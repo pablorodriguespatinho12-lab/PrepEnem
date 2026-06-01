@@ -1,0 +1,173 @@
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+    output = "/home/ubuntu/prepenem/nextjs_space/node_modules/.prisma/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  username      String    @unique
+  email         String?
+  password      String
+  role          String    @default("user")
+  themeColor    String    @default("purple")
+  streakDays    Int       @default(0)
+  lastStudyDate DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  progress      UserProgress[]
+  reviews       ReviewSchedule[]
+  trainingSessions TrainingSession[]
+  essays        Essay[]
+
+  @@index([username])
+}
+
+model Question {
+  id              String   @id @default(cuid())
+  enunciado       String
+  alternativaA    String
+  alternativaB    String
+  alternativaC    String
+  alternativaD    String
+  alternativaE    String
+  respostaCorreta String
+  materia         String
+  subtema         String
+  dificuldade     String
+  explicacao      String?
+  origem          String?
+  dependeImagem   Boolean  @default(false)
+  numeroQuestao   Int?
+  anoProva        Int?
+  diaProva        Int?
+  pdfFileUrl      String?
+  paginaPdf       Int?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  progress        UserProgress[]
+  reviews         ReviewSchedule[]
+  sessions        TrainingSessionQuestion[]
+
+  @@index([materia])
+  @@index([dificuldade])
+  @@index([materia, dificuldade])
+  @@index([anoProva, diaProva, numeroQuestao])
+}
+
+model TrainingSession {
+  id          String   @id @default(cuid())
+  userId      String
+  currentIdx  Int      @default(0)
+  correct     Int      @default(0)
+  wrong       Int      @default(0)
+  finished    Boolean  @default(false)
+  mode        String   @default("normal")
+  timeLeft    Int      @default(0)
+  timeElapsed Int      @default(0)
+  timerHours  Float    @default(0)
+  useTimer    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questions   TrainingSessionQuestion[]
+
+  @@index([userId, finished])
+  @@index([userId, mode, finished])
+}
+
+model TrainingSessionQuestion {
+  id          String   @id @default(cuid())
+  sessionId   String
+  questionId  String
+  ordem       Int
+  answered    Boolean  @default(false)
+  respostaDada String?
+
+  session     TrainingSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  question    Question        @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([sessionId, questionId])
+  @@index([sessionId, ordem])
+}
+
+model UserProgress {
+  id                  String   @id @default(cuid())
+  userId              String
+  questionId          String
+  acertou             Boolean
+  respostaDada        String
+  tentativas          Int      @default(1)
+  explicacaoEstudante String?
+  dominada            Boolean  @default(false)
+  acertosConsecutivos Int      @default(0)
+  dataResposta        DateTime @default(now())
+
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([questionId])
+  @@index([userId, questionId])
+  @@index([userId, acertou])
+  @@index([userId, dataResposta])
+}
+
+model ReviewSchedule {
+  id              String   @id @default(cuid())
+  userId          String
+  questionId      String
+  proximaRevisao  DateTime
+  intervaloAtual  Int      @default(1)
+  completada      Boolean  @default(false)
+  createdAt       DateTime @default(now())
+
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@index([userId, proximaRevisao])
+  @@index([userId, completada])
+}
+
+model EssayTheme {
+  id              String   @id @default(cuid())
+  tema            String
+  anoEnem         Int?
+  textoMotivador  String?  @db.Text
+  areaConhecimento String? 
+  createdAt       DateTime @default(now())
+
+  essays          Essay[]
+}
+
+model Essay {
+  id              String   @id @default(cuid())
+  userId          String
+  themeId         String
+  texto           String   @db.Text
+  status          String   @default("pendente") // pendente, avaliando, avaliada
+  notaC1          Int?
+  notaC2          Int?
+  notaC3          Int?
+  notaC4          Int?
+  notaC5          Int?
+  notaTotal       Int?
+  avaliacao       String?  @db.Text
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  theme           EssayTheme @relation(fields: [themeId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, status])
+}
