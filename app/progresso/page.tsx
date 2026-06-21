@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { BarChart3, TrendingUp, Target, BookOpen } from 'lucide-react';
+import { BarChart3, TrendingUp, Target, BookOpen, PenTool } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { materiaColors } from '@/lib/theme-colors';
 
@@ -78,6 +78,47 @@ export default function ProgressoPage() {
 
       {/* Charts */}
       {stats && <ProgressCharts stats={stats} />}
+
+      {/* Essay Parts Progress */}
+      {stats?.essayPartStats && Object.keys(stats.essayPartStats).length > 0 && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.45 }}
+          className="bg-card rounded-xl p-6 shadow-sm border border-border mt-8"
+        >
+          <h3 className="font-display text-base font-semibold mb-4 flex items-center gap-2">
+            <PenTool className="w-5 h-5 text-primary" /> Treino de Redação por Partes
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { key: 'introducao', label: 'Introdução', emoji: '📝', color: 'bg-blue-500' },
+              { key: 'desenvolvimento1', label: 'Desenvolvimento 1', emoji: '💡', color: 'bg-green-500' },
+              { key: 'desenvolvimento2', label: 'Desenvolvimento 2', emoji: '🔍', color: 'bg-purple-500' },
+              { key: 'conclusao', label: 'Conclusão', emoji: '🎯', color: 'bg-orange-500' },
+            ].map(part => {
+              const s = stats.essayPartStats[part.key];
+              if (!s) return (
+                <div key={part.key} className="bg-muted/30 rounded-lg p-4 text-center">
+                  <p className="text-lg">{part.emoji}</p>
+                  <p className="text-xs font-medium mt-1">{part.label}</p>
+                  <p className="text-xs text-muted-foreground mt-1">Nenhum treino</p>
+                </div>
+              );
+              return (
+                <div key={part.key} className="bg-muted/30 rounded-lg p-4 text-center">
+                  <p className="text-lg">{part.emoji}</p>
+                  <p className="text-xs font-medium mt-1">{part.label}</p>
+                  <p className={`text-xl font-bold mt-1 ${s.avgNota >= 7 ? 'text-green-600' : s.avgNota >= 5 ? 'text-yellow-600' : 'text-red-600'}`}>
+                    {s.avgNota}/10
+                  </p>
+                  <p className="text-xs text-muted-foreground">{s.total} treinos</p>
+                </div>
+              );
+            })}
+          </div>
+        </motion.div>
+      )}
 
       {/* Subtema Table */}
       {stats?.bySubtema && Object.keys(stats.bySubtema).length > 0 && (

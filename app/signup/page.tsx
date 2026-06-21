@@ -4,6 +4,8 @@ import { signIn } from 'next-auth/react';
 import Link from 'next/link';
 import { GraduationCap, Lock, User, Eye, EyeOff, AtSign } from 'lucide-react';
 import { toast } from 'sonner';
+import { motion } from 'framer-motion';
+import { ParticlesBg } from '@/components/particles-bg';
 
 export default function SignupPage() {
   const [name, setName] = useState('');
@@ -42,7 +44,6 @@ export default function SignupPage() {
         toast.error(data?.error ?? 'Erro ao criar conta');
         return;
       }
-      // Auto login after signup
       await signIn('credentials', {
         username,
         password,
@@ -57,21 +58,41 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-primary/10 p-4">
-      <div className="w-full max-w-md">
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center shadow-lg">
+    <div className="min-h-screen flex items-center justify-center p-4 relative">
+      <ParticlesBg />
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+        className="w-full max-w-md"
+      >
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.15, duration: 0.5 }}
+          className="flex items-center justify-center gap-3 mb-8"
+        >
+          <motion.div
+            className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center shadow-lg"
+            animate={{ scale: [1, 1.05, 1] }}
+            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+          >
             <GraduationCap className="w-7 h-7 text-primary-foreground" />
-          </div>
+          </motion.div>
           <h1 className="font-display text-3xl font-bold tracking-tight">PrepEnem</h1>
-        </div>
+        </motion.div>
 
-        <div className="bg-card rounded-xl shadow-lg border border-border p-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+          className="bg-card/80 backdrop-blur-xl rounded-xl shadow-lg border border-border p-8"
+        >
           <h2 className="font-display text-xl font-semibold mb-1">Criar conta</h2>
           <p className="text-sm text-muted-foreground mb-6">Comece seus estudos para o ENEM agora</p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
+            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.35 }}>
               <label className="block text-sm font-medium mb-1.5">Nome</label>
               <div className="relative">
                 <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -79,13 +100,13 @@ export default function SignupPage() {
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2.5 border border-input rounded-lg bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  className="w-full pl-10 pr-4 py-2.5 border border-input rounded-lg bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-shadow"
                   placeholder="Seu nome"
                 />
               </div>
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.45 }}>
               <label className="block text-sm font-medium mb-1.5">Nome de usuário</label>
               <div className="relative">
                 <AtSign className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -93,14 +114,14 @@ export default function SignupPage() {
                   type="text"
                   value={username}
                   onChange={(e) => setUsername(e.target.value.toLowerCase().replace(/\s/g, ''))}
-                  className="w-full pl-10 pr-4 py-2.5 border border-input rounded-lg bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  className="w-full pl-10 pr-4 py-2.5 border border-input rounded-lg bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-shadow"
                   placeholder="seu_usuario"
                   autoComplete="username"
                 />
               </div>
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.55 }}>
               <label className="block text-sm font-medium mb-1.5">Senha</label>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -108,26 +129,30 @@ export default function SignupPage() {
                   type={showPw ? 'text' : 'password'}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-10 pr-10 py-2.5 border border-input rounded-lg bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  className="w-full pl-10 pr-10 py-2.5 border border-input rounded-lg bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-shadow"
                   placeholder="Mínimo 6 caracteres"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPw(!showPw)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {showPw ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                 </button>
               </div>
-            </div>
+            </motion.div>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full py-2.5 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:opacity-90 transition-all disabled:opacity-50 shadow-md"
-            >
-              {loading ? 'Criando...' : 'Criar Conta'}
-            </button>
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.65 }}>
+              <motion.button
+                type="submit"
+                disabled={loading}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full py-2.5 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:opacity-90 transition-all disabled:opacity-50 shadow-md shimmer-btn"
+              >
+                {loading ? 'Criando...' : 'Criar Conta'}
+              </motion.button>
+            </motion.div>
           </form>
 
           <p className="text-center text-sm text-muted-foreground mt-6">
@@ -136,8 +161,8 @@ export default function SignupPage() {
               Faça login
             </Link>
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }

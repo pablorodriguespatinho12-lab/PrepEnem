@@ -11,7 +11,7 @@ import { toast } from 'sonner';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 
-type View = 'home' | 'write' | 'history' | 'result';
+type View = 'home' | 'write' | 'history' | 'result' | 'saved';
 
 export default function RedacaoPage() {
   const [view, setView] = useState<View>('home');
@@ -25,6 +25,51 @@ export default function RedacaoPage() {
   const [polling, setPolling] = useState(false);
   const [customTema, setCustomTema] = useState('');
   const [showCustomInput, setShowCustomInput] = useState(false);
+  const [savedDrafts, setSavedDrafts] = useState<any[]>([]);
+  const [lastSaved, setLastSaved] = useState<string | null>(null);
+
+  // Load saved drafts from localStorage
+  const loadSavedDrafts = useCallback(() => {
+    try {
+      const saved = localStorage.getItem('redacao_saved_list');
+      if (saved) {
+        setSavedDrafts(JSON.parse(saved));
+      }
+    } catch (e) { /* ignore */ }
+  }, []);
+
+  // Save current essay to saved list
+  const saveEssay = useCallback(() => {
+    if (!selectedTheme || texto.trim().length < 10) {
+      toast.error('Escreva pelo menos 10 caracteres para salvar');
+      return;
+    }
+    try {
+      const existing = JSON.parse(localStorage.getItem('redacao_saved_list') || '[]');
+      const id = `draft_${Date.now()}`;
+      const draft = {
+        id,
+        tema: selectedTheme.tema,
+        theme: selectedTheme,
+        texto: texto.trim(),
+        wordCount: texto.trim().split(/\s+/).filter(Boolean).length,
+        savedAt: new Date().toISOString(),
+      };
+      // Check if we're editing an existing saved draft
+      const editingIdx = existing.findIndex((d: any) => d.id === (selectedTheme as any)?._draftId);
+      if (editingIdx >= 0) {
+        existing[editingIdx] = { ...draft, id: existing[editingIdx].id };
+      } else {
+        existing.unshift(draft);
+      }
+      localStorage.setItem('redacao_saved_list', JSON.stringify(existing.slice(0, 50))); // max 50
+      setSavedDrafts(existing.slice(0, 50));
+      setLastSaved(new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }));
+      toast.success('Redação salva!');
+    } catch (e) {
+      toast.error('Erro ao salvar');
+    }
+  }, [selectedTheme, texto]);
 
   const fetchThemes = useCallback(async () => {
     try {
@@ -46,6 +91,7 @@ export default function RedacaoPage() {
   useEffect(() => {
     Promise.all([fetchThemes(), fetchHistory()]).then(() => {
       setLoading(false);
+      loadSavedDrafts();
       try {
         const saved = localStorage.getItem('redacao_draft');
         if (saved) {
@@ -59,7 +105,7 @@ export default function RedacaoPage() {
         }
       } catch (e) { /* ignore */ }
     });
-  }, [fetchThemes, fetchHistory]);
+  }, [fetchThemes, fetchHistory, loadSavedDrafts]);
 
   // Auto-save draft to localStorage when writing
   useEffect(() => {
@@ -147,15 +193,6 @@ export default function RedacaoPage() {
   };
 
   const wordCount = texto.trim().split(/\s+/).filter(Boolean).length;
-  // Simula a folha de redação do ENEM (~160 caracteres por linha real de papel)
-  // Calibrado: 64 linhas digitadas = 28 linhas no caderno real
-  const charsPerPaperLine = 160;
-  const lineCount = texto.length > 0
-    ? texto.split('\n').reduce((total, paragraph) => {
-        if (paragraph.length === 0) return total + 1;
-        return total + Math.ceil(paragraph.length / charsPerPaperLine);
-      }, 0)
-    : 0;
 
   if (loading) {
     return (
@@ -280,12 +317,6 @@ export default function RedacaoPage() {
             <span className="text-xs font-medium text-muted-foreground">Sua redação</span>
             <div className="flex items-center gap-3 text-xs text-muted-foreground">
               <span>{wordCount} palavras</span>
-              <span className={`font-semibold ${lineCount > 30 ? 'text-red-500' : lineCount >= 20 ? 'text-green-600' : 'text-amber-500'}`}>
-                {lineCount}/30 linhas
-              </span>
-              <span className={wordCount < 200 ? 'text-red-500' : wordCount > 400 ? 'text-amber-500' : 'text-green-500'}>
-                {wordCount < 200 ? 'Muito curto' : wordCount > 400 ? 'Extenso' : 'Bom tamanho'}
-              </span>
             </div>
           </div>
           <textarea
@@ -297,16 +328,25 @@ export default function RedacaoPage() {
           />
         </div>
 
-        <button
-          onClick={handleSubmit}
-          disabled={submitting || wordCount < 20}
-          className="w-full py-3 bg-primary text-primary-foreground rounded-xl font-medium text-sm hover:opacity-90 disabled:opacity-40 transition shadow-md flex items-center justify-center gap-2"
-        >
-          {submitting ? <><Loader2 className="w-4 h-4 animate-spin" /> Enviando...</> : <><Send className="w-4 h-4" /> Enviar para Correção</>}
-        </button>
+        <div className="flex gap-3">
+          <button
+            onClick={saveEssay}
+            disabled={wordCount < 5}
+            className="px-5 py-3 bg-muted text-foreground rounded-xl font-medium text-sm hover:bg-muted/80 disabled:opacity-40 transition flex items-center justify-center gap-2 border border-border"
+          >
+            <FileText className="w-4 h-4" /> Salvar
+          </button>
+          <button
+            onClick={handleSubmit}
+            disabled={submitting || wordCount < 20}
+            className="flex-1 py-3 bg-primary text-primary-foreground rounded-xl font-medium text-sm hover:opacity-90 disabled:opacity-40 transition shadow-md flex items-center justify-center gap-2"
+          >
+            {submitting ? <><Loader2 className="w-4 h-4 animate-spin" /> Enviando...</> : <><Send className="w-4 h-4" /> Enviar para Correção</>}
+          </button>
+        </div>
 
         <p className="text-xs text-muted-foreground text-center mt-2">
-          A IA avaliará sua redação nas 5 competências do ENEM. Mesmo saindo da página, a correção continua.
+          {lastSaved ? `✅ Último salvamento: ${lastSaved} • ` : ''}A IA avaliará sua redação nas 5 competências do ENEM.
         </p>
       </div>
     );
@@ -360,6 +400,73 @@ export default function RedacaoPage() {
     );
   }
 
+  // ==== SAVED VIEW ====
+  if (view === 'saved') {
+    return (
+      <div className="p-4 md:p-8 max-w-4xl mx-auto">
+        <button onClick={() => setView('home')} className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-4">
+          <ChevronLeft className="w-4 h-4" /> Voltar
+        </button>
+        <h2 className="font-display text-xl font-bold mb-4 flex items-center gap-2">
+          <FileText className="w-5 h-5 text-primary" /> Redações Salvas
+        </h2>
+
+        {savedDrafts.length === 0 ? (
+          <div className="text-center py-12">
+            <FileText className="w-12 h-12 text-muted-foreground mx-auto mb-3" />
+            <p className="text-sm text-muted-foreground">Nenhuma redação salva</p>
+            <p className="text-xs text-muted-foreground mt-1">Ao escrever, clique em "Salvar" para guardar seu rascunho</p>
+          </div>
+        ) : (
+          <div className="space-y-3">
+            {savedDrafts.map((d: any) => (
+              <div key={d.id} className="bg-card rounded-xl p-4 border border-border shadow-sm">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-medium text-sm">{d.tema}</span>
+                  <span className="text-xs text-muted-foreground">{d.wordCount} palavras</span>
+                </div>
+                <p className="text-xs text-muted-foreground mb-3 line-clamp-2">
+                  {d.texto.slice(0, 150)}...
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-muted-foreground">
+                    {new Date(d.savedAt).toLocaleDateString('pt-BR')} às {new Date(d.savedAt).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}
+                  </span>
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => {
+                        try {
+                          const list = JSON.parse(localStorage.getItem('redacao_saved_list') || '[]');
+                          const filtered = list.filter((x: any) => x.id !== d.id);
+                          localStorage.setItem('redacao_saved_list', JSON.stringify(filtered));
+                          setSavedDrafts(filtered);
+                          toast.success('Redação removida');
+                        } catch (e) {}
+                      }}
+                      className="text-xs text-red-500 hover:underline"
+                    >
+                      Excluir
+                    </button>
+                    <button
+                      onClick={() => {
+                        setSelectedTheme({ ...d.theme, _draftId: d.id });
+                        setTexto(d.texto);
+                        setView('write');
+                      }}
+                      className="px-3 py-1.5 bg-primary text-primary-foreground text-xs rounded-lg font-medium hover:opacity-90"
+                    >
+                      Continuar Escrevendo
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
+
   // ==== HOME VIEW ====
   return (
     <div className="p-4 md:p-8 max-w-4xl mx-auto">
@@ -394,23 +501,47 @@ export default function RedacaoPage() {
           </div>
         )}
 
+        {/* Treino por Partes */}
+        <button
+          onClick={() => window.location.href = '/redacao/partes'}
+          className="w-full bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-5 border border-primary/20 shadow-sm hover:shadow-md transition text-left mb-6"
+        >
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
+              <Sparkles className="w-6 h-6 text-primary" />
+            </div>
+            <div className="flex-1">
+              <h3 className="font-display font-bold text-base">Treino por Partes</h3>
+              <p className="text-xs text-muted-foreground">Pratique Introdução, Desenvolvimento e Conclusão separadamente com feedback da IA</p>
+            </div>
+          </div>
+        </button>
+
         {/* Action buttons */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
           <button
             onClick={() => setView('history')}
             className="bg-card rounded-xl p-5 border border-border shadow-sm hover:shadow-md transition text-left"
           >
             <History className="w-8 h-8 text-primary mb-2" />
             <h3 className="font-display font-bold text-sm">Histórico</h3>
-            <p className="text-xs text-muted-foreground">Ver redações anteriores e correções</p>
+            <p className="text-xs text-muted-foreground">Correções anteriores</p>
           </button>
           <button
-            onClick={() => { fetchHistory(); }}
+            onClick={() => { loadSavedDrafts(); setView('saved'); }}
+            className="bg-card rounded-xl p-5 border border-border shadow-sm hover:shadow-md transition text-left"
+          >
+            <FileText className="w-8 h-8 text-primary mb-2" />
+            <h3 className="font-display font-bold text-sm">Redações Salvas {savedDrafts.length > 0 && <span className="text-xs bg-primary/10 text-primary px-1.5 py-0.5 rounded-full ml-1">{savedDrafts.length}</span>}</h3>
+            <p className="text-xs text-muted-foreground">Rascunhos guardados</p>
+          </button>
+          <button
+            onClick={() => { fetchHistory(); toast.info('Atualizado!'); }}
             className="bg-card rounded-xl p-5 border border-border shadow-sm hover:shadow-md transition text-left"
           >
             <RefreshCcw className="w-8 h-8 text-primary mb-2" />
             <h3 className="font-display font-bold text-sm">Atualizar</h3>
-            <p className="text-xs text-muted-foreground">Verificar correções pendentes</p>
+            <p className="text-xs text-muted-foreground">Verificar correções</p>
           </button>
         </div>
 

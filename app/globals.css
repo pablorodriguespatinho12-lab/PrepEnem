@@ -111,7 +111,9 @@
   }
 
   body {
-    background-color: hsl(var(--background));
+    background: linear-gradient(-45deg, #f0f0f8, #e8e0f0, #e0e8f8, #f0e8f0);
+    background-size: 400% 400%;
+    animation: auroraMove 20s ease infinite;
     color: hsl(var(--foreground));
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -199,4 +201,252 @@
     radial-gradient(ellipse 60% 50% at 50% -10%, hsl(263 70% 50% / 0.2), transparent),
     radial-gradient(ellipse 40% 40% at 80% 0%, hsl(280 80% 60% / 0.1), transparent),
     radial-gradient(ellipse 40% 30% at 20% 10%, hsl(240 80% 60% / 0.08), transparent);
+}
+
+/* ===== AURORA BACKGROUND ===== */
+html.dark body {
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1a1a2e) !important;
+  background-size: 400% 400% !important;
+  animation: auroraMove 20s ease infinite !important;
+}
+
+@keyframes auroraMove {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== CARD 3D & SHINE ===== */
+.card-3d {
+  transition: transform 0.35s cubic-bezier(.22,.61,.36,1), box-shadow 0.35s ease;
+  transform-style: preserve-3d;
+}
+.card-3d:hover {
+  transform: perspective(800px) translateZ(20px) rotateX(-2deg) rotateY(2deg);
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.18),
+    0 0 40px rgba(124,58,237,0.1);
+}
+.dark .card-3d:hover {
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.45),
+    0 0 40px rgba(124,58,237,0.2);
+}
+
+/* CTA glow pulse */
+@keyframes ctaGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(124,58,237,0.3), 0 0 40px rgba(124,58,237,0.1), 0 4px 15px rgba(0,0,0,0.1);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(124,58,237,0.5), 0 0 70px rgba(124,58,237,0.2), 0 0 100px rgba(124,58,237,0.08);
+  }
+}
+.cta-glow {
+  animation: ctaGlow 2.5s ease-in-out infinite;
+}
+
+/* GSAP scroll reveal (initial hidden state) */
+.gsap-reveal {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* Floating animation for question cards */
+@keyframes cardFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-6px); }
+}
+.card-float {
+  animation: cardFloat 4s ease-in-out infinite;
+}
+
+/* 3D perspective wrapper */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Shine sweep on hover */
+.card-shine {
+  position: relative;
+  overflow: hidden;
+}
+.card-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%; left: -60%;
+  width: 40%; height: 200%;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.08) 50%, transparent 60%);
+  transform: skewX(-15deg);
+  transition: none;
+  pointer-events: none;
+}
+.card-shine:hover::after {
+  left: 130%;
+  transition: left 0.6s ease;
+}
+
+/* Particle fly for correct answers */
+@keyframes particleFly {
+  0%   { transform: translate(0,0) scale(1); opacity: 1; }
+  100% { transform: translate(var(--dx), var(--dy)) scale(0); opacity: 0; }
+}
+
+/* Flash overlay for answer feedback */
+@keyframes flashGreen {
+  0%   { opacity: 0.08; }
+  100% { opacity: 0; }
+}
+@keyframes flashRed {
+  0%   { opacity: 0.06; }
+  100% { opacity: 0; }
+}
+.flash-correct {
+  position: fixed; inset: 0; z-index: 50;
+  background: rgba(34, 197, 94, 1);
+  animation: flashGreen 0.4s ease forwards;
+  pointer-events: none;
+}
+.flash-wrong {
+  position: fixed; inset: 0; z-index: 50;
+  background: rgba(239, 68, 68, 1);
+  animation: flashRed 0.4s ease forwards;
+  pointer-events: none;
+}
+
+/* Timer vignette pulse */
+@keyframes vignettePulse {
+  0%, 100% { box-shadow: inset 0 0 40px rgba(255,0,0,0.08); }
+  50%      { box-shadow: inset 0 0 80px rgba(255,0,0,0.18); }
+}
+.timer-critical {
+  animation: vignettePulse 1.5s ease-in-out infinite;
+}
+
+/* ===== ANIMATION SYSTEM ===== */
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--chart-2)));
+  z-index: 9999;
+  transition: width 100ms;
+}
+
+/* Shimmer button effect */
+@keyframes shimmerBtn {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmerBtn 2.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Ripple effect */
+@keyframes ripple {
+  to { transform: scale(4); opacity: 0; }
+}
+.ripple-container {
+  position: relative;
+  overflow: hidden;
+}
+.ripple-container .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+
+/* Count-up transition */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.count-up {
+  animation: countUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Skeleton loader */
+@keyframes skeletonPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+.skeleton {
+  background: linear-gradient(90deg, hsl(var(--muted)) 0%, hsl(var(--muted-foreground) / 0.1) 50%, hsl(var(--muted)) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+  border-radius: var(--radius);
+}
+
+/* Shake animation for wrong answers */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+  20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+.animate-shake {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* Checkmark animation */
+@keyframes checkDraw {
+  to { stroke-dashoffset: 0; }
+}
+.animate-check {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  animation: checkDraw 0.4s ease forwards 0.2s;
+}
+
+/* Ping badge */
+@keyframes pingBadge {
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+.animate-ping-badge::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: inherit;
+  animation: pingBadge 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Gradient border spin (avatar) */
+@keyframes borderSpin {
+  to { --angle: 360deg; }
+}
+.gradient-border-spin {
+  background: conic-gradient(from var(--angle, 0deg), hsl(var(--primary)), hsl(var(--chart-2)), hsl(var(--chart-3)), hsl(var(--primary)));
+  animation: borderSpin 4s linear infinite;
+}
+
+/* Input focus glow */
+input:focus, textarea:focus, select:focus {
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.15);
+  transition: box-shadow 0.2s ease;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .shimmer-btn::after { animation: none; }
 }

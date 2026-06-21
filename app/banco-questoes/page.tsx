@@ -118,7 +118,7 @@ export default function BancoQuestoesPage() {
 
       {/* Materia Grid */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 1, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
         className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 mb-6"
@@ -146,7 +146,7 @@ export default function BancoQuestoesPage() {
               className="w-2.5 h-2.5 rounded-full mx-auto mb-1.5"
               style={{ backgroundColor: (materiaColors as any)[m] ?? '#888' }}
             />
-            <p className="text-xs font-medium">{m}</p>
+            <p className="text-xs font-medium text-foreground">{m}</p>
             <p className="text-xs text-muted-foreground">{materiaTotals[m] ?? 0} q</p>
           </button>
         ))}
@@ -270,9 +270,9 @@ export default function BancoQuestoesPage() {
           filtered.slice(0, 50).map((q, i) => (
             <motion.div
               key={q.id}
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 1, y: 5 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: Math.min(i * 0.03, 0.5) }}
+              transition={{ delay: Math.min(i * 0.02, 0.3) }}
               className="bg-card rounded-xl p-4 shadow-sm border border-border hover:shadow-md transition-shadow"
             >
               <div className="flex items-start gap-3">

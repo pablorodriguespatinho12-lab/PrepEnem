@@ -10,9 +10,11 @@ import {
 } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
+import { fireConfetti, spawnCorrectParticles, flashScreen } from '@/components/animations';
 
 const PdfPageViewer = dynamic(() => import('@/components/pdf-page-viewer'), { ssr: false });
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
+const Results3DScene = dynamic(() => import('@/components/results-3d-scene'), { ssr: false });
 
 const difficultyLabel: Record<string, string> = {
   facil: 'Fácil',
@@ -240,13 +242,18 @@ export default function TreinoPage() {
 
     try {
       if (isErrosReview) {
-        // Error review mode - just check locally, track wrong ones
         const acertou = selected === currentQ.respostaCorreta;
         setResult({
           acertou,
           respostaCorreta: currentQ.respostaCorreta,
           explicacao: currentQ.explicacao,
         });
+        // Visual feedback
+        flashScreen(acertou ? 'correct' : 'wrong');
+        if (acertou) {
+          const correctEl = document.querySelector(`[data-alt="${currentQ.respostaCorreta}"]`);
+          if (correctEl) spawnCorrectParticles(correctEl as HTMLElement);
+        }
         if (acertou) {
           setScore((s) => ({ ...s, correct: s.correct + 1 }));
           setStreak((s) => s + 1);
@@ -274,6 +281,11 @@ export default function TreinoPage() {
           respostaCorreta: currentQ.respostaCorreta,
           explicacao: currentQ.explicacao,
         });
+        flashScreen(acertou ? 'correct' : 'wrong');
+        if (acertou) {
+          const correctEl = document.querySelector(`[data-alt="${currentQ.respostaCorreta}"]`);
+          if (correctEl) spawnCorrectParticles(correctEl as HTMLElement);
+        }
         if (acertou) {
           setScore((s) => ({ ...s, correct: s.correct + 1 }));
           setStreak((s) => s + 1);
@@ -292,6 +304,11 @@ export default function TreinoPage() {
         });
         const data = await res.json();
         setResult(data);
+        flashScreen(data?.acertou ? 'correct' : 'wrong');
+        if (data?.acertou) {
+          const correctEl = document.querySelector(`[data-alt="${currentQ.respostaCorreta}"]`);
+          if (correctEl) spawnCorrectParticles(correctEl as HTMLElement);
+        }
         if (data?.acertou) {
           setScore((s) => {
             const newScore = { ...s, correct: s.correct + 1 };
@@ -337,13 +354,25 @@ export default function TreinoPage() {
         }),
       });
 
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        toast.error(errData?.error || 'Erro ao gerar explicação. Tente novamente.');
+        setGeneratingExplanation(false);
+        return;
+      }
+
       const reader = res.body?.getReader();
+      if (!reader) {
+        toast.error('Erro ao conectar com a IA');
+        setGeneratingExplanation(false);
+        return;
+      }
       const decoder = new TextDecoder();
       let buffer = '';
       let partialRead = '';
 
       while (true) {
-        const { done, value } = await (reader as any).read();
+        const { done, value } = await reader.read();
         if (done) break;
         partialRead += decoder.decode(value, { stream: true });
         const lines = partialRead.split('\n');
@@ -361,9 +390,12 @@ export default function TreinoPage() {
           }
         }
       }
+      if (!buffer) {
+        toast.error('A IA não conseguiu gerar explicação para esta questão. Tente novamente.');
+      }
     } catch (e) {
       console.error(e);
-      toast.error('Erro ao gerar explicação');
+      toast.error('Erro ao gerar explicação. Tente novamente.');
     } finally {
       setGeneratingExplanation(false);
     }
@@ -451,7 +483,7 @@ export default function TreinoPage() {
   if (showResumo && !resumoDismissed && sessionStarted && !loading && questions.length > 0) {
     return (
       <div className="p-4 md:p-8 max-w-3xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+        <motion.div initial={{ opacity: 1, y: 10 }} animate={{ opacity: 1, y: 0 }}>
           <div className="flex items-center gap-3 mb-2">
             <button onClick={() => router.push('/dashboard')} className="p-2 rounded-lg hover:bg-muted transition">
               <ChevronLeft className="w-5 h-5" />
@@ -485,9 +517,15 @@ export default function TreinoPage() {
 
         {/* Subtemas list */}
         {resumoLoading ? (
-          <div className="flex items-center justify-center py-16 gap-3">
-            <Loader2 className="w-6 h-6 animate-spin text-primary" />
-            <p className="text-sm text-muted-foreground">Gerando resumo dos conteúdos...</p>
+          <div className="text-center py-12">
+            <Loader2 className="w-8 h-8 animate-spin text-primary mx-auto mb-3" />
+            <p className="text-sm text-muted-foreground mb-4">Gerando resumo dos conteúdos...</p>
+            <button
+              onClick={() => setResumoDismissed(true)}
+              className="px-5 py-2.5 bg-primary text-primary-foreground rounded-xl font-medium text-sm hover:opacity-90 transition shadow-md inline-flex items-center gap-2"
+            >
+              <Play className="w-4 h-4" /> Pular e Começar Treino
+            </button>
           </div>
         ) : (
           <div className="space-y-3 mb-8">
@@ -641,48 +679,107 @@ export default function TreinoPage() {
   if (finished) {
     const total = score.correct + score.wrong;
     const pct = total > 0 ? Math.round((score.correct / total) * 100) : 0;
+    const tierEmoji = pct >= 80 ? '🏆' : pct >= 60 ? '🥈' : '🥉';
+    const tierLabel = pct >= 80 ? 'Ouro' : pct >= 60 ? 'Prata' : 'Bronze';
     return (
       <div className="p-4 md:p-8 max-w-2xl mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="bg-card rounded-xl p-8 shadow-lg border border-border text-center"
+          onAnimationComplete={() => { if (pct >= 60) fireConfetti(); }}
+          className="bg-card/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-border text-center overflow-hidden"
         >
-          <Trophy className="w-16 h-16 text-primary mx-auto mb-4" />
-          <h1 className="font-display text-2xl font-bold mb-2">
+          {/* 3D Scene: Medal + Podium + Confetti */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="mx-auto mb-2 -mt-4"
+          >
+            <Results3DScene percentage={pct} width={320} height={320} />
+          </motion.div>
+
+          {/* Percentage display */}
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.8, type: 'spring', stiffness: 200, damping: 15 }}
+            className="mb-3"
+          >
+            <span className="font-display text-6xl font-black bg-gradient-to-r from-primary via-purple-500 to-blue-500 bg-clip-text text-transparent">
+              {pct}%
+            </span>
+          </motion.div>
+
+          {/* Tier badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.0 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4"
+          >
+            <span className="text-lg">{tierEmoji}</span>
+            <span className="font-display font-bold text-sm text-primary">Medalha {tierLabel}</span>
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.1 }}
+            className="font-display text-2xl font-bold mb-1"
+          >
             {pct >= 80 ? 'Excelente! 🎉' : pct >= 60 ? 'Bom trabalho! 👏' : 'Continue praticando! 💪'}
-          </h1>
-          <p className="text-muted-foreground mb-6">Sessão {isReview ? 'de revisão' : 'de treino'} finalizada</p>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2 }}
+            className="text-muted-foreground mb-6 text-sm"
+          >
+            Sessão {isReview ? 'de revisão' : 'de treino'} finalizada
+          </motion.p>
 
-          <div className="grid grid-cols-3 gap-4 mb-8">
-            <div className="bg-muted/50 rounded-lg p-4">
-              <p className="font-display text-2xl font-bold">{total}</p>
-              <p className="text-xs text-muted-foreground">Total</p>
+          {/* Stats grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.3 }}
+            className="grid grid-cols-3 gap-3 mb-8"
+          >
+            <div className="bg-muted/50 rounded-xl p-4 card-3d">
+              <p className="font-display text-3xl font-bold">{total}</p>
+              <p className="text-xs text-muted-foreground mt-1">Total</p>
             </div>
-            <div className="bg-green-500/10 rounded-lg p-4">
-              <p className="font-display text-2xl font-bold text-green-600">{score.correct}</p>
-              <p className="text-xs text-green-700">Acertos</p>
+            <div className="bg-green-500/10 rounded-xl p-4 card-3d">
+              <p className="font-display text-3xl font-bold text-green-600 dark:text-green-400">{score.correct}</p>
+              <p className="text-xs text-green-700 dark:text-green-500 mt-1">Acertos</p>
             </div>
-            <div className="bg-red-500/10 rounded-lg p-4">
-              <p className="font-display text-2xl font-bold text-red-600">{score.wrong}</p>
-              <p className="text-xs text-red-700">Erros</p>
+            <div className="bg-red-500/10 rounded-xl p-4 card-3d">
+              <p className="font-display text-3xl font-bold text-red-600 dark:text-red-400">{score.wrong}</p>
+              <p className="text-xs text-red-700 dark:text-red-500 mt-1">Erros</p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex gap-3 justify-center">
+          {/* Action buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.5 }}
+            className="flex gap-3 justify-center"
+          >
             <button
               onClick={() => router.push('/dashboard')}
-              className="flex items-center gap-2 px-4 py-2.5 bg-muted rounded-lg text-sm font-medium hover:bg-muted/80 transition"
+              className="flex items-center gap-2 px-5 py-2.5 bg-muted rounded-xl text-sm font-medium hover:bg-muted/80 transition card-3d"
             >
               <Home className="w-4 h-4" /> Voltar
             </button>
             <button
               onClick={() => { setFinished(false); startSession(); }}
-              className="flex items-center gap-2 px-4 py-2.5 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:opacity-90 transition shadow-md"
+              className="flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-xl text-sm font-medium hover:opacity-90 transition shadow-lg cta-glow"
             >
               <RefreshCcw className="w-4 h-4" /> Nova Sessão
             </button>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     );
@@ -751,6 +848,13 @@ export default function TreinoPage() {
               <Sparkles className="w-3 h-3" /> {streak} seguidas!
             </span>
           )}
+          <button
+            onClick={() => { setFinished(false); startSession(); }}
+            title="Reiniciar sessão"
+            className="p-1.5 rounded-lg hover:bg-muted transition text-muted-foreground hover:text-foreground"
+          >
+            <RefreshCcw className="w-4 h-4" />
+          </button>
         </div>
       </div>
 
@@ -762,15 +866,22 @@ export default function TreinoPage() {
         />
       </div>
 
-      {/* Question */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentIdx}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -50 }}
-          className="bg-card rounded-xl p-6 shadow-sm border border-border mb-4"
-        >
+      {/* Question with 3D flip transition */}
+      <div className="perspective-1000 mb-4">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIdx}
+            initial={{ opacity: 0, rotateY: -90, scale: 0.85 }}
+            animate={{ opacity: 1, rotateY: 0, scale: 1 }}
+            exit={
+              result?.acertou === false
+                ? { opacity: 0, y: 200, rotateX: 30, transition: { duration: 0.5, ease: 'easeIn' } }
+                : { opacity: 0, rotateY: 90, scale: 0.85, transition: { duration: 0.4 } }
+            }
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            style={{ transformStyle: 'preserve-3d' }}
+            className="bg-card/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-border card-float"
+          >
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-4">
             <span
@@ -801,24 +912,29 @@ export default function TreinoPage() {
 
           {/* Alternatives */}
           <div className="space-y-2">
-            {alternatives.map((alt) => {
+            {alternatives.map((alt, altIdx) => {
               const isCorrect = answered && alt.key === result?.respostaCorreta;
               const isWrong = answered && alt.key === selected && !result?.acertou;
               const isSelected = alt.key === selected;
               return (
-                <button
+                <motion.button
                   key={alt.key}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: altIdx * 0.08, duration: 0.3 }}
                   onClick={() => !answered && setSelected(alt.key)}
                   disabled={answered}
+                  data-alt={alt.key}
                   className={`w-full flex items-start gap-3 p-3 rounded-lg border text-left text-sm transition-all ${
                     isCorrect
-                      ? 'bg-green-500/10 border-green-500 text-green-800'
+                      ? 'bg-green-500/10 border-green-500 text-green-800 dark:text-green-300'
                       : isWrong
-                      ? 'bg-red-500/10 border-red-500 text-red-800'
+                      ? 'bg-red-500/10 border-red-500 text-red-800 dark:text-red-300 animate-shake'
                       : isSelected
                       ? 'bg-primary/10 border-primary'
-                      : 'border-border hover:bg-muted/50'
+                      : 'border-border hover:bg-muted/50 hover:translate-x-1'
                   }`}
+                  whileHover={!answered ? { x: 4 } : undefined}
                 >
                   <span className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold ${
                     isCorrect
@@ -832,12 +948,13 @@ export default function TreinoPage() {
                     {isCorrect ? <CheckCircle2 className="w-4 h-4" /> : isWrong ? <XCircle className="w-4 h-4" /> : alt.key}
                   </span>
                   <span className="pt-0.5"><MathText text={alt.text ?? ''} /></span>
-                </button>
+                </motion.button>
               );
             })}
           </div>
-        </motion.div>
-      </AnimatePresence>
+          </motion.div>
+        </AnimatePresence>
+      </div>
 
       {/* Confirm / Next */}
       {!answered ? (
@@ -875,24 +992,22 @@ export default function TreinoPage() {
             )}
           </motion.div>
 
-          {/* AI Explanation */}
-          {!result?.acertou && (
-            <div className="bg-card rounded-xl p-4 border border-border">
-              <button
-                onClick={generateAIExplanation}
-                disabled={generatingExplanation}
-                className="flex items-center gap-2 text-sm text-primary font-medium hover:underline mb-3"
-              >
-                <Brain className="w-4 h-4" />
-                {generatingExplanation ? 'Gerando explicação...' : 'Gerar explicação detalhada com IA'}
-              </button>
-              {llmExplanation && (
-                <div className="text-sm text-foreground/80 leading-relaxed bg-muted/50 rounded-lg p-3">
-                  <MathText text={llmExplanation} />
-                </div>
-              )}
-            </div>
-          )}
+          {/* AI Explanation — available for ALL answers */}
+          <div className="bg-card rounded-xl p-4 border border-border">
+            <button
+              onClick={generateAIExplanation}
+              disabled={generatingExplanation}
+              className="flex items-center gap-2 text-sm text-primary font-medium hover:underline mb-3"
+            >
+              <Brain className="w-4 h-4" />
+              {generatingExplanation ? 'Gerando explicação...' : `${result?.acertou ? '📚 Ver explicação detalhada' : '🧠 Gerar explicação detalhada com IA'}`}
+            </button>
+            {llmExplanation && (
+              <div className="text-sm text-foreground/80 leading-relaxed bg-muted/50 rounded-lg p-3">
+                <MathText text={llmExplanation} />
+              </div>
+            )}
+          </div>
 
           {/* Feynman technique */}
           {!result?.acertou && !isReview && (
@@ -921,13 +1036,30 @@ export default function TreinoPage() {
             </div>
           )}
 
-          <button
-            onClick={nextQuestion}
-            className="w-full py-3 bg-primary text-primary-foreground rounded-xl font-medium text-sm hover:opacity-90 transition shadow-md flex items-center justify-center gap-2"
-          >
-            {currentIdx >= (questions?.length ?? 0) - 1 ? 'Finalizar Sessão' : 'Próxima Questão'}
-            <ChevronRight className="w-4 h-4" />
-          </button>
+          <div className="flex gap-3">
+            {currentIdx > 0 && (
+              <button
+                onClick={() => {
+                  setCurrentIdx(currentIdx - 1);
+                  setSelected(null);
+                  setAnswered(false);
+                  setResult(null);
+                  setFeynmanText('');
+                  setLlmExplanation('');
+                }}
+                className="px-4 py-3 bg-muted text-foreground rounded-xl font-medium text-sm hover:bg-muted/80 transition flex items-center gap-2"
+              >
+                <ChevronLeft className="w-4 h-4" /> Voltar
+              </button>
+            )}
+            <button
+              onClick={nextQuestion}
+              className="flex-1 py-3 bg-primary text-primary-foreground rounded-xl font-medium text-sm hover:opacity-90 transition shadow-md flex items-center justify-center gap-2"
+            >
+              {currentIdx >= (questions?.length ?? 0) - 1 ? 'Finalizar Sessão' : 'Próxima Questão'}
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       )}
     </div>

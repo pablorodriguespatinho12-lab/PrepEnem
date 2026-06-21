@@ -39,4 +39,5 @@ export const materiaColors: Record<string, string> = {
   'Geografia': '#72BF78',
   'Filosofia': '#FF90BB',
   'Sociologia': '#B8860B',
+  'Literatura': '#E07C24',
 };

@@ -72,6 +72,26 @@ export async function GET() {
       else if (rate < 50 && data.total >= 2) reforcar.push(m);
     }
 
+    // Essay part practice stats
+    const essayParts = await prisma.essayPartPractice.findMany({
+      where: { userId },
+      orderBy: { createdAt: 'desc' },
+    });
+    const essayPartStats: Record<string, { total: number; avgNota: number; lastNota: number | null }> = {};
+    const byPartType: Record<string, any[]> = {};
+    for (const p of (essayParts ?? [])) {
+      if (!byPartType[p.partType]) byPartType[p.partType] = [];
+      byPartType[p.partType].push(p);
+    }
+    for (const [type, items] of Object.entries(byPartType)) {
+      const withNota = items.filter(i => i.nota != null);
+      essayPartStats[type] = {
+        total: items.length,
+        avgNota: withNota.length > 0 ? Math.round(withNota.reduce((s, i) => s + (i.nota ?? 0), 0) / withNota.length * 10) / 10 : 0,
+        lastNota: items[0]?.nota ?? null,
+      };
+    }
+
     return NextResponse.json({
       totalRespondidas,
       totalAcertos,
@@ -83,6 +103,7 @@ export async function GET() {
       pendingReviews,
       dominadas,
       reforcar,
+      essayPartStats,
     });
   } catch (error: any) {
     console.error('Stats error:', error);

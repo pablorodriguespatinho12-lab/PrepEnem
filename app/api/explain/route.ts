@@ -9,61 +9,64 @@ export async function POST(request: Request) {
       return new Response(JSON.stringify({ error: 'Não autenticado' }), { status: 401 });
     }
 
-    const { enunciado, alternativas, respostaCorreta, respostaDada, materia } = await request.json();
+    const body = await request.json().catch(() => ({}));
+    const { enunciado, alternativas, respostaCorreta, respostaDada, materia } = body;
+    if (!enunciado || !respostaCorreta) {
+      return new Response(JSON.stringify({ error: 'Dados da questão incompletos' }), { status: 400 });
+    }
 
     const isExatas = ['Física', 'Matemática', 'Química'].includes(materia ?? '');
     const isFisicaMat = ['Física', 'Matemática'].includes(materia ?? '');
 
     const formulaSection = isFisicaMat
-      ? `\n\n**🧮 Fórmula(s) envolvida(s):**\nApresente a(s) fórmula(s) relevante(s) usando LaTeX entre $...$ para inline e $$...$$ para destaque. Ex: $S = S_0 + v_0 \\cdot t + \\frac{1}{2} a t^2$. Defina cada variável.\n\n**✏️ Exemplo resolvido passo a passo:**\nResolva NUMERICAMENTE a questão substituindo valores na fórmula. Use LaTeX para cada expressão. Mostre cada cálculo intermediário.`
+      ? `\n\n**🧮 Fórmula(s) envolvida(s):**\nApresente a(s) fórmula(s) relevante(s) usando LaTeX entre $...$ para inline e $$...$$ para destaque. Ex: $S = S_0 + v_0 \\cdot t + \\frac{1}{2} a t^2$. Defina cada variável.`
       : isExatas
         ? `\n\n**🧮 Conceito-chave / Reação / Equação:**\nApresente a fórmula química, equação balanceada ou conceito quantitativo usando LaTeX entre $...$ para notação.`
         : '';
 
-    // Truncate very long enunciados to leave room for a good explanation
+    // Truncate very long enunciados and clean special chars
     const maxEnunciadoLen = 1200;
-    const enunciadoTrimmed = (enunciado ?? '').length > maxEnunciadoLen
-      ? (enunciado as string).slice(0, maxEnunciadoLen) + '... [texto resumido]'
-      : (enunciado ?? '');
+    const cleanEnunciado = (enunciado ?? '').replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, ' ');
+    const enunciadoTrimmed = cleanEnunciado.length > maxEnunciadoLen
+      ? cleanEnunciado.slice(0, maxEnunciadoLen) + '... [texto resumido]'
+      : cleanEnunciado;
 
-    const prompt = `Você é um professor preparatório de ENEM/vestibular, especialista em ${materia ?? 'todas as áreas'}.
+    const prompt = `Você é um professor especialista em preparação para vestibulares brasileiros (ENEM, FUVEST, UNICAMP, etc.), com domínio profundo de ${materia ?? 'todas as áreas'}.
 
-OBJETIVO: Explicar passo a passo, de forma SIMPLES e DIDÁTICA, por que a resposta correta é "${respostaCorreta}" e por que "${respostaDada}" está errada. O aluno precisa ENTENDER a lógica e MEMORIZAR o conceito.
+Ao explicar uma questão, siga OBRIGATORIAMENTE esta estrutura, baseada em princípios de aprendizagem ativa e metacognição:
 
 REGRAS OBRIGATÓRIAS:
-• Use LaTeX ($...$) para fórmulas. NUNCA use ², ³, √ — use $x^2$, $\\sqrt{x}$, $\\frac{a}{b}$
-• Seja DIRETO — vá direto ao ponto, sem repetir o enunciado inteiro
-• Use linguagem simples, como se estivesse conversando com o aluno
-• Use analogias do dia a dia para facilitar a memorização
+• Use LaTeX ($...$) para fórmulas matemáticas/físicas. NUNCA use ², ³, √ — use $x^2$, $\\sqrt{x}$, $\\frac{a}{b}$
+• Linguagem clara, didática, como se estivesse conversando com o aluno
 • Markdown com emojis nos títulos
+• Use analogias do dia a dia quando ajudarem na compreensão
 
 ---
 **Matéria:** ${materia ?? 'Geral'}
-**Questão (resumo):** ${enunciadoTrimmed}
+**Questão:** ${enunciadoTrimmed}
 **Alternativas:** A) ${alternativas?.A ?? ''} | B) ${alternativas?.B ?? ''} | C) ${alternativas?.C ?? ''} | D) ${alternativas?.D ?? ''} | E) ${alternativas?.E ?? ''}
 **Correta:** ${respostaCorreta} | **Aluno marcou:** ${respostaDada}
 ---
 
-Responda nesta estrutura:
+Responda EXATAMENTE nesta estrutura:
 
-**📚 O que a questão cobra:**
-Em 2-3 frases, explique qual CONCEITO está sendo testado. Não repita o enunciado — só identifique o tema central.
+**📚 1. CONTEXTO DA QUESTÃO**
+Explique brevemente o tema geral abordado e por que ele costuma cair em vestibulares. (2-3 frases)
 ${formulaSection}
 
-**✅ Passo a passo — por que "${respostaCorreta}" é a certa:**
-Numere os passos do raciocínio (1, 2, 3...). Cada passo deve ser uma frase curta e clara. Destaque as palavras-chave do enunciado que levam à resposta.
+**🔍 2. INTERPRETAÇÃO**
+Destrinche o enunciado em partes simples. Identifique o que a questão realmente está pedindo, eliminando possíveis armadilhas ou confusões comuns. Destaque palavras-chave do enunciado.
 
-${respostaDada !== respostaCorreta ? `**❌ O erro de marcar "${respostaDada}":**
-Explique em 2-3 frases qual foi a armadilha ou confusão. Mostre EXATAMENTE onde o raciocínio desvia.\n\n` : ''}**🎯 Descartando as outras:**
-Uma frase para cada alternativa errada explicando o motivo.
+**🧩 3. RESOLUÇÃO PASSO A PASSO**
+Resolva de forma progressiva (passos 1, 2, 3...), explicando o raciocínio de cada etapa, não apenas o resultado final. Em questões de cálculo, mostre cada operação com LaTeX.
 
-**💡 Macete para decorar:**
-Dê um mnemônico, frase-chave ou regra prática que ajude a NUNCA mais errar esse tipo de questão. Seja criativo e memorável!
+**❌ 4. POR QUE AS ALTERNATIVAS ERRADAS ESTÃO ERRADAS**
+Explique o erro de CADA distrator (uma por uma: A, B, C, D, E — exceto a correta). Mostre qual confusão conceitual leva o aluno a marcar cada uma. Isso evita que ele erre por confusão futura.
+${respostaDada !== respostaCorreta ? `\nAtenção especial: o aluno marcou "${respostaDada}". Aprofunde o motivo dessa alternativa estar incorreta.\n` : ''}
+**💡 5. CONCEITO-CHAVE PARA FIXAR**
+Resuma em 2-3 linhas o conceito principal que essa questão testa, de forma que o aluno consiga resolver questões semelhantes sozinho. Pode ser um mnemônico, regra prática ou frase-chave que ele leve para a vida.
 
-**🔗 Cai junto no ENEM:**
-Cite 1-2 temas relacionados que o aluno deve revisar.
-
-IMPORTANTE: Seja conciso mas completo. Priorize CLAREZA sobre quantidade de texto.`;
+IMPORTANTE: Siga rigorosamente essa estrutura de 5 partes. Seja completo mas objetivo — cada seção deve ser densa em conteúdo útil, sem enrolação.`;
 
     const response = await fetch('https://apps.abacus.ai/v1/chat/completions', {
       method: 'POST',
@@ -75,12 +78,14 @@ IMPORTANTE: Seja conciso mas completo. Priorize CLAREZA sobre quantidade de text
         model: 'gpt-5.4-mini',
         messages: [{ role: 'user', content: prompt }],
         stream: true,
-        max_tokens: 3000,
+        max_tokens: 4000,
       }),
     });
 
     if (!response.ok) {
-      return new Response(JSON.stringify({ error: 'Erro na API LLM' }), { status: 500 });
+      const errorText = await response.text().catch(() => 'Unknown error');
+      console.error('LLM API error:', response.status, errorText);
+      return new Response(JSON.stringify({ error: 'Erro na API de explicação. Tente novamente.' }), { status: 500 });
     }
 
     const stream = new ReadableStream({

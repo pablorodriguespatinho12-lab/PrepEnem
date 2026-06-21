@@ -4,6 +4,8 @@ import { useSession } from 'next-auth/react';
 import { useRouter, usePathname } from 'next/navigation';
 import { SidebarNav } from './sidebar-nav';
 import { AppThemeProvider } from './app-theme-provider';
+import { ScrollProgress } from './animations';
+import { ParticlesBg } from './particles-bg';
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
   const { data: session, status } = useSession() || {};
@@ -45,9 +47,11 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <AppThemeProvider>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen relative">
+        <ParticlesBg />
+        <ScrollProgress />
         <SidebarNav />
-        <main className="md:ml-64 min-h-screen">
+        <main className="md:ml-64 min-h-screen relative" style={{ zIndex: 1 }}>
           {children}
         </main>
       </div>

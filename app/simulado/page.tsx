@@ -8,6 +8,7 @@ import {
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { materiaColors } from '@/lib/theme-colors';
+import { fireConfetti } from '@/components/animations';
 import dynamic from 'next/dynamic';
 
 const PdfPageViewer = dynamic(() => import('@/components/pdf-page-viewer'), { ssr: false });
@@ -485,10 +486,14 @@ export default function SimuladoPage() {
 
         {/* Alternatives */}
         <div className="space-y-2 mb-6">
-          {alternatives.map((alt) => (
-            <button
+          {alternatives.map((alt, altIdx) => (
+            <motion.button
               key={alt.key}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: altIdx * 0.08, duration: 0.3 }}
               onClick={() => handleAnswer(currentQ.id, alt.key)}
+              whileHover={{ x: 4 }}
               className={`w-full text-left p-4 rounded-xl border transition-all flex items-start gap-3 ${
                 answers[currentQ.id] === alt.key
                   ? 'border-primary bg-primary/5 shadow-sm'
@@ -503,7 +508,7 @@ export default function SimuladoPage() {
                 {alt.key}
               </span>
               <span className="text-sm flex-1"><MathText text={alt.text ?? ''} /></span>
-            </button>
+            </motion.button>
           ))}
         </div>
 
@@ -595,10 +600,12 @@ export default function SimuladoPage() {
 
     return (
       <div className="p-4 md:p-8 max-w-4xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} onAnimationComplete={() => { if (results.taxaAcerto >= 60) fireConfetti(); }}>
           {/* Score Header */}
           <div className="bg-card rounded-2xl p-6 md:p-8 shadow-sm border border-border mb-6 text-center">
-            <Trophy className="w-12 h-12 text-primary mx-auto mb-4" />
+            <motion.div initial={{ scale: 0 }} animate={{ scale: [0, 1.3, 1] }} transition={{ delay: 0.2, duration: 0.5 }}>
+              <Trophy className="w-12 h-12 text-primary mx-auto mb-4" />
+            </motion.div>
             <h1 className="font-display text-3xl md:text-4xl font-bold mb-2">
               {results.taxaAcerto}% de acerto
             </h1>

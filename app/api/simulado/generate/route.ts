@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { getCurrentCycleInfo, getWeekTopics } from '@/lib/schedule-data';
 
 export async function POST(req: Request) {
   try {
@@ -11,13 +12,22 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
     }
 
-    const { totalQuestoes = 90, materias } = await req.json().catch(() => ({}));
+    const { totalQuestoes = 90, materias, weeklySimulado } = await req.json().catch(() => ({}));
     const limit = Math.min(Math.max(totalQuestoes, 10), 180);
 
-    // Get questions, optionally filtered by materias
-    const where: any = {};
+    // If it's a weekly simulado (Friday), get this week's topics
+    const { weekIndex, todaySchedule } = getCurrentCycleInfo();
+    const isWeeklySimulado = weeklySimulado || todaySchedule?.isSimulado;
+    const weekTopics = isWeeklySimulado ? getWeekTopics(weekIndex) : [];
+    const weekMaterias = weekTopics.map(t => t.materia);
+    const weekSubtemas = weekTopics.flatMap(t => t.subtemas).map(s => s.toLowerCase());
+
+    // Build filter
+    const where: any = { dependeImagem: false };
     if (materias && Array.isArray(materias) && materias.length > 0) {
       where.materia = { in: materias };
+    } else if (isWeeklySimulado && weekMaterias.length > 0) {
+      where.materia = { in: weekMaterias };
     }
 
     const allQuestions = await prisma.question.findMany({ where });
@@ -26,7 +36,6 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Sem questões disponíveis' }, { status: 404 });
     }
 
-    // Shuffle
     const shuffle = (arr: any[]) => {
       const a = [...arr];
       for (let i = a.length - 1; i > 0; i--) {
@@ -36,27 +45,120 @@ export async function POST(req: Request) {
       return a;
     };
 
-    // Try to balance by materia
+    // For weekly simulado, prioritize questions matching this week's subtemas
+    let prioritized: any[] = [];
+    let others: any[] = [];
+
+    if (isWeeklySimulado && weekSubtemas.length > 0) {
+      for (const q of allQuestions) {
+        const qSub = (q.subtema ?? '').toLowerCase();
+        const qEnun = (q.enunciado ?? '').toLowerCase();
+        if (weekSubtemas.some(s => qSub.includes(s) || s.includes(qSub) || qEnun.includes(s))) {
+          prioritized.push(q);
+        } else {
+          others.push(q);
+        }
+      }
+    } else {
+      others = allQuestions;
+    }
+
+    // Select questions: prioritized first, then others
+    let selected: any[] = [];
+    const seenIds = new Set<string>();
+
+    // Balance by materia within prioritized
     const byMateria: Record<string, any[]> = {};
-    for (const q of allQuestions) {
+    for (const q of shuffle(prioritized)) {
       const m = q.materia;
       if (!byMateria[m]) byMateria[m] = [];
       byMateria[m].push(q);
     }
-
     const materiaKeys = Object.keys(byMateria);
-    const perMateria = Math.max(1, Math.floor(limit / materiaKeys.length));
-    let selected: any[] = [];
-
-    for (const m of materiaKeys) {
-      selected.push(...shuffle(byMateria[m]).slice(0, perMateria));
+    if (materiaKeys.length > 0) {
+      const perMateria = Math.max(1, Math.floor(limit / materiaKeys.length));
+      for (const m of materiaKeys) {
+        for (const q of byMateria[m].slice(0, perMateria)) {
+          if (!seenIds.has(q.id)) { seenIds.add(q.id); selected.push(q); }
+        }
+      }
     }
 
-    // Fill remaining
-    if (selected.length < limit) {
-      const usedIds = new Set(selected.map((q) => q.id));
-      const remaining = shuffle(allQuestions.filter((q) => !usedIds.has(q.id)));
-      selected.push(...remaining.slice(0, limit - selected.length));
+    // Fill with others
+    for (const q of shuffle(others)) {
+      if (selected.length >= limit) break;
+      if (!seenIds.has(q.id)) { seenIds.add(q.id); selected.push(q); }
+    }
+
+    // Fill remaining from prioritized overflow
+    for (const m of materiaKeys) {
+      for (const q of byMateria[m]) {
+        if (selected.length >= limit) break;
+        if (!seenIds.has(q.id)) { seenIds.add(q.id); selected.push(q); }
+      }
+    }
+
+    // If still not enough and it's weekly simulado, generate AI questions
+    if (selected.length < limit && isWeeklySimulado && weekTopics.length > 0) {
+      const apiKey = process.env.ABACUSAI_API_KEY;
+      if (apiKey) {
+        const neededPerTopic = Math.ceil((limit - selected.length) / weekTopics.length);
+        for (const topic of weekTopics) {
+          if (selected.length >= limit) break;
+          try {
+            const prompt = `Gere ${Math.min(neededPerTopic, 5)} questões modelo ENEM difíceis com 5 alternativas (A-E) sobre ${topic.materia}, especificamente: ${topic.subtemas.join(', ')}.
+
+REGRAS:
+- Nível de dificuldade ENEM real (médio a difícil)
+- Contexto realista com texto de apoio
+- Explicação didática
+
+Retorne JSON: {"questoes":[{"enunciado":"...","alternativaA":"...","alternativaB":"...","alternativaC":"...","alternativaD":"...","alternativaE":"...","respostaCorreta":"A","subtema":"...","dificuldade":"dificil","explicacao":"..."}]}
+Retorne SOMENTE JSON válido.`;
+
+            const llmRes = await fetch('https://apps.abacus.ai/v1/chat/completions', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
+              body: JSON.stringify({
+                model: 'gpt-5.4-mini',
+                messages: [{ role: 'user', content: prompt }],
+                max_tokens: 8000,
+                temperature: 0.7,
+                response_format: { type: 'json_object' },
+              }),
+            });
+            if (llmRes.ok) {
+              const llmData = await llmRes.json();
+              const raw = llmData?.choices?.[0]?.message?.content ?? '';
+              const parsed = JSON.parse(raw);
+              for (const q of (parsed?.questoes ?? [])) {
+                if (selected.length >= limit) break;
+                let resp = (q.respostaCorreta ?? 'A').toUpperCase();
+                if (!['A','B','C','D','E'].includes(resp)) resp = 'A';
+                const created = await prisma.question.create({
+                  data: {
+                    enunciado: q.enunciado ?? 'Questão',
+                    alternativaA: q.alternativaA ?? 'N/A',
+                    alternativaB: q.alternativaB ?? 'N/A',
+                    alternativaC: q.alternativaC ?? 'N/A',
+                    alternativaD: q.alternativaD ?? 'N/A',
+                    alternativaE: q.alternativaE ?? 'N/A',
+                    respostaCorreta: resp,
+                    materia: topic.materia,
+                    subtema: q.subtema ?? topic.subtemas[0] ?? 'Geral',
+                    dificuldade: q.dificuldade ?? 'dificil',
+                    explicacao: q.explicacao ?? null,
+                    origem: 'IA Gerada',
+                  },
+                });
+                selected.push(created);
+              }
+            }
+          } catch (e) {
+            console.error('Simulado AI generation error:', e);
+          }
+        }
+      }
     }
 
     selected = shuffle(selected).slice(0, limit);
@@ -71,6 +173,7 @@ export async function POST(req: Request) {
       questions: selected,
       total: selected.length,
       areas,
+      isWeeklySimulado,
     });
   } catch (error: any) {
     console.error('Simulado generate error:', error);

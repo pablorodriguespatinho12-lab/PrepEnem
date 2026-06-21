@@ -1,111 +1,331 @@
+export interface StudyTopic {
+  materia: string;
+  subtemas: string[];
+}
+
+export interface DaySchedule {
+  dayOfWeek: number; // 1=Seg, 2=Ter, 3=Qua, 4=Qui, 6=Sab, 0=Dom
+  dayName: string;
+  color: string;
+  topics: StudyTopic[];
+  isSimulado?: boolean;
+}
+
+export interface WeekSchedule {
+  weekNumber: number;
+  weekTitle: string;
+  days: DaySchedule[];
+}
+
+// 4-week study cycle based on the ENEM master plan
+export const studyCycle: WeekSchedule[] = [
+  {
+    weekNumber: 1,
+    weekTitle: 'Fundamentos Mais Importantes',
+    days: [
+      {
+        dayOfWeek: 1, dayName: 'Segunda-feira', color: '#60B5FF',
+        topics: [
+          { materia: 'Física', subtemas: ['Cinemática', 'velocidade média', 'deslocamento', 'MRU'] },
+          { materia: 'Química', subtemas: ['Mol', 'Massa molar', 'Conceito de átomo e molécula'] },
+        ],
+      },
+      {
+        dayOfWeek: 2, dayName: 'Terça-feira', color: '#80D8C3',
+        topics: [
+          { materia: 'Biologia', subtemas: ['Ecologia', 'cadeia alimentar', 'teia alimentar', 'fluxo de energia'] },
+          { materia: 'Geografia', subtemas: ['Globalização', 'Geopolítica básica', 'Ordem mundial'] },
+        ],
+      },
+      {
+        dayOfWeek: 3, dayName: 'Quarta-feira', color: '#D4A017',
+        topics: [
+          { materia: 'História', subtemas: ['Brasil Colônia', 'açúcar', 'escravidão', 'sociedade colonial'] },
+          { materia: 'Filosofia', subtemas: ['Sócrates', 'Platão', 'Aristóteles'] },
+        ],
+      },
+      {
+        dayOfWeek: 4, dayName: 'Quinta-feira', color: '#FF9149',
+        topics: [
+          { materia: 'Física', subtemas: ['MRUV', 'gráficos do movimento'] },
+          { materia: 'Sociologia', subtemas: ['Durkheim', 'fato social', 'coesão social'] },
+        ],
+      },
+      {
+        dayOfWeek: 5, dayName: 'Sexta-feira', color: '#FF6363',
+        topics: [],
+        isSimulado: true,
+      },
+      {
+        dayOfWeek: 6, dayName: 'Sábado', color: '#A19AD3',
+        topics: [
+          { materia: 'Química', subtemas: ['Balanceamento químico', 'Estequiometria básica'] },
+        ],
+      },
+      {
+        dayOfWeek: 0, dayName: 'Domingo', color: '#FF9898',
+        topics: [
+          { materia: 'Biologia', subtemas: ['Citologia', 'organelas', 'membrana plasmática', 'transporte celular'] },
+          { materia: 'História', subtemas: ['Iluminismo', 'Revolução Francesa'] },
+        ],
+      },
+    ],
+  },
+  {
+    weekNumber: 2,
+    weekTitle: 'Base Forte ENEM',
+    days: [
+      {
+        dayOfWeek: 1, dayName: 'Segunda-feira', color: '#60B5FF',
+        topics: [
+          { materia: 'Física', subtemas: ['Leis de Newton', 'força resultante'] },
+          { materia: 'Química', subtemas: ['Reagente limitante', 'rendimento da reação'] },
+        ],
+      },
+      {
+        dayOfWeek: 2, dayName: 'Terça-feira', color: '#80D8C3',
+        topics: [
+          { materia: 'Biologia', subtemas: ['Ecologia', 'relações ecológicas', 'sucessão ecológica'] },
+          { materia: 'Geografia', subtemas: ['Urbanização', 'êxodo rural', 'segregação urbana'] },
+        ],
+      },
+      {
+        dayOfWeek: 3, dayName: 'Quarta-feira', color: '#D4A017',
+        topics: [
+          { materia: 'História', subtemas: ['Revolução Industrial'] },
+          { materia: 'Filosofia', subtemas: ['Maquiavel', 'Hobbes', 'Locke'] },
+        ],
+      },
+      {
+        dayOfWeek: 4, dayName: 'Quinta-feira', color: '#FF9149',
+        topics: [
+          { materia: 'Física', subtemas: ['Atrito', 'plano inclinado'] },
+          { materia: 'Sociologia', subtemas: ['Karl Marx', 'luta de classes', 'alienação'] },
+        ],
+      },
+      {
+        dayOfWeek: 5, dayName: 'Sexta-feira', color: '#FF6363',
+        topics: [],
+        isSimulado: true,
+      },
+      {
+        dayOfWeek: 6, dayName: 'Sábado', color: '#A19AD3',
+        topics: [
+          { materia: 'Química', subtemas: ['Soluções', 'concentração', 'diluição'] },
+        ],
+      },
+      {
+        dayOfWeek: 0, dayName: 'Domingo', color: '#FF9898',
+        topics: [
+          { materia: 'Biologia', subtemas: ['Respiração celular', 'Fotossíntese'] },
+          { materia: 'História', subtemas: ['Independência do Brasil', 'Primeiro Reinado'] },
+        ],
+      },
+    ],
+  },
+  {
+    weekNumber: 3,
+    weekTitle: 'Conteúdos Muito Cobrados',
+    days: [
+      {
+        dayOfWeek: 1, dayName: 'Segunda-feira', color: '#60B5FF',
+        topics: [
+          { materia: 'Física', subtemas: ['Trabalho', 'energia cinética', 'energia potencial'] },
+          { materia: 'Química', subtemas: ['Ligações químicas', 'iônica', 'covalente', 'metálica'] },
+        ],
+      },
+      {
+        dayOfWeek: 2, dayName: 'Terça-feira', color: '#80D8C3',
+        topics: [
+          { materia: 'Biologia', subtemas: ['Genética', 'DNA', 'RNA', 'cromossomos'] },
+          { materia: 'Geografia', subtemas: ['Agropecuária', 'agronegócio', 'reforma agrária'] },
+        ],
+      },
+      {
+        dayOfWeek: 3, dayName: 'Quarta-feira', color: '#D4A017',
+        topics: [
+          { materia: 'História', subtemas: ['Era Vargas'] },
+          { materia: 'Filosofia', subtemas: ['Rousseau', 'contrato social'] },
+        ],
+      },
+      {
+        dayOfWeek: 4, dayName: 'Quinta-feira', color: '#FF9149',
+        topics: [
+          { materia: 'Física', subtemas: ['Conservação da energia', 'potência', 'rendimento'] },
+          { materia: 'Sociologia', subtemas: ['Max Weber', 'ação social'] },
+        ],
+      },
+      {
+        dayOfWeek: 5, dayName: 'Sexta-feira', color: '#FF6363',
+        topics: [],
+        isSimulado: true,
+      },
+      {
+        dayOfWeek: 6, dayName: 'Sábado', color: '#A19AD3',
+        topics: [
+          { materia: 'Química', subtemas: ['Termoquímica', 'endotérmica', 'exotérmica', 'entalpia'] },
+        ],
+      },
+      {
+        dayOfWeek: 0, dayName: 'Domingo', color: '#FF9898',
+        topics: [
+          { materia: 'Biologia', subtemas: ['1ª Lei de Mendel', 'heredogramas'] },
+          { materia: 'História', subtemas: ['República Velha'] },
+        ],
+      },
+    ],
+  },
+  {
+    weekNumber: 4,
+    weekTitle: 'ENEM Moderno',
+    days: [
+      {
+        dayOfWeek: 1, dayName: 'Segunda-feira', color: '#60B5FF',
+        topics: [
+          { materia: 'Física', subtemas: ['Corrente elétrica', 'tensão', 'resistência'] },
+          { materia: 'Química', subtemas: ['Funções orgânicas'] },
+        ],
+      },
+      {
+        dayOfWeek: 2, dayName: 'Terça-feira', color: '#80D8C3',
+        topics: [
+          { materia: 'Biologia', subtemas: ['Sistemas humanos', 'digestório', 'respiratório'] },
+          { materia: 'Geografia', subtemas: ['Meio ambiente', 'aquecimento global', 'sustentabilidade'] },
+        ],
+      },
+      {
+        dayOfWeek: 3, dayName: 'Quarta-feira', color: '#D4A017',
+        topics: [
+          { materia: 'História', subtemas: ['Ditadura Militar'] },
+          { materia: 'Filosofia', subtemas: ['Ética', 'cidadania'] },
+        ],
+      },
+      {
+        dayOfWeek: 4, dayName: 'Quinta-feira', color: '#FF9149',
+        topics: [
+          { materia: 'Física', subtemas: ['Potência elétrica', 'consumo de energia', 'circuitos'] },
+          { materia: 'Sociologia', subtemas: ['Cultura', 'indústria cultural', 'relativismo cultural'] },
+        ],
+      },
+      {
+        dayOfWeek: 5, dayName: 'Sexta-feira', color: '#FF6363',
+        topics: [],
+        isSimulado: true,
+      },
+      {
+        dayOfWeek: 6, dayName: 'Sábado', color: '#A19AD3',
+        topics: [
+          { materia: 'Química', subtemas: ['Eletroquímica', 'oxidação', 'redução', 'pilhas'] },
+        ],
+      },
+      {
+        dayOfWeek: 0, dayName: 'Domingo', color: '#FF9898',
+        topics: [
+          { materia: 'Biologia', subtemas: ['Imunologia', 'vacinas', 'doenças virais'] },
+          { materia: 'História', subtemas: ['Guerra Fria'] },
+        ],
+      },
+    ],
+  },
+];
+
+// Reference start date for the 4-week cycle (a known Monday)
+// Using June 2, 2025 as week 1 Monday — adjust if needed
+const CYCLE_START = new Date('2025-06-02T00:00:00');
+
+export function getCurrentCycleInfo(date?: Date) {
+  const now = date ?? new Date();
+  const diffMs = now.getTime() - CYCLE_START.getTime();
+  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+  // Total days in a 4-week cycle = 28
+  const dayInCycle = ((diffDays % 28) + 28) % 28; // 0-27
+  const weekIndex = Math.floor(dayInCycle / 7); // 0-3
+  const currentWeek = studyCycle[weekIndex];
+  const dayOfWeek = now.getDay(); // 0=Sun...6=Sat
+  const todaySchedule = currentWeek.days.find(d => d.dayOfWeek === dayOfWeek) ?? null;
+  return { weekIndex, weekNumber: weekIndex + 1, currentWeek, todaySchedule, dayInCycle };
+}
+
+// Get all topics for the current week (for simulado on Friday)
+export function getWeekTopics(weekIndex: number): StudyTopic[] {
+  const week = studyCycle[weekIndex];
+  if (!week) return [];
+  const allTopics: StudyTopic[] = [];
+  const seen = new Set<string>();
+  for (const day of week.days) {
+    for (const topic of day.topics) {
+      const key = topic.materia;
+      if (!seen.has(key)) {
+        seen.add(key);
+        allTopics.push(topic);
+      } else {
+        // Merge subtemas
+        const existing = allTopics.find(t => t.materia === key);
+        if (existing) {
+          for (const s of topic.subtemas) {
+            if (!existing.subtemas.includes(s)) existing.subtemas.push(s);
+          }
+        }
+      }
+    }
+  }
+  return allTopics;
+}
+
+// Legacy export for backward compatibility
 export interface StudyBlock {
   materia: string;
   tema: string;
   questoes: number;
 }
 
-export interface DaySchedule {
-  dayOfWeek: number; // 0=Sun, 1=Mon...
+export interface LegacyDaySchedule {
+  dayOfWeek: number;
   dayName: string;
   color: string;
-  manha: StudyBlock[]; // Estudo matinal - matérias ENEM rotativas
-  trabalho: StudyBlock[]; // Treino no trabalho - Português e Matemática fixos
+  manha: StudyBlock[];
+  trabalho: StudyBlock[];
   revisao?: string;
   isSimulado?: boolean;
 }
 
-export const weeklySchedule: DaySchedule[] = [
-  {
-    dayOfWeek: 1,
-    dayName: 'Segunda-feira',
-    color: '#60B5FF',
-    manha: [
-      { materia: 'Física', tema: 'Eletrodinâmica e Circuitos', questoes: 20 },
-      { materia: 'Química', tema: 'Química Geral e Estequiometria', questoes: 20 },
-    ],
-    trabalho: [
-      { materia: 'Português', tema: 'Interpretação de Textos + Gêneros Textuais', questoes: 20 },
-      { materia: 'Matemática', tema: 'Álgebra: Equações 1º e 2º grau', questoes: 20 },
-    ],
-    revisao: 'Flashcards dos erros da semana anterior (15 min)',
-  },
-  {
-    dayOfWeek: 2,
-    dayName: 'Terça-feira',
-    color: '#80D8C3',
-    manha: [
-      { materia: 'Biologia', tema: 'Ecologia e Meio Ambiente', questoes: 20 },
-      { materia: 'Geografia', tema: 'Espaço Agrário e Urbano', questoes: 20 },
-    ],
-    trabalho: [
-      { materia: 'Português', tema: 'Funções da Linguagem + Figuras de Linguagem', questoes: 20 },
-      { materia: 'Matemática', tema: 'Geometria Plana: Áreas, Perímetros', questoes: 20 },
-    ],
-    revisao: 'Explicar 3 conceitos errados (Técnica Feynman)',
-  },
-  {
-    dayOfWeek: 3,
-    dayName: 'Quarta-feira',
-    color: '#D4A017',
-    manha: [
-      { materia: 'História', tema: 'Brasil Colônia e Era Vargas', questoes: 20 },
-      { materia: 'Filosofia', tema: 'Filosofia Antiga: Sócrates, Platão, Aristóteles', questoes: 20 },
-    ],
-    trabalho: [
-      { materia: 'Português', tema: 'Gramática: Pontuação, Concordância', questoes: 20 },
-      { materia: 'Matemática', tema: 'Estatística: Média, Mediana, Moda', questoes: 20 },
-    ],
-    revisao: 'Revisão espaçada de segunda e terça (10 questões)',
-  },
-  {
-    dayOfWeek: 4,
-    dayName: 'Quinta-feira',
-    color: '#FF9149',
-    manha: [
-      { materia: 'Física', tema: 'Mecânica: Cinemática e Dinâmica', questoes: 20 },
-      { materia: 'Sociologia', tema: 'Cultura, Sociedade e Movimentos Sociais', questoes: 20 },
-    ],
-    trabalho: [
-      { materia: 'Português', tema: 'Literatura: Modernismo', questoes: 20 },
-      { materia: 'Matemática', tema: 'Trigonometria + Geometria Espacial', questoes: 20 },
-    ],
-    revisao: 'Mapas mentais dos temas da semana (20 min)',
-  },
-  {
-    dayOfWeek: 5,
-    dayName: 'Sexta-feira',
-    color: '#FF6363',
-    manha: [],
+// Convert current cycle day to legacy format for backward compatibility
+export function getTodayLegacySchedule(date?: Date): LegacyDaySchedule | null {
+  const { todaySchedule } = getCurrentCycleInfo(date);
+  if (!todaySchedule) return null;
+  return {
+    dayOfWeek: todaySchedule.dayOfWeek,
+    dayName: todaySchedule.dayName,
+    color: todaySchedule.color,
+    manha: todaySchedule.topics.map(t => ({
+      materia: t.materia,
+      tema: t.subtemas.join(', '),
+      questoes: 20,
+    })),
     trabalho: [
       { materia: 'Português', tema: 'Treino diário', questoes: 20 },
       { materia: 'Matemática', tema: 'Treino diário', questoes: 20 },
     ],
-    revisao: 'Correção detalhada do simulado + Caderno de erros',
-    isSimulado: true,
-  },
-  {
-    dayOfWeek: 6,
-    dayName: 'Sábado',
-    color: '#A19AD3',
-    manha: [
-      { materia: 'Química', tema: 'Química Orgânica e Reações', questoes: 20 },
-      { materia: 'Biologia', tema: 'Genética e Citologia', questoes: 20 },
-    ],
-    trabalho: [
-      { materia: 'Português', tema: 'Variação Linguística + Intertextualidade', questoes: 20 },
-      { materia: 'Matemática', tema: 'Funções (1º, 2º grau, Exponencial)', questoes: 20 },
-    ],
-    revisao: 'Revisão espaçada dos erros da semana (10 questões)',
-  },
-  {
-    dayOfWeek: 0,
-    dayName: 'Domingo',
-    color: '#FF9898',
-    manha: [
-      { materia: 'Geografia', tema: 'Geopolítica e Globalização', questoes: 20 },
-      { materia: 'História', tema: 'Ditadura Militar e República', questoes: 20 },
-    ],
-    trabalho: [],
-    revisao: 'Revisão geral de TODOS os erros da semana + Redação ENEM',
-  },
-];
+    isSimulado: todaySchedule.isSimulado,
+  };
+}
+
+// Build a weeklySchedule-like array for the current week (for dashboard weekly view)
+export function getCurrentWeekSchedule(): LegacyDaySchedule[] {
+  const { currentWeek } = getCurrentCycleInfo();
+  return currentWeek.days.map(d => ({
+    dayOfWeek: d.dayOfWeek,
+    dayName: d.dayName,
+    color: d.color,
+    manha: d.topics.map(t => ({
+      materia: t.materia,
+      tema: t.subtemas.join(', '),
+      questoes: 20,
+    })),
+    trabalho: d.dayOfWeek !== 5 ? [
+      { materia: 'Português', tema: 'Treino diário', questoes: 20 },
+      { materia: 'Matemática', tema: 'Treino diário', questoes: 20 },
+    ] : [],
+    isSimulado: d.isSimulado,
+  }));
+}
