@@ -33,7 +33,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
     if (!deck) return NextResponse.json({ error: 'Deck não encontrado' }, { status: 404 });
 
     // Get user's progress on these cards
-    const cardIds = deck.cards.map((c) => c.id);
+    const cardIds = deck.cards.map((c: any) => c.id);
     const allProgress = await prisma.flashcardProgress.findMany({
       where: { userId: user.id, cardId: { in: cardIds } },
       orderBy: { dataResposta: 'desc' },
