@@ -269,7 +269,7 @@ export async function POST(req: Request) {
         const dependeImagem = imagePatterns.test(enunciado);
 
         // Build origin string
-        const origemParts = [];
+        const origemParts: string[] = [];
         if (ano) origemParts.push(`ENEM ${ano}`);
         if (dia) origemParts.push(`D${dia}`);
         if (!isNaN(qNum)) origemParts.push(`Q${qNum}`);
