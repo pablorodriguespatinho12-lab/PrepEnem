@@ -2,7 +2,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, CheckCircle2, XCircle, Trophy, Loader2, ArrowRight, BookOpen, Target, Brain } from 'lucide-react';
+import { ChevronLeft, CheckCircle2, XCircle, Trophy, Loader2, ArrowRight, BookOpen, Target, Brain, AlertTriangle, RefreshCcw } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
 import dynamic from 'next/dynamic';
@@ -20,6 +20,7 @@ export default function ProvaDetailPage() {
   const [submitted, setSubmitted] = useState(false);
   const [feedback, setFeedback] = useState<any>(null);
   const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [llmExplanation, setLlmExplanation] = useState('');
   const [generatingExplanation, setGeneratingExplanation] = useState(false);
 
@@ -272,22 +273,33 @@ export default function ProvaDetailPage() {
   const handleSubmit = async () => {
     if (!selectedAnswer) return;
     setSubmitting(true);
+    setSubmitError(null);
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 15000);
+
     try {
       const res = await fetch('/api/provas/responder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ examId, questionId: q.id, respostaDada: selectedAnswer }),
+        signal: controller.signal,
       });
-      const data = await res.json();
+      const data = await res.json().catch(() => ({}));
       if (!res.ok) {
-        toast.error(data.error || 'Erro');
-        return;
+        throw new Error(data?.error || 'Erro ao verificar resposta.');
       }
       setFeedback(data);
       setSubmitted(true);
-    } catch (e) {
-      toast.error('Erro ao enviar');
+    } catch (e: any) {
+      const message =
+        e?.name === 'AbortError'
+          ? 'A verificação demorou demais. Confira sua conexão e tente de novo.'
+          : e?.message || 'Erro ao enviar resposta.';
+      setSubmitError(message);
+      toast.error(message);
     } finally {
+      clearTimeout(timeoutId);
       setSubmitting(false);
     }
   };
@@ -305,6 +317,7 @@ export default function ProvaDetailPage() {
       setSelectedAnswer(null);
       setSubmitted(false);
       setFeedback(null);
+      setSubmitError(null);
       setLlmExplanation('');
       setGeneratingExplanation(false);
       fetchExam();
@@ -373,20 +386,24 @@ export default function ProvaDetailPage() {
 
           <div className="space-y-2">
             {alternativas.map((alt, i) => {
+              // isCorrect/isWrong só existem quando `submitted` é true, e `submitted` só vira
+              // true depois que `feedback` já foi setado (mesmo bloco síncrono em
+              // handleSubmit) — não há janela onde submitted=true e feedback=null aqui.
               const isCorrect = submitted && alt.letra === feedback?.respostaCorreta;
               const isWrong = submitted && selectedAnswer === alt.letra && alt.letra !== feedback?.respostaCorreta;
               const isSelected = !submitted && selectedAnswer === alt.letra;
+              const isChecking = submitting && selectedAnswer === alt.letra;
 
               return (
                 <motion.button
                   key={alt.letra}
-                  whileHover={!submitted ? { scale: 1.01, x: 4 } : {}}
-                  whileTap={!submitted ? { scale: 0.99 } : {}}
+                  whileHover={!submitted && !submitting ? { scale: 1.01, x: 4 } : {}}
+                  whileTap={!submitted && !submitting ? { scale: 0.99 } : {}}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  disabled={submitted}
-                  onClick={() => !submitted && setSelectedAnswer(alt.letra)}
+                  disabled={submitted || submitting}
+                  onClick={() => !submitted && !submitting && setSelectedAnswer(alt.letra)}
                   className={`w-full text-left p-4 rounded-xl border-2 transition-all flex items-start gap-3 ${
                     isCorrect
                       ? 'border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30'
@@ -408,7 +425,7 @@ export default function ProvaDetailPage() {
                             : 'bg-muted text-foreground'
                     }`}
                   >
-                    {alt.letra}
+                    {isChecking ? <Loader2 className="w-4 h-4 animate-spin" /> : alt.letra}
                   </span>
                   <span className="text-foreground flex-1">
                     <MathText text={alt.texto} />
@@ -468,6 +485,27 @@ export default function ProvaDetailPage() {
                   </div>
                 )}
               </div>
+            </motion.div>
+          )}
+
+          {/* Error state: fetch failed or timed out */}
+          {submitError && !submitted && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mt-6 rounded-xl p-4 bg-amber-500/10 border border-amber-500/20"
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <AlertTriangle className="w-5 h-5 text-amber-600" />
+                <span className="font-bold text-amber-700">Não deu pra verificar</span>
+              </div>
+              <p className="text-sm text-foreground/70 mb-3">{submitError}</p>
+              <button
+                onClick={handleSubmit}
+                className="flex items-center gap-2 px-4 py-2 bg-amber-500 text-white rounded-lg font-medium text-sm hover:opacity-90 transition"
+              >
+                <RefreshCcw className="w-4 h-4" /> Tentar novamente
+              </button>
             </motion.div>
           )}
 
