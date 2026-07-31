@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState, useCallback } from 'react';
 import { useRouter, useParams, useSearchParams } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { ChevronLeft, CheckCircle, XCircle, RotateCw, Trophy, Lightbulb, Loader2, RefreshCw, Sparkles, Plus } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
@@ -12,6 +12,7 @@ export default function FlashcardDeckPage() {
   const searchParams = useSearchParams();
   const deckId = params.deckId as string;
   const initialMode = (searchParams.get('mode') || 'todos') as 'todos' | 'revisar';
+  const shouldReduceMotion = useReducedMotion();
 
   const [deck, setDeck] = useState<any>(null);
   const [cards, setCards] = useState<any[]>([]);
@@ -27,6 +28,7 @@ export default function FlashcardDeckPage() {
   const [finished, setFinished] = useState(false);
   const [animating, setAnimating] = useState(false);
   const [generating, setGenerating] = useState(false);
+  const [lastAnswer, setLastAnswer] = useState<'correct' | 'wrong' | null>(null);
 
   const fetchDeck = useCallback(
     async (m: 'todos' | 'revisar' = mode) => {
@@ -65,6 +67,7 @@ export default function FlashcardDeckPage() {
   const handleAnswer = async (acertou: boolean) => {
     if (animating) return;
     setAnimating(true);
+    setLastAnswer(acertou ? 'correct' : 'wrong');
     const currentCard = cards[currentIdx];
     if (!currentCard) return;
 
@@ -90,10 +93,12 @@ export default function FlashcardDeckPage() {
           setShowHint(false);
         }
         setAnimating(false);
+        setLastAnswer(null);
       }, 400);
     } catch (e) {
       toast.error('Erro ao salvar resposta');
       setAnimating(false);
+      setLastAnswer(null);
     }
   };
 
@@ -213,7 +218,8 @@ export default function FlashcardDeckPage() {
       )}
 
       {/* Card or Finished */}
-      <AnimatePresence mode="wait">
+      <div className="relative">
+      <AnimatePresence mode="popLayout">
         {finished ? (
           <motion.div
             key="finished"
@@ -223,9 +229,9 @@ export default function FlashcardDeckPage() {
             className="text-center bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 border border-emerald-200 dark:border-emerald-800 rounded-3xl p-10"
           >
             <motion.div
-              initial={{ scale: 0, rotate: -180 }}
+              initial={{ scale: 0, rotate: shouldReduceMotion ? 0 : -180 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{ type: 'spring', delay: 0.2 }}
+              transition={shouldReduceMotion ? { duration: 0.01 } : { type: 'spring', delay: 0.2 }}
               className="inline-block mb-4"
             >
               <Trophy className="w-20 h-20 text-amber-500" />
@@ -290,10 +296,10 @@ export default function FlashcardDeckPage() {
         ) : currentCard ? (
           <motion.div
             key={currentCard.id}
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: shouldReduceMotion ? 0 : 50 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.25 }}
+            exit={{ opacity: 0, x: shouldReduceMotion ? 0 : -50 }}
+            transition={{ duration: shouldReduceMotion ? 0.01 : 0.25 }}
           >
             {/* 3D flip card */}
             <div
@@ -303,7 +309,11 @@ export default function FlashcardDeckPage() {
             >
               <motion.div
                 animate={{ rotateY: flipped ? 180 : 0 }}
-                transition={{ duration: 0.6, type: 'spring', stiffness: 100, damping: 15 }}
+                transition={
+                  shouldReduceMotion
+                    ? { duration: 0 }
+                    : { duration: 0.6, type: 'spring', stiffness: 100, damping: 15 }
+                }
                 style={{ transformStyle: 'preserve-3d', minHeight: '400px' }}
                 className="relative w-full"
               >
@@ -385,9 +395,19 @@ export default function FlashcardDeckPage() {
                   <motion.button
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
+                    animate={
+                      !shouldReduceMotion && lastAnswer === 'wrong' ? { scale: [1, 1.12, 1] } : { scale: 1 }
+                    }
+                    transition={{ duration: 0.35, ease: 'easeOut' }}
                     onClick={() => handleAnswer(false)}
                     disabled={animating}
-                    className="flex items-center justify-center gap-2 py-4 bg-gradient-to-r from-rose-500 to-red-600 text-white rounded-2xl font-bold shadow-lg hover:shadow-xl transition-shadow disabled:opacity-50"
+                    className={`flex items-center justify-center gap-2 py-4 bg-gradient-to-r from-rose-500 to-red-600 text-white rounded-2xl font-bold shadow-lg transition-shadow ${
+                      lastAnswer === 'wrong'
+                        ? 'ring-4 ring-rose-300 shadow-xl'
+                        : lastAnswer === 'correct'
+                        ? 'opacity-40'
+                        : 'hover:shadow-xl disabled:opacity-50'
+                    }`}
                   >
                     <XCircle className="w-5 h-5" />
                     Errei
@@ -395,9 +415,19 @@ export default function FlashcardDeckPage() {
                   <motion.button
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
+                    animate={
+                      !shouldReduceMotion && lastAnswer === 'correct' ? { scale: [1, 1.12, 1] } : { scale: 1 }
+                    }
+                    transition={{ duration: 0.35, ease: 'easeOut' }}
                     onClick={() => handleAnswer(true)}
                     disabled={animating}
-                    className="flex items-center justify-center gap-2 py-4 bg-gradient-to-r from-emerald-500 to-green-600 text-white rounded-2xl font-bold shadow-lg hover:shadow-xl transition-shadow disabled:opacity-50"
+                    className={`flex items-center justify-center gap-2 py-4 bg-gradient-to-r from-emerald-500 to-green-600 text-white rounded-2xl font-bold shadow-lg transition-shadow ${
+                      lastAnswer === 'correct'
+                        ? 'ring-4 ring-emerald-300 shadow-xl'
+                        : lastAnswer === 'wrong'
+                        ? 'opacity-40'
+                        : 'hover:shadow-xl disabled:opacity-50'
+                    }`}
                   >
                     <CheckCircle className="w-5 h-5" />
                     Acertei
@@ -423,6 +453,7 @@ export default function FlashcardDeckPage() {
           </div>
         )}
       </AnimatePresence>
+      </div>
     </div>
   );
 }
