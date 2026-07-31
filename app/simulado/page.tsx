@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import {
   Clock, Play, Pause, BookOpen, ChevronLeft, ChevronRight,
   CheckCircle2, XCircle, BarChart3, Trophy, AlertTriangle, Timer, TimerOff, RotateCcw
@@ -25,6 +25,7 @@ function formatTime(seconds: number) {
 
 export default function SimuladoPage() {
   const router = useRouter();
+  const shouldReduceMotion = useReducedMotion();
   const [phase, setPhase] = useState<Phase>('config');
   const [checkingSession, setCheckingSession] = useState(true);
 
@@ -465,51 +466,74 @@ export default function SimuladoPage() {
           </div>
         )}
 
-        {/* Question */}
-        <div className="bg-card rounded-xl p-5 md:p-6 shadow-sm border border-border mb-4">
-          <div className="flex items-center gap-2 mb-3 flex-wrap">
-            <span
-              className="text-xs font-medium px-2.5 py-1 rounded-full text-white"
-              style={{ backgroundColor: (materiaColors as any)[currentQ.materia] ?? '#888' }}
-            >
-              {currentQ.materia}
-            </span>
-            <span className="text-xs text-muted-foreground">{currentQ.subtema}</span>
-          </div>
-          <div className="text-sm md:text-base leading-relaxed whitespace-pre-wrap"><MathText text={currentQ.enunciado ?? ''} /></div>
-          {currentQ.pdfFileUrl && currentQ.paginaPdf && (
-            <div className="mt-4">
-              <PdfPageViewer pdfUrl={currentQ.pdfFileUrl} pageNumber={currentQ.paginaPdf} />
-            </div>
-          )}
-        </div>
-
-        {/* Alternatives */}
-        <div className="space-y-2 mb-6">
-          {alternatives.map((alt, altIdx) => (
-            <motion.button
-              key={alt.key}
-              initial={{ opacity: 0, x: -20 }}
+        <div className="relative">
+          <AnimatePresence mode="popLayout">
+            <motion.div
+              key={currentQ.id ?? currentIdx}
+              initial={{ opacity: 0, x: shouldReduceMotion ? 0 : 30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: altIdx * 0.08, duration: 0.3 }}
-              onClick={() => handleAnswer(currentQ.id, alt.key)}
-              whileHover={{ x: 4 }}
-              className={`w-full text-left p-4 rounded-xl border transition-all flex items-start gap-3 ${
-                answers[currentQ.id] === alt.key
-                  ? 'border-primary bg-primary/5 shadow-sm'
-                  : 'border-border hover:border-primary/30 hover:bg-muted/30'
-              }`}
+              exit={{ opacity: 0, x: shouldReduceMotion ? 0 : -30 }}
+              transition={{ duration: shouldReduceMotion ? 0.01 : 0.3 }}
             >
-              <span className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold flex-shrink-0 ${
-                answers[currentQ.id] === alt.key
-                  ? 'bg-primary text-primary-foreground'
-                  : 'bg-muted'
-              }`}>
-                {alt.key}
-              </span>
-              <span className="text-sm flex-1"><MathText text={alt.text ?? ''} /></span>
-            </motion.button>
-          ))}
+              {/* Question */}
+              <div className="bg-card rounded-xl p-5 md:p-6 shadow-sm border border-border mb-4">
+                <div className="flex items-center gap-2 mb-3 flex-wrap">
+                  <span
+                    className="text-xs font-medium px-2.5 py-1 rounded-full text-white"
+                    style={{ backgroundColor: (materiaColors as any)[currentQ.materia] ?? '#888' }}
+                  >
+                    {currentQ.materia}
+                  </span>
+                  <span className="text-xs text-muted-foreground">{currentQ.subtema}</span>
+                </div>
+                <div className="text-sm md:text-base leading-relaxed whitespace-pre-wrap"><MathText text={currentQ.enunciado ?? ''} /></div>
+                {currentQ.pdfFileUrl && currentQ.paginaPdf && (
+                  <div className="mt-4">
+                    <PdfPageViewer pdfUrl={currentQ.pdfFileUrl} pageNumber={currentQ.paginaPdf} />
+                  </div>
+                )}
+              </div>
+
+              {/* Alternatives */}
+              <div className="space-y-2 mb-6">
+                {alternatives.map((alt, altIdx) => {
+                  const isSelected = answers[currentQ.id] === alt.key;
+                  return (
+                    <motion.button
+                      key={alt.key}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={
+                        isSelected && !shouldReduceMotion
+                          ? { opacity: 1, x: 0, scale: [1, 1.05, 1] }
+                          : { opacity: 1, x: 0, scale: 1 }
+                      }
+                      transition={
+                        isSelected && !shouldReduceMotion
+                          ? { duration: 0.25, ease: 'easeOut' }
+                          : { delay: altIdx * 0.08, duration: 0.3 }
+                      }
+                      onClick={() => handleAnswer(currentQ.id, alt.key)}
+                      whileHover={{ x: 4 }}
+                      className={`w-full text-left p-4 rounded-xl border transition-all flex items-start gap-3 ${
+                        isSelected
+                          ? 'border-primary bg-primary/5 shadow-sm'
+                          : 'border-border hover:border-primary/30 hover:bg-muted/30'
+                      }`}
+                    >
+                      <span className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold flex-shrink-0 ${
+                        isSelected
+                          ? 'bg-primary text-primary-foreground'
+                          : 'bg-muted'
+                      }`}>
+                        {alt.key}
+                      </span>
+                      <span className="text-sm flex-1"><MathText text={alt.text ?? ''} /></span>
+                    </motion.button>
+                  );
+                })}
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
 
         {/* Navigation */}

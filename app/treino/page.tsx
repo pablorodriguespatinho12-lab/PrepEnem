@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import {
   BookOpen, ChevronLeft, ChevronRight, CheckCircle2, XCircle,
@@ -38,6 +38,7 @@ export default function TreinoPage() {
   const filterMateria = searchParams?.get('materia') ?? '';
   const filterSubtema = searchParams?.get('subtema') ?? '';
   const errosQuestionIds = searchParams?.get('questionIds') ?? '';
+  const shouldReduceMotion = useReducedMotion();
 
   const [questions, setQuestions] = useState<any[]>([]);
   const [reviewData, setReviewData] = useState<any[]>([]);
@@ -867,18 +868,28 @@ export default function TreinoPage() {
       </div>
 
       {/* Question with 3D flip transition */}
-      <div className="perspective-1000 mb-4">
-        <AnimatePresence mode="wait">
+      <div className="perspective-1000 mb-4 relative">
+        <AnimatePresence mode="popLayout">
           <motion.div
             key={currentIdx}
-            initial={{ opacity: 0, rotateY: -90, scale: 0.85 }}
-            animate={{ opacity: 1, rotateY: 0, scale: 1 }}
+            initial={
+              shouldReduceMotion
+                ? { opacity: 0 }
+                : { opacity: 0, rotateY: -90, scale: 0.85 }
+            }
+            animate={
+              shouldReduceMotion
+                ? { opacity: 1 }
+                : { opacity: 1, rotateY: 0, scale: 1 }
+            }
             exit={
-              result?.acertou === false
+              shouldReduceMotion
+                ? { opacity: 0, transition: { duration: 0.01 } }
+                : result?.acertou === false
                 ? { opacity: 0, y: 200, rotateX: 30, transition: { duration: 0.5, ease: 'easeIn' } }
                 : { opacity: 0, rotateY: 90, scale: 0.85, transition: { duration: 0.4 } }
             }
-            transition={{ duration: 0.5, ease: 'easeOut' }}
+            transition={{ duration: shouldReduceMotion ? 0.01 : 0.5, ease: 'easeOut' }}
             style={{ transformStyle: 'preserve-3d' }}
             className="bg-card/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-border card-float"
           >
@@ -920,8 +931,16 @@ export default function TreinoPage() {
                 <motion.button
                   key={alt.key}
                   initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: altIdx * 0.08, duration: 0.3 }}
+                  animate={
+                    isCorrect && !shouldReduceMotion
+                      ? { opacity: 1, x: 0, scale: [1, 1.08, 1] }
+                      : { opacity: 1, x: 0, scale: 1 }
+                  }
+                  transition={
+                    isCorrect && !shouldReduceMotion
+                      ? { duration: 0.35, ease: 'easeOut' }
+                      : { delay: altIdx * 0.08, duration: 0.3 }
+                  }
                   onClick={() => !answered && setSelected(alt.key)}
                   disabled={answered}
                   data-alt={alt.key}
