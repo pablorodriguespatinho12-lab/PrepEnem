@@ -4,7 +4,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import {
-  BookOpen, ChevronLeft, ChevronRight, CheckCircle2, XCircle,
+  BookOpen, ChevronLeft, ChevronRight, CheckCircle2, XCircle, AlertTriangle,
   Brain, Loader2, RefreshCcw, Home, Send, Sparkles, Trophy,
   GraduationCap, ChevronDown, Lightbulb, FlaskConical, Calculator, Play, Eye, EyeOff, ImageIcon
 } from 'lucide-react';
@@ -46,6 +46,7 @@ export default function TreinoPage() {
   const [selected, setSelected] = useState<string | null>(null);
   const [answered, setAnswered] = useState(false);
   const [result, setResult] = useState<any>(null);
+  const [answerError, setAnswerError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [sessionStarted, setSessionStarted] = useState(false);
   const [score, setScore] = useState({ correct: 0, wrong: 0 });
@@ -240,6 +241,11 @@ export default function TreinoPage() {
   const handleAnswer = async () => {
     if (!selected || !currentQ) return;
     setAnswered(true);
+    setAnswerError(null);
+    setResult(null);
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 15000);
 
     try {
       if (isErrosReview) {
@@ -263,7 +269,7 @@ export default function TreinoPage() {
           setStreak(0);
           setErrosWrongIds((prev) => [...prev, currentQ.id]);
         }
-        // Also record answer server-side
+        // Also record answer server-side (best-effort, não bloqueia a UI que já tem o veredito local)
         fetch('/api/treino/answer', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -276,7 +282,12 @@ export default function TreinoPage() {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ reviewId: reviewItem?.id, acertou }),
+          signal: controller.signal,
         });
+        if (!res.ok) {
+          const errBody = await res.json().catch(() => ({}));
+          throw new Error(errBody?.error || 'Erro ao registrar revisão.');
+        }
         setResult({
           acertou,
           respostaCorreta: currentQ.respostaCorreta,
@@ -302,7 +313,12 @@ export default function TreinoPage() {
             questionId: currentQ.id,
             respostaDada: selected,
           }),
+          signal: controller.signal,
         });
+        if (!res.ok) {
+          const errBody = await res.json().catch(() => ({}));
+          throw new Error(errBody?.error || 'Erro ao verificar resposta.');
+        }
         const data = await res.json();
         setResult(data);
         flashScreen(data?.acertou ? 'correct' : 'wrong');
@@ -326,10 +342,22 @@ export default function TreinoPage() {
           setStreak(0);
         }
       }
-    } catch (e) {
+    } catch (e: any) {
       console.error(e);
-      toast.error('Erro ao processar resposta');
+      const message =
+        e?.name === 'AbortError'
+          ? 'A verificação demorou demais. Confira sua conexão e tente de novo.'
+          : e?.message || 'Erro ao verificar resposta. Tente de novo.';
+      setAnswerError(message);
+      toast.error(message);
+    } finally {
+      clearTimeout(timeoutId);
     }
+  };
+
+  const retryAnswer = () => {
+    // `selected` continua igual; só reenvia a mesma resposta.
+    handleAnswer();
   };
 
   const generateAIExplanation = async () => {
@@ -431,6 +459,7 @@ export default function TreinoPage() {
         setSelected(null);
         setAnswered(false);
         setResult(null);
+        setAnswerError(null);
         setFeynmanText('');
         setLlmExplanation('');
         toast.info(`Rodada ${errosRound + 1}: ${wrongQs.length} questão(ões) para revisar novamente!`);
@@ -445,6 +474,7 @@ export default function TreinoPage() {
     setSelected(null);
     setAnswered(false);
     setResult(null);
+    setAnswerError(null);
     setFeynmanText('');
     setLlmExplanation('');
     if (sessionId) saveSessionProgress(sessionId, newIdx, score);
@@ -924,8 +954,11 @@ export default function TreinoPage() {
           {/* Alternatives */}
           <div className="space-y-2">
             {alternatives.map((alt, altIdx) => {
-              const isCorrect = answered && alt.key === result?.respostaCorreta;
-              const isWrong = answered && alt.key === selected && !result?.acertou;
+              // Só marca certo/errado quando o veredito do servidor (result) já chegou —
+              // enquanto `answered && !result` (verificando) ou em erro, fica neutro.
+              const isCorrect = !!result && alt.key === result.respostaCorreta;
+              const isWrong = !!result && alt.key === selected && !result.acertou;
+              const isChecking = answered && !result && !answerError && alt.key === selected;
               const isSelected = alt.key === selected;
               return (
                 <motion.button
@@ -964,7 +997,15 @@ export default function TreinoPage() {
                       ? 'bg-primary text-primary-foreground'
                       : 'bg-muted text-muted-foreground'
                   }`}>
-                    {isCorrect ? <CheckCircle2 className="w-4 h-4" /> : isWrong ? <XCircle className="w-4 h-4" /> : alt.key}
+                    {isCorrect ? (
+                      <CheckCircle2 className="w-4 h-4" />
+                    ) : isWrong ? (
+                      <XCircle className="w-4 h-4" />
+                    ) : isChecking ? (
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                    ) : (
+                      alt.key
+                    )}
                   </span>
                   <span className="pt-0.5"><MathText text={alt.text ?? ''} /></span>
                 </motion.button>
@@ -975,7 +1016,7 @@ export default function TreinoPage() {
         </AnimatePresence>
       </div>
 
-      {/* Confirm / Next */}
+      {/* Confirm / Checking / Error / Next */}
       {!answered ? (
         <button
           onClick={handleAnswer}
@@ -984,6 +1025,29 @@ export default function TreinoPage() {
         >
           Confirmar Resposta
         </button>
+      ) : answerError ? (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="rounded-xl p-5 bg-amber-500/10 border border-amber-500/20"
+        >
+          <div className="flex items-center gap-2 mb-2">
+            <AlertTriangle className="w-5 h-5 text-amber-600" />
+            <span className="font-display font-bold text-amber-700">Não deu pra verificar</span>
+          </div>
+          <p className="text-sm text-foreground/80 mb-4">{answerError}</p>
+          <button
+            onClick={retryAnswer}
+            className="flex items-center gap-2 px-4 py-2 bg-amber-500 text-white rounded-lg font-medium text-sm hover:opacity-90 transition"
+          >
+            <RefreshCcw className="w-4 h-4" /> Tentar novamente
+          </button>
+        </motion.div>
+      ) : !result ? (
+        <div className="rounded-xl p-5 bg-muted/40 border border-border flex items-center gap-3">
+          <Loader2 className="w-5 h-5 animate-spin text-muted-foreground" />
+          <span className="text-sm text-muted-foreground">Verificando resposta...</span>
+        </div>
       ) : (
         <div className="space-y-4">
           {/* Feedback */}
@@ -1063,6 +1127,7 @@ export default function TreinoPage() {
                   setSelected(null);
                   setAnswered(false);
                   setResult(null);
+                  setAnswerError(null);
                   setFeynmanText('');
                   setLlmExplanation('');
                 }}
