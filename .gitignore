@@ -5,3 +5,7 @@ node_modules
 .env.local
 .env*.local
 *.tsbuildinfo
+
+# Dump de dados de importação única (1.2MB) — fonte de verdade já é o Neon.
+# O script de import (import-questoes.js) fica versionado.
+questoes-prepenem.json
