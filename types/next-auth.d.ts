@@ -8,6 +8,9 @@ declare module 'next-auth' {
       role?: string;
       // Add custom fields here
     } & DefaultSession['user']; // includes name, email, image
+    // Setado pelo callback `session` quando o usuário do token não existe mais
+    // no banco (conta deletada). Ver lib/auth.ts.
+    error?: 'UserNotFound';
   }
 
   interface User extends DefaultUser {
