@@ -63,10 +63,11 @@ function HeroTitle({ name, weekNumber }: { name: string; weekNumber: number }) {
 
   return (
     <div className="flex items-center justify-between flex-wrap gap-3 mb-6 pt-2">
-      <div ref={titleRef} style={{ perspective: '1000px' }} className="flex items-center">
+      <div ref={titleRef} style={{ perspective: '1000px' }} className="flex items-center" aria-label="PrepEnem" role="text">
         {'PrepEnem'.split('').map((letter, i) => (
           <span
             key={i}
+            aria-hidden="true"
             className="hero-letter inline-block text-2xl md:text-3xl font-display font-black bg-gradient-to-r from-primary via-purple-500 to-blue-500 bg-clip-text text-transparent drop-shadow-sm"
             style={{ transformStyle: 'preserve-3d', opacity: 0 }}
           >
@@ -151,6 +152,24 @@ export default function DashboardPage() {
             gsap.fromTo(el, { y: 50, opacity: 0 }, {
               y: 0, opacity: 1, duration: 0.8, ease: 'power2.out',
               scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
+            });
+          });
+
+          // Em telas altas o suficiente pra caber a página inteira sem scroll
+          // (ou quando o refresh inicial do ScrollTrigger mede o layout antes
+          // dos dados assíncronos terminarem de empurrar o conteúdo), o
+          // trigger de "top 88%" nunca é cruzado e o elemento fica em
+          // opacity:0 pra sempre. Depois de um refresh (layout já assentado),
+          // qualquer .gsap-reveal que já esteja visível no viewport revela
+          // na hora, sem depender de o usuário rolar a página.
+          requestAnimationFrame(() => {
+            ScrollTrigger.refresh();
+            document.querySelectorAll('.gsap-reveal').forEach((el) => {
+              const rect = el.getBoundingClientRect();
+              const alreadyVisible = rect.top < window.innerHeight && rect.bottom > 0;
+              if (alreadyVisible) {
+                gsap.set(el, { opacity: 1, y: 0, rotationX: 0 });
+              }
             });
           });
         }, dashRef);
