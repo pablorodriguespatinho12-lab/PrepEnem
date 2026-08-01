@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     const weekSubtemas = weekTopics.flatMap(t => t.subtemas).map(s => s.toLowerCase());
 
     // Build filter
-    const where: any = { dependeImagem: false };
+    const where: any = {};
     if (materias && Array.isArray(materias) && materias.length > 0) {
       where.materia = { in: materias };
     } else if (isWeeklySimulado && weekMaterias.length > 0) {

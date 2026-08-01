@@ -36,7 +36,6 @@ export async function POST(request: Request) {
       where: {
         materia: { in: materias },
         nivel: { in: niveisPermitidos },
-        dependeImagem: false,
       },
       orderBy: { createdAt: 'desc' },
       take: totalQuestoes * 3, // fetch extras for shuffling
@@ -47,7 +46,6 @@ export async function POST(request: Request) {
       const extra = await prisma.question.findMany({
         where: {
           materia: { in: materias },
-          dependeImagem: false,
           id: { notIn: questoes.map((q) => q.id) },
         },
         orderBy: { createdAt: 'desc' },

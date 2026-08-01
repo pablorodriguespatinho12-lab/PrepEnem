@@ -31,7 +31,7 @@ export async function POST(req: Request) {
 
     const filterMaterias = todayMaterias.length > 0 ? todayMaterias : undefined;
 
-    const where: any = { dependeImagem: false };
+    const where: any = {};
     if (filterMaterias) where.materia = { in: filterMaterias };
 
     const allQuestions = await prisma.question.findMany({ where });
