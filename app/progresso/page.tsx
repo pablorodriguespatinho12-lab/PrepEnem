@@ -56,7 +56,7 @@ export default function ProgressoPage() {
         {[
           { label: 'Total Respondidas', value: stats?.totalRespondidas ?? 0, icon: BookOpen, color: 'text-blue-600' },
           { label: 'Acertos', value: stats?.totalAcertos ?? 0, icon: Target, color: 'text-green-600' },
-          { label: 'Taxa de Acerto', value: `${stats?.taxaAcerto ?? 0}%`, icon: TrendingUp, color: 'text-purple-600' },
+          { label: 'Taxa de Acerto', value: `${stats?.taxaAcerto ?? 0}%`, icon: TrendingUp, color: 'text-primary' },
           { label: 'Sequência', value: `${stats?.streakDays ?? 0} dias`, icon: BarChart3, color: 'text-orange-600' },
         ].map((card, i) => {
           const Icon = card.icon;
@@ -94,7 +94,7 @@ export default function ProgressoPage() {
             {[
               { key: 'introducao', label: 'Introdução', emoji: '📝', color: 'bg-blue-500' },
               { key: 'desenvolvimento1', label: 'Desenvolvimento 1', emoji: '💡', color: 'bg-green-500' },
-              { key: 'desenvolvimento2', label: 'Desenvolvimento 2', emoji: '🔍', color: 'bg-purple-500' },
+              { key: 'desenvolvimento2', label: 'Desenvolvimento 2', emoji: '🔍', color: 'bg-primary' },
               { key: 'conclusao', label: 'Conclusão', emoji: '🎯', color: 'bg-orange-500' },
             ].map(part => {
               const s = stats.essayPartStats[part.key];

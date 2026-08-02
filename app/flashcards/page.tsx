@@ -148,7 +148,7 @@ export default function FlashcardsPage() {
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+              className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-500 via-blue-500 to-primary bg-clip-text text-transparent"
             >
               Flashcards
             </motion.h1>
@@ -247,7 +247,7 @@ export default function FlashcardsPage() {
                           </div>
 
                           {/* Subject name */}
-                          <h3 className="font-bold text-foreground text-lg mb-1 group-hover:text-violet-600 transition-colors">
+                          <h3 className="font-bold text-foreground text-lg mb-1 group-hover:text-primary transition-colors">
                             {group.materia}
                           </h3>
 
@@ -398,7 +398,7 @@ export default function FlashcardsPage() {
                           </div>
 
                           {/* Name */}
-                          <h3 className="font-bold text-foreground mb-1 line-clamp-2 group-hover:text-violet-600 transition-colors">
+                          <h3 className="font-bold text-foreground mb-1 line-clamp-2 group-hover:text-primary transition-colors">
                             {deck.subtema || deck.nome}
                           </h3>
                           {deck.descricao && (

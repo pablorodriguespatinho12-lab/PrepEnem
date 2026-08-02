@@ -104,7 +104,7 @@ export default function ProgressCharts({ stats }: Props) {
                 />
                 <YAxis tickLine={false} tick={{ fontSize: 10 }} />
                 <Tooltip contentStyle={{ fontSize: 11 }} />
-                <Line type="monotone" dataKey="taxa" stroke="#7c3aed" strokeWidth={2} dot={{ r: 3 }} name="Taxa (%)" />
+                <Line type="monotone" dataKey="taxa" stroke="hsl(var(--primary))" strokeWidth={2} dot={{ r: 3 }} name="Taxa (%)" />
                 <Line type="monotone" dataKey="total" stroke="#60B5FF" strokeWidth={2} dot={{ r: 3 }} name="Questões" />
                 <Legend verticalAlign="top" wrapperStyle={{ fontSize: 11 }} />
               </LineChart>

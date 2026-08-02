@@ -634,7 +634,7 @@ export default function TreinoPage() {
                           {(resumo.formulas?.length ?? 0) > 0 && (
                             <div>
                               <div className="flex items-center gap-1.5 mb-2">
-                                <FlaskConical className="w-4 h-4 text-purple-500" />
+                                <FlaskConical className="w-4 h-4 text-primary" />
                                 <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Fórmulas</span>
                               </div>
                               <div className="bg-muted/50 rounded-lg p-3 space-y-1">
@@ -738,7 +738,7 @@ export default function TreinoPage() {
             transition={{ delay: 0.8, type: 'spring', stiffness: 200, damping: 15 }}
             className="mb-3"
           >
-            <span className="font-display text-6xl font-black bg-gradient-to-r from-primary via-purple-500 to-blue-500 bg-clip-text text-transparent">
+            <span className="font-display text-6xl font-black bg-gradient-to-r from-primary via-[hsl(var(--chart-2))] to-primary bg-clip-text text-transparent">
               {pct}%
             </span>
           </motion.div>

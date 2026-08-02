@@ -1,31 +1,209 @@
-export const themeColors: Record<string, { primary: string; primaryHsl: string; ring: string; accent: string; chart1: string }> = {
-  purple: {
-    primary: '#7c3aed',
-    primaryHsl: '262 83% 58%',
-    ring: '262 83% 58%',
-    accent: '262 20% 95%',
-    chart1: '262 83% 58%',
+export const DEFAULT_THEME_COLOR = 'clareza';
+
+type ThemeModeTokens = {
+  primary: string;
+  primaryForeground: string;
+  ring: string;
+  accent: string;
+  chart1: string;
+  background: string;
+  card: string;
+  foreground: string;
+  muted: string;
+  mutedForeground: string;
+  border: string;
+};
+
+type ThemeColorSet = {
+  label: string;
+  swatch: string;
+  light: ThemeModeTokens;
+  dark: ThemeModeTokens;
+};
+
+// Todos os valores em "H S% L%" (mesma convenção do globals.css, prontos pra hsl(var(--token))).
+// primaryForeground é escolhido por par de contraste (branco quando passa 4.5:1 contra o primary daquele
+// modo, senão um "ink" escuro no matiz do próprio tema) — ver contrast-check em Frente 2 antes de editar.
+export const themeColors: Record<string, ThemeColorSet> = {
+  clareza: {
+    label: 'Clareza',
+    swatch: '#0c6a7f',
+    light: {
+      primary: '192 84% 30%',
+      primaryForeground: '0 0% 100%',
+      ring: '192 84% 30%',
+      accent: '190 20% 92%',
+      chart1: '192 84% 30%',
+      background: '190 20% 97%',
+      card: '190 25% 99%',
+      foreground: '200 25% 12%',
+      muted: '190 20% 92%',
+      mutedForeground: '200 15% 40%',
+      border: '190 20% 88%',
+    },
+    dark: {
+      primary: '189 80% 52%',
+      primaryForeground: '200 30% 10%',
+      ring: '189 80% 52%',
+      accent: '200 20% 20%',
+      chart1: '189 80% 52%',
+      background: '200 28% 8%',
+      card: '200 26% 11%',
+      foreground: '190 15% 94%',
+      muted: '200 20% 20%',
+      mutedForeground: '190 10% 65%',
+      border: '200 20% 20%',
+    },
+  },
+  ambar: {
+    label: 'Âmbar de Estudo',
+    swatch: '#a8502c',
+    light: {
+      primary: '16 68% 42%',
+      primaryForeground: '0 0% 100%',
+      ring: '16 68% 42%',
+      accent: '30 15% 91%',
+      chart1: '16 68% 42%',
+      background: '30 12% 96%',
+      card: '30 15% 99%',
+      foreground: '20 15% 14%',
+      muted: '30 15% 91%',
+      mutedForeground: '25 8% 40%',
+      border: '30 12% 87%',
+    },
+    dark: {
+      primary: '18 75% 56%',
+      primaryForeground: '20 20% 10%',
+      ring: '18 75% 56%',
+      accent: '22 14% 20%',
+      chart1: '18 75% 56%',
+      background: '22 18% 9%',
+      card: '22 16% 12%',
+      foreground: '30 20% 94%',
+      muted: '22 14% 20%',
+      mutedForeground: '28 10% 65%',
+      border: '22 14% 20%',
+    },
+  },
+  academico: {
+    label: 'Índigo Acadêmico',
+    swatch: '#2e3a66',
+    light: {
+      primary: '229 42% 30%',
+      primaryForeground: '0 0% 100%',
+      ring: '229 42% 30%',
+      accent: '225 18% 93%',
+      chart1: '229 42% 30%',
+      background: '225 20% 97%',
+      card: '0 0% 100%',
+      foreground: '228 30% 14%',
+      muted: '225 18% 93%',
+      mutedForeground: '225 12% 40%',
+      border: '225 18% 88%',
+    },
+    dark: {
+      primary: '228 55% 62%',
+      primaryForeground: '228 30% 10%',
+      ring: '228 55% 62%',
+      accent: '228 20% 20%',
+      chart1: '228 55% 62%',
+      background: '228 30% 7%',
+      card: '228 26% 10%',
+      foreground: '225 20% 95%',
+      muted: '228 20% 20%',
+      mutedForeground: '225 10% 65%',
+      border: '228 20% 20%',
+    },
   },
   blue: {
-    primary: '#2563eb',
-    primaryHsl: '217 91% 53%',
-    ring: '217 91% 53%',
-    accent: '217 20% 95%',
-    chart1: '217 91% 53%',
+    label: 'Azul',
+    swatch: '#2563eb',
+    light: {
+      primary: '217 91% 53%',
+      primaryForeground: '0 0% 100%',
+      ring: '217 91% 53%',
+      accent: '217 20% 93%',
+      chart1: '217 91% 53%',
+      background: '217 20% 97%',
+      card: '217 25% 99%',
+      foreground: '220 25% 12%',
+      muted: '217 20% 92%',
+      mutedForeground: '220 12% 42%',
+      border: '217 18% 88%',
+    },
+    dark: {
+      primary: '217 85% 65%',
+      primaryForeground: '217 40% 10%',
+      ring: '217 85% 65%',
+      accent: '217 20% 20%',
+      chart1: '217 85% 65%',
+      background: '217 28% 8%',
+      card: '217 24% 11%',
+      foreground: '217 15% 94%',
+      muted: '217 20% 20%',
+      mutedForeground: '217 10% 65%',
+      border: '217 20% 20%',
+    },
   },
   green: {
-    primary: '#16a34a',
-    primaryHsl: '142 71% 37%',
-    ring: '142 71% 37%',
-    accent: '142 20% 95%',
-    chart1: '142 71% 37%',
+    label: 'Verde',
+    swatch: '#16a34a',
+    light: {
+      primary: '142 71% 37%',
+      primaryForeground: '142 40% 10%',
+      ring: '142 71% 37%',
+      accent: '142 20% 93%',
+      chart1: '142 71% 37%',
+      background: '142 15% 97%',
+      card: '142 20% 99%',
+      foreground: '145 25% 12%',
+      muted: '142 18% 92%',
+      mutedForeground: '145 12% 40%',
+      border: '142 15% 88%',
+    },
+    dark: {
+      primary: '142 55% 48%',
+      primaryForeground: '142 30% 10%',
+      ring: '142 55% 48%',
+      accent: '142 18% 20%',
+      chart1: '142 55% 48%',
+      background: '145 24% 8%',
+      card: '145 22% 11%',
+      foreground: '142 15% 94%',
+      muted: '142 18% 20%',
+      mutedForeground: '142 10% 65%',
+      border: '142 18% 20%',
+    },
   },
   orange: {
-    primary: '#ea580c',
-    primaryHsl: '21 90% 48%',
-    ring: '21 90% 48%',
-    accent: '21 20% 95%',
-    chart1: '21 90% 48%',
+    label: 'Laranja',
+    swatch: '#ea580c',
+    light: {
+      primary: '21 90% 48%',
+      primaryForeground: '21 40% 10%',
+      ring: '21 90% 48%',
+      accent: '21 20% 93%',
+      chart1: '21 90% 48%',
+      background: '25 15% 97%',
+      card: '25 20% 99%',
+      foreground: '22 25% 12%',
+      muted: '25 18% 92%',
+      mutedForeground: '22 12% 40%',
+      border: '25 15% 88%',
+    },
+    dark: {
+      primary: '21 85% 58%',
+      primaryForeground: '21 30% 10%',
+      ring: '21 85% 58%',
+      accent: '22 18% 20%',
+      chart1: '21 85% 58%',
+      background: '22 24% 8%',
+      card: '22 22% 11%',
+      foreground: '25 15% 94%',
+      muted: '22 18% 20%',
+      mutedForeground: '22 10% 65%',
+      border: '22 18% 20%',
+    },
   },
 };
 

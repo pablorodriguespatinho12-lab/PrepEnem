@@ -77,7 +77,7 @@ export default function CriarBaralhoPage() {
       </motion.button>
 
       <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="mb-10">
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-500 via-blue-500 to-primary bg-clip-text text-transparent">
           Novo Baralho
         </h1>
         <p className="text-muted-foreground mt-2 text-lg">A IA vai gerar os flashcards para você</p>

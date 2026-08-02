@@ -68,7 +68,7 @@ function HeroTitle({ name, weekNumber }: { name: string; weekNumber: number }) {
           <span
             key={i}
             aria-hidden="true"
-            className="hero-letter inline-block text-2xl md:text-3xl font-display font-black bg-gradient-to-r from-primary via-purple-500 to-blue-500 bg-clip-text text-transparent drop-shadow-sm"
+            className="hero-letter inline-block text-2xl md:text-3xl font-display font-black bg-gradient-to-r from-primary via-[hsl(var(--chart-2))] to-primary bg-clip-text text-transparent drop-shadow-sm"
             style={{ transformStyle: 'preserve-3d', opacity: 0 }}
           >
             {letter}
@@ -190,7 +190,7 @@ export default function DashboardPage() {
     { label: 'Questões Respondidas', value: stats?.totalRespondidas ?? 0, icon: BookOpen, color: 'bg-blue-500/10 text-blue-600 dark:text-blue-400' },
     { label: 'Taxa de Acerto', value: stats?.taxaAcerto ?? 0, suffix: '%', icon: Target, color: 'bg-green-500/10 text-green-600 dark:text-green-400' },
     { label: 'Dias de Sequência', value: stats?.streakDays ?? 0, icon: Flame, color: 'bg-orange-500/10 text-orange-600 dark:text-orange-400' },
-    { label: 'Revisões Pendentes', value: stats?.pendingReviews ?? 0, icon: RefreshCcw, color: 'bg-purple-500/10 text-purple-600 dark:text-purple-400' },
+    { label: 'Revisões Pendentes', value: stats?.pendingReviews ?? 0, icon: RefreshCcw, color: 'bg-primary/10 text-primary' },
   ];
 
   return (

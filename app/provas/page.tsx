@@ -54,7 +54,7 @@ export default function ProvasPage() {
       >
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-primary/85 to-[hsl(var(--chart-2))] bg-clip-text text-transparent">
               Minhas Provas
             </h1>
             <p className="text-muted-foreground mt-2 text-lg">
@@ -65,7 +65,7 @@ export default function ProvasPage() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => router.push('/provas/criar')}
-            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-shadow"
+            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-primary/70 text-primary-foreground rounded-xl font-semibold shadow-lg hover:shadow-xl transition-shadow"
           >
             <Plus className="w-5 h-5" />
             Nova Prova
@@ -96,7 +96,7 @@ export default function ProvasPage() {
                   ) + '%'
                 : '—',
             icon: Trophy,
-            color: 'from-purple-500 to-fuchsia-500',
+            color: 'from-primary to-primary/70',
           },
         ].map((stat, i) => (
           <motion.div
@@ -137,7 +137,7 @@ export default function ProvasPage() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => router.push('/provas/criar')}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-xl font-semibold shadow-lg"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-primary/70 text-primary-foreground rounded-xl font-semibold shadow-lg"
           >
             <Plus className="w-5 h-5" />
             Criar Prova
@@ -223,7 +223,7 @@ export default function ProvasPage() {
                       className={`w-full py-2.5 rounded-xl font-semibold flex items-center justify-center gap-2 ${
                         exam.status === 'finalizada'
                           ? 'bg-muted text-foreground hover:bg-muted/80'
-                          : 'bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-md hover:shadow-lg'
+                          : 'bg-gradient-to-r from-primary to-primary/70 text-primary-foreground shadow-md hover:shadow-lg'
                       } transition-all`}
                     >
                       {exam.status === 'finalizada' ? (

@@ -121,7 +121,7 @@ export default function ProvaDetailPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="w-10 h-10 animate-spin text-violet-600" />
+        <Loader2 className="w-10 h-10 animate-spin text-primary" />
       </div>
     );
   }
@@ -146,7 +146,7 @@ export default function ProvaDetailPage() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="text-center mb-10 bg-gradient-to-br from-violet-500/10 to-fuchsia-500/10 border border-violet-200 dark:border-violet-800 rounded-3xl p-10"
+          className="text-center mb-10 bg-gradient-to-br from-primary/10 to-[hsl(var(--chart-2))]/10 border border-primary/30 rounded-3xl p-10"
         >
           <motion.div
             initial={{ rotate: -180, scale: 0 }}
@@ -169,7 +169,7 @@ export default function ProvaDetailPage() {
               <div className="text-xs text-muted-foreground">Erros</div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="bg-card border border-border rounded-2xl p-4">
-              <div className="text-3xl font-bold text-violet-600">{pct}%</div>
+              <div className="text-3xl font-bold text-primary">{pct}%</div>
               <div className="text-xs text-muted-foreground">Aproveitamento</div>
             </motion.div>
           </div>
@@ -218,14 +218,14 @@ export default function ProvaDetailPage() {
                   <button
                     onClick={() => generateExplanation(q, eq.respostaDada, eq.id)}
                     disabled={reviewGenerating === eq.id}
-                    className="flex items-center gap-2 text-sm text-violet-600 font-medium hover:underline"
+                    className="flex items-center gap-2 text-sm text-primary font-medium hover:underline"
                   >
                     <Brain className="w-4 h-4" />
                     {reviewGenerating === eq.id ? 'Gerando...' : (reviewExplanations[eq.id] ? 'Explicação ↓' : `${acertou ? '📚 Ver explicação' : '🧠 Gerar explicação'}`)}
                   </button>
                   {reviewGenerating === eq.id && !reviewExplanations[eq.id] && (
                     <div className="flex items-center gap-2 mt-2">
-                      <Loader2 className="w-4 h-4 animate-spin text-violet-500" />
+                      <Loader2 className="w-4 h-4 animate-spin text-primary" />
                       <span className="text-xs text-muted-foreground">Gerando...</span>
                     </div>
                   )}
@@ -256,7 +256,7 @@ export default function ProvaDetailPage() {
     }).then(() => fetchExam());
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="w-10 h-10 animate-spin text-violet-600" />
+        <Loader2 className="w-10 h-10 animate-spin text-primary" />
       </div>
     );
   }
@@ -355,7 +355,7 @@ export default function ProvaDetailPage() {
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.5 }}
-            className="h-full bg-gradient-to-r from-violet-600 to-fuchsia-600"
+            className="h-full bg-gradient-to-r from-primary to-primary/70"
           />
         </div>
       </motion.div>
@@ -410,8 +410,8 @@ export default function ProvaDetailPage() {
                       : isWrong
                         ? 'border-rose-500 bg-rose-50 dark:bg-rose-950/30'
                         : isSelected
-                          ? 'border-violet-500 bg-violet-50 dark:bg-violet-950/30'
-                          : 'border-border bg-background hover:border-violet-300'
+                          ? 'border-primary bg-primary/10'
+                          : 'border-border bg-background hover:border-primary/30'
                   }`}
                 >
                   <span
@@ -421,7 +421,7 @@ export default function ProvaDetailPage() {
                         : isWrong
                           ? 'bg-rose-500 text-white'
                           : isSelected
-                            ? 'bg-violet-500 text-white'
+                            ? 'bg-primary text-primary-foreground'
                             : 'bg-muted text-foreground'
                     }`}
                   >
@@ -468,14 +468,14 @@ export default function ProvaDetailPage() {
                 <button
                   onClick={() => generateExplanation(q, selectedAnswer)}
                   disabled={generatingExplanation}
-                  className="flex items-center gap-2 text-sm text-violet-600 font-medium hover:underline mb-3"
+                  className="flex items-center gap-2 text-sm text-primary font-medium hover:underline mb-3"
                 >
                   <Brain className="w-4 h-4" />
                   {generatingExplanation ? 'Gerando explicação...' : `${feedback.acertou ? '📚 Ver explicação detalhada' : '🧠 Gerar explicação detalhada com IA'}`}
                 </button>
                 {generatingExplanation && !llmExplanation && (
                   <div className="flex items-center gap-2 py-3">
-                    <Loader2 className="w-4 h-4 animate-spin text-violet-500" />
+                    <Loader2 className="w-4 h-4 animate-spin text-primary" />
                     <span className="text-sm text-muted-foreground">Gerando...</span>
                   </div>
                 )}
@@ -517,7 +517,7 @@ export default function ProvaDetailPage() {
                 whileTap={{ scale: 0.95 }}
                 disabled={!selectedAnswer || submitting}
                 onClick={handleSubmit}
-                className="px-6 py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-xl font-bold shadow-md disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                className="px-6 py-3 bg-gradient-to-r from-primary to-primary/70 text-primary-foreground rounded-xl font-bold shadow-md disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
               >
                 {submitting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Target className="w-4 h-4" />}
                 Confirmar

@@ -16,7 +16,7 @@ type View = 'home' | 'exercise' | 'result';
 const PARTS: { type: PartType; label: string; emoji: string; description: string; color: string }[] = [
   { type: 'introducao', label: 'Introdução', emoji: '📝', description: 'Apresentar tema, contextualizar e formular tese', color: 'bg-blue-500' },
   { type: 'desenvolvimento1', label: 'Desenvolvimento 1', emoji: '💡', description: 'Primeiro argumento com fundamentação', color: 'bg-green-500' },
-  { type: 'desenvolvimento2', label: 'Desenvolvimento 2', emoji: '🔍', description: 'Segundo argumento com repertório', color: 'bg-purple-500' },
+  { type: 'desenvolvimento2', label: 'Desenvolvimento 2', emoji: '🔍', description: 'Segundo argumento com repertório', color: 'bg-primary' },
   { type: 'conclusao', label: 'Conclusão', emoji: '🎯', description: 'Retomar tese e proposta de intervenção', color: 'bg-orange-500' },
 ];
 

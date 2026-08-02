@@ -15,7 +15,7 @@ model User {
   email         String?
   password      String
   role          String    @default("user")
-  themeColor    String    @default("purple")
+  themeColor    String    @default("clareza")
   streakDays    Int       @default(0)
   lastStudyDate DateTime?
   createdAt     DateTime  @default(now())

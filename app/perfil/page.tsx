@@ -4,22 +4,21 @@ import { useSession, signOut } from 'next-auth/react';
 import { motion } from 'framer-motion';
 import { Settings, User, Palette, Save, LogOut, Check, Moon, Sun } from 'lucide-react';
 import { toast } from 'sonner';
-import { themeColors } from '@/lib/theme-colors';
+import { themeColors, DEFAULT_THEME_COLOR } from '@/lib/theme-colors';
 import { useAppTheme } from '@/components/app-theme-provider';
 import { useTheme } from 'next-themes';
 
-const THEME_OPTIONS = [
-  { key: 'purple', label: 'Roxo', color: '#7c3aed' },
-  { key: 'blue', label: 'Azul', color: '#2563eb' },
-  { key: 'green', label: 'Verde', color: '#16a34a' },
-  { key: 'orange', label: 'Laranja', color: '#ea580c' },
-];
+const THEME_OPTIONS = Object.entries(themeColors).map(([key, set]) => ({
+  key,
+  label: set.label,
+  color: set.swatch,
+}));
 
 export default function PerfilPage() {
   const { data: session, update } = useSession() || {};
   const { color: currentTheme, setColor: setTheme } = useAppTheme();
   const [name, setName] = useState('');
-  const [selectedTheme, setSelectedTheme] = useState('purple');
+  const [selectedTheme, setSelectedTheme] = useState(DEFAULT_THEME_COLOR);
   const [saving, setSaving] = useState(false);
   const [profile, setProfile] = useState<any>(null);
   const { theme: darkMode, setTheme: setDarkMode } = useTheme();
@@ -31,7 +30,7 @@ export default function PerfilPage() {
         const data = await res.json();
         setProfile(data);
         setName(data?.name ?? '');
-        setSelectedTheme(data?.themeColor ?? 'purple');
+        setSelectedTheme(data?.themeColor ?? DEFAULT_THEME_COLOR);
       }
     } catch (e) {
       console.error(e);
@@ -121,7 +120,7 @@ export default function PerfilPage() {
           <h2 className="font-display text-base font-semibold">Tema de Cores</h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {THEME_OPTIONS.map((theme) => (
             <button
               key={theme.key}

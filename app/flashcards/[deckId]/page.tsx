@@ -286,7 +286,7 @@ export default function FlashcardDeckPage() {
                 whileTap={{ scale: 0.95 }}
                 disabled={generating}
                 onClick={handleGenerateMore}
-                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-xl font-bold shadow-md disabled:opacity-50"
+                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-primary/70 text-primary-foreground rounded-xl font-bold shadow-md disabled:opacity-50"
               >
                 {generating ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
                 Gerar mais cards

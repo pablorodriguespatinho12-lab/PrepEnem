@@ -99,7 +99,7 @@ export default function CriarProvaPage() {
         animate={{ opacity: 1, y: 0 }}
         className="mb-10"
       >
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-primary/85 to-[hsl(var(--chart-2))] bg-clip-text text-transparent">
           Nova Prova
         </h1>
         <p className="text-muted-foreground mt-2 text-lg">Personalize sua prova de treinamento</p>
@@ -119,7 +119,7 @@ export default function CriarProvaPage() {
             value={nome}
             onChange={(e) => setNome(e.target.value)}
             placeholder="Ex: Simulado de Ciências da Natureza"
-            className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background focus:border-violet-500 outline-none transition-colors text-foreground placeholder:text-muted-foreground/60"
+            className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground/60"
           />
         </motion.div>
 
@@ -144,7 +144,7 @@ export default function CriarProvaPage() {
                   className={`relative p-5 rounded-2xl text-left transition-all overflow-hidden ${
                     selected
                       ? `bg-gradient-to-br ${n.color} text-white shadow-xl`
-                      : 'bg-background border-2 border-border hover:border-violet-300'
+                      : 'bg-background border-2 border-border hover:border-primary/30'
                   }`}
                 >
                   {selected && (
@@ -156,7 +156,7 @@ export default function CriarProvaPage() {
                       <Check className="w-3 h-3" />
                     </motion.div>
                   )}
-                  <NIcon className={`w-7 h-7 mb-2 ${selected ? 'text-white' : 'text-violet-600'}`} />
+                  <NIcon className={`w-7 h-7 mb-2 ${selected ? 'text-white' : 'text-primary'}`} />
                   <div className="font-bold text-lg">{n.label}</div>
                   <div className={`text-xs mt-1 ${selected ? 'text-white/90' : 'text-muted-foreground'}`}>{n.desc}</div>
                 </motion.button>
@@ -187,7 +187,7 @@ export default function CriarProvaPage() {
                   className={`px-4 py-2 rounded-xl font-semibold text-sm transition-all ${
                     selected
                       ? 'text-white shadow-md'
-                      : 'bg-background border-2 border-border text-foreground hover:border-violet-300'
+                      : 'bg-background border-2 border-border text-foreground hover:border-primary/30'
                   }`}
                   style={selected ? { backgroundColor: materiaColors[m] || '#a855f7' } : {}}
                 >
@@ -214,13 +214,13 @@ export default function CriarProvaPage() {
               max={50}
               value={totalQuestoes}
               onChange={(e) => setTotalQuestoes(Number(e.target.value))}
-              className="flex-1 accent-violet-600"
+              className="flex-1 accent-primary"
             />
             <motion.div
               key={totalQuestoes}
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
-              className="min-w-[60px] text-center px-4 py-2 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-xl font-bold text-lg"
+              className="min-w-[60px] text-center px-4 py-2 bg-gradient-to-r from-primary to-primary/70 text-primary-foreground rounded-xl font-bold text-lg"
             >
               {totalQuestoes}
             </motion.div>
@@ -232,7 +232,7 @@ export default function CriarProvaPage() {
                 onClick={() => setTotalQuestoes(n)}
                 className={`px-3 py-1 rounded-lg text-xs font-semibold transition-colors ${
                   totalQuestoes === n
-                    ? 'bg-violet-600 text-white'
+                    ? 'bg-primary text-primary-foreground'
                     : 'bg-muted text-foreground hover:bg-muted/80'
                 }`}
               >
@@ -254,7 +254,7 @@ export default function CriarProvaPage() {
             whileTap={{ scale: 0.95 }}
             disabled={criando}
             onClick={handleCriar}
-            className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-shadow disabled:opacity-50"
+            className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-primary/70 text-primary-foreground rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-shadow disabled:opacity-50"
           >
             {criando ? (
               <>
