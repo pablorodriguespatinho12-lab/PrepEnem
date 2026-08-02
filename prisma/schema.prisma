@@ -1,11 +1,11 @@
 generator client {
-    provider = "prisma-client-js"
+  provider      = "prisma-client-js"
   binaryTargets = ["native", "rhel-openssl-1.0.x"]
 }
 
 datasource db {
-    provider = "postgresql"
-    url      = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model User {
@@ -21,46 +21,48 @@ model User {
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
-  progress      UserProgress[]
-  reviews       ReviewSchedule[]
-  trainingSessions TrainingSession[]
-  essays        Essay[]
-  essayParts    EssayPartPractice[]
-  flashcardDecks FlashcardDeck[]
+  progress          UserProgress[]
+  reviews           ReviewSchedule[]
+  trainingSessions  TrainingSession[]
+  essays            Essay[]
+  essayParts        EssayPartPractice[]
+  flashcardDecks    FlashcardDeck[]
   flashcardProgress FlashcardProgress[]
-  customExams   CustomExam[]
+  customExams       CustomExam[]
 
   @@index([username])
 }
 
 model Question {
-  id              String   @id @default(cuid())
-  enunciado       String
-  alternativaA    String
-  alternativaB    String
-  alternativaC    String
-  alternativaD    String
-  alternativaE    String
-  respostaCorreta String
-  materia         String
-  subtema         String
-  dificuldade     String
-  nivel           String?  // FACIL, MEDIO, MODELO_ENEM, VESTIBULAR
-  explicacao      String?
-  origem          String?
-  dependeImagem   Boolean  @default(false)
-  geradaPorIA     Boolean  @default(false)
-  numeroQuestao   Int?
-  anoProva        Int?
-  diaProva        Int?
-  pdfFileUrl      String?
-  paginaPdf       Int?
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  id                 String   @id @default(cuid())
+  enunciado          String
+  alternativaA       String
+  alternativaB       String
+  alternativaC       String
+  alternativaD       String
+  alternativaE       String
+  respostaCorreta    String
+  materia            String
+  subtema            String
+  dificuldade        String
+  nivel              String? // FACIL, MEDIO, MODELO_ENEM, VESTIBULAR
+  explicacao         String?
+  origem             String?
+  dependeImagem      Boolean  @default(false)
+  geradaPorIA        Boolean  @default(false)
+  numeroQuestao      Int?
+  anoProva           Int?
+  diaProva           Int?
+  pdfFileUrl         String?
+  paginaPdf          Int?
+  imagemUrl          String?
+  imagemUrlExpandida String?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
 
-  progress        UserProgress[]
-  reviews         ReviewSchedule[]
-  sessions        TrainingSessionQuestion[]
+  progress            UserProgress[]
+  reviews             ReviewSchedule[]
+  sessions            TrainingSessionQuestion[]
   customExamQuestions CustomExamQuestion[]
 
   @@index([materia])
@@ -86,23 +88,23 @@ model TrainingSession {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  questions   TrainingSessionQuestion[]
+  user      User                      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questions TrainingSessionQuestion[]
 
   @@index([userId, finished])
   @@index([userId, mode, finished])
 }
 
 model TrainingSessionQuestion {
-  id          String   @id @default(cuid())
-  sessionId   String
-  questionId  String
-  ordem       Int
-  answered    Boolean  @default(false)
+  id           String  @id @default(cuid())
+  sessionId    String
+  questionId   String
+  ordem        Int
+  answered     Boolean @default(false)
   respostaDada String?
 
-  session     TrainingSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
-  question    Question        @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  session  TrainingSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  question Question        @relation(fields: [questionId], references: [id], onDelete: Cascade)
 
   @@unique([sessionId, questionId])
   @@index([sessionId, ordem])
@@ -131,13 +133,13 @@ model UserProgress {
 }
 
 model ReviewSchedule {
-  id              String   @id @default(cuid())
-  userId          String
-  questionId      String
-  proximaRevisao  DateTime
-  intervaloAtual  Int      @default(1)
-  completada      Boolean  @default(false)
-  createdAt       DateTime @default(now())
+  id             String   @id @default(cuid())
+  userId         String
+  questionId     String
+  proximaRevisao DateTime
+  intervaloAtual Int      @default(1)
+  completada     Boolean  @default(false)
+  createdAt      DateTime @default(now())
 
   user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
@@ -147,82 +149,82 @@ model ReviewSchedule {
 }
 
 model EssayTheme {
-  id              String   @id @default(cuid())
-  tema            String
-  anoEnem         Int?
-  textoMotivador  String?  @db.Text
-  areaConhecimento String? 
-  createdAt       DateTime @default(now())
+  id               String   @id @default(cuid())
+  tema             String
+  anoEnem          Int?
+  textoMotivador   String?  @db.Text
+  areaConhecimento String?
+  createdAt        DateTime @default(now())
 
-  essays          Essay[]
+  essays Essay[]
 }
 
 model EssayPartPractice {
-  id              String   @id @default(cuid())
-  userId          String
-  partType        String   // introducao, desenvolvimento1, desenvolvimento2, conclusao
-  tema            String
-  textoBase       String   @db.Text  // the partial essay text provided
-  resposta        String   @db.Text  // user's written part
-  feedback        String?  @db.Text  // AI feedback
-  nota            Int?     // 0-10 score
-  createdAt       DateTime @default(now())
+  id        String   @id @default(cuid())
+  userId    String
+  partType  String // introducao, desenvolvimento1, desenvolvimento2, conclusao
+  tema      String
+  textoBase String   @db.Text // the partial essay text provided
+  resposta  String   @db.Text // user's written part
+  feedback  String?  @db.Text // AI feedback
+  nota      Int? // 0-10 score
+  createdAt DateTime @default(now())
 
-  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@index([userId, partType])
 }
 
 model Essay {
-  id              String   @id @default(cuid())
-  userId          String
-  themeId         String
-  texto           String   @db.Text
-  status          String   @default("pendente") // pendente, avaliando, avaliada
-  notaC1          Int?
-  notaC2          Int?
-  notaC3          Int?
-  notaC4          Int?
-  notaC5          Int?
-  notaTotal       Int?
-  avaliacao       String?  @db.Text
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  id        String   @id @default(cuid())
+  userId    String
+  themeId   String
+  texto     String   @db.Text
+  status    String   @default("pendente") // pendente, avaliando, avaliada
+  notaC1    Int?
+  notaC2    Int?
+  notaC3    Int?
+  notaC4    Int?
+  notaC5    Int?
+  notaTotal Int?
+  avaliacao String?  @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
-  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  theme           EssayTheme @relation(fields: [themeId], references: [id], onDelete: Cascade)
+  user  User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  theme EssayTheme @relation(fields: [themeId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@index([userId, status])
 }
 
 model EssayPartTemplate {
-  id              String   @id @default(cuid())
-  partType        String   // introducao, desenvolvimento1, desenvolvimento2, conclusao
-  tema            String
-  textoMotivador  String   @db.Text  // motivational texts (multiple paragraphs)
-  textoBase       String   @db.Text  // the partial essay (with the missing part marked)
-  isActive        Boolean  @default(true)
-  createdAt       DateTime @default(now())
+  id             String   @id @default(cuid())
+  partType       String // introducao, desenvolvimento1, desenvolvimento2, conclusao
+  tema           String
+  textoMotivador String   @db.Text // motivational texts (multiple paragraphs)
+  textoBase      String   @db.Text // the partial essay (with the missing part marked)
+  isActive       Boolean  @default(true)
+  createdAt      DateTime @default(now())
 
   @@index([partType, isActive])
 }
 
 model FlashcardDeck {
-  id              String   @id @default(cuid())
-  userId          String?  // null = default/system deck available to all
-  nome            String
-  materia         String
-  subtema         String?
-  descricao       String?
-  cor             String?
-  isDefault       Boolean  @default(false)
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  id        String   @id @default(cuid())
+  userId    String? // null = default/system deck available to all
+  nome      String
+  materia   String
+  subtema   String?
+  descricao String?
+  cor       String?
+  isDefault Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
-  user            User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
-  cards           Flashcard[]
+  user  User?       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  cards Flashcard[]
 
   @@index([userId])
   @@index([materia])
@@ -230,30 +232,30 @@ model FlashcardDeck {
 }
 
 model Flashcard {
-  id              String   @id @default(cuid())
-  deckId          String
-  frente          String   @db.Text  // question/term
-  verso           String   @db.Text  // answer/definition
-  dica            String?  @db.Text
-  ordem           Int      @default(0)
-  createdAt       DateTime @default(now())
+  id        String   @id @default(cuid())
+  deckId    String
+  frente    String   @db.Text // question/term
+  verso     String   @db.Text // answer/definition
+  dica      String?  @db.Text
+  ordem     Int      @default(0)
+  createdAt DateTime @default(now())
 
-  deck            FlashcardDeck @relation(fields: [deckId], references: [id], onDelete: Cascade)
-  progress        FlashcardProgress[]
+  deck     FlashcardDeck       @relation(fields: [deckId], references: [id], onDelete: Cascade)
+  progress FlashcardProgress[]
 
   @@index([deckId])
 }
 
 model FlashcardProgress {
-  id              String   @id @default(cuid())
-  userId          String
-  cardId          String
-  acertou         Boolean
-  precisaRevisar  Boolean  @default(false)  // marked for review when wrong
-  dataResposta    DateTime @default(now())
+  id             String   @id @default(cuid())
+  userId         String
+  cardId         String
+  acertou        Boolean
+  precisaRevisar Boolean  @default(false) // marked for review when wrong
+  dataResposta   DateTime @default(now())
 
-  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  card            Flashcard @relation(fields: [cardId], references: [id], onDelete: Cascade)
+  user User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  card Flashcard @relation(fields: [cardId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@index([userId, cardId])
@@ -261,39 +263,39 @@ model FlashcardProgress {
 }
 
 model CustomExam {
-  id              String   @id @default(cuid())
-  userId          String
-  nome            String
-  nivel           String   // facil, medio, vestibular
-  materias        String[] // array of subjects
-  totalQuestoes   Int
-  status          String   @default("pendente") // pendente, em_andamento, finalizada
-  currentIdx      Int      @default(0)
-  acertos         Int      @default(0)
-  erros           Int      @default(0)
-  startedAt       DateTime?
-  finishedAt      DateTime?
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  id            String    @id @default(cuid())
+  userId        String
+  nome          String
+  nivel         String // facil, medio, vestibular
+  materias      String[] // array of subjects
+  totalQuestoes Int
+  status        String    @default("pendente") // pendente, em_andamento, finalizada
+  currentIdx    Int       @default(0)
+  acertos       Int       @default(0)
+  erros         Int       @default(0)
+  startedAt     DateTime?
+  finishedAt    DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
 
-  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  questions       CustomExamQuestion[]
+  user      User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questions CustomExamQuestion[]
 
   @@index([userId])
   @@index([userId, status])
 }
 
 model CustomExamQuestion {
-  id              String   @id @default(cuid())
-  examId          String
-  questionId      String
-  ordem           Int
-  answered        Boolean  @default(false)
-  respostaDada    String?
-  acertou         Boolean?
+  id           String   @id @default(cuid())
+  examId       String
+  questionId   String
+  ordem        Int
+  answered     Boolean  @default(false)
+  respostaDada String?
+  acertou      Boolean?
 
-  exam            CustomExam @relation(fields: [examId], references: [id], onDelete: Cascade)
-  question        Question   @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  exam     CustomExam @relation(fields: [examId], references: [id], onDelete: Cascade)
+  question Question   @relation(fields: [questionId], references: [id], onDelete: Cascade)
 
   @@unique([examId, questionId])
   @@index([examId, ordem])

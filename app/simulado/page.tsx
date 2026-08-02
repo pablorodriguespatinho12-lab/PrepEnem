@@ -489,7 +489,18 @@ export default function SimuladoPage() {
                 <div className="text-sm md:text-base leading-relaxed whitespace-pre-wrap"><MathText text={currentQ.enunciado ?? ''} /></div>
                 {currentQ.pdfFileUrl && currentQ.paginaPdf && (
                   <div className="mt-4">
-                    <PdfPageViewer pdfUrl={currentQ.pdfFileUrl} pageNumber={currentQ.paginaPdf} />
+                    <PdfPageViewer
+                      pdfUrl={currentQ.pdfFileUrl}
+                      pageNumber={currentQ.paginaPdf}
+                      imagemUrl={currentQ.imagemUrl}
+                      imagemUrlExpandida={currentQ.imagemUrlExpandida}
+                    />
+                  </div>
+                )}
+                {currentQ.dependeImagem && !currentQ.pdfFileUrl && (
+                  <div className="mt-4 flex items-center gap-3 p-4 bg-muted/50 rounded-xl border border-border">
+                    <AlertTriangle className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground">Imagem da questão não disponível.</p>
                   </div>
                 )}
               </div>
