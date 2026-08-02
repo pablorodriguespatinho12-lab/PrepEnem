@@ -1,12 +1,18 @@
 // Pré-renderiza páginas de PDF do INEP como imagens WebP estáticas em public/questoes-imagens/,
-// pra questões com dependeImagem=true. Elimina o problema de origem da Etapa A: o pdf.js faz
-// range requests em paralelo no cliente, o pdf-proxy baixa os 6.7MB inteiros a cada uma delas,
-// e a concorrência estoura tempo/memória da function (502 intermitente). Pré-renderizando uma
-// vez aqui, cada questão passa a carregar uma imagem de ~100-250KB via CDN, sem tocar no proxy.
+// pra toda questão com pdfFileUrl (não filtra por dependeImagem: essa flag vem de uma heurística
+// de regex sobre o enunciado da Abacus — "figura|gráfico|tabela|imagem" — e tem falso negativo
+// pra questões com conteúdo visual que não usa essas palavras, ex. equação química. pdfFileUrl é
+// o sinal confiável de que existe uma página de prova pra rasterizar). Elimina o problema de
+// origem da Etapa A: o pdf.js faz range requests em paralelo no cliente, o pdf-proxy baixa os
+// 6.7MB inteiros a cada uma delas, e a concorrência estoura tempo/memória da function (502
+// intermitente). Pré-renderizando uma vez aqui, cada questão passa a carregar uma imagem de
+// ~100-250KB via CDN, sem tocar no proxy. Roda de forma incremental: só processa questões que
+// ainda não têm imagemUrl, então é seguro re-rodar depois de importar questões novas.
 //
 // Uso:
-//   npx tsx scripts/generate-question-images.ts            # todas as questões elegíveis
-//   npx tsx scripts/generate-question-images.ts --limit=3   # só as N primeiras (validação de amostra)
+//   npx tsx scripts/generate-question-images.ts                 # todas as questões elegíveis (incremental)
+//   npx tsx scripts/generate-question-images.ts --limit=3        # só as N primeiras (validação de amostra)
+//   npx tsx scripts/generate-question-images.ts --small-only     # gera só o variant 800px (sem -expandida), pra controlar peso do repo
 import { PrismaClient } from '@prisma/client';
 import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs';
 import { createCanvas } from '@napi-rs/canvas';
@@ -36,6 +42,8 @@ function parseLimitArg(): number | undefined {
   const value = Number(arg.split('=')[1]);
   return Number.isFinite(value) && value > 0 ? value : undefined;
 }
+
+const smallOnly = process.argv.includes('--small-only');
 
 async function downloadWithRetry(url: URL): Promise<Buffer> {
   let lastError: unknown;
@@ -71,7 +79,7 @@ async function main(): Promise<void> {
 
   const limit = parseLimitArg();
   const questions = await prisma.question.findMany({
-    where: { dependeImagem: true, pdfFileUrl: { not: null }, paginaPdf: { not: null } },
+    where: { pdfFileUrl: { not: null }, paginaPdf: { not: null }, imagemUrl: null },
     select: { id: true, pdfFileUrl: true, paginaPdf: true },
     orderBy: { id: 'asc' },
     ...(limit ? { take: limit } : {}),
@@ -80,7 +88,7 @@ async function main(): Promise<void> {
   const toRender: QuestionToRender[] = questions
     .filter((q): q is QuestionToRender => q.pdfFileUrl !== null && q.paginaPdf !== null);
 
-  console.log(`${toRender.length} questões elegíveis (dependeImagem=true + pdfFileUrl + paginaPdf).\n`);
+  console.log(`${toRender.length} questões elegíveis (pdfFileUrl + paginaPdf, ainda sem imagemUrl).${smallOnly ? ' Modo --small-only: sem variant ampliada.' : ''}\n`);
 
   const byPdf = new Map<string, QuestionToRender[]>();
   for (const q of toRender) {
@@ -115,19 +123,20 @@ async function main(): Promise<void> {
 
     for (const question of group) {
       try {
-        const [smallBuffer, largeBuffer] = await Promise.all([
-          renderPageToWebp(pdf, question.paginaPdf, SMALL_WIDTH),
-          renderPageToWebp(pdf, question.paginaPdf, LARGE_WIDTH),
-        ]);
-
         const smallPath = `/questoes-imagens/${question.id}.webp`;
-        const largePath = `/questoes-imagens/${question.id}-expandida.webp`;
+        const smallBuffer = await renderPageToWebp(pdf, question.paginaPdf, SMALL_WIDTH);
         fs.writeFileSync(path.join(process.cwd(), 'public', smallPath), smallBuffer);
-        fs.writeFileSync(path.join(process.cwd(), 'public', largePath), largeBuffer);
+
+        let largePath: string | null = null;
+        if (!smallOnly) {
+          largePath = `/questoes-imagens/${question.id}-expandida.webp`;
+          const largeBuffer = await renderPageToWebp(pdf, question.paginaPdf, LARGE_WIDTH);
+          fs.writeFileSync(path.join(process.cwd(), 'public', largePath), largeBuffer);
+        }
 
         await prisma.question.update({
           where: { id: question.id },
-          data: { imagemUrl: smallPath, imagemUrlExpandida: largePath },
+          data: { imagemUrl: smallPath, ...(largePath ? { imagemUrlExpandida: largePath } : {}) },
         });
 
         done += 1;

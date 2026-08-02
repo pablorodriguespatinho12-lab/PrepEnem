@@ -9,6 +9,7 @@ import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { materiaColors } from '@/lib/theme-colors';
 import { fireConfetti } from '@/components/animations';
+import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
 import dynamic from 'next/dynamic';
 
 const PdfPageViewer = dynamic(() => import('@/components/pdf-page-viewer'), { ssr: false });
@@ -498,10 +499,7 @@ export default function SimuladoPage() {
                   </div>
                 )}
                 {currentQ.dependeImagem && !currentQ.pdfFileUrl && (
-                  <div className="mt-4 flex items-center gap-3 p-4 bg-muted/50 rounded-xl border border-border">
-                    <AlertTriangle className="w-5 h-5 text-muted-foreground flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground">Imagem da questão não disponível.</p>
-                  </div>
+                  <ImagemIndisponivel className="mt-4" />
                 )}
               </div>
 

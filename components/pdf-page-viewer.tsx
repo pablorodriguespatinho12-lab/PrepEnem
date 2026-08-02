@@ -53,36 +53,19 @@ function ViewerHeader({ pageNumber, pdfUrl, isExpanded, onToggleExpand, onRetry 
   );
 }
 
-type ViewerErrorProps = {
-  pdfUrl: string;
-  onRetry: () => void;
+type ImagemIndisponivelProps = {
   className?: string;
 };
 
-function ViewerError({ pdfUrl, onRetry, className = '' }: ViewerErrorProps) {
+// Estado neutro pra qualquer questão sem imagem pra mostrar — seja porque nunca teve pdfFileUrl,
+// seja porque o render (pré-gerado ou o fallback legado via pdf.js) falhou de verdade. Nunca é
+// "erro, tente de novo": se chegou aqui é porque não há imagem disponível pra essa questão agora,
+// então nenhum retry vai mudar isso — e usar linguagem de erro passa alarme falso pro estudante.
+export function ImagemIndisponivel({ className = '' }: ImagemIndisponivelProps) {
   return (
-    <div className={`flex items-center gap-3 p-4 bg-amber-50 dark:bg-amber-900/20 rounded-xl border border-amber-200 dark:border-amber-800 ${className}`}>
-      <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0" />
-      <div className="flex-1">
-        <p className="text-sm font-medium text-amber-800 dark:text-amber-300">Erro ao carregar imagem</p>
-        <p className="text-xs text-amber-600 dark:text-amber-400">Tente recarregar ou abra o PDF original</p>
-      </div>
-      <div className="flex items-center gap-2">
-        <button
-          onClick={onRetry}
-          className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
-        >
-          <RefreshCw className="w-3.5 h-3.5" /> Recarregar
-        </button>
-        <a
-          href={`/api/pdf-proxy?url=${encodeURIComponent(pdfUrl)}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-1 text-xs font-medium text-amber-700 dark:text-amber-300 hover:underline"
-        >
-          <ExternalLink className="w-3.5 h-3.5" /> PDF
-        </a>
-      </div>
+    <div className={`flex items-center gap-3 p-4 bg-muted/50 rounded-xl border border-border ${className}`}>
+      <AlertTriangle className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+      <p className="text-sm text-muted-foreground">Imagem da questão não disponível.</p>
     </div>
   );
 }
@@ -107,7 +90,7 @@ function PreRenderedPdfPage({ pdfUrl, pageNumber, imagemUrl, imagemUrlExpandida,
   const src = isExpanded && imagemUrlExpandida ? imagemUrlExpandida : imagemUrl;
 
   if (hasError) {
-    return <ViewerError pdfUrl={pdfUrl} onRetry={handleRetry} className={className} />;
+    return <ImagemIndisponivel className={className} />;
   }
 
   return (
@@ -186,7 +169,7 @@ function LegacyPdfRender({ pdfUrl, pageNumber, className = '' }: Pick<PdfPageVie
   }
 
   if (hasError || !imageUrl) {
-    return <ViewerError pdfUrl={pdfUrl} onRetry={handleRetry} className={className} />;
+    return <ImagemIndisponivel className={className} />;
   }
 
   return (
