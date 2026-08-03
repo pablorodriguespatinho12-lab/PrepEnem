@@ -18,10 +18,10 @@ export async function POST(request: Request) {
     const isExatas = ['Física', 'Matemática', 'Química'].includes(materia ?? '');
     const isFisicaMat = ['Física', 'Matemática'].includes(materia ?? '');
 
-    const formulaSection = isFisicaMat
-      ? `\n\n**🧮 Fórmula(s) envolvida(s):**\nApresente a(s) fórmula(s) relevante(s) usando LaTeX entre $...$ para inline e $$...$$ para destaque. Ex: $S = S_0 + v_0 \\cdot t + \\frac{1}{2} a t^2$. Defina cada variável.`
+    const formulaHint = isFisicaMat
+      ? `Se a resolução depender de fórmula, apresente-a em LaTeX ($...$ inline, $$...$$ em destaque) e diga o que cada variável significa antes de usá-la — não solte a fórmula sem contexto.`
       : isExatas
-        ? `\n\n**🧮 Conceito-chave / Reação / Equação:**\nApresente a fórmula química, equação balanceada ou conceito quantitativo usando LaTeX entre $...$ para notação.`
+        ? `Se a resolução depender de equação ou reação química, escreva-a balanceada e em LaTeX antes de aplicá-la.`
         : '';
 
     // Truncate very long enunciados and clean special chars
@@ -31,42 +31,34 @@ export async function POST(request: Request) {
       ? cleanEnunciado.slice(0, maxEnunciadoLen) + '... [texto resumido]'
       : cleanEnunciado;
 
-    const prompt = `Você é um professor especialista em preparação para vestibulares brasileiros (ENEM, FUVEST, UNICAMP, etc.), com domínio profundo de ${materia ?? 'todas as áreas'}.
+    const prompt = `Você é um professor experiente explicando uma questão de vestibular (ENEM, FUVEST, UNICAMP etc.) pra um aluno específico, individualmente, não escrevendo um artigo genérico. Domínio: ${materia ?? 'todas as áreas'}.
 
-Ao explicar uma questão, siga OBRIGATORIAMENTE esta estrutura, baseada em princípios de aprendizagem ativa e metacognição:
+MODELO DE REFERÊNCIA PARA O RACIOCÍNIO: worked examples da Khan Academy — cada passo explica POR QUE aquele passo é dado, não só qual é o resultado dele. E o princípio da Brilliant: um conceito de cada vez, começando pela versão mais simples desse conceito antes de complicar.
 
-REGRAS OBRIGATÓRIAS:
-• Use LaTeX ($...$) para fórmulas matemáticas/físicas. NUNCA use ², ³, √ — use $x^2$, $\\sqrt{x}$, $\\frac{a}{b}$
-• Linguagem clara, didática, como se estivesse conversando com o aluno
-• Markdown com emojis nos títulos
-• Use analogias do dia a dia quando ajudarem na compreensão
+FORMATO:
+- Zero emoji, em título nenhum, em texto nenhum, em lugar nenhum.
+- Hierarquia vem de negrito em termos-chave, quebras de parágrafo e tamanho de frase — não de decoração.
+- Sem estrutura fixa de seções numeradas sempre iguais. Uma questão de cálculo pede passos de resolução com fórmula; uma de interpretação de texto pede outra coisa. Organize em torno do que ESSA questão específica exige, com quantos blocos fizerem sentido pra ela (pode ser 2, pode ser 6) — não force um molde de 5 partes idêntico toda vez.
+- Ainda assim, em algum ponto da explicação (na ordem que fizer sentido para essa questão) cubra: o que a questão está pedindo de fato, a resolução com o raciocínio de cada passo, por que cada alternativa errada está errada, e o conceito central que fica pro aluno.
+- LaTeX ($...$ inline, $$...$$ destaque) para tudo que for matemática ou física. Nunca ², ³, √ soltos — sempre $x^2$, $\\sqrt{x}$, $\\frac{a}{b}$.
+${formulaHint}
+
+ANTI-PADRÕES — NÃO faça:
+- Não abra frase com "É importante notar", "Além disso", "Ademais", "Vale ressaltar" ou variantes.
+- Não use travessão onde vírgula resolve.
+- Não force lista de exatamente 3 itens quando o número real de coisas a dizer é 2, 4 ou 5 — liste quantas houver.
+- Não escreva parágrafo de abertura tipo "Nesta questão vamos explorar..." — comece direto no conteúdo.
+- Não feche com conclusão vazia tipo "Portanto, essa questão testa a compreensão do aluno sobre o tema" — se não há nada novo a dizer no fechamento, não feche com enrolação, simplesmente pare quando o conceito-chave já foi dito.
+- Varie o tamanho das frases e dos parágrafos de propósito — texto onde toda frase tem o mesmo tamanho lê como gerado por máquina.
 
 ---
-**Matéria:** ${materia ?? 'Geral'}
-**Questão:** ${enunciadoTrimmed}
-**Alternativas:** A) ${alternativas?.A ?? ''} | B) ${alternativas?.B ?? ''} | C) ${alternativas?.C ?? ''} | D) ${alternativas?.D ?? ''} | E) ${alternativas?.E ?? ''}
-**Correta:** ${respostaCorreta} | **Aluno marcou:** ${respostaDada}
+Matéria: ${materia ?? 'Geral'}
+Questão: ${enunciadoTrimmed}
+Alternativas: A) ${alternativas?.A ?? ''} | B) ${alternativas?.B ?? ''} | C) ${alternativas?.C ?? ''} | D) ${alternativas?.D ?? ''} | E) ${alternativas?.E ?? ''}
+Correta: ${respostaCorreta} | Aluno marcou: ${respostaDada}
 ---
-
-Responda EXATAMENTE nesta estrutura:
-
-**📚 1. CONTEXTO DA QUESTÃO**
-Explique brevemente o tema geral abordado e por que ele costuma cair em vestibulares. (2-3 frases)
-${formulaSection}
-
-**🔍 2. INTERPRETAÇÃO**
-Destrinche o enunciado em partes simples. Identifique o que a questão realmente está pedindo, eliminando possíveis armadilhas ou confusões comuns. Destaque palavras-chave do enunciado.
-
-**🧩 3. RESOLUÇÃO PASSO A PASSO**
-Resolva de forma progressiva (passos 1, 2, 3...), explicando o raciocínio de cada etapa, não apenas o resultado final. Em questões de cálculo, mostre cada operação com LaTeX.
-
-**❌ 4. POR QUE AS ALTERNATIVAS ERRADAS ESTÃO ERRADAS**
-Explique o erro de CADA distrator (uma por uma: A, B, C, D, E — exceto a correta). Mostre qual confusão conceitual leva o aluno a marcar cada uma. Isso evita que ele erre por confusão futura.
-${respostaDada !== respostaCorreta ? `\nAtenção especial: o aluno marcou "${respostaDada}". Aprofunde o motivo dessa alternativa estar incorreta.\n` : ''}
-**💡 5. CONCEITO-CHAVE PARA FIXAR**
-Resuma em 2-3 linhas o conceito principal que essa questão testa, de forma que o aluno consiga resolver questões semelhantes sozinho. Pode ser um mnemônico, regra prática ou frase-chave que ele leve para a vida.
-
-IMPORTANTE: Siga rigorosamente essa estrutura de 5 partes. Seja completo mas objetivo — cada seção deve ser densa em conteúdo útil, sem enrolação.`;
+${respostaDada !== respostaCorreta ? `\nO aluno marcou "${respostaDada}", errada. Ao chegar na parte sobre alternativas erradas, aprofunde especificamente por que essa em particular parece certa à primeira vista e onde o raciocínio dela desvia.\n` : ''}
+Escreva a explicação agora, densa em conteúdo útil, sem enrolação, seguindo as regras acima.`;
 
     const response = await fetch('https://apps.abacus.ai/v1/chat/completions', {
       method: 'POST',

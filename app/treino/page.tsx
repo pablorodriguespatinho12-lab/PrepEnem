@@ -760,7 +760,7 @@ export default function TreinoPage() {
             transition={{ delay: 1.1 }}
             className="font-display text-2xl font-bold mb-1"
           >
-            {pct >= 80 ? 'Excelente! 🎉' : pct >= 60 ? 'Bom trabalho! 👏' : 'Continue praticando! 💪'}
+            {pct >= 80 ? 'Excelente!' : pct >= 60 ? 'Bom trabalho!' : 'Continue praticando!'}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -1074,7 +1074,7 @@ export default function TreinoPage() {
                 <XCircle className="w-5 h-5 text-red-600" />
               )}
               <span className={`font-display font-bold ${result?.acertou ? 'text-green-700' : 'text-red-700'}`}>
-                {result?.acertou ? 'Correto! 🎉' : 'Incorreto 😔'}
+                {result?.acertou ? 'Correto' : 'Incorreto'}
               </span>
             </div>
             {result?.explicacao && (
