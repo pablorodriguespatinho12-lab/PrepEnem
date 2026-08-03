@@ -30,56 +30,16 @@ function AnimatedNumber({ value, suffix = '' }: { value: number; suffix?: string
   return <span>{display}{suffix}</span>;
 }
 
-/* ── Hero title with GSAP 3D letter animation ──
-   Fundida com a saudação + badge de semana numa única linha compacta. */
-function HeroTitle({ name, weekNumber }: { name: string; weekNumber: number }) {
-  const titleRef = useRef<HTMLDivElement>(null);
-  const greetRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    import('gsap').then(mod => {
-      const gsap = mod.gsap || mod.default;
-      if (!titleRef.current) return;
-
-      const letters = titleRef.current.querySelectorAll('.hero-letter');
-      const tl = gsap.timeline();
-
-      tl.fromTo(
-        letters,
-        { y: -100, rotationX: 90, opacity: 0, transformOrigin: 'center bottom' },
-        { y: 0, rotationX: 0, opacity: 1, stagger: 0.08, duration: 0.8, ease: 'back.out(1.7)' }
-      );
-
-      if (greetRef.current) {
-        tl.fromTo(
-          greetRef.current,
-          { y: 15, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' },
-          '-=0.3'
-        );
-      }
-    });
-  }, [name]);
-
+/* ── Saudação + badge de semana ──
+   Direto ao ponto: sem título animado (o nome do produto já está na
+   sidebar), só o contexto de quem está estudando e em qual semana. */
+function Greeting({ name, weekNumber }: { name: string; weekNumber: number }) {
   return (
     <div className="flex items-center justify-between flex-wrap gap-3 mb-6 pt-2">
-      <div ref={titleRef} style={{ perspective: '1000px' }} className="flex items-center" aria-label="PrepEnem" role="text">
-        {'PrepEnem'.split('').map((letter, i) => (
-          <span
-            key={i}
-            aria-hidden="true"
-            className="hero-letter inline-block text-2xl md:text-3xl font-display font-black bg-gradient-to-r from-primary via-[hsl(var(--chart-2))] to-primary bg-clip-text text-transparent drop-shadow-sm"
-            style={{ transformStyle: 'preserve-3d', opacity: 0 }}
-          >
-            {letter}
-          </span>
-        ))}
-      </div>
-
-      <div ref={greetRef} className="flex items-center gap-2 flex-wrap" style={{ opacity: 0 }}>
-        <p className="text-sm md:text-base font-display font-semibold whitespace-nowrap">
-          Olá, {name}! 👋
-        </p>
+      <p className="text-sm md:text-base font-display font-semibold whitespace-nowrap">
+        Olá, {name}!
+      </p>
+      <div className="flex items-center gap-2 flex-wrap">
         <span className="px-2.5 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full whitespace-nowrap">
           Semana {weekNumber}/4
         </span>
@@ -197,8 +157,7 @@ export default function DashboardPage() {
     <>
       <ThreeScene />
       <div ref={dashRef} className="p-4 md:p-8 max-w-6xl mx-auto relative" style={{ zIndex: 1 }}>
-        {/* ── Hero fundido: título GSAP + saudação + badge de semana ── */}
-        <HeroTitle name={session?.user?.name ?? 'Estudante'} weekNumber={cycleInfo.weekNumber} />
+        <Greeting name={session?.user?.name ?? 'Estudante'} weekNumber={cycleInfo.weekNumber} />
 
         {/* ── Estudo de Hoje (protagonista, com CTA de treino embutido) ── */}
         {todaySchedule && (
