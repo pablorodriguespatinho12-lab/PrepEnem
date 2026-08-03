@@ -1059,10 +1059,12 @@ export default function TreinoPage() {
         </div>
       ) : (
         <div className="space-y-4">
-          {/* Feedback */}
+          {/* Feedback — revelação em "flip" suave, mesmo espírito do flip dos flashcards */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, rotateX: shouldReduceMotion ? 0 : -12, scaleY: shouldReduceMotion ? 1 : 0.96 }}
+            animate={{ opacity: 1, rotateX: 0, scaleY: 1 }}
+            transition={{ duration: shouldReduceMotion ? 0.01 : 0.3, ease: [0.16, 1, 0.3, 1] }}
+            style={{ transformPerspective: 800, transformOrigin: 'top' }}
             className={`rounded-xl p-5 ${
               result?.acertou ? 'bg-green-500/10 border border-green-500/20' : 'bg-red-500/10 border border-red-500/20'
             }`}
@@ -1092,13 +1094,21 @@ export default function TreinoPage() {
               className="flex items-center gap-2 text-sm text-primary font-medium hover:underline mb-3"
             >
               <Brain className="w-4 h-4" />
-              {generatingExplanation ? 'Gerando explicação...' : `${result?.acertou ? '📚 Ver explicação detalhada' : '🧠 Gerar explicação detalhada com IA'}`}
+              {generatingExplanation ? 'Gerando explicação...' : result?.acertou ? 'Ver explicação detalhada' : 'Gerar explicação detalhada com IA'}
             </button>
-            {llmExplanation && (
-              <div className="text-sm text-foreground/80 leading-relaxed bg-muted/50 rounded-lg p-3">
-                <MathText text={llmExplanation} />
-              </div>
-            )}
+            <AnimatePresence>
+              {llmExplanation && (
+                <motion.div
+                  initial={{ opacity: 0, rotateX: shouldReduceMotion ? 0 : -12, scaleY: shouldReduceMotion ? 1 : 0.96 }}
+                  animate={{ opacity: 1, rotateX: 0, scaleY: 1 }}
+                  transition={{ duration: shouldReduceMotion ? 0.01 : 0.3, ease: [0.16, 1, 0.3, 1] }}
+                  style={{ transformPerspective: 800, transformOrigin: 'top' }}
+                  className="text-sm text-foreground/80 leading-relaxed bg-muted/50 rounded-lg p-3"
+                >
+                  <MathText text={llmExplanation} />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
           {/* Feynman technique */}
