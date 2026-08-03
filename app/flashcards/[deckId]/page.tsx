@@ -2,9 +2,304 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useRouter, useParams, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import { ChevronLeft, CheckCircle, XCircle, RotateCw, Trophy, Lightbulb, Loader2, RefreshCw, Sparkles, Plus } from 'lucide-react';
+import { ChevronLeft, CheckCircle, XCircle, RotateCw, Trophy, Lightbulb, Loader2, RefreshCw, Sparkles, Plus, Trash2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+
+interface CardCandidato {
+  frente: string;
+  verso: string;
+  dica: string | null;
+}
+
+/* ── Adicionar card manualmente ── */
+function AdicionarCardDialog({
+  open,
+  onOpenChange,
+  deckId,
+  onSaved,
+}: {
+  open: boolean;
+  onOpenChange: (v: boolean) => void;
+  deckId: string;
+  onSaved: () => void;
+}) {
+  const [frente, setFrente] = useState('');
+  const [verso, setVerso] = useState('');
+  const [dica, setDica] = useState('');
+  const [salvando, setSalvando] = useState(false);
+
+  const reset = () => {
+    setFrente('');
+    setVerso('');
+    setDica('');
+  };
+
+  const handleSalvar = async () => {
+    if (!frente.trim() || !verso.trim()) {
+      toast.error('Preencha a frente e o verso do card');
+      return;
+    }
+    setSalvando(true);
+    try {
+      const res = await fetch('/api/flashcards/cards', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          deckId,
+          cards: [{ frente: frente.trim(), verso: verso.trim(), dica: dica.trim() || null }],
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        toast.error(data.error || 'Erro ao salvar card');
+        return;
+      }
+      toast.success('Card adicionado');
+      reset();
+      onOpenChange(false);
+      onSaved();
+    } catch {
+      toast.error('Erro ao salvar card');
+    } finally {
+      setSalvando(false);
+    }
+  };
+
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Adicionar card</DialogTitle>
+          <DialogDescription>Frente e verso do flashcard.</DialogDescription>
+        </DialogHeader>
+        <div className="space-y-3">
+          <div>
+            <label className="block text-xs font-medium text-muted-foreground mb-1">Frente (pergunta)</label>
+            <Textarea value={frente} onChange={(e) => setFrente(e.target.value)} rows={2} placeholder="Ex: O que é osmose?" />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-muted-foreground mb-1">Verso (resposta)</label>
+            <Textarea value={verso} onChange={(e) => setVerso(e.target.value)} rows={2} placeholder="Resposta curta e direta" />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-muted-foreground mb-1">Dica (opcional)</label>
+            <Input value={dica} onChange={(e) => setDica(e.target.value)} placeholder="Mnemônico ou pista" />
+          </div>
+        </div>
+        <DialogFooter>
+          <button
+            onClick={handleSalvar}
+            disabled={salvando}
+            className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:opacity-90 transition disabled:opacity-50"
+          >
+            {salvando ? <Loader2 className="w-4 h-4 animate-spin" /> : <Plus className="w-4 h-4" />}
+            Salvar card
+          </button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  );
+}
+
+/* ── Gerar cards com IA, com preview obrigatório antes de salvar ── */
+function GerarComIADialog({
+  open,
+  onOpenChange,
+  deckId,
+  onSaved,
+}: {
+  open: boolean;
+  onOpenChange: (v: boolean) => void;
+  deckId: string;
+  onSaved: () => void;
+}) {
+  const [etapa, setEtapa] = useState<'form' | 'preview'>('form');
+  const [quantidade, setQuantidade] = useState(10);
+  const [topico, setTopico] = useState('');
+  const [gerando, setGerando] = useState(false);
+  const [salvando, setSalvando] = useState(false);
+  const [candidatos, setCandidatos] = useState<CardCandidato[]>([]);
+  const [descartadosPorDuplicata, setDescartadosPorDuplicata] = useState(0);
+
+  const fecharEResetar = () => {
+    onOpenChange(false);
+    setEtapa('form');
+    setTopico('');
+    setCandidatos([]);
+    setDescartadosPorDuplicata(0);
+  };
+
+  const handleGerar = async () => {
+    setGerando(true);
+    try {
+      const res = await fetch('/api/flashcards/gerar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ deckId, quantidade, topico: topico.trim() || undefined }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        toast.error(data.error || 'Erro ao gerar cards');
+        return;
+      }
+      if (!data.candidatos || data.candidatos.length === 0) {
+        toast.error('A IA não gerou nenhum card novo (tudo parecido demais com o que já existe?)');
+        return;
+      }
+      setCandidatos(data.candidatos);
+      setDescartadosPorDuplicata(data.descartadosPorDuplicata ?? 0);
+      setEtapa('preview');
+    } catch {
+      toast.error('Erro ao gerar cards');
+    } finally {
+      setGerando(false);
+    }
+  };
+
+  const updateCandidato = (i: number, field: keyof CardCandidato, value: string) => {
+    setCandidatos((prev) => prev.map((c, idx) => (idx === i ? { ...c, [field]: value } : c)));
+  };
+
+  const descartarCandidato = (i: number) => {
+    setCandidatos((prev) => prev.filter((_, idx) => idx !== i));
+  };
+
+  const handleSalvarAceitos = async () => {
+    if (candidatos.length === 0) {
+      toast.error('Nenhum card pra salvar');
+      return;
+    }
+    setSalvando(true);
+    try {
+      const res = await fetch('/api/flashcards/cards', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ deckId, cards: candidatos }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        toast.error(data.error || 'Erro ao salvar cards');
+        return;
+      }
+      toast.success(`${data.created} card${data.created !== 1 ? 's' : ''} salvo${data.created !== 1 ? 's' : ''}`);
+      fecharEResetar();
+      onSaved();
+    } catch {
+      toast.error('Erro ao salvar cards');
+    } finally {
+      setSalvando(false);
+    }
+  };
+
+  return (
+    <Dialog open={open} onOpenChange={(v) => (v ? onOpenChange(v) : fecharEResetar())}>
+      <DialogContent className={etapa === 'preview' ? 'max-w-2xl max-h-[85vh] overflow-y-auto' : undefined}>
+        {etapa === 'form' ? (
+          <>
+            <DialogHeader>
+              <DialogTitle>Gerar cards com IA</DialogTitle>
+              <DialogDescription>Você revisa antes de salvar — nada é gravado automaticamente.</DialogDescription>
+            </DialogHeader>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-xs font-medium text-muted-foreground mb-1">
+                  Sobre o que? (opcional — refina o foco da IA)
+                </label>
+                <Input
+                  value={topico}
+                  onChange={(e) => setTopico(e.target.value)}
+                  placeholder="Ex: reações de eliminação, funções orgânicas..."
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-muted-foreground mb-2">
+                  Quantidade: {quantidade}
+                </label>
+                <input
+                  type="range"
+                  min={5}
+                  max={30}
+                  value={quantidade}
+                  onChange={(e) => setQuantidade(Number(e.target.value))}
+                  className="w-full accent-primary"
+                />
+              </div>
+            </div>
+            <DialogFooter>
+              <button
+                onClick={handleGerar}
+                disabled={gerando}
+                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:opacity-90 transition disabled:opacity-50"
+              >
+                {gerando ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
+                {gerando ? 'Gerando...' : 'Gerar'}
+              </button>
+            </DialogFooter>
+          </>
+        ) : (
+          <>
+            <DialogHeader>
+              <DialogTitle>Revise antes de salvar</DialogTitle>
+              <DialogDescription>
+                {candidatos.length} card{candidatos.length !== 1 ? 's' : ''} pronto{candidatos.length !== 1 ? 's' : ''} para salvar
+                {descartadosPorDuplicata > 0
+                  ? ` — ${descartadosPorDuplicata} descartado${descartadosPorDuplicata !== 1 ? 's' : ''} automaticamente por serem parecidos demais com cards que já existem`
+                  : ''}
+                . Edite ou descarte cada um antes de confirmar.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="space-y-3">
+              {candidatos.map((c, i) => (
+                <div key={i} className="bg-muted/40 rounded-lg p-3 space-y-2">
+                  <div className="flex items-start justify-between gap-2">
+                    <Textarea
+                      value={c.frente}
+                      onChange={(e) => updateCandidato(i, 'frente', e.target.value)}
+                      rows={2}
+                      className="flex-1 text-sm font-medium"
+                    />
+                    <button
+                      onClick={() => descartarCandidato(i)}
+                      title="Descartar este card"
+                      className="p-1.5 text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-md transition-colors flex-shrink-0"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  </div>
+                  <Textarea
+                    value={c.verso}
+                    onChange={(e) => updateCandidato(i, 'verso', e.target.value)}
+                    rows={2}
+                    className="text-sm"
+                  />
+                </div>
+              ))}
+              {candidatos.length === 0 && (
+                <p className="text-sm text-muted-foreground text-center py-4">
+                  Todos os cards foram descartados. Feche e gere novamente se quiser tentar de novo.
+                </p>
+              )}
+            </div>
+            <DialogFooter>
+              <button
+                onClick={handleSalvarAceitos}
+                disabled={salvando || candidatos.length === 0}
+                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:opacity-90 transition disabled:opacity-50"
+              >
+                {salvando ? <Loader2 className="w-4 h-4 animate-spin" /> : <CheckCircle className="w-4 h-4" />}
+                Salvar {candidatos.length} card{candidatos.length !== 1 ? 's' : ''}
+              </button>
+            </DialogFooter>
+          </>
+        )}
+      </DialogContent>
+    </Dialog>
+  );
+}
 
 export default function FlashcardDeckPage() {
   const router = useRouter();
@@ -27,8 +322,9 @@ export default function FlashcardDeckPage() {
   const [sessionStats, setSessionStats] = useState({ acertos: 0, erros: 0 });
   const [finished, setFinished] = useState(false);
   const [animating, setAnimating] = useState(false);
-  const [generating, setGenerating] = useState(false);
   const [lastAnswer, setLastAnswer] = useState<'correct' | 'wrong' | null>(null);
+  const [showAddDialog, setShowAddDialog] = useState(false);
+  const [showGerarDialog, setShowGerarDialog] = useState(false);
 
   const fetchDeck = useCallback(
     async (m: 'todos' | 'revisar' = mode) => {
@@ -102,28 +398,6 @@ export default function FlashcardDeckPage() {
     }
   };
 
-  const handleGenerateMore = async () => {
-    setGenerating(true);
-    try {
-      const res = await fetch('/api/flashcards/gerar', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ deckId, quantidade: 15 }),
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        toast.error(data.error || 'Erro');
-        return;
-      }
-      toast.success(`${data.created} novos cards gerados!`);
-      fetchDeck();
-    } catch (e) {
-      toast.error('Erro ao gerar');
-    } finally {
-      setGenerating(false);
-    }
-  };
-
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -190,6 +464,21 @@ export default function FlashcardDeckPage() {
         >
           <RefreshCw className="w-3.5 h-3.5" />
           Revisar erros ({cardsToRevise})
+        </button>
+        <div className="flex-1" />
+        <button
+          onClick={() => setShowAddDialog(true)}
+          className="px-3 py-2 rounded-xl font-medium text-xs bg-card border border-border hover:bg-muted transition-all flex items-center gap-1.5"
+        >
+          <Plus className="w-3.5 h-3.5" />
+          Adicionar card
+        </button>
+        <button
+          onClick={() => setShowGerarDialog(true)}
+          className="px-3 py-2 rounded-xl font-medium text-xs bg-card border border-border hover:bg-muted transition-all flex items-center gap-1.5"
+        >
+          <Sparkles className="w-3.5 h-3.5" />
+          Gerar com IA
         </button>
       </div>
 
@@ -284,11 +573,10 @@ export default function FlashcardDeckPage() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                disabled={generating}
-                onClick={handleGenerateMore}
-                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-primary/70 text-primary-foreground rounded-xl font-bold shadow-md disabled:opacity-50"
+                onClick={() => setShowGerarDialog(true)}
+                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-primary/70 text-primary-foreground rounded-xl font-bold shadow-md"
               >
-                {generating ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
+                <Sparkles className="w-4 h-4" />
                 Gerar mais cards
               </motion.button>
             </div>
@@ -440,20 +728,33 @@ export default function FlashcardDeckPage() {
           <div className="text-center py-20 bg-card border border-border rounded-3xl">
             <h3 className="text-2xl font-bold mb-2">Baralho vazio</h3>
             <p className="text-muted-foreground mb-6">Este baralho ainda não tem flashcards.</p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              disabled={generating}
-              onClick={handleGenerateMore}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-bold disabled:opacity-50"
-            >
-              {generating ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
-              Gerar com IA
-            </motion.button>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setShowAddDialog(true)}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-card border-2 border-border rounded-xl font-bold hover:border-primary/50 transition-colors"
+              >
+                <Plus className="w-4 h-4" />
+                Adicionar manualmente
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setShowGerarDialog(true)}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-bold"
+              >
+                <Sparkles className="w-4 h-4" />
+                Gerar com IA
+              </motion.button>
+            </div>
           </div>
         )}
       </AnimatePresence>
       </div>
+
+      <AdicionarCardDialog open={showAddDialog} onOpenChange={setShowAddDialog} deckId={deckId} onSaved={() => fetchDeck()} />
+      <GerarComIADialog open={showGerarDialog} onOpenChange={setShowGerarDialog} deckId={deckId} onSaved={() => fetchDeck()} />
     </div>
   );
 }

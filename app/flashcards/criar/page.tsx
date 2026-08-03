@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { ChevronLeft, Loader2, Sparkles, Plus } from 'lucide-react';
+import { ChevronLeft, Loader2, Plus } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
 
@@ -14,7 +14,6 @@ export default function CriarBaralhoPage() {
   const [materia, setMateria] = useState(MATERIAS[0]);
   const [subtema, setSubtema] = useState('');
   const [descricao, setDescricao] = useState('');
-  const [quantidade, setQuantidade] = useState(15);
   const [criando, setCriando] = useState(false);
 
   const handleCriar = async () => {
@@ -22,7 +21,6 @@ export default function CriarBaralhoPage() {
 
     setCriando(true);
     try {
-      // Create deck
       const resDeck = await fetch('/api/flashcards/decks', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -40,21 +38,8 @@ export default function CriarBaralhoPage() {
         return;
       }
 
-      toast.info(`Gerando ${quantidade} flashcards com IA...`);
-
-      // Generate cards with AI
-      const resGen = await fetch('/api/flashcards/gerar', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ deckId: deckData.deck.id, quantidade }),
-      });
-      const genData = await resGen.json();
-      if (!resGen.ok) {
-        toast.error(genData.error || 'Erro ao gerar cards (baralho criado vazio)');
-      } else {
-        toast.success(`${genData.created} flashcards criados!`);
-      }
-
+      // Baralho criado vazio — adicionar cards (manual ou IA com preview)
+      // acontece na própria página do deck, não aqui.
       router.push(`/flashcards/${deckData.deck.id}`);
     } catch (e) {
       toast.error('Erro ao criar baralho');
@@ -80,7 +65,7 @@ export default function CriarBaralhoPage() {
         <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-500 via-blue-500 to-primary bg-clip-text text-transparent">
           Novo Baralho
         </h1>
-        <p className="text-muted-foreground mt-2 text-lg">A IA vai gerar os flashcards para você</p>
+        <p className="text-muted-foreground mt-2 text-lg">Depois de criar, adicione cards manualmente ou com IA</p>
       </motion.div>
 
       <div className="space-y-6">
@@ -124,29 +109,7 @@ export default function CriarBaralhoPage() {
             placeholder="Ex: Embriologia, Eletrodinâmica, Funções Orgânicas"
             className="w-full px-4 py-3 rounded-xl border-2 border-border bg-background focus:border-cyan-500 outline-none transition-colors"
           />
-          <p className="text-xs text-muted-foreground mt-2">Se preencher, a IA vai focar exclusivamente nesse subtema.</p>
-        </motion.div>
-
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="bg-card border border-border rounded-2xl p-6">
-          <label className="block text-sm font-bold mb-3">Quantidade de flashcards</label>
-          <div className="flex items-center gap-4">
-            <input
-              type="range"
-              min={5}
-              max={30}
-              value={quantidade}
-              onChange={(e) => setQuantidade(Number(e.target.value))}
-              className="flex-1 accent-cyan-500"
-            />
-            <motion.div
-              key={quantidade}
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              className="min-w-[60px] text-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-bold text-lg"
-            >
-              {quantidade}
-            </motion.div>
-          </div>
+          <p className="text-xs text-muted-foreground mt-2">Se preencher, a IA vai focar exclusivamente nesse subtema ao gerar cards depois.</p>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="flex justify-end">
@@ -160,11 +123,11 @@ export default function CriarBaralhoPage() {
             {criando ? (
               <>
                 <Loader2 className="w-5 h-5 animate-spin" />
-                Criando com IA...
+                Criando...
               </>
             ) : (
               <>
-                <Sparkles className="w-5 h-5" />
+                <Plus className="w-5 h-5" />
                 Criar Baralho
               </>
             )}

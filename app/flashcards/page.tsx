@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 import {
   Layers, BookOpen, CheckCircle, AlertCircle, Loader2, Star,
   Search, ChevronLeft, ChevronRight, Calculator, Dna, FlaskConical,
-  Zap, Landmark, Globe2, Brain, Users, BookText, X,
+  Zap, Landmark, Globe2, Brain, Users, BookText, X, Plus,
 } from 'lucide-react';
 import { materiaColors } from '@/lib/theme-colors';
 
@@ -158,6 +158,15 @@ export default function FlashcardsPage() {
                 : 'Escolha uma matéria para começar a estudar'}
             </p>
           </div>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => router.push('/flashcards/criar')}
+            className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-bold shadow-md hover:shadow-lg transition-shadow self-start"
+          >
+            <Plus className="w-4 h-4" />
+            Novo Baralho
+          </motion.button>
         </div>
       </motion.div>
 
