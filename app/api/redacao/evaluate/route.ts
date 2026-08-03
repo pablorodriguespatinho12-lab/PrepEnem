@@ -2,6 +2,8 @@ export const dynamic = 'force-dynamic';
 export const maxDuration = 120;
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '@/lib/auth';
 
 const SYSTEM_PROMPT = `Você é um especialista avaliador de redações do ENEM com mais de 20 anos de experiência como corretor oficial do INEP. Analise redações dissertativo-argumentativas com máxima precisão seguindo rigorosamente os critérios oficiais.
 
@@ -62,6 +64,12 @@ APÓS o Markdown, inclua na ÚLTIMA LINHA este JSON (exatamente neste formato):
 
 export async function POST(req: Request) {
   try {
+    const session = await getServerSession(authOptions);
+    if (!session?.user) {
+      return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
+    }
+    const userId = (session.user as any).id;
+
     const { essayId } = await req.json();
     if (!essayId) return NextResponse.json({ error: 'essayId obrigatório' }, { status: 400 });
 
@@ -70,6 +78,9 @@ export async function POST(req: Request) {
       include: { theme: true },
     });
     if (!essay) return NextResponse.json({ error: 'Redação não encontrada' }, { status: 404 });
+    if (essay.userId !== userId) {
+      return NextResponse.json({ error: 'Não autorizado' }, { status: 403 });
+    }
 
     // Mark as evaluating
     await prisma.essay.update({ where: { id: essayId }, data: { status: 'avaliando' } });

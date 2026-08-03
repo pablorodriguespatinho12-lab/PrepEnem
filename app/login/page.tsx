@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import { signIn } from 'next-auth/react';
-import Link from 'next/link';
 import { GraduationCap, User, Lock, Eye, EyeOff } from 'lucide-react';
 import { toast } from 'sonner';
 import { motion } from 'framer-motion';
@@ -120,13 +119,6 @@ export default function LoginPage() {
               </motion.button>
             </motion.div>
           </form>
-
-          <p className="text-center text-sm text-muted-foreground mt-6">
-            Não tem conta?{' '}
-            <Link href="/signup" className="text-primary font-medium hover:underline">
-              Cadastre-se
-            </Link>
-          </p>
         </motion.div>
       </motion.div>
     </div>

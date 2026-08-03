@@ -35,6 +35,7 @@ export const authOptions: NextAuthOptions = {
           if (!valid) return null;
           return {
             id: user.id,
+            username: user.username,
             email: user.email ?? user.username,
             name: user.name,
             role: user.role,
@@ -47,6 +48,19 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
+    // Restringe quem pode logar via ALLOWED_USERS (lista de usernames
+    // separados por vírgula). Sem a variável definida, ninguém é bloqueado
+    // aqui — reabrir o site é só remover ALLOWED_USERS do ambiente e
+    // redeployar, sem tocar em código.
+    async signIn({ user }: any) {
+      const allowedUsersRaw = process.env.ALLOWED_USERS;
+      if (!allowedUsersRaw) return true;
+      const allowedUsers = allowedUsersRaw
+        .split(',')
+        .map((u) => u.trim())
+        .filter(Boolean);
+      return allowedUsers.includes(user.username);
+    },
     async jwt({ token, user, trigger, session }: any) {
       if (user) {
         // Login inicial: popula o token e marca como validado agora.
