@@ -602,9 +602,16 @@ export default function FlashcardDeckPage() {
             >
               <motion.div
                 animate={{ rotateY: flipped ? 180 : 0 }}
+                // Exceção deliberada ao padrão de reduced-motion do resto do
+                // app: aqui a rotação é o próprio feedback de que a resposta
+                // trocou de lado, não decoração (diferente do parallax de
+                // fundo, que é puramente estético). Uma rotação de eixo único
+                // em 250-600ms não é o tipo de movimento que a diretriz mira
+                // (parallax rápido, zoom, deslocamento grande) — só encurta
+                // e tira o bounce quando reduced-motion está ativo.
                 transition={
                   shouldReduceMotion
-                    ? { duration: 0 }
+                    ? { duration: 0.25, ease: 'easeOut' }
                     : { duration: 0.6, type: 'spring', stiffness: 100, damping: 15 }
                 }
                 style={{ transformStyle: 'preserve-3d', minHeight: '400px' }}
