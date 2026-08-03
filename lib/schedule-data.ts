@@ -229,21 +229,19 @@ export const studyCycle: WeekSchedule[] = [
   },
 ];
 
-// Reference start date for the 4-week cycle (a known Monday)
-// Using June 2, 2025 as week 1 Monday — adjust if needed
-const CYCLE_START = new Date('2025-06-02T00:00:00');
-
-export function getCurrentCycleInfo(date?: Date) {
-  const now = date ?? new Date();
-  const diffMs = now.getTime() - CYCLE_START.getTime();
-  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-  // Total days in a 4-week cycle = 28
-  const dayInCycle = ((diffDays % 28) + 28) % 28; // 0-27
-  const weekIndex = Math.floor(dayInCycle / 7); // 0-3
+// dayIndex é a posição do dia DENTRO do array `days` de uma semana (0-6,
+// ordem Segunda→Domingo conforme o array já está declarado acima) — não é
+// o `dayOfWeek` civil (0=Dom...6=Sáb, usado só como rótulo/cor de exibição).
+// Antes disso o dia/semana "atual" era calculado a partir de CYCLE_START +
+// data de hoje: o ciclo girava sozinho independente do que o usuário de
+// fato estudou. Ver lib/study-progress.ts pra a versão baseada em progresso
+// real (StudyProgress no banco) — essas funções aqui são só leitura pura do
+// conteúdo estático de studyCycle, dado um weekNumber/dayIndex explícitos.
+export function getCycleInfoForDay(weekNumber: number, dayIndex: number) {
+  const weekIndex = Math.min(Math.max(weekNumber - 1, 0), studyCycle.length - 1);
   const currentWeek = studyCycle[weekIndex];
-  const dayOfWeek = now.getDay(); // 0=Sun...6=Sat
-  const todaySchedule = currentWeek.days.find(d => d.dayOfWeek === dayOfWeek) ?? null;
-  return { weekIndex, weekNumber: weekIndex + 1, currentWeek, todaySchedule, dayInCycle };
+  const daySchedule = currentWeek.days[Math.min(Math.max(dayIndex, 0), currentWeek.days.length - 1)] ?? null;
+  return { weekIndex, weekNumber: weekIndex + 1, currentWeek, daySchedule, dayIndex };
 }
 
 // Get all topics for the current week (for simulado on Friday)
@@ -289,15 +287,15 @@ export interface LegacyDaySchedule {
   isSimulado?: boolean;
 }
 
-// Convert current cycle day to legacy format for backward compatibility
-export function getTodayLegacySchedule(date?: Date): LegacyDaySchedule | null {
-  const { todaySchedule } = getCurrentCycleInfo(date);
-  if (!todaySchedule) return null;
+// Convert a specific plan day to legacy format for backward compatibility
+export function getLegacyScheduleForDay(weekNumber: number, dayIndex: number): LegacyDaySchedule | null {
+  const { daySchedule } = getCycleInfoForDay(weekNumber, dayIndex);
+  if (!daySchedule) return null;
   return {
-    dayOfWeek: todaySchedule.dayOfWeek,
-    dayName: todaySchedule.dayName,
-    color: todaySchedule.color,
-    manha: todaySchedule.topics.map(t => ({
+    dayOfWeek: daySchedule.dayOfWeek,
+    dayName: daySchedule.dayName,
+    color: daySchedule.color,
+    manha: daySchedule.topics.map(t => ({
       materia: t.materia,
       tema: t.subtemas.join(', '),
       questoes: 20,
@@ -306,13 +304,13 @@ export function getTodayLegacySchedule(date?: Date): LegacyDaySchedule | null {
       { materia: 'Português', tema: 'Treino diário', questoes: 20 },
       { materia: 'Matemática', tema: 'Treino diário', questoes: 20 },
     ],
-    isSimulado: todaySchedule.isSimulado,
+    isSimulado: daySchedule.isSimulado,
   };
 }
 
-// Build a weeklySchedule-like array for the current week (for dashboard weekly view)
-export function getCurrentWeekSchedule(): LegacyDaySchedule[] {
-  const { currentWeek } = getCurrentCycleInfo();
+// Build a weeklySchedule-like array for a given week (for dashboard weekly view)
+export function getWeekScheduleByNumber(weekNumber: number): LegacyDaySchedule[] {
+  const { currentWeek } = getCycleInfoForDay(weekNumber, 0);
   return currentWeek.days.map(d => ({
     dayOfWeek: d.dayOfWeek,
     dayName: d.dayName,

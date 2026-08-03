@@ -3,7 +3,8 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
-import { getCurrentCycleInfo, getWeekTopics } from '@/lib/schedule-data';
+import { getCycleInfoForDay, getWeekTopics } from '@/lib/schedule-data';
+import { getActiveStudyDay } from '@/lib/study-progress';
 
 export async function POST(req: Request) {
   try {
@@ -11,12 +12,18 @@ export async function POST(req: Request) {
     if (!session?.user) {
       return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
     }
+    const userId = (session.user as any).id;
 
-    const { totalQuestoes = 90, materias, weeklySimulado } = await req.json().catch(() => ({}));
+    const body = await req.json().catch(() => ({}));
+    const { totalQuestoes = 90, materias, weeklySimulado } = body;
     const limit = Math.min(Math.max(totalQuestoes, 10), 180);
 
-    // If it's a weekly simulado (Friday), get this week's topics
-    const { weekIndex, todaySchedule } = getCurrentCycleInfo();
+    // Semana ativa: explícita no corpo (dashboard já sabe qual é) ou derivada
+    // do progresso real do usuário como fallback.
+    const planDay = Number.isInteger(body?.weekNumber) && Number.isInteger(body?.dayIndex)
+      ? { weekNumber: body.weekNumber, dayIndex: body.dayIndex }
+      : await getActiveStudyDay(userId);
+    const { weekIndex, daySchedule: todaySchedule } = getCycleInfoForDay(planDay.weekNumber, planDay.dayIndex);
     const isWeeklySimulado = weeklySimulado || todaySchedule?.isSimulado;
     const weekTopics = isWeeklySimulado ? getWeekTopics(weekIndex) : [];
     const weekMaterias = weekTopics.map(t => t.materia);

@@ -9,3 +9,9 @@ node_modules
 # Dump de dados de importação única (1.2MB) — fonte de verdade já é o Neon.
 # O script de import (import-questoes.js) fica versionado.
 questoes-prepenem.json
+
+# Config local de ferramentas (ruflo/claude-flow, proven-config) — gerado
+# automaticamente por integração local, não é código do projeto.
+.claude-flow/
+.claude/proven-config*
+.claude/.proven-config*

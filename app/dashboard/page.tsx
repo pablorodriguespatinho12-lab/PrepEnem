@@ -8,8 +8,9 @@ import {
   Trophy, ArrowRight, AlertTriangle, CheckCircle2, Brain, Sparkles,
   Sun, Briefcase, FileText, Upload, ClipboardList
 } from 'lucide-react';
-import { getCurrentCycleInfo, getCurrentWeekSchedule, studyCycle } from '@/lib/schedule-data';
+import { getWeekScheduleByNumber, studyCycle } from '@/lib/schedule-data';
 import { materiaColors } from '@/lib/theme-colors';
+import { CheckCircle2 as DayDoneIcon, Circle, CircleDashed } from 'lucide-react';
 
 const ThreeScene = dynamic(() => import('@/components/three-scene'), { ssr: false });
 
@@ -61,7 +62,9 @@ export default function DashboardPage() {
   const router = useRouter();
   const [stats, setStats] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-  const [expandedDay, setExpandedDay] = useState<number>(() => new Date().getDay());
+  const [studyProgress, setStudyProgress] = useState<any[]>([]);
+  const [activeDay, setActiveDay] = useState<{ weekNumber: number; dayIndex: number; cycleComplete: boolean } | null>(null);
+  const [expandedDayIndex, setExpandedDayIndex] = useState<number | null>(null);
   const dashRef = useRef<HTMLDivElement>(null);
 
   const fetchStats = useCallback(async () => {
@@ -75,7 +78,31 @@ export default function DashboardPage() {
     }
   }, []);
 
-  useEffect(() => { fetchStats(); }, [fetchStats]);
+  const fetchStudyProgress = useCallback(async () => {
+    try {
+      const res = await fetch('/api/study-progress');
+      if (res.ok) {
+        const data = await res.json();
+        setStudyProgress(data?.progress ?? []);
+        setActiveDay(data?.active ?? null);
+        setExpandedDayIndex((prev) => prev ?? data?.active?.dayIndex ?? 0);
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }, []);
+
+  useEffect(() => { fetchStats(); fetchStudyProgress(); }, [fetchStats, fetchStudyProgress]);
+
+  const skipActiveDay = useCallback(async () => {
+    if (!activeDay) return;
+    await fetch('/api/study-progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ weekNumber: activeDay.weekNumber, dayIndex: activeDay.dayIndex, status: 'pulado' }),
+    }).catch(() => {});
+    fetchStudyProgress();
+  }, [activeDay, fetchStudyProgress]);
 
   /* ── GSAP scroll animations ── */
   useEffect(() => {
@@ -139,12 +166,15 @@ export default function DashboardPage() {
     return () => { if (ctx) ctx.revert(); };
   }, [loading]);
 
-  const cycleInfo = getCurrentCycleInfo();
-  const weekSchedule = getCurrentWeekSchedule();
-  const todaySchedule = weekSchedule.find(d => d.dayOfWeek === new Date().getDay());
-  const weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
-  const dayOfWeek = new Date().getDay();
-  const expandedDaySchedule = weekSchedule.find(d => d.dayOfWeek === expandedDay);
+  const weekNumber = activeDay?.weekNumber ?? 1;
+  const weekTitle = studyCycle[weekNumber - 1]?.weekTitle ?? '';
+  const weekSchedule = getWeekScheduleByNumber(weekNumber);
+  const activeDaySchedule = activeDay ? weekSchedule[activeDay.dayIndex] : null;
+  const expandedDaySchedule = expandedDayIndex !== null ? weekSchedule[expandedDayIndex] : null;
+  const statusForDayIndex = (dayIndex: number): string =>
+    studyProgress.find((p) => p.weekNumber === weekNumber && p.dayIndex === dayIndex)?.status ?? 'nao_iniciado';
+  const treinoHref = activeDay ? `/treino?weekNumber=${activeDay.weekNumber}&dayIndex=${activeDay.dayIndex}` : '/treino';
+  const weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']; // indexado por day.dayOfWeek (0=Dom civil), não por dayIndex
 
   const statCards = [
     { label: 'Questões Respondidas', value: stats?.totalRespondidas ?? 0, icon: BookOpen, color: 'bg-blue-500/10 text-blue-600 dark:text-blue-400' },
@@ -157,47 +187,63 @@ export default function DashboardPage() {
     <>
       <ThreeScene />
       <div ref={dashRef} className="p-4 md:p-8 max-w-6xl mx-auto relative" style={{ zIndex: 1 }}>
-        <Greeting name={session?.user?.name ?? 'Estudante'} weekNumber={cycleInfo.weekNumber} />
+        <Greeting name={session?.user?.name ?? 'Estudante'} weekNumber={weekNumber} />
 
-        {/* ── Estudo de Hoje (protagonista, com CTA de treino embutido) ── */}
-        {todaySchedule && (
+        {/* ── Estudo Atual (protagonista, com CTA de treino embutido) ──
+             "Atual" em vez de "Hoje": o dia mostrado é o próximo pendente no
+             SEU progresso, não necessariamente o dia da semana civil de hoje. */}
+        {activeDay?.cycleComplete ? (
+          <div className="gsap-section gsap-reveal bg-card/80 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-border mb-6 text-center">
+            <Trophy className="w-8 h-8 text-primary mx-auto mb-2" />
+            <p className="font-display text-base font-semibold">Ciclo de 4 semanas concluído!</p>
+            <p className="text-xs text-muted-foreground mt-1">Continue treinando livremente pelas outras telas.</p>
+          </div>
+        ) : activeDaySchedule && (
           <div className="gsap-section gsap-reveal bg-card/80 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-border mb-6">
-            <div className="flex items-center gap-2 mb-4">
-              <Sun className="w-5 h-5 text-amber-500" />
-              <h2 className="font-display text-lg font-semibold">Estudo de Hoje</h2>
-              <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">
-                Semana {cycleInfo.weekNumber} • {todaySchedule.dayName}
-              </span>
+            <div className="flex items-center justify-between gap-2 mb-4 flex-wrap">
+              <div className="flex items-center gap-2">
+                <Sun className="w-5 h-5 text-amber-500" />
+                <h2 className="font-display text-lg font-semibold">Estudo Atual</h2>
+                <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">
+                  Semana {weekNumber} • {activeDaySchedule.dayName}
+                </span>
+              </div>
+              <button
+                onClick={skipActiveDay}
+                className="text-xs text-muted-foreground hover:text-foreground underline underline-offset-2"
+              >
+                Pular este dia
+              </button>
             </div>
 
             <button
-              onClick={() => router.push('/treino')}
+              onClick={() => router.push(treinoHref)}
               className="w-full flex items-center gap-4 bg-primary text-primary-foreground rounded-xl p-4 md:p-5 shadow-lg hover:opacity-90 transition-all group shimmer-btn cta-glow mb-4"
             >
               <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
                 <Brain className="w-6 h-6" />
               </div>
               <div className="flex-1 text-left">
-                <p className="font-display text-base md:text-lg font-bold">Iniciar Treino de Hoje (20 questões)</p>
+                <p className="font-display text-base md:text-lg font-bold">Iniciar Treino (20 questões)</p>
               </div>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </button>
 
-            {todaySchedule.isSimulado ? (
+            {activeDaySchedule.isSimulado ? (
               <div className="p-4 rounded-lg bg-red-500/5 border border-red-500/10 text-center">
                 <ClipboardList className="w-8 h-8 text-red-500 mx-auto mb-2" />
-                <p className="text-sm font-medium text-red-700 dark:text-red-400">📝 Dia de Simulado!</p>
+                <p className="text-sm font-medium text-red-700 dark:text-red-400">Dia de Simulado</p>
                 <p className="text-xs text-muted-foreground mt-1">Questões das matérias da semana</p>
               </div>
             ) : (
               <div className="space-y-3">
-                {todaySchedule.manha.length > 0 && (
+                {activeDaySchedule.manha.length > 0 && (
                   <div>
                     <p className="text-xs font-medium text-muted-foreground mb-2 flex items-center gap-1">
                       <Sun className="w-3.5 h-3.5 text-amber-500" /> Matérias ENEM
                     </p>
                     <div className="space-y-2">
-                      {todaySchedule.manha.map((block, i) => (
+                      {activeDaySchedule.manha.map((block, i) => (
                         <button
                           key={i}
                           onClick={() => router.push(`/treino?mode=filtered&materia=${encodeURIComponent(block.materia)}`)}
@@ -218,13 +264,13 @@ export default function DashboardPage() {
                   </div>
                 )}
 
-                {todaySchedule.trabalho.length > 0 && (
+                {activeDaySchedule.trabalho.length > 0 && (
                   <div>
                     <p className="text-xs font-medium text-muted-foreground mb-2 flex items-center gap-1">
                       <Briefcase className="w-3.5 h-3.5 text-blue-500" /> Treino Diário
                     </p>
                     <div className="space-y-2">
-                      {todaySchedule.trabalho.map((block, i) => (
+                      {activeDaySchedule.trabalho.map((block, i) => (
                         <button
                           key={i}
                           onClick={() => router.push(`/treino?mode=filtered&materia=${encodeURIComponent(block.materia)}`)}
@@ -299,7 +345,7 @@ export default function DashboardPage() {
             <div className="flex-1 text-left min-w-0">
               <p className="font-display text-sm font-bold truncate">Simulado ENEM</p>
               <p className="text-xs text-muted-foreground truncate">
-                {todaySchedule?.isSimulado ? '🔥 Hoje é dia de simulado!' : 'Até 180 questões'}
+                {activeDaySchedule?.isSimulado ? 'Dia de simulado no seu plano atual' : 'Até 180 questões'}
               </p>
             </div>
           </button>
@@ -318,33 +364,39 @@ export default function DashboardPage() {
           </button>
         </div>
 
-        {/* ── Weekly Calendar: pills horizontais (dia de hoje expandido por padrão) ── */}
+        {/* ── Weekly Calendar: pills horizontais, status vem do progresso real,
+             não da data (dia atual do plano expandido por padrão) ── */}
         <div className="gsap-section gsap-reveal bg-card/80 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-border mb-8">
           <div className="flex items-center gap-2 mb-4">
             <Sparkles className="w-5 h-5 text-primary" />
-            <h2 className="font-display text-lg font-semibold">Semana {cycleInfo.weekNumber}: {cycleInfo.currentWeek.weekTitle}</h2>
+            <h2 className="font-display text-lg font-semibold">Semana {weekNumber}: {weekTitle}</h2>
           </div>
 
           <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1">
-            {weekSchedule.map((day) => {
-              const isToday = day.dayOfWeek === dayOfWeek;
-              const isExpanded = day.dayOfWeek === expandedDay;
+            {weekSchedule.map((day, dayIndex) => {
+              const status = statusForDayIndex(dayIndex);
+              const isActive = activeDay?.dayIndex === dayIndex;
+              const isExpanded = expandedDayIndex === dayIndex;
+              const StatusIcon = status === 'concluido' || status === 'pulado' ? DayDoneIcon : status === 'em_andamento' ? CircleDashed : Circle;
               return (
                 <button
-                  key={day.dayOfWeek}
-                  onClick={() => setExpandedDay(day.dayOfWeek)}
+                  key={dayIndex}
+                  onClick={() => setExpandedDayIndex(dayIndex)}
                   className={`flex-shrink-0 flex flex-col items-center gap-1 px-3 py-2 rounded-lg border transition-all min-w-[52px] ${
                     isExpanded ? 'border-primary shadow-sm' : 'border-transparent hover:bg-muted/50'
                   }`}
                   style={isExpanded ? { backgroundColor: `${day.color}20` } : undefined}
                 >
                   <div
-                    className="w-7 h-7 rounded-lg flex items-center justify-center text-[11px] font-bold text-white flex-shrink-0"
+                    className="relative w-7 h-7 rounded-lg flex items-center justify-center text-[11px] font-bold text-white flex-shrink-0"
                     style={{ backgroundColor: day.color }}
                   >
                     {weekDays[day.dayOfWeek]}
+                    <StatusIcon className={`absolute -top-1.5 -right-1.5 w-3.5 h-3.5 rounded-full bg-card ${
+                      status === 'concluido' ? 'text-green-600' : status === 'pulado' ? 'text-muted-foreground' : status === 'em_andamento' ? 'text-primary' : 'text-border'
+                    }`} />
                   </div>
-                  {isToday && <span className="text-[9px] font-bold text-primary">Hoje</span>}
+                  {isActive && <span className="text-[9px] font-bold text-primary">Atual</span>}
                 </button>
               );
             })}
@@ -357,13 +409,13 @@ export default function DashboardPage() {
                 {expandedDaySchedule.manha.length > 0 && !expandedDaySchedule.isSimulado && (
                   <Sun className="w-3.5 h-3.5 text-amber-500" />
                 )}
-                {expandedDaySchedule.dayOfWeek === dayOfWeek && (
-                  <span className="text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded-full font-medium">Hoje</span>
+                {activeDay?.dayIndex === expandedDayIndex && (
+                  <span className="text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded-full font-medium">Atual</span>
                 )}
               </p>
               <p className="text-xs text-muted-foreground">
                 {expandedDaySchedule.isSimulado
-                  ? '📝 Simulado ENEM'
+                  ? 'Simulado ENEM'
                   : [...expandedDaySchedule.manha, ...expandedDaySchedule.trabalho].map((b) => b.materia).join(' • ') || 'Sem blocos programados'}
               </p>
             </div>

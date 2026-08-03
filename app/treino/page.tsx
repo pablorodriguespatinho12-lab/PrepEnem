@@ -40,7 +40,24 @@ export default function TreinoPage() {
   const filterMateria = searchParams?.get('materia') ?? '';
   const filterSubtema = searchParams?.get('subtema') ?? '';
   const errosQuestionIds = searchParams?.get('questionIds') ?? '';
+  const planWeekNumberParam = searchParams?.get('weekNumber');
+  const planDayIndexParam = searchParams?.get('dayIndex');
   const shouldReduceMotion = useReducedMotion();
+  const [planDay, setPlanDay] = useState<{ weekNumber: number; dayIndex: number } | null>(
+    planWeekNumberParam && planDayIndexParam
+      ? { weekNumber: Number(planWeekNumberParam), dayIndex: Number(planDayIndexParam) }
+      : null
+  );
+
+  const markStudyProgress = useCallback((status: 'em_andamento' | 'concluido', day?: { weekNumber: number; dayIndex: number } | null) => {
+    const target = day ?? planDay;
+    if (!target) return;
+    fetch('/api/study-progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...target, status }),
+    }).catch(() => {});
+  }, [planDay]);
 
   const [questions, setQuestions] = useState<any[]>([]);
   const [reviewData, setReviewData] = useState<any[]>([]);
@@ -158,6 +175,7 @@ export default function TreinoPage() {
 
           setCurrentIdx(restoreIdx);
           setScore({ correct: s.correct ?? 0, wrong: s.wrong ?? 0 });
+          markStudyProgress('em_andamento');
           setRestoredSession(true);
           setSessionStarted(true);
           setResumoDismissed(true); // Skip resumo on restore
@@ -171,12 +189,24 @@ export default function TreinoPage() {
         }
 
         // No active session, generate new one
-        const res = await fetch('/api/treino/generate', { method: 'POST' });
+        const res = await fetch('/api/treino/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(planDay ?? {}),
+        });
         const resData = await res.json();
         loadedQs = resData?.questions ?? [];
         setQuestions(loadedQs);
         if (resData?.materias) setSessionMaterias(resData.materias);
-        if (resData?.schedule) setSessionSchedule(resData.schedule);
+        if (resData?.schedule) {
+          setSessionSchedule(resData.schedule);
+          // Servidor pode ter resolvido o dia do plano sozinho (ex: sessão
+          // sem weekNumber/dayIndex explícitos na URL) — guarda pra saber
+          // qual dia marcar como concluído ao final da sessão.
+          const resolvedDay = { weekNumber: resData.schedule.weekNumber, dayIndex: resData.schedule.dayIndex };
+          setPlanDay(resolvedDay);
+          markStudyProgress('em_andamento', resolvedDay);
+        }
 
         // Create persistent session
         if (loadedQs.length > 0) {
@@ -473,6 +503,7 @@ export default function TreinoPage() {
       setFinished(true);
       playSound('sessaoConcluida');
       if (sessionId) saveSessionProgress(sessionId, currentIdx, score, undefined, undefined, true);
+      markStudyProgress('concluido');
       return;
     }
     const newIdx = currentIdx + 1;

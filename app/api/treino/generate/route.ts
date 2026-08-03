@@ -3,7 +3,8 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
-import { getCurrentCycleInfo } from '@/lib/schedule-data';
+import { getCycleInfoForDay } from '@/lib/schedule-data';
+import { getActiveStudyDay, upsertStudyProgress } from '@/lib/study-progress';
 
 
 export async function POST(req: Request) {
@@ -14,7 +15,14 @@ export async function POST(req: Request) {
     }
     const userId = (session.user as any).id;
 
-    const { todaySchedule, weekNumber, currentWeek } = getCurrentCycleInfo();
+    const body = await req.json().catch(() => ({}));
+    const planDay = Number.isInteger(body?.weekNumber) && Number.isInteger(body?.dayIndex)
+      ? { weekNumber: body.weekNumber, dayIndex: body.dayIndex }
+      : await getActiveStudyDay(userId);
+
+    const { daySchedule: todaySchedule, weekNumber, currentWeek } = getCycleInfoForDay(planDay.weekNumber, planDay.dayIndex);
+
+    await upsertStudyProgress(userId, planDay.weekNumber, planDay.dayIndex, 'em_andamento');
 
     // Build materia + subtema filters from today's schedule
     const todayMaterias: string[] = [];
@@ -220,6 +228,7 @@ Retorne SOMENTE JSON válido.`;
       schedule: todaySchedule ? {
         dayName: todaySchedule.dayName,
         weekNumber,
+        dayIndex: planDay.dayIndex,
         weekTitle: currentWeek.weekTitle,
         topics: scheduleTopics,
         manha: todaySchedule.topics.map(t => ({ materia: t.materia, tema: t.subtemas.join(', '), questoes: 20 })),
