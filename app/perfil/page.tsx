@@ -2,11 +2,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useSession, signOut } from 'next-auth/react';
 import { motion } from 'framer-motion';
-import { Settings, User, Palette, Save, LogOut, Check, Moon, Sun } from 'lucide-react';
+import { Settings, User, Palette, Save, LogOut, Check, Moon, Sun, Volume2, VolumeX } from 'lucide-react';
 import { toast } from 'sonner';
 import { themeColors, DEFAULT_THEME_COLOR } from '@/lib/theme-colors';
 import { useAppTheme } from '@/components/app-theme-provider';
 import { useTheme } from 'next-themes';
+import { useSoundEnabled } from '@/lib/use-sound-preference';
 
 const THEME_OPTIONS = Object.entries(themeColors).map(([key, set]) => ({
   key,
@@ -22,6 +23,7 @@ export default function PerfilPage() {
   const [saving, setSaving] = useState(false);
   const [profile, setProfile] = useState<any>(null);
   const { theme: darkMode, setTheme: setDarkMode } = useTheme();
+  const [soundEnabled, setSoundEnabled] = useSoundEnabled();
 
   const fetchProfile = useCallback(async () => {
     try {
@@ -173,6 +175,38 @@ export default function PerfilPage() {
               transition={{ type: 'spring', stiffness: 500, damping: 30 }}
             >
               {darkMode === 'dark' ? <Moon className="w-3.5 h-3.5 text-primary" /> : <Sun className="w-3.5 h-3.5 text-amber-500" />}
+            </motion.div>
+          </button>
+        </div>
+      </motion.div>
+
+      {/* Sound */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.35 }}
+        className="bg-card rounded-xl p-6 shadow-sm border border-border mb-6"
+      >
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            {soundEnabled ? <Volume2 className="w-5 h-5 text-primary" /> : <VolumeX className="w-5 h-5 text-primary" />}
+            <div>
+              <h2 className="font-display text-base font-semibold">Som</h2>
+              <p className="text-xs text-muted-foreground">Feedback sonoro discreto em acerto, erro, card salvo e sessão concluída</p>
+            </div>
+          </div>
+          <button
+            onClick={() => setSoundEnabled(!soundEnabled)}
+            className={`relative w-14 h-7 rounded-full transition-colors duration-300 flex-shrink-0 ${
+              soundEnabled ? 'bg-primary' : 'bg-muted'
+            }`}
+          >
+            <motion.div
+              className="absolute top-0.5 w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center"
+              animate={{ left: soundEnabled ? '30px' : '2px' }}
+              transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+            >
+              {soundEnabled ? <Volume2 className="w-3.5 h-3.5 text-primary" /> : <VolumeX className="w-3.5 h-3.5 text-muted-foreground" />}
             </motion.div>
           </button>
         </div>

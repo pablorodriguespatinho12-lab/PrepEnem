@@ -12,6 +12,7 @@ import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
 import { fireConfetti, spawnCorrectParticles, flashScreen } from '@/components/animations';
 import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
+import { playSound } from '@/lib/sounds';
 
 const PdfPageViewer = dynamic(() => import('@/components/pdf-page-viewer'), { ssr: false });
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
@@ -258,6 +259,7 @@ export default function TreinoPage() {
         });
         // Visual feedback
         flashScreen(acertou ? 'correct' : 'wrong');
+        playSound(acertou ? 'acerto' : 'erro');
         if (acertou) {
           const correctEl = document.querySelector(`[data-alt="${currentQ.respostaCorreta}"]`);
           if (correctEl) spawnCorrectParticles(correctEl as HTMLElement);
@@ -295,6 +297,7 @@ export default function TreinoPage() {
           explicacao: currentQ.explicacao,
         });
         flashScreen(acertou ? 'correct' : 'wrong');
+        playSound(acertou ? 'acerto' : 'erro');
         if (acertou) {
           const correctEl = document.querySelector(`[data-alt="${currentQ.respostaCorreta}"]`);
           if (correctEl) spawnCorrectParticles(correctEl as HTMLElement);
@@ -323,6 +326,7 @@ export default function TreinoPage() {
         const data = await res.json();
         setResult(data);
         flashScreen(data?.acertou ? 'correct' : 'wrong');
+        playSound(data?.acertou ? 'acerto' : 'erro');
         if (data?.acertou) {
           const correctEl = document.querySelector(`[data-alt="${currentQ.respostaCorreta}"]`);
           if (correctEl) spawnCorrectParticles(correctEl as HTMLElement);
@@ -467,6 +471,7 @@ export default function TreinoPage() {
         return;
       }
       setFinished(true);
+      playSound('sessaoConcluida');
       if (sessionId) saveSessionProgress(sessionId, currentIdx, score, undefined, undefined, true);
       return;
     }

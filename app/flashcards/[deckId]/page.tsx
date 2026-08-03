@@ -8,6 +8,7 @@ import { materiaColors } from '@/lib/theme-colors';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { playSound } from '@/lib/sounds';
 
 interface CardCandidato {
   frente: string;
@@ -59,6 +60,7 @@ function AdicionarCardDialog({
         return;
       }
       toast.success('Card adicionado');
+      playSound('cardSalvo');
       reset();
       onOpenChange(false);
       onSaved();
@@ -186,6 +188,7 @@ function GerarComIADialog({
         return;
       }
       toast.success(`${data.created} card${data.created !== 1 ? 's' : ''} salvo${data.created !== 1 ? 's' : ''}`);
+      playSound('cardSalvo');
       fecharEResetar();
       onSaved();
     } catch {
@@ -364,6 +367,7 @@ export default function FlashcardDeckPage() {
     if (animating) return;
     setAnimating(true);
     setLastAnswer(acertou ? 'correct' : 'wrong');
+    playSound(acertou ? 'acerto' : 'erro');
     const currentCard = cards[currentIdx];
     if (!currentCard) return;
 
@@ -383,6 +387,7 @@ export default function FlashcardDeckPage() {
       setTimeout(() => {
         if (currentIdx + 1 >= cards.length) {
           setFinished(true);
+          playSound('sessaoConcluida');
         } else {
           setCurrentIdx((i) => i + 1);
           setFlipped(false);
