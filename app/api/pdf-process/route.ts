@@ -6,6 +6,7 @@ import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/db';
 import { PDFDocument } from 'pdf-lib';
 import { uploadBufferToS3 } from '@/lib/s3';
+import { isS3Configured, s3UnavailableResponse } from '@/lib/aws-client';
 
 const MATERIAS_VALIDAS = [
   'Matemática', 'Português', 'Biologia', 'Química', 'Física',
@@ -139,6 +140,9 @@ export async function POST(req: Request) {
     const session = await getServerSession(authOptions);
     if (!session?.user) {
       return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
+    }
+    if (!isS3Configured()) {
+      return s3UnavailableResponse();
     }
 
     const { pdfBase64, gabaritoBase64, fileName, gabaritoFileName } = await req.json();

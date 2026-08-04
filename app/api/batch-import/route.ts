@@ -6,6 +6,7 @@ import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/db';
 import { PDFDocument } from 'pdf-lib';
 import { uploadBufferToS3 } from '@/lib/s3';
+import { isS3Configured, s3UnavailableResponse } from '@/lib/aws-client';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -107,6 +108,9 @@ export async function POST(req: Request) {
     const session = await getServerSession(authOptions);
     if (!session?.user || (session.user as any).role !== 'admin') {
       return NextResponse.json({ error: 'Admin required' }, { status: 403 });
+    }
+    if (!isS3Configured()) {
+      return s3UnavailableResponse();
     }
 
     const { pairIndex } = await req.json();
