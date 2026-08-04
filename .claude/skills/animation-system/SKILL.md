@@ -42,9 +42,28 @@ const shouldReduceMotion = useReducedMotion(); // do próprio framer-motion
 ```
 
 Com `shouldReduceMotion`, os offsets de `x`/`rotate` viram `0` e a
-`transition.duration` cai para `0`/`0.01` — sem slide, sem flip 3D, sem
-spin, mantendo a troca de conteúdo instantânea. Esse é o padrão a copiar
-(gate no offset + na duration, não reescrever a estrutura do componente).
+`transition.duration` cai para `0`/`0.01` — sem slide, sem spin, mantendo
+a troca de conteúdo instantânea. Esse é o padrão a copiar (gate no offset
++ na duration, não reescrever a estrutura do componente).
+
+### Exceção: o flip do flashcard (commit `a2df4d0`)
+
+O flip é a **única exceção** — ele continua animando sob reduced-motion:
+
+```ts
+transition={shouldReduceMotion
+  ? { duration: 0.25, ease: 'easeOut' }        // mais curto, sem bounce
+  : { duration: 0.6, type: 'spring', stiffness: 100, damping: 15 }}
+```
+
+Motivo: ali a rotação **é** o feedback do gesto (a carta virou, o conteúdo
+mudou), não decoração. Com `duration: 0` a carta trocava de lado
+instantaneamente e não havia sinal nenhum de que a resposta apareceu.
+Uma rotação de eixo único em 250ms não é o tipo de movimento que a
+diretriz mira (parallax rápido, zoom, deslocamento grande).
+
+Isso **não** se estende ao resto: partículas de fundo e parallax respeitam
+reduced-motion sempre. Ver [[decisoes-prepenem]] para a decisão registrada.
 
 **Ainda sem esse tratamento**: transição de questão em Treino/Simulado,
 fundo de partículas (não crítico, é decorativo e não desloca conteúdo),

@@ -24,6 +24,11 @@ types/        # tipos compartilhados
 - Antes de qualquer commit, rode `npm run build` (roda `prisma generate` +
   `next build`) e resolva os erros antes de seguir.
 
+## Decisões já tomadas
+Antes de mexer em UI, conteúdo gerado por IA, visualização de dados ou
+taxonomia de temas, carregue a skill `decisoes-prepenem` — ela é a fonte
+de verdade dessas decisões (elas não sobrevivem ao /compact de outro jeito).
+
 ## /compact
 Ao resumir, preserve: decisões de schema do Prisma, erros de build já vistos
 e a solução aplicada. Descarte: exploração de arquivos já concluída e
