@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 import {
   BookOpen, Target, Flame, RefreshCcw, Calendar,
   Trophy, ArrowRight, AlertTriangle, CheckCircle2, Brain, Sparkles,
-  Sun, Briefcase, FileText, Upload, ClipboardList
+  Sun, Briefcase, FileText, Upload, ClipboardList, BarChart3
 } from 'lucide-react';
 import { getWeekScheduleByNumber, studyCycle } from '@/lib/schedule-data';
 import { materiaColors } from '@/lib/theme-colors';
@@ -423,7 +423,15 @@ export default function DashboardPage() {
         </div>
 
         {/* ── Subjects status ── */}
-        {stats && (
+        {stats && ((stats.dominadas?.length ?? 0) === 0 && (stats.reforcar?.length ?? 0) === 0 ? (
+          <div className="gsap-section gsap-reveal bg-card rounded-xl p-5 shadow-sm border border-border card-3d text-center">
+            <BarChart3 className="w-6 h-6 text-muted-foreground mx-auto mb-2" />
+            <p className="text-sm font-medium">Ainda sem dados suficientes por matéria</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Responda mais questões pra ver aqui quais matérias você já domina e quais precisa reforçar.
+            </p>
+          </div>
+        ) : (
           <div className="gsap-section gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-4">
             {(stats?.dominadas?.length ?? 0) > 0 && (
               <div className="bg-card rounded-xl p-5 shadow-sm border border-border card-3d">
@@ -452,7 +460,7 @@ export default function DashboardPage() {
               </div>
             )}
           </div>
-        )}
+        ))}
       </div>
     </>
   );
