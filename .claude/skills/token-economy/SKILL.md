@@ -23,3 +23,41 @@ description: "Use no início de qualquer tarefa que envolva explorar o codebase,
 - **Avise antes de tarefas longas.** Se a próxima etapa vai gerar muita
   exploração (ex.: rodar seeds grandes, ler múltiplos seeds de flashcards),
   avise que pode valer rodar `/compact` antes de prosseguir.
+
+## Medido neste repo (2026-08-04)
+
+Números reais, não estimativa — cada item abaixo custou tokens de verdade
+numa sessão e é evitável.
+
+- **`git log --oneline` é armadilha AQUI.** As mensagens de commit deste
+  repo têm corpo longo, e o `--oneline` achata tudo numa linha só em vez de
+  cortar: um `git log --oneline -6` despejou ~4.000 tokens de corpo de
+  commit. Use sempre truncado:
+
+  ```bash
+  git log --format='%h %<(72,trunc)%s' -10
+  ```
+
+- **`git diff --stat` antes de `git diff`.** Confirme quais arquivos e
+  quantas linhas antes de puxar o conteúdo inteiro. Num commit de 13
+  arquivos, o `--stat` custa ~150 tokens e o diff completo ~8.000.
+
+- **Rota de API grande: grep antes de Read.** `app/api/pdf-process/route.ts`
+  tem 344 linhas. Ler inteiro para alterar 2 trechos é desperdício — ache com
+  `grep -n` e leia com `offset`/`limit`.
+
+- **Subagent devolve o achado, não a narração.** Um prompt de `build-guard`
+  que pede "reporte só os erros" volta com `Build OK` (~2 tokens). O mesmo
+  build narrado volta com ~2.000. Vale para todos os subagents deste projeto.
+
+- **Verificação no navegador tem custo de descoberta.** Autenticar o
+  Playwright localmente custou ~8 chamadas de ferramenta só para redescobrir
+  o formato do cookie do NextAuth. Isso agora está em
+  [[verificacao-local]] — leia de lá em vez de redescobrir.
+
+- **O maior dreno não é resolvível por skill.** As regras `ecc` em
+  `~/.claude/rules/ecc/` carregam ~9.900 tokens em TODA sessão
+  (`web/` + `common/` + `README.md`), e injeções por linguagem chegaram a
+  ~15.000 numa única sessão — incluindo `arkts/` (HarmonyOS, stack que este
+  projeto não usa) a ~6.100 tokens sozinho. Nenhuma instrução compensa isso;
+  é decisão de arquivo em disco, no escopo global do usuário.
