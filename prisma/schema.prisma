@@ -45,6 +45,7 @@ model Question {
   respostaCorreta    String
   materia            String
   subtema            String
+  tema               String? // taxonomia enxuta por materia (lib/tema-taxonomy.ts); subtema preservado como estava
   dificuldade        String
   nivel              String? // FACIL, MEDIO, MODELO_ENEM, VESTIBULAR
   explicacao         String?
