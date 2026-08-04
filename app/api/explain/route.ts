@@ -1,6 +1,7 @@
 export const dynamic = 'force-dynamic';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { chatCompletionStream } from '@/lib/ai-client';
 
 export async function POST(request: Request) {
   try {
@@ -60,25 +61,12 @@ Correta: ${respostaCorreta} | Aluno marcou: ${respostaDada}
 ${respostaDada !== respostaCorreta ? `\nO aluno marcou "${respostaDada}", errada. Ao chegar na parte sobre alternativas erradas, aprofunde especificamente por que essa em particular parece certa à primeira vista e onde o raciocínio dela desvia.\n` : ''}
 Escreva a explicação agora, densa em conteúdo útil, sem enrolação, seguindo as regras acima.`;
 
-    const response = await fetch('https://apps.abacus.ai/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.ABACUSAI_API_KEY}`,
-      },
-      body: JSON.stringify({
-        model: 'gpt-5.4-mini',
-        messages: [{ role: 'user', content: prompt }],
-        stream: true,
-        max_tokens: 4000,
-      }),
+    const result = await chatCompletionStream({
+      messages: [{ role: 'user', content: prompt }],
+      maxTokens: 4000,
     });
-
-    if (!response.ok) {
-      const errorText = await response.text().catch(() => 'Unknown error');
-      console.error('LLM API error:', response.status, errorText);
-      return new Response(JSON.stringify({ error: 'Erro na API de explicação. Tente novamente.' }), { status: 500 });
-    }
+    if (!result.ok) return result.response;
+    const response = result.res;
 
     const stream = new ReadableStream({
       async start(controller) {

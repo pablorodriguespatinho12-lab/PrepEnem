@@ -4,6 +4,7 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { chatCompletion } from '@/lib/ai-client';
 
 const SYSTEM_PROMPT = `Você é um especialista avaliador de redações do ENEM com mais de 20 anos de experiência como corretor oficial do INEP. Analise redações dissertativo-argumentativas com máxima precisão seguindo rigorosamente os critérios oficiais.
 
@@ -85,38 +86,24 @@ export async function POST(req: Request) {
     // Mark as evaluating
     await prisma.essay.update({ where: { id: essayId }, data: { status: 'avaliando' } });
 
-    const apiKey = process.env.ABACUSAI_API_KEY;
-    if (!apiKey) {
-      await prisma.essay.update({ where: { id: essayId }, data: { status: 'pendente' } });
-      return NextResponse.json({ error: 'API key não configurada' }, { status: 500 });
-    }
-
     const userPrompt = `TEMA: ${essay.theme.tema}${essay.theme.anoEnem ? ` (ENEM ${essay.theme.anoEnem})` : ''}
 
 ${essay.theme.textoMotivador ? `TEXTOS MOTIVADORES:\n${essay.theme.textoMotivador}\n\n` : ''}REDAÇÃO DO ALUNO:\n${essay.texto}`;
 
-    const res = await fetch('https://apps.abacus.ai/v1/chat/completions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
-      body: JSON.stringify({
-        model: 'gpt-5.4-mini',
-        messages: [
-          { role: 'system', content: SYSTEM_PROMPT },
-          { role: 'user', content: userPrompt },
-        ],
-        max_tokens: 6000,
-        temperature: 0.3,
-      }),
+    const result = await chatCompletion({
+      messages: [
+        { role: 'system', content: SYSTEM_PROMPT },
+        { role: 'user', content: userPrompt },
+      ],
+      maxTokens: 6000,
+      temperature: 0.3,
     });
-
-    if (!res.ok) {
-      console.error('LLM evaluate error:', res.status);
+    if (!result.ok) {
       await prisma.essay.update({ where: { id: essayId }, data: { status: 'pendente' } });
-      return NextResponse.json({ error: 'Erro na avaliação' }, { status: 500 });
+      return result.response;
     }
 
-    const data = await res.json();
-    const content = data?.choices?.[0]?.message?.content ?? '';
+    const content = result.data?.choices?.[0]?.message?.content ?? '';
 
     // Extract scores from JSON tag
     let c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5 = 0, total = 0;

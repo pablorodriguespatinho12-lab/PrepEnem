@@ -2,16 +2,13 @@ export const dynamic = 'force-dynamic';
 import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { chatCompletion } from '@/lib/ai-client';
 
 export async function POST(req: Request) {
   try {
     const session = await getServerSession(authOptions);
     if (!session?.user) {
       return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
-    }
-    const apiKey = process.env.ABACUSAI_API_KEY;
-    if (!apiKey) {
-      return NextResponse.json({ error: 'API key não configurada' }, { status: 500 });
     }
 
     let body: any = {};
@@ -41,26 +38,15 @@ Retorne JSON:
 {"resumos": [{"materia": "...", "subtema": "...", "conceitos": ["..."], "formulas": ["..."], "dica_enem": "...", "image_suggestion": "..."}]}
 Retorne SOMENTE JSON, sem markdown.`;
 
-    const llmRes = await fetch('https://apps.abacus.ai/v1/chat/completions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
-      body: JSON.stringify({
-        model: 'gpt-5.4-mini',
-        messages: [{ role: 'user', content: prompt }],
-        max_tokens: 4000,
-        temperature: 0.5,
-        response_format: { type: 'json_object' },
-      }),
+    const result = await chatCompletion({
+      messages: [{ role: 'user', content: prompt }],
+      maxTokens: 4000,
+      temperature: 0.5,
+      responseFormat: { type: 'json_object' },
     });
+    if (!result.ok) return result.response;
 
-    if (!llmRes.ok) {
-      const txt = await llmRes.text();
-      console.error('Resumo LLM error:', txt.substring(0, 300));
-      return NextResponse.json({ error: 'Erro ao gerar resumo com IA' }, { status: 500 });
-    }
-
-    const data = await llmRes.json();
-    const raw = data?.choices?.[0]?.message?.content ?? '';
+    const raw = result.data?.choices?.[0]?.message?.content ?? '';
     try {
       const parsed = JSON.parse(raw);
       return NextResponse.json(parsed);

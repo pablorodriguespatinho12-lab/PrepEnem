@@ -7,6 +7,7 @@ import { prisma } from '@/lib/db';
 import { PDFDocument } from 'pdf-lib';
 import { uploadBufferToS3 } from '@/lib/s3';
 import { isS3Configured, s3UnavailableResponse } from '@/lib/aws-client';
+import { chatCompletion, getAbacusApiKey, aiUnavailableResponse } from '@/lib/ai-client';
 
 const MATERIAS_VALIDAS = [
   'Matemática', 'Português', 'Biologia', 'Química', 'Física',
@@ -14,7 +15,9 @@ const MATERIAS_VALIDAS = [
 ];
 
 // Extract answer key from gabarito PDF using LLM
-async function extractGabarito(gabaritoBase64: string, apiKey: string): Promise<Record<number, string>> {
+async function extractGabarito(
+  gabaritoBase64: string
+): Promise<{ ok: true; gabarito: Record<number, string> } | { ok: false; response: NextResponse }> {
   const prompt = `Você recebeu o PDF do gabarito oficial de uma prova ENEM.
 
 Extraia TODOS os números de questão e suas respostas corretas.
@@ -27,32 +30,21 @@ Regras:
 
 Retorne APENAS JSON: {"gabarito": {"1": "C", "2": "A", ...}}`;
 
-  const res = await fetch('https://apps.abacus.ai/v1/chat/completions', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
-    body: JSON.stringify({
-      model: 'gpt-5.4-mini',
-      messages: [{
-        role: 'user',
-        content: [
-          { type: 'text', text: prompt },
-          { type: 'file', file: { filename: 'gabarito.pdf', file_data: `data:application/pdf;base64,${gabaritoBase64}` } },
-        ],
-      }],
-      max_tokens: 4000,
-      temperature: 0.05,
-      response_format: { type: 'json_object' },
-    }),
+  const result = await chatCompletion({
+    messages: [{
+      role: 'user',
+      content: [
+        { type: 'text', text: prompt },
+        { type: 'file', file: { filename: 'gabarito.pdf', file_data: `data:application/pdf;base64,${gabaritoBase64}` } },
+      ],
+    }],
+    maxTokens: 4000,
+    temperature: 0.05,
+    responseFormat: { type: 'json_object' },
   });
+  if (!result.ok) return result;
 
-  if (!res.ok) {
-    const txt = await res.text();
-    console.error('Gabarito extraction error:', res.status, txt.substring(0, 300));
-    throw new Error('Erro ao extrair gabarito');
-  }
-
-  const data = await res.json();
-  const raw = data?.choices?.[0]?.message?.content ?? '';
+  const raw = result.data?.choices?.[0]?.message?.content ?? '';
   try {
     const parsed = JSON.parse(raw);
     const gab: Record<number, string> = {};
@@ -62,15 +54,15 @@ Retorne APENAS JSON: {"gabarito": {"1": "C", "2": "A", ...}}`;
         gab[num] = String(val).toUpperCase().trim();
       }
     }
-    return gab;
+    return { ok: true, gabarito: gab };
   } catch (e) {
     console.error('Gabarito parse fail:', e);
-    throw new Error('Erro ao interpretar gabarito');
+    return { ok: false, response: NextResponse.json({ error: 'Erro ao interpretar gabarito' }, { status: 502 }) };
   }
 }
 
 // Process a chunk of the exam PDF to extract questions
-async function processChunk(chunkBase64: string, fileName: string, apiKey: string, chunkPageCount: number): Promise<any[]> {
+async function processChunk(chunkBase64: string, fileName: string, chunkPageCount: number): Promise<any[]> {
   const prompt = `Você recebeu PARTE de um PDF de prova ENEM/vestibular (${chunkPageCount} páginas neste trecho).
 
 Extraia TODAS as questões objetivas (múltipla escolha A-E) presentes COMPLETAS nessas páginas. Ignore questões cortadas/incompletas.
@@ -91,31 +83,24 @@ Para cada questão:
 
 Retorne APENAS JSON: {"questoes":[{...}]}`;
 
-  const res = await fetch('https://apps.abacus.ai/v1/chat/completions', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
-    body: JSON.stringify({
-      model: 'gpt-5.4-mini',
-      messages: [{
-        role: 'user',
-        content: [
-          { type: 'text', text: prompt },
-          { type: 'file', file: { filename: fileName, file_data: `data:application/pdf;base64,${chunkBase64}` } },
-        ],
-      }],
-      max_tokens: 8000,
-      temperature: 0.1,
-      response_format: { type: 'json_object' },
-    }),
+  const result = await chatCompletion({
+    messages: [{
+      role: 'user',
+      content: [
+        { type: 'text', text: prompt },
+        { type: 'file', file: { filename: fileName, file_data: `data:application/pdf;base64,${chunkBase64}` } },
+      ],
+    }],
+    maxTokens: 8000,
+    temperature: 0.1,
+    responseFormat: { type: 'json_object' },
   });
 
-  if (!res.ok) {
-    const txt = await res.text();
-    console.error(`Chunk error: ${res.status}`, txt.substring(0, 200));
+  if (!result.ok) {
+    console.error('Chunk error:', result.response.status);
     return [];
   }
-  const data = await res.json();
-  const raw = data?.choices?.[0]?.message?.content ?? '';
+  const raw = result.data?.choices?.[0]?.message?.content ?? '';
   try {
     const parsed = JSON.parse(raw);
     return parsed?.questoes ?? [];
@@ -144,6 +129,9 @@ export async function POST(req: Request) {
     if (!isS3Configured()) {
       return s3UnavailableResponse();
     }
+    if (!getAbacusApiKey()) {
+      return aiUnavailableResponse();
+    }
 
     const { pdfBase64, gabaritoBase64, fileName, gabaritoFileName } = await req.json();
     if (!pdfBase64) {
@@ -153,17 +141,14 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'PDF do gabarito não fornecido' }, { status: 400 });
     }
 
-    const apiKey = process.env.ABACUSAI_API_KEY;
-    if (!apiKey) {
-      return NextResponse.json({ error: 'API key não configurada' }, { status: 500 });
-    }
-
     const { ano, dia } = parseProvaInfo(fileName ?? '');
     console.log(`Processing prova: ${fileName} (ano=${ano}, dia=${dia})`);
 
     // Step 1: Extract gabarito
     console.log('Extracting gabarito...');
-    const gabarito = await extractGabarito(gabaritoBase64, apiKey);
+    const gabResult = await extractGabarito(gabaritoBase64);
+    if (!gabResult.ok) return gabResult.response;
+    const gabarito = gabResult.gabarito;
     const gabaritoCount = Object.keys(gabarito).length;
     console.log(`Gabarito extracted: ${gabaritoCount} answers`);
 
@@ -199,7 +184,7 @@ export async function POST(req: Request) {
       const chunkB64 = Buffer.from(chunkBytes).toString('base64');
       const chunkPageCount = end - start;
       console.log(`Processing chunk pages ${start + 1}-${end}...`);
-      const questoes = await processChunk(chunkB64, fileName ?? 'prova.pdf', apiKey, chunkPageCount);
+      const questoes = await processChunk(chunkB64, fileName ?? 'prova.pdf', chunkPageCount);
       // Add absolute page number to each question
       for (const q of questoes) {
         const relPage = parseInt(q.paginaNoTrecho);

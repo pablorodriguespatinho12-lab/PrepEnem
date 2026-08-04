@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { getAbacusApiKey, AI_UNAVAILABLE_MESSAGE, chatCompletion } from '@/lib/ai-client';
 
 const PART_LABELS: Record<string, string> = {
   introducao: 'Introdução',
@@ -70,9 +71,12 @@ export async function POST(request: Request) {
     }
 
     // Fallback: AI generation if no templates exist
-    const apiKey = process.env.ABACUSAI_API_KEY;
+    const apiKey = getAbacusApiKey();
     if (!apiKey) {
-      return NextResponse.json({ error: 'API não configurada e sem templates disponíveis' }, { status: 500 });
+      return NextResponse.json(
+        { error: `${AI_UNAVAILABLE_MESSAGE} Nenhuma proposta pré-pronta disponível para este tipo no momento.` },
+        { status: 503 }
+      );
     }
 
     const partInstruction: Record<string, string> = {
@@ -102,24 +106,15 @@ Retorne JSON:
 }
 Apenas JSON válido.`;
 
-    const llmRes = await fetch('https://apps.abacus.ai/v1/chat/completions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
-      body: JSON.stringify({
-        model: 'gpt-5.4-mini',
-        messages: [{ role: 'user', content: prompt }],
-        max_tokens: 5000,
-        temperature: 0.8,
-        response_format: { type: 'json_object' },
-      }),
+    const result = await chatCompletion({
+      messages: [{ role: 'user', content: prompt }],
+      maxTokens: 5000,
+      temperature: 0.8,
+      responseFormat: { type: 'json_object' },
     });
+    if (!result.ok) return result.response;
 
-    if (!llmRes.ok) {
-      return NextResponse.json({ error: 'Erro na API LLM' }, { status: 500 });
-    }
-
-    const llmData = await llmRes.json();
-    const raw = llmData?.choices?.[0]?.message?.content ?? '{}';
+    const raw = result.data?.choices?.[0]?.message?.content ?? '{}';
     const parsed = JSON.parse(raw);
 
     return NextResponse.json({

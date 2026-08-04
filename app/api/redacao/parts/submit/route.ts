@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { chatCompletion } from '@/lib/ai-client';
 
 const PART_LABELS: Record<string, string> = {
   introducao: 'Introdução',
@@ -51,11 +52,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Dados inválidos' }, { status: 400 });
     }
 
-    const apiKey = process.env.ABACUSAI_API_KEY;
-    if (!apiKey) {
-      return NextResponse.json({ error: 'API não configurada' }, { status: 500 });
-    }
-
     const prompt = `Você é um corretor de redação ENEM especialista. 
 
 TEMA: ${tema}
@@ -76,24 +72,15 @@ RETORNE JSON:
 }
 Retorne SOMENTE JSON válido.`;
 
-    const llmRes = await fetch('https://apps.abacus.ai/v1/chat/completions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
-      body: JSON.stringify({
-        model: 'gpt-5.4-mini',
-        messages: [{ role: 'user', content: prompt }],
-        max_tokens: 4000,
-        temperature: 0.3,
-        response_format: { type: 'json_object' },
-      }),
+    const result = await chatCompletion({
+      messages: [{ role: 'user', content: prompt }],
+      maxTokens: 4000,
+      temperature: 0.3,
+      responseFormat: { type: 'json_object' },
     });
+    if (!result.ok) return result.response;
 
-    if (!llmRes.ok) {
-      return NextResponse.json({ error: 'Erro na API LLM' }, { status: 500 });
-    }
-
-    const llmData = await llmRes.json();
-    const raw = llmData?.choices?.[0]?.message?.content ?? '{}';
+    const raw = result.data?.choices?.[0]?.message?.content ?? '{}';
     const parsed = JSON.parse(raw);
 
     const nota = Math.min(10, Math.max(0, parsed.nota ?? 5));

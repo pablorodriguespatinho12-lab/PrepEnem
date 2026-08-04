@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { chatCompletion } from '@/lib/ai-client';
 
 const MATERIAS_VALIDAS = [
   'Matemática', 'Português', 'Biologia', 'Química', 'Física',
@@ -20,9 +21,6 @@ export async function POST(req: Request) {
     if (!materia || !MATERIAS_VALIDAS.includes(materia)) {
       return NextResponse.json({ error: 'Matéria inválida' }, { status: 400 });
     }
-    const apiKey = process.env.ABACUSAI_API_KEY;
-    if (!apiKey) return NextResponse.json({ error: 'API key não configurada' }, { status: 500 });
-
     const isFisicaMat = ['Física', 'Matemática'].includes(materia);
     const formulaInstruction = isFisicaMat
       ? '\nSEMPRE inclua na explicação: (1) a fórmula relevante; (2) substituição numérica passo a passo.'
@@ -44,25 +42,15 @@ Cada questão deve ter:
 Retorne JSON: {"questoes":[{"enunciado":"...","alternativaA":"...","alternativaB":"...","alternativaC":"...","alternativaD":"...","alternativaE":"...","respostaCorreta":"A","subtema":"...","dificuldade":"${dificuldade}","explicacao":"..."}]}
 Retorne SOMENTE JSON, sem markdown.`;
 
-    const llmResponse = await fetch('https://apps.abacus.ai/v1/chat/completions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
-      body: JSON.stringify({
-        model: 'gpt-5.4-mini',
-        messages: [{ role: 'user', content: prompt }],
-        max_tokens: 8000,
-        temperature: 0.7,
-        response_format: { type: 'json_object' },
-      }),
+    const result = await chatCompletion({
+      messages: [{ role: 'user', content: prompt }],
+      maxTokens: 8000,
+      temperature: 0.7,
+      responseFormat: { type: 'json_object' },
     });
+    if (!result.ok) return result.response;
 
-    if (!llmResponse.ok) {
-      const errText = await llmResponse.text();
-      console.error('AI gen LLM error:', errText);
-      return NextResponse.json({ error: 'Erro ao gerar questões com IA' }, { status: 500 });
-    }
-    const data = await llmResponse.json();
-    const raw = data?.choices?.[0]?.message?.content ?? '';
+    const raw = result.data?.choices?.[0]?.message?.content ?? '';
     let questoes: any[] = [];
     try {
       const parsed = JSON.parse(raw);

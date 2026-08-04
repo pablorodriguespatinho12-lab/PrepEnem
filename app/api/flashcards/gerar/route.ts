@@ -4,6 +4,7 @@ import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { maxSimilarity } from '@/lib/text-similarity';
+import { chatCompletion } from '@/lib/ai-client';
 
 // Abaixo disso, dois cards contam como o mesmo conceito repetido — limiar
 // ajustável pelo chamador (query "limiar" ou body.limiarSimilaridade) pra
@@ -73,28 +74,14 @@ Retorne APENAS um JSON válido:
   ]
 }`;
 
-    const response = await fetch('https://apps.abacus.ai/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.ABACUSAI_API_KEY}`,
-      },
-      body: JSON.stringify({
-        model: 'gpt-5.4-mini',
-        messages: [{ role: 'user', content: prompt }],
-        response_format: { type: 'json_object' },
-        max_tokens: 5000,
-      }),
+    const result = await chatCompletion({
+      messages: [{ role: 'user', content: prompt }],
+      responseFormat: { type: 'json_object' },
+      maxTokens: 5000,
     });
+    if (!result.ok) return result.response;
 
-    if (!response.ok) {
-      const txt = await response.text().catch(() => '');
-      console.error('LLM error:', response.status, txt);
-      return NextResponse.json({ error: 'Erro na IA' }, { status: 500 });
-    }
-
-    const data = await response.json();
-    let content = data.choices?.[0]?.message?.content ?? '{}';
+    let content = result.data.choices?.[0]?.message?.content ?? '{}';
     content = content.replace(/```json\s*/g, '').replace(/```/g, '').trim();
     let parsed: any;
     try {

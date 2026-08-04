@@ -5,6 +5,7 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { getCycleInfoForDay } from '@/lib/schedule-data';
 import { getActiveStudyDay, upsertStudyProgress } from '@/lib/study-progress';
+import { chatCompletion, getAbacusApiKey } from '@/lib/ai-client';
 
 
 export async function POST(req: Request) {
@@ -120,8 +121,7 @@ export async function POST(req: Request) {
 
     // If still not enough, auto-generate AI questions for today's topics
     if (selected.length < sessionSize && filterMaterias) {
-      const apiKey = process.env.ABACUSAI_API_KEY;
-      if (apiKey) {
+      if (getAbacusApiKey()) {
         const topicsToGenerate = todaySchedule?.topics ?? [];
         for (const topic of topicsToGenerate) {
           if (selected.length >= sessionSize) break;
@@ -147,20 +147,14 @@ REGRAS:
 Retorne JSON: {"questoes":[{"enunciado":"...","alternativaA":"...","alternativaB":"...","alternativaC":"...","alternativaD":"...","alternativaE":"...","respostaCorreta":"A","subtema":"...","dificuldade":"medio","explicacao":"..."}]}
 Retorne SOMENTE JSON válido.`;
 
-            const llmRes = await fetch('https://apps.abacus.ai/v1/chat/completions', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
-              body: JSON.stringify({
-                model: 'gpt-5.4-mini',
-                messages: [{ role: 'user', content: prompt }],
-                max_tokens: 8000,
-                temperature: 0.7,
-                response_format: { type: 'json_object' },
-              }),
+            const llmResult = await chatCompletion({
+              messages: [{ role: 'user', content: prompt }],
+              maxTokens: 8000,
+              temperature: 0.7,
+              responseFormat: { type: 'json_object' },
             });
-            if (llmRes.ok) {
-              const llmData = await llmRes.json();
-              const raw = llmData?.choices?.[0]?.message?.content ?? '';
+            if (llmResult.ok) {
+              const raw = llmResult.data?.choices?.[0]?.message?.content ?? '';
               const parsed = JSON.parse(raw);
               const questoes = parsed?.questoes ?? [];
               for (const q of questoes) {

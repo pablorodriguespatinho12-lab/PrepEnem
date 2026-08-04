@@ -7,6 +7,7 @@ import { prisma } from '@/lib/db';
 import { PDFDocument } from 'pdf-lib';
 import { uploadBufferToS3 } from '@/lib/s3';
 import { isS3Configured, s3UnavailableResponse } from '@/lib/aws-client';
+import { chatCompletion, getAbacusApiKey, aiUnavailableResponse } from '@/lib/ai-client';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -29,57 +30,48 @@ const PDF_PAIRS = [
 
 const UPLOAD_DIR = path.join(process.cwd(), 'data', 'pdfs');
 
-async function extractGabarito(gabaritoBase64: string, apiKey: string): Promise<Record<number, string>> {
-  const res = await fetch('https://apps.abacus.ai/v1/chat/completions', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
-    body: JSON.stringify({
-      model: 'gpt-5.4-mini',
-      messages: [{
-        role: 'user',
-        content: [
-          { type: 'text', text: 'Você recebeu o PDF do gabarito oficial de uma prova ENEM.\n\nExtraia TODOS os números de questão e suas respostas corretas.\n\nRegras:\n- Se a resposta for "Anulado" ou "Anulada", use "ANULADA" como valor\n- Respostas devem ser A, B, C, D, E ou ANULADA\n- Inclua TODAS as questões de TODAS as áreas\n- Para questões de língua estrangeira (Inglês/Espanhol), use a coluna Inglês\n\nRetorne APENAS JSON: {"gabarito": {"1": "C", "2": "A", ...}}' },
-          { type: 'file', file: { filename: 'gabarito.pdf', file_data: `data:application/pdf;base64,${gabaritoBase64}` } },
-        ],
-      }],
-      max_tokens: 4000,
-      temperature: 0.05,
-      response_format: { type: 'json_object' },
-    }),
+async function extractGabarito(
+  gabaritoBase64: string
+): Promise<{ ok: true; gabarito: Record<number, string> } | { ok: false; response: NextResponse }> {
+  const result = await chatCompletion({
+    messages: [{
+      role: 'user',
+      content: [
+        { type: 'text', text: 'Você recebeu o PDF do gabarito oficial de uma prova ENEM.\n\nExtraia TODOS os números de questão e suas respostas corretas.\n\nRegras:\n- Se a resposta for "Anulado" ou "Anulada", use "ANULADA" como valor\n- Respostas devem ser A, B, C, D, E ou ANULADA\n- Inclua TODAS as questões de TODAS as áreas\n- Para questões de língua estrangeira (Inglês/Espanhol), use a coluna Inglês\n\nRetorne APENAS JSON: {"gabarito": {"1": "C", "2": "A", ...}}' },
+        { type: 'file', file: { filename: 'gabarito.pdf', file_data: `data:application/pdf;base64,${gabaritoBase64}` } },
+      ],
+    }],
+    maxTokens: 4000,
+    temperature: 0.05,
+    responseFormat: { type: 'json_object' },
   });
-  if (!res.ok) throw new Error(`Gabarito error: ${res.status}`);
-  const data = await res.json();
-  const raw = data?.choices?.[0]?.message?.content ?? '';
+  if (!result.ok) return result;
+
+  const raw = result.data?.choices?.[0]?.message?.content ?? '';
   const parsed = JSON.parse(raw);
   const gab: Record<number, string> = {};
   for (const [key, val] of Object.entries(parsed?.gabarito ?? {})) {
     const num = parseInt(key);
     if (!isNaN(num)) gab[num] = String(val).toUpperCase().trim();
   }
-  return gab;
+  return { ok: true, gabarito: gab };
 }
 
-async function processChunk(chunkBase64: string, fileName: string, apiKey: string, chunkPageCount: number): Promise<any[]> {
-  const res = await fetch('https://apps.abacus.ai/v1/chat/completions', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
-    body: JSON.stringify({
-      model: 'gpt-5.4-mini',
-      messages: [{
-        role: 'user',
-        content: [
-          { type: 'text', text: `Você recebeu PARTE de um PDF de prova ENEM/vestibular (${chunkPageCount} páginas neste trecho).\n\nExtraia TODAS as questões objetivas (múltipla escolha A-E) presentes COMPLETAS nessas páginas. Ignore questões cortadas/incompletas.\n\nIMPORTANTE:\n- Para cada questão, identifique o NÚMERO original da questão na prova (ex: Questão 91).\n- Para cada questão, identifique em qual PÁGINA deste trecho ela COMEÇA (1 = primeira página deste trecho).\n\nPara cada questão:\n- numeroQuestao: número original da questão na prova (inteiro)\n- paginaNoTrecho: página deste trecho onde a questão começa (1 a ${chunkPageCount})\n- enunciado: texto completo (incluindo textos de apoio). Se houver referência a imagem/figura/gráfico, inclua "[IMAGEM]" no texto.\n- alternativaA-E: 5 alternativas completas\n- materia: ${MATERIAS_VALIDAS.join(', ')}\n- subtema: subtema específico\n- dificuldade: facil, medio ou dificil\n- explicacao: justificativa breve da correta\n\nRetorne APENAS JSON: {"questoes":[{...}]}` },
-          { type: 'file', file: { filename: fileName, file_data: `data:application/pdf;base64,${chunkBase64}` } },
-        ],
-      }],
-      max_tokens: 8000,
-      temperature: 0.1,
-      response_format: { type: 'json_object' },
-    }),
+async function processChunk(chunkBase64: string, fileName: string, chunkPageCount: number): Promise<any[]> {
+  const result = await chatCompletion({
+    messages: [{
+      role: 'user',
+      content: [
+        { type: 'text', text: `Você recebeu PARTE de um PDF de prova ENEM/vestibular (${chunkPageCount} páginas neste trecho).\n\nExtraia TODAS as questões objetivas (múltipla escolha A-E) presentes COMPLETAS nessas páginas. Ignore questões cortadas/incompletas.\n\nIMPORTANTE:\n- Para cada questão, identifique o NÚMERO original da questão na prova (ex: Questão 91).\n- Para cada questão, identifique em qual PÁGINA deste trecho ela COMEÇA (1 = primeira página deste trecho).\n\nPara cada questão:\n- numeroQuestao: número original da questão na prova (inteiro)\n- paginaNoTrecho: página deste trecho onde a questão começa (1 a ${chunkPageCount})\n- enunciado: texto completo (incluindo textos de apoio). Se houver referência a imagem/figura/gráfico, inclua "[IMAGEM]" no texto.\n- alternativaA-E: 5 alternativas completas\n- materia: ${MATERIAS_VALIDAS.join(', ')}\n- subtema: subtema específico\n- dificuldade: facil, medio ou dificil\n- explicacao: justificativa breve da correta\n\nRetorne APENAS JSON: {"questoes":[{...}]}` },
+        { type: 'file', file: { filename: fileName, file_data: `data:application/pdf;base64,${chunkBase64}` } },
+      ],
+    }],
+    maxTokens: 8000,
+    temperature: 0.1,
+    responseFormat: { type: 'json_object' },
   });
-  if (!res.ok) return [];
-  const data = await res.json();
-  const raw = data?.choices?.[0]?.message?.content ?? '';
+  if (!result.ok) return [];
+  const raw = result.data?.choices?.[0]?.message?.content ?? '';
   try { return JSON.parse(raw)?.questoes ?? []; } catch { return []; }
 }
 
@@ -112,6 +104,9 @@ export async function POST(req: Request) {
     if (!isS3Configured()) {
       return s3UnavailableResponse();
     }
+    if (!getAbacusApiKey()) {
+      return aiUnavailableResponse();
+    }
 
     const { pairIndex } = await req.json();
     if (pairIndex === undefined || pairIndex < 0 || pairIndex >= PDF_PAIRS.length) {
@@ -119,8 +114,6 @@ export async function POST(req: Request) {
     }
 
     const pair = PDF_PAIRS[pairIndex];
-    const apiKey = process.env.ABACUSAI_API_KEY;
-    if (!apiKey) return NextResponse.json({ error: 'API key missing' }, { status: 500 });
 
     // Check if already imported
     const existing = await prisma.question.count({ where: { anoProva: pair.ano, diaProva: pair.dia } });
@@ -142,7 +135,9 @@ export async function POST(req: Request) {
     console.log(`[BATCH] Starting ENEM ${pair.ano} D${pair.dia}`);
 
     // Step 1: Extract gabarito
-    const gabarito = await extractGabarito(gabB64, apiKey);
+    const gabResult = await extractGabarito(gabB64);
+    if (!gabResult.ok) return gabResult.response;
+    const gabarito = gabResult.gabarito;
     console.log(`[BATCH] Gabarito: ${Object.keys(gabarito).length} answers`);
 
     // Step 2: Upload PDF to S3
@@ -169,7 +164,7 @@ export async function POST(req: Request) {
       const chunkBytes = await chunkPdf.save();
       const chunkB64 = Buffer.from(chunkBytes).toString('base64');
       console.log(`[BATCH] Chunk pages ${start + 1}-${end}...`);
-      const questoes = await processChunk(chunkB64, pair.prova, apiKey, end - start);
+      const questoes = await processChunk(chunkB64, pair.prova, end - start);
       for (const q of questoes) {
         const relPage = parseInt(q.paginaNoTrecho);
         q._absolutePage = (!isNaN(relPage) && relPage >= 1) ? start + relPage : start + 1;

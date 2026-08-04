@@ -2,6 +2,7 @@ export const dynamic = 'force-dynamic';
 import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { getAbacusApiKey, aiUnavailableResponse } from '@/lib/ai-client';
 
 export async function POST(req: Request) {
   try {
@@ -9,8 +10,8 @@ export async function POST(req: Request) {
     if (!session?.user) {
       return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
     }
-    const apiKey = process.env.ABACUSAI_API_KEY;
-    if (!apiKey) return NextResponse.json({ error: 'API key não configurada' }, { status: 500 });
+    const apiKey = getAbacusApiKey();
+    if (!apiKey) return aiUnavailableResponse();
 
     const { description, materia, subtema } = await req.json();
     if (!description) return NextResponse.json({ error: 'Descrição não informada' }, { status: 400 });
