@@ -39,7 +39,7 @@ function ViewerHeader({ pageNumber, pdfUrl, isExpanded, onToggleExpand, onRetry 
         <span className="text-xs font-medium text-muted-foreground">Página {pageNumber} da prova</span>
       </div>
       <div className="flex items-center gap-2">
-        <button onClick={onRetry} className="text-xs text-muted-foreground hover:text-primary transition-colors" title="Recarregar">
+        <button onClick={onRetry} className="text-xs text-muted-foreground hover:text-primary transition-[color]" title="Recarregar">
           <RefreshCw className="w-3.5 h-3.5" />
         </button>
         <button onClick={onToggleExpand} className="text-xs font-medium text-primary hover:underline">
@@ -94,7 +94,7 @@ function PreRenderedPdfPage({ pdfUrl, pageNumber, imagemUrl, imagemUrlExpandida,
   }
 
   return (
-    <div className={`rounded-xl border border-border overflow-hidden bg-white dark:bg-gray-900 shadow-sm ${className}`}>
+    <div className={`exam-scan-frame ${className}`}>
       <ViewerHeader
         pageNumber={pageNumber}
         pdfUrl={pdfUrl}
@@ -102,7 +102,7 @@ function PreRenderedPdfPage({ pdfUrl, pageNumber, imagemUrl, imagemUrlExpandida,
         onToggleExpand={() => setIsExpanded(!isExpanded)}
         onRetry={handleRetry}
       />
-      <div className={`overflow-auto ${isExpanded ? 'max-h-[80vh]' : 'max-h-[400px]'}`}>
+      <div className={`exam-scan-mat overflow-auto ${isExpanded ? 'max-h-[80vh]' : 'max-h-[400px]'}`}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           key={`${src}-${retryCount}`}
@@ -173,7 +173,7 @@ function LegacyPdfRender({ pdfUrl, pageNumber, className = '' }: Pick<PdfPageVie
   }
 
   return (
-    <div className={`rounded-xl border border-border overflow-hidden bg-white dark:bg-gray-900 shadow-sm ${className}`}>
+    <div className={`exam-scan-frame ${className}`}>
       <ViewerHeader
         pageNumber={pageNumber}
         pdfUrl={pdfUrl}
@@ -181,7 +181,7 @@ function LegacyPdfRender({ pdfUrl, pageNumber, className = '' }: Pick<PdfPageVie
         onToggleExpand={() => setIsExpanded(!isExpanded)}
         onRetry={handleRetry}
       />
-      <div className={`overflow-auto ${isExpanded ? 'max-h-[80vh]' : 'max-h-[400px]'}`}>
+      <div className={`exam-scan-mat overflow-auto ${isExpanded ? 'max-h-[80vh]' : 'max-h-[400px]'}`}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={imageUrl} alt={`Página ${pageNumber} da prova original`} className="w-full h-auto" />
       </div>

@@ -6,7 +6,8 @@ import dynamic from 'next/dynamic';
 import {
   BookOpen, ChevronLeft, ChevronRight, CheckCircle2, XCircle, AlertTriangle,
   Brain, Loader2, RefreshCcw, Home, Send, Sparkles, Trophy,
-  GraduationCap, ChevronDown, Lightbulb, FlaskConical, Calculator, Play, Eye, EyeOff, ImageIcon
+  GraduationCap, ChevronDown, Lightbulb, FlaskConical, Calculator, Play, Eye, EyeOff, ImageIcon,
+  Check, X
 } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
@@ -885,54 +886,75 @@ export default function TreinoPage() {
   }
 
   return (
-    <div className="p-4 md:p-8 max-w-3xl mx-auto">
-      {/* Header */}
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-3">
-          <button
-            onClick={() => router.push('/dashboard')}
-            className="p-2 rounded-lg hover:bg-muted transition"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <div>
-            <h1 className="font-display text-lg font-bold">
-              {isErrosReview ? `Revisão de Erros (Rodada ${errosRound})` : isReview ? 'Revisão Espaçada' : isFiltered ? `Treino: ${filterMateria || 'Filtrado'}` : 'Treino Diário'}
-            </h1>
-            <p className="text-xs text-muted-foreground">
-              Questão {currentIdx + 1} de {questions?.length ?? 0}
+    <div className="px-4 py-6 md:px-8 md:py-10 max-w-[46rem] mx-auto">
+      {/* Cabeçalho editorial: o número da questão é o marcador de capítulo.
+          Contraste de escala (51.9px contra 13.6px) carrega a hierarquia — não
+          há caixa colorida fazendo esse trabalho. */}
+      <header className="mb-8">
+        <div className="flex items-start justify-between gap-4 mb-5">
+          <div className="flex items-center gap-2 min-w-0">
+            <button
+              onClick={() => router.push('/dashboard')}
+              aria-label="Voltar ao painel"
+              className="-ml-2 p-2 rounded-[var(--radius-control)] text-muted-foreground hover:text-foreground hover:bg-muted t-colors"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <p className="type-caption text-muted-foreground truncate">
+              {isErrosReview ? `Revisão de erros · rodada ${errosRound}` : isReview ? 'Revisão espaçada' : isFiltered ? `Treino · ${filterMateria || 'filtrado'}` : 'Treino diário'}
             </p>
           </div>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-xs font-medium bg-green-500/10 text-green-700 px-2 py-1 rounded">
-            {score.correct} ✓
-          </span>
-          <span className="text-xs font-medium bg-red-500/10 text-red-700 px-2 py-1 rounded">
-            {score.wrong} ✗
-          </span>
-          {streak >= 3 && (
-            <span className="text-xs font-medium bg-orange-500/10 text-orange-700 px-2 py-1 rounded flex items-center gap-1">
-              <Sparkles className="w-3 h-3" /> {streak} seguidas!
-            </span>
-          )}
-          <button
-            onClick={() => { setFinished(false); startSession(); }}
-            title="Reiniciar sessão"
-            className="p-1.5 rounded-lg hover:bg-muted transition text-muted-foreground hover:text-foreground"
-          >
-            <RefreshCcw className="w-4 h-4" />
-          </button>
-        </div>
-      </div>
 
-      {/* Progress bar */}
-      <div className="w-full h-2 bg-muted rounded-full mb-6 overflow-hidden">
-        <div
-          className="h-full bg-primary rounded-full transition-all duration-300"
-          style={{ width: `${((currentIdx + 1) / Math.max(1, questions?.length ?? 1)) * 100}%` }}
-        />
-      </div>
+          <div className="flex items-center gap-1.5 shrink-0">
+            <span
+              data-numeric
+              className="inline-flex items-center gap-1.5 type-meta font-medium px-2 py-1 rounded-[var(--radius-data)]"
+              style={{ backgroundColor: 'hsl(var(--success-surface))', color: 'hsl(var(--success))' }}
+            >
+              <Check className="w-3.5 h-3.5" strokeWidth={2.5} />
+              {score.correct}
+            </span>
+            <span
+              data-numeric
+              className="inline-flex items-center gap-1.5 type-meta font-medium px-2 py-1 rounded-[var(--radius-data)]"
+              style={{ backgroundColor: 'hsl(var(--danger-surface))', color: 'hsl(var(--danger))' }}
+            >
+              <X className="w-3.5 h-3.5" strokeWidth={2.5} />
+              {score.wrong}
+            </span>
+            {streak >= 3 && (
+              <span data-numeric className="type-meta font-medium px-2 py-1 rounded-[var(--radius-data)] bg-primary/10 text-primary">
+                {streak} seguidas
+              </span>
+            )}
+            <button
+              onClick={() => { setFinished(false); startSession(); }}
+              title="Reiniciar sessão"
+              aria-label="Reiniciar sessão"
+              className="ml-1 p-1.5 rounded-[var(--radius-control)] text-muted-foreground hover:text-foreground hover:bg-muted t-colors"
+            >
+              <RefreshCcw className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+
+        <div className="flex items-baseline gap-2.5">
+          <span data-numeric className="font-display type-hero font-semibold leading-none">
+            {String(currentIdx + 1).padStart(2, '0')}
+          </span>
+          <span data-numeric className="type-meta text-muted-foreground pb-1.5">
+            de {String(questions?.length ?? 0).padStart(2, '0')}
+          </span>
+        </div>
+
+        {/* Filete de progresso: escala no eixo X, sem animar width. */}
+        <div className="mt-4 h-px w-full bg-border overflow-hidden" role="presentation">
+          <div
+            className="h-full w-full bg-primary origin-left transition-transform duration-medium ease-out-quart"
+            style={{ transform: `scaleX(${(currentIdx + 1) / Math.max(1, questions?.length ?? 1)})` }}
+          />
+        </div>
+      </header>
 
       {/* Question with 3D flip transition */}
       <div className="perspective-1000 mb-4 relative">
@@ -958,42 +980,53 @@ export default function TreinoPage() {
             }
             transition={{ duration: shouldReduceMotion ? 0.01 : 0.5, ease: 'easeOut' }}
             style={{ transformStyle: 'preserve-3d' }}
-            className="bg-card/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-border card-float"
+            className="surface-1 rounded-[var(--radius-surface)] p-6 md:p-8"
           >
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 mb-4">
-            <span
-              className="px-2.5 py-0.5 rounded-full text-xs font-medium text-white"
-              style={{ backgroundColor: materiaColors[currentQ?.materia] ?? '#888' }}
-            >
+          {/* Procedência da questão. Antes eram três pílulas preenchidas; a
+              pílula da matéria usava texto branco sobre pastel (contraste
+              reprovado) e as três competiam com o enunciado. Agora é uma linha
+              de metadado: ponto de cor + nome, separadores discretos. */}
+          <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-6 type-meta text-muted-foreground">
+            <span className="inline-flex items-center gap-1.5 font-medium text-foreground">
+              <span
+                aria-hidden
+                className="w-2 h-2 rounded-[var(--radius-data)] shrink-0"
+                style={{ backgroundColor: materiaColors[currentQ?.materia] ?? 'hsl(var(--muted-foreground))' }}
+              />
               {currentQ?.materia ?? ''}
             </span>
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-muted text-muted-foreground">
-              {currentQ?.subtema ?? ''}
-            </span>
-            <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium ${difficultyColor[currentQ?.dificuldade] ?? ''}`}>
+            {currentQ?.subtema && (
+              <>
+                <span aria-hidden className="text-border">/</span>
+                <span className="truncate max-w-[22rem]">{currentQ.subtema}</span>
+              </>
+            )}
+            <span aria-hidden className="text-border">/</span>
+            <span className={difficultyColor[currentQ?.dificuldade] ? 'font-medium' : ''}>
               {difficultyLabel[currentQ?.dificuldade] ?? currentQ?.dificuldade ?? ''}
             </span>
           </div>
 
-          {/* Enunciado */}
-          <div className="text-sm md:text-base leading-relaxed mb-4">
+          {/* Enunciado — serifada de leitura, medida travada em 60–70 caracteres.
+              Antes: 646px a 16px, ~81 caracteres por linha. */}
+          <div className="prose-reading mb-6">
             <MathText text={currentQ?.enunciado ?? ''} />
           </div>
 
-          {/* PDF Image (figure/graph from original exam) */}
+          {/* Scan da prova original. O container é o passe-partout: ver .exam-scan
+              em globals.css — no escuro, papel rebaixado em vez de branco puro. */}
           {currentQ?.pdfFileUrl && currentQ?.paginaPdf && (
-            <div className="mb-5">
+            <figure className="mb-6">
               <PdfPageViewer
                 pdfUrl={currentQ.pdfFileUrl}
                 pageNumber={currentQ.paginaPdf}
                 imagemUrl={currentQ.imagemUrl}
                 imagemUrlExpandida={currentQ.imagemUrlExpandida}
               />
-            </div>
+            </figure>
           )}
           {currentQ?.dependeImagem && !currentQ?.pdfFileUrl && (
-            <ImagemIndisponivel className="mb-5" />
+            <ImagemIndisponivel className="mb-6" />
           )}
 
           {/* Alternatives */}
@@ -1022,37 +1055,71 @@ export default function TreinoPage() {
                   onClick={() => !answered && setSelected(alt.key)}
                   disabled={answered}
                   data-alt={alt.key}
-                  className={`w-full flex items-start gap-3 p-3 rounded-lg border text-left text-sm transition-all ${
+                  data-state={isCorrect ? 'correta' : isWrong ? 'errada' : isSelected ? 'selecionada' : 'repouso'}
+                  style={
                     isCorrect
-                      ? 'bg-green-500/10 border-green-500 text-green-800 dark:text-green-300'
+                      ? { backgroundColor: 'hsl(var(--success-surface))', borderColor: 'hsl(var(--success-border))' }
                       : isWrong
-                      ? 'bg-red-500/10 border-red-500 text-red-800 dark:text-red-300 animate-shake'
+                      ? { backgroundColor: 'hsl(var(--danger-surface))', borderColor: 'hsl(var(--danger-border))' }
+                      : undefined
+                  }
+                  className={`group relative w-full flex items-start gap-3.5 p-3.5 pl-4 text-left rounded-[var(--radius-control)] border t-lift ${
+                    isCorrect
+                      ? 'shadow-elev-1'
+                      : isWrong
+                      ? 'shadow-elev-1 animate-shake'
                       : isSelected
-                      ? 'bg-primary/10 border-primary'
-                      : 'border-border hover:bg-muted/50 hover:translate-x-1'
+                      ? 'bg-primary/[0.07] border-primary shadow-elev-2'
+                      : 'bg-[hsl(var(--surface-2))] border-border shadow-elev-1 enabled:hover:border-primary/45 enabled:hover:shadow-elev-2 enabled:hover:-translate-y-px'
                   }`}
-                  whileHover={!answered ? { x: 4 } : undefined}
+                  whileHover={!answered ? { x: 3 } : undefined}
+                  whileTap={!answered ? { scale: 0.995 } : undefined}
                 >
-                  <span className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold ${
-                    isCorrect
-                      ? 'bg-green-500 text-white'
-                      : isWrong
-                      ? 'bg-red-500 text-white'
-                      : isSelected
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-muted text-muted-foreground'
-                  }`}>
+                  {/* Filete lateral: segundo sinal do estado escolhido, para quem
+                      não distingue o matiz da borda. */}
+                  {(isSelected || isCorrect || isWrong) && (
+                    <span
+                      aria-hidden
+                      className="absolute left-0 top-2 bottom-2 w-[3px] rounded-r-[var(--radius-data)]"
+                      style={{
+                        backgroundColor: isCorrect
+                          ? 'hsl(var(--success))'
+                          : isWrong
+                          ? 'hsl(var(--danger))'
+                          : 'hsl(var(--primary))',
+                      }}
+                    />
+                  )}
+                  <span
+                    aria-hidden
+                    style={
+                      isCorrect
+                        ? { backgroundColor: 'hsl(var(--success))', color: 'hsl(var(--surface-1))' }
+                        : isWrong
+                        ? { backgroundColor: 'hsl(var(--danger))', color: 'hsl(var(--surface-1))' }
+                        : undefined
+                    }
+                    className={`w-8 h-8 rounded-[var(--radius-control)] flex items-center justify-center flex-shrink-0 type-meta font-semibold t-colors ${
+                      isCorrect || isWrong
+                        ? ''
+                        : isSelected
+                        ? 'bg-primary text-primary-foreground'
+                        : 'bg-muted text-muted-foreground group-enabled:group-hover:bg-primary/15 group-enabled:group-hover:text-primary'
+                    }`}
+                  >
                     {isCorrect ? (
-                      <CheckCircle2 className="w-4 h-4" />
+                      <Check className="w-4 h-4" strokeWidth={3} />
                     ) : isWrong ? (
-                      <XCircle className="w-4 h-4" />
+                      <X className="w-4 h-4" strokeWidth={3} />
                     ) : isChecking ? (
                       <Loader2 className="w-4 h-4 animate-spin" />
                     ) : (
                       alt.key
                     )}
                   </span>
-                  <span className="pt-0.5"><MathText text={alt.text ?? ''} /></span>
+                  <span className="font-reading text-body leading-[var(--lh-reading)] pt-0.5">
+                    <MathText text={alt.text ?? ''} />
+                  </span>
                 </motion.button>
               );
             })}
@@ -1066,9 +1133,9 @@ export default function TreinoPage() {
         <button
           onClick={handleAnswer}
           disabled={!selected}
-          className="w-full py-3 bg-primary text-primary-foreground rounded-xl font-medium text-sm hover:opacity-90 disabled:opacity-40 transition shadow-md"
+          className="w-full py-3.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium text-body shadow-elev-2 t-lift enabled:hover:-translate-y-px enabled:hover:shadow-elev-3 disabled:opacity-40 disabled:shadow-elev-1"
         >
-          Confirmar Resposta
+          Confirmar resposta
         </button>
       ) : answerError ? (
         <motion.div
@@ -1100,34 +1167,38 @@ export default function TreinoPage() {
             initial={{ opacity: 0, rotateX: shouldReduceMotion ? 0 : -12, scaleY: shouldReduceMotion ? 1 : 0.96 }}
             animate={{ opacity: 1, rotateX: 0, scaleY: 1 }}
             transition={{ duration: shouldReduceMotion ? 0.01 : 0.3, ease: [0.16, 1, 0.3, 1] }}
-            style={{ transformPerspective: 800, transformOrigin: 'top' }}
-            className={`rounded-xl p-5 ${
-              result?.acertou ? 'bg-green-500/10 border border-green-500/20' : 'bg-red-500/10 border border-red-500/20'
-            }`}
+            style={{
+              transformPerspective: 800,
+              transformOrigin: 'top',
+              backgroundColor: result?.acertou ? 'hsl(var(--success-surface))' : 'hsl(var(--danger-surface))',
+              borderColor: result?.acertou ? 'hsl(var(--success-border))' : 'hsl(var(--danger-border))',
+            }}
+            className="rounded-[var(--radius-surface)] border p-5 md:p-6 shadow-elev-1"
           >
-            <div className="flex items-center gap-2 mb-2">
-              {result?.acertou ? (
-                <CheckCircle2 className="w-5 h-5 text-green-600" />
-              ) : (
-                <XCircle className="w-5 h-5 text-red-600" />
-              )}
-              <span className={`font-display font-bold ${result?.acertou ? 'text-green-700' : 'text-red-700'}`}>
+            <div className="flex items-center gap-2 mb-3">
+              <span style={{ color: result?.acertou ? 'hsl(var(--success))' : 'hsl(var(--danger))' }}>
+                {result?.acertou ? <Check className="w-5 h-5" strokeWidth={3} /> : <X className="w-5 h-5" strokeWidth={3} />}
+              </span>
+              <span
+                className="font-display type-lead font-semibold"
+                style={{ color: result?.acertou ? 'hsl(var(--success))' : 'hsl(var(--danger))' }}
+              >
                 {result?.acertou ? 'Correto' : 'Incorreto'}
               </span>
             </div>
             {result?.explicacao && (
-              <div className="text-sm text-foreground/80 leading-relaxed">
+              <div className="prose-reading">
                 <MathText text={result.explicacao} />
               </div>
             )}
           </motion.div>
 
           {/* AI Explanation — available for ALL answers */}
-          <div className="bg-card rounded-xl p-4 border border-border">
+          <div className="surface-1 rounded-[var(--radius-surface)] p-5">
             <button
               onClick={generateAIExplanation}
               disabled={generatingExplanation}
-              className="flex items-center gap-2 text-sm text-primary font-medium hover:underline mb-3"
+              className="flex items-center gap-2 type-meta text-primary font-medium hover:underline underline-offset-4 mb-3 disabled:opacity-50"
             >
               <Brain className="w-4 h-4" />
               {generatingExplanation ? 'Gerando explicação...' : result?.acertou ? 'Ver explicação detalhada' : 'Gerar explicação detalhada com IA'}
@@ -1139,7 +1210,7 @@ export default function TreinoPage() {
                   animate={{ opacity: 1, rotateX: 0, scaleY: 1 }}
                   transition={{ duration: shouldReduceMotion ? 0.01 : 0.3, ease: [0.16, 1, 0.3, 1] }}
                   style={{ transformPerspective: 800, transformOrigin: 'top' }}
-                  className="text-sm text-foreground/80 leading-relaxed bg-muted/50 rounded-lg p-3"
+                  className="prose-reading bg-muted/50 rounded-[var(--radius-control)] p-4"
                 >
                   <MathText text={llmExplanation} />
                 </motion.div>
@@ -1149,27 +1220,24 @@ export default function TreinoPage() {
 
           {/* Feynman technique */}
           {!result?.acertou && !isReview && (
-            <div className="bg-card rounded-xl p-4 border border-border">
-              <div className="flex items-center gap-2 mb-2">
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium">Técnica Feynman</span>
-              </div>
-              <p className="text-xs text-muted-foreground mb-3">
+            <div className="surface-1 rounded-[var(--radius-surface)] p-5">
+              <p className="type-caption text-muted-foreground mb-1.5">Técnica Feynman</p>
+              <p className="type-meta text-muted-foreground mb-3">
                 Explique com suas palavras por que errou e qual o conceito correto:
               </p>
               <textarea
                 value={feynmanText}
                 onChange={(e) => setFeynmanText(e.target.value)}
-                className="w-full p-3 border border-input rounded-lg text-sm bg-background resize-none focus:outline-none focus:ring-2 focus:ring-ring"
+                className="w-full p-3 border border-input rounded-[var(--radius-control)] font-reading text-body bg-[hsl(var(--surface-2))] resize-none focus:outline-none"
                 rows={3}
                 placeholder="Escreva sua explicação aqui..."
               />
               <button
                 onClick={saveFeynman}
                 disabled={!feynmanText.trim()}
-                className="mt-2 flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary text-xs font-medium rounded-lg hover:bg-primary/20 transition disabled:opacity-40"
+                className="mt-2.5 flex items-center gap-1.5 px-3 py-2 bg-primary/10 text-primary type-meta font-medium rounded-[var(--radius-control)] hover:bg-primary/20 t-colors disabled:opacity-40"
               >
-                <Send className="w-3 h-3" /> Salvar explicação
+                <Send className="w-3.5 h-3.5" /> Salvar explicação
               </button>
             </div>
           )}
@@ -1186,14 +1254,14 @@ export default function TreinoPage() {
                   setFeynmanText('');
                   setLlmExplanation('');
                 }}
-                className="px-4 py-3 bg-muted text-foreground rounded-xl font-medium text-sm hover:bg-muted/80 transition flex items-center gap-2"
+                className="px-4 py-3.5 bg-muted text-foreground rounded-[var(--radius-control)] font-medium type-meta hover:bg-secondary t-colors flex items-center gap-2"
               >
                 <ChevronLeft className="w-4 h-4" /> Voltar
               </button>
             )}
             <button
               onClick={nextQuestion}
-              className="flex-1 py-3 bg-primary text-primary-foreground rounded-xl font-medium text-sm hover:opacity-90 transition shadow-md flex items-center justify-center gap-2"
+              className="flex-1 py-3.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium text-body shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3 flex items-center justify-center gap-2"
             >
               {currentIdx >= (questions?.length ?? 0) - 1 ? 'Finalizar Sessão' : 'Próxima Questão'}
               <ChevronRight className="w-4 h-4" />
