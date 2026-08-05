@@ -40,7 +40,7 @@ export function SidebarNav() {
       {/* Mobile toggle */}
       <motion.button
         onClick={() => setOpen(!open)}
-        className="fixed top-4 left-4 z-50 p-2 rounded-lg bg-primary text-primary-foreground shadow-lg md:hidden"
+        className="fixed top-4 left-4 z-50 p-2 rounded-[var(--radius-control)] bg-primary text-primary-foreground shadow-lg md:hidden"
         aria-label="Menu"
         whileTap={{ scale: 0.9 }}
       >
@@ -63,22 +63,21 @@ export function SidebarNav() {
       {/* Sidebar */}
       <aside
         className={cn(
-          'fixed top-0 left-0 z-40 h-full w-64 bg-card border-r border-border flex flex-col transition-transform duration-300',
+          'fixed top-0 left-0 z-40 h-full w-64 bg-[hsl(var(--surface-1))] border-r border-border flex flex-col transition-transform duration-300',
           'md:translate-x-0',
           open ? 'translate-x-0' : '-translate-x-full'
         )}
       >
         <div className="flex items-center gap-3 p-6 border-b border-border">
-          <motion.div
-            className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center"
-            animate={{ scale: [1, 1.05, 1] }}
-            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-          >
-            <GraduationCap className="w-6 h-6 text-primary-foreground" />
-          </motion.div>
+          {/* Antes pulsava em loop infinito. Movimento perpétuo na visão
+              periférica durante sessão de uma a três horas é exatamente o que
+              a direção evita — e não comunicava estado nenhum. */}
+          <div className="w-10 h-10 rounded-[var(--radius-control)] bg-primary flex items-center justify-center shrink-0">
+            <GraduationCap className="w-5 h-5 text-primary-foreground" />
+          </div>
           <div>
-            <h1 className="font-display text-lg font-bold tracking-tight">PrepEnem</h1>
-            <p className="text-xs text-muted-foreground">Plataforma de Estudos</p>
+            <h1 className="font-display type-lead font-semibold">PrepEnem</h1>
+            <p className="type-caption text-muted-foreground">Plataforma de Estudos</p>
           </div>
         </div>
 
@@ -97,7 +96,7 @@ export function SidebarNav() {
                   href={item.href}
                   onClick={() => setOpen(false)}
                   className={cn(
-                    'group flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200',
+                    'group flex items-center gap-3 px-3 py-2.5 rounded-[var(--radius-control)] type-meta font-medium transition-[color,background-color,border-color,box-shadow] duration-200',
                     active
                       ? 'bg-primary text-primary-foreground shadow-md'
                       : 'text-muted-foreground hover:bg-muted hover:text-foreground'
@@ -123,7 +122,7 @@ export function SidebarNav() {
                 href="/admin/questoes"
                 onClick={() => setOpen(false)}
                 className={cn(
-                  'flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200',
+                  'flex items-center gap-3 px-3 py-2.5 rounded-[var(--radius-control)] type-meta font-medium transition-[color,background-color,border-color,box-shadow] duration-200',
                   pathname?.startsWith('/admin')
                     ? 'bg-primary text-primary-foreground shadow-md'
                     : 'text-muted-foreground hover:bg-muted hover:text-foreground'
@@ -140,7 +139,7 @@ export function SidebarNav() {
           {/* Dark mode toggle */}
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground transition-all w-full"
+            className="flex items-center gap-3 px-3 py-2.5 rounded-[var(--radius-control)] type-meta font-medium text-muted-foreground hover:bg-muted hover:text-foreground transition-[color,background-color] w-full"
           >
             <motion.div
               key={theme}
@@ -155,18 +154,18 @@ export function SidebarNav() {
 
           <div className="flex items-center gap-3 px-3">
             <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-              <span className="text-sm font-bold text-primary">
+              <span className="type-meta font-semibold text-primary">
                 {session?.user?.name?.[0]?.toUpperCase() ?? 'U'}
               </span>
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium truncate">{session?.user?.name ?? 'Estudante'}</p>
-              <p className="text-xs text-muted-foreground truncate">@{session?.user?.email ?? ''}</p>
+              <p className="type-meta font-medium truncate">{session?.user?.name ?? 'Estudante'}</p>
+              <p className="type-micro text-muted-foreground truncate">@{session?.user?.email ?? ''}</p>
             </div>
           </div>
           <button
             onClick={() => signOut({ callbackUrl: '/login' })}
-            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:bg-destructive/10 hover:text-destructive transition-all w-full"
+            className="flex items-center gap-3 px-3 py-2.5 rounded-[var(--radius-control)] type-meta font-medium text-muted-foreground hover:bg-destructive/10 hover:text-destructive transition-[color,background-color] w-full"
           >
             <LogOut className="w-4 h-4" />
             Sair
