@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import {
   Clock, Play, Pause, BookOpen, ChevronLeft, ChevronRight,
-  CheckCircle2, XCircle, BarChart3, Trophy, AlertTriangle, Timer, TimerOff, RotateCcw
+  CheckCircle2, XCircle, BarChart3, Trophy, AlertTriangle, AlertCircle, Timer, TimerOff, RotateCcw
 } from 'lucide-react';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
@@ -17,11 +17,42 @@ const MathText = dynamic(() => import('@/components/math-text'), { ssr: false })
 
 type Phase = 'config' | 'exam' | 'result';
 
+// Limiares de dado esparso (decisão travada, ver skill decisoes-prepenem):
+// <5 questões não mostra %, 5-15 mostra com indicador de baixa confiança.
+const MIN_QUESTOES_PARA_TAXA = 5;
+const LIMIAR_BAIXA_CONFIANCA = 15;
+
 function formatTime(seconds: number) {
   const h = Math.floor(seconds / 3600);
   const m = Math.floor((seconds % 3600) / 60);
   const s = seconds % 60;
   return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+}
+
+// Taxa de acerto ciente de amostra pequena — mesmo padrão de app/progresso/page.tsx.
+function TaxaAcerto({ total, acertos }: { total: number; acertos: number }) {
+  if (total < MIN_QUESTOES_PARA_TAXA) {
+    return (
+      <span className="type-micro text-muted-foreground italic whitespace-nowrap">
+        poucos dados
+      </span>
+    );
+  }
+  const rate = Math.round((acertos / total) * 100);
+  const baixaConfianca = total < LIMIAR_BAIXA_CONFIANCA;
+  const cor = rate >= 70 ? 'hsl(var(--success))' : rate < 50 ? 'hsl(var(--danger))' : 'hsl(var(--foreground))';
+  return (
+    <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
+      <span data-numeric className="type-meta font-semibold" style={{ color: cor }}>{rate}%</span>
+      <span data-numeric className="type-micro text-muted-foreground">· {total} questões</span>
+      {baixaConfianca && (
+        <AlertCircle
+          className="w-3.5 h-3.5 text-muted-foreground flex-shrink-0"
+          aria-label="Amostra pequena: a taxa ainda pode mudar bastante"
+        />
+      )}
+    </span>
+  );
 }
 
 export default function SimuladoPage() {
@@ -262,6 +293,7 @@ export default function SimuladoPage() {
 
   const answeredCount = Object.keys(answers).filter((k) => answers[k]).length;
   const currentQ = questions[currentIdx];
+  const isTimerCritical = useTimer && timeLeft > 0 && timeLeft < 300;
 
   // --- LOADING CHECK ---
   if (checkingSession) {
@@ -269,7 +301,7 @@ export default function SimuladoPage() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-8 w-8 border-4 border-primary border-t-transparent mx-auto mb-3" />
-          <p className="text-sm text-muted-foreground">Verificando simulado em andamento...</p>
+          <p className="type-meta text-muted-foreground">Verificando simulado em andamento...</p>
         </div>
       </div>
     );
@@ -280,10 +312,10 @@ export default function SimuladoPage() {
     return (
       <div className="p-4 md:p-8 max-w-3xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <h1 className="font-display text-2xl md:text-3xl font-bold tracking-tight mb-2">
-            📝 Simulado ENEM
+          <h1 className="font-display type-headline font-bold tracking-tight mb-2">
+            Simulado ENEM
           </h1>
-          <p className="text-muted-foreground mb-8">
+          <p className="type-body text-muted-foreground mb-8">
             Configure e inicie seu simulado. Sexta-feira é dia de simulado!
           </p>
         </motion.div>
@@ -292,19 +324,19 @@ export default function SimuladoPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="bg-card rounded-2xl p-6 md:p-8 shadow-sm border border-border space-y-6"
+          className="surface-1 rounded-[var(--radius-surface)] p-6 md:p-8 space-y-6"
         >
           {/* Número de questões */}
           <div>
-            <label className="text-sm font-medium mb-2 block">Número de Questões</label>
+            <label className="type-meta font-medium mb-2 block">Número de Questões</label>
             <div className="flex gap-3">
               {[45, 90, 135, 180].map((n) => (
                 <button
                   key={n}
                   onClick={() => setTotalQ(n)}
-                  className={`flex-1 py-3 rounded-xl text-center font-medium transition-all ${
+                  className={`flex-1 py-3 rounded-[var(--radius-control)] text-center font-medium t-colors ${
                     totalQ === n
-                      ? 'bg-primary text-primary-foreground shadow-md'
+                      ? 'bg-primary text-primary-foreground shadow-elev-1'
                       : 'bg-muted hover:bg-muted/80'
                   }`}
                 >
@@ -312,19 +344,19 @@ export default function SimuladoPage() {
                 </button>
               ))}
             </div>
-            <p className="text-xs text-muted-foreground mt-2">
+            <p className="type-caption text-muted-foreground mt-2">
               ENEM real: 90 questões por dia (180 total em 2 dias)
             </p>
           </div>
 
           {/* Timer toggle */}
           <div>
-            <label className="text-sm font-medium mb-3 block">Cronômetro</label>
+            <label className="type-meta font-medium mb-3 block">Cronômetro</label>
             <div className="flex gap-3">
               <button
                 onClick={() => setUseTimer(true)}
-                className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-medium transition-all ${
-                  useTimer ? 'bg-primary text-primary-foreground shadow-md' : 'bg-muted hover:bg-muted/80'
+                className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-[var(--radius-control)] font-medium t-colors ${
+                  useTimer ? 'bg-primary text-primary-foreground shadow-elev-1' : 'bg-muted hover:bg-muted/80'
                 }`}
               >
                 <Timer className="w-4 h-4" />
@@ -332,8 +364,8 @@ export default function SimuladoPage() {
               </button>
               <button
                 onClick={() => setUseTimer(false)}
-                className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-medium transition-all ${
-                  !useTimer ? 'bg-primary text-primary-foreground shadow-md' : 'bg-muted hover:bg-muted/80'
+                className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-[var(--radius-control)] font-medium t-colors ${
+                  !useTimer ? 'bg-primary text-primary-foreground shadow-elev-1' : 'bg-muted hover:bg-muted/80'
                 }`}
               >
                 <TimerOff className="w-4 h-4" />
@@ -348,15 +380,15 @@ export default function SimuladoPage() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
             >
-              <label className="text-sm font-medium mb-2 block">Tempo (horas)</label>
+              <label className="type-meta font-medium mb-2 block">Tempo (horas)</label>
               <div className="flex gap-3">
                 {[2.5, 3, 4, 5, 5.5].map((h) => (
                   <button
                     key={h}
                     onClick={() => setTimerHours(h)}
-                    className={`flex-1 py-2.5 rounded-xl text-center text-sm font-medium transition-all ${
+                    className={`flex-1 py-2.5 rounded-[var(--radius-control)] text-center type-meta font-medium t-colors ${
                       timerHours === h
-                        ? 'bg-primary text-primary-foreground shadow-md'
+                        ? 'bg-primary text-primary-foreground shadow-elev-1'
                         : 'bg-muted hover:bg-muted/80'
                     }`}
                   >
@@ -364,7 +396,7 @@ export default function SimuladoPage() {
                   </button>
                 ))}
               </div>
-              <p className="text-xs text-muted-foreground mt-2">
+              <p className="type-caption text-muted-foreground mt-2">
                 ENEM real: 5h30 (1º dia) e 5h (2º dia)
               </p>
             </motion.div>
@@ -374,7 +406,7 @@ export default function SimuladoPage() {
           <button
             onClick={() => startSimulado()}
             disabled={loading}
-            className="w-full flex items-center justify-center gap-3 bg-primary text-primary-foreground py-4 rounded-xl font-display font-bold text-lg hover:opacity-90 transition-opacity disabled:opacity-50 shadow-lg"
+            className="w-full flex items-center justify-center gap-3 bg-primary text-primary-foreground py-4 rounded-[var(--radius-control)] font-display font-bold type-lead hover:opacity-90 transition-opacity disabled:opacity-50 shadow-elev-2"
           >
             {loading ? (
               <span className="animate-spin">...</span>
@@ -403,26 +435,30 @@ export default function SimuladoPage() {
     return (
       <div className="p-4 md:p-6 max-w-4xl mx-auto">
         {/* Top Bar */}
-        <div className="flex items-center justify-between mb-4 bg-card rounded-xl p-3 shadow-sm border border-border sticky top-0 z-10">
+        <div className="flex items-center justify-between mb-4 surface-1 rounded-[var(--radius-control)] p-3 sticky top-0 z-10">
           <div className="flex items-center gap-3">
-            <span className="text-sm font-mono bg-primary/10 text-primary px-3 py-1 rounded-lg">
+            <span data-numeric className="type-meta font-medium bg-primary/10 text-primary px-3 py-1 rounded-[var(--radius-data)]">
               {currentIdx + 1}/{questions.length}
             </span>
-            <span className="text-xs text-muted-foreground">
+            <span data-numeric className="type-caption text-muted-foreground">
               {answeredCount} respondidas
             </span>
           </div>
 
           <div className="flex items-center gap-3">
             {useTimer ? (
-              <div className={`flex items-center gap-2 font-mono text-lg font-bold ${
-                timeLeft < 600 ? 'text-red-600' : timeLeft < 1800 ? 'text-orange-600' : 'text-foreground'
-              }`}>
+              <div
+                data-numeric
+                className={`flex items-center gap-2 type-lead font-semibold px-2.5 py-1 rounded-[var(--radius-control)] ${
+                  isTimerCritical ? 'timer-critical' : ''
+                }`}
+                style={isTimerCritical ? { color: 'hsl(var(--danger))' } : undefined}
+              >
                 <Clock className="w-4 h-4" />
                 {formatTime(timeLeft)}
               </div>
             ) : (
-              <div className="flex items-center gap-2 font-mono text-sm text-muted-foreground">
+              <div data-numeric className="flex items-center gap-2 type-meta text-muted-foreground">
                 <Clock className="w-4 h-4" />
                 {formatTime(timeElapsed)}
               </div>
@@ -430,7 +466,8 @@ export default function SimuladoPage() {
 
             <button
               onClick={handlePause}
-              className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors"
+              aria-label={isPaused ? 'Retomar simulado' : 'Pausar simulado'}
+              className="p-2 rounded-[var(--radius-control)] bg-muted hover:bg-muted/80 t-colors"
             >
               {isPaused ? <Play className="w-4 h-4" /> : <Pause className="w-4 h-4" />}
             </button>
@@ -442,11 +479,11 @@ export default function SimuladoPage() {
           <div className="fixed inset-0 bg-background/95 z-20 flex items-center justify-center">
             <div className="text-center">
               <Pause className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-              <p className="font-display text-2xl font-bold mb-2">Simulado Pausado</p>
-              <p className="text-sm text-muted-foreground mb-4">Seu progresso foi salvo automaticamente.</p>
+              <p className="font-display type-headline font-bold mb-2">Simulado Pausado</p>
+              <p className="type-meta text-muted-foreground mb-4">Seu progresso foi salvo automaticamente.</p>
               <button
                 onClick={handlePause}
-                className="bg-primary text-primary-foreground px-8 py-3 rounded-xl font-medium hover:opacity-90 mt-2"
+                className="bg-primary text-primary-foreground px-8 py-3 rounded-[var(--radius-control)] font-medium hover:opacity-90 transition-opacity mt-2"
               >
                 Continuar
               </button>
@@ -458,7 +495,7 @@ export default function SimuladoPage() {
                     setQuestions([]);
                     setAnswers({});
                   }}
-                  className="text-sm text-muted-foreground hover:text-foreground underline"
+                  className="type-meta text-muted-foreground hover:text-foreground underline t-colors"
                 >
                   Abandonar e iniciar novo
                 </button>
@@ -477,26 +514,33 @@ export default function SimuladoPage() {
               transition={{ duration: shouldReduceMotion ? 0.01 : 0.3 }}
             >
               {/* Question */}
-              <div className="bg-card rounded-xl p-5 md:p-6 shadow-sm border border-border mb-4">
-                <div className="flex items-center gap-2 mb-3 flex-wrap">
-                  <span
-                    className="text-xs font-medium px-2.5 py-1 rounded-full text-white"
-                    style={{ backgroundColor: (materiaColors as any)[currentQ.materia] ?? '#888' }}
-                  >
+              <div className="surface-1 rounded-[var(--radius-surface)] p-5 md:p-6 mb-4">
+                <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-4 type-meta text-muted-foreground">
+                  <span className="inline-flex items-center gap-1.5 font-medium text-foreground">
+                    <span
+                      aria-hidden
+                      className="w-2 h-2 rounded-[var(--radius-data)] shrink-0"
+                      style={{ backgroundColor: (materiaColors as any)[currentQ.materia] ?? 'hsl(var(--muted-foreground))' }}
+                    />
                     {currentQ.materia}
                   </span>
-                  <span className="text-xs text-muted-foreground">{currentQ.subtema}</span>
+                  {currentQ.subtema && (
+                    <>
+                      <span aria-hidden className="text-border">/</span>
+                      <span className="truncate max-w-[22rem]">{currentQ.subtema}</span>
+                    </>
+                  )}
                 </div>
-                <div className="text-sm md:text-base leading-relaxed whitespace-pre-wrap"><MathText text={currentQ.enunciado ?? ''} /></div>
+                <div className="prose-reading"><MathText text={currentQ.enunciado ?? ''} /></div>
                 {currentQ.pdfFileUrl && currentQ.paginaPdf && (
-                  <div className="mt-4">
+                  <figure className="mt-4">
                     <PdfPageViewer
                       pdfUrl={currentQ.pdfFileUrl}
                       pageNumber={currentQ.paginaPdf}
                       imagemUrl={currentQ.imagemUrl}
                       imagemUrlExpandida={currentQ.imagemUrlExpandida}
                     />
-                  </div>
+                  </figure>
                 )}
                 {currentQ.dependeImagem && !currentQ.pdfFileUrl && (
                   <ImagemIndisponivel className="mt-4" />
@@ -522,21 +566,35 @@ export default function SimuladoPage() {
                           : { delay: altIdx * 0.08, duration: 0.3 }
                       }
                       onClick={() => handleAnswer(currentQ.id, alt.key)}
+                      data-state={isSelected ? 'selecionada' : 'repouso'}
                       whileHover={{ x: 4 }}
-                      className={`w-full text-left p-4 rounded-xl border transition-all flex items-start gap-3 ${
+                      whileTap={{ scale: 0.995 }}
+                      className={`group relative w-full text-left p-3.5 pl-4 rounded-[var(--radius-control)] border t-lift flex items-start gap-3.5 ${
                         isSelected
-                          ? 'border-primary bg-primary/5 shadow-sm'
-                          : 'border-border hover:border-primary/30 hover:bg-muted/30'
+                          ? 'bg-primary/[0.07] border-primary shadow-elev-2'
+                          : 'bg-[hsl(var(--surface-2))] border-border shadow-elev-1 hover:border-primary/45 hover:shadow-elev-2 hover:-translate-y-px'
                       }`}
                     >
-                      <span className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold flex-shrink-0 ${
-                        isSelected
-                          ? 'bg-primary text-primary-foreground'
-                          : 'bg-muted'
-                      }`}>
+                      {/* Filete lateral: segundo sinal do estado selecionado. */}
+                      {isSelected && (
+                        <span
+                          aria-hidden
+                          className="absolute left-0 top-2 bottom-2 w-[3px] rounded-r-[var(--radius-data)]"
+                          style={{ backgroundColor: 'hsl(var(--primary))' }}
+                        />
+                      )}
+                      <span
+                        className={`w-8 h-8 rounded-[var(--radius-control)] flex items-center justify-center type-meta font-semibold flex-shrink-0 t-colors ${
+                          isSelected
+                            ? 'bg-primary text-primary-foreground'
+                            : 'bg-muted text-muted-foreground group-hover:bg-primary/15 group-hover:text-primary'
+                        }`}
+                      >
                         {alt.key}
                       </span>
-                      <span className="text-sm flex-1"><MathText text={alt.text ?? ''} /></span>
+                      <span className="font-reading text-body leading-[var(--lh-reading)] pt-0.5 flex-1">
+                        <MathText text={alt.text ?? ''} />
+                      </span>
                     </motion.button>
                   );
                 })}
@@ -550,23 +608,25 @@ export default function SimuladoPage() {
           <button
             onClick={() => handleNavigate(Math.max(0, currentIdx - 1))}
             disabled={currentIdx === 0}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-muted hover:bg-muted/80 transition-colors disabled:opacity-30"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-[var(--radius-control)] type-meta font-medium bg-muted hover:bg-muted/80 t-colors disabled:opacity-30"
           >
             <ChevronLeft className="w-4 h-4" /> Anterior
           </button>
 
           <div className="flex items-center gap-1">
             {/* Mini question dots */}
-            <div className="hidden md:flex gap-0.5 flex-wrap max-w-xs justify-center">
+            <div className="hidden md:flex gap-1 flex-wrap max-w-xs justify-center">
               {questions.slice(0, 45).map((q, i) => (
                 <button
                   key={q.id}
                   onClick={() => handleNavigate(i)}
-                  className={`w-5 h-5 rounded text-[9px] font-bold flex items-center justify-center transition-all ${
+                  data-numeric
+                  aria-label={`Ir para questão ${i + 1}${answers[q.id] ? ', respondida' : ''}`}
+                  className={`w-5 h-5 rounded-[var(--radius-control)] type-caption flex items-center justify-center t-colors ${
                     i === currentIdx
                       ? 'bg-primary text-primary-foreground'
                       : answers[q.id]
-                        ? 'bg-green-500/20 text-green-700'
+                        ? 'bg-primary/15 text-primary'
                         : 'bg-muted text-muted-foreground'
                   }`}
                 >
@@ -579,7 +639,7 @@ export default function SimuladoPage() {
           {currentIdx < questions.length - 1 ? (
             <button
               onClick={() => handleNavigate(currentIdx + 1)}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-muted hover:bg-muted/80 transition-colors"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-[var(--radius-control)] type-meta font-medium bg-muted hover:bg-muted/80 t-colors"
             >
               Próxima <ChevronRight className="w-4 h-4" />
             </button>
@@ -595,7 +655,7 @@ export default function SimuladoPage() {
                 handleSubmit();
               }}
               disabled={submitting}
-              className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
+              className="flex items-center gap-2 px-6 py-2.5 rounded-[var(--radius-control)] bg-primary text-primary-foreground type-meta font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
             >
               {submitting ? 'Enviando...' : 'Finalizar'}
             </button>
@@ -603,18 +663,20 @@ export default function SimuladoPage() {
         </div>
 
         {/* Question grid for mobile */}
-        <div className="md:hidden mt-4 bg-card rounded-xl p-3 border border-border">
-          <p className="text-xs text-muted-foreground mb-2">Navegação rápida:</p>
-          <div className="flex gap-1 flex-wrap">
+        <div className="md:hidden mt-4 surface-1 rounded-[var(--radius-surface)] p-3">
+          <p className="type-caption text-muted-foreground mb-2">Navegação rápida</p>
+          <div className="flex gap-1.5 flex-wrap">
             {questions.map((q, i) => (
               <button
                 key={q.id}
                 onClick={() => handleNavigate(i)}
-                className={`w-7 h-7 rounded text-[10px] font-bold flex items-center justify-center transition-all ${
+                data-numeric
+                aria-label={`Ir para questão ${i + 1}${answers[q.id] ? ', respondida' : ''}`}
+                className={`w-7 h-7 rounded-[var(--radius-control)] type-caption flex items-center justify-center t-colors ${
                   i === currentIdx
                     ? 'bg-primary text-primary-foreground'
                     : answers[q.id]
-                      ? 'bg-green-500/20 text-green-700'
+                      ? 'bg-primary/15 text-primary'
                       : 'bg-muted text-muted-foreground'
                 }`}
               >
@@ -635,78 +697,74 @@ export default function SimuladoPage() {
       <div className="p-4 md:p-8 max-w-4xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} onAnimationComplete={() => { if (results.taxaAcerto >= 60) fireConfetti(); }}>
           {/* Score Header */}
-          <div className="bg-card rounded-2xl p-6 md:p-8 shadow-sm border border-border mb-6 text-center">
+          <div className="surface-1 rounded-[var(--radius-surface)] p-6 md:p-8 mb-6 text-center">
             <motion.div initial={{ scale: 0 }} animate={{ scale: [0, 1.3, 1] }} transition={{ delay: 0.2, duration: 0.5 }}>
               <Trophy className="w-12 h-12 text-primary mx-auto mb-4" />
             </motion.div>
-            <h1 className="font-display text-3xl md:text-4xl font-bold mb-2">
-              {results.taxaAcerto}% de acerto
+            <h1 className="mb-2">
+              <span data-numeric className="font-display type-hero font-semibold">{results.taxaAcerto}%</span>{' '}
+              <span className="type-lead text-muted-foreground">de acerto</span>
             </h1>
-            <p className="text-muted-foreground">
+            <p data-numeric className="type-body text-muted-foreground">
               {results.totalCorretas} corretas de {results.totalQuestoes} questões
             </p>
             {results.timerUsed && (
-              <p className="text-sm text-muted-foreground mt-1">
+              <p data-numeric className="type-meta text-muted-foreground mt-1">
                 Tempo: {formatTime(results.tempoGasto ?? 0)}
               </p>
             )}
 
             <div className="flex justify-center gap-6 mt-6">
               <div className="text-center">
-                <p className="text-2xl font-bold text-green-600">{results.totalCorretas}</p>
-                <p className="text-xs text-muted-foreground">Corretas</p>
+                <p data-numeric className="type-lead font-bold" style={{ color: 'hsl(var(--success))' }}>{results.totalCorretas}</p>
+                <p className="type-caption text-muted-foreground">Corretas</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl font-bold text-red-600">{results.totalErradas}</p>
-                <p className="text-xs text-muted-foreground">Erradas</p>
+                <p data-numeric className="type-lead font-bold" style={{ color: 'hsl(var(--danger))' }}>{results.totalErradas}</p>
+                <p className="type-caption text-muted-foreground">Erradas</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl font-bold text-muted-foreground">
+                <p data-numeric className="type-lead font-bold text-muted-foreground">
                   {results.totalQuestoes - results.totalCorretas - results.totalErradas}
                 </p>
-                <p className="text-xs text-muted-foreground">Em branco</p>
+                <p className="type-caption text-muted-foreground">Em branco</p>
               </div>
             </div>
           </div>
 
           {/* Per Materia Breakdown */}
-          <div className="bg-card rounded-xl p-6 shadow-sm border border-border mb-6">
-            <h2 className="font-display text-lg font-semibold mb-4 flex items-center gap-2">
+          <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
+            <h2 className="font-display type-title font-semibold mb-4 flex items-center gap-2">
               <BarChart3 className="w-5 h-5 text-primary" />
               Desempenho por Matéria
             </h2>
             <div className="space-y-3">
               {porMateriaEntries.map(([materia, data]) => {
-                const taxa = data.total > 0 ? Math.round((data.corretas / data.total) * 100) : 0;
+                const rate = data.total > 0 ? data.corretas / data.total : 0;
                 return (
                   <div key={materia} className="space-y-1.5">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <div
-                          className="w-3 h-3 rounded-full"
-                          style={{ backgroundColor: (materiaColors as any)[materia] ?? '#888' }}
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="flex items-center gap-2 min-w-0">
+                        <span
+                          aria-hidden
+                          className="w-2 h-2 rounded-[var(--radius-data)] shrink-0"
+                          style={{ backgroundColor: (materiaColors as any)[materia] ?? 'hsl(var(--muted-foreground))' }}
                         />
-                        <span className="text-sm font-medium">{materia}</span>
+                        <span className="type-meta font-medium truncate">{materia}</span>
                       </div>
-                      <span className="text-sm">
-                        <span className="font-bold">{data.corretas}</span>
-                        <span className="text-muted-foreground">/{data.total}</span>
-                        <span className={`ml-2 font-bold ${
-                          taxa >= 70 ? 'text-green-600' : taxa >= 50 ? 'text-yellow-600' : 'text-red-600'
-                        }`}>
-                          {taxa}%
-                        </span>
-                      </span>
+                      <TaxaAcerto total={data.total} acertos={data.corretas} />
                     </div>
-                    <div className="h-2 bg-muted rounded-full overflow-hidden">
-                      <div
-                        className="h-full rounded-full transition-all"
-                        style={{
-                          width: `${taxa}%`,
-                          backgroundColor: taxa >= 70 ? '#22c55e' : taxa >= 50 ? '#eab308' : '#ef4444',
-                        }}
-                      />
-                    </div>
+                    {data.total >= MIN_QUESTOES_PARA_TAXA && (
+                      <div className="h-1.5 bg-muted rounded-[var(--radius-data)] overflow-hidden">
+                        <div
+                          className="h-full w-full rounded-[var(--radius-data)] origin-left transition-transform duration-medium ease-out-quart"
+                          style={{
+                            transform: `scaleX(${rate})`,
+                            backgroundColor: rate >= 0.7 ? 'hsl(var(--success))' : rate < 0.5 ? 'hsl(var(--danger))' : 'hsl(var(--foreground) / 0.35)',
+                          }}
+                        />
+                      </div>
+                    )}
                   </div>
                 );
               })}
@@ -715,20 +773,23 @@ export default function SimuladoPage() {
 
           {/* Materias to reinforce */}
           {(results.materiasReforcar?.length ?? 0) > 0 && (
-            <div className="bg-orange-500/5 border border-orange-500/20 rounded-xl p-6 mb-6">
-              <h3 className="font-display text-base font-semibold mb-3 flex items-center gap-2">
-                <AlertTriangle className="w-5 h-5 text-orange-600" />
+            <div className="bg-amber-500/5 border border-amber-500/20 rounded-[var(--radius-surface)] p-6 mb-6">
+              <h3 className="font-display type-lead font-semibold mb-3 flex items-center gap-2">
+                <AlertTriangle className="w-5 h-5 text-amber-600" />
                 Matérias para Reforçar
               </h3>
               <div className="space-y-2">
-                {results.materiasReforcar.map((m: any) => (
-                  <div key={m.materia} className="flex items-center justify-between p-2 rounded-lg bg-background">
-                    <span className="text-sm font-medium">{m.materia}</span>
-                    <span className="text-sm text-red-600 font-bold">{m.taxa}%</span>
-                  </div>
-                ))}
+                {results.materiasReforcar.map((m: any) => {
+                  const md = results.porMateria?.[m.materia];
+                  return (
+                    <div key={m.materia} className="flex items-center justify-between gap-3 p-2.5 rounded-[var(--radius-control)] bg-background">
+                      <span className="type-meta font-medium truncate">{m.materia}</span>
+                      <TaxaAcerto total={md?.total ?? 0} acertos={md?.corretas ?? 0} />
+                    </div>
+                  );
+                })}
               </div>
-              <p className="text-xs text-muted-foreground mt-3">
+              <p className="type-caption text-muted-foreground mt-3">
                 Essas matérias serão priorizadas nos seus próximos treinos e revisões.
               </p>
             </div>
@@ -738,19 +799,19 @@ export default function SimuladoPage() {
           <div className="flex flex-wrap gap-3">
             <button
               onClick={() => { setPhase('config'); setResults(null); setSessionId(null); }}
-              className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-xl font-medium hover:opacity-90"
+              className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-[var(--radius-control)] type-meta font-medium shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3"
             >
               Novo Simulado
             </button>
             <button
               onClick={() => router.push('/caderno-erros')}
-              className="flex items-center gap-2 bg-card border border-border px-6 py-3 rounded-xl font-medium hover:bg-muted"
+              className="flex items-center gap-2 bg-muted text-foreground px-6 py-3 rounded-[var(--radius-control)] type-meta font-medium t-colors hover:bg-secondary"
             >
               Ver Caderno de Erros
             </button>
             <button
               onClick={() => router.push('/dashboard')}
-              className="flex items-center gap-2 bg-card border border-border px-6 py-3 rounded-xl font-medium hover:bg-muted"
+              className="flex items-center gap-2 bg-muted text-foreground px-6 py-3 rounded-[var(--radius-control)] type-meta font-medium t-colors hover:bg-secondary"
             >
               Voltar ao Início
             </button>
