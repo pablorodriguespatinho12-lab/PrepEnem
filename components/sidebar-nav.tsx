@@ -77,7 +77,7 @@ export function SidebarNav() {
           </div>
           <div>
             <h1 className="font-display type-lead font-semibold">PrepEnem</h1>
-            <p className="type-caption text-muted-foreground">Plataforma de Estudos</p>
+            <p className="type-micro text-muted-foreground tracking-wide">Plataforma de Estudos</p>
           </div>
         </div>
 

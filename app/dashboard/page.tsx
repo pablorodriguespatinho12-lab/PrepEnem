@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import {
   BookOpen, Target, Flame, RefreshCcw, Calendar,
-  Trophy, ArrowRight, AlertTriangle, CheckCircle2, Brain, Sparkles,
+  Trophy, ArrowRight, AlertTriangle, AlertCircle, CheckCircle2, Brain, Sparkles,
   Sun, Briefcase, FileText, Upload, ClipboardList, BarChart3
 } from 'lucide-react';
 import { getWeekScheduleByNumber, studyCycle } from '@/lib/schedule-data';
@@ -13,6 +13,11 @@ import { materiaColors } from '@/lib/theme-colors';
 import { CheckCircle2 as DayDoneIcon, Circle, CircleDashed } from 'lucide-react';
 
 const ThreeScene = dynamic(() => import('@/components/three-scene'), { ssr: false });
+
+/* Limiares de dado esparso — mesma regra usada em app/progresso/page.tsx.
+   < 5 respostas: sem %. 5–15: % com indicador de baixa confiança. 15+: limpa. */
+const MIN_QUESTOES_PARA_TAXA = 5;
+const LIMIAR_BAIXA_CONFIANCA = 15;
 
 /* ── Animated number counter ── */
 function AnimatedNumber({ value, suffix = '' }: { value: number; suffix?: string }) {
@@ -37,11 +42,14 @@ function AnimatedNumber({ value, suffix = '' }: { value: number; suffix?: string
 function Greeting({ name, weekNumber }: { name: string; weekNumber: number }) {
   return (
     <div className="flex items-center justify-between flex-wrap gap-3 mb-6 pt-2">
-      <p className="text-sm md:text-base font-display font-semibold whitespace-nowrap">
-        Olá, {name}!
-      </p>
+      {/* Âncora editorial da página. A tela inteira estava presa entre 10.9px
+          e 26.6px (range 2.44x) — sem nenhum elemento no topo da escala, a
+          hierarquia dependia só de peso e cor. */}
+      <h1 className="type-headline font-display font-semibold whitespace-nowrap">
+        Olá, {name}
+      </h1>
       <div className="flex items-center gap-2 flex-wrap">
-        <span className="px-2.5 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full whitespace-nowrap">
+        <span data-numeric className="px-2.5 py-1 bg-primary/10 text-primary type-meta font-semibold rounded-[var(--radius-data)] whitespace-nowrap">
           Semana {weekNumber}/4
         </span>
         <div className="flex gap-1">
@@ -176,11 +184,13 @@ export default function DashboardPage() {
   const treinoHref = activeDay ? `/treino?weekNumber=${activeDay.weekNumber}&dayIndex=${activeDay.dayIndex}` : '/treino';
   const weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']; // indexado por day.dayOfWeek (0=Dom civil), não por dayIndex
 
+  const totalRespondidas = stats?.totalRespondidas ?? 0;
+
   const statCards = [
-    { label: 'Questões Respondidas', value: stats?.totalRespondidas ?? 0, icon: BookOpen, color: 'bg-blue-500/10 text-blue-600 dark:text-blue-400' },
-    { label: 'Taxa de Acerto', value: stats?.taxaAcerto ?? 0, suffix: '%', icon: Target, color: 'bg-green-500/10 text-green-600 dark:text-green-400' },
-    { label: 'Dias de Sequência', value: stats?.streakDays ?? 0, icon: Flame, color: 'bg-orange-500/10 text-orange-600 dark:text-orange-400' },
-    { label: 'Revisões Pendentes', value: stats?.pendingReviews ?? 0, icon: RefreshCcw, color: 'bg-primary/10 text-primary' },
+    { key: 'respondidas', label: 'Questões Respondidas', value: stats?.totalRespondidas ?? 0, icon: BookOpen },
+    { key: 'taxa', label: 'Taxa de Acerto', value: stats?.taxaAcerto ?? 0, suffix: '%', icon: Target },
+    { key: 'streak', label: 'Dias de Sequência', value: stats?.streakDays ?? 0, icon: Flame },
+    { key: 'revisoes', label: 'Revisões Pendentes', value: stats?.pendingReviews ?? 0, icon: RefreshCcw },
   ];
 
   return (
@@ -193,24 +203,24 @@ export default function DashboardPage() {
              "Atual" em vez de "Hoje": o dia mostrado é o próximo pendente no
              SEU progresso, não necessariamente o dia da semana civil de hoje. */}
         {activeDay?.cycleComplete ? (
-          <div className="gsap-section gsap-reveal bg-card/80 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-border mb-6 text-center">
+          <div className="gsap-section gsap-reveal surface-1 rounded-[var(--radius-surface)] p-6 mb-6 text-center">
             <Trophy className="w-8 h-8 text-primary mx-auto mb-2" />
-            <p className="font-display text-base font-semibold">Ciclo de 4 semanas concluído!</p>
-            <p className="text-xs text-muted-foreground mt-1">Continue treinando livremente pelas outras telas.</p>
+            <p className="font-display type-body font-semibold">Ciclo de 4 semanas concluído!</p>
+            <p className="type-meta text-muted-foreground mt-1">Continue treinando livremente pelas outras telas.</p>
           </div>
         ) : activeDaySchedule && (
-          <div className="gsap-section gsap-reveal bg-card/80 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-border mb-6">
+          <div className="gsap-section gsap-reveal surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
             <div className="flex items-center justify-between gap-2 mb-4 flex-wrap">
               <div className="flex items-center gap-2">
                 <Sun className="w-5 h-5 text-amber-500" />
-                <h2 className="font-display text-lg font-semibold">Estudo Atual</h2>
-                <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">
+                <h2 className="font-display type-lead font-semibold">Estudo Atual</h2>
+                <span data-numeric className="type-meta bg-primary/10 text-primary px-2 py-0.5 rounded-[var(--radius-data)]">
                   Semana {weekNumber} • {activeDaySchedule.dayName}
                 </span>
               </div>
               <button
                 onClick={skipActiveDay}
-                className="text-xs text-muted-foreground hover:text-foreground underline underline-offset-2"
+                className="type-meta text-muted-foreground hover:text-foreground underline underline-offset-2"
               >
                 Pular este dia
               </button>
@@ -218,28 +228,28 @@ export default function DashboardPage() {
 
             <button
               onClick={() => router.push(treinoHref)}
-              className="w-full flex items-center gap-4 bg-primary text-primary-foreground rounded-xl p-4 md:p-5 shadow-lg hover:opacity-90 transition-all group shimmer-btn cta-glow mb-4"
+              className="w-full flex items-center gap-4 bg-primary text-primary-foreground rounded-[var(--radius-control)] p-4 md:p-5 shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3 group mb-4"
             >
-              <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 rounded-[var(--radius-control)] bg-white/20 flex items-center justify-center flex-shrink-0">
                 <Brain className="w-6 h-6" />
               </div>
               <div className="flex-1 text-left">
-                <p className="font-display text-base md:text-lg font-bold">Iniciar Treino (20 questões)</p>
+                <p className="font-display type-title font-bold">Iniciar Treino (20 questões)</p>
               </div>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </button>
 
             {activeDaySchedule.isSimulado ? (
-              <div className="p-4 rounded-lg bg-red-500/5 border border-red-500/10 text-center">
-                <ClipboardList className="w-8 h-8 text-red-500 mx-auto mb-2" />
-                <p className="text-sm font-medium text-red-700 dark:text-red-400">Dia de Simulado</p>
-                <p className="text-xs text-muted-foreground mt-1">Questões das matérias da semana</p>
+              <div className="p-4 rounded-[var(--radius-control)] bg-[hsl(var(--surface-2))] border border-border text-center">
+                <ClipboardList className="w-8 h-8 text-foreground mx-auto mb-2" />
+                <p className="type-meta font-medium text-foreground">Dia de Simulado</p>
+                <p className="type-caption text-muted-foreground mt-1">Questões das matérias da semana</p>
               </div>
             ) : (
               <div className="space-y-3">
                 {activeDaySchedule.manha.length > 0 && (
                   <div>
-                    <p className="text-xs font-medium text-muted-foreground mb-2 flex items-center gap-1">
+                    <p className="type-caption text-muted-foreground mb-2 flex items-center gap-1">
                       <Sun className="w-3.5 h-3.5 text-amber-500" /> Matérias ENEM
                     </p>
                     <div className="space-y-2">
@@ -247,17 +257,17 @@ export default function DashboardPage() {
                         <button
                           key={i}
                           onClick={() => router.push(`/treino?mode=filtered&materia=${encodeURIComponent(block.materia)}`)}
-                          className="w-full flex items-center gap-3 p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors text-left group"
+                          className="w-full flex items-center gap-3 p-3 rounded-[var(--radius-control)] bg-muted/50 hover:bg-muted t-colors text-left group"
                         >
                           <div
                             className="w-3 h-3 rounded-full flex-shrink-0"
                             style={{ backgroundColor: (materiaColors as any)[block.materia] ?? '#ccc' }}
                           />
                           <div className="flex-1 min-w-0">
-                            <p className="text-sm font-medium">{block.materia}</p>
-                            <p className="text-xs text-muted-foreground truncate">{block.tema}</p>
+                            <p className="type-meta font-medium">{block.materia}</p>
+                            <p className="type-meta text-muted-foreground truncate">{block.tema}</p>
                           </div>
-                          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary t-colors" />
                         </button>
                       ))}
                     </div>
@@ -266,7 +276,7 @@ export default function DashboardPage() {
 
                 {activeDaySchedule.trabalho.length > 0 && (
                   <div>
-                    <p className="text-xs font-medium text-muted-foreground mb-2 flex items-center gap-1">
+                    <p className="type-caption text-muted-foreground mb-2 flex items-center gap-1">
                       <Briefcase className="w-3.5 h-3.5 text-blue-500" /> Treino Diário
                     </p>
                     <div className="space-y-2">
@@ -274,17 +284,17 @@ export default function DashboardPage() {
                         <button
                           key={i}
                           onClick={() => router.push(`/treino?mode=filtered&materia=${encodeURIComponent(block.materia)}`)}
-                          className="w-full flex items-center gap-3 p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors text-left group"
+                          className="w-full flex items-center gap-3 p-3 rounded-[var(--radius-control)] bg-muted/50 hover:bg-muted t-colors text-left group"
                         >
                           <div
                             className="w-3 h-3 rounded-full flex-shrink-0"
                             style={{ backgroundColor: (materiaColors as any)[block.materia] ?? '#ccc' }}
                           />
                           <div className="flex-1 min-w-0">
-                            <p className="text-sm font-medium">{block.materia}</p>
-                            <p className="text-xs text-muted-foreground truncate">{block.tema}</p>
+                            <p className="type-meta font-medium">{block.materia}</p>
+                            <p className="type-meta text-muted-foreground truncate">{block.tema}</p>
                           </div>
-                          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary t-colors" />
                         </button>
                       ))}
                     </div>
@@ -296,19 +306,28 @@ export default function DashboardPage() {
         )}
 
         {/* ── Stats compactos (contexto, não protagonista) ── */}
-        <div className="gsap-stats-grid flex items-stretch divide-x divide-border bg-card/60 backdrop-blur-sm rounded-xl border border-border mb-4 overflow-x-auto" style={{ perspective: '800px' }}>
+        <div className="gsap-stats-grid flex items-stretch divide-x divide-border surface-1 rounded-[var(--radius-surface)] mb-4 overflow-x-auto">
           {statCards.map((card) => {
             const Icon = card.icon;
+            const isTaxa = card.key === 'taxa';
+            const sparse = isTaxa && totalRespondidas < MIN_QUESTOES_PARA_TAXA;
+            const lowConfidence = isTaxa && !sparse && totalRespondidas < LIMIAR_BAIXA_CONFIANCA;
             return (
-              <div key={card.label} className="gsap-stat gsap-reveal flex items-center gap-2 px-4 py-3 flex-1 min-w-[140px]">
-                <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${card.color}`}>
-                  <Icon className="w-4 h-4" />
-                </div>
+              <div key={card.label} className="gsap-stat gsap-reveal flex items-center gap-2.5 px-4 py-3 flex-1 min-w-[140px]">
+                <Icon className="w-4 h-4 text-muted-foreground flex-shrink-0" aria-hidden="true" />
                 <div className="min-w-0">
-                  <p className="font-display text-lg font-bold leading-tight">
-                    <AnimatedNumber value={card.value} suffix={card.suffix} />
+                  <p data-numeric className="font-display type-lead font-bold flex items-center gap-1">
+                    {sparse ? '—' : <AnimatedNumber value={card.value} suffix={card.suffix} />}
+                    {lowConfidence && (
+                      <AlertCircle
+                        className="w-3 h-3 text-muted-foreground"
+                        aria-label="Amostra pequena: a taxa ainda pode mudar bastante"
+                      />
+                    )}
                   </p>
-                  <p className="text-[11px] text-muted-foreground truncate">{card.label}</p>
+                  <p className="type-caption text-muted-foreground truncate">
+                    {sparse ? 'poucos dados' : isTaxa ? `${card.label} · ${totalRespondidas}` : card.label}
+                  </p>
                 </div>
               </div>
             );
@@ -319,32 +338,32 @@ export default function DashboardPage() {
         <div className="gsap-actions-grid grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6" style={{ perspective: '800px' }}>
           <button
             onClick={() => router.push('/treino?mode=review')}
-            className="gsap-action gsap-reveal flex items-center gap-3 bg-card border border-border rounded-xl p-3 shadow-sm hover:shadow-md transition-all group card-3d"
+            className="gsap-action gsap-reveal flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-3 t-lift card-3d group"
           >
-            <div className="w-9 h-9 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-              <RefreshCcw className="w-4 h-4 text-orange-600" />
+            <div className="w-9 h-9 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <RefreshCcw className="w-4 h-4 text-primary" />
             </div>
             <div className="flex-1 text-left min-w-0">
-              <p className="font-display text-sm font-bold truncate">Revisar Agora</p>
-              <p className="text-xs text-muted-foreground truncate">
+              <p className="font-display type-meta font-bold truncate">Revisar Agora</p>
+              <p className="type-meta text-muted-foreground truncate">
                 {(stats?.pendingReviews ?? 0) > 0 ? `${stats.pendingReviews} pendentes` : 'Nenhuma pendente'}
               </p>
             </div>
             {(stats?.pendingReviews ?? 0) > 0 && (
-              <span className="px-2 py-0.5 bg-orange-500 text-white text-[10px] font-bold rounded-full flex-shrink-0">{stats.pendingReviews}</span>
+              <span data-numeric className="type-micro px-2 py-0.5 bg-primary text-primary-foreground font-bold rounded-[var(--radius-data)] flex-shrink-0">{stats.pendingReviews}</span>
             )}
           </button>
 
           <button
             onClick={() => router.push('/simulado')}
-            className="gsap-action gsap-reveal flex items-center gap-3 bg-card border border-border rounded-xl p-3 shadow-sm hover:shadow-md transition-all group card-3d"
+            className="gsap-action gsap-reveal flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-3 t-lift card-3d group"
           >
-            <div className="w-9 h-9 rounded-lg bg-red-500/10 flex items-center justify-center flex-shrink-0">
-              <ClipboardList className="w-4 h-4 text-red-600" />
+            <div className="w-9 h-9 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <ClipboardList className="w-4 h-4 text-primary" />
             </div>
             <div className="flex-1 text-left min-w-0">
-              <p className="font-display text-sm font-bold truncate">Simulado ENEM</p>
-              <p className="text-xs text-muted-foreground truncate">
+              <p className="font-display type-meta font-bold truncate">Simulado ENEM</p>
+              <p className="type-meta text-muted-foreground truncate">
                 {activeDaySchedule?.isSimulado ? 'Dia de simulado no seu plano atual' : 'Até 180 questões'}
               </p>
             </div>
@@ -352,24 +371,24 @@ export default function DashboardPage() {
 
           <button
             onClick={() => router.push('/upload')}
-            className="gsap-action gsap-reveal flex items-center gap-3 bg-card border border-border rounded-xl p-3 shadow-sm hover:shadow-md transition-all group card-3d"
+            className="gsap-action gsap-reveal flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-3 t-lift card-3d group"
           >
-            <div className="w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0">
-              <Upload className="w-4 h-4 text-blue-600" />
+            <div className="w-9 h-9 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <Upload className="w-4 h-4 text-primary" />
             </div>
             <div className="flex-1 text-left min-w-0">
-              <p className="font-display text-sm font-bold truncate">Importar PDF</p>
-              <p className="text-xs text-muted-foreground truncate">Provas e simulados</p>
+              <p className="font-display type-meta font-bold truncate">Importar PDF</p>
+              <p className="type-meta text-muted-foreground truncate">Provas e simulados</p>
             </div>
           </button>
         </div>
 
         {/* ── Weekly Calendar: pills horizontais, status vem do progresso real,
              não da data (dia atual do plano expandido por padrão) ── */}
-        <div className="gsap-section gsap-reveal bg-card/80 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-border mb-8">
+        <div className="gsap-section gsap-reveal surface-1 rounded-[var(--radius-surface)] p-6 mb-8">
           <div className="flex items-center gap-2 mb-4">
             <Sparkles className="w-5 h-5 text-primary" />
-            <h2 className="font-display text-lg font-semibold">Semana {weekNumber}: {weekTitle}</h2>
+            <h2 className="font-display type-lead font-semibold">Semana {weekNumber}: {weekTitle}</h2>
           </div>
 
           <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1">
@@ -382,38 +401,47 @@ export default function DashboardPage() {
                 <button
                   key={dayIndex}
                   onClick={() => setExpandedDayIndex(dayIndex)}
-                  className={`flex-shrink-0 flex flex-col items-center gap-1 px-3 py-2 rounded-lg border transition-all min-w-[52px] ${
-                    isExpanded ? 'border-primary shadow-sm' : 'border-transparent hover:bg-muted/50'
+                  className={`flex-shrink-0 flex flex-col items-center gap-1 px-3 py-2 rounded-[var(--radius-control)] border t-colors min-w-[52px] ${
+                    isExpanded ? 'border-primary shadow-elev-1' : 'border-transparent hover:bg-muted/50'
                   }`}
-                  style={isExpanded ? { backgroundColor: `${day.color}20` } : undefined}
                 >
+                  {/* A cor do dia preenchia o chip inteiro com texto branco em
+                      cima — mesmo problema de contraste das pílulas de matéria.
+                      Agora ela vira um marcador de 4px no topo e o chip usa a
+                      superfície do sistema. */}
                   <div
-                    className="relative w-7 h-7 rounded-lg flex items-center justify-center text-[11px] font-bold text-white flex-shrink-0"
-                    style={{ backgroundColor: day.color }}
+                    className={`relative w-7 h-7 rounded-[var(--radius-control)] flex items-center justify-center type-caption flex-shrink-0 overflow-hidden ${
+                      isExpanded ? 'bg-primary text-primary-foreground' : 'bg-muted text-foreground'
+                    }`}
                   >
+                    <span
+                      aria-hidden
+                      className="absolute inset-x-0 top-0 h-1"
+                      style={{ backgroundColor: day.color }}
+                    />
                     {weekDays[day.dayOfWeek]}
                     <StatusIcon className={`absolute -top-1.5 -right-1.5 w-3.5 h-3.5 rounded-full bg-card ${
-                      status === 'concluido' ? 'text-green-600' : status === 'pulado' ? 'text-muted-foreground' : status === 'em_andamento' ? 'text-primary' : 'text-border'
+                      status === 'concluido' ? 'text-primary' : status === 'pulado' ? 'text-muted-foreground' : status === 'em_andamento' ? 'text-primary' : 'text-border'
                     }`} />
                   </div>
-                  {isActive && <span className="text-[9px] font-bold text-primary">Atual</span>}
+                  {isActive && <span className="type-caption text-primary">Atual</span>}
                 </button>
               );
             })}
           </div>
 
           {expandedDaySchedule && (
-            <div className="mt-4 p-3 rounded-lg bg-muted/40">
-              <p className="text-sm font-medium mb-1.5 flex items-center gap-1.5">
+            <div className="mt-4 p-3 rounded-[var(--radius-control)] bg-muted/40">
+              <p className="type-meta font-medium mb-1.5 flex items-center gap-1.5">
                 {expandedDaySchedule.dayName}
                 {expandedDaySchedule.manha.length > 0 && !expandedDaySchedule.isSimulado && (
                   <Sun className="w-3.5 h-3.5 text-amber-500" />
                 )}
                 {activeDay?.dayIndex === expandedDayIndex && (
-                  <span className="text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded-full font-medium">Atual</span>
+                  <span className="type-meta bg-primary text-primary-foreground px-2 py-0.5 rounded-[var(--radius-data)] font-medium">Atual</span>
                 )}
               </p>
-              <p className="text-xs text-muted-foreground">
+              <p className="type-meta text-muted-foreground">
                 {expandedDaySchedule.isSimulado
                   ? 'Simulado ENEM'
                   : [...expandedDaySchedule.manha, ...expandedDaySchedule.trabalho].map((b) => b.materia).join(' • ') || 'Sem blocos programados'}
@@ -424,37 +452,43 @@ export default function DashboardPage() {
 
         {/* ── Subjects status ── */}
         {stats && ((stats.dominadas?.length ?? 0) === 0 && (stats.reforcar?.length ?? 0) === 0 ? (
-          <div className="gsap-section gsap-reveal bg-card rounded-xl p-5 shadow-sm border border-border card-3d text-center">
+          <div className="gsap-section gsap-reveal surface-1 rounded-[var(--radius-surface)] p-5 card-3d text-center">
             <BarChart3 className="w-6 h-6 text-muted-foreground mx-auto mb-2" />
-            <p className="text-sm font-medium">Ainda sem dados suficientes por matéria</p>
-            <p className="text-xs text-muted-foreground mt-1">
+            <p className="type-meta font-medium">Ainda sem dados suficientes por matéria</p>
+            <p className="type-meta text-muted-foreground mt-1">
               Responda mais questões pra ver aqui quais matérias você já domina e quais precisa reforçar.
             </p>
           </div>
         ) : (
           <div className="gsap-section gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-4">
             {(stats?.dominadas?.length ?? 0) > 0 && (
-              <div className="bg-card rounded-xl p-5 shadow-sm border border-border card-3d">
+              <div className="surface-1 rounded-[var(--radius-surface)] p-5 card-3d">
                 <div className="flex items-center gap-2 mb-3">
-                  <CheckCircle2 className="w-5 h-5 text-green-600" />
-                  <h3 className="font-display text-base font-semibold">Matérias Dominadas</h3>
+                  <CheckCircle2 className="w-5 h-5" style={{ color: 'hsl(var(--success))' }} />
+                  <h3 className="font-display type-body font-semibold">Matérias Dominadas</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {(stats.dominadas ?? []).map((m: string) => (
-                    <span key={m} className="px-3 py-1.5 bg-green-500/10 text-green-700 dark:text-green-400 text-xs font-medium rounded-full">{m}</span>
+                    <span
+                      key={m}
+                      className="px-3 py-1.5 type-meta font-medium rounded-[var(--radius-data)]"
+                      style={{ backgroundColor: 'hsl(var(--success-surface))', color: 'hsl(var(--success))' }}
+                    >
+                      {m}
+                    </span>
                   ))}
                 </div>
               </div>
             )}
             {(stats?.reforcar?.length ?? 0) > 0 && (
-              <div className="bg-card rounded-xl p-5 shadow-sm border border-border card-3d">
+              <div className="surface-1 rounded-[var(--radius-surface)] p-5 card-3d">
                 <div className="flex items-center gap-2 mb-3">
                   <AlertTriangle className="w-5 h-5 text-orange-600" />
-                  <h3 className="font-display text-base font-semibold">Matérias para Reforçar</h3>
+                  <h3 className="font-display type-body font-semibold">Matérias para Reforçar</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {(stats.reforcar ?? []).map((m: string) => (
-                    <span key={m} className="px-3 py-1.5 bg-orange-500/10 text-orange-700 dark:text-orange-400 text-xs font-medium rounded-full">{m}</span>
+                    <span key={m} className="px-3 py-1.5 bg-primary/10 text-primary type-meta font-medium rounded-[var(--radius-data)]">{m}</span>
                   ))}
                 </div>
               </div>
