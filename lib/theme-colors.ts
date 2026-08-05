@@ -207,6 +207,45 @@ export const themeColors: Record<string, ThemeColorSet> = {
   },
 };
 
+/**
+ * Desloca só o L de uma string "H S% L%", mantendo matiz e saturação.
+ * Usado para derivar os níveis de elevação a partir da superfície do card,
+ * em vez de manter 24 valores escritos à mão que saem de sincronia.
+ */
+function shiftLightness(hsl: string, delta: number): string {
+  const parts = hsl.trim().split(/\s+/);
+  if (parts.length !== 3) return hsl;
+  const l = Number.parseFloat(parts[2]);
+  if (Number.isNaN(l)) return hsl;
+  const next = Math.min(100, Math.max(0, l + delta));
+  return `${parts[0]} ${parts[1]} ${Math.round(next * 10) / 10}%`;
+}
+
+export type SurfaceScale = {
+  surface0: string;
+  surface1: string;
+  surface2: string;
+  surface3: string;
+};
+
+/**
+ * Escala de elevação por superfície.
+ *
+ * No claro, a elevação vem sobretudo da sombra — as superfícies já estão perto
+ * do branco e não há para onde clarear. No escuro é o inverso: sombra sobre
+ * fundo escuro quase não aparece, então cada nível precisa ficar visivelmente
+ * mais claro que o anterior. Daí os deltas assimétricos.
+ */
+export function surfaceScale(mode: ThemeModeTokens, isDark: boolean): SurfaceScale {
+  const steps = isDark ? [3.5, 7] : [0.6, 1];
+  return {
+    surface0: mode.background,
+    surface1: mode.card,
+    surface2: shiftLightness(mode.card, steps[0]),
+    surface3: shiftLightness(mode.card, steps[1]),
+  };
+}
+
 export const materiaColors: Record<string, string> = {
   'Matemática': '#60B5FF',
   'Português': '#FF9149',

@@ -9,6 +9,25 @@ Cada item aqui é uma decisão **fechada**, com o motivo. Não são sugestões.
 Se algo aqui parecer errado para a tarefa atual, levante a questão com o
 usuário em vez de contrariar em silêncio.
 
+## Identidade visual — o que é trava e o que é aberto
+
+Definido no início do redesign visual (2026-08-05). A distinção importa:
+o redesign pode reinventar quase tudo, **menos** os itens abaixo.
+
+**Travado (não se renegocia):**
+
+- **Teal "Clareza" é a base cromática.** `--primary: 189 80% 52%`
+  (`app/globals.css:75`, também em `--ring` e `--chart-1`). Toda a paleta
+  do redesign se constrói a partir dele.
+- **Zero emoji na UI** (ver seção abaixo).
+- **Limiares de dado esparso** (`<5` sem %, `5–15` com alerta, `15+` limpa).
+- **Exceção do flip no reduced-motion.**
+- **Proibição de treemap.**
+
+**Aberto para o redesign:** tipografia, escala, densidade, elevação, forma
+dos componentes, movimento, personalidade visual. Nada disso está decidido
+— não trate o estado atual como referência a preservar.
+
 ## Conteúdo gerado por IA
 
 - **Zero emoji** em explicações, feedback ou UI. Hierarquia se faz com

@@ -11,8 +11,38 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-display)', 'var(--font-sans)', 'sans-serif'],
+        display: ['var(--font-display)', 'Georgia', 'serif'],
+        reading: ['var(--font-reading)', 'Georgia', 'serif'],
         mono: ['var(--font-mono)', 'ui-monospace', 'monospace'],
+      },
+      fontSize: {
+        caption: ['var(--type-caption)', { lineHeight: 'var(--lh-normal)' }],
+        meta: ['var(--type-meta)', { lineHeight: 'var(--lh-normal)' }],
+        body: ['var(--type-body)', { lineHeight: 'var(--lh-reading)' }],
+        lead: ['var(--type-lead)', { lineHeight: 'var(--lh-snug)' }],
+        title: ['var(--type-title)', { lineHeight: 'var(--lh-snug)' }],
+        headline: ['var(--type-headline)', { lineHeight: 'var(--lh-snug)' }],
+        display: ['var(--type-display)', { lineHeight: 'var(--lh-tight)' }],
+        hero: ['var(--type-hero)', { lineHeight: 'var(--lh-tight)' }],
+      },
+      boxShadow: {
+        'elev-1': 'var(--elev-1)',
+        'elev-2': 'var(--elev-2)',
+        'elev-3': 'var(--elev-3)',
+      },
+      transitionTimingFunction: {
+        'out-quart': 'var(--ease-out-quart)',
+        'in-out-quad': 'var(--ease-in-out-quad)',
+        entrance: 'var(--ease-entrance)',
+      },
+      transitionDuration: {
+        micro: 'var(--dur-micro)',
+        short: 'var(--dur-short)',
+        medium: 'var(--dur-medium)',
+        // aliases legados — mesmos valores, nomes antigos ainda em uso
+        fast: 'var(--duration-fast)',
+        normal: 'var(--duration-normal)',
+        slow: 'var(--duration-slow)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -91,11 +121,6 @@ const config: Config = {
           from: { opacity: '1' },
           to: { opacity: '0' },
         },
-      },
-      transitionDuration: {
-        fast: 'var(--duration-fast)',
-        normal: 'var(--duration-normal)',
-        slow: 'var(--duration-slow)',
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',

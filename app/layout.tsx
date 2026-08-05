@@ -1,12 +1,22 @@
-import { DM_Sans, Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
+import { DM_Sans, Fraunces, Source_Serif_4, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { Providers } from '@/components/providers';
 import { AppLayout } from '@/components/app-layout';
 import { ChunkLoadErrorHandler } from '@/components/chunk-load-error-handler';
 
-const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-sans' });
-const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-display' });
-const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
+/* Três famílias, três papéis — pareamento editorial.
+   Fraunces (display): serifa variável de alto contraste, com personalidade.
+     Só em título. É a voz da marca.
+   Source Serif 4 (leitura): desenhada para leitura em tela, altura-x grande,
+     itálico de verdade — importante porque enunciado de ENEM traz trecho
+     literário citado. É onde o olho passa as horas.
+   DM Sans (chrome): rótulo, botão, metadado. Serifa em 13px de interface
+     lê datado; o sans separa "interface" de "conteúdo" sem precisar de caixa.
+   JetBrains Mono permanece para código e dado tabular. */
+const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
+const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-display', display: 'swap' });
+const sourceSerif = Source_Serif_4({ subsets: ['latin'], variable: '--font-reading', display: 'swap' });
+const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono', display: 'swap' });
 
 export const dynamic = 'force-dynamic';
 
@@ -34,7 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script src="https://apps.abacus.ai/chatllm/appllm-lib.js" />
       </head>
-      <body className={`${dmSans.variable} ${jakartaSans.variable} ${jetbrainsMono.variable} font-sans`}>
+      <body className={`${dmSans.variable} ${fraunces.variable} ${sourceSerif.variable} ${jetbrainsMono.variable} font-sans`}>
         <Providers>
           <AppLayout>
             {children}

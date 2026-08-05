@@ -2,42 +2,131 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================================
+   SISTEMA VISUAL — direção editorial
+   ----------------------------------------------------------------------------
+   Tipografia é a protagonista. Hierarquia vem de contraste de tamanho e peso,
+   não de caixa colorida. Cor entra para marcar estado e ação.
+
+   ESCALA TIPOGRÁFICA: razão modular 1.250 (major third), ancorada em 17px
+   (o corpo de leitura), 8 níveis, range 4.76x (10.9px → 51.9px).
+
+   Por que 1.250 e não 1.333 (perfect fourth): esta é uma tela onde se lê por
+   uma a três horas seguidas. A quarta gera saltos grandes demais entre níveis
+   adjacentes, e num texto denso isso vira ruído a cada parágrafo. A terça
+   maior mantém os níveis distinguíveis sem exigir reajuste do olho. O caráter
+   editorial vem do pareamento de famílias e da generosidade de espaço, não de
+   berrar no tamanho. O range de 4.76x é obtido estendendo a escala nas pontas
+   (caption e hero), onde o salto grande não atrapalha a leitura corrida.
+   ========================================================================== */
+
 @layer base {
   :root {
-    /* Direção "Clareza" (teal) — valores default coincidem com lib/theme-colors.ts#clareza.light,
-       assim o primeiro paint (antes do AppThemeProvider rodar no client) já bate com o tema aplicado. */
-    --background: 190 20% 97%;
-    --foreground: 200 25% 12%;
+    /* --- Escala tipográfica (razão 1.250, âncora 17px) --------------------- */
+    --type-caption:  0.680rem;  /* 10.9px — anotação de n, unidade, rodapé   */
+    --type-meta:     0.850rem;  /* 13.6px — chrome de UI, label, metadado    */
+    --type-body:     1.0625rem; /* 17.0px — LEITURA: enunciado, alternativa  */
+    --type-lead:     1.328rem;  /* 21.2px — abertura, número em destaque    */
+    --type-title:    1.660rem;  /* 26.6px — título de seção                  */
+    --type-headline: 2.075rem;  /* 33.2px — título de página                 */
+    --type-display:  2.594rem;  /* 41.5px — display                          */
+    --type-hero:     3.242rem;  /* 51.9px — número-herói, tela de resultado  */
 
-    --card: 190 25% 99%;
-    --card-foreground: 200 25% 12%;
+    --lh-tight:   1.08;  /* display e hero */
+    --lh-snug:    1.24;  /* títulos        */
+    --lh-normal:  1.45;  /* chrome de UI   */
+    --lh-reading: 1.65;  /* corpo de texto */
 
-    --popover: 190 25% 99%;
-    --popover-foreground: 200 25% 12%;
+    --tracking-tight:  -0.022em;  /* tamanhos grandes precisam fechar */
+    --tracking-normal:  0;
+    --tracking-wide:    0.06em;   /* label caixa-alta */
+
+    /* Medida de leitura: alvo 60–70 caracteres. Verificado no navegador. */
+    --measure-reading: 35rem;
+    --measure-ui:      48rem;
+
+    /* --- Superfícies (cinzas com matiz teal, nunca cinza neutro) ---------- */
+    /* Cinza puro ao lado de teal saturado lê como sujo. Matiz 195–200. */
+    --surface-0: 195 30% 96.5%;  /* fundo de página            */
+    --surface-1: 195 33% 99.0%;  /* card, painel               */
+    --surface-2: 0   0%  100%;   /* elemento elevado           */
+    --surface-3: 0   0%  100%;   /* overlay, popover           */
+    --shadow-color: 200 45% 14%;
+
+    /* --- Elevação: 3 níveis, sombra em DUAS camadas ----------------------- */
+    /* Camada curta e opaca = contato com a superfície de baixo.
+       Camada longa e difusa = distância. Sombra de camada única é o que
+       produz o visual chapado. */
+    --elev-1:
+      0 1px 1px  hsl(var(--shadow-color) / 0.05),
+      0 2px 6px -1px hsl(var(--shadow-color) / 0.06);
+    --elev-2:
+      0 1px 2px  hsl(var(--shadow-color) / 0.06),
+      0 8px 20px -4px hsl(var(--shadow-color) / 0.10);
+    --elev-3:
+      0 2px 4px  hsl(var(--shadow-color) / 0.07),
+      0 18px 40px -8px hsl(var(--shadow-color) / 0.16);
+
+    /* --- Raio: decisão semântica, não valor único ------------------------- */
+    --radius-data:      3px;     /* dado/badge — quase reto, lê como rótulo  */
+    --radius-control:   8px;     /* clicável: botão, alternativa, input      */
+    --radius-surface:  14px;     /* card, painel                             */
+    --radius-container: 20px;    /* container grande, modal                  */
+    --radius-pill:     9999px;   /* apenas toggle e pill de estado           */
+
+    /* --- Movimento: curvas nomeadas, reutilizadas ------------------------- */
+    --dur-micro:  120ms;  /* mudança de estado imediata (hover, focus) */
+    --dur-short:  220ms;  /* transição de componente                   */
+    --dur-medium: 420ms;  /* entrada/saída de tela                     */
+    --ease-out-quart:   cubic-bezier(0.25, 1, 0.5, 1);     /* saída natural */
+    --ease-in-out-quad: cubic-bezier(0.45, 0, 0.55, 1);    /* ida e volta   */
+    --ease-entrance:    cubic-bezier(0.16, 1, 0.3, 1);     /* entrada       */
+
+    /* --- Feedback semântico: verde/vermelho SÓ para acerto/erro ----------- */
+    --success:          158 68% 26%;
+    --success-surface:  158 45% 94%;
+    --success-border:   158 50% 68%;
+    --danger:             2 72% 42%;
+    --danger-surface:     2 60% 96%;
+    --danger-border:      2 65% 76%;
+
+    /* ===================================================================== */
+    /* Tokens shadcn — mapeados sobre as superfícies acima.                   */
+    /* Direção "Clareza" (teal). Coincide com lib/theme-colors.ts#clareza.    */
+    /* ===================================================================== */
+    --background: var(--surface-0);
+    --foreground: 200 30% 11%;
+
+    --card: var(--surface-1);
+    --card-foreground: 200 30% 11%;
+
+    --popover: var(--surface-3);
+    --popover-foreground: 200 30% 11%;
 
     --primary: 192 84% 30%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 190 20% 92%;
-    --secondary-foreground: 200 25% 12%;
+    --secondary: 195 24% 92%;
+    --secondary-foreground: 200 30% 11%;
 
-    --muted: 190 20% 92%;
-    --muted-foreground: 200 15% 40%;
+    --muted: 195 24% 92%;
+    --muted-foreground: 200 14% 38%;
 
-    --accent: 190 20% 92%;
-    --accent-foreground: 200 25% 12%;
+    --accent: 195 24% 92%;
+    --accent-foreground: 200 30% 11%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: var(--danger);
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 190 20% 88%;
-    --input: 190 20% 88%;
+    --border: 195 22% 87%;
+    --input: 195 22% 87%;
     --ring: 192 84% 30%;
 
-    --radius: 0.625rem;
-    --radius-sm: calc(0.625rem - 4px);
-    --radius-lg: calc(0.625rem + 4px);
-    --radius-full: 9999px;
+    /* Compat shadcn: --radius mapeia para a superfície. */
+    --radius: var(--radius-surface);
+    --radius-sm: var(--radius-control);
+    --radius-lg: var(--radius-container);
+    --radius-full: var(--radius-pill);
 
     --spacing-xs: 4px;
     --spacing-sm: 8px;
@@ -47,59 +136,87 @@
     --spacing-2xl: 48px;
     --spacing-3xl: 64px;
 
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.03), 0 1px 3px 0 rgb(0 0 0 / 0.06);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+    --shadow-sm: var(--elev-1);
+    --shadow-md: var(--elev-2);
+    --shadow-lg: var(--elev-3);
 
-    --duration-fast: 150ms;
-    --duration-normal: 250ms;
-    --duration-slow: 350ms;
+    --duration-fast: var(--dur-micro);
+    --duration-normal: var(--dur-short);
+    --duration-slow: var(--dur-medium);
 
     --chart-1: 192 84% 30%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 12 76% 61%;
+    --chart-2: 173 58% 34%;
+    --chart-3: 12 70% 48%;
     --chart-4: 197 37% 24%;
-    --chart-5: 43 74% 66%;
+    --chart-5: 43 74% 44%;
+
+    /* Tratamento do scan de prova P&B — ver .exam-scan mais abaixo. */
+    --scan-mat: 40 22% 96%;      /* papel, levemente quente */
+    --scan-filter: none;
   }
 
   .dark {
-    --background: 200 28% 8%;
-    --foreground: 190 15% 94%;
+    /* No modo escuro a elevação vem PRINCIPALMENTE da superfície ficar mais
+       clara. Sombra sobre fundo escuro quase não aparece — é onde a maioria
+       das implementações falha e o dark mode inteiro fica no mesmo plano.
+       Nunca preto puro, nunca cinza neutro. */
+    --surface-0: 200 24% 7.0%;
+    --surface-1: 200 22% 10.5%;
+    --surface-2: 200 20% 14.0%;
+    --surface-3: 200 19% 17.5%;
+    --shadow-color: 200 60% 2%;
 
-    --card: 200 26% 11%;
-    --card-foreground: 190 15% 94%;
+    --elev-1:
+      0 1px 1px  hsl(var(--shadow-color) / 0.30),
+      0 2px 6px -1px hsl(var(--shadow-color) / 0.34);
+    --elev-2:
+      0 1px 2px  hsl(var(--shadow-color) / 0.36),
+      0 8px 20px -4px hsl(var(--shadow-color) / 0.44);
+    --elev-3:
+      0 2px 4px  hsl(var(--shadow-color) / 0.42),
+      0 18px 40px -8px hsl(var(--shadow-color) / 0.56);
 
-    --popover: 200 26% 11%;
-    --popover-foreground: 190 15% 94%;
+    --foreground: 190 18% 93%;
+    --card-foreground: 190 18% 93%;
+    --popover-foreground: 190 18% 93%;
 
     --primary: 189 80% 52%;
     --primary-foreground: 200 30% 10%;
 
-    --secondary: 200 20% 20%;
-    --secondary-foreground: 190 15% 94%;
+    --secondary: 200 18% 19%;
+    --secondary-foreground: 190 18% 93%;
 
-    --muted: 200 20% 20%;
-    --muted-foreground: 190 10% 65%;
+    --muted: 200 18% 19%;
+    --muted-foreground: 195 12% 68%;
 
-    --accent: 200 20% 20%;
-    --accent-foreground: 190 15% 94%;
+    --accent: 200 18% 19%;
+    --accent-foreground: 190 18% 93%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 200 20% 20%;
-    --input: 200 20% 20%;
+    --border: 200 16% 21%;
+    --input: 200 16% 21%;
     --ring: 189 80% 52%;
 
-    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.15), 0 1px 2px -1px rgb(0 0 0 / 0.15);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.15);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.25), 0 4px 6px -4px rgb(0 0 0 / 0.15);
+    --success:          158 62% 62%;
+    --success-surface:  158 40% 14%;
+    --success-border:   158 40% 34%;
+    --danger:             4 78% 70%;
+    --danger-surface:     4 40% 15%;
+    --danger-border:      4 45% 36%;
+
+    --destructive: var(--danger);
+    --destructive-foreground: 200 30% 10%;
 
     --chart-1: 189 80% 52%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --chart-2: 168 55% 52%;
+    --chart-3: 30 78% 62%;
+    --chart-4: 208 60% 62%;
+    --chart-5: 45 70% 60%;
+
+    /* Scan P&B no escuro: o papel não pode ser branco puro — vira retângulo
+       cegante. Reduz-se a luminância do container E da própria imagem, com
+       ganho de contraste para compensar a perda de separação. */
+    --scan-mat: 40 12% 82%;
+    --scan-filter: brightness(0.86) contrast(1.08);
   }
 }
 
@@ -113,342 +230,388 @@
   }
 
   body {
-    background: linear-gradient(-45deg, #eef7f8, #e2f1f0, #e6f3f6, #eef6f2);
-    background-size: 400% 400%;
-    animation: auroraMove 20s ease infinite;
+    background-color: hsl(var(--surface-0));
     color: hsl(var(--foreground));
+    font-size: var(--type-body);
+    line-height: var(--lh-reading);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  }
+
+  /* Títulos usam a família display e fecham o tracking — tamanho grande com
+     tracking normal parece frouxo. */
+  h1, h2, h3, h4 {
+    font-family: var(--font-display), Georgia, serif;
+    line-height: var(--lh-snug);
+    letter-spacing: var(--tracking-tight);
+  }
+
+  /* Todo número que o olho compara entre atualizações precisa de largura fixa,
+     senão o contador dança. */
+  [data-numeric], .tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
   }
 
   ::selection {
-    background-color: hsl(var(--primary) / 0.2);
-    color: hsl(var(--primary));
+    background-color: hsl(var(--primary) / 0.18);
+    color: hsl(var(--foreground));
   }
 
-  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
   ::-webkit-scrollbar-track { background-color: transparent; }
-  ::-webkit-scrollbar-thumb { background-color: hsl(var(--border)); border-radius: 9999px; }
-  ::-webkit-scrollbar-thumb:hover { background-color: hsl(var(--muted-foreground) / 0.5); }
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--border));
+    border-radius: var(--radius-pill);
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover { background-color: hsl(var(--muted-foreground) / 0.45); }
+
+  /* KaTeX herda o tamanho do container mas mantém a própria família. Sem isto
+     a fórmula inline sai maior que o texto ao redor e desalinha a linha. */
+  .katex {
+    font-size: 1.06em;
+    line-height: normal;
+  }
+}
+
+@layer components {
+  /* ===== TIPOGRAFIA — classes semânticas ================================= */
+  .type-caption {
+    font-size: var(--type-caption);
+    line-height: var(--lh-normal);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  /* Mesmo tamanho da caption, sem caixa-alta — para conteúdo que não é rótulo
+     (e-mail, contagem, anotação de n). Caixa-alta em conteúdo prejudica a
+     leitura porque apaga a silhueta da palavra. */
+  .type-micro {
+    font-size: var(--type-caption);
+    line-height: var(--lh-normal);
+  }
+  .type-meta {
+    font-size: var(--type-meta);
+    line-height: var(--lh-normal);
+  }
+  .type-body {
+    font-size: var(--type-body);
+    line-height: var(--lh-reading);
+  }
+  .type-lead {
+    font-size: var(--type-lead);
+    line-height: var(--lh-snug);
+  }
+  .type-title {
+    font-size: var(--type-title);
+    line-height: var(--lh-snug);
+    letter-spacing: var(--tracking-tight);
+  }
+  .type-headline {
+    font-size: var(--type-headline);
+    line-height: var(--lh-snug);
+    letter-spacing: var(--tracking-tight);
+  }
+  .type-display {
+    font-size: var(--type-display);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--tracking-tight);
+  }
+  .type-hero {
+    font-size: var(--type-hero);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--tracking-tight);
+  }
+
+  /* Texto de leitura: família serifada, medida controlada. */
+  .prose-reading {
+    font-family: var(--font-reading), Georgia, serif;
+    font-size: var(--type-body);
+    line-height: var(--lh-reading);
+    max-width: var(--measure-reading);
+    text-wrap: pretty;
+  }
+  .prose-reading p + p { margin-top: 0.9em; }
+  .prose-reading em { font-style: italic; }
+
+  /* ===== ELEVAÇÃO ======================================================== */
+  .surface-1 {
+    background-color: hsl(var(--surface-1));
+    box-shadow: var(--elev-1);
+    border: 1px solid hsl(var(--border) / 0.7);
+  }
+  .surface-2 {
+    background-color: hsl(var(--surface-2));
+    box-shadow: var(--elev-2);
+    border: 1px solid hsl(var(--border) / 0.55);
+  }
+  .surface-3 {
+    background-color: hsl(var(--surface-3));
+    box-shadow: var(--elev-3);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  /* ===== SCAN DE PROVA (P&B) ============================================= */
+  /* O caso visual mais difícil do projeto: imagem escaneada em preto e branco.
+     Sem tratamento, no modo escuro vira um retângulo branco cegante colado na
+     tela. A solução é dar ao scan um suporte próprio ("passe-partout"), como
+     numa moldura: o papel fica num tom quente, recuado da superfície da
+     página, e a própria imagem tem a luminância reduzida no escuro. */
+  /* A moldura: fica no nível da superfície da página, não brilha. */
+  .exam-scan-frame {
+    background-color: hsl(var(--surface-2));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius-surface);
+    overflow: hidden;
+    box-shadow: var(--elev-1);
+  }
+
+  /* O passe-partout: a área onde o scan repousa. No claro é um branco quente
+     (papel), no escuro cai para um cinza-papel bem mais baixo — é isto que
+     impede o retângulo cegante. O scan em si perde luminância e ganha
+     contraste, senão o traço cinza-claro do original some junto. */
+  .exam-scan-mat {
+    background-color: hsl(var(--scan-mat));
+    padding: clamp(0.5rem, 1.5vw, 0.875rem);
+  }
+  .exam-scan-mat img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-data);
+    filter: var(--scan-filter);
+  }
 }
 
 @layer utilities {
-  /* Hide scrollbar */
   .scrollbar-none::-webkit-scrollbar { display: none; }
   .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
 
-  /* Smooth card hover */
+  .measure-reading { max-width: var(--measure-reading); }
+  .measure-ui { max-width: var(--measure-ui); }
+
+  /* Transições nomeadas — nunca transition-all, nunca mais de 4 propriedades */
+  .t-colors {
+    transition-property: color, background-color, border-color;
+    transition-duration: var(--dur-micro);
+    transition-timing-function: var(--ease-out-quart);
+  }
+  .t-lift {
+    transition-property: transform, box-shadow;
+    transition-duration: var(--dur-short);
+    transition-timing-function: var(--ease-out-quart);
+  }
+
   .card-hover {
-    @apply transition-all duration-300 ease-out;
+    transition-property: transform, box-shadow;
+    transition-duration: var(--dur-short);
+    transition-timing-function: var(--ease-out-quart);
   }
   .card-hover:hover {
-    @apply -translate-y-1 shadow-lg;
+    transform: translateY(-2px);
+    box-shadow: var(--elev-3);
   }
 
-  /* Gradient shimmer for loading states */
-  .shimmer {
-    background: linear-gradient(90deg, transparent 0%, hsl(var(--primary) / 0.08) 50%, transparent 100%);
-    background-size: 200% 100%;
-    animation: shimmer 1.5s ease-in-out infinite;
-  }
-
-  /* Glow effect */
   .glow-primary {
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.15), 0 0 40px hsl(var(--primary) / 0.05);
+    box-shadow: 0 0 0 1px hsl(var(--primary) / 0.25), var(--elev-2);
   }
 
-  /* Floating animation for elements */
-  .float {
-    animation: float 3s ease-in-out infinite;
-  }
-
-  /* Pulse glow for active items */
-  .pulse-glow {
-    animation: pulseGlow 2s ease-in-out infinite;
-  }
-
-  /* Gradient text */
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-[hsl(var(--chart-2))];
+    color: hsl(var(--primary));
   }
 }
 
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
-}
-
-@keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 5px hsl(var(--primary) / 0.2); }
-  50% { box-shadow: 0 0 20px hsl(var(--primary) / 0.4), 0 0 40px hsl(var(--primary) / 0.1); }
-}
-
-/* Hero background — deriva do token --primary (não mais fixo em roxo), acompanha a direção ativa */
+/* ===== FUNDO DA PÁGINA =====================================================
+   Superfície calma e estável. O gradiente aurora animado anterior movia
+   background-position em loop infinito atrás de texto que se lê por horas —
+   custo de repaint permanente e concorrência visual com o conteúdo, que nesta
+   direção é o protagonista. */
 .hero-gradient {
   background:
-    radial-gradient(ellipse 60% 50% at 50% -10%, hsl(var(--primary) / 0.12), transparent),
-    radial-gradient(ellipse 40% 40% at 80% 0%, hsl(var(--chart-2) / 0.08), transparent),
-    radial-gradient(ellipse 40% 30% at 20% 10%, hsl(200 80% 60% / 0.06), transparent);
+    radial-gradient(ellipse 70% 45% at 50% -8%, hsl(var(--primary) / 0.07), transparent 70%);
 }
-
 .dark .hero-gradient {
   background:
-    radial-gradient(ellipse 60% 50% at 50% -10%, hsl(var(--primary) / 0.2), transparent),
-    radial-gradient(ellipse 40% 40% at 80% 0%, hsl(var(--chart-2) / 0.1), transparent),
-    radial-gradient(ellipse 40% 30% at 20% 10%, hsl(200 80% 60% / 0.08), transparent);
+    radial-gradient(ellipse 70% 45% at 50% -8%, hsl(var(--primary) / 0.10), transparent 70%);
 }
 
-/* ===== AURORA BACKGROUND ===== */
-html.dark body {
-  background: linear-gradient(-45deg, #071a1d, #0c2b30, #0a2226, #0e2420) !important;
-  background-size: 400% 400% !important;
-  animation: auroraMove 20s ease infinite !important;
-}
+/* ===== INTERAÇÃO ===========================================================
+   Substituições da folha anterior. Cada classe abaixo mantém o nome usado nas
+   outras telas (a propagação vem depois da aprovação), mas anima somente
+   transform e opacity. */
 
-@keyframes auroraMove {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* ===== CARD 3D & SHINE ===== */
 .card-3d {
-  transition: transform 0.35s cubic-bezier(.22,.61,.36,1), box-shadow 0.35s ease;
-  transform-style: preserve-3d;
+  transition-property: transform, box-shadow;
+  transition-duration: var(--dur-short);
+  transition-timing-function: var(--ease-out-quart);
 }
 .card-3d:hover {
-  transform: perspective(800px) translateZ(20px) rotateX(-2deg) rotateY(2deg);
-  box-shadow:
-    0 30px 60px rgba(0,0,0,0.18),
-    0 0 40px hsl(var(--primary) / 0.1);
-}
-.dark .card-3d:hover {
-  box-shadow:
-    0 30px 60px rgba(0,0,0,0.45),
-    0 0 40px hsl(var(--primary) / 0.2);
+  transform: translateY(-2px);
+  box-shadow: var(--elev-3);
 }
 
-/* CTA glow pulse */
-@keyframes ctaGlow {
-  0%, 100% {
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.3), 0 0 40px hsl(var(--primary) / 0.1), 0 4px 15px rgba(0,0,0,0.1);
-  }
-  50% {
-    box-shadow: 0 0 35px hsl(var(--primary) / 0.5), 0 0 70px hsl(var(--primary) / 0.2), 0 0 100px hsl(var(--primary) / 0.08);
-  }
+/* Antes: cardFloat, um translateY em loop infinito no card da questão.
+   Movimento perpétuo atrás de texto denso atrapalha a leitura. Neutralizado. */
+.card-float { animation: none; }
+
+/* Antes: ctaGlow, box-shadow pulsando em loop. Idem. */
+.cta-glow { box-shadow: var(--elev-2); }
+
+/* Antes: card-shine com `transition: left 0.6s` — animava layout a cada frame.
+   Agora o mesmo brilho corre em translateX, no compositor. */
+.card-shine { position: relative; overflow: hidden; }
+.card-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%; left: 0;
+  width: 40%; height: 200%;
+  background: linear-gradient(105deg, transparent 40%, hsl(0 0% 100% / 0.08) 50%, transparent 60%);
+  transform: translateX(-200%) skewX(-15deg);
+  pointer-events: none;
 }
-.cta-glow {
-  animation: ctaGlow 2.5s ease-in-out infinite;
+.card-shine:hover::after {
+  transform: translateX(420%) skewX(-15deg);
+  transition: transform var(--dur-medium) var(--ease-out-quart);
 }
 
-/* GSAP scroll reveal (initial hidden state) */
+/* Antes: `transition: width 100ms` numa barra fixa no topo. */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 2px;
+  transform-origin: left center;
+  background: hsl(var(--primary));
+  z-index: 9999;
+  transition: transform var(--dur-micro) linear;
+}
+
 .gsap-reveal {
   opacity: 0;
   will-change: transform, opacity;
 }
 
-/* Floating animation for question cards */
-@keyframes cardFloat {
-  0%, 100% { transform: translateY(0px); }
-  50%      { transform: translateY(-6px); }
-}
-.card-float {
-  animation: cardFloat 4s ease-in-out infinite;
-}
+.perspective-1000 { perspective: 1000px; }
 
-/* 3D perspective wrapper */
-.perspective-1000 {
-  perspective: 1000px;
+/* ===== FEEDBACK DE RESPOSTA ================================================ */
+@keyframes flashFade {
+  from { opacity: 0.07; }
+  to   { opacity: 0; }
 }
-
-/* Shine sweep on hover */
-.card-shine {
-  position: relative;
-  overflow: hidden;
-}
-.card-shine::after {
-  content: '';
-  position: absolute;
-  top: -50%; left: -60%;
-  width: 40%; height: 200%;
-  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.08) 50%, transparent 60%);
-  transform: skewX(-15deg);
-  transition: none;
+.flash-correct {
+  position: fixed; inset: 0; z-index: 50;
+  background: hsl(var(--success));
+  animation: flashFade var(--dur-medium) var(--ease-out-quart) forwards;
   pointer-events: none;
 }
-.card-shine:hover::after {
-  left: 130%;
-  transition: left 0.6s ease;
+.flash-wrong {
+  position: fixed; inset: 0; z-index: 50;
+  background: hsl(var(--danger));
+  animation: flashFade var(--dur-medium) var(--ease-out-quart) forwards;
+  pointer-events: none;
 }
 
-/* Particle fly for correct answers */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); }
+  20%, 40%, 60%, 80% { transform: translateX(3px); }
+}
+.animate-shake { animation: shake var(--dur-medium) var(--ease-in-out-quad) both; }
+
 @keyframes particleFly {
   0%   { transform: translate(0,0) scale(1); opacity: 1; }
   100% { transform: translate(var(--dx), var(--dy)) scale(0); opacity: 0; }
 }
 
-/* Flash overlay for answer feedback */
-@keyframes flashGreen {
-  0%   { opacity: 0.08; }
-  100% { opacity: 0; }
-}
-@keyframes flashRed {
-  0%   { opacity: 0.06; }
-  100% { opacity: 0; }
-}
-.flash-correct {
-  position: fixed; inset: 0; z-index: 50;
-  background: rgba(34, 197, 94, 1);
-  animation: flashGreen 0.4s ease forwards;
-  pointer-events: none;
-}
-.flash-wrong {
-  position: fixed; inset: 0; z-index: 50;
-  background: rgba(239, 68, 68, 1);
-  animation: flashRed 0.4s ease forwards;
-  pointer-events: none;
-}
-
-/* Timer vignette pulse */
-@keyframes vignettePulse {
-  0%, 100% { box-shadow: inset 0 0 40px rgba(255,0,0,0.08); }
-  50%      { box-shadow: inset 0 0 80px rgba(255,0,0,0.18); }
-}
-.timer-critical {
-  animation: vignettePulse 1.5s ease-in-out infinite;
-}
-
-/* ===== ANIMATION SYSTEM ===== */
-
-/* Scroll progress bar */
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 3px;
-  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--chart-2)));
-  z-index: 9999;
-  transition: width 100ms;
-}
-
-/* Shimmer button effect */
-@keyframes shimmerBtn {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-.shimmer-btn {
-  position: relative;
-  overflow: hidden;
-}
-.shimmer-btn::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
-  background-size: 200% 100%;
-  animation: shimmerBtn 2.5s ease-in-out infinite;
-  pointer-events: none;
-}
-
-/* Ripple effect */
-@keyframes ripple {
-  to { transform: scale(4); opacity: 0; }
-}
-.ripple-container {
-  position: relative;
-  overflow: hidden;
-}
-.ripple-container .ripple {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.35);
-  transform: scale(0);
-  animation: ripple 0.6s linear;
-  pointer-events: none;
-}
-
-/* Count-up transition */
-@keyframes countUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.count-up {
-  animation: countUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
-/* Skeleton loader */
-@keyframes skeletonPulse {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.7; }
-}
-.skeleton {
-  background: linear-gradient(90deg, hsl(var(--muted)) 0%, hsl(var(--muted-foreground) / 0.1) 50%, hsl(var(--muted)) 100%);
-  background-size: 200% 100%;
-  animation: shimmer 1.8s ease-in-out infinite;
-  border-radius: var(--radius);
-}
-
-/* Shake animation for wrong answers */
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
-  20%, 40%, 60%, 80% { transform: translateX(4px); }
-}
-.animate-shake {
-  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
-}
-
-/* Checkmark animation */
-@keyframes checkDraw {
-  to { stroke-dashoffset: 0; }
-}
+@keyframes checkDraw { to { stroke-dashoffset: 0; } }
 .animate-check {
   stroke-dasharray: 20;
   stroke-dashoffset: 20;
-  animation: checkDraw 0.4s ease forwards 0.2s;
+  animation: checkDraw var(--dur-medium) var(--ease-out-quart) forwards 0.15s;
 }
 
-/* Ping badge */
-@keyframes pingBadge {
-  75%, 100% { transform: scale(2); opacity: 0; }
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
+.count-up { animation: countUp var(--dur-medium) var(--ease-entrance) forwards; }
+
+@keyframes pingBadge { 75%, 100% { transform: scale(2); opacity: 0; } }
 .animate-ping-badge::before {
   content: '';
   position: absolute;
   inset: 0;
-  border-radius: 9999px;
+  border-radius: var(--radius-pill);
   background: inherit;
-  animation: pingBadge 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  animation: pingBadge 1.5s var(--ease-out-quart) infinite;
 }
 
-/* Gradient border spin (avatar) */
-@keyframes borderSpin {
-  to { --angle: 360deg; }
+/* Antes: vignettePulse animava box-shadow em loop. Agora opacidade num overlay. */
+@keyframes vignetteFade { 0%, 100% { opacity: 0.35; } 50% { opacity: 0.8; } }
+.timer-critical { position: relative; }
+.timer-critical::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow: inset 0 0 60px hsl(var(--danger) / 0.25);
+  animation: vignetteFade 1.5s var(--ease-in-out-quad) infinite;
 }
+
+/* ===== CARREGAMENTO ========================================================
+   Antes: shimmer varria background-position em loop (repaint da caixa inteira
+   a cada frame). Agora é opacidade — compositor. */
+@keyframes softPulse { 0%, 100% { opacity: 0.45; } 50% { opacity: 0.8; } }
+.skeleton {
+  background-color: hsl(var(--muted));
+  border-radius: var(--radius-control);
+  animation: softPulse 1.8s var(--ease-in-out-quad) infinite;
+}
+.shimmer { animation: softPulse 1.5s var(--ease-in-out-quad) infinite; }
+.shimmer-btn { position: relative; overflow: hidden; }
+.float { animation: none; }
+.pulse-glow { box-shadow: 0 0 0 1px hsl(var(--primary) / 0.3); }
+
+/* Antes: borderSpin animava uma custom property num conic-gradient — repaint
+   integral a cada frame, sem aceleração. Agora é estático. */
 .gradient-border-spin {
-  background: conic-gradient(from var(--angle, 0deg), hsl(var(--primary)), hsl(var(--chart-2)), hsl(var(--chart-3)), hsl(var(--primary)));
-  animation: borderSpin 4s linear infinite;
+  background: conic-gradient(from 0deg, hsl(var(--primary)), hsl(var(--chart-2)), hsl(var(--primary)));
 }
 
-/* Input focus glow */
-input:focus, textarea:focus, select:focus {
-  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.15);
-  transition: box-shadow 0.2s ease;
+.ripple-container { position: relative; overflow: hidden; }
+@keyframes ripple { to { transform: scale(4); opacity: 0; } }
+.ripple-container .ripple {
+  position: absolute;
+  border-radius: var(--radius-pill);
+  background: hsl(0 0% 100% / 0.3);
+  transform: scale(0);
+  animation: ripple var(--dur-medium) linear;
+  pointer-events: none;
 }
 
-/* Respect reduced motion */
+/* ===== FOCO ================================================================
+   Anel de foco visível e consistente. box-shadow em vez de outline para
+   acompanhar o raio do elemento. */
+:where(a, button, [role="button"], input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 2px hsl(var(--surface-0)), 0 0 0 4px hsl(var(--ring));
+}
+
+/* ===== REDUCED MOTION ======================================================
+   Exceção documentada: o flip do flashcard continua animando (a rotação É o
+   feedback do gesto, não decoração) — tratada no componente, não aqui.
+   Ver a skill decisoes-prepenem. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
-  .shimmer-btn::after { animation: none; }
+  .card-shine:hover::after { transform: translateX(-200%) skewX(-15deg); }
 }
