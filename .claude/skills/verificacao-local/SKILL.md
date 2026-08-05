@@ -22,6 +22,34 @@ sleep 8 && tail -5 /tmp/.../scratchpad/dev-server.log
 Sempre em background com log em arquivo. Ao terminar:
 `kill $(lsof -t -i:3000)`.
 
+### Antes de acreditar em qualquer medição: um servidor só
+
+Três sintomas custaram uma hora numa sessão e todos tinham a mesma causa —
+**servidores de dev órfãos acumulados**. Página renderizando em branco, rota
+respondendo 404 sem compilar, `_next/static/chunks/main-app.js` em 404.
+
+`lsof -t -i:3000` **mente** aqui: ele não enxergou os processos. Use `ss`:
+
+```bash
+ss -ltnp | grep -E ':300[0-9]'      # mostra PID real de cada porta
+kill -9 <pids>
+```
+
+O que gera os órfãos: cada `npm run dev` que acha a porta ocupada sobe na
+seguinte (3001, 3002...) e o log diz `⚠ Port 3000 is in use`. **Sempre
+confira a linha `- Local:` do log** — se não for `:3000`, você está medindo
+um servidor e testando outro.
+
+Duas regras que evitam tudo isso:
+
+1. **Nunca rode `npm run build` com o dev server no ar.** O build sobrescreve
+   `.next/` e o dev passa a servir chunks que não existem mais. Pare o dev,
+   rode o build, suba o dev de novo.
+2. **Rota nova criada com o dev já rodando pode ficar 404 pra sempre** — o
+   watcher não a registra. Resolve com `touch app/<rota>/page.tsx`. E **um
+   `touch` em lote (`find ... -exec touch {} +`) não funciona**: o watcher
+   debounce e ignora. Toque um arquivo por vez, com pausa.
+
 ## Sessão autenticada — sem tocar na senha de ninguém
 
 Não tente fazer login pela tela nem peça a senha ao usuário. Gere um JWT
