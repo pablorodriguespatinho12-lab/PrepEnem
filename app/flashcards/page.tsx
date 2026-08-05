@@ -145,24 +145,18 @@ export default function FlashcardsPage() {
       <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <motion.h1
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-500 via-blue-500 to-primary bg-clip-text text-transparent"
-            >
-              Flashcards
-            </motion.h1>
-            <p className="text-muted-foreground mt-2 text-lg">
+            <h1 className="type-headline">Flashcards</h1>
+            <p className="type-lead text-muted-foreground mt-2">
               {selectedMateria
                 ? `Baralhos de ${selectedMateria}`
                 : 'Escolha uma matéria para começar a estudar'}
             </p>
           </div>
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.97 }}
             onClick={() => router.push('/flashcards/criar')}
-            className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-bold shadow-md hover:shadow-lg transition-shadow self-start"
+            className="flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-2 t-lift hover:shadow-elev-3 self-start"
           >
             <Plus className="w-4 h-4" />
             Novo Baralho
@@ -184,12 +178,12 @@ export default function FlashcardsPage() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Buscar baralho por nome ou tema..."
-            className="w-full pl-12 pr-10 py-3 rounded-xl border-2 border-border bg-card focus:border-cyan-500 outline-none transition-colors text-sm"
+            className="w-full pl-12 pr-10 py-3 type-meta rounded-[var(--radius-control)] border border-input bg-[hsl(var(--surface-1))] t-colors focus:outline-none focus:border-primary hover:border-primary/50"
           />
           {searchQuery && (
             <button
               onClick={() => setSearchQuery('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-muted rounded-full transition-colors"
+              className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-muted rounded-[var(--radius-control)] t-colors"
             >
               <X className="w-4 h-4 text-muted-foreground" />
             </button>
@@ -199,7 +193,7 @@ export default function FlashcardsPage() {
 
       {loading ? (
         <div className="text-center py-20">
-          <Loader2 className="w-10 h-10 animate-spin text-cyan-500 mx-auto" />
+          <Loader2 className="w-10 h-10 animate-spin text-primary mx-auto" />
         </div>
       ) : (
         <AnimatePresence mode="wait">
@@ -215,17 +209,16 @@ export default function FlashcardsPage() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-20 bg-card border border-border rounded-3xl"
+                  className="text-center py-20 surface-1 rounded-[var(--radius-container)]"
                 >
                   <Layers className="w-20 h-20 text-muted-foreground/40 mx-auto mb-4" />
-                  <h3 className="text-2xl font-semibold mb-2">Nenhum resultado</h3>
-                  <p className="text-muted-foreground">Tente buscar por outro termo</p>
+                  <h3 className="type-headline mb-2">Nenhum resultado</h3>
+                  <p className="type-body text-muted-foreground">Tente buscar por outro termo</p>
                 </motion.div>
               ) : (
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                  {filteredGroups.map((group, idx) => {
+                  {filteredGroups.map((group) => {
                     const cor = materiaColors[group.materia] || '#06b6d4';
-                    const Icon = materiaIcons[group.materia] || BookOpen;
                     const progressPct =
                       group.totalCards > 0
                         ? Math.round((group.totalAcertos / group.totalCards) * 100)
@@ -235,13 +228,12 @@ export default function FlashcardsPage() {
                         key={group.materia}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: idx * 0.04 }}
                         whileHover={{ y: -6, transition: { duration: 0.2 } }}
                         onClick={() => {
                           setSelectedMateria(group.materia);
                           setSearchQuery('');
                         }}
-                        className="relative bg-card/80 backdrop-blur-sm border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all cursor-pointer group card-3d card-shine"
+                        className="relative surface-1 rounded-[var(--radius-surface)] overflow-hidden cursor-pointer group card-3d t-lift hover:shadow-elev-3"
                       >
                         {/* Color band */}
                         <div className="h-2" style={{ backgroundColor: cor }} />
@@ -249,40 +241,37 @@ export default function FlashcardsPage() {
                         <div className="p-5">
                           {/* 3D Icon */}
                           <div
-                            className="w-14 h-14 rounded-xl flex items-center justify-center mb-3"
+                            className="w-14 h-14 rounded-[var(--radius-control)] flex items-center justify-center mb-3"
                             style={{ backgroundColor: `${cor}20` }}
                           >
                             <Subject3DIcon materia={group.materia} color={cor} size={48} />
                           </div>
 
                           {/* Subject name */}
-                          <h3 className="font-bold text-foreground text-lg mb-1 group-hover:text-primary transition-colors">
+                          <h3 className="type-lead text-foreground mb-1 group-hover:text-primary t-colors">
                             {group.materia}
                           </h3>
 
                           {/* Stats */}
-                          <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
+                          <div className="flex items-center gap-2 type-meta text-muted-foreground mb-3">
                             <span className="flex items-center gap-1">
                               <Layers className="w-3.5 h-3.5" />
-                              {group.totalDecks} {group.totalDecks === 1 ? 'baralho' : 'baralhos'}
+                              <span data-numeric>{group.totalDecks}</span> {group.totalDecks === 1 ? 'baralho' : 'baralhos'}
                             </span>
-                            <span>•</span>
-                            <span>{group.totalCards} cards</span>
+                            <span aria-hidden>•</span>
+                            <span data-numeric>{group.totalCards} cards</span>
                           </div>
 
                           {/* Progress */}
-                          <div className="h-1.5 bg-muted rounded-full overflow-hidden">
-                            <motion.div
-                              initial={{ width: 0 }}
-                              animate={{ width: `${progressPct}%` }}
-                              transition={{ duration: 0.6, delay: 0.3 }}
-                              className="h-full rounded-full"
-                              style={{ backgroundColor: cor }}
+                          <div className="h-1.5 bg-muted rounded-[var(--radius-data)] overflow-hidden">
+                            <div
+                              className="h-full origin-left rounded-[var(--radius-data)] transition-transform duration-medium ease-out-quart"
+                              style={{ transform: `scaleX(${progressPct / 100})`, backgroundColor: cor }}
                             />
                           </div>
                           <div className="flex justify-between items-center mt-1.5">
-                            <span className="text-[10px] text-muted-foreground">{progressPct}%</span>
-                            <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors" />
+                            <span data-numeric className="type-caption text-muted-foreground">{progressPct}%</span>
+                            <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground t-colors" />
                           </div>
                         </div>
                       </motion.div>
@@ -308,7 +297,7 @@ export default function FlashcardsPage() {
                   setSelectedMateria(null);
                   setSearchQuery('');
                 }}
-                className="flex items-center gap-2 text-muted-foreground hover:text-foreground mb-6 -mt-2"
+                className="flex items-center gap-2 type-meta text-muted-foreground hover:text-foreground t-colors mb-6 -mt-2"
               >
                 <ChevronLeft className="w-5 h-5" />
                 Todas as matérias
@@ -322,7 +311,7 @@ export default function FlashcardsPage() {
                   className="mb-6 flex items-center gap-4"
                 >
                   <div
-                    className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0"
+                    className="w-16 h-16 rounded-[var(--radius-container)] flex items-center justify-center flex-shrink-0"
                     style={{ backgroundColor: `${materiaColors[selectedMateria] || '#06b6d4'}20` }}
                   >
                     <Subject3DIcon
@@ -332,9 +321,9 @@ export default function FlashcardsPage() {
                     />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold">{selectedMateria}</h2>
-                    <p className="text-sm text-muted-foreground">
-                      {selectedGroup.totalDecks} {selectedGroup.totalDecks === 1 ? 'baralho' : 'baralhos'} • {selectedGroup.totalCards} cards
+                    <h2 className="type-headline">{selectedMateria}</h2>
+                    <p className="type-meta text-muted-foreground">
+                      <span data-numeric>{selectedGroup.totalDecks}</span> {selectedGroup.totalDecks === 1 ? 'baralho' : 'baralhos'} · <span data-numeric>{selectedGroup.totalCards}</span> cards
                     </p>
                   </div>
                 </motion.div>
@@ -348,12 +337,12 @@ export default function FlashcardsPage() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder={`Buscar em ${selectedMateria}...`}
-                  className="w-full pl-12 pr-10 py-3 rounded-xl border-2 border-border bg-card focus:border-cyan-500 outline-none transition-colors text-sm"
+                  className="w-full pl-12 pr-10 py-3 type-meta rounded-[var(--radius-control)] border border-input bg-[hsl(var(--surface-1))] t-colors focus:outline-none focus:border-primary hover:border-primary/50"
                 />
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery('')}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-muted rounded-full transition-colors"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-muted rounded-[var(--radius-control)] t-colors"
                   >
                     <X className="w-4 h-4 text-muted-foreground" />
                   </button>
@@ -365,15 +354,15 @@ export default function FlashcardsPage() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-16 bg-card border border-border rounded-3xl"
+                  className="text-center py-16 surface-1 rounded-[var(--radius-container)]"
                 >
                   <Layers className="w-16 h-16 text-muted-foreground/40 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Nenhum baralho encontrado</h3>
-                  <p className="text-muted-foreground text-sm">Tente buscar por outro termo</p>
+                  <h3 className="type-title mb-2">Nenhum baralho encontrado</h3>
+                  <p className="type-body text-muted-foreground">Tente buscar por outro termo</p>
                 </motion.div>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                  {selectedDecks.map((deck, idx) => {
+                  {selectedDecks.map((deck) => {
                     const cor = deck.cor || materiaColors[deck.materia] || '#06b6d4';
                     const progressPct =
                       deck.totalCards > 0 ? Math.round((deck.acertos / deck.totalCards) * 100) : 0;
@@ -382,71 +371,70 @@ export default function FlashcardsPage() {
                         key={deck.id}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: idx * 0.04 }}
                         whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                        className="relative bg-card/80 backdrop-blur-sm border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all cursor-pointer group card-3d card-shine"
+                        className="relative surface-1 rounded-[var(--radius-surface)] overflow-hidden cursor-pointer group card-3d t-lift hover:shadow-elev-3"
                         onClick={() => router.push(`/flashcards/${deck.id}`)}
                       >
                         {/* Color band */}
                         <div className="h-2" style={{ backgroundColor: cor }} />
 
                         <div className="p-5">
-                          {/* Tags */}
-                          <div className="flex flex-wrap items-center gap-1.5 mb-3">
-                            <span
-                              className="text-[10px] px-2 py-0.5 rounded-md text-white font-bold uppercase tracking-wider"
-                              style={{ backgroundColor: cor }}
-                            >
+                          {/* Procedência: ponto de cor + nome, não pílula preenchida com
+                              texto branco (contraste reprova — ver MIGRACAO.md §4). */}
+                          <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-3 type-meta text-muted-foreground">
+                            <span className="inline-flex items-center gap-1.5 font-medium text-foreground">
+                              <span aria-hidden className="w-2 h-2 rounded-[var(--radius-data)] shrink-0" style={{ backgroundColor: cor }} />
                               {deck.materia}
                             </span>
                             {deck.isDefault && (
-                              <span className="inline-flex items-center gap-1 text-[10px] text-amber-600 dark:text-amber-400 font-bold">
-                                <Star className="w-3 h-3 fill-current" /> Padrão
-                              </span>
+                              <>
+                                <span aria-hidden className="text-border">/</span>
+                                <span className="inline-flex items-center gap-1 text-amber-600 dark:text-amber-400 font-medium">
+                                  <Star className="w-3 h-3 fill-current" /> Padrão
+                                </span>
+                              </>
                             )}
                           </div>
 
                           {/* Name */}
-                          <h3 className="font-bold text-foreground mb-1 line-clamp-2 group-hover:text-primary transition-colors">
+                          <h3 className="type-lead text-foreground mb-1 line-clamp-2 group-hover:text-primary t-colors">
                             {deck.subtema || deck.nome}
                           </h3>
                           {deck.descricao && (
-                            <p className="text-xs text-muted-foreground mb-3 line-clamp-2">{deck.descricao}</p>
+                            <p className="type-meta text-muted-foreground mb-3 line-clamp-2">{deck.descricao}</p>
                           )}
 
-                          {/* Stats */}
-                          <div className="flex items-center gap-3 mb-3 text-xs">
+                          {/* Stats — verde/vermelho aqui são legítimos: expressam
+                              acerto e erro, via tokens semânticos. */}
+                          <div className="flex items-center gap-3 mb-3 type-meta">
                             <span className="flex items-center gap-1 text-muted-foreground">
                               <Layers className="w-3.5 h-3.5" />
-                              {deck.totalCards} cards
+                              <span data-numeric>{deck.totalCards}</span> cards
                             </span>
                             {deck.acertos > 0 && (
-                              <span className="flex items-center gap-1 text-emerald-600">
+                              <span className="flex items-center gap-1" style={{ color: 'hsl(var(--success))' }}>
                                 <CheckCircle className="w-3.5 h-3.5" />
-                                {deck.acertos}
+                                <span data-numeric>{deck.acertos}</span>
                               </span>
                             )}
                             {deck.erros > 0 && (
-                              <span className="flex items-center gap-1 text-rose-600">
+                              <span className="flex items-center gap-1" style={{ color: 'hsl(var(--danger))' }}>
                                 <AlertCircle className="w-3.5 h-3.5" />
-                                {deck.erros}
+                                <span data-numeric>{deck.erros}</span>
                               </span>
                             )}
                           </div>
 
-                          {/* Progress bar */}
-                          <div className="h-1.5 bg-muted rounded-full overflow-hidden">
-                            <motion.div
-                              initial={{ width: 0 }}
-                              animate={{ width: `${progressPct}%` }}
-                              transition={{ duration: 0.6, delay: 0.2 }}
-                              className="h-full rounded-full"
-                              style={{ backgroundColor: cor }}
+                          {/* Progress bar — escala no eixo X, sem animar width. */}
+                          <div className="h-1.5 bg-muted rounded-[var(--radius-data)] overflow-hidden">
+                            <div
+                              className="h-full origin-left rounded-[var(--radius-data)] transition-transform duration-medium ease-out-quart"
+                              style={{ transform: `scaleX(${progressPct / 100})`, backgroundColor: cor }}
                             />
                           </div>
                           <div className="flex justify-between items-center mt-1">
-                            <span className="text-[10px] text-muted-foreground">{progressPct}% dominado</span>
-                            <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors" />
+                            <span data-numeric className="type-caption text-muted-foreground">{progressPct}% dominado</span>
+                            <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground t-colors" />
                           </div>
                         </div>
                       </motion.div>

@@ -2,7 +2,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useRouter, useParams, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import { ChevronLeft, CheckCircle, XCircle, RotateCw, Trophy, Lightbulb, Loader2, RefreshCw, Sparkles, Plus, Trash2 } from 'lucide-react';
+import { ChevronLeft, CheckCircle, XCircle, RotateCw, Trophy, Lightbulb, Loader2, RefreshCw, Sparkles, Plus, Trash2, Check, X } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
@@ -80,15 +80,15 @@ function AdicionarCardDialog({
         </DialogHeader>
         <div className="space-y-3">
           <div>
-            <label className="block text-xs font-medium text-muted-foreground mb-1">Frente (pergunta)</label>
-            <Textarea value={frente} onChange={(e) => setFrente(e.target.value)} rows={2} placeholder="Ex: O que é osmose?" />
+            <label className="block type-meta font-medium text-muted-foreground mb-1">Frente (pergunta)</label>
+            <Textarea value={frente} onChange={(e) => setFrente(e.target.value)} rows={2} placeholder="Ex: O que é osmose?" className="font-reading" />
           </div>
           <div>
-            <label className="block text-xs font-medium text-muted-foreground mb-1">Verso (resposta)</label>
-            <Textarea value={verso} onChange={(e) => setVerso(e.target.value)} rows={2} placeholder="Resposta curta e direta" />
+            <label className="block type-meta font-medium text-muted-foreground mb-1">Verso (resposta)</label>
+            <Textarea value={verso} onChange={(e) => setVerso(e.target.value)} rows={2} placeholder="Resposta curta e direta" className="font-reading" />
           </div>
           <div>
-            <label className="block text-xs font-medium text-muted-foreground mb-1">Dica (opcional)</label>
+            <label className="block type-meta font-medium text-muted-foreground mb-1">Dica (opcional)</label>
             <Input value={dica} onChange={(e) => setDica(e.target.value)} placeholder="Mnemônico ou pista" />
           </div>
         </div>
@@ -96,7 +96,7 @@ function AdicionarCardDialog({
           <button
             onClick={handleSalvar}
             disabled={salvando}
-            className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:opacity-90 transition disabled:opacity-50"
+            className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta hover:opacity-90 transition-opacity duration-micro ease-out-quart disabled:opacity-50"
           >
             {salvando ? <Loader2 className="w-4 h-4 animate-spin" /> : <Plus className="w-4 h-4" />}
             Salvar card
@@ -209,7 +209,7 @@ function GerarComIADialog({
             </DialogHeader>
             <div className="space-y-4">
               <div>
-                <label className="block text-xs font-medium text-muted-foreground mb-1">
+                <label className="block type-meta font-medium text-muted-foreground mb-1">
                   Sobre o que? (opcional — refina o foco da IA)
                 </label>
                 <Input
@@ -219,8 +219,8 @@ function GerarComIADialog({
                 />
               </div>
               <div>
-                <label className="block text-xs font-medium text-muted-foreground mb-2">
-                  Quantidade: {quantidade}
+                <label className="block type-meta font-medium text-muted-foreground mb-2">
+                  Quantidade: <span data-numeric>{quantidade}</span>
                 </label>
                 <input
                   type="range"
@@ -236,7 +236,7 @@ function GerarComIADialog({
               <button
                 onClick={handleGerar}
                 disabled={gerando}
-                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:opacity-90 transition disabled:opacity-50"
+                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta hover:opacity-90 transition-opacity duration-micro ease-out-quart disabled:opacity-50"
               >
                 {gerando ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
                 {gerando ? 'Gerando...' : 'Gerar'}
@@ -248,7 +248,7 @@ function GerarComIADialog({
             <DialogHeader>
               <DialogTitle>Revise antes de salvar</DialogTitle>
               <DialogDescription>
-                {candidatos.length} card{candidatos.length !== 1 ? 's' : ''} pronto{candidatos.length !== 1 ? 's' : ''} para salvar
+                <span data-numeric>{candidatos.length}</span> card{candidatos.length !== 1 ? 's' : ''} pronto{candidatos.length !== 1 ? 's' : ''} para salvar
                 {descartadosPorDuplicata > 0
                   ? ` — ${descartadosPorDuplicata} descartado${descartadosPorDuplicata !== 1 ? 's' : ''} automaticamente por serem parecidos demais com cards que já existem`
                   : ''}
@@ -257,18 +257,18 @@ function GerarComIADialog({
             </DialogHeader>
             <div className="space-y-3">
               {candidatos.map((c, i) => (
-                <div key={i} className="bg-muted/40 rounded-lg p-3 space-y-2">
+                <div key={i} className="rounded-[var(--radius-control)] p-3 space-y-2 bg-[hsl(var(--surface-2))] shadow-elev-1">
                   <div className="flex items-start justify-between gap-2">
                     <Textarea
                       value={c.frente}
                       onChange={(e) => updateCandidato(i, 'frente', e.target.value)}
                       rows={2}
-                      className="flex-1 text-sm font-medium"
+                      className="flex-1 font-reading type-body font-medium"
                     />
                     <button
                       onClick={() => descartarCandidato(i)}
                       title="Descartar este card"
-                      className="p-1.5 text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-md transition-colors flex-shrink-0"
+                      className="p-1.5 text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-[var(--radius-control)] t-colors flex-shrink-0"
                     >
                       <Trash2 className="w-4 h-4" />
                     </button>
@@ -277,12 +277,12 @@ function GerarComIADialog({
                     value={c.verso}
                     onChange={(e) => updateCandidato(i, 'verso', e.target.value)}
                     rows={2}
-                    className="text-sm"
+                    className="font-reading type-body"
                   />
                 </div>
               ))}
               {candidatos.length === 0 && (
-                <p className="text-sm text-muted-foreground text-center py-4">
+                <p className="type-meta text-muted-foreground text-center py-4">
                   Todos os cards foram descartados. Feche e gere novamente se quiser tentar de novo.
                 </p>
               )}
@@ -291,7 +291,7 @@ function GerarComIADialog({
               <button
                 onClick={handleSalvarAceitos}
                 disabled={salvando || candidatos.length === 0}
-                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:opacity-90 transition disabled:opacity-50"
+                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta hover:opacity-90 transition-opacity duration-micro ease-out-quart disabled:opacity-50"
               >
                 {salvando ? <Loader2 className="w-4 h-4 animate-spin" /> : <CheckCircle className="w-4 h-4" />}
                 Salvar {candidatos.length} card{candidatos.length !== 1 ? 's' : ''}
@@ -406,7 +406,7 @@ export default function FlashcardDeckPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="w-10 h-10 animate-spin text-cyan-500" />
+        <Loader2 className="w-10 h-10 animate-spin text-primary" />
       </div>
     );
   }
@@ -424,63 +424,68 @@ export default function FlashcardDeckPage() {
         animate={{ opacity: 1, x: 0 }}
         whileHover={{ x: -4 }}
         onClick={() => router.push('/flashcards')}
-        className="flex items-center gap-2 text-muted-foreground hover:text-foreground mb-4"
+        className="flex items-center gap-2 type-meta text-muted-foreground hover:text-foreground t-colors mb-4"
       >
         <ChevronLeft className="w-5 h-5" />
         Voltar
       </motion.button>
 
-      {/* Header */}
+      {/* Header — procedência como metadado (ponto de cor + nome), não pílula
+          preenchida com texto branco. */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         className="mb-4"
       >
-        <div className="flex items-center gap-2 mb-2">
-          <span
-            className="text-[10px] px-2 py-0.5 rounded-md text-white font-bold uppercase"
-            style={{ backgroundColor: cor }}
-          >
+        <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-2 type-meta text-muted-foreground">
+          <span className="inline-flex items-center gap-1.5 font-medium text-foreground">
+            <span aria-hidden className="w-2 h-2 rounded-[var(--radius-data)] shrink-0" style={{ backgroundColor: cor }} />
             {deck.materia}
           </span>
           {deck.subtema && (
-            <span className="text-[10px] px-2 py-0.5 rounded-md bg-muted text-foreground font-bold">{deck.subtema}</span>
+            <>
+              <span aria-hidden className="text-border">/</span>
+              <span>{deck.subtema}</span>
+            </>
           )}
         </div>
-        <h1 className="text-2xl md:text-3xl font-bold">{deck.nome}</h1>
+        <h1 className="type-headline">{deck.nome}</h1>
       </motion.div>
 
-      {/* Mode toggle */}
+      {/* Mode toggle — "Revisar erros" usa --danger porque é, de fato, sobre
+          erros; não é decoração de categoria. */}
       <div className="flex flex-wrap gap-2 mb-4">
         <button
           onClick={() => setMode('todos')}
-          className={`px-4 py-2 rounded-xl font-semibold text-sm transition-all ${
-            mode === 'todos' ? 'text-white shadow-md' : 'bg-card border border-border hover:bg-muted'
+          className={`px-4 py-2 rounded-[var(--radius-control)] font-semibold type-meta t-colors ${
+            mode === 'todos'
+              ? 'bg-primary text-primary-foreground shadow-elev-2'
+              : 'bg-[hsl(var(--surface-2))] border border-border hover:bg-muted'
           }`}
-          style={mode === 'todos' ? { backgroundColor: cor } : {}}
         >
-          Estudar ({totalCards - cardsAcertados})
+          Estudar (<span data-numeric>{totalCards - cardsAcertados}</span>)
         </button>
         <button
           onClick={() => setMode('revisar')}
-          className={`px-4 py-2 rounded-xl font-semibold text-sm transition-all flex items-center gap-1 ${
-            mode === 'revisar' ? 'bg-rose-500 text-white shadow-md' : 'bg-card border border-border hover:bg-muted'
+          style={mode === 'revisar' ? { backgroundColor: 'hsl(var(--danger))', color: 'hsl(var(--surface-1))' } : undefined}
+          className={`px-4 py-2 rounded-[var(--radius-control)] font-semibold type-meta t-colors flex items-center gap-1 ${
+            mode === 'revisar' ? 'shadow-elev-2' : 'bg-[hsl(var(--surface-2))] border border-border hover:bg-muted'
           }`}
         >
           <RefreshCw className="w-3.5 h-3.5" />
-          Revisar erros ({cardsToRevise})
+          Revisar erros (<span data-numeric>{cardsToRevise}</span>)
         </button>
         <div className="flex-1" />
         <button
           onClick={() => setShowAddDialog(true)}
-          className="px-3 py-2 rounded-xl font-medium text-xs bg-card border border-border hover:bg-muted transition-all flex items-center gap-1.5"
+          className="px-3 py-2 rounded-[var(--radius-control)] font-medium type-meta bg-[hsl(var(--surface-2))] border border-border hover:bg-muted t-colors flex items-center gap-1.5"
         >
           <Plus className="w-3.5 h-3.5" />
           Adicionar card
         </button>
         <button
           onClick={() => setShowGerarDialog(true)}
-          className="px-3 py-2 rounded-xl font-medium text-xs bg-card border border-border hover:bg-muted transition-all flex items-center gap-1.5"
+          className="px-3 py-2 rounded-[var(--radius-control)] font-medium type-meta bg-[hsl(var(--surface-2))] border border-border hover:bg-muted t-colors flex items-center gap-1.5"
         >
           <Sparkles className="w-3.5 h-3.5" />
           Gerar com IA
@@ -490,22 +495,23 @@ export default function FlashcardDeckPage() {
       {/* Progress */}
       {cards.length > 0 && (
         <div className="mb-6">
-          <div className="flex justify-between text-xs text-muted-foreground mb-1.5">
+          <div className="flex justify-between type-meta text-muted-foreground mb-1.5">
             <span>
-              Card {Math.min(currentIdx + 1, cards.length)} de {cards.length}
+              Card <span data-numeric>{Math.min(currentIdx + 1, cards.length)}</span> de <span data-numeric>{cards.length}</span>
             </span>
             <div className="flex gap-3">
-              <span className="text-emerald-600 font-bold">✓ {sessionStats.acertos}</span>
-              <span className="text-rose-600 font-bold">✗ {sessionStats.erros}</span>
+              <span data-numeric className="inline-flex items-center gap-1 font-semibold" style={{ color: 'hsl(var(--success))' }}>
+                <Check className="w-3.5 h-3.5" strokeWidth={2.5} /> {sessionStats.acertos}
+              </span>
+              <span data-numeric className="inline-flex items-center gap-1 font-semibold" style={{ color: 'hsl(var(--danger))' }}>
+                <X className="w-3.5 h-3.5" strokeWidth={2.5} /> {sessionStats.erros}
+              </span>
             </div>
           </div>
-          <div className="h-1.5 bg-muted rounded-full overflow-hidden">
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: `${progress}%` }}
-              transition={{ duration: 0.5 }}
-              className="h-full rounded-full"
-              style={{ backgroundColor: cor }}
+          <div className="h-1.5 bg-muted rounded-[var(--radius-data)] overflow-hidden">
+            <div
+              className="h-full origin-left rounded-[var(--radius-data)] transition-transform duration-medium ease-out-quart"
+              style={{ transform: `scaleX(${progress / 100})`, backgroundColor: cor }}
             />
           </div>
         </div>
@@ -520,7 +526,7 @@ export default function FlashcardDeckPage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            className="text-center bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 border border-emerald-200 dark:border-emerald-800 rounded-3xl p-10"
+            className="text-center surface-1 rounded-[var(--radius-container)] p-10"
           >
             <motion.div
               initial={{ scale: 0, rotate: shouldReduceMotion ? 0 : -180 }}
@@ -530,10 +536,10 @@ export default function FlashcardDeckPage() {
             >
               <Trophy className="w-20 h-20 text-amber-500" />
             </motion.div>
-            <h2 className="text-3xl font-bold mb-2">
+            <h2 className="type-headline mb-2">
               {cards.length === 0 ? 'Nada para estudar!' : 'Parabéns!'}
             </h2>
-            <p className="text-muted-foreground mb-6">
+            <p className="type-body text-muted-foreground mb-6">
               {cards.length === 0
                 ? mode === 'revisar'
                   ? 'Você não tem cards marcados para revisão!'
@@ -543,43 +549,44 @@ export default function FlashcardDeckPage() {
 
             {sessionStats.acertos + sessionStats.erros > 0 && (
               <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto mb-6">
-                <div className="bg-card border border-border rounded-2xl p-4">
-                  <div className="text-3xl font-bold text-emerald-600">{sessionStats.acertos}</div>
-                  <div className="text-xs text-muted-foreground">Acertos</div>
+                <div className="surface-1 rounded-[var(--radius-surface)] p-4">
+                  <div data-numeric className="font-display type-display font-semibold" style={{ color: 'hsl(var(--success))' }}>{sessionStats.acertos}</div>
+                  <div className="type-meta text-muted-foreground">Acertos</div>
                 </div>
-                <div className="bg-card border border-border rounded-2xl p-4">
-                  <div className="text-3xl font-bold text-rose-600">{sessionStats.erros}</div>
-                  <div className="text-xs text-muted-foreground">A revisar</div>
+                <div className="surface-1 rounded-[var(--radius-surface)] p-4">
+                  <div data-numeric className="font-display type-display font-semibold" style={{ color: 'hsl(var(--danger))' }}>{sessionStats.erros}</div>
+                  <div className="type-meta text-muted-foreground">A revisar</div>
                 </div>
               </div>
             )}
 
             <div className="flex flex-wrap gap-3 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.97 }}
                 onClick={() => fetchDeck()}
-                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-bold shadow-md"
+                className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-semibold type-meta shadow-elev-2 t-lift hover:shadow-elev-3"
               >
                 <RotateCw className="w-4 h-4" />
                 Estudar Novamente
               </motion.button>
               {sessionStats.erros > 0 && (
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.97 }}
                   onClick={() => setMode('revisar')}
-                  className="flex items-center gap-2 px-6 py-3 bg-rose-500 text-white rounded-xl font-bold shadow-md"
+                  style={{ backgroundColor: 'hsl(var(--danger))', color: 'hsl(var(--surface-1))' }}
+                  className="flex items-center gap-2 px-6 py-3 rounded-[var(--radius-control)] font-semibold type-meta shadow-elev-2 t-lift hover:shadow-elev-3"
                 >
                   <RefreshCw className="w-4 h-4" />
                   Revisar Erros
                 </motion.button>
               )}
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.97 }}
                 onClick={() => setShowGerarDialog(true)}
-                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-primary/70 text-primary-foreground rounded-xl font-bold shadow-md"
+                className="flex items-center gap-2 px-6 py-3 bg-primary/10 text-primary border border-primary/30 rounded-[var(--radius-control)] font-semibold type-meta t-colors hover:bg-primary/15"
               >
                 <Sparkles className="w-4 h-4" />
                 Gerar mais cards
@@ -617,51 +624,63 @@ export default function FlashcardDeckPage() {
                 style={{ transformStyle: 'preserve-3d', minHeight: '400px' }}
                 className="relative w-full"
               >
-                {/* Front */}
+                {/* Front — surface-2 (elevada): a frente é o lado ativo da
+                    pergunta. Identidade da matéria vira ponto de cor, não
+                    fundo — texto branco sobre pastel reprova contraste. */}
                 <div
-                  className="absolute inset-0 w-full rounded-3xl shadow-xl flex flex-col items-center justify-center text-white p-8 md:p-10"
+                  className="absolute inset-0 w-full rounded-[var(--radius-container)] surface-2 flex flex-col items-center justify-center p-8 md:p-10"
                   style={{
                     backfaceVisibility: 'hidden',
-                    background: `linear-gradient(135deg, ${cor}, ${cor}dd)`,
                     minHeight: '400px',
                   }}
                 >
-                  <div className="absolute top-4 left-4 text-xs font-bold uppercase tracking-wider opacity-70">Pergunta</div>
-                  <div className="text-xl md:text-2xl font-semibold text-center leading-relaxed">{currentCard.frente}</div>
-                  <div className="absolute bottom-4 left-0 right-0 text-center text-xs opacity-70">Toque para ver a resposta</div>
+                  <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 type-caption text-muted-foreground">
+                    <span aria-hidden className="w-2 h-2 rounded-[var(--radius-data)]" style={{ backgroundColor: cor }} />
+                    Pergunta
+                  </div>
+                  <p className="font-reading type-title measure-reading text-center text-foreground">
+                    {currentCard.frente}
+                  </p>
+                  <div className="absolute bottom-4 left-0 right-0 text-center type-meta text-muted-foreground">Toque para ver a resposta</div>
                   {currentCard.dica && (
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
                         setShowHint((h) => !h);
                       }}
-                      className="absolute top-4 right-4 p-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors"
+                      className="absolute top-4 right-4 p-2 bg-muted rounded-[var(--radius-control)] hover:bg-muted/70 t-colors"
                       aria-label="Mostrar dica"
                     >
-                      <Lightbulb className="w-4 h-4" />
+                      <Lightbulb className="w-4 h-4 text-foreground" />
                     </button>
                   )}
                 </div>
 
-                {/* Back */}
+                {/* Back — surface-1 (repouso): a resposta é o lado de chegada. */}
                 <div
-                  className="absolute inset-0 w-full rounded-3xl shadow-xl flex flex-col items-center justify-center bg-card border-4 p-8 md:p-10"
+                  className="absolute inset-0 w-full rounded-[var(--radius-container)] surface-1 flex flex-col items-center justify-center p-8 md:p-10"
                   style={{
                     backfaceVisibility: 'hidden',
                     transform: 'rotateY(180deg)',
-                    borderColor: cor,
                     minHeight: '400px',
                   }}
                 >
-                  <div className="absolute top-4 left-4 text-xs font-bold uppercase tracking-wider text-muted-foreground">Resposta</div>
-                  <div className="text-lg md:text-xl text-foreground text-center leading-relaxed font-medium">{currentCard.verso}</div>
+                  <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 type-caption text-muted-foreground">
+                    <span aria-hidden className="w-2 h-2 rounded-[var(--radius-data)]" style={{ backgroundColor: cor }} />
+                    Resposta
+                  </div>
+                  <p className="font-reading type-lead measure-reading text-center text-foreground font-medium">
+                    {currentCard.verso}
+                  </p>
                   {currentCard.dica && (
-                    <div className="mt-4 px-4 py-2 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl text-sm text-amber-900 dark:text-amber-200 flex items-start gap-2 max-w-md">
-                      <Lightbulb className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                      <span>{currentCard.dica}</span>
+                    <div
+                      className="mt-4 px-4 py-2 rounded-[var(--radius-control)] type-meta flex items-start gap-2 max-w-md bg-[hsl(var(--surface-2))] shadow-elev-1"
+                    >
+                      <Lightbulb className="w-4 h-4 flex-shrink-0 mt-0.5 text-amber-600 dark:text-amber-400" />
+                      <span className="font-reading">{currentCard.dica}</span>
                     </div>
                   )}
-                  <div className="absolute bottom-4 left-0 right-0 text-center text-xs text-muted-foreground">Toque para virar</div>
+                  <div className="absolute bottom-4 left-0 right-0 text-center type-meta text-muted-foreground">Toque para virar</div>
                 </div>
               </motion.div>
             </div>
@@ -674,16 +693,17 @@ export default function FlashcardDeckPage() {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="mb-4 mx-auto max-w-md px-4 py-3 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl text-sm text-amber-900 dark:text-amber-200 flex items-start gap-2"
+                    className="mb-4 mx-auto max-w-md px-4 py-3 rounded-[var(--radius-control)] type-meta flex items-start gap-2 bg-[hsl(var(--surface-2))] shadow-elev-1"
                   >
-                    <Lightbulb className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                    <span>{currentCard.dica}</span>
+                    <Lightbulb className="w-4 h-4 flex-shrink-0 mt-0.5 text-amber-600 dark:text-amber-400" />
+                    <span className="font-reading">{currentCard.dica}</span>
                   </motion.div>
                 )}
               </AnimatePresence>
             )}
 
-            {/* Action buttons - shown when flipped */}
+            {/* Action buttons - shown when flipped. Verde/vermelho legítimos:
+                classificam acerto/erro da própria revisão. */}
             <AnimatePresence>
               {flipped && (
                 <motion.div
@@ -701,13 +721,13 @@ export default function FlashcardDeckPage() {
                     transition={{ duration: 0.35, ease: 'easeOut' }}
                     onClick={() => handleAnswer(false)}
                     disabled={animating}
-                    className={`flex items-center justify-center gap-2 py-4 bg-gradient-to-r from-rose-500 to-red-600 text-white rounded-2xl font-bold shadow-lg transition-shadow ${
-                      lastAnswer === 'wrong'
-                        ? 'ring-4 ring-rose-300 shadow-xl'
-                        : lastAnswer === 'correct'
-                        ? 'opacity-40'
-                        : 'hover:shadow-xl disabled:opacity-50'
-                    }`}
+                    style={{
+                      backgroundColor: 'hsl(var(--danger))',
+                      color: 'hsl(var(--surface-1))',
+                      opacity: lastAnswer === 'correct' ? 0.4 : undefined,
+                      boxShadow: lastAnswer === 'wrong' ? '0 0 0 4px hsl(var(--danger) / 0.3), var(--elev-3)' : undefined,
+                    }}
+                    className="flex items-center justify-center gap-2 py-4 rounded-[var(--radius-control)] font-semibold type-body t-lift enabled:hover:shadow-elev-3 disabled:opacity-50"
                   >
                     <XCircle className="w-5 h-5" />
                     Errei
@@ -721,13 +741,13 @@ export default function FlashcardDeckPage() {
                     transition={{ duration: 0.35, ease: 'easeOut' }}
                     onClick={() => handleAnswer(true)}
                     disabled={animating}
-                    className={`flex items-center justify-center gap-2 py-4 bg-gradient-to-r from-emerald-500 to-green-600 text-white rounded-2xl font-bold shadow-lg transition-shadow ${
-                      lastAnswer === 'correct'
-                        ? 'ring-4 ring-emerald-300 shadow-xl'
-                        : lastAnswer === 'wrong'
-                        ? 'opacity-40'
-                        : 'hover:shadow-xl disabled:opacity-50'
-                    }`}
+                    style={{
+                      backgroundColor: 'hsl(var(--success))',
+                      color: 'hsl(var(--surface-1))',
+                      opacity: lastAnswer === 'wrong' ? 0.4 : undefined,
+                      boxShadow: lastAnswer === 'correct' ? '0 0 0 4px hsl(var(--success) / 0.3), var(--elev-3)' : undefined,
+                    }}
+                    className="flex items-center justify-center gap-2 py-4 rounded-[var(--radius-control)] font-semibold type-body t-lift enabled:hover:shadow-elev-3 disabled:opacity-50"
                   >
                     <CheckCircle className="w-5 h-5" />
                     Acertei
@@ -737,24 +757,24 @@ export default function FlashcardDeckPage() {
             </AnimatePresence>
           </motion.div>
         ) : (
-          <div className="text-center py-20 bg-card border border-border rounded-3xl">
-            <h3 className="text-2xl font-bold mb-2">Baralho vazio</h3>
-            <p className="text-muted-foreground mb-6">Este baralho ainda não tem flashcards.</p>
+          <div className="text-center py-20 surface-1 rounded-[var(--radius-container)]">
+            <h3 className="type-headline mb-2">Baralho vazio</h3>
+            <p className="type-body text-muted-foreground mb-6">Este baralho ainda não tem flashcards.</p>
             <div className="flex flex-wrap gap-3 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.97 }}
                 onClick={() => setShowAddDialog(true)}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-card border-2 border-border rounded-xl font-bold hover:border-primary/50 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[hsl(var(--surface-2))] border border-border rounded-[var(--radius-control)] font-semibold type-meta t-colors hover:border-primary/50"
               >
                 <Plus className="w-4 h-4" />
                 Adicionar manualmente
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.97 }}
                 onClick={() => setShowGerarDialog(true)}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-bold"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-semibold type-meta shadow-elev-2 t-lift hover:shadow-elev-3"
               >
                 <Sparkles className="w-4 h-4" />
                 Gerar com IA
