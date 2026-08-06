@@ -124,7 +124,7 @@ export default function AdminQuestoesPage() {
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <ShieldCheck className="w-6 h-6 text-primary" />
+            <ShieldCheck className="w-6 h-6 text-primary-text" />
             <div>
               <h1 className="font-display type-headline font-bold">Gerenciar Questões</h1>
               <p className="type-meta text-muted-foreground">

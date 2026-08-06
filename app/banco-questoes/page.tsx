@@ -109,7 +109,7 @@ export default function BancoQuestoesPage() {
     <div className="p-4 md:p-8 max-w-6xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <div className="flex items-center gap-3 mb-2">
-          <BookOpen className="w-6 h-6 text-primary" />
+          <BookOpen className="w-6 h-6 text-primary-text" />
           <h1 className="font-display type-headline font-bold tracking-tight">
             Banco de Questões
           </h1>
@@ -199,7 +199,7 @@ export default function BancoQuestoesPage() {
         >
           <div className="flex items-start gap-3 mb-4">
             <div className="w-10 h-10 rounded-[var(--radius-control)] bg-primary/15 flex items-center justify-center flex-shrink-0">
-              <Sparkles className="w-5 h-5 text-primary" />
+              <Sparkles className="w-5 h-5 text-primary-text" />
             </div>
             <div className="flex-1">
               <h3 className="font-display type-lead font-semibold mb-1">Gerar questões com IA</h3>

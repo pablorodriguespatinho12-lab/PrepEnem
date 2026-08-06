@@ -154,7 +154,7 @@ export function SidebarNav() {
 
           <div className="flex items-center gap-3 px-3">
             <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-              <span className="type-meta font-semibold text-primary">
+              <span className="type-meta font-semibold text-primary-text">
                 {session?.user?.name?.[0]?.toUpperCase() ?? 'U'}
               </span>
             </div>

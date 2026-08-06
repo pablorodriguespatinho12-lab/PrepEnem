@@ -406,7 +406,7 @@ export default function FlashcardDeckPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="w-10 h-10 animate-spin text-primary" />
+        <Loader2 className="w-10 h-10 animate-spin text-primary-text" />
       </div>
     );
   }
@@ -586,7 +586,7 @@ export default function FlashcardDeckPage() {
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => setShowGerarDialog(true)}
-                className="flex items-center gap-2 px-6 py-3 bg-primary/10 text-primary border border-primary/30 rounded-[var(--radius-control)] font-semibold type-meta t-colors hover:bg-primary/15"
+                className="flex items-center gap-2 px-6 py-3 bg-primary/10 text-primary-text border border-primary/30 rounded-[var(--radius-control)] font-semibold type-meta t-colors hover:bg-primary/15"
               >
                 <Sparkles className="w-4 h-4" />
                 Gerar mais cards

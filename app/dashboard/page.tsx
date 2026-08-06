@@ -49,7 +49,7 @@ function Greeting({ name, weekNumber }: { name: string; weekNumber: number }) {
         Olá, {name}
       </h1>
       <div className="flex items-center gap-2 flex-wrap">
-        <span data-numeric className="px-2.5 py-1 bg-primary/10 text-primary type-meta font-semibold rounded-[var(--radius-data)] whitespace-nowrap">
+        <span data-numeric className="px-2.5 py-1 bg-primary/10 text-primary-text type-meta font-semibold rounded-[var(--radius-data)] whitespace-nowrap">
           Semana {weekNumber}/4
         </span>
         <div className="flex gap-1">
@@ -204,7 +204,7 @@ export default function DashboardPage() {
              SEU progresso, não necessariamente o dia da semana civil de hoje. */}
         {activeDay?.cycleComplete ? (
           <div className="gsap-section gsap-reveal surface-1 rounded-[var(--radius-surface)] p-6 mb-6 text-center">
-            <Trophy className="w-8 h-8 text-primary mx-auto mb-2" />
+            <Trophy className="w-8 h-8 text-primary-text mx-auto mb-2" />
             <p className="font-display type-body font-semibold">Ciclo de 4 semanas concluído!</p>
             <p className="type-meta text-muted-foreground mt-1">Continue treinando livremente pelas outras telas.</p>
           </div>
@@ -214,7 +214,7 @@ export default function DashboardPage() {
               <div className="flex items-center gap-2">
                 <Sun className="w-5 h-5 text-amber-500" />
                 <h2 className="font-display type-lead font-semibold">Estudo Atual</h2>
-                <span data-numeric className="type-meta bg-primary/10 text-primary px-2 py-0.5 rounded-[var(--radius-data)]">
+                <span data-numeric className="type-meta bg-primary/10 text-primary-text px-2 py-0.5 rounded-[var(--radius-data)]">
                   Semana {weekNumber} • {activeDaySchedule.dayName}
                 </span>
               </div>
@@ -267,7 +267,7 @@ export default function DashboardPage() {
                             <p className="type-meta font-medium">{block.materia}</p>
                             <p className="type-meta text-muted-foreground truncate">{block.tema}</p>
                           </div>
-                          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary t-colors" />
+                          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary-text t-colors" />
                         </button>
                       ))}
                     </div>
@@ -294,7 +294,7 @@ export default function DashboardPage() {
                             <p className="type-meta font-medium">{block.materia}</p>
                             <p className="type-meta text-muted-foreground truncate">{block.tema}</p>
                           </div>
-                          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary t-colors" />
+                          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary-text t-colors" />
                         </button>
                       ))}
                     </div>
@@ -341,7 +341,7 @@ export default function DashboardPage() {
             className="gsap-action gsap-reveal flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-3 t-lift card-3d group"
           >
             <div className="w-9 h-9 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center flex-shrink-0">
-              <RefreshCcw className="w-4 h-4 text-primary" />
+              <RefreshCcw className="w-4 h-4 text-primary-text" />
             </div>
             <div className="flex-1 text-left min-w-0">
               <p className="font-display type-meta font-bold truncate">Revisar Agora</p>
@@ -359,7 +359,7 @@ export default function DashboardPage() {
             className="gsap-action gsap-reveal flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-3 t-lift card-3d group"
           >
             <div className="w-9 h-9 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center flex-shrink-0">
-              <ClipboardList className="w-4 h-4 text-primary" />
+              <ClipboardList className="w-4 h-4 text-primary-text" />
             </div>
             <div className="flex-1 text-left min-w-0">
               <p className="font-display type-meta font-bold truncate">Simulado ENEM</p>
@@ -374,7 +374,7 @@ export default function DashboardPage() {
             className="gsap-action gsap-reveal flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-3 t-lift card-3d group"
           >
             <div className="w-9 h-9 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center flex-shrink-0">
-              <Upload className="w-4 h-4 text-primary" />
+              <Upload className="w-4 h-4 text-primary-text" />
             </div>
             <div className="flex-1 text-left min-w-0">
               <p className="font-display type-meta font-bold truncate">Importar PDF</p>
@@ -387,7 +387,7 @@ export default function DashboardPage() {
              não da data (dia atual do plano expandido por padrão) ── */}
         <div className="gsap-section gsap-reveal surface-1 rounded-[var(--radius-surface)] p-6 mb-8">
           <div className="flex items-center gap-2 mb-4">
-            <Sparkles className="w-5 h-5 text-primary" />
+            <Sparkles className="w-5 h-5 text-primary-text" />
             <h2 className="font-display type-lead font-semibold">Semana {weekNumber}: {weekTitle}</h2>
           </div>
 
@@ -421,10 +421,10 @@ export default function DashboardPage() {
                     />
                     {weekDays[day.dayOfWeek]}
                     <StatusIcon className={`absolute -top-1.5 -right-1.5 w-3.5 h-3.5 rounded-full bg-card ${
-                      status === 'concluido' ? 'text-primary' : status === 'pulado' ? 'text-muted-foreground' : status === 'em_andamento' ? 'text-primary' : 'text-border'
+                      status === 'concluido' ? 'text-primary-text' : status === 'pulado' ? 'text-muted-foreground' : status === 'em_andamento' ? 'text-primary-text' : 'text-border'
                     }`} />
                   </div>
-                  {isActive && <span className="type-caption text-primary">Atual</span>}
+                  {isActive && <span className="type-caption text-primary-text">Atual</span>}
                 </button>
               );
             })}
@@ -488,7 +488,7 @@ export default function DashboardPage() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {(stats.reforcar ?? []).map((m: string) => (
-                    <span key={m} className="px-3 py-1.5 bg-primary/10 text-primary type-meta font-medium rounded-[var(--radius-data)]">{m}</span>
+                    <span key={m} className="px-3 py-1.5 bg-primary/10 text-primary-text type-meta font-medium rounded-[var(--radius-data)]">{m}</span>
                   ))}
                 </div>
               </div>

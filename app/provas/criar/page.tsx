@@ -192,7 +192,7 @@ export default function CriarProvaPage() {
                     style={{ backgroundColor: materiaColors[m] ?? 'hsl(var(--muted-foreground))' }}
                   />
                   {m}
-                  {selected && <Check className="w-3.5 h-3.5 text-primary" />}
+                  {selected && <Check className="w-3.5 h-3.5 text-primary-text" />}
                 </button>
               );
             })}

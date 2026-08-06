@@ -126,7 +126,7 @@ export default function ProvaDetailPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="w-10 h-10 animate-spin text-primary" />
+        <Loader2 className="w-10 h-10 animate-spin text-primary-text" />
       </div>
     );
   }
@@ -198,7 +198,7 @@ export default function ProvaDetailPage() {
               transition={{ delay: 0.25 }}
               className="surface-2 rounded-[var(--radius-surface)] p-4"
             >
-              <p data-numeric className="font-display type-display font-semibold text-primary flex items-center justify-center gap-1">
+              <p data-numeric className="font-display type-display font-semibold text-primary-text flex items-center justify-center gap-1">
                 {sparse ? '—' : `${pct}%`}
                 {lowConfidence && (
                   <AlertCircle
@@ -256,7 +256,7 @@ export default function ProvaDetailPage() {
                   <button
                     onClick={() => generateExplanation(q, eq.respostaDada, eq.id)}
                     disabled={reviewGenerating === eq.id}
-                    className="flex items-center gap-2 type-meta text-primary font-medium hover:underline underline-offset-4 disabled:opacity-50"
+                    className="flex items-center gap-2 type-meta text-primary-text font-medium hover:underline underline-offset-4 disabled:opacity-50"
                   >
                     <Brain className="w-4 h-4" />
                     {reviewGenerating === eq.id
@@ -267,7 +267,7 @@ export default function ProvaDetailPage() {
                   </button>
                   {reviewGenerating === eq.id && !reviewExplanations[eq.id] && (
                     <div className="flex items-center gap-2 mt-2">
-                      <Loader2 className="w-4 h-4 animate-spin text-primary" />
+                      <Loader2 className="w-4 h-4 animate-spin text-primary-text" />
                       <span className="type-caption text-muted-foreground">Gerando...</span>
                     </div>
                   )}
@@ -298,7 +298,7 @@ export default function ProvaDetailPage() {
     }).then(() => fetchExam());
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="w-10 h-10 animate-spin text-primary" />
+        <Loader2 className="w-10 h-10 animate-spin text-primary-text" />
       </div>
     );
   }
@@ -502,7 +502,7 @@ export default function ProvaDetailPage() {
                         ? ''
                         : isSelected
                         ? 'bg-primary text-primary-foreground'
-                        : 'bg-muted text-muted-foreground group-enabled:group-hover:bg-primary/15 group-enabled:group-hover:text-primary'
+                        : 'bg-muted text-muted-foreground group-enabled:group-hover:bg-primary/15 group-enabled:group-hover:text-primary-text'
                     }`}
                   >
                     {isChecking ? <Loader2 className="w-4 h-4 animate-spin" /> : alt.letra}
@@ -554,14 +554,14 @@ export default function ProvaDetailPage() {
                 <button
                   onClick={() => generateExplanation(q, selectedAnswer)}
                   disabled={generatingExplanation}
-                  className="flex items-center gap-2 type-meta text-primary font-medium hover:underline underline-offset-4 mb-3 disabled:opacity-50"
+                  className="flex items-center gap-2 type-meta text-primary-text font-medium hover:underline underline-offset-4 mb-3 disabled:opacity-50"
                 >
                   <Brain className="w-4 h-4" />
                   {generatingExplanation ? 'Gerando explicação...' : feedback.acertou ? 'Ver explicação detalhada' : 'Gerar explicação detalhada com IA'}
                 </button>
                 {generatingExplanation && !llmExplanation && (
                   <div className="flex items-center gap-2 py-3">
-                    <Loader2 className="w-4 h-4 animate-spin text-primary" />
+                    <Loader2 className="w-4 h-4 animate-spin text-primary-text" />
                     <span className="type-meta text-muted-foreground">Gerando...</span>
                   </div>
                 )}

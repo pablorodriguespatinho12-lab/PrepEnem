@@ -48,7 +48,7 @@ export default function CadernoErrosPage() {
     <div className="p-4 md:p-8 max-w-4xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <div className="flex items-center gap-3 mb-2">
-          <AlertCircle className="w-6 h-6 text-primary" />
+          <AlertCircle className="w-6 h-6 text-primary-text" />
           <h1 className="font-display type-headline font-bold tracking-tight">Caderno de Erros</h1>
         </div>
         <p className="type-meta text-muted-foreground mb-6">Revise as questões que você errou e acompanhe sua evolução</p>
@@ -152,14 +152,14 @@ export default function CadernoErrosPage() {
 
               {item?.explicacaoEstudante && (
                 <div className="bg-primary/5 rounded-[var(--radius-control)] p-3 mb-3">
-                  <p className="type-caption text-primary mb-1">Sua explicação (Feynman)</p>
+                  <p className="type-caption text-primary-text mb-1">Sua explicação (Feynman)</p>
                   <p className="font-reading type-meta measure-reading text-foreground/80">{item.explicacaoEstudante}</p>
                 </div>
               )}
 
               <button
                 onClick={() => router.push(`/treino?mode=erros&questionIds=${item?.question?.id}`)}
-                className="flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary type-meta font-medium rounded-[var(--radius-control)] hover:bg-primary/20 t-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary-text type-meta font-medium rounded-[var(--radius-control)] hover:bg-primary/20 t-colors"
               >
                 <RefreshCcw className="w-3 h-3" /> Revisar até acertar
               </button>

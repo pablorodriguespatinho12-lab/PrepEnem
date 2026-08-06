@@ -35,17 +35,17 @@ function ViewerHeader({ pageNumber, pdfUrl, isExpanded, onToggleExpand, onRetry 
   return (
     <div className="flex items-center justify-between px-3 py-2 bg-muted/60 border-b border-border">
       <div className="flex items-center gap-2">
-        <FileText className="w-4 h-4 text-primary" />
+        <FileText className="w-4 h-4 text-primary-text" />
         <span className="type-caption text-muted-foreground">Página {pageNumber} da prova</span>
       </div>
       <div className="flex items-center gap-2">
-        <button onClick={onRetry} className="type-caption text-muted-foreground hover:text-primary transition-[color]" title="Recarregar">
+        <button onClick={onRetry} className="type-caption text-muted-foreground hover:text-primary-text transition-[color]" title="Recarregar">
           <RefreshCw className="w-3.5 h-3.5" />
         </button>
-        <button onClick={onToggleExpand} className="type-caption text-primary hover:underline">
+        <button onClick={onToggleExpand} className="type-caption text-primary-text hover:underline">
           {isExpanded ? 'Reduzir' : 'Ampliar'}
         </button>
-        <a href={`/api/pdf-proxy?url=${encodeURIComponent(pdfUrl)}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 type-caption text-muted-foreground hover:text-primary">
+        <a href={`/api/pdf-proxy?url=${encodeURIComponent(pdfUrl)}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 type-caption text-muted-foreground hover:text-primary-text">
           <ExternalLink className="w-3.5 h-3.5" />
         </a>
       </div>
@@ -162,7 +162,7 @@ function LegacyPdfRender({ pdfUrl, pageNumber, className = '' }: Pick<PdfPageVie
   if (isLoading) {
     return (
       <div className={`flex items-center justify-center gap-2 p-4 bg-muted/50 rounded-xl border border-border animate-pulse ${className}`}>
-        <Loader2 className="w-5 h-5 animate-spin text-primary" />
+        <Loader2 className="w-5 h-5 animate-spin text-primary-text" />
         <span className="type-meta text-muted-foreground">Carregando imagem da prova...</span>
       </div>
     );

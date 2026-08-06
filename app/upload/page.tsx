@@ -98,7 +98,7 @@ export default function UploadPage() {
     <div className="px-4 py-6 md:px-8 md:py-10 max-w-4xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <div className="flex items-center gap-3 mb-2">
-          <Upload className="w-7 h-7 text-primary" />
+          <Upload className="w-7 h-7 text-primary-text" />
           <h1 className="font-display type-headline font-bold">Importar Questões de Vestibular</h1>
         </div>
         <p className="type-body measure-reading text-muted-foreground mb-8">
@@ -126,7 +126,7 @@ export default function UploadPage() {
             {provaFile ? (
               <div className="flex flex-col items-center gap-2">
                 <div className="w-12 h-12 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center">
-                  <FileText className="w-6 h-6 text-primary" />
+                  <FileText className="w-6 h-6 text-primary-text" />
                 </div>
                 <p className="font-display type-meta font-semibold truncate max-w-full">{provaFile.name}</p>
                 <p className="type-meta text-muted-foreground">{(provaFile.size / 1024 / 1024).toFixed(2)} MB</p>
@@ -162,7 +162,7 @@ export default function UploadPage() {
             {gabaritoFile ? (
               <div className="flex flex-col items-center gap-2">
                 <div className="w-12 h-12 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center">
-                  <FileSearch className="w-6 h-6 text-primary" />
+                  <FileSearch className="w-6 h-6 text-primary-text" />
                 </div>
                 <p className="font-display type-meta font-semibold truncate max-w-full">{gabaritoFile.name}</p>
                 <p className="type-meta text-muted-foreground">{(gabaritoFile.size / 1024 / 1024).toFixed(2)} MB</p>
@@ -202,7 +202,7 @@ export default function UploadPage() {
             exit={{ opacity: 0 }}
             className="mt-8 surface-1 rounded-[var(--radius-surface)] p-8 text-center"
           >
-            <Loader2 className="w-10 h-10 animate-spin text-primary mx-auto mb-4" />
+            <Loader2 className="w-10 h-10 animate-spin text-primary-text mx-auto mb-4" />
             <p className="type-lead font-semibold">{progress}</p>
             <p className="type-meta text-muted-foreground mt-2">
               A IA está lendo o gabarito, extraindo questões e cruzando as respostas...
@@ -306,7 +306,7 @@ export default function UploadPage() {
           <li>• A IA extrai as questões e cruza com o gabarito para garantir respostas 100% corretas</li>
           <li>• Questões anuladas no gabarito são automaticamente ignoradas</li>
           <li>• Provas de anos diferentes: basta importar cada par (prova + gabarito) separadamente</li>
-          <li>• Arquivos disponíveis em <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos" target="_blank" rel="noopener" className="text-primary underline font-medium">gov.br/inep</a></li>
+          <li>• Arquivos disponíveis em <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos" target="_blank" rel="noopener" className="text-primary-text underline font-medium">gov.br/inep</a></li>
         </ul>
       </motion.div>
     </div>

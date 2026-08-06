@@ -122,7 +122,7 @@ export default function RedacaoPartesPage() {
               </div>
               <div>
                 <h2 className="font-display type-lead font-semibold flex items-center gap-2">
-                  {CurrentPartIcon && <CurrentPartIcon className="w-5 h-5 text-primary" />} {currentPartInfo.label}
+                  {CurrentPartIcon && <CurrentPartIcon className="w-5 h-5 text-primary-text" />} {currentPartInfo.label}
                 </h2>
                 <p className="type-meta text-muted-foreground">{exercise?.tema}</p>
               </div>
@@ -132,7 +132,7 @@ export default function RedacaoPartesPage() {
           {/* Feedback — conteúdo gerado por IA é conteúdo de leitura. */}
           <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
             <h3 className="font-display type-body font-semibold mb-4 flex items-center gap-2">
-              <BarChart3 className="w-5 h-5 text-primary" /> Feedback da IA
+              <BarChart3 className="w-5 h-5 text-primary-text" /> Feedback da IA
             </h3>
             <div className="prose-reading whitespace-pre-wrap">
               <MathText text={result.feedback} />
@@ -179,14 +179,14 @@ export default function RedacaoPartesPage() {
           {/* Header */}
           <div className="surface-1 rounded-[var(--radius-surface)] p-5 mb-4">
             <div className="flex items-center gap-2 mb-2">
-              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 type-meta font-semibold rounded-[var(--radius-data)] bg-primary/10 text-primary">
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 type-meta font-semibold rounded-[var(--radius-data)] bg-primary/10 text-primary-text">
                 {CurrentPartIcon && <CurrentPartIcon className="w-3.5 h-3.5" />} {currentPartInfo.label}
               </span>
             </div>
             <h2 className="font-display type-lead font-semibold mb-1">{exercise.tema}</h2>
             {exercise.textosMotivadores && (
               <details className="mt-3">
-                <summary className="type-meta text-primary font-medium cursor-pointer hover:underline underline-offset-4">Ver textos motivadores</summary>
+                <summary className="type-meta text-primary-text font-medium cursor-pointer hover:underline underline-offset-4">Ver textos motivadores</summary>
                 <div className="prose-reading text-foreground/80 whitespace-pre-wrap bg-muted/50 rounded-[var(--radius-control)] p-3 mt-2 max-h-48 overflow-y-auto">
                   {exercise.textosMotivadores}
                 </div>
@@ -206,8 +206,8 @@ export default function RedacaoPartesPage() {
 
           {/* Instruction */}
           <div className="bg-primary/5 rounded-[var(--radius-control)] p-4 border border-primary/10 mb-4 flex items-start gap-2">
-            <Info className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-            <p className="type-meta font-medium text-primary">{exercise.instrucao}</p>
+            <Info className="w-4 h-4 text-primary-text flex-shrink-0 mt-0.5" />
+            <p className="type-meta font-medium text-primary-text">{exercise.instrucao}</p>
           </div>
 
           {/* Editor */}
@@ -272,7 +272,7 @@ export default function RedacaoPartesPage() {
 
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}>
         <div className="flex items-center gap-3 mb-2">
-          <PenTool className="w-6 h-6 text-primary" />
+          <PenTool className="w-6 h-6 text-primary-text" />
           <h1 className="font-display type-headline font-bold">Treino por Partes</h1>
         </div>
         <p className="type-meta text-muted-foreground mb-6">Pratique cada parte da redação separadamente e receba feedback da IA</p>
@@ -292,7 +292,7 @@ export default function RedacaoPartesPage() {
               >
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-6 h-6 text-primary" />
+                    <Icon className="w-6 h-6 text-primary-text" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="font-display type-body font-semibold">{part.label}</h3>
@@ -310,7 +310,7 @@ export default function RedacaoPartesPage() {
                     )}
                   </div>
                   {isLoadingThis ? (
-                    <Loader2 className="w-5 h-5 animate-spin text-primary" />
+                    <Loader2 className="w-5 h-5 animate-spin text-primary-text" />
                   ) : (
                     <ArrowRight className="w-5 h-5 text-muted-foreground" />
                   )}

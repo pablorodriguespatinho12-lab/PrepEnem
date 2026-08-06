@@ -197,7 +197,7 @@ export default function RedacaoPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
-        <Loader2 className="w-8 h-8 animate-spin text-primary" />
+        <Loader2 className="w-8 h-8 animate-spin text-primary-text" />
       </div>
     );
   }
@@ -213,7 +213,7 @@ export default function RedacaoPage() {
 
         {isEvaluating ? (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-16">
-            <Loader2 className="w-12 h-12 animate-spin text-primary mx-auto mb-4" />
+            <Loader2 className="w-12 h-12 animate-spin text-primary-text mx-auto mb-4" />
             <h2 className="font-display type-title font-semibold mb-2">A IA está avaliando sua redação...</h2>
             <p className="type-meta text-muted-foreground">Isso pode levar até 1 minuto. Você pode sair e voltar depois — a avaliação continua em segundo plano.</p>
           </motion.div>
@@ -264,7 +264,7 @@ export default function RedacaoPage() {
             {currentEssay.avaliacao && (
               <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
                 <h3 className="font-display type-body font-semibold mb-4 flex items-center gap-2">
-                  <BarChart3 className="w-5 h-5 text-primary" /> Avaliação Completa
+                  <BarChart3 className="w-5 h-5 text-primary-text" /> Avaliação Completa
                 </h3>
                 <div className="prose-reading">
                   <MathText text={currentEssay.avaliacao} />
@@ -275,7 +275,7 @@ export default function RedacaoPage() {
             {/* Original text — o que o usuário escreveu é conteúdo de leitura. */}
             <div className="surface-1 rounded-[var(--radius-surface)] p-6">
               <h3 className="font-display type-body font-semibold mb-3 flex items-center gap-2">
-                <FileText className="w-5 h-5 text-primary" /> Seu Texto
+                <FileText className="w-5 h-5 text-primary-text" /> Seu Texto
               </h3>
               <div className="prose-reading whitespace-pre-wrap bg-muted/50 rounded-[var(--radius-control)] p-4">
                 {currentEssay.texto}
@@ -303,7 +303,7 @@ export default function RedacaoPage() {
           )}
           {selectedTheme.textoMotivador && (
             <details className="mt-3">
-              <summary className="type-meta text-primary font-medium cursor-pointer hover:underline underline-offset-4">Ver textos motivadores</summary>
+              <summary className="type-meta text-primary-text font-medium cursor-pointer hover:underline underline-offset-4">Ver textos motivadores</summary>
               <div className="prose-reading text-foreground/80 whitespace-pre-wrap bg-muted/50 rounded-[var(--radius-control)] p-3 mt-2 max-h-64 overflow-y-auto">
                 {selectedTheme.textoMotivador}
               </div>
@@ -349,7 +349,7 @@ export default function RedacaoPage() {
         <p className="type-meta text-muted-foreground text-center mt-2 flex items-center justify-center gap-1.5 flex-wrap">
           {lastSaved && (
             <span className="inline-flex items-center gap-1 text-foreground">
-              <CheckCircle2 className="w-3.5 h-3.5 text-primary" /> Último salvamento: {lastSaved} ·
+              <CheckCircle2 className="w-3.5 h-3.5 text-primary-text" /> Último salvamento: {lastSaved} ·
             </span>
           )}
           A IA avaliará sua redação nas 5 competências do ENEM.
@@ -366,7 +366,7 @@ export default function RedacaoPage() {
           <ChevronLeft className="w-4 h-4" /> Voltar
         </button>
         <h2 className="font-display type-title font-semibold mb-4 flex items-center gap-2">
-          <History className="w-5 h-5 text-primary" /> Histórico de Redações
+          <History className="w-5 h-5 text-primary-text" /> Histórico de Redações
         </h2>
 
         {essays.length === 0 ? (
@@ -385,7 +385,7 @@ export default function RedacaoPage() {
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-medium type-meta">{e.theme?.tema ?? 'Redação'}</span>
                   {e.status === 'avaliada' ? (
-                    <span data-numeric className="px-2 py-0.5 rounded-[var(--radius-data)] type-meta font-semibold bg-primary/10 text-primary">
+                    <span data-numeric className="px-2 py-0.5 rounded-[var(--radius-data)] type-meta font-semibold bg-primary/10 text-primary-text">
                       {e.notaTotal ?? 0}/1000
                     </span>
                   ) : (
@@ -414,7 +414,7 @@ export default function RedacaoPage() {
           <ChevronLeft className="w-4 h-4" /> Voltar
         </button>
         <h2 className="font-display type-title font-semibold mb-4 flex items-center gap-2">
-          <FileText className="w-5 h-5 text-primary" /> Redações Salvas
+          <FileText className="w-5 h-5 text-primary-text" /> Redações Salvas
         </h2>
 
         {savedDrafts.length === 0 ? (
@@ -478,7 +478,7 @@ export default function RedacaoPage() {
     <div className="p-4 md:p-8 max-w-4xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}>
         <div className="flex items-center gap-3 mb-2">
-          <PenTool className="w-6 h-6 text-primary" />
+          <PenTool className="w-6 h-6 text-primary-text" />
           <h1 className="font-display type-headline font-bold">Treino de Redação</h1>
         </div>
         <p className="type-meta text-muted-foreground mb-6">Pratique com temas reais do ENEM e receba correção detalhada por IA nas 5 competências</p>
@@ -487,11 +487,11 @@ export default function RedacaoPage() {
         {essays.length > 0 && (
           <div className="grid grid-cols-3 gap-3 mb-6">
             <div className="surface-1 rounded-[var(--radius-surface)] p-4 text-center">
-              <p data-numeric className="font-display type-headline font-semibold text-primary">{essays.length}</p>
+              <p data-numeric className="font-display type-headline font-semibold text-primary-text">{essays.length}</p>
               <p className="type-caption text-muted-foreground">Redações</p>
             </div>
             <div className="surface-1 rounded-[var(--radius-surface)] p-4 text-center">
-              <p data-numeric className="font-display type-headline font-semibold text-primary">
+              <p data-numeric className="font-display type-headline font-semibold text-primary-text">
                 {essays.filter((e: any) => e.status === 'avaliada').length > 0
                   ? Math.round(essays.filter((e: any) => e.status === 'avaliada').reduce((s: number, e: any) => s + (e.notaTotal ?? 0), 0) / essays.filter((e: any) => e.status === 'avaliada').length)
                   : '-'}
@@ -499,7 +499,7 @@ export default function RedacaoPage() {
               <p className="type-caption text-muted-foreground">Média</p>
             </div>
             <div className="surface-1 rounded-[var(--radius-surface)] p-4 text-center">
-              <p data-numeric className="font-display type-headline font-semibold text-primary">
+              <p data-numeric className="font-display type-headline font-semibold text-primary-text">
                 {Math.max(0, ...essays.filter((e: any) => e.status === 'avaliada').map((e: any) => e.notaTotal ?? 0)) || '-'}
               </p>
               <p className="type-caption text-muted-foreground">Melhor</p>
@@ -514,7 +514,7 @@ export default function RedacaoPage() {
         >
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-[var(--radius-control)] bg-primary/20 flex items-center justify-center flex-shrink-0">
-              <Sparkles className="w-6 h-6 text-primary" />
+              <Sparkles className="w-6 h-6 text-primary-text" />
             </div>
             <div className="flex-1">
               <h3 className="font-display type-meta font-semibold">Treino por Partes</h3>
@@ -529,7 +529,7 @@ export default function RedacaoPage() {
             onClick={() => setView('history')}
             className="surface-1 rounded-[var(--radius-surface)] p-5 t-lift hover:shadow-elev-2 hover:-translate-y-px text-left"
           >
-            <History className="w-8 h-8 text-primary mb-2" />
+            <History className="w-8 h-8 text-primary-text mb-2" />
             <h3 className="font-display type-meta font-semibold">Histórico</h3>
             <p className="type-meta text-muted-foreground">Correções anteriores</p>
           </button>
@@ -537,11 +537,11 @@ export default function RedacaoPage() {
             onClick={() => { loadSavedDrafts(); setView('saved'); }}
             className="surface-1 rounded-[var(--radius-surface)] p-5 t-lift hover:shadow-elev-2 hover:-translate-y-px text-left"
           >
-            <FileText className="w-8 h-8 text-primary mb-2" />
+            <FileText className="w-8 h-8 text-primary-text mb-2" />
             <h3 className="font-display type-meta font-semibold flex items-center gap-1.5">
               Redações Salvas
               {savedDrafts.length > 0 && (
-                <span data-numeric className="type-caption bg-primary/10 text-primary px-1.5 py-0.5 rounded-[var(--radius-data)]">{savedDrafts.length}</span>
+                <span data-numeric className="type-caption bg-primary/10 text-primary-text px-1.5 py-0.5 rounded-[var(--radius-data)]">{savedDrafts.length}</span>
               )}
             </h3>
             <p className="type-meta text-muted-foreground">Rascunhos guardados</p>
@@ -550,7 +550,7 @@ export default function RedacaoPage() {
             onClick={() => { fetchHistory(); toast.info('Atualizado!'); }}
             className="surface-1 rounded-[var(--radius-surface)] p-5 t-lift hover:shadow-elev-2 hover:-translate-y-px text-left"
           >
-            <RefreshCcw className="w-8 h-8 text-primary mb-2" />
+            <RefreshCcw className="w-8 h-8 text-primary-text mb-2" />
             <h3 className="font-display type-meta font-semibold">Atualizar</h3>
             <p className="type-meta text-muted-foreground">Verificar correções</p>
           </button>
@@ -558,7 +558,7 @@ export default function RedacaoPage() {
 
         {/* Theme selection */}
         <h2 className="font-display type-lead font-semibold mb-3 flex items-center gap-2">
-          <BookOpen className="w-5 h-5 text-primary" /> Escolha um Tema
+          <BookOpen className="w-5 h-5 text-primary-text" /> Escolha um Tema
         </h2>
 
         <div className="space-y-3">
@@ -574,12 +574,12 @@ export default function RedacaoPage() {
             >
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <Sparkles className="w-4 h-4 text-primary" />
+                  <Sparkles className="w-4 h-4 text-primary-text" />
                   <h3 className="font-display type-meta font-semibold">Tema Livre</h3>
                 </div>
                 <p className="type-meta text-muted-foreground">Escreva sobre qualquer assunto que você quiser treinar</p>
               </div>
-              <Plus className={`w-5 h-5 text-primary flex-shrink-0 mt-1 transition-transform duration-short ease-out-quart ${showCustomInput ? 'rotate-45' : ''}`} />
+              <Plus className={`w-5 h-5 text-primary-text flex-shrink-0 mt-1 transition-transform duration-short ease-out-quart ${showCustomInput ? 'rotate-45' : ''}`} />
             </button>
 
             <AnimatePresence>
@@ -633,7 +633,7 @@ export default function RedacaoPage() {
                 <div className="flex-1">
                   <h3 className="font-display type-meta font-semibold mb-1">{theme.tema}</h3>
                   {theme.anoEnem && (
-                    <span className="px-2 py-0.5 rounded-[var(--radius-data)] type-caption bg-primary/10 text-primary">
+                    <span className="px-2 py-0.5 rounded-[var(--radius-data)] type-caption bg-primary/10 text-primary-text">
                       ENEM {theme.anoEnem}
                     </span>
                   )}

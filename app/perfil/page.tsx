@@ -65,7 +65,7 @@ export default function PerfilPage() {
     <div className="px-4 py-6 md:px-8 md:py-10 max-w-2xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <div className="flex items-center gap-3 mb-2">
-          <Settings className="w-6 h-6 text-primary" />
+          <Settings className="w-6 h-6 text-primary-text" />
           <h1 className="font-display type-headline font-bold">Perfil & Configurações</h1>
         </div>
         <p className="type-meta text-muted-foreground mb-8">Personalize sua experiência de estudo</p>
@@ -79,7 +79,7 @@ export default function PerfilPage() {
         className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6"
       >
         <div className="flex items-center gap-2 mb-4">
-          <User className="w-5 h-5 text-primary" />
+          <User className="w-5 h-5 text-primary-text" />
           <h2 className="font-display type-body font-semibold">Informações Pessoais</h2>
         </div>
 
@@ -118,7 +118,7 @@ export default function PerfilPage() {
         className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6"
       >
         <div className="flex items-center gap-2 mb-4">
-          <Palette className="w-5 h-5 text-primary" />
+          <Palette className="w-5 h-5 text-primary-text" />
           <h2 className="font-display type-body font-semibold">Tema de Cores</h2>
         </div>
 
@@ -158,7 +158,7 @@ export default function PerfilPage() {
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            {darkMode === 'dark' ? <Moon className="w-5 h-5 text-primary" /> : <Sun className="w-5 h-5 text-primary" />}
+            {darkMode === 'dark' ? <Moon className="w-5 h-5 text-primary-text" /> : <Sun className="w-5 h-5 text-primary-text" />}
             <div>
               <h2 className="font-display type-body font-semibold">Modo Escuro</h2>
               <p className="type-meta text-muted-foreground">Altere entre modo claro e escuro</p>
@@ -175,7 +175,7 @@ export default function PerfilPage() {
               animate={{ left: darkMode === 'dark' ? '30px' : '2px' }}
               transition={{ type: 'spring', stiffness: 500, damping: 30 }}
             >
-              {darkMode === 'dark' ? <Moon className="w-3.5 h-3.5 text-primary" /> : <Sun className="w-3.5 h-3.5 text-amber-500" />}
+              {darkMode === 'dark' ? <Moon className="w-3.5 h-3.5 text-primary-text" /> : <Sun className="w-3.5 h-3.5 text-amber-500" />}
             </motion.div>
           </button>
         </div>
@@ -190,7 +190,7 @@ export default function PerfilPage() {
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            {soundEnabled ? <Volume2 className="w-5 h-5 text-primary" /> : <VolumeX className="w-5 h-5 text-primary" />}
+            {soundEnabled ? <Volume2 className="w-5 h-5 text-primary-text" /> : <VolumeX className="w-5 h-5 text-primary-text" />}
             <div>
               <h2 className="font-display type-body font-semibold">Som</h2>
               <p className="type-meta text-muted-foreground">Feedback sonoro discreto em acerto, erro, card salvo e sessão concluída</p>
@@ -207,7 +207,7 @@ export default function PerfilPage() {
               animate={{ left: soundEnabled ? '30px' : '2px' }}
               transition={{ type: 'spring', stiffness: 500, damping: 30 }}
             >
-              {soundEnabled ? <Volume2 className="w-3.5 h-3.5 text-primary" /> : <VolumeX className="w-3.5 h-3.5 text-muted-foreground" />}
+              {soundEnabled ? <Volume2 className="w-3.5 h-3.5 text-primary-text" /> : <VolumeX className="w-3.5 h-3.5 text-muted-foreground" />}
             </motion.div>
           </button>
         </div>

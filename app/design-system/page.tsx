@@ -111,7 +111,10 @@ const TOKENS_COR: readonly TokenCor[] = [
   { nome: '--background', uso: 'fundo da página' },
   { nome: '--foreground', uso: 'texto principal' },
   { nome: '--card', uso: 'superfície de card' },
-  { nome: '--primary', uso: 'ação primária, seleção' },
+  { nome: '--primary', uso: 'preenchimento da ação primária, origem das tintas' },
+  { nome: '--primary-text', uso: 'primary como TEXTO — escurecido para passar em AA sobre as tintas' },
+  { nome: '--primary-hover', uso: 'preenchimento em hover (sólido, não transparência)' },
+  { nome: '--primary-active', uso: 'preenchimento pressionado (sólido)' },
   { nome: '--primary-foreground', uso: 'texto sobre a ação primária' },
   { nome: '--muted', uso: 'fundo secundário' },
   { nome: '--muted-foreground', uso: 'texto de apoio' },
@@ -440,7 +443,7 @@ const ALTERNATIVAS: readonly EstiloAlternativa[] = [
     letra: 'B',
     texto: 'A aceleração média vale 1,5 m/s² e o movimento é uniformemente variado.',
     container: { backgroundColor: 'hsl(var(--surface-2))', borderColor: 'hsl(var(--primary) / 0.45)' },
-    chip: { backgroundColor: 'hsl(var(--primary) / 0.14)', color: 'hsl(var(--primary))' },
+    chip: { backgroundColor: 'hsl(var(--primary) / 0.14)', color: 'hsl(var(--primary-text))' },
   },
   {
     rotulo: 'Selecionada',
@@ -551,7 +554,7 @@ function OutrosComponentes() {
           <span className="type-caption rounded-[var(--radius-data)] bg-muted px-2 py-1 text-muted-foreground">
             Neutro
           </span>
-          <Badge fundo="hsl(var(--primary) / 0.14)" cor="hsl(var(--primary))">Em revisão</Badge>
+          <Badge fundo="hsl(var(--primary) / 0.14)" cor="hsl(var(--primary-text))">Em revisão</Badge>
           <Badge fundo="hsl(var(--success-surface))" cor="hsl(var(--success))">Dominado</Badge>
           <Badge fundo="hsl(var(--danger-surface))" cor="hsl(var(--danger))">Reforçar</Badge>
           <span className="type-caption rounded-[var(--radius-pill)] border border-border px-2.5 py-1 text-muted-foreground">
@@ -663,7 +666,7 @@ function DemoCurva({ curva, duracaoMs, registrar }: DemoCurvaProps) {
       <button
         type="button"
         onClick={play}
-        className={`${BOTAO_BASE} mt-4 border border-border bg-[hsl(var(--surface-2))] text-foreground hover:border-primary/50 hover:text-primary`}
+        className={`${BOTAO_BASE} mt-4 border border-border bg-[hsl(var(--surface-2))] text-foreground hover:border-primary/50 hover:text-primary-text`}
       >
         <Play className="h-4 w-4" aria-hidden="true" />
         Reproduzir {curva.token.replace('--ease-', '')}
@@ -757,7 +760,7 @@ function PainelDesign() {
             <a
               key={item.id}
               href={`#${item.id}`}
-              className="type-caption t-colors rounded-[var(--radius-pill)] border border-border px-3 py-1.5 text-muted-foreground hover:border-primary/50 hover:text-primary"
+              className="type-caption t-colors rounded-[var(--radius-pill)] border border-border px-3 py-1.5 text-muted-foreground hover:border-primary/50 hover:text-primary-text"
             >
               {item.nome}
             </a>

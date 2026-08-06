@@ -140,7 +140,7 @@ export function CelebrationOverlay({ show, message, subMessage, onClose }: { sho
               className="flex items-center justify-center gap-2 mb-5"
             >
               <span aria-hidden className="w-8 h-px bg-primary/50" />
-              <Sparkles className="w-5 h-5 text-primary" />
+              <Sparkles className="w-5 h-5 text-primary-text" />
               <span aria-hidden className="w-8 h-px bg-primary/50" />
             </motion.div>
             <h2 className="font-display type-title font-semibold mb-2">{message}</h2>

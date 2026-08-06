@@ -68,8 +68,12 @@ const config: Config = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
-          // Estados sólidos: o hover/ativo escurece em vez de ficar transparente.
-          // bg-primary/80 desbotava contra a página e reprovava em AA.
+          // Tinta de texto, separada do preenchimento. O primary vivo continua
+          // sendo o fundo do botão e a origem das tintas; text-primary-text é
+          // o mesmo matiz escurecido até passar em AA sobre essas tintas.
+          text: 'hsl(var(--primary-text))',
+          // Estados sólidos: o hover/ativo se afasta da cor do texto em vez de
+          // ficar transparente. bg-primary/80 desbotava contra a página.
           hover: 'hsl(var(--primary-hover))',
           active: 'hsl(var(--primary-active))',
         },

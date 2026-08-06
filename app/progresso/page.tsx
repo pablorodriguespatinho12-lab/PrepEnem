@@ -83,7 +83,7 @@ export default function ProgressoPage() {
     <div className="p-4 md:p-8 max-w-6xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}>
         <div className="flex items-center gap-3 mb-2">
-          <BarChart3 className="w-6 h-6 text-primary" />
+          <BarChart3 className="w-6 h-6 text-primary-text" />
           <h1 className="font-display type-headline font-bold">Dashboard de Progresso</h1>
         </div>
         <p className="type-meta text-muted-foreground mb-8">Acompanhe sua evolução detalhada nos estudos</p>
@@ -94,7 +94,7 @@ export default function ProgressoPage() {
         {[
           { label: 'Total Respondidas', value: stats?.totalRespondidas ?? 0, icon: BookOpen, color: 'text-muted-foreground' },
           { label: 'Acertos', value: stats?.totalAcertos ?? 0, icon: Target, style: { color: 'hsl(var(--success))' } },
-          { label: 'Taxa de Acerto', value: `${stats?.taxaAcerto ?? 0}%`, icon: TrendingUp, color: 'text-primary' },
+          { label: 'Taxa de Acerto', value: `${stats?.taxaAcerto ?? 0}%`, icon: TrendingUp, color: 'text-primary-text' },
           { label: 'Sequência', value: `${stats?.streakDays ?? 0} dias`, icon: BarChart3, color: 'text-muted-foreground' },
         ].map((card, i) => {
           const Icon = card.icon;
@@ -126,7 +126,7 @@ export default function ProgressoPage() {
           className="surface-1 rounded-[var(--radius-surface)] p-6 mt-8"
         >
           <h3 className="font-display type-body font-semibold mb-4 flex items-center gap-2">
-            <PenTool className="w-5 h-5 text-primary" /> Treino de Redação por Partes
+            <PenTool className="w-5 h-5 text-primary-text" /> Treino de Redação por Partes
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
@@ -146,7 +146,7 @@ export default function ProgressoPage() {
               );
               return (
                 <div key={part.key} className="bg-muted/30 rounded-[var(--radius-control)] p-4 text-center">
-                  <Icon className="w-5 h-5 text-primary mx-auto" />
+                  <Icon className="w-5 h-5 text-primary-text mx-auto" />
                   <p className="type-caption text-muted-foreground mt-1">{part.label}</p>
                   <p data-numeric className="type-title font-semibold mt-1">
                     {s.avgNota}/10

@@ -193,7 +193,7 @@ export default function FlashcardsPage() {
 
       {loading ? (
         <div className="text-center py-20">
-          <Loader2 className="w-10 h-10 animate-spin text-primary mx-auto" />
+          <Loader2 className="w-10 h-10 animate-spin text-primary-text mx-auto" />
         </div>
       ) : (
         <AnimatePresence mode="wait">
@@ -248,7 +248,7 @@ export default function FlashcardsPage() {
                           </div>
 
                           {/* Subject name */}
-                          <h3 className="type-lead text-foreground mb-1 group-hover:text-primary t-colors">
+                          <h3 className="type-lead text-foreground mb-1 group-hover:text-primary-text t-colors">
                             {group.materia}
                           </h3>
 
@@ -397,7 +397,7 @@ export default function FlashcardsPage() {
                           </div>
 
                           {/* Name */}
-                          <h3 className="type-lead text-foreground mb-1 line-clamp-2 group-hover:text-primary t-colors">
+                          <h3 className="type-lead text-foreground mb-1 line-clamp-2 group-hover:text-primary-text t-colors">
                             {deck.subtema || deck.nome}
                           </h3>
                           {deck.descricao && (

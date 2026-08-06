@@ -437,7 +437,7 @@ export default function SimuladoPage() {
         {/* Top Bar */}
         <div className="flex items-center justify-between mb-4 surface-1 rounded-[var(--radius-control)] p-3 sticky top-0 z-10">
           <div className="flex items-center gap-3">
-            <span data-numeric className="type-meta font-medium bg-primary/10 text-primary px-3 py-1 rounded-[var(--radius-data)]">
+            <span data-numeric className="type-meta font-medium bg-primary/10 text-primary-text px-3 py-1 rounded-[var(--radius-data)]">
               {currentIdx + 1}/{questions.length}
             </span>
             <span data-numeric className="type-caption text-muted-foreground">
@@ -587,7 +587,7 @@ export default function SimuladoPage() {
                         className={`w-8 h-8 rounded-[var(--radius-control)] flex items-center justify-center type-meta font-semibold flex-shrink-0 t-colors ${
                           isSelected
                             ? 'bg-primary text-primary-foreground'
-                            : 'bg-muted text-muted-foreground group-hover:bg-primary/15 group-hover:text-primary'
+                            : 'bg-muted text-muted-foreground group-hover:bg-primary/15 group-hover:text-primary-text'
                         }`}
                       >
                         {alt.key}
@@ -626,7 +626,7 @@ export default function SimuladoPage() {
                     i === currentIdx
                       ? 'bg-primary text-primary-foreground'
                       : answers[q.id]
-                        ? 'bg-primary/15 text-primary'
+                        ? 'bg-primary/15 text-primary-text'
                         : 'bg-muted text-muted-foreground'
                   }`}
                 >
@@ -676,7 +676,7 @@ export default function SimuladoPage() {
                   i === currentIdx
                     ? 'bg-primary text-primary-foreground'
                     : answers[q.id]
-                      ? 'bg-primary/15 text-primary'
+                      ? 'bg-primary/15 text-primary-text'
                       : 'bg-muted text-muted-foreground'
                 }`}
               >
@@ -699,7 +699,7 @@ export default function SimuladoPage() {
           {/* Score Header */}
           <div className="surface-1 rounded-[var(--radius-surface)] p-6 md:p-8 mb-6 text-center">
             <motion.div initial={{ scale: 0 }} animate={{ scale: [0, 1.3, 1] }} transition={{ delay: 0.2, duration: 0.5 }}>
-              <Trophy className="w-12 h-12 text-primary mx-auto mb-4" />
+              <Trophy className="w-12 h-12 text-primary-text mx-auto mb-4" />
             </motion.div>
             <h1 className="mb-2">
               <span data-numeric className="font-display type-hero font-semibold">{results.taxaAcerto}%</span>{' '}
@@ -735,7 +735,7 @@ export default function SimuladoPage() {
           {/* Per Materia Breakdown */}
           <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
             <h2 className="font-display type-title font-semibold mb-4 flex items-center gap-2">
-              <BarChart3 className="w-5 h-5 text-primary" />
+              <BarChart3 className="w-5 h-5 text-primary-text" />
               Desempenho por Matéria
             </h2>
             <div className="space-y-3">

@@ -553,7 +553,7 @@ export default function TreinoPage() {
             </button>
             <div>
               <h1 className="font-display type-title font-semibold flex items-center gap-2">
-                <GraduationCap className="w-6 h-6 text-primary" />
+                <GraduationCap className="w-6 h-6 text-primary-text" />
                 Revisão de Conceitos
               </h1>
               <p className="type-meta text-muted-foreground">
@@ -583,7 +583,7 @@ export default function TreinoPage() {
         {/* Subtemas list */}
         {resumoLoading ? (
           <div className="text-center py-12">
-            <Loader2 className="w-8 h-8 animate-spin text-primary mx-auto mb-3" />
+            <Loader2 className="w-8 h-8 animate-spin text-primary-text mx-auto mb-3" />
             <p className="type-meta text-muted-foreground mb-4">Gerando resumo dos conteúdos...</p>
             <button
               onClick={() => setResumoDismissed(true)}
@@ -628,7 +628,7 @@ export default function TreinoPage() {
                       <p className="type-meta text-muted-foreground">{resumo.subtema}</p>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="type-caption text-primary">
+                      <span className="type-caption text-primary-text">
                         {isExpanded ? 'Ocultar' : 'Revelar'}
                       </span>
                       <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
@@ -692,7 +692,7 @@ export default function TreinoPage() {
                                 <button
                                   onClick={() => generateResumoImage(resumo)}
                                   disabled={isLoadingImg}
-                                  className="flex items-center gap-2 type-meta text-primary font-medium hover:underline disabled:opacity-50"
+                                  className="flex items-center gap-2 type-meta text-primary-text font-medium hover:underline disabled:opacity-50"
                                 >
                                   {isLoadingImg ? (
                                     <><Loader2 className="w-4 h-4 animate-spin" /> Gerando ilustração...</>
@@ -768,7 +768,7 @@ export default function TreinoPage() {
             transition={{ delay: 0.8, type: 'spring', stiffness: 200, damping: 15 }}
             className="mb-3"
           >
-            <span className="font-display type-hero font-semibold text-primary" data-numeric>
+            <span className="font-display type-hero font-semibold text-primary-text" data-numeric>
               {pct}%
             </span>
           </motion.div>
@@ -781,7 +781,7 @@ export default function TreinoPage() {
             className="inline-flex items-center gap-2 mb-5"
           >
             <span aria-hidden className="w-6 h-px bg-primary/50" />
-            <span className="type-caption text-primary">Medalha {tierLabel}</span>
+            <span className="type-caption text-primary-text">Medalha {tierLabel}</span>
             <span aria-hidden className="w-6 h-px bg-primary/50" />
           </motion.div>
 
@@ -876,7 +876,7 @@ export default function TreinoPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="w-8 h-8 animate-spin text-primary" />
+        <Loader2 className="w-8 h-8 animate-spin text-primary-text" />
       </div>
     );
   }
@@ -919,7 +919,7 @@ export default function TreinoPage() {
               {score.wrong}
             </span>
             {streak >= 3 && (
-              <span data-numeric className="type-meta font-medium px-2 py-1 rounded-[var(--radius-data)] bg-primary/10 text-primary">
+              <span data-numeric className="type-meta font-medium px-2 py-1 rounded-[var(--radius-data)] bg-primary/10 text-primary-text">
                 {streak} seguidas
               </span>
             )}
@@ -1100,7 +1100,7 @@ export default function TreinoPage() {
                         ? ''
                         : isSelected
                         ? 'bg-primary text-primary-foreground'
-                        : 'bg-muted text-muted-foreground group-enabled:group-hover:bg-primary/15 group-enabled:group-hover:text-primary'
+                        : 'bg-muted text-muted-foreground group-enabled:group-hover:bg-primary/15 group-enabled:group-hover:text-primary-text'
                     }`}
                   >
                     {isCorrect ? (
@@ -1196,7 +1196,7 @@ export default function TreinoPage() {
             <button
               onClick={generateAIExplanation}
               disabled={generatingExplanation}
-              className="flex items-center gap-2 type-meta text-primary font-medium hover:underline underline-offset-4 mb-3 disabled:opacity-50"
+              className="flex items-center gap-2 type-meta text-primary-text font-medium hover:underline underline-offset-4 mb-3 disabled:opacity-50"
             >
               <Brain className="w-4 h-4" />
               {generatingExplanation ? 'Gerando explicação...' : result?.acertou ? 'Ver explicação detalhada' : 'Gerar explicação detalhada com IA'}
@@ -1233,7 +1233,7 @@ export default function TreinoPage() {
               <button
                 onClick={saveFeynman}
                 disabled={!feynmanText.trim()}
-                className="mt-2.5 flex items-center gap-1.5 px-3 py-2 bg-primary/10 text-primary type-meta font-medium rounded-[var(--radius-control)] hover:bg-primary/20 t-colors disabled:opacity-40"
+                className="mt-2.5 flex items-center gap-1.5 px-3 py-2 bg-primary/10 text-primary-text type-meta font-medium rounded-[var(--radius-control)] hover:bg-primary/20 t-colors disabled:opacity-40"
               >
                 <Send className="w-3.5 h-3.5" /> Salvar explicação
               </button>

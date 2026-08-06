@@ -41,7 +41,8 @@ export function AppThemeProvider({ children }: { children: React.ReactNode }) {
     root.style.setProperty('--chart-1', mode.chart1);
     // A escala de superfície é a fonte da elevação; --background/--card/--popover
     // derivam dela para os componentes shadcn continuarem funcionando.
-    const estados = primaryStates(mode, resolvedTheme === 'dark');
+    root.style.setProperty('--primary-text', mode.primaryText);
+    const estados = primaryStates(mode);
     root.style.setProperty('--primary-hover', estados.hover);
     root.style.setProperty('--primary-active', estados.active);
     const surfaces = surfaceScale(mode, resolvedTheme === 'dark');

@@ -2,6 +2,9 @@ export const DEFAULT_THEME_COLOR = 'clareza';
 
 type ThemeModeTokens = {
   primary: string;
+  /** Tinta de texto: o mesmo matiz do primary, escurecido até passar em AA
+   *  sobre as tintas primary/10-15. O primary continua sendo o preenchimento. */
+  primaryText: string;
   primaryForeground: string;
   ring: string;
   accent: string;
@@ -27,13 +30,14 @@ type ThemeColorSet = {
 export const themeColors: Record<string, ThemeColorSet> = {
   clareza: {
     label: 'Clareza',
-    swatch: '#0b687f',
+    swatch: '#0c6a7f',
     light: {
-      primary: '192 84% 27%',
+      primary: '192 84% 30%',
+      primaryText: '192 84% 27%',
       primaryForeground: '0 0% 100%',
-      ring: '192 84% 27%',
+      ring: '192 84% 30%',
       accent: '190 20% 92%',
-      chart1: '192 84% 27%',
+      chart1: '192 84% 30%',
       background: '190 20% 97%',
       card: '190 25% 99%',
       foreground: '200 25% 12%',
@@ -43,6 +47,7 @@ export const themeColors: Record<string, ThemeColorSet> = {
     },
     dark: {
       primary: '189 80% 52%',
+      primaryText: '189 80% 52%',
       primaryForeground: '200 30% 10%',
       ring: '189 80% 52%',
       accent: '200 20% 20%',
@@ -57,13 +62,14 @@ export const themeColors: Record<string, ThemeColorSet> = {
   },
   ambar: {
     label: 'Âmbar de Estudo',
-    swatch: '#a3421f',
+    swatch: '#a8502c',
     light: {
-      primary: '16 68% 38%',
+      primary: '16 68% 42%',
+      primaryText: '16 68% 38%',
       primaryForeground: '0 0% 100%',
-      ring: '16 68% 38%',
+      ring: '16 68% 42%',
       accent: '30 15% 91%',
-      chart1: '16 68% 38%',
+      chart1: '16 68% 42%',
       background: '30 12% 96%',
       card: '30 15% 99%',
       foreground: '20 15% 14%',
@@ -73,6 +79,7 @@ export const themeColors: Record<string, ThemeColorSet> = {
     },
     dark: {
       primary: '18 75% 56%',
+      primaryText: '18 75% 56%',
       primaryForeground: '20 20% 10%',
       ring: '18 75% 56%',
       accent: '22 14% 20%',
@@ -87,9 +94,10 @@ export const themeColors: Record<string, ThemeColorSet> = {
   },
   academico: {
     label: 'Índigo Acadêmico',
-    swatch: '#2c386d',
+    swatch: '#2e3a66',
     light: {
       primary: '229 42% 30%',
+      primaryText: '229 42% 30%',
       primaryForeground: '0 0% 100%',
       ring: '229 42% 30%',
       accent: '225 18% 93%',
@@ -103,6 +111,7 @@ export const themeColors: Record<string, ThemeColorSet> = {
     },
     dark: {
       primary: '228 55% 62%',
+      primaryText: '228 55% 62%',
       primaryForeground: '228 30% 10%',
       ring: '228 55% 62%',
       accent: '228 20% 20%',
@@ -117,13 +126,14 @@ export const themeColors: Record<string, ThemeColorSet> = {
   },
   blue: {
     label: 'Azul',
-    swatch: '#0a58d6',
+    swatch: '#2563eb',
     light: {
-      primary: '217 91% 44%',
+      primary: '217 91% 53%',
+      primaryText: '217 91% 44%',
       primaryForeground: '0 0% 100%',
-      ring: '217 91% 44%',
+      ring: '217 91% 53%',
       accent: '217 20% 93%',
-      chart1: '217 91% 44%',
+      chart1: '217 91% 53%',
       background: '217 20% 97%',
       card: '217 25% 99%',
       foreground: '220 25% 12%',
@@ -133,6 +143,7 @@ export const themeColors: Record<string, ThemeColorSet> = {
     },
     dark: {
       primary: '217 85% 65%',
+      primaryText: '217 85% 65%',
       primaryForeground: '217 40% 10%',
       ring: '217 85% 65%',
       accent: '217 20% 20%',
@@ -147,13 +158,14 @@ export const themeColors: Record<string, ThemeColorSet> = {
   },
   green: {
     label: 'Verde',
-    swatch: '#126d34',
+    swatch: '#16a34a',
     light: {
-      primary: '142 71% 25%',
-      primaryForeground: '0 0% 100%',
-      ring: '142 71% 25%',
+      primary: '142 71% 37%',
+      primaryText: '142 71% 25%',
+      primaryForeground: '142 40% 10%',
+      ring: '142 71% 37%',
       accent: '142 20% 93%',
-      chart1: '142 71% 25%',
+      chart1: '142 71% 37%',
       background: '142 15% 97%',
       card: '142 20% 99%',
       foreground: '145 25% 12%',
@@ -163,6 +175,7 @@ export const themeColors: Record<string, ThemeColorSet> = {
     },
     dark: {
       primary: '142 55% 48%',
+      primaryText: '142 55% 48%',
       primaryForeground: '142 30% 10%',
       ring: '142 55% 48%',
       accent: '142 18% 20%',
@@ -177,13 +190,14 @@ export const themeColors: Record<string, ThemeColorSet> = {
   },
   orange: {
     label: 'Laranja',
-    swatch: '#a53f09',
+    swatch: '#ea580c',
     light: {
-      primary: '21 90% 34%',
-      primaryForeground: '0 0% 100%',
-      ring: '21 90% 34%',
+      primary: '21 90% 48%',
+      primaryText: '21 90% 34%',
+      primaryForeground: '21 40% 10%',
+      ring: '21 90% 48%',
       accent: '21 20% 93%',
-      chart1: '21 90% 34%',
+      chart1: '21 90% 48%',
       background: '25 15% 97%',
       card: '25 20% 99%',
       foreground: '22 25% 12%',
@@ -193,6 +207,7 @@ export const themeColors: Record<string, ThemeColorSet> = {
     },
     dark: {
       primary: '21 85% 58%',
+      primaryText: '21 85% 58%',
       primaryForeground: '21 30% 10%',
       ring: '21 85% 58%',
       accent: '22 18% 20%',
@@ -229,15 +244,20 @@ function shiftLightness(hsl: string, delta: number): string {
  * branco sobre primary/80 media 3.76:1, reprovado em AA, e nenhuma
  * luminosidade de primary resolve enquanto o estado for transparência.
  *
- * Agora os dois estados são cores sólidas. No claro o botão escurece ao ser
- * pressionado; no escuro clareia, porque ali o primary já é o elemento claro
- * sobre fundo escuro e escurecer leria como "apagando".
+ * Agora os dois estados são cores sólidas, e a direção sai do próprio par de
+ * contraste em vez de ser fixa: o estado se afasta da cor do texto. Onde o
+ * primaryForeground é branco o preenchimento escurece; onde é a tinta escura
+ * do tema (verde e laranja no modo claro, que são vivos demais para texto
+ * branco) ele clareia. Escurecer nesses dois derrubava o contraste do rótulo
+ * para 3.2:1 justamente no estado pressionado.
  */
-export function primaryStates(mode: ThemeModeTokens, isDark: boolean) {
-  const passo = isDark ? [4, 8] : [-4, -8];
+export function primaryStates(mode: ThemeModeTokens) {
+  const fgL = Number.parseFloat(mode.primaryForeground.trim().split(/\s+/)[2]);
+  const textoClaro = Number.isNaN(fgL) ? true : fgL > 50;
+  const dir = textoClaro ? -1 : 1;
   return {
-    hover: shiftLightness(mode.primary, passo[0]),
-    active: shiftLightness(mode.primary, passo[1]),
+    hover: shiftLightness(mode.primary, dir * 4),
+    active: shiftLightness(mode.primary, dir * 8),
   };
 }
 

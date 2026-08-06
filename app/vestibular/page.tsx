@@ -42,7 +42,7 @@ export default function VestibularPage() {
     <div className="px-4 py-6 md:px-8 md:py-10 max-w-4xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <div className="flex items-center gap-3 mb-2">
-          <GraduationCap className="w-7 h-7 text-primary" />
+          <GraduationCap className="w-7 h-7 text-primary-text" />
           <h1 className="font-display type-headline font-bold">Modo Vestibular</h1>
         </div>
         <p className="type-meta text-muted-foreground mb-8">
@@ -51,7 +51,7 @@ export default function VestibularPage() {
 
         {/* Coming soon banner */}
         <div className="bg-primary/5 border border-primary/10 rounded-[var(--radius-surface)] p-6 mb-8 text-center">
-          <Construction className="w-10 h-10 text-primary mx-auto mb-3" />
+          <Construction className="w-10 h-10 text-primary-text mx-auto mb-3" />
           <h2 className="font-display type-lead font-bold mb-2">Em Construção</h2>
           <p className="type-meta text-muted-foreground max-w-md mx-auto">
             O modo Vestibular está sendo preparado! Em breve você poderá importar PDFs de provas de outras bancas
