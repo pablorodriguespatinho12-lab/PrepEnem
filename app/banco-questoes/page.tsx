@@ -108,10 +108,13 @@ export default function BancoQuestoesPage() {
   return (
     <div className="p-4 md:p-8 max-w-6xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-        <h1 className="font-display text-2xl md:text-3xl font-bold tracking-tight mb-2">
-          📚 Banco de Questões
-        </h1>
-        <p className="text-muted-foreground mb-6">
+        <div className="flex items-center gap-3 mb-2">
+          <BookOpen className="w-6 h-6 text-primary" />
+          <h1 className="font-display type-headline font-bold tracking-tight">
+            Banco de Questões
+          </h1>
+        </div>
+        <p className="type-body text-muted-foreground mb-6">
           Filtre por matéria e subtema, depois inicie um treino personalizado.
         </p>
       </motion.div>
@@ -125,12 +128,12 @@ export default function BancoQuestoesPage() {
       >
         <button
           onClick={() => { setMateria(''); setSubtema(''); }}
-          className={`p-3 rounded-xl text-center transition-all border ${
-            !materia ? 'border-primary bg-primary/10 shadow-sm' : 'border-border hover:border-primary/30 hover:bg-muted/50'
+          className={`p-3 rounded-[var(--radius-control)] text-center border t-colors ${
+            !materia ? 'border-primary bg-primary/10 shadow-elev-1' : 'border-border hover:border-primary/30 hover:bg-muted/50'
           }`}
         >
-          <p className="text-sm font-medium">Todas</p>
-          <p className="text-xs text-muted-foreground mt-0.5">
+          <p className="type-meta font-medium">Todas</p>
+          <p data-numeric className="type-caption text-muted-foreground mt-0.5">
             {Object.values(materiaTotals).reduce((a, b) => a + b, 0)} q
           </p>
         </button>
@@ -138,16 +141,16 @@ export default function BancoQuestoesPage() {
           <button
             key={m}
             onClick={() => { setMateria(m); setSubtema(''); }}
-            className={`p-3 rounded-xl text-center transition-all border ${
-              materia === m ? 'border-primary bg-primary/10 shadow-sm' : 'border-border hover:border-primary/30 hover:bg-muted/50'
+            className={`p-3 rounded-[var(--radius-control)] text-center border t-colors ${
+              materia === m ? 'border-primary bg-primary/10 shadow-elev-1' : 'border-border hover:border-primary/30 hover:bg-muted/50'
             }`}
           >
             <div
               className="w-2.5 h-2.5 rounded-full mx-auto mb-1.5"
               style={{ backgroundColor: (materiaColors as any)[m] ?? '#888' }}
             />
-            <p className="text-xs font-medium text-foreground">{m}</p>
-            <p className="text-xs text-muted-foreground">{materiaTotals[m] ?? 0} q</p>
+            <p className="type-meta font-medium text-foreground">{m}</p>
+            <p data-numeric className="type-caption text-muted-foreground">{materiaTotals[m] ?? 0} q</p>
           </button>
         ))}
       </motion.div>
@@ -159,14 +162,14 @@ export default function BancoQuestoesPage() {
           animate={{ opacity: 1, height: 'auto' }}
           className="mb-6"
         >
-          <p className="text-sm font-medium mb-2 flex items-center gap-2">
+          <p className="type-meta font-semibold text-foreground mb-2 flex items-center gap-2">
             <Filter className="w-4 h-4" /> Subtemas de {materia}
           </p>
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setSubtema('')}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
-                !subtema ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80'
+              className={`px-3 py-1.5 rounded-[var(--radius-control)] type-meta font-medium t-colors ${
+                !subtema ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground'
               }`}
             >
               Todos
@@ -175,12 +178,12 @@ export default function BancoQuestoesPage() {
               <button
                 key={st}
                 onClick={() => setSubtema(st)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
-                  subtema === st ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80'
+                className={`px-3 py-1.5 rounded-[var(--radius-control)] type-meta font-medium t-colors ${
+                  subtema === st ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground'
                 }`}
               >
                 {st}
-                <span className="ml-1 opacity-60">({counts[materia]?.[st] ?? 0})</span>
+                <span data-numeric className="ml-1 opacity-60">({counts[materia]?.[st] ?? 0})</span>
               </button>
             ))}
           </div>
@@ -192,15 +195,15 @@ export default function BancoQuestoesPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-6 bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 rounded-2xl p-5"
+          className="mb-6 bg-primary/5 border border-primary/20 rounded-[var(--radius-surface)] p-5"
         >
           <div className="flex items-start gap-3 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-primary/15 flex items-center justify-center flex-shrink-0">
+            <div className="w-10 h-10 rounded-[var(--radius-control)] bg-primary/15 flex items-center justify-center flex-shrink-0">
               <Sparkles className="w-5 h-5 text-primary" />
             </div>
             <div className="flex-1">
-              <h3 className="font-display text-base font-semibold mb-1">Gerar questões com IA</h3>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="font-display type-lead font-semibold mb-1">Gerar questões com IA</h3>
+              <p className="type-meta text-muted-foreground">
                 Poucas questões para essa matéria? A IA pode gerar questões estilo ENEM agora mesmo, com formula e explicação detalhada.
               </p>
             </div>
@@ -209,7 +212,7 @@ export default function BancoQuestoesPage() {
             <button
               onClick={() => generateAIQuestions('facil')}
               disabled={generating}
-              className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium bg-green-500/10 text-green-700 dark:text-green-400 hover:bg-green-500/20 transition-colors disabled:opacity-50"
+              className="flex items-center gap-2 px-4 py-2 rounded-[var(--radius-control)] type-meta font-medium bg-muted text-foreground hover:bg-muted/80 t-colors disabled:opacity-50"
             >
               {generating ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
               5 fáceis
@@ -217,7 +220,7 @@ export default function BancoQuestoesPage() {
             <button
               onClick={() => generateAIQuestions('medio')}
               disabled={generating}
-              className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium bg-amber-500/10 text-amber-700 dark:text-amber-400 hover:bg-amber-500/20 transition-colors disabled:opacity-50"
+              className="flex items-center gap-2 px-4 py-2 rounded-[var(--radius-control)] type-meta font-medium bg-muted text-foreground hover:bg-muted/80 t-colors disabled:opacity-50"
             >
               {generating ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
               5 médias
@@ -225,7 +228,7 @@ export default function BancoQuestoesPage() {
             <button
               onClick={() => generateAIQuestions('dificil')}
               disabled={generating}
-              className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium bg-red-500/10 text-red-700 dark:text-red-400 hover:bg-red-500/20 transition-colors disabled:opacity-50"
+              className="flex items-center gap-2 px-4 py-2 rounded-[var(--radius-control)] type-meta font-medium bg-muted text-foreground hover:bg-muted/80 t-colors disabled:opacity-50"
             >
               {generating ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
               5 difíceis
@@ -243,16 +246,16 @@ export default function BancoQuestoesPage() {
             placeholder="Buscar questões..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-card border border-border text-sm focus:outline-none focus:ring-2 focus:ring-primary/20"
+            className="w-full pl-10 pr-4 py-2.5 rounded-[var(--radius-control)] bg-[hsl(var(--surface-2))] border border-input type-meta focus:outline-none focus:ring-2 focus:ring-primary/20"
           />
         </div>
         <button
           onClick={startFiltered}
           disabled={filtered.length === 0}
-          className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-xl font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
+          className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-[var(--radius-control)] type-meta font-medium hover:opacity-90 transition-opacity duration-micro disabled:opacity-50"
         >
           <Play className="w-4 h-4" />
-          Treinar ({filtered.length} questões)
+          Treinar (<span data-numeric>{filtered.length}</span> questões)
         </button>
       </div>
 
@@ -264,16 +267,15 @@ export default function BancoQuestoesPage() {
           <div className="text-center py-12">
             <BookOpen className="w-12 h-12 text-muted-foreground/30 mx-auto mb-3" />
             <p className="text-muted-foreground">Nenhuma questão encontrada</p>
-            <p className="text-sm text-muted-foreground mt-1">Importe PDFs para adicionar questões ao banco</p>
+            <p className="type-meta text-muted-foreground mt-1">Importe PDFs para adicionar questões ao banco</p>
           </div>
         ) : (
-          filtered.slice(0, 50).map((q, i) => (
+          filtered.slice(0, 50).map((q) => (
             <motion.div
               key={q.id}
-              initial={{ opacity: 1, y: 5 }}
+              initial={{ opacity: 0, y: 5 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: Math.min(i * 0.02, 0.3) }}
-              className="bg-card rounded-xl p-4 shadow-sm border border-border hover:shadow-md transition-shadow"
+              className="surface-1 rounded-[var(--radius-surface)] p-4 t-lift hover:-translate-y-px hover:shadow-elev-2"
             >
               <div className="flex items-start gap-3">
                 <div
@@ -281,20 +283,26 @@ export default function BancoQuestoesPage() {
                   style={{ backgroundColor: (materiaColors as any)[q.materia] ?? '#888' }}
                 />
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1.5 flex-wrap">
-                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full text-white" style={{ backgroundColor: (materiaColors as any)[q.materia] ?? '#888' }}>{q.materia}</span>
-                    <span className="text-xs font-medium text-gray-600 dark:text-gray-400">{q.subtema}</span>
-                    <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
-                      q.dificuldade === 'facil' ? 'bg-green-600 text-white' :
-                      q.dificuldade === 'dificil' ? 'bg-red-600 text-white' :
-                      'bg-amber-600 text-white'
-                    }`}>
+                  <div className="flex items-center gap-x-2.5 gap-y-1 mb-1.5 flex-wrap type-meta text-muted-foreground">
+                    <span className="inline-flex items-center gap-1.5 font-medium text-foreground">
+                      <span
+                        aria-hidden
+                        className="w-2 h-2 rounded-[var(--radius-data)] shrink-0"
+                        style={{ backgroundColor: (materiaColors as any)[q.materia] ?? 'hsl(var(--muted-foreground))' }}
+                      />
+                      {q.materia}
+                    </span>
+                    <span aria-hidden className="w-px h-3 bg-border shrink-0" />
+                    <span>{q.subtema}</span>
+                    <span
+                      className="type-caption px-2 py-0.5 rounded-[var(--radius-data)] bg-muted text-muted-foreground"
+                    >
                       {q.dificuldade === 'facil' ? 'Fácil' : q.dificuldade === 'dificil' ? 'Difícil' : 'Médio'}
                     </span>
                   </div>
-                  <p className="text-sm text-foreground line-clamp-2">{q.enunciado}</p>
+                  <p className="font-reading type-body measure-reading line-clamp-2 text-foreground">{q.enunciado}</p>
                   {q.origem && (
-                    <p className="text-xs text-muted-foreground mt-1">Origem: {q.origem}</p>
+                    <p className="type-micro text-muted-foreground mt-1">Origem: {q.origem}</p>
                   )}
                 </div>
               </div>
@@ -302,8 +310,8 @@ export default function BancoQuestoesPage() {
           ))
         )}
         {filtered.length > 50 && (
-          <p className="text-center text-sm text-muted-foreground py-4">
-            Mostrando 50 de {filtered.length} questões. Use os filtros para refinar.
+          <p className="text-center type-meta text-muted-foreground py-4">
+            Mostrando 50 de <span data-numeric>{filtered.length}</span> questões. Use os filtros para refinar.
           </p>
         )}
       </div>

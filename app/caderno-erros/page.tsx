@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { AlertCircle, Filter, BookOpen, CheckCircle2, XCircle, RefreshCcw, Search } from 'lucide-react';
+import { AlertCircle, Filter, BookOpen, CheckCircle2, XCircle, RefreshCcw, Search, Check } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { materiaColors } from '@/lib/theme-colors';
 
@@ -49,9 +49,9 @@ export default function CadernoErrosPage() {
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <div className="flex items-center gap-3 mb-2">
           <AlertCircle className="w-6 h-6 text-primary" />
-          <h1 className="font-display text-2xl font-bold tracking-tight">Caderno de Erros</h1>
+          <h1 className="font-display type-headline font-bold tracking-tight">Caderno de Erros</h1>
         </div>
-        <p className="text-sm text-muted-foreground mb-6">Revise as questões que você errou e acompanhe sua evolução</p>
+        <p className="type-meta text-muted-foreground mb-6">Revise as questões que você errou e acompanhe sua evolução</p>
       </motion.div>
 
       {/* Filters */}
@@ -63,13 +63,13 @@ export default function CadernoErrosPage() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Buscar por enunciado ou subtema..."
-            className="w-full pl-10 pr-4 py-2.5 border border-input rounded-lg bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            className="w-full pl-10 pr-4 py-2.5 border border-input rounded-[var(--radius-control)] bg-[hsl(var(--surface-2))] type-meta focus:outline-none focus:ring-2 focus:ring-ring"
           />
         </div>
         <select
           value={materiaFilter}
           onChange={(e) => setMateriaFilter(e.target.value)}
-          className="px-3 py-2.5 border border-input rounded-lg bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+          className="px-3 py-2.5 border border-input rounded-[var(--radius-control)] bg-[hsl(var(--surface-2))] type-meta focus:outline-none focus:ring-2 focus:ring-ring"
         >
           <option value="">Todas as matérias</option>
           {MATERIAS.map((m) => <option key={m} value={m}>{m}</option>)}
@@ -82,9 +82,9 @@ export default function CadernoErrosPage() {
         </div>
       ) : filtered.length === 0 ? (
         <div className="text-center py-12">
-          <CheckCircle2 className="w-12 h-12 text-green-500 mx-auto mb-3" />
-          <p className="font-display text-lg font-semibold">Nenhum erro encontrado!</p>
-          <p className="text-sm text-muted-foreground">Continue assim 🚀</p>
+          <CheckCircle2 className="w-12 h-12 mx-auto mb-3" style={{ color: 'hsl(var(--success))' }} />
+          <p className="font-display type-lead font-semibold">Nenhum erro encontrado!</p>
+          <p className="type-meta text-muted-foreground">Continue assim.</p>
         </div>
       ) : (
         <div className="space-y-4">
@@ -94,9 +94,9 @@ export default function CadernoErrosPage() {
                 const ids = filtered.map((e: any) => e?.question?.id).filter(Boolean).join(',');
                 router.push(`/treino?mode=erros&questionIds=${ids}`);
               }}
-              className="w-full py-3 bg-primary text-primary-foreground rounded-xl font-medium text-sm hover:opacity-90 transition shadow-md flex items-center justify-center gap-2"
+              className="w-full py-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] type-meta font-medium hover:opacity-90 transition-opacity duration-micro shadow-elev-2 flex items-center justify-center gap-2"
             >
-              <RefreshCcw className="w-4 h-4" /> Revisar todos os erros ({filtered.length} questões)
+              <RefreshCcw className="w-4 h-4" /> Revisar todos os erros (<span data-numeric>{filtered.length}</span> questões)
             </button>
           )}
           {filtered.map((item: any, i: number) => (
@@ -104,36 +104,45 @@ export default function CadernoErrosPage() {
               key={item?.question?.id ?? i}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.05 }}
-              className="bg-card rounded-xl p-5 shadow-sm border border-border hover:shadow-md transition-shadow"
+              className="surface-1 rounded-[var(--radius-surface)] p-5 t-lift hover:-translate-y-px hover:shadow-elev-2"
             >
-              <div className="flex flex-wrap gap-2 mb-3">
-                <span
-                  className="px-2 py-0.5 rounded-full text-xs font-medium text-white"
-                  style={{ backgroundColor: materiaColors[item?.question?.materia] ?? '#888' }}
-                >
+              <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 mb-3 type-meta text-muted-foreground">
+                <span className="inline-flex items-center gap-1.5 font-medium text-foreground">
+                  <span
+                    aria-hidden
+                    className="w-2 h-2 rounded-[var(--radius-data)] shrink-0"
+                    style={{ backgroundColor: materiaColors[item?.question?.materia] ?? 'hsl(var(--muted-foreground))' }}
+                  />
                   {item?.question?.materia ?? ''}
                 </span>
-                <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-muted text-muted-foreground">
+                <span aria-hidden className="w-px h-3 bg-border shrink-0" />
+                <span className="px-2 py-0.5 rounded-[var(--radius-data)] bg-muted">
                   {item?.question?.subtema ?? ''}
                 </span>
                 {item?.dominada && (
-                  <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-green-500/10 text-green-700">
-                    ✓ Dominada
+                  <span
+                    className="inline-flex items-center gap-1 px-2 py-0.5 rounded-[var(--radius-data)] font-medium"
+                    style={{ backgroundColor: 'hsl(var(--success-surface))', color: 'hsl(var(--success))' }}
+                  >
+                    <Check className="w-3 h-3" strokeWidth={3} /> Dominada
                   </span>
                 )}
-                <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-red-500/10 text-red-700">
+                <span
+                  data-numeric
+                  className="px-2 py-0.5 rounded-[var(--radius-data)] font-medium"
+                  style={{ backgroundColor: 'hsl(var(--danger-surface))', color: 'hsl(var(--danger))' }}
+                >
                   {item?.erros ?? 0}x errada
                 </span>
               </div>
 
-              <p className="text-sm leading-relaxed mb-3 line-clamp-3">{item?.question?.enunciado ?? ''}</p>
+              <p className="font-reading type-body measure-reading line-clamp-3 mb-3 text-foreground">{item?.question?.enunciado ?? ''}</p>
 
-              <div className="flex items-center gap-4 text-xs mb-3">
-                <span className="flex items-center gap-1 text-red-600">
+              <div className="flex flex-wrap items-center gap-4 type-meta mb-3">
+                <span className="flex items-center gap-1" style={{ color: 'hsl(var(--danger))' }}>
                   <XCircle className="w-3.5 h-3.5" /> Sua: {item?.respostaDada ?? '-'}
                 </span>
-                <span className="flex items-center gap-1 text-green-600">
+                <span className="flex items-center gap-1" style={{ color: 'hsl(var(--success))' }}>
                   <CheckCircle2 className="w-3.5 h-3.5" /> Correta: {item?.question?.respostaCorreta ?? '-'}
                 </span>
                 <span className="text-muted-foreground">
@@ -142,15 +151,15 @@ export default function CadernoErrosPage() {
               </div>
 
               {item?.explicacaoEstudante && (
-                <div className="bg-primary/5 rounded-lg p-3 mb-3">
-                  <p className="text-xs font-medium text-primary mb-1">Sua explicação (Feynman):</p>
-                  <p className="text-xs text-foreground/70">{item.explicacaoEstudante}</p>
+                <div className="bg-primary/5 rounded-[var(--radius-control)] p-3 mb-3">
+                  <p className="type-caption text-primary mb-1">Sua explicação (Feynman)</p>
+                  <p className="font-reading type-meta measure-reading text-foreground/80">{item.explicacaoEstudante}</p>
                 </div>
               )}
 
               <button
                 onClick={() => router.push(`/treino?mode=erros&questionIds=${item?.question?.id}`)}
-                className="flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary text-xs font-medium rounded-lg hover:bg-primary/20 transition"
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary type-meta font-medium rounded-[var(--radius-control)] hover:bg-primary/20 t-colors"
               >
                 <RefreshCcw className="w-3 h-3" /> Revisar até acertar
               </button>
