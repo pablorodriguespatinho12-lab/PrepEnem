@@ -95,12 +95,13 @@ export default function UploadPage() {
   }, {} as Record<string, any[]>) ?? {};
 
   return (
-    <div className="p-4 md:p-8 max-w-4xl mx-auto">
+    <div className="px-4 py-6 md:px-8 md:py-10 max-w-4xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-        <h1 className="font-display text-2xl md:text-3xl font-bold tracking-tight mb-2">
-          📄 Importar Questões de Vestibular
-        </h1>
-        <p className="text-muted-foreground mb-8">
+        <div className="flex items-center gap-3 mb-2">
+          <Upload className="w-7 h-7 text-primary" />
+          <h1 className="font-display type-headline font-bold">Importar Questões de Vestibular</h1>
+        </div>
+        <p className="type-body measure-reading text-muted-foreground mb-8">
           Envie o PDF da prova e o PDF do gabarito. A IA vai extrair as questões e cruzar com o gabarito oficial para garantir as respostas corretas.
         </p>
       </motion.div>
@@ -112,9 +113,9 @@ export default function UploadPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
         >
-          <label className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3 block">📝 Prova (Questões)</label>
+          <label className="type-caption text-muted-foreground mb-3 block">Prova (Questões)</label>
           <div
-            className={`border-2 border-dashed rounded-2xl p-6 md:p-8 text-center transition-colors cursor-pointer min-h-[180px] flex items-center justify-center ${
+            className={`border-2 border-dashed rounded-[var(--radius-surface)] p-6 md:p-8 text-center t-colors cursor-pointer min-h-[180px] flex items-center justify-center ${
               provaFile ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50 hover:bg-muted/30'
             }`}
             onClick={() => provaRef.current?.click()}
@@ -124,19 +125,19 @@ export default function UploadPage() {
             <input ref={provaRef} type="file" accept=".pdf" onChange={handleFileChange('prova')} className="hidden" />
             {provaFile ? (
               <div className="flex flex-col items-center gap-2">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center">
                   <FileText className="w-6 h-6 text-primary" />
                 </div>
-                <p className="font-display text-sm font-semibold truncate max-w-full">{provaFile.name}</p>
-                <p className="text-xs text-muted-foreground">{(provaFile.size / 1024 / 1024).toFixed(2)} MB</p>
+                <p className="font-display type-meta font-semibold truncate max-w-full">{provaFile.name}</p>
+                <p className="type-meta text-muted-foreground">{(provaFile.size / 1024 / 1024).toFixed(2)} MB</p>
               </div>
             ) : (
               <div className="flex flex-col items-center gap-2">
-                <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center">
+                <div className="w-12 h-12 rounded-[var(--radius-control)] bg-muted flex items-center justify-center">
                   <Upload className="w-6 h-6 text-muted-foreground" />
                 </div>
-                <p className="font-display text-sm font-semibold">Arraste o PDF da prova</p>
-                <p className="text-xs text-muted-foreground">ou clique para selecionar</p>
+                <p className="font-display type-meta font-semibold">Arraste o PDF da prova</p>
+                <p className="type-meta text-muted-foreground">ou clique para selecionar</p>
               </div>
             )}
           </div>
@@ -148,10 +149,10 @@ export default function UploadPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15 }}
         >
-          <label className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3 block">✅ Gabarito (Respostas)</label>
+          <label className="type-caption text-muted-foreground mb-3 block">Gabarito (Respostas)</label>
           <div
-            className={`border-2 border-dashed rounded-2xl p-6 md:p-8 text-center transition-colors cursor-pointer min-h-[180px] flex items-center justify-center ${
-              gabaritoFile ? 'border-green-500 bg-green-500/5' : 'border-border hover:border-green-500/50 hover:bg-muted/30'
+            className={`border-2 border-dashed rounded-[var(--radius-surface)] p-6 md:p-8 text-center t-colors cursor-pointer min-h-[180px] flex items-center justify-center ${
+              gabaritoFile ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50 hover:bg-muted/30'
             }`}
             onClick={() => gabaritoRef.current?.click()}
             onDragOver={(e) => e.preventDefault()}
@@ -160,19 +161,19 @@ export default function UploadPage() {
             <input ref={gabaritoRef} type="file" accept=".pdf" onChange={handleFileChange('gabarito')} className="hidden" />
             {gabaritoFile ? (
               <div className="flex flex-col items-center gap-2">
-                <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center">
-                  <FileSearch className="w-6 h-6 text-green-600" />
+                <div className="w-12 h-12 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center">
+                  <FileSearch className="w-6 h-6 text-primary" />
                 </div>
-                <p className="font-display text-sm font-semibold truncate max-w-full">{gabaritoFile.name}</p>
-                <p className="text-xs text-muted-foreground">{(gabaritoFile.size / 1024 / 1024).toFixed(2)} MB</p>
+                <p className="font-display type-meta font-semibold truncate max-w-full">{gabaritoFile.name}</p>
+                <p className="type-meta text-muted-foreground">{(gabaritoFile.size / 1024 / 1024).toFixed(2)} MB</p>
               </div>
             ) : (
               <div className="flex flex-col items-center gap-2">
-                <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center">
+                <div className="w-12 h-12 rounded-[var(--radius-control)] bg-muted flex items-center justify-center">
                   <FileSearch className="w-6 h-6 text-muted-foreground" />
                 </div>
-                <p className="font-display text-sm font-semibold">Arraste o PDF do gabarito</p>
-                <p className="text-xs text-muted-foreground">ou clique para selecionar</p>
+                <p className="font-display type-meta font-semibold">Arraste o PDF do gabarito</p>
+                <p className="type-meta text-muted-foreground">ou clique para selecionar</p>
               </div>
             )}
           </div>
@@ -184,7 +185,7 @@ export default function UploadPage() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-6 flex justify-center">
           <button
             onClick={processFiles}
-            className="flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-display font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg"
+            className="flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-[var(--radius-control)] font-display font-semibold type-lead t-lift hover:-translate-y-px shadow-elev-2 hover:shadow-elev-3"
           >
             <BookOpen className="w-5 h-5" />
             Processar com IA
@@ -199,14 +200,14 @@ export default function UploadPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            className="mt-8 bg-card rounded-xl p-8 shadow-sm border border-border text-center"
+            className="mt-8 surface-1 rounded-[var(--radius-surface)] p-8 text-center"
           >
             <Loader2 className="w-10 h-10 animate-spin text-primary mx-auto mb-4" />
-            <p className="font-display text-lg font-semibold">{progress}</p>
-            <p className="text-sm text-muted-foreground mt-2">
+            <p className="type-lead font-semibold">{progress}</p>
+            <p className="type-meta text-muted-foreground mt-2">
               A IA está lendo o gabarito, extraindo questões e cruzando as respostas...
             </p>
-            <p className="text-xs text-muted-foreground mt-1">Isso pode levar de 1 a 5 minutos dependendo do tamanho da prova</p>
+            <p className="type-meta text-muted-foreground mt-1">Isso pode levar de 1 a 5 minutos dependendo do tamanho da prova</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -215,21 +216,24 @@ export default function UploadPage() {
       <AnimatePresence>
         {result && !result.error && (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mt-8 space-y-6">
-            <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-6 flex items-center gap-4">
-              <CheckCircle2 className="w-8 h-8 text-green-600 flex-shrink-0" />
+            <div
+              className="rounded-[var(--radius-surface)] border p-6 flex items-center gap-4"
+              style={{ backgroundColor: 'hsl(var(--success-surface))', borderColor: 'hsl(var(--success-border))' }}
+            >
+              <CheckCircle2 className="w-8 h-8 flex-shrink-0" style={{ color: 'hsl(var(--success))' }} />
               <div>
-                <p className="font-display text-lg font-bold text-green-700">{result.message}</p>
+                <p className="font-display type-lead font-bold" style={{ color: 'hsl(var(--success))' }}>{result.message}</p>
                 {result.gabaritoUsado && (
-                  <p className="text-sm text-green-600 mt-1">✅ Respostas cruzadas com gabarito oficial</p>
+                  <p className="type-meta mt-1" style={{ color: 'hsl(var(--success))' }}>Respostas cruzadas com gabarito oficial</p>
                 )}
                 {result.anuladas > 0 && (
-                  <p className="text-sm text-orange-600 mt-1">
+                  <p className="type-meta text-amber-600 mt-1">
                     <AlertTriangle className="w-4 h-4 inline mr-1" />
                     {result.anuladas} questão(ões) anulada(s) no gabarito foram ignoradas
                   </p>
                 )}
                 {result.erros && result.erros.length > 0 && (
-                  <p className="text-sm text-orange-600 mt-1">
+                  <p className="type-meta text-amber-600 mt-1">
                     <AlertTriangle className="w-4 h-4 inline mr-1" />
                     {result.erros.length} questões com problemas foram ignoradas
                   </p>
@@ -237,15 +241,15 @@ export default function UploadPage() {
               </div>
             </div>
 
-            <div className="bg-card rounded-xl p-6 shadow-sm border border-border">
-              <h3 className="font-display text-lg font-semibold mb-4">Questões por Matéria</h3>
+            <div className="surface-1 rounded-[var(--radius-surface)] p-6">
+              <h3 className="font-display type-lead font-semibold mb-4">Questões por Matéria</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {Object.entries(groupedByMateria).map(([materia, qs]: [string, any]) => (
-                  <div key={materia} className="flex items-center gap-3 p-3 rounded-lg bg-muted/50">
+                  <div key={materia} className="flex items-center gap-3 p-3 rounded-[var(--radius-control)] bg-muted/50">
                     <div className="w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: (materiaColors as any)[materia] ?? '#888' }} />
                     <div>
-                      <p className="text-sm font-medium">{materia}</p>
-                      <p className="text-xs text-muted-foreground">{qs.length} questões</p>
+                      <p className="type-meta font-medium">{materia}</p>
+                      <p className="type-meta text-muted-foreground" data-numeric>{qs.length} questões</p>
                     </div>
                   </div>
                 ))}
@@ -255,14 +259,14 @@ export default function UploadPage() {
             <div className="flex flex-wrap gap-3">
               <button
                 onClick={() => { setProvaFile(null); setGabaritoFile(null); setResult(null); }}
-                className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-xl font-medium hover:opacity-90 transition-opacity"
+                className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-[var(--radius-control)] font-medium t-lift hover:-translate-y-px shadow-elev-1 hover:shadow-elev-2"
               >
                 <Upload className="w-4 h-4" />
                 Importar outra prova
               </button>
               <button
                 onClick={() => window.location.href = '/banco-questoes'}
-                className="flex items-center gap-2 bg-card border border-border px-6 py-3 rounded-xl font-medium hover:bg-muted transition-colors"
+                className="flex items-center gap-2 bg-card border border-border px-6 py-3 rounded-[var(--radius-control)] font-medium hover:bg-muted t-colors"
               >
                 <BookOpen className="w-4 h-4" />
                 Ver Banco de Questões
@@ -277,12 +281,13 @@ export default function UploadPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mt-8 bg-red-500/10 border border-red-500/20 rounded-xl p-6 flex items-center gap-4"
+          className="mt-8 rounded-[var(--radius-surface)] border p-6 flex items-center gap-4"
+          style={{ backgroundColor: 'hsl(var(--danger-surface))', borderColor: 'hsl(var(--danger-border))' }}
         >
-          <XCircle className="w-8 h-8 text-red-600 flex-shrink-0" />
+          <XCircle className="w-8 h-8 flex-shrink-0" style={{ color: 'hsl(var(--danger))' }} />
           <div>
-            <p className="font-display font-bold text-red-700">{result.error}</p>
-            <p className="text-sm text-muted-foreground mt-1">Verifique se os PDFs estão corretos e tente novamente</p>
+            <p className="font-display font-bold" style={{ color: 'hsl(var(--danger))' }}>{result.error}</p>
+            <p className="type-meta text-muted-foreground mt-1">Verifique se os PDFs estão corretos e tente novamente</p>
           </div>
         </motion.div>
       )}
@@ -292,16 +297,16 @@ export default function UploadPage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
-        className="mt-8 bg-card rounded-xl p-6 shadow-sm border border-border"
+        className="mt-8 surface-1 rounded-[var(--radius-surface)] p-6"
       >
-        <h3 className="font-display text-base font-semibold mb-3">💡 Como usar</h3>
-        <ul className="space-y-2 text-sm text-foreground/70">
+        <h3 className="font-display type-body font-semibold mb-3">Como usar</h3>
+        <ul className="space-y-2 type-meta text-foreground/70">
           <li>• <strong className="text-foreground">Prova (PV):</strong> o PDF com as questões da prova ENEM</li>
           <li>• <strong className="text-foreground">Gabarito (GB):</strong> o PDF oficial com as respostas corretas</li>
           <li>• A IA extrai as questões e cruza com o gabarito para garantir respostas 100% corretas</li>
           <li>• Questões anuladas no gabarito são automaticamente ignoradas</li>
           <li>• Provas de anos diferentes: basta importar cada par (prova + gabarito) separadamente</li>
-          <li>• Arquivos disponíveis em <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos" target="_blank" rel="noopener" className="text-blue-600 dark:text-blue-400 underline font-medium">gov.br/inep</a></li>
+          <li>• Arquivos disponíveis em <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos" target="_blank" rel="noopener" className="text-primary underline font-medium">gov.br/inep</a></li>
         </ul>
       </motion.div>
     </div>

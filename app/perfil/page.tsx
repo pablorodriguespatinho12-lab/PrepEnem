@@ -62,13 +62,13 @@ export default function PerfilPage() {
   };
 
   return (
-    <div className="p-4 md:p-8 max-w-2xl mx-auto">
+    <div className="px-4 py-6 md:px-8 md:py-10 max-w-2xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <div className="flex items-center gap-3 mb-2">
           <Settings className="w-6 h-6 text-primary" />
-          <h1 className="font-display text-2xl font-bold tracking-tight">Perfil & Configurações</h1>
+          <h1 className="font-display type-headline font-bold">Perfil & Configurações</h1>
         </div>
-        <p className="text-sm text-muted-foreground mb-8">Personalize sua experiência de estudo</p>
+        <p className="type-meta text-muted-foreground mb-8">Personalize sua experiência de estudo</p>
       </motion.div>
 
       {/* Profile Info */}
@@ -76,34 +76,34 @@ export default function PerfilPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
-        className="bg-card rounded-xl p-6 shadow-sm border border-border mb-6"
+        className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6"
       >
         <div className="flex items-center gap-2 mb-4">
           <User className="w-5 h-5 text-primary" />
-          <h2 className="font-display text-base font-semibold">Informações Pessoais</h2>
+          <h2 className="font-display type-body font-semibold">Informações Pessoais</h2>
         </div>
 
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-1.5">Nome</label>
+            <label className="block type-meta font-medium mb-1.5">Nome</label>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-2.5 border border-input rounded-lg bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              className="w-full px-4 py-2.5 border border-input rounded-[var(--radius-control)] bg-background type-meta focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1.5">Email</label>
+            <label className="block type-meta font-medium mb-1.5">Email</label>
             <input
               type="email"
               value={session?.user?.email ?? ''}
               disabled
-              className="w-full px-4 py-2.5 border border-input rounded-lg bg-muted text-sm text-muted-foreground"
+              className="w-full px-4 py-2.5 border border-input rounded-[var(--radius-control)] bg-muted type-meta text-muted-foreground"
             />
           </div>
           {profile?.createdAt && (
-            <p className="text-xs text-muted-foreground">
+            <p className="type-meta text-muted-foreground">
               Membro desde {new Date(profile.createdAt).toLocaleDateString('pt-BR')}
             </p>
           )}
@@ -115,11 +115,11 @@ export default function PerfilPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="bg-card rounded-xl p-6 shadow-sm border border-border mb-6"
+        className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6"
       >
         <div className="flex items-center gap-2 mb-4">
           <Palette className="w-5 h-5 text-primary" />
-          <h2 className="font-display text-base font-semibold">Tema de Cores</h2>
+          <h2 className="font-display type-body font-semibold">Tema de Cores</h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -127,17 +127,18 @@ export default function PerfilPage() {
             <button
               key={theme.key}
               onClick={() => setSelectedTheme(theme.key)}
-              className={`relative flex flex-col items-center gap-2 p-4 rounded-xl border-2 transition-all ${
+              data-state={selectedTheme === theme.key ? 'selecionado' : 'repouso'}
+              className={`relative flex flex-col items-center gap-2 p-4 rounded-[var(--radius-control)] border t-colors ${
                 selectedTheme === theme.key
-                  ? 'border-primary shadow-md'
-                  : 'border-border hover:border-primary/30'
+                  ? 'border-primary bg-primary/10'
+                  : 'border-border hover:border-primary/40 hover:bg-muted/40'
               }`}
             >
               <div
                 className="w-10 h-10 rounded-full shadow-inner"
                 style={{ backgroundColor: theme.color }}
               />
-              <span className="text-sm font-medium">{theme.label}</span>
+              <span className="type-meta font-medium">{theme.label}</span>
               {selectedTheme === theme.key && (
                 <div className="absolute top-2 right-2 w-5 h-5 rounded-full bg-primary flex items-center justify-center">
                   <Check className="w-3 h-3 text-primary-foreground" />
@@ -153,24 +154,24 @@ export default function PerfilPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-        className="bg-card rounded-xl p-6 shadow-sm border border-border mb-6"
+        className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6"
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             {darkMode === 'dark' ? <Moon className="w-5 h-5 text-primary" /> : <Sun className="w-5 h-5 text-primary" />}
             <div>
-              <h2 className="font-display text-base font-semibold">Modo Escuro</h2>
-              <p className="text-xs text-muted-foreground">Altere entre modo claro e escuro</p>
+              <h2 className="font-display type-body font-semibold">Modo Escuro</h2>
+              <p className="type-meta text-muted-foreground">Altere entre modo claro e escuro</p>
             </div>
           </div>
           <button
             onClick={() => setDarkMode(darkMode === 'dark' ? 'light' : 'dark')}
-            className={`relative w-14 h-7 rounded-full transition-colors duration-300 ${
+            className={`relative w-14 h-7 rounded-full t-colors ${
               darkMode === 'dark' ? 'bg-primary' : 'bg-muted'
             }`}
           >
             <motion.div
-              className="absolute top-0.5 w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center"
+              className="absolute top-0.5 w-6 h-6 bg-white rounded-full shadow-elev-1 flex items-center justify-center"
               animate={{ left: darkMode === 'dark' ? '30px' : '2px' }}
               transition={{ type: 'spring', stiffness: 500, damping: 30 }}
             >
@@ -185,24 +186,24 @@ export default function PerfilPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.35 }}
-        className="bg-card rounded-xl p-6 shadow-sm border border-border mb-6"
+        className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6"
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             {soundEnabled ? <Volume2 className="w-5 h-5 text-primary" /> : <VolumeX className="w-5 h-5 text-primary" />}
             <div>
-              <h2 className="font-display text-base font-semibold">Som</h2>
-              <p className="text-xs text-muted-foreground">Feedback sonoro discreto em acerto, erro, card salvo e sessão concluída</p>
+              <h2 className="font-display type-body font-semibold">Som</h2>
+              <p className="type-meta text-muted-foreground">Feedback sonoro discreto em acerto, erro, card salvo e sessão concluída</p>
             </div>
           </div>
           <button
             onClick={() => setSoundEnabled(!soundEnabled)}
-            className={`relative w-14 h-7 rounded-full transition-colors duration-300 flex-shrink-0 ${
+            className={`relative w-14 h-7 rounded-full t-colors flex-shrink-0 ${
               soundEnabled ? 'bg-primary' : 'bg-muted'
             }`}
           >
             <motion.div
-              className="absolute top-0.5 w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center"
+              className="absolute top-0.5 w-6 h-6 bg-white rounded-full shadow-elev-1 flex items-center justify-center"
               animate={{ left: soundEnabled ? '30px' : '2px' }}
               transition={{ type: 'spring', stiffness: 500, damping: 30 }}
             >
@@ -217,14 +218,14 @@ export default function PerfilPage() {
         <button
           onClick={handleSave}
           disabled={saving}
-          className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:opacity-90 transition shadow-md disabled:opacity-50"
+          className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-2 t-lift enabled:hover:-translate-y-px enabled:hover:shadow-elev-3 disabled:opacity-50"
         >
           <Save className="w-4 h-4" />
           {saving ? 'Salvando...' : 'Salvar Alterações'}
         </button>
         <button
           onClick={() => signOut({ callbackUrl: '/login' })}
-          className="flex items-center gap-2 px-4 py-2.5 bg-destructive/10 text-destructive rounded-lg font-medium text-sm hover:bg-destructive/20 transition"
+          className="flex items-center gap-2 px-4 py-2.5 bg-muted text-foreground rounded-[var(--radius-control)] font-medium type-meta hover:bg-secondary t-colors"
         >
           <LogOut className="w-4 h-4" /> Sair
         </button>

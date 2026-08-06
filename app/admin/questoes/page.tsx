@@ -120,19 +120,21 @@ export default function AdminQuestoesPage() {
   if (!isAdmin) return null;
 
   return (
-    <div className="p-4 md:p-8 max-w-5xl mx-auto">
+    <div className="px-4 py-6 md:px-8 md:py-10 max-w-5xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
             <ShieldCheck className="w-6 h-6 text-primary" />
             <div>
-              <h1 className="font-display text-2xl font-bold tracking-tight">Gerenciar Questões</h1>
-              <p className="text-sm text-muted-foreground">{questions?.length ?? 0} questões cadastradas</p>
+              <h1 className="font-display type-headline font-bold">Gerenciar Questões</h1>
+              <p className="type-meta text-muted-foreground">
+                <span data-numeric>{questions?.length ?? 0}</span> questões cadastradas
+              </p>
             </div>
           </div>
           <button
             onClick={() => { setShowForm(true); setEditId(null); setForm({ ...emptyQuestion }); }}
-            className="flex items-center gap-2 px-4 py-2.5 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:opacity-90 transition shadow-md"
+            className="flex items-center gap-2 px-4 py-2.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] type-meta font-medium t-lift hover:-translate-y-px shadow-elev-2 hover:shadow-elev-3"
           >
             <Plus className="w-4 h-4" /> Nova Questão
           </button>
@@ -154,96 +156,96 @@ export default function AdminQuestoesPage() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 20 }}
               onClick={(e: React.MouseEvent) => e.stopPropagation()}
-              className="bg-card rounded-xl p-6 shadow-lg border border-border w-full max-w-2xl mb-8"
+              className="surface-3 rounded-[var(--radius-container)] p-6 w-full max-w-2xl mb-8"
             >
               <div className="flex items-center justify-between mb-4">
-                <h2 className="font-display text-lg font-semibold">
+                <h2 className="font-display type-lead font-semibold">
                   {editId ? 'Editar Questão' : 'Nova Questão'}
                 </h2>
-                <button onClick={() => setShowForm(false)} className="p-1 hover:bg-muted rounded">
+                <button onClick={() => setShowForm(false)} className="p-1 rounded-[var(--radius-control)] hover:bg-muted t-colors">
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
               <div className="space-y-3">
                 <div>
-                  <label className="text-xs font-medium">Enunciado *</label>
+                  <label className="type-meta font-medium">Enunciado *</label>
                   <textarea
                     value={form.enunciado}
                     onChange={(e) => setForm({ ...form, enunciado: e.target.value })}
-                    className="w-full p-3 border border-input rounded-lg text-sm bg-background resize-none focus:outline-none focus:ring-2 focus:ring-ring"
+                    className="w-full p-3 border border-input rounded-[var(--radius-control)] type-meta bg-background resize-none focus:outline-none focus:ring-2 focus:ring-ring"
                     rows={4}
                   />
                 </div>
 
                 {['A', 'B', 'C', 'D', 'E'].map((letter) => (
                   <div key={letter}>
-                    <label className="text-xs font-medium">Alternativa {letter} *</label>
+                    <label className="type-meta font-medium">Alternativa {letter} *</label>
                     <input
                       value={(form as any)[`alternativa${letter}`] ?? ''}
                       onChange={(e) => setForm({ ...form, [`alternativa${letter}`]: e.target.value })}
-                      className="w-full px-3 py-2 border border-input rounded-lg text-sm bg-background focus:outline-none focus:ring-2 focus:ring-ring"
+                      className="w-full px-3 py-2 border border-input rounded-[var(--radius-control)] type-meta bg-background focus:outline-none focus:ring-2 focus:ring-ring"
                     />
                   </div>
                 ))}
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                   <div>
-                    <label className="text-xs font-medium">Resposta Correta</label>
+                    <label className="type-meta font-medium">Resposta Correta</label>
                     <select
                       value={form.respostaCorreta}
                       onChange={(e) => setForm({ ...form, respostaCorreta: e.target.value })}
-                      className="w-full px-3 py-2 border border-input rounded-lg text-sm bg-background"
+                      className="w-full px-3 py-2 border border-input rounded-[var(--radius-control)] type-meta bg-background"
                     >
                       {['A', 'B', 'C', 'D', 'E'].map((l) => <option key={l} value={l}>{l}</option>)}
                     </select>
                   </div>
                   <div>
-                    <label className="text-xs font-medium">Matéria</label>
+                    <label className="type-meta font-medium">Matéria</label>
                     <select
                       value={form.materia}
                       onChange={(e) => setForm({ ...form, materia: e.target.value })}
-                      className="w-full px-3 py-2 border border-input rounded-lg text-sm bg-background"
+                      className="w-full px-3 py-2 border border-input rounded-[var(--radius-control)] type-meta bg-background"
                     >
                       {MATERIAS.map((m) => <option key={m} value={m}>{m}</option>)}
                     </select>
                   </div>
                   <div>
-                    <label className="text-xs font-medium">Dificuldade</label>
+                    <label className="type-meta font-medium">Dificuldade</label>
                     <select
                       value={form.dificuldade}
                       onChange={(e) => setForm({ ...form, dificuldade: e.target.value })}
-                      className="w-full px-3 py-2 border border-input rounded-lg text-sm bg-background"
+                      className="w-full px-3 py-2 border border-input rounded-[var(--radius-control)] type-meta bg-background"
                     >
                       {DIFICULDADES.map((d) => <option key={d} value={d}>{DIFICULDADE_LABELS[d]}</option>)}
                     </select>
                   </div>
                   <div>
-                    <label className="text-xs font-medium">Subtema</label>
+                    <label className="type-meta font-medium">Subtema</label>
                     <input
                       value={form.subtema}
                       onChange={(e) => setForm({ ...form, subtema: e.target.value })}
-                      className="w-full px-3 py-2 border border-input rounded-lg text-sm bg-background"
+                      className="w-full px-3 py-2 border border-input rounded-[var(--radius-control)] type-meta bg-background"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-xs font-medium">Explicação</label>
+                  <label className="type-meta font-medium">Explicação</label>
                   <textarea
                     value={form.explicacao}
                     onChange={(e) => setForm({ ...form, explicacao: e.target.value })}
-                    className="w-full p-3 border border-input rounded-lg text-sm bg-background resize-none focus:outline-none focus:ring-2 focus:ring-ring"
+                    className="w-full p-3 border border-input rounded-[var(--radius-control)] type-meta bg-background resize-none focus:outline-none focus:ring-2 focus:ring-ring"
                     rows={3}
                   />
                 </div>
 
                 <div>
-                  <label className="text-xs font-medium">Origem</label>
+                  <label className="type-meta font-medium">Origem</label>
                   <input
                     value={form.origem}
                     onChange={(e) => setForm({ ...form, origem: e.target.value })}
-                    className="w-full px-3 py-2 border border-input rounded-lg text-sm bg-background"
+                    className="w-full px-3 py-2 border border-input rounded-[var(--radius-control)] type-meta bg-background"
                     placeholder="Ex: ENEM 2023, Elaboração própria"
                   />
                 </div>
@@ -252,14 +254,14 @@ export default function AdminQuestoesPage() {
               <div className="flex gap-3 mt-4">
                 <button
                   onClick={() => setShowForm(false)}
-                  className="flex-1 py-2.5 bg-muted rounded-lg text-sm font-medium hover:bg-muted/80 transition"
+                  className="flex-1 py-2.5 bg-muted rounded-[var(--radius-control)] type-meta font-medium hover:bg-muted/80 t-colors"
                 >
                   Cancelar
                 </button>
                 <button
                   onClick={handleSave}
                   disabled={saving}
-                  className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:opacity-90 transition shadow-md disabled:opacity-50"
+                  className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] type-meta font-medium t-lift enabled:hover:-translate-y-px shadow-elev-2 enabled:hover:shadow-elev-3 disabled:opacity-50"
                 >
                   <Save className="w-4 h-4" /> {saving ? 'Salvando...' : 'Salvar'}
                 </button>
@@ -278,13 +280,13 @@ export default function AdminQuestoesPage() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Buscar questões..."
-            className="w-full pl-10 pr-4 py-2.5 border border-input rounded-lg bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            className="w-full pl-10 pr-4 py-2.5 border border-input rounded-[var(--radius-control)] bg-background type-meta focus:outline-none focus:ring-2 focus:ring-ring"
           />
         </div>
         <select
           value={materiaFilter}
           onChange={(e) => setMateriaFilter(e.target.value)}
-          className="px-3 py-2.5 border border-input rounded-lg bg-background text-sm"
+          className="px-3 py-2.5 border border-input rounded-[var(--radius-control)] bg-background type-meta"
         >
           <option value="">Todas</option>
           {MATERIAS.map((m) => <option key={m} value={m}>{m}</option>)}
@@ -304,43 +306,42 @@ export default function AdminQuestoesPage() {
               initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2 }}
-              className="bg-card rounded-xl p-4 shadow-sm border border-border hover:shadow-md transition-shadow"
+              className="surface-1 rounded-[var(--radius-surface)] p-4 t-lift hover:shadow-elev-2"
             >
               <div className="flex items-start justify-between gap-3">
                 <div className="flex-1 min-w-0">
-                  <div className="flex flex-wrap gap-2 mb-2">
-                    <span className="px-2 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1.5 bg-slate-100 text-slate-900 dark:bg-slate-700 dark:text-slate-100 border border-slate-300 dark:border-slate-600">
+                  <div className="flex flex-wrap gap-2 mb-2 type-caption">
+                    <span className="px-2 py-0.5 rounded-[var(--radius-data)] inline-flex items-center gap-1.5 bg-muted text-foreground">
                       <span className="w-2 h-2 rounded-full" style={{ backgroundColor: materiaColors[q?.materia] ?? '#666' }} />
                       {q?.materia}
                     </span>
-                    <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-slate-200 text-slate-800 dark:bg-slate-700 dark:text-slate-200">
+                    <span className="px-2 py-0.5 rounded-[var(--radius-data)] bg-muted text-muted-foreground">
                       {q?.subtema}
                     </span>
-                    <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${
-                      q?.dificuldade === 'facil' ? 'bg-green-100 text-green-800 dark:bg-green-500/20 dark:text-green-300' :
-                      q?.dificuldade === 'dificil' ? 'bg-red-100 text-red-800 dark:bg-red-500/20 dark:text-red-300' :
-                      'bg-amber-100 text-amber-800 dark:bg-yellow-500/20 dark:text-yellow-300'
-                    }`}>
+                    <span className="px-2 py-0.5 rounded-[var(--radius-data)] bg-muted text-muted-foreground">
                       {DIFICULDADE_LABELS[q?.dificuldade] ?? q?.dificuldade}
                     </span>
-                    <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-green-200 text-green-900 dark:bg-green-500/20 dark:text-green-300">
+                    <span
+                      className="px-2 py-0.5 rounded-[var(--radius-data)] font-semibold"
+                      style={{ backgroundColor: 'hsl(var(--success-surface))', color: 'hsl(var(--success))' }}
+                    >
                       Resp: {q?.respostaCorreta}
                     </span>
                   </div>
-                  <p className="text-sm text-foreground line-clamp-2">{q?.enunciado}</p>
+                  <p className="type-meta text-foreground line-clamp-2">{q?.enunciado}</p>
                 </div>
                 <div className="flex gap-1 flex-shrink-0">
                   <button
                     onClick={() => handleEdit(q)}
-                    className="p-2 rounded-lg hover:bg-muted transition"
+                    className="p-2 rounded-[var(--radius-control)] hover:bg-muted t-colors"
                   >
                     <Edit2 className="w-4 h-4 text-muted-foreground" />
                   </button>
                   <button
                     onClick={() => handleDelete(q?.id)}
-                    className="p-2 rounded-lg hover:bg-destructive/10 transition"
+                    className="p-2 rounded-[var(--radius-control)] hover:bg-muted t-colors"
                   >
-                    <Trash2 className="w-4 h-4 text-destructive" />
+                    <Trash2 className="w-4 h-4 text-muted-foreground" />
                   </button>
                 </div>
               </div>

@@ -51,35 +51,31 @@ export default function LoginPage() {
           transition={{ delay: 0.15, duration: 0.5 }}
           className="flex items-center justify-center gap-3 mb-8"
         >
-          <motion.div
-            className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center shadow-lg"
-            animate={{ scale: [1, 1.05, 1] }}
-            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-          >
+          <div className="w-12 h-12 rounded-[var(--radius-control)] bg-primary flex items-center justify-center shadow-elev-2">
             <GraduationCap className="w-7 h-7 text-primary-foreground" />
-          </motion.div>
-          <h1 className="font-display text-3xl font-bold tracking-tight">PrepEnem</h1>
+          </div>
+          <h1 className="font-display type-display font-bold">PrepEnem</h1>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
-          className="bg-card/80 backdrop-blur-xl rounded-xl shadow-lg border border-border p-8"
+          className="surface-2 rounded-[var(--radius-surface)] p-8"
         >
-          <h2 className="font-display text-xl font-semibold mb-1">Bem-vindo de volta!</h2>
-          <p className="text-sm text-muted-foreground mb-6">Faça login para continuar seus estudos</p>
+          <h2 className="font-display type-title font-semibold mb-1">Bem-vindo de volta!</h2>
+          <p className="type-meta text-muted-foreground mb-6">Faça login para continuar seus estudos</p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }}>
-              <label className="block text-sm font-medium mb-1.5">Nome de usuário</label>
+              <label className="block type-meta font-medium mb-1.5">Nome de usuário</label>
               <div className="relative">
                 <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <input
                   type="text"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2.5 border border-input rounded-lg bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-shadow"
+                  className="w-full pl-10 pr-4 py-2.5 border border-input rounded-[var(--radius-control)] bg-background type-meta focus:outline-none focus:ring-2 focus:ring-ring transition-[box-shadow] duration-short ease-out-quart"
                   placeholder="Seu nome de usuário"
                   autoComplete="username"
                 />
@@ -87,20 +83,20 @@ export default function LoginPage() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 }}>
-              <label className="block text-sm font-medium mb-1.5">Senha</label>
+              <label className="block type-meta font-medium mb-1.5">Senha</label>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <input
                   type={showPw ? 'text' : 'password'}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-10 pr-10 py-2.5 border border-input rounded-lg bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-shadow"
+                  className="w-full pl-10 pr-10 py-2.5 border border-input rounded-[var(--radius-control)] bg-background type-meta focus:outline-none focus:ring-2 focus:ring-ring transition-[box-shadow] duration-short ease-out-quart"
                   placeholder="Sua senha"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPw(!showPw)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground t-colors"
                 >
                   {showPw ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                 </button>
@@ -113,7 +109,7 @@ export default function LoginPage() {
                 disabled={loading}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full py-2.5 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:opacity-90 transition-all disabled:opacity-50 shadow-md shimmer-btn"
+                className="w-full py-2.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta hover:opacity-90 t-lift disabled:opacity-50 shadow-elev-2 hover:shadow-elev-3 hover:-translate-y-px"
               >
                 {loading ? 'Entrando...' : 'Entrar'}
               </motion.button>
