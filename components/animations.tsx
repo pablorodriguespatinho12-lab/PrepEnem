@@ -2,6 +2,7 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import confetti from 'canvas-confetti';
+import { Sparkles } from 'lucide-react';
 
 // === SCROLL PROGRESS BAR ===
 export function ScrollProgress() {
@@ -127,24 +128,28 @@ export function CelebrationOverlay({ show, message, subMessage, onClose }: { sho
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.5, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-            className="bg-card border border-border rounded-2xl p-8 text-center max-w-sm mx-4 shadow-2xl"
+            className="bg-[hsl(var(--surface-1))] border border-border rounded-[var(--radius-container)] p-8 text-center max-w-sm mx-4 shadow-elev-3"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Antes: um emoji em text-6xl. Emoji é trava do projeto. A celebração
+                agora vem da escala tipográfica e do filete, não do pictograma. */}
             <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: [0, 1.3, 1] }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="text-6xl mb-4"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.15, duration: 0.35 }}
+              className="flex items-center justify-center gap-2 mb-5"
             >
-              🎉
+              <span aria-hidden className="w-8 h-px bg-primary/50" />
+              <Sparkles className="w-5 h-5 text-primary" />
+              <span aria-hidden className="w-8 h-px bg-primary/50" />
             </motion.div>
-            <h2 className="text-2xl font-bold mb-2">{message}</h2>
-            {subMessage && <p className="text-muted-foreground">{subMessage}</p>}
+            <h2 className="font-display type-title font-semibold mb-2">{message}</h2>
+            {subMessage && <p className="type-body font-reading text-muted-foreground">{subMessage}</p>}
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
               onClick={onClose}
-              className="mt-6 px-6 py-2 bg-primary text-primary-foreground rounded-lg font-medium shimmer-btn"
+              className="mt-6 px-6 py-2 bg-primary text-primary-foreground rounded-[var(--radius-control)] type-meta font-medium shadow-elev-2"
             >
               Continuar
             </motion.button>

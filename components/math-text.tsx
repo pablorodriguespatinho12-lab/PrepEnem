@@ -55,8 +55,8 @@ export default function MathText({ text, className = '' }: MathTextProps) {
     // Convert markdown-style bold **...** to <strong>
     result = result.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
     // Convert markdown headers ### to styled divs
-    result = result.replace(/^### (.+)$/gm, '<div class="text-base font-bold mt-4 mb-2">$1</div>');
-    result = result.replace(/^## (.+)$/gm, '<div class="text-lg font-bold mt-4 mb-2">$1</div>');
+    result = result.replace(/^### (.+)$/gm, '<div class="type-lead font-display font-semibold mt-5 mb-2">$1</div>');
+    result = result.replace(/^## (.+)$/gm, '<div class="type-title font-display font-semibold mt-5 mb-2">$1</div>');
     // Convert bullet points
     result = result.replace(/^[\-\*] (.+)$/gm, '<div class="ml-4 flex gap-2"><span>•</span><span>$1</span></div>');
     // Convert newlines to <br>

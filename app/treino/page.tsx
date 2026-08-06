@@ -25,12 +25,6 @@ const difficultyLabel: Record<string, string> = {
   dificil: 'Difícil',
 };
 
-const difficultyColor: Record<string, string> = {
-  facil: 'bg-green-500/10 text-green-700',
-  medio: 'bg-yellow-500/10 text-yellow-700',
-  dificil: 'bg-red-500/10 text-red-700',
-};
-
 export default function TreinoPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -554,21 +548,21 @@ export default function TreinoPage() {
       <div className="p-4 md:p-8 max-w-3xl mx-auto">
         <motion.div initial={{ opacity: 1, y: 10 }} animate={{ opacity: 1, y: 0 }}>
           <div className="flex items-center gap-3 mb-2">
-            <button onClick={() => router.push('/dashboard')} className="p-2 rounded-lg hover:bg-muted transition">
+            <button onClick={() => router.push('/dashboard')} className="p-2 rounded-[var(--radius-control)] hover:bg-muted t-colors">
               <ChevronLeft className="w-5 h-5" />
             </button>
             <div>
-              <h1 className="font-display text-xl md:text-2xl font-bold flex items-center gap-2">
+              <h1 className="font-display type-title font-semibold flex items-center gap-2">
                 <GraduationCap className="w-6 h-6 text-primary" />
                 Revisão de Conceitos
               </h1>
-              <p className="text-sm text-muted-foreground">
-                {isFiltered ? `${filterMateria || 'Filtrado'}` : sessionSchedule ? `${sessionSchedule.dayName}` : 'Treino Diário'} — {questions.length} questões preparadas
+              <p className="type-meta text-muted-foreground">
+                {isFiltered ? `${filterMateria || 'Filtrado'}` : sessionSchedule ? `${sessionSchedule.dayName}` : 'Treino Diário'} — <span data-numeric>{questions.length}</span> questões preparadas
               </p>
               {sessionMaterias.length > 0 && !isFiltered && (
-                <div className="flex flex-wrap gap-1.5 mt-1">
+                <div className="flex flex-wrap gap-1.5 mt-1.5">
                   {sessionMaterias.map(m => (
-                    <span key={m} className="text-xs font-medium px-2 py-0.5 rounded-full bg-muted text-foreground" style={{ borderLeft: `3px solid ${materiaColors[m] ?? '#888'}` }}>
+                    <span key={m} className="type-caption px-2 py-0.5 rounded-[var(--radius-data)] bg-[hsl(var(--surface-2))] text-foreground" style={{ borderLeft: `3px solid ${materiaColors[m] ?? '#888'}` }}>
                       {m}
                     </span>
                   ))}
@@ -577,9 +571,11 @@ export default function TreinoPage() {
             </div>
           </div>
 
-          <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 mb-6 mt-4">
-            <p className="text-sm font-medium text-primary">
-              📖 Revise os conceitos antes de começar. Quando estiver pronto, clique em &quot;Começar Treino&quot;.
+          {/* Antes: caixa em primary/5 com emoji. Emoji é trava do projeto e a
+              caixa colorida decorava. Agora é filete + texto na serifada. */}
+          <div className="border-l-2 border-primary pl-4 py-1 mb-6 mt-5">
+            <p className="type-body font-reading text-muted-foreground measure-reading">
+              Revise os conceitos antes de começar. Quando estiver pronto, clique em &quot;Começar Treino&quot;.
             </p>
           </div>
         </motion.div>
@@ -588,10 +584,10 @@ export default function TreinoPage() {
         {resumoLoading ? (
           <div className="text-center py-12">
             <Loader2 className="w-8 h-8 animate-spin text-primary mx-auto mb-3" />
-            <p className="text-sm text-muted-foreground mb-4">Gerando resumo dos conteúdos...</p>
+            <p className="type-meta text-muted-foreground mb-4">Gerando resumo dos conteúdos...</p>
             <button
               onClick={() => setResumoDismissed(true)}
-              className="px-5 py-2.5 bg-primary text-primary-foreground rounded-xl font-medium text-sm hover:opacity-90 transition shadow-md inline-flex items-center gap-2"
+              className="px-5 py-2.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta hover:opacity-90 t-colors shadow-elev-1 inline-flex items-center gap-2"
             >
               <Play className="w-4 h-4" /> Pular e Começar Treino
             </button>
@@ -611,29 +607,28 @@ export default function TreinoPage() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.05 }}
-                  className="bg-card rounded-xl border border-border shadow-sm overflow-hidden"
+                  className="bg-[hsl(var(--surface-1))] rounded-[var(--radius-surface)] border border-border shadow-elev-1 overflow-hidden"
                 >
-                  {/* Header - always visible */}
+                  {/* Header - always visible. A cor da matéria virou filete
+                      vertical: como caixa pastel atrás do ícone ela decorava. */}
                   <button
                     onClick={() => toggleResumoExpand(key)}
-                    className="w-full flex items-center gap-3 p-4 text-left hover:bg-muted/30 transition-colors"
+                    className="w-full flex items-center gap-3 p-4 text-left hover:bg-[hsl(var(--surface-2))] t-colors"
                   >
-                    <div
-                      className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                      style={{ backgroundColor: `${materiaColors[resumo.materia] ?? '#888'}22` }}
-                    >
-                      {isExatas ? (
-                        <Calculator className="w-5 h-5" style={{ color: materiaColors[resumo.materia] ?? '#888' }} />
-                      ) : (
-                        <BookOpen className="w-5 h-5" style={{ color: materiaColors[resumo.materia] ?? '#888' }} />
-                      )}
+                    <span
+                      aria-hidden
+                      className="w-[3px] h-9 rounded-[var(--radius-data)] shrink-0"
+                      style={{ backgroundColor: materiaColors[resumo.materia] ?? '#888' }}
+                    />
+                    <div className="w-9 h-9 flex items-center justify-center shrink-0 text-muted-foreground">
+                      {isExatas ? <Calculator className="w-5 h-5" /> : <BookOpen className="w-5 h-5" />}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="font-display text-sm font-semibold">{resumo.materia}</p>
-                      <p className="text-xs text-muted-foreground">{resumo.subtema}</p>
+                      <p className="font-display type-body font-semibold">{resumo.materia}</p>
+                      <p className="type-meta text-muted-foreground">{resumo.subtema}</p>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-md">
+                      <span className="type-caption text-primary">
                         {isExpanded ? 'Ocultar' : 'Revelar'}
                       </span>
                       <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
@@ -654,13 +649,13 @@ export default function TreinoPage() {
                           {/* Conceitos */}
                           <div>
                             <div className="flex items-center gap-1.5 mb-2">
-                              <Lightbulb className="w-4 h-4 text-amber-500" />
-                              <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Conceitos-chave</span>
+                              <Lightbulb className="w-4 h-4 text-muted-foreground" />
+                              <span className="type-caption text-muted-foreground">Conceitos-chave</span>
                             </div>
-                            <ul className="space-y-1.5">
+                            <ul className="space-y-2 measure-reading">
                               {(resumo.conceitos ?? []).map((c: string, ci: number) => (
-                                <li key={ci} className="flex items-start gap-2 text-sm text-foreground/90">
-                                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                                <li key={ci} className="flex items-start gap-2.5 type-body font-reading text-foreground/90">
+                                  <span aria-hidden className="w-1 h-1 rounded-full bg-primary mt-[0.7em] shrink-0" />
                                   {c}
                                 </li>
                               ))}
@@ -671,12 +666,12 @@ export default function TreinoPage() {
                           {(resumo.formulas?.length ?? 0) > 0 && (
                             <div>
                               <div className="flex items-center gap-1.5 mb-2">
-                                <FlaskConical className="w-4 h-4 text-primary" />
-                                <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Fórmulas</span>
+                                <FlaskConical className="w-4 h-4 text-muted-foreground" />
+                                <span className="type-caption text-muted-foreground">Fórmulas</span>
                               </div>
-                              <div className="bg-muted/50 rounded-lg p-3 space-y-1">
+                              <div className="bg-[hsl(var(--surface-2))] rounded-[var(--radius-control)] p-3 space-y-1">
                                 {(resumo.formulas ?? []).map((f: string, fi: number) => (
-                                  <p key={fi} className="text-sm font-mono text-foreground">{f}</p>
+                                  <p key={fi} className="type-meta font-mono text-foreground" data-numeric>{f}</p>
                                 ))}
                               </div>
                             </div>
@@ -684,10 +679,9 @@ export default function TreinoPage() {
 
                           {/* Dica ENEM */}
                           {resumo.dica_enem && (
-                            <div className="bg-amber-500/5 border border-amber-500/15 rounded-lg p-3">
-                              <p className="text-sm text-foreground/90">
-                                <span className="font-semibold">💡 Dica ENEM:</span> {resumo.dica_enem}
-                              </p>
+                            <div className="border-l-2 border-primary/40 pl-3 py-0.5">
+                              <p className="type-caption text-muted-foreground mb-1">Dica ENEM</p>
+                              <p className="type-body font-reading text-foreground/90 measure-reading">{resumo.dica_enem}</p>
                             </div>
                           )}
 
@@ -698,7 +692,7 @@ export default function TreinoPage() {
                                 <button
                                   onClick={() => generateResumoImage(resumo)}
                                   disabled={isLoadingImg}
-                                  className="flex items-center gap-2 text-sm text-primary font-medium hover:underline disabled:opacity-50"
+                                  className="flex items-center gap-2 type-meta text-primary font-medium hover:underline disabled:opacity-50"
                                 >
                                   {isLoadingImg ? (
                                     <><Loader2 className="w-4 h-4 animate-spin" /> Gerando ilustração...</>
@@ -734,7 +728,7 @@ export default function TreinoPage() {
         <div className="flex gap-3 sticky bottom-4">
           <button
             onClick={() => setResumoDismissed(true)}
-            className="flex-1 py-3.5 bg-primary text-primary-foreground rounded-xl font-display font-semibold text-sm hover:opacity-90 transition-opacity shadow-lg flex items-center justify-center gap-2"
+            className="flex-1 py-3.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-display font-semibold type-body hover:opacity-90 transition-opacity shadow-elev-2 flex items-center justify-center gap-2"
           >
             <Play className="w-5 h-5" />
             Começar Treino
@@ -748,7 +742,6 @@ export default function TreinoPage() {
   if (finished) {
     const total = score.correct + score.wrong;
     const pct = total > 0 ? Math.round((score.correct / total) * 100) : 0;
-    const tierEmoji = pct >= 80 ? '🏆' : pct >= 60 ? '🥈' : '🥉';
     const tierLabel = pct >= 80 ? 'Ouro' : pct >= 60 ? 'Prata' : 'Bronze';
     return (
       <div className="p-4 md:p-8 max-w-2xl mx-auto">
@@ -756,7 +749,7 @@ export default function TreinoPage() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           onAnimationComplete={() => { if (pct >= 60) fireConfetti(); }}
-          className="bg-card/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-border text-center overflow-hidden"
+          className="bg-[hsl(var(--surface-1))] rounded-[var(--radius-container)] p-6 md:p-8 shadow-elev-3 border border-border text-center overflow-hidden"
         >
           {/* 3D Scene: Medal + Podium + Confetti */}
           <motion.div
@@ -775,7 +768,7 @@ export default function TreinoPage() {
             transition={{ delay: 0.8, type: 'spring', stiffness: 200, damping: 15 }}
             className="mb-3"
           >
-            <span className="font-display text-6xl font-black bg-gradient-to-r from-primary via-[hsl(var(--chart-2))] to-primary bg-clip-text text-transparent">
+            <span className="font-display type-hero font-semibold text-primary" data-numeric>
               {pct}%
             </span>
           </motion.div>
@@ -785,17 +778,18 @@ export default function TreinoPage() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4"
+            className="inline-flex items-center gap-2 mb-5"
           >
-            <span className="text-lg">{tierEmoji}</span>
-            <span className="font-display font-bold text-sm text-primary">Medalha {tierLabel}</span>
+            <span aria-hidden className="w-6 h-px bg-primary/50" />
+            <span className="type-caption text-primary">Medalha {tierLabel}</span>
+            <span aria-hidden className="w-6 h-px bg-primary/50" />
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.1 }}
-            className="font-display text-2xl font-bold mb-1"
+            className="font-display type-title font-semibold mb-1"
           >
             {pct >= 80 ? 'Excelente!' : pct >= 60 ? 'Bom trabalho!' : 'Continue praticando!'}
           </motion.h1>
@@ -803,7 +797,7 @@ export default function TreinoPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
-            className="text-muted-foreground mb-6 text-sm"
+            className="text-muted-foreground mb-8 type-meta"
           >
             Sessão {isReview ? 'de revisão' : 'de treino'} finalizada
           </motion.p>
@@ -815,17 +809,19 @@ export default function TreinoPage() {
             transition={{ delay: 1.3 }}
             className="grid grid-cols-3 gap-3 mb-8"
           >
-            <div className="bg-muted/50 rounded-xl p-4 card-3d">
-              <p className="font-display text-3xl font-bold">{total}</p>
-              <p className="text-xs text-muted-foreground mt-1">Total</p>
+            {/* Verde e vermelho aqui são legítimos: acerto e erro. Mas via
+                tokens --success/--danger, não green-500/red-500 literais. */}
+            <div className="bg-[hsl(var(--surface-2))] rounded-[var(--radius-surface)] p-4">
+              <p className="font-display type-headline font-semibold" data-numeric>{total}</p>
+              <p className="type-caption text-muted-foreground mt-1">Total</p>
             </div>
-            <div className="bg-green-500/10 rounded-xl p-4 card-3d">
-              <p className="font-display text-3xl font-bold text-green-600 dark:text-green-400">{score.correct}</p>
-              <p className="text-xs text-green-700 dark:text-green-500 mt-1">Acertos</p>
+            <div className="bg-[hsl(var(--success-surface))] rounded-[var(--radius-surface)] p-4">
+              <p className="font-display type-headline font-semibold text-[hsl(var(--success))]" data-numeric>{score.correct}</p>
+              <p className="type-caption text-[hsl(var(--success))] mt-1">Acertos</p>
             </div>
-            <div className="bg-red-500/10 rounded-xl p-4 card-3d">
-              <p className="font-display text-3xl font-bold text-red-600 dark:text-red-400">{score.wrong}</p>
-              <p className="text-xs text-red-700 dark:text-red-500 mt-1">Erros</p>
+            <div className="bg-[hsl(var(--danger-surface))] rounded-[var(--radius-surface)] p-4">
+              <p className="font-display type-headline font-semibold text-[hsl(var(--danger))]" data-numeric>{score.wrong}</p>
+              <p className="type-caption text-[hsl(var(--danger))] mt-1">Erros</p>
             </div>
           </motion.div>
 
@@ -838,13 +834,13 @@ export default function TreinoPage() {
           >
             <button
               onClick={() => router.push('/dashboard')}
-              className="flex items-center gap-2 px-5 py-2.5 bg-muted rounded-xl text-sm font-medium hover:bg-muted/80 transition card-3d"
+              className="flex items-center gap-2 px-5 py-2.5 bg-[hsl(var(--surface-2))] border border-border rounded-[var(--radius-control)] type-meta font-medium hover:bg-muted t-colors"
             >
               <Home className="w-4 h-4" /> Voltar
             </button>
             <button
               onClick={() => { setFinished(false); startSession(); }}
-              className="flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-xl text-sm font-medium hover:opacity-90 transition shadow-lg cta-glow"
+              className="flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] type-meta font-medium hover:opacity-90 t-colors shadow-elev-2"
             >
               <RefreshCcw className="w-4 h-4" /> Nova Sessão
             </button>
@@ -858,17 +854,17 @@ export default function TreinoPage() {
   if (sessionStarted && (questions?.length ?? 0) === 0 && !loading) {
     return (
       <div className="p-4 md:p-8 max-w-2xl mx-auto">
-        <div className="bg-card rounded-xl p-8 shadow-sm border border-border text-center">
-          <BookOpen className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-          <h2 className="font-display text-xl font-semibold mb-2">
-            {isReview ? 'Nenhuma revisão pendente!' : 'Sem questões disponíveis'}
+        <div className="bg-[hsl(var(--surface-1))] rounded-[var(--radius-surface)] p-8 shadow-elev-1 border border-border text-center">
+          <BookOpen className="w-10 h-10 text-muted-foreground mx-auto mb-5" />
+          <h2 className="font-display type-title font-semibold mb-2">
+            {isReview ? 'Nenhuma revisão pendente' : 'Sem questões disponíveis'}
           </h2>
-          <p className="text-sm text-muted-foreground mb-4">
-            {isReview ? 'Parabéns! Você está em dia com suas revisões.' : 'O admin precisa cadastrar questões primeiro.'}
+          <p className="type-body font-reading text-muted-foreground mb-6 measure-reading mx-auto">
+            {isReview ? 'Você está em dia com suas revisões.' : 'O admin precisa cadastrar questões primeiro.'}
           </p>
           <button
             onClick={() => router.push('/dashboard')}
-            className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:opacity-90"
+            className="px-4 py-2 bg-primary text-primary-foreground rounded-[var(--radius-control)] type-meta font-medium hover:opacity-90 t-colors"
           >
             Voltar ao Início
           </button>
@@ -997,12 +993,12 @@ export default function TreinoPage() {
             </span>
             {currentQ?.subtema && (
               <>
-                <span aria-hidden className="text-border">/</span>
+                <span aria-hidden className="w-px h-3 bg-border shrink-0" />
                 <span className="truncate max-w-[22rem]">{currentQ.subtema}</span>
               </>
             )}
-            <span aria-hidden className="text-border">/</span>
-            <span className={difficultyColor[currentQ?.dificuldade] ? 'font-medium' : ''}>
+            <span aria-hidden className="w-px h-3 bg-border shrink-0" />
+            <span className={difficultyLabel[currentQ?.dificuldade] ? 'font-medium' : ''}>
               {difficultyLabel[currentQ?.dificuldade] ?? currentQ?.dificuldade ?? ''}
             </span>
           </div>
@@ -1141,24 +1137,26 @@ export default function TreinoPage() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="rounded-xl p-5 bg-amber-500/10 border border-amber-500/20"
+          className="rounded-[var(--radius-surface)] p-5 bg-[hsl(var(--surface-2))] border border-border"
         >
+          {/* Falha do sistema, não erro do aluno — por isso fica em superfície
+              neutra. Vermelho aqui roubaria o sinal da resposta errada. */}
           <div className="flex items-center gap-2 mb-2">
-            <AlertTriangle className="w-5 h-5 text-amber-600" />
-            <span className="font-display font-bold text-amber-700">Não deu pra verificar</span>
+            <AlertTriangle className="w-5 h-5 text-muted-foreground" />
+            <span className="font-display type-lead font-semibold">Não deu pra verificar</span>
           </div>
-          <p className="text-sm text-foreground/80 mb-4">{answerError}</p>
+          <p className="type-body font-reading text-foreground/80 mb-4 measure-reading">{answerError}</p>
           <button
             onClick={retryAnswer}
-            className="flex items-center gap-2 px-4 py-2 bg-amber-500 text-white rounded-lg font-medium text-sm hover:opacity-90 transition"
+            className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta hover:opacity-90 t-colors"
           >
             <RefreshCcw className="w-4 h-4" /> Tentar novamente
           </button>
         </motion.div>
       ) : !result ? (
-        <div className="rounded-xl p-5 bg-muted/40 border border-border flex items-center gap-3">
+        <div className="rounded-[var(--radius-surface)] p-5 bg-[hsl(var(--surface-2))] border border-border flex items-center gap-3">
           <Loader2 className="w-5 h-5 animate-spin text-muted-foreground" />
-          <span className="text-sm text-muted-foreground">Verificando resposta...</span>
+          <span className="type-meta text-muted-foreground">Verificando resposta...</span>
         </div>
       ) : (
         <div className="space-y-4">
