@@ -206,36 +206,38 @@ export default function RedacaoPage() {
   if (view === 'result' && currentEssay) {
     const isEvaluating = currentEssay.status !== 'avaliada';
     return (
-      <div className="p-4 md:p-8 max-w-4xl mx-auto">
-        <button onClick={() => { setView('home'); setPolling(false); }} className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-4">
+      <div className="p-4 md:p-8 max-w-[46rem] mx-auto">
+        <button onClick={() => { setView('home'); setPolling(false); }} className="inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors mb-4">
           <ChevronLeft className="w-4 h-4" /> Voltar
         </button>
 
         {isEvaluating ? (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-16">
             <Loader2 className="w-12 h-12 animate-spin text-primary mx-auto mb-4" />
-            <h2 className="font-display text-xl font-bold mb-2">A IA está avaliando sua redação...</h2>
-            <p className="text-sm text-muted-foreground">Isso pode levar até 1 minuto. Você pode sair e voltar depois — a avaliação continua em segundo plano.</p>
+            <h2 className="font-display type-title font-semibold mb-2">A IA está avaliando sua redação...</h2>
+            <p className="type-meta text-muted-foreground">Isso pode levar até 1 minuto. Você pode sair e voltar depois — a avaliação continua em segundo plano.</p>
           </motion.div>
         ) : (
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}>
             {/* Score Header */}
-            <div className="bg-card rounded-2xl p-6 border border-border shadow-sm mb-6">
+            <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className={`w-14 h-14 rounded-xl flex items-center justify-center font-display font-bold text-xl text-white ${
-                  (currentEssay.notaTotal ?? 0) >= 800 ? 'bg-green-500' : (currentEssay.notaTotal ?? 0) >= 600 ? 'bg-yellow-500' : 'bg-red-500'
-                }`}>
-                  {currentEssay.notaTotal ?? 0}
+                <div
+                  className="w-14 h-14 rounded-[var(--radius-control)] flex items-center justify-center font-display type-title font-semibold flex-shrink-0"
+                  style={{ backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}
+                >
+                  <span data-numeric>{currentEssay.notaTotal ?? 0}</span>
                 </div>
                 <div>
-                  <h2 className="font-display text-lg font-bold">{currentEssay.theme?.tema ?? 'Redação'}</h2>
-                  <p className="text-xs text-muted-foreground">
-                    {currentEssay.theme?.anoEnem ? `ENEM ${currentEssay.theme.anoEnem}` : ''} • {new Date(currentEssay.createdAt).toLocaleDateString('pt-BR')}
+                  <h2 className="font-display type-lead font-semibold">{currentEssay.theme?.tema ?? 'Redação'}</h2>
+                  <p className="type-meta text-muted-foreground">
+                    {currentEssay.theme?.anoEnem ? `ENEM ${currentEssay.theme.anoEnem}` : ''} · {new Date(currentEssay.createdAt).toLocaleDateString('pt-BR')}
                   </p>
                 </div>
               </div>
 
-              {/* Score bars */}
+              {/* Score bars — cada competência é uma barra: escala no eixo Y via
+                  transform (nunca animando height/width). */}
               <div className="grid grid-cols-5 gap-2">
                 {[
                   { label: 'C1', nota: currentEssay.notaC1 },
@@ -245,16 +247,14 @@ export default function RedacaoPage() {
                   { label: 'C5', nota: currentEssay.notaC5 },
                 ].map((c) => (
                   <div key={c.label} className="text-center">
-                    <div className="text-xs font-medium text-muted-foreground mb-1">{c.label}</div>
-                    <div className="h-20 bg-muted rounded-lg relative overflow-hidden">
+                    <div className="type-caption text-muted-foreground mb-1">{c.label}</div>
+                    <div className="h-20 bg-muted rounded-[var(--radius-control)] relative overflow-hidden">
                       <div
-                        className={`absolute bottom-0 w-full rounded-lg transition-all ${
-                          (c.nota ?? 0) >= 160 ? 'bg-green-500' : (c.nota ?? 0) >= 120 ? 'bg-yellow-500' : 'bg-red-500'
-                        }`}
-                        style={{ height: `${((c.nota ?? 0) / 200) * 100}%` }}
+                        className="absolute inset-x-0 bottom-0 h-full rounded-[var(--radius-control)] bg-primary origin-bottom transition-transform duration-medium ease-out-quart"
+                        style={{ transform: `scaleY(${Math.min(1, (c.nota ?? 0) / 200)})` }}
                       />
                     </div>
-                    <div className="text-sm font-bold mt-1">{c.nota ?? 0}</div>
+                    <div data-numeric className="type-meta font-semibold mt-1">{c.nota ?? 0}</div>
                   </div>
                 ))}
               </div>
@@ -262,22 +262,22 @@ export default function RedacaoPage() {
 
             {/* Full evaluation */}
             {currentEssay.avaliacao && (
-              <div className="bg-card rounded-2xl p-6 border border-border shadow-sm mb-6">
-                <h3 className="font-display text-base font-bold mb-4 flex items-center gap-2">
+              <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
+                <h3 className="font-display type-body font-semibold mb-4 flex items-center gap-2">
                   <BarChart3 className="w-5 h-5 text-primary" /> Avaliação Completa
                 </h3>
-                <div className="prose prose-sm dark:prose-invert max-w-none">
+                <div className="prose-reading">
                   <MathText text={currentEssay.avaliacao} />
                 </div>
               </div>
             )}
 
-            {/* Original text */}
-            <div className="bg-card rounded-2xl p-6 border border-border shadow-sm">
-              <h3 className="font-display text-base font-bold mb-3 flex items-center gap-2">
+            {/* Original text — o que o usuário escreveu é conteúdo de leitura. */}
+            <div className="surface-1 rounded-[var(--radius-surface)] p-6">
+              <h3 className="font-display type-body font-semibold mb-3 flex items-center gap-2">
                 <FileText className="w-5 h-5 text-primary" /> Seu Texto
               </h3>
-              <div className="text-sm leading-relaxed whitespace-pre-wrap bg-muted/50 rounded-xl p-4">
+              <div className="prose-reading whitespace-pre-wrap bg-muted/50 rounded-[var(--radius-control)] p-4">
                 {currentEssay.texto}
               </div>
             </div>
@@ -290,41 +290,42 @@ export default function RedacaoPage() {
   // ==== WRITE VIEW ====
   if (view === 'write' && selectedTheme) {
     return (
-      <div className="p-4 md:p-8 max-w-4xl mx-auto">
-        <button onClick={() => setView('home')} className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-4">
+      <div className="p-4 md:p-8 max-w-[46rem] mx-auto">
+        <button onClick={() => setView('home')} className="inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors mb-4">
           <ChevronLeft className="w-4 h-4" /> Voltar
         </button>
 
         {/* Theme header */}
-        <div className="bg-card rounded-2xl p-5 border border-border shadow-sm mb-6">
-          <h2 className="font-display text-lg font-bold mb-1">{selectedTheme.tema}</h2>
+        <div className="surface-1 rounded-[var(--radius-surface)] p-5 mb-6">
+          <h2 className="font-display type-lead font-semibold mb-1">{selectedTheme.tema}</h2>
           {selectedTheme.anoEnem && (
-            <span className="text-xs text-muted-foreground">ENEM {selectedTheme.anoEnem}</span>
+            <span className="type-meta text-muted-foreground">ENEM {selectedTheme.anoEnem}</span>
           )}
           {selectedTheme.textoMotivador && (
             <details className="mt-3">
-              <summary className="text-sm text-primary font-medium cursor-pointer hover:underline">Ver textos motivadores</summary>
-              <div className="mt-2 text-sm text-foreground/80 whitespace-pre-wrap bg-muted/50 rounded-lg p-3 max-h-64 overflow-y-auto">
+              <summary className="type-meta text-primary font-medium cursor-pointer hover:underline underline-offset-4">Ver textos motivadores</summary>
+              <div className="prose-reading text-foreground/80 whitespace-pre-wrap bg-muted/50 rounded-[var(--radius-control)] p-3 mt-2 max-h-64 overflow-y-auto">
                 {selectedTheme.textoMotivador}
               </div>
             </details>
           )}
         </div>
 
-        {/* Editor */}
-        <div className="bg-card rounded-2xl border border-border shadow-sm overflow-hidden mb-4">
+        {/* Editor — a coluna de escrita fica na medida de leitura, mesmo
+            dentro de um card mais largo: linha de 100+ caracteres não se
+            escreve nem se relê. */}
+        <div className="surface-1 rounded-[var(--radius-surface)] overflow-hidden mb-4">
           <div className="flex items-center justify-between px-4 py-2 bg-muted/60 border-b border-border">
-            <span className="text-xs font-medium text-muted-foreground">Sua redação</span>
-            <div className="flex items-center gap-3 text-xs text-muted-foreground">
-              <span>{wordCount} palavras</span>
+            <span className="type-caption text-muted-foreground">Sua redação</span>
+            <div className="flex items-center gap-3 type-meta text-muted-foreground">
+              <span data-numeric>{wordCount} palavras</span>
             </div>
           </div>
           <textarea
             value={texto}
             onChange={(e) => setTexto(e.target.value)}
             placeholder="Escreva sua redação aqui...\n\nLembre-se da estrutura:\n- Introdução com tese\n- Desenvolvimento 1 (argumento)\n- Desenvolvimento 2 (argumento)\n- Conclusão com proposta de intervenção"
-            className="w-full min-h-[400px] p-4 bg-background text-sm leading-relaxed resize-y focus:outline-none"
-            style={{ fontFamily: 'serif', lineHeight: '1.8' }}
+            className="block w-full max-w-[var(--measure-reading)] mx-auto min-h-[400px] p-4 bg-[hsl(var(--surface-2))] font-reading text-body leading-[var(--lh-reading)] resize-y focus:outline-none"
           />
         </div>
 
@@ -332,21 +333,26 @@ export default function RedacaoPage() {
           <button
             onClick={saveEssay}
             disabled={wordCount < 5}
-            className="px-5 py-3 bg-muted text-foreground rounded-xl font-medium text-sm hover:bg-muted/80 disabled:opacity-40 transition flex items-center justify-center gap-2 border border-border"
+            className="px-5 py-3 bg-muted text-foreground rounded-[var(--radius-control)] font-medium type-meta hover:bg-secondary t-colors disabled:opacity-40 transition-opacity flex items-center justify-center gap-2 border border-border"
           >
             <FileText className="w-4 h-4" /> Salvar
           </button>
           <button
             onClick={handleSubmit}
             disabled={submitting || wordCount < 20}
-            className="flex-1 py-3 bg-primary text-primary-foreground rounded-xl font-medium text-sm hover:opacity-90 disabled:opacity-40 transition shadow-md flex items-center justify-center gap-2"
+            className="flex-1 py-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-2 t-lift enabled:hover:-translate-y-px enabled:hover:shadow-elev-3 disabled:opacity-40 disabled:shadow-elev-1 flex items-center justify-center gap-2"
           >
             {submitting ? <><Loader2 className="w-4 h-4 animate-spin" /> Enviando...</> : <><Send className="w-4 h-4" /> Enviar para Correção</>}
           </button>
         </div>
 
-        <p className="text-xs text-muted-foreground text-center mt-2">
-          {lastSaved ? `✅ Último salvamento: ${lastSaved} • ` : ''}A IA avaliará sua redação nas 5 competências do ENEM.
+        <p className="type-meta text-muted-foreground text-center mt-2 flex items-center justify-center gap-1.5 flex-wrap">
+          {lastSaved && (
+            <span className="inline-flex items-center gap-1 text-foreground">
+              <CheckCircle2 className="w-3.5 h-3.5 text-primary" /> Último salvamento: {lastSaved} ·
+            </span>
+          )}
+          A IA avaliará sua redação nas 5 competências do ENEM.
         </p>
       </div>
     );
@@ -356,17 +362,17 @@ export default function RedacaoPage() {
   if (view === 'history') {
     return (
       <div className="p-4 md:p-8 max-w-4xl mx-auto">
-        <button onClick={() => setView('home')} className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-4">
+        <button onClick={() => setView('home')} className="inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors mb-4">
           <ChevronLeft className="w-4 h-4" /> Voltar
         </button>
-        <h2 className="font-display text-xl font-bold mb-4 flex items-center gap-2">
+        <h2 className="font-display type-title font-semibold mb-4 flex items-center gap-2">
           <History className="w-5 h-5 text-primary" /> Histórico de Redações
         </h2>
 
         {essays.length === 0 ? (
           <div className="text-center py-12">
             <PenTool className="w-12 h-12 text-muted-foreground mx-auto mb-3" />
-            <p className="text-sm text-muted-foreground">Nenhuma redação escrita ainda</p>
+            <p className="type-meta text-muted-foreground">Nenhuma redação escrita ainda</p>
           </div>
         ) : (
           <div className="space-y-3">
@@ -374,22 +380,22 @@ export default function RedacaoPage() {
               <button
                 key={e.id}
                 onClick={() => viewEssay(e.id)}
-                className="w-full bg-card rounded-xl p-4 border border-border shadow-sm hover:shadow-md transition text-left"
+                className="w-full bg-[hsl(var(--surface-2))] rounded-[var(--radius-control)] p-4 border border-border shadow-elev-1 t-lift hover:shadow-elev-2 hover:-translate-y-px text-left"
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-medium text-sm">{e.theme?.tema ?? 'Redação'}</span>
+                  <span className="font-medium type-meta">{e.theme?.tema ?? 'Redação'}</span>
                   {e.status === 'avaliada' ? (
-                    <span className={`px-2 py-0.5 rounded-full text-xs font-bold text-white ${
-                      (e.notaTotal ?? 0) >= 800 ? 'bg-green-500' : (e.notaTotal ?? 0) >= 600 ? 'bg-yellow-500' : 'bg-red-500'
-                    }`}>{e.notaTotal ?? 0}/1000</span>
+                    <span data-numeric className="px-2 py-0.5 rounded-[var(--radius-data)] type-meta font-semibold bg-primary/10 text-primary">
+                      {e.notaTotal ?? 0}/1000
+                    </span>
                   ) : (
-                    <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-amber-500/10 text-amber-700 flex items-center gap-1">
+                    <span className="px-2 py-0.5 rounded-[var(--radius-pill)] type-meta font-medium bg-amber-500/10 text-amber-700 dark:text-amber-400 flex items-center gap-1">
                       <Loader2 className="w-3 h-3 animate-spin" /> Avaliando
                     </span>
                   )}
                 </div>
-                <p className="text-xs text-muted-foreground">
-                  {e.theme?.anoEnem ? `ENEM ${e.theme.anoEnem} • ` : ''}
+                <p className="type-meta text-muted-foreground">
+                  {e.theme?.anoEnem ? `ENEM ${e.theme.anoEnem} · ` : ''}
                   {new Date(e.createdAt).toLocaleDateString('pt-BR')}
                 </p>
               </button>
@@ -404,35 +410,35 @@ export default function RedacaoPage() {
   if (view === 'saved') {
     return (
       <div className="p-4 md:p-8 max-w-4xl mx-auto">
-        <button onClick={() => setView('home')} className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-4">
+        <button onClick={() => setView('home')} className="inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors mb-4">
           <ChevronLeft className="w-4 h-4" /> Voltar
         </button>
-        <h2 className="font-display text-xl font-bold mb-4 flex items-center gap-2">
+        <h2 className="font-display type-title font-semibold mb-4 flex items-center gap-2">
           <FileText className="w-5 h-5 text-primary" /> Redações Salvas
         </h2>
 
         {savedDrafts.length === 0 ? (
           <div className="text-center py-12">
             <FileText className="w-12 h-12 text-muted-foreground mx-auto mb-3" />
-            <p className="text-sm text-muted-foreground">Nenhuma redação salva</p>
-            <p className="text-xs text-muted-foreground mt-1">Ao escrever, clique em "Salvar" para guardar seu rascunho</p>
+            <p className="type-meta text-muted-foreground">Nenhuma redação salva</p>
+            <p className="type-meta text-muted-foreground mt-1">Ao escrever, clique em &quot;Salvar&quot; para guardar seu rascunho</p>
           </div>
         ) : (
           <div className="space-y-3">
             {savedDrafts.map((d: any) => (
-              <div key={d.id} className="bg-card rounded-xl p-4 border border-border shadow-sm">
+              <div key={d.id} className="surface-1 rounded-[var(--radius-surface)] p-4">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-medium text-sm">{d.tema}</span>
-                  <span className="text-xs text-muted-foreground">{d.wordCount} palavras</span>
+                  <span className="font-medium type-meta">{d.tema}</span>
+                  <span data-numeric className="type-meta text-muted-foreground">{d.wordCount} palavras</span>
                 </div>
-                <p className="text-xs text-muted-foreground mb-3 line-clamp-2">
+                <p className="font-reading type-meta text-muted-foreground mb-3 line-clamp-2">
                   {d.texto.slice(0, 150)}...
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-muted-foreground">
+                  <span className="type-meta text-muted-foreground">
                     {new Date(d.savedAt).toLocaleDateString('pt-BR')} às {new Date(d.savedAt).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}
                   </span>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-3">
                     <button
                       onClick={() => {
                         try {
@@ -443,7 +449,7 @@ export default function RedacaoPage() {
                           toast.success('Redação removida');
                         } catch (e) {}
                       }}
-                      className="text-xs text-red-500 hover:underline"
+                      className="type-meta text-muted-foreground hover:text-foreground t-colors underline-offset-2 hover:underline"
                     >
                       Excluir
                     </button>
@@ -453,7 +459,7 @@ export default function RedacaoPage() {
                         setTexto(d.texto);
                         setView('write');
                       }}
-                      className="px-3 py-1.5 bg-primary text-primary-foreground text-xs rounded-lg font-medium hover:opacity-90"
+                      className="px-3 py-1.5 bg-primary text-primary-foreground type-meta rounded-[var(--radius-control)] font-medium t-colors hover:bg-primary-hover"
                     >
                       Continuar Escrevendo
                     </button>
@@ -470,33 +476,33 @@ export default function RedacaoPage() {
   // ==== HOME VIEW ====
   return (
     <div className="p-4 md:p-8 max-w-4xl mx-auto">
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}>
         <div className="flex items-center gap-3 mb-2">
           <PenTool className="w-6 h-6 text-primary" />
-          <h1 className="font-display text-2xl font-bold tracking-tight">Treino de Redação</h1>
+          <h1 className="font-display type-headline font-bold">Treino de Redação</h1>
         </div>
-        <p className="text-sm text-muted-foreground mb-6">Pratique com temas reais do ENEM e receba correção detalhada por IA nas 5 competências</p>
+        <p className="type-meta text-muted-foreground mb-6">Pratique com temas reais do ENEM e receba correção detalhada por IA nas 5 competências</p>
 
         {/* Stats */}
         {essays.length > 0 && (
           <div className="grid grid-cols-3 gap-3 mb-6">
-            <div className="bg-card rounded-xl p-4 border border-border text-center">
-              <p className="text-2xl font-bold text-primary">{essays.length}</p>
-              <p className="text-xs text-muted-foreground">Redações</p>
+            <div className="surface-1 rounded-[var(--radius-surface)] p-4 text-center">
+              <p data-numeric className="font-display type-headline font-semibold text-primary">{essays.length}</p>
+              <p className="type-caption text-muted-foreground">Redações</p>
             </div>
-            <div className="bg-card rounded-xl p-4 border border-border text-center">
-              <p className="text-2xl font-bold text-primary">
+            <div className="surface-1 rounded-[var(--radius-surface)] p-4 text-center">
+              <p data-numeric className="font-display type-headline font-semibold text-primary">
                 {essays.filter((e: any) => e.status === 'avaliada').length > 0
                   ? Math.round(essays.filter((e: any) => e.status === 'avaliada').reduce((s: number, e: any) => s + (e.notaTotal ?? 0), 0) / essays.filter((e: any) => e.status === 'avaliada').length)
                   : '-'}
               </p>
-              <p className="text-xs text-muted-foreground">Média</p>
+              <p className="type-caption text-muted-foreground">Média</p>
             </div>
-            <div className="bg-card rounded-xl p-4 border border-border text-center">
-              <p className="text-2xl font-bold text-primary">
+            <div className="surface-1 rounded-[var(--radius-surface)] p-4 text-center">
+              <p data-numeric className="font-display type-headline font-semibold text-primary">
                 {Math.max(0, ...essays.filter((e: any) => e.status === 'avaliada').map((e: any) => e.notaTotal ?? 0)) || '-'}
               </p>
-              <p className="text-xs text-muted-foreground">Melhor</p>
+              <p className="type-caption text-muted-foreground">Melhor</p>
             </div>
           </div>
         )}
@@ -504,15 +510,15 @@ export default function RedacaoPage() {
         {/* Treino por Partes */}
         <button
           onClick={() => window.location.href = '/redacao/partes'}
-          className="w-full bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-5 border border-primary/20 shadow-sm hover:shadow-md transition text-left mb-6"
+          className="w-full bg-primary/[0.06] rounded-[var(--radius-surface)] p-5 border border-primary/20 shadow-elev-1 t-lift hover:shadow-elev-2 hover:-translate-y-px text-left mb-6"
         >
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-[var(--radius-control)] bg-primary/20 flex items-center justify-center flex-shrink-0">
               <Sparkles className="w-6 h-6 text-primary" />
             </div>
             <div className="flex-1">
-              <h3 className="font-display font-bold text-base">Treino por Partes</h3>
-              <p className="text-xs text-muted-foreground">Pratique Introdução, Desenvolvimento e Conclusão separadamente com feedback da IA</p>
+              <h3 className="font-display type-meta font-semibold">Treino por Partes</h3>
+              <p className="type-meta text-muted-foreground">Pratique Introdução, Desenvolvimento e Conclusão separadamente com feedback da IA</p>
             </div>
           </div>
         </button>
@@ -521,32 +527,37 @@ export default function RedacaoPage() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
           <button
             onClick={() => setView('history')}
-            className="bg-card rounded-xl p-5 border border-border shadow-sm hover:shadow-md transition text-left"
+            className="surface-1 rounded-[var(--radius-surface)] p-5 t-lift hover:shadow-elev-2 hover:-translate-y-px text-left"
           >
             <History className="w-8 h-8 text-primary mb-2" />
-            <h3 className="font-display font-bold text-sm">Histórico</h3>
-            <p className="text-xs text-muted-foreground">Correções anteriores</p>
+            <h3 className="font-display type-meta font-semibold">Histórico</h3>
+            <p className="type-meta text-muted-foreground">Correções anteriores</p>
           </button>
           <button
             onClick={() => { loadSavedDrafts(); setView('saved'); }}
-            className="bg-card rounded-xl p-5 border border-border shadow-sm hover:shadow-md transition text-left"
+            className="surface-1 rounded-[var(--radius-surface)] p-5 t-lift hover:shadow-elev-2 hover:-translate-y-px text-left"
           >
             <FileText className="w-8 h-8 text-primary mb-2" />
-            <h3 className="font-display font-bold text-sm">Redações Salvas {savedDrafts.length > 0 && <span className="text-xs bg-primary/10 text-primary px-1.5 py-0.5 rounded-full ml-1">{savedDrafts.length}</span>}</h3>
-            <p className="text-xs text-muted-foreground">Rascunhos guardados</p>
+            <h3 className="font-display type-meta font-semibold flex items-center gap-1.5">
+              Redações Salvas
+              {savedDrafts.length > 0 && (
+                <span data-numeric className="type-caption bg-primary/10 text-primary px-1.5 py-0.5 rounded-[var(--radius-data)]">{savedDrafts.length}</span>
+              )}
+            </h3>
+            <p className="type-meta text-muted-foreground">Rascunhos guardados</p>
           </button>
           <button
             onClick={() => { fetchHistory(); toast.info('Atualizado!'); }}
-            className="bg-card rounded-xl p-5 border border-border shadow-sm hover:shadow-md transition text-left"
+            className="surface-1 rounded-[var(--radius-surface)] p-5 t-lift hover:shadow-elev-2 hover:-translate-y-px text-left"
           >
             <RefreshCcw className="w-8 h-8 text-primary mb-2" />
-            <h3 className="font-display font-bold text-sm">Atualizar</h3>
-            <p className="text-xs text-muted-foreground">Verificar correções</p>
+            <h3 className="font-display type-meta font-semibold">Atualizar</h3>
+            <p className="type-meta text-muted-foreground">Verificar correções</p>
           </button>
         </div>
 
         {/* Theme selection */}
-        <h2 className="font-display text-lg font-bold mb-3 flex items-center gap-2">
+        <h2 className="font-display type-lead font-semibold mb-3 flex items-center gap-2">
           <BookOpen className="w-5 h-5 text-primary" /> Escolha um Tema
         </h2>
 
@@ -555,7 +566,7 @@ export default function RedacaoPage() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/20 overflow-hidden"
+            className="bg-primary/[0.06] rounded-[var(--radius-surface)] border border-primary/20 shadow-elev-1 overflow-hidden"
           >
             <button
               onClick={() => setShowCustomInput(!showCustomInput)}
@@ -564,11 +575,11 @@ export default function RedacaoPage() {
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <Sparkles className="w-4 h-4 text-primary" />
-                  <h3 className="font-display font-bold text-sm">Tema Livre</h3>
+                  <h3 className="font-display type-meta font-semibold">Tema Livre</h3>
                 </div>
-                <p className="text-xs text-muted-foreground">Escreva sobre qualquer assunto que você quiser treinar</p>
+                <p className="type-meta text-muted-foreground">Escreva sobre qualquer assunto que você quiser treinar</p>
               </div>
-              <Plus className={`w-5 h-5 text-primary flex-shrink-0 mt-1 transition-transform ${showCustomInput ? 'rotate-45' : ''}`} />
+              <Plus className={`w-5 h-5 text-primary flex-shrink-0 mt-1 transition-transform duration-short ease-out-quart ${showCustomInput ? 'rotate-45' : ''}`} />
             </button>
 
             <AnimatePresence>
@@ -586,7 +597,7 @@ export default function RedacaoPage() {
                       value={customTema}
                       onChange={(e) => setCustomTema(e.target.value)}
                       placeholder="Ex: A importância da leitura na formação cidadã"
-                      className="w-full px-4 py-3 bg-background border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
+                      className="w-full px-4 py-3 bg-background border border-input rounded-[var(--radius-control)] type-meta focus:outline-none"
                       maxLength={200}
                     />
                     <button
@@ -601,7 +612,7 @@ export default function RedacaoPage() {
                         setShowCustomInput(false);
                       }}
                       disabled={customTema.trim().length < 5}
-                      className="w-full py-2.5 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:opacity-90 disabled:opacity-40 transition flex items-center justify-center gap-2"
+                      className="w-full py-2.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] type-meta font-medium t-colors hover:bg-primary-hover disabled:opacity-40 flex items-center justify-center gap-2"
                     >
                       <PenTool className="w-4 h-4" /> Começar a Escrever
                     </button>
@@ -614,15 +625,15 @@ export default function RedacaoPage() {
           {themes.map((theme: any) => (
             <motion.button
               key={theme.id}
-              whileHover={{ scale: 1.01 }}
+              whileHover={{ scale: 1.005 }}
               onClick={() => { setSelectedTheme(theme); setTexto(''); setView('write'); }}
-              className="w-full bg-card rounded-xl p-5 border border-border shadow-sm hover:shadow-md hover:border-primary/30 transition text-left"
+              className="w-full bg-[hsl(var(--surface-2))] rounded-[var(--radius-control)] p-5 border border-border shadow-elev-1 t-lift hover:border-primary/45 hover:shadow-elev-2 hover:-translate-y-px text-left"
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1">
-                  <h3 className="font-display font-bold text-sm mb-1">{theme.tema}</h3>
+                  <h3 className="font-display type-meta font-semibold mb-1">{theme.tema}</h3>
                   {theme.anoEnem && (
-                    <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">
+                    <span className="px-2 py-0.5 rounded-[var(--radius-data)] type-caption bg-primary/10 text-primary">
                       ENEM {theme.anoEnem}
                     </span>
                   )}

@@ -4,7 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import {
   PenTool, ChevronLeft, Loader2, Send, Star, BarChart3,
-  BookOpen, RefreshCcw, CheckCircle2, ArrowRight, Sparkles, FileText
+  BookOpen, RefreshCcw, CheckCircle2, ArrowRight, Sparkles, FileText,
+  Lightbulb, Search, Target, Info
 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -13,11 +14,11 @@ const MathText = dynamic(() => import('@/components/math-text'), { ssr: false })
 type PartType = 'introducao' | 'desenvolvimento1' | 'desenvolvimento2' | 'conclusao';
 type View = 'home' | 'exercise' | 'result';
 
-const PARTS: { type: PartType; label: string; emoji: string; description: string; color: string }[] = [
-  { type: 'introducao', label: 'Introdução', emoji: '📝', description: 'Apresentar tema, contextualizar e formular tese', color: 'bg-blue-500' },
-  { type: 'desenvolvimento1', label: 'Desenvolvimento 1', emoji: '💡', description: 'Primeiro argumento com fundamentação', color: 'bg-green-500' },
-  { type: 'desenvolvimento2', label: 'Desenvolvimento 2', emoji: '🔍', description: 'Segundo argumento com repertório', color: 'bg-primary' },
-  { type: 'conclusao', label: 'Conclusão', emoji: '🎯', description: 'Retomar tese e proposta de intervenção', color: 'bg-orange-500' },
+const PARTS: { type: PartType; label: string; icon: typeof FileText; description: string }[] = [
+  { type: 'introducao', label: 'Introdução', icon: FileText, description: 'Apresentar tema, contextualizar e formular tese' },
+  { type: 'desenvolvimento1', label: 'Desenvolvimento 1', icon: Lightbulb, description: 'Primeiro argumento com fundamentação' },
+  { type: 'desenvolvimento2', label: 'Desenvolvimento 2', icon: Search, description: 'Segundo argumento com repertório' },
+  { type: 'conclusao', label: 'Conclusão', icon: Target, description: 'Retomar tese e proposta de intervenção' },
 ];
 
 export default function RedacaoPartesPage() {
@@ -99,45 +100,49 @@ export default function RedacaoPartesPage() {
 
   const wordCount = resposta.trim().split(/\s+/).filter(Boolean).length;
   const currentPartInfo = PARTS.find(p => p.type === selectedPart);
+  const CurrentPartIcon = currentPartInfo?.icon;
 
   // ==== RESULT VIEW ====
   if (view === 'result' && result && currentPartInfo) {
     return (
-      <div className="p-4 md:p-8 max-w-4xl mx-auto">
-        <button onClick={() => { setView('home'); setResult(null); }} className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-4">
+      <div className="p-4 md:p-8 max-w-[46rem] mx-auto">
+        <button onClick={() => { setView('home'); setResult(null); }} className="inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors mb-4">
           <ChevronLeft className="w-4 h-4" /> Voltar
         </button>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+        <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}>
           {/* Score */}
-          <div className="bg-card rounded-2xl p-6 border border-border shadow-sm mb-6">
+          <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
             <div className="flex items-center gap-4">
-              <div className={`w-16 h-16 rounded-xl flex items-center justify-center font-display font-bold text-2xl text-white ${
-                (result.nota ?? 0) >= 8 ? 'bg-green-500' : (result.nota ?? 0) >= 5 ? 'bg-yellow-500' : 'bg-red-500'
-              }`}>
-                {result.nota}/10
+              <div
+                className="w-16 h-16 rounded-[var(--radius-control)] flex items-center justify-center font-display type-title font-semibold flex-shrink-0"
+                style={{ backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}
+              >
+                <span data-numeric>{result.nota}/10</span>
               </div>
               <div>
-                <h2 className="font-display text-lg font-bold">{currentPartInfo.emoji} {currentPartInfo.label}</h2>
-                <p className="text-sm text-muted-foreground">{exercise?.tema}</p>
+                <h2 className="font-display type-lead font-semibold flex items-center gap-2">
+                  {CurrentPartIcon && <CurrentPartIcon className="w-5 h-5 text-primary" />} {currentPartInfo.label}
+                </h2>
+                <p className="type-meta text-muted-foreground">{exercise?.tema}</p>
               </div>
             </div>
           </div>
 
-          {/* Feedback */}
-          <div className="bg-card rounded-2xl p-6 border border-border shadow-sm mb-6">
-            <h3 className="font-display text-base font-bold mb-4 flex items-center gap-2">
+          {/* Feedback — conteúdo gerado por IA é conteúdo de leitura. */}
+          <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
+            <h3 className="font-display type-body font-semibold mb-4 flex items-center gap-2">
               <BarChart3 className="w-5 h-5 text-primary" /> Feedback da IA
             </h3>
-            <div className="prose prose-sm dark:prose-invert max-w-none whitespace-pre-wrap">
+            <div className="prose-reading whitespace-pre-wrap">
               <MathText text={result.feedback} />
             </div>
           </div>
 
           {/* User's text */}
-          <div className="bg-card rounded-2xl p-6 border border-border shadow-sm mb-6">
-            <h3 className="font-display text-base font-bold mb-3">Seu Texto</h3>
-            <div className="text-sm leading-relaxed whitespace-pre-wrap bg-muted/50 rounded-xl p-4">
+          <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
+            <h3 className="font-display type-body font-semibold mb-3">Seu Texto</h3>
+            <div className="prose-reading whitespace-pre-wrap bg-muted/50 rounded-[var(--radius-control)] p-4">
               {resposta}
             </div>
           </div>
@@ -146,13 +151,13 @@ export default function RedacaoPartesPage() {
           <div className="grid grid-cols-2 gap-4">
             <button
               onClick={() => { setView('exercise'); setResult(null); }}
-              className="py-3 bg-primary text-primary-foreground rounded-xl font-medium text-sm hover:opacity-90 transition flex items-center justify-center gap-2"
+              className="py-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3 flex items-center justify-center gap-2"
             >
               <RefreshCcw className="w-4 h-4" /> Refazer
             </button>
             <button
               onClick={() => startExercise(selectedPart!)}
-              className="py-3 bg-card border border-border rounded-xl font-medium text-sm hover:bg-muted transition flex items-center justify-center gap-2"
+              className="py-3 surface-1 rounded-[var(--radius-control)] font-medium type-meta t-colors hover:bg-muted flex items-center justify-center gap-2"
             >
               <Sparkles className="w-4 h-4" /> Novo Exercício
             </button>
@@ -165,24 +170,24 @@ export default function RedacaoPartesPage() {
   // ==== EXERCISE VIEW ====
   if (view === 'exercise' && exercise && currentPartInfo) {
     return (
-      <div className="p-4 md:p-8 max-w-4xl mx-auto">
-        <button onClick={() => setView('home')} className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-4">
+      <div className="p-4 md:p-8 max-w-[46rem] mx-auto">
+        <button onClick={() => setView('home')} className="inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors mb-4">
           <ChevronLeft className="w-4 h-4" /> Voltar
         </button>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+        <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}>
           {/* Header */}
-          <div className="bg-card rounded-2xl p-5 border border-border shadow-sm mb-4">
+          <div className="surface-1 rounded-[var(--radius-surface)] p-5 mb-4">
             <div className="flex items-center gap-2 mb-2">
-              <span className={`px-2 py-0.5 text-xs font-bold text-white rounded-full ${currentPartInfo.color}`}>
-                {currentPartInfo.emoji} {currentPartInfo.label}
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 type-meta font-semibold rounded-[var(--radius-data)] bg-primary/10 text-primary">
+                {CurrentPartIcon && <CurrentPartIcon className="w-3.5 h-3.5" />} {currentPartInfo.label}
               </span>
             </div>
-            <h2 className="font-display text-lg font-bold mb-1">{exercise.tema}</h2>
+            <h2 className="font-display type-lead font-semibold mb-1">{exercise.tema}</h2>
             {exercise.textosMotivadores && (
               <details className="mt-3">
-                <summary className="text-sm text-primary font-medium cursor-pointer hover:underline">Ver textos motivadores</summary>
-                <div className="mt-2 text-sm text-foreground/80 whitespace-pre-wrap bg-muted/50 rounded-lg p-3 max-h-48 overflow-y-auto">
+                <summary className="type-meta text-primary font-medium cursor-pointer hover:underline underline-offset-4">Ver textos motivadores</summary>
+                <div className="prose-reading text-foreground/80 whitespace-pre-wrap bg-muted/50 rounded-[var(--radius-control)] p-3 mt-2 max-h-48 overflow-y-auto">
                   {exercise.textosMotivadores}
                 </div>
               </details>
@@ -191,31 +196,31 @@ export default function RedacaoPartesPage() {
 
           {/* Texto base (existing parts) */}
           {exercise.textoBase && (
-            <div className="bg-muted/30 rounded-2xl p-5 border border-border mb-4">
-              <h3 className="text-sm font-bold mb-2 text-muted-foreground">Texto já escrito:</h3>
-              <div className="text-sm leading-relaxed whitespace-pre-wrap">
+            <div className="bg-muted/30 rounded-[var(--radius-surface)] p-5 border border-border mb-4">
+              <h3 className="type-meta font-semibold mb-2 text-muted-foreground">Texto já escrito:</h3>
+              <div className="prose-reading whitespace-pre-wrap">
                 {exercise.textoBase}
               </div>
             </div>
           )}
 
           {/* Instruction */}
-          <div className="bg-primary/5 rounded-xl p-4 border border-primary/10 mb-4">
-            <p className="text-sm font-medium text-primary">📌 {exercise.instrucao}</p>
+          <div className="bg-primary/5 rounded-[var(--radius-control)] p-4 border border-primary/10 mb-4 flex items-start gap-2">
+            <Info className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+            <p className="type-meta font-medium text-primary">{exercise.instrucao}</p>
           </div>
 
           {/* Editor */}
-          <div className="bg-card rounded-2xl border border-border shadow-sm overflow-hidden mb-4">
+          <div className="surface-1 rounded-[var(--radius-surface)] overflow-hidden mb-4">
             <div className="flex items-center justify-between px-4 py-2 bg-muted/60 border-b border-border">
-              <span className="text-xs font-medium text-muted-foreground">Sua {currentPartInfo.label}</span>
-              <span className="text-xs text-muted-foreground">{wordCount} palavras</span>
+              <span className="type-caption text-muted-foreground">Sua {currentPartInfo.label}</span>
+              <span data-numeric className="type-meta text-muted-foreground">{wordCount} palavras</span>
             </div>
             <textarea
               value={resposta}
               onChange={(e) => setResposta(e.target.value)}
               placeholder={`Escreva sua ${currentPartInfo.label.toLowerCase()} aqui...`}
-              className="w-full min-h-[250px] p-4 bg-background text-sm leading-relaxed resize-y focus:outline-none"
-              style={{ fontFamily: 'serif', lineHeight: '1.8' }}
+              className="block w-full max-w-[var(--measure-reading)] mx-auto min-h-[250px] p-4 bg-[hsl(var(--surface-2))] font-reading text-body leading-[var(--lh-reading)] resize-y focus:outline-none"
             />
           </div>
 
@@ -241,14 +246,14 @@ export default function RedacaoPartesPage() {
                 } catch (e) { toast.error('Erro ao salvar'); }
               }}
               disabled={wordCount < 5}
-              className="px-5 py-3 bg-muted text-foreground rounded-xl font-medium text-sm hover:bg-muted/80 disabled:opacity-40 transition flex items-center gap-2 border border-border"
+              className="px-5 py-3 bg-muted text-foreground rounded-[var(--radius-control)] font-medium type-meta hover:bg-secondary t-colors disabled:opacity-40 flex items-center gap-2 border border-border"
             >
               <FileText className="w-4 h-4" /> Salvar
             </button>
             <button
               onClick={handleSubmit}
               disabled={submitting || wordCount < 10}
-              className="flex-1 py-3 bg-primary text-primary-foreground rounded-xl font-medium text-sm hover:opacity-90 disabled:opacity-40 transition shadow-md flex items-center justify-center gap-2"
+              className="flex-1 py-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-2 t-lift enabled:hover:-translate-y-px enabled:hover:shadow-elev-3 disabled:opacity-40 disabled:shadow-elev-1 flex items-center justify-center gap-2"
             >
               {submitting ? <><Loader2 className="w-4 h-4 animate-spin" /> Avaliando...</> : <><Send className="w-4 h-4" /> Enviar para Correção</>}
             </button>
@@ -261,48 +266,50 @@ export default function RedacaoPartesPage() {
   // ==== HOME VIEW ====
   return (
     <div className="p-4 md:p-8 max-w-4xl mx-auto">
-      <button onClick={() => window.history.back()} className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-4">
+      <button onClick={() => window.history.back()} className="inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors mb-4">
         <ChevronLeft className="w-4 h-4" /> Voltar para Redação
       </button>
 
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}>
         <div className="flex items-center gap-3 mb-2">
           <PenTool className="w-6 h-6 text-primary" />
-          <h1 className="font-display text-2xl font-bold tracking-tight">Treino por Partes</h1>
+          <h1 className="font-display type-headline font-bold">Treino por Partes</h1>
         </div>
-        <p className="text-sm text-muted-foreground mb-6">Pratique cada parte da redação separadamente e receba feedback da IA</p>
+        <p className="type-meta text-muted-foreground mb-6">Pratique cada parte da redação separadamente e receba feedback da IA</p>
 
         <div className="space-y-4">
           {PARTS.map((part) => {
             const partStats = stats[part.type];
+            const Icon = part.icon;
+            const isLoadingThis = loading && selectedPart === part.type;
             return (
               <motion.button
                 key={part.type}
-                whileHover={{ scale: 1.01 }}
+                whileHover={{ scale: 1.005 }}
                 onClick={() => startExercise(part.type)}
-                disabled={loading && selectedPart === part.type}
-                className="w-full bg-card rounded-xl p-5 border border-border shadow-sm hover:shadow-md hover:border-primary/30 transition text-left disabled:opacity-60"
+                disabled={isLoadingThis}
+                className="w-full bg-[hsl(var(--surface-2))] rounded-[var(--radius-control)] p-5 border border-border shadow-elev-1 t-lift hover:border-primary/45 hover:shadow-elev-2 hover:-translate-y-px text-left disabled:opacity-60"
               >
                 <div className="flex items-center gap-4">
-                  <div className={`w-12 h-12 rounded-xl ${part.color} flex items-center justify-center text-xl text-white`}>
-                    {part.emoji}
+                  <div className="w-12 h-12 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-6 h-6 text-primary" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-display font-bold text-base">{part.label}</h3>
-                    <p className="text-xs text-muted-foreground">{part.description}</p>
+                    <h3 className="font-display type-body font-semibold">{part.label}</h3>
+                    <p className="type-meta text-muted-foreground">{part.description}</p>
                     {partStats && (
-                      <div className="flex items-center gap-3 mt-1.5">
-                        <span className="text-xs text-muted-foreground">{partStats.total} treinos</span>
-                        <span className={`text-xs font-semibold ${partStats.avgNota >= 7 ? 'text-green-600' : partStats.avgNota >= 5 ? 'text-yellow-600' : 'text-red-600'}`}>
+                      <div className="flex items-center gap-3 mt-1.5 type-meta text-muted-foreground">
+                        <span data-numeric>{partStats.total} treinos</span>
+                        <span data-numeric className="font-semibold text-foreground">
                           Média: {partStats.avgNota}/10
                         </span>
                         {partStats.lastNota != null && (
-                          <span className="text-xs text-muted-foreground">Última: {partStats.lastNota}/10</span>
+                          <span data-numeric>Última: {partStats.lastNota}/10</span>
                         )}
                       </div>
                     )}
                   </div>
-                  {loading && selectedPart === part.type ? (
+                  {isLoadingThis ? (
                     <Loader2 className="w-5 h-5 animate-spin text-primary" />
                   ) : (
                     <ArrowRight className="w-5 h-5 text-muted-foreground" />
