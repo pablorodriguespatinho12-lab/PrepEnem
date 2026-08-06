@@ -68,6 +68,10 @@ const config: Config = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
+          // Estados sólidos: o hover/ativo escurece em vez de ficar transparente.
+          // bg-primary/80 desbotava contra a página e reprovava em AA.
+          hover: 'hsl(var(--primary-hover))',
+          active: 'hsl(var(--primary-active))',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',

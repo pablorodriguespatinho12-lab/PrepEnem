@@ -2,7 +2,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { useTheme } from 'next-themes';
-import { themeColors, DEFAULT_THEME_COLOR, surfaceScale } from '@/lib/theme-colors';
+import { themeColors, DEFAULT_THEME_COLOR, surfaceScale, primaryStates } from '@/lib/theme-colors';
 
 interface ThemeContextType {
   color: string;
@@ -41,6 +41,9 @@ export function AppThemeProvider({ children }: { children: React.ReactNode }) {
     root.style.setProperty('--chart-1', mode.chart1);
     // A escala de superfície é a fonte da elevação; --background/--card/--popover
     // derivam dela para os componentes shadcn continuarem funcionando.
+    const estados = primaryStates(mode, resolvedTheme === 'dark');
+    root.style.setProperty('--primary-hover', estados.hover);
+    root.style.setProperty('--primary-active', estados.active);
     const surfaces = surfaceScale(mode, resolvedTheme === 'dark');
     root.style.setProperty('--surface-0', surfaces.surface0);
     root.style.setProperty('--surface-1', surfaces.surface1);

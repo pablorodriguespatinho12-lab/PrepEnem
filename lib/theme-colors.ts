@@ -27,13 +27,13 @@ type ThemeColorSet = {
 export const themeColors: Record<string, ThemeColorSet> = {
   clareza: {
     label: 'Clareza',
-    swatch: '#0c6a7f',
+    swatch: '#0b687f',
     light: {
-      primary: '192 84% 30%',
+      primary: '192 84% 27%',
       primaryForeground: '0 0% 100%',
-      ring: '192 84% 30%',
+      ring: '192 84% 27%',
       accent: '190 20% 92%',
-      chart1: '192 84% 30%',
+      chart1: '192 84% 27%',
       background: '190 20% 97%',
       card: '190 25% 99%',
       foreground: '200 25% 12%',
@@ -57,13 +57,13 @@ export const themeColors: Record<string, ThemeColorSet> = {
   },
   ambar: {
     label: 'Âmbar de Estudo',
-    swatch: '#a8502c',
+    swatch: '#a3421f',
     light: {
-      primary: '16 68% 42%',
+      primary: '16 68% 38%',
       primaryForeground: '0 0% 100%',
-      ring: '16 68% 42%',
+      ring: '16 68% 38%',
       accent: '30 15% 91%',
-      chart1: '16 68% 42%',
+      chart1: '16 68% 38%',
       background: '30 12% 96%',
       card: '30 15% 99%',
       foreground: '20 15% 14%',
@@ -87,7 +87,7 @@ export const themeColors: Record<string, ThemeColorSet> = {
   },
   academico: {
     label: 'Índigo Acadêmico',
-    swatch: '#2e3a66',
+    swatch: '#2c386d',
     light: {
       primary: '229 42% 30%',
       primaryForeground: '0 0% 100%',
@@ -117,13 +117,13 @@ export const themeColors: Record<string, ThemeColorSet> = {
   },
   blue: {
     label: 'Azul',
-    swatch: '#2563eb',
+    swatch: '#0a58d6',
     light: {
-      primary: '217 91% 53%',
+      primary: '217 91% 44%',
       primaryForeground: '0 0% 100%',
-      ring: '217 91% 53%',
+      ring: '217 91% 44%',
       accent: '217 20% 93%',
-      chart1: '217 91% 53%',
+      chart1: '217 91% 44%',
       background: '217 20% 97%',
       card: '217 25% 99%',
       foreground: '220 25% 12%',
@@ -147,13 +147,13 @@ export const themeColors: Record<string, ThemeColorSet> = {
   },
   green: {
     label: 'Verde',
-    swatch: '#16a34a',
+    swatch: '#126d34',
     light: {
-      primary: '142 71% 37%',
-      primaryForeground: '142 40% 10%',
-      ring: '142 71% 37%',
+      primary: '142 71% 25%',
+      primaryForeground: '0 0% 100%',
+      ring: '142 71% 25%',
       accent: '142 20% 93%',
-      chart1: '142 71% 37%',
+      chart1: '142 71% 25%',
       background: '142 15% 97%',
       card: '142 20% 99%',
       foreground: '145 25% 12%',
@@ -177,13 +177,13 @@ export const themeColors: Record<string, ThemeColorSet> = {
   },
   orange: {
     label: 'Laranja',
-    swatch: '#ea580c',
+    swatch: '#a53f09',
     light: {
-      primary: '21 90% 48%',
-      primaryForeground: '21 40% 10%',
-      ring: '21 90% 48%',
+      primary: '21 90% 34%',
+      primaryForeground: '0 0% 100%',
+      ring: '21 90% 34%',
       accent: '21 20% 93%',
-      chart1: '21 90% 48%',
+      chart1: '21 90% 34%',
       background: '25 15% 97%',
       card: '25 20% 99%',
       foreground: '22 25% 12%',
@@ -219,6 +219,26 @@ function shiftLightness(hsl: string, delta: number): string {
   if (Number.isNaN(l)) return hsl;
   const next = Math.min(100, Math.max(0, l + delta));
   return `${parts[0]} ${parts[1]} ${Math.round(next * 10) / 10}%`;
+}
+
+/**
+ * Estados interativos do primary.
+ *
+ * Antes o hover e o ativo eram `bg-primary/90` e `bg-primary/80`, ou seja,
+ * transparência. Isso desbota o botão contra a página em vez de escurecê-lo:
+ * branco sobre primary/80 media 3.76:1, reprovado em AA, e nenhuma
+ * luminosidade de primary resolve enquanto o estado for transparência.
+ *
+ * Agora os dois estados são cores sólidas. No claro o botão escurece ao ser
+ * pressionado; no escuro clareia, porque ali o primary já é o elemento claro
+ * sobre fundo escuro e escurecer leria como "apagando".
+ */
+export function primaryStates(mode: ThemeModeTokens, isDark: boolean) {
+  const passo = isDark ? [4, 8] : [-4, -8];
+  return {
+    hover: shiftLightness(mode.primary, passo[0]),
+    active: shiftLightness(mode.primary, passo[1]),
+  };
 }
 
 export type SurfaceScale = {

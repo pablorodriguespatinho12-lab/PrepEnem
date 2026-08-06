@@ -388,18 +388,18 @@ function BotoesDemo() {
       <Estado rotulo="Repouso (interativo)">
         <button
           type="button"
-          className={`${BOTAO_BASE} bg-primary text-primary-foreground hover:bg-primary/90 active:bg-primary/80`}
+          className={`${BOTAO_BASE} bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-active`}
         >
           Responder
         </button>
       </Estado>
       <Estado rotulo="Hover (estático)">
-        <button type="button" tabIndex={-1} className={`${BOTAO_BASE} bg-primary/90 text-primary-foreground`}>
+        <button type="button" tabIndex={-1} className={`${BOTAO_BASE} bg-primary-hover text-primary-foreground`}>
           Responder
         </button>
       </Estado>
       <Estado rotulo="Ativo (estático)">
-        <button type="button" tabIndex={-1} className={`${BOTAO_BASE} bg-primary/80 text-primary-foreground`}>
+        <button type="button" tabIndex={-1} className={`${BOTAO_BASE} bg-primary-active text-primary-foreground`}>
           Responder
         </button>
       </Estado>
@@ -697,7 +697,7 @@ function SecaoMovimento() {
         <button
           type="button"
           onClick={reproduzirTodas}
-          className={`${BOTAO_BASE} bg-primary text-primary-foreground hover:bg-primary/90 active:bg-primary/80`}
+          className={`${BOTAO_BASE} bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-active`}
         >
           <Play className="h-4 w-4" aria-hidden="true" />
           Reproduzir todas

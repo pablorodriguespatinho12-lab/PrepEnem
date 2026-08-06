@@ -103,7 +103,9 @@
     --popover: var(--surface-3);
     --popover-foreground: 200 30% 11%;
 
-    --primary: 192 84% 30%;
+    --primary-hover: 192 84% 25%;
+    --primary-active: 192 84% 21%;
+    --primary: 192 84% 27%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 195 24% 92%;
@@ -120,7 +122,7 @@
 
     --border: 195 22% 87%;
     --input: 195 22% 87%;
-    --ring: 192 84% 30%;
+    --ring: 192 84% 27%;
 
     /* Compat shadcn: --radius mapeia para a superfície. */
     --radius: var(--radius-surface);
@@ -144,7 +146,7 @@
     --duration-normal: var(--dur-short);
     --duration-slow: var(--dur-medium);
 
-    --chart-1: 192 84% 30%;
+    --chart-1: 192 84% 27%;
     --chart-2: 173 58% 34%;
     --chart-3: 12 70% 48%;
     --chart-4: 197 37% 24%;
@@ -180,6 +182,8 @@
     --card-foreground: 190 18% 93%;
     --popover-foreground: 190 18% 93%;
 
+    --primary-hover: 189 80% 56%;
+    --primary-active: 189 80% 60%;
     --primary: 189 80% 52%;
     --primary-foreground: 200 30% 10%;
 
@@ -614,4 +618,35 @@
     scroll-behavior: auto !important;
   }
   .card-shine:hover::after { transform: translateX(-200%) skewX(-15deg); }
+}
+/* ===== SONNER ==============================================================
+   O sonner traz a própria paleta por variante. toast.info() saía em
+   hsl(210 92% 45%) sobre hsl(208 100% 97%) — 4.35:1, reprovado em AA, e
+   idêntico nos dois modos porque não lia token nenhum.
+   Cada variante passa a ter texto em foreground sobre surface-1, o que garante
+   AA, e se distingue pela borda em vez de texto colorido — mesma regra do
+   resto do sistema: a cor acentua, não carrega o significado sozinha.
+   A especificidade precisa ser maior que `[data-sonner-toaster][data-theme=x]`
+   porque o sonner injeta o CSS dele no <head> em runtime, depois desta folha.
+   O `html` à frente resolve. Um style inline no componente NÃO resolve: o
+   sonner não repassa a prop `style` para o elemento raiz do toaster.
+   Nota: --success-border e --error-border colidem de nome com tokens nossos.
+   Declarados aqui eles ficam sombreados só dentro da subárvore do toaster,
+   e o toast não consome esses tokens — inofensivo, mas fica registrado. */
+html [data-sonner-toaster][data-theme] {
+  --normal-bg:    hsl(var(--surface-1));
+  --normal-text:  hsl(var(--foreground));
+  --normal-border: hsl(var(--border));
+  --info-bg:      hsl(var(--surface-1));
+  --info-text:    hsl(var(--foreground));
+  --info-border:  hsl(var(--primary));
+  --success-bg:   hsl(var(--surface-1));
+  --success-text: hsl(var(--foreground));
+  --success-border: hsl(var(--success));
+  --error-bg:     hsl(var(--surface-1));
+  --error-text:   hsl(var(--foreground));
+  --error-border: hsl(var(--danger));
+  --warning-bg:   hsl(var(--surface-1));
+  --warning-text: hsl(var(--foreground));
+  --warning-border: hsl(var(--border));
 }
