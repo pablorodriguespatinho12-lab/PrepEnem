@@ -6,14 +6,17 @@
 // cadastradas como "facil"/"medio" pela dificuldade estimada, e na prática são
 // as mais difíceis da sessão. A etapa se decide pela ORIGEM primeiro.
 
-export type Etapa = 'base' | 'intermediaria' | 'enem';
+// 'acima': um nível além do ENEM, no estilo Fuvest/Unicamp/ITA/IME, logo
+// depois da questão do ENEM do mesmo conteúdo (lib/treino-degraus.ts).
+export type Etapa = 'base' | 'intermediaria' | 'enem' | 'acima';
 
-export const ETAPA_ORDEM: Etapa[] = ['base', 'intermediaria', 'enem'];
+export const ETAPA_ORDEM: Etapa[] = ['base', 'intermediaria', 'enem', 'acima'];
 
 export const ETAPA_LABEL: Record<Etapa, string> = {
   base: 'Base',
   intermediaria: 'Intermediária',
   enem: 'ENEM',
+  acima: 'Nível acima',
 };
 
 /* Quantas questões de cada degrau numa sessão de 20. Falta num degrau é
@@ -22,6 +25,7 @@ export const ETAPA_COTA: Record<Etapa, number> = {
   base: 6,
   intermediaria: 8,
   enem: 6,
+  acima: 0, // só entra no bloco da própria âncora, nunca pela cota
 };
 
 interface QuestaoClassificavel {
@@ -38,6 +42,7 @@ export function isQuestaoEnem(q: QuestaoClassificavel): boolean {
 }
 
 export function etapaDaQuestao(q: QuestaoClassificavel): Etapa {
+  if ((q.nivel ?? '').toLowerCase() === 'acima') return 'acima';
   if (isQuestaoEnem(q)) return 'enem';
   const grau = (q.nivel ?? q.dificuldade ?? '').toLowerCase();
   return grau === 'facil' ? 'base' : 'intermediaria';
@@ -54,7 +59,7 @@ export function montarEscada<T extends QuestaoClassificavel & { id: string; mate
   const porEtapa = (lista: T[], etapa: Etapa) => lista.filter((q) => etapaDaQuestao(q) === etapa);
 
   const cotas = { ...ETAPA_COTA };
-  const escolhidas: Record<Etapa, T[]> = { base: [], intermediaria: [], enem: [] };
+  const escolhidas: Record<Etapa, T[]> = { base: [], intermediaria: [], enem: [], acima: [] };
   const usados = new Set<string>();
 
   const pegar = (etapa: Etapa, quantas: number) => {
@@ -86,4 +91,21 @@ function alternarMaterias<T extends { materia: string }>(lista: T[]): T[] {
     for (const f of filas) if (f[i]) saida.push(f[i]);
   }
   return saida;
+}
+
+/* Exemplo resolvido: as primeiras questões de cada matéria chegam com a
+   resolução aberta, para o estudante ver a construção do raciocínio antes de
+   tentar sozinho (efeito do exemplo resolvido, Sweller). Pedido do Pablo em
+   05/10/2026. ENEM e nível acima nunca: essas ele resolve. */
+export const RESOLVIDAS_POR_MATERIA = 5;
+export function ehExemploResolvido<T extends QuestaoClassificavel & { materia: string }>(
+  questoes: T[],
+  idx: number,
+): boolean {
+  const q = questoes[idx];
+  if (!q) return false;
+  const etapa = etapaDaQuestao(q);
+  if (etapa === 'enem' || etapa === 'acima') return false;
+  const anteriores = questoes.slice(0, idx).filter((o) => o.materia === q.materia).length;
+  return anteriores < RESOLVIDAS_POR_MATERIA;
 }

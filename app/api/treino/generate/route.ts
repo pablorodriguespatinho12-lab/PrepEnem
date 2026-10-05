@@ -10,7 +10,8 @@ import { chatCompletion, getAbacusApiKey } from '@/lib/ai-client';
 import { etapaDaQuestao, isQuestaoEnem, montarEscada } from '@/lib/treino-etapas';
 import { degrausDasAncoras } from '@/lib/treino-degraus';
 // Quantas questões do ENEM viram bloco com degraus por sessão. Cada bloco tem
-// ~6 questões (5 degraus + a do ENEM): 2 blocos deixam espaço para o aquecimento.
+// ~7 questões (5 degraus + a do ENEM + 1 de nível acima): 2 blocos deixam
+// espaço para o aquecimento.
 const MAX_ANCORAS = 2;
 /* Uma âncora por matéria antes de repetir matéria — o dia costuma ter duas. */
 function escolherAncoras<T extends { materia: string }>(candidatas: T[], max: number): T[] {
@@ -129,9 +130,13 @@ export async function POST(req: Request) {
     };
     const ancoras = escolherAncoras(shuffle(topicMatch.filter((q) => isQuestaoEnem(q) && assuntoNoSubtema(q))), MAX_ANCORAS);
     const degraus = await degrausDasAncoras(ancoras);
+    // Bloco: degraus → questão do ENEM → nível acima (lib/treino-degraus.ts).
     const blocos = ancoras
-      .filter((a) => (degraus.get(a.id)?.length ?? 0) > 0)
-      .map((a) => [...(degraus.get(a.id) ?? []), a]);
+      .filter((a) => (degraus.get(a.id) ?? []).some((q) => q.nivel !== 'acima'))
+      .map((a) => {
+        const qs = degraus.get(a.id) ?? [];
+        return [...qs.filter((q) => q.nivel !== 'acima'), a, ...qs.filter((q) => q.nivel === 'acima')];
+      });
     const idsBlocos = new Set(blocos.flat().map((q) => q.id));
     // 2. O resto da sessão vem do banco, na escada: base e intermediária
     //    aquecem antes dos blocos, ENEM avulsa fecha depois deles.

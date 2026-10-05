@@ -604,6 +604,24 @@
   box-shadow: 0 0 0 2px hsl(var(--surface-0)), 0 0 0 4px hsl(var(--ring));
 }
 
+/* ===== PARTÍCULAS DE FUNDO =================================================
+   Só transform e opacity: roda no compositor, fora da thread principal.
+   A cor vem de dois tokens por modo; o alfa de cada ponto vem do componente. */
+.particulas { --particula: 100 80 180; --particula-k: 0.6; }
+.dark .particulas { --particula: 150 180 255; --particula-k: 1; }
+.particula {
+  position: absolute;
+  top: 100%;
+  border-radius: 9999px;
+  background: rgb(var(--particula) / calc(var(--alfa) * var(--particula-k)));
+  animation: particulaSobe var(--duracao) linear infinite;
+}
+@keyframes particulaSobe {
+  0%   { transform: translate3d(0, 0, 0); opacity: 0; }
+  6%   { opacity: 1; }
+  94%  { opacity: 1; }
+  100% { transform: translate3d(var(--deriva), calc(-100vh - 20px), 0); opacity: 0; }
+}
 /* ===== REDUCED MOTION ======================================================
    Exceção documentada: o flip do flashcard continua animando (a rotação É o
    feedback do gesto, não decoração) — tratada no componente, não aqui.
@@ -616,6 +634,12 @@
     scroll-behavior: auto !important;
   }
   .card-shine:hover::after { transform: translateX(-200%) skewX(-15deg); }
+  /* Partículas paradas onde estão, espalhadas pela tela, em vez de sumirem. */
+  .particulas .particula {
+    animation-duration: var(--duracao) !important;
+    animation-iteration-count: infinite !important;
+    animation-play-state: paused;
+  }
 }
 /* ===== SONNER ==============================================================
    O sonner traz a própria paleta por variante. toast.info() saía em

@@ -13,7 +13,7 @@ import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
 import { fireConfetti, spawnCorrectParticles, flashScreen } from '@/components/animations';
 import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
-import { ETAPA_LABEL, etapaDaQuestao } from '@/lib/treino-etapas';
+import { ETAPA_LABEL, ehExemploResolvido, etapaDaQuestao } from '@/lib/treino-etapas';
 import { ExplicacaoTutor } from '@/components/tutor/explicacao-tutor';
 import { VisualDesenho } from '@/components/visual/visual-desenho';
 import type { Visual } from '@/lib/visual/especificacao';
@@ -100,8 +100,15 @@ export default function TreinoPage() {
     }
   }, []);
 
-  const startSession = useCallback(async () => {
+  // `recomecar`: monta uma sessão nova do zero. Sem isso o
+  // botão de reiniciar só restaurava a mesma sessão, na mesma questão.
+  const startSession = useCallback(async (recomecar = false) => {
     setLoading(true);
+    setSelected(null);
+    setAnswered(false);
+    setResult(null);
+    setAnswerError(null);
+    setStreak(0);
     try {
       let loadedQs: any[] = [];
       let revisaoDoDia: { materia: string; subtema: string }[] = [];
@@ -145,9 +152,9 @@ export default function TreinoPage() {
         loadedQs = resData?.questions ?? [];
         setQuestions(loadedQs);
       } else {
-        // Check for active session first
-        const activeRes = await fetch('/api/treino/session');
-        const activeData = await activeRes.json();
+        // Recomeçar pula a restauração; o POST da sessão nova fecha a antiga.
+        const activeRes = recomecar ? null : await fetch('/api/treino/session');
+        const activeData = activeRes ? await activeRes.json() : null;
 
         if (activeData?.session && !activeData.session.finished) {
           // Restore existing session
@@ -262,6 +269,8 @@ export default function TreinoPage() {
   }, [startSession]);
 
   const currentQ = questions?.[currentIdx];
+  // Só no treino do dia: revisão e filtro por assunto continuam todos para resolver.
+  const resolvida = !isReview && !isErrosReview && !isFiltered && ehExemploResolvido(questions ?? [], currentIdx);
   const alternatives = currentQ ? [
     { key: 'A', text: currentQ.alternativaA },
     { key: 'B', text: currentQ.alternativaB },
@@ -787,12 +796,16 @@ export default function TreinoPage() {
               </span>
             )}
             <button
-              onClick={() => { setFinished(false); startSession(); }}
-              title="Reiniciar sessão"
-              aria-label="Reiniciar sessão"
-              className="ml-1 p-1.5 rounded-[var(--radius-control)] text-muted-foreground hover:text-foreground hover:bg-muted t-colors"
+              onClick={() => {
+                if (!window.confirm('Recomeçar o treino do zero? As respostas desta sessão continuam salvas no seu progresso.')) return;
+                setFinished(false);
+                startSession(true);
+              }}
+              title="Recomeçar treino do zero"
+              className="ml-1 inline-flex items-center gap-1.5 px-2 py-1.5 rounded-[var(--radius-control)] type-meta text-muted-foreground hover:text-foreground hover:bg-muted t-colors"
             >
               <RefreshCcw className="w-4 h-4" />
+              Recomeçar
             </button>
           </div>
         </div>
@@ -815,30 +828,17 @@ export default function TreinoPage() {
         </div>
       </header>
 
-      {/* Question with 3D flip transition */}
-      <div className="perspective-1000 mb-4 relative">
-        <AnimatePresence mode="popLayout">
+      {/* Troca de questão: fade + deslize curto (skill animation-system).
+          Antes era um giro 3D de 0,5 s com a página da prova dentro — a
+          imagem grande era rasterizada em 3D a cada quadro e a tela travava. */}
+      <div className="mb-4 relative">
+        <AnimatePresence mode="popLayout" initial={false}>
           <motion.div
             key={currentIdx}
-            initial={
-              shouldReduceMotion
-                ? { opacity: 0 }
-                : { opacity: 0, rotateY: -90, scale: 0.85 }
-            }
-            animate={
-              shouldReduceMotion
-                ? { opacity: 1 }
-                : { opacity: 1, rotateY: 0, scale: 1 }
-            }
-            exit={
-              shouldReduceMotion
-                ? { opacity: 0, transition: { duration: 0.01 } }
-                : result?.acertou === false
-                ? { opacity: 0, y: 200, rotateX: 30, transition: { duration: 0.5, ease: 'easeIn' } }
-                : { opacity: 0, rotateY: 90, scale: 0.85, transition: { duration: 0.4 } }
-            }
-            transition={{ duration: shouldReduceMotion ? 0.01 : 0.5, ease: 'easeOut' }}
-            style={{ transformStyle: 'preserve-3d' }}
+            initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, x: 40 }}
+            animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, x: 0 }}
+            exit={shouldReduceMotion ? { opacity: 0, transition: { duration: 0.01 } } : { opacity: 0, x: -40, transition: { duration: 0.18, ease: 'easeIn' } }}
+            transition={{ duration: shouldReduceMotion ? 0.01 : 0.25, ease: [0.16, 1, 0.3, 1] }}
             className="surface-1 rounded-[var(--radius-surface)] p-6 md:p-8"
           >
           {/* Procedência da questão. Antes eram três pílulas preenchidas; a
@@ -863,6 +863,12 @@ export default function TreinoPage() {
             <span aria-hidden className="w-px h-3 bg-border shrink-0" />
             {currentQ && (
               <span className="font-medium">{ETAPA_LABEL[etapaDaQuestao(currentQ)]}</span>
+            )}
+            {resolvida && (
+              <>
+                <span aria-hidden className="w-px h-3 bg-border shrink-0" />
+                <span className="font-medium text-primary-text">Exemplo resolvido</span>
+              </>
             )}
           </div>
 
@@ -893,14 +899,14 @@ export default function TreinoPage() {
             {alternatives.map((alt, altIdx) => {
               // Só marca certo/errado quando o veredito do servidor (result) já chegou —
               // enquanto `answered && !result` (verificando) ou em erro, fica neutro.
-              const isCorrect = !!result && alt.key === result.respostaCorreta;
+              const isCorrect = resolvida ? alt.key === currentQ?.respostaCorreta : !!result && alt.key === result.respostaCorreta;
               const isWrong = !!result && alt.key === selected && !result.acertou;
               const isChecking = answered && !result && !answerError && alt.key === selected;
               const isSelected = alt.key === selected;
               return (
                 <motion.button
                   key={alt.key}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -8 }}
                   animate={
                     isCorrect && !shouldReduceMotion
                       ? { opacity: 1, x: 0, scale: [1, 1.08, 1] }
@@ -909,10 +915,10 @@ export default function TreinoPage() {
                   transition={
                     isCorrect && !shouldReduceMotion
                       ? { duration: 0.35, ease: 'easeOut' }
-                      : { delay: altIdx * 0.08, duration: 0.3 }
+                      : { delay: shouldReduceMotion ? 0 : 0.05 + altIdx * 0.03, duration: 0.2 }
                   }
-                  onClick={() => !answered && setSelected(alt.key)}
-                  disabled={answered}
+                  onClick={() => !answered && !resolvida && setSelected(alt.key)}
+                  disabled={answered || resolvida}
                   data-alt={alt.key}
                   data-state={isCorrect ? 'correta' : isWrong ? 'errada' : isSelected ? 'selecionada' : 'repouso'}
                   style={
@@ -988,7 +994,29 @@ export default function TreinoPage() {
       </div>
 
       {/* Confirm / Checking / Error / Next */}
-      {!answered ? (
+      {resolvida && currentQ ? (
+        <div className="space-y-4">
+          <div className="surface-1 rounded-[var(--radius-surface)] p-5 md:p-6 border-l-[3px] border-l-primary">
+            <p className="type-caption text-muted-foreground mb-1.5">Exemplo resolvido · resposta {currentQ.respostaCorreta}</p>
+            <p className="type-meta text-muted-foreground mb-4">
+              Leia como a resposta é construída. As próximas você resolve sozinho.
+            </p>
+            {currentQ.explicacao && (
+              <div className="prose-reading">
+                <MathText text={currentQ.explicacao} />
+              </div>
+            )}
+          </div>
+          <ExplicacaoTutor questao={currentQ} respostaDada={null} iniciarSozinha={!currentQ.explicacao} />
+          <button
+            onClick={nextQuestion}
+            className="w-full py-3.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium text-body shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3 flex items-center justify-center gap-2"
+          >
+            Entendi, próxima
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
+      ) : !answered ? (
         <button
           onClick={handleAnswer}
           disabled={!selected}

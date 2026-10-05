@@ -101,6 +101,7 @@ export async function PUT(req: Request) {
       return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
     }
 
+    const userId = (session.user as any).id;
     const { sessionId, currentIdx, correct, wrong, questionId, respostaDada, finished } = await req.json();
 
     if (!sessionId) {
@@ -114,10 +115,14 @@ export async function PUT(req: Request) {
     if (wrong !== undefined) updateData.wrong = wrong;
     if (finished !== undefined) updateData.finished = finished;
 
-    await prisma.trainingSession.update({
-      where: { id: sessionId },
+    // Só a sessão do próprio usuário: o id vem do cliente.
+    const { count } = await prisma.trainingSession.updateMany({
+      where: { id: sessionId, userId },
       data: updateData,
     });
+    if (count === 0) {
+      return NextResponse.json({ error: 'Sessão não encontrada' }, { status: 404 });
+    }
 
     // Mark question as answered if provided
     if (questionId && respostaDada) {

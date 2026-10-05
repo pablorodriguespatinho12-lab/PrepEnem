@@ -28,6 +28,13 @@ o redesign pode reinventar quase tudo, **menos** os itens abaixo.
 dos componentes, movimento, personalidade visual. Nada disso está decidido
 — não trate o estado atual como referência a preservar.
 
+## Referência por tela
+
+O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
+`montar-referencia`, escolhida pelo Pablo olhando, e registrada aqui com data.
+
+- Nenhuma escolhida ainda (05/10/2026).
+
 ## Conteúdo gerado por IA
 
 - **Zero emoji** em explicações, feedback ou UI. Hierarquia se faz com
@@ -67,6 +74,15 @@ dos componentes, movimento, personalidade visual. Nada disso está decidido
   resposta de cara (Bastani et al. 2025: IA que entrega piora o aprendizado),
   corrige sem concordar para agradar e muda de ângulo em vez de repetir.
   Regras e fontes no topo de `lib/tutor/prompts.ts`.
+- **Exemplo resolvido e nível acima (05/10/2026, pedido do Pablo):** as 5
+  primeiras questões de cada matéria no treino do dia chegam resolvidas
+  (gabarito marcado, explicação e tutor abertos) — nunca a do ENEM nem a de
+  nível acima (`ehExemploResolvido` em `lib/treino-etapas.ts`). Cada bloco de
+  âncora fecha com 1 questão "Nível acima" gerada por IA no estilo
+  Fuvest/Unicamp (+ ITA/IME nas exatas), original, autossuficiente, só
+  programa do médio, conferida pelo verificador. Não há questão real dessas
+  bancas no banco: não apresentar a gerada como real.
+- "Recomeçar" no treino monta sessão nova; antes só restaurava a mesma.
 - Sessão aberta só é retomada se tiver menos de 12 h — a de outro dia foi
   montada para outro dia do cronograma.
 

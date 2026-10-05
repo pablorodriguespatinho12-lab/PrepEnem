@@ -6,7 +6,10 @@ description: "Use ao mexer em qualquer animação, transição ou movimento visu
 # Sistema de Animação do PrepEnem
 
 Biblioteca: **Framer Motion 11** (`motion`, `AnimatePresence`). Fundo de
-partículas é canvas puro (`components/particles-bg.tsx`), não Framer Motion.
+partículas é CSS puro (`components/particles-bg.tsx` + `.particula` em
+`globals.css`): só `transform`/`opacity`, roda no compositor. Era canvas
+redesenhado a 60 fps na thread principal e travava o treino (05/10/2026) —
+não volte para canvas nem para rAF.
 
 ## Padrões já em uso (seguir, não inventar novos)
 
@@ -65,8 +68,8 @@ diretriz mira (parallax rápido, zoom, deslocamento grande).
 Isso **não** se estende ao resto: partículas de fundo e parallax respeitam
 reduced-motion sempre. Ver [[decisoes-prepenem]] para a decisão registrada.
 
-**Ainda sem esse tratamento**: transição de questão em Treino/Simulado,
-fundo de partículas (não crítico, é decorativo e não desloca conteúdo),
+Treino e partículas já respeitam (partículas ficam paradas, não somem).
+**Ainda sem esse tratamento**: transição de questão no Simulado,
 demais páginas com `motion.div` de entrada. Aplique o mesmo padrão sempre
 que tocar nessas telas — não precisa refatorar tudo de uma vez.
 
