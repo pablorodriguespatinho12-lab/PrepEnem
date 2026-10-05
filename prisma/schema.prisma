@@ -171,7 +171,7 @@ model ReviewSchedule {
 
 model EssayTheme {
   id               String   @id @default(cuid())
-  tema             String
+  tema             String   @unique
   anoEnem          Int?
   textoMotivador   String?  @db.Text
   areaConhecimento String?

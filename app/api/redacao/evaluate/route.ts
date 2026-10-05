@@ -29,7 +29,12 @@ function correcaoNotaZeroPorTamanho(): CorrecaoCompleta {
   };
 }
 
+/* Uma avaliação que ficou "avaliando" por mais que isso morreu no meio
+   (queda de rede, timeout da função) e pode ser refeita. */
+const AVALIACAO_TRAVADA_MS = 3 * 60 * 1000;
+
 export async function POST(req: Request) {
+  let essayIdMarcada: string | null = null;
   try {
     const session = await getServerSession(authOptions);
     if (!session?.user) return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
@@ -42,7 +47,17 @@ export async function POST(req: Request) {
     if (!essay) return NextResponse.json({ error: 'Redação não encontrada' }, { status: 404 });
     if (essay.userId !== userId) return NextResponse.json({ error: 'Não autorizado' }, { status: 403 });
 
-    await prisma.essay.update({ where: { id: essayId }, data: { status: 'avaliando' } });
+    // Marca "avaliando" só se ninguém está avaliando agora: o updateMany com
+    // condição é atômico, então dois cliques não disparam duas correções.
+    const marcada = await prisma.essay.updateMany({
+      where: {
+        id: essayId,
+        OR: [{ status: { not: 'avaliando' } }, { updatedAt: { lt: new Date(Date.now() - AVALIACAO_TRAVADA_MS) } }],
+      },
+      data: { status: 'avaliando' },
+    });
+    if (marcada.count === 0) return NextResponse.json({ error: 'Esta redação já está sendo avaliada.' }, { status: 409 });
+    essayIdMarcada = essayId;
 
     let correcao: CorrecaoCompleta;
     if (linhasAproximadas(essay.texto) < MINIMO_LINHAS) {
@@ -73,6 +88,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true, notaTotal: correcao.total });
   } catch (error: unknown) {
     console.error('Evaluate error:', error);
+    // Sem isso a redação ficava "avaliando" para sempre e a tela, carregando.
+    if (essayIdMarcada) {
+      await prisma.essay.update({ where: { id: essayIdMarcada }, data: { status: 'pendente' } }).catch(() => {});
+    }
     return NextResponse.json({ error: 'Erro ao avaliar redação' }, { status: 500 });
   }
 }

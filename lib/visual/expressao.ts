@@ -158,10 +158,18 @@ class Leitor {
 }
 
 /* Aceita "y = ...", "f(x) = ..." ou só o lado direito. Lança erro legível. */
+/* Teto de tamanho: com ele, a recursão do leitor e a da função montada ficam
+   rasas (sem estouro de pilha na hora de desenhar). Gráfico de aula cabe folgado. */
+const MAX_CARACTERES = 200;
+const MAX_TOKENS = 120;
+
 export function compilarExpressao(fonte: string): Funcao {
+  if (fonte.length > MAX_CARACTERES) throw new Error('Expressão longa demais');
   const ladoDireito = fonte.includes('=') ? fonte.slice(fonte.lastIndexOf('=') + 1) : fonte;
   if (ladoDireito.trim().length === 0) throw new Error('Expressão vazia');
-  return new Leitor(tokenizar(ladoDireito), fonte).ler();
+  const tokens = tokenizar(ladoDireito);
+  if (tokens.length > MAX_TOKENS) throw new Error('Expressão longa demais');
+  return new Leitor(tokens, fonte).ler();
 }
 
 /* Versão que nunca lança: devolve null quando a IA mandou algo ilegível. */

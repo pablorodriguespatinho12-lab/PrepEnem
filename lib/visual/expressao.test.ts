@@ -39,6 +39,12 @@ describe('compilarExpressao', () => {
     expect(em('x**3', 2)).toBe(8);
   });
 
+  test('recusa expressão gigante antes de montar recursão funda', () => {
+    expect(() => compilarExpressao('('.repeat(150) + 'x' + ')'.repeat(150))).toThrow('longa');
+    expect(() => compilarExpressao(Array(80).fill('x').join('+'))).toThrow('longa');
+    expect(tentarCompilar('-'.repeat(300) + 'x')).toBeNull();
+  });
+
   test('recusa código e nomes desconhecidos em vez de executar', () => {
     expect(() => compilarExpressao('alert(1)')).toThrow();
     expect(() => compilarExpressao('x; process.exit()')).toThrow();

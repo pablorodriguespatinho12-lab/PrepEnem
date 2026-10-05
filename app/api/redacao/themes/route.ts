@@ -5,14 +5,13 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { MODELOS } from '@/data/redacao/modelos';
 
-/* Os temas das redações-modelo entram no banco na primeira listagem. Só
-   cria o que falta (por tema), então rodar de novo não duplica nada. */
+/* Os temas das redações-modelo entram no banco na primeira listagem. `tema` é
+   único no schema e skipDuplicates ignora o que já existe, então duas
+   listagens ao mesmo tempo (duas abas) não duplicam nada. */
 async function garantirTemasDosModelos(): Promise<void> {
-  const existentes = new Set((await prisma.essayTheme.findMany({ select: { tema: true } })).map((t) => t.tema));
-  const faltando = MODELOS.filter((m) => !existentes.has(m.tema));
-  if (faltando.length === 0) return;
   await prisma.essayTheme.createMany({
-    data: faltando.map((m) => ({ tema: m.tema, anoEnem: m.anoEnem, textoMotivador: m.contexto })),
+    data: MODELOS.map((m) => ({ tema: m.tema, anoEnem: m.anoEnem, textoMotivador: m.contexto })),
+    skipDuplicates: true,
   });
 }
 

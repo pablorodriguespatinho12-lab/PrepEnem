@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
-import { getCycleInfoForDay } from '@/lib/schedule-data';
+import { getCycleInfoForDay, studyCycle } from '@/lib/schedule-data';
 import { getActiveStudyDay, upsertStudyProgress } from '@/lib/study-progress';
 import { chatCompletion, getAbacusApiKey } from '@/lib/ai-client';
 import { etapaDaQuestao, isQuestaoEnem, montarEscada } from '@/lib/treino-etapas';
@@ -28,7 +28,10 @@ export async function POST(req: Request) {
     const userId = (session.user as any).id;
 
     const body = await req.json().catch(() => ({}));
-    const planDay = Number.isInteger(body?.weekNumber) && Number.isInteger(body?.dayIndex)
+    // Dia do plano vindo da URL só vale se existir no ciclo; senão, o dia ativo.
+    const diaValido = Number.isInteger(body?.weekNumber) && Number.isInteger(body?.dayIndex)
+      && body.weekNumber >= 1 && body.weekNumber <= studyCycle.length && body.dayIndex >= 0 && body.dayIndex <= 6;
+    const planDay = diaValido
       ? { weekNumber: body.weekNumber, dayIndex: body.dayIndex }
       : await getActiveStudyDay(userId);
 
@@ -68,7 +71,7 @@ export async function POST(req: Request) {
       if (subtemaLower.length === 0) return true;
       const qSub = (q.subtema ?? '').toLowerCase();
       const qEnun = (q.enunciado ?? '').toLowerCase();
-      return subtemaLower.some(s => qSub.includes(s) || s.includes(qSub) || qEnun.includes(s));
+      return subtemaLower.some(s => qSub.includes(s) || (qSub.length > 0 && s.includes(qSub)) || qEnun.includes(s));
     }
 
     // Get ALL user progress to check recently answered questions
