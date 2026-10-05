@@ -3,7 +3,7 @@
 // o erro em vez de repetir o mesmo pedido.
 
 import { chatCompletion } from '@/lib/ai-client';
-import { extrairJson } from './validar';
+import { extrairJson } from '@/lib/tutor/validar';
 
 /* AI_MODEL_TUTOR permite um modelo mais forte só para explicar e conversar,
    sem mudar o das outras rotas. Sem ele, vale o AI_MODEL padrão. */

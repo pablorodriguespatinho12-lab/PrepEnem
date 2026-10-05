@@ -3,5 +3,5 @@ import path from 'path';
 
 export default defineConfig({
   resolve: { alias: { '@': path.resolve(__dirname, '.') } },
-  test: { include: ['lib/**/*.test.ts'] },
+  test: { include: ['lib/**/*.test.ts', 'data/**/*.test.ts'] },
 });

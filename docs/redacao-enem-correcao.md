@@ -1,0 +1,86 @@
+# Correção da redação do ENEM — referência do corretor do PrepEnem
+
+Pesquisa de 05/10/2026 nos documentos oficiais do INEP. É a régua que
+`lib/redacao/grade.ts` e `lib/redacao/prompts.ts` implementam. Ao mudar a
+correção, mude aqui primeiro.
+
+**Fontes oficiais (INEP):**
+- Manuais de correção por competência ("Grade Específica", versão 2020, ainda
+  listados como vigentes): `download.inep.gov.br/educacao_basica/enem/downloads/2020/Competencia_1.pdf`
+  (trocar 1 por 2–5) e `.../2020/Situacoes_nota_zero.pdf`.
+- Cartilhas do Participante 2024, 2025 e 2026 (a de 2026 publicada em set/2026),
+  em gov.br/inep → Enem → Outros documentos.
+
+## As 5 competências (0–200, em passos de 40)
+
+Regra geral do manual: texto com características de dois níveis fica no **de baixo**.
+
+### C1 — norma escrita formal
+| Nível | Estrutura sintática | Desvios |
+|---|---|---|
+| 200 | excelente (no máximo 1 falha) | no máximo 2 |
+| 160 | boa | poucos |
+| 120 | regular | alguns |
+| 80 | deficitária **ou** | muitos |
+| 40 | deficitária **e** | muitos |
+| 0 | inexistente | — |
+
+"Poucos/alguns/muitos" não têm número oficial. O PrepEnem usa faixas
+aproximadas (≤5 / ≤9 / ≤14 / mais), marcadas como aproximação no código.
+
+### C2 — tema, tipo textual, repertório
+- 0: fuga ao tema ou outro tipo textual (anula a redação).
+- 40: tangencia o tema; ou traços constantes de outro tipo textual.
+- 80: tema completo, mas 2 das 3 partes embrionárias; ou conclusão incompleta; ou muita cópia dos motivadores (cópia trava em 80).
+- 120: no máximo 1 parte embrionária; repertório só dos motivadores, ou não legitimado, ou não pertinente.
+- 160: nenhuma parte embrionária; repertório legitimado e pertinente, uso **improdutivo**.
+- 200: o mesmo, com uso **produtivo**.
+- Tangenciar trava C2, C3 e C5 em 40.
+
+**Repertório:** legitimado = tem respaldo numa área do conhecimento (conceito,
+fato histórico, autor, obra, lei, pesquisa); dado tirado dos textos motivadores
+não conta. Pertinente = ligado a algum elemento do tema. Produtivo = articulado à
+discussão. "Repertório de bolso" (citação decorada que daria para trocar por
+outra sem mudar o sentido) é improdutivo: no máximo 160.
+
+### C3 — projeto de texto
+- 200: projeto estratégico, todas as ideias desenvolvidas (deslizes pontuais aceitos).
+- 160: poucas falhas, a maior parte desenvolvida.
+- 120: algumas falhas, algumas ideias desenvolvidas.
+- 80: muitas falhas, uma ou nenhuma ideia desenvolvida. Contradição grave trava aqui.
+- 40: tangente com direção, ou tema completo sem direção.
+- O que mais derruba: informação solta, sem explicação, que deixa a ligação para o leitor.
+
+### C4 — coesão
+- 200: presença expressiva; ≥2 operadores **entre** parágrafos e ≥1 coesivo **dentro** de cada parágrafo; repetições raras; **nenhuma** inadequação.
+- 160: presença constante; ≥1 operador entre parágrafos; poucas repetições/inadequações.
+- 120: presença regular. 80: pontual (texto em um parágrafo só trava aqui). 40: rara.
+- Um conectivo com relação de sentido errada já impede o 200. Conectivo artificial ou excessivo também é condenado.
+
+### C5 — proposta de intervenção
+Nota = 40 × elementos válidos (agente, ação, modo/meio, efeito/finalidade, detalhamento).
+- 0: sem proposta, desrespeito aos direitos humanos, ou desligada do assunto.
+- Proposta em oração condicional ("se...") trava em 80.
+- **Ação** genérica ou que só constata ("faltam investimentos") é nula.
+- **Agente** nulo: "alguém", "você", verbo no imperativo. "A sociedade", "o Estado", "nós" valem.
+- **Detalhamento** nunca é nulo. Detalhar o efeito só conta como "efeito do efeito", com marcador explícito.
+- Elemento repetido conta uma vez. Com várias propostas, vale a mais completa. Pode estar em qualquer parte do texto.
+
+## Nota zero
+Folha em branco; até 7 linhas; fuga total ao tema; não dissertativo-argumentativo;
+parte deliberadamente desconectada; identificação; impropérios ou desenhos;
+predominância de língua estrangeira; ilegível. O título é opcional.
+
+## Padrões das redações bem avaliadas (observados nas cartilhas, não regra oficial)
+- **Introdução:** repertório como mote → liga à realidade brasileira com todos os termos do tema → tese → anúncio de dois eixos.
+- **Desenvolvimento:** operador entre parágrafos + tópico frasal que retoma um eixo → repertório que sustenta → análise de causa/consequência no Brasil → fecho ("Dessa forma...").
+- **Conclusão:** retomada com "Portanto" → proposta completa respondendo às causas → volta ao repertório da introdução.
+
+## Correção na prática
+Dois corretores independentes; discrepância acima de 100 no total ou 80 numa
+competência chama um terceiro. O feedback do PrepEnem segue a ordem dos
+comentários da cartilha: desvios → tema e repertório → projeto, parágrafo a
+parágrafo → coesão → proposta, elemento a elemento.
+
+**Não confirmado em fonte oficial:** "sem ação perde 120"; repertório de bolso
+penalizado na C3.

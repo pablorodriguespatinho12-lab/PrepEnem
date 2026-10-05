@@ -70,6 +70,16 @@ dos componentes, movimento, personalidade visual. Nada disso está decidido
 - Sessão aberta só é retomada se tiver menos de 12 h — a de outro dia foi
   montada para outro dia do cronograma.
 
+## Redação
+
+- **A IA levanta evidência, o código dá a nota (05/10/2026).** C1, C2 e C5
+  saem inteiras das regras da grade do INEP (`lib/redacao/grade.ts`); C3 e C4
+  usam o nível da IA com teto pela evidência e pelas travas. Régua e fontes
+  em `docs/redacao-enem-correcao.md` — mude lá antes de mudar o código.
+- Treino por partes usa as redações-modelo de `data/redacao/modelos.ts`
+  (textos originais, temas reais, cada trecho comentado). Não inventa
+  texto-base com IA. Repertório nos modelos: só fato verificável.
+
 ## Visualização de dados
 
 - **Dado esparso é ruído, não informação.** Numa amostra binária pequena,

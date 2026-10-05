@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { toast } from 'sonner';
 
+import { CorrecaoCompletaView, lerCorrecao } from '@/components/redacao/correcao-completa';
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 
 type View = 'home' | 'write' | 'history' | 'result' | 'saved';
@@ -260,8 +261,10 @@ export default function RedacaoPage() {
               </div>
             </div>
 
-            {/* Full evaluation */}
-            {currentEssay.avaliacao && (
+            {/* Avaliação: estruturada (versão 2) ou markdown de redações antigas */}
+            {currentEssay.avaliacao && (lerCorrecao(currentEssay.avaliacao) ? (
+              <div className="mb-6"><CorrecaoCompletaView correcao={lerCorrecao(currentEssay.avaliacao)!} /></div>
+            ) : (
               <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
                 <h3 className="font-display type-body font-semibold mb-4 flex items-center gap-2">
                   <BarChart3 className="w-5 h-5 text-primary-text" /> Avaliação Completa
@@ -270,8 +273,7 @@ export default function RedacaoPage() {
                   <MathText text={currentEssay.avaliacao} />
                 </div>
               </div>
-            )}
-
+            ))}
             {/* Original text — o que o usuário escreveu é conteúdo de leitura. */}
             <div className="surface-1 rounded-[var(--radius-surface)] p-6">
               <h3 className="font-display type-body font-semibold mb-3 flex items-center gap-2">

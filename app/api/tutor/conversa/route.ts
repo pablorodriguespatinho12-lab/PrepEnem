@@ -4,7 +4,7 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { promptConversa } from '@/lib/tutor/prompts';
 import { validarRespostaTutor } from '@/lib/tutor/validar';
-import { pedirJson } from '@/lib/tutor/chamar-ia';
+import { pedirJson } from '@/lib/pedir-json';
 import { lerHistorico, lerQuestao } from '@/lib/tutor/entrada';
 
 // Dúvida depois da explicação: o aluno pergunta, o tutor responde um passo

@@ -8,6 +8,8 @@ import {
   Lightbulb, Search, Target, Info
 } from 'lucide-react';
 import { toast } from 'sonner';
+import Link from 'next/link';
+import { CorrecaoParteView } from '@/components/redacao/correcao-parte';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 
@@ -41,7 +43,7 @@ export default function RedacaoPartesPage() {
 
   useEffect(() => { fetchStats(); }, [fetchStats]);
 
-  const startExercise = async (partType: PartType) => {
+  const startExercise = async (partType: PartType, modeloId?: string) => {
     setSelectedPart(partType);
     setLoading(true);
     setResposta('');
@@ -50,7 +52,7 @@ export default function RedacaoPartesPage() {
       const res = await fetch('/api/redacao/parts/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ partType }),
+        body: JSON.stringify({ partType, modeloId }),
       });
       const data = await res.json();
       if (data?.tema) {
@@ -66,9 +68,16 @@ export default function RedacaoPartesPage() {
     }
   };
 
+  // Vindo de /redacao/modelos ("Treinar esta parte"): abre direto o exercício.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const parte = params.get('parte') as PartType | null;
+    if (parte && PARTS.some((p) => p.type === parte)) startExercise(parte, params.get('modelo') ?? undefined);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na chegada à página
+  }, []);
   const handleSubmit = async () => {
-    if (!exercise || !resposta.trim() || resposta.trim().length < 50) {
-      toast.error('Escreva pelo menos 50 caracteres');
+    if (!exercise || resposta.trim().length < 80) {
+      toast.error('Escreva pelo menos duas ou três frases antes de enviar.');
       return;
     }
     setSubmitting(true);
@@ -76,15 +85,10 @@ export default function RedacaoPartesPage() {
       const res = await fetch('/api/redacao/parts/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          partType: selectedPart,
-          tema: exercise.tema,
-          textoBase: exercise.textoBase,
-          resposta,
-        }),
+        body: JSON.stringify({ partType: selectedPart, modeloId: exercise.modeloId, resposta }),
       });
       const data = await res.json();
-      if (data?.feedback) {
+      if (data?.correcao) {
         setResult(data);
         setView('result');
         fetchStats();
@@ -118,7 +122,7 @@ export default function RedacaoPartesPage() {
                 className="w-16 h-16 rounded-[var(--radius-control)] flex items-center justify-center font-display type-title font-semibold flex-shrink-0"
                 style={{ backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}
               >
-                <span data-numeric>{result.nota}/10</span>
+                <span data-numeric>{result.correcao.nota}/10</span>
               </div>
               <div>
                 <h2 className="font-display type-lead font-semibold flex items-center gap-2">
@@ -129,16 +133,7 @@ export default function RedacaoPartesPage() {
             </div>
           </div>
 
-          {/* Feedback — conteúdo gerado por IA é conteúdo de leitura. */}
-          <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
-            <h3 className="font-display type-body font-semibold mb-4 flex items-center gap-2">
-              <BarChart3 className="w-5 h-5 text-primary-text" /> Feedback da IA
-            </h3>
-            <div className="prose-reading whitespace-pre-wrap">
-              <MathText text={result.feedback} />
-            </div>
-          </div>
-
+          <div className="mb-6"><CorrecaoParteView correcao={result.correcao} modelo={result.modelo ?? null} /></div>
           {/* User's text */}
           <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
             <h3 className="font-display type-body font-semibold mb-3">Seu Texto</h3>
@@ -204,6 +199,17 @@ export default function RedacaoPartesPage() {
             </div>
           )}
 
+          {/* O que a parte precisa ter — os mesmos itens da correção */}
+          {Array.isArray(exercise.criterios) && (
+            <div className="surface-1 rounded-[var(--radius-surface)] p-5 mb-4">
+              <h3 className="type-meta font-semibold mb-2">O que sua {currentPartInfo.label.toLowerCase()} precisa ter</h3>
+              <ul className="space-y-1.5">
+                {exercise.criterios.map((c: { id: string; rotulo: string; descricao: string }) => (
+                  <li key={c.id} className="type-meta"><strong>{c.rotulo}.</strong> <span className="text-muted-foreground">{c.descricao}</span></li>
+                ))}
+              </ul>
+            </div>
+          )}
           {/* Instruction */}
           <div className="bg-primary/5 rounded-[var(--radius-control)] p-4 border border-primary/10 mb-4 flex items-start gap-2">
             <Info className="w-4 h-4 text-primary-text flex-shrink-0 mt-0.5" />
@@ -275,7 +281,10 @@ export default function RedacaoPartesPage() {
           <PenTool className="w-6 h-6 text-primary-text" />
           <h1 className="font-display type-headline font-bold">Treino por Partes</h1>
         </div>
-        <p className="type-meta text-muted-foreground mb-6">Pratique cada parte da redação separadamente e receba feedback da IA</p>
+        <p className="type-meta text-muted-foreground mb-4">Você recebe uma redação pronta sem uma das partes e escreve a parte que falta. Depois compara com o modelo comentado.</p>
+        <Link href="/redacao/modelos" className="inline-flex items-center gap-1.5 type-meta text-primary-text font-medium hover:underline underline-offset-4 mb-6">
+          <BookOpen className="w-4 h-4" /> Ler as redações-modelo comentadas
+        </Link>
 
         <div className="space-y-4">
           {PARTS.map((part) => {
