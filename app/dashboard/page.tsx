@@ -1,8 +1,7 @@
 'use client';
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import dynamic from 'next/dynamic';
 import {
   BookOpen, Target, Flame, RefreshCcw, Calendar,
   Trophy, ArrowRight, AlertTriangle, AlertCircle, CheckCircle2, Brain, Sparkles,
@@ -12,7 +11,6 @@ import { getWeekScheduleByNumber, studyCycle } from '@/lib/schedule-data';
 import { materiaColors } from '@/lib/theme-colors';
 import { CheckCircle2 as DayDoneIcon, Circle, CircleDashed } from 'lucide-react';
 
-const ThreeScene = dynamic(() => import('@/components/three-scene'), { ssr: false });
 
 /* Limiares de dado esparso — mesma regra usada em app/progresso/page.tsx.
    < 5 respostas: sem %. 5–15: % com indicador de baixa confiança. 15+: limpa. */
@@ -73,7 +71,6 @@ export default function DashboardPage() {
   const [studyProgress, setStudyProgress] = useState<any[]>([]);
   const [activeDay, setActiveDay] = useState<{ weekNumber: number; dayIndex: number; cycleComplete: boolean } | null>(null);
   const [expandedDayIndex, setExpandedDayIndex] = useState<number | null>(null);
-  const dashRef = useRef<HTMLDivElement>(null);
 
   const fetchStats = useCallback(async () => {
     try {
@@ -112,68 +109,6 @@ export default function DashboardPage() {
     fetchStudyProgress();
   }, [activeDay, fetchStudyProgress]);
 
-  /* ── GSAP scroll animations ── */
-  useEffect(() => {
-    if (loading) return;
-
-    let ctx: any;
-    import('gsap').then(gsapMod => {
-      import('gsap/ScrollTrigger').then(stMod => {
-        const gsap = gsapMod.gsap || gsapMod.default;
-        const ScrollTrigger = stMod.ScrollTrigger || stMod.default;
-        gsap.registerPlugin(ScrollTrigger);
-
-        ctx = gsap.context(() => {
-          /* stat cards: rotateX reveal */
-          gsap.fromTo('.gsap-stat', {
-            rotationX: 50, y: 40, opacity: 0,
-          }, {
-            rotationX: 0, y: 0, opacity: 1,
-            stagger: 0.1, duration: 0.8, ease: 'power3.out',
-            scrollTrigger: { trigger: '.gsap-stats-grid', start: 'top 88%', toggleActions: 'play none none none' },
-          });
-
-          /* action buttons: slide+rotate */
-          gsap.fromTo('.gsap-action', {
-            rotationX: 30, y: 30, opacity: 0,
-          }, {
-            rotationX: 0, y: 0, opacity: 1,
-            stagger: 0.08, duration: 0.7, ease: 'power2.out',
-            scrollTrigger: { trigger: '.gsap-actions-grid', start: 'top 88%', toggleActions: 'play none none none' },
-          });
-
-          /* schedule sections: fade up */
-          gsap.utils.toArray('.gsap-section').forEach((el: any) => {
-            gsap.fromTo(el, { y: 50, opacity: 0 }, {
-              y: 0, opacity: 1, duration: 0.8, ease: 'power2.out',
-              scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
-            });
-          });
-
-          // Em telas altas o suficiente pra caber a página inteira sem scroll
-          // (ou quando o refresh inicial do ScrollTrigger mede o layout antes
-          // dos dados assíncronos terminarem de empurrar o conteúdo), o
-          // trigger de "top 88%" nunca é cruzado e o elemento fica em
-          // opacity:0 pra sempre. Depois de um refresh (layout já assentado),
-          // qualquer .gsap-reveal que já esteja visível no viewport revela
-          // na hora, sem depender de o usuário rolar a página.
-          requestAnimationFrame(() => {
-            ScrollTrigger.refresh();
-            document.querySelectorAll('.gsap-reveal').forEach((el) => {
-              const rect = el.getBoundingClientRect();
-              const alreadyVisible = rect.top < window.innerHeight && rect.bottom > 0;
-              if (alreadyVisible) {
-                gsap.set(el, { opacity: 1, y: 0, rotationX: 0 });
-              }
-            });
-          });
-        }, dashRef);
-      });
-    });
-
-    return () => { if (ctx) ctx.revert(); };
-  }, [loading]);
-
   const weekNumber = activeDay?.weekNumber ?? 1;
   const weekTitle = studyCycle[weekNumber - 1]?.weekTitle ?? '';
   const weekSchedule = getWeekScheduleByNumber(weekNumber);
@@ -195,21 +130,20 @@ export default function DashboardPage() {
 
   return (
     <>
-      <ThreeScene />
-      <div ref={dashRef} className="p-4 md:p-8 max-w-6xl mx-auto relative" style={{ zIndex: 1 }}>
+      <div className="p-4 md:p-8 max-w-6xl mx-auto relative" style={{ zIndex: 1 }}>
         <Greeting name={session?.user?.name ?? 'Estudante'} weekNumber={weekNumber} />
 
         {/* ── Estudo Atual (protagonista, com CTA de treino embutido) ──
              "Atual" em vez de "Hoje": o dia mostrado é o próximo pendente no
              SEU progresso, não necessariamente o dia da semana civil de hoje. */}
         {activeDay?.cycleComplete ? (
-          <div className="gsap-section gsap-reveal surface-1 rounded-[var(--radius-surface)] p-6 mb-6 text-center">
+          <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6 text-center">
             <Trophy className="w-8 h-8 text-primary-text mx-auto mb-2" />
             <p className="font-display type-body font-semibold">Ciclo de 4 semanas concluído!</p>
             <p className="type-meta text-muted-foreground mt-1">Continue treinando livremente pelas outras telas.</p>
           </div>
         ) : activeDaySchedule && (
-          <div className="gsap-section gsap-reveal surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
+          <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
             <div className="flex items-center justify-between gap-2 mb-4 flex-wrap">
               <div className="flex items-center gap-2">
                 <Sun className="w-5 h-5 text-amber-500" />
@@ -306,14 +240,14 @@ export default function DashboardPage() {
         )}
 
         {/* ── Stats compactos (contexto, não protagonista) ── */}
-        <div className="gsap-stats-grid flex items-stretch divide-x divide-border surface-1 rounded-[var(--radius-surface)] mb-4 overflow-x-auto">
+        <div className="flex items-stretch divide-x divide-border surface-1 rounded-[var(--radius-surface)] mb-4 overflow-x-auto">
           {statCards.map((card) => {
             const Icon = card.icon;
             const isTaxa = card.key === 'taxa';
             const sparse = isTaxa && totalRespondidas < MIN_QUESTOES_PARA_TAXA;
             const lowConfidence = isTaxa && !sparse && totalRespondidas < LIMIAR_BAIXA_CONFIANCA;
             return (
-              <div key={card.label} className="gsap-stat gsap-reveal flex items-center gap-2.5 px-4 py-3 flex-1 min-w-[140px]">
+              <div key={card.label} className="flex items-center gap-2.5 px-4 py-3 flex-1 min-w-[140px]">
                 <Icon className="w-4 h-4 text-muted-foreground flex-shrink-0" aria-hidden="true" />
                 <div className="min-w-0">
                   <p data-numeric className="font-display type-lead font-bold flex items-center gap-1">
@@ -335,10 +269,10 @@ export default function DashboardPage() {
         </div>
 
         {/* ── Ações secundárias ── */}
-        <div className="gsap-actions-grid grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6" style={{ perspective: '800px' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6" style={{ perspective: '800px' }}>
           <button
             onClick={() => router.push('/treino?mode=review')}
-            className="gsap-action gsap-reveal flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-3 t-lift card-3d group"
+            className="flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-3 t-lift card-3d group"
           >
             <div className="w-9 h-9 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center flex-shrink-0">
               <RefreshCcw className="w-4 h-4 text-primary-text" />
@@ -356,7 +290,7 @@ export default function DashboardPage() {
 
           <button
             onClick={() => router.push('/simulado')}
-            className="gsap-action gsap-reveal flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-3 t-lift card-3d group"
+            className="flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-3 t-lift card-3d group"
           >
             <div className="w-9 h-9 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center flex-shrink-0">
               <ClipboardList className="w-4 h-4 text-primary-text" />
@@ -371,7 +305,7 @@ export default function DashboardPage() {
 
           <button
             onClick={() => router.push('/upload')}
-            className="gsap-action gsap-reveal flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-3 t-lift card-3d group"
+            className="flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-3 t-lift card-3d group"
           >
             <div className="w-9 h-9 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center flex-shrink-0">
               <Upload className="w-4 h-4 text-primary-text" />
@@ -385,7 +319,7 @@ export default function DashboardPage() {
 
         {/* ── Weekly Calendar: pills horizontais, status vem do progresso real,
              não da data (dia atual do plano expandido por padrão) ── */}
-        <div className="gsap-section gsap-reveal surface-1 rounded-[var(--radius-surface)] p-6 mb-8">
+        <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-8">
           <div className="flex items-center gap-2 mb-4">
             <Sparkles className="w-5 h-5 text-primary-text" />
             <h2 className="font-display type-lead font-semibold">Semana {weekNumber}: {weekTitle}</h2>
@@ -452,7 +386,7 @@ export default function DashboardPage() {
 
         {/* ── Subjects status ── */}
         {stats && ((stats.dominadas?.length ?? 0) === 0 && (stats.reforcar?.length ?? 0) === 0 ? (
-          <div className="gsap-section gsap-reveal surface-1 rounded-[var(--radius-surface)] p-5 card-3d text-center">
+          <div className="surface-1 rounded-[var(--radius-surface)] p-5 card-3d text-center">
             <BarChart3 className="w-6 h-6 text-muted-foreground mx-auto mb-2" />
             <p className="type-meta font-medium">Ainda sem dados suficientes por matéria</p>
             <p className="type-meta text-muted-foreground mt-1">
@@ -460,7 +394,7 @@ export default function DashboardPage() {
             </p>
           </div>
         ) : (
-          <div className="gsap-section gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {(stats?.dominadas?.length ?? 0) > 0 && (
               <div className="surface-1 rounded-[var(--radius-surface)] p-5 card-3d">
                 <div className="flex items-center gap-2 mb-3">

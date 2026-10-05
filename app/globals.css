@@ -496,10 +496,6 @@
   transition: transform var(--dur-micro) linear;
 }
 
-.gsap-reveal {
-  opacity: 0;
-  will-change: transform, opacity;
-}
 
 .perspective-1000 { perspective: 1000px; }
 
