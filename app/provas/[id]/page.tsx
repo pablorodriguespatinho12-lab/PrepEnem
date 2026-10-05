@@ -8,6 +8,7 @@ import { materiaColors } from '@/lib/theme-colors';
 import dynamic from 'next/dynamic';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
+import { ExplicacaoTutor } from '@/components/tutor/explicacao-tutor';
 
 /* Limiares de dado esparso — mesma regra usada em app/dashboard/page.tsx. */
 const MIN_QUESTOES_PARA_TAXA = 5;
@@ -26,82 +27,8 @@ export default function ProvaDetailPage() {
   const [feedback, setFeedback] = useState<any>(null);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const [llmExplanation, setLlmExplanation] = useState('');
-  const [generatingExplanation, setGeneratingExplanation] = useState(false);
-
-  // Track explanations for review screen
-  const [reviewExplanations, setReviewExplanations] = useState<Record<string, string>>({});
-  const [reviewGenerating, setReviewGenerating] = useState<string | null>(null);
-
-  const generateExplanation = async (question: any, answeredLetter: string | null, targetKey?: string) => {
-    const isReview = !!targetKey;
-    if (isReview) {
-      setReviewGenerating(targetKey);
-    } else {
-      setGeneratingExplanation(true);
-      setLlmExplanation('');
-    }
-    try {
-      const res = await fetch('/api/explain', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          enunciado: question.enunciado,
-          alternativas: {
-            A: question.alternativaA,
-            B: question.alternativaB,
-            C: question.alternativaC,
-            D: question.alternativaD,
-            E: question.alternativaE,
-          },
-          respostaCorreta: question.respostaCorreta,
-          respostaDada: answeredLetter || question.respostaCorreta,
-          materia: question.materia,
-        }),
-      });
-      if (!res.ok) {
-        toast.error('Erro ao gerar explicação');
-        return;
-      }
-      const reader = res.body?.getReader();
-      if (!reader) return;
-      const decoder = new TextDecoder();
-      let buffer = '';
-      let partial = '';
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        partial += decoder.decode(value, { stream: true });
-        const lines = partial.split('\n');
-        partial = lines.pop() ?? '';
-        for (const line of lines) {
-          if (line.startsWith('data: ')) {
-            const data = line.slice(6);
-            if (data === '[DONE]') break;
-            try {
-              const parsed = JSON.parse(data);
-              const content = parsed?.choices?.[0]?.delta?.content ?? '';
-              buffer += content;
-              if (isReview) {
-                setReviewExplanations(prev => ({ ...prev, [targetKey]: buffer }));
-              } else {
-                setLlmExplanation(buffer);
-              }
-            } catch {}
-          }
-        }
-      }
-    } catch (e) {
-      toast.error('Erro ao gerar explicação');
-    } finally {
-      if (isReview) {
-        setReviewGenerating(null);
-      } else {
-        setGeneratingExplanation(false);
-      }
-    }
-  };
-
+  // Questão da revisão final com a explicação aberta (uma por vez).
+  const [revisaoAberta, setRevisaoAberta] = useState<string | null>(null);
   const fetchExam = useCallback(async () => {
     try {
       const res = await fetch(`/api/provas/${examId}`);
@@ -251,30 +178,18 @@ export default function ProvaDetailPage() {
                   )}
                 </div>
 
-                {/* Explanation button for each question */}
+                {/* Explicação visual da questão, uma aberta por vez */}
                 <div className="mt-3 border-t border-border pt-3">
-                  <button
-                    onClick={() => generateExplanation(q, eq.respostaDada, eq.id)}
-                    disabled={reviewGenerating === eq.id}
-                    className="flex items-center gap-2 type-meta text-primary-text font-medium hover:underline underline-offset-4 disabled:opacity-50"
-                  >
-                    <Brain className="w-4 h-4" />
-                    {reviewGenerating === eq.id
-                      ? 'Gerando...'
-                      : reviewExplanations[eq.id]
-                        ? 'Explicação ↓'
-                        : acertou ? 'Ver explicação' : 'Gerar explicação'}
-                  </button>
-                  {reviewGenerating === eq.id && !reviewExplanations[eq.id] && (
-                    <div className="flex items-center gap-2 mt-2">
-                      <Loader2 className="w-4 h-4 animate-spin text-primary-text" />
-                      <span className="type-caption text-muted-foreground">Gerando...</span>
-                    </div>
-                  )}
-                  {reviewExplanations[eq.id] && (
-                    <div className="prose-reading bg-muted/50 rounded-[var(--radius-control)] p-3 mt-2">
-                      <MathText text={reviewExplanations[eq.id]} />
-                    </div>
+                  {revisaoAberta === eq.id ? (
+                    <ExplicacaoTutor questao={q} respostaDada={eq.respostaDada} iniciarSozinha />
+                  ) : (
+                    <button
+                      onClick={() => setRevisaoAberta(eq.id)}
+                      className="flex items-center gap-2 type-meta text-primary-text font-medium hover:underline underline-offset-4"
+                    >
+                      <Brain className="w-4 h-4" />
+                      {acertou ? 'Ver explicação' : 'Me explica com desenho'}
+                    </button>
                   )}
                 </div>
               </motion.div>
@@ -360,8 +275,6 @@ export default function ProvaDetailPage() {
       setSubmitted(false);
       setFeedback(null);
       setSubmitError(null);
-      setLlmExplanation('');
-      setGeneratingExplanation(false);
       fetchExam();
     }
   };
@@ -549,28 +462,7 @@ export default function ProvaDetailPage() {
                 )}
               </div>
 
-              {/* AI Explanation */}
-              <div className="surface-1 rounded-[var(--radius-surface)] p-5">
-                <button
-                  onClick={() => generateExplanation(q, selectedAnswer)}
-                  disabled={generatingExplanation}
-                  className="flex items-center gap-2 type-meta text-primary-text font-medium hover:underline underline-offset-4 mb-3 disabled:opacity-50"
-                >
-                  <Brain className="w-4 h-4" />
-                  {generatingExplanation ? 'Gerando explicação...' : feedback.acertou ? 'Ver explicação detalhada' : 'Gerar explicação detalhada com IA'}
-                </button>
-                {generatingExplanation && !llmExplanation && (
-                  <div className="flex items-center gap-2 py-3">
-                    <Loader2 className="w-4 h-4 animate-spin text-primary-text" />
-                    <span className="type-meta text-muted-foreground">Gerando...</span>
-                  </div>
-                )}
-                {llmExplanation && (
-                  <div className="prose-reading bg-muted/50 rounded-[var(--radius-control)] p-4">
-                    <MathText text={llmExplanation} />
-                  </div>
-                )}
-              </div>
+              <ExplicacaoTutor questao={q} respostaDada={selectedAnswer} iniciarSozinha={!feedback.acertou} />
             </motion.div>
           )}
 

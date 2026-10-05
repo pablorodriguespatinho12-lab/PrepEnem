@@ -6,6 +6,7 @@ import { useSession } from 'next-auth/react';
 import { useTheme } from 'next-themes';
 import { useReducedMotion } from 'framer-motion';
 import { Check, Loader2, Play, Search, X } from 'lucide-react';
+import { SecaoVisual } from './secao-visual';
 
 /* PAINEL DE DESIGN — documentação viva dos tokens de app/globals.css. Rota
    interna, só logado. Tudo aqui lê o token real; nada é redigitado. */
@@ -774,6 +775,7 @@ function PainelDesign() {
         <SecaoPaleta />
         <SecaoEstados />
         <SecaoMovimento />
+        <SecaoVisual />
       </div>
     </main>
   );

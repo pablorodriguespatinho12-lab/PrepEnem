@@ -35,7 +35,7 @@ import { NextResponse } from 'next/server';
 const DEFAULT_BASE_URL = 'https://apps.abacus.ai/v1';
 const DEFAULT_MODEL = 'gpt-5.4-mini';
 const DEFAULT_TIMEOUT_MS = 30_000;
-// Chamadas em streaming (explain/route.ts) ficam recebendo tokens aos
+// Chamadas em streaming ficam recebendo tokens aos
 // poucos por mais tempo que uma chamada JSON normal — timeout maior evita
 // cortar uma explicação longa no meio só porque demorou mais que 30s.
 const DEFAULT_STREAM_TIMEOUT_MS = 60_000;
@@ -154,7 +154,7 @@ export async function chatCompletion(
 }
 
 // Chamada em streaming: devolve o Response bruto pro caller repassar
-// res.body direto pro cliente (ver app/api/explain/route.ts).
+// res.body direto pro cliente.
 export async function chatCompletionStream(
   params: ChatCompletionParams
 ): Promise<{ ok: true; res: Response } | ErrorResult> {

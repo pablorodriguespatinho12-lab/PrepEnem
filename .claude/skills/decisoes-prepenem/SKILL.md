@@ -59,6 +59,14 @@ dos componentes, movimento, personalidade visual. Nada disso está decidido
   subtema/tema, não no enunciado), a IA gera 2 base + 3 intermediárias que
   quebram a questão em peças; ficam no banco com `ancoraId` e a questão do
   ENEM vem logo depois delas. Sem âncora ou sem IA, cai na escada do banco.
+- **Explicação e dúvida (05/10/2026):** a IA descreve o desenho em JSON e o
+  app desenha (`lib/visual/especificacao.ts`) — gerador de imagem erra eixo e
+  número, então nunca imagem gerada para matemática. Desenho antes do texto,
+  um passo por vez, a fórmula sai do raciocínio (concreto → desenho →
+  símbolo), pergunta de recuperação no fim. Na conversa o tutor não entrega a
+  resposta de cara (Bastani et al. 2025: IA que entrega piora o aprendizado),
+  corrige sem concordar para agradar e muda de ângulo em vez de repetir.
+  Regras e fontes no topo de `lib/tutor/prompts.ts`.
 - Sessão aberta só é retomada se tiver menos de 12 h — a de outro dia foi
   montada para outro dia do cronograma.
 

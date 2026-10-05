@@ -5,7 +5,7 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import {
   BookOpen, ChevronLeft, ChevronRight, CheckCircle2, XCircle, AlertTriangle,
-  Brain, Loader2, RefreshCcw, Home, Send, Sparkles, Trophy,
+  Loader2, RefreshCcw, Home, Send, Sparkles, Trophy,
   GraduationCap, ChevronDown, Lightbulb, FlaskConical, Calculator, Play, Eye, EyeOff, ImageIcon,
   Check, X
 } from 'lucide-react';
@@ -14,6 +14,7 @@ import { materiaColors } from '@/lib/theme-colors';
 import { fireConfetti, spawnCorrectParticles, flashScreen } from '@/components/animations';
 import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
 import { ETAPA_LABEL, etapaDaQuestao } from '@/lib/treino-etapas';
+import { ExplicacaoTutor } from '@/components/tutor/explicacao-tutor';
 import { playSound } from '@/lib/sounds';
 
 const PdfPageViewer = dynamic(() => import('@/components/pdf-page-viewer'), { ssr: false });
@@ -61,8 +62,6 @@ export default function TreinoPage() {
   const [score, setScore] = useState({ correct: 0, wrong: 0 });
   const [finished, setFinished] = useState(false);
   const [feynmanText, setFeynmanText] = useState('');
-  const [llmExplanation, setLlmExplanation] = useState('');
-  const [generatingExplanation, setGeneratingExplanation] = useState(false);
   const [streak, setStreak] = useState(0);
   const [errosRound, setErrosRound] = useState(1);
   const [errosWrongIds, setErrosWrongIds] = useState<string[]>([]);
@@ -396,76 +395,6 @@ export default function TreinoPage() {
     handleAnswer();
   };
 
-  const generateAIExplanation = async () => {
-    if (!currentQ || generatingExplanation) return;
-    setGeneratingExplanation(true);
-    setLlmExplanation('');
-    try {
-      const res = await fetch('/api/explain', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          enunciado: currentQ.enunciado,
-          alternativas: {
-            A: currentQ.alternativaA,
-            B: currentQ.alternativaB,
-            C: currentQ.alternativaC,
-            D: currentQ.alternativaD,
-            E: currentQ.alternativaE,
-          },
-          respostaCorreta: currentQ.respostaCorreta,
-          respostaDada: selected,
-          materia: currentQ.materia,
-        }),
-      });
-
-      if (!res.ok) {
-        const errData = await res.json().catch(() => ({}));
-        toast.error(errData?.error || 'Erro ao gerar explicação. Tente novamente.');
-        setGeneratingExplanation(false);
-        return;
-      }
-
-      const reader = res.body?.getReader();
-      if (!reader) {
-        toast.error('Erro ao conectar com a IA');
-        setGeneratingExplanation(false);
-        return;
-      }
-      const decoder = new TextDecoder();
-      let buffer = '';
-      let partialRead = '';
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        partialRead += decoder.decode(value, { stream: true });
-        const lines = partialRead.split('\n');
-        partialRead = lines.pop() ?? '';
-        for (const line of lines) {
-          if (line.startsWith('data: ')) {
-            const data = line.slice(6);
-            if (data === '[DONE]') break;
-            try {
-              const parsed = JSON.parse(data);
-              const content = parsed?.choices?.[0]?.delta?.content ?? '';
-              buffer += content;
-              setLlmExplanation(buffer);
-            } catch {}
-          }
-        }
-      }
-      if (!buffer) {
-        toast.error('A IA não conseguiu gerar explicação para esta questão. Tente novamente.');
-      }
-    } catch (e) {
-      console.error(e);
-      toast.error('Erro ao gerar explicação. Tente novamente.');
-    } finally {
-      setGeneratingExplanation(false);
-    }
-  };
-
   const saveFeynman = async () => {
     if (!feynmanText.trim() || !result?.progressId) return;
     try {
@@ -497,7 +426,6 @@ export default function TreinoPage() {
         setResult(null);
         setAnswerError(null);
         setFeynmanText('');
-        setLlmExplanation('');
         toast.info(`Rodada ${errosRound + 1}: ${wrongQs.length} questão(ões) para revisar novamente!`);
         return;
       }
@@ -514,7 +442,6 @@ export default function TreinoPage() {
     setResult(null);
     setAnswerError(null);
     setFeynmanText('');
-    setLlmExplanation('');
     if (sessionId) saveSessionProgress(sessionId, newIdx, score);
   };
 
@@ -1197,31 +1124,10 @@ export default function TreinoPage() {
             )}
           </motion.div>
 
-          {/* AI Explanation — available for ALL answers */}
-          <div className="surface-1 rounded-[var(--radius-surface)] p-5">
-            <button
-              onClick={generateAIExplanation}
-              disabled={generatingExplanation}
-              className="flex items-center gap-2 type-meta text-primary-text font-medium hover:underline underline-offset-4 mb-3 disabled:opacity-50"
-            >
-              <Brain className="w-4 h-4" />
-              {generatingExplanation ? 'Gerando explicação...' : result?.acertou ? 'Ver explicação detalhada' : 'Gerar explicação detalhada com IA'}
-            </button>
-            <AnimatePresence>
-              {llmExplanation && (
-                <motion.div
-                  initial={{ opacity: 0, rotateX: shouldReduceMotion ? 0 : -12, scaleY: shouldReduceMotion ? 1 : 0.96 }}
-                  animate={{ opacity: 1, rotateX: 0, scaleY: 1 }}
-                  transition={{ duration: shouldReduceMotion ? 0.01 : 0.3, ease: [0.16, 1, 0.3, 1] }}
-                  style={{ transformPerspective: 800, transformOrigin: 'top' }}
-                  className="prose-reading bg-muted/50 rounded-[var(--radius-control)] p-4"
-                >
-                  <MathText text={llmExplanation} />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-
+          {/* Explicação visual em passos + conversa de dúvida. Errou: começa sozinha. */}
+          {currentQ && (
+            <ExplicacaoTutor questao={currentQ} respostaDada={selected} iniciarSozinha={!result?.acertou} />
+          )}
           {/* Feynman technique */}
           {!result?.acertou && !isReview && (
             <div className="surface-1 rounded-[var(--radius-surface)] p-5">
@@ -1256,8 +1162,7 @@ export default function TreinoPage() {
                   setResult(null);
                   setAnswerError(null);
                   setFeynmanText('');
-                  setLlmExplanation('');
-                }}
+                          }}
                 className="px-4 py-3.5 bg-muted text-foreground rounded-[var(--radius-control)] font-medium type-meta hover:bg-secondary t-colors flex items-center gap-2"
               >
                 <ChevronLeft className="w-4 h-4" /> Voltar
