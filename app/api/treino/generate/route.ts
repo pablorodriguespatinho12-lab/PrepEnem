@@ -6,6 +6,17 @@ import { authOptions } from '@/lib/auth';
 import { getCycleInfoForDay } from '@/lib/schedule-data';
 import { getActiveStudyDay, upsertStudyProgress } from '@/lib/study-progress';
 import { chatCompletion, getAbacusApiKey } from '@/lib/ai-client';
+import { etapaDaQuestao, isQuestaoEnem, montarEscada } from '@/lib/treino-etapas';
+import { degrausDasAncoras } from '@/lib/treino-degraus';
+// Quantas questões do ENEM viram bloco com degraus por sessão. Cada bloco tem
+// ~6 questões (5 degraus + a do ENEM): 2 blocos deixam espaço para o aquecimento.
+const MAX_ANCORAS = 2;
+/* Uma âncora por matéria antes de repetir matéria — o dia costuma ter duas. */
+function escolherAncoras<T extends { materia: string }>(candidatas: T[], max: number): T[] {
+  const primeiras = candidatas.filter((q, i) => candidatas.findIndex((c) => c.materia === q.materia) === i);
+  const resto = candidatas.filter((q) => !primeiras.includes(q));
+  return [...primeiras, ...resto].slice(0, max);
+}
 
 
 export async function POST(req: Request) {
@@ -34,13 +45,14 @@ export async function POST(req: Request) {
         todaySubtemas.push(...topic.subtemas);
       }
     }
-    // Always include Português and Matemática for daily practice
-    if (!todayMaterias.includes('Português')) todayMaterias.push('Português');
-    if (!todayMaterias.includes('Matemática')) todayMaterias.push('Matemática');
+    // O treino é sobre o conteúdo do dia. Português e Matemática só entram
+    // quando o dia não tem tópico nenhum (ex.: dia sem plano carregado).
+    if (todayMaterias.length === 0) todayMaterias.push('Português', 'Matemática');
 
     const filterMaterias = todayMaterias.length > 0 ? todayMaterias : undefined;
 
-    const where: any = {};
+    // Degraus (ancoraId) só entram junto da própria questão do ENEM, nunca soltos.
+    const where: any = { ancoraId: null };
     if (filterMaterias) where.materia = { in: filterMaterias };
 
     const allQuestions = await prisma.question.findMany({ where });
@@ -102,29 +114,42 @@ export async function POST(req: Request) {
     };
 
     const sessionSize = 20;
-
-    // Prioritize topic-matching questions, then fill with materia matches
-    let selected: any[] = [];
-    const seenIds = new Set<string>();
-
-    // First: topic matches (shuffled)
-    for (const q of shuffle(topicMatch)) {
-      if (selected.length >= sessionSize) break;
-      if (!seenIds.has(q.id)) { seenIds.add(q.id); selected.push(q); }
-    }
-
-    // Second: same materia but different subtema
-    for (const q of shuffle(materiaMatch)) {
-      if (selected.length >= sessionSize) break;
-      if (!seenIds.has(q.id)) { seenIds.add(q.id); selected.push(q); }
-    }
-
+    // Escada: base → intermediária → ENEM (lib/treino-etapas.ts).
+    // 1. Blocos-âncora: para cada questão do ENEM sobre o conteúdo do dia, os
+    //    degraus que a quebram em peças (base → intermediária) e ela logo depois.
+    // Âncora exige o assunto no subtema/tema, não só uma palavra no enunciado:
+    // "mol" no enunciado casava com "g/mol" de uma questão de titulação.
+    const assuntoNoSubtema = (q: any) => {
+      const rotulo = `${q.subtema ?? ''} ${q.tema ?? ''}`.toLowerCase();
+      return subtemaLower.some((s) => rotulo.includes(s));
+    };
+    const ancoras = escolherAncoras(shuffle(topicMatch.filter((q) => isQuestaoEnem(q) && assuntoNoSubtema(q))), MAX_ANCORAS);
+    const degraus = await degrausDasAncoras(ancoras);
+    const blocos = ancoras
+      .filter((a) => (degraus.get(a.id)?.length ?? 0) > 0)
+      .map((a) => [...(degraus.get(a.id) ?? []), a]);
+    const idsBlocos = new Set(blocos.flat().map((q) => q.id));
+    // 2. O resto da sessão vem do banco, na escada: base e intermediária
+    //    aquecem antes dos blocos, ENEM avulsa fecha depois deles.
+    const vagas = Math.max(0, sessionSize - idsBlocos.size);
+    const complemento = montarEscada(
+      shuffle(topicMatch.filter((q) => !idsBlocos.has(q.id))),
+      shuffle(materiaMatch),
+      vagas,
+    );
+    let selected: any[] = [
+      ...complemento.filter((q) => etapaDaQuestao(q) !== 'enem'),
+      ...blocos.flat(),
+      ...complemento.filter((q) => etapaDaQuestao(q) === 'enem'),
+    ];
+    const seenIds = new Set<string>(selected.map((q) => q.id));
+    const geradasIA: any[] = [];
     // If still not enough, auto-generate AI questions for today's topics
     if (selected.length < sessionSize && filterMaterias) {
       if (getAbacusApiKey()) {
         const topicsToGenerate = todaySchedule?.topics ?? [];
         for (const topic of topicsToGenerate) {
-          if (selected.length >= sessionSize) break;
+          if (selected.length + geradasIA.length >= sessionSize) break;
           try {
             const subtemasStr = topic.subtemas.join(', ');
             const examples = await prisma.question.findMany({
@@ -158,7 +183,7 @@ Retorne SOMENTE JSON válido.`;
               const parsed = JSON.parse(raw);
               const questoes = parsed?.questoes ?? [];
               for (const q of questoes) {
-                if (selected.length >= sessionSize) break;
+                if (selected.length + geradasIA.length >= sessionSize) break;
                 let resp = (q.respostaCorreta ?? 'A').toUpperCase();
                 if (!['A','B','C','D','E'].includes(resp)) resp = 'A';
                 const created = await prisma.question.create({
@@ -178,7 +203,7 @@ Retorne SOMENTE JSON válido.`;
                   },
                 });
                 seenIds.add(created.id);
-                selected.push(created);
+                geradasIA.push(created);
               }
             }
           } catch (e) {
@@ -188,30 +213,20 @@ Retorne SOMENTE JSON válido.`;
       }
     }
 
-    // Last resort: recently answered questions
-    if (selected.length < sessionSize) {
-      const recentPool = shuffle(allQuestions.filter(q => recentlyAnsweredIds.has(q.id) && !seenIds.has(q.id)));
-      // Prefer topic-matching recent ones first
-      const recentTopic = recentPool.filter(matchesSubtema);
-      const recentOther = recentPool.filter(q => !matchesSubtema(q));
-      for (const q of [...recentTopic, ...recentOther]) {
-        if (selected.length >= sessionSize) break;
-        seenIds.add(q.id);
-        selected.push(q);
-      }
-    }
-
-    // Sort: topic matches first, then by difficulty
-    const difficultyOrder: Record<string, number> = { facil: 0, medio: 1, dificil: 2 };
-    selected.sort((a: any, b: any) => {
-      const aMatch = matchesSubtema(a) ? 0 : 1;
-      const bMatch = matchesSubtema(b) ? 0 : 1;
-      if (aMatch !== bMatch) return aMatch - bMatch;
-      const da = difficultyOrder[a?.dificuldade ?? 'medio'] ?? 1;
-      const db = difficultyOrder[b?.dificuldade ?? 'medio'] ?? 1;
-      return da - db;
-    });
-
+    // O que faltar (geradas por IA agora e, em último caso, respondidas nos
+    // últimos 7 dias) entra na escada sem quebrar os blocos-âncora: o que é
+    // base/intermediária vai antes deles, o que é ENEM vai depois.
+    const recentes = shuffle(allQuestions.filter((q) => recentlyAnsweredIds.has(q.id) && !seenIds.has(q.id)));
+    const extras = montarEscada(
+      [...geradasIA, ...recentes.filter(matchesSubtema)],
+      recentes.filter((q) => !matchesSubtema(q)),
+      Math.max(0, sessionSize - selected.length),
+    );
+    selected = [
+      ...extras.filter((q) => etapaDaQuestao(q) !== 'enem'),
+      ...selected,
+      ...extras.filter((q) => etapaDaQuestao(q) === 'enem'),
+    ];
     // Build schedule info for header
     const scheduleTopics = todaySchedule?.topics.map(t => `${t.materia}: ${t.subtemas.join(', ')}`) ?? [];
 
@@ -219,6 +234,9 @@ Retorne SOMENTE JSON válido.`;
       questions: selected,
       total: selected.length,
       materias: todayMaterias,
+      // O resumo de revisão cobre o conteúdo do cronograma, não o subtema de
+      // cada questão sorteada (as do ENEM trazem subtemas soltos).
+      revisao: (todaySchedule?.topics ?? []).flatMap((t) => t.subtemas.map((subtema) => ({ materia: t.materia, subtema }))),
       schedule: todaySchedule ? {
         dayName: todaySchedule.dayName,
         weekNumber,

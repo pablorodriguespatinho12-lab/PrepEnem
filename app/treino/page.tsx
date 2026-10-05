@@ -13,17 +13,12 @@ import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
 import { fireConfetti, spawnCorrectParticles, flashScreen } from '@/components/animations';
 import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
+import { ETAPA_LABEL, etapaDaQuestao } from '@/lib/treino-etapas';
 import { playSound } from '@/lib/sounds';
 
 const PdfPageViewer = dynamic(() => import('@/components/pdf-page-viewer'), { ssr: false });
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 const Results3DScene = dynamic(() => import('@/components/results-3d-scene'), { ssr: false });
-
-const difficultyLabel: Record<string, string> = {
-  facil: 'Fácil',
-  medio: 'Médio',
-  dificil: 'Difícil',
-};
 
 export default function TreinoPage() {
   const searchParams = useSearchParams();
@@ -110,6 +105,7 @@ export default function TreinoPage() {
     setLoading(true);
     try {
       let loadedQs: any[] = [];
+      let revisaoDoDia: { materia: string; subtema: string }[] = [];
 
       if (isErrosReview && errosQuestionIds) {
         // Load specific questions for error review loop
@@ -191,6 +187,7 @@ export default function TreinoPage() {
         });
         const resData = await res.json();
         loadedQs = resData?.questions ?? [];
+        revisaoDoDia = resData?.revisao ?? [];
         setQuestions(loadedQs);
         if (resData?.materias) setSessionMaterias(resData.materias);
         if (resData?.schedule) {
@@ -225,7 +222,8 @@ export default function TreinoPage() {
       if (loadedQs.length > 0 && !isReview && !isErrosReview) {
         setShowResumo(true);
         const subtemaMap = new Map<string, { materia: string; subtema: string }>();
-        for (const q of loadedQs) {
+        for (const r of revisaoDoDia) subtemaMap.set(`${r.materia}::${r.subtema}`, r);
+        for (const q of revisaoDoDia.length > 0 ? [] : loadedQs) {
           const key = `${q?.materia}::${q?.subtema}`;
           if (!subtemaMap.has(key) && q?.materia && q?.subtema) {
             subtemaMap.set(key, { materia: q.materia, subtema: q.subtema });
@@ -239,7 +237,15 @@ export default function TreinoPage() {
           body: JSON.stringify({ subtemas }),
         })
           .then((r) => r.json())
-          .then((d) => setResumoData(d?.resumos ?? []))
+          .then((d) => {
+            // IA fora do ar devolve {error}; sem isso a tela ficava com a lista vazia.
+            if ((d?.resumos?.length ?? 0) === 0) {
+              toast.error('Resumo indisponível agora. Começando pelas questões.');
+              setResumoDismissed(true);
+              return;
+            }
+            setResumoData(d.resumos);
+          })
           .catch(() => toast.error('Erro ao carregar resumo'))
           .finally(() => setResumoLoading(false));
       }
@@ -998,9 +1004,9 @@ export default function TreinoPage() {
               </>
             )}
             <span aria-hidden className="w-px h-3 bg-border shrink-0" />
-            <span className={difficultyLabel[currentQ?.dificuldade] ? 'font-medium' : ''}>
-              {difficultyLabel[currentQ?.dificuldade] ?? currentQ?.dificuldade ?? ''}
-            </span>
+            {currentQ && (
+              <span className="font-medium">{ETAPA_LABEL[etapaDaQuestao(currentQ)]}</span>
+            )}
           </div>
 
           {/* Enunciado — serifada de leitura, medida travada em 60–70 caracteres.

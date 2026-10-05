@@ -48,6 +48,20 @@ dos componentes, movimento, personalidade visual. Nada disso está decidido
   fato por card, resposta o mais curta possível, sem enumeração longa
   (quebre em cards separados ou use cloze). Ver [[flashcard-pattern]].
 
+## Treino
+
+- **Treino é escada, decidida pelo Pablo em 05/10/2026:** resumo do conteúdo
+  do dia → questões Base → Intermediárias → ENEM real por último. Só matérias
+  do cronograma do dia. A etapa sai da ORIGEM (`lib/treino-etapas.ts`), não de
+  `dificuldade`: as reais do ENEM estão cadastradas como fácil/médio e são as
+  mais difíceis da sessão.
+- **Degraus:** para até 2 questões do ENEM do assunto do dia (assunto no
+  subtema/tema, não no enunciado), a IA gera 2 base + 3 intermediárias que
+  quebram a questão em peças; ficam no banco com `ancoraId` e a questão do
+  ENEM vem logo depois delas. Sem âncora ou sem IA, cai na escada do banco.
+- Sessão aberta só é retomada se tiver menos de 12 h — a de outro dia foi
+  montada para outro dia do cronograma.
+
 ## Visualização de dados
 
 - **Dado esparso é ruído, não informação.** Numa amostra binária pequena,

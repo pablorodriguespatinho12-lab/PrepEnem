@@ -13,8 +13,12 @@ export async function GET() {
     }
     const userId = (session.user as any).id;
 
+    // Só retoma sessão recente. Uma sessão aberta de outro dia foi montada
+    // para outro dia do cronograma — retomá-la jogava o estudante no meio de
+    // questões que não são as de hoje, sem passar pelo resumo.
+    const LIMITE_RETOMADA_MS = 12 * 60 * 60 * 1000;
     const activeSession = await prisma.trainingSession.findFirst({
-      where: { userId, finished: false },
+      where: { userId, finished: false, createdAt: { gte: new Date(Date.now() - LIMITE_RETOMADA_MS) } },
       orderBy: { createdAt: 'desc' },
       include: {
         questions: {

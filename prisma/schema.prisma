@@ -59,6 +59,7 @@ model Question {
   paginaPdf          Int?
   imagemUrl          String?
   imagemUrlExpandida String?
+  ancoraId           String? // questão do ENEM que esta prepara (degrau gerado por IA, lib/treino-degraus.ts)
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
 
@@ -73,6 +74,7 @@ model Question {
   @@index([materia, nivel])
   @@index([materia, dificuldade])
   @@index([anoProva, diaProva, numeroQuestao])
+  @@index([ancoraId])
 }
 
 model TrainingSession {
