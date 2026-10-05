@@ -17,12 +17,6 @@ import { NextResponse } from 'next/server';
 //      "o Bearer token do provedor de chat", não precisa ser da Abacus.
 // Nenhum dos 12 arquivos de rota precisa mudar — só as 3 env vars acima.
 //
-// NÃO centralizado: app/api/treino/resumo-image/route.ts usa
-// `modalities: ['image']`, parâmetro específico da Abacus pra geração de
-// imagem — não é portável entre provedores do mesmo jeito que chat texto,
-// então essa rota continua chamando a API direto (mas usa getAbacusApiKey()
-// pra a checagem de chave, igual as outras).
-//
 // Aviso à parte: pdf-process/route.ts e batch-import/route.ts mandam PDF
 // como anexo multimodal (`content: [{ type: 'file', ... }]`) — isso É
 // centralizado aqui (o tipo de `content` aceita array), mas o formato exato

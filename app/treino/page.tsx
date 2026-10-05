@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 import {
   BookOpen, ChevronLeft, ChevronRight, CheckCircle2, XCircle, AlertTriangle,
   Loader2, RefreshCcw, Home, Send, Sparkles, Trophy,
-  GraduationCap, ChevronDown, Lightbulb, FlaskConical, Calculator, Play, Eye, EyeOff, ImageIcon,
+  GraduationCap, ChevronDown, Calculator, Play, Eye, EyeOff,
   Check, X
 } from 'lucide-react';
 import { toast } from 'sonner';
@@ -15,6 +15,8 @@ import { fireConfetti, spawnCorrectParticles, flashScreen } from '@/components/a
 import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
 import { ETAPA_LABEL, etapaDaQuestao } from '@/lib/treino-etapas';
 import { ExplicacaoTutor } from '@/components/tutor/explicacao-tutor';
+import { VisualDesenho } from '@/components/visual/visual-desenho';
+import type { Visual } from '@/lib/visual/especificacao';
 import { playSound } from '@/lib/sounds';
 
 const PdfPageViewer = dynamic(() => import('@/components/pdf-page-viewer'), { ssr: false });
@@ -71,8 +73,6 @@ export default function TreinoPage() {
   const [resumoData, setResumoData] = useState<any[]>([]);
   const [resumoLoading, setResumoLoading] = useState(false);
   const [expandedResumo, setExpandedResumo] = useState<Set<string>>(new Set());
-  const [resumoImages, setResumoImages] = useState<Record<string, string>>({});
-  const [loadingImages, setLoadingImages] = useState<Set<string>>(new Set());
   const [resumoDismissed, setResumoDismissed] = useState(false);
   const [sessionMaterias, setSessionMaterias] = useState<string[]>([]);
   const [sessionSchedule, setSessionSchedule] = useState<any>(null);
@@ -454,28 +454,6 @@ export default function TreinoPage() {
     });
   };
 
-  const generateResumoImage = async (resumo: any) => {
-    const key = `${resumo.materia}::${resumo.subtema}`;
-    if (resumoImages[key] || loadingImages.has(key)) return;
-    setLoadingImages((prev) => new Set(prev).add(key));
-    try {
-      const res = await fetch('/api/treino/resumo-image', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ description: resumo.image_suggestion, materia: resumo.materia, subtema: resumo.subtema }),
-      });
-      const data = await res.json();
-      if (data?.imageUrl) {
-        setResumoImages((prev) => ({ ...prev, [key]: data.imageUrl }));
-      }
-    } catch {
-      toast.error('Erro ao gerar imagem');
-    } finally {
-      setLoadingImages((prev) => { const n = new Set(prev); n.delete(key); return n; });
-    }
-  };
-
-  // Resumo screen (before questions)
   if (showResumo && !resumoDismissed && sessionStarted && !loading && questions.length > 0) {
     return (
       <div className="p-4 md:p-8 max-w-3xl mx-auto">
@@ -530,8 +508,6 @@ export default function TreinoPage() {
             {resumoData.map((resumo, idx) => {
               const key = `${resumo.materia}::${resumo.subtema}`;
               const isExpanded = expandedResumo.has(key);
-              const hasImage = !!resumoImages[key];
-              const isLoadingImg = loadingImages.has(key);
               const isExatas = ['Física', 'Matemática', 'Química'].includes(resumo.materia);
 
               return (
@@ -579,72 +555,26 @@ export default function TreinoPage() {
                         className="overflow-hidden"
                       >
                         <div className="px-4 pb-4 pt-1 space-y-4">
-                          {/* Conceitos */}
-                          <div>
-                            <div className="flex items-center gap-1.5 mb-2">
-                              <Lightbulb className="w-4 h-4 text-muted-foreground" />
-                              <span className="type-caption text-muted-foreground">Conceitos-chave</span>
-                            </div>
-                            <ul className="space-y-2 measure-reading">
-                              {(resumo.conceitos ?? []).map((c: string, ci: number) => (
-                                <li key={ci} className="flex items-start gap-2.5 type-body font-reading text-foreground/90">
-                                  <span aria-hidden className="w-1 h-1 rounded-full bg-primary mt-[0.7em] shrink-0" />
-                                  {c}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-
-                          {/* Fórmulas */}
-                          {(resumo.formulas?.length ?? 0) > 0 && (
-                            <div>
-                              <div className="flex items-center gap-1.5 mb-2">
-                                <FlaskConical className="w-4 h-4 text-muted-foreground" />
-                                <span className="type-caption text-muted-foreground">Fórmulas</span>
-                              </div>
-                              <div className="bg-[hsl(var(--surface-2))] rounded-[var(--radius-control)] p-3 space-y-1">
-                                {(resumo.formulas ?? []).map((f: string, fi: number) => (
-                                  <p key={fi} className="type-meta font-mono text-foreground" data-numeric>{f}</p>
-                                ))}
-                              </div>
+                          <p className="font-display type-body font-semibold"><MathText text={resumo.ideia} /></p>
+                          <ol className="space-y-5">
+                            {(resumo.construcao ?? []).map((passo: { titulo: string; texto: string; visual: Visual | null }, pi: number) => (
+                              <li key={pi} className="space-y-2">
+                                {passo.visual && <VisualDesenho visual={passo.visual} />}
+                                <p className="type-meta font-semibold">{passo.titulo}</p>
+                                <MathText text={passo.texto} className="font-reading" />
+                              </li>
+                            ))}
+                          </ol>
+                          {resumo.regra && (
+                            <div className="rounded-[var(--radius-control)] border-l-4 border-primary bg-[hsl(var(--surface-2))] p-3">
+                              <p className="type-caption text-muted-foreground mb-1">Resumo</p>
+                              <MathText text={resumo.regra} className="font-reading" />
                             </div>
                           )}
-
-                          {/* Dica ENEM */}
-                          {resumo.dica_enem && (
+                          {resumo.dicaEnem && (
                             <div className="border-l-2 border-primary/40 pl-3 py-0.5">
-                              <p className="type-caption text-muted-foreground mb-1">Dica ENEM</p>
-                              <p className="type-body font-reading text-foreground/90 measure-reading">{resumo.dica_enem}</p>
-                            </div>
-                          )}
-
-                          {/* Image */}
-                          {resumo.image_suggestion && (
-                            <div>
-                              {!hasImage ? (
-                                <button
-                                  onClick={() => generateResumoImage(resumo)}
-                                  disabled={isLoadingImg}
-                                  className="flex items-center gap-2 type-meta text-primary-text font-medium hover:underline disabled:opacity-50"
-                                >
-                                  {isLoadingImg ? (
-                                    <><Loader2 className="w-4 h-4 animate-spin" /> Gerando ilustração...</>
-                                  ) : (
-                                    <><ImageIcon className="w-4 h-4" /> Ver ilustração do conceito</>
-                                  )}
-                                </button>
-                              ) : (
-                                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-2">
-                                  <div className="relative rounded-xl overflow-hidden bg-muted" style={{ aspectRatio: '16/9' }}>
-                                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                                    <img
-                                      src={resumoImages[key]}
-                                      alt={`Ilustração: ${resumo.subtema}`}
-                                      className="w-full h-full object-contain"
-                                    />
-                                  </div>
-                                </motion.div>
-                              )}
+                              <p className="type-caption text-muted-foreground mb-1">Como cai no ENEM</p>
+                              <p className="type-body font-reading text-foreground/90 measure-reading">{resumo.dicaEnem}</p>
                             </div>
                           )}
                         </div>
