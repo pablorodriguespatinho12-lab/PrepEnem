@@ -113,19 +113,22 @@ await page.route('**/api/stats', async (route) => {
 });
 ```
 
-### Animação com ScrollTrigger não revela sozinha
+### Conteúdo que nasce invisível é bug, não teste mal feito
 
-Elementos com `.gsap-section`/`.gsap-reveal` começam em `opacity: 0` e só
-revelam quando o scroll cruza o trigger. Num teste headless a página não
-rola, então medir `opacity` logo após o `goto` dá `0` e parece bug. Force o
-scroll real antes de medir:
+Até 05/10/2026 o dashboard usava `.gsap-reveal` (opacity 0 no CSS, revelado
+pelo ScrollTrigger). No navegador do Pablo o efeito rodava antes de os dados
+chegarem e o cartão "Estudo Atual", com o botão Iniciar Treino, ficava
+invisível para sempre: o "buraco" que ele viu. No headless a corrida caía
+para o outro lado e o cartão aparecia. Foi removido. Se algo some só no
+navegador dele, procure `opacity: 0` à espera de animação antes de qualquer
+outra causa.
 
-```js
-await section.scrollIntoViewIfNeeded();
-await page.waitForTimeout(1000);
-const opacity = await section.evaluate(el =>
-  getComputedStyle(el.closest('.gsap-section')).opacity);   // agora dá "1"
-```
+### Playwright
+
+Está em `devDependencies` desde 05/10/2026 (antes estava instalado solto e o
+`npm install` o removeu). Se reclamar de "Executable doesn't exist", rode
+`npx playwright install chromium-headless-shell`. Para não gravar nada na
+conta durante o teste, intercepte o POST com `page.route(...).fulfill(...)`.
 
 ### Medir em vários instantes revela corrida
 
