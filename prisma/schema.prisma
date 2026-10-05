@@ -30,6 +30,7 @@ model User {
   flashcardProgress FlashcardProgress[]
   customExams       CustomExam[]
   studyProgress     StudyProgress[]
+  calculoProgresso  CalculoProgresso[]
 
   @@index([username])
 }
@@ -319,4 +320,31 @@ model CustomExamQuestion {
 
   @@unique([examId, questionId])
   @@index([examId, ordem])
+}
+
+// Trilha de Cálculo (data/calculo/trilha.ts). Uma linha por degrau tocado.
+model CalculoProgresso {
+  id             String    @id @default(cuid())
+  userId         String
+  licaoId        String // id do degrau na trilha (p1, c4...)
+  status         String    @default("em_andamento") // em_andamento | concluida
+  acertos        Int       @default(0)
+  tentativas     Int       @default(0)
+  revisoes       Int       @default(0) // revisões seguidas acertadas (define o próximo intervalo)
+  proximaRevisao DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  user           User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, licaoId])
+  @@index([userId, proximaRevisao])
+}
+
+// Lições da trilha geradas por IA, salvas na primeira vez (as escritas à mão
+// ficam em data/calculo/licoes e não passam por aqui).
+model CalculoLicaoGerada {
+  licaoId   String   @id
+  conteudo  Json
+  modelo    String?
+  createdAt DateTime @default(now())
 }

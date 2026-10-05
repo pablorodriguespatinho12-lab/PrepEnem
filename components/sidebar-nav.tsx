@@ -7,7 +7,7 @@ import { useTheme } from 'next-themes';
 import {
   Home, BookOpen, AlertCircle, BarChart3, Settings, ShieldCheck,
   LogOut, Menu, X, GraduationCap, Upload, ClipboardList, Library, PenTool, Trophy,
-  Layers, FileText, Moon, Sun
+  Layers, FileText, Moon, Sun, Sigma
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAppTheme } from './app-theme-provider';
@@ -22,6 +22,7 @@ const navItems = [
   { href: '/banco-questoes', label: 'Banco de Questões', icon: Library },
   { href: '/caderno-erros', label: 'Caderno de Erros', icon: AlertCircle },
   { href: '/redacao', label: 'Redação', icon: PenTool },
+  { href: '/calculo', label: 'Cálculo', icon: Sigma },
   { href: '/progresso', label: 'Progresso', icon: BarChart3 },
   { href: '/vestibular', label: 'Vestibular', icon: Trophy },
   { href: '/upload', label: 'Importar PDF', icon: Upload },
