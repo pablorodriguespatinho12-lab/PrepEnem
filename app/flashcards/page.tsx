@@ -2,7 +2,6 @@
 import { useEffect, useState, useCallback, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import dynamic from 'next/dynamic';
 import {
   Layers, BookOpen, CheckCircle, AlertCircle, Loader2, Star,
   Search, ChevronLeft, ChevronRight, Calculator, Dna, FlaskConical,
@@ -10,7 +9,12 @@ import {
 } from 'lucide-react';
 import { materiaColors } from '@/lib/theme-colors';
 
-const Subject3DIcon = dynamic(() => import('@/components/subject-3d-icon'), { ssr: false });
+/* Ícone estático por matéria. Antes era um canvas three.js por cartão — dez
+   contextos WebGL, cada um com seu próprio loop de animação, só na grade. */
+function MateriaIcon({ materia, color, size }: { materia: string; color: string; size: number }) {
+  const Icon = materiaIcons[materia] ?? Layers;
+  return <Icon style={{ color, width: size * 0.6, height: size * 0.6 }} aria-hidden />;
+}
 
 const materiaIcons: Record<string, any> = {
   'Matemática': Calculator,
@@ -244,7 +248,7 @@ export default function FlashcardsPage() {
                             className="w-14 h-14 rounded-[var(--radius-control)] flex items-center justify-center mb-3"
                             style={{ backgroundColor: `${cor}20` }}
                           >
-                            <Subject3DIcon materia={group.materia} color={cor} size={48} />
+                            <MateriaIcon materia={group.materia} color={cor} size={48} />
                           </div>
 
                           {/* Subject name */}
@@ -314,7 +318,7 @@ export default function FlashcardsPage() {
                     className="w-16 h-16 rounded-[var(--radius-container)] flex items-center justify-center flex-shrink-0"
                     style={{ backgroundColor: `${materiaColors[selectedMateria] || '#06b6d4'}20` }}
                   >
-                    <Subject3DIcon
+                    <MateriaIcon
                       materia={selectedMateria}
                       color={materiaColors[selectedMateria] || '#06b6d4'}
                       size={56}
