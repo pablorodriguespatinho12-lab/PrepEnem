@@ -7,6 +7,20 @@ describe('extrairJson', () => {
     expect(extrairJson('Aqui está: {"a":2} pronto')).toEqual({ a: 2 });
   });
 
+  test('LaTeX com barra simples não vira form-feed nem tab', () => {
+    const r = extrairJson(String.raw`{"t":"$\frac{1}{2} \times \theta$"}`) as { t: string };
+    expect(r.t).toBe(String.raw`$\frac{1}{2} \times \theta$`);
+  });
+
+  test('LaTeX já escapado e quebra de linha continuam como estão', () => {
+    expect((extrairJson(String.raw`{"t":"$\\frac{1}{2}$"}`) as { t: string }).t).toBe(String.raw`$\frac{1}{2}$`);
+    expect((extrairJson(String.raw`{"t":"linha um\nlinha dois"}`) as { t: string }).t).toBe('linha um\nlinha dois');
+  });
+
+  test('barra inválida para JSON ("\\sqrt") é salva em vez de falhar', () => {
+    expect((extrairJson(String.raw`{"t":"$\sqrt{4} \cdot 2$"}`) as { t: string }).t).toBe(String.raw`$\sqrt{4} \cdot 2$`);
+  });
+
   test('devolve null para lixo', () => {
     expect(extrairJson('sem json')).toBeNull();
     expect(extrairJson('{quebrado')).toBeNull();

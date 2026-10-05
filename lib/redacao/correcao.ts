@@ -35,6 +35,17 @@ const lista = (v: unknown): Record<string, unknown>[] => (Array.isArray(v) ? v.m
 const txt = (v: unknown, max = 600): string => (typeof v === 'string' ? v.trim().slice(0, max) : '');
 const bool = (v: unknown): boolean => v === true;
 const naoVazio = <T extends { trecho: string }>(x: T): boolean => x.trecho.length > 0;
+/* Desvio que "corrige" para o mesmo texto não é desvio; o mesmo trecho
+   apontado duas vezes conta uma (no teste com IA real veio "ninguém → ninguém"). */
+function limparDesvios(desvios: Desvio[]): Desvio[] {
+  const vistos = new Set<string>();
+  return desvios.filter((d) => {
+    const chave = d.trecho.toLowerCase();
+    if (!d.trecho || d.trecho === d.correcao || vistos.has(chave)) return false;
+    vistos.add(chave);
+    return true;
+  });
+}
 
 const ESTRUTURAS: EstruturaSintatica[] = ['excelente', 'boa', 'regular', 'deficitaria', 'inexistente'];
 const ABORDAGENS: Abordagem[] = ['completa', 'tangencia', 'fuga'];
@@ -68,7 +79,7 @@ export function corrigirRedacao(bruto: unknown, textoDoAluno: string): CorrecaoC
   const abordagem = ABORDAGENS.includes(c2.abordagem as Abordagem) ? (c2.abordagem as Abordagem) : null;
   if (!estrutura || !abordagem) return null;
 
-  const desvios = lista(c1.desvios).map((d) => ({ trecho: txt(d.trecho, 200), tipo: txt(d.tipo, 40), correcao: txt(d.correcao, 200) })).filter(naoVazio);
+  const desvios = limparDesvios(lista(c1.desvios).map((d) => ({ trecho: txt(d.trecho, 200), tipo: txt(d.tipo, 40), correcao: txt(d.correcao, 200) })));
   const repertorios = lista(c2.repertorios).map((x) => ({
     trecho: txt(x.trecho, 300), legitimado: bool(x.legitimado), pertinente: bool(x.pertinente), produtivo: bool(x.produtivo), comentario: txt(x.comentario, 300),
   })).filter(naoVazio);
@@ -151,7 +162,7 @@ export function corrigirParte(bruto: unknown, parte: TipoParte): CorrecaoParte |
     const ok = bool(m.ok) && trecho !== null;
     return { id: c.id, rotulo: c.rotulo, ok, trecho, comoMelhorar: ok ? '' : txt(m.comoMelhorar, 500) };
   });
-  const desvios = lista(r.desvios).map((d) => ({ trecho: txt(d.trecho, 200), tipo: txt(d.tipo, 40), correcao: txt(d.correcao, 200) })).filter(naoVazio);
+  const desvios = limparDesvios(lista(r.desvios).map((d) => ({ trecho: txt(d.trecho, 200), tipo: txt(d.tipo, 40), correcao: txt(d.correcao, 200) })));
   const base = (10 * itens.filter((i) => i.ok).length) / itens.length;
   const nota = Math.max(0, Math.round(base - Math.floor(desvios.length / 3)));
   return { versao: 2, parte, nota, itens, desvios, reescrita: txt(r.reescrita, 2500) };

@@ -22,6 +22,12 @@ describe('renderizarTextoMatematico', () => {
     expect(r('$a < b$')).not.toContain('&amp;lt;');
   });
 
+  test('letra grega sem barra dentro da fórmula vira símbolo; fora dela, não', () => {
+    expect(r('$Delta = 4$')).toBe(r('$\\Delta = 4$'));
+    expect(r('$Delta = 4$')).toContain('Δ');
+    expect(r('Delta fora da fórmula')).toContain('Delta fora');
+  });
+
   test('colore termo marcado com a cor do desenho', () => {
     expect(r('a [[a:raiz]] do gráfico')).toContain('<strong style="color:hsl(var(--chart-1))">raiz</strong>');
   });

@@ -1,4 +1,5 @@
 export const dynamic = 'force-dynamic';
+export const maxDuration = 60;
 import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
@@ -6,6 +7,7 @@ import { promptConversa } from '@/lib/tutor/prompts';
 import { validarRespostaTutor } from '@/lib/tutor/validar';
 import { pedirJson } from '@/lib/pedir-json';
 import { lerHistorico, lerQuestao } from '@/lib/tutor/entrada';
+import { MODELO_IA } from '@/lib/ia-modelos';
 
 // Dúvida depois da explicação: o aluno pergunta, o tutor responde um passo
 // por vez. O histórico vem do navegador (a conversa não é salva no banco).
@@ -22,8 +24,10 @@ export async function POST(req: Request) {
   }
 
   const r = await pedirJson(promptConversa(questao, resumo, historico), validarRespostaTutor, {
-    maxTokens: 1500,
+    maxTokens: 1600,
     temperature: 0.5,
+    modelo: MODELO_IA.conversa(),
+    pensar: 'medium',
   });
   if (!r.ok) return NextResponse.json({ error: r.erro }, { status: r.status });
   return NextResponse.json(r.dado);

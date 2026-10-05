@@ -83,8 +83,20 @@ describe('corrigirParte', () => {
 
   test('desvios descontam 1 ponto a cada 3', () => {
     const tudo = Object.fromEntries(['operador', 'topico', 'repertorio_produtivo', 'analise', 'fecho'].map((id) => [id, { ok: true, trecho: 'x' }]));
-    const desvios = Array.from({ length: 6 }, () => ({ trecho: 'y', tipo: 'crase', correcao: 'z' }));
+    const desvios = Array.from({ length: 6 }, (_, i) => ({ trecho: `erro ${i}`, tipo: 'crase', correcao: `certo ${i}` }));
     expect(corrigirParte({ itens: tudo, desvios }, 'desenvolvimento1')!.nota).toBe(8);
+  });
+
+  test('desvio que não corrige nada ou repetido é descartado', () => {
+    const c = corrigirParte({
+      itens: { operador: { ok: true, trecho: 'Além disso' } },
+      desvios: [
+        { trecho: 'ninguém', tipo: 'acento', correcao: 'ninguém' },
+        { trecho: 'nao', tipo: 'acento', correcao: 'não' },
+        { trecho: 'Nao', tipo: 'acento', correcao: 'Não' },
+      ],
+    }, 'desenvolvimento1')!;
+    expect(c.desvios).toEqual([{ trecho: 'nao', tipo: 'acento', correcao: 'não' }]);
   });
 
   test('sem nenhum item marcado é resposta inválida', () => {

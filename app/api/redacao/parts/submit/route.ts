@@ -1,4 +1,5 @@
 export const dynamic = 'force-dynamic';
+export const maxDuration = 60;
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
@@ -7,6 +8,7 @@ import { pedirJson } from '@/lib/pedir-json';
 import { promptParte } from '@/lib/redacao/prompts';
 import { corrigirParte } from '@/lib/redacao/correcao';
 import { MODELOS, ORDEM_PARTES, textoBaseSemParte, type TipoParte } from '@/data/redacao/modelos';
+import { MODELO_IA } from '@/lib/ia-modelos';
 
 const MAX_RESPOSTA = 4000;
 const MIN_RESPOSTA = 80;
@@ -30,8 +32,11 @@ export async function POST(request: Request) {
 
     const textoBase = textoBaseSemParte(modelo, partType);
     const r = await pedirJson(promptParte(partType, modelo.tema, textoBase, resposta), (b) => corrigirParte(b, partType), {
-      maxTokens: 3000,
+      maxTokens: 2500,
       temperature: 0.2,
+      modelo: MODELO_IA.redacao(),
+      pensar: 'medium',
+      timeoutMs: 55_000,
     });
     if (!r.ok) return NextResponse.json({ error: r.erro }, { status: r.status });
 

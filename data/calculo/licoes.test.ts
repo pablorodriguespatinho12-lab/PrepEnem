@@ -40,6 +40,22 @@ describe('lições escritas', () => {
   }
 });
 
+describe('validarLicao com saída imperfeita da IA', () => {
+  test('lacuna no 1º exemplo é removida, sem recusar a lição', () => {
+    const l = structuredClone(LICOES_ESCRITAS.p3);
+    l.exemplos[0].passos[0].lacuna = { pergunta: 'x?', resposta: { tipo: 'numero', valor: 1 } };
+    const v = validarLicao(l)!;
+    expect(v).not.toBeNull();
+    expect(v.exemplos[0].passos.every((p) => !p.lacuna)).toBe(true);
+  });
+
+  test('exercício com resposta "texto" é descartado', () => {
+    const l = structuredClone(LICOES_ESCRITAS.p3) as unknown as { exercicios: { resposta: unknown }[] };
+    l.exercicios[0].resposta = { tipo: 'texto', valor: 'para baixo' };
+    expect(validarLicao(l)!.exercicios).toHaveLength(LICOES_ESCRITAS.p3.exercicios.length - 1);
+  });
+});
+
 describe('conferirResposta', () => {
   test('número aceita vírgula e tolerância pequena', () => {
     expect(conferirResposta({ tipo: 'numero', valor: 0.5 }, '0,5')).toBe(true);

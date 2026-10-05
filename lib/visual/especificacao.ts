@@ -142,4 +142,11 @@ export const FORMATO_VISUAL_PARA_IA = `"visual" é um destes objetos (ou null). 
 - Transformação passo a passo (álgebra, de onde a fórmula vem): {"tipo":"transformacao","linhas":[{"latex":"ax^2+bx+c=0","porque":"ponto de partida"},{"latex":"x^2+\\\\frac{b}{a}x=-\\\\frac{c}{a}","porque":"divide tudo por a"}]}
 - Tabela (comparar valores, proporção, mol): {"tipo":"tabela","cabecalho":["n (mol)","massa (g)"],"linhas":[["1","18"],["2","36"]]}
 - Vetores (forças, velocidade, deslocamento): {"tipo":"vetores","vetores":[{"de":[0,0],"para":[3,0],"rotulo":"F₁","cor":"a"}],"pontos":[{"x":0,"y":0,"rotulo":"corpo"}]}
-"cor": "a", "b" ou "c" para destacar (use a MESMA cor no texto: escreva o termo como [[a:termo]]), "erro" só para o caminho errado do aluno.`;
+"cor": "a", "b" ou "c" para destacar (use a MESMA cor no texto: escreva o termo como [[a:termo]]), "erro" só para o caminho errado do aluno.
+REGRAS DE TEXTO: toda fórmula entre $...$ (nunca \\frac solto fora de $). [[a:termo]] é só para PALAVRAS fora da fórmula ("a [[a:velocidade]] é a inclinação"); nunca dentro de $...$ e nunca em volta de símbolo.`;
+/* Versão curta para a conversa: vai em toda pergunta do aluno, e a Groq
+   gratuita tem 8 mil tokens por minuto. Só os dois desenhos mais usados. */
+export const FORMATO_VISUAL_CURTO = `"visual" (opcional, ou null) — o app desenha:
+- gráfico: {"tipo":"grafico","funcoes":[{"expr":"x^2-4","rotulo":"f(x)","cor":"a"}],"pontos":[{"x":2,"y":0,"rotulo":"raiz"}],"x":[-4,4]}
+- passo a passo: {"tipo":"transformacao","linhas":[{"latex":"2x=6","porque":"..."},{"latex":"x=3","porque":"divide por 2"}]}
+Fórmula sempre entre $...$; [[a:palavra]] só fora da fórmula.`;

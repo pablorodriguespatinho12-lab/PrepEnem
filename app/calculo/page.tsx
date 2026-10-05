@@ -9,7 +9,7 @@ import { NOME_MODULO } from '@/data/calculo/trilha';
 import type { Degrau, Modulo } from '@/lib/calculo/tipos';
 import type { Situacao } from '@/lib/calculo/progresso';
 
-interface DegrauTela extends Degrau { situacao: Situacao; acertos: number; tentativas: number }
+interface DegrauTela extends Degrau { situacao: Situacao; escrita: boolean; acertos: number; tentativas: number }
 interface Trilha { degraus: DegrauTela[]; proximo: string | null; revisoesPendentes: number }
 
 const MODULOS: Modulo[] = ['pre', 'calc1', 'calc2', 'calc3'];
@@ -81,6 +81,7 @@ export default function CalculoPage() {
                   <div className="min-w-0">
                     <p className={`type-meta font-semibold ${d.situacao === 'bloqueada' ? 'text-muted-foreground' : ''}`}>{d.titulo}</p>
                     <p className="type-meta text-muted-foreground">{d.pergunta}</p>
+                    {!d.escrita && <p className="type-caption text-muted-foreground mt-0.5">em preparação</p>}
                   </div>
                 </div>
               );

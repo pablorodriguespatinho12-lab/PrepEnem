@@ -5,26 +5,56 @@
 import { chatCompletion } from '@/lib/ai-client';
 import { extrairJson } from '@/lib/tutor/validar';
 
-/* AI_MODEL_TUTOR permite um modelo mais forte só para explicar e conversar,
-   sem mudar o das outras rotas. Sem ele, vale o AI_MODEL padrão. */
-const modeloTutor = (): string | undefined => process.env.AI_MODEL_TUTOR || undefined;
-
 export type ResultadoIA<T> = { ok: true; dado: T } | { ok: false; erro: string; status: number };
+
+/* A Groq gratuita limita 8.000 tokens por minuto por modelo (429). Medido
+   em 05/10/2026: 2 e 5 s de espera não bastavam, a janela é de um minuto.
+   Esperar e repetir resolve; o aluno vê "Pensando..." em vez de erro. */
+const ESPERAS_429_MS = [4000, 12000];
+const esperar = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+type Mensagem = { role: 'user' | 'assistant'; content: string };
+/* modelo: ver lib/ia-modelos.ts. Sem ele, vale o AI_MODEL do .env. */
+export interface OpcoesPedido {
+  maxTokens?: number;
+  temperature?: number;
+  modelo?: string;
+  /* 'high' onde conta errada não pode passar (ver lib/ia-modelos.ts). */
+  pensar?: 'low' | 'medium' | 'high';
+  timeoutMs?: number;
+}
+
+async function chamarComEspera(mensagens: Mensagem[], opcoes: OpcoesPedido) {
+  for (let i = 0; ; i++) {
+    const r = await chatCompletion({
+      messages: mensagens,
+      model: opcoes.modelo,
+      maxTokens: opcoes.maxTokens ?? 3000,
+      temperature: opcoes.temperature ?? 0.4,
+      // Sem o modo JSON da Groq, de propósito: ele valida no servidor e recusa
+      // (400 json_validate_failed) todo LaTeX com barra simples ("\Delta"),
+      // que é o normal em fórmula. extrairJson trata essas barras do nosso lado.
+      // Medido em 05/10/2026: a maioria das recusas de lição vinha daqui.
+      ...(opcoes.pensar && opcoes.modelo?.includes('gpt-oss') ? { reasoningEffort: opcoes.pensar } : {}),
+      ...(opcoes.timeoutMs ? { timeoutMs: opcoes.timeoutMs } : {}),
+    });
+    // 429 = limite por minuto; 502 = conexão caiu ou erro passageiro da Groq
+    // ("fetch failed" no teste de 05/10/2026). Timeout (504) não se repete:
+    // dobraria a espera do aluno.
+    const passageiro = r.ok ? false : r.response.status === 429 || r.response.status === 502;
+    if (!passageiro || i >= ESPERAS_429_MS.length) return r;
+    await esperar(ESPERAS_429_MS[i]);
+  }
+}
 
 export async function pedirJson<T>(
   prompt: string,
   validar: (bruto: unknown) => T | null,
-  opcoes: { maxTokens?: number; temperature?: number } = {},
+  opcoes: OpcoesPedido = {},
 ): Promise<ResultadoIA<T>> {
-  const mensagens: { role: 'user' | 'assistant'; content: string }[] = [{ role: 'user', content: prompt }];
+  const mensagens: Mensagem[] = [{ role: 'user', content: prompt }];
   for (let tentativa = 0; tentativa < 2; tentativa++) {
-    const r = await chatCompletion({
-      messages: mensagens,
-      model: modeloTutor(),
-      maxTokens: opcoes.maxTokens ?? 3000,
-      temperature: opcoes.temperature ?? 0.4,
-      responseFormat: { type: 'json_object' },
-    });
+    const r = await chamarComEspera(mensagens, opcoes);
     if (!r.ok) {
       const corpo = await r.response.json().catch(() => ({}));
       return { ok: false, erro: corpo?.error ?? 'Erro no serviço de IA.', status: r.response.status };

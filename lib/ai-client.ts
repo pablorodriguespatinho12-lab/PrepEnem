@@ -64,6 +64,8 @@ type ChatCompletionParams = {
   temperature?: number;
   responseFormat?: { type: 'json_object' };
   timeoutMs?: number;
+  /* Só modelos de raciocínio (gpt-oss na Groq): quanto pensar antes de responder. */
+  reasoningEffort?: 'low' | 'medium' | 'high';
 };
 
 type ErrorResult = { ok: false; response: NextResponse };
@@ -102,6 +104,7 @@ async function fetchChatCompletion(
         ...(params.temperature !== undefined ? { temperature: params.temperature } : {}),
         ...(params.responseFormat ? { response_format: params.responseFormat } : {}),
         ...(params.stream ? { stream: true } : {}),
+        ...(params.reasoningEffort ? { reasoning_effort: params.reasoningEffort } : {}),
       }),
       signal: controller.signal,
     });

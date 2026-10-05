@@ -5,11 +5,14 @@
 
 import type { Question } from '@prisma/client';
 import { prisma } from '@/lib/db';
-import { chatCompletion, getAbacusApiKey } from '@/lib/ai-client';
+import { getAbacusApiKey } from '@/lib/ai-client';
+import { pedirJson } from '@/lib/pedir-json';
+import { MODELO_IA } from '@/lib/ia-modelos';
+import { concorda, resolverIndependente } from '@/lib/verificar-respostas';
 
 const DEGRAUS_BASE = 2;
 const DEGRAUS_INTERMEDIARIOS = 3;
-const TIMEOUT_GERACAO_MS = 25_000;
+const TIMEOUT_GERACAO_MS = 25_000; // duas âncoras em série cabem nos 60 s da rota
 const LETRAS = ['A', 'B', 'C', 'D', 'E'] as const;
 
 interface DegrauGerado {
@@ -39,7 +42,9 @@ Gere exatamente ${DEGRAUS_BASE + DEGRAUS_INTERMEDIARIOS} questões:
 - ${DEGRAUS_INTERMEDIARIOS} com nivel "medio": aplicam uma peça num contexto pequeno, mais perto do raciocínio da questão. Enunciado de até 5 linhas.
 
 REGRAS:
-- NÃO copie nem resolva a questão do ENEM; ela vem depois, o estudante precisa resolvê-la sozinho.
+- NÃO copie nem resolva a questão do ENEM; ela vem depois, o estudante precisa resolvê-la sozinho. Nenhum degrau pergunta o que a questão do ENEM pergunta, nem cita o resultado dela (se a resposta do ENEM é "mês 5", nenhum degrau calcula o mês do máximo DAQUELA função). Use outros números e outras situações para treinar a mesma peça.
+- Nada de decoreba: nunca "qual é a fórmula de...". O degrau pede para USAR ou ENTENDER a peça (calcular, comparar, interpretar um gráfico).
+- Faça cada conta duas vezes antes de marcar a alternativa correta.
 - 5 alternativas plausíveis, uma só correta.
 - Explicação: 1) o que a questão pedia; 2) por que o erro mais comum falha; 3) o caminho passo a passo; 4) o princípio por trás; 5) onde essa peça aparece na questão do ENEM.
 - Português do Brasil. Sem emoji, sem elogio, sem "É importante notar".
@@ -58,28 +63,37 @@ function validarDegrau(bruto: unknown): DegrauGerado | null {
   return { ...(d as unknown as DegrauGerado), respostaCorreta: resposta, nivel };
 }
 
+/* Pelo menos 3 degraus válidos, senão a lista não serve como escada. */
+function validarLista(bruto: unknown): DegrauGerado[] | null {
+  const lista = Array.isArray((bruto as { degraus?: unknown })?.degraus) ? (bruto as { degraus: unknown[] }).degraus : [];
+  const validos = lista.map(validarDegrau).filter((d): d is DegrauGerado => d !== null);
+  return validos.length >= 3 ? validos : null;
+}
 async function gerarDegraus(ancora: Question): Promise<Question[]> {
-  const resultado = await chatCompletion({
-    messages: [{ role: 'user', content: montarPrompt(ancora) }],
-    maxTokens: 6000,
-    temperature: 0.5,
-    responseFormat: { type: 'json_object' },
-    timeoutMs: TIMEOUT_GERACAO_MS,
+  const r = await pedirJson(montarPrompt(ancora), validarLista, {
+    maxTokens: 4500, temperature: 0.4, modelo: MODELO_IA.degraus(), pensar: 'medium', timeoutMs: TIMEOUT_GERACAO_MS,
   });
-  if (!resultado.ok) return [];
-
-  let lista: unknown[] = [];
-  try {
-    const conteudo = resultado.data?.choices?.[0]?.message?.content ?? '';
-    lista = JSON.parse(conteudo)?.degraus ?? [];
-  } catch (erro) {
-    console.error('Degraus: JSON inválido para a âncora', ancora.id, erro);
+  if (!r.ok) {
+    console.error('Degraus: falha ao gerar para a âncora', ancora.id, r.erro);
     return [];
   }
-
-  const validos = lista.map(validarDegrau).filter((d): d is DegrauGerado => d !== null);
-  if (validos.length === 0) return [];
-
+  // Resolução independente por outro modelo: só fica o degrau em que os
+  // dois chegam à mesma alternativa (lib/verificar-respostas.ts).
+  const verificadas = await resolverIndependente(r.dado.map((d) => ({
+    enunciado: d.enunciado,
+    opcoes: [d.alternativaA, d.alternativaB, d.alternativaC, d.alternativaD, d.alternativaE],
+  })));
+  const validos = verificadas
+    ? r.dado.filter((d, i) => concorda({ tipo: 'escolha', correta: LETRAS.indexOf(d.respostaCorreta as (typeof LETRAS)[number]) }, verificadas[i]))
+    : [];
+  if (!verificadas) console.error(`Degraus: a verificação independente falhou (âncora ${ancora.id}); nenhum degrau salvo`);
+  else {
+    r.dado.forEach((d, i) => {
+      const v = verificadas[i];
+      if (!validos.includes(d)) console.error(`Degraus: descartado, gerador marcou ${d.respostaCorreta} e o verificador ${v && 'indice' in v ? LETRAS[v.indice] : 'nada'}: ${d.enunciado.slice(0, 80)}`);
+    });
+  }
+  if (validos.length < 3) return [];
   return prisma.$transaction(
     validos.map((d) =>
       prisma.question.create({
@@ -108,7 +122,7 @@ async function gerarDegraus(ancora: Question): Promise<Question[]> {
 
 const ordemNivel = (q: Question) => (q.nivel === 'facil' ? 0 : 1);
 
-/* Degraus de cada âncora, do banco ou gerados agora (em paralelo). Âncora
+/* Degraus de cada âncora, do banco ou gerados agora (um por vez). Âncora
    cuja geração falhar volta sem degraus — quem chama decide o que fazer. */
 export async function degrausDasAncoras(ancoras: Question[]): Promise<Map<string, Question[]>> {
   const ids = ancoras.map((a) => a.id);
@@ -117,15 +131,14 @@ export async function degrausDasAncoras(ancoras: Question[]): Promise<Map<string
 
   const faltando = ancoras.filter((a) => (porAncora.get(a.id)?.length ?? 0) === 0);
   if (faltando.length > 0 && getAbacusApiKey()) {
-    const gerados = await Promise.all(
-      faltando.map((a) =>
-        gerarDegraus(a).catch((erro) => {
-          console.error('Degraus: falha ao gerar para a âncora', a.id, erro);
-          return [] as Question[];
-        }),
-      ),
-    );
-    faltando.forEach((a, i) => porAncora.set(a.id, gerados[i]));
+    // Uma âncora de cada vez: em paralelo, as duas estouravam juntas o limite
+    // de tokens por minuto do modelo na Groq gratuita.
+    for (const a of faltando) {
+      porAncora.set(a.id, await gerarDegraus(a).catch((erro) => {
+        console.error('Degraus: falha ao gerar para a âncora', a.id, erro);
+        return [] as Question[];
+      }));
+    }
   }
 
   return new Map(Array.from(porAncora, ([id, qs]) => [id, [...qs].sort((x, y) => ordemNivel(x) - ordemNivel(y))]));

@@ -1,9 +1,11 @@
 export const dynamic = 'force-dynamic';
+export const maxDuration = 60;
 import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { pedirJson } from '@/lib/pedir-json';
 import { promptResumo, validarResumos } from '@/lib/tutor/resumo';
+import { MODELO_IA } from '@/lib/ia-modelos';
 
 // Resumo de revisão dos assuntos do dia, antes das questões.
 export async function POST(req: Request) {
@@ -20,7 +22,7 @@ export async function POST(req: Request) {
   ).values());
   if (assuntos.length === 0) return NextResponse.json({ error: 'Subtemas não informados' }, { status: 400 });
 
-  const r = await pedirJson(promptResumo(assuntos), validarResumos, { maxTokens: 6000, temperature: 0.3 });
+  const r = await pedirJson(promptResumo(assuntos), validarResumos, { maxTokens: 4000, temperature: 0.3, modelo: MODELO_IA.resumo() });
   if (!r.ok) return NextResponse.json({ error: r.erro }, { status: r.status });
   return NextResponse.json({ resumos: r.dado });
 }

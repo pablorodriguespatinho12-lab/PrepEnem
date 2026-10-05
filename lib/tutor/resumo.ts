@@ -23,7 +23,7 @@ ${lista}
 
 Para CADA assunto:
 - "ideia": uma frase, a ideia central, em palavras simples.
-- "construcao": de 2 a 4 passos curtos (até 3 frases cada), do concreto ao símbolo: uma situação real → o desenho → a fórmula saindo do raciocínio. Use "visual" sempre que um desenho ajudar (gráfico, reta, transformação algébrica linha a linha, tabela, vetores). Em humanas e linguagens, use tabela para comparar ou organizar.
+- "construcao": de 2 a 4 passos curtos (até 3 frases cada), do concreto ao símbolo: uma situação real → o desenho → a fórmula saindo do raciocínio. O passo do desenho TEM "visual" preenchido, sempre (gráfico, reta, transformação algébrica linha a linha, tabela ou vetores); em exatas, quase sempre um gráfico. Em humanas e linguagens, use tabela para comparar ou organizar. A situação real é concreta e do dia a dia (uma bicicleta, uma receita, uma conta de luz), nunca uma definição.
 - "regra": a fórmula ou regra no fim, como resumo, dizendo o que cada símbolo significa.
 - "dicaEnem": uma frase sobre como o assunto costuma aparecer no ENEM.
 

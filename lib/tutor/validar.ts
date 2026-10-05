@@ -21,15 +21,31 @@ const lista = (v: unknown): unknown[] => (Array.isArray(v) ? v : []);
 const objeto = (v: unknown): Record<string, unknown> => (v && typeof v === 'object' ? (v as Record<string, unknown>) : {});
 
 /* Modelos às vezes embrulham o JSON em ```json ... ``` mesmo em modo JSON. */
+/* LaTeX dentro de JSON: "\frac" com UMA barra é JSON válido, mas \f vira
+   form-feed e a fórmula some sem erro nenhum ("\times" → tab + "imes").
+   Comandos LaTeX que começam com letra de escape JSON (b f n r t u) ganham
+   a barra dupla antes do parse. A lista é fechada de propósito: "\n" seguido
+   de texto comum é quebra de linha de verdade e não pode virar "\\n". */
+const LATEX_COM_ESCAPE_JSON = /(?<!\\)\\(?=(?:frac|forall|beta|bar|binom|big|boxed|bullet|neq|nabla|nu|ne(?![a-z])|not|newline|right|rho|rangle|rm|times|theta|text|tau|tan|to(?![a-z])|triangle|tfrac|top|tilde|underline|upsilon)(?![a-z]))/g;
+
+/* Barra solta antes de letra que não é escape JSON ("\sqrt", "\cdot") torna o
+   JSON inválido; dobrar a barra salva o texto. */
+const BARRA_INVALIDA = /(?<!\\)\\(?=[^"\\/bfnrtu])/g;
+
 export function extrairJson(bruto: string): unknown {
   const limpo = bruto.trim().replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/, '');
   const inicio = limpo.indexOf('{');
   const fim = limpo.lastIndexOf('}');
   if (inicio < 0 || fim <= inicio) return null;
+  const json = limpo.slice(inicio, fim + 1).replace(LATEX_COM_ESCAPE_JSON, '\\\\');
   try {
-    return JSON.parse(limpo.slice(inicio, fim + 1));
+    return JSON.parse(json);
   } catch {
-    return null;
+    try {
+      return JSON.parse(json.replace(BARRA_INVALIDA, '\\\\'));
+    } catch {
+      return null;
+    }
   }
 }
 
