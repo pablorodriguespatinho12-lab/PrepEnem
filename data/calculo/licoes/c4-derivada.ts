@@ -8,9 +8,9 @@ export const C4_DERIVADA: ConteudoLicao = {
   construcao: [
     {
       titulo: 'O velocímetro',
-      texto: 'Ande o relógio. O carro acelera: a cada minuto anda mais que no anterior. O velocímetro não marca a média da viagem, marca a velocidade naquele instante. Como calcular o número que ele mostra?',
+      texto: 'Ande o relógio. O carro acelera: a cada minuto anda mais que no anterior. O velocímetro não marca a média da viagem, marca a velocidade naquele instante: 2, 4, 6, 8. Como calcular o número que ele mostra, sem o velocímetro?',
       visual: {
-        tipo: 'cena', titulo: 'O carro que acelera: s(x) = x²', x: [0, 5], unidadeX: 'min', unidadeY: 'km',
+        tipo: 'cena', titulo: 'O carro que acelera: s(x) = x²', x: [0, 5], unidadeX: 'min', unidadeY: 'km', velocimetro: true,
         veiculos: [{ veiculo: 'carro', nome: 's', expr: 'x^2', cor: 'a' }],
       },
     },

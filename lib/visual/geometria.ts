@@ -81,3 +81,9 @@ export function posicionarRotulos(ancoras: { x: number; y: number }[]): number[]
   });
   return ys;
 }
+const PASSO_DERIVADA = 1e-5;
+/* Velocímetro da cena: a taxa no instante t pela média simétrica num
+   intervalo minúsculo (a definição da derivada, com h pequeno de verdade). */
+export function taxaNoInstante(f: Funcao, t: number): number {
+  return (f(t + PASSO_DERIVADA) - f(t - PASSO_DERIVADA)) / (2 * PASSO_DERIVADA);
+}

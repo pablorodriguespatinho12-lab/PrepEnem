@@ -8,7 +8,7 @@ import { useMemo } from 'react';
 import { useReducedMotion } from 'framer-motion';
 import { ehVertical, type CorVisual, type Veiculo, type VisualCena, type VisualGrafico } from '@/lib/visual/especificacao';
 import { exprParaLatex, numeroLatex, tentarCompilar } from '@/lib/visual/expressao';
-import { faixaDaCena, marcas } from '@/lib/visual/geometria';
+import { faixaDaCena, marcas, taxaNoInstante } from '@/lib/visual/geometria';
 import { Grafico, Latex, corDe } from './grafico';
 import { Controles, Deslizante, useRelogio } from './relogio';
 
@@ -176,6 +176,11 @@ export function Cena({ v }: { v: VisualCena }) {
             <Latex fonte={`${w.nome}(${numeroLatex(t)}) = ${numeroLatex(w.valor)}`} />
             <span className="text-muted-foreground"> → {frase(w.veiculo, uy)} </span>
             <strong data-numeric style={{ color: w.cor }}>{numero(w.valor)}{vertical ? ` ${uy}` : ''}</strong>
+            {v.velocimetro && (
+              <span className="text-muted-foreground">
+                {' '}· velocímetro: <strong data-numeric className="text-foreground">{numero(taxaNoInstante(fns[posicoes.indexOf(w)], t))} {uy}/{ux}</strong>
+              </span>
+            )}
           </p>
         ))}
         {juntos && <p className="font-semibold">Mesmo lugar: aqui os dois se encontram.</p>}

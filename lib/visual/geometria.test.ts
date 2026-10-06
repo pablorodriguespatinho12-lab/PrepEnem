@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { amostrar, faixaAutomatica, faixaDaCena, marcas, posicionarRotulos } from './geometria';
+import { amostrar, faixaAutomatica, faixaDaCena, marcas, posicionarRotulos, taxaNoInstante } from './geometria';
 
 describe('amostrar', () => {
   test('quebra o traço na assíntota de 1/x', () => {
@@ -52,5 +52,14 @@ describe('posicionarRotulos', () => {
   });
   test('rótulos longe um do outro ficam onde estão, mas nunca acima do topo', () => {
     expect(posicionarRotulos([{ x: 100, y: 50 }, { x: 500, y: 52 }, { x: 300, y: -10 }])).toEqual([50, 52, 14]);
+  });
+});
+
+describe('taxaNoInstante', () => {
+  test('velocímetro de x³ marca 3, 12 e 27', () => {
+    const f = (x: number) => x ** 3;
+    expect(taxaNoInstante(f, 1)).toBeCloseTo(3, 6);
+    expect(taxaNoInstante(f, 2)).toBeCloseTo(12, 6);
+    expect(taxaNoInstante(f, 3)).toBeCloseTo(27, 6);
   });
 });

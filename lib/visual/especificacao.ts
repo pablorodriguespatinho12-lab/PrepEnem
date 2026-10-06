@@ -66,6 +66,8 @@ export interface VisualCena {
   unidadeY?: string;
   /* O gráfico se desenha ponto a ponto, conforme o relógio anda. */
   rastro?: boolean;
+  /* Mostra a velocidade no instante (a derivada) ao lado da posição: c4 em diante. */
+  velocimetro?: boolean;
   veiculos: { veiculo: Veiculo; nome: string; expr: string; rotulo?: string; cor?: CorVisual }[];
 }
 /* Ponto girando num círculo: o cosseno é a sombra no chão, o seno é a altura
@@ -193,7 +195,7 @@ function cena(v: Record<string, unknown>): VisualCena | null {
       cor: cor(w.cor),
     }));
   if (veiculos.length === 0) return null;
-  return { tipo: 'cena', titulo: texto(v.titulo), x: aparar(x, veiculos), unidadeX: texto(v.unidadeX, 12), unidadeY: texto(v.unidadeY, 12), rastro: v.rastro === true, veiculos };
+  return { tipo: 'cena', titulo: texto(v.titulo), x: aparar(x, veiculos), unidadeX: texto(v.unidadeX, 12), unidadeY: texto(v.unidadeY, 12), rastro: v.rastro === true, velocimetro: v.velocimetro === true, veiculos };
 }
 const DIVISOES = [4, 24] as const;
 const MAX_VOLTAS = 3;
@@ -225,7 +227,7 @@ export const FORMATO_VISUAL_PARA_IA = `"visual" é um destes objetos (ou null). 
 - Transformação passo a passo (álgebra, de onde a fórmula vem): {"tipo":"transformacao","linhas":[{"latex":"ax^2+bx+c=0","porque":"ponto de partida"},{"latex":"x^2+\\\\frac{b}{a}x=-\\\\frac{c}{a}","porque":"divide tudo por a"}]}
 - Tabela (comparar valores, proporção, mol): {"tipo":"tabela","cabecalho":["n (mol)","massa (g)"],"linhas":[["1","18"],["2","36"]]}
 - Cena (algo que MUDA COM O TEMPO: movimento, queda, lançamento, crescimento, juros, decaimento, reservatório): {"tipo":"cena","titulo":"Bola solta de 45 m","x":[0,3],"unidadeX":"s","unidadeY":"m","rastro":true,"veiculos":[{"veiculo":"bola","nome":"h","expr":"45-5*x^2","rotulo":"bola","cor":"a"}]}
-  O app anima o objeto pelo relógio e desenha o gráfico junto. "veiculo" é EXATAMENTE um destes; o nome real (pena, pedra, foguete) vai em "rotulo". "carro" ou "moto" andam para o lado (posição); "bola", "balao" ou "vela" sobem e descem (altura ou quantidade). x é o tempo em passos INTEIROS, de 0 até no máximo 20. Até 2 objetos, na mesma direção. "rastro": true quando o formato da curva é o ponto. Calcule expr em cada x inteiro e confira com o texto. "nome" é UMA letra (f, g, h). expr dá ONDE o objeto está (posição, altura ou quantidade) no instante x, nunca a velocidade: numa queda de 45 m a altura DIMINUI, "45-5*x^2"; um corpo lançado para cima sobe e desce, "20*x-5*x^2". O relógio termina quando o objeto chega ao chão (altura 0), não depois.
+  O app anima o objeto pelo relógio e desenha o gráfico junto. "veiculo" é EXATAMENTE um destes; o nome real (pena, pedra, foguete) vai em "rotulo". "carro" ou "moto" andam para o lado (posição); "bola", "balao" ou "vela" sobem e descem (altura ou quantidade). x é o tempo em passos INTEIROS, de 0 até no máximo 20. Até 2 objetos, na mesma direção. "rastro": true quando o formato da curva é o ponto. "velocimetro": true mostra a velocidade no instante ao lado da posição (movimento acelerado). Calcule expr em cada x inteiro e confira com o texto. "nome" é UMA letra (f, g, h). expr dá ONDE o objeto está (posição, altura ou quantidade) no instante x, nunca a velocidade: numa queda de 45 m a altura DIMINUI, "45-5*x^2"; um corpo lançado para cima sobe e desce, "20*x-5*x^2". O relógio termina quando o objeto chega ao chão (altura 0), não depois.
 - Vetores (forças, velocidade, deslocamento): {"tipo":"vetores","vetores":[{"de":[0,0],"para":[3,0],"rotulo":"F₁","cor":"a"}],"pontos":[{"x":0,"y":0,"rotulo":"corpo"}]}
 "cor": "a", "b" ou "c" para destacar (use a MESMA cor no texto: escreva o termo como [[a:termo]]), "erro" só para o caminho errado do aluno.
 REGRAS DE TEXTO: toda fórmula entre $...$ (nunca \\frac solto fora de $). [[a:termo]] é só para PALAVRAS fora da fórmula ("a [[a:velocidade]] é a inclinação"); nunca dentro de $...$ e nunca em volta de símbolo.`;

@@ -136,7 +136,7 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 - Toda lição na mesma ordem: tentativa curta → construção do raciocínio →
   fórmula como resumo → 3 exemplos (completo, 1 lacuna, 2 lacunas) →
   exercícios com resolução comentada → pergunta de recuperação.
-- **Lições escritas à mão** (`data/calculo/licoes`): p1 a p12 (todo o pré-cálculo) e c1 a c4 em 06/10/2026.
+- **Lições escritas à mão** (`data/calculo/licoes`): p1 a p12 (todo o pré-cálculo) e c1 a c5 em 06/10/2026.
   A geração por IA está desligada (`CALCULO_LICAO_IA`, teste de 05/10: contas
   certas, explicação sem sentido); lição sem versão escrita aparece "em
   preparação". Escrever a próxima é o caminho, não religar a IA.
@@ -160,7 +160,8 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   (limite, c1), degraus do estacionamento com bolinha vazia (continuidade,
   c2; pedaço de função limitado com `0*sqrt(...)`), balão que perde metade da
   altura e corrida x³ × 2ˣ (limites no infinito, c3), o velocímetro do carro x² e o 2x saindo da
-  definição (derivada, c4). Lição nova
+  definição (derivada, c4), velocímetro da cena anotando 3, 12, 27 para x³
+  (regra da potência, c5). A cena tem `velocimetro: true` desde a c4. Lição nova
   nasce com cena. O x é o relógio, nunca "o carro".
 - Antes de commitar lição nova: os testes de `data/calculo` (inclusive: nenhuma
   lacuna nem gabarito pode ser alterado pelo validador; decimal no fim da

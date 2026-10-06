@@ -60,6 +60,11 @@ describe('validarVisual', () => {
     const v = validarVisual({ tipo: 'cena', x: [0, 6], veiculos: [{ veiculo: 'moto', nome: 'g', expr: '5*(x-2)' }] });
     expect(v).toMatchObject({ x: [0, 6] });
   });
+  test('cena: velocímetro só liga quando pedido', () => {
+    const base = { tipo: 'cena', x: [0, 3], veiculos: [{ veiculo: 'carro', nome: 'f', expr: 'x^3' }] };
+    expect(validarVisual({ ...base, velocimetro: true })).toMatchObject({ velocimetro: true });
+    expect(validarVisual(base)).toMatchObject({ velocimetro: false });
+  });
   test('cena: recusa relógio que não é de números inteiros', () => {
     expect(validarVisual({ tipo: 'cena', x: [0, 2.5], veiculos: [{ veiculo: 'carro', nome: 'f', expr: 'x' }] })).toBeNull();
   });
