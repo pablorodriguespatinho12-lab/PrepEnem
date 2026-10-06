@@ -4,15 +4,14 @@
 // anda junto, para a fórmula virar uma coisa que se vê (pedido do Pablo,
 // 06/10/2026). Só transform na animação: roda no compositor.
 
-import { useEffect, useId, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { useReducedMotion } from 'framer-motion';
-import { Play, RotateCcw, StepForward } from 'lucide-react';
 import { ehVertical, type CorVisual, type Veiculo, type VisualCena, type VisualGrafico } from '@/lib/visual/especificacao';
 import { tentarCompilar } from '@/lib/visual/expressao';
 import { faixaDaCena, marcas } from '@/lib/visual/geometria';
 import { Grafico, Latex, corDe } from './grafico';
+import { Controles, Deslizante, useRelogio } from './relogio';
 
-const PASSO_MS = 900; // um passo do relógio: devagar o bastante para acompanhar o número
 const ALTURA_PISTA = 220;
 const MOVIMENTO = 'transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1)';
 const CORES = ['a', 'b', 'c'] as const;
@@ -138,18 +137,10 @@ function pontosDoGrafico(v: VisualCena, t: number, fns: ((x: number) => number)[
 
 export function Cena({ v }: { v: VisualCena }) {
   const reduzir = useReducedMotion() ?? false;
-  const idRelogio = useId();
-  const [t, setT] = useState(v.x[0]);
-  const [andando, setAndando] = useState(false);
+  const relogio = useRelogio(v.x);
+  const { t, terminou } = relogio;
   const fns = useMemo(() => v.veiculos.map((w) => tentarCompilar(w.expr) ?? (() => NaN)), [v]);
   const faixa = useMemo(() => faixaDaCena(fns, v.x), [fns, v.x]);
-
-  useEffect(() => {
-    if (!andando) return;
-    if (t >= v.x[1]) { setAndando(false); return; }
-    const id = setTimeout(() => setT((atual) => Math.min(atual + 1, v.x[1])), PASSO_MS);
-    return () => clearTimeout(id);
-  }, [andando, t, v.x]);
 
   const pct = (valor: number) => Math.max(0, Math.min(100, ((valor - faixa[0]) / (faixa[1] - faixa[0])) * 100));
   const posicoes: Posicao[] = v.veiculos.map((w, i) => ({ veiculo: w.veiculo, nome: w.nome, cor: corDe(w.cor, i), valor: fns[i](t) }));
@@ -157,7 +148,6 @@ export function Cena({ v }: { v: VisualCena }) {
   const vertical = ehVertical(v.veiculos[0].veiculo);
   const ux = v.unidadeX ?? 'min';
   const uy = v.unidadeY ?? 'km';
-  const terminou = t >= v.x[1];
   const grafico: VisualGrafico = {
     tipo: 'grafico',
     x: v.x,
@@ -166,7 +156,6 @@ export function Cena({ v }: { v: VisualCena }) {
     pontos: pontosDoGrafico(v, t, fns),
   };
   const Pista = vertical ? PistaVertical : PistaHorizontal;
-  const botao = 'inline-flex items-center gap-1.5 px-3 py-2 rounded-[var(--radius-control)] type-meta font-medium t-colors disabled:opacity-40';
 
   return (
     <div className="space-y-4">
@@ -179,17 +168,7 @@ export function Cena({ v }: { v: VisualCena }) {
         ))}
       </div>
 
-      <div className="flex items-center gap-3">
-        <label htmlFor={idRelogio} className="type-meta text-muted-foreground whitespace-nowrap">
-          Relógio <span data-numeric className="font-semibold text-foreground">x = {numero(t)} {ux}</span>
-        </label>
-        <input
-          id={idRelogio} type="range" min={v.x[0]} max={v.x[1]} step={1} value={t}
-          onChange={(e) => { setAndando(false); setT(Number(e.target.value)); }}
-          className="flex-1 accent-[hsl(var(--primary))]"
-        />
-      </div>
-
+      <Deslizante relogio={relogio} rotulo={<>Relógio <span data-numeric className="font-semibold text-foreground">x = {numero(t)} {ux}</span></>} />
       <Pista posicoes={posicoes} pct={pct} faixa={faixa} unidade={uy} reduzir={reduzir} />
 
       <div className="space-y-1 type-body" aria-live="polite">
@@ -203,21 +182,7 @@ export function Cena({ v }: { v: VisualCena }) {
         {juntos && <p className="font-semibold">Mesmo lugar: aqui os dois se encontram.</p>}
       </div>
 
-      <div className="flex flex-wrap gap-2">
-        <button type="button" onClick={() => { if (terminou) setT(v.x[0]); setAndando(true); }} disabled={andando}
-          className={`${botao} bg-primary text-primary-foreground hover:opacity-90`}>
-          <Play className="w-4 h-4" /> Ver andando
-        </button>
-        <button type="button" onClick={() => { setAndando(false); setT((a) => Math.min(a + 1, v.x[1])); }} disabled={terminou}
-          className={`${botao} bg-muted hover:bg-muted/80`}>
-          <StepForward className="w-4 h-4" /> Mais 1 {ux}
-        </button>
-        <button type="button" onClick={() => { setAndando(false); setT(v.x[0]); }} disabled={t === v.x[0]}
-          className={`${botao} bg-muted hover:bg-muted/80`}>
-          <RotateCcw className="w-4 h-4" /> Recomeçar
-        </button>
-      </div>
-
+      <Controles relogio={relogio} passo={`Mais 1 ${ux}`} />
       <div>
         <p className="type-meta text-muted-foreground mb-1">
           {v.rastro && !terminou

@@ -5,6 +5,7 @@ import { marcas } from '@/lib/visual/geometria';
 import { renderizarTextoMatematico } from '@/lib/visual/texto-matematico';
 import { ALTURA, COR, EIXO, Eixos, Grafico, HALO, LARGURA, Latex, MARGEM, corDe, escala } from './grafico';
 import { Cena } from './cena';
+import { Roda } from './roda';
 function Reta({ v }: { v: VisualReta }) {
   const altura = 110;
   const meio = 56;
@@ -122,6 +123,7 @@ export function VisualDesenho({ visual }: { visual: Visual }) {
       {visual.tipo === 'tabela' && <Tabela v={visual} />}
       {visual.tipo === 'vetores' && <Vetores v={visual} />}
       {visual.tipo === 'cena' && <Cena v={visual} />}
+      {visual.tipo === 'roda' && <Roda v={visual} />}
     </figure>
   );
 }

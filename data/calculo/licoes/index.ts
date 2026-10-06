@@ -10,6 +10,7 @@ import { P5_TRANSFORMACOES } from './p5-transformacoes';
 import { P6_POTENCIAS } from './p6-potencias';
 import { P7_EXPONENCIAL } from './p7-exponencial';
 import { P8_LOGARITMO } from './p8-logaritmo';
+import { P9_SENO_COSSENO } from './p9-seno-cosseno';
 
 export const LICOES_ESCRITAS: Record<string, ConteudoLicao> = {
   p1: P1_FUNCAO,
@@ -20,4 +21,5 @@ export const LICOES_ESCRITAS: Record<string, ConteudoLicao> = {
   p6: P6_POTENCIAS,
   p7: P7_EXPONENCIAL,
   p8: P8_LOGARITMO,
+  p9: P9_SENO_COSSENO,
 };

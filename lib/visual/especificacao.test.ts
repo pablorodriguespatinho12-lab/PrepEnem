@@ -2,6 +2,14 @@ import { describe, expect, test } from 'vitest';
 import { validarVisual } from './especificacao';
 
 describe('validarVisual', () => {
+  test('roda: círculo de raio 1 por padrão, divisões e voltas limitadas', () => {
+    expect(validarVisual({ tipo: 'roda', divisoes: 12 })).toMatchObject({ tipo: 'roda', divisoes: 12, raio: 1, centro: 0, voltas: 1 });
+    expect(validarVisual({ tipo: 'roda', divisoes: 12, raio: 20, centro: 22, voltas: 2, unidade: 'm', grafico: true }))
+      .toMatchObject({ raio: 20, centro: 22, voltas: 2, unidade: 'm', grafico: true });
+    expect(validarVisual({ tipo: 'roda', divisoes: 3 })).toBeNull();
+    expect(validarVisual({ tipo: 'roda', divisoes: 12, voltas: 9 })).toMatchObject({ voltas: 3 });
+    expect(validarVisual({ tipo: 'roda', divisoes: 12, raio: -1 })).toBeNull();
+  });
   test('cena: aceita carro e moto, descarta veículo sem regra legível', () => {
     const v = validarVisual({
       tipo: 'cena', x: [0, 4], unidadeX: 'min', unidadeY: 'km',

@@ -67,7 +67,20 @@ export interface VisualCena {
   rastro?: boolean;
   veiculos: { veiculo: Veiculo; nome: string; expr: string; rotulo?: string; cor?: CorVisual }[];
 }
-export type Visual = VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena;
+/* Ponto girando num círculo: o cosseno é a sombra no chão, o seno é a altura
+   (lição p9). Com raio e centro vira roda-gigante: altura da cadeira =
+   centro + raio · sen θ (lição p10). "grafico" desenrola a altura ao lado. */
+export interface VisualRoda {
+  tipo: 'roda';
+  titulo?: string;
+  divisoes: number;
+  raio: number;
+  centro: number;
+  voltas: number;
+  unidade?: string;
+  grafico?: boolean;
+}
+export type Visual = VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda;
 
 const MAX_FUNCOES = 4;
 const MAX_PONTOS = 8;
@@ -179,8 +192,19 @@ function cena(v: Record<string, unknown>): VisualCena | null {
   if (veiculos.length === 0) return null;
   return { tipo: 'cena', titulo: texto(v.titulo), x: aparar(x, veiculos), unidadeX: texto(v.unidadeX, 12), unidadeY: texto(v.unidadeY, 12), rastro: v.rastro === true, veiculos };
 }
+const DIVISOES = [4, 24] as const;
+const MAX_VOLTAS = 3;
+function roda(v: Record<string, unknown>): VisualRoda | null {
+  const divisoes = Number(v.divisoes);
+  if (!Number.isInteger(divisoes) || divisoes < DIVISOES[0] || divisoes > DIVISOES[1]) return null;
+  const raio = v.raio === undefined ? 1 : v.raio;
+  const centro = v.centro === undefined ? 0 : v.centro;
+  if (!ehNumero(raio) || raio <= 0 || !ehNumero(centro)) return null;
+  const voltas = Math.min(MAX_VOLTAS, Math.max(1, Math.round(Number(v.voltas) || 1)));
+  return { tipo: 'roda', titulo: texto(v.titulo), divisoes, raio, centro, voltas, unidade: texto(v.unidade, 12), grafico: v.grafico === true };
+}
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {
-  grafico, reta, transformacao, tabela, vetores, cena,
+  grafico, reta, transformacao, tabela, vetores, cena, roda,
 };
 
 /* Devolve o visual limpo, ou null se não der para desenhar com segurança. */
