@@ -136,15 +136,17 @@ export default function SimuladoPage() {
   }, [sessionId]);
 
   // --- Periodic save of timer state (every 15 seconds) ---
+  // O tempo vai por ref: com timeLeft nas dependências o intervalo era
+  // recriado a cada segundo e nunca chegava aos 15 s.
+  const tempoRef = useRef({ timeLeft, timeElapsed });
+  tempoRef.current = { timeLeft, timeElapsed };
   useEffect(() => {
-    if (phase !== 'exam' || !sessionId) return;
+    if (phase !== 'exam' || !sessionId || isPaused) return;
     saveTimerRef.current = setInterval(() => {
-      if (!isPaused) {
-        saveProgress({ tLeft: timeLeft, tElapsed: timeElapsed });
-      }
+      saveProgress({ tLeft: tempoRef.current.timeLeft, tElapsed: tempoRef.current.timeElapsed });
     }, 15000);
     return () => { if (saveTimerRef.current) clearInterval(saveTimerRef.current); };
-  }, [phase, sessionId, isPaused, timeLeft, timeElapsed, saveProgress]);
+  }, [phase, sessionId, isPaused, saveProgress]);
 
   // --- Save on pause/visibility change ---
   useEffect(() => {

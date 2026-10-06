@@ -166,13 +166,16 @@ export default function PerfilPage() {
           </div>
           <button
             onClick={() => setDarkMode(darkMode === 'dark' ? 'light' : 'dark')}
+            role="switch"
+            aria-checked={darkMode === 'dark'}
+            aria-label="Modo escuro"
             className={`relative w-14 h-7 rounded-full t-colors ${
               darkMode === 'dark' ? 'bg-primary' : 'bg-muted'
             }`}
           >
             <motion.div
-              className="absolute top-0.5 w-6 h-6 bg-white rounded-full shadow-elev-1 flex items-center justify-center"
-              animate={{ left: darkMode === 'dark' ? '30px' : '2px' }}
+              className="absolute top-0.5 left-0.5 w-6 h-6 bg-white rounded-full shadow-elev-1 flex items-center justify-center"
+              animate={{ x: darkMode === 'dark' ? 28 : 0 }}
               transition={{ type: 'spring', stiffness: 500, damping: 30 }}
             >
               {darkMode === 'dark' ? <Moon className="w-3.5 h-3.5 text-primary-text" /> : <Sun className="w-3.5 h-3.5 text-amber-500" />}
@@ -198,13 +201,16 @@ export default function PerfilPage() {
           </div>
           <button
             onClick={() => setSoundEnabled(!soundEnabled)}
+            role="switch"
+            aria-checked={soundEnabled}
+            aria-label="Som"
             className={`relative w-14 h-7 rounded-full t-colors flex-shrink-0 ${
               soundEnabled ? 'bg-primary' : 'bg-muted'
             }`}
           >
             <motion.div
-              className="absolute top-0.5 w-6 h-6 bg-white rounded-full shadow-elev-1 flex items-center justify-center"
-              animate={{ left: soundEnabled ? '30px' : '2px' }}
+              className="absolute top-0.5 left-0.5 w-6 h-6 bg-white rounded-full shadow-elev-1 flex items-center justify-center"
+              animate={{ x: soundEnabled ? 28 : 0 }}
               transition={{ type: 'spring', stiffness: 500, damping: 30 }}
             >
               {soundEnabled ? <Volume2 className="w-3.5 h-3.5 text-primary-text" /> : <VolumeX className="w-3.5 h-3.5 text-muted-foreground" />}

@@ -126,6 +126,11 @@ export async function POST(req: Request) {
     if (!session?.user) {
       return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
     }
+    // Cria questões no banco de todos e reescreve gabarito oficial: só admin,
+    // como o batch-import.
+    if ((session.user as { role?: string }).role !== 'admin') {
+      return NextResponse.json({ error: 'Apenas administradores podem importar provas.' }, { status: 403 });
+    }
     if (!isS3Configured()) {
       return s3UnavailableResponse();
     }

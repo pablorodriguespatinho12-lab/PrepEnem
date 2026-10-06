@@ -47,11 +47,15 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Revisão não encontrada' }, { status: 404 });
     }
 
-    // Mark current review as complete
-    await prisma.reviewSchedule.update({
-      where: { id: reviewId },
+    // Marca como feita só se ainda não estava: duplo clique ou nova tentativa
+    // criavam uma revisão seguinte a cada chamada e a fila se multiplicava.
+    const marcada = await prisma.reviewSchedule.updateMany({
+      where: { id: reviewId, completada: false },
       data: { completada: true },
     });
+    if (marcada.count === 0) {
+      return NextResponse.json({ ok: true, jaRegistrada: true });
+    }
 
     // Ebbinghaus intervals: 1 -> 3 -> 7 -> 15
     const intervals = [1, 3, 7, 15];

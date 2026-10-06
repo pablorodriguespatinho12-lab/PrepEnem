@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { diaNoBrasil } from '@/lib/dia-brasil';
 
 export async function GET() {
   try {
@@ -51,7 +52,7 @@ export async function GET() {
     );
     const dailyData: Record<string, { total: number; acertos: number }> = {};
     for (const p of recentProgress) {
-      const day = new Date(p?.dataResposta).toISOString().split('T')[0];
+      const day = diaNoBrasil(new Date(p?.dataResposta));
       if (!dailyData[day]) dailyData[day] = { total: 0, acertos: 0 };
       dailyData[day].total++;
       if (p?.acertou) dailyData[day].acertos++;

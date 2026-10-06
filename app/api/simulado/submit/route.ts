@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { agendarRevisaoDoErro } from '@/lib/revisao';
 
 export async function POST(req: Request) {
   try {
@@ -80,19 +81,7 @@ export async function POST(req: Request) {
         },
       });
 
-      // Schedule review for wrong answers
-      if (!acertou) {
-        const tomorrow = new Date();
-        tomorrow.setDate(tomorrow.getDate() + 1);
-        await prisma.reviewSchedule.create({
-          data: {
-            userId,
-            questionId: q.id,
-            proximaRevisao: tomorrow,
-            intervaloAtual: 1,
-          },
-        });
-      }
+      if (!acertou) await agendarRevisaoDoErro(userId, q.id);
     }
 
     const taxa = respostas.length > 0 ? Math.round((totalCorrect / respostas.length) * 100) : 0;

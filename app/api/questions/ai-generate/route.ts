@@ -10,6 +10,8 @@ const MATERIAS_VALIDAS = [
   'História', 'Geografia', 'Filosofia', 'Sociologia', 'Inglês'
 ];
 
+const MAX_QUANTIDADE = 10;
+
 export async function POST(req: Request) {
   try {
     const session = await getServerSession(authOptions);
@@ -17,7 +19,9 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
     }
 
-    const { materia, subtema, dificuldade = 'medio', quantidade = 5, save = true } = await req.json();
+    const { materia, subtema, dificuldade = 'medio', quantidade: pedida = 5, save = true } = await req.json();
+    // Sem teto, "quantidade: 500" ia direto para o prompt (custo e banco cheio).
+    const quantidade = Math.min(Math.max(Number.parseInt(String(pedida), 10) || 5, 1), MAX_QUANTIDADE);
     if (!materia || !MATERIAS_VALIDAS.includes(materia)) {
       return NextResponse.json({ error: 'Matéria inválida' }, { status: 400 });
     }

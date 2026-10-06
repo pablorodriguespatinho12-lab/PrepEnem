@@ -23,13 +23,16 @@ function AnimatedNumber({ value, suffix = '' }: { value: number; suffix?: string
   useEffect(() => {
     const duration = 1000;
     const startTime = Date.now();
+    let frame = 0;
     const animate = () => {
       const elapsed = Date.now() - startTime;
       const progress = Math.min(elapsed / duration, 1);
       setDisplay(Math.floor(value * progress));
-      if (progress < 1) requestAnimationFrame(animate);
+      if (progress < 1) frame = requestAnimationFrame(animate);
     };
     animate();
+    // Sem cancelar, o loop do valor antigo (0) disputava com o novo e o número piscava.
+    return () => cancelAnimationFrame(frame);
   }, [value]);
   return <span>{display}{suffix}</span>;
 }

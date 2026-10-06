@@ -142,6 +142,33 @@ export default function RedacaoPage() {
     return () => clearInterval(interval);
   }, [polling, currentEssay?.id, fetchHistory]);
 
+  // Pede a correção e mostra o resultado. Erro aparece na hora, em vez de o
+  // polling seguir consultando uma redação que voltou para "pendente".
+  const avaliar = useCallback(async (essayId: string) => {
+    setPolling(true);
+    try {
+      const res = await fetch('/api/redacao/evaluate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ essayId }),
+      });
+      if (res.status === 409) return; // já está sendo avaliada: o polling acompanha
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setPolling(false);
+        setCurrentEssay((atual: any) => (atual?.id === essayId ? { ...atual, status: 'pendente' } : atual));
+        toast.error(data?.error || 'Não foi possível corrigir a redação agora.');
+        return;
+      }
+      const hist = await fetch(`/api/redacao/history?id=${essayId}`).then((r) => r.json());
+      if (hist?.essay) setCurrentEssay(hist.essay);
+      setPolling(false);
+      fetchHistory();
+    } catch (e) {
+      setPolling(false);
+      toast.error('Erro de conexão ao corrigir a redação.');
+    }
+  }, [fetchHistory]);
   const handleSubmit = async () => {
     if (!selectedTheme || texto.trim().length < 100) {
       toast.error('Escreva pelo menos 100 caracteres');
@@ -165,10 +192,10 @@ export default function RedacaoPage() {
       if (data?.essayId) {
         toast.success('Redação enviada! A IA está avaliando...');
         setCurrentEssay({ id: data.essayId, status: 'avaliando' });
-        setPolling(true);
         setView('result');
         setTexto('');
         clearDraft();
+        avaliar(data.essayId);
       } else {
         toast.error(data?.error || 'Erro ao enviar');
       }
@@ -186,7 +213,8 @@ export default function RedacaoPage() {
       if (data?.essay) {
         setCurrentEssay(data.essay);
         setView('result');
-        if (data.essay.status !== 'avaliada') setPolling(true);
+        if (data.essay.status === 'pendente') avaliar(data.essay.id);
+        else if (data.essay.status !== 'avaliada') setPolling(true);
       }
     } catch (e) {
       toast.error('Erro ao carregar redação');
@@ -212,7 +240,13 @@ export default function RedacaoPage() {
           <ChevronLeft className="w-4 h-4" /> Voltar
         </button>
 
-        {isEvaluating ? (
+        {currentEssay.status === 'pendente' && !polling ? (
+          <div className="text-center py-16">
+            <h2 className="font-display type-title font-semibold mb-2">A correção não terminou</h2>
+            <p className="type-meta text-muted-foreground mb-6">Sua redação está salva. Tente corrigir de novo.</p>
+            <button onClick={() => avaliar(currentEssay.id)} className="px-6 py-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3">Corrigir agora</button>
+          </div>
+        ) : isEvaluating ? (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-16">
             <Loader2 className="w-12 h-12 animate-spin text-primary-text mx-auto mb-4" />
             <h2 className="font-display type-title font-semibold mb-2">A IA está avaliando sua redação...</h2>

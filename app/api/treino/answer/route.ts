@@ -3,6 +3,8 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { proximaSequencia } from '@/lib/dia-brasil';
+import { agendarRevisaoDoErro } from '@/lib/revisao';
 
 export async function POST(request: Request) {
   try {
@@ -45,42 +47,17 @@ export async function POST(request: Request) {
       },
     });
 
-    // Schedule review if wrong (Ebbinghaus intervals: 1, 3, 7, 15 days)
-    if (!acertou) {
-      const now = new Date();
-      const nextReview = new Date(now);
-      nextReview.setDate(nextReview.getDate() + 1);
-      await prisma.reviewSchedule.create({
-        data: {
-          userId,
-          questionId,
-          proximaRevisao: nextReview,
-          intervaloAtual: 1,
-        },
-      });
-    }
+    if (!acertou) await agendarRevisaoDoErro(userId, questionId);
 
-    // Update streak
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
+    // Sequência de dias no calendário de Brasília (lib/dia-brasil.ts).
     const user = await prisma.user.findUnique({ where: { id: userId } });
     if (user) {
-      const lastStudy = user.lastStudyDate ? new Date(user.lastStudyDate) : null;
-      if (lastStudy) {
-        lastStudy.setHours(0, 0, 0, 0);
-      }
-      const diff = lastStudy ? Math.floor((today.getTime() - lastStudy.getTime()) / (1000 * 60 * 60 * 24)) : -1;
-      let newStreak = user.streakDays ?? 0;
-      if (diff === 1) newStreak += 1;
-      else if (diff > 1) newStreak = 1;
-      else if (diff < 0 || diff === 0) { /* same day, keep streak */ }
-
+      const agora = new Date();
       await prisma.user.update({
         where: { id: userId },
-        data: { lastStudyDate: new Date(), streakDays: newStreak },
+        data: { lastStudyDate: agora, streakDays: proximaSequencia(user.lastStudyDate, user.streakDays ?? 0, agora) },
       });
     }
-
     return NextResponse.json({
       acertou,
       respostaCorreta: question.respostaCorreta,

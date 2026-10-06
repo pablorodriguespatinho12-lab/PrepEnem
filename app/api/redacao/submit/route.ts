@@ -32,14 +32,9 @@ export async function POST(req: Request) {
       data: { userId, themeId: finalThemeId, texto: texto.trim(), status: 'pendente' },
     });
 
-    // Trigger evaluation in background (non-blocking)
-    const baseUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000';
-    fetch(`${baseUrl}/api/redacao/evaluate`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ essayId: essay.id }),
-    }).catch(e => console.error('Background eval trigger error:', e));
-
+    // A correção é pedida pelo navegador logo depois (POST /api/redacao/evaluate).
+    // Disparar daqui não funcionava: o fetch servidor→servidor vai sem o cookie
+    // de sessão, o evaluate devolvia 401 e a redação ficava "pendente" para sempre.
     return NextResponse.json({ essayId: essay.id, status: 'pendente' });
   } catch (error: any) {
     console.error('Submit essay error:', error);

@@ -30,23 +30,27 @@ export async function POST(request: Request) {
 
     const acertou = respostaDada === examQuestion.question.respostaCorreta;
 
-    // Update exam question
-    await prisma.customExamQuestion.update({
-      where: { id: examQuestion.id },
+    const respostaCorreta = examQuestion.question.respostaCorreta;
+    if (exam.status === 'finalizada') {
+      return NextResponse.json({ error: 'Esta prova já foi finalizada.' }, { status: 409 });
+    }
+
+    // Marca a questão só se ainda não estava respondida: duplo clique contava
+    // o acerto duas vezes e avançava currentIdx além do total.
+    const marcada = await prisma.customExamQuestion.updateMany({
+      where: { id: examQuestion.id, answered: false },
       data: { answered: true, respostaDada, acertou },
     });
-
-    // Update exam stats
-    const newAcertos = acertou ? exam.acertos + 1 : exam.acertos;
-    const newErros = !acertou ? exam.erros + 1 : exam.erros;
-    const newCurrentIdx = exam.currentIdx + 1;
+    if (marcada.count === 0) {
+      return NextResponse.json({ acertou: examQuestion.acertou ?? acertou, respostaCorreta });
+    }
 
     await prisma.customExam.update({
       where: { id: examId },
       data: {
-        acertos: newAcertos,
-        erros: newErros,
-        currentIdx: newCurrentIdx,
+        acertos: { increment: acertou ? 1 : 0 },
+        erros: { increment: acertou ? 0 : 1 },
+        currentIdx: { increment: 1 },
         status: exam.status === 'pendente' ? 'em_andamento' : exam.status,
         startedAt: exam.startedAt ?? new Date(),
       },
@@ -62,7 +66,7 @@ export async function POST(request: Request) {
       },
     });
 
-    return NextResponse.json({ acertou, respostaCorreta: examQuestion.question.respostaCorreta });
+    return NextResponse.json({ acertou, respostaCorreta });
   } catch (error: any) {
     console.error('Erro ao responder prova:', error);
     return NextResponse.json({ error: 'Erro ao responder' }, { status: 500 });

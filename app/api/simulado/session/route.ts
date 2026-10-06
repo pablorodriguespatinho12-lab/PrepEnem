@@ -121,10 +121,16 @@ export async function PUT(req: Request) {
     if (timeElapsed !== undefined) updateData.timeElapsed = timeElapsed;
     if (finished !== undefined) updateData.finished = finished;
 
-    await prisma.trainingSession.update({
-      where: { id: sessionId },
+    // Filtra pelo dono: sem isso, qualquer aluno logado alterava a sessão de
+    // outro sabendo o id (o treino/session já filtrava).
+    const userId = (session.user as { id: string }).id;
+    const atualizada = await prisma.trainingSession.updateMany({
+      where: { id: sessionId, userId },
       data: updateData,
     });
+    if (atualizada.count === 0) {
+      return NextResponse.json({ error: 'Sessão não encontrada' }, { status: 404 });
+    }
 
     // Mark question as answered if provided
     if (questionId && respostaDada !== undefined) {

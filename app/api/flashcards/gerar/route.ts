@@ -37,7 +37,7 @@ export async function POST(request: Request) {
     });
     if (!deck) return NextResponse.json({ error: 'Deck não encontrado' }, { status: 404 });
 
-    const qty = Math.min(Math.max(parseInt(String(quantidade)), 1), 30);
+    const qty = Math.min(Math.max(Number.parseInt(String(quantidade), 10) || 10, 1), 30);
 
     const existingCards = await prisma.flashcard.findMany({
       where: { deckId: deck.id },
