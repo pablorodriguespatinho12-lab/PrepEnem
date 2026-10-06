@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { situacaoDoCartao, type RespostaCartao } from '@/lib/flashcard-dominio';
 
 // GET /api/flashcards/decks/[id] - get deck with cards to study
 export async function GET(request: Request, { params }: { params: { id: string } }) {
@@ -41,9 +42,16 @@ export async function GET(request: Request, { params }: { params: { id: string }
 
     // Build progress map - latest per card
     const latestProgress: Record<string, any> = {};
+    const historico: Record<string, RespostaCartao[]> = {};
     allProgress.forEach((p) => {
       if (!latestProgress[p.cardId]) latestProgress[p.cardId] = p;
+      (historico[p.cardId] ??= []).push(p);
     });
+    const agora = new Date();
+    const situacao = Object.fromEntries(
+      deck.cards.map((c) => [c.id, situacaoDoCartao(historico[c.id] ?? [], agora)])
+    );
+    const filaDeHoje = deck.cards.filter((c) => situacao[c.id].naFilaHoje);
 
     let cardsToStudy = deck.cards;
 
@@ -54,16 +62,14 @@ export async function GET(request: Request, { params }: { params: { id: string }
         return p && p.precisaRevisar;
       });
     } else {
-      // 'todos' - exclude cards already acertou (definitively answered correctly)
-      cardsToStudy = deck.cards.filter((c) => {
-        const p = latestProgress[c.id];
-        // Show if no progress OR not yet acertou
-        return !p || !p.acertou || p.precisaRevisar;
-      });
+      // 'todos': sai da fila só com 3 acertos em dias diferentes (lib/flashcard-dominio.ts)
+      cardsToStudy = filaDeHoje;
     }
 
     // Shuffle
-    cardsToStudy = [...cardsToStudy].sort(() => Math.random() - 0.5);
+    const cartoes = [...cardsToStudy]
+      .sort(() => Math.random() - 0.5)
+      .map((c) => ({ ...c, acertosSeguidos: situacao[c.id].acertosSeguidos }));
 
     return NextResponse.json({
       deck: {
@@ -73,13 +79,11 @@ export async function GET(request: Request, { params }: { params: { id: string }
         subtema: deck.subtema,
         cor: deck.cor,
       },
-      cards: cardsToStudy,
+      cards: cartoes,
       totalCards: deck.cards.length,
       cardsToRevise: deck.cards.filter((c) => latestProgress[c.id]?.precisaRevisar).length,
-      cardsAcertados: deck.cards.filter((c) => {
-        const p = latestProgress[c.id];
-        return p && p.acertou && !p.precisaRevisar;
-      }).length,
+      cardsAcertados: deck.cards.filter((c) => situacao[c.id].dominado).length,
+      cardsParaHoje: filaDeHoje.length,
     });
   } catch (error: any) {
     console.error('Erro ao buscar deck:', error);

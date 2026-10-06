@@ -34,7 +34,10 @@ etc. — ver `lib/theme-colors.ts` para as cores por matéria).
 4. "Errei" → `POST /api/flashcards/progresso` com `acertou: false` →
    `FlashcardProgress.precisaRevisar = true` → o card volta a aparecer no
    modo "revisar" (`mode=revisar` na URL/estado).
-5. "Acertei" → `precisaRevisar = false`, conta para `cardsAcertados`.
+5. "Acertei" → `precisaRevisar = false`. O cartão só sai da fila de "Estudar"
+   com **3 acertos seguidos em dias diferentes** (`lib/flashcard-dominio.ts`,
+   pedido do Pablo em 05/10/2026, da pesquisa de TDAH): acertou hoje, volta
+   amanhã; errou, zera. A frente mostra "x/3". `cardsAcertados` = dominados.
 6. Ao esgotar os cards do modo atual, tela final mostra estatísticas da
    sessão (acertos/erros) e ações: estudar de novo, revisar erros, gerar
    mais cards com IA.

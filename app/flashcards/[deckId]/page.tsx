@@ -9,6 +9,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, Di
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { playSound } from '@/lib/sounds';
+import { ACERTOS_PARA_DOMINAR } from '@/lib/flashcard-dominio';
 
 interface CardCandidato {
   frente: string;
@@ -322,6 +323,21 @@ function cartaoVariantes(reduzir: boolean): Variants {
     }),
   };
 }
+/* Quantos acertos faltam para o cartão sair da fila (lib/flashcard-dominio.ts):
+   3 tracinhos, preenchidos com a cor da marca. Número junto, para não depender
+   só de cor. */
+function DominioDoCartao({ acertos }: { acertos: number }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 ml-2" title={`${acertos} de ${ACERTOS_PARA_DOMINAR} acertos em dias diferentes`}>
+      <span aria-hidden className="inline-flex gap-0.5">
+        {Array.from({ length: ACERTOS_PARA_DOMINAR }, (_, i) => (
+          <span key={i} className={`w-3 h-1 rounded-[var(--radius-data)] ${i < acertos ? 'bg-primary' : 'bg-muted'}`} />
+        ))}
+      </span>
+      <span data-numeric>{acertos}/{ACERTOS_PARA_DOMINAR}</span>
+    </span>
+  );
+}
 /* Cartões que ainda faltam, empilhados atrás do atual: mostra que a sessão
    tem fim e quanto falta, sem número a mais na tela. */
 function PilhaDeCartoes({ restantes }: { restantes: number }) {
@@ -352,6 +368,7 @@ export default function FlashcardDeckPage() {
   const [totalCards, setTotalCards] = useState(0);
   const [cardsToRevise, setCardsToRevise] = useState(0);
   const [cardsAcertados, setCardsAcertados] = useState(0);
+  const [cardsParaHoje, setCardsParaHoje] = useState(0);
   const [loading, setLoading] = useState(true);
   const [mode, setMode] = useState<'todos' | 'revisar'>(initialMode);
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -382,6 +399,7 @@ export default function FlashcardDeckPage() {
         setTotalCards(data.totalCards || 0);
         setCardsToRevise(data.cardsToRevise || 0);
         setCardsAcertados(data.cardsAcertados || 0);
+        setCardsParaHoje(data.cardsParaHoje || 0);
         setCurrentIdx(0);
         setFlipped(false);
         setShowHint(false);
@@ -514,7 +532,7 @@ export default function FlashcardDeckPage() {
               : 'bg-[hsl(var(--surface-2))] border border-border hover:bg-muted'
           }`}
         >
-          Estudar (<span data-numeric>{totalCards - cardsAcertados}</span>)
+          Estudar (<span data-numeric>{cardsParaHoje}</span>)
         </button>
         <button
           onClick={() => setMode('revisar')}
@@ -694,6 +712,7 @@ export default function FlashcardDeckPage() {
                   <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 type-caption text-muted-foreground">
                     <span aria-hidden className="w-2 h-2 rounded-[var(--radius-data)]" style={{ backgroundColor: cor }} />
                     Pergunta
+                    <DominioDoCartao acertos={currentCard.acertosSeguidos ?? 0} />
                   </div>
                   <p className="font-reading type-title measure-reading text-center text-foreground">
                     {currentCard.frente}
