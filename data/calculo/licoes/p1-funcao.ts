@@ -85,8 +85,8 @@ export const P1_FUNCAO: ConteudoLicao = {
       enunciado: 'Para $h(x) = 10 - 2x$, calcule $h(-3)$.',
       passos: [
         { texto: '$h(-3) = 10 - 2\\cdot(-3)$', porque: 'Troca $x$ por $-3$, com parênteses para não perder o sinal.' },
-        { texto: '$2\\cdot(-3) = -6$, então $h(-3) = 10 - (-6)$', porque: 'Positivo vezes negativo dá negativo.', lacuna: { pergunta: 'Quanto vale $2\\cdot(-3)$?', resposta: { tipo: 'numero', valor: -6 } } },
-        { texto: '$h(-3) = 16$', porque: 'Tirar um negativo é o mesmo que somar: $10 - (-6) = 10 + 6$.', lacuna: { pergunta: 'Quanto vale $10 - (-6)$?', resposta: { tipo: 'numero', valor: 16 } } },
+        { texto: '$-2\\cdot(-3) = 6$, então $h(-3) = 10 + 6$', porque: 'O sinal de menos fica grudado no 2: é $-2$ vezes $-3$. Menos com menos dá mais.', lacuna: { pergunta: 'Quanto vale $-2\\cdot(-3)$?', resposta: { tipo: 'numero', valor: 6 } } },
+        { texto: '$h(-3) = 10 + 6 = 16$', porque: 'Outro caminho dá o mesmo: $2\\cdot(-3) = -6$, e tirar $-6$ é somar 6. Os dois chegam em 16.', lacuna: { pergunta: 'Quanto vale $h(-3)$?', resposta: { tipo: 'numero', valor: 16 } } },
       ],
     },
   ],
@@ -103,11 +103,11 @@ export const P1_FUNCAO: ConteudoLicao = {
     {
       enunciado: 'Para $f(x) = x^2 - 4x$, quanto vale $f(-1)$?',
       resposta: { tipo: 'numero', valor: 5 },
-      dica: 'Use parênteses: $(-1)^2$ e $4\\cdot(-1)$.',
+      dica: 'Use parênteses e deixe o sinal grudado no número: $(-1)^2$ e $-4\\cdot(-1)$.',
       resolucao: [
         { texto: '$f(-1) = (-1)^2 - 4\\cdot(-1)$', porque: 'Troca todo $x$ por $-1$, com parênteses.' },
-        { texto: '$= 1 - (-4)$', porque: '$(-1)\\cdot(-1) = 1$ e $4\\cdot(-1) = -4$.' },
-        { texto: '$= 1 + 4 = 5$', porque: 'Tirar um negativo é somar.' },
+        { texto: '$= 1 + 4$', porque: '$(-1)^2 = 1$. E o menos fica grudado no 4: $-4\\cdot(-1) = 4$, menos com menos dá mais.' },
+        { texto: '$= 1 + 4 = 5$', porque: 'Soma final.' },
       ],
     },
     {

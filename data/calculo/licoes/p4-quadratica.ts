@@ -100,7 +100,7 @@ export const P4_QUADRATICA: ConteudoLicao = {
       enunciado: 'Uma bola é jogada para cima e sua altura é $h(t) = -5t^2 + 20t$ metros, depois de $t$ segundos. Qual a altura máxima?',
       passos: [
         { texto: '$a = -5 < 0$: a parábola abre para baixo, e o vértice é o ponto mais alto.', porque: 'Altura máxima é o $y$ do vértice.' },
-        { texto: '$t_v = -\\frac{20}{2\\cdot(-5)} = 2$', porque: '$x_v = -\\frac{b}{2a}$ com $b = 20$ e $a = -5$.', lacuna: { pergunta: 'Em que instante $t$ a bola está mais alta?', resposta: { tipo: 'numero', valor: 2 } } },
+        { texto: '$t_v = -\\frac{20}{2\\cdot(-5)} = 2$', porque: '$x_v = -\\frac{b}{2a}$ com $b = 20$ e $a = -5$: embaixo, $2\\cdot(-5) = -10$; e $-20$ dividido por $-10$ dá 2, menos com menos dá mais.', lacuna: { pergunta: 'Em que instante $t$ a bola está mais alta?', resposta: { tipo: 'numero', valor: 2 } } },
         { texto: '$h(2) = -5\\cdot 4 + 40 = 20$', porque: 'Altura máxima: 20 m.', lacuna: { pergunta: 'Quanto vale $h(2)$?', resposta: { tipo: 'numero', valor: 20 } } },
       ],
     },
@@ -138,7 +138,7 @@ export const P4_QUADRATICA: ConteudoLicao = {
       resposta: { tipo: 'numero', valor: 5 },
       dica: '$a < 0$: o maior valor está no vértice.',
       resolucao: [
-        { texto: '$x_v = -\\frac{8}{2\\cdot(-2)} = 2$', porque: '$b = 8$ e $a = -2$.' },
+        { texto: '$x_v = -\\frac{8}{2\\cdot(-2)} = 2$', porque: '$b = 8$ e $a = -2$: $-8$ dividido por $-4$ dá 2, menos com menos dá mais.' },
         { texto: '$f(2) = -8 + 16 - 3 = 5$', porque: '$-2\\cdot 2^2 = -8$.' },
       ],
     },
@@ -148,7 +148,7 @@ export const P4_QUADRATICA: ConteudoLicao = {
       dica: 'Chame de $x$ os dois lados que saem do muro. O lado paralelo ao muro fica com o que sobra da cerca.',
       resolucao: [
         { texto: '$A(x) = x(40 - 2x) = -2x^2 + 40x$', porque: 'Dois lados de $x$ e um de $40 - 2x$.' },
-        { texto: '$x_v = -\\frac{40}{2\\cdot(-2)} = 10$', porque: 'Parábola para baixo: o vértice dá a área máxima.' },
+        { texto: '$x_v = -\\frac{40}{2\\cdot(-2)} = 10$', porque: '$-40$ dividido por $-4$ dá 10 (menos com menos dá mais). Parábola para baixo: o vértice dá a área máxima.' },
         { texto: '$A(10) = 10\\cdot 20 = 200$', porque: 'Lados de 10 m e 20 m.' },
       ],
     },
