@@ -20,6 +20,7 @@ import { C3_LIMITE_INFINITO } from './c3-limite-infinito';
 import { C4_DERIVADA } from './c4-derivada';
 import { C5_REGRA_POTENCIA } from './c5-regra-potencia';
 import { C6_PRODUTO_QUOCIENTE } from './c6-produto-quociente';
+import { C7_REGRA_CADEIA } from './c7-regra-cadeia';
 
 export const LICOES_ESCRITAS: Record<string, ConteudoLicao> = {
   p1: P1_FUNCAO,
@@ -40,4 +41,5 @@ export const LICOES_ESCRITAS: Record<string, ConteudoLicao> = {
   c4: C4_DERIVADA,
   c5: C5_REGRA_POTENCIA,
   c6: C6_PRODUTO_QUOCIENTE,
+  c7: C7_REGRA_CADEIA,
 };
