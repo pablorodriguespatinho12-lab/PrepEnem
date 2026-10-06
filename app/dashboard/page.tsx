@@ -49,6 +49,10 @@ export default function DashboardPage() {
   const [studyProgress, setStudyProgress] = useState<any[]>([]);
   // A semana repete as matérias do dia: fica fechada até o aluno pedir.
   const [semanaAberta, setSemanaAberta] = useState(false);
+  // Pablo, 06/10/2026: "deixa mais escondido aquilo que eu não vou usar no
+  // dia". A lista de matérias clicáveis fica atrás de um clique.
+  const [materiasAbertas, setMateriasAbertas] = useState(false);
+  const [carregandoDia, setCarregandoDia] = useState(true);
   const [activeDay, setActiveDay] = useState<{ weekNumber: number; dayIndex: number; cycleComplete: boolean } | null>(null);
   const [expandedDayIndex, setExpandedDayIndex] = useState<number | null>(null);
 
@@ -74,6 +78,8 @@ export default function DashboardPage() {
       }
     } catch (e) {
       console.error(e);
+    } finally {
+      setCarregandoDia(false);
     }
   }, []);
 
@@ -109,6 +115,14 @@ export default function DashboardPage() {
         {/* ── Estudo Atual (protagonista, com CTA de treino embutido) ──
              "Atual" em vez de "Hoje": o dia mostrado é o próximo pendente no
              SEU progresso, não necessariamente o dia da semana civil de hoje. */}
+        {carregandoDia && !activeDay && (
+          <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6 space-y-4" role="status" aria-label="Carregando o estudo de hoje">
+            <div className="h-5 w-40 rounded-[var(--radius-data)] bg-muted motion-safe:animate-pulse" />
+            <div className="h-20 rounded-[var(--radius-control)] bg-muted motion-safe:animate-pulse" />
+            <div className="h-4 w-64 rounded-[var(--radius-data)] bg-muted motion-safe:animate-pulse" />
+          </div>
+        )}
+
         {activeDay?.cycleComplete ? (
           <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6 text-center">
             <Trophy className="w-8 h-8 text-primary-text mx-auto mb-2" />
@@ -147,13 +161,37 @@ export default function DashboardPage() {
             </button>
 
             {activeDaySchedule.isSimulado ? (
-              <div className="p-4 rounded-[var(--radius-control)] bg-[hsl(var(--surface-2))] border border-border text-center">
+              <button
+                type="button"
+                onClick={() => router.push('/simulado')}
+                className="w-full p-4 rounded-[var(--radius-control)] bg-[hsl(var(--surface-2))] border border-border text-center hover:border-primary t-colors"
+              >
                 <ClipboardList className="w-8 h-8 text-foreground mx-auto mb-2" />
-                <p className="type-meta font-medium text-foreground">Dia de Simulado</p>
-                <p className="type-caption text-muted-foreground mt-1">Questões das matérias da semana</p>
-              </div>
+                <p className="type-meta font-medium text-foreground">Hoje é dia do simulado da semana</p>
+                <p className="type-caption text-muted-foreground mt-1">Uma matéria, de 10 a 20 questões</p>
+              </button>
             ) : (
-              <div className="space-y-3">
+              <>
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 type-meta text-muted-foreground">
+                <span>Hoje:</span>
+                {[...activeDaySchedule.manha, ...activeDaySchedule.trabalho].map((block, i) => (
+                  <span key={`${block.materia}-${i}`} className="inline-flex items-center gap-1.5 text-foreground">
+                    <span aria-hidden className="w-2 h-2 rounded-full" style={{ backgroundColor: (materiaColors as any)[block.materia] ?? '#ccc' }} />
+                    {block.materia}
+                  </span>
+                ))}
+              </div>
+              <button
+                type="button"
+                onClick={() => setMateriasAbertas((v) => !v)}
+                aria-expanded={materiasAbertas}
+                className="mt-3 inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors"
+              >
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${materiasAbertas ? 'rotate-180' : ''}`} />
+                {materiasAbertas ? 'Esconder as matérias' : 'Estudar uma matéria só'}
+              </button>
+              {materiasAbertas && (
+              <div className="space-y-3 mt-3">
                 {activeDaySchedule.manha.length > 0 && (
                   <div>
                     <p className="type-caption text-muted-foreground mb-2 flex items-center gap-1">
@@ -208,6 +246,8 @@ export default function DashboardPage() {
                   </div>
                 )}
               </div>
+              )}
+              </>
             )}
           </div>
         )}

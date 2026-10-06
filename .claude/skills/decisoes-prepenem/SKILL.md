@@ -41,6 +41,9 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   Progresso) e o resto em "Mais", aberto sozinho quando a página atual é dele.
   Tela nova entra em "Mais", a não ser que seja estudo diário.
 - **Início = só o estudo de hoje** + "Revisar o que você errou" (se houver).
+  Dentro do estudo de hoje, as matérias viram uma linha ("Hoje: Física ·
+  Química..."); a lista clicável fica atrás de "Estudar uma matéria só"
+  (06/10/2026). Enquanto carrega, esqueleto do cartão, nunca tela vazia.
   Números ficam em Progresso; a semana fica atrás de "Ver a semana".
 - **Um número, um lugar.** Se a informação já aparece na tela, não repete em
   gráfico (Progresso perdeu a rosca e as barras; ficou a evolução por dia).
