@@ -23,6 +23,7 @@ não volte para canvas nem para rAF.
 | Botão de ação | `whileHover={{ scale: 1.05 }}` `whileTap={{ scale: 0.95 }}` |
 | Barra de progresso | `initial={{ width: 0 }}` → `animate={{ width: '${pct}%' }}`, `duration: 0.6` |
 | Troca de card sem "buraco" em branco (`AnimatePresence`) | Use `mode="popLayout"` (não `mode="wait"`) quando o card exibido tem altura fixa e a troca precisa parecer contínua — remove o elemento que sai do fluxo (`position: absolute`) em vez de esperar a saída terminar antes de montar o próximo. Envolva num `<div className="relative">` só ao redor do `AnimatePresence` para a posição absoluta não vazar para o header/progresso acima. |
+| Cena e roda do Cálculo (`components/visual/cena.tsx`, `roda.tsx`) | Relógio em passos inteiros de 900 ms (`useRelogio` em `relogio.tsx`, `setTimeout`, nunca rAF); o objeto anda por `transform` com `transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1)`; sob reduced-motion a transição some e o número muda igual. Botões: "Ver andando" / "Mais 1 x" / "Recomeçar" |
 | Feedback de acerto/erro em botão | Pulso de escala (`animate={{ scale: [1, 1.12, 1] }}`, ~0.35s) + `ring-4` na cor do botão clicado; o botão NÃO clicado cai para `opacity-40` (em vez de ambos ficarem pálidos por causa do `disabled:opacity-50`). Isso deixa claro qual resposta foi registrada, sem alert(). |
 
 ## Regras

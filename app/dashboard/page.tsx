@@ -301,7 +301,7 @@ export default function DashboardPage() {
               </p>
               <p className="type-meta text-muted-foreground">
                 {expandedDaySchedule.isSimulado
-                  ? 'Simulado ENEM'
+                  ? 'Simulado da semana'
                   : [...expandedDaySchedule.manha, ...expandedDaySchedule.trabalho].map((b) => b.materia).join(' • ') || 'Sem blocos programados'}
               </p>
             </div>

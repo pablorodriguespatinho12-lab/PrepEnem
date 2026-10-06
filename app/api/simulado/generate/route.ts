@@ -17,7 +17,7 @@ export async function POST(req: Request) {
     const userId = (session.user as any).id;
 
     const body = await req.json().catch(() => ({}));
-    const { totalQuestoes = 90, materias, weeklySimulado } = body;
+    const { totalQuestoes = 10, materias, weeklySimulado } = body;
     const limit = Math.min(Math.max(totalQuestoes, 10), 180);
 
     // Semana ativa: explícita no corpo (dashboard já sabe qual é) ou derivada

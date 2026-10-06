@@ -149,7 +149,7 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   (visual `cena` em `lib/visual/especificacao.ts`: veículo andando por uma
   função, relógio em x, gráfico junto). O exemplo do Pablo (carro e moto) é o
   princípio, não a receita: cada conceito ganha a cena que melhor o mostra.
-  Feitas p1 a p6: carro (função), rastro do carro (gráfico), vela e carro×moto
+  Feitas p1 a p12: carro (função), rastro do carro (gráfico), vela e carro×moto
   com a = velocidade e b = largada (afim), bola jogada (parábola), moto 2 min
   atrás = f(x − 2) (transformação), balão que dobra (potência), balão que
   soma contra balão que dobra (exponencial, p7), o mesmo balão ao contrário
