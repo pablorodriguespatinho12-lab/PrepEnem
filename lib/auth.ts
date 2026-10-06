@@ -6,7 +6,10 @@ import bcrypt from 'bcryptjs';
 // Intervalo mínimo entre revalidações do usuário contra o banco no callback
 // jwt. Evita bater no Neon (serverless, cobra compute por conexão) a cada
 // request — só paga o custo de detectar uma conta deletada com esse atraso.
-const SESSION_REVALIDATE_INTERVAL_MS = 60_000;
+// Era 1 min: como o NextAuth repede a sessão a cada foco na aba, quase toda
+// abertura do app acordava o Neon e prendia a tela no círculo (06/10/2026).
+// 30 min: em troca, uma conta apagada leva até meia hora para cair.
+const SESSION_REVALIDATE_INTERVAL_MS = 30 * 60_000;
 
 export const authOptions: NextAuthOptions = {
   providers: [
