@@ -126,7 +126,11 @@ export function LicaoPlayer({ licao, onTela }: { licao: LicaoCompleta; onTela?: 
   const topo = useRef<HTMLElement>(null);
   const primeiraVez = useRef(true);
   const [exemplo, setExemplo] = useState(0);
-  const [exercicio, setExercicio] = useState(0);
+  // Fila de exercícios: todos na primeira vez; depois, só os que errou.
+  const [ordem, setOrdem] = useState<number[]>(() => licao.conteudo.exercicios.map((_, i) => i));
+  const [pos, setPos] = useState(0);
+  const [erradas, setErradas] = useState<number[]>([]);
+  const exercicio = ordem[pos] ?? 0;
   useEffect(() => {
     if (!onTela) return;
     const c0 = licao.conteudo;
@@ -164,7 +168,14 @@ export function LicaoPlayer({ licao, onTela }: { licao: LicaoCompleta; onTela?: 
     }
   };
 
-  const reiniciarExercicios = () => { setExercicio(0); setAcertos(0); setSalvo(null); setEtapa('exercicios'); };
+  const reiniciarExercicios = () => {
+    setOrdem(c.exercicios.map((_, i) => i)); setPos(0); setErradas([]); setAcertos(0); setSalvo(null); setEtapa('exercicios');
+  };
+  /* Não passou: refaz só as que errou, e os acertos se somam aos de antes
+     (Pablo, 06/10/2026: "volta para o que eu errei, não tudo do começo"). */
+  const refazerErradas = () => {
+    setOrdem(erradas); setPos(0); setErradas([]); setSalvo(null); setEtapa('exercicios');
+  };
   const indice = ETAPAS.findIndex((e) => e.id === etapa);
 
   return (
@@ -241,11 +252,12 @@ export function LicaoPlayer({ licao, onTela }: { licao: LicaoCompleta; onTela?: 
         )}
 
         {etapa === 'exercicios' && (
-          <ExercicioView key={exercicio} exercicio={c.exercicios[exercicio]} numero={exercicio + 1} total={c.exercicios.length}
+          <ExercicioView key={`${exercicio}-${ordem.length}`} exercicio={c.exercicios[exercicio]} numero={pos + 1} total={ordem.length}
             onFim={(acertou) => {
               const total = acertos + (acertou ? 1 : 0);
               setAcertos(total);
-              if (exercicio < c.exercicios.length - 1) setExercicio((n) => n + 1);
+              if (!acertou) setErradas((e) => [...e, exercicio]);
+              if (pos < ordem.length - 1) setPos((n) => n + 1);
               else finalizar(total);
             }} />
         )}
@@ -258,7 +270,7 @@ export function LicaoPlayer({ licao, onTela }: { licao: LicaoCompleta; onTela?: 
             ) : salvo.concluiu ? (
               <p className="type-body">Degrau concluído. O próximo está aberto, e este volta para uma revisão rápida daqui a 2 dias.</p>
             ) : (
-              <p className="type-body">Para subir de degrau, acerte pelo menos 70%. Releia os exemplos e tente de novo: é aqui que o raciocínio se fixa.</p>
+              <p className="type-body">Para subir de degrau, acerte pelo menos 70%. Refaça só as que errou: os acertos de agora se somam aos de antes.</p>
             )}
             <div className="rounded-[var(--radius-control)] border border-border p-4">
               <p className="type-caption text-muted-foreground mb-1">Responda de cabeça, sem olhar</p>
@@ -269,9 +281,15 @@ export function LicaoPlayer({ licao, onTela }: { licao: LicaoCompleta; onTela?: 
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/calculo" className={botao}>Voltar para a trilha <ArrowRight className="w-4 h-4" /></Link>
-              <button onClick={reiniciarExercicios} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-[var(--radius-control)] border border-border type-meta hover:bg-muted t-colors">
-                <RefreshCcw className="w-4 h-4" /> Refazer os exercícios
-              </button>
+              {salvo && !salvo.concluiu && erradas.length > 0 ? (
+                <button onClick={refazerErradas} className={botao}>
+                  <RefreshCcw className="w-4 h-4" /> Refazer só as que errei (<span data-numeric>{erradas.length}</span>)
+                </button>
+              ) : (
+                <button onClick={reiniciarExercicios} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-[var(--radius-control)] border border-border type-meta hover:bg-muted t-colors">
+                  <RefreshCcw className="w-4 h-4" /> Refazer os exercícios
+                </button>
+              )}
             </div>
           </>
         )}

@@ -147,7 +147,8 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 
 - **Opcional, para o tempo livre (05/10/2026):** do pré-cálculo ao Cálculo 3
   em 41 degraus (`data/calculo/trilha.ts`). O degrau abre quando os
-  pré-requisitos estão concluídos. Conclui com 70% nos exercícios e volta em
+  pré-requisitos estão concluídos. Conclui com 70% nos exercícios (quem não
+  chega refaz SÓ as que errou, e os acertos somam, 06/10/2026) e volta em
   revisão espaçada com 2, 7, 21 e 60 dias; se errar, volta no dia seguinte.
 - Toda lição na mesma ordem: tentativa curta → construção do raciocínio →
   fórmula como resumo → 3 exemplos (completo, 1 lacuna, 2 lacunas) →
