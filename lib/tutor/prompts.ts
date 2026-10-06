@@ -33,13 +33,34 @@ const RACIOCINIO = `ENTENDER, NÃO DECORAR (o mais importante):
 - Use um visual "transformacao" quando a fórmula sair de manipulação algébrica, com o porquê de cada linha.
 - Diga o que o aluno precisa lembrar se esquecer a fórmula: o raciocínio que a reconstrói.`;
 
+// Teste de 05/10/2026: 14 questões do ENEM 2021 estão no banco sem o texto-base
+// ("Esse trecho da resenha... tem por finalidade"), e a IA inventou palavras do
+// trecho ("pobreza", "luta") para justificar o gabarito.
+const SO_O_QUE_ESTA_ESCRITO = `USE SÓ O QUE ESTÁ ESCRITO:
+- Toda citação do texto vai entre aspas e é cópia literal do enunciado acima. Nunca cite palavra que não está lá.
+- Se o enunciado fala de um texto, trecho, canção, gráfico ou imagem que NÃO aparece aqui, não invente o conteúdo. Diga em uma frase que o texto-base não veio nesta questão e resolva pelo que o comando e as alternativas permitem.`;
+
+// Só a regra no prompt não bastou: o modelo não percebe a falta e inventa
+// mesmo assim. Detectado aqui, o aviso vai explícito junto da questão.
+const APONTA_TEXTO = /\b(ess[ea]|est[ea]|n?[oa]|d[oa]) (trecho|texto|fragmento|poema|canção|letra|charge|tirinha|cartum|anúncio)\b|\[trecho/i;
+const ENUNCIADO_SEM_TEXTO_MAX = 250;
+
+export function faltaTextoBase(enunciado: string): boolean {
+  if (enunciado.length > ENUNCIADO_SEM_TEXTO_MAX) return false;
+  if (/["“”«]/.test(enunciado)) return false;
+  return APONTA_TEXTO.test(enunciado);
+}
+
+const AVISO_SEM_TEXTO = `
+ATENÇÃO: o texto-base desta questão NÃO veio. Não cite nem descreva o conteúdo dele, nenhuma palavra. Diga no primeiro passo que o texto original não está disponível aqui e resolva só pelo comando e pelas alternativas.`;
+
 function textoDaQuestao(q: QuestaoParaTutor): string {
   const enunciado = q.enunciado.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, ' ').slice(0, MAX_ENUNCIADO);
   const alternativas = (['A', 'B', 'C', 'D', 'E'] as const).map((l) => `${l}) ${q.alternativas[l] ?? ''}`).join('\n');
   return `Matéria: ${q.materia}${q.subtema ? ` — ${q.subtema}` : ''}
 Questão: ${enunciado}
 ${alternativas}
-Correta: ${q.respostaCorreta}${q.respostaDada ? ` | O aluno marcou: ${q.respostaDada}` : ''}`;
+Correta: ${q.respostaCorreta}${q.respostaDada ? ` | O aluno marcou: ${q.respostaDada}` : ''}${faltaTextoBase(q.enunciado) ? AVISO_SEM_TEXTO : ''}`;
 }
 
 export function promptExplicacao(q: QuestaoParaTutor): string {
@@ -50,20 +71,23 @@ ${ESTILO}
 
 ${RACIOCINIO}
 
+${SO_O_QUE_ESTA_ESCRITO}
+
 ESTRUTURA (devolva SOMENTE JSON neste formato):
 {
   "conferencia": "ESCREVA PRIMEIRO, antes de tudo: cada conta da resolução refeita por extenso, número por número (ex.: 'p(5) = -(25) + 50 + 24 = 49; -(t-5)^2 + 49 = -t^2 + 10t - 25 + 49 = -t^2 + 10t + 24, confere'). Se alguma conta não bater, corrija antes de escrever os passos. Este campo não aparece para o aluno.",
   "ideia": "uma frase com a ideia-chave da questão",
   "pecas": [{"termo": "...", "significado": "uma frase"}],
   "passos": [{"titulo": "até 6 palavras", "texto": "até 3 frases", "visual": null}],
-  "seuErro": ${errou ? '"até 3 frases: por que a alternativa marcada parece certa e onde o raciocínio dela desvia"' : 'null'},
+  "seuErro": ${errou ? '"até 3 frases: UM caminho concreto que leva à alternativa marcada (em cálculo, a conta que dá o número dela) e onde ele desvia. Nunca liste hipóteses com ou"' : 'null'},
   "checagem": {"pergunta": "uma pergunta curta que o aluno responde de cabeça para fixar", "resposta": "a resposta em uma frase"}
 }
 
 REGRAS DA ESTRUTURA:
 - "pecas": de 0 a 3 termos que o aluno precisa conhecer ANTES dos passos (pré-treino). Só o que for realmente novo.
-- "passos": de 3 a 6. O PRIMEIRO passo tem visual sempre que a matéria permitir (gráfico, reta, vetores, tabela ou transformação): o aluno vê antes de ler. Depois, visual só onde ajudar de verdade.
+- "passos": de 3 a 6. Em Matemática, Física e Química, o PRIMEIRO passo tem visual (gráfico, reta, vetores, tabela ou transformação): o aluno vê antes de ler. Em Linguagens e Humanas, visual só "tabela", e só quando ela compara de verdade (alternativa × o trecho que a confirma ou derruba); senão, null. Depois, visual só onde ajudar de verdade.
 - Ordem dos passos: o que a questão pede de fato → o raciocínio, um passo por vez, com o porquê → o princípio por trás → como reconhecer uma questão parecida.${errou ? '\n- O aluno errou: "seuErro" vem primeiro na tela, então seja específico sobre a alternativa que ele marcou.' : ''}
+- Teste de 05/10/2026: em cálculo, a IA escrevia "O resultado é 2" sem a conta e usava fórmula pronta. Por isso: passo de cálculo mostra a conta com os números ($2L \\cdot H + 2W \\cdot H$ vira $2(2L \\cdot H) + \\dots$), nunca só o resultado. E se algum passo usa fórmula, um passo ANTES dele tem título começando com "De onde vem".
 - Confira cada número do visual com a conta do texto. Se um gráfico mostra uma raiz em x=2, o texto e a conta dizem 2.
 
 ${FORMATO_VISUAL_PARA_IA}
