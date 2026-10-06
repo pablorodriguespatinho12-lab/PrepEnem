@@ -46,19 +46,19 @@ describe('ordenarPorEtapa', () => {
 });
 
 describe('cotasDoDia', () => {
-  test('matérias do cronograma com 10, depois Português e Matemática com 20', () => {
+  test('10 de cada: matérias do cronograma, depois Português e Matemática', () => {
     expect(cotasDoDia(['Física', 'Química'])).toEqual([
       { materia: 'Física', quantidade: 10 },
       { materia: 'Química', quantidade: 10 },
-      { materia: 'Português', quantidade: 20 },
-      { materia: 'Matemática', quantidade: 20 },
+      { materia: 'Português', quantidade: 10 },
+      { materia: 'Matemática', quantidade: 10 },
     ]);
   });
-  test('Matemática no cronograma não aparece duas vezes e fica com 20', () => {
+  test('Matemática no cronograma não aparece duas vezes', () => {
     expect(cotasDoDia(['Matemática', 'Biologia'])).toEqual([
       { materia: 'Biologia', quantidade: 10 },
-      { materia: 'Português', quantidade: 20 },
-      { materia: 'Matemática', quantidade: 20 },
+      { materia: 'Português', quantidade: 10 },
+      { materia: 'Matemática', quantidade: 10 },
     ]);
   });
 });

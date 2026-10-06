@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { BarChart3, TrendingUp, Target, BookOpen, PenTool, AlertCircle, FileText, Lightbulb, Search } from 'lucide-react';
+import { BarChart3, Target, BookOpen, PenTool, AlertCircle, FileText, Lightbulb, Search } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { materiaColors } from '@/lib/theme-colors';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -86,17 +86,16 @@ export default function ProgressoPage() {
           <BarChart3 className="w-6 h-6 text-primary-text" />
           <h1 className="font-display type-headline font-bold">Seu progresso</h1>
         </div>
-        <p className="type-meta text-muted-foreground mb-8">Acompanhe sua evolução detalhada nos estudos</p>
+
       </motion.div>
 
-      {/* Summary Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      {/* Só dois números (Pablo, 06/10/2026: "pode deixar só total respondidas
+          e acertos"). Taxa e sequência saíram. */}
+      <div className="grid grid-cols-2 gap-4 mb-8 max-w-xl">
         {[
           { label: 'Total Respondidas', value: stats?.totalRespondidas ?? 0, icon: BookOpen, color: 'text-muted-foreground' },
           { label: 'Acertos', value: stats?.totalAcertos ?? 0, icon: Target, style: { color: 'hsl(var(--success))' } },
-          { label: 'Taxa de Acerto', value: `${stats?.taxaAcerto ?? 0}%`, icon: TrendingUp, color: 'text-primary-text' },
-          { label: 'Sequência', value: `${stats?.streakDays ?? 0} ${(stats?.streakDays ?? 0) === 1 ? 'dia' : 'dias'}`, icon: BarChart3, color: 'text-muted-foreground' },
-        ].map((card, i) => {
+        ].map((card: { label: string; value: number; icon: typeof BookOpen; color?: string; style?: React.CSSProperties }, i) => {
           const Icon = card.icon;
           return (
             <motion.div

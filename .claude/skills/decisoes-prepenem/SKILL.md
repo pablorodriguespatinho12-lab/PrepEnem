@@ -42,6 +42,9 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   Tela nova entra em "Mais", a não ser que seja estudo diário.
 - **Início = só o cronograma de hoje e "Começar"** (detalhe na seção Treino).
   Enquanto carrega, esqueleto do cartão, nunca tela vazia.
+- **Progresso = 2 números** (total respondidas e acertos), 06/10/2026.
+- **Sem contorno azul ao clicar:** anel de foco só com teclado (`FocoTeclado`,
+  classe `usando-teclado`); campo de texto nunca tem anel.
   Números ficam em Progresso; a semana fica atrás de "Ver a semana".
 - **Página escaneada da prova só abre sozinha se a questão depende da imagem**
   (`dependeImagem`); nas outras fica atrás de "Ver na página da prova"
@@ -83,8 +86,9 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 
 ## Treino
 
-- **Treino do dia (Pablo, 06/10/2026):** 10 questões de cada matéria do
-  cronograma do dia, depois 20 de Português e 20 de Matemática (`cotasDoDia`);
+- **Treino do dia (Pablo, 06/10/2026):** 10 questões de cada matéria do dia:
+  as do cronograma, depois Português e Matemática (`cotasDoDia`; era 20 e ele
+  baixou para 10 no mesmo dia);
   uma matéria por vez, cada uma na escada com cota proporcional (em 10: 3
   fáceis, 4 médias, 3 ENEM). Retoma só treino aberto HOJE, e nunca a sessão do
   simulado (as duas ficam em `TrainingSession`; filtrar `mode`).

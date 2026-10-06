@@ -1,6 +1,7 @@
 import { DM_Sans, Fraunces, Source_Serif_4, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { Providers } from '@/components/providers';
+import { FocoTeclado } from '@/components/foco-teclado';
 import { AppLayout } from '@/components/app-layout';
 import { ChunkLoadErrorHandler } from '@/components/chunk-load-error-handler';
 
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {children}
           </AppLayout>
           <ChunkLoadErrorHandler />
+          <FocoTeclado />
         </Providers>
       </body>
     </html>

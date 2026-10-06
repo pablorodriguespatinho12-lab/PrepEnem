@@ -599,10 +599,23 @@
 /* ===== FOCO ================================================================
    Anel de foco visível e consistente. box-shadow em vez de outline para
    acompanhar o raio do elemento. */
+/* Pablo, 06/10/2026: nada de contorno azul ao clicar ou digitar. O anel só
+   aparece para quem navega pelo teclado (classe posta por FocoTeclado ao
+   apertar Tab); campos de texto nunca têm anel, só o cursor. */
+:where(a, button, [role="button"], input, textarea, select, [tabindex]):focus,
 :where(a, button, [role="button"], input, textarea, select, [tabindex]):focus-visible {
-  outline: 2px solid transparent;
+  outline: none;
+}
+.usando-teclado :where(a, button, [role="button"], select, [tabindex]):focus-visible {
   box-shadow: 0 0 0 2px hsl(var(--surface-0)), 0 0 0 4px hsl(var(--ring));
 }
+input:focus, input:focus-visible, textarea:focus, textarea:focus-visible, [contenteditable]:focus {
+  --tw-ring-shadow: 0 0 #0000 !important;
+  --tw-ring-offset-shadow: 0 0 #0000 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+html:not(.usando-teclado) :focus { --tw-ring-shadow: 0 0 #0000; --tw-ring-offset-shadow: 0 0 #0000; }
 
 /* ===== PARTÍCULAS DE FUNDO =================================================
    Só transform e opacity: roda no compositor, fora da thread principal.

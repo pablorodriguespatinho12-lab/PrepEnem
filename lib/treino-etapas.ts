@@ -120,10 +120,11 @@ export function ehExemploResolvido<T extends QuestaoClassificavel & { materia: s
   return anteriores < RESOLVIDAS_POR_MATERIA;
 }
 /* Treino do dia, decidido pelo Pablo em 06/10/2026: 10 questões de cada
-   matéria do cronograma do dia, depois 20 de Português e 20 de Matemática.
+   matéria do cronograma do dia, depois 10 de Português e 10 de Matemática
+   (ele começou com 20 e baixou para 10 no mesmo dia; se der, ele pede mais).
    Uma matéria por vez, cada uma na escada fácil → média → ENEM. */
 export const COTA_CRONOGRAMA = 10;
-export const COTA_TREINO_DIARIO = 20;
+export const COTA_TREINO_DIARIO = 10;
 const MATERIAS_DIARIAS = ['Português', 'Matemática'];
 export function cotasDoDia(materiasDoCronograma: string[]): { materia: string; quantidade: number }[] {
   const doCronograma = Array.from(new Set(materiasDoCronograma)).filter((m) => !MATERIAS_DIARIAS.includes(m));
