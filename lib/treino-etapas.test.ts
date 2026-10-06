@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { ehExemploResolvido, etapaDaQuestao, ordenarPorEtapa, RESOLVIDAS_POR_MATERIA } from './treino-etapas';
+import { cotasDoDia, ehExemploResolvido, montarEscada, etapaDaQuestao, ordenarPorEtapa, RESOLVIDAS_POR_MATERIA } from './treino-etapas';
 
 const q = (materia: string, nivel = 'facil', extra: Record<string, unknown> = {}) => ({ id: Math.random().toString(), materia, nivel, ...extra });
 
@@ -42,5 +42,35 @@ describe('ordenarPorEtapa', () => {
       q('Matemática', 'acima', { id: 'a' }),
     ];
     expect(ordenarPorEtapa(lista).map((x) => x.id)).toEqual(['b', 'm', 'f', 'a']);
+  });
+});
+
+describe('cotasDoDia', () => {
+  test('matérias do cronograma com 10, depois Português e Matemática com 20', () => {
+    expect(cotasDoDia(['Física', 'Química'])).toEqual([
+      { materia: 'Física', quantidade: 10 },
+      { materia: 'Química', quantidade: 10 },
+      { materia: 'Português', quantidade: 20 },
+      { materia: 'Matemática', quantidade: 20 },
+    ]);
+  });
+  test('Matemática no cronograma não aparece duas vezes e fica com 20', () => {
+    expect(cotasDoDia(['Matemática', 'Biologia'])).toEqual([
+      { materia: 'Biologia', quantidade: 10 },
+      { materia: 'Português', quantidade: 20 },
+      { materia: 'Matemática', quantidade: 20 },
+    ]);
+  });
+});
+
+describe('montarEscada com 10 questões', () => {
+  test('mantém a proporção: fáceis, médias e ENEM, nessa ordem', () => {
+    const banco = [
+      ...Array.from({ length: 8 }, (_, i) => q('Física', 'facil', { id: `f${i}` })),
+      ...Array.from({ length: 8 }, (_, i) => q('Física', 'medio', { id: `m${i}` })),
+      ...Array.from({ length: 8 }, (_, i) => q('Física', 'medio', { id: `e${i}`, anoProva: 2020 })),
+    ];
+    const etapas = montarEscada(banco, [], 10).map((x) => etapaDaQuestao(x));
+    expect(etapas).toEqual(['base', 'base', 'base', 'intermediaria', 'intermediaria', 'intermediaria', 'intermediaria', 'enem', 'enem', 'enem']);
   });
 });

@@ -63,7 +63,12 @@ export function montarEscada<T extends QuestaoClassificavel & { id: string; mate
 ): T[] {
   const porEtapa = (lista: T[], etapa: Etapa) => lista.filter((q) => etapaDaQuestao(q) === etapa);
 
-  const cotas = { ...ETAPA_COTA };
+  // Cota proporcional ao tamanho: com 10 questões (matéria do cronograma),
+  // a cota fixa de 20 enchia tudo de base e intermediária e o ENEM sumia.
+  const escala = tamanho / (ETAPA_COTA.base + ETAPA_COTA.intermediaria + ETAPA_COTA.enem);
+  const base = Math.round(ETAPA_COTA.base * escala);
+  const intermediaria = Math.round(ETAPA_COTA.intermediaria * escala);
+  const cotas = { ...ETAPA_COTA, base, intermediaria, enem: Math.max(0, tamanho - base - intermediaria) };
   const escolhidas: Record<Etapa, T[]> = { base: [], intermediaria: [], enem: [], acima: [] };
   const usados = new Set<string>();
 
@@ -113,4 +118,17 @@ export function ehExemploResolvido<T extends QuestaoClassificavel & { materia: s
   if (etapa === 'enem' || etapa === 'acima') return false;
   const anteriores = questoes.slice(0, idx).filter((o) => o.materia === q.materia).length;
   return anteriores < RESOLVIDAS_POR_MATERIA;
+}
+/* Treino do dia, decidido pelo Pablo em 06/10/2026: 10 questões de cada
+   matéria do cronograma do dia, depois 20 de Português e 20 de Matemática.
+   Uma matéria por vez, cada uma na escada fácil → média → ENEM. */
+export const COTA_CRONOGRAMA = 10;
+export const COTA_TREINO_DIARIO = 20;
+const MATERIAS_DIARIAS = ['Português', 'Matemática'];
+export function cotasDoDia(materiasDoCronograma: string[]): { materia: string; quantidade: number }[] {
+  const doCronograma = Array.from(new Set(materiasDoCronograma)).filter((m) => !MATERIAS_DIARIAS.includes(m));
+  return [
+    ...doCronograma.map((materia) => ({ materia, quantidade: COTA_CRONOGRAMA })),
+    ...MATERIAS_DIARIAS.map((materia) => ({ materia, quantidade: COTA_TREINO_DIARIO })),
+  ];
 }

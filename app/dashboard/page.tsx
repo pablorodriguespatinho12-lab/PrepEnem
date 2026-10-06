@@ -1,57 +1,23 @@
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
-import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import {
-  RefreshCcw, Calendar, Trophy, ArrowRight, Brain, Sparkles,
-  Sun, Briefcase, ClipboardList, ChevronDown,
-} from 'lucide-react';
+import { RefreshCcw, Trophy, ArrowRight, Sparkles, Sun, ChevronDown } from 'lucide-react';
 import { getWeekScheduleByNumber, studyCycle } from '@/lib/schedule-data';
 import { materiaColors } from '@/lib/theme-colors';
 import { CheckCircle2 as DayDoneIcon, Circle, CircleDashed } from 'lucide-react';
 
 
 
-/* ── Saudação + badge de semana ──
-   Direto ao ponto: sem título animado (o nome do produto já está na
-   sidebar), só o contexto de quem está estudando e em qual semana. */
-function Greeting({ name, weekNumber }: { name: string; weekNumber: number }) {
-  return (
-    <div className="flex items-center justify-between flex-wrap gap-3 mb-6 pt-2">
-      {/* Âncora editorial da página. A tela inteira estava presa entre 10.9px
-          e 26.6px (range 2.44x) — sem nenhum elemento no topo da escala, a
-          hierarquia dependia só de peso e cor. */}
-      <h1 className="type-headline font-display font-semibold whitespace-nowrap">
-        Olá, {name}
-      </h1>
-      <div className="flex items-center gap-2 flex-wrap">
-        <span data-numeric className="px-2.5 py-1 bg-primary/10 text-primary-text type-meta font-semibold rounded-[var(--radius-data)] whitespace-nowrap">
-          Semana {weekNumber}/4
-        </span>
-        <div className="flex gap-1">
-          {[1, 2, 3, 4].map(w => (
-            <div key={w} className={`w-2 h-2 rounded-full ${w <= weekNumber ? 'bg-primary' : 'bg-muted'}`} />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 /* ══════════════════════════════════════
    DASHBOARD PAGE
    ══════════════════════════════════════ */
 export default function DashboardPage() {
-  const { data: session } = useSession() || {};
   const router = useRouter();
   const [stats, setStats] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [studyProgress, setStudyProgress] = useState<any[]>([]);
   // A semana repete as matérias do dia: fica fechada até o aluno pedir.
   const [semanaAberta, setSemanaAberta] = useState(false);
-  // Pablo, 06/10/2026: "deixa mais escondido aquilo que eu não vou usar no
-  // dia". A lista de matérias clicáveis fica atrás de um clique.
-  const [materiasAbertas, setMateriasAbertas] = useState(false);
   const [carregandoDia, setCarregandoDia] = useState(true);
   const [activeDay, setActiveDay] = useState<{ weekNumber: number; dayIndex: number; cycleComplete: boolean } | null>(null);
   const [expandedDayIndex, setExpandedDayIndex] = useState<number | null>(null);
@@ -110,19 +76,18 @@ export default function DashboardPage() {
   return (
     <>
       <div className="p-4 md:p-8 max-w-6xl mx-auto relative" style={{ zIndex: 1 }}>
-        <Greeting name={session?.user?.name ?? 'Estudante'} weekNumber={weekNumber} />
-
-        {/* ── Estudo Atual (protagonista, com CTA de treino embutido) ──
-             "Atual" em vez de "Hoje": o dia mostrado é o próximo pendente no
-             SEU progresso, não necessariamente o dia da semana civil de hoje. */}
+        {/* Pablo, 06/10/2026: "tira esse negócio de iniciar treino, coloca só
+            meu cronograma de hoje e começar; tira o olá". Sem saudação, sem
+            banner. O dia é o próximo pendente no progresso, não o do calendário.
+            As revisões ficam num link lá embaixo ("deixar para depois"). */}
         {carregandoDia && !activeDay && (
-          <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6 space-y-4" role="status" aria-label="Carregando o estudo de hoje">
-            <div className="h-5 w-40 rounded-[var(--radius-data)] bg-muted motion-safe:animate-pulse" />
-            <div className="h-20 rounded-[var(--radius-control)] bg-muted motion-safe:animate-pulse" />
+          <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6 space-y-4" role="status" aria-label="Carregando o cronograma de hoje">
+            <div className="h-6 w-24 rounded-[var(--radius-data)] bg-muted motion-safe:animate-pulse" />
             <div className="h-4 w-64 rounded-[var(--radius-data)] bg-muted motion-safe:animate-pulse" />
+            <div className="h-4 w-56 rounded-[var(--radius-data)] bg-muted motion-safe:animate-pulse" />
+            <div className="h-11 w-36 rounded-[var(--radius-control)] bg-muted motion-safe:animate-pulse" />
           </div>
         )}
-
         {activeDay?.cycleComplete ? (
           <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6 text-center">
             <Trophy className="w-8 h-8 text-primary-text mx-auto mb-2" />
@@ -130,146 +95,41 @@ export default function DashboardPage() {
             <p className="type-meta text-muted-foreground mt-1">Continue treinando livremente pelas outras telas.</p>
           </div>
         ) : activeDaySchedule && (
-          <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
-            <div className="flex items-center justify-between gap-2 mb-4 flex-wrap">
-              <div className="flex items-center gap-2">
-                <Sun className="w-5 h-5 text-amber-500" />
-                <h2 className="font-display type-lead font-semibold">Estudo Atual</h2>
-                <span data-numeric className="type-meta bg-primary/10 text-primary-text px-2 py-0.5 rounded-[var(--radius-data)]">
-                  Semana {weekNumber} • {activeDaySchedule.dayName}
-                </span>
-              </div>
+          <section className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6" aria-labelledby="hoje-titulo">
+            <div className="flex items-baseline justify-between gap-2 mb-4 flex-wrap">
+              <h1 id="hoje-titulo" className="font-display type-title font-semibold">Hoje</h1>
+              <span data-numeric className="type-meta text-muted-foreground">Semana {weekNumber} · {activeDaySchedule.dayName}</span>
+            </div>
+            {activeDaySchedule.isSimulado ? (
+              <p className="type-body mb-6">Dia do simulado da semana: uma matéria, de 10 a 20 questões.</p>
+            ) : (
+              <ul className="space-y-2.5 mb-6">
+                {[...activeDaySchedule.manha, ...activeDaySchedule.trabalho].map((block, i) => (
+                  <li key={`${block.materia}-${i}`} className="flex items-baseline gap-3 min-w-0">
+                    <span aria-hidden className="w-2.5 h-2.5 rounded-full flex-shrink-0 translate-y-[-1px]" style={{ backgroundColor: (materiaColors as any)[block.materia] ?? '#ccc' }} />
+                    <span className="type-body font-medium whitespace-nowrap">{block.materia}</span>
+                    <span className="type-meta text-muted-foreground truncate">{block.tema}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+            <div className="flex items-center justify-between gap-3 flex-wrap">
               <button
+                type="button"
+                onClick={() => router.push(activeDaySchedule.isSimulado ? '/simulado' : treinoHref)}
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground rounded-[var(--radius-control)] px-6 py-3 font-display type-lead font-semibold shadow-elev-1 hover:opacity-90 t-colors group"
+              >
+                Começar <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+              <button
+                type="button"
                 onClick={skipActiveDay}
                 className="type-meta text-muted-foreground hover:text-foreground underline underline-offset-2"
               >
                 Pular este dia
               </button>
             </div>
-
-            <button
-              onClick={() => router.push(treinoHref)}
-              className="w-full flex items-center gap-4 bg-primary text-primary-foreground rounded-[var(--radius-control)] p-4 md:p-5 shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3 group mb-4"
-            >
-              <div className="w-12 h-12 rounded-[var(--radius-control)] bg-white/20 flex items-center justify-center flex-shrink-0">
-                <Brain className="w-6 h-6" />
-              </div>
-              <div className="flex-1 text-left">
-                <p className="font-display type-title font-bold">Iniciar Treino (20 questões)</p>
-              </div>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
-            </button>
-
-            {activeDaySchedule.isSimulado ? (
-              <button
-                type="button"
-                onClick={() => router.push('/simulado')}
-                className="w-full p-4 rounded-[var(--radius-control)] bg-[hsl(var(--surface-2))] border border-border text-center hover:border-primary t-colors"
-              >
-                <ClipboardList className="w-8 h-8 text-foreground mx-auto mb-2" />
-                <p className="type-meta font-medium text-foreground">Hoje é dia do simulado da semana</p>
-                <p className="type-caption text-muted-foreground mt-1">Uma matéria, de 10 a 20 questões</p>
-              </button>
-            ) : (
-              <>
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 type-meta text-muted-foreground">
-                <span>Hoje:</span>
-                {[...activeDaySchedule.manha, ...activeDaySchedule.trabalho].map((block, i) => (
-                  <span key={`${block.materia}-${i}`} className="inline-flex items-center gap-1.5 text-foreground">
-                    <span aria-hidden className="w-2 h-2 rounded-full" style={{ backgroundColor: (materiaColors as any)[block.materia] ?? '#ccc' }} />
-                    {block.materia}
-                  </span>
-                ))}
-              </div>
-              <button
-                type="button"
-                onClick={() => setMateriasAbertas((v) => !v)}
-                aria-expanded={materiasAbertas}
-                className="mt-3 inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors"
-              >
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${materiasAbertas ? 'rotate-180' : ''}`} />
-                {materiasAbertas ? 'Esconder as matérias' : 'Estudar uma matéria só'}
-              </button>
-              {materiasAbertas && (
-              <div className="space-y-3 mt-3">
-                {activeDaySchedule.manha.length > 0 && (
-                  <div>
-                    <p className="type-caption text-muted-foreground mb-2 flex items-center gap-1">
-                      <Sun className="w-3.5 h-3.5 text-amber-500" /> Matérias ENEM
-                    </p>
-                    <div className="space-y-2">
-                      {activeDaySchedule.manha.map((block, i) => (
-                        <button
-                          key={i}
-                          onClick={() => router.push(`/treino?mode=filtered&materia=${encodeURIComponent(block.materia)}`)}
-                          className="w-full flex items-center gap-3 p-3 rounded-[var(--radius-control)] bg-muted/50 hover:bg-muted t-colors text-left group"
-                        >
-                          <div
-                            className="w-3 h-3 rounded-full flex-shrink-0"
-                            style={{ backgroundColor: (materiaColors as any)[block.materia] ?? '#ccc' }}
-                          />
-                          <div className="flex-1 min-w-0">
-                            <p className="type-meta font-medium">{block.materia}</p>
-                            <p className="type-meta text-muted-foreground truncate">{block.tema}</p>
-                          </div>
-                          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary-text t-colors" />
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {activeDaySchedule.trabalho.length > 0 && (
-                  <div>
-                    <p className="type-caption text-muted-foreground mb-2 flex items-center gap-1">
-                      <Briefcase className="w-3.5 h-3.5 text-blue-500" /> Treino Diário
-                    </p>
-                    <div className="space-y-2">
-                      {activeDaySchedule.trabalho.map((block, i) => (
-                        <button
-                          key={i}
-                          onClick={() => router.push(`/treino?mode=filtered&materia=${encodeURIComponent(block.materia)}`)}
-                          className="w-full flex items-center gap-3 p-3 rounded-[var(--radius-control)] bg-muted/50 hover:bg-muted t-colors text-left group"
-                        >
-                          <div
-                            className="w-3 h-3 rounded-full flex-shrink-0"
-                            style={{ backgroundColor: (materiaColors as any)[block.materia] ?? '#ccc' }}
-                          />
-                          <div className="flex-1 min-w-0">
-                            <p className="type-meta font-medium">{block.materia}</p>
-                            <p className="type-meta text-muted-foreground truncate">{block.tema}</p>
-                          </div>
-                          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary-text t-colors" />
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-              )}
-              </>
-            )}
-          </div>
-        )}
-
-        {/* Tela inicial enxuta (Pablo, 06/10/2026: "não deixar tanta coisa num
-            lugar só"). Saíram daqui os números (estão em Progresso), os atalhos
-            de Simulado e Importar PDF (estão no menu) e as matérias para
-            reforçar (Progresso). Fica só o que é ação de hoje: revisar. */}
-        {(stats?.pendingReviews ?? 0) > 0 && (
-          <button
-            onClick={() => router.push('/treino?mode=review')}
-            className="w-full flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-4 mb-6 t-lift group text-left"
-          >
-            <div className="w-9 h-9 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center flex-shrink-0">
-              <RefreshCcw className="w-4 h-4 text-primary-text" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="font-display type-body font-semibold">Revisar o que você errou</p>
-              <p className="type-meta text-muted-foreground"><span data-numeric>{stats.pendingReviews}</span> questões esperando revisão</p>
-            </div>
-            <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary-text group-hover:translate-x-1 transition-transform flex-shrink-0" />
-          </button>
+          </section>
         )}
         {/* ── Weekly Calendar: pills horizontais, status vem do progresso real,
              não da data (dia atual do plano expandido por padrão) ── */}
@@ -282,6 +142,15 @@ export default function DashboardPage() {
           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${semanaAberta ? 'rotate-180' : ''}`} />
           {semanaAberta ? 'Esconder a semana' : 'Ver a semana'}
         </button>
+        {(stats?.pendingReviews ?? 0) > 0 && (
+          <button
+            type="button"
+            onClick={() => router.push('/treino?mode=review')}
+            className="mb-4 ml-6 inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors"
+          >
+            <RefreshCcw className="w-3.5 h-3.5" /> Revisões <span data-numeric>({stats.pendingReviews})</span>
+          </button>
+        )}
         {semanaAberta && (
         <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-8">
           <div className="flex items-center gap-2 mb-4">

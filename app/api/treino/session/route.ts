@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { diaNoBrasil } from '@/lib/dia-brasil';
 
 // GET: Retrieve active (unfinished) training session
 export async function GET() {
@@ -17,8 +18,10 @@ export async function GET() {
     // para outro dia do cronograma — retomá-la jogava o estudante no meio de
     // questões que não são as de hoje, sem passar pelo resumo.
     const LIMITE_RETOMADA_MS = 12 * 60 * 60 * 1000;
-    const activeSession = await prisma.trainingSession.findFirst({
-      where: { userId, finished: false, createdAt: { gte: new Date(Date.now() - LIMITE_RETOMADA_MS) } },
+    // Treino e Simulado dividem a tabela: sem filtrar o modo, o Treino
+    // retomava o simulado aberto ("45 de 90", Pablo, 06/10/2026).
+    const aberta = await prisma.trainingSession.findFirst({
+      where: { userId, finished: false, mode: { not: 'simulado' }, createdAt: { gte: new Date(Date.now() - LIMITE_RETOMADA_MS) } },
       orderBy: { createdAt: 'desc' },
       include: {
         questions: {
@@ -27,6 +30,9 @@ export async function GET() {
         },
       },
     });
+    // Só retoma o treino de HOJE (dia no Brasil): o de ontem foi montado para
+    // outro dia do cronograma.
+    const activeSession = aberta && diaNoBrasil(aberta.createdAt) === diaNoBrasil(new Date()) ? aberta : null;
 
     if (!activeSession) {
       return NextResponse.json({ session: null });
@@ -66,9 +72,9 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Nenhuma questão fornecida' }, { status: 400 });
     }
 
-    // Close any existing active sessions
+    // Fecha os treinos abertos; o simulado aberto fica, ele tem tela própria.
     await prisma.trainingSession.updateMany({
-      where: { userId, finished: false },
+      where: { userId, finished: false, mode: { not: 'simulado' } },
       data: { finished: true },
     });
 
