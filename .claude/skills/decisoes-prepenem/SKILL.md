@@ -232,6 +232,11 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   clara (`lib/aws-client.ts`, 503) em vez de estourar 500. As questões com
   imagem usam `public/questoes-imagens/` pré-renderizado e o `pdf-proxy`
   busca do INEP — nenhum dos dois depende de S3.
+- **Login e cadastro não esperam a sessão** (`components/app-layout.tsx`):
+  esperar `/api/auth/session` acordava o Neon e deixava 6,7 s de círculo antes
+  do formulário (06/10/2026). A conta é reconferida no banco a cada 30 min
+  (`SESSION_REVALIDATE_INTERVAL_MS`), não a cada minuto. A primeira consulta
+  com o Neon dormindo leva ~3 s (medido no ar); as seguintes, ~0,5 s.
 - **`AUTH_TRUST_HOST` não é necessário.** É conceito do Auth.js v5; este
   projeto usa NextAuth v4, onde a variável não tem efeito.
 - **Validar em produção depois do push, nunca só local.** Já houve caso de
