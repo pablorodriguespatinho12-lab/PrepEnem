@@ -71,7 +71,8 @@ function RodaGigante({ v, k }: { v: VisualRoda; k: number }) {
       ))}
       <line x1={px} y1={py} x2={px} y2={chao} stroke={COR.b} strokeWidth={2.5} strokeDasharray="5 4" />
       <rect x={px - 10} y={py - 8} width={20} height={16} rx={3} fill={COR.a} />
-      <text x={px + 14} y={(py + chao) / 2} fontSize={13} fontWeight={600} fill={COR.b}>altura</text>
+      {/* O rótulo fica do lado de dentro da roda, senão sai cortado na borda. */}
+      <text x={px > cx ? px - 10 : px + 10} y={(py + chao) / 2} textAnchor={px > cx ? 'end' : 'start'} fontSize={13} fontWeight={600} fill={COR.b}>altura</text>
     </svg>
   );
 }
