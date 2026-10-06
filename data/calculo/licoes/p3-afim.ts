@@ -7,6 +7,14 @@ export const P3_AFIM: ConteudoLicao = {
   },
   construcao: [
     {
+      titulo: 'A vela acesa',
+      texto: 'A vela da pergunta, acesa. Cada hora ela perde 2 cm, sempre o mesmo tanto: $h(x) = 20 - 2x$, com $x$ em horas. Aperte "Ver andando": a vela encolhe em pedaços iguais, e no gráfico os pontos descem em degraus iguais. Mudança sempre igual desenha uma **reta**.',
+      visual: {
+        tipo: 'cena', titulo: 'A vela encolhe 2 cm por hora', x: [0, 10], unidadeX: 'h', unidadeY: 'cm', rastro: true,
+        veiculos: [{ veiculo: 'vela', nome: 'h', expr: '20-2*x', cor: 'a' }],
+      },
+    },
+    {
       titulo: 'Mudar sempre o mesmo tanto',
       texto: 'Na tabela da vela, cada hora tira exatamente 2 cm. A mudança é sempre a mesma.',
       visual: { tipo: 'tabela', titulo: 'Vela', cabecalho: ['horas', 'altura (cm)', 'mudança'], linhas: [['0', '20', '—'], ['1', '18', '−2'], ['2', '16', '−2'], ['3', '14', '−2']] },
@@ -25,6 +33,17 @@ export const P3_AFIM: ConteudoLicao = {
           { latex: '\\text{altura} = \\text{início} + (\\text{mudança por hora})\\cdot \\text{horas}', porque: 'a ideia em palavras' },
           { latex: 'h(t) = 20 + (-2)\\cdot t', porque: 'começa em 20, muda −2 por hora' },
           { latex: 'h(t) = -2t + 20', porque: 'a = −2, b = 20' },
+        ],
+      },
+    },
+    {
+      titulo: 'O a e o b na estrada',
+      texto: 'Na estrada, [[b:b]] é onde o veículo larga e [[a:a]] é quantos km ele anda por minuto: a velocidade. O carro larga na frente ($b = 6$), mas é mais lento ($a = 2$). A moto larga do zero ($b = 0$), mas é mais rápida ($a = 4$). Quem tem o $a$ maior tem a reta mais inclinada, e por isso alcança: no minuto 3, os dois estão no km 12.',
+      visual: {
+        tipo: 'cena', titulo: 'Carro f(x) = 2x + 6 e moto g(x) = 4x', x: [0, 5], unidadeX: 'min', unidadeY: 'km',
+        veiculos: [
+          { veiculo: 'carro', nome: 'f', expr: '2*x+6', cor: 'a' },
+          { veiculo: 'moto', nome: 'g', expr: '4*x', cor: 'b' },
         ],
       },
     },

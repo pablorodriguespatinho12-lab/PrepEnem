@@ -7,6 +7,14 @@ export const P4_QUADRATICA: ConteudoLicao = {
   },
   construcao: [
     {
+      titulo: 'A bola jogada para cima',
+      texto: 'Jogue uma bola para cima. Ela sobe rápido, vai perdendo força, para lá no alto e cai. A altura depois de $x$ segundos é $h(x) = 20x - 5x^2$. Aperte "Ver andando": em 1 s ela está a 15 m, em 2 s chega a 20 m, o ponto mais alto, e em 4 s volta ao chão. O rastro no gráfico não é uma reta: é uma curva que sobe e desce, a **parábola**. O ponto mais alto é o [[c:vértice]]. Os instantes em que a bola está no chão (0 s e 4 s) são as **raízes**.',
+      visual: {
+        tipo: 'cena', titulo: 'A altura da bola segundo a segundo', x: [0, 4], unidadeX: 's', unidadeY: 'm', rastro: true,
+        veiculos: [{ veiculo: 'bola', nome: 'h', expr: '20*x-5*x^2', cor: 'a' }],
+      },
+    },
+    {
       titulo: 'A mudança cresce',
       texto: 'Na reta, cada passo de $x$ mudava $y$ sempre o mesmo tanto. Em $x^2$, a mudança vai 1, 3, 5, 7: cresce de 2 em 2. Como a inclinação aumenta, o desenho entorta.',
       visual: { tipo: 'tabela', titulo: 'f(x) = x²', cabecalho: ['x', 'x²', 'mudança'], linhas: [['0', '0', '—'], ['1', '1', '+1'], ['2', '4', '+3'], ['3', '9', '+5'], ['4', '16', '+7']] },

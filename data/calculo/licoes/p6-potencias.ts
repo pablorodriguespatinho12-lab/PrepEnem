@@ -7,6 +7,14 @@ export const P6_POTENCIAS: ConteudoLicao = {
   },
   construcao: [
     {
+      titulo: 'O balão que dobra',
+      texto: 'Um balão sobe de um jeito estranho: a cada minuto, a altura **dobra**. Começa a 1 m, depois 2, 4, 8, 16, 32. No começo parece parado; no fim, dispara. A regra é $b(x) = 2^x$: o 2 multiplicado por ele mesmo $x$ vezes. Olhe o rastro: não é reta, porque a reta muda sempre o mesmo tanto. Crescer multiplicando é a marca das **potências**.',
+      visual: {
+        tipo: 'cena', titulo: 'A altura dobra a cada minuto', x: [0, 5], unidadeX: 'min', unidadeY: 'm', rastro: true,
+        veiculos: [{ veiculo: 'balao', nome: 'b', expr: '2^x', cor: 'a' }],
+      },
+    },
+    {
       titulo: 'Potência é multiplicação repetida',
       texto: '$2^5$ é o 2 multiplicado 5 vezes: $2\\cdot 2\\cdot 2\\cdot 2\\cdot 2 = 32$. Subir um no expoente é multiplicar mais uma vez por 2.',
       visual: { tipo: 'tabela', titulo: 'Subindo o expoente', cabecalho: ['n', '2ⁿ', 'conta'], linhas: [['1', '2', '2'], ['2', '4', '2 · 2'], ['3', '8', '2 · 2 · 2'], ['4', '16', '8 · 2'], ['5', '32', '16 · 2']] },

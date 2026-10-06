@@ -7,6 +7,14 @@ export const P2_GRAFICO: ConteudoLicao = {
   },
   construcao: [
     {
+      titulo: 'O rastro do carro',
+      texto: 'Lembra do carro da lição anterior, $f(x) = 5x + 2$? Agora, a cada minuto, ele deixa uma marca no gráfico: o ponto (minuto, km). Aperte "Mais 1 min" algumas vezes e veja os pontos aparecerem um por um. Quando o relógio chega ao fim, os pontos viram uma linha: essa linha é o **gráfico** da função, o caminho inteiro desenhado de uma vez.',
+      visual: {
+        tipo: 'cena', titulo: 'Cada minuto deixa um ponto', x: [0, 4], unidadeX: 'min', unidadeY: 'km', rastro: true,
+        veiculos: [{ veiculo: 'carro', nome: 'f', expr: '5*x+2', cor: 'a' }],
+      },
+    },
+    {
       titulo: 'Cada linha da tabela vira um ponto',
       texto: 'O par (entrada, saída) vira o ponto $(x, f(x))$: ande $x$ para a direita e $f(x)$ para cima. A linha "3 km custa R$ 11" vira o ponto $(3, 11)$.',
       visual: { tipo: 'grafico', titulo: 'Os pontos da tabela', funcoes: [], pontos: [{ x: 1, y: 7, rotulo: '(1, 7)', cor: 'a' }, { x: 2, y: 9, rotulo: '(2, 9)', cor: 'a' }, { x: 3, y: 11, rotulo: '(3, 11)', cor: 'a' }], x: [0, 6], y: [0, 20] },

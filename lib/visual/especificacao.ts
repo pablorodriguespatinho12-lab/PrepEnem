@@ -52,13 +52,20 @@ export interface VisualVetores {
    f(x) é o km onde ele está. Para ver uma função antes de ler a fórmula
    (pedido do Pablo, 06/10/2026). Só nas lições escritas: fica fora do
    formato da IA. */
+export type Veiculo = 'carro' | 'moto' | 'bola' | 'balao' | 'vela';
+const VEICULOS: Veiculo[] = ['carro', 'moto', 'bola', 'balao', 'vela'];
+/* Carro e moto andam para o lado; bola e balão sobem e descem; a vela
+   encolhe. Uma cena tem uma direção só. */
+export const ehVertical = (v: Veiculo): boolean => v === 'bola' || v === 'balao' || v === 'vela';
 export interface VisualCena {
   tipo: 'cena';
   titulo?: string;
   x: [number, number];
   unidadeX?: string;
   unidadeY?: string;
-  veiculos: { veiculo: 'carro' | 'moto'; nome: string; expr: string; rotulo?: string; cor?: CorVisual }[];
+  /* O gráfico se desenha ponto a ponto, conforme o relógio anda. */
+  rastro?: boolean;
+  veiculos: { veiculo: Veiculo; nome: string; expr: string; rotulo?: string; cor?: CorVisual }[];
 }
 export type Visual = VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena;
 
@@ -142,17 +149,18 @@ function cena(v: Record<string, unknown>): VisualCena | null {
   if (!x || !Number.isInteger(x[0]) || !Number.isInteger(x[1]) || x[1] - x[0] > MAX_MINUTOS) return null;
   const veiculos = lista(v.veiculos)
     .map(objeto)
-    .filter((w) => (w.veiculo === 'carro' || w.veiculo === 'moto') && typeof w.expr === 'string' && tentarCompilar(w.expr) !== null)
+    .filter((w) => VEICULOS.includes(w.veiculo as Veiculo) && typeof w.expr === 'string' && tentarCompilar(w.expr) !== null)
+    .filter((w, _i, todos) => ehVertical(w.veiculo as Veiculo) === ehVertical(todos[0].veiculo as Veiculo))
     .slice(0, MAX_VEICULOS)
     .map((w) => ({
-      veiculo: w.veiculo as 'carro' | 'moto',
+      veiculo: w.veiculo as Veiculo,
       nome: texto(w.nome, 3) ?? 'f',
       expr: String(w.expr),
       rotulo: texto(w.rotulo, 40),
       cor: cor(w.cor),
     }));
   if (veiculos.length === 0) return null;
-  return { tipo: 'cena', titulo: texto(v.titulo), x, unidadeX: texto(v.unidadeX, 12), unidadeY: texto(v.unidadeY, 12), veiculos };
+  return { tipo: 'cena', titulo: texto(v.titulo), x, unidadeX: texto(v.unidadeX, 12), unidadeY: texto(v.unidadeY, 12), rastro: v.rastro === true, veiculos };
 }
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {
   grafico, reta, transformacao, tabela, vetores, cena,

@@ -142,7 +142,10 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   (visual `cena` em `lib/visual/especificacao.ts`: veículo andando por uma
   função, relógio em x, gráfico junto). O exemplo do Pablo (carro e moto) é o
   princípio, não a receita: cada conceito ganha a cena que melhor o mostra.
-  Feito: p1. Falta: p2 a p6. O x é o relógio, nunca "o carro".
+  Feitas p1 a p6: carro (função), rastro do carro (gráfico), vela e carro×moto
+  com a = velocidade e b = largada (afim), bola jogada (parábola), moto 2 min
+  atrás = f(x − 2) (transformação), balão que dobra (potência). Lição nova
+  nasce com cena. O x é o relógio, nunca "o carro".
 - Antes de commitar lição nova: os testes de `data/calculo` (validador e
   gabarito conferido contra a resolução, que precisa terminar em "= valor") e
   conferir que todo ponto marcado num gráfico está sobre a curva.

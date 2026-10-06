@@ -14,6 +14,14 @@ describe('validarVisual', () => {
     expect(v).toMatchObject({ tipo: 'cena', x: [0, 4], veiculos: [{ veiculo: 'carro', nome: 'f' }, { veiculo: 'moto', nome: 'g' }] });
     expect(v && v.tipo === 'cena' && v.veiculos).toHaveLength(2);
   });
+  test('cena: bola e vela andam na vertical; veículo de outra direção sai', () => {
+    const v = validarVisual({
+      tipo: 'cena', x: [0, 4], rastro: true,
+      veiculos: [{ veiculo: 'bola', nome: 'h', expr: '20*x-5*x^2' }, { veiculo: 'carro', nome: 'f', expr: 'x' }],
+    });
+    expect(v).toMatchObject({ tipo: 'cena', rastro: true, veiculos: [{ veiculo: 'bola' }] });
+    expect(v && v.tipo === 'cena' && v.veiculos).toHaveLength(1);
+  });
   test('cena: recusa relógio que não é de números inteiros', () => {
     expect(validarVisual({ tipo: 'cena', x: [0, 2.5], veiculos: [{ veiculo: 'carro', nome: 'f', expr: 'x' }] })).toBeNull();
   });

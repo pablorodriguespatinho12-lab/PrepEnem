@@ -22,6 +22,17 @@ export const P5_TRANSFORMACOES: ConteudoLicao = {
       },
     },
     {
+      titulo: 'A moto que vem 2 minutos atrás',
+      texto: 'O carro anda pela regra $f(x) = 5x$. A moto faz exatamente o mesmo caminho, só que **2 minutos depois**: onde o carro estava no minuto 0, a moto chega no minuto 2. A regra da moto é $g(x) = f(x - 2) = 5(x - 2)$. Aperte "Ver andando" e compare: $g(2) = f(0)$ e $g(3) = f(1)$. No gráfico, a linha da moto é a do carro empurrada 2 para a **direita**. O "−2" de dentro atrasa, e atrasar no relógio é andar para a direita.',
+      visual: {
+        tipo: 'cena', titulo: 'Carro f(x) = 5x e moto g(x) = f(x − 2)', x: [0, 6], unidadeX: 'min', unidadeY: 'km',
+        veiculos: [
+          { veiculo: 'carro', nome: 'f', expr: '5*x', cor: 'a' },
+          { veiculo: 'moto', nome: 'g', expr: '5*(x-2)', cor: 'b' },
+        ],
+      },
+    },
+    {
       titulo: 'Por que parece ao contrário',
       texto: 'Compare as entradas: para $(x - 3)^2$ dar 0, 1 ou 4, a entrada precisa ser 3 maior do que em $x^2$. Tudo acontece 3 passos mais tarde, e "mais tarde" no eixo $x$ é mais para a direita. O sinal de menos atrasa; o de mais adianta.',
       visual: { tipo: 'tabela', titulo: 'Mesma saída, entrada 3 maior', cabecalho: ['saída', 'em x² entra', 'em (x − 3)² entra'], linhas: [['0', '0', '3'], ['1', '1', '4'], ['4', '2', '5']] },

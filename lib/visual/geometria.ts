@@ -50,3 +50,17 @@ export function marcas([a, b]: [number, number], alvo = 8): number[] {
   }
   return saida;
 }
+
+const PASSO_PISTA = 5;
+const AMOSTRAS_CENA = 40;
+/* Pista da cena: do menor ao maior valor que algum veículo atinge no relógio
+   (o topo da bola fica no meio, não nas pontas), sempre com o zero, em
+   múltiplos de 5 para as marcas saírem redondas. */
+export function faixaDaCena(funcoes: Funcao[], [x0, x1]: [number, number]): [number, number] {
+  const valores = funcoes.flatMap((f) =>
+    Array.from({ length: AMOSTRAS_CENA + 1 }, (_, i) => f(x0 + ((x1 - x0) * i) / AMOSTRAS_CENA)))
+    .filter(Number.isFinite);
+  const min = Math.floor(Math.min(0, ...valores) / PASSO_PISTA) * PASSO_PISTA;
+  const max = Math.ceil(Math.max(0, ...valores) / PASSO_PISTA) * PASSO_PISTA;
+  return [min, max > min ? max : min + PASSO_PISTA];
+}
