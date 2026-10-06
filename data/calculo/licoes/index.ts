@@ -21,6 +21,7 @@ import { C4_DERIVADA } from './c4-derivada';
 import { C5_REGRA_POTENCIA } from './c5-regra-potencia';
 import { C6_PRODUTO_QUOCIENTE } from './c6-produto-quociente';
 import { C7_REGRA_CADEIA } from './c7-regra-cadeia';
+import { C8_EXP_LOG_TRIG } from './c8-exp-log-trig';
 
 export const LICOES_ESCRITAS: Record<string, ConteudoLicao> = {
   p1: P1_FUNCAO,
@@ -42,4 +43,5 @@ export const LICOES_ESCRITAS: Record<string, ConteudoLicao> = {
   c5: C5_REGRA_POTENCIA,
   c6: C6_PRODUTO_QUOCIENTE,
   c7: C7_REGRA_CADEIA,
+  c8: C8_EXP_LOG_TRIG,
 };
