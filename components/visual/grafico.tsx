@@ -96,7 +96,7 @@ export function Grafico({ v }: { v: VisualGrafico }) {
         <g key={i}>
           <path d={t.d} fill="none" stroke={t.cor} strokeWidth={2.5} strokeLinejoin="round" strokeLinecap="round" />
           {t.ultimo && (
-            <text x={Math.min(e.px(t.ultimo.x), LARGURA - MARGEM) - 4} y={e.py(t.ultimo.y) - 8 - i * 14}
+            <text x={Math.min(e.px(t.ultimo.x), LARGURA - MARGEM) - 4} y={Math.max(14 + i * 14, e.py(t.ultimo.y) - 8 - i * 14)}
               textAnchor="end" fontSize={12} fontWeight={600} {...HALO} fill={t.cor}>{t.rotulo}</text>
           )}
         </g>
