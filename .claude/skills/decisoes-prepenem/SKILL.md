@@ -51,6 +51,13 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 - **Proibido**: elogio, tom motivacional genérico, "É importante notar",
   parágrafo-preview ("Vamos analisar..."), conclusão vazia que só repete o
   que já foi dito.
+- **Testar prompt de explicação contra questões reais** (só leitura no banco):
+  `npx tsx --env-file=.env scripts/testar-tutor.ts 3 [Matéria]`. Imprime a
+  explicação e mede passos, visual, frase longa, emoji e frase proibida.
+- **14 questões do ENEM 2021 D1 estão no banco sem o texto-base** (ex.: "Esse
+  trecho da resenha... tem por finalidade"). A IA inventava o trecho; agora
+  `faltaTextoBase()` (`lib/tutor/prompts.ts`) avisa. Consertar o dado pede o
+  texto do PDF do INEP e escreve no Neon de produção: decisão do Pablo.
 - **Flashcards seguem o princípio da informação mínima do SuperMemo**: um
   fato por card, resposta o mais curta possível, sem enumeração longa
   (quebre em cards separados ou use cloze). Ver [[flashcard-pattern]].
