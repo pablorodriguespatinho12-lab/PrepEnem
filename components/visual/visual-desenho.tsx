@@ -115,10 +115,14 @@ function Vetores({ v }: { v: VisualVetores }) {
 }
 
 
+const INTERATIVOS: Visual['tipo'][] = ['cena', 'roda', 'retangulo', 'fatias'];
+
 export function VisualDesenho({ visual }: { visual: Visual }) {
   return (
     <figure className="rounded-[var(--radius-control)] border border-border bg-[hsl(var(--surface-2))] p-3">
-      {visual.titulo && <figcaption className="type-meta font-medium text-muted-foreground mb-2">{visual.titulo}</figcaption>}
+      {/* Nos desenhos que se mexem, o título do passo já diz o que é; o título
+          extra ("Mexa no relógio...") só poluía (Pablo, 06/10/2026). */}
+      {visual.titulo && !INTERATIVOS.includes(visual.tipo) && <figcaption className="type-meta font-medium text-muted-foreground mb-2">{visual.titulo}</figcaption>}
       {visual.tipo === 'grafico' && <Grafico v={visual} />}
       {visual.tipo === 'reta' && <Reta v={visual} />}
       {visual.tipo === 'transformacao' && <Transformacao v={visual} />}

@@ -3,13 +3,14 @@
 // exercícios → resultado. Nada aparece antes da hora: o aluno tenta o gancho
 // antes da explicação e responde a lacuna antes de ver o passo.
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Eye, Lightbulb, RefreshCcw } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Eye, Lightbulb, RefreshCcw } from 'lucide-react';
 import MathText from '@/components/math-text';
 import { VisualDesenho } from '@/components/visual/visual-desenho';
 import { RespostaInput } from './resposta-input';
 import type { ExemploResolvido, Exercicio, LicaoCompleta } from '@/lib/calculo/tipos';
+import type { Visual } from '@/lib/visual/especificacao';
 
 type Etapa = 'gancho' | 'construcao' | 'resumo' | 'exemplos' | 'exercicios' | 'resultado';
 const ETAPAS: { id: Etapa; nome: string }[] = [
@@ -105,12 +106,45 @@ function ExercicioView({ exercicio, numero, total, onFim }: { exercicio: Exercic
   );
 }
 
-export function LicaoPlayer({ licao }: { licao: LicaoCompleta }) {
+/* O que está na tela, em texto, para o painel de dúvidas (a IA vê o mesmo que
+   o aluno). Em exercício, avisa a IA para não entregar a resposta. */
+function descreverDesenho(v: Visual | null | undefined): string {
+  if (!v) return '';
+  if (v.tipo === 'cena') {
+    const quem = v.veiculos.map((w) => `${w.rotulo ?? w.veiculo} anda por ${w.nome}(x) = ${w.expr}`).join('; ');
+    return `Desenho animado: ${quem}; x é o tempo (${v.unidadeX ?? 'min'}), f(x) é a posição (${v.unidadeY ?? 'km'}).`;
+  }
+  return `Desenho: ${v.tipo}${v.titulo ? ` (${v.titulo})` : ''}.`;
+}
+
+export function LicaoPlayer({ licao, onTela }: { licao: LicaoCompleta; onTela?: (texto: string) => void }) {
   const [etapa, setEtapa] = useState<Etapa>('gancho');
   const [ideiaAberta, setIdeiaAberta] = useState(false);
   const [passos, setPassos] = useState(1);
+  // Troca de passo ou de etapa: volta para o topo do cartão, em vez de o
+  // conteúdo novo aparecer lá embaixo (Pablo, 06/10/2026).
+  const topo = useRef<HTMLElement>(null);
+  const primeiraVez = useRef(true);
   const [exemplo, setExemplo] = useState(0);
   const [exercicio, setExercicio] = useState(0);
+  useEffect(() => {
+    if (!onTela) return;
+    const c0 = licao.conteudo;
+    const p = c0.construcao[passos - 1];
+    let texto = 'Fim da lição.';
+    if (etapa === 'gancho') texto = `Pergunta de abertura: ${c0.gancho.pergunta}${ideiaAberta ? `\nResposta mostrada: ${c0.gancho.ideia}` : ''}`;
+    else if (etapa === 'construcao' && p) texto = `Passo "${p.titulo}": ${p.texto}\n${descreverDesenho(p.visual)}`;
+    else if (etapa === 'resumo') texto = `Resumo: ${c0.resumo}`;
+    else if (etapa === 'exemplos') texto = `Exemplo resolvido: ${c0.exemplos[exemplo]?.enunciado ?? ''}`;
+    else if (etapa === 'exercicios') texto = `EXERCÍCIO que ele está resolvendo (dê pistas, não a resposta): ${c0.exercicios[exercicio]?.enunciado ?? ''}`;
+    onTela(texto);
+  }, [onTela, licao, etapa, passos, exemplo, exercicio, ideiaAberta]);
+
+  useEffect(() => {
+    if (primeiraVez.current) { primeiraVez.current = false; return; }
+    const reduzir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    topo.current?.scrollIntoView({ block: 'start', behavior: reduzir ? 'auto' : 'smooth' });
+  }, [passos, etapa, exemplo, exercicio]);
   const [acertos, setAcertos] = useState(0);
   const [salvo, setSalvo] = useState<{ concluiu: boolean } | null>(null);
   const [recuperacaoAberta, setRecuperacaoAberta] = useState(false);
@@ -146,7 +180,7 @@ export function LicaoPlayer({ licao }: { licao: LicaoCompleta }) {
         </ol>
       </nav>
 
-      <section className="surface-1 rounded-[var(--radius-surface)] p-6 space-y-5">
+      <section ref={topo} className="surface-1 rounded-[var(--radius-surface)] p-6 space-y-5 scroll-mt-4">
         {etapa === 'gancho' && (
           <>
             <p className="type-caption text-muted-foreground">Antes de explicar, tente de cabeça</p>
@@ -162,24 +196,37 @@ export function LicaoPlayer({ licao }: { licao: LicaoCompleta }) {
           </>
         )}
 
-        {etapa === 'construcao' && (
-          <>
-            <ol className="space-y-6">
-              {c.construcao.slice(0, passos).map((p, i) => (
-                <li key={i} className="space-y-3">
-                  <p className="type-caption text-muted-foreground" data-numeric>Passo {i + 1} de {c.construcao.length}</p>
-                  {p.visual && <VisualDesenho visual={p.visual} />}
-                  <h3 className="font-display type-body font-semibold">{p.titulo}</h3>
-                  <MathText text={p.texto} className="font-reading" />
-                </li>
-              ))}
-            </ol>
-            {passos < c.construcao.length
-              ? <Avancar onClick={() => setPassos((n) => n + 1)}>Próximo passo</Avancar>
-              : <Avancar onClick={() => setEtapa('resumo')}>Juntar tudo</Avancar>}
-          </>
-        )}
-
+        {etapa === 'construcao' && (() => {
+          // Um passo por vez: o atual sai e o próximo entra no lugar, sem
+          // empilhar a lição inteira para baixo (Pablo, 06/10/2026).
+          const i = passos - 1;
+          const p = c.construcao[i];
+          const total = c.construcao.length;
+          return (
+            <div key={i} className="space-y-4">
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="font-display type-lead font-semibold">{p.titulo}</h3>
+                <span className="flex gap-1.5 pt-2 flex-shrink-0" role="img" aria-label={`Passo ${i + 1} de ${total}`}>
+                  {c.construcao.map((_, k) => (
+                    <span key={k} className={`h-1.5 rounded-full ${k === i ? 'w-4 bg-primary' : k < i ? 'w-1.5 bg-primary/50' : 'w-1.5 bg-muted'}`} />
+                  ))}
+                </span>
+              </div>
+              {p.visual && <VisualDesenho visual={p.visual} />}
+              <MathText text={p.texto} className="font-reading" />
+              <div className="flex items-center gap-4">
+                {i > 0 && (
+                  <button type="button" onClick={() => setPassos((n) => n - 1)} className="inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors">
+                    <ArrowLeft className="w-4 h-4" /> Voltar
+                  </button>
+                )}
+                {passos < total
+                  ? <Avancar onClick={() => setPassos((n) => n + 1)}>Próximo passo</Avancar>
+                  : <Avancar onClick={() => setEtapa('resumo')}>Juntar tudo</Avancar>}
+              </div>
+            </div>
+          );
+        })()}
         {etapa === 'resumo' && (
           <>
             <p className="type-caption text-muted-foreground">O resumo (a fórmula é o fim do raciocínio, não o começo)</p>

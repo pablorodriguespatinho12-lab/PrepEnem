@@ -46,7 +46,7 @@ export function Retangulo({ v }: { v: VisualRetangulo }) {
   return (
     <div className="space-y-4">
       {/* Com faixas, o retângulo cresce com o tempo (c6); sem, a base é uma escolha (cerca, c10). */}
-      <Deslizante relogio={relogio} rotulo={<>{v.faixas ? 'Tempo' : 'Base'} <span data-numeric className="font-semibold text-foreground">{v.faixas ? 't' : 'x'} = {numero(t)}</span></>} />
+      <Deslizante relogio={relogio} rotulo={<span data-numeric className="font-semibold text-foreground">{v.faixas ? 't' : 'x'} = {numero(t)}</span>} />
       <svg viewBox={`0 0 ${LARGURA} ${ALTURA}`} className="w-full max-w-[360px] h-auto mx-auto" role="img" aria-label="Retângulo que cresce nos dois lados">
         <rect x={px(0)} y={py(a0)} width={b0 * escala} height={a0 * escala} fill={COR.a} fillOpacity={0.25} stroke={COR.a} strokeWidth={1.5} />
         {anterior && (

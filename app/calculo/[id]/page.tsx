@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, Loader2 } from 'lucide-react';
 import { LicaoPlayer } from '@/components/calculo/licao-player';
+import { DuvidaLicao } from '@/components/calculo/duvida-licao';
 import { NOME_MODULO, buscarDegrau } from '@/data/calculo/trilha';
 import { LICOES_ESCRITAS } from '@/data/calculo/licoes';
 import type { LicaoCompleta } from '@/lib/calculo/tipos';
@@ -18,6 +19,7 @@ function licaoEscrita(id: string): LicaoCompleta | null {
 export default function LicaoCalculoPage({ params }: { params: { id: string } }) {
   const [licao, setLicao] = useState<LicaoCompleta | null>(() => licaoEscrita(params.id));
   const [erro, setErro] = useState<string | null>(null);
+  const [naTela, setNaTela] = useState('');
 
   useEffect(() => {
     fetch(`/api/calculo/licao/${encodeURIComponent(params.id)}`)
@@ -30,7 +32,9 @@ export default function LicaoCalculoPage({ params }: { params: { id: string } })
   }, [params.id]);
 
   return (
-    <div className="p-4 md:p-8 max-w-[46rem] mx-auto space-y-4">
+    // Lição e painel de dúvidas lado a lado no computador; no celular, o painel
+    // vira um botão embaixo da lição.
+    <div className="p-4 md:p-8 max-w-[46rem] lg:max-w-[72rem] mx-auto space-y-4">
       <Link href="/calculo" className="inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors">
         <ChevronLeft className="w-4 h-4" /> Trilha
       </Link>
@@ -46,7 +50,10 @@ export default function LicaoCalculoPage({ params }: { params: { id: string } })
             <p className="type-caption text-muted-foreground" data-numeric>{NOME_MODULO[licao.modulo]} · {licao.minutos} min</p>
             <h1 className="font-display type-headline font-bold">{licao.titulo}</h1>
           </header>
-          <LicaoPlayer licao={licao} />
+          <div className="grid gap-6 lg:grid-cols-[minmax(0,46rem)_minmax(0,1fr)]">
+            <LicaoPlayer licao={licao} onTela={setNaTela} />
+            <DuvidaLicao licaoId={licao.id} naTela={naTela} />
+          </div>
         </>
       )}
     </div>

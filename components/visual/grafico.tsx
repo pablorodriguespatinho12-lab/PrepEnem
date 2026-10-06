@@ -2,7 +2,7 @@
 // Peças comuns dos desenhos: cores, escala, eixos e o gráfico de funções.
 // Os rótulos ficam DENTRO do desenho, junto da parte que nomeiam (contiguidade
 // de Mayer), e a cor de cada traço é a mesma do termo na explicação.
-import { useMemo } from 'react';
+import { useId, useMemo } from 'react';
 import 'katex/dist/katex.min.css';
 import type { CorVisual, VisualGrafico } from '@/lib/visual/especificacao';
 import { tentarCompilar } from '@/lib/visual/expressao';
@@ -39,7 +39,10 @@ export function escala(x: [number, number], y: [number, number]): Escala {
   };
 }
 
-export function Eixos({ x, y, e }: { x: [number, number]; y: [number, number]; e: Escala }) {
+/* "nomes": o que cada eixo mede ("x: tempo (min)"). Sem nome, o aluno não
+   sabia qual eixo era o tempo e qual era o espaço (Pablo, 06/10/2026). */
+export interface NomesDosEixos { x?: string; y?: string }
+export function Eixos({ x, y, e, nomes }: { x: [number, number]; y: [number, number]; e: Escala; nomes?: NomesDosEixos }) {
   const zeroX = x[0] <= 0 && x[1] >= 0 ? e.px(0) : MARGEM;
   const zeroY = y[0] <= 0 && y[1] >= 0 ? e.py(0) : ALTURA - MARGEM;
   return (
@@ -59,13 +62,20 @@ export function Eixos({ x, y, e }: { x: [number, number]; y: [number, number]; e
       ))}
       <line x1={MARGEM} x2={LARGURA - MARGEM} y1={zeroY} y2={zeroY} stroke={EIXO} strokeWidth={1.2} />
       <line x1={zeroX} x2={zeroX} y1={MARGEM} y2={ALTURA - MARGEM} stroke={EIXO} strokeWidth={1.2} />
-      <text x={LARGURA - MARGEM + 4} y={zeroY + 4}>x</text>
-      <text x={zeroX + 4} y={MARGEM - 8}>y</text>
+      {nomes?.x
+        ? <text x={LARGURA - MARGEM} y={zeroY - 7} textAnchor="end" fontSize={12} fontWeight={600} fill="hsl(var(--foreground))" {...HALO}>{nomes.x}</text>
+        : <text x={LARGURA - MARGEM + 4} y={zeroY + 4}>x</text>}
+      {nomes?.y
+        ? <text x={zeroX + 6} y={MARGEM - 8} fontSize={12} fontWeight={600} fill="hsl(var(--foreground))">{nomes.y}</text>
+        : <text x={zeroX + 4} y={MARGEM - 8}>y</text>}
     </g>
   );
 }
 
-export function Grafico({ v }: { v: VisualGrafico }) {
+/* "ateX": desenha o traço só até ali, como caneta no papel (cena animada);
+   o resto da curva fica clarinho, como guia. */
+export function Grafico({ v, ateX, nomes }: { v: VisualGrafico; ateX?: number; nomes?: NomesDosEixos }) {
+  const idCorte = `corte${useId().replace(/:/g, '')}`; // "#:r1:" quebra o url() do SVG
   const desenho = useMemo(() => {
     const funcoes = v.funcoes
       .map((f) => ({ ...f, fn: tentarCompilar(f.expr) }))
@@ -94,10 +104,16 @@ export function Grafico({ v }: { v: VisualGrafico }) {
   const { y, e, tracos, rotuloX, rotuloY } = desenho;
   return (
     <svg viewBox={`0 0 ${LARGURA} ${ALTURA}`} className="w-full h-auto" role="img" aria-label={v.titulo ?? 'Gráfico'}>
-      <Eixos x={v.x} y={y} e={e} />
+      <Eixos x={v.x} y={y} e={e} nomes={nomes} />
+      {ateX !== undefined && (
+        <defs>
+          <clipPath id={idCorte}><rect x={0} y={0} width={Math.max(0, e.px(Math.min(ateX, v.x[1])))} height={ALTURA} /></clipPath>
+        </defs>
+      )}
       {tracos.map((t, i) => (
         <g key={i}>
-          <path d={t.d} fill="none" stroke={t.cor} strokeWidth={2.5} strokeLinejoin="round" strokeLinecap="round" />
+          {ateX !== undefined && <path d={t.d} fill="none" stroke={t.cor} strokeOpacity={0.18} strokeWidth={2.5} strokeLinejoin="round" strokeLinecap="round" />}
+          <path d={t.d} fill="none" stroke={t.cor} strokeWidth={2.5} strokeLinejoin="round" strokeLinecap="round" clipPath={ateX !== undefined ? `url(#${idCorte})` : undefined} />
           {t.ultimo && (
             <text x={rotuloX(t)} y={rotuloY[i]}
               textAnchor="end" fontSize={12} fontWeight={600} {...HALO} fill={t.cor}>{t.rotulo}</text>

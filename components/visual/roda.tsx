@@ -85,18 +85,20 @@ export function Roda({ v }: { v: VisualRoda }) {
   const u = v.unidade ?? 'm';
   const passoGraus = 360 / v.divisoes;
   const valor = (k: number) => geometria(v, k).altura;
-  const ate = Array.from({ length: t + 1 }, (_, k) => k);
+  // Pontos nos ângulos inteiros já passados e o de agora; a curva vai sendo desenhada junto.
+  const ate = [...Array.from({ length: Math.floor(t) + 1 }, (_, k) => k), ...(Number.isInteger(t) ? [] : [t])];
+  const thetaAgora = (t * 2 * Math.PI) / v.divisoes;
   const grafico: VisualGrafico = {
     tipo: 'grafico',
     x: [0, 2 * Math.PI * v.voltas],
     y: [Math.min(0, v.centro - v.raio) - v.raio * 0.15, v.centro + v.raio * 1.15],
-    funcoes: relogio.terminou ? [{ expr: gigante ? `${v.centro}+${v.raio}*sin(x)` : 'sin(x)', rotulo: gigante ? 'altura' : 'sen x', cor: 'b' }] : [],
+    funcoes: [{ expr: gigante ? `${v.centro}+${v.raio}*sin(x)` : 'sin(x)', rotulo: gigante ? 'altura' : 'sen x', cor: 'b' }],
     pontos: ate.map((k) => ({ x: (k * 2 * Math.PI) / v.divisoes, y: valor(k), cor: 'b' as const })),
   };
 
   return (
     <div className="space-y-4">
-      <Deslizante relogio={relogio} rotulo={<>Ângulo <span data-numeric className="font-semibold text-foreground">θ = {numero(graus)}°</span></>} />
+      <Deslizante relogio={relogio} rotulo={<span data-numeric className="font-semibold text-foreground">θ = {numero(graus)}°</span>} />
       {gigante ? <RodaGigante v={v} k={t} /> : <Circulo v={v} k={t} />}
       <div className="space-y-1 type-body" aria-live="polite">
         {gigante ? (
@@ -122,12 +124,7 @@ export function Roda({ v }: { v: VisualRoda }) {
       <Controles relogio={relogio} tocar="Girar" passo={`Mais ${numero(passoGraus)}°`} />
       {v.grafico && (
         <div>
-          <p className="type-meta text-muted-foreground mb-1">
-            {relogio.terminou
-              ? 'A altura, volta a volta: uma onda que se repete. No eixo x, o ângulo em radianos (uma volta = 2π ≈ 6,28).'
-              : 'Cada passo deixa um ponto: (ângulo, altura). Gire até o fim para ver a onda inteira.'}
-          </p>
-          <Grafico v={grafico} />
+          <Grafico v={grafico} ateX={thetaAgora} nomes={{ x: 'x: ângulo (rad)', y: gigante ? `y: altura (${u})` : 'y: sen x' }} />
         </div>
       )}
     </div>

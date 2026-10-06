@@ -5,7 +5,6 @@
 // 06/10/2026). Só transform na animação: roda no compositor.
 
 import { useMemo } from 'react';
-import { useReducedMotion } from 'framer-motion';
 import { ehVertical, type CorVisual, type Veiculo, type VisualCena, type VisualGrafico } from '@/lib/visual/especificacao';
 import { exprParaLatex, numeroLatex, tentarCompilar } from '@/lib/visual/expressao';
 import { faixaDaCena, marcas, taxaNoInstante } from '@/lib/visual/geometria';
@@ -13,10 +12,11 @@ import { Grafico, Latex, corDe } from './grafico';
 import { Controles, Deslizante, useRelogio } from './relogio';
 
 const ALTURA_PISTA = 220;
-const MOVIMENTO = 'transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1)';
 const CORES = ['a', 'b', 'c'] as const;
 
-const EXTENSO: Record<string, string> = { min: 'minuto', h: 'hora', s: 'segundo' };
+/* O que o eixo y mede, pelo objeto da cena: o aluno precisa saber que x é o
+   tempo e que f(x) é onde o objeto está (Pablo, 06/10/2026). */
+const NOME_EIXO_Y: Record<Veiculo, string> = { carro: 'posição', moto: 'posição', bola: 'altura', balao: 'altura', vela: 'tamanho' };
 const NOME: Record<Veiculo, string> = { carro: 'carro', moto: 'moto', bola: 'bola', balao: 'balão', vela: 'vela' };
 const numero = (n: number) => n.toLocaleString('pt-BR', { maximumFractionDigits: 2 });
 
@@ -69,14 +69,14 @@ function Glifo({ veiculo }: { veiculo: Veiculo }) {
 
 interface Posicao { veiculo: Veiculo; nome: string; cor: string; valor: number }
 
-function PistaHorizontal({ posicoes, pct, faixa, unidade, reduzir }: {
-  posicoes: Posicao[]; pct: (v: number) => number; faixa: [number, number]; unidade: string; reduzir: boolean;
+function PistaHorizontal({ posicoes, pct, faixa, unidade }: {
+  posicoes: Posicao[]; pct: (v: number) => number; faixa: [number, number]; unidade: string;
 }) {
   return (
     <div className="px-6">
       {posicoes.map((w) => (
         <div key={w.nome} className="relative h-10 border-b-2 border-dashed border-border">
-          <div className="absolute inset-x-0 bottom-0" style={{ transform: `translateX(${pct(w.valor)}%)`, transition: reduzir ? 'none' : MOVIMENTO }}>
+          <div className="absolute inset-x-0 bottom-0" style={{ transform: `translateX(${pct(w.valor)}%)` }}>
             <div className="w-fit -translate-x-1/2" style={{ color: w.cor }}><Glifo veiculo={w.veiculo} /></div>
           </div>
         </div>
@@ -91,10 +91,9 @@ function PistaHorizontal({ posicoes, pct, faixa, unidade, reduzir }: {
   );
 }
 
-function PistaVertical({ posicoes, pct, faixa, unidade, reduzir }: {
-  posicoes: Posicao[]; pct: (v: number) => number; faixa: [number, number]; unidade: string; reduzir: boolean;
+function PistaVertical({ posicoes, pct, faixa, unidade }: {
+  posicoes: Posicao[]; pct: (v: number) => number; faixa: [number, number]; unidade: string;
 }) {
-  const transicao = reduzir ? 'none' : MOVIMENTO;
   const chao = pct(0);
   return (
     <div className="flex justify-center gap-10 pt-12 pb-4" aria-hidden>
@@ -113,11 +112,11 @@ function PistaVertical({ posicoes, pct, faixa, unidade, reduzir }: {
               style={{
                 bottom: `${chao}%`, height: `${100 - chao}%`, transformOrigin: 'bottom',
                 transform: `scaleY(${Math.max(0, (pct(w.valor) - chao) / (100 - chao))})`,
-                transition: transicao, background: w.cor, opacity: 0.55,
+                background: w.cor, opacity: 0.55,
               }}
             />
           )}
-          <div className="absolute inset-0" style={{ transform: `translateY(${100 - pct(w.valor)}%)`, transition: transicao }}>
+          <div className="absolute inset-0" style={{ transform: `translateY(${100 - pct(w.valor)}%)` }}>
             {/* O objeto pousa no valor: a bola no chão fica em cima da linha, não enterrada. */}
             <div className="absolute left-1/2 -translate-x-1/2 -translate-y-full" style={{ color: w.cor }}>
               <Glifo veiculo={w.veiculo} />
@@ -130,20 +129,20 @@ function PistaVertical({ posicoes, pct, faixa, unidade, reduzir }: {
 }
 
 function pontosDoGrafico(v: VisualCena, t: number, fns: ((x: number) => number)[]): VisualGrafico['pontos'] {
-  const instantes = v.rastro ? Array.from({ length: t - v.x[0] + 1 }, (_, i) => v.x[0] + i) : [t];
+  const inteiros = Array.from({ length: Math.floor(t) - v.x[0] + 1 }, (_, i) => v.x[0] + i);
+  const instantes = v.rastro ? (Number.isInteger(t) ? inteiros : [...inteiros, t]) : [t];
   return v.veiculos.flatMap((w, i) => instantes.map((x) => ({ x, y: fns[i](x), cor: w.cor ?? CORES[i % 3] as CorVisual })));
 }
 
 export function Cena({ v }: { v: VisualCena }) {
-  const reduzir = useReducedMotion() ?? false;
   const relogio = useRelogio(v.x);
-  const { t, terminou } = relogio;
+  const { t } = relogio;
   const fns = useMemo(() => v.veiculos.map((w) => tentarCompilar(w.expr) ?? (() => NaN)), [v]);
   const faixa = useMemo(() => faixaDaCena(fns, v.x), [fns, v.x]);
 
   const pct = (valor: number) => Math.max(0, Math.min(100, ((valor - faixa[0]) / (faixa[1] - faixa[0])) * 100));
   const posicoes: Posicao[] = v.veiculos.map((w, i) => ({ veiculo: w.veiculo, nome: w.nome, cor: corDe(w.cor, i), valor: fns[i](t) }));
-  const juntos = posicoes.length === 2 && Math.abs(posicoes[0].valor - posicoes[1].valor) < 1e-9;
+  const juntos = posicoes.length === 2 && Math.abs(posicoes[0].valor - posicoes[1].valor) < (faixa[1] - faixa[0]) * 0.005;
   const vertical = ehVertical(v.veiculos[0].veiculo);
   const ux = v.unidadeX ?? 'min';
   const uy = v.unidadeY ?? 'km';
@@ -151,7 +150,7 @@ export function Cena({ v }: { v: VisualCena }) {
     tipo: 'grafico',
     x: v.x,
     y: faixa,
-    funcoes: v.rastro && !terminou ? [] : v.veiculos.map((w) => ({ expr: w.expr, rotulo: `${w.nome}(x)`, cor: w.cor })),
+    funcoes: v.veiculos.map((w) => ({ expr: w.expr, rotulo: `${w.nome}(x)`, cor: w.cor })),
     pontos: pontosDoGrafico(v, t, fns),
   };
   const Pista = vertical ? PistaVertical : PistaHorizontal;
@@ -167,8 +166,8 @@ export function Cena({ v }: { v: VisualCena }) {
         ))}
       </div>
 
-      <Deslizante relogio={relogio} rotulo={<>Relógio <span data-numeric className="font-semibold text-foreground">x = {numero(t)} {ux}</span></>} />
-      <Pista posicoes={posicoes} pct={pct} faixa={faixa} unidade={uy} reduzir={reduzir} />
+      <Deslizante relogio={relogio} rotulo={<span data-numeric className="font-semibold text-foreground">x = {numero(t)} {ux}</span>} />
+      <Pista posicoes={posicoes} pct={pct} faixa={faixa} unidade={uy} />
 
       <div className="space-y-1 type-body" aria-live="polite">
         {posicoes.map((w) => (
@@ -188,12 +187,7 @@ export function Cena({ v }: { v: VisualCena }) {
 
       <Controles relogio={relogio} passo={`Mais 1 ${ux}`} />
       <div>
-        <p className="type-meta text-muted-foreground mb-1">
-          {v.rastro && !terminou
-            ? `Cada ${EXTENSO[ux] ?? ux} que passa deixa um ponto (${ux}, ${uy}) no gráfico. Ande até o fim para ver a linha inteira.`
-            : `O mesmo movimento como gráfico: cada ponto é (${ux}, ${uy}). A bolinha anda junto com o relógio.`}
-        </p>
-        <Grafico v={grafico} />
+        <Grafico v={grafico} ateX={t} nomes={{ x: `x: tempo (${ux})`, y: `y: ${NOME_EIXO_Y[v.veiculos[0].veiculo]} (${uy})` }} />
       </div>
     </div>
   );

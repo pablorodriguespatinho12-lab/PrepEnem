@@ -15,6 +15,10 @@ export const MODELO_IA = {
   conversa: () => modelo('AI_MODEL_CONVERSA', 'openai/gpt-oss-20b'),
   // O 20b ficou abstrato demais no teste de 05/10/2026 ("Definir número de
   // entidades"); o 120b seguiu situação → desenho → fórmula.
+  // Dúvida no meio da lição de Cálculo: o 20b acertou a conta mas respondeu
+  // seco ("Não.") e chamou o carro de saída (teste de 06/10/2026). Vem uma
+  // pergunta por vez, não em rajada: cabe no 120b.
+  duvidaLicao: () => modelo('AI_MODEL_DUVIDA_LICAO', 'openai/gpt-oss-120b'),
   resumo: () => modelo('AI_MODEL_RESUMO', 'openai/gpt-oss-120b'),
   redacao: () => modelo('AI_MODEL_REDACAO', 'openai/gpt-oss-120b'),
   licao: () => modelo('AI_MODEL_LICAO', 'openai/gpt-oss-120b'),

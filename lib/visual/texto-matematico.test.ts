@@ -2,6 +2,9 @@ import { describe, expect, test } from 'vitest';
 import { renderizarTextoMatematico as r } from './texto-matematico';
 
 describe('renderizarTextoMatematico', () => {
+  test('vírgula decimal dentro da fórmula não ganha espaço', () => {
+    expect(r('$x = 0,2$')).toEqual(r('$x = 0{,}2$'));
+  });
   test('R$ de dinheiro não abre fórmula', () => {
     const html = r('Custa R$ 5 para entrar mais R$ 2 por km. Em $f(x)$ entra x.');
     expect(html).toContain('R$ 5 para entrar mais R$ 2 por km');

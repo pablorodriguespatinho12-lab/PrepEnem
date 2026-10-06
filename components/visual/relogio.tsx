@@ -1,12 +1,15 @@
 'use client';
-// Relógio das animações (cena e roda): um passo inteiro por vez, devagar o
-// bastante para acompanhar o número mudar. Os botões e o deslizante são os
-// mesmos nos dois desenhos.
+// Relógio das animações (cena, roda, retângulo, fatias). Corre CONTÍNUO: o
+// objeto desliza e o gráfico se desenha como caneta no papel. Antes andava em
+// passos inteiros de 900 ms e o carro teleportava de um ponto ao outro (Pablo,
+// 06/10/2026: "sprite por sprite, tem que ser fluido"). As fatias, que só
+// existem em número inteiro, pedem `continuo: false`.
 
-import { useEffect, useId, useState, type ReactNode } from 'react';
+import { useEffect, useId, useRef, useState, type ReactNode } from 'react';
+import { animate, type AnimationPlaybackControls } from 'framer-motion';
 import { Play, RotateCcw, StepForward } from 'lucide-react';
 
-const PASSO_MS = 900;
+const SEGUNDOS_POR_UNIDADE = 0.9;
 
 export interface Relogio {
   t: number;
@@ -14,30 +17,47 @@ export interface Relogio {
   terminou: boolean;
   inicio: number;
   fim: number;
+  continuo: boolean;
   ir: (t: number) => void;
   tocar: () => void;
   avancar: () => void;
   recomecar: () => void;
 }
 
-export function useRelogio([inicio, fim]: [number, number], passoMs = PASSO_MS): Relogio {
+export function useRelogio(
+  [inicio, fim]: [number, number],
+  { continuo = true, segundosPorUnidade = SEGUNDOS_POR_UNIDADE }: { continuo?: boolean; segundosPorUnidade?: number } = {},
+): Relogio {
   const [t, setT] = useState(inicio);
   const [andando, setAndando] = useState(false);
+  const animacao = useRef<AnimationPlaybackControls | null>(null);
+  const tAtual = useRef(inicio);
+  tAtual.current = t;
 
-  useEffect(() => {
-    if (!andando) return;
-    if (t >= fim) { setAndando(false); return; }
-    const id = setTimeout(() => setT((atual) => Math.min(atual + 1, fim)), passoMs);
-    return () => clearTimeout(id);
-  }, [andando, t, fim, passoMs]);
+  useEffect(() => () => animacao.current?.stop(), []);
+
+  const parar = () => { animacao.current?.stop(); animacao.current = null; setAndando(false); };
+
+  const correr = (de: number, ate: number) => {
+    animacao.current?.stop();
+    if (ate <= de) return;
+    setAndando(true);
+    const passo = (v: number) => setT(continuo ? v : Math.floor(v));
+    animacao.current = animate(de, ate, {
+      duration: (ate - de) * segundosPorUnidade,
+      ease: 'linear',
+      onUpdate: passo,
+      onComplete: () => { setT(ate); animacao.current = null; setAndando(false); },
+    });
+  };
 
   return {
-    t, andando, inicio, fim,
+    t, andando, inicio, fim, continuo,
     terminou: t >= fim,
-    ir: (novo) => { setAndando(false); setT(novo); },
-    tocar: () => { if (t >= fim) setT(inicio); setAndando(true); },
-    avancar: () => { setAndando(false); setT((a) => Math.min(a + 1, fim)); },
-    recomecar: () => { setAndando(false); setT(inicio); },
+    ir: (novo) => { parar(); setT(novo); },
+    tocar: () => correr(tAtual.current >= fim ? inicio : tAtual.current, fim),
+    avancar: () => correr(tAtual.current, Math.min(Math.floor(tAtual.current + 1e-9) + 1, fim)),
+    recomecar: () => { parar(); setT(inicio); },
   };
 }
 
@@ -47,9 +67,10 @@ export function Deslizante({ relogio, rotulo }: { relogio: Relogio; rotulo: Reac
     <div className="flex items-center gap-3">
       <label htmlFor={id} className="type-meta text-muted-foreground whitespace-nowrap">{rotulo}</label>
       <input
-        id={id} type="range" min={relogio.inicio} max={relogio.fim} step={1} value={relogio.t}
+        id={id} type="range" min={relogio.inicio} max={relogio.fim} step={relogio.continuo ? 0.01 : 1} value={relogio.t}
         onChange={(e) => relogio.ir(Number(e.target.value))}
-        className="flex-1 accent-[hsl(var(--primary))]"
+        className="deslizante flex-1"
+        style={{ ['--progresso' as string]: `${((relogio.t - relogio.inicio) / (relogio.fim - relogio.inicio || 1)) * 100}%` }}
       />
     </div>
   );
@@ -63,10 +84,10 @@ export function Controles({ relogio, tocar = 'Ver andando', passo }: { relogio: 
       <button type="button" onClick={relogio.tocar} disabled={relogio.andando} className={`${BOTAO} bg-primary text-primary-foreground hover:opacity-90`}>
         <Play className="w-4 h-4" /> {tocar}
       </button>
-      <button type="button" onClick={relogio.avancar} disabled={relogio.terminou} className={`${BOTAO} bg-muted hover:bg-muted/80`}>
+      <button type="button" onClick={relogio.avancar} disabled={relogio.terminou || relogio.andando} className={`${BOTAO} bg-muted hover:bg-muted/80`}>
         <StepForward className="w-4 h-4" /> {passo}
       </button>
-      <button type="button" onClick={relogio.recomecar} disabled={relogio.t === relogio.inicio} className={`${BOTAO} bg-muted hover:bg-muted/80`}>
+      <button type="button" onClick={relogio.recomecar} disabled={relogio.t === relogio.inicio && !relogio.andando} className={`${BOTAO} bg-muted hover:bg-muted/80`}>
         <RotateCcw className="w-4 h-4" /> Recomeçar
       </button>
     </div>

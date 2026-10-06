@@ -29,7 +29,9 @@ function escapar(texto: string): string {
 const GREGAS = /(?<![\\a-zA-Z])(Delta|delta|alpha|beta|gamma|Gamma|theta|lambda|mu|pi|sigma|Sigma|omega|Omega|rho|phi|epsilon)(?![a-zA-Z])/g;
 
 function formula(latex: string, display: boolean): string {
-  const corrigido = latex.trim().replace(GREGAS, '\\$1');
+  // "0,2" virava "0, 2": para o KaTeX, vírgula é pontuação e ganha espaço.
+  // Entre dois algarismos, é vírgula decimal (padrão brasileiro).
+  const corrigido = latex.trim().replace(GREGAS, '\\$1').replace(/(\d),(?=\d)/g, '$1{,}');
   return katex.renderToString(corrigido, { displayMode: display, throwOnError: false, trust: false, strict: 'ignore' });
 }
 
