@@ -1,7 +1,7 @@
 'use client';
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { useRouter, useParams, useSearchParams } from 'next/navigation';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion, type Variants } from 'framer-motion';
 import { ChevronLeft, CheckCircle, XCircle, RotateCw, Trophy, Lightbulb, Loader2, RefreshCw, Sparkles, Plus, Trash2, Check, X } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
@@ -304,6 +304,41 @@ function GerarComIADialog({
   );
 }
 
+/* Tempo para o feedback do botão (pulso + anel) aparecer antes de trocar o cartão. */
+const ESPERA_FEEDBACK_MS = 400;
+const CURVA_FIRME = [0.2, 0.8, 0.2, 1] as const;
+/* Opção A, escolhida pelo Pablo em 05/10/2026: o novo cartão sobe da pilha e o
+   respondido sai para o lado da resposta (Errei esquerda, Acertei direita).
+   Só transform e opacity. Sob reduced-motion, só troca de opacidade. */
+function cartaoVariantes(reduzir: boolean): Variants {
+  return {
+    entra: { opacity: 0, y: reduzir ? 0 : 12 },
+    parado: { opacity: 1, y: 0, x: 0, rotate: 0, transition: { duration: reduzir ? 0.01 : 0.24, ease: CURVA_FIRME } },
+    sai: (lado: 'esq' | 'dir') => ({
+      opacity: 0,
+      x: reduzir ? 0 : lado === 'dir' ? 60 : -60,
+      rotate: reduzir ? 0 : lado === 'dir' ? 3 : -3,
+      transition: { duration: reduzir ? 0.01 : 0.26, ease: 'easeIn' },
+    }),
+  };
+}
+/* Cartões que ainda faltam, empilhados atrás do atual: mostra que a sessão
+   tem fim e quanto falta, sem número a mais na tela. */
+function PilhaDeCartoes({ restantes }: { restantes: number }) {
+  const camadas = Math.min(restantes, 2);
+  return (
+    <div aria-hidden className="absolute inset-x-0 top-0 h-[400px] pointer-events-none">
+      {/* A mais funda primeiro, para a de cima pintar por cima dela. */}
+      {Array.from({ length: camadas }, (_, k) => camadas - 1 - k).map((i) => (
+        <div
+          key={i}
+          className="absolute inset-0 rounded-[var(--radius-container)] surface-1"
+          style={{ transform: `translateY(${(i + 1) * 10}px) scale(${1 - (i + 1) * 0.04})`, opacity: i === 0 ? 0.7 : 0.4 }}
+        />
+      ))}
+    </div>
+  );
+}
 export default function FlashcardDeckPage() {
   const router = useRouter();
   const params = useParams();
@@ -326,6 +361,9 @@ export default function FlashcardDeckPage() {
   const [finished, setFinished] = useState(false);
   const [animating, setAnimating] = useState(false);
   const [lastAnswer, setLastAnswer] = useState<'correct' | 'wrong' | null>(null);
+  // Lado para onde o cartão respondido sai (Errei esquerda, Acertei direita).
+  // Fica guardado depois do reset de lastAnswer: o AnimatePresence lê no exit.
+  const [saida, setSaida] = useState<'esq' | 'dir'>('esq');
   const [showAddDialog, setShowAddDialog] = useState(false);
   const [showGerarDialog, setShowGerarDialog] = useState(false);
 
@@ -363,46 +401,59 @@ export default function FlashcardDeckPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [deckId, mode]);
 
-  const handleAnswer = async (acertou: boolean) => {
-    if (animating) return;
+  // Avança sem esperar a rede: o feedback vem na hora e a gravação segue em
+  // paralelo. Antes, rede lenta deixava o cartão parado depois do clique.
+  const handleAnswer = (acertou: boolean) => {
+    const currentCard = cards[currentIdx];
+    if (animating || !currentCard) return;
     setAnimating(true);
     setLastAnswer(acertou ? 'correct' : 'wrong');
+    setSaida(acertou ? 'dir' : 'esq');
     playSound(acertou ? 'acerto' : 'erro');
-    const currentCard = cards[currentIdx];
-    if (!currentCard) return;
-
-    try {
-      await fetch('/api/flashcards/progresso', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ cardId: currentCard.id, acertou }),
-      });
-
-      setSessionStats((s) => ({
-        acertos: acertou ? s.acertos + 1 : s.acertos,
-        erros: !acertou ? s.erros + 1 : s.erros,
-      }));
-
-      // Move to next card
-      setTimeout(() => {
-        if (currentIdx + 1 >= cards.length) {
-          setFinished(true);
-          playSound('sessaoConcluida');
-        } else {
-          setCurrentIdx((i) => i + 1);
-          setFlipped(false);
-          setShowHint(false);
-        }
-        setAnimating(false);
-        setLastAnswer(null);
-      }, 400);
-    } catch (e) {
-      toast.error('Erro ao salvar resposta');
+    setSessionStats((s) => ({
+      acertos: acertou ? s.acertos + 1 : s.acertos,
+      erros: !acertou ? s.erros + 1 : s.erros,
+    }));
+    fetch('/api/flashcards/progresso', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ cardId: currentCard.id, acertou }),
+    })
+      .then((res) => { if (!res.ok) throw new Error(String(res.status)); })
+      .catch(() => toast.error('Não salvou a resposta deste cartão. Confira a conexão.'));
+    setTimeout(() => {
+      if (currentIdx + 1 >= cards.length) {
+        setFinished(true);
+        playSound('sessaoConcluida');
+      } else {
+        setCurrentIdx((i) => i + 1);
+        setFlipped(false);
+        setShowHint(false);
+      }
       setAnimating(false);
       setLastAnswer(null);
+    }, ESPERA_FEEDBACK_MS);
+  };
+  // Teclado: Espaço vira, 1 = Errei, 2 = Acertei (só com o cartão virado).
+  const teclaRef = useRef<(e: KeyboardEvent) => void>(() => {});
+  teclaRef.current = (e: KeyboardEvent) => {
+    if (finished || !cards[currentIdx] || showAddDialog || showGerarDialog) return;
+    const alvo = e.target as HTMLElement | null;
+    if (alvo && (alvo.closest('input, textarea, select, [contenteditable="true"]') || (alvo.tagName === 'BUTTON' && e.key === ' '))) return;
+    if (e.key === ' ' || e.key === 'Enter') {
+      e.preventDefault();
+      setFlipped((f) => !f);
+    } else if (flipped && e.key === '1') {
+      handleAnswer(false);
+    } else if (flipped && e.key === '2') {
+      handleAnswer(true);
     }
   };
-
+  useEffect(() => {
+    const ouvir = (e: KeyboardEvent) => teclaRef.current(e);
+    window.addEventListener('keydown', ouvir);
+    return () => window.removeEventListener('keydown', ouvir);
+  }, []);
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -519,7 +570,8 @@ export default function FlashcardDeckPage() {
 
       {/* Card or Finished */}
       <div className="relative">
-      <AnimatePresence mode="popLayout">
+      {!finished && !loading && cards.length - currentIdx > 1 && <PilhaDeCartoes restantes={cards.length - currentIdx - 1} />}
+      <AnimatePresence mode="popLayout" custom={saida}>
         {finished ? (
           <motion.div
             key="finished"
@@ -596,16 +648,21 @@ export default function FlashcardDeckPage() {
         ) : currentCard ? (
           <motion.div
             key={currentCard.id}
-            initial={{ opacity: 0, x: shouldReduceMotion ? 0 : 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: shouldReduceMotion ? 0 : -50 }}
-            transition={{ duration: shouldReduceMotion ? 0.01 : 0.25 }}
+            custom={saida}
+            variants={cartaoVariantes(Boolean(shouldReduceMotion))}
+            initial="entra"
+            animate="parado"
+            exit="sai"
           >
             {/* 3D flip card */}
             <div
               className="relative w-full mb-6 cursor-pointer select-none"
               style={{ perspective: '1500px', minHeight: '400px' }}
               onClick={() => setFlipped((f) => !f)}
+              role="button"
+              tabIndex={0}
+              aria-pressed={flipped}
+              aria-label={flipped ? 'Virar para a pergunta' : 'Virar para ver a resposta'}
             >
               <motion.div
                 animate={{ rotateY: flipped ? 180 : 0 }}
@@ -619,7 +676,7 @@ export default function FlashcardDeckPage() {
                 transition={
                   shouldReduceMotion
                     ? { duration: 0.25, ease: 'easeOut' }
-                    : { duration: 0.6, type: 'spring', stiffness: 100, damping: 15 }
+                    : { duration: 0.42, ease: [0.2, 0.8, 0.2, 1] } // opção A (05/10/2026): firme, sem quique
                 }
                 style={{ transformStyle: 'preserve-3d', minHeight: '400px' }}
                 className="relative w-full"
@@ -641,7 +698,7 @@ export default function FlashcardDeckPage() {
                   <p className="font-reading type-title measure-reading text-center text-foreground">
                     {currentCard.frente}
                   </p>
-                  <div className="absolute bottom-4 left-0 right-0 text-center type-meta text-muted-foreground">Toque para ver a resposta</div>
+                  <div className="absolute bottom-4 left-0 right-0 text-center type-meta text-muted-foreground">Toque para ver a resposta <span className="hidden md:inline">· Espaço</span></div>
                   {currentCard.dica && (
                     <button
                       onClick={(e) => {
@@ -680,7 +737,7 @@ export default function FlashcardDeckPage() {
                       <span className="font-reading">{currentCard.dica}</span>
                     </div>
                   )}
-                  <div className="absolute bottom-4 left-0 right-0 text-center type-meta text-muted-foreground">Toque para virar</div>
+                  <div className="absolute bottom-4 left-0 right-0 text-center type-meta text-muted-foreground">Toque para virar <span className="hidden md:inline">· 1 errei · 2 acertei</span></div>
                 </div>
               </motion.div>
             </div>

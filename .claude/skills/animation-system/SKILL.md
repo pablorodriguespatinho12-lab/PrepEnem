@@ -18,7 +18,7 @@ não volte para canvas nem para rAF.
 | Entrada de listas (cards de deck/matéria) | `initial={{ opacity: 0, y: 20 }}` → `animate={{ opacity: 1, y: 0 }}`, stagger via `transition={{ delay: idx * 0.04 }}` |
 | Troca de tela/etapa (`AnimatePresence mode="wait"`) | `initial={{ opacity: 0, x: 30 }}` → `exit={{ opacity: 0, x: 30 }}` |
 | Transição de questão (Treino/Simulado) | `initial={{ opacity: 0, x: 50 }}` → `exit={{ opacity: 0, x: -50 }}`, `duration: 0.25` |
-| Flip 3D de flashcard | `animate={{ rotateY: flipped ? 180 : 0 }}`, `transition={{ duration: 0.6, type: 'spring', stiffness: 100, damping: 15 }}`, `transformStyle: 'preserve-3d'` + `backfaceVisibility: 'hidden'` nas duas faces |
+| Flip 3D de flashcard (opção A, Pablo 05/10/2026) | `animate={{ rotateY: flipped ? 180 : 0 }}`, `transition={{ duration: 0.42, ease: [0.2, 0.8, 0.2, 1] }}` (firme, sem quique de mola), `transformStyle: 'preserve-3d'` + `backfaceVisibility: 'hidden'` nas duas faces. Pilha de até 2 cartões atrás (`PilhaDeCartoes`); o próximo sobe dela (`y: 12`) e o respondido sai para o lado da resposta (Errei esquerda, Acertei direita) via `custom` no `AnimatePresence` |
 | Hover em card clicável | `whileHover={{ y: -6, transition: { duration: 0.2 } }}` |
 | Botão de ação | `whileHover={{ scale: 1.05 }}` `whileTap={{ scale: 0.95 }}` |
 | Barra de progresso | `initial={{ width: 0 }}` → `animate={{ width: '${pct}%' }}`, `duration: 0.6` |
@@ -55,8 +55,8 @@ O flip é a **única exceção** — ele continua animando sob reduced-motion:
 
 ```ts
 transition={shouldReduceMotion
-  ? { duration: 0.25, ease: 'easeOut' }        // mais curto, sem bounce
-  : { duration: 0.6, type: 'spring', stiffness: 100, damping: 15 }}
+  ? { duration: 0.25, ease: 'easeOut' }        // mais curto
+  : { duration: 0.42, ease: [0.2, 0.8, 0.2, 1] }}
 ```
 
 Motivo: ali a rotação **é** o feedback do gesto (a carta virou, o conteúdo

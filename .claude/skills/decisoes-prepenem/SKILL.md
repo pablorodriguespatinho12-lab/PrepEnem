@@ -130,6 +130,9 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   (`{ duration: 0.25, ease: 'easeOut' }`), mas continua visível.
 - **Partículas de fundo e parallax respeitam sempre** — esses são
   decorativos e são exatamente o tipo de movimento que a diretriz mira.
+- **Flashcard é a opção A, escolhida pelo Pablo em 05/10/2026** (entre A "flip
+  firme" e B "revelar embaixo, pergunta fica na tela"): flip 3D de 0,42 s sem
+  mola, pilha atrás, saída para o lado da resposta, Espaço vira e 1/2 respondem.
 - Detalhes de implementação e padrões em uso: [[animation-system]].
 
 ## Taxonomia de temas

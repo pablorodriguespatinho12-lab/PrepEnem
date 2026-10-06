@@ -28,7 +28,7 @@ etc. — ver `lib/theme-colors.ts` para as cores por matéria).
 ## Fluxo de UX (já implementado em `app/flashcards/[deckId]/page.tsx`)
 
 1. Card mostra só a **frente** — cor de fundo = cor da matéria.
-2. Usuário clica no card → flip 3D (`rotateY`, spring, ~600ms) revela o
+2. Usuário clica no card → flip 3D (`rotateY`, 0,42 s sem mola, opção A de 05/10/2026; Espaço também vira) revela o
    **verso** com a definição.
 3. Aparecem os botões **Acertei** / **Errei**.
 4. "Errei" → `POST /api/flashcards/progresso` com `acertou: false` →
