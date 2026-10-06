@@ -23,6 +23,12 @@ describe('lições escritas', () => {
       expect(validada).not.toBeNull();
       expect(validada!.construcao).toHaveLength(licao.construcao.length);
       expect(validada!.exercicios).toHaveLength(licao.exercicios.length);
+      // Lacuna cuja resposta não bate com o passo vira passo comum sem aviso;
+      // gabarito de escolha pode ser trocado pelo conferidor. Nada disso pode
+      // acontecer numa lição escrita à mão.
+      const lacunas = (l: typeof licao) => l.exemplos.map((e) => e.passos.filter((p) => p.lacuna).length);
+      expect(lacunas(validada!)).toEqual(lacunas(licao));
+      expect(validada!.exercicios.map((e) => e.resposta)).toEqual(licao.exercicios.map((e) => e.resposta));
     });
 
     test(`${id}: todo desenho é válido`, () => {
