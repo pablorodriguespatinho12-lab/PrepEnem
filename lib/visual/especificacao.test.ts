@@ -2,6 +2,24 @@ import { describe, expect, test } from 'vitest';
 import { validarVisual } from './especificacao';
 
 describe('validarVisual', () => {
+  test('processo: etapas com o que entra e sai, e ligação entre elas', () => {
+    const v = validarVisual({
+      tipo: 'processo', titulo: 'Fotossíntese',
+      etapas: [
+        { nome: 'Fase clara', entra: ['luz', 'H₂O'], sai: ['O₂'] },
+        { nome: 'Fase escura', entra: ['CO₂'], sai: ['glicose'] },
+      ],
+      ligacoes: [{ de: 0, para: 1, leva: 'ATP e NADPH' }, { de: 0, para: 9, leva: 'x' }],
+    });
+    expect(v).toMatchObject({ tipo: 'processo', etapas: [{ nome: 'Fase clara', entra: ['luz', 'H₂O'], sai: ['O₂'] }, { nome: 'Fase escura' }], ligacoes: [{ de: 0, para: 1, leva: 'ATP e NADPH' }] });
+    expect(v && v.tipo === 'processo' && v.ligacoes).toHaveLength(1);
+    expect(validarVisual({ tipo: 'processo', etapas: [] })).toBeNull();
+  });
+  test('processo forçado (etapa vazia, teste de 06/10/2026) é descartado', () => {
+    expect(validarVisual({ tipo: 'processo', etapas: [{ nome: 'Troca gasosa', entra: ['O₂'], sai: ['CO₂'] }, { nome: 'Sustentação', entra: [], sai: [] }] })).toBeNull();
+    expect(validarVisual({ tipo: 'processo', etapas: [{ nome: 'Só nome', entra: ['A'], sai: [] }] })).toBeNull();
+    expect(validarVisual({ tipo: 'processo', etapas: [{ nome: 'Respiração', entra: ['glicose', 'O₂'], sai: ['CO₂', 'ATP'] }] })).not.toBeNull();
+  });
   test('fatias: função legível, intervalo e no máximo 50 fatias', () => {
     expect(validarVisual({ tipo: 'fatias', expr: 'x^2', x: [0, 3], maxFatias: 30 })).toMatchObject({ tipo: 'fatias', expr: 'x^2', x: [0, 3], maxFatias: 30 });
     expect(validarVisual({ tipo: 'fatias', expr: 'x^2', x: [0, 3], maxFatias: 500 })).toMatchObject({ maxFatias: 50 });

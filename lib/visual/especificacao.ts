@@ -106,7 +106,17 @@ export interface VisualFatias {
   unidadeX?: string;
   unidadeY?: string;
 }
-export type Visual = VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias;
+/* Processo em etapas (fotossíntese, respiração, digestão): o que entra, o
+   que sai e o que passa de uma etapa para a outra. Pedido do Pablo em
+   06/10/2026: "mostrar esse processo em desenho, não em texto". Animado:
+   as moléculas andam pelas setas. */
+export interface VisualProcesso {
+  tipo: 'processo';
+  titulo?: string;
+  etapas: { nome: string; entra: string[]; sai: string[] }[];
+  ligacoes: { de: number; para: number; leva: string }[];
+}
+export type Visual = VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso;
 
 const MAX_FUNCOES = 4;
 const MAX_PONTOS = 8;
@@ -251,8 +261,27 @@ function fatias(v: Record<string, unknown>): VisualFatias | null {
   const maxFatias = Math.min(MAX_FATIAS, Math.max(2, Math.round(Number(v.maxFatias) || 20)));
   return { tipo: 'fatias', titulo: texto(v.titulo), expr: v.expr, x, maxFatias, unidadeX: texto(v.unidadeX, 12), unidadeY: texto(v.unidadeY, 12) };
 }
+const MAX_ETAPAS = 4;
+const MAX_MOLECULAS = 4;
+function processo(v: Record<string, unknown>): VisualProcesso | null {
+  const nomes = (l: unknown) => lista(l).map((x) => texto(x, 24)).filter((x): x is string => Boolean(x)).slice(0, MAX_MOLECULAS);
+  const etapas = lista(v.etapas).map(objeto)
+    .map((e) => ({ nome: texto(e.nome, 30), entra: nomes(e.entra), sai: nomes(e.sai) }))
+    .filter((e): e is { nome: string; entra: string[]; sai: string[] } => Boolean(e.nome))
+    .slice(0, MAX_ETAPAS);
+  // Processo forçado onde não há processo (a IA desenhou "Sustentação" sem nada
+  // entrando nem saindo): melhor sem desenho do que com um que confunde.
+  if (etapas.length === 0 || etapas.some((e) => e.entra.length === 0 && e.sai.length === 0)) return null;
+  if (etapas.length === 1 && (etapas[0].entra.length === 0 || etapas[0].sai.length === 0)) return null;
+  const indice = (n: unknown) => typeof n === 'number' && Number.isInteger(n) && n >= 0 && n < etapas.length;
+  const ligacoes = lista(v.ligacoes).map(objeto)
+    .filter((l) => indice(l.de) && indice(l.para) && l.de !== l.para && texto(l.leva, 30))
+    .slice(0, MAX_ETAPAS)
+    .map((l) => ({ de: l.de as number, para: l.para as number, leva: texto(l.leva, 30)! }));
+  return { tipo: 'processo', titulo: texto(v.titulo), etapas, ligacoes };
+}
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {
-  grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias,
+  grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias, processo,
 };
 
 /* Devolve o visual limpo, ou null se não der para desenhar com segurança. */
@@ -272,6 +301,8 @@ export const FORMATO_VISUAL_PARA_IA = `"visual" é um destes objetos (ou null). 
 - Cena (algo que MUDA COM O TEMPO: movimento, queda, lançamento, crescimento, juros, decaimento, reservatório): {"tipo":"cena","titulo":"Bola solta de 45 m","x":[0,3],"unidadeX":"s","unidadeY":"m","rastro":true,"veiculos":[{"veiculo":"bola","nome":"h","expr":"45-5*x^2","rotulo":"bola","cor":"a"}]}
   O app anima o objeto pelo relógio e desenha o gráfico junto. "veiculo" é EXATAMENTE um destes; o nome real (pena, pedra, foguete) vai em "rotulo". "carro" ou "moto" andam para o lado (posição); "bola", "balao" ou "vela" sobem e descem (altura ou quantidade). x é o tempo em passos INTEIROS, de 0 até no máximo 20. Até 2 objetos, na mesma direção. "rastro": true quando o formato da curva é o ponto. "velocimetro": true mostra a velocidade no instante ao lado da posição (movimento acelerado). Calcule expr em cada x inteiro e confira com o texto. "nome" é UMA letra (f, g, h). expr dá ONDE o objeto está (posição, altura ou quantidade) no instante x, nunca a velocidade: numa queda de 45 m a altura DIMINUI, "45-5*x^2"; um corpo lançado para cima sobe e desce, "20*x-5*x^2". O relógio termina quando o objeto chega ao chão (altura 0), não depois.
 - Área sob a curva como soma de fatias (distância a partir da velocidade, energia a partir da potência): {"tipo":"fatias","titulo":"...","expr":"2*x","x":[0,4],"maxFatias":20,"unidadeX":"s","unidadeY":"m/s"}
+- Processo em etapas (biologia, química, geografia: o que entra, o que sai, o que passa de uma etapa à outra): {"tipo":"processo","titulo":"Fotossíntese","etapas":[{"nome":"Fase clara","entra":["luz","H₂O"],"sai":["O₂"]},{"nome":"Fase escura","entra":["CO₂"],"sai":["glicose"]}],"ligacoes":[{"de":0,"para":1,"leva":"ATP e NADPH"}]}
+  Até 4 etapas, só as moléculas ou coisas principais (até 4 de cada lado). O app anima: as coisas andam pelas setas.
 - Vetores (forças, velocidade, deslocamento): {"tipo":"vetores","vetores":[{"de":[0,0],"para":[3,0],"rotulo":"F₁","cor":"a"}],"pontos":[{"x":0,"y":0,"rotulo":"corpo"}]}
 "cor": "a", "b" ou "c" para destacar (use a MESMA cor no texto: escreva o termo como [[a:termo]]), "erro" só para o caminho errado do aluno.
 REGRAS DE TEXTO: toda fórmula entre $...$ (nunca \\frac solto fora de $). [[a:termo]] é só para PALAVRAS fora da fórmula ("a [[a:velocidade]] é a inclinação"); nunca dentro de $...$ e nunca em volta de símbolo.`;

@@ -111,6 +111,13 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   resposta de cara (Bastani et al. 2025: IA que entrega piora o aprendizado),
   corrige sem concordar para agradar e muda de ângulo em vez de repetir.
   Regras e fontes no topo de `lib/tutor/prompts.ts`.
+- **Explicação curta e processo desenhado (06/10/2026):** a "ideia" da
+  explicação tem 1 ou 2 frases práticas ("A planta precisa de energia.
+  Carboidrato é energia."), 2 a 4 passos opcionais. Processo (fotossíntese,
+  respiração, digestão) vira o desenho `processo`, animado; processo forçado
+  (etapa sem nada entrando nem saindo) é descartado pelo validador. O texto
+  antigo das questões importadas (com emoji) fica atrás de "Ver texto completo",
+  sem emoji (`lib/explicacao-antiga.ts`).
 - **A IA pede cena (06/10/2026):** questão sobre algo que muda no tempo abre
   com uma `cena`. Medido com 3 questões de Física: antes, só "transformação";
   depois, a queda dos corpos chega com duas bolas caindo. O validador conserta

@@ -720,3 +720,21 @@ html [data-sonner-toaster][data-theme] {
 .deslizante:hover::-webkit-slider-thumb { transform: scale(1.12); }
 .deslizante:active::-webkit-slider-thumb { transform: scale(1.2); }
 .deslizante:focus-visible { box-shadow: 0 0 0 3px hsl(var(--ring) / 0.35); }
+/* Desenho de processo (components/visual/processo.tsx): pontos que descem pelas
+   setas e andam entre as etapas, em laço. Só transform e opacity. */
+@keyframes fluxo-desce {
+  0% { transform: translateY(-8px); opacity: 0; }
+  25% { opacity: 1; }
+  100% { transform: translateY(26px); opacity: 0; }
+}
+@keyframes fluxo-anda {
+  0% { transform: translateX(0%); opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+.fluxo-desce { animation: fluxo-desce 1.6s linear infinite; }
+.fluxo-anda { animation: fluxo-anda 2.2s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .fluxo-desce, .fluxo-anda { animation: none; opacity: 1; }
+}

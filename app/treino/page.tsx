@@ -16,6 +16,7 @@ import { fireConfetti, spawnCorrectParticles, flashScreen } from '@/components/a
 import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
 import { ETAPA_LABEL, ehExemploResolvido, etapaDaQuestao } from '@/lib/treino-etapas';
 import { ExplicacaoTutor } from '@/components/tutor/explicacao-tutor';
+import { TextoCompleto } from '@/components/tutor/texto-completo';
 import { VisualDesenho } from '@/components/visual/visual-desenho';
 import type { Visual } from '@/lib/visual/especificacao';
 import { playSound } from '@/lib/sounds';
@@ -1009,16 +1010,14 @@ export default function TreinoPage() {
         <div className="space-y-4">
           <div className="surface-1 rounded-[var(--radius-surface)] p-5 md:p-6 border-l-[3px] border-l-primary">
             <p className="type-caption text-muted-foreground mb-1.5">Exemplo resolvido · resposta {currentQ.respostaCorreta}</p>
-            <p className="type-meta text-muted-foreground mb-4">
-              Leia como a resposta é construída. As próximas você resolve sozinho.
+            <p className="type-meta text-muted-foreground">
+              Veja por que a resposta é essa. As próximas você resolve sozinho.
             </p>
-            {currentQ.explicacao && (
-              <div className="prose-reading">
-                <MathText text={currentQ.explicacao} />
-              </div>
-            )}
           </div>
-          <ExplicacaoTutor questao={currentQ} respostaDada={null} iniciarSozinha={!currentQ.explicacao} />
+          {/* A explicação curta com desenho vem primeiro; o texto antigo da
+              questão fica atrás de um clique (Pablo, 06/10/2026). */}
+          <ExplicacaoTutor questao={currentQ} respostaDada={null} iniciarSozinha />
+          {currentQ.explicacao && <TextoCompleto texto={currentQ.explicacao} />}
           <button
             onClick={nextQuestion}
             className="w-full py-3.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium text-body shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3 flex items-center justify-center gap-2"
@@ -1086,11 +1085,7 @@ export default function TreinoPage() {
                 {result?.acertou ? 'Correto' : 'Incorreto'}
               </span>
             </div>
-            {result?.explicacao && (
-              <div className="prose-reading">
-                <MathText text={result.explicacao} />
-              </div>
-            )}
+            {result?.explicacao && <TextoCompleto texto={result.explicacao} />}
           </motion.div>
 
           {/* Explicação visual em passos + conversa de dúvida. Errou: começa sozinha. */}

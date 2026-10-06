@@ -76,7 +76,7 @@ ${SO_O_QUE_ESTA_ESCRITO}
 ESTRUTURA (devolva SOMENTE JSON neste formato):
 {
   "conferencia": "ESCREVA PRIMEIRO, antes de tudo: cada conta da resolução refeita por extenso, número por número (ex.: 'p(5) = -(25) + 50 + 24 = 49; -(t-5)^2 + 49 = -t^2 + 10t - 25 + 49 = -t^2 + 10t + 24, confere'). Se alguma conta não bater, corrija antes de escrever os passos. Este campo não aparece para o aluno.",
-  "ideia": "uma frase com a ideia-chave da questão",
+  "ideia": "1 ou 2 frases CURTAS e práticas, como um lembrete que se decora: o que a questão quer e por que a resposta é aquela. Ex.: 'A planta precisa de energia. Carboidrato é energia: sem ele, ela morre.'",
   "pecas": [{"termo": "...", "significado": "uma frase"}],
   "passos": [{"titulo": "até 6 palavras", "texto": "até 3 frases", "visual": null}],
   "seuErro": ${errou ? '"até 3 frases: UM caminho concreto que leva à alternativa marcada (em cálculo, a conta que dá o número dela) e onde ele desvia. Nunca liste hipóteses com ou"' : 'null'},
@@ -85,8 +85,10 @@ ESTRUTURA (devolva SOMENTE JSON neste formato):
 
 REGRAS DA ESTRUTURA:
 - "pecas": de 0 a 3 termos que o aluno precisa conhecer ANTES dos passos (pré-treino). Só o que for realmente novo.
-- "passos": de 3 a 6. Em Matemática, Física e Química, o PRIMEIRO passo tem visual (cena, gráfico, reta, vetores, tabela ou transformação): o aluno vê antes de ler.
-- Concreto antes do símbolo (pedido do Pablo, 06/10/2026: "coisas visualizáveis"): se a questão fala de algo que muda com o tempo (um corpo que cai ou anda, uma população, um saldo, um remédio no sangue), o PRIMEIRO visual é uma "cena" com esse objeto, e só depois vem a conta. Se não há tempo envolvido, prefira um gráfico ou vetores a uma transformação no primeiro passo. Em Linguagens e Humanas, visual só "tabela", e só quando ela compara de verdade (alternativa × o trecho que a confirma ou derruba); senão, null. Depois, visual só onde ajudar de verdade.
+- CURTO (Pablo, 06/10/2026: "resposta curta, curta mesmo, rápida e prática"): a "ideia" sozinha já explica a questão; os passos são para quem quer ver mais.
+- "passos": de 2 a 4. Em Matemática, Física, Química e Biologia, o PRIMEIRO passo tem visual (cena, processo, gráfico, reta, vetores, tabela ou transformação): o aluno vê antes de ler.
+- Se a questão envolve um PROCESSO (o que entra, o que acontece, o que sai: fotossíntese, respiração celular, digestão, ciclo da água, cadeia alimentar, eletrólise), o PRIMEIRO visual é um "processo" com as etapas e só as moléculas ou coisas principais, nunca um parágrafo descrevendo.
+- Concreto antes do símbolo (pedido do Pablo, 06/10/2026: "coisas visualizáveis"): se a questão fala de algo que muda com o tempo (um corpo que cai ou anda, uma população, um saldo, um remédio no sangue), o PRIMEIRO visual é uma "cena" com esse objeto, e só depois vem a conta. Se não há tempo envolvido, prefira um gráfico ou vetores a uma transformação no primeiro passo. Em Linguagens e Humanas, visual só "tabela" ou "processo" (etapas de um fenômeno, como um ciclo econômico), e só quando compara ou mostra de verdade (alternativa × o trecho que a confirma ou derruba); senão, null. Depois, visual só onde ajudar de verdade.
 - Ordem dos passos: o que a questão pede de fato → o raciocínio, um passo por vez, com o porquê → o princípio por trás → como reconhecer uma questão parecida.${errou ? '\n- O aluno errou: "seuErro" vem primeiro na tela, então seja específico sobre a alternativa que ele marcou.' : ''}
 - Teste de 05/10/2026: em cálculo, a IA escrevia "O resultado é 2" sem a conta e usava fórmula pronta. Por isso: passo de cálculo mostra a conta com os números ($2L \\cdot H + 2W \\cdot H$ vira $2(2L \\cdot H) + \\dots$), nunca só o resultado. E se algum passo usa fórmula, um passo ANTES dele tem título começando com "De onde vem".
 - Confira cada número do visual com a conta do texto. Se um gráfico mostra uma raiz em x=2, o texto e a conta dizem 2.

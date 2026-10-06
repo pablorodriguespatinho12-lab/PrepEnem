@@ -56,6 +56,17 @@ const EXEMPLOS: { nome: string; bruto: unknown }[] = [
       pontos: [{ x: 0, y: 0, rotulo: 'bloco' }],
     },
   },
+  {
+    nome: 'Processo: fotossíntese (animado)',
+    bruto: {
+      tipo: 'processo', titulo: 'Fotossíntese',
+      etapas: [
+        { nome: 'Fase clara', entra: ['luz', 'H₂O'], sai: ['O₂'] },
+        { nome: 'Fase escura', entra: ['CO₂'], sai: ['glicose'] },
+      ],
+      ligacoes: [{ de: 0, para: 1, leva: 'ATP e NADPH' }],
+    },
+  },
 ];
 
 export function SecaoVisual() {

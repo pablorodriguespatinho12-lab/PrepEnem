@@ -8,6 +8,7 @@ import { Cena } from './cena';
 import { Roda } from './roda';
 import { Retangulo } from './retangulo';
 import { Fatias } from './fatias';
+import { Processo } from './processo';
 function Reta({ v }: { v: VisualReta }) {
   const altura = 110;
   const meio = 56;
@@ -132,6 +133,7 @@ export function VisualDesenho({ visual }: { visual: Visual }) {
       {visual.tipo === 'roda' && <Roda v={visual} />}
       {visual.tipo === 'retangulo' && <Retangulo v={visual} />}
       {visual.tipo === 'fatias' && <Fatias v={visual} />}
+      {visual.tipo === 'processo' && <Processo v={visual} />}
     </figure>
   );
 }
