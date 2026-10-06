@@ -70,7 +70,14 @@ function ExercicioView({ exercicio, numero, total, onFim }: { exercicio: Exercic
   const [dica, setDica] = useState(false);
   return (
     <div className="space-y-4">
-      <p className="type-caption text-muted-foreground" data-numeric>Exercício {numero} de {total}</p>
+      <p className="type-caption text-muted-foreground flex flex-wrap items-center gap-2" data-numeric>
+        Exercício {numero} de {total}
+        {exercicio.nivelAcima && (
+          <span className="rounded-[var(--radius-data)] bg-primary/10 px-2 py-0.5 font-semibold text-primary-text">
+            Nível acima · estilo {exercicio.nivelAcima.estilo}
+          </span>
+        )}
+      </p>
       <MathText text={exercicio.enunciado} className="font-reading font-medium" />
       {exercicio.visual && <VisualDesenho visual={exercicio.visual} />}
       {resultado === null && !dica && (

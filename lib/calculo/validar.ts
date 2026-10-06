@@ -61,7 +61,12 @@ function exercicio(bruto: unknown): Exercicio | null {
   const fim = resolucao.map((p) => p.texto).join(' ');
   const conferida = conferirGabarito(resposta, fim);
   if (!conferida) return null;
-  return { enunciado, visual: validarVisual(e.visual), resposta: conferida.resposta, dica: txt(e.dica, 400) ?? 'Releia o resumo da lição.', resolucao };
+  const estilo = txt(obj(e.nivelAcima).estilo, 40);
+  return {
+    enunciado, visual: validarVisual(e.visual), resposta: conferida.resposta,
+    dica: txt(e.dica, 400) ?? 'Releia o resumo da lição.', resolucao,
+    ...(estilo ? { nivelAcima: { estilo } } : {}),
+  };
 }
 
 /* Exige a estrutura da lição: construção, 3 exemplos com o fading (o 1º sem

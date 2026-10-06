@@ -30,6 +30,10 @@ export interface Exercicio {
   resposta: Resposta;
   dica: string;
   resolucao: { texto: string; porque: string }[];
+  /* Um degrau acima do ENEM (pedido do Pablo, 06/10/2026): questão original no
+     estilo de ITA, Fuvest, Unicamp, resolvível só com o que a trilha ensinou
+     até aqui. "estilo" nomeia a banca de referência; nunca é questão real. */
+  nivelAcima?: { estilo: string };
 }
 
 export interface ConteudoLicao {
