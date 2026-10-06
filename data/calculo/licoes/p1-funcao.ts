@@ -2,13 +2,38 @@ import type { ConteudoLicao } from '@/lib/calculo/tipos';
 
 export const P1_FUNCAO: ConteudoLicao = {
   gancho: {
-    pergunta: 'Uma corrida de táxi custa R$ 5 para entrar mais R$ 2 por km. Quanto custa uma corrida de 3 km? Do que o preço depende?',
-    ideia: 'Custa 5 + 2·3 = R$ 11. O preço depende só da distância: escolhida a distância, o preço fica decidido. Uma coisa que fica decidida por outra é uma função.',
+    pergunta: 'Um carro já está no km 2 da estrada e anda 5 km a cada minuto. Em que km ele vai estar daqui a 3 minutos?',
+    ideia: 'Em 3 minutos ele anda 5 + 5 + 5 = 15 km. Somando os 2 km onde ele já estava: km 17. Repare que você só precisou saber quantos minutos passaram. Escolhido o tempo, o lugar fica decidido. Uma coisa que fica decidida por outra é uma função.',
   },
   construcao: [
     {
+      titulo: 'Antes de tudo: o que é pré-cálculo',
+      texto: 'Cálculo é a matemática das coisas que mudam: quanto um carro anda, quão rápido um preço sobe. Para medir mudança, primeiro é preciso **descrever** uma coisa que depende de outra, como o lugar do carro, que depende do tempo. Essa descrição se chama **função**. Pré-cálculo é aprender a ler, desenhar e mexer em funções. Todo o resto da trilha é feito delas.',
+    },
+    {
+      titulo: 'O carro na estrada',
+      texto: 'O carro começa no km 2 e anda 5 km por minuto. Depois de 1 minuto: 2 + 5 = 7. Depois de 2: 2 + 10 = 12. A regra é sempre a mesma: **5 vezes os minutos, mais 2**. Chamando os minutos de $x$, a regra fica curta: $f(x) = 5x + 2$. Aqui o $x$ **não é o carro**: o $x$ é o **relógio**. E $f(x)$ é o km onde o carro está naquela hora. Aperte "Mais 1 min" e veja o número mudar junto com o carro.',
+      visual: {
+        tipo: 'cena', titulo: 'Mexa no relógio: o carro anda pela regra f(x) = 5x + 2',
+        x: [0, 4], unidadeX: 'min', unidadeY: 'km',
+        veiculos: [{ veiculo: 'carro', nome: 'f', expr: '5*x+2', cor: 'a' }],
+      },
+    },
+    {
+      titulo: 'Chega a moto',
+      texto: 'Agora uma moto sai do km 0 e anda 7 km por minuto: $g(x) = 7x$. O **relógio é o mesmo** $x$ para os dois; o que muda é a regra. Cada veículo tem a sua função. Aperte "Ver andando": no minuto 1 os dois estão no km 7, e é aí que a moto alcança o carro. No gráfico, esse encontro é o lugar onde as duas linhas se cruzam. O gráfico é o filme inteiro numa foto só.',
+      visual: {
+        tipo: 'cena', titulo: 'Carro f(x) = 5x + 2 e moto g(x) = 7x, no mesmo relógio',
+        x: [0, 4], unidadeX: 'min', unidadeY: 'km',
+        veiculos: [
+          { veiculo: 'carro', nome: 'f', expr: '5*x+2', cor: 'a' },
+          { veiculo: 'moto', nome: 'g', expr: '7*x', cor: 'b' },
+        ],
+      },
+    },
+    {
       titulo: 'Uma máquina de entrada e saída',
-      texto: 'Pense numa máquina: entra a distância, sai o preço. Uma **função** é uma regra assim: para cada entrada, ela dá uma saída.',
+      texto: 'O táxi funciona igual ao carro: custa R$ 5 para entrar mais R$ 2 por km. Pense numa máquina: entra a distância, sai o preço. Uma **função** é uma regra assim: para cada entrada, ela dá uma saída.',
       visual: { tipo: 'tabela', titulo: 'Táxi: entra a distância, sai o preço', cabecalho: ['entra (km)', 'sai (R$)'], linhas: [['1', '7'], ['2', '9'], ['3', '11'], ['10', '25']] },
     },
     {
@@ -38,7 +63,7 @@ export const P1_FUNCAO: ConteudoLicao = {
       texto: 'A **imagem** é tudo o que pode sair. No táxi, a corrida mais barata é a de 0 km, que custa 5. Então a imagem é todo preço a partir de 5: $f(x) \\ge 5$.',
     },
   ],
-  resumo: 'Uma função é uma regra que dá **uma** saída para cada entrada. $f(x)$ é a saída quando entra $x$. Domínio: o que pode entrar. Imagem: o que pode sair.',
+  resumo: 'O carro: $f(x) = 5x + 2$, onde $x$ é o relógio e $f(x)$ é o km. Uma função é uma regra que dá **uma** saída para cada entrada. $f(x)$ é a saída quando entra $x$. Domínio: o que pode entrar. Imagem: o que pode sair.',
   exemplos: [
     {
       enunciado: 'Para $f(x) = 3x - 1$, calcule $f(4)$.',

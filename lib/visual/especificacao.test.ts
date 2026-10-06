@@ -2,6 +2,21 @@ import { describe, expect, test } from 'vitest';
 import { validarVisual } from './especificacao';
 
 describe('validarVisual', () => {
+  test('cena: aceita carro e moto, descarta veículo sem regra legível', () => {
+    const v = validarVisual({
+      tipo: 'cena', x: [0, 4], unidadeX: 'min', unidadeY: 'km',
+      veiculos: [
+        { veiculo: 'carro', nome: 'f', expr: '5*x+2', cor: 'a' },
+        { veiculo: 'moto', nome: 'g', expr: '7*x', cor: 'b' },
+        { veiculo: 'moto', nome: 'h', expr: 'alert(1)' },
+      ],
+    });
+    expect(v).toMatchObject({ tipo: 'cena', x: [0, 4], veiculos: [{ veiculo: 'carro', nome: 'f' }, { veiculo: 'moto', nome: 'g' }] });
+    expect(v && v.tipo === 'cena' && v.veiculos).toHaveLength(2);
+  });
+  test('cena: recusa relógio que não é de números inteiros', () => {
+    expect(validarVisual({ tipo: 'cena', x: [0, 2.5], veiculos: [{ veiculo: 'carro', nome: 'f', expr: 'x' }] })).toBeNull();
+  });
   test('aceita gráfico válido e descarta a função ilegível', () => {
     const v = validarVisual({
       tipo: 'grafico', x: [-4, 4],

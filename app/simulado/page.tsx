@@ -20,6 +20,9 @@ type Phase = 'config' | 'exam' | 'result';
 // Limiares de dado esparso (decisão travada, ver skill decisoes-prepenem):
 // <5 questões não mostra %, 5-15 mostra com indicador de baixa confiança.
 const MIN_QUESTOES_PARA_TAXA = 5;
+const MATERIAS_SIMULADO = Object.keys(materiaColors);
+const TAMANHOS_SIMULADO = [10, 15, 20];
+const MINUTOS_POR_QUESTAO = 3;
 const LIMIAR_BAIXA_CONFIANCA = 15;
 
 function formatTime(seconds: number) {
@@ -62,9 +65,12 @@ export default function SimuladoPage() {
   const [checkingSession, setCheckingSession] = useState(true);
 
   // Config
-  const [totalQ, setTotalQ] = useState(90);
+  // Simulado semanal curto, de uma matéria (pedido do Pablo, 06/10/2026):
+  // 10, 15 ou 20 questões, 3 minutos por questão como no ENEM.
+  const [totalQ, setTotalQ] = useState(10);
+  const [materia, setMateria] = useState(MATERIAS_SIMULADO[0]);
   const [useTimer, setUseTimer] = useState(true);
-  const [timerHours, setTimerHours] = useState(5);
+  const timerHours = (totalQ * MINUTOS_POR_QUESTAO) / 60;
 
   // Exam
   const [questions, setQuestions] = useState<any[]>([]);
@@ -97,7 +103,6 @@ export default function SimuladoPage() {
           setTimeLeft(data.session.timeLeft ?? 0);
           setTimeElapsed(data.session.timeElapsed ?? 0);
           setUseTimer(data.session.useTimer ?? false);
-          setTimerHours(data.session.timerHours ?? 5);
           setSessionId(data.session.id);
           setIsPaused(true); // Start paused so user can resume
           setPhase('exam');
@@ -196,7 +201,7 @@ export default function SimuladoPage() {
       const res = await fetch('/api/simulado/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ totalQuestoes: totalQ }),
+        body: JSON.stringify({ totalQuestoes: totalQ, materias: [materia] }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error);
@@ -315,10 +320,10 @@ export default function SimuladoPage() {
       <div className="p-4 md:p-8 max-w-3xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <h1 className="font-display type-headline font-bold tracking-tight mb-2">
-            Simulado ENEM
+            Simulado da semana
           </h1>
           <p className="type-body text-muted-foreground mb-8">
-            Configure e inicie seu simulado. Sexta-feira é dia de simulado!
+            Uma matéria, poucas questões, uma vez por semana. Começa pelas fáceis.
           </p>
         </motion.div>
 
@@ -328,14 +333,33 @@ export default function SimuladoPage() {
           transition={{ delay: 0.1 }}
           className="surface-1 rounded-[var(--radius-surface)] p-6 md:p-8 space-y-6"
         >
+          {/* Matéria */}
+          <div>
+            <label className="type-meta font-medium mb-2 block">Matéria</label>
+            <div className="flex flex-wrap gap-2">
+              {MATERIAS_SIMULADO.map((m) => (
+                <button
+                  key={m}
+                  onClick={() => setMateria(m)}
+                  aria-pressed={materia === m}
+                  className={`px-4 py-2 rounded-[var(--radius-control)] type-meta font-medium t-colors ${
+                    materia === m ? 'bg-primary text-primary-foreground shadow-elev-1' : 'bg-muted hover:bg-muted/80'
+                  }`}
+                >
+                  {m}
+                </button>
+              ))}
+            </div>
+          </div>
           {/* Número de questões */}
           <div>
-            <label className="type-meta font-medium mb-2 block">Número de Questões</label>
+            <label className="type-meta font-medium mb-2 block">Número de questões</label>
             <div className="flex gap-3">
-              {[45, 90, 135, 180].map((n) => (
+              {TAMANHOS_SIMULADO.map((n) => (
                 <button
                   key={n}
                   onClick={() => setTotalQ(n)}
+                  aria-pressed={totalQ === n}
                   className={`flex-1 py-3 rounded-[var(--radius-control)] text-center font-medium t-colors ${
                     totalQ === n
                       ? 'bg-primary text-primary-foreground shadow-elev-1'
@@ -346,11 +370,7 @@ export default function SimuladoPage() {
                 </button>
               ))}
             </div>
-            <p className="type-caption text-muted-foreground mt-2">
-              ENEM real: 90 questões por dia (180 total em 2 dias)
-            </p>
           </div>
-
           {/* Timer toggle */}
           <div>
             <label className="type-meta font-medium mb-3 block">Cronômetro</label>
@@ -376,34 +396,11 @@ export default function SimuladoPage() {
             </div>
           </div>
 
-          {/* Timer duration */}
           {useTimer && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-            >
-              <label className="type-meta font-medium mb-2 block">Tempo (horas)</label>
-              <div className="flex gap-3">
-                {[2.5, 3, 4, 5, 5.5].map((h) => (
-                  <button
-                    key={h}
-                    onClick={() => setTimerHours(h)}
-                    className={`flex-1 py-2.5 rounded-[var(--radius-control)] text-center type-meta font-medium t-colors ${
-                      timerHours === h
-                        ? 'bg-primary text-primary-foreground shadow-elev-1'
-                        : 'bg-muted hover:bg-muted/80'
-                    }`}
-                  >
-                    {h}h
-                  </button>
-                ))}
-              </div>
-              <p className="type-caption text-muted-foreground mt-2">
-                ENEM real: 5h30 (1º dia) e 5h (2º dia)
-              </p>
-            </motion.div>
+            <p className="type-caption text-muted-foreground -mt-3">
+              <span data-numeric>{totalQ * MINUTOS_POR_QUESTAO}</span> minutos: {MINUTOS_POR_QUESTAO} por questão, o ritmo do ENEM.
+            </p>
           )}
-
           {/* Start */}
           <button
             onClick={() => startSimulado()}

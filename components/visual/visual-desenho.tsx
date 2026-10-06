@@ -3,10 +3,12 @@
 // DENTRO do desenho, junto da parte que nomeiam (contiguidade de Mayer), e a
 // cor de cada traço é a mesma do termo na explicação (sinalização).
 
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { useReducedMotion } from 'framer-motion';
+import { Play, RotateCcw, StepForward } from 'lucide-react';
 import 'katex/dist/katex.min.css';
 import type {
-  CorVisual, Visual, VisualGrafico, VisualReta, VisualTabela, VisualTransformacao, VisualVetores,
+  CorVisual, Visual, VisualCena, VisualGrafico, VisualReta, VisualTabela, VisualTransformacao, VisualVetores,
 } from '@/lib/visual/especificacao';
 import { tentarCompilar } from '@/lib/visual/expressao';
 import { amostrar, faixaAutomatica, marcas } from '@/lib/visual/geometria';
@@ -223,6 +225,138 @@ function Vetores({ v }: { v: VisualVetores }) {
   );
 }
 
+/* Desenhos de traço no estilo dos ícones do app, virados para a direita. */
+function GlifoCarro() {
+  return (
+    <svg viewBox="0 0 32 20" width={44} height={28} fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M2 15v-4l4-6h12l5 6h5a2 2 0 0 1 2 2v2" />
+      <path d="M7 11h15" />
+      <path d="M2 15h3M11 15h10M27 15h3" />
+      <circle cx={8} cy={15} r={3} />
+      <circle cx={24} cy={15} r={3} />
+    </svg>
+  );
+}
+function GlifoMoto() {
+  return (
+    <svg viewBox="0 0 32 20" width={44} height={28} fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <circle cx={6} cy={15} r={4} />
+      <circle cx={26} cy={15} r={4} />
+      <path d="M6 15l6-6h8l2 6" />
+      <path d="M10 9h6" />
+      <path d="M21 4h3l2 11" />
+    </svg>
+  );
+}
+const PASSO_MS = 900; // um minuto do relógio por passo: devagar o bastante para acompanhar o número
+const NOME_VEICULO = { carro: 'carro', moto: 'moto' } as const;
+const numero = (n: number) => n.toLocaleString('pt-BR', { maximumFractionDigits: 2 });
+const latexDaRegra = (expr: string) => expr.replace(/\*/g, '');
+function Cena({ v }: { v: VisualCena }) {
+  const reduzir = useReducedMotion();
+  const [t, setT] = useState(v.x[0]);
+  const [andando, setAndando] = useState(false);
+  const veiculos = useMemo(
+    () => v.veiculos.map((w, i) => ({ ...w, fn: tentarCompilar(w.expr) ?? (() => NaN), cor: corDe(w.cor, i) })),
+    [v],
+  );
+  const kmMax = useMemo(() => {
+    const maior = Math.max(...veiculos.flatMap((w) => [w.fn(v.x[0]), w.fn(v.x[1])]).filter(Number.isFinite), 1);
+    return Math.ceil(maior / 5) * 5;
+  }, [veiculos, v.x]);
+  useEffect(() => {
+    if (!andando) return;
+    if (t >= v.x[1]) { setAndando(false); return; }
+    const id = setTimeout(() => setT((atual) => Math.min(atual + 1, v.x[1])), PASSO_MS);
+    return () => clearTimeout(id);
+  }, [andando, t, v.x]);
+  const pct = (km: number) => Math.max(0, Math.min(100, (km / kmMax) * 100));
+  const posicoes = veiculos.map((w) => ({ ...w, km: w.fn(t) }));
+  const juntos = posicoes.length === 2 && Math.abs(posicoes[0].km - posicoes[1].km) < 1e-9;
+  const ux = v.unidadeX ?? 'min';
+  const uy = v.unidadeY ?? 'km';
+  const grafico: VisualGrafico = {
+    tipo: 'grafico',
+    x: v.x,
+    y: [0, kmMax],
+    funcoes: v.veiculos.map((w) => ({ expr: w.expr, rotulo: `${w.nome}(x)`, cor: w.cor })),
+    pontos: v.veiculos.map((w, i) => ({ x: t, y: posicoes[i].km, cor: w.cor ?? (['a', 'b', 'c'] as const)[i % 3] })),
+  };
+  const botao = 'inline-flex items-center gap-1.5 px-3 py-2 rounded-[var(--radius-control)] type-meta font-medium t-colors disabled:opacity-40';
+  return (
+    <div className="space-y-4">
+      <div className="flex flex-wrap gap-x-6 gap-y-1 type-body">
+        {veiculos.map((w) => (
+          <span key={w.nome} className="inline-flex items-baseline gap-2">
+            <strong style={{ color: w.cor }}>{w.rotulo ?? NOME_VEICULO[w.veiculo]}</strong>
+            <Latex fonte={`${w.nome}(x) = ${latexDaRegra(w.expr)}`} />
+          </span>
+        ))}
+      </div>
+      <div className="flex items-center gap-3">
+        <label htmlFor={`relogio-${v.veiculos[0].nome}`} className="type-meta text-muted-foreground whitespace-nowrap">
+          Relógio <span data-numeric className="font-semibold text-foreground">x = {numero(t)} {ux}</span>
+        </label>
+        <input
+          id={`relogio-${v.veiculos[0].nome}`}
+          type="range" min={v.x[0]} max={v.x[1]} step={1} value={t}
+          onChange={(e) => { setAndando(false); setT(Number(e.target.value)); }}
+          className="flex-1 accent-[hsl(var(--primary))]"
+        />
+      </div>
+      <div className="px-6">
+        {posicoes.map((w) => (
+          <div key={w.nome} className="relative h-10 border-b-2 border-dashed border-border">
+            <div
+              className="absolute inset-x-0 bottom-0"
+              style={{ transform: `translateX(${pct(w.km)}%)`, transition: reduzir ? 'none' : 'transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1)' }}
+            >
+              <div className="w-fit -translate-x-1/2" style={{ color: w.cor }} aria-hidden>
+                {w.veiculo === 'carro' ? <GlifoCarro /> : <GlifoMoto />}
+              </div>
+            </div>
+          </div>
+        ))}
+        <div className="relative h-5 type-micro text-muted-foreground" aria-hidden>
+          {marcas([0, kmMax], 6).map((km) => (
+            <span key={km} data-numeric className="absolute top-1 -translate-x-1/2" style={{ left: `${pct(km)}%` }}>{km}</span>
+          ))}
+          <span className="absolute top-1 -right-6">{uy}</span>
+        </div>
+      </div>
+      <div className="space-y-1 type-body" aria-live="polite">
+        {posicoes.map((w) => (
+          <p key={w.nome}>
+            <Latex fonte={`${w.nome}(${numero(t)}) = ${numero(w.km)}`} />
+            <span className="text-muted-foreground"> → o {NOME_VEICULO[w.veiculo]} está no {uy} </span>
+            <strong data-numeric style={{ color: w.cor }}>{numero(w.km)}</strong>
+          </p>
+        ))}
+        {juntos && <p className="font-semibold">Mesmo lugar: aqui os dois se encontram.</p>}
+      </div>
+      <div className="flex flex-wrap gap-2">
+        <button type="button" onClick={() => { if (t >= v.x[1]) setT(v.x[0]); setAndando(true); }} disabled={andando}
+          className={`${botao} bg-primary text-primary-foreground hover:opacity-90`}>
+          <Play className="w-4 h-4" /> Ver andando
+        </button>
+        <button type="button" onClick={() => { setAndando(false); setT((a) => Math.min(a + 1, v.x[1])); }} disabled={t >= v.x[1]}
+          className={`${botao} bg-muted hover:bg-muted/80`}>
+          <StepForward className="w-4 h-4" /> Mais 1 {ux}
+        </button>
+        <button type="button" onClick={() => { setAndando(false); setT(v.x[0]); }} disabled={t === v.x[0]}
+          className={`${botao} bg-muted hover:bg-muted/80`}>
+          <RotateCcw className="w-4 h-4" /> Recomeçar
+        </button>
+      </div>
+      <div>
+        <p className="type-meta text-muted-foreground mb-1">
+          O mesmo movimento como gráfico: cada ponto é (minuto, {uy}). A bolinha anda junto com o relógio.
+        </p>
+        <Grafico v={grafico} />
+      </div>
+    </div>
+  );
+}
 export function VisualDesenho({ visual }: { visual: Visual }) {
   return (
     <figure className="rounded-[var(--radius-control)] border border-border bg-[hsl(var(--surface-2))] p-3">
@@ -232,6 +366,7 @@ export function VisualDesenho({ visual }: { visual: Visual }) {
       {visual.tipo === 'transformacao' && <Transformacao v={visual} />}
       {visual.tipo === 'tabela' && <Tabela v={visual} />}
       {visual.tipo === 'vetores' && <Vetores v={visual} />}
+      {visual.tipo === 'cena' && <Cena v={visual} />}
     </figure>
   );
 }

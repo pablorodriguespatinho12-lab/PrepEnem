@@ -48,6 +48,11 @@ export function etapaDaQuestao(q: QuestaoClassificavel): Etapa {
   return grau === 'facil' ? 'base' : 'intermediaria';
 }
 
+/* Fácil → média → ENEM → acima, sem embaralhar dentro do degrau. Usado no
+   simulado, que sorteia as questões mas não pode abrir com a mais difícil. */
+export function ordenarPorEtapa<T extends QuestaoClassificavel>(lista: T[]): T[] {
+  return ETAPA_ORDEM.flatMap((e) => lista.filter((q) => etapaDaQuestao(q) === e));
+}
 /* Monta a sessão na ordem da escada. `prioritarias` são as do subtema do dia;
    `reserva` são da mesma matéria com outro subtema, usadas só se faltar.
    Dentro de cada degrau, as matérias se alternam para não virar bloco único. */

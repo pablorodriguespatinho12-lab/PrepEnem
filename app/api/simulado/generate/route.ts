@@ -6,6 +6,7 @@ import { authOptions } from '@/lib/auth';
 import { getCycleInfoForDay, getWeekTopics } from '@/lib/schedule-data';
 import { getActiveStudyDay } from '@/lib/study-progress';
 import { chatCompletion, getAbacusApiKey } from '@/lib/ai-client';
+import { ordenarPorEtapa } from '@/lib/treino-etapas';
 
 export async function POST(req: Request) {
   try {
@@ -162,7 +163,8 @@ Retorne SOMENTE JSON válido.`;
       }
     }
 
-    selected = shuffle(selected).slice(0, limit);
+    // Sorteadas, mas em ordem de degrau: começa pelas fáceis (pedido do Pablo, 06/10/2026).
+    selected = ordenarPorEtapa(shuffle(selected).slice(0, limit));
 
     // Group by area for summary
     const areas: Record<string, number> = {};

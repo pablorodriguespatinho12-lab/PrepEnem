@@ -3,11 +3,20 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, Loader2 } from 'lucide-react';
 import { LicaoPlayer } from '@/components/calculo/licao-player';
-import { NOME_MODULO } from '@/data/calculo/trilha';
+import { NOME_MODULO, buscarDegrau } from '@/data/calculo/trilha';
+import { LICOES_ESCRITAS } from '@/data/calculo/licoes';
 import type { LicaoCompleta } from '@/lib/calculo/tipos';
+/* Lição escrita à mão já está no bundle: abre na hora, sem esperar a rota
+   (pedido do Pablo, 06/10/2026: "a tela de carregamento demora"). A rota
+   continua sendo chamada e, se disser que o degrau está bloqueado, vale ela. */
+function licaoEscrita(id: string): LicaoCompleta | null {
+  const degrau = buscarDegrau(id);
+  const conteudo = LICOES_ESCRITAS[id];
+  return degrau && conteudo ? { ...degrau, conteudo, origem: 'escrita' } : null;
+}
 
 export default function LicaoCalculoPage({ params }: { params: { id: string } }) {
-  const [licao, setLicao] = useState<LicaoCompleta | null>(null);
+  const [licao, setLicao] = useState<LicaoCompleta | null>(() => licaoEscrita(params.id));
   const [erro, setErro] = useState<string | null>(null);
 
   useEffect(() => {
@@ -15,9 +24,9 @@ export default function LicaoCalculoPage({ params }: { params: { id: string } })
       .then(async (r) => {
         const data = await r.json().catch(() => ({}));
         if (!r.ok) throw new Error(data?.error ?? 'Não deu para abrir a lição.');
-        setLicao(data.licao);
+        setLicao((atual) => atual ?? data.licao);
       })
-      .catch((e: Error) => setErro(e.message));
+      .catch((e: Error) => { setLicao(null); setErro(e.message); });
   }, [params.id]);
 
   return (

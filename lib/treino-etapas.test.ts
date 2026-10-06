@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { ehExemploResolvido, etapaDaQuestao, RESOLVIDAS_POR_MATERIA } from './treino-etapas';
+import { ehExemploResolvido, etapaDaQuestao, ordenarPorEtapa, RESOLVIDAS_POR_MATERIA } from './treino-etapas';
 
 const q = (materia: string, nivel = 'facil', extra: Record<string, unknown> = {}) => ({ id: Math.random().toString(), materia, nivel, ...extra });
 
@@ -30,5 +30,17 @@ describe('etapaDaQuestao', () => {
     expect(etapaDaQuestao({ nivel: 'acima' })).toBe('acima');
     expect(etapaDaQuestao({ nivel: 'acima', anoProva: 2020 })).toBe('acima');
     expect(etapaDaQuestao({ anoProva: 2022 })).toBe('enem');
+  });
+});
+
+describe('ordenarPorEtapa', () => {
+  test('fáceis primeiro, depois médias, depois ENEM', () => {
+    const lista = [
+      q('Matemática', 'medio', { id: 'm' }),
+      q('Matemática', 'facil', { id: 'f', anoProva: 2020 }),
+      q('Matemática', 'facil', { id: 'b' }),
+      q('Matemática', 'acima', { id: 'a' }),
+    ];
+    expect(ordenarPorEtapa(lista).map((x) => x.id)).toEqual(['b', 'm', 'f', 'a']);
   });
 });

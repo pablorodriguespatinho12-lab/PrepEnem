@@ -2,6 +2,11 @@ import { describe, expect, test } from 'vitest';
 import { renderizarTextoMatematico as r } from './texto-matematico';
 
 describe('renderizarTextoMatematico', () => {
+  test('R$ de dinheiro não abre fórmula', () => {
+    const html = r('Custa R$ 5 para entrar mais R$ 2 por km. Em $f(x)$ entra x.');
+    expect(html).toContain('R$ 5 para entrar mais R$ 2 por km');
+    expect(html.match(/class="katex"/g)?.length).toBe(1);
+  });
   test('escapa HTML fora das fórmulas', () => {
     const html = r('<img src=x onerror=alert(1)> e <script>x</script>');
     expect(html).not.toContain('<img');

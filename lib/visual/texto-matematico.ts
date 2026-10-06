@@ -5,7 +5,8 @@
 
 import katex from 'katex';
 
-const DELIMITADORES = /\$\$([\s\S]+?)\$\$|\\\[([\s\S]+?)\\\]|(?<!\$)\$(?!\$)([^$\n]+?)\$|\\\((.+?)\\\)/g;
+/* "R$" é dinheiro, nunca abre fórmula: "R$ 5 ... R$ 2" virava LaTeX (06/10/2026). */
+const DELIMITADORES = /\$\$([\s\S]+?)\$\$|\\\[([\s\S]+?)\\\]|(?<![$R])\$(?!\$)([^$\n]+?)\$|\\\((.+?)\\\)/g;
 
 const CORES_TERMO: Record<string, string> = {
   a: 'hsl(var(--chart-1))',

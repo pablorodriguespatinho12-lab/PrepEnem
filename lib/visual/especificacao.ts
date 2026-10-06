@@ -48,7 +48,19 @@ export interface VisualVetores {
   pontos?: PontoRotulado[];
 }
 
-export type Visual = VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores;
+/* Cena com relógio: cada veículo anda pela própria função, x é o tempo e
+   f(x) é o km onde ele está. Para ver uma função antes de ler a fórmula
+   (pedido do Pablo, 06/10/2026). Só nas lições escritas: fica fora do
+   formato da IA. */
+export interface VisualCena {
+  tipo: 'cena';
+  titulo?: string;
+  x: [number, number];
+  unidadeX?: string;
+  unidadeY?: string;
+  veiculos: { veiculo: 'carro' | 'moto'; nome: string; expr: string; rotulo?: string; cor?: CorVisual }[];
+}
+export type Visual = VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena;
 
 const MAX_FUNCOES = 4;
 const MAX_PONTOS = 8;
@@ -123,8 +135,27 @@ function vetores(v: Record<string, unknown>): VisualVetores | null {
   return { tipo: 'vetores', titulo: texto(v.titulo), vetores: vs, pontos: lista(v.pontos).map(ponto).filter(naoNulo).slice(0, MAX_PONTOS) };
 }
 
+const MAX_VEICULOS = 2;
+const MAX_MINUTOS = 20;
+function cena(v: Record<string, unknown>): VisualCena | null {
+  const x = intervalo(v.x);
+  if (!x || !Number.isInteger(x[0]) || !Number.isInteger(x[1]) || x[1] - x[0] > MAX_MINUTOS) return null;
+  const veiculos = lista(v.veiculos)
+    .map(objeto)
+    .filter((w) => (w.veiculo === 'carro' || w.veiculo === 'moto') && typeof w.expr === 'string' && tentarCompilar(w.expr) !== null)
+    .slice(0, MAX_VEICULOS)
+    .map((w) => ({
+      veiculo: w.veiculo as 'carro' | 'moto',
+      nome: texto(w.nome, 3) ?? 'f',
+      expr: String(w.expr),
+      rotulo: texto(w.rotulo, 40),
+      cor: cor(w.cor),
+    }));
+  if (veiculos.length === 0) return null;
+  return { tipo: 'cena', titulo: texto(v.titulo), x, unidadeX: texto(v.unidadeX, 12), unidadeY: texto(v.unidadeY, 12), veiculos };
+}
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {
-  grafico, reta, transformacao, tabela, vetores,
+  grafico, reta, transformacao, tabela, vetores, cena,
 };
 
 /* Devolve o visual limpo, ou null se não der para desenhar com segurança. */

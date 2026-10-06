@@ -103,6 +103,9 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   Fuvest/Unicamp (+ ITA/IME nas exatas), original, autossuficiente, só
   programa do médio, conferida pelo verificador. Não há questão real dessas
   bancas no banco: não apresentar a gerada como real.
+- **Simulado semanal (06/10/2026):** uma matéria, 10, 15 ou 20 questões,
+  3 min por questão; sorteadas mas em ordem fácil → média → ENEM
+  (`ordenarPorEtapa`). O de 45 a 180 questões saiu.
 - "Recomeçar" no treino monta sessão nova; antes só restaurava a mesma.
 - Sessão aberta só é retomada se tiver menos de 12 h — a de outro dia foi
   montada para outro dia do cronograma.
@@ -134,6 +137,12 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   do pessoal"):** toda lição escrita fecha com 2 exercícios `nivelAcima`
   (estilo ITA, Fuvest, Unicamp), originais, resolvíveis só com o que a trilha
   já ensinou. Marcados "estilo X" na tela, nunca apresentados como questão real.
+- **Cena antes da fórmula (Pablo, 06/10/2026, pedido da psiquiatra: coisas
+  visualizáveis):** toda lição abre com uma cena concreta que se mexe
+  (visual `cena` em `lib/visual/especificacao.ts`: veículo andando por uma
+  função, relógio em x, gráfico junto). O exemplo do Pablo (carro e moto) é o
+  princípio, não a receita: cada conceito ganha a cena que melhor o mostra.
+  Feito: p1. Falta: p2 a p6. O x é o relógio, nunca "o carro".
 - Antes de commitar lição nova: os testes de `data/calculo` (validador e
   gabarito conferido contra a resolução, que precisa terminar em "= valor") e
   conferir que todo ponto marcado num gráfico está sobre a curva.
