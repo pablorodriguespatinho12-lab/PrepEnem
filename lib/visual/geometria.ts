@@ -87,3 +87,11 @@ const PASSO_DERIVADA = 1e-5;
 export function taxaNoInstante(f: Funcao, t: number): number {
   return (f(t + PASSO_DERIVADA) - f(t - PASSO_DERIVADA)) / (2 * PASSO_DERIVADA);
 }
+/* Soma de Riemann pela esquerda: em cada fatia, a altura é o valor no começo
+   dela (c11). Com mais fatias, encosta na área. */
+export function somaPelaEsquerda(f: Funcao, [a, b]: [number, number], n: number): number {
+  const largura = (b - a) / n;
+  let soma = 0;
+  for (let k = 0; k < n; k++) soma += f(a + k * largura) * largura;
+  return soma;
+}

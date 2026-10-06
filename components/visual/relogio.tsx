@@ -20,16 +20,16 @@ export interface Relogio {
   recomecar: () => void;
 }
 
-export function useRelogio([inicio, fim]: [number, number]): Relogio {
+export function useRelogio([inicio, fim]: [number, number], passoMs = PASSO_MS): Relogio {
   const [t, setT] = useState(inicio);
   const [andando, setAndando] = useState(false);
 
   useEffect(() => {
     if (!andando) return;
     if (t >= fim) { setAndando(false); return; }
-    const id = setTimeout(() => setT((atual) => Math.min(atual + 1, fim)), PASSO_MS);
+    const id = setTimeout(() => setT((atual) => Math.min(atual + 1, fim)), passoMs);
     return () => clearTimeout(id);
-  }, [andando, t, fim]);
+  }, [andando, t, fim, passoMs]);
 
   return {
     t, andando, inicio, fim,

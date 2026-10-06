@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { amostrar, faixaAutomatica, faixaDaCena, marcas, posicionarRotulos, taxaNoInstante } from './geometria';
+import { amostrar, faixaAutomatica, faixaDaCena, marcas, posicionarRotulos, somaPelaEsquerda, taxaNoInstante } from './geometria';
 
 describe('amostrar', () => {
   test('quebra o traço na assíntota de 1/x', () => {
@@ -61,5 +61,14 @@ describe('taxaNoInstante', () => {
     expect(taxaNoInstante(f, 1)).toBeCloseTo(3, 6);
     expect(taxaNoInstante(f, 2)).toBeCloseTo(12, 6);
     expect(taxaNoInstante(f, 3)).toBeCloseTo(27, 6);
+  });
+});
+
+describe('somaPelaEsquerda', () => {
+  test('2t de 0 a 4 dá 16(n − 1)/n', () => {
+    const f = (t: number) => 2 * t;
+    expect(somaPelaEsquerda(f, [0, 4], 1)).toBe(0);
+    expect(somaPelaEsquerda(f, [0, 4], 4)).toBeCloseTo(12, 9);
+    expect(somaPelaEsquerda(f, [0, 4], 100)).toBeCloseTo(15.84, 9);
   });
 });

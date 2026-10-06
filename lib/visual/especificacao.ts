@@ -96,7 +96,17 @@ export interface VisualRetangulo {
      como na cerca de perímetro fixo (otimização, c10). */
   faixas: boolean;
 }
-export type Visual = VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo;
+/* Área sob a curva como soma de retângulos que afinam (integral, c11). */
+export interface VisualFatias {
+  tipo: 'fatias';
+  titulo?: string;
+  expr: string;
+  x: [number, number];
+  maxFatias: number;
+  unidadeX?: string;
+  unidadeY?: string;
+}
+export type Visual = VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias;
 
 const MAX_FUNCOES = 4;
 const MAX_PONTOS = 8;
@@ -234,8 +244,15 @@ function retangulo(v: Record<string, unknown>): VisualRetangulo | null {
   }
   return { tipo: 'retangulo', titulo: texto(v.titulo), x, base: v.base, altura: v.altura, unidade: texto(v.unidade, 12), faixas: v.faixas !== false };
 }
+const MAX_FATIAS = 50;
+function fatias(v: Record<string, unknown>): VisualFatias | null {
+  const x = intervalo(v.x);
+  if (!x || typeof v.expr !== 'string' || !tentarCompilar(v.expr)) return null;
+  const maxFatias = Math.min(MAX_FATIAS, Math.max(2, Math.round(Number(v.maxFatias) || 20)));
+  return { tipo: 'fatias', titulo: texto(v.titulo), expr: v.expr, x, maxFatias, unidadeX: texto(v.unidadeX, 12), unidadeY: texto(v.unidadeY, 12) };
+}
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {
-  grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo,
+  grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias,
 };
 
 /* Devolve o visual limpo, ou null se não der para desenhar com segurança. */
@@ -254,6 +271,7 @@ export const FORMATO_VISUAL_PARA_IA = `"visual" é um destes objetos (ou null). 
 - Tabela (comparar valores, proporção, mol): {"tipo":"tabela","cabecalho":["n (mol)","massa (g)"],"linhas":[["1","18"],["2","36"]]}
 - Cena (algo que MUDA COM O TEMPO: movimento, queda, lançamento, crescimento, juros, decaimento, reservatório): {"tipo":"cena","titulo":"Bola solta de 45 m","x":[0,3],"unidadeX":"s","unidadeY":"m","rastro":true,"veiculos":[{"veiculo":"bola","nome":"h","expr":"45-5*x^2","rotulo":"bola","cor":"a"}]}
   O app anima o objeto pelo relógio e desenha o gráfico junto. "veiculo" é EXATAMENTE um destes; o nome real (pena, pedra, foguete) vai em "rotulo". "carro" ou "moto" andam para o lado (posição); "bola", "balao" ou "vela" sobem e descem (altura ou quantidade). x é o tempo em passos INTEIROS, de 0 até no máximo 20. Até 2 objetos, na mesma direção. "rastro": true quando o formato da curva é o ponto. "velocimetro": true mostra a velocidade no instante ao lado da posição (movimento acelerado). Calcule expr em cada x inteiro e confira com o texto. "nome" é UMA letra (f, g, h). expr dá ONDE o objeto está (posição, altura ou quantidade) no instante x, nunca a velocidade: numa queda de 45 m a altura DIMINUI, "45-5*x^2"; um corpo lançado para cima sobe e desce, "20*x-5*x^2". O relógio termina quando o objeto chega ao chão (altura 0), não depois.
+- Área sob a curva como soma de fatias (distância a partir da velocidade, energia a partir da potência): {"tipo":"fatias","titulo":"...","expr":"2*x","x":[0,4],"maxFatias":20,"unidadeX":"s","unidadeY":"m/s"}
 - Vetores (forças, velocidade, deslocamento): {"tipo":"vetores","vetores":[{"de":[0,0],"para":[3,0],"rotulo":"F₁","cor":"a"}],"pontos":[{"x":0,"y":0,"rotulo":"corpo"}]}
 "cor": "a", "b" ou "c" para destacar (use a MESMA cor no texto: escreva o termo como [[a:termo]]), "erro" só para o caminho errado do aluno.
 REGRAS DE TEXTO: toda fórmula entre $...$ (nunca \\frac solto fora de $). [[a:termo]] é só para PALAVRAS fora da fórmula ("a [[a:velocidade]] é a inclinação"); nunca dentro de $...$ e nunca em volta de símbolo.`;

@@ -2,6 +2,11 @@ import { describe, expect, test } from 'vitest';
 import { validarVisual } from './especificacao';
 
 describe('validarVisual', () => {
+  test('fatias: função legível, intervalo e no máximo 50 fatias', () => {
+    expect(validarVisual({ tipo: 'fatias', expr: 'x^2', x: [0, 3], maxFatias: 30 })).toMatchObject({ tipo: 'fatias', expr: 'x^2', x: [0, 3], maxFatias: 30 });
+    expect(validarVisual({ tipo: 'fatias', expr: 'x^2', x: [0, 3], maxFatias: 500 })).toMatchObject({ maxFatias: 50 });
+    expect(validarVisual({ tipo: 'fatias', expr: 'alert(1)', x: [0, 3], maxFatias: 10 })).toBeNull();
+  });
   test('retângulo: base e altura por regra, relógio inteiro, nada negativo', () => {
     expect(validarVisual({ tipo: 'retangulo', x: [0, 4], base: '10+x', altura: '5+2*x' }))
       .toMatchObject({ tipo: 'retangulo', x: [0, 4], base: '10+x', altura: '5+2*x' });
