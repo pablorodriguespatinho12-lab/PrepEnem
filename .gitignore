@@ -15,3 +15,6 @@ questoes-prepenem.json
 .claude-flow/
 .claude/proven-config*
 .claude/.proven-config*
+
+# cópias de segurança de scripts que escrevem no Neon (scripts/corrigir-*.ts)
+/backups
