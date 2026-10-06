@@ -6,7 +6,7 @@ import { useMemo } from 'react';
 import 'katex/dist/katex.min.css';
 import type { CorVisual, VisualGrafico } from '@/lib/visual/especificacao';
 import { tentarCompilar } from '@/lib/visual/expressao';
-import { amostrar, faixaAutomatica, marcas } from '@/lib/visual/geometria';
+import { amostrar, faixaAutomatica, marcas, posicionarRotulos } from '@/lib/visual/geometria';
 import { renderizarTextoMatematico } from '@/lib/visual/texto-matematico';
 export const LARGURA = 480;
 export const ALTURA = 300;
@@ -53,7 +53,8 @@ export function Eixos({ x, y, e }: { x: [number, number]; y: [number, number]; e
       {marcas(y, 6).map((v) => (
         <g key={`y${v}`}>
           <line x1={MARGEM} x2={LARGURA - MARGEM} y1={e.py(v)} y2={e.py(v)} stroke={GRADE} strokeWidth={0.5} />
-          {v !== 0 && <text x={zeroX - 5} y={e.py(v) + 4} textAnchor="end">{v}</text>}
+          {/* Número grande ("1000") saía cortado na borda esquerda. */}
+          {v !== 0 && <text x={Math.max(zeroX - 5, String(v).length * 6.2 + 2)} y={e.py(v) + 4} textAnchor="end">{v}</text>}
         </g>
       ))}
       <line x1={MARGEM} x2={LARGURA - MARGEM} y1={zeroY} y2={zeroY} stroke={EIXO} strokeWidth={1.2} />
@@ -85,10 +86,12 @@ export function Grafico({ v }: { v: VisualGrafico }) {
       }
       return { d, cor: corDe(f.cor, i), rotulo: f.rotulo ?? `y = ${f.expr}`, ultimo };
     });
-    return { y, e, tracos };
+    const rotuloX = (t: (typeof tracos)[number]) => (t.ultimo ? Math.min(e.px(t.ultimo.x), LARGURA - MARGEM) - 4 : 0);
+    const rotuloY = posicionarRotulos(tracos.map((t) => ({ x: rotuloX(t), y: t.ultimo ? e.py(t.ultimo.y) - 8 : 0 })));
+    return { y, e, tracos, rotuloX, rotuloY };
   }, [v]);
 
-  const { y, e, tracos } = desenho;
+  const { y, e, tracos, rotuloX, rotuloY } = desenho;
   return (
     <svg viewBox={`0 0 ${LARGURA} ${ALTURA}`} className="w-full h-auto" role="img" aria-label={v.titulo ?? 'Gráfico'}>
       <Eixos x={v.x} y={y} e={e} />
@@ -96,7 +99,7 @@ export function Grafico({ v }: { v: VisualGrafico }) {
         <g key={i}>
           <path d={t.d} fill="none" stroke={t.cor} strokeWidth={2.5} strokeLinejoin="round" strokeLinecap="round" />
           {t.ultimo && (
-            <text x={Math.min(e.px(t.ultimo.x), LARGURA - MARGEM) - 4} y={Math.max(14 + i * 14, e.py(t.ultimo.y) - 8 - i * 14)}
+            <text x={rotuloX(t)} y={rotuloY[i]}
               textAnchor="end" fontSize={12} fontWeight={600} {...HALO} fill={t.cor}>{t.rotulo}</text>
           )}
         </g>

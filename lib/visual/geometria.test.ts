@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { amostrar, faixaAutomatica, faixaDaCena, marcas } from './geometria';
+import { amostrar, faixaAutomatica, faixaDaCena, marcas, posicionarRotulos } from './geometria';
 
 describe('amostrar', () => {
   test('quebra o traço na assíntota de 1/x', () => {
@@ -41,5 +41,16 @@ describe('faixaDaCena', () => {
   });
   test('sempre inclui o zero e arredonda o topo', () => {
     expect(faixaDaCena([(x) => 2 ** x], [0, 5])).toEqual([0, 35]);
+  });
+});
+
+describe('posicionarRotulos', () => {
+  test('dois rótulos no mesmo canto descem um abaixo do outro', () => {
+    const ys = posicionarRotulos([{ x: 570, y: 20 }, { x: 570, y: 14 }]);
+    expect(ys[0]).toBe(20);
+    expect(Math.abs(ys[1] - ys[0])).toBeGreaterThanOrEqual(14);
+  });
+  test('rótulos longe um do outro ficam onde estão, mas nunca acima do topo', () => {
+    expect(posicionarRotulos([{ x: 100, y: 50 }, { x: 500, y: 52 }, { x: 300, y: -10 }])).toEqual([50, 52, 14]);
   });
 });

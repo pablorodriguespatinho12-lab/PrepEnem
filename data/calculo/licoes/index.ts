@@ -16,6 +16,7 @@ import { P11_COMPOSICAO_INVERSA } from './p11-composicao-inversa';
 import { P12_TAXA_MEDIA } from './p12-taxa-media';
 import { C1_LIMITE } from './c1-limite';
 import { C2_CONTINUIDADE } from './c2-continuidade';
+import { C3_LIMITE_INFINITO } from './c3-limite-infinito';
 
 export const LICOES_ESCRITAS: Record<string, ConteudoLicao> = {
   p1: P1_FUNCAO,
@@ -32,4 +33,5 @@ export const LICOES_ESCRITAS: Record<string, ConteudoLicao> = {
   p12: P12_TAXA_MEDIA,
   c1: C1_LIMITE,
   c2: C2_CONTINUIDADE,
+  c3: C3_LIMITE_INFINITO,
 };

@@ -64,3 +64,20 @@ export function faixaDaCena(funcoes: Funcao[], [x0, x1]: [number, number]): [num
   const max = Math.ceil(Math.max(0, ...valores) / PASSO_PISTA) * PASSO_PISTA;
   return [min, max > min ? max : min + PASSO_PISTA];
 }
+const ALTURA_ROTULO = 14;
+const LARGURA_ROTULO = 90;
+const TOPO_ROTULO = 14;
+/* Altura de cada rótulo de curva, sem um cobrir o outro: duas curvas que
+   terminam no mesmo canto (x³ e 2ˣ no minuto 10) tinham os nomes empilhados
+   no mesmo lugar. Desce o rótulo até achar espaço; nunca acima do topo. */
+export function posicionarRotulos(ancoras: { x: number; y: number }[]): number[] {
+  const ys: number[] = [];
+  ancoras.forEach((a, i) => {
+    let y = Math.max(TOPO_ROTULO, a.y);
+    const bate = (alvo: number) => ancoras.slice(0, i).some((b, j) =>
+      Math.abs(b.x - a.x) < LARGURA_ROTULO && Math.abs(ys[j] - alvo) < ALTURA_ROTULO);
+    while (bate(y)) y += ALTURA_ROTULO;
+    ys.push(y);
+  });
+  return ys;
+}
