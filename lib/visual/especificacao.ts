@@ -83,7 +83,17 @@ export interface VisualRoda {
   unidade?: string;
   grafico?: boolean;
 }
-export type Visual = VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda;
+/* Retângulo que cresce com o relógio: base e altura mudam juntas e a área
+   nova aparece como duas faixas e um canto (regra do produto, c6). */
+export interface VisualRetangulo {
+  tipo: 'retangulo';
+  titulo?: string;
+  x: [number, number];
+  base: string;
+  altura: string;
+  unidade?: string;
+}
+export type Visual = VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo;
 
 const MAX_FUNCOES = 4;
 const MAX_PONTOS = 8;
@@ -208,8 +218,21 @@ function roda(v: Record<string, unknown>): VisualRoda | null {
   const voltas = Math.min(MAX_VOLTAS, Math.max(1, Math.round(Number(v.voltas) || 1)));
   return { tipo: 'roda', titulo: texto(v.titulo), divisoes, raio, centro, voltas, unidade: texto(v.unidade, 12), grafico: v.grafico === true };
 }
+function retangulo(v: Record<string, unknown>): VisualRetangulo | null {
+  const x = intervalo(v.x);
+  if (!x || !Number.isInteger(x[0]) || !Number.isInteger(x[1]) || x[1] - x[0] > MAX_MINUTOS) return null;
+  if (typeof v.base !== 'string' || typeof v.altura !== 'string') return null;
+  const base = tentarCompilar(v.base);
+  const altura = tentarCompilar(v.altura);
+  if (!base || !altura) return null;
+  for (let t = x[0]; t <= x[1]; t++) {
+    const lados = [base(t), altura(t)];
+    if (lados.some((l) => !Number.isFinite(l) || l < 0)) return null;
+  }
+  return { tipo: 'retangulo', titulo: texto(v.titulo), x, base: v.base, altura: v.altura, unidade: texto(v.unidade, 12) };
+}
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {
-  grafico, reta, transformacao, tabela, vetores, cena, roda,
+  grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo,
 };
 
 /* Devolve o visual limpo, ou null se não der para desenhar com segurança. */

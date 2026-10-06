@@ -2,6 +2,12 @@ import { describe, expect, test } from 'vitest';
 import { validarVisual } from './especificacao';
 
 describe('validarVisual', () => {
+  test('retângulo: base e altura por regra, relógio inteiro, nada negativo', () => {
+    expect(validarVisual({ tipo: 'retangulo', x: [0, 4], base: '10+x', altura: '5+2*x' }))
+      .toMatchObject({ tipo: 'retangulo', x: [0, 4], base: '10+x', altura: '5+2*x' });
+    expect(validarVisual({ tipo: 'retangulo', x: [0, 4], base: '2-x', altura: '1' })).toBeNull();
+    expect(validarVisual({ tipo: 'retangulo', x: [0, 4], base: 'alert(1)', altura: '1' })).toBeNull();
+  });
   test('ponto aberto (furo) é preservado; sem o campo, fica fechado', () => {
     const v = validarVisual({ tipo: 'grafico', x: [0, 2], funcoes: [{ expr: 'x' }], pontos: [{ x: 1, y: 1, aberto: true }, { x: 2, y: 2 }] });
     expect(v).toMatchObject({ pontos: [{ x: 1, y: 1, aberto: true }, { x: 2, y: 2 }] });

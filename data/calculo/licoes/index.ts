@@ -19,6 +19,7 @@ import { C2_CONTINUIDADE } from './c2-continuidade';
 import { C3_LIMITE_INFINITO } from './c3-limite-infinito';
 import { C4_DERIVADA } from './c4-derivada';
 import { C5_REGRA_POTENCIA } from './c5-regra-potencia';
+import { C6_PRODUTO_QUOCIENTE } from './c6-produto-quociente';
 
 export const LICOES_ESCRITAS: Record<string, ConteudoLicao> = {
   p1: P1_FUNCAO,
@@ -38,4 +39,5 @@ export const LICOES_ESCRITAS: Record<string, ConteudoLicao> = {
   c3: C3_LIMITE_INFINITO,
   c4: C4_DERIVADA,
   c5: C5_REGRA_POTENCIA,
+  c6: C6_PRODUTO_QUOCIENTE,
 };

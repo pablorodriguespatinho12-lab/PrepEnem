@@ -6,6 +6,7 @@ import { renderizarTextoMatematico } from '@/lib/visual/texto-matematico';
 import { ALTURA, COR, EIXO, Eixos, Grafico, HALO, LARGURA, Latex, MARGEM, corDe, escala } from './grafico';
 import { Cena } from './cena';
 import { Roda } from './roda';
+import { Retangulo } from './retangulo';
 function Reta({ v }: { v: VisualReta }) {
   const altura = 110;
   const meio = 56;
@@ -124,6 +125,7 @@ export function VisualDesenho({ visual }: { visual: Visual }) {
       {visual.tipo === 'vetores' && <Vetores v={visual} />}
       {visual.tipo === 'cena' && <Cena v={visual} />}
       {visual.tipo === 'roda' && <Roda v={visual} />}
+      {visual.tipo === 'retangulo' && <Retangulo v={visual} />}
     </figure>
   );
 }
