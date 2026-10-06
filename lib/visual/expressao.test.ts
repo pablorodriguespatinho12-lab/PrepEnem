@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { compilarExpressao, tentarCompilar } from './expressao';
+import { compilarExpressao, exprParaLatex, tentarCompilar } from './expressao';
 
 const em = (fonte: string, x: number) => compilarExpressao(fonte)(x);
 
@@ -50,5 +50,26 @@ describe('compilarExpressao', () => {
     expect(() => compilarExpressao('x; process.exit()')).toThrow();
     expect(() => compilarExpressao('x +')).toThrow();
     expect(tentarCompilar('constructor')).toBeNull();
+  });
+});
+
+describe('exprParaLatex', () => {
+  test('número vezes número mantém o ponto de multiplicação', () => {
+    expect(exprParaLatex('10-10*0.5^x')).toBe('10-10\\cdot 0{,}5^x');
+  });
+  test('número vezes letra ou parêntese fica colado, como se escreve à mão', () => {
+    expect(exprParaLatex('5*x+2')).toBe('5x+2');
+    expect(exprParaLatex('5*(x-2)')).toBe('5(x-2)');
+    expect(exprParaLatex('20*x-5*x^2')).toBe('20x-5x^2');
+  });
+  test('decimal com vírgula', () => {
+    expect(exprParaLatex('1000*1.1^x')).toBe('1000\\cdot 1{,}1^x');
+  });
+});
+describe('numeroLatex', () => {
+  test('vírgula decimal sem o espaço do KaTeX', async () => {
+    const { numeroLatex } = await import('./expressao');
+    expect(numeroLatex(9.84375)).toBe('9{,}84');
+    expect(numeroLatex(12)).toBe('12');
   });
 });

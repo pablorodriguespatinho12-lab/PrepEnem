@@ -5,6 +5,7 @@
 // O gráfico opcional desenrola a altura volta a volta.
 
 import type { VisualGrafico, VisualRoda } from '@/lib/visual/especificacao';
+import { numeroLatex } from '@/lib/visual/expressao';
 import { Grafico, Latex, COR, EIXO } from './grafico';
 import { Controles, Deslizante, useRelogio } from './relogio';
 
@@ -13,7 +14,6 @@ const MARGEM = 34;
 const LARGURA = 2 * (R + MARGEM);
 
 const numero = (n: number) => (Math.abs(n) < 1e-9 ? 0 : n).toLocaleString('pt-BR', { maximumFractionDigits: 2 });
-const latexNumero = (n: number) => numero(n).replace(',', '{,}');
 
 function geometria(v: VisualRoda, k: number) {
   const graus = (k * 360) / v.divisoes;
@@ -101,7 +101,7 @@ export function Roda({ v }: { v: VisualRoda }) {
       <div className="space-y-1 type-body" aria-live="polite">
         {gigante ? (
           <p>
-            <Latex fonte={`${latexNumero(v.centro)} + ${latexNumero(v.raio)}\\cdot \\operatorname{sen} ${latexNumero(graus)}^\\circ = ${latexNumero(altura)}`} />
+            <Latex fonte={`${numeroLatex(v.centro)} + ${numeroLatex(v.raio)}\\cdot \\operatorname{sen} ${numeroLatex(graus)}^\\circ = ${numeroLatex(altura)}`} />
             <span className="text-muted-foreground"> → a cadeira está a </span>
             <strong data-numeric style={{ color: COR.b }}>{numero(altura)} {u}</strong>
             <span className="text-muted-foreground"> do chão</span>
@@ -109,11 +109,11 @@ export function Roda({ v }: { v: VisualRoda }) {
         ) : (
           <>
             <p>
-              <Latex fonte={`\\cos ${latexNumero(graus)}^\\circ = ${latexNumero(cos)}`} />
+              <Latex fonte={`\\cos ${numeroLatex(graus)}^\\circ = ${numeroLatex(cos)}`} />
               <span className="text-muted-foreground"> → a sombra no chão, </span><strong style={{ color: COR.a }}>para o lado</strong>
             </p>
             <p>
-              <Latex fonte={`\\operatorname{sen} ${latexNumero(graus)}^\\circ = ${latexNumero(sen)}`} />
+              <Latex fonte={`\\operatorname{sen} ${numeroLatex(graus)}^\\circ = ${numeroLatex(sen)}`} />
               <span className="text-muted-foreground"> → a </span><strong style={{ color: COR.b }}>altura</strong>
             </p>
           </>

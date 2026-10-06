@@ -103,7 +103,9 @@ export function Grafico({ v }: { v: VisualGrafico }) {
       ))}
       {(v.pontos ?? []).map((p, i) => (
         <g key={`p${i}`}>
-          <circle cx={e.px(p.x)} cy={e.py(p.y)} r={4.5} fill={corDe(p.cor, 1)} stroke="hsl(var(--background))" strokeWidth={1.5} />
+          {p.aberto
+            ? <circle cx={e.px(p.x)} cy={e.py(p.y)} r={5} fill="hsl(var(--surface-2))" stroke={corDe(p.cor, 1)} strokeWidth={2.5} />
+            : <circle cx={e.px(p.x)} cy={e.py(p.y)} r={4.5} fill={corDe(p.cor, 1)} stroke="hsl(var(--background))" strokeWidth={1.5} />}
           {p.rotulo && (
             <text x={e.px(p.x) + 7} y={e.py(p.y) - 7} fontSize={12} fontWeight={600} {...HALO} fill={corDe(p.cor, 1)}>{p.rotulo}</text>
           )}

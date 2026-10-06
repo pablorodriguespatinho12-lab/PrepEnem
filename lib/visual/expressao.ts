@@ -180,3 +180,18 @@ export function tentarCompilar(fonte: string): Funcao | null {
     return null;
   }
 }
+/* Regra ("10-10*0.5^x") → LaTeX para mostrar. Número vezes número mantém o
+   "·": sem ele, "10*0.5" aparecia como "100,5" (c1, 06/10/2026). Número vezes
+   letra ou parêntese fica colado, como se escreve à mão: "5x", "5(x-2)". */
+export function exprParaLatex(expr: string): string {
+  return expr
+    .replace(/(\d)\.(\d)/g, '$1{,}$2')
+    .replace(/(\d)\s*\*\s*(?=\d)/g, '$1\\cdot ')
+    .replace(/\s*\*\s*/g, '');
+}
+/* Número para dentro de uma fórmula: vírgula decimal sem o espaço que o
+   KaTeX põe depois de "," ("9,84" saía "9, 84"). */
+export function numeroLatex(n: number): string {
+  const limpo = Math.abs(n) < 1e-9 ? 0 : n;
+  return limpo.toLocaleString('pt-BR', { maximumFractionDigits: 2, useGrouping: false }).replace(',', '{,}');
+}

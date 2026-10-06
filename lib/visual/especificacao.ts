@@ -8,7 +8,8 @@ import { tentarCompilar } from './expressao';
    desenho (sinalização de Mayer). 'erro' é só para o caminho errado. */
 export type CorVisual = 'a' | 'b' | 'c' | 'erro';
 
-export interface PontoRotulado { x: number; y: number; rotulo?: string; cor?: CorVisual }
+/* "aberto": bolinha vazia, o furo onde a função não tem valor (limites, c1/c2). */
+export interface PontoRotulado { x: number; y: number; rotulo?: string; cor?: CorVisual; aberto?: boolean }
 
 export interface VisualGrafico {
   tipo: 'grafico';
@@ -103,7 +104,9 @@ function intervalo(v: unknown): [number, number] | undefined {
 
 function ponto(v: unknown): PontoRotulado | null {
   const p = objeto(v);
-  return ehNumero(p.x) && ehNumero(p.y) ? { x: p.x, y: p.y, rotulo: texto(p.rotulo, 40), cor: cor(p.cor) } : null;
+  if (!ehNumero(p.x) || !ehNumero(p.y)) return null;
+  const base = { x: p.x, y: p.y, rotulo: texto(p.rotulo, 40), cor: cor(p.cor) };
+  return p.aberto === true ? { ...base, aberto: true } : base;
 }
 
 const naoNulo = <T,>(v: T | null): v is T => v !== null;
@@ -217,7 +220,7 @@ export function validarVisual(bruto: unknown): Visual | null {
 /* Descrição do formato para colocar no prompt da IA — uma fonte só. */
 export const FORMATO_VISUAL_PARA_IA = `"visual" é um destes objetos (ou null). O app desenha a partir dele; você nunca manda imagem.
 - Gráfico de função: {"tipo":"grafico","titulo":"...","funcoes":[{"expr":"x^2-4","rotulo":"f(x)","cor":"a"}],"pontos":[{"x":2,"y":0,"rotulo":"raiz","cor":"b"}],"x":[-4,4],"y":[-5,6]}
-  expr usa só x, números, + - * / ^, parênteses, sqrt, sin, cos, tan, ln, log, abs, exp, pi. Escolha x e y para que o que importa (raízes, vértice, cruzamentos) apareça.
+  expr usa só x, números, + - * / ^, parênteses, sqrt, sin, cos, tan, ln, log, abs, exp, pi. Escolha x e y para que o que importa (raízes, vértice, cruzamentos) apareça. Ponto com "aberto": true é bolinha vazia: furo onde a função não tem valor, ou ponta que não entra.
 - Reta numérica (inequação, intervalo): {"tipo":"reta","de":-5,"ate":5,"marcas":[{"x":2,"rotulo":"2"}],"trechos":[{"de":2,"ate":5,"rotulo":"x ≥ 2","fechadoDe":true,"fechadoAte":false,"cor":"a"}]}
 - Transformação passo a passo (álgebra, de onde a fórmula vem): {"tipo":"transformacao","linhas":[{"latex":"ax^2+bx+c=0","porque":"ponto de partida"},{"latex":"x^2+\\\\frac{b}{a}x=-\\\\frac{c}{a}","porque":"divide tudo por a"}]}
 - Tabela (comparar valores, proporção, mol): {"tipo":"tabela","cabecalho":["n (mol)","massa (g)"],"linhas":[["1","18"],["2","36"]]}

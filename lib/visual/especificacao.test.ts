@@ -2,6 +2,11 @@ import { describe, expect, test } from 'vitest';
 import { validarVisual } from './especificacao';
 
 describe('validarVisual', () => {
+  test('ponto aberto (furo) é preservado; sem o campo, fica fechado', () => {
+    const v = validarVisual({ tipo: 'grafico', x: [0, 2], funcoes: [{ expr: 'x' }], pontos: [{ x: 1, y: 1, aberto: true }, { x: 2, y: 2 }] });
+    expect(v).toMatchObject({ pontos: [{ x: 1, y: 1, aberto: true }, { x: 2, y: 2 }] });
+    expect(v && v.tipo === 'grafico' && v.pontos?.[1].aberto).toBeFalsy();
+  });
   test('roda: círculo de raio 1 por padrão, divisões e voltas limitadas', () => {
     expect(validarVisual({ tipo: 'roda', divisoes: 12 })).toMatchObject({ tipo: 'roda', divisoes: 12, raio: 1, centro: 0, voltas: 1 });
     expect(validarVisual({ tipo: 'roda', divisoes: 12, raio: 20, centro: 22, voltas: 2, unidade: 'm', grafico: true }))

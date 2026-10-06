@@ -7,7 +7,7 @@
 import { useMemo } from 'react';
 import { useReducedMotion } from 'framer-motion';
 import { ehVertical, type CorVisual, type Veiculo, type VisualCena, type VisualGrafico } from '@/lib/visual/especificacao';
-import { tentarCompilar } from '@/lib/visual/expressao';
+import { exprParaLatex, numeroLatex, tentarCompilar } from '@/lib/visual/expressao';
 import { faixaDaCena, marcas } from '@/lib/visual/geometria';
 import { Grafico, Latex, corDe } from './grafico';
 import { Controles, Deslizante, useRelogio } from './relogio';
@@ -19,7 +19,6 @@ const CORES = ['a', 'b', 'c'] as const;
 const EXTENSO: Record<string, string> = { min: 'minuto', h: 'hora', s: 'segundo' };
 const NOME: Record<Veiculo, string> = { carro: 'carro', moto: 'moto', bola: 'bola', balao: 'balão', vela: 'vela' };
 const numero = (n: number) => n.toLocaleString('pt-BR', { maximumFractionDigits: 2 });
-const latexDaRegra = (expr: string) => expr.replace(/\*/g, '');
 
 function frase(veiculo: Veiculo, unidade: string): string {
   if (veiculo === 'bola' || veiculo === 'balao') return `${veiculo === 'bola' ? 'a bola' : 'o balão'} está a esta altura:`;
@@ -163,7 +162,7 @@ export function Cena({ v }: { v: VisualCena }) {
         {v.veiculos.map((w, i) => (
           <span key={w.nome} className="inline-flex items-baseline gap-2">
             <strong style={{ color: posicoes[i].cor }}>{w.rotulo ?? NOME[w.veiculo]}</strong>
-            <Latex fonte={`${w.nome}(x) = ${latexDaRegra(w.expr)}`} />
+            <Latex fonte={`${w.nome}(x) = ${exprParaLatex(w.expr)}`} />
           </span>
         ))}
       </div>
@@ -174,7 +173,7 @@ export function Cena({ v }: { v: VisualCena }) {
       <div className="space-y-1 type-body" aria-live="polite">
         {posicoes.map((w) => (
           <p key={w.nome}>
-            <Latex fonte={`${w.nome}(${numero(t)}) = ${numero(w.valor)}`} />
+            <Latex fonte={`${w.nome}(${numeroLatex(t)}) = ${numeroLatex(w.valor)}`} />
             <span className="text-muted-foreground"> → {frase(w.veiculo, uy)} </span>
             <strong data-numeric style={{ color: w.cor }}>{numero(w.valor)}{vertical ? ` ${uy}` : ''}</strong>
           </p>
