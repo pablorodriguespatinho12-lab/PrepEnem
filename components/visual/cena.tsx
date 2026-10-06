@@ -99,7 +99,7 @@ function PistaVertical({ posicoes, pct, faixa, unidade, reduzir }: {
   const transicao = reduzir ? 'none' : MOVIMENTO;
   const chao = pct(0);
   return (
-    <div className="flex justify-center gap-10 py-4" aria-hidden>
+    <div className="flex justify-center gap-10 pt-12 pb-4" aria-hidden>
       <div className="relative w-8 type-micro text-muted-foreground" style={{ height: ALTURA_PISTA }}>
         {marcas(faixa, 6).map((v) => (
           <span key={v} data-numeric className="absolute right-0 translate-y-1/2" style={{ bottom: `${pct(v)}%` }}>{v}</span>
