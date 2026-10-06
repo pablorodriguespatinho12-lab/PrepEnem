@@ -51,7 +51,8 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         <ParticlesBg />
         <ScrollProgress />
         <SidebarNav />
-        <main className="md:ml-64 min-h-screen relative" style={{ zIndex: 1 }}>
+        {/* pt-12 no celular: o botão fixo do menu (top-4, 36 px) cobria o topo das páginas, ex. o "Voltar". */}
+        <main className="md:ml-64 min-h-screen relative pt-12 md:pt-0" style={{ zIndex: 1 }}>
           {children}
         </main>
       </div>

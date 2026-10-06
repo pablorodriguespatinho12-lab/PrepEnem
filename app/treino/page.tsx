@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import dynamic from 'next/dynamic';
@@ -102,6 +102,10 @@ export default function TreinoPage() {
 
   // `recomecar`: monta uma sessão nova do zero. Sem isso o
   // botão de reiniciar só restaurava a mesma sessão, na mesma questão.
+  // Resumo já pedido e ainda sem resposta. O efeito que monta a sessão roda duas
+  // vezes no modo de desenvolvimento do React: eram dois pedidos iguais à IA,
+  // o dobro da cota por minuto e um 429 no segundo (visto em 05/10/2026).
+  const resumoEmCursoRef = useRef<string | null>(null);
   const startSession = useCallback(async (recomecar = false) => {
     setLoading(true);
     setSelected(null);
@@ -236,6 +240,9 @@ export default function TreinoPage() {
           }
         }
         const subtemas = Array.from(subtemaMap.values()).slice(0, 8);
+        const chaveResumo = JSON.stringify(subtemas);
+        if (resumoEmCursoRef.current === chaveResumo) return;
+        resumoEmCursoRef.current = chaveResumo;
         setResumoLoading(true);
         fetch('/api/treino/resumo', {
           method: 'POST',
@@ -253,7 +260,10 @@ export default function TreinoPage() {
             setResumoData(d.resumos);
           })
           .catch(() => toast.error('Erro ao carregar resumo'))
-          .finally(() => setResumoLoading(false));
+          .finally(() => {
+            resumoEmCursoRef.current = null;
+            setResumoLoading(false);
+          });
       }
     } catch (e) {
       console.error(e);
