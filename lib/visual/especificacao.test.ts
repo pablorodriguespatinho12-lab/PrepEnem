@@ -6,6 +6,8 @@ describe('validarVisual', () => {
     expect(validarVisual({ tipo: 'retangulo', x: [0, 4], base: '10+x', altura: '5+2*x' }))
       .toMatchObject({ tipo: 'retangulo', x: [0, 4], base: '10+x', altura: '5+2*x' });
     expect(validarVisual({ tipo: 'retangulo', x: [0, 4], base: '2-x', altura: '1' })).toBeNull();
+    expect(validarVisual({ tipo: 'retangulo', x: [0, 10], base: 'x', altura: '10-x', faixas: false })).toMatchObject({ faixas: false });
+    expect(validarVisual({ tipo: 'retangulo', x: [0, 4], base: 'x', altura: '1' })).toMatchObject({ faixas: true });
     expect(validarVisual({ tipo: 'retangulo', x: [0, 4], base: 'alert(1)', altura: '1' })).toBeNull();
   });
   test('ponto aberto (furo) é preservado; sem o campo, fica fechado', () => {

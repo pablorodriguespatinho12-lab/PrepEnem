@@ -13,6 +13,7 @@ import { Controles, Deslizante, useRelogio } from './relogio';
 const LARGURA = 320;
 const ALTURA = 240;
 const MARGEM = 24;
+const LARGURA_ROTULO = 80;
 
 const numero = (n: number) => n.toLocaleString('pt-BR', { maximumFractionDigits: 2 });
 
@@ -31,7 +32,7 @@ export function Retangulo({ v }: { v: VisualRetangulo }) {
 
   const b1 = base(t);
   const a1 = altura(t);
-  const anterior = t > v.x[0];
+  const anterior = v.faixas && t > v.x[0];
   const b0 = anterior ? base(t - 1) : b1;
   const a0 = anterior ? altura(t - 1) : a1;
   const chao = ALTURA - MARGEM;
@@ -44,7 +45,8 @@ export function Retangulo({ v }: { v: VisualRetangulo }) {
 
   return (
     <div className="space-y-4">
-      <Deslizante relogio={relogio} rotulo={<>Tempo <span data-numeric className="font-semibold text-foreground">t = {numero(t)}</span></>} />
+      {/* Com faixas, o retângulo cresce com o tempo (c6); sem, a base é uma escolha (cerca, c10). */}
+      <Deslizante relogio={relogio} rotulo={<>{v.faixas ? 'Tempo' : 'Base'} <span data-numeric className="font-semibold text-foreground">{v.faixas ? 't' : 'x'} = {numero(t)}</span></>} />
       <svg viewBox={`0 0 ${LARGURA} ${ALTURA}`} className="w-full max-w-[360px] h-auto mx-auto" role="img" aria-label="Retângulo que cresce nos dois lados">
         <rect x={px(0)} y={py(a0)} width={b0 * escala} height={a0 * escala} fill={COR.a} fillOpacity={0.25} stroke={COR.a} strokeWidth={1.5} />
         {anterior && (
@@ -56,7 +58,9 @@ export function Retangulo({ v }: { v: VisualRetangulo }) {
         )}
         <rect x={px(0)} y={py(a1)} width={b1 * escala} height={a1 * escala} fill="none" stroke="hsl(var(--foreground))" strokeWidth={2} />
         <text x={px(b1 / 2)} y={chao + 16} textAnchor="middle" fontSize={12} fill={EIXO}>base {numero(b1)} {u}</text>
-        <text x={px(0) + 6} y={py(a1) + 16} fontSize={12} fill="hsl(var(--foreground))">altura {numero(a1)} {u}</text>
+        {/* Retângulo estreito: o rótulo da altura vai para fora, à direita. */}
+        <text x={b1 * escala >= LARGURA_ROTULO ? px(0) + 6 : px(b1) + 6} y={b1 * escala >= LARGURA_ROTULO ? py(a1) + 16 : py(a1 / 2)}
+          fontSize={12} fill="hsl(var(--foreground))">altura {numero(a1)} {u}</text>
       </svg>
       <div className="space-y-1 type-body" aria-live="polite">
         <p>
@@ -72,7 +76,7 @@ export function Retangulo({ v }: { v: VisualRetangulo }) {
           </p>
         )}
       </div>
-      <Controles relogio={relogio} tocar="Crescer" passo="Mais 1" />
+      <Controles relogio={relogio} tocar={v.faixas ? 'Crescer' : 'Ver variando'} passo="Mais 1" />
     </div>
   );
 }

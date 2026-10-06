@@ -9,7 +9,7 @@ export const C6_PRODUTO_QUOCIENTE: ConteudoLicao = {
     {
       titulo: 'O retângulo que cresce nos dois lados',
       texto: 'Base $10 + t$ e altura $5 + 2t$. Aperte "Mais 1" e veja o que a área ganha a cada ano: a [[c:faixa de cima]] (a base velha vezes o que a altura cresceu), a [[b:faixa do lado]] (a altura velha vezes o que a base cresceu) e o canto.',
-      visual: { tipo: 'retangulo', titulo: 'Terreno: base 10 + t, altura 5 + 2t', x: [0, 4], base: '10+x', altura: '5+2*x', unidade: 'm' },
+      visual: { tipo: 'retangulo', titulo: 'Terreno: base 10 + t, altura 5 + 2t', x: [0, 4], base: '10+x', altura: '5+2*x', unidade: 'm', faixas: true },
     },
     {
       titulo: 'Duas faixas e um canto',

@@ -92,6 +92,9 @@ export interface VisualRetangulo {
   base: string;
   altura: string;
   unidade?: string;
+  /* Faixas da regra do produto (c6). Desligadas quando um lado encolhe,
+     como na cerca de perímetro fixo (otimização, c10). */
+  faixas: boolean;
 }
 export type Visual = VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo;
 
@@ -229,7 +232,7 @@ function retangulo(v: Record<string, unknown>): VisualRetangulo | null {
     const lados = [base(t), altura(t)];
     if (lados.some((l) => !Number.isFinite(l) || l < 0)) return null;
   }
-  return { tipo: 'retangulo', titulo: texto(v.titulo), x, base: v.base, altura: v.altura, unidade: texto(v.unidade, 12) };
+  return { tipo: 'retangulo', titulo: texto(v.titulo), x, base: v.base, altura: v.altura, unidade: texto(v.unidade, 12), faixas: v.faixas !== false };
 }
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {
   grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo,
