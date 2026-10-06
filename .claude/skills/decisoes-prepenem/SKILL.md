@@ -126,9 +126,17 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 - Toda lição na mesma ordem: tentativa curta → construção do raciocínio →
   fórmula como resumo → 3 exemplos (completo, 1 lacuna, 2 lacunas) →
   exercícios com resolução comentada → pergunta de recuperação.
-- As primeiras lições são escritas à mão (`data/calculo/licoes`). As outras
-  são geradas pela IA uma vez, passam pelo mesmo validador e ficam em
-  `CalculoLicaoGerada`, com a marca "gerada por IA" na tela.
+- **Lições escritas à mão** (`data/calculo/licoes`): p1 a p6 em 06/10/2026.
+  A geração por IA está desligada (`CALCULO_LICAO_IA`, teste de 05/10: contas
+  certas, explicação sem sentido); lição sem versão escrita aparece "em
+  preparação". Escrever a próxima é o caminho, não religar a IA.
+- **Nível acima no Cálculo (Pablo, 06/10/2026: "saber mais do que a maior parte
+  do pessoal"):** toda lição escrita fecha com 2 exercícios `nivelAcima`
+  (estilo ITA, Fuvest, Unicamp), originais, resolvíveis só com o que a trilha
+  já ensinou. Marcados "estilo X" na tela, nunca apresentados como questão real.
+- Antes de commitar lição nova: os testes de `data/calculo` (validador e
+  gabarito conferido contra a resolução, que precisa terminar em "= valor") e
+  conferir que todo ponto marcado num gráfico está sobre a curva.
 
 ## Visualização de dados
 
