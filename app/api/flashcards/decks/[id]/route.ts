@@ -4,6 +4,56 @@ import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { situacaoDoCartao, type RespostaCartao } from '@/lib/flashcard-dominio';
+import { escolherCartoesDoDia } from '@/lib/flashcards-dia';
+import { getCycleInfoForDay } from '@/lib/schedule-data';
+import { getActiveStudyDay } from '@/lib/study-progress';
+import { cotasDoDia } from '@/lib/treino-etapas';
+
+// Deck virtual "dia": 10 cartões de cada matéria do treino de hoje, montado na
+// hora a partir dos decks padrão e dos do usuário (lib/flashcards-dia.ts).
+const DECK_DO_DIA = 'dia';
+const CARTOES_POR_MATERIA = 10;
+
+async function deckDoDia(userId: string) {
+  const dia = await getActiveStudyDay(userId);
+  const topicos = getCycleInfoForDay(dia.weekNumber, dia.dayIndex).daySchedule?.topics ?? [];
+  const materias = cotasDoDia(topicos.map((t) => t.materia)).map(({ materia }) => ({
+    materia,
+    subtemas: topicos.filter((t) => t.materia === materia).flatMap((t) => t.subtemas),
+  }));
+
+  const decks = await prisma.flashcardDeck.findMany({
+    where: { materia: { in: materias.map((m) => m.materia) }, OR: [{ isDefault: true }, { userId }] },
+    select: { materia: true, subtema: true, nome: true, cards: { orderBy: { ordem: 'asc' } } },
+  });
+  const cartoes = decks.flatMap((d) => d.cards.map((c) => ({ ...c, materia: d.materia, subtema: d.subtema ?? d.nome })));
+  const respostas = await prisma.flashcardProgress.findMany({
+    where: { userId, cardId: { in: cartoes.map((c) => c.id) } },
+    orderBy: { dataResposta: 'desc' },
+  });
+  const historico: Record<string, RespostaCartao[]> = {};
+  const ultimaErrada = new Set<string>();
+  respostas.forEach((r) => {
+    if (!historico[r.cardId] && r.precisaRevisar) ultimaErrada.add(r.cardId);
+    (historico[r.cardId] ??= []).push(r);
+  });
+
+  const agora = new Date();
+  const candidatos = cartoes.map((c) => {
+    const situacao = situacaoDoCartao(historico[c.id] ?? [], agora);
+    return { ...c, naFilaHoje: situacao.naFilaHoje, acertosSeguidos: situacao.acertosSeguidos, precisaRevisar: ultimaErrada.has(c.id) };
+  });
+  const escolhidos = escolherCartoesDoDia(candidatos, materias, CARTOES_POR_MATERIA);
+
+  return {
+    deck: { id: DECK_DO_DIA, nome: 'Flashcards do dia', materia: materias.map((m) => m.materia).join(' · '), subtema: null, cor: null },
+    cards: escolhidos,
+    totalCards: escolhidos.length,
+    cardsToRevise: escolhidos.filter((c) => c.precisaRevisar).length,
+    cardsAcertados: 0,
+    cardsParaHoje: escolhidos.length,
+  };
+}
 
 // GET /api/flashcards/decks/[id] - get deck with cards to study
 export async function GET(request: Request, { params }: { params: { id: string } }) {
@@ -15,6 +65,8 @@ export async function GET(request: Request, { params }: { params: { id: string }
 
     const user = await prisma.user.findUnique({ where: { username: (session.user as any).username || session.user.email! } });
     if (!user) return NextResponse.json({ error: 'Usuário não encontrado' }, { status: 404 });
+
+    if (params.id === DECK_DO_DIA) return NextResponse.json(await deckDoDia(user.id));
 
     const { searchParams } = new URL(request.url);
     const mode = searchParams.get('mode') || 'todos'; // 'todos', 'revisar'

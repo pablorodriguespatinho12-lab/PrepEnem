@@ -137,8 +137,12 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   3 min por questão; sorteadas mas em ordem fácil → média → ENEM
   (`ordenarPorEtapa`). O de 45 a 180 questões saiu.
 - "Recomeçar" no treino monta sessão nova; antes só restaurava a mesma.
-- Sessão aberta só é retomada se tiver menos de 12 h — a de outro dia foi
-  montada para outro dia do cronograma.
+- Sessão aberta só é retomada se for do mesmo dia (horário de Brasília) e não
+  for simulado — a de outro dia foi montada para outro dia do cronograma.
+- **Flashcards do dia (06/10/2026):** o fim do treino leva a `/flashcards/dia`,
+  deck virtual com 10 cartões de cada matéria do treino (errados primeiro,
+  depois o assunto do dia; dominados e já respondidos hoje ficam fora).
+  Escolha em `lib/flashcards-dia.ts`; o deck não tem modo nem botão de editar.
 
 ## Redação
 

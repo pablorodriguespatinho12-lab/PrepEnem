@@ -360,6 +360,8 @@ export default function FlashcardDeckPage() {
   const params = useParams();
   const searchParams = useSearchParams();
   const deckId = params.deckId as string;
+  // Deck virtual montado pelo cronograma (api/flashcards/decks/[id]): não se edita nem tem modo.
+  const ehDoDia = deckId === 'dia';
   const initialMode = (searchParams.get('mode') || 'todos') as 'todos' | 'revisar';
   const shouldReduceMotion = useReducedMotion();
 
@@ -523,7 +525,7 @@ export default function FlashcardDeckPage() {
 
       {/* Mode toggle — "Revisar erros" usa --danger porque é, de fato, sobre
           erros; não é decoração de categoria. */}
-      <div className="flex flex-wrap gap-2 mb-4">
+      {!ehDoDia && <div className="flex flex-wrap gap-2 mb-4">
         <button
           onClick={() => setMode('todos')}
           className={`px-4 py-2 rounded-[var(--radius-control)] font-semibold type-meta t-colors ${
@@ -559,7 +561,7 @@ export default function FlashcardDeckPage() {
           <Sparkles className="w-3.5 h-3.5" />
           Gerar com IA
         </button>
-      </div>
+      </div>}
 
       {/* Progress */}
       {cards.length > 0 && (
@@ -611,7 +613,9 @@ export default function FlashcardDeckPage() {
             </h2>
             <p className="type-body text-muted-foreground mb-6">
               {cards.length === 0
-                ? mode === 'revisar'
+                ? ehDoDia
+                  ? 'Os cartões das matérias de hoje já foram respondidos.'
+                  : mode === 'revisar'
                   ? 'Você não tem cards marcados para revisão!'
                   : 'Você já dominou todos os cards deste baralho!'
                 : `Você completou ${sessionStats.acertos + sessionStats.erros} cards nesta sessão.`}
@@ -640,7 +644,7 @@ export default function FlashcardDeckPage() {
                 <RotateCw className="w-4 h-4" />
                 Estudar Novamente
               </motion.button>
-              {sessionStats.erros > 0 && (
+              {sessionStats.erros > 0 && !ehDoDia && (
                 <motion.button
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.97 }}
@@ -652,7 +656,7 @@ export default function FlashcardDeckPage() {
                   Revisar Erros
                 </motion.button>
               )}
-              <motion.button
+              {!ehDoDia && <motion.button
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => setShowGerarDialog(true)}
@@ -660,7 +664,7 @@ export default function FlashcardDeckPage() {
               >
                 <Sparkles className="w-4 h-4" />
                 Gerar mais cards
-              </motion.button>
+              </motion.button>}
             </div>
           </motion.div>
         ) : currentCard ? (
@@ -861,8 +865,10 @@ export default function FlashcardDeckPage() {
       </AnimatePresence>
       </div>
 
+      {!ehDoDia && <>
       <AdicionarCardDialog open={showAddDialog} onOpenChange={setShowAddDialog} deckId={deckId} onSaved={() => fetchDeck()} />
       <GerarComIADialog open={showGerarDialog} onOpenChange={setShowGerarDialog} deckId={deckId} onSaved={() => fetchDeck()} />
+      </>}
     </div>
   );
 }

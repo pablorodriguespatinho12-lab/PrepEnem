@@ -8,7 +8,7 @@ import {
   BookOpen, ChevronLeft, ChevronRight, CheckCircle2, XCircle, AlertTriangle,
   Loader2, RefreshCcw, Home, Send, Sparkles, Trophy,
   GraduationCap, ChevronDown, Calculator, Play, Eye, EyeOff,
-  Check, X
+  Check, X, Layers
 } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
@@ -721,12 +721,22 @@ export default function TreinoPage() {
             >
               <Home className="w-4 h-4" /> Voltar
             </button>
-            <button
-              onClick={() => { setFinished(false); startSession(); }}
-              className="flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] type-meta font-medium hover:opacity-90 t-colors shadow-elev-2"
-            >
-              <RefreshCcw className="w-4 h-4" /> Nova Sessão
-            </button>
+            {/* Depois do treino do dia vêm os flashcards do dia (Pablo, 06/10/2026). */}
+            {isReview ? (
+              <button
+                onClick={() => { setFinished(false); startSession(); }}
+                className="flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] type-meta font-medium hover:opacity-90 t-colors shadow-elev-2"
+              >
+                <RefreshCcw className="w-4 h-4" /> Nova Sessão
+              </button>
+            ) : (
+              <button
+                onClick={() => router.push('/flashcards/dia')}
+                className="flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] type-meta font-medium hover:opacity-90 t-colors shadow-elev-2"
+              >
+                <Layers className="w-4 h-4" /> Flashcards do dia
+              </button>
+            )}
           </motion.div>
         </motion.div>
       </div>
