@@ -25,6 +25,7 @@ import { C8_EXP_LOG_TRIG } from './c8-exp-log-trig';
 import { C9_SUBIR_DESCER } from './c9-subir-descer';
 import { C10_OTIMIZACAO } from './c10-otimizacao';
 import { C11_INTEGRAL } from './c11-integral';
+import { C12_TEOREMA_FUNDAMENTAL } from './c12-teorema-fundamental';
 
 export const LICOES_ESCRITAS: Record<string, ConteudoLicao> = {
   p1: P1_FUNCAO,
@@ -50,4 +51,5 @@ export const LICOES_ESCRITAS: Record<string, ConteudoLicao> = {
   c9: C9_SUBIR_DESCER,
   c10: C10_OTIMIZACAO,
   c11: C11_INTEGRAL,
+  c12: C12_TEOREMA_FUNDAMENTAL,
 };
