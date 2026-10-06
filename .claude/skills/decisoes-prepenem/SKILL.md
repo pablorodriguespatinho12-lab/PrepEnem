@@ -35,6 +35,16 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 
 - Nenhuma escolhida ainda (05/10/2026).
 
+## Telas enxutas (06/10/2026, pedido do Pablo: menos coisa num lugar só)
+
+- **Menu: 6 itens à vista** (Início, Treino, Flashcards, Redação, Cálculo,
+  Progresso) e o resto em "Mais", aberto sozinho quando a página atual é dele.
+  Tela nova entra em "Mais", a não ser que seja estudo diário.
+- **Início = só o estudo de hoje** + "Revisar o que você errou" (se houver).
+  Números ficam em Progresso; a semana fica atrás de "Ver a semana".
+- **Um número, um lugar.** Se a informação já aparece na tela, não repete em
+  gráfico (Progresso perdeu a rosca e as barras; ficou a evolução por dia).
+
 ## Conteúdo gerado por IA
 
 - **Zero emoji** em explicações, feedback ou UI. Hierarquia se faz com

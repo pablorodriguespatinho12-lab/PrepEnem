@@ -3,39 +3,14 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import {
-  BookOpen, Target, Flame, RefreshCcw, Calendar,
-  Trophy, ArrowRight, AlertTriangle, AlertCircle, CheckCircle2, Brain, Sparkles,
-  Sun, Briefcase, FileText, Upload, ClipboardList, BarChart3
+  RefreshCcw, Calendar, Trophy, ArrowRight, Brain, Sparkles,
+  Sun, Briefcase, ClipboardList, ChevronDown,
 } from 'lucide-react';
 import { getWeekScheduleByNumber, studyCycle } from '@/lib/schedule-data';
 import { materiaColors } from '@/lib/theme-colors';
 import { CheckCircle2 as DayDoneIcon, Circle, CircleDashed } from 'lucide-react';
 
 
-/* Limiares de dado esparso — mesma regra usada em app/progresso/page.tsx.
-   < 5 respostas: sem %. 5–15: % com indicador de baixa confiança. 15+: limpa. */
-const MIN_QUESTOES_PARA_TAXA = 5;
-const LIMIAR_BAIXA_CONFIANCA = 15;
-
-/* ── Animated number counter ── */
-function AnimatedNumber({ value, suffix = '' }: { value: number; suffix?: string }) {
-  const [display, setDisplay] = useState(0);
-  useEffect(() => {
-    const duration = 1000;
-    const startTime = Date.now();
-    let frame = 0;
-    const animate = () => {
-      const elapsed = Date.now() - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      setDisplay(Math.floor(value * progress));
-      if (progress < 1) frame = requestAnimationFrame(animate);
-    };
-    animate();
-    // Sem cancelar, o loop do valor antigo (0) disputava com o novo e o número piscava.
-    return () => cancelAnimationFrame(frame);
-  }, [value]);
-  return <span>{display}{suffix}</span>;
-}
 
 /* ── Saudação + badge de semana ──
    Direto ao ponto: sem título animado (o nome do produto já está na
@@ -72,6 +47,8 @@ export default function DashboardPage() {
   const [stats, setStats] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [studyProgress, setStudyProgress] = useState<any[]>([]);
+  // A semana repete as matérias do dia: fica fechada até o aluno pedir.
+  const [semanaAberta, setSemanaAberta] = useState(false);
   const [activeDay, setActiveDay] = useState<{ weekNumber: number; dayIndex: number; cycleComplete: boolean } | null>(null);
   const [expandedDayIndex, setExpandedDayIndex] = useState<number | null>(null);
 
@@ -122,14 +99,7 @@ export default function DashboardPage() {
   const treinoHref = activeDay ? `/treino?weekNumber=${activeDay.weekNumber}&dayIndex=${activeDay.dayIndex}` : '/treino';
   const weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']; // indexado por day.dayOfWeek (0=Dom civil), não por dayIndex
 
-  const totalRespondidas = stats?.totalRespondidas ?? 0;
 
-  const statCards = [
-    { key: 'respondidas', label: 'Questões Respondidas', value: stats?.totalRespondidas ?? 0, icon: BookOpen },
-    { key: 'taxa', label: 'Taxa de Acerto', value: stats?.taxaAcerto ?? 0, suffix: '%', icon: Target },
-    { key: 'streak', label: 'Dias de Sequência', value: stats?.streakDays ?? 0, icon: Flame },
-    { key: 'revisoes', label: 'Revisões Pendentes', value: stats?.pendingReviews ?? 0, icon: RefreshCcw },
-  ];
 
   return (
     <>
@@ -242,86 +212,37 @@ export default function DashboardPage() {
           </div>
         )}
 
-        {/* ── Stats compactos (contexto, não protagonista) ── */}
-        <div className="flex items-stretch divide-x divide-border surface-1 rounded-[var(--radius-surface)] mb-4 overflow-x-auto">
-          {statCards.map((card) => {
-            const Icon = card.icon;
-            const isTaxa = card.key === 'taxa';
-            const sparse = isTaxa && totalRespondidas < MIN_QUESTOES_PARA_TAXA;
-            const lowConfidence = isTaxa && !sparse && totalRespondidas < LIMIAR_BAIXA_CONFIANCA;
-            return (
-              <div key={card.label} className="flex items-center gap-2.5 px-4 py-3 flex-1 min-w-[140px]">
-                <Icon className="w-4 h-4 text-muted-foreground flex-shrink-0" aria-hidden="true" />
-                <div className="min-w-0">
-                  <p data-numeric className="font-display type-lead font-bold flex items-center gap-1">
-                    {sparse ? '—' : <AnimatedNumber value={card.value} suffix={card.suffix} />}
-                    {lowConfidence && (
-                      <AlertCircle
-                        className="w-3 h-3 text-muted-foreground"
-                        aria-label="Amostra pequena: a taxa ainda pode mudar bastante"
-                      />
-                    )}
-                  </p>
-                  <p className="type-caption text-muted-foreground truncate">
-                    {sparse ? 'poucos dados' : isTaxa ? `${card.label} · ${totalRespondidas}` : card.label}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* ── Ações secundárias ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6" style={{ perspective: '800px' }}>
+        {/* Tela inicial enxuta (Pablo, 06/10/2026: "não deixar tanta coisa num
+            lugar só"). Saíram daqui os números (estão em Progresso), os atalhos
+            de Simulado e Importar PDF (estão no menu) e as matérias para
+            reforçar (Progresso). Fica só o que é ação de hoje: revisar. */}
+        {(stats?.pendingReviews ?? 0) > 0 && (
           <button
             onClick={() => router.push('/treino?mode=review')}
-            className="flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-3 t-lift card-3d group"
+            className="w-full flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-4 mb-6 t-lift group text-left"
           >
             <div className="w-9 h-9 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center flex-shrink-0">
               <RefreshCcw className="w-4 h-4 text-primary-text" />
             </div>
-            <div className="flex-1 text-left min-w-0">
-              <p className="font-display type-meta font-bold truncate">Revisar Agora</p>
-              <p className="type-meta text-muted-foreground truncate">
-                {(stats?.pendingReviews ?? 0) > 0 ? `${stats.pendingReviews} pendentes` : 'Nenhuma pendente'}
-              </p>
+            <div className="flex-1 min-w-0">
+              <p className="font-display type-body font-semibold">Revisar o que você errou</p>
+              <p className="type-meta text-muted-foreground"><span data-numeric>{stats.pendingReviews}</span> questões esperando revisão</p>
             </div>
-            {(stats?.pendingReviews ?? 0) > 0 && (
-              <span data-numeric className="type-micro px-2 py-0.5 bg-primary text-primary-foreground font-bold rounded-[var(--radius-data)] flex-shrink-0">{stats.pendingReviews}</span>
-            )}
+            <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary-text group-hover:translate-x-1 transition-transform flex-shrink-0" />
           </button>
-
-          <button
-            onClick={() => router.push('/simulado')}
-            className="flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-3 t-lift card-3d group"
-          >
-            <div className="w-9 h-9 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center flex-shrink-0">
-              <ClipboardList className="w-4 h-4 text-primary-text" />
-            </div>
-            <div className="flex-1 text-left min-w-0">
-              <p className="font-display type-meta font-bold truncate">Simulado ENEM</p>
-              <p className="type-meta text-muted-foreground truncate">
-                {activeDaySchedule?.isSimulado ? 'Dia de simulado no seu plano atual' : 'Até 180 questões'}
-              </p>
-            </div>
-          </button>
-
-          <button
-            onClick={() => router.push('/upload')}
-            className="flex items-center gap-3 surface-1 rounded-[var(--radius-surface)] p-3 t-lift card-3d group"
-          >
-            <div className="w-9 h-9 rounded-[var(--radius-control)] bg-primary/10 flex items-center justify-center flex-shrink-0">
-              <Upload className="w-4 h-4 text-primary-text" />
-            </div>
-            <div className="flex-1 text-left min-w-0">
-              <p className="font-display type-meta font-bold truncate">Importar PDF</p>
-              <p className="type-meta text-muted-foreground truncate">Provas e simulados</p>
-            </div>
-          </button>
-        </div>
-
+        )}
         {/* ── Weekly Calendar: pills horizontais, status vem do progresso real,
              não da data (dia atual do plano expandido por padrão) ── */}
+        <button
+          type="button"
+          onClick={() => setSemanaAberta((v) => !v)}
+          aria-expanded={semanaAberta}
+          className="mb-4 inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors"
+        >
+          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${semanaAberta ? 'rotate-180' : ''}`} />
+          {semanaAberta ? 'Esconder a semana' : 'Ver a semana'}
+        </button>
+        {semanaAberta && (
         <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-8">
           <div className="flex items-center gap-2 mb-4">
             <Sparkles className="w-5 h-5 text-primary-text" />
@@ -386,52 +307,7 @@ export default function DashboardPage() {
             </div>
           )}
         </div>
-
-        {/* ── Subjects status ── */}
-        {stats && ((stats.dominadas?.length ?? 0) === 0 && (stats.reforcar?.length ?? 0) === 0 ? (
-          <div className="surface-1 rounded-[var(--radius-surface)] p-5 card-3d text-center">
-            <BarChart3 className="w-6 h-6 text-muted-foreground mx-auto mb-2" />
-            <p className="type-meta font-medium">Ainda sem dados suficientes por matéria</p>
-            <p className="type-meta text-muted-foreground mt-1">
-              Responda mais questões pra ver aqui quais matérias você já domina e quais precisa reforçar.
-            </p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {(stats?.dominadas?.length ?? 0) > 0 && (
-              <div className="surface-1 rounded-[var(--radius-surface)] p-5 card-3d">
-                <div className="flex items-center gap-2 mb-3">
-                  <CheckCircle2 className="w-5 h-5" style={{ color: 'hsl(var(--success))' }} />
-                  <h3 className="font-display type-body font-semibold">Matérias Dominadas</h3>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {(stats.dominadas ?? []).map((m: string) => (
-                    <span
-                      key={m}
-                      className="px-3 py-1.5 type-meta font-medium rounded-[var(--radius-data)]"
-                      style={{ backgroundColor: 'hsl(var(--success-surface))', color: 'hsl(var(--success))' }}
-                    >
-                      {m}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-            {(stats?.reforcar?.length ?? 0) > 0 && (
-              <div className="surface-1 rounded-[var(--radius-surface)] p-5 card-3d">
-                <div className="flex items-center gap-2 mb-3">
-                  <AlertTriangle className="w-5 h-5 text-orange-600" />
-                  <h3 className="font-display type-body font-semibold">Matérias para Reforçar</h3>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {(stats.reforcar ?? []).map((m: string) => (
-                    <span key={m} className="px-3 py-1.5 bg-primary/10 text-primary-text type-meta font-medium rounded-[var(--radius-data)]">{m}</span>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        ))}
+        )}
       </div>
     </>
   );

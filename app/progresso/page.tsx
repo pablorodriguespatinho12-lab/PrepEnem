@@ -16,8 +16,8 @@ const LIMIAR_BAIXA_CONFIANCA = 15;
 function TaxaAcerto({ total, acertos }: { total: number; acertos: number }) {
   if (total < MIN_QUESTOES_PARA_TAXA) {
     return (
-      <span className="type-meta text-muted-foreground italic whitespace-nowrap">
-        poucos dados · responda mais para ver seu desempenho
+      <span className="type-meta text-muted-foreground italic whitespace-nowrap" title="Responda mais para ver a porcentagem">
+        poucos dados · <span data-numeric>{total}</span> {total === 1 ? 'questão' : 'questões'}
       </span>
     );
   }
@@ -84,7 +84,7 @@ export default function ProgressoPage() {
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}>
         <div className="flex items-center gap-3 mb-2">
           <BarChart3 className="w-6 h-6 text-primary-text" />
-          <h1 className="font-display type-headline font-bold">Dashboard de Progresso</h1>
+          <h1 className="font-display type-headline font-bold">Seu progresso</h1>
         </div>
         <p className="type-meta text-muted-foreground mb-8">Acompanhe sua evolução detalhada nos estudos</p>
       </motion.div>
@@ -95,7 +95,7 @@ export default function ProgressoPage() {
           { label: 'Total Respondidas', value: stats?.totalRespondidas ?? 0, icon: BookOpen, color: 'text-muted-foreground' },
           { label: 'Acertos', value: stats?.totalAcertos ?? 0, icon: Target, style: { color: 'hsl(var(--success))' } },
           { label: 'Taxa de Acerto', value: `${stats?.taxaAcerto ?? 0}%`, icon: TrendingUp, color: 'text-primary-text' },
-          { label: 'Sequência', value: `${stats?.streakDays ?? 0} dias`, icon: BarChart3, color: 'text-muted-foreground' },
+          { label: 'Sequência', value: `${stats?.streakDays ?? 0} ${(stats?.streakDays ?? 0) === 1 ? 'dia' : 'dias'}`, icon: BarChart3, color: 'text-muted-foreground' },
         ].map((card, i) => {
           const Icon = card.icon;
           return (
@@ -182,7 +182,7 @@ export default function ProgressoPage() {
                 return (
                   <AccordionItem key={materia} value={materia}>
                     <AccordionTrigger className="hover:no-underline">
-                      <div className="flex items-center justify-between w-full pr-2 gap-3">
+                      <div className="flex flex-wrap items-center justify-between w-full pr-2 gap-x-3 gap-y-1 min-w-0">
                         <div className="flex items-center gap-2 min-w-0">
                           <span className="inline-flex items-center gap-1.5 type-meta font-semibold whitespace-nowrap">
                             <span
@@ -204,7 +204,7 @@ export default function ProgressoPage() {
                         {subtemas.map(([subtema, sdata]: [string, any]) => (
                           <div
                             key={subtema}
-                            className="flex items-center justify-between gap-3 py-2 border-b border-border/40 last:border-0"
+                            className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 py-2 border-b border-border/40 last:border-0"
                           >
                             <span className="type-meta truncate">{subtema}</span>
                             <TaxaAcerto total={sdata?.total ?? 0} acertos={sdata?.acertos ?? 0} />

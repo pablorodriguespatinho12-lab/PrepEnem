@@ -6,26 +6,31 @@ import { useSession, signOut } from 'next-auth/react';
 import { useTheme } from 'next-themes';
 import {
   Home, BookOpen, AlertCircle, BarChart3, Settings, ShieldCheck,
-  LogOut, Menu, X, GraduationCap, Upload, ClipboardList, Library, PenTool, Trophy,
-  Layers, FileText, Moon, Sun, Sigma
+  LogOut, Menu, X, GraduationCap, ClipboardList, Library, PenTool, Trophy,
+  Layers, FileText, Moon, Sun, Sigma, ChevronDown
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAppTheme } from './app-theme-provider';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const navItems = [
+type ItemNav = { href: string; label: string; icon: typeof Home };
+// Menu enxuto (pedido do Pablo, 06/10/2026: "não deixar tanta coisa num lugar
+// só"). Eram 13 itens de uma vez. Ficam à vista os 6 do estudo diário; o resto
+// abre em "Mais". "Importar PDF" saiu: depende de S3, que não será configurado.
+const principais: ItemNav[] = [
   { href: '/dashboard', label: 'Início', icon: Home },
   { href: '/treino', label: 'Treino', icon: BookOpen },
-  { href: '/simulado', label: 'Simulado', icon: ClipboardList },
-  { href: '/provas', label: 'Provas', icon: FileText },
   { href: '/flashcards', label: 'Flashcards', icon: Layers },
-  { href: '/banco-questoes', label: 'Banco de Questões', icon: Library },
-  { href: '/caderno-erros', label: 'Caderno de Erros', icon: AlertCircle },
   { href: '/redacao', label: 'Redação', icon: PenTool },
   { href: '/calculo', label: 'Cálculo', icon: Sigma },
   { href: '/progresso', label: 'Progresso', icon: BarChart3 },
+];
+const secundarios: ItemNav[] = [
+  { href: '/simulado', label: 'Simulado', icon: ClipboardList },
+  { href: '/provas', label: 'Provas', icon: FileText },
+  { href: '/caderno-erros', label: 'Caderno de Erros', icon: AlertCircle },
+  { href: '/banco-questoes', label: 'Banco de Questões', icon: Library },
   { href: '/vestibular', label: 'Vestibular', icon: Trophy },
-  { href: '/upload', label: 'Importar PDF', icon: Upload },
   { href: '/perfil', label: 'Perfil', icon: Settings },
 ];
 
@@ -35,6 +40,35 @@ export function SidebarNav() {
   const [open, setOpen] = useState(false);
   const isAdmin = (session?.user as any)?.role === 'admin';
   const { theme, setTheme } = useTheme();
+  const estaEm = (href: string) => pathname === href || pathname?.startsWith(href + '/');
+  const [maisAberto, setMaisAberto] = useState(() => secundarios.some((item) => estaEm(item.href)));
+  const linkDoMenu = (item: ItemNav, i: number) => {
+    const Icon = item.icon;
+    const active = estaEm(item.href);
+    return (
+      <motion.div
+        key={item.href}
+        initial={{ opacity: 0, x: -10 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: i * 0.02, duration: 0.15 }}
+      >
+        <Link
+          href={item.href}
+          onClick={() => setOpen(false)}
+          aria-current={active ? 'page' : undefined}
+          className={cn(
+            'group flex items-center gap-3 px-3 py-2.5 rounded-[var(--radius-control)] type-meta font-medium transition-[color,background-color,border-color,box-shadow] duration-200',
+            active
+              ? 'bg-primary text-primary-foreground shadow-md'
+              : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+          )}
+        >
+          <Icon className={cn('w-4 h-4 transition-transform duration-200', !active && 'group-hover:scale-110')} />
+          {item.label}
+        </Link>
+      </motion.div>
+    );
+  };
 
   return (
     <>
@@ -83,40 +117,17 @@ export function SidebarNav() {
         </div>
 
         <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
-          {navItems.map((item, i) => {
-            const Icon = item.icon;
-            const active = pathname === item.href || pathname?.startsWith(item.href + '/');
-            return (
-              <motion.div
-                key={item.href}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.02, duration: 0.15 }}
-              >
-                <Link
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className={cn(
-                    'group flex items-center gap-3 px-3 py-2.5 rounded-[var(--radius-control)] type-meta font-medium transition-[color,background-color,border-color,box-shadow] duration-200',
-                    active
-                      ? 'bg-primary text-primary-foreground shadow-md'
-                      : 'text-muted-foreground hover:bg-muted hover:text-foreground'
-                  )}
-                >
-                  <Icon className={cn('w-4 h-4 transition-transform duration-200', !active && 'group-hover:scale-110')} />
-                  {item.label}
-                  {active && (
-                    <motion.div
-                      layoutId="sidebar-active"
-                      className="absolute left-0 w-1 h-6 bg-primary-foreground rounded-r-full"
-                      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                    />
-                  )}
-                </Link>
-              </motion.div>
-            );
-          })}
-
+          {principais.map(linkDoMenu)}
+          <button
+            type="button"
+            onClick={() => setMaisAberto((v) => !v)}
+            aria-expanded={maisAberto}
+            className="flex w-full items-center gap-3 px-3 py-2.5 mt-3 rounded-[var(--radius-control)] type-meta font-medium text-muted-foreground hover:bg-muted hover:text-foreground transition-[color,background-color]"
+          >
+            <ChevronDown className={cn('w-4 h-4 transition-transform duration-200', maisAberto && 'rotate-180')} />
+            Mais
+          </button>
+          {maisAberto && <div className="space-y-1">{secundarios.map(linkDoMenu)}</div>}
           {isAdmin && (
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 }}>
               <Link
