@@ -22,6 +22,31 @@ describe('validarVisual', () => {
     expect(v).toMatchObject({ tipo: 'cena', rastro: true, veiculos: [{ veiculo: 'bola' }] });
     expect(v && v.tipo === 'cena' && v.veiculos).toHaveLength(1);
   });
+  test('cena: nome que não é uma letra vira f e g', () => {
+    const v = validarVisual({
+      tipo: 'cena', x: [0, 3],
+      veiculos: [{ veiculo: 'bola', nome: 'metal', expr: '45-5*x^2' }, { veiculo: 'bola', nome: 'pluma', expr: '45-x' }],
+    });
+    expect(v && v.tipo === 'cena' && v.veiculos.map((w) => w.nome)).toEqual(['f', 'g']);
+  });
+  test('cena: objeto que o app não desenha vira bola, e o nome fica no rótulo', () => {
+    const v = validarVisual({
+      tipo: 'cena', x: [0, 2],
+      veiculos: [{ veiculo: 'pena', nome: 'p', expr: '10-0.5*x^2' }, { veiculo: 'pedra', nome: 's', expr: '10-2*x^2', rotulo: 'pedra' }],
+    });
+    expect(v).toMatchObject({ veiculos: [{ veiculo: 'bola', rotulo: 'pena' }, { veiculo: 'bola', rotulo: 'pedra' }] });
+  });
+  test('cena vertical: o relógio para quando todos chegaram ao chão', () => {
+    const v = validarVisual({
+      tipo: 'cena', x: [0, 5],
+      veiculos: [{ veiculo: 'bola', nome: 'h', expr: '20-5*x^2' }, { veiculo: 'bola', nome: 'g', expr: '20-3*x^2' }],
+    });
+    expect(v).toMatchObject({ x: [0, 2] });
+  });
+  test('cena horizontal com valor negativo não é cortada', () => {
+    const v = validarVisual({ tipo: 'cena', x: [0, 6], veiculos: [{ veiculo: 'moto', nome: 'g', expr: '5*(x-2)' }] });
+    expect(v).toMatchObject({ x: [0, 6] });
+  });
   test('cena: recusa relógio que não é de números inteiros', () => {
     expect(validarVisual({ tipo: 'cena', x: [0, 2.5], veiculos: [{ veiculo: 'carro', nome: 'f', expr: 'x' }] })).toBeNull();
   });

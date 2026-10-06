@@ -95,6 +95,13 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   resposta de cara (Bastani et al. 2025: IA que entrega piora o aprendizado),
   corrige sem concordar para agradar e muda de ângulo em vez de repetir.
   Regras e fontes no topo de `lib/tutor/prompts.ts`.
+- **A IA pede cena (06/10/2026):** questão sobre algo que muda no tempo abre
+  com uma `cena`. Medido com 3 questões de Física: antes, só "transformação";
+  depois, a queda dos corpos chega com duas bolas caindo. O validador conserta
+  o que a IA erra sempre: nome de função vira letra, objeto inventado vira
+  bola (nome no rótulo), relógio de queda é cortado no chão. A IA copia o
+  EXEMPLO do formato mais do que a regra: para mudar o comportamento, mude o
+  exemplo.
 - **Exemplo resolvido e nível acima (05/10/2026, pedido do Pablo):** as 5
   primeiras questões de cada matéria no treino do dia chegam resolvidas
   (gabarito marcado, explicação e tutor abertos) — nunca a do ENEM nem a de

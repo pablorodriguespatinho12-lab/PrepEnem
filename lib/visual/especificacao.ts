@@ -50,8 +50,8 @@ export interface VisualVetores {
 
 /* Cena com relógio: cada veículo anda pela própria função, x é o tempo e
    f(x) é o km onde ele está. Para ver uma função antes de ler a fórmula
-   (pedido do Pablo, 06/10/2026). Só nas lições escritas: fica fora do
-   formato da IA. */
+   (pedido do Pablo, 06/10/2026). Nas lições escritas e, desde a mesma data,
+   pedida pela IA nas explicações (ver FORMATO_VISUAL_PARA_IA). */
 export type Veiculo = 'carro' | 'moto' | 'bola' | 'balao' | 'vela';
 const VEICULOS: Veiculo[] = ['carro', 'moto', 'bola', 'balao', 'vela'];
 /* Carro e moto andam para o lado; bola e balão sobem e descem; a vela
@@ -143,24 +143,41 @@ function vetores(v: Record<string, unknown>): VisualVetores | null {
 }
 
 const MAX_VEICULOS = 2;
+const NOMES_PADRAO = ['f', 'g'];
 const MAX_MINUTOS = 20;
+/* Na vertical, altura negativa é atravessar o chão: a IA pede relógio longo
+   demais numa queda. Corta no último instante em que alguém ainda está no
+   chão ou acima. Na horizontal, posição negativa é legítima (largada atrás). */
+function aparar(x: [number, number], veiculos: VisualCena['veiculos']): [number, number] {
+  if (!ehVertical(veiculos[0].veiculo)) return x;
+  const fns = veiculos.map((w) => tentarCompilar(w.expr)!);
+  if (fns.some((f) => f(x[0]) < 0)) return x;
+  let fim = x[0];
+  for (let t = x[0] + 1; t <= x[1] && fns.some((f) => f(t) >= 0); t++) fim = t;
+  return fim > x[0] ? [x[0], fim] : x;
+}
 function cena(v: Record<string, unknown>): VisualCena | null {
   const x = intervalo(v.x);
   if (!x || !Number.isInteger(x[0]) || !Number.isInteger(x[1]) || x[1] - x[0] > MAX_MINUTOS) return null;
+  // A IA inventa objetos ("pena", "pedra"): o que o app não desenha vira bola
+  // e o nome dela vai para o rótulo, em vez de a cena inteira sumir.
+  const conhecido = (w: Record<string, unknown>) => VEICULOS.includes(w.veiculo as Veiculo);
   const veiculos = lista(v.veiculos)
     .map(objeto)
-    .filter((w) => VEICULOS.includes(w.veiculo as Veiculo) && typeof w.expr === 'string' && tentarCompilar(w.expr) !== null)
+    .filter((w) => typeof w.expr === 'string' && tentarCompilar(w.expr) !== null)
+    .map((w) => (conhecido(w) ? w : { ...w, veiculo: 'bola', rotulo: w.rotulo ?? w.veiculo }))
     .filter((w, _i, todos) => ehVertical(w.veiculo as Veiculo) === ehVertical(todos[0].veiculo as Veiculo))
     .slice(0, MAX_VEICULOS)
-    .map((w) => ({
+    .map((w, i) => ({
       veiculo: w.veiculo as Veiculo,
-      nome: texto(w.nome, 3) ?? 'f',
+      // A IA às vezes nomeia a função pelo objeto ("metal"); na tela vira "met(x)".
+      nome: typeof w.nome === 'string' && /^[a-zA-Z]$/.test(w.nome.trim()) ? w.nome.trim() : NOMES_PADRAO[i],
       expr: String(w.expr),
       rotulo: texto(w.rotulo, 40),
       cor: cor(w.cor),
     }));
   if (veiculos.length === 0) return null;
-  return { tipo: 'cena', titulo: texto(v.titulo), x, unidadeX: texto(v.unidadeX, 12), unidadeY: texto(v.unidadeY, 12), rastro: v.rastro === true, veiculos };
+  return { tipo: 'cena', titulo: texto(v.titulo), x: aparar(x, veiculos), unidadeX: texto(v.unidadeX, 12), unidadeY: texto(v.unidadeY, 12), rastro: v.rastro === true, veiculos };
 }
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {
   grafico, reta, transformacao, tabela, vetores, cena,
@@ -180,6 +197,8 @@ export const FORMATO_VISUAL_PARA_IA = `"visual" é um destes objetos (ou null). 
 - Reta numérica (inequação, intervalo): {"tipo":"reta","de":-5,"ate":5,"marcas":[{"x":2,"rotulo":"2"}],"trechos":[{"de":2,"ate":5,"rotulo":"x ≥ 2","fechadoDe":true,"fechadoAte":false,"cor":"a"}]}
 - Transformação passo a passo (álgebra, de onde a fórmula vem): {"tipo":"transformacao","linhas":[{"latex":"ax^2+bx+c=0","porque":"ponto de partida"},{"latex":"x^2+\\\\frac{b}{a}x=-\\\\frac{c}{a}","porque":"divide tudo por a"}]}
 - Tabela (comparar valores, proporção, mol): {"tipo":"tabela","cabecalho":["n (mol)","massa (g)"],"linhas":[["1","18"],["2","36"]]}
+- Cena (algo que MUDA COM O TEMPO: movimento, queda, lançamento, crescimento, juros, decaimento, reservatório): {"tipo":"cena","titulo":"Bola solta de 45 m","x":[0,3],"unidadeX":"s","unidadeY":"m","rastro":true,"veiculos":[{"veiculo":"bola","nome":"h","expr":"45-5*x^2","rotulo":"bola","cor":"a"}]}
+  O app anima o objeto pelo relógio e desenha o gráfico junto. "veiculo" é EXATAMENTE um destes; o nome real (pena, pedra, foguete) vai em "rotulo". "carro" ou "moto" andam para o lado (posição); "bola", "balao" ou "vela" sobem e descem (altura ou quantidade). x é o tempo em passos INTEIROS, de 0 até no máximo 20. Até 2 objetos, na mesma direção. "rastro": true quando o formato da curva é o ponto. Calcule expr em cada x inteiro e confira com o texto. "nome" é UMA letra (f, g, h). expr dá ONDE o objeto está (posição, altura ou quantidade) no instante x, nunca a velocidade: numa queda de 45 m a altura DIMINUI, "45-5*x^2"; um corpo lançado para cima sobe e desce, "20*x-5*x^2". O relógio termina quando o objeto chega ao chão (altura 0), não depois.
 - Vetores (forças, velocidade, deslocamento): {"tipo":"vetores","vetores":[{"de":[0,0],"para":[3,0],"rotulo":"F₁","cor":"a"}],"pontos":[{"x":0,"y":0,"rotulo":"corpo"}]}
 "cor": "a", "b" ou "c" para destacar (use a MESMA cor no texto: escreva o termo como [[a:termo]]), "erro" só para o caminho errado do aluno.
 REGRAS DE TEXTO: toda fórmula entre $...$ (nunca \\frac solto fora de $). [[a:termo]] é só para PALAVRAS fora da fórmula ("a [[a:velocidade]] é a inclinação"); nunca dentro de $...$ e nunca em volta de símbolo.`;
