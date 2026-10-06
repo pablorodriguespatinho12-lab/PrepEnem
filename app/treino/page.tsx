@@ -3,6 +3,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import dynamic from 'next/dynamic';
+import { PaginaDaProva } from '@/components/pagina-da-prova';
 import {
   BookOpen, ChevronLeft, ChevronRight, CheckCircle2, XCircle, AlertTriangle,
   Loader2, RefreshCcw, Home, Send, Sparkles, Trophy,
@@ -19,7 +20,6 @@ import { VisualDesenho } from '@/components/visual/visual-desenho';
 import type { Visual } from '@/lib/visual/especificacao';
 import { playSound } from '@/lib/sounds';
 
-const PdfPageViewer = dynamic(() => import('@/components/pdf-page-viewer'), { ssr: false });
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 const Results3DScene = dynamic(() => import('@/components/results-3d-scene'), { ssr: false });
 
@@ -891,14 +891,15 @@ export default function TreinoPage() {
           {/* Scan da prova original. O container é o passe-partout: ver .exam-scan
               em globals.css — no escuro, papel rebaixado em vez de branco puro. */}
           {currentQ?.pdfFileUrl && currentQ?.paginaPdf && (
-            <figure className="mb-6">
-              <PdfPageViewer
-                pdfUrl={currentQ.pdfFileUrl}
-                pageNumber={currentQ.paginaPdf}
-                imagemUrl={currentQ.imagemUrl}
-                imagemUrlExpandida={currentQ.imagemUrlExpandida}
-              />
-            </figure>
+            <PaginaDaProva
+              key={currentQ.id}
+              pdfUrl={currentQ.pdfFileUrl}
+              pagina={currentQ.paginaPdf}
+              imagemUrl={currentQ.imagemUrl}
+              imagemUrlExpandida={currentQ.imagemUrlExpandida}
+              precisaDaImagem={Boolean(currentQ.dependeImagem)}
+              className="mb-6"
+            />
           )}
           {currentQ?.dependeImagem && !currentQ?.pdfFileUrl && (
             <ImagemIndisponivel className="mb-6" />

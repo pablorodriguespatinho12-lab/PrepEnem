@@ -45,6 +45,10 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   Química..."); a lista clicável fica atrás de "Estudar uma matéria só"
   (06/10/2026). Enquanto carrega, esqueleto do cartão, nunca tela vazia.
   Números ficam em Progresso; a semana fica atrás de "Ver a semana".
+- **Página escaneada da prova só abre sozinha se a questão depende da imagem**
+  (`dependeImagem`); nas outras fica atrás de "Ver na página da prova"
+  (`components/pagina-da-prova.tsx`, Treino e Simulado, 06/10/2026). A página
+  inteira trazia outras 3 questões em volta.
 - **Um número, um lugar.** Se a informação já aparece na tela, não repete em
   gráfico (Progresso perdeu a rosca e as barras; ficou a evolução por dia).
 

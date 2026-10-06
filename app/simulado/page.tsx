@@ -11,8 +11,8 @@ import { materiaColors } from '@/lib/theme-colors';
 import { fireConfetti } from '@/components/animations';
 import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
 import dynamic from 'next/dynamic';
+import { PaginaDaProva } from '@/components/pagina-da-prova';
 
-const PdfPageViewer = dynamic(() => import('@/components/pdf-page-viewer'), { ssr: false });
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 
 type Phase = 'config' | 'exam' | 'result';
@@ -532,14 +532,15 @@ export default function SimuladoPage() {
                 </div>
                 <div className="prose-reading"><MathText text={currentQ.enunciado ?? ''} /></div>
                 {currentQ.pdfFileUrl && currentQ.paginaPdf && (
-                  <figure className="mt-4">
-                    <PdfPageViewer
-                      pdfUrl={currentQ.pdfFileUrl}
-                      pageNumber={currentQ.paginaPdf}
-                      imagemUrl={currentQ.imagemUrl}
-                      imagemUrlExpandida={currentQ.imagemUrlExpandida}
-                    />
-                  </figure>
+                  <PaginaDaProva
+                    key={currentQ.id}
+                    pdfUrl={currentQ.pdfFileUrl}
+                    pagina={currentQ.paginaPdf}
+                    imagemUrl={currentQ.imagemUrl}
+                    imagemUrlExpandida={currentQ.imagemUrlExpandida}
+                    precisaDaImagem={Boolean(currentQ.dependeImagem)}
+                    className="mt-4"
+                  />
                 )}
                 {currentQ.dependeImagem && !currentQ.pdfFileUrl && (
                   <ImagemIndisponivel className="mt-4" />
