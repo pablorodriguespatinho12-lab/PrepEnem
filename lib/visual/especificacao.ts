@@ -183,6 +183,15 @@ function ponto(v: unknown): PontoRotulado | null {
 
 const naoNulo = <T,>(v: T | null): v is T => v !== null;
 
+/* Ponto que se diz da curva ("raiz", "vértice", "máximo") e não está em
+   nenhuma das funções: a IA errou a conta, e o desenho ensinaria o erro.
+   Bolinha aberta (furo) fica: ali a função não tem valor. */
+const PONTO_DA_CURVA = /raiz|zero|v[ée]rtice|m[áa]xim|m[íi]nim|topo|corta|encontr|intersec/i;
+function pontoFalsoNaCurva(p: { x: number; y: number; rotulo?: string | null; aberto?: boolean }, fns: ((x: number) => number)[]): boolean {
+  if (p.aberto || fns.length === 0 || !p.rotulo || !PONTO_DA_CURVA.test(p.rotulo)) return false;
+  const tolerancia = Math.max(0.05, Math.abs(p.y) * 0.02);
+  return !fns.some((f) => Math.abs(f(p.x) - p.y) <= tolerancia);
+}
 function grafico(v: Record<string, unknown>): VisualGrafico | null {
   const x = intervalo(v.x);
   if (!x) return null;
@@ -191,7 +200,10 @@ function grafico(v: Record<string, unknown>): VisualGrafico | null {
     .filter((f) => typeof f.expr === 'string' && tentarCompilar(f.expr) !== null)
     .slice(0, MAX_FUNCOES)
     .map((f) => ({ expr: String(f.expr), rotulo: texto(f.rotulo, 40), cor: cor(f.cor) }));
-  const pontos = lista(v.pontos).map(ponto).filter(naoNulo).slice(0, MAX_PONTOS);
+  const fns = funcoes.map((f) => tentarCompilar(f.expr)!);
+  const pontos = lista(v.pontos).map(ponto).filter(naoNulo)
+    .filter((p) => !pontoFalsoNaCurva(p, fns))
+    .slice(0, MAX_PONTOS);
   if (funcoes.length === 0 && pontos.length === 0) return null;
   return { tipo: 'grafico', titulo: texto(v.titulo), funcoes, pontos, x, y: intervalo(v.y) };
 }
@@ -331,10 +343,21 @@ function processo(v: Record<string, unknown>): VisualProcesso | null {
 const MIN_ATOMOS = 2;
 const MAX_ATOMOS = 6;
 const MAX_MASSA = 300;
+/* Massa arredondada como o ENEM costuma dar. A soma aparece na tela: a IA
+   chutava massa entre 0 e 300 e a conta saía errada. Átomo fora da tabela
+   fica com a massa da IA. */
+const MASSA_ATOMICA: Record<string, number> = {
+  H: 1, He: 4, Li: 7, C: 12, N: 14, O: 16, F: 19, Na: 23, Mg: 24, Al: 27, Si: 28, P: 31, S: 32,
+  Cl: 35.5, K: 39, Ca: 40, Fe: 56, Cu: 63.5, Zn: 65, Br: 80, Ag: 108, I: 127,
+};
 function molecula(v: Record<string, unknown>): VisualMolecula | null {
   const atomos = lista(v.atomos).map(objeto)
     .filter((a) => typeof a.simbolo === 'string' && /^[A-Z][a-z]?$/.test(a.simbolo.trim()))
-    .map((a) => ({ simbolo: String(a.simbolo).trim(), massa: ehNumero(a.massa) && a.massa > 0 && a.massa < MAX_MASSA ? a.massa : undefined }))
+    .map((a) => {
+      const simbolo = String(a.simbolo).trim();
+      const daIA = ehNumero(a.massa) && a.massa > 0 && a.massa < MAX_MASSA ? a.massa : undefined;
+      return { simbolo, massa: MASSA_ATOMICA[simbolo] ?? daIA };
+    })
     .slice(0, MAX_ATOMOS);
   if (atomos.length < MIN_ATOMOS) return null;
   // Soma só se todo átomo tem massa: senão a conta na tela sairia errada.

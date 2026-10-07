@@ -148,9 +148,19 @@ describe('validarVisual', () => {
   test('molécula: guarda de 2 a 6 átomos com símbolo válido; soma só se todos têm massa', () => {
     const agua = validarVisual({ tipo: 'molecula', nome: 'H₂O', atomos: [{ simbolo: 'O', massa: 16 }, { simbolo: 'H', massa: 1 }, { simbolo: 'H', massa: 1 }, { simbolo: 'água' }], soma: true });
     expect(agua).toMatchObject({ tipo: 'molecula', soma: true, atomos: [{ simbolo: 'O' }, { simbolo: 'H' }, { simbolo: 'H' }] });
-    const semMassa = validarVisual({ tipo: 'molecula', atomos: [{ simbolo: 'C', massa: 12 }, { simbolo: 'O' }], soma: true });
+    const semMassa = validarVisual({ tipo: 'molecula', atomos: [{ simbolo: 'C', massa: 12 }, { simbolo: 'Xe' }], soma: true });
     expect(semMassa && semMassa.tipo === 'molecula' && semMassa.soma).toBe(false);
     expect(validarVisual({ tipo: 'molecula', atomos: [{ simbolo: 'H' }] })).toBeNull();
+  });
+  test('gráfico: "raiz" fora da curva sai; ponto certo e furo ficam', () => {
+    const g = validarVisual({ tipo: 'grafico', x: [-4, 4], funcoes: [{ expr: 'x^2-4' }], pontos: [
+      { x: 2, y: 0, rotulo: 'raiz' }, { x: 3, y: 0, rotulo: 'raiz' }, { x: 1, y: 9, rotulo: 'furo', aberto: true }, { x: 1, y: 9, rotulo: 'dado' },
+    ] });
+    expect(g && g.tipo === 'grafico' && g.pontos!.map((p) => `${p.x},${p.rotulo}`)).toEqual(['2,raiz', '1,furo', '1,dado']);
+  });
+  test('molécula: massa de átomo comum vem da tabela, não da IA (a soma aparece na tela)', () => {
+    const v = validarVisual({ tipo: 'molecula', atomos: [{ simbolo: 'C', massa: 14 }, { simbolo: 'O' }, { simbolo: 'O', massa: 16 }], soma: true });
+    expect(v).toMatchObject({ soma: true, atomos: [{ simbolo: 'C', massa: 12 }, { simbolo: 'O', massa: 16 }, { simbolo: 'O', massa: 16 }] });
   });
   test('palavra: sílabas só se juntas dão a palavra; destaque só se está nela', () => {
     expect(validarVisual({ tipo: 'palavra', palavra: 'baú', silabas: ['ba', 'ú'], destaque: 'ú', nota: 'hiato' }))
