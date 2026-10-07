@@ -1,10 +1,13 @@
 export const dynamic = 'force-dynamic';
+export const maxDuration = 60;
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { maxSimilarity } from '@/lib/text-similarity';
-import { chatCompletion } from '@/lib/ai-client';
+import { pedirJson } from '@/lib/pedir-json';
+import { MODELO_IA } from '@/lib/ia-modelos';
+import { validarCartoesGerados } from '@/lib/flashcards-gerados';
 
 // Abaixo disso, dois cards contam como o mesmo conceito repetido — limiar
 // ajustável pelo chamador (query "limiar" ou body.limiarSimilaridade) pra
@@ -74,36 +77,17 @@ Retorne APENAS um JSON válido:
   ]
 }`;
 
-    const result = await chatCompletion({
-      messages: [{ role: 'user', content: prompt }],
-      responseFormat: { type: 'json_object' },
-      maxTokens: 5000,
-    });
-    if (!result.ok) return result.response;
-
-    let content = result.data.choices?.[0]?.message?.content ?? '{}';
-    content = content.replace(/```json\s*/g, '').replace(/```/g, '').trim();
-    let parsed: any;
-    try {
-      parsed = JSON.parse(content);
-    } catch (e) {
-      console.error('JSON parse error:', e, content.slice(0, 500));
-      return NextResponse.json({ error: 'Erro ao parsear IA' }, { status: 500 });
-    }
-
-    if (!Array.isArray(parsed.cards)) {
-      return NextResponse.json({ error: 'Resposta inválida' }, { status: 500 });
-    }
-
+    // Mesmo caminho das outras rotas de IA: modelo do lib/ia-modelos, JSON
+    // recuperado, segunda tentativa e prazo. Antes: modelo padrão de outro
+    // provedor, JSON.parse cru e "Erro ao parsear IA" na tela.
+    const r = await pedirJson(prompt, validarCartoesGerados, { maxTokens: 5000, temperature: 0.4, modelo: MODELO_IA.resumo() });
+    if (!r.ok) return NextResponse.json({ error: r.erro }, { status: r.status });
     // Camada 2 de dedup: filtra candidato cuja frente é similar demais a um
     // card já existente OU a outro candidato já aceito nesta mesma leva
     // (a IA às vezes gera duas variações do mesmo conceito no mesmo lote).
     const accepted: { frente: string; verso: string; dica: string | null }[] = [];
     let descartadosPorDuplicata = 0;
-    for (const raw of parsed.cards) {
-      const frente = String(raw?.frente ?? '').trim().slice(0, 1000);
-      const verso = String(raw?.verso ?? '').trim().slice(0, 2000);
-      if (!frente || !verso) continue;
+    for (const { frente, verso, dica } of r.dado) {
 
       const comparaContra = [...existingFronts, ...accepted.map((c) => c.frente)];
       const similaridade = maxSimilarity(frente, comparaContra);
@@ -115,7 +99,7 @@ Retorne APENAS um JSON válido:
       accepted.push({
         frente,
         verso,
-        dica: raw?.dica ? String(raw.dica).trim().slice(0, 500) : null,
+        dica,
       });
     }
 
