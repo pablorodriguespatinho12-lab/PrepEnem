@@ -142,6 +142,10 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   Fuvest/Unicamp (+ ITA/IME nas exatas), original, autossuficiente, só
   programa do médio, conferida pelo verificador. A gerada nunca se apresenta
   como real.
+- **Exemplo resolvido sem escolha (Pablo, 07/10/2026):** só a alternativa certa
+  aparece, já marcada; a resolução vem embaixo. Conta = visual `transformacao`,
+  escrita à mão linha por linha (caneta). Questão de uma palavra (acento, sílaba)
+  = visual `palavra`, 1 passo só. Questão simples tem resposta pequena.
 - **Vestibular real, a última do dia (06/10/2026):** 48 questões reais (ITA
   2025, IME 2024, Fuvest 2024/25, Unicamp 2024, Unesp 2025) em
   `data/vestibular`, gravadas com `nivel: 'vestibular'` e `anoProva` vazio

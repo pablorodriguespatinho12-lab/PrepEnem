@@ -130,7 +130,19 @@ export interface VisualMolecula {
   atomos: { simbolo: string; massa?: number }[];
   soma?: boolean;
 }
-export type Visual = VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula;
+/* Palavra em destaque (Português: acento, sílaba, grafia). A palavra grande,
+   separada em sílabas, com a parte que importa circulada e uma nota pequena
+   (Pablo, 07/10/2026: "a palavra baú, o círculo no u, e embaixo: é acentuado
+   por causa do hiato"). */
+export interface VisualPalavra {
+  tipo: 'palavra';
+  titulo?: string;
+  palavra: string;
+  silabas?: string[];
+  destaque?: string;
+  nota?: string;
+}
+export type Visual = VisualPalavra | VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula;
 
 const MAX_FUNCOES = 4;
 const MAX_PONTOS = 8;
@@ -315,8 +327,22 @@ function molecula(v: Record<string, unknown>): VisualMolecula | null {
   const soma = v.soma === true && atomos.every((a) => a.massa !== undefined);
   return { tipo: 'molecula', titulo: texto(v.titulo), nome: texto(v.nome, 20), atomos, soma };
 }
+const MAX_PALAVRA = 30;
+function palavra(v: Record<string, unknown>): VisualPalavra | null {
+  const p = texto(v.palavra, MAX_PALAVRA);
+  if (!p || /\s{2,}/.test(p)) return null;
+  // Sílabas só valem se, juntas, dão a palavra; destaque só se está nela.
+  const silabas = lista(v.silabas).map((x) => texto(x, MAX_PALAVRA)).filter((x): x is string => !!x);
+  const destaque = texto(v.destaque, MAX_PALAVRA);
+  return {
+    tipo: 'palavra', titulo: texto(v.titulo), palavra: p,
+    silabas: silabas.length > 1 && silabas.join('') === p ? silabas : undefined,
+    destaque: destaque && p.includes(destaque) ? destaque : undefined,
+    nota: texto(v.nota, 140),
+  };
+}
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {
-  grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias, processo, molecula,
+  grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias, processo, molecula, palavra,
 };
 
 /* Devolve o visual limpo, ou null se não der para desenhar com segurança. */
@@ -340,6 +366,8 @@ export const FORMATO_VISUAL_PARA_IA = `"visual" é um destes objetos (ou null). 
   Até 4 etapas, só as moléculas ou coisas principais (até 4 de cada lado). O app anima: as coisas andam pelas setas.
 - Molécula (química: átomo, molécula, massa molar, ligação): {"tipo":"molecula","titulo":"Massa da água","nome":"H₂O","atomos":[{"simbolo":"O","massa":16},{"simbolo":"H","massa":1},{"simbolo":"H","massa":1}],"soma":true}
   O app desenha cada átomo de verdade (núcleo e elétrons), uma etiqueta com a massa de cada um e, com "soma": true, a conta da massa da molécula. O átomo do meio vem PRIMEIRO. De 2 a 6 átomos; massa da tabela periódica, arredondada.
+- Palavra (Português: acento, sílaba, grafia, hiato, ditongo): {"tipo":"palavra","palavra":"baú","silabas":["ba","ú"],"destaque":"ú","nota":"Acento no u: hiato, o a e o u ficam em sílabas separadas."}
+  O app escreve a palavra grande, separa as sílabas e circula o destaque. "silabas" juntas têm que dar a palavra; "destaque" é um pedaço dela. A nota tem 1 frase.
 - Vetores (forças, velocidade, deslocamento): {"tipo":"vetores","vetores":[{"de":[0,0],"para":[3,0],"rotulo":"F₁","cor":"a"}],"pontos":[{"x":0,"y":0,"rotulo":"corpo"}]}
 "cor": "a", "b" ou "c" para destacar (use a MESMA cor no texto: escreva o termo como [[a:termo]]), "erro" só para o caminho errado do aluno.
 REGRAS DE TEXTO: toda fórmula entre $...$ (nunca \\frac solto fora de $). [[a:termo]] é só para PALAVRAS fora da fórmula ("a [[a:velocidade]] é a inclinação"); nunca dentro de $...$ e nunca em volta de símbolo.`;

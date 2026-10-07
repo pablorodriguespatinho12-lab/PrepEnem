@@ -827,9 +827,11 @@ export default function TreinoPage() {
             <ImagemIndisponivel className="mb-6" />
           )}
 
-          {/* Alternatives */}
+          {/* Alternatives. No exemplo resolvido só a certa aparece, já marcada:
+              não há o que escolher (Pablo, 07/10/2026). */}
+          {resolvida && <p className="type-caption text-muted-foreground mb-2">Resposta certa</p>}
           <div className="space-y-2">
-            {alternatives.map((alt, altIdx) => {
+            {(resolvida ? alternatives.filter((alt) => alt.key === currentQ?.respostaCorreta) : alternatives).map((alt, altIdx) => {
               // Só marca certo/errado quando o veredito do servidor (result) já chegou —
               // enquanto `answered && !result` (verificando) ou em erro, fica neutro.
               const isCorrect = resolvida ? alt.key === currentQ?.respostaCorreta : !!result && alt.key === result.respostaCorreta;
@@ -932,7 +934,7 @@ export default function TreinoPage() {
           <div className="surface-1 rounded-[var(--radius-surface)] p-5 md:p-6 border-l-[3px] border-l-primary">
             <p className="type-caption text-muted-foreground mb-1.5">Exemplo resolvido · resposta {currentQ.respostaCorreta}</p>
             <p className="type-meta text-muted-foreground">
-              Veja por que a resposta é essa. As próximas você resolve sozinho.
+              A resolução vem embaixo, um passo por vez. As próximas você resolve sozinho.
             </p>
           </div>
           {/* A explicação curta com desenho vem primeiro; o texto antigo da

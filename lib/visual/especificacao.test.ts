@@ -152,4 +152,11 @@ describe('validarVisual', () => {
     expect(semMassa && semMassa.tipo === 'molecula' && semMassa.soma).toBe(false);
     expect(validarVisual({ tipo: 'molecula', atomos: [{ simbolo: 'H' }] })).toBeNull();
   });
+  test('palavra: sílabas só se juntas dão a palavra; destaque só se está nela', () => {
+    expect(validarVisual({ tipo: 'palavra', palavra: 'baú', silabas: ['ba', 'ú'], destaque: 'ú', nota: 'hiato' }))
+      .toEqual({ tipo: 'palavra', titulo: undefined, palavra: 'baú', silabas: ['ba', 'ú'], destaque: 'ú', nota: 'hiato' });
+    expect(validarVisual({ tipo: 'palavra', palavra: 'baú', silabas: ['bau'], destaque: 'x' }))
+      .toMatchObject({ silabas: undefined, destaque: undefined });
+    expect(validarVisual({ tipo: 'palavra' })).toBeNull();
+  });
 });

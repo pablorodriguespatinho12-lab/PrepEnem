@@ -58,6 +58,10 @@ const EXEMPLOS: { nome: string; bruto: unknown }[] = [
     },
   },
   {
+    nome: 'Palavra: acento de hiato',
+    bruto: { tipo: 'palavra', palavra: 'baú', silabas: ['ba', 'ú'], destaque: 'ú', nota: 'Acento no u: hiato, o a e o u ficam em sílabas separadas.' },
+  },
+  {
     nome: 'Molécula: massa da água (mapa mental)',
     bruto: { tipo: 'molecula', nome: 'H₂O', atomos: [{ simbolo: 'O', massa: 16 }, { simbolo: 'H', massa: 1 }, { simbolo: 'H', massa: 1 }], soma: true },
   },

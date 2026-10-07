@@ -11,6 +11,7 @@ import { marcas } from '@/lib/visual/geometria';
 import { renderizarTextoMatematico } from '@/lib/visual/texto-matematico';
 import { Quadro } from './quadro';
 import { Molecula } from './molecula';
+import { Palavra } from './palavra';
 import { ALTURA, COR, EIXO, Eixos, Grafico, HALO, LARGURA, Latex, MARGEM, corDe, escala } from './grafico';
 import { Cena } from './cena';
 import { Roda } from './roda';
@@ -160,6 +161,7 @@ export function VisualDesenho({ visual }: { visual: Visual }) {
       {visual.tipo === 'fatias' && <Fatias v={visual} />}
       {visual.tipo === 'processo' && <Processo v={visual} />}
       {visual.tipo === 'molecula' && <Molecula v={visual} />}
+      {visual.tipo === 'palavra' && <Palavra v={visual} />}
     </figure>
   );
 }
