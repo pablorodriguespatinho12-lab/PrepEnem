@@ -4,7 +4,7 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { buscarDegrau } from '@/data/calculo/trilha';
 import { lerEstados, salvarEstado } from '@/lib/calculo/estados';
-import { META_ACERTO, registrarLicao, registrarRevisao, situacao } from '@/lib/calculo/progresso';
+import { registrarLicao, registrarRevisao } from '@/lib/calculo/progresso';
 
 const MAX_EXERCICIOS = 20;
 
@@ -20,9 +20,6 @@ export async function POST(req: Request) {
   if (!buscarDegrau(licaoId)) return NextResponse.json({ error: 'Lição inválida' }, { status: 400 });
 
   const estados = await lerEstados(userId);
-  if (situacao(buscarDegrau(licaoId)!, estados) === 'bloqueada') {
-    return NextResponse.json({ error: 'Conclua os degraus anteriores primeiro.' }, { status: 403 });
-  }
   const atual = estados.get(licaoId);
   const agora = new Date();
 
@@ -40,5 +37,5 @@ export async function POST(req: Request) {
   }
   const novo = registrarLicao(atual, licaoId, acertos, total, agora);
   await salvarEstado(userId, novo);
-  return NextResponse.json({ estado: novo, concluiu: novo.status === 'concluida', meta: META_ACERTO });
+  return NextResponse.json({ estado: novo, concluiu: novo.status === 'concluida' });
 }

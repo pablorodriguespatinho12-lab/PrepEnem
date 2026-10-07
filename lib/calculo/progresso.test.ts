@@ -13,11 +13,11 @@ const concluida = (licaoId: string, proximaRevisao: Date | null = null): EstadoD
   ({ licaoId, status: 'concluida', acertos: 4, tentativas: 5, revisoes: 0, proximaRevisao });
 
 describe('situação dos degraus', () => {
-  test('só abre quando todos os pré-requisitos estão concluídos', () => {
+  test('toda lição fica aberta desde o começo, com ou sem pré-requisito', () => {
     const estados = new Map([['a', concluida('a')]]);
     expect(situacao(TRILHA[0], estados)).toBe('concluida');
     expect(situacao(TRILHA[1], estados)).toBe('disponivel');
-    expect(situacao(TRILHA[2], estados)).toBe('bloqueada');
+    expect(situacao(TRILHA[2], estados)).toBe('disponivel');
   });
 
   test('o próximo degrau é o primeiro aberto e não concluído', () => {
@@ -28,14 +28,14 @@ describe('situação dos degraus', () => {
 });
 
 describe('registrarLicao', () => {
-  test('70% conclui e agenda revisão em 2 dias', () => {
-    const e = registrarLicao(undefined, 'a', 4, 5, AGORA);
+  test('terminar os exercícios conclui, com qualquer número de acertos, e agenda revisão em 2 dias', () => {
+    const e = registrarLicao(undefined, 'a', 1, 5, AGORA);
     expect(e.status).toBe('concluida');
     expect(e.proximaRevisao!.getTime()).toBe(AGORA.getTime() + 2 * DIA);
   });
 
-  test('abaixo de 70% continua em andamento, sem revisão', () => {
-    const e = registrarLicao(undefined, 'a', 3, 5, AGORA);
+  test('sem exercício nenhum, continua em andamento e sem revisão', () => {
+    const e = registrarLicao(undefined, 'a', 0, 0, AGORA);
     expect(e.status).toBe('em_andamento');
     expect(e.proximaRevisao).toBeNull();
   });

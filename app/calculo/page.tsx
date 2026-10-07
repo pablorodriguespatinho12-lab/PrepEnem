@@ -4,7 +4,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Check, Circle, Loader2, Lock, RefreshCcw } from 'lucide-react';
+import { ArrowRight, Check, Circle, Loader2, RefreshCcw } from 'lucide-react';
 import { NOME_MODULO } from '@/data/calculo/trilha';
 import type { Degrau, Modulo } from '@/lib/calculo/tipos';
 import type { Situacao } from '@/lib/calculo/progresso';
@@ -16,7 +16,6 @@ const MODULOS: Modulo[] = ['pre', 'calc1', 'calc2', 'calc3'];
 
 function Icone({ s }: { s: Situacao }) {
   if (s === 'concluida') return <Check className="w-4 h-4" strokeWidth={3} style={{ color: 'hsl(var(--success))' }} aria-label="concluído" />;
-  if (s === 'bloqueada') return <Lock className="w-4 h-4 text-muted-foreground" aria-label="bloqueado" />;
   return <Circle className="w-4 h-4 text-primary-text" aria-label={s === 'em_andamento' ? 'em andamento' : 'aberto'} />;
 }
 
@@ -46,7 +45,7 @@ export default function CalculoPage() {
         <h1 className="font-display type-headline font-bold">Cálculo, degrau por degrau</h1>
         <p className="type-meta text-muted-foreground mt-2 measure-reading">
           Do pré-cálculo ao Cálculo 3. Cada lição começa por uma pergunta, mostra como o raciocínio foi construído e só então chega à fórmula.
-          Exemplos resolvidos primeiro, depois você. O próximo degrau abre quando você acerta 70%.
+          Exemplos resolvidos primeiro, depois você. Todas as lições estão abertas: pode pular para a que quiser.
         </p>
         <p className="type-meta mt-2" data-numeric>{concluidos} de {trilha.degraus.length} degraus concluídos</p>
       </header>
@@ -79,7 +78,7 @@ export default function CalculoPage() {
                 <div className="flex items-start gap-3 -ml-[9px]">
                   <span className="mt-1 rounded-full bg-background p-0.5"><Icone s={d.situacao} /></span>
                   <div className="min-w-0">
-                    <p className={`type-meta font-semibold ${d.situacao === 'bloqueada' ? 'text-muted-foreground' : ''}`}>{d.titulo}</p>
+                    <p className="type-meta font-semibold">{d.titulo}</p>
                     <p className="type-meta text-muted-foreground">{d.pergunta}</p>
                     {!d.escrita && <p className="type-caption text-muted-foreground mt-0.5">em preparação</p>}
                   </div>
@@ -87,9 +86,7 @@ export default function CalculoPage() {
               );
               return (
                 <li key={d.id}>
-                  {d.situacao === 'bloqueada'
-                    ? <div className="px-2 py-2">{conteudo}</div>
-                    : <Link href={`/calculo/${d.id}`} className="block px-2 py-2 rounded-[var(--radius-control)] hover:bg-muted t-colors">{conteudo}</Link>}
+                  <Link href={`/calculo/${d.id}`} className="block px-2 py-2 rounded-[var(--radius-control)] hover:bg-muted t-colors">{conteudo}</Link>
                 </li>
               );
             })}

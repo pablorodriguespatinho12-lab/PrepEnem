@@ -10,7 +10,7 @@ import { LICOES_ESCRITAS } from '@/data/calculo/licoes';
 import type { LicaoCompleta } from '@/lib/calculo/tipos';
 /* Lição escrita à mão já está no bundle: abre na hora, sem esperar a rota
    (pedido do Pablo, 06/10/2026: "a tela de carregamento demora"). A rota
-   continua sendo chamada e, se disser que o degrau está bloqueado, vale ela. */
+   continua sendo chamada para a lição que ainda não está escrita. */
 function licaoEscrita(id: string): LicaoCompleta | null {
   const degrau = buscarDegrau(id);
   const conteudo = LICOES_ESCRITAS[id];

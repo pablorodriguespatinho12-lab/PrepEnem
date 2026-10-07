@@ -4,7 +4,6 @@
 
 import type { Degrau } from './tipos';
 
-export const META_ACERTO = 0.7;
 export const INTERVALOS_REVISAO_DIAS = [2, 7, 21, 60];
 const DIA_MS = 24 * 60 * 60 * 1000;
 
@@ -17,13 +16,13 @@ export interface EstadoDegrau {
   proximaRevisao: Date | null;
 }
 
-export type Situacao = 'bloqueada' | 'disponivel' | 'em_andamento' | 'concluida';
+/* Sem tranca (Pablo, 07/10/2026: "deixa eu pular, toda hora volto do início"):
+   toda lição abre desde o começo; os pré-requisitos só ordenam a trilha. */
+export type Situacao = 'disponivel' | 'em_andamento' | 'concluida';
 
 export function situacao(degrau: Degrau, estados: Map<string, EstadoDegrau>): Situacao {
   const e = estados.get(degrau.id);
   if (e?.status === 'concluida') return 'concluida';
-  const liberada = degrau.prerequisitos.every((p) => estados.get(p)?.status === 'concluida');
-  if (!liberada) return 'bloqueada';
   return e ? 'em_andamento' : 'disponivel';
 }
 
@@ -34,11 +33,12 @@ export function proximoDegrau(trilha: Degrau[], estados: Map<string, EstadoDegra
   }) ?? null;
 }
 
-/* Resultado dos exercícios de uma lição. Conclui com 70% ou mais; ao concluir
-   pela primeira vez, agenda a primeira revisão. Refazer não "desconclui". */
+/* Resultado dos exercícios de uma lição. Terminar conclui, com qualquer
+   número de acertos (a meta de 70% saiu em 07/10/2026, pedido do Pablo); ao
+   concluir pela primeira vez, agenda a primeira revisão. Refazer não "desconclui". */
 export function registrarLicao(atual: EstadoDegrau | undefined, licaoId: string, acertos: number, total: number, agora: Date): EstadoDegrau {
   const base: EstadoDegrau = atual ?? { licaoId, status: 'em_andamento', acertos: 0, tentativas: 0, revisoes: 0, proximaRevisao: null };
-  const passou = total > 0 && acertos / total >= META_ACERTO;
+  const passou = total > 0;
   const concluiAgora = passou && base.status !== 'concluida';
   return {
     ...base,

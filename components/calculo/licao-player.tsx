@@ -180,12 +180,19 @@ export function LicaoPlayer({ licao, onTela }: { licao: LicaoCompleta; onTela?: 
 
   return (
     <div className="space-y-6">
+      {/* Cada etapa é um botão: dá para pular para qualquer uma (Pablo,
+          07/10/2026: "toda hora volto do início"). O Fim só depois dos exercícios. */}
       <nav aria-label="Etapas da lição">
         <ol className="flex gap-1">
           {ETAPAS.map((e, i) => (
             <li key={e.id} className="flex-1">
-              <div className="h-1 rounded-full" style={{ backgroundColor: i <= indice ? 'hsl(var(--primary))' : 'hsl(var(--muted))' }} />
-              <span className={`type-caption ${i === indice ? 'text-foreground' : 'text-muted-foreground'}`}>{e.nome}</span>
+              <button type="button" disabled={e.id === 'resultado' || e.id === etapa}
+                onClick={() => (e.id === 'exercicios' ? reiniciarExercicios() : setEtapa(e.id))}
+                aria-current={e.id === etapa ? 'step' : undefined}
+                className="group w-full text-left enabled:cursor-pointer disabled:cursor-default">
+                <div className="h-1 rounded-full t-colors group-enabled:group-hover:opacity-70" style={{ backgroundColor: i <= indice ? 'hsl(var(--primary))' : 'hsl(var(--muted))' }} />
+                <span className={`type-caption t-colors ${i === indice ? 'text-foreground' : 'text-muted-foreground group-enabled:group-hover:text-foreground'}`}>{e.nome}</span>
+              </button>
             </li>
           ))}
         </ol>
@@ -268,9 +275,9 @@ export function LicaoPlayer({ licao, onTela }: { licao: LicaoCompleta; onTela?: 
             {salvo === null ? (
               <p className="type-meta text-muted-foreground">Salvando...</p>
             ) : salvo.concluiu ? (
-              <p className="type-body">Degrau concluído. O próximo está aberto, e este volta para uma revisão rápida daqui a 2 dias.</p>
+              <p className="type-body">Lição concluída. Ela volta para uma revisão rápida daqui a 2 dias.</p>
             ) : (
-              <p className="type-body">Para subir de degrau, acerte pelo menos 70%. Refaça só as que errou: os acertos de agora se somam aos de antes.</p>
+              <p className="type-body">Não deu para salvar agora. Seus acertos aparecem acima.</p>
             )}
             <div className="rounded-[var(--radius-control)] border border-border p-4">
               <p className="type-caption text-muted-foreground mb-1">Responda de cabeça, sem olhar</p>
@@ -281,7 +288,7 @@ export function LicaoPlayer({ licao, onTela }: { licao: LicaoCompleta; onTela?: 
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/calculo" className={botao}>Voltar para a trilha <ArrowRight className="w-4 h-4" /></Link>
-              {salvo && !salvo.concluiu && erradas.length > 0 ? (
+              {erradas.length > 0 ? (
                 <button onClick={refazerErradas} className={botao}>
                   <RefreshCcw className="w-4 h-4" /> Refazer só as que errei (<span data-numeric>{erradas.length}</span>)
                 </button>
