@@ -84,6 +84,15 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   é a imagem da página em `public/questoes-imagens/<id>.webp`. Gabarito: conferir
   com o `..._GB_impresso_...pdf` oficial. `faltaTextoBase()` continua no
   prompt como rede de segurança.
+- **Caminhos únicos da IA (07/10/2026):** questão gerada (treino, simulado,
+  banco) só entra pelo `lib/questoes-geradas.ts` (validação estrita +
+  resolução por outro modelo; gabarito inválido descarta, nunca vira 'A').
+  Resposta repetível vai pelo `lib/cache-ia.ts` (chave = hash do prompt; a
+  explicação foi de 10.838 ms para 41 ms). Toda `pedirJson` tem prazo total de
+  50 s (a Vercel mata aos 60 s). Molécula usa massa da tabela fixa; ponto
+  "raiz/vértice" fora da curva é descartado. Questão errada vira cartão em
+  "Meus erros · matéria" (`api/flashcards/do-erro`). Contexto do aluno (erros
+  no assunto, Feynman) vai só na conversa, nunca na explicação (quebraria o cache).
 - **Flashcards seguem o princípio da informação mínima do SuperMemo**: um
   fato por card, resposta o mais curta possível, sem enumeração longa
   (quebre em cards separados ou use cloze). Ver [[flashcard-pattern]].
