@@ -67,7 +67,7 @@ REGRAS:
 - Nada de decoreba: nunca "qual é a fórmula de...". O degrau pede para USAR ou ENTENDER a peça (calcular, comparar, interpretar um gráfico).
 - Faça cada conta duas vezes antes de marcar a alternativa correta.
 - 5 alternativas plausíveis, uma só correta.
-- Explicação: 1) o que a questão pedia; 2) por que o erro mais comum falha; 3) o caminho passo a passo; 4) o princípio por trás; 5) onde essa peça aparece na questão do ENEM (no nivel "acima": o que ela exige além do ENEM).
+- Explicação: 2 ou 3 frases curtas, a conta principal e o porquê. O tutor do app faz a explicação desenhada; esta só fica atrás de "Ver texto completo" (e gastava a cota de tokens da Groq).
 - Português do Brasil. Sem emoji, sem elogio, sem "É importante notar".
 
 Retorne SOMENTE JSON: {"degraus":[{"enunciado":"...","alternativaA":"...","alternativaB":"...","alternativaC":"...","alternativaD":"...","alternativaE":"...","respostaCorreta":"A","nivel":"facil","explicacao":"..."}]}`;
@@ -90,7 +90,7 @@ REGRAS:
 - Não repita a pergunta da questão do ENEM; use outros números e outra situação.
 - Faça cada conta duas vezes antes de marcar a alternativa correta.
 - 5 alternativas plausíveis, uma só correta.
-- Explicação: 1) o que a questão pedia; 2) por que o erro mais comum falha; 3) o caminho passo a passo; 4) o princípio por trás; 5) o que ela exige além do ENEM.
+- Explicação: 2 ou 3 frases curtas, a conta principal e o porquê. O tutor do app faz a explicação desenhada; esta só fica atrás de "Ver texto completo" (e gastava a cota de tokens da Groq).
 - Português do Brasil. Sem emoji, sem elogio, sem "É importante notar".
 
 Retorne SOMENTE JSON: {"degraus":[{"enunciado":"...","alternativaA":"...","alternativaB":"...","alternativaC":"...","alternativaD":"...","alternativaE":"...","respostaCorreta":"A","nivel":"acima","explicacao":"..."}]}`;
