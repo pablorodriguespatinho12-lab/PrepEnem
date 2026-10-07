@@ -120,7 +120,20 @@ function regrasTutoria(respostasAnteriores: number): string {
 - Se ele diz que NÃO ENTENDEU ("não entendi", "explica de novo", "como assim"): é proibido refazer a mesma conta, mesmo mais devagar. Responda com um "visual" (tabela com 3 ou 4 linhas de números pequenos, ou gráfico) e uma frase dizendo o que olhar nele. A conta volta depois, se ele pedir.
 - O motivo que você dá tem de ser o motivo verdadeiro. Confira: se a conta deu um número negativo onde não pode, diga isso; não invente outra razão.${longa}`;
 }
-export function promptConversa(q: QuestaoParaTutor, resumoExplicacao: string, historico: MensagemTutor[]): string {
+/* O que o app sabe do aluno neste assunto (api/tutor/conversa). Vai só na
+   conversa: na explicação quebraria o cache, que é por questão. */
+export interface ContextoAluno { errosNoAssunto: number; suasPalavras: string | null }
+
+function textoDoAluno(c: ContextoAluno | undefined, subtema: string | null | undefined): string {
+  if (!c || (c.errosNoAssunto < 2 && !c.suasPalavras)) return '';
+  const linhas = [
+    c.errosNoAssunto >= 2 ? `- Errou ${c.errosNoAssunto} questões de ${subtema ?? 'este assunto'} nos últimos 30 dias: procure o pré-requisito que falta antes de insistir na conta.` : '',
+    c.suasPalavras ? `- Explicou o erro com as palavras dele: "${c.suasPalavras.slice(0, 400)}". Parta daí: confirme o que está certo e corrija o que não está.` : '',
+  ].filter(Boolean);
+  return `\nO QUE VOCÊ SABE DO ALUNO (use, mas não cite números):\n${linhas.join('\n')}\n`;
+}
+
+export function promptConversa(q: QuestaoParaTutor, resumoExplicacao: string, historico: MensagemTutor[], aluno?: ContextoAluno): string {
   const recente = historico.slice(-MAX_HISTORICO);
   const conversa = recente.map((m) => `${m.papel === 'aluno' ? 'ALUNO' : 'TUTOR'}: ${m.texto}`).join('\n');
   const respostasAnteriores = recente.filter((m) => m.papel === 'tutor').length;
@@ -145,7 +158,7 @@ ${textoDaQuestao(q)}
 
 EXPLICAÇÃO QUE ELE JÁ VIU (não repita):
 ${resumoExplicacao.slice(0, 1500)}
-
+${textoDoAluno(aluno, q.subtema)}
 CONVERSA:
 ${conversa}`;
 }

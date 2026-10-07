@@ -13,6 +13,7 @@ import { resumirExplicacao } from '@/lib/tutor/validar';
 import type { Visual } from '@/lib/visual/especificacao';
 
 export interface QuestaoTutor {
+  id?: string;
   enunciado: string;
   alternativaA: string; alternativaB: string; alternativaC: string; alternativaD: string; alternativaE: string;
   respostaCorreta: string;
@@ -113,6 +114,7 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           questao: corpoDaQuestao(questao, respostaDada),
+          questionId: questao.id,
           resumoExplicacao: resumirExplicacao(explicacao),
           historico: historico.map(({ papel, texto: t }) => ({ papel, texto: t })),
         }),

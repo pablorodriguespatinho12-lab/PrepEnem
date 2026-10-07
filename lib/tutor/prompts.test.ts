@@ -1,5 +1,20 @@
 import { describe, expect, test } from 'vitest';
-import { faltaTextoBase } from './prompts';
+import { faltaTextoBase, promptConversa } from './prompts';
+
+describe('promptConversa com o que se sabe do aluno', () => {
+  const q = { enunciado: 'Quanto é 2 + 2?', alternativas: { A: '3', B: '4', C: '5', D: '6', E: '7' }, respostaCorreta: 'B', respostaDada: 'A', materia: 'Matemática', subtema: 'Aritmética' };
+  const historico = [{ papel: 'aluno' as const, texto: 'por quê?' }];
+
+  test('erros repetidos e as palavras dele entram no prompt', () => {
+    const p = promptConversa(q, 'resumo', historico, { errosNoAssunto: 4, suasPalavras: 'achei que somava 1' });
+    expect(p).toContain('Errou 4 questões de Aritmética');
+    expect(p).toContain('"achei que somava 1"');
+  });
+
+  test('um erro só e nada escrito: prompt igual ao de antes', () => {
+    expect(promptConversa(q, 'resumo', historico, { errosNoAssunto: 1, suasPalavras: null })).toBe(promptConversa(q, 'resumo', historico));
+  });
+});
 
 describe('faltaTextoBase', () => {
   test('comando que aponta para um trecho que não veio', () => {
