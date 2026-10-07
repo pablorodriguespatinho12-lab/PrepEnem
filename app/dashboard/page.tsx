@@ -107,8 +107,11 @@ export default function DashboardPage() {
                 {[...activeDaySchedule.manha, ...activeDaySchedule.trabalho].map((block, i) => (
                   <li key={`${block.materia}-${i}`} className="flex items-baseline gap-3 min-w-0">
                     <span aria-hidden className="w-2.5 h-2.5 rounded-full flex-shrink-0 translate-y-[-1px]" style={{ backgroundColor: (materiaColors as any)[block.materia] ?? '#ccc' }} />
-                    <span className="type-body font-medium whitespace-nowrap">{block.materia}</span>
-                    <span className="type-meta text-muted-foreground truncate">{block.tema}</span>
+                    {/* Tema quebra para baixo no celular: com truncate virava "Mol, Massa molar, Conceito d…". */}
+                    <span className="min-w-0 flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
+                      <span className="type-body font-medium whitespace-nowrap">{block.materia}</span>
+                      <span className="type-meta text-muted-foreground">{block.tema}</span>
+                    </span>
                   </li>
                 ))}
               </ul>

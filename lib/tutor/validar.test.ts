@@ -92,6 +92,18 @@ describe('validarExplicacao limpa o texto da IA', () => {
     const e = validarExplicacao({ ideia: 'Ok.', passos: [passo('Vamos analisar a questão. A raiz é 2.')] })!;
     expect(e.passos[0].texto).toBe('A raiz é 2.');
   });
+  test('expoente solto vira sobrescrito fora da fórmula, dentro fica', () => {
+    const e = validarExplicacao({ ideia: 'Dá 2 m/s^2, e $x^2$ fica.', passos: [passo('x.')] })!;
+    expect(e.ideia).toBe('Dá 2 m/s², e $x^2$ fica.');
+  });
+
+  test('desenho de palavra só em Português (em Física virava "New·ton")', () => {
+    const palavra = { tipo: 'palavra', palavra: 'Newton', silabas: ['New', 'ton'], destaque: 'ton', nota: 'Unidade.' };
+    const bruto = { ideia: 'Ok.', passos: [{ titulo: 'Passo', texto: 'x.', visual: palavra }] };
+    expect(validarExplicacao(bruto, 'Física')!.passos[0].visual).toBeNull();
+    expect(validarExplicacao(bruto, 'Português')!.passos[0].visual).not.toBeNull();
+  });
+
   test('texto longo é cortado no fim de uma frase, nunca no meio da palavra', () => {
     const longo = 'Frase curta. ' + 'palavra '.repeat(150) + 'fim.';
     const e = validarExplicacao({ ideia: 'Ok.', passos: [passo(longo)] })!;

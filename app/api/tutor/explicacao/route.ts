@@ -17,7 +17,7 @@ export async function POST(req: Request) {
   const questao = lerQuestao(await req.json().catch(() => null));
   if (!questao) return NextResponse.json({ error: 'Dados da questão incompletos' }, { status: 400 });
 
-  const r = await pedirJson(promptExplicacao(questao), validarExplicacao, { maxTokens: 4000, temperature: 0.2, modelo: MODELO_IA.explicacao(), timeoutMs: 45_000 });
+  const r = await pedirJson(promptExplicacao(questao), (bruto) => validarExplicacao(bruto, questao.materia), { maxTokens: 4000, temperature: 0.2, modelo: MODELO_IA.explicacao(), timeoutMs: 45_000 });
   if (!r.ok) return NextResponse.json({ error: r.erro }, { status: r.status });
   return NextResponse.json({ explicacao: r.dado });
 }

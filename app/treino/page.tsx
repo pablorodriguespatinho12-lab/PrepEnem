@@ -1026,10 +1026,14 @@ export default function TreinoPage() {
           )}
           {/* Feynman technique */}
           {!result?.acertou && !isReview && (
-            <div className="surface-1 rounded-[var(--radius-surface)] p-5">
-              <p className="type-caption text-muted-foreground mb-1.5">Técnica Feynman</p>
-              <p className="type-meta text-muted-foreground mb-3">
-                Explique com suas palavras por que errou e qual o conceito correto:
+            /* Fechado por padrão: aberto, era mais um campo de texto embaixo de
+               toda explicação (tela limpa, decisoes-prepenem). */
+            <details key={currentIdx} className="surface-1 rounded-[var(--radius-surface)] px-5 py-3 group">
+              <summary className="cursor-pointer type-meta text-muted-foreground hover:text-foreground t-colors list-none">
+                Explicar com minhas palavras
+              </summary>
+              <p className="type-meta text-muted-foreground mt-3 mb-3">
+                Por que errou e qual o conceito certo:
               </p>
               <textarea
                 value={feynmanText}
@@ -1045,7 +1049,7 @@ export default function TreinoPage() {
               >
                 <Send className="w-3.5 h-3.5" /> Salvar explicação
               </button>
-            </div>
+            </details>
           )}
 
           <div className="flex gap-3">

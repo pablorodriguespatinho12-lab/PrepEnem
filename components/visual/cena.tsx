@@ -76,11 +76,12 @@ function PistaHorizontal({ posicoes, pct, faixa, unidade }: {
           </div>
         </div>
       ))}
-      <div className="relative h-5 type-micro text-muted-foreground" aria-hidden>
+      {/* Unidade numa linha abaixo: ao lado do último número virava "20m/s". */}
+      <div className="relative h-9 type-micro text-muted-foreground" aria-hidden>
         {marcas(faixa, 6).map((v) => (
           <span key={v} data-numeric className="absolute top-1 -translate-x-1/2" style={{ left: `${pct(v)}%` }}>{v}</span>
         ))}
-        <span className="absolute top-1 -right-6">{unidade}</span>
+        <span className="absolute top-5 right-0">{unidade}</span>
       </div>
     </div>
   );

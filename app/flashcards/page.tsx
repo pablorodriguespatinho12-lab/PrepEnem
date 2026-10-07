@@ -257,13 +257,13 @@ export default function FlashcardsPage() {
                           </h3>
 
                           {/* Stats */}
-                          <div className="flex items-center gap-2 type-meta text-muted-foreground mb-3">
-                            <span className="flex items-center gap-1">
+                          <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 type-meta text-muted-foreground mb-3">
+                            <span className="flex items-center gap-1 whitespace-nowrap">
                               <Layers className="w-3.5 h-3.5" />
                               <span data-numeric>{group.totalDecks}</span> {group.totalDecks === 1 ? 'baralho' : 'baralhos'}
                             </span>
                             <span aria-hidden>•</span>
-                            <span data-numeric>{group.totalCards} cards</span>
+                            <span data-numeric className="whitespace-nowrap">{group.totalCards} cards</span>
                           </div>
 
                           {/* Progress */}

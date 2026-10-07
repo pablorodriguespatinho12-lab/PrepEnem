@@ -35,11 +35,15 @@ export function frases(t: string): string[] {
   if (atual.trim()) saida.push(atual.trim());
   return saida;
 }
+const SOBRESCRITO: Record<string, string> = { '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹', '-': '⁻' };
+/* "m/s^2" fora de $...$ aparecia com o circunflexo cru na tela. */
+const semCircunflexo = (t: string): string =>
+  t.split('$').map((pedaco, i) => (i % 2 === 1 ? pedaco : pedaco.replace(/\^(-?\d+)/g, (_, n: string) => [...n].map((c) => SOBRESCRITO[c]).join('')))).join('$');
 /* Texto da IA: sem emoji, sem frase proibida, cortado em fim de frase.
    Antes cortava com slice no meio da palavra (validador deixava passar). */
 const texto = (v: unknown, max: number, maxFrases = Infinity): string | null => {
   if (typeof v !== 'string') return null;
-  const limpas = frases(v.replace(EMOJI, '').replace(/[ \t]{2,}/g, ' ').trim())
+  const limpas = frases(semCircunflexo(v).replace(EMOJI, '').replace(/[ \t]{2,}/g, ' ').trim())
     .filter((f) => !PROIBIDAS.some((r) => r.test(f)))
     .slice(0, maxFrases);
   let saida = '';
@@ -83,10 +87,14 @@ export function extrairJson(bruto: string): unknown {
   }
 }
 
-export function validarExplicacao(bruto: unknown): Explicacao | null {
+/* Desenho "palavra" (sílabas, acento) só faz sentido em Português: em Física
+   a IA desenhou "New·ton" para explicar força (foto de 07/10/2026). */
+const visualDaMateria = (v: Visual | null, materia?: string): Visual | null =>
+  v?.tipo === 'palavra' && materia && !/portugu/i.test(materia) ? null : v;
+export function validarExplicacao(bruto: unknown, materia?: string): Explicacao | null {
   const e = objeto(bruto);
   const passos = lista(e.passos).map(objeto)
-    .map((p) => ({ titulo: texto(p.titulo, 80), texto: texto(p.texto, 900), visual: validarVisual(p.visual) }))
+    .map((p) => ({ titulo: texto(p.titulo, 80), texto: texto(p.texto, 900), visual: visualDaMateria(validarVisual(p.visual), materia) }))
     .filter((p): p is PassoExplicacao => p.titulo !== null && p.texto !== null)
     .slice(0, 4);
   const ideia = texto(e.ideia, 300, 2);
