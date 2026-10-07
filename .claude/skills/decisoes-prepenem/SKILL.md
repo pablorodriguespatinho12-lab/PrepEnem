@@ -131,8 +131,16 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   nível acima (`ehExemploResolvido` em `lib/treino-etapas.ts`). Cada bloco de
   âncora fecha com 1 questão "Nível acima" gerada por IA no estilo
   Fuvest/Unicamp (+ ITA/IME nas exatas), original, autossuficiente, só
-  programa do médio, conferida pelo verificador. Não há questão real dessas
-  bancas no banco: não apresentar a gerada como real.
+  programa do médio, conferida pelo verificador. A gerada nunca se apresenta
+  como real.
+- **Vestibular real, a última do dia (06/10/2026):** 48 questões reais (ITA
+  2025, IME 2024, Fuvest 2024/25, Unicamp 2024, Unesp 2025) em
+  `data/vestibular`, gravadas com `nivel: 'vestibular'` e `anoProva` vazio
+  (`anoProva` marca prova do ENEM). Cada gabarito conferido contra o oficial
+  e por resolução própria; o teste guarda uma segunda cópia dos gabaritos.
+  Resolução "Resolva comigo": passos de clicar, conta escrita como caneta.
+  Gabarito de cursinho resumido por IA veio errado: só fonte oficial.
+  Questão nova: `scripts/seed-vestibular.ts` (só cria/atualiza as próprias).
 - **Simulado semanal (06/10/2026):** uma matéria, 10, 15 ou 20 questões,
   3 min por questão; sorteadas mas em ordem fácil → média → ENEM
   (`ordenarPorEtapa`). O de 45 a 180 questões saiu.

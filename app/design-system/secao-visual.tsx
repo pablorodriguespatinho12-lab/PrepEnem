@@ -5,6 +5,7 @@
 import { VisualDesenho } from '@/components/visual/visual-desenho';
 import { validarVisual, type Visual } from '@/lib/visual/especificacao';
 import MathText from '@/components/math-text';
+import ResolucaoClicavel from '@/components/vestibular/resolucao-clicavel';
 
 const EXEMPLOS: { nome: string; bruto: unknown }[] = [
   {
@@ -88,6 +89,10 @@ export function SecaoVisual() {
             <VisualDesenho visual={e.visual} />
           </div>
         ))}
+        <div>
+          <p className="type-caption mb-2 text-muted-foreground">Resolução de vestibular (clicar e responder)</p>
+          <ResolucaoClicavel origem="ITA 2025" numero={1} />
+        </div>
         <div>
           <p className="type-caption mb-2 text-muted-foreground">Texto ligado ao desenho</p>
           <MathText className="font-reading" text="As [[b:raízes]] são onde [[a:f(x)]] corta o eixo x: $x = \pm 2$." />

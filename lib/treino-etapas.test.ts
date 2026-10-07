@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { cotasDoDia, ehExemploResolvido, montarEscada, etapaDaQuestao, ordenarPorEtapa, RESOLVIDAS_POR_MATERIA } from './treino-etapas';
+import { cotasDoDia, ehExemploResolvido, montarEscada, etapaDaQuestao, isQuestaoEnem, ordenarPorEtapa, RESOLVIDAS_POR_MATERIA } from './treino-etapas';
 
 const q = (materia: string, nivel = 'facil', extra: Record<string, unknown> = {}) => ({ id: Math.random().toString(), materia, nivel, ...extra });
 
@@ -30,6 +30,9 @@ describe('etapaDaQuestao', () => {
     expect(etapaDaQuestao({ nivel: 'acima' })).toBe('acima');
     expect(etapaDaQuestao({ nivel: 'acima', anoProva: 2020 })).toBe('acima');
     expect(etapaDaQuestao({ anoProva: 2022 })).toBe('enem');
+    // Questão real de vestibular nunca vira âncora do ENEM, mesmo com ano.
+    expect(etapaDaQuestao({ nivel: 'vestibular', origem: 'ITA 2025', anoProva: 2025 })).toBe('vestibular');
+    expect(isQuestaoEnem({ nivel: 'vestibular', anoProva: 2025 })).toBe(false);
   });
 });
 

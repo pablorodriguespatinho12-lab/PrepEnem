@@ -17,6 +17,8 @@ import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
 import { ETAPA_LABEL, ehExemploResolvido, etapaDaQuestao } from '@/lib/treino-etapas';
 import { ExplicacaoTutor } from '@/components/tutor/explicacao-tutor';
 import { TextoCompleto } from '@/components/tutor/texto-completo';
+// Só carrega as 48 resoluções quando a questão do dia é de vestibular.
+const ResolucaoClicavel = dynamic(() => import('@/components/vestibular/resolucao-clicavel'), { ssr: false });
 import { VisualDesenho } from '@/components/visual/visual-desenho';
 import type { Visual } from '@/lib/visual/especificacao';
 import { playSound } from '@/lib/sounds';
@@ -288,7 +290,8 @@ export default function TreinoPage() {
     { key: 'C', text: currentQ.alternativaC },
     { key: 'D', text: currentQ.alternativaD },
     { key: 'E', text: currentQ.alternativaE },
-  ] : [];
+  ].filter((a) => a.text?.trim()) : []; // Unicamp tem 4 alternativas
+  const ehVestibular = !!currentQ && etapaDaQuestao(currentQ) === 'vestibular';
 
   const handleAnswer = async () => {
     if (!selected || !currentQ) return;
@@ -883,7 +886,9 @@ export default function TreinoPage() {
             )}
             <span aria-hidden className="w-px h-3 bg-border shrink-0" />
             {currentQ && (
-              <span className="font-medium">{ETAPA_LABEL[etapaDaQuestao(currentQ)]}</span>
+              <span className="font-medium">
+                {ehVestibular ? `${currentQ.origem} · questão ${currentQ.numeroQuestao} · prova real` : ETAPA_LABEL[etapaDaQuestao(currentQ)]}
+              </span>
             )}
             {resolvida && (
               <>
@@ -1098,9 +1103,11 @@ export default function TreinoPage() {
             {result?.explicacao && <TextoCompleto texto={result.explicacao} />}
           </motion.div>
 
+          {/* Questão real de vestibular: resolução de clicar, passo a passo, antes do tutor. */}
+          {currentQ && ehVestibular && <ResolucaoClicavel origem={currentQ.origem} numero={currentQ.numeroQuestao} />}
           {/* Explicação visual em passos + conversa de dúvida. Errou: começa sozinha. */}
           {currentQ && (
-            <ExplicacaoTutor questao={currentQ} respostaDada={selected} iniciarSozinha={!result?.acertou} />
+            <ExplicacaoTutor questao={currentQ} respostaDada={selected} iniciarSozinha={!result?.acertou && !ehVestibular} />
           )}
           {/* Feynman technique */}
           {!result?.acertou && !isReview && (

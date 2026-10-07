@@ -21,6 +21,20 @@ function escolherAncoras<T extends { materia: string }>(candidatas: T[], max: nu
 }
 
 
+/* A última questão do dia é real de vestibular (ITA, IME, Fuvest, Unicamp,
+   Unesp; data/vestibular), de uma exata do dia. Prefere a nunca respondida;
+   se todas já foram, volta a mais antiga. Pedido do Pablo, 06/10/2026. */
+const EXATAS = ['Matemática', 'Física', 'Química'];
+async function questaoVestibularDoDia(materias: string[], ultimaResposta: Map<string, Date>) {
+  const doDia = materias.filter((m) => EXATAS.includes(m));
+  if (doDia.length === 0) return null;
+  const candidatas = await prisma.question.findMany({ where: { nivel: 'vestibular', materia: { in: doDia } } });
+  if (candidatas.length === 0) return null;
+  const nunca = candidatas.filter((q) => !ultimaResposta.has(q.id));
+  if (nunca.length > 0) return nunca[Math.floor(Math.random() * nunca.length)];
+  return [...candidatas].sort((a, b) => ultimaResposta.get(a.id)!.getTime() - ultimaResposta.get(b.id)!.getTime())[0];
+}
+
 export async function POST(req: Request) {
   try {
     const session = await getServerSession(authOptions);
@@ -195,7 +209,8 @@ Retorne SOMENTE JSON válido.`;
     }
     // Em paralelo: a geração de degraus por IA de uma matéria não segura as outras.
     const porMateria = await Promise.all(cotas.map((c) => montarMateria(c.materia, c.quantidade)));
-    const selected = porMateria.flat();
+    const vestibular = await questaoVestibularDoDia(cotas.map((c) => c.materia), ultimaResposta);
+    const selected = [...porMateria.flat(), ...(vestibular ? [vestibular] : [])];
     if (selected.length === 0) {
       return NextResponse.json({
         error: 'Sem questões para as matérias de hoje. Importe um PDF ou gere questões com IA no Banco de Questões.',

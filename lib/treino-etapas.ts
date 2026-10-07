@@ -8,15 +8,16 @@
 
 // 'acima': um nível além do ENEM, no estilo Fuvest/Unicamp/ITA/IME, logo
 // depois da questão do ENEM do mesmo conteúdo (lib/treino-degraus.ts).
-export type Etapa = 'base' | 'intermediaria' | 'enem' | 'acima';
+export type Etapa = 'base' | 'intermediaria' | 'enem' | 'acima' | 'vestibular';
 
-export const ETAPA_ORDEM: Etapa[] = ['base', 'intermediaria', 'enem', 'acima'];
+export const ETAPA_ORDEM: Etapa[] = ['base', 'intermediaria', 'enem', 'acima', 'vestibular'];
 
 export const ETAPA_LABEL: Record<Etapa, string> = {
   base: 'Base',
   intermediaria: 'Intermediária',
   enem: 'ENEM',
   acima: 'Nível acima',
+  vestibular: 'Vestibular real',
 };
 
 /* Quantas questões de cada degrau numa sessão de 20. Falta num degrau é
@@ -26,6 +27,7 @@ export const ETAPA_COTA: Record<Etapa, number> = {
   intermediaria: 8,
   enem: 6,
   acima: 0, // só entra no bloco da própria âncora, nunca pela cota
+  vestibular: 0, // questão real de ITA/IME/Fuvest/Unicamp/Unesp: só a última do dia (data/vestibular)
 };
 
 interface QuestaoClassificavel {
@@ -36,6 +38,7 @@ interface QuestaoClassificavel {
 }
 
 export function isQuestaoEnem(q: QuestaoClassificavel): boolean {
+  if ((q.nivel ?? '').toLowerCase() === 'vestibular') return false;
   if (q.anoProva != null) return true;
   if (/^enem/i.test(q.origem ?? '')) return true;
   return (q.nivel ?? '').toLowerCase() === 'modelo_enem';
@@ -43,6 +46,7 @@ export function isQuestaoEnem(q: QuestaoClassificavel): boolean {
 
 export function etapaDaQuestao(q: QuestaoClassificavel): Etapa {
   if ((q.nivel ?? '').toLowerCase() === 'acima') return 'acima';
+  if ((q.nivel ?? '').toUpperCase() === 'VESTIBULAR') return 'vestibular';
   if (isQuestaoEnem(q)) return 'enem';
   const grau = (q.nivel ?? q.dificuldade ?? '').toLowerCase();
   return grau === 'facil' ? 'base' : 'intermediaria';
@@ -69,7 +73,7 @@ export function montarEscada<T extends QuestaoClassificavel & { id: string; mate
   const base = Math.round(ETAPA_COTA.base * escala);
   const intermediaria = Math.round(ETAPA_COTA.intermediaria * escala);
   const cotas = { ...ETAPA_COTA, base, intermediaria, enem: Math.max(0, tamanho - base - intermediaria) };
-  const escolhidas: Record<Etapa, T[]> = { base: [], intermediaria: [], enem: [], acima: [] };
+  const escolhidas: Record<Etapa, T[]> = { base: [], intermediaria: [], enem: [], acima: [], vestibular: [] };
   const usados = new Set<string>();
 
   const pegar = (etapa: Etapa, quantas: number) => {
@@ -115,7 +119,7 @@ export function ehExemploResolvido<T extends QuestaoClassificavel & { materia: s
   const q = questoes[idx];
   if (!q) return false;
   const etapa = etapaDaQuestao(q);
-  if (etapa === 'enem' || etapa === 'acima') return false;
+  if (etapa === 'enem' || etapa === 'acima' || etapa === 'vestibular') return false;
   const anteriores = questoes.slice(0, idx).filter((o) => o.materia === q.materia).length;
   return anteriores < RESOLVIDAS_POR_MATERIA;
 }
