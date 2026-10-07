@@ -134,8 +134,8 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   bola (nome no rótulo), relógio de queda é cortado no chão. A IA copia o
   EXEMPLO do formato mais do que a regra: para mudar o comportamento, mude o
   exemplo.
-- **Exemplo resolvido e nível acima (05/10/2026, pedido do Pablo):** as 5
-  primeiras questões de cada matéria no treino do dia chegam resolvidas
+- **Exemplo resolvido e nível acima (05/10/2026, pedido do Pablo):** as 3
+  primeiras questões de cada matéria (eram 5; 3 desde 07/10/2026) no treino do dia chegam resolvidas
   (gabarito marcado, explicação e tutor abertos) — nunca a do ENEM nem a de
   nível acima (`ehExemploResolvido` em `lib/treino-etapas.ts`). Cada bloco de
   âncora fecha com 1 questão "Nível acima" gerada por IA no estilo

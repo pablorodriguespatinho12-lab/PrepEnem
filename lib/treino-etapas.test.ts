@@ -6,13 +6,13 @@ const q = (materia: string, nivel = 'facil', extra: Record<string, unknown> = {}
 describe('ehExemploResolvido', () => {
   test('as primeiras de cada matéria vêm resolvidas, contadas por matéria', () => {
     const sessao = [
-      ...Array.from({ length: 6 }, () => q('Português')),
-      ...Array.from({ length: 6 }, () => q('Matemática')),
+      ...Array.from({ length: 4 }, () => q('Português')),
+      ...Array.from({ length: 4 }, () => q('Matemática')),
     ];
     const resolvidas = sessao.map((_, i) => ehExemploResolvido(sessao, i));
-    expect(resolvidas.slice(0, 6)).toEqual([true, true, true, true, true, false]);
-    expect(resolvidas.slice(6)).toEqual([true, true, true, true, true, false]);
-    expect(RESOLVIDAS_POR_MATERIA).toBe(5);
+    expect(resolvidas.slice(0, 4)).toEqual([true, true, true, false]);
+    expect(resolvidas.slice(4)).toEqual([true, true, true, false]);
+    expect(RESOLVIDAS_POR_MATERIA).toBe(3);
   });
 
   test('questão do ENEM e do nível acima nunca vem resolvida', () => {

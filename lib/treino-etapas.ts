@@ -110,8 +110,9 @@ function alternarMaterias<T extends { materia: string }>(lista: T[]): T[] {
 /* Exemplo resolvido: as primeiras questões de cada matéria chegam com a
    resolução aberta, para o estudante ver a construção do raciocínio antes de
    tentar sozinho (efeito do exemplo resolvido, Sweller). Pedido do Pablo em
-   05/10/2026. ENEM e nível acima nunca: essas ele resolve. */
-export const RESOLVIDAS_POR_MATERIA = 5;
+   05/10/2026; em 07/10/2026 ele baixou de 5 para 3 (3 resolvidas, 7 ele faz).
+   ENEM e nível acima nunca: essas ele resolve. */
+export const RESOLVIDAS_POR_MATERIA = 3;
 export function ehExemploResolvido<T extends QuestaoClassificavel & { materia: string }>(
   questoes: T[],
   idx: number,
