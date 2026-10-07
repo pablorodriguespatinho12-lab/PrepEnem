@@ -34,6 +34,10 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 `montar-referencia`, escolhida pelo Pablo olhando, e registrada aqui com data.
 
 - Nenhuma escolhida ainda (05/10/2026).
+- **Desenho de química = mapa mental (opção A, Pablo, 07/10/2026):** átomo de
+  verdade (núcleo de bolinhas, camadas com elétrons girando, símbolo embaixo),
+  linha do átomo até uma etiqueta "H: massa 1", e a soma numa caixa. Nunca seta
+  ou bolinha solta fingindo ser átomo. Exemplo: https://claude.ai/artifact/9tM1oPntj5qQ7owQEpA1rM
 
 ## Telas enxutas (06/10/2026, pedido do Pablo: menos coisa num lugar só)
 
