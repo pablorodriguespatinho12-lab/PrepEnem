@@ -70,6 +70,15 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
       }
       setExplicacao(data.explicacao);
       setPassosVisiveis(1);
+      // Errou: a pergunta de fixação vira flashcard (api/flashcards/do-erro).
+      const c = data.explicacao.checagem;
+      if (c && respostaDada && respostaDada !== questao.respostaCorreta) {
+        fetch('/api/flashcards/do-erro', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ materia: questao.materia, pergunta: c.pergunta, resposta: c.resposta }),
+        }).catch(() => { /* cartão é bônus: falhar não atrapalha a explicação */ });
+      }
     } catch {
       setErro('Sem conexão com o servidor.');
     } finally {
