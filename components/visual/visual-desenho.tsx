@@ -56,7 +56,7 @@ function Reta({ v }: { v: VisualReta }) {
 
 /* Passo a passo da conta: a caneta escreve uma linha por vez (quadro.tsx). */
 function Transformacao({ v }: { v: VisualTransformacao }) {
-  return <Quadro partes={v.linhas.map((l) => ({ latex: l.latex, porque: l.porque }))} />;
+  return <Quadro partes={v.linhas} condicao={v.condicao} ajuda={v.ajuda} />;
 }
 function Tabela({ v }: { v: VisualTabela }) {
   const reduzir = useReducedMotion() ?? false;

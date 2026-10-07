@@ -123,15 +123,6 @@ export const P1_FUNCAO: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Uma máquina de suco tem botões. Você aperta um botão (a entrada) e sai um suco (a saída). Em qual caso a máquina **não** funciona como uma função?',
-      resposta: { tipo: 'escolha', opcoes: ['Botão 1 sempre solta suco de uva', 'Botão 2 sempre solta suco de laranja', 'Botão 3 às vezes solta uva, às vezes laranja', 'Botões 4 e 5 soltam, os dois, suco de limão'], correta: 2 },
-      dica: 'Numa função, a mesma entrada dá sempre a mesma saída.',
-      resolucao: [
-        { texto: 'O botão 3 dá saídas diferentes para a mesma entrada.', porque: 'Apertando o mesmo botão, você não sabe o que vai sair: isso não é função.' },
-        { texto: 'Dois botões soltarem o mesmo suco pode: entradas diferentes com a mesma saída é permitido.', porque: 'Como em $x^2$: entra 2 ou $-2$, sai 4 nos dois.' },
-      ],
-    },
-    {
       enunciado: 'Em $f(x) = \\frac{1}{x - 3}$, qual número **não** pode entrar?',
       resposta: { tipo: 'numero', valor: 3 },
       dica: 'Que valor de $x$ faz o denominador dar zero?',

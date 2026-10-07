@@ -135,15 +135,6 @@ export const C2_CONTINUIDADE: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Qual destas funções é contínua em zero?',
-      resposta: { tipo: 'escolha', opcoes: ['um sobre x', 'x ao quadrado dividido por x, sem valor definido em zero', 'x ao quadrado mais um', 'um degrau que pula em zero'], correta: 2 },
-      dica: 'Procure uma que não tenha furo, salto nem explosão em zero.',
-      resolucao: [
-        { texto: 'x ao quadrado mais um existe em zero, e o limite bate com o valor.', porque: 'Sem furo, sem salto, sem explosão.' },
-        { texto: 'As outras quebram: explosão, furo e salto, nessa ordem.', porque: 'Cada uma falha numa das três perguntas.' },
-      ],
-    },
-    {
       enunciado: 'Ache $a$ para que $f(x) = ax + 1$ (para $x < 2$) e $f(x) = x^2 - a$ (para $x \\ge 2$) seja contínua em 2.',
       resposta: { tipo: 'numero', valor: 1 },
       dica: 'Iguale os dois lados em $x = 2$.',

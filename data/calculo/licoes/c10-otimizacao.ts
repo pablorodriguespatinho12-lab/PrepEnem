@@ -130,15 +130,6 @@ export const C10_OTIMIZACAO: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Com o perímetro fixo, qual retângulo tem a maior área?',
-      resposta: { tipo: 'escolha', opcoes: ['o mais comprido possível', 'o quadrado', 'qualquer um: a área é sempre a mesma'], correta: 1 },
-      dica: 'Lembre da cerca de 20 m.',
-      resolucao: [
-        { texto: 'O quadrado: na cerca, 5 por 5 deu a maior área.', porque: 'A derivada da área zera quando base e altura são iguais.' },
-        { texto: 'Esticar o retângulo diminui a área, mesmo com a mesma cerca.', porque: 'Nas pontas a área chega a zero.' },
-      ],
-    },
-    {
       enunciado: 'De uma folha quadrada de 30 cm de lado cortam-se quadrados de lado $x$ nos cantos, para fazer uma caixa sem tampa. Que valor de $x$, em cm, dá o maior volume?',
       resposta: { tipo: 'numero', valor: 5 },
       dica: '$V = x(30 - 2x)^2$. Derive com produto e cadeia.',

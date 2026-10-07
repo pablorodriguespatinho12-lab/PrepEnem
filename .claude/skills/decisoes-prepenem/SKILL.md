@@ -193,6 +193,15 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   Ele risca eixos e reta; cada traço vira reta na hora e a conferência é conta
   (`lib/calculo/desenho.ts`, tolerância de 1/3 de quadradinho), nunca IA. Diz o
   que falta e, se errou, mostra a certa tracejada. Por ora só reta (p2 e p3).
+- **Sem múltipla escolha nas lições de Cálculo (Pablo, 07/10/2026):** os 23
+  exercícios de escolha saíram ("tira mesmo"). No lugar do "qual destes é
+  função", o "por que funciona": a fórmula deduzida no quadro, do jeito do
+  Universo Narrado (canal que o Pablo usa de referência de MÉTODO, nunca de
+  conteúdo): começa pela pergunta, uma regra só (o que faz de um lado do =
+  faz do outro), condição no canto (`condicao`), operação anotada em cada linha
+  (`lado`), peça usada no cantinho (`ajuda`), termo novo em cor (`\novo`), o
+  que cancela riscado (`\corta`), nome dado depois que aparece (Δ), resultado
+  em `\boxed`. Feito: Bhaskara na p4. Lacuna de exemplo resolvido continua.
 - **Nível acima no Cálculo (Pablo, 06/10/2026: "saber mais do que a maior parte
   do pessoal"):** toda lição escrita fecha com 2 exercícios `nivelAcima`
   (estilo ITA, Fuvest, Unicamp), originais, resolvíveis só com o que a trilha

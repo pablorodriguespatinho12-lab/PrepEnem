@@ -14,4 +14,13 @@ describe('texParaSvg', () => {
   test('comando de link ou HTML não passa', () => {
     expect(texParaSvg('\\href{https://x.com}{a}')).toBeNull();
   });
+  test('\\novo pinta com a cor do tema e \\corta risca de vermelho, sem deixar o código', () => {
+    const svg = texParaSvg('x^2 + \\novo{\\left(\\frac{b}{2a}\\right)^2} + \\corta{\\frac{c}{a}}')!;
+    expect(svg).toContain('hsl(var(--chart-2))');
+    expect(svg).toContain('hsl(var(--danger))');
+    expect(svg).not.toMatch(/0A0A0/i);
+  });
+  test('caixa no resultado final', () => {
+    expect(texParaSvg('\\boxed{x = \\frac{-b \\pm \\sqrt{\\Delta}}{2a}}')).toMatch(/^<svg/);
+  });
 });

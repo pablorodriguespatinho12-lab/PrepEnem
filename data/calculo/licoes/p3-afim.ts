@@ -142,15 +142,6 @@ export const P3_AFIM: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Em $f(x) = 7 - 2x$, o que acontece com $f$ quando $x$ aumenta 1?',
-      resposta: { tipo: 'escolha', opcoes: ['Aumenta 7', 'Diminui 2', 'Aumenta 2', 'Fica igual'], correta: 1 },
-      dica: 'Escreva na forma $ax + b$ e olhe o $a$.',
-      resolucao: [
-        { texto: '$f(x) = -2x + 7$, então $a = -2$.', porque: 'A taxa é o número que multiplica o $x$.' },
-        { texto: 'Cada passo de $x$ muda $f$ em $-2$.', porque: 'Taxa negativa: diminui.' },
-      ],
-    },
-    {
       enunciado: 'Um táxi cobra R$ 6 fixos mais R$ 2,50 por km. Com R$ 41, quantos km dá para andar?',
       resposta: { tipo: 'numero', valor: 14 },
       dica: 'Resolva $6 + 2{,}5k = 41$.',

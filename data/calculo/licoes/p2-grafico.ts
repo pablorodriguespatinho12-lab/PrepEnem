@@ -106,27 +106,11 @@ export const P2_GRAFICO: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Onde $f(x) = x^2$ é crescente?',
-      resposta: { tipo: 'escolha', opcoes: ['Para todo x', 'Para x > 0', 'Para x < 0', 'Nunca'], correta: 1 },
-      dica: 'Imagine a parábola e leia da esquerda para a direita.',
-      resolucao: [
-        { texto: 'À esquerda do 0 a parábola desce; à direita, sobe.', porque: 'Ex.: $f(1) = 1$, $f(2) = 4$: entrada maior, saída maior.' },
-      ],
-    },
-    {
       enunciado: 'No gráfico de $f(x) = 2x + 1$, qual a altura do ponto com $x = 4$?',
       resposta: { tipo: 'numero', valor: 9 },
       dica: 'A altura do ponto é $f(4)$.',
       resolucao: [
         { texto: '$f(4) = 2\\cdot 4 + 1 = 9$', porque: 'O ponto é $(4, 9)$.' },
-      ],
-    },
-    {
-      enunciado: 'Qual destes desenhos **não** é gráfico de uma função?',
-      resposta: { tipo: 'escolha', opcoes: ['Uma reta inclinada', 'Uma parábola', 'Um círculo', 'Uma reta horizontal'], correta: 2 },
-      dica: 'Use o teste da reta vertical.',
-      resolucao: [
-        { texto: 'Uma reta vertical corta o círculo em dois pontos.', porque: 'Uma entrada com duas saídas: não é função.' },
       ],
     },
   ],

@@ -119,15 +119,6 @@ export const C9_SUBIR_DESCER: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'A derivada de uma função é positiva antes de $x = 2$ e negativa depois. Em $x = 2$ a função tem:',
-      resposta: { tipo: 'escolha', opcoes: ['um topo', 'um fundo', 'nem topo nem fundo'], correta: 0 },
-      dica: 'Positiva: sobe. Negativa: desce.',
-      resolucao: [
-        { texto: 'Ela subia e passou a descer: topo.', porque: 'De mais para menos.' },
-        { texto: 'Fundo seria o contrário: descia e passou a subir.', porque: 'De menos para mais.' },
-      ],
-    },
-    {
       enunciado: 'Quanto vale a segunda derivada de $f(x) = 3x^2 + x$?',
       resposta: { tipo: 'numero', valor: 6 },
       dica: 'Derive duas vezes.',

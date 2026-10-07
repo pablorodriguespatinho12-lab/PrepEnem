@@ -150,15 +150,6 @@ export const P11_COMPOSICAO_INVERSA: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Qual destas funções NÃO tem inversa, porque alguma saída vem de duas entradas?',
-      resposta: { tipo: 'escolha', opcoes: ['$f(x) = 2x + 1$', '$f(x) = x^3$', '$f(x) = x^2$', '$f(x) = 10^x$'], correta: 2 },
-      dica: 'Procure uma função em que um número e o seu oposto dão a mesma saída.',
-      resolucao: [
-        { texto: 'Em $x^2$, um número e o seu oposto dão a mesma saída.', porque: 'Vendo só a saída, não dá para saber quem entrou.' },
-        { texto: 'As outras sempre dão saídas diferentes para entradas diferentes.', porque: 'Por isso cada uma tem inversa.' },
-      ],
-    },
-    {
       enunciado: 'Se $f(x) = 2x + 3$ e $g(f(x)) = 4x + 7$, quanto vale $g(5)$?',
       resposta: { tipo: 'numero', valor: 11 },
       dica: 'Qual entrada faz $f$ dar 5? Use ela na fórmula de $g(f(x))$.',

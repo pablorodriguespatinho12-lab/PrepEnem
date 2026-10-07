@@ -116,7 +116,8 @@ export function Caneta({ linhas, onFim, jaEscrita = false, className }: CanetaPr
       {linhas.map((l, i) => {
         const svg = cache.get(l);
         return (
-          <div key={`${i}-${l}`} data-linha className="overflow-x-auto py-1 text-[1.35em] leading-none">
+          // Conta mais larga que a tela encolhe em vez de ser cortada.
+          <div key={`${i}-${l}`} data-linha className="overflow-x-auto py-1 text-[1.35em] leading-none [&_svg]:max-w-full [&_svg]:h-auto">
             {svg ? <span aria-hidden dangerouslySetInnerHTML={{ __html: svg }} /> : <Latex fonte={l} />}
           </div>
         );

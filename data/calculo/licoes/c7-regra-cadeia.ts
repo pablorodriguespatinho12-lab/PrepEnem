@@ -124,15 +124,6 @@ export const C7_REGRA_CADEIA: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Qual é a derivada de $g(f(x))$?',
-      resposta: { tipo: 'escolha', opcoes: ["$g'(x)\\cdot f'(x)$", "$g'(f(x))\\cdot f'(x)$", "$g'(f'(x))$", "$g(x)\\cdot f'(x)$"], correta: 1 },
-      dica: 'A taxa de fora é medida onde a de dentro está.',
-      resolucao: [
-        { texto: 'A taxa de fora entra calculada no ponto de dentro, vezes a taxa de dentro.', porque: 'Engrenagens em fila.' },
-        { texto: 'Calcular a de fora em $x$, e não em $f(x)$, é o erro mais comum.', porque: 'A máquina de fora recebe $f(x)$, não $x$.' },
-      ],
-    },
-    {
       enunciado: 'Quanto vale a derivada de $\\sqrt{x^2 + 9}$ em $x = 4$?',
       resposta: { tipo: 'numero', valor: 0.8 },
       dica: 'Fora: $\\sqrt{u}$, com taxa $\\frac{1}{2\\sqrt{u}}$. Dentro: $x^2 + 9$.',

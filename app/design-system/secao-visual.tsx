@@ -6,8 +6,13 @@ import { VisualDesenho } from '@/components/visual/visual-desenho';
 import { validarVisual, type Visual } from '@/lib/visual/especificacao';
 import MathText from '@/components/math-text';
 import ResolucaoClicavel from '@/components/vestibular/resolucao-clicavel';
+import { LICOES_ESCRITAS } from '@/data/calculo/licoes';
+
+/* O quadro da lição p4: dá para ver a dedução de Bhaskara sem destrancar a lição. */
+const BHASKARA = LICOES_ESCRITAS.p4.construcao.find((p) => p.titulo === 'De onde vem a fórmula de Bhaskara')?.visual;
 
 const EXEMPLOS: { nome: string; bruto: unknown }[] = [
+  { nome: 'Quadro: de onde vem Bhaskara (lição p4)', bruto: BHASKARA },
   {
     nome: 'Gráfico: raízes de uma parábola',
     bruto: {

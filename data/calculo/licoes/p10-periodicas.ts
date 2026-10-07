@@ -130,15 +130,6 @@ export const P10_PERIODICAS: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Qual destas funções sobe e desce entre 1 e 5?',
-      resposta: { tipo: 'escolha', opcoes: ['$3 + 2\\operatorname{sen} x$', '$2 + 3\\operatorname{sen} x$', '$5\\operatorname{sen} x$', '$1 + 5\\operatorname{sen} x$'], correta: 0 },
-      dica: 'O meio entre 1 e 5 é a linha do meio; a distância até a ponta é a amplitude.',
-      resolucao: [
-        { texto: 'Meio entre 1 e 5: linha do meio 3. Distância até as pontas: amplitude 2.', porque: 'A onda vai de 3 − 2 até 3 + 2.' },
-        { texto: 'As outras não: a segunda vai de −1 a 5, a terceira de −5 a 5 e a quarta de −4 a 6.', porque: 'Linha do meio menos e mais a amplitude.' },
-      ],
-    },
-    {
       enunciado: 'Uma roda-gigante de raio 20 m tem o eixo a 22 m do chão e dá uma volta a cada 8 minutos. A cadeira parte da altura do eixo, subindo. Qual a altura dela, em metros, depois de 2 minutos?',
       resposta: { tipo: 'numero', valor: 42 },
       dica: 'Que fração da volta são 2 minutos? Que ângulo é esse?',

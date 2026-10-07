@@ -112,15 +112,6 @@ export const C11_INTEGRAL: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Se $v(t)$ é a velocidade de um carro, o que a integral de $v$ entre dois instantes mede?',
-      resposta: { tipo: 'escolha', opcoes: ['a velocidade média', 'a distância percorrida entre os dois instantes', 'a aceleração', 'o tempo de viagem'], correta: 1 },
-      dica: 'Cada fatia é velocidade vezes tempo.',
-      resolucao: [
-        { texto: 'Velocidade vezes tempo dá distância; somando as fatias, a distância total.', porque: 'A área sob a velocidade é a distância.' },
-        { texto: 'A velocidade média seria essa distância dividida pelo tempo.', porque: 'Por isso não é a mesma coisa.' },
-      ],
-    },
-    {
       enunciado: 'A velocidade de um carro é $v(t) = 10 + 2t$ m/s. Quantos metros ele anda de $t = 0$ a $t = 5$ s?',
       resposta: { tipo: 'numero', valor: 75 },
       dica: 'A área sob essa reta é um trapézio.',

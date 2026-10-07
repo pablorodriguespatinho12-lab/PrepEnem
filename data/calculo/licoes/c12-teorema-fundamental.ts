@@ -119,15 +119,6 @@ export const C12_TEOREMA_FUNDAMENTAL: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Qual destas funções tem derivada $x^4$?',
-      resposta: { tipo: 'escolha', opcoes: ['$4x^3$', '$\\frac{x^5}{5}$', '$x^5$', '$\\frac{x^4}{4}$'], correta: 1 },
-      dica: 'Expoente sobe 1 e divide pelo novo expoente.',
-      resolucao: [
-        { texto: 'Derivando $\\frac{x^5}{5}$: o 5 desce e cancela com o 5 de baixo, sobra $x^4$.', porque: 'É a antiderivada.' },
-        { texto: 'A primeira é a derivada de $x^4$, não a antiderivada.', porque: 'Ir para o lado errado é o erro mais comum.' },
-      ],
-    },
-    {
       enunciado: 'Quanto vale $\\int_0^1 (x^2 + x)\\,dx$? Responda com duas casas decimais.',
       resposta: { tipo: 'numero', valor: 0.83, tolerancia: 0.01 },
       dica: 'Antiderivada parte por parte.',

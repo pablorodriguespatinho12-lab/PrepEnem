@@ -124,15 +124,6 @@ export const C3_LIMITE_INFINITO: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Com $x$ crescendo sem parar, quem acaba maior: uma potência de $x$ com expoente grande, ou uma exponencial?',
-      resposta: { tipo: 'escolha', opcoes: ['a potência de x', 'a exponencial', 'as duas ficam iguais para sempre'], correta: 1 },
-      dica: 'Lembre da corrida entre o carro e a moto.',
-      resolucao: [
-        { texto: 'A exponencial sempre acaba passando qualquer potência de x, mesmo que demore.', porque: 'Ela multiplica a cada passo; a potência cresce cada vez mais devagar em proporção.' },
-        { texto: 'Na corrida, a potência saiu na frente e foi ultrapassada.', porque: 'Com expoente maior, a ultrapassagem demora mais, mas acontece.' },
-      ],
-    },
-    {
       enunciado: 'Quanto vale $\\lim_{x \\to \\infty} \\left(\\sqrt{x^2 + 4x} - x\\right)$?',
       resposta: { tipo: 'numero', valor: 2 },
       dica: 'Multiplique e divida por $\\sqrt{x^2 + 4x} + x$.',

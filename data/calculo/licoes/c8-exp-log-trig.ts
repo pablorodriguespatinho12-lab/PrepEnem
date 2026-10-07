@@ -132,15 +132,6 @@ export const C8_EXP_LOG_TRIG: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Qual destas funções é igual à própria derivada?',
-      resposta: { tipo: 'escolha', opcoes: ['$x^2$', '$e^x$', '$\\ln x$', '$\\operatorname{sen} x$'], correta: 1 },
-      dica: 'Lembre do carro cujo velocímetro marca o próprio km.',
-      resolucao: [
-        { texto: 'A exponencial de base $e$ deriva nela mesma.', porque: 'Velocidade igual à posição.' },
-        { texto: 'As outras viram outra coisa: $2x$, $\\frac{1}{x}$ e $\\cos x$.', porque: 'Nenhuma volta igual.' },
-      ],
-    },
-    {
       enunciado: 'Uma população é $P(t) = 1000e^{0{,}02t}$, com $t$ em anos. Quantos indivíduos por ano ela está crescendo em $t = 0$?',
       resposta: { tipo: 'numero', valor: 20 },
       dica: 'Regra da cadeia: dentro, $0{,}02t$ tem taxa 0,02.',

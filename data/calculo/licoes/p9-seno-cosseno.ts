@@ -141,15 +141,6 @@ export const P9_SENO_COSSENO: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Em qual destes ângulos o cosseno é negativo e o seno é positivo?',
-      resposta: { tipo: 'escolha', opcoes: ['45°', '135°', '225°', '315°'], correta: 1 },
-      dica: 'Cosseno negativo: o ponto está à esquerda. Seno positivo: acima do eixo.',
-      resolucao: [
-        { texto: 'Em 135° o ponto está à esquerda e acima do eixo.', porque: 'Sombra para a esquerda (cos < 0) e altura para cima (sen > 0).' },
-        { texto: 'Nos outros não: o primeiro tem os dois positivos, o terceiro os dois negativos e o quarto tem seno negativo.', porque: 'Cada quarto do círculo tem a sua combinação de sinais.' },
-      ],
-    },
-    {
       enunciado: 'Um avião decola em linha reta, subindo com ângulo de 30° em relação à pista. Depois de percorrer 2 km nessa reta, a que altura, em metros, ele está?',
       resposta: { tipo: 'numero', valor: 1000 },
       dica: 'Os 2 km são a hipotenusa. Passe para metros.',

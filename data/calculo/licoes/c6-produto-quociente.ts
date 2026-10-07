@@ -119,15 +119,6 @@ export const C6_PRODUTO_QUOCIENTE: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Qual é a derivada de um produto $f\\cdot g$?',
-      resposta: { tipo: 'escolha', opcoes: ["$f'\\cdot g'$", "$f'\\cdot g + f\\cdot g'$", "$f' + g'$", "$\\frac{f'}{g'}$"], correta: 1 },
-      dica: 'Lembre das duas faixas do retângulo.',
-      resolucao: [
-        { texto: 'Cada faixa usa um lado inteiro vezes o quanto o outro lado cresceu.', porque: 'Faixa de cima e faixa do lado.' },
-        { texto: 'Multiplicar as derivadas deixa as faixas de fora.', porque: 'É o erro mais comum.' },
-      ],
-    },
-    {
       enunciado: 'Uma loja vende $q(t) = 100 + 10t$ unidades por mês, ao preço $p(t) = 50 - t$ reais. A receita é $R = p\\cdot q$. Em $t = 0$, quantos reais por mês a receita está mudando?',
       resposta: { tipo: 'numero', valor: 400 },
       dica: "$R' = p'q + pq'$, com $p' = -1$ e $q' = 10$.",

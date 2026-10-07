@@ -102,15 +102,6 @@ export const P7_EXPONENCIAL: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Qual destas sequências é de uma função exponencial?',
-      resposta: { tipo: 'escolha', opcoes: ['1; 4; 7; 10; 13', '2; 6; 18; 54; 162', '1; 4; 9; 16; 25', '5; 5; 5; 5; 5'], correta: 1 },
-      dica: 'Divida cada termo pelo anterior. Na exponencial, essa razão nunca muda.',
-      resolucao: [
-        { texto: 'Em 2; 6; 18; 54; 162, cada termo é o anterior vezes 3.', porque: 'Razão fixa é a marca da exponencial.' },
-        { texto: 'Nas outras não: a primeira soma sempre o mesmo, a terceira são quadrados e a quarta não muda.', porque: 'Diferença fixa é afim; quadrados formam uma parábola.' },
-      ],
-    },
-    {
       enunciado: 'Para $f(x) = 3\\cdot 2^x$, quanto vale $f(0)$?',
       resposta: { tipo: 'numero', valor: 3 },
       dica: 'Quanto vale qualquer número elevado a 0?',

@@ -135,15 +135,6 @@ export const C1_LIMITE: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Em qual caso o limite quando $x$ tende a 0 NÃO existe?',
-      resposta: { tipo: 'escolha', opcoes: ['$\\lim_{x \\to 0} (x + 3)$', '$\\lim_{x \\to 0} \\frac{x^2}{x}$', '$\\lim_{x \\to 0} \\frac{1}{x}$', '$\\lim_{x \\to 0} 5$'], correta: 2 },
-      dica: 'Procure a função que explode perto de 0.',
-      resolucao: [
-        { texto: '$\\frac{1}{x}$ sobe sem parar pela direita e desce sem parar pela esquerda, perto de 0.', porque: 'Não há um número para onde os dois lados apontem.' },
-        { texto: 'Nos outros, os valores apontam para um número só.', porque: 'Até o que tem buraco tem limite.' },
-      ],
-    },
-    {
       enunciado: 'Quanto vale $\\lim_{x \\to 1} \\frac{x^3 - 1}{x - 1}$?',
       resposta: { tipo: 'numero', valor: 3 },
       dica: '$x^3 - 1$ também tem o fator $x - 1$ escondido. Qual é o outro fator?',

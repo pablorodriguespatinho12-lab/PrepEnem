@@ -50,17 +50,39 @@ export const P4_QUADRATICA: ConteudoLicao = {
       },
     },
     {
-      titulo: 'De onde vem a fórmula de Bhaskara',
-      texto: 'Nem toda quadrática se fatora de cabeça. O truque é **completar o quadrado**: escrever a expressão como "algo ao quadrado" mais um número. Primeiro num caso com números, depois em geral. A fórmula é só o resultado dessa conta.',
+      titulo: 'Completar o quadrado, com números',
+      texto: 'Nem toda quadrática se fatora de cabeça. O truque é **completar o quadrado**: escrever a conta como "algo ao quadrado" mais um número. Primeiro com números.',
       visual: {
         tipo: 'transformacao', titulo: 'Completando o quadrado',
+        ajuda: ['(x - y)^2 = x^2 - 2xy + y^2'],
         linhas: [
-          { latex: 'x^2 - 6x + 5', porque: 'o caso com números' },
-          { latex: '(x - 3)^2 = x^2 - 6x + 9', porque: 'metade do 6 é 3: esse quadrado tem o mesmo começo' },
-          { latex: 'x^2 - 6x + 5 = (x - 3)^2 - 4', porque: 'o quadrado tem 9 e a expressão tem 5: tira 4' },
-          { latex: '(x - 3)^2 = 4 \\Rightarrow x - 3 = \\pm 2', porque: 'zera quando o quadrado vale 4' },
-          { latex: 'ax^2 + bx + c = a\\left(x + \\tfrac{b}{2a}\\right)^2 - \\tfrac{b^2 - 4ac}{4a}', porque: 'a mesma conta com letras' },
-          { latex: 'x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}', porque: 'isolando x: é a fórmula de Bhaskara' },
+          { latex: 'x^2 - 6x + 5 = 0', porque: 'A pergunta: qual x faz isso dar zero?' },
+          { latex: '(x - 3)^2 = x^2 - 6x + \\novo{9}', porque: 'Metade do 6 é 3. Esse quadrado começa igual, mas termina em 9, não em 5.' },
+          { latex: 'x^2 - 6x + 5 = (x - 3)^2 - \\novo{4}', porque: 'Tem 9 e queremos 5: tira 4.' },
+          { latex: '(x - 3)^2 = 4', lado: '+4', porque: 'Soma 4 dos dois lados.' },
+          { latex: 'x - 3 = \\pm 2', lado: '\\sqrt{\\quad}', porque: 'Que número ao quadrado dá 4? 2 e também −2.' },
+          { latex: '\\boxed{x = 5 \;\\text{ou}\; x = 1}', lado: '+3', porque: 'Confere: 25 − 30 + 5 = 0 e 1 − 6 + 5 = 0.' },
+        ],
+      },
+    },
+    {
+      titulo: 'De onde vem a fórmula de Bhaskara',
+      texto: 'A mesma conta, agora com letras. Uma regra só: o que fizer de um lado do =, faz do outro. A fórmula é o fim desse caminho, não o começo.',
+      visual: {
+        tipo: 'transformacao', titulo: 'Bhaskara, linha por linha',
+        condicao: 'a \\neq 0',
+        ajuda: ['(x + y)^2 = x^2 + 2xy + y^2', 'y = \\frac{b}{2a}'],
+        linhas: [
+          { latex: 'ax^2 + bx + c = 0', porque: 'A pergunta: qual x faz isso dar zero?' },
+          { latex: 'x^2 + \\frac{b}{a}x + \\frac{c}{a} = 0', lado: '\\div a', porque: 'Divide os dois lados por a. Pode, porque a não é zero.' },
+          { latex: 'x^2 + \\frac{b}{a}x + \\novo{\\left(\\frac{b}{2a}\\right)^2} + \\frac{c}{a} = \\novo{\\left(\\frac{b}{2a}\\right)^2}', lado: '+\\left(\\frac{b}{2a}\\right)^2', porque: 'Soma o mesmo pedaço dos dois lados. Ele completa o quadrado da ajuda, com y = b/2a.' },
+          { latex: '\\left(x + \\frac{b}{2a}\\right)^2 + \\frac{c}{a} = \\frac{b^2}{4a^2}', porque: 'Os três primeiros termos viram um quadrado só.' },
+          { latex: '\\left(x + \\frac{b}{2a}\\right)^2 + \\corta{\\frac{c}{a}} - \\corta{\\frac{c}{a}} = \\frac{b^2}{4a^2} - \\frac{c}{a}', lado: '-\\frac{c}{a}', porque: 'Tira c/a dos dois lados. Do lado esquerdo ele some.' },
+          { latex: '\\left(x + \\frac{b}{2a}\\right)^2 = \\frac{b^2 - 4ac}{4a^2}', porque: 'Mesmo denominador: c/a vira 4ac/4a².' },
+          { latex: '\\novo{\\Delta = b^2 - 4ac}', porque: 'Esse pedaço aparece tanto que ganhou nome: delta.' },
+          { latex: 'x + \\frac{b}{2a} = \\pm\\frac{\\sqrt{\\Delta}}{2a}', lado: '\\sqrt{\\quad}', porque: 'Raiz dos dois lados. Mais ou menos, porque 3² e (−3)² dão 9.' },
+          { latex: 'x = -\\frac{b}{2a} \\pm \\frac{\\sqrt{\\Delta}}{2a}', lado: '-\\frac{b}{2a}', porque: 'Tira b/2a dos dois lados.' },
+          { latex: '\\boxed{x = \\frac{-b \\pm \\sqrt{\\Delta}}{2a}}', porque: 'A fórmula. Esquecer não tem problema: o caminho leva de volta a ela.' },
         ],
       },
     },
@@ -123,15 +145,6 @@ export const P4_QUADRATICA: ConteudoLicao = {
       resolucao: [
         { texto: '$x_v = -\\frac{-6}{2\\cdot 1} = 3$', porque: 'Vértice de uma parábola que abre para cima.' },
         { texto: '$f(3) = 9 - 18 + 10 = 1$', porque: 'O menor valor é o $y$ do vértice.' },
-      ],
-    },
-    {
-      enunciado: 'Quantas raízes reais tem $x^2 + 2x + 5 = 0$?',
-      resposta: { tipo: 'escolha', opcoes: ['Nenhuma', 'Uma', 'Duas', 'Infinitas'], correta: 0 },
-      dica: 'Calcule $\\Delta = b^2 - 4ac$ e olhe o sinal.',
-      resolucao: [
-        { texto: '$\\Delta = 2^2 - 4\\cdot 1\\cdot 5 = 4 - 20 = -16$', porque: 'Delta negativo.' },
-        { texto: 'Nenhuma raiz real.', porque: 'Não existe raiz quadrada real de número negativo: a parábola não toca o eixo $x$.' },
       ],
     },
     {

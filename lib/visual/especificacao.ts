@@ -29,10 +29,18 @@ export interface VisualReta {
   trechos?: { de: number; ate: number; rotulo?: string; cor?: CorVisual; fechadoDe?: boolean; fechadoAte?: boolean }[];
 }
 
+/* Conta no quadro, do jeito do Universo Narrado (Pablo, 07/10/2026): cada
+   linha com o que foi feito anotado ao lado ("lado": "÷ a"), a condição no
+   canto ("condicao": "a \\neq 0") e um cantinho de ajuda com a peça usada
+   ("ajuda": ["(x+y)^2 = x^2 + 2xy + y^2"]). No LaTeX, \\novo{...} pinta o que
+   acabou de entrar, \\corta{...} risca o que cancela e \\boxed{...} fecha o
+   resultado numa caixa. */
 export interface VisualTransformacao {
   tipo: 'transformacao';
   titulo?: string;
-  linhas: { latex: string; porque?: string }[];
+  condicao?: string;
+  ajuda?: string[];
+  linhas: { latex: string; porque?: string; lado?: string }[];
 }
 
 export interface VisualTabela {
@@ -147,6 +155,9 @@ export type Visual = VisualPalavra | VisualGrafico | VisualReta | VisualTransfor
 const MAX_FUNCOES = 4;
 const MAX_PONTOS = 8;
 const MAX_LINHAS = 8;
+/* Uma dedução inteira (Bhaskara) tem 10 linhas. */
+const MAX_LINHAS_CONTA = 12;
+const MAX_AJUDA = 3;
 const MAX_VETORES = 6;
 const LIMITE_EIXO = 1e6;
 
@@ -199,8 +210,11 @@ function reta(v: Record<string, unknown>): VisualReta | null {
 
 function transformacao(v: Record<string, unknown>): VisualTransformacao | null {
   const linhas = lista(v.linhas).map(objeto).filter((l) => texto(l.latex, 300))
-    .slice(0, MAX_LINHAS).map((l) => ({ latex: texto(l.latex, 300)!, porque: texto(l.porque, 140) }));
-  return linhas.length >= 2 ? { tipo: 'transformacao', titulo: texto(v.titulo), linhas } : null;
+    .slice(0, MAX_LINHAS_CONTA).map((l) => ({ latex: texto(l.latex, 300)!, porque: texto(l.porque, 140), lado: texto(l.lado, 30) }));
+  const ajuda = lista(v.ajuda).map((a) => texto(a, 120)).filter((a): a is string => !!a).slice(0, MAX_AJUDA);
+  return linhas.length >= 2
+    ? { tipo: 'transformacao', titulo: texto(v.titulo), condicao: texto(v.condicao, 60), ajuda: ajuda.length > 0 ? ajuda : undefined, linhas }
+    : null;
 }
 
 function tabela(v: Record<string, unknown>): VisualTabela | null {
@@ -357,7 +371,8 @@ export const FORMATO_VISUAL_PARA_IA = `"visual" é um destes objetos (ou null). 
 - Gráfico de função: {"tipo":"grafico","titulo":"...","funcoes":[{"expr":"x^2-4","rotulo":"f(x)","cor":"a"}],"pontos":[{"x":2,"y":0,"rotulo":"raiz","cor":"b"}],"x":[-4,4],"y":[-5,6]}
   expr usa só x, números, + - * / ^, parênteses, sqrt, sin, cos, tan, ln, log, abs, exp, pi. Escolha x e y para que o que importa (raízes, vértice, cruzamentos) apareça. Ponto com "aberto": true é bolinha vazia: furo onde a função não tem valor, ou ponta que não entra.
 - Reta numérica (inequação, intervalo): {"tipo":"reta","de":-5,"ate":5,"marcas":[{"x":2,"rotulo":"2"}],"trechos":[{"de":2,"ate":5,"rotulo":"x ≥ 2","fechadoDe":true,"fechadoAte":false,"cor":"a"}]}
-- Transformação passo a passo (álgebra, de onde a fórmula vem): {"tipo":"transformacao","linhas":[{"latex":"ax^2+bx+c=0","porque":"ponto de partida"},{"latex":"x^2+\\\\frac{b}{a}x=-\\\\frac{c}{a}","porque":"divide tudo por a"}]}
+- Transformação passo a passo (álgebra, de onde a fórmula vem): {"tipo":"transformacao","condicao":"a \\\\neq 0","linhas":[{"latex":"ax^2+bx+c=0","porque":"ponto de partida"},{"latex":"x^2+\\\\frac{b}{a}x+\\\\frac{c}{a}=0","lado":"\\\\div a","porque":"divide os dois lados por a"}]}
+  O app escreve à mão, linha por linha. "lado" é a operação feita (aparece ao lado). \\\\novo{...} pinta o termo que acabou de entrar; \\\\corta{...} risca o que cancela; \\\\boxed{...} na resposta final. "ajuda" (opcional): até 3 identidades usadas no meio.
 - Tabela (comparar valores, proporção, mol): {"tipo":"tabela","cabecalho":["n (mol)","massa (g)"],"linhas":[["1","18"],["2","36"]]}
 - Cena (algo que MUDA COM O TEMPO: movimento, queda, lançamento, crescimento, juros, decaimento, reservatório): {"tipo":"cena","titulo":"Bola solta de 45 m","x":[0,3],"unidadeX":"s","unidadeY":"m","rastro":true,"veiculos":[{"veiculo":"bola","nome":"h","expr":"45-5*x^2","rotulo":"bola","cor":"a"}]}
   O app anima o objeto pelo relógio e desenha o gráfico junto. "veiculo" é EXATAMENTE um destes; o nome real (pena, pedra, foguete) vai em "rotulo". "carro" ou "moto" andam para o lado (posição); "bola", "balao" ou "vela" sobem e descem (altura ou quantidade). x é o tempo em passos INTEIROS, de 0 até no máximo 20. Até 2 objetos, na mesma direção. "rastro": true quando o formato da curva é o ponto. "velocimetro": true mostra a velocidade no instante ao lado da posição (movimento acelerado). Calcule expr em cada x inteiro e confira com o texto. "nome" é UMA letra (f, g, h). expr dá ONDE o objeto está (posição, altura ou quantidade) no instante x, nunca a velocidade: numa queda de 45 m a altura DIMINUI, "45-5*x^2"; um corpo lançado para cima sobe e desce, "20*x-5*x^2". O relógio termina quando o objeto chega ao chão (altura 0), não depois.

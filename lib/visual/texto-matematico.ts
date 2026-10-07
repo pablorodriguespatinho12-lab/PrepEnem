@@ -32,7 +32,7 @@ function formula(latex: string, display: boolean): string {
   // "0,2" virava "0, 2": para o KaTeX, vírgula é pontuação e ganha espaço.
   // Entre dois algarismos, é vírgula decimal (padrão brasileiro).
   const corrigido = latex.trim().replace(GREGAS, '\\$1').replace(/(\d),(?=\d)/g, '$1{,}');
-  return katex.renderToString(corrigido, { displayMode: display, throwOnError: false, trust: false, strict: 'ignore' });
+  return katex.renderToString(corrigido, { displayMode: display, throwOnError: false, trust: false, strict: 'ignore', macros: MACROS_KATEX });
 }
 
 /* Markdown mínimo, aplicado sobre texto JÁ escapado. */
@@ -47,6 +47,13 @@ function marcarTexto(escapado: string): string {
     .replace(/\n/g, '<br/>');
 }
 
+/* Os mesmos \\novo e \\corta da caneta (lib/caneta/tex-para-svg.ts), para
+   quando a conta cai no KaTeX. Sem cor no \\novo: o \\color do KaTeX não
+   aceita a cor do tema (hsl(var(...))), e uma cor fixa some num dos temas. */
+const MACROS_KATEX = {
+  '\\novo': '{#1}',
+  '\\corta': '\\cancel{#1}',
+};
 export function renderizarTextoMatematico(texto: string): string {
   if (!texto) return '';
   let saida = '';

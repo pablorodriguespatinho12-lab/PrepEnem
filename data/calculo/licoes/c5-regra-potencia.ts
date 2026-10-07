@@ -131,15 +131,6 @@ export const C5_REGRA_POTENCIA: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Qual é a derivada de $x^6$?',
-      resposta: { tipo: 'escolha', opcoes: ['$6x^5$', '$x^5$', '$6x^6$', '$5x^6$'], correta: 0 },
-      dica: 'O expoente desce multiplicando e diminui 1.',
-      resolucao: [
-        { texto: 'O 6 desce para a frente e o expoente vira 5.', porque: 'Regra da potência.' },
-        { texto: 'As outras esquecem uma das duas partes: descer o expoente ou diminuir 1.', porque: 'As duas coisas acontecem juntas.' },
-      ],
-    },
-    {
       enunciado: 'Em que valor de $x$ a tangente à curva $y = x^2 - 6x + 2$ é horizontal?',
       resposta: { tipo: 'numero', valor: 3 },
       dica: 'Tangente horizontal: inclinação zero.',

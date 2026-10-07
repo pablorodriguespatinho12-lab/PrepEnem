@@ -124,15 +124,6 @@ export const P12_TAXA_MEDIA: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'A taxa média de $f(x) = x^2$ entre o 1 e um número muito perto dele, logo à direita, fica mais perto de qual número?',
-      resposta: { tipo: 'escolha', opcoes: ['1', '2', '3', '0'], correta: 1 },
-      dica: 'Olhe a tabela do passo "Encolhendo o intervalo".',
-      resolucao: [
-        { texto: 'Fazendo a conta, a média dá 2 e mais um pouquinho.', porque: 'Quanto mais perto, menor esse pouquinho.' },
-        { texto: 'É a taxa naquele instante: a inclinação da tangente.', porque: 'O velocímetro do carro da cena marcaria esse número.' },
-      ],
-    },
-    {
       enunciado: 'Para $f(x) = x^2$, a taxa média entre $a$ e $a + h$ é $2a + h$. Usando isso, qual a taxa média entre 5 e 5,5?',
       resposta: { tipo: 'numero', valor: 10.5 },
       dica: 'Aqui $a = 5$ e $h = 0{,}5$.',

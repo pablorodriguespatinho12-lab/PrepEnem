@@ -114,15 +114,6 @@ export const P5_TRANSFORMACOES: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Como é o gráfico de $y = -x^2 + 3$?',
-      resposta: { tipo: 'escolha', opcoes: ['Parábola para baixo, vértice (0, 3)', 'Parábola para cima, vértice (0, 3)', 'Parábola para baixo, vértice (0, −3)', 'Parábola para cima, vértice (3, 0)'], correta: 0 },
-      dica: 'O sinal de menos na frente espelha; o +3 sobe.',
-      resolucao: [
-        { texto: '$-x^2$ é $x^2$ espelhado: abre para baixo.', porque: 'Toda altura troca de sinal.' },
-        { texto: 'O $+3$ sobe tudo 3: vértice em $(0, 3)$.', porque: 'Somar fora sobe.' },
-      ],
-    },
-    {
       enunciado: 'Escreva $x^2 + 4x + 1$ na forma $(x - h)^2 + k$. Quanto vale $k$?',
       resposta: { tipo: 'numero', valor: -3 },
       dica: 'Metade de 4 é 2: compare com $(x + 2)^2$.',

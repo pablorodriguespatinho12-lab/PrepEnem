@@ -146,15 +146,6 @@ export const C4_DERIVADA: ConteudoLicao = {
       ],
     },
     {
-      enunciado: 'Se uma função dá a posição de um carro ao longo do tempo, o que a derivada dela mede?',
-      resposta: { tipo: 'escolha', opcoes: ['a distância total percorrida', 'a velocidade naquele instante', 'a velocidade média da viagem', 'o tempo total de viagem'], correta: 1 },
-      dica: 'Pense no velocímetro.',
-      resolucao: [
-        { texto: 'A derivada da posição é a velocidade no instante: o que o velocímetro marca.', porque: 'É o limite da média com o intervalo encolhendo.' },
-        { texto: 'A velocidade média é a taxa num intervalo, antes do limite.', porque: 'Por isso não é a mesma coisa.' },
-      ],
-    },
-    {
       enunciado: 'Pela definição, qual a derivada de $f(x) = x^3$ em $x = 1$?',
       resposta: { tipo: 'numero', valor: 3 },
       dica: '$(1 + h)^3 = 1 + 3h + 3h^2 + h^3$.',
