@@ -15,8 +15,42 @@ export interface Explicacao {
 
 export interface RespostaTutor { resposta: string; visual: Visual | null }
 
-const texto = (v: unknown, max: number): string | null =>
-  typeof v === 'string' && v.trim().length > 0 ? v.trim().slice(0, max) : null;
+const EMOJI = /[\p{Extended_Pictographic}\u{FE0F}\u{200D}]/gu;
+/* Frase que a decisão proíbe (decisoes-prepenem): a frase inteira sai. */
+const PROIBIDAS = [/é importante notar/i, /vale ressaltar/i, /vamos analisar/i, /^(ótima pergunta|muito bem|parabéns)\b/i];
+/* Quebra em frases sem cortar dentro de $...$ nem em decimal ("0.5"). */
+export function frases(t: string): string[] {
+  const saida: string[] = [];
+  let atual = '';
+  let naFormula = false;
+  for (let i = 0; i < t.length; i++) {
+    const c = t[i];
+    atual += c;
+    if (c === '$') naFormula = !naFormula;
+    if (!naFormula && /[.!?]/.test(c) && (i + 1 === t.length || /\s/.test(t[i + 1]))) {
+      saida.push(atual.trim());
+      atual = '';
+    }
+  }
+  if (atual.trim()) saida.push(atual.trim());
+  return saida;
+}
+/* Texto da IA: sem emoji, sem frase proibida, cortado em fim de frase.
+   Antes cortava com slice no meio da palavra (validador deixava passar). */
+const texto = (v: unknown, max: number, maxFrases = Infinity): string | null => {
+  if (typeof v !== 'string') return null;
+  const limpas = frases(v.replace(EMOJI, '').replace(/[ \t]{2,}/g, ' ').trim())
+    .filter((f) => !PROIBIDAS.some((r) => r.test(f)))
+    .slice(0, maxFrases);
+  let saida = '';
+  for (const f of limpas) {
+    const junto = saida ? `${saida} ${f}` : f;
+    if (junto.length > max) break;
+    saida = junto;
+  }
+  if (!saida && limpas[0]) saida = limpas[0].slice(0, max).replace(/\s+\S*$/, '') + '…';
+  return saida || null;
+};
 const lista = (v: unknown): unknown[] => (Array.isArray(v) ? v : []);
 const objeto = (v: unknown): Record<string, unknown> => (v && typeof v === 'object' ? (v as Record<string, unknown>) : {});
 
@@ -54,8 +88,8 @@ export function validarExplicacao(bruto: unknown): Explicacao | null {
   const passos = lista(e.passos).map(objeto)
     .map((p) => ({ titulo: texto(p.titulo, 80), texto: texto(p.texto, 900), visual: validarVisual(p.visual) }))
     .filter((p): p is PassoExplicacao => p.titulo !== null && p.texto !== null)
-    .slice(0, 8);
-  const ideia = texto(e.ideia, 300);
+    .slice(0, 4);
+  const ideia = texto(e.ideia, 300, 2);
   if (!ideia || passos.length === 0) return null;
   const pecas = lista(e.pecas).map(objeto)
     .map((p) => ({ termo: texto(p.termo, 60), significado: texto(p.significado, 240) }))

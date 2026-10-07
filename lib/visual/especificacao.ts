@@ -391,4 +391,5 @@ REGRAS DE TEXTO: toda fórmula entre $...$ (nunca \\frac solto fora de $). [[a:t
 export const FORMATO_VISUAL_CURTO = `"visual" (opcional, ou null) — o app desenha:
 - gráfico: {"tipo":"grafico","funcoes":[{"expr":"x^2-4","rotulo":"f(x)","cor":"a"}],"pontos":[{"x":2,"y":0,"rotulo":"raiz"}],"x":[-4,4]}
 - passo a passo: {"tipo":"transformacao","linhas":[{"latex":"2x=6","porque":"..."},{"latex":"x=3","porque":"divide por 2"}]}
+- tabela (quando ele NÃO ENTENDEU: 3 ou 4 linhas de números pequenos): {"tipo":"tabela","cabecalho":["x","f(x)"],"linhas":[["0","2"],["1","7"]]}
 Fórmula sempre entre $...$; [[a:palavra]] só fora da fórmula.`;

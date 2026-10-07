@@ -68,3 +68,33 @@ describe('validarRespostaTutor', () => {
     expect(validarRespostaTutor({ visual: null })).toBeNull();
   });
 });
+describe('validarExplicacao limpa o texto da IA', () => {
+  const passo = (texto: string) => ({ titulo: 'Passo', texto, visual: null });
+  test('tira emoji de todos os campos', () => {
+    const e = validarExplicacao({ ideia: 'Energia 🌱 vem da luz.', passos: [passo('Olha ✅ isso.')], seuErro: 'Errou 😅 a conta.' })!;
+    expect(e.ideia).toBe('Energia vem da luz.');
+    expect(e.passos[0].texto).toBe('Olha isso.');
+    expect(e.seuErro).toBe('Errou a conta.');
+  });
+  test('no máximo 4 passos', () => {
+    const e = validarExplicacao({ ideia: 'Ok.', passos: Array.from({ length: 7 }, (_, i) => passo(`Passo ${i}.`)) })!;
+    expect(e.passos).toHaveLength(4);
+  });
+  test('ideia fica nas 2 primeiras frases', () => {
+    const e = validarExplicacao({ ideia: 'A planta precisa de energia. Carboidrato é energia. Sem ele, ela morre. E mais.', passos: [passo('x.')] })!;
+    expect(e.ideia).toBe('A planta precisa de energia. Carboidrato é energia.');
+  });
+  test('decimal e fórmula não contam como fim de frase', () => {
+    const e = validarExplicacao({ ideia: 'A massa é 0.5 kg e $v = 2.5$ m/s. Pronto.', passos: [passo('x.')] })!;
+    expect(e.ideia).toBe('A massa é 0.5 kg e $v = 2.5$ m/s. Pronto.');
+  });
+  test('frase proibida sai, o resto fica', () => {
+    const e = validarExplicacao({ ideia: 'Ok.', passos: [passo('Vamos analisar a questão. A raiz é 2.')] })!;
+    expect(e.passos[0].texto).toBe('A raiz é 2.');
+  });
+  test('texto longo é cortado no fim de uma frase, nunca no meio da palavra', () => {
+    const longo = 'Frase curta. ' + 'palavra '.repeat(150) + 'fim.';
+    const e = validarExplicacao({ ideia: 'Ok.', passos: [passo(longo)] })!;
+    expect(e.passos[0].texto).toBe('Frase curta.');
+  });
+});

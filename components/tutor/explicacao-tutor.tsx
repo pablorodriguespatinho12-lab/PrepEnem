@@ -49,6 +49,7 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
   const [passosVisiveis, setPassosVisiveis] = useState(1);
   const [respostaChecagemAberta, setRespostaChecagemAberta] = useState(false);
   const [mensagens, setMensagens] = useState<Mensagem[]>([]);
+  const [falhaConversa, setFalhaConversa] = useState(false);
   const [rascunho, setRascunho] = useState('');
   const [respondendo, setRespondendo] = useState(false);
   const fimDaConversa = useRef<HTMLDivElement>(null);
@@ -95,6 +96,7 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
     const historico: Mensagem[] = [...mensagens, { papel: 'aluno', texto: limpo }];
     setMensagens(historico);
     setRascunho('');
+    setFalhaConversa(false);
     setRespondendo(true);
     try {
       const res = await fetch('/api/tutor/conversa', {
@@ -106,13 +108,15 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
           historico: historico.map(({ papel, texto: t }) => ({ papel, texto: t })),
         }),
       });
-      const data: Partial<RespostaTutor> & { error?: string } = await res.json().catch(() => ({}));
-      const resposta = res.ok && data.resposta
-        ? { papel: 'tutor' as const, texto: data.resposta, visual: data.visual ?? null }
-        : { papel: 'tutor' as const, texto: data.error ?? 'Não consegui responder agora. Tente de novo.' };
-      setMensagens([...historico, resposta]);
+      const data: Partial<RespostaTutor> = await res.json().catch(() => ({}));
+      if (!res.ok || !data.resposta) throw new Error('sem resposta');
+      setMensagens([...historico, { papel: 'tutor', texto: data.resposta, visual: data.visual ?? null }]);
     } catch {
-      setMensagens([...historico, { papel: 'tutor', texto: 'Sem conexão com o servidor.' }]);
+      /* Erro não entra na conversa: antes virava fala do tutor ("Falha de
+         autenticação...") e voltava no prompt seguinte. A dúvida volta ao campo. */
+      setMensagens(mensagens);
+      setRascunho(limpo);
+      setFalhaConversa(true);
     } finally {
       setRespondendo(false);
     }
@@ -242,6 +246,9 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
               ))}
             </div>
           )}
+          {falhaConversa && (
+            <p className="type-meta text-[hsl(var(--danger))]" role="alert">Não consegui responder agora. Envie de novo.</p>
+          )}
           <form
             onSubmit={(e) => { e.preventDefault(); perguntar(rascunho); }}
             className="flex items-end gap-2"
@@ -255,7 +262,7 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
               rows={1}
               maxLength={1200}
               placeholder="Ex.: mas por que o x vira negativo?"
-              className="flex-1 resize-none p-3 border border-input rounded-[var(--radius-control)] font-reading text-body bg-[hsl(var(--surface-2))] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="flex-1 resize-none p-3 border border-input rounded-[var(--radius-control)] font-reading text-body bg-[hsl(var(--surface-2))] focus:outline-none"
             />
             <button type="submit" disabled={respondendo || !rascunho.trim()} aria-label="Enviar dúvida"
               className="p-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] disabled:opacity-50 t-colors hover:bg-[hsl(var(--primary-hover))]">
