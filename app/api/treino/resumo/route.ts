@@ -4,6 +4,7 @@ import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { pedirJson } from '@/lib/pedir-json';
+import { comCache } from '@/lib/cache-ia';
 import { promptResumo, validarResumos } from '@/lib/tutor/resumo';
 import { MODELO_IA } from '@/lib/ia-modelos';
 
@@ -30,7 +31,9 @@ export async function POST(req: Request) {
   // Com teto fixo de 4.000, 7 ou 8 assuntos cortavam o JSON no meio, a segunda
   // tentativa estourava a cota por minuto (429) e o aluno via "Resumo indisponível".
   const maxTokens = Math.min(TOKENS_BASE + TOKENS_POR_ASSUNTO * assuntos.length, TOKENS_TETO);
-  const r = await pedirJson(promptResumo(assuntos), validarResumos, { maxTokens, temperature: 0.3, modelo: MODELO_IA.resumo() });
+  // Os assuntos do dia são os mesmos para todos: guardado pelo prompt.
+  const prompt = promptResumo(assuntos);
+  const r = await comCache('resumo', prompt, () => pedirJson(prompt, validarResumos, { maxTokens, temperature: 0.3, modelo: MODELO_IA.resumo() }));
   if (!r.ok) return NextResponse.json({ error: r.erro }, { status: r.status });
   return NextResponse.json({ resumos: r.dado });
 }
