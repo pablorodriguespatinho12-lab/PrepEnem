@@ -30,10 +30,16 @@ export function resultadosDe(texto: string): Set<string> {
 
 export type Conferencia = { resposta: Resposta } | null;
 
+/* Todo ponto "(x, y)" citado na resolução tem de estar na reta do gabarito. */
+function conferirPontosDaReta(reta: { a: number; b: number }, texto: string): boolean {
+  const pontos = Array.from(texto.replace(/−/g, '-').matchAll(/\(\s*(-?\d+)\s*,\s*(-?\d+)\s*\)/g));
+  return pontos.every((m) => Math.abs(reta.a * Number(m[1]) + reta.b - Number(m[2])) < 1e-9);
+}
 /* Devolve a resposta confirmada (talvez com a opção corrigida) ou null. */
 export function conferirGabarito(resposta: Resposta, resolucaoFinal: string): Conferencia {
   const resultado = resultadosDe(resolucaoFinal);
   const universo = resultado.size > 0 ? resultado : new Set(numeros(resolucaoFinal));
+  if (resposta.tipo === 'desenho') return conferirPontosDaReta(resposta.reta, resolucaoFinal) ? { resposta } : null;
   if (universo.size === 0) return { resposta };
 
   if (resposta.tipo === 'numero') {

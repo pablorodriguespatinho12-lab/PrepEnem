@@ -24,6 +24,14 @@ export function validarResposta(bruto: unknown): Resposta | null {
     if (opcoes.length < 2 || !Number.isInteger(correta) || correta < 0 || correta >= opcoes.length) return null;
     return { tipo: 'escolha', opcoes, correta };
   }
+  if (r.tipo === 'desenho') {
+    const reta = obj(r.reta);
+    const a = Number(reta.a), b = Number(reta.b);
+    // Reta quase deitada no 0 seria lida como eixo x, e quase em pé como eixo y.
+    if (!Number.isFinite(a) || !Number.isFinite(b) || Math.abs(b) > 4) return null;
+    if (a === 0 ? Math.abs(b) < 1 : Math.abs(a) < 0.25 || Math.abs(a) > 4) return null;
+    return { tipo: 'desenho', reta: { a, b } };
+  }
   return null;
 }
 

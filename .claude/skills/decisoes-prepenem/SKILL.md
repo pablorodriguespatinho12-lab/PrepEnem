@@ -168,6 +168,10 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   A geração por IA está desligada (`CALCULO_LICAO_IA`, teste de 05/10: contas
   certas, explicação sem sentido); lição sem versão escrita aparece "em
   preparação". Escrever a próxima é o caminho, não religar a IA.
+- **Exercício de desenhar (06/10/2026):** resposta `{ tipo: 'desenho', reta }`.
+  Ele risca eixos e reta; cada traço vira reta na hora e a conferência é conta
+  (`lib/calculo/desenho.ts`, tolerância de 1/3 de quadradinho), nunca IA. Diz o
+  que falta e, se errou, mostra a certa tracejada. Por ora só reta (p2 e p3).
 - **Nível acima no Cálculo (Pablo, 06/10/2026: "saber mais do que a maior parte
   do pessoal"):** toda lição escrita fecha com 2 exercícios `nivelAcima`
   (estilo ITA, Fuvest, Unicamp), originais, resolvíveis só com o que a trilha

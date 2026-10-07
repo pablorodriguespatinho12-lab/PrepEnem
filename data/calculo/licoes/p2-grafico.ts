@@ -85,6 +85,16 @@ export const P2_GRAFICO: ConteudoLicao = {
       ],
     },
     {
+      enunciado: 'Desenhe os eixos $x$ e $y$ e o gráfico de $f(x) = x + 2$.',
+      resposta: { tipo: 'desenho', reta: { a: 1, b: 2 } },
+      dica: 'Faça uma tabelinha: $x = 0$ dá $f(0) = 2$; $x = 1$ dá $f(1) = 3$. Marque os dois pontos e ligue.',
+      resolucao: [
+        { texto: 'Primeiro os eixos: uma linha deitada e uma em pé, cruzando no 0.', porque: 'Sem eixos não dá para saber onde fica cada número.' },
+        { texto: '$f(0) = 2$ dá o ponto (0, 2); $f(1) = 3$ dá o ponto (1, 3).', porque: 'Cada entrada vira um ponto: anda $x$ para o lado e sobe $f(x)$.' },
+        { texto: 'A reta passa por (0, 2) e (1, 3) e segue para os dois lados.', porque: 'A cada 1 para a direita, sobe 1: é sempre o mesmo passo.' },
+      ],
+    },
+    {
       enunciado: 'Qual é o valor máximo (a maior altura) de $f(x) = -x^2 + 9$?',
       visual: { tipo: 'grafico', funcoes: [{ expr: '-x^2 + 9', rotulo: 'f(x)', cor: 'a' }], x: [-4, 4], y: [-8, 11] },
       resposta: { tipo: 'numero', valor: 9 },

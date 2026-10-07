@@ -77,8 +77,9 @@ async function conferirComOutroModelo(id: string, l: ConteudoLicao): Promise<Con
     console.error(`Lição ${id}: verificação independente falhou`);
     return null;
   }
-  const exercicios = l.exercicios.filter((x, i) => concorda(x.resposta, v[i]));
-  const lacunaOk = new Set(lacunas.filter((_, i) => concorda(lacunas[i].p.lacuna!.resposta, v[l.exercicios.length + i])).map(({ ie, ip }) => `${ie}:${ip}`));
+  const exercicios = l.exercicios.filter((x, i) => x.resposta.tipo !== 'desenho' && concorda(x.resposta, v[i]));
+  // Desenho não tem como ser resolvido por outro modelo: sai.
+  const lacunaOk = new Set(lacunas.filter(({ p }, i) => p.lacuna!.resposta.tipo !== 'desenho' && concorda(p.lacuna!.resposta, v[l.exercicios.length + i])).map(({ ie, ip }) => `${ie}:${ip}`));
   const exemplos = l.exemplos.map((e, ie) => ({
     ...e,
     passos: e.passos.map((p, ip) => (p.lacuna && !lacunaOk.has(`${ie}:${ip}`) ? { texto: p.texto, porque: p.porque } : p)),

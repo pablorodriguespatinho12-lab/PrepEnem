@@ -11,7 +11,9 @@ import type { Visual } from '@/lib/visual/especificacao';
 
 export type Resposta =
   | { tipo: 'numero'; valor: number; tolerancia?: number }
-  | { tipo: 'escolha'; opcoes: string[]; correta: number };
+  | { tipo: 'escolha'; opcoes: string[]; correta: number }
+  /* O aluno risca os eixos e a reta y = a·x + b (components/calculo/desenhar-reta.tsx). */
+  | { tipo: 'desenho'; reta: { a: number; b: number } };
 
 export interface PassoConstrucao { titulo: string; texto: string; visual?: Visual | null }
 
@@ -65,6 +67,7 @@ export interface LicaoCompleta extends Degrau { conteudo: ConteudoLicao; origem:
 
 export function conferirResposta(r: Resposta, dada: string | number): boolean {
   if (r.tipo === 'escolha') return Number(dada) === r.correta;
+  if (r.tipo === 'desenho') return false; // conferido pelo desenho (lib/calculo/desenho.ts)
   const valor = typeof dada === 'number' ? dada : Number(String(dada).replace(',', '.').trim());
   if (!Number.isFinite(valor)) return false;
   const tolerancia = r.tolerancia ?? Math.max(1e-6, Math.abs(r.valor) * 1e-3);

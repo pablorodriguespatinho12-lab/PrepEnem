@@ -6,6 +6,7 @@ import { useId, useState } from 'react';
 import { Check, X } from 'lucide-react';
 import MathText from '@/components/math-text';
 import { conferirResposta, type Resposta } from '@/lib/calculo/tipos';
+import { DesenharReta } from './desenhar-reta';
 
 interface Props {
   resposta: Resposta;
@@ -34,6 +35,10 @@ export function RespostaInput({ resposta, onResponder, respondido }: Props) {
       {acertou ? 'Certo' : resposta.tipo === 'numero' ? `Não. A resposta é ${String(resposta.valor).replace('.', ',')}` : 'Não é essa'}
     </span>
   );
+
+  if (resposta.tipo === 'desenho') {
+    return <DesenharReta reta={resposta.reta} respondido={respondido} onResponder={onResponder} />;
+  }
 
   if (resposta.tipo === 'escolha') {
     return (

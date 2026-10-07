@@ -103,6 +103,16 @@ export const P3_AFIM: ConteudoLicao = {
   ],
   exercicios: [
     {
+      enunciado: 'Desenhe os eixos e o gráfico de $f(x) = -2x + 3$.',
+      resposta: { tipo: 'desenho', reta: { a: -2, b: 3 } },
+      dica: 'O $+3$ diz onde a reta corta o eixo $y$. O $-2$ diz que, a cada 1 para a direita, ela desce 2.',
+      resolucao: [
+        { texto: 'Corta o eixo $y$ no 3: ponto (0, 3).', porque: '$f(0) = -2\\cdot 0 + 3 = 3$.' },
+        { texto: 'Um passo para a direita, desce 2: ponto (1, 1). Mais um: (2, -1).', porque: 'Na função afim o passo é sempre o mesmo: é o número na frente do $x$.' },
+        { texto: 'Liga os pontos: a reta desce da esquerda para a direita.', porque: 'O número na frente do $x$ é negativo.' },
+      ],
+    },
+    {
       enunciado: 'Uma caixa d\'água tem 500 L e perde 25 L por minuto. Quantos litros restam depois de 8 minutos?',
       resposta: { tipo: 'numero', valor: 300 },
       dica: 'Início 500, taxa $-25$ por minuto.',
