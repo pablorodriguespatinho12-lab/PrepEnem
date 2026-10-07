@@ -1,9 +1,10 @@
 export const dynamic = 'force-dynamic';
+export const maxDuration = 60;
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
-import { chatCompletion } from '@/lib/ai-client';
+import { gerarQuestoesConferidas } from '@/lib/questoes-geradas';
 
 const MATERIAS_VALIDAS = [
   'Matemática', 'Português', 'Biologia', 'Química', 'Física',
@@ -46,58 +47,25 @@ Cada questão deve ter:
 Retorne JSON: {"questoes":[{"enunciado":"...","alternativaA":"...","alternativaB":"...","alternativaC":"...","alternativaD":"...","alternativaE":"...","respostaCorreta":"A","subtema":"...","dificuldade":"${dificuldade}","explicacao":"..."}]}
 Retorne SOMENTE JSON, sem markdown.`;
 
-    const result = await chatCompletion({
-      messages: [{ role: 'user', content: prompt }],
-      maxTokens: 8000,
-      temperature: 0.7,
-      responseFormat: { type: 'json_object' },
-    });
-    if (!result.ok) return result.response;
-
-    const raw = result.data?.choices?.[0]?.message?.content ?? '';
-    let questoes: any[] = [];
-    try {
-      const parsed = JSON.parse(raw);
-      questoes = parsed?.questoes ?? parsed ?? [];
-    } catch (e) {
-      console.error('Parse error:', raw.substring(0, 300));
-      return NextResponse.json({ error: 'Erro ao interpretar questões geradas' }, { status: 500 });
+    // Validada e conferida por outro modelo (lib/questoes-geradas.ts); antes
+    // o gabarito inválido virava 'A' e ia para o banco de todos.
+    const questoes = await gerarQuestoesConferidas(prompt, 40_000);
+    if (questoes.length === 0) {
+      return NextResponse.json({ error: 'A IA não gerou questões conferidas agora. Tente de novo.' }, { status: 502 });
     }
-
     const saved: any[] = [];
     for (const q of questoes) {
+      const dados = { ...q, materia, subtema: q.subtema ?? subtema ?? 'Geral', dificuldade: q.dificuldade ?? dificuldade, origem: 'IA Gerada', geradaPorIA: true };
+      if (!save) {
+        saved.push({ ...dados, id: `ai-${Date.now()}-${saved.length}` });
+        continue;
+      }
       try {
-        let resposta = (q.respostaCorreta ?? 'A').toUpperCase();
-        if (!['A','B','C','D','E'].includes(resposta)) resposta = 'A';
-        let dif = (q.dificuldade ?? dificuldade).toLowerCase();
-        if (!['facil','medio','dificil'].includes(dif)) dif = dificuldade;
-
-        if (save) {
-          const created = await prisma.question.create({
-            data: {
-              enunciado: q.enunciado ?? 'Questão',
-              alternativaA: q.alternativaA ?? 'N/A',
-              alternativaB: q.alternativaB ?? 'N/A',
-              alternativaC: q.alternativaC ?? 'N/A',
-              alternativaD: q.alternativaD ?? 'N/A',
-              alternativaE: q.alternativaE ?? 'N/A',
-              respostaCorreta: resposta,
-              materia,
-              subtema: q.subtema ?? subtema ?? 'Geral',
-              dificuldade: dif,
-              explicacao: q.explicacao ?? null,
-              origem: 'IA Gerada',
-            },
-          });
-          saved.push(created);
-        } else {
-          saved.push({ ...q, id: `ai-${Date.now()}-${Math.random()}`, materia, dificuldade: dif, respostaCorreta: resposta, origem: 'IA Gerada' });
-        }
+        saved.push(await prisma.question.create({ data: dados }));
       } catch (e: any) {
         console.error('Save error:', e.message);
       }
     }
-
     return NextResponse.json({ questoes: saved, total: saved.length });
   } catch (error: any) {
     console.error('AI generate error:', error);

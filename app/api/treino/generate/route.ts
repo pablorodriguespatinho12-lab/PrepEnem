@@ -1,12 +1,13 @@
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
+import { gerarQuestoesConferidas } from '@/lib/questoes-geradas';
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { getCycleInfoForDay, studyCycle } from '@/lib/schedule-data';
 import { getActiveStudyDay, upsertStudyProgress } from '@/lib/study-progress';
-import { chatCompletion, getAbacusApiKey } from '@/lib/ai-client';
+import { getAbacusApiKey } from '@/lib/ai-client';
 import { cotasDoDia, etapaDaQuestao, isQuestaoEnem, montarEscada } from '@/lib/treino-etapas';
 import { degrausDasAncoras } from '@/lib/treino-degraus';
 // Quantas questões do ENEM viram bloco com degraus por sessão. Cada bloco tem
@@ -153,39 +154,21 @@ REGRAS:
 Retorne JSON: {"questoes":[{"enunciado":"...","alternativaA":"...","alternativaB":"...","alternativaC":"...","alternativaD":"...","alternativaE":"...","respostaCorreta":"A","subtema":"...","dificuldade":"medio","explicacao":"..."}]}
 Retorne SOMENTE JSON válido.`;
 
-              const llmResult = await chatCompletion({
-                messages: [{ role: 'user', content: prompt }],
-                maxTokens: 8000,
-                temperature: 0.7,
-                responseFormat: { type: 'json_object' },
-              });
-              if (llmResult.ok) {
-                const raw = llmResult.data?.choices?.[0]?.message?.content ?? '';
-                const parsed = JSON.parse(raw);
-                const questoes = parsed?.questoes ?? [];
-                for (const q of questoes) {
+              const questoes = await gerarQuestoesConferidas(prompt);
+              for (const q of questoes) {
                   if (selected.length + geradasIA.length >= sessionSize) break;
-                  let resp = (q.respostaCorreta ?? 'A').toUpperCase();
-                  if (!['A','B','C','D','E'].includes(resp)) resp = 'A';
                   const created = await prisma.question.create({
                     data: {
-                      enunciado: q.enunciado ?? 'Questão',
-                      alternativaA: q.alternativaA ?? 'N/A',
-                      alternativaB: q.alternativaB ?? 'N/A',
-                      alternativaC: q.alternativaC ?? 'N/A',
-                      alternativaD: q.alternativaD ?? 'N/A',
-                      alternativaE: q.alternativaE ?? 'N/A',
-                      respostaCorreta: resp,
+                      ...q,
                       materia: topic.materia,
                       subtema: q.subtema ?? topic.subtemas[0] ?? 'Geral',
                       dificuldade: q.dificuldade ?? 'medio',
-                      explicacao: q.explicacao ?? null,
                       origem: 'IA Gerada',
+                      geradaPorIA: true,
                     },
                   });
                   seenIds.add(created.id);
                   geradasIA.push(created);
-                }
               }
           } catch (e) {
             console.error('Auto-generate AI questions error for', topic.materia, e);
