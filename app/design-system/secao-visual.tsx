@@ -58,6 +58,18 @@ const EXEMPLOS: { nome: string; bruto: unknown }[] = [
     },
   },
   {
+    nome: 'Molécula: massa da água (mapa mental)',
+    bruto: { tipo: 'molecula', nome: 'H₂O', atomos: [{ simbolo: 'O', massa: 16 }, { simbolo: 'H', massa: 1 }, { simbolo: 'H', massa: 1 }], soma: true },
+  },
+  {
+    nome: 'Molécula: gás carbônico',
+    bruto: { tipo: 'molecula', nome: 'CO₂', atomos: [{ simbolo: 'C', massa: 12 }, { simbolo: 'O', massa: 16 }, { simbolo: 'O', massa: 16 }], soma: true },
+  },
+  {
+    nome: 'Molécula: metano (4 em volta)',
+    bruto: { tipo: 'molecula', nome: 'CH₄', atomos: [{ simbolo: 'C', massa: 12 }, { simbolo: 'H', massa: 1 }, { simbolo: 'H', massa: 1 }, { simbolo: 'H', massa: 1 }, { simbolo: 'H', massa: 1 }], soma: true },
+  },
+  {
     nome: 'Processo: fotossíntese (animado)',
     bruto: {
       tipo: 'processo', titulo: 'Fotossíntese',

@@ -8,7 +8,7 @@ import { promptResumo, validarResumos } from '@/lib/tutor/resumo';
 import { MODELO_IA } from '@/lib/ia-modelos';
 
 const TOKENS_BASE = 2000;
-const TOKENS_POR_ASSUNTO = 700;
+const TOKENS_POR_ASSUNTO = 850; // +150 com "antes" e "oQueE" (07/10/2026)
 // Abaixo dos 8.000 tokens/min da Groq gratuita, somando o prompt (~1.000).
 const TOKENS_TETO = 6800;
 // Resumo de revisão dos assuntos do dia, antes das questões.

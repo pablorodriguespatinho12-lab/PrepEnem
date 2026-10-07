@@ -145,4 +145,11 @@ describe('validarVisual', () => {
     expect(r).toMatchObject({ trechos: [{ fechadoDe: true, fechadoAte: false }] });
     expect(validarVisual({ tipo: 'vetores', vetores: [{ de: [0, 0], para: [3] }] })).toBeNull();
   });
+  test('molécula: guarda de 2 a 6 átomos com símbolo válido; soma só se todos têm massa', () => {
+    const agua = validarVisual({ tipo: 'molecula', nome: 'H₂O', atomos: [{ simbolo: 'O', massa: 16 }, { simbolo: 'H', massa: 1 }, { simbolo: 'H', massa: 1 }, { simbolo: 'água' }], soma: true });
+    expect(agua).toMatchObject({ tipo: 'molecula', soma: true, atomos: [{ simbolo: 'O' }, { simbolo: 'H' }, { simbolo: 'H' }] });
+    const semMassa = validarVisual({ tipo: 'molecula', atomos: [{ simbolo: 'C', massa: 12 }, { simbolo: 'O' }], soma: true });
+    expect(semMassa && semMassa.tipo === 'molecula' && semMassa.soma).toBe(false);
+    expect(validarVisual({ tipo: 'molecula', atomos: [{ simbolo: 'H' }] })).toBeNull();
+  });
 });

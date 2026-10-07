@@ -7,7 +7,7 @@ import { PaginaDaProva } from '@/components/pagina-da-prova';
 import {
   BookOpen, ChevronLeft, ChevronRight, CheckCircle2, XCircle, AlertTriangle,
   Loader2, RefreshCcw, Home, Send, Sparkles, Trophy,
-  GraduationCap, ChevronDown, Calculator, Play, Eye, EyeOff,
+  GraduationCap, Play, Eye, EyeOff,
   Check, X, Layers
 } from 'lucide-react';
 import { toast } from 'sonner';
@@ -19,8 +19,8 @@ import { ExplicacaoTutor } from '@/components/tutor/explicacao-tutor';
 import { TextoCompleto } from '@/components/tutor/texto-completo';
 // Só carrega as 48 resoluções quando a questão do dia é de vestibular.
 const ResolucaoClicavel = dynamic(() => import('@/components/vestibular/resolucao-clicavel'), { ssr: false });
-import { VisualDesenho } from '@/components/visual/visual-desenho';
-import type { Visual } from '@/lib/visual/especificacao';
+import { ConceitosDoDia } from '@/components/treino/conceitos-do-dia';
+import type { ResumoAssunto } from '@/lib/tutor/resumo';
 import { playSound } from '@/lib/sounds';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
@@ -73,9 +73,8 @@ export default function TreinoPage() {
 
   // Resumo (pre-training review) state
   const [showResumo, setShowResumo] = useState(false);
-  const [resumoData, setResumoData] = useState<any[]>([]);
+  const [resumoData, setResumoData] = useState<ResumoAssunto[]>([]);
   const [resumoLoading, setResumoLoading] = useState(false);
-  const [expandedResumo, setExpandedResumo] = useState<Set<string>>(new Set());
   const [resumoDismissed, setResumoDismissed] = useState(false);
   const [sessionMaterias, setSessionMaterias] = useState<string[]>([]);
   const [sessionSchedule, setSessionSchedule] = useState<any>(null);
@@ -468,14 +467,6 @@ export default function TreinoPage() {
     if (sessionId) saveSessionProgress(sessionId, newIdx, score);
   };
 
-  const toggleResumoExpand = (key: string) => {
-    setExpandedResumo((prev) => {
-      const next = new Set(prev);
-      if (next.has(key)) next.delete(key);
-      else next.add(key);
-      return next;
-    });
-  };
 
   if (showResumo && !resumoDismissed && sessionStarted && !loading && questions.length > 0) {
     return (
@@ -509,7 +500,7 @@ export default function TreinoPage() {
               caixa colorida decorava. Agora é filete + texto na serifada. */}
           <div className="border-l-2 border-primary pl-4 py-1 mb-6 mt-5">
             <p className="type-body font-reading text-muted-foreground measure-reading">
-              Revise os conceitos antes de começar. Quando estiver pronto, clique em &quot;Começar Treino&quot;.
+              Um conceito por vez, começando pelo que você precisa saber antes.
             </p>
           </div>
         </motion.div>
@@ -527,99 +518,14 @@ export default function TreinoPage() {
             </button>
           </div>
         ) : (
-          <div className="space-y-3 mb-8">
-            {resumoData.map((resumo, idx) => {
-              const key = `${resumo.materia}::${resumo.subtema}`;
-              const isExpanded = expandedResumo.has(key);
-              const isExatas = ['Física', 'Matemática', 'Química'].includes(resumo.materia);
-
-              return (
-                <motion.div
-                  key={key}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: idx * 0.05 }}
-                  className="bg-[hsl(var(--surface-1))] rounded-[var(--radius-surface)] border border-border shadow-elev-1 overflow-hidden"
-                >
-                  {/* Header - always visible. A cor da matéria virou filete
-                      vertical: como caixa pastel atrás do ícone ela decorava. */}
-                  <button
-                    onClick={() => toggleResumoExpand(key)}
-                    className="w-full flex items-center gap-3 p-4 text-left hover:bg-[hsl(var(--surface-2))] t-colors"
-                  >
-                    <span
-                      aria-hidden
-                      className="w-[3px] h-9 rounded-[var(--radius-data)] shrink-0"
-                      style={{ backgroundColor: materiaColors[resumo.materia] ?? '#888' }}
-                    />
-                    <div className="w-9 h-9 flex items-center justify-center shrink-0 text-muted-foreground">
-                      {isExatas ? <Calculator className="w-5 h-5" /> : <BookOpen className="w-5 h-5" />}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-display type-body font-semibold">{resumo.materia}</p>
-                      <p className="type-meta text-muted-foreground">{resumo.subtema}</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="type-caption text-primary-text">
-                        {isExpanded ? 'Ocultar' : 'Revelar'}
-                      </span>
-                      <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
-                    </div>
-                  </button>
-
-                  {/* Content - expandable */}
-                  <AnimatePresence>
-                    {isExpanded && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="px-4 pb-4 pt-1 space-y-4">
-                          <p className="font-display type-body font-semibold"><MathText text={resumo.ideia} /></p>
-                          <ol className="space-y-5">
-                            {(resumo.construcao ?? []).map((passo: { titulo: string; texto: string; visual: Visual | null }, pi: number) => (
-                              <li key={pi} className="space-y-2">
-                                {passo.visual && <VisualDesenho visual={passo.visual} />}
-                                <p className="type-meta font-semibold">{passo.titulo}</p>
-                                <MathText text={passo.texto} className="font-reading" />
-                              </li>
-                            ))}
-                          </ol>
-                          {resumo.regra && (
-                            <div className="rounded-[var(--radius-control)] border-l-4 border-primary bg-[hsl(var(--surface-2))] p-3">
-                              <p className="type-caption text-muted-foreground mb-1">Resumo</p>
-                              <MathText text={resumo.regra} className="font-reading" />
-                            </div>
-                          )}
-                          {resumo.dicaEnem && (
-                            <div className="border-l-2 border-primary/40 pl-3 py-0.5">
-                              <p className="type-caption text-muted-foreground mb-1">Como cai no ENEM</p>
-                              <p className="type-body font-reading text-foreground/90 measure-reading">{resumo.dicaEnem}</p>
-                            </div>
-                          )}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              );
-            })}
+          <div className="mb-8">
+            <ConceitosDoDia resumos={resumoData} cores={materiaColors} onComecar={() => setResumoDismissed(true)} />
+            <button type="button" onClick={() => setResumoDismissed(true)}
+              className="mt-4 type-meta text-muted-foreground hover:text-foreground t-colors underline-offset-4 hover:underline">
+              Pular os conceitos e começar o treino
+            </button>
           </div>
         )}
-
-        {/* Action buttons */}
-        <div className="flex gap-3 sticky bottom-4">
-          <button
-            onClick={() => setResumoDismissed(true)}
-            className="flex-1 py-3.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-display font-semibold type-body hover:opacity-90 transition-opacity shadow-elev-2 flex items-center justify-center gap-2"
-          >
-            <Play className="w-5 h-5" />
-            Começar Treino
-          </button>
-        </div>
       </div>
     );
   }

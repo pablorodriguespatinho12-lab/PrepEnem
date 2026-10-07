@@ -96,6 +96,11 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   uma matéria por vez, cada uma na escada com cota proporcional (em 10: 3
   fáceis, 4 médias, 3 ENEM). Retoma só treino aberto HOJE, e nunca a sessão do
   simulado (as duas ficam em `TrainingSession`; filtrar `mode`).
+- **Conceitos antes do treino, um por vez (Pablo, 07/10/2026):** abrem sozinhos,
+  em ordem, com Continuar (`components/treino/conceitos-do-dia.tsx`). Por
+  assunto: o que precisa saber ANTES (pré-requisito, `antes`) → o que o assunto
+  É, sigla por extenso (`oQueE`: "não me falou o que é MRU") → passos → regra e
+  ENEM. Química de átomo e massa usa o desenho `molecula`.
 - **Início (06/10/2026):** sem saudação e sem banner: cartão "Hoje" com as
   matérias e temas do dia e um botão "Começar"; revisões num link discreto.
 - **Treino é escada, decidida pelo Pablo em 05/10/2026:** resumo do conteúdo

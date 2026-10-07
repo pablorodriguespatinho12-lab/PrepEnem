@@ -10,6 +10,7 @@ import type { VisualGrafico, Visual, VisualReta, VisualTabela, VisualTransformac
 import { marcas } from '@/lib/visual/geometria';
 import { renderizarTextoMatematico } from '@/lib/visual/texto-matematico';
 import { Quadro } from './quadro';
+import { Molecula } from './molecula';
 import { ALTURA, COR, EIXO, Eixos, Grafico, HALO, LARGURA, Latex, MARGEM, corDe, escala } from './grafico';
 import { Cena } from './cena';
 import { Roda } from './roda';
@@ -158,6 +159,7 @@ export function VisualDesenho({ visual }: { visual: Visual }) {
       {visual.tipo === 'retangulo' && <Retangulo v={visual} />}
       {visual.tipo === 'fatias' && <Fatias v={visual} />}
       {visual.tipo === 'processo' && <Processo v={visual} />}
+      {visual.tipo === 'molecula' && <Molecula v={visual} />}
     </figure>
   );
 }

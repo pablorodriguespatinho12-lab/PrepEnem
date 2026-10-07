@@ -119,7 +119,18 @@ export interface VisualProcesso {
   etapas: { nome: string; entra: string[]; sai: string[] }[];
   ligacoes: { de: number; para: number; leva: string }[];
 }
-export type Visual = VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso;
+/* Molécula como mapa mental (Pablo, 07/10/2026, opção A): átomos de verdade
+   (núcleo e elétrons nas camadas), linha de cada um até a etiqueta com a massa
+   e, com "soma", a conta da massa da molécula embaixo. O primeiro átomo fica
+   no meio; os outros, em volta dele. */
+export interface VisualMolecula {
+  tipo: 'molecula';
+  titulo?: string;
+  nome?: string;
+  atomos: { simbolo: string; massa?: number }[];
+  soma?: boolean;
+}
+export type Visual = VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula;
 
 const MAX_FUNCOES = 4;
 const MAX_PONTOS = 8;
@@ -291,8 +302,21 @@ function processo(v: Record<string, unknown>): VisualProcesso | null {
     .map((l) => ({ de: l.de as number, para: l.para as number, leva: texto(l.leva, 30)! }));
   return { tipo: 'processo', titulo: texto(v.titulo), etapas, ligacoes };
 }
+const MIN_ATOMOS = 2;
+const MAX_ATOMOS = 6;
+const MAX_MASSA = 300;
+function molecula(v: Record<string, unknown>): VisualMolecula | null {
+  const atomos = lista(v.atomos).map(objeto)
+    .filter((a) => typeof a.simbolo === 'string' && /^[A-Z][a-z]?$/.test(a.simbolo.trim()))
+    .map((a) => ({ simbolo: String(a.simbolo).trim(), massa: ehNumero(a.massa) && a.massa > 0 && a.massa < MAX_MASSA ? a.massa : undefined }))
+    .slice(0, MAX_ATOMOS);
+  if (atomos.length < MIN_ATOMOS) return null;
+  // Soma só se todo átomo tem massa: senão a conta na tela sairia errada.
+  const soma = v.soma === true && atomos.every((a) => a.massa !== undefined);
+  return { tipo: 'molecula', titulo: texto(v.titulo), nome: texto(v.nome, 20), atomos, soma };
+}
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {
-  grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias, processo,
+  grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias, processo, molecula,
 };
 
 /* Devolve o visual limpo, ou null se não der para desenhar com segurança. */
@@ -314,6 +338,8 @@ export const FORMATO_VISUAL_PARA_IA = `"visual" é um destes objetos (ou null). 
 - Área sob a curva como soma de fatias (distância a partir da velocidade, energia a partir da potência): {"tipo":"fatias","titulo":"...","expr":"2*x","x":[0,4],"maxFatias":20,"unidadeX":"s","unidadeY":"m/s"}
 - Processo em etapas (biologia, química, geografia: o que entra, o que sai, o que passa de uma etapa à outra): {"tipo":"processo","titulo":"Fotossíntese","etapas":[{"nome":"Fase clara","entra":["luz","H₂O"],"sai":["O₂"]},{"nome":"Fase escura","entra":["CO₂"],"sai":["glicose"]}],"ligacoes":[{"de":0,"para":1,"leva":"ATP e NADPH"}]}
   Até 4 etapas, só as moléculas ou coisas principais (até 4 de cada lado). O app anima: as coisas andam pelas setas.
+- Molécula (química: átomo, molécula, massa molar, ligação): {"tipo":"molecula","titulo":"Massa da água","nome":"H₂O","atomos":[{"simbolo":"O","massa":16},{"simbolo":"H","massa":1},{"simbolo":"H","massa":1}],"soma":true}
+  O app desenha cada átomo de verdade (núcleo e elétrons), uma etiqueta com a massa de cada um e, com "soma": true, a conta da massa da molécula. O átomo do meio vem PRIMEIRO. De 2 a 6 átomos; massa da tabela periódica, arredondada.
 - Vetores (forças, velocidade, deslocamento): {"tipo":"vetores","vetores":[{"de":[0,0],"para":[3,0],"rotulo":"F₁","cor":"a"}],"pontos":[{"x":0,"y":0,"rotulo":"corpo"}]}
 "cor": "a", "b" ou "c" para destacar (use a MESMA cor no texto: escreva o termo como [[a:termo]]), "erro" só para o caminho errado do aluno.
 REGRAS DE TEXTO: toda fórmula entre $...$ (nunca \\frac solto fora de $). [[a:termo]] é só para PALAVRAS fora da fórmula ("a [[a:velocidade]] é a inclinação"); nunca dentro de $...$ e nunca em volta de símbolo.`;
