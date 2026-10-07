@@ -8,9 +8,10 @@ export const P7_EXPONENCIAL: ConteudoLicao = {
   construcao: [
     {
       titulo: 'Somar contra multiplicar',
-      texto: 'Dois balões saem juntos. O primeiro **soma** 6 m a cada minuto: $a(x) = 6x$. O segundo **dobra** de altura a cada minuto: $b(x) = 2^x$. Aperte "Ver andando". No começo, o que soma está bem na frente. Entre o minuto 4 e o 5, o que dobra passa, e daí em diante só se afasta.',
+      texto: 'Dois balões saem juntos. O primeiro **soma** 6 m a cada minuto: $a(x) = 6x$. O segundo **dobra** de altura a cada minuto: $b(x) = 2^x$. No começo, o que soma está bem na frente. Entre o minuto 4 e o 5, o que dobra passa, e daí em diante só se afasta.',
       visual: {
         tipo: 'cena', titulo: 'O que soma contra o que dobra', x: [0, 6], unidadeX: 'min', unidadeY: 'm', rastro: true,
+        legenda: [{ termo: 'x', diz: 'os minutos' }, { termo: '6x', diz: 'soma 6 m por minuto' }, { termo: '2^x', diz: 'dobra a cada minuto' }],
         veiculos: [
           { veiculo: 'balao', nome: 'a', expr: '6*x', rotulo: 'soma 6', cor: 'a' },
           { veiculo: 'balao', nome: 'b', expr: '2^x', rotulo: 'dobra', cor: 'b' },

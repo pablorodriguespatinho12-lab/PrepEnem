@@ -8,9 +8,10 @@ export const P3_AFIM: ConteudoLicao = {
   construcao: [
     {
       titulo: 'A vela acesa',
-      texto: 'A vela da pergunta, acesa. Cada hora ela perde 2 cm, sempre o mesmo tanto: $h(x) = 20 - 2x$, com $x$ em horas. Aperte "Ver andando": a vela encolhe em pedaços iguais, e no gráfico os pontos descem em degraus iguais. Mudança sempre igual desenha uma **reta**.',
+      texto: 'A vela da pergunta, acesa. Cada hora ela perde 2 cm, sempre o mesmo tanto: $h(x) = 20 - 2x$, com $x$ em horas. A vela encolhe em pedaços iguais, e no gráfico os pontos descem em degraus iguais. Mudança sempre igual desenha uma **reta**.',
       visual: {
         tipo: 'cena', titulo: 'A vela encolhe 2 cm por hora', x: [0, 10], unidadeX: 'h', unidadeY: 'cm', rastro: true,
+        legenda: [{ termo: 'x', diz: 'as horas acesa' }, { termo: '20', diz: 'o tamanho no começo (cm)' }, { termo: '-2', diz: 'os cm que ela perde por hora' }],
         veiculos: [{ veiculo: 'vela', nome: 'h', expr: '20-2*x', cor: 'a' }],
       },
     },
@@ -41,6 +42,7 @@ export const P3_AFIM: ConteudoLicao = {
       texto: 'Na estrada, [[b:b]] é onde o veículo larga e [[a:a]] é quantos km ele anda por minuto: a velocidade. O carro larga na frente ($b = 6$), mas é mais lento ($a = 2$). A moto larga do zero ($b = 0$), mas é mais rápida ($a = 4$). Quem tem o $a$ maior tem a reta mais inclinada, e por isso alcança: no minuto 3, os dois estão no km 12.',
       visual: {
         tipo: 'cena', titulo: 'Carro f(x) = 2x + 6 e moto g(x) = 4x', x: [0, 5], unidadeX: 'min', unidadeY: 'km',
+        legenda: [{ termo: 'x', diz: 'os minutos' }, { termo: '2 \\text{ e } 4', diz: 'km por minuto: a inclinação' }, { termo: '6', diz: 'o carro larga 6 km na frente' }],
         veiculos: [
           { veiculo: 'carro', nome: 'f', expr: '2*x+6', cor: 'a' },
           { veiculo: 'moto', nome: 'g', expr: '4*x', cor: 'b' },

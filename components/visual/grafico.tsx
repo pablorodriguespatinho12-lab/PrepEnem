@@ -42,7 +42,9 @@ export function escala(x: [number, number], y: [number, number]): Escala {
 /* "nomes": o que cada eixo mede ("x: tempo (min)"). Sem nome, o aluno não
    sabia qual eixo era o tempo e qual era o espaço (Pablo, 06/10/2026). */
 export interface NomesDosEixos { x?: string; y?: string }
-export function Eixos({ x, y, e, nomes }: { x: [number, number]; y: [number, number]; e: Escala; nomes?: NomesDosEixos }) {
+/* "plano": eixos que se cruzam no zero, com seta na ponta, como o plano
+   cartesiano do caderno (Pablo, 07/10/2026: "um plano cartesiano mesmo"). */
+export function Eixos({ x, y, e, nomes, plano }: { x: [number, number]; y: [number, number]; e: Escala; nomes?: NomesDosEixos; plano?: boolean }) {
   const zeroX = x[0] <= 0 && x[1] >= 0 ? e.px(0) : MARGEM;
   const zeroY = y[0] <= 0 && y[1] >= 0 ? e.py(0) : ALTURA - MARGEM;
   return (
@@ -62,6 +64,7 @@ export function Eixos({ x, y, e, nomes }: { x: [number, number]; y: [number, num
       ))}
       <line x1={MARGEM} x2={LARGURA - MARGEM} y1={zeroY} y2={zeroY} stroke={EIXO} strokeWidth={1.2} />
       <line x1={zeroX} x2={zeroX} y1={MARGEM} y2={ALTURA - MARGEM} stroke={EIXO} strokeWidth={1.2} />
+      {plano && <Setas zeroX={zeroX} zeroY={zeroY} />}
       {nomes?.x
         ? <text x={LARGURA - MARGEM} y={zeroY - 7} textAnchor="end" fontSize={12} fontWeight={600} fill="hsl(var(--foreground))" {...HALO}>{nomes.x}</text>
         : <text x={LARGURA - MARGEM + 4} y={zeroY + 4}>x</text>}
@@ -72,9 +75,21 @@ export function Eixos({ x, y, e, nomes }: { x: [number, number]; y: [number, num
   );
 }
 
+const SETA = 7;
+function Setas({ zeroX, zeroY }: { zeroX: number; zeroY: number }) {
+  const fimX = LARGURA - MARGEM;
+  return (
+    <g fill={EIXO} stroke="none">
+      <path d={`M${fimX + SETA},${zeroY} L${fimX},${zeroY - SETA / 2} L${fimX},${zeroY + SETA / 2} Z`} />
+      <path d={`M${zeroX},${MARGEM - SETA} L${zeroX - SETA / 2},${MARGEM} L${zeroX + SETA / 2},${MARGEM} Z`} />
+      <text x={zeroX - 5} y={zeroY + 14} textAnchor="end" fontSize={11}>0</text>
+    </g>
+  );
+}
 /* "ateX": desenha o traço só até ali, como caneta no papel (cena animada);
    o resto da curva fica clarinho, como guia. */
-export function Grafico({ v, ateX, nomes }: { v: VisualGrafico; ateX?: number; nomes?: NomesDosEixos }) {
+/* "deX": onde a caneta começa (no plano, o desenho vai além do relógio). */
+export function Grafico({ v, ateX, deX, nomes, plano }: { v: VisualGrafico; ateX?: number; deX?: number; nomes?: NomesDosEixos; plano?: boolean }) {
   const idCorte = `corte${useId().replace(/:/g, '')}`; // "#:r1:" quebra o url() do SVG
   const desenho = useMemo(() => {
     const funcoes = v.funcoes
@@ -104,10 +119,13 @@ export function Grafico({ v, ateX, nomes }: { v: VisualGrafico; ateX?: number; n
   const { y, e, tracos, rotuloX, rotuloY } = desenho;
   return (
     <svg viewBox={`0 0 ${LARGURA} ${ALTURA}`} className="w-full h-auto" role="img" aria-label={v.titulo ?? 'Gráfico'}>
-      <Eixos x={v.x} y={y} e={e} nomes={nomes} />
+      <Eixos x={v.x} y={y} e={e} nomes={nomes} plano={plano} />
       {ateX !== undefined && (
         <defs>
-          <clipPath id={idCorte}><rect x={0} y={0} width={Math.max(0, e.px(Math.min(ateX, v.x[1])))} height={ALTURA} /></clipPath>
+          <clipPath id={idCorte}>
+            <rect x={deX === undefined ? 0 : e.px(deX)} y={0} height={ALTURA}
+              width={Math.max(0, e.px(Math.min(ateX, v.x[1])) - (deX === undefined ? 0 : e.px(deX)))} />
+          </clipPath>
         </defs>
       )}
       {tracos.map((t, i) => (

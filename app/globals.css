@@ -685,41 +685,6 @@ html [data-sonner-toaster][data-theme] {
   --warning-text: hsl(var(--foreground));
   --warning-border: hsl(var(--border));
 }
-/* Controle deslizante das animações (cena, roda, retângulo, fatias). O padrão
-   do navegador pintava a seleção de azul ao passar o mouse e parecia genérico
-   (Pablo, 06/10/2026). Trilho fino que se preenche até o ponto; bolinha na cor
-   primária com borda da cor do fundo. */
-.deslizante {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 6px;
-  border-radius: 999px;
-  background: linear-gradient(to right, hsl(var(--primary)) var(--progresso, 0%), hsl(var(--muted)) var(--progresso, 0%));
-  outline: none;
-  cursor: pointer;
-}
-.deslizante::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: hsl(var(--primary));
-  border: 3px solid hsl(var(--background));
-  box-shadow: 0 0 0 1px hsl(var(--primary));
-  transition: transform 150ms ease-out;
-}
-.deslizante::-moz-range-thumb {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: hsl(var(--primary));
-  border: 3px solid hsl(var(--background));
-  box-shadow: 0 0 0 1px hsl(var(--primary));
-}
-.deslizante::-moz-range-track { background: transparent; }
-.deslizante:hover::-webkit-slider-thumb { transform: scale(1.12); }
-.deslizante:active::-webkit-slider-thumb { transform: scale(1.2); }
-.deslizante:focus-visible { box-shadow: 0 0 0 3px hsl(var(--ring) / 0.35); }
 /* Desenho de processo (components/visual/processo.tsx): pontos que descem pelas
    setas e andam entre as etapas, em laço. Só transform e opacity. */
 @keyframes fluxo-desce {

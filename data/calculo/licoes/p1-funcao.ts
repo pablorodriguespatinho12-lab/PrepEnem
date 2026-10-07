@@ -12,18 +12,20 @@ export const P1_FUNCAO: ConteudoLicao = {
     },
     {
       titulo: 'O carro na estrada',
-      texto: 'O carro começa no km 2 e anda 5 km por minuto. Depois de 1 minuto: 2 + 5 = 7. Depois de 2: 2 + 10 = 12. A regra é sempre a mesma: **5 vezes os minutos, mais 2**. Chamando os minutos de $x$, a regra fica curta: $f(x) = 5x + 2$. Aqui o $x$ **não é o carro**: o $x$ é o **relógio**. E $f(x)$ é o km onde o carro está naquela hora. Aperte "Mais 1 min" e veja o número mudar junto com o carro.',
+      texto: 'Escolha os minutos e o km fica decidido: 1 min, km 7; 2 min, km 12. O $x$ **não é o carro**: é o **relógio**.',
       visual: {
-        tipo: 'cena', titulo: 'Mexa no relógio: o carro anda pela regra f(x) = 5x + 2',
+        tipo: 'cena', titulo: 'O carro anda pela regra f(x) = 5x + 2',
+        legenda: [{ termo: 'x', diz: 'os minutos que passaram' }, { termo: '5', diz: 'km que o carro anda por minuto' }, { termo: '2', diz: 'km onde ele começa' }, { termo: 'f(x)', diz: 'km onde ele está' }],
         x: [0, 4], unidadeX: 'min', unidadeY: 'km',
         veiculos: [{ veiculo: 'carro', nome: 'f', expr: '5*x+2', cor: 'a' }],
       },
     },
     {
       titulo: 'Chega a moto',
-      texto: 'Agora uma moto sai do km 0 e anda 7 km por minuto: $g(x) = 7x$. O **relógio é o mesmo** $x$ para os dois; o que muda é a regra. Cada veículo tem a sua função. Aperte "Ver andando": no minuto 1 os dois estão no km 7, e é aí que a moto alcança o carro. No gráfico, esse encontro é o lugar onde as duas linhas se cruzam. O gráfico é o filme inteiro numa foto só.',
+      texto: 'Mesmo relógio, regras diferentes. No minuto 1 os dois estão no km 7: é onde as linhas se cruzam.',
       visual: {
         tipo: 'cena', titulo: 'Carro f(x) = 5x + 2 e moto g(x) = 7x, no mesmo relógio',
+        legenda: [{ termo: 'x', diz: 'os minutos, o mesmo relógio para os dois' }, { termo: '5 \\text{ e } 7', diz: 'km por minuto de cada um' }, { termo: '2', diz: 'o carro sai 2 km na frente' }],
         x: [0, 4], unidadeX: 'min', unidadeY: 'km',
         veiculos: [
           { veiculo: 'carro', nome: 'f', expr: '5*x+2', cor: 'a' },

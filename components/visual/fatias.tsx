@@ -8,7 +8,7 @@ import type { VisualFatias } from '@/lib/visual/especificacao';
 import { tentarCompilar } from '@/lib/visual/expressao';
 import { amostrar, faixaAutomatica, somaPelaEsquerda } from '@/lib/visual/geometria';
 import { ALTURA, COR, Eixos, LARGURA, escala } from './grafico';
-import { Controles, Deslizante, useRelogio } from './relogio';
+import { Controles, useRelogio, useTocarAoVer } from './relogio';
 
 const SEGUNDOS_POR_FATIA = 0.25;
 const FATIAS_DA_AREA = 4000; // fino o bastante para a "área de verdade" bater na segunda casa
@@ -35,9 +35,9 @@ export function Fatias({ v }: { v: VisualFatias }) {
     return { x: e.px(x0), w: e.px(x0 + largura) - e.px(x0), topo: e.py(Math.max(h, 0)), base: e.py(Math.min(h, 0)) };
   });
 
+  const aoVer = useTocarAoVer(relogio);
   return (
-    <div className="space-y-4">
-      <Deslizante relogio={relogio} rotulo={<span data-numeric className="font-semibold text-foreground">{n} {n === 1 ? 'fatia' : 'fatias'}</span>} />
+    <div ref={aoVer} className="space-y-4">
       <svg viewBox={`0 0 ${LARGURA} ${ALTURA}`} className="w-full h-auto" role="img" aria-label={`${n} fatias sob a curva`}>
         <Eixos x={v.x} y={y} e={e} />
         {retangulos.map((r, k) => (
@@ -55,7 +55,7 @@ export function Fatias({ v }: { v: VisualFatias }) {
           Área de verdade embaixo da curva: <strong data-numeric className="text-foreground">{numero(area)}</strong>
         </p>
       </div>
-      <Controles relogio={relogio} tocar="Ver afinando" passo="Mais 1 fatia" />
+      <Controles relogio={relogio} />
       {v.unidadeX && v.unidadeY && (
         <p className="type-caption text-muted-foreground">Cada retângulo: largura em {v.unidadeX} vezes altura em {v.unidadeY}.</p>
       )}

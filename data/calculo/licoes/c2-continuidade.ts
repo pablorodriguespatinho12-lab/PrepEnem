@@ -60,6 +60,7 @@ export const C2_CONTINUIDADE: ConteudoLicao = {
       texto: 'Um carro não se teletransporta: a posição dele não dá saltos. Ande o relógio devagar. Entre o km 4 e o km 9, ele passa por todos os km do meio, sem pular nenhum. Isso vale para toda função contínua: se ela vai de um valor a outro, passa por todos os valores entre eles.',
       visual: {
         tipo: 'cena', titulo: 'Sem pular nenhum km', x: [0, 4], unidadeX: 'min', unidadeY: 'km',
+        legenda: [{ termo: 'x', diz: 'os minutos' }, { termo: 's(x)', diz: 'os km, sem pular nenhum' }],
         veiculos: [{ veiculo: 'carro', nome: 's', expr: 'x^2', cor: 'a' }],
       },
     },

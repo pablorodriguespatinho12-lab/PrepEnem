@@ -5,9 +5,9 @@
 // 06/10/2026: "sprite por sprite, tem que ser fluido"). As fatias, que só
 // existem em número inteiro, pedem `continuo: false`.
 
-import { useEffect, useId, useRef, useState, type ReactNode } from 'react';
-import { animate, type AnimationPlaybackControls } from 'framer-motion';
-import { Play, RotateCcw, StepForward } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { animate, useInView, useReducedMotion, type AnimationPlaybackControls } from 'framer-motion';
+import { RotateCcw } from 'lucide-react';
 
 const SEGUNDOS_POR_UNIDADE = 0.9;
 
@@ -61,35 +61,29 @@ export function useRelogio(
   };
 }
 
-export function Deslizante({ relogio, rotulo }: { relogio: Relogio; rotulo: ReactNode }) {
-  const id = useId();
-  return (
-    <div className="flex items-center gap-3">
-      <label htmlFor={id} className="type-meta text-muted-foreground whitespace-nowrap">{rotulo}</label>
-      <input
-        id={id} type="range" min={relogio.inicio} max={relogio.fim} step={relogio.continuo ? 0.01 : 1} value={relogio.t}
-        onChange={(e) => relogio.ir(Number(e.target.value))}
-        className="deslizante flex-1"
-        style={{ ['--progresso' as string]: `${((relogio.t - relogio.inicio) / (relogio.fim - relogio.inicio || 1)) * 100}%` }}
-      />
-    </div>
-  );
+/* Toca sozinho quando o desenho aparece na tela, uma vez. Sem deslizante nem
+   "Mais 1": o Pablo não usava e só enchia a tela (07/10/2026). Sob
+   reduced-motion o desenho já nasce no fim, sem animar. */
+export function useTocarAoVer(relogio: Relogio) {
+  const ref = useRef<HTMLDivElement>(null);
+  const visto = useInView(ref, { once: true, amount: 0.4 });
+  const reduzir = useReducedMotion();
+  const tocar = useRef(relogio.tocar);
+  const ir = useRef(relogio.ir);
+  tocar.current = relogio.tocar;
+  ir.current = relogio.ir;
+  useEffect(() => {
+    if (!visto) return;
+    if (reduzir) ir.current(relogio.fim);
+    else tocar.current();
+  }, [visto, reduzir, relogio.fim]);
+  return ref;
 }
-
 const BOTAO = 'inline-flex items-center gap-1.5 px-3 py-2 rounded-[var(--radius-control)] type-meta font-medium t-colors disabled:opacity-40';
-
-export function Controles({ relogio, tocar = 'Ver andando', passo }: { relogio: Relogio; tocar?: string; passo: string }) {
+export function Controles({ relogio }: { relogio: Relogio }) {
   return (
-    <div className="flex flex-wrap gap-2">
-      <button type="button" onClick={relogio.tocar} disabled={relogio.andando} className={`${BOTAO} bg-primary text-primary-foreground hover:opacity-90`}>
-        <Play className="w-4 h-4" /> {tocar}
-      </button>
-      <button type="button" onClick={relogio.avancar} disabled={relogio.terminou || relogio.andando} className={`${BOTAO} bg-muted hover:bg-muted/80`}>
-        <StepForward className="w-4 h-4" /> {passo}
-      </button>
-      <button type="button" onClick={relogio.recomecar} disabled={relogio.t === relogio.inicio && !relogio.andando} className={`${BOTAO} bg-muted hover:bg-muted/80`}>
-        <RotateCcw className="w-4 h-4" /> Recomeçar
-      </button>
-    </div>
+    <button type="button" onClick={relogio.tocar} disabled={relogio.andando} className={`${BOTAO} bg-muted hover:bg-muted/80`}>
+      <RotateCcw className="w-4 h-4" /> Ver de novo
+    </button>
   );
 }

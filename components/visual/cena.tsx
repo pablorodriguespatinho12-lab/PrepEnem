@@ -1,15 +1,16 @@
 'use client';
 // Cena com relógio: cada veículo anda pela própria função. x é o tempo e f(x)
-// é onde ele está (ou, na vela, quanto ela mede). O gráfico fica embaixo e
-// anda junto, para a fórmula virar uma coisa que se vê (pedido do Pablo,
-// 06/10/2026). Só transform na animação: roda no compositor.
+// é onde ele está (ou, na vela, quanto ela mede). Ordem (Pablo, 07/10/2026):
+// a equação grande com o que cada pedaço é, o objeto andando e o plano
+// cartesiano inteiro se desenhando junto. Toca sozinha ao aparecer.
+// Só transform na animação: roda no compositor.
 
 import { useMemo } from 'react';
 import { ehVertical, type CorVisual, type Veiculo, type VisualCena, type VisualGrafico } from '@/lib/visual/especificacao';
 import { exprParaLatex, numeroLatex, tentarCompilar } from '@/lib/visual/expressao';
 import { faixaDaCena, marcas, taxaNoInstante } from '@/lib/visual/geometria';
 import { Grafico, Latex, corDe } from './grafico';
-import { Controles, Deslizante, useRelogio } from './relogio';
+import { Controles, useRelogio, useTocarAoVer } from './relogio';
 
 const ALTURA_PISTA = 220;
 const CORES = ['a', 'b', 'c'] as const;
@@ -19,12 +20,6 @@ const CORES = ['a', 'b', 'c'] as const;
 const NOME_EIXO_Y: Record<Veiculo, string> = { carro: 'posição', moto: 'posição', bola: 'altura', balao: 'altura', vela: 'tamanho' };
 const NOME: Record<Veiculo, string> = { carro: 'carro', moto: 'moto', bola: 'bola', balao: 'balão', vela: 'vela' };
 const numero = (n: number) => n.toLocaleString('pt-BR', { maximumFractionDigits: 2 });
-
-function frase(veiculo: Veiculo, unidade: string): string {
-  if (veiculo === 'bola' || veiculo === 'balao') return `${veiculo === 'bola' ? 'a bola' : 'o balão'} está a esta altura:`;
-  if (veiculo === 'vela') return 'a vela mede:';
-  return `${veiculo === 'moto' ? 'a' : 'o'} ${NOME[veiculo]} está no ${unidade}`;
-}
 
 /* Desenhos de traço no estilo dos ícones do app. */
 const TRACO = { fill: 'none', stroke: 'currentColor', strokeWidth: 2, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
@@ -73,7 +68,7 @@ function PistaHorizontal({ posicoes, pct, faixa, unidade }: {
   posicoes: Posicao[]; pct: (v: number) => number; faixa: [number, number]; unidade: string;
 }) {
   return (
-    <div className="px-6">
+    <div className="px-6 overflow-hidden">
       {posicoes.map((w) => (
         <div key={w.nome} className="relative h-10 border-b-2 border-dashed border-border">
           <div className="absolute inset-x-0 bottom-0" style={{ transform: `translateX(${pct(w.valor)}%)` }}>
@@ -133,13 +128,54 @@ function pontosDoGrafico(v: VisualCena, t: number, fns: ((x: number) => number)[
   const instantes = v.rastro ? (Number.isInteger(t) ? inteiros : [...inteiros, t]) : [t];
   return v.veiculos.flatMap((w, i) => instantes.map((x) => ({ x, y: fns[i](x), cor: w.cor ?? CORES[i % 3] as CorVisual })));
 }
-
+/* O plano vai um pouco além da cena para a esquerda e para baixo, para os
+   quatro lados do zero aparecerem (Pablo, 07/10/2026). */
+const SOBRA = 0.3;
+function plano(x: [number, number], faixa: [number, number]): { x: [number, number]; y: [number, number] } {
+  const passoY = (() => { const m = marcas(faixa, 6); return m.length > 1 ? m[1] - m[0] : 1; })();
+  const recuoX = Math.max(1, Math.ceil((x[1] - x[0]) * SOBRA));
+  const recuoY = passoY * Math.max(1, Math.round(((faixa[1] - faixa[0]) * SOBRA) / passoY));
+  return {
+    x: [Math.min(x[0], -recuoX), x[1]],
+    y: [Math.min(faixa[0], -recuoY), faixa[1]],
+  };
+}
+/* A equação grande e, embaixo, o que cada pedaço dela é, em poucas linhas
+   (Pablo, 07/10/2026: "deixa ela bem grande e um textinho bem pequeno"). */
+function Equacao({ v, cores, ux, uy }: { v: VisualCena; cores: string[]; ux: string; uy: string }) {
+  const nomeY = NOME_EIXO_Y[v.veiculos[0].veiculo];
+  const legenda = v.legenda ?? [
+    { termo: 'x', diz: `o tempo (${ux})` },
+    ...v.veiculos.map((w) => ({ termo: `${w.nome}(x)`, diz: `${nomeY} ${v.veiculos.length > 1 ? `d${w.veiculo === 'moto' ? 'a' : 'o'} ${NOME[w.veiculo]} ` : ''}(${uy})` })),
+  ];
+  return (
+    <div className="space-y-3">
+      <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
+        {v.veiculos.map((w, i) => (
+          <div key={w.nome} className="inline-flex items-center gap-3">
+            <span style={{ color: cores[i] }}><Glifo veiculo={w.veiculo} /></span>
+            <span className="text-2xl sm:text-4xl leading-none whitespace-nowrap"><Latex fonte={`${w.nome}(x) = ${exprParaLatex(w.expr)}`} /></span>
+          </div>
+        ))}
+      </div>
+      <ul className="type-meta text-muted-foreground space-y-0.5">
+        {legenda.map((l) => (
+          <li key={l.termo + l.diz}>
+            <span className="text-foreground font-semibold"><Latex fonte={l.termo} /></span>
+            <span> → {l.diz}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 export function Cena({ v }: { v: VisualCena }) {
   const relogio = useRelogio(v.x);
+  const aoVer = useTocarAoVer(relogio);
   const { t } = relogio;
   const fns = useMemo(() => v.veiculos.map((w) => tentarCompilar(w.expr) ?? (() => NaN)), [v]);
   const faixa = useMemo(() => faixaDaCena(fns, v.x), [fns, v.x]);
-
+  const area = useMemo(() => plano(v.x, faixa), [v.x, faixa]);
   const pct = (valor: number) => Math.max(0, Math.min(100, ((valor - faixa[0]) / (faixa[1] - faixa[0])) * 100));
   const posicoes: Posicao[] = v.veiculos.map((w, i) => ({ veiculo: w.veiculo, nome: w.nome, cor: corDe(w.cor, i), valor: fns[i](t) }));
   const juntos = posicoes.length === 2 && Math.abs(posicoes[0].valor - posicoes[1].valor) < (faixa[1] - faixa[0]) * 0.005;
@@ -148,46 +184,31 @@ export function Cena({ v }: { v: VisualCena }) {
   const uy = v.unidadeY ?? 'km';
   const grafico: VisualGrafico = {
     tipo: 'grafico',
-    x: v.x,
-    y: faixa,
+    x: area.x,
+    y: area.y,
     funcoes: v.veiculos.map((w) => ({ expr: w.expr, rotulo: `${w.nome}(x)`, cor: w.cor })),
     pontos: pontosDoGrafico(v, t, fns),
   };
   const Pista = vertical ? PistaVertical : PistaHorizontal;
-
   return (
-    <div className="space-y-4">
-      <div className="flex flex-wrap gap-x-6 gap-y-1 type-body">
-        {v.veiculos.map((w, i) => (
-          <span key={w.nome} className="inline-flex items-baseline gap-2">
-            <strong style={{ color: posicoes[i].cor }}>{w.rotulo ?? NOME[w.veiculo]}</strong>
-            <Latex fonte={`${w.nome}(x) = ${exprParaLatex(w.expr)}`} />
-          </span>
-        ))}
-      </div>
-
-      <Deslizante relogio={relogio} rotulo={<span data-numeric className="font-semibold text-foreground">x = {numero(t)} {ux}</span>} />
+    <div ref={aoVer} className="space-y-5">
+      <Equacao v={v} cores={posicoes.map((w) => w.cor)} ux={ux} uy={uy} />
       <Pista posicoes={posicoes} pct={pct} faixa={faixa} unidade={uy} />
-
-      <div className="space-y-1 type-body" aria-live="polite">
-        {posicoes.map((w) => (
-          <p key={w.nome}>
-            <Latex fonte={`${w.nome}(${numeroLatex(t)}) = ${numeroLatex(w.valor)}`} />
-            <span className="text-muted-foreground"> → {frase(w.veiculo, uy)} </span>
-            <strong data-numeric style={{ color: w.cor }}>{numero(w.valor)}{vertical ? ` ${uy}` : ''}</strong>
-            {v.velocimetro && (
-              <span className="text-muted-foreground">
-                {' '}· velocímetro: <strong data-numeric className="text-foreground">{numero(taxaNoInstante(fns[posicoes.indexOf(w)], t))} {uy}/{ux}</strong>
-              </span>
-            )}
-          </p>
-        ))}
-        {juntos && <p className="font-semibold">Mesmo lugar: aqui os dois se encontram.</p>}
-      </div>
-
-      <Controles relogio={relogio} passo={`Mais 1 ${ux}`} />
-      <div>
-        <Grafico v={grafico} ateX={t} nomes={{ x: `x: tempo (${ux})`, y: `y: ${NOME_EIXO_Y[v.veiculos[0].veiculo]} (${uy})` }} />
+      <Grafico v={grafico} ateX={t} deX={v.x[0]} plano nomes={{ x: `x (${ux})`, y: `y (${uy})` }} />
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="type-meta text-muted-foreground space-y-0.5" aria-live="polite">
+          {posicoes.map((w) => (
+            <p key={w.nome}>
+              <Latex fonte={`${w.nome}(${numeroLatex(t)}) =`} />
+              <strong data-numeric style={{ color: w.cor }}> {numero(w.valor)} {uy}</strong>
+              {v.velocimetro && (
+                <span> · velocímetro <strong data-numeric className="text-foreground">{numero(taxaNoInstante(fns[posicoes.indexOf(w)], t))} {uy}/{ux}</strong></span>
+              )}
+            </p>
+          ))}
+          {juntos && <p className="font-semibold text-foreground">Aqui os dois se encontram.</p>}
+        </div>
+        <Controles relogio={relogio} />
       </div>
     </div>
   );

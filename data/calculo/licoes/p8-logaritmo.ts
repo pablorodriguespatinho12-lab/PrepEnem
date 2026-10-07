@@ -11,6 +11,7 @@ export const P8_LOGARITMO: ConteudoLicao = {
       texto: 'Ande o relógio e pare quando o balão chegar a 32 m: minuto 5. Na lição anterior, você sabia o minuto e queria a altura. Aqui você sabe a altura e quer o minuto. O **logaritmo** responde essa pergunta: $\\log_2 32 = 5$, porque $2^5 = 32$.',
       visual: {
         tipo: 'cena', titulo: 'Quantos minutos até 32 m?', x: [0, 5], unidadeX: 'min', unidadeY: 'm', rastro: true,
+        legenda: [{ termo: 'x', diz: 'os minutos: é isso que o log responde' }, { termo: '2^x', diz: 'a altura dobra a cada minuto' }, { termo: 'b(x)', diz: 'a altura (m)' }],
         veiculos: [{ veiculo: 'balao', nome: 'b', expr: '2^x', cor: 'a' }],
       },
     },

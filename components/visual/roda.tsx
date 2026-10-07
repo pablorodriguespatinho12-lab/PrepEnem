@@ -7,7 +7,7 @@
 import type { VisualGrafico, VisualRoda } from '@/lib/visual/especificacao';
 import { numeroLatex } from '@/lib/visual/expressao';
 import { Grafico, Latex, COR, EIXO } from './grafico';
-import { Controles, Deslizante, useRelogio } from './relogio';
+import { Controles, useRelogio, useTocarAoVer } from './relogio';
 
 const R = 110; // raio do desenho, em px
 const MARGEM = 34;
@@ -83,7 +83,6 @@ export function Roda({ v }: { v: VisualRoda }) {
   const { graus, cos, sen, altura } = geometria(v, t);
   const gigante = v.centro !== 0 || v.raio !== 1;
   const u = v.unidade ?? 'm';
-  const passoGraus = 360 / v.divisoes;
   const valor = (k: number) => geometria(v, k).altura;
   // Pontos nos ângulos inteiros já passados e o de agora; a curva vai sendo desenhada junto.
   const ate = [...Array.from({ length: Math.floor(t) + 1 }, (_, k) => k), ...(Number.isInteger(t) ? [] : [t])];
@@ -96,9 +95,9 @@ export function Roda({ v }: { v: VisualRoda }) {
     pontos: ate.map((k) => ({ x: (k * 2 * Math.PI) / v.divisoes, y: valor(k), cor: 'b' as const })),
   };
 
+  const aoVer = useTocarAoVer(relogio);
   return (
-    <div className="space-y-4">
-      <Deslizante relogio={relogio} rotulo={<span data-numeric className="font-semibold text-foreground">θ = {numero(graus)}°</span>} />
+    <div ref={aoVer} className="space-y-4">
       {gigante ? <RodaGigante v={v} k={t} /> : <Circulo v={v} k={t} />}
       <div className="space-y-1 type-body" aria-live="polite">
         {gigante ? (
@@ -121,7 +120,7 @@ export function Roda({ v }: { v: VisualRoda }) {
           </>
         )}
       </div>
-      <Controles relogio={relogio} tocar="Girar" passo={`Mais ${numero(passoGraus)}°`} />
+      <Controles relogio={relogio} />
       {v.grafico && (
         <div>
           <Grafico v={grafico} ateX={thetaAgora} nomes={{ x: 'x: ângulo (rad)', y: gigante ? `y: altura (${u})` : 'y: sen x' }} />

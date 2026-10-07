@@ -58,6 +58,17 @@ describe('validarVisual', () => {
     expect(v).toMatchObject({ tipo: 'cena', x: [0, 4], veiculos: [{ veiculo: 'carro', nome: 'f' }, { veiculo: 'moto', nome: 'g' }] });
     expect(v && v.tipo === 'cena' && v.veiculos).toHaveLength(2);
   });
+  test('cena: legenda fica com até 4 linhas e descarta linha sem termo ou sem texto', () => {
+    const v = validarVisual({
+      tipo: 'cena', x: [0, 4],
+      legenda: [{ termo: 'x', diz: 'os minutos' }, { termo: '5' }, { diz: 'solto' }, ...Array(5).fill({ termo: '2', diz: 'onde começa' })],
+      veiculos: [{ veiculo: 'carro', expr: '5*x+2' }],
+    });
+    expect(v && v.tipo === 'cena' && v.legenda).toEqual([
+      { termo: 'x', diz: 'os minutos' }, { termo: '2', diz: 'onde começa' }, { termo: '2', diz: 'onde começa' }, { termo: '2', diz: 'onde começa' },
+    ]);
+  });
+
   test('cena: bola e vela andam na vertical; veículo de outra direção sai', () => {
     const v = validarVisual({
       tipo: 'cena', x: [0, 4], rastro: true,

@@ -11,6 +11,7 @@ export const C12_TEOREMA_FUNDAMENTAL: ConteudoLicao = {
       texto: 'O hodômetro do carro conta os km rodados; o velocímetro mostra a velocidade. Ande o relógio: o velocímetro é a derivada do hodômetro, porque $\\left(\\frac{t^3}{3}\\right)\' = t^2$. E o hodômetro é a soma das fatias do velocímetro, a área acumulada. Uma operação desfaz a outra.',
       visual: {
         tipo: 'cena', titulo: 'Hodômetro t³/3, velocímetro t²', x: [0, 3], unidadeX: 'min', unidadeY: 'km', velocimetro: true,
+        legenda: [{ termo: 'x', diz: 'os minutos' }, { termo: 's(x)', diz: 'o hodômetro: km rodados' }, { termo: '\\text{velocímetro}', diz: 'x²' }],
         veiculos: [{ veiculo: 'carro', nome: 's', expr: 'x^3/3', cor: 'a' }],
       },
     },

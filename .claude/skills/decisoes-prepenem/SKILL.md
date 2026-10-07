@@ -208,7 +208,12 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   cerca de 20 m com o retângulo sem faixas (`faixas: false`) e a caixa (otimização, c10),
   desenho `fatias`: retângulos que afinam sob a velocidade (integral, c11), hodômetro
   e velocímetro como operações inversas (Teorema Fundamental, c12). Lição nova
-  nasce com cena. O x é o relógio, nunca "o carro".
+  nasce com cena.
+- **Tela da cena (Pablo, 07/10/2026: "eu quero algo visual mesmo"):** equação
+  grande no topo, embaixo 2 a 4 linhas curtas do que cada pedaço é (`legenda`,
+  "5 → km por minuto"), o objeto andando e o plano cartesiano inteiro, com os
+  quatro lados do zero e seta nos eixos. Toca sozinha; sem deslizante. O texto
+  do passo vem embaixo e tem 1 ou 2 frases. Lição nova escreve a `legenda`. O x é o relógio, nunca "o carro".
 - Antes de commitar lição nova: os testes de `data/calculo` (inclusive: nenhuma
   lacuna nem gabarito pode ser alterado pelo validador; decimal no fim da
   resolução vai fora do `$`, "que dá 0,78", porque `0{,}78` não é lido; validador e

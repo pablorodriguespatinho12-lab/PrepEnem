@@ -11,6 +11,7 @@ export const C8_EXP_LOG_TRIG: ConteudoLicao = {
       texto: 'Ande o relógio e compare os dois números da linha: o km e o velocímetro. São sempre iguais. Quanto mais longe o carro está, mais rápido anda, na mesma medida. Esse carro anda pela regra $e^x$.',
       visual: {
         tipo: 'cena', titulo: 'Posição e velocímetro iguais: s(x) = eˣ', x: [0, 4], unidadeX: 'min', unidadeY: 'km', velocimetro: true,
+        legenda: [{ termo: 'x', diz: 'os minutos' }, { termo: 'e^x', diz: 'os km e também o velocímetro' }],
         veiculos: [{ veiculo: 'carro', nome: 's', expr: 'e^x', cor: 'a' }],
       },
     },

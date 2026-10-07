@@ -11,6 +11,7 @@ export const C3_LIMITE_INFINITO: ConteudoLicao = {
       texto: 'Um balão perde metade da altura a cada minuto: 80 m, 40, 20, 10... Ande o relógio. Ele desce cada vez mais devagar e chega tão perto do chão quanto se quiser, mas pela regra nunca encosta. Para onde ele vai, com o tempo indo para o infinito? Para 0.',
       visual: {
         tipo: 'cena', titulo: 'Metade da altura a cada minuto', x: [0, 8], unidadeX: 'min', unidadeY: 'm', rastro: true,
+        legenda: [{ termo: 'x', diz: 'os minutos' }, { termo: '80', diz: 'a altura no começo (m)' }, { termo: '0{,}5^x', diz: 'a metade a cada minuto' }],
         veiculos: [{ veiculo: 'balao', nome: 'b', expr: '80*0.5^x', cor: 'a' }],
       },
     },
@@ -37,6 +38,7 @@ export const C3_LIMITE_INFINITO: ConteudoLicao = {
       texto: 'Uma corrida: o carro anda pela regra $x^3$ e a moto por $2^x$. No começo o carro dispara: no minuto 5, 125 contra 32. Ande até o minuto 10: a moto passa, 1024 contra 1000. A exponencial sempre acaba ganhando de qualquer potência de $x$, porque multiplica a cada passo.',
       visual: {
         tipo: 'cena', titulo: 'Carro x³ contra moto 2ˣ', x: [0, 10], unidadeX: 'min', unidadeY: 'km',
+        legenda: [{ termo: 'x', diz: 'os minutos' }, { termo: 'x^3', diz: 'o carro' }, { termo: '2^x', diz: 'a moto, que dobra a cada minuto' }],
         veiculos: [
           { veiculo: 'carro', nome: 'f', expr: 'x^3', cor: 'a' },
           { veiculo: 'moto', nome: 'g', expr: '2^x', cor: 'b' },

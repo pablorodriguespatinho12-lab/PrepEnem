@@ -11,6 +11,7 @@ export const C1_LIMITE: ConteudoLicao = {
       texto: 'A cada minuto, o carro anda metade do que falta até o pedágio, no km 10: vai para 5, 7,5, 8,75... Ele chega tão perto quanto se quiser, mas a regra nunca o põe no km 10. Mesmo assim, todo mundo sabe dizer para onde ele vai: o km 10. Dizer "para onde vai" sem precisar chegar é a ideia de **limite**.',
       visual: {
         tipo: 'cena', titulo: 'Metade do que falta, a cada minuto', x: [0, 6], unidadeX: 'min', unidadeY: 'km', rastro: true,
+        legenda: [{ termo: 'x', diz: 'os minutos' }, { termo: '10', diz: 'o pedágio, no km 10' }, { termo: '0{,}5^x', diz: 'o que falta cai pela metade a cada minuto' }],
         veiculos: [{ veiculo: 'carro', nome: 'p', expr: '10-10*0.5^x', cor: 'a' }],
       },
     },

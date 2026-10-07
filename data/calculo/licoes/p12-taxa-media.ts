@@ -11,6 +11,7 @@ export const P12_TAXA_MEDIA: ConteudoLicao = {
       texto: 'Um carro sai parado e vai acelerando: depois de $x$ minutos, ele está no km $x^2$. Ande o relógio. No primeiro minuto ele anda 1 km, no segundo 3, no terceiro 5: cada minuto anda mais que o anterior. Então, qual é a velocidade dele?',
       visual: {
         tipo: 'cena', titulo: 'Cada minuto anda mais que o anterior', x: [0, 5], unidadeX: 'min', unidadeY: 'km', rastro: true,
+        legenda: [{ termo: 'x', diz: 'os minutos' }, { termo: 'x^2', diz: 'os km: cada minuto anda mais que o anterior' }],
         veiculos: [{ veiculo: 'carro', nome: 's', expr: 'x^2', cor: 'a' }],
       },
     },

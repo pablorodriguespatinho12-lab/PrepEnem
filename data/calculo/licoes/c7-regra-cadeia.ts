@@ -11,6 +11,7 @@ export const C7_REGRA_CADEIA: ConteudoLicao = {
       texto: 'O velocímetro marca 2 km por minuto. O taxímetro transforma km em reais, a 2 reais por km. Então a cada minuto o preço sobe $2\\cdot 2 = 4$ reais. Como engrenagens: a primeira gira 2 vezes mais rápido que o relógio, a segunda gira 2 vezes mais que a primeira, e no fim tudo anda 4 vezes.',
       visual: {
         tipo: 'cena', titulo: 'O táxi: 2 km por minuto', x: [0, 5], unidadeX: 'min', unidadeY: 'km', velocimetro: true,
+        legenda: [{ termo: 'x', diz: 'os minutos' }, { termo: '2', diz: 'km por minuto: o velocímetro' }],
         veiculos: [{ veiculo: 'carro', nome: 'f', expr: '2*x', rotulo: 'táxi', cor: 'a' }],
       },
     },

@@ -11,6 +11,7 @@ export const C11_INTEGRAL: ConteudoLicao = {
       texto: 'Este carro acelera: o velocímetro marca 1, 4, 9 km por minuto nos minutos 1, 2 e 3. Quanto ele andou em 3 minutos? Não dá para fazer velocidade vezes tempo de uma vez, porque a velocidade não para quieta.',
       visual: {
         tipo: 'cena', titulo: 'O velocímetro sobe: v(t) = t²', x: [0, 3], unidadeX: 'min', unidadeY: 'km', velocimetro: true,
+        legenda: [{ termo: 'x', diz: 'os minutos' }, { termo: 's(x)', diz: 'os km rodados' }, { termo: '\\text{velocímetro}', diz: 'x², sempre subindo' }],
         veiculos: [{ veiculo: 'carro', nome: 's', expr: 'x^3/3', cor: 'a' }],
       },
     },

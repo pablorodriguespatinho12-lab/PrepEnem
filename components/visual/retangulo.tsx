@@ -8,7 +8,7 @@ import { useMemo } from 'react';
 import type { VisualRetangulo } from '@/lib/visual/especificacao';
 import { numeroLatex, tentarCompilar } from '@/lib/visual/expressao';
 import { COR, EIXO, Latex } from './grafico';
-import { Controles, Deslizante, useRelogio } from './relogio';
+import { Controles, useRelogio, useTocarAoVer } from './relogio';
 
 const LARGURA = 320;
 const ALTURA = 240;
@@ -43,10 +43,10 @@ export function Retangulo({ v }: { v: VisualRetangulo }) {
   const faixaLado = a0 * (b1 - b0);
   const canto = (b1 - b0) * (a1 - a0);
 
+  const aoVer = useTocarAoVer(relogio);
   return (
-    <div className="space-y-4">
+    <div ref={aoVer} className="space-y-4">
       {/* Com faixas, o retângulo cresce com o tempo (c6); sem, a base é uma escolha (cerca, c10). */}
-      <Deslizante relogio={relogio} rotulo={<span data-numeric className="font-semibold text-foreground">{v.faixas ? 't' : 'x'} = {numero(t)}</span>} />
       <svg viewBox={`0 0 ${LARGURA} ${ALTURA}`} className="w-full max-w-[360px] h-auto mx-auto" role="img" aria-label="Retângulo que cresce nos dois lados">
         <rect x={px(0)} y={py(a0)} width={b0 * escala} height={a0 * escala} fill={COR.a} fillOpacity={0.25} stroke={COR.a} strokeWidth={1.5} />
         {anterior && (
@@ -76,7 +76,7 @@ export function Retangulo({ v }: { v: VisualRetangulo }) {
           </p>
         )}
       </div>
-      <Controles relogio={relogio} tocar={v.faixas ? 'Crescer' : 'Ver variando'} passo="Mais 1" />
+      <Controles relogio={relogio} />
     </div>
   );
 }

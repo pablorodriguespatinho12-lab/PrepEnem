@@ -11,6 +11,7 @@ export const P6_POTENCIAS: ConteudoLicao = {
       texto: 'Um balão sobe de um jeito estranho: a cada minuto, a altura **dobra**. Começa a 1 m, depois 2, 4, 8, 16, 32. No começo parece parado; no fim, dispara. A regra é $b(x) = 2^x$: o 2 multiplicado por ele mesmo $x$ vezes. Olhe o rastro: não é reta, porque a reta muda sempre o mesmo tanto. Crescer multiplicando é a marca das **potências**.',
       visual: {
         tipo: 'cena', titulo: 'A altura dobra a cada minuto', x: [0, 5], unidadeX: 'min', unidadeY: 'm', rastro: true,
+        legenda: [{ termo: 'x', diz: 'os minutos' }, { termo: '2^x', diz: 'a altura dobra a cada minuto' }, { termo: 'b(x)', diz: 'a altura (m)' }],
         veiculos: [{ veiculo: 'balao', nome: 'b', expr: '2^x', cor: 'a' }],
       },
     },

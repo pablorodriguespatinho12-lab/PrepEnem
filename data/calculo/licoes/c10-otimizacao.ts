@@ -7,7 +7,7 @@ export const C10_OTIMIZACAO: ConteudoLicao = {
   },
   construcao: [
     {
-      titulo: 'Mexa na cerca',
+      titulo: 'A cerca mudando de forma',
       texto: 'A cerca tem sempre 20 m. Mova o controle: a base cresce e a altura encolhe, porque a cerca não estica. A área sobe, chega a 25 m² no quadrado 5 por 5 e depois desce.',
       visual: { tipo: 'retangulo', titulo: '20 m de cerca: base x, altura 10 − x', x: [0, 10], base: 'x', altura: '10-x', unidade: 'm', faixas: false },
     },

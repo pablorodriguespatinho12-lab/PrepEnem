@@ -11,6 +11,7 @@ export const C9_SUBIR_DESCER: ConteudoLicao = {
       texto: 'Ande o relógio e olhe o velocímetro: 20, 10, 0, −10, −20. Positivo: a bola sobe. Negativo: desce. Bem no meio, em 2 segundos, ele marca 0. É o topo.',
       visual: {
         tipo: 'cena', titulo: 'A bola e o velocímetro: h(t) = 20t − 5t²', x: [0, 4], unidadeX: 's', unidadeY: 'm', rastro: true, velocimetro: true,
+        legenda: [{ termo: 'x', diz: 'os segundos' }, { termo: 'h(x)', diz: 'a altura (m)' }, { termo: '\\text{velocímetro}', diz: 'marca zero lá no topo' }],
         veiculos: [{ veiculo: 'bola', nome: 'h', expr: '20*x-5*x^2', cor: 'a' }],
       },
     },

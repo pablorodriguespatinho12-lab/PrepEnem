@@ -11,6 +11,7 @@ export const P11_COMPOSICAO_INVERSA: ConteudoLicao = {
       texto: 'Primeira máquina: o relógio vira km, $f(t) = 2t$. Segunda máquina: o km vira preço, $g(k) = 5 + 2k$. Ande o relógio e, a cada minuto, jogue o km da tela no taxímetro. Em 3 minutos, o táxi está no km 6, e o preço é $5 + 2\\cdot 6 = 17$.',
       visual: {
         tipo: 'cena', titulo: 'O táxi anda; o taxímetro lê o km', x: [0, 5], unidadeX: 'min', unidadeY: 'km',
+        legenda: [{ termo: 'x', diz: 'os minutos' }, { termo: '2', diz: 'km por minuto' }, { termo: 'f(x)', diz: 'os km rodados' }],
         veiculos: [{ veiculo: 'carro', nome: 'f', expr: '2*x', rotulo: 'táxi', cor: 'a' }],
       },
     },

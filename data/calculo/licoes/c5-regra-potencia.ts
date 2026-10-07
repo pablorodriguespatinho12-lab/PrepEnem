@@ -11,6 +11,7 @@ export const C5_REGRA_POTENCIA: ConteudoLicao = {
       texto: 'Agora o carro está no km $x^3$. Ande minuto a minuto e anote o velocímetro: 3, 12, 27. Esses números são $3\\cdot 1^2$, $3\\cdot 2^2$ e $3\\cdot 3^2$. A velocidade é $3x^2$, como o padrão previa.',
       visual: {
         tipo: 'cena', titulo: 'Anote o velocímetro: s(x) = x³', x: [0, 4], unidadeX: 'min', unidadeY: 'km', velocimetro: true,
+        legenda: [{ termo: 'x', diz: 'os minutos' }, { termo: 's(x)', diz: 'os km' }, { termo: '\\text{velocímetro}', diz: 'anote: 3, 12, 27...' }],
         veiculos: [{ veiculo: 'carro', nome: 's', expr: 'x^3', cor: 'a' }],
       },
     },

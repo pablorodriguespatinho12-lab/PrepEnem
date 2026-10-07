@@ -68,6 +68,9 @@ export interface VisualCena {
   rastro?: boolean;
   /* Mostra a velocidade no instante (a derivada) ao lado da posição: c4 em diante. */
   velocimetro?: boolean;
+  /* O que cada pedaço da equação é, em 2 a 4 linhas curtas embaixo dela
+     ("5 → km por minuto"). Sem legenda, mostra o que x e f(x) medem. */
+  legenda?: { termo: string; diz: string }[];
   veiculos: { veiculo: Veiculo; nome: string; expr: string; rotulo?: string; cor?: CorVisual }[];
 }
 /* Ponto girando num círculo: o cosseno é a sombra no chão, o seno é a altura
@@ -207,6 +210,14 @@ function aparar(x: [number, number], veiculos: VisualCena['veiculos']): [number,
   for (let t = x[0] + 1; t <= x[1] && fns.some((f) => f(t) >= 0); t++) fim = t;
   return fim > x[0] ? [x[0], fim] : x;
 }
+const MAX_LEGENDA = 4;
+function legenda(v: unknown): VisualCena['legenda'] {
+  const itens = lista(v).map(objeto)
+    .map((l) => ({ termo: texto(l.termo, 20), diz: texto(l.diz, 50) }))
+    .filter((l): l is { termo: string; diz: string } => !!l.termo && !!l.diz)
+    .slice(0, MAX_LEGENDA);
+  return itens.length > 0 ? itens : undefined;
+}
 function cena(v: Record<string, unknown>): VisualCena | null {
   const x = intervalo(v.x);
   if (!x || !Number.isInteger(x[0]) || !Number.isInteger(x[1]) || x[1] - x[0] > MAX_MINUTOS) return null;
@@ -228,7 +239,7 @@ function cena(v: Record<string, unknown>): VisualCena | null {
       cor: cor(w.cor),
     }));
   if (veiculos.length === 0) return null;
-  return { tipo: 'cena', titulo: texto(v.titulo), x: aparar(x, veiculos), unidadeX: texto(v.unidadeX, 12), unidadeY: texto(v.unidadeY, 12), rastro: v.rastro === true, velocimetro: v.velocimetro === true, veiculos };
+  return { tipo: 'cena', titulo: texto(v.titulo), x: aparar(x, veiculos), unidadeX: texto(v.unidadeX, 12), unidadeY: texto(v.unidadeY, 12), rastro: v.rastro === true, velocimetro: v.velocimetro === true, legenda: legenda(v.legenda), veiculos };
 }
 const DIVISOES = [4, 24] as const;
 const MAX_VOLTAS = 3;

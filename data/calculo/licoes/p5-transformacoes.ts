@@ -23,9 +23,10 @@ export const P5_TRANSFORMACOES: ConteudoLicao = {
     },
     {
       titulo: 'A moto que vem 2 minutos atrás',
-      texto: 'O carro anda pela regra $f(x) = 5x$. A moto faz exatamente o mesmo caminho, só que **2 minutos depois**: onde o carro estava no minuto 0, a moto chega no minuto 2. A regra da moto é $g(x) = f(x - 2) = 5(x - 2)$. Aperte "Ver andando" e compare: $g(2) = f(0)$ e $g(3) = f(1)$. No gráfico, a linha da moto é a do carro empurrada 2 para a **direita**. O "−2" de dentro atrasa, e atrasar no relógio é andar para a direita.',
+      texto: 'O carro anda pela regra $f(x) = 5x$. A moto faz exatamente o mesmo caminho, só que **2 minutos depois**: onde o carro estava no minuto 0, a moto chega no minuto 2. A regra da moto é $g(x) = f(x - 2) = 5(x - 2)$. Compare: $g(2) = f(0)$ e $g(3) = f(1)$. No gráfico, a linha da moto é a do carro empurrada 2 para a **direita**. O "−2" de dentro atrasa, e atrasar no relógio é andar para a direita.',
       visual: {
         tipo: 'cena', titulo: 'Carro f(x) = 5x e moto g(x) = f(x − 2)', x: [0, 6], unidadeX: 'min', unidadeY: 'km',
+        legenda: [{ termo: 'x', diz: 'os minutos' }, { termo: '5', diz: 'km por minuto, igual para os dois' }, { termo: 'x - 2', diz: 'a moto sai 2 minutos depois' }],
         veiculos: [
           { veiculo: 'carro', nome: 'f', expr: '5*x', cor: 'a' },
           { veiculo: 'moto', nome: 'g', expr: '5*(x-2)', cor: 'b' },
