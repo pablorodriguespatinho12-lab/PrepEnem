@@ -23,7 +23,9 @@ export async function POST(request: Request) {
     if (!user) return NextResponse.json({ error: 'Usuário não encontrado' }, { status: 404 });
 
     const body = await request.json();
-    const { nome, nivel, materias, totalQuestoes } = body;
+    const { nome, nivel, materias } = body;
+    // Sem limite, "abc" dava take: NaN (500) e 100000 lia o banco inteiro.
+    const totalQuestoes = Math.min(Math.max(parseInt(String(body.totalQuestoes), 10) || 0, 0), 90);
 
     if (!nome || !nivel || !Array.isArray(materias) || materias.length === 0 || !totalQuestoes) {
       return NextResponse.json({ error: 'Dados incompletos' }, { status: 400 });

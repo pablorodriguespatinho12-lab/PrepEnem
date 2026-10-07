@@ -170,15 +170,22 @@ export default function TreinoPage() {
           setSessionId(s.id);
 
           // Find first unanswered question
-          let restoreIdx = s.currentIdx ?? 0;
-          const answeredQs = loadedQs.filter((q: any) => q.answered);
-          for (let i = restoreIdx; i < loadedQs.length; i++) {
-            if (!loadedQs[i]?.answered) { restoreIdx = i; break; }
+          // Primeira sem resposta, a partir de onde parou e depois do começo.
+          // Sem nenhuma pendente (respondeu a última e fechou), a sessão acabou:
+          // antes reabria uma respondida, que aceitava resposta de novo e
+          // contava o acerto duas vezes.
+          const inicio = s.currentIdx ?? 0;
+          const pendentes = loadedQs.map((q: any, i: number) => (q?.answered ? -1 : i)).filter((i: number) => i >= 0);
+          const restoreIdx = pendentes.find((i: number) => i >= inicio) ?? pendentes[0];
+          if (restoreIdx === undefined) {
+            setCurrentIdx(Math.max(loadedQs.length - 1, 0));
+            setFinished(true);
+            saveSessionProgress(s.id, loadedQs.length - 1, { correct: s.correct ?? 0, wrong: s.wrong ?? 0 }, undefined, undefined, true);
+          } else {
+            setCurrentIdx(restoreIdx);
           }
-
-          setCurrentIdx(restoreIdx);
           setScore({ correct: s.correct ?? 0, wrong: s.wrong ?? 0 });
-          markStudyProgress('em_andamento');
+          markStudyProgress(restoreIdx === undefined ? 'concluido' : 'em_andamento');
           setRestoredSession(true);
           setSessionStarted(true);
           setResumoDismissed(true); // Skip resumo on restore

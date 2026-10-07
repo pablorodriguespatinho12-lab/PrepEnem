@@ -132,10 +132,17 @@ export default function RedacaoPage() {
       try {
         const res = await fetch(`/api/redacao/history?id=${currentEssay.id}`);
         const data = await res.json();
-        if (data?.essay?.status === 'avaliada') {
+        const st = data?.essay?.status;
+        if (st === 'avaliada') {
           setCurrentEssay(data.essay);
           setPolling(false);
           fetchHistory();
+        } else if (st === 'pendente') {
+          // A outra correção falhou e devolveu para "pendente": antes o
+          // polling girava para sempre esperando "avaliada".
+          setPolling(false);
+          setCurrentEssay(data.essay);
+          toast.error('A correção não terminou. Toque em corrigir de novo.');
         }
       } catch (e) { console.error(e); }
     }, 5000);

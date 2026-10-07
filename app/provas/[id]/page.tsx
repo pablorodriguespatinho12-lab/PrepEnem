@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { ChevronLeft, CheckCircle2, XCircle, Trophy, Loader2, ArrowRight, BookOpen, Target, Brain, AlertTriangle, AlertCircle, RefreshCcw, Check, X } from 'lucide-react';
@@ -49,6 +49,26 @@ export default function ProvaDetailPage() {
   useEffect(() => {
     fetchExam();
   }, [fetchExam]);
+  // Todas respondidas mas a prova não fechou: finaliza uma vez só.
+  const finalizando = useRef(false);
+  const semQuestaoAtual = !!exam && exam.status !== 'finalizada' && !exam.questions?.[exam.currentIdx];
+  useEffect(() => {
+    if (!semQuestaoAtual || finalizando.current) return;
+    finalizando.current = true;
+    fetch('/api/provas/finalizar', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ examId }),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error('finalizar');
+        return fetchExam();
+      })
+      .catch(() => {
+        toast.error('Não consegui fechar a prova agora.');
+        router.push('/provas');
+      });
+  }, [semQuestaoAtual, examId, fetchExam, router]);
 
   if (loading) {
     return (
@@ -205,12 +225,8 @@ export default function ProvaDetailPage() {
   const isLast = exam.currentIdx === exam.totalQuestoes - 1;
 
   if (!currentEQ) {
-    // All answered but not finalized? Finalize now
-    fetch('/api/provas/finalizar', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ examId }),
-    }).then(() => fetchExam());
+    // Finalizar mora num efeito com trava (finalizarSemQuestao): chamado aqui
+    // no render, cada re-render disparava outro par de requisições, em laço.
     return (
       <div className="min-h-screen flex items-center justify-center">
         <Loader2 className="w-10 h-10 animate-spin text-primary-text" />
