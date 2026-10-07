@@ -12,7 +12,7 @@ export async function GET() {
       return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
     }
 
-    const user = await prisma.user.findUnique({ where: { username: (session.user as any).username || session.user.email! } });
+    const user = await prisma.user.findUnique({ where: { id: (session.user as any).id } });
     if (!user) return NextResponse.json({ error: 'Usuário não encontrado' }, { status: 404 });
 
     const decks = await prisma.flashcardDeck.findMany({
@@ -69,7 +69,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
     }
 
-    const user = await prisma.user.findUnique({ where: { username: (session.user as any).username || session.user.email! } });
+    const user = await prisma.user.findUnique({ where: { id: (session.user as any).id } });
     if (!user) return NextResponse.json({ error: 'Usuário não encontrado' }, { status: 404 });
 
     const body = await request.json();

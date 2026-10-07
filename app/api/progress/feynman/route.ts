@@ -14,10 +14,12 @@ export async function POST(request: Request) {
     if (!progressId || !explicacaoEstudante) {
       return NextResponse.json({ error: 'Dados incompletos' }, { status: 400 });
     }
-    await prisma.userProgress.update({
-      where: { id: progressId },
-      data: { explicacaoEstudante },
+    // Só o dono escreve: antes qualquer conta sobrescrevia pelo id.
+    const { count } = await prisma.userProgress.updateMany({
+      where: { id: progressId, userId: (session.user as any).id },
+      data: { explicacaoEstudante: String(explicacaoEstudante).slice(0, 4000) },
     });
+    if (count === 0) return NextResponse.json({ error: 'Resposta não encontrada' }, { status: 404 });
     return NextResponse.json({ success: true });
   } catch (error: any) {
     return NextResponse.json({ error: 'Erro ao salvar explicação' }, { status: 500 });

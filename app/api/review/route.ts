@@ -1,6 +1,7 @@
 export const dynamic = 'force-dynamic';
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
+import { inicioDoDiaBrasil } from '@/lib/dia-brasil';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 
@@ -66,8 +67,7 @@ export async function POST(request: Request) {
       // If correct, schedule next interval (if there is one)
       const nextIdx = currentIdx + 1;
       if (nextIdx < intervals.length) {
-        const nextDate = new Date();
-        nextDate.setDate(nextDate.getDate() + intervals[nextIdx]);
+        const nextDate = inicioDoDiaBrasil(new Date(), intervals[nextIdx]);
         await prisma.reviewSchedule.create({
           data: {
             userId,
@@ -79,8 +79,7 @@ export async function POST(request: Request) {
       }
     } else {
       // If wrong, restart cycle
-      const nextDate = new Date();
-      nextDate.setDate(nextDate.getDate() + 1);
+      const nextDate = inicioDoDiaBrasil(new Date(), 1);
       await prisma.reviewSchedule.create({
         data: {
           userId,

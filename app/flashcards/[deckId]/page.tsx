@@ -1,4 +1,5 @@
 'use client';
+import { useSession } from 'next-auth/react';
 import { useEffect, useState, useCallback, useRef } from 'react';
 import { useRouter, useParams, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence, useReducedMotion, type Variants } from 'framer-motion';
@@ -362,10 +363,13 @@ export default function FlashcardDeckPage() {
   const deckId = params.deckId as string;
   // Deck virtual montado pelo cronograma (api/flashcards/decks/[id]): não se edita nem tem modo.
   const ehDoDia = deckId === 'dia';
+  const { data: sessao } = useSession();
   const initialMode = (searchParams.get('mode') || 'todos') as 'todos' | 'revisar';
   const shouldReduceMotion = useReducedMotion();
 
   const [deck, setDeck] = useState<any>(null);
+  // Baralho padrão é compartilhado: só admin adiciona card (api/flashcards/cards).
+  const podeEditar = !deck?.isDefault || (sessao?.user as any)?.role === 'admin';
   const [cards, setCards] = useState<any[]>([]);
   const [totalCards, setTotalCards] = useState(0);
   const [cardsToRevise, setCardsToRevise] = useState(0);
@@ -547,6 +551,7 @@ export default function FlashcardDeckPage() {
           Revisar erros (<span data-numeric>{cardsToRevise}</span>)
         </button>
         <div className="flex-1" />
+        {podeEditar && <>
         <button
           onClick={() => setShowAddDialog(true)}
           className="px-3 py-2 rounded-[var(--radius-control)] font-medium type-meta bg-[hsl(var(--surface-2))] border border-border hover:bg-muted t-colors flex items-center gap-1.5"
@@ -561,6 +566,7 @@ export default function FlashcardDeckPage() {
           <Sparkles className="w-3.5 h-3.5" />
           Gerar com IA
         </button>
+        </>}
       </div>}
 
       {/* Progress */}

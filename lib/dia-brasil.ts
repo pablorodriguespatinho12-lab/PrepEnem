@@ -26,3 +26,11 @@ export function proximaSequencia(ultimoEstudo: Date | null, sequenciaAtual: numb
   if (diff === 1) return sequenciaAtual + 1;
   return 1;
 }
+
+/* Começo (00h de Brasília) do dia `dias` depois de `agora`. Revisão "amanhã"
+   era agora + 24 h: quem errou às 21h só via às 21h do dia seguinte. Brasil
+   sem horário de verão desde 2019: meia-noite é 03h UTC. */
+export function inicioDoDiaBrasil(agora: Date, dias: number): Date {
+  const meiaNoiteUtc = Date.parse(`${diaNoBrasil(agora)}T00:00:00Z`);
+  return new Date(meiaNoiteUtc + dias * MS_POR_DIA + 3 * 60 * 60 * 1000);
+}

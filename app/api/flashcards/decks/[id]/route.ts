@@ -63,7 +63,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
       return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
     }
 
-    const user = await prisma.user.findUnique({ where: { username: (session.user as any).username || session.user.email! } });
+    const user = await prisma.user.findUnique({ where: { id: (session.user as any).id } });
     if (!user) return NextResponse.json({ error: 'Usuário não encontrado' }, { status: 404 });
 
     if (params.id === DECK_DO_DIA) return NextResponse.json(await deckDoDia(user.id));
@@ -151,7 +151,7 @@ export async function DELETE(request: Request, { params }: { params: { id: strin
       return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
     }
 
-    const user = await prisma.user.findUnique({ where: { username: (session.user as any).username || session.user.email! } });
+    const user = await prisma.user.findUnique({ where: { id: (session.user as any).id } });
     if (!user) return NextResponse.json({ error: 'Usuário não encontrado' }, { status: 404 });
 
     // Only delete if it's user's own deck

@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { diaNoBrasil, diasEntre, proximaSequencia } from './dia-brasil';
+import { diaNoBrasil, diasEntre, inicioDoDiaBrasil, proximaSequencia } from './dia-brasil';
 
 describe('diaNoBrasil', () => {
   test('22h de Brasília ainda é o mesmo dia (em UTC já virou)', () => {
@@ -34,5 +34,16 @@ describe('proximaSequencia', () => {
 
   test('pulou um dia recomeça em 1', () => {
     expect(proximaSequencia(new Date('2026-10-02T12:00:00Z'), 4, agora)).toBe(1);
+  });
+});
+
+describe('inicioDoDiaBrasil', () => {
+  test('erro às 21h de Brasília volta à meia-noite seguinte, não às 21h', () => {
+    // 21h de 06/10 em Brasília = 00h UTC de 07/10
+    expect(inicioDoDiaBrasil(new Date('2026-10-07T00:00:00Z'), 1).toISOString()).toBe('2026-10-07T03:00:00.000Z');
+  });
+
+  test('de manhã conta o dia de Brasília', () => {
+    expect(inicioDoDiaBrasil(new Date('2026-10-07T10:00:00Z'), 3).toISOString()).toBe('2026-10-10T03:00:00.000Z');
   });
 });

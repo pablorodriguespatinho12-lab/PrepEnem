@@ -1,3 +1,4 @@
+import { inicioDoDiaBrasil } from '@/lib/dia-brasil';
 import { describe, expect, test } from 'vitest';
 import { proximoDegrau, registrarLicao, registrarRevisao, revisoesPendentes, situacao, type EstadoDegrau } from './progresso';
 import type { Degrau } from './tipos';
@@ -31,7 +32,7 @@ describe('registrarLicao', () => {
   test('terminar os exercícios conclui, com qualquer número de acertos, e agenda revisão em 2 dias', () => {
     const e = registrarLicao(undefined, 'a', 1, 5, AGORA);
     expect(e.status).toBe('concluida');
-    expect(e.proximaRevisao!.getTime()).toBe(AGORA.getTime() + 2 * DIA);
+    expect(e.proximaRevisao).toEqual(inicioDoDiaBrasil(AGORA, 2));
   });
 
   test('sem exercício nenhum, continua em andamento e sem revisão', () => {
@@ -51,12 +52,12 @@ describe('registrarLicao', () => {
 describe('revisão espaçada', () => {
   test('acertar aumenta o intervalo; errar volta para amanhã', () => {
     const r1 = registrarRevisao(concluida('a'), true, AGORA);
-    expect(r1.proximaRevisao!.getTime()).toBe(AGORA.getTime() + 7 * DIA);
+    expect(r1.proximaRevisao).toEqual(inicioDoDiaBrasil(AGORA, 7));
     const r2 = registrarRevisao(r1, true, AGORA);
-    expect(r2.proximaRevisao!.getTime()).toBe(AGORA.getTime() + 21 * DIA);
+    expect(r2.proximaRevisao).toEqual(inicioDoDiaBrasil(AGORA, 21));
     const errou = registrarRevisao(r2, false, AGORA);
     expect(errou.revisoes).toBe(0);
-    expect(errou.proximaRevisao!.getTime()).toBe(AGORA.getTime() + 1 * DIA);
+    expect(errou.proximaRevisao).toEqual(inicioDoDiaBrasil(AGORA, 1));
   });
 
   test('pendentes são as concluídas com revisão vencida, da mais atrasada para a mais nova', () => {

@@ -22,8 +22,11 @@ export async function POST(req: Request) {
 
     // If custom theme, create an EssayTheme record on the fly
     if (!themeId && customTema) {
-      const newTheme = await prisma.essayTheme.create({
-        data: { tema: customTema.trim(), areaConhecimento: 'Tema Livre' },
+      // `tema` é único no banco: create dava 500 na segunda redação do mesmo tema.
+      const newTheme = await prisma.essayTheme.upsert({
+        where: { tema: customTema.trim() },
+        update: {},
+        create: { tema: customTema.trim(), areaConhecimento: 'Tema Livre' },
       });
       finalThemeId = newTheme.id;
     }

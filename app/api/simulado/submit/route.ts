@@ -63,7 +63,7 @@ export async function POST(req: Request) {
         acertou,
       });
 
-      if (!acertou) {
+      if (!acertou && r.respostaDada) {
         errosParaReforco.push({
           materia: q.materia,
           subtema: q.subtema,
@@ -71,6 +71,8 @@ export async function POST(req: Request) {
         });
       }
 
+      // Em branco não é erro: não vira progresso, revisão nem caderno de erros.
+      if (!r.respostaDada) continue;
       // Save progress
       await prisma.userProgress.create({
         data: {

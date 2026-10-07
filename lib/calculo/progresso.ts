@@ -3,9 +3,9 @@
 // crescentes (Cepeda et al. 2008; Dunlosky et al. 2013); errou, volta cedo.
 
 import type { Degrau } from './tipos';
+import { inicioDoDiaBrasil } from '@/lib/dia-brasil';
 
 export const INTERVALOS_REVISAO_DIAS = [2, 7, 21, 60];
-const DIA_MS = 24 * 60 * 60 * 1000;
 
 export interface EstadoDegrau {
   licaoId: string;
@@ -45,7 +45,7 @@ export function registrarLicao(atual: EstadoDegrau | undefined, licaoId: string,
     acertos: base.acertos + acertos,
     tentativas: base.tentativas + total,
     status: passou || base.status === 'concluida' ? 'concluida' : 'em_andamento',
-    proximaRevisao: concluiAgora ? new Date(agora.getTime() + INTERVALOS_REVISAO_DIAS[0] * DIA_MS) : base.proximaRevisao,
+    proximaRevisao: concluiAgora ? inicioDoDiaBrasil(agora, INTERVALOS_REVISAO_DIAS[0]) : base.proximaRevisao,
   };
 }
 
@@ -60,7 +60,7 @@ export function registrarRevisao(atual: EstadoDegrau, acertou: boolean, agora: D
     revisoes,
     acertos: atual.acertos + (acertou ? 1 : 0),
     tentativas: atual.tentativas + 1,
-    proximaRevisao: new Date(agora.getTime() + dias * DIA_MS),
+    proximaRevisao: inicioDoDiaBrasil(agora, dias),
   };
 }
 
