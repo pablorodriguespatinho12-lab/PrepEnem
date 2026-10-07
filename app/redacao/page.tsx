@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import {
   PenTool, FileText, Clock, CheckCircle2, Loader2, ChevronLeft,
-  Send, BookOpen, History, Star, AlertTriangle, BarChart3, RefreshCcw,
+  Send, BookOpen, History, Star, AlertTriangle, BarChart3,
   Sparkles, Plus
 } from 'lucide-react';
 import { toast } from 'sonner';
@@ -550,55 +550,20 @@ export default function RedacaoPage() {
           </div>
         )}
 
-        {/* Treino por Partes */}
-        <button
-          onClick={() => window.location.href = '/redacao/partes'}
-          className="w-full bg-primary/[0.06] rounded-[var(--radius-surface)] p-5 border border-primary/20 shadow-elev-1 t-lift hover:shadow-elev-2 hover:-translate-y-px text-left mb-6"
-        >
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-[var(--radius-control)] bg-primary/20 flex items-center justify-center flex-shrink-0">
-              <Sparkles className="w-6 h-6 text-primary-text" />
-            </div>
-            <div className="flex-1">
-              <h3 className="font-display type-meta font-semibold">Treino por Partes</h3>
-              <p className="type-meta text-muted-foreground">Pratique Introdução, Desenvolvimento e Conclusão separadamente com feedback da IA</p>
-            </div>
-          </div>
-        </button>
-
-        {/* Action buttons */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-          <button
-            onClick={() => setView('history')}
-            className="surface-1 rounded-[var(--radius-surface)] p-5 t-lift hover:shadow-elev-2 hover:-translate-y-px text-left"
-          >
-            <History className="w-8 h-8 text-primary-text mb-2" />
-            <h3 className="font-display type-meta font-semibold">Histórico</h3>
-            <p className="type-meta text-muted-foreground">Correções anteriores</p>
+        {/* Ferramentas numa linha de links: eram 4 cartões antes dos temas, e
+            "Atualizar" (o polling já atualiza) ganhava um cartão inteiro. */}
+        <nav aria-label="Outras ferramentas de redação" className="flex flex-wrap gap-x-5 gap-y-1 mb-6 type-meta">
+          <a href="/redacao/partes" className="inline-flex items-center gap-1.5 py-2 text-primary-text font-medium hover:underline underline-offset-4">
+            <Sparkles className="w-4 h-4" /> Treino por partes
+          </a>
+          <button onClick={() => setView('history')} className="inline-flex items-center gap-1.5 py-2 text-muted-foreground hover:text-foreground t-colors">
+            <History className="w-4 h-4" /> Histórico
           </button>
-          <button
-            onClick={() => { loadSavedDrafts(); setView('saved'); }}
-            className="surface-1 rounded-[var(--radius-surface)] p-5 t-lift hover:shadow-elev-2 hover:-translate-y-px text-left"
-          >
-            <FileText className="w-8 h-8 text-primary-text mb-2" />
-            <h3 className="font-display type-meta font-semibold flex items-center gap-1.5">
-              Redações Salvas
-              {savedDrafts.length > 0 && (
-                <span data-numeric className="type-caption bg-primary/10 text-primary-text px-1.5 py-0.5 rounded-[var(--radius-data)]">{savedDrafts.length}</span>
-              )}
-            </h3>
-            <p className="type-meta text-muted-foreground">Rascunhos guardados</p>
+          <button onClick={() => { loadSavedDrafts(); setView('saved'); }} className="inline-flex items-center gap-1.5 py-2 text-muted-foreground hover:text-foreground t-colors">
+            <FileText className="w-4 h-4" /> Salvas
+            {savedDrafts.length > 0 && <span data-numeric className="type-caption bg-primary/10 text-primary-text px-1.5 rounded-[var(--radius-data)]">{savedDrafts.length}</span>}
           </button>
-          <button
-            onClick={() => { fetchHistory(); toast.info('Atualizado!'); }}
-            className="surface-1 rounded-[var(--radius-surface)] p-5 t-lift hover:shadow-elev-2 hover:-translate-y-px text-left"
-          >
-            <RefreshCcw className="w-8 h-8 text-primary-text mb-2" />
-            <h3 className="font-display type-meta font-semibold">Atualizar</h3>
-            <p className="type-meta text-muted-foreground">Verificar correções</p>
-          </button>
-        </div>
-
+        </nav>
         {/* Theme selection */}
         <h2 className="font-display type-lead font-semibold mb-3 flex items-center gap-2">
           <BookOpen className="w-5 h-5 text-primary-text" /> Escolha um Tema

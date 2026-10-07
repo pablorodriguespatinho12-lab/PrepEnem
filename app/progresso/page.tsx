@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { BarChart3, Target, BookOpen, PenTool, AlertCircle, FileText, Lightbulb, Search } from 'lucide-react';
@@ -113,6 +114,24 @@ export default function ProgressoPage() {
         })}
       </div>
 
+      {/* Conta nova: a tela era dois zeros e fundo vazio (foto de 07/10/2026). */}
+      {stats && (stats.totalRespondidas ?? 0) < MIN_QUESTOES_PARA_TAXA && (
+        <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-8 max-w-xl flex items-center gap-5">
+          <svg viewBox="0 0 120 60" className="w-28 h-14 flex-shrink-0 text-primary-text" aria-hidden>
+            <line x1="4" y1="56" x2="116" y2="56" stroke="hsl(var(--border))" strokeWidth="2" />
+            <motion.path
+              d="M6 50 L34 42 L60 46 L86 24 L114 10"
+              fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"
+              initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+            />
+          </svg>
+          <div className="min-w-0">
+            <p className="font-display type-lead font-semibold">Sua evolução aparece aqui</p>
+            <p className="type-meta text-muted-foreground mt-1">Responda <span data-numeric>{MIN_QUESTOES_PARA_TAXA}</span> questões e a linha começa a subir.</p>
+            <Link href="/treino" className="inline-block mt-2 py-2 type-meta font-semibold text-primary-text hover:underline underline-offset-4">Começar o treino</Link>
+          </div>
+        </div>
+      )}
       {/* Charts */}
       {stats && <ProgressCharts stats={stats} />}
 

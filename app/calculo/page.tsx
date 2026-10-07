@@ -69,30 +69,45 @@ export default function CalculoPage() {
         )}
       </div>
 
-      {MODULOS.map((m) => (
-        <section key={m} aria-labelledby={`modulo-${m}`}>
-          <h2 id={`modulo-${m}`} className="font-display type-title font-semibold mb-3">{NOME_MODULO[m]}</h2>
-          <ol className="space-y-1 border-l-2 border-border ml-2">
-            {trilha.degraus.filter((d) => d.modulo === m).map((d) => {
-              const conteudo = (
-                <div className="flex items-start gap-3 -ml-[9px]">
-                  <span className="mt-1 rounded-full bg-background p-0.5"><Icone s={d.situacao} /></span>
-                  <div className="min-w-0">
-                    <p className="type-meta font-semibold">{d.titulo}</p>
-                    <p className="type-meta text-muted-foreground">{d.pergunta}</p>
-                    {!d.escrita && <p className="type-caption text-muted-foreground mt-0.5">em preparação</p>}
-                  </div>
-                </div>
-              );
-              return (
-                <li key={d.id}>
-                  <Link href={`/calculo/${d.id}`} className="block px-2 py-2 rounded-[var(--radius-control)] hover:bg-muted t-colors">{conteudo}</Link>
-                </li>
-              );
-            })}
-          </ol>
-        </section>
-      ))}
+      {MODULOS.map((m) => {
+        const doModulo = trilha.degraus.filter((d) => d.modulo === m);
+        const prontas = doModulo.filter((d) => d.escrita);
+        // Lição sem versão escrita vira uma linha só: eram 22 itens
+        // "em preparação" no meio da trilha (foto de 07/10/2026).
+        const emPreparo = doModulo.filter((d) => !d.escrita);
+        return (
+          <section key={m} aria-labelledby={`modulo-${m}`}>
+            <h2 id={`modulo-${m}`} className="font-display type-title font-semibold mb-3">{NOME_MODULO[m]}</h2>
+            {prontas.length > 0 && (
+              <ol className="space-y-1 border-l-2 border-border ml-2">
+                {prontas.map((d) => (
+                  <li key={d.id}>
+                    <Link href={`/calculo/${d.id}`} className="block px-2 py-2 rounded-[var(--radius-control)] hover:bg-muted t-colors">
+                      <div className="flex items-start gap-3 -ml-[9px]">
+                        <span className="mt-1 rounded-full bg-background p-0.5"><Icone s={d.situacao} /></span>
+                        <div className="min-w-0">
+                          <p className="type-meta font-semibold">{d.titulo}</p>
+                          <p className="type-meta text-muted-foreground">{d.pergunta}</p>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                ))}
+              </ol>
+            )}
+            {emPreparo.length > 0 && (
+              <details className="mt-2 ml-2">
+                <summary className="cursor-pointer type-meta text-muted-foreground hover:text-foreground t-colors py-2" data-numeric>
+                  Em preparação: {emPreparo.length} {emPreparo.length === 1 ? 'lição' : 'lições'}
+                </summary>
+                <ul className="mt-1 space-y-1 type-meta text-muted-foreground">
+                  {emPreparo.map((d) => <li key={d.id}>{d.titulo}</li>)}
+                </ul>
+              </details>
+            )}
+          </section>
+        );
+      })}
     </div>
   );
 }

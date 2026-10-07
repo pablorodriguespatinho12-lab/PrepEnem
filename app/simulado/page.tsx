@@ -342,7 +342,7 @@ export default function SimuladoPage() {
                   key={m}
                   onClick={() => setMateria(m)}
                   aria-pressed={materia === m}
-                  className={`px-4 py-2 rounded-[var(--radius-control)] type-meta font-medium t-colors ${
+                  className={`px-4 py-3 rounded-[var(--radius-control)] type-meta font-medium t-colors ${
                     materia === m ? 'bg-primary text-primary-foreground shadow-elev-1' : 'bg-muted hover:bg-muted/80'
                   }`}
                 >
@@ -382,7 +382,7 @@ export default function SimuladoPage() {
                 }`}
               >
                 <Timer className="w-4 h-4" />
-                Com Cronômetro
+                Com tempo
               </button>
               <button
                 onClick={() => setUseTimer(false)}
@@ -391,7 +391,7 @@ export default function SimuladoPage() {
                 }`}
               >
                 <TimerOff className="w-4 h-4" />
-                Sem Cronômetro
+                Sem tempo
               </button>
             </div>
           </div>

@@ -514,9 +514,15 @@ export default function TreinoPage() {
 
         {/* Subtemas list */}
         {resumoLoading ? (
-          <div className="text-center py-12">
-            <Loader2 className="w-8 h-8 animate-spin text-primary-text mx-auto mb-3" />
-            <p className="type-meta text-muted-foreground mb-4">Gerando resumo dos conteúdos...</p>
+          /* Esqueleto do primeiro conceito, nunca tela vazia com rodinha. */
+          <div className="mb-8">
+            <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-4 animate-pulse" role="status" aria-label="Preparando os conceitos do dia">
+              <div className="h-3 w-24 rounded bg-muted mb-4" />
+              <div className="h-6 w-2/3 rounded bg-muted mb-5" />
+              <div className="h-24 w-full rounded bg-muted mb-4" />
+              <div className="h-3 w-5/6 rounded bg-muted mb-2" />
+              <div className="h-3 w-3/5 rounded bg-muted" />
+            </div>
             <button
               onClick={() => setResumoDismissed(true)}
               className="px-5 py-2.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta hover:opacity-90 t-colors shadow-elev-1 inline-flex items-center gap-2"

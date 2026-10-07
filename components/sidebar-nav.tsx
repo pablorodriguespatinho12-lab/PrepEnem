@@ -75,7 +75,7 @@ export function SidebarNav() {
       {/* Mobile toggle */}
       <motion.button
         onClick={() => setOpen(!open)}
-        className="fixed top-4 left-4 z-50 p-2 rounded-[var(--radius-control)] bg-primary text-primary-foreground shadow-lg md:hidden"
+        className="fixed top-4 left-4 z-50 p-3 rounded-[var(--radius-control)] bg-primary text-primary-foreground shadow-lg md:hidden"
         aria-label="Menu"
         whileTap={{ scale: 0.9 }}
       >
