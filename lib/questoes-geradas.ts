@@ -60,7 +60,7 @@ export function validarQuestoesGeradas(bruto: unknown): QuestaoGerada[] | null {
    verificação falhar por inteiro, nenhuma (quem chama cai no banco). */
 export async function gerarQuestoesConferidas(prompt: string, timeoutMs = 25_000): Promise<QuestaoGerada[]> {
   const r = await pedirJson(prompt, validarQuestoesGeradas, {
-    maxTokens: 6000, temperature: 0.5, modelo: MODELO_IA.degraus(), timeoutMs,
+    maxTokens: 6000, temperature: 0.5, modelo: MODELO_IA.degraus(), timeoutMs, prazoMs: timeoutMs,
   });
   if (!r.ok) {
     console.error('Questões geradas: a IA falhou', r.erro);

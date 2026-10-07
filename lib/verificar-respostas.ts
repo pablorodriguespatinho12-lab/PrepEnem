@@ -51,7 +51,7 @@ function ler(bruto: unknown, questoes: QuestaoParaVerificar[]): RespostaVerifica
 export async function resolverIndependente(questoes: QuestaoParaVerificar[]): Promise<RespostaVerificada[] | null> {
   if (questoes.length === 0) return [];
   const r = await pedirJson(montarPrompt(questoes), (b) => ler(b, questoes), {
-    maxTokens: 2500, temperature: 0, modelo: MODELO_IA.verificacao(), timeoutMs: 40_000,
+    maxTokens: 2500, temperature: 0, modelo: MODELO_IA.verificacao(), timeoutMs: 40_000, prazoMs: 40_000,
   });
   return r.ok ? r.dado : null;
 }

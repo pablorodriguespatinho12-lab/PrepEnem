@@ -22,10 +22,17 @@ export interface OpcoesPedido {
   /* 'high' onde conta errada não pode passar (ver lib/ia-modelos.ts). */
   pensar?: 'low' | 'medium' | 'high';
   timeoutMs?: number;
+  /* Prazo da chamada inteira, com tentativas e esperas de 429. A função na
+     Vercel morre aos 60 s (maxDuration): antes 2 tentativas + 4 s + 12 s de
+     espera + timeout passavam disso, o catch não rodava e a tela travava. */
+  prazoMs?: number;
 }
+const PRAZO_PADRAO_MS = 50_000;
+const FOLGA_MS = 3_000;
 
-async function chamarComEspera(mensagens: Mensagem[], opcoes: OpcoesPedido) {
+async function chamarComEspera(mensagens: Mensagem[], opcoes: OpcoesPedido, fim: number) {
   for (let i = 0; ; i++) {
+    const resta = fim - Date.now();
     const r = await chatCompletion({
       messages: mensagens,
       model: opcoes.modelo,
@@ -36,13 +43,14 @@ async function chamarComEspera(mensagens: Mensagem[], opcoes: OpcoesPedido) {
       // que é o normal em fórmula. extrairJson trata essas barras do nosso lado.
       // Medido em 05/10/2026: a maioria das recusas de lição vinha daqui.
       ...(opcoes.pensar && opcoes.modelo?.includes('gpt-oss') ? { reasoningEffort: opcoes.pensar } : {}),
-      ...(opcoes.timeoutMs ? { timeoutMs: opcoes.timeoutMs } : {}),
+      timeoutMs: Math.min(opcoes.timeoutMs ?? resta, resta),
     });
     // 429 = limite por minuto; 502 = conexão caiu ou erro passageiro da Groq
     // ("fetch failed" no teste de 05/10/2026). Timeout (504) não se repete:
     // dobraria a espera do aluno.
     const passageiro = r.ok ? false : r.response.status === 429 || r.response.status === 502;
     if (!passageiro || i >= ESPERAS_429_MS.length) return r;
+    if (Date.now() + ESPERAS_429_MS[i] + FOLGA_MS > fim) return r;
     await esperar(ESPERAS_429_MS[i]);
   }
 }
@@ -53,8 +61,10 @@ export async function pedirJson<T>(
   opcoes: OpcoesPedido = {},
 ): Promise<ResultadoIA<T>> {
   const mensagens: Mensagem[] = [{ role: 'user', content: prompt }];
+  const fim = Date.now() + (opcoes.prazoMs ?? PRAZO_PADRAO_MS);
   for (let tentativa = 0; tentativa < 2; tentativa++) {
-    const r = await chamarComEspera(mensagens, opcoes);
+    if (fim - Date.now() < FOLGA_MS) break;
+    const r = await chamarComEspera(mensagens, opcoes, fim);
     if (!r.ok) {
       const corpo = await r.response.json().catch(() => ({}));
       return { ok: false, erro: corpo?.error ?? 'Erro no serviço de IA.', status: r.response.status };
@@ -68,5 +78,6 @@ export async function pedirJson<T>(
       { role: 'user', content: 'Essa resposta não seguiu o formato JSON pedido. Devolva SOMENTE o JSON, completo, no formato exato.' },
     );
   }
+  if (fim - Date.now() < FOLGA_MS) return { ok: false, erro: 'A IA demorou demais. Tente de novo.', status: 504 };
   return { ok: false, erro: 'A IA respondeu fora do formato. Tente de novo.', status: 502 };
 }
