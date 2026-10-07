@@ -54,11 +54,11 @@ export function Quadro({ partes, condicao, ajuda }: { partes: ParteDoQuadro[]; c
               onFim={i === atual ? () => setEscrita(true) : undefined}
               className={i < atual ? 'opacity-70 t-colors' : undefined} />
             {(p.porque || p.lado) && (i < atual || escrita) && (
-              <motion.p className="type-meta text-muted-foreground" initial={{ opacity: 0, y: reduzir ? 0 : 4 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.25 }}>
+              <motion.div className="type-meta text-muted-foreground" initial={{ opacity: 0, y: reduzir ? 0 : 4 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.25 }}>
                 {/* A operação feita, como o professor anota ao lado da linha. */}
                 {p.lado && <span className="inline-block mr-2 px-1.5 rounded-[var(--radius-data)] bg-muted text-foreground font-semibold"><Latex fonte={p.lado} /></span>}
                 {p.porque && <MathText text={p.porque} />}
-              </motion.p>
+              </motion.div>
             )}
           </li>
         ))}

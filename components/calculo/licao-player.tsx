@@ -52,7 +52,7 @@ function Exemplo({ exemplo, numero, onFim }: { exemplo: ExemploResolvido; numero
               {!esconder && (
                 <>
                   <MathText text={p.texto} className="font-reading" />
-                  <p className="type-meta text-muted-foreground"><MathText text={`Por quê: ${p.porque}`} /></p>
+                  <div className="type-meta text-muted-foreground"><MathText text={`Por quê: ${p.porque}`} /></div>
                 </>
               )}
             </li>
@@ -86,7 +86,7 @@ function ExercicioView({ exercicio, numero, total, onFim }: { exercicio: Exercic
           <Lightbulb className="w-4 h-4" /> Quero uma dica
         </button>
       )}
-      {dica && resultado === null && <p className="type-meta rounded-[var(--radius-control)] bg-muted/60 px-3 py-2"><MathText text={exercicio.dica} /></p>}
+      {dica && resultado === null && <div className="type-meta rounded-[var(--radius-control)] bg-muted/60 px-3 py-2"><MathText text={exercicio.dica} /></div>}
       <RespostaInput resposta={exercicio.resposta} respondido={resultado !== null} onResponder={setResultado} />
       {resultado !== null && (
         <div className="space-y-3">
@@ -95,7 +95,7 @@ function ExercicioView({ exercicio, numero, total, onFim }: { exercicio: Exercic
             {exercicio.resolucao.map((r, i) => (
               <div key={i}>
                 <MathText text={r.texto} className="font-reading" />
-                <p className="type-meta text-muted-foreground"><MathText text={`Por quê: ${r.porque}`} /></p>
+                <div className="type-meta text-muted-foreground"><MathText text={`Por quê: ${r.porque}`} /></div>
               </div>
             ))}
           </div>

@@ -142,3 +142,12 @@ Antes de afirmar que um bug existe ou foi corrigido, reproduza no navegador.
 E se não reproduzir localmente, considere que produção pode estar rodando
 código anterior ao último push antes de sair caçando causa no código atual.
 Ver [[decisoes-prepenem]] (validar em produção depois do push).
+`geral.cjs` (no scratchpad da sessão; refazer é fácil): abre as 21 páginas em
+1366 px e 375 px, com o cookie da sessão, e **devolve `{}` a todo POST/PUT/DELETE
+em `/api/**`** (menos `/api/caneta`, que só converte conta): assim nada grava na
+conta do Pablo. Anota erro de JS, `console.error`, HTTP ≥ 400, overflow lateral
+e tela quase vazia. Duas armadilhas: a primeira página depois de subir o dev
+fica no círculo de carregar (compilação + Neon acordando), e um 500 isolado com
+"Can't reach database server" é o Neon dormindo, não bug: rode de novo antes de
+caçar. `MathText` vira `<div>`: dentro de `<p>` dá aviso de hidratação.
+

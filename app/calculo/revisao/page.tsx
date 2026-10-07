@@ -70,7 +70,7 @@ export default function RevisaoCalculoPage() {
               {q.exercicio.resolucao.map((r, i) => (
                 <div key={i}>
                   <MathText text={r.texto} className="font-reading" />
-                  <p className="type-meta text-muted-foreground"><MathText text={`Por quê: ${r.porque}`} /></p>
+                  <div className="type-meta text-muted-foreground"><MathText text={`Por quê: ${r.porque}`} /></div>
                 </div>
               ))}
             </div>
