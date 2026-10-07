@@ -1,31 +1,21 @@
 'use client';
 // Resolução de questão real de vestibular, um passo por vez (Pablo, 06/10/2026:
 // "clique e responda", animado). Cada passo é uma pergunta curta; ao responder,
-// a conta se escreve no caderno como caneta (clip-path) e o porquê aparece.
+// a conta se escreve no caderno com a caneta (letra por letra) e o porquê aparece.
 
 import { useMemo, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Check, X } from 'lucide-react';
 import MathText from '@/components/math-text';
-import { Latex } from '@/components/visual/grafico';
+import { Caneta } from '@/components/visual/caneta';
 import { acharQuestaoVestibular } from '@/data/vestibular';
 import type { PassoResolucao } from '@/lib/vestibular/tipos';
 import { ordemFixa, sementeDoPasso } from '@/lib/vestibular/ordem';
 import { quebrarConta } from '@/lib/vestibular/conta';
 
-/* Cada linha da conta se escreve da esquerda para a direita, uma depois da outra. */
-function Conta({ fonte, reduzir }: { fonte: string; reduzir: boolean }) {
-  return (
-    <div className="py-1 font-reading">
-      {quebrarConta(fonte).map((linha, i) => (
-        <motion.div key={i} className="overflow-x-auto whitespace-nowrap"
-          initial={reduzir ? false : { clipPath: 'inset(0 100% 0 0)' }} animate={{ clipPath: 'inset(0 0% 0 0)' }}
-          transition={{ duration: 0.55, delay: i * 0.45, ease: [0.4, 0, 0.2, 1] }}>
-          <Latex fonte={linha} />
-        </motion.div>
-      ))}
-    </div>
-  );
+/* A conta se escreve no caderno com a caneta, letra por letra. */
+function Conta({ fonte }: { fonte: string }) {
+  return <Caneta linhas={quebrarConta(fonte)} className="font-reading" />;
 }
 function Passo({ passo, semente, onFim, reduzir }: { passo: PassoResolucao; semente: number; onFim: () => void; reduzir: boolean }) {
   const ordem = useMemo(() => ordemFixa(passo.opcoes.length, semente), [passo.opcoes.length, semente]);
@@ -92,7 +82,7 @@ export default function ResolucaoClicavel({ origem, numero }: { origem: string; 
       {/* O caderno: cada passo respondido deixa a sua conta escrita. */}
       {escritas.length > 0 && (
         <div className="rounded-[var(--radius-control)] bg-[hsl(var(--surface-2))] border border-border px-4 py-2 space-y-1">
-          {escritas.map((p, i) => <Conta key={i} fonte={p.conta!} reduzir={reduzir} />)}
+          {escritas.map((p, i) => <Conta key={i} fonte={p.conta!} />)}
         </div>
       )}
 

@@ -13,7 +13,9 @@ interface Mensagem { papel: 'aluno' | 'tutor'; texto: string; visual?: Visual | 
 
 const MAX_PERGUNTA = 600;
 
-export function DuvidaLicao({ licaoId, naTela }: { licaoId: string; naTela: string }) {
+/* "pronta": pergunta que veio de um botão da tela ("Não entendi" do quadro);
+   chega com id novo a cada clique e é enviada sozinha. */
+export function DuvidaLicao({ licaoId, naTela, pronta }: { licaoId: string; naTela: string; pronta?: { id: number; texto: string } | null }) {
   const [mensagens, setMensagens] = useState<Mensagem[]>([]);
   const [texto, setTexto] = useState('');
   const [pensando, setPensando] = useState(false);
@@ -22,9 +24,15 @@ export function DuvidaLicao({ licaoId, naTela }: { licaoId: string; naTela: stri
   const fim = useRef<HTMLDivElement>(null);
 
   useEffect(() => { fim.current?.scrollIntoView({ block: 'nearest' }); }, [mensagens, pensando]);
+  useEffect(() => {
+    if (!pronta) return;
+    setAberto(true);
+    void enviar(pronta.texto);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pronta?.id]);
 
-  const enviar = async () => {
-    const pergunta = texto.trim().slice(0, MAX_PERGUNTA);
+  const enviar = async (escrita?: string) => {
+    const pergunta = (escrita ?? texto).trim().slice(0, MAX_PERGUNTA);
     if (!pergunta || pensando) return;
     const historico = [...mensagens, { papel: 'aluno' as const, texto: pergunta }];
     setMensagens(historico);

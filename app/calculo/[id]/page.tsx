@@ -1,9 +1,10 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, Loader2 } from 'lucide-react';
 import { LicaoPlayer } from '@/components/calculo/licao-player';
 import { DuvidaLicao } from '@/components/calculo/duvida-licao';
+import { NaoEntendiContext } from '@/components/visual/quadro';
 import { NOME_MODULO, buscarDegrau } from '@/data/calculo/trilha';
 import { LICOES_ESCRITAS } from '@/data/calculo/licoes';
 import type { LicaoCompleta } from '@/lib/calculo/tipos';
@@ -20,6 +21,8 @@ export default function LicaoCalculoPage({ params }: { params: { id: string } })
   const [licao, setLicao] = useState<LicaoCompleta | null>(() => licaoEscrita(params.id));
   const [erro, setErro] = useState<string | null>(null);
   const [naTela, setNaTela] = useState('');
+  const [pronta, setPronta] = useState<{ id: number; texto: string } | null>(null);
+  const naoEntendi = useCallback((texto: string) => setPronta((p) => ({ id: (p?.id ?? 0) + 1, texto })), []);
 
   useEffect(() => {
     fetch(`/api/calculo/licao/${encodeURIComponent(params.id)}`)
@@ -51,8 +54,10 @@ export default function LicaoCalculoPage({ params }: { params: { id: string } })
             <h1 className="font-display type-headline font-bold">{licao.titulo}</h1>
           </header>
           <div className="grid gap-6 lg:grid-cols-[minmax(0,46rem)_minmax(0,1fr)]">
-            <LicaoPlayer licao={licao} onTela={setNaTela} />
-            <DuvidaLicao licaoId={licao.id} naTela={naTela} />
+            <NaoEntendiContext.Provider value={naoEntendi}>
+              <LicaoPlayer licao={licao} onTela={setNaTela} />
+            </NaoEntendiContext.Provider>
+            <DuvidaLicao licaoId={licao.id} naTela={naTela} pronta={pronta} />
           </div>
         </>
       )}

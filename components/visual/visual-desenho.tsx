@@ -9,6 +9,7 @@ import { animate, motion, useReducedMotion } from 'framer-motion';
 import type { VisualGrafico, Visual, VisualReta, VisualTabela, VisualTransformacao, VisualVetores } from '@/lib/visual/especificacao';
 import { marcas } from '@/lib/visual/geometria';
 import { renderizarTextoMatematico } from '@/lib/visual/texto-matematico';
+import { Quadro } from './quadro';
 import { ALTURA, COR, EIXO, Eixos, Grafico, HALO, LARGURA, Latex, MARGEM, corDe, escala } from './grafico';
 import { Cena } from './cena';
 import { Roda } from './roda';
@@ -51,22 +52,10 @@ function Reta({ v }: { v: VisualReta }) {
   );
 }
 
+/* Passo a passo da conta: a caneta escreve uma linha por vez (quadro.tsx). */
 function Transformacao({ v }: { v: VisualTransformacao }) {
-  const reduzir = useReducedMotion() ?? false;
-  return (
-    <ol className="space-y-1">
-      {v.linhas.map((l, i) => (
-        <motion.li key={i} className="grid grid-cols-[1fr_auto] items-center gap-3 rounded-[var(--radius-control)] px-3 py-2 odd:bg-muted/40"
-          initial={reduzir ? false : { clipPath: 'inset(0 100% 0 0)' }} animate={{ clipPath: 'inset(0 0% 0 0)' }}
-          transition={{ duration: 0.6, delay: i * 0.55, ease: [0.4, 0, 0.2, 1] }}>
-          <span className="text-body overflow-x-auto"><Latex fonte={l.latex} /></span>
-          {l.porque && <span className="type-meta text-muted-foreground text-right max-w-[14rem]">{l.porque}</span>}
-        </motion.li>
-      ))}
-    </ol>
-  );
+  return <Quadro partes={v.linhas.map((l) => ({ latex: l.latex, porque: l.porque }))} />;
 }
-
 function Tabela({ v }: { v: VisualTabela }) {
   const reduzir = useReducedMotion() ?? false;
   return (

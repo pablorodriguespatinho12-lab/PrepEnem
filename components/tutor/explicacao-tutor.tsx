@@ -7,6 +7,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { ArrowRight, Brain, Eye, Loader2, RefreshCcw, Send } from 'lucide-react';
 import MathText from '@/components/math-text';
 import { VisualDesenho } from '@/components/visual/visual-desenho';
+import { NaoEntendiContext } from '@/components/visual/quadro';
 import type { Explicacao, RespostaTutor } from '@/lib/tutor/validar';
 import { resumirExplicacao } from '@/lib/tutor/validar';
 import type { Visual } from '@/lib/visual/especificacao';
@@ -145,6 +146,7 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
   const terminou = passosVisiveis >= total;
 
   return (
+    <NaoEntendiContext.Provider value={(texto) => { void perguntar(texto); }}>
     <section className="surface-1 rounded-[var(--radius-surface)] p-5 md:p-6 space-y-5" aria-label="Explicação">
       {explicacao.seuErro && (
         <div className="rounded-[var(--radius-control)] border p-4"
@@ -263,5 +265,6 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
         </div>
       )}
     </section>
+    </NaoEntendiContext.Provider>
   );
 }
