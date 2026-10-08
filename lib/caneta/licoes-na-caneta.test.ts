@@ -9,3 +9,6 @@ test('toda conta de quadro das lições escritas vira traço', () => {
   }
   expect(ruins).toEqual([]);
 });
+test('a caneta escreve o exemplo do quadro de escola', () => {
+  for (const t of ['v = 72\\,\\text{km/h} = 20\\,\\text{m/s}', 'a = \\dfrac{\\Delta v}{\\Delta t}', 'a = 2\\,\\text{m/s}^2']) expect(texParaSvg(t)).toBeTruthy();
+});

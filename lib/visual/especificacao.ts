@@ -150,7 +150,21 @@ export interface VisualPalavra {
   destaque?: string;
   nota?: string;
 }
-export type Visual = VisualPalavra | VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula;
+/* Quadro de escola (Pablo, 08/10/2026, com a foto do quadro do Professor
+   Ferretto: "exatamente desse jeito"): à esquerda os dados tirados da questão,
+   no meio a fórmula, o que cada letra é, os valores trocados linha por linha e
+   o resultado em verde; um recado curto ao lado. Toda questão com conta. */
+export interface VisualQuadro {
+  tipo: 'quadro';
+  titulo?: string;
+  dados: string[];
+  formula: string;
+  legenda?: string[];
+  contas: string[];
+  resultado: string;
+  nota?: string;
+}
+export type Visual = VisualQuadro | VisualPalavra | VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula;
 
 const MAX_FUNCOES = 4;
 const MAX_PONTOS = 8;
@@ -220,12 +234,37 @@ function reta(v: Record<string, unknown>): VisualReta | null {
   return { tipo: 'reta', titulo: texto(v.titulo), de: v.de, ate: v.ate, marcas, trechos };
 }
 
+/* A IA já mandou "condicao": "true" e o app escreveu "true" no quadro
+   (08/10/2026). Condição de verdade tem um sinal de comparação. */
+const RELACAO = /\\neq|\\geq|\\leq|\\ne\b|\\ge\b|\\le\b|[<>=≠≥≤]|\\in\b/;
+function condicao(v: unknown): string | undefined {
+  const c = texto(v, 60);
+  return c && RELACAO.test(c) ? c : undefined;
+}
+const MAX_DADOS = 6;
+const MAX_CONTAS_QUADRO = 5;
+/* Vírgula decimal em LaTeX sai "0, 54", com espaço: vira 0{,}54. */
+const decimal = (l: string | undefined) => l?.replace(/(\d),(?=\d)/g, '$1{,}');
+function quadro(v: Record<string, unknown>): VisualQuadro | null {
+  const linhas = (bruto: unknown, max: number, tamanho: number) =>
+    lista(bruto).map((l) => decimal(texto(l, tamanho))).filter((l): l is string => !!l).slice(0, max);
+  const dados = linhas(v.dados, MAX_DADOS, 120);
+  const contas = linhas(v.contas, MAX_CONTAS_QUADRO, 300);
+  const formula = decimal(texto(v.formula, 200));
+  const resultado = decimal(texto(v.resultado, 200));
+  if (dados.length === 0 || !formula || !resultado) return null;
+  const legenda = linhas(v.legenda, 3, 90);
+  return {
+    tipo: 'quadro', titulo: texto(v.titulo), dados, formula, contas, resultado,
+    legenda: legenda.length > 0 ? legenda : undefined, nota: texto(v.nota, 120),
+  };
+}
 function transformacao(v: Record<string, unknown>): VisualTransformacao | null {
   const linhas = lista(v.linhas).map(objeto).filter((l) => texto(l.latex, 300))
     .slice(0, MAX_LINHAS_CONTA).map((l) => ({ latex: texto(l.latex, 300)!, porque: texto(l.porque, 140), lado: texto(l.lado, 30) }));
   const ajuda = lista(v.ajuda).map((a) => texto(a, 120)).filter((a): a is string => !!a).slice(0, MAX_AJUDA);
   return linhas.length >= 2
-    ? { tipo: 'transformacao', titulo: texto(v.titulo), condicao: texto(v.condicao, 60), ajuda: ajuda.length > 0 ? ajuda : undefined, linhas }
+    ? { tipo: 'transformacao', titulo: texto(v.titulo), condicao: condicao(v.condicao), ajuda: ajuda.length > 0 ? ajuda : undefined, linhas }
     : null;
 }
 
@@ -379,7 +418,7 @@ function palavra(v: Record<string, unknown>): VisualPalavra | null {
   };
 }
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {
-  grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias, processo, molecula, palavra,
+  quadro, grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias, processo, molecula, palavra,
 };
 
 /* Devolve o visual limpo, ou null se não der para desenhar com segurança. */
@@ -394,6 +433,8 @@ export const FORMATO_VISUAL_PARA_IA = `"visual" é um destes objetos (ou null). 
 - Gráfico de função: {"tipo":"grafico","titulo":"...","funcoes":[{"expr":"x^2-4","rotulo":"f(x)","cor":"a"}],"pontos":[{"x":2,"y":0,"rotulo":"raiz","cor":"b"}],"x":[-4,4],"y":[-5,6]}
   expr usa só x, números, + - * / ^, parênteses, sqrt, sin, cos, tan, ln, log, abs, exp, pi. Escolha x e y para que o que importa (raízes, vértice, cruzamentos) apareça. Ponto com "aberto": true é bolinha vazia: furo onde a função não tem valor, ou ponta que não entra.
 - Reta numérica (inequação, intervalo): {"tipo":"reta","de":-5,"ate":5,"marcas":[{"x":2,"rotulo":"2"}],"trechos":[{"de":2,"ate":5,"rotulo":"x ≥ 2","fechadoDe":true,"fechadoAte":false,"cor":"a"}]}
+- Quadro (TODA conta de Matemática, Física e Química, como o professor resolve no quadro): {"tipo":"quadro","dados":["v_0 = 0","v = 72\\\\,\\\\text{km/h} = 20\\\\,\\\\text{m/s}","\\\\Delta t = 10\\\\,\\\\text{s}"],"formula":"a = \\\\dfrac{\\\\Delta v}{\\\\Delta t}","legenda":["$\\\\Delta v$: quanto a velocidade mudou","$\\\\Delta t$: em quanto tempo mudou"],"contas":["a = \\\\dfrac{20 - 0}{10}","a = \\\\dfrac{20}{10}"],"resultado":"a = 2\\\\,\\\\text{m/s}^2","nota":"A cada segundo, a velocidade sobe 2 m/s."}
+  O app desenha um quadro branco e escreve à mão: os "dados" à esquerda (cada valor que a questão deu, com letra e unidade, um por linha; conversão de unidade vai aqui), a "formula" geral no alto, a "legenda" (até 3: o que cada letra da fórmula É, em palavras), as "contas" embaixo dela (a fórmula com os números no lugar das letras, depois cada simplificação, uma por linha) e o "resultado" em verde. "nota" é 1 frase curta do que o resultado quer dizer. Tudo em LaTeX sem $, menos a legenda.
 - Transformação passo a passo (álgebra, de onde a fórmula vem): {"tipo":"transformacao","condicao":"a \\\\neq 0","linhas":[{"latex":"ax^2+bx+c=0","porque":"ponto de partida"},{"latex":"x^2+\\\\frac{b}{a}x+\\\\frac{c}{a}=0","lado":"\\\\div a","porque":"divide os dois lados por a"}]}
   O app escreve à mão, linha por linha. "lado" é a operação feita (aparece ao lado). \\\\novo{...} pinta o termo que acabou de entrar; \\\\corta{...} risca o que cancela; \\\\boxed{...} na resposta final. "ajuda" (opcional): até 3 identidades usadas no meio.
 - Tabela (comparar valores, proporção, mol): {"tipo":"tabela","cabecalho":["n (mol)","massa (g)"],"linhas":[["1","18"],["2","36"]]}

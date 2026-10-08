@@ -170,3 +170,37 @@ describe('validarVisual', () => {
     expect(validarVisual({ tipo: 'palavra' })).toBeNull();
   });
 });
+describe('quadro de escola', () => {
+  const quadro = {
+    tipo: 'quadro',
+    dados: ['v_0 = 0', 'v = 72\\,\\text{km/h} = 20\\,\\text{m/s}', '\\Delta t = 10\\,\\text{s}'],
+    formula: 'a = \\dfrac{\\Delta v}{\\Delta t}',
+    legenda: ['$\\Delta v$: quanto a velocidade mudou'],
+    contas: ['a = \\dfrac{20 - 0}{10}', 'a = \\dfrac{20}{10}'],
+    resultado: 'a = 2\\,\\text{m/s}^2',
+    nota: 'A cada segundo, a velocidade sobe 2 m/s.',
+  };
+  test('dados, fórmula, contas e resultado passam inteiros', () => {
+    expect(validarVisual(quadro)).toMatchObject({ tipo: 'quadro', dados: quadro.dados, formula: quadro.formula, contas: quadro.contas, resultado: quadro.resultado });
+  });
+  test('sem dados, fórmula ou resultado não é quadro', () => {
+    expect(validarVisual({ ...quadro, dados: [] })).toBeNull();
+    expect(validarVisual({ ...quadro, formula: '' })).toBeNull();
+    expect(validarVisual({ ...quadro, resultado: undefined })).toBeNull();
+  });
+});
+describe('condição no canto da transformação', () => {
+  const linhas = [{ latex: 'ax^2+bx+c=0' }, { latex: 'x^2+\\frac{b}{a}x=-\\frac{c}{a}' }];
+  test('"true" não vira condição escrita no quadro', () => {
+    const v = validarVisual({ tipo: 'transformacao', condicao: 'true', linhas });
+    expect(v && v.tipo === 'transformacao' && v.condicao).toBeUndefined();
+  });
+  test('condição com sinal de comparação fica', () => {
+    const v = validarVisual({ tipo: 'transformacao', condicao: 'a \\neq 0', linhas });
+    expect(v && v.tipo === 'transformacao' && v.condicao).toBe('a \\neq 0');
+  });
+});
+test('quadro: vírgula decimal sem espaço no LaTeX', () => {
+  const v = validarVisual({ tipo: 'quadro', dados: ['E = 0,54\\,\\text{V}'], formula: 'E = a - b', contas: ['E = 0,54 - (-3,05)'], resultado: 'E = 3,59' });
+  expect(v).toMatchObject({ dados: ['E = 0{,}54\\,\\text{V}'], contas: ['E = 0{,}54 - (-3{,}05)'], resultado: 'E = 3{,}59' });
+});

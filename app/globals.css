@@ -53,6 +53,16 @@
     --surface-3: 0   0%  100%;   /* overlay, popover           */
     --shadow-color: 200 45% 14%;
 
+    /* --- Quadro de escola (components/visual/quadro-escola.tsx) ----------- */
+    /* Quadro branco com tinta escura, verde no resultado e laranja na seta,
+       como a foto do quadro do Ferretto que o Pablo mandou (08/10/2026). */
+    --quadro-fundo:   40 33% 99%;
+    --quadro-tinta:   215 28% 17%;
+    --quadro-apagado: 215 14% 42%;
+    --quadro-linha:   215 16% 80%;
+    --quadro-verde:   142 64% 27%;
+    --quadro-laranja: 22 90% 37%;
+
     /* --- Elevação: 3 níveis, sombra em DUAS camadas ----------------------- */
     /* Camada curta e opaca = contato com a superfície de baixo.
        Camada longa e difusa = distância. Sombra de camada única é o que
@@ -168,6 +178,10 @@
     --surface-2: 200 20% 14.0%;
     --surface-3: 200 19% 17.5%;
     --shadow-color: 200 60% 2%;
+
+    /* O quadro continua branco no escuro (é um quadro), só menos ofuscante. */
+    --quadro-fundo:   40 20% 93%;
+    --quadro-linha:   215 14% 72%;
 
     --elev-1:
       0 1px 1px  hsl(var(--shadow-color) / 0.30),
@@ -705,4 +719,11 @@ html [data-sonner-toaster][data-theme] {
 .fluxo-anda { animation: fluxo-anda 2.2s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) {
   .fluxo-desce, .fluxo-anda { animation: none; opacity: 1; }
+}
+
+/* Quadro branco: borda fina e uma sombra curta, como uma placa na parede. */
+.quadro-escola {
+  background-color: hsl(var(--quadro-fundo));
+  border: 1px solid hsl(var(--quadro-linha));
+  box-shadow: var(--elev-1);
 }

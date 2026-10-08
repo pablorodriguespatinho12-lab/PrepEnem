@@ -71,7 +71,7 @@ for (const q of escolhidas) {
   const e = r.dado;
   console.log('Ideia:', e.ideia);
   if (e.seuErro) console.log('Seu erro:', e.seuErro);
-  e.passos.forEach((p, i) => console.log(`  ${i + 1}. [${p.titulo}]${p.visual ? ` (visual: ${(p.visual as { tipo?: string }).tipo})` : ''} ${p.texto}`));
+  e.passos.forEach((p, i) => console.log(`  ${i + 1}. [${p.titulo}]${p.visual ? ` (visual: ${(p.visual as { tipo?: string }).tipo})` : ''} ${p.texto}${p.visual?.tipo === 'quadro' ? `\n     ${JSON.stringify(p.visual)}` : ''}`));
   console.log('Checagem:', e.checagem?.pergunta, '→', e.checagem?.resposta);
   console.log('MEDIDAS:', JSON.stringify(medir(e)));
 }

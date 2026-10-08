@@ -152,9 +152,18 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   programa do médio, conferida pelo verificador. A gerada nunca se apresenta
   como real.
 - **Exemplo resolvido sem escolha (Pablo, 07/10/2026):** só a alternativa certa
-  aparece, já marcada; a resolução vem embaixo. Conta = visual `transformacao`,
-  escrita à mão linha por linha (caneta). Questão de uma palavra (acento, sílaba)
+  aparece, já marcada; a resolução vem embaixo. Conta = visual `quadro`
+  (abaixo); `transformacao` só deduz fórmula. Questão de uma palavra (acento, sílaba)
   = visual `palavra`, 1 passo só. Questão simples tem resposta pequena.
+- **Quadro de escola em toda conta (Pablo, 08/10/2026, foto do quadro do
+  Ferretto: "exatamente desse jeito"):** visual `quadro`
+  (`components/visual/quadro-escola.tsx`): quadro branco também no escuro,
+  dados da questão à esquerda, fórmula geral, o que cada letra é, "troca as
+  letras pelos números" com seta laranja, resultado em verde e 1 frase do que
+  ele quer dizer. Antes dele, o passo "De onde vem" com números redondos. TODA
+  questão tem visual no 1º passo, de qualquer matéria. A conversa com a IA fica
+  aberta desde o 1º passo (o "Não entendi" mandava a pergunta para uma conversa
+  escondida até o último passo).
 - **Vestibular real, a última do dia (06/10/2026):** 48 questões reais (ITA
   2025, IME 2024, Fuvest 2024/25, Unicamp 2024, Unesp 2025) em
   `data/vestibular`, gravadas com `nivel: 'vestibular'` e `anoProva` vazio

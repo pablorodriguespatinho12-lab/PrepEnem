@@ -224,9 +224,11 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
         </div>
       )}
 
-      {terminou && (
-        <div className="border-t border-border pt-4 space-y-3">
-          <p className="type-caption text-muted-foreground">Ficou alguma dúvida? Pergunte do seu jeito.</p>
+      {/* A conversa fica aberta desde o primeiro passo: o "Não entendi" do
+          quadro manda a pergunta para cá, e antes ela só aparecia no último
+          passo, então o botão parecia não fazer nada (Pablo, 08/10/2026). */}
+      <div className="border-t border-border pt-4 space-y-3">
+          <p className="type-caption text-muted-foreground">Não entendeu alguma parte? Pergunte para a IA do seu jeito.</p>
           {mensagens.length > 0 && (
             <div className="space-y-3" aria-live="polite">
               {mensagens.map((m, i) => (
@@ -235,7 +237,7 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
                     ? 'max-w-[85%] rounded-[var(--radius-control)] bg-primary/10 px-3 py-2 type-meta'
                     : 'space-y-2'}>
                     {m.papel === 'tutor' && m.visual && <VisualDesenho visual={m.visual} />}
-                    {m.papel === 'aluno' ? m.texto : <MathText text={m.texto} className="font-reading" />}
+                    <MathText text={m.texto} className={m.papel === 'aluno' ? undefined : 'font-reading'} />
                   </div>
                 </div>
               ))}
@@ -247,7 +249,7 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
               <div ref={fimDaConversa} />
             </div>
           )}
-          {mensagens.length === 0 && (
+          {mensagens.length === 0 && terminou && (
             <div className="flex flex-wrap gap-2">
               {SUGESTOES.map((s) => (
                 <button key={s} onClick={() => perguntar(s)}
@@ -280,8 +282,7 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
               <Send className="w-4 h-4" />
             </button>
           </form>
-        </div>
-      )}
+      </div>
     </section>
     </NaoEntendiContext.Provider>
   );
