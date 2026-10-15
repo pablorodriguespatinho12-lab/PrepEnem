@@ -190,6 +190,10 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   quadro das deduções do Cálculo (`Quadro`, de `transformacao`) também é
   branco, com "Continuar" e os botões fora dele. Conversão de unidade em
   qualquer campo da explicação: o atalho (÷ 3,6), nunca × 1000 ÷ 3600.
+  Quadro só com número nos dados (o validador descarta o sem número, que era
+  a fórmula três vezes); questão sem número abre com tabela do efeito
+  (velocidade 2× → energia 4×). Palavra solta na fórmula vira `\text{}`
+  (`palavrasComoTexto`: "massadocorpo"). "De onde vem" sem integral ou derivada.
 - **Quadro primeiro, sem cena na questão (Pablo, 15/10/2026: "o quadro branco
   e a fórmula", depois de ver o carro com gráfico no lugar):** na explicação
   da questão, conta abre com o `quadro` no 1º passo e a `cena` não entra (ela

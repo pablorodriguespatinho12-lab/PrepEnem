@@ -204,3 +204,10 @@ test('quadro: vírgula decimal sem espaço no LaTeX', () => {
   const v = validarVisual({ tipo: 'quadro', dados: ['E = 0,54\\,\\text{V}'], formula: 'E = a - b', contas: ['E = 0,54 - (-3,05)'], resultado: 'E = 3,59' });
   expect(v).toMatchObject({ dados: ['E = 0{,}54\\,\\text{V}'], contas: ['E = 0{,}54 - (-3{,}05)'], resultado: 'E = 3{,}59' });
 });
+test('quadro: palavra solta na fórmula vira texto, com espaço', () => {
+  const v = validarVisual({ tipo: 'quadro', dados: ['m = massa do corpo', 'v = 4\\,\\text{m/s}', 'N = 100 habitantes'], formula: 'E_c = \\frac{1}{2} m v^2', contas: ['E_c = \\frac{1}{2} \\cdot 2 \\cdot 4^2'], resultado: 'E_c = 16\\,\\text{J}' });
+  expect(v).toMatchObject({ dados: ['m = \\,\\text{massa do corpo}', 'v = 4\\,\\text{m/s}', 'N = 100 \\,\\text{habitantes}'], resultado: 'E_c = 16\\,\\text{J}' });
+});
+test('quadro sem nenhum número não é quadro (a fórmula escrita três vezes)', () => {
+  expect(validarVisual({ tipo: 'quadro', dados: ['m = massa do corpo', 'v = velocidade'], formula: 'E_c = \\frac{1}{2}mv^2', contas: ['E_c = \\frac{1}{2}mv^2'], resultado: 'E_c = \\frac{1}{2}mv^2' })).toBeNull();
+});

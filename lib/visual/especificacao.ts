@@ -245,17 +245,33 @@ const MAX_DADOS = 6;
 const MAX_CONTAS_QUADRO = 5;
 /* Vírgula decimal em LaTeX sai "0, 54", com espaço: vira 0{,}54. */
 const decimal = (l: string | undefined) => l?.replace(/(\d),(?=\d)/g, '$1{,}');
+/* Palavra solta dentro da fórmula ("m = massa do corpo") sai em itálico e
+   sem espaço: "massadocorpo" (Pablo, 15/10/2026). Toda sequência de 3+ letras
+   fora de comando e fora de \text vira \text{...}. */
+const PROTEGIDO = /\\(?:text|mathrm|operatorname)\{[^}]*\}|\\[A-Za-z]+/g;
+const PALAVRAS = /(?<![A-Za-zÀ-ÿ])[A-Za-zÀ-ÿ]{3,}(?:\s+[A-Za-zÀ-ÿ]+)*/g;
+export function palavrasComoTexto(latex: string): string {
+  const guardados: string[] = [];
+  const marcado = latex.replace(PROTEGIDO, (m) => `\u0000${guardados.push(m) - 1}\u0000`);
+  return marcado
+    .replace(PALAVRAS, (p, i: number, todo: string) => `${/[\d\s]/.test(todo[i - 1] ?? '') && i > 0 ? '\\,' : ''}\\text{${p}}`)
+    .replace(/\u0000(\d+)\u0000/g, (_m, i: string) => guardados[Number(i)]);
+}
 function quadro(v: Record<string, unknown>): VisualQuadro | null {
   const linhas = (bruto: unknown, max: number, tamanho: number) =>
-    lista(bruto).map((l) => decimal(texto(l, tamanho))).filter((l): l is string => !!l).slice(0, max);
+    lista(bruto).map((l) => decimal(texto(l, tamanho))).filter((l): l is string => !!l).map(palavrasComoTexto).slice(0, max);
   const dados = linhas(v.dados, MAX_DADOS, 120);
   const contas = linhas(v.contas, MAX_CONTAS_QUADRO, 300);
   const formula = decimal(texto(v.formula, 200));
   const resultado = decimal(texto(v.resultado, 200));
   if (dados.length === 0 || !formula || !resultado) return null;
+  // Quadro sem número é a fórmula escrita três vezes ("depende de quê?"):
+  // a questão não tem conta, então não tem quadro (15/10/2026).
+  // Olha só os dados: o ½ e o ² da fórmula não são números da questão.
+  if (!/\d/.test(dados.join(' '))) return null;
   const legenda = linhas(v.legenda, 3, 90);
   return {
-    tipo: 'quadro', titulo: texto(v.titulo), dados, formula, contas, resultado,
+    tipo: 'quadro', titulo: texto(v.titulo), dados, formula: palavrasComoTexto(formula), contas, resultado: palavrasComoTexto(resultado),
     legenda: legenda.length > 0 ? legenda : undefined, nota: texto(v.nota, 120),
   };
 }
