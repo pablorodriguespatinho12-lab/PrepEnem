@@ -3,6 +3,8 @@
 // prompt inteiro: mudou a regra ou a questão, muda a chave. Falha da IA não
 // entra no cache. Medido em 07/10/2026 (explicação do carro 72 km/h):
 // 10.838 ms na primeira vez, 41 ms na segunda.
+// O que sai do cache passa de novo por `validar`: regra nova vale também para
+// resposta guardada antes dela (quadro com $ de 15/10/2026 ficaria 30 dias).
 
 import { createHash } from 'crypto';
 import { unstable_cache } from 'next/cache';
@@ -14,7 +16,7 @@ class FalhaIA extends Error {
   constructor(mensagem: string, readonly status: number) { super(mensagem); }
 }
 
-export async function comCache<T>(prefixo: string, prompt: string, gerar: () => Promise<ResultadoIA<T>>): Promise<ResultadoIA<T>> {
+export async function comCache<T>(prefixo: string, prompt: string, gerar: () => Promise<ResultadoIA<T>>, validar: (guardado: T) => T | null): Promise<ResultadoIA<T>> {
   const chave = createHash('sha256').update(prompt).digest('hex');
   try {
     const dado = await unstable_cache(
@@ -26,7 +28,8 @@ export async function comCache<T>(prefixo: string, prompt: string, gerar: () => 
       [prefixo, chave],
       { revalidate: TRINTA_DIAS_S },
     )();
-    return { ok: true, dado };
+    const valido = validar(dado);
+    return valido ? { ok: true, dado: valido } : { ok: false, erro: 'Resposta guardada inválida', status: 502 };
   } catch (e) {
     if (e instanceof FalhaIA) return { ok: false, erro: e.message, status: e.status };
     throw e;

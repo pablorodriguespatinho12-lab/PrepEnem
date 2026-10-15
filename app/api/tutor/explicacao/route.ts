@@ -21,7 +21,8 @@ export async function POST(req: Request) {
   // Mesma questão e mesma alternativa marcada = mesmo prompt (lib/cache-ia.ts).
   const prompt = promptExplicacao(questao);
   const r = await comCache('explicacao', prompt, () =>
-    pedirJson(prompt, (bruto) => validarExplicacao(bruto, questao.materia), { maxTokens: 4000, temperature: 0.2, modelo: MODELO_IA.explicacao(), timeoutMs: 45_000 }));
+    pedirJson(prompt, (bruto) => validarExplicacao(bruto, questao.materia), { maxTokens: 4000, temperature: 0.2, modelo: MODELO_IA.explicacao(), timeoutMs: 45_000 }),
+    (guardada) => validarExplicacao(guardada, questao.materia));
   if (!r.ok) return NextResponse.json({ error: r.erro }, { status: r.status });
   return NextResponse.json({ explicacao: r.dado });
 }

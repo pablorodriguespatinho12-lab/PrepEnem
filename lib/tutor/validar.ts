@@ -91,9 +91,15 @@ export function extrairJson(bruto: string): unknown {
    a IA desenhou "New·ton" para explicar força (foto de 07/10/2026). */
 const visualDaMateria = (v: Visual | null, materia?: string): Visual | null =>
   v?.tipo === 'palavra' && materia && !/portugu/i.test(materia) ? null : v;
+/* ENEM não cobra cálculo, e o prompt já proíbe; mesmo assim a IA deduziu
+   energia cinética com integral numa questão de Física Base (Pablo,
+   15/10/2026: "integral em lugar que não é para aparecer"). Passo assim sai. */
+const CALCULO = /\\int|\\oint|\\lim\b|\\partial|\\frac\{d[a-z]?\}\{d[a-z]\}|\bd[a-z]\s*=\s*[a-z]\s*\\?,?\s*d[a-z]\b|∫/;
+export const temCalculo = (passo: unknown): boolean => CALCULO.test(JSON.stringify(passo));
 export function validarExplicacao(bruto: unknown, materia?: string): Explicacao | null {
   const e = objeto(bruto);
   const passos = lista(e.passos).map(objeto)
+    .filter((p) => !temCalculo(p))
     .map((p) => ({ titulo: texto(p.titulo, 80), texto: texto(p.texto, 900), visual: visualDaMateria(validarVisual(p.visual), materia) }))
     .filter((p): p is PassoExplicacao => p.titulo !== null && p.texto !== null)
     .slice(0, 4);

@@ -110,3 +110,17 @@ describe('validarExplicacao limpa o texto da IA', () => {
     expect(e.passos[0].texto).toBe('Frase curta.');
   });
 });
+test('explicação já validada continua igual ao ser validada de novo (cache)', () => {
+  const bruto = { ideia: 'A energia depende da velocidade.', passos: [{ titulo: 'Conta', texto: 'Troca as letras.', visual: { tipo: 'quadro', dados: ['m = 2', 'v = 4'], formula: '$E_c = \\frac{1}{2}mv^2$', contas: ['E_c = \\frac{1}{2} \\cdot 2 \\cdot 4^2'], resultado: 'E_c = 16\\,\\text{J}' } }] };
+  const uma = validarExplicacao(bruto, 'Física');
+  expect(uma).not.toBeNull();
+  expect(validarExplicacao(uma, 'Física')).toEqual(uma);
+});
+test('passo com integral ou derivada sai da explicação de questão do ENEM (foto de 15/10/2026)', () => {
+  const r = validarExplicacao({ ideia: 'Energia cinética depende da massa e da velocidade.', passos: [
+    { titulo: 'A fórmula', texto: 'A energia é $\\frac{1}{2}mv^2$.' },
+    { titulo: 'De onde vem', texto: 'Integrando.', visual: { tipo: 'transformacao', linhas: [{ latex: 'W = \\int F\\,dx' }, { latex: 'a = \\frac{dv}{dt}' }] } },
+    { titulo: 'Derivada', texto: 'Use $\\frac{dv}{dt}$.' },
+  ] }, 'Física');
+  expect(r?.passos.map((p) => p.titulo)).toEqual(['A fórmula']);
+});

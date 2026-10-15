@@ -194,6 +194,10 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   a fórmula três vezes); questão sem número abre com tabela do efeito
   (velocidade 2× → energia 4×). Palavra solta na fórmula vira `\text{}`
   (`palavrasComoTexto`: "massadocorpo"). "De onde vem" sem integral ou derivada.
+  Regra de prompt não basta: o CÓDIGO barra (15/10/2026). `semCifrao` tira o
+  `$` que a IA põe no quadro; `temCalculo` derruba passo com integral/derivada
+  na questão e no resumo; `comCache` revalida o que sai do cache (senão a
+  explicação errada fica 30 dias). Erro novo da IA = regra no validador + teste.
 - **Quadro primeiro, sem cena na questão (Pablo, 15/10/2026: "o quadro branco
   e a fórmula", depois de ver o carro com gráfico no lugar):** na explicação
   da questão, conta abre com o `quadro` no 1º passo e a `cena` não entra (ela

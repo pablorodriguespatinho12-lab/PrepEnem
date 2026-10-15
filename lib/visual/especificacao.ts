@@ -257,13 +257,26 @@ export function palavrasComoTexto(latex: string): string {
     .replace(PALAVRAS, (p, i: number, todo: string) => `${/[\d\s]/.test(todo[i - 1] ?? '') && i > 0 ? '\\,' : ''}\\text{${p}}`)
     .replace(/\u0000(\d+)\u0000/g, (_m, i: string) => guardados[Number(i)]);
 }
+/* O quadro já é LaTeX, mas a IA às vezes manda "$E_c = ...$" e o quadro
+   escrevia o cifrão; frase com fórmula no meio ("$E_c$ depende de $m$")
+   saía grudada (Pablo, 15/10/2026). Fora do $ é texto; dentro, a conta. */
+export function semCifrao(latex: string): string {
+  if (!latex.includes('$')) return latex;
+  return latex.replace(/\\\(|\\\)/g, '$').split('$')
+    .map((parte, i) => (i % 2 === 1 ? parte.trim() : parte.trim() ? `\\text{${parte.replace(/\s+/g, ' ')}}` : ''))
+    .join('');
+}
+const linhaDoQuadro = (bruto: unknown, tamanho: number) => {
+  const l = decimal(texto(bruto, tamanho));
+  return l ? palavrasComoTexto(semCifrao(l)) : undefined;
+};
 function quadro(v: Record<string, unknown>): VisualQuadro | null {
   const linhas = (bruto: unknown, max: number, tamanho: number) =>
-    lista(bruto).map((l) => decimal(texto(l, tamanho))).filter((l): l is string => !!l).map(palavrasComoTexto).slice(0, max);
+    lista(bruto).map((l) => linhaDoQuadro(l, tamanho)).filter((l): l is string => !!l).slice(0, max);
   const dados = linhas(v.dados, MAX_DADOS, 120);
   const contas = linhas(v.contas, MAX_CONTAS_QUADRO, 300);
-  const formula = decimal(texto(v.formula, 200));
-  const resultado = decimal(texto(v.resultado, 200));
+  const formula = linhaDoQuadro(v.formula, 200);
+  const resultado = linhaDoQuadro(v.resultado, 200);
   if (dados.length === 0 || !formula || !resultado) return null;
   // Quadro sem número é a fórmula escrita três vezes ("depende de quê?"):
   // a questão não tem conta, então não tem quadro (15/10/2026).
@@ -271,7 +284,7 @@ function quadro(v: Record<string, unknown>): VisualQuadro | null {
   if (!/\d/.test(dados.join(' '))) return null;
   const legenda = linhas(v.legenda, 3, 90);
   return {
-    tipo: 'quadro', titulo: texto(v.titulo), dados, formula: palavrasComoTexto(formula), contas, resultado: palavrasComoTexto(resultado),
+    tipo: 'quadro', titulo: texto(v.titulo), dados, formula, contas, resultado,
     legenda: legenda.length > 0 ? legenda : undefined, nota: texto(v.nota, 120),
   };
 }

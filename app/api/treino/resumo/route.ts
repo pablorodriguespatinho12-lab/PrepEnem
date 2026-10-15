@@ -43,7 +43,8 @@ export async function POST(req: Request) {
   const tokensDoPrompt = Math.ceil(prompt.length / CARACTERES_POR_TOKEN);
   const maxTokens = Math.min(TOKENS_BASE + TOKENS_POR_ASSUNTO * Math.min(assuntos.length, MAX_ASSUNTOS), TOKENS_TETO, LIMITE_POR_MINUTO - tokensDoPrompt);
   // Os assuntos do dia são os mesmos para todos: guardado pelo prompt.
-  const r = await comCache('resumo', prompt, () => pedirJson(prompt, validarResumos, { maxTokens, temperature: 0.3, modelo: MODELO_IA.resumo() }));
+  const r = await comCache('resumo', prompt, () => pedirJson(prompt, validarResumos, { maxTokens, temperature: 0.3, modelo: MODELO_IA.resumo() }),
+    (guardados) => validarResumos({ resumos: guardados }));
   if (!r.ok) return NextResponse.json({ error: r.erro }, { status: r.status });
   return NextResponse.json({ resumos: r.dado });
 }

@@ -5,6 +5,7 @@
 // de frações se não sei soma": o pré-requisito vem primeiro, na tela.
 
 import { FORMATO_VISUAL_PARA_IA, validarVisual, type Visual } from '@/lib/visual/especificacao';
+import { temCalculo } from './validar';
 
 export interface ResumoAssunto {
   materia: string;
@@ -45,7 +46,7 @@ Devolva SOMENTE JSON: {"resumos": [{"materia": "...", "subtema": "...", "oQueE":
 
 const obj = (v: unknown): Record<string, unknown> => (v && typeof v === 'object' ? (v as Record<string, unknown>) : {});
 const txt = (v: unknown, max: number): string => (typeof v === 'string' ? v.trim().slice(0, max) : '');
-const passos = (v: unknown, max: number) => (Array.isArray(v) ? v : []).map(obj)
+const passos = (v: unknown, max: number) => (Array.isArray(v) ? v : []).map(obj).filter((p) => !temCalculo(p))
   .map((p) => ({ titulo: txt(p.titulo, 80), texto: txt(p.texto, 800), visual: validarVisual(p.visual) }))
   .filter((p) => p.titulo && p.texto)
   .slice(0, max);

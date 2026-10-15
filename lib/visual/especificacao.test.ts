@@ -211,3 +211,16 @@ test('quadro: palavra solta na fórmula vira texto, com espaço', () => {
 test('quadro sem nenhum número não é quadro (a fórmula escrita três vezes)', () => {
   expect(validarVisual({ tipo: 'quadro', dados: ['m = massa do corpo', 'v = velocidade'], formula: 'E_c = \\frac{1}{2}mv^2', contas: ['E_c = \\frac{1}{2}mv^2'], resultado: 'E_c = \\frac{1}{2}mv^2' })).toBeNull();
 });
+test('quadro: $ da IA não aparece no quadro (foto de 15/10/2026)', () => {
+  const v = validarVisual({ tipo: 'quadro', dados: ['$m = 2\\,\\text{kg}$'], formula: '$E_c = \\frac{1}{2}mv^2$', contas: ['$E_c = \\frac{1}{2} \\cdot 2 \\cdot 4^2$'], resultado: '$E_c = 16\\,\\text{J}$' });
+  expect(JSON.stringify(v)).not.toContain('$');
+  expect(v).toMatchObject({ formula: 'E_c = \\frac{1}{2}mv^2', resultado: 'E_c = 16\\,\\text{J}' });
+});
+test('quadro: frase com $ no meio vira texto com espaço', () => {
+  const v = validarVisual({ tipo: 'quadro', dados: ['v = 4'], formula: 'E_c = mv', contas: [], resultado: '$E_c$ depende de $m$ e $v$' });
+  expect(v).toMatchObject({ resultado: 'E_c\\text{ depende de }m\\text{ e }v' });
+});
+test('quadro já validado continua igual (explicação guardada no cache)', () => {
+  const v = validarVisual({ tipo: 'quadro', dados: ['m = massa do corpo', 'v = 4,5'], formula: '$E_c = \\frac{1}{2}mv^2$', contas: ['E_c = 2 \\cdot 4,5'], resultado: 'E_c = 9\\,\\text{J}' });
+  expect(validarVisual(v)).toEqual(v);
+});

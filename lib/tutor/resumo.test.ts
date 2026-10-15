@@ -41,3 +41,7 @@ describe('validarResumos', () => {
     expect(validarResumos('lixo')).toBeNull();
   });
 });
+test('resumo já validado continua igual ao ser validado de novo (cache)', () => {
+  const r = validarResumos({ resumos: [{ materia: 'Física', subtema: 'MRU', ideia: 'Velocidade constante.', construcao: [{ titulo: 'Posição', texto: 'Anda 2 m por segundo.', visual: { tipo: 'grafico', x: [0, 5], funcoes: [{ expr: '2x' }] } }], regra: '$s = s_0 + vt$', dicaEnem: 'Gráfico s × t.' }] });
+  expect(validarResumos({ resumos: r })).toEqual(r);
+});
