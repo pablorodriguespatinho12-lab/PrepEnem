@@ -92,8 +92,8 @@ function Conteudo({ cartao }: { cartao: Cartao }) {
 
 const BOTAO = 'inline-flex items-center gap-2 px-4 py-2.5 rounded-[var(--radius-control)] font-medium type-meta t-colors';
 
-export function ConceitosDoDia({ resumos, cores, onComecar }: {
-  resumos: ResumoAssunto[]; cores: Record<string, string>; onComecar: () => void;
+export function ConceitosDoDia({ resumos, cores, onComecar, rotuloFim = 'Começar treino' }: {
+  resumos: ResumoAssunto[]; cores: Record<string, string>; onComecar: () => void; rotuloFim?: string;
 }) {
   const reduzir = useReducedMotion() ?? false;
   const etapas = montarEtapas(resumos);
@@ -143,7 +143,7 @@ export function ConceitosDoDia({ resumos, cores, onComecar }: {
         )}
         {ultima ? (
           <button type="button" onClick={onComecar} className={`${BOTAO} bg-primary text-primary-foreground hover:bg-[hsl(var(--primary-hover))]`}>
-            <Play className="w-4 h-4" /> Começar treino
+            <Play className="w-4 h-4" /> {rotuloFim}
           </button>
         ) : (
           <button type="button" onClick={() => ir(1)} className={`${BOTAO} bg-primary text-primary-foreground hover:bg-[hsl(var(--primary-hover))]`}>

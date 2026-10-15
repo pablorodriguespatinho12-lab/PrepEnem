@@ -21,6 +21,8 @@ import { TextoCompleto } from '@/components/tutor/texto-completo';
 // Só carrega as 48 resoluções quando a questão do dia é de vestibular.
 const ResolucaoClicavel = dynamic(() => import('@/components/vestibular/resolucao-clicavel'), { ssr: false });
 import { ConceitosDoDia } from '@/components/treino/conceitos-do-dia';
+import { ConceitoAntes } from '@/components/treino/conceito-antes';
+import { useConceitoAntes } from '@/hooks/use-conceito-antes';
 import type { ResumoAssunto } from '@/lib/tutor/resumo';
 import { playSound } from '@/lib/sounds';
 
@@ -292,6 +294,10 @@ export default function TreinoPage() {
   }, [startSession]);
 
   const currentQ = questions?.[currentIdx];
+  // Assunto que a Revisão de Conceitos não cobriu: o conceito vem antes da questão.
+  const conceito = useConceitoAntes(questions ?? [], currentIdx,
+    sessionStarted && !loading && !finished && !answered && (resumoDismissed || !showResumo) && !isReview && !isErrosReview && !isFiltered,
+    resumoData);
   // Só no treino do dia: revisão e filtro por assunto continuam todos para resolver.
   const resolvida = !isReview && !isErrosReview && !isFiltered && ehExemploResolvido(questions ?? [], currentIdx);
   const alternatives = currentQ ? [
@@ -762,6 +768,13 @@ export default function TreinoPage() {
     </>
   );
 
+  if (conceito.assunto) {
+    return (
+      <div className="p-4 md:p-8 max-w-3xl mx-auto lg:max-w-[88rem]">
+        <ConceitoAntes assunto={conceito.assunto} resumo={conceito.resumo} carregando={conceito.carregando} cores={materiaColors} onSeguir={conceito.dispensar} />
+      </div>
+    );
+  }
   return (
     // Tela grande: questão na esquerda, resolução na direita, e a página não
     // rola, só a coluna da direita (Pablo, 15/10/2026). No celular

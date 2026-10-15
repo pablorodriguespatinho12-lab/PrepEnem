@@ -224,6 +224,11 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 - "Começar do zero" no treino monta sessão nova; antes só restaurava a mesma.
   Chamava "Recomeçar" e o Pablo apertou achando que voltava de onde parou
   (15/10/2026): o nome diz que sai de onde está. Voltar é automático.
+- **Conceito antes do assunto novo (Pablo, 15/10/2026: resistor "sem
+  revisar conceito"):** a Revisão de Conceitos cobre só até 4 assuntos do
+  cronograma; o treino completa com outros. Na 1ª questão de assunto não
+  coberto, o conceito dele vem antes (`lib/conceito-antes.ts`), já buscado
+  durante a questão anterior. Falhou a IA, a questão segue sem cartão.
 - Sessão aberta só é retomada se for do mesmo dia (horário de Brasília) e não
   for simulado — a de outro dia foi montada para outro dia do cronograma.
 - **Flashcards do dia (06/10/2026):** o fim do treino leva a `/flashcards/dia`,
