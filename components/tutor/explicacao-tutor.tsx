@@ -4,6 +4,7 @@
 // uma pergunta de recuperação; depois, ele pode perguntar "mas por quê?".
 
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { ArrowLeft, ArrowRight, Brain, Eye, Loader2, RefreshCcw, Send } from 'lucide-react';
 import MathText from '@/components/math-text';
 import { VisualDesenho } from '@/components/visual/visual-desenho';
@@ -11,6 +12,7 @@ import { NaoEntendiContext } from '@/components/visual/quadro';
 import type { Explicacao, RespostaTutor } from '@/lib/tutor/validar';
 import { resumirExplicacao } from '@/lib/tutor/validar';
 import type { Visual } from '@/lib/visual/especificacao';
+import { useTelaGrande } from '@/hooks/use-tela-grande';
 
 export interface QuestaoTutor {
   id?: string;
@@ -26,6 +28,10 @@ interface Props {
   respostaDada: string | null;
   /* Errou: a explicação já começa sozinha (feedback imediato). Acertou: botão. */
   iniciarSozinha?: boolean;
+  /* Tela grande: o que é sobre o aluno e a questão (onde errou, o que cada
+     termo é) vai para este lugar da coluna da esquerda, para a direita caber
+     sem rolar (Pablo, 15/10/2026). */
+  lateral?: HTMLElement | null;
 }
 
 interface Mensagem { papel: 'aluno' | 'tutor'; texto: string; visual?: Visual | null }
@@ -43,7 +49,8 @@ function corpoDaQuestao(q: QuestaoTutor, respostaDada: string | null) {
   };
 }
 
-export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false }: Props) {
+export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false, lateral = null }: Props) {
+  const telaGrande = useTelaGrande();
   const [explicacao, setExplicacao] = useState<Explicacao | null>(null);
   const [carregando, setCarregando] = useState(false);
   const [erro, setErro] = useState<string | null>(null);
@@ -160,10 +167,8 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
   const total = explicacao.passos.length;
   const terminou = passosVisiveis >= total;
   const passoAtual = explicacao.passos[passosVisiveis - 1];
-
-  return (
-    <NaoEntendiContext.Provider value={(texto) => { void perguntar(texto); }}>
-    <section className="surface-1 rounded-[var(--radius-surface)] p-5 md:p-6 space-y-5" aria-label="Explicação">
+  const sobreAQuestao = (
+    <>
       {explicacao.seuErro && (
         <div className="rounded-[var(--radius-control)] border p-4"
           style={{ backgroundColor: 'hsl(var(--danger-surface))', borderColor: 'hsl(var(--danger-border))' }}>
@@ -171,12 +176,6 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
           <MathText text={explicacao.seuErro} className="font-reading" />
         </div>
       )}
-
-      <div>
-        <p className="type-caption text-muted-foreground mb-1">A ideia</p>
-        <div className="font-display type-lead font-semibold"><MathText text={explicacao.ideia} /></div>
-      </div>
-
       {explicacao.pecas.length > 0 && (
         <dl className="flex flex-wrap gap-2">
           {explicacao.pecas.map((p) => (
@@ -187,6 +186,18 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
           ))}
         </dl>
       )}
+    </>
+  );
+
+  return (
+    <NaoEntendiContext.Provider value={(texto) => { void perguntar(texto); }}>
+    <section className="surface-1 rounded-[var(--radius-surface)] p-5 md:p-6 space-y-5 lg:space-y-4" aria-label="Explicação">
+      {lateral && telaGrande ? createPortal(<div className="space-y-4">{sobreAQuestao}</div>, lateral) : sobreAQuestao}
+
+      <div>
+        <p className="type-caption text-muted-foreground mb-1">A ideia</p>
+        <div className="font-display type-lead font-semibold"><MathText text={explicacao.ideia} /></div>
+      </div>
 
       {/* Um passo por vez: o botão troca o passo em vez de empilhar, para a
           tela não rolar (Pablo, 15/10/2026, opção A com o quadro do B). */}
@@ -236,9 +247,9 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
           quadro manda a pergunta para cá, e antes ela só aparecia no último
           passo, então o botão parecia não fazer nada (Pablo, 08/10/2026). */}
       <div className="border-t border-border pt-4 space-y-3">
-          <p className="type-caption text-muted-foreground">Não entendeu alguma parte? Pergunte para a IA do seu jeito.</p>
+          <p className="type-caption text-muted-foreground lg:hidden">Não entendeu alguma parte? Pergunte para a IA do seu jeito.</p>
           {mensagens.length > 0 && (
-            <div className="space-y-3" aria-live="polite">
+            <div className="space-y-3 lg:max-h-60 lg:overflow-y-auto lg:pr-1" aria-live="polite">
               {mensagens.map((m, i) => (
                 <div key={i} className={m.papel === 'aluno' ? 'flex justify-end' : ''}>
                   <div className={m.papel === 'aluno'

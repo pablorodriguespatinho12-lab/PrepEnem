@@ -162,7 +162,11 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   resolução na direita, e a página não rola: só a coluna da direita. A
   explicação mostra UM passo por vez (Próximo / Passo anterior, sem empilhar)
   e o "Não entendeu? Pergunte aqui" fica preso embaixo da coluna. No celular,
-  uma coluna só, na ordem de antes.
+  uma coluna só, na ordem de antes. **A direita não rola** (Pablo, mesmo dia):
+  o que é sobre a resposta dele (Correto/Incorreto, onde errou, glossário,
+  Feynman) vai para a esquerda (`lateral`, portal), o "01 de 41" grande vira
+  linha pequena e a conversa rola só dentro dela. Medido: cabe em 1920×1030;
+  em 1366×768 passa um pouco quando o passo tem `cena`.
 - **Exemplo resolvido sem escolha (Pablo, 07/10/2026):** só a alternativa certa
   aparece, já marcada; a resolução vem ao lado (embaixo no celular). Conta = visual `quadro`
   (abaixo); `transformacao` só deduz fórmula. Questão de uma palavra (acento, sílaba)

@@ -16,6 +16,7 @@ import { fireConfetti, spawnCorrectParticles, flashScreen } from '@/components/a
 import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
 import { ETAPA_LABEL, ehExemploResolvido, etapaDaQuestao } from '@/lib/treino-etapas';
 import { ExplicacaoTutor } from '@/components/tutor/explicacao-tutor';
+import { useTelaGrande } from '@/hooks/use-tela-grande';
 import { TextoCompleto } from '@/components/tutor/texto-completo';
 // Só carrega as 48 resoluções quando a questão do dia é de vestibular.
 const ResolucaoClicavel = dynamic(() => import('@/components/vestibular/resolucao-clicavel'), { ssr: false });
@@ -67,6 +68,9 @@ export default function TreinoPage() {
   const [score, setScore] = useState({ correct: 0, wrong: 0 });
   const [finished, setFinished] = useState(false);
   const [feynmanText, setFeynmanText] = useState('');
+  // Lugar na coluna da esquerda para o que é sobre a questão (tela grande).
+  const [lateral, setLateral] = useState<HTMLDivElement | null>(null);
+  const telaGrande = useTelaGrande();
   const [streak, setStreak] = useState(0);
   const [errosRound, setErrosRound] = useState(1);
   const [errosWrongIds, setErrosWrongIds] = useState<string[]>([]);
@@ -696,6 +700,68 @@ export default function TreinoPage() {
     );
   }
 
+  const retorno = (
+    <>
+      {/* Feedback — revelação em "flip" suave, mesmo espírito do flip dos flashcards */}
+        <motion.div
+          initial={{ opacity: 0, rotateX: shouldReduceMotion ? 0 : -12, scaleY: shouldReduceMotion ? 1 : 0.96 }}
+          animate={{ opacity: 1, rotateX: 0, scaleY: 1 }}
+          transition={{ duration: shouldReduceMotion ? 0.01 : 0.3, ease: [0.16, 1, 0.3, 1] }}
+          style={{
+            transformPerspective: 800,
+            transformOrigin: 'top',
+            backgroundColor: result?.acertou ? 'hsl(var(--success-surface))' : 'hsl(var(--danger-surface))',
+            borderColor: result?.acertou ? 'hsl(var(--success-border))' : 'hsl(var(--danger-border))',
+          }}
+          className="rounded-[var(--radius-surface)] border p-5 md:p-6 shadow-elev-1"
+        >
+          <div className="flex items-center gap-2 mb-3">
+            <span style={{ color: result?.acertou ? 'hsl(var(--success))' : 'hsl(var(--danger))' }}>
+              {result?.acertou ? <Check className="w-5 h-5" strokeWidth={3} /> : <X className="w-5 h-5" strokeWidth={3} />}
+            </span>
+            <span
+              className="font-display type-lead font-semibold"
+              style={{ color: result?.acertou ? 'hsl(var(--success))' : 'hsl(var(--danger))' }}
+            >
+              {result?.acertou ? 'Correto' : 'Incorreto'}
+            </span>
+          </div>
+          {result?.explicacao && <TextoCompleto texto={result.explicacao} />}
+        </motion.div>
+    </>
+  );
+  const feynman = (
+    <>
+      {/* Feynman technique */}
+        {!result?.acertou && !isReview && (
+          /* Fechado por padrão: aberto, era mais um campo de texto embaixo de
+             toda explicação (tela limpa, decisoes-prepenem). */
+          <details key={currentIdx} className="surface-1 rounded-[var(--radius-surface)] px-5 py-3 group">
+            <summary className="cursor-pointer type-meta text-muted-foreground hover:text-foreground t-colors list-none">
+              Explicar com minhas palavras
+            </summary>
+            <p className="type-meta text-muted-foreground mt-3 mb-3">
+              Por que errou e qual o conceito certo:
+            </p>
+            <textarea
+              value={feynmanText}
+              onChange={(e) => setFeynmanText(e.target.value)}
+              className="w-full p-3 border border-input rounded-[var(--radius-control)] font-reading text-body bg-[hsl(var(--surface-2))] resize-none focus:outline-none"
+              rows={3}
+              placeholder="Escreva sua explicação aqui..."
+            />
+            <button
+              onClick={saveFeynman}
+              disabled={!feynmanText.trim()}
+              className="mt-2.5 flex items-center gap-1.5 px-3 py-2 bg-primary/10 text-primary-text type-meta font-medium rounded-[var(--radius-control)] hover:bg-primary/20 t-colors disabled:opacity-40"
+            >
+              <Send className="w-3.5 h-3.5" /> Salvar explicação
+            </button>
+          </details>
+        )}
+    </>
+  );
+
   return (
     // Tela grande: questão na esquerda, resolução na direita, e a página não
     // rola, só a coluna da direita (Pablo, 15/10/2026). No celular
@@ -704,8 +770,8 @@ export default function TreinoPage() {
       {/* Cabeçalho editorial: o número da questão é o marcador de capítulo.
           Contraste de escala (51.9px contra 13.6px) carrega a hierarquia — não
           há caixa colorida fazendo esse trabalho. */}
-      <header className="mb-8 lg:mb-5 lg:shrink-0">
-        <div className="flex items-start justify-between gap-4 mb-5">
+      <header className="mb-8 lg:mb-4 lg:shrink-0">
+        <div className="flex items-start justify-between gap-4 mb-5 lg:mb-0">
           <div className="flex items-center gap-2 min-w-0">
             <button
               onClick={() => router.push('/dashboard')}
@@ -717,6 +783,9 @@ export default function TreinoPage() {
             <p className="type-caption text-muted-foreground truncate">
               {isErrosReview ? `Revisão de erros · rodada ${errosRound}` : isReview ? 'Revisão espaçada' : isFiltered ? `Treino · ${filterMateria || 'filtrado'}` : 'Treino diário'}
             </p>
+            <span data-numeric className="hidden lg:inline type-caption text-muted-foreground shrink-0">
+              · {String(currentIdx + 1).padStart(2, '0')} de {String(questions?.length ?? 0).padStart(2, '0')}
+            </span>
           </div>
 
           <div className="flex items-center gap-1.5 shrink-0">
@@ -756,7 +825,7 @@ export default function TreinoPage() {
           </div>
         </div>
 
-        <div className="flex items-baseline gap-2.5">
+        <div className="flex items-baseline gap-2.5 lg:hidden">
           <span data-numeric className="font-display type-hero font-semibold leading-none">
             {String(currentIdx + 1).padStart(2, '0')}
           </span>
@@ -766,7 +835,7 @@ export default function TreinoPage() {
         </div>
 
         {/* Filete de progresso: escala no eixo X, sem animar width. */}
-        <div className="mt-4 h-px w-full bg-border overflow-hidden" role="presentation">
+        <div className="mt-4 lg:mt-3 h-px w-full bg-border overflow-hidden" role="presentation">
           <div
             className="h-full w-full bg-primary origin-left transition-transform duration-medium ease-out-quart"
             style={{ transform: `scaleX(${(currentIdx + 1) / Math.max(1, questions?.length ?? 1)})` }}
@@ -781,7 +850,7 @@ export default function TreinoPage() {
           for longo), botões embaixo à esquerda, resolução na direita inteira.
           No DOM a ordem é enunciado → resolução → botões, a mesma do celular. */}
       <div className="lg:flex-1 lg:min-h-0 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:grid-rows-[minmax(0,1fr)_auto] lg:gap-x-8 lg:gap-y-4 space-y-4 lg:space-y-0">
-      <div className="relative lg:col-start-1 lg:row-start-1 lg:overflow-y-auto lg:min-h-0">
+      <div className="relative lg:col-start-1 lg:row-start-1 lg:overflow-y-auto lg:min-h-0 lg:space-y-4 lg:pr-1">
         <AnimatePresence mode="popLayout" initial={false}>
           <motion.div
             key={currentIdx}
@@ -946,15 +1015,21 @@ export default function TreinoPage() {
           </div>
           </motion.div>
         </AnimatePresence>
+        {/* Tela grande: o que é sobre a sua resposta fica embaixo da questão,
+            e a coluna da direita só com a resolução (Pablo, 15/10/2026). */}
+        {telaGrande && result && !resolvida && retorno}
+        <div ref={setLateral} className="hidden lg:block empty:hidden" />
+        {telaGrande && result && !resolvida && feynman}
       </div>
 
-      {/* Resolução: na tela grande é a coluna da direita, a única que rola. */}
+      {/* Resolução: na tela grande é a coluna da direita. Feita para caber sem
+          rolar; o overflow fica só de rede para conteúdo fora do comum. */}
       <div className="lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:overflow-y-auto lg:min-h-0 lg:pr-1">
       {resolvida && currentQ ? (
         <div className="space-y-4">
           {/* A explicação curta com desenho vem primeiro; o texto antigo da
               questão fica atrás de um clique (Pablo, 06/10/2026). */}
-          <ExplicacaoTutor questao={currentQ} respostaDada={null} iniciarSozinha />
+          <ExplicacaoTutor questao={currentQ} respostaDada={null} iniciarSozinha lateral={lateral} />
           {currentQ.explicacao && <TextoCompleto texto={currentQ.explicacao} />}
         </div>
       ) : !answered ? (
@@ -988,66 +1063,15 @@ export default function TreinoPage() {
         </div>
       ) : (
         <div className="space-y-4">
-          {/* Feedback — revelação em "flip" suave, mesmo espírito do flip dos flashcards */}
-          <motion.div
-            initial={{ opacity: 0, rotateX: shouldReduceMotion ? 0 : -12, scaleY: shouldReduceMotion ? 1 : 0.96 }}
-            animate={{ opacity: 1, rotateX: 0, scaleY: 1 }}
-            transition={{ duration: shouldReduceMotion ? 0.01 : 0.3, ease: [0.16, 1, 0.3, 1] }}
-            style={{
-              transformPerspective: 800,
-              transformOrigin: 'top',
-              backgroundColor: result?.acertou ? 'hsl(var(--success-surface))' : 'hsl(var(--danger-surface))',
-              borderColor: result?.acertou ? 'hsl(var(--success-border))' : 'hsl(var(--danger-border))',
-            }}
-            className="rounded-[var(--radius-surface)] border p-5 md:p-6 shadow-elev-1"
-          >
-            <div className="flex items-center gap-2 mb-3">
-              <span style={{ color: result?.acertou ? 'hsl(var(--success))' : 'hsl(var(--danger))' }}>
-                {result?.acertou ? <Check className="w-5 h-5" strokeWidth={3} /> : <X className="w-5 h-5" strokeWidth={3} />}
-              </span>
-              <span
-                className="font-display type-lead font-semibold"
-                style={{ color: result?.acertou ? 'hsl(var(--success))' : 'hsl(var(--danger))' }}
-              >
-                {result?.acertou ? 'Correto' : 'Incorreto'}
-              </span>
-            </div>
-            {result?.explicacao && <TextoCompleto texto={result.explicacao} />}
-          </motion.div>
+          {!telaGrande && retorno}
 
           {/* Questão real de vestibular: resolução de clicar, passo a passo, antes do tutor. */}
           {currentQ && ehVestibular && <ResolucaoClicavel origem={currentQ.origem} numero={currentQ.numeroQuestao} />}
           {/* Explicação visual em passos + conversa de dúvida. Errou: começa sozinha. */}
           {currentQ && (
-            <ExplicacaoTutor questao={currentQ} respostaDada={selected} iniciarSozinha={!result?.acertou && !ehVestibular} />
+            <ExplicacaoTutor questao={currentQ} respostaDada={selected} iniciarSozinha={!result?.acertou && !ehVestibular} lateral={lateral} />
           )}
-          {/* Feynman technique */}
-          {!result?.acertou && !isReview && (
-            /* Fechado por padrão: aberto, era mais um campo de texto embaixo de
-               toda explicação (tela limpa, decisoes-prepenem). */
-            <details key={currentIdx} className="surface-1 rounded-[var(--radius-surface)] px-5 py-3 group">
-              <summary className="cursor-pointer type-meta text-muted-foreground hover:text-foreground t-colors list-none">
-                Explicar com minhas palavras
-              </summary>
-              <p className="type-meta text-muted-foreground mt-3 mb-3">
-                Por que errou e qual o conceito certo:
-              </p>
-              <textarea
-                value={feynmanText}
-                onChange={(e) => setFeynmanText(e.target.value)}
-                className="w-full p-3 border border-input rounded-[var(--radius-control)] font-reading text-body bg-[hsl(var(--surface-2))] resize-none focus:outline-none"
-                rows={3}
-                placeholder="Escreva sua explicação aqui..."
-              />
-              <button
-                onClick={saveFeynman}
-                disabled={!feynmanText.trim()}
-                className="mt-2.5 flex items-center gap-1.5 px-3 py-2 bg-primary/10 text-primary-text type-meta font-medium rounded-[var(--radius-control)] hover:bg-primary/20 t-colors disabled:opacity-40"
-              >
-                <Send className="w-3.5 h-3.5" /> Salvar explicação
-              </button>
-            </details>
-          )}
+          {!telaGrande && feynman}
         </div>
       )}
       </div>
