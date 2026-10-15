@@ -51,23 +51,17 @@ export default function DashboardPage() {
 
   useEffect(() => { fetchStats(); fetchStudyProgress(); }, [fetchStats, fetchStudyProgress]);
 
-  const skipActiveDay = useCallback(async () => {
-    if (!activeDay) return;
-    await fetch('/api/study-progress', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ weekNumber: activeDay.weekNumber, dayIndex: activeDay.dayIndex, status: 'pulado' }),
-    }).catch(() => {});
-    fetchStudyProgress();
-  }, [activeDay, fetchStudyProgress]);
 
   const weekNumber = activeDay?.weekNumber ?? 1;
   const weekTitle = studyCycle[weekNumber - 1]?.weekTitle ?? '';
   const weekSchedule = getWeekScheduleByNumber(weekNumber);
   const activeDaySchedule = activeDay ? weekSchedule[activeDay.dayIndex] : null;
   const expandedDaySchedule = expandedDayIndex !== null ? weekSchedule[expandedDayIndex] : null;
-  const statusForDayIndex = (dayIndex: number): string =>
-    studyProgress.find((p) => p.weekNumber === weekNumber && p.dayIndex === dayIndex)?.status ?? 'nao_iniciado';
+  // "pulado" (do antigo Pular este dia) não é estudado: aparece pendente.
+  const statusForDayIndex = (dayIndex: number): string => {
+    const status = studyProgress.find((p) => p.weekNumber === weekNumber && p.dayIndex === dayIndex)?.status ?? 'nao_iniciado';
+    return status === 'pulado' ? 'nao_iniciado' : status;
+  };
   const treinoHref = activeDay ? `/treino?weekNumber=${activeDay.weekNumber}&dayIndex=${activeDay.dayIndex}` : '/treino';
   const weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']; // indexado por day.dayOfWeek (0=Dom civil), não por dayIndex
   // Dia de verdade, no horário de Brasília: "Quinta-feira".
@@ -135,13 +129,6 @@ export default function DashboardPage() {
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground rounded-[var(--radius-control)] px-6 py-3 font-display type-lead font-semibold shadow-elev-1 hover:opacity-90 t-colors group"
               >
                 Começar <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button
-                type="button"
-                onClick={skipActiveDay}
-                className="type-meta text-muted-foreground hover:text-foreground underline underline-offset-2"
-              >
-                Pular este dia
               </button>
             </div>
           </section>

@@ -117,6 +117,10 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   ENEM. Química de átomo e massa usa o desenho `molecula`.
 - **Início (06/10/2026):** sem saudação e sem banner: cartão "Hoje" com as
   matérias e temas do dia e um botão "Começar"; revisões num link discreto.
+- **Conteúdo atrasado vira o de hoje (Pablo, 15/10/2026):** o dia do
+  cronograma só avança com o treino TERMINADO (`concluido`) ou o simulado
+  enviado. "Pular este dia" saiu e o `pulado` antigo conta como pendente. O
+  rótulo diz o dia de verdade: "Quinta-feira · conteúdo de segunda".
 - **Treino é escada, decidida pelo Pablo em 05/10/2026:** resumo do conteúdo
   do dia → questões Base → Intermediárias → ENEM real por último. Só matérias
   do cronograma do dia. A etapa sai da ORIGEM (`lib/treino-etapas.ts`), não de

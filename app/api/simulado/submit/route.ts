@@ -4,6 +4,8 @@ import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { agendarRevisaoDoErro } from '@/lib/revisao';
+import { getActiveStudyDay, upsertStudyProgress } from '@/lib/study-progress';
+import { studyCycle } from '@/lib/schedule-data';
 
 export async function POST(req: Request) {
   try {
@@ -84,6 +86,17 @@ export async function POST(req: Request) {
       });
 
       if (!acertou) await agendarRevisaoDoErro(userId, q.id);
+    }
+
+    // Dia do simulado no cronograma: fazer o simulado é estudar o dia. Antes
+    // só o "Pular este dia" passava dele, e o Pular saiu (15/10/2026).
+    try {
+      const ativo = await getActiveStudyDay(userId);
+      if (!ativo.cycleComplete && studyCycle[ativo.weekNumber - 1]?.days[ativo.dayIndex]?.isSimulado) {
+        await upsertStudyProgress(userId, ativo.weekNumber, ativo.dayIndex, 'concluido');
+      }
+    } catch (e) {
+      console.error('Simulado: não marcou o dia do cronograma', e);
     }
 
     const taxa = respostas.length > 0 ? Math.round((totalCorrect / respostas.length) * 100) : 0;

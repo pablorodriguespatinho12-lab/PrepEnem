@@ -17,10 +17,13 @@ export async function getActiveStudyDay(userId: string) {
     (rows.find((r) => r.weekNumber === weekNumber && r.dayIndex === dayIndex)?.status as StudyProgressStatus) ??
     'nao_iniciado';
 
+  // Só avança o dia que foi ESTUDADO (treino terminado). "pulado" fica
+  // pendente: o conteúdo não estudado vira o conteúdo de hoje (Pablo,
+  // 15/10/2026: "mostra o dia de hoje, que é quinta, com o conteúdo de segunda").
   for (let weekNumber = 1; weekNumber <= studyCycle.length; weekNumber++) {
     const week = studyCycle[weekNumber - 1];
     for (let dayIndex = 0; dayIndex < week.days.length; dayIndex++) {
-      if (!DONE_STATUSES.includes(statusFor(weekNumber, dayIndex))) {
+      if (statusFor(weekNumber, dayIndex) !== 'concluido') {
         return { weekNumber, dayIndex, cycleComplete: false };
       }
     }
