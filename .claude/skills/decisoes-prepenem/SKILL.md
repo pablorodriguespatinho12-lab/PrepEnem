@@ -156,8 +156,15 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   Fuvest/Unicamp (+ ITA/IME nas exatas), original, autossuficiente, só
   programa do médio, conferida pelo verificador. A gerada nunca se apresenta
   como real.
+- **Treino em duas colunas (Pablo, 15/10/2026, artefato
+  https://claude.ai/artifact/15stmsNn2K6a3xQEzfwLaj, "A com o quadro do B"):**
+  na tela grande (`lg`) a questão fica na esquerda com os botões embaixo, a
+  resolução na direita, e a página não rola: só a coluna da direita. A
+  explicação mostra UM passo por vez (Próximo / Passo anterior, sem empilhar)
+  e o "Não entendeu? Pergunte aqui" fica preso embaixo da coluna. No celular,
+  uma coluna só, na ordem de antes.
 - **Exemplo resolvido sem escolha (Pablo, 07/10/2026):** só a alternativa certa
-  aparece, já marcada; a resolução vem embaixo. Conta = visual `quadro`
+  aparece, já marcada; a resolução vem ao lado (embaixo no celular). Conta = visual `quadro`
   (abaixo); `transformacao` só deduz fórmula. Questão de uma palavra (acento, sílaba)
   = visual `palavra`, 1 passo só. Questão simples tem resposta pequena.
 - **Quadro de escola em toda conta (Pablo, 08/10/2026, foto do quadro do

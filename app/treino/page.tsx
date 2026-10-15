@@ -697,11 +697,14 @@ export default function TreinoPage() {
   }
 
   return (
-    <div className="px-4 py-6 md:px-8 md:py-10 max-w-[46rem] mx-auto">
+    // Tela grande: questão na esquerda, resolução na direita, e a página não
+    // rola, só a coluna da direita (Pablo, 15/10/2026). No celular
+    // continua uma coluna só, na mesma ordem.
+    <div className="px-4 py-6 md:px-8 md:py-10 max-w-[46rem] mx-auto lg:max-w-[88rem] lg:h-[100dvh] lg:py-6 lg:flex lg:flex-col">
       {/* Cabeçalho editorial: o número da questão é o marcador de capítulo.
           Contraste de escala (51.9px contra 13.6px) carrega a hierarquia — não
           há caixa colorida fazendo esse trabalho. */}
-      <header className="mb-8">
+      <header className="mb-8 lg:mb-5 lg:shrink-0">
         <div className="flex items-start justify-between gap-4 mb-5">
           <div className="flex items-center gap-2 min-w-0">
             <button
@@ -774,7 +777,11 @@ export default function TreinoPage() {
       {/* Troca de questão: fade + deslize curto (skill animation-system).
           Antes era um giro 3D de 0,5 s com a página da prova dentro — a
           imagem grande era rasterizada em 3D a cada quadro e a tela travava. */}
-      <div className="mb-4 relative">
+      {/* Grade da tela grande: enunciado em cima à esquerda (rola sozinho se
+          for longo), botões embaixo à esquerda, resolução na direita inteira.
+          No DOM a ordem é enunciado → resolução → botões, a mesma do celular. */}
+      <div className="lg:flex-1 lg:min-h-0 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:grid-rows-[minmax(0,1fr)_auto] lg:gap-x-8 lg:gap-y-4 space-y-4 lg:space-y-0">
+      <div className="relative lg:col-start-1 lg:row-start-1 lg:overflow-y-auto lg:min-h-0">
         <AnimatePresence mode="popLayout" initial={false}>
           <motion.div
             key={currentIdx}
@@ -941,35 +948,19 @@ export default function TreinoPage() {
         </AnimatePresence>
       </div>
 
-      {/* Confirm / Checking / Error / Next */}
+      {/* Resolução: na tela grande é a coluna da direita, a única que rola. */}
+      <div className="lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:overflow-y-auto lg:min-h-0 lg:pr-1">
       {resolvida && currentQ ? (
         <div className="space-y-4">
-          <div className="surface-1 rounded-[var(--radius-surface)] p-5 md:p-6 border-l-[3px] border-l-primary">
-            <p className="type-caption text-muted-foreground mb-1.5">Exemplo resolvido · resposta {currentQ.respostaCorreta}</p>
-            <p className="type-meta text-muted-foreground">
-              A resolução vem embaixo, um passo por vez. As próximas você resolve sozinho.
-            </p>
-          </div>
           {/* A explicação curta com desenho vem primeiro; o texto antigo da
               questão fica atrás de um clique (Pablo, 06/10/2026). */}
           <ExplicacaoTutor questao={currentQ} respostaDada={null} iniciarSozinha />
           {currentQ.explicacao && <TextoCompleto texto={currentQ.explicacao} />}
-          <button
-            onClick={nextQuestion}
-            className="w-full py-3.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium text-body shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3 flex items-center justify-center gap-2"
-          >
-            Entendi, próxima
-            <ChevronRight className="w-4 h-4" />
-          </button>
         </div>
       ) : !answered ? (
-        <button
-          onClick={handleAnswer}
-          disabled={!selected}
-          className="w-full py-3.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium text-body shadow-elev-2 t-lift enabled:hover:-translate-y-px enabled:hover:shadow-elev-3 disabled:opacity-40 disabled:shadow-elev-1"
-        >
-          Confirmar resposta
-        </button>
+        <p className="hidden lg:flex h-full items-center justify-center text-center type-meta text-muted-foreground px-8">
+          Escolha uma alternativa e confirme. A resolução aparece aqui.
+        </p>
       ) : answerError ? (
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -1057,33 +1048,56 @@ export default function TreinoPage() {
               </button>
             </details>
           )}
-
-          <div className="flex gap-3">
-            {currentIdx > 0 && (
-              <button
-                onClick={() => {
-                  setCurrentIdx(currentIdx - 1);
-                  setSelected(null);
-                  setAnswered(false);
-                  setResult(null);
-                  setAnswerError(null);
-                  setFeynmanText('');
-                          }}
-                className="px-4 py-3.5 bg-muted text-foreground rounded-[var(--radius-control)] font-medium type-meta hover:bg-secondary t-colors flex items-center gap-2"
-              >
-                <ChevronLeft className="w-4 h-4" /> Voltar
-              </button>
-            )}
-            <button
-              onClick={nextQuestion}
-              className="flex-1 py-3.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium text-body shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3 flex items-center justify-center gap-2"
-            >
-              {currentIdx >= (questions?.length ?? 0) - 1 ? 'Finalizar Sessão' : 'Próxima Questão'}
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
         </div>
       )}
+      </div>
+
+      {/* Botões: na tela grande ficam embaixo da questão, sempre à vista. */}
+      <div className="lg:col-start-1 lg:row-start-2">
+      {resolvida && currentQ ? (
+        <button
+          onClick={nextQuestion}
+          className="w-full py-3.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium text-body shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3 flex items-center justify-center gap-2"
+        >
+          Entendi, próxima
+          <ChevronRight className="w-4 h-4" />
+        </button>
+      ) : !answered ? (
+        <button
+          onClick={handleAnswer}
+          disabled={!selected}
+          className="w-full py-3.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium text-body shadow-elev-2 t-lift enabled:hover:-translate-y-px enabled:hover:shadow-elev-3 disabled:opacity-40 disabled:shadow-elev-1"
+        >
+          Confirmar resposta
+        </button>
+      ) : result ? (
+        <div className="flex gap-3">
+          {currentIdx > 0 && (
+            <button
+              onClick={() => {
+                setCurrentIdx(currentIdx - 1);
+                setSelected(null);
+                setAnswered(false);
+                setResult(null);
+                setAnswerError(null);
+                setFeynmanText('');
+                        }}
+              className="px-4 py-3.5 bg-muted text-foreground rounded-[var(--radius-control)] font-medium type-meta hover:bg-secondary t-colors flex items-center gap-2"
+            >
+              <ChevronLeft className="w-4 h-4" /> Voltar
+            </button>
+          )}
+          <button
+            onClick={nextQuestion}
+            className="flex-1 py-3.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium text-body shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3 flex items-center justify-center gap-2"
+          >
+            {currentIdx >= (questions?.length ?? 0) - 1 ? 'Finalizar Sessão' : 'Próxima Questão'}
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
+      ) : null}
+      </div>
+      </div>
     </div>
   );
 }

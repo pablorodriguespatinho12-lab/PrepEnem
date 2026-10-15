@@ -4,7 +4,7 @@
 // uma pergunta de recuperação; depois, ele pode perguntar "mas por quê?".
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ArrowRight, Brain, Eye, Loader2, RefreshCcw, Send } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Brain, Eye, Loader2, RefreshCcw, Send } from 'lucide-react';
 import MathText from '@/components/math-text';
 import { VisualDesenho } from '@/components/visual/visual-desenho';
 import { NaoEntendiContext } from '@/components/visual/quadro';
@@ -159,6 +159,7 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
 
   const total = explicacao.passos.length;
   const terminou = passosVisiveis >= total;
+  const passoAtual = explicacao.passos[passosVisiveis - 1];
 
   return (
     <NaoEntendiContext.Provider value={(texto) => { void perguntar(texto); }}>
@@ -187,30 +188,37 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
         </dl>
       )}
 
-      <ol className="space-y-5">
-        {explicacao.passos.slice(0, passosVisiveis).map((p, i) => (
-          <li key={i} className="space-y-3">
-            <p className="type-caption text-muted-foreground" data-numeric>Passo {i + 1} de {total}</p>
-            {p.visual && <VisualDesenho visual={p.visual} />}
-            <h3 className="font-display type-body font-semibold">{p.titulo}</h3>
-            <MathText text={p.texto} className="font-reading" />
-          </li>
-        ))}
-      </ol>
+      {/* Um passo por vez: o botão troca o passo em vez de empilhar, para a
+          tela não rolar (Pablo, 15/10/2026, opção A com o quadro do B). */}
+      {passoAtual && (
+        <div className="space-y-3">
+          <p className="type-caption text-muted-foreground" data-numeric>Passo {passosVisiveis} de {total}</p>
+          {passoAtual.visual && <VisualDesenho visual={passoAtual.visual} />}
+          <h3 className="font-display type-body font-semibold">{passoAtual.titulo}</h3>
+          <MathText text={passoAtual.texto} className="font-reading" />
+        </div>
+      )}
 
-      {!terminou ? (
-        <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3">
+        {passosVisiveis > 1 && (
+          <button
+            onClick={() => setPassosVisiveis((n) => n - 1)}
+            className="flex items-center gap-1.5 px-3 py-2.5 rounded-[var(--radius-control)] border border-border type-meta text-muted-foreground hover:text-foreground hover:bg-muted t-colors"
+          >
+            <ArrowLeft className="w-4 h-4" /> Passo anterior
+          </button>
+        )}
+        {!terminou && (
           <button
             onClick={() => setPassosVisiveis((n) => n + 1)}
             className="flex items-center gap-2 px-4 py-2.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-1 t-colors hover:bg-[hsl(var(--primary-hover))]"
           >
             Próximo passo <ArrowRight className="w-4 h-4" />
           </button>
-          <button onClick={() => setPassosVisiveis(total)} className="type-meta text-muted-foreground hover:text-foreground underline underline-offset-2">
-            Ver tudo
-          </button>
-        </div>
-      ) : explicacao.checagem && (
+        )}
+      </div>
+
+      {terminou && explicacao.checagem && (
         <div className="rounded-[var(--radius-control)] border border-border p-4">
           <p className="type-caption text-muted-foreground mb-1">Responda de cabeça, sem olhar</p>
           <MathText text={explicacao.checagem.pergunta} className="font-reading font-medium" />
@@ -262,27 +270,29 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false 
           {falhaConversa && (
             <p className="type-meta text-[hsl(var(--danger))]" role="alert">Não consegui responder agora. Envie de novo.</p>
           )}
-          <form
-            onSubmit={(e) => { e.preventDefault(); perguntar(rascunho); }}
-            className="flex items-end gap-2"
-          >
-            <label htmlFor="duvida-tutor" className="sr-only">Sua dúvida</label>
-            <textarea
-              id="duvida-tutor"
-              value={rascunho}
-              onChange={(e) => setRascunho(e.target.value)}
-              onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); perguntar(rascunho); } }}
-              rows={1}
-              maxLength={1200}
-              placeholder="Ex.: mas por que o x vira negativo?"
-              className="flex-1 resize-none p-3 border border-input rounded-[var(--radius-control)] font-reading text-body bg-[hsl(var(--surface-2))] focus:outline-none"
-            />
-            <button type="submit" disabled={respondendo || !rascunho.trim()} aria-label="Enviar dúvida"
-              className="p-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] disabled:opacity-50 t-colors hover:bg-[hsl(var(--primary-hover))]">
-              <Send className="w-4 h-4" />
-            </button>
-          </form>
       </div>
+      {/* Fora da conversa, filho direto da seção: assim fica preso embaixo da
+          coluna que rola na tela grande, sempre à vista (Pablo, 15/10/2026). */}
+      <form
+        onSubmit={(e) => { e.preventDefault(); perguntar(rascunho); }}
+        className="flex items-end gap-2 lg:sticky lg:bottom-0 lg:-mx-6 lg:-mb-6 lg:px-6 lg:pb-6 lg:pt-3 bg-[hsl(var(--surface-1))] rounded-b-[var(--radius-surface)]"
+      >
+        <label htmlFor="duvida-tutor" className="sr-only">Sua dúvida</label>
+        <textarea
+          id="duvida-tutor"
+          value={rascunho}
+          onChange={(e) => setRascunho(e.target.value)}
+          onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); perguntar(rascunho); } }}
+          rows={1}
+          maxLength={1200}
+          placeholder="Não entendeu? Pergunte aqui..."
+          className="flex-1 resize-none p-3 border border-input rounded-[var(--radius-control)] font-reading text-body bg-[hsl(var(--surface-2))] focus:outline-none"
+        />
+        <button type="submit" disabled={respondendo || !rascunho.trim()} aria-label="Enviar dúvida"
+          className="p-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] disabled:opacity-50 t-colors hover:bg-[hsl(var(--primary-hover))]">
+          <Send className="w-4 h-4" />
+        </button>
+      </form>
     </section>
     </NaoEntendiContext.Provider>
   );
