@@ -184,6 +184,14 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   questão tem visual no 1º passo, de qualquer matéria. A conversa com a IA fica
   aberta desde o 1º passo (o "Não entendi" mandava a pergunta para uma conversa
   escondida até o último passo).
+- **Quadro primeiro, sem cena na questão (Pablo, 15/10/2026: "o quadro branco
+  e a fórmula", depois de ver o carro com gráfico no lugar):** na explicação
+  da questão, conta abre com o `quadro` no 1º passo e a `cena` não entra (ela
+  fica nas lições de Cálculo). Nos conceitos do dia, o passo da fórmula também
+  é `quadro`, e o texto ao lado EXPLICA o desenho, nunca o descreve. Conceitos
+  do dia em duas colunas na tela grande (texto à esquerda, desenho à direita).
+  Resumo: no máximo 4 assuntos e teto de tokens pelo tamanho do prompt (a Groq
+  gratuita recusa acima de 8.000/min; o prompt já tem ~3.600).
 - **"Como você fez?" na conversa (Pablo, 15/10/2026: "multiplicar por 1000 não
   dá"):** atalho de cabeça primeiro (km/h ÷ 3,6; vírgula 3 casas) e sempre um
   visual mostrando o atalho. Só a regra não mudou nada em 3 testes; o EXEMPLO

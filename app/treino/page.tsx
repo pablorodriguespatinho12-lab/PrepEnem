@@ -481,7 +481,7 @@ export default function TreinoPage() {
 
   if (showResumo && !resumoDismissed && sessionStarted && !loading && questions.length > 0) {
     return (
-      <div className="p-4 md:p-8 max-w-3xl mx-auto">
+      <div className="p-4 md:p-8 max-w-3xl mx-auto lg:max-w-[88rem]">
         <motion.div initial={{ opacity: 1, y: 10 }} animate={{ opacity: 1, y: 0 }}>
           <div className="flex items-center gap-3 mb-2">
             <button onClick={() => router.push('/dashboard')} className="p-2 rounded-[var(--radius-control)] hover:bg-muted t-colors">
@@ -509,7 +509,7 @@ export default function TreinoPage() {
 
           {/* Antes: caixa em primary/5 com emoji. Emoji é trava do projeto e a
               caixa colorida decorava. Agora é filete + texto na serifada. */}
-          <div className="border-l-2 border-primary pl-4 py-1 mb-6 mt-5">
+          <div className="border-l-2 border-primary pl-4 py-1 mb-6 mt-5 lg:hidden">
             <p className="type-body font-reading text-muted-foreground measure-reading">
               Um conceito por vez, começando pelo que você precisa saber antes.
             </p>

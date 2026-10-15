@@ -11,6 +11,7 @@ import { ArrowLeft, ArrowRight, Play } from 'lucide-react';
 import MathText from '@/components/math-text';
 import { VisualDesenho } from '@/components/visual/visual-desenho';
 import type { ResumoAssunto } from '@/lib/tutor/resumo';
+import type { Visual } from '@/lib/visual/especificacao';
 
 type Cartao =
   | { tipo: 'antes'; titulo: string; texto: string; visual: ResumoAssunto['antes'][number]['visual'] }
@@ -32,15 +33,27 @@ export function montarEtapas(resumos: ResumoAssunto[]): Etapa[] {
   });
 }
 
+/* Tela grande: texto na esquerda, desenho na direita, como o treino (Pablo,
+   15/10/2026: "em todas as disciplinas a explicação do conteúdo"). No celular,
+   o desenho vem antes do texto. */
+function ComDesenho({ visual, children }: { visual: Visual | null | undefined; children: React.ReactNode }) {
+  if (!visual) return <div className="space-y-3">{children}</div>;
+  return (
+    <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-8 lg:items-start">
+      <div className="min-w-0 lg:col-start-2 lg:row-start-1"><VisualDesenho visual={visual} /></div>
+      <div className="min-w-0 space-y-3 lg:col-start-1 lg:row-start-1">{children}</div>
+    </div>
+  );
+}
+
 function Conteudo({ cartao }: { cartao: Cartao }) {
   if (cartao.tipo === 'antes') {
     return (
-      <div className="space-y-3">
+      <ComDesenho visual={cartao.visual}>
         <p className="type-caption text-primary-text">Você precisa disto antes</p>
         <p className="font-display type-lead font-semibold">{cartao.titulo}</p>
-        {cartao.visual && <VisualDesenho visual={cartao.visual} />}
         <MathText text={cartao.texto} className="font-reading type-body block" />
-      </div>
+      </ComDesenho>
     );
   }
   if (cartao.tipo === 'oQueE') {
@@ -53,11 +66,10 @@ function Conteudo({ cartao }: { cartao: Cartao }) {
   }
   if (cartao.tipo === 'passo') {
     return (
-      <div className="space-y-3">
-        {cartao.visual && <VisualDesenho visual={cartao.visual} />}
+      <ComDesenho visual={cartao.visual}>
         <p className="type-meta font-semibold">{cartao.titulo}</p>
         <MathText text={cartao.texto} className="font-reading type-body block" />
-      </div>
+      </ComDesenho>
     );
   }
   return (
