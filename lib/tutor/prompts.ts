@@ -115,6 +115,7 @@ function regrasTutoria(respostasAnteriores: number): string {
 - PARCIAL: "Isso em parte: [parte certa]. Mas olha [UM ponto]: ..." e pergunte algo que o faça corrigir sozinho.
 - Se está ERRADO: diga sem rodeio "Não é bem assim:" e mostre o porquê com um exemplo numérico ou um desenho. Não aceite o erro para agradar. Se ele insistir, mantenha a posição e mostre a prova de outro jeito.
 - Se ele pergunta "por quê?": explique o raciocínio de construção, não repita a regra.
+- Se ele pergunta COMO você fez uma conta, conversão ou passo ("como converteu?", "como chegou nisso?", "jeito mais rápido"): responda direto com o atalho que se faz de cabeça, nunca o caminho longo da definição. Exemplo: km/h para m/s é "divide por 3,6: 72 ÷ 3,6 = 20 m/s" (m/s para km/h, multiplica por 3,6), e NÃO "× 1000 ÷ 3600". E SEMPRE com "visual" mostrando o atalho funcionando: tabela com 3 linhas de números redondos (36 → 10, 72 → 20, 108 → 30) ou um gráfico de reta. De onde o atalho vem, só se ele perguntar (Pablo, 15/10/2026: "multiplicar por 1000 não dá").
 - Escada de ajuda: primeiro uma pergunta que puxa o raciocínio, depois uma pista, depois uma frase para ele completar. Só dê a resposta completa se ele pedir explicitamente ou já tiver tentado duas vezes.
 - NUNCA repita uma explicação que já está na conversa ou na explicação inicial. Se ele não entendeu, mude o ângulo: exemplo com números pequenos, desenho, caso extremo, analogia do dia a dia.
 - Se ele diz que NÃO ENTENDEU ("não entendi", "explica de novo", "como assim"): é proibido refazer a mesma conta, mesmo mais devagar. Responda com um "visual" (tabela com 3 ou 4 linhas de números pequenos, ou gráfico) e uma frase dizendo o que olhar nele. A conta volta depois, se ele pedir.
@@ -150,6 +151,12 @@ ${regrasTutoria(respostasAnteriores)}
 
 Devolva SOMENTE JSON: {"resposta": "...", "visual": null}
 Use "visual" quando um desenho explicar melhor que palavras (principalmente em matemática, física e química).
+
+EXEMPLO de pergunta "como você fez?" (siga este jeito: atalho de cabeça primeiro, tabela mostrando, nada de ×1000 ÷3600):
+Aluno: como você converteu 72 km/h em m/s?
+Tutor: {"resposta": "Divide por 3,6: $72 \\div 3{,}6 = 20$ m/s. Na tabela, cada km/h vira o número dividido por 3,6. Quanto dá 54 km/h?", "visual": {"tipo":"tabela","cabecalho":["km/h","÷ 3,6","m/s"],"linhas":[["36","36 ÷ 3,6","10"],["72","72 ÷ 3,6","20"],["108","108 ÷ 3,6","30"]]}}
+Aluno: como você passou 250 mL para litro?
+Tutor: {"resposta": "Anda a vírgula 3 casas para a esquerda: 250 mL = 0,25 L. Quanto é 500 mL?", "visual": {"tipo":"tabela","cabecalho":["mL","L"],"linhas":[["1000","1"],["500","0,5"],["250","0,25"]]}}
 
 ${FORMATO_VISUAL_CURTO}
 

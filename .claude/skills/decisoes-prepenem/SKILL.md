@@ -180,6 +180,10 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   questão tem visual no 1º passo, de qualquer matéria. A conversa com a IA fica
   aberta desde o 1º passo (o "Não entendi" mandava a pergunta para uma conversa
   escondida até o último passo).
+- **"Como você fez?" na conversa (Pablo, 15/10/2026: "multiplicar por 1000 não
+  dá"):** atalho de cabeça primeiro (km/h ÷ 3,6; vírgula 3 casas) e sempre um
+  visual mostrando o atalho. Só a regra não mudou nada em 3 testes; o EXEMPLO
+  no prompt mudou os 3 (`scripts/testar-conversa.ts`).
 - **Vestibular real, a última do dia (06/10/2026):** 48 questões reais (ITA
   2025, IME 2024, Fuvest 2024/25, Unicamp 2024, Unesp 2025) em
   `data/vestibular`, gravadas com `nivel: 'vestibular'` e `anoProva` vazio
