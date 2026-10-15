@@ -812,15 +812,18 @@ export default function TreinoPage() {
             )}
             <button
               onClick={() => {
-                if (!window.confirm('Recomeçar o treino do zero? As respostas desta sessão continuam salvas no seu progresso.')) return;
+                // "Recomeçar" parecia "voltar de onde parei" e apagava o lugar
+                // (Pablo, 15/10/2026, perdeu a questão 3). Voltar de onde parou
+                // é automático ao abrir o Treino; este botão é só para do zero.
+                if (!window.confirm('Começar um treino novo do zero? Você sai desta questão e não volta para ela. Para continuar de onde parou, basta abrir o Treino.')) return;
                 setFinished(false);
                 startSession(true);
               }}
-              title="Recomeçar treino do zero"
+              title="Monta um treino novo; você sai de onde está"
               className="ml-1 inline-flex items-center gap-1.5 px-2 py-1.5 rounded-[var(--radius-control)] type-meta text-muted-foreground hover:text-foreground hover:bg-muted t-colors"
             >
               <RefreshCcw className="w-4 h-4" />
-              Recomeçar
+              Começar do zero
             </button>
           </div>
         </div>

@@ -221,7 +221,9 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 - **Simulado semanal (06/10/2026):** uma matéria, 10, 15 ou 20 questões,
   3 min por questão; sorteadas mas em ordem fácil → média → ENEM
   (`ordenarPorEtapa`). O de 45 a 180 questões saiu.
-- "Recomeçar" no treino monta sessão nova; antes só restaurava a mesma.
+- "Começar do zero" no treino monta sessão nova; antes só restaurava a mesma.
+  Chamava "Recomeçar" e o Pablo apertou achando que voltava de onde parou
+  (15/10/2026): o nome diz que sai de onde está. Voltar é automático.
 - Sessão aberta só é retomada se for do mesmo dia (horário de Brasília) e não
   for simulado — a de outro dia foi montada para outro dia do cronograma.
 - **Flashcards do dia (06/10/2026):** o fim do treino leva a `/flashcards/dia`,
