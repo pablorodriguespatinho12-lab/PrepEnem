@@ -37,13 +37,17 @@ export function Quadro({ partes, condicao, ajuda }: { partes: ParteDoQuadro[]; c
   const parte = partes[atual];
 
   return (
-    <div className="rounded-[var(--radius-control)] bg-[hsl(var(--surface-2))] border border-border px-4 py-3 space-y-3">
+    <div className="space-y-3">
+      {/* Quadro branco com tinta escura, o mesmo do treino (Pablo, 15/10/2026:
+          "o quadro de imagem branca ilustrando a fórmula", "quero no cálculo
+          também"). Os botões ficam fora dele, embaixo. */}
+      <div className="quadro-escola rounded-[var(--radius-control)] px-4 py-3 space-y-3" style={{ color: 'hsl(var(--quadro-tinta))' }}>
       {condicao && (
         <p className="type-meta font-semibold" style={{ color: 'hsl(var(--chart-2))' }}><Latex fonte={condicao} /></p>
       )}
       {ajuda && (
-        <aside className="rounded-[var(--radius-control)] border border-dashed border-border px-3 py-2 flex flex-wrap items-center gap-x-5 gap-y-1" aria-label="Peça usada na conta">
-          <span className="type-caption text-muted-foreground">Ajuda</span>
+        <aside className="rounded-[var(--radius-control)] border border-dashed border-[hsl(var(--quadro-linha))] px-3 py-2 flex flex-wrap items-center gap-x-5 gap-y-1" aria-label="Peça usada na conta">
+          <span className="type-caption" style={{ color: 'hsl(var(--quadro-apagado))' }}>Ajuda</span>
           {ajuda.map((a) => <Caneta key={a} linhas={[a]} className="text-[0.8em]" />)}
         </aside>
       )}
@@ -54,15 +58,16 @@ export function Quadro({ partes, condicao, ajuda }: { partes: ParteDoQuadro[]; c
               onFim={i === atual ? () => setEscrita(true) : undefined}
               className={i < atual ? 'opacity-70 t-colors' : undefined} />
             {(p.porque || p.lado) && (i < atual || escrita) && (
-              <motion.div className="type-meta text-muted-foreground" initial={{ opacity: 0, y: reduzir ? 0 : 4 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.25 }}>
+              <motion.div className="type-meta" style={{ color: 'hsl(var(--quadro-apagado))' }} initial={{ opacity: 0, y: reduzir ? 0 : 4 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.25 }}>
                 {/* A operação feita, como o professor anota ao lado da linha. */}
-                {p.lado && <span className="inline-block mr-2 px-1.5 rounded-[var(--radius-data)] bg-muted text-foreground font-semibold"><Latex fonte={p.lado} /></span>}
+                {p.lado && <span className="inline-block mr-2 px-1.5 rounded-[var(--radius-data)] font-semibold" style={{ backgroundColor: 'hsl(var(--quadro-linha) / 0.5)', color: 'hsl(var(--quadro-tinta))' }}><Latex fonte={p.lado} /></span>}
                 {p.porque && <MathText text={p.porque} />}
               </motion.div>
             )}
           </li>
         ))}
       </ol>
+      </div>
 
       {escrita && (
         <motion.div className="flex flex-wrap gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2 }}>

@@ -184,6 +184,12 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   questão tem visual no 1º passo, de qualquer matéria. A conversa com a IA fica
   aberta desde o 1º passo (o "Não entendi" mandava a pergunta para uma conversa
   escondida até o último passo).
+- **Forma do quadro = a da prévia (Pablo, 15/10/2026, print do artefato:
+  "assim que eu quero"):** `quadro` compacto e inteiro de uma vez, sem
+  rótulos, legenda, nota nem botões (a caneta não escreve bloco a bloco). O
+  quadro das deduções do Cálculo (`Quadro`, de `transformacao`) também é
+  branco, com "Continuar" e os botões fora dele. Conversão de unidade em
+  qualquer campo da explicação: o atalho (÷ 3,6), nunca × 1000 ÷ 3600.
 - **Quadro primeiro, sem cena na questão (Pablo, 15/10/2026: "o quadro branco
   e a fórmula", depois de ver o carro com gráfico no lugar):** na explicação
   da questão, conta abre com o `quadro` no 1º passo e a `cena` não entra (ela
