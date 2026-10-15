@@ -70,6 +70,11 @@ export default function DashboardPage() {
     studyProgress.find((p) => p.weekNumber === weekNumber && p.dayIndex === dayIndex)?.status ?? 'nao_iniciado';
   const treinoHref = activeDay ? `/treino?weekNumber=${activeDay.weekNumber}&dayIndex=${activeDay.dayIndex}` : '/treino';
   const weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']; // indexado por day.dayOfWeek (0=Dom civil), não por dayIndex
+  // Dia de verdade, no horário de Brasília: "Quinta-feira".
+  const hojeNome = (() => {
+    const nome = new Intl.DateTimeFormat('pt-BR', { weekday: 'long', timeZone: 'America/Sao_Paulo' }).format(new Date());
+    return nome.charAt(0).toUpperCase() + nome.slice(1);
+  })();
 
 
 
@@ -98,7 +103,14 @@ export default function DashboardPage() {
           <section className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6" aria-labelledby="hoje-titulo">
             <div className="flex items-baseline justify-between gap-2 mb-4 flex-wrap">
               <h1 id="hoje-titulo" className="font-display type-title font-semibold">Hoje</h1>
-              <span data-numeric className="type-meta text-muted-foreground">Semana {weekNumber} · {activeDaySchedule.dayName}</span>
+              {/* O conteúdo é o do primeiro dia não estudado; o rótulo diz o dia
+                  de verdade e de qual dia é o conteúdo (Pablo, 15/10/2026: "mostra
+                  o dia de hoje, que é quinta, mas com o conteúdo de segunda"). */}
+              <span data-numeric className="type-meta text-muted-foreground">
+                {hojeNome === activeDaySchedule.dayName
+                  ? `Semana ${weekNumber} · ${activeDaySchedule.dayName}`
+                  : `${hojeNome} · conteúdo de ${activeDaySchedule.dayName.replace('-feira', '').toLowerCase()} (semana ${weekNumber})`}
+              </span>
             </div>
             {activeDaySchedule.isSimulado ? (
               <p className="type-body mb-6">Dia do simulado da semana: uma matéria, de 10 a 20 questões.</p>
