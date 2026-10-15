@@ -11,6 +11,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { playSound } from '@/lib/sounds';
 import { ACERTOS_PARA_DOMINAR } from '@/lib/flashcard-dominio';
+import { CapituloLido } from '@/components/flashcards/capitulo-lido';
 
 interface CardCandidato {
   frente: string;
@@ -526,6 +527,16 @@ export default function FlashcardDeckPage() {
         </div>
         <h1 className="type-headline">{deck.nome}</h1>
       </motion.div>
+
+      {deck.proximoCapitulo != null && (
+        <CapituloLido
+          deckId={deckId}
+          capituloLido={deck.capituloLido}
+          proximoCapitulo={deck.proximoCapitulo}
+          trancados={deck.trancados}
+          onMarcado={() => fetchDeck()}
+        />
+      )}
 
       {/* Mode toggle — "Revisar erros" usa --danger porque é, de fato, sobre
           erros; não é decoração de categoria. */}

@@ -85,6 +85,11 @@ export async function GET(request: Request, { params }: { params: { id: string }
 
     if (!deck) return NextResponse.json({ error: 'Deck não encontrado' }, { status: 404 });
 
+    // Deck de livro: cartão com `capitulo` ainda não lido fica fora (spoiler).
+    const trancados = deck.cards.filter((c) => c.capitulo != null && c.capitulo > deck.capituloLido);
+    const proximoCapitulo = trancados.length ? Math.min(...trancados.map((c) => c.capitulo!)) : null;
+    deck.cards = deck.cards.filter((c) => !trancados.includes(c));
+
     // Get user's progress on these cards
     const cardIds = deck.cards.map((c: any) => c.id);
     const allProgress = await prisma.flashcardProgress.findMany({
@@ -130,6 +135,9 @@ export async function GET(request: Request, { params }: { params: { id: string }
         materia: deck.materia,
         subtema: deck.subtema,
         cor: deck.cor,
+        capituloLido: deck.capituloLido,
+        proximoCapitulo,
+        trancados: trancados.length,
       },
       cards: cartoes,
       totalCards: deck.cards.length,
@@ -143,6 +151,32 @@ export async function GET(request: Request, { params }: { params: { id: string }
   }
 }
 
+// PATCH /api/flashcards/decks/[id] - deck de livro: marca até que capítulo já foi lido
+export async function PATCH(request: Request, { params }: { params: { id: string } }) {
+  try {
+    const session = await getServerSession(authOptions);
+    if (!session?.user) {
+      return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
+    }
+
+    const { capituloLido } = await request.json();
+    if (!Number.isInteger(capituloLido) || capituloLido < 0 || capituloLido > 500) {
+      return NextResponse.json({ error: 'Capítulo inválido' }, { status: 400 });
+    }
+
+    const userId = (session.user as any).id;
+    const { count } = await prisma.flashcardDeck.updateMany({
+      where: { id: params.id, OR: [{ isDefault: true }, { userId }] },
+      data: { capituloLido },
+    });
+    if (!count) return NextResponse.json({ error: 'Deck não encontrado' }, { status: 404 });
+
+    return NextResponse.json({ success: true });
+  } catch (error: any) {
+    console.error('Erro ao marcar capítulo:', error);
+    return NextResponse.json({ error: 'Erro ao marcar capítulo' }, { status: 500 });
+  }
+}
 // DELETE /api/flashcards/decks/[id]
 export async function DELETE(request: Request, { params }: { params: { id: string } }) {
   try {

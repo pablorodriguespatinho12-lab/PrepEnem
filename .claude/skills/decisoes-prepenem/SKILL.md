@@ -93,6 +93,11 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   "raiz/vértice" fora da curva é descartado. Questão errada vira cartão em
   "Meus erros · matéria" (`api/flashcards/do-erro`). Contexto do aluno (erros
   no assunto, Feynman) vai só na conversa, nunca na explicação (quebraria o cache).
+- **Deck de livro (Pablo, 15/10/2026, artefato https://claude.ai/artifact/6PoWDVkq5cr9xN4v3EkeBR):**
+  matéria "Livros", frente = título curto, verso = 1 ou 2 frases. Frase de
+  capítulo (`Flashcard.capitulo`) fica trancada até "Li o capítulo N"
+  (`FlashcardDeck.capituloLido`). Primeiro: O Cavalo e Seu Menino
+  (`scripts/seed-livro-cavalo.ts`). O campo "digite a frase exata" ficou de fora.
 - **Flashcards seguem o princípio da informação mínima do SuperMemo**: um
   fato por card, resposta o mais curta possível, sem enumeração longa
   (quebre em cards separados ou use cloze). Ver [[flashcard-pattern]].

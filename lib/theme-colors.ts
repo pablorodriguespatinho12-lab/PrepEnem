@@ -297,4 +297,5 @@ export const materiaColors: Record<string, string> = {
   'Filosofia': '#FF90BB',
   'Sociologia': '#B8860B',
   'Literatura': '#E07C24',
+  'Livros': '#0E6F66',
 };

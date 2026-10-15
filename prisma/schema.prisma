@@ -241,6 +241,7 @@ model FlashcardDeck {
   descricao String?
   cor       String?
   isDefault Boolean  @default(false)
+  capituloLido Int   @default(0) // deck de livro: até que capítulo já foi lido
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -259,6 +260,7 @@ model Flashcard {
   verso     String   @db.Text // answer/definition
   dica      String?  @db.Text
   ordem     Int      @default(0)
+  capitulo  Int? // deck de livro: tranca até ler este capítulo (spoiler)
   createdAt DateTime @default(now())
 
   deck     FlashcardDeck       @relation(fields: [deckId], references: [id], onDelete: Cascade)

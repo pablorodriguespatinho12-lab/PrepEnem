@@ -27,6 +27,7 @@ const materiaIcons: Record<string, any> = {
   'Geografia': Globe2,
   'Filosofia': Brain,
   'Sociologia': Users,
+  'Livros': BookText,
 };
 
 const materiaOrder = [
@@ -34,6 +35,7 @@ const materiaOrder = [
   'História', 'Geografia', 'Filosofia', 'Sociologia',
   'Biologia', 'Química', 'Física',
   'Matemática',
+  'Livros',
 ];
 
 interface DeckInfo {
