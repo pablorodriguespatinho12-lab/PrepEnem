@@ -5,6 +5,11 @@ description: "Use antes de fazer commit/push ou quando um build da Vercel falhar
 
 # Checklist de Deploy na Vercel — PrepEnem
 
+**O site do ar é o projeto `prep-enem`** (`prj_lrUuqulABBSD8EHjCoxo1uvIZGNd`,
+time `team_a7PD1Od3lH4xFGeqesETzANl`). O `.vercel/project.json` aponta para um
+projeto antigo (`prepenem.app`) que a API responde 404: para ver se o push já
+publicou, liste os deploys do `prep-enem` e confira o `githubCommitSha`.
+
 Erros que **já aconteceram** neste projeto e a causa raiz confirmada:
 
 ## 1. `next.config.js` deve ficar vazio/mínimo
