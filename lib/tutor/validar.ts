@@ -39,11 +39,15 @@ const SOBRESCRITO: Record<string, string> = { '0': '⁰', '1': '¹', '2': '²', 
 /* "m/s^2" fora de $...$ aparecia com o circunflexo cru na tela. */
 const semCircunflexo = (t: string): string =>
   t.split('$').map((pedaco, i) => (i % 2 === 1 ? pedaco : pedaco.replace(/\^(-?\d+)/g, (_, n: string) => [...n].map((c) => SOBRESCRITO[c]).join('')))).join('$');
+/* "Três pilhas dão ~10.8 V" (lote de 15/10/2026): decimal brasileiro é com
+   vírgula. Só 1 ou 2 casas: "1.000" é mil e fica. Dentro de $...$ não mexe. */
+const virgulaDecimal = (t: string): string =>
+  t.split('$').map((pedaco, i) => (i % 2 === 1 ? pedaco : pedaco.replace(/(\d)\.(\d{1,2})(?!\d)/g, '$1,$2'))).join('$');
 /* Texto da IA: sem emoji, sem frase proibida, cortado em fim de frase.
    Antes cortava com slice no meio da palavra (validador deixava passar). */
 const texto = (v: unknown, max: number, maxFrases = Infinity): string | null => {
   if (typeof v !== 'string') return null;
-  const limpas = frases(semCircunflexo(v).replace(EMOJI, '').replace(/[ \t]{2,}/g, ' ').trim())
+  const limpas = frases(virgulaDecimal(semCircunflexo(v)).replace(EMOJI, '').replace(/[ \t]{2,}/g, ' ').trim())
     .filter((f) => !PROIBIDAS.some((r) => r.test(f)))
     .slice(0, maxFrases);
   let saida = '';

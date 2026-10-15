@@ -86,7 +86,7 @@ describe('validarExplicacao limpa o texto da IA', () => {
   });
   test('decimal e fórmula não contam como fim de frase', () => {
     const e = validarExplicacao({ ideia: 'A massa é 0.5 kg e $v = 2.5$ m/s. Pronto.', passos: [passo('x.')] })!;
-    expect(e.ideia).toBe('A massa é 0.5 kg e $v = 2.5$ m/s. Pronto.');
+    expect(e.ideia).toBe('A massa é 0,5 kg e $v = 2.5$ m/s. Pronto.');
   });
   test('frase proibida sai, o resto fica', () => {
     const e = validarExplicacao({ ideia: 'Ok.', passos: [passo('Vamos analisar a questão. A raiz é 2.')] })!;
@@ -123,4 +123,8 @@ test('passo com integral ou derivada sai da explicação de questão do ENEM (fo
     { titulo: 'Derivada', texto: 'Use $\\frac{dv}{dt}$.' },
   ] }, 'Física');
   expect(r?.passos.map((p) => p.titulo)).toEqual(['A fórmula']);
+});
+test('decimal com ponto vira vírgula fora da fórmula; milhar e fórmula ficam', () => {
+  const r = validarExplicacao({ ideia: 'Três pilhas dão 10.8 V e custam 1.000 reais, $x = 0.5$.', passos: [{ titulo: 'Conta', texto: 'Ok.' }] });
+  expect(r?.ideia).toBe('Três pilhas dão 10,8 V e custam 1.000 reais, $x = 0.5$.');
 });

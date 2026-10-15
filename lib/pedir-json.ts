@@ -4,6 +4,7 @@
 
 import { chatCompletion } from '@/lib/ai-client';
 import { extrairJson } from '@/lib/tutor/validar';
+import { modelosEmOrdem } from '@/lib/ia-modelos';
 
 export type ResultadoIA<T> = { ok: true; dado: T } | { ok: false; erro: string; status: number };
 
@@ -30,7 +31,18 @@ export interface OpcoesPedido {
 const PRAZO_PADRAO_MS = 50_000;
 const FOLGA_MS = 3_000;
 
-async function chamarComEspera(mensagens: Mensagem[], opcoes: OpcoesPedido, fim: number) {
+/* 429 troca de modelo antes de esperar (ver modelosEmOrdem). Devolve também
+   o modelo que respondeu, para a segunda tentativa continuar nele. */
+async function chamarComReserva(mensagens: Mensagem[], opcoes: OpcoesPedido, fim: number) {
+  const modelos = modelosEmOrdem(opcoes.modelo);
+  for (let i = 0; ; i++) {
+    const modelo = modelos[i];
+    const r = await chamarComEspera(mensagens, { ...opcoes, modelo }, fim, i === modelos.length - 1);
+    const semCota = !r.ok && r.response.status === 429;
+    if (!semCota || i === modelos.length - 1 || fim - Date.now() < FOLGA_MS) return { r, modelo };
+  }
+}
+async function chamarComEspera(mensagens: Mensagem[], opcoes: OpcoesPedido, fim: number, esperar429 = true) {
   for (let i = 0; ; i++) {
     const resta = fim - Date.now();
     const r = await chatCompletion({
@@ -50,6 +62,7 @@ async function chamarComEspera(mensagens: Mensagem[], opcoes: OpcoesPedido, fim:
     // dobraria a espera do aluno.
     const passageiro = r.ok ? false : r.response.status === 429 || r.response.status === 502;
     if (!passageiro || i >= ESPERAS_429_MS.length) return r;
+    if (!esperar429 && !r.ok && r.response.status === 429) return r;
     if (Date.now() + ESPERAS_429_MS[i] + FOLGA_MS > fim) return r;
     await esperar(ESPERAS_429_MS[i]);
   }
@@ -62,9 +75,12 @@ export async function pedirJson<T>(
 ): Promise<ResultadoIA<T>> {
   const mensagens: Mensagem[] = [{ role: 'user', content: prompt }];
   const fim = Date.now() + (opcoes.prazoMs ?? PRAZO_PADRAO_MS);
+  let modelo = opcoes.modelo;
   for (let tentativa = 0; tentativa < 2; tentativa++) {
     if (fim - Date.now() < FOLGA_MS) break;
-    const r = await chamarComEspera(mensagens, opcoes, fim);
+    const chamada = await chamarComReserva(mensagens, { ...opcoes, modelo }, fim);
+    const r = chamada.r;
+    modelo = chamada.modelo;
     if (!r.ok) {
       const corpo = await r.response.json().catch(() => ({}));
       return { ok: false, erro: corpo?.error ?? 'Erro no serviço de IA.', status: r.response.status };

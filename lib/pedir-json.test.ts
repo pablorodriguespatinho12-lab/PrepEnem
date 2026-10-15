@@ -1,10 +1,10 @@
 import { afterEach, describe, expect, test, vi } from 'vitest';
 
-const chamadas: { timeoutMs?: number }[] = [];
+const chamadas: { timeoutMs?: number; model?: string }[] = [];
 let respostas: Array<{ ok: boolean; status?: number; conteudo?: string }> = [];
 
 vi.mock('@/lib/ai-client', () => ({
-  chatCompletion: async (params: { timeoutMs?: number }) => {
+  chatCompletion: async (params: { timeoutMs?: number; model?: string }) => {
     chamadas.push(params);
     const r = respostas.shift() ?? { ok: true, conteudo: '{"a":1}' };
     return r.ok
@@ -41,5 +41,27 @@ describe('pedirJson com prazo total', () => {
     respostas = [{ ok: true, conteudo: 'lixo' }, { ok: true, conteudo: '{"a":2}' }];
     const r = await pedirJson('p', validar);
     expect(r).toEqual({ ok: true, dado: { a: 2 } });
+  });
+});
+
+describe('cota da Groq acabou (15/10/2026: 200 mil tokens/dia no 120b, ~30 explicações)', () => {
+  test('429 passa na hora para o modelo reserva, sem esperar', async () => {
+    respostas = [{ ok: false, status: 429 }, { ok: true, conteudo: '{"a":1}' }];
+    const inicio = Date.now();
+    const r = await pedirJson('p', validar, { modelo: 'openai/gpt-oss-120b' });
+    expect(r.ok).toBe(true);
+    expect(chamadas.map((c) => c.model)).toEqual(['openai/gpt-oss-120b', 'openai/gpt-oss-20b']);
+    expect(Date.now() - inicio).toBeLessThan(1000);
+  });
+  test('todas as reservas sem cota: devolve 429', async () => {
+    respostas = [{ ok: false, status: 429 }, { ok: false, status: 429 }, { ok: false, status: 429 }, { ok: false, status: 429 }, { ok: false, status: 429 }];
+    const r = await pedirJson('p', validar, { modelo: 'openai/gpt-oss-120b', prazoMs: 4000 });
+    expect(r).toMatchObject({ ok: false, status: 429 });
+    expect(new Set(chamadas.map((c) => c.model)).size).toBe(3);
+  });
+  test('a segunda tentativa (fora do formato) continua no modelo que respondeu', async () => {
+    respostas = [{ ok: false, status: 429 }, { ok: true, conteudo: 'nada' }, { ok: true, conteudo: '{"a":1}' }];
+    await pedirJson('p', validar, { modelo: 'openai/gpt-oss-120b' });
+    expect(chamadas.map((c) => c.model)).toEqual(['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'openai/gpt-oss-20b']);
   });
 });

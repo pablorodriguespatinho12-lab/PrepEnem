@@ -27,3 +27,14 @@ export const MODELO_IA = {
   // Modelo DIFERENTE do gerador de propósito: erra em lugares diferentes.
   verificacao: () => modelo('AI_MODEL_VERIFICACAO', 'qwen/qwen3.8-27b'),
 };
+
+/* Cota esgotada (429) num modelo não vale para os outros: cada um tem a sua
+   (8 mil tokens/min, 200 mil/dia no 120b). Medido em 15/10/2026: explicação
+   gasta ~6.700 tokens, ~30 por dia no 120b, e a 2ª questão em menos de um
+   minuto dava erro depois de 16 s esperando. Agora troca na hora: resposta de
+   modelo menor (e ainda validada) é melhor que tela de erro. */
+const RESERVAS = ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'qwen/qwen3.8-27b'];
+export function modelosEmOrdem(principal: string | undefined): (string | undefined)[] {
+  if (!principal || !RESERVAS.includes(principal)) return [principal];
+  return [principal, ...RESERVAS.filter((m) => m !== principal)];
+}
