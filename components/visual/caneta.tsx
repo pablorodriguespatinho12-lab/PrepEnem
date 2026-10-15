@@ -55,8 +55,14 @@ function escrever(svg: SVGSVGElement, inicio: number): number {
         ],
         { duration: MS_TRACO, delay: atraso, easing: 'ease-in-out', fill: 'both' },
       );
+    } else if (el.tagName === 'text' || el.hasAttribute('transform')) {
+      // Letra sem traço na fonte do MathJax (acento: "â", "ç", "ã") vem como
+      // <text> com transform="scale(1,-1)". Animar transform pelo CSS apagava
+      // esse atributo e a letra caía de ponta-cabeça: "dist_ncia" (15/10/2026).
+      el.animate([{ opacity: 0 }, { opacity: 1 }],
+        { duration: MS_TRACO * 0.7, delay: atraso, easing: 'ease-out', fill: 'both' });
     } else {
-      // Traço de fração e raiz (rect) e texto: risca da esquerda para a direita.
+      // Traço de fração e raiz (rect): risca da esquerda para a direita.
       el.style.transformBox = 'fill-box';
       el.style.transformOrigin = 'left center';
       el.animate([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }],
