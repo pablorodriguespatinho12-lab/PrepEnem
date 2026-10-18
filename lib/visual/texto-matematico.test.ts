@@ -47,3 +47,9 @@ describe('renderizarTextoMatematico', () => {
     expect(html).toContain('•');
   });
 });
+test('% sem barra dentro da fórmula não apaga o resto da linha (jornada de 18/10/2026)', () => {
+  // Só a parte visível: o KaTeX guarda o LaTeX original escondido (MathML).
+  const visivel = r('$\\text{Aumento} = 15% \\cdot 200 = 30$').split('katex-html')[1] ?? '';
+  expect(visivel).toContain('30');
+  expect(visivel).toContain('%');
+});

@@ -6,6 +6,7 @@
 
 import { FORMATO_VISUAL_PARA_IA, validarVisual, type Visual } from '@/lib/visual/especificacao';
 import { temCalculo } from './validar';
+import { PALAVRA_NOVA } from './prompts';
 
 export interface ResumoAssunto {
   materia: string;
@@ -36,6 +37,8 @@ Para CADA assunto:
 - "construcao": de 2 a 4 passos curtos (até 3 frases cada), do concreto ao símbolo: uma situação real → o desenho → a fórmula saindo do raciocínio. O passo do desenho TEM "visual" preenchido, sempre (gráfico, reta, transformação algébrica linha a linha, tabela ou vetores); em exatas, o passo em que a fórmula aparece usa o visual "quadro" (dados de um exemplo com números redondos, a fórmula, cada letra, os números no lugar das letras e o resultado: Pablo, 15/10/2026, "o quadro branco e a fórmula"); os outros, gráfico. O texto ao lado do desenho EXPLICA o que olhar nele e por quê ("a reta sobe 2 a cada segundo: isso é a aceleração"), nunca descreve o desenho ("gráfico mostrando uma reta..."), e o título diz a ideia, nunca "Desenho". Em química com átomo, molécula ou massa, use o desenho "molecula". Em humanas e linguagens, use tabela para comparar ou organizar. A situação real é concreta e do dia a dia (uma bicicleta, uma receita, uma conta de luz), nunca uma definição.
 - "regra": a fórmula ou regra no fim, como resumo, dizendo o que cada símbolo significa.
 - "dicaEnem": uma frase sobre como o assunto costuma aparecer no ENEM.
+
+${PALAVRA_NOVA}
 
 Confira cada conta e cada número do desenho. Zero emoji, zero elogio, nada de "É importante notar". LaTeX para matemática ($...$).
 

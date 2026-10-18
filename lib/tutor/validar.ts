@@ -43,11 +43,14 @@ const semCircunflexo = (t: string): string =>
    vírgula. Só 1 ou 2 casas: "1.000" é mil e fica. Dentro de $...$ não mexe. */
 const virgulaDecimal = (t: string): string =>
   t.split('$').map((pedaco, i) => (i % 2 === 1 ? pedaco : pedaco.replace(/(\d)\.(\d{1,2})(?!\d)/g, '$1,$2'))).join('$');
+/* "60\%" fora de $...$ aparecia com a barra na tela (jornada de 18/10/2026). */
+const semBarraNoPorcento = (t: string): string =>
+  t.split('$').map((pedaco, i) => (i % 2 === 1 ? pedaco : pedaco.replace(/\\%/g, '%'))).join('$');
 /* Texto da IA: sem emoji, sem frase proibida, cortado em fim de frase.
    Antes cortava com slice no meio da palavra (validador deixava passar). */
 const texto = (v: unknown, max: number, maxFrases = Infinity): string | null => {
   if (typeof v !== 'string') return null;
-  const limpas = frases(virgulaDecimal(semCircunflexo(v)).replace(EMOJI, '').replace(/[ \t]{2,}/g, ' ').trim())
+  const limpas = frases(virgulaDecimal(semCircunflexo(semBarraNoPorcento(v))).replace(EMOJI, '').replace(/[ \t]{2,}/g, ' ').trim())
     .filter((f) => !PROIBIDAS.some((r) => r.test(f)))
     .slice(0, maxFrases);
   let saida = '';
@@ -59,6 +62,14 @@ const texto = (v: unknown, max: number, maxFrases = Infinity): string | null => 
   if (!saida && limpas[0]) saida = limpas[0].slice(0, max).replace(/\s+\S*$/, '') + '…';
   return saida || null;
 };
+/* "Onde seu raciocínio desviou" errado é pior que nenhum: o aluno refaz a conta
+   e perde a confiança na explicação inteira. Na jornada de 18/10/2026, 2 de 7
+   chutavam ("Provavelmente calculou 60% de 30 como 10", que dá 18; "√8 ≈ 2,8,
+   arredondado para 2") e 1 trazia a fórmula sem $, como código na tela. A
+   regra no prompt não bastou; sem o erro, a tela segue com a ideia e os passos. */
+const ERRO_CHUTADO = /\b(provavelmente|talvez|possivelmente|arredond)/i;
+const latexSolto = (t: string): boolean => t.split('$').some((pedaco, i) => i % 2 === 0 && /\\[a-zA-Z,]/.test(pedaco));
+const erroConfiavel = (t: string | null): string | null => (t && !ERRO_CHUTADO.test(t) && !latexSolto(t) ? t : null);
 const lista = (v: unknown): unknown[] => (Array.isArray(v) ? v : []);
 const objeto = (v: unknown): Record<string, unknown> => (v && typeof v === 'object' ? (v as Record<string, unknown>) : {});
 
@@ -120,7 +131,7 @@ export function validarExplicacao(bruto: unknown, materia?: string): Explicacao 
     ideia,
     pecas,
     passos,
-    seuErro: texto(e.seuErro, 700),
+    seuErro: erroConfiavel(texto(e.seuErro, 700)),
     checagem: pergunta && resposta ? { pergunta, resposta } : null,
   };
 }

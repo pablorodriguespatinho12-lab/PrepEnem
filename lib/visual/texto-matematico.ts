@@ -31,7 +31,9 @@ const GREGAS = /(?<![\\a-zA-Z])(Delta|delta|alpha|beta|gamma|Gamma|theta|lambda|
 function formula(latex: string, display: boolean): string {
   // "0,2" virava "0, 2": para o KaTeX, vírgula é pontuação e ganha espaço.
   // Entre dois algarismos, é vírgula decimal (padrão brasileiro).
-  const corrigido = latex.trim().replace(GREGAS, '\\$1').replace(/(\d),(?=\d)/g, '$1{,}');
+  // "15%" sem barra: no LaTeX, % abre comentário e o resto da linha sumia
+  // ("Aumento = 15% · 200 = 30" mostrava só "Aumento = 15"; 18/10/2026).
+  const corrigido = latex.trim().replace(GREGAS, '\\$1').replace(/(\d),(?=\d)/g, '$1{,}').replace(/(?<!\\)%/g, '\\%');
   return katex.renderToString(corrigido, { displayMode: display, throwOnError: false, trust: false, strict: 'ignore', macros: MACROS_KATEX });
 }
 

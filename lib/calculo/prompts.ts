@@ -3,6 +3,7 @@
 
 import { FORMATO_VISUAL_PARA_IA } from '@/lib/visual/especificacao';
 import type { ConteudoLicao, Degrau } from './tipos';
+import { PALAVRA_NOVA } from '@/lib/tutor/prompts';
 
 /* Um pedaço de cada seção da lição escrita, não ela inteira: a lição inteira
    são ~6 mil tokens, e o limite da Groq gratuita é 8 mil por minuto somando
@@ -38,6 +39,7 @@ ORDEM DA LIÇÃO (é a ordem da pesquisa sobre aprendizagem, não mude):
 6. "recuperacao": uma pergunta para responder de cabeça.
 
 ESTILO: frases curtas, palavras simples, um conceito por passo. Zero emoji, zero elogio, nada de "É importante notar". LaTeX para toda matemática ($...$). Use [[a:termo]] para ligar o termo à cor do traço no desenho.
+${PALAVRA_NOVA}
 Lacuna: fica DENTRO do passo que ela esconde. O passo tem "texto" (a conta completa, com o resultado) e "porque", e a lacuna pergunta o resultado DESSE passo: {"texto": "$x_v = \\frac{6}{2} = 3$", "porque": "...", "lacuna": {"pergunta": "Quanto vale $x_v$?", "resposta": {"tipo": "numero", "valor": 3}}}. Nunca crie passo vazio só para a lacuna. Resposta numérica exata; se for irracional, use escolha.
 NENHUMA fórmula pode aparecer "dada" ("use a fórmula do vértice"): se a lição usa uma fórmula, um passo da construção mostra de onde ela sai.
 

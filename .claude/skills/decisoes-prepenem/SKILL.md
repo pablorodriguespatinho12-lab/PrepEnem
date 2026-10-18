@@ -152,6 +152,14 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   de queda); "seu erro" é a conta com os números do enunciado que dá
   exatamente a alternativa marcada. Testado em 3 questões: antes, o erro
   inventava "√8 ≈ 2,8 arredondado para 2".
+- **Aluno do zero (18/10/2026):** o texto gerado é lido pelo agente
+  `aluno-do-zero` (só sabe as quatro operações) sobre a jornada de
+  `scripts/jornada-do-aluno.mts`. Primeira leitura: ~25 tropeços em palavra ou
+  símbolo nunca explicado e 3 de 7 "seu erro" com conta falsa. Daí a regra
+  `PALAVRA_NOVA` (símbolo e termo explicados entre parênteses na 1ª vez, conta
+  que muda de lado dita em palavras, tudo em português), usada na explicação,
+  no conceito e na lição; e o validador que descarta "seu erro" com chute
+  ("provavelmente", "arredondado") ou fórmula sem `$`.
 - **A IA pede cena (06/10/2026):** questão sobre algo que muda no tempo abre
   com uma `cena`. Medido com 3 questões de Física: antes, só "transformação";
   depois, a queda dos corpos chega com duas bolas caindo. O validador conserta

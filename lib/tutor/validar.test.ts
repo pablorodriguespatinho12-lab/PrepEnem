@@ -128,3 +128,14 @@ test('decimal com ponto vira vírgula fora da fórmula; milhar e fórmula ficam'
   const r = validarExplicacao({ ideia: 'Três pilhas dão 10.8 V e custam 1.000 reais, $x = 0.5$.', passos: [{ titulo: 'Conta', texto: 'Ok.' }] });
   expect(r?.ideia).toBe('Três pilhas dão 10,8 V e custam 1.000 reais, $x = 0.5$.');
 });
+test('"seu erro" que chuta ou traz fórmula sem $ não vai para a tela (jornada de 18/10/2026)', () => {
+  const com = (seuErro: string) => validarExplicacao({ ideia: 'Só a altura conta.', passos: [{ titulo: 'Conta', texto: 'Ok.' }], seuErro })?.seuErro;
+  expect(com('Provavelmente calculou 60% de 30 como 10.')).toBeNull();
+  expect(com('Deu $\\sqrt{8} \\approx 2,8$, arredondado para 2 s.')).toBeNull();
+  expect(com('Assim calculou 4\\,\\text{mol H}_2\\times\\frac{1}{2}=2.')).toBeNull();
+  expect(com('Você fez $20 \\div 10 = 2$: usou a velocidade para o lado como se fosse para baixo.')).toBe('Você fez $20 \\div 10 = 2$: usou a velocidade para o lado como se fosse para baixo.');
+});
+test('"60\\%" fora da fórmula vira "60%" (jornada de 18/10/2026)', () => {
+  const r = validarExplicacao({ ideia: 'Use 60\\% de 30, e $60\\%$ fica.', passos: [{ titulo: 'Conta', texto: 'Ok.' }] });
+  expect(r?.ideia).toBe('Use 60% de 30, e $60\\%$ fica.');
+});

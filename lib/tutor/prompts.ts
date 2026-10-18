@@ -19,13 +19,24 @@ export interface QuestaoParaTutor {
 }
 
 const MAX_ENUNCIADO = 1500;
+/* Jornada de 18/10/2026 (scripts/jornada-do-aluno.mts + agente aluno-do-zero):
+   um aluno que só sabe as quatro operações tropeçou ~25 vezes em palavra ou
+   símbolo nunca explicado (Δ, √, ², ≥, taxa, repouso, mol, reagente, eixo,
+   denominador) e ~8 em passo de conta não dito ("t² = 80/5" sem dizer que
+   dividiu por 5). Vale para explicação, conceito do dia e lição de Cálculo. */
+export const PALAVRA_NOVA = `PALAVRA E SÍMBOLO NOVOS (o aluno pode só saber somar, subtrair, multiplicar e dividir):
+- Na PRIMEIRA vez que aparece um símbolo (Δ, √, ², ≥, ≠, ⁻¹, 10²³, f(x), v₀) ou uma palavra técnica (taxa, repouso, mol, reagente, eixo, denominador, parábola), diga o que é entre parênteses, em palavras do dia a dia: "Δv (quanto a velocidade mudou)", "$\sqrt{16}$ (o número que vezes ele mesmo dá 16: 4)".
+- Toda conta que muda algo de lado diz o que fez em palavras: "divide os dois lados por 5", "tira 2 dos dois lados".
+- Tudo em português, inclusive cabeçalho de tabela e rótulo de desenho. Dinheiro dentro de fórmula é $\\text{R\\$}\\,200$, nunca só "R".`;
 
 const ESTILO = `ESTILO (o aluno tem TDAH; texto longo faz ele se perder):
 - Frases curtas, de até 20 palavras. Palavras simples, como se explicasse para alguém que nunca viu o assunto.
 - Um conceito novo por passo. Nada de parágrafo de abertura, nada de conclusão que repete.
 - Zero emoji. Zero elogio ("ótima pergunta", "muito bem"). Nunca "É importante notar", "Vale ressaltar", "Vamos analisar".
 - LaTeX para toda matemática: $x^2$, $\\frac{a}{b}$, $\\sqrt{x}$. Nunca ² ou √ soltos.
-- Para ligar texto e desenho, escreva o termo como [[a:termo]] com a mesma cor do traço no visual.`;
+- Para ligar texto e desenho, escreva o termo como [[a:termo]] com a mesma cor do traço no visual.
+
+${PALAVRA_NOVA}`;
 
 const RACIOCINIO = `ENTENDER, NÃO DECORAR (o mais importante):
 - Se a resolução usa uma fórmula, mostre DE ONDE ela vem: parta de uma situação concreta, passe pelo desenho e só no fim chegue ao símbolo. A fórmula é o resumo do raciocínio, não o ponto de partida.
@@ -75,11 +86,11 @@ ${SO_O_QUE_ESTA_ESCRITO}
 
 ESTRUTURA (devolva SOMENTE JSON neste formato):
 {
-  "conferencia": "ESCREVA PRIMEIRO, antes de tudo: cada conta da resolução refeita por extenso, número por número (ex.: 'p(5) = -(25) + 50 + 24 = 49; -(t-5)^2 + 49 = -t^2 + 10t - 25 + 49 = -t^2 + 10t + 24, confere'). Se alguma conta não bater, corrija antes de escrever os passos. Este campo não aparece para o aluno.",
+  "conferencia": "ESCREVA PRIMEIRO, antes de tudo: cada conta da resolução refeita por extenso, número por número (ex.: 'p(5) = -(25) + 50 + 24 = 49; -(t-5)^2 + 49 = -t^2 + 10t - 25 + 49 = -t^2 + 10t + 24, confere'). Se alguma conta não bater, corrija antes de escrever os passos.${errou ? ' Refaça também a conta do seuErro com os números do enunciado: ela tem de dar EXATAMENTE o número da alternativa marcada; se não der, ache outro caminho ou deixe seuErro null.' : ''} Este campo não aparece para o aluno.",
   "ideia": "1 ou 2 frases CURTAS e práticas, como um lembrete que se decora: o que a questão quer e por que a resposta é aquela. Ex.: 'A planta precisa de energia. Carboidrato é energia: sem ele, ela morre.' NUNCA só uma fórmula: em Física, o fenômeno em palavras ('Ir para o lado não muda o tempo de cair: a bola que rola da mesa e a que cai solta chegam juntas ao chão.') Se o enunciado traz um número que NÃO entra na conta (a velocidade para o lado num tempo de queda), a ideia diz que ele não importa e por quê: é a pegadinha.",
   "pecas": [{"termo": "...", "significado": "o que é, em palavras simples, e um exemplo do dia a dia; até 2 frases curtas"}],
   "passos": [{"titulo": "até 6 palavras", "texto": "1 ou 2 frases", "visual": {"tipo": "quadro", "...": "o desenho deste passo, num dos formatos abaixo; null só quando a regra abaixo permite"}}],
-  "seuErro": ${errou ? '"até 3 frases: UM caminho concreto que leva à alternativa marcada (em cálculo, a conta com os números DO ENUNCIADO que dá EXATAMENTE o número dela; confira antes, arredondamento não vale) e onde ele desvia. O caminho mais comum é usar o número da pegadinha. Nunca liste hipóteses com ou, nunca \"provavelmente\""' : 'null'},
+  "seuErro": ${errou ? '"até 3 frases, falando com o aluno por «você», nunca «o aluno»: UM caminho concreto que leva à alternativa marcada (em cálculo, a conta com os números DO ENUNCIADO que dá EXATAMENTE o número dela; confira antes, arredondamento não vale) e onde ele desvia. O caminho mais comum é usar o número da pegadinha. Nunca liste hipóteses com ou, nunca \"provavelmente\""' : 'null'},
   "checagem": {"pergunta": "uma pergunta curta que o aluno responde de cabeça para fixar", "resposta": "a resposta em uma frase"}
 }
 
