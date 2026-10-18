@@ -87,10 +87,16 @@ export const authOptions: NextAuthOptions = {
       const needsRevalidation =
         !token.lastValidated || Date.now() - token.lastValidated > SESSION_REVALIDATE_INTERVAL_MS;
       if (needsRevalidation) {
-        const stillExists = await prisma.user.findUnique({
-          where: { id: token.id },
-          select: { id: true },
-        });
+        // Banco fora do ar (Neon acordando) não prova que a conta sumiu. Antes
+        // a exceção derrubava a sessão: 401 "Não autenticado" no meio do treino
+        // (18/10/2026). Mantém o token e tenta de novo na próxima requisição.
+        const stillExists = await prisma.user
+          .findUnique({ where: { id: token.id }, select: { id: true } })
+          .catch((erro: unknown) => {
+            console.error('[auth] revalidação adiada, banco indisponível:', erro instanceof Error ? erro.message.split('\n').pop() : erro);
+            return undefined;
+          });
+        if (stillExists === undefined) return token;
         if (!stillExists) {
           token.error = 'UserNotFound';
         } else {

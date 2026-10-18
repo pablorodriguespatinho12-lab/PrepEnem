@@ -142,7 +142,7 @@ Antes de afirmar que um bug existe ou foi corrigido, reproduza no navegador.
 E se não reproduzir localmente, considere que produção pode estar rodando
 código anterior ao último push antes de sair caçando causa no código atual.
 Ver [[decisoes-prepenem]] (validar em produção depois do push).
-`geral.cjs` (no scratchpad da sessão; refazer é fácil): abre as 21 páginas em
+`scripts/varrer-telas.mts` (antes `geral.cjs` no scratchpad): abre as telas em
 1366 px e 375 px, com o cookie da sessão, e **devolve `{}` a todo POST/PUT/DELETE
 em `/api/**`** (menos `/api/caneta`, que só converte conta): assim nada grava na
 conta do Pablo. Anota erro de JS, `console.error`, HTTP ≥ 400, overflow lateral
