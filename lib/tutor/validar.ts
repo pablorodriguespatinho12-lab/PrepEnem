@@ -110,7 +110,7 @@ export function validarExplicacao(bruto: unknown, materia?: string): Explicacao 
   const ideia = texto(e.ideia, 300, 2);
   if (!ideia || passos.length === 0) return null;
   const pecas = lista(e.pecas).map(objeto)
-    .map((p) => ({ termo: texto(p.termo, 60), significado: texto(p.significado, 240) }))
+    .map((p) => ({ termo: texto(p.termo, 60), significado: texto(p.significado, 320) }))
     .filter((p): p is { termo: string; significado: string } => p.termo !== null && p.significado !== null)
     .slice(0, 3);
   const c = objeto(e.checagem);

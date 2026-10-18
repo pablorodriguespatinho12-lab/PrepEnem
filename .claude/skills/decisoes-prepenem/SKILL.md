@@ -145,6 +145,13 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   (etapa sem nada entrando nem saindo) é descartado pelo validador. O texto
   antigo das questões importadas (com emoji) fica atrás de "Ver texto completo",
   sem emoji (`lib/explicacao-antiga.ts`).
+- **Conceito com nome vira peça com exemplo (Pablo, 18/10/2026: "não sei o
+  que é queda livre, me dá um exemplo"):** errou, a explicação abre com o
+  conceito central (o que é + exemplo do dia a dia) nas peças; a "ideia" nunca
+  é só fórmula e aponta a pegadinha (velocidade para o lado não muda o tempo
+  de queda); "seu erro" é a conta com os números do enunciado que dá
+  exatamente a alternativa marcada. Testado em 3 questões: antes, o erro
+  inventava "√8 ≈ 2,8 arredondado para 2".
 - **A IA pede cena (06/10/2026):** questão sobre algo que muda no tempo abre
   com uma `cena`. Medido com 3 questões de Física: antes, só "transformação";
   depois, a queda dos corpos chega com duas bolas caindo. O validador conserta
