@@ -641,8 +641,10 @@ html:not(.usando-teclado) :focus { --tw-ring-shadow: 0 0 #0000; --tw-ring-offset
   top: 100%;
   border-radius: 9999px;
   background: rgb(var(--particula) / calc(var(--alfa) * var(--particula-k)));
-  animation: particulaSobe var(--duracao) linear infinite;
+  animation: particulaSobe var(--duracao) steps(var(--passos, 1200)) infinite;
 }
+/* Parada enquanto a página rola: ver o comentário em particles-bg.tsx. */
+.particulas.rolando .particula { animation-play-state: paused; }
 @keyframes particulaSobe {
   0%   { transform: translate3d(0, 0, 0); opacity: 0; }
   6%   { opacity: 1; }

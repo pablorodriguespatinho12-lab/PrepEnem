@@ -242,15 +242,29 @@ export default function Results3DScene({ percentage, width = 400, height = 400 }
     }
 
     // ============= ANIMATION =============
+    // Relógio real: antes era `time += 0.016` por quadro, então a cena corria
+    // em câmera lenta a 30 Hz e acelerada a 120 Hz.
     let time = 0;
-    let animId: number;
+    let ultimo = 0;
+    let animId = 0;
+    let naTela = true;
     const medalStartY = 6;
     const medalEndY = 3.0;
     const dropDuration = 1.5; // seconds for medal drop
+    // Passada a entrada, a medalha só flutua de leve: 30 fps bastam e liberam a
+    // placa de vídeo para a rolagem e o resto da tela.
+    const FIM_DA_ENTRADA_S = 4;
+    const QUADRO_CALMO_S = 1 / 30;
 
-    function animate() {
+    function animate(agora = performance.now()) {
       animId = requestAnimationFrame(animate);
-      time += 0.016; // ~60fps
+      // Primeiro quadro (ou volta à tela) sempre desenha: com dt fixo menor que
+      // o quadro calmo, a cena ficava parada para sempre ao voltar à tela.
+      const dt = ultimo ? Math.min((agora - ultimo) / 1000, 0.1) : QUADRO_CALMO_S;
+      // 10% de folga: o rAF oscila e 33,2 ms não pode virar 50 ms.
+      if (time > FIM_DA_ENTRADA_S && dt < QUADRO_CALMO_S * 0.9) return;
+      ultimo = agora;
+      time += dt;
 
       // Medal drop + bounce
       if (time < dropDuration) {
@@ -312,17 +326,22 @@ export default function Results3DScene({ percentage, width = 400, height = 400 }
       renderer.render(scene, camera);
     }
 
-    animate();
-
-    // Visibility handling
-    const handleVisibility = () => {
-      if (document.hidden) { cancelAnimationFrame(animId); }
-      else { animate(); }
+    // Só desenha com a aba aberta e a cena visível: fora da tela (aluno rolando
+    // o resultado) era WebGL a 60 fps que ninguém via.
+    const ligar = () => {
+      cancelAnimationFrame(animId);
+      if (document.hidden || !naTela) return;
+      ultimo = 0;
+      animate();
     };
-    document.addEventListener('visibilitychange', handleVisibility);
+    const observador = new IntersectionObserver(([e]) => { naTela = e.isIntersecting; ligar(); });
+    observador.observe(container);
+    document.addEventListener('visibilitychange', ligar);
+    ligar();
 
     return () => {
-      document.removeEventListener('visibilitychange', handleVisibility);
+      observador.disconnect();
+      document.removeEventListener('visibilitychange', ligar);
       cancelAnimationFrame(animId);
       renderer.dispose();
       scene.traverse((obj) => {

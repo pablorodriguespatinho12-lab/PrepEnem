@@ -6,18 +6,30 @@ import { Sparkles } from 'lucide-react';
 
 // === SCROLL PROGRESS BAR ===
 export function ScrollProgress() {
-  const [width, setWidth] = useState(0);
+  // Escala no compositor, lida no máximo uma vez por quadro e sem estado do
+  // React. Antes era setState + width a cada evento de rolagem: re-render e
+  // layout da página a cada quadro (162 layouts em 3 s no /flashcards).
+  const barra = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    const onScroll = () => {
-      const scrollTop = document.documentElement.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      setWidth(scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0);
+    let quadro = 0;
+    const atualizar = () => {
+      quadro = 0;
+      const el = document.documentElement;
+      const max = el.scrollHeight - el.clientHeight;
+      const fracao = max > 0 ? el.scrollTop / max : 0;
+      if (!barra.current) return;
+      barra.current.style.transform = `scaleX(${fracao})`;
+      barra.current.style.opacity = fracao < 0.01 ? '0' : '1';
     };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    const aoRolar = () => { if (!quadro) quadro = requestAnimationFrame(atualizar); };
+    window.addEventListener('scroll', aoRolar, { passive: true });
+    atualizar();
+    return () => {
+      window.removeEventListener('scroll', aoRolar);
+      cancelAnimationFrame(quadro);
+    };
   }, []);
-  if (width < 1) return null;
-  return <div className="scroll-progress" style={{ width: `${width}%` }} />;
+  return <div ref={barra} className="scroll-progress" style={{ transform: 'scaleX(0)', opacity: 0 }} aria-hidden="true" />;
 }
 
 // === ANIMATED COUNTER ===

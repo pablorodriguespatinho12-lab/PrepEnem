@@ -9,7 +9,9 @@ Biblioteca: **Framer Motion 11** (`motion`, `AnimatePresence`). Fundo de
 partículas é CSS puro (`components/particles-bg.tsx` + `.particula` em
 `globals.css`): só `transform`/`opacity`, roda no compositor. Era canvas
 redesenhado a 60 fps na thread principal e travava o treino (05/10/2026) —
-não volte para canvas nem para rAF.
+não volte para canvas nem para rAF. Animação contínua nova (loop, fundo,
+3D) passa antes pela skill `medir-fluidez`: precisa parar fora da tela e
+durante a rolagem (18/10/2026: partículas e medalha 3D não paravam).
 
 ## Padrões já em uso (seguir, não inventar novos)
 
