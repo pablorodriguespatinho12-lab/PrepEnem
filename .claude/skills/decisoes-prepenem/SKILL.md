@@ -108,6 +108,14 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   nível superior no passo (arrasto $\frac{1}{2}\rho v^2 C_d A$ numa questão
   de queda); "espermatozoide" em planta (é núcleo espermático); "seu erro" na
   1ª pessoa ("confundi"); passo "Por que X?" que não responde o porquê.
+  **O prompt não tem espaço (testado e desfeito em 21/10/2026, texto no
+  `git stash` "prompt explicacao: fila de 21/10"):** a explicação reserva
+  `maxTokens: 4000` e a Groq gratuita aceita 8.000 por minuto, então prompt +
+  questão precisam caber em ~4.000. Questão longa (com tabela) já encosta;
+  +200 tokens de regras deram 413 em 4 de 9 questões, que caíram no modelo
+  reserva (20 a 35 s em vez de 4). Ganho misto: termo e "você" melhoraram, 2
+  questões perderam o desenho. Próxima rodada: CORTAR texto do prompt antes de
+  acrescentar, e medir com uma questão longa.
 - **Deck de livro (Pablo, 15/10/2026, artefato https://claude.ai/artifact/6PoWDVkq5cr9xN4v3EkeBR):**
   matéria "Livros", frente = título curto, verso = 1 ou 2 frases. Frase de
   capítulo (`Flashcard.capitulo`) fica trancada até "Li o capítulo N"
