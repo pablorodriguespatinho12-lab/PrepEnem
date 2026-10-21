@@ -98,6 +98,10 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   capítulo (`Flashcard.capitulo`) fica trancada até "Li o capítulo N"
   (`FlashcardDeck.capituloLido`). Primeiro: O Cavalo e Seu Menino
   (`scripts/seed-livro-cavalo.ts`). O campo "digite a frase exata" ficou de fora.
+- **Lembrete de leitura (Pablo, 21/10/2026):** cartão no canto ao entrar no
+  site (`components/lembrete-leitura.tsx`), livros em `data/leituras.ts`.
+  Página muda no − e + (fica no navegador); fechado, só volta na próxima visita.
+  Plano dele: blocos de 5 páginas, começando com 4 e subindo 1 por dia.
 - **Flashcards seguem o princípio da informação mínima do SuperMemo**: um
   fato por card, resposta o mais curta possível, sem enumeração longa
   (quebre em cards separados ou use cloze). Ver [[flashcard-pattern]].

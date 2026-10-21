@@ -6,6 +6,7 @@ import { SidebarNav } from './sidebar-nav';
 import { AppThemeProvider } from './app-theme-provider';
 import { ScrollProgress } from './animations';
 import { ParticlesBg } from './particles-bg';
+import { LembreteLeitura } from './lembrete-leitura';
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
   const { data: session, status } = useSession() || {};
@@ -55,6 +56,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         <main className="md:ml-64 min-h-screen relative pt-12 md:pt-0" style={{ zIndex: 1 }}>
           {children}
         </main>
+        <LembreteLeitura />
       </div>
     </AppThemeProvider>
   );
