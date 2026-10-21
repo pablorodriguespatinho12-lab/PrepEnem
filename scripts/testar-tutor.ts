@@ -70,6 +70,7 @@ for (const q of escolhidas) {
   if (!r.ok) { console.log('FALHOU:', r.status, r.erro); continue; }
   const e = r.dado;
   console.log('Ideia:', e.ideia);
+  for (const p of e.pecas) console.log(`  peça: ${p.termo} = ${p.significado}`);
   if (e.seuErro) console.log('Seu erro:', e.seuErro);
   e.passos.forEach((p, i) => console.log(`  ${i + 1}. [${p.titulo}]${p.visual ? ` (visual: ${(p.visual as { tipo?: string }).tipo})` : ''} ${p.texto}${p.visual?.tipo === 'quadro' ? `\n     ${JSON.stringify(p.visual)}` : ''}`));
   console.log('Checagem:', e.checagem?.pergunta, '→', e.checagem?.resposta);

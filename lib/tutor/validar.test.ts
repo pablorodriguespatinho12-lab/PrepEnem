@@ -139,3 +139,25 @@ test('"60\\%" fora da fórmula vira "60%" (jornada de 18/10/2026)', () => {
   const r = validarExplicacao({ ideia: 'Use 60\\% de 30, e $60\\%$ fica.', passos: [{ titulo: 'Conta', texto: 'Ok.' }] });
   expect(r?.ideia).toBe('Use 60% de 30, e $60\\%$ fica.');
 });
+test('peça com a explicação no termo: o parêntese vai para o significado (testar-tutor, 21/10/2026)', () => {
+  const r = validarExplicacao({
+    ideia: 'Polímero condutor tem duplas alternadas.',
+    pecas: [{
+      termo: 'conjugação (alternância de ligações simples e duplas ao longo da cadeia)',
+      significado: 'exemplo: cadeia C=C–C=C–C tem conjugação',
+    }],
+    passos: [{ titulo: 'Olhe a cadeia', texto: 'Ok.' }],
+  });
+  expect(r?.pecas[0]).toEqual({
+    termo: 'conjugação',
+    significado: 'Alternância de ligações simples e duplas ao longo da cadeia. exemplo: cadeia C=C–C=C–C tem conjugação',
+  });
+});
+test('peça com termo normal e parêntese curto fica como está', () => {
+  const r = validarExplicacao({
+    ideia: 'Ideia.',
+    pecas: [{ termo: 'Δv', significado: 'quanto a velocidade mudou' }, { termo: 'pH (acidez)', significado: 'mede o quão ácido é' }],
+    passos: [{ titulo: 'Passo', texto: 'Ok.' }],
+  });
+  expect(r?.pecas.map((p) => p.termo)).toEqual(['Δv', 'pH (acidez)']);
+});

@@ -111,6 +111,19 @@ const visualDaMateria = (v: Visual | null, materia?: string): Visual | null =>
    15/10/2026: "integral em lugar que não é para aparecer"). Passo assim sai. */
 const CALCULO = /\\int|\\oint|\\lim\b|\\partial|\\frac\{d[a-z]?\}\{d[a-z]\}|\bd[a-z]\s*=\s*[a-z]\s*\\?,?\s*d[a-z]\b|∫/;
 export const temCalculo = (passo: unknown): boolean => CALCULO.test(JSON.stringify(passo));
+/* A IA às vezes põe a explicação dentro do termo: "conjugação (alternância de
+   ligações simples e duplas ao longo da cadeia)". O termo tem teto de 60
+   letras e saía cortado com "…" no título da peça (testar-tutor, 21/10/2026).
+   Parêntese longo vai para o começo do significado; curto ("pH (acidez)") fica. */
+const PARENTESE_LONGO = 25;
+function separarTermo(p: Record<string, unknown>): Record<string, unknown> {
+  if (typeof p.termo !== 'string') return p;
+  const m = p.termo.trim().match(/^([^()]+?)\s*\((.+)\)$/);
+  if (!m || m[2].length < PARENTESE_LONGO) return p;
+  const explicacao = m[2].charAt(0).toUpperCase() + m[2].slice(1).replace(/\.?$/, '.');
+  const resto = typeof p.significado === 'string' ? p.significado.trim() : '';
+  return { ...p, termo: m[1], significado: resto ? `${explicacao} ${resto}` : explicacao };
+}
 export function validarExplicacao(bruto: unknown, materia?: string): Explicacao | null {
   const e = objeto(bruto);
   const passos = lista(e.passos).map(objeto)
@@ -120,7 +133,7 @@ export function validarExplicacao(bruto: unknown, materia?: string): Explicacao 
     .slice(0, 4);
   const ideia = texto(e.ideia, 300, 2);
   if (!ideia || passos.length === 0) return null;
-  const pecas = lista(e.pecas).map(objeto)
+  const pecas = lista(e.pecas).map(objeto).map(separarTermo)
     .map((p) => ({ termo: texto(p.termo, 60), significado: texto(p.significado, 320) }))
     .filter((p): p is { termo: string; significado: string } => p.termo !== null && p.significado !== null)
     .slice(0, 3);
