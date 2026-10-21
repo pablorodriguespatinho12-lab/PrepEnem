@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Upload, FileText, Loader2, CheckCircle2, XCircle, AlertTriangle, BookOpen, FileSearch } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
+import { abrirComTeclado } from '@/lib/teclado';
 
 function fileToBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
@@ -118,6 +119,10 @@ export default function UploadPage() {
             className={`border-2 border-dashed rounded-[var(--radius-surface)] p-6 md:p-8 text-center t-colors cursor-pointer min-h-[180px] flex items-center justify-center ${
               provaFile ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50 hover:bg-muted/30'
             }`}
+            role="button"
+            tabIndex={0}
+            aria-label="Escolher o PDF da prova"
+            onKeyDown={(e) => abrirComTeclado(e, () => provaRef.current?.click())}
             onClick={() => provaRef.current?.click()}
             onDragOver={(e) => e.preventDefault()}
             onDrop={handleDrop('prova')}
@@ -154,6 +159,10 @@ export default function UploadPage() {
             className={`border-2 border-dashed rounded-[var(--radius-surface)] p-6 md:p-8 text-center t-colors cursor-pointer min-h-[180px] flex items-center justify-center ${
               gabaritoFile ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50 hover:bg-muted/30'
             }`}
+            role="button"
+            tabIndex={0}
+            aria-label="Escolher o PDF do gabarito"
+            onKeyDown={(e) => abrirComTeclado(e, () => gabaritoRef.current?.click())}
             onClick={() => gabaritoRef.current?.click()}
             onDragOver={(e) => e.preventDefault()}
             onDrop={handleDrop('gabarito')}

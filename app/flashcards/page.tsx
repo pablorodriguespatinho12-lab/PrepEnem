@@ -8,6 +8,7 @@ import {
   Zap, Landmark, Globe2, Brain, Users, BookText, X, Plus,
 } from 'lucide-react';
 import { corDoBaralho, materiaColors } from '@/lib/theme-colors';
+import { abrirComTeclado } from '@/lib/teclado';
 
 /* Ícone estático por matéria. Antes era um canvas three.js por cartão — dez
    contextos WebGL, cada um com seu próprio loop de animação, só na grade. */
@@ -60,13 +61,6 @@ interface MateriaGroup {
   totalDecks: number;
 }
 
-/* Cartão clicável é div (tem bloco dentro): Enter e Espaço abrem, como num botão.
-   Antes só o mouse abria. */
-function abrirComTeclado(e: React.KeyboardEvent, abrir: () => void) {
-  if (e.key !== 'Enter' && e.key !== ' ') return;
-  e.preventDefault();
-  abrir();
-}
 export default function FlashcardsPage() {
   const router = useRouter();
   const [decks, setDecks] = useState<DeckInfo[]>([]);

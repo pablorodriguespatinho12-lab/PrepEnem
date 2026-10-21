@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { GraduationCap, BookOpen, ClipboardList, AlertCircle, BarChart3, ArrowRight, Construction } from 'lucide-react';
+import { abrirComTeclado } from '@/lib/teclado';
 
 const features = [
   {
@@ -72,6 +73,9 @@ export default function VestibularPage() {
                 className={`surface-1 rounded-[var(--radius-surface)] p-5 t-lift ${
                   feature.available ? 'hover:shadow-elev-2 hover:-translate-y-px cursor-pointer' : 'opacity-80'
                 }`}
+                role={feature.available ? 'button' : undefined}
+                tabIndex={feature.available ? 0 : undefined}
+                onKeyDown={(e) => feature.available && abrirComTeclado(e, () => router.push(feature.href))}
                 onClick={() => feature.available && router.push(feature.href)}
               >
                 <div className="flex items-center gap-4">
