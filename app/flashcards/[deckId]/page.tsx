@@ -5,7 +5,7 @@ import { useRouter, useParams, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence, MotionConfig, useReducedMotion, type Variants } from 'framer-motion';
 import { ChevronLeft, CheckCircle, XCircle, RotateCw, Trophy, Lightbulb, Loader2, RefreshCw, Sparkles, Plus, Trash2, Check, X } from 'lucide-react';
 import { toast } from 'sonner';
-import { materiaColors } from '@/lib/theme-colors';
+import { corDoBaralho } from '@/lib/theme-colors';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -489,7 +489,7 @@ export default function FlashcardDeckPage() {
 
   if (!deck) return null;
 
-  const cor = deck.cor || materiaColors[deck.materia] || '#06b6d4';
+  const cor = corDoBaralho(deck);
   const currentCard = cards[currentIdx];
   const progress = cards.length > 0 ? ((currentIdx + (finished ? 1 : 0)) / cards.length) * 100 : 0;
 

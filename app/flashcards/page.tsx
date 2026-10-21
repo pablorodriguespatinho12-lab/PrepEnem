@@ -7,7 +7,7 @@ import {
   Search, ChevronLeft, ChevronRight, Calculator, Dna, FlaskConical,
   Zap, Landmark, Globe2, Brain, Users, BookText, X, Plus,
 } from 'lucide-react';
-import { materiaColors } from '@/lib/theme-colors';
+import { corDoBaralho, materiaColors } from '@/lib/theme-colors';
 
 /* Ícone estático por matéria. Antes era um canvas three.js por cartão — dez
    contextos WebGL, cada um com seu próprio loop de animação, só na grade. */
@@ -60,6 +60,13 @@ interface MateriaGroup {
   totalDecks: number;
 }
 
+/* Cartão clicável é div (tem bloco dentro): Enter e Espaço abrem, como num botão.
+   Antes só o mouse abria. */
+function abrirComTeclado(e: React.KeyboardEvent, abrir: () => void) {
+  if (e.key !== 'Enter' && e.key !== ' ') return;
+  e.preventDefault();
+  abrir();
+}
 export default function FlashcardsPage() {
   const router = useRouter();
   const [decks, setDecks] = useState<DeckInfo[]>([]);
@@ -144,6 +151,10 @@ export default function FlashcardsPage() {
   }, [selectedMateria, materiaGroups, searchQuery]);
 
   const selectedGroup = materiaGroups.find((g) => g.materia === selectedMateria);
+  function abrirMateria(materia: string) {
+    setSelectedMateria(materia);
+    setSearchQuery('');
+  }
 
   return (
     <div className="min-h-screen p-6 md:p-10 max-w-7xl mx-auto">
@@ -223,7 +234,7 @@ export default function FlashcardsPage() {
                 </motion.div>
               ) : (
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                  {filteredGroups.map((group) => {
+                  {filteredGroups.map((group, idx) => {
                     const cor = materiaColors[group.materia] || '#06b6d4';
                     const progressPct =
                       group.totalCards > 0
@@ -234,11 +245,14 @@ export default function FlashcardsPage() {
                         key={group.materia}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: idx * 0.04 }}
                         whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                        onClick={() => {
-                          setSelectedMateria(group.materia);
-                          setSearchQuery('');
-                        }}
+                        whileTap={{ scale: 0.98 }}
+                        role="button"
+                        tabIndex={0}
+                        aria-label={`Abrir ${group.materia}`}
+                        onKeyDown={(e) => abrirComTeclado(e, () => abrirMateria(group.materia))}
+                        onClick={() => abrirMateria(group.materia)}
                         className="relative surface-1 rounded-[var(--radius-surface)] overflow-hidden cursor-pointer group card-3d t-lift hover:shadow-elev-3"
                       >
                         {/* Color band */}
@@ -247,7 +261,7 @@ export default function FlashcardsPage() {
                         <div className="p-5">
                           {/* 3D Icon */}
                           <div
-                            className="w-14 h-14 rounded-[var(--radius-control)] flex items-center justify-center mb-3"
+                            className="w-14 h-14 rounded-[var(--radius-control)] flex items-center justify-center mb-3 transition-transform duration-200 group-hover:scale-110 group-hover:-rotate-3"
                             style={{ backgroundColor: `${cor}20` }}
                           >
                             <MateriaIcon materia={group.materia} color={cor} size={48} />
@@ -270,9 +284,12 @@ export default function FlashcardsPage() {
 
                           {/* Progress */}
                           <div className="h-1.5 bg-muted rounded-[var(--radius-data)] overflow-hidden">
-                            <div
-                              className="h-full origin-left rounded-[var(--radius-data)] transition-transform duration-medium ease-out-quart"
-                              style={{ transform: `scaleX(${progressPct / 100})`, backgroundColor: cor }}
+                            <motion.div
+                              className="h-full origin-left rounded-[var(--radius-data)]"
+                              initial={{ scaleX: 0 }}
+                              animate={{ scaleX: progressPct / 100 }}
+                              transition={{ duration: 0.6, delay: 0.2 + idx * 0.04, ease: [0.25, 1, 0.5, 1] }}
+                              style={{ backgroundColor: cor }}
                             />
                           </div>
                           <div className="flex justify-between items-center mt-1.5">
@@ -368,8 +385,8 @@ export default function FlashcardsPage() {
                 </motion.div>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                  {selectedDecks.map((deck) => {
-                    const cor = deck.cor || materiaColors[deck.materia] || '#06b6d4';
+                  {selectedDecks.map((deck, idx) => {
+                    const cor = corDoBaralho(deck);
                     const progressPct =
                       deck.totalCards > 0 ? Math.round((deck.acertos / deck.totalCards) * 100) : 0;
                     return (
@@ -377,8 +394,14 @@ export default function FlashcardsPage() {
                         key={deck.id}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: idx * 0.04 }}
                         whileHover={{ y: -6, transition: { duration: 0.2 } }}
+                        whileTap={{ scale: 0.98 }}
+                        role="button"
+                        tabIndex={0}
+                        aria-label={`Abrir o baralho ${deck.nome ?? deck.materia}`}
                         className="relative surface-1 rounded-[var(--radius-surface)] overflow-hidden cursor-pointer group card-3d t-lift hover:shadow-elev-3"
+                        onKeyDown={(e) => abrirComTeclado(e, () => router.push(`/flashcards/${deck.id}`))}
                         onClick={() => router.push(`/flashcards/${deck.id}`)}
                       >
                         {/* Color band */}
@@ -433,9 +456,12 @@ export default function FlashcardsPage() {
 
                           {/* Progress bar — escala no eixo X, sem animar width. */}
                           <div className="h-1.5 bg-muted rounded-[var(--radius-data)] overflow-hidden">
-                            <div
-                              className="h-full origin-left rounded-[var(--radius-data)] transition-transform duration-medium ease-out-quart"
-                              style={{ transform: `scaleX(${progressPct / 100})`, backgroundColor: cor }}
+                            <motion.div
+                              className="h-full origin-left rounded-[var(--radius-data)]"
+                              initial={{ scaleX: 0 }}
+                              animate={{ scaleX: progressPct / 100 }}
+                              transition={{ duration: 0.6, delay: 0.2 + idx * 0.04, ease: [0.25, 1, 0.5, 1] }}
+                              style={{ backgroundColor: cor }}
                             />
                           </div>
                           <div className="flex justify-between items-center mt-1">

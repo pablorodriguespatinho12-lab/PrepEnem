@@ -301,3 +301,10 @@ export const materiaColors: Record<string, string> = {
   'Literatura': '#D2691E',
   'Livros': '#0F8A7E',
 };
+/* Baralho padrão gravou no banco a cor da matéria do dia do seed (a pastel):
+   ele segue a cor atual da matéria. Baralho do aluno mantém a cor que ele escolheu. */
+export function corDoBaralho(deck: { cor?: string | null; materia: string; isDefault?: boolean }): string {
+  const daMateria = materiaColors[deck.materia];
+  if (deck.isDefault && daMateria) return daMateria;
+  return deck.cor || daMateria || '#06b6d4';
+}
