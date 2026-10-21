@@ -65,7 +65,7 @@ export function faltaTextoBase(enunciado: string): boolean {
 const AVISO_SEM_TEXTO = `
 ATENÇÃO: o texto-base desta questão NÃO veio. Não cite nem descreva o conteúdo dele, nenhuma palavra. Diga no primeiro passo que o texto original não está disponível aqui e resolva só pelo comando e pelas alternativas.`;
 
-function textoDaQuestao(q: QuestaoParaTutor): string {
+export function textoDaQuestao(q: QuestaoParaTutor): string {
   const enunciado = q.enunciado.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, ' ').slice(0, MAX_ENUNCIADO);
   const alternativas = (['A', 'B', 'C', 'D', 'E'] as const).map((l) => `${l}) ${q.alternativas[l] ?? ''}`).join('\n');
   return `Matéria: ${q.materia}${q.subtema ? ` — ${q.subtema}` : ''}
