@@ -72,9 +72,11 @@ diretriz mira (parallax rápido, zoom, deslocamento grande).
 Isso **não** se estende ao resto: partículas de fundo e parallax respeitam
 reduced-motion sempre. Ver [[decisoes-prepenem]] para a decisão registrada.
 
-Treino e partículas já respeitam (partículas ficam paradas, não somem).
-**Ainda sem esse tratamento**: transição de questão no Simulado,
-demais páginas com `motion.div` de entrada. Aplique o mesmo padrão sempre
-que tocar nessas telas — não precisa refatorar tudo de uma vez.
+**Global desde 21/10/2026:** `<MotionConfig reducedMotion="user">` nos
+`Providers` desliga transform (x, y, scale) em toda `motion.*` do app e mantém
+opacity. Tela nova não precisa de `useReducedMotion` só para entrada. O flip
+fica de fora com `<MotionConfig reducedMotion="never">` em volta dele
+(`app/flashcards/[deckId]/page.tsx`, `components/simulado/aquecimento-flashcards.tsx`):
+flip novo precisa do mesmo invólucro, senão ele some sob reduced-motion.
 
 Ver também [[flashcard-pattern]] para o fluxo completo que usa o flip 3D.

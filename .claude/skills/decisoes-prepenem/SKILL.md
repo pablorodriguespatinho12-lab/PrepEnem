@@ -56,6 +56,11 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   inteira trazia outras 3 questões em volta.
 - **Um número, um lugar.** Se a informação já aparece na tela, não repete em
   gráfico (Progresso perdeu a rosca e as barras; ficou a evolução por dia).
+  Desde 21/10/2026 a evolução é barra de acertos e erros por dia nos 30 dias
+  de calendário (`lib/evolucao-diaria.ts`), sem %: a linha de taxa dava "0%"
+  para dia com 1 questão e espaçava igual dias com 9 dias de distância.
+- **Cores mais saturadas (Pablo, 21/10/2026):** matérias saíram do pastel e o
+  tema Índigo subiu de 42% para 64% de saturação, com AA conferido par a par.
 
 ## Conteúdo gerado por IA
 
