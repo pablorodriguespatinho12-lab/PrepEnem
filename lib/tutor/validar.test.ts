@@ -161,3 +161,8 @@ test('peça com termo normal e parêntese curto fica como está', () => {
   });
   expect(r?.pecas.map((p) => p.termo)).toEqual(['Δv', 'pH (acidez)']);
 });
+test('hífen especial da IA (U+2011) vira hífen comum: a fonte não tem o desenho dele (21/10/2026)', () => {
+  const r = validarExplicacao({ ideia: 'As tensões somam‑se em série.', passos: [{ titulo: 'Ponta‐a‐ponta', texto: 'Calcula‑se assim.' }] });
+  expect(r?.ideia).toBe('As tensões somam-se em série.');
+  expect(r?.passos[0]).toMatchObject({ titulo: 'Ponta-a-ponta', texto: 'Calcula-se assim.' });
+});

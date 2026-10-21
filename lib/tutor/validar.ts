@@ -16,6 +16,9 @@ export interface Explicacao {
 export interface RespostaTutor { resposta: string; visual: Visual | null }
 
 const EMOJI = /[\p{Extended_Pictographic}\u{FE0F}\u{200D}]/gu;
+// Hífen sem quebra e hífen tipográfico (U+2010/2011): a IA usa em "calcula‑se",
+// e as fontes do app não têm o desenho deles (21/10/2026).
+const HIFEN_ESPECIAL = /[\u2010\u2011]/g;
 /* Frase que a decisão proíbe (decisoes-prepenem): a frase inteira sai. */
 const PROIBIDAS = [/é importante notar/i, /vale ressaltar/i, /vamos analisar/i, /^(ótima pergunta|muito bem|parabéns)\b/i];
 /* Quebra em frases sem cortar dentro de $...$ nem em decimal ("0.5"). */
@@ -50,7 +53,7 @@ const semBarraNoPorcento = (t: string): string =>
    Antes cortava com slice no meio da palavra (validador deixava passar). */
 const texto = (v: unknown, max: number, maxFrases = Infinity): string | null => {
   if (typeof v !== 'string') return null;
-  const limpas = frases(virgulaDecimal(semCircunflexo(semBarraNoPorcento(v))).replace(EMOJI, '').replace(/[ \t]{2,}/g, ' ').trim())
+  const limpas = frases(virgulaDecimal(semCircunflexo(semBarraNoPorcento(v))).replace(EMOJI, '').replace(HIFEN_ESPECIAL, '-').replace(/[ \t]{2,}/g, ' ').trim())
     .filter((f) => !PROIBIDAS.some((r) => r.test(f)))
     .slice(0, maxFrases);
   let saida = '';
