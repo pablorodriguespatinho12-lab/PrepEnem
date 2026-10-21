@@ -60,7 +60,8 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   de calendário (`lib/evolucao-diaria.ts`), sem %: a linha de taxa dava "0%"
   para dia com 1 questão e espaçava igual dias com 9 dias de distância.
 - **Cores mais saturadas (Pablo, 21/10/2026):** matérias saíram do pastel e o
-  tema Índigo subiu de 42% para 64% de saturação, com AA conferido par a par.
+  tema Índigo subiu de 42% para 64% de saturação, com AA conferido par a par. Baralho padrão
+  usa a cor atual da matéria (`corDoBaralho`), não a gravada no seed.
 
 ## Conteúdo gerado por IA
 
@@ -98,6 +99,9 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   "raiz/vértice" fora da curva é descartado. Questão errada vira cartão em
   "Meus erros · matéria" (`api/flashcards/do-erro`). Contexto do aluno (erros
   no assunto, Feynman) vai só na conversa, nunca na explicação (quebraria o cache).
+  Pelo mesmo motivo, erro da IA que o CÓDIGO consegue consertar vai no
+  validador, não no prompt: mudar o prompt zera o cache inteiro (ex.: peça com
+  a explicação no termo, `separarTermo`, 21/10/2026).
 - **Deck de livro (Pablo, 15/10/2026, artefato https://claude.ai/artifact/6PoWDVkq5cr9xN4v3EkeBR):**
   matéria "Livros", frente = título curto, verso = 1 ou 2 frases. Frase de
   capítulo (`Flashcard.capitulo`) fica trancada até "Li o capítulo N"
