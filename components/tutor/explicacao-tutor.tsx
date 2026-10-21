@@ -5,11 +5,17 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Brain, Eye, Loader2, RefreshCcw, Send } from 'lucide-react';
 import MathText from '@/components/math-text';
 import { VisualDesenho } from '@/components/visual/visual-desenho';
 import { NaoEntendiContext } from '@/components/visual/quadro';
 import type { Explicacao, RespostaTutor } from '@/lib/tutor/validar';
+const DESLIZE_DO_PASSO = {
+  entra: (s: number) => ({ opacity: 0, x: 24 * s }),
+  parado: { opacity: 1, x: 0 },
+  sai: (s: number) => ({ opacity: 0, x: -24 * s }),
+};
 import { resumirExplicacao } from '@/lib/tutor/validar';
 import type { Visual } from '@/lib/visual/especificacao';
 import { useTelaGrande } from '@/hooks/use-tela-grande';
@@ -55,6 +61,8 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
   const [carregando, setCarregando] = useState(false);
   const [erro, setErro] = useState<string | null>(null);
   const [passosVisiveis, setPassosVisiveis] = useState(1);
+  // 1 = avançou (o passo novo vem da direita), -1 = voltou (vem da esquerda).
+  const [sentido, setSentido] = useState(1);
   const [respostaChecagemAberta, setRespostaChecagemAberta] = useState(false);
   const [mensagens, setMensagens] = useState<Mensagem[]>([]);
   const [falhaConversa, setFalhaConversa] = useState(false);
@@ -201,19 +209,32 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
 
       {/* Um passo por vez: o botão troca o passo em vez de empilhar, para a
           tela não rolar (Pablo, 15/10/2026, opção A com o quadro do B). */}
-      {passoAtual && (
-        <div className="space-y-3">
-          <p className="type-caption text-muted-foreground" data-numeric>Passo {passosVisiveis} de {total}</p>
-          {passoAtual.visual && <VisualDesenho visual={passoAtual.visual} />}
-          <h3 className="font-display type-body font-semibold">{passoAtual.titulo}</h3>
-          <MathText text={passoAtual.texto} className="font-reading" />
-        </div>
-      )}
+      {/* A troca desliza no sentido do clique (21/10/2026): antes o passo
+          trocava seco e não dava para sentir que avançou. */}
+      <AnimatePresence mode="wait" initial={false} custom={sentido}>
+        {passoAtual && (
+          <motion.div
+            key={passosVisiveis}
+            custom={sentido}
+            variants={DESLIZE_DO_PASSO}
+            initial="entra"
+            animate="parado"
+            exit="sai"
+            transition={{ duration: 0.18, ease: [0.25, 1, 0.5, 1] }}
+            className="space-y-3"
+          >
+            <p className="type-caption text-muted-foreground" data-numeric>Passo {passosVisiveis} de {total}</p>
+            {passoAtual.visual && <VisualDesenho visual={passoAtual.visual} />}
+            <h3 className="font-display type-body font-semibold">{passoAtual.titulo}</h3>
+            <MathText text={passoAtual.texto} className="font-reading" />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <div className="flex items-center gap-3">
         {passosVisiveis > 1 && (
           <button
-            onClick={() => setPassosVisiveis((n) => n - 1)}
+            onClick={() => { setSentido(-1); setPassosVisiveis((n) => n - 1); }}
             className="flex items-center gap-1.5 px-3 py-2.5 rounded-[var(--radius-control)] border border-border type-meta text-muted-foreground hover:text-foreground hover:bg-muted t-colors"
           >
             <ArrowLeft className="w-4 h-4" /> Passo anterior
@@ -221,7 +242,7 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
         )}
         {!terminou && (
           <button
-            onClick={() => setPassosVisiveis((n) => n + 1)}
+            onClick={() => { setSentido(1); setPassosVisiveis((n) => n + 1); }}
             className="flex items-center gap-2 px-4 py-2.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-1 t-colors hover:bg-[hsl(var(--primary-hover))]"
           >
             Próximo passo <ArrowRight className="w-4 h-4" />

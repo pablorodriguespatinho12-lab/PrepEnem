@@ -808,7 +808,15 @@ export default function TreinoPage() {
               style={{ backgroundColor: 'hsl(var(--success-surface))', color: 'hsl(var(--success))' }}
             >
               <Check className="w-3.5 h-3.5" strokeWidth={2.5} />
-              {score.correct}
+              <motion.span
+                key={score.correct}
+                initial={{ scale: 1.5 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.3, ease: [0.25, 1, 0.5, 1] }}
+                className="inline-block"
+              >
+                {score.correct}
+              </motion.span>
             </span>
             <span
               data-numeric
@@ -816,7 +824,15 @@ export default function TreinoPage() {
               style={{ backgroundColor: 'hsl(var(--danger-surface))', color: 'hsl(var(--danger))' }}
             >
               <X className="w-3.5 h-3.5" strokeWidth={2.5} />
-              {score.wrong}
+              <motion.span
+                key={score.wrong}
+                initial={{ scale: 1.5 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.3, ease: [0.25, 1, 0.5, 1] }}
+                className="inline-block"
+              >
+                {score.wrong}
+              </motion.span>
             </span>
             {streak >= 3 && (
               <span data-numeric className="type-meta font-medium px-2 py-1 rounded-[var(--radius-data)] bg-primary/10 text-primary-text">
