@@ -7,6 +7,7 @@
 import { pedirJson } from '@/lib/pedir-json';
 import { MODELO_IA } from '@/lib/ia-modelos';
 import { concorda, resolverIndependente } from '@/lib/verificar-respostas';
+import { temPalavrao } from '@/lib/tutor/validar';
 
 const LETRAS = ['A', 'B', 'C', 'D', 'E'] as const;
 const DIFICULDADES = ['facil', 'medio', 'dificil'];
@@ -24,7 +25,8 @@ export interface QuestaoGerada {
   explicacao: string | null;
 }
 
-const textoValido = (v: unknown): v is string => typeof v === 'string' && v.trim().length > 0;
+// Questão com palavrão é descartada (a geração repõe outra), 21/10/2026.
+const textoValido = (v: unknown): v is string => typeof v === 'string' && v.trim().length > 0 && !temPalavrao(v);
 
 function validarUma(bruto: unknown): QuestaoGerada | null {
   if (!bruto || typeof bruto !== 'object') return null;

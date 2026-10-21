@@ -11,7 +11,10 @@ export type ResultadoIA<T> = { ok: true; dado: T } | { ok: false; erro: string; 
 /* A Groq gratuita limita 8.000 tokens por minuto por modelo (429). Medido
    em 05/10/2026: 2 e 5 s de espera não bastavam, a janela é de um minuto.
    Esperar e repetir resolve; o aluno vê "Pensando..." em vez de erro. */
-const ESPERAS_429_MS = [4000, 12000];
+// Terceira espera (21/10/2026, "não pode falhar"): no teste de 9 questões, 2
+// desistiram aos 16 s com 429, e a janela da cota é de um minuto. Cabe no
+// prazo de 50 s; se não couber, o laço abaixo desiste antes de estourar.
+const ESPERAS_429_MS = [4000, 12000, 20000];
 const esperar = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 type Mensagem = { role: 'user' | 'assistant'; content: string };

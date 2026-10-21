@@ -110,8 +110,16 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   regras dentro (termo sem parêntese, palavra técnica explicada, só fórmula
   do médio, "você" no seuErro, passo-pergunta responde) ficou 14.110 contra
   14.765 de antes: 0 x 413 em 9 questões, 2 a 8 s. Regra nova: corte antes.
-  Ainda falha às vezes: passo sem visual (ésteres), palavra chula ("caga").
-  Medir: `scripts/` não tem; o tamanho sai de `promptExplicacao(...).length`.
+  Medir: o tamanho sai de `promptExplicacao(...).length`.
+- **"Não pode falhar" (Pablo, 21/10/2026): o CÓDIGO garante, não o prompt.**
+  Primeiro passo sem desenho recebe tabela de reserva (peças termo × o que é,
+  ou os passos) em `comAlgumDesenho`; chulo vira palavra limpa ("caga" →
+  "solta") e frase com palavrão sai (`semPalavraChula`, também em conceito do
+  dia, flashcard gerado e lição; questão gerada com palavrão é descartada;
+  "Cu" é o cobre e fica); inglês que escapa vira português (endosperm,
+  genotype); 429 espera uma 3ª vez (20 s) dentro do prazo de 50 s. Não dá para
+  garantir por código: erro de conteúdo ("núcleo poligênico" no lugar de
+  núcleos polares, "espermatozoide" em planta). Esses vão para a fila do prompt.
 - **Deck de livro (Pablo, 15/10/2026, artefato https://claude.ai/artifact/6PoWDVkq5cr9xN4v3EkeBR):**
   matéria "Livros", frente = título curto, verso = 1 ou 2 frases. Frase de
   capítulo (`Flashcard.capitulo`) fica trancada até "Li o capítulo N"

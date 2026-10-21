@@ -20,7 +20,24 @@ const EMOJI = /[\p{Extended_Pictographic}\u{FE0F}\u{200D}]/gu;
 // e as fontes do app não têm o desenho deles (21/10/2026).
 const HIFEN_ESPECIAL = /[\u2010\u2011]/g;
 /* Frase que a decisão proíbe (decisoes-prepenem): a frase inteira sai. */
-const PROIBIDAS = [/é importante notar/i, /vale ressaltar/i, /vamos analisar/i, /^(ótima pergunta|muito bem|parabéns)\b/i];
+// Palavrão derruba a frase inteira (21/10/2026). "Cu" não entra: é o cobre.
+const PALAVRAO = /\b(merda|porra|bosta|caralho|cacete|foda|fodid[oa]|put[oa])\b/i;
+const PROIBIDAS = [/é importante notar/i, /vale ressaltar/i, /vamos analisar/i, /^(ótima pergunta|muito bem|parabéns)\b/i, PALAVRAO];
+/* Chulo com troca natural fica, trocado: "o passarinho caga a semente longe"
+   (testar-tutor, 21/10/2026) vira "solta a semente longe". */
+const semChulo = (t: string): string => t.replace(/\bcag(a|am|ar|ou|aram)\b/gi, 'solt$1');
+/* Termo em inglês que o modelo deixa escapar (testar-tutor, 21/10/2026). */
+const INGLES: [RegExp, string][] = [
+  [/\bendosperm\b/gi, 'endosperma'], [/\bgenotypes?\b/gi, 'genótipo'], [/\bphenotypes?\b/gi, 'fenótipo'],
+];
+const semIngles = (t: string): string => INGLES.reduce((acc, [de, para]) => acc.replace(de, para), t);
+export const temPalavrao = (t: string): boolean => PALAVRAO.test(t);
+/* Para os outros textos da IA (conceito do dia, flashcard, lição): troca o
+   chulo e tira a frase com palavrão, sem mexer em mais nada. */
+export function semPalavraChula(t: string): string {
+  if (!/cag|merd|porr|bost|caral|cacet|fod|put/i.test(t)) return t;
+  return frases(semChulo(t)).filter((f) => !PALAVRAO.test(f)).join(' ');
+}
 /* Quebra em frases sem cortar dentro de $...$ nem em decimal ("0.5"). */
 export function frases(t: string): string[] {
   const saida: string[] = [];
@@ -53,7 +70,7 @@ const semBarraNoPorcento = (t: string): string =>
    Antes cortava com slice no meio da palavra (validador deixava passar). */
 const texto = (v: unknown, max: number, maxFrases = Infinity): string | null => {
   if (typeof v !== 'string') return null;
-  const limpas = frases(virgulaDecimal(semCircunflexo(semBarraNoPorcento(v))).replace(EMOJI, '').replace(HIFEN_ESPECIAL, '-').replace(/[ \t]{2,}/g, ' ').trim())
+  const limpas = frases(semIngles(semChulo(virgulaDecimal(semCircunflexo(semBarraNoPorcento(v))))).replace(EMOJI, '').replace(HIFEN_ESPECIAL, '-').replace(/[ \t]{2,}/g, ' ').trim())
     .filter((f) => !PROIBIDAS.some((r) => r.test(f)))
     .slice(0, maxFrases);
   let saida = '';
@@ -131,6 +148,20 @@ function separarTermo(p: Record<string, unknown>): Record<string, unknown> {
   const resto = typeof p.significado === 'string' ? p.significado.trim() : '';
   return { ...p, termo: m[1], significado: resto ? `${explicacao} ${resto}` : explicacao };
 }
+/* Toda explicação tem desenho no primeiro passo (Pablo, 08/10/2026), e a IA às
+   vezes não manda (ésteres, 21/10/2026) ou manda um que o validador derruba
+   (quadro de genética sem número). Pedir de novo pode virar tela de erro; aqui
+   nunca falha: primeiro passo sem desenho ganha uma tabela com as peças
+   (termo × o que é) ou, sem peças, com os passos. */
+const primeiraFrase = (t: string): string => frases(t)[0]?.trim() ?? t;
+function comAlgumDesenho(passos: PassoExplicacao[], pecas: { termo: string; significado: string }[]): PassoExplicacao[] {
+  if (passos[0].visual) return passos;
+  const reserva = pecas.length > 0
+    ? { tipo: 'tabela', cabecalho: ['Termo', 'O que é'], linhas: pecas.map((p) => [p.termo, primeiraFrase(p.significado)]) }
+    : { tipo: 'tabela', cabecalho: ['Passo', 'O que fazer'], linhas: passos.map((p) => [p.titulo, primeiraFrase(p.texto)]) };
+  const [primeiro, ...resto] = passos;
+  return [{ ...primeiro, visual: validarVisual(reserva) }, ...resto];
+}
 export function validarExplicacao(bruto: unknown, materia?: string): Explicacao | null {
   const e = objeto(bruto);
   const passos = lista(e.passos).map(objeto)
@@ -150,7 +181,7 @@ export function validarExplicacao(bruto: unknown, materia?: string): Explicacao 
   return {
     ideia,
     pecas,
-    passos,
+    passos: comAlgumDesenho(passos, pecas),
     seuErro: erroConfiavel(texto(e.seuErro, 700)),
     checagem: pergunta && resposta ? { pergunta, resposta } : null,
   };

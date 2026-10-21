@@ -4,10 +4,11 @@
 import { validarVisual } from '@/lib/visual/especificacao';
 import type { ConteudoLicao, Exercicio, ExemploResolvido, PassoResolvido, Resposta } from './tipos';
 import { conferirGabarito } from './conferir';
+import { semPalavraChula } from '@/lib/tutor/validar';
 
 const obj = (v: unknown): Record<string, unknown> => (v && typeof v === 'object' ? (v as Record<string, unknown>) : {});
 const lista = (v: unknown): unknown[] => (Array.isArray(v) ? v : []);
-const txt = (v: unknown, max = 1200): string | null => (typeof v === 'string' && v.trim() ? v.trim().slice(0, max) : null);
+const txt = (v: unknown, max = 1200): string | null => (typeof v === 'string' && v.trim() ? semPalavraChula(v.trim()).slice(0, max) || null : null);
 const naoNulo = <T,>(v: T | null): v is T => v !== null;
 
 export function validarResposta(bruto: unknown): Resposta | null {

@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { extrairJson, resumirExplicacao, validarExplicacao, validarRespostaTutor } from './validar';
+import { extrairJson, resumirExplicacao, semPalavraChula, temPalavrao, validarExplicacao, validarRespostaTutor } from './validar';
 
 describe('extrairJson', () => {
   test('tira cerca de markdown e texto em volta', () => {
@@ -100,7 +100,8 @@ describe('validarExplicacao limpa o texto da IA', () => {
   test('desenho de palavra só em Português (em Física virava "New·ton")', () => {
     const palavra = { tipo: 'palavra', palavra: 'Newton', silabas: ['New', 'ton'], destaque: 'ton', nota: 'Unidade.' };
     const bruto = { ideia: 'Ok.', passos: [{ titulo: 'Passo', texto: 'x.', visual: palavra }] };
-    expect(validarExplicacao(bruto, 'Física')!.passos[0].visual).toBeNull();
+    // Em Física o desenho de palavra sai; sem outro desenho, entra a tabela de reserva.
+    expect(validarExplicacao(bruto, 'Física')!.passos[0].visual?.tipo).toBe('tabela');
     expect(validarExplicacao(bruto, 'Português')!.passos[0].visual).not.toBeNull();
   });
 
@@ -174,6 +175,68 @@ test('cena e fatias saem da explicação da questão: são das lições de Cálc
       { titulo: 'Tabela', texto: 'Ok.', visual: { tipo: 'tabela', cabecalho: ['a', 'b'], linhas: [['1', '2']] } },
     ],
   }, 'Física');
-  expect(r?.passos[0].visual).toBeNull();
+  // A cena sai; o primeiro passo fica sem desenho e recebe a tabela de reserva.
+  expect(r?.passos[0].visual).toMatchObject({ tipo: 'tabela', cabecalho: ['Passo', 'O que fazer'] });
   expect(r?.passos[1].visual?.tipo).toBe('tabela');
+});
+describe('palavra chula (testar-tutor, 21/10/2026: "passarinho come fruta e caga a semente longe")', () => {
+  test('"caga" vira "solta", e a frase fica', () => {
+    const r = validarExplicacao({ ideia: 'O passarinho come a fruta e caga a semente longe.', passos: [{ titulo: 'Passo', texto: 'Ele cagou ali.' }] });
+    expect(r?.ideia).toBe('O passarinho come a fruta e solta a semente longe.');
+    expect(r?.passos[0].texto).toBe('Ele soltou ali.');
+  });
+  test('frase com palavrão sai; o símbolo do cobre (Cu) fica', () => {
+    const r = validarExplicacao({ ideia: 'Que merda de conta. O cobre é Cu.', passos: [{ titulo: 'Cu e Zn', texto: 'O Cu perde elétrons.' }] });
+    expect(r?.ideia).toBe('O cobre é Cu.');
+    expect(r?.passos[0]).toMatchObject({ titulo: 'Cu e Zn', texto: 'O Cu perde elétrons.' });
+  });
+  test('vale na conversa com o tutor', () => {
+    expect(validarRespostaTutor({ resposta: 'O bicho caga a semente. Entendeu?' })?.resposta).toBe('O bicho solta a semente. Entendeu?');
+  });
+});
+describe('explicação sem nenhum desenho ganha uma tabela (Pablo, 21/10/2026: "não pode falhar")', () => {
+  test('com peças: tabela termo × o que é, no primeiro passo', () => {
+    const r = validarExplicacao({
+      ideia: 'Ideia.',
+      pecas: [{ termo: 'ácido etanoico', significado: 'Ácido com dois carbonos. Dá o cheiro de vinagre.' }, { termo: 'saturada', significado: 'Só ligações simples.' }],
+      passos: [{ titulo: 'Passo 1', texto: 'Ok.' }, { titulo: 'Passo 2', texto: 'Ok.' }],
+    });
+    expect(r?.passos[0].visual).toEqual({
+      tipo: 'tabela', titulo: undefined, cabecalho: ['Termo', 'O que é'],
+      linhas: [['ácido etanoico', 'Ácido com dois carbonos.'], ['saturada', 'Só ligações simples.']],
+    });
+    expect(r?.passos[1].visual).toBeNull();
+  });
+  test('sem peças: tabela com os passos', () => {
+    const r = validarExplicacao({ ideia: 'Ideia.', passos: [{ titulo: 'Ache o grupo', texto: 'Procure CH3COO. Depois confira.' }] });
+    expect(r?.passos[0].visual).toMatchObject({ tipo: 'tabela', cabecalho: ['Passo', 'O que fazer'], linhas: [['Ache o grupo', 'Procure CH3COO.']] });
+  });
+  test('primeiro passo sem desenho ganha a tabela mesmo se outro passo tiver (genética, 21/10/2026)', () => {
+    const r = validarExplicacao({
+      ideia: 'Ideia.',
+      pecas: [{ termo: 'portador', significado: 'Tem uma cópia mutada.' }],
+      passos: [{ titulo: 'P1', texto: 'Ok.' }, { titulo: 'P2', texto: 'Ok.', visual: { tipo: 'tabela', cabecalho: ['x', 'y'], linhas: [['1', '2']] } }],
+    });
+    expect(r?.passos[0].visual).toMatchObject({ tipo: 'tabela', cabecalho: ['Termo', 'O que é'] });
+    expect(r?.passos[1].visual).toMatchObject({ cabecalho: ['x', 'y'] });
+  });
+  test('primeiro passo com desenho: nada muda', () => {
+    const tabela = { tipo: 'tabela', cabecalho: ['x', 'y'], linhas: [['1', '2']] };
+    const r = validarExplicacao({ ideia: 'Ideia.', pecas: [{ termo: 'a', significado: 'b' }], passos: [{ titulo: 'P1', texto: 'Ok.', visual: tabela }] });
+    expect(r?.passos[0].visual).toMatchObject({ cabecalho: ['x', 'y'] });
+  });
+});
+
+test('semPalavraChula e temPalavrao: os outros textos da IA (conceito, flashcard, lição, questão gerada)', () => {
+  expect(semPalavraChula('A ave caga a semente. Ela germina.')).toBe('A ave solta a semente. Ela germina.');
+  expect(semPalavraChula('Que porra é essa. O $Cu$ oxida.')).toBe('O $Cu$ oxida.');
+  expect(semPalavraChula('Texto limpo, sem nada.')).toBe('Texto limpo, sem nada.');
+  expect(temPalavrao('Uma merda de reação')).toBe(true);
+  expect(temPalavrao('O Cu e a cachaça')).toBe(false);
+});
+
+test('termo em inglês que escapa vira português', () => {
+  const r = validarExplicacao({ ideia: 'O endosperm alimenta o embrião.', passos: [{ titulo: 'Genotype', texto: 'Cada pai tem genotype Aa.' }] });
+  expect(r?.ideia).toBe('O endosperma alimenta o embrião.');
+  expect(r?.passos[0]).toMatchObject({ titulo: 'genótipo', texto: 'Cada pai tem genótipo Aa.' });
 });

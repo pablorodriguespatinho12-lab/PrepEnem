@@ -1,3 +1,4 @@
+import { semPalavraChula } from '@/lib/tutor/validar';
 // Cartões que a IA gera para um baralho. Informação mínima (SuperMemo,
 // decisoes-prepenem): verso longo é enumeração disfarçada e sai.
 
@@ -7,7 +8,7 @@ const MAX_FRENTE = 300;
 const MAX_VERSO = 200;
 const MAX_DICA = 200;
 
-const texto = (v: unknown): string => (typeof v === 'string' ? v.trim() : '');
+const texto = (v: unknown): string => (typeof v === 'string' ? semPalavraChula(v.trim()) : '');
 
 /* Nenhum cartão aproveitável = null (a pedirJson tenta de novo). */
 export function validarCartoesGerados(bruto: unknown): CartaoGerado[] | null {
