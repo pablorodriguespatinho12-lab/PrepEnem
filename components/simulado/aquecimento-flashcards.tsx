@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { motion, AnimatePresence, MotionConfig, useReducedMotion } from 'framer-motion';
 import { CheckCircle2, XCircle } from 'lucide-react';
 import { materiaColors } from '@/lib/theme-colors';
 
@@ -107,6 +107,8 @@ export function AquecimentoFlashcards({ deckId, onFim }: Props) {
         aria-pressed={virado}
         aria-label={virado ? 'Virar para a pergunta' : 'Virar para ver a resposta'}
       >
+        {/* reducedMotion global do app (Providers) desliga transform; o flip é a exceção (decisoes-prepenem). */}
+        <MotionConfig reducedMotion="never">
         <motion.div
           key={cartao.id}
           animate={{ rotateY: virado ? 180 : 0 }}
@@ -136,6 +138,7 @@ export function AquecimentoFlashcards({ deckId, onFim }: Props) {
             <p className="font-reading type-lead measure-reading text-center font-medium">{cartao.verso}</p>
           </div>
         </motion.div>
+        </MotionConfig>
       </div>
 
       <AnimatePresence>

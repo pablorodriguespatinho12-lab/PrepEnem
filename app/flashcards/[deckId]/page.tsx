@@ -2,7 +2,7 @@
 import { useSession } from 'next-auth/react';
 import { useEffect, useState, useCallback, useRef } from 'react';
 import { useRouter, useParams, useSearchParams } from 'next/navigation';
-import { motion, AnimatePresence, useReducedMotion, type Variants } from 'framer-motion';
+import { motion, AnimatePresence, MotionConfig, useReducedMotion, type Variants } from 'framer-motion';
 import { ChevronLeft, CheckCircle, XCircle, RotateCw, Trophy, Lightbulb, Loader2, RefreshCw, Sparkles, Plus, Trash2, Check, X } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
@@ -703,6 +703,8 @@ export default function FlashcardDeckPage() {
               aria-pressed={flipped}
               aria-label={flipped ? 'Virar para a pergunta' : 'Virar para ver a resposta'}
             >
+              {/* reducedMotion global do app (Providers) desliga transform; o flip é a exceção (decisoes-prepenem). */}
+              <MotionConfig reducedMotion="never">
               <motion.div
                 animate={{ rotateY: flipped ? 180 : 0 }}
                 // Exceção deliberada ao padrão de reduced-motion do resto do
@@ -780,6 +782,7 @@ export default function FlashcardDeckPage() {
                   <div className="absolute bottom-4 left-0 right-0 text-center type-meta text-muted-foreground">Toque para virar <span className="hidden md:inline">· 1 errei · 2 acertei</span></div>
                 </div>
               </motion.div>
+              </MotionConfig>
             </div>
 
             {/* Hint overlay (front side only) */}

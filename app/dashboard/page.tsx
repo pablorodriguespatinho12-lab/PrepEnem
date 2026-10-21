@@ -1,10 +1,13 @@
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 import { RefreshCcw, Trophy, ArrowRight, Sparkles, Sun, ChevronDown } from 'lucide-react';
 import { getWeekScheduleByNumber, studyCycle } from '@/lib/schedule-data';
 import { materiaColors } from '@/lib/theme-colors';
 import { CheckCircle2 as DayDoneIcon, Circle, CircleDashed } from 'lucide-react';
+// Mesma curva de --ease-entrance (globals.css).
+const ENTRADA = [0.16, 1, 0.3, 1] as const;
 
 
 
@@ -94,7 +97,13 @@ export default function DashboardPage() {
             <p className="type-meta text-muted-foreground mt-1">Continue treinando livremente pelas outras telas.</p>
           </div>
         ) : activeDaySchedule && (
-          <section className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6" aria-labelledby="hoje-titulo">
+          <motion.section
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: ENTRADA }}
+            className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6"
+            aria-labelledby="hoje-titulo"
+          >
             <div className="flex items-baseline justify-between gap-2 mb-4 flex-wrap">
               <h1 id="hoje-titulo" className="font-display type-title font-semibold">Hoje</h1>
               {/* O conteúdo é o do primeiro dia não estudado; o rótulo diz o dia
@@ -111,27 +120,35 @@ export default function DashboardPage() {
             ) : (
               <ul className="space-y-2.5 mb-6">
                 {[...activeDaySchedule.manha, ...activeDaySchedule.trabalho].map((block, i) => (
-                  <li key={`${block.materia}-${i}`} className="flex items-baseline gap-3 min-w-0">
+                  <motion.li
+                    key={`${block.materia}-${i}`}
+                    initial={{ opacity: 0, x: -8 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.25, delay: 0.12 + i * 0.05, ease: ENTRADA }}
+                    className="flex items-baseline gap-3 min-w-0"
+                  >
                     <span aria-hidden className="w-2.5 h-2.5 rounded-full flex-shrink-0 translate-y-[-1px]" style={{ backgroundColor: (materiaColors as any)[block.materia] ?? '#ccc' }} />
                     {/* Tema quebra para baixo no celular: com truncate virava "Mol, Massa molar, Conceito d…". */}
                     <span className="min-w-0 flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
                       <span className="type-body font-medium whitespace-nowrap">{block.materia}</span>
                       <span className="type-meta text-muted-foreground">{block.tema}</span>
                     </span>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             )}
             <div className="flex items-center justify-between gap-3 flex-wrap">
-              <button
+              <motion.button
                 type="button"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
                 onClick={() => router.push(activeDaySchedule.isSimulado ? '/simulado' : treinoHref)}
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground rounded-[var(--radius-control)] px-6 py-3 font-display type-lead font-semibold shadow-elev-1 hover:opacity-90 t-colors group"
               >
                 Começar <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </motion.button>
             </div>
-          </section>
+          </motion.section>
         )}
         {/* ── Weekly Calendar: pills horizontais, status vem do progresso real,
              não da data (dia atual do plano expandido por padrão) ── */}
@@ -154,7 +171,12 @@ export default function DashboardPage() {
           </button>
         )}
         {semanaAberta && (
-        <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-8">
+        <motion.div
+          initial={{ opacity: 0, y: -6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.22, ease: ENTRADA }}
+          className="surface-1 rounded-[var(--radius-surface)] p-6 mb-8"
+        >
           <div className="flex items-center gap-2 mb-4">
             <Sparkles className="w-5 h-5 text-primary-text" />
             <h2 className="font-display type-lead font-semibold">Semana {weekNumber}: {weekTitle}</h2>
@@ -217,7 +239,7 @@ export default function DashboardPage() {
               </p>
             </div>
           )}
-        </div>
+        </motion.div>
         )}
       </div>
     </>

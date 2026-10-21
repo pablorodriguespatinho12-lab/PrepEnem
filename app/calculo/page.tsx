@@ -4,6 +4,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { ArrowRight, Check, Circle, Loader2, RefreshCcw } from 'lucide-react';
 import { NOME_MODULO } from '@/data/calculo/trilha';
 import type { Degrau, Modulo } from '@/lib/calculo/tipos';
@@ -13,6 +14,10 @@ interface DegrauTela extends Degrau { situacao: Situacao; escrita: boolean; acer
 interface Trilha { degraus: DegrauTela[]; proximo: string | null; revisoesPendentes: number }
 
 const MODULOS: Modulo[] = ['pre', 'calc1', 'calc2', 'calc3'];
+// Mesma curva de --ease-entrance (globals.css). Atraso por item com teto: lista
+// longa não pode deixar o último degrau esperando quase um segundo.
+const ENTRADA = [0.16, 1, 0.3, 1] as const;
+const atraso = (i: number) => Math.min(i, 10) * 0.035;
 
 function Icone({ s }: { s: Situacao }) {
   if (s === 'concluida') return <Check className="w-4 h-4" strokeWidth={3} style={{ color: 'hsl(var(--success))' }} aria-label="concluído" />;
@@ -50,7 +55,12 @@ export default function CalculoPage() {
         <p className="type-meta mt-2" data-numeric>{concluidos} de {trilha.degraus.length} degraus concluídos</p>
       </header>
 
-      <div className="grid gap-3 sm:grid-cols-2">
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, ease: ENTRADA }}
+        className="grid gap-3 sm:grid-cols-2"
+      >
         {proximo && (
           <Link href={`/calculo/${proximo.id}`} className="block rounded-[var(--radius-surface)] bg-primary text-primary-foreground p-5 shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3">
             <p className="type-caption opacity-80">Próximo degrau · {proximo.minutos} min</p>
@@ -67,7 +77,7 @@ export default function CalculoPage() {
             <span className="inline-flex items-center gap-1 type-meta font-semibold text-primary-text mt-3"><RefreshCcw className="w-4 h-4" /> Revisar</span>
           </Link>
         )}
-      </div>
+      </motion.div>
 
       {MODULOS.map((m) => {
         const doModulo = trilha.degraus.filter((d) => d.modulo === m);
@@ -80,8 +90,13 @@ export default function CalculoPage() {
             <h2 id={`modulo-${m}`} className="font-display type-title font-semibold mb-3">{NOME_MODULO[m]}</h2>
             {prontas.length > 0 && (
               <ol className="space-y-1 border-l-2 border-border ml-2">
-                {prontas.map((d) => (
-                  <li key={d.id}>
+                {prontas.map((d, i) => (
+                  <motion.li
+                    key={d.id}
+                    initial={{ opacity: 0, x: -8 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.25, delay: 0.1 + atraso(i), ease: ENTRADA }}
+                  >
                     <Link href={`/calculo/${d.id}`} className="block px-2 py-2 rounded-[var(--radius-control)] hover:bg-muted t-colors">
                       <div className="flex items-start gap-3 -ml-[9px]">
                         <span className="mt-1 rounded-full bg-background p-0.5"><Icone s={d.situacao} /></span>
@@ -91,7 +106,7 @@ export default function CalculoPage() {
                         </div>
                       </div>
                     </Link>
-                  </li>
+                  </motion.li>
                 ))}
               </ol>
             )}
