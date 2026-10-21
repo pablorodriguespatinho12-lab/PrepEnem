@@ -2,7 +2,8 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { Minus, Plus, X } from 'lucide-react';
-import { LEITURAS } from '@/data/leituras';
+import { LEITURAS, PLANO_DE_LEITURA } from '@/data/leituras';
+import { metaDePaginas } from '@/lib/meta-leitura';
 
 const CHAVE_PAGINAS = 'prepenem-leitura-paginas';
 const CHAVE_FECHADO = 'prepenem-leitura-fechado';
@@ -26,9 +27,12 @@ export function LembreteLeitura() {
   const reduzir = useReducedMotion();
   const [aberto, setAberto] = useState(false);
   const [paginas, setPaginas] = useState<Paginas>({});
+  const [meta, setMeta] = useState<number | null>(null);
 
   useEffect(() => {
     setPaginas(lerPaginas());
+    // No efeito, não no render: a data do servidor e a do navegador podem divergir.
+    setMeta(metaDePaginas(PLANO_DE_LEITURA, new Date()));
     try {
       if (sessionStorage.getItem(CHAVE_FECHADO)) return;
     } catch {
@@ -68,7 +72,14 @@ export function LembreteLeitura() {
           className="fixed bottom-4 right-4 left-4 sm:left-auto sm:w-80 z-50 p-4 rounded-[var(--radius-surface)] bg-[hsl(var(--surface-2))] border border-border shadow-elev-2"
         >
           <div className="flex items-start justify-between gap-2 mb-3">
-            <h2 className="font-display text-lg leading-tight">Leitura de hoje</h2>
+            <div>
+              <h2 className="font-display text-lg leading-tight">Leitura de hoje</h2>
+              {meta !== null && (
+                <p className="type-meta text-muted-foreground mt-0.5">
+                  Meta: <span data-numeric className="font-semibold text-foreground">{meta}</span> páginas
+                </p>
+              )}
+            </div>
             <button
               onClick={fechar}
               aria-label="Fechar lembrete"
