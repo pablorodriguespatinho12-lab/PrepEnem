@@ -31,6 +31,9 @@
     --type-headline: 2.075rem;  /* 33.2px — título de página                 */
     --type-display:  2.594rem;  /* 41.5px — display                          */
     --type-hero:     3.242rem;  /* 51.9px — número-herói, tela de resultado  */
+    /* Fora da razão 1.250 de propósito: o título do bloco do Início no jeito
+       Nubank (21/10/2026). Cresce com a tela, de 44 a 76px. Só ali. */
+    --type-mega:     clamp(2.75rem, 7vw, 4.75rem);
 
     --lh-tight:   1.08;  /* display e hero */
     --lh-snug:    1.24;  /* títulos        */

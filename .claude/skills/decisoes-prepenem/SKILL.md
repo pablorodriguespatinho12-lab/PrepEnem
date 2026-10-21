@@ -33,7 +33,11 @@ dos componentes, movimento, personalidade visual. Nada disso está decidido
 O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 `montar-referencia`, escolhida pelo Pablo olhando, e registrada aqui com data.
 
-- Nenhuma escolhida ainda (05/10/2026).
+- **Fluidez e Início = Nubank (Pablo, 21/10/2026: "achei muito legal e fluido",
+  o site e o app).** Medido em nubank.com.br: título de 112px, blocos de cor
+  de ponta a ponta, 57 elementos em pílula (999px), transição de 0,65 s,
+  `scroll-behavior: smooth`. Venda fora (foto, CPF, carrossel do blog). O
+  Pablo escolheu a opção B de https://claude.ai/artifact/Wy2USfyj6hiYfSKA4dKdfs.
 - **Desenho de química = mapa mental (opção A, Pablo, 07/10/2026):** átomo de
   verdade (núcleo de bolinhas, camadas com elétrons girando, símbolo embaixo),
   linha do átomo até uma etiqueta "H: massa 1", e a soma numa caixa. Nunca seta
@@ -44,7 +48,11 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 - **Menu: 6 itens à vista** (Início, Treino, Flashcards, Redação, Cálculo,
   Progresso) e o resto em "Mais", aberto sozinho quando a página atual é dele.
   Tela nova entra em "Mais", a não ser que seja estudo diário.
-- **Início = só o cronograma de hoje e "Começar"** (detalhe na seção Treino).
+- **Início = o cronograma de hoje e "Começar", no jeito Nubank (B, 21/10/2026):**
+  bloco bg-primary de ponta a ponta com "N matérias hoje" (`--type-mega`) e o
+  Começar em pílula; 4 atalhos redondos (mesmos ícones do menu); seções com
+  linha fina, sem caixa: O que cai hoje (com tema), Leitura (o cartão
+  flutuante não aparece no Início), Revisões, A semana (fechada).
   Enquanto carrega, esqueleto do cartão, nunca tela vazia.
 - **Progresso = 2 números** (total respondidas e acertos), 06/10/2026.
 - **Sem contorno azul ao clicar:** anel de foco só com teclado (`FocoTeclado`,
@@ -153,8 +161,8 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   assunto: o que precisa saber ANTES (pré-requisito, `antes`) → o que o assunto
   É, sigla por extenso (`oQueE`: "não me falou o que é MRU") → passos → regra e
   ENEM. Química de átomo e massa usa o desenho `molecula`.
-- **Início (06/10/2026):** sem saudação e sem banner: cartão "Hoje" com as
-  matérias e temas do dia e um botão "Começar"; revisões num link discreto.
+- **Início (06/10/2026, forma nova em 21/10/2026):** sem saudação e sem
+  banner; o bloco de cor É o cronograma de hoje (ver "Telas enxutas").
 - **Conteúdo atrasado vira o de hoje (Pablo, 15/10/2026):** o dia do
   cronograma só avança com o treino TERMINADO (`concluido`) ou o simulado
   enviado. "Pular este dia" saiu e o `pulado` antigo conta como pendente. O

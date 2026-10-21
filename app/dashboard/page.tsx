@@ -1,29 +1,32 @@
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { RefreshCcw, Trophy, ArrowRight, Sparkles, Sun, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
 import { getWeekScheduleByNumber, studyCycle } from '@/lib/schedule-data';
 import { materiaColors } from '@/lib/theme-colors';
-import { CheckCircle2 as DayDoneIcon, Circle, CircleDashed } from 'lucide-react';
+import { useLeitura } from '@/hooks/use-leitura';
+import { LivrosDaLeitura } from '@/components/livros-da-leitura';
+import { Atalhos } from '@/components/inicio/atalhos';
+import { Semana } from '@/components/inicio/semana';
+
 // Mesma curva de --ease-entrance (globals.css).
 const ENTRADA = [0.16, 1, 0.3, 1] as const;
 
-
-
-/* ══════════════════════════════════════
-   DASHBOARD PAGE
-   ══════════════════════════════════════ */
+/* Início no jeito Nubank (Pablo escolheu a opção B em 21/10/2026, artefato
+   https://claude.ai/artifact/Wy2USfyj6hiYfSKA4dKdfs): bloco de cor com o dia
+   em letra grande e o Começar, atalhos redondos, e o resto em seções
+   separadas por linha fina, sem caixa. Continua sem saudação e sem banner
+   (06/10/2026): o bloco É o cronograma de hoje. */
 export default function DashboardPage() {
-  const router = useRouter();
   const [stats, setStats] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
   const [studyProgress, setStudyProgress] = useState<any[]>([]);
   // A semana repete as matérias do dia: fica fechada até o aluno pedir.
   const [semanaAberta, setSemanaAberta] = useState(false);
   const [carregandoDia, setCarregandoDia] = useState(true);
   const [activeDay, setActiveDay] = useState<{ weekNumber: number; dayIndex: number; cycleComplete: boolean } | null>(null);
   const [expandedDayIndex, setExpandedDayIndex] = useState<number | null>(null);
+  const leitura = useLeitura();
 
   const fetchStats = useCallback(async () => {
     try {
@@ -31,8 +34,6 @@ export default function DashboardPage() {
       if (res.ok) setStats(await res.json());
     } catch (e) {
       console.error(e);
-    } finally {
-      setLoading(false);
     }
   }, []);
 
@@ -54,194 +55,163 @@ export default function DashboardPage() {
 
   useEffect(() => { fetchStats(); fetchStudyProgress(); }, [fetchStats, fetchStudyProgress]);
 
-
   const weekNumber = activeDay?.weekNumber ?? 1;
   const weekTitle = studyCycle[weekNumber - 1]?.weekTitle ?? '';
   const weekSchedule = getWeekScheduleByNumber(weekNumber);
-  const activeDaySchedule = activeDay ? weekSchedule[activeDay.dayIndex] : null;
-  const expandedDaySchedule = expandedDayIndex !== null ? weekSchedule[expandedDayIndex] : null;
+  const activeDaySchedule = activeDay && !activeDay.cycleComplete ? weekSchedule[activeDay.dayIndex] : null;
+  const blocos = activeDaySchedule ? [...activeDaySchedule.manha, ...activeDaySchedule.trabalho] : [];
+  const materias = Array.from(new Set(blocos.map((b) => b.materia)));
   // "pulado" (do antigo Pular este dia) não é estudado: aparece pendente.
-  const statusForDayIndex = (dayIndex: number): string => {
+  const statusDoDia = (dayIndex: number): string => {
     const status = studyProgress.find((p) => p.weekNumber === weekNumber && p.dayIndex === dayIndex)?.status ?? 'nao_iniciado';
     return status === 'pulado' ? 'nao_iniciado' : status;
   };
-  const treinoHref = activeDay ? `/treino?weekNumber=${activeDay.weekNumber}&dayIndex=${activeDay.dayIndex}` : '/treino';
-  const weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']; // indexado por day.dayOfWeek (0=Dom civil), não por dayIndex
+  const comecarHref = activeDaySchedule?.isSimulado
+    ? '/simulado'
+    : activeDay ? `/treino?weekNumber=${activeDay.weekNumber}&dayIndex=${activeDay.dayIndex}` : '/treino';
   // Dia de verdade, no horário de Brasília: "Quinta-feira".
   const hojeNome = (() => {
     const nome = new Intl.DateTimeFormat('pt-BR', { weekday: 'long', timeZone: 'America/Sao_Paulo' }).format(new Date());
     return nome.charAt(0).toUpperCase() + nome.slice(1);
   })();
-
-
+  /* O conteúdo é o do primeiro dia não estudado; o rótulo diz o dia de verdade
+     e de qual dia é o conteúdo (Pablo, 15/10/2026). */
+  const rotuloDoDia = !activeDaySchedule ? '' : hojeNome === activeDaySchedule.dayName
+    ? `Semana ${weekNumber} · ${activeDaySchedule.dayName}`
+    : `${hojeNome} · conteúdo de ${activeDaySchedule.dayName.replace('-feira', '').toLowerCase()} (semana ${weekNumber})`;
+  const titulo = activeDay?.cycleComplete
+    ? 'Ciclo de 4 semanas concluído'
+    : activeDaySchedule?.isSimulado
+      ? 'Dia de simulado'
+      : `${materias.length} ${materias.length === 1 ? 'matéria' : 'matérias'} hoje`;
+  const revisoes = stats?.pendingReviews ?? 0;
 
   return (
-    <>
-      <div className="p-4 md:p-8 max-w-6xl mx-auto relative" style={{ zIndex: 1 }}>
-        {/* Pablo, 06/10/2026: "tira esse negócio de iniciar treino, coloca só
-            meu cronograma de hoje e começar; tira o olá". Sem saudação, sem
-            banner. O dia é o próximo pendente no progresso, não o do calendário.
-            As revisões ficam num link lá embaixo ("deixar para depois"). */}
-        {carregandoDia && !activeDay && (
-          <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6 space-y-4" role="status" aria-label="Carregando o cronograma de hoje">
-            <div className="h-6 w-24 rounded-[var(--radius-data)] bg-muted motion-safe:animate-pulse" />
-            <div className="h-4 w-64 rounded-[var(--radius-data)] bg-muted motion-safe:animate-pulse" />
-            <div className="h-4 w-56 rounded-[var(--radius-data)] bg-muted motion-safe:animate-pulse" />
-            <div className="h-11 w-36 rounded-[var(--radius-control)] bg-muted motion-safe:animate-pulse" />
-          </div>
-        )}
-        {activeDay?.cycleComplete ? (
-          <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6 text-center">
-            <Trophy className="w-8 h-8 text-primary-text mx-auto mb-2" />
-            <p className="font-display type-body font-semibold">Ciclo de 4 semanas concluído!</p>
-            <p className="type-meta text-muted-foreground mt-1">Continue treinando livremente pelas outras telas.</p>
-          </div>
-        ) : activeDaySchedule && (
-          <motion.section
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, ease: ENTRADA }}
-            className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6"
-            aria-labelledby="hoje-titulo"
-          >
-            <div className="flex items-baseline justify-between gap-2 mb-4 flex-wrap">
-              <h1 id="hoje-titulo" className="font-display type-title font-semibold">Hoje</h1>
-              {/* O conteúdo é o do primeiro dia não estudado; o rótulo diz o dia
-                  de verdade e de qual dia é o conteúdo (Pablo, 15/10/2026: "mostra
-                  o dia de hoje, que é quinta, mas com o conteúdo de segunda"). */}
-              <span data-numeric className="type-meta text-muted-foreground">
-                {hojeNome === activeDaySchedule.dayName
-                  ? `Semana ${weekNumber} · ${activeDaySchedule.dayName}`
-                  : `${hojeNome} · conteúdo de ${activeDaySchedule.dayName.replace('-feira', '').toLowerCase()} (semana ${weekNumber})`}
-              </span>
+    <div className="relative" style={{ zIndex: 1 }}>
+      {/* Bloco de cor de ponta a ponta. No celular sobe por baixo do botão do
+          menu (o main tem pt-12 para ele). */}
+      <header className="-mt-12 md:mt-0 bg-primary text-primary-foreground dark:bg-primary/20 dark:text-foreground" aria-labelledby="hoje-titulo">
+        <div className="max-w-6xl mx-auto px-4 md:px-10 pt-[4.5rem] pb-6 md:pt-14 md:pb-12 flex flex-col gap-5">
+          {carregandoDia && !activeDay ? (
+            <div role="status" aria-label="Carregando o cronograma de hoje" className="space-y-5">
+              <div className="h-4 w-48 rounded-full bg-current opacity-20 motion-safe:animate-pulse" />
+              <div className="h-14 w-72 max-w-full rounded-[var(--radius-control)] bg-current opacity-20 motion-safe:animate-pulse" />
+              <div className="h-14 w-full md:w-80 rounded-full bg-current opacity-20 motion-safe:animate-pulse" />
             </div>
-            {activeDaySchedule.isSimulado ? (
-              <p className="type-body mb-6">Dia do simulado da semana: uma matéria, de 10 a 20 questões.</p>
-            ) : (
-              <ul className="space-y-2.5 mb-6">
-                {[...activeDaySchedule.manha, ...activeDaySchedule.trabalho].map((block, i) => (
-                  <motion.li
-                    key={`${block.materia}-${i}`}
-                    initial={{ opacity: 0, x: -8 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.25, delay: 0.12 + i * 0.05, ease: ENTRADA }}
-                    className="flex items-baseline gap-3 min-w-0"
+          ) : (
+            <>
+              {rotuloDoDia && <span data-numeric className="type-meta">{rotuloDoDia}</span>}
+              <motion.h1
+                id="hoje-titulo"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.65, ease: ENTRADA }}
+                className="font-sans font-extrabold leading-[0.95] tracking-[-0.035em] text-[length:var(--type-mega)] max-w-[12ch]"
+              >
+                {titulo}
+              </motion.h1>
+              {activeDay?.cycleComplete ? (
+                <p className="type-body opacity-90">Continue treinando livremente pelas outras telas.</p>
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.65, delay: 0.08, ease: ENTRADA }}
+                >
+                  <Link
+                    href={comecarHref}
+                    className="group flex md:inline-flex items-center justify-between gap-8 rounded-full bg-primary-foreground text-primary-text dark:bg-primary dark:text-primary-foreground px-6 md:px-8 py-4 type-lead font-bold shadow-elev-2 transition-transform duration-200 ease-out hover:-translate-y-0.5 active:scale-[0.98]"
                   >
-                    <span aria-hidden className="w-2.5 h-2.5 rounded-full flex-shrink-0 translate-y-[-1px]" style={{ backgroundColor: (materiaColors as any)[block.materia] ?? '#ccc' }} />
+                    Começar
+                    <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
+                  </Link>
+                </motion.div>
+              )}
+            </>
+          )}
+        </div>
+      </header>
+
+      <div className="max-w-6xl mx-auto px-4 md:px-10 py-6 md:py-8">
+        {/* Só no celular: no computador o menu lateral já mostra os mesmos 4. */}
+        <div className="md:hidden mb-8">
+          <Atalhos />
+        </div>
+
+        {/* Uma coluna no celular (na ordem do DOM); duas no computador, para a
+            direita não ficar vazia sob um bloco de ponta a ponta. */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2, ease: ENTRADA }}
+          className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-x-12 lg:items-start"
+        >
+          {blocos.length > 0 && (
+            <section aria-labelledby="cai-hoje" className="py-5 border-t border-border lg:col-start-1 lg:row-start-1">
+              <h2 id="cai-hoje" className="font-sans type-lead font-bold mb-3">O que cai hoje</h2>
+              <ul className="space-y-2.5">
+                {blocos.map((block, i) => (
+                  <li key={`${block.materia}-${i}`} className="flex items-baseline gap-3 min-w-0">
+                    <span aria-hidden className="w-2.5 h-2.5 rounded-full flex-shrink-0 translate-y-[-1px]" style={{ backgroundColor: materiaColors[block.materia] ?? 'hsl(var(--muted-foreground))' }} />
                     {/* Tema quebra para baixo no celular: com truncate virava "Mol, Massa molar, Conceito d…". */}
-                    <span className="min-w-0 flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
+                    <span className="min-w-0 flex flex-col sm:grid sm:grid-cols-[7.5rem_1fr] sm:items-baseline sm:gap-3">
                       <span className="type-body font-medium whitespace-nowrap">{block.materia}</span>
                       <span className="type-meta text-muted-foreground">{block.tema}</span>
                     </span>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
-            )}
-            <div className="flex items-center justify-between gap-3 flex-wrap">
-              <motion.button
-                type="button"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                onClick={() => router.push(activeDaySchedule.isSimulado ? '/simulado' : treinoHref)}
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground rounded-[var(--radius-control)] px-6 py-3 font-display type-lead font-semibold shadow-elev-1 hover:opacity-90 t-colors group"
-              >
-                Começar <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
-            </div>
-          </motion.section>
-        )}
-        {/* ── Weekly Calendar: pills horizontais, status vem do progresso real,
-             não da data (dia atual do plano expandido por padrão) ── */}
-        <button
-          type="button"
-          onClick={() => setSemanaAberta((v) => !v)}
-          aria-expanded={semanaAberta}
-          className="mb-4 inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors"
-        >
-          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${semanaAberta ? 'rotate-180' : ''}`} />
-          {semanaAberta ? 'Esconder a semana' : 'Ver a semana'}
-        </button>
-        {(stats?.pendingReviews ?? 0) > 0 && (
-          <button
-            type="button"
-            onClick={() => router.push('/treino?mode=review')}
-            className="mb-4 ml-6 inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors"
-          >
-            <RefreshCcw className="w-3.5 h-3.5" /> Revisões <span data-numeric>({stats.pendingReviews})</span>
-          </button>
-        )}
-        {semanaAberta && (
-        <motion.div
-          initial={{ opacity: 0, y: -6 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.22, ease: ENTRADA }}
-          className="surface-1 rounded-[var(--radius-surface)] p-6 mb-8"
-        >
-          <div className="flex items-center gap-2 mb-4">
-            <Sparkles className="w-5 h-5 text-primary-text" />
-            <h2 className="font-display type-lead font-semibold">Semana {weekNumber}: {weekTitle}</h2>
-          </div>
-
-          <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1">
-            {weekSchedule.map((day, dayIndex) => {
-              const status = statusForDayIndex(dayIndex);
-              const isActive = activeDay?.dayIndex === dayIndex;
-              const isExpanded = expandedDayIndex === dayIndex;
-              const StatusIcon = status === 'concluido' || status === 'pulado' ? DayDoneIcon : status === 'em_andamento' ? CircleDashed : Circle;
-              return (
-                <button
-                  key={dayIndex}
-                  onClick={() => setExpandedDayIndex(dayIndex)}
-                  className={`flex-shrink-0 flex flex-col items-center gap-1 px-3 py-2 rounded-[var(--radius-control)] border t-colors min-w-[52px] ${
-                    isExpanded ? 'border-primary shadow-elev-1' : 'border-transparent hover:bg-muted/50'
-                  }`}
-                >
-                  {/* A cor do dia preenchia o chip inteiro com texto branco em
-                      cima — mesmo problema de contraste das pílulas de matéria.
-                      Agora ela vira um marcador de 4px no topo e o chip usa a
-                      superfície do sistema. */}
-                  <div
-                    className={`relative w-7 h-7 rounded-[var(--radius-control)] flex items-center justify-center type-caption flex-shrink-0 overflow-hidden ${
-                      isExpanded ? 'bg-primary text-primary-foreground' : 'bg-muted text-foreground'
-                    }`}
-                  >
-                    <span
-                      aria-hidden
-                      className="absolute inset-x-0 top-0 h-1"
-                      style={{ backgroundColor: day.color }}
-                    />
-                    {weekDays[day.dayOfWeek]}
-                    <StatusIcon className={`absolute -top-1.5 -right-1.5 w-3.5 h-3.5 rounded-full bg-card ${
-                      status === 'concluido' ? 'text-primary-text' : status === 'pulado' ? 'text-muted-foreground' : status === 'em_andamento' ? 'text-primary-text' : 'text-border'
-                    }`} />
-                  </div>
-                  {isActive && <span className="type-caption text-primary-text">Atual</span>}
-                </button>
-              );
-            })}
-          </div>
-
-          {expandedDaySchedule && (
-            <div className="mt-4 p-3 rounded-[var(--radius-control)] bg-muted/40">
-              <p className="type-meta font-medium mb-1.5 flex items-center gap-1.5">
-                {expandedDaySchedule.dayName}
-                {expandedDaySchedule.manha.length > 0 && !expandedDaySchedule.isSimulado && (
-                  <Sun className="w-3.5 h-3.5 text-amber-500" />
-                )}
-                {activeDay?.dayIndex === expandedDayIndex && (
-                  <span className="type-meta bg-primary text-primary-foreground px-2 py-0.5 rounded-[var(--radius-data)] font-medium">Atual</span>
-                )}
-              </p>
-              <p className="type-meta text-muted-foreground">
-                {expandedDaySchedule.isSimulado
-                  ? 'Simulado da semana'
-                  : [...expandedDaySchedule.manha, ...expandedDaySchedule.trabalho].map((b) => b.materia).join(' • ') || 'Sem blocos programados'}
-              </p>
-            </div>
+            </section>
           )}
+
+          <section aria-labelledby="leitura" className="py-5 border-t border-border lg:col-start-2 lg:row-start-1">
+            <div className="flex items-baseline justify-between gap-3 mb-3">
+              <h2 id="leitura" className="font-sans type-lead font-bold">Leitura</h2>
+              {leitura.meta !== null && (
+                <span className="type-meta text-muted-foreground">
+                  Meta de hoje: <span data-numeric className="font-semibold text-foreground">{leitura.meta}</span> páginas
+                </span>
+              )}
+            </div>
+            <LivrosDaLeitura paginas={leitura.paginas} mudarPagina={leitura.mudarPagina} />
+          </section>
+
+          {revisoes > 0 && (
+            <Link href="/treino?mode=review" className="group flex items-center justify-between gap-3 py-5 border-t border-border lg:col-start-2 lg:row-start-2">
+              <span className="flex flex-col gap-0.5">
+                <span className="type-lead font-bold">Revisões</span>
+                <span className="type-meta text-muted-foreground">
+                  <span data-numeric>{revisoes}</span> {revisoes === 1 ? 'questão esperando' : 'questões esperando'}
+                </span>
+              </span>
+              <ChevronRight className="w-5 h-5 text-muted-foreground transition-transform duration-200 group-hover:translate-x-1" />
+            </Link>
+          )}
+
+          <div className="border-y border-border lg:col-start-1 lg:row-start-2">
+            <button
+              type="button"
+              onClick={() => setSemanaAberta((v) => !v)}
+              aria-expanded={semanaAberta}
+              className="w-full flex items-center justify-between gap-3 py-5 text-left"
+            >
+              <span className="type-lead font-bold">A semana</span>
+              <ChevronDown className={`w-5 h-5 text-muted-foreground transition-transform duration-200 ${semanaAberta ? 'rotate-180' : ''}`} />
+            </button>
+            {semanaAberta && (
+              <Semana
+                weekNumber={weekNumber}
+                weekTitle={weekTitle}
+                weekSchedule={weekSchedule}
+                diaAtual={activeDay?.dayIndex ?? null}
+                diaAberto={expandedDayIndex}
+                abrirDia={setExpandedDayIndex}
+                statusDoDia={statusDoDia}
+              />
+            )}
+          </div>
         </motion.div>
-        )}
       </div>
-    </>
+    </div>
   );
 }
