@@ -128,6 +128,12 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   genotype); 429 espera uma 3ª vez (20 s) dentro do prazo de 50 s. Não dá para
   garantir por código: erro de conteúdo ("núcleo poligênico" no lugar de
   núcleos polares, "espermatozoide" em planta). Esses vão para a fila do prompt.
+- **Segunda IA confere antes de guardar (21/10/2026, `lib/tutor/conferir.ts`):**
+  gera → o verificador (qwen, outro modelo) lista só erro de CONTEÚDO → se
+  achou, gera de novo com os erros no prompt. Falhou ou sem tempo: fica a
+  primeira (nunca tela de erro). Prazo único de 55 s. Dentro do cache, chave
+  `explicacao-conferida`: cada questão é conferida uma vez. Medir com
+  `scripts/medir-conferencia.ts` (o verificador é o juiz: ler os marcados).
 - **Deck de livro (Pablo, 15/10/2026, artefato https://claude.ai/artifact/6PoWDVkq5cr9xN4v3EkeBR):**
   matéria "Livros", frente = título curto, verso = 1 ou 2 frases. Frase de
   capítulo (`Flashcard.capitulo`) fica trancada até "Li o capítulo N"

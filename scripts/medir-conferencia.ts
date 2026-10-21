@@ -4,7 +4,7 @@
    de novo a versão final. Grava uma linha JSON por questão para leitura humana:
    a conferência é o juiz aqui, então os casos marcados precisam ser lidos.
 
-   Uso: DB_CONFIRMED=1 npx tsx --env-file=.env scripts/medir-conferencia.mts [quantas=50] [saida.jsonl] */
+   Uso: DB_CONFIRMED=1 npx tsx --env-file=.env scripts/medir-conferencia.ts [quantas=50] [saida.jsonl] */
 import { appendFileSync, writeFileSync } from 'node:fs';
 import { PrismaClient } from '@prisma/client';
 import { promptExplicacao, textoDaQuestao, type QuestaoParaTutor } from '../lib/tutor/prompts';
@@ -54,8 +54,8 @@ async function main() {
   for (const q of questoes) {
     const gerar = (p: string) => pedirJson(p, (b) => validarExplicacao(b, q.materia), { maxTokens: 4000, temperature: 0.2, modelo: MODELO_IA.explicacao(), timeoutMs: 45_000 });
     const conferir = (e: Explicacao) => pedirJson(promptConferencia(textoDaQuestao(q), e), validarConferencia, { maxTokens: 1500, temperature: 0, modelo: MODELO_IA.verificacao() });
-    let primeira: Explicacao | null = null;
-    let errosAntes: ErroDeConteudo[] | null = null;
+    let primeira = null as Explicacao | null;
+    let errosAntes = null as ErroDeConteudo[] | null;
     const inicio = Date.now();
     const final: ResultadoIA<Explicacao> = await explicarConferido(
       promptExplicacao(q),
