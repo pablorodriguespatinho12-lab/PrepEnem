@@ -7,7 +7,7 @@
 //   tutoria por passo (VanLehn 2011) e escada de ajuda (Graesser 1995);
 //   IA que entrega a resposta piora o aprendizado (Bastani et al. 2025, PNAS).
 
-import { FORMATO_VISUAL_CURTO, FORMATO_VISUAL_PARA_IA } from '@/lib/visual/especificacao';
+import { FORMATO_VISUAL_CURTO, FORMATO_VISUAL_PARA_IA, formatoVisualSem } from '@/lib/visual/especificacao';
 
 export interface QuestaoParaTutor {
   enunciado: string;
@@ -74,6 +74,9 @@ ${alternativas}
 Correta: ${q.respostaCorreta}${q.respostaDada ? ` | O aluno marcou: ${q.respostaDada}` : ''}${faltaTextoBase(q.enunciado) ? AVISO_SEM_TEXTO : ''}`;
 }
 
+/* Sem cena e fatias: a cena é das lições de Cálculo, e o espaço do prompt
+   é curto (ver formatoVisualSem). */
+const FORMATO_VISUAL_DA_EXPLICACAO = formatoVisualSem(['cena', 'fatias']);
 export function promptExplicacao(q: QuestaoParaTutor): string {
   const errou = q.respostaDada && q.respostaDada !== q.respostaCorreta;
   return `Você é um tutor particular explicando UMA questão para UM aluno. Resolva a questão você mesmo, com cuidado, antes de escrever: a explicação não pode ter erro de conta nem lacuna.
@@ -88,9 +91,9 @@ ESTRUTURA (devolva SOMENTE JSON neste formato):
 {
   "conferencia": "ESCREVA PRIMEIRO, antes de tudo: cada conta da resolução refeita por extenso, número por número (ex.: 'p(5) = -(25) + 50 + 24 = 49; -(t-5)^2 + 49 = -t^2 + 10t - 25 + 49 = -t^2 + 10t + 24, confere'). Se alguma conta não bater, corrija antes de escrever os passos.${errou ? ' Refaça também a conta do seuErro com os números do enunciado: ela tem de dar EXATAMENTE o número da alternativa marcada; se não der, ache outro caminho ou deixe seuErro null.' : ''} Este campo não aparece para o aluno.",
   "ideia": "1 ou 2 frases CURTAS e práticas, como um lembrete que se decora: o que a questão quer e por que a resposta é aquela. Ex.: 'A planta precisa de energia. Carboidrato é energia: sem ele, ela morre.' NUNCA só uma fórmula: em Física, o fenômeno em palavras ('Ir para o lado não muda o tempo de cair: a bola que rola da mesa e a que cai solta chegam juntas ao chão.') Se o enunciado traz um número que NÃO entra na conta (a velocidade para o lado num tempo de queda), a ideia diz que ele não importa e por quê: é a pegadinha.",
-  "pecas": [{"termo": "...", "significado": "o que é, em palavras simples, e um exemplo do dia a dia; até 2 frases curtas"}],
+  "pecas": [{"termo": "só o nome, sem parêntese (ex.: \"anaeróbio\")", "significado": "o que é, em palavras simples, e um exemplo do dia a dia; até 2 frases curtas (ex.: \"Sem oxigênio. Como o esterco apodrecendo fechado num tanque.\")"}],
   "passos": [{"titulo": "até 6 palavras", "texto": "1 ou 2 frases", "visual": {"tipo": "quadro", "...": "o desenho deste passo, num dos formatos abaixo; null só quando a regra abaixo permite"}}],
-  "seuErro": ${errou ? '"até 3 frases, falando com o aluno por «você», nunca «o aluno»: UM caminho concreto que leva à alternativa marcada (em cálculo, a conta com os números DO ENUNCIADO que dá EXATAMENTE o número dela; confira antes, arredondamento não vale) e onde ele desvia. O caminho mais comum é usar o número da pegadinha. Nunca liste hipóteses com ou, nunca \"provavelmente\""' : 'null'},
+  "seuErro": ${errou ? '"até 3 frases, falando com o aluno por «você» («você confundiu kWh com Wh»), nunca «o aluno» nem «eu»: UM caminho concreto que leva à alternativa marcada (em cálculo, a conta com os números DO ENUNCIADO que dá EXATAMENTE o número dela; confira antes, arredondamento não vale) e onde ele desvia. O caminho mais comum é usar o número da pegadinha. Nunca liste hipóteses com ou, nunca \"provavelmente\""' : 'null'},
   "checagem": {"pergunta": "uma pergunta curta que o aluno responde de cabeça para fixar", "resposta": "a resposta em uma frase"}
 }
 
@@ -100,12 +103,17 @@ REGRAS DA ESTRUTURA:
 - CURTO (Pablo, 06/10/2026: "resposta curta, curta mesmo, rápida e prática"): a "ideia" sozinha já explica a questão; os passos são para quem quer ver mais.
 - "passos": de 1 a 4. Questão simples (ex.: por que "baú" tem acento) = 1 passo só, o desenho e uma frase curta. TODA questão com conta (Matemática, Física, Química) tem um passo com o visual "quadro": os dados da questão à esquerda, a fórmula geral, o que cada letra é, a fórmula com os números da questão no lugar das letras e o resultado (Pablo, 08/10/2026: "como um quadro de escola"). Questão SEM números ("a energia cinética depende de quê?") NÃO tem quadro (seria a fórmula escrita três vezes): o primeiro visual é uma "tabela" com números redondos mostrando o efeito (massa 2× → energia 2×; velocidade 2× → energia 4×). Nos "dados" do quadro vai só letra = número com unidade, nunca palavra ("m = 2 kg", não "m = massa do corpo"). A conta da questão vai SEMPRE no "quadro"; "transformacao" fica só para mostrar de onde uma fórmula vem (álgebra). Ordem com conta: o PRIMEIRO passo é o "quadro" com os números da questão, nunca uma cena (Pablo, 15/10/2026: "o quadro branco e a fórmula", depois de ver um carro com gráfico no lugar dele); depois, se ajudar, "De onde vem" a fórmula com números pequenos e redondos numa tabela (andou 100 km em 2 h: 50 km a cada hora, por isso divide o espaço pelo tempo). TODA questão, de qualquer matéria, tem visual no PRIMEIRO passo: o aluno vê antes de ler (Pablo, 08/10/2026: "todas as questões têm que ter algo visual"). Matemática e Física: quadro, gráfico, reta, vetores, tabela ou transformação (nunca processo nem cena). Química e Biologia: processo, molecula, tabela ou gráfico.
 - Se a questão envolve um PROCESSO (o que entra, o que acontece, o que sai: fotossíntese, respiração celular, digestão, ciclo da água, cadeia alimentar, eletrólise), o PRIMEIRO visual é um "processo" com as etapas e só as moléculas ou coisas principais, nunca um parágrafo descrevendo.
-- Concreto antes do símbolo (pedido do Pablo, 06/10/2026: "coisas visualizáveis"): questão SEM conta que fala de algo que muda com o tempo (uma população, um remédio no sangue) abre com um gráfico. Questão com conta abre com o "quadro". Não use "cena" na explicação da questão. Em Português, se a questão gira em torno de UMA palavra (acento, sílaba, grafia), o primeiro visual é "palavra". Em Química, "molecula" SÓ para massa molar ou para mostrar de que átomos uma molécula PEQUENA é feita (até 6 átomos: H₂O, CO₂, CH₄); cadeia longa, polímero ou reação não cabe nele. "processo" é para fenômeno com etapas (biologia, química, geografia), NUNCA para conta: conta é "transformacao". Em Linguagens e Humanas, fora isso, visual só "tabela" ou "processo" (etapas de um fenômeno, como um ciclo econômico), que compare de verdade (alternativa × o trecho que a confirma ou derruba). Nunca null no primeiro passo. Depois, visual só onde ajudar de verdade.
+- Concreto antes do símbolo (pedido do Pablo, 06/10/2026: "coisas visualizáveis"): questão SEM conta que fala de algo que muda com o tempo (uma população, um remédio no sangue) abre com um gráfico. Questão com conta abre com o "quadro". Em Português, se a questão gira em torno de UMA palavra (acento, sílaba, grafia), o primeiro visual é "palavra". Em Química, "molecula" SÓ para massa molar ou para mostrar de que átomos uma molécula PEQUENA é feita (até 6 átomos: H₂O, CO₂, CH₄); cadeia longa, polímero ou reação não cabe nele. "processo" é para fenômeno com etapas (biologia, química, geografia), NUNCA para conta: conta é "transformacao". Em Linguagens e Humanas, fora isso, visual só "tabela" ou "processo" (etapas de um fenômeno, como um ciclo econômico), que compare de verdade (alternativa × o trecho que a confirma ou derruba). Nunca null no primeiro passo. Depois, visual só onde ajudar de verdade.
+- Fila do teste de 21/10/2026 (9 questões de Química, Física e Biologia):
+  - Palavra técnica que aparece na ideia, nos passos ou no seuErro (anaeróbio, triploide, orbital, saturada) é uma peça ou vem explicada entre parênteses na primeira vez.
+  - Só fórmula que o ensino médio usa. Questão sem conta não ganha fórmula: na queda com ar, "o ar empurra mais quem tem mais área", nunca a fórmula do arrasto.
+  - O nome que o livro do médio usa: em planta com flor, «núcleo espermático», não «espermatozoide».
+  - Passo com título de pergunta ("Por que biogás?") responde essa pergunta no texto.
 - Ordem dos passos: o que a questão pede de fato → o raciocínio, um passo por vez, com o porquê → o princípio por trás → como reconhecer uma questão parecida.${errou ? '\n- O aluno errou: "seuErro" vem primeiro na tela, então seja específico sobre a alternativa que ele marcou.' : ''}
 - Teste de 05/10/2026: em cálculo, a IA escrevia "O resultado é 2" sem a conta e usava fórmula pronta. Por isso: passo de cálculo mostra a conta com os números ($2L \\cdot H + 2W \\cdot H$ vira $2(2L \\cdot H) + \\dots$), nunca só o resultado. O "quadro" já mostra a fórmula geral e o que cada letra é; o passo "De onde vem" vem logo DEPOIS dele, quando couber. "De onde vem" é de ensino médio: números pequenos numa tabela ou uma conta de 2 linhas, NUNCA integral, derivada, limite ou vetor (o teste de 15/10/2026 deduziu energia cinética com integral). Se não dá para mostrar assim, não tem "De onde vem".
 - Confira cada número do visual com a conta do texto. Se um gráfico mostra uma raiz em x=2, o texto e a conta dizem 2.
 
-${FORMATO_VISUAL_PARA_IA}
+${FORMATO_VISUAL_DA_EXPLICACAO}
 
 ---
 ${textoDaQuestao(q)}`;

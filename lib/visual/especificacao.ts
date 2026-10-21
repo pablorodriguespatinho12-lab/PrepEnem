@@ -479,6 +479,19 @@ export const FORMATO_VISUAL_PARA_IA = `"visual" é um destes objetos (ou null). 
 - Vetores (forças, velocidade, deslocamento): {"tipo":"vetores","vetores":[{"de":[0,0],"para":[3,0],"rotulo":"F₁","cor":"a"}],"pontos":[{"x":0,"y":0,"rotulo":"corpo"}]}
 "cor": "a", "b" ou "c" para destacar (use a MESMA cor no texto: escreva o termo como [[a:termo]]), "erro" só para o caminho errado do aluno.
 REGRAS DE TEXTO: toda fórmula entre $...$ (nunca \\frac solto fora de $). [[a:termo]] é só para PALAVRAS fora da fórmula ("a [[a:velocidade]] é a inclinação"); nunca dentro de $...$ e nunca em volta de símbolo.`;
+/* O formato sem alguns tipos. A explicação da questão não usa cena nem fatias
+   (decisoes-prepenem: a cena é das lições de Cálculo), e cada token conta: a
+   Groq gratuita aceita 8 mil por minuto e a explicação reserva 4 mil para a
+   resposta (413 em 21/10/2026). Linha "- ..." abre um tipo; as de dois espaços
+   que vêm depois são a explicação dele. */
+export function formatoVisualSem(tipos: readonly Visual['tipo'][]): string {
+  let pulando = false;
+  return FORMATO_VISUAL_PARA_IA.split('\n').filter((linha) => {
+    if (linha.startsWith('- ')) pulando = tipos.some((t) => linha.includes(`"tipo":"${t}"`));
+    else if (!linha.startsWith('  ')) pulando = false;
+    return !pulando;
+  }).join('\n');
+}
 /* Versão curta para a conversa: vai em toda pergunta do aluno, e a Groq
    gratuita tem 8 mil tokens por minuto. Só os dois desenhos mais usados. */
 export const FORMATO_VISUAL_CURTO = `"visual" (opcional, ou null) — o app desenha:

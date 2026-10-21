@@ -102,20 +102,16 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   Pelo mesmo motivo, erro da IA que o CÓDIGO consegue consertar vai no
   validador, não no prompt: mudar o prompt zera o cache inteiro (ex.: peça com
   a explicação no termo, `separarTermo`, 21/10/2026).
-  **Fila para a próxima mudança de prompt** (testar-tutor, 21/10/2026, 9
-  questões de Química, Física e Biologia), para zerar o cache uma vez só:
-  termo sem explicar ("anaeróbia", "triploide", "orbitais π"); fórmula de
-  nível superior no passo (arrasto $\frac{1}{2}\rho v^2 C_d A$ numa questão
-  de queda); "espermatozoide" em planta (é núcleo espermático); "seu erro" na
-  1ª pessoa ("confundi"); passo "Por que X?" que não responde o porquê.
-  **O prompt não tem espaço (testado e desfeito em 21/10/2026, texto no
-  `git stash` "prompt explicacao: fila de 21/10"):** a explicação reserva
-  `maxTokens: 4000` e a Groq gratuita aceita 8.000 por minuto, então prompt +
-  questão precisam caber em ~4.000. Questão longa (com tabela) já encosta;
-  +200 tokens de regras deram 413 em 4 de 9 questões, que caíram no modelo
-  reserva (20 a 35 s em vez de 4). Ganho misto: termo e "você" melhoraram, 2
-  questões perderam o desenho. Próxima rodada: CORTAR texto do prompt antes de
-  acrescentar, e medir com uma questão longa.
+  **Espaço do prompt (21/10/2026):** a explicação reserva `maxTokens: 4000` e
+  a Groq gratuita aceita 8.000 tokens/min, então prompt + questão cabem em
+  ~4.000. Regra nova sem corte deu 413 em 4 de 9 questões (modelo reserva, 20
+  a 35 s). Saída: o prompt da explicação usa `formatoVisualSem(['cena',
+  'fatias'])` (-1.350 caracteres) e o validador barra os dois. Com a fila de
+  regras dentro (termo sem parêntese, palavra técnica explicada, só fórmula
+  do médio, "você" no seuErro, passo-pergunta responde) ficou 14.110 contra
+  14.765 de antes: 0 x 413 em 9 questões, 2 a 8 s. Regra nova: corte antes.
+  Ainda falha às vezes: passo sem visual (ésteres), palavra chula ("caga").
+  Medir: `scripts/` não tem; o tamanho sai de `promptExplicacao(...).length`.
 - **Deck de livro (Pablo, 15/10/2026, artefato https://claude.ai/artifact/6PoWDVkq5cr9xN4v3EkeBR):**
   matéria "Livros", frente = título curto, verso = 1 ou 2 frases. Frase de
   capítulo (`Flashcard.capitulo`) fica trancada até "Li o capítulo N"

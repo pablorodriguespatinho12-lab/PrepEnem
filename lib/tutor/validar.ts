@@ -107,8 +107,12 @@ export function extrairJson(bruto: string): unknown {
 
 /* Desenho "palavra" (sílabas, acento) só faz sentido em Português: em Física
    a IA desenhou "New·ton" para explicar força (foto de 07/10/2026). */
-const visualDaMateria = (v: Visual | null, materia?: string): Visual | null =>
-  v?.tipo === 'palavra' && materia && !/portugu/i.test(materia) ? null : v;
+// Cena e fatias são das lições de Cálculo; o prompt da explicação nem as descreve.
+const FORA_DA_EXPLICACAO: readonly Visual['tipo'][] = ['cena', 'fatias'];
+const visualDaMateria = (v: Visual | null, materia?: string): Visual | null => {
+  if (v && FORA_DA_EXPLICACAO.includes(v.tipo)) return null;
+  return v?.tipo === 'palavra' && materia && !/portugu/i.test(materia) ? null : v;
+};
 /* ENEM não cobra cálculo, e o prompt já proíbe; mesmo assim a IA deduziu
    energia cinética com integral numa questão de Física Base (Pablo,
    15/10/2026: "integral em lugar que não é para aparecer"). Passo assim sai. */

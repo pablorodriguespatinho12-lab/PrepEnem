@@ -166,3 +166,14 @@ test('hífen especial da IA (U+2011) vira hífen comum: a fonte não tem o desen
   expect(r?.ideia).toBe('As tensões somam-se em série.');
   expect(r?.passos[0]).toMatchObject({ titulo: 'Ponta-a-ponta', texto: 'Calcula-se assim.' });
 });
+test('cena e fatias saem da explicação da questão: são das lições de Cálculo (21/10/2026)', () => {
+  const r = validarExplicacao({
+    ideia: 'Ideia.',
+    passos: [
+      { titulo: 'Cena', texto: 'Ok.', visual: { tipo: 'cena', x: [0, 3], veiculos: [{ veiculo: 'bola', expr: '45-5*x^2' }] } },
+      { titulo: 'Tabela', texto: 'Ok.', visual: { tipo: 'tabela', cabecalho: ['a', 'b'], linhas: [['1', '2']] } },
+    ],
+  }, 'Física');
+  expect(r?.passos[0].visual).toBeNull();
+  expect(r?.passos[1].visual?.tipo).toBe('tabela');
+});
