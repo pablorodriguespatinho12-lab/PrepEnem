@@ -6,6 +6,7 @@ import { BarChart3, Target, BookOpen, PenTool, AlertCircle, FileText, Lightbulb,
 import dynamic from 'next/dynamic';
 import { materiaColors } from '@/lib/theme-colors';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { EsqueletoLista } from '@/components/esqueletos';
 
 // Abaixo disso, uma % individual é ruído estatístico, não informação — numa
 // amostra binária pequena, uma resposta a mais ou a menos muda a taxa em
@@ -46,7 +47,7 @@ function TaxaAcerto({ total, acertos }: { total: number; acertos: number }) {
   );
 }
 
-const ProgressCharts = dynamic(() => import('./progress-charts'), { ssr: false, loading: () => <div className="h-64 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-4 border-primary border-t-transparent" /></div> });
+const ProgressCharts = dynamic(() => import('./progress-charts'), { ssr: false, loading: () => <div aria-hidden className="h-80 rounded-[var(--radius-surface)] bg-muted motion-safe:animate-pulse" /> });
 
 const ESSAY_PART_ICONS: Record<string, typeof FileText> = {
   introducao: FileText,
@@ -74,9 +75,7 @@ export default function ProgressoPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-4 border-primary border-t-transparent" />
-      </div>
+      <div className="p-4 md:p-8 max-w-6xl mx-auto"><EsqueletoLista rotulo="Carregando seu progresso" linhas={5} /></div>
     );
   }
 

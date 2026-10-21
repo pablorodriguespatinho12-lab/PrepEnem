@@ -12,6 +12,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { playSound } from '@/lib/sounds';
 import { ACERTOS_PARA_DOMINAR } from '@/lib/flashcard-dominio';
 import { CapituloLido } from '@/components/flashcards/capitulo-lido';
+import { EsqueletoQuestao } from '@/components/esqueletos';
 
 interface CardCandidato {
   frente: string;
@@ -481,9 +482,7 @@ export default function FlashcardDeckPage() {
   }, []);
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="w-10 h-10 animate-spin text-primary-text" />
-      </div>
+      <div className="p-4 md:p-8 max-w-3xl mx-auto"><EsqueletoQuestao rotulo="Carregando o baralho" /></div>
     );
   }
 

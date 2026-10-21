@@ -3,11 +3,12 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, ChevronLeft, Loader2 } from 'lucide-react';
+import { ArrowRight, ChevronLeft } from 'lucide-react';
 import MathText from '@/components/math-text';
 import { VisualDesenho } from '@/components/visual/visual-desenho';
 import { RespostaInput } from '@/components/calculo/resposta-input';
 import type { Exercicio } from '@/lib/calculo/tipos';
+import { EsqueletoQuestao } from '@/components/esqueletos';
 
 interface Questao { licaoId: string; titulo: string; exercicio: Exercicio }
 
@@ -37,7 +38,7 @@ export default function RevisaoCalculoPage() {
   );
 
   if (!questoes) {
-    return <div className="p-8 flex items-center gap-2 text-muted-foreground" role="status"><Loader2 className="w-4 h-4 animate-spin" /> Carregando...</div>;
+    return <div className="p-4 md:p-8 max-w-3xl mx-auto"><EsqueletoQuestao rotulo="Carregando a revisão" /></div>;
   }
   if (questoes.length === 0 || indice >= questoes.length) {
     return (

@@ -25,6 +25,7 @@ import { ConceitoAntes } from '@/components/treino/conceito-antes';
 import { useConceitoAntes } from '@/hooks/use-conceito-antes';
 import type { ResumoAssunto } from '@/lib/tutor/resumo';
 import { playSound } from '@/lib/sounds';
+import { EsqueletoQuestao } from '@/components/esqueletos';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 const Results3DScene = dynamic(() => import('@/components/results-3d-scene'), { ssr: false });
@@ -700,9 +701,7 @@ export default function TreinoPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="w-8 h-8 animate-spin text-primary-text" />
-      </div>
+      <div className="p-4 md:p-8 max-w-6xl mx-auto"><EsqueletoQuestao rotulo="Montando o treino" /></div>
     );
   }
 

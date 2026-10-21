@@ -7,6 +7,7 @@ import { AppThemeProvider } from './app-theme-provider';
 import { ScrollProgress } from './animations';
 import { ParticlesBg } from './particles-bg';
 import { LembreteLeitura } from './lembrete-leitura';
+import { EsqueletoApp } from './esqueletos';
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
   const { data: session, status } = useSession() || {};
@@ -27,23 +28,13 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
     return <AppThemeProvider>{children}</AppThemeProvider>;
   }
 
-  if (status === 'loading') {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-background">
-        <div className="animate-spin rounded-full h-10 w-10 border-4 border-primary border-t-transparent" />
-      </div>
-    );
-  }
+  if (status === 'loading') return <EsqueletoApp />;
 
   if (!session && !isPublic) {
     if (typeof window !== 'undefined') {
       router.replace('/login');
     }
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-background">
-        <div className="animate-spin rounded-full h-10 w-10 border-4 border-primary border-t-transparent" />
-      </div>
-    );
+    return <EsqueletoApp />;
   }
 
   return (

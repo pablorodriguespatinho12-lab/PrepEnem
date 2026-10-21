@@ -3,12 +3,13 @@ import { useEffect, useState, useCallback, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Layers, BookOpen, CheckCircle, AlertCircle, Loader2, Star,
+  Layers, BookOpen, CheckCircle, AlertCircle, Star,
   Search, ChevronLeft, ChevronRight, Calculator, Dna, FlaskConical,
   Zap, Landmark, Globe2, Brain, Users, BookText, X, Plus,
 } from 'lucide-react';
 import { corDoBaralho, materiaColors } from '@/lib/theme-colors';
 import { abrirComTeclado } from '@/lib/teclado';
+import { EsqueletoGrade } from '@/components/esqueletos';
 
 /* Ícone estático por matéria. Antes era um canvas three.js por cartão — dez
    contextos WebGL, cada um com seu próprio loop de animação, só na grade. */
@@ -203,9 +204,7 @@ export default function FlashcardsPage() {
       </motion.div>
 
       {loading ? (
-        <div className="text-center py-20">
-          <Loader2 className="w-10 h-10 animate-spin text-primary-text mx-auto" />
-        </div>
+        <EsqueletoGrade rotulo="Carregando os baralhos" />
       ) : (
         <AnimatePresence mode="wait">
           {!selectedMateria ? (

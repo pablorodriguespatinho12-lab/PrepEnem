@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { AlertCircle, Filter, BookOpen, CheckCircle2, XCircle, RefreshCcw, Search, Check } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { materiaColors } from '@/lib/theme-colors';
+import { EsqueletoLista } from '@/components/esqueletos';
 
 const MATERIAS = ['Matemática', 'Português', 'Biologia', 'Química', 'Física', 'História', 'Geografia', 'Filosofia', 'Sociologia'];
 
@@ -77,9 +78,7 @@ export default function CadernoErrosPage() {
       </div>
 
       {loading ? (
-        <div className="flex justify-center py-12">
-          <div className="animate-spin rounded-full h-8 w-8 border-4 border-primary border-t-transparent" />
-        </div>
+        <EsqueletoLista rotulo="Carregando seus erros" linhas={5} />
       ) : filtered.length === 0 ? (
         <div className="text-center py-12">
           <CheckCircle2 className="w-12 h-12 mx-auto mb-3" style={{ color: 'hsl(var(--success))' }} />

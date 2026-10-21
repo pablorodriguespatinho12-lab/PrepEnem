@@ -10,6 +10,7 @@ import {
 import { toast } from 'sonner';
 
 import { CorrecaoCompletaView, lerCorrecao } from '@/components/redacao/correcao-completa';
+import { EsqueletoLista } from '@/components/esqueletos';
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 
 type View = 'home' | 'write' | 'history' | 'result' | 'saved';
@@ -232,9 +233,7 @@ export default function RedacaoPage() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-[60vh]">
-        <Loader2 className="w-8 h-8 animate-spin text-primary-text" />
-      </div>
+      <div className="p-4 md:p-8 max-w-5xl mx-auto"><EsqueletoLista rotulo="Carregando a redação" linhas={4} /></div>
     );
   }
 

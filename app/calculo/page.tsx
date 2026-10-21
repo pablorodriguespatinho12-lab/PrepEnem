@@ -5,10 +5,11 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Check, Circle, Loader2, RefreshCcw } from 'lucide-react';
+import { ArrowRight, Check, Circle, RefreshCcw } from 'lucide-react';
 import { NOME_MODULO } from '@/data/calculo/trilha';
 import type { Degrau, Modulo } from '@/lib/calculo/tipos';
 import type { Situacao } from '@/lib/calculo/progresso';
+import { EsqueletoLista } from '@/components/esqueletos';
 
 interface DegrauTela extends Degrau { situacao: Situacao; escrita: boolean; acertos: number; tentativas: number }
 interface Trilha { degraus: DegrauTela[]; proximo: string | null; revisoesPendentes: number }
@@ -37,7 +38,7 @@ export default function CalculoPage() {
 
   if (erro) return <p className="p-8 type-meta text-[hsl(var(--danger))]">{erro}</p>;
   if (!trilha) {
-    return <div className="p-8 flex items-center gap-2 text-muted-foreground" role="status"><Loader2 className="w-4 h-4 animate-spin" /> Carregando a trilha...</div>;
+    return <div className="p-4 md:p-8 max-w-[52rem] mx-auto"><EsqueletoLista rotulo="Carregando a trilha" linhas={8} /></div>;
   }
 
   const proximo = trilha.degraus.find((d) => d.id === trilha.proximo);

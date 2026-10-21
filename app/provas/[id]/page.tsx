@@ -9,6 +9,7 @@ import dynamic from 'next/dynamic';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 import { ExplicacaoTutor } from '@/components/tutor/explicacao-tutor';
+import { EsqueletoQuestao } from '@/components/esqueletos';
 
 /* Limiares de dado esparso — mesma regra usada em app/dashboard/page.tsx. */
 const MIN_QUESTOES_PARA_TAXA = 5;
@@ -72,9 +73,7 @@ export default function ProvaDetailPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="w-10 h-10 animate-spin text-primary-text" />
-      </div>
+      <div className="p-4 md:p-8 max-w-4xl mx-auto"><EsqueletoQuestao rotulo="Carregando a prova" /></div>
     );
   }
 
