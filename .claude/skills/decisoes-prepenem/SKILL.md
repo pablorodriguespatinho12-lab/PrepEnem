@@ -55,6 +55,9 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   flutuante não aparece no Início), Revisões, A semana (fechada).
   Enquanto carrega, esqueleto do cartão, nunca tela vazia.
 - **Progresso = 2 números** (total respondidas e acertos), 06/10/2026.
+- **Sem controle deslizante para número (Pablo, 21/10/2026: "muito feio"):**
+  quantidade se escolhe com botões (`components/escolha-de-numero.tsx`); saiu
+  de criar prova e de gerar flashcards. Skill global `sem-controle-deslizante`.
 - **Sem contorno azul ao clicar:** anel de foco só com teclado (`FocoTeclado`,
   classe `usando-teclado`); campo de texto nunca tem anel.
   Números ficam em Progresso; a semana fica atrás de "Ver a semana".

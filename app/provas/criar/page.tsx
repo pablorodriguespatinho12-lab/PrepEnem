@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, FileText, Sparkles, Target, Trophy, Check, Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
+import { EscolhaDeNumero } from '@/components/escolha-de-numero';
 
 const MATERIAS_DISPONIVEIS = [
   'Matemática',
@@ -206,39 +207,8 @@ export default function CriarProvaPage() {
           transition={{ delay: 0.25 }}
           className="surface-1 rounded-[var(--radius-surface)] p-6"
         >
-          <label className="block type-meta font-semibold text-foreground mb-3">Número de questões</label>
-          <div className="flex items-center gap-4">
-            <input
-              type="range"
-              min={1}
-              max={50}
-              value={totalQuestoes}
-              onChange={(e) => setTotalQuestoes(Number(e.target.value))}
-              className="flex-1 accent-primary"
-            />
-            <div
-              data-numeric
-              className="min-w-[60px] text-center px-4 py-2 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-display type-lead font-semibold"
-            >
-              {totalQuestoes}
-            </div>
-          </div>
-          <div className="flex gap-2 mt-3 flex-wrap">
-            {[5, 10, 20, 30, 45].map((n) => (
-              <button
-                key={n}
-                data-numeric
-                onClick={() => setTotalQuestoes(n)}
-                className={`px-3 py-1 rounded-[var(--radius-control)] type-micro font-medium t-colors ${
-                  totalQuestoes === n
-                    ? 'bg-primary text-primary-foreground'
-                    : 'bg-muted text-foreground hover:bg-muted/80'
-                }`}
-              >
-                {n}
-              </button>
-            ))}
-          </div>
+          <p className="type-meta font-semibold text-foreground mb-3">Número de questões</p>
+          <EscolhaDeNumero rotulo="Número de questões" opcoes={[5, 10, 20, 30, 45]} valor={totalQuestoes} aoEscolher={setTotalQuestoes} />
         </motion.div>
 
         {/* Botão criar */}

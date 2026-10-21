@@ -13,6 +13,7 @@ import { playSound } from '@/lib/sounds';
 import { ACERTOS_PARA_DOMINAR } from '@/lib/flashcard-dominio';
 import { CapituloLido } from '@/components/flashcards/capitulo-lido';
 import { EsqueletoQuestao } from '@/components/esqueletos';
+import { EscolhaDeNumero } from '@/components/escolha-de-numero';
 
 interface CardCandidato {
   frente: string;
@@ -223,17 +224,8 @@ function GerarComIADialog({
                 />
               </div>
               <div>
-                <label className="block type-meta font-medium text-muted-foreground mb-2">
-                  Quantidade: <span data-numeric>{quantidade}</span>
-                </label>
-                <input
-                  type="range"
-                  min={5}
-                  max={30}
-                  value={quantidade}
-                  onChange={(e) => setQuantidade(Number(e.target.value))}
-                  className="w-full accent-primary"
-                />
+                <p className="type-meta font-medium text-muted-foreground mb-2">Quantidade</p>
+                <EscolhaDeNumero rotulo="Quantidade de cartões" opcoes={[5, 10, 15, 20, 30]} valor={quantidade} aoEscolher={setQuantidade} />
               </div>
             </div>
             <DialogFooter>
