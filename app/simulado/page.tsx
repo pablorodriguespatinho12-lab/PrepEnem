@@ -12,10 +12,15 @@ import { fireConfetti } from '@/components/animations';
 import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
 import dynamic from 'next/dynamic';
 import { PaginaDaProva } from '@/components/pagina-da-prova';
+import { PainelProvaRapida, MISTURA_PROVA_RAPIDA } from '@/components/simulado/painel-prova-rapida';
+import { ContagemRegressiva } from '@/components/simulado/contagem-regressiva';
+import { AquecimentoFlashcards } from '@/components/simulado/aquecimento-flashcards';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 
-type Phase = 'config' | 'exam' | 'result';
+// contagem-cards → cards → contagem-questoes: a prova rápida (painel-prova-rapida.tsx).
+type Phase = 'config' | 'contagem-cards' | 'cards' | 'contagem-questoes' | 'exam' | 'result';
+type ProvaGerada = { qs: any[]; total: number; sessionId: string | null; initialTimeLeft: number };
 
 // Limiares de dado esparso (decisão travada, ver skill decisoes-prepenem):
 // <5 questões não mostra %, 5-15 mostra com indicador de baixa confiança.
@@ -70,7 +75,6 @@ export default function SimuladoPage() {
   const [totalQ, setTotalQ] = useState(10);
   const [materia, setMateria] = useState(MATERIAS_SIMULADO[0]);
   const [useTimer, setUseTimer] = useState(true);
-  const timerHours = (totalQ * MINUTOS_POR_QUESTAO) / 60;
 
   // Exam
   const [questions, setQuestions] = useState<any[]>([]);
@@ -195,50 +199,78 @@ export default function SimuladoPage() {
     }
   }, [timerExpired]);
 
-  const startSimulado = async (forceNew = false) => {
+  const gerarSimulado = async (corpo: object, comTempo: boolean): Promise<ProvaGerada> => {
+    const res = await fetch('/api/simulado/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(corpo),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error);
+    const qs = data.questions ?? [];
+    const initialTimeLeft = comTempo ? qs.length * MINUTOS_POR_QUESTAO * 60 : 0;
+    // Create session in DB
+    const sessRes = await fetch('/api/simulado/session', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        questionIds: qs.map((q: any) => q.id),
+        useTimer: comTempo,
+        timerHours: initialTimeLeft / 3600,
+        timeLeft: initialTimeLeft,
+      }),
+    });
+    const sessData = await sessRes.json();
+    return { qs, total: data.total, sessionId: sessData.sessionId ?? null, initialTimeLeft };
+  };
+  const entrarNaProva = (prova: ProvaGerada) => {
+    if (prova.sessionId) setSessionId(prova.sessionId);
+    setQuestions(prova.qs);
+    setAnswers({});
+    setCurrentIdx(0);
+    setTimeLeft(prova.initialTimeLeft);
+    setTimeElapsed(0);
+    setTimerExpired(false);
+    setIsPaused(false);
+    setPhase('exam');
+  };
+  const startSimulado = async () => {
     setLoading(true);
     try {
-      const res = await fetch('/api/simulado/generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ totalQuestoes: totalQ, materias: [materia] }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error);
-
-      const qs = data.questions ?? [];
-      const initialTimeLeft = timerHours * 3600;
-
-      // Create session in DB
-      const sessRes = await fetch('/api/simulado/session', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          questionIds: qs.map((q: any) => q.id),
-          useTimer,
-          timerHours,
-          timeLeft: initialTimeLeft,
-        }),
-      });
-      const sessData = await sessRes.json();
-      if (sessData.sessionId) setSessionId(sessData.sessionId);
-
-      setQuestions(qs);
-      setAnswers({});
-      setCurrentIdx(0);
-      setTimeLeft(initialTimeLeft);
-      setTimeElapsed(0);
-      setTimerExpired(false);
-      setIsPaused(false);
-      setPhase('exam');
-      toast.success(`Simulado iniciado! ${data.total} questões`);
+      const prova = await gerarSimulado({ totalQuestoes: totalQ, materias: [materia] }, useTimer);
+      entrarNaProva(prova);
+      toast.success(`Simulado iniciado! ${prova.total} questões`);
     } catch (err: any) {
       toast.error(err.message || 'Erro ao gerar simulado');
     } finally {
       setLoading(false);
     }
   };
-
+  // Prova rápida: as questões são montadas enquanto o aluno faz os cartões.
+  // Sem cronômetro: é o dia de cabeça cansada.
+  const provaRapidaRef = useRef<Promise<ProvaGerada> | null>(null);
+  const [deckDaProva, setDeckDaProva] = useState<string | null>(null);
+  const comecarProvaRapida = (deckId: string | null) => {
+    setUseTimer(false);
+    const prova = gerarSimulado({ mistura: MISTURA_PROVA_RAPIDA }, false);
+    prova.catch(() => {}); // o erro é mostrado em irParaQuestoes
+    provaRapidaRef.current = prova;
+    setDeckDaProva(deckId);
+    setPhase(deckId ? 'contagem-cards' : 'contagem-questoes');
+  };
+  const irParaCartoes = useCallback(() => setPhase('cards'), []);
+  const irParaContagemQuestoes = useCallback(() => setPhase('contagem-questoes'), []);
+  const irParaQuestoes = useCallback(async () => {
+    if (!provaRapidaRef.current) return;
+    try {
+      entrarNaProva(await provaRapidaRef.current);
+    } catch (err: any) {
+      toast.error(err.message || 'Erro ao montar a prova');
+      setPhase('config');
+    } finally {
+      provaRapidaRef.current = null;
+    }
+  }, []); // entrarNaProva só usa setters, que são estáveis
   const handleAnswer = useCallback((questionId: string, answer: string) => {
     setAnswers((prev) => ({ ...prev, [questionId]: answer }));
     // Save this answer to DB
@@ -314,6 +346,16 @@ export default function SimuladoPage() {
     );
   }
 
+  // --- PROVA RÁPIDA: contagem, cartões, contagem ---
+  if (phase === 'contagem-cards') {
+    return <ContagemRegressiva titulo="Primeiro, os flashcards" onFim={irParaCartoes} />;
+  }
+  if (phase === 'cards' && deckDaProva) {
+    return <AquecimentoFlashcards deckId={deckDaProva} onFim={irParaContagemQuestoes} />;
+  }
+  if (phase === 'contagem-questoes') {
+    return <ContagemRegressiva titulo="Agora, as questões" onFim={irParaQuestoes} />;
+  }
   // --- CONFIG PHASE ---
   if (phase === 'config') {
     return (
@@ -326,6 +368,8 @@ export default function SimuladoPage() {
             Uma matéria, poucas questões, uma vez por semana. Começa pelas fáceis.
           </p>
         </motion.div>
+
+        <PainelProvaRapida carregando={loading} onComecar={comecarProvaRapida} />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

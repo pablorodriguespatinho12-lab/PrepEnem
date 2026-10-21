@@ -8,7 +8,35 @@ import { authOptions } from '@/lib/auth';
 import { getCycleInfoForDay, getWeekTopics } from '@/lib/schedule-data';
 import { getActiveStudyDay } from '@/lib/study-progress';
 import { getAbacusApiKey } from '@/lib/ai-client';
-import { ordenarPorEtapa } from '@/lib/treino-etapas';
+import { ordenarPorEtapa, etapaDaQuestao } from '@/lib/treino-etapas';
+
+const MAX_POR_MATERIA = 10;
+
+function embaralhar<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+/* Questões médias primeiro; se faltar, completa com as do ENEM e depois as
+   fáceis. A matéria some da prova se não houver nenhuma questão dela. */
+async function montarMistura(mistura: unknown[]) {
+  const pedidos = mistura
+    .filter((m): m is { materia: string; quantidade: number } =>
+      typeof (m as any)?.materia === 'string' && Number.isInteger((m as any)?.quantidade))
+    .map((m) => ({ materia: m.materia, quantidade: Math.min(Math.max(m.quantidade, 1), MAX_POR_MATERIA) }));
+
+  const blocos = await Promise.all(pedidos.map(async ({ materia, quantidade }) => {
+    const todas = embaralhar(await prisma.question.findMany({ where: { materia } }));
+    const preferencia = ['intermediaria', 'enem', 'base'];
+    const ordenadas = preferencia.flatMap((e) => todas.filter((q) => etapaDaQuestao(q) === e));
+    return ordenadas.slice(0, quantidade);
+  }));
+  return blocos.flat();
+}
 
 export async function POST(req: Request) {
   try {
@@ -21,6 +49,18 @@ export async function POST(req: Request) {
     const body = await req.json().catch(() => ({}));
     const { totalQuestoes = 10, materias, weeklySimulado } = body;
     const limit = Math.min(Math.max(totalQuestoes, 10), 180);
+
+    // Prova rápida (Pablo, 21/10/2026): poucas questões médias de cada matéria,
+    // na ordem pedida. Ex.: [{ materia: 'Português', quantidade: 3 }, ...].
+    if (Array.isArray(body.mistura) && body.mistura.length > 0) {
+      const selecionadas = await montarMistura(body.mistura);
+      if (selecionadas.length === 0) {
+        return NextResponse.json({ error: 'Sem questões disponíveis' }, { status: 404 });
+      }
+      const areasMistura: Record<string, number> = {};
+      for (const q of selecionadas) areasMistura[q.materia] = (areasMistura[q.materia] ?? 0) + 1;
+      return NextResponse.json({ questions: selecionadas, total: selecionadas.length, areas: areasMistura, isWeeklySimulado: false });
+    }
 
     // Semana ativa: explícita no corpo (dashboard já sabe qual é) ou derivada
     // do progresso real do usuário como fallback.

@@ -104,6 +104,13 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 
 ## Treino
 
+- **Prova rápida (Pablo, 21/10/2026, dia de cabeça cansada):** fica DENTRO do
+  Simulado, num painel que minimiza pela setinha (lembra no navegador), não é
+  tela nova. Escolhe flashcards (os do dia, ou matéria → baralho) → 3-2-1 →
+  até 8 cartões → 3-2-1 → 10 questões médias, sem cronômetro: Português 3,
+  Matemática 3, Biologia 3, Química 1 (`MISTURA_PROVA_RAPIDA`; o generate
+  aceita `mistura`). As questões são montadas enquanto ele faz os cartões.
+
 - **Treino do dia (Pablo, 06/10/2026):** 10 questões de cada matéria do dia:
   as do cronograma, depois Português e Matemática (`cotasDoDia`; era 20 e ele
   baixou para 10 no mesmo dia);
