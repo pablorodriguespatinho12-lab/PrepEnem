@@ -102,6 +102,12 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   Pelo mesmo motivo, erro da IA que o CÓDIGO consegue consertar vai no
   validador, não no prompt: mudar o prompt zera o cache inteiro (ex.: peça com
   a explicação no termo, `separarTermo`, 21/10/2026).
+  **Fila para a próxima mudança de prompt** (testar-tutor, 21/10/2026, 9
+  questões de Química, Física e Biologia), para zerar o cache uma vez só:
+  termo sem explicar ("anaeróbia", "triploide", "orbitais π"); fórmula de
+  nível superior no passo (arrasto $\frac{1}{2}\rho v^2 C_d A$ numa questão
+  de queda); "espermatozoide" em planta (é núcleo espermático); "seu erro" na
+  1ª pessoa ("confundi"); passo "Por que X?" que não responde o porquê.
 - **Deck de livro (Pablo, 15/10/2026, artefato https://claude.ai/artifact/6PoWDVkq5cr9xN4v3EkeBR):**
   matéria "Livros", frente = título curto, verso = 1 ou 2 frases. Frase de
   capítulo (`Flashcard.capitulo`) fica trancada até "Li o capítulo N"
