@@ -137,6 +137,14 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   primeira (nunca tela de erro). Prazo único de 55 s. Dentro do cache, chave
   `explicacao-conferida`: cada questão é conferida uma vez. Medir com
   `scripts/medir-conferencia.ts` (o verificador é o juiz: ler os marcados).
+  Medido em 50 questões (21/10/2026): 43 geradas, 7 caíram no limite da Groq
+  (teste em rajada). Erros reais lidos à mão: 5 de 43 (~12%: "benzina",
+  "Conselho de Geografia" sem Nacional, dengue por "tosse", "trocado de
+  planta", ciganos "nômades"); 1 alarme falso. A geração nova corrigiu 3 e
+  falhou em 2 por cota; por isso o erro agora é TROCADO direto no texto
+  (`aplicarCorrecoes`) e só gera de novo o que não achou. "Correta: X" no
+  trecho é sobre o gabarito: achou ENEM 2021 Q113 (id cmoudnnu2002auoz9dskgmqnx)
+  com C no banco e conta dando D (31,25 L); não corrigido sem o Pablo.
 - **Deck de livro (Pablo, 15/10/2026, artefato https://claude.ai/artifact/6PoWDVkq5cr9xN4v3EkeBR):**
   matéria "Livros", frente = título curto, verso = 1 ou 2 frases. Frase de
   capítulo (`Flashcard.capitulo`) fica trancada até "Li o capítulo N"

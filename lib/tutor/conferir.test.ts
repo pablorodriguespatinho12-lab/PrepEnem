@@ -1,7 +1,7 @@
 import { describe, expect, test, vi } from 'vitest';
 import type { ResultadoIA } from '@/lib/pedir-json';
 import type { Explicacao } from './validar';
-import { explicarConferido, promptCorrecao, textoParaConferir, validarConferencia } from './conferir';
+import { aplicarCorrecoes, explicarConferido, promptCorrecao, textoParaConferir, validarConferencia } from './conferir';
 
 const explicacao = (ideia: string): Explicacao => ({
   ideia,
@@ -78,5 +78,50 @@ describe('explicarConferido', () => {
     const conferir = vi.fn();
     expect(await explicarConferido('P', gerar, conferir)).toEqual(falha);
     expect(conferir).not.toHaveBeenCalled();
+  });
+});
+
+describe('aplicarCorrecoes: troca o trecho direto, sem gerar de novo', () => {
+  test('troca nos campos de texto e não muda o original', () => {
+    const e = explicacao('O solvente é a benzina.');
+    const { explicacao: nova, faltaram } = aplicarCorrecoes(e, [{ trecho: 'benzina', correcao: 'benzeno' }]);
+    expect(nova.ideia).toBe('O solvente é a benzeno.');
+    expect(e.ideia).toBe('O solvente é a benzina.');
+    expect(faltaram).toEqual([]);
+  });
+
+  test('tira o rótulo que o verificador copiou de textoParaConferir ("Peça: estaca: ...")', () => {
+    const e = { ...explicacao('Ideia.'), pecas: [{ termo: 'estaca', significado: 'Trocado de planta cortado para plantar.' }] };
+    const { explicacao: nova } = aplicarCorrecoes(e, [{ trecho: 'Peça: estaca: Trocado de planta cortado para plantar.', correcao: 'Peça: estaca: Pedaço de planta cortado para plantar.' }]);
+    expect(nova.pecas[0].significado).toBe('Pedaço de planta cortado para plantar.');
+  });
+
+  test('trecho que não está no texto (ex.: dentro do desenho) volta em faltaram', () => {
+    const { faltaram } = aplicarCorrecoes(explicacao('Ideia.'), [{ trecho: '31.25', correcao: '31,25' }]);
+    expect(faltaram).toHaveLength(1);
+  });
+});
+
+describe('explicarConferido com troca direta', () => {
+  test('todos os trechos trocados: não gera de novo (não gasta cota)', async () => {
+    const gerar = vi.fn().mockResolvedValueOnce(ok(explicacao('Ex.: benzina.')));
+    const conferir = vi.fn().mockResolvedValue(ok([{ trecho: 'benzina', correcao: 'benzeno' }]));
+    const r = await explicarConferido('P', gerar, conferir);
+    expect(r.ok && r.dado.ideia).toBe('Ex.: benzeno.');
+    expect(gerar).toHaveBeenCalledOnce();
+  });
+
+  test('a correção por geração falhou: fica a versão com as trocas que deram', async () => {
+    const gerar = vi.fn().mockResolvedValueOnce(ok(explicacao('Ex.: benzina.'))).mockResolvedValueOnce(falha);
+    const conferir = vi.fn().mockResolvedValue(ok([{ trecho: 'benzina', correcao: 'benzeno' }, { trecho: 'não existe', correcao: 'y' }]));
+    const r = await explicarConferido('P', gerar, conferir);
+    expect(r.ok && r.dado.ideia).toBe('Ex.: benzeno.');
+  });
+
+  test('"Correta: C" é sobre o gabarito da questão, não da explicação: não dispara correção', async () => {
+    const gerar = vi.fn().mockResolvedValueOnce(ok(explicacao('Ideia.')));
+    const conferir = vi.fn().mockResolvedValue(ok([{ trecho: 'Correta: C', correcao: 'Correta: D' }]));
+    await explicarConferido('P', gerar, conferir);
+    expect(gerar).toHaveBeenCalledOnce();
   });
 });
