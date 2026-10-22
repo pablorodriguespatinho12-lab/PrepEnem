@@ -14,6 +14,8 @@ import { problemasDaExplicacao, VERSAO_EXPLICACAO } from '../lib/tutor/pronta';
 import type { QuestaoParaTutor } from '../lib/tutor/prompts';
 
 const prisma = new PrismaClient();
+// Questões públicas: aqui a Mistral gratuita pode entrar como reserva (lib/ia-modelos.ts).
+process.env.IA_RESERVAS_QUE_TREINAM = '1';
 const PRAZO_POR_QUESTAO_MS = 120_000;
 /* A Groq gratuita dá 8 mil tokens por minuto por modelo e a explicação gasta
    ~6.700: uma pausa entre questões evita queimar as reservas à toa. */

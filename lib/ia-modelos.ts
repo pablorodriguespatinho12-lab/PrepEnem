@@ -34,7 +34,14 @@ export const MODELO_IA = {
    minuto dava erro depois de 16 s esperando. Agora troca na hora: resposta de
    modelo menor (e ainda validada) é melhor que tela de erro. */
 const RESERVAS = ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'qwen/qwen3.8-27b'];
+/* Reservas que podem treinar com o que recebem (Mistral gratuita). Só entram
+   quando quem chama liga IA_RESERVAS_QUE_TREINAM=1: o gerador de explicações
+   prontas (questões públicas), nunca a conversa com o aluno. */
+function reservasQueTreinam(): string[] {
+  if (process.env.IA_RESERVAS_QUE_TREINAM !== '1' || !process.env.MISTRAL_API_KEY) return [];
+  return [`mistral:${process.env.AI_MODEL_MISTRAL || 'mistral-medium-latest'}`];
+}
 export function modelosEmOrdem(principal: string | undefined): (string | undefined)[] {
   if (!principal || !RESERVAS.includes(principal)) return [principal];
-  return [principal, ...RESERVAS.filter((m) => m !== principal)];
+  return [principal, ...RESERVAS.filter((m) => m !== principal), ...reservasQueTreinam()];
 }

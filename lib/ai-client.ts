@@ -37,6 +37,20 @@ const DEFAULT_STREAM_TIMEOUT_MS = 60_000;
 function getBaseUrl(): string {
   return process.env.AI_BASE_URL || DEFAULT_BASE_URL;
 }
+/* Outros provedores no mesmo formato, escolhidos pelo prefixo do modelo
+   ("mistral:mistral-medium-latest"). Mistral gratuita (plano Experiment) pode
+   treinar com o que recebe: só o gerador de explicações prontas a usa, com
+   questões públicas (lib/ia-modelos.ts, reservasQueTreinam). */
+const PROVEDORES: Record<string, { baseUrl: string; chave: () => string | undefined }> = {
+  mistral: { baseUrl: 'https://api.mistral.ai/v1', chave: () => process.env.MISTRAL_API_KEY },
+};
+function destino(model: string | undefined, chavePadrao: string): { baseUrl: string; apiKey: string; model: string | undefined } {
+  const [prefixo, ...resto] = (model ?? '').split(':');
+  const provedor = PROVEDORES[prefixo];
+  const chave = provedor?.chave();
+  if (!provedor || !chave || resto.length === 0) return { baseUrl: getBaseUrl(), apiKey: chavePadrao, model };
+  return { baseUrl: provedor.baseUrl, apiKey: chave, model: resto.join(':') };
+}
 
 function getModel(): string {
   return process.env.AI_MODEL || DEFAULT_MODEL;
@@ -93,12 +107,13 @@ async function fetchChatCompletion(
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), timeoutMs);
 
+  const alvo = destino(params.model, apiKey);
   try {
-    const res = await fetch(`${getBaseUrl()}/chat/completions`, {
+    const res = await fetch(`${alvo.baseUrl}/chat/completions`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${alvo.apiKey}` },
       body: JSON.stringify({
-        model: params.model ?? getModel(),
+        model: alvo.model ?? getModel(),
         messages: params.messages,
         ...(params.maxTokens ? { max_tokens: params.maxTokens } : {}),
         ...(params.temperature !== undefined ? { temperature: params.temperature } : {}),
