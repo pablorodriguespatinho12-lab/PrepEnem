@@ -162,10 +162,18 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 
 - **Prova rápida (Pablo, 21/10/2026, dia de cabeça cansada):** fica DENTRO do
   Simulado, num painel que minimiza pela setinha (lembra no navegador), não é
-  tela nova. Escolhe flashcards (os do dia, ou matéria → baralho) → 3-2-1 →
-  até 8 cartões → 3-2-1 → 10 questões médias, sem cronômetro: Português 3,
+  tela nova. 3-2-1 → 10 questões médias, sem cronômetro: Português 3,
   Matemática 3, Biologia 3, Química 1 (`MISTURA_PROVA_RAPIDA`; o generate
-  aceita `mistura`). As questões são montadas enquanto ele faz os cartões.
+  aceita `mistura`). As questões são montadas durante a contagem.
+- **Flashcards antes moram em Provas (Pablo, 22/10/2026):** saíram da prova
+  rápida. Em Criar prova, "Flashcards antes: Sem · 5 · 10 · 15" (os do dia);
+  vão por `?cartoes=N` e aparecem só antes da 1ª questão.
+- **Prova responde na hora (22/10/2026):** o acerto é conferido no navegador
+  (a letra certa já vem com a questão) e a resposta é gravada por trás, com
+  3 tentativas; "Próxima" avança sem recarregar a prova. Antes: 1,5 s para ver
+  certo/errado e a questão anterior voltava sem resposta enquanto carregava.
+  O lembrete de leitura não aparece em Provas, Simulado e Treino (cobria o
+  Confirmar).
 
 - **Treino do dia (Pablo, 06/10/2026):** 10 questões de cada matéria do dia:
   as do cronograma, depois Português e Matemática (`cotasDoDia`; era 20 e ele

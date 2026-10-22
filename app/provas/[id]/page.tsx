@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useState, useCallback, useRef } from 'react';
-import { useRouter, useParams } from 'next/navigation';
+import { useRouter, useParams, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import { ChevronLeft, CheckCircle2, XCircle, Trophy, Loader2, ArrowRight, BookOpen, Target, Brain, AlertTriangle, AlertCircle, RefreshCcw, Check, X } from 'lucide-react';
+import { ChevronLeft, Trophy, Loader2, ArrowRight, Target, Brain, AlertCircle, Check, X } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
 import dynamic from 'next/dynamic';
@@ -10,10 +10,30 @@ import dynamic from 'next/dynamic';
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 import { ExplicacaoTutor } from '@/components/tutor/explicacao-tutor';
 import { EsqueletoQuestao } from '@/components/esqueletos';
+import { AquecimentoFlashcards } from '@/components/simulado/aquecimento-flashcards';
 
 /* Limiares de dado esparso — mesma regra usada em app/dashboard/page.tsx. */
 const MIN_QUESTOES_PARA_TAXA = 5;
 const LIMIAR_BAIXA_CONFIANCA = 15;
+const TENTATIVAS_DE_SALVAR = 3;
+
+/* Grava a resposta; tenta de novo se a rede piscar (o servidor ignora repetida). */
+async function salvarResposta(examId: string, questionId: string, respostaDada: string): Promise<void> {
+  for (let tentativa = 1; ; tentativa++) {
+    try {
+      const res = await fetch('/api/provas/responder', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ examId, questionId, respostaDada }),
+      });
+      if (res.ok || res.status < 500) return;
+    } catch {
+      // rede caiu: tenta de novo abaixo
+    }
+    if (tentativa >= TENTATIVAS_DE_SALVAR) throw new Error('responder');
+    await new Promise((r) => setTimeout(r, 800 * tentativa));
+  }
+}
 
 export default function ProvaDetailPage() {
   const router = useRouter();
@@ -26,8 +46,11 @@ export default function ProvaDetailPage() {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [feedback, setFeedback] = useState<any>(null);
-  const [submitting, setSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [fechando, setFechando] = useState(false);
+  // Respostas ainda a caminho do servidor; a prova só fecha depois delas.
+  const salvando = useRef<Promise<void>[]>([]);
+  const cartoesAntes = Number(useSearchParams().get('cartoes')) || 0;
+  const [aquecido, setAquecido] = useState(false);
   // Questão da revisão final com a explicação aberta (uma por vez).
   const [revisaoAberta, setRevisaoAberta] = useState<string | null>(null);
   const fetchExam = useCallback(async () => {
@@ -78,6 +101,11 @@ export default function ProvaDetailPage() {
   }
 
   if (!exam) return null;
+
+  // Flashcards antes, escolhidos ao criar a prova (só antes da 1ª questão).
+  if (cartoesAntes > 0 && !aquecido && exam.status === 'pendente' && exam.currentIdx === 0) {
+    return <AquecimentoFlashcards deckId="dia" quantidade={cartoesAntes} onFim={() => setAquecido(true)} />;
+  }
 
   // If finalized, show results
   if (exam.status === 'finalizada') {
@@ -242,56 +270,50 @@ export default function ProvaDetailPage() {
     { letra: 'E', texto: q.alternativaE },
   ];
 
-  const handleSubmit = async () => {
-    if (!selectedAnswer) return;
-    setSubmitting(true);
-    setSubmitError(null);
-
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 15000);
-
-    try {
-      const res = await fetch('/api/provas/responder', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ examId, questionId: q.id, respostaDada: selectedAnswer }),
-        signal: controller.signal,
-      });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) {
-        throw new Error(data?.error || 'Erro ao verificar resposta.');
-      }
-      setFeedback(data);
-      setSubmitted(true);
-    } catch (e: any) {
-      const message =
-        e?.name === 'AbortError'
-          ? 'A verificação demorou demais. Confira sua conexão e tente de novo.'
-          : e?.message || 'Erro ao enviar resposta.';
-      setSubmitError(message);
-      toast.error(message);
-    } finally {
-      clearTimeout(timeoutId);
-      setSubmitting(false);
-    }
+  // A letra certa já vem com a questão: o acerto aparece no toque e a resposta
+  // é gravada por trás (Pablo, 22/10/2026: "demora para ele ver que acerta").
+  const handleSubmit = () => {
+    if (!selectedAnswer || submitted) return;
+    const acertou = selectedAnswer === q.respostaCorreta;
+    setFeedback({ acertou, respostaCorreta: q.respostaCorreta });
+    setSubmitted(true);
+    setExam((e: any) => ({
+      ...e,
+      acertos: e.acertos + (acertou ? 1 : 0),
+      erros: e.erros + (acertou ? 0 : 1),
+      questions: e.questions.map((eq: any, i: number) =>
+        i === e.currentIdx ? { ...eq, answered: true, respostaDada: selectedAnswer, acertou } : eq
+      ),
+    }));
+    const numero = exam.currentIdx + 1;
+    salvando.current.push(
+      salvarResposta(examId, q.id, selectedAnswer).catch(() => {
+        toast.error(`Não consegui salvar a questão ${numero}. Confira a internet.`);
+      })
+    );
   };
 
+  // Próxima troca a questão na hora. Antes recarregava a prova inteira e, até
+  // chegar, a questão de antes voltava sem resposta na tela.
   const handleNext = async () => {
     if (isLast) {
+      setFechando(true);
+      await Promise.allSettled(salvando.current);
       await fetch('/api/provas/finalizar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ examId }),
       });
       toast.success('Prova finalizada!');
-      fetchExam();
-    } else {
-      setSelectedAnswer(null);
-      setSubmitted(false);
-      setFeedback(null);
-      setSubmitError(null);
-      fetchExam();
+      await fetchExam();
+      setFechando(false);
+      return;
     }
+    setSelectedAnswer(null);
+    setSubmitted(false);
+    setFeedback(null);
+    setExam((e: any) => ({ ...e, currentIdx: e.currentIdx + 1, status: 'em_andamento' }));
+    window.scrollTo({ top: 0 });
   };
 
   const progress = (exam.currentIdx + (submitted ? 1 : 0)) / exam.totalQuestoes;
@@ -366,7 +388,6 @@ export default function ProvaDetailPage() {
               const isCorrect = submitted && alt.letra === feedback?.respostaCorreta;
               const isWrong = submitted && selectedAnswer === alt.letra && alt.letra !== feedback?.respostaCorreta;
               const isSelected = !submitted && selectedAnswer === alt.letra;
-              const isChecking = submitting && selectedAnswer === alt.letra;
 
               return (
                 <motion.button
@@ -382,8 +403,8 @@ export default function ProvaDetailPage() {
                       ? { duration: 0.35, ease: 'easeOut' }
                       : { delay: i * 0.08, duration: 0.3 }
                   }
-                  disabled={submitted || submitting}
-                  onClick={() => !submitted && !submitting && setSelectedAnswer(alt.letra)}
+                  disabled={submitted}
+                  onClick={() => !submitted && setSelectedAnswer(alt.letra)}
                   data-alt={alt.letra}
                   data-state={isCorrect ? 'correta' : isWrong ? 'errada' : isSelected ? 'selecionada' : 'repouso'}
                   style={
@@ -433,7 +454,7 @@ export default function ProvaDetailPage() {
                         : 'bg-muted text-muted-foreground group-enabled:group-hover:bg-primary/15 group-enabled:group-hover:text-primary-text'
                     }`}
                   >
-                    {isChecking ? <Loader2 className="w-4 h-4 animate-spin" /> : alt.letra}
+                    {alt.letra}
                   </span>
                   <span className="font-reading text-body leading-[var(--lh-reading)] pt-0.5 flex-1">
                     <MathText text={alt.texto} />
@@ -481,36 +502,15 @@ export default function ProvaDetailPage() {
             </motion.div>
           )}
 
-          {/* Error state: fetch failed or timed out */}
-          {submitError && !submitted && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="mt-6 rounded-[var(--radius-surface)] p-4 bg-amber-500/10 border border-amber-500/20"
-            >
-              <div className="flex items-center gap-2 mb-2">
-                <AlertTriangle className="w-5 h-5 text-amber-600" />
-                <span className="font-display type-lead font-semibold text-amber-700">Não deu pra verificar</span>
-              </div>
-              <p className="type-meta text-foreground/80 mb-3">{submitError}</p>
-              <button
-                onClick={handleSubmit}
-                className="flex items-center gap-2 px-4 py-2 bg-amber-500 text-white rounded-[var(--radius-control)] font-medium type-meta t-colors hover:opacity-90"
-              >
-                <RefreshCcw className="w-4 h-4" /> Tentar novamente
-              </button>
-            </motion.div>
-          )}
-
           {/* Submit / Next */}
           <div className="flex justify-end mt-6">
             {!submitted ? (
               <button
-                disabled={!selectedAnswer || submitting}
+                disabled={!selectedAnswer}
                 onClick={handleSubmit}
                 className="px-6 py-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-2 t-lift enabled:hover:-translate-y-px enabled:hover:shadow-elev-3 disabled:opacity-40 disabled:shadow-elev-1 flex items-center gap-2"
               >
-                {submitting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Target className="w-4 h-4" />}
+                <Target className="w-4 h-4" />
                 Confirmar
               </button>
             ) : (
@@ -518,11 +518,12 @@ export default function ProvaDetailPage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 onClick={handleNext}
+                disabled={fechando}
                 className="px-6 py-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3 flex items-center gap-2"
               >
                 {isLast ? (
                   <>
-                    <Trophy className="w-4 h-4" />
+                    {fechando ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trophy className="w-4 h-4" />}
                     Finalizar Prova
                   </>
                 ) : (

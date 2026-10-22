@@ -11,21 +11,19 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
     }
 
-    const user = await prisma.user.findUnique({ where: { id: (session.user as any).id } });
-    if (!user) return NextResponse.json({ error: 'Usuário não encontrado' }, { status: 404 });
-
+    const userId = (session.user as any).id as string;
     const body = await request.json();
     const { examId, questionId, respostaDada } = body;
 
-    const exam = await prisma.customExam.findFirst({
-      where: { id: examId, userId: user.id },
-    });
+    // Cada ida ao Neon custa; as duas leituras vão juntas e as escritas numa transação.
+    const [exam, examQuestion] = await Promise.all([
+      prisma.customExam.findFirst({ where: { id: examId, userId } }),
+      prisma.customExamQuestion.findFirst({
+        where: { examId, questionId },
+        include: { question: { select: { respostaCorreta: true } } },
+      }),
+    ]);
     if (!exam) return NextResponse.json({ error: 'Prova não encontrada' }, { status: 404 });
-
-    const examQuestion = await prisma.customExamQuestion.findFirst({
-      where: { examId, questionId },
-      include: { question: true },
-    });
     if (!examQuestion) return NextResponse.json({ error: 'Questão não encontrada na prova' }, { status: 404 });
 
     const acertou = respostaDada === examQuestion.question.respostaCorreta;
@@ -45,26 +43,22 @@ export async function POST(request: Request) {
       return NextResponse.json({ acertou: examQuestion.acertou ?? acertou, respostaCorreta });
     }
 
-    await prisma.customExam.update({
-      where: { id: examId },
-      data: {
-        acertos: { increment: acertou ? 1 : 0 },
-        erros: { increment: acertou ? 0 : 1 },
-        currentIdx: { increment: 1 },
-        status: exam.status === 'pendente' ? 'em_andamento' : exam.status,
-        startedAt: exam.startedAt ?? new Date(),
-      },
-    });
-
-    // Also record in UserProgress to feed the wider system (caderno de erros etc)
-    await prisma.userProgress.create({
-      data: {
-        userId: user.id,
-        questionId,
-        acertou,
-        respostaDada,
-      },
-    });
+    // UserProgress alimenta o resto do sistema (caderno de erros etc).
+    await prisma.$transaction([
+      prisma.customExam.update({
+        where: { id: examId },
+        data: {
+          acertos: { increment: acertou ? 1 : 0 },
+          erros: { increment: acertou ? 0 : 1 },
+          currentIdx: { increment: 1 },
+          status: exam.status === 'pendente' ? 'em_andamento' : exam.status,
+          startedAt: exam.startedAt ?? new Date(),
+        },
+      }),
+      prisma.userProgress.create({
+        data: { userId, questionId, acertou, respostaDada },
+      }),
+    ]);
 
     return NextResponse.json({ acertou, respostaCorreta });
   } catch (error: any) {

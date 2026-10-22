@@ -5,13 +5,15 @@ type Props = {
   opcoes: readonly number[];
   valor: number;
   aoEscolher: (n: number) => void;
+  // Como escrever o 0 quando ele é "nenhum" (ex.: "Sem").
+  nomeDoZero?: string;
 };
 
 /* Escolher quantidade com botões, nunca com controle deslizante (Pablo,
    21/10/2026: "essa linha que dá para arrastar e aumentar o número é muito
    feia"). Arrastar é impreciso, cai em número quebrado (31) e no celular briga
    com a rolagem; o botão é um toque e diz as opções que fazem sentido. */
-export function EscolhaDeNumero({ rotulo, opcoes, valor, aoEscolher }: Props) {
+export function EscolhaDeNumero({ rotulo, opcoes, valor, aoEscolher, nomeDoZero }: Props) {
   return (
     <div role="radiogroup" aria-label={rotulo} className="flex flex-wrap gap-2">
       {opcoes.map((n) => {
@@ -30,7 +32,7 @@ export function EscolhaDeNumero({ rotulo, opcoes, valor, aoEscolher }: Props) {
                 : 'bg-primary/10 text-primary-text hover:bg-primary/15'
             }`}
           >
-            {n}
+            {n === 0 && nomeDoZero ? nomeDoZero : n}
           </button>
         );
       })}

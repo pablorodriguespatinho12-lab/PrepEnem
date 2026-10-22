@@ -14,12 +14,12 @@ import dynamic from 'next/dynamic';
 import { PaginaDaProva } from '@/components/pagina-da-prova';
 import { PainelProvaRapida, MISTURA_PROVA_RAPIDA } from '@/components/simulado/painel-prova-rapida';
 import { ContagemRegressiva } from '@/components/simulado/contagem-regressiva';
-import { AquecimentoFlashcards } from '@/components/simulado/aquecimento-flashcards';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 
-// contagem-cards → cards → contagem-questoes: a prova rápida (painel-prova-rapida.tsx).
-type Phase = 'config' | 'contagem-cards' | 'cards' | 'contagem-questoes' | 'exam' | 'result';
+// contagem-questoes: a prova rápida (painel-prova-rapida.tsx). Os flashcards de antes
+// foram para Provas (Pablo, 22/10/2026).
+type Phase = 'config' | 'contagem-questoes' | 'exam' | 'result';
 type ProvaGerada = { qs: any[]; total: number; sessionId: string | null; initialTimeLeft: number };
 
 // Limiares de dado esparso (decisão travada, ver skill decisoes-prepenem):
@@ -246,20 +246,16 @@ export default function SimuladoPage() {
       setLoading(false);
     }
   };
-  // Prova rápida: as questões são montadas enquanto o aluno faz os cartões.
+  // Prova rápida: as questões são montadas durante a contagem 3-2-1.
   // Sem cronômetro: é o dia de cabeça cansada.
   const provaRapidaRef = useRef<Promise<ProvaGerada> | null>(null);
-  const [deckDaProva, setDeckDaProva] = useState<string | null>(null);
-  const comecarProvaRapida = (deckId: string | null) => {
+  const comecarProvaRapida = () => {
     setUseTimer(false);
     const prova = gerarSimulado({ mistura: MISTURA_PROVA_RAPIDA }, false);
     prova.catch(() => {}); // o erro é mostrado em irParaQuestoes
     provaRapidaRef.current = prova;
-    setDeckDaProva(deckId);
-    setPhase(deckId ? 'contagem-cards' : 'contagem-questoes');
+    setPhase('contagem-questoes');
   };
-  const irParaCartoes = useCallback(() => setPhase('cards'), []);
-  const irParaContagemQuestoes = useCallback(() => setPhase('contagem-questoes'), []);
   const irParaQuestoes = useCallback(async () => {
     if (!provaRapidaRef.current) return;
     try {
@@ -346,13 +342,7 @@ export default function SimuladoPage() {
     );
   }
 
-  // --- PROVA RÁPIDA: contagem, cartões, contagem ---
-  if (phase === 'contagem-cards') {
-    return <ContagemRegressiva titulo="Primeiro, os flashcards" onFim={irParaCartoes} />;
-  }
-  if (phase === 'cards' && deckDaProva) {
-    return <AquecimentoFlashcards deckId={deckDaProva} onFim={irParaContagemQuestoes} />;
-  }
+  // --- PROVA RÁPIDA: contagem e questões ---
   if (phase === 'contagem-questoes') {
     return <ContagemRegressiva titulo="Agora, as questões" onFim={irParaQuestoes} />;
   }

@@ -4,18 +4,18 @@ import { motion, AnimatePresence, MotionConfig, useReducedMotion } from 'framer-
 import { CheckCircle2, XCircle } from 'lucide-react';
 import { materiaColors } from '@/lib/theme-colors';
 
-// Aquecimento da prova rápida: poucos cartões, virar e responder, e segue
+// Aquecimento antes da prova: poucos cartões, virar e responder, e segue
 // para as questões. Mesmo flip do baralho (app/flashcards/[deckId]/page.tsx).
-const CARTOES_NO_AQUECIMENTO = 8;
-
+// Desde 22/10/2026 mora em Provas, com a quantidade escolhida ao criar a prova.
 type Cartao = { id: string; frente: string; verso: string; materia?: string };
 
 type Props = {
   deckId: string;
+  quantidade: number;
   onFim: () => void;
 };
 
-export function AquecimentoFlashcards({ deckId, onFim }: Props) {
+export function AquecimentoFlashcards({ deckId, quantidade, onFim }: Props) {
   const reduzir = useReducedMotion();
   const [cartoes, setCartoes] = useState<Cartao[] | null>(null);
   const [materiaDoDeck, setMateriaDoDeck] = useState('');
@@ -29,13 +29,13 @@ export function AquecimentoFlashcards({ deckId, onFim }: Props) {
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error('deck'))))
       .then((data) => {
         setMateriaDoDeck(data.deck?.materia ?? '');
-        setCartoes((data.cards ?? []).slice(0, CARTOES_NO_AQUECIMENTO));
+        setCartoes((data.cards ?? []).slice(0, quantidade));
       })
       .catch((e) => {
         if (e.name !== 'AbortError') setCartoes([]);
       });
     return () => controle.abort();
-  }, [deckId]);
+  }, [deckId, quantidade]);
 
   const responder = (acertou: boolean) => {
     const cartao = cartoes?.[idx];

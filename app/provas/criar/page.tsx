@@ -50,6 +50,8 @@ export default function CriarProvaPage() {
   const [nivel, setNivel] = useState('medio');
   const [materias, setMaterias] = useState<string[]>([]);
   const [totalQuestoes, setTotalQuestoes] = useState(10);
+  // Flashcards do dia antes da 1ª questão (Pablo, 22/10/2026; antes ficavam no Simulado).
+  const [cartoesAntes, setCartoesAntes] = useState(0);
   const [criando, setCriando] = useState(false);
 
   const toggleMateria = (m: string) => {
@@ -74,7 +76,7 @@ export default function CriarProvaPage() {
         return;
       }
       toast.success(`Prova criada com ${data.totalQuestoes} questões!`);
-      router.push(`/provas/${data.examId}`);
+      router.push(cartoesAntes > 0 ? `/provas/${data.examId}?cartoes=${cartoesAntes}` : `/provas/${data.examId}`);
     } catch (e) {
       toast.error('Erro ao criar prova');
     } finally {
@@ -209,6 +211,18 @@ export default function CriarProvaPage() {
         >
           <p className="type-meta font-semibold text-foreground mb-3">Número de questões</p>
           <EscolhaDeNumero rotulo="Número de questões" opcoes={[5, 10, 20, 30, 45]} valor={totalQuestoes} aoEscolher={setTotalQuestoes} />
+        </motion.div>
+
+        {/* Flashcards antes */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.28 }}
+          className="surface-1 rounded-[var(--radius-surface)] p-6"
+        >
+          <p className="type-meta font-semibold text-foreground mb-1">Flashcards antes</p>
+          <p className="type-meta text-muted-foreground mb-3">Os cartões do dia, para aquecer antes da primeira questão.</p>
+          <EscolhaDeNumero rotulo="Flashcards antes da prova" opcoes={[0, 5, 10, 15]} valor={cartoesAntes} aoEscolher={setCartoesAntes} nomeDoZero="Sem" />
         </motion.div>
 
         {/* Botão criar */}

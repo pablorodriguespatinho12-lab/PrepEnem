@@ -7,6 +7,9 @@ import { useLeitura } from '@/hooks/use-leitura';
 import { LivrosDaLeitura } from './livros-da-leitura';
 
 const CHAVE_FECHADO = 'prepenem-leitura-fechado';
+// Provas, Simulado e Treino: o cartão no canto cobria o Confirmar e, no
+// celular, os botões de Criar prova (22/10/2026).
+const TELA_DE_QUESTAO = /^\/(provas|simulado|treino)(\/|$)/;
 
 /* Lembrete de leitura ao entrar no site (Pablo, 21/10/2026): os livros e a
    página onde parou, num cartão no canto. Fechado, só volta na próxima vez
@@ -37,7 +40,7 @@ export function LembreteLeitura() {
 
   return (
     <AnimatePresence>
-      {aberto && pathname !== '/dashboard' && (
+      {aberto && pathname !== '/dashboard' && !TELA_DE_QUESTAO.test(pathname ?? '') && (
         <motion.aside
           aria-label="Lembrete de leitura"
           initial={{ opacity: 0, y: 20 }}
