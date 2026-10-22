@@ -38,11 +38,12 @@ function getBaseUrl(): string {
   return process.env.AI_BASE_URL || DEFAULT_BASE_URL;
 }
 /* Outros provedores no mesmo formato, escolhidos pelo prefixo do modelo
-   ("mistral:mistral-medium-latest"). Mistral gratuita (plano Experiment) pode
-   treinar com o que recebe: só o gerador de explicações prontas a usa, com
+   ("gemini:gemini-2.5-flash"). Os gratuitos podem treinar com o que recebem: só o gerador de explicações prontas a usa, com
    questões públicas (lib/ia-modelos.ts, reservasQueTreinam). */
 const PROVEDORES: Record<string, { baseUrl: string; chave: () => string | undefined }> = {
   mistral: { baseUrl: 'https://api.mistral.ai/v1', chave: () => process.env.MISTRAL_API_KEY },
+  // Gemini gratuito (Google AI Studio): também pode treinar com o que recebe.
+  gemini: { baseUrl: 'https://generativelanguage.googleapis.com/v1beta/openai', chave: () => process.env.GEMINI_API_KEY },
 };
 function destino(model: string | undefined, chavePadrao: string): { baseUrl: string; apiKey: string; model: string | undefined } {
   const [prefixo, ...resto] = (model ?? '').split(':');

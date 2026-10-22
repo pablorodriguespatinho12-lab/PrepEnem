@@ -5,6 +5,7 @@ describe('modelosEmOrdem', () => {
   afterEach(() => {
     delete process.env.IA_RESERVAS_QUE_TREINAM;
     delete process.env.MISTRAL_API_KEY;
+    delete process.env.GEMINI_API_KEY;
   });
 
   test('sem o gerador ligar, a Mistral não entra (conversa do aluno fica na Groq)', () => {
@@ -20,6 +21,12 @@ describe('modelosEmOrdem', () => {
     expect(ordem[ordem.length - 1]).toBe('mistral:mistral-medium-latest');
   });
 
+  test('com a chave do Gemini, ele entra antes da Mistral', () => {
+    process.env.GEMINI_API_KEY = 'g';
+    process.env.MISTRAL_API_KEY = 'm';
+    process.env.IA_RESERVAS_QUE_TREINAM = '1';
+    expect(modelosEmOrdem('openai/gpt-oss-120b').slice(-2)).toEqual(['gemini:gemini-2.5-flash', 'mistral:mistral-medium-latest']);
+  });
   test('sem a chave, a Mistral não entra mesmo com o gerador ligado', () => {
     process.env.IA_RESERVAS_QUE_TREINAM = '1';
     expect(modelosEmOrdem('openai/gpt-oss-120b').some((m) => m?.startsWith('mistral:'))).toBe(false);
