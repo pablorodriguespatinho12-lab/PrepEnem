@@ -183,8 +183,10 @@ export function validarExplicacao(bruto: unknown, materia?: string): Explicacao 
   const c = objeto(e.checagem);
   const pergunta = texto(c.pergunta, 300);
   const resposta = texto(c.resposta, 400);
-  const opcoes = lista(c.opcoes).map((o) => texto(o, 60)).filter((o): o is string => !!o).slice(0, 4);
-  const certa = texto(c.certa, 60);
+  // "C) íons K⁺" → "íons K⁺": a letra vinha junto mesmo com o prompt pedindo sem.
+  const semLetra = (t: string | null) => t?.replace(/^[A-E]\)\s*/, '') ?? null;
+  const opcoes = lista(c.opcoes).map((o) => semLetra(texto(o, 60))).filter((o): o is string => !!o).slice(0, 4);
+  const certa = semLetra(texto(c.certa, 60));
   const comOpcoes = opcoes.length >= 2 && !!certa && opcoes.includes(certa) ? { opcoes, certa } : {};
   return {
     ideia,

@@ -76,7 +76,21 @@ Correta: ${q.respostaCorreta}${q.respostaDada ? ` | O aluno marcou: ${q.resposta
 
 /* Sem cena e fatias: a cena é das lições de Cálculo, e o espaço do prompt
    é curto (ver formatoVisualSem). */
-const FORMATO_VISUAL_DA_EXPLICACAO = formatoVisualSem(['cena', 'fatias']);
+/* Só os desenhos que a matéria usa: o catálogo inteiro passava de 8 mil tokens
+   com a resposta e a Groq gratuita devolvia 413 (lote de 22/10/2026). */
+type TipoVisual = Parameters<typeof formatoVisualSem>[0][number];
+const SEMPRE_FORA: TipoVisual[] = ['cena', 'fatias'];
+const FORA_POR_MATERIA: [RegExp, TipoVisual[]][] = [
+  [/matem|físic|fisic/i, ['processo', 'molecula', 'palavra']],
+  [/químic|quimic/i, ['palavra', 'vetores', 'reta']],
+  [/biolog/i, ['palavra', 'vetores', 'reta', 'transformacao']],
+  [/portugu/i, ['grafico', 'reta', 'vetores', 'transformacao', 'molecula', 'quadro']],
+];
+const FORA_NAS_HUMANAS: TipoVisual[] = ['reta', 'vetores', 'transformacao', 'molecula', 'palavra', 'quadro'];
+function formatoVisualDaMateria(materia: string): string {
+  const fora = FORA_POR_MATERIA.find(([r]) => r.test(materia))?.[1] ?? FORA_NAS_HUMANAS;
+  return formatoVisualSem([...SEMPRE_FORA, ...fora]);
+}
 export function promptExplicacao(q: QuestaoParaTutor): string {
   const errou = q.respostaDada && q.respostaDada !== q.respostaCorreta;
   return `Você é um tutor particular explicando UMA questão para UM aluno. Resolva a questão você mesmo, com cuidado, antes de escrever: a explicação não pode ter erro de conta nem lacuna.
@@ -89,7 +103,7 @@ ${SO_O_QUE_ESTA_ESCRITO}
 
 ESTRUTURA (devolva SOMENTE JSON neste formato):
 {
-  "conferencia": "ESCREVA PRIMEIRO, antes de tudo: cada conta da resolução refeita por extenso, número por número (ex.: 'p(5) = -(25) + 50 + 24 = 49; -(t-5)^2 + 49 = -t^2 + 10t - 25 + 49 = -t^2 + 10t + 24, confere'). Se alguma conta não bater, corrija antes de escrever os passos.${errou ? ' Refaça também a conta do seuErro com os números do enunciado: ela tem de dar EXATAMENTE o número da alternativa marcada; se não der, ache outro caminho ou deixe seuErro null.' : ''} Este campo não aparece para o aluno.",
+  "conferencia": "ESCREVA PRIMEIRO, antes de tudo: cada conta da resolução refeita por extenso, número por número (ex.: 'p(5) = -(25) + 50 + 24 = 49; -(t-5)^2 + 49 = -t^2 + 10t - 25 + 49 = -t^2 + 10t + 24, confere'). Refaça também a conta do «Sua vez» (checagem): a opção certa tem de sair dela (revisão de 22/10/2026: 2 de 11 tinham a resposta do «Sua vez» errada). Se alguma conta não bater, corrija antes de escrever os passos.${errou ? ' Refaça também a conta do seuErro com os números do enunciado: ela tem de dar EXATAMENTE o número da alternativa marcada; se não der, ache outro caminho ou deixe seuErro null.' : ''} Este campo não aparece para o aluno.",
   "ideia": "1 ou 2 frases CURTAS e práticas, como um lembrete que se decora: o que a questão quer e por que a resposta é aquela. Ex.: 'A planta precisa de energia. Carboidrato é energia: sem ele, ela morre.' NUNCA só uma fórmula: em Física, o fenômeno em palavras ('Ir para o lado não muda o tempo de cair: a bola que rola da mesa e a que cai solta chegam juntas ao chão.') Se o enunciado traz um número que NÃO entra na conta (a velocidade para o lado num tempo de queda), a ideia diz que ele não importa e por quê: é a pegadinha.",
   "pecas": [{"termo": "só o nome, sem parêntese (ex.: \"anaeróbio\")", "significado": "o que é, em palavras simples, e um exemplo do dia a dia; até 2 frases curtas (ex.: \"Sem oxigênio. Como o esterco apodrecendo fechado num tanque.\")"}],
   "passos": [{"titulo": "até 6 palavras", "texto": "1 ou 2 frases", "visual": {"tipo": "quadro", "...": "o desenho deste passo, num dos formatos abaixo; null só quando a regra abaixo permite"}}],
@@ -121,7 +135,7 @@ REGRAS DA ESTRUTURA:
 - Teste de 05/10/2026: em cálculo, a IA escrevia "O resultado é 2" sem a conta e usava fórmula pronta. Por isso: passo de cálculo mostra a conta com os números ($2L \\cdot H + 2W \\cdot H$ vira $2(2L \\cdot H) + \\dots$), nunca só o resultado. O "quadro" já mostra a fórmula geral e o que cada letra é; o passo "Por que funciona" vem logo DEPOIS dele. "Por que funciona" é de ensino médio: números pequenos numa tabela ou uma conta de 2 linhas, NUNCA integral, derivada, limite ou vetor (o teste de 15/10/2026 deduziu energia cinética com integral). Se não dá para mostrar assim, mostre no desenho (espelho, proporção) em vez da álgebra.
 - Confira cada número do visual com a conta do texto. Se um gráfico mostra uma raiz em x=2, o texto e a conta dizem 2.
 
-${FORMATO_VISUAL_DA_EXPLICACAO}
+${formatoVisualDaMateria(q.materia)}
 
 ---
 ${textoDaQuestao(q)}`;

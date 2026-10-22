@@ -19,7 +19,11 @@ const MIN_LETRAS_PALAVRA = 4;
 const MESMA_PERGUNTA = 0.6;
 const palavras = (t: string): string[] =>
   t.toLowerCase().split(/[^a-zà-ú0-9]+/i).filter((p) => p.length >= MIN_LETRAS_PALAVRA);
+const numeros = (t: string): string[] => t.match(/\d+(?:[.,]\d+)?/g) ?? [];
 export function repeteAQuestao(pergunta: string, enunciado: string): boolean {
+  // Número que a questão não tem = outro caso (cilindro de raio 2, não 3).
+  const doEnunciadoNumeros = new Set(numeros(enunciado));
+  if (numeros(pergunta).some((n) => !doEnunciadoNumeros.has(n))) return false;
   const daPergunta = palavras(pergunta);
   if (daPergunta.length < 3) return false;
   const doEnunciado = new Set(palavras(enunciado));
@@ -29,7 +33,8 @@ export function repeteAQuestao(pergunta: string, enunciado: string): boolean {
 /* Lista do que está fora do formato aprovado. Vazia = passou. */
 export function problemasDaExplicacao(e: Explicacao, enunciado: string, materia: string): string[] {
   const problemas: string[] = [];
-  const comConta = COM_CONTA.test(materia);
+  // Química sem número ("por que a solução de NaCl conduz?") não tem conta.
+  const comConta = COM_CONTA.test(materia) && /\d/.test(enunciado);
   if (comConta && e.passos.length < MIN_PASSOS_COM_CONTA) problemas.push(`só ${e.passos.length} passos numa questão com conta`);
   if (comConta && !e.passos.some((p) => p.visual?.tipo === 'quadro')) problemas.push('sem o quadro do jeito rápido');
   if (!e.passos.some((p) => /resposta/i.test(p.titulo))) problemas.push('sem o passo "A resposta"');

@@ -6,6 +6,9 @@ describe('repeteAQuestao', () => {
   test('a mesma pergunta com outras palavras conta como repetida', () => {
     expect(repeteAQuestao('Qual etapa da respiração aeróbia gera mais ATP?', enunciado)).toBe(true);
   });
+  test('com números novos é outro caso, mesmo com as mesmas palavras', () => {
+    expect(repeteAQuestao('Cilindro com raio 2 cm e altura 5 cm. Qual o volume?', 'O volume de um cilindro com raio da base de 3 cm e altura de 10 cm é')).toBe(false);
+  });
   test('pergunta parecida de outro assunto não conta', () => {
     expect(repeteAQuestao('Na replicação do DNA, quantas fitas servem de molde?', enunciado)).toBe(false);
   });
