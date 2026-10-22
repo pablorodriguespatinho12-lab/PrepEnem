@@ -38,7 +38,7 @@ function getBaseUrl(): string {
   return process.env.AI_BASE_URL || DEFAULT_BASE_URL;
 }
 /* Outros provedores no mesmo formato, escolhidos pelo prefixo do modelo
-   ("gemini:gemini-2.5-flash"). Os gratuitos podem treinar com o que recebem: só o gerador de explicações prontas a usa, com
+   ("gemini:gemini-3-flash-preview"). Os gratuitos podem treinar com o que recebem: só o gerador de explicações prontas a usa, com
    questões públicas (lib/ia-modelos.ts, reservasQueTreinam). */
 const PROVEDORES: Record<string, { baseUrl: string; chave: () => string | undefined }> = {
   mistral: { baseUrl: 'https://api.mistral.ai/v1', chave: () => process.env.MISTRAL_API_KEY },

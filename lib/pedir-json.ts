@@ -58,6 +58,9 @@ async function chamarComEspera(mensagens: Mensagem[], opcoes: OpcoesPedido, fim:
       // que é o normal em fórmula. extrairJson trata essas barras do nosso lado.
       // Medido em 05/10/2026: a maioria das recusas de lição vinha daqui.
       ...(opcoes.pensar && opcoes.modelo?.includes('gpt-oss') ? { reasoningEffort: opcoes.pensar } : {}),
+      // Gemini pensa muito por padrão: o pensamento comia o espaço da resposta e
+      // o JSON vinha cortado, ou passava de 45 s (teste de 22/10/2026).
+      ...(opcoes.modelo?.startsWith('gemini:') ? { reasoningEffort: opcoes.pensar ?? 'low' } : {}),
       timeoutMs: Math.min(opcoes.timeoutMs ?? resta, resta),
     });
     // 429 = limite por minuto; 502 = conexão caiu ou erro passageiro da Groq

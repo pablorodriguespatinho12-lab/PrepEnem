@@ -42,11 +42,13 @@ const RESERVAS = ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'qwen/qwen3.8-27b
 function reservasQueTreinam(): string[] {
   if (process.env.IA_RESERVAS_QUE_TREINAM !== '1') return [];
   return [
-    process.env.GEMINI_API_KEY ? `gemini:${process.env.AI_MODEL_GEMINI || 'gemini-2.5-flash'}` : null,
+    process.env.GEMINI_API_KEY ? `gemini:${process.env.AI_MODEL_GEMINI || 'gemini-3-flash-preview'}` : null,
     process.env.MISTRAL_API_KEY ? `mistral:${process.env.AI_MODEL_MISTRAL || 'mistral-medium-latest'}` : null,
   ].filter((m): m is string => m !== null);
 }
 export function modelosEmOrdem(principal: string | undefined): (string | undefined)[] {
   if (!principal || !RESERVAS.includes(principal)) return [principal];
-  return [principal, ...RESERVAS.filter((m) => m !== principal), ...reservasQueTreinam()];
+  // No gerador, o Gemini vem logo depois do principal: nos testes de 22/10/2026
+  // ele acertou o formato, e as reservas pequenas da Groq erravam o "Sua vez".
+  return [principal, ...reservasQueTreinam(), ...RESERVAS.filter((m) => m !== principal)];
 }
