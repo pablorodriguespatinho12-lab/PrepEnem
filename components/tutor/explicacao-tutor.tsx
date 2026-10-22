@@ -1,24 +1,30 @@
 'use client';
-// Explicação visual em passos + conversa de dúvida. Um passo por vez, o aluno
-// avança no próprio ritmo (segmentação); o desenho vem antes do texto; no fim,
-// uma pergunta de recuperação; depois, ele pode perguntar "mas por quê?".
+// Explicação visual em passos + conversa de dúvida. Uma tela por passo, do jeito
+// que o Pablo aprovou no artefato dos peixes (22/10/2026: "perfeito, fala para
+// a IA fazer exatamente assim"): texto à esquerda, desenho à direita, pontinhos
+// de progresso, Voltar e Próximo, e nada rola: o desenho encolhe para caber.
+// A conversa fica atrás de um ícone no meio, embaixo.
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import { ArrowLeft, ArrowRight, Brain, Eye, Loader2, RefreshCcw, Send } from 'lucide-react';
+import { Brain, Loader2, RefreshCcw, Sparkles } from 'lucide-react';
 import MathText from '@/components/math-text';
 import { VisualDesenho } from '@/components/visual/visual-desenho';
 import { NaoEntendiContext } from '@/components/visual/quadro';
 import type { Explicacao, RespostaTutor } from '@/lib/tutor/validar';
+import { resumirExplicacao } from '@/lib/tutor/validar';
+import type { Visual } from '@/lib/visual/especificacao';
+import { useTelaGrande } from '@/hooks/use-tela-grande';
+import { CaberNaCaixa } from './caber-na-caixa';
+import { SuaVez } from './sua-vez';
+import { PergunteAIa, type Mensagem } from './pergunte-a-ia';
+
 const DESLIZE_DO_PASSO = {
   entra: (s: number) => ({ opacity: 0, x: 24 * s }),
   parado: { opacity: 1, x: 0 },
   sai: (s: number) => ({ opacity: 0, x: -24 * s }),
 };
-import { resumirExplicacao } from '@/lib/tutor/validar';
-import type { Visual } from '@/lib/visual/especificacao';
-import { useTelaGrande } from '@/hooks/use-tela-grande';
 
 export interface QuestaoTutor {
   id?: string;
@@ -35,14 +41,14 @@ interface Props {
   /* Errou: a explicação já começa sozinha (feedback imediato). Acertou: botão. */
   iniciarSozinha?: boolean;
   /* Tela grande: o que é sobre o aluno e a questão (onde errou, o que cada
-     termo é) vai para este lugar da coluna da esquerda, para a direita caber
-     sem rolar (Pablo, 15/10/2026). */
+     termo é) vai para este lugar da coluna da esquerda (Pablo, 15/10/2026). */
   lateral?: HTMLElement | null;
 }
 
-interface Mensagem { papel: 'aluno' | 'tutor'; texto: string; visual?: Visual | null }
-
-const SUGESTOES = ['Por que é assim?', 'Me dá outro exemplo', 'De onde vem essa fórmula?'];
+type Tela =
+  | { tipo: 'erro'; rotulo: string; titulo: string; texto: string }
+  | { tipo: 'passo'; rotulo: string; titulo: string; texto: string; visual: Visual | null; comPecas: boolean }
+  | { tipo: 'fim'; rotulo: string; titulo: string; texto: string };
 
 function corpoDaQuestao(q: QuestaoTutor, respostaDada: string | null) {
   return {
@@ -55,20 +61,35 @@ function corpoDaQuestao(q: QuestaoTutor, respostaDada: string | null) {
   };
 }
 
+/* Onde errou (se não foi para a coluna do lado) → os passos → sua vez. */
+function montarTelas(e: Explicacao, erroNaLateral: boolean): Tela[] {
+  const erro: Tela[] = e.seuErro && !erroNaLateral
+    ? [{ tipo: 'erro', rotulo: 'Seu erro', titulo: 'Onde você desviou', texto: e.seuErro }]
+    : [];
+  // Como no artefato: o nome do passo pequeno ("A pergunta") e o que ele diz em destaque.
+  const passos: Tela[] = e.passos.map((p, i) => ({
+    tipo: 'passo', rotulo: p.titulo, titulo: p.texto, texto: '', visual: p.visual, comPecas: i === 0 && !erroNaLateral,
+  }));
+  const fim: Tela = e.checagem
+    ? { tipo: 'fim', rotulo: 'Sua vez', titulo: e.checagem.pergunta, texto: `Para lembrar: ${e.ideia}` }
+    : { tipo: 'fim', rotulo: 'Para lembrar', titulo: e.ideia, texto: '' };
+  return [...erro, ...passos, fim];
+}
+
 export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false, lateral = null }: Props) {
   const telaGrande = useTelaGrande();
   const [explicacao, setExplicacao] = useState<Explicacao | null>(null);
   const [carregando, setCarregando] = useState(false);
   const [erro, setErro] = useState<string | null>(null);
-  const [passosVisiveis, setPassosVisiveis] = useState(1);
+  const [atual, setAtual] = useState(0);
   // 1 = avançou (o passo novo vem da direita), -1 = voltou (vem da esquerda).
   const [sentido, setSentido] = useState(1);
-  const [respostaChecagemAberta, setRespostaChecagemAberta] = useState(false);
   const [mensagens, setMensagens] = useState<Mensagem[]>([]);
+  const [conversaAberta, setConversaAberta] = useState(false);
   const [falhaConversa, setFalhaConversa] = useState(false);
   const [rascunho, setRascunho] = useState('');
   const [respondendo, setRespondendo] = useState(false);
-  const fimDaConversa = useRef<HTMLDivElement>(null);
+  const cartao = useRef<HTMLElement>(null);
 
   const gerar = useCallback(async () => {
     setCarregando(true);
@@ -85,7 +106,7 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
         return;
       }
       setExplicacao(data.explicacao);
-      setPassosVisiveis(1);
+      setAtual(0);
       // Errou: a pergunta de fixação vira flashcard (api/flashcards/do-erro).
       const c = data.explicacao.checagem;
       if (c && respostaDada && respostaDada !== questao.respostaCorreta) {
@@ -106,18 +127,20 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
   useEffect(() => {
     setExplicacao(null);
     setMensagens([]);
-    setRespostaChecagemAberta(false);
+    setConversaAberta(false);
     setErro(null);
     if (iniciarSozinha) gerar();
   }, [questao, iniciarSozinha, gerar]);
 
+  // A explicação chegou: o cartão sobe e ocupa a tela.
   useEffect(() => {
-    fimDaConversa.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }, [mensagens.length]);
+    if (explicacao) cartao.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [explicacao]);
 
   const perguntar = async (texto: string) => {
     const limpo = texto.trim();
     if (!limpo || respondendo || !explicacao) return;
+    setConversaAberta(true);
     const historico: Mensagem[] = [...mensagens, { papel: 'aluno', texto: limpo }];
     setMensagens(historico);
     setRascunho('');
@@ -138,8 +161,8 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
       if (!res.ok || !data.resposta) throw new Error('sem resposta');
       setMensagens([...historico, { papel: 'tutor', texto: data.resposta, visual: data.visual ?? null }]);
     } catch {
-      /* Erro não entra na conversa: antes virava fala do tutor ("Falha de
-         autenticação...") e voltava no prompt seguinte. A dúvida volta ao campo. */
+      /* Erro não entra na conversa: antes virava fala do tutor e voltava no
+         prompt seguinte. A dúvida volta ao campo. */
       setMensagens(mensagens);
       setRascunho(limpo);
       setFalhaConversa(true);
@@ -147,6 +170,27 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
       setRespondendo(false);
     }
   };
+
+  const erroNaLateral = !!lateral && telaGrande;
+  const telas = explicacao ? montarTelas(explicacao, erroNaLateral) : [];
+  const total = telas.length;
+  const ir = useCallback((destino: number) => {
+    setSentido(destino >= atual ? 1 : -1);
+    setAtual(Math.max(0, Math.min(total - 1, destino)));
+  }, [atual, total]);
+
+  // Setas do teclado trocam o passo (menos quando ele está escrevendo).
+  useEffect(() => {
+    if (!explicacao || conversaAberta) return;
+    const tecla = (e: KeyboardEvent) => {
+      const alvo = e.target as HTMLElement | null;
+      if (alvo && /^(INPUT|TEXTAREA|SELECT)$/.test(alvo.tagName)) return;
+      if (e.key === 'ArrowRight') ir(atual + 1);
+      if (e.key === 'ArrowLeft') ir(atual - 1);
+    };
+    window.addEventListener('keydown', tecla);
+    return () => window.removeEventListener('keydown', tecla);
+  }, [explicacao, conversaAberta, atual, ir]);
 
   if (!explicacao) {
     return (
@@ -172,160 +216,128 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
     );
   }
 
-  const total = explicacao.passos.length;
-  const terminou = passosVisiveis >= total;
-  const passoAtual = explicacao.passos[passosVisiveis - 1];
+  const tela = telas[atual];
+  const temLadoDireito = tela.tipo === 'fim' ? !!explicacao.checagem : tela.tipo === 'passo' && !!tela.visual;
   const sobreAQuestao = (
-    <>
+    <div className="space-y-4">
       {explicacao.seuErro && (
-        <div className="rounded-[var(--radius-control)] border p-4"
-          style={{ backgroundColor: 'hsl(var(--danger-surface))', borderColor: 'hsl(var(--danger-border))' }}>
+        <div className="rounded-[var(--radius-control)] border p-4" style={{ backgroundColor: 'hsl(var(--danger-surface))', borderColor: 'hsl(var(--danger-border))' }}>
           <p className="type-caption font-semibold mb-1" style={{ color: 'hsl(var(--danger))' }}>Onde seu raciocínio desviou</p>
           <MathText text={explicacao.seuErro} className="font-reading" />
         </div>
       )}
-      {explicacao.pecas.length > 0 && (
-        <dl className="flex flex-wrap gap-2">
-          {explicacao.pecas.map((p) => (
-            <div key={p.termo} className="rounded-[var(--radius-control)] bg-muted/60 px-3 py-2 max-w-sm">
-              <dt className="type-meta font-semibold">{p.termo}</dt>
-              <dd className="type-meta text-muted-foreground"><MathText text={p.significado} /></dd>
-            </div>
-          ))}
-        </dl>
-      )}
-    </>
+      <Pecas explicacao={explicacao} />
+    </div>
   );
 
   return (
     <NaoEntendiContext.Provider value={(texto) => { void perguntar(texto); }}>
-    <section className="surface-1 rounded-[var(--radius-surface)] p-5 md:p-6 space-y-5 lg:space-y-4" aria-label="Explicação">
-      {lateral && telaGrande ? createPortal(<div className="space-y-4">{sobreAQuestao}</div>, lateral) : sobreAQuestao}
+      {erroNaLateral && lateral && createPortal(sobreAQuestao, lateral)}
+      <section
+        ref={cartao}
+        aria-label="Explicação"
+        className="relative surface-1 rounded-[var(--radius-surface)] p-4 md:p-6 grid grid-rows-[auto_minmax(0,1fr)_auto] gap-3 md:gap-4 h-[calc(100dvh-5.5rem)] md:h-[calc(100dvh-2rem)] max-h-[760px] min-h-[460px] scroll-mt-20 md:scroll-mt-4"
+      >
+        <div className="flex items-center justify-between gap-3">
+          <span className="type-meta text-muted-foreground whitespace-nowrap" data-numeric>Passo {atual + 1} de {total}</span>
+          <nav className="flex gap-1.5" aria-label="Passos">
+            {telas.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => ir(i)}
+                aria-label={`Ir para o passo ${i + 1}`}
+                aria-current={i === atual ? 'step' : undefined}
+                className={`h-2 w-6 md:w-7 rounded-full t-colors ${i === atual ? 'bg-primary' : i < atual ? 'bg-primary/30' : 'bg-border'}`}
+              />
+            ))}
+          </nav>
+        </div>
 
-      <div>
-        <p className="type-caption text-muted-foreground mb-1">A ideia</p>
-        <div className="font-display type-lead font-semibold"><MathText text={explicacao.ideia} /></div>
-      </div>
-
-      {/* Um passo por vez: o botão troca o passo em vez de empilhar, para a
-          tela não rolar (Pablo, 15/10/2026, opção A com o quadro do B). */}
-      {/* A troca desliza no sentido do clique (21/10/2026): antes o passo
-          trocava seco e não dava para sentir que avançou. */}
-      <AnimatePresence mode="wait" initial={false} custom={sentido}>
-        {passoAtual && (
+        <AnimatePresence mode="wait" initial={false} custom={sentido}>
           <motion.div
-            key={passosVisiveis}
+            key={atual}
             custom={sentido}
             variants={DESLIZE_DO_PASSO}
             initial="entra"
             animate="parado"
             exit="sai"
-            transition={{ duration: 0.18, ease: [0.25, 1, 0.5, 1] }}
-            className="space-y-3"
+            transition={{ duration: 0.2, ease: [0.25, 1, 0.5, 1] }}
+            className={`min-h-0 grid gap-4 md:gap-8 ${temLadoDireito ? 'grid-rows-[auto_minmax(0,1fr)] md:grid-rows-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]' : 'grid-rows-1'} items-center`}
           >
-            <p className="type-caption text-muted-foreground" data-numeric>Passo {passosVisiveis} de {total}</p>
-            {passoAtual.visual && <VisualDesenho visual={passoAtual.visual} />}
-            <h3 className="font-display type-body font-semibold">{passoAtual.titulo}</h3>
-            <MathText text={passoAtual.texto} className="font-reading" />
+            <div className={`grid gap-2 md:gap-3 content-center min-w-0 ${temLadoDireito ? '' : 'max-w-2xl mx-auto text-center justify-items-center'}`}>
+              <p className="type-caption font-semibold uppercase tracking-[0.08em] text-primary-text">{tela.rotulo}</p>
+              <h3 className={`font-display font-bold leading-snug text-balance ${tela.tipo === 'erro' ? 'text-[clamp(1.3rem,0.9rem+1.6vw,2.3rem)]' : 'text-[clamp(1.1rem,0.85rem+1vw,1.75rem)]'}`}>
+                <MathText text={tela.titulo} />
+              </h3>
+              {tela.texto && <MathText text={tela.texto} className="font-reading type-lead" />}
+              {/* No celular as peças roubavam o lugar do desenho; a legenda já diz o que cada letra é. */}
+              {tela.tipo === 'passo' && tela.comPecas && <div className="hidden md:block"><Pecas explicacao={explicacao} /></div>}
+            </div>
+            {temLadoDireito && (
+              <div className="min-h-0 h-full min-w-0 rounded-[var(--radius-surface)] border border-border bg-[hsl(var(--surface-2))] p-2 md:p-4">
+                <CaberNaCaixa>
+                  {tela.tipo === 'passo' && tela.visual && <VisualDesenho visual={tela.visual} semMoldura />}
+                  {tela.tipo === 'fim' && explicacao.checagem && <SuaVez checagem={explicacao.checagem} />}
+                </CaberNaCaixa>
+              </div>
+            )}
           </motion.div>
-        )}
-      </AnimatePresence>
+        </AnimatePresence>
 
-      <div className="flex items-center gap-3">
-        {passosVisiveis > 1 && (
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-3">
           <button
-            onClick={() => { setSentido(-1); setPassosVisiveis((n) => n - 1); }}
-            className="flex items-center gap-1.5 px-3 py-2.5 rounded-[var(--radius-control)] border border-border type-meta text-muted-foreground hover:text-foreground hover:bg-muted t-colors"
+            onClick={() => ir(atual - 1)}
+            disabled={atual === 0}
+            className="justify-self-start min-h-12 px-5 md:px-7 rounded-[var(--radius-control)] bg-primary/10 text-primary-text font-semibold type-body t-colors hover:bg-primary/15 disabled:opacity-30 active:scale-[0.97]"
           >
-            <ArrowLeft className="w-4 h-4" /> Passo anterior
+            Voltar
           </button>
-        )}
-        {!terminou && (
           <button
-            onClick={() => { setSentido(1); setPassosVisiveis((n) => n + 1); }}
-            className="flex items-center gap-2 px-4 py-2.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-1 t-colors hover:bg-[hsl(var(--primary-hover))]"
+            onClick={() => setConversaAberta(true)}
+            aria-label="Perguntar para a IA sobre a explicação"
+            title="Perguntar para a IA"
+            className="w-11 h-11 grid place-items-center rounded-full text-muted-foreground hover:text-primary-text hover:bg-primary/10 t-colors active:scale-95"
           >
-            Próximo passo <ArrowRight className="w-4 h-4" />
+            <Sparkles className="w-5 h-5" />
           </button>
-        )}
-      </div>
-
-      {terminou && explicacao.checagem && (
-        <div className="rounded-[var(--radius-control)] border border-border p-4">
-          <p className="type-caption text-muted-foreground mb-1">Responda de cabeça, sem olhar</p>
-          <MathText text={explicacao.checagem.pergunta} className="font-reading font-medium" />
-          {respostaChecagemAberta ? (
-            <div className="mt-2 text-muted-foreground"><MathText text={explicacao.checagem.resposta} className="font-reading" /></div>
-          ) : (
-            <button onClick={() => setRespostaChecagemAberta(true)} className="mt-2 flex items-center gap-1.5 type-meta text-primary-text font-medium hover:underline underline-offset-4">
-              <Eye className="w-4 h-4" /> Conferir
-            </button>
-          )}
+          <button
+            onClick={() => ir(atual + 1)}
+            disabled={atual === total - 1}
+            className="justify-self-end min-h-12 px-5 md:px-7 rounded-[var(--radius-control)] bg-primary text-primary-foreground font-semibold type-body shadow-elev-1 t-colors hover:bg-[hsl(var(--primary-hover))] disabled:opacity-30 active:scale-[0.97]"
+          >
+            Próximo
+          </button>
         </div>
-      )}
 
-      {/* A conversa fica aberta desde o primeiro passo: o "Não entendi" do
-          quadro manda a pergunta para cá, e antes ela só aparecia no último
-          passo, então o botão parecia não fazer nada (Pablo, 08/10/2026). */}
-      <div className="border-t border-border pt-4 space-y-3">
-          <p className="type-caption text-muted-foreground lg:hidden">Não entendeu alguma parte? Pergunte para a IA do seu jeito.</p>
-          {mensagens.length > 0 && (
-            <div className="space-y-3 lg:max-h-60 lg:overflow-y-auto lg:pr-1" aria-live="polite">
-              {mensagens.map((m, i) => (
-                <div key={i} className={m.papel === 'aluno' ? 'flex justify-end' : ''}>
-                  <div className={m.papel === 'aluno'
-                    ? 'max-w-[85%] rounded-[var(--radius-control)] bg-primary/10 px-3 py-2 type-meta'
-                    : 'space-y-2'}>
-                    {m.papel === 'tutor' && m.visual && <VisualDesenho visual={m.visual} />}
-                    <MathText text={m.texto} className={m.papel === 'aluno' ? undefined : 'font-reading'} />
-                  </div>
-                </div>
-              ))}
-              {respondendo && (
-                <div className="flex items-center gap-2 text-muted-foreground type-meta" role="status">
-                  <Loader2 className="w-4 h-4 animate-spin" /> Pensando...
-                </div>
-              )}
-              <div ref={fimDaConversa} />
-            </div>
+        <AnimatePresence>
+          {conversaAberta && (
+            <PergunteAIa
+              mensagens={mensagens}
+              respondendo={respondendo}
+              falhou={falhaConversa}
+              rascunho={rascunho}
+              aoEscrever={setRascunho}
+              aoPerguntar={(t) => { void perguntar(t); }}
+              aoFechar={() => setConversaAberta(false)}
+            />
           )}
-          {mensagens.length === 0 && terminou && (
-            <div className="flex flex-wrap gap-2">
-              {SUGESTOES.map((s) => (
-                <button key={s} onClick={() => perguntar(s)}
-                  className="px-3 py-1.5 rounded-[var(--radius-control)] border border-border type-meta hover:bg-muted t-colors">
-                  {s}
-                </button>
-              ))}
-            </div>
-          )}
-          {falhaConversa && (
-            <p className="type-meta text-[hsl(var(--danger))]" role="alert">Não consegui responder agora. Envie de novo.</p>
-          )}
-      </div>
-      {/* Fora da conversa, filho direto da seção: assim fica preso embaixo da
-          coluna que rola na tela grande, sempre à vista (Pablo, 15/10/2026). */}
-      <form
-        onSubmit={(e) => { e.preventDefault(); perguntar(rascunho); }}
-        className="flex items-end gap-2 lg:sticky lg:bottom-0 lg:-mx-6 lg:-mb-6 lg:px-6 lg:pb-6 lg:pt-3 bg-[hsl(var(--surface-1))] rounded-b-[var(--radius-surface)]"
-      >
-        <label htmlFor="duvida-tutor" className="sr-only">Sua dúvida</label>
-        <textarea
-          id="duvida-tutor"
-          value={rascunho}
-          onChange={(e) => setRascunho(e.target.value)}
-          onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); perguntar(rascunho); } }}
-          rows={1}
-          maxLength={1200}
-          placeholder="Não entendeu? Pergunte aqui..."
-          className="flex-1 resize-none p-3 border border-input rounded-[var(--radius-control)] font-reading text-body bg-[hsl(var(--surface-2))] focus:outline-none"
-        />
-        <button type="submit" disabled={respondendo || !rascunho.trim()} aria-label="Enviar dúvida"
-          className="p-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] disabled:opacity-50 t-colors hover:bg-[hsl(var(--primary-hover))]">
-          <Send className="w-4 h-4" />
-        </button>
-      </form>
-    </section>
+        </AnimatePresence>
+      </section>
     </NaoEntendiContext.Provider>
+  );
+}
+
+/* O que cada termo é, em chips pequenos, no primeiro passo (pré-treino). */
+function Pecas({ explicacao }: { explicacao: Explicacao }) {
+  if (explicacao.pecas.length === 0) return null;
+  return (
+    <dl className="flex flex-wrap gap-2 text-left">
+      {explicacao.pecas.map((p) => (
+        <div key={p.termo} className="rounded-[var(--radius-control)] bg-muted/60 px-3 py-2 max-w-xs">
+          <dt className="type-meta font-semibold">{p.termo}</dt>
+          <dd className="type-meta text-muted-foreground"><MathText text={p.significado} /></dd>
+        </div>
+      ))}
+    </dl>
   );
 }

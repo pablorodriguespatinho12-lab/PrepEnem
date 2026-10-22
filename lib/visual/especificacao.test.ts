@@ -224,3 +224,13 @@ test('quadro já validado continua igual (explicação guardada no cache)', () =
   const v = validarVisual({ tipo: 'quadro', dados: ['m = massa do corpo', 'v = 4,5'], formula: '$E_c = \\frac{1}{2}mv^2$', contas: ['E_c = 2 \\cdot 4,5'], resultado: 'E_c = 9\\,\\text{J}' });
   expect(validarVisual(v)).toEqual(v);
 });
+
+describe('legenda (fórmula com o que cada pedaço é)', () => {
+  test('guarda as partes com texto e rótulo', () => {
+    const v = validarVisual({ tipo: 'legenda', partes: [{ texto: 'p(d)', rotulo: 'quantos peixes', cor: 'a' }, { texto: '+20', rotulo: 'peixes do começo' }] });
+    expect(v).toEqual({ tipo: 'legenda', titulo: undefined, partes: [{ texto: 'p(d)', rotulo: 'quantos peixes', cor: 'a' }, { texto: '+20', rotulo: 'peixes do começo' }] });
+  });
+  test('com menos de 2 partes não desenha', () => {
+    expect(validarVisual({ tipo: 'legenda', partes: [{ texto: 'p', rotulo: 'peixes' }, { texto: 'd' }] })).toBeNull();
+  });
+});

@@ -76,9 +76,9 @@ describe('validarExplicacao limpa o texto da IA', () => {
     expect(e.passos[0].texto).toBe('Olha isso.');
     expect(e.seuErro).toBe('Errou a conta.');
   });
-  test('no máximo 4 passos', () => {
-    const e = validarExplicacao({ ideia: 'Ok.', passos: Array.from({ length: 7 }, (_, i) => passo(`Passo ${i}.`)) })!;
-    expect(e.passos).toHaveLength(4);
+  test('no máximo 6 passos (a pergunta → o que acontece → jeito rápido → por que funciona → a resposta)', () => {
+    const e = validarExplicacao({ ideia: 'Ok.', passos: Array.from({ length: 8 }, (_, i) => passo(`Passo ${i}.`)) })!;
+    expect(e.passos).toHaveLength(6);
   });
   test('ideia fica nas 2 primeiras frases', () => {
     const e = validarExplicacao({ ideia: 'A planta precisa de energia. Carboidrato é energia. Sem ele, ela morre. E mais.', passos: [passo('x.')] })!;
@@ -239,4 +239,15 @@ test('termo em inglês que escapa vira português', () => {
   const r = validarExplicacao({ ideia: 'O endosperm alimenta o embrião.', passos: [{ titulo: 'Genotype', texto: 'Cada pai tem genotype Aa.' }] });
   expect(r?.ideia).toBe('O endosperma alimenta o embrião.');
   expect(r?.passos[0]).toMatchObject({ titulo: 'genótipo', texto: 'Cada pai tem genótipo Aa.' });
+});
+
+test('"sua vez" com opções guarda opções e a certa', () => {
+  const r = validarExplicacao({ ideia: 'Ok.', passos: [{ titulo: 'A', texto: 'B.' }],
+    checagem: { pergunta: 'Em que dia é o topo?', resposta: 'Dia 3.', opcoes: ['Dia 2', 'Dia 3', 'Dia 6'], certa: 'Dia 3' } });
+  expect(r?.checagem).toMatchObject({ opcoes: ['Dia 2', 'Dia 3', 'Dia 6'], certa: 'Dia 3' });
+});
+test('"sua vez" com a certa fora das opções fica só com pergunta e resposta', () => {
+  const r = validarExplicacao({ ideia: 'Ok.', passos: [{ titulo: 'A', texto: 'B.' }],
+    checagem: { pergunta: 'Em que dia?', resposta: 'Dia 3.', opcoes: ['Dia 2', 'Dia 6'], certa: 'Dia 3' } });
+  expect(r?.checagem).toEqual({ pergunta: 'Em que dia?', resposta: 'Dia 3.' });
 });

@@ -10,7 +10,8 @@ export interface Explicacao {
   pecas: { termo: string; significado: string }[];
   passos: PassoExplicacao[];
   seuErro: string | null;
-  checagem: { pergunta: string; resposta: string } | null;
+  /* "Sua vez": com opções, o aluno toca na resposta (Pablo, 22/10/2026). */
+  checagem: { pergunta: string; resposta: string; opcoes?: string[]; certa?: string } | null;
 }
 
 export interface RespostaTutor { resposta: string; visual: Visual | null }
@@ -132,8 +133,9 @@ const visualDaMateria = (v: Visual | null, materia?: string): Visual | null => {
 };
 /* ENEM não cobra cálculo, e o prompt já proíbe; mesmo assim a IA deduziu
    energia cinética com integral numa questão de Física Base (Pablo,
-   15/10/2026: "integral em lugar que não é para aparecer"). Passo assim sai. */
-const CALCULO = /\\int|\\oint|\\lim\b|\\partial|\\frac\{d[a-z]?\}\{d[a-z]\}|\bd[a-z]\s*=\s*[a-z]\s*\\?,?\s*d[a-z]\b|∫/;
+   15/10/2026: "integral em lugar que não é para aparecer"). Passo assim sai.
+   "A derivada de p(d) é 2ad + b" no vértice dos peixes (22/10/2026) também. */
+const CALCULO = /\bderivad|\\int|\\oint|\\lim\b|\\partial|\\frac\{d[a-z]?\}\{d[a-z]\}|\bd[a-z]\s*=\s*[a-z]\s*\\?,?\s*d[a-z]\b|∫/;
 export const temCalculo = (passo: unknown): boolean => CALCULO.test(JSON.stringify(passo));
 /* A IA às vezes põe a explicação dentro do termo: "conjugação (alternância de
    ligações simples e duplas ao longo da cadeia)". O termo tem teto de 60
@@ -162,13 +164,16 @@ function comAlgumDesenho(passos: PassoExplicacao[], pecas: { termo: string; sign
   const [primeiro, ...resto] = passos;
   return [{ ...primeiro, visual: validarVisual(reserva) }, ...resto];
 }
+/* A pergunta → o que acontece → jeito rápido → por que funciona → a resposta
+   (o passo a passo que o Pablo aprovou em 22/10/2026), com folga de um. */
+const MAX_PASSOS = 6;
 export function validarExplicacao(bruto: unknown, materia?: string): Explicacao | null {
   const e = objeto(bruto);
   const passos = lista(e.passos).map(objeto)
     .filter((p) => !temCalculo(p))
     .map((p) => ({ titulo: texto(p.titulo, 80), texto: texto(p.texto, 900), visual: visualDaMateria(validarVisual(p.visual), materia) }))
     .filter((p): p is PassoExplicacao => p.titulo !== null && p.texto !== null)
-    .slice(0, 4);
+    .slice(0, MAX_PASSOS);
   const ideia = texto(e.ideia, 300, 2);
   if (!ideia || passos.length === 0) return null;
   const pecas = lista(e.pecas).map(objeto).map(separarTermo)
@@ -178,12 +183,15 @@ export function validarExplicacao(bruto: unknown, materia?: string): Explicacao 
   const c = objeto(e.checagem);
   const pergunta = texto(c.pergunta, 300);
   const resposta = texto(c.resposta, 400);
+  const opcoes = lista(c.opcoes).map((o) => texto(o, 60)).filter((o): o is string => !!o).slice(0, 4);
+  const certa = texto(c.certa, 60);
+  const comOpcoes = opcoes.length >= 2 && !!certa && opcoes.includes(certa) ? { opcoes, certa } : {};
   return {
     ideia,
     pecas,
     passos: comAlgumDesenho(passos, pecas),
     seuErro: erroConfiavel(texto(e.seuErro, 700)),
-    checagem: pergunta && resposta ? { pergunta, resposta } : null,
+    checagem: pergunta && resposta ? { pergunta, resposta, ...comOpcoes } : null,
   };
 }
 

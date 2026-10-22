@@ -13,6 +13,7 @@ import { Quadro } from './quadro';
 import { QuadroEscola } from './quadro-escola';
 import { Molecula } from './molecula';
 import { Palavra } from './palavra';
+import { Legenda } from './legenda';
 import { ALTURA, COR, EIXO, Eixos, Grafico, HALO, LARGURA, Latex, MARGEM, corDe, escala } from './grafico';
 import { Cena } from './cena';
 import { Roda } from './roda';
@@ -145,12 +146,15 @@ function GraficoDesenhando({ v }: { v: VisualGrafico }) {
 }
 const INTERATIVOS: Visual['tipo'][] = ['cena', 'roda', 'retangulo', 'fatias'];
 
-export function VisualDesenho({ visual }: { visual: Visual }) {
+/* semMoldura: quem já põe o desenho num cartão (o passo da explicação) não
+   quer moldura dentro de moldura, que deixava o desenho pequeno (22/10/2026). */
+export function VisualDesenho({ visual, semMoldura = false }: { visual: Visual; semMoldura?: boolean }) {
   return (
-    <figure className="rounded-[var(--radius-control)] border border-border bg-[hsl(var(--surface-2))] p-3">
+    <figure className={semMoldura ? '' : 'rounded-[var(--radius-control)] border border-border bg-[hsl(var(--surface-2))] p-3'}>
       {/* Nos desenhos que se mexem, o título do passo já diz o que é; o título
           extra ("Mexa no relógio...") só poluía (Pablo, 06/10/2026). */}
       {visual.titulo && !INTERATIVOS.includes(visual.tipo) && <figcaption className="type-meta font-medium text-muted-foreground mb-2">{visual.titulo}</figcaption>}
+      {visual.tipo === 'legenda' && <Legenda v={visual} />}
       {visual.tipo === 'quadro' && <QuadroEscola v={visual} />}
       {visual.tipo === 'grafico' && <GraficoDesenhando v={visual} />}
       {visual.tipo === 'reta' && <Reta v={visual} />}

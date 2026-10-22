@@ -75,6 +75,15 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   usa a cor atual da matéria (`corDoBaralho`), não a gravada no seed.
 
 ## Conteúdo gerado por IA
+- **Explicação = o artefato dos peixes (Pablo, 22/10/2026: "perfeito, fala
+  para a IA fazer exatamente assim"):** uma tela por passo, nada rola (o desenho
+  encolhe em `CaberNaCaixa`), pontinhos, Voltar/Próximo. Nome do passo pequeno
+  em teal, o texto em destaque, desenho à direita (embaixo no celular). Ordem:
+  A pergunta (visual `legenda`: a fórmula com o que cada pedaço é) → O que
+  acontece → Jeito rápido (quadro) → Por que funciona (vértice SEMPRE pelo
+  espelho; derivada derruba o passo) → A resposta → Sua vez (opções de tocar).
+  Perguntar à IA: ícone discreto no meio, embaixo, abre por cima do passo.
+  Artefato de referência: claude.ai/artifact/BkAg7rxYtof11vRoPMmvWu.
 
 - **Zero emoji** em explicações, feedback ou UI. Hierarquia se faz com
   tipografia (peso, tamanho, cor), não com ícone decorativo.

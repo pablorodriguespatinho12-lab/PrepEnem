@@ -164,7 +164,15 @@ export interface VisualQuadro {
   resultado: string;
   nota?: string;
 }
-export type Visual = VisualQuadro | VisualPalavra | VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula;
+/* A fórmula da questão com o que cada pedaço quer dizer escrito embaixo
+   (Pablo, 22/10/2026, no artefato dos peixes: "p = quantos peixes, d = o dia").
+   Abre a explicação de toda questão com fórmula. */
+export interface VisualLegenda {
+  tipo: 'legenda';
+  titulo?: string;
+  partes: { texto: string; rotulo: string; cor?: CorVisual }[];
+}
+export type Visual = VisualLegenda | VisualQuadro | VisualPalavra | VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula;
 
 const MAX_FUNCOES = 4;
 const MAX_PONTOS = 8;
@@ -446,8 +454,17 @@ function palavra(v: Record<string, unknown>): VisualPalavra | null {
     nota: texto(v.nota, 140),
   };
 }
+const MAX_PARTES_LEGENDA = 6;
+function formulaComLegenda(v: Record<string, unknown>): VisualLegenda | null {
+  const partes = lista(v.partes).map(objeto)
+    .map((p) => ({ texto: texto(p.texto, 60), rotulo: texto(p.rotulo, 48), cor: cor(p.cor) }))
+    .filter((p): p is { texto: string; rotulo: string; cor: CorVisual | undefined } => !!p.texto && !!p.rotulo)
+    .map(({ cor: c, ...resto }) => (c ? { ...resto, cor: c } : resto))
+    .slice(0, MAX_PARTES_LEGENDA);
+  return partes.length >= 2 ? { tipo: 'legenda', titulo: texto(v.titulo), partes } : null;
+}
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {
-  quadro, grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias, processo, molecula, palavra,
+  legenda: formulaComLegenda, quadro, grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias, processo, molecula, palavra,
 };
 
 /* Devolve o visual limpo, ou null se não der para desenhar com segurança. */
@@ -461,6 +478,8 @@ export function validarVisual(bruto: unknown): Visual | null {
 export const FORMATO_VISUAL_PARA_IA = `"visual" é um destes objetos (ou null). O app desenha a partir dele; você nunca manda imagem.
 - Gráfico de função: {"tipo":"grafico","titulo":"...","funcoes":[{"expr":"x^2-4","rotulo":"f(x)","cor":"a"}],"pontos":[{"x":2,"y":0,"rotulo":"raiz","cor":"b"}],"x":[-4,4],"y":[-5,6]}
   expr usa só x, números, + - * / ^, parênteses, sqrt, sin, cos, tan, ln, log, abs, exp, pi. Escolha x e y para que o que importa (raízes, vértice, cruzamentos) apareça. Ponto com "aberto": true é bolinha vazia: furo onde a função não tem valor, ou ponta que não entra.
+- Legenda (PRIMEIRO passo de toda questão com fórmula: o que cada pedaço quer dizer): {"tipo":"legenda","partes":[{"texto":"p(d)","rotulo":"quantos peixes no dia d","cor":"a"},{"texto":"-0{,}5d^2","rotulo":"peixes que somem"},{"texto":"+4d","rotulo":"peixes que nascem"},{"texto":"+20","rotulo":"peixes do começo"}]}
+  "texto" é LaTeX sem $; juntas, as partes formam a fórmula da questão. "rotulo" em palavras do dia a dia, até 5 palavras.
 - Reta numérica (inequação, intervalo): {"tipo":"reta","de":-5,"ate":5,"marcas":[{"x":2,"rotulo":"2"}],"trechos":[{"de":2,"ate":5,"rotulo":"x ≥ 2","fechadoDe":true,"fechadoAte":false,"cor":"a"}]}
 - Quadro (TODA conta de Matemática, Física e Química, como o professor resolve no quadro): {"tipo":"quadro","dados":["v_0 = 0","v = 72\\\\,\\\\text{km/h} = 20\\\\,\\\\text{m/s}","\\\\Delta t = 10\\\\,\\\\text{s}"],"formula":"a = \\\\dfrac{\\\\Delta v}{\\\\Delta t}","legenda":["$\\\\Delta v$: quanto a velocidade mudou","$\\\\Delta t$: em quanto tempo mudou"],"contas":["a = \\\\dfrac{20 - 0}{10}","a = \\\\dfrac{20}{10}"],"resultado":"a = 2\\\\,\\\\text{m/s}^2","nota":"A cada segundo, a velocidade sobe 2 m/s."}
   O app desenha um quadro branco e escreve à mão: os "dados" à esquerda (cada valor que a questão deu, com letra e unidade, um por linha; conversão de unidade vai aqui), a "formula" geral no alto, a "legenda" (até 3: o que cada letra da fórmula É, em palavras), as "contas" embaixo dela (a fórmula com os números no lugar das letras, depois cada simplificação, uma por linha) e o "resultado" em verde. "nota" é 1 frase curta do que o resultado quer dizer. Tudo em LaTeX sem $, menos a legenda.
