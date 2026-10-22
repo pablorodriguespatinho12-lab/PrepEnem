@@ -37,6 +37,27 @@ const CARDS: { frente: string; verso: string; capitulo?: number }[] = [
   { frente: 'Não foi sorte', verso: 'Shasta entende que chegar até ali não foi sorte. Alguém grande o guiava.', capitulo: 12 },
   { frente: 'O cavalo sensato', verso: 'Bree admite que foi tolo. Aslan diz que é feliz o cavalo que aprende isso cedo.', capitulo: 14 },
   { frente: 'O orgulho paga', verso: 'O príncipe orgulhoso sofre as consequências do que fez. Arrogância tem preço.', capitulo: 15 },
+  // Por capítulo: o resumo e uma frase para pregar (pedido do Pablo, 22/10/2026).
+  {
+    frente: 'Capítulo 1',
+    verso: 'Shasta descobre que o pescador não é seu pai e que vai ser vendido como escravo. Bree, um cavalo falante, chama Shasta para fugirem juntos para Nárnia.',
+    capitulo: 1,
+  },
+  {
+    frente: 'Capítulo 1 · para pregar',
+    verso: 'Como Shasta em O Cavalo e Seu Menino: ele vivia como escravo porque não sabia de onde vinha. Em Cristo, "já não és escravo, mas filho" (Gálatas 4:7).',
+    capitulo: 1,
+  },
+  {
+    frente: 'Capítulo 2',
+    verso: 'Na viagem, leões perseguem Shasta e Bree. A fuga junta os dois com Aravis e a égua falante Huin, que também fogem para Nárnia. Viram companheiros.',
+    capitulo: 2,
+  },
+  {
+    frente: 'Capítulo 2 · para pregar',
+    verso: 'Como em O Cavalo e Seu Menino: o susto dos leões parecia azar, mas foi ele que juntou os amigos. "O coração do homem planeja o seu caminho, mas o Senhor lhe dirige os passos" (Provérbios 16:9).',
+    capitulo: 2,
+  },
 ];
 
 async function main() {

@@ -12,23 +12,28 @@ const DECK = {
   descricao: 'Um diabo velho ensina o sobrinho a tentar um homem. Uma lição por carta.',
 };
 
+// Por carta, dois cartões: o resumo e uma frase para pregar (pedido do Pablo, 22/10/2026).
 const CARDS: { frente: string; verso: string; capitulo?: number }[] = [
-  // Antes de ler
-  { frente: 'O livro', verso: 'Cartas de um Diabo a seu Aprendiz, de C.S. Lewis (1942).' },
-  { frente: 'Quem escreve', verso: 'Fitafuso, um diabo experiente, escreve ao sobrinho Vermebile, um diabo novato.' },
-  { frente: 'O "paciente"', verso: 'Um homem comum que Vermebile precisa afastar de Deus.' },
-  { frente: 'O truque do livro', verso: 'Tudo é dito pelo avesso: o que o diabo chama de bom, é ruim para nós.' },
-  // Carta 1
-  { frente: 'Carta 1: a ideia', verso: 'Não deixe o homem buscar a verdade. Faça ele achar que já é dono dela.', capitulo: 1 },
-  { frente: 'Carta 1: sem discussão', verso: 'Discutir faz o homem pensar. Melhor é ele julgar ideias por "moderna" ou "antiquada", não por verdadeira ou falsa.', capitulo: 1 },
-  { frente: 'Carta 1: falsa certeza', verso: 'O que ele pegou de conversa e leitura casual, ele acha que é "o resultado das pesquisas mais recentes".', capitulo: 1 },
-  { frente: 'Carta 1: a ciência', verso: 'O diabo evita a ciência de verdade: ela faz pensar no que não se vê. Alguns físicos acabaram crendo em Deus.', capitulo: 1 },
-  { frente: 'Carta 1: a lição', verso: 'Falta de humildade fecha a porta para a verdade. Quem acha que sabe tudo, para de procurar.', capitulo: 1 },
-  // Carta 2
-  { frente: 'Carta 2: a ideia', verso: 'O homem virou cristão. Agora o diabo quer que ele se decepcione com a igreja.', capitulo: 2 },
-  { frente: 'Carta 2: os vizinhos de banco', verso: 'Faça ele reparar em quem canta desafinado ou se veste mal, e concluir que a fé deve ser ridícula.', capitulo: 2 },
-  { frente: 'Carta 2: a igreja de verdade', verso: 'O diabo esconde que a Igreja é enorme, de todos os tempos e lugares. Ele só deixa ver o banco do lado.', capitulo: 2 },
-  { frente: 'Carta 2: a lição', verso: 'Todo começo empolgado tem um momento sem graça. Não confunda a decepção com as pessoas com a fé.', capitulo: 2 },
+  {
+    frente: 'Carta 1',
+    verso: 'O diabo não deixa o homem buscar a verdade: faz ele achar que já é dono dela. O que leu por alto vira "a pesquisa mais recente".',
+    capitulo: 1,
+  },
+  {
+    frente: 'Carta 1 · para pregar',
+    verso: 'Como em Cartas de um Diabo a seu Aprendiz: o diabo não precisa que a gente minta, só que a gente ache que já sabe tudo. "Quem pensa saber alguma coisa ainda não sabe como convém saber" (1 Coríntios 8:2).',
+    capitulo: 1,
+  },
+  {
+    frente: 'Carta 2',
+    verso: 'O homem virou cristão. Agora o diabo quer que ele se decepcione com a igreja, olhando os defeitos de quem está no banco do lado.',
+    capitulo: 2,
+  },
+  {
+    frente: 'Carta 2 · para pregar',
+    verso: 'Como em Cartas de um Diabo a seu Aprendiz: o diabo quer que você olhe para o irmão que canta desafinado, e não para Jesus. Corramos "olhando para Jesus" (Hebreus 12:2).',
+    capitulo: 2,
+  },
 ];
 
 async function main() {
@@ -58,6 +63,8 @@ async function main() {
       await prisma.flashcard.create({ data: { ...c, ordem, deckId: existente.id } });
     }
   }
+  // Cartões que sobraram de uma versão maior do deck.
+  await prisma.flashcard.deleteMany({ where: { deckId: existente.id, ordem: { gte: CARDS.length } } });
   console.log(`Atualizado: ${DECK.nome} (${CARDS.length} cartões)`);
 }
 
