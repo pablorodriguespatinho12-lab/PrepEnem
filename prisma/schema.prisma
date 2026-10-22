@@ -68,6 +68,7 @@ model Question {
   reviews             ReviewSchedule[]
   sessions            TrainingSessionQuestion[]
   customExamQuestions CustomExamQuestion[]
+  explicacaoPronta    ExplicacaoPronta?
 
   @@index([materia])
   @@index([dificuldade])
@@ -349,4 +350,22 @@ model CalculoLicaoGerada {
   conteudo  Json
   modelo    String?
   createdAt DateTime @default(now())
+}
+
+// Explicação da questão gerada antes, guardada e revisada (Pablo, 22/10/2026:
+// "já deixa várias prontas e você revisa"). Feita sem a alternativa marcada:
+// o "onde você desviou" é pedido à parte quando o aluno erra. `versao` sobe
+// quando o formato muda (lib/tutor/pronta.ts); versão velha é ignorada.
+model ExplicacaoPronta {
+  id         String   @id @default(cuid())
+  questionId String   @unique
+  versao     Int
+  conteudo   Json
+  revisada   Boolean  @default(false)
+  problemas  String?  // o que a revisão automática achou; vazio = passou
+  modelo     String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  @@index([versao, revisada])
 }

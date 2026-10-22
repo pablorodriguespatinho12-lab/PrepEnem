@@ -52,6 +52,7 @@ type Tela =
 
 function corpoDaQuestao(q: QuestaoTutor, respostaDada: string | null) {
   return {
+    questionId: q.id,
     enunciado: q.enunciado,
     alternativas: { A: q.alternativaA, B: q.alternativaB, C: q.alternativaC, D: q.alternativaD, E: q.alternativaE },
     respostaCorreta: q.respostaCorreta,
@@ -90,6 +91,8 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
   const [rascunho, setRascunho] = useState('');
   const [respondendo, setRespondendo] = useState(false);
   const cartao = useRef<HTMLElement>(null);
+  // Lido quando o "onde você desviou" chega depois: só desloca o passo atual se ele virou tela.
+  const erroVaiParaOLado = useRef(false);
 
   const gerar = useCallback(async () => {
     setCarregando(true);
@@ -107,6 +110,23 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
       }
       setExplicacao(data.explicacao);
       setAtual(0);
+      // Veio pronta do banco (feita sem saber o que ele marcou): se errou, o
+      // "onde você desviou" chega depois e entra como primeira tela.
+      const errou = !!respostaDada && respostaDada !== questao.respostaCorreta;
+      if (data.pronta && errou) {
+        fetch('/api/tutor/seu-erro', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(corpoDaQuestao(questao, respostaDada)),
+        })
+          .then((r) => (r.ok ? r.json() : null))
+          .then((d) => {
+            if (!d?.seuErro) return;
+            setExplicacao((e) => (e ? { ...e, seuErro: d.seuErro } : e));
+            if (!erroVaiParaOLado.current) setAtual((a) => (a > 0 ? a + 1 : a));
+          })
+          .catch(() => { /* sem o erro, a explicação segue completa */ });
+      }
       // Errou: a pergunta de fixação vira flashcard (api/flashcards/do-erro).
       const c = data.explicacao.checagem;
       if (c && respostaDada && respostaDada !== questao.respostaCorreta) {
@@ -172,6 +192,7 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
   };
 
   const erroNaLateral = !!lateral && telaGrande;
+  erroVaiParaOLado.current = erroNaLateral;
   const telas = explicacao ? montarTelas(explicacao, erroNaLateral) : [];
   const total = telas.length;
   const ir = useCallback((destino: number) => {

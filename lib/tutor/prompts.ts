@@ -94,7 +94,7 @@ ESTRUTURA (devolva SOMENTE JSON neste formato):
   "pecas": [{"termo": "só o nome, sem parêntese (ex.: \"anaeróbio\")", "significado": "o que é, em palavras simples, e um exemplo do dia a dia; até 2 frases curtas (ex.: \"Sem oxigênio. Como o esterco apodrecendo fechado num tanque.\")"}],
   "passos": [{"titulo": "até 6 palavras", "texto": "1 ou 2 frases", "visual": {"tipo": "quadro", "...": "o desenho deste passo, num dos formatos abaixo; null só quando a regra abaixo permite"}}],
   "seuErro": ${errou ? '"até 3 frases, falando com o aluno por «você» («você confundiu kWh com Wh»), nunca «o aluno» nem «eu»: UM caminho concreto que leva à alternativa marcada (em cálculo, a conta com os números DO ENUNCIADO que dá EXATAMENTE o número dela; confira antes, arredondamento não vale) e onde ele desvia. O caminho mais comum é usar o número da pegadinha. Nunca liste hipóteses com ou, nunca \"provavelmente\""' : 'null'},
-  "checagem": {"pergunta": "«Sua vez»: uma questão PARECIDA com outros números, em até 15 palavras, sem aspas (ex.: $p(d) = -d^2 + 6d + 10$. Em que dia é o topo?)", "opcoes": ["SEMPRE 3 ou 4 respostas curtas (até 4 palavras), uma certa"], "certa": "a opção certa, igual a uma das opcoes", "resposta": "a conta da resposta em uma frase (ex.: a = −1, b = 6: −6 ÷ (2 · −1) = 3)"}
+  "checagem": {"pergunta": "«Sua vez»: uma questão PARECIDA, nunca a mesma pergunta com outras palavras: com conta, outros números; sem conta, outro caso do mesmo assunto (pediu a etapa que mais faz ATP? pergunte a que faz menos). Em até 15 palavras, sem aspas (ex.: $p(d) = -d^2 + 6d + 10$. Em que dia é o topo?)", "opcoes": ["SEMPRE 3 ou 4 respostas curtas (até 4 palavras), uma certa; sem letra A) B) na frente"], "certa": "a opção certa, igual a uma das opcoes", "resposta": "a conta da resposta em uma frase (ex.: a = −1, b = 6: −6 ÷ (2 · −1) = 3)"}
 }
 
 REGRAS DA ESTRUTURA:
@@ -127,6 +127,14 @@ ${FORMATO_VISUAL_DA_EXPLICACAO}
 ${textoDaQuestao(q)}`;
 }
 
+/* "Onde você desviou" sozinho: a explicação veio pronta (feita sem saber o que
+   o aluno marcou) e só falta este pedaço. Prompt curto: cabe na cota. */
+export function promptSeuErro(q: QuestaoParaTutor): string {
+  return `O aluno errou esta questão. Resolva-a você mesmo com cuidado e escreva em até 3 frases curtas, falando com ele por «você», UM caminho concreto que leva à alternativa que ele marcou e onde ele desvia. Em conta, use os números DO ENUNCIADO e confira que dá EXATAMENTE o número da alternativa marcada; se não der, devolva null. Nunca "provavelmente", nunca liste hipóteses. Fórmula entre $...$. Zero emoji.
+Devolva SOMENTE JSON: {"seuErro": "..."}
+---
+${textoDaQuestao(q)}`;
+}
 export interface MensagemTutor { papel: 'aluno' | 'tutor'; texto: string }
 
 const MAX_HISTORICO = 12;

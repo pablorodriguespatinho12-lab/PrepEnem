@@ -195,6 +195,10 @@ export function validarExplicacao(bruto: unknown, materia?: string): Explicacao 
   };
 }
 
+/* Só o "onde você desviou", pedido à parte quando a explicação veio pronta. */
+export function validarSeuErro(bruto: unknown): string | null {
+  return erroConfiavel(texto(objeto(bruto).seuErro, 700));
+}
 export function validarRespostaTutor(bruto: unknown): RespostaTutor | null {
   const r = objeto(bruto);
   const resposta = texto(r.resposta, 1500);

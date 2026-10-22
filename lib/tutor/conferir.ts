@@ -78,7 +78,8 @@ function trocarEmTudo(e: Explicacao, de: string, para: string): Explicacao {
     pecas: e.pecas.map((p) => ({ termo: t(p.termo), significado: t(p.significado) })),
     passos: e.passos.map((p) => ({ ...p, titulo: t(p.titulo), texto: t(p.texto) })),
     seuErro: e.seuErro === null ? null : t(e.seuErro),
-    checagem: e.checagem && { pergunta: t(e.checagem.pergunta), resposta: t(e.checagem.resposta) },
+    // Mantém as opções do "Sua vez" (antes sumiam quando o verificador corrigia algo).
+    checagem: e.checagem && { ...e.checagem, pergunta: t(e.checagem.pergunta), resposta: t(e.checagem.resposta) },
   };
   return { ...e, ...campos };
 }
