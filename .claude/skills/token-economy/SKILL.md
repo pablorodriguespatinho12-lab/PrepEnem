@@ -55,6 +55,20 @@ numa sessão e é evitável.
   o formato do cookie do NextAuth. Isso agora está em
   [[verificacao-local]] — leia de lá em vez de redescobrir.
 
+- **Build em segundo plano: a notificação mente.** `npm run build > log; echo $?`
+  termina com o `echo`, e o "exit 0" é dele. Leia a linha de saída que o
+  próprio comando imprime, ou procure `Compiled successfully` no log
+  (logica-app, 26/09/2026: dois commits entraram com a cadeia parada assim).
+
+- **Subagente custa por CHAMADA, não por pedido.** Medido no logica-app
+  (28/08/2026): 130 mil tokens em 32 chamadas e 142 mil em 24, com pedido de 2
+  mil. Cole no pedido o que ele iria buscar. E **continuar um agente vivo com
+  `SendMessage` é mais barato que abrir outro** — o novo começa frio e relê tudo.
+
+- **Contexto curto: não comece frente nova.** Feche a aberta — build, commit
+  do que está pronto, uma linha do que faltou. Frente pela metade com contexto
+  no fim vira trabalho refeito.
+
 - **O maior dreno não é resolvível por skill.** As regras `ecc` em
   `~/.claude/rules/ecc/` carregam ~9.900 tokens em TODA sessão
   (`web/` + `common/` + `README.md`), e injeções por linguagem chegaram a
