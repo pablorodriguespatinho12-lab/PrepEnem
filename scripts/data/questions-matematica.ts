@@ -14,7 +14,7 @@ export const matematicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Porcentagem é um dos temas mais recorrentes no ENEM, aparecendo em contextos de descontos, juros, aumentos e estatísticas.\n\n🔍 INTERPRETAÇÃO: Aumento de 15% sobre R$ 200,00. Novo preço = preço original × (1 + taxa).\n\n✅ RESOLUÇÃO: 200 × 1,15 = 230. Ou: 15% de 200 = 30, logo 200 + 30 = 230. Alternativa D.\n\n❌ ALTERNATIVAS ERRADAS: A) 15/2=7,5% de 200. B) 10% de 200. C) 12,5% de 200. E) 20% de 200.\n\n💡 CONCEITO-CHAVE: Aumento: preço × (1 + i). Desconto: preço × (1 - i). Aumentos sucessivos: multiplica fatores.'
+    explicacao: 'CONTEXTO: Porcentagem é um dos temas mais recorrentes no ENEM, aparecendo em contextos de descontos, juros, aumentos e estatísticas.\n\nINTERPRETAÇÃO: Aumento de 15% sobre R$ 200,00. Novo preço = preço original × (1 + taxa).\n\nRESOLUÇÃO: 200 × 1,15 = 230. Ou: 15% de 200 = 30, logo 200 + 30 = 230. Alternativa D.\n\nALTERNATIVAS ERRADAS: A) 15/2=7,5% de 200. B) 10% de 200. C) 12,5% de 200. E) 20% de 200.\n\nCONCEITO-CHAVE: Aumento: preço × (1 + i). Desconto: preço × (1 - i). Aumentos sucessivos: multiplica fatores.'
   },
   {
     enunciado: 'Em uma sala de aula, há 30 alunos. Se 60% são meninas, quantos meninos há na sala?',
@@ -30,7 +30,7 @@ export const matematicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Problemas de porcentagem envolvendo complemento são frequentes no ENEM.\n\n🔍 INTERPRETAÇÃO: 60% meninas → 40% meninos. Total = 30.\n\n✅ RESOLUÇÃO: 40% de 30 = 0,40 × 30 = 12 meninos. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) ~33%. C) 50%. D) 60% (seria meninas). E) ~67%.\n\n💡 CONCEITO-CHAVE: Se X% é uma parte, (100-X)% é o complemento. 60% meninas → 40% meninos.'
+    explicacao: 'CONTEXTO: Problemas de porcentagem envolvendo complemento são frequentes no ENEM.\n\nINTERPRETAÇÃO: 60% meninas → 40% meninos. Total = 30.\n\nRESOLUÇÃO: 40% de 30 = 0,40 × 30 = 12 meninos. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) ~33%. C) 50%. D) 60% (seria meninas). E) ~67%.\n\nCONCEITO-CHAVE: Se X% é uma parte, (100-X)% é o complemento. 60% meninas → 40% meninos.'
   },
   {
     enunciado: 'A média aritmética dos valores 4, 7, 10 e 15 é:',
@@ -46,7 +46,7 @@ export const matematicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Média aritmética é uma medida de tendência central fundamental em estatística, muito cobrada no ENEM.\n\n🔍 INTERPRETAÇÃO: Média = soma dos valores / quantidade de valores.\n\n✅ RESOLUÇÃO: (4 + 7 + 10 + 15) / 4 = 36 / 4 = 9. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Média sem o 15. B) Cálculo incorreto. D) Mediana, não média. E) Soma /3.\n\n💡 CONCEITO-CHAVE: Média aritmética = Σxi / n. Mediana = valor central (dados ordenados). Moda = valor mais frequente.'
+    explicacao: 'CONTEXTO: Média aritmética é uma medida de tendência central fundamental em estatística, muito cobrada no ENEM.\n\nINTERPRETAÇÃO: Média = soma dos valores / quantidade de valores.\n\nRESOLUÇÃO: (4 + 7 + 10 + 15) / 4 = 36 / 4 = 9. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Média sem o 15. B) Cálculo incorreto. D) Mediana, não média. E) Soma /3.\n\nCONCEITO-CHAVE: Média aritmética = Σxi / n. Mediana = valor central (dados ordenados). Moda = valor mais frequente.'
   },
   {
     enunciado: 'Um terreno retangular tem 20 metros de comprimento e 15 metros de largura. Qual é sua área?',
@@ -62,7 +62,7 @@ export const matematicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A área do retângulo é uma das fórmulas mais básicas de geometria plana, essencial para o ENEM.\n\n🔍 INTERPRETAÇÃO: Retângulo com base = 20m e altura = 15m.\n\n✅ RESOLUÇÃO: A = base × altura = 20 × 15 = 300 m². Alternativa D.\n\n❌ ALTERNATIVAS ERRADAS: A) 2×(20+15)=70 é o perímetro. B) 20×10. C) 25×10. E) 35×10.\n\n💡 CONCEITO-CHAVE: Retângulo: A = b×h, P = 2(b+h). Quadrado: A = l². Triângulo: A = b×h/2. Círculo: A = πr².'
+    explicacao: 'CONTEXTO: A área do retângulo é uma das fórmulas mais básicas de geometria plana, essencial para o ENEM.\n\nINTERPRETAÇÃO: Retângulo com base = 20m e altura = 15m.\n\nRESOLUÇÃO: A = base × altura = 20 × 15 = 300 m². Alternativa D.\n\nALTERNATIVAS ERRADAS: A) 2×(20+15)=70 é o perímetro. B) 20×10. C) 25×10. E) 35×10.\n\nCONCEITO-CHAVE: Retângulo: A = b×h, P = 2(b+h). Quadrado: A = l². Triângulo: A = b×h/2. Círculo: A = πr².'
   },
   {
     enunciado: 'Se $f(x) = 3x - 2$, qual é o valor de $f(5)$?',
@@ -78,7 +78,7 @@ export const matematicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Funções são fundamentais na Matemática e no ENEM. A função afim (1º grau) tem a forma f(x) = ax + b.\n\n🔍 INTERPRETAÇÃO: Substituir x = 5 na expressão f(x) = 3x - 2.\n\n✅ RESOLUÇÃO: f(5) = 3(5) - 2 = 15 - 2 = 13. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) 3(4)-2. B) 3(5)-4. D) 3(5)+0. E) 3(5)+2.\n\n💡 CONCEITO-CHAVE: f(x) = ax + b: a = coeficiente angular (inclinação), b = coeficiente linear (intercepto). Para calcular f(k), substitua x por k.'
+    explicacao: 'CONTEXTO: Funções são fundamentais na Matemática e no ENEM. A função afim (1º grau) tem a forma f(x) = ax + b.\n\nINTERPRETAÇÃO: Substituir x = 5 na expressão f(x) = 3x - 2.\n\nRESOLUÇÃO: f(5) = 3(5) - 2 = 15 - 2 = 13. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) 3(4)-2. B) 3(5)-4. D) 3(5)+0. E) 3(5)+2.\n\nCONCEITO-CHAVE: f(x) = ax + b: a = coeficiente angular (inclinação), b = coeficiente linear (intercepto). Para calcular f(k), substitua x por k.'
   },
   {
     enunciado: 'Uma pizza foi dividida igualmente entre 5 pessoas. Cada pessoa comeu sua fatia e mais 1/5 de outra fatia que sobrou. Qual fração da pizza cada pessoa comeu no total?',
@@ -94,7 +94,7 @@ export const matematicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Operações com frações são essenciais para resolver problemas do ENEM, especialmente em contextos do cotidiano.\n\n🔍 INTERPRETAÇÃO: Cada pessoa recebeu 1/5 da pizza + 1/5 de 1/5 (uma fatia extra dividida por 5).\n\n✅ RESOLUÇÃO: 1/5 + 1/5 × 1/5 = 1/5 + 1/25 = 5/25 + 1/25 = 6/25. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) Apenas a fatia inicial. C) 25/100. D) 10/25. E) Cálculo diferente.\n\n💡 CONCEITO-CHAVE: Soma de frações: mesmo denominador → soma numeradores. Denominadores diferentes → MMC. Multiplicação: numera × numera / denom × denom.'
+    explicacao: 'CONTEXTO: Operações com frações são essenciais para resolver problemas do ENEM, especialmente em contextos do cotidiano.\n\nINTERPRETAÇÃO: Cada pessoa recebeu 1/5 da pizza + 1/5 de 1/5 (uma fatia extra dividida por 5).\n\nRESOLUÇÃO: 1/5 + 1/5 × 1/5 = 1/5 + 1/25 = 5/25 + 1/25 = 6/25. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) Apenas a fatia inicial. C) 25/100. D) 10/25. E) Cálculo diferente.\n\nCONCEITO-CHAVE: Soma de frações: mesmo denominador → soma numeradores. Denominadores diferentes → MMC. Multiplicação: numera × numera / denom × denom.'
   },
   {
     enunciado: 'Um carro percorre 360 km em 4 horas. Qual é a velocidade média do carro?',
@@ -110,7 +110,7 @@ export const matematicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Velocidade média é a razão entre distância percorrida e tempo gasto, sendo um conceito interdisciplinar (Matemática e Física).\n\n🔍 INTERPRETAÇÃO: V = d/t, com d = 360 km e t = 4h.\n\n✅ RESOLUÇÃO: V = 360/4 = 90 km/h. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) 280/4. B) 320/4. D) 400/4. E) 480/4.\n\n💡 CONCEITO-CHAVE: V = d/t. Para converter km/h em m/s: divida por 3,6. Velocidade média ≠ velocidade instantânea.'
+    explicacao: 'CONTEXTO: Velocidade média é a razão entre distância percorrida e tempo gasto, sendo um conceito interdisciplinar (Matemática e Física).\n\nINTERPRETAÇÃO: V = d/t, com d = 360 km e t = 4h.\n\nRESOLUÇÃO: V = 360/4 = 90 km/h. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) 280/4. B) 320/4. D) 400/4. E) 480/4.\n\nCONCEITO-CHAVE: V = d/t. Para converter km/h em m/s: divida por 3,6. Velocidade média ≠ velocidade instantânea.'
   },
   {
     enunciado: 'Qual é o valor de $2^5$?',
@@ -126,7 +126,7 @@ export const matematicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Potenciação é uma operação fundamental que aparece em diversas áreas da Matemática do ENEM.\n\n🔍 INTERPRETAÇÃO: $2^5$ significa 2 multiplicado por si mesmo 5 vezes.\n\n✅ RESOLUÇÃO: $2^5 = 2 \\times 2 \\times 2 \\times 2 \\times 2 = 32$. Alternativa D.\n\n❌ ALTERNATIVAS ERRADAS: A) 2×5. B) $2^4$. C) $5^2$. E) $2^6$.\n\n💡 CONCEITO-CHAVE: $a^n = a \\times a \\times ... \\times a$ (n vezes). $a^0 = 1$. $a^{-n} = 1/a^n$. $a^m \\times a^n = a^{m+n}$.'
+    explicacao: 'CONTEXTO: Potenciação é uma operação fundamental que aparece em diversas áreas da Matemática do ENEM.\n\nINTERPRETAÇÃO: $2^5$ significa 2 multiplicado por si mesmo 5 vezes.\n\nRESOLUÇÃO: $2^5 = 2 \\times 2 \\times 2 \\times 2 \\times 2 = 32$. Alternativa D.\n\nALTERNATIVAS ERRADAS: A) 2×5. B) $2^4$. C) $5^2$. E) $2^6$.\n\nCONCEITO-CHAVE: $a^n = a \\times a \\times ... \\times a$ (n vezes). $a^0 = 1$. $a^{-n} = 1/a^n$. $a^m \\times a^n = a^{m+n}$.'
   },
   {
     enunciado: 'Uma escada de 5 metros está apoiada em uma parede. Se a base da escada está a 3 metros da parede, a que altura da parede a escada atinge?',
@@ -142,7 +142,7 @@ export const matematicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: O Teorema de Pitágoras relaciona os lados de um triângulo retângulo: o quadrado da hipotenusa é igual à soma dos quadrados dos catetos.\n\n🔍 INTERPRETAÇÃO: Escada = hipotenusa (5m), distância da parede = cateto (3m), altura = cateto desconhecido.\n\n✅ RESOLUÇÃO: $5^2 = 3^2 + h^2 \\Rightarrow 25 = 9 + h^2 \\Rightarrow h^2 = 16 \\Rightarrow h = 4$m. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) $\\sqrt{25-9}$ mal calculado. B) Cateto dado. D) Hipotenusa. E) $\\sqrt{61}$.\n\n💡 CONCEITO-CHAVE: Pitágoras: $a^2 = b^2 + c^2$. Ternas pitagóricas: (3,4,5), (5,12,13), (8,15,17). Funciona APENAS em triângulos retângulos.'
+    explicacao: 'CONTEXTO: O Teorema de Pitágoras relaciona os lados de um triângulo retângulo: o quadrado da hipotenusa é igual à soma dos quadrados dos catetos.\n\nINTERPRETAÇÃO: Escada = hipotenusa (5m), distância da parede = cateto (3m), altura = cateto desconhecido.\n\nRESOLUÇÃO: $5^2 = 3^2 + h^2 \\Rightarrow 25 = 9 + h^2 \\Rightarrow h^2 = 16 \\Rightarrow h = 4$m. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) $\\sqrt{25-9}$ mal calculado. B) Cateto dado. D) Hipotenusa. E) $\\sqrt{61}$.\n\nCONCEITO-CHAVE: Pitágoras: $a^2 = b^2 + c^2$. Ternas pitagóricas: (3,4,5), (5,12,13), (8,15,17). Funciona APENAS em triângulos retângulos.'
   },
   {
     enunciado: 'Uma loja oferece um desconto de 20% em um produto de R$ 150,00. Qual é o preço com desconto?',
@@ -158,7 +158,7 @@ export const matematicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Descontos percentuais são cobrados frequentemente no ENEM, em contextos de compras, promoções e finanças pessoais.\n\n🔍 INTERPRETAÇÃO: Desconto de 20% sobre R$ 150,00. Preço final = preço × (1 - desconto).\n\n✅ RESOLUÇÃO: 150 × 0,80 = 120. Ou: 20% de 150 = 30, logo 150 - 30 = 120. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) ~33% de desconto. B) ~27% de desconto. D) ~17% de desconto. E) ~13% de desconto.\n\n💡 CONCEITO-CHAVE: Desconto: preço × (1 - taxa). Atenção: desconto sobre desconto não é a soma dos descontos (descontos sucessivos multiplica fatores).'
+    explicacao: 'CONTEXTO: Descontos percentuais são cobrados frequentemente no ENEM, em contextos de compras, promoções e finanças pessoais.\n\nINTERPRETAÇÃO: Desconto de 20% sobre R$ 150,00. Preço final = preço × (1 - desconto).\n\nRESOLUÇÃO: 150 × 0,80 = 120. Ou: 20% de 150 = 30, logo 150 - 30 = 120. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) ~33% de desconto. B) ~27% de desconto. D) ~17% de desconto. E) ~13% de desconto.\n\nCONCEITO-CHAVE: Desconto: preço × (1 - taxa). Atenção: desconto sobre desconto não é a soma dos descontos (descontos sucessivos multiplica fatores).'
   },
   {
     enunciado: 'Quantos triângulos existem em um polígono convexo de 6 lados (hexágono), traçando-se todas as diagonais a partir de um único vértice?',
@@ -174,7 +174,7 @@ export const matematicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A triangulação de polígonos é um conceito de geometria plana usado para calcular a soma dos ângulos internos.\n\n🔍 INTERPRETAÇÃO: De um vértice de um polígono de n lados, traçam-se (n-3) diagonais, que dividem o polígono em (n-2) triângulos.\n\n✅ RESOLUÇÃO: n = 6 → n-2 = 4 triângulos. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) n-3 = 3 é o número de diagonais. C) n-1. D) n. E) 2n-4.\n\n💡 CONCEITO-CHAVE: Polígono de n lados: (n-2) triângulos a partir de um vértice → soma dos ângulos internos = (n-2)×180°.'
+    explicacao: 'CONTEXTO: A triangulação de polígonos é um conceito de geometria plana usado para calcular a soma dos ângulos internos.\n\nINTERPRETAÇÃO: De um vértice de um polígono de n lados, traçam-se (n-3) diagonais, que dividem o polígono em (n-2) triângulos.\n\nRESOLUÇÃO: n = 6 → n-2 = 4 triângulos. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) n-3 = 3 é o número de diagonais. C) n-1. D) n. E) 2n-4.\n\nCONCEITO-CHAVE: Polígono de n lados: (n-2) triângulos a partir de um vértice → soma dos ângulos internos = (n-2)×180°.'
   },
   {
     enunciado: 'Em uma progressão aritmética (PA), o primeiro termo é 3 e a razão é 5. Qual é o 4º termo?',
@@ -190,7 +190,7 @@ export const matematicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Progressão aritmética é uma sequência onde cada termo é obtido somando uma constante (razão) ao anterior.\n\n🔍 INTERPRETAÇÃO: PA com a₁ = 3 e r = 5. O n-ésimo termo: aₙ = a₁ + (n-1)r.\n\n✅ RESOLUÇÃO: a₄ = 3 + (4-1)×5 = 3 + 15 = 18. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) a₃ = 13. B) 3×5. D) 4×5. E) a₅ = 23.\n\n💡 CONCEITO-CHAVE: PA: aₙ = a₁ + (n-1)r. Soma: Sₙ = n(a₁+aₙ)/2. PG: aₙ = a₁ × q^(n-1).'
+    explicacao: 'CONTEXTO: Progressão aritmética é uma sequência onde cada termo é obtido somando uma constante (razão) ao anterior.\n\nINTERPRETAÇÃO: PA com a₁ = 3 e r = 5. O n-ésimo termo: aₙ = a₁ + (n-1)r.\n\nRESOLUÇÃO: a₄ = 3 + (4-1)×5 = 3 + 15 = 18. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) a₃ = 13. B) 3×5. D) 4×5. E) a₅ = 23.\n\nCONCEITO-CHAVE: PA: aₙ = a₁ + (n-1)r. Soma: Sₙ = n(a₁+aₙ)/2. PG: aₙ = a₁ × q^(n-1).'
   },
   // === MÉDIO (10) ===
   {
@@ -207,7 +207,7 @@ export const matematicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Estatística descritiva e interpretação de pesquisas são competências essenciais no ENEM.\n\n🔍 INTERPRETAÇÃO: 55% + 30% = 85% manifestaram preferência. Logo, 15% não manifestaram.\n\n✅ RESOLUÇÃO: 100% - 85% = 15%. 15% de 500 = 75 pessoas. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) 10%. B) 12%. D) 20%. E) 30%.\n\n💡 CONCEITO-CHAVE: Complementar de porcentagem: se X% são de um grupo, (100-X)% são do restante. Sempre verifique se as porcentagens somam 100% ou se há sobreposição.'
+    explicacao: 'CONTEXTO: Estatística descritiva e interpretação de pesquisas são competências essenciais no ENEM.\n\nINTERPRETAÇÃO: 55% + 30% = 85% manifestaram preferência. Logo, 15% não manifestaram.\n\nRESOLUÇÃO: 100% - 85% = 15%. 15% de 500 = 75 pessoas. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) 10%. B) 12%. D) 20%. E) 30%.\n\nCONCEITO-CHAVE: Complementar de porcentagem: se X% são de um grupo, (100-X)% são do restante. Sempre verifique se as porcentagens somam 100% ou se há sobreposição.'
   },
   {
     enunciado: 'O gráfico de uma função quadrática $f(x) = x^2 - 6x + 8$ intercepta o eixo x nos pontos:',
@@ -223,7 +223,7 @@ export const matematicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: As raízes de uma função quadrática são os valores de x onde f(x) = 0, ou seja, onde a parábola intercepta o eixo x.\n\n🔍 INTERPRETAÇÃO: Resolver $x^2 - 6x + 8 = 0$ usando fatoração ou fórmula de Bhaskara.\n\n✅ RESOLUÇÃO: Δ = 36 - 32 = 4. $x = (6 ± 2)/2$. x₁ = 4, x₂ = 2. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Produto seria 8, mas soma seria 9. B) Sinais incorretos. D) Soma 8 ≠ 6. E) Produto -8 ≠ 8.\n\n💡 CONCEITO-CHAVE: $ax^2 + bx + c = 0$: Bhaskara $x = (-b ± \\sqrt{Δ})/2a$. Soma raízes = -b/a. Produto = c/a. Δ > 0: duas raízes; Δ = 0: uma raiz; Δ < 0: nenhuma.'
+    explicacao: 'CONTEXTO: As raízes de uma função quadrática são os valores de x onde f(x) = 0, ou seja, onde a parábola intercepta o eixo x.\n\nINTERPRETAÇÃO: Resolver $x^2 - 6x + 8 = 0$ usando fatoração ou fórmula de Bhaskara.\n\nRESOLUÇÃO: Δ = 36 - 32 = 4. $x = (6 ± 2)/2$. x₁ = 4, x₂ = 2. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Produto seria 8, mas soma seria 9. B) Sinais incorretos. D) Soma 8 ≠ 6. E) Produto -8 ≠ 8.\n\nCONCEITO-CHAVE: $ax^2 + bx + c = 0$: Bhaskara $x = (-b ± \\sqrt{Δ})/2a$. Soma raízes = -b/a. Produto = c/a. Δ > 0: duas raízes; Δ = 0: uma raiz; Δ < 0: nenhuma.'
   },
   {
     enunciado: 'Um capital de R$ 5.000,00 foi aplicado a juros simples de 2% ao mês. Qual será o montante após 10 meses?',
@@ -239,7 +239,7 @@ export const matematicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Juros simples é um modelo de capitalização onde os juros são calculados apenas sobre o capital inicial, sem acumulação.\n\n🔍 INTERPRETAÇÃO: C = 5000, i = 2% = 0,02 ao mês, t = 10 meses. Montante = C(1 + it).\n\n✅ RESOLUÇÃO: M = 5000 × (1 + 0,02 × 10) = 5000 × 1,20 = 6000. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) 1 mês de juros. B) 5 meses. D) Juros compostos ~6095. E) 20 meses de juros simples.\n\n💡 CONCEITO-CHAVE: J. Simples: M = C(1+it), juros lineares. J. Compostos: M = C(1+i)^t, juros sobre juros. ENEM cobra diferença e aplicação prática.'
+    explicacao: 'CONTEXTO: Juros simples é um modelo de capitalização onde os juros são calculados apenas sobre o capital inicial, sem acumulação.\n\nINTERPRETAÇÃO: C = 5000, i = 2% = 0,02 ao mês, t = 10 meses. Montante = C(1 + it).\n\nRESOLUÇÃO: M = 5000 × (1 + 0,02 × 10) = 5000 × 1,20 = 6000. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) 1 mês de juros. B) 5 meses. D) Juros compostos ~6095. E) 20 meses de juros simples.\n\nCONCEITO-CHAVE: J. Simples: M = C(1+it), juros lineares. J. Compostos: M = C(1+i)^t, juros sobre juros. ENEM cobra diferença e aplicação prática.'
   },
   {
     enunciado: 'Em um baralho de 52 cartas, qual é a probabilidade de retirar um Ás ao acaso?',
@@ -255,7 +255,7 @@ export const matematicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Probabilidade é um dos temas mais frequentes no ENEM, aparecendo em contextos de jogos, pesquisas e situações cotidianas.\n\n🔍 INTERPRETAÇÃO: Há 4 ases (um por naipe) em um baralho de 52 cartas. P(evento) = favoráveis / possíveis.\n\n✅ RESOLUÇÃO: P(Ás) = 4/52 = 1/13 ≈ 7,7%. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Probabilidade de uma carta específica. B) 2/52. D) Probabilidade de um naipe inteiro. E) 16/52.\n\n💡 CONCEITO-CHAVE: P = favoráveis / total. Baralho: 52 cartas, 4 naipes × 13 valores. P(ás) = 4/52 = 1/13. P(copas) = 13/52 = 1/4.'
+    explicacao: 'CONTEXTO: Probabilidade é um dos temas mais frequentes no ENEM, aparecendo em contextos de jogos, pesquisas e situações cotidianas.\n\nINTERPRETAÇÃO: Há 4 ases (um por naipe) em um baralho de 52 cartas. P(evento) = favoráveis / possíveis.\n\nRESOLUÇÃO: P(Ás) = 4/52 = 1/13 ≈ 7,7%. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Probabilidade de uma carta específica. B) 2/52. D) Probabilidade de um naipe inteiro. E) 16/52.\n\nCONCEITO-CHAVE: P = favoráveis / total. Baralho: 52 cartas, 4 naipes × 13 valores. P(ás) = 4/52 = 1/13. P(copas) = 13/52 = 1/4.'
   },
   {
     enunciado: 'O volume de um cilindro com raio da base de 3 cm e altura de 10 cm é (considere $\\pi \\approx 3,14$):',
@@ -271,7 +271,7 @@ export const matematicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: O volume do cilindro é uma fórmula essencial da geometria espacial, muito cobrada no ENEM em contextos práticos (caixas d\'água, latas, etc).\n\n🔍 INTERPRETAÇÃO: Cilindro com r = 3cm e h = 10cm. V = πr²h.\n\n✅ RESOLUÇÃO: V = 3,14 × 3² × 10 = 3,14 × 9 × 10 = 282,6 cm³. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) πr²h com r=3,h=3,33. B) 2πr²h. D) π×10² (confundiu r e h). E) πr²×h com erro.\n\n💡 CONCEITO-CHAVE: Cilindro: V = πr²h. Cone: V = πr²h/3. Esfera: V = 4πr³/3. Prisma: V = Ab × h.'
+    explicacao: 'CONTEXTO: O volume do cilindro é uma fórmula essencial da geometria espacial, muito cobrada no ENEM em contextos práticos (caixas d\'água, latas, etc).\n\nINTERPRETAÇÃO: Cilindro com r = 3cm e h = 10cm. V = πr²h.\n\nRESOLUÇÃO: V = 3,14 × 3² × 10 = 3,14 × 9 × 10 = 282,6 cm³. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) πr²h com r=3,h=3,33. B) 2πr²h. D) π×10² (confundiu r e h). E) πr²×h com erro.\n\nCONCEITO-CHAVE: Cilindro: V = πr²h. Cone: V = πr²h/3. Esfera: V = 4πr³/3. Prisma: V = Ab × h.'
   },
   {
     enunciado: 'Uma pessoa gasta 1/3 do salário com aluguel, 1/4 com alimentação e 1/6 com transporte. Que fração do salário sobra?',
@@ -287,7 +287,7 @@ export const matematicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Operações com frações em contexto financeiro são frequentes no ENEM, testando a capacidade de gerenciar orçamento pessoal.\n\n🔍 INTERPRETAÇÃO: Total gasto = 1/3 + 1/4 + 1/6. Sobra = 1 - total gasto. MMC(3,4,6) = 12.\n\n✅ RESOLUÇÃO: 1/3 + 1/4 + 1/6 = 4/12 + 3/12 + 2/12 = 9/12 = 3/4. Sobra: 1 - 3/4 = 1/4. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) 1/12 seria se gastasse 11/12. B) Erro no cálculo. D) Fração gasta, não sobra. E) Cálculo diferente.\n\n💡 CONCEITO-CHAVE: Soma de frações: encontrar MMC dos denominadores. 1/3 + 1/4 + 1/6 = 4/12 + 3/12 + 2/12 = 9/12.'
+    explicacao: 'CONTEXTO: Operações com frações em contexto financeiro são frequentes no ENEM, testando a capacidade de gerenciar orçamento pessoal.\n\nINTERPRETAÇÃO: Total gasto = 1/3 + 1/4 + 1/6. Sobra = 1 - total gasto. MMC(3,4,6) = 12.\n\nRESOLUÇÃO: 1/3 + 1/4 + 1/6 = 4/12 + 3/12 + 2/12 = 9/12 = 3/4. Sobra: 1 - 3/4 = 1/4. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) 1/12 seria se gastasse 11/12. B) Erro no cálculo. D) Fração gasta, não sobra. E) Cálculo diferente.\n\nCONCEITO-CHAVE: Soma de frações: encontrar MMC dos denominadores. 1/3 + 1/4 + 1/6 = 4/12 + 3/12 + 2/12 = 9/12.'
   },
   {
     enunciado: 'Uma função exponencial é dada por $f(x) = 2^x$. Qual é o valor de $f(0) + f(3)$?',
@@ -303,7 +303,7 @@ export const matematicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A função exponencial modela crescimento/decrescimento em fenômenos naturais e financeiros (juros compostos, crescimento populacional).\n\n🔍 INTERPRETAÇÃO: Calcular f(0) = 2⁰ e f(3) = 2³ e somar.\n\n✅ RESOLUÇÃO: f(0) = 2⁰ = 1, f(3) = 2³ = 8. Logo, f(0) + f(3) = 1 + 8 = 9. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) f(0)=0 (erro: 2⁰≠0). B) Só f(3). D) f(1)+f(3). E) f(4).\n\n💡 CONCEITO-CHAVE: $a^0 = 1$ (para a ≠ 0). Função exponencial: f(x) = aˣ. Cresce se a > 1, decresce se 0 < a < 1. Nunca é zero.'
+    explicacao: 'CONTEXTO: A função exponencial modela crescimento/decrescimento em fenômenos naturais e financeiros (juros compostos, crescimento populacional).\n\nINTERPRETAÇÃO: Calcular f(0) = 2⁰ e f(3) = 2³ e somar.\n\nRESOLUÇÃO: f(0) = 2⁰ = 1, f(3) = 2³ = 8. Logo, f(0) + f(3) = 1 + 8 = 9. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) f(0)=0 (erro: 2⁰≠0). B) Só f(3). D) f(1)+f(3). E) f(4).\n\nCONCEITO-CHAVE: $a^0 = 1$ (para a ≠ 0). Função exponencial: f(x) = aˣ. Cresce se a > 1, decresce se 0 < a < 1. Nunca é zero.'
   },
   {
     enunciado: 'Na análise combinatória, de quantas formas diferentes 4 livros podem ser organizados em uma prateleira?',
@@ -319,7 +319,7 @@ export const matematicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Permutação calcula o número de arranjos possíveis quando a ordem importa — fundamental no ENEM para contagem e probabilidade.\n\n🔍 INTERPRETAÇÃO: Organizar 4 livros diferentes em sequência = permutação simples de 4 elementos.\n\n✅ RESOLUÇÃO: P₄ = 4! = 4 × 3 × 2 × 1 = 24. Alternativa D.\n\n❌ ALTERNATIVAS ERRADAS: A) 4¹. B) 4×2. C) 2⁴ (se fossem decisões binárias). E) 4⁴ (arranjo com repetição).\n\n💡 CONCEITO-CHAVE: Permutação: n! = n×(n-1)×...×1. Arranjo: A(n,p) = n!/(n-p)!. Combinação: C(n,p) = n!/[p!(n-p)!]. Ordem importa → permutação/arranjo. Ordem não importa → combinação.'
+    explicacao: 'CONTEXTO: Permutação calcula o número de arranjos possíveis quando a ordem importa — fundamental no ENEM para contagem e probabilidade.\n\nINTERPRETAÇÃO: Organizar 4 livros diferentes em sequência = permutação simples de 4 elementos.\n\nRESOLUÇÃO: P₄ = 4! = 4 × 3 × 2 × 1 = 24. Alternativa D.\n\nALTERNATIVAS ERRADAS: A) 4¹. B) 4×2. C) 2⁴ (se fossem decisões binárias). E) 4⁴ (arranjo com repetição).\n\nCONCEITO-CHAVE: Permutação: n! = n×(n-1)×...×1. Arranjo: A(n,p) = n!/(n-p)!. Combinação: C(n,p) = n!/[p!(n-p)!]. Ordem importa → permutação/arranjo. Ordem não importa → combinação.'
   },
   {
     enunciado: 'Um triângulo tem lados medindo 5 cm, 12 cm e 13 cm. Esse triângulo é:',
@@ -335,7 +335,7 @@ export const matematicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A classificação de triângulos quanto aos ângulos pode ser feita verificando a relação de Pitágoras entre os lados.\n\n🔍 INTERPRETAÇÃO: Se a² = b² + c² (maior lado ao quadrado = soma dos quadrados dos outros dois), o triângulo é retângulo.\n\n✅ RESOLUÇÃO: 13² = 169. 5² + 12² = 25 + 144 = 169. Como 169 = 169, é retângulo. Alternativa D.\n\n❌ ALTERNATIVAS ERRADAS: A) Lados diferentes, não equilátero. B) Nenhum par de lados iguais. C) a² > b²+c² seria obtusângulo. E) a² < b²+c² seria acutângulo.\n\n💡 CONCEITO-CHAVE: a² = b²+c² → retângulo. a² > b²+c² → obtusângulo. a² < b²+c² → acutângulo. (5,12,13) é terna pitagórica.'
+    explicacao: 'CONTEXTO: A classificação de triângulos quanto aos ângulos pode ser feita verificando a relação de Pitágoras entre os lados.\n\nINTERPRETAÇÃO: Se a² = b² + c² (maior lado ao quadrado = soma dos quadrados dos outros dois), o triângulo é retângulo.\n\nRESOLUÇÃO: 13² = 169. 5² + 12² = 25 + 144 = 169. Como 169 = 169, é retângulo. Alternativa D.\n\nALTERNATIVAS ERRADAS: A) Lados diferentes, não equilátero. B) Nenhum par de lados iguais. C) a² > b²+c² seria obtusângulo. E) a² < b²+c² seria acutângulo.\n\nCONCEITO-CHAVE: a² = b²+c² → retângulo. a² > b²+c² → obtusângulo. a² < b²+c² → acutângulo. (5,12,13) é terna pitagórica.'
   },
   {
     enunciado: 'Se $\\log_2 x = 5$, então o valor de x é:',
@@ -351,7 +351,7 @@ export const matematicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Logaritmo é a operação inversa da exponenciação. $\\log_a b = c$ significa $a^c = b$.\n\n🔍 INTERPRETAÇÃO: $\\log_2 x = 5$ significa $2^5 = x$.\n\n✅ RESOLUÇÃO: $x = 2^5 = 32$. Alternativa D.\n\n❌ ALTERNATIVAS ERRADAS: A) 2×5. B) $2^4$. C) $5^2$. E) $2^6$.\n\n💡 CONCEITO-CHAVE: $\\log_a b = c \\Leftrightarrow a^c = b$. Propriedades: $\\log(ab) = \\log a + \\log b$. $\\log(a/b) = \\log a - \\log b$. $\\log a^n = n \\log a$.'
+    explicacao: 'CONTEXTO: Logaritmo é a operação inversa da exponenciação. $\\log_a b = c$ significa $a^c = b$.\n\nINTERPRETAÇÃO: $\\log_2 x = 5$ significa $2^5 = x$.\n\nRESOLUÇÃO: $x = 2^5 = 32$. Alternativa D.\n\nALTERNATIVAS ERRADAS: A) 2×5. B) $2^4$. C) $5^2$. E) $2^6$.\n\nCONCEITO-CHAVE: $\\log_a b = c \\Leftrightarrow a^c = b$. Propriedades: $\\log(ab) = \\log a + \\log b$. $\\log(a/b) = \\log a - \\log b$. $\\log a^n = n \\log a$.'
   },
   // === MODELO ENEM (10) ===
   {
@@ -368,7 +368,7 @@ export const matematicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Inequações do 1º grau modelam limites e restrições do cotidiano — tema clássico do ENEM com contexto de planos de telefonia.\n\n🔍 INTERPRETAÇÃO: C(x) = 25 + 0,50x ≤ 100, onde x é o número de minutos.\n\n✅ RESOLUÇÃO: 25 + 0,50x ≤ 100 → 0,50x ≤ 75 → x ≤ 150. Máximo = 150 minutos. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) 100×0,5+25=75. B) 120×0,5+25=85. D) 175×0,5+25=112,50. E) 200×0,5+25=125.\n\n💡 CONCEITO-CHAVE: Modelagem com inequação: custo fixo + custo variável ≤ limite. Isolar a variável e interpretar no contexto. ENEM frequentemente cobra interpretação do resultado.'
+    explicacao: 'CONTEXTO: Inequações do 1º grau modelam limites e restrições do cotidiano — tema clássico do ENEM com contexto de planos de telefonia.\n\nINTERPRETAÇÃO: C(x) = 25 + 0,50x ≤ 100, onde x é o número de minutos.\n\nRESOLUÇÃO: 25 + 0,50x ≤ 100 → 0,50x ≤ 75 → x ≤ 150. Máximo = 150 minutos. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) 100×0,5+25=75. B) 120×0,5+25=85. D) 175×0,5+25=112,50. E) 200×0,5+25=125.\n\nCONCEITO-CHAVE: Modelagem com inequação: custo fixo + custo variável ≤ limite. Isolar a variável e interpretar no contexto. ENEM frequentemente cobra interpretação do resultado.'
   },
   {
     enunciado: 'Um tanque de água no formato de um paralelepípedo retângulo tem dimensões internas de 2 m de comprimento, 1,5 m de largura e 1 m de altura. Sabendo que 1 m³ equivale a 1.000 litros, a capacidade máxima do tanque, em litros, é:',
@@ -384,7 +384,7 @@ export const matematicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Conversão entre unidades de volume (m³ para litros) é essencial no ENEM, especialmente em problemas de capacidade de reservatórios.\n\n🔍 INTERPRETAÇÃO: Volume do paralelepípedo = comprimento × largura × altura. Converter m³ para litros.\n\n✅ RESOLUÇÃO: V = 2 × 1,5 × 1 = 3 m³. 3 m³ × 1000 = 3000 litros. Alternativa D.\n\n❌ ALTERNATIVAS ERRADAS: A) 2×1,5×0,5. B) 2×1×1. C) 2,5×1×1. E) 3,5×1×1.\n\n💡 CONCEITO-CHAVE: 1 m³ = 1000 L. 1 dm³ = 1 L. Volume do paralelepípedo = a × b × c. No ENEM, atenção às unidades!'
+    explicacao: 'CONTEXTO: Conversão entre unidades de volume (m³ para litros) é essencial no ENEM, especialmente em problemas de capacidade de reservatórios.\n\nINTERPRETAÇÃO: Volume do paralelepípedo = comprimento × largura × altura. Converter m³ para litros.\n\nRESOLUÇÃO: V = 2 × 1,5 × 1 = 3 m³. 3 m³ × 1000 = 3000 litros. Alternativa D.\n\nALTERNATIVAS ERRADAS: A) 2×1,5×0,5. B) 2×1×1. C) 2,5×1×1. E) 3,5×1×1.\n\nCONCEITO-CHAVE: 1 m³ = 1000 L. 1 dm³ = 1 L. Volume do paralelepípedo = a × b × c. No ENEM, atenção às unidades!'
   },
   {
     enunciado: 'Em uma escola, 200 alunos participaram de uma pesquisa sobre atividades extracurriculares. 120 praticam esportes, 90 fazem música e 40 fazem ambas as atividades. Quantos alunos não praticam nenhuma das duas atividades?',
@@ -400,7 +400,7 @@ export const matematicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Problemas de conjuntos com diagrama de Venn são muito frequentes no ENEM, especialmente em contextos de pesquisas.\n\n🔍 INTERPRETAÇÃO: n(A∪B) = n(A) + n(B) - n(A∩B). Fora = total - n(A∪B).\n\n✅ RESOLUÇÃO: n(A∪B) = 120 + 90 - 40 = 170. Fora = 200 - 170 = 30. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) 200-190. B) 200-180. D) A interseção. E) 200-150.\n\n💡 CONCEITO-CHAVE: Princípio da inclusão-exclusão: |A∪B| = |A| + |B| - |A∩B|. Para 3 conjuntos: |A∪B∪C| = |A|+|B|+|C|-|A∩B|-|A∩C|-|B∩C|+|A∩B∩C|.'
+    explicacao: 'CONTEXTO: Problemas de conjuntos com diagrama de Venn são muito frequentes no ENEM, especialmente em contextos de pesquisas.\n\nINTERPRETAÇÃO: n(A∪B) = n(A) + n(B) - n(A∩B). Fora = total - n(A∪B).\n\nRESOLUÇÃO: n(A∪B) = 120 + 90 - 40 = 170. Fora = 200 - 170 = 30. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) 200-190. B) 200-180. D) A interseção. E) 200-150.\n\nCONCEITO-CHAVE: Princípio da inclusão-exclusão: |A∪B| = |A| + |B| - |A∩B|. Para 3 conjuntos: |A∪B∪C| = |A|+|B|+|C|-|A∩B|-|A∩C|-|B∩C|+|A∩B∩C|.'
   },
   {
     enunciado: 'Uma indústria produz embalagens cilíndricas para conservas. Se o raio da base for duplicado e a altura for reduzida à metade, o volume da nova embalagem, em relação ao original, será:',
@@ -416,7 +416,7 @@ export const matematicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Variação de dimensões em sólidos geométricos é um tema sofisticado do ENEM que testa compreensão de fórmulas, não apenas aplicação.\n\n🔍 INTERPRETAÇÃO: V = πr²h. Novo: r\' = 2r, h\' = h/2. V\' = π(2r)²(h/2) = π × 4r² × h/2 = 2πr²h.\n\n✅ RESOLUÇÃO: V\' = π(2r)²(h/2) = 4πr²h/2 = 2πr²h = 2V. O volume dobra. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) Duplicar r e reduzir h pela metade não se cancelam (r é quadrático). C) Se fossem proporcionais. D) Só duplicar r sem alterar h. E) O oposto.\n\n💡 CONCEITO-CHAVE: No cilindro V = πr²h: r aparece ao quadrado! Duplicar r → 4× na área da base. Se h reduz à metade → 4 × 1/2 = 2× o volume original.'
+    explicacao: 'CONTEXTO: Variação de dimensões em sólidos geométricos é um tema sofisticado do ENEM que testa compreensão de fórmulas, não apenas aplicação.\n\nINTERPRETAÇÃO: V = πr²h. Novo: r\' = 2r, h\' = h/2. V\' = π(2r)²(h/2) = π × 4r² × h/2 = 2πr²h.\n\nRESOLUÇÃO: V\' = π(2r)²(h/2) = 4πr²h/2 = 2πr²h = 2V. O volume dobra. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) Duplicar r e reduzir h pela metade não se cancelam (r é quadrático). C) Se fossem proporcionais. D) Só duplicar r sem alterar h. E) O oposto.\n\nCONCEITO-CHAVE: No cilindro V = πr²h: r aparece ao quadrado! Duplicar r → 4× na área da base. Se h reduz à metade → 4 × 1/2 = 2× o volume original.'
   },
   {
     enunciado: 'Um investidor aplica R$ 10.000,00 a juros compostos de 10% ao ano. Qual será o montante após 2 anos?',
@@ -432,7 +432,7 @@ export const matematicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Juros compostos são o sistema real de capitalização usado em investimentos e empréstimos — tema central de educação financeira no ENEM.\n\n🔍 INTERPRETAÇÃO: C = 10000, i = 10% = 0,10, t = 2 anos. M = C(1+i)^t.\n\n✅ RESOLUÇÃO: M = 10000 × (1,10)² = 10000 × 1,21 = 12100. Alternativa D.\n\n❌ ALTERNATIVAS ERRADAS: A) 1 ano simples. B) Média. C) 2 anos simples (10000×1,20). E) Erro de cálculo.\n\n💡 CONCEITO-CHAVE: J. Compostos: M = C(1+i)^t. Diferença para simples em 2 anos: compostos = 12100, simples = 12000. A diferença (100) são os "juros sobre juros".'
+    explicacao: 'CONTEXTO: Juros compostos são o sistema real de capitalização usado em investimentos e empréstimos — tema central de educação financeira no ENEM.\n\nINTERPRETAÇÃO: C = 10000, i = 10% = 0,10, t = 2 anos. M = C(1+i)^t.\n\nRESOLUÇÃO: M = 10000 × (1,10)² = 10000 × 1,21 = 12100. Alternativa D.\n\nALTERNATIVAS ERRADAS: A) 1 ano simples. B) Média. C) 2 anos simples (10000×1,20). E) Erro de cálculo.\n\nCONCEITO-CHAVE: J. Compostos: M = C(1+i)^t. Diferença para simples em 2 anos: compostos = 12100, simples = 12000. A diferença (100) são os "juros sobre juros".'
   },
   {
     enunciado: 'Em uma competição, 8 atletas disputam a final dos 100 metros rasos. De quantas formas diferentes podem ser formados os pódios (1º, 2º e 3º lugares)?',
@@ -448,7 +448,7 @@ export const matematicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Arranjo simples é usado quando selecionamos elementos de um conjunto e a ordem importa — como posições em um pódio.\n\n🔍 INTERPRETAÇÃO: Escolher 3 atletas dentre 8, onde a ordem importa (1º ≠ 2º ≠ 3º) = Arranjo A(8,3).\n\n✅ RESOLUÇÃO: A(8,3) = 8!/(8-3)! = 8!/5! = 8×7×6 = 336. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) C(8,3) = 56 (combinação, sem ordem). B) P(5) = 120. D) 8³ (com repetição). E) 8! (permutação total).\n\n💡 CONCEITO-CHAVE: Arranjo (ordem importa): A(n,p) = n!/(n-p)!. Combinação (ordem não importa): C(n,p) = n!/[p!(n-p)!]. Pódio → arranjo. Comissão → combinação.'
+    explicacao: 'CONTEXTO: Arranjo simples é usado quando selecionamos elementos de um conjunto e a ordem importa — como posições em um pódio.\n\nINTERPRETAÇÃO: Escolher 3 atletas dentre 8, onde a ordem importa (1º ≠ 2º ≠ 3º) = Arranjo A(8,3).\n\nRESOLUÇÃO: A(8,3) = 8!/(8-3)! = 8!/5! = 8×7×6 = 336. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) C(8,3) = 56 (combinação, sem ordem). B) P(5) = 120. D) 8³ (com repetição). E) 8! (permutação total).\n\nCONCEITO-CHAVE: Arranjo (ordem importa): A(n,p) = n!/(n-p)!. Combinação (ordem não importa): C(n,p) = n!/[p!(n-p)!]. Pódio → arranjo. Comissão → combinação.'
   },
   {
     enunciado: 'Uma empresa cobra frete proporcional à distância percorrida. Para 100 km, cobra R$ 80,00; para 250 km, cobra R$ 200,00. Supondo que o frete segue uma função afim f(d), o valor do frete para 400 km será:',
@@ -464,7 +464,7 @@ export const matematicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Função afim f(x) = ax + b modela muitas situações do ENEM: tarifas, fretes, planos de telefonia. Dois pontos determinam a função.\n\n🔍 INTERPRETAÇÃO: f(100) = 80 e f(250) = 200. Encontrar a e b, depois calcular f(400).\n\n✅ RESOLUÇÃO: 100a + b = 80 e 250a + b = 200. Subtraindo: 150a = 120 → a = 0,80. b = 80 - 80 = 0. f(d) = 0,80d. f(400) = 320. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) 0,70×400. B) 200+100. D) 0,85×400. E) 0,90×400.\n\n💡 CONCEITO-CHAVE: Função afim: dois pontos definem a reta. a = (y₂-y₁)/(x₂-x₁). Verificação: f(100) = 0,80×100 = 80 ✓. f(250) = 0,80×250 = 200 ✓.'
+    explicacao: 'CONTEXTO: Função afim f(x) = ax + b modela muitas situações do ENEM: tarifas, fretes, planos de telefonia. Dois pontos determinam a função.\n\nINTERPRETAÇÃO: f(100) = 80 e f(250) = 200. Encontrar a e b, depois calcular f(400).\n\nRESOLUÇÃO: 100a + b = 80 e 250a + b = 200. Subtraindo: 150a = 120 → a = 0,80. b = 80 - 80 = 0. f(d) = 0,80d. f(400) = 320. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) 0,70×400. B) 200+100. D) 0,85×400. E) 0,90×400.\n\nCONCEITO-CHAVE: Função afim: dois pontos definem a reta. a = (y₂-y₁)/(x₂-x₁). Verificação: f(100) = 0,80×100 = 80 ✓. f(250) = 0,80×250 = 200 ✓.'
   },
   {
     enunciado: 'Em um grupo de 12 pessoas, uma comissão de 3 membros deve ser formada. Quantas comissões diferentes são possíveis?',
@@ -480,7 +480,7 @@ export const matematicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Combinação é usada quando a ordem não importa — como na formação de comissões, equipes ou grupos.\n\n🔍 INTERPRETAÇÃO: Comissão = grupo sem ordem definida → Combinação C(12,3).\n\n✅ RESOLUÇÃO: C(12,3) = 12!/(3!×9!) = (12×11×10)/(3×2×1) = 1320/6 = 220. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) 12×3. B) C(11,3). D) P(6). E) A(12,3) = arranjo, ordem importaria.\n\n💡 CONCEITO-CHAVE: Comissão → combinação (ordem NÃO importa). C(n,p) = n!/[p!(n-p)!]. Dica: C(12,3) = C(12,9) — propriedade da simetria.'
+    explicacao: 'CONTEXTO: Combinação é usada quando a ordem não importa — como na formação de comissões, equipes ou grupos.\n\nINTERPRETAÇÃO: Comissão = grupo sem ordem definida → Combinação C(12,3).\n\nRESOLUÇÃO: C(12,3) = 12!/(3!×9!) = (12×11×10)/(3×2×1) = 1320/6 = 220. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) 12×3. B) C(11,3). D) P(6). E) A(12,3) = arranjo, ordem importaria.\n\nCONCEITO-CHAVE: Comissão → combinação (ordem NÃO importa). C(n,p) = n!/[p!(n-p)!]. Dica: C(12,3) = C(12,9) — propriedade da simetria.'
   },
   {
     enunciado: 'Um mapa está na escala 1:50.000. Se a distância entre duas cidades no mapa é de 6 cm, a distância real entre elas é:',
@@ -496,6 +496,6 @@ export const matematicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Escalas cartográficas são frequentes no ENEM, integrando Matemática e Geografia. A escala relaciona medida no mapa com a real.\n\n🔍 INTERPRETAÇÃO: Escala 1:50.000 → 1 cm no mapa = 50.000 cm na realidade.\n\n✅ RESOLUÇÃO: 6 cm × 50.000 = 300.000 cm = 3.000 m = 3 km. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) 6×50.000/1000. C) Erro na conversão (km extra). D) Escala 1:5.000.000. E) Escala 1:50.000.000.\n\n💡 CONCEITO-CHAVE: Escala 1:E → distância real = medida no mapa × E. Conversões: 1 km = 100.000 cm. ENEM cobra conversão de unidades junto com escala.'
+    explicacao: 'CONTEXTO: Escalas cartográficas são frequentes no ENEM, integrando Matemática e Geografia. A escala relaciona medida no mapa com a real.\n\nINTERPRETAÇÃO: Escala 1:50.000 → 1 cm no mapa = 50.000 cm na realidade.\n\nRESOLUÇÃO: 6 cm × 50.000 = 300.000 cm = 3.000 m = 3 km. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) 6×50.000/1000. C) Erro na conversão (km extra). D) Escala 1:5.000.000. E) Escala 1:50.000.000.\n\nCONCEITO-CHAVE: Escala 1:E → distância real = medida no mapa × E. Conversões: 1 km = 100.000 cm. ENEM cobra conversão de unidades junto com escala.'
   }
 ];

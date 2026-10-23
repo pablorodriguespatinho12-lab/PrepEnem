@@ -14,7 +14,7 @@ export const fisicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: As três leis de Newton são a base da mecânica clássica. A 1ª Lei trata da inércia — resistência de um corpo a mudanças em seu estado de movimento.\n\n🔍 INTERPRETAÇÃO: A questão descreve literalmente a 1ª Lei de Newton: sem força resultante, o corpo mantém seu estado (repouso ou MRU).\n\n✅ RESOLUÇÃO: Inércia = 1ª Lei de Newton. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) 2ª Lei: F = ma. B) 3ª Lei: toda ação tem reação igual e oposta. D) Gravitação: F = GMm/r². E) Hooke: F = -kx (molas).\n\n💡 CONCEITO-CHAVE: 1ª Lei: inércia (FR = 0 → repouso ou MRU). 2ª Lei: F = ma. 3ª Lei: ação e reação (pares de forças em corpos diferentes).'
+    explicacao: 'CONTEXTO: As três leis de Newton são a base da mecânica clássica. A 1ª Lei trata da inércia — resistência de um corpo a mudanças em seu estado de movimento.\n\nINTERPRETAÇÃO: A questão descreve literalmente a 1ª Lei de Newton: sem força resultante, o corpo mantém seu estado (repouso ou MRU).\n\nRESOLUÇÃO: Inércia = 1ª Lei de Newton. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) 2ª Lei: F = ma. B) 3ª Lei: toda ação tem reação igual e oposta. D) Gravitação: F = GMm/r². E) Hooke: F = -kx (molas).\n\nCONCEITO-CHAVE: 1ª Lei: inércia (FR = 0 → repouso ou MRU). 2ª Lei: F = ma. 3ª Lei: ação e reação (pares de forças em corpos diferentes).'
   },
   {
     enunciado: 'A unidade de medida de força no Sistema Internacional (SI) é:',
@@ -30,7 +30,7 @@ export const fisicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: O SI (Sistema Internacional de Unidades) padroniza as medidas científicas em todo o mundo.\n\n🔍 INTERPRETAÇÃO: Cada grandeza física tem sua unidade SI: comprimento (m), massa (kg), tempo (s), força (N), energia (J), potência (W).\n\n✅ RESOLUÇÃO: A unidade de força no SI é o Newton (N). 1 N = 1 kg·m/s². Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Joule = energia/trabalho. B) Watt = potência. D) Pascal = pressão. E) Quilograma = massa (não é força!).\n\n💡 CONCEITO-CHAVE: N = kg·m/s² (F=ma). J = N·m (trabalho). W = J/s (potência). Pa = N/m² (pressão). Peso ≠ massa: P = mg (em N).'
+    explicacao: 'CONTEXTO: O SI (Sistema Internacional de Unidades) padroniza as medidas científicas em todo o mundo.\n\nINTERPRETAÇÃO: Cada grandeza física tem sua unidade SI: comprimento (m), massa (kg), tempo (s), força (N), energia (J), potência (W).\n\nRESOLUÇÃO: A unidade de força no SI é o Newton (N). 1 N = 1 kg·m/s². Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Joule = energia/trabalho. B) Watt = potência. D) Pascal = pressão. E) Quilograma = massa (não é força!).\n\nCONCEITO-CHAVE: N = kg·m/s² (F=ma). J = N·m (trabalho). W = J/s (potência). Pa = N/m² (pressão). Peso ≠ massa: P = mg (em N).'
   },
   {
     enunciado: 'Um carro percorre 100 km em 2 horas. Sua velocidade média é:',
@@ -46,7 +46,7 @@ export const fisicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Velocidade média é a razão entre a distância total percorrida e o tempo total gasto — conceito fundamental da cinemática.\n\n🔍 INTERPRETAÇÃO: Vm = Δd/Δt = 100 km / 2h.\n\n✅ RESOLUÇÃO: Vm = 100/2 = 50 km/h. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) 100/4. C) 150/2. D) 100/1. E) 100×2.\n\n💡 CONCEITO-CHAVE: Vm = Δd/Δt. Para converter km/h → m/s: ÷ 3,6. Para m/s → km/h: × 3,6. 50 km/h ≈ 13,9 m/s.'
+    explicacao: 'CONTEXTO: Velocidade média é a razão entre a distância total percorrida e o tempo total gasto — conceito fundamental da cinemática.\n\nINTERPRETAÇÃO: Vm = Δd/Δt = 100 km / 2h.\n\nRESOLUÇÃO: Vm = 100/2 = 50 km/h. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) 100/4. C) 150/2. D) 100/1. E) 100×2.\n\nCONCEITO-CHAVE: Vm = Δd/Δt. Para converter km/h → m/s: ÷ 3,6. Para m/s → km/h: × 3,6. 50 km/h ≈ 13,9 m/s.'
   },
   {
     enunciado: 'A energia cinética de um corpo depende de sua massa e de sua:',
@@ -62,7 +62,7 @@ export const fisicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Energia cinética é a energia associada ao movimento de um corpo. Sua fórmula relaciona massa e velocidade.\n\n🔍 INTERPRETAÇÃO: Ec = mv²/2 — depende da massa (m) e do quadrado da velocidade (v²).\n\n✅ RESOLUÇÃO: A energia cinética depende da massa e da velocidade. Alternativa D.\n\n❌ ALTERNATIVAS ERRADAS: A) Posição → energia potencial gravitacional. B) Temperatura → energia térmica. C) Aceleração entra na 2ª Lei. E) Cor é irrelevante.\n\n💡 CONCEITO-CHAVE: Ec = mv²/2. Ep = mgh (potencial gravitacional). Em = Ec + Ep (energia mecânica). Conservação de energia: Em constante se não há atrito.'
+    explicacao: 'CONTEXTO: Energia cinética é a energia associada ao movimento de um corpo. Sua fórmula relaciona massa e velocidade.\n\nINTERPRETAÇÃO: Ec = mv²/2 — depende da massa (m) e do quadrado da velocidade (v²).\n\nRESOLUÇÃO: A energia cinética depende da massa e da velocidade. Alternativa D.\n\nALTERNATIVAS ERRADAS: A) Posição → energia potencial gravitacional. B) Temperatura → energia térmica. C) Aceleração entra na 2ª Lei. E) Cor é irrelevante.\n\nCONCEITO-CHAVE: Ec = mv²/2. Ep = mgh (potencial gravitacional). Em = Ec + Ep (energia mecânica). Conservação de energia: Em constante se não há atrito.'
   },
   {
     enunciado: 'O peso de um objeto de massa 5 kg na superfície da Terra (g ≈ 10 m/s²) é:',
@@ -78,7 +78,7 @@ export const fisicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Peso é a força gravitacional que a Terra exerce sobre um corpo. Diferente de massa (propriedade intrínseca da matéria).\n\n🔍 INTERPRETAÇÃO: P = m × g, onde m = 5 kg e g = 10 m/s².\n\n✅ RESOLUÇÃO: P = 5 × 10 = 50 N. Alternativa D.\n\n❌ ALTERNATIVAS ERRADAS: A) 5/10. B) A massa em kg (não é peso). C) 5×3. E) 5×100.\n\n💡 CONCEITO-CHAVE: P = mg. Massa (kg) ≠ Peso (N). g varia: Terra ~10 m/s², Lua ~1,6 m/s². Sua massa não muda, mas seu peso sim!'
+    explicacao: 'CONTEXTO: Peso é a força gravitacional que a Terra exerce sobre um corpo. Diferente de massa (propriedade intrínseca da matéria).\n\nINTERPRETAÇÃO: P = m × g, onde m = 5 kg e g = 10 m/s².\n\nRESOLUÇÃO: P = 5 × 10 = 50 N. Alternativa D.\n\nALTERNATIVAS ERRADAS: A) 5/10. B) A massa em kg (não é peso). C) 5×3. E) 5×100.\n\nCONCEITO-CHAVE: P = mg. Massa (kg) ≠ Peso (N). g varia: Terra ~10 m/s², Lua ~1,6 m/s². Sua massa não muda, mas seu peso sim!'
   },
   {
     enunciado: 'Qual tipo de transferência de calor ocorre em um dia quente quando o asfalto aquece o ar logo acima dele, criando correntes ascendentes?',
@@ -94,7 +94,7 @@ export const fisicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Calor pode ser transferido por condução (contato), convecção (correntes em fluidos) e irradiação (ondas eletromagnéticas).\n\n🔍 INTERPRETAÇÃO: Ar quente sobe (menos denso) e ar frio desce (mais denso) = correntes de convecção.\n\n✅ RESOLUÇÃO: Correntes ascendentes de ar aquecido = convecção térmica. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) Condução é por contato direto (sólidos). C) Irradiação não precisa de meio material. D) Evaporação é mudança de fase. E) Sublimação é sólido→gás.\n\n💡 CONCEITO-CHAVE: Convecção: correntes em fluidos (ar, água) por diferença de densidade. Condução: sólidos. Irradiação: ondas EM (como o Sol aquece a Terra no vácuo).'
+    explicacao: 'CONTEXTO: Calor pode ser transferido por condução (contato), convecção (correntes em fluidos) e irradiação (ondas eletromagnéticas).\n\nINTERPRETAÇÃO: Ar quente sobe (menos denso) e ar frio desce (mais denso) = correntes de convecção.\n\nRESOLUÇÃO: Correntes ascendentes de ar aquecido = convecção térmica. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) Condução é por contato direto (sólidos). C) Irradiação não precisa de meio material. D) Evaporação é mudança de fase. E) Sublimação é sólido→gás.\n\nCONCEITO-CHAVE: Convecção: correntes em fluidos (ar, água) por diferença de densidade. Condução: sólidos. Irradiação: ondas EM (como o Sol aquece a Terra no vácuo).'
   },
   {
     enunciado: 'A grandeza que mede a rapidez com que um trabalho é realizado chama-se:',
@@ -110,7 +110,7 @@ export const fisicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Potência relaciona o trabalho realizado com o tempo gasto, medindo a "rapidez" da transformação de energia.\n\n🔍 INTERPRETAÇÃO: P = W/t (trabalho por unidade de tempo). Unidade: Watt (W) = J/s.\n\n✅ RESOLUÇÃO: Potência = trabalho/tempo = rapidez de realizar trabalho. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Energia é capacidade de realizar trabalho. B) Força causa aceleração. D) Pressão = F/A. E) Impulso = F×Δt.\n\n💡 CONCEITO-CHAVE: P = W/t = F×v. Watt = J/s. 1 cv ≈ 736 W. Potência elétrica: P = V×i = Ri² = V²/R.'
+    explicacao: 'CONTEXTO: Potência relaciona o trabalho realizado com o tempo gasto, medindo a "rapidez" da transformação de energia.\n\nINTERPRETAÇÃO: P = W/t (trabalho por unidade de tempo). Unidade: Watt (W) = J/s.\n\nRESOLUÇÃO: Potência = trabalho/tempo = rapidez de realizar trabalho. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Energia é capacidade de realizar trabalho. B) Força causa aceleração. D) Pressão = F/A. E) Impulso = F×Δt.\n\nCONCEITO-CHAVE: P = W/t = F×v. Watt = J/s. 1 cv ≈ 736 W. Potência elétrica: P = V×i = Ri² = V²/R.'
   },
   {
     enunciado: 'Quando empurramos uma parede, ela não se move. Isso ocorre porque:',
@@ -126,7 +126,7 @@ export const fisicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A 3ª Lei de Newton (ação e reação) afirma que forças sempre surgem em pares: se A empurra B, B empurra A com força de mesma intensidade e sentido oposto.\n\n🔍 INTERPRETAÇÃO: Ao empurrar a parede, ela exerce força de mesma intensidade sobre nós. A parede não se move pois sua estrutura suporta a força (atrito com fundação >> força aplicada).\n\n✅ RESOLUÇÃO: A parede exerce reação igual e oposta à nossa força (3ª Lei). Ela não se move por estar solidamente fixada. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) A parede SIM exerce força (reação). C) Forças não são "absorvidas". D) Gravidade atua verticalmente. E) Inércia é finita (depende da massa).\n\n💡 CONCEITO-CHAVE: Ação e reação: mesma intensidade, mesma direção, sentidos opostos, em corpos DIFERENTES. Por isso não se cancelam!'
+    explicacao: 'CONTEXTO: A 3ª Lei de Newton (ação e reação) afirma que forças sempre surgem em pares: se A empurra B, B empurra A com força de mesma intensidade e sentido oposto.\n\nINTERPRETAÇÃO: Ao empurrar a parede, ela exerce força de mesma intensidade sobre nós. A parede não se move pois sua estrutura suporta a força (atrito com fundação >> força aplicada).\n\nRESOLUÇÃO: A parede exerce reação igual e oposta à nossa força (3ª Lei). Ela não se move por estar solidamente fixada. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) A parede SIM exerce força (reação). C) Forças não são "absorvidas". D) Gravidade atua verticalmente. E) Inércia é finita (depende da massa).\n\nCONCEITO-CHAVE: Ação e reação: mesma intensidade, mesma direção, sentidos opostos, em corpos DIFERENTES. Por isso não se cancelam!'
   },
   {
     enunciado: 'Um fio de cobre conduz corrente elétrica melhor que um fio de borracha porque:',
@@ -142,7 +142,7 @@ export const fisicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Materiais condutores possuem elétrons livres (não ligados a átomos específicos) que permitem o fluxo de corrente elétrica.\n\n🔍 INTERPRETAÇÃO: Metais como cobre têm elétrons livres na banda de condução. Borracha é isolante — seus elétrons estão fortemente ligados.\n\n✅ RESOLUÇÃO: Cobre é condutor porque possui elétrons livres que se movem facilmente sob uma ddp. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) Densidade não determina condutividade. C) Peso é irrelevante. D) Transparência não se aplica. E) Prótons não se movem nos sólidos.\n\n💡 CONCEITO-CHAVE: Condutores: elétrons livres (metais). Isolantes: elétrons presos (borracha, vidro). Semicondutores: condutividade intermediária (silício, germânio — base da eletrônica).'
+    explicacao: 'CONTEXTO: Materiais condutores possuem elétrons livres (não ligados a átomos específicos) que permitem o fluxo de corrente elétrica.\n\nINTERPRETAÇÃO: Metais como cobre têm elétrons livres na banda de condução. Borracha é isolante — seus elétrons estão fortemente ligados.\n\nRESOLUÇÃO: Cobre é condutor porque possui elétrons livres que se movem facilmente sob uma ddp. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) Densidade não determina condutividade. C) Peso é irrelevante. D) Transparência não se aplica. E) Prótons não se movem nos sólidos.\n\nCONCEITO-CHAVE: Condutores: elétrons livres (metais). Isolantes: elétrons presos (borracha, vidro). Semicondutores: condutividade intermediária (silício, germânio — base da eletrônica).'
   },
   {
     enunciado: 'Em um circuito elétrico, a grandeza que mede a "força" que impulsiona os elétrons a se moverem é:',
@@ -158,7 +158,7 @@ export const fisicaQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A diferença de potencial (ddp ou tensão) entre dois pontos de um circuito é o que "empurra" os elétrons a fluírem, criando corrente.\n\n🔍 INTERPRETAÇÃO: Analogia hidráulica: tensão = diferença de pressão que empurra a água (corrente) pelo cano (fio).\n\n✅ RESOLUÇÃO: A tensão (V) é a "força eletromotriz" que impulsiona os elétrons. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Corrente é o fluxo resultante de elétrons. B) Resistência dificulta o fluxo. D) Potência é energia/tempo. E) Capacitância armazena carga.\n\n💡 CONCEITO-CHAVE: Lei de Ohm: V = R × i. Tensão (V) causa corrente (i) que encontra resistência (R). Analogia: V = pressão, i = vazão, R = estreitamento.'
+    explicacao: 'CONTEXTO: A diferença de potencial (ddp ou tensão) entre dois pontos de um circuito é o que "empurra" os elétrons a fluírem, criando corrente.\n\nINTERPRETAÇÃO: Analogia hidráulica: tensão = diferença de pressão que empurra a água (corrente) pelo cano (fio).\n\nRESOLUÇÃO: A tensão (V) é a "força eletromotriz" que impulsiona os elétrons. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Corrente é o fluxo resultante de elétrons. B) Resistência dificulta o fluxo. D) Potência é energia/tempo. E) Capacitância armazena carga.\n\nCONCEITO-CHAVE: Lei de Ohm: V = R × i. Tensão (V) causa corrente (i) que encontra resistência (R). Analogia: V = pressão, i = vazão, R = estreitamento.'
   },
   // === MÉDIO (10) ===
   {
@@ -175,7 +175,7 @@ export const fisicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: No lançamento horizontal, o tempo de queda depende apenas da altura e da gravidade — a velocidade horizontal não afeta o tempo de queda.\n\n🔍 INTERPRETAÇÃO: Componente vertical: h = gt²/2 (queda livre). A velocidade horizontal é irrelevante para o tempo.\n\n✅ RESOLUÇÃO: 80 = 10×t²/2 → 80 = 5t² → t² = 16 → t = 4 s. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) h=20m para t=2. B) h=45m para t=3. D) h=125m para t=5. E) h=320m para t=8.\n\n💡 CONCEITO-CHAVE: Lançamento horizontal: vertical = queda livre (h=gt²/2); horizontal = MRU (x=v₀t). Alcance = v₀ × t. Independência dos movimentos!'
+    explicacao: 'CONTEXTO: No lançamento horizontal, o tempo de queda depende apenas da altura e da gravidade — a velocidade horizontal não afeta o tempo de queda.\n\nINTERPRETAÇÃO: Componente vertical: h = gt²/2 (queda livre). A velocidade horizontal é irrelevante para o tempo.\n\nRESOLUÇÃO: 80 = 10×t²/2 → 80 = 5t² → t² = 16 → t = 4 s. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) h=20m para t=2. B) h=45m para t=3. D) h=125m para t=5. E) h=320m para t=8.\n\nCONCEITO-CHAVE: Lançamento horizontal: vertical = queda livre (h=gt²/2); horizontal = MRU (x=v₀t). Alcance = v₀ × t. Independência dos movimentos!'
   },
   {
     enunciado: 'Uma máquina térmica opera entre as temperaturas de 600 K (fonte quente) e 300 K (fonte fria). O rendimento máximo teórico dessa máquina (ciclo de Carnot) é:',
@@ -191,7 +191,7 @@ export const fisicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: O ciclo de Carnot define o rendimento máximo possível para uma máquina térmica operando entre duas temperaturas — nenhuma máquina real pode superá-lo.\n\n🔍 INTERPRETAÇÃO: η(Carnot) = 1 - Tf/Tq, onde Tf = 300K e Tq = 600K (temperaturas em Kelvin!).\n\n✅ RESOLUÇÃO: η = 1 - 300/600 = 1 - 0,5 = 0,5 = 50%. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) 1-300/400. B) 1-400/600. D) 1-200/600. E) η=100% violaria a 2ª Lei da Termodinâmica.\n\n💡 CONCEITO-CHAVE: Carnot: η = 1 - Tf/Tq (em Kelvin!). Nunca 100% (2ª Lei). Maior rendimento: maior Tq e menor Tf. K = °C + 273.'
+    explicacao: 'CONTEXTO: O ciclo de Carnot define o rendimento máximo possível para uma máquina térmica operando entre duas temperaturas — nenhuma máquina real pode superá-lo.\n\nINTERPRETAÇÃO: η(Carnot) = 1 - Tf/Tq, onde Tf = 300K e Tq = 600K (temperaturas em Kelvin!).\n\nRESOLUÇÃO: η = 1 - 300/600 = 1 - 0,5 = 0,5 = 50%. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) 1-300/400. B) 1-400/600. D) 1-200/600. E) η=100% violaria a 2ª Lei da Termodinâmica.\n\nCONCEITO-CHAVE: Carnot: η = 1 - Tf/Tq (em Kelvin!). Nunca 100% (2ª Lei). Maior rendimento: maior Tq e menor Tf. K = °C + 273.'
   },
   {
     enunciado: 'Dois resistores de 6 Ω cada são ligados em paralelo. A resistência equivalente do conjunto é:',
@@ -207,7 +207,7 @@ export const fisicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Em associação paralela, a corrente se divide entre os resistores, e a resistência equivalente é menor que a menor resistência individual.\n\n🔍 INTERPRETAÇÃO: 1/Req = 1/R₁ + 1/R₂ = 1/6 + 1/6 = 2/6 = 1/3.\n\n✅ RESOLUÇÃO: 1/Req = 1/6 + 1/6 = 1/3 → Req = 3 Ω. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) 6/6. C) Seria em série (6+6=12... não, 6). D) Seria em série: 6+6=12. E) 6×6.\n\n💡 CONCEITO-CHAVE: Série: Req = R₁+R₂ (soma). Paralelo: 1/Req = 1/R₁+1/R₂. Para 2 resistores iguais em paralelo: Req = R/2. Em paralelo, Req < menor R.'
+    explicacao: 'CONTEXTO: Em associação paralela, a corrente se divide entre os resistores, e a resistência equivalente é menor que a menor resistência individual.\n\nINTERPRETAÇÃO: 1/Req = 1/R₁ + 1/R₂ = 1/6 + 1/6 = 2/6 = 1/3.\n\nRESOLUÇÃO: 1/Req = 1/6 + 1/6 = 1/3 → Req = 3 Ω. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) 6/6. C) Seria em série (6+6=12... não, 6). D) Seria em série: 6+6=12. E) 6×6.\n\nCONCEITO-CHAVE: Série: Req = R₁+R₂ (soma). Paralelo: 1/Req = 1/R₁+1/R₂. Para 2 resistores iguais em paralelo: Req = R/2. Em paralelo, Req < menor R.'
   },
   {
     enunciado: 'Uma onda sonora tem frequência de 440 Hz e se propaga no ar com velocidade de 340 m/s. Seu comprimento de onda é aproximadamente:',
@@ -223,7 +223,7 @@ export const fisicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A equação fundamental da ondulatória relaciona velocidade, frequência e comprimento de onda: v = f × λ.\n\n🔍 INTERPRETAÇÃO: v = 340 m/s, f = 440 Hz. λ = v/f.\n\n✅ RESOLUÇÃO: λ = 340/440 ≈ 0,77 m. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) 340/880. C) 340/264. D) 340/132. E) 340×440.\n\n💡 CONCEITO-CHAVE: v = f × λ. 440 Hz = nota Lá (padrão de afinação). Som: onda mecânica longitudinal, precisa de meio material. Velocidade no ar ≈ 340 m/s, na água ≈ 1500 m/s.'
+    explicacao: 'CONTEXTO: A equação fundamental da ondulatória relaciona velocidade, frequência e comprimento de onda: v = f × λ.\n\nINTERPRETAÇÃO: v = 340 m/s, f = 440 Hz. λ = v/f.\n\nRESOLUÇÃO: λ = 340/440 ≈ 0,77 m. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) 340/880. C) 340/264. D) 340/132. E) 340×440.\n\nCONCEITO-CHAVE: v = f × λ. 440 Hz = nota Lá (padrão de afinação). Som: onda mecânica longitudinal, precisa de meio material. Velocidade no ar ≈ 340 m/s, na água ≈ 1500 m/s.'
   },
   {
     enunciado: 'Um bloco de 2 kg está sobre uma mesa sem atrito e é puxado por uma força horizontal de 10 N. A aceleração do bloco é:',
@@ -239,7 +239,7 @@ export const fisicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A 2ª Lei de Newton relaciona força resultante, massa e aceleração: FR = m × a.\n\n🔍 INTERPRETAÇÃO: F = 10 N, m = 2 kg, sem atrito → FR = F. a = FR/m.\n\n✅ RESOLUÇÃO: a = 10/2 = 5 m/s². Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) 10/5. B) 10/3,33. D) A própria força. E) 10×2.\n\n💡 CONCEITO-CHAVE: F = ma → a = F/m. Unidades SI: F em N, m em kg, a em m/s². Com atrito: FR = F - Fat, onde Fat = μN.'
+    explicacao: 'CONTEXTO: A 2ª Lei de Newton relaciona força resultante, massa e aceleração: FR = m × a.\n\nINTERPRETAÇÃO: F = 10 N, m = 2 kg, sem atrito → FR = F. a = FR/m.\n\nRESOLUÇÃO: a = 10/2 = 5 m/s². Alternativa C.\n\nALTERNATIVAS ERRADAS: A) 10/5. B) 10/3,33. D) A própria força. E) 10×2.\n\nCONCEITO-CHAVE: F = ma → a = F/m. Unidades SI: F em N, m em kg, a em m/s². Com atrito: FR = F - Fat, onde Fat = μN.'
   },
   {
     enunciado: 'O princípio de Arquimedes afirma que um corpo imerso em um fluido recebe um empuxo igual ao peso do fluido deslocado. Um corpo flutua quando:',
@@ -255,7 +255,7 @@ export const fisicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: O empuxo (E) é a força que fluidos exercem sobre corpos imersos. E = ρ_fluido × V_deslocado × g.\n\n🔍 INTERPRETAÇÃO: Para flutuar: Empuxo ≥ Peso → ρ_fluido × Vd × g ≥ ρ_corpo × Vc × g → ρ_corpo ≤ ρ_fluido.\n\n✅ RESOLUÇÃO: Um corpo flutua quando sua densidade é menor ou igual à do fluido. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Densidade maior → afunda. B) Massa nunca é zero. D) O fluido sempre exerce empuxo. E) Gravidade atua em todos os corpos.\n\n💡 CONCEITO-CHAVE: ρ_corpo < ρ_fluido → flutua. ρ_corpo = ρ_fluido → equilíbrio neutro. ρ_corpo > ρ_fluido → afunda. Gelo flutua: ρ_gelo (0,92) < ρ_água (1,0).'
+    explicacao: 'CONTEXTO: O empuxo (E) é a força que fluidos exercem sobre corpos imersos. E = ρ_fluido × V_deslocado × g.\n\nINTERPRETAÇÃO: Para flutuar: Empuxo ≥ Peso → ρ_fluido × Vd × g ≥ ρ_corpo × Vc × g → ρ_corpo ≤ ρ_fluido.\n\nRESOLUÇÃO: Um corpo flutua quando sua densidade é menor ou igual à do fluido. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Densidade maior → afunda. B) Massa nunca é zero. D) O fluido sempre exerce empuxo. E) Gravidade atua em todos os corpos.\n\nCONCEITO-CHAVE: ρ_corpo < ρ_fluido → flutua. ρ_corpo = ρ_fluido → equilíbrio neutro. ρ_corpo > ρ_fluido → afunda. Gelo flutua: ρ_gelo (0,92) < ρ_água (1,0).'
   },
   {
     enunciado: 'A energia potencial gravitacional de um corpo a 10 m de altura, com massa de 3 kg (g = 10 m/s²), é:',
@@ -271,7 +271,7 @@ export const fisicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Energia potencial gravitacional é a energia armazenada pela posição de um corpo em relação a um referencial.\n\n🔍 INTERPRETAÇÃO: Ep = mgh, com m = 3 kg, g = 10 m/s², h = 10 m.\n\n✅ RESOLUÇÃO: Ep = 3 × 10 × 10 = 300 J. Alternativa D.\n\n❌ ALTERNATIVAS ERRADAS: A) 3×10. B) 10×10. C) 3×10×5. E) 3×10×100.\n\n💡 CONCEITO-CHAVE: Ep = mgh. Ec = mv²/2. Em = Ep + Ec. Sem atrito: Em se conserva → perda de Ep = ganho de Ec (e vice-versa).'
+    explicacao: 'CONTEXTO: Energia potencial gravitacional é a energia armazenada pela posição de um corpo em relação a um referencial.\n\nINTERPRETAÇÃO: Ep = mgh, com m = 3 kg, g = 10 m/s², h = 10 m.\n\nRESOLUÇÃO: Ep = 3 × 10 × 10 = 300 J. Alternativa D.\n\nALTERNATIVAS ERRADAS: A) 3×10. B) 10×10. C) 3×10×5. E) 3×10×100.\n\nCONCEITO-CHAVE: Ep = mgh. Ec = mv²/2. Em = Ep + Ec. Sem atrito: Em se conserva → perda de Ep = ganho de Ec (e vice-versa).'
   },
   {
     enunciado: 'Uma lâmpada de 100 W fica ligada por 5 horas. A energia consumida, em kWh, é:',
@@ -287,7 +287,7 @@ export const fisicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: O kWh (quilowatt-hora) é a unidade comercial de energia elétrica usada nas contas de luz.\n\n🔍 INTERPRETAÇÃO: E = P × t. 100 W = 0,1 kW. t = 5 h.\n\n✅ RESOLUÇÃO: E = 0,1 kW × 5 h = 0,5 kWh. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) 100W × 1h. C) 1kW × 5h. D) 10kW × 5h. E) 100kW × 5h.\n\n💡 CONCEITO-CHAVE: E = P × t. 1 kWh = 3.600.000 J. Conta de luz cobra por kWh. Para economizar: substituir lâmpadas incandescentes por LED (menos W, mesma luminosidade).'
+    explicacao: 'CONTEXTO: O kWh (quilowatt-hora) é a unidade comercial de energia elétrica usada nas contas de luz.\n\nINTERPRETAÇÃO: E = P × t. 100 W = 0,1 kW. t = 5 h.\n\nRESOLUÇÃO: E = 0,1 kW × 5 h = 0,5 kWh. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) 100W × 1h. C) 1kW × 5h. D) 10kW × 5h. E) 100kW × 5h.\n\nCONCEITO-CHAVE: E = P × t. 1 kWh = 3.600.000 J. Conta de luz cobra por kWh. Para economizar: substituir lâmpadas incandescentes por LED (menos W, mesma luminosidade).'
   },
   {
     enunciado: 'A 1ª Lei da Termodinâmica estabelece que:',
@@ -303,7 +303,7 @@ export const fisicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: As leis da termodinâmica governam as transformações de energia. A 1ª Lei é a conservação da energia aplicada a sistemas termodinâmicos.\n\n🔍 INTERPRETAÇÃO: ΔU = Q - W (convenção: Q recebido positivo, W realizado pelo sistema positivo).\n\n✅ RESOLUÇÃO: A 1ª Lei afirma: ΔU = Q - W (conservação da energia em processos térmicos). Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) 2ª Lei (calor flui do quente para o frio, não o contrário). B) 2ª Lei (entropia). D) 3ª Lei (zero absoluto). E) Boyle: PV = const (isotérmico).\n\n💡 CONCEITO-CHAVE: 1ª Lei: ΔU = Q - W (conservação). 2ª Lei: entropia, sentido natural dos processos. 0ª Lei: equilíbrio térmico. 3ª Lei: zero absoluto inatingível.'
+    explicacao: 'CONTEXTO: As leis da termodinâmica governam as transformações de energia. A 1ª Lei é a conservação da energia aplicada a sistemas termodinâmicos.\n\nINTERPRETAÇÃO: ΔU = Q - W (convenção: Q recebido positivo, W realizado pelo sistema positivo).\n\nRESOLUÇÃO: A 1ª Lei afirma: ΔU = Q - W (conservação da energia em processos térmicos). Alternativa C.\n\nALTERNATIVAS ERRADAS: A) 2ª Lei (calor flui do quente para o frio, não o contrário). B) 2ª Lei (entropia). D) 3ª Lei (zero absoluto). E) Boyle: PV = const (isotérmico).\n\nCONCEITO-CHAVE: 1ª Lei: ΔU = Q - W (conservação). 2ª Lei: entropia, sentido natural dos processos. 0ª Lei: equilíbrio térmico. 3ª Lei: zero absoluto inatingível.'
   },
   {
     enunciado: 'Um espelho plano produz imagens com quais características?',
@@ -319,7 +319,7 @@ export const fisicaQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Espelhos planos são onipresentes no cotidiano. As propriedades de suas imagens são fundamentais na óptica geométrica.\n\n🔍 INTERPRETAÇÃO: A imagem no espelho plano é simétrica ao objeto em relação ao plano do espelho.\n\n✅ RESOLUÇÃO: Imagem: virtual (atrás do espelho), direita (não invertida verticalmente), mesmo tamanho, simétrica. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) Espelhos côncavos podem dar imagens reais. C/D) Espelhos esféricos variam. E) Imagens reais podem ser projetadas — espelhos planos não produzem imagens reais.\n\n💡 CONCEITO-CHAVE: Espelho plano: imagem virtual, direita, simétrica, mesmo tamanho. Inversão: direita↔esquerda (reversão lateral), não vertical.'
+    explicacao: 'CONTEXTO: Espelhos planos são onipresentes no cotidiano. As propriedades de suas imagens são fundamentais na óptica geométrica.\n\nINTERPRETAÇÃO: A imagem no espelho plano é simétrica ao objeto em relação ao plano do espelho.\n\nRESOLUÇÃO: Imagem: virtual (atrás do espelho), direita (não invertida verticalmente), mesmo tamanho, simétrica. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) Espelhos côncavos podem dar imagens reais. C/D) Espelhos esféricos variam. E) Imagens reais podem ser projetadas — espelhos planos não produzem imagens reais.\n\nCONCEITO-CHAVE: Espelho plano: imagem virtual, direita, simétrica, mesmo tamanho. Inversão: direita↔esquerda (reversão lateral), não vertical.'
   },
   // === MODELO ENEM (10) ===
   {
@@ -336,7 +336,7 @@ export const fisicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: O problema do elevador é clássico na dinâmica de Newton — envolve peso, tração e aceleração em um sistema com movimento vertical.\n\n🔍 INTERPRETAÇÃO: Elevador subindo com aceleração para cima: T - P = ma, onde P = mg.\n\n✅ RESOLUÇÃO: T - mg = ma → T = m(g+a) = 800×(10+2) = 800×12 = 9600 N. Alternativa D.\n\n❌ ALTERNATIVAS ERRADAS: A) ma = 800×2. B) m(g-a) = 800×8. C) mg = 800×10. E) 2mg.\n\n💡 CONCEITO-CHAVE: Elevador: T = m(g+a) subindo acelerando ou descendo desacelerando. T = m(g-a) subindo desacelerando ou descendo acelerando. T = mg em MRU.'
+    explicacao: 'CONTEXTO: O problema do elevador é clássico na dinâmica de Newton — envolve peso, tração e aceleração em um sistema com movimento vertical.\n\nINTERPRETAÇÃO: Elevador subindo com aceleração para cima: T - P = ma, onde P = mg.\n\nRESOLUÇÃO: T - mg = ma → T = m(g+a) = 800×(10+2) = 800×12 = 9600 N. Alternativa D.\n\nALTERNATIVAS ERRADAS: A) ma = 800×2. B) m(g-a) = 800×8. C) mg = 800×10. E) 2mg.\n\nCONCEITO-CHAVE: Elevador: T = m(g+a) subindo acelerando ou descendo desacelerando. T = m(g-a) subindo desacelerando ou descendo acelerando. T = mg em MRU.'
   },
   {
     enunciado: 'Um gás ideal realiza uma expansão isotérmica. Nesse processo, pode-se afirmar que:',
@@ -352,7 +352,7 @@ export const fisicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Em processos isotérmicos (T constante), a energia interna de um gás ideal não varia (ΔU = 0), pois depende apenas de T.\n\n🔍 INTERPRETAÇÃO: 1ª Lei: ΔU = Q - W. Se ΔU = 0 → Q = W. Todo calor absorvido vira trabalho.\n\n✅ RESOLUÇÃO: Isotérmica: ΔU = 0 → Q = W. O gás absorve calor e realiza trabalho equivalente. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) T constante (isotérmico). B) ΔU = 0 (T não muda). D) Expansão → volume AUMENTA. E) P muda: PV = nRT → P diminui se V aumenta.\n\n💡 CONCEITO-CHAVE: Isotérmica: T = cte, ΔU = 0, Q = W. Isobárica: P = cte, W = PΔV. Isocórica: V = cte, W = 0, Q = ΔU. Adiabática: Q = 0, ΔU = -W.'
+    explicacao: 'CONTEXTO: Em processos isotérmicos (T constante), a energia interna de um gás ideal não varia (ΔU = 0), pois depende apenas de T.\n\nINTERPRETAÇÃO: 1ª Lei: ΔU = Q - W. Se ΔU = 0 → Q = W. Todo calor absorvido vira trabalho.\n\nRESOLUÇÃO: Isotérmica: ΔU = 0 → Q = W. O gás absorve calor e realiza trabalho equivalente. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) T constante (isotérmico). B) ΔU = 0 (T não muda). D) Expansão → volume AUMENTA. E) P muda: PV = nRT → P diminui se V aumenta.\n\nCONCEITO-CHAVE: Isotérmica: T = cte, ΔU = 0, Q = W. Isobárica: P = cte, W = PΔV. Isocórica: V = cte, W = 0, Q = ΔU. Adiabática: Q = 0, ΔU = -W.'
   },
   {
     enunciado: 'Uma usina hidrelétrica converte energia potencial gravitacional da água em energia elétrica. Se a vazão de água é de 500 m³/s e a altura da queda é de 40 m (g = 10 m/s², ρ_água = 1000 kg/m³), a potência máxima teórica disponível é:',
@@ -368,7 +368,7 @@ export const fisicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Usinas hidrelétricas convertem Ep gravitacional da água em eletricidade. O ENEM cobra essa conversão em contextos de matriz energética brasileira.\n\n🔍 INTERPRETAÇÃO: P = ρgQh, onde Q = vazão (m³/s), h = altura, ρ = densidade.\n\n✅ RESOLUÇÃO: P = ρ × g × Q × h = 1000 × 10 × 500 × 40 = 200.000.000 W = 200 MW. Alternativa D.\n\n❌ ALTERNATIVAS ERRADAS: A) Fator errado. B) Sem ρ. C) Q/2. E) Q × h × 10³.\n\n💡 CONCEITO-CHAVE: P = ρgQh (usina). Na prática, η < 100% (perdas por atrito, gerador). Brasil: ~60% da matriz é hidrelétrica. ENEM cobra sustentabilidade e impactos ambientais.'
+    explicacao: 'CONTEXTO: Usinas hidrelétricas convertem Ep gravitacional da água em eletricidade. O ENEM cobra essa conversão em contextos de matriz energética brasileira.\n\nINTERPRETAÇÃO: P = ρgQh, onde Q = vazão (m³/s), h = altura, ρ = densidade.\n\nRESOLUÇÃO: P = ρ × g × Q × h = 1000 × 10 × 500 × 40 = 200.000.000 W = 200 MW. Alternativa D.\n\nALTERNATIVAS ERRADAS: A) Fator errado. B) Sem ρ. C) Q/2. E) Q × h × 10³.\n\nCONCEITO-CHAVE: P = ρgQh (usina). Na prática, η < 100% (perdas por atrito, gerador). Brasil: ~60% da matriz é hidrelétrica. ENEM cobra sustentabilidade e impactos ambientais.'
   },
   {
     enunciado: 'A luz branca ao atravessar um prisma de vidro se decompõe nas cores do espectro visível. Esse fenômeno ocorre porque:',
@@ -384,7 +384,7 @@ export const fisicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A dispersão da luz foi estudada por Newton e demonstra que a luz branca é composta por todas as cores do espectro visível.\n\n🔍 INTERPRETAÇÃO: O índice de refração do vidro varia com a frequência (dispersão cromática). Cada cor sofre desvio diferente.\n\n✅ RESOLUÇÃO: Cada frequência (cor) tem índice de refração diferente no vidro → ângulos de refração diferentes → separação em espectro. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) O prisma é transparente, não absorve seletivamente. B) Luz branca é policromática. D) O vidro não emite cores. E) A frequência NÃO muda na refração (λ muda, f não).\n\n💡 CONCEITO-CHAVE: Dispersão: n(violeta) > n(vermelho) → violeta desvia mais. Arco-íris = dispersão nas gotas de água. Frequência não muda na refração, comprimento de onda e velocidade mudam.'
+    explicacao: 'CONTEXTO: A dispersão da luz foi estudada por Newton e demonstra que a luz branca é composta por todas as cores do espectro visível.\n\nINTERPRETAÇÃO: O índice de refração do vidro varia com a frequência (dispersão cromática). Cada cor sofre desvio diferente.\n\nRESOLUÇÃO: Cada frequência (cor) tem índice de refração diferente no vidro → ângulos de refração diferentes → separação em espectro. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) O prisma é transparente, não absorve seletivamente. B) Luz branca é policromática. D) O vidro não emite cores. E) A frequência NÃO muda na refração (λ muda, f não).\n\nCONCEITO-CHAVE: Dispersão: n(violeta) > n(vermelho) → violeta desvia mais. Arco-íris = dispersão nas gotas de água. Frequência não muda na refração, comprimento de onda e velocidade mudam.'
   },
   {
     enunciado: 'Um satélite em órbita circular ao redor da Terra mantém-se em sua trajetória porque:',
@@ -400,7 +400,7 @@ export const fisicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Satélites em órbita estão em "queda livre" contínua — a gravidade os puxa, mas a velocidade tangencial mantém a curvatura da trajetória.\n\n🔍 INTERPRETAÇÃO: A força gravitacional (Fg = GMm/r²) aponta para o centro da Terra e fornece a aceleração centrípeta (ac = v²/r) para a órbita circular.\n\n✅ RESOLUÇÃO: Gravidade = centrípeta: GMm/r² = mv²/r. O satélite "cai" continuamente, mas a curvatura da Terra se afasta na mesma proporção. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) Há gravidade no espaço (ISS: ~90% de g terrestre). C) Satélites em órbita não precisam de propulsão. D) Sem atmosfera significativa. E) 3ª Lei não explica a órbita.\n\n💡 CONCEITO-CHAVE: Órbita: Fg = Fc → v² = GM/r. Satélite mais alto → mais lento. Velocidade orbital na ISS (~400km): ~7,7 km/s. Satélite geoestacionário: T = 24h, r ≈ 36.000 km.'
+    explicacao: 'CONTEXTO: Satélites em órbita estão em "queda livre" contínua — a gravidade os puxa, mas a velocidade tangencial mantém a curvatura da trajetória.\n\nINTERPRETAÇÃO: A força gravitacional (Fg = GMm/r²) aponta para o centro da Terra e fornece a aceleração centrípeta (ac = v²/r) para a órbita circular.\n\nRESOLUÇÃO: Gravidade = centrípeta: GMm/r² = mv²/r. O satélite "cai" continuamente, mas a curvatura da Terra se afasta na mesma proporção. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) Há gravidade no espaço (ISS: ~90% de g terrestre). C) Satélites em órbita não precisam de propulsão. D) Sem atmosfera significativa. E) 3ª Lei não explica a órbita.\n\nCONCEITO-CHAVE: Órbita: Fg = Fc → v² = GM/r. Satélite mais alto → mais lento. Velocidade orbital na ISS (~400km): ~7,7 km/s. Satélite geoestacionário: T = 24h, r ≈ 36.000 km.'
   },
   {
     enunciado: 'Em uma colisão perfeitamente inelástica entre dois carros de massas iguais, sendo que um está parado e o outro se move a 20 m/s, a velocidade do conjunto após a colisão é:',
@@ -416,7 +416,7 @@ export const fisicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Na colisão perfeitamente inelástica, os corpos se unem após o choque. A quantidade de movimento se conserva, mas a energia cinética não.\n\n🔍 INTERPRETAÇÃO: Conservação do momento: m×20 + m×0 = 2m×v (corpos se juntam).\n\n✅ RESOLUÇÃO: m×20 = 2m×v → v = 20/2 = 10 m/s. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) m₁v₁/4m. C) (v₁+v₂)/2 com v₂≠0. D) Velocidade original (momento não se conservaria). E) 2v₁.\n\n💡 CONCEITO-CHAVE: Conservação do momento: Σp_antes = Σp_depois. Inelástica: corpos se unem, Ec diminui. Elástica: Ec se conserva. Perfeitamente inelástica: máxima perda de Ec.'
+    explicacao: 'CONTEXTO: Na colisão perfeitamente inelástica, os corpos se unem após o choque. A quantidade de movimento se conserva, mas a energia cinética não.\n\nINTERPRETAÇÃO: Conservação do momento: m×20 + m×0 = 2m×v (corpos se juntam).\n\nRESOLUÇÃO: m×20 = 2m×v → v = 20/2 = 10 m/s. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) m₁v₁/4m. C) (v₁+v₂)/2 com v₂≠0. D) Velocidade original (momento não se conservaria). E) 2v₁.\n\nCONCEITO-CHAVE: Conservação do momento: Σp_antes = Σp_depois. Inelástica: corpos se unem, Ec diminui. Elástica: Ec se conserva. Perfeitamente inelástica: máxima perda de Ec.'
   },
   {
     enunciado: 'Um transformador ideal tem 1000 espiras no primário e 100 no secundário. Se a tensão no primário é 220 V, a tensão no secundário é:',
@@ -432,7 +432,7 @@ export const fisicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Transformadores funcionam por indução eletromagnética (Lei de Faraday) e permitem alterar tensões em corrente alternada — essenciais na distribuição de energia.\n\n🔍 INTERPRETAÇÃO: V₁/V₂ = N₁/N₂ (transformador ideal). V₁ = 220V, N₁ = 1000, N₂ = 100.\n\n✅ RESOLUÇÃO: 220/V₂ = 1000/100 → V₂ = 220 × 100/1000 = 22 V. Transformador abaixador. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) 220/100. C) 220/2. D) Sem transformação. E) 220×10 (inverteu a razão).\n\n💡 CONCEITO-CHAVE: V₁/V₂ = N₁/N₂ = i₂/i₁ (ideal: P₁ = P₂). N₂ > N₁ → elevador. N₂ < N₁ → abaixador. Só funciona com corrente alternada (CA).'
+    explicacao: 'CONTEXTO: Transformadores funcionam por indução eletromagnética (Lei de Faraday) e permitem alterar tensões em corrente alternada — essenciais na distribuição de energia.\n\nINTERPRETAÇÃO: V₁/V₂ = N₁/N₂ (transformador ideal). V₁ = 220V, N₁ = 1000, N₂ = 100.\n\nRESOLUÇÃO: 220/V₂ = 1000/100 → V₂ = 220 × 100/1000 = 22 V. Transformador abaixador. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) 220/100. C) 220/2. D) Sem transformação. E) 220×10 (inverteu a razão).\n\nCONCEITO-CHAVE: V₁/V₂ = N₁/N₂ = i₂/i₁ (ideal: P₁ = P₂). N₂ > N₁ → elevador. N₂ < N₁ → abaixador. Só funciona com corrente alternada (CA).'
   },
   {
     enunciado: 'O efeito Doppler explica por que a sirene de uma ambulância parece ter som mais agudo quando se aproxima e mais grave quando se afasta. Isso ocorre porque:',
@@ -448,7 +448,7 @@ export const fisicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: O efeito Doppler ocorre com qualquer tipo de onda quando há movimento relativo entre fonte e observador — aplicações em astronomia (redshift), radar e medicina (ultrassom).\n\n🔍 INTERPRETAÇÃO: Quando a fonte se aproxima, as ondas se "comprimem" (λ diminui, f percebida aumenta). Quando se afasta, as ondas se "esticam" (λ aumenta, f percebida diminui).\n\n✅ RESOLUÇÃO: As cristas chegam mais próximas → o observador percebe comprimento de onda menor → frequência maior → som mais agudo. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) A frequência emitida é constante. B) "Comprimir" o ar não é preciso fisicamente. D) Volume (intensidade) também muda, mas não explica a mudança de altura. E) A velocidade do som depende do meio, não da fonte.\n\n💡 CONCEITO-CHAVE: Doppler: f\' = f × (v ± vo)/(v ∓ vf). Aproximação → f\' > f (agudo). Afastamento → f\' < f (grave). Luz: redshift (afasta, vermelho) / blueshift (aproxima, azul).'
+    explicacao: 'CONTEXTO: O efeito Doppler ocorre com qualquer tipo de onda quando há movimento relativo entre fonte e observador — aplicações em astronomia (redshift), radar e medicina (ultrassom).\n\nINTERPRETAÇÃO: Quando a fonte se aproxima, as ondas se "comprimem" (λ diminui, f percebida aumenta). Quando se afasta, as ondas se "esticam" (λ aumenta, f percebida diminui).\n\nRESOLUÇÃO: As cristas chegam mais próximas → o observador percebe comprimento de onda menor → frequência maior → som mais agudo. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) A frequência emitida é constante. B) "Comprimir" o ar não é preciso fisicamente. D) Volume (intensidade) também muda, mas não explica a mudança de altura. E) A velocidade do som depende do meio, não da fonte.\n\nCONCEITO-CHAVE: Doppler: f\' = f × (v ± vo)/(v ∓ vf). Aproximação → f\' > f (agudo). Afastamento → f\' < f (grave). Luz: redshift (afasta, vermelho) / blueshift (aproxima, azul).'
   },
   {
     enunciado: 'Na geração de energia em uma usina nuclear, a energia liberada provém de:',
@@ -464,7 +464,7 @@ export const fisicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Usinas nucleares usam a fissão controlada de U-235 ou Pu-239 para gerar calor, que produz vapor, que move turbinas, gerando eletricidade.\n\n🔍 INTERPRETAÇÃO: Fissão = quebra de núcleo pesado em núcleos menores + nêutrons + energia (E = mc²). Diferente de fusão (junção de núcleos leves, como no Sol).\n\n✅ RESOLUÇÃO: Usinas nucleares usam fissão do U-235: nêutron atinge núcleo pesado → quebra → libera energia + mais nêutrons (reação em cadeia). Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Urânio não "queima" (combustão é reação química). B) Fusão é de átomos leves (H → He), como no Sol. D) Não é reação química. E) O decaimento é controlado em reatores.\n\n💡 CONCEITO-CHAVE: Fissão: núcleo pesado se divide (U-235, centrais nucleares). Fusão: núcleos leves se unem (H→He, Sol, bomba H). E = mc² (Einstein). Fissão: reação em cadeia controlada por barras de cádmio.'
+    explicacao: 'CONTEXTO: Usinas nucleares usam a fissão controlada de U-235 ou Pu-239 para gerar calor, que produz vapor, que move turbinas, gerando eletricidade.\n\nINTERPRETAÇÃO: Fissão = quebra de núcleo pesado em núcleos menores + nêutrons + energia (E = mc²). Diferente de fusão (junção de núcleos leves, como no Sol).\n\nRESOLUÇÃO: Usinas nucleares usam fissão do U-235: nêutron atinge núcleo pesado → quebra → libera energia + mais nêutrons (reação em cadeia). Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Urânio não "queima" (combustão é reação química). B) Fusão é de átomos leves (H → He), como no Sol. D) Não é reação química. E) O decaimento é controlado em reatores.\n\nCONCEITO-CHAVE: Fissão: núcleo pesado se divide (U-235, centrais nucleares). Fusão: núcleos leves se unem (H→He, Sol, bomba H). E = mc² (Einstein). Fissão: reação em cadeia controlada por barras de cádmio.'
   },
   {
     enunciado: 'Considere duas cargas elétricas puntiformes de 2 μC e 8 μC separadas por uma distância de 20 cm no vácuo (k = 9×10⁹ N·m²/C²). A força elétrica entre elas é:',
@@ -480,6 +480,6 @@ export const fisicaQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A Lei de Coulomb descreve a força elétrica entre cargas puntiformes — análoga à gravitação, mas com cargas em vez de massas.\n\n🔍 INTERPRETAÇÃO: F = k|q₁||q₂|/d². q₁ = 2×10⁻⁶ C, q₂ = 8×10⁻⁶ C, d = 0,20 m.\n\n✅ RESOLUÇÃO: F = 9×10⁹ × 2×10⁻⁶ × 8×10⁻⁶ / (0,2)² = 9×10⁹ × 16×10⁻¹² / 0,04 = 144×10⁻³ / 0,04 = 3,6 N. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) Erro no expoente. C) d em cm. D) d em mm. E) Erro de fator 100.\n\n💡 CONCEITO-CHAVE: Coulomb: F = kq₁q₂/d². k = 9×10⁹ (vácuo). μC = 10⁻⁶ C. Atenção às unidades! Converter cm → m e μC → C antes de calcular.'
+    explicacao: 'CONTEXTO: A Lei de Coulomb descreve a força elétrica entre cargas puntiformes — análoga à gravitação, mas com cargas em vez de massas.\n\nINTERPRETAÇÃO: F = k|q₁||q₂|/d². q₁ = 2×10⁻⁶ C, q₂ = 8×10⁻⁶ C, d = 0,20 m.\n\nRESOLUÇÃO: F = 9×10⁹ × 2×10⁻⁶ × 8×10⁻⁶ / (0,2)² = 9×10⁹ × 16×10⁻¹² / 0,04 = 144×10⁻³ / 0,04 = 3,6 N. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) Erro no expoente. C) d em cm. D) d em mm. E) Erro de fator 100.\n\nCONCEITO-CHAVE: Coulomb: F = kq₁q₂/d². k = 9×10⁹ (vácuo). μC = 10⁻⁶ C. Atenção às unidades! Converter cm → m e μC → C antes de calcular.'
   }
 ];

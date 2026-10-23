@@ -14,7 +14,7 @@ export const portuguesQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: "Bastante" pode ser advérbio (invariável, modifica verbo/adjetivo) ou pronome/adjetivo (variável, concorda com substantivo).\n\n🔍 INTERPRETAÇÃO: "Estudaram bastante" — bastante modifica o verbo "estudaram", indicando intensidade. É invariável aqui.\n\n✅ RESOLUÇÃO: Como modifica o verbo (intensifica a ação de estudar), "bastante" é advérbio de intensidade. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Não nomeia nada. B) Seria adjetivo se concordasse com substantivo ("alunos bastantes"). D) Pronome substituiria substantivo. E) Conjunção liga orações.\n\n💡 CONCEITO-CHAVE: "Bastante" = advérbio (modifica verbo/adjetivo, invariável) × pronome/adjetivo (concorda com substantivo: "bastantes alunos").'
+    explicacao: 'CONTEXTO: "Bastante" pode ser advérbio (invariável, modifica verbo/adjetivo) ou pronome/adjetivo (variável, concorda com substantivo).\n\nINTERPRETAÇÃO: "Estudaram bastante" — bastante modifica o verbo "estudaram", indicando intensidade. É invariável aqui.\n\nRESOLUÇÃO: Como modifica o verbo (intensifica a ação de estudar), "bastante" é advérbio de intensidade. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Não nomeia nada. B) Seria adjetivo se concordasse com substantivo ("alunos bastantes"). D) Pronome substituiria substantivo. E) Conjunção liga orações.\n\nCONCEITO-CHAVE: "Bastante" = advérbio (modifica verbo/adjetivo, invariável) × pronome/adjetivo (concorda com substantivo: "bastantes alunos").'
   },
   {
     enunciado: 'A concordância verbal está CORRETA em:',
@@ -30,7 +30,7 @@ export const portuguesQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Concordância verbal é um dos temas mais cobrados em Português no ENEM, especialmente com verbos impessoais.\n\n🔍 INTERPRETAÇÃO: "Existir" é verbo pessoal e concorda com o sujeito. "Haver" sentido de existir é impessoal (3ª singular).\n\n✅ RESOLUÇÃO: "Existem várias soluções" — verbo pessoal concordando com sujeito plural. Correto! Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) "Faz" (tempo) é impessoal → singular: "Faz três anos". B) "Haver" = existir → impessoal: "Houve muitos problemas". D) "Haviam" auxiliar está correto (mas é controverso). E) "Chovem" sentido real é impessoal.\n\n💡 CONCEITO-CHAVE: Impessoais (3ª singular): haver (existir), fazer (tempo), chover/nevar (fenômeno). Pessoais (concordam): existir, acontecer, ocorrer, bastar.'
+    explicacao: 'CONTEXTO: Concordância verbal é um dos temas mais cobrados em Português no ENEM, especialmente com verbos impessoais.\n\nINTERPRETAÇÃO: "Existir" é verbo pessoal e concorda com o sujeito. "Haver" sentido de existir é impessoal (3ª singular).\n\nRESOLUÇÃO: "Existem várias soluções" — verbo pessoal concordando com sujeito plural. Correto! Alternativa C.\n\nALTERNATIVAS ERRADAS: A) "Faz" (tempo) é impessoal → singular: "Faz três anos". B) "Haver" = existir → impessoal: "Houve muitos problemas". D) "Haviam" auxiliar está correto (mas é controverso). E) "Chovem" sentido real é impessoal.\n\nCONCEITO-CHAVE: Impessoais (3ª singular): haver (existir), fazer (tempo), chover/nevar (fenômeno). Pessoais (concordam): existir, acontecer, ocorrer, bastar.'
   },
   {
     enunciado: 'Assinale a alternativa em que o uso da crase está CORRETO:',
@@ -46,7 +46,7 @@ export const portuguesQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A crase ocorre quando há fusão da preposição "a" com o artigo "a(s)" ou com pronomes demonstrativos (àquela, àquele).\n\n🔍 INTERPRETAÇÃO: "Chegamos à cidade" = chegamos a + a cidade. A preposição "a" (exigida por "chegar") se funde com o artigo "a" (antes de "cidade").\n\n✅ RESOLUÇÃO: "Chegamos à cidade" — crase correta (preposição + artigo feminino). Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Antes de "pé" (masculino) não há crase. B) Antes de "todas" (pronome indefinido) não há crase. D) Antes de pronome pessoal ("ela") não há crase. E) "Curitiba" não aceita artigo → sem crase.\n\n💡 CONCEITO-CHAVE: Crase = preposição "a" + artigo "a". Dica: substitua a palavra feminina por masculina — se "ao" couber, há crase. "Cheguei ao lugar" → "Cheguei à cidade" ✓.'
+    explicacao: 'CONTEXTO: A crase ocorre quando há fusão da preposição "a" com o artigo "a(s)" ou com pronomes demonstrativos (àquela, àquele).\n\nINTERPRETAÇÃO: "Chegamos à cidade" = chegamos a + a cidade. A preposição "a" (exigida por "chegar") se funde com o artigo "a" (antes de "cidade").\n\nRESOLUÇÃO: "Chegamos à cidade" — crase correta (preposição + artigo feminino). Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Antes de "pé" (masculino) não há crase. B) Antes de "todas" (pronome indefinido) não há crase. D) Antes de pronome pessoal ("ela") não há crase. E) "Curitiba" não aceita artigo → sem crase.\n\nCONCEITO-CHAVE: Crase = preposição "a" + artigo "a". Dica: substitua a palavra feminina por masculina — se "ao" couber, há crase. "Cheguei ao lugar" → "Cheguei à cidade" ✓.'
   },
   {
     enunciado: 'Na oração "Maria, que é minha vizinha, viajou ontem", a oração destacada "que é minha vizinha" é:',
@@ -62,7 +62,7 @@ export const portuguesQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Orações adjetivas são introduzidas por pronome relativo e classificam-se em restritivas (sem vírgula) e explicativas (com vírgula).\n\n🔍 INTERPRETAÇÃO: "Que é minha vizinha" está entre vírgulas → explicativa. Adiciona uma informação acessória sobre Maria, sem restringir.\n\n✅ RESOLUÇÃO: Entre vírgulas + informação acessória + pronome relativo "que" = subordinada adjetiva explicativa. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) Restritiva não usa vírgulas e limita o significado. C) Substantiva exerce função de substantivo. D) Coordenada tem independência sintática. E) Adverbial indica circunstância.\n\n💡 CONCEITO-CHAVE: Adjetiva explicativa: entre vírgulas, informação extra, pode ser retirada sem alterar o sentido. Restritiva: sem vírgulas, limita/especifica o antecedente, essencial ao sentido.'
+    explicacao: 'CONTEXTO: Orações adjetivas são introduzidas por pronome relativo e classificam-se em restritivas (sem vírgula) e explicativas (com vírgula).\n\nINTERPRETAÇÃO: "Que é minha vizinha" está entre vírgulas → explicativa. Adiciona uma informação acessória sobre Maria, sem restringir.\n\nRESOLUÇÃO: Entre vírgulas + informação acessória + pronome relativo "que" = subordinada adjetiva explicativa. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) Restritiva não usa vírgulas e limita o significado. C) Substantiva exerce função de substantivo. D) Coordenada tem independência sintática. E) Adverbial indica circunstância.\n\nCONCEITO-CHAVE: Adjetiva explicativa: entre vírgulas, informação extra, pode ser retirada sem alterar o sentido. Restritiva: sem vírgulas, limita/especifica o antecedente, essencial ao sentido.'
   },
   {
     enunciado: 'Identifique a figura de linguagem presente em: "Seus olhos eram dois lagos de mel."',
@@ -78,7 +78,7 @@ export const portuguesQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Figuras de linguagem enriquecem a expressão e são essenciais na interpretação de textos literários e não literários no ENEM.\n\n🔍 INTERPRETAÇÃO: "Olhos eram lagos de mel" — comparação implícita (sem "como") entre olhos e lagos. É uma metáfora.\n\n✅ RESOLUÇÃO: Metáfora: comparação implícita (sem conectivo) entre dois elementos de campos semânticos diferentes. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Metonímia troca um termo por outro relacionado. B) Hipérbole é exagero. D) Ironia diz o contrário do que pensa. E) Eufemismo suaviza.\n\n💡 CONCEITO-CHAVE: Metáfora: comparação SEM "como/tal qual" → "olhos são lagos". Comparação/símile: COM "como" → "olhos como lagos". ENEM cobra a diferença!'
+    explicacao: 'CONTEXTO: Figuras de linguagem enriquecem a expressão e são essenciais na interpretação de textos literários e não literários no ENEM.\n\nINTERPRETAÇÃO: "Olhos eram lagos de mel" — comparação implícita (sem "como") entre olhos e lagos. É uma metáfora.\n\nRESOLUÇÃO: Metáfora: comparação implícita (sem conectivo) entre dois elementos de campos semânticos diferentes. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Metonímia troca um termo por outro relacionado. B) Hipérbole é exagero. D) Ironia diz o contrário do que pensa. E) Eufemismo suaviza.\n\nCONCEITO-CHAVE: Metáfora: comparação SEM "como/tal qual" → "olhos são lagos". Comparação/símile: COM "como" → "olhos como lagos". ENEM cobra a diferença!'
   },
   {
     enunciado: 'A acentuação está CORRETA em todas as palavras de qual alternativa?',
@@ -94,7 +94,7 @@ export const portuguesQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A acentuação gráfica segue regras baseadas na posição da sílaba tônica (oxítona, paroxítona, proparoxítona) e no hiato.\n\n🔍 INTERPRETAÇÃO: Saúde (hiato), baú (hiato), caráter (paroxítona terminada em -r) — todas corretas.\n\n✅ RESOLUÇÃO: Todas as palavras em A estão acentuadas corretamente. Alternativa A.\n\n❌ ALTERNATIVAS ERRADAS: B) "Rubrica" é paroxítona (sem acento); "gratuito" não tem acento. C) Acordo Ortográfico eliminou acento em ditongos abertos em paroxítonas. D) "Item" não é acentuado. E) "Fórum" é acentuado, mas "bônus" e "vírus" são proparoxítonas — todas corretas... Na verdade, A é a resposta mais segura.\n\n💡 CONCEITO-CHAVE: Hiato I/U tônicos: acentuam-se (saúde, baú, saída). Ditongos abertos em paroxítonas: perderam acento no Acordo (ideia, assembleia).'
+    explicacao: 'CONTEXTO: A acentuação gráfica segue regras baseadas na posição da sílaba tônica (oxítona, paroxítona, proparoxítona) e no hiato.\n\nINTERPRETAÇÃO: Saúde (hiato), baú (hiato), caráter (paroxítona terminada em -r) — todas corretas.\n\nRESOLUÇÃO: Todas as palavras em A estão acentuadas corretamente. Alternativa A.\n\nALTERNATIVAS ERRADAS: B) "Rubrica" é paroxítona (sem acento); "gratuito" não tem acento. C) Acordo Ortográfico eliminou acento em ditongos abertos em paroxítonas. D) "Item" não é acentuado. E) "Fórum" é acentuado, mas "bônus" e "vírus" são proparoxítonas — todas corretas... Na verdade, A é a resposta mais segura.\n\nCONCEITO-CHAVE: Hiato I/U tônicos: acentuam-se (saúde, baú, saída). Ditongos abertos em paroxítonas: perderam acento no Acordo (ideia, assembleia).'
   },
   {
     enunciado: 'Na frase "Quando cheguei, todos já tinham saído", o verbo "tinham saído" está no:',
@@ -110,7 +110,7 @@ export const portuguesQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: O pretérito mais-que-perfeito indica uma ação passada anterior a outra ação passada. Na forma composta: ter/haver (imperfeito) + particípio.\n\n🔍 INTERPRETAÇÃO: "Tinham saído" (antes de "cheguei") — ação anterior a outra no passado. Auxiliar "tinham" (imperfeito de ter) + particípio "saído".\n\n✅ RESOLUÇÃO: Pretérito mais-que-perfeito composto = auxiliar no imperfeito + particípio. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Perfeito simples: "saíram". B) Imperfeito: "saíam". D) Futuro do pretérito: "teriam saído". E) Subjuntivo: "tenham saído".\n\n💡 CONCEITO-CHAVE: Mais-que-perfeito: ação passada anterior a outra passada. Simples: "saíra". Composto: "tinha/havia saído". ENEM cobra interpretação temporal.'
+    explicacao: 'CONTEXTO: O pretérito mais-que-perfeito indica uma ação passada anterior a outra ação passada. Na forma composta: ter/haver (imperfeito) + particípio.\n\nINTERPRETAÇÃO: "Tinham saído" (antes de "cheguei") — ação anterior a outra no passado. Auxiliar "tinham" (imperfeito de ter) + particípio "saído".\n\nRESOLUÇÃO: Pretérito mais-que-perfeito composto = auxiliar no imperfeito + particípio. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Perfeito simples: "saíram". B) Imperfeito: "saíam". D) Futuro do pretérito: "teriam saído". E) Subjuntivo: "tenham saído".\n\nCONCEITO-CHAVE: Mais-que-perfeito: ação passada anterior a outra passada. Simples: "saíra". Composto: "tinha/havia saído". ENEM cobra interpretação temporal.'
   },
   {
     enunciado: 'Em "Vi o menino que brincava no parque", o pronome relativo "que" substitui:',
@@ -126,7 +126,7 @@ export const portuguesQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: O pronome relativo retoma um termo anterior (antecedente) e introduz uma oração subordinada adjetiva.\n\n🔍 INTERPRETAÇÃO: "que brincava" = "o menino brincava". O pronome "que" retoma "o menino" — seu antecedente.\n\n✅ RESOLUÇÃO: "Que" substitui "o menino" (antecedente do pronome relativo). Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A/C/D/E) Não são retomados pelo "que" nesta estrutura.\n\n💡 CONCEITO-CHAVE: Pronome relativo: "que" (o mais usado), "o qual", "cujo", "onde", "quem". Sempre retoma o antecedente (termo anterior). Introduz oração adjetiva.'
+    explicacao: 'CONTEXTO: O pronome relativo retoma um termo anterior (antecedente) e introduz uma oração subordinada adjetiva.\n\nINTERPRETAÇÃO: "que brincava" = "o menino brincava". O pronome "que" retoma "o menino" — seu antecedente.\n\nRESOLUÇÃO: "Que" substitui "o menino" (antecedente do pronome relativo). Alternativa B.\n\nALTERNATIVAS ERRADAS: A/C/D/E) Não são retomados pelo "que" nesta estrutura.\n\nCONCEITO-CHAVE: Pronome relativo: "que" (o mais usado), "o qual", "cujo", "onde", "quem". Sempre retoma o antecedente (termo anterior). Introduz oração adjetiva.'
   },
   {
     enunciado: 'Qual alternativa contém um exemplo de linguagem conotativa?',
@@ -142,7 +142,7 @@ export const portuguesQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A diferença entre linguagem denotativa (literal) e conotativa (figurada) é fundamental para interpretar textos no ENEM.\n\n🔍 INTERPRETAÇÃO: "Coração de pedra" não é literal — ninguém tem um coração feito de pedra. Significa insensibilidade (sentido figurado).\n\n✅ RESOLUÇÃO: "Coração de pedra" é linguagem conotativa/figurada (metáfora). Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A/B/D/E) Todas são linguagem denotativa (sentido literal, objetivo).\n\n💡 CONCEITO-CHAVE: Denotativa: sentido literal, dicionário, objetivo. Conotativa: sentido figurado, subjetivo, metafórico. ENEM cobra essa distinção em textos literários e publicitários.'
+    explicacao: 'CONTEXTO: A diferença entre linguagem denotativa (literal) e conotativa (figurada) é fundamental para interpretar textos no ENEM.\n\nINTERPRETAÇÃO: "Coração de pedra" não é literal — ninguém tem um coração feito de pedra. Significa insensibilidade (sentido figurado).\n\nRESOLUÇÃO: "Coração de pedra" é linguagem conotativa/figurada (metáfora). Alternativa C.\n\nALTERNATIVAS ERRADAS: A/B/D/E) Todas são linguagem denotativa (sentido literal, objetivo).\n\nCONCEITO-CHAVE: Denotativa: sentido literal, dicionário, objetivo. Conotativa: sentido figurado, subjetivo, metafórico. ENEM cobra essa distinção em textos literários e publicitários.'
   },
   {
     enunciado: 'Assinale a alternativa em que a separação silábica está CORRETA:',
@@ -158,7 +158,7 @@ export const portuguesQuestions = [
     nivel: 'facil',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A separação silábica segue regras fonológicas, não morfológicas. Cada sílaba tem um núcleo vocálico.\n\n🔍 INTERPRETAÇÃO: "Trans-por-te" — o prefixo "trans" forma uma sílaba, "por" outra, "te" outra. Correto!\n\n✅ RESOLUÇÃO: trans-por-te está corretamente separado. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) subs-tân-cia ("bs" fica junto). B) pas-sa-rei-ro ("ss" se separa: pas-sa). D) ad-vo-ga-do. E) psi-có-lo-go (correto, mas "ps" é inseparável no início da sílaba).\n\n💡 CONCEITO-CHAVE: Dígrafos inseparáveis: lh, nh, ch, gu, qu. Dígrafos separáveis: rr, ss, sc, sç, xc. Consoantes no início: ps, mn, gn ficam na mesma sílaba.'
+    explicacao: 'CONTEXTO: A separação silábica segue regras fonológicas, não morfológicas. Cada sílaba tem um núcleo vocálico.\n\nINTERPRETAÇÃO: "Trans-por-te" — o prefixo "trans" forma uma sílaba, "por" outra, "te" outra. Correto!\n\nRESOLUÇÃO: trans-por-te está corretamente separado. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) subs-tân-cia ("bs" fica junto). B) pas-sa-rei-ro ("ss" se separa: pas-sa). D) ad-vo-ga-do. E) psi-có-lo-go (correto, mas "ps" é inseparável no início da sílaba).\n\nCONCEITO-CHAVE: Dígrafos inseparáveis: lh, nh, ch, gu, qu. Dígrafos separáveis: rr, ss, sc, sç, xc. Consoantes no início: ps, mn, gn ficam na mesma sílaba.'
   },
   // === MÉDIO (10) ===
   {
@@ -175,7 +175,7 @@ export const portuguesQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Orações subordinadas substantivas exercem função de substantivo na oração principal. A subjetiva funciona como sujeito.\n\n🔍 INTERPRETAÇÃO: "É necessário" — o que é necessário? → "que todos participem da reunião" = sujeito oracional. O verbo é impessoal + predicativo.\n\n✅ RESOLUÇÃO: A oração funciona como sujeito da principal → subordinada substantiva subjetiva. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) Adjetiva modifica substantivo. C) Adverbial indica circunstância. D) Coordenada é independente. E) Objetiva direta complementa VTD.\n\n💡 CONCEITO-CHAVE: Substantiva subjetiva: sujeito da principal. Pistas: "É + adjetivo + que", "Convém que", "Parece que". Substitua por "isso": "Isso é necessário" ✓.'
+    explicacao: 'CONTEXTO: Orações subordinadas substantivas exercem função de substantivo na oração principal. A subjetiva funciona como sujeito.\n\nINTERPRETAÇÃO: "É necessário" — o que é necessário? → "que todos participem da reunião" = sujeito oracional. O verbo é impessoal + predicativo.\n\nRESOLUÇÃO: A oração funciona como sujeito da principal → subordinada substantiva subjetiva. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) Adjetiva modifica substantivo. C) Adverbial indica circunstância. D) Coordenada é independente. E) Objetiva direta complementa VTD.\n\nCONCEITO-CHAVE: Substantiva subjetiva: sujeito da principal. Pistas: "É + adjetivo + que", "Convém que", "Parece que". Substitua por "isso": "Isso é necessário" ✓.'
   },
   {
     enunciado: 'Assinale a alternativa em que a regência verbal está CORRETA:',
@@ -191,7 +191,7 @@ export const portuguesQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Regência verbal define qual preposição um verbo exige. O ENEM cobra especialmente os verbos mais errados no uso cotidiano.\n\n🔍 INTERPRETAÇÃO: "Obedecer" é VTI (a) → "obedecer ao regulamento" está correto pela norma culta.\n\n✅ RESOLUÇÃO: "Obedeceu ao regulamento" — obedecer rege "a" (VTI). Correto! Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Assistir (ver) = VTI → "assisti ao jogo". B) Preferir = "prefiro X a Y" (sem "do que"). D) Ir = VTI → "fomos ao cinema". E) Namorar = VTD → "namora Pedro" (sem "com").\n\n💡 CONCEITO-CHAVE: Verbos com regência frequente no ENEM: assistir a, obedecer a, preferir X a Y, visar a, ir a, chegar a, aspirar a (desejar).'
+    explicacao: 'CONTEXTO: Regência verbal define qual preposição um verbo exige. O ENEM cobra especialmente os verbos mais errados no uso cotidiano.\n\nINTERPRETAÇÃO: "Obedecer" é VTI (a) → "obedecer ao regulamento" está correto pela norma culta.\n\nRESOLUÇÃO: "Obedeceu ao regulamento" — obedecer rege "a" (VTI). Correto! Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Assistir (ver) = VTI → "assisti ao jogo". B) Preferir = "prefiro X a Y" (sem "do que"). D) Ir = VTI → "fomos ao cinema". E) Namorar = VTD → "namora Pedro" (sem "com").\n\nCONCEITO-CHAVE: Verbos com regência frequente no ENEM: assistir a, obedecer a, preferir X a Y, visar a, ir a, chegar a, aspirar a (desejar).'
   },
   {
     enunciado: 'Em "O livro cujo autor é brasileiro ganhou o prêmio", o pronome "cujo" expressa relação de:',
@@ -207,7 +207,7 @@ export const portuguesQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: "Cujo" é um pronome relativo que estabelece relação de posse entre o antecedente e o consequente.\n\n🔍 INTERPRETAÇÃO: "O livro cujo autor" = o autor DO livro. "Cujo" indica que o autor pertence/se relaciona ao livro (posse).\n\n✅ RESOLUÇÃO: "Cujo" sempre indica posse — equivale a "de quem", "do qual". Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) "Onde" indica lugar. B) "Quando" indica tempo. D/E) Não são expressos por pronomes relativos.\n\n💡 CONCEITO-CHAVE: "Cujo" = posse. Regras: concorda com o consequente (não com antecedente). Nunca vem com artigo depois. "Cujo" = de + o qual.'
+    explicacao: 'CONTEXTO: "Cujo" é um pronome relativo que estabelece relação de posse entre o antecedente e o consequente.\n\nINTERPRETAÇÃO: "O livro cujo autor" = o autor DO livro. "Cujo" indica que o autor pertence/se relaciona ao livro (posse).\n\nRESOLUÇÃO: "Cujo" sempre indica posse — equivale a "de quem", "do qual". Alternativa C.\n\nALTERNATIVAS ERRADAS: A) "Onde" indica lugar. B) "Quando" indica tempo. D/E) Não são expressos por pronomes relativos.\n\nCONCEITO-CHAVE: "Cujo" = posse. Regras: concorda com o consequente (não com antecedente). Nunca vem com artigo depois. "Cujo" = de + o qual.'
   },
   {
     enunciado: 'Identifique a função da linguagem predominante em: "Compre agora! Não perca esta oportunidade incrível!"',
@@ -223,7 +223,7 @@ export const portuguesQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Jakobson definiu 6 funções da linguagem, cada uma focada em um elemento da comunicação: emissor, receptor, mensagem, código, canal, referente.\n\n🔍 INTERPRETAÇÃO: "Compre agora!" e "Não perca!" são imperativos que tentam convencer o receptor a agir → foco no destinatário.\n\n✅ RESOLUÇÃO: Verbos no imperativo + tentativa de persuasão = função conativa (apelativa), focada no receptor. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Referencial foca no referente (informação objetiva). B) Emotiva foca no emissor (sentimentos). D) Metalinguística foca no código (linguagem sobre linguagem). E) Fática foca no canal ("alô?", "né?").\n\n💡 CONCEITO-CHAVE: Conativa = foco no receptor, persuasão, propaganda, imperativo. Emotiva = 1ª pessoa, sentimentos. Referencial = 3ª pessoa, objetiva. ENEM cobra identificação em textos.'
+    explicacao: 'CONTEXTO: Jakobson definiu 6 funções da linguagem, cada uma focada em um elemento da comunicação: emissor, receptor, mensagem, código, canal, referente.\n\nINTERPRETAÇÃO: "Compre agora!" e "Não perca!" são imperativos que tentam convencer o receptor a agir → foco no destinatário.\n\nRESOLUÇÃO: Verbos no imperativo + tentativa de persuasão = função conativa (apelativa), focada no receptor. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Referencial foca no referente (informação objetiva). B) Emotiva foca no emissor (sentimentos). D) Metalinguística foca no código (linguagem sobre linguagem). E) Fática foca no canal ("alô?", "né?").\n\nCONCEITO-CHAVE: Conativa = foco no receptor, persuasão, propaganda, imperativo. Emotiva = 1ª pessoa, sentimentos. Referencial = 3ª pessoa, objetiva. ENEM cobra identificação em textos.'
   },
   {
     enunciado: 'A coesão textual por substituição está presente em:',
@@ -239,7 +239,7 @@ export const portuguesQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Coesão textual é a articulação entre elementos do texto. A coesão referencial por substituição usa pronomes ou sinônimos para retomar termos anteriores.\n\n🔍 INTERPRETAÇÃO: "Ele" substitui "João" — evitando repetição e mantendo a referência ao mesmo elemento textual.\n\n✅ RESOLUÇÃO: "Ele" = pronome substitutivo que retoma "João" = coesão por substituição (referenciação anafórica). Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) Repetição, não substituição. C) Elipse (omissão do sujeito). D) Coesão por conexão (conjunção adversativa). E) Coesão por conexão (conjunção temporal).\n\n💡 CONCEITO-CHAVE: Coesão referencial: substituição (pronomes, sinônimos) e repetição. Coesão sequencial: conjunções, advérbios. Anáfora: retoma anterior. Catáfora: antecipa posterior.'
+    explicacao: 'CONTEXTO: Coesão textual é a articulação entre elementos do texto. A coesão referencial por substituição usa pronomes ou sinônimos para retomar termos anteriores.\n\nINTERPRETAÇÃO: "Ele" substitui "João" — evitando repetição e mantendo a referência ao mesmo elemento textual.\n\nRESOLUÇÃO: "Ele" = pronome substitutivo que retoma "João" = coesão por substituição (referenciação anafórica). Alternativa B.\n\nALTERNATIVAS ERRADAS: A) Repetição, não substituição. C) Elipse (omissão do sujeito). D) Coesão por conexão (conjunção adversativa). E) Coesão por conexão (conjunção temporal).\n\nCONCEITO-CHAVE: Coesão referencial: substituição (pronomes, sinônimos) e repetição. Coesão sequencial: conjunções, advérbios. Anáfora: retoma anterior. Catáfora: antecipa posterior.'
   },
   {
     enunciado: 'Na frase "Embora estivesse cansado, continuou trabalhando", a conjunção "embora" introduz uma ideia de:',
@@ -255,7 +255,7 @@ export const portuguesQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Conjunções subordinativas expressam diferentes relações entre orações. Concessivas indicam oposição/contraste sem impedir a ação.\n\n🔍 INTERPRETAÇÃO: "Embora estivesse cansado" → apesar do cansaço (obstáculo), a ação principal ocorreu = concessão.\n\n✅ RESOLUÇÃO: "Embora" é conjunção concessiva — indica que o fato da subordinada não impediu o da principal. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Causal: porque, visto que, já que. B) Consequencial: de modo que, tão...que. D) Condicional: se, caso, desde que. E) Final: para que, a fim de que.\n\n💡 CONCEITO-CHAVE: Concessivas: embora, conquanto, ainda que, mesmo que, se bem que. Sempre com SUBJUNTIVO. Concessão ≠ adversidade (mas = coordenada; embora = subordinada).'
+    explicacao: 'CONTEXTO: Conjunções subordinativas expressam diferentes relações entre orações. Concessivas indicam oposição/contraste sem impedir a ação.\n\nINTERPRETAÇÃO: "Embora estivesse cansado" → apesar do cansaço (obstáculo), a ação principal ocorreu = concessão.\n\nRESOLUÇÃO: "Embora" é conjunção concessiva — indica que o fato da subordinada não impediu o da principal. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Causal: porque, visto que, já que. B) Consequencial: de modo que, tão...que. D) Condicional: se, caso, desde que. E) Final: para que, a fim de que.\n\nCONCEITO-CHAVE: Concessivas: embora, conquanto, ainda que, mesmo que, se bem que. Sempre com SUBJUNTIVO. Concessão ≠ adversidade (mas = coordenada; embora = subordinada).'
   },
   {
     enunciado: 'A variação linguística presente em "Vamo embora, tá ficando tarde" é do tipo:',
@@ -271,7 +271,7 @@ export const portuguesQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A linguística reconhece que a língua varia conforme região, classe social, época, situação de comunicação — e nenhuma variante é "errada".\n\n🔍 INTERPRETAÇÃO: "Vamo" (vamos), "tá" (está) — são marcas de registro informal/coloquial. A variação depende da situação comunicativa.\n\n✅ RESOLUÇÃO: Variação diafásica (situacional): o falante adapta o registro conforme a situação (formal × informal). Alternativa D.\n\n❌ ALTERNATIVAS ERRADAS: A) Diacrônica: mudança ao longo do tempo. B) Diatópica: variação por região. C) Diastrática: variação por classe social. E) Registro culto usaria "vamos" e "está".\n\n💡 CONCEITO-CHAVE: Variação diafásica = registro/estilo (formal × informal). Diatópica = regional. Diastrática = social. Diacrônica = temporal. ENEM defende que nenhuma variante é inferior.'
+    explicacao: 'CONTEXTO: A linguística reconhece que a língua varia conforme região, classe social, época, situação de comunicação — e nenhuma variante é "errada".\n\nINTERPRETAÇÃO: "Vamo" (vamos), "tá" (está) — são marcas de registro informal/coloquial. A variação depende da situação comunicativa.\n\nRESOLUÇÃO: Variação diafásica (situacional): o falante adapta o registro conforme a situação (formal × informal). Alternativa D.\n\nALTERNATIVAS ERRADAS: A) Diacrônica: mudança ao longo do tempo. B) Diatópica: variação por região. C) Diastrática: variação por classe social. E) Registro culto usaria "vamos" e "está".\n\nCONCEITO-CHAVE: Variação diafásica = registro/estilo (formal × informal). Diatópica = regional. Diastrática = social. Diacrônica = temporal. ENEM defende que nenhuma variante é inferior.'
   },
   {
     enunciado: 'Na frase "Ele me deu o livro para que eu estudasse", a oração "para que eu estudasse" é:',
@@ -287,7 +287,7 @@ export const portuguesQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Orações subordinadas adverbiais exercem função de advérbio, indicando circunstâncias da ação principal (tempo, causa, finalidade, etc).\n\n🔍 INTERPRETAÇÃO: "Para que eu estudasse" indica a finalidade/objetivo de dar o livro. Conjunção "para que" é final.\n\n✅ RESOLUÇÃO: "Para que" introduz ideia de finalidade → subordinada adverbial final. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) Temporal: quando, enquanto, assim que. C) Causal: porque, visto que. D) Completiva nominal completa nome. E) Adjetiva modifica substantivo.\n\n💡 CONCEITO-CHAVE: Adverbiais finais: para que, a fim de que, que (= para que). Expressam objetivo/propósito. Sempre com SUBJUNTIVO.'
+    explicacao: 'CONTEXTO: Orações subordinadas adverbiais exercem função de advérbio, indicando circunstâncias da ação principal (tempo, causa, finalidade, etc).\n\nINTERPRETAÇÃO: "Para que eu estudasse" indica a finalidade/objetivo de dar o livro. Conjunção "para que" é final.\n\nRESOLUÇÃO: "Para que" introduz ideia de finalidade → subordinada adverbial final. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) Temporal: quando, enquanto, assim que. C) Causal: porque, visto que. D) Completiva nominal completa nome. E) Adjetiva modifica substantivo.\n\nCONCEITO-CHAVE: Adverbiais finais: para que, a fim de que, que (= para que). Expressam objetivo/propósito. Sempre com SUBJUNTIVO.'
   },
   {
     enunciado: 'No trecho "O governo anunciou o pacote de medidas. Essas ações visam combater a inflação", o pronome "essas" exerce função de:',
@@ -303,10 +303,10 @@ export const portuguesQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Coesão referencial é essencial na produção e interpretação de textos. Anáfora retoma termo anterior; catáfora antecipa termo posterior.\n\n🔍 INTERPRETAÇÃO: "Essas ações" retoma "pacote de medidas" (mencionado antes) → referência anafórica.\n\n✅ RESOLUÇÃO: "Essas" é pronome demonstrativo que retoma informação anterior (anáfora). Alternativa A.\n\n❌ ALTERNATIVAS ERRADAS: B) Catáfora anteciparia algo que viria depois. C/D) Dêixis indica tempo/espaço do enunciador. E) Elipse omite um termo.\n\n💡 CONCEITO-CHAVE: Anáfora: retoma anterior ("essas medidas", "elas", "o problema mencionado"). Catáfora: antecipa posterior ("Este é o problema: a inflação"). ENEM cobra em coesão textual.'
+    explicacao: 'CONTEXTO: Coesão referencial é essencial na produção e interpretação de textos. Anáfora retoma termo anterior; catáfora antecipa termo posterior.\n\nINTERPRETAÇÃO: "Essas ações" retoma "pacote de medidas" (mencionado antes) → referência anafórica.\n\nRESOLUÇÃO: "Essas" é pronome demonstrativo que retoma informação anterior (anáfora). Alternativa A.\n\nALTERNATIVAS ERRADAS: B) Catáfora anteciparia algo que viria depois. C/D) Dêixis indica tempo/espaço do enunciador. E) Elipse omite um termo.\n\nCONCEITO-CHAVE: Anáfora: retoma anterior ("essas medidas", "elas", "o problema mencionado"). Catáfora: antecipa posterior ("Este é o problema: a inflação"). ENEM cobra em coesão textual.'
   },
   {
-    enunciado: 'Assinale a alternativa em que o uso do "porquê" está CORRETO:',
+    enunciado: 'Assinale a alternativa em que a pergunta está escrita corretamente:',
     alternativaA: 'Por que você não veio?',
     alternativaB: 'Porque você não veio?',
     alternativaC: 'Porquê você não veio?',
@@ -319,7 +319,7 @@ export const portuguesQuestions = [
     nivel: 'medio',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Os quatro "porquês" são um dos temas mais cobrados em gramática, tanto no ENEM quanto em vestibulares.\n\n🔍 INTERPRETAÇÃO: Em pergunta direta, usa-se "por que" (separado, sem acento) no início/meio da frase.\n\n✅ RESOLUÇÃO: "Por que você não veio?" — interrogação direta = por que (separado, sem acento). Alternativa A.\n\n❌ ALTERNATIVAS ERRADAS: B) "Porque" = resposta/causa. C) "Porquê" = substantivo ("o porquê"). D) "Por quê" = no final de frase. E) Não existe hifenizado.\n\n💡 CONCEITO-CHAVE: Por que = pergunta/"pelo qual". Porque = resposta/causa. Por quê = final de frase. Porquê = substantivo (precedido de artigo/determinante).'
+    explicacao: 'CONTEXTO: Os quatro "porquês" são um dos temas mais cobrados em gramática, tanto no ENEM quanto em vestibulares.\n\nINTERPRETAÇÃO: Em pergunta direta, usa-se "por que" (separado, sem acento) no início/meio da frase.\n\nRESOLUÇÃO: "Por que você não veio?" — interrogação direta = por que (separado, sem acento). Alternativa A.\n\nALTERNATIVAS ERRADAS: B) "Porque" = resposta/causa. C) "Porquê" = substantivo ("o porquê"). D) "Por quê" = no final de frase. E) Não existe hifenizado.\n\nCONCEITO-CHAVE: Por que = pergunta/"pelo qual". Porque = resposta/causa. Por quê = final de frase. Porquê = substantivo (precedido de artigo/determinante).'
   },
   // === MODELO ENEM (10) ===
   {
@@ -336,7 +336,7 @@ export const portuguesQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A antítese é a figura de linguagem que usa ideias opostas para criar contraste e reforçar o argumento — muito comum em textos filosóficos e literários.\n\n🔍 INTERPRETAÇÃO: "Grande" × "pequeno", "aprender" × "ensinar" — pares de ideias opostas que se complementam para expressar a universalidade do aprendizado.\n\n✅ RESOLUÇÃO: O uso de palavras de sentidos opostos (grande/pequeno, aprender/ensinar) constitui antítese. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) Ironia diz o contrário do que pensa. C) Hipérbole é exagero. D) Metonímia substitui por relação de proximidade. E) Onomatopeia imita sons.\n\n💡 CONCEITO-CHAVE: Antítese: oposição de ideias em expressões diferentes. Paradoxo (oxímoro): oposição na mesma expressão ("silêncio ensurdecedor"). ENEM cobra ambos em interpretação de textos.'
+    explicacao: 'CONTEXTO: A antítese é a figura de linguagem que usa ideias opostas para criar contraste e reforçar o argumento — muito comum em textos filosóficos e literários.\n\nINTERPRETAÇÃO: "Grande" × "pequeno", "aprender" × "ensinar" — pares de ideias opostas que se complementam para expressar a universalidade do aprendizado.\n\nRESOLUÇÃO: O uso de palavras de sentidos opostos (grande/pequeno, aprender/ensinar) constitui antítese. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) Ironia diz o contrário do que pensa. C) Hipérbole é exagero. D) Metonímia substitui por relação de proximidade. E) Onomatopeia imita sons.\n\nCONCEITO-CHAVE: Antítese: oposição de ideias em expressões diferentes. Paradoxo (oxímoro): oposição na mesma expressão ("silêncio ensurdecedor"). ENEM cobra ambos em interpretação de textos.'
   },
   {
     enunciado: '"A linguagem é a morada do ser." (Martin Heidegger)\n\nConsiderando o contexto filosófico dessa afirmação, a função da linguagem predominante é:',
@@ -352,7 +352,7 @@ export const portuguesQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A função metalinguística ocorre quando a linguagem fala sobre si mesma — o código se volta para o próprio código.\n\n🔍 INTERPRETAÇÃO: Heidegger usa a linguagem para refletir sobre a própria linguagem — "a linguagem é a morada do ser" é uma afirmação sobre o papel da linguagem na constituição da realidade humana.\n\n✅ RESOLUÇÃO: A frase usa linguagem para discorrer sobre a linguagem = função metalinguística. Alternativa D.\n\n❌ ALTERNATIVAS ERRADAS: A) Conativa foca no receptor. B) Fática mantém o canal. C) Poética foca na forma da mensagem. E) Referencial foca no referente objetivo.\n\n💡 CONCEITO-CHAVE: Metalinguagem: linguagem sobre linguagem. Exemplos: dicionário, gramática, filme sobre cinema, poema sobre poesia. ENEM cobra em textos reflexivos.'
+    explicacao: 'CONTEXTO: A função metalinguística ocorre quando a linguagem fala sobre si mesma — o código se volta para o próprio código.\n\nINTERPRETAÇÃO: Heidegger usa a linguagem para refletir sobre a própria linguagem — "a linguagem é a morada do ser" é uma afirmação sobre o papel da linguagem na constituição da realidade humana.\n\nRESOLUÇÃO: A frase usa linguagem para discorrer sobre a linguagem = função metalinguística. Alternativa D.\n\nALTERNATIVAS ERRADAS: A) Conativa foca no receptor. B) Fática mantém o canal. C) Poética foca na forma da mensagem. E) Referencial foca no referente objetivo.\n\nCONCEITO-CHAVE: Metalinguagem: linguagem sobre linguagem. Exemplos: dicionário, gramática, filme sobre cinema, poema sobre poesia. ENEM cobra em textos reflexivos.'
   },
   {
     enunciado: 'Leia o trecho: "O sertanejo é, antes de tudo, um forte." (Euclides da Cunha, Os Sertões)\n\nNo contexto da obra, essa afirmação aparentemente elogiosa revela uma visão que, paradoxalmente:',
@@ -368,7 +368,7 @@ export const portuguesQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: "Os Sertões" (1902) de Euclides da Cunha narra a Guerra de Canudos. Influenciado pelo determinismo racial da época, Euclides via o sertanejo como mestiço "inferior" biologicamente, mas forte pela adaptação ao meio.\n\n🔍 INTERPRETAÇÃO: "Antes de tudo, um forte" implica que, apesar de ser considerado racialmente "atrasado" (visão determinista de Euclides), sua resistência física e moral surpreende — é admiração dentro de um paradigma preconceituoso.\n\n✅ RESOLUÇÃO: O elogio parte de uma visão determinista/racialista que considerava o sertanejo racialmente inferior, tornando sua força uma exceção notável. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Euclides não celebrava superioridade cultural. B) Não defendia igualdade plena. D) Não propunha integração urbana. E) A crítica ao governo existe, mas não é o ponto da frase.\n\n💡 CONCEITO-CHAVE: Os Sertões: "A terra" (determinismo geográfico) + "O homem" (determinismo racial) + "A luta" (Canudos). Euclides oscila entre admiração e preconceito. Pré-Modernismo.'
+    explicacao: 'CONTEXTO: "Os Sertões" (1902) de Euclides da Cunha narra a Guerra de Canudos. Influenciado pelo determinismo racial da época, Euclides via o sertanejo como mestiço "inferior" biologicamente, mas forte pela adaptação ao meio.\n\nINTERPRETAÇÃO: "Antes de tudo, um forte" implica que, apesar de ser considerado racialmente "atrasado" (visão determinista de Euclides), sua resistência física e moral surpreende — é admiração dentro de um paradigma preconceituoso.\n\nRESOLUÇÃO: O elogio parte de uma visão determinista/racialista que considerava o sertanejo racialmente inferior, tornando sua força uma exceção notável. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Euclides não celebrava superioridade cultural. B) Não defendia igualdade plena. D) Não propunha integração urbana. E) A crítica ao governo existe, mas não é o ponto da frase.\n\nCONCEITO-CHAVE: Os Sertões: "A terra" (determinismo geográfico) + "O homem" (determinismo racial) + "A luta" (Canudos). Euclides oscila entre admiração e preconceito. Pré-Modernismo.'
   },
   {
     enunciado: 'Um texto jornalístico sobre uma nova vacina apresenta o seguinte trecho: "A eficácia do imunizante, segundo estudos publicados em periódico científico revisado por pares, é de 95% contra formas graves da doença."\n\nA estratégia argumentativa utilizada nesse trecho é:',
@@ -384,7 +384,7 @@ export const portuguesQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Estratégias argumentativas são recursos usados para dar credibilidade e persuasão ao texto — tema central na redação e na interpretação textual do ENEM.\n\n🔍 INTERPRETAÇÃO: "Segundo estudos publicados em periódico científico revisado por pares" — cita uma fonte confiável (ciência) para validar a informação. É argumento de autoridade.\n\n✅ RESOLUÇÃO: Recorrer a fontes científicas reconhecidas para sustentar uma afirmação é argumento de autoridade. Alternativa A.\n\n❌ ALTERNATIVAS ERRADAS: B) Exemplificação usaria caso concreto. C) Comparação confrontaria elementos. D) Ad hominem ataca a pessoa, não o argumento. E) Emocional apela aos sentimentos.\n\n💡 CONCEITO-CHAVE: Argumento de autoridade: cita especialista, estudo, instituição renomada. ENEM cobra identificação dessa estratégia em textos informativos, científicos e de opinião.'
+    explicacao: 'CONTEXTO: Estratégias argumentativas são recursos usados para dar credibilidade e persuasão ao texto — tema central na redação e na interpretação textual do ENEM.\n\nINTERPRETAÇÃO: "Segundo estudos publicados em periódico científico revisado por pares" — cita uma fonte confiável (ciência) para validar a informação. É argumento de autoridade.\n\nRESOLUÇÃO: Recorrer a fontes científicas reconhecidas para sustentar uma afirmação é argumento de autoridade. Alternativa A.\n\nALTERNATIVAS ERRADAS: B) Exemplificação usaria caso concreto. C) Comparação confrontaria elementos. D) Ad hominem ataca a pessoa, não o argumento. E) Emocional apela aos sentimentos.\n\nCONCEITO-CHAVE: Argumento de autoridade: cita especialista, estudo, instituição renomada. ENEM cobra identificação dessa estratégia em textos informativos, científicos e de opinião.'
   },
   {
     enunciado: '"Pronominais" (Oswald de Andrade)\n\n"Dê-me um cigarro\nDiz a gramática\nDo professor e do aluno\nE do mulato sabido\nMas o bom negro e o bom branco\nDa Nação Brasileira\nDizem todos os dias\nDeixa disso camarada\nMe dá um cigarro"\n\nO poema de Oswald de Andrade tematiza:',
@@ -400,7 +400,7 @@ export const portuguesQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Oswald de Andrade foi um dos líderes do Modernismo brasileiro (Semana de 1922), que valorizava a linguagem coloquial brasileira contra o purismo gramatical lusitano.\n\n🔍 INTERPRETAÇÃO: "Dê-me" (gramática, norma culta, colocação pronominal europeia) × "Me dá" (uso real brasileiro, próclise). O poema ironiza a distância entre a norma e a fala.\n\n✅ RESOLUÇÃO: O poema tensiona gramática normativa vs. uso real da língua no Brasil, valorizando a fala popular brasileira. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) O poema questiona essa suposta superioridade. C) Não propõe reforma, mas reflexão. D) Menciona raça, mas o tema central é linguístico. E) Não há proibição.\n\n💡 CONCEITO-CHAVE: Modernismo (1ª fase): "língua brasileira" × português lusitano. Colocação pronominal: próclise ("me dá" = BR) × ênclise ("dê-me" = PT). ENEM cobra essa reflexão sociolinguística.'
+    explicacao: 'CONTEXTO: Oswald de Andrade foi um dos líderes do Modernismo brasileiro (Semana de 1922), que valorizava a linguagem coloquial brasileira contra o purismo gramatical lusitano.\n\nINTERPRETAÇÃO: "Dê-me" (gramática, norma culta, colocação pronominal europeia) × "Me dá" (uso real brasileiro, próclise). O poema ironiza a distância entre a norma e a fala.\n\nRESOLUÇÃO: O poema tensiona gramática normativa vs. uso real da língua no Brasil, valorizando a fala popular brasileira. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) O poema questiona essa suposta superioridade. C) Não propõe reforma, mas reflexão. D) Menciona raça, mas o tema central é linguístico. E) Não há proibição.\n\nCONCEITO-CHAVE: Modernismo (1ª fase): "língua brasileira" × português lusitano. Colocação pronominal: próclise ("me dá" = BR) × ênclise ("dê-me" = PT). ENEM cobra essa reflexão sociolinguística.'
   },
   {
     enunciado: 'Na construção de um texto dissertativo-argumentativo (redação ENEM), a tese do autor deve estar:',
@@ -416,7 +416,7 @@ export const portuguesQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A redação do ENEM exige texto dissertativo-argumentativo com 4 partes: introdução (tese), 2 desenvolvimentos (argumentos) e conclusão (proposta de intervenção).\n\n🔍 INTERPRETAÇÃO: A tese é o posicionamento do autor sobre o tema, apresentada na introdução e defendida com argumentos ao longo do texto.\n\n✅ RESOLUÇÃO: A tese deve ser clara na introdução e sustentada por argumentos nos parágrafos de desenvolvimento. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) Conclusão retoma a tese, não a apresenta. C) Narrativa pessoal não é dissertação. D) Dissertação-argumentativa exige posicionamento. E) Apenas citar autoridades não basta.\n\n💡 CONCEITO-CHAVE: Estrutura ENEM: Introdução (tema + tese) → D1 (argumento 1 + exemplos) → D2 (argumento 2 + exemplos) → Conclusão (retomada + proposta de intervenção detalhada).'
+    explicacao: 'CONTEXTO: A redação do ENEM exige texto dissertativo-argumentativo com 4 partes: introdução (tese), 2 desenvolvimentos (argumentos) e conclusão (proposta de intervenção).\n\nINTERPRETAÇÃO: A tese é o posicionamento do autor sobre o tema, apresentada na introdução e defendida com argumentos ao longo do texto.\n\nRESOLUÇÃO: A tese deve ser clara na introdução e sustentada por argumentos nos parágrafos de desenvolvimento. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) Conclusão retoma a tese, não a apresenta. C) Narrativa pessoal não é dissertação. D) Dissertação-argumentativa exige posicionamento. E) Apenas citar autoridades não basta.\n\nCONCEITO-CHAVE: Estrutura ENEM: Introdução (tema + tese) → D1 (argumento 1 + exemplos) → D2 (argumento 2 + exemplos) → Conclusão (retomada + proposta de intervenção detalhada).'
   },
   {
     enunciado: 'Considere: "A violência urbana aumentou. Entretanto, os investimentos em segurança pública foram reduzidos."\n\nO conectivo "entretanto" estabelece, entre as orações, uma relação de:',
@@ -432,7 +432,7 @@ export const portuguesQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: Conectivos (conjunções e locuções conjuntivas) são essenciais para a coesão textual e para a argumentação na redação ENEM.\n\n🔍 INTERPRETAÇÃO: "A violência aumentou" (esperaria-se mais investimento) → "Entretanto" (contrário) → "investimentos foram reduzidos". Há oposição de expectativas.\n\n✅ RESOLUÇÃO: "Entretanto" é conjunção coordenativa adversativa — indica oposição/contraste entre as ideias. Alternativa D.\n\n❌ ALTERNATIVAS ERRADAS: A) Adição: e, também, além disso. B) Explicação: pois, porque. C) Conclusão: logo, portanto. E) Alternância: ou, ora...ora.\n\n💡 CONCEITO-CHAVE: Adversativas: mas, porém, contudo, entretanto, todavia, no entanto. Expressam contraste/oposição. Na redação ENEM, usar conectivos variados demonstra repertório linguístico.'
+    explicacao: 'CONTEXTO: Conectivos (conjunções e locuções conjuntivas) são essenciais para a coesão textual e para a argumentação na redação ENEM.\n\nINTERPRETAÇÃO: "A violência aumentou" (esperaria-se mais investimento) → "Entretanto" (contrário) → "investimentos foram reduzidos". Há oposição de expectativas.\n\nRESOLUÇÃO: "Entretanto" é conjunção coordenativa adversativa — indica oposição/contraste entre as ideias. Alternativa D.\n\nALTERNATIVAS ERRADAS: A) Adição: e, também, além disso. B) Explicação: pois, porque. C) Conclusão: logo, portanto. E) Alternância: ou, ora...ora.\n\nCONCEITO-CHAVE: Adversativas: mas, porém, contudo, entretanto, todavia, no entanto. Expressam contraste/oposição. Na redação ENEM, usar conectivos variados demonstra repertório linguístico.'
   },
   {
     enunciado: 'Em "Fosse eu o presidente, mudaria tudo", o modo verbal empregado na primeira oração indica:',
@@ -448,7 +448,7 @@ export const portuguesQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: O modo subjuntivo expressa dúvida, hipótese, desejo, possibilidade — diferente do indicativo (certeza) e do imperativo (ordem).\n\n🔍 INTERPRETAÇÃO: "Fosse eu" — pretérito imperfeito do subjuntivo. Expressa uma situação hipotética, contrária à realidade (ele NÃO é presidente).\n\n✅ RESOLUÇÃO: "Fosse" (subjuntivo) indica hipótese/irrealidade — uma condição não realizada. Alternativa C.\n\n❌ ALTERNATIVAS ERRADAS: A) Certeza seria indicativo. B) Ordem seria imperativo. D) Desejo realizado contradiria "mudaria" (condicional). E) Fato consumado seria pretérito perfeito do indicativo.\n\n💡 CONCEITO-CHAVE: Subjuntivo: dúvida, hipótese, desejo. "Se eu fosse" (irreal) + "mudaria" (futuro do pretérito = consequência hipotética). Construção condicional irreal no ENEM.'
+    explicacao: 'CONTEXTO: O modo subjuntivo expressa dúvida, hipótese, desejo, possibilidade — diferente do indicativo (certeza) e do imperativo (ordem).\n\nINTERPRETAÇÃO: "Fosse eu" — pretérito imperfeito do subjuntivo. Expressa uma situação hipotética, contrária à realidade (ele NÃO é presidente).\n\nRESOLUÇÃO: "Fosse" (subjuntivo) indica hipótese/irrealidade — uma condição não realizada. Alternativa C.\n\nALTERNATIVAS ERRADAS: A) Certeza seria indicativo. B) Ordem seria imperativo. D) Desejo realizado contradiria "mudaria" (condicional). E) Fato consumado seria pretérito perfeito do indicativo.\n\nCONCEITO-CHAVE: Subjuntivo: dúvida, hipótese, desejo. "Se eu fosse" (irreal) + "mudaria" (futuro do pretérito = consequência hipotética). Construção condicional irreal no ENEM.'
   },
   {
     enunciado: 'Na Competência 5 da redação do ENEM, o candidato deve elaborar uma proposta de intervenção que contenha:',
@@ -464,6 +464,6 @@ export const portuguesQuestions = [
     nivel: 'modelo_enem',
     dependeImagem: false,
     origem: 'Manual',
-    explicacao: '📚 CONTEXTO: A Competência 5 vale 200 pontos e exige proposta de intervenção detalhada que respeite os direitos humanos. É onde muitos candidatos perdem pontos por genericidade.\n\n🔍 INTERPRETAÇÃO: Uma proposta completa deve ter 5 elementos: quem faz (agente), o que faz (ação), como faz (meio/modo), para que faz (finalidade/efeito) e detalhamento de pelo menos um elemento.\n\n✅ RESOLUÇÃO: Agente + ação + meio + finalidade + detalhamento = proposta completa para nota máxima na C5. Alternativa B.\n\n❌ ALTERNATIVAS ERRADAS: A) Genérico perde pontos. C) Agente é apenas um dos 5 elementos. D) Narrativa pessoal não é dissertação. E) Repetir tese não é proposta.\n\n💡 CONCEITO-CHAVE: C5: Agente (quem?) + Ação (o quê?) + Meio (como?) + Finalidade (para quê?) + Detalhamento. Deve respeitar os direitos humanos. Proposta genérica = nota parcial.'
+    explicacao: 'CONTEXTO: A Competência 5 vale 200 pontos e exige proposta de intervenção detalhada que respeite os direitos humanos. É onde muitos candidatos perdem pontos por genericidade.\n\nINTERPRETAÇÃO: Uma proposta completa deve ter 5 elementos: quem faz (agente), o que faz (ação), como faz (meio/modo), para que faz (finalidade/efeito) e detalhamento de pelo menos um elemento.\n\nRESOLUÇÃO: Agente + ação + meio + finalidade + detalhamento = proposta completa para nota máxima na C5. Alternativa B.\n\nALTERNATIVAS ERRADAS: A) Genérico perde pontos. C) Agente é apenas um dos 5 elementos. D) Narrativa pessoal não é dissertação. E) Repetir tese não é proposta.\n\nCONCEITO-CHAVE: C5: Agente (quem?) + Ação (o quê?) + Meio (como?) + Finalidade (para quê?) + Detalhamento. Deve respeitar os direitos humanos. Proposta genérica = nota parcial.'
   }
 ];
