@@ -10,8 +10,8 @@ skill que não está carregando**. Código tem build; `CLAUDE.md` não tem.
 
 O pior caso não é a skill podre que ninguém chama — é a que se chama por
 obrigação e devolve regra errada com cara de autoridade. Ex. real daqui: o
-`STYLE_GUIDE.md` ainda manda usar Plus Jakarta Sans, que saiu no redesign de
-05/08/2026.
+`STYLE_GUIDE.md` mandou usar Plus Jakarta Sans por 2 meses e meio depois de a
+fonte sair no redesign de 05/08/2026 (virou só ponteiro em 23/10/2026).
 
 ## Gatilhos
 
@@ -31,8 +31,9 @@ obrigação e devolve regra errada com cara de autoridade. Ex. real daqui: o
    Fato morto citado como **história** ou **aviso** fica. Sai o citado como
    regra vigente. Teste: seguindo esta linha hoje, faço a coisa certa?
 2. **Ponteiro quebrado.** Todo caminho, comando e nome de arquivo citado,
-   conferido contra o disco e o `package.json` (aqui só existem `dev`, `build`,
-   `start`). Comando quebrado é pior que caminho: alguém roda.
+   conferido contra o disco e o `package.json` (confira com
+   `node -p "Object.keys(require('./package.json').scripts)"`; em 23/10/2026:
+   `dev`, `build`, `start`, `test`; não há `lint`). Comando quebrado é pior que caminho: alguém roda.
 3. **Segunda fonte.** A mesma regra em dois lugares diverge no primeiro ajuste.
    Uma casa, e no outro um ponteiro. E o par: regra escrita uma vez, na skill
    que ninguém abre naquele momento.

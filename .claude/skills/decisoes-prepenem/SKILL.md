@@ -78,7 +78,9 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 - **Explicação = o artefato dos peixes (Pablo, 22/10/2026: "perfeito, fala
   para a IA fazer exatamente assim"):** uma tela por passo, nada rola (o desenho
   encolhe em `CaberNaCaixa`), pontinhos, Voltar/Próximo. Nome do passo pequeno
-  em teal, o texto em destaque, desenho à direita (embaixo no celular). Ordem:
+  em teal, o texto em destaque, desenho à direita só quando o CARTÃO tem
+  700 px ou mais; mais estreito, embaixo (celular e treino em tela grande, onde o
+  cartão divide a tela com a questão: lado a lado ali cortava o desenho, 23/10). Ordem:
   A pergunta (visual `legenda`: a fórmula com o que cada pedaço é) → O que
   acontece → Jeito rápido (quadro) → Por que funciona (vértice SEMPRE pelo
   espelho; derivada derruba o passo) → A resposta → Sua vez (opções de tocar).

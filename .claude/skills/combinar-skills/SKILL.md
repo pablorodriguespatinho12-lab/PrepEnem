@@ -36,7 +36,7 @@ para tomar (02/09/2026). Anunciar não é usar.
 | **"o que a gente faz agora?"** | `inventar-daqui` → `garimpar-da-web` se a ideia é de fora → `perguntar-ao-pablo` |
 | **"pesquisa e vê se dá"** | `garimpar-da-web` → `inventar-daqui` |
 | **frente com mais de 2 arquivos** | `distribuir-trabalho` antes de abrir o primeiro |
-| **commit** | agente `build-guard` → `vercel-deploy-checklist` → commit (push é do Pablo) → validar em produção |
+| **commit** | agente `build-guard` → `chamar-revisor` (revisor-adversarial? só mecanismo novo, auth ou script que grava no Neon) → `vercel-deploy-checklist` → commit (push é do Pablo) → validar em produção |
 | **fechar qualquer frente** | `auditar-o-repertorio` (o que ficou FALSO) + `inventar-daqui` (o que ficou VERDADEIRO) → `explicar-ao-pablo` |
 
 ## Design: por que as skills globais ficam fora

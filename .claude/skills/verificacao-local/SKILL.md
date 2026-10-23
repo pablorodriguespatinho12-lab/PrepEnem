@@ -113,6 +113,17 @@ await page.route('**/api/stats', async (route) => {
 });
 ```
 
+### Layout cortado: meça camada por camada antes do segundo palpite
+
+Em 23/10/2026 o quadro do tutor vazava no celular e dois palpites pelo código
+(`w-fit`, tirar `overflow`) não mudaram nada. Resolveu medir no navegador,
+subindo do elemento até a caixa: `offsetWidth`, `scrollWidth`,
+`style.transform` e a largura `min-content` (clone com `width:min-content`).
+A medição mostrou que a fórmula do KaTeX quebra linha e o filho estava com
+`flex-none`. Dois fatos que valem guardar: `ResizeObserver` não dispara quando
+só o conteúdo vaza (a caixa não muda de tamanho), e `grid place-items-center`
+gruda no topo um filho mais alto que a caixa; `flex items-center` centraliza.
+
 ### Conteúdo que nasce invisível é bug, não teste mal feito
 
 Até 05/10/2026 o dashboard usava `.gsap-reveal` (opacity 0 no CSS, revelado
