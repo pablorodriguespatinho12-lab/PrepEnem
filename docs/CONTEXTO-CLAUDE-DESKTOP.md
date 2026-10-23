@@ -54,16 +54,14 @@ Testes: vitest (`npm test`, 349 passando em 23/10). Não há lint.
 
 ## O que falta, por prioridade
 
-1. **Confirmar que as senhas foram trocadas.** O `public/prepenem_codigo.tar.gz` (com o `.env`)
-   saiu do site no commit `2ccb9d7`, mas o arquivo ficou no histórico do git. Se a senha do Neon,
-   o `NEXTAUTH_SECRET` e as chaves de IA não foram trocados, trocar.
-2. **Gerar e revisar as explicações prontas que faltam:** 26 de 772 questões têm uma; só 9
+1. **Gerar e revisar as explicações prontas que faltam:** 26 de 772 questões têm uma; só 9
    passaram limpas na revisão automática.
-3. **Arquivos grandes demais** (teto 800 linhas): `app/treino/page.tsx` 1.158,
+2. **Arquivos grandes demais** (teto 800 linhas): `app/treino/page.tsx` 1.158,
    `app/flashcards/[deckId]/page.tsx` 885, `app/simulado/page.tsx` 859, `app/design-system/page.tsx` 804.
-4. **Sem lint.** O logica-app tem `npm run verificar` (contraste, CSS que anima layout): portar.
-5. **Limpeza fora do repositório:** `~/prepenem-novo`, `~/prepenem-app-backup-20260621`,
-   `~/prepenem_codigo.tar.gz` (este tem o `.env`). Confirmar com ele antes de apagar.
+3. **Sem lint.** O logica-app tem `npm run verificar` (contraste, CSS que anima layout): portar.
+
+Resolvido em 23/10: o `.env` que vazou em `public/prepenem_codigo.tar.gz` não vale mais (senha do
+banco, `NEXTAUTH_SECRET` e chave de IA foram trocadas, conferido; repositório privado).
 
 ## Jeito de trabalhar
 
