@@ -20,6 +20,8 @@ import { CaberNaCaixa } from './caber-na-caixa';
 import { SuaVez } from './sua-vez';
 import { PergunteAIa, type Mensagem } from './pergunte-a-ia';
 
+const LARGURA_LADO_A_LADO = 700;
+
 const DESLIZE_DO_PASSO = {
   entra: (s: number) => ({ opacity: 0, x: 24 * s }),
   parado: { opacity: 1, x: 0 },
@@ -157,6 +159,17 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
     if (explicacao) cartao.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, [explicacao]);
 
+  // Lado a lado só quando o próprio cartão é largo. No treino em tela grande ele
+  // divide a tela com a questão (~540 px) e o desenho saía cortado (23/10/2026).
+  const [ladoALado, setLadoALado] = useState(false);
+  useEffect(() => {
+    const c = cartao.current;
+    if (!c) return;
+    const observador = new ResizeObserver(([e]) => setLadoALado(e.contentRect.width >= LARGURA_LADO_A_LADO));
+    observador.observe(c);
+    return () => observador.disconnect();
+  }, [explicacao]);
+
   const perguntar = async (texto: string) => {
     const limpo = texto.trim();
     if (!limpo || respondendo || !explicacao) return;
@@ -257,7 +270,7 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
       <section
         ref={cartao}
         aria-label="Explicação"
-        className="relative surface-1 rounded-[var(--radius-surface)] p-4 md:p-6 grid grid-rows-[auto_minmax(0,1fr)_auto] gap-3 md:gap-4 h-[calc(100dvh-5.5rem)] md:h-[calc(100dvh-2rem)] max-h-[760px] min-h-[460px] scroll-mt-20 md:scroll-mt-4"
+        className="relative surface-1 rounded-[var(--radius-surface)] p-4 md:p-6 grid grid-rows-[auto_minmax(0,1fr)_auto] gap-3 md:gap-4 h-[calc(100dvh-5.5rem)] md:h-[calc(100dvh-2rem)] lg:h-[calc(100dvh-7.5rem)] max-h-[760px] min-h-[460px] scroll-mt-20 md:scroll-mt-4"
       >
         <div className="flex items-center justify-between gap-3">
           <span className="type-meta text-muted-foreground whitespace-nowrap" data-numeric>Passo {atual + 1} de {total}</span>
@@ -283,7 +296,7 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
             animate="parado"
             exit="sai"
             transition={{ duration: 0.2, ease: [0.25, 1, 0.5, 1] }}
-            className={`min-h-0 grid gap-4 md:gap-8 ${temLadoDireito ? 'grid-rows-[auto_minmax(0,1fr)] md:grid-rows-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]' : 'grid-rows-1'} items-center`}
+            className={`min-h-0 grid gap-4 md:gap-8 ${!temLadoDireito ? 'grid-rows-1' : ladoALado ? 'grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]' : 'grid-rows-[auto_minmax(0,1fr)]'} items-center`}
           >
             <div className={`grid gap-2 md:gap-3 content-center min-w-0 ${temLadoDireito ? '' : 'max-w-2xl mx-auto text-center justify-items-center'}`}>
               <p className="type-caption font-semibold uppercase tracking-[0.08em] text-primary-text">{tela.rotulo}</p>
@@ -291,8 +304,8 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
                 <MathText text={tela.titulo} />
               </h3>
               {tela.texto && <MathText text={tela.texto} className="font-reading type-lead" />}
-              {/* No celular as peças roubavam o lugar do desenho; a legenda já diz o que cada letra é. */}
-              {tela.tipo === 'passo' && tela.comPecas && <div className="hidden md:block"><Pecas explicacao={explicacao} /></div>}
+              {/* Empilhado, as peças roubavam o lugar do desenho; a legenda já diz o que cada letra é. */}
+              {tela.tipo === 'passo' && tela.comPecas && ladoALado && <Pecas explicacao={explicacao} />}
             </div>
             {temLadoDireito && (
               <div className="min-h-0 h-full min-w-0 rounded-[var(--radius-surface)] border border-border bg-[hsl(var(--surface-2))] p-2 md:p-4">
