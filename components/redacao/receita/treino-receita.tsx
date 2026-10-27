@@ -18,6 +18,7 @@ import { PassoCausas } from './passo-causas';
 import { PassoTese } from './passo-tese';
 import { PassoParagrafo } from './passo-paragrafo';
 import { PassoFinal } from './passo-final';
+import { useTemas } from './use-temas';
 
 const PASSO_FINAL = TOTAL_PASSOS + 1;
 /* Passos 4 a 7 são os parágrafos, na ordem da receita. */
@@ -35,6 +36,8 @@ export function TreinoReceita() {
   const [r, setR] = useState<Rascunho>(rascunhoVazio);
   const [carregado, setCarregado] = useState(false);
   const reduzirMovimento = useReducedMotion();
+  const { temas, erro: erroTemas } = useTemas();
+  const textosDaLista = temas.map((t) => t.tema);
 
   /* Lê depois de montar: no servidor não há localStorage. */
   useEffect(() => {
@@ -51,8 +54,8 @@ export function TreinoReceita() {
   const irPara = (passo: number) => {
     setR((atual) => {
       /* Tema da lista com dupla na receita: os 2 motivos chegam escolhidos,
-         só se o aluno ainda não escolheu nenhum. */
-      const dupla = passo === 2 && !atual.causaA && !atual.causaB ? duplaSugerida(atual.tema, atual.temaDaLista) : null;
+         só se o aluno ainda não escolheu nenhum. Escolha feita não muda. */
+      const dupla = passo === 2 && !atual.causaA && !atual.causaB ? duplaSugerida(atual.tema, textosDaLista) : null;
       const causaA = dupla ? dupla[0] : atual.causaA;
       const causaB = dupla ? dupla[1] : atual.causaB;
       return {
@@ -80,8 +83,8 @@ export function TreinoReceita() {
 
   const conteudo = (
     <>
-      {r.passo === 1 && <PassoTema tema={r.tema} aoMudar={(tema, temaDaLista) => mudar({ tema, temaDaLista })} />}
-      {r.passo === 2 && <PassoCausas causaA={r.causaA} causaB={r.causaB} sugeridas={duplaSugerida(r.tema, r.temaDaLista) ?? []} aoMudar={(causaA, causaB) => mudar({ causaA, causaB })} />}
+      {r.passo === 1 && <PassoTema tema={r.tema} temas={temas} erro={erroTemas} aoMudar={(tema) => mudar({ tema })} />}
+      {r.passo === 2 && <PassoCausas causaA={r.causaA} causaB={r.causaB} sugeridas={duplaSugerida(r.tema, textosDaLista) ?? []} aoMudar={(causaA, causaB) => mudar({ causaA, causaB })} />}
       {r.passo === 3 && <PassoTese tese={r.tese} causaA={r.causaA} causaB={r.causaB} aoMudar={(tese) => mudar({ tese })} />}
       {paragrafo && (
         <PassoParagrafo

@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { CARACTERES_POR_LINHA, contarLinhas, duplaSugerida, montarRedacao, moldeTese, situacaoLinhas } from './receita';
+import { CARACTERES_POR_LINHA, contarLinhas, duplaSugerida, ehTemaDaLista, montarRedacao, moldeTese, situacaoLinhas } from './receita';
 import { CHAVE_RASCUNHO, CHAVE_SALVAS, guardarEmSalvas, lerRascunho, rascunhoVazio, salvarRascunho, apagarRascunho } from './rascunho-receita';
 
 /* Armazenamento de mentira: um Map, ou um que estoura em tudo (aba anônima). */
@@ -92,18 +92,32 @@ describe('rascunho: salvar e restaurar', () => {
   });
 });
 
+const LISTA = [
+  'O estigma associado às doenças mentais na sociedade brasileira',
+  'Perspectivas acerca do envelhecimento na sociedade brasileira',
+  'Desafios para a valorização da herança africana no Brasil',
+  'Democratização do acesso ao cinema no Brasil',
+  'Os desafios da mobilidade urbana',
+];
 describe('dupla sugerida pela tabela da receita', () => {
   test('tema da lista com dupla na receita vem com os 2 motivos, na ordem', () => {
-    expect(duplaSugerida('Perspectivas acerca do envelhecimento na sociedade brasileira', true)).toEqual(['estigma', 'estado']);
-    expect(duplaSugerida('Desafios para a valorização da herança africana no Brasil', true)).toEqual(['historia', 'estigma']);
-    expect(duplaSugerida('Democratização do acesso ao cinema no Brasil', true)).toEqual(['acesso', 'mercado']);
-    expect(duplaSugerida('O estigma associado às doenças mentais na sociedade brasileira', true)).toEqual(['estigma', 'estado']);
+    expect(duplaSugerida(LISTA[1], LISTA)).toEqual(['estigma', 'estado']);
+    expect(duplaSugerida(LISTA[2], LISTA)).toEqual(['historia', 'estigma']);
+    expect(duplaSugerida(LISTA[3], LISTA)).toEqual(['acesso', 'mercado']);
+    expect(duplaSugerida(LISTA[0], LISTA)).toEqual(['estigma', 'estado']);
   });
-  test('tema livre (digitado) não tem sugestão, mesmo com a mesma palavra', () => {
-    expect(duplaSugerida('Perspectivas acerca do envelhecimento na sociedade brasileira', false)).toBeNull();
+  test('reconhece pelo texto, sem diferenciar maiúsculas e espaços (rascunho antigo, sem marcador)', () => {
+    expect(duplaSugerida('  o ESTIGMA associado às   doenças mentais na sociedade brasileira ', LISTA)).toEqual(['estigma', 'estado']);
+    expect(ehTemaDaLista('o estigma associado às doenças mentais na sociedade brasileira', LISTA)).toBe(true);
+  });
+  test('tema livre (texto que não está na lista) não tem sugestão, mesmo com a mesma palavra', () => {
+    expect(duplaSugerida('Envelhecimento no Brasil', LISTA)).toBeNull();
+    expect(ehTemaDaLista('', LISTA)).toBe(false);
   });
   test('tema da lista que não está na tabela não tem sugestão', () => {
-    expect(duplaSugerida('Os desafios da mobilidade urbana', true)).toBeNull();
-    expect(duplaSugerida('', true)).toBeNull();
+    expect(duplaSugerida(LISTA[4], LISTA)).toBeNull();
+  });
+  test('sem a lista carregada, nada é sugerido', () => {
+    expect(duplaSugerida(LISTA[0], [])).toBeNull();
   });
 });

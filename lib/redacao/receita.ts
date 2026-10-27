@@ -62,9 +62,17 @@ const DUPLAS_DA_RECEITA: { ano: number; palavra: string; causas: [ChaveCausa, Ch
 ];
 const semAcento = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
+/* O tema é "da lista" quando o texto é igual a um tema da lista, sem
+   diferenciar maiúsculas e espaços. Pelo texto, não por um marcador gravado:
+   rascunho de antes da sugestão existir não tinha o marcador (27/10/2026). */
+const comparavel = (s: string) => s.trim().replace(/\s+/g, ' ').toLowerCase();
+export function ehTemaDaLista(tema: string, temasDaLista: string[]): boolean {
+  const t = comparavel(tema);
+  return t !== '' && temasDaLista.some((x) => comparavel(x) === t);
+}
 /* Dupla sugerida para um tema da lista; tema livre (digitado) não tem. */
-export function duplaSugerida(tema: string, temaDaLista: boolean): [ChaveCausa, ChaveCausa] | null {
-  if (!temaDaLista || !tema.trim()) return null;
+export function duplaSugerida(tema: string, temasDaLista: string[]): [ChaveCausa, ChaveCausa] | null {
+  if (!ehTemaDaLista(tema, temasDaLista)) return null;
   const t = semAcento(tema);
   return DUPLAS_DA_RECEITA.find((d) => t.includes(d.palavra))?.causas ?? null;
 }

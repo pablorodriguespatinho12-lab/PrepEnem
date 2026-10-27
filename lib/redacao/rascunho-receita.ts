@@ -12,8 +12,6 @@ const MAX_SALVAS = 50;
 export interface Rascunho {
   passo: number;
   tema: string;
-  /* true quando o tema veio da lista (pode ter dupla sugerida); digitado = livre. */
-  temaDaLista: boolean;
   causaA: ChaveCausa | null;
   causaB: ChaveCausa | null;
   tese: string;
@@ -25,7 +23,6 @@ export interface Rascunho {
 export const rascunhoVazio = (): Rascunho => ({
   passo: 1,
   tema: '',
-  temaDaLista: false,
   causaA: null,
   causaB: null,
   tese: '',

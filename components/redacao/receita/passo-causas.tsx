@@ -1,7 +1,7 @@
 'use client';
 // Passo 2: escolher 2 das 5 causas coringa. A 1ª vira o D1, a 2ª o D2.
-// Tema da lista com dupla na receita: os 2 cartões vêm marcados como
-// sugeridos (e pré-selecionados ao entrar no passo). Tocar de novo desmarca.
+// Tema da lista com dupla na receita: os 2 cartões ganham o selo "Sugerido"
+// (e vêm pré-selecionados se nenhum motivo foi escolhido). Tocar de novo desmarca.
 
 import { CAUSAS, causaPorChave, type ChaveCausa } from '@/lib/redacao/receita';
 import { CabecalhoPasso } from './pecas';
