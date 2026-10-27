@@ -82,6 +82,12 @@ function Resumo({ correcao }: { correcao: CorrecaoCompleta }) {
   );
 }
 
+/* Linha discreta com o modelo de IA que corrigiu. Correção antiga não tem o
+   campo e não mostra nada. */
+export function CorrigidaPor({ modelo }: { modelo?: string }) {
+  if (!modelo) return null;
+  return <p className="type-meta text-muted-foreground">Corrigida por {modelo.replace(/^[a-z]+:/, '')}</p>;
+}
 export function CorrecaoCompletaView({ correcao }: { correcao: CorrecaoCompleta }) {
   const { notas, proximoPasso: p } = correcao;
   const j = correcao.justificativas;
@@ -187,6 +193,7 @@ export function CorrecaoCompletaView({ correcao }: { correcao: CorrecaoCompleta 
           ))}
         </section>
       )}
+      <CorrigidaPor modelo={correcao.corrigidaPor} />
     </div>
   );
 }

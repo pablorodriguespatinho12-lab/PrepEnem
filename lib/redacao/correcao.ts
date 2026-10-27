@@ -28,6 +28,8 @@ export interface CorrecaoCompleta {
   total: number;
   travas: string[];
   justificativas?: Record<Competencia, Justificativa>;
+  /* Modelo de IA que corrigiu (gravado desde 27/10/2026; antigas não têm). */
+  corrigidaPor?: string;
   c1: { estrutura: EstruturaSintatica; desvios: Desvio[] };
   c2: { abordagem: Abordagem; partesEmbrionarias: number; copiaMotivadores: boolean; repertorios: Repertorio[] };
   c3: { paragrafos: ParagrafoAnalisado[]; contradicaoGrave: boolean };
@@ -215,7 +217,12 @@ export interface CorrecaoParte {
   itens: { id: string; rotulo: string; ok: boolean; trecho: string | null; comoMelhorar: string }[];
   desvios: Desvio[];
   reescrita: string;
+  /* Modelo de IA que corrigiu (gravado desde 27/10/2026; antigas não têm). */
+  corrigidaPor?: string;
 }
+/* Correção de redação não troca de modelo (Pablo, 27/10/2026): falhou, o
+   aluno tenta de novo. A nota de um modelo não vale para outro. */
+export const ERRO_CORRECAO_IA = 'Tente de novo em 1 minuto.';
 
 /* Nota da parte (0–10) = proporção de itens cumpridos, menos 1 ponto a cada
    3 desvios de norma. Itens são os fixos de criterios-parte.ts. */

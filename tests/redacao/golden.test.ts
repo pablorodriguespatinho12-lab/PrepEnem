@@ -28,9 +28,9 @@ let ultimaChamada = 0;
 /* Outro modelo só no teste, sem mexer no site:
      REDACAO_MODELO=gemini:gemini-3-flash-preview REDACAO_PENSAR=medium REDACAO_MAX_TOKENS=16000
    Nota de um modelo não vale para outro: trocou, roda o golden set inteiro.
-   O Gemini não está em RESERVAS (lib/ia-modelos.ts), então não cai para outro
-   modelo no 429. O gpt-oss-120b cai para o 20b e o qwen: a rodada de 27/10
-   terminou com a cota do dia esgotada, e as últimas notas podem ser deles. */
+   A correção usa semReserva (opcoesCorrecaoCompleta): nenhum modelo cai para
+   outro no 429. Antes disso, o gpt-oss-120b caía para o 20b e o qwen, e a
+   rodada da Groq de 27/10 (cota do dia esgotada) pode ter notas deles. */
 const OPCOES_TESTE = {
   ...opcoesCorrecaoCompleta(),
   ...(process.env.REDACAO_MODELO ? { modelo: process.env.REDACAO_MODELO } : {}),

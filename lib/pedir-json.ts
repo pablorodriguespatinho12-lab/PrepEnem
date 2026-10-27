@@ -6,7 +6,9 @@ import { chatCompletion } from '@/lib/ai-client';
 import { extrairJson } from '@/lib/tutor/validar';
 import { modelosEmOrdem } from '@/lib/ia-modelos';
 
-export type ResultadoIA<T> = { ok: true; dado: T } | { ok: false; erro: string; status: number };
+/* modelo: quem respondeu de fato (pode ser uma reserva). Vazio = o AI_MODEL do
+   .env. Opcional porque cache e repositórios também montam ResultadoIA. */
+export type ResultadoIA<T> = { ok: true; dado: T; modelo?: string } | { ok: false; erro: string; status: number };
 
 /* A Groq gratuita limita 8.000 tokens por minuto por modelo (429). Medido
    em 05/10/2026: 2 e 5 s de espera não bastavam, a janela é de um minuto.
@@ -30,6 +32,9 @@ export interface OpcoesPedido {
      Vercel morre aos 60 s (maxDuration): antes 2 tentativas + 4 s + 12 s de
      espera + timeout passavam disso, o catch não rodava e a tela travava. */
   prazoMs?: number;
+  /* Sem troca para modelo menor no 429 (correção de redação, Pablo 27/10/2026:
+     a nota de um modelo não vale para outro). Ainda espera e repete no mesmo. */
+  semReserva?: boolean;
 }
 const PRAZO_PADRAO_MS = 50_000;
 const FOLGA_MS = 3_000;
@@ -37,7 +42,7 @@ const FOLGA_MS = 3_000;
 /* 429 troca de modelo antes de esperar (ver modelosEmOrdem). Devolve também
    o modelo que respondeu, para a segunda tentativa continuar nele. */
 async function chamarComReserva(mensagens: Mensagem[], opcoes: OpcoesPedido, fim: number) {
-  const modelos = modelosEmOrdem(opcoes.modelo);
+  const modelos = opcoes.semReserva ? [opcoes.modelo] : modelosEmOrdem(opcoes.modelo);
   for (let i = 0; ; i++) {
     const modelo = modelos[i];
     const r = await chamarComEspera(mensagens, { ...opcoes, modelo }, fim, i === modelos.length - 1);
@@ -93,7 +98,7 @@ export async function pedirJson<T>(
     }
     const conteudo: string = r.data?.choices?.[0]?.message?.content ?? '';
     const dado = validar(extrairJson(conteudo));
-    if (dado) return { ok: true, dado };
+    if (dado) return { ok: true, dado, modelo: modelo ?? '' };
     console.error('Tutor: resposta fora do formato, tentativa', tentativa + 1, conteudo.slice(0, 300));
     mensagens.push(
       { role: 'assistant', content: conteudo.slice(0, 4000) },

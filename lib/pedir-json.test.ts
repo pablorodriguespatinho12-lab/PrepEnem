@@ -40,7 +40,7 @@ describe('pedirJson com prazo total', () => {
   test('resposta fora do formato ainda ganha a segunda tentativa', async () => {
     respostas = [{ ok: true, conteudo: 'lixo' }, { ok: true, conteudo: '{"a":2}' }];
     const r = await pedirJson('p', validar);
-    expect(r).toEqual({ ok: true, dado: { a: 2 } });
+    expect(r).toEqual({ ok: true, dado: { a: 2 }, modelo: '' });
   });
 });
 
@@ -63,5 +63,23 @@ describe('cota da Groq acabou (15/10/2026: 200 mil tokens/dia no 120b, ~30 expli
     respostas = [{ ok: false, status: 429 }, { ok: true, conteudo: 'nada' }, { ok: true, conteudo: '{"a":1}' }];
     await pedirJson('p', validar, { modelo: 'openai/gpt-oss-120b' });
     expect(chamadas.map((c) => c.model)).toEqual(['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'openai/gpt-oss-20b']);
+  });
+});
+describe('pedirJson: modelo que respondeu e semReserva', () => {
+  test('devolve o modelo que respondeu', async () => {
+    const r = await pedirJson('p', validar, { modelo: 'openai/gpt-oss-120b' });
+    expect(r.ok && r.modelo).toBe('openai/gpt-oss-120b');
+  });
+  test('sem semReserva, o 429 passa para o modelo menor e devolve qual respondeu', async () => {
+    respostas = [{ ok: false, status: 429 }, { ok: true, conteudo: '{"a":1}' }];
+    const r = await pedirJson('p', validar, { modelo: 'openai/gpt-oss-120b', prazoMs: 30_000 });
+    expect(chamadas.map((c) => c.model)).toEqual(['openai/gpt-oss-120b', 'openai/gpt-oss-20b']);
+    expect(r.ok && r.modelo).toBe('openai/gpt-oss-20b');
+  });
+  test('com semReserva, o 429 nunca chama outro modelo', async () => {
+    respostas = [{ ok: false, status: 429 }, { ok: false, status: 429 }, { ok: false, status: 429 }, { ok: false, status: 429 }];
+    const r = await pedirJson('p', validar, { modelo: 'openai/gpt-oss-120b', semReserva: true, prazoMs: 5_000 });
+    expect(r.ok).toBe(false);
+    expect(new Set(chamadas.map((c) => c.model))).toEqual(new Set(['openai/gpt-oss-120b']));
   });
 });

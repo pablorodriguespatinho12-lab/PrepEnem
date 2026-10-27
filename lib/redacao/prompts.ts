@@ -12,8 +12,14 @@ import { CRITERIOS_PARTE } from './criterios-parte';
    pensando e o JSON veio cortado (27/10/2026, redação de 718 palavras); com
    'low', 1.844 tokens no total. Subir maxTokens não dá: prompt (~2.900) +
    maxTokens tem que caber nos 8.000 tokens/min da Groq gratuita. */
+/* As rotas de redação têm maxDuration 120 (Fluid compute ligado): a chamada
+   pode levar 100 s e o pedido inteiro 110 s, sobrando 10 para gravar. No
+   Gemini a correção levou até 80 s (27/10/2026). */
+export const PRAZOS_CORRECAO = { timeoutMs: 100_000, prazoMs: 110_000 };
 export const opcoesCorrecaoCompleta = () => ({
-  maxTokens: 4500, temperature: 0.2, modelo: MODELO_IA.redacao(), pensar: 'low' as const, timeoutMs: 55_000,
+  maxTokens: 4500, temperature: 0.2, modelo: MODELO_IA.redacao(), pensar: 'low' as const,
+  ...PRAZOS_CORRECAO,
+  semReserva: true,
 });
 
 const ESTILO = `ESTILO DO RETORNO (o aluno tem TDAH):

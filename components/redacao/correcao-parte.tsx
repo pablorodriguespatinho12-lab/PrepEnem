@@ -7,6 +7,7 @@ import { Check, X } from 'lucide-react';
 import type { CorrecaoParte } from '@/lib/redacao/correcao';
 import type { ParteModelo } from '@/data/redacao/modelos';
 import { ModeloComentado } from './modelo-comentado';
+import { CorrigidaPor } from './correcao-completa';
 
 export function CorrecaoParteView({ correcao, modelo }: { correcao: CorrecaoParte; modelo: ParteModelo | null }) {
   const cumpridos = correcao.itens.filter((i) => i.ok).length;
@@ -63,6 +64,7 @@ export function CorrecaoParteView({ correcao, modelo }: { correcao: CorrecaoPart
           <ModeloComentado parte={modelo} />
         </section>
       )}
+      <CorrigidaPor modelo={correcao.corrigidaPor} />
     </div>
   );
 }

@@ -1,12 +1,12 @@
 export const dynamic = 'force-dynamic';
-export const maxDuration = 60;
+export const maxDuration = 120;
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { pedirJson } from '@/lib/pedir-json';
 import { opcoesCorrecaoCompleta, promptRedacaoCompleta } from '@/lib/redacao/prompts';
-import { corrigirRedacao, type CorrecaoCompleta } from '@/lib/redacao/correcao';
+import { corrigirRedacao, ERRO_CORRECAO_IA, type CorrecaoCompleta } from '@/lib/redacao/correcao';
 import { MINIMO_LINHAS, linhasAproximadas } from '@/lib/redacao/grade';
 
 /* Até 7 linhas é nota zero pela regra do INEP: não precisa da IA para isso. */
@@ -70,9 +70,9 @@ export async function POST(req: Request) {
       );
       if (!r.ok) {
         await prisma.essay.update({ where: { id: essayId }, data: { status: 'pendente' } });
-        return NextResponse.json({ error: r.erro }, { status: r.status });
+        return NextResponse.json({ error: ERRO_CORRECAO_IA }, { status: r.status });
       }
-      correcao = r.dado;
+      correcao = { ...r.dado, corrigidaPor: r.modelo };
     }
 
     await prisma.essay.update({

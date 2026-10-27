@@ -1,12 +1,12 @@
 export const dynamic = 'force-dynamic';
-export const maxDuration = 60;
+export const maxDuration = 120;
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { pedirJson } from '@/lib/pedir-json';
-import { promptParte } from '@/lib/redacao/prompts';
-import { corrigirParte } from '@/lib/redacao/correcao';
+import { PRAZOS_CORRECAO, promptParte } from '@/lib/redacao/prompts';
+import { corrigirParte, ERRO_CORRECAO_IA } from '@/lib/redacao/correcao';
 import { MODELOS, ORDEM_PARTES, textoBaseSemParte, type TipoParte } from '@/data/redacao/modelos';
 import { MODELO_IA } from '@/lib/ia-modelos';
 
@@ -36,9 +36,11 @@ export async function POST(request: Request) {
       temperature: 0.2,
       modelo: MODELO_IA.redacao(),
       pensar: 'medium',
-      timeoutMs: 55_000,
+      ...PRAZOS_CORRECAO,
+      semReserva: true,
     });
-    if (!r.ok) return NextResponse.json({ error: r.erro }, { status: r.status });
+    if (!r.ok) return NextResponse.json({ error: ERRO_CORRECAO_IA }, { status: r.status });
+    const correcao = { ...r.dado, corrigidaPor: r.modelo };
 
     const practice = await prisma.essayPartPractice.create({
       data: {
@@ -47,12 +49,12 @@ export async function POST(request: Request) {
         tema: modelo.tema,
         textoBase,
         resposta,
-        feedback: JSON.stringify(r.dado),
-        nota: r.dado.nota,
+        feedback: JSON.stringify(correcao),
+        nota: correcao.nota,
       },
     });
 
-    return NextResponse.json({ id: practice.id, correcao: r.dado, modelo: modelo.partes[partType] });
+    return NextResponse.json({ id: practice.id, correcao, modelo: modelo.partes[partType] });
   } catch (error: unknown) {
     console.error('Submit essay part error:', error);
     return NextResponse.json({ error: 'Erro ao avaliar' }, { status: 500 });
