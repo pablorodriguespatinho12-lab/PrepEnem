@@ -358,7 +358,8 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   por linha) → redação montada com checklist e "Copiar redação"; a correção é
   fora do site. Fonte única: `docs/redacao/receita-redacao.md` (dados em
   `lib/redacao/receita.ts`). Rascunho no localStorage a cada mudança, sem
-  Neon. As rotas `/api/redacao/parts/*` ficaram sem quem chame.
+  Neon. As rotas `/api/redacao/parts/*` e a correção por partes pela IA foram
+  apagadas; a tabela EssayPartPractice fica (histórico, lida em /api/stats).
 - As redações-modelo de `data/redacao/modelos.ts` (textos originais, temas
   reais, cada trecho comentado) seguem em /redacao/modelos. Não inventa
   texto-base com IA. Repertório nos modelos: só fato verificável.

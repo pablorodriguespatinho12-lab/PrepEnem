@@ -3,9 +3,7 @@
 // com a grade oficial (lib/redacao/grade.ts). Isso evita a nota "de
 // impressão" e deixa cada ponto perdido com o trecho que o justifica.
 
-import { ROTULO_PARTE, type TipoParte } from '@/data/redacao/modelos';
 import { MODELO_IA } from '@/lib/ia-modelos';
-import { CRITERIOS_PARTE } from './criterios-parte';
 
 /* Opções da correção completa (rota e golden set usam as mesmas). Raciocínio
    'low', não 'medium': com 'medium' o gpt-oss gastou 4.380 dos 4.500 tokens
@@ -98,35 +96,4 @@ TEMA: ${tema}
 ${contexto ? `CONTEXTO DO TEMA:\n${contexto}\n` : ''}
 REDAÇÃO DO ALUNO:
 ${texto}`;
-}
-export function promptParte(parte: TipoParte, tema: string, textoBase: string, resposta: string): string {
-  const itens = CRITERIOS_PARTE[parte];
-  const lista = itens.map((i) => `- "${i.id}" (${i.rotulo}): ${i.descricao}`).join('\n');
-  return `Você é corretor da redação do ENEM. O aluno está treinando UMA parte: ${ROTULO_PARTE[parte].toUpperCase()}. O resto da redação já estava pronto (texto-base). Avalie só a parte dele, mas confira se ela conversa com o texto-base (tese, eixos anunciados, causas).
-
-Marque cada item abaixo como cumprido ou não, com o trecho do aluno que prova. Item meio cumprido é NÃO cumprido, e "comoMelhorar" diz o que falta.
-${lista}
-
-Liste também cada desvio de norma (grafia, crase, concordância, regência, pontuação).
-
-${ESTILO}
-
-${SEGURANCA}
-
-Devolva SOMENTE JSON:
-{
-  "itens": {${itens.map((i) => `"${i.id}": {"ok": true, "trecho": "...", "comoMelhorar": "..."}`).join(', ')}},
-  "desvios": [{"trecho": "...", "tipo": "...", "correcao": "..."}],
-  "reescrita": "a parte do aluno reescrita como deveria ficar, MANTENDO as ideias e o repertório dele, corrigindo só o que faltou"
-}
-"trecho" é null quando o item não aparece. "comoMelhorar" vazio quando ok.
-
----
-TEMA: ${tema}
-
-TEXTO-BASE:
-${textoBase}
-
-PARTE ESCRITA PELO ALUNO (${ROTULO_PARTE[parte]}):
-${resposta}`;
 }

@@ -6,10 +6,8 @@ import {
   aplicarTravas, arredondarNivel, notaC1, notaC5, total,
   type Abordagem, type EstruturaSintatica, type Nivel, type Notas,
 } from './grade';
-import { CRITERIOS_PARTE } from './criterios-parte';
 import { EvidenciaSchema } from './esquema';
 import { ACAO_SO_CONSCIENCIA, conectivosRepetidos, trechoExiste } from './trecho';
-import type { TipoParte } from '@/data/redacao/modelos';
 export interface Desvio { trecho: string; tipo: string; correcao: string }
 /* cita/explica/amarra e bolso só existem da v3 em diante. */
 export interface Repertorio {
@@ -210,35 +208,6 @@ export function erroPrincipal(c: CorrecaoCompleta, comp: Competencia): string | 
     }
   }
 }
-export interface CorrecaoParte {
-  versao: 2;
-  parte: TipoParte;
-  nota: number;
-  itens: { id: string; rotulo: string; ok: boolean; trecho: string | null; comoMelhorar: string }[];
-  desvios: Desvio[];
-  reescrita: string;
-  /* Modelo de IA que corrigiu (gravado desde 27/10/2026; antigas não têm). */
-  corrigidaPor?: string;
-}
 /* Correção de redação não troca de modelo (Pablo, 27/10/2026): falhou, o
    aluno tenta de novo. A nota de um modelo não vale para outro. */
 export const ERRO_CORRECAO_IA = 'Tente de novo em 1 minuto.';
-
-/* Nota da parte (0–10) = proporção de itens cumpridos, menos 1 ponto a cada
-   3 desvios de norma. Itens são os fixos de criterios-parte.ts. */
-export function corrigirParte(bruto: unknown, parte: TipoParte): CorrecaoParte | null {
-  const r = obj(bruto);
-  const marcados = obj(r.itens);
-  const criterios = CRITERIOS_PARTE[parte];
-  if (criterios.every((c) => !(c.id in marcados))) return null;
-  const itens = criterios.map((c) => {
-    const m = obj(marcados[c.id]);
-    const trecho = txt(m.trecho, 400) || null;
-    const ok = bool(m.ok) && trecho !== null;
-    return { id: c.id, rotulo: c.rotulo, ok, trecho, comoMelhorar: ok ? '' : txt(m.comoMelhorar, 500) };
-  });
-  const desvios = limparDesvios(lista(r.desvios).map((d) => ({ trecho: txt(d.trecho, 200), tipo: txt(d.tipo, 40), correcao: txt(d.correcao, 200) })));
-  const base = (10 * itens.filter((i) => i.ok).length) / itens.length;
-  const nota = Math.max(0, Math.round(base - Math.floor(desvios.length / 3)));
-  return { versao: 2, parte, nota, itens, desvios, reescrita: txt(r.reescrita, 2500) };
-}
