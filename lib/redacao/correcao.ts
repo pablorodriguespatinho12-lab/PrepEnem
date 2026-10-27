@@ -42,11 +42,15 @@ const txt = (v: unknown, max = 600): string => (typeof v === 'string' ? v.trim()
 const bool = (v: unknown): boolean => v === true;
 /* Desvio que "corrige" para o mesmo texto não é desvio; o mesmo trecho
    apontado duas vezes conta uma (no teste com IA real veio "ninguém → ninguém"). */
-function limparDesvios(desvios: Desvio[]): Desvio[] {
+/* Desvio que não está no texto, ou cuja "correção" é o próprio trecho, não
+   conta: com raciocínio 'low' a IA apontou "Eremos Seis" → "Eremas Seis" e
+   aspas trocadas por aspas iguais (Cartilha 2026 #2, 27/10/2026). */
+function limparDesvios(desvios: Desvio[], texto?: string): Desvio[] {
   const vistos = new Set<string>();
   return desvios.filter((d) => {
-    const chave = d.trecho.toLowerCase();
-    if (!d.trecho || d.trecho === d.correcao || vistos.has(chave)) return false;
+    const limpo = (t: string) => t.trim().replace(/\s+/g, ' ');
+    const chave = limpo(d.trecho).toLowerCase();
+    if (!chave || limpo(d.trecho) === limpo(d.correcao) || (texto !== undefined && !trechoExiste(d.trecho, texto)) || vistos.has(chave)) return false;
     vistos.add(chave);
     return true;
   });
@@ -71,7 +75,8 @@ export function contarParagrafos(texto: string): number {
   return texto.split(/\n\s*\n|\n/).map((p) => p.trim()).filter((p) => p.length > 0).length;
 }
 /* Repertório produtivo = os 3 passos no texto: cita, explica, amarra ao tema.
-   Citado e legitimado sem a amarra é o "repertório de bolso" da cartilha. */
+   Citado e legitimado sem explicar ou sem amarrar é o "repertório de bolso":
+   a Cartilha 2025 chama de bolso o Bauman só nomeado, mesmo ligado ao tema. */
 function lerRepertorio(
   r: { cita: string | null; explica: string | null; amarra: string | null; legitimado: boolean; pertinente: boolean; comentario: string },
   texto: string,
@@ -84,7 +89,7 @@ function lerRepertorio(
     legitimado: r.legitimado,
     pertinente: r.pertinente,
     produtivo: r.legitimado && r.pertinente && !!cita && !!explica && !!amarra,
-    bolso: r.legitimado && !!cita && !amarra,
+    bolso: r.legitimado && !!cita && (!explica || !amarra),
     comentario: r.comentario,
   };
 }
@@ -96,7 +101,7 @@ export function corrigirRedacao(bruto: unknown, textoDoAluno: string): CorrecaoC
   const existe = (t: string | null | undefined) => trechoExiste(t, textoDoAluno);
   /* Nota sem trecho é inválida: a IA tenta de novo. */
   if (![c1, c2, c3, c4].every((c) => existe(c.trecho))) return null;
-  const desvios = limparDesvios(c1.desvios);
+  const desvios = limparDesvios(c1.desvios, textoDoAluno);
   const repertorios = c2.repertorios.map((r) => lerRepertorio(r, textoDoAluno)).filter((r) => r.trecho);
   const proposta = Object.fromEntries(ELEMENTOS.map((k) => {
     const e = c5[k];
@@ -177,7 +182,7 @@ export function erroPrincipal(c: CorrecaoCompleta, comp: Competencia): string | 
     case 'c2': {
       if (c.c2.abordagem === 'tangencia') return 'Tangenciou o tema: fala do assunto amplo, não do recorte da frase temática.';
       const bolso = c.c2.repertorios.find((r) => r.bolso);
-      if (bolso) return `Repertório de bolso: ${aspas(bolso.trecho)} não foi amarrado ao tema.`;
+      if (bolso) return `Repertório de bolso: ${aspas(bolso.trecho)} ${bolso.explica ? 'não foi amarrado ao tema' : 'só foi citado, sem explicar a ideia'}.`;
       if (c.c2.partesEmbrionarias > 0) return `${c.c2.partesEmbrionarias} parte(s) curta(s) demais.`;
       if (c.c2.repertorios.length === 0) return 'Nenhum repertório próprio. Sem ele a C2 para em 120.';
       const fraco = c.c2.repertorios.find((r) => !r.produtivo);
@@ -191,7 +196,7 @@ export function erroPrincipal(c: CorrecaoCompleta, comp: Competencia): string | 
     case 'c4': {
       const i = c.c4.inadequacoes[0];
       if (i) return `Conectivo com sentido errado: ${aspas(i.trecho)}. ${i.porque}`;
-      if (c.c4.repeticoes.length > 0) return `Conectivo repetido: ${c.c4.repeticoes.join(', ')}.`;
+      if (c.c4.repeticoes.length > 0) return `Repetição: ${c.c4.repeticoes.join(', ')}.`;
       if (c.c4.operadoresEntreParagrafos.length < 2) return 'Menos de 2 conectivos ligando um parágrafo ao outro.';
       return c.justificativas?.c4.descritor || null;
     }

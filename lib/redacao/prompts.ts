@@ -4,7 +4,17 @@
 // impressão" e deixa cada ponto perdido com o trecho que o justifica.
 
 import { ROTULO_PARTE, type TipoParte } from '@/data/redacao/modelos';
+import { MODELO_IA } from '@/lib/ia-modelos';
 import { CRITERIOS_PARTE } from './criterios-parte';
+
+/* Opções da correção completa (rota e golden set usam as mesmas). Raciocínio
+   'low', não 'medium': com 'medium' o gpt-oss gastou 4.380 dos 4.500 tokens
+   pensando e o JSON veio cortado (27/10/2026, redação de 718 palavras); com
+   'low', 1.844 tokens no total. Subir maxTokens não dá: prompt (~2.900) +
+   maxTokens tem que caber nos 8.000 tokens/min da Groq gratuita. */
+export const opcoesCorrecaoCompleta = () => ({
+  maxTokens: 4500, temperature: 0.2, modelo: MODELO_IA.redacao(), pensar: 'low' as const, timeoutMs: 55_000,
+});
 
 const ESTILO = `ESTILO DO RETORNO (o aluno tem TDAH):
 - Frases curtas e diretas. Sempre cite o trecho exato do aluno entre aspas quando apontar algo.
@@ -30,9 +40,9 @@ C2, tema e repertório:
 - abordagem "fuga": não trata do assunto.
 - Repertório em 3 PASSOS. Para cada referência externa (autor, obra, lei, dado, fato histórico), copie o trecho de cada passo:
   "cita": onde a referência aparece (autor + ideia).
-  "explica": onde o aluno diz, com as palavras dele, o que a ideia significa.
+  "explica": onde o aluno diz, com as palavras dele, o que a ideia significa. Só nomear o conceito ou usar a obra como símbolo de ideal contra realidade NÃO é explicar: "explica": null. Os dois exemplos de bolso do INEP (Cartilha 2025, p. 17 e 18): "Utopia", de Thomas More, só como contraste com o Brasil; Bauman, "instituições zumbis", só nomeado.
   "amarra": onde o aluno liga a ideia ao recorte do tema, com fato ou exemplo do Brasil.
-  Passo que não existe no texto = null. Citar um autor NÃO é usar repertório: nome + frase decorada, sem "amarra", é REPERTÓRIO DE BOLSO (cartilhas 2025 e 2026) e deve vir com "amarra": null.
+  Cada passo é CÓPIA EXATA de um trecho do aluno, nunca resumo seu: o sistema procura o trecho no texto e o que não acha vira null. Passo que não existe no texto = null. Citar um autor NÃO é usar repertório: nome + frase decorada, sem "explica" ou sem "amarra", é REPERTÓRIO DE BOLSO (cartilhas 2025 e 2026). O autor ser famoso não é o problema: Kant ou Paulo Freire explicados e ligados ao recorte contam.
   "legitimado": a referência existe numa área do conhecimento (dado só dos textos motivadores não conta). "pertinente": tem relação com o tema.
 C3, projeto de texto ("nivel"):
 - 200: projeto estratégico; TODAS as ideias desenvolvidas (com causa, consequência ou exemplo); deslizes só pontuais.

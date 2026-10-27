@@ -5,10 +5,9 @@ import { prisma } from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { pedirJson } from '@/lib/pedir-json';
-import { promptRedacaoCompleta } from '@/lib/redacao/prompts';
+import { opcoesCorrecaoCompleta, promptRedacaoCompleta } from '@/lib/redacao/prompts';
 import { corrigirRedacao, type CorrecaoCompleta } from '@/lib/redacao/correcao';
 import { MINIMO_LINHAS, linhasAproximadas } from '@/lib/redacao/grade';
-import { MODELO_IA } from '@/lib/ia-modelos';
 
 /* Até 7 linhas é nota zero pela regra do INEP: não precisa da IA para isso. */
 function correcaoNotaZeroPorTamanho(): CorrecaoCompleta {
@@ -67,7 +66,7 @@ export async function POST(req: Request) {
       const r = await pedirJson(
         promptRedacaoCompleta(essay.theme.tema, essay.theme.textoMotivador, essay.texto),
         (bruto) => corrigirRedacao(bruto, essay.texto),
-        { maxTokens: 4500, temperature: 0.2, modelo: MODELO_IA.redacao(), pensar: 'medium', timeoutMs: 55_000 },
+        opcoesCorrecaoCompleta(),
       );
       if (!r.ok) {
         await prisma.essay.update({ where: { id: essayId }, data: { status: 'pendente' } });

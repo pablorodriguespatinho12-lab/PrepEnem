@@ -343,10 +343,15 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   competência traz o trecho que a justifica e o código confere que está no
   texto (`lib/redacao/trecho.ts`, tolera 1 letra errada em trecho de 5+
   palavras: a IA copiou "Estima" por "Estigma"). Repertório só é produtivo com
-  cita + explica + amarra; sem amarra é "de bolso" (C2 160). "Conscientizar"
-  sem meio não é ação. Conectivo repetido trava C4 em 160. Prova:
-  `npm test` (sem IA) e `npm run test:redacao` (IA real, ~6 min por causa da
-  cota da Groq; textos da cartilha em `tests/redacao/textos/`, fora do git).
+  cita + explica + amarra; sem explicar ou sem amarrar é "de bolso" (C2 160;
+  a Cartilha 2025 chama de bolso o Bauman só nomeado). "Conscientizar"
+  sem meio não é ação. Conectivo repetido trava C4 em 160. Raciocínio da IA em
+  'low': 'medium' cortava o JSON. Prova: `npm test` (sem IA) e
+  `npm run test:redacao` (IA real, ~30 min pela cota da Groq; 20 redações das
+  cartilhas 2025 e 2026 em `tests/redacao/textos/`, PDFs em
+  `docs/redacao/fontes/`, os dois fora do git). As cartilhas NÃO dizem que as
+  redações tiraram 1000: o teste compara com o nível que o comentário do INEP
+  declara (`tests/redacao/niveis-inep.ts`).
 - Treino por partes usa as redações-modelo de `data/redacao/modelos.ts`
   (textos originais, temas reais, cada trecho comentado). Não inventa
   texto-base com IA. Repertório nos modelos: só fato verificável.

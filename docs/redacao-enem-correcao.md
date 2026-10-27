@@ -83,13 +83,23 @@ predominância de língua estrangeira; ilegível. O título é opcional.
   é recusada e a IA tenta de novo. Trecho de repertório ou de elemento da
   proposta que não está no texto conta como ausente.
 - **Repertório só é produtivo com os 3 passos** (cita, explica, amarra ao tema
-  com fato brasileiro). Legitimado, citado, sem "amarra" = **repertório de
-  bolso** (termo das cartilhas 2025 e 2026): improdutivo, C2 para em 160.
+  com fato brasileiro). Legitimado, citado, sem "explica" ou sem "amarra" =
+  **repertório de bolso** (termo das cartilhas 2025 e 2026): improdutivo, C2
+  para em 160. A Cartilha 2025 chama de bolso o Bauman ("instituições zumbis")
+  só nomeado, mesmo ligado ao tema: nomear o conceito não é explicar.
   Quem decide "produtivo" é o código, pelos trechos, não o booleano da IA.
 - **C5:** ação com "conscientizar", "sensibilizar" ou "alertar" sem meio
   válido é ação nula.
 - **C4:** o código conta conectivos. O mesmo conectivo 3 vezes ou mais, ou
   abrindo 2 parágrafos, trava a C4 em 160 ("repetições raras" é exigência do 200).
+- **C1:** desvio cujo trecho não está no texto, ou cuja correção é igual ao
+  trecho, não conta.
+- **Raciocínio da IA em 'low'** (`opcoesCorrecaoCompleta`): com 'medium' o
+  gpt-oss gastava até 4.380 dos 4.500 tokens pensando e o JSON vinha cortado.
+- **Calibração:** `docs/redacao/padrao-nota-1000.md` (20 redações das cartilhas
+  2025 e 2026) e o golden set, que compara com o nível que o INEP declara nos
+  comentários (`tests/redacao/niveis-inep.ts`). As cartilhas não dizem que as
+  redações tiraram 1000: o INEP põe algumas em 160 na C1 e na C4.
 - **Prompt sem "seja rigoroso":** a IA recebe o descritor de cada nível
   (200/160/120/80/40) e devolve qual descritor escolheu e o trecho.
 

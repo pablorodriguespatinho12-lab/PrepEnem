@@ -60,6 +60,12 @@ describe('C2: repertório em 3 passos', () => {
     expect(c.c2.repertorios[0].produtivo).toBe(false);
     expect(c.notas.c2).toBe(160);
   });
+  test('ligado ao tema mas sem explicar a ideia também é bolso (o Bauman da Cartilha 2025)', () => {
+    const c = corrigir({ c2: { ...base.c2, repertorios: [{ ...rep, explica: null }] } })!;
+    expect(c.c2.repertorios[0].bolso).toBe(true);
+    expect(c.notas.c2).toBe(160);
+    expect(erroPrincipal(c, 'c2')).toContain('sem explicar a ideia');
+  });
   test('a IA dizer "produtivo" não basta: quem decide são os 3 trechos', () => {
     const c = corrigir({ c2: { ...base.c2, repertorios: [{ ...rep, explica: null, produtivo: true }] } })!;
     expect(c.notas.c2).toBe(160);
@@ -99,7 +105,19 @@ describe('C4: conectivo repetido', () => {
     const texto = REDACAO.replace('Em primeiro lugar,', 'Além disso,').replace('Portanto,', 'Além disso,');
     const c = corrigir({ c4: { ...base.c4, trecho: 'a herança manicomial também contribui' } }, texto)!;
     expect(c.notas.c4).toBe(160);
-    expect(erroPrincipal(c, 'c4')).toContain('Conectivo repetido');
+    expect(erroPrincipal(c, 'c4')).toContain('Repetição');
+    expect(c.travas.join(' ')).toContain('Conectivo repetido');
+  });
+});
+describe('C1: desvio que não vale', () => {
+  test('desvio fora do texto ou com a correção igual ao trecho não conta', () => {
+    const desvios = [
+      { trecho: 'Eremos Seis', tipo: 'grafia', correcao: 'Eremas Seis' },
+      { trecho: 'reduz a pessoa a um atributo', tipo: 'aspas', correcao: 'reduz a pessoa  a um atributo' },
+      { trecho: 'a sociedade reduz a pessoa', tipo: 'regência', correcao: 'a sociedade reduz à pessoa' },
+    ];
+    const c = corrigir({ c1: { ...base.c1, desvios } })!;
+    expect(c.c1.desvios.map((d) => d.trecho)).toEqual(['a sociedade reduz a pessoa']);
   });
 });
 
