@@ -8,6 +8,8 @@ export interface Degradacao {
   nome: string;
   competencia: Competencia;
   trocas: [string, string][];
+  /* true: só reporta a queda, não exige (a C2 pode ficar se sobrar repertório produtivo). */
+  soReporta?: boolean;
 }
 
 /* Trocas sobre tests/redacao/fixtures.ts (REDACAO). Para degradar uma redação
@@ -65,3 +67,38 @@ export function degradar(texto: string, d: Degradacao): string {
     return t.replace(de, para);
   }, texto);
 }
+/* Estragos numa redação real da Cartilha 2025 (#09, Faoro e Durkheim), fora
+   do grupo separado. O bolso imita o Bauman do INEP (Cartilha 2025, p. 18):
+   autor e conceito só nomeados, sem explicar. A C2 só cai se nenhum
+   repertório ficar produtivo: "bolso sem explicação" mexe nos dois do
+   desenvolvimento; "todo repertório só nomeado" mexe também no fato histórico
+   da introdução, e nesse a C2 tem que cair. */
+export const ARQUIVO_CARTILHA_ESTRAGADA = 'cartilha2025-09';
+export const DEGRADACOES_CARTILHA: Degradacao[] = [
+  {
+    nome: 'sem agente',
+    competencia: 'c5',
+    trocas: [
+      ['Logo, o Poder Executivo, responsável pelo bem-estar social, deve aumentar', 'Logo, deve-se aumentar'],
+      ['Ademais, as escolas devem inserir', 'Ademais, devem-se inserir'],
+    ],
+  },
+  {
+    nome: 'bolso sem explicação',
+    competencia: 'c2',
+    soReporta: true,
+    trocas: [
+      ['Isso ocorre, porque, tal qual abordado pelo teórico Raymundo Faoro, o governo, muitas vezes, prioriza seus próprios interesses em detrimento das necessidades do povo. Em conformidade com Faoro, os políticos em exercício, ao se preocuparem apenas com seus proveitos pessoais, não tomam medidas', 'Isso ocorre, porque, como já dizia o teórico Raymundo Faoro, existem "os donos do poder". Assim, os políticos em exercício não tomam medidas'],
+      ['Nesse sentido, o sociólogo Émile Durkheim afirma que a escola é o segundo mecanismo de socialização do indivíduo, que molda seus hábitos e seus comportamentos.', 'Nesse sentido, o sociólogo Émile Durkheim fala em "fato social".'],
+    ],
+  },
+  {
+    nome: 'todo repertório só nomeado',
+    competencia: 'c2',
+    trocas: [
+      ['No período colonial brasileiro, a cultura dos indivíduos escravizados foi suprimida para facilitar a dominação e a exploração desse grupo pelos europeus.', 'O período colonial brasileiro é muito lembrado.'],
+      ['Isso ocorre, porque, tal qual abordado pelo teórico Raymundo Faoro, o governo, muitas vezes, prioriza seus próprios interesses em detrimento das necessidades do povo. Em conformidade com Faoro, os políticos em exercício, ao se preocuparem apenas com seus proveitos pessoais, não tomam medidas', 'Isso ocorre, porque, como já dizia o teórico Raymundo Faoro, existem "os donos do poder". Assim, os políticos em exercício não tomam medidas'],
+      ['Nesse sentido, o sociólogo Émile Durkheim afirma que a escola é o segundo mecanismo de socialização do indivíduo, que molda seus hábitos e seus comportamentos.', 'Nesse sentido, o sociólogo Émile Durkheim fala em "fato social".'],
+    ],
+  },
+];
