@@ -10,7 +10,7 @@ import {
   AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent,
   AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
-import { montarRedacao, moldeTese, PARAGRAFOS, type ChaveParagrafo } from '@/lib/redacao/receita';
+import { duplaSugerida, montarRedacao, moldeTese, PARAGRAFOS, type ChaveParagrafo } from '@/lib/redacao/receita';
 import { apagarRascunho, lerRascunho, rascunhoVazio, salvarRascunho, type Rascunho } from '@/lib/redacao/rascunho-receita';
 import { BarraProgresso, TOTAL_PASSOS } from './pecas';
 import { PassoTema } from './passo-tema';
@@ -27,7 +27,7 @@ const PARAGRAFO_DO_PASSO: Record<number, ChaveParagrafo> = { 4: 'introducao', 5:
    o resto o aluno pode deixar para depois. */
 function falta(r: Rascunho): string | null {
   if (r.passo === 1 && !r.tema.trim()) return 'Escolha ou digite um tema.';
-  if (r.passo === 2 && !(r.causaA && r.causaB)) return 'Escolha 2 causas.';
+  if (r.passo === 2 && !(r.causaA && r.causaB)) return 'Escolha 2 motivos.';
   return null;
 }
 
@@ -49,12 +49,21 @@ export function TreinoReceita() {
   const mudarParagrafo = (chave: ChaveParagrafo, texto: string) =>
     setR((atual) => ({ ...atual, paragrafos: { ...atual.paragrafos, [chave]: texto } }));
   const irPara = (passo: number) => {
-    setR((atual) => ({
-      ...atual,
-      passo,
-      /* A tese chega preenchida com o molde das causas escolhidas. */
-      tese: passo === 3 && !atual.tese.trim() ? moldeTese(atual.causaA, atual.causaB) : atual.tese,
-    }));
+    setR((atual) => {
+      /* Tema da lista com dupla na receita: os 2 motivos chegam escolhidos,
+         só se o aluno ainda não escolheu nenhum. */
+      const dupla = passo === 2 && !atual.causaA && !atual.causaB ? duplaSugerida(atual.tema, atual.temaDaLista) : null;
+      const causaA = dupla ? dupla[0] : atual.causaA;
+      const causaB = dupla ? dupla[1] : atual.causaB;
+      return {
+        ...atual,
+        passo,
+        causaA,
+        causaB,
+        /* A tese chega preenchida com o molde das causas escolhidas. */
+        tese: passo === 3 && !atual.tese.trim() ? moldeTese(causaA, causaB) : atual.tese,
+      };
+    });
     window.scrollTo({ top: 0 });
   };
   const recomecar = () => {
@@ -71,8 +80,8 @@ export function TreinoReceita() {
 
   const conteudo = (
     <>
-      {r.passo === 1 && <PassoTema tema={r.tema} aoMudar={(tema) => mudar({ tema })} />}
-      {r.passo === 2 && <PassoCausas causaA={r.causaA} causaB={r.causaB} aoMudar={(causaA, causaB) => mudar({ causaA, causaB })} />}
+      {r.passo === 1 && <PassoTema tema={r.tema} aoMudar={(tema, temaDaLista) => mudar({ tema, temaDaLista })} />}
+      {r.passo === 2 && <PassoCausas causaA={r.causaA} causaB={r.causaB} sugeridas={duplaSugerida(r.tema, r.temaDaLista) ?? []} aoMudar={(causaA, causaB) => mudar({ causaA, causaB })} />}
       {r.passo === 3 && <PassoTese tese={r.tese} causaA={r.causaA} causaB={r.causaB} aoMudar={(tese) => mudar({ tese })} />}
       {paragrafo && (
         <PassoParagrafo

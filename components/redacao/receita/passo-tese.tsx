@@ -18,7 +18,7 @@ export function PassoTese({ tese, causaA, causaB, aoMudar }: {
         <p className="type-caption font-semibold text-primary-text mb-1">Molde</p>
         <p className="font-reading type-body">Tal cenário decorre, sobretudo, de [causa A] e de [causa B].</p>
         <p className="type-meta text-muted-foreground mt-2">
-          Causa A: {causaPorChave(causaA)?.nome ?? 'não escolhida'} · Causa B: {causaPorChave(causaB)?.nome ?? 'não escolhida'}
+          Motivo 1: {causaPorChave(causaA)?.nome ?? 'não escolhido'} → D1 · Motivo 2: {causaPorChave(causaB)?.nome ?? 'não escolhido'} → D2
         </p>
       </div>
       <CaixaTexto id="tese" rotulo="Sua tese" valor={tese} aoMudar={aoMudar} placeholder={molde} />

@@ -6,7 +6,8 @@ import { CabecalhoPasso } from './pecas';
 
 interface Tema { id: string; tema: string; anoEnem: number | null }
 
-export function PassoTema({ tema, aoMudar }: { tema: string; aoMudar: (t: string) => void }) {
+/* daLista: true quando o tema foi tocado na lista (pode ter dupla sugerida). */
+export function PassoTema({ tema, aoMudar }: { tema: string; aoMudar: (t: string, daLista: boolean) => void }) {
   const [temas, setTemas] = useState<Tema[]>([]);
   const [erro, setErro] = useState(false);
 
@@ -26,7 +27,7 @@ export function PassoTema({ tema, aoMudar }: { tema: string; aoMudar: (t: string
       <input
         id="tema-livre"
         value={tema}
-        onChange={(e) => aoMudar(e.target.value)}
+        onChange={(e) => aoMudar(e.target.value, false)}
         placeholder="Digite o tema"
         className="block w-full rounded-[var(--radius-control)] border border-muted-foreground bg-[hsl(var(--surface-2))] px-4 py-3 type-body placeholder:text-muted-foreground focus:outline-none mb-5"
       />
@@ -39,7 +40,7 @@ export function PassoTema({ tema, aoMudar }: { tema: string; aoMudar: (t: string
               <li key={t.id}>
                 <button
                   type="button"
-                  onClick={() => aoMudar(t.tema)}
+                  onClick={() => aoMudar(t.tema, true)}
                   aria-pressed={escolhido}
                   className="w-full text-left rounded-[var(--radius-control)] border px-4 py-3 t-colors hover:bg-muted"
                   style={escolhido ? { borderColor: 'hsl(var(--primary))', backgroundColor: 'hsl(var(--primary) / 0.1)' } : undefined}

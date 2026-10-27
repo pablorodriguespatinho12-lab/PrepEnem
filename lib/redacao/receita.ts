@@ -48,6 +48,27 @@ export const CAUSAS: Causa[] = [
 export const causaPorChave = (chave: ChaveCausa | null): Causa | null =>
   CAUSAS.find((c) => c.chave === chave) ?? null;
 
+/* Tabela "Ano | Tema | Causas" da receita: a dupla recomendada para cada tema
+   do ENEM, na ordem (1º motivo, 2º motivo). A ligação com o texto do tema é
+   pela palavra que o identifica, sem acento e sem caixa. */
+const DUPLAS_DA_RECEITA: { ano: number; palavra: string; causas: [ChaveCausa, ChaveCausa] }[] = [
+  { ano: 2025, palavra: 'envelhecimento', causas: ['estigma', 'estado'] },
+  { ano: 2024, palavra: 'heranca africana', causas: ['historia', 'estigma'] },
+  { ano: 2023, palavra: 'trabalho de cuidado', causas: ['estigma', 'historia'] },
+  { ano: 2022, palavra: 'povos tradicionais', causas: ['historia', 'estado'] },
+  { ano: 2021, palavra: 'registro civil', causas: ['estado', 'estigma'] },
+  { ano: 2020, palavra: 'doencas mentais', causas: ['estigma', 'estado'] },
+  { ano: 2019, palavra: 'cinema', causas: ['acesso', 'mercado'] },
+];
+const semAcento = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+/* Dupla sugerida para um tema da lista; tema livre (digitado) não tem. */
+export function duplaSugerida(tema: string, temaDaLista: boolean): [ChaveCausa, ChaveCausa] | null {
+  if (!temaDaLista || !tema.trim()) return null;
+  const t = semAcento(tema);
+  return DUPLAS_DA_RECEITA.find((d) => t.includes(d.palavra))?.causas ?? null;
+}
+
 /* Molde da 3ª frase da introdução ("Frases-esqueleto"). */
 export function moldeTese(causaA: ChaveCausa | null, causaB: ChaveCausa | null): string {
   const a = causaPorChave(causaA)?.naTese ?? 'de [causa A]';

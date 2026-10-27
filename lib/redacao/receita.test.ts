@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { CARACTERES_POR_LINHA, contarLinhas, montarRedacao, moldeTese, situacaoLinhas } from './receita';
+import { CARACTERES_POR_LINHA, contarLinhas, duplaSugerida, montarRedacao, moldeTese, situacaoLinhas } from './receita';
 import { CHAVE_RASCUNHO, CHAVE_SALVAS, guardarEmSalvas, lerRascunho, rascunhoVazio, salvarRascunho, apagarRascunho } from './rascunho-receita';
 
 /* Armazenamento de mentira: um Map, ou um que estoura em tudo (aba anônima). */
@@ -89,5 +89,21 @@ describe('rascunho: salvar e restaurar', () => {
     const lista = JSON.parse(arm.getItem(CHAVE_SALVAS)!);
     expect(lista.map((s: { id: string }) => s.id.startsWith('receita_') ? 'nova' : s.id)).toEqual(['nova', 'antiga']);
     expect(lista[0].texto).toBe('Texto da redação');
+  });
+});
+
+describe('dupla sugerida pela tabela da receita', () => {
+  test('tema da lista com dupla na receita vem com os 2 motivos, na ordem', () => {
+    expect(duplaSugerida('Perspectivas acerca do envelhecimento na sociedade brasileira', true)).toEqual(['estigma', 'estado']);
+    expect(duplaSugerida('Desafios para a valorização da herança africana no Brasil', true)).toEqual(['historia', 'estigma']);
+    expect(duplaSugerida('Democratização do acesso ao cinema no Brasil', true)).toEqual(['acesso', 'mercado']);
+    expect(duplaSugerida('O estigma associado às doenças mentais na sociedade brasileira', true)).toEqual(['estigma', 'estado']);
+  });
+  test('tema livre (digitado) não tem sugestão, mesmo com a mesma palavra', () => {
+    expect(duplaSugerida('Perspectivas acerca do envelhecimento na sociedade brasileira', false)).toBeNull();
+  });
+  test('tema da lista que não está na tabela não tem sugestão', () => {
+    expect(duplaSugerida('Os desafios da mobilidade urbana', true)).toBeNull();
+    expect(duplaSugerida('', true)).toBeNull();
   });
 });
