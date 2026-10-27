@@ -74,7 +74,11 @@ reduced-motion sempre. Ver [[decisoes-prepenem]] para a decisão registrada.
 
 **Global desde 21/10/2026:** `<MotionConfig reducedMotion="user">` nos
 `Providers` desliga transform (x, y, scale) em toda `motion.*` do app e mantém
-opacity. Tela nova não precisa de `useReducedMotion` só para entrada. O flip
+opacity. Tela nova não precisa de `useReducedMotion` só para entrada.
+**Mas troca de tela com `AnimatePresence mode="wait"` precisa:** como a opacity
+continua, o antigo some antes de o novo entrar e a tela fica em branco por um
+instante (e em aba de fundo a espera trava). Com `useReducedMotion()`, renderize
+sem `AnimatePresence` (Treino por partes, 27/10/2026: medido, troca em 16 ms). O flip
 fica de fora com `<MotionConfig reducedMotion="never">` em volta dele
 (`app/flashcards/[deckId]/page.tsx`, `components/simulado/aquecimento-flashcards.tsx`):
 flip novo precisa do mesmo invólucro, senão ele some sob reduced-motion.

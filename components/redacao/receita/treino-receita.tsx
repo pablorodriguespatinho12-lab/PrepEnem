@@ -4,7 +4,7 @@
 // rascunho salvo no navegador a cada mudança. Sem IA: zero gasto de cota.
 
 import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, RotateCcw } from 'lucide-react';
 import {
   AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent,
@@ -34,6 +34,7 @@ function falta(r: Rascunho): string | null {
 export function TreinoReceita() {
   const [r, setR] = useState<Rascunho>(rascunhoVazio);
   const [carregado, setCarregado] = useState(false);
+  const reduzirMovimento = useReducedMotion();
 
   /* Lê depois de montar: no servidor não há localStorage. */
   useEffect(() => {
@@ -68,6 +69,38 @@ export function TreinoReceita() {
   const chaveParagrafo = PARAGRAFO_DO_PASSO[r.passo];
   const paragrafo = PARAGRAFOS.find((p) => p.chave === chaveParagrafo);
 
+  const conteudo = (
+    <>
+      {r.passo === 1 && <PassoTema tema={r.tema} aoMudar={(tema) => mudar({ tema })} />}
+      {r.passo === 2 && <PassoCausas causaA={r.causaA} causaB={r.causaB} aoMudar={(causaA, causaB) => mudar({ causaA, causaB })} />}
+      {r.passo === 3 && <PassoTese tese={r.tese} causaA={r.causaA} causaB={r.causaB} aoMudar={(tese) => mudar({ tese })} />}
+      {paragrafo && (
+        <PassoParagrafo
+          paragrafo={paragrafo}
+          texto={r.paragrafos[paragrafo.chave]}
+          aoMudar={(t) => mudarParagrafo(paragrafo.chave, t)}
+          causaA={r.causaA}
+          causaB={r.causaB}
+          tese={r.tese}
+          elementos={r.elementos}
+          aoMarcarElemento={(e, v) => setR((atual) => ({ ...atual, elementos: { ...atual.elementos, [e]: v } }))}
+        />
+      )}
+      {r.passo === PASSO_FINAL && (
+        <PassoFinal
+          tema={r.tema}
+          redacao={montarRedacao(r.paragrafos)}
+          checklist={r.checklist}
+          aoMarcar={(i, v) => setR((atual) => {
+            const checklist = [...atual.checklist];
+            checklist[i] = v;
+            return { ...atual, checklist };
+          })}
+        />
+      )}
+    </>
+  );
+
   return (
     <div className="flex min-h-[calc(100dvh-4rem)] flex-col">
       <header className="flex items-end justify-between gap-4 mb-6">
@@ -92,43 +125,22 @@ export function TreinoReceita() {
       </header>
 
       <div className="flex-1 pb-6">
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            key={r.passo}
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -30 }}
-            transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-          >
-            {r.passo === 1 && <PassoTema tema={r.tema} aoMudar={(tema) => mudar({ tema })} />}
-            {r.passo === 2 && <PassoCausas causaA={r.causaA} causaB={r.causaB} aoMudar={(causaA, causaB) => mudar({ causaA, causaB })} />}
-            {r.passo === 3 && <PassoTese tese={r.tese} causaA={r.causaA} causaB={r.causaB} aoMudar={(tese) => mudar({ tese })} />}
-            {paragrafo && (
-              <PassoParagrafo
-                paragrafo={paragrafo}
-                texto={r.paragrafos[paragrafo.chave]}
-                aoMudar={(t) => mudarParagrafo(paragrafo.chave, t)}
-                causaA={r.causaA}
-                causaB={r.causaB}
-                tese={r.tese}
-                elementos={r.elementos}
-                aoMarcarElemento={(e, v) => setR((atual) => ({ ...atual, elementos: { ...atual.elementos, [e]: v } }))}
-              />
-            )}
-            {r.passo === PASSO_FINAL && (
-              <PassoFinal
-                tema={r.tema}
-                redacao={montarRedacao(r.paragrafos)}
-                checklist={r.checklist}
-                aoMarcar={(i, v) => setR((atual) => {
-                  const checklist = [...atual.checklist];
-                  checklist[i] = v;
-                  return { ...atual, checklist };
-                })}
-              />
-            )}
-          </motion.div>
-        </AnimatePresence>
+        {/* Com movimento reduzido, troca na hora: sem AnimatePresence. O mode
+            "wait" esperava o passo antigo sumir (opacity) e a tela ficava em
+            branco por um instante; em aba de fundo a espera travava. */}
+        {reduzirMovimento ? <div key={r.passo}>{conteudo}</div> : (
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={r.passo}
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -30 }}
+              transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+            >
+              {conteudo}
+            </motion.div>
+          </AnimatePresence>
+        )}
       </div>
 
       {/* Barra presa embaixo: Voltar e Próximo nunca mudam de lugar. */}
