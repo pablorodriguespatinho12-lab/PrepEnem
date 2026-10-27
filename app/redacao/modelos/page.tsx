@@ -47,9 +47,9 @@ export default function RedacaoModelosPage() {
           <section key={parte} className="surface-1 rounded-[var(--radius-surface)] p-6" aria-labelledby={`parte-${parte}`}>
             <div className="flex items-center justify-between gap-3 mb-4">
               <h3 id={`parte-${parte}`} className="font-display type-body font-semibold">{ROTULO_PARTE[parte]}</h3>
-              <Link href={`/redacao/partes?parte=${parte}&modelo=${modelo.id}`}
+              <Link href="/redacao/partes"
                 className="inline-flex items-center gap-1.5 type-meta text-primary-text font-medium hover:underline underline-offset-4">
-                <PenTool className="w-4 h-4" /> Treinar esta parte
+                <PenTool className="w-4 h-4" /> Treinar com a receita
               </Link>
             </div>
             <ModeloComentado parte={modelo.partes[parte]} />

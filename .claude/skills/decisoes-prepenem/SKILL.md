@@ -352,8 +352,15 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   `docs/redacao/fontes/`, os dois fora do git). As cartilhas NÃO dizem que as
   redações tiraram 1000: o teste compara com o nível que o comentário do INEP
   declara (`tests/redacao/niveis-inep.ts`).
-- Treino por partes usa as redações-modelo de `data/redacao/modelos.ts`
-  (textos originais, temas reais, cada trecho comentado). Não inventa
+- **Treino por partes = guia da receita de bolso (Pablo, 27/10/2026), SEM IA:**
+  tema → 2 das 5 causas coringa → tese no molde → introdução, D1, D2,
+  conclusão (molde à esquerda, caixa à direita, contador de ~70 caracteres
+  por linha) → redação montada com checklist e "Copiar redação"; a correção é
+  fora do site. Fonte única: `docs/redacao/receita-redacao.md` (dados em
+  `lib/redacao/receita.ts`). Rascunho no localStorage a cada mudança, sem
+  Neon. As rotas `/api/redacao/parts/*` ficaram sem quem chame.
+- As redações-modelo de `data/redacao/modelos.ts` (textos originais, temas
+  reais, cada trecho comentado) seguem em /redacao/modelos. Não inventa
   texto-base com IA. Repertório nos modelos: só fato verificável.
 
 ## Trilha de Cálculo
