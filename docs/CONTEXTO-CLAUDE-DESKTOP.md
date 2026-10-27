@@ -1,7 +1,7 @@
 # PrepEnem — contexto para o Claude (aba Projetos)
 
-Atualizado em 23/10/2026, lendo o repositório `~/prepenem-app` (commit `e60ebc1`).
-A versão anterior era de 05/10; desde então foram 138 commits (Cálculo, tutor, IA).
+Atualizado em 27/10/2026, lendo o repositório `~/prepenem-app` (commit `5bde373`).
+Código: https://github.com/pablorodriguespatinho12-lab/PrepEnem (privado). Hospedagem: Vercel, projeto `prepenem.app`.
 
 ## Como falar com o Pablo (ler primeiro)
 
@@ -45,19 +45,23 @@ Testes: vitest (`npm test`, 349 passando em 23/10). Não há lint.
 - **AWS não será configurada.** Upload de PDF degrada com 503 e mensagem clara.
 - Movimento só em `transform`/`opacity`; nada de `transition-all`.
 
-## Onde paramos (23/10/2026)
+## Onde paramos (27/10/2026)
 
 - 22/10: tutor com explicação em passos, explicações prontas no banco (26 geradas, 9 limpas
   na revisão automática), Gemini e Mistral como reserva do gerador.
 - 23/10: corrigido o desenho cortado no tutor em tela grande e o quadro de conta que vazava.
-  Build limpo. Commits locais ainda sem push (o Pablo faz o push).
+  Build limpo. Também: 11 arquivos sem uso apagados, guia e skills limpos do que estava velho,
+  enunciado do "porquê" das questões reescrito e explicações sem emoji. Tudo já foi para o ar.
+- **Em andamento (não commitado):** correção no fim do simulado (`components/simulado/correcao-dos-erros.tsx`):
+  uma questão errada por vez, com a explicação em passos ao lado, logo que a prova termina.
+  Antes o resultado só mandava para o Caderno de Erros.
 
 ## O que falta, por prioridade
 
 1. **Gerar e revisar as explicações prontas que faltam:** 26 de 772 questões têm uma; só 9
    passaram limpas na revisão automática.
 2. **Arquivos grandes demais** (teto 800 linhas): `app/treino/page.tsx` 1.158,
-   `app/flashcards/[deckId]/page.tsx` 885, `app/simulado/page.tsx` 859, `app/design-system/page.tsx` 804.
+   `app/flashcards/[deckId]/page.tsx` 885, `app/simulado/page.tsx` 865, `app/design-system/page.tsx` 804.
 3. **Sem lint.** O logica-app tem `npm run verificar` (contraste, CSS que anima layout): portar.
 
 Resolvido em 23/10: o `.env` que vazou em `public/prepenem_codigo.tar.gz` não vale mais (senha do
