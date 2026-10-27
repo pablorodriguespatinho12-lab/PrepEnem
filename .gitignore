@@ -19,3 +19,6 @@ questoes-prepenem.json
 # cópias de segurança de scripts que escrevem no Neon (scripts/corrigir-*.ts)
 /backups
 *.tar.gz
+
+# Redações da cartilha do INEP para o golden set (texto do INEP não vai pro git)
+tests/redacao/textos/

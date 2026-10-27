@@ -339,6 +339,14 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   saem inteiras das regras da grade do INEP (`lib/redacao/grade.ts`); C3 e C4
   usam o nível da IA com teto pela evidência e pelas travas. Régua e fontes
   em `docs/redacao-enem-correcao.md` — mude lá antes de mudar o código.
+- **Correção v3 (Pablo, 27/10/2026): nota sem trecho é inválida.** Cada
+  competência traz o trecho que a justifica e o código confere que está no
+  texto (`lib/redacao/trecho.ts`, tolera 1 letra errada em trecho de 5+
+  palavras: a IA copiou "Estima" por "Estigma"). Repertório só é produtivo com
+  cita + explica + amarra; sem amarra é "de bolso" (C2 160). "Conscientizar"
+  sem meio não é ação. Conectivo repetido trava C4 em 160. Prova:
+  `npm test` (sem IA) e `npm run test:redacao` (IA real, ~6 min por causa da
+  cota da Groq; textos da cartilha em `tests/redacao/textos/`, fora do git).
 - Treino por partes usa as redações-modelo de `data/redacao/modelos.ts`
   (textos originais, temas reais, cada trecho comentado). Não inventa
   texto-base com IA. Repertório nos modelos: só fato verificável.

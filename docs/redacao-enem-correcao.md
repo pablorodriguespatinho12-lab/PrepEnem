@@ -76,6 +76,23 @@ predominância de língua estrangeira; ilegível. O título é opcional.
 - **Desenvolvimento:** operador entre parágrafos + tópico frasal que retoma um eixo → repertório que sustenta → análise de causa/consequência no Brasil → fecho ("Dessa forma...").
 - **Conclusão:** retomada com "Portanto" → proposta completa respondendo às causas → volta ao repertório da introdução.
 
+## Regras do corretor v3 (27/10/2026, pedido do Pablo)
+- **Nota sem trecho é inválida.** Cada competência devolve o trecho da redação
+  que justifica o nível; o código confere que o trecho existe no texto (sem
+  diferença de caixa, acento, pontuação). Faltou em alguma: a correção inteira
+  é recusada e a IA tenta de novo. Trecho de repertório ou de elemento da
+  proposta que não está no texto conta como ausente.
+- **Repertório só é produtivo com os 3 passos** (cita, explica, amarra ao tema
+  com fato brasileiro). Legitimado, citado, sem "amarra" = **repertório de
+  bolso** (termo das cartilhas 2025 e 2026): improdutivo, C2 para em 160.
+  Quem decide "produtivo" é o código, pelos trechos, não o booleano da IA.
+- **C5:** ação com "conscientizar", "sensibilizar" ou "alertar" sem meio
+  válido é ação nula.
+- **C4:** o código conta conectivos. O mesmo conectivo 3 vezes ou mais, ou
+  abrindo 2 parágrafos, trava a C4 em 160 ("repetições raras" é exigência do 200).
+- **Prompt sem "seja rigoroso":** a IA recebe o descritor de cada nível
+  (200/160/120/80/40) e devolve qual descritor escolheu e o trecho.
+
 ## Correção na prática
 Dois corretores independentes; discrepância acima de 100 no total ou 80 numa
 competência chama um terceiro. O feedback do PrepEnem segue a ordem dos
