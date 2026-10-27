@@ -35,7 +35,7 @@ Testes: vitest (`npm test`, 349 passando em 23/10). Não há lint.
   Ordem: A pergunta → O que acontece → Jeito rápido (quadro) → Por que funciona → A resposta → Sua vez.
   Desenho ao lado só quando o cartão tem 700 px ou mais; senão, embaixo.
   Explicações prontas ficam no banco (`ExplicacaoPronta`), geradas e revisadas antes.
-- **Gerador de explicações prontas:** Groq primeiro; se falhar, Gemini (gratuito); depois Mistral.
+- **Gerador de explicações prontas:** Groq primeiro; se falhar, Mistral (se tiver chave), depois os modelos menores da Groq. O Gemini não é reserva de nada: o gratuito dá 20 pedidos por dia e fica só para a correção de redação (27/10/2026).
 - **Flashcard:** um fato por card, resposta mínima. Deck de livro: por capítulo, resumo + frase para pregar.
 - **Número se escolhe com botões**, nunca com controle deslizante.
 - **Dado esparso:** `<5` questões não mostra %; `5–15` mostra com alerta; `15+` limpo. O *n* sempre visível.
