@@ -2,7 +2,8 @@
 // doenças mentais, com as causas 4 + 1 da tabela da receita (estigma e
 // omissão do Estado). Escrito à mão, frase por frase no molde de
 // PARAGRAFOS e com a ponte em 3 passos; sem IA e sem Neon. Só fato
-// verificável (as ideias dos autores são as de lib/redacao/autores.ts).
+// verificável (as ideias dos autores são as de lib/redacao/autores.ts; os
+// 60 mil mortos de Barbacena são de Daniela Arbex, Holocausto Brasileiro, 2013).
 // É exemplo de ESTRUTURA: a tela avisa para não copiar.
 
 import type { ChaveCausa, ChaveParagrafo } from './receita';
@@ -12,7 +13,7 @@ export const EXEMPLO_ANO = 2020;
 export const EXEMPLO_CAUSAS: [ChaveCausa, ChaveCausa] = ['estigma', 'estado'];
 
 export const EXEMPLO_TESE =
-  'O estigma associado às doenças mentais na sociedade brasileira decorre, sobretudo, da invisibilidade social imposta a quem tem transtorno mental e da negligência estatal na garantia de direitos já previstos em lei.';
+  'O estigma associado às doenças mentais na sociedade brasileira decorre, sobretudo, da invisibilidade social desses pacientes e da negligência estatal na garantia de direitos já previstos em lei.';
 
 export interface PassoDaPonte {
   passo: 'Cita' | 'Explica' | 'Amarra';
@@ -27,15 +28,15 @@ export interface ExemploParagrafo {
 export const EXEMPLO_PARAGRAFOS: Record<ChaveParagrafo, ExemploParagrafo> = {
   introducao: {
     frases: [
-      'Segundo Michel Foucault, em História da Loucura (1961), a sociedade ocidental aprendeu a isolar quem foge da norma, em vez de acolher essas pessoas.',
-      'Essa reflexão se aplica ao Brasil contemporâneo, onde o estigma associado às doenças mentais ainda persiste.',
+      'Segundo Michel Foucault, em História da Loucura (1961), a sociedade aprendeu a isolar quem foge da norma.',
+      'Essa reflexão se aplica ao Brasil contemporâneo, onde o preconceito contra quem tem transtorno mental persiste: só no Hospital Colônia de Barbacena (MG), cerca de 60 mil internos morreram.',
       /* A 3ª frase é a tese do passo 3, igual: começa pelas palavras do tema. */
       EXEMPLO_TESE,
     ],
     ponte: [
       { passo: 'Cita', trecho: 'Michel Foucault, em História da Loucura (1961)' },
       { passo: 'Explica', trecho: 'a sociedade aprendeu a isolar quem foge da norma' },
-      { passo: 'Amarra', trecho: 'no Brasil de hoje, o estigma das doenças mentais persiste' },
+      { passo: 'Amarra', trecho: 'só no Hospital Colônia de Barbacena (MG), cerca de 60 mil internos morreram' },
     ],
   },
   desenvolvimento1: {
