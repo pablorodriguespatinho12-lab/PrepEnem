@@ -14,6 +14,7 @@ import dynamic from 'next/dynamic';
 import { PaginaDaProva } from '@/components/pagina-da-prova';
 import { PainelProvaRapida, MISTURA_PROVA_RAPIDA } from '@/components/simulado/painel-prova-rapida';
 import { ContagemRegressiva } from '@/components/simulado/contagem-regressiva';
+import { CorrecaoDosErros } from '@/components/simulado/correcao-dos-erros';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 
@@ -728,8 +729,8 @@ export default function SimuladoPage() {
     const porMateriaEntries = Object.entries(results.porMateria ?? {}) as [string, any][];
 
     return (
-      <div className="p-4 md:p-8 max-w-4xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} onAnimationComplete={() => { if (results.taxaAcerto >= 60) fireConfetti(); }}>
+      <div className="p-4 md:p-8 max-w-6xl mx-auto">
+        <motion.div className="max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} onAnimationComplete={() => { if (results.taxaAcerto >= 60) fireConfetti(); }}>
           {/* Score Header */}
           <div className="surface-1 rounded-[var(--radius-surface)] p-6 md:p-8 mb-6 text-center">
             <motion.div initial={{ scale: 0 }} animate={{ scale: [0, 1.3, 1] }} transition={{ delay: 0.2, duration: 0.5 }}>
@@ -765,7 +766,12 @@ export default function SimuladoPage() {
               </div>
             </div>
           </div>
+        </motion.div>
 
+        {/* As que errou, uma por vez, com a explicação em passos já aberta. */}
+        <CorrecaoDosErros questoes={questions} respostas={answers} />
+
+        <div className="max-w-4xl mx-auto">
           {/* Per Materia Breakdown */}
           <div className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6">
             <h2 className="font-display type-title font-semibold mb-4 flex items-center gap-2">
@@ -850,7 +856,7 @@ export default function SimuladoPage() {
               Voltar ao Início
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     );
   }
