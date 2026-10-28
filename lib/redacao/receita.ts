@@ -198,9 +198,10 @@ export const PARAGRAFOS: Paragrafo[] = [
     chave: 'conclusao', titulo: 'Conclusão', linhasMin: 6, linhasMax: 7,
     frases: [
       { funcao: 'Retoma o problema', molde: 'Portanto, é preciso enfrentar [causa A] e [causa B].' },
-      { funcao: 'Proposta 1 contra causa A, 5 elementos', molde: 'Para isso, o [agente] deve [ação], por meio de [meio], a fim de [finalidade].' },
-      /* A tabela da receita diz "Proposta 2 contra causa B (opcional)"; o esqueleto, "[Detalhamento]". */
-      { funcao: 'Detalhamento, ou proposta 2 contra causa B (opcional)', molde: '[Detalhamento: como funciona, para quem, com quem.]' },
+      { funcao: 'Proposta 1 contra causa A, 5 elementos', molde: 'Para isso, o [agente] deve [ação contra a causa A], por meio de [meio], com [detalhamento], a fim de [finalidade].' },
+      /* Regra 3 da receita: a proposta resolve as causas discutidas, as 2
+         (Pablo, 28/10/2026). O detalhamento vai dentro de cada proposta. */
+      { funcao: 'Proposta 2 contra causa B, 5 elementos', molde: 'Já o [agente] deve [ação contra a causa B], por meio de [meio], com [detalhamento], a fim de [finalidade].' },
       { funcao: 'Frase final que retoma a abertura', molde: 'Dessa forma, [retoma a ideia do repertório da introdução].' },
     ],
   },

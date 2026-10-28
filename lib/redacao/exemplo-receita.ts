@@ -14,8 +14,12 @@
 // - Lei 10.216, de 6 de abril de 2001 (Reforma Psiquiátrica), art. 2º,
 //   parágrafo único, IX: tratamento "preferencialmente, em serviços
 //   comunitários de saúde mental". planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm
-// - Centros de Atenção Psicossocial (CAPS) e Rede de Atenção Psicossocial:
-//   Portaria GM/MS 3.088/2011, Ministério da Saúde.
+// - CAPS I (o menor CAPS) indicado para municípios com mais de 20 mil
+//   habitantes: Portaria GM/MS 3.088/2011, art. 7º, § 4º, I
+//   (bvsms.saude.gov.br/bvs/saudelegis/gm/2011/prt3088_23_12_2011_rep.html);
+//   a regra atual fala em 15 mil. Os dois limites ficam acima de 10 mil.
+// - 2.495 dos 5.570 municípios (44,8%) têm até 10 mil habitantes: IBGE,
+//   Censo 2022 (noticiado pela Band, 28/06/2023).
 // - Michel Foucault, História da Loucura (1961); Erving Goffman, Estigma
 //   (1963): as ideias são as de lib/redacao/autores.ts.
 
@@ -74,9 +78,9 @@ export const REDACAO_GRIFADA: Record<ChaveParagrafo, Frase[]> = {
       { texto: '.' },
     ],
     [
-      { texto: 'Essa reflexão se aplica ao Brasil contemporâneo, onde o estigma associado às doenças mentais ainda persiste', funcao: 'ponte', nota: 'Isso é a ponte (passo 3, amarra): liga o autor ao Brasil de hoje, com as palavras do tema.' },
+      { texto: 'Essa reflexão se aplica ao Brasil contemporâneo, onde o estigma associado às doenças mentais tem raízes antigas', funcao: 'ponte', nota: 'Isso é a ponte (passo 3, amarra): liga o autor ao Brasil de hoje, com as palavras do tema.' },
       { texto: ': ' },
-      { texto: 'no Hospital Colônia de Barbacena (MG), cerca de 60 mil internos morreram no século XX', funcao: 'explicacao', fato: true, nota: 'Fato histórico com fonte (Daniela Arbex, Holocausto Brasileiro, 2013): prova que o problema é antigo.' },
+      { texto: 'no Hospital Colônia de Barbacena (MG), cerca de 60 mil internos morreram ao longo do século XX', funcao: 'explicacao', fato: true, nota: 'Fato histórico com fonte (Daniela Arbex, Holocausto Brasileiro, 2013): prova que o problema é antigo.' },
       { texto: '.' },
     ],
     [
@@ -115,7 +119,7 @@ export const REDACAO_GRIFADA: Record<ChaveParagrafo, Frase[]> = {
     ],
     [
       { texto: 'Na realidade brasileira, porém, ' },
-      { texto: 'muitas cidades pequenas ainda não têm um Centro de Atenção Psicossocial (CAPS)', funcao: 'explicacao', nota: 'Ponte, passo 3 (amarra): a lei existe, mas o serviço não chega a todos.' },
+      { texto: '44,8% dos municípios têm até 10 mil habitantes, porte menor que o indicado pelo Ministério da Saúde para abrir um CAPS', funcao: 'explicacao', fato: true, nota: 'Dado com fonte (IBGE, Censo 2022; Portaria 3.088/2011): a lei existe, mas o serviço não chega às cidades pequenas.' },
       { texto: ', o que agrava o estigma.' },
     ],
     [
@@ -124,24 +128,37 @@ export const REDACAO_GRIFADA: Record<ChaveParagrafo, Frase[]> = {
   ],
   conclusao: [
     [
-      { texto: 'Portanto, é preciso enfrentar o preconceito contra quem tem transtorno mental e a omissão do Estado.', funcao: 'fechamento', nota: 'Retoma o problema e os 2 motivos, na mesma ordem.' },
+      { texto: 'Portanto, é preciso enfrentar o preconceito e a omissão do Estado.', funcao: 'fechamento', nota: 'Retoma o problema e os 2 motivos, na mesma ordem.' },
     ],
+    /* Uma proposta contra cada motivo (regra 3 da receita), cada uma com os 5 elementos. */
     [
       { texto: 'Para isso, ' },
-      { texto: 'o Ministério da Saúde', funcao: 'agente' },
+      { texto: 'o Ministério da Saúde', funcao: 'agente', nota: 'Proposta 1 (contra o preconceito), agente: quem faz.' },
       { texto: ' ' },
-      { texto: 'deve criar campanhas permanentes contra o estigma', funcao: 'acao' },
+      { texto: 'deve criar campanhas contra o estigma', funcao: 'acao' },
       { texto: ', ' },
-      { texto: 'por meio de anúncios em redes sociais e nas UBS', funcao: 'meio' },
+      { texto: 'por meio das redes sociais e das UBS', funcao: 'meio' },
       { texto: ', ' },
-      { texto: 'a fim de que pessoas em sofrimento busquem tratamento sem vergonha', funcao: 'finalidade' },
+      { texto: 'com relatos de pacientes', funcao: 'detalhamento' },
+      { texto: ', ' },
+      { texto: 'a fim de que quem sofre busque ajuda sem vergonha', funcao: 'finalidade' },
       { texto: '.' },
     ],
     [
-      { texto: 'As campanhas devem trazer depoimentos de pacientes atendidos nos CAPS.', funcao: 'detalhamento' },
+      { texto: 'Já ' },
+      { texto: 'o governo federal', funcao: 'agente', nota: 'Proposta 2 (contra a omissão do Estado), agente: quem faz.' },
+      { texto: ' ' },
+      { texto: 'deve ampliar os CAPS', funcao: 'acao' },
+      { texto: ', ' },
+      { texto: 'por meio de verba vinculada', funcao: 'meio' },
+      { texto: ', ' },
+      { texto: 'com centros regionais para cidades vizinhas', funcao: 'detalhamento' },
+      { texto: ', ' },
+      { texto: 'a fim de levar tratamento ao interior', funcao: 'finalidade' },
+      { texto: '.' },
     ],
     [
-      { texto: 'Dessa forma, o país deixará de isolar quem foge da norma, como criticou Foucault, e não repetirá Barbacena.', funcao: 'fechamento', fato: true, nota: 'Frase final: volta ao autor da introdução e ao fato de Barbacena.' },
+      { texto: 'Dessa forma, o país não repetirá o isolamento criticado por Foucault.', funcao: 'fechamento', nota: 'Frase final: volta ao autor da introdução.' },
     ],
   ],
 };
@@ -167,7 +184,7 @@ export const EXEMPLO_PARAGRAFOS: Record<ChaveParagrafo, ExemploParagrafo> = {
     ponte: [
       { passo: 'Cita', trecho: 'Michel Foucault, em História da Loucura (1961)' },
       { passo: 'Explica', trecho: 'a sociedade aprendeu a isolar quem foge da norma' },
-      { passo: 'Amarra', trecho: 'em Barbacena (MG), cerca de 60 mil internos morreram no século XX' },
+      { passo: 'Amarra', trecho: 'em Barbacena (MG), cerca de 60 mil internos morreram ao longo do século XX' },
     ],
   },
   desenvolvimento1: {
@@ -183,7 +200,7 @@ export const EXEMPLO_PARAGRAFOS: Record<ChaveParagrafo, ExemploParagrafo> = {
     ponte: [
       { passo: 'Cita', trecho: 'Lei 10.216, de 2001 (Reforma Psiquiátrica)' },
       { passo: 'Explica', trecho: 'tratar em serviços perto de casa, não isolar' },
-      { passo: 'Amarra', trecho: 'muitas cidades pequenas não têm CAPS' },
+      { passo: 'Amarra', trecho: '44,8% dos municípios têm até 10 mil habitantes, menos que o mínimo para um CAPS' },
     ],
   },
   conclusao: { frases: frasesDe('conclusao') },

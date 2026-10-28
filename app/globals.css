@@ -166,6 +166,24 @@
     --chart-3: 12 70% 48%;
     --chart-4: 197 37% 24%;
     --chart-5: 43 74% 44%;
+    /* Grifo da redação explicada: matiz e saturação por função, FIXOS (não
+       seguem o tema do aluno: no Índigo, chart-1 e chart-4 viravam o mesmo
+       azul). Vizinhas no texto ficam a 40° ou mais de distância. A luz do
+       fundo vem por tema em --grifo-luz / --grifo-luz-ativa. */
+    --grifo-repertorio:   215 85%;
+    --grifo-ponte:        168 70%;
+    --grifo-tese:          45 95%;
+    --grifo-topico:       335 80%;
+    --grifo-explicacao:    95 65%;
+    --grifo-fechamento:   210 12%;
+    --grifo-agente:        25 95%;
+    --grifo-acao:         192 85%;
+    --grifo-meio:         135 60%;
+    --grifo-finalidade:    80 75%;
+    --grifo-detalhamento: 250 70%;
+    --grifo-luz: 87%;
+    --grifo-luz-ativa: 78%;
+    --grifo-luz-traco: 36%;
 
     /* Tratamento do scan de prova P&B — ver .exam-scan mais abaixo. */
     --scan-mat: 40 22% 96%;      /* papel, levemente quente */
@@ -235,6 +253,9 @@
     --chart-3: 30 78% 62%;
     --chart-4: 208 60% 62%;
     --chart-5: 45 70% 60%;
+    --grifo-luz: 26%;
+    --grifo-luz-ativa: 18%;
+    --grifo-luz-traco: 68%;
 
     /* Scan P&B no escuro: o papel não pode ser branco puro — vira retângulo
        cegante. Reduz-se a luminância do container E da própria imagem, com

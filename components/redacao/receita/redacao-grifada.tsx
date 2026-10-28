@@ -1,11 +1,11 @@
 'use client';
 // "Ver uma redação pronta, explicada" (Pablo, 28/10/2026): a redação inteira
-// do tema de 2020, cada trecho grifado pela FUNÇÃO. O grifo não depende só da
-// cor (daltonismo): cada trecho tem o rótulo curto em cima e um traço
-// diferente embaixo (contínuo, tracejado, pontilhado, duplo). Tocar num
-// trecho mostra 1 linha do que ele faz. Os dados são a lista de trechos de
-// lib/redacao/exemplo-receita.ts, não uma string com índices.
-
+// do tema de 2020, cada trecho grifado pela FUNÇÃO. Cada função tem cor
+// própria (--grifo-* em app/globals.css, fixa, não segue o tema do aluno) e um
+// sublinhado diferente (contínuo, tracejado, pontilhado, duplo, ondulado),
+// para não depender só da cor. O texto lê corrido: o nome da função aparece
+// só ao tocar, na linha presa embaixo (o trecho ganha contorno). Os dados
+// são a lista de trechos de lib/redacao/exemplo-receita.ts.
 import { useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { BookOpenText, X } from 'lucide-react';
@@ -15,34 +15,39 @@ import {
   type FuncaoTrecho, type Trecho,
 } from '@/lib/redacao/exemplo-receita';
 
-type Grifo = { cor: string; traco: 'solid' | 'dashed' | 'dotted' | 'double' };
-/* Grupo de cor + traço. As 5 partes da proposta dividem a cor e se separam
-   pelo rótulo, que é o que o aluno precisa ler um a um. */
+type Grifo = { cor: string; traco: 'solid' | 'dashed' | 'dotted' | 'double' | 'wavy' };
+/* Cor + sublinhado por função. Os 5 elementos da proposta têm cor e
+   sublinhado próprios: o aluno precisa achar cada um. */
 const GRIFO: Record<FuncaoTrecho, Grifo> = {
-  repertorio: { cor: '--chart-1', traco: 'solid' },
-  ponte: { cor: '--chart-2', traco: 'dashed' },
-  tese: { cor: '--chart-5', traco: 'double' },
-  topico: { cor: '--chart-4', traco: 'solid' },
-  explicacao: { cor: '--chart-3', traco: 'dotted' },
-  fechamento: { cor: '--muted-foreground', traco: 'dashed' },
-  agente: { cor: '--chart-5', traco: 'solid' },
-  acao: { cor: '--chart-5', traco: 'solid' },
-  meio: { cor: '--chart-5', traco: 'solid' },
-  finalidade: { cor: '--chart-5', traco: 'solid' },
-  detalhamento: { cor: '--chart-5', traco: 'solid' },
+  repertorio: { cor: '--grifo-repertorio', traco: 'solid' },
+  ponte: { cor: '--grifo-ponte', traco: 'dashed' },
+  tese: { cor: '--grifo-tese', traco: 'double' },
+  topico: { cor: '--grifo-topico', traco: 'wavy' },
+  explicacao: { cor: '--grifo-explicacao', traco: 'dotted' },
+  fechamento: { cor: '--grifo-fechamento', traco: 'solid' },
+  agente: { cor: '--grifo-agente', traco: 'solid' },
+  acao: { cor: '--grifo-acao', traco: 'dashed' },
+  meio: { cor: '--grifo-meio', traco: 'dotted' },
+  finalidade: { cor: '--grifo-finalidade', traco: 'double' },
+  detalhamento: { cor: '--grifo-detalhamento', traco: 'wavy' },
 };
 const estiloGrifo = (f: FuncaoTrecho, ativo: boolean): React.CSSProperties => {
   const g = GRIFO[f];
   return {
-    backgroundColor: `hsl(var(${g.cor}) / ${ativo ? 0.32 : 0.14})`,
-    borderBottom: `${g.traco === 'double' ? 4 : 2}px ${g.traco} hsl(var(${g.cor}))`,
+    backgroundColor: `hsl(var(${g.cor}) var(${ativo ? '--grifo-luz-ativa' : '--grifo-luz'}))`,
+    textDecorationLine: 'underline',
+    textDecorationStyle: g.traco,
+    textDecorationColor: `hsl(var(${g.cor}) var(--grifo-luz-traco))`,
+    textDecorationThickness: '2px',
+    textUnderlineOffset: '5px',
+    /* Tocado: contorno na cor da função (a etiqueta acima cobria a linha de
+       cima no celular; o nome vai na barra de baixo). */
+    outline: ativo ? `2px solid hsl(var(${g.cor}) var(--grifo-luz-traco))` : undefined,
     boxDecorationBreak: 'clone',
     WebkitBoxDecorationBreak: 'clone',
   };
 };
-
-const rotuloDoTrecho = (t: Trecho) => `${funcaoInfo(t.funcao!).rotulo}${t.fato ? ' · fato histórico' : ''}`;
-
+const rotuloDoTrecho = (t: Trecho) => `${funcaoInfo(t.funcao!).rotulo}${t.fato ? ' · com fonte' : ''}`;
 export function BotaoRedacaoPronta({ destaque = false }: { destaque?: boolean }) {
   return (
     <Dialog.Root>
@@ -117,10 +122,10 @@ function RedacaoGrifada() {
                             setEscolhido(ativo ? null : id);
                           }}
                           aria-pressed={ativo}
-                          className="cursor-pointer rounded-[var(--radius-data)] px-0.5 t-colors"
+                          aria-label={`${rotuloDoTrecho(t)}: ${t.texto}`}
+                          className="relative cursor-pointer rounded-[var(--radius-data)] px-0.5 t-colors"
                           style={estiloGrifo(t.funcao, ativo)}
                         >
-                          <span className="type-rotulo text-foreground mr-1 align-[0.15em] font-sans whitespace-nowrap">{rotuloDoTrecho(t)}</span>
                           {t.texto}
                         </span>
                       );
@@ -151,7 +156,7 @@ function Legenda() {
   const proposta = FUNCOES.filter((f) => f.proposta);
   const item = (f: (typeof FUNCOES)[number]) => (
     <li key={f.chave} className="flex items-center gap-2 type-meta">
-      <span className="inline-block h-4 w-6 flex-shrink-0 rounded-[var(--radius-data)]" style={estiloGrifo(f.chave, false)} aria-hidden />
+      <span className="flex-shrink-0 rounded-[var(--radius-data)] px-1 font-reading type-meta" style={estiloGrifo(f.chave, false)} aria-hidden>texto</span>
       {f.rotulo}
     </li>
   );

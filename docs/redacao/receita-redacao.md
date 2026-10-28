@@ -15,7 +15,7 @@ Repertório que serve para qualquer tema é "repertório de bolso": referência 
 | Introdução | 6-7 | Repertório que abre o assunto | Ponte: liga o repertório ao Brasil de hoje, com as palavras do tema | Tese: opinião + causa A + causa B | |
 | Desenvolvimento 1 | 7-8 | Tópico frasal: causa A | Repertório do eixo | Explicação: o que o repertório prova sobre a causa A | Fechamento: volta à tese |
 | Desenvolvimento 2 | 7-8 | Tópico frasal: causa B | Repertório de outro autor/área | Explicação com exemplo brasileiro ou dado | Fechamento: volta à tese |
-| Conclusão | 6-7 | Retoma o problema | Proposta 1 contra causa A, 5 elementos | Proposta 2 contra causa B (opcional) | Frase final que retoma a abertura |
+| Conclusão | 6-7 | Retoma o problema | Proposta 1 contra causa A, 5 elementos | Proposta 2 contra causa B, 5 elementos | Frase final que retoma a abertura |
 
 Três regras:
 1. Palavras-chave do tema na introdução, na tese e no início de cada desenvolvimento (protege contra tangenciamento).
@@ -43,8 +43,8 @@ Desenvolvimento 2
 
 Conclusão
 - Portanto, é preciso enfrentar [causa A] e [causa B].
-- Para isso, o [agente] deve [ação], por meio de [meio], a fim de [finalidade].
-- [Detalhamento: como funciona, para quem, com quem.]
+- Para isso, o [agente] deve [ação contra a causa A], por meio de [meio], com [detalhamento], a fim de [finalidade].
+- Já o [agente] deve [ação contra a causa B], por meio de [meio], com [detalhamento], a fim de [finalidade].
 - Dessa forma, [retoma a ideia do repertório da introdução].
 
 Conectivos para variar (C4): Em primeiro lugar / Além disso / Nesse sentido / Sob essa ótica / Diante disso / Portanto / Dessa forma.
