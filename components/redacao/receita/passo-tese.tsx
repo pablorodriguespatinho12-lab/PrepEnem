@@ -8,12 +8,14 @@ import { EXEMPLO_TESE } from '@/lib/redacao/exemplo-receita';
 import { CabecalhoPasso, CaixaTexto } from './pecas';
 import { VerExemplo } from './autores';
 
-export function PassoTese({ tese, tema, causaA, causaB, aoMudar }: {
+export function PassoTese({ tese, tema, causaA, causaB, aoMudar, desatualizada, aoAtualizar }: {
   tese: string;
   tema: string;
   causaA: ChaveCausa | null;
   causaB: ChaveCausa | null;
   aoMudar: (t: string) => void;
+  desatualizada: boolean;
+  aoAtualizar: () => void;
 }) {
   const molde = moldeTese(causaA, causaB, tema);
   const semPalavraDoTema = !teseTemPalavraDoTema(tese, tema);
@@ -27,6 +29,12 @@ export function PassoTese({ tese, tema, causaA, causaB, aoMudar }: {
           Motivo 1: {causaPorChave(causaA)?.nome ?? 'não escolhido'} → D1 · Motivo 2: {causaPorChave(causaB)?.nome ?? 'não escolhido'} → D2
         </p>
       </div>
+      {desatualizada && (
+        <p className="mb-3 type-meta" role="status">
+          Seus motivos mudaram. Atualizar a tese?{' '}
+          <button type="button" onClick={aoAtualizar} className="font-semibold text-primary-text underline underline-offset-2">Atualizar a tese</button>
+        </p>
+      )}
       <CaixaTexto id="tese" rotulo="Sua tese" valor={tese} aoMudar={aoMudar} placeholder={molde} />
       {semPalavraDoTema && (
         <p className="type-meta font-medium mt-2" role="status">Sua tese não tem nenhuma palavra do tema. Use as palavras do tema.</p>

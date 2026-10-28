@@ -139,9 +139,12 @@ describe('autores: cada nome das causas abre obra, ano e ideia', () => {
   });
 });
 describe('tema nos moldes e na tese', () => {
-  test('a tese começa com as palavras do tema', () => {
-    expect(moldeTese('estigma', 'estado', EXEMPLO_TEMA)).toBe(
-      'O estigma associado às doenças mentais na sociedade brasileira decorre, sobretudo, do estigma social que torna esse grupo invisível e da negligência estatal na garantia de direitos já previstos em lei.',
+  test('tema da receita: a tese abre com a forma curta (o tema inteiro já veio na ponte)', () => {
+    expect(moldeTese('estigma', 'estado', EXEMPLO_TEMA)).toBe(EXEMPLO_TESE);
+  });
+  test('tema livre: a tese começa com as palavras do tema', () => {
+    expect(moldeTese('estigma', 'estado', 'A obesidade infantil no Brasil')).toBe(
+      'A obesidade infantil no Brasil decorre, sobretudo, do estigma social que torna esse grupo invisível e da negligência estatal na garantia de direitos já previstos em lei.',
     );
   });
   test('começo que não é problema vira problema; depois de ":" sai', () => {
@@ -194,9 +197,9 @@ describe('exemplo do tema de 2020 (estigma + omissão do Estado)', () => {
   });
   test('tese e desenvolvimentos têm palavra do tema; a tese é a 3ª frase da introdução', () => {
     expect(teseTemPalavraDoTema(EXEMPLO_TESE, EXEMPLO_TEMA)).toBe(true);
-    expect(EXEMPLO_PARAGRAFOS.introducao.frases[2].startsWith(EXEMPLO_TEMA)).toBe(true);
-    expect(EXEMPLO_PARAGRAFOS.desenvolvimento1.frases[0]).toContain('doenças mentais');
-    expect(EXEMPLO_PARAGRAFOS.desenvolvimento2.frases[0]).toContain('doenças mentais');
+    expect(EXEMPLO_PARAGRAFOS.introducao.frases[2]).toBe(EXEMPLO_TESE);
+    expect(teseTemPalavraDoTema(EXEMPLO_PARAGRAFOS.desenvolvimento1.frases[0], EXEMPLO_TEMA)).toBe(true);
+    expect(teseTemPalavraDoTema(EXEMPLO_PARAGRAFOS.desenvolvimento2.frases[0], EXEMPLO_TEMA)).toBe(true);
   });
   test('zero emoji no exemplo', () => {
     const tudo = [EXEMPLO_TESE, ...Object.values(EXEMPLO_PARAGRAFOS).flatMap((p) => p.frases)].join(' ');

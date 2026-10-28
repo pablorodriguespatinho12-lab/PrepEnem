@@ -6,9 +6,10 @@
 // tem "Ver exemplo" com o parágrafo do tema de 2020.
 
 import {
-  causaPorChave, CONECTIVOS, ELEMENTOS, ERROS_PROPOSTA, moldeTese, PONTE, PONTE_AVISO, preencherProblema,
+  causaPorChave, CONECTIVOS, ELEMENTOS, ERROS_PROPOSTA, introducaoComTese, moldeDaFrase, PONTE, PONTE_AVISO,
   type ChaveCausa, type ChaveElemento, type Paragrafo,
 } from '@/lib/redacao/receita';
+import { AvisoMotivo } from './passo-causas';
 import { EXEMPLO_PARAGRAFOS } from '@/lib/redacao/exemplo-receita';
 import { CabecalhoPasso, CaixaTexto, ContadorLinhas, Marcavel } from './pecas';
 import { ListaAutores, VerExemplo } from './autores';
@@ -23,15 +24,7 @@ interface Props {
   tese: string;
   elementos: Record<ChaveElemento, boolean>;
   aoMarcarElemento: (e: ChaveElemento, v: boolean) => void;
-}
-
-/* Troca [causa A]/[causa B] do molde pelo nome da causa escolhida e
-   [problema] pelo problema do tema. */
-function preencher(molde: string, causaA: ChaveCausa | null, causaB: ChaveCausa | null, tema: string): string {
-  const a = causaPorChave(causaA)?.nome.toLowerCase();
-  const b = causaPorChave(causaB)?.nome.toLowerCase();
-  const comCausas = molde.split('[causa A]').join(a ? `[${a}]` : '[causa A]').split('[causa B]').join(b ? `[${b}]` : '[causa B]');
-  return preencherProblema(comCausas, tema);
+  aoTrocarMotivos: () => void;
 }
 
 function Molde({ paragrafo, causaA, causaB, tese, tema }: Pick<Props, 'paragrafo' | 'causaA' | 'causaB' | 'tese' | 'tema'>) {
@@ -45,8 +38,8 @@ function Molde({ paragrafo, causaA, causaB, tese, tema }: Pick<Props, 'paragrafo
             <span data-numeric className="type-meta font-semibold text-primary-text w-5 flex-shrink-0">{i + 1}</span>
             <div className="min-w-0">
               <p className="type-caption font-semibold text-muted-foreground">{f.funcao}</p>
-              <p className="font-reading type-meta">{ehTese ? tese : naTese ? moldeTese(causaA, causaB, tema) : preencher(f.molde, causaA, causaB, tema)}</p>
-              {ehTese && <p className="type-caption text-muted-foreground">Sua tese do passo 3.</p>}
+              <p className="font-reading type-meta">{ehTese ? tese : moldeDaFrase(paragrafo.chave, i, tema, causaA, causaB)}</p>
+              {naTese && <p className="type-caption text-muted-foreground">Entra sozinha: é a sua tese do passo 3.</p>}
             </div>
           </li>
         );
@@ -132,6 +125,7 @@ function Exemplo({ paragrafo }: { paragrafo: Paragrafo }) {
 }
 export function PassoParagrafo(props: Props) {
   const { paragrafo, texto, aoMudar, causaA, causaB, tema } = props;
+  const ehIntroducao = paragrafo.chave === 'introducao';
   const causaDoParagrafo = paragrafo.chave === 'desenvolvimento1' ? causaA : paragrafo.chave === 'desenvolvimento2' ? causaB : null;
   return (
     <div>
@@ -145,8 +139,10 @@ export function PassoParagrafo(props: Props) {
           {paragrafo.chave === 'desenvolvimento1' && <p className="type-meta text-muted-foreground mt-4">Conectivos para variar: {CONECTIVOS.join(' / ')}.</p>}
         </section>
         <div>
-          <CaixaTexto id={`texto-${paragrafo.chave}`} rotulo="Seu texto" valor={texto} aoMudar={aoMudar} placeholder="Escreva aqui." alto />
-          <div className="mt-2"><ContadorLinhas texto={texto} min={paragrafo.linhasMin} max={paragrafo.linhasMax} /></div>
+          <CaixaTexto id={`texto-${paragrafo.chave}`} rotulo={ehIntroducao ? 'Seu texto: frases 1 e 2' : 'Seu texto'} valor={texto} aoMudar={aoMudar} placeholder="Escreva aqui." alto />
+          {ehIntroducao && props.tese.trim() && <p className="type-meta text-muted-foreground mt-2">A tese entra sozinha depois do seu texto.</p>}
+          <div className="mt-2"><ContadorLinhas texto={ehIntroducao ? introducaoComTese(texto, props.tese) : texto} min={paragrafo.linhasMin} max={paragrafo.linhasMax} /></div>
+          <AvisoMotivo tema={tema} causaA={causaA} causaB={causaB} aoTrocar={props.aoTrocarMotivos} />
           {paragrafo.chave === 'conclusao' && <Elementos elementos={props.elementos} aoMarcar={props.aoMarcarElemento} />}
           <VerExemplo><Exemplo paragrafo={paragrafo} /></VerExemplo>
         </div>

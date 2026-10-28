@@ -5,7 +5,8 @@
 // Os autores ficam fora do botão de escolher (botão dentro de botão não vale):
 // cada nome abre a ficha.
 
-import { CAUSAS, causaPorChave, type ChaveCausa } from '@/lib/redacao/receita';
+import { CAUSAS, causaPorChave, motivosQueCombinamPouco, type ChaveCausa } from '@/lib/redacao/receita';
+import { conteudoDoTema } from '@/lib/redacao/conteudo-temas';
 import { EXEMPLO_CAUSAS } from '@/lib/redacao/exemplo-receita';
 import { CabecalhoPasso } from './pecas';
 import { ListaAutores, VerExemplo } from './autores';
@@ -13,7 +14,8 @@ import { ListaAutores, VerExemplo } from './autores';
 const DESTAQUE = { borderColor: 'hsl(var(--primary))', backgroundColor: 'hsl(var(--primary) / 0.1)' };
 const SELO = { backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' };
 
-export function PassoCausas({ causaA, causaB, sugeridas, aoMudar }: {
+export function PassoCausas({ tema, causaA, causaB, sugeridas, aoMudar }: {
+  tema: string;
   causaA: ChaveCausa | null;
   causaB: ChaveCausa | null;
   sugeridas: ChaveCausa[];
@@ -56,6 +58,7 @@ export function PassoCausas({ causaA, causaB, sugeridas, aoMudar }: {
           );
         })}
       </ul>
+      <AvisoMotivo tema={tema} causaA={causaA} causaB={causaB} />
       <MiniMapa causaA={causaA} causaB={causaB} />
       <VerExemplo>
         <p className="type-meta"><span className="font-semibold">1º motivo:</span> {causaPorChave(EXEMPLO_CAUSAS[0])?.nome}</p>
@@ -81,5 +84,26 @@ function MiniMapa({ causaA, causaB }: { causaA: ChaveCausa | null; causaB: Chave
         ))}
       </ul>
     </section>
+  );
+}
+
+/* Avisa, não bloqueia: o aluno pode ter um bom argumento para o motivo. */
+export function AvisoMotivo({ tema, causaA, causaB, aoTrocar }: {
+  tema: string;
+  causaA: ChaveCausa | null;
+  causaB: ChaveCausa | null;
+  aoTrocar?: () => void;
+}) {
+  const fracos = motivosQueCombinamPouco(tema, causaA, causaB);
+  const sugeridos = conteudoDoTema(tema)?.causas;
+  if (fracos.length === 0 || !sugeridos) return null;
+  const [x, y] = sugeridos.map((c) => causaPorChave(c)?.nome);
+  return (
+    <p className="mt-4 type-meta" role="status">
+      {fracos.length === 1 ? 'Esse motivo combina' : 'Esses motivos combinam'} pouco com o tema. Os sugeridos são {x} e {y}.
+      {aoTrocar && (
+        <> <button type="button" onClick={aoTrocar} className="font-semibold text-primary-text underline underline-offset-2">Trocar motivos</button></>
+      )}
+    </p>
   );
 }

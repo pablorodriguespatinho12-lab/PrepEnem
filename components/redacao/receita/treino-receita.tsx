@@ -10,8 +10,10 @@ import {
   AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent,
   AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
-import { duplaSugerida, montarRedacao, moldeTese, PARAGRAFOS, type ChaveParagrafo } from '@/lib/redacao/receita';
-import { apagarRascunho, lerRascunho, rascunhoVazio, salvarRascunho, type Rascunho } from '@/lib/redacao/rascunho-receita';
+import { duplaSugerida, montarRedacao, PARAGRAFOS, type ChaveParagrafo } from '@/lib/redacao/receita';
+import {
+  apagarRascunho, atualizarTese, lerRascunho, rascunhoVazio, salvarRascunho, sincronizarTese, teseDesatualizada, type Rascunho,
+} from '@/lib/redacao/rascunho-receita';
 import { BarraProgresso, TOTAL_PASSOS } from './pecas';
 import { PassoTema } from './passo-tema';
 import { PassoCausas } from './passo-causas';
@@ -50,6 +52,9 @@ export function TreinoReceita() {
   }, [r, carregado]);
 
   const mudar = (parcial: Partial<Rascunho>) => setR((atual) => ({ ...atual, ...parcial }));
+  /* Tema e motivos mexem na tese: automática é regerada, editada ganha aviso. */
+  const mudarTemaOuMotivos = (parcial: Pick<Partial<Rascunho>, 'tema' | 'causaA' | 'causaB'>) =>
+    setR((atual) => sincronizarTese({ ...atual, ...parcial }));
   const mudarParagrafo = (chave: ChaveParagrafo, texto: string) =>
     setR((atual) => ({ ...atual, paragrafos: { ...atual.paragrafos, [chave]: texto } }));
   const irPara = (passo: number) => {
@@ -59,14 +64,8 @@ export function TreinoReceita() {
       const dupla = passo === 2 && !atual.causaA && !atual.causaB ? duplaSugerida(atual.tema, textosDaLista) : null;
       const causaA = dupla ? dupla[0] : atual.causaA;
       const causaB = dupla ? dupla[1] : atual.causaB;
-      return {
-        ...atual,
-        passo,
-        causaA,
-        causaB,
-        /* A tese chega preenchida com as palavras do tema e as causas escolhidas. */
-        tese: passo === 3 && !atual.tese.trim() ? moldeTese(causaA, causaB, atual.tema) : atual.tese,
-      };
+      /* A tese chega preenchida com as palavras do tema e os motivos escolhidos. */
+      return sincronizarTese({ ...atual, passo, causaA, causaB });
     });
     window.scrollTo({ top: 0 });
   };
@@ -84,9 +83,19 @@ export function TreinoReceita() {
 
   const conteudo = (
     <>
-      {r.passo === 1 && <PassoTema tema={r.tema} temas={temas} erro={erroTemas} aoMudar={(tema) => mudar({ tema })} />}
-      {r.passo === 2 && <PassoCausas causaA={r.causaA} causaB={r.causaB} sugeridas={duplaSugerida(r.tema, textosDaLista) ?? []} aoMudar={(causaA, causaB) => mudar({ causaA, causaB })} />}
-      {r.passo === 3 && <PassoTese tese={r.tese} tema={r.tema} causaA={r.causaA} causaB={r.causaB} aoMudar={(tese) => mudar({ tese })} />}
+      {r.passo === 1 && <PassoTema tema={r.tema} temas={temas} erro={erroTemas} aoMudar={(tema) => mudarTemaOuMotivos({ tema })} />}
+      {r.passo === 2 && <PassoCausas tema={r.tema} causaA={r.causaA} causaB={r.causaB} sugeridas={duplaSugerida(r.tema, textosDaLista) ?? []} aoMudar={(causaA, causaB) => mudarTemaOuMotivos({ causaA, causaB })} />}
+      {r.passo === 3 && (
+        <PassoTese
+          tese={r.tese}
+          tema={r.tema}
+          causaA={r.causaA}
+          causaB={r.causaB}
+          aoMudar={(tese) => mudar({ tese })}
+          desatualizada={teseDesatualizada(r)}
+          aoAtualizar={() => setR(atualizarTese)}
+        />
+      )}
       {paragrafo && (
         <PassoParagrafo
           paragrafo={paragrafo}
@@ -98,12 +107,13 @@ export function TreinoReceita() {
           tese={r.tese}
           elementos={r.elementos}
           aoMarcarElemento={(e, v) => setR((atual) => ({ ...atual, elementos: { ...atual.elementos, [e]: v } }))}
+          aoTrocarMotivos={() => irPara(2)}
         />
       )}
       {r.passo === PASSO_FINAL && (
         <PassoFinal
           tema={r.tema}
-          redacao={montarRedacao(r.paragrafos)}
+          redacao={montarRedacao(r.paragrafos, r.tese)}
           checklist={r.checklist}
           aoMarcar={(i, v) => setR((atual) => {
             const checklist = [...atual.checklist];
