@@ -29,14 +29,14 @@ export const EXEMPLO_PARAGRAFOS: Record<ChaveParagrafo, ExemploParagrafo> = {
   introducao: {
     frases: [
       'Segundo Michel Foucault, em História da Loucura (1961), a sociedade aprendeu a isolar quem foge da norma.',
-      'Essa reflexão se aplica ao Brasil contemporâneo, onde o preconceito contra quem tem transtorno mental persiste: só no Hospital Colônia de Barbacena (MG), cerca de 60 mil internos morreram.',
+      'Essa reflexão se aplica ao Brasil contemporâneo, onde o preconceito contra quem tem transtorno mental tem raízes antigas: em Barbacena (MG), cerca de 60 mil internos morreram no século XX.',
       /* A 3ª frase é a tese do passo 3, igual: começa pelas palavras do tema. */
       EXEMPLO_TESE,
     ],
     ponte: [
       { passo: 'Cita', trecho: 'Michel Foucault, em História da Loucura (1961)' },
       { passo: 'Explica', trecho: 'a sociedade aprendeu a isolar quem foge da norma' },
-      { passo: 'Amarra', trecho: 'só no Hospital Colônia de Barbacena (MG), cerca de 60 mil internos morreram' },
+      { passo: 'Amarra', trecho: 'em Barbacena (MG), cerca de 60 mil internos morreram no século XX' },
     ],
   },
   desenvolvimento1: {
