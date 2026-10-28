@@ -4,7 +4,7 @@ import {
   CAUSAS, contarLinhas, introducaoComTese, LINHAS_TOTAL, montarRedacao, moldeDaFrase, motivosQueCombinamPouco,
   PARAGRAFOS, problemaCompleto, type ChaveCausa,
 } from './receita';
-import { CONTEUDO_TEMAS, conteudoDoTema } from './conteudo-temas';
+import { CONTEUDO_TEMAS, conteudoDoTema, perguntasDoPasso } from './conteudo-temas';
 import { EXEMPLO_TEMA, FUNCOES, REDACAO_GRIFADA, textoDaFrase } from './exemplo-receita';
 import {
   atualizarTese, CHAVE_RASCUNHO, lerRascunho, rascunhoVazio, sincronizarTese, teseDesatualizada, type Rascunho,
@@ -162,5 +162,23 @@ describe('redação pronta, grifada por função', () => {
   });
   test('a tese da redação é a tese que o site gera para o tema e os motivos', () => {
     expect(textoDaFrase(REDACAO_GRIFADA.introducao[2])).toBe(moldeDaFrase('introducao', 2, EXEMPLO_TEMA, 'estigma', 'estado'));
+  });
+});
+describe('perguntas-guia', () => {
+  test('tema de 2020: passo 2 pergunta pelos 2 motivos sugeridos', () => {
+    expect(perguntasDoPasso(2, EXEMPLO_TEMA, null, null)).toEqual(['Por que as pessoas têm preconceito com doença mental?', 'O governo faz a parte dele?']);
+  });
+  test('parágrafo do meio: a pergunta do motivo do parágrafo e as duas gerais', () => {
+    expect(perguntasDoPasso(6, EXEMPLO_TEMA, 'estigma', 'estado')).toEqual(['O governo faz a parte dele?', 'Que fato do Brasil prova esse motivo?', 'O que o autor diria disso?']);
+  });
+  test('tema livre usa as perguntas gerais; todo passo tem 2 ou 3', () => {
+    expect(perguntasDoPasso(7, 'A obesidade infantil no Brasil', 'acesso', 'mercado')).toEqual(['Quem pode resolver?', 'Com o quê?', 'Para quê?']);
+    for (const tema of [EXEMPLO_TEMA, 'Tema livre']) {
+      for (let passo = 1; passo <= 7; passo++) {
+        const n = perguntasDoPasso(passo, tema, 'estigma', 'estado').length;
+        expect(n, `${tema} ${passo}`).toBeGreaterThanOrEqual(2);
+        expect(n, `${tema} ${passo}`).toBeLessThanOrEqual(3);
+      }
+    }
   });
 });

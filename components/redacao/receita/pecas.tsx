@@ -107,3 +107,16 @@ export function CabecalhoPasso({ titulo, instrucao }: { titulo: string; instruca
     </div>
   );
 }
+/* As perguntas-guia do passo: o site questiona o aluno antes de ele escrever.
+   Texto de leitura (serif), sem ação: não disputa com o Próximo. */
+export function PerguntasGuia({ perguntas }: { perguntas: string[] }) {
+  if (perguntas.length === 0) return null;
+  return (
+    <section className="border-l-2 border-primary pl-4 mb-5" aria-label="Perguntas para pensar">
+      <p className="type-rotulo text-primary-text mb-1">Pense antes</p>
+      <ul className="space-y-1">
+        {perguntas.map((p) => <li key={p} className="font-reading type-body">{p}</li>)}
+      </ul>
+    </section>
+  );
+}

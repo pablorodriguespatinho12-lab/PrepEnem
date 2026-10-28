@@ -228,3 +228,21 @@ export function conteudoDoTema(tema: string): ConteudoTema | null {
   if (!t) return null;
   return CONTEUDO_TEMAS.find((c) => comparavel(c.tema) === t) ?? null;
 }
+/* As 2 ou 3 perguntas-guia de cada passo (1 a 7). Tema da receita: as escritas
+   à mão; tema livre: as gerais. Nos parágrafos do meio, a pergunta do motivo
+   daquele parágrafo vem antes das duas que valem para qualquer motivo. */
+export function perguntasDoPasso(passo: number, tema: string, causaA: ChaveCausa | null, causaB: ChaveCausa | null): string[] {
+  const c = conteudoDoTema(tema);
+  const g = PERGUNTAS_GERAIS;
+  const doMotivo = (causa: ChaveCausa | null) => (c && causa ? [c.perguntas.motivo[causa], ...g.desenvolvimento] : g.desenvolvimento);
+  switch (passo) {
+    case 1: return g.tema;
+    case 2: return c ? c.causas.map((x) => c.perguntas.motivo[x]) : g.motivos;
+    case 3: return g.tese;
+    case 4: return c ? c.perguntas.introducao : g.introducao;
+    case 5: return doMotivo(causaA);
+    case 6: return doMotivo(causaB);
+    case 7: return c ? c.perguntas.conclusao : g.conclusao;
+    default: return [];
+  }
+}

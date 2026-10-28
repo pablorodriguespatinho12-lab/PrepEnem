@@ -14,7 +14,8 @@ import { duplaSugerida, montarRedacao, PARAGRAFOS, type ChaveParagrafo } from '@
 import {
   apagarRascunho, atualizarTese, lerRascunho, rascunhoVazio, salvarRascunho, sincronizarTese, teseDesatualizada, type Rascunho,
 } from '@/lib/redacao/rascunho-receita';
-import { BarraProgresso, TOTAL_PASSOS } from './pecas';
+import { BarraProgresso, PerguntasGuia, TOTAL_PASSOS } from './pecas';
+import { perguntasDoPasso } from '@/lib/redacao/conteudo-temas';
 import { PassoTema } from './passo-tema';
 import { PassoCausas } from './passo-causas';
 import { PassoTese } from './passo-tese';
@@ -82,8 +83,10 @@ export function TreinoReceita() {
   const chaveParagrafo = PARAGRAFO_DO_PASSO[r.passo];
   const paragrafo = PARAGRAFOS.find((p) => p.chave === chaveParagrafo);
 
+  const perguntas = perguntasDoPasso(r.passo, r.tema, r.causaA, r.causaB);
   const conteudo = (
     <>
+      {r.passo <= 3 && <PerguntasGuia perguntas={perguntas} />}
       {r.passo === 1 && <PassoTema tema={r.tema} temas={temas} erro={erroTemas} aoMudar={(tema) => mudarTemaOuMotivos({ tema })} />}
       {r.passo === 2 && <PassoCausas tema={r.tema} causaA={r.causaA} causaB={r.causaB} sugeridas={duplaSugerida(r.tema, textosDaLista) ?? []} aoMudar={(causaA, causaB) => mudarTemaOuMotivos({ causaA, causaB })} />}
       {r.passo === 3 && (
@@ -109,6 +112,7 @@ export function TreinoReceita() {
           elementos={r.elementos}
           aoMarcarElemento={(e, v) => setR((atual) => ({ ...atual, elementos: { ...atual.elementos, [e]: v } }))}
           aoTrocarMotivos={() => irPara(2)}
+          perguntas={perguntas}
         />
       )}
       {r.passo === PASSO_FINAL && (

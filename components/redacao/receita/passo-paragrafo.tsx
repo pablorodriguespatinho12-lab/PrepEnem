@@ -11,7 +11,7 @@ import {
 } from '@/lib/redacao/receita';
 import { AvisoMotivo } from './passo-causas';
 import { EXEMPLO_PARAGRAFOS } from '@/lib/redacao/exemplo-receita';
-import { CabecalhoPasso, CaixaTexto, ContadorLinhas, Marcavel } from './pecas';
+import { CabecalhoPasso, CaixaTexto, ContadorLinhas, Marcavel, PerguntasGuia } from './pecas';
 import { ListaAutores, VerExemplo } from './autores';
 
 interface Props {
@@ -25,6 +25,7 @@ interface Props {
   elementos: Record<ChaveElemento, boolean>;
   aoMarcarElemento: (e: ChaveElemento, v: boolean) => void;
   aoTrocarMotivos: () => void;
+  perguntas: string[];
 }
 
 function Molde({ paragrafo, causaA, causaB, tese, tema }: Pick<Props, 'paragrafo' | 'causaA' | 'causaB' | 'tese' | 'tema'>) {
@@ -132,6 +133,7 @@ export function PassoParagrafo(props: Props) {
       <CabecalhoPasso titulo={paragrafo.titulo} instrucao={`Siga o molde, uma frase por função. Meta: ${paragrafo.linhasMin} a ${paragrafo.linhasMax} linhas.`} />
       <div className="grid gap-5 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:items-start">
         <section className="surface-1 rounded-[var(--radius-surface)] p-4 md:p-5" aria-label={`Molde da ${paragrafo.titulo.toLowerCase()}`}>
+          <PerguntasGuia perguntas={props.perguntas} />
           <p className="type-caption font-semibold text-primary-text mb-3">Molde</p>
           <Molde paragrafo={paragrafo} causaA={causaA} causaB={causaB} tese={props.tese} tema={tema} />
           {paragrafo.chave === 'introducao' && <AutoresDasCausas causaA={causaA} causaB={causaB} />}
