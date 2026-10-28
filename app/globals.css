@@ -24,6 +24,7 @@
   :root {
     /* --- Escala tipográfica (razão 1.250, âncora 17px) --------------------- */
     --type-caption:  0.680rem;  /* 10.9px — anotação de n, unidade, rodapé   */
+    --type-rotulo:   0.800rem;  /* 12.8px — rótulo de função, sem caixa-alta  */
     --type-meta:     0.850rem;  /* 13.6px — chrome de UI, label, metadado    */
     --type-body:     1.0625rem; /* 17.0px — LEITURA: enunciado, alternativa  */
     --type-lead:     1.328rem;  /* 21.2px — abertura, número em destaque    */
@@ -316,6 +317,14 @@
   .type-micro {
     font-size: var(--type-caption);
     line-height: var(--lh-normal);
+  }
+  /* Rótulo que nomeia a função de um trecho ("Tópico frasal", "Tese"). Fica
+     acima de 12px e sem caixa-alta: são nomes de 2 ou 3 palavras que o
+     aluno lê, não etiqueta de canto (Treino por partes, 28/10/2026). */
+  .type-rotulo {
+    font-size: var(--type-rotulo);
+    line-height: var(--lh-normal);
+    font-weight: 600;
   }
   .type-meta {
     font-size: var(--type-meta);

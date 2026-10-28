@@ -22,6 +22,7 @@ import { PassoParagrafo } from './passo-paragrafo';
 import { PassoFinal } from './passo-final';
 import { useTemas } from './use-temas';
 import { LinhaTema } from './autores';
+import { BotaoRedacaoPronta } from './redacao-grifada';
 
 const PASSO_FINAL = TOTAL_PASSOS + 1;
 /* Passos 4 a 7 são os parágrafos, na ordem da receita. */
@@ -129,6 +130,8 @@ export function TreinoReceita() {
     <div className="flex min-h-[calc(100dvh-4rem)] flex-col">
       <header className="flex items-end justify-between gap-4 mb-6">
         <div className="flex-1 max-w-md"><BarraProgresso passo={r.passo} /></div>
+        <div className="flex items-center gap-4">
+        {r.passo > 1 && <BotaoRedacaoPronta />}
         <AlertDialog>
           <AlertDialogTrigger asChild>
             <button type="button" className="inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors">
@@ -146,7 +149,10 @@ export function TreinoReceita() {
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>
+        </div>
       </header>
+      {/* Antes do passo 1: ver o resultado inteiro antes de começar. */}
+      {r.passo === 1 && <div className="mb-6"><BotaoRedacaoPronta destaque /></div>}
 
       {r.passo > 1 && r.tema.trim() && <LinhaTema tema={r.tema.trim()} />}
       <div className="flex-1 pb-6">

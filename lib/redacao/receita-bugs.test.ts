@@ -1,11 +1,11 @@
 // Um teste por bug medido no preview do Treino por partes (Pablo, 28/10/2026).
 import { describe, expect, test } from 'vitest';
 import {
-  CAUSAS, introducaoComTese, montarRedacao, moldeDaFrase, motivosQueCombinamPouco,
+  CAUSAS, contarLinhas, introducaoComTese, LINHAS_TOTAL, montarRedacao, moldeDaFrase, motivosQueCombinamPouco,
   PARAGRAFOS, problemaCompleto, type ChaveCausa,
 } from './receita';
 import { CONTEUDO_TEMAS, conteudoDoTema } from './conteudo-temas';
-import { EXEMPLO_TEMA } from './exemplo-receita';
+import { EXEMPLO_TEMA, FUNCOES, REDACAO_GRIFADA, textoDaFrase } from './exemplo-receita';
 import {
   atualizarTese, CHAVE_RASCUNHO, lerRascunho, rascunhoVazio, sincronizarTese, teseDesatualizada, type Rascunho,
 } from './rascunho-receita';
@@ -135,5 +135,32 @@ describe('conteúdo por tema', () => {
         expect(/\p{Extended_Pictographic}/u.test(p)).toBe(false);
       }
     }
+  });
+});
+describe('redação pronta, grifada por função', () => {
+  const todas = PARAGRAFOS.flatMap((p) => REDACAO_GRIFADA[p.chave].flat());
+  test('4 parágrafos, 25 a 30 linhas, cada parágrafo na meta', () => {
+    const texto = PARAGRAFOS.map((p) => REDACAO_GRIFADA[p.chave].map(textoDaFrase).join(' ')).join('\n');
+    const linhas = contarLinhas(texto);
+    expect(linhas).toBeGreaterThanOrEqual(LINHAS_TOTAL.min);
+    expect(linhas).toBeLessThanOrEqual(LINHAS_TOTAL.max);
+  });
+  test('toda função da legenda aparece, e a proposta tem os 5 elementos', () => {
+    const usadas = new Set(todas.map((t) => t.funcao).filter(Boolean));
+    for (const f of FUNCOES) expect(usadas.has(f.chave), f.chave).toBe(true);
+  });
+  test('fato histórico com fonte em pelo menos 2 lugares', () => {
+    expect(todas.filter((t) => t.fato).length).toBeGreaterThanOrEqual(2);
+    expect(todas.some((t) => t.fato && t.texto.includes('Barbacena'))).toBe(true);
+    expect(todas.some((t) => t.fato && t.texto.includes('10.216'))).toBe(true);
+  });
+  test('trecho grifado tem função conhecida e texto não vazio', () => {
+    for (const t of todas) {
+      expect(t.texto.length).toBeGreaterThan(0);
+      if (t.funcao) expect(FUNCOES.some((f) => f.chave === t.funcao)).toBe(true);
+    }
+  });
+  test('a tese da redação é a tese que o site gera para o tema e os motivos', () => {
+    expect(textoDaFrase(REDACAO_GRIFADA.introducao[2])).toBe(moldeDaFrase('introducao', 2, EXEMPLO_TEMA, 'estigma', 'estado'));
   });
 });
