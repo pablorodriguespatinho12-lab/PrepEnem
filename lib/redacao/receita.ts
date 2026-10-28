@@ -10,7 +10,7 @@ export type ChaveElemento = 'agente' | 'acao' | 'meio' | 'finalidade' | 'detalha
 export interface Causa {
   chave: ChaveCausa;
   nome: string;
-  /* Como a causa entra no molde "Tal cenário decorre, sobretudo, de [causa]". */
+  /* A frase de tese da receita no molde "decorre, sobretudo, de [causa]". */
   naTese: string;
   fraseDeTese: string;
   repertorios: string[];
@@ -19,27 +19,27 @@ export interface Causa {
 /* "Coringas de argumento (as 5 causas)". */
 export const CAUSAS: Causa[] = [
   {
-    chave: 'estado', nome: 'Omissão do Estado', naTese: 'da omissão do Estado',
+    chave: 'estado', nome: 'Omissão do Estado', naTese: 'da negligência estatal na garantia de direitos já previstos em lei',
     fraseDeTese: '...por negligência estatal na garantia de direitos já previstos em lei',
     repertorios: ['CF art. 3º e 6º', 'Amartya Sen', 'José Murilo de Carvalho', 'Lei do SUS'],
   },
   {
-    chave: 'historia', nome: 'Herança histórica', naTese: 'da herança histórica',
+    chave: 'historia', nome: 'Herança histórica', naTese: 'de uma herança histórica de exclusão que ainda estrutura o país',
     fraseDeTese: '...por uma herança histórica de exclusão que ainda estrutura o país',
     repertorios: ['Celso Furtado', 'Sérgio Buarque', 'Lélia Gonzalez'],
   },
   {
-    chave: 'acesso', nome: 'Desigualdade de acesso', naTese: 'da desigualdade de acesso',
+    chave: 'acesso', nome: 'Desigualdade de acesso', naTese: 'da desigualdade de acesso, que separa quem pode de quem não pode',
     fraseDeTese: '...pela desigualdade de acesso, que separa quem pode de quem não pode',
     repertorios: ['Bourdieu', 'Piketty', 'Josué de Castro', 'Anísio Teixeira'],
   },
   {
-    chave: 'estigma', nome: 'Estigma e invisibilidade', naTese: 'do estigma e da invisibilidade',
+    chave: 'estigma', nome: 'Estigma e invisibilidade', naTese: 'do estigma social que torna esse grupo invisível',
     fraseDeTese: '...pelo estigma social que torna esse grupo invisível',
     repertorios: ['Goffman', 'Hannah Arendt', 'Foucault', 'Nise da Silveira'],
   },
   {
-    chave: 'mercado', nome: 'Mercado acima das pessoas', naTese: 'da lógica de mercado acima das pessoas',
+    chave: 'mercado', nome: 'Mercado acima das pessoas', naTese: 'da lógica de lucro que se sobrepõe ao bem-estar',
     fraseDeTese: '...pela lógica de lucro que se sobrepõe ao bem-estar',
     repertorios: ['Zuboff', 'Ricardo Antunes', 'Byung-Chul Han', 'Ulrich Beck'],
   },
@@ -77,13 +77,60 @@ export function duplaSugerida(tema: string, temasDaLista: string[]): [ChaveCausa
   return DUPLAS_DA_RECEITA.find((d) => t.includes(d.palavra))?.causas ?? null;
 }
 
-/* Molde da 3ª frase da introdução ("Frases-esqueleto"). */
-export function moldeTese(causaA: ChaveCausa | null, causaB: ChaveCausa | null): string {
+/* O tema virado em "problema" para entrar nos moldes ("fator central de
+   [problema]"). Só os começos que não são problema mudam: "Desafios para a
+   valorização..." vira "a falta de valorização...", "Perspectivas acerca do
+   envelhecimento..." vira "o desafio do envelhecimento...". Depois de ":" sai
+   ("causas e soluções"). O resto fica como o aluno escreveu. */
+export function problemaDoTema(tema: string): string {
+  let p = tema.trim().replace(/\s+/g, ' ').split(':')[0].trim().replace(/[.!?]+$/, '');
+  if (!p) return '';
+  p = p.replace(/^(os\s+)?desafios\s+(para|de|da|do|das|dos)\s+((a|o|as|os)\s+)?/i, 'a falta de ');
+  p = p.replace(/^perspectivas\s+acerca\s+d(o|a|os|as)\s+/i, 'o desafio d$1 ');
+  /* Artigo no começo fica minúsculo; nome próprio ("Brasil") não muda. */
+  return p.replace(/^(O|A|Os|As)\s/, (m) => m.toLowerCase());
+}
+const maiuscula = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+/* Molde da tese ("Frases-esqueleto"), com as palavras do tema no lugar de
+   "Tal cenário" quando há tema (Pablo, 27/10/2026). */
+export function moldeTese(causaA: ChaveCausa | null, causaB: ChaveCausa | null, tema = ''): string {
   const a = causaPorChave(causaA)?.naTese ?? 'de [causa A]';
   const b = causaPorChave(causaB)?.naTese ?? 'de [causa B]';
-  return `Tal cenário decorre, sobretudo, ${a} e ${b}.`;
+  const problema = problemaDoTema(tema);
+  return `${problema ? maiuscula(problema) : 'Tal cenário'} decorre, sobretudo, ${a} e ${b}.`;
 }
-
+/* Troca [problema do tema] e [problema] do molde pelo problema do tema, com a
+   contração do português ("de a falta" vira "da falta"). Sem tema, o molde
+   fica como está. */
+export function preencherProblema(molde: string, tema: string): string {
+  const problema = problemaDoTema(tema);
+  if (!problema) return molde;
+  return molde
+    .split('[problema do tema]').join(problema)
+    .split('[problema]').join(problema)
+    .replace(/\b(de|em) (o|a|os|as) /g, (_, prep: string, art: string) => `${prep === 'de' ? 'd' : 'n'}${art} `);
+}
+/* Palavras que dizem do que o tema trata: sem as que servem para qualquer
+   tema ("desafios", "sociedade", "brasileira"). Regra 1 da receita: elas
+   aparecem na tese. A comparação é pelo começo da palavra (5 letras), para
+   "mentais" achar "mental". */
+const PALAVRAS_DE_TODO_TEMA = new Set([
+  'desafios', 'desafio', 'perspectivas', 'acerca', 'sociedade', 'brasileira', 'brasileiro', 'brasileiros',
+  'brasileiras', 'brasil', 'contemporaneo', 'caminhos', 'para', 'como', 'entre', 'frente', 'seus', 'suas',
+  'causas', 'solucoes', 'superacao', 'importancia', 'impactos', 'combate', 'questao',
+]);
+const raiz = (p: string) => p.slice(0, 5);
+const palavrasDe = (s: string) => semAcento(s).split(/[^a-z]+/).filter((p) => p.length >= 4);
+export function palavrasChaveDoTema(tema: string): string[] {
+  return Array.from(new Set(palavrasDe(tema.split(':')[0]).filter((p) => !PALAVRAS_DE_TODO_TEMA.has(p))));
+}
+/* true também sem tema ou sem tese: só avisa quando há o que comparar. */
+export function teseTemPalavraDoTema(tese: string, tema: string): boolean {
+  const chaves = palavrasChaveDoTema(tema);
+  if (!tese.trim() || chaves.length === 0) return true;
+  const naTese = new Set(palavrasDe(tese).map(raiz));
+  return chaves.some((c) => naTese.has(raiz(c)));
+}
 export interface FraseEsqueleto {
   funcao: string;
   molde: string;

@@ -19,6 +19,7 @@ import { PassoTese } from './passo-tese';
 import { PassoParagrafo } from './passo-paragrafo';
 import { PassoFinal } from './passo-final';
 import { useTemas } from './use-temas';
+import { LinhaTema } from './autores';
 
 const PASSO_FINAL = TOTAL_PASSOS + 1;
 /* Passos 4 a 7 são os parágrafos, na ordem da receita. */
@@ -63,8 +64,8 @@ export function TreinoReceita() {
         passo,
         causaA,
         causaB,
-        /* A tese chega preenchida com o molde das causas escolhidas. */
-        tese: passo === 3 && !atual.tese.trim() ? moldeTese(causaA, causaB) : atual.tese,
+        /* A tese chega preenchida com as palavras do tema e as causas escolhidas. */
+        tese: passo === 3 && !atual.tese.trim() ? moldeTese(causaA, causaB, atual.tema) : atual.tese,
       };
     });
     window.scrollTo({ top: 0 });
@@ -85,10 +86,11 @@ export function TreinoReceita() {
     <>
       {r.passo === 1 && <PassoTema tema={r.tema} temas={temas} erro={erroTemas} aoMudar={(tema) => mudar({ tema })} />}
       {r.passo === 2 && <PassoCausas causaA={r.causaA} causaB={r.causaB} sugeridas={duplaSugerida(r.tema, textosDaLista) ?? []} aoMudar={(causaA, causaB) => mudar({ causaA, causaB })} />}
-      {r.passo === 3 && <PassoTese tese={r.tese} causaA={r.causaA} causaB={r.causaB} aoMudar={(tese) => mudar({ tese })} />}
+      {r.passo === 3 && <PassoTese tese={r.tese} tema={r.tema} causaA={r.causaA} causaB={r.causaB} aoMudar={(tese) => mudar({ tese })} />}
       {paragrafo && (
         <PassoParagrafo
           paragrafo={paragrafo}
+          tema={r.tema}
           texto={r.paragrafos[paragrafo.chave]}
           aoMudar={(t) => mudarParagrafo(paragrafo.chave, t)}
           causaA={r.causaA}
@@ -136,6 +138,7 @@ export function TreinoReceita() {
         </AlertDialog>
       </header>
 
+      {r.passo > 1 && r.tema.trim() && <LinhaTema tema={r.tema.trim()} />}
       <div className="flex-1 pb-6">
         {/* Com movimento reduzido, troca na hora: sem AnimatePresence. O mode
             "wait" esperava o passo antigo sumir (opacity) e a tela ficava em

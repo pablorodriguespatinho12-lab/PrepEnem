@@ -100,6 +100,27 @@ Tecnologia: Zuboff, A Era do Capitalismo de Vigilância (2019) | Eli Pariser, O 
 Meio ambiente: Ailton Krenak, Ideias para adiar o fim do mundo (2019) | Hans Jonas, O Princípio Responsabilidade (1979) | Ulrich Beck, Sociedade de Risco (1986) | Chico Mendes | Kopenawa e Albert, A Queda do Céu (2010).
 Cidadania: Hannah Arendt, Origens do Totalitarismo (1951) | José Murilo de Carvalho, Cidadania no Brasil (2001) | Sérgio Buarque, Raízes do Brasil (1936) | Lélia Gonzalez, amefricanidade | CF 1988 art. 3º.
 
+Cada nome das 5 causas abre esta ficha no Treino por partes (dados em `lib/redacao/autores.ts`). Sem obra e ideia, o aluno cita só o nome: repertório de bolso.
+- Constituição Federal, art. 3º e 6º, Constituição da República (1988): Reduzir desigualdades é objetivo do país, e saúde, educação e moradia são direitos sociais.
+- Amartya Sen, Desenvolvimento como Liberdade (1999): Desenvolver é ampliar as liberdades reais das pessoas, não só o direito no papel.
+- José Murilo de Carvalho, Cidadania no Brasil (2001): A cidadania brasileira é incompleta: os direitos existem, mas não chegam a todos.
+- Lei do SUS (Lei 8.080), Lei Orgânica da Saúde (1990): Saúde é direito de todos e dever do Estado, com acesso universal e gratuito.
+- Celso Furtado, Formação Econômica do Brasil (1959): A economia colonial, voltada para fora, deixou a desigualdade que o país ainda carrega.
+- Sérgio Buarque de Holanda, Raízes do Brasil (1936): O "homem cordial" mistura o público e o privado e decide pelo afeto, não pela regra.
+- Lélia Gonzalez, A categoria político-cultural de amefricanidade (1988): A cultura brasileira foi feita por africanos e indígenas, e o racismo apaga essa herança.
+- Pierre Bourdieu (com Passeron), A Reprodução (1970): A escola premia quem já chega com mais cultura em casa e assim repete a desigualdade.
+- Thomas Piketty, O Capital no Século XXI (2013): Quando a riqueza rende mais que a economia cresce, a desigualdade só aumenta.
+- Josué de Castro, Geografia da Fome (1946): A fome no Brasil é produto da desigualdade social, não da natureza.
+- Anísio Teixeira, Educação não é privilégio (1957): Escola pública de qualidade é direito de todos, não privilégio de poucos.
+- Erving Goffman, Estigma (1963): O estigma reduz a pessoa a uma marca, e ela deixa de ser vista por inteiro.
+- Hannah Arendt, Origens do Totalitarismo (1951): Quem perde o lugar na comunidade perde o "direito a ter direitos".
+- Michel Foucault, História da Loucura (1961): A sociedade aprendeu a isolar quem foge da norma em vez de acolher.
+- Nise da Silveira, Museu de Imagens do Inconsciente (fundação) (1952): Tratou pacientes psiquiátricos com arte e afeto, contra o isolamento e o eletrochoque.
+- Shoshana Zuboff, A Era do Capitalismo de Vigilância (2019): Empresas lucram transformando o comportamento das pessoas em dado para prever escolhas.
+- Ricardo Antunes, O privilégio da servidão (2018): O trabalho precário virou regra, e ter qualquer emprego passou a parecer privilégio.
+- Byung-Chul Han, Sociedade do cansaço (2010): A cobrança por desempenho faz a pessoa se explorar até o esgotamento.
+- Ulrich Beck, Sociedade de Risco (1986): O progresso produz riscos para todos, mas eles pesam mais sobre os pobres.
+
 ## Checklist antes de passar a limpo
 
 - Palavras-chave do tema na introdução, tese e início de cada desenvolvimento

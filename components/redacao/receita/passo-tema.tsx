@@ -1,7 +1,9 @@
 'use client';
 // Passo 1: escolher um tema que já existe ou digitar um livre.
 
+import { EXEMPLO_TEMA } from '@/lib/redacao/exemplo-receita';
 import { CabecalhoPasso } from './pecas';
+import { VerExemplo } from './autores';
 import type { TemaDaLista } from './use-temas';
 
 export function PassoTema({ tema, temas, erro, aoMudar }: {
@@ -12,6 +14,11 @@ export function PassoTema({ tema, temas, erro, aoMudar }: {
 }) {
   return (
     <div>
+      {/* Pedido do Pablo (27/10/2026): o iniciante sabe o tamanho da tarefa antes. */}
+      <div className="surface-1 rounded-[var(--radius-surface)] px-4 py-3 mb-5">
+        <p data-numeric className="type-meta font-semibold">7 passos, cerca de 40 minutos.</p>
+        <p className="type-meta text-muted-foreground">No fim você tem a redação inteira montada para copiar.</p>
+      </div>
       <CabecalhoPasso titulo="Tema" instrucao="Escolha um tema da lista ou digite outro." />
       <label htmlFor="tema-livre" className="type-meta font-semibold block mb-2">Tema</label>
       <input
@@ -43,6 +50,10 @@ export function PassoTema({ tema, temas, erro, aoMudar }: {
           })}
         </ul>
       )}
+      <VerExemplo>
+        <p className="font-reading type-body">{EXEMPLO_TEMA}</p>
+        <p className="type-meta text-muted-foreground mt-2">O tema já diz o problema. Você vai repetir essas palavras na tese e no começo de cada parágrafo.</p>
+      </VerExemplo>
     </div>
   );
 }

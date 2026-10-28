@@ -2,9 +2,13 @@
 // Passo 2: escolher 2 das 5 causas coringa. A 1ª vira o D1, a 2ª o D2.
 // Tema da lista com dupla na receita: os 2 cartões ganham o selo "Sugerido"
 // (e vêm pré-selecionados se nenhum motivo foi escolhido). Tocar de novo desmarca.
+// Os autores ficam fora do botão de escolher (botão dentro de botão não vale):
+// cada nome abre a ficha.
 
 import { CAUSAS, causaPorChave, type ChaveCausa } from '@/lib/redacao/receita';
+import { EXEMPLO_CAUSAS } from '@/lib/redacao/exemplo-receita';
 import { CabecalhoPasso } from './pecas';
+import { ListaAutores, VerExemplo } from './autores';
 
 const DESTAQUE = { borderColor: 'hsl(var(--primary))', backgroundColor: 'hsl(var(--primary) / 0.1)' };
 const SELO = { backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' };
@@ -30,13 +34,12 @@ export function PassoCausas({ causaA, causaB, sugeridas, aoMudar }: {
           const ordem = c.chave === causaA ? '1º motivo' : c.chave === causaB ? '2º motivo' : null;
           const sugerida = sugeridas.includes(c.chave);
           return (
-            <li key={c.chave}>
+            <li key={c.chave} className="h-full flex flex-col rounded-[var(--radius-surface)] border t-colors" style={ordem ? DESTAQUE : undefined}>
               <button
                 type="button"
                 onClick={() => tocar(c.chave)}
                 aria-pressed={ordem !== null}
-                className="h-full w-full text-left rounded-[var(--radius-surface)] border p-4 t-colors hover:bg-muted"
-                style={ordem ? DESTAQUE : undefined}
+                className="w-full text-left rounded-t-[var(--radius-surface)] p-4 pb-3 t-colors hover:bg-muted"
               >
                 <span className="flex flex-wrap items-center justify-between gap-2 mb-2">
                   <span className="font-display type-body font-semibold">{c.nome}</span>
@@ -44,15 +47,21 @@ export function PassoCausas({ causaA, causaB, sugeridas, aoMudar }: {
                 </span>
                 {sugerida && <span className="block type-caption font-semibold text-primary-text mb-2">Sugerido para este tema</span>}
                 <span className="block type-caption font-semibold text-muted-foreground">Entra na tese:</span>
-                <span className="block font-reading type-meta mb-2">{c.fraseDeTese}</span>
-                <span className="block type-caption font-semibold text-muted-foreground">Autores para citar:</span>
-                <span className="block type-meta">{c.repertorios.join(' · ')}</span>
+                <span className="block font-reading type-meta">{c.fraseDeTese}</span>
               </button>
+              <div className="px-4 pb-4">
+                <ListaAutores nomes={c.repertorios} />
+              </div>
             </li>
           );
         })}
       </ul>
       <MiniMapa causaA={causaA} causaB={causaB} />
+      <VerExemplo>
+        <p className="type-meta"><span className="font-semibold">1º motivo:</span> {causaPorChave(EXEMPLO_CAUSAS[0])?.nome}</p>
+        <p className="type-meta"><span className="font-semibold">2º motivo:</span> {causaPorChave(EXEMPLO_CAUSAS[1])?.nome}</p>
+        <p className="type-meta text-muted-foreground mt-2">Quem tem doença mental é visto só pela doença (estigma), e falta atendimento perto de casa (omissão do Estado).</p>
+      </VerExemplo>
     </div>
   );
 }

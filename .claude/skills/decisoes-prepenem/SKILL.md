@@ -360,6 +360,13 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   `lib/redacao/receita.ts`). Rascunho no localStorage a cada mudança, sem
   Neon. As rotas `/api/redacao/parts/*` e a correção por partes pela IA foram
   apagadas; a tabela EssayPartPractice fica (histórico, lida em /api/stats).
+  **Para iniciante (Pablo, 27/10/2026):** todo nome de autor abre obra + ano +
+  ideia em 1 linha (`lib/redacao/autores.ts`, ficha também na receita; nome
+  solto = repertório de bolso); a introdução lista os autores das 2 causas; a
+  tese já vem com as palavras do tema (`moldeTese`) e avisa sem palavra-chave;
+  linha fixa com o tema e [problema] trocado nos moldes (`problemaDoTema`);
+  "Ver exemplo" em cada passo, tema de 2020, escrito à mão
+  (`lib/redacao/exemplo-receita.ts`, o teste confere molde, ponte e linhas).
 - As redações-modelo de `data/redacao/modelos.ts` (textos originais, temas
   reais, cada trecho comentado) seguem em /redacao/modelos. Não inventa
   texto-base com IA. Repertório nos modelos: só fato verificável.
