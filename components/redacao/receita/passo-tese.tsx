@@ -7,6 +7,7 @@ import { causaPorChave, moldeTese, teseTemPalavraDoTema, type ChaveCausa } from 
 import { EXEMPLO_TESE } from '@/lib/redacao/exemplo-receita';
 import { CabecalhoPasso, CaixaTexto } from './pecas';
 import { VerExemplo } from './autores';
+import { criarMarcador } from './glossario';
 
 export function PassoTese({ perguntas, tese, tema, causaA, causaB, aoMudar, desatualizada, aoAtualizar }: {
   perguntas: string[];
@@ -20,9 +21,10 @@ export function PassoTese({ perguntas, tese, tema, causaA, causaB, aoMudar, desa
 }) {
   const molde = moldeTese(causaA, causaB, tema);
   const semPalavraDoTema = !teseTemPalavraDoTema(tese, tema);
+  const m = criarMarcador();
   return (
     <div>
-      <CabecalhoPasso titulo="Tese" instrucao="Uma frase: o problema do tema e os 2 motivos." perguntas={perguntas} />
+      <CabecalhoPasso titulo="Tese" instrucao={m('Sua tese é uma frase só: o problema do tema e os 2 motivos. Siga o molde.')} perguntas={perguntas} />
       <div className="surface-1 rounded-[var(--radius-surface)] p-4 mb-5">
         <p className="type-rotulo text-primary-text mb-1">Molde</p>
         <p className="font-reading type-body">[palavras do tema] decorre, sobretudo, de [motivo 1] e de [motivo 2].</p>

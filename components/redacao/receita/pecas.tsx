@@ -102,7 +102,7 @@ export function Marcavel({ marcado, aoMudar, children }: { marcado: boolean; aoM
 }
 
 /* Título de cada passo: o que fazer, em uma linha; embaixo, as perguntas-guia. */
-export function CabecalhoPasso({ titulo, instrucao, perguntas = [] }: { titulo: string; instrucao: string; perguntas?: string[] }) {
+export function CabecalhoPasso({ titulo, instrucao, perguntas = [] }: { titulo: string; instrucao: React.ReactNode; perguntas?: string[] }) {
   return (
     <div className="mb-5">
       <h2 className="font-display type-title font-semibold">{titulo}</h2>

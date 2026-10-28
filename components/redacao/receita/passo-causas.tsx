@@ -9,6 +9,7 @@ import { CAUSAS, causaPorChave, motivosQueCombinamPouco, type ChaveCausa } from 
 import { conteudoDoTema } from '@/lib/redacao/conteudo-temas';
 import { EXEMPLO_CAUSAS } from '@/lib/redacao/exemplo-receita';
 import { CabecalhoPasso } from './pecas';
+import { criarMarcador } from './glossario';
 import { AutoresEmLinha, VerExemplo } from './autores';
 
 const DESTAQUE = { borderColor: 'hsl(var(--primary))', backgroundColor: 'hsl(var(--primary) / 0.1)' };
@@ -31,7 +32,7 @@ export function PassoCausas({ perguntas, tema, causaA, causaB, sugeridas, aoMuda
   };
   return (
     <div>
-      <CabecalhoPasso titulo="Por que esse problema existe?" instrucao="Escolha 2 motivos. Eles viram sua tese e os 2 parágrafos do meio." perguntas={perguntas} />
+      <CabecalhoPasso titulo="Por que esse problema existe?" instrucao={criarMarcador()('Escolha 2 motivos. Eles viram sua tese e os 2 parágrafos do meio.')} perguntas={perguntas} />
       {/* O aviso fica em cima dos cartões: embaixo, ficava fora da tela. */}
       <AvisoMotivo tema={tema} causaA={causaA} causaB={causaB} />
       <ul className="grid gap-3 sm:grid-cols-2">

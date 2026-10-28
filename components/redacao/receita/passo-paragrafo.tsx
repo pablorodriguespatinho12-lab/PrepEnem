@@ -6,7 +6,7 @@
 // vista). Celular: o painel do molde recolhe acima da caixa.
 // O painel alterna Molde e Exemplo (o parágrafo do tema de 2020).
 
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { ChevronDown } from 'lucide-react';
 import {
   causaPorChave, CONECTIVOS, ELEMENTOS, ERROS_PROPOSTA, introducaoComTese, moldeDaFrase, PONTE, PONTE_AVISO,
@@ -15,6 +15,7 @@ import {
 import { EXEMPLO_ANO, EXEMPLO_PARAGRAFOS } from '@/lib/redacao/exemplo-receita';
 import { CabecalhoPasso, CaixaTexto, ContadorLinhas, PerguntasGuia } from './pecas';
 import { AutoresEmLinha } from './autores';
+import { criarMarcador, termosDe } from './glossario';
 import { AvisoMotivo } from './passo-causas';
 
 interface Props {
@@ -33,7 +34,7 @@ interface Props {
 
 /* Uma frase por linha da lista: o nome da função em cima, o molde em texto
    de leitura. A tese (3ª frase da introdução) é a do passo 3 e entra sozinha. */
-function ListaDeFrases({ paragrafo, frases, tese }: { paragrafo: Paragrafo; frases: string[]; tese?: string }) {
+function ListaDeFrases({ paragrafo, frases, tese, rotulos }: { paragrafo: Paragrafo; frases: string[]; tese?: string; rotulos: ReactNode[] }) {
   return (
     <ol className="space-y-4">
       {frases.map((frase, i) => {
@@ -42,7 +43,7 @@ function ListaDeFrases({ paragrafo, frases, tese }: { paragrafo: Paragrafo; fras
           <li key={paragrafo.frases[i]?.funcao ?? i} className="grid grid-cols-[1.25rem_minmax(0,1fr)] gap-x-2">
             <span data-numeric className="type-rotulo text-primary-text pt-px">{i + 1}</span>
             <div className="min-w-0">
-              <p className="type-rotulo text-muted-foreground">{paragrafo.frases[i]?.funcao}</p>
+              <p className="type-rotulo text-muted-foreground">{rotulos[i]}</p>
               <p className="font-reading type-body mt-0.5">{ehTese && tese ? tese : frase}</p>
               {ehTese && <p className="type-rotulo text-primary-text mt-1">Entra sozinha: é a sua tese do passo 3.</p>}
             </div>
@@ -67,8 +68,12 @@ function Ponte({ itens, titulo }: { itens: { passo: string; texto: string }[]; t
   );
 }
 
-function Painel(props: Props) {
+function Painel({ jaMarcados, ...props }: Props & { jaMarcados: string[] }) {
+  /* O marcador é usado no mesmo render que o criou: o modo estrito renderiza
+     2 vezes, e um filho que usasse o marcador do pai acharia tudo já usado. */
   const { paragrafo, causaA, causaB, tema, tese, perguntas } = props;
+  const m = criarMarcador(jaMarcados);
+  const rotulos = paragrafo.frases.map((f) => m(f.funcao));
   const [aba, setAba] = useState<'molde' | 'exemplo'>('molde');
   /* Celular: começa recolhido, para a caixa de texto aparecer sem rolar. */
   const [aberto, setAberto] = useState(false);
@@ -116,7 +121,7 @@ function Painel(props: Props) {
         {aba === 'molde' ? (
           <>
             <div className="mb-5"><PerguntasGuia perguntas={perguntas} /></div>
-            <ListaDeFrases paragrafo={paragrafo} frases={moldes} tese={tese} />
+            <ListaDeFrases paragrafo={paragrafo} frases={moldes} tese={tese} rotulos={rotulos} />
             {temPonte && <Ponte titulo="Ponte em 3 passos" itens={PONTE.map((p) => ({ passo: p.passo, texto: p.o_que }))} />}
             {temPonte && <p className="type-meta text-muted-foreground mt-2">{PONTE_AVISO}</p>}
             {paragrafo.chave === 'desenvolvimento1' && <p className="type-meta text-muted-foreground mt-4">Conectivos para variar: {CONECTIVOS.join(' / ')}.</p>}
@@ -125,7 +130,7 @@ function Painel(props: Props) {
         ) : (
           <>
             <p className="type-rotulo text-primary-text mb-3">Exemplo de estrutura, não copie · <span data-numeric>ENEM {EXEMPLO_ANO}</span></p>
-            <ListaDeFrases paragrafo={paragrafo} frases={exemplo.frases} />
+            <ListaDeFrases paragrafo={paragrafo} frases={exemplo.frases} rotulos={rotulos} />
             {exemplo.ponte && <Ponte titulo="A ponte neste exemplo" itens={exemplo.ponte.map((p) => ({ passo: p.passo, texto: p.trecho }))} />}
           </>
         )}
@@ -167,12 +172,17 @@ export function PassoParagrafo(props: Props) {
   const causas = ehIntroducao ? [causaA, causaB] : paragrafo.chave === 'desenvolvimento1' ? [causaA] : paragrafo.chave === 'desenvolvimento2' ? [causaB] : [];
   const nomes = Array.from(new Set(causas.flatMap((c) => causaPorChave(c)?.repertorios ?? [])));
   const contado = ehIntroducao ? introducaoComTese(texto, tese) : texto;
+  /* Glossário: a instrução vem antes dos rótulos do molde na leitura. */
+  const m = criarMarcador();
+  const instrucao = paragrafo.chave === 'conclusao'
+    ? `Feche com a proposta de intervenção: uma contra cada motivo, cada uma com agente, ação, meio, detalhamento e finalidade. Siga o molde. Meta: ${paragrafo.linhasMin} a ${paragrafo.linhasMax} linhas.`
+    : `Uma frase por função do molde. Meta: ${paragrafo.linhasMin} a ${paragrafo.linhasMax} linhas.`;
 
   return (
     <div>
-      <CabecalhoPasso titulo={paragrafo.titulo} instrucao={`Uma frase por função do molde. Meta: ${paragrafo.linhasMin} a ${paragrafo.linhasMax} linhas.`} />
+      <CabecalhoPasso titulo={paragrafo.titulo} instrucao={m(instrucao)} />
       <div className="grid gap-5 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:items-start lg:gap-8">
-        <Painel {...props} />
+        <Painel {...props} jaMarcados={termosDe(instrucao)} />
         <div className="lg:sticky lg:top-[4.25rem] lg:flex lg:h-[calc(100dvh-var(--altura-fixa-passo))] lg:min-h-[22rem] lg:flex-col">
           {nomes.length > 0 && (
             <div data-medir="autores" className="mb-4">
