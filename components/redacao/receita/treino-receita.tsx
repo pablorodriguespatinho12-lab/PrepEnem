@@ -14,7 +14,7 @@ import { duplaSugerida, montarRedacao, PARAGRAFOS, type ChaveParagrafo } from '@
 import {
   apagarRascunho, atualizarTese, lerRascunho, rascunhoVazio, salvarRascunho, sincronizarTese, teseDesatualizada, type Rascunho,
 } from '@/lib/redacao/rascunho-receita';
-import { BarraProgresso, PerguntasGuia, TOTAL_PASSOS } from './pecas';
+import { BarraProgresso, TOTAL_PASSOS } from './pecas';
 import { perguntasDoPasso } from '@/lib/redacao/conteudo-temas';
 import { PassoTema } from './passo-tema';
 import { PassoCausas } from './passo-causas';
@@ -86,11 +86,11 @@ export function TreinoReceita() {
   const perguntas = perguntasDoPasso(r.passo, r.tema, r.causaA, r.causaB);
   const conteudo = (
     <>
-      {r.passo <= 3 && <PerguntasGuia perguntas={perguntas} />}
-      {r.passo === 1 && <PassoTema tema={r.tema} temas={temas} erro={erroTemas} aoMudar={(tema) => mudarTemaOuMotivos({ tema })} />}
-      {r.passo === 2 && <PassoCausas tema={r.tema} causaA={r.causaA} causaB={r.causaB} sugeridas={duplaSugerida(r.tema, textosDaLista) ?? []} aoMudar={(causaA, causaB) => mudarTemaOuMotivos({ causaA, causaB })} />}
+      {r.passo === 1 && <PassoTema perguntas={perguntas} tema={r.tema} temas={temas} erro={erroTemas} aoMudar={(tema) => mudarTemaOuMotivos({ tema })} />}
+      {r.passo === 2 && <PassoCausas perguntas={perguntas} tema={r.tema} causaA={r.causaA} causaB={r.causaB} sugeridas={duplaSugerida(r.tema, textosDaLista) ?? []} aoMudar={(causaA, causaB) => mudarTemaOuMotivos({ causaA, causaB })} />}
       {r.passo === 3 && (
         <PassoTese
+          perguntas={perguntas}
           tese={r.tese}
           tema={r.tema}
           causaA={r.causaA}
@@ -131,10 +131,14 @@ export function TreinoReceita() {
   );
 
   return (
-    <div className="flex min-h-[calc(100dvh-4rem)] flex-col">
-      <header className="flex items-end justify-between gap-4 mb-6">
-        <div className="flex-1 max-w-md"><BarraProgresso passo={r.passo} /></div>
-        <div className="flex items-center gap-4">
+    /* --altura-fixa-passo: o que fica acima e abaixo do painel do molde na
+       tela grande (título, barra, linha do tema, nome do passo, Voltar/Próximo).
+       O painel rola por dentro e a página não precisa rolar. */
+    <div className="flex min-h-[calc(100dvh-6rem)] md:min-h-[calc(100dvh-4rem)] flex-col" style={{ ['--altura-fixa-passo' as string]: '22.5rem' }}>
+      <header className="flex flex-wrap items-center gap-x-6 gap-y-3 mb-4">
+        <h1 className="font-display type-headline font-bold">Treino por partes</h1>
+        <div className="flex-1 min-w-[12rem] max-w-sm"><BarraProgresso passo={r.passo} /></div>
+        <div className="ml-auto flex items-center gap-4">
         {r.passo > 1 && <BotaoRedacaoPronta />}
         <AlertDialog>
           <AlertDialogTrigger asChild>

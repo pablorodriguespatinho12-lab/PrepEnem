@@ -53,23 +53,26 @@ export function ContadorLinhas({ texto, min, max }: { texto: string; min: number
   );
 }
 
-export function CaixaTexto({ id, valor, aoMudar, rotulo, placeholder, alto = false }: {
+/* encher: na tela grande a caixa ocupa a altura que sobra na coluna (o pai é
+   flex em coluna com altura fixa), em vez de uma altura chutada. */
+export function CaixaTexto({ id, valor, aoMudar, rotulo, placeholder, alto = false, encher = false }: {
   id: string;
   valor: string;
   aoMudar: (v: string) => void;
   rotulo: string;
   placeholder: string;
   alto?: boolean;
+  encher?: boolean;
 }) {
   return (
-    <div>
+    <div className={encher ? 'lg:flex lg:min-h-0 lg:flex-1 lg:flex-col' : undefined}>
       <label htmlFor={id} className="type-meta font-semibold block mb-2">{rotulo}</label>
       <textarea
         id={id}
         value={valor}
         onChange={(e) => aoMudar(e.target.value)}
         placeholder={placeholder}
-        className={`block w-full max-w-[var(--measure-reading)] rounded-[var(--radius-control)] border border-muted-foreground bg-[hsl(var(--surface-2))] p-4 font-reading text-body leading-[var(--lh-reading)] placeholder:text-muted-foreground resize-y focus:outline-none ${alto ? 'min-h-[18rem]' : 'min-h-[7rem]'}`}
+        className={`block w-full max-w-[var(--measure-reading)] rounded-[var(--radius-control)] border border-muted-foreground bg-[hsl(var(--surface-2))] p-4 font-reading text-body leading-[var(--lh-reading)] placeholder:text-muted-foreground resize-y focus:outline-none ${alto ? 'min-h-[18rem]' : 'min-h-[7rem]'} ${encher ? 'lg:min-h-[9rem] lg:flex-1 lg:resize-none' : ''}`}
       />
     </div>
   );
@@ -98,12 +101,13 @@ export function Marcavel({ marcado, aoMudar, children }: { marcado: boolean; aoM
   );
 }
 
-/* Título de cada passo: o que fazer, em uma linha. */
-export function CabecalhoPasso({ titulo, instrucao }: { titulo: string; instrucao: string }) {
+/* Título de cada passo: o que fazer, em uma linha; embaixo, as perguntas-guia. */
+export function CabecalhoPasso({ titulo, instrucao, perguntas = [] }: { titulo: string; instrucao: string; perguntas?: string[] }) {
   return (
     <div className="mb-5">
       <h2 className="font-display type-title font-semibold">{titulo}</h2>
       <p className="type-meta text-muted-foreground mt-1">{instrucao}</p>
+      {perguntas.length > 0 && <div className="mt-4"><PerguntasGuia perguntas={perguntas} /></div>}
     </div>
   );
 }
@@ -112,7 +116,7 @@ export function CabecalhoPasso({ titulo, instrucao }: { titulo: string; instruca
 export function PerguntasGuia({ perguntas }: { perguntas: string[] }) {
   if (perguntas.length === 0) return null;
   return (
-    <section className="border-l-2 border-primary pl-4 mb-5" aria-label="Perguntas para pensar">
+    <section className="border-l-2 border-primary pl-4" aria-label="Perguntas para pensar">
       <p className="type-rotulo text-primary-text mb-1">Pense antes</p>
       <ul className="space-y-1">
         {perguntas.map((p) => <li key={p} className="font-reading type-body">{p}</li>)}

@@ -367,6 +367,18 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   linha fixa com o tema e [problema] trocado nos moldes (`problemaDoTema`);
   "Ver exemplo" em cada passo, tema de 2020, escrito à mão
   (`lib/redacao/exemplo-receita.ts`, o teste confere molde, ponte e linhas).
+  **Rodada de qualidade (Pablo, 28/10/2026):** conteúdo por tema escrito à mão
+  em `lib/redacao/conteudo-temas.ts` (7 temas da receita: forma curta, tópico
+  por motivo, motivos fracos, perguntas-guia); o tema inteiro só na ponte da
+  introdução, depois a forma curta ("Esse estigma decorre..."). Tese guarda
+  `teseGerada`: automática é regerada ao trocar motivos, editada ganha "Seus
+  motivos mudaram. Atualizar a tese?" (nunca sobrescreve). A tese entra
+  sozinha como 3ª frase da introdução. "Ver uma redação pronta, explicada":
+  a redação de 2020 como lista de trechos `{texto, funcao}`, grifo = rótulo +
+  cor + traço (não só cor), tocar mostra 1 linha. Passo 4-7 na tela grande:
+  molde à esquerda rola sozinho, caixa à direita parada, cabe em 1440×762
+  sem rolar; no celular o molde começa recolhido. Rótulos em `.type-rotulo`
+  (12,8 px, sem caixa-alta); texto de leitura em `font-reading type-body`.
 - As redações-modelo de `data/redacao/modelos.ts` (textos originais, temas
   reais, cada trecho comentado) seguem em /redacao/modelos. Não inventa
   texto-base com IA. Repertório nos modelos: só fato verificável.

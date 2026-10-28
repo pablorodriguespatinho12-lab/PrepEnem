@@ -117,10 +117,10 @@ function RedacaoGrifada() {
                             setEscolhido(ativo ? null : id);
                           }}
                           aria-pressed={ativo}
-                          className="cursor-pointer rounded-[2px] px-0.5 t-colors"
+                          className="cursor-pointer rounded-[var(--radius-data)] px-0.5 t-colors"
                           style={estiloGrifo(t.funcao, ativo)}
                         >
-                          <span className="type-rotulo text-muted-foreground mr-1 align-[0.15em] font-sans">{rotuloDoTrecho(t)}</span>
+                          <span className="type-rotulo text-foreground mr-1 align-[0.15em] font-sans whitespace-nowrap">{rotuloDoTrecho(t)}</span>
                           {t.texto}
                         </span>
                       );
@@ -151,7 +151,7 @@ function Legenda() {
   const proposta = FUNCOES.filter((f) => f.proposta);
   const item = (f: (typeof FUNCOES)[number]) => (
     <li key={f.chave} className="flex items-center gap-2 type-meta">
-      <span className="inline-block h-4 w-6 flex-shrink-0 rounded-[2px]" style={estiloGrifo(f.chave, false)} aria-hidden />
+      <span className="inline-block h-4 w-6 flex-shrink-0 rounded-[var(--radius-data)]" style={estiloGrifo(f.chave, false)} aria-hidden />
       {f.rotulo}
     </li>
   );

@@ -12,7 +12,7 @@ import { EXEMPLO_ANO, EXEMPLO_TEMA } from '@/lib/redacao/exemplo-receita';
 export function ListaAutores({ nomes, titulo = 'Autores para citar' }: { nomes: string[]; titulo?: string }) {
   return (
     <div>
-      <p className="type-caption font-semibold text-muted-foreground mb-1">{titulo}</p>
+      <p className="type-rotulo text-muted-foreground mb-1">{titulo}</p>
       <ul className="divide-y divide-border border-y border-border">
         {nomes.map((nome) => <ItemAutor key={nome} nome={nome} />)}
       </ul>
@@ -40,13 +40,48 @@ function ItemAutor({ nome }: { nome: string }) {
       {aberto && (
         <div id={id} className="pb-3">
           <p className="type-meta"><cite className="font-reading italic">{autor.obra}</cite> <span data-numeric className="text-muted-foreground">({autor.ano})</span></p>
-          <p className="type-meta text-muted-foreground mt-0.5">{autor.ideia}</p>
+          <p className="font-reading type-body mt-0.5">{autor.ideia}</p>
         </div>
       )}
     </li>
   );
 }
 
+/* Os autores numa linha de pílulas, em cima da caixa de texto: visíveis sem
+   rolar. Tocar abre a ficha (obra, ano, ideia) logo abaixo, uma por vez. */
+export function AutoresEmLinha({ nomes, titulo }: { nomes: string[]; titulo: string }) {
+  const [aberto, setAberto] = useState<string | null>(null);
+  const autor = aberto ? autorPorNome(aberto) : null;
+  return (
+    <div>
+      <p className="type-rotulo text-muted-foreground mb-2">{titulo}</p>
+      <ul className="flex flex-wrap gap-2">
+        {nomes.map((nome) => {
+          const ativo = nome === aberto;
+          return (
+            <li key={nome}>
+              <button
+                type="button"
+                onClick={() => setAberto(ativo ? null : nome)}
+                aria-expanded={ativo}
+                aria-controls="ficha-autor"
+                className="rounded-full border border-border px-3 py-1.5 type-meta font-medium t-colors hover:bg-muted aria-expanded:border-primary aria-expanded:bg-[hsl(var(--primary)/0.12)]"
+              >
+                {autorPorNome(nome)?.nome ?? nome}
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+      {autor && (
+        <div id="ficha-autor" className="mt-3 border-l-2 border-primary pl-3" aria-live="polite">
+          <p className="type-meta"><cite className="font-reading italic">{autor.obra}</cite> <span data-numeric className="text-muted-foreground">({autor.ano})</span></p>
+          <p className="font-reading type-body mt-0.5">{autor.ideia}</p>
+        </div>
+      )}
+    </div>
+  );
+}
 /* "Ver exemplo" fechado por padrão: o aluno tenta primeiro. */
 export function VerExemplo({ children }: { children: React.ReactNode }) {
   const [aberto, setAberto] = useState(false);
@@ -63,8 +98,8 @@ export function VerExemplo({ children }: { children: React.ReactNode }) {
       </button>
       {aberto && (
         <section className="mt-3 rounded-[var(--radius-surface)] border-l-4 border-primary surface-1 p-4" aria-label="Exemplo de estrutura">
-          <p className="type-caption font-semibold text-primary-text">Exemplo de estrutura, não copie</p>
-          <p className="type-caption text-muted-foreground mb-3"><span data-numeric>ENEM {EXEMPLO_ANO}</span>: {EXEMPLO_TEMA}</p>
+          <p className="type-rotulo text-primary-text">Exemplo de estrutura, não copie</p>
+          <p className="type-rotulo font-normal text-muted-foreground mb-3"><span data-numeric>ENEM {EXEMPLO_ANO}</span>: {EXEMPLO_TEMA}</p>
           {children}
         </section>
       )}

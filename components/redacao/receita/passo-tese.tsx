@@ -8,7 +8,8 @@ import { EXEMPLO_TESE } from '@/lib/redacao/exemplo-receita';
 import { CabecalhoPasso, CaixaTexto } from './pecas';
 import { VerExemplo } from './autores';
 
-export function PassoTese({ tese, tema, causaA, causaB, aoMudar, desatualizada, aoAtualizar }: {
+export function PassoTese({ perguntas, tese, tema, causaA, causaB, aoMudar, desatualizada, aoAtualizar }: {
+  perguntas: string[];
   tese: string;
   tema: string;
   causaA: ChaveCausa | null;
@@ -21,9 +22,9 @@ export function PassoTese({ tese, tema, causaA, causaB, aoMudar, desatualizada, 
   const semPalavraDoTema = !teseTemPalavraDoTema(tese, tema);
   return (
     <div>
-      <CabecalhoPasso titulo="Tese" instrucao="Uma frase: o problema do tema e os 2 motivos." />
+      <CabecalhoPasso titulo="Tese" instrucao="Uma frase: o problema do tema e os 2 motivos." perguntas={perguntas} />
       <div className="surface-1 rounded-[var(--radius-surface)] p-4 mb-5">
-        <p className="type-caption font-semibold text-primary-text mb-1">Molde</p>
+        <p className="type-rotulo text-primary-text mb-1">Molde</p>
         <p className="font-reading type-body">[palavras do tema] decorre, sobretudo, de [motivo 1] e de [motivo 2].</p>
         <p className="type-meta text-muted-foreground mt-2">
           Motivo 1: {causaPorChave(causaA)?.nome ?? 'não escolhido'} → D1 · Motivo 2: {causaPorChave(causaB)?.nome ?? 'não escolhido'} → D2

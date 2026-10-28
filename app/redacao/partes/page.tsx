@@ -11,11 +11,12 @@ import { TreinoReceita } from '@/components/redacao/receita/treino-receita';
 
 export default function RedacaoPartesPage() {
   return (
-    <div className="p-4 md:p-8 max-w-6xl mx-auto">
-      <Link href="/redacao" className="inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors mb-4">
+    <div className="px-4 pt-4 md:px-8 md:pt-8 max-w-6xl mx-auto">
+      <Link href="/redacao" className="inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors mb-2">
         <ChevronLeft className="w-4 h-4" aria-hidden /> Redação
       </Link>
-      <h1 className="font-display type-headline font-bold mb-6">Treino por partes</h1>
+      {/* O título fica na mesma linha da barra de passos (TreinoReceita): o
+          passo 4 precisa da altura toda da tela. */}
       <TreinoReceita />
     </div>
   );

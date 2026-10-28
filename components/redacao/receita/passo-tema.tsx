@@ -6,7 +6,8 @@ import { CabecalhoPasso } from './pecas';
 import { VerExemplo } from './autores';
 import type { TemaDaLista } from './use-temas';
 
-export function PassoTema({ tema, temas, erro, aoMudar }: {
+export function PassoTema({ perguntas, tema, temas, erro, aoMudar }: {
+  perguntas: string[];
   tema: string;
   temas: TemaDaLista[];
   erro: boolean;
@@ -19,7 +20,7 @@ export function PassoTema({ tema, temas, erro, aoMudar }: {
         <p data-numeric className="type-meta font-semibold">7 passos, cerca de 40 minutos.</p>
         <p className="type-meta text-muted-foreground">No fim você tem a redação inteira montada para copiar.</p>
       </div>
-      <CabecalhoPasso titulo="Tema" instrucao="Escolha um tema da lista ou digite outro." />
+      <CabecalhoPasso titulo="Tema" instrucao="Escolha um tema da lista ou digite outro." perguntas={perguntas} />
       <label htmlFor="tema-livre" className="type-meta font-semibold block mb-2">Tema</label>
       <input
         id="tema-livre"

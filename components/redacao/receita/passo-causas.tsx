@@ -9,12 +9,13 @@ import { CAUSAS, causaPorChave, motivosQueCombinamPouco, type ChaveCausa } from 
 import { conteudoDoTema } from '@/lib/redacao/conteudo-temas';
 import { EXEMPLO_CAUSAS } from '@/lib/redacao/exemplo-receita';
 import { CabecalhoPasso } from './pecas';
-import { ListaAutores, VerExemplo } from './autores';
+import { AutoresEmLinha, VerExemplo } from './autores';
 
 const DESTAQUE = { borderColor: 'hsl(var(--primary))', backgroundColor: 'hsl(var(--primary) / 0.1)' };
 const SELO = { backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' };
 
-export function PassoCausas({ tema, causaA, causaB, sugeridas, aoMudar }: {
+export function PassoCausas({ perguntas, tema, causaA, causaB, sugeridas, aoMudar }: {
+  perguntas: string[];
   tema: string;
   causaA: ChaveCausa | null;
   causaB: ChaveCausa | null;
@@ -30,7 +31,9 @@ export function PassoCausas({ tema, causaA, causaB, sugeridas, aoMudar }: {
   };
   return (
     <div>
-      <CabecalhoPasso titulo="Por que esse problema existe?" instrucao="Escolha 2 motivos. Eles viram sua tese e os 2 parágrafos do meio." />
+      <CabecalhoPasso titulo="Por que esse problema existe?" instrucao="Escolha 2 motivos. Eles viram sua tese e os 2 parágrafos do meio." perguntas={perguntas} />
+      {/* O aviso fica em cima dos cartões: embaixo, ficava fora da tela. */}
+      <AvisoMotivo tema={tema} causaA={causaA} causaB={causaB} />
       <ul className="grid gap-3 sm:grid-cols-2">
         {CAUSAS.map((c) => {
           const ordem = c.chave === causaA ? '1º motivo' : c.chave === causaB ? '2º motivo' : null;
@@ -47,18 +50,17 @@ export function PassoCausas({ tema, causaA, causaB, sugeridas, aoMudar }: {
                   <span className="font-display type-body font-semibold">{c.nome}</span>
                   {ordem && <span className="type-meta font-semibold rounded-[var(--radius-data)] px-2 py-0.5" style={SELO}>{ordem}</span>}
                 </span>
-                {sugerida && <span className="block type-caption font-semibold text-primary-text mb-2">Sugerido para este tema</span>}
-                <span className="block type-caption font-semibold text-muted-foreground">Entra na tese:</span>
-                <span className="block font-reading type-meta">{c.fraseDeTese}</span>
+                {sugerida && <span className="block type-rotulo text-primary-text mb-2">Sugerido para este tema</span>}
+                <span className="block type-rotulo text-muted-foreground">Entra na tese:</span>
+                <span className="block font-reading type-body">{c.fraseDeTese}</span>
               </button>
               <div className="px-4 pb-4">
-                <ListaAutores nomes={c.repertorios} />
+                <AutoresEmLinha nomes={c.repertorios} titulo="Autores para citar" />
               </div>
             </li>
           );
         })}
       </ul>
-      <AvisoMotivo tema={tema} causaA={causaA} causaB={causaB} />
       <MiniMapa causaA={causaA} causaB={causaB} />
       <VerExemplo>
         <p className="type-meta"><span className="font-semibold">1º motivo:</span> {causaPorChave(EXEMPLO_CAUSAS[0])?.nome}</p>
@@ -99,8 +101,9 @@ export function AvisoMotivo({ tema, causaA, causaB, aoTrocar }: {
   if (fracos.length === 0 || !sugeridos) return null;
   const [x, y] = sugeridos.map((c) => causaPorChave(c)?.nome);
   return (
-    <p className="mt-4 type-meta" role="status">
-      {fracos.length === 1 ? 'Esse motivo combina' : 'Esses motivos combinam'} pouco com o tema. Os sugeridos são {x} e {y}.
+    <p className="mb-4 mt-1 border-l-2 border-[hsl(var(--chart-5))] pl-3 type-meta" role="status">
+      <span className="font-semibold">{fracos.map((c) => causaPorChave(c)?.nome).join(' e ')}:</span>{' '}
+      {fracos.length === 1 ? 'esse motivo combina' : 'esses motivos combinam'} pouco com o tema. Os sugeridos são {x} e {y}.
       {aoTrocar && (
         <> <button type="button" onClick={aoTrocar} className="font-semibold text-primary-text underline underline-offset-2">Trocar motivos</button></>
       )}
