@@ -10,7 +10,7 @@
 // "fraseAgora", conferida aqui. Só contar dava "frase 3 de 4" para quem
 // escreveu 2 frases fora do molde (aluno-do-zero, 29/10/2026).
 
-import { autorPorNome } from './autores';
+import { autorPorNome, coringaPorNome } from './autores';
 import { causaPorChave, moldeDaFrase, PARAGRAFOS, type ChaveCausa, type ChaveParagrafo } from './receita';
 import { ondeEstou } from './onde-estou';
 import { semPalavraChula } from '@/lib/tutor/validar';
@@ -78,10 +78,15 @@ export function lerPedidoAjuda(corpo: unknown): PedidoAjuda | null {
    sempre com a ideia explicada (nome solto = repertório de bolso). */
 function fichas(p: PedidoAjuda): string {
   const causas = p.paragrafo === 'introducao' ? [p.causaA, p.causaB] : p.paragrafo === 'desenvolvimento1' ? [p.causaA] : p.paragrafo === 'desenvolvimento2' ? [p.causaB] : [];
-  const linhas = causas.flatMap((c) => causaPorChave(c)?.repertorios ?? []).map((nome) => {
+  /* Os coringas raros primeiro, com a frase que os liga ao motivo. */
+  const raros = causas.flatMap((c) => (causaPorChave(c)?.coringas ?? []).map((nome) => {
+    const k = coringaPorNome(nome);
+    return k && c ? `- [raro] ${k.nome}, "${k.obra}" (${k.ano}): ${k.ideia} Ligação ao motivo: ${k.amarra[c] ?? ''}` : null;
+  })).filter((l): l is string => l !== null);
+  const linhas = [...new Set([...raros, ...causas.flatMap((c) => causaPorChave(c)?.repertorios ?? []).map((nome) => {
     const a = autorPorNome(nome);
     return a ? `- ${a.nome}, "${a.obra}" (${a.ano}): ${a.ideia}` : `- ${nome}`;
-  });
+  })])];
   return linhas.length > 0 ? linhas.join('\n') : '(nenhum: a conclusão não cita autor novo)';
 }
 
@@ -102,7 +107,7 @@ ${molde}
 ${p.paragrafo === 'introducao' ? 'A frase 3 (tese) entra sozinha: ele escreve só as frases 1 e 2.\n' : ''}
 ONDE ELE ESTÁ: ${agora}
 
-AUTORES QUE ELE PODE USAR (só estes; ao sugerir um, diga a ideia dele):
+AUTORES QUE ELE PODE USAR (só estes; ao sugerir um, diga a ideia dele; prefira os [raro], que quase ninguém usa, e mostre como ligar ao tema):
 ${fichas(p)}
 
 O QUE ELE JÁ ESCREVEU NESTE PARÁGRAFO:

@@ -4,7 +4,8 @@
 
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import { autorPorNome } from '@/lib/redacao/autores';
+import { autorPorNome, coringaPorNome } from '@/lib/redacao/autores';
+import type { ChaveCausa } from '@/lib/redacao/receita';
 import { EXEMPLO_ANO, EXEMPLO_TEMA } from '@/lib/redacao/exemplo-receita';
 
 /* Cada nome é um botão que abre a ficha. Sem a ficha o aluno cita só o nome,
@@ -48,16 +49,24 @@ function ItemAutor({ nome }: { nome: string }) {
 }
 
 /* Os autores numa linha de pílulas, em cima da caixa de texto: visíveis sem
-   rolar. Tocar abre a ficha (obra, ano, ideia) logo abaixo, uma por vez. */
-export function AutoresEmLinha({ nomes, titulo }: { nomes: string[]; titulo: string }) {
+   rolar. Tocar abre a ficha (obra, ano, ideia) logo abaixo, uma por vez.
+   Os coringas raros vêm primeiro, marcados, e a ficha deles traz a frase que
+   os amarra ao motivo do parágrafo (`causas`, na ordem). */
+export function AutoresEmLinha({ nomes, titulo, coringas = [], causas = [] }: {
+  nomes: string[]; titulo: string; coringas?: string[]; causas?: (ChaveCausa | null)[];
+}) {
   const [aberto, setAberto] = useState<string | null>(null);
   const autor = aberto ? autorPorNome(aberto) : null;
+  const coringa = aberto ? coringaPorNome(aberto) : null;
+  const amarra = coringa ? causas.map((c) => (c ? coringa.amarra[c] : undefined)).find(Boolean) ?? Object.values(coringa.amarra)[0] : null;
+  const todos = [...coringas, ...nomes.filter((n) => !coringas.includes(n))];
   return (
     <div>
       {titulo && <p className="type-rotulo text-muted-foreground mb-2">{titulo}</p>}
       <ul className="flex flex-wrap gap-2">
-        {nomes.map((nome) => {
+        {todos.map((nome) => {
           const ativo = nome === aberto;
+          const raro = coringas.includes(nome);
           return (
             <li key={nome}>
               <button
@@ -65,8 +74,9 @@ export function AutoresEmLinha({ nomes, titulo }: { nomes: string[]; titulo: str
                 onClick={() => setAberto(ativo ? null : nome)}
                 aria-expanded={ativo}
                 aria-controls="ficha-autor"
-                className="rounded-full border border-border px-3 py-1.5 type-meta font-medium t-colors hover:bg-muted aria-expanded:border-primary aria-expanded:bg-[hsl(var(--primary)/0.12)]"
+                className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 type-meta font-medium t-colors hover:bg-muted aria-expanded:border-primary aria-expanded:bg-[hsl(var(--primary)/0.12)]"
               >
+                {raro && <span className="type-micro font-semibold uppercase tracking-wide text-primary-text">raro</span>}
                 {autorPorNome(nome)?.nome ?? nome}
               </button>
             </li>
@@ -75,8 +85,18 @@ export function AutoresEmLinha({ nomes, titulo }: { nomes: string[]; titulo: str
       </ul>
       {autor && (
         <div id="ficha-autor" className="mt-3 border-l-2 border-primary pl-3" aria-live="polite">
-          <p className="type-meta"><cite className="font-reading italic">{autor.obra}</cite> <span data-numeric className="text-muted-foreground">({autor.ano})</span></p>
+          <p className="type-meta">
+            {coringa && <span className="text-muted-foreground">{coringa.area} · </span>}
+            <cite className="font-reading italic">{autor.obra}</cite> <span data-numeric className="text-muted-foreground">({autor.ano})</span>
+          </p>
           <p className="font-reading type-body mt-0.5">{autor.ideia}</p>
+          {amarra && (
+            <>
+              <p className="type-rotulo text-primary-text mt-2">Como ligar ao seu motivo</p>
+              <p className="font-reading type-body mt-0.5">{amarra}</p>
+              <p className="type-meta text-muted-foreground mt-1">Comece por esta frase e troque pelas palavras do seu tema. Citado sem essa ligação, ele não vale ponto.</p>
+            </>
+          )}
         </div>
       )}
     </div>

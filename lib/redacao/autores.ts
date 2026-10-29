@@ -3,6 +3,8 @@
 // 27/10/2026). Fonte: docs/redacao/receita-redacao.md, "Repertório por eixo"
 // e "Ideia de cada autor". A chave é o texto exato de Causa.repertorios.
 
+import type { ChaveCausa } from './receita';
+
 export interface Autor {
   nome: string;
   obra: string;
@@ -89,4 +91,107 @@ export const AUTORES: Record<string, Autor> = {
   },
 };
 
-export const autorPorNome = (nome: string): Autor | null => AUTORES[nome] ?? null;
+/* Coringas raros (Pablo, 29/10/2026: "coisa muito rara, mas que serve para
+   tudo"). Critério, nota 0 a 2 em cada: raro em redação de ENEM, serve a 3
+   ou mais dos 5 motivos, o leigo entende em 1 linha, fato conferido em fonte.
+   Análise e fontes: docs/redacao/repertorios-coringa.md. A Cartilha 2025
+   (p.16) pune o "repertório de bolso", o que é usado em qualquer tema "de
+   forma decorada, automática ou forçada": por isso cada coringa traz a frase
+   que o AMARRA a cada motivo em que ele serve. */
+export interface Coringa extends Autor {
+  area: string;
+  amarra: Partial<Record<ChaveCausa, string>>;
+}
+
+export const CORINGAS: Record<string, Coringa> = {
+  'Efeito Mateus': {
+    nome: 'Robert K. Merton (Efeito Mateus)', obra: 'artigo "O Efeito Mateus na ciência", revista Science', ano: 1968, area: 'Sociologia',
+    ideia: 'Cientistas famosos levam mais crédito pelo mesmo trabalho: quem já tem vantagem ganha mais (o nome vem do Evangelho de Mateus).',
+    amarra: {
+      acesso: 'Quem nasce com acesso a boa escola e saúde acumula mais chances, e a distância para os outros só cresce.',
+      mercado: 'É o mesmo mecanismo com o dinheiro: renda gera mais renda, e quem começou sem nada fica para trás.',
+      historia: 'A vantagem que alguns grupos tiveram no passado se acumula até hoje, geração após geração.',
+    },
+  },
+  'Efeito espectador': {
+    nome: 'Darley e Latané (efeito espectador)', obra: 'experimento de psicologia publicado em revista científica', ano: 1968, area: 'Psicologia',
+    ideia: 'Num experimento, cada pessoa demorava mais a ajudar quando sabia que outras também tinham percebido o problema.',
+    amarra: {
+      estigma: 'Todos percebem quem sofre com o problema e, justamente por isso, ninguém se sente responsável por ajudar.',
+      estado: 'Como no efeito espectador, quando vários órgãos dividem a tarefa, cada um espera o outro e o problema fica sem dono.',
+    },
+  },
+  'Mundo justo': {
+    nome: 'Melvin Lerner (crença no mundo justo)', obra: 'livro The Belief in a Just World ("A crença num mundo justo")', ano: 1980, area: 'Psicologia',
+    ideia: 'As pessoas querem acreditar que cada um recebe o que merece; por isso tendem a culpar quem sofre pelo próprio sofrimento.',
+    amarra: {
+      estigma: 'Quem sofre com o problema é visto como culpado pela própria situação, e isso serve de desculpa para não ajudar.',
+      acesso: 'Quem não tem acesso é acusado de "não ter se esforçado", e a desigualdade passa a parecer justa.',
+    },
+  },
+  'Cidadania regulada': {
+    nome: 'Wanderley Guilherme dos Santos (cidadania regulada)', obra: 'livro Cidadania e Justiça', ano: 1979, area: 'Ciência política',
+    ideia: 'No governo de Getúlio Vargas (anos 1930 e 1940), só tinha direito trabalhista e aposentadoria quem tinha carteira assinada.',
+    amarra: {
+      estado: 'Restos dessa lógica ainda deixam quem trabalha sem carteira com menos proteção do que a lei promete a todos.',
+      historia: 'Desde Vargas, os direitos chegaram primeiro a quem tinha carteira assinada, e quem ficou de fora ainda espera.',
+      acesso: 'Quem trabalha sem carteira ainda tem menos acesso a aposentadoria e proteção quando adoece.',
+    },
+  },
+  'Vozes da Seca': {
+    nome: 'Luiz Gonzaga e Zé Dantas, "Vozes da Seca"', obra: 'canção', ano: 1953, area: 'Música',
+    ideia: 'O sertanejo pede aos políticos obra que resolva a seca, como açude e trabalho, e não só uma ajuda que acaba logo.',
+    amarra: {
+      estado: 'O Estado ainda responde com ajuda emergencial, sem a obra que resolveria o problema de vez.',
+      estigma: 'Quem precisa de apoio é tratado como pedinte, e não como cidadão com direitos.',
+      acesso: 'Sem a obra que fica, o acesso à água e ao trabalho continua dependendo de favor.',
+    },
+  },
+  'A Cidade': {
+    nome: 'Chico Science & Nação Zumbi, "A Cidade"', obra: 'canção do disco Da Lama ao Caos', ano: 1994, area: 'Música',
+    ideia: 'A cidade cresce sem parar, mas "o de cima sobe e o de baixo desce": o rico fica mais rico, e o pobre, mais pobre.',
+    amarra: {
+      acesso: 'O país cresce, mas o acesso fica com quem já está em cima, e quem está embaixo desce ainda mais.',
+      mercado: 'A cidade cresce como negócio, e o lucro de poucos aumenta a distância entre as pessoas.',
+    },
+  },
+  'A Caverna': {
+    nome: 'José Saramago, A Caverna', obra: 'romance', ano: 2000, area: 'Literatura',
+    ideia: 'Um artesão de louça de barro perde o único comprador, um shopping gigante que só quer prato de plástico: o mercado descarta pessoas.',
+    amarra: {
+      mercado: 'Como o artesão de Saramago, quem não dá lucro é descartado, mesmo quando o que faz tem valor.',
+      estigma: 'Quem é visto como antigo é descartado, como o artesão do romance, mesmo sabendo fazer bem o seu trabalho.',
+      acesso: 'Quem não acompanha o que o mercado quer perde o acesso ao próprio sustento.',
+    },
+  },
+  'Isaías Caminha': {
+    nome: 'Lima Barreto, Recordações do Escrivão Isaías Caminha', obra: 'romance', ano: 1909, area: 'Literatura',
+    ideia: 'Um jovem mulato e pobre acredita que estudar basta para subir na vida e esbarra no racismo: o esforço sozinho não abre porta fechada.',
+    amarra: {
+      estigma: 'Como Isaías Caminha, quem carrega o estigma é julgado antes de mostrar o que sabe.',
+      historia: 'Escrito 21 anos após o fim da escravidão, o livro mostra uma liberdade sem integração que ainda pesa hoje.',
+      acesso: 'Estudar não basta quando a porta já está fechada para alguns grupos.',
+    },
+  },
+  'Amor e Fúria': {
+    nome: 'Luiz Bolognesi, Uma História de Amor e Fúria', obra: 'animação premiada no festival de Annecy, na França', ano: 2013, area: 'Cinema',
+    ideia: 'Um herói atravessa mais de 500 anos de Brasil, da colonização até 2096, e vê sempre os mesmos vencedores.',
+    amarra: {
+      historia: 'Os mesmos grupos vencem há 500 anos, e o problema de hoje é mais um capítulo dessa história.',
+      mercado: 'No filme, em 2096, até a água vira mercadoria: quem não pode pagar fica sem.',
+      acesso: 'Quem não pode pagar fica sem o básico, como a água no Rio de 2096 do filme.',
+    },
+  },
+  'Revolta da Vacina': {
+    nome: 'Nicolau Sevcenko, A Revolta da Vacina', obra: 'livro de história', ano: 1984, area: 'História',
+    ideia: 'Em 1904, o povo do Rio se revoltou também contra as obras que derrubaram as casas dos pobres: o problema era a imposição, não a vacina.',
+    amarra: {
+      estado: 'Quando o Estado impõe sem explicar, como em 1904, a população desconfia até do que é bom para ela.',
+      acesso: 'Os pobres foram tirados do centro do Rio, e morar perto do trabalho virou privilégio.',
+      estigma: 'Em 1904, o pobre foi tratado como foco de doença, e não como cidadão.',
+    },
+  },
+};
+
+export const autorPorNome = (nome: string): Autor | null => AUTORES[nome] ?? CORINGAS[nome] ?? null;
+export const coringaPorNome = (nome: string): Coringa | null => CORINGAS[nome] ?? null;

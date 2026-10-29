@@ -419,6 +419,17 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   citar a C4); `trechoExiste` aceita frase por frase, com 3+ palavras cada.
   **Aberto:** ela deu C5 = 200 para "o governo deve ajudar... campanhas na
   televisão", generosa demais; calibrar custa o golden set (1 rodada/dia).
+- **Coringas raros (Pablo, 29/10/2026: "coisa muito rara, mas que serve para
+  tudo"):** 10 em `CORINGAS` (`lib/redacao/autores.ts`), 3 por motivo
+  (`Causa.coringas`). Ficam antes dos autores comuns, com a marca "raro", e a
+  ficha traz "Como ligar ao seu motivo". 6 de cultura e 4 de ciência, porque
+  13 das 20 redações das cartilhas usam cultura. A Cartilha 2025 (p.16) pune o
+  repertório "de bolso" que entra "decorado, automático ou forçado", e não o
+  autor: coringa sem amarra é exatamente isso. Fato e amarra foram conferidos
+  por 2 agentes; 7 das 10 fichas foram corrigidas (Mateus é crédito na ciência,
+  e não lucro; "esmola" saiu de "Vozes da Seca" por risco político). Análise,
+  notas e cortes: `docs/redacao/repertorios-coringa.md`. Testes:
+  `lib/redacao/coringas.test.ts` (barra os batidos) e `tests/e2e/coringas.e2e.ts`.
 - **Menos poluição nos passos 4 a 7 (mesmo dia):** o molde destaca só a frase
   de agora (feitas com visto, futuras apagadas); "Pense antes" mudou para a
   aba Ajuda; ponte, conectivos e erros da proposta foram para "Mais dicas";

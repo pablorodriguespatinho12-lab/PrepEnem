@@ -221,7 +221,9 @@ function Elementos({ elementos, aoMarcar }: { elementos: Props['elementos']; aoM
 
 /* Autores recolhidos numa linha; abrem sozinhos quando a frase de agora é a
    do repertório, que é quando ele precisa deles. Tocar decide de vez. */
-function Autores({ nomes, titulo, fraseDeRepertorio }: { nomes: string[]; titulo: string; fraseDeRepertorio: boolean }) {
+function Autores({ nomes, coringas, causas, titulo, fraseDeRepertorio }: {
+  nomes: string[]; coringas: string[]; causas: (ChaveCausa | null)[]; titulo: string; fraseDeRepertorio: boolean;
+}) {
   const [escolha, setEscolha] = useState<boolean | null>(null);
   const aberto = escolha ?? fraseDeRepertorio;
   return (
@@ -232,10 +234,10 @@ function Autores({ nomes, titulo, fraseDeRepertorio }: { nomes: string[]; titulo
         aria-expanded={aberto}
         className="inline-flex items-center gap-1.5 type-rotulo text-muted-foreground hover:text-foreground t-colors"
       >
-        {titulo} · <span data-numeric>{nomes.length}</span>
+        {titulo} · <span data-numeric>{nomes.length + coringas.length}</span>
         <ChevronDown className="w-4 h-4 transition-transform duration-200 motion-reduce:transition-none" style={{ transform: aberto ? 'rotate(180deg)' : undefined }} aria-hidden />
       </button>
-      {aberto && <div className="mt-2"><AutoresEmLinha nomes={nomes} titulo="" /></div>}
+      {aberto && <div className="mt-2"><AutoresEmLinha nomes={nomes} coringas={coringas} causas={causas} titulo="" /></div>}
     </div>
   );
 }
@@ -246,6 +248,7 @@ export function PassoParagrafo(props: Props) {
   /* Introdução: autores dos 2 motivos; D1 e D2: do motivo do parágrafo. */
   const causas = ehIntroducao ? [causaA, causaB] : paragrafo.chave === 'desenvolvimento1' ? [causaA] : paragrafo.chave === 'desenvolvimento2' ? [causaB] : [];
   const nomes = Array.from(new Set(causas.flatMap((c) => causaPorChave(c)?.repertorios ?? [])));
+  const coringas = Array.from(new Set(causas.flatMap((c) => causaPorChave(c)?.coringas ?? [])));
   const contado = ehIntroducao ? introducaoComTese(texto, tese) : texto;
   const onde = ondeEstou(texto, paragrafo.chave, paragrafo.frases.length);
   const fraseDeRepertorio = /^repert[óo]rio/i.test(paragrafo.frases[onde.atual]?.funcao ?? '');
@@ -313,7 +316,7 @@ export function PassoParagrafo(props: Props) {
         />
         <div className="lg:sticky lg:top-[4.25rem] lg:flex lg:h-[calc(100dvh-var(--altura-fixa-passo))] lg:min-h-[22rem] lg:flex-col">
           {nomes.length > 0 && (
-            <Autores nomes={nomes} titulo={ehIntroducao ? 'Autores dos seus motivos' : 'Autores deste motivo'} fraseDeRepertorio={fraseDeRepertorio} />
+            <Autores nomes={nomes} coringas={coringas} causas={causas} titulo={ehIntroducao ? 'Autores dos seus motivos' : 'Autores deste motivo'} fraseDeRepertorio={fraseDeRepertorio} />
           )}
           <CaixaTexto
             id={`texto-${paragrafo.chave}`}

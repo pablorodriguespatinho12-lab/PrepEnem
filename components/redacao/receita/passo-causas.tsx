@@ -56,7 +56,7 @@ export function PassoCausas({ perguntas, tema, causaA, causaB, sugeridas, aoMuda
                 <span className="block font-reading type-body">{c.fraseDeTese}</span>
               </button>
               <div className="px-4 pb-4">
-                <AutoresEmLinha nomes={c.repertorios} titulo="Autores para citar" />
+                <AutoresEmLinha nomes={c.repertorios} coringas={c.coringas} causas={[c.chave]} titulo="Autores para citar" />
               </div>
             </li>
           );
