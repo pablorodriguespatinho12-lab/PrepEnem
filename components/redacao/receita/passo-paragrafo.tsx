@@ -230,7 +230,7 @@ function Autores({ nomes, coringas, causas, titulo, fraseDeRepertorio }: {
   return (
     /* Trava: a caixa de texto nunca vai para baixo da barra, mesmo com
        "Outros autores" aberto. */
-    <div data-medir="autores" className="mb-4 lg:max-h-[45%] lg:shrink-0 lg:overflow-y-auto">
+    <div data-medir="autores" className="mb-4 lg:max-h-[60%] lg:shrink-0 lg:overflow-y-auto">
       <button
         type="button"
         onClick={() => setEscolha(!aberto)}

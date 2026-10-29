@@ -106,6 +106,9 @@ export interface Coringa {
   rotulo: string;
   /* A frase exata do autor (vai entre aspas na tela) ou o dado com o número. */
   texto: string;
+  /* A frase em palavras simples: quem nunca leu a obra entende logo
+     (aluno-do-zero, 29/10/2026: "lírios", "as batatas" travavam). */
+  sentido?: string;
   /* Quem disse e onde (fala), ou a pesquisa (dado). */
   fonte: string;
   quando: string;
@@ -116,6 +119,7 @@ export const CORINGAS: Record<string, Coringa> = {
   Drummond: {
     tipo: 'fala', rotulo: 'Carlos Drummond de Andrade', quando: '1945',
     texto: 'As leis não bastam. Os lírios não nascem da lei.',
+    sentido: 'Lírio é uma flor: a vida boa não nasce só porque uma lei manda.',
     fonte: 'poema "Nosso tempo", do livro A Rosa do Povo',
     amarra: {
       estado: 'A lei já garante o direito, mas, como diz Drummond, só a lei não faz o direito chegar a quem precisa.',
@@ -125,7 +129,8 @@ export const CORINGAS: Record<string, Coringa> = {
   'Dom Hélder': {
     tipo: 'fala', rotulo: 'Dom Hélder Câmara', quando: 'anos 1960 e 1970',
     texto: 'Quando dou comida aos pobres, chamam-me de santo. Quando pergunto por que eles não têm comida, chamam-me de comunista.',
-    fonte: 'frase do arcebispo de Olinda e Recife; cite "como dizia Dom Hélder", sem data',
+    sentido: 'Ajudar é aplaudido; perguntar a causa do problema incomoda. Na redação, escreva "como dizia Dom Hélder", sem data.',
+    fonte: 'arcebispo de Olinda e Recife',
     amarra: {
       estado: 'Ajudar na emergência é preciso, mas o Estado também tem de perguntar por que o problema existe e atacar a causa.',
       acesso: 'Doar resolve o dia; perguntar por que falta é o que muda o acesso de verdade.',
@@ -134,56 +139,60 @@ export const CORINGAS: Record<string, Coringa> = {
   Carolina: {
     tipo: 'fala', rotulo: 'Carolina Maria de Jesus', quando: '1960',
     texto: 'E assim no dia 13 de maio de 1958 eu lutava contra a escravatura atual – a fome!',
+    sentido: '13 de maio é o dia do fim da escravidão (1888). Setenta anos depois, ela diz que a fome prende como a escravidão prendia.',
     fonte: 'diário Quarto de Despejo',
     amarra: {
-      historia: 'Setenta anos depois da abolição, Carolina via a fome como uma nova escravidão: a exclusão só mudou de forma.',
+      historia: 'Setenta anos depois do fim da escravidão, Carolina via a fome como uma nova escravidão: a exclusão só mudou de forma.',
     },
   },
   'Conceição Evaristo': {
     tipo: 'fala', rotulo: 'Conceição Evaristo', quando: '2014',
     texto: 'A gente combinamos de não morrer.',
-    fonte: 'conto do livro Olhos d\'água (a concordância é de propósito: é a fala do povo)',
+    sentido: 'O "combinamos" é de propósito: é a fala do povo. No conto, jovens negros da favela fazem um pacto para sobreviver.',
+    fonte: 'conto do livro Olhos d\'água',
     amarra: {
       estigma: 'Para quem é visto como suspeito, sobreviver já é uma luta diária, como no conto de Conceição Evaristo.',
-      historia: 'Mais de um século após a abolição, a população negra ainda luta, antes de tudo, para não morrer.',
+      historia: 'Mais de um século após o fim da escravidão, jovens negros da periferia ainda lutam, antes de tudo, para não morrer.',
     },
   },
   Graciliano: {
     tipo: 'fala', rotulo: 'Graciliano Ramos', quando: '1938',
     texto: 'Você é um bicho, Fabiano.',
+    sentido: 'Fabiano é um sertanejo pobre, tão maltratado pela seca e pelo patrão que passa a se ver como bicho.',
     fonte: 'romance Vidas Secas',
     amarra: {
-      estigma: 'Quem é tratado como menos que gente acaba se vendo assim, como Fabiano em Vidas Secas.',
-      mercado: 'Fabiano trabalha a vida toda e é enganado nas contas pelo patrão: trabalho sem dignidade desumaniza.',
+      estigma: 'Fabiano, tratado como menos que gente, passa a se ver como bicho, e é isso que o preconceito faz.',
+      mercado: 'Enganado nas contas pelo patrão, Fabiano aceita calado: quem trabalha sem direitos se sente menos que gente.',
     },
   },
   Machado: {
     tipo: 'fala', rotulo: 'Machado de Assis', quando: '1891',
     texto: 'Ao vencido, ódio ou compaixão; ao vencedor, as batatas.',
+    sentido: 'Quem vence a disputa leva o prêmio (as batatas); quem perde ganha só raiva ou pena. Machado zomba dessa lei do mais forte.',
     fonte: 'romance Quincas Borba, capítulo VI',
     amarra: {
-      mercado: 'Na lógica do lucro, quem ganha leva tudo, e quem perde recebe, no máximo, pena.',
+      mercado: 'Na competição sem limites, como ironizava Machado, quem vence leva tudo e quem perde recebe, no máximo, pena.',
     },
   },
   'Dado esgoto': {
     tipo: 'dado', rotulo: 'quase metade sem esgoto', quando: '2026',
-    texto: 'Quase metade dos brasileiros, cerca de 90 milhões de pessoas, não tem coleta de esgoto.',
-    fonte: 'Instituto Trata Brasil, Ranking do Saneamento, com dados do governo federal (SINISA)',
+    texto: 'Quase metade dos brasileiros, cerca de 90 milhões de pessoas, não tem acesso à coleta de esgoto.',
+    fonte: 'Instituto Trata Brasil, Ranking do Saneamento, com dados do governo federal',
     amarra: {
       estado: 'Um serviço básico, que é dever do poder público, ainda falta a quase metade do país.',
     },
   },
   'Dado 1888': {
     tipo: 'dado', rotulo: 'último a abolir a escravidão', quando: '1888',
-    texto: 'O Brasil foi o último país das Américas a abolir a escravidão, em 1888, com a Lei Áurea.',
-    fonte: 'Lei nº 3.353, de 13 de maio de 1888',
+    texto: 'O Brasil foi o último país das Américas a acabar com a escravidão, em 1888, com a Lei Áurea.',
+    fonte: 'Lei nº 3.353, de 13 de maio de 1888 (a Lei Áurea)',
     amarra: {
-      historia: 'Mais de três séculos de escravidão e uma abolição sem integração ainda pesam sobre o país.',
+      historia: 'Mais de três séculos de escravidão e um fim sem terra, escola nem trabalho para os libertos ainda pesam sobre o país.',
     },
   },
   'Dado Inaf': {
     tipo: 'dado', rotulo: '3 em 10 não entendem um texto', quando: '2024',
-    texto: '3 em cada 10 brasileiros de 15 a 64 anos são analfabetos funcionais: leem, mas não entendem bem um texto.',
+    texto: '3 em cada 10 brasileiros de 15 a 64 anos são analfabetos funcionais: têm dificuldade de entender até textos simples.',
     fonte: 'Indicador de Alfabetismo Funcional (Inaf), da Ação Educativa e do Instituto Paulo Montenegro',
     amarra: {
       acesso: 'Sem entender bem um texto, a pessoa tem menos acesso a direitos, a emprego e a informação.',
@@ -191,18 +200,18 @@ export const CORINGAS: Record<string, Coringa> = {
   },
   'Dado violência': {
     tipo: 'dado', rotulo: '3 em 4 vítimas são negras', quando: '2026',
-    texto: '3 em cada 4 vítimas de homicídio no Brasil são negras (77%).',
+    texto: '3 em cada 4 pessoas assassinadas no Brasil são negras, contando pretos e pardos (77%).',
     fonte: 'Atlas da Violência, do Ipea e do Fórum Brasileiro de Segurança Pública',
     amarra: {
-      estigma: 'O estigma tem cor: 3 em cada 4 pessoas assassinadas no país são negras.',
+      estigma: 'O preconceito tem cor: 3 em cada 4 pessoas assassinadas no país são negras.',
     },
   },
   'Dado informalidade': {
     tipo: 'dado', rotulo: '4 em 10 trabalham informais', quando: '2026',
-    texto: 'Quase 4 em cada 10 trabalhadores brasileiros são informais (37,4%), sem a proteção de um emprego formal.',
-    fonte: 'IBGE, PNAD Contínua (2º trimestre)',
+    texto: 'Quase 4 em cada 10 trabalhadores brasileiros são informais (37,4%): sem carteira assinada ou sem CNPJ, em geral sem férias nem 13º.',
+    fonte: 'IBGE, pesquisa PNAD Contínua (2º trimestre)',
     amarra: {
-      mercado: 'Quando o trabalho é visto só como custo, quase 4 em cada 10 ficam sem a proteção de um emprego formal.',
+      mercado: 'Quase 4 em cada 10 trabalhadores vivem sem garantias como férias, 13º e aposentadoria.',
     },
   },
 };

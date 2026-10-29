@@ -91,7 +91,10 @@ export function AutoresEmLinha({ nomes, titulo, coringas = [], causas = [] }: {
       {coringa && (
         <div id="ficha-autor" className="mt-3 border-l-2 border-primary pl-3" aria-live="polite">
           <p className="font-reading type-body">{coringa.tipo === 'fala' ? <>&ldquo;{coringa.texto}&rdquo;</> : coringa.texto}</p>
-          <p className="type-meta text-muted-foreground mt-0.5">{coringa.fonte} <span data-numeric>({coringa.quando})</span></p>
+          <p className="type-meta mt-0.5">
+            <span className="text-muted-foreground">{coringa.fonte} <span data-numeric>({coringa.quando})</span>.</span>
+            {coringa.sentido && <> {coringa.sentido}</>}
+          </p>
           {amarra && (
             <p className="type-meta mt-1.5">
               <span className="font-medium text-primary-text">Ligue ao seu tema assim: </span>{amarra}

@@ -47,3 +47,9 @@ No passo do parágrafo aparecem só 3 coringas (sem rolagem); os outros autores
 ficam atrás de "Outros autores". Medido na introdução, com a ficha aberta: em
 1917×1030 a caixa de texto termina em 885 px (antes, 1024 px, por baixo da
 barra); em 1440×900 a página não rola (antes, 1024 de 900).
+
+## Revisão final (29/10/2026)
+
+- O agente `aluno-do-zero` travou em "lírios", "as batatas", "escravatura atual" e na concordância de Conceição Evaristo. Cada frase ganhou uma linha de sentido, em palavras simples.
+- O professor-checador corrigiu dois dados. O Inaf soma quem não lê e quem lê muito pouco, por isso a ficha diz "têm dificuldade de entender até textos simples". A informalidade inclui quem trabalha por conta própria sem CNPJ, por isso diz "sem carteira assinada ou sem CNPJ". Ele também trocou uma amarra forçada da informalidade.
+- Medido na ficha mais longa (Dom Hélder, passo 6): não rola em 1440×900 nem em 1917×1030, e 0 px ficam escondidos no bloco.

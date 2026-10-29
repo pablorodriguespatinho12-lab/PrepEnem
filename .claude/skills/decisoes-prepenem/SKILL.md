@@ -419,17 +419,21 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   citar a C4); `trechoExiste` aceita frase por frase, com 3+ palavras cada.
   **Aberto:** ela deu C5 = 200 para "o governo deve ajudar... campanhas na
   televisão", generosa demais; calibrar custa o golden set (1 rodada/dia).
-- **Coringas raros (Pablo, 29/10/2026: "coisa muito rara, mas que serve para
-  tudo"):** 10 em `CORINGAS` (`lib/redacao/autores.ts`), 3 por motivo
-  (`Causa.coringas`). Ficam antes dos autores comuns, com a marca "raro", e a
-  ficha traz "Como ligar ao seu motivo". 6 de cultura e 4 de ciência, porque
-  13 das 20 redações das cartilhas usam cultura. A Cartilha 2025 (p.16) pune o
-  repertório "de bolso" que entra "decorado, automático ou forçado", e não o
-  autor: coringa sem amarra é exatamente isso. Fato e amarra foram conferidos
-  por 2 agentes; 7 das 10 fichas foram corrigidas (Mateus é crédito na ciência,
-  e não lucro; "esmola" saiu de "Vozes da Seca" por risco político). Análise,
-  notas e cortes: `docs/redacao/repertorios-coringa.md`. Testes:
-  `lib/redacao/coringas.test.ts` (barra os batidos) e `tests/e2e/coringas.e2e.ts`.
+- **Coringas = frase de autor ou dado (Pablo, 29/10/2026: "coisa muito rara,
+  mas que serve para tudo"; depois, vendo conceitos e obras no ar: "fáceis de
+  memorizar, falas de autores é o que eu mais gosto, ou dados"):** 11 em
+  `CORINGAS` (`lib/redacao/autores.ts`), 3 por motivo (2 falas e 1 dado,
+  `Causa.coringas`). A frase é EXATA e conferida em fonte; a frase sem fonte
+  primária sai (Josué de Castro, "metade da humanidade não come"), e a de forma
+  errada também (Darcy disse "é um programa"). Dado só com fonte oficial, sem
+  número só da imprensa. Cada um tem `sentido` (a frase em palavras simples: o
+  aluno-do-zero travou em "lírios" e "as batatas") e a amarra por motivo, porque a
+  Cartilha 2025 (p.16) pune o repertório "de bolso" que entra "decorado,
+  automático ou forçado". **Sem rolagem:** só 3 coringas à vista, e os outros
+  autores ficam atrás de "Outros autores". Medido: a ficha mais longa (Dom Hélder) cabe
+  em 1440×900, sem rolar a página nem o bloco. Análise e fontes:
+  `docs/redacao/repertorios-coringa.md`. Testes: `lib/redacao/coringas.test.ts`
+  (barra os batidos) e `tests/e2e/coringas.e2e.ts` (mede a rolagem).
 - **Menos poluição nos passos 4 a 7 (mesmo dia):** o molde destaca só a frase
   de agora (feitas com visto, futuras apagadas); "Pense antes" mudou para a
   aba Ajuda; ponte, conectivos e erros da proposta foram para "Mais dicas";

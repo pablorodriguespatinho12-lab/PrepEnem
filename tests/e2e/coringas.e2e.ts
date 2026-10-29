@@ -60,6 +60,8 @@ async function percorrer(largura: number): Promise<[string, boolean, string][]> 
     prova('caixa de texto acima da barra', !!barra && fundo <= barra.y, `caixa até ${fundo}, barra em ${Math.round(barra?.y ?? 0)}`);
     const rola = await page.evaluate(() => document.documentElement.scrollHeight > innerHeight + 1);
     prova('página não rola', !rola, rola ? 'rola' : 'cabe');
+    const dentro = await page.locator('[data-medir="autores"]').evaluate((el) => el.scrollHeight - el.clientHeight);
+    prova('ficha inteira à vista, sem rolar por dentro', dentro <= 1, `${dentro} px escondidos`);
   }
 
   /* Passo 2: cada motivo mostra os seus coringas. */
