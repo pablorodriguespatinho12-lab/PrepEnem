@@ -1,22 +1,25 @@
 'use client';
 // Passos 4 a 7: introdução, D1, D2 e conclusão. Tela grande: o painel do
 // molde à esquerda rola sozinho e a caixa de texto à direita fica parada
-// (sticky), com os autores em cima dela: tudo visível sem rolar a página
-// (antes: 1.419 px de altura numa tela de 762, autores e exemplo fora da
-// vista). Celular: o painel do molde recolhe acima da caixa.
-// O painel alterna Molde e Exemplo (o parágrafo do tema de 2020).
+// (sticky): tudo visível sem rolar a página (antes: 1.419 px de altura numa
+// tela de 762). Celular: o painel recolhe acima da caixa.
+// O painel alterna Molde, Ajuda (IA, a pedido) e Exemplo (tema de 2020).
+// Menos coisa à vista (Pablo, 29/10/2026: "muita poluição visual"): o molde
+// destaca só a frase de agora, as dicas da ponte e os autores recolhem.
 
 import { useEffect, useState, type ReactNode } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { Check, ChevronDown, LifeBuoy } from 'lucide-react';
 import {
   causaPorChave, CONECTIVOS, ELEMENTOS, ERROS_PROPOSTA, introducaoComTese, moldeDaFrase, PONTE, PONTE_AVISO,
   type ChaveCausa, type ChaveElemento, type Paragrafo,
 } from '@/lib/redacao/receita';
 import { EXEMPLO_ANO, EXEMPLO_PARAGRAFOS } from '@/lib/redacao/exemplo-receita';
-import { CabecalhoPasso, CaixaTexto, ContadorLinhas, PerguntasGuia } from './pecas';
+import { juntarComeco, ondeEstou, type OndeEstou } from '@/lib/redacao/onde-estou';
+import { CabecalhoPasso, CaixaTexto, ContadorLinhas } from './pecas';
 import { AutoresEmLinha } from './autores';
 import { criarMarcador, termosDe } from './glossario';
 import { AvisoMotivo } from './passo-causas';
+import { AjudaEscrita, ajudaVazia, pedirAjuda, type EstadoAjuda } from './ajuda-escrita';
 
 interface Props {
   paragrafo: Paragrafo;
@@ -34,19 +37,33 @@ interface Props {
   aoVerMolde: () => void;
 }
 
+type Aba = 'molde' | 'ajuda' | 'exemplo';
+const ABAS: { chave: Aba; nome: string }[] = [{ chave: 'molde', nome: 'Molde' }, { chave: 'ajuda', nome: 'Ajuda' }, { chave: 'exemplo', nome: 'Exemplo' }];
+
 /* Uma frase por linha da lista: o nome da função em cima, o molde em texto
-   de leitura. A tese (3ª frase da introdução) é a do passo 3 e entra sozinha. */
-function ListaDeFrases({ paragrafo, frases, tese, rotulos }: { paragrafo: Paragrafo; frases: string[]; tese?: string; rotulos: ReactNode[] }) {
+   de leitura. A tese (3ª frase da introdução) é a do passo 3 e entra sozinha.
+   Com `onde`, a frase de agora fica em destaque, as feitas ganham o visto e
+   as que faltam ficam apagadas: o olho vai direto para o que fazer. */
+function ListaDeFrases({ paragrafo, frases, tese, rotulos, onde }: { paragrafo: Paragrafo; frases: string[]; tese?: string; rotulos: ReactNode[]; onde?: OndeEstou }) {
   return (
-    <ol className="space-y-4">
+    <ol className="space-y-3">
       {frases.map((frase, i) => {
         const ehTese = tese !== undefined && paragrafo.chave === 'introducao' && i === 2;
+        const feita = onde ? i < onde.atual || (ehTese && onde.atual >= onde.total) : false;
+        const agora = onde ? i === onde.atual : false;
+        const depois = onde ? i > onde.atual && !ehTese : false;
         return (
-          <li key={paragrafo.frases[i]?.funcao ?? i} className="grid grid-cols-[1.25rem_minmax(0,1fr)] gap-x-2">
-            <span data-numeric className="type-rotulo text-primary-text pt-px">{i + 1}</span>
+          <li
+            key={paragrafo.frases[i]?.funcao ?? i}
+            aria-current={agora ? 'step' : undefined}
+            className={`grid grid-cols-[1.25rem_minmax(0,1fr)] gap-x-2 rounded-[var(--radius-control)] t-colors ${agora ? 'bg-[hsl(var(--primary)/0.08)] -mx-2 px-2 py-2' : ''} ${depois ? 'opacity-70' : ''}`}
+          >
+            <span data-numeric className="type-rotulo text-primary-text pt-px">
+              {feita ? <Check className="h-3.5 w-3.5 mt-0.5" strokeWidth={3} aria-label={`Frase ${i + 1} feita`} /> : i + 1}
+            </span>
             <div className="min-w-0">
-              <p className="type-rotulo text-muted-foreground">{rotulos[i]}</p>
-              <p className="font-reading type-body mt-0.5">{ehTese && tese ? tese : frase}</p>
+              <p className="type-rotulo text-muted-foreground">{rotulos[i]}{agora && <span className="text-primary-text"> · agora</span>}</p>
+              <p className={`font-reading type-body mt-0.5 ${feita ? 'text-muted-foreground' : ''}`}>{ehTese && tese ? tese : frase}</p>
               {ehTese && <p className="type-rotulo text-primary-text mt-1">Entra sozinha: é a sua tese do passo 3.</p>}
             </div>
           </li>
@@ -70,53 +87,84 @@ function Ponte({ itens, titulo }: { itens: { passo: string; texto: string }[]; t
   );
 }
 
-function Painel({ jaMarcados, ...props }: Props & { jaMarcados: string[] }) {
+/* Ponte, conectivos e erros da proposta: úteis, mas não a cada frase. */
+function MaisDicas({ paragrafo }: { paragrafo: Paragrafo }) {
+  const [aberto, setAberto] = useState(false);
+  const temPonte = paragrafo.chave !== 'conclusao';
+  return (
+    <div className="mt-4">
+      <button
+        type="button"
+        onClick={() => setAberto(!aberto)}
+        aria-expanded={aberto}
+        className="inline-flex items-center gap-1.5 type-meta font-medium text-muted-foreground hover:text-foreground t-colors"
+      >
+        {aberto ? 'Fechar dicas' : 'Mais dicas'}
+        <ChevronDown className="w-4 h-4 transition-transform duration-200 motion-reduce:transition-none" style={{ transform: aberto ? 'rotate(180deg)' : undefined }} aria-hidden />
+      </button>
+      {aberto && (
+        <>
+          {temPonte && <Ponte titulo="Ponte em 3 passos" itens={PONTE.map((p) => ({ passo: p.passo, texto: p.o_que }))} />}
+          {temPonte && <p className="type-meta text-muted-foreground mt-2">{PONTE_AVISO}</p>}
+          {paragrafo.chave === 'desenvolvimento1' && <p className="type-meta text-muted-foreground mt-4">Conectivos para variar: {CONECTIVOS.join(' / ')}.</p>}
+          {paragrafo.chave === 'conclusao' && <p className="type-meta text-muted-foreground mt-4">Erros: {ERROS_PROPOSTA}</p>}
+        </>
+      )}
+    </div>
+  );
+}
+
+interface PainelProps extends Props {
+  jaMarcados: string[];
+  onde: OndeEstou;
+  aba: Aba;
+  aoTrocarAba: (a: Aba) => void;
+  aberto: boolean;
+  aoAbrir: (v: boolean) => void;
+  ajuda: ReactNode;
+}
+
+function Painel({ jaMarcados, onde, aba, aoTrocarAba, aberto, aoAbrir, ajuda, ...props }: PainelProps) {
   /* O marcador é usado no mesmo render que o criou: o modo estrito renderiza
      2 vezes, e um filho que usasse o marcador do pai acharia tudo já usado. */
-  const { paragrafo, causaA, causaB, tema, tese, perguntas, primeiraVisita, aoVerMolde } = props;
+  const { paragrafo, causaA, causaB, tema, tese, primeiraVisita, aoVerMolde } = props;
   const m = criarMarcador(jaMarcados);
   const rotulos = paragrafo.frases.map((f) => m(f.funcao));
-  const [aba, setAba] = useState<'molde' | 'exemplo'>('molde');
-  /* Abaixo de 1024 px: aberto na 1ª visita do passo, para o aluno ver o
-     molde (Pablo, 29/10/2026); nas outras, recolhido, para a caixa de texto
-     aparecer sem rolar. Marcar como visto não fecha: o valor de entrada fica. */
-  const [aberto, setAberto] = useState(primeiraVisita);
   useEffect(() => {
     if (primeiraVisita) aoVerMolde();
     // eslint-disable-next-line react-hooks/exhaustive-deps -- só na entrada do passo
   }, []);
   const exemplo = EXEMPLO_PARAGRAFOS[paragrafo.chave];
   const moldes = paragrafo.frases.map((_, i) => moldeDaFrase(paragrafo.chave, i, tema, causaA, causaB));
-  const temPonte = paragrafo.chave !== 'conclusao';
-  const abas: { chave: typeof aba; nome: string }[] = [{ chave: 'molde', nome: 'Molde' }, { chave: 'exemplo', nome: 'Ver exemplo' }];
 
   return (
     <section
+      id="painel-molde"
       data-medir="molde"
       className="surface-1 rounded-[var(--radius-surface)] border border-border lg:sticky lg:top-[4.25rem] lg:max-h-[calc(100dvh-var(--altura-fixa-passo))] lg:overflow-y-auto"
       aria-label={`Molde da ${paragrafo.titulo.toLowerCase()}`}
     >
       <div className="flex items-center justify-between gap-3 border-b border-border px-4 md:px-5 py-2 lg:sticky lg:top-0 lg:z-[1] surface-1">
         <div className="flex gap-1" role="tablist" aria-label="O que ver">
-          {abas.map((a) => (
+          {ABAS.map((a) => (
             <button
               key={a.chave}
               type="button"
               role="tab"
               aria-selected={aba === a.chave}
               data-medir={a.chave === 'exemplo' ? 'exemplo' : undefined}
-              onClick={() => { setAba(a.chave); setAberto(true); }}
+              onClick={() => { aoTrocarAba(a.chave); aoAbrir(true); }}
               className="rounded-[var(--radius-control)] px-3 py-2 type-meta font-medium t-colors hover:bg-muted aria-selected:bg-muted aria-selected:text-foreground text-muted-foreground"
             >
               {a.nome}
             </button>
           ))}
         </div>
-        {!aberto && <span className="lg:hidden type-meta text-muted-foreground"><span data-numeric>{paragrafo.frases.length}</span> frases</span>}
+        {!aberto && <span className="hidden sm:inline lg:hidden type-meta text-muted-foreground whitespace-nowrap">Frase <span data-numeric>{Math.min(onde.atual + 1, onde.total)}</span> de <span data-numeric>{onde.total}</span></span>}
         {/* No celular o painel recolhe; na tela grande fica sempre aberto. */}
         <button
           type="button"
-          onClick={() => setAberto(!aberto)}
+          onClick={() => aoAbrir(!aberto)}
           aria-expanded={aberto}
           className="lg:hidden flex h-11 w-11 items-center justify-center rounded-[var(--radius-control)] t-colors hover:bg-muted"
           aria-label={aberto ? 'Recolher o molde' : 'Abrir o molde'}
@@ -126,16 +174,14 @@ function Painel({ jaMarcados, ...props }: Props & { jaMarcados: string[] }) {
       </div>
 
       <div className={`${aberto ? 'block' : 'hidden'} lg:block px-4 md:px-5 py-4`}>
-        {aba === 'molde' ? (
+        {aba === 'molde' && (
           <>
-            <div className="mb-5"><PerguntasGuia perguntas={perguntas} /></div>
-            <ListaDeFrases paragrafo={paragrafo} frases={moldes} tese={tese} rotulos={rotulos} />
-            {temPonte && <Ponte titulo="Ponte em 3 passos" itens={PONTE.map((p) => ({ passo: p.passo, texto: p.o_que }))} />}
-            {temPonte && <p className="type-meta text-muted-foreground mt-2">{PONTE_AVISO}</p>}
-            {paragrafo.chave === 'desenvolvimento1' && <p className="type-meta text-muted-foreground mt-4">Conectivos para variar: {CONECTIVOS.join(' / ')}.</p>}
-            {paragrafo.chave === 'conclusao' && <p className="type-meta text-muted-foreground mt-4">Erros: {ERROS_PROPOSTA}</p>}
+            <ListaDeFrases paragrafo={paragrafo} frases={moldes} tese={tese} rotulos={rotulos} onde={onde} />
+            <MaisDicas paragrafo={paragrafo} />
           </>
-        ) : (
+        )}
+        {aba === 'ajuda' && ajuda}
+        {aba === 'exemplo' && (
           <>
             <p className="type-rotulo text-primary-text mb-3">Exemplo de estrutura, não copie · <span data-numeric>ENEM {EXEMPLO_ANO}</span></p>
             <ListaDeFrases paragrafo={paragrafo} frases={exemplo.frases} rotulos={rotulos} />
@@ -165,7 +211,7 @@ function Elementos({ elementos, aoMarcar }: { elementos: Props['elementos']; aoM
             title={e.pergunta}
             className="rounded-full border px-3 py-1.5 type-meta t-colors hover:bg-muted aria-checked:border-primary aria-checked:bg-[hsl(var(--primary)/0.12)] aria-checked:font-semibold border-border"
           >
-            {e.nome} <span className="text-muted-foreground">· {e.pergunta}</span>
+            {e.nome}
           </button>
         ))}
       </div>
@@ -173,13 +219,68 @@ function Elementos({ elementos, aoMarcar }: { elementos: Props['elementos']; aoM
   );
 }
 
+/* Autores recolhidos numa linha; abrem sozinhos quando a frase de agora é a
+   do repertório, que é quando ele precisa deles. Tocar decide de vez. */
+function Autores({ nomes, titulo, fraseDeRepertorio }: { nomes: string[]; titulo: string; fraseDeRepertorio: boolean }) {
+  const [escolha, setEscolha] = useState<boolean | null>(null);
+  const aberto = escolha ?? fraseDeRepertorio;
+  return (
+    <div data-medir="autores" className="mb-4">
+      <button
+        type="button"
+        onClick={() => setEscolha(!aberto)}
+        aria-expanded={aberto}
+        className="inline-flex items-center gap-1.5 type-rotulo text-muted-foreground hover:text-foreground t-colors"
+      >
+        {titulo} · <span data-numeric>{nomes.length}</span>
+        <ChevronDown className="w-4 h-4 transition-transform duration-200 motion-reduce:transition-none" style={{ transform: aberto ? 'rotate(180deg)' : undefined }} aria-hidden />
+      </button>
+      {aberto && <div className="mt-2"><AutoresEmLinha nomes={nomes} titulo="" /></div>}
+    </div>
+  );
+}
+
 export function PassoParagrafo(props: Props) {
-  const { paragrafo, texto, aoMudar, causaA, causaB, tema, tese } = props;
+  const { paragrafo, texto, aoMudar, causaA, causaB, tema, tese, primeiraVisita } = props;
   const ehIntroducao = paragrafo.chave === 'introducao';
   /* Introdução: autores dos 2 motivos; D1 e D2: do motivo do parágrafo. */
   const causas = ehIntroducao ? [causaA, causaB] : paragrafo.chave === 'desenvolvimento1' ? [causaA] : paragrafo.chave === 'desenvolvimento2' ? [causaB] : [];
   const nomes = Array.from(new Set(causas.flatMap((c) => causaPorChave(c)?.repertorios ?? [])));
   const contado = ehIntroducao ? introducaoComTese(texto, tese) : texto;
+  const onde = ondeEstou(texto, paragrafo.chave, paragrafo.frases.length);
+  const fraseDeRepertorio = /^repert[óo]rio/i.test(paragrafo.frases[onde.atual]?.funcao ?? '');
+
+  const [aba, setAba] = useState<Aba>('molde');
+  /* Abaixo de 1024 px: aberto na 1ª visita do passo, para o aluno ver o
+     molde (Pablo, 29/10/2026); nas outras, recolhido, para a caixa de texto
+     aparecer sem rolar. */
+  const [aberto, setAberto] = useState(primeiraVisita);
+  const [ajuda, setAjuda] = useState<EstadoAjuda>(ajudaVazia);
+
+  const pedir = async (pergunta: string) => {
+    setAjuda((a) => ({ ...a, carregando: true, erro: null }));
+    try {
+      const resposta = await pedirAjuda({ tema, paragrafo, texto, tese, causaA, causaB }, pergunta);
+      setAjuda((a) => ({ ...a, carregando: false, resposta, pergunta: pergunta ? '' : a.pergunta }));
+    } catch (e) {
+      setAjuda((a) => ({ ...a, carregando: false, erro: (e as Error).message }));
+    }
+  };
+  const abrirAjuda = () => {
+    setAba('ajuda');
+    setAberto(true);
+    if (!ajuda.resposta && !ajuda.carregando) pedir('');
+    if (window.matchMedia('(max-width: 1023px)').matches) document.getElementById('painel-molde')?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  };
+  const usarComeco = (comeco: string) => {
+    aoMudar(juntarComeco(texto, comeco));
+    const caixa = document.getElementById(`texto-${paragrafo.chave}`) as HTMLTextAreaElement | null;
+    requestAnimationFrame(() => {
+      caixa?.focus();
+      caixa?.setSelectionRange(caixa.value.length, caixa.value.length);
+    });
+  };
+
   /* Glossário: a instrução vem antes dos rótulos do molde na leitura. */
   const m = criarMarcador();
   const instrucao = paragrafo.chave === 'conclusao'
@@ -190,12 +291,29 @@ export function PassoParagrafo(props: Props) {
     <div>
       <CabecalhoPasso titulo={paragrafo.titulo} instrucao={m(instrucao)} />
       <div className="grid gap-5 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:items-start lg:gap-8">
-        <Painel {...props} jaMarcados={termosDe(instrucao)} />
+        <Painel
+          {...props}
+          jaMarcados={termosDe(instrucao)}
+          onde={onde}
+          aba={aba}
+          aoTrocarAba={setAba}
+          aberto={aberto}
+          aoAbrir={setAberto}
+          ajuda={(
+            <AjudaEscrita
+              paragrafo={paragrafo}
+              onde={onde}
+              perguntas={props.perguntas}
+              estado={ajuda}
+              aoPedir={pedir}
+              aoMudarPergunta={(pergunta) => setAjuda((a) => ({ ...a, pergunta }))}
+              aoUsarComeco={usarComeco}
+            />
+          )}
+        />
         <div className="lg:sticky lg:top-[4.25rem] lg:flex lg:h-[calc(100dvh-var(--altura-fixa-passo))] lg:min-h-[22rem] lg:flex-col">
           {nomes.length > 0 && (
-            <div data-medir="autores" className="mb-4">
-              <AutoresEmLinha nomes={nomes} titulo={ehIntroducao ? 'Abra com um autor dos seus motivos' : 'Autores deste motivo'} />
-            </div>
+            <Autores nomes={nomes} titulo={ehIntroducao ? 'Autores dos seus motivos' : 'Autores deste motivo'} fraseDeRepertorio={fraseDeRepertorio} />
           )}
           <CaixaTexto
             id={`texto-${paragrafo.chave}`}
@@ -206,7 +324,16 @@ export function PassoParagrafo(props: Props) {
             alto
             encher
           />
-          <div className="mt-2"><ContadorLinhas texto={contado} min={paragrafo.linhasMin} max={paragrafo.linhasMax} /></div>
+          <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
+            <ContadorLinhas texto={contado} min={paragrafo.linhasMin} max={paragrafo.linhasMax} />
+            <button
+              type="button"
+              onClick={abrirAjuda}
+              className="inline-flex items-center gap-1.5 rounded-full border border-primary px-3.5 py-1.5 type-meta font-medium text-primary-text t-colors hover:bg-[hsl(var(--primary)/0.1)]"
+            >
+              <LifeBuoy className="w-4 h-4" aria-hidden /> Me ajuda
+            </button>
+          </div>
           <AvisoMotivo tema={tema} causaA={causaA} causaB={causaB} aoTrocar={props.aoTrocarMotivos} />
           {paragrafo.chave === 'conclusao' && <Elementos elementos={props.elementos} aoMarcar={props.aoMarcarElemento} />}
         </div>

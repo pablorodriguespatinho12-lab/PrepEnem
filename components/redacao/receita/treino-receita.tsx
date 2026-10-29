@@ -1,7 +1,8 @@
 'use client';
 // Treino por partes guiado pela receita de bolso (docs/redacao/receita-redacao.md).
 // Um passo por tela, Voltar/Próximo sempre no mesmo lugar (barra presa embaixo),
-// rascunho salvo no navegador a cada mudança. Sem IA: zero gasto de cota.
+// rascunho salvo no navegador a cada mudança. A IA só entra no "Me ajuda" dos
+// passos 4 a 7, a pedido (Pablo, 29/10/2026; ver ajuda-escrita.tsx).
 
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';

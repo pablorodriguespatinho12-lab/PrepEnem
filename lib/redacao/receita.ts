@@ -1,7 +1,8 @@
 // A receita de bolso da redação, em dados, para o Treino por partes guiado.
 // Fonte única: docs/redacao/receita-redacao.md (Pablo, 27/10/2026). Nada aqui
-// é regra nova: cada bloco diz de qual seção do arquivo veio. Sem IA: o site
-// só mostra o molde, conta linhas e monta o texto; a correção é fora do site.
+// é regra nova: cada bloco diz de qual seção do arquivo veio. Estes dados são
+// sem IA: o site mostra o molde, conta linhas e monta o texto; a correção é
+// fora do site. A IA só aparece no "Me ajuda" (lib/redacao/ajuda.ts).
 
 import { conteudoDoTema } from './conteudo-temas';
 export type ChaveCausa = 'estado' | 'historia' | 'acesso' | 'estigma' | 'mercado';

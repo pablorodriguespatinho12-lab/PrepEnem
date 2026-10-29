@@ -54,7 +54,7 @@ export function AutoresEmLinha({ nomes, titulo }: { nomes: string[]; titulo: str
   const autor = aberto ? autorPorNome(aberto) : null;
   return (
     <div>
-      <p className="type-rotulo text-muted-foreground mb-2">{titulo}</p>
+      {titulo && <p className="type-rotulo text-muted-foreground mb-2">{titulo}</p>}
       <ul className="flex flex-wrap gap-2">
         {nomes.map((nome) => {
           const ativo = nome === aberto;

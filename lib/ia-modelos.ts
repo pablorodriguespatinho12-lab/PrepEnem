@@ -21,6 +21,10 @@ export const MODELO_IA = {
   duvidaLicao: () => modelo('AI_MODEL_DUVIDA_LICAO', 'openai/gpt-oss-120b'),
   resumo: () => modelo('AI_MODEL_RESUMO', 'openai/gpt-oss-120b'),
   redacao: () => modelo('AI_MODEL_REDACAO', 'openai/gpt-oss-120b'),
+  // Ajuda enquanto escreve (Treino por partes). Separada de AI_MODEL_REDACAO
+  // de propósito: aquela pode ser o Gemini, que dá só 20 pedidos por dia, e
+  // a ajuda é pedida várias vezes por redação.
+  ajudaRedacao: () => modelo('AI_MODEL_AJUDA_REDACAO', 'openai/gpt-oss-120b'),
   licao: () => modelo('AI_MODEL_LICAO', 'openai/gpt-oss-120b'),
   degraus: () => modelo('AI_MODEL_DEGRAUS', 'openai/gpt-oss-120b'),
   // Resolve de novo o que outro modelo gerou (lib/verificar-respostas.ts).

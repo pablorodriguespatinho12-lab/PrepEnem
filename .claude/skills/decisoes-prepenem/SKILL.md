@@ -352,7 +352,7 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   `docs/redacao/fontes/`, os dois fora do git). As cartilhas NÃO dizem que as
   redações tiraram 1000: o teste compara com o nível que o comentário do INEP
   declara (`tests/redacao/niveis-inep.ts`).
-- **Treino por partes = guia da receita de bolso (Pablo, 27/10/2026), SEM IA:**
+- **Treino por partes = guia da receita de bolso (Pablo, 27/10/2026), sem IA na correção:**
   tema → 2 das 5 causas coringa → tese no molde → introdução, D1, D2,
   conclusão (molde à esquerda, caixa à direita, contador de ~70 caracteres
   por linha) → redação montada com checklist e "Copiar redação"; a correção é
@@ -385,6 +385,20 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   motivo com aposto ganha a vírgula de fecho (`encaixar`); a ponte tira o
   "no Brasil"/"na sociedade brasileira" do fim do tema. Rótulos em `.type-rotulo`
   (12,8 px, sem caixa-alta); texto de leitura em `font-reading type-body`.
+- **Me ajuda enquanto escreve (Pablo, 29/10/2026: "onde eu estou, qual a
+  minha próxima ação, como posso explicar isso"):** nos passos 4 a 7, o botão
+  "Me ajuda" abre a aba Ajuda do painel. Onde ele está (frase N de M) é
+  CONTADO pelo código (`lib/redacao/onde-estou.ts`); a IA (Groq 120b,
+  `AI_MODEL_AJUDA_REDACAO`, nunca o Gemini de 20/dia) dá a próxima ação e 2 a 3
+  COMEÇOS de frase com o que completar, e responde "Travou? Pergunte". Nunca
+  a frase inteira: o validador corta o começo em 14 palavras e descarta
+  número que não está no texto, no tema ou na ficha (`lib/redacao/ajuda.ts`).
+  "Usar este começo" não repete o pedaço que ele já tinha escrito. Medido:
+  3 s por resposta. Teste: `tests/e2e/ajuda-escrita.e2e.ts`.
+- **Menos poluição nos passos 4 a 7 (mesmo dia):** o molde destaca só a frase
+  de agora (feitas com visto, futuras apagadas); "Pense antes" mudou para a
+  aba Ajuda; ponte, conectivos e erros da proposta foram para "Mais dicas";
+  autores recolhidos numa linha, abertos sozinhos na frase de repertório.
 - As redações-modelo de `data/redacao/modelos.ts` (textos originais, temas
   reais, cada trecho comentado) seguem em /redacao/modelos. Não inventa
   texto-base com IA. Repertório nos modelos: só fato verificável.

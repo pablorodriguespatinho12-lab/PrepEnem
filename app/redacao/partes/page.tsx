@@ -1,7 +1,7 @@
 'use client';
-// Treino por partes = guia da receita de bolso (Pablo, 27/10/2026). Sem IA:
-// a tela mostra o molde de cada parte e conta as linhas; a correção é feita
-// fora do site. A versão antiga (parte avulsa corrigida pela IA) e as rotas
+// Treino por partes = guia da receita de bolso (Pablo, 27/10/2026): a tela
+// mostra o molde de cada parte e conta as linhas; a correção é feita fora do
+// site. A IA só entra no "Me ajuda" (caminhos para a próxima frase, 29/10/2026). A versão antiga (parte avulsa corrigida pela IA) e as rotas
 // /api/redacao/parts/* foram apagadas; a tabela EssayPartPractice fica no
 // Neon com o histórico (a página de estatísticas ainda lê dela).
 
