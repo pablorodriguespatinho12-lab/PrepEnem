@@ -3,7 +3,7 @@
 // armazenamento tem try/catch: em aba anônima ou com o site bloqueado, a
 // tela funciona e só não guarda.
 
-import { moldeTese, problemaDoTema, causaPorChave, type ChaveCausa, type ChaveElemento, type ChaveParagrafo } from './receita';
+import { duplaSugerida, moldeTese, problemaDoTema, causaPorChave, type ChaveCausa, type ChaveElemento, type ChaveParagrafo } from './receita';
 
 export const CHAVE_RASCUNHO = 'prepenem_receita_rascunho_v1';
 export const CHAVE_SALVAS = 'redacao_saved_list';
@@ -21,6 +21,9 @@ export interface Rascunho {
   paragrafos: Record<ChaveParagrafo, string>;
   elementos: Record<ChaveElemento, boolean>;
   checklist: boolean[];
+  /* Parágrafos cujo molde o aluno já viu: no celular, o molde abre sozinho
+     só na 1ª visita de cada passo (Pablo, 29/10/2026). */
+  moldesVistos: ChaveParagrafo[];
 }
 
 export const rascunhoVazio = (): Rascunho => ({
@@ -33,6 +36,7 @@ export const rascunhoVazio = (): Rascunho => ({
   paragrafos: { introducao: '', desenvolvimento1: '', desenvolvimento2: '', conclusao: '' },
   elementos: { agente: false, acao: false, meio: false, finalidade: false, detalhamento: false },
   checklist: [],
+  moldesVistos: [],
 });
 
 type Armazenamento = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
@@ -52,6 +56,7 @@ export function lerRascunho(armazenamento: Armazenamento | null = navegador()): 
       paragrafos: { ...vazio.paragrafos, ...salvo.paragrafos },
       elementos: { ...vazio.elementos, ...salvo.elementos },
       checklist: Array.isArray(salvo.checklist) ? salvo.checklist : [],
+      moldesVistos: Array.isArray(salvo.moldesVistos) ? salvo.moldesVistos : [],
     }, typeof salvo.teseGerada === 'string');
   } catch {
     return rascunhoVazio();
@@ -77,6 +82,17 @@ export function teseDesatualizada(r: Rascunho): boolean {
   const nova = teseAutomatica(r);
   return teseFoiEditada(r) && nova !== '' && nova !== r.teseGerada;
 }
+/* Troca de tema (Pablo, 29/10/2026): motivos que ainda são os sugeridos do
+   tema antigo foram postos pelo site e viram os sugeridos do novo (tema livre
+   não tem: o aluno escolhe). Motivos escolhidos à mão ficam, e o aviso
+   "combina pouco" diz se servem mal ao tema novo. A tese segue sincronizarTese. */
+export function trocarTema(r: Rascunho, tema: string, temasDaLista: string[]): Rascunho {
+  const doSite = duplaSugerida(r.tema, temasDaLista);
+  const eramDoSite = doSite !== null && r.causaA === doSite[0] && r.causaB === doSite[1];
+  if (!eramDoSite) return sincronizarTese({ ...r, tema });
+  const novos = duplaSugerida(tema, temasDaLista);
+  return sincronizarTese({ ...r, tema, causaA: novos?.[0] ?? null, causaB: novos?.[1] ?? null });
+}
 export function atualizarTese(r: Rascunho): Rascunho {
   const nova = teseAutomatica(r);
   return { ...r, tese: nova, teseGerada: nova };
@@ -85,9 +101,12 @@ export function atualizarTese(r: Rascunho): Rascunho {
    (o de antes, com o tema inteiro, ou o de agora) era automática: vira a
    de agora. Tese escrita pelo aluno fica intacta e conta como gerada para os
    motivos atuais, para o aviso não aparecer sem os motivos terem mudado. */
+/* A frase do estigma de antes de 29/10/2026, para reconhecer a tese velha. */
+const NA_TESE_ANTIGA: Partial<Record<ChaveCausa, string>> = { estigma: 'do estigma social que torna esse grupo invisível' };
+const naTeseAntiga = (c: ChaveCausa | null, reserva: string) => (c && NA_TESE_ANTIGA[c]) ?? causaPorChave(c)?.naTese ?? reserva;
 function moldeTeseAntigo(r: Rascunho): string {
-  const a = causaPorChave(r.causaA)?.naTese ?? 'de [causa A]';
-  const b = causaPorChave(r.causaB)?.naTese ?? 'de [causa B]';
+  const a = naTeseAntiga(r.causaA, 'de [causa A]');
+  const b = naTeseAntiga(r.causaB, 'de [causa B]');
   const p = problemaDoTema(r.tema);
   return `${p ? p.charAt(0).toUpperCase() + p.slice(1) : 'Tal cenário'} decorre, sobretudo, ${a} e ${b}.`;
 }

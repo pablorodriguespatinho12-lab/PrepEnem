@@ -9,7 +9,7 @@
 
 import { readFileSync } from 'fs';
 import { chromium, type Browser, type Page } from 'playwright';
-import { CAUSAS, causaPorChave, montarRedacao, moldeDaFrase, moldeTese, motivoNoTema, problemaCompleto, problemaCurto, type ChaveCausa } from '@/lib/redacao/receita';
+import { CAUSAS, causaPorChave, montarRedacao, moldeDaFrase, moldeTese, motivoNoTema, problemaCurto, problemaNaPonte, type ChaveCausa } from '@/lib/redacao/receita';
 import { CONTEUDO_TEMAS, conteudoDoTema } from '@/lib/redacao/conteudo-temas';
 
 const BASE = process.env.BASE ?? 'http://localhost:3000';
@@ -105,7 +105,7 @@ async function percorrer(browser: Browser, tema: string, daLista: boolean): Prom
     await proximo(page);
     const painel = await page.locator('[data-medir=molde]').innerText();
     if (!painel.includes(tese)) return 'tese não aparece como 3ª frase';
-    if (!painel.includes(problemaCompleto(tema))) return 'tema inteiro não aparece na ponte';
+    if (!painel.includes(problemaNaPonte(tema))) return 'tema inteiro não aparece na ponte';
     await page.locator('#texto-introducao').fill(textos.introducao);
     return null;
   });

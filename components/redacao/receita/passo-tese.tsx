@@ -8,8 +8,9 @@ import { EXEMPLO_TESE } from '@/lib/redacao/exemplo-receita';
 import { CabecalhoPasso, CaixaTexto } from './pecas';
 import { VerExemplo } from './autores';
 import { criarMarcador } from './glossario';
+import { AvisoMotivo } from './passo-causas';
 
-export function PassoTese({ perguntas, tese, tema, causaA, causaB, aoMudar, desatualizada, aoAtualizar }: {
+export function PassoTese({ perguntas, tese, tema, causaA, causaB, aoMudar, desatualizada, aoAtualizar, aoTrocarMotivos }: {
   perguntas: string[];
   tese: string;
   tema: string;
@@ -18,6 +19,7 @@ export function PassoTese({ perguntas, tese, tema, causaA, causaB, aoMudar, desa
   aoMudar: (t: string) => void;
   desatualizada: boolean;
   aoAtualizar: () => void;
+  aoTrocarMotivos: () => void;
 }) {
   const molde = moldeTese(causaA, causaB, tema);
   const semPalavraDoTema = !teseTemPalavraDoTema(tese, tema);
@@ -32,6 +34,7 @@ export function PassoTese({ perguntas, tese, tema, causaA, causaB, aoMudar, desa
           Motivo 1: {causaPorChave(causaA)?.nome ?? 'não escolhido'} → D1 · Motivo 2: {causaPorChave(causaB)?.nome ?? 'não escolhido'} → D2
         </p>
       </div>
+      <AvisoMotivo tema={tema} causaA={causaA} causaB={causaB} aoTrocar={aoTrocarMotivos} />
       {desatualizada && (
         <p className="mb-3 type-meta" role="status">
           Seus motivos mudaram. Atualizar a tese?{' '}

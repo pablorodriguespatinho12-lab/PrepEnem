@@ -3,12 +3,16 @@
 
 import { EXEMPLO_TEMA } from '@/lib/redacao/exemplo-receita';
 import { CabecalhoPasso } from './pecas';
+import type { ChaveCausa } from '@/lib/redacao/receita';
 import { VerExemplo } from './autores';
+import { AvisoMotivo } from './passo-causas';
 import type { TemaDaLista } from './use-temas';
 
-export function PassoTema({ perguntas, tema, temas, erro, aoMudar }: {
+export function PassoTema({ perguntas, tema, causaA, causaB, temas, erro, aoMudar }: {
   perguntas: string[];
   tema: string;
+  causaA: ChaveCausa | null;
+  causaB: ChaveCausa | null;
   temas: TemaDaLista[];
   erro: boolean;
   aoMudar: (t: string) => void;
@@ -29,6 +33,9 @@ export function PassoTema({ perguntas, tema, temas, erro, aoMudar }: {
         placeholder="Digite o tema"
         className="block w-full rounded-[var(--radius-control)] border border-muted-foreground bg-[hsl(var(--surface-2))] px-4 py-3 type-body placeholder:text-muted-foreground focus:outline-none mb-5"
       />
+      {/* Trocou de tema com motivos escolhidos à mão: eles ficam, e o aviso
+          aparece aqui mesmo, onde a troca aconteceu. */}
+      <AvisoMotivo tema={tema} causaA={causaA} causaB={causaB} />
       {erro && <p className="type-meta text-muted-foreground">Não deu para carregar a lista. Digite o tema acima.</p>}
       {temas.length > 0 && (
         <ul className="space-y-2" aria-label="Temas de provas anteriores">

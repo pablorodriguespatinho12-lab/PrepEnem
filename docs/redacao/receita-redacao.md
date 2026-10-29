@@ -78,7 +78,7 @@ Se não sai o passo 3 em 1 minuto, troque de repertório.
 | 1. Omissão do Estado | "...por negligência estatal na garantia de direitos já previstos em lei" | CF art. 3º e 6º, Amartya Sen, José Murilo de Carvalho, Lei do SUS |
 | 2. Herança histórica | "...por uma herança histórica de exclusão que ainda estrutura o país" | Celso Furtado, Sérgio Buarque, Lélia Gonzalez |
 | 3. Desigualdade de acesso | "...pela desigualdade de acesso, que separa quem pode de quem não pode" | Bourdieu, Piketty, Josué de Castro, Anísio Teixeira |
-| 4. Estigma e invisibilidade | "...pelo estigma social que torna esse grupo invisível" | Goffman, Hannah Arendt, Foucault, Nise da Silveira |
+| 4. Estigma e invisibilidade | "...pelo estigma social, que torna invisível quem sofre com o problema" | Goffman, Hannah Arendt, Foucault, Nise da Silveira |
 | 5. Mercado acima das pessoas | "...pela lógica de lucro que se sobrepõe ao bem-estar" | Zuboff, Ricardo Antunes, Byung-Chul Han, Ulrich Beck |
 
 | Ano | Tema | Causas |

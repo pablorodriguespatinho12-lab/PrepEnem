@@ -2,7 +2,7 @@
 import { describe, expect, test } from 'vitest';
 import {
   CAUSAS, contarLinhas, introducaoComTese, LINHAS_TOTAL, montarRedacao, moldeDaFrase, motivosQueCombinamPouco,
-  PARAGRAFOS, problemaCompleto, type ChaveCausa,
+  PARAGRAFOS, problemaCompleto, problemaNaPonte, type ChaveCausa,
 } from './receita';
 import { CONTEUDO_TEMAS, conteudoDoTema, perguntasDoPasso } from './conteudo-temas';
 import { EXEMPLO_TEMA, FUNCOES, REDACAO_GRIFADA, textoDaFrase } from './exemplo-receita';
@@ -84,9 +84,11 @@ describe('bug 4: a frase inteira do tema só aparece uma vez', () => {
     for (const c of CONTEUDO_TEMAS) {
       const completo = problemaCompleto(c.tema);
       const moldes = PARAGRAFOS.flatMap((p) => p.frases.map((_, i) => moldeDaFrase(p.chave, i, c.tema, c.causas[0], c.causas[1])));
-      const vezes = moldes.join(' ').split(completo).length - 1;
-      expect(vezes, `${c.ano}`).toBe(1);
-      expect(moldes[1]).toContain(completo);
+      /* Na ponte vai sem o "no Brasil" do fim (29/10/2026). */
+      const ponte = problemaNaPonte(c.tema);
+      expect(completo.startsWith(ponte), `${c.ano}`).toBe(true);
+      expect(moldes.filter((_, i) => i !== 1).some((m) => m.includes(completo)), `${c.ano}`).toBe(false);
+      expect(moldes[1]).toContain(ponte);
     }
   });
   test('depois da 1ª vez, vem a forma curta do tema', () => {

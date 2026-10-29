@@ -377,7 +377,13 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   a redação de 2020 como lista de trechos `{texto, funcao}`, grifo = rótulo +
   cor + traço (não só cor), tocar mostra 1 linha. Passo 4-7 na tela grande:
   molde à esquerda rola sozinho, caixa à direita parada, cabe em 1440×762
-  sem rolar; no celular o molde começa recolhido. Rótulos em `.type-rotulo`
+  sem rolar; abaixo de 1024 px o molde abre na 1ª visita de cada passo e
+  recolhe nas outras (`moldesVistos`, 29/10/2026). Trocar de tema: motivos
+  ainda iguais aos sugeridos do tema antigo viram os do novo (livre: nenhum);
+  escolhidos à mão ficam, com o aviso "combina pouco" nos passos 1, 2 e 3.
+  Frase genérica de motivo nunca depende do sujeito do tema ("esse grupo");
+  motivo com aposto ganha a vírgula de fecho (`encaixar`); a ponte tira o
+  "no Brasil"/"na sociedade brasileira" do fim do tema. Rótulos em `.type-rotulo`
   (12,8 px, sem caixa-alta); texto de leitura em `font-reading type-body`.
 - As redações-modelo de `data/redacao/modelos.ts` (textos originais, temas
   reais, cada trecho comentado) seguem em /redacao/modelos. Não inventa

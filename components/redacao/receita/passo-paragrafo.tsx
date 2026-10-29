@@ -6,7 +6,7 @@
 // vista). Celular: o painel do molde recolhe acima da caixa.
 // O painel alterna Molde e Exemplo (o parágrafo do tema de 2020).
 
-import { useState, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { ChevronDown } from 'lucide-react';
 import {
   causaPorChave, CONECTIVOS, ELEMENTOS, ERROS_PROPOSTA, introducaoComTese, moldeDaFrase, PONTE, PONTE_AVISO,
@@ -30,6 +30,8 @@ interface Props {
   aoMarcarElemento: (e: ChaveElemento, v: boolean) => void;
   aoTrocarMotivos: () => void;
   perguntas: string[];
+  primeiraVisita: boolean;
+  aoVerMolde: () => void;
 }
 
 /* Uma frase por linha da lista: o nome da função em cima, o molde em texto
@@ -71,12 +73,18 @@ function Ponte({ itens, titulo }: { itens: { passo: string; texto: string }[]; t
 function Painel({ jaMarcados, ...props }: Props & { jaMarcados: string[] }) {
   /* O marcador é usado no mesmo render que o criou: o modo estrito renderiza
      2 vezes, e um filho que usasse o marcador do pai acharia tudo já usado. */
-  const { paragrafo, causaA, causaB, tema, tese, perguntas } = props;
+  const { paragrafo, causaA, causaB, tema, tese, perguntas, primeiraVisita, aoVerMolde } = props;
   const m = criarMarcador(jaMarcados);
   const rotulos = paragrafo.frases.map((f) => m(f.funcao));
   const [aba, setAba] = useState<'molde' | 'exemplo'>('molde');
-  /* Celular: começa recolhido, para a caixa de texto aparecer sem rolar. */
-  const [aberto, setAberto] = useState(false);
+  /* Abaixo de 1024 px: aberto na 1ª visita do passo, para o aluno ver o
+     molde (Pablo, 29/10/2026); nas outras, recolhido, para a caixa de texto
+     aparecer sem rolar. Marcar como visto não fecha: o valor de entrada fica. */
+  const [aberto, setAberto] = useState(primeiraVisita);
+  useEffect(() => {
+    if (primeiraVisita) aoVerMolde();
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- só na entrada do passo
+  }, []);
   const exemplo = EXEMPLO_PARAGRAFOS[paragrafo.chave];
   const moldes = paragrafo.frases.map((_, i) => moldeDaFrase(paragrafo.chave, i, tema, causaA, causaB));
   const temPonte = paragrafo.chave !== 'conclusao';

@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/alert-dialog';
 import { duplaSugerida, montarRedacao, PARAGRAFOS, type ChaveParagrafo } from '@/lib/redacao/receita';
 import {
-  apagarRascunho, atualizarTese, lerRascunho, rascunhoVazio, salvarRascunho, sincronizarTese, teseDesatualizada, type Rascunho,
+  apagarRascunho, atualizarTese, lerRascunho, rascunhoVazio, salvarRascunho, sincronizarTese, teseDesatualizada, trocarTema, type Rascunho,
 } from '@/lib/redacao/rascunho-receita';
 import { BarraProgresso, TOTAL_PASSOS } from './pecas';
 import { perguntasDoPasso } from '@/lib/redacao/conteudo-temas';
@@ -55,8 +55,11 @@ export function TreinoReceita() {
 
   const mudar = (parcial: Partial<Rascunho>) => setR((atual) => ({ ...atual, ...parcial }));
   /* Tema e motivos mexem na tese: automática é regerada, editada ganha aviso. */
-  const mudarTemaOuMotivos = (parcial: Pick<Partial<Rascunho>, 'tema' | 'causaA' | 'causaB'>) =>
+  const mudarMotivos = (parcial: Pick<Partial<Rascunho>, 'causaA' | 'causaB'>) =>
     setR((atual) => sincronizarTese({ ...atual, ...parcial }));
+  const mudarTema = (tema: string) => setR((atual) => trocarTema(atual, tema, textosDaLista));
+  const marcarMoldeVisto = (chave: ChaveParagrafo) =>
+    setR((atual) => (atual.moldesVistos.includes(chave) ? atual : { ...atual, moldesVistos: [...atual.moldesVistos, chave] }));
   const mudarParagrafo = (chave: ChaveParagrafo, texto: string) =>
     setR((atual) => ({ ...atual, paragrafos: { ...atual.paragrafos, [chave]: texto } }));
   const irPara = (passo: number) => {
@@ -86,8 +89,8 @@ export function TreinoReceita() {
   const perguntas = perguntasDoPasso(r.passo, r.tema, r.causaA, r.causaB);
   const conteudo = (
     <>
-      {r.passo === 1 && <PassoTema perguntas={perguntas} tema={r.tema} temas={temas} erro={erroTemas} aoMudar={(tema) => mudarTemaOuMotivos({ tema })} />}
-      {r.passo === 2 && <PassoCausas perguntas={perguntas} tema={r.tema} causaA={r.causaA} causaB={r.causaB} sugeridas={duplaSugerida(r.tema, textosDaLista) ?? []} aoMudar={(causaA, causaB) => mudarTemaOuMotivos({ causaA, causaB })} />}
+      {r.passo === 1 && <PassoTema perguntas={perguntas} tema={r.tema} temas={temas} erro={erroTemas} causaA={r.causaA} causaB={r.causaB} aoMudar={mudarTema} />}
+      {r.passo === 2 && <PassoCausas perguntas={perguntas} tema={r.tema} causaA={r.causaA} causaB={r.causaB} sugeridas={duplaSugerida(r.tema, textosDaLista) ?? []} aoMudar={(causaA, causaB) => mudarMotivos({ causaA, causaB })} />}
       {r.passo === 3 && (
         <PassoTese
           perguntas={perguntas}
@@ -98,6 +101,7 @@ export function TreinoReceita() {
           aoMudar={(tese) => mudar({ tese })}
           desatualizada={teseDesatualizada(r)}
           aoAtualizar={() => setR(atualizarTese)}
+          aoTrocarMotivos={() => irPara(2)}
         />
       )}
       {paragrafo && (
@@ -113,6 +117,8 @@ export function TreinoReceita() {
           aoMarcarElemento={(e, v) => setR((atual) => ({ ...atual, elementos: { ...atual.elementos, [e]: v } }))}
           aoTrocarMotivos={() => irPara(2)}
           perguntas={perguntas}
+          primeiraVisita={!r.moldesVistos.includes(paragrafo.chave)}
+          aoVerMolde={() => marcarMoldeVisto(paragrafo.chave)}
         />
       )}
       {r.passo === PASSO_FINAL && (

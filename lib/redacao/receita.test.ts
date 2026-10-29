@@ -45,7 +45,7 @@ describe('contador de linhas (~70 caracteres por linha)', () => {
 
 describe('molde e montagem', () => {
   test('a tese vem preenchida com as causas escolhidas', () => {
-    expect(moldeTese('estado', 'estigma')).toBe('Tal cenário decorre, sobretudo, da negligência estatal na garantia de direitos já previstos em lei e do estigma social que torna esse grupo invisível.');
+    expect(moldeTese('estado', 'estigma')).toBe('Tal cenário decorre, sobretudo, da negligência estatal na garantia de direitos já previstos em lei e do estigma social, que torna invisível quem sofre com o problema.');
     expect(moldeTese(null, null)).toBe('Tal cenário decorre, sobretudo, de [causa A] e de [causa B].');
   });
   test('a redação montada tem os 4 parágrafos na ordem, separados por linha em branco', () => {
@@ -144,7 +144,7 @@ describe('tema nos moldes e na tese', () => {
   });
   test('tema livre: a tese começa com as palavras do tema', () => {
     expect(moldeTese('estigma', 'estado', 'A obesidade infantil no Brasil')).toBe(
-      'A obesidade infantil no Brasil decorre, sobretudo, do estigma social que torna esse grupo invisível e da negligência estatal na garantia de direitos já previstos em lei.',
+      'A obesidade infantil no Brasil decorre, sobretudo, do estigma social, que torna invisível quem sofre com o problema, e da negligência estatal na garantia de direitos já previstos em lei.',
     );
   });
   test('começo que não é problema vira problema; depois de ":" sai', () => {

@@ -37,8 +37,10 @@ export const CAUSAS: Causa[] = [
     repertorios: ['Bourdieu', 'Piketty', 'Josué de Castro', 'Anísio Teixeira'],
   },
   {
-    chave: 'estigma', nomeNaFrase: 'estigma e invisibilidade', nome: 'Estigma e invisibilidade', naTese: 'do estigma social que torna esse grupo invisível',
-    fraseDeTese: '...pelo estigma social que torna esse grupo invisível',
+    chave: 'estigma', nomeNaFrase: 'estigma e invisibilidade', nome: 'Estigma e invisibilidade', /* Sem "esse grupo": a frase serve a tema livre, que pode não ter grupo
+       nenhum ("mobilidade urbana"; Pablo, 29/10/2026). */
+    naTese: 'do estigma social, que torna invisível quem sofre com o problema',
+    fraseDeTese: '...pelo estigma social, que torna invisível quem sofre com o problema',
     repertorios: ['Goffman', 'Hannah Arendt', 'Foucault', 'Nise da Silveira'],
   },
   {
@@ -101,6 +103,20 @@ export function problemaCompleto(tema: string): string {
 export function problemaCurto(tema: string): string {
   return conteudoDoTema(tema)?.formaCurta ?? problemaCompleto(tema);
 }
+/* Na ponte ("se aplica ao Brasil contemporâneo, onde [problema]"), o "no
+   Brasil" do fim do tema sai: senão a frase diz Brasil duas vezes (Pablo,
+   29/10/2026). "Na sociedade brasileira" também, pelo mesmo motivo. */
+export function problemaNaPonte(tema: string): string {
+  return problemaCompleto(tema).replace(/\s+(no Brasil|na sociedade brasileira)$/i, '');
+}
+/* Troca o marcador pelo motivo. Motivo com vírgula no meio ("a herança da
+   escravidão, que pôs...") abre um aposto: se a frase continua depois dele,
+   fecha com outra vírgula ("..., que pôs a cultura à margem, mantém..."). */
+function encaixar(molde: string, marcador: string, motivo: string): string {
+  const partes = molde.split(marcador);
+  if (!motivo.includes(',')) return partes.join(motivo);
+  return partes.reduce((feito, resto) => `${feito}${motivo}${/^[.,;:!?]/.test(resto) ? '' : ','}${resto}`);
+}
 /* "o estigma" vira "Esse estigma": a tese vem logo depois da ponte, que já
    disse o tema inteiro. */
 const comEsse = (s: string) => s.replace(/^(o|a|os|as)\s/i, (m) => ({ o: 'Esse ', a: 'Essa ', os: 'Esses ', as: 'Essas ' } as Record<string, string>)[m.trim().toLowerCase()]);
@@ -117,19 +133,19 @@ export function motivoNoTema(causa: ChaveCausa | null, tema: string, reserva: st
 export function moldeTese(causaA: ChaveCausa | null, causaB: ChaveCausa | null, tema = ''): string {
   const conteudo = conteudoDoTema(tema);
   if (conteudo && causaA && causaB) {
-    const [a, b] = [conteudo.topico[causaA], conteudo.topico[causaB]];
-    return contrair(`${comEsse(conteudo.formaCurta)} decorre, sobretudo, de ${a} e de ${b}.`);
+    const molde = `${comEsse(conteudo.formaCurta)} decorre, sobretudo, de [A] e de [B].`;
+    return contrair(encaixar(encaixar(molde, '[A]', conteudo.topico[causaA]), '[B]', conteudo.topico[causaB]));
   }
   const a = causaPorChave(causaA)?.naTese ?? 'de [causa A]';
   const b = causaPorChave(causaB)?.naTese ?? 'de [causa B]';
   const problema = problemaDoTema(tema);
-  return `${problema ? maiuscula(problema) : 'Tal cenário'} decorre, sobretudo, ${a} e ${b}.`;
+  return encaixar(encaixar(`${problema ? maiuscula(problema) : 'Tal cenário'} decorre, sobretudo, [A] e [B].`, '[A]', a), '[B]', b);
 }
 /* Troca [problema do tema] e [problema] do molde pelo problema do tema, com a
    contração do português ("de a falta" vira "da falta"). Sem tema, o molde
    fica como está. A forma inteira só vai no 1º lugar onde o tema aparece. */
-export function preencherProblema(molde: string, tema: string, forma: 'completa' | 'curta' = 'completa'): string {
-  const problema = forma === 'curta' ? problemaCurto(tema) : problemaCompleto(tema);
+export function preencherProblema(molde: string, tema: string, forma: 'completa' | 'curta' | 'ponte' = 'completa'): string {
+  const problema = { completa: problemaCompleto, curta: problemaCurto, ponte: problemaNaPonte }[forma](tema);
   if (!problema) return molde;
   return contrair(molde.split('[problema do tema]').join(problema).split('[problema]').join(problema));
 }
@@ -215,10 +231,8 @@ const ehPrimeiroUsoDoTema = (chave: ChaveParagrafo, i: number) => chave === 'int
 export function moldeDaFrase(chave: ChaveParagrafo, i: number, tema: string, causaA: ChaveCausa | null, causaB: ChaveCausa | null): string {
   if (chave === 'introducao' && i === 2) return moldeTese(causaA, causaB, tema);
   const molde = PARAGRAFOS.find((p) => p.chave === chave)?.frases[i]?.molde ?? '';
-  const comMotivos = molde
-    .split('[causa A]').join(motivoNoTema(causaA, tema, 'causa A'))
-    .split('[causa B]').join(motivoNoTema(causaB, tema, 'causa B'));
-  return preencherProblema(comMotivos, tema, ehPrimeiroUsoDoTema(chave, i) ? 'completa' : 'curta');
+  const comMotivos = encaixar(encaixar(molde, '[causa A]', motivoNoTema(causaA, tema, 'causa A')), '[causa B]', motivoNoTema(causaB, tema, 'causa B'));
+  return preencherProblema(comMotivos, tema, ehPrimeiroUsoDoTema(chave, i) ? 'ponte' : 'curta');
 }
 /* A tese do passo 3 entra sozinha como 3ª frase da introdução: o aluno não a
    reescreve. Rascunho antigo que já tinha a tese no texto não a ganha duas vezes. */
