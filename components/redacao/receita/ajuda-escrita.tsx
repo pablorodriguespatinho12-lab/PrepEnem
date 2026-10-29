@@ -43,8 +43,13 @@ export async function pedirAjuda(dados: DadosDaAjuda, pergunta: string): Promise
   return corpo as RespostaAjuda;
 }
 
+/* Só a 1ª letra: "causa A" e siglas ficam como estão. */
+const minusculaNaPrimeira = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
+
 /* As frases do molde em bolinhas: feita, a de agora, as que faltam. */
-export function OndeVoceEsta({ paragrafo, onde }: { paragrafo: Paragrafo; onde: OndeEstou }) {
+/* `conferido`: a IA já leu o texto e disse qual função falta. Sem isso, o
+   número é só a contagem de frases e não promete que estão certas. */
+export function OndeVoceEsta({ paragrafo, onde, conferido = false }: { paragrafo: Paragrafo; onde: OndeEstou; conferido?: boolean }) {
   const terminou = onde.atual >= onde.total;
   return (
     <div>
@@ -67,8 +72,10 @@ export function OndeVoceEsta({ paragrafo, onde }: { paragrafo: Paragrafo; onde: 
       </ol>
       <p className="font-reading type-body mt-2">
         {terminou
-          ? 'Você escreveu todas as frases. Agora confira as linhas e se cada frase faz a sua função.'
-          : <>Frase <span data-numeric>{onde.atual + 1}</span> de <span data-numeric>{onde.total}</span>: {paragrafo.frases[onde.atual].funcao.toLowerCase()}.</>}
+          ? conferido
+            ? 'Cada frase faz a sua função. Agora confira as linhas e os conectivos.'
+            : 'Você escreveu todas as frases. Toque em "Me mostre caminhos" para conferir se cada uma faz a sua função.'
+          : <>Frase <span data-numeric>{onde.atual + 1}</span> de <span data-numeric>{onde.total}</span>: {minusculaNaPrimeira(paragrafo.frases[onde.atual].funcao)}.</>}
       </p>
     </div>
   );
@@ -98,7 +105,7 @@ export function AjudaEscrita({ paragrafo, onde, perguntas, estado, aoPedir, aoMu
 
   return (
     <div className="space-y-5">
-      <OndeVoceEsta paragrafo={paragrafo} onde={onde} />
+      <OndeVoceEsta paragrafo={paragrafo} onde={resposta ? { ...onde, atual: Math.min(resposta.fraseAgora, onde.atual) } : onde} conferido={!!resposta} />
       {!resposta && <PerguntasGuia perguntas={perguntas} />}
 
       {(!resposta || carregando) && (
@@ -128,7 +135,7 @@ export function AjudaEscrita({ paragrafo, onde, perguntas, estado, aoPedir, aoMu
               {resposta.caminhos.map((c) => (
                 <li key={c.comeco} className="rounded-[var(--radius-control)] border border-border p-3">
                   <p className="font-reading type-body">{c.comeco}</p>
-                  <p className="type-meta text-muted-foreground mt-0.5">Depois: {c.completar}</p>
+                  <p className="type-meta text-muted-foreground mt-0.5">Complete com: {c.completar}</p>
                   <button
                     type="button"
                     onClick={() => aoUsarComeco(c.comeco)}

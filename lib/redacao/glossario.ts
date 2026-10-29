@@ -18,6 +18,13 @@ export const GLOSSARIO: Termo[] = [
   { chave: 'ponte', formas: ['ponte', 'pontes'], frase: 'Ponte: a frase que liga o autor que você citou ao Brasil de hoje.' },
   { chave: 'molde', formas: ['molde', 'moldes'], frase: 'Molde: uma frase pronta com lacunas; você troca o que está entre colchetes.' },
   { chave: 'agente', formas: ['agente', 'agentes'], frase: 'Agente: quem vai fazer a ação da proposta (um ministério, a escola, o governo).' },
+  /* Os que o aluno-do-zero não entendeu (29/10/2026). */
+  { chave: 'desenvolvimento', formas: ['desenvolvimento', 'desenvolvimentos'], frase: 'Desenvolvimento: cada um dos 2 parágrafos do meio; cada um prova 1 motivo.' },
+  { chave: 'omissao', formas: ['omissão do estado'], frase: 'Omissão do Estado: o governo não faz o que a lei manda fazer.' },
+  { chave: 'estigma', formas: ['estigma', 'estigmas'], frase: 'Estigma: uma marca de vergonha que a sociedade põe em alguém.' },
+  { chave: 'detalhamento', formas: ['detalhamento'], frase: 'Detalhamento: um detalhe a mais da proposta (para quem, onde ou com o quê).' },
+  { chave: 'finalidade', formas: ['finalidade'], frase: 'Finalidade: para que serve a proposta; começa com "a fim de".' },
+  { chave: 'conectivo', formas: ['conectivo', 'conectivos'], frase: 'Conectivo: palavra que liga frases, como "além disso" ou "portanto".' },
 ];
 
 export type Pedaco = { texto: string; termo?: Termo };

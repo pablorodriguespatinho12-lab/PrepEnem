@@ -190,23 +190,23 @@ export const PARAGRAFOS: Paragrafo[] = [
     frases: [
       { funcao: 'Repertório que abre o assunto', molde: 'Segundo [autor], em [obra], [ideia em suas palavras].' },
       { funcao: 'Ponte: liga o repertório ao Brasil de hoje, com as palavras do tema', molde: 'Essa reflexão se aplica ao Brasil contemporâneo, onde [problema do tema] ainda persiste.' },
-      { funcao: 'Tese: opinião + causa A + causa B', molde: 'Tal cenário decorre, sobretudo, de [causa A] e de [causa B].' },
+      { funcao: 'Tese: opinião + motivo 1 + motivo 2', molde: 'Tal cenário decorre, sobretudo, de [causa A] e de [causa B].' },
     ],
   },
   {
     chave: 'desenvolvimento1', titulo: 'Desenvolvimento 1', linhasMin: 7, linhasMax: 8,
     frases: [
-      { funcao: 'Tópico frasal: causa A', molde: 'Em primeiro lugar, cabe destacar [causa A] como fator central de [problema].' },
-      { funcao: 'Repertório do eixo', molde: 'Nesse sentido, [autor/lei/dado] mostra que [ideia].' },
-      { funcao: 'Explicação: o que o repertório prova sobre a causa A', molde: 'Isso se verifica no país quando [exemplo concreto], o que [consequência].' },
+      { funcao: 'Tópico frasal: motivo 1', molde: 'Em primeiro lugar, cabe destacar [causa A] como fator central de [problema].' },
+      { funcao: 'Repertório que prova o motivo 1', molde: 'Nesse sentido, [autor/lei/dado] mostra que [ideia].' },
+      { funcao: 'Explicação: o que o repertório prova sobre o motivo 1', molde: 'Isso se verifica no país quando [exemplo concreto], o que [consequência].' },
       { funcao: 'Fechamento: volta à tese', molde: 'Assim, [causa A] mantém [problema do tema].' },
     ],
   },
   {
     chave: 'desenvolvimento2', titulo: 'Desenvolvimento 2', linhasMin: 7, linhasMax: 8,
     frases: [
-      { funcao: 'Tópico frasal: causa B', molde: 'Além disso, [causa B] também contribui para [problema].' },
-      { funcao: 'Repertório de outro autor/área', molde: 'Sob essa ótica, [repertório 2] evidencia que [ideia].' },
+      { funcao: 'Tópico frasal: motivo 2', molde: 'Além disso, [causa B] também contribui para [problema].' },
+      { funcao: 'Repertório de outro autor, que prova o motivo 2', molde: 'Sob essa ótica, [repertório 2] evidencia que [ideia].' },
       { funcao: 'Explicação com exemplo brasileiro ou dado', molde: 'Na realidade brasileira, [exemplo ou dado], o que agrava [problema].' },
       { funcao: 'Fechamento: volta à tese', molde: 'Logo, enquanto [causa B] persistir, [problema] continuará.' },
     ],
@@ -215,10 +215,10 @@ export const PARAGRAFOS: Paragrafo[] = [
     chave: 'conclusao', titulo: 'Conclusão', linhasMin: 6, linhasMax: 7,
     frases: [
       { funcao: 'Retoma o problema', molde: 'Portanto, é preciso enfrentar [causa A] e [causa B].' },
-      { funcao: 'Proposta 1 contra causa A, 5 elementos', molde: 'Para isso, o [agente] deve [ação contra a causa A], por meio de [meio], com [detalhamento], a fim de [finalidade].' },
+      { funcao: 'Proposta 1 contra o motivo 1, 5 elementos', molde: 'Para isso, o [agente] deve [ação contra a causa A], por meio de [meio], com [detalhamento], a fim de [finalidade].' },
       /* Regra 3 da receita: a proposta resolve as causas discutidas, as 2
          (Pablo, 28/10/2026). O detalhamento vai dentro de cada proposta. */
-      { funcao: 'Proposta 2 contra causa B, 5 elementos', molde: 'Já o [agente] deve [ação contra a causa B], por meio de [meio], com [detalhamento], a fim de [finalidade].' },
+      { funcao: 'Proposta 2 contra o motivo 2, 5 elementos', molde: 'Já o [agente] deve [ação contra a causa B], por meio de [meio], com [detalhamento], a fim de [finalidade].' },
       { funcao: 'Frase final que retoma a abertura', molde: 'Dessa forma, [retoma a ideia do repertório da introdução].' },
     ],
   },
@@ -265,7 +265,7 @@ export const CONECTIVOS = ['Em primeiro lugar', 'Além disso', 'Nesse sentido', 
 /* "Checklist antes de passar a limpo". */
 export const CHECKLIST_FINAL = [
   'Palavras-chave do tema na introdução, tese e início de cada desenvolvimento',
-  'Tese anuncia causa A e B, desenvolvimentos na mesma ordem',
+  'Tese anuncia os 2 motivos, desenvolvimentos na mesma ordem',
   'Cada repertório com cita, explica, amarra',
   'Exemplo ou dado brasileiro em cada desenvolvimento',
   'Proposta com agente, ação, meio, finalidade, detalhamento',

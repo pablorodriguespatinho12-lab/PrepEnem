@@ -395,6 +395,13 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   número que não está no texto, no tema ou na ficha (`lib/redacao/ajuda.ts`).
   "Usar este começo" não repete o pedaço que ele já tinha escrito. Medido:
   3 s por resposta. Teste: `tests/e2e/ajuda-escrita.e2e.ts`.
+  **Contar frase não basta (aluno-do-zero, mesmo dia):** 2 frases fora do
+  molde davam "Frase 3 de 4" e a ajuda mandava "continuar" a frase errada. A
+  IA devolve `fraseAgora` (1ª função do molde ainda não feita); o código
+  aceita só 1..total+1 e nunca além do contado. "Complete com" é cortado em 16
+  palavras. Exemplo de formato com texto de verdade fez a IA copiar o exemplo
+  e aceitar frase errada: o formato fica com lacunas `<...>`. Rótulos dizem
+  "motivo 1/2" (o nome do passo 2), nunca "causa A/B" na tela.
 - **Menos poluição nos passos 4 a 7 (mesmo dia):** o molde destaca só a frase
   de agora (feitas com visto, futuras apagadas); "Pense antes" mudou para a
   aba Ajuda; ponte, conectivos e erros da proposta foram para "Mais dicas";

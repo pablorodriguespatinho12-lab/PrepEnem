@@ -54,9 +54,10 @@ describe('pedido vindo do navegador', () => {
 });
 
 describe('prompt', () => {
-  test('diz a frase em que ele está e traz a ficha dos autores do motivo', () => {
+  test('diz quantas frases ele escreveu e traz a ficha dos autores do motivo', () => {
     const p = promptAjuda(pedido({ texto: 'Em primeiro lugar, cabe destacar a desigualdade.' }));
-    expect(p).toContain('frase 2 de 4: "Repertório do eixo"');
+    expect(p).toContain('Ele escreveu 1 frase(s) com ponto final');
+    expect(p).toContain('"fraseAgora"');
     expect(p).toContain('Bourdieu');
     expect(p).not.toContain('Goffman');
   });
@@ -91,4 +92,26 @@ describe('validador', () => {
   test('sem nenhum caminho válido, recusa (pedirJson tenta de novo)', () => {
     expect(validarAjuda({ proximaAcao: 'Faça.', caminhos: [] }, pedido())).toBeNull();
   });
+
+  /* Aluno-do-zero, 29/10/2026: 2 frases fora do molde davam "frase 3 de 4". */
+  describe('fraseAgora', () => {
+    const duas = pedido({ texto: 'Muitas pessoas não pagam psicólogo. Elas ficam sem tratamento.' });
+    const com = (fraseAgora: unknown) => validarAjuda({ fraseAgora, proximaAcao: 'Faça.', caminhos: [caminho] }, duas)?.fraseAgora;
+    test('a IA diz que a 1ª frase não faz a função: volta para a 1ª', () => expect(com(1)).toBe(0));
+    test('nunca passa do que ele escreveu', () => expect(com(4)).toBe(2));
+    test('número inválido fica com a contagem do código', () => {
+      expect(com('x')).toBe(2);
+      expect(com(9)).toBe(2);
+    });
+  });
+  test('"completar" comprido é cortado: dica, não a frase pronta', () => {
+    const longo = 'uma pessoa manifesta sintomas de ansiedade e é rotulada como fraca ou louca sendo evitada pelos colegas de trabalho o que reforça o isolamento';
+    const r = validarAjuda({ proximaAcao: 'Faça.', caminhos: [{ comeco: 'Isso se verifica quando', completar: longo }] }, pedido());
+    expect(r?.caminhos[0].completar.split(' ')).toHaveLength(16);
+    expect(r?.caminhos[0].completar.endsWith('...')).toBe(true);
+  });
+});
+test('rótulo copiado do formato sai da próxima ação', () => {
+  const r = validarAjuda({ proximaAcao: '1 frase: transformar a frase em tópico', caminhos: [{ comeco: 'Além disso,', completar: 'o outro motivo' }] }, { tema: 'T', paragrafo: 'conclusao', texto: '', tese: '', causaA: null, causaB: null, pergunta: '' });
+  expect(r?.proximaAcao).toBe('Transformar a frase em tópico');
 });

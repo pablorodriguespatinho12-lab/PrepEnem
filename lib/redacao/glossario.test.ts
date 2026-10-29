@@ -21,8 +21,8 @@ describe('glossário: 1ª vez de cada termo na tela', () => {
     const t = 'Molde: Segundo [autor]. Ponte: liga o repertório ao Brasil.';
     expect(marcarTermos(t, new Set()).map((p) => p.texto).join('')).toBe(t);
   });
-  test('cada termo pedido pelo Pablo tem 1 frase curta, sem emoji', () => {
-    expect(GLOSSARIO.map((t) => t.chave).sort()).toEqual(['agente', 'molde', 'ponte', 'proposta', 'repertorio', 'tese', 'topico']);
+  test('cada termo (Pablo e aluno-do-zero) tem 1 frase curta, sem emoji', () => {
+    expect(GLOSSARIO.map((t) => t.chave).sort()).toEqual(['agente', 'conectivo', 'desenvolvimento', 'detalhamento', 'estigma', 'finalidade', 'molde', 'omissao', 'ponte', 'proposta', 'repertorio', 'tese', 'topico']);
     for (const t of GLOSSARIO) {
       expect(t.frase.length, t.chave).toBeLessThanOrEqual(110);
       expect(/\p{Extended_Pictographic}/u.test(t.frase)).toBe(false);
