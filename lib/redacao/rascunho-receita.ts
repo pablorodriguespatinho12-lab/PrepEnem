@@ -24,7 +24,15 @@ export interface Rascunho {
   /* Parágrafos cujo molde o aluno já viu: no celular, o molde abre sozinho
      só na 1ª visita de cada passo (Pablo, 29/10/2026). */
   moldesVistos: ChaveParagrafo[];
+  /* A última correção do passo 8 e o texto que ela corrigiu: texto diferente
+     = ele mexeu depois, e a tela oferece corrigir de novo. */
+  correcao: CorrecaoDoTreino | null;
 }
+export interface CorrecaoDoTreino { essayId: string; texto: string }
+const lerCorrecaoDoTreino = (v: unknown): CorrecaoDoTreino | null => {
+  const c = (v && typeof v === 'object' ? v : {}) as Record<string, unknown>;
+  return typeof c.essayId === 'string' && typeof c.texto === 'string' ? { essayId: c.essayId, texto: c.texto } : null;
+};
 
 export const rascunhoVazio = (): Rascunho => ({
   passo: 1,
@@ -37,6 +45,7 @@ export const rascunhoVazio = (): Rascunho => ({
   elementos: { agente: false, acao: false, meio: false, finalidade: false, detalhamento: false },
   checklist: [],
   moldesVistos: [],
+  correcao: null,
 });
 
 type Armazenamento = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
@@ -57,6 +66,7 @@ export function lerRascunho(armazenamento: Armazenamento | null = navegador()): 
       elementos: { ...vazio.elementos, ...salvo.elementos },
       checklist: Array.isArray(salvo.checklist) ? salvo.checklist : [],
       moldesVistos: Array.isArray(salvo.moldesVistos) ? salvo.moldesVistos : [],
+      correcao: lerCorrecaoDoTreino(salvo.correcao),
     }, typeof salvo.teseGerada === 'string');
   } catch {
     return rascunhoVazio();

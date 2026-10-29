@@ -1,19 +1,23 @@
 'use client';
-// Passo final: a redação montada, o contador total, o checklist antes de
-// passar a limpo e "Copiar redação" (a correção é feita fora do site).
+// Passo final: a redação montada, o contador total, a correção com o que
+// treinar (corrigir-no-treino.tsx), o checklist e "Copiar redação".
 
 import { useState } from 'react';
 import { Copy, FolderInput } from 'lucide-react';
 import { toast } from 'sonner';
 import { CHECKLIST_FINAL, LINHAS_TOTAL } from '@/lib/redacao/receita';
-import { guardarEmSalvas } from '@/lib/redacao/rascunho-receita';
+import { guardarEmSalvas, type CorrecaoDoTreino } from '@/lib/redacao/rascunho-receita';
+import { CorrigirNoTreino } from './corrigir-no-treino';
 import { CabecalhoPasso, ContadorLinhas, Marcavel } from './pecas';
 
-export function PassoFinal({ tema, redacao, checklist, aoMarcar }: {
+export function PassoFinal({ tema, redacao, checklist, aoMarcar, correcao, aoGuardarCorrecao, aoIrPara }: {
   tema: string;
   redacao: string;
   checklist: boolean[];
   aoMarcar: (i: number, v: boolean) => void;
+  correcao: CorrecaoDoTreino | null;
+  aoGuardarCorrecao: (c: CorrecaoDoTreino) => void;
+  aoIrPara: (passo: number) => void;
 }) {
   const [copiada, setCopiada] = useState(false);
   const feitos = CHECKLIST_FINAL.filter((_, i) => checklist[i]).length;
@@ -34,7 +38,7 @@ export function PassoFinal({ tema, redacao, checklist, aoMarcar }: {
 
   return (
     <div>
-      <CabecalhoPasso titulo="Redação montada" instrucao="Confira o checklist e copie para corrigir." />
+      <CabecalhoPasso titulo="Redação montada" instrucao="Corrija para ver a nota e o que treinar na próxima." />
       <div className="grid gap-5 lg:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] lg:items-start">
         <section className="surface-1 rounded-[var(--radius-surface)] p-4 md:p-6" aria-label="Redação inteira">
           {tema && <p className="type-meta text-muted-foreground mb-3">{tema}</p>}
@@ -46,6 +50,7 @@ export function PassoFinal({ tema, redacao, checklist, aoMarcar }: {
           </div>
         </section>
         <div>
+          <CorrigirNoTreino tema={tema} redacao={redacao} salva={correcao} aoGuardar={aoGuardarCorrecao} aoIrPara={aoIrPara} />
           <p data-numeric className="type-meta font-semibold mb-2">Antes de passar a limpo: {feitos} de {CHECKLIST_FINAL.length}</p>
           <div className="space-y-2 mb-5">
             {CHECKLIST_FINAL.map((item, i) => (
@@ -57,7 +62,7 @@ export function PassoFinal({ tema, redacao, checklist, aoMarcar }: {
               type="button"
               onClick={copiar}
               disabled={!redacao}
-              className="flex-1 inline-flex items-center justify-center gap-2 py-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-2 t-lift enabled:hover:-translate-y-px disabled:opacity-40"
+              className="flex-1 inline-flex items-center justify-center gap-2 py-3 surface-1 rounded-[var(--radius-control)] font-medium type-meta t-colors hover:bg-muted disabled:opacity-40"
             >
               <Copy className="w-4 h-4" aria-hidden /> {copiada ? 'Copiada' : 'Copiar redação'}
             </button>

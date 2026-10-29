@@ -352,11 +352,11 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   `docs/redacao/fontes/`, os dois fora do git). As cartilhas NÃO dizem que as
   redações tiraram 1000: o teste compara com o nível que o comentário do INEP
   declara (`tests/redacao/niveis-inep.ts`).
-- **Treino por partes = guia da receita de bolso (Pablo, 27/10/2026), sem IA na correção:**
+- **Treino por partes = guia da receita de bolso (Pablo, 27/10/2026), sem IA por partes:**
   tema → 2 das 5 causas coringa → tese no molde → introdução, D1, D2,
   conclusão (molde à esquerda, caixa à direita, contador de ~70 caracteres
-  por linha) → redação montada com checklist e "Copiar redação"; a correção é
-  fora do site. Fonte única: `docs/redacao/receita-redacao.md` (dados em
+  por linha) → redação montada com a correção do site (desde 29/10, ver
+  "Corrigir no passo 8"), checklist e "Copiar redação". Fonte única: `docs/redacao/receita-redacao.md` (dados em
   `lib/redacao/receita.ts`). Rascunho no localStorage a cada mudança, sem
   Neon. As rotas `/api/redacao/parts/*` e a correção por partes pela IA foram
   apagadas; a tabela EssayPartPractice fica (histórico, lida em /api/stats).
@@ -402,6 +402,23 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   palavras. Exemplo de formato com texto de verdade fez a IA copiar o exemplo
   e aceitar frase errada: o formato fica com lacunas `<...>`. Rótulos dizem
   "motivo 1/2" (o nome do passo 2), nunca "causa A/B" na tela.
+- **Corrigir no passo 8 (Pablo, 29/10/2026: "melhorar com o tempo", "como um
+  pai ensinando a engatinhar"; ele mandou escolher, e a escolha foi corrigir +
+  comparar):** usa a correção OFICIAL (submit + evaluate, grava no histórico);
+  nada de IA nova. `lib/redacao/devolutiva.ts` traduz os campos: nota grande,
+  "+N desde a redação anterior", "Já funciona" (um fato do texto, sem
+  elogio), "Treine agora" com UMA parte (nota mais baixa; empate c5, c2, c4,
+  c3, c1; fuga e texto curto antes de tudo) e o botão "Treinar no passo N",
+  meta em pontos ("de 120 para 160 pontos, cada parte vai até 200"). Regra:
+  frase só com campo da correção que a sustente (4 revisores acharam 9 frases
+  falsas na 1ª versão). O rascunho guarda `{essayId, texto}`: texto mudou =
+  "Corrigir de novo"; igual = reabre sem gastar IA. Menos de 8 linhas não
+  envia. Teste: `tests/e2e/corrigir-no-treino.e2e.ts` (devolve a correção
+  real gravada em `correcao-leigo.json`, sem Neon). **Achado:** a correção
+  oficial recusava texto com erro em 2 de 4 rodadas (a IA cola 2 frases ao
+  citar a C4); `trechoExiste` aceita frase por frase, com 3+ palavras cada.
+  **Aberto:** ela deu C5 = 200 para "o governo deve ajudar... campanhas na
+  televisão", generosa demais; calibrar custa o golden set (1 rodada/dia).
 - **Menos poluição nos passos 4 a 7 (mesmo dia):** o molde destaca só a frase
   de agora (feitas com visto, futuras apagadas); "Pense antes" mudou para a
   aba Ajuda; ponte, conectivos e erros da proposta foram para "Mais dicas";

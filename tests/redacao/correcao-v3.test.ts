@@ -22,6 +22,15 @@ describe('trechoExiste', () => {
   test('frase longa parecida, mas trocando o sentido, não passa', () => {
     expect(trechoExiste('Segundo Michel Foucault, em História da Loucura, a sociedade isola quem foge', REDACAO)).toBe(false);
   });
+  test('2 frases reais coladas, pulando o meio, valem; fora de ordem não', () => {
+    const texto = 'Além disso as pessoas tem vergonha. Então ficam caladas e ninguém ajuda.\n\nPortanto, o governo deve ajudar as pessoas.';
+    expect(trechoExiste('Além disso, as pessoas têm vergonha. Portanto, o governo deve ajudar...', texto)).toBe(true);
+    expect(trechoExiste('Portanto, o governo deve ajudar as pessoas. Além disso as pessoas tem vergonha.', texto)).toBe(false);
+  });
+  test('palavras soltas com ponto não viram trecho (revisor, 29/10/2026)', () => {
+    const texto = 'O Estado falha. A escola ignora o tema e a família se cala diante da mídia.';
+    expect(trechoExiste('Estado. Escola. Família. Mídia.', texto)).toBe(false);
+  });
   test('trecho inventado ou curto demais não existe', () => {
     expect(trechoExiste('segundo Michel Foucault', REDACAO)).toBe(false);
     expect(trechoExiste('o', REDACAO)).toBe(false);

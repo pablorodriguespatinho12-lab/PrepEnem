@@ -132,6 +132,9 @@ export function TreinoReceita() {
             checklist[i] = v;
             return { ...atual, checklist };
           })}
+          correcao={r.correcao}
+          aoGuardarCorrecao={(correcao) => setR((atual) => ({ ...atual, correcao }))}
+          aoIrPara={irPara}
         />
       )}
     </>

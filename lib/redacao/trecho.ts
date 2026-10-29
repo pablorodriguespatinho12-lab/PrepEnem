@@ -20,6 +20,7 @@ const MINIMO_CARACTERES = 4;
    ou mais vale com 85% delas iguais, na mesma posição; menor tem que ser exato. */
 const PALAVRAS_PARA_TOLERAR = 5;
 const PROPORCAO_IGUAL = 0.85;
+const MINIMO_PALAVRAS_POR_FRASE = 3;
 
 /* Posição (em palavras) logo depois do pedaço no texto, ou -1. */
 function acharPedaco(pedaco: string[], alvo: string[], desde: number): number {
@@ -34,18 +35,28 @@ function acharPedaco(pedaco: string[], alvo: string[], desde: number): number {
 }
 
 /* O trecho existe na redação? Reticências ("começo ... fim") valem: cada
-   pedaço tem que estar no texto, na ordem. */
+   pedaço tem que estar no texto, na ordem. Frase por frase também: na C4 a IA
+   cola o fim de um parágrafo no começo do outro, pulando as frases do meio
+   sem reticências, e isso recusava a correção de quem escreve com erro
+   (medido em 29/10/2026: 2 de 4 correções de um texto fraco). */
 export function trechoExiste(trecho: string | null | undefined, texto: string): boolean {
   if (!trecho) return false;
+  const alvo = normalizar(texto).split(' ');
+  const naOrdem = (pedacos: string[]) => {
+    let desde = 0;
+    for (const p of pedacos) {
+      desde = acharPedaco(p.split(' '), alvo, desde);
+      if (desde < 0) return false;
+    }
+    return true;
+  };
   const pedacos = trecho.split(/\.{3}|…/).map(normalizar).filter(Boolean);
   if (pedacos.length === 0 || pedacos.every((p) => p.length < MINIMO_CARACTERES)) return false;
-  const alvo = normalizar(texto).split(' ');
-  let desde = 0;
-  for (const p of pedacos) {
-    desde = acharPedaco(p.split(' '), alvo, desde);
-    if (desde < 0) return false;
-  }
-  return true;
+  if (naOrdem(pedacos)) return true;
+  /* Só como 2ª tentativa, e com frases de 3 palavras ou mais: "Estado.
+     Escola. Mídia." casaria com palavras soltas em qualquer lugar do texto. */
+  const frases = trecho.split(/\.{3}|…|(?<=[.!?])\s+/).map(normalizar).filter(Boolean);
+  return frases.length > 1 && frases.every((f) => f.split(' ').length >= MINIMO_PALAVRAS_POR_FRASE) && naOrdem(frases);
 }
 
 const CONECTIVOS = [

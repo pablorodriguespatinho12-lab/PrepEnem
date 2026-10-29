@@ -1,0 +1,136 @@
+{
+ "versao": 3,
+ "notas": {
+  "c1": 160,
+  "c2": 120,
+  "c3": 120,
+  "c4": 160,
+  "c5": 200
+ },
+ "total": 760,
+ "travas": [],
+ "justificativas": {
+  "c1": {
+   "trecho": "Hoje em dia muita gente tem preconceito com quem tem doença mental, e isso é muito ruim para essas pessoas que sofrem.",
+   "descritor": "boa"
+  },
+  "c2": {
+   "trecho": "Esse estigma decorre, sobretudo, do preconceito social que esconde quem tem transtorno mental e da omissão do Estado no cuidado em saúde mental.",
+   "descritor": "abordagem completa"
+  },
+  "c3": {
+   "trecho": "Portanto, o governo deve ajudar as pessoas com doença mental, fazendo campanhas na televisão.",
+   "descritor": "algumas falhas; a maior parte das ideias desenvolvida"
+  },
+  "c4": {
+   "trecho": "Além disso as pessoas tem vergonha de falar que estão doentes, porque os outros chamam de louco.",
+   "descritor": "presença constante; 1 operador entre parágrafos ou mais; poucas repetições ou inadequações"
+  },
+  "c5": {
+   "trecho": "o governo",
+   "descritor": ""
+  }
+ },
+ "c1": {
+  "estrutura": "boa",
+  "desvios": [
+   {
+    "trecho": "tem vergonha",
+    "tipo": "concordância",
+    "correcao": "têm vergonha"
+   },
+   {
+    "trecho": "Além disso as pessoas tem vergonha",
+    "tipo": "pontuação",
+    "correcao": "Além disso, as pessoas têm vergonha"
+   }
+  ]
+ },
+ "c2": {
+  "abordagem": "completa",
+  "partesEmbrionarias": 0,
+  "copiaMotivadores": false,
+  "repertorios": []
+ },
+ "c3": {
+  "paragrafos": [
+   {
+    "numero": 1,
+    "ideia": "Apresenta o problema do estigma e da omissão estatal.",
+    "desenvolvida": true,
+    "comentario": "Explica como o preconceito afeta quem tem doença mental."
+   },
+   {
+    "numero": 2,
+    "ideia": "Expõe causas econômicas e sociais que impedem o tratamento.",
+    "desenvolvida": true,
+    "comentario": "Mostra a relação entre falta de recursos e piora da doença."
+   },
+   {
+    "numero": 3,
+    "ideia": "Propõe intervenção governamental para reduzir o preconceito.",
+    "desenvolvida": true,
+    "comentario": "Sugere campanha televisiva como solução."
+   }
+  ],
+  "contradicaoGrave": false
+ },
+ "c4": {
+  "operadoresEntreParagrafos": [
+   "Além disso",
+   "Portanto"
+  ],
+  "inadequacoes": [],
+  "repeticoes": [
+   "as pessoas"
+  ]
+ },
+ "c5": {
+  "agente": {
+   "trecho": "o governo",
+   "valido": true
+  },
+  "acao": {
+   "trecho": "deve ajudar",
+   "valido": true
+  },
+  "modo": {
+   "trecho": "fazendo campanhas na televisão",
+   "valido": true
+  },
+  "efeito": {
+   "trecho": "o preconceito vai diminuir",
+   "valido": true
+  },
+  "detalhamento": {
+   "trecho": "as pessoas vão poder se tratar melhor",
+   "valido": true
+  },
+  "desrespeitaDH": false,
+  "condicional": false
+ },
+ "proximoPasso": {
+  "c1": "Revise concordância verbal (tem → têm) e insira vírgula após conectivos como 'Além disso,'.",
+  "c2": "Inclua ao menos um repertório (ex.: dados da OMS ou obra de Freud) com citação, explicação e amarração ao estigma no Brasil.",
+  "c3": "Aprofunde cada ideia explicando causas e consequências; por exemplo, detalhe como a falta de tratamento afeta a inserção no mercado de trabalho.",
+  "c4": "Varie os conectivos para evitar repetições como 'as pessoas' e use operadores adequados entre todos os parágrafos."
+ },
+ "reescritas": [
+  {
+   "original": "Além disso as pessoas tem vergonha de falar que estão doentes, porque os outros chamam de louco.",
+   "sugestao": "Além disso, as pessoas têm vergonha de falar que estão doentes, porque os outros as chamam de loucas.",
+   "porque": "Corrige concordância, pontuação e evita generalização de gênero."
+  },
+  {
+   "original": "Portanto, o governo deve ajudar as pessoas com doença mental, fazendo campanhas na televisão.",
+   "sugestao": "Portanto, o governo deve ajudar as pessoas com doença mental, realizando campanhas educativas na televisão.",
+   "porque": "Substitui verbo genérico por termo mais preciso e mantém coesão."
+  },
+  {
+   "original": "Hoje em dia muita gente tem preconceito com quem tem doença mental, e isso é muito ruim para essas pessoas que sofrem.",
+   "sugestao": "Hoje em dia, muita gente tem preconceito contra quem tem doença mental, o que agrava o sofrimento dessas pessoas.",
+   "porque": "Melhora a clareza e a concisão da frase."
+  }
+ ],
+ "corrigidaPor": "openai/gpt-oss-120b"
+}
