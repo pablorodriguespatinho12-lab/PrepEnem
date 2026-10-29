@@ -49,59 +49,66 @@ function ItemAutor({ nome }: { nome: string }) {
 }
 
 /* Os autores numa linha de pílulas, em cima da caixa de texto: visíveis sem
-   rolar. Tocar abre a ficha (obra, ano, ideia) logo abaixo, uma por vez.
-   Os coringas raros vêm primeiro, marcados, e a ficha deles traz a frase que
-   os amarra ao motivo do parágrafo (`causas`, na ordem). */
+   rolar. Primeiro até 3 coringas (frase de autor ou dado, fáceis de decorar);
+   os outros autores ficam atrás de "Outros autores", para a coluna caber na
+   tela (Pablo, 29/10/2026: 14 pílulas e a ficha empurravam a caixa de texto
+   para baixo da barra). Tocar abre a ficha curta logo abaixo, uma por vez. */
 export function AutoresEmLinha({ nomes, titulo, coringas = [], causas = [] }: {
   nomes: string[]; titulo: string; coringas?: string[]; causas?: (ChaveCausa | null)[];
 }) {
   const [aberto, setAberto] = useState<string | null>(null);
-  const autor = aberto ? autorPorNome(aberto) : null;
+  const [verOutros, setVerOutros] = useState(coringas.length === 0);
+  const outros = nomes.filter((n) => !coringas.includes(n));
+  const visiveis = verOutros ? [...coringas, ...outros] : coringas;
   const coringa = aberto ? coringaPorNome(aberto) : null;
+  const autor = aberto && !coringa ? autorPorNome(aberto) : null;
   const amarra = coringa ? causas.map((c) => (c ? coringa.amarra[c] : undefined)).find(Boolean) ?? Object.values(coringa.amarra)[0] : null;
-  const todos = [...coringas, ...nomes.filter((n) => !coringas.includes(n))];
+  const pilula = 'inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 type-meta font-medium t-colors hover:bg-muted aria-expanded:border-primary aria-expanded:bg-[hsl(var(--primary)/0.12)]';
   return (
     <div>
       {titulo && <p className="type-rotulo text-muted-foreground mb-2">{titulo}</p>}
       <ul className="flex flex-wrap gap-2">
-        {todos.map((nome) => {
+        {visiveis.map((nome) => {
           const ativo = nome === aberto;
-          const raro = coringas.includes(nome);
+          const k = coringaPorNome(nome);
           return (
             <li key={nome}>
-              <button
-                type="button"
-                onClick={() => setAberto(ativo ? null : nome)}
-                aria-expanded={ativo}
-                aria-controls="ficha-autor"
-                className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 type-meta font-medium t-colors hover:bg-muted aria-expanded:border-primary aria-expanded:bg-[hsl(var(--primary)/0.12)]"
-              >
-                {raro && <span className="type-micro font-semibold uppercase tracking-wide text-primary-text">raro</span>}
-                {autorPorNome(nome)?.nome ?? nome}
+              <button type="button" onClick={() => setAberto(ativo ? null : nome)} aria-expanded={ativo} aria-controls="ficha-autor" className={pilula}>
+                {k && <span className="type-micro font-semibold uppercase tracking-wide text-primary-text">{k.tipo}</span>}
+                {k ? k.rotulo : autorPorNome(nome)?.nome ?? nome}
               </button>
             </li>
           );
         })}
+        {coringas.length > 0 && outros.length > 0 && (
+          <li>
+            <button type="button" onClick={() => setVerOutros(!verOutros)} aria-expanded={verOutros} className={`${pilula} text-muted-foreground`}>
+              {verOutros ? 'Menos autores' : <>Outros autores · <span data-numeric>{outros.length}</span></>}
+            </button>
+          </li>
+        )}
       </ul>
+      {coringa && (
+        <div id="ficha-autor" className="mt-3 border-l-2 border-primary pl-3" aria-live="polite">
+          <p className="font-reading type-body">{coringa.tipo === 'fala' ? <>&ldquo;{coringa.texto}&rdquo;</> : coringa.texto}</p>
+          <p className="type-meta text-muted-foreground mt-0.5">{coringa.fonte} <span data-numeric>({coringa.quando})</span></p>
+          {amarra && (
+            <p className="type-meta mt-1.5">
+              <span className="font-medium text-primary-text">Ligue ao seu tema assim: </span>{amarra}
+            </p>
+          )}
+        </div>
+      )}
       {autor && (
         <div id="ficha-autor" className="mt-3 border-l-2 border-primary pl-3" aria-live="polite">
-          <p className="type-meta">
-            {coringa && <span className="text-muted-foreground">{coringa.area} · </span>}
-            <cite className="font-reading italic">{autor.obra}</cite> <span data-numeric className="text-muted-foreground">({autor.ano})</span>
-          </p>
+          <p className="type-meta"><cite className="font-reading italic">{autor.obra}</cite> <span data-numeric className="text-muted-foreground">({autor.ano})</span></p>
           <p className="font-reading type-body mt-0.5">{autor.ideia}</p>
-          {amarra && (
-            <>
-              <p className="type-rotulo text-primary-text mt-2">Como ligar ao seu motivo</p>
-              <p className="font-reading type-body mt-0.5">{amarra}</p>
-              <p className="type-meta text-muted-foreground mt-1">Comece por esta frase e troque pelas palavras do seu tema. Citado sem essa ligação, ele não vale ponto.</p>
-            </>
-          )}
         </div>
       )}
     </div>
   );
 }
+
 /* "Ver exemplo" fechado por padrão: o aluno tenta primeiro. */
 export function VerExemplo({ children }: { children: React.ReactNode }) {
   const [aberto, setAberto] = useState(false);

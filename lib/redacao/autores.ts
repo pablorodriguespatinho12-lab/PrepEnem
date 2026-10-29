@@ -91,107 +91,121 @@ export const AUTORES: Record<string, Autor> = {
   },
 };
 
-/* Coringas raros (Pablo, 29/10/2026: "coisa muito rara, mas que serve para
-   tudo"). Critério, nota 0 a 2 em cada: raro em redação de ENEM, serve a 3
-   ou mais dos 5 motivos, o leigo entende em 1 linha, fato conferido em fonte.
+/* Coringas (Pablo, 29/10/2026: "coisa muito rara, mas que serve para tudo";
+   depois de ver conceitos no ar: "fáceis de memorizar, falas de autores ou
+   dados"). Cada motivo tem 2 frases exatas de autor e 1 dado oficial, todos
+   conferidos em fonte (frase sem fonte primária, como a "metade da humanidade
+   não come" atribuída a Josué de Castro, ficou de fora).
    Análise e fontes: docs/redacao/repertorios-coringa.md. A Cartilha 2025
    (p.16) pune o "repertório de bolso", o que é usado em qualquer tema "de
    forma decorada, automática ou forçada": por isso cada coringa traz a frase
    que o AMARRA a cada motivo em que ele serve. */
-export interface Coringa extends Autor {
-  area: string;
+export interface Coringa {
+  tipo: 'fala' | 'dado';
+  /* O que aparece na pílula: o autor (fala) ou o dado em poucas palavras. */
+  rotulo: string;
+  /* A frase exata do autor (vai entre aspas na tela) ou o dado com o número. */
+  texto: string;
+  /* Quem disse e onde (fala), ou a pesquisa (dado). */
+  fonte: string;
+  quando: string;
   amarra: Partial<Record<ChaveCausa, string>>;
 }
 
 export const CORINGAS: Record<string, Coringa> = {
-  'Efeito Mateus': {
-    nome: 'Robert K. Merton (Efeito Mateus)', obra: 'artigo "O Efeito Mateus na ciência", revista Science', ano: 1968, area: 'Sociologia',
-    ideia: 'Cientistas famosos levam mais crédito pelo mesmo trabalho: quem já tem vantagem ganha mais (o nome vem do Evangelho de Mateus).',
+  Drummond: {
+    tipo: 'fala', rotulo: 'Carlos Drummond de Andrade', quando: '1945',
+    texto: 'As leis não bastam. Os lírios não nascem da lei.',
+    fonte: 'poema "Nosso tempo", do livro A Rosa do Povo',
     amarra: {
-      acesso: 'Quem nasce com acesso a boa escola e saúde acumula mais chances, e a distância para os outros só cresce.',
-      mercado: 'É o mesmo mecanismo com o dinheiro: renda gera mais renda, e quem começou sem nada fica para trás.',
-      historia: 'A vantagem que alguns grupos tiveram no passado se acumula até hoje, geração após geração.',
+      estado: 'A lei já garante o direito, mas, como diz Drummond, só a lei não faz o direito chegar a quem precisa.',
+      acesso: 'O direito existe no papel, mas sem ação ele não chega a quem mais precisa dele.',
     },
   },
-  'Efeito espectador': {
-    nome: 'Darley e Latané (efeito espectador)', obra: 'experimento de psicologia publicado em revista científica', ano: 1968, area: 'Psicologia',
-    ideia: 'Num experimento, cada pessoa demorava mais a ajudar quando sabia que outras também tinham percebido o problema.',
+  'Dom Hélder': {
+    tipo: 'fala', rotulo: 'Dom Hélder Câmara', quando: 'anos 1960 e 1970',
+    texto: 'Quando dou comida aos pobres, chamam-me de santo. Quando pergunto por que eles não têm comida, chamam-me de comunista.',
+    fonte: 'frase do arcebispo de Olinda e Recife; cite "como dizia Dom Hélder", sem data',
     amarra: {
-      estigma: 'Todos percebem quem sofre com o problema e, justamente por isso, ninguém se sente responsável por ajudar.',
-      estado: 'Como no efeito espectador, quando vários órgãos dividem a tarefa, cada um espera o outro e o problema fica sem dono.',
+      estado: 'Ajudar na emergência é preciso, mas o Estado também tem de perguntar por que o problema existe e atacar a causa.',
+      acesso: 'Doar resolve o dia; perguntar por que falta é o que muda o acesso de verdade.',
     },
   },
-  'Mundo justo': {
-    nome: 'Melvin Lerner (crença no mundo justo)', obra: 'livro The Belief in a Just World ("A crença num mundo justo")', ano: 1980, area: 'Psicologia',
-    ideia: 'As pessoas querem acreditar que cada um recebe o que merece; por isso tendem a culpar quem sofre pelo próprio sofrimento.',
+  Carolina: {
+    tipo: 'fala', rotulo: 'Carolina Maria de Jesus', quando: '1960',
+    texto: 'E assim no dia 13 de maio de 1958 eu lutava contra a escravatura atual – a fome!',
+    fonte: 'diário Quarto de Despejo',
     amarra: {
-      estigma: 'Quem sofre com o problema é visto como culpado pela própria situação, e isso serve de desculpa para não ajudar.',
-      acesso: 'Quem não tem acesso é acusado de "não ter se esforçado", e a desigualdade passa a parecer justa.',
+      historia: 'Setenta anos depois da abolição, Carolina via a fome como uma nova escravidão: a exclusão só mudou de forma.',
     },
   },
-  'Cidadania regulada': {
-    nome: 'Wanderley Guilherme dos Santos (cidadania regulada)', obra: 'livro Cidadania e Justiça', ano: 1979, area: 'Ciência política',
-    ideia: 'No governo de Getúlio Vargas (anos 1930 e 1940), só tinha direito trabalhista e aposentadoria quem tinha carteira assinada.',
+  'Conceição Evaristo': {
+    tipo: 'fala', rotulo: 'Conceição Evaristo', quando: '2014',
+    texto: 'A gente combinamos de não morrer.',
+    fonte: 'conto do livro Olhos d\'água (a concordância é de propósito: é a fala do povo)',
     amarra: {
-      estado: 'Restos dessa lógica ainda deixam quem trabalha sem carteira com menos proteção do que a lei promete a todos.',
-      historia: 'Desde Vargas, os direitos chegaram primeiro a quem tinha carteira assinada, e quem ficou de fora ainda espera.',
-      acesso: 'Quem trabalha sem carteira ainda tem menos acesso a aposentadoria e proteção quando adoece.',
+      estigma: 'Para quem é visto como suspeito, sobreviver já é uma luta diária, como no conto de Conceição Evaristo.',
+      historia: 'Mais de um século após a abolição, a população negra ainda luta, antes de tudo, para não morrer.',
     },
   },
-  'Vozes da Seca': {
-    nome: 'Luiz Gonzaga e Zé Dantas, "Vozes da Seca"', obra: 'canção', ano: 1953, area: 'Música',
-    ideia: 'O sertanejo pede aos políticos obra que resolva a seca, como açude e trabalho, e não só uma ajuda que acaba logo.',
+  Graciliano: {
+    tipo: 'fala', rotulo: 'Graciliano Ramos', quando: '1938',
+    texto: 'Você é um bicho, Fabiano.',
+    fonte: 'romance Vidas Secas',
     amarra: {
-      estado: 'O Estado ainda responde com ajuda emergencial, sem a obra que resolveria o problema de vez.',
-      estigma: 'Quem precisa de apoio é tratado como pedinte, e não como cidadão com direitos.',
-      acesso: 'Sem a obra que fica, o acesso à água e ao trabalho continua dependendo de favor.',
+      estigma: 'Quem é tratado como menos que gente acaba se vendo assim, como Fabiano em Vidas Secas.',
+      mercado: 'Fabiano trabalha a vida toda e é enganado nas contas pelo patrão: trabalho sem dignidade desumaniza.',
     },
   },
-  'A Cidade': {
-    nome: 'Chico Science & Nação Zumbi, "A Cidade"', obra: 'canção do disco Da Lama ao Caos', ano: 1994, area: 'Música',
-    ideia: 'A cidade cresce sem parar, mas "o de cima sobe e o de baixo desce": o rico fica mais rico, e o pobre, mais pobre.',
+  Machado: {
+    tipo: 'fala', rotulo: 'Machado de Assis', quando: '1891',
+    texto: 'Ao vencido, ódio ou compaixão; ao vencedor, as batatas.',
+    fonte: 'romance Quincas Borba, capítulo VI',
     amarra: {
-      acesso: 'O país cresce, mas o acesso fica com quem já está em cima, e quem está embaixo desce ainda mais.',
-      mercado: 'A cidade cresce como negócio, e o lucro de poucos aumenta a distância entre as pessoas.',
+      mercado: 'Na lógica do lucro, quem ganha leva tudo, e quem perde recebe, no máximo, pena.',
     },
   },
-  'A Caverna': {
-    nome: 'José Saramago, A Caverna', obra: 'romance', ano: 2000, area: 'Literatura',
-    ideia: 'Um artesão de louça de barro perde o único comprador, um shopping gigante que só quer prato de plástico: o mercado descarta pessoas.',
+  'Dado esgoto': {
+    tipo: 'dado', rotulo: 'quase metade sem esgoto', quando: '2026',
+    texto: 'Quase metade dos brasileiros, cerca de 90 milhões de pessoas, não tem coleta de esgoto.',
+    fonte: 'Instituto Trata Brasil, Ranking do Saneamento, com dados do governo federal (SINISA)',
     amarra: {
-      mercado: 'Como o artesão de Saramago, quem não dá lucro é descartado, mesmo quando o que faz tem valor.',
-      estigma: 'Quem é visto como antigo é descartado, como o artesão do romance, mesmo sabendo fazer bem o seu trabalho.',
-      acesso: 'Quem não acompanha o que o mercado quer perde o acesso ao próprio sustento.',
+      estado: 'Um serviço básico, que é dever do poder público, ainda falta a quase metade do país.',
     },
   },
-  'Isaías Caminha': {
-    nome: 'Lima Barreto, Recordações do Escrivão Isaías Caminha', obra: 'romance', ano: 1909, area: 'Literatura',
-    ideia: 'Um jovem mulato e pobre acredita que estudar basta para subir na vida e esbarra no racismo: o esforço sozinho não abre porta fechada.',
+  'Dado 1888': {
+    tipo: 'dado', rotulo: 'último a abolir a escravidão', quando: '1888',
+    texto: 'O Brasil foi o último país das Américas a abolir a escravidão, em 1888, com a Lei Áurea.',
+    fonte: 'Lei nº 3.353, de 13 de maio de 1888',
     amarra: {
-      estigma: 'Como Isaías Caminha, quem carrega o estigma é julgado antes de mostrar o que sabe.',
-      historia: 'Escrito 21 anos após o fim da escravidão, o livro mostra uma liberdade sem integração que ainda pesa hoje.',
-      acesso: 'Estudar não basta quando a porta já está fechada para alguns grupos.',
+      historia: 'Mais de três séculos de escravidão e uma abolição sem integração ainda pesam sobre o país.',
     },
   },
-  'Amor e Fúria': {
-    nome: 'Luiz Bolognesi, Uma História de Amor e Fúria', obra: 'animação premiada no festival de Annecy, na França', ano: 2013, area: 'Cinema',
-    ideia: 'Um herói atravessa mais de 500 anos de Brasil, da colonização até 2096, e vê sempre os mesmos vencedores.',
+  'Dado Inaf': {
+    tipo: 'dado', rotulo: '3 em 10 não entendem um texto', quando: '2024',
+    texto: '3 em cada 10 brasileiros de 15 a 64 anos são analfabetos funcionais: leem, mas não entendem bem um texto.',
+    fonte: 'Indicador de Alfabetismo Funcional (Inaf), da Ação Educativa e do Instituto Paulo Montenegro',
     amarra: {
-      historia: 'Os mesmos grupos vencem há 500 anos, e o problema de hoje é mais um capítulo dessa história.',
-      mercado: 'No filme, em 2096, até a água vira mercadoria: quem não pode pagar fica sem.',
-      acesso: 'Quem não pode pagar fica sem o básico, como a água no Rio de 2096 do filme.',
+      acesso: 'Sem entender bem um texto, a pessoa tem menos acesso a direitos, a emprego e a informação.',
     },
   },
-  'Revolta da Vacina': {
-    nome: 'Nicolau Sevcenko, A Revolta da Vacina', obra: 'livro de história', ano: 1984, area: 'História',
-    ideia: 'Em 1904, o povo do Rio se revoltou também contra as obras que derrubaram as casas dos pobres: o problema era a imposição, não a vacina.',
+  'Dado violência': {
+    tipo: 'dado', rotulo: '3 em 4 vítimas são negras', quando: '2026',
+    texto: '3 em cada 4 vítimas de homicídio no Brasil são negras (77%).',
+    fonte: 'Atlas da Violência, do Ipea e do Fórum Brasileiro de Segurança Pública',
     amarra: {
-      estado: 'Quando o Estado impõe sem explicar, como em 1904, a população desconfia até do que é bom para ela.',
-      acesso: 'Os pobres foram tirados do centro do Rio, e morar perto do trabalho virou privilégio.',
-      estigma: 'Em 1904, o pobre foi tratado como foco de doença, e não como cidadão.',
+      estigma: 'O estigma tem cor: 3 em cada 4 pessoas assassinadas no país são negras.',
+    },
+  },
+  'Dado informalidade': {
+    tipo: 'dado', rotulo: '4 em 10 trabalham informais', quando: '2026',
+    texto: 'Quase 4 em cada 10 trabalhadores brasileiros são informais (37,4%), sem a proteção de um emprego formal.',
+    fonte: 'IBGE, PNAD Contínua (2º trimestre)',
+    amarra: {
+      mercado: 'Quando o trabalho é visto só como custo, quase 4 em cada 10 ficam sem a proteção de um emprego formal.',
     },
   },
 };
 
-export const autorPorNome = (nome: string): Autor | null => AUTORES[nome] ?? CORINGAS[nome] ?? null;
+export const autorPorNome = (nome: string): Autor | null => AUTORES[nome] ?? null;
 export const coringaPorNome = (nome: string): Coringa | null => CORINGAS[nome] ?? null;

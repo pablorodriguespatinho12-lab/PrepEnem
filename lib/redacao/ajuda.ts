@@ -81,7 +81,7 @@ function fichas(p: PedidoAjuda): string {
   /* Os coringas raros primeiro, com a frase que os liga ao motivo. */
   const raros = causas.flatMap((c) => (causaPorChave(c)?.coringas ?? []).map((nome) => {
     const k = coringaPorNome(nome);
-    return k && c ? `- [raro] ${k.nome}, "${k.obra}" (${k.ano}): ${k.ideia} Ligação ao motivo: ${k.amarra[c] ?? ''}` : null;
+    return k && c && k.amarra[c] ? `- [coringa, ${k.tipo}] ${k.rotulo}: "${k.texto}" (${k.fonte}, ${k.quando}). Ligação ao motivo: ${k.amarra[c]}` : null;
   })).filter((l): l is string => l !== null);
   const linhas = [...new Set([...raros, ...causas.flatMap((c) => causaPorChave(c)?.repertorios ?? []).map((nome) => {
     const a = autorPorNome(nome);
@@ -107,7 +107,7 @@ ${molde}
 ${p.paragrafo === 'introducao' ? 'A frase 3 (tese) entra sozinha: ele escreve só as frases 1 e 2.\n' : ''}
 ONDE ELE ESTÁ: ${agora}
 
-AUTORES QUE ELE PODE USAR (só estes; ao sugerir um, diga a ideia dele; prefira os [raro], que quase ninguém usa, e mostre como ligar ao tema):
+AUTORES QUE ELE PODE USAR (só estes; ao sugerir um, diga a ideia dele; prefira os [coringa], frases e dados fáceis de decorar, e mostre como ligar ao tema; a frase do autor é exata, não mude as palavras dela):
 ${fichas(p)}
 
 O QUE ELE JÁ ESCREVEU NESTE PARÁGRAFO:

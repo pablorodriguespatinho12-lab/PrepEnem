@@ -38,7 +38,8 @@ interface Props {
 }
 
 type Aba = 'molde' | 'ajuda' | 'exemplo';
-const ABAS: { chave: Aba; nome: string }[] = [{ chave: 'molde', nome: 'Molde' }, { chave: 'ajuda', nome: 'Ajuda' }, { chave: 'exemplo', nome: 'Exemplo' }];
+const CORINGAS_A_VISTA = 3;
+const ABAS: { chave: Aba; nome: string }[] =[{ chave: 'molde', nome: 'Molde' }, { chave: 'ajuda', nome: 'Ajuda' }, { chave: 'exemplo', nome: 'Exemplo' }];
 
 /* Uma frase por linha da lista: o nome da função em cima, o molde em texto
    de leitura. A tese (3ª frase da introdução) é a do passo 3 e entra sozinha.
@@ -227,7 +228,9 @@ function Autores({ nomes, coringas, causas, titulo, fraseDeRepertorio }: {
   const [escolha, setEscolha] = useState<boolean | null>(null);
   const aberto = escolha ?? fraseDeRepertorio;
   return (
-    <div data-medir="autores" className="mb-4">
+    /* Trava: a caixa de texto nunca vai para baixo da barra, mesmo com
+       "Outros autores" aberto. */
+    <div data-medir="autores" className="mb-4 lg:max-h-[45%] lg:shrink-0 lg:overflow-y-auto">
       <button
         type="button"
         onClick={() => setEscolha(!aberto)}
@@ -248,7 +251,9 @@ export function PassoParagrafo(props: Props) {
   /* Introdução: autores dos 2 motivos; D1 e D2: do motivo do parágrafo. */
   const causas = ehIntroducao ? [causaA, causaB] : paragrafo.chave === 'desenvolvimento1' ? [causaA] : paragrafo.chave === 'desenvolvimento2' ? [causaB] : [];
   const nomes = Array.from(new Set(causas.flatMap((c) => causaPorChave(c)?.repertorios ?? [])));
-  const coringas = Array.from(new Set(causas.flatMap((c) => causaPorChave(c)?.coringas ?? [])));
+  /* Só 3 coringas à vista (sem rolagem); na introdução, alternando os 2 motivos. */
+  const porMotivo = causas.map((c) => causaPorChave(c)?.coringas ?? []);
+  const coringas = Array.from(new Set(porMotivo[0]?.flatMap((n, i) => [n, ...porMotivo.slice(1).map((m) => m[i])]).filter(Boolean) ?? [])).slice(0, CORINGAS_A_VISTA);
   const contado = ehIntroducao ? introducaoComTese(texto, tese) : texto;
   const onde = ondeEstou(texto, paragrafo.chave, paragrafo.frases.length);
   const fraseDeRepertorio = /^repert[óo]rio/i.test(paragrafo.frases[onde.atual]?.funcao ?? '');

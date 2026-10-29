@@ -34,20 +34,33 @@ async function percorrer(largura: number): Promise<[string, boolean, string][]> 
   await page.getByRole('heading', { level: 2, name: 'Desenvolvimento 1', exact: true }).waitFor();
 
   /* A frase 2 é a do repertório: os autores abrem sozinhos. */
-  const esperados = causaPorChave('estigma')!.coringas.map((n) => CORINGAS[n].nome);
+  const esperados = causaPorChave('estigma')!.coringas.map((n) => CORINGAS[n].rotulo);
   const pilulas = page.locator('[data-medir="autores"] ul button');
   await pilulas.first().waitFor();
-  const primeiros = (await pilulas.allInnerTexts()).slice(0, 3).map((t) => t.replace(/^raro\s*/i, '').trim());
+  const primeiros = (await pilulas.allInnerTexts()).slice(0, 3).map((t) => t.replace(/^(fala|dado)\s*/i, '').trim());
   prova('coringas do motivo vêm primeiro', JSON.stringify(primeiros) === JSON.stringify(esperados), primeiros.join(' | '));
-  const marcados = await page.locator('[data-medir="autores"] ul button', { hasText: /^raro/i }).count();
-  prova('3 marcados "raro"', marcados === 3, `${marcados}`);
+  const marcados = await page.locator('[data-medir="autores"] ul button', { hasText: /^(fala|dado)/i }).count();
+  prova('só 3 coringas à vista (2 falas e 1 dado)', marcados === 3, `${marcados}`);
+  const outros = await page.getByRole('button', { name: /^Outros autores/ }).isVisible();
+  prova('outros autores atrás de 1 botão', outros, outros ? 'sim' : 'não');
 
   await pilulas.first().click();
   const ficha = await page.locator('#ficha-autor').innerText();
-  const amarra = CORINGAS['Efeito espectador'].amarra.estigma!;
-  prova('ficha traz a ligação ao motivo', ficha.includes('Como ligar ao seu motivo') && ficha.includes(amarra), ficha.split('\n')[0]);
-  prova('ficha diz como usar sem decorar', ficha.includes('troque pelas palavras do seu tema'), ficha.includes('troque') ? 'sim' : 'não');
-  if (SHOTS) await page.locator('[data-medir="autores"]').screenshot({ path: `${SHOTS}/coringas-${largura}.png` });
+  const amarra = CORINGAS['Graciliano'].amarra.estigma!;
+  prova('ficha traz a frase e a ligação', ficha.includes('Você é um bicho, Fabiano') && ficha.includes(amarra), ficha.split('\n')[0]);
+  prova('ficha diz como ligar ao tema', ficha.includes('Ligue ao seu tema assim'), ficha.includes('Ligue') ? 'sim' : 'não');
+  if (SHOTS) await page.screenshot({ path: `${SHOTS}/coringas-${largura}.png` });
+
+  /* Sem rolagem (Pablo, 29/10/2026): com a ficha aberta, a caixa de texto
+     inteira fica acima da barra Voltar/Próximo, e a página não rola. */
+  if (largura >= 1024) {
+    const caixa = await page.locator('#texto-desenvolvimento1').boundingBox();
+    const barra = await page.getByRole('button', { name: /^Próximo/ }).boundingBox();
+    const fundo = Math.round((caixa?.y ?? 0) + (caixa?.height ?? 0));
+    prova('caixa de texto acima da barra', !!barra && fundo <= barra.y, `caixa até ${fundo}, barra em ${Math.round(barra?.y ?? 0)}`);
+    const rola = await page.evaluate(() => document.documentElement.scrollHeight > innerHeight + 1);
+    prova('página não rola', !rola, rola ? 'rola' : 'cabe');
+  }
 
   /* Passo 2: cada motivo mostra os seus coringas. */
   await page.evaluate(() => {
@@ -56,7 +69,7 @@ async function percorrer(largura: number): Promise<[string, boolean, string][]> 
   });
   await page.reload({ waitUntil: 'networkidle' });
   await page.getByRole('heading', { level: 2, name: 'Por que esse problema existe?', exact: true }).waitFor();
-  const raros2 = await page.getByRole('button', { name: /^raro/i }).count();
+  const raros2 = await page.getByRole('button', { name: /^(fala|dado)/i }).count();
   prova('passo 2: 3 coringas em cada um dos 5 motivos', raros2 === 15, `${raros2}`);
 
   const largo = await page.evaluate(() => document.documentElement.scrollWidth);

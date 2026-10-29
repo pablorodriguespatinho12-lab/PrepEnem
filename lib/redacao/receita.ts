@@ -18,7 +18,7 @@ export interface Causa {
   naTese: string;
   fraseDeTese: string;
   repertorios: string[];
-  /* Coringas raros que servem a este motivo, com a amarra pronta (autores.ts). */
+  /* Coringas: 2 frases de autor e 1 dado, fáceis de decorar, com a amarra pronta (autores.ts). */
   coringas: string[];
 }
 
@@ -28,19 +28,19 @@ export const CAUSAS: Causa[] = [
     chave: 'estado', nomeNaFrase: 'omissão do Estado', nome: 'Omissão do Estado', naTese: 'da negligência estatal na garantia de direitos já previstos em lei',
     fraseDeTese: '...por negligência estatal na garantia de direitos já previstos em lei',
     repertorios: ['CF art. 3º e 6º', 'Amartya Sen', 'José Murilo de Carvalho', 'Lei do SUS'],
-    coringas: ['Vozes da Seca', 'Cidadania regulada', 'Revolta da Vacina'],
+    coringas: ['Drummond', 'Dom Hélder', 'Dado esgoto'],
   },
   {
     chave: 'historia', nomeNaFrase: 'herança histórica', nome: 'Herança histórica', naTese: 'de uma herança histórica de exclusão que ainda estrutura o país',
     fraseDeTese: '...por uma herança histórica de exclusão que ainda estrutura o país',
     repertorios: ['Celso Furtado', 'Sérgio Buarque', 'Lélia Gonzalez'],
-    coringas: ['Amor e Fúria', 'Cidadania regulada', 'Isaías Caminha'],
+    coringas: ['Carolina', 'Conceição Evaristo', 'Dado 1888'],
   },
   {
     chave: 'acesso', nomeNaFrase: 'desigualdade de acesso', nome: 'Desigualdade de acesso', naTese: 'da desigualdade de acesso, que separa quem pode de quem não pode',
     fraseDeTese: '...pela desigualdade de acesso, que separa quem pode de quem não pode',
     repertorios: ['Bourdieu', 'Piketty', 'Josué de Castro', 'Anísio Teixeira'],
-    coringas: ['Efeito Mateus', 'A Cidade', 'Mundo justo'],
+    coringas: ['Dom Hélder', 'Drummond', 'Dado Inaf'],
   },
   {
     chave: 'estigma', nomeNaFrase: 'estigma e invisibilidade', nome: 'Estigma e invisibilidade', /* Sem "esse grupo": a frase serve a tema livre, que pode não ter grupo
@@ -48,13 +48,13 @@ export const CAUSAS: Causa[] = [
     naTese: 'do estigma social, que torna invisível quem sofre com o problema',
     fraseDeTese: '...pelo estigma social, que torna invisível quem sofre com o problema',
     repertorios: ['Goffman', 'Hannah Arendt', 'Foucault', 'Nise da Silveira'],
-    coringas: ['Efeito espectador', 'Mundo justo', 'Isaías Caminha'],
+    coringas: ['Graciliano', 'Conceição Evaristo', 'Dado violência'],
   },
   {
     chave: 'mercado', nomeNaFrase: 'mercado acima das pessoas', nome: 'Mercado acima das pessoas', naTese: 'da lógica de lucro que se sobrepõe ao bem-estar',
     fraseDeTese: '...pela lógica de lucro que se sobrepõe ao bem-estar',
     repertorios: ['Zuboff', 'Ricardo Antunes', 'Byung-Chul Han', 'Ulrich Beck'],
-    coringas: ['A Caverna', 'Efeito Mateus', 'A Cidade'],
+    coringas: ['Machado', 'Graciliano', 'Dado informalidade'],
   },
 ];
 
