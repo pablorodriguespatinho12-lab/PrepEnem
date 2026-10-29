@@ -112,22 +112,29 @@ export interface Coringa {
   /* Quem disse e onde (fala), ou a pesquisa (dado). */
   fonte: string;
   quando: string;
+  /* Em quantos dos 11 temas do ENEM de 2015 a 2025 ele sustentou nota 200,
+     com 3 juízes cegos (docs/redacao/prova-coringas.md). */
+  prova: { aprovados: number; temas: number };
+  /* Para quem não serve em quase todo tema: onde ele funcionou. */
+  restricao?: string;
   amarra: Partial<Record<ChaveCausa, string>>;
 }
 
 export const CORINGAS: Record<string, Coringa> = {
   Drummond: {
-    tipo: 'fala', rotulo: 'Carlos Drummond de Andrade', quando: '1945',
+    tipo: 'fala', rotulo: 'Carlos Drummond de Andrade', quando: '1945', prova: { aprovados: 11, temas: 11 },
     texto: 'As leis não bastam. Os lírios não nascem da lei.',
     sentido: 'Lírio é uma flor: a vida boa não nasce só porque uma lei manda.',
     fonte: 'poema "Nosso tempo", do livro A Rosa do Povo',
     amarra: {
       estado: 'A lei já garante o direito, mas, como diz Drummond, só a lei não faz o direito chegar a quem precisa.',
       acesso: 'O direito existe no papel, mas sem ação ele não chega a quem mais precisa dele.',
+      historia: 'A Lei Áurea acabou com a escravidão no papel, mas, como diz Drummond, só a lei não deu terra, escola nem trabalho.',
+      mercado: 'Há leis que protegem o trabalhador e o consumidor, mas só a lei não impede que o lucro passe por cima das pessoas.',
     },
   },
   'Dom Hélder': {
-    tipo: 'fala', rotulo: 'Dom Hélder Câmara', quando: 'anos 1960 e 1970',
+    tipo: 'fala', rotulo: 'Dom Hélder Câmara', quando: 'anos 1960 e 1970', prova: { aprovados: 11, temas: 11 },
     texto: 'Quando dou comida aos pobres, chamam-me de santo. Quando pergunto por que eles não têm comida, chamam-me de comunista.',
     sentido: 'Ajudar é aplaudido; perguntar a causa do problema incomoda. Na redação, escreva "como dizia Dom Hélder", sem data.',
     fonte: 'arcebispo de Olinda e Recife',
@@ -136,27 +143,28 @@ export const CORINGAS: Record<string, Coringa> = {
       acesso: 'Doar resolve o dia; perguntar por que falta é o que muda o acesso de verdade.',
     },
   },
-  Carolina: {
-    tipo: 'fala', rotulo: 'Carolina Maria de Jesus', quando: '1960',
-    texto: 'E assim no dia 13 de maio de 1958 eu lutava contra a escravatura atual – a fome!',
-    sentido: '13 de maio é o dia do fim da escravidão (1888). Setenta anos depois, ela diz que a fome prende como a escravidão prendia.',
-    fonte: 'diário Quarto de Despejo',
+  'Rui Barbosa': {
+    tipo: 'fala', rotulo: 'Rui Barbosa', quando: '1920', prova: { aprovados: 11, temas: 11 },
+    texto: 'Tratar com desigualdade a iguais, ou a desiguais com igualdade, seria desigualdade flagrante, e não igualdade real.',
+    sentido: 'Tratar todo mundo igual parece justo, mas quem começa em desvantagem precisa de mais para chegar ao mesmo lugar.',
+    fonte: 'discurso Oração aos Moços',
     amarra: {
-      historia: 'Setenta anos depois do fim da escravidão, Carolina via a fome como uma nova escravidão: a exclusão só mudou de forma.',
+      estado: 'O Estado não pode dar o mesmo a quem precisa de mais: tratar igual quem está em desvantagem mantém a desigualdade.',
+      acesso: 'Oferecer o mesmo a todos não basta se uns partem de trás: a justiça dá mais a quem tem menos.',
+      historia: 'Grupos deixados para trás pela história só alcançam os outros com tratamento diferente, como as cotas.',
     },
   },
-  'Conceição Evaristo': {
-    tipo: 'fala', rotulo: 'Conceição Evaristo', quando: '2014',
-    texto: 'A gente combinamos de não morrer.',
-    sentido: 'O "combinamos" é de propósito: é a fala do povo. No conto, jovens negros da favela fazem um pacto para sobreviver.',
-    fonte: 'conto do livro Olhos d\'água',
+  'Elie Wiesel': {
+    tipo: 'fala', rotulo: 'Elie Wiesel', quando: '1986', prova: { aprovados: 8, temas: 11 },
+    texto: 'O oposto do amor não é o ódio, é a indiferença.',
+    sentido: 'Fingir que não vê quem sofre é tão grave quanto agredir.',
+    fonte: 'entrevista à revista US News & World Report (tradução)',
     amarra: {
-      estigma: 'Para quem é visto como suspeito, sobreviver já é uma luta diária, como no conto de Conceição Evaristo.',
-      historia: 'Mais de um século após o fim da escravidão, jovens negros da periferia ainda lutam, antes de tudo, para não morrer.',
+      estigma: 'Ignorar quem sofre também fere: a indiferença da sociedade é o que mantém o grupo invisível.',
     },
   },
   Graciliano: {
-    tipo: 'fala', rotulo: 'Graciliano Ramos', quando: '1938',
+    tipo: 'fala', rotulo: 'Graciliano Ramos', quando: '1938', prova: { aprovados: 7, temas: 11 },
     texto: 'Você é um bicho, Fabiano.',
     sentido: 'Fabiano é um sertanejo pobre, tão maltratado pela seca e pelo patrão que passa a se ver como bicho.',
     fonte: 'romance Vidas Secas',
@@ -165,8 +173,18 @@ export const CORINGAS: Record<string, Coringa> = {
       mercado: 'Enganado nas contas pelo patrão, Fabiano aceita calado: quem trabalha sem direitos se sente menos que gente.',
     },
   },
+  'Luther King': {
+    tipo: 'fala', rotulo: 'Martin Luther King Jr.', quando: '1963', prova: { aprovados: 7, temas: 11 },
+    texto: 'A injustiça em qualquer lugar é uma ameaça à justiça em todo lugar.',
+    sentido: 'Quando um grupo perde direitos, ninguém está seguro: a injustiça se espalha.',
+    fonte: 'Carta da Prisão de Birmingham (tradução)',
+    amarra: {
+      estigma: 'O preconceito contra um grupo ameaça os direitos de todos, não só os de quem é atingido.',
+    },
+  },
   Machado: {
-    tipo: 'fala', rotulo: 'Machado de Assis', quando: '1891',
+    tipo: 'fala', rotulo: 'Machado de Assis', quando: '1891', prova: { aprovados: 4, temas: 11 },
+    restricao: 'serviu em temas de desigualdade e disputa: herança africana, povos tradicionais, trabalho de cuidado, cinema',
     texto: 'Ao vencido, ódio ou compaixão; ao vencedor, as batatas.',
     sentido: 'Quem vence a disputa leva o prêmio (as batatas); quem perde ganha só raiva ou pena. Machado zomba dessa lei do mais forte.',
     fonte: 'romance Quincas Borba, capítulo VI',
@@ -174,44 +192,13 @@ export const CORINGAS: Record<string, Coringa> = {
       mercado: 'Na competição sem limites, como ironizava Machado, quem vence leva tudo e quem perde recebe, no máximo, pena.',
     },
   },
-  'Dado esgoto': {
-    tipo: 'dado', rotulo: 'quase metade sem esgoto', quando: '2026',
-    texto: 'Quase metade dos brasileiros, cerca de 90 milhões de pessoas, não tem acesso à coleta de esgoto.',
-    fonte: 'Instituto Trata Brasil, Ranking do Saneamento, com dados do governo federal',
-    amarra: {
-      estado: 'Um serviço básico, que é dever do poder público, ainda falta a quase metade do país.',
-    },
-  },
   'Dado 1888': {
-    tipo: 'dado', rotulo: 'último a abolir a escravidão', quando: '1888',
+    tipo: 'dado', rotulo: 'último a abolir a escravidão', quando: '1888', prova: { aprovados: 4, temas: 11 },
+    restricao: 'serviu em temas de população negra, religião de matriz africana, povos tradicionais e trabalho de cuidado',
     texto: 'O Brasil foi o último país das Américas a acabar com a escravidão, em 1888, com a Lei Áurea.',
     fonte: 'Lei nº 3.353, de 13 de maio de 1888 (a Lei Áurea)',
     amarra: {
       historia: 'Mais de três séculos de escravidão e um fim sem terra, escola nem trabalho para os libertos ainda pesam sobre o país.',
-    },
-  },
-  'Dado Inaf': {
-    tipo: 'dado', rotulo: '3 em 10 não entendem um texto', quando: '2024',
-    texto: '3 em cada 10 brasileiros de 15 a 64 anos são analfabetos funcionais: têm dificuldade de entender até textos simples.',
-    fonte: 'Indicador de Alfabetismo Funcional (Inaf), da Ação Educativa e do Instituto Paulo Montenegro',
-    amarra: {
-      acesso: 'Sem entender bem um texto, a pessoa tem menos acesso a direitos, a emprego e a informação.',
-    },
-  },
-  'Dado violência': {
-    tipo: 'dado', rotulo: '3 em 4 vítimas são negras', quando: '2026',
-    texto: '3 em cada 4 pessoas assassinadas no Brasil são negras, contando pretos e pardos (77%).',
-    fonte: 'Atlas da Violência, do Ipea e do Fórum Brasileiro de Segurança Pública',
-    amarra: {
-      estigma: 'O preconceito tem cor: 3 em cada 4 pessoas assassinadas no país são negras.',
-    },
-  },
-  'Dado informalidade': {
-    tipo: 'dado', rotulo: '4 em 10 trabalham informais', quando: '2026',
-    texto: 'Quase 4 em cada 10 trabalhadores brasileiros são informais (37,4%): sem carteira assinada ou sem CNPJ, em geral sem férias nem 13º.',
-    fonte: 'IBGE, pesquisa PNAD Contínua (2º trimestre)',
-    amarra: {
-      mercado: 'Quase 4 em cada 10 trabalhadores vivem sem garantias como férias, 13º e aposentadoria.',
     },
   },
 };

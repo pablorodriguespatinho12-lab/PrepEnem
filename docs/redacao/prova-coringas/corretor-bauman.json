@@ -1,0 +1,29 @@
+{
+ "bauman_bolso": {
+  "notas": {
+   "c1": 120,
+   "c2": 160,
+   "c3": 120,
+   "c4": 120,
+   "c5": 200
+  },
+  "total": 720,
+  "repertorios": [
+   {
+    "trecho": "Segundo o sociólogo Zygmunt Bauman, vivemos em uma modernidade líquida",
+    "legitimado": true,
+    "pertinente": true,
+    "produtivo": false,
+    "bolso": true
+   },
+   {
+    "trecho": "Tal situação é evidenciada pelo filósofo camaronês Achille Mbembe, que",
+    "legitimado": true,
+    "pertinente": true,
+    "produtivo": false,
+    "bolso": true
+   }
+  ],
+  "travas": []
+ }
+}

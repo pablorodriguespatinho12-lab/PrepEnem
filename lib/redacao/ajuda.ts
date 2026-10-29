@@ -81,7 +81,7 @@ function fichas(p: PedidoAjuda): string {
   /* Os coringas raros primeiro, com a frase que os liga ao motivo. */
   const raros = causas.flatMap((c) => (causaPorChave(c)?.coringas ?? []).map((nome) => {
     const k = coringaPorNome(nome);
-    return k && c && k.amarra[c] ? `- [coringa, ${k.tipo}] ${k.rotulo}: "${k.texto}" (${k.fonte}, ${k.quando}). Ligação ao motivo: ${k.amarra[c]}` : null;
+    return k && c && k.amarra[c] ? `- [coringa, ${k.tipo}, serviu em ${k.prova.aprovados} de ${k.prova.temas} temas${k.restricao ? `; ${k.restricao}` : ''}] ${k.rotulo}: "${k.texto}" (${k.fonte}, ${k.quando}). Ligação ao motivo: ${k.amarra[c]}` : null;
   })).filter((l): l is string => l !== null);
   const linhas = [...new Set([...raros, ...causas.flatMap((c) => causaPorChave(c)?.repertorios ?? []).map((nome) => {
     const a = autorPorNome(nome);

@@ -1,0 +1,1277 @@
+{
+ "y001": {
+  "item": "Dado esgoto",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "âncora Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.33,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado de saneamento sem relação com estigma; ponte forçada de 'Estado falha no básico'.",
+   "Dado de saneamento só ao assunto geral de omissão estatal; liga-se pouco ao estigma.",
+   "Dado de saneamento não tem relação com estigma; a ponte 'Estado falha no básico' é forçada."
+  ]
+ },
+ "y002": {
+  "item": "elie_wiesel",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "elie_wiesel",
+  "sim": 2,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Afirma que a falta de registro é indiferença, mas explica a invisibilidade sem desenvolver a ideia da citação.",
+   "Citação real, explicada e amarrada à invisibilidade do sem-registro.",
+   "A indiferença é amarrada à invisibilidade de quem não tem certidão e à perda de direitos."
+  ]
+ },
+ "y003": {
+  "item": "luther_king",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "fraco",
+  "grupo": "luther_king",
+  "sim": 2,
+  "bolso": 1,
+  "pertinente": 1.67,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Ponte concreta: manipulação de dados de um grupo afeta escolhas e votos de toda a sociedade.",
+   "Citação real ligada ao efeito coletivo da manipulação de dados de um grupo.",
+   "Citação genérica sobre injustiça adaptada à força ao uso de dados; ligação superficial."
+  ]
+ },
+ "y004": {
+  "item": "rui_barbosa",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "rui_barbosa",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Princípio da equidade aplicado com medidas concretas para periferias e interior sem salas.",
+   "Rui Barbosa explicado e aplicado a medidas concretas para quem não tem sala.",
+   "A ideia de equidade é aplicada com raciocínio próprio às cidades sem salas de cinema."
+  ]
+ },
+ "y005": {
+  "item": "rui_barbosa",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "rui_barbosa",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Equidade ligada à reparação histórica, cotas e ensino da história africana.",
+   "Equidade aplicada às cotas e ao ensino afro, com raciocínio próprio.",
+   "Equidade ligada à escravidão e a cotas/ensino de história africana, amarrada ao recorte."
+  ]
+ },
+ "y006": {
+  "item": "elie_wiesel",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "elie_wiesel",
+  "sim": 2,
+  "bolso": 1,
+  "pertinente": 2.0,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Indiferença explicada como desconhecimento que facilita aceitar a perda de território e cultura.",
+   "Wiesel só rotula o desconhecimento como indiferença; ligação genérica.",
+   "Indiferença explicada como desconhecimento que facilita a perda de território e cultura."
+  ]
+ },
+ "y007": {
+  "item": "luther_king",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "luther_king",
+  "sim": 2,
+  "bolso": 1,
+  "pertinente": 1.67,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Liga o apagamento da contribuição africana a uma perda de toda a sociedade, com razão própria.",
+   "King explicado e ligado ao apagamento que empobrece toda a sociedade.",
+   "'Toda a sociedade perde' é dedução genérica; a frase de King não é de fato explorada."
+  ]
+ },
+ "y008": {
+  "item": "positivo2_cartilha2025-10",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 2,
+  "bolso": 0,
+  "pertinente": 1.67,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Obra real sobre racismo colonial, explicada e ligada à persistência do apagamento da cultura afro-brasileira.",
+   "Obra real, mas trata de racismo colonial em Moçambique; ligação ao recorte é frouxa.",
+   "Obra real sobre racismo colonial, articulada à persistência do apagamento afro-brasileiro."
+  ]
+ },
+ "y009": {
+  "item": "elie_wiesel",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "elie_wiesel",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Indiferença traduzida em cena concreta: matrícula sem intérprete nem Libras.",
+   "Indiferença concretizada na matrícula sem intérprete nem Libras.",
+   "A indiferença aparece numa situação concreta da escola com o aluno surdo."
+  ]
+ },
+ "y010": {
+  "item": "positivo2_cartilha2026-08",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 2,
+  "bolso": 1,
+  "pertinente": 1.67,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Romance real com paralelo explicado: mais longevidade e instituições despreparadas.",
+   "Saramago só toca em expectativa de vida; analogia forçada, sem explicar o recorte.",
+   "Romance de Saramago sobre longevidade e despreparo institucional ligado ao envelhecimento no país."
+  ]
+ },
+ "y011": {
+  "item": "Dado esgoto",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "âncora Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado nacional de esgoto, sem fonte sobre comunidades tradicionais; ligação só ao básico.",
+   "Dado de esgoto tangencia o recorte; a ligação é de omissão estatal genérica.",
+   "Dado geral de saneamento estendido por suposição aos povos tradicionais; ligação fraca com valorização."
+  ]
+ },
+ "y012": {
+  "item": "elie_wiesel",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "ok",
+  "grupo": "elie_wiesel",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Indiferença concretizada em vizinho, parente e sociedade que deixam a agressão continuar.",
+   "Indiferença exemplificada em vizinho, parente e sociedade que permitem a agressão.",
+   "Exemplos concretos de omissão explicam a persistência da violência doméstica."
+  ]
+ },
+ "y013": {
+  "item": "positivo2_cartilha2026-06",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.67,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Filme muito batido, ligação por simples analogia, sem explicar o mecanismo.",
+   "Filme de bolso clássico; liga-se ao isolamento do idoso de forma ilustrativa.",
+   "Filme pertinente, mas só ilustra; a passagem para o Brasil é genérica."
+  ]
+ },
+ "y014": {
+  "item": "elie_wiesel",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "elie_wiesel",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "'Ignorar quem sofre' aplicado a falta de cinema soa forçado e pouco explicado.",
+   "Wiesel aplicado ao cinema como indiferença; relação forçada e superficial.",
+   "Igualar falta de sala de cinema a 'ignorar quem sofre' força a citação."
+  ]
+ },
+ "y015": {
+  "item": "positivo2_cartilha2026-04",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Conceito real mas definido de forma imprecisa e mal ligado ao preconceito etário.",
+   "Conceito real e pertinente, mas pouco articulado ao argumento seguinte.",
+   "Conceito definido de forma imprecisa e sem fonte; a ligação com o preconceito etário é vaga."
+  ]
+ },
+ "y016": {
+  "item": "positivo2_cartilha2025-06",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 1.67,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Banda real, mas o trecho passa para generalidades sem amarrar a obra à herança africana.",
+   "Banda real e pertinente à cultura negra, mas a ligação ao argumento é rasa.",
+   "Exemplo real e pertinente, mas o contraste com o país fica genérico e não se desenvolve."
+  ]
+ },
+ "y017": {
+  "item": "Dado esgoto",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "âncora Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado de esgoto com ponte engenhosa mas indireta ao cuidado feminino.",
+   "Dado de esgoto ligado de forma indireta ao cuidado; mecanismo só esboçado.",
+   "O saneamento chega ao cuidado feminino por uma ponte criativa, mas forçada."
+  ]
+ },
+ "y018": {
+  "item": "Dado esgoto",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "âncora Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.33,
+  "produtivo": 0.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Saneamento ligado à valorização cultural por suposição sem base.",
+   "Dado de esgoto com ponte frágil para a herança africana.",
+   "Esgoto não tem relação com a valorização da herança africana; a cadeia é artificial."
+  ]
+ },
+ "y019": {
+  "item": "Drummond",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "âncora Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Contraste lei x realidade bem aplicado à casa, creche e quarto do doente.",
+   "Drummond explicado e aplicado à igualdade legal que não alcança o cuidado.",
+   "A distância entre a lei e a vida é aplicada com precisão ao cuidado não pago e invisível."
+  ]
+ },
+ "y020": {
+  "item": "positivo2_cartilha2025-07",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.67,
+  "produtivo": 0.67,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Analogia genérica com a música, sem explicar o que ela diz sobre herança africana.",
+   "Música citada sem explicar o conteúdo; analogia decorativa.",
+   "A música só é mencionada; 'de maneira análoga' não explica nada."
+  ]
+ },
+ "y021": {
+  "item": "luther_king",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "luther_king",
+  "sim": 2,
+  "bolso": 1,
+  "pertinente": 1.67,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Raciocínio próprio: todos envelhecem, logo o abandono dos idosos ameaça a todos.",
+   "King adaptado: todos envelhecem, logo o abandono ameaça a todos.",
+   "'Todos envelhecem' é raciocínio próprio, mas a frase de King entra de modo genérico."
+  ]
+ },
+ "y022": {
+  "item": "Drummond",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "âncora Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Lei da gratuidade do registro contrastada com a falta de cartório e busca ativa.",
+   "Drummond aplicado à certidão gratuita por lei que não chega às pessoas.",
+   "O registro gratuito por lei mas sem cartórios por perto concretiza bem a citação."
+  ]
+ },
+ "y023": {
+  "item": "Dado esgoto",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "âncora Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.33,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado de esgoto sem relação com surdos; ligação 'não espanta' é decorativa.",
+   "Dado de esgoto sem relação direta com a formação de surdos.",
+   "Saneamento sem relação com a educação de surdos; conclusão por mera analogia."
+  ]
+ },
+ "y024": {
+  "item": "luther_king",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "fraco",
+  "grupo": "luther_king",
+  "sim": 2,
+  "bolso": 1,
+  "pertinente": 1.67,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Ponte própria: qualquer um pode adoecer e o preconceito impede buscar ajuda.",
+   "King ligado ao estigma que afasta de ajuda e fragiliza a saúde de todos.",
+   "Tem alguma lógica (qualquer um pode adoecer), mas a citação é coringa e pouco explorada."
+  ]
+ },
+ "y025": {
+  "item": "rui_barbosa",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "rui_barbosa",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Igualdade formal do mercado mostrada como o que esconde e pune o cuidado.",
+   "Rui Barbosa aplicado à igualdade de fachada que esconde o cuidado.",
+   "A 'igualdade de fachada' no mercado explica a invisibilidade do cuidado feminino."
+  ]
+ },
+ "y026": {
+  "item": "luther_king",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "luther_king",
+  "sim": 1,
+  "bolso": 2,
+  "pertinente": 1.67,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Consequências concretas citadas, mas a ponte final só reformula a frase de forma abstrata.",
+   "King explicado e amarrado à cidadania enfraquecida pelo sem-registro.",
+   "Consequências concretas, mas o salto para 'enfraquece a cidadania de todos' é genérico."
+  ]
+ },
+ "y027": {
+  "item": "positivo2_cartilha2025-04",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 1.0,
+  "produtivo": 0.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Generalização sobre miscigenação sem referência identificável.",
+   "Fato histórico genérico, sem fonte, só contextualiza.",
+   "Afirmação histórica genérica, sem referência identificável."
+  ]
+ },
+ "y028": {
+  "item": "elie_wiesel",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "elie_wiesel",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Indiferença ligada à banalização de ataques e à omissão de quem assiste.",
+   "Indiferença concretizada no ataque a terreiro tratado como briga de vizinho.",
+   "A indiferença é mostrada em casos concretos de ataque a terreiros e omissão."
+  ]
+ },
+ "y029": {
+  "item": "Dado esgoto",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "forcado",
+  "grupo": "âncora Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.33,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Saneamento ligado a dados pessoais por 'mesma lentidão'; sem relação.",
+   "Dado de esgoto sem relação com manipulação de dados; ponte frágil.",
+   "Saneamento sem relação com manipulação por dados; analogia de 'lentidão' forçada."
+  ]
+ },
+ "y030": {
+  "item": "positivo2_cartilha2025-01",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Obra real, mas sobre pobreza e favela; extensão vaga à herança africana.",
+   "Obra real, mas a ligação à valorização da herança africana é genérica.",
+   "A obra trata da fome e da pobreza, não da herança africana; a extensão ao tema é vaga."
+  ]
+ },
+ "y031": {
+  "item": "luther_king",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "luther_king",
+  "sim": 1,
+  "bolso": 2,
+  "pertinente": 1.67,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Bom diagnóstico, mas a ponte só repete a citação: falha para alguns, frágil para todos.",
+   "King aplicado ao direito à educação que falha para surdos.",
+   "O fecho 'um direito que falha para alguns é mais frágil para todos' é genérico."
+  ]
+ },
+ "y032": {
+  "item": "Dado esgoto",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "âncora Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Saneamento ligado ao envelhecer com saúde de forma indireta e genérica.",
+   "Dado de esgoto liga-se ao envelhecimento só por saúde genérica.",
+   "O dado de esgoto liga-se ao envelhecimento só de modo indireto e forçado."
+  ]
+ },
+ "y033": {
+  "item": "positivo2_cartilha2026-05",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 2,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Comparação com o Japão explicada e ligada ao Brasil, embora o dado de suicídio seja duvidoso.",
+   "Dado da ONU pertinente, comparação desenvolvida só de leve.",
+   "A comparação com o Japão é desenvolvida, embora o dado sobre suicídio de idosos seja duvidoso."
+  ]
+ },
+ "y034": {
+  "item": "Dado esgoto",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "âncora Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.33,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Saneamento sem relação com intolerância religiosa; dedução forçada.",
+   "Dado de esgoto com inferência fraca sobre intolerância religiosa.",
+   "Saneamento sem relação com a intolerância religiosa; o 'é previsível' é forçado."
+  ]
+ },
+ "y035": {
+  "item": "elie_wiesel",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "ok",
+  "grupo": "elie_wiesel",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Indiferença traduzida em 'frescura' e 'falta de fé' que afastam do tratamento.",
+   "Indiferença exemplificada em 'frescura' e 'falta de fé' que afastam do tratamento.",
+   "Tratar o sofrimento como 'frescura' concretiza a indiferença e explica por que não se busca tratamento."
+  ]
+ },
+ "y036": {
+  "item": "positivo2_cartilha2025-03",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 0.67,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Música citada de forma genérica, sem explicar o que ela mostra sobre herança africana.",
+   "Música citada sem conteúdo explicado; decorativa.",
+   "A música é citada sem conteúdo; a ligação é declarada, não explicada."
+  ]
+ },
+ "y037": {
+  "item": "Drummond",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "âncora Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Constituição garante liberdade de crença, ataques persistem: ponte clara aos caminhos.",
+   "Drummond aplicado à Constituição e aos terreiros atacados, com solução.",
+   "Constituição contra ataques reais leva a caminhos de combate; bem amarrado."
+  ]
+ },
+ "y038": {
+  "item": "Drummond",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "ok",
+  "grupo": "âncora Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Estatuto da Pessoa Idosa contrastado com a falta de fiscalização e serviço.",
+   "Drummond ligado ao Estatuto da Pessoa Idosa sem fiscalização.",
+   "Estatuto da Pessoa Idosa no papel contra a realidade; aplicação precisa."
+  ]
+ },
+ "y039": {
+  "item": "rui_barbosa",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "rui_barbosa",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Equidade aplicada com precisão ao aluno surdo em aula só falada.",
+   "Rui Barbosa aplicado ao surdo na aula sem intérprete, com raciocínio claro.",
+   "A 'mesma aula' sem Libras ilustra com precisão a desigualdade sob aparência de igualdade."
+  ]
+ },
+ "y040": {
+  "item": "rui_barbosa",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "fraco",
+  "grupo": "rui_barbosa",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Equidade explica por que a vítima dependente precisa de proteção específica.",
+   "Rui Barbosa aplicado à vítima dependente que precisa de proteção específica.",
+   "A equidade explica a necessidade de proteção específica e a repetição da agressão."
+  ]
+ },
+ "y041": {
+  "item": "Drummond",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "âncora Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Direito constitucional à cultura contrastado com a falta de salas e ingressos.",
+   "Drummond aplicado ao direito à cultura sem salas nem ingressos acessíveis.",
+   "Direito à cultura no papel contra a falta de salas fora dos centros; bem articulado."
+  ]
+ },
+ "y042": {
+  "item": "Drummond",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "âncora Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Lei 10.639 contrastada com a falta de formação e material: recorte exato.",
+   "Drummond ligado à Lei 10.639 sem formação docente, exemplo preciso.",
+   "Lei 10.639 sem formação nem material concretiza a citação no recorte."
+  ]
+ },
+ "y043": {
+  "item": "luther_king",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "luther_king",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Ponte só repete a citação; falta de salas não é explicada como injustiça que se espalha.",
+   "King aplicado ao cinema de modo forçado; a ameaça ao país é pouco desenvolvida.",
+   "Sem salas = injustiça que 'perde força para o país' é genérico e forçado."
+  ]
+ },
+ "y044": {
+  "item": "luther_king",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "luther_king",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Ponte concreta: a liberdade de crença ameaçada protege todos os grupos.",
+   "King aplicado ao terreiro depredado e à liberdade de crença de todos.",
+   "A impunidade contra um terreiro fragiliza a liberdade de crença de todos: a citação cabe de verdade."
+  ]
+ },
+ "y045": {
+  "item": "rui_barbosa",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "fraco",
+  "grupo": "rui_barbosa",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Igualdade formal do termo de uso mostrada como base da manipulação.",
+   "Rui Barbosa aplicado ao termo de uso entre usuário e empresa desiguais.",
+   "O termo de uso entre partes desiguais aplica bem a equidade à manipulação por dados."
+  ]
+ },
+ "y046": {
+  "item": "Dado esgoto",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "âncora Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.33,
+  "produtivo": 0.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Saneamento sem relação com violência contra a mulher; ponte decorativa.",
+   "Dado de esgoto ligado de forma analógica à rede de proteção da mulher.",
+   "Saneamento sem relação com a violência contra a mulher; ponte por 'nem o básico'."
+  ]
+ },
+ "y047": {
+  "item": "rui_barbosa",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "rui_barbosa",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Equidade justifica proteção específica às religiões de matriz africana.",
+   "Rui Barbosa aplicado à neutralidade estatal que não protege religiões de matriz africana.",
+   "Neutralidade formal contra a proteção às religiões mais atacadas; propõe caminho."
+  ]
+ },
+ "y048": {
+  "item": "positivo2_cartilha2025-05",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Obra descrita de forma errada (enredo e editora), o que compromete a legitimidade.",
+   "Conto infantil usado como analogia; ligação superficial ao recorte.",
+   "Erra a editora e o enredo do livro de Ana Maria Machado; referência distorcida."
+  ]
+ },
+ "y049": {
+  "item": "elie_wiesel",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "ok",
+  "grupo": "elie_wiesel",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Indiferença concretizada no idoso esquecido em casa ou asilo.",
+   "Indiferença concretizada no abandono silencioso do idoso.",
+   "Abandono do idoso como indiferença tão cruel quanto a violência; ligação clara."
+  ]
+ },
+ "y050": {
+  "item": "rui_barbosa",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "rui_barbosa",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Equidade aplicada a ribeirinhos e pessoas em situação de rua, com busca ativa.",
+   "Rui Barbosa aplicado ao acesso desigual ao cartório, com busca ativa como saída.",
+   "Mesmo caminho até o cartório para desiguais, com solução de busca ativa; bem amarrado."
+  ]
+ },
+ "y051": {
+  "item": "luther_king",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "ok",
+  "grupo": "luther_king",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Ditado popular concretiza a tolerância que permite a violência persistir.",
+   "King ligado ao ditado que tolera a agressão doméstica.",
+   "O ditado da 'colher' mostra a tolerância privada que corrói a lei para todos."
+  ]
+ },
+ "y052": {
+  "item": "Drummond",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "ok",
+  "grupo": "âncora Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Lei Maria da Penha contrastada com falta de estrutura: recorte da persistência.",
+   "Drummond ligado à Lei Maria da Penha sem rede de proteção funcionando.",
+   "Lei Maria da Penha sem estrutura concretiza a citação no recorte da persistência."
+  ]
+ },
+ "y053": {
+  "item": "positivo2_cartilha2026-10",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 2,
+  "bolso": 0,
+  "pertinente": 1.67,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Personagem real do filme contrastada com a visão etarista, com causa apontada.",
+   "Filme real, mas o contraste com a realidade fica genérico.",
+   "Filme recente contraposto à realidade etarista, com causas apontadas."
+  ]
+ },
+ "y054": {
+  "item": "positivo2_cartilha2026-02",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.67,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Filme batido, ligado só por analogia antes de listar aspectos.",
+   "Filme de bolso clássico; ligação ilustrativa ao isolamento.",
+   "Filme batido usado como ilustração; a passagem para as causas é genérica."
+  ]
+ },
+ "y055": {
+  "item": "rui_barbosa",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "ok",
+  "grupo": "rui_barbosa",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Equidade justifica atendimento e serviços adaptados ao idoso.",
+   "Rui Barbosa aplicado a atendimento prioritário e serviços adaptados ao idoso.",
+   "A equidade aplicada às necessidades do idoso; coerente com o recorte."
+  ]
+ },
+ "y056": {
+  "item": "elie_wiesel",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "elie_wiesel",
+  "sim": 1,
+  "bolso": 2,
+  "pertinente": 1.67,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Desinteresse escolar chamado de indiferença a quem sofre; ligação frouxa.",
+   "Wiesel rotula o desinteresse escolar; ligação genérica.",
+   "Indiferença concretizada na história africana restrita a um dia letivo."
+  ]
+ },
+ "y057": {
+  "item": "positivo2_cartilha2026-01",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 2,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Filme real explicado: idosa desacreditada pela idade, ligada aos estigmas, mais dado populacional.",
+   "Filme pertinente ao etarismo, mas a analogia é pouco explicada.",
+   "Filme sobre idosa desacreditada ligado aos estigmas e a um dado demográfico."
+  ]
+ },
+ "y058": {
+  "item": "Dado esgoto",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "âncora Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.33,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Saneamento ligado ao cinema por 'se nem o básico...'; sem relação.",
+   "Dado de esgoto sem relação direta com o acesso ao cinema.",
+   "Saneamento sem relação com cinema; conclusão por 'nem o básico'."
+  ]
+ },
+ "y059": {
+  "item": "Dado esgoto",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "âncora Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Supõe sem base que áreas sem esgoto são as sem cartório; ligação fraca.",
+   "Dado de esgoto ligado a cartórios só por inferência de ausência estatal.",
+   "Supõe sem base que as áreas sem esgoto são as sem cartório; ligação frágil."
+  ]
+ },
+ "y060": {
+  "item": "positivo2_cartilha2025-02",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Conceito de Arendt distorcido e só relacionado em seguida, sem explicação.",
+   "Arendt usada de forma simplificada e genérica; conceito mal explicado.",
+   "Distorce o conceito de Arendt e só relaciona, sem explicar."
+  ]
+ },
+ "y061": {
+  "item": "Drummond",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "ok",
+  "grupo": "âncora Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "LGPD contrastada com a manipulação que persiste sem fiscalização.",
+   "Drummond ligado à LGPD sem fiscalização nem educação digital.",
+   "A LGPD sem fiscalização e sem educação digital concretiza a citação."
+  ]
+ },
+ "y062": {
+  "item": "Drummond",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "ok",
+  "grupo": "âncora Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Lei da Reforma Psiquiátrica contrastada com o rótulo que a lei não apaga.",
+   "Drummond aplicado à Lei 10.216 que não apaga o rótulo.",
+   "A Reforma Psiquiátrica não apaga o rótulo: ligação precisa com o estigma."
+  ]
+ },
+ "y063": {
+  "item": "Drummond",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "âncora Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Lei de Libras contrastada com a falta de intérpretes e escolas bilíngues.",
+   "Drummond aplicado à lei da Libras sem intérpretes nem escolas preparadas.",
+   "Libras reconhecida em lei sem intérpretes nem escolas; bem amarrado."
+  ]
+ },
+ "y064": {
+  "item": "elie_wiesel",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "elie_wiesel",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Indiferença explica por que o cuidado é visto como obrigação natural e não notado.",
+   "Indiferença explicando a invisibilidade do cuidado como 'obrigação natural'.",
+   "A 'obrigação natural' explica por que o cuidado é invisível."
+  ]
+ },
+ "y065": {
+  "item": "rui_barbosa",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "rui_barbosa",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Equidade justifica demarcação e escola própria para povos tradicionais.",
+   "Rui Barbosa aplicado a direitos específicos e à demarcação de terras.",
+   "A equidade justifica direitos específicos dos povos tradicionais; bem articulado."
+  ]
+ },
+ "y066": {
+  "item": "rui_barbosa",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "fraco",
+  "grupo": "rui_barbosa",
+  "sim": 2,
+  "bolso": 1,
+  "pertinente": 1.67,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Cobrança igual ao doente mostrada como o que reforça o estigma de preguiça.",
+   "Rui Barbosa estendido ao estigma de modo forçado; igualdade e estigma pouco conectados.",
+   "A cobrança 'igual' a quem está doente reforça o estigma; aplicação própria."
+  ]
+ },
+ "y067": {
+  "item": "luther_king",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "luther_king",
+  "sim": 1,
+  "bolso": 1,
+  "pertinente": 2.0,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Mostra que a injustiça doméstica sustenta escola, empresa e Estado.",
+   "King ligado ao cuidado só por analogia; o vínculo é esboçado.",
+   "A ideia de que a sociedade depende do cuidado é boa, mas a citação de King entra genérica."
+  ]
+ },
+ "y068": {
+  "item": "elie_wiesel",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "forcado",
+  "grupo": "elie_wiesel",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Citação sobre ignorar o sofrimento alheio aplicada forçadamente ao próprio usuário.",
+   "Wiesel aplicado a usuário que aceita termos; relação forçada.",
+   "Troca a indiferença diante do sofrimento alheio pela do usuário consigo mesmo; forçado."
+  ]
+ },
+ "y069": {
+  "item": "luther_king",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "luther_king",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Ponte concreta: invasão de terras destrói florestas e rios de todo o país.",
+   "King ligado à invasão de terras que prejudica florestas e rios de todos.",
+   "Invasão de terras com dano ambiental coletivo: a frase de King cabe com raciocínio próprio."
+  ]
+ },
+ "y070": {
+  "item": "positivo2_cartilha2026-03",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Obra real, mas o contraste com a sociedade brasileira fica vago.",
+   "Obra indígena real e pertinente, contraste pouco desenvolvido.",
+   "Obra pertinente, mas o contraste com a sociedade brasileira é vago e não se desenvolve."
+  ]
+ },
+ "y071": {
+  "item": "Drummond",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "âncora Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Direitos constitucionais sobre territórios contrastados com a falta de demarcação.",
+   "Drummond aplicado ao reconhecimento constitucional sem demarcação efetiva.",
+   "Direitos territoriais na Constituição sem demarcação; aplicação precisa."
+  ]
+ },
+ "y072": {
+  "item": "positivo2_cartilha2026-09",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Fato histórico real, mas a ligação com as perspectivas atuais é vaga.",
+   "Fato histórico real e pertinente, ligação à situação atual rasa.",
+   "O fato histórico é real, mas a ponte para os entraves atuais é confusa."
+  ]
+ },
+ "y073": {
+  "item": "positivo2_cartilha2026-07",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 0,
+  "bolso": 1,
+  "pertinente": 1.0,
+  "produtivo": 0.67,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Madame Clessi não é idosa na peça; repertório descrito de forma falsa.",
+   "Personagem descrita de forma imprecisa (Madame Clessi não é idosa); referência distorcida.",
+   "Distorce Madame Clessi, que não é uma idosa; referência equivocada."
+  ]
+ },
+ "y074": {
+  "item": "positivo2_cartilha2025-08",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 2,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Eugenia e embranquecimento explicados como origem dos desafios atuais.",
+   "Movimento eugenista real e pertinente, ligação aos desafios atuais só enunciada.",
+   "O eugenismo e o branqueamento explicam a origem da desvalorização atual."
+  ]
+ },
+ "y075": {
+  "item": "positivo2_cartilha2025-09",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (introdução inteira bem avaliada)",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Fato histórico genérico, sem fonte, e ligação ao presente apenas afirmada.",
+   "Fato histórico real e pertinente, mas sem aprofundamento.",
+   "Contexto histórico vago, sem referência específica, apenas aproximado."
+  ]
+ }
+}

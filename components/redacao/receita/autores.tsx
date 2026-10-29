@@ -95,6 +95,9 @@ export function AutoresEmLinha({ nomes, titulo, coringas = [], causas = [] }: {
             <span className="text-muted-foreground">{coringa.fonte} <span data-numeric>({coringa.quando})</span>.</span>
             {coringa.sentido && <> {coringa.sentido}</>}
           </p>
+          <p className="type-meta mt-1" data-numeric>
+            <span className="font-medium">Testado:</span> serviu em {coringa.prova.aprovados} de {coringa.prova.temas} temas do ENEM de 2015 a 2025{coringa.restricao ? `; ${coringa.restricao}` : ''}.
+          </p>
           {amarra && (
             <p className="type-meta mt-1.5">
               <span className="font-medium text-primary-text">Ligue ao seu tema assim: </span>{amarra}

@@ -1,0 +1,2773 @@
+{
+ "x001": {
+  "item": "Dado informalidade",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado informalidade",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado de informalidade sem relação com intolerância religiosa; ligação hipotética e forçada.",
+   "Dado real mas só liga informalidade a demissão por fé, ligação frouxa ao recorte.",
+   "Dado de informalidade sem relação com intolerância religiosa; ponte especulativa."
+  ]
+ },
+ "x002": {
+  "item": "Dado esgoto",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado de saneamento usado por analogia genérica de Estado falho; não trata de cinema.",
+   "Saneamento não tem relação com cinema; analogia genérica de Estado omisso.",
+   "Dado de esgoto ligado ao cinema por uma ponte genérica de Estado que falha."
+  ]
+ },
+ "x003": {
+  "item": "bauman_cuidadoso",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Bauman bem escrito",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Liquidez aplicada à troca da sala coletiva pela tela individual, amarrada à democratização.",
+   "Bauman aplicado ao cinema como espaço coletivo vs consumo fragmentado, com proposta ligada ao recorte.",
+   "Conceito explicado e aplicado à troca da sala coletiva pela tela individual."
+  ]
+ },
+ "x004": {
+  "item": "Dado Inaf",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado Inaf",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado geral de leitura ligado à herança africana por salto pouco sustentado.",
+   "Dado real, cadeia longa e genérica até a herança africana.",
+   "Analfabetismo funcional ligado à herança africana por cadeia vaga."
+  ]
+ },
+ "x005": {
+  "item": "positivo_cartilha2026-05",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 1.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Japão envelhecido é real, mas a parte dos suicídios é duvidosa e a comparação fica descritiva.",
+   "Fato real e pertinente, mas a analogia com o Brasil é só afirmada.",
+   "Dado do Japão pertinente ao envelhecimento, mas afirmação sobre suicídio duvidosa e comparação pouco amarrada."
+  ]
+ },
+ "x006": {
+  "item": "Conceição Evaristo",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Conceição Evaristo",
+  "sim": 1,
+  "bolso": 1,
+  "pertinente": 1.33,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Analogia do pacto de sobrevivência com quilombolas é plausível, mas pouco desenvolvida.",
+   "Evaristo ligado ao pacto coletivo quilombola com raciocínio próprio.",
+   "Frase de Evaristo aproximada dos quilombolas por analogia de resistência, sem aprofundar."
+  ]
+ },
+ "x007": {
+  "item": "Conceição Evaristo",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Conceição Evaristo",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Frase sobre violência contra jovens negros transposta à força para a escola de surdos.",
+   "Frase de Evaristo forçada para a escola de surdos, sem relação real.",
+   "Analogia forçada entre o pacto de sobrevivência e alunos surdos."
+  ]
+ },
+ "x008": {
+  "item": "Dado violência",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado violência",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado de homicídios não trata de dados na internet; ponte com algoritmos é genérica.",
+   "Dado de homicídios usado de modo frouxo para algoritmos.",
+   "Dado de homicídios sem relação com manipulação por dados; ponte genérica."
+  ]
+ },
+ "x009": {
+  "item": "Drummond",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Distância entre direito escrito e acesso real ao cinema bem explicada e situada.",
+   "Drummond amarrado à lacuna entre direito constitucional e acesso real ao cinema.",
+   "Citação explicada e aplicada ao direito à cultura que não chega às salas."
+  ]
+ },
+ "x010": {
+  "item": "Dado esgoto",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Saneamento ligado à intolerância só pela ideia vaga de Estado ausente.",
+   "Saneamento sem relação com intolerância religiosa, analogia genérica.",
+   "Dado de saneamento ligado à intolerância só pela ideia genérica de Estado omisso."
+  ]
+ },
+ "x011": {
+  "item": "Drummond",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Lei de liberdade de crença versus ataques a terreiros: amarra precisa ao recorte.",
+   "Drummond ligado a terreiros atacados apesar da Constituição, com solução.",
+   "Contraste entre liberdade de crença na lei e ataques a terreiros bem desenvolvido."
+  ]
+ },
+ "x012": {
+  "item": "Dado informalidade",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "fraco",
+  "grupo": "Dado informalidade",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado geral de informalidade; a dependência financeira da vítima é inferida, não sustentada pelo dado.",
+   "Informalidade e dependência financeira, nexo indireto com a violência.",
+   "Dado geral de informalidade estendido à dependência financeira da mulher sem recorte de gênero."
+  ]
+ },
+ "x013": {
+  "item": "Dado informalidade",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado informalidade",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Informalidade vira exemplo de aplicativos; liga ao controle de dados de forma superficial.",
+   "Trabalho por aplicativo é boa ponte, mas o raciocínio é curto.",
+   "Informalidade ligada a apps de forma superficial; o dado não trata de manipulação."
+  ]
+ },
+ "x014": {
+  "item": "Machado",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Machado",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Ironia machadiana aplicada a crenças minoritárias de modo genérico, sem caminho de combate.",
+   "Machado aplicado a maiorias religiosas de modo vago, citação de bolso.",
+   "Citação de Machado aplicada de forma genérica ao campo religioso."
+  ]
+ },
+ "x015": {
+  "item": "Dado 1888",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado 1888",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Escravidão ligada à posse do corpo feminino por salto amplo, pouco explicado.",
+   "Lei Áurea ligada a posse do corpo feminino de forma forçada.",
+   "Abolição ligada à violência de gênero por salto pouco fundamentado."
+  ]
+ },
+ "x016": {
+  "item": "Drummond",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Direitos territoriais na Constituição versus falta de demarcação: articulação clara.",
+   "Drummond com direitos territoriais e falta de demarcação, concreto.",
+   "Citação aplicada aos direitos territoriais na Constituição sem efetividade."
+  ]
+ },
+ "x017": {
+  "item": "Machado",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "fraco",
+  "grupo": "Machado",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.67,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Batatas aplicadas ao adoecido no trabalho; ligação razoável, mas de pouca profundidade.",
+   "Machado para o mercado de trabalho e doença mental, analogia solta.",
+   "Analogia do vencido com o doente mental no trabalho é plausível mas rasa."
+  ]
+ },
+ "x018": {
+  "item": "Dado violência",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado violência",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 0.67,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado de homicídios sem relação direta com registro civil; ponte especulativa.",
+   "Dado ligado a invisibilidade e subnotificação, mas o recorte registro é lateral.",
+   "Dado de homicídios ligado à invisibilidade civil por associação vaga."
+  ]
+ },
+ "x019": {
+  "item": "Conceição Evaristo",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "fraco",
+  "grupo": "Conceição Evaristo",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Pacto de sobrevivência estendido às mulheres por analogia, sem aprofundar a persistência.",
+   "Evaristo estendido a mulheres de modo superficial.",
+   "Pacto de jovens negros transposto à violência de gênero por analogia forçada."
+  ]
+ },
+ "x020": {
+  "item": "Carolina",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Carolina",
+  "sim": 0,
+  "bolso": 1,
+  "pertinente": 1.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Fome ligada à perda de território, mas a valorização dos povos fica de fora.",
+   "Carolina e fome ligadas a perda de território, mas amarra fraca.",
+   "Fome de Carolina ligada à perda do território de forma breve."
+  ]
+ },
+ "x021": {
+  "item": "Dado informalidade",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Dado informalidade",
+  "sim": 1,
+  "bolso": 0,
+  "pertinente": 1.33,
+  "produtivo": 2.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Bom raciocínio sobre dupla jornada, mas o dado é geral e não fala da mulher nem do cuidado.",
+   "Informalidade ligada a dupla jornada e invisibilidade do cuidado, raciocínio próprio.",
+   "Raciocínio próprio sobre informalidade e dupla jornada, mas o dado não tem recorte de gênero."
+  ]
+ },
+ "x022": {
+  "item": "Drummond",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "ok",
+  "grupo": "Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Estatuto da Pessoa Idosa no papel versus abandono real: articulação ao tema.",
+   "Drummond com Estatuto da Pessoa Idosa e falhas de fiscalização.",
+   "Citação aplicada ao Estatuto da Pessoa Idosa sem fiscalização."
+  ]
+ },
+ "x023": {
+  "item": "Carolina",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Carolina",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Fome como escravidão ligada à mente por salto pouco fundamentado.",
+   "Fome como escravidão forçada para estigma mental.",
+   "Fome como prisão estendida ao estigma mental por ponte forçada."
+  ]
+ },
+ "x024": {
+  "item": "positivo_cartilha2025-04",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 1,
+  "pertinente": 1.0,
+  "produtivo": 0.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Afirmação genérica de senso comum, sem referência identificável.",
+   "Sem referência verificável, só afirmação geral.",
+   "Afirmação histórica genérica, sem referência identificável."
+  ]
+ },
+ "x025": {
+  "item": "bauman_bolso",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Bauman de bolso",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Bauman citado de forma decorada, sem explicar nem relacionar aos surdos.",
+   "Bauman citado sem explicação nem ligação, repertório de bolso.",
+   "Bauman citado em uma linha, sem explicar o conceito nem ligá-lo ao tema."
+  ]
+ },
+ "x026": {
+  "item": "Dado violência",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado violência",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado de homicídios ligado ao cinema por hipótese de medo, forçada.",
+   "Violência e medo afastando do cinema, dado tangencial.",
+   "Dado de homicídios ligado ao cinema por suposição sobre medo de sair à noite."
+  ]
+ },
+ "x027": {
+  "item": "positivo_cartilha2025-09",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Fato histórico genérico, sem fonte ou dado preciso; desenvolvimento superficial.",
+   "Fato histórico real e pertinente, mas só ilustrativo.",
+   "Fato histórico genérico, ligado ao tema mas pouco desenvolvido."
+  ]
+ },
+ "x028": {
+  "item": "Dado esgoto",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 0.67,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Saneamento associado à proteção de dados por analogia vaga de lentidão estatal.",
+   "Saneamento e dados pessoais, sem ligação real.",
+   "Saneamento e proteção de dados ligados apenas pela palavra lentidão."
+  ]
+ },
+ "x029": {
+  "item": "positivo_cartilha2025-02",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Banalidade do mal deturpada e apenas declarada como relacionável ao tema.",
+   "Arendt citada de modo decorado, sem ligação real.",
+   "Conceito de Arendt deturpado e relação só anunciada."
+  ]
+ },
+ "x030": {
+  "item": "Dom Hélder",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Dom Hélder",
+  "sim": 2,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Remediar versus perguntar a causa aplicado à demonização de crenças: bem amarrado.",
+   "Dom Hélder aplicado a terreiro, pergunta pela causa é aceitável mas pouco aprofundada.",
+   "Citação aplicada à diferença entre reparar terreiro e atacar a causa da demonização."
+  ]
+ },
+ "x031": {
+  "item": "positivo_cartilha2026-04",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 1.67,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Conceito apresentado com imprecisão e ligado ao tema de forma vaga.",
+   "Conceito real e pertinente, mas só definido, não desenvolvido.",
+   "Conceito pertinente, mas descrito com imprecisão e pouco articulado."
+  ]
+ },
+ "x032": {
+  "item": "Dado violência",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Dado violência",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado de violência racial ligado à herança cultural por afirmação, não por argumento.",
+   "Dado de homicídio negro ligado a herança africana de modo largo.",
+   "Dado de violência racial ligado à herança cultural por generalização."
+  ]
+ },
+ "x033": {
+  "item": "Dado violência",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado violência",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.0,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado de homicídios usado de lado para falar de velhice; ligação estreita.",
+   "Raciocínio próprio sobre juventude negra, mas pertinência parcial.",
+   "Dado de homicídios ligado ao envelhecimento de forma breve."
+  ]
+ },
+ "x034": {
+  "item": "positivo_cartilha2026-10",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 1.0,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Filme real apenas resumido, sem levar à discussão sobre envelhecimento.",
+   "Filme citado só descritivamente, sem argumento.",
+   "Filme apenas descrito, sem relação explícita com o tema."
+  ]
+ },
+ "x035": {
+  "item": "Carolina",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "forcado",
+  "grupo": "Carolina",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Fome como escravidão vira \"servidão digital\" por metáfora forçada.",
+   "Carolina estendida a algoritmos de forma forçada.",
+   "Fome como escravidão transposta ao algoritmo por metáfora forçada."
+  ]
+ },
+ "x036": {
+  "item": "Machado",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "fraco",
+  "grupo": "Machado",
+  "sim": 1,
+  "bolso": 1,
+  "pertinente": 1.33,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Batatas aplicadas às plataformas; ligação plausível, mas genérica sobre manipulação.",
+   "Machado aplicado a plataformas vencedoras e usuário sem nada, com raciocínio.",
+   "Analogia vencedor/plataformas plausível, mas genérica."
+  ]
+ },
+ "x037": {
+  "item": "bauman_bolso",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Bauman de bolso",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Bauman decorado, sem explicação e sem ligação real com a violência contra a mulher.",
+   "Bauman genérico, sem desenvolvimento.",
+   "Bauman citado em uma linha, sem explicar o conceito nem ligá-lo ao tema."
+  ]
+ },
+ "x038": {
+  "item": "Drummond",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "ok",
+  "grupo": "Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Lei Maria da Penha sem rede de proteção explica a persistência da violência.",
+   "Drummond com Lei Maria da Penha e rede de proteção ausente.",
+   "Citação aplicada à Lei Maria da Penha sem estrutura de proteção."
+  ]
+ },
+ "x039": {
+  "item": "Dado esgoto",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Saneamento ligado à rede de proteção da mulher por analogia de Estado falho.",
+   "Saneamento por analogia de Estado omisso, sem ligação ao tema.",
+   "Dado de saneamento ligado à rede de proteção da mulher por ponte genérica."
+  ]
+ },
+ "x040": {
+  "item": "Dado informalidade",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Dado informalidade",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.0,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Raciocínio causal bom (sem documento, sem carteira), mas o dado é geral do trabalho.",
+   "Informalidade como consequência de não ter certidão, ligação plausível mas rasa.",
+   "Dado de informalidade usado como consequência da falta de documento, sem sustentação."
+  ]
+ },
+ "x041": {
+  "item": "Dado esgoto",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado nacional de esgoto estendido às comunidades por suposição, sem dado próprio.",
+   "Saneamento por analogia de Estado ausente.",
+   "Dado nacional de esgoto estendido a aldeias sem fonte específica."
+  ]
+ },
+ "x042": {
+  "item": "Graciliano",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Graciliano",
+  "sim": 1,
+  "bolso": 1,
+  "pertinente": 1.33,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Desumanização de Fabiano aplicada à vítima de forma analógica e pouco desenvolvida.",
+   "Fabiano e internalização da desvalorização ligada à mulher agredida que não denuncia.",
+   "Analogia Fabiano/mulher agredida superficial."
+  ]
+ },
+ "x043": {
+  "item": "positivo_cartilha2026-01",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Filme pertinente ao etarismo, mas só descrito, sem articulação argumentativa.",
+   "Filme pertinente descrito, sem raciocínio próprio.",
+   "Filme pertinente ao etarismo, mas apenas descrito."
+  ]
+ },
+ "x044": {
+  "item": "bauman_cuidadoso",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Bauman bem escrito",
+  "sim": 0,
+  "bolso": 1,
+  "pertinente": 1.0,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Liquidez ligada à intolerância de forma genérica; o caminho proposto não decorre do autor.",
+   "Bauman geral, solução do ensino religioso desconectada.",
+   "Conceito explicado, mas a ligação entre liquidez e intolerância é só afirmada."
+  ]
+ },
+ "x045": {
+  "item": "bauman_cuidadoso",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Bauman bem escrito",
+  "sim": 2,
+  "bolso": 1,
+  "pertinente": 2.0,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Povos tradicionais como contraponto à fluidez: articulação própria e pertinente.",
+   "Bauman por contraste, ligação conceitual vaga.",
+   "Contraste entre fluidez e vínculos sólidos dos povos tradicionais bem construído."
+  ]
+ },
+ "x046": {
+  "item": "Carolina",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Carolina",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Fome como escravidão vira \"cativeiro doméstico\" por metáfora pouco fundamentada.",
+   "Carolina forçada: cativeiro doméstico como escravidão atual.",
+   "Metáfora de cativeiro doméstico forçada a partir da fome."
+  ]
+ },
+ "x047": {
+  "item": "Dado 1888",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Dado 1888",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Repressão histórica às crenças africanas explica a intolerância atual e o caminho.",
+   "Lei Áurea e repressão de crenças africanas explicam a intolerância atual.",
+   "Abolição tardia ligada à repressão das crenças africanas e ao racismo religioso."
+  ]
+ },
+ "x048": {
+  "item": "Dom Hélder",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "fraco",
+  "grupo": "Dom Hélder",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Doação a asilo versus falta de rede pública de cuidado: causa bem apontada.",
+   "Dom Hélder ligado a rede de cuidado ao idoso, com exemplo concreto.",
+   "Citação aplicada à falta de rede pública de cuidado ao idoso."
+  ]
+ },
+ "x049": {
+  "item": "positivo_cartilha2025-05",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 1,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Obra real, mas enredo e editora errados; o repertório foi deturpado.",
+   "Obra real mas editora citada errada e tema é cabelo, recorte lateral.",
+   "Obra com autoria/editora e enredo distorcidos."
+  ]
+ },
+ "x050": {
+  "item": "Dado Inaf",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado Inaf",
+  "sim": 1,
+  "bolso": 2,
+  "pertinente": 1.33,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado geral de leitura ligado à violência por desconhecimento de direitos; superficial.",
+   "Inaf ligado a desconhecimento de medidas protetivas, cadeia clara.",
+   "Dado geral de leitura estendido às mulheres sem recorte."
+  ]
+ },
+ "x051": {
+  "item": "Graciliano",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Graciliano",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Desprezo internalizado explicado e aplicado ao afastamento da herança africana.",
+   "Fabiano e vergonha de si ligados ao desprezo da herança africana.",
+   "Analogia da desumanização internalizada aplicada à vergonha da própria herança."
+  ]
+ },
+ "x052": {
+  "item": "Dado violência",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado violência",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 0.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado de homicídios de negros sem relação com surdos; analogia vazia.",
+   "Dado sobre homicídios sem relação direta com surdos.",
+   "Dado de homicídios sem relação com a educação de surdos."
+  ]
+ },
+ "x053": {
+  "item": "Dado informalidade",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado informalidade",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Informalidade geral ligada a mestres da cultura africana por suposição.",
+   "Informalidade de mestres africanos plausível mas dado não os mede.",
+   "Informalidade ligada a mestres de saberes por suposição."
+  ]
+ },
+ "x054": {
+  "item": "Dado 1888",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Dado 1888",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 1.0,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Exclusão de origem bem explicada, mas a ligação ao registro civil é ampla.",
+   "Abolição sem inclusão ligada a invisibilidade civil, mas de modo geral.",
+   "Ligação histórica plausível, mas vaga ('em certa medida')."
+  ]
+ },
+ "x055": {
+  "item": "Graciliano",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "fraco",
+  "grupo": "Graciliano",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Rótulo internalizado aplicado ao idoso tratado como inútil: articulação clara.",
+   "Fabiano ligado a idoso que internaliza a inutilidade, com raciocínio.",
+   "Analogia aplicada ao etarismo internalizado."
+  ]
+ },
+ "x056": {
+  "item": "bauman_cuidadoso",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Bauman bem escrito",
+  "sim": 2,
+  "bolso": 1,
+  "pertinente": 1.67,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Vínculos frágeis exigem quem sustente o cuidado, e esse alguém é a mulher.",
+   "Bauman com cuidado como parte sólida, argumento largo.",
+   "Conceito explicado e aplicado à mulher que sustenta o cuidado contínuo."
+  ]
+ },
+ "x057": {
+  "item": "bauman_bolso",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Bauman de bolso",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Bauman decorado, sem explicação nem ligação com o cinema.",
+   "Bauman citado sem desenvolvimento, de bolso.",
+   "Bauman citado em uma linha, sem explicar o conceito nem ligá-lo ao tema."
+  ]
+ },
+ "x058": {
+  "item": "Carolina",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Carolina",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Exclusão que muda de forma ligada à perseguição às religiões de matriz africana.",
+   "Carolina e abolição ligadas à perseguição às religiões africanas.",
+   "Continuidade da exclusão pós-abolição aplicada à perseguição de religiões africanas."
+  ]
+ },
+ "x059": {
+  "item": "Graciliano",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Graciliano",
+  "sim": 2,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Fabiano sem palavras ligado à privação de língua da criança surda: amarra forte.",
+   "Fabiano ligado à criança surda sem Libras, analogia funciona só em parte.",
+   "Privação de linguagem de Fabiano bem ligada à falta de Libras e ensino bilíngue."
+  ]
+ },
+ "x060": {
+  "item": "Dado esgoto",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 0.67,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Saneamento ligado aos surdos só pela ideia de Estado falho.",
+   "Saneamento por analogia de Estado omisso, sem nexo.",
+   "Dado de saneamento sem relação com educação de surdos."
+  ]
+ },
+ "x061": {
+  "item": "Carolina",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Carolina",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Continuidade da exclusão explica a desvalorização, com exemplo da própria obra.",
+   "Carolina, abolição e desvalorização da obra, bem amarrados à herança africana.",
+   "Citação explicada e ligada à desvalorização da herança, inclusive da obra da autora."
+  ]
+ },
+ "x062": {
+  "item": "Dado violência",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "fraco",
+  "grupo": "Dado violência",
+  "sim": 0,
+  "bolso": 1,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado racial, não de gênero; o recorte da mulher é inferido.",
+   "Dado racial com recorte de gênero, ligação com violência contra mulher parcial.",
+   "Dado não trata de mulheres; recorte de gênero só suposto."
+  ]
+ },
+ "x063": {
+  "item": "Dado 1888",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Dado 1888",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Abolição tardia e sem amparo explica a inferiorização da cultura africana.",
+   "Lei Áurea e associação do africano ao escravizado explicam a desvalorização.",
+   "Abolição sem reparação ligada à inferiorização da cultura africana."
+  ]
+ },
+ "x064": {
+  "item": "Graciliano",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "fraco",
+  "grupo": "Graciliano",
+  "sim": 2,
+  "bolso": 0,
+  "pertinente": 1.67,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Analogia boa com termos de uso, mas a cena de Fabiano é só aproximada ao tema.",
+   "Fabiano e termos de uso que o usuário aceita sem entender, analogia boa.",
+   "Fabiano enganado nas contas bem aproximado do usuário que aceita termos que não entende."
+  ]
+ },
+ "x065": {
+  "item": "Dado Inaf",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "fraco",
+  "grupo": "Dado Inaf",
+  "sim": 1,
+  "bolso": 1,
+  "pertinente": 1.33,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado geral de leitura ligado ao estigma pela falta de informação; raso.",
+   "Inaf ligado a falta de orientação em saúde mental e crenças que alimentam o estigma.",
+   "Dado geral de leitura ligado ao estigma por cadeia suposta."
+  ]
+ },
+ "x066": {
+  "item": "Drummond",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Igualdade constitucional que não chega ao cuidado doméstico: bem amarrado.",
+   "Drummond ligado à igualdade formal e ao cuidado desigual na casa.",
+   "Citação aplicada à igualdade constitucional que não chega ao trabalho de cuidado."
+  ]
+ },
+ "x067": {
+  "item": "Carolina",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Carolina",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Exclusão que muda de forma aplicada ao surdo por analogia frouxa.",
+   "Carolina forçada para exclusão dentro da escola.",
+   "Exclusão que muda de forma aproximada dos surdos de modo superficial."
+  ]
+ },
+ "x068": {
+  "item": "Dado violência",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado violência",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado de homicídios usado para trauma periférico; ligação lateral ao estigma.",
+   "Violência e sofrimento psíquico, nexo com estigma indireto.",
+   "Dado de homicídios ligado ao sofrimento psíquico por suposição."
+  ]
+ },
+ "x069": {
+  "item": "Dom Hélder",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Dom Hélder",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "\"Santas\" e \"guerreiras\" espelham a frase e expõem a causa da invisibilidade.",
+   "Dom Hélder ligado ao elogio à mulher cuidadora sem questionar a causa.",
+   "Citação aplicada ao elogio à cuidadora que esconde a desigualdade."
+  ]
+ },
+ "x070": {
+  "item": "Dado Inaf",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Dado Inaf",
+  "sim": 0,
+  "bolso": 1,
+  "pertinente": 1.0,
+  "produtivo": 1.67,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Barreira da burocracia escrita é bem raciocinada, mas o dado é geral.",
+   "Inaf e burocracia de cartório, nexo plausível mas raso.",
+   "Raciocínio próprio sobre burocracia escrita, mas o dado não é sobre registro."
+  ]
+ },
+ "x071": {
+  "item": "Machado",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Machado",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Vencedor que conta a história explica a folclorização da herança africana.",
+   "Machado aplicado à cultura vencedora vs africana tratada como folclore.",
+   "Citação aplicada à cultura africana tratada como folclore."
+  ]
+ },
+ "x072": {
+  "item": "Dado violência",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado violência",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado racial geral estendido aos quilombolas sem base própria.",
+   "Dado racial de homicídios aplicado a quilombolas sem base.",
+   "Dado geral de homicídios estendido a quilombolas sem fonte específica."
+  ]
+ },
+ "x073": {
+  "item": "positivo_cartilha2026-07",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 1,
+  "pertinente": 1.0,
+  "produtivo": 0.67,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Madame Clessi não é idosa na peça; o repertório foi deturpado.",
+   "Personagem descrita errada (Clessi não é idosa), repertório distorcido.",
+   "Obra real, mas leitura da personagem é questionável e pouco articulada."
+  ]
+ },
+ "x074": {
+  "item": "positivo_cartilha2026-03",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 1.0,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Obra real apenas mencionada, sem articulação com o envelhecimento no Brasil.",
+   "Obra real, citada sem articulação com o recorte.",
+   "Obra apenas descrita, sem argumento."
+  ]
+ },
+ "x075": {
+  "item": "Carolina",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Carolina",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Fome como escravidão vira metáfora do cuidado sem sustentação.",
+   "Carolina ligada a cuidado como prisão silenciosa, analogia frouxa.",
+   "Fome como prisão aproximada do cuidado por metáfora vaga."
+  ]
+ },
+ "x076": {
+  "item": "Dado informalidade",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "fraco",
+  "grupo": "Dado informalidade",
+  "sim": 0,
+  "bolso": 1,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Informalidade ligada ao estigma pela falta de afastamento; ligação parcial.",
+   "Informalidade e adoecimento mental, ligação indireta ao estigma.",
+   "Dado geral de informalidade com ligação breve ao estigma."
+  ]
+ },
+ "x077": {
+  "item": "Conceição Evaristo",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Conceição Evaristo",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.0,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Pacto de sobrevivência usado para explicar falta de cinema; ponte fraca.",
+   "Evaristo e prioridade de sobreviver, argumento próprio mas lateral.",
+   "Pacto de sobrevivência ligado ao cinema por suposição."
+  ]
+ },
+ "x078": {
+  "item": "Dado esgoto",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Saneamento ligado ao cuidado feminino por hipótese, sem dado de gênero.",
+   "Saneamento ligado a cuidar de doentes, nexo indireto.",
+   "Dado de saneamento ligado ao cuidado por suposição."
+  ]
+ },
+ "x079": {
+  "item": "positivo_cartilha2026-09",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 1.67,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Fato histórico real, mas a amarra às perspectivas atuais é vaga.",
+   "Fato histórico real e pertinente, sem desenvolvimento do raciocínio.",
+   "Fato histórico pertinente, mas pouco desenvolvido e genérico."
+  ]
+ },
+ "x080": {
+  "item": "Dado 1888",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado 1888",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Lei Áurea ligada aos surdos só pela ideia de lentidão; forçada.",
+   "Lei Áurea por analogia de lentidão do Estado.",
+   "Abolição ligada aos surdos só pela ideia de lentidão."
+  ]
+ },
+ "x081": {
+  "item": "Dom Hélder",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "fraco",
+  "grupo": "Dom Hélder",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Ajustar privacidade versus questionar o modelo de negócio: amarra precisa.",
+   "Dom Hélder ligado ao modelo de negócio das plataformas, com exemplo concreto.",
+   "Citação aplicada ao modelo de negócio das plataformas."
+  ]
+ },
+ "x082": {
+  "item": "Dado esgoto",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.67,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Saneamento ligado a cartórios por suposição geográfica.",
+   "Saneamento e cartórios, nexo geográfico frouxo.",
+   "Saneamento ligado a cartórios por associação vaga."
+  ]
+ },
+ "x083": {
+  "item": "bauman_cuidadoso",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "fraco",
+  "grupo": "Bauman bem escrito",
+  "sim": 2,
+  "bolso": 0,
+  "pertinente": 1.67,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Fragilidade institucional aplicada à rede de proteção; boa, mas Bauman é esticado.",
+   "Bauman aplicado a medidas protetivas descumpridas e rede estatal descontínua.",
+   "Fluidez institucional aplicada à descontinuidade da rede de proteção."
+  ]
+ },
+ "x084": {
+  "item": "Conceição Evaristo",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "fraco",
+  "grupo": "Conceição Evaristo",
+  "sim": 1,
+  "bolso": 2,
+  "pertinente": 1.33,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Pacto de não morrer aplicado à depressão por trocadilho, não por argumento.",
+   "Evaristo ligado à rede de apoio e ao estigma que esconde a depressão.",
+   "Jogo de palavras com o pacto, ligação rasa ao estigma."
+  ]
+ },
+ "x085": {
+  "item": "Carolina",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Carolina",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Fome como escravidão aplicada ao idoso pobre de forma genérica.",
+   "Carolina e fome forçadas para idosos pobres.",
+   "Fome de Carolina estendida aos idosos pobres de forma genérica."
+  ]
+ },
+ "x086": {
+  "item": "Graciliano",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Graciliano",
+  "sim": 0,
+  "bolso": 1,
+  "pertinente": 1.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Rótulo de \"primitivo\" ligado a Fabiano de modo correto, mas pouco desenvolvido.",
+   "Fabiano ligado a povos vistos como primitivos, analogia correta mas breve.",
+   "Analogia de desumanização breve e genérica."
+  ]
+ },
+ "x087": {
+  "item": "bauman_cuidadoso",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "ok",
+  "grupo": "Bauman bem escrito",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Laços frágeis deixam o idoso sem cuidado; propõe rede pública coerente.",
+   "Bauman e laços familiares frouxos levando à necessidade de rede de cuidado estatal.",
+   "Laços frágeis aplicados à necessidade de rede pública de cuidado ao idoso."
+  ]
+ },
+ "x088": {
+  "item": "Drummond",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "ok",
+  "grupo": "Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "LGPD sem fiscalização versus manipulação algorítmica: articulação clara.",
+   "Drummond com a LGPD sem fiscalização e educação digital.",
+   "Citação aplicada à LGPD sem fiscalização."
+  ]
+ },
+ "x089": {
+  "item": "Graciliano",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Graciliano",
+  "sim": 2,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Fabiano sem voz diante da autoridade ligado a quem não tem certidão.",
+   "Fabiano ligado à falta de certidão, analogia aceitável mas rasa.",
+   "Falta de voz de Fabiano bem aproximada de quem não tem documento."
+  ]
+ },
+ "x090": {
+  "item": "bauman_bolso",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Bauman de bolso",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Bauman decorado, sem explicação nem ligação com registro civil.",
+   "Bauman citado sem desenvolvimento.",
+   "Bauman citado em uma linha, sem explicar o conceito nem ligá-lo ao tema."
+  ]
+ },
+ "x091": {
+  "item": "Graciliano",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Graciliano",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Desumanização ligada à privação de arte de forma abstrata.",
+   "Fabiano forçado para privação de cinema.",
+   "Analogia ampla sobre arte e humanidade, pouco ligada ao acesso ao cinema."
+  ]
+ },
+ "x092": {
+  "item": "Conceição Evaristo",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Conceição Evaristo",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "A fala popular do conto como saber afro-brasileiro a valorizar: leitura própria.",
+   "Evaristo e a fala popular como saber ligados à herança africana.",
+   "Fala popular da autora usada para valorizar a voz afrodescendente."
+  ]
+ },
+ "x093": {
+  "item": "Conceição Evaristo",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "forcado",
+  "grupo": "Conceição Evaristo",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.33,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Pacto de sobrevivência transposto ao algoritmo sem ligação real.",
+   "Evaristo forçado para algoritmos, sem raciocínio.",
+   "Pacto de sobrevivência transposto à internet sem sentido."
+  ]
+ },
+ "x094": {
+  "item": "positivo_cartilha2025-06",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 1.67,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Banda real, mas a ligação com o desafio nacional é genérica.",
+   "Black Pantera pertinente, argumento pouco desenvolvido.",
+   "Banda real e pertinente, mas ligação ao argumento é genérica."
+  ]
+ },
+ "x095": {
+  "item": "positivo_cartilha2025-07",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.33,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Música citada e declarada análoga, sem explicação.",
+   "Música citada sem explicação, analogia vazia.",
+   "Música citada sem explicar a letra; 'de maneira análoga' vazio."
+  ]
+ },
+ "x096": {
+  "item": "Dado 1888",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Dado 1888",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Abolição sem terra explica a luta quilombola pelo território.",
+   "Abolição sem terra ligada à luta quilombola por títulos.",
+   "Abolição sem terra ligada à luta quilombola pelo território."
+  ]
+ },
+ "x097": {
+  "item": "Dado informalidade",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado informalidade",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Informalidade usada como consequência hipotética para surdos; ligação rasa.",
+   "Informalidade como destino do surdo mal formado, dado não os mede.",
+   "Informalidade como destino do surdo é suposição sem dado específico."
+  ]
+ },
+ "x098": {
+  "item": "Dado informalidade",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "ok",
+  "grupo": "Dado informalidade",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Informalidade sem contribuição anuncia velhice sem aposentadoria: amarra clara.",
+   "Informalidade, falta de contribuição e velhice desprotegida, cadeia causal clara.",
+   "Informalidade ligada à falta de contribuição e à velhice desprotegida."
+  ]
+ },
+ "x099": {
+  "item": "Conceição Evaristo",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Conceição Evaristo",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Pacto de sobrevivência aplicado ao registro por analogia frouxa.",
+   "Evaristo ligado a invisibilidade de modo vago.",
+   "Pacto de sobrevivência ligado ao registro civil de forma rasa."
+  ]
+ },
+ "x100": {
+  "item": "bauman_bolso",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Bauman de bolso",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Bauman decorado e só declarado como relacionado.",
+   "Bauman genérico, sem desenvolvimento.",
+   "Bauman citado em uma linha, sem explicar o conceito nem ligá-lo ao tema."
+  ]
+ },
+ "x101": {
+  "item": "positivo_cartilha2025-03",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Música mencionada sem conteúdo e ligada ao tema por afirmação.",
+   "Música citada sem explicar verso nem ligar ao tema.",
+   "Música citada de forma vaga, sem conteúdo nem amarra."
+  ]
+ },
+ "x102": {
+  "item": "Machado",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Machado",
+  "sim": 0,
+  "bolso": 1,
+  "pertinente": 1.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Lei do mais forte aplicada ao patriarcado de forma genérica.",
+   "Machado ligado a vítima com compaixão sem proteção, ligeiro.",
+   "Citação aplicada ao patriarcado de forma genérica."
+  ]
+ },
+ "x103": {
+  "item": "Conceição Evaristo",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Conceição Evaristo",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Pacto de sobrevivência aplicado ao cuidado por analogia ampla.",
+   "Evaristo ligado a cuidadoras em modo de sobrevivência, um pouco forçado.",
+   "Analogia de sobrevivência com a cuidadora superficial."
+  ]
+ },
+ "x104": {
+  "item": "bauman_cuidadoso",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "ok",
+  "grupo": "Bauman bem escrito",
+  "sim": 2,
+  "bolso": 1,
+  "pertinente": 1.67,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Laços descartáveis explicam o afastamento de quem recebe o rótulo de doente.",
+   "Bauman geral aplicado ao estigma, nexo largo.",
+   "Laços frágeis aplicados à perda de rede de apoio do doente mental."
+  ]
+ },
+ "x105": {
+  "item": "Dado esgoto",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Saneamento ligado à preservação da cultura africana por salto forçado.",
+   "Saneamento e periferias negras, nexo longo e frouxo.",
+   "Dado de esgoto ligado à herança africana por cadeia frouxa."
+  ]
+ },
+ "x106": {
+  "item": "Dom Hélder",
+  "tema": "A persistência da violência contra a mulher na sociedade brasileira",
+  "autoavaliacao": "fraco",
+  "grupo": "Dom Hélder",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Acolher a vítima versus questionar a raiz machista: amarra ao recorte.",
+   "Dom Hélder ligado a acolher a vítima vs questionar a raiz machista.",
+   "Citação aplicada à raiz machista da violência."
+  ]
+ },
+ "x107": {
+  "item": "Dado Inaf",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado Inaf",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado geral de leitura ligado a estereótipos sobre povos de forma rasa.",
+   "Inaf e estereótipos sobre indígenas e quilombolas, nexo frouxo.",
+   "Dado geral de leitura ligado aos povos tradicionais por suposição."
+  ]
+ },
+ "x108": {
+  "item": "Machado",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Machado",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "As \"batatas\" viram os recursos do território tomado: leitura própria e precisa.",
+   "Machado ligado à disputa por recursos do território de povos tradicionais.",
+   "Citação aplicada à disputa pelos recursos dos territórios tradicionais."
+  ]
+ },
+ "x109": {
+  "item": "bauman_bolso",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Bauman de bolso",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Bauman decorado, sem explicação nem ligação com o cuidado.",
+   "Bauman genérico, sem desenvolvimento.",
+   "Bauman citado em uma linha, sem explicar o conceito nem ligá-lo ao tema."
+  ]
+ },
+ "x110": {
+  "item": "Machado",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "ok",
+  "grupo": "Machado",
+  "sim": 1,
+  "bolso": 0,
+  "pertinente": 1.67,
+  "produtivo": 1.67,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Bem aplicado ao etarismo no trabalho, mas cobre só parte do recorte.",
+   "Machado ligado a trabalhador velho descartado, analogia curta.",
+   "Citação aplicada ao etarismo no mercado de trabalho."
+  ]
+ },
+ "x111": {
+  "item": "Dado Inaf",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Dado Inaf",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Analfabetismo funcional torna o filme legendado inacessível: ponto específico do acesso.",
+   "Inaf ligado a legenda inacessível e proposta de sessões dubladas e acessíveis.",
+   "Dado de leitura ligado com precisão ao filme legendado e à proposta de dublagem."
+  ]
+ },
+ "x112": {
+  "item": "Dom Hélder",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Dom Hélder",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Mutirão versus causas da falta de registro: amarra precisa.",
+   "Dom Hélder ligado à causa de crianças sem registro, com exemplos concretos.",
+   "Citação aplicada às causas do sub-registro."
+  ]
+ },
+ "x113": {
+  "item": "Dado 1888",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado 1888",
+  "sim": 0,
+  "bolso": 1,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Herança da escravidão ligada à velhice negra de forma breve.",
+   "Lei Áurea e idosos negros, ligação parcial.",
+   "Abolição ligada a idosos negros de forma breve."
+  ]
+ },
+ "x114": {
+  "item": "positivo_cartilha2026-08",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 1,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Obra pertinente, mas a articulação é só \"de maneira símile\", sem raciocínio.",
+   "Saramago ligado a despreparo institucional diante do aumento de idosos.",
+   "Obra pertinente, mas ligação ao tema é só anunciada ('de maneira símile')."
+  ]
+ },
+ "x115": {
+  "item": "bauman_bolso",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Bauman de bolso",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Bauman decorado, sem explicação nem ligação com o estigma.",
+   "Bauman genérico, sem desenvolvimento.",
+   "Bauman citado em uma linha, sem explicar o conceito nem ligá-lo ao tema."
+  ]
+ },
+ "x116": {
+  "item": "Machado",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Machado",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Economia colhe as batatas do trabalho gratuito de cuidado: leitura própria.",
+   "Machado aplicado ao trabalho feminino gratuito colhido pela economia.",
+   "Citação aplicada ao lucro da economia sobre o cuidado gratuito."
+  ]
+ },
+ "x117": {
+  "item": "Carolina",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Carolina",
+  "sim": 0,
+  "bolso": 1,
+  "pertinente": 1.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Fome ligada à falta de tempo para cultura; plausível, mas genérica.",
+   "Carolina ligada à pobreza e a cinema como privilégio, analogia média.",
+   "Fome de Carolina ligada ao cinema por generalização."
+  ]
+ },
+ "x118": {
+  "item": "Dado 1888",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Dado 1888",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Escravidão explica por que o cuidado não é visto como trabalho pago.",
+   "Lei Áurea e herança escravista explicam o cuidado visto como ajuda.",
+   "Escravidão ligada à desvalorização do trabalho de cuidado e doméstico."
+  ]
+ },
+ "x119": {
+  "item": "positivo_cartilha2025-10",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 1.0,
+  "produtivo": 0.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Obra real sobre Moçambique, apenas resumida e sem ligação com o Brasil.",
+   "Obra moçambicana, ligação com herança africana no Brasil frouxa.",
+   "Obra sobre Moçambique descrita, sem ligação ao Brasil nem ao argumento."
+  ]
+ },
+ "x120": {
+  "item": "Graciliano",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Graciliano",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Desumanização que legitima a agressão aplicada à intolerância religiosa.",
+   "Fabiano e desumanização do fiel de candomblé, com caminho de combate.",
+   "Desumanização aplicada ao rótulo contra fiéis do candomblé."
+  ]
+ },
+ "x121": {
+  "item": "Conceição Evaristo",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Conceição Evaristo",
+  "sim": 1,
+  "bolso": 2,
+  "pertinente": 1.33,
+  "produtivo": 1.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Pacto de sobrevivência estendido aos terreiros por analogia genérica.",
+   "Evaristo ligado à resistência de terreiros e urgência de proteção.",
+   "Pacto de sobrevivência aproximado dos terreiros de forma genérica."
+  ]
+ },
+ "x122": {
+  "item": "Dom Hélder",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Dom Hélder",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Sessões gratuitas versus concentração das salas: causa bem apontada.",
+   "Dom Hélder ligado à concentração de salas em shoppings de bairros ricos.",
+   "Citação aplicada à concentração de salas em bairros ricos."
+  ]
+ },
+ "x123": {
+  "item": "positivo_cartilha2025-08",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Eugenia é pertinente, mas só mencionada, sem desenvolvimento.",
+   "Eugenia real e pertinente, mas só informada, sem raciocínio.",
+   "Eugenismo pertinente, mas só mencionado."
+  ]
+ },
+ "x124": {
+  "item": "bauman_bolso",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Bauman de bolso",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Bauman decorado e só declarado como relacionado.",
+   "Bauman genérico, sem desenvolvimento.",
+   "Bauman citado em uma linha, sem explicar o conceito nem ligá-lo ao tema."
+  ]
+ },
+ "x125": {
+  "item": "Dom Hélder",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Dom Hélder",
+  "sim": 2,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Samba celebrado versus terreiros atacados espelha bem a frase.",
+   "Dom Hélder aplicado a samba vs terreiros, correto mas curto.",
+   "Citação aplicada à celebração seletiva da cultura africana."
+  ]
+ },
+ "x126": {
+  "item": "Machado",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Machado",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Vencidos e vencedores aplicados ao registro de forma esquemática.",
+   "Machado aplicado a registro de modo vago e decorado.",
+   "Analogia vencido/sem registro superficial."
+  ]
+ },
+ "x127": {
+  "item": "Dom Hélder",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Dom Hélder",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Intérprete pontual versus escola bilíngue desde a base: amarra precisa.",
+   "Dom Hélder ligado a ações pontuais vs escola bilíngue desde a base.",
+   "Citação aplicada à falta de escola bilíngue."
+  ]
+ },
+ "x128": {
+  "item": "positivo_cartilha2025-01",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.0,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Obra apenas resumida e ligada ao tema por \"infelizmente, ainda\".",
+   "Obra descrita, sem argumento.",
+   "Obra descrita (com erro de década) sem articulação ao tema."
+  ]
+ },
+ "x129": {
+  "item": "Drummond",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Registro gratuito por lei, mas sem cartórios e busca ativa: bem amarrado.",
+   "Drummond com certidão gratuita por lei mas sem cartórios e busca ativa.",
+   "Citação aplicada ao registro gratuito que não chega a todos."
+  ]
+ },
+ "x130": {
+  "item": "Dado Inaf",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "ok",
+  "grupo": "Dado Inaf",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Quem não entende textos simples aceita termos de uso: amarra precisa.",
+   "Inaf ligado a termos de uso incompreendidos e coleta de dados.",
+   "Dado de leitura ligado com precisão aos termos de uso."
+  ]
+ },
+ "x131": {
+  "item": "bauman_bolso",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Bauman de bolso",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Bauman decorado, sem explicação nem ligação com a intolerância.",
+   "Bauman genérico, sem desenvolvimento.",
+   "Bauman citado em uma linha, sem explicar o conceito nem ligá-lo ao tema."
+  ]
+ },
+ "x132": {
+  "item": "Machado",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Machado",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Vencedor e vencido aplicados ao surdo de forma esquemática.",
+   "Machado aplicado à escola de ouvintes, analogia vaga.",
+   "Citação de Machado aplicada aos surdos de forma rasa."
+  ]
+ },
+ "x133": {
+  "item": "bauman_bolso",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Bauman de bolso",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Bauman decorado e só declarado como relacionado.",
+   "Bauman genérico, sem desenvolvimento.",
+   "Bauman citado em uma linha, sem explicar o conceito nem ligá-lo ao tema."
+  ]
+ },
+ "x134": {
+  "item": "Conceição Evaristo",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "fraco",
+  "grupo": "Conceição Evaristo",
+  "sim": 2,
+  "bolso": 0,
+  "pertinente": 1.67,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Leitura boa sobre envelhecer como conquista, mas o conto trata de violência juvenil.",
+   "Evaristo ligado a chegar à velhice como conquista desigual.",
+   "Pacto de sobrevivência usado para mostrar envelhecimento desigual."
+  ]
+ },
+ "x135": {
+  "item": "Dado Inaf",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado Inaf",
+  "sim": 0,
+  "bolso": 1,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado geral de leitura ligado ao idoso via cuidador por suposição.",
+   "Inaf em cuidadores de idosos, nexo indireto.",
+   "Dado de leitura estendido a cuidadores de idosos por suposição."
+  ]
+ },
+ "x136": {
+  "item": "bauman_bolso",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "forcado",
+  "grupo": "Bauman de bolso",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 0.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Bauman decorado, sem explicação nem ligação com dados.",
+   "Bauman genérico, sem desenvolvimento.",
+   "Bauman citado em uma linha, sem explicar o conceito nem ligá-lo ao tema."
+  ]
+ },
+ "x137": {
+  "item": "Dado informalidade",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado informalidade",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Informalidade ligada à expulsão territorial por suposição.",
+   "Informalidade de expulsos da terra, dado não os mede.",
+   "Informalidade ligada aos povos expulsos por suposição."
+  ]
+ },
+ "x138": {
+  "item": "Dado Inaf",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado Inaf",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado geral de leitura ligado às cuidadoras de forma rasa.",
+   "Inaf e cuidadoras, nexo frouxo.",
+   "Dado de leitura ligado às cuidadoras por cadeia frouxa."
+  ]
+ },
+ "x139": {
+  "item": "bauman_cuidadoso",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "ok",
+  "grupo": "Bauman bem escrito",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Fluidez das relações explorada pelos algoritmos: articulação própria.",
+   "Bauman ligado à fluidez explorada por algoritmos e atenção dispersa.",
+   "Fluidez aplicada à atenção dispersa explorada pelos algoritmos."
+  ]
+ },
+ "x140": {
+  "item": "Dado esgoto",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 0.67,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Saneamento ligado ao estigma só pela ideia de Estado negligente.",
+   "Saneamento por analogia de Estado omisso.",
+   "Saneamento ligado ao estigma mental sem relação."
+  ]
+ },
+ "x141": {
+  "item": "Carolina",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Carolina",
+  "sim": 1,
+  "bolso": 0,
+  "pertinente": 1.33,
+  "produtivo": 1.67,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Exclusão que muda de forma aplicada ao documento; plausível, mas breve.",
+   "Carolina e exclusão em nova forma ligadas à falta de certidão.",
+   "Raciocínio próprio, mas a fome de Carolina tem relação indireta com registro civil."
+  ]
+ },
+ "x142": {
+  "item": "Dado Inaf",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado Inaf",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado geral de leitura ligado ao discurso de ódio por suposição.",
+   "Inaf e discurso de ódio, nexo plausível mas indireto.",
+   "Dado de leitura ligado a discurso de ódio por suposição."
+  ]
+ },
+ "x143": {
+  "item": "Dado informalidade",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Dado informalidade",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 1.0,
+  "produtivo": 2.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Renda instável corta o lazer: raciocínio bom, mas dado geral.",
+   "Raciocínio próprio sobre renda e ingresso, mas dado é geral.",
+   "Raciocínio sobre renda e ingresso é próprio, mas o dado é genérico."
+  ]
+ },
+ "x144": {
+  "item": "Drummond",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Libras reconhecida desde 2002, mas sem intérpretes e escolas: bem amarrado.",
+   "Drummond com Libras reconhecida em 2002 sem intérpretes e escolas.",
+   "Citação aplicada à lei da Libras sem estrutura."
+  ]
+ },
+ "x145": {
+  "item": "Dom Hélder",
+  "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Dom Hélder",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Cestas versus perda da terra: causa bem apontada.",
+   "Dom Hélder ligado a cestas vs perda da terra das comunidades.",
+   "Citação aplicada à causa da perda da terra."
+  ]
+ },
+ "x146": {
+  "item": "Drummond",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "ok",
+  "grupo": "Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Lei da Reforma Psiquiátrica não apaga o rótulo: amarra precisa ao estigma.",
+   "Drummond com Lei 10.216 e o rótulo de louco que a lei não apaga.",
+   "Citação aplicada à Reforma Psiquiátrica e ao rótulo que persiste."
+  ]
+ },
+ "x147": {
+  "item": "Dado Inaf",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Dado Inaf",
+  "sim": 1,
+  "bolso": 0,
+  "pertinente": 1.33,
+  "produtivo": 1.67,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Português como segunda língua do surdo agrava o problema: amarra precisa.",
+   "Inaf em surdos, comparação só parcial.",
+   "Raciocínio sobre português como segunda língua é bom, mas o dado é geral."
+  ]
+ },
+ "x148": {
+  "item": "bauman_cuidadoso",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Bauman bem escrito",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Consumo rápido transforma herança em moda; pede vínculo com a memória.",
+   "Bauman ligado à moda passageira de elementos afro, com consumo superficial.",
+   "Fluidez aplicada à apropriação da cultura africana como moda."
+  ]
+ },
+ "x149": {
+  "item": "Dado 1888",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado 1888",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Escravidão ligada à frequência ao cinema por salto amplo.",
+   "Lei Áurea e cinema, ligação histórica longa.",
+   "Abolição ligada à frequência ao cinema por generalização."
+  ]
+ },
+ "x150": {
+  "item": "positivo_cartilha2026-02",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.0,
+  "produtivo": 0.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Filme apenas resumido e generalizado sem argumento.",
+   "Filme ficcional de isolamento, afirmação sem raciocínio.",
+   "Filme apenas mencionado, sem argumento."
+  ]
+ },
+ "x151": {
+  "item": "bauman_cuidadoso",
+  "tema": "Desafios para a formação educacional de surdos no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Bauman bem escrito",
+  "sim": 2,
+  "bolso": 0,
+  "pertinente": 1.67,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Instituições frágeis aplicadas a contratos temporários; Bauman esticado.",
+   "Bauman ligado a políticas descontínuas e intérpretes temporários.",
+   "Fragilidade institucional aplicada à descontinuidade da educação bilíngue."
+  ]
+ },
+ "x152": {
+  "item": "Dom Hélder",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "fraco",
+  "grupo": "Dom Hélder",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Setembro Amarelo versus causa do estigma e falta de atendimento: amarra precisa.",
+   "Dom Hélder ligado ao Setembro Amarelo vs causa do estigma e falta de atendimento.",
+   "Citação aplicada ao Setembro Amarelo e à falta de atendimento público."
+  ]
+ },
+ "x153": {
+  "item": "Graciliano",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "ok",
+  "grupo": "Graciliano",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Rótulo internalizado afasta o paciente do tratamento: amarra precisa.",
+   "Fabiano e internalização do rótulo de louco, com isolamento.",
+   "Rótulo internalizado aplicado ao estigma que afasta do tratamento."
+  ]
+ },
+ "x154": {
+  "item": "Dado violência",
+  "tema": "Caminhos para combater a intolerância religiosa no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Dado violência",
+  "sim": 0,
+  "bolso": 0,
+  "pertinente": 1.33,
+  "produtivo": 1.67,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Liga intolerância a racismo com raciocínio, mas o dado é de homicídios em geral.",
+   "Dado racial ligado a racismo religioso, nexo razoável mas largo.",
+   "Ligação racismo-intolerância é boa, mas o dado de homicídios é indireto."
+  ]
+ },
+ "x155": {
+  "item": "Graciliano",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Graciliano",
+  "sim": 0,
+  "bolso": 1,
+  "pertinente": 1.33,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Desvalorização internalizada aplicada à cuidadora de forma breve.",
+   "Fabiano ligado à autodesvalorização da cuidadora, analogia curta.",
+   "Analogia de autodesvalorização da cuidadora rasa."
+  ]
+ },
+ "x156": {
+  "item": "positivo_cartilha2026-06",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "-",
+  "grupo": "positivo (redação bem avaliada)",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Filme genérico ligado a políticas públicas por afirmação.",
+   "Filme ficcional descrito, argumento pouco ligado.",
+   "Animação mencionada e ligada ao Brasil por afirmação genérica."
+  ]
+ },
+ "x157": {
+  "item": "Dado 1888",
+  "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado 1888",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 0.0,
+  "produtivo": 0.33,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Lei Áurea ligada à liberdade na internet por associação vazia.",
+   "Lei Áurea por analogia fraca, ligação frouxa a dados.",
+   "Abolição ligada a dados só pela palavra liberdade."
+  ]
+ },
+ "x158": {
+  "item": "Dado 1888",
+  "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado 1888",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 0.67,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Escravidão ligada aos hospícios por salto pouco fundamentado.",
+   "Lei Áurea e hospícios, ligação parcial.",
+   "Abolição ligada aos hospícios por salto sem fundamento."
+  ]
+ },
+ "x159": {
+  "item": "Drummond",
+  "tema": "Desafios para a valorização da herança africana no Brasil",
+  "autoavaliacao": "ok",
+  "grupo": "Drummond",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Lei 10.639 sem formação de professores: amarra precisa ao desafio.",
+   "Drummond com Lei 10.639 sem formação de professores e material.",
+   "Citação aplicada à Lei 10.639 sem formação de professores."
+  ]
+ },
+ "x160": {
+  "item": "bauman_cuidadoso",
+  "tema": "Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Bauman bem escrito",
+  "sim": 2,
+  "bolso": 0,
+  "pertinente": 1.67,
+  "produtivo": 1.67,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Registro como \"âncora sólida\" é imagem retórica; Bauman pouco explicado.",
+   "Bauman ligado ao registro civil como âncora sólida do cidadão.",
+   "Conceito aplicado ao registro civil como âncora sólida."
+  ]
+ },
+ "x161": {
+  "item": "Machado",
+  "tema": "Democratização do acesso ao cinema no Brasil",
+  "autoavaliacao": "fraco",
+  "grupo": "Machado",
+  "sim": 3,
+  "bolso": 0,
+  "pertinente": 2.0,
+  "produtivo": 2.0,
+  "aprovado": true,
+  "n": 3,
+  "porques": [
+   "Lógica do vencedor aplicada ao mercado de exibição: leitura própria.",
+   "Machado ligado à lógica de exibição que concentra salas onde há lucro.",
+   "Citação aplicada à lógica de mercado da exibição."
+  ]
+ },
+ "x162": {
+  "item": "Dado violência",
+  "tema": "Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado violência",
+  "sim": 0,
+  "bolso": 2,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Dado racial de homicídios ligado ao cuidado por consequência suposta.",
+   "Dado racial ligado a mães cuidando sozinhas, nexo indireto.",
+   "Dado de homicídios ligado ao cuidado por suposição."
+  ]
+ },
+ "x163": {
+  "item": "Dado esgoto",
+  "tema": "Perspectivas acerca do envelhecimento na sociedade brasileira",
+  "autoavaliacao": "forcado",
+  "grupo": "Dado esgoto",
+  "sim": 0,
+  "bolso": 3,
+  "pertinente": 1.0,
+  "produtivo": 1.0,
+  "aprovado": false,
+  "n": 3,
+  "porques": [
+   "Saneamento ligado ao envelhecimento de forma genérica.",
+   "Saneamento e envelhecimento com qualidade, ligação indireta.",
+   "Dado de saneamento ligado ao envelhecimento de forma genérica."
+  ]
+ }
+}

@@ -419,21 +419,21 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   citar a C4); `trechoExiste` aceita frase por frase, com 3+ palavras cada.
   **Aberto:** ela deu C5 = 200 para "o governo deve ajudar... campanhas na
   televisão", generosa demais; calibrar custa o golden set (1 rodada/dia).
-- **Coringas = frase de autor ou dado (Pablo, 29/10/2026: "coisa muito rara,
-  mas que serve para tudo"; depois, vendo conceitos e obras no ar: "fáceis de
-  memorizar, falas de autores é o que eu mais gosto, ou dados"):** 11 em
-  `CORINGAS` (`lib/redacao/autores.ts`), 3 por motivo (2 falas e 1 dado,
-  `Causa.coringas`). A frase é EXATA e conferida em fonte; a frase sem fonte
-  primária sai (Josué de Castro, "metade da humanidade não come"), e a de forma
-  errada também (Darcy disse "é um programa"). Dado só com fonte oficial, sem
-  número só da imprensa. Cada um tem `sentido` (a frase em palavras simples: o
-  aluno-do-zero travou em "lírios" e "as batatas") e a amarra por motivo, porque a
-  Cartilha 2025 (p.16) pune o repertório "de bolso" que entra "decorado,
-  automático ou forçado". **Sem rolagem:** só 3 coringas à vista, e os outros
-  autores ficam atrás de "Outros autores". Medido: a ficha mais longa (Dom Hélder) cabe
-  em 1440×900, sem rolar a página nem o bloco. Análise e fontes:
-  `docs/redacao/repertorios-coringa.md`. Testes: `lib/redacao/coringas.test.ts`
-  (barra os batidos) e `tests/e2e/coringas.e2e.ts` (mede a rolagem).
+- **Coringas PROVADOS (Pablo, 29/10/2026: "você tem que provar, não achismo"):**
+  `CORINGAS` em `lib/redacao/autores.ts` traz só o que passou: 3 juízes cegos
+  (Opus, Sonnet, Fable), 11 temas do ENEM de 2015 a 2025, com controles (Bauman
+  colado "de bolso" teve 0 de 11 aprovados; âncoras repetidas deram o mesmo
+  resultado). Passaram em 11 de 11: Drummond ("As leis não bastam"), Dom Hélder
+  e Rui Barbosa. Em 8: Wiesel. Em 7: Graciliano e Luther King. Dado não é
+  coringa: esgoto e violência tiveram 0 de 11, e o de 1888 só serviu em temas de
+  raça (fica com `restricao`). Nas 47 redações nota 1000 (censo), "a lei
+  existe, mas não basta" aparece em 18, nos 5 temas (a Constituição de 1988 em
+  15), e "indiferença" em 29. Frase entre aspas aparece em só 5 de 47. Cada
+  ficha mostra "Testado: serviu em X de 11". Coringa novo só entra depois de
+  passar pela mesma prova (`docs/redacao/prova-coringas/`, scripts
+  `montar_pilha.py` e `somar.py`). **Defeito aberto:** o corretor do site deu C2
+  = 160 à redação original, à com Drummond e à com Bauman colado: a C2 não
+  separa repertório bom de colado. Relatório: `docs/redacao/repertorios-coringa.md`.
 - **Menos poluição nos passos 4 a 7 (mesmo dia):** o molde destaca só a frase
   de agora (feitas com visto, futuras apagadas); "Pense antes" mudou para a
   aba Ajuda; ponte, conectivos e erros da proposta foram para "Mais dicas";
