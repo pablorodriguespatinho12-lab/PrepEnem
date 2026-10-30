@@ -300,6 +300,8 @@ export const materiaColors: Record<string, string> = {
   'Sociologia': '#C99400',
   'Literatura': '#D2691E',
   'Livros': '#0F8A7E',
+  /* Ciano escuro: longe do teal dos Livros e do azul da Matemática; branco passa no AA. */
+  'Redação': '#0E7490',
 };
 /* Baralho padrão gravou no banco a cor da matéria do dia do seed (a pastel):
    ele segue a cor atual da matéria. Baralho do aluno mantém a cor que ele escolheu. */

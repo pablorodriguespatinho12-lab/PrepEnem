@@ -162,7 +162,7 @@ export const CORINGAS: Record<string, Coringa> = {
     tipo: 'fala', rotulo: 'Elie Wiesel', quando: '1986', prova: { aprovados: 8, temas: 11 },
     texto: 'O oposto do amor não é o ódio, é a indiferença.',
     sentido: 'Fingir que não vê quem sofre é tão grave quanto agredir.',
-    fonte: 'entrevista à revista US News & World Report (tradução)',
+    fonte: 'entrevista à revista US News & World Report, em tradução',
     amarra: {
       estigma: 'Ignorar quem sofre também fere: a indiferença da sociedade é o que mantém o grupo invisível.',
     },
@@ -181,7 +181,7 @@ export const CORINGAS: Record<string, Coringa> = {
     tipo: 'fala', rotulo: 'Martin Luther King Jr.', quando: '1963', prova: { aprovados: 7, temas: 11 },
     texto: 'A injustiça em qualquer lugar é uma ameaça à justiça em todo lugar.',
     sentido: 'Quando um grupo perde direitos, ninguém está seguro: a injustiça se espalha.',
-    fonte: 'Carta da Prisão de Birmingham (tradução)',
+    fonte: 'Carta da Prisão de Birmingham, em tradução',
     amarra: {
       estigma: 'O preconceito contra um grupo ameaça os direitos de todos, não só os de quem é atingido.',
     },

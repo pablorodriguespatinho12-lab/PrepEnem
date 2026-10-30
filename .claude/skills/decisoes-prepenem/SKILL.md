@@ -441,7 +441,16 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   virava "de bolso". O prompt pede a cópia e diz que a explicação pode estar na
   frase da citação. Em 6 correções, as originais voltaram a C2 = 200 e o Bauman
   colado foi pego. Aberto: a IA nem sempre lista o repertório da introdução, e
-  falta o golden set. Relatório: `docs/redacao/repertorios-coringa.md`.
+  falta o golden set. Também pede TODOS os repertórios, a começar pelo da
+  introdução (que ficava de fora), e não aceita ligação genérica ("se relaciona
+  com a problemática") como amarra. **Decorar (30/10):** baralho padrão "Coringas
+  da redação" (matéria Redação, cor #0E7490), gerado de `CORINGAS` por
+  `lib/redacao/cartoes-coringas.ts`. São 2 cartões por coringa: "Coringa para:
+  <argumento>" e "complete a frase". A dica é a imagem e nunca usa palavra do
+  verso (o teste barra). Criar ou atualizar: `DB_CONFIRMED=1 npx tsx
+  --env-file=.env scripts/seed-coringas-redacao.ts`; roda de novo quando
+  CORINGAS mudar. A lista de baralhos mostra o subtema como título. Relatório:
+  `docs/redacao/repertorios-coringa.md`.
 - **Menos poluição nos passos 4 a 7 (mesmo dia):** o molde destaca só a frase
   de agora (feitas com visto, futuras apagadas); "Pense antes" mudou para a
   aba Ajuda; ponte, conectivos e erros da proposta foram para "Mais dicas";
