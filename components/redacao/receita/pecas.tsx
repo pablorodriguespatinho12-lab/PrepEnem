@@ -65,7 +65,7 @@ export function CaixaTexto({ id, valor, aoMudar, rotulo, placeholder, alto = fal
   encher?: boolean;
 }) {
   return (
-    <div className={encher ? 'lg:flex lg:min-h-0 lg:flex-1 lg:flex-col' : undefined}>
+    <div className={encher ? 'lg:flex lg:flex-1 lg:flex-col' : undefined}>
       <label htmlFor={id} className="type-meta font-semibold block mb-2">{rotulo}</label>
       <textarea
         id={id}

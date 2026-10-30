@@ -229,8 +229,9 @@ function Autores({ nomes, coringas, causas, titulo, fraseDeRepertorio }: {
   const aberto = escolha ?? fraseDeRepertorio;
   return (
     /* Trava: a caixa de texto nunca vai para baixo da barra, mesmo com
-       "Outros autores" aberto. */
-    <div data-medir="autores" className="mb-4 lg:max-h-[60%] lg:shrink-0 lg:overflow-y-auto">
+       "Outros autores" aberto. Em tela baixa quem encolhe (e rola por dentro)
+       é a lista, não a caixa — senão ela passa por cima do contador (30/10/2026). */
+    <div data-medir="autores" className="mb-4 lg:max-h-[60%] lg:min-h-[4.5rem] lg:shrink lg:overflow-y-auto">
       <button
         type="button"
         onClick={() => setEscolha(!aberto)}
