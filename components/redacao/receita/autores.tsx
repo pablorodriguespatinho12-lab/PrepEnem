@@ -7,6 +7,7 @@ import { ChevronDown } from 'lucide-react';
 import { autorPorNome, coringaPorNome } from '@/lib/redacao/autores';
 import type { ChaveCausa } from '@/lib/redacao/receita';
 import { EXEMPLO_ANO, EXEMPLO_TEMA } from '@/lib/redacao/exemplo-receita';
+import { exemplosDoCoringa } from '@/lib/redacao/exemplos-coringas';
 
 /* Cada nome é um botão que abre a ficha. Sem a ficha o aluno cita só o nome,
    e o INEP chama isso de repertório de bolso. */
@@ -53,8 +54,10 @@ function ItemAutor({ nome }: { nome: string }) {
    os outros autores ficam atrás de "Outros autores", para a coluna caber na
    tela (Pablo, 29/10/2026: 14 pílulas e a ficha empurravam a caixa de texto
    para baixo da barra). Tocar abre a ficha curta logo abaixo, uma por vez. */
-export function AutoresEmLinha({ nomes, titulo, coringas = [], causas = [] }: {
+export function AutoresEmLinha({ nomes, titulo, coringas = [], causas = [], aoVerExemplo }: {
   nomes: string[]; titulo: string; coringas?: string[]; causas?: (ChaveCausa | null)[];
+  /* Abre o exemplo pronto do coringa na aba Exemplo do painel. */
+  aoVerExemplo?: (nome: string) => void;
 }) {
   const [aberto, setAberto] = useState<string | null>(null);
   const [verOutros, setVerOutros] = useState(coringas.length === 0);
@@ -105,7 +108,18 @@ export function AutoresEmLinha({ nomes, titulo, coringas = [], causas = [] }: {
             <p className="type-meta mt-1.5">
               <span className="font-medium text-primary-text">Ligue ao seu tema assim: </span>{amarra}
               {/* Os 3 alunos do teste citaram e não ligaram: o molde ensina a ligar em qualquer tema. */}
-              <span className="text-muted-foreground"> Depois: &ldquo;Isso se vê quando [fato do tema]&rdquo;.</span>
+              {/* O exemplo pronto mostra a ligação feita; sem ele, a dica em palavras.
+                  Os dois juntos estouravam a ficha mais longa (Luther King, 15 px). */}
+              {aoVerExemplo && aberto && exemplosDoCoringa(aberto, '').length > 0 ? (
+                <>
+                  {' '}
+                  <button type="button" onClick={() => aoVerExemplo(aberto)} className="font-semibold text-primary-text underline underline-offset-2 t-colors hover:text-foreground">
+                    Ver exemplo pronto
+                  </button>
+                </>
+              ) : (
+                <span className="text-muted-foreground"> Depois: &ldquo;Isso se vê quando [fato do tema]&rdquo;.</span>
+              )}
             </p>
           )}
         </div>

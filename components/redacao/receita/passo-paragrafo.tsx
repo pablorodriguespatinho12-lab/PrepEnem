@@ -17,6 +17,7 @@ import { EXEMPLO_ANO, EXEMPLO_PARAGRAFOS } from '@/lib/redacao/exemplo-receita';
 import { juntarComeco, ondeEstou, type OndeEstou } from '@/lib/redacao/onde-estou';
 import { CabecalhoPasso, CaixaTexto, ContadorLinhas } from './pecas';
 import { AutoresEmLinha } from './autores';
+import { ExemploComCoringa } from './exemplo-coringa';
 import { criarMarcador, termosDe } from './glossario';
 import { AvisoMotivo } from './passo-causas';
 import { AjudaEscrita, ajudaVazia, pedirAjuda, type EstadoAjuda } from './ajuda-escrita';
@@ -117,6 +118,9 @@ function MaisDicas({ paragrafo }: { paragrafo: Paragrafo }) {
 
 interface PainelProps extends Props {
   jaMarcados: string[];
+  coringas: string[];
+  coringaExemplo: string | null;
+  aoEscolherCoringa: (nome: string) => void;
   onde: OndeEstou;
   aba: Aba;
   aoTrocarAba: (a: Aba) => void;
@@ -125,7 +129,7 @@ interface PainelProps extends Props {
   ajuda: ReactNode;
 }
 
-function Painel({ jaMarcados, onde, aba, aoTrocarAba, aberto, aoAbrir, ajuda, ...props }: PainelProps) {
+function Painel({ jaMarcados, onde, aba, aoTrocarAba, aberto, aoAbrir, ajuda, coringas, coringaExemplo, aoEscolherCoringa, ...props }: PainelProps) {
   /* O marcador é usado no mesmo render que o criou: o modo estrito renderiza
      2 vezes, e um filho que usasse o marcador do pai acharia tudo já usado. */
   const { paragrafo, causaA, causaB, tema, tese, primeiraVisita, aoVerMolde } = props;
@@ -184,7 +188,13 @@ function Painel({ jaMarcados, onde, aba, aoTrocarAba, aberto, aoAbrir, ajuda, ..
         {aba === 'ajuda' && ajuda}
         {aba === 'exemplo' && (
           <>
-            <p className="type-rotulo text-primary-text mb-3">Exemplo de estrutura, não copie · <span data-numeric>ENEM {EXEMPLO_ANO}</span></p>
+            {/* Primeiro o texto com coringa em outro tema; depois a redação inteira. */}
+            {paragrafo.chave !== 'conclusao' && (
+              <div className="mb-5 border-b border-border pb-5">
+                <ExemploComCoringa coringas={coringas} tema={tema} escolhido={coringaExemplo} aoEscolher={aoEscolherCoringa} />
+              </div>
+            )}
+            <p className="type-rotulo text-primary-text mb-3">A redação inteira de exemplo, não copie · <span data-numeric>ENEM {EXEMPLO_ANO}</span></p>
             <ListaDeFrases paragrafo={paragrafo} frases={exemplo.frases} rotulos={rotulos} />
             {exemplo.ponte && <Ponte titulo="A ponte neste exemplo" itens={exemplo.ponte.map((p) => ({ passo: p.passo, texto: p.trecho }))} />}
           </>
@@ -222,8 +232,8 @@ function Elementos({ elementos, aoMarcar }: { elementos: Props['elementos']; aoM
 
 /* Autores recolhidos numa linha; abrem sozinhos quando a frase de agora é a
    do repertório, que é quando ele precisa deles. Tocar decide de vez. */
-function Autores({ nomes, coringas, causas, titulo, fraseDeRepertorio }: {
-  nomes: string[]; coringas: string[]; causas: (ChaveCausa | null)[]; titulo: string; fraseDeRepertorio: boolean;
+function Autores({ nomes, coringas, causas, titulo, fraseDeRepertorio, aoVerExemplo }: {
+  nomes: string[]; coringas: string[]; causas: (ChaveCausa | null)[]; titulo: string; fraseDeRepertorio: boolean; aoVerExemplo: (nome: string) => void;
 }) {
   const [escolha, setEscolha] = useState<boolean | null>(null);
   const aberto = escolha ?? fraseDeRepertorio;
@@ -241,7 +251,7 @@ function Autores({ nomes, coringas, causas, titulo, fraseDeRepertorio }: {
         {titulo} · <span data-numeric>{nomes.length + coringas.length}</span>
         <ChevronDown className="w-4 h-4 transition-transform duration-200 motion-reduce:transition-none" style={{ transform: aberto ? 'rotate(180deg)' : undefined }} aria-hidden />
       </button>
-      {aberto && <div className="mt-2"><AutoresEmLinha nomes={nomes} coringas={coringas} causas={causas} titulo="" /></div>}
+      {aberto && <div className="mt-2"><AutoresEmLinha nomes={nomes} coringas={coringas} causas={causas} titulo="" aoVerExemplo={aoVerExemplo} /></div>}
     </div>
   );
 }
@@ -264,6 +274,7 @@ export function PassoParagrafo(props: Props) {
      aparecer sem rolar. */
   const [aberto, setAberto] = useState(primeiraVisita);
   const [ajuda, setAjuda] = useState<EstadoAjuda>(ajudaVazia);
+  const [coringaExemplo, setCoringaExemplo] = useState<string | null>(null);
 
   const pedir = async (pergunta: string) => {
     setAjuda((a) => ({ ...a, carregando: true, erro: null }));
@@ -278,6 +289,13 @@ export function PassoParagrafo(props: Props) {
     setAba('ajuda');
     setAberto(true);
     if (!ajuda.resposta && !ajuda.carregando) pedir('');
+    if (window.matchMedia('(max-width: 1023px)').matches) document.getElementById('painel-molde')?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  };
+  /* "Ver exemplo pronto" na ficha do coringa: abre a aba Exemplo nele. */
+  const verExemplo = (nome: string) => {
+    setCoringaExemplo(nome);
+    setAba('exemplo');
+    setAberto(true);
     if (window.matchMedia('(max-width: 1023px)').matches) document.getElementById('painel-molde')?.scrollIntoView({ block: 'start', behavior: 'smooth' });
   };
   const usarComeco = (comeco: string) => {
@@ -302,6 +320,9 @@ export function PassoParagrafo(props: Props) {
         <Painel
           {...props}
           jaMarcados={termosDe(instrucao)}
+          coringas={coringas}
+          coringaExemplo={coringaExemplo}
+          aoEscolherCoringa={setCoringaExemplo}
           onde={onde}
           aba={aba}
           aoTrocarAba={setAba}
@@ -321,7 +342,7 @@ export function PassoParagrafo(props: Props) {
         />
         <div className="lg:sticky lg:top-[4.25rem] lg:flex lg:h-[calc(100dvh-var(--altura-fixa-passo))] lg:min-h-[22rem] lg:flex-col">
           {nomes.length > 0 && (
-            <Autores nomes={nomes} coringas={coringas} causas={causas} titulo={ehIntroducao ? 'Autores dos seus motivos' : 'Autores deste motivo'} fraseDeRepertorio={fraseDeRepertorio} />
+            <Autores nomes={nomes} coringas={coringas} causas={causas} titulo={ehIntroducao ? 'Autores dos seus motivos' : 'Autores deste motivo'} fraseDeRepertorio={fraseDeRepertorio} aoVerExemplo={verExemplo} />
           )}
           <CaixaTexto
             id={`texto-${paragrafo.chave}`}
