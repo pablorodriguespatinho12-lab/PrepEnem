@@ -82,7 +82,11 @@ export function AutoresEmLinha({ nomes, titulo, coringas = [], causas = [] }: {
         })}
         {coringas.length > 0 && outros.length > 0 && (
           <li>
-            <button type="button" onClick={() => setVerOutros(!verOutros)} aria-expanded={verOutros} className={`${pilula} text-muted-foreground`}>
+            <button
+              type="button"
+              /* Recolher fecha a ficha de um autor que vai sumir da lista. */
+              onClick={() => { if (verOutros && aberto && !coringas.includes(aberto)) setAberto(null); setVerOutros(!verOutros); }}
+              aria-expanded={verOutros} className={`${pilula} text-muted-foreground`}>
               {verOutros ? 'Menos autores' : <>Outros autores · <span data-numeric>{outros.length}</span></>}
             </button>
           </li>
@@ -93,14 +97,15 @@ export function AutoresEmLinha({ nomes, titulo, coringas = [], causas = [] }: {
           <p className="font-reading type-body">{coringa.tipo === 'fala' ? <>&ldquo;{coringa.texto}&rdquo;</> : coringa.texto}</p>
           <p className="type-meta mt-0.5">
             <span className="text-muted-foreground">{coringa.fonte} <span data-numeric>({coringa.quando})</span>.</span>
-            {coringa.sentido && <> {coringa.sentido}</>}
+            {' '}<span className="font-medium" data-numeric>Serviu em {coringa.prova.aprovados} de {coringa.prova.temas} temas do ENEM{coringa.restricao ? `; ${coringa.restricao}` : ''}.</span>
+            {coringa.sentido && !coringa.curta && <> {coringa.sentido}</>}
           </p>
-          <p className="type-meta mt-1" data-numeric>
-            <span className="font-medium">Testado:</span> serviu em {coringa.prova.aprovados} de {coringa.prova.temas} temas do ENEM de 2015 a 2025{coringa.restricao ? `; ${coringa.restricao}` : ''}.
-          </p>
+          {coringa.curta && <p className="type-meta mt-1"><span className="font-medium">Para decorar, sem aspas:</span> {coringa.curta}</p>}
           {amarra && (
             <p className="type-meta mt-1.5">
               <span className="font-medium text-primary-text">Ligue ao seu tema assim: </span>{amarra}
+              {/* Os 3 alunos do teste citaram e não ligaram: o molde ensina a ligar em qualquer tema. */}
+              <span className="text-muted-foreground"> Depois: &ldquo;Isso se vê quando [fato do tema]&rdquo;.</span>
             </p>
           )}
         </div>

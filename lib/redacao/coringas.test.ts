@@ -5,7 +5,7 @@
 
 import { describe, expect, test } from 'vitest';
 import { CORINGAS, coringaPorNome } from './autores';
-import { CAUSAS } from './receita';
+import { CAUSAS, coringasDosMotivos } from './receita';
 import { promptAjuda } from './ajuda';
 
 /* Os que aparecem em quase toda lista de repertório, e a frase sem fonte. */
@@ -50,4 +50,11 @@ describe('coringas', () => {
     expect(p).toContain('Ligação ao motivo: Doar resolve o dia');
     expect(p).not.toContain('Fabiano');
   });
+});
+
+/* Revisor, 29/10/2026: motivo ainda não escolhido apagava os coringas do outro. */
+test('coringas à vista: alterna os motivos e não some com motivo vazio', () => {
+  expect(coringasDosMotivos(['estigma', 'estado'], 3)).toEqual(['Elie Wiesel', 'Drummond', 'Graciliano']);
+  expect(coringasDosMotivos([null, 'estado'], 3)).toEqual(['Drummond', 'Dom Hélder', 'Rui Barbosa']);
+  expect(coringasDosMotivos(['estado', 'acesso'], 3)).toEqual(['Drummond', 'Rui Barbosa', 'Dom Hélder']);
 });

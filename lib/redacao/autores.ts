@@ -115,6 +115,9 @@ export interface Coringa {
   /* Em quantos dos 11 temas do ENEM de 2015 a 2025 ele sustentou nota 200,
      com 3 juízes cegos (docs/redacao/prova-coringas.md). */
   prova: { aprovados: number; temas: number };
+  /* Forma curta para decorar, citada como ideia (sem aspas): nenhum dos 3
+     alunos do teste decorou a frase longa do Rui Barbosa. */
+  curta?: string;
   /* Para quem não serve em quase todo tema: onde ele funcionou. */
   restricao?: string;
   amarra: Partial<Record<ChaveCausa, string>>;
@@ -147,6 +150,7 @@ export const CORINGAS: Record<string, Coringa> = {
     tipo: 'fala', rotulo: 'Rui Barbosa', quando: '1920', prova: { aprovados: 11, temas: 11 },
     texto: 'Tratar com desigualdade a iguais, ou a desiguais com igualdade, seria desigualdade flagrante, e não igualdade real.',
     sentido: 'Tratar todo mundo igual parece justo, mas quem começa em desvantagem precisa de mais para chegar ao mesmo lugar.',
+    curta: 'Tratar igual quem é desigual é desigualdade, e não igualdade real.',
     fonte: 'discurso Oração aos Moços',
     amarra: {
       estado: 'O Estado não pode dar o mesmo a quem precisa de mais: tratar igual quem está em desvantagem mantém a desigualdade.',

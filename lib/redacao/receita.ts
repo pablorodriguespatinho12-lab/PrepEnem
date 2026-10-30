@@ -61,6 +61,16 @@ export const CAUSAS: Causa[] = [
 export const causaPorChave = (chave: ChaveCausa | null): Causa | null =>
   CAUSAS.find((c) => c.chave === chave) ?? null;
 
+/* Os coringas à vista no parágrafo: alternando os motivos (1º de A, 1º de B,
+   2º de A...), sem repetir, até o limite. Motivo ainda não escolhido (null)
+   não apaga os do outro (revisor, 29/10/2026). */
+export function coringasDosMotivos(causas: (ChaveCausa | null)[], limite: number): string[] {
+  const porMotivo = causas.map((c) => causaPorChave(c)?.coringas ?? []);
+  const maior = Math.max(0, ...porMotivo.map((m) => m.length));
+  const alternados = Array.from({ length: maior }, (_, i) => porMotivo.map((m) => m[i])).flat();
+  return Array.from(new Set(alternados.filter((n): n is string => !!n))).slice(0, limite);
+}
+
 const semAcento = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
 /* O tema é "da lista" quando o texto é igual a um tema da lista, sem

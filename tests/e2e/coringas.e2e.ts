@@ -48,7 +48,7 @@ async function percorrer(largura: number): Promise<[string, boolean, string][]> 
   const ficha = await page.locator('#ficha-autor').innerText();
   const primeiro = causaPorChave('estigma')!.coringas[0];
   const amarra = CORINGAS[primeiro].amarra.estigma!;
-  prova('ficha traz a frase, a ligação e a prova', ficha.includes(CORINGAS[primeiro].texto) && ficha.includes(amarra) && ficha.includes('Testado:'), ficha.split('\n')[0]);
+  prova('ficha traz a frase, a ligação e a prova', ficha.includes(CORINGAS[primeiro].texto) && ficha.includes(amarra) && ficha.includes('Serviu em'), ficha.split('\n')[0]);
   prova('ficha diz como ligar ao tema', ficha.includes('Ligue ao seu tema assim'), ficha.includes('Ligue') ? 'sim' : 'não');
   if (SHOTS) await page.screenshot({ path: `${SHOTS}/coringas-${largura}.png` });
 
@@ -63,6 +63,9 @@ async function percorrer(largura: number): Promise<[string, boolean, string][]> 
     prova('página não rola', !rola, rola ? 'rola' : 'cabe');
     const dentro = await page.locator('[data-medir="autores"]').evaluate((el) => el.scrollHeight - el.clientHeight);
     prova('ficha inteira à vista, sem rolar por dentro', dentro <= 1, `${dentro} px escondidos`);
+    /* 30/10/2026: com mais espaço para os autores, a caixa passou por cima do contador. */
+    const contador = await page.getByText(/linhas? · meta/).first().boundingBox();
+    prova('contador abaixo da caixa, sem sobrepor', !!contador && contador.y >= fundo - 1, `contador em ${Math.round(contador?.y ?? 0)}, caixa até ${fundo}`);
   }
 
   /* Passo 2: cada motivo mostra os seus coringas. */

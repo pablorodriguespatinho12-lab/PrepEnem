@@ -98,8 +98,70 @@ As 3 versões da mesma redação tiraram **a mesma nota na C2 (160)**: a origina
 marcou todos os repertórios como "de bolso". Ele não separa o repertório bem
 usado do colado, e por isso não serve de prova aqui.
 
-**Aberto:** calibrar a C2 do corretor, que custa o golden set (1 rodada por
-dia na cota da Groq).
+**Causa (30/10/2026, medida com a resposta crua da IA):** em "explica" e
+"amarra", a IA escrevia a própria análise ("Ele usa a citação para mostrar...")
+em vez de copiar a frase do aluno. O código procura o trecho na redação, não
+acha, e o passo vira "ausente": todo repertório saía "de bolso".
+
+**Conserto, no prompt (`lib/redacao/prompts.ts`):**
+- o exemplo do formato diz "<frase do aluno, copiada>";
+- a análise vai só em "comentario";
+- a explicação pode estar na mesma frase da citação ("X afirma que...").
+
+A regra do código ficou como estava: sem explicar, é "de bolso", como no
+Bauman da Cartilha 2025.
+
+**Validação (6 correções reais):** 2 redações bem avaliadas, cada uma em 3
+versões. As 2 originais voltaram a C2 = 200, como o INEP avaliou. O Drummond
+bem usado saiu produtivo, e não "de bolso". O Bauman colado foi marcado "de
+bolso". Dados em `prova-coringas/validar-c2-depois.json`.
+
+**Ainda aberto:**
+- Em 4 das 6 correções, a IA não listou o repertório da introdução. Num dos
+  casos, o Bauman colado passou sem ser avaliado.
+- Confirmar a mudança no golden set, que gasta 1 rodada por dia da cota da Groq.
+
+## O iniciante decora e melhora? (30/10/2026)
+
+**Método.** 3 alunos simulados, que nunca escreveram redação (Ana, Bruno e
+Carla, perfis diferentes):
+1. escrevem 3 parágrafos sem os coringas;
+2. leem as fichas uma vez;
+3. escrevem de memória o que lembram;
+4. reescrevem os parágrafos com 1 coringa.
+
+Os temas nunca entraram na prova: 2012 (imigração), 2013 (Lei Seca) e 2014
+(publicidade infantil). Os mesmos 3 juízes cegos avaliaram os 18 parágrafos
+embaralhados. Dados em `prova-coringas/iniciantes/`.
+
+| | Antes | Depois de 1 leitura |
+|---|---|---|
+| Parágrafos que sustentam 200 no repertório | 0 de 9 | **4 de 9** |
+| Qualidade média do parágrafo (0 a 10) | 3,4 | **5,4** |
+
+**Memória** (de 3 alunos):
+
+| Lembraram de | Coringas |
+|---|---|
+| 3 de 3 | Drummond, Dom Hélder, Graciliano e Wiesel (a ideia) |
+| 2 de 3 | Machado e Luther King |
+| 1 de 3 | dado de 1888 |
+| 0 de 3 | **Rui Barbosa** (só a ideia, a frase é longa) |
+
+Fica na cabeça a frase curta e com imagem: lírio, bicho, santo e comunista,
+batatas.
+
+**O que falhou:** 5 dos 9 parágrafos do "depois" saíram "de bolso". O aluno
+cita, mas liga mal ao tema, e os 3 disseram que "ligar foi o mais difícil".
+Deram certo Drummond na Lei Seca e Graciliano na imigração. Falharam Dom Hélder
+na publicidade infantil, além de Wiesel e Luther King citados de forma genérica.
+
+**Consertos que vieram disso:**
+- o Rui Barbosa ganhou uma forma curta para decorar, citada como ideia, sem aspas;
+- toda ficha ganhou o molde da ligação: "Isso se vê quando [fato do tema]".
+
+**Limite:** um aluno (Ana) leu as fichas antes do "antes". Ela não usou nenhum
+coringa nele, mas a ordem não foi a combinada.
 
 ## O que mudou no site
 

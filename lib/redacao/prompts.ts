@@ -44,9 +44,10 @@ C2, tema e repertório:
 - abordagem "fuga": não trata do assunto.
 - Repertório em 3 PASSOS. Para cada referência externa (autor, obra, lei, dado, fato histórico), copie o trecho de cada passo:
   "cita": onde a referência aparece (autor + ideia).
-  "explica": onde o aluno diz, com as palavras dele, o que a ideia significa. Só nomear o conceito ou usar a obra como símbolo de ideal contra realidade NÃO é explicar: "explica": null. Os dois exemplos de bolso do INEP (Cartilha 2025, p. 17 e 18): "Utopia", de Thomas More, só como contraste com o Brasil; Bauman, "instituições zumbis", só nomeado.
+  "explica": onde o aluno diz, com as palavras dele, o que a ideia significa. Muitas vezes está NA MESMA FRASE da citação ("Mbembe afirma que o Estado decide quem tem o direito de viver"): copie a parte que explica, mesmo repetindo palavras do "cita". Só nomear o conceito ou usar a obra como símbolo de ideal contra realidade NÃO é explicar: "explica": null. Os dois exemplos de bolso do INEP (Cartilha 2025, p. 17 e 18): "Utopia", de Thomas More, só como contraste com o Brasil; Bauman, "instituições zumbis", só nomeado.
   "amarra": onde o aluno liga a ideia ao recorte do tema, com fato ou exemplo do Brasil.
   Cada passo é CÓPIA EXATA de um trecho do aluno, nunca resumo seu: o sistema procura o trecho no texto e o que não acha vira null. Passo que não existe no texto = null. Citar um autor NÃO é usar repertório: nome + frase decorada, sem "explica" ou sem "amarra", é REPERTÓRIO DE BOLSO (cartilhas 2025 e 2026). O autor ser famoso não é o problema: Kant ou Paulo Freire explicados e ligados ao recorte contam.
+  NUNCA escreva a sua análise em "cita", "explica" ou "amarra" ("Ele usa a citação para mostrar..."): ali vai SÓ a frase do aluno, copiada letra por letra. A sua análise vai em "comentario". Análise no lugar da cópia faz o sistema achar que o passo não existe e marcar como de bolso um repertório bem usado.
   "legitimado": a referência existe numa área do conhecimento (dado só dos textos motivadores não conta). "pertinente": tem relação com o tema.
 C3, projeto de texto ("nivel"):
 - 200: projeto estratégico; TODAS as ideias desenvolvidas (com causa, consequência ou exemplo); deslizes só pontuais.
@@ -80,7 +81,7 @@ Devolva SOMENTE JSON:
          "desvios": [{"trecho": "...", "tipo": "crase|concordância|...", "correcao": "..."}]},
   "c2": {"abordagem": "completa|tangencia|fuga", "trecho": "frase que mostra o recorte do tema", "descritor": "...",
          "outroTipoTextual": false, "copiaMotivadores": false, "partesEmbrionarias": 0,
-         "repertorios": [{"cita": "...", "explica": "...", "amarra": "... ou null", "legitimado": true, "pertinente": true, "comentario": "uma frase"}]},
+         "repertorios": [{"cita": "<frase do aluno, copiada>", "explica": "<frase do aluno, copiada, ou null>", "amarra": "<frase do aluno, copiada, ou null>", "legitimado": true, "pertinente": true, "comentario": "<sua análise, uma frase>"}]},
   "c3": {"nivel": 160, "trecho": "...", "descritor": "...", "contradicaoGrave": false,
          "paragrafos": [{"numero": 1, "ideia": "...", "desenvolvida": true, "comentario": "uma frase"}]},
   "c4": {"nivel": 160, "trecho": "...", "descritor": "...", "operadoresEntreParagrafos": ["Além disso"], "todoParagrafoTemCoesivo": true,

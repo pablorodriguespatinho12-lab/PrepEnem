@@ -10,7 +10,7 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import { Check, ChevronDown, LifeBuoy } from 'lucide-react';
 import {
-  causaPorChave, CONECTIVOS, ELEMENTOS, ERROS_PROPOSTA, introducaoComTese, moldeDaFrase, PONTE, PONTE_AVISO,
+  causaPorChave, coringasDosMotivos, CONECTIVOS,ELEMENTOS, ERROS_PROPOSTA, introducaoComTese, moldeDaFrase, PONTE, PONTE_AVISO,
   type ChaveCausa, type ChaveElemento, type Paragrafo,
 } from '@/lib/redacao/receita';
 import { EXEMPLO_ANO, EXEMPLO_PARAGRAFOS } from '@/lib/redacao/exemplo-receita';
@@ -252,8 +252,7 @@ export function PassoParagrafo(props: Props) {
   const causas = ehIntroducao ? [causaA, causaB] : paragrafo.chave === 'desenvolvimento1' ? [causaA] : paragrafo.chave === 'desenvolvimento2' ? [causaB] : [];
   const nomes = Array.from(new Set(causas.flatMap((c) => causaPorChave(c)?.repertorios ?? [])));
   /* Só 3 coringas à vista (sem rolagem); na introdução, alternando os 2 motivos. */
-  const porMotivo = causas.map((c) => causaPorChave(c)?.coringas ?? []);
-  const coringas = Array.from(new Set(porMotivo[0]?.flatMap((n, i) => [n, ...porMotivo.slice(1).map((m) => m[i])]).filter(Boolean) ?? [])).slice(0, CORINGAS_A_VISTA);
+  const coringas = coringasDosMotivos(causas, CORINGAS_A_VISTA);
   const contado = ehIntroducao ? introducaoComTese(texto, tese) : texto;
   const onde = ondeEstou(texto, paragrafo.chave, paragrafo.frases.length);
   const fraseDeRepertorio = /^repert[óo]rio/i.test(paragrafo.frases[onde.atual]?.funcao ?? '');

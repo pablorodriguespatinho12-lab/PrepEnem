@@ -431,9 +431,17 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   15), e "indiferença" em 29. Frase entre aspas aparece em só 5 de 47. Cada
   ficha mostra "Testado: serviu em X de 11". Coringa novo só entra depois de
   passar pela mesma prova (`docs/redacao/prova-coringas/`, scripts
-  `montar_pilha.py` e `somar.py`). **Defeito aberto:** o corretor do site deu C2
-  = 160 à redação original, à com Drummond e à com Bauman colado: a C2 não
-  separa repertório bom de colado. Relatório: `docs/redacao/repertorios-coringa.md`.
+  `montar_pilha.py` e `somar.py`). **Iniciante (30/10):** 3 alunos simulados
+  foram de 0/9 para 4/9 parágrafos com repertório nota 200 após 1 leitura; a frase
+  longa (Rui Barbosa) ninguém decora (ganhou `curta`), e ligar ao tema é o mais
+  difícil (a ficha ganhou o molde "Isso se vê quando [fato do tema]"). A ficha
+  não pode rolar: medido em 1440x900 com a ficha mais longa (0 px escondidos,
+  contador fora da caixa; o e2e mede). **Corretor (30/10):** a IA escrevia a
+  análise em "explica" e "amarra" no lugar da frase do aluno, e todo repertório
+  virava "de bolso". O prompt pede a cópia e diz que a explicação pode estar na
+  frase da citação. Em 6 correções, as originais voltaram a C2 = 200 e o Bauman
+  colado foi pego. Aberto: a IA nem sempre lista o repertório da introdução, e
+  falta o golden set. Relatório: `docs/redacao/repertorios-coringa.md`.
 - **Menos poluição nos passos 4 a 7 (mesmo dia):** o molde destaca só a frase
   de agora (feitas com visto, futuras apagadas); "Pense antes" mudou para a
   aba Ajuda; ponte, conectivos e erros da proposta foram para "Mais dicas";
