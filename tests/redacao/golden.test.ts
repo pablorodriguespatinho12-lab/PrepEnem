@@ -93,13 +93,24 @@ function textosDaCartilha(): { nome: string; tema: string; texto: string }[] {
   });
 }
 
+/* Grava as notas já corrigidas (as da rodada anterior também), depois de cada uma. */
+function salvarProgresso(): void {
+  if (!process.env.REDACAO_SALVAR) return;
+  const notas = Object.fromEntries([...corrigidas].map(([nome, c]) => [nome, { notas: c.notas, total: c.total }]));
+  fs.writeFileSync(process.env.REDACAO_SALVAR, JSON.stringify({ modelo: OPCOES_TESTE.modelo, notas }, null, 1));
+}
 const linha = (nome: string, c: CorrecaoCompleta) =>
   `| ${nome} | ${COMPETENCIAS.map((k) => c.notas[k]).join(' | ')} | ${c.total} |`;
 const CABECALHO = '| redação | C1 | C2 | C3 | C4 | C5 | total |\n|---|---|---|---|---|---|---|';
 
 describe.skipIf(!RODAR)('golden set da redação (IA real)', () => {
   test('nota 1000: média de 880 ou mais, e toda nota com trecho', async () => {
-    const lista = [{ nome: 'fixture (original)', tema: TEMA, texto: REDACAO }, ...textosDaCartilha()];
+    /* 47 redações com pausa de 60 s não cabem no prazo de 1 h (30/10/2026):
+       REDACAO_FILTRO (regex no nome) roda por partes, e o progresso é salvo a
+       cada correção, para retomar com REDACAO_ANTERIOR sem perder nada. */
+    const filtro = process.env.REDACAO_FILTRO ? new RegExp(process.env.REDACAO_FILTRO) : null;
+    const lista = [{ nome: 'fixture (original)', tema: TEMA, texto: REDACAO }, ...textosDaCartilha()]
+      .filter((r) => !filtro || filtro.test(r.nome));
     const linhas: string[] = [];
     const falhas: string[] = [];
     let soma = 0;
@@ -119,6 +130,7 @@ describe.skipIf(!RODAR)('golden set da redação (IA real)', () => {
         continue;
       }
       corrigidas.set(r.nome, c);
+      salvarProgresso();
       for (const k of ['c1', 'c2', 'c3', 'c4'] as const) expect(c.justificativas?.[k].trecho, `${r.nome} ${k}`).toBeTruthy();
       linhas.push(linha(r.nome, c));
       soma += c.total;
