@@ -66,6 +66,15 @@ async function percorrer(largura: number): Promise<[string, boolean, string][]> 
     /* 30/10/2026: com mais espaço para os autores, a caixa passou por cima do contador. */
     const contador = await page.getByText(/linhas? · meta/).first().boundingBox();
     prova('contador abaixo da caixa, sem sobrepor', !!contador && contador.y >= fundo - 1, `contador em ${Math.round(contador?.y ?? 0)}, caixa até ${fundo}`);
+    /* Cada coringa à vista, não só o 1º: a ficha mais alta é a que tem o aviso de onde serve. */
+    const piores: string[] = [];
+    for (const nome of causaPorChave('estigma')!.coringas) {
+      await page.locator('[data-medir="autores"] ul button', { hasText: CORINGAS[nome].rotulo }).click();
+      await page.waitForTimeout(250);
+      const esc = await page.locator('[data-medir="autores"]').evaluate((el) => el.scrollHeight - el.clientHeight);
+      if (esc > 1) piores.push(`${nome}: ${esc} px`);
+    }
+    prova('todas as fichas do motivo cabem', piores.length === 0, piores.join('; ') || 'todas cabem');
   }
 
   /* Passo 2: cada motivo mostra os seus coringas. */

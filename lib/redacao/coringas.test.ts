@@ -12,8 +12,8 @@ import { promptAjuda } from './ajuda';
 const BATIDOS = /bauman|foucault|arendt|byung|durkheim|kant|arist[óo]teles|plat[ãa]o|orwell|huxley|freire|maslow|mandela|betinho|josu[ée] de castro/i;
 const PALAVRAS_FALA = 22;
 const LIMITE_AMARRA = 130;
-/* Abaixo disso não é coringa: tem de dizer em que temas serviu. */
-const UNIVERSAL = 7;
+/* Abaixo de 60% dos temas não é coringa: tem de dizer em que temas serviu. */
+const UNIVERSAL = 0.6;
 
 describe('coringas', () => {
   test.each(CAUSAS.map((c) => [c.chave, c] as const))('%s: 3 coringas, do mais testado ao menos, com amarra', (chave, causa) => {
@@ -30,7 +30,7 @@ describe('coringas', () => {
   test('quem passou em poucos temas diz onde serve', () => {
     for (const [nome, k] of Object.entries(CORINGAS)) {
       expect(k.prova.aprovados, nome).toBeLessThanOrEqual(k.prova.temas);
-      if (k.prova.aprovados < UNIVERSAL) expect(k.restricao, nome).toBeTruthy();
+      if (k.prova.aprovados / k.prova.temas < UNIVERSAL) expect(k.restricao, nome).toBeTruthy();
     }
   });
   test('frase curta, dado com número, com fonte e data, sem emoji e sem batido', () => {
@@ -46,7 +46,7 @@ describe('coringas', () => {
   });
   test('a ajuda da IA recebe os coringas do motivo, com a prova e a ligação', () => {
     const p = promptAjuda({ tema: 'T', paragrafo: 'desenvolvimento1', texto: '', tese: '', causaA: 'acesso', causaB: 'estado', pergunta: '' });
-    expect(p).toContain('[coringa, fala, serviu em 11 de 11 temas] Rui Barbosa: "Tratar com desigualdade');
+    expect(p).toContain('[coringa, fala, serviu em 24 de 28 temas] Rui Barbosa: "Tratar com desigualdade');
     expect(p).toContain('Ligação ao motivo: Doar resolve o dia');
     expect(p).not.toContain('Fabiano');
   });
@@ -54,7 +54,7 @@ describe('coringas', () => {
 
 /* Revisor, 29/10/2026: motivo ainda não escolhido apagava os coringas do outro. */
 test('coringas à vista: alterna os motivos e não some com motivo vazio', () => {
-  expect(coringasDosMotivos(['estigma', 'estado'], 3)).toEqual(['Elie Wiesel', 'Drummond', 'Graciliano']);
-  expect(coringasDosMotivos([null, 'estado'], 3)).toEqual(['Drummond', 'Dom Hélder', 'Rui Barbosa']);
+  expect(coringasDosMotivos(['estigma', 'estado'], 3)).toEqual(['Graciliano', 'Drummond', 'Elie Wiesel']);
+  expect(coringasDosMotivos([null, 'estado'], 3)).toEqual(['Drummond', 'Rui Barbosa', 'Dom Hélder']);
   expect(coringasDosMotivos(['estado', 'acesso'], 3)).toEqual(['Drummond', 'Rui Barbosa', 'Dom Hélder']);
 });

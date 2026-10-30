@@ -1,0 +1,902 @@
+[
+ {
+  "id": "r001",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Fato clássico (último país a abolir) usado como pano de fundo genérico, pouco ligado ao recorte da valorização."
+ },
+ {
+  "id": "r002",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Drummond real e explicado, ligado com raciocínio próprio à ineficácia das leis sobre o trabalho feminino."
+ },
+ {
+  "id": "r003",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Citação de Machado real, mas forçada para explicar a mídia; ligação frouxa com o envelhecimento."
+ },
+ {
+  "id": "r004",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Machado real, aplicado à escola de modo forçado; frase decorada de ampla circulação."
+ },
+ {
+  "id": "r005",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Drummond real, ligação aceitável mas rasa; citação de uso corrente."
+ },
+ {
+  "id": "r006",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Wiesel real e razoável para invisibilidade/indiferença, mas citação coringa pouco aprofundada."
+ },
+ {
+  "id": "r007",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 4,
+  "porque": "Fato histórico genérico (Lei Áurea) sem aprofundamento ou ligação precisa com o recorte."
+ },
+ {
+  "id": "r008",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 0,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 4,
+  "porque": "Djamila citada de forma vaga, sem obra nem raciocínio; ideia solta."
+ },
+ {
+  "id": "r009",
+  "legitimado": 0,
+  "pertinente": 0,
+  "produtivo": 0,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 3,
+  "porque": "Sem repertório: apenas contextualização histórica genérica."
+ },
+ {
+  "id": "r010",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Wiesel real e bem amarrado à indiferença com idosos, mas citação coringa."
+ },
+ {
+  "id": "r011",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Beauvoir real e pertinente: papel de cuidado construído e imposto, com explicação própria."
+ },
+ {
+  "id": "r012",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Krenak (humanidade/subumanidade) real, bem ligado à marginalização do negro e à desvalorização."
+ },
+ {
+  "id": "r013",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Lei do Sexagenário real e usada com leitura historiográfica própria, ligada ao recorte do envelhecimento."
+ },
+ {
+  "id": "r014",
+  "legitimado": 0,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "'Colonialismo Insidioso' de Boaventura não é verificável; fechamento com Romantismo é forçado."
+ },
+ {
+  "id": "r015",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Wiesel real, mas aplicado de modo genérico às comunidades amazônicas."
+ },
+ {
+  "id": "r016",
+  "legitimado": 0,
+  "pertinente": 1,
+  "produtivo": 0,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Curta 'Meow' atribuído a tese que não corresponde à obra; referência distorcida e solta."
+ },
+ {
+  "id": "r017",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 0,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 3,
+  "porque": "Fato da Lei Áurea sem conexão lógica com povos tradicionais; decorativo."
+ },
+ {
+  "id": "r018",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Vidas Secas real, mas Fabiano não trata de herança africana; ligação tênue."
+ },
+ {
+  "id": "r019",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Série Aruanas real e ligada ao tema, mas só descrita, sem raciocínio próprio."
+ },
+ {
+  "id": "r020",
+  "legitimado": 0,
+  "pertinente": 0,
+  "produtivo": 0,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 3,
+  "porque": "Sem repertório: contextualização histórica genérica."
+ },
+ {
+  "id": "r021",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Machado real, aplicação raciocinada aos agressores do meio ambiente, mas citação coringa."
+ },
+ {
+  "id": "r022",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Drummond real, ligação superficial com campanhas educacionais; citação de uso corrente."
+ },
+ {
+  "id": "r023",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 0,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Freire parafraseado sem fonte verificável; frase genérica e decorativa."
+ },
+ {
+  "id": "r024",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Fernanda Montenegro em Ainda Estou Aqui real e pertinente, porém usado como ilustração."
+ },
+ {
+  "id": "r025",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Wiesel real, aplicado de forma genérica ao trabalho de cuidado."
+ },
+ {
+  "id": "r026",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "LDB/BNCC reais, explicadas e criticadas com raciocínio próprio no recorte educacional."
+ },
+ {
+  "id": "r027",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "MLK real mas genérico; a imagem dos meninos de Graciliano é boa, porém só rapidamente amarrada."
+ },
+ {
+  "id": "r028",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Fato da escravidão usado com raciocínio próprio para explicar a desvalorização do trabalho de cuidado."
+ },
+ {
+  "id": "r029",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Filme Up real e ligado ao isolamento de idosos, mas apenas ilustrativo."
+ },
+ {
+  "id": "r030",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Wiesel real, aplicado de forma razoável mas coringa e pouco aprofundado."
+ },
+ {
+  "id": "r031",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Milton Santos e 'cidadanias mutiladas' reais, explicados e amarrados ao papel do registro civil."
+ },
+ {
+  "id": "r032",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 4,
+  "porque": "Lei Áurea como fato genérico, pouco aprofundado e de uso corrente."
+ },
+ {
+  "id": "r033",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Drummond real e razoável para a distância entre lei e prática, mas citação coringa de ligação rasa."
+ },
+ {
+  "id": "r034",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Dimenstein citado de forma vaga, sem obra; tese genérica sobre leis só no papel."
+ },
+ {
+  "id": "r035",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Wiesel bem ligado à invisibilidade da cultura africana, mas citação coringa."
+ },
+ {
+  "id": "r036",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 8,
+  "porque": "Beauvoir, A Velhice, real e exata; explica a marginalização capitalista e sustenta a proposta."
+ },
+ {
+  "id": "r037",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Goffman (estigma) real, aplicado com exemplos de quilombolas e ciganos e com raciocínio próprio."
+ },
+ {
+  "id": "r038",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Machado bem aplicado ao apagamento cultural, mas é frase decorada de ampla circulação."
+ },
+ {
+  "id": "r039",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Rui Barbosa usado no sentido original (igualdade real) para criticar tratamento uniforme dos povos."
+ },
+ {
+  "id": "r040",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Marx citado de modo vago, sem passagem específica; ligação frouxa."
+ },
+ {
+  "id": "r041",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 0,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 4,
+  "porque": "Música citada e resumida, mas sem raciocínio que a una ao recorte da herança."
+ },
+ {
+  "id": "r042",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Machado aplicado de forma forçada à estigmatização dos povos tradicionais."
+ },
+ {
+  "id": "r043",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Lei Áurea como fato de pano de fundo; ligação indireta com o registro civil."
+ },
+ {
+  "id": "r044",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Vidas Secas real, mas Fabiano não é caso de herança africana; analogia forçada."
+ },
+ {
+  "id": "r045",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 8,
+  "porque": "José Murilo de Carvalho e os três direitos reais e pertinentes; Graciliano bem amarrado ao sub-registro."
+ },
+ {
+  "id": "r046",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Elijah Anderson real (chamado de filósofo) e sobre contexto americano; ligação razoável mas não precisa."
+ },
+ {
+  "id": "r047",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Kant (menoridade) distorcido como falta de saberes; aplicação forçada."
+ },
+ {
+  "id": "r048",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 0,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 4,
+  "porque": "Hobbes citado de forma genérica e solta."
+ },
+ {
+  "id": "r049",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 8,
+  "porque": "Dado do IBGE de 2019 real, pertinente e que sustenta o argumento; Drummond só reforça."
+ },
+ {
+  "id": "r050",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Adichie vaga e livro de Wierzchowski mal descrito; ilustrativo, de ligação frouxa."
+ },
+ {
+  "id": "r051",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Dado do PNUD/desigualdade real e amarrado ao custo de ir ao cartório."
+ },
+ {
+  "id": "r052",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 8,
+  "porque": "Dado do IBGE e Constituição de 1988 reais, ligados ao reconhecimento do trabalho de cuidado."
+ },
+ {
+  "id": "r053",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Rui Barbosa explicado e aplicado ao acesso desigual ao registro civil."
+ },
+ {
+  "id": "r054",
+  "legitimado": 0,
+  "pertinente": 0,
+  "produtivo": 0,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Canção 'Envelhecer é uma Arte' de Adoniran Barbosa não é verificável; parece inventada."
+ },
+ {
+  "id": "r055",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Wiesel real e razoável, mas citação coringa pouco aprofundada."
+ },
+ {
+  "id": "r056",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Política assimilacionista da ditadura é fato real, explicado e ligado à perda cultural."
+ },
+ {
+  "id": "r057",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Machado bem aplicado à lógica da produtividade, mas frase decorada de ampla circulação."
+ },
+ {
+  "id": "r058",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Marx genérico; ligação com a falta de registro é frouxa."
+ },
+ {
+  "id": "r059",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Obra 'Éramos Seis' (título errado) usada como exemplo ilustrativo, com detalhe duvidoso."
+ },
+ {
+  "id": "r060",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Fato das favelas pós-abolição e Rui Barbosa bem ligados à justificativa de ação do Estado."
+ },
+ {
+  "id": "r061",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Durkheim real e pertinente, mas a aplicação ('é um fato social') é breve e pouco desenvolvida."
+ },
+ {
+  "id": "r062",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Faoro citado de modo vago; tese genérica sobre governantes."
+ },
+ {
+  "id": "r063",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 4,
+  "porque": "Ação dos jesuítas é fato real mas exagerado ('abolir quaisquer traços negros'); sem aprofundamento."
+ },
+ {
+  "id": "r064",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Machado real, aplicado de modo forçado ao idoso; citação coringa."
+ },
+ {
+  "id": "r065",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Drummond real e bem ligado ao fato de os direitos conquistados não terem dividido o cuidado."
+ },
+ {
+  "id": "r066",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Referência à Grécia Antiga plausível e raciocinada, mas sem fonte nem precisão; generalização frouxa."
+ },
+ {
+  "id": "r067",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Vidas Secas aplicado à falta de instrução de Fabiano, ligando de forma coerente à desinformação sobre o registro."
+ },
+ {
+  "id": "r068",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 8,
+  "porque": "Teoria do Indigenato e o ministro Fachin reais, bem ligados ao ensino sobre os povos originários."
+ },
+ {
+  "id": "r069",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Wiesel bem amarrado à indiferença do poder público, mas citação coringa."
+ },
+ {
+  "id": "r070",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Constituição citada de forma genérica (direito à educação), sem artigo nem aprofundamento."
+ },
+ {
+  "id": "r071",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Djamila e o Pequeno manual antirracista reais e pertinentes, mas o raciocínio fica parafraseado."
+ },
+ {
+  "id": "r072",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Rui Barbosa explicado e aplicado ao tratamento diferenciado de idosos, justificando centros de convivência."
+ },
+ {
+  "id": "r073",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Caio Prado Júnior e a colonização de exploração reais, explicados e ligados ao pertencimento e à certidão."
+ },
+ {
+  "id": "r074",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Kant citado de forma genérica (educação muda mentalidade), com ligação frouxa."
+ },
+ {
+  "id": "r075",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Constituição de 1988 genérica e fato das favelas pós-abolição pouco desenvolvido."
+ },
+ {
+  "id": "r076",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Machado bem aplicado à lógica de produtividade, mas frase decorada de ampla circulação."
+ },
+ {
+  "id": "r077",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Casa-Grande e Senzala citado com leitura distorcida (comparação com o Brasil atual), de uso forçado."
+ },
+ {
+  "id": "r078",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Lei Áurea como fato de pano de fundo; ligação indireta com documentos e trabalho."
+ },
+ {
+  "id": "r079",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "IPHAN e patrimônio imaterial reais e pertinentes, mas pouco desenvolvidos."
+ },
+ {
+  "id": "r080",
+  "legitimado": 0,
+  "pertinente": 0,
+  "produtivo": 0,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Sem repertório: argumentação própria, sem referência sociocultural."
+ },
+ {
+  "id": "r081",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 6,
+  "porque": "Dado do IBGE real e pertinente, usado para sustentar o machismo estrutural."
+ },
+ {
+  "id": "r082",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Drummond real, mas citação coringa de ligação rasa com o currículo."
+ },
+ {
+  "id": "r083",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Wiesel real, aplicado de forma razoável mas genérica à omissão do Estado."
+ },
+ {
+  "id": "r084",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 6,
+  "porque": "Byung-Chul Han e a sociedade do desempenho reais e coerentes com a desvalorização do idoso não produtivo."
+ },
+ {
+  "id": "r085",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Machado aplicado de modo forçado à história dos vencedores; citação coringa."
+ },
+ {
+  "id": "r086",
+  "legitimado": 0,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Frase atribuída a Einstein é apócrifa e genérica, não verificável."
+ },
+ {
+  "id": "r087",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Wiesel real e amarrado ao esquecimento dos idosos pelos filhos, mas citação coringa."
+ },
+ {
+  "id": "r088",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Sagarana e Sete-de-Ouros reais e pertinentes à discriminação por idade, mas só ilustrativos."
+ },
+ {
+  "id": "r089",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Wiesel genérico aplicado aos povos tradicionais; ligação frouxa."
+ },
+ {
+  "id": "r090",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Vidas Secas real, mas ligação forçada com o pertencimento e o registro civil."
+ }
+]

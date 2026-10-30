@@ -12,7 +12,7 @@ const DECK = {
   materia: 'Redação',
   /* A lista de baralhos mostra o subtema como título. */
   subtema: 'Coringas da redação',
-  descricao: 'Frases de autor testadas em 11 temas do ENEM. Decore quem disse, a frase e quando usar.',
+  descricao: 'Frases de autor testadas em 28 temas do ENEM. Decore quem disse, a frase e quando usar.',
 };
 
 async function main() {

@@ -107,7 +107,7 @@ ${molde}
 ${p.paragrafo === 'introducao' ? 'A frase 3 (tese) entra sozinha: ele escreve só as frases 1 e 2.\n' : ''}
 ONDE ELE ESTÁ: ${agora}
 
-AUTORES QUE ELE PODE USAR (só estes; ao sugerir um, diga a ideia dele; prefira os [coringa], frases e dados fáceis de decorar, e mostre como ligar ao tema; a frase do autor é exata, não mude as palavras dela):
+AUTORES QUE ELE PODE USAR (só estes; ao sugerir um, diga a ideia dele; prefira os [coringa], frases e dados fáceis de decorar; a frase do autor é exata, não mude as palavras dela. O coringa é o ESQUELETO do parágrafo, não enfeite: o parágrafo parte do argumento dele e o liga a um fato concreto do recorte do tema; colado num parágrafo pronto, o corretor vê como repertório de bolso):
 ${fichas(p)}
 
 O QUE ELE JÁ ESCREVEU NESTE PARÁGRAFO:

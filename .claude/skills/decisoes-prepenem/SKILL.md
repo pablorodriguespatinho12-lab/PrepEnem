@@ -449,8 +449,16 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   <argumento>" e "complete a frase". A dica é a imagem e nunca usa palavra do
   verso (o teste barra). Criar ou atualizar: `DB_CONFIRMED=1 npx tsx
   --env-file=.env scripts/seed-coringas-redacao.ts`; roda de novo quando
-  CORINGAS mudar. A lista de baralhos mostra o subtema como título. Relatório:
-  `docs/redacao/repertorios-coringa.md`.
+  CORINGAS mudar. A lista de baralhos mostra o subtema como título.
+  **Grandes assuntos (30/10):** nos 28 temas do ENEM de 1998 a 2025, agrupados
+  em 9 grupos (o maior é "grupos vulneráveis", com 11), Drummond passou em
+  28/28, Rui Barbosa em 24, Dom Hélder em 21, Graciliano em 19 e Wiesel em 18.
+  A `prova` de cada ficha conta de 28. Nas 47 redações nota 1000, o coringa
+  COLADO no parágrafo pronto vira "de bolso" (2/43 sustentam 200), e o
+  parágrafo CONSTRUÍDO em volta dele, pelo molde do site, passa (34/47, contra
+  17/47 do original). Regra: coringa é o esqueleto do parágrafo, nunca enfeite.
+  Graciliano construído ficou 1/5 (forçado em racismo e velhice), então ganhou
+  `restricao`. Relatório: `docs/redacao/repertorios-coringa.md`.
 - **Menos poluição nos passos 4 a 7 (mesmo dia):** o molde destaca só a frase
   de agora (feitas com visto, futuras apagadas); "Pense antes" mudou para a
   aba Ajuda; ponte, conectivos e erros da proposta foram para "Mais dicas";

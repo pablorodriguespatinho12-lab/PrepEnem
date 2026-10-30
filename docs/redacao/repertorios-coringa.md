@@ -5,6 +5,79 @@ fáceis de decorar (frases de autor ou dados), e **provar** que funcionam, com
 base nas redações nota 1000, sem achismo. Dados brutos e scripts:
 `docs/redacao/prova-coringas/`.
 
+## Atualização de 30/10/2026: grandes assuntos e redações nota 1000
+
+O Pablo perguntou se os coringas servem para os grandes assuntos (economia,
+saúde, educação, segurança, cultura e outros) e se dariam certo nas redações
+nota 1000 de verdade. Os dados estão em `prova-coringas/grandes-assuntos/`,
+com o script `somar_macro.py` e `somar_c.py`.
+
+**Os grandes assuntos.** Agrupei os 28 temas do ENEM de 1998 a 2025. Um tema
+pode cair em 2 grupos.
+
+| Grupo | Temas |
+|---|---|
+| Grupos vulneráveis | 11 |
+| Cultura | 5 |
+| Cidadania e política | 4 |
+| Tecnologia e comunicação | 4 |
+| Economia e trabalho | 4 |
+| Segurança e violência | 3 |
+| Educação | 3 |
+| Saúde | 3 |
+| Meio ambiente | 2 |
+
+**Cobertura nos 28 temas.** Escritores redigiram os trechos dos 17 temas
+novos, de 1998 a 2014, com o mesmo método e os mesmos 3 juízes cegos. Somados
+aos 11 temas da prova anterior, dão os 28.
+
+| Coringa | Temas | Grupos em que passou em todos |
+|---|---|---|
+| Drummond | **28 de 28** | os 9 grupos |
+| Rui Barbosa | 24 de 28 | vulneráveis, saúde, tecnologia |
+| Dom Hélder | 21 de 28 | ambiente, saúde, segurança |
+| Graciliano | 19 de 28 | educação |
+| Elie Wiesel | 18 de 28 | saúde, segurança |
+| Luther King | 12 de 28 | nenhum |
+| Dado 1888 | 12 de 28 | nenhum |
+| Machado | 6 de 28 | nenhum |
+
+- Em todos os 28 temas, pelo menos 1 dos 3 primeiros (Drummond, Rui Barbosa,
+  Dom Hélder) passou.
+- Calibração: o Bauman colado reprovou em 17 de 17 temas.
+- As âncoras repetiram a 1ª prova: Drummond 11 de 11 e esgoto 0 de 11.
+
+**Nas redações nota 1000 reais.** Usei o 1º desenvolvimento das 47 redações
+(5 cartilhas do INEP), comparado às cegas em duas versões com coringa.
+
+| Parágrafo | Sustenta 200 no repertório | Visto como "de bolso" | Qualidade (0 a 10) |
+|---|---|---|---|
+| Original nota 1000 | 17 de 47 | 14 | 5,85 |
+| Coringa colado no parágrafo pronto | 2 de 43 | 36 | 5,69 |
+| Parágrafo construído em volta do coringa (molde do site) | **34 de 47** | 12 | **6,37** |
+
+- Par a par, o construído foi melhor que o original em 24, pior em 6 e
+  empatou em 17.
+- Âncoras: 11 de 15 originais tiveram a mesma decisão nas duas rodadas. Os
+  juízes ficaram um pouco mais duros (5 aprovados contra 7), e não mais moles.
+- O coringa colado foi chamado de "genérico, serviria para qualquer tema". É a
+  definição de "repertório de bolso" da Cartilha.
+- Construído, por coringa:
+  - Machado 8 de 9, Drummond 8 de 10, Wiesel 7 de 10, Rui Barbosa 4 de 4,
+    dado de 1888 5 de 7;
+  - **Graciliano 1 de 5**: forçado em racismo e velhice. A ficha avisa.
+
+**Regra que sai disso:**
+1. O coringa é o esqueleto do parágrafo: tópico, coringa, explicação com um
+   fato do Brasil no recorte do tema, fechamento.
+2. Nunca é um enfeite colado num parágrafo pronto.
+3. Se você conhece um repertório próprio do tema, ele também serve. As
+   redações nota 1000 usam mais obra cultural específica.
+
+**Limite:** os juízes cobram "cita, explica, amarra", que é a estrutura do
+molde. A Cartilha cobra isso, mas é uma vantagem de formato para o parágrafo
+construído.
+
 ## Resposta curta
 
 Dos 11 coringas da 1ª versão, **só 2 passaram em todos os temas**: Drummond e

@@ -1,0 +1,902 @@
+[
+ {
+  "id": "r001",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 8,
+  "porque": "Lei Áurea usada para explicar a abolição sem integração e ligada ao apagamento da herança africana."
+ },
+ {
+  "id": "r002",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Verso de Drummond genérico sobre leis, sem relação com o trabalho de cuidado; argumento vago."
+ },
+ {
+  "id": "r003",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Frase de Quincas Borba forçada para falar de mídia e velhice; o resto do parágrafo é bom."
+ },
+ {
+  "id": "r004",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Citação de Machado encaixada à força na escola e na herança africana."
+ },
+ {
+  "id": "r005",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Drummond decorado, ligado só de forma genérica à mentalidade sobre o trabalho de cuidado."
+ },
+ {
+  "id": "r006",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Wiesel com explicação própria sobre naturalização, mas citação genérica que serve a qualquer tema."
+ },
+ {
+  "id": "r007",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Lei Áurea pertinente, mas só constatada; a ligação com o apagamento cultural é superficial."
+ },
+ {
+  "id": "r008",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Ideia vaga atribuída a Djamila Ribeiro (nome errado), usada de forma genérica."
+ },
+ {
+  "id": "r009",
+  "legitimado": 0,
+  "pertinente": 0,
+  "produtivo": 0,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 4,
+  "porque": "Sem repertório legitimado; só história genérica da escravidão e argumento repetitivo."
+ },
+ {
+  "id": "r010",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 7,
+  "porque": "Wiesel bem explicado e amarrado ao isolamento do idoso, mas é citação coringa genérica."
+ },
+ {
+  "id": "r011",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Beauvoir pertinente à construção do papel feminino, mas apenas inserida, sem desenvolvimento."
+ },
+ {
+  "id": "r012",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 8,
+  "porque": "Krenak (humanidade e sub-humanidade) explicado e ligado ao apagamento da cultura africana."
+ },
+ {
+  "id": "r013",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Lei do Sexagenário pertinente e bem explicada, mas o argumento fica no passado sem ligar ao presente."
+ },
+ {
+  "id": "r014",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 8,
+  "porque": "Boaventura de Sousa Santos explicado e aplicado à invisibilização dos povos tradicionais."
+ },
+ {
+  "id": "r015",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Wiesel genérico encaixado na questão ambiental das comunidades amazônicas."
+ },
+ {
+  "id": "r016",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 8,
+  "porque": "Curta Meow sobre a mídia moldando pensamentos, retomado ao longo do parágrafo e aplicado ao idoso."
+ },
+ {
+  "id": "r017",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Lei Áurea forçada para explicar a desvalorização de povos tradicionais em geral."
+ },
+ {
+  "id": "r018",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Fala de Fabiano (sertanejo) estendida sem mediação à herança africana; 'prova' exagerada."
+ },
+ {
+  "id": "r019",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Série Aruanas ligada ao desmatamento e às comunidades amazônicas, com transposição para a realidade."
+ },
+ {
+  "id": "r020",
+  "legitimado": 0,
+  "pertinente": 0,
+  "produtivo": 0,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 4,
+  "porque": "Sem repertório específico; só generalização histórica sobre escravidão."
+ },
+ {
+  "id": "r021",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 7,
+  "porque": "Machado aplicado com mapeamento coerente (agressores e povos), mas é citação de bolso; argumento ambiental bom."
+ },
+ {
+  "id": "r022",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Drummond com explicação que não segue (direito à educação), ligação frouxa ao tema."
+ },
+ {
+  "id": "r023",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 0,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Paulo Freire parafraseado de forma vaga e colado no fim, sem articulação."
+ },
+ {
+  "id": "r024",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Fernanda Montenegro como exemplo de idosa ativa, ligação fraca com o apagamento que o parágrafo defende."
+ },
+ {
+  "id": "r025",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Wiesel genérico sobre indiferença, aplicado de forma rasa ao trabalho de cuidado."
+ },
+ {
+  "id": "r026",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "LDB/BNCC usada para mostrar a falha do currículo com povos tradicionais."
+ },
+ {
+  "id": "r027",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "sim",
+  "qualidade": 8,
+  "porque": "MLK é coringa genérico, mas Vidas Secas (filhos sem nome) é pertinente ao registro civil e bem amarrado."
+ },
+ {
+  "id": "r028",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Abolição tardia explica a desvalorização do trabalho braçal e de cuidado com raciocínio próprio."
+ },
+ {
+  "id": "r029",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Up: Altas Aventuras ligado ao isolamento do idoso e à solução intergeracional."
+ },
+ {
+  "id": "r030",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Wiesel genérico com explicação curta, sem aprofundar a exclusão dos idosos."
+ },
+ {
+  "id": "r031",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Cidadania mutilada de Milton Santos explicada e ligada ao registro civil como ponte com o Estado."
+ },
+ {
+  "id": "r032",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Abolição tardia citada como fato pronto, com ligação superficial à herança africana."
+ },
+ {
+  "id": "r033",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Drummond genérico sobre leis aplicado ao registro civil sem conexão específica."
+ },
+ {
+  "id": "r034",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Ideia vaga atribuída a Dimenstein, genérica, sem ligação ao trabalho de cuidado."
+ },
+ {
+  "id": "r035",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Wiesel explicado com exemplos de indiferença, mas é citação coringa que serve a qualquer tema."
+ },
+ {
+  "id": "r036",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 8,
+  "porque": "A Velhice, de Beauvoir, explicada e usada para sustentar a proposta de convivência."
+ },
+ {
+  "id": "r037",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Conceito de estigma de Goffman definido e aplicado a quilombolas e ciganos."
+ },
+ {
+  "id": "r038",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Machado com mapeamento colonizador e escravizado coerente, mas citação decorada."
+ },
+ {
+  "id": "r039",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 7,
+  "porque": "Rui Barbosa bem aplicado à assimilação forçada, mas é frase coringa colada ao tema."
+ },
+ {
+  "id": "r040",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Marx simplificado e genérico, ligado de forma rasa aos idosos."
+ },
+ {
+  "id": "r041",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 0,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 4,
+  "porque": "Negro Drama citado no início e abandonado; resto é generalização histórica."
+ },
+ {
+  "id": "r042",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Machado citado sem explicação e ligado de forma frouxa ao estigma dos povos tradicionais."
+ },
+ {
+  "id": "r043",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Abolição tardia ligada ao registro civil por suposição ('é provável')."
+ },
+ {
+  "id": "r044",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Fala de Fabiano (sertanejo) forçada para tratar da escravidão africana."
+ },
+ {
+  "id": "r045",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 9,
+  "porque": "José Murilo de Carvalho e os filhos sem nome de Vidas Secas, explicados e ligados ao registro civil."
+ },
+ {
+  "id": "r046",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Elijah Anderson integrado ao raciocínio, embora seja de contexto americano e mal qualificado."
+ },
+ {
+  "id": "r047",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Menoridade de Kant distorcida (falta de saber), mas aplicada à desinformação sobre o registro."
+ },
+ {
+  "id": "r048",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Hobbes genérico sobre o papel do Estado, aplicável a qualquer tema."
+ },
+ {
+  "id": "r049",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "sim",
+  "qualidade": 8,
+  "porque": "Dados do IBGE e patriarcado colonial bem usados; Drummond no fim é colado."
+ },
+ {
+  "id": "r050",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Chimamanda e A Casa das Sete Mulheres ligados ao estereótipo do cuidado, com erros de nome e de dado."
+ },
+ {
+  "id": "r051",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Relatório do PNUD sobre desigualdade aplicado à dificuldade de acesso ao cartório."
+ },
+ {
+  "id": "r052",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 8,
+  "porque": "Dados do IBGE e patriarcado colonial bem articulados ao trabalho de cuidado."
+ },
+ {
+  "id": "r053",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Rui Barbosa explicado e aplicado ao acesso desigual, mas é frase coringa."
+ },
+ {
+  "id": "r054",
+  "legitimado": 0,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Canção atribuída a Adoniran Barbosa não é verificável; ligação ao tema superficial."
+ },
+ {
+  "id": "r055",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Wiesel genérico aplicado ao etarismo sem aprofundar."
+ },
+ {
+  "id": "r056",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 8,
+  "porque": "Política assimilacionista da ditadura como prova histórica do apagamento dos povos tradicionais."
+ },
+ {
+  "id": "r057",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 7,
+  "porque": "Machado aplicado à lógica produtivista com explicação coerente, mas citação de bolso."
+ },
+ {
+  "id": "r058",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Marx distorcido e ligado ao registro civil por suposição."
+ },
+ {
+  "id": "r059",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Éramos Seis (título errado) pertinente ao abandono do idoso, mas apenas ilustrativo."
+ },
+ {
+  "id": "r060",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Pós-abolição bem lembrado, mas Rui Barbosa entra no fim sem ligação à herança africana."
+ },
+ {
+  "id": "r061",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Fato social de Durkheim definido e rotulado no problema, sem desenvolver por que o cuidado é desprezado."
+ },
+ {
+  "id": "r062",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Faoro reduzido a 'políticos priorizam seus interesses', ligação genérica à herança africana."
+ },
+ {
+  "id": "r063",
+  "legitimado": 0,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 4,
+  "porque": "Afirmação histórica distorcida sobre os jesuítas, sem fonte reconhecível."
+ },
+ {
+  "id": "r064",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Machado aplicado ao idoso como 'vencido' com explicação coerente, mas citação de bolso."
+ },
+ {
+  "id": "r065",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Drummond encaixado com uma explicação curta; ligação genérica ao trabalho de cuidado."
+ },
+ {
+  "id": "r066",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Grécia Antiga explica a desvalorização do trabalho braçal, mas a ponte com o Brasil e com a mulher é frágil."
+ },
+ {
+  "id": "r067",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Fala de Fabiano lida como falta de instrução, aplicação forçada à desinformação sobre o registro."
+ },
+ {
+  "id": "r068",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 8,
+  "porque": "Teoria do Indigenato (voto de Fachin) contrapõe o preconceito ensinado e sustenta a tese."
+ },
+ {
+  "id": "r069",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Wiesel genérico ligado à indiferença do Estado sem aprofundar."
+ },
+ {
+  "id": "r070",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Constituição de 1988 citada de forma genérica (direito à educação), ponte rasa com o tema."
+ },
+ {
+  "id": "r071",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Djamila Ribeiro pertinente, mas o parágrafo só descreve a obra e termina sem amarrar."
+ },
+ {
+  "id": "r072",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Rui Barbosa explicado e aplicado aos idosos, mas é frase coringa."
+ },
+ {
+  "id": "r073",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Caio Prado Júnior e o sentido da colonização explicam a falta de pertencimento ligada ao registro."
+ },
+ {
+  "id": "r074",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Kant genérico sobre educação, aplicável a qualquer tema."
+ },
+ {
+  "id": "r075",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Pós-abolição pertinente, mas a Constituição no fim fica solta, sem conclusão."
+ },
+ {
+  "id": "r076",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Machado aplicado à lógica produtiva com explicação, mas citação de bolso."
+ },
+ {
+  "id": "r077",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Casa-grande e Senzala com conteúdo distorcido, encaixado para falar de trabalho precarizado."
+ },
+ {
+  "id": "r078",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Abolição tardia ligada ao trabalho sem documentos de forma genérica."
+ },
+ {
+  "id": "r079",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 1,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "IPHAN pertinente, mas só ilustra a importância dos povos, sem enfrentar o desafio do tema."
+ },
+ {
+  "id": "r080",
+  "legitimado": 0,
+  "pertinente": 0,
+  "produtivo": 0,
+  "bolso": 0,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Sem repertório; argumento próprio coerente sobre agressão ambiental."
+ },
+ {
+  "id": "r081",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Dado do IBGE comprova o machismo estrutural na divisão do cuidado."
+ },
+ {
+  "id": "r082",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Drummond genérico sobre leis aplicado ao currículo escolar."
+ },
+ {
+  "id": "r083",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Wiesel genérico sobre indiferença atribuído ao Estado sem raciocínio próprio."
+ },
+ {
+  "id": "r084",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "Sociedade do Cansaço de Byung-Chul Han explica a lógica produtivista que exclui o idoso."
+ },
+ {
+  "id": "r085",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Machado encaixado na educação eurocêntrica de forma forçada."
+ },
+ {
+  "id": "r086",
+  "legitimado": 0,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Frase de autoria duvidosa atribuída a Einstein, genérica."
+ },
+ {
+  "id": "r087",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Wiesel genérico com uma glosa curta sobre o idoso esquecido."
+ },
+ {
+  "id": "r088",
+  "legitimado": 1,
+  "pertinente": 2,
+  "produtivo": 2,
+  "bolso": 0,
+  "c2_200": "sim",
+  "qualidade": 7,
+  "porque": "O Burrinho Pedrês ligado ao desprezo pela idade, com analogia explícita aos idosos."
+ },
+ {
+  "id": "r089",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 5,
+  "porque": "Wiesel genérico aplicado à inoperância do governo."
+ },
+ {
+  "id": "r090",
+  "legitimado": 1,
+  "pertinente": 1,
+  "produtivo": 1,
+  "bolso": 1,
+  "c2_200": "nao",
+  "qualidade": 6,
+  "porque": "Fala de Fabiano usada de forma forçada para a falta de pertencimento ligada ao registro."
+ }
+]

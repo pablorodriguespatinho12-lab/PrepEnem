@@ -112,8 +112,8 @@ export interface Coringa {
   /* Quem disse e onde (fala), ou a pesquisa (dado). */
   fonte: string;
   quando: string;
-  /* Em quantos dos 11 temas do ENEM de 2015 a 2025 ele sustentou nota 200,
-     com 3 juízes cegos (docs/redacao/prova-coringas.md). */
+  /* Em quantos dos 28 temas do ENEM de 1998 a 2025 ele sustentou nota 200,
+     com 3 juízes cegos (docs/redacao/repertorios-coringa.md). */
   prova: { aprovados: number; temas: number };
   /* Forma curta para decorar, citada como ideia (sem aspas): nenhum dos 3
      alunos do teste decorou a frase longa do Rui Barbosa. */
@@ -125,7 +125,7 @@ export interface Coringa {
 
 export const CORINGAS: Record<string, Coringa> = {
   Drummond: {
-    tipo: 'fala', rotulo: 'Carlos Drummond de Andrade', quando: '1945', prova: { aprovados: 11, temas: 11 },
+    tipo: 'fala', rotulo: 'Carlos Drummond de Andrade', quando: '1945', prova: { aprovados: 28, temas: 28 },
     texto: 'As leis não bastam. Os lírios não nascem da lei.',
     sentido: 'Lírio é uma flor: a vida boa não nasce só porque uma lei manda.',
     fonte: 'poema "Nosso tempo", do livro A Rosa do Povo',
@@ -137,7 +137,7 @@ export const CORINGAS: Record<string, Coringa> = {
     },
   },
   'Dom Hélder': {
-    tipo: 'fala', rotulo: 'Dom Hélder Câmara', quando: 'anos 1960 e 1970', prova: { aprovados: 11, temas: 11 },
+    tipo: 'fala', rotulo: 'Dom Hélder Câmara', quando: 'anos 1960 e 1970', prova: { aprovados: 21, temas: 28 },
     texto: 'Quando dou comida aos pobres, chamam-me de santo. Quando pergunto por que eles não têm comida, chamam-me de comunista.',
     sentido: 'Ajudar é aplaudido; perguntar a causa do problema incomoda. Na redação, escreva "como dizia Dom Hélder", sem data.',
     fonte: 'arcebispo de Olinda e Recife',
@@ -147,7 +147,7 @@ export const CORINGAS: Record<string, Coringa> = {
     },
   },
   'Rui Barbosa': {
-    tipo: 'fala', rotulo: 'Rui Barbosa', quando: '1920', prova: { aprovados: 11, temas: 11 },
+    tipo: 'fala', rotulo: 'Rui Barbosa', quando: '1920', prova: { aprovados: 24, temas: 28 },
     texto: 'Tratar com desigualdade a iguais, ou a desiguais com igualdade, seria desigualdade flagrante, e não igualdade real.',
     sentido: 'Tratar todo mundo igual parece justo, mas quem começa em desvantagem precisa de mais para chegar ao mesmo lugar.',
     curta: 'Tratar igual quem é desigual é desigualdade, e não igualdade real.',
@@ -159,7 +159,7 @@ export const CORINGAS: Record<string, Coringa> = {
     },
   },
   'Elie Wiesel': {
-    tipo: 'fala', rotulo: 'Elie Wiesel', quando: '1986', prova: { aprovados: 8, temas: 11 },
+    tipo: 'fala', rotulo: 'Elie Wiesel', quando: '1986', prova: { aprovados: 18, temas: 28 },
     texto: 'O oposto do amor não é o ódio, é a indiferença.',
     sentido: 'Fingir que não vê quem sofre é tão grave quanto agredir.',
     fonte: 'entrevista à revista US News & World Report, em tradução',
@@ -168,7 +168,9 @@ export const CORINGAS: Record<string, Coringa> = {
     },
   },
   Graciliano: {
-    tipo: 'fala', rotulo: 'Graciliano Ramos', quando: '1938', prova: { aprovados: 7, temas: 11 },
+    tipo: 'fala', rotulo: 'Graciliano Ramos', quando: '1938', prova: { aprovados: 19, temas: 28 },
+    /* Nas redações nota 1000, construído em volta dele: 1 de 5 (forçado em racismo e velhice). */
+    restricao: 'serviu em temas de pobreza, trabalho e exclusão; em racismo e velhice ficou forçado',
     texto: 'Você é um bicho, Fabiano.',
     sentido: 'Fabiano é um sertanejo pobre, tão maltratado pela seca e pelo patrão que passa a se ver como bicho.',
     fonte: 'romance Vidas Secas',
@@ -178,7 +180,8 @@ export const CORINGAS: Record<string, Coringa> = {
     },
   },
   'Luther King': {
-    tipo: 'fala', rotulo: 'Martin Luther King Jr.', quando: '1963', prova: { aprovados: 7, temas: 11 },
+    tipo: 'fala', rotulo: 'Martin Luther King Jr.', quando: '1963', prova: { aprovados: 12, temas: 28 },
+    restricao: 'serviu em temas de preconceito e direitos: intolerância religiosa, violência contra a mulher, convivência com a diferença, herança africana',
     texto: 'A injustiça em qualquer lugar é uma ameaça à justiça em todo lugar.',
     sentido: 'Quando um grupo perde direitos, ninguém está seguro: a injustiça se espalha.',
     fonte: 'Carta da Prisão de Birmingham, em tradução',
@@ -187,8 +190,8 @@ export const CORINGAS: Record<string, Coringa> = {
     },
   },
   Machado: {
-    tipo: 'fala', rotulo: 'Machado de Assis', quando: '1891', prova: { aprovados: 4, temas: 11 },
-    restricao: 'serviu em temas de desigualdade e disputa: herança africana, povos tradicionais, trabalho de cuidado, cinema',
+    tipo: 'fala', rotulo: 'Machado de Assis', quando: '1891', prova: { aprovados: 6, temas: 28 },
+    restricao: 'serviu em temas de desigualdade e disputa: herança africana, povos tradicionais, trabalho de cuidado, cinema, violência',
     texto: 'Ao vencido, ódio ou compaixão; ao vencedor, as batatas.',
     sentido: 'Quem vence a disputa leva o prêmio (as batatas); quem perde ganha só raiva ou pena. Machado zomba dessa lei do mais forte.',
     fonte: 'romance Quincas Borba, capítulo VI',
@@ -197,8 +200,8 @@ export const CORINGAS: Record<string, Coringa> = {
     },
   },
   'Dado 1888': {
-    tipo: 'dado', rotulo: 'último a abolir a escravidão', quando: '1888', prova: { aprovados: 4, temas: 11 },
-    restricao: 'serviu em temas de população negra, religião de matriz africana, povos tradicionais e trabalho de cuidado',
+    tipo: 'dado', rotulo: 'último a abolir a escravidão', quando: '1888', prova: { aprovados: 12, temas: 28 },
+    restricao: 'serviu em temas de raça, trabalho e cidadania: herança africana, religião, trabalho infantil e de cuidado, imigração, voto',
     texto: 'O Brasil foi o último país das Américas a acabar com a escravidão, em 1888, com a Lei Áurea.',
     fonte: 'Lei nº 3.353, de 13 de maio de 1888 (a Lei Áurea)',
     amarra: {
