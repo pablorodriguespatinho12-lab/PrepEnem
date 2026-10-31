@@ -59,7 +59,7 @@ export function CaixaTexto({ id, valor, aoMudar, rotulo, placeholder, alto = fal
   id: string;
   valor: string;
   aoMudar: (v: string) => void;
-  rotulo: string;
+  rotulo: React.ReactNode;
   placeholder: string;
   alto?: boolean;
   encher?: boolean;

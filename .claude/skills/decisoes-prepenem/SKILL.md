@@ -463,6 +463,13 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   de agora (feitas com visto, futuras apagadas); "Pense antes" mudou para a
   aba Ajuda; ponte, conectivos e erros da proposta foram para "Mais dicas";
   autores recolhidos numa linha, abertos sozinhos na frase de repertório.
+- **Lado a lado, como Bíblia em duas línguas (Pablo, 31/10/2026):** na tela
+  grande, "Como escrever" à esquerda e "Sua vez" à direita, com uma linha no
+  meio e sem caixa em volta do molde. O molde é UM parágrafo corrido em letra
+  de 19 px (nada de lista 1, 2, 3); a frase de agora tem fundo, o nome dela
+  vai em cima ("Agora, frase 2: Ponte..."), as feitas apagam e a tese vem
+  sublinhada. "Sua vez" fica colado na caixa (no topo da coluna, cortava a
+  ficha do autor; o `coringas.e2e` mede). Aba Exemplo segue em lista.
 - As redações-modelo de `data/redacao/modelos.ts` (textos originais, temas
   reais, cada trecho comentado) seguem em /redacao/modelos. Não inventa
   texto-base com IA. Repertório nos modelos: só fato verificável.

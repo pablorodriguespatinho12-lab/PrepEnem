@@ -75,6 +75,40 @@ function ListaDeFrases({ paragrafo, frases, tese, rotulos, onde }: { paragrafo: 
   );
 }
 
+/* O molde como um parágrafo só, em letra grande, para comparar lado a lado
+   com o texto dele, como uma Bíblia com duas línguas (Pablo, 31/10/2026: "não
+   deixar 1, 2, 3 separado"). A frase de agora fica marcada e só o nome dela
+   aparece em cima; as feitas apagam. A tese entra com traço: vem do passo 3. */
+function MoldeCorrido({ paragrafo, frases, tese, rotulos, onde }: { paragrafo: Paragrafo; frases: string[]; tese: string; rotulos: ReactNode[]; onde: OndeEstou }) {
+  const temTese = paragrafo.chave === 'introducao';
+  const agora = onde.atual < frases.length && !(temTese && onde.atual === 2) ? onde.atual : null;
+  return (
+    <div>
+      {agora !== null && (
+        <p className="type-rotulo text-muted-foreground mb-2">
+          <span data-numeric className="text-primary-text font-semibold">Agora, frase {agora + 1}:</span> {rotulos[agora]}
+        </p>
+      )}
+      <p className="font-reading text-[1.1875rem] leading-[var(--lh-reading)]">
+        {frases.map((frase, i) => {
+          const ehTese = temTese && i === 2;
+          const feita = i < onde.atual || (ehTese && onde.atual >= onde.total);
+          const estilo = i === agora
+            ? 'rounded-[3px] bg-[hsl(var(--primary)/0.16)] [box-decoration-break:clone] px-1 -mx-1'
+            : ehTese ? 'underline decoration-dotted decoration-[hsl(var(--primary))] underline-offset-[6px]'
+            : feita ? 'text-muted-foreground' : '';
+          return (
+            <span key={paragrafo.frases[i]?.funcao ?? i} aria-current={i === agora ? 'step' : undefined}>
+              <span className={estilo}>{ehTese && tese ? tese : frase}</span>{' '}
+            </span>
+          );
+        })}
+      </p>
+      {temTese && <p className="type-rotulo text-primary-text mt-2">A frase sublinhada é a sua tese do passo 3: ela entra sozinha.</p>}
+    </div>
+  );
+}
+
 /* A ponte em 3 passos, no molde ou com os trechos do exemplo. */
 function Ponte({ itens, titulo }: { itens: { passo: string; texto: string }[]; titulo: string }) {
   return (
@@ -146,10 +180,13 @@ function Painel({ jaMarcados, onde, aba, aoTrocarAba, aberto, aoAbrir, ajuda, co
     <section
       id="painel-molde"
       data-medir="molde"
-      className="surface-1 rounded-[var(--radius-surface)] border border-border lg:sticky lg:top-[4.25rem] lg:max-h-[calc(100dvh-var(--altura-fixa-passo))] lg:overflow-y-auto"
+      className="surface-1 rounded-[var(--radius-surface)] border border-border lg:rounded-none lg:border-0 lg:bg-transparent lg:shadow-none lg:sticky lg:top-[4.25rem] lg:max-h-[calc(100dvh-var(--altura-fixa-passo))] lg:overflow-y-auto"
       aria-label={`Molde da ${paragrafo.titulo.toLowerCase()}`}
     >
-      <div className="flex items-center justify-between gap-3 border-b border-border px-4 md:px-5 py-2 lg:sticky lg:top-0 lg:z-[1] surface-1">
+      {/* Na tela grande, as duas colunas abrem com um título do mesmo tamanho:
+          "Como escrever" aqui, "Sua vez" do outro lado da linha do meio. */}
+      <div className="flex items-center justify-between gap-3 border-b border-border px-4 md:px-5 lg:px-0 py-2 lg:pt-0 lg:sticky lg:top-0 lg:z-[1] surface-1 lg:border-x-0 lg:border-t-0 lg:shadow-none lg:bg-background">
+        <h3 className="hidden lg:block font-display type-lead font-semibold">Como escrever</h3>
         <div className="flex gap-1" role="tablist" aria-label="O que ver">
           {ABAS.map((a) => (
             <button
@@ -178,10 +215,10 @@ function Painel({ jaMarcados, onde, aba, aoTrocarAba, aberto, aoAbrir, ajuda, co
         </button>
       </div>
 
-      <div className={`${aberto ? 'block' : 'hidden'} lg:block px-4 md:px-5 py-4`}>
+      <div className={`${aberto ? 'block' : 'hidden'} lg:block px-4 md:px-5 lg:px-0 py-4 lg:pt-3 lg:pb-0`}>
         {aba === 'molde' && (
           <>
-            <ListaDeFrases paragrafo={paragrafo} frases={moldes} tese={tese} rotulos={rotulos} onde={onde} />
+            <MoldeCorrido paragrafo={paragrafo} frases={moldes} tese={tese} rotulos={rotulos} onde={onde} />
             <MaisDicas paragrafo={paragrafo} />
           </>
         )}
@@ -350,13 +387,21 @@ export function PassoParagrafo(props: Props) {
             />
           )}
         />
-        <div className="lg:sticky lg:top-[4.25rem] lg:flex lg:h-[calc(100dvh-var(--altura-fixa-passo))] lg:min-h-[22rem] lg:flex-col">
+        <div className="lg:sticky lg:top-[4.25rem] lg:flex lg:h-[calc(100dvh-var(--altura-fixa-passo))] lg:min-h-[22rem] lg:flex-col lg:border-l lg:border-border lg:pl-8">
           {nomes.length > 0 && (
             <Autores nomes={nomes} coringas={coringas} causas={causas} titulo={ehIntroducao ? 'Autores dos seus motivos' : 'Autores deste motivo'} fraseDeRepertorio={fraseDeRepertorio} aoVerExemplo={verExemplo} />
           )}
+          {/* "Sua vez" grande, colado na caixa: o aluno não via onde o molde
+              acabava e a parte dele começava (Pablo, 31/10/2026). No topo da
+              coluna, roubava o espaço da ficha do autor. */}
           <CaixaTexto
             id={`texto-${paragrafo.chave}`}
-            rotulo={ehIntroducao ? 'Seu texto: frases 1 e 2 (a tese entra sozinha depois)' : 'Seu texto'}
+            rotulo={(
+              <>
+                <span className="font-display type-lead font-semibold leading-none">Sua vez</span>
+                <span className="font-normal text-muted-foreground"> · {ehIntroducao ? 'frases 1 e 2, imitando o modelo ao lado' : 'imite o modelo ao lado, uma frase de cada vez'}</span>
+              </>
+            )}
             valor={texto}
             aoMudar={aoMudar}
             placeholder="Escreva aqui."
