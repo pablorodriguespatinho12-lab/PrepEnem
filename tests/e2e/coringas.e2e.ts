@@ -37,10 +37,10 @@ async function percorrer(largura: number): Promise<[string, boolean, string][]> 
   const esperados = causaPorChave('estigma')!.coringas.map((n) => CORINGAS[n].rotulo);
   const pilulas = page.locator('[data-medir="autores"] ul button');
   await pilulas.first().waitFor();
-  const primeiros = (await pilulas.allInnerTexts()).slice(0, 3).map((t) => t.replace(/^(fala|dado)\s*/i, '').trim());
+  const primeiros = (await pilulas.allInnerTexts()).slice(0, 3).map((t) => t.replace(/^(frase|fato)\s*/i, '').trim());
   prova('coringas do motivo vêm primeiro', JSON.stringify(primeiros) === JSON.stringify(esperados), primeiros.join(' | '));
-  const marcados = await page.locator('[data-medir="autores"] ul button', { hasText: /^(fala|dado)/i }).count();
-  prova('só 3 coringas à vista (2 falas e 1 dado)', marcados === 3, `${marcados}`);
+  const marcados = await page.locator('[data-medir="autores"] ul button', { hasText: /^(frase|fato)/i }).count();
+  prova('só 3 coringas à vista (com etiqueta Frase ou Fato)', marcados === 3, `${marcados}`);
   const outros = await page.getByRole('button', { name: /^Outros autores/ }).isVisible();
   prova('outros autores atrás de 1 botão', outros, outros ? 'sim' : 'não');
 
@@ -64,7 +64,7 @@ async function percorrer(largura: number): Promise<[string, boolean, string][]> 
     const dentro = await page.locator('[data-medir="autores"]').evaluate((el) => el.scrollHeight - el.clientHeight);
     prova('ficha inteira à vista, sem rolar por dentro', dentro <= 1, `${dentro} px escondidos`);
     /* 30/10/2026: com mais espaço para os autores, a caixa passou por cima do contador. */
-    const contador = await page.getByText(/linhas? · meta/).first().boundingBox();
+    const contador = await page.getByText(/linhas? · o ideal é/).first().boundingBox();
     prova('contador abaixo da caixa, sem sobrepor', !!contador && contador.y >= fundo - 1, `contador em ${Math.round(contador?.y ?? 0)}, caixa até ${fundo}`);
     /* Cada coringa à vista, não só o 1º: a ficha mais alta é a que tem o aviso de onde serve. */
     const piores: string[] = [];
@@ -84,7 +84,7 @@ async function percorrer(largura: number): Promise<[string, boolean, string][]> 
   });
   await page.reload({ waitUntil: 'networkidle' });
   await page.getByRole('heading', { level: 2, name: 'Por que esse problema existe?', exact: true }).waitFor();
-  const raros2 = await page.getByRole('button', { name: /^(fala|dado)/i }).count();
+  const raros2 = await page.getByRole('button', { name: /^(frase|fato)/i }).count();
   prova('passo 2: 3 coringas em cada um dos 5 motivos', raros2 === 15, `${raros2}`);
 
   const largo = await page.evaluate(() => document.documentElement.scrollWidth);

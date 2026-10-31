@@ -188,15 +188,24 @@ function Painel({ jaMarcados, onde, aba, aoTrocarAba, aberto, aoAbrir, ajuda, co
         {aba === 'ajuda' && ajuda}
         {aba === 'exemplo' && (
           <>
-            {/* Primeiro o texto com coringa em outro tema; depois a redação inteira. */}
-            {paragrafo.chave !== 'conclusao' && (
+            {/* Introdução: primeiro o texto com coringa em outro tema (ele É a
+                introdução). D1 e D2: primeiro o parágrafo deste passo; o coringa
+                vem depois, para a frase do autor (teste do iniciante, 31/10/2026:
+                o mesmo texto no topo dos passos 4, 5 e 6 parecia passo errado). */}
+            {paragrafo.chave === 'introducao' && (
               <div className="mb-5 border-b border-border pb-5">
                 <ExemploComCoringa coringas={coringas} tema={tema} escolhido={coringaExemplo} aoEscolher={aoEscolherCoringa} />
               </div>
             )}
-            <p className="type-rotulo text-primary-text mb-3">A redação inteira de exemplo, não copie · <span data-numeric>ENEM {EXEMPLO_ANO}</span></p>
+            <p className="type-rotulo text-primary-text mb-3">Este parágrafo numa redação de exemplo, não copie · <span data-numeric>ENEM {EXEMPLO_ANO}</span></p>
             <ListaDeFrases paragrafo={paragrafo} frases={exemplo.frases} rotulos={rotulos} />
             {exemplo.ponte && <Ponte titulo="A ponte neste exemplo" itens={exemplo.ponte.map((p) => ({ passo: p.passo, texto: p.trecho }))} />}
+            {(paragrafo.chave === 'desenvolvimento1' || paragrafo.chave === 'desenvolvimento2') && (
+              <div className="mt-5 border-t border-border pt-5">
+                <p className="type-meta font-semibold mb-3">Para a frase 2 (a do autor), faça como neste exemplo:</p>
+                <ExemploComCoringa coringas={coringas} tema={tema} escolhido={coringaExemplo} aoEscolher={aoEscolherCoringa} />
+              </div>
+            )}
           </>
         )}
       </div>
@@ -266,7 +275,8 @@ export function PassoParagrafo(props: Props) {
   const coringas = coringasDosMotivos(causas, CORINGAS_A_VISTA);
   const contado = ehIntroducao ? introducaoComTese(texto, tese) : texto;
   const onde = ondeEstou(texto, paragrafo.chave, paragrafo.frases.length);
-  const fraseDeRepertorio = /^repert[óo]rio/i.test(paragrafo.frases[onde.atual]?.funcao ?? '');
+  /* A frase do autor: "Repertório: ..." na introdução, "Um autor, ..." no D1 e no D2. */
+  const fraseDeRepertorio = /^(repert[óo]rio|um autor)/i.test(paragrafo.frases[onde.atual]?.funcao ?? '');
 
   const [aba, setAba] = useState<Aba>('molde');
   /* Abaixo de 1024 px: aberto na 1ª visita do passo, para o aluno ver o

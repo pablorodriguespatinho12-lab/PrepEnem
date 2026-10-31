@@ -218,8 +218,8 @@ export const PARAGRAFOS: Paragrafo[] = [
   {
     chave: 'desenvolvimento1', titulo: 'Desenvolvimento 1', linhasMin: 7, linhasMax: 8,
     frases: [
-      { funcao: 'Tópico frasal: motivo 1', molde: 'Em primeiro lugar, cabe destacar [causa A] como fator central de [problema].' },
-      { funcao: 'Repertório que prova o motivo 1', molde: 'Nesse sentido, [um autor, uma lei ou um dado] mostra que [ideia].' },
+      { funcao: '1ª frase: diga o motivo 1', molde: 'Em primeiro lugar, cabe destacar [causa A] como fator central de [problema].' },
+      { funcao: 'Um autor, uma lei ou um fato que mostra o motivo 1', molde: 'Nesse sentido, [um autor, uma lei ou um dado] mostra que [ideia].' },
       { funcao: 'Explicação: o que o repertório prova sobre o motivo 1', molde: 'Isso se verifica no país quando [exemplo concreto], o que [consequência].' },
       { funcao: 'Fechamento: volta à tese', molde: 'Assim, [causa A] mantém [problema do tema].' },
     ],
@@ -227,8 +227,8 @@ export const PARAGRAFOS: Paragrafo[] = [
   {
     chave: 'desenvolvimento2', titulo: 'Desenvolvimento 2', linhasMin: 7, linhasMax: 8,
     frases: [
-      { funcao: 'Tópico frasal: motivo 2', molde: 'Além disso, [causa B] também contribui para [problema].' },
-      { funcao: 'Repertório que prova o motivo 2, de um autor diferente do usado no desenvolvimento 1', molde: 'Sob essa ótica, [repertório 2] evidencia que [ideia].' },
+      { funcao: '1ª frase: diga o motivo 2', molde: 'Além disso, [causa B] também contribui para [problema].' },
+      { funcao: 'Um autor, uma lei ou um fato que mostra o motivo 2 (outro, não o do desenvolvimento 1)', molde: 'Sob essa ótica, [repertório 2] evidencia que [ideia].' },
       { funcao: 'Explicação com um fato do Brasil que você conhece (número só se souber de cor)', molde: 'Na realidade brasileira, [um fato do Brasil], o que agrava [problema].' },
       { funcao: 'Fechamento: volta à tese', molde: 'Logo, enquanto [causa B] persistir, [problema] continuará.' },
     ],
@@ -277,8 +277,9 @@ export const ELEMENTOS: { chave: ChaveElemento; nome: string; pergunta: string }
   { chave: 'agente', nome: 'Agente', pergunta: 'Quem faz?' },
   { chave: 'acao', nome: 'Ação', pergunta: 'Faz o quê?' },
   { chave: 'meio', nome: 'Meio', pergunta: 'Como?' },
+  /* Mesma ordem do molde da conclusão (teste do iniciante, 31/10/2026). */
+  { chave: 'detalhamento', nome: 'Detalhamento', pergunta: 'Quanto, onde ou quando?' },
   { chave: 'finalidade', nome: 'Finalidade', pergunta: 'Para quê?' },
-  { chave: 'detalhamento', nome: 'Detalhamento', pergunta: 'Mais um detalhe' },
 ];
 export const ERROS_PROPOSTA = '"é preciso que se faça" (sem agente); "conscientizar" sem dizer como; desrespeito a direitos humanos.';
 
