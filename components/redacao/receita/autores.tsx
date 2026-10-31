@@ -77,7 +77,7 @@ export function AutoresEmLinha({ nomes, titulo, coringas = [], causas = [], aoVe
           return (
             <li key={nome}>
               <button type="button" onClick={() => setAberto(ativo ? null : nome)} aria-expanded={ativo} aria-controls="ficha-autor" className={pilula}>
-                {k && <span className="type-micro font-semibold uppercase tracking-wide text-primary-text">{k.tipo}</span>}
+                {k && <span className="type-micro font-semibold text-primary-text">{k.tipo === 'fala' ? 'Frase' : 'Número'}</span>}
                 {k ? k.rotulo : autorPorNome(nome)?.nome ?? nome}
               </button>
             </li>

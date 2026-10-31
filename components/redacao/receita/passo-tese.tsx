@@ -28,10 +28,10 @@ export function PassoTese({ perguntas, tese, tema, causaA, causaB, aoMudar, desa
     <div>
       <CabecalhoPasso titulo="Tese" instrucao={m('Sua tese é uma frase só: o problema do tema e os 2 motivos. Siga o molde.')} perguntas={perguntas} />
       <div className="surface-1 rounded-[var(--radius-surface)] p-4 mb-5">
-        <p className="type-rotulo text-primary-text mb-1">Molde</p>
+        <p className="type-rotulo text-primary-text mb-1">Molde <span className="text-muted-foreground">· pode copiar e trocar só o que está entre [ ]</span></p>
         <p className="font-reading type-body">[palavras do tema] decorre, sobretudo, de [motivo 1] e de [motivo 2].</p>
         <p className="type-meta text-muted-foreground mt-2">
-          Motivo 1: {causaPorChave(causaA)?.nome ?? 'não escolhido'} → D1 · Motivo 2: {causaPorChave(causaB)?.nome ?? 'não escolhido'} → D2
+          Motivo 1: {causaPorChave(causaA)?.nome ?? 'não escolhido'} (vira o desenvolvimento 1) · Motivo 2: {causaPorChave(causaB)?.nome ?? 'não escolhido'} (vira o desenvolvimento 2)
         </p>
       </div>
       <AvisoMotivo tema={tema} causaA={causaA} causaB={causaB} aoTrocar={aoTrocarMotivos} />
@@ -47,7 +47,7 @@ export function PassoTese({ perguntas, tese, tema, causaA, causaB, aoMudar, desa
       )}
       <VerExemplo>
         <p className="font-reading type-body">{EXEMPLO_TESE}</p>
-        <p className="type-meta text-muted-foreground mt-2">Começa com as palavras do tema e termina com os 2 motivos, na ordem do D1 e do D2.</p>
+        <p className="type-meta text-muted-foreground mt-2">Começa com as palavras do tema e termina com os 2 motivos, na mesma ordem dos 2 parágrafos do meio.</p>
       </VerExemplo>
     </div>
   );

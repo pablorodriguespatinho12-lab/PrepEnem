@@ -52,7 +52,7 @@ export function PassoCausas({ perguntas, tema, causaA, causaB, sugeridas, aoMuda
                   {ordem && <span className="type-meta font-semibold rounded-[var(--radius-data)] px-2 py-0.5" style={SELO}>{ordem}</span>}
                 </span>
                 {sugerida && <span className="block type-rotulo text-primary-text mb-2">Sugerido para este tema</span>}
-                <span className="block type-rotulo text-muted-foreground">Entra na tese:</span>
+                <span className="block type-rotulo text-muted-foreground">Vai para o fim da sua tese:</span>
                 <span className="block font-reading type-body">{c.fraseDeTese}</span>
               </button>
               <div className="px-4 pb-4">
