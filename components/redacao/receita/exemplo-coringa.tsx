@@ -9,7 +9,8 @@ import { coringaPorNome } from '@/lib/redacao/autores';
 import { exemplosDoCoringa, PERGUNTA_DO_CORINGA } from '@/lib/redacao/exemplos-coringas';
 
 const PARTES = [
-  /* Teste do iniciante (30/10/2026): com "copie igual" ele inventou uma frase de outro autor. */
+  /* Teste do iniciante (30/10/2026): com "copie igual" ele inventou uma frase de outro autor;
+     "pode começar com Assim" em cada parte confundiu onde o exemplo começa de outro jeito. */
   { chave: 'citacao', nome: 'A frase do autor', faz: 'use esta mesma frase no seu tema, não invente outra' },
   { chave: 'sentido', nome: 'O que ela quer dizer', faz: 'diga com suas palavras' },
   { chave: 'ligacao', nome: 'A ligação com o tema', faz: 'esta você troca pelo seu tema' },
@@ -34,7 +35,7 @@ export function ExemploComCoringa({ coringas, tema, escolhido, aoEscolher }: {
   return (
     <section aria-label="Exemplo pronto com coringa" data-medir="exemplo-coringa">
       <p className="type-rotulo text-primary-text">Exemplo pronto, em outro tema</p>
-      <p className="type-meta text-muted-foreground mt-0.5">Veja como ficou num tema do ENEM e faça igual no seu.</p>
+      <p className="type-meta text-muted-foreground mt-0.5">Veja como ficou num tema do ENEM e faça igual no seu. As palavras que abrem cada parte (&ldquo;Ou seja&rdquo;, &ldquo;É o que ocorre&rdquo;) você pode copiar.</p>
 
       {comExemplo.length > 1 && (
         <div className="mt-3 flex flex-wrap gap-2" role="group" aria-label="Coringa do exemplo">

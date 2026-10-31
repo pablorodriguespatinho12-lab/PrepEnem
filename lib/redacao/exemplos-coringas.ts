@@ -26,8 +26,9 @@ const EXEMPLOS = dados as Record<string, ExemploCoringa[]>;
 /* A pergunta que transforma a ideia do coringa na ligação com qualquer tema:
    o aluno responde e a resposta vira a parte 3. */
 export const PERGUNTA_DO_CORINGA: Record<string, string> = {
-  Drummond: 'Que lei ou direito do seu tema existe no papel, mas não chega à vida real?',
-  'Dom Hélder': 'No seu tema, que ajuda remedia o problema sem atacar a causa?',
+  Drummond: 'Que lei ou direito do seu tema existe no papel, mas não chega à vida real? Não precisa do número da lei: “a Constituição garante…” já vale.',
+  /* "causa" ficou vago para o iniciante (teste de 30/10/2026). */
+  'Dom Hélder': 'No seu tema, que ajuda resolve só na hora, sem perguntar por que o problema existe?',
   'Rui Barbosa': 'No seu tema, quem está em desvantagem e precisa de um cuidado diferente?',
   'Elie Wiesel': 'No seu tema, quem sofre enquanto a sociedade não se importa?',
   Graciliano: 'No seu tema, quem é tratado como menos que gente, e por quê?',
