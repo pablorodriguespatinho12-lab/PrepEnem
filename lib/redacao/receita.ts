@@ -103,6 +103,11 @@ export function motivosQueCombinamPouco(tema: string, causaA: ChaveCausa | null,
 export function problemaDoTema(tema: string): string {
   let p = tema.trim().replace(/\s+/g, ' ').split(':')[0].trim().replace(/[.!?]+$/, '');
   if (!p) return '';
+  /* "Desafios para combater X": o problema é o próprio X. "Desafios para
+     garantir X": o problema é a falta de X. Sem isso saía "a falta de
+     combater a evasão escolar" (teste do iniciante, 31/10/2026). */
+  p = p.replace(/^(os\s+)?desafios\s+para\s+(combater|enfrentar|reduzir|superar|erradicar|conter|prevenir|diminuir|eliminar)\s+/i, '');
+  p = p.replace(/^(os\s+)?desafios\s+para\s+(garantir|promover|ampliar|assegurar|efetivar)\s+((a|o|as|os)\s+)?/i, 'a falta de ');
   p = p.replace(/^(os\s+)?desafios\s+(para|de|da|do|das|dos)\s+((a|o|as|os)\s+)?/i, 'a falta de ');
   p = p.replace(/^perspectivas\s+acerca\s+d(o|a|os|as)\s+/i, 'o desafio d$1 ');
   /* Artigo no começo fica minúsculo; nome próprio ("Brasil") não muda. */

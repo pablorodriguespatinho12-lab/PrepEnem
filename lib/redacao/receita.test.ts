@@ -149,6 +149,10 @@ describe('tema nos moldes e na tese', () => {
   });
   test('começo que não é problema vira problema; depois de ":" sai', () => {
     expect(problemaDoTema('Desafios para a valorização da herança africana no Brasil')).toBe('a falta de valorização da herança africana no Brasil');
+    /* Teste do iniciante (31/10/2026): saía "a falta de combater a evasão escolar". */
+    expect(problemaDoTema('Desafios para combater a evasão escolar no Brasil')).toBe('a evasão escolar no Brasil');
+    expect(problemaDoTema('Desafios para enfrentar o racismo')).toBe('o racismo');
+    expect(problemaDoTema('Desafios para garantir o acesso à saúde')).toBe('a falta de acesso à saúde');
     expect(problemaDoTema('Perspectivas acerca do envelhecimento na sociedade brasileira')).toBe('o desafio do envelhecimento na sociedade brasileira');
     expect(problemaDoTema('A obesidade infantil no Brasil: causas e soluções')).toBe('a obesidade infantil no Brasil');
     expect(problemaDoTema('  ')).toBe('');

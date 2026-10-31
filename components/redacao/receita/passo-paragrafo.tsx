@@ -219,10 +219,10 @@ function Elementos({ elementos, aoMarcar }: { elementos: Props['elementos']; aoM
             role="checkbox"
             aria-checked={elementos[e.chave]}
             onClick={() => aoMarcar(e.chave, !elementos[e.chave])}
-            title={e.pergunta}
             className="rounded-full border px-3 py-1.5 type-meta t-colors hover:bg-muted aria-checked:border-primary aria-checked:bg-[hsl(var(--primary)/0.12)] aria-checked:font-semibold border-border"
           >
-            {e.nome}
+            {/* A pergunta à vista: "agente, meio, finalidade" travou o iniciante (31/10/2026). */}
+            {e.nome} <span className="text-muted-foreground">· {e.pergunta.toLowerCase()}</span>
           </button>
         ))}
       </div>
@@ -310,7 +310,7 @@ export function PassoParagrafo(props: Props) {
   /* Glossário: a instrução vem antes dos rótulos do molde na leitura. */
   const m = criarMarcador();
   const instrucao = paragrafo.chave === 'conclusao'
-    ? `Feche com a proposta de intervenção: uma contra cada motivo, cada uma com agente, ação, meio, detalhamento e finalidade. Siga o molde. Meta: ${paragrafo.linhasMin} a ${paragrafo.linhasMax} linhas.`
+    ? `Feche com a proposta de intervenção: uma contra cada motivo, cada uma dizendo quem faz, o que faz, como faz, para quê e mais um detalhe. Siga o molde. Meta: ${paragrafo.linhasMin} a ${paragrafo.linhasMax} linhas.`
     : `Uma frase por função do molde. Meta: ${paragrafo.linhasMin} a ${paragrafo.linhasMax} linhas.`;
 
   return (
