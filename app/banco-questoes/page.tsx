@@ -5,6 +5,10 @@ import { BookOpen, Filter, Search, ChevronDown, Play, Hash, Sparkles, Loader2 } 
 import { useRouter } from 'next/navigation';
 import { materiaColors } from '@/lib/theme-colors';
 import { toast } from 'sonner';
+import dynamic from 'next/dynamic';
+
+// O enunciado tem fórmula em $...$: em <p> cru aparecia "$\\log_2$" (passeio do iniciante, 02/11/2026).
+const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 
 const MATERIAS = [
   'Matemática', 'Português', 'Biologia', 'Química', 'Física',
@@ -300,7 +304,7 @@ export default function BancoQuestoesPage() {
                       {q.dificuldade === 'facil' ? 'Fácil' : q.dificuldade === 'dificil' ? 'Difícil' : 'Médio'}
                     </span>
                   </div>
-                  <p className="font-reading type-body measure-reading line-clamp-2 text-foreground">{q.enunciado}</p>
+                  <div className="font-reading type-body measure-reading line-clamp-2 text-foreground"><MathText text={q.enunciado} /></div>
                   {q.origem && (
                     <p className="type-micro text-muted-foreground mt-1">Origem: {q.origem}</p>
                   )}

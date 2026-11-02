@@ -53,6 +53,14 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   abrem `/provas`, e Provas saiu do "Mais". O treino do dia (`/treino`) fica
   só pelo "Começar" do Início, porque é ele que faz o cronograma andar; o item
   Treino fica aceso nas duas rotas.
+  **Passeio do iniciante (02/11/2026):** Vestibular saiu do menu (tela toda
+  "Em construção"; as 48 questões reais seguem no treino do dia). Na Redação,
+  "Treino por partes" é o cartão grande do topo ("Primeira vez? Comece aqui")
+  e a lista de temas virou "Ou escreva a redação inteira". O lembrete de
+  leitura aparece só na 1ª tela da visita e some ao trocar de tela (cobria o
+  conteúdo em 8 telas); entrou pelo Início, não aparece. Banco mostra o
+  enunciado com `MathText` (aparecia `$\log_2$` cru). "Recomeçar" do Treino
+  por partes virou "Começar do zero", o nome que já valia no treino.
 - **Início = o cronograma de hoje e "Começar", no jeito Nubank (B, 21/10/2026):**
   bloco bg-primary de ponta a ponta com "N matérias hoje" (`--type-mega`) e o
   Começar em pílula; 4 atalhos redondos (mesmos ícones do menu); seções com

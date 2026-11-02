@@ -6,7 +6,7 @@ import { useSession, signOut } from 'next-auth/react';
 import { useTheme } from 'next-themes';
 import {
   Home, BookOpen, AlertCircle, BarChart3, Settings, ShieldCheck,
-  LogOut, Menu, X, GraduationCap, ClipboardList, Library, PenTool, Trophy,
+  LogOut, Menu, X, GraduationCap, ClipboardList, Library, PenTool,
   Layers, Moon, Sun, Sigma, ChevronDown
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -32,7 +32,6 @@ const secundarios: ItemNav[] = [
   { href: '/simulado', label: 'Simulado', icon: ClipboardList },
   { href: '/caderno-erros', label: 'Caderno de Erros', icon: AlertCircle },
   { href: '/banco-questoes', label: 'Banco de Questões', icon: Library },
-  { href: '/vestibular', label: 'Vestibular', icon: Trophy },
   { href: '/perfil', label: 'Perfil', icon: Settings },
 ];
 

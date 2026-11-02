@@ -74,7 +74,7 @@ export default function ProvasPage() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <h1 className="font-display type-display font-semibold text-foreground">
-              Minhas Provas
+              Treino
             </h1>
             <p className="text-muted-foreground mt-2 type-lead">
               Crie provas personalizadas com o nível e matérias que você quer treinar
