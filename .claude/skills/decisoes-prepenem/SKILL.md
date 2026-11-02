@@ -48,6 +48,11 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 - **Menu: 6 itens à vista** (Início, Treino, Flashcards, Redação, Cálculo,
   Progresso) e o resto em "Mais", aberto sozinho quando a página atual é dele.
   Tela nova entra em "Mais", a não ser que seja estudo diário.
+  **Treino = Provas (Pablo, 02/11/2026: "tem a mesma função e é até melhor,
+  inclui flashcards antes"):** o item Treino do menu e o atalho do Início
+  abrem `/provas`, e Provas saiu do "Mais". O treino do dia (`/treino`) fica
+  só pelo "Começar" do Início, porque é ele que faz o cronograma andar; o item
+  Treino fica aceso nas duas rotas.
 - **Início = o cronograma de hoje e "Começar", no jeito Nubank (B, 21/10/2026):**
   bloco bg-primary de ponta a ponta com "N matérias hoje" (`--type-mega`) e o
   Começar em pílula; 4 atalhos redondos (mesmos ícones do menu); seções com

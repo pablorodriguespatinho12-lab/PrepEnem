@@ -5,7 +5,7 @@ import { BookOpen, Layers, PenTool, Sigma } from 'lucide-react';
 
 // Mesmos ícones do menu lateral: o atalho é o mesmo lugar, não outro.
 const ATALHOS = [
-  { href: '/treino', rotulo: 'Treino', Icone: BookOpen },
+  { href: '/provas', rotulo: 'Treino', Icone: BookOpen },
   { href: '/flashcards', rotulo: 'Flashcards', Icone: Layers },
   { href: '/redacao', rotulo: 'Redação', Icone: PenTool },
   { href: '/calculo', rotulo: 'Cálculo', Icone: Sigma },
