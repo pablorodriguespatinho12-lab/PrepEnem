@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 // corrigirRedacao (v3, com trecho obrigatório) é testada em tests/redacao/correcao-v3.test.ts.
-import { contarParagrafos, notaC2, notaC3 } from './correcao';
+import { contarParagrafos, ehSobraDeDigitacao, notaC2, notaC3 } from './correcao';
 
 const TEXTO = 'Introdução.\n\nDesenvolvimento um.\n\nDesenvolvimento dois.\n\nConclusão.';
 
@@ -24,5 +24,17 @@ describe('notaC2 e notaC3', () => {
   test('conta parágrafos com uma ou duas quebras de linha', () => {
     expect(contarParagrafos(TEXTO)).toBe(4);
     expect(contarParagrafos('a\nb')).toBe(2);
+  });
+});
+
+describe('sobra de digitação não é erro de português', () => {
+  test('número grudado na palavra não conta (Pablo, 02/11/2026)', () => {
+    expect(ehSobraDeDigitacao({ trecho: 'por uma desinformação1', correcao: 'por uma desinformação' })).toBe(true);
+    expect(ehSobraDeDigitacao({ trecho: '2a sociedade', correcao: 'a sociedade' })).toBe(true);
+  });
+  test('erro de verdade continua contando', () => {
+    expect(ehSobraDeDigitacao({ trecho: 'por que uma norma', correcao: 'porque uma norma' })).toBe(false);
+    expect(ehSobraDeDigitacao({ trecho: 'desinformação1 e', correcao: 'da desinformação e' })).toBe(false);
+    expect(ehSobraDeDigitacao({ trecho: 'Lei 10.216', correcao: 'Lei nº 10.216' })).toBe(false);
   });
 });

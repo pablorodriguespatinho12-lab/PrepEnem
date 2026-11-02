@@ -531,9 +531,20 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   prova, é a lei da amarra). Baralho padrão "Autores por tema": 28 cartões,
   um por tema, até 3 autores além do Drummond (que serve em todos), de
   `coringas-por-tema.json` (`scripts/seed-autores-por-tema.ts`).
-  **Aberto:** motivo próprio no passo 2 (ele escreveu desinformação e falta
-  de empatia, fora das 5 causas, e o molde seguia as do exemplo) e a
-  correção gastar o "Treine agora" em erro de digitação.
+  **2ª rodada (mesmo dia, "mais bonitinho, bem ilustrado", sem texto a
+  mais):** cada parte tem a folha da prova em miniatura à esquerda (as 30
+  linhas, a parte de agora colorida frase por frase), a frase com barra e
+  rótulo na cor da função dela (as mesmas `--grifo-*`), troca deslizando
+  (sem AnimatePresence sob movimento reduzido) e a tela "Sua vez" com a folha
+  inteira acesa. Quadro alargado para 58rem: 0 px escondidos em 1366x768,
+  1440x762 e 1920x1030. **Motivo próprio** (`meusMotivos` no rascunho): no
+  passo 2, "Tem outro motivo? Escreva do seu jeito", opcional; escrito, manda
+  na tese ("da desinformação... e da falta de empatia...") e nos moldes
+  (`meuMotivo` tira o ponto e põe o artigo em minúscula para contrair); a
+  causa marcada continua dando os autores, e vale passar só com os
+  escritos. **Correção:** número grudado na palavra ("desinformação1") é
+  sobra de digitação (`ehSobraDeDigitacao`), não conta na C1 nem no "Treine
+  agora". D2, "Mais dicas": ligar o 2º motivo ao 1º ("gerado pelo [motivo 1]").
 - As redações-modelo de `data/redacao/modelos.ts` (textos originais, temas
   reais, cada trecho comentado) seguem em /redacao/modelos. Não inventa
   texto-base com IA. Repertório nos modelos: só fato verificável.

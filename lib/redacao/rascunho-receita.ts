@@ -3,7 +3,7 @@
 // armazenamento tem try/catch: em aba anônima ou com o site bloqueado, a
 // tela funciona e só não guarda.
 
-import { duplaSugerida, moldeTese, problemaDoTema, causaPorChave, type ChaveCausa, type ChaveElemento, type ChaveParagrafo } from './receita';
+import { duplaSugerida, meuMotivo, moldeTese, MOTIVOS_VAZIOS, problemaDoTema, causaPorChave, type ChaveCausa, type ChaveElemento, type ChaveParagrafo, type MeusMotivos } from './receita';
 
 export const CHAVE_RASCUNHO = 'prepenem_receita_rascunho_v1';
 export const CHAVE_SALVAS = 'redacao_saved_list';
@@ -14,6 +14,9 @@ export interface Rascunho {
   tema: string;
   causaA: ChaveCausa | null;
   causaB: ChaveCausa | null;
+  /* Os motivos com as palavras dele (opcional): mandam no molde e na tese
+     no lugar da frase da causa (Pablo, 02/11/2026). */
+  meusMotivos: MeusMotivos;
   tese: string;
   /* A última tese que o site gerou. tese === teseGerada: o aluno não mexeu,
      e o site pode trocar sozinho quando os motivos mudam. */
@@ -39,6 +42,7 @@ export const rascunhoVazio = (): Rascunho => ({
   tema: '',
   causaA: null,
   causaB: null,
+  meusMotivos: MOTIVOS_VAZIOS,
   tese: '',
   teseGerada: '',
   paragrafos: { introducao: '', desenvolvimento1: '', desenvolvimento2: '', conclusao: '' },
@@ -67,6 +71,7 @@ export function lerRascunho(armazenamento: Armazenamento | null = navegador()): 
       checklist: Array.isArray(salvo.checklist) ? salvo.checklist : [],
       moldesVistos: Array.isArray(salvo.moldesVistos) ? salvo.moldesVistos : [],
       correcao: lerCorrecaoDoTreino(salvo.correcao),
+      meusMotivos: lerMeusMotivos(salvo.meusMotivos),
     }, typeof salvo.teseGerada === 'string');
   } catch {
     return rascunhoVazio();
@@ -75,9 +80,14 @@ export function lerRascunho(armazenamento: Armazenamento | null = navegador()): 
 
 /* A tese que o site gera para o tema e os motivos; sem os 2 motivos, nada
    (colchete na caixa do aluno parece texto dele). */
-export function teseAutomatica(r: Pick<Rascunho, 'tema' | 'causaA' | 'causaB'>): string {
-  return r.causaA && r.causaB ? moldeTese(r.causaA, r.causaB, r.tema) : '';
+export function teseAutomatica(r: Pick<Rascunho, 'tema' | 'causaA' | 'causaB'> & Partial<Pick<Rascunho, 'meusMotivos'>>): string {
+  const meus = r.meusMotivos ?? MOTIVOS_VAZIOS;
+  return temMotivo(r.causaA, meus[0]) && temMotivo(r.causaB, meus[1]) ? moldeTese(r.causaA, r.causaB, r.tema, meus) : '';
 }
+/* Cada motivo vale escolhido na lista OU escrito por ele. */
+export const temMotivo = (causa: ChaveCausa | null, meu: string): boolean => causa !== null || meuMotivo(meu) !== '';
+const lerMeusMotivos = (v: unknown): MeusMotivos =>
+  Array.isArray(v) ? [String(v[0] ?? '').slice(0, 160), String(v[1] ?? '').slice(0, 160)] : MOTIVOS_VAZIOS;
 const teseFoiEditada = (r: Pick<Rascunho, 'tese' | 'teseGerada'>) => r.tese.trim() !== '' && r.tese !== r.teseGerada;
 /* Depois de mudar tema ou motivos: tese ainda automática é regerada; tese que
    o aluno editou fica como está (a tela pergunta, nunca sobrescreve). */

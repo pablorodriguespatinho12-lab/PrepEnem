@@ -35,7 +35,7 @@ export function BotaoRedacaoPronta({ destaque = false }: { destaque?: boolean })
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 z-50 bg-black/60 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 motion-reduce:animate-none" />
         <Dialog.Content
-          className="fixed inset-0 z-50 flex flex-col bg-background md:inset-y-6 md:mx-auto md:w-[min(48rem,calc(100vw-3rem))] md:rounded-[var(--radius-surface)] md:shadow-elev-3 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:slide-in-from-bottom-4 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 motion-reduce:animate-none focus:outline-none"
+          className="fixed inset-0 z-50 flex flex-col bg-background md:inset-y-6 md:mx-auto md:w-[min(58rem,calc(100vw-3rem))] md:rounded-[var(--radius-surface)] md:shadow-elev-3 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:slide-in-from-bottom-4 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 motion-reduce:animate-none focus:outline-none"
           aria-describedby="redacao-grifada-descricao"
         >
           <ConteudoDoDialogo />

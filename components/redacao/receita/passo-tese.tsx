@@ -3,7 +3,7 @@
 // causas escolhidas; o aluno edita. Avisa se a tese perdeu todas as
 // palavras-chave do tema (regra 1 da receita: protege contra tangenciamento).
 
-import { causaPorChave, moldeTese, problemaCurto, teseTemPalavraDoTema, type ChaveCausa } from '@/lib/redacao/receita';
+import { causaPorChave, meuMotivo, moldeTese, problemaCurto, teseTemPalavraDoTema, type ChaveCausa, type MeusMotivos } from '@/lib/redacao/receita';
 import { EXEMPLO_TESE } from '@/lib/redacao/exemplo-receita';
 import { CabecalhoPasso, CaixaTexto } from './pecas';
 import { VerExemplo } from './autores';
@@ -17,18 +17,20 @@ const inicioDoTema = (tema: string) => {
   return curto ? curto[0].toUpperCase() + curto.slice(1) : '[palavras do tema]';
 };
 
-export function PassoTese({ perguntas, tese, tema, causaA, causaB, aoMudar, desatualizada, aoAtualizar, aoTrocarMotivos }: {
+export function PassoTese({ perguntas, tese, tema, causaA, causaB, meusMotivos, aoMudar, desatualizada, aoAtualizar, aoTrocarMotivos }: {
   perguntas: string[];
   tese: string;
   tema: string;
   causaA: ChaveCausa | null;
   causaB: ChaveCausa | null;
+  meusMotivos: MeusMotivos;
   aoMudar: (t: string) => void;
   desatualizada: boolean;
   aoAtualizar: () => void;
   aoTrocarMotivos: () => void;
 }) {
-  const molde = moldeTese(causaA, causaB, tema);
+  const molde = moldeTese(causaA, causaB, tema, meusMotivos);
+  const nome = (causa: ChaveCausa | null, meu: string) => meuMotivo(meu) || causaPorChave(causa)?.nome || 'não escolhido';
   const semPalavraDoTema = !teseTemPalavraDoTema(tese, tema);
   const m = criarMarcador();
   return (
@@ -38,7 +40,7 @@ export function PassoTese({ perguntas, tese, tema, causaA, causaB, aoMudar, desa
         <p className="type-rotulo text-primary-text mb-1">Molde <span className="text-muted-foreground">· pode copiar e trocar só o que está entre [ ]</span></p>
         <p className="font-reading type-body">{inicioDoTema(tema)} decorre, sobretudo, de [motivo 1] e de [motivo 2].</p>
         <p className="type-meta text-muted-foreground mt-2">
-          Motivo 1: {causaPorChave(causaA)?.nome ?? 'não escolhido'} (vira o desenvolvimento 1) · Motivo 2: {causaPorChave(causaB)?.nome ?? 'não escolhido'} (vira o desenvolvimento 2)
+          Motivo 1: {nome(causaA, meusMotivos[0])} (vira o desenvolvimento 1) · Motivo 2: {nome(causaB, meusMotivos[1])} (vira o desenvolvimento 2)
         </p>
       </div>
       <AvisoMotivo tema={tema} causaA={causaA} causaB={causaB} aoTrocar={aoTrocarMotivos} />
