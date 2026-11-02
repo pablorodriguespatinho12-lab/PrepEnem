@@ -182,7 +182,15 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   falhou em 2 por cota; por isso o erro agora é TROCADO direto no texto
   (`aplicarCorrecoes`) e só gera de novo o que não achou. "Correta: X" no
   trecho é sobre o gabarito: achou ENEM 2021 Q113 (id cmoudnnu2002auoz9dskgmqnx)
-  com C no banco e conta dando D (31,25 L); não corrigido sem o Pablo.
+  com C no banco e conta dando D (31,25 L). **Resolvido em 02/11/2026 (Pablo
+  autorizou):** o gabarito C estava certo (gabarito oficial `2021_GB_impresso_D2_CD5`);
+  o TEXTO no banco é que tinha perdido "80% de conversão" e trazia D = 32 no
+  lugar de 64. Lição: conta que não fecha com o gabarito, olhar primeiro a
+  página escaneada (`public/questoes-imagens/<id>.webp`), não o gabarito.
+  Varredura das 88 questões de resposta numérica (explicação que termina em
+  outra alternativa): mais 3 com a EXPLICAÇÃO errada e o gabarito certo
+  (2021 Q99, 2022 Q99, 2022 Q153), corrigidas; versão antiga guardada fora do
+  git. As 679 de resposta em texto não entram nessa varredura.
 - **Deck de livro (Pablo, 15/10/2026, artefato https://claude.ai/artifact/6PoWDVkq5cr9xN4v3EkeBR):**
   matéria "Livros", frente = título curto, verso = 1 ou 2 frases. Frase de
   capítulo (`Flashcard.capitulo`) fica trancada até "Li o capítulo N"
@@ -497,6 +505,18 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   vai em cima ("Agora, frase 2: Ponte..."), as feitas apagam e a tese vem
   sublinhada. "Sua vez" fica colado na caixa (no topo da coluna, cortava a
   ficha do autor; o `coringas.e2e` mede). Aba Exemplo segue em lista.
+- **Aba Exemplo no SEU tema (Pablo, 02/11/2026: "o exemplo tem que ser desse
+  tema", "quais frases eu posso utilizar, quais não"):** muda a regra antiga
+  de nunca mostrar o tema do aluno. Tema do ENEM (os 28 da prova dos coringas):
+  "Qual autor usar no seu tema?", autores com ✓/✗ pelo veredito dos 3 juízes
+  NESSE tema, o parágrafo aprovado nele em 3 partes, "Pôr a frase do autor no
+  meu texto" e "Me testar" (esconde as marcas; tocar revela uma). Sem
+  "Escolha um assunto"; a redação pronta fica recolhida embaixo. Tema
+  digitado fora da lista: exemplo em outro tema, como antes. Conclusão: só a
+  redação pronta. Dados: `lib/redacao/coringas-por-tema.json`, de
+  `docs/redacao/prova-coringas/por_tema.py`; teste `autores-no-tema.e2e`.
+  Já falhava antes (não é desta mudança): no `coringas.e2e`, a ficha do
+  Luther King passa 19 px em 1440 px.
 - As redações-modelo de `data/redacao/modelos.ts` (textos originais, temas
   reais, cada trecho comentado) seguem em /redacao/modelos. Não inventa
   texto-base com IA. Repertório nos modelos: só fato verificável.

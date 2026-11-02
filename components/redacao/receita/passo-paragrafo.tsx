@@ -18,6 +18,8 @@ import { juntarComeco, ondeEstou, type OndeEstou } from '@/lib/redacao/onde-esto
 import { CabecalhoPasso, CaixaTexto, ContadorLinhas } from './pecas';
 import { AutoresEmLinha } from './autores';
 import { ExemploComCoringa } from './exemplo-coringa';
+import { AutoresNoTema } from './autores-no-tema';
+import { autoresNoTema } from '@/lib/redacao/coringas-por-tema';
 import { criarMarcador, termosDe } from './glossario';
 import { AvisoMotivo } from './passo-causas';
 import { AjudaEscrita, ajudaVazia, pedirAjuda, type EstadoAjuda } from './ajuda-escrita';
@@ -155,6 +157,7 @@ interface PainelProps extends Props {
   coringas: string[];
   coringaExemplo: string | null;
   aoEscolherCoringa: (nome: string) => void;
+  aoUsarFrase: (frase: string) => void;
   onde: OndeEstou;
   aba: Aba;
   aoTrocarAba: (a: Aba) => void;
@@ -163,7 +166,7 @@ interface PainelProps extends Props {
   ajuda: ReactNode;
 }
 
-function Painel({ jaMarcados, onde, aba, aoTrocarAba, aberto, aoAbrir, ajuda, coringas, coringaExemplo, aoEscolherCoringa, ...props }: PainelProps) {
+function Painel({ jaMarcados, onde, aba, aoTrocarAba, aberto, aoAbrir, ajuda, coringas, coringaExemplo, aoEscolherCoringa, aoUsarFrase, ...props }: PainelProps) {
   /* O marcador é usado no mesmo render que o criou: o modo estrito renderiza
      2 vezes, e um filho que usasse o marcador do pai acharia tudo já usado. */
   const { paragrafo, causaA, causaB, tema, tese, primeiraVisita, aoVerMolde } = props;
@@ -174,6 +177,18 @@ function Painel({ jaMarcados, onde, aba, aoTrocarAba, aberto, aoAbrir, ajuda, co
     // eslint-disable-next-line react-hooks/exhaustive-deps -- só na entrada do passo
   }, []);
   const exemplo = EXEMPLO_PARAGRAFOS[paragrafo.chave];
+  /* Tema do ENEM: os autores testados NESTE tema (Pablo, 02/11/2026). */
+  const autoresTema = paragrafo.chave === 'conclusao' ? null : autoresNoTema(tema);
+  const coringaDoExemplo = autoresTema
+    ? <AutoresNoTema autores={autoresTema} escolhido={coringaExemplo} aoEscolher={aoEscolherCoringa} aoUsarFrase={aoUsarFrase} />
+    : <ExemploComCoringa coringas={coringas} tema={tema} escolhido={coringaExemplo} aoEscolher={aoEscolherCoringa} />;
+  const redacaoDeExemplo = (
+    <>
+      <p className="type-rotulo text-primary-text mb-3">Este parágrafo numa redação de exemplo, não copie · <span data-numeric>ENEM {EXEMPLO_ANO}</span></p>
+      <ListaDeFrases paragrafo={paragrafo} frases={exemplo.frases} rotulos={rotulos} />
+      {exemplo.ponte && <Ponte titulo="A ponte neste exemplo" itens={exemplo.ponte.map((p) => ({ passo: p.passo, texto: p.trecho }))} />}
+    </>
+  );
   const moldes = paragrafo.frases.map((_, i) => moldeDaFrase(paragrafo.chave, i, tema, causaA, causaB));
 
   return (
@@ -223,24 +238,30 @@ function Painel({ jaMarcados, onde, aba, aoTrocarAba, aberto, aoAbrir, ajuda, co
           </>
         )}
         {aba === 'ajuda' && ajuda}
-        {aba === 'exemplo' && (
+        {aba === 'exemplo' && autoresTema && (
+          <>
+            {/* Tema do ENEM: primeiro quais autores servem NELE; a redação
+                de exemplo fica recolhida (a aba estava amontoada, 02/11/2026). */}
+            {coringaDoExemplo}
+            <details className="mt-8 border-t border-border pt-5">
+              <summary className="cursor-pointer type-meta font-medium text-muted-foreground hover:text-foreground">Ver este parágrafo numa redação pronta</summary>
+              <div className="mt-4">{redacaoDeExemplo}</div>
+            </details>
+          </>
+        )}
+        {aba === 'exemplo' && paragrafo.chave === 'conclusao' && redacaoDeExemplo}
+        {aba === 'exemplo' && !autoresTema && paragrafo.chave !== 'conclusao' && (
           <>
             {/* Introdução: primeiro o texto com coringa em outro tema (ele É a
                 introdução). D1 e D2: primeiro o parágrafo deste passo; o coringa
                 vem depois, para a frase do autor (teste do iniciante, 31/10/2026:
                 o mesmo texto no topo dos passos 4, 5 e 6 parecia passo errado). */}
-            {paragrafo.chave === 'introducao' && (
-              <div className="mb-5 border-b border-border pb-5">
-                <ExemploComCoringa coringas={coringas} tema={tema} escolhido={coringaExemplo} aoEscolher={aoEscolherCoringa} />
-              </div>
-            )}
-            <p className="type-rotulo text-primary-text mb-3">Este parágrafo numa redação de exemplo, não copie · <span data-numeric>ENEM {EXEMPLO_ANO}</span></p>
-            <ListaDeFrases paragrafo={paragrafo} frases={exemplo.frases} rotulos={rotulos} />
-            {exemplo.ponte && <Ponte titulo="A ponte neste exemplo" itens={exemplo.ponte.map((p) => ({ passo: p.passo, texto: p.trecho }))} />}
+            {paragrafo.chave === 'introducao' && <div className="mb-5 border-b border-border pb-5">{coringaDoExemplo}</div>}
+            {redacaoDeExemplo}
             {(paragrafo.chave === 'desenvolvimento1' || paragrafo.chave === 'desenvolvimento2') && (
               <div className="mt-5 border-t border-border pt-5">
                 <p className="type-meta font-semibold mb-3">Para a frase 2 (a do autor), faça como neste exemplo:</p>
-                <ExemploComCoringa coringas={coringas} tema={tema} escolhido={coringaExemplo} aoEscolher={aoEscolherCoringa} />
+                {coringaDoExemplo}
               </div>
             )}
           </>
@@ -372,6 +393,7 @@ export function PassoParagrafo(props: Props) {
           coringas={coringas}
           coringaExemplo={coringaExemplo}
           aoEscolherCoringa={setCoringaExemplo}
+          aoUsarFrase={usarComeco}
           onde={onde}
           aba={aba}
           aoTrocarAba={setAba}
