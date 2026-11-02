@@ -103,6 +103,11 @@ export function motivosQueCombinamPouco(tema: string, causaA: ChaveCausa | null,
 export function problemaDoTema(tema: string): string {
   let p = tema.trim().replace(/\s+/g, ' ').split(':')[0].trim().replace(/[.!?]+$/, '');
   if (!p) return '';
+  /* "Desafios para combater X": o problema é o próprio X. "Desafios para
+     garantir X": o problema é a falta de X. Sem isso saía "a falta de
+     combater a evasão escolar" (teste do iniciante, 31/10/2026). */
+  p = p.replace(/^(os\s+)?desafios\s+para\s+(combater|enfrentar|reduzir|superar|erradicar|conter|prevenir|diminuir|eliminar)\s+/i, '');
+  p = p.replace(/^(os\s+)?desafios\s+para\s+(garantir|promover|ampliar|assegurar|efetivar)\s+((a|o|as|os)\s+)?/i, 'a falta de ');
   p = p.replace(/^(os\s+)?desafios\s+(para|de|da|do|das|dos)\s+((a|o|as|os)\s+)?/i, 'a falta de ');
   p = p.replace(/^perspectivas\s+acerca\s+d(o|a|os|as)\s+/i, 'o desafio d$1 ');
   /* Artigo no começo fica minúsculo; nome próprio ("Brasil") não muda. */
@@ -205,7 +210,7 @@ export const PARAGRAFOS: Paragrafo[] = [
   {
     chave: 'introducao', titulo: 'Introdução', linhasMin: 6, linhasMax: 7,
     frases: [
-      { funcao: 'Repertório que abre o assunto', molde: 'Segundo [autor], em [obra], [ideia em suas palavras].' },
+      { funcao: 'Repertório: a frase de um autor que abre o assunto', molde: 'Segundo [autor], em [obra], [ideia em suas palavras].' },
       { funcao: 'Ponte: liga o repertório ao Brasil de hoje, com as palavras do tema', molde: 'Essa reflexão se aplica ao Brasil contemporâneo, onde [problema do tema] ainda persiste.' },
       { funcao: 'Tese: opinião + motivo 1 + motivo 2', molde: 'Tal cenário decorre, sobretudo, de [causa A] e de [causa B].' },
     ],
@@ -213,8 +218,8 @@ export const PARAGRAFOS: Paragrafo[] = [
   {
     chave: 'desenvolvimento1', titulo: 'Desenvolvimento 1', linhasMin: 7, linhasMax: 8,
     frases: [
-      { funcao: 'Tópico frasal: motivo 1', molde: 'Em primeiro lugar, cabe destacar [causa A] como fator central de [problema].' },
-      { funcao: 'Repertório que prova o motivo 1', molde: 'Nesse sentido, [autor/lei/dado] mostra que [ideia].' },
+      { funcao: '1ª frase: diga o motivo 1', molde: 'Em primeiro lugar, cabe destacar [causa A] como fator central de [problema].' },
+      { funcao: 'Um autor, uma lei ou um fato que mostra o motivo 1', molde: 'Nesse sentido, [um autor, uma lei ou um dado] mostra que [ideia].' },
       { funcao: 'Explicação: o que o repertório prova sobre o motivo 1', molde: 'Isso se verifica no país quando [exemplo concreto], o que [consequência].' },
       { funcao: 'Fechamento: volta à tese', molde: 'Assim, [causa A] mantém [problema do tema].' },
     ],
@@ -222,9 +227,9 @@ export const PARAGRAFOS: Paragrafo[] = [
   {
     chave: 'desenvolvimento2', titulo: 'Desenvolvimento 2', linhasMin: 7, linhasMax: 8,
     frases: [
-      { funcao: 'Tópico frasal: motivo 2', molde: 'Além disso, [causa B] também contribui para [problema].' },
-      { funcao: 'Repertório de outro autor, que prova o motivo 2', molde: 'Sob essa ótica, [repertório 2] evidencia que [ideia].' },
-      { funcao: 'Explicação com exemplo brasileiro ou dado', molde: 'Na realidade brasileira, [exemplo ou dado], o que agrava [problema].' },
+      { funcao: '1ª frase: diga o motivo 2', molde: 'Além disso, [causa B] também contribui para [problema].' },
+      { funcao: 'Um autor, uma lei ou um fato que mostra o motivo 2 (outro, não o do desenvolvimento 1)', molde: 'Sob essa ótica, [repertório 2] evidencia que [ideia].' },
+      { funcao: 'Explicação com um fato do Brasil que você conhece (número só se souber de cor)', molde: 'Na realidade brasileira, [um fato do Brasil], o que agrava [problema].' },
       { funcao: 'Fechamento: volta à tese', molde: 'Logo, enquanto [causa B] persistir, [problema] continuará.' },
     ],
   },
@@ -232,11 +237,11 @@ export const PARAGRAFOS: Paragrafo[] = [
     chave: 'conclusao', titulo: 'Conclusão', linhasMin: 6, linhasMax: 7,
     frases: [
       { funcao: 'Retoma o problema', molde: 'Portanto, é preciso enfrentar [causa A] e [causa B].' },
-      { funcao: 'Proposta 1 contra o motivo 1, 5 elementos', molde: 'Para isso, o [agente] deve [ação contra a causa A], por meio de [meio], com [detalhamento], a fim de [finalidade].' },
+      { funcao: 'Proposta 1 contra o motivo 1, 5 elementos', molde: 'Para isso, o [agente] deve [o que fazer contra o motivo 1], por meio de [meio], com [detalhamento], a fim de [finalidade].' },
       /* Regra 3 da receita: a proposta resolve as causas discutidas, as 2
          (Pablo, 28/10/2026). O detalhamento vai dentro de cada proposta. */
-      { funcao: 'Proposta 2 contra o motivo 2, 5 elementos', molde: 'Já o [agente] deve [ação contra a causa B], por meio de [meio], com [detalhamento], a fim de [finalidade].' },
-      { funcao: 'Frase final que retoma a abertura', molde: 'Dessa forma, [retoma a ideia do repertório da introdução].' },
+      { funcao: 'Proposta 2 contra o motivo 2, 5 elementos', molde: 'Já o [agente] deve [o que fazer contra o motivo 2], por meio de [meio], com [detalhamento], a fim de [finalidade].' },
+      { funcao: 'Frase final que volta ao autor da introdução', molde: 'Dessa forma, [retoma a ideia do repertório da introdução].' },
     ],
   },
 ];
@@ -272,8 +277,9 @@ export const ELEMENTOS: { chave: ChaveElemento; nome: string; pergunta: string }
   { chave: 'agente', nome: 'Agente', pergunta: 'Quem faz?' },
   { chave: 'acao', nome: 'Ação', pergunta: 'Faz o quê?' },
   { chave: 'meio', nome: 'Meio', pergunta: 'Como?' },
+  /* Mesma ordem do molde da conclusão (teste do iniciante, 31/10/2026). */
+  { chave: 'detalhamento', nome: 'Detalhamento', pergunta: 'Quanto, onde ou quando?' },
   { chave: 'finalidade', nome: 'Finalidade', pergunta: 'Para quê?' },
-  { chave: 'detalhamento', nome: 'Detalhamento', pergunta: 'Mais um detalhe' },
 ];
 export const ERROS_PROPOSTA = '"é preciso que se faça" (sem agente); "conscientizar" sem dizer como; desrespeito a direitos humanos.';
 

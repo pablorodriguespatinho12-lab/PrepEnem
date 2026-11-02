@@ -5,32 +5,32 @@ import { usePathname } from 'next/navigation';
 import { useSession, signOut } from 'next-auth/react';
 import { useTheme } from 'next-themes';
 import {
-  Home, BookOpen, AlertCircle, BarChart3, Settings, ShieldCheck,
-  LogOut, Menu, X, GraduationCap, ClipboardList, Library, PenTool, Trophy,
-  Layers, FileText, Moon, Sun, Sigma, ChevronDown
+  Home, BookOpen, BarChart3, Settings, ShieldCheck,
+  LogOut, Menu, X, GraduationCap, Library, PenTool,
+  Layers, Moon, Sun, Sigma, ChevronDown
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAppTheme } from './app-theme-provider';
 import { motion, AnimatePresence } from 'framer-motion';
 
-type ItemNav = { href: string; label: string; icon: typeof Home };
+type ItemNav = { href: string; label: string; icon: typeof Home; tambem?: string[] };
 // Menu enxuto (pedido do Pablo, 06/10/2026: "não deixar tanta coisa num lugar
 // só"). Eram 13 itens de uma vez. Ficam à vista os 6 do estudo diário; o resto
 // abre em "Mais". "Importar PDF" saiu: depende de S3, que não será configurado.
 const principais: ItemNav[] = [
   { href: '/dashboard', label: 'Início', icon: Home },
-  { href: '/treino', label: 'Treino', icon: BookOpen },
+  // Treino = Provas (Pablo, 02/11/2026: a prova escolhida, com flashcards antes,
+  // faz o papel do treino). O treino do dia segue pelo "Começar" do Início,
+  // porque é ele que faz o cronograma andar.
+  { href: '/provas', label: 'Treino', icon: BookOpen, tambem: ['/treino', '/simulado', '/caderno-erros'] },
   { href: '/flashcards', label: 'Flashcards', icon: Layers },
   { href: '/redacao', label: 'Redação', icon: PenTool },
   { href: '/calculo', label: 'Cálculo', icon: Sigma },
   { href: '/progresso', label: 'Progresso', icon: BarChart3 },
 ];
+// Simulado e Caderno de Erros moram dentro do Treino desde 02/11/2026.
 const secundarios: ItemNav[] = [
-  { href: '/simulado', label: 'Simulado', icon: ClipboardList },
-  { href: '/provas', label: 'Provas', icon: FileText },
-  { href: '/caderno-erros', label: 'Caderno de Erros', icon: AlertCircle },
   { href: '/banco-questoes', label: 'Banco de Questões', icon: Library },
-  { href: '/vestibular', label: 'Vestibular', icon: Trophy },
   { href: '/perfil', label: 'Perfil', icon: Settings },
 ];
 
@@ -41,10 +41,11 @@ export function SidebarNav() {
   const isAdmin = (session?.user as any)?.role === 'admin';
   const { theme, setTheme } = useTheme();
   const estaEm = (href: string) => pathname === href || pathname?.startsWith(href + '/');
-  const [maisAberto, setMaisAberto] = useState(() => secundarios.some((item) => estaEm(item.href)));
+  const itemAtivo = (item: ItemNav) => [item.href, ...(item.tambem ?? [])].some(estaEm);
+  const [maisAberto, setMaisAberto] = useState(() => secundarios.some(itemAtivo));
   const linkDoMenu = (item: ItemNav, i: number) => {
     const Icon = item.icon;
-    const active = estaEm(item.href);
+    const active = itemAtivo(item);
     return (
       <motion.div
         key={item.href}

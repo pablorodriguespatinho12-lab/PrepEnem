@@ -2,9 +2,10 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FileText, Plus, Trophy, CheckCircle, XCircle, Clock, Play, Trash2, BookOpen, Sparkles, Target, AlertCircle } from 'lucide-react';
+import { Trophy, Play, Trash2, BookOpen, Sparkles, Target, AlertCircle } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
+import { CaminhosDoTreino } from '@/components/treino/caminhos-do-treino';
 
 /* Limiares de dado esparso — mesma regra usada em app/dashboard/page.tsx.
    < 5 questões: sem %. 5–15: % com indicador de baixa confiança. 15+: limpa. */
@@ -49,20 +50,6 @@ export default function ProvasPage() {
     }
   };
 
-  const finalizadas = exams.filter((e) => e.status === 'finalizada');
-  const finalizadasTotalQuestoes = finalizadas.reduce((acc, e) => acc + (e.totalQuestoes || 0), 0);
-  const finalizadasAcertos = finalizadas.reduce((acc, e) => acc + (e.acertos || 0), 0);
-  const mediaSparse = finalizadasTotalQuestoes < MIN_QUESTOES_PARA_TAXA;
-  const mediaLowConfidence = !mediaSparse && finalizadasTotalQuestoes < LIMIAR_BAIXA_CONFIANCA;
-  const mediaPct = finalizadasTotalQuestoes > 0 ? Math.round((finalizadasAcertos / finalizadasTotalQuestoes) * 100) : 0;
-
-  const statCards = [
-    { key: 'total', label: 'Total de provas', value: exams.length, icon: FileText },
-    { key: 'finalizadas', label: 'Finalizadas', value: finalizadas.length, icon: CheckCircle },
-    { key: 'andamento', label: 'Em andamento', value: exams.filter((e) => e.status === 'em_andamento').length, icon: Clock },
-    { key: 'media', label: 'Média geral', value: `${mediaPct}%`, icon: Trophy },
-  ];
-
   return (
     <div className="min-h-screen p-6 md:p-10 max-w-7xl mx-auto">
       {/* Header */}
@@ -74,79 +61,25 @@ export default function ProvasPage() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <h1 className="font-display type-display font-semibold text-foreground">
-              Minhas Provas
+              Treino
             </h1>
             <p className="text-muted-foreground mt-2 type-lead">
-              Crie provas personalizadas com o nível e matérias que você quer treinar
+              Escolha um jeito de treinar. Não sabe qual? Comece pela Nova prova.
             </p>
           </div>
-          <button
-            onClick={() => router.push('/provas/criar')}
-            className="flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3 shrink-0"
-          >
-            <Plus className="w-4 h-4" />
-            Nova Prova
-          </button>
         </div>
       </motion.div>
 
-      {/* Stats */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.08 }}
-        className="flex items-stretch divide-x divide-border surface-1 rounded-[var(--radius-surface)] mb-10 overflow-x-auto"
-      >
-        {statCards.map((stat) => {
-          const Icon = stat.icon;
-          const isMedia = stat.key === 'media';
-          return (
-            <div key={stat.label} className="flex items-center gap-2.5 px-4 py-3.5 flex-1 min-w-[150px]">
-              <Icon className="w-4 h-4 text-muted-foreground flex-shrink-0" aria-hidden="true" />
-              <div className="min-w-0">
-                <p data-numeric className="font-display type-lead font-semibold flex items-center gap-1">
-                  {isMedia && mediaSparse ? '—' : stat.value}
-                  {isMedia && mediaLowConfidence && (
-                    <AlertCircle
-                      className="w-3 h-3 text-muted-foreground"
-                      aria-label="Amostra pequena: a média ainda pode mudar bastante"
-                    />
-                  )}
-                </p>
-                <p className="type-caption text-muted-foreground truncate">
-                  {isMedia
-                    ? mediaSparse
-                      ? 'poucos dados'
-                      : `${stat.label} · ${finalizadasTotalQuestoes}`
-                    : stat.label}
-                </p>
-              </div>
-            </div>
-          );
-        })}
-      </motion.div>
+      <CaminhosDoTreino />
+
+      {exams.length > 0 && (
+        <h2 className="font-display type-title font-semibold mb-4">Suas provas</h2>
+      )}
 
       {/* Exams list */}
       {loading ? (
         <div className="text-center py-20 text-muted-foreground type-meta">Carregando...</div>
-      ) : exams.length === 0 ? (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-center py-20 surface-1 rounded-[var(--radius-container)]"
-        >
-          <FileText className="w-12 h-12 text-muted-foreground/40 mx-auto mb-4" />
-          <h3 className="font-display type-title font-semibold mb-2">Nenhuma prova ainda</h3>
-          <p className="text-muted-foreground mb-6">Crie sua primeira prova personalizada para começar a treinar</p>
-          <button
-            onClick={() => router.push('/provas/criar')}
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3"
-          >
-            <Plus className="w-4 h-4" />
-            Criar Prova
-          </button>
-        </motion.div>
-      ) : (
+      ) : exams.length === 0 ? null : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <AnimatePresence>
             {exams.map((exam, idx) => {

@@ -48,6 +48,33 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 - **Menu: 6 itens à vista** (Início, Treino, Flashcards, Redação, Cálculo,
   Progresso) e o resto em "Mais", aberto sozinho quando a página atual é dele.
   Tela nova entra em "Mais", a não ser que seja estudo diário.
+  **Treino = Provas (Pablo, 02/11/2026: "tem a mesma função e é até melhor,
+  inclui flashcards antes"):** o item Treino do menu e o atalho do Início
+  abrem `/provas`, e Provas saiu do "Mais". O treino do dia (`/treino`) fica
+  só pelo "Começar" do Início, porque é ele que faz o cronograma andar; o item
+  Treino fica aceso nas duas rotas.
+  **Passeio do iniciante (02/11/2026):** Vestibular saiu do menu (tela toda
+  "Em construção"; as 48 questões reais seguem no treino do dia). Na Redação,
+  "Treino por partes" é o cartão grande do topo ("Primeira vez? Comece aqui")
+  e a lista de temas virou "Ou escreva a redação inteira". O lembrete de
+  leitura aparece só na 1ª tela da visita e some ao trocar de tela (cobria o
+  conteúdo em 8 telas); entrou pelo Início, não aparece. Banco mostra o
+  enunciado com `MathText` (aparecia `$\log_2$` cru). "Recomeçar" do Treino
+  por partes virou "Começar do zero", o nome que já valia no treino.
+  **Treino é o lugar único de escolher como treinar (opção B, mesmo dia):**
+  eram 6 portas para questões. O topo de `/provas` tem 3 cartões
+  (`components/treino/caminhos-do-treino.tsx`): Nova prova (o principal),
+  Prova rápida ou simulado (`/simulado`) e Refazer meus erros
+  (`/caderno-erros`). Simulado e Caderno de Erros saíram do "Mais" e acendem
+  o item Treino. A faixa de números das provas saiu (os números ficam em
+  Progresso). Ficam fora do Treino só o "Começar" e as Revisões do Início
+  (o dia do cronograma) e o Banco de Questões no "Mais".
+  2º passeio (conta nova simulada): nome da prova é opcional (vazio vira
+  "Matemática e Física", `nomeAutomatico`); Simulado e Criar prova oferecem
+  só matérias com questão (`MATERIAS_COM_QUESTOES`: saíram Literatura, Livros
+  e Redação do Simulado); a tela do Simulado se chama "Prova rápida ou
+  simulado", como o cartão; Simulado e Caderno têm "‹ Treino" no topo; Caderno
+  vazio diz "Ainda não há erro para refazer", não "Continue assim".
 - **Início = o cronograma de hoje e "Começar", no jeito Nubank (B, 21/10/2026):**
   bloco bg-primary de ponta a ponta com "N matérias hoje" (`--type-mega`) e o
   Começar em pílula; 4 atalhos redondos (mesmos ícones do menu); seções com
@@ -463,6 +490,13 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   de agora (feitas com visto, futuras apagadas); "Pense antes" mudou para a
   aba Ajuda; ponte, conectivos e erros da proposta foram para "Mais dicas";
   autores recolhidos numa linha, abertos sozinhos na frase de repertório.
+- **Lado a lado, como Bíblia em duas línguas (Pablo, 31/10/2026):** na tela
+  grande, "Como escrever" à esquerda e "Sua vez" à direita, com uma linha no
+  meio e sem caixa em volta do molde. O molde é UM parágrafo corrido em letra
+  de 19 px (nada de lista 1, 2, 3); a frase de agora tem fundo, o nome dela
+  vai em cima ("Agora, frase 2: Ponte..."), as feitas apagam e a tese vem
+  sublinhada. "Sua vez" fica colado na caixa (no topo da coluna, cortava a
+  ficha do autor; o `coringas.e2e` mede). Aba Exemplo segue em lista.
 - As redações-modelo de `data/redacao/modelos.ts` (textos originais, temas
   reais, cada trecho comentado) seguem em /redacao/modelos. Não inventa
   texto-base com IA. Repertório nos modelos: só fato verificável.

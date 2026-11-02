@@ -12,6 +12,8 @@ import { fireConfetti } from '@/components/animations';
 import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
 import dynamic from 'next/dynamic';
 import { PaginaDaProva } from '@/components/pagina-da-prova';
+import { MATERIAS_COM_QUESTOES } from '@/lib/materias-com-questoes';
+import { VoltarAoTreino } from '@/components/treino/voltar-ao-treino';
 import { PainelProvaRapida, MISTURA_PROVA_RAPIDA } from '@/components/simulado/painel-prova-rapida';
 import { ContagemRegressiva } from '@/components/simulado/contagem-regressiva';
 import { CorrecaoDosErros } from '@/components/simulado/correcao-dos-erros';
@@ -26,7 +28,7 @@ type ProvaGerada = { qs: any[]; total: number; sessionId: string | null; initial
 // Limiares de dado esparso (decisão travada, ver skill decisoes-prepenem):
 // <5 questões não mostra %, 5-15 mostra com indicador de baixa confiança.
 const MIN_QUESTOES_PARA_TAXA = 5;
-const MATERIAS_SIMULADO = Object.keys(materiaColors);
+const MATERIAS_SIMULADO = MATERIAS_COM_QUESTOES;
 const TAMANHOS_SIMULADO = [10, 15, 20];
 const MINUTOS_POR_QUESTAO = 3;
 const LIMIAR_BAIXA_CONFIANCA = 15;
@@ -74,7 +76,7 @@ export default function SimuladoPage() {
   // Simulado semanal curto, de uma matéria (pedido do Pablo, 06/10/2026):
   // 10, 15 ou 20 questões, 3 minutos por questão como no ENEM.
   const [totalQ, setTotalQ] = useState(10);
-  const [materia, setMateria] = useState(MATERIAS_SIMULADO[0]);
+  const [materia, setMateria] = useState<string>(MATERIAS_SIMULADO[0]);
   const [useTimer, setUseTimer] = useState(true);
 
   // Exam
@@ -351,12 +353,13 @@ export default function SimuladoPage() {
   if (phase === 'config') {
     return (
       <div className="p-4 md:p-8 max-w-3xl mx-auto">
+        <VoltarAoTreino />
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <h1 className="font-display type-headline font-bold tracking-tight mb-2">
-            Simulado da semana
+            Prova rápida ou simulado
           </h1>
           <p className="type-body text-muted-foreground mb-8">
-            Uma matéria, poucas questões, uma vez por semana. Começa pelas fáceis.
+            Cansado? A prova rápida já vem pronta. Com mais fôlego, faça o simulado da semana logo abaixo.
           </p>
         </motion.div>
 
@@ -368,6 +371,10 @@ export default function SimuladoPage() {
           transition={{ delay: 0.1 }}
           className="surface-1 rounded-[var(--radius-surface)] p-6 md:p-8 space-y-6"
         >
+          <div>
+            <h2 className="font-display type-title font-semibold">Simulado da semana</h2>
+            <p className="type-meta text-muted-foreground mt-1">Uma matéria, com tempo, começando pelas fáceis.</p>
+          </div>
           {/* Matéria */}
           <div>
             <label className="type-meta font-medium mb-2 block">Matéria</label>

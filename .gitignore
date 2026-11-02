@@ -23,3 +23,6 @@ questoes-prepenem.json
 # Redações da cartilha do INEP para o golden set (texto do INEP não vai pro git)
 tests/redacao/textos/
 docs/redacao/fontes/
+
+# Python
+__pycache__/

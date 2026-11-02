@@ -51,7 +51,7 @@ export function ExemploComCoringa({ coringas, tema, escolhido, aoEscolher }: {
       <div className="flex flex-wrap gap-2" role="group" aria-label="Assunto do exemplo">
         {exemplos.map((e, i) => (
           <button key={e.tema} type="button" aria-pressed={e === exemplo} onClick={() => setIndice(i)} className={PILULA}>
-            {e.assuntos[0]}
+            {e.assuntos[0]}{exemplos.slice(0, i).filter((o) => o.assuntos[0] === e.assuntos[0]).length > 0 && <span data-numeric> {exemplos.slice(0, i + 1).filter((o) => o.assuntos[0] === e.assuntos[0]).length}</span>}
           </button>
         ))}
       </div>

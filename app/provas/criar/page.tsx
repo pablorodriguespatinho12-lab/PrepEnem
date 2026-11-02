@@ -6,19 +6,9 @@ import { ChevronLeft, FileText, Sparkles, Target, Trophy, Check, Loader2 } from 
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
 import { EscolhaDeNumero } from '@/components/escolha-de-numero';
+import { MATERIAS_COM_QUESTOES, nomeAutomatico } from '@/lib/materias-com-questoes';
 
-const MATERIAS_DISPONIVEIS = [
-  'Matemática',
-  'Física',
-  'Química',
-  'Biologia',
-  'Português',
-  'História',
-  'Geografia',
-  'Filosofia',
-  'Sociologia',
-  'Inglês',
-];
+const MATERIAS_DISPONIVEIS = MATERIAS_COM_QUESTOES;
 
 const NIVEIS = [
   {
@@ -59,7 +49,6 @@ export default function CriarProvaPage() {
   };
 
   const handleCriar = async () => {
-    if (!nome.trim()) return toast.error('Dê um nome para a prova');
     if (materias.length === 0) return toast.error('Escolha pelo menos uma matéria');
     if (totalQuestoes < 1) return toast.error('Número mínimo: 1 questão');
 
@@ -68,7 +57,7 @@ export default function CriarProvaPage() {
       const res = await fetch('/api/provas/criar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nome, nivel, materias, totalQuestoes }),
+        body: JSON.stringify({ nome: nome.trim() || nomeAutomatico(materias), nivel, materias, totalQuestoes }),
       });
       const data = await res.json();
       if (!res.ok) {
@@ -113,12 +102,12 @@ export default function CriarProvaPage() {
           transition={{ delay: 0.1 }}
           className="surface-1 rounded-[var(--radius-surface)] p-6"
         >
-          <label className="block type-meta font-semibold text-foreground mb-3">Nome da prova</label>
+          <label className="block type-meta font-semibold text-foreground mb-3">Nome da prova <span className="text-muted-foreground font-normal">(opcional)</span></label>
           <input
             type="text"
             value={nome}
             onChange={(e) => setNome(e.target.value)}
-            placeholder="Ex: Simulado de Ciências da Natureza"
+            placeholder="Se deixar em branco, vira o nome das matérias"
             className="w-full px-4 py-3 rounded-[var(--radius-control)] border border-border bg-[hsl(var(--surface-2))] shadow-elev-1 focus:border-primary outline-none t-colors text-foreground placeholder:text-muted-foreground/60"
           />
         </motion.div>

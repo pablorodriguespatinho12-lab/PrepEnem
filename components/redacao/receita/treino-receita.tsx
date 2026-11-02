@@ -153,12 +153,12 @@ export function TreinoReceita() {
         <AlertDialog>
           <AlertDialogTrigger asChild>
             <button type="button" className="inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors">
-              <RotateCcw className="w-4 h-4" aria-hidden /> Recomeçar
+              <RotateCcw className="w-4 h-4" aria-hidden /> Começar do zero
             </button>
           </AlertDialogTrigger>
           <AlertDialogContent>
             <AlertDialogHeader>
-              <AlertDialogTitle>Recomeçar do zero?</AlertDialogTitle>
+              <AlertDialogTitle>Começar do zero?</AlertDialogTitle>
               <AlertDialogDescription>Tema, causas e tudo o que você escreveu aqui serão apagados.</AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>

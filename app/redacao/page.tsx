@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import {
   PenTool, FileText, Clock, CheckCircle2, Loader2, ChevronLeft,
   Send, BookOpen, History, Star, AlertTriangle, BarChart3,
-  Sparkles, Plus
+  Sparkles, Plus, ArrowRight
 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -551,10 +551,22 @@ export default function RedacaoPage() {
 
         {/* Ferramentas numa linha de links: eram 4 cartões antes dos temas, e
             "Atualizar" (o polling já atualiza) ganhava um cartão inteiro. */}
+        {/* O caminho guiado era um link pequeno e a lista de temas (redação
+            inteira, sem guia) ocupava a tela: o iniciante caía no difícil
+            (passeio do iniciante, 02/11/2026). */}
+        <a
+          href="/redacao/partes"
+          className="group mb-4 flex items-center justify-between gap-4 p-5 rounded-[var(--radius-surface)] bg-primary text-primary-foreground shadow-elev-1 hover:shadow-elev-2 t-colors"
+        >
+          <span>
+            <span className="flex items-center gap-2 font-display type-lead font-semibold">
+              <Sparkles className="w-5 h-5" aria-hidden /> Treino por partes
+            </span>
+            <span className="block type-meta opacity-90 mt-1">Primeira vez? Comece aqui: 7 passos guiados, do tema à redação pronta.</span>
+          </span>
+          <ArrowRight className="w-5 h-5 shrink-0 transition-transform duration-200 group-hover:translate-x-1" aria-hidden />
+        </a>
         <nav aria-label="Outras ferramentas de redação" className="flex flex-wrap gap-x-5 gap-y-1 mb-6 type-meta">
-          <a href="/redacao/partes" className="inline-flex items-center gap-1.5 py-2 text-primary-text font-medium hover:underline underline-offset-4">
-            <Sparkles className="w-4 h-4" /> Treino por partes
-          </a>
           <button onClick={() => setView('history')} className="inline-flex items-center gap-1.5 py-2 text-muted-foreground hover:text-foreground t-colors">
             <History className="w-4 h-4" /> Histórico
           </button>
@@ -565,7 +577,7 @@ export default function RedacaoPage() {
         </nav>
         {/* Theme selection */}
         <h2 className="font-display type-lead font-semibold mb-3 flex items-center gap-2">
-          <BookOpen className="w-5 h-5 text-primary-text" /> Escolha um Tema
+          <BookOpen className="w-5 h-5 text-primary-text" /> Ou escreva a redação inteira
         </h2>
 
         <div className="space-y-3">

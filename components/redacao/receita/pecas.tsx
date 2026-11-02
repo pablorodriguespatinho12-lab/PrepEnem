@@ -37,9 +37,9 @@ const COR_SITUACAO: Record<SituacaoLinhas, string> = {
 };
 const TEXTO_SITUACAO: Record<SituacaoLinhas, string> = {
   vazio: '',
-  curto: 'abaixo da meta',
+  curto: 'continue escrevendo',
   'na-meta': 'na meta',
-  longo: 'acima da meta',
+  longo: 'passou um pouco, pode cortar',
 };
 
 export function ContadorLinhas({ texto, min, max }: { texto: string; min: number; max: number }) {
@@ -47,7 +47,7 @@ export function ContadorLinhas({ texto, min, max }: { texto: string; min: number
   const situacao = situacaoLinhas(linhas, min, max);
   return (
     <p data-numeric className="type-meta font-medium" style={{ color: COR_SITUACAO[situacao] }} aria-live="polite">
-      {linhas} {linhas === 1 ? 'linha' : 'linhas'} · meta {min} a {max}
+      {linhas} {linhas === 1 ? 'linha' : 'linhas'} · o ideal é {min} a {max}
       {TEXTO_SITUACAO[situacao] && ` · ${TEXTO_SITUACAO[situacao]}`}
     </p>
   );
@@ -59,7 +59,7 @@ export function CaixaTexto({ id, valor, aoMudar, rotulo, placeholder, alto = fal
   id: string;
   valor: string;
   aoMudar: (v: string) => void;
-  rotulo: string;
+  rotulo: React.ReactNode;
   placeholder: string;
   alto?: boolean;
   encher?: boolean;
@@ -117,7 +117,7 @@ export function PerguntasGuia({ perguntas }: { perguntas: string[] }) {
   if (perguntas.length === 0) return null;
   return (
     <section className="border-l-2 border-primary pl-4" aria-label="Perguntas para pensar">
-      <p className="type-rotulo text-primary-text mb-1">Pense antes</p>
+      <p className="type-rotulo text-primary-text mb-1">Pense antes (de cabeça, não precisa escrever)</p>
       <ul className="space-y-1">
         {perguntas.map((p) => <li key={p} className="font-reading type-body">{p}</li>)}
       </ul>

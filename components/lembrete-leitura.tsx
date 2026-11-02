@@ -19,6 +19,10 @@ const TELA_DE_QUESTAO = /^\/(provas|simulado|treino|redacao\/partes)(\/|$)/;
 export function LembreteLeitura() {
   const pathname = usePathname();
   const [aberto, setAberto] = useState(false);
+  // Só na PRIMEIRA tela da visita (passeio do iniciante, 02/11/2026: ficava
+  // em cima do conteúdo em 8 telas até ele achar o X). Trocou de tela, conta
+  // como lembrado. Entrou pelo Início: a seção Leitura de lá já é o lembrete.
+  const [primeiraTela, setPrimeiraTela] = useState<string | null>(null);
   const { paginas, meta, mudarPagina } = useLeitura();
 
   useEffect(() => {
@@ -29,6 +33,16 @@ export function LembreteLeitura() {
     }
     setAberto(true);
   }, []);
+
+  useEffect(() => {
+    if (!aberto || !pathname) return;
+    if (primeiraTela === null) {
+      if (pathname === '/dashboard') fechar();
+      else setPrimeiraTela(pathname);
+      return;
+    }
+    if (pathname !== primeiraTela) fechar();
+  }, [aberto, pathname, primeiraTela]);
 
   function fechar() {
     setAberto(false);
