@@ -505,6 +505,18 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   vai em cima ("Agora, frase 2: Ponte..."), as feitas apagam e a tese vem
   sublinhada. "Sua vez" fica colado na caixa (no topo da coluna, cortava a
   ficha do autor; o `coringas.e2e` mede). Aba Exemplo segue em lista.
+- **Aba Exemplo no SEU tema (Pablo, 02/11/2026: "o exemplo tem que ser desse
+  tema", "quais frases eu posso utilizar, quais não"):** muda a regra antiga
+  de nunca mostrar o tema do aluno. Tema do ENEM (os 28 da prova dos coringas):
+  "Qual autor usar no seu tema?", autores com ✓/✗ pelo veredito dos 3 juízes
+  NESSE tema, o parágrafo aprovado nele em 3 partes, "Pôr a frase do autor no
+  meu texto" e "Me testar" (esconde as marcas; tocar revela uma). Sem
+  "Escolha um assunto"; a redação pronta fica recolhida embaixo. Tema
+  digitado fora da lista: exemplo em outro tema, como antes. Conclusão: só a
+  redação pronta. Dados: `lib/redacao/coringas-por-tema.json`, de
+  `docs/redacao/prova-coringas/por_tema.py`; teste `autores-no-tema.e2e`.
+  Já falhava antes (não é desta mudança): no `coringas.e2e`, a ficha do
+  Luther King passa 19 px em 1440 px.
 - As redações-modelo de `data/redacao/modelos.ts` (textos originais, temas
   reais, cada trecho comentado) seguem em /redacao/modelos. Não inventa
   texto-base com IA. Repertório nos modelos: só fato verificável.
