@@ -357,7 +357,9 @@ export function PassoParagrafo(props: Props) {
   /* Glossário: a instrução vem antes dos rótulos do molde na leitura. */
   const m = criarMarcador();
   const instrucao = paragrafo.chave === 'conclusao'
-    ? `Feche com a proposta de intervenção: uma contra cada motivo, cada uma dizendo quem faz, o que faz, como faz, para quê e mais um detalhe. Siga o molde. Meta: ${paragrafo.linhasMin} a ${paragrafo.linhasMax} linhas.`
+    /* Uma linha só: em 2 linhas a tela rolava 9 px (01/11/2026). Os 5
+       elementos (quem faz, o que faz...) já estão nos botões ao lado. */
+    ? `Feche com a proposta de intervenção: uma para cada motivo, com os 5 elementos. Siga o molde. Meta: ${paragrafo.linhasMin} a ${paragrafo.linhasMax} linhas.`
     : `Uma frase por função do molde. Meta: ${paragrafo.linhasMin} a ${paragrafo.linhasMax} linhas.`;
 
   return (
