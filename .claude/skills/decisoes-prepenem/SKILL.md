@@ -182,7 +182,15 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   falhou em 2 por cota; por isso o erro agora é TROCADO direto no texto
   (`aplicarCorrecoes`) e só gera de novo o que não achou. "Correta: X" no
   trecho é sobre o gabarito: achou ENEM 2021 Q113 (id cmoudnnu2002auoz9dskgmqnx)
-  com C no banco e conta dando D (31,25 L); não corrigido sem o Pablo.
+  com C no banco e conta dando D (31,25 L). **Resolvido em 02/11/2026 (Pablo
+  autorizou):** o gabarito C estava certo (gabarito oficial `2021_GB_impresso_D2_CD5`);
+  o TEXTO no banco é que tinha perdido "80% de conversão" e trazia D = 32 no
+  lugar de 64. Lição: conta que não fecha com o gabarito, olhar primeiro a
+  página escaneada (`public/questoes-imagens/<id>.webp`), não o gabarito.
+  Varredura das 88 questões de resposta numérica (explicação que termina em
+  outra alternativa): mais 3 com a EXPLICAÇÃO errada e o gabarito certo
+  (2021 Q99, 2022 Q99, 2022 Q153), corrigidas; versão antiga guardada fora do
+  git. As 679 de resposta em texto não entram nessa varredura.
 - **Deck de livro (Pablo, 15/10/2026, artefato https://claude.ai/artifact/6PoWDVkq5cr9xN4v3EkeBR):**
   matéria "Livros", frente = título curto, verso = 1 ou 2 frases. Frase de
   capítulo (`Flashcard.capitulo`) fica trancada até "Li o capítulo N"
