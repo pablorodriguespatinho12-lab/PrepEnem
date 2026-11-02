@@ -5,8 +5,8 @@ import { usePathname } from 'next/navigation';
 import { useSession, signOut } from 'next-auth/react';
 import { useTheme } from 'next-themes';
 import {
-  Home, BookOpen, AlertCircle, BarChart3, Settings, ShieldCheck,
-  LogOut, Menu, X, GraduationCap, ClipboardList, Library, PenTool,
+  Home, BookOpen, BarChart3, Settings, ShieldCheck,
+  LogOut, Menu, X, GraduationCap, Library, PenTool,
   Layers, Moon, Sun, Sigma, ChevronDown
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -22,15 +22,14 @@ const principais: ItemNav[] = [
   // Treino = Provas (Pablo, 02/11/2026: a prova escolhida, com flashcards antes,
   // faz o papel do treino). O treino do dia segue pelo "Começar" do Início,
   // porque é ele que faz o cronograma andar.
-  { href: '/provas', label: 'Treino', icon: BookOpen, tambem: ['/treino'] },
+  { href: '/provas', label: 'Treino', icon: BookOpen, tambem: ['/treino', '/simulado', '/caderno-erros'] },
   { href: '/flashcards', label: 'Flashcards', icon: Layers },
   { href: '/redacao', label: 'Redação', icon: PenTool },
   { href: '/calculo', label: 'Cálculo', icon: Sigma },
   { href: '/progresso', label: 'Progresso', icon: BarChart3 },
 ];
+// Simulado e Caderno de Erros moram dentro do Treino desde 02/11/2026.
 const secundarios: ItemNav[] = [
-  { href: '/simulado', label: 'Simulado', icon: ClipboardList },
-  { href: '/caderno-erros', label: 'Caderno de Erros', icon: AlertCircle },
   { href: '/banco-questoes', label: 'Banco de Questões', icon: Library },
   { href: '/perfil', label: 'Perfil', icon: Settings },
 ];

@@ -61,6 +61,14 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   conteúdo em 8 telas); entrou pelo Início, não aparece. Banco mostra o
   enunciado com `MathText` (aparecia `$\log_2$` cru). "Recomeçar" do Treino
   por partes virou "Começar do zero", o nome que já valia no treino.
+  **Treino é o lugar único de escolher como treinar (opção B, mesmo dia):**
+  eram 6 portas para questões. O topo de `/provas` tem 3 cartões
+  (`components/treino/caminhos-do-treino.tsx`): Nova prova (o principal),
+  Prova rápida ou simulado (`/simulado`) e Refazer meus erros
+  (`/caderno-erros`). Simulado e Caderno de Erros saíram do "Mais" e acendem
+  o item Treino. A faixa de números das provas saiu (os números ficam em
+  Progresso). Ficam fora do Treino só o "Começar" e as Revisões do Início
+  (o dia do cronograma) e o Banco de Questões no "Mais".
 - **Início = o cronograma de hoje e "Começar", no jeito Nubank (B, 21/10/2026):**
   bloco bg-primary de ponta a ponta com "N matérias hoje" (`--type-mega`) e o
   Começar em pílula; 4 atalhos redondos (mesmos ícones do menu); seções com
