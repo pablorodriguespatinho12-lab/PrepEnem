@@ -5,6 +5,8 @@ import { AlertCircle, Filter, BookOpen, CheckCircle2, XCircle, RefreshCcw, Searc
 import { useRouter } from 'next/navigation';
 import { materiaColors } from '@/lib/theme-colors';
 import { EsqueletoLista } from '@/components/esqueletos';
+import { VoltarAoTreino } from '@/components/treino/voltar-ao-treino';
+import Link from 'next/link';
 
 const MATERIAS = ['Matemática', 'Português', 'Biologia', 'Química', 'Física', 'História', 'Geografia', 'Filosofia', 'Sociologia'];
 
@@ -47,6 +49,7 @@ export default function CadernoErrosPage() {
 
   return (
     <div className="p-4 md:p-8 max-w-4xl mx-auto">
+      <VoltarAoTreino />
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <div className="flex items-center gap-3 mb-2">
           <AlertCircle className="w-6 h-6 text-primary-text" />
@@ -82,8 +85,15 @@ export default function CadernoErrosPage() {
       ) : filtered.length === 0 ? (
         <div className="text-center py-12">
           <CheckCircle2 className="w-12 h-12 mx-auto mb-3" style={{ color: 'hsl(var(--success))' }} />
-          <p className="font-display type-lead font-semibold">Nenhum erro encontrado!</p>
-          <p className="type-meta text-muted-foreground">Continue assim.</p>
+          {(erros ?? []).length === 0 ? (
+            <>
+              <p className="font-display type-lead font-semibold">Ainda não há erro para refazer</p>
+              <p className="type-meta text-muted-foreground mb-4">Quando você errar uma questão no treino, ela aparece aqui.</p>
+              <Link href="/provas" className="inline-flex items-center px-5 py-2.5 rounded-[var(--radius-control)] bg-primary text-primary-foreground type-meta font-medium">Ir para o Treino</Link>
+            </>
+          ) : (
+            <p className="font-display type-lead font-semibold">Nenhum erro com essa busca</p>
+          )}
         </div>
       ) : (
         <div className="space-y-4">

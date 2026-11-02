@@ -69,6 +69,12 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   o item Treino. A faixa de números das provas saiu (os números ficam em
   Progresso). Ficam fora do Treino só o "Começar" e as Revisões do Início
   (o dia do cronograma) e o Banco de Questões no "Mais".
+  2º passeio (conta nova simulada): nome da prova é opcional (vazio vira
+  "Matemática e Física", `nomeAutomatico`); Simulado e Criar prova oferecem
+  só matérias com questão (`MATERIAS_COM_QUESTOES`: saíram Literatura, Livros
+  e Redação do Simulado); a tela do Simulado se chama "Prova rápida ou
+  simulado", como o cartão; Simulado e Caderno têm "‹ Treino" no topo; Caderno
+  vazio diz "Ainda não há erro para refazer", não "Continue assim".
 - **Início = o cronograma de hoje e "Começar", no jeito Nubank (B, 21/10/2026):**
   bloco bg-primary de ponta a ponta com "N matérias hoje" (`--type-mega`) e o
   Começar em pílula; 4 atalhos redondos (mesmos ícones do menu); seções com
