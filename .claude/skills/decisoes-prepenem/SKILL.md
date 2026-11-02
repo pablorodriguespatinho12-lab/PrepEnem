@@ -517,6 +517,23 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   `docs/redacao/prova-coringas/por_tema.py`; teste `autores-no-tema.e2e`.
   Já falhava antes (não é desta mudança): no `coringas.e2e`, a ficha do
   Luther King passa 19 px em 1440 px.
+- **Redação pronta parte por parte (Pablo, 02/11/2026: "primeiro mostra uma
+  redação nota 1000... essa é a introdução, essa é a tese... depois a minha
+  vez"):** o diálogo abre em "Parte por parte" (`redacao-por-partes.tsx`):
+  uma tela por parágrafo, cada frase com o nome da função do molde em cima, a
+  proposta com os 5 elementos grifados na frase e a legenda embaixo, e a
+  última tela "Agora é a sua vez". "Inteira, com grifos" é a versão de 28/10.
+  Medido: 0 px escondidos em 1366x768 e 2 px em 1440x762; no celular (375)
+  rola dentro da tela, 154 a 320 px. Aba Exemplo, Drummond: "Em palavras
+  simples" (de `MEMORIA`) e "Seu tema não tem uma lei própria?" com o molde
+  da ligação e o Pacto Internacional dos Direitos Econômicos, Sociais e
+  Culturais (`lib/redacao/lei-coringa.ts`; não é coringa, não passou pela
+  prova, é a lei da amarra). Baralho padrão "Autores por tema": 28 cartões,
+  um por tema, até 3 autores além do Drummond (que serve em todos), de
+  `coringas-por-tema.json` (`scripts/seed-autores-por-tema.ts`).
+  **Aberto:** motivo próprio no passo 2 (ele escreveu desinformação e falta
+  de empatia, fora das 5 causas, e o molde seguia as do exemplo) e a
+  correção gastar o "Treine agora" em erro de digitação.
 - As redações-modelo de `data/redacao/modelos.ts` (textos originais, temas
   reais, cada trecho comentado) seguem em /redacao/modelos. Não inventa
   texto-base com IA. Repertório nos modelos: só fato verificável.
