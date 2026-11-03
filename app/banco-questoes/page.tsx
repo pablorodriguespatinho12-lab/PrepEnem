@@ -3,6 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, Filter, Search, ChevronDown, Play, Hash, Sparkles, Loader2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { semMarcaDeImagem } from '@/lib/enunciado-sem-alternativas';
 import { materiaColors } from '@/lib/theme-colors';
 import { ETAPA_LABEL, etapaDaQuestao } from '@/lib/treino-etapas';
 import { toast } from 'sonner';
@@ -305,7 +306,7 @@ export default function BancoQuestoesPage() {
                       {ETAPA_LABEL[etapaDaQuestao(q)]}
                     </span>
                   </div>
-                  <div className="font-reading type-body measure-reading line-clamp-2 text-foreground"><MathText text={q.enunciado} /></div>
+                  <div className="font-reading type-body measure-reading line-clamp-2 text-foreground"><MathText text={semMarcaDeImagem(q.enunciado)} /></div>
                   {q.origem && (
                     <p className="type-micro text-muted-foreground mt-1">Origem: {q.origem}</p>
                   )}

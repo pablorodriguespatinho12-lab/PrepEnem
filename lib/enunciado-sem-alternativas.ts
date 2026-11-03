@@ -35,3 +35,9 @@ export function cortarAlternativasRepetidas(enunciado: string, alternativas: str
   }
   return enunciado;
 }
+
+/* "[IMAGEM]" é a marca do importador de onde fica a figura; a figura aparece
+   embaixo do texto, então a marca não vai para a tela. */
+export function semMarcaDeImagem(enunciado: string): string {
+  return enunciado.replace(/\[IMAGEM\]\s*/gi, '').trim();
+}

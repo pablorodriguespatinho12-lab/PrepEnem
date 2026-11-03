@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
+import { semMarcaDeImagem } from '@/lib/enunciado-sem-alternativas';
 import { materiaColors } from '@/lib/theme-colors';
 import { fireConfetti } from '@/components/animations';
 import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
@@ -572,7 +573,7 @@ export default function SimuladoPage() {
                     </>
                   )}
                 </div>
-                <div className="prose-reading"><MathText text={currentQ.enunciado ?? ''} /></div>
+                <div className="prose-reading"><MathText text={semMarcaDeImagem(currentQ.enunciado ?? '')} /></div>
                 {currentQ.pdfFileUrl && currentQ.paginaPdf && (
                   <PaginaDaProva
                     key={currentQ.id}

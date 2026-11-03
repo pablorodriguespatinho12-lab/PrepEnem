@@ -206,7 +206,7 @@ export async function POST(req: Request) {
         if (!['A', 'B', 'C', 'D', 'E'].includes(resposta)) resposta = 'A';
 
         const enunciado = q.enunciado ?? `Questão ${qNum}`;
-        const imagePatterns = /\[IMAGEM\]|imagem|figura|gráfico|tirinha|charge|quadrinho|esquema|diagrama|tabela|mapa|ilustração/i;
+        const imagePatterns = /\[IMAGEM\]|imagem|figura(?! de linguagem)|gráfico|tirinha|charge|quadrinho|esquema|diagrama|tabela|mapa|ilustração/i;
 
         await prisma.question.create({
           data: {
