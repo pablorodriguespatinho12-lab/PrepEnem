@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { ChevronLeft, FileText, Sparkles, Target, Trophy, Check, Loader2 } from 'lucide-react';
+import { ChevronLeft, FileText, Sparkles, Target, Trophy, Check, Loader2, Flame } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
 import { EscolhaDeNumero } from '@/components/escolha-de-numero';
@@ -14,26 +14,32 @@ const NIVEIS = [
   {
     id: 'facil',
     label: 'Fácil',
-    desc: 'Questões de nível fácil e médio. Ideal para revisão.',
+    desc: 'Pergunta direta e curta: "O que é...?".',
     dotColor: 'hsl(var(--chart-2))',
     icon: Sparkles,
   },
   {
     id: 'medio',
     label: 'Médio',
-    desc: 'Questões de nível médio e modelo ENEM. Treinamento padrão.',
+    desc: 'Com um texto um pouco maior.',
     dotColor: 'hsl(var(--chart-5))',
     icon: Target,
   },
   {
-    id: 'vestibular',
-    label: 'Vestibular',
-    desc: 'Questões de vestibulares e modelo ENEM. Nível mais desafiador.',
+    id: 'dificil',
+    label: 'Difícil',
+    desc: 'Texto longo, no jeito do ENEM. Não é questão real.',
+    dotColor: 'hsl(var(--chart-3))',
+    icon: Flame,
+  },
+  {
+    id: 'enem',
+    label: 'ENEM',
+    desc: 'Só questão real do ENEM.',
     dotColor: 'hsl(var(--chart-4))',
     icon: Trophy,
   },
 ];
-
 export default function CriarProvaPage() {
   const router = useRouter();
   const [nome, setNome] = useState('');
@@ -120,7 +126,7 @@ export default function CriarProvaPage() {
           className="surface-1 rounded-[var(--radius-surface)] p-6"
         >
           <label className="block type-meta font-semibold text-foreground mb-4">Nível</label>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {NIVEIS.map((n) => {
               const NIcon = n.icon;
               const selected = nivel === n.id;

@@ -2,7 +2,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Trophy, Play, Trash2, BookOpen, Sparkles, Target, AlertCircle } from 'lucide-react';
+import { Trophy, Play, Trash2, BookOpen, Sparkles, Target, AlertCircle, Flame } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
 import { CaminhosDoTreino } from '@/components/treino/caminhos-do-treino';
@@ -15,6 +15,8 @@ const LIMIAR_BAIXA_CONFIANCA = 15;
 const nivelLabels: Record<string, { label: string; dotColor: string; icon: any }> = {
   facil: { label: 'Fácil', dotColor: 'hsl(var(--chart-2))', icon: Sparkles },
   medio: { label: 'Médio', dotColor: 'hsl(var(--chart-5))', icon: Target },
+  dificil: { label: 'Difícil', dotColor: 'hsl(var(--chart-3))', icon: Flame },
+  enem: { label: 'ENEM', dotColor: 'hsl(var(--chart-4))', icon: Trophy },
   vestibular: { label: 'Vestibular', dotColor: 'hsl(var(--chart-4))', icon: Trophy },
 };
 

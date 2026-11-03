@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { BookOpen, Filter, Search, ChevronDown, Play, Hash, Sparkles, Loader2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { materiaColors } from '@/lib/theme-colors';
+import { ETAPA_LABEL, etapaDaQuestao } from '@/lib/treino-etapas';
 import { toast } from 'sonner';
 import dynamic from 'next/dynamic';
 
@@ -301,7 +302,7 @@ export default function BancoQuestoesPage() {
                     <span
                       className="type-caption px-2 py-0.5 rounded-[var(--radius-data)] bg-muted text-muted-foreground"
                     >
-                      {q.dificuldade === 'facil' ? 'Fácil' : q.dificuldade === 'dificil' ? 'Difícil' : 'Médio'}
+                      {ETAPA_LABEL[etapaDaQuestao(q)]}
                     </span>
                   </div>
                   <div className="font-reading type-body measure-reading line-clamp-2 text-foreground"><MathText text={q.enunciado} /></div>

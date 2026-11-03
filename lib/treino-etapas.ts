@@ -1,59 +1,60 @@
-// Escada do treino: a questão do ENEM é o degrau final, não o primeiro.
-// Antes dela vêm questões menores sobre o mesmo conteúdo (base → intermediária),
-// para o estudante chegar à questão real já com as peças na mão.
-//
-// O campo `dificuldade` não serve para isso: as questões reais do ENEM estão
-// cadastradas como "facil"/"medio" pela dificuldade estimada, e na prática são
-// as mais difíceis da sessão. A etapa se decide pela ORIGEM primeiro.
-
+// Escada do treino: Fácil → Médio → Difícil → ENEM (pedido do Pablo,
+// 03/11/2026). A questão do ENEM é o degrau final, não o primeiro.
+//   Fácil: pergunta direta e curta ("O que é X?").
+//   Médio: com um texto um pouco maior.
+//   Difícil: texto longo no jeito do ENEM, mas NÃO é questão real.
+//   ENEM: só questão real do ENEM.
+// Questão real nunca aparece como Fácil, Médio ou Difícil: o nível se decide
+// pela ORIGEM primeiro. As reais estão cadastradas como "facil"/"medio" pela
+// dificuldade estimada, e "modelo_enem" é questão escrita no estilo, não real.
 // 'acima': um nível além do ENEM, no estilo Fuvest/Unicamp/ITA/IME, logo
 // depois da questão do ENEM do mesmo conteúdo (lib/treino-degraus.ts).
-export type Etapa = 'base' | 'intermediaria' | 'enem' | 'acima' | 'vestibular';
-
-export const ETAPA_ORDEM: Etapa[] = ['base', 'intermediaria', 'enem', 'acima', 'vestibular'];
-
+export type Etapa = 'facil' | 'medio' | 'dificil' | 'enem' | 'acima' | 'vestibular';
+export const ETAPA_ORDEM: Etapa[] = ['facil', 'medio', 'dificil', 'enem', 'acima', 'vestibular'];
 export const ETAPA_LABEL: Record<Etapa, string> = {
-  base: 'Base',
-  intermediaria: 'Intermediária',
+  facil: 'Fácil',
+  medio: 'Médio',
+  dificil: 'Difícil',
   enem: 'ENEM',
   acima: 'Nível acima',
   vestibular: 'Vestibular real',
 };
-
-/* Quantas questões de cada degrau numa sessão de 20. Falta num degrau é
-   coberta pelo vizinho (ver montarEscada). */
+/* Quantas questões de cada degrau numa sessão de 20 (em 10: 2, 3, 2, 3).
+   Falta num degrau é coberta pelo vizinho (ver montarEscada). */
 export const ETAPA_COTA: Record<Etapa, number> = {
-  base: 6,
-  intermediaria: 8,
+  facil: 4,
+  medio: 6,
+  dificil: 4,
   enem: 6,
   acima: 0, // só entra no bloco da própria âncora, nunca pela cota
   vestibular: 0, // questão real de ITA/IME/Fuvest/Unicamp/Unesp: só a última do dia (data/vestibular)
 };
-
 interface QuestaoClassificavel {
   origem?: string | null;
   anoProva?: number | null;
   nivel?: string | null;
   dificuldade?: string | null;
 }
-
+/* Real = tem ano de prova ou origem "ENEM 2022 ...". "ENEM adaptado" e
+   "modelo_enem" não são reais. */
 export function isQuestaoEnem(q: QuestaoClassificavel): boolean {
   if ((q.nivel ?? '').toLowerCase() === 'vestibular') return false;
   if (q.anoProva != null) return true;
-  if (/^enem/i.test(q.origem ?? '')) return true;
-  return (q.nivel ?? '').toLowerCase() === 'modelo_enem';
+  return /^enem\s+\d{4}/i.test(q.origem ?? '');
 }
-
 export function etapaDaQuestao(q: QuestaoClassificavel): Etapa {
-  if ((q.nivel ?? '').toLowerCase() === 'acima') return 'acima';
-  if ((q.nivel ?? '').toUpperCase() === 'VESTIBULAR') return 'vestibular';
+  const nivel = (q.nivel ?? '').toLowerCase();
+  if (nivel === 'acima') return 'acima';
+  if (nivel === 'vestibular') return 'vestibular';
   if (isQuestaoEnem(q)) return 'enem';
-  const grau = (q.nivel ?? q.dificuldade ?? '').toLowerCase();
-  return grau === 'facil' ? 'base' : 'intermediaria';
+  if (nivel === 'modelo_enem') return 'dificil';
+  const grau = (q.nivel || q.dificuldade || '').toLowerCase();
+  if (grau === 'facil') return 'facil';
+  if (grau === 'dificil') return 'dificil';
+  return 'medio';
 }
-
-/* Fácil → média → ENEM → acima, sem embaralhar dentro do degrau. Usado no
-   simulado, que sorteia as questões mas não pode abrir com a mais difícil. */
+/* Fácil → Médio → Difícil → ENEM → acima, sem embaralhar dentro do degrau.
+   Usado no simulado, que sorteia as questões mas não pode abrir com a mais difícil. */
 export function ordenarPorEtapa<T extends QuestaoClassificavel>(lista: T[]): T[] {
   return ETAPA_ORDEM.flatMap((e) => lista.filter((q) => etapaDaQuestao(q) === e));
 }
@@ -66,33 +67,37 @@ export function montarEscada<T extends QuestaoClassificavel & { id: string; mate
   tamanho: number,
 ): T[] {
   const porEtapa = (lista: T[], etapa: Etapa) => lista.filter((q) => etapaDaQuestao(q) === etapa);
-
-  // Cota proporcional ao tamanho: com 10 questões (matéria do cronograma),
-  // a cota fixa de 20 enchia tudo de base e intermediária e o ENEM sumia.
-  const escala = tamanho / (ETAPA_COTA.base + ETAPA_COTA.intermediaria + ETAPA_COTA.enem);
-  const base = Math.round(ETAPA_COTA.base * escala);
-  const intermediaria = Math.round(ETAPA_COTA.intermediaria * escala);
-  const cotas = { ...ETAPA_COTA, base, intermediaria, enem: Math.max(0, tamanho - base - intermediaria) };
-  const escolhidas: Record<Etapa, T[]> = { base: [], intermediaria: [], enem: [], acima: [], vestibular: [] };
+  // Cota proporcional ao tamanho: com 10 questões (matéria do cronograma)
+  // fica 2 fáceis, 3 médias, 2 difíceis e 3 do ENEM.
+  const escada: Etapa[] = ['facil', 'medio', 'dificil', 'enem'];
+  const soma = escada.reduce((n, e) => n + ETAPA_COTA[e], 0);
+  const cotas = { ...ETAPA_COTA };
+  let resto = tamanho;
+  for (const e of escada.slice(0, -1)) {
+    cotas[e] = Math.round((ETAPA_COTA[e] * tamanho) / soma);
+    resto -= cotas[e];
+  }
+  cotas.enem = Math.max(0, resto);
+  const escolhidas: Record<Etapa, T[]> = { facil: [], medio: [], dificil: [], enem: [], acima: [], vestibular: [] };
   const usados = new Set<string>();
-
   const pegar = (etapa: Etapa, quantas: number) => {
+    if (quantas <= 0) return 0;
     const fila = [...porEtapa(prioritarias, etapa), ...porEtapa(reserva, etapa)].filter((q) => !usados.has(q.id));
     const novas = fila.slice(0, quantas);
     novas.forEach((q) => usados.add(q.id));
     escolhidas[etapa] = [...escolhidas[etapa], ...novas];
     return quantas - novas.length;
   };
-
-  // Primeira passada: cada degrau tenta a própria cota. O que faltar desce
-  // para o degrau vizinho (base ↔ intermediária, enem → intermediária).
-  const faltaBase = pegar('base', cotas.base);
+  // Cada degrau tenta a própria cota; o que faltar passa para o vizinho mais
+  // perto (ENEM → Difícil → Médio → Fácil; Fácil → Médio).
   const faltaEnem = pegar('enem', cotas.enem);
-  const faltaInter = pegar('intermediaria', cotas.intermediaria + faltaBase + faltaEnem);
-  if (faltaInter > 0) pegar('base', faltaInter);
+  const faltaDificil = pegar('dificil', cotas.dificil + faltaEnem);
+  const faltaFacil = pegar('facil', cotas.facil);
+  const faltaMedio = pegar('medio', cotas.medio + faltaDificil + faltaFacil);
   const total = () => ETAPA_ORDEM.reduce((n, e) => n + escolhidas[e].length, 0);
-  if (total() < tamanho) pegar('enem', tamanho - total());
-
+  for (const e of ['facil', 'dificil', 'enem'] as Etapa[]) {
+    if (faltaMedio > 0 && total() < tamanho) pegar(e, tamanho - total());
+  }
   return ETAPA_ORDEM.flatMap((e) => alternarMaterias(escolhidas[e])).slice(0, tamanho);
 }
 
@@ -127,7 +132,7 @@ export function ehExemploResolvido<T extends QuestaoClassificavel & { materia: s
 /* Treino do dia, decidido pelo Pablo em 06/10/2026: 10 questões de cada
    matéria do cronograma do dia, depois 10 de Português e 10 de Matemática
    (ele começou com 20 e baixou para 10 no mesmo dia; se der, ele pede mais).
-   Uma matéria por vez, cada uma na escada fácil → média → ENEM. */
+   Uma matéria por vez, cada uma na escada Fácil → Médio → Difícil → ENEM. */
 export const COTA_CRONOGRAMA = 10;
 export const COTA_TREINO_DIARIO = 10;
 const MATERIAS_DIARIAS = ['Português', 'Matemática'];
