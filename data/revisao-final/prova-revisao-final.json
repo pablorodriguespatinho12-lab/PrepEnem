@@ -1,0 +1,486 @@
+{
+ "nome": "Revisão final: o que mais cai",
+ "descricao": "Questões reais do ENEM dos temas do checklist (70% de cada área), cerca de 1 para cada 3 que o tema tem por prova. Dia 1 depois dia 2; dentro da área, fáceis primeiro.",
+ "questoes": [
+  {
+   "id": "cmoueoppw008iuoz90chnq575",
+   "area": "Linguagens",
+   "tema": "Português|Interpretação e Leitura de Texto",
+   "pct": 17.2,
+   "origem": "ENEM 2023 D1 Q6",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoueopqt008yuoz9cv2x3t9d",
+   "area": "Linguagens",
+   "tema": "Português|Literatura Brasileira",
+   "pct": 16.2,
+   "origem": "ENEM 2023 D1 Q22",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoueopqd008quoz9seo2lfao",
+   "area": "Linguagens",
+   "tema": "Português|Literatura Brasileira",
+   "pct": 16.2,
+   "origem": "ENEM 2023 D1 Q14",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudvh4f004fuoz95zd77c9y",
+   "area": "Linguagens",
+   "tema": "Português|Gêneros Textuais e Multimodalidade",
+   "pct": 16.0,
+   "origem": "ENEM 2022 D1 Q15",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoueoprl009buoz97ki4yuyy",
+   "area": "Linguagens",
+   "tema": "Português|Gêneros Textuais e Multimodalidade",
+   "pct": 16.0,
+   "origem": "ENEM 2023 D1 Q45",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudvh3p0045uoz9kwsyw24g",
+   "area": "Linguagens",
+   "tema": "Inglês|Reading Comprehension e Interpretação",
+   "pct": 11.2,
+   "origem": "ENEM 2022 D1 Q1",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoueoppu008huoz9w4zntmn8",
+   "area": "Linguagens",
+   "tema": "Inglês|Reading Comprehension e Interpretação",
+   "pct": 11.2,
+   "origem": "ENEM 2023 D1 Q5",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoueopqh008suoz9wltu8xpg",
+   "area": "Linguagens",
+   "tema": "Português|Variação Linguística e Norma-Padrão",
+   "pct": 10.0,
+   "origem": "ENEM 2023 D1 Q16",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudvh51004ouoz90riwjm80",
+   "area": "Linguagens",
+   "tema": "Português|Variação Linguística e Norma-Padrão",
+   "pct": 10.0,
+   "origem": "ENEM 2022 D1 Q24",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoucu2ou000guoz9vo2vod6w",
+   "area": "Linguagens",
+   "tema": "Português|Interpretação e Leitura de Texto",
+   "pct": 17.2,
+   "origem": "ENEM 2021 D1 Q17",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoueopq2008luoz9j30aqu9i",
+   "area": "Linguagens",
+   "tema": "Português|Interpretação e Leitura de Texto",
+   "pct": 17.2,
+   "origem": "ENEM 2023 D1 Q9",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoudvh7d005nuoz9pjlxslaj",
+   "area": "Humanas",
+   "tema": "História|República Velha e Era Vargas",
+   "pct": 6.3,
+   "origem": "ENEM 2022 D1 Q81",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoueopu200aiuoz9ha2x3vil",
+   "area": "Humanas",
+   "tema": "Geografia|Geopolítica Mundial",
+   "pct": 5.4,
+   "origem": "ENEM 2023 D1 Q88",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoueopu400ajuoz9ru8llnce",
+   "area": "Humanas",
+   "tema": "Geografia|Sustentabilidade e Problemas Ambientais",
+   "pct": 4.2,
+   "origem": "ENEM 2023 D1 Q89",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoueops2009juoz9khul7grr",
+   "area": "Humanas",
+   "tema": "Geografia|Geologia e Geomorfologia",
+   "pct": 3.3,
+   "origem": "ENEM 2023 D1 Q53",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudvh6p005duoz96dxk8qty",
+   "area": "Humanas",
+   "tema": "Filosofia|Filosofia Política",
+   "pct": 3.2,
+   "origem": "ENEM 2022 D1 Q71",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoueopsc009ouoz9fygws2p0",
+   "area": "Humanas",
+   "tema": "Sociologia|Cultura e Diversidade",
+   "pct": 3.0,
+   "origem": "ENEM 2023 D1 Q58",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudvh7t005uuoz992mxuclh",
+   "area": "Humanas",
+   "tema": "Filosofia|Filosofia Antiga",
+   "pct": 3.0,
+   "origem": "ENEM 2022 D1 Q88",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoueopth00a8uoz9gy3ulqt6",
+   "area": "Humanas",
+   "tema": "Geografia|Urbanização e Problemas Urbanos",
+   "pct": 2.9,
+   "origem": "ENEM 2023 D1 Q78",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudvh6r005euoz9eqm6w6u6",
+   "area": "Humanas",
+   "tema": "Geografia|Demografia e Migrações",
+   "pct": 2.9,
+   "origem": "ENEM 2022 D1 Q72",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudvh7h005puoz9ipeic1j9",
+   "area": "Humanas",
+   "tema": "Sociologia|Movimentos Sociais e Cidadania",
+   "pct": 2.0,
+   "origem": "ENEM 2022 D1 Q83",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudvh75005kuoz9aufr6q9x",
+   "area": "Humanas",
+   "tema": "Geografia|Cartografia, Fusos Horários e Movimentos da Terra",
+   "pct": 2.0,
+   "origem": "ENEM 2022 D1 Q78",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoueoprr009euoz9yh16fpct",
+   "area": "Humanas",
+   "tema": "Geografia|Questão Agrária e Agronegócio",
+   "pct": 5.3,
+   "origem": "ENEM 2023 D1 Q48",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoudvh670055uoz9poajj9qb",
+   "area": "Humanas",
+   "tema": "História|Antiguidade e Idade Média",
+   "pct": 4.2,
+   "origem": "ENEM 2022 D1 Q63",
+   "dificuldade": "dificil"
+  },
+  {
+   "id": "cmoudvh5d004tuoz9jetel24b",
+   "area": "Humanas",
+   "tema": "Sociologia|Mídia, Cultura e Sociedade Digital",
+   "pct": 3.3,
+   "origem": "ENEM 2022 D1 Q37",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoueoptu00aeuoz9p7uxzdto",
+   "area": "Humanas",
+   "tema": "Sociologia|Trabalho e Sociedade",
+   "pct": 3.2,
+   "origem": "ENEM 2023 D1 Q84",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoueoprp009duoz9f4hx0m8p",
+   "area": "Humanas",
+   "tema": "História|Brasil Império",
+   "pct": 2.9,
+   "origem": "ENEM 2023 D1 Q47",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoueoptm00aauoz93bysxcaw",
+   "area": "Humanas",
+   "tema": "História|Ditadura Militar e Redemocratização",
+   "pct": 2.9,
+   "origem": "ENEM 2023 D1 Q80",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoudvh78005luoz936i5flqw",
+   "area": "Humanas",
+   "tema": "História|Historiografia e Memória",
+   "pct": 2.4,
+   "origem": "ENEM 2022 D1 Q79",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoueopsm009tuoz9a5vef4tn",
+   "area": "Humanas",
+   "tema": "História|Brasil Colonial",
+   "pct": 2.3,
+   "origem": "ENEM 2023 D1 Q63",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoudvh73005juoz9y6ge6fh3",
+   "area": "Humanas",
+   "tema": "História|Escravidão e Resistência no Brasil",
+   "pct": 2.3,
+   "origem": "ENEM 2022 D1 Q77",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoueoptf00a7uoz9p1rbi4s9",
+   "area": "Humanas",
+   "tema": "História|Iluminismo e Revoluções Burguesas",
+   "pct": 2.1,
+   "origem": "ENEM 2023 D1 Q77",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoudnnuh002huoz9a6tzencl",
+   "area": "Natureza",
+   "tema": "Biologia|Ecologia",
+   "pct": 8.2,
+   "origem": "ENEM 2021 D2 Q120",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmouei9600068uoz985fjme9s",
+   "area": "Natureza",
+   "tema": "Química|Química Orgânica",
+   "pct": 7.8,
+   "origem": "ENEM 2022 D2 Q102",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudnnt8001yuoz9z3qqkd6g",
+   "area": "Natureza",
+   "tema": "Química|Química Ambiental e Energia",
+   "pct": 6.1,
+   "origem": "ENEM 2021 D2 Q101",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudnntx0028uoz9vb9rp0ce",
+   "area": "Natureza",
+   "tema": "Física|Termodinâmica e Calor",
+   "pct": 5.5,
+   "origem": "ENEM 2021 D2 Q111",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmouei96m006iuoz9kq9qcnis",
+   "area": "Natureza",
+   "tema": "Química|Soluções, pH e Titulação",
+   "pct": 4.6,
+   "origem": "ENEM 2022 D2 Q112",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudnnus002muoz9ffoextle",
+   "area": "Natureza",
+   "tema": "Biologia|Fisiologia Humana e Saúde",
+   "pct": 4.3,
+   "origem": "ENEM 2021 D2 Q125",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmouei95n0062uoz9a6nn3ldw",
+   "area": "Natureza",
+   "tema": "Física|Óptica",
+   "pct": 3.1,
+   "origem": "ENEM 2022 D2 Q96",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmouei97k006yuoz9ua39q9rf",
+   "area": "Natureza",
+   "tema": "Biologia|Citologia",
+   "pct": 3.1,
+   "origem": "ENEM 2022 D2 Q128",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudnntz0029uoz9c7lz4lxl",
+   "area": "Natureza",
+   "tema": "Física|Dinâmica e Leis de Newton",
+   "pct": 2.6,
+   "origem": "ENEM 2021 D2 Q112",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudnntu0027uoz96y9mxvij",
+   "area": "Natureza",
+   "tema": "Biologia|Microbiologia e Doenças",
+   "pct": 2.6,
+   "origem": "ENEM 2021 D2 Q110",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmouei95t0065uoz98o4upi0n",
+   "area": "Natureza",
+   "tema": "Física|Eletricidade e Circuitos",
+   "pct": 5.6,
+   "origem": "ENEM 2022 D2 Q99",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoudnnvc002vuoz940shzcze",
+   "area": "Natureza",
+   "tema": "Física|Ondas e Acústica",
+   "pct": 4.7,
+   "origem": "ENEM 2021 D2 Q134",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoudnnv3002ruoz9hwq7y8mx",
+   "area": "Natureza",
+   "tema": "Biologia|Genética",
+   "pct": 3.8,
+   "origem": "ENEM 2021 D2 Q130",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoudnnuq002luoz9i47iyls2",
+   "area": "Natureza",
+   "tema": "Química|Eletroquímica",
+   "pct": 3.4,
+   "origem": "ENEM 2021 D2 Q124",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoudnnve002wuoz91mdz6vw5",
+   "area": "Natureza",
+   "tema": "Biologia|Evolução",
+   "pct": 2.9,
+   "origem": "ENEM 2021 D2 Q135",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoudnnu2002auoz9dskgmqnx",
+   "area": "Natureza",
+   "tema": "Química|Estequiometria e Leis Ponderais",
+   "pct": 2.7,
+   "origem": "ENEM 2021 D2 Q113",
+   "dificuldade": "medio"
+  },
+  {
+   "id": "cmoudnnx3003iuoz9dzbc13hb",
+   "area": "Matemática",
+   "tema": "Matemática|Aritmética e Porcentagem",
+   "pct": 19.0,
+   "origem": "ENEM 2021 D2 Q157",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudnnxr003ruoz9ep94uoxo",
+   "area": "Matemática",
+   "tema": "Matemática|Aritmética e Porcentagem",
+   "pct": 19.0,
+   "origem": "ENEM 2021 D2 Q166",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmouei9850079uoz9am4gd7bz",
+   "area": "Matemática",
+   "tema": "Matemática|Aritmética e Porcentagem",
+   "pct": 19.0,
+   "origem": "ENEM 2022 D2 Q140",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudnnxk003ouoz9gnzft1n5",
+   "area": "Matemática",
+   "tema": "Matemática|Grandezas e Medidas",
+   "pct": 12.0,
+   "origem": "ENEM 2021 D2 Q163",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmouei9810077uoz94kqj3d7a",
+   "area": "Matemática",
+   "tema": "Matemática|Grandezas e Medidas",
+   "pct": 12.0,
+   "origem": "ENEM 2022 D2 Q137",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudnnxy003uuoz9jk23xkl9",
+   "area": "Matemática",
+   "tema": "Matemática|Estatística",
+   "pct": 11.1,
+   "origem": "ENEM 2021 D2 Q169",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudnnyc0040uoz9iu1cs5e1",
+   "area": "Matemática",
+   "tema": "Matemática|Estatística",
+   "pct": 11.1,
+   "origem": "ENEM 2021 D2 Q175",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmouei9a9008cuoz9o5rd5z4u",
+   "area": "Matemática",
+   "tema": "Matemática|Funções",
+   "pct": 10.8,
+   "origem": "ENEM 2022 D2 Q180",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmouei99g007xuoz9086hv599",
+   "area": "Matemática",
+   "tema": "Matemática|Funções",
+   "pct": 10.8,
+   "origem": "ENEM 2022 D2 Q164",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmoudnnwd0039uoz99fyksqke",
+   "area": "Matemática",
+   "tema": "Matemática|Geometria Plana",
+   "pct": 10.0,
+   "origem": "ENEM 2021 D2 Q148",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmouei99p0082uoz9p61sg5mn",
+   "area": "Matemática",
+   "tema": "Matemática|Geometria Espacial",
+   "pct": 9.8,
+   "origem": "ENEM 2022 D2 Q169",
+   "dificuldade": "facil"
+  },
+  {
+   "id": "cmouei99e007wuoz94h6zkyz2",
+   "area": "Matemática",
+   "tema": "Matemática|Geometria Plana",
+   "pct": 10.0,
+   "origem": "ENEM 2022 D2 Q163",
+   "dificuldade": "medio"
+  }
+ ]
+}

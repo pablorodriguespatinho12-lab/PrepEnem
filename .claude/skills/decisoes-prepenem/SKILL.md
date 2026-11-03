@@ -224,8 +224,8 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 - **Treino do dia (Pablo, 06/10/2026):** 10 questões de cada matéria do dia:
   as do cronograma, depois Português e Matemática (`cotasDoDia`; era 20 e ele
   baixou para 10 no mesmo dia);
-  uma matéria por vez, cada uma na escada com cota proporcional (em 10: 3
-  fáceis, 4 médias, 3 ENEM). Retoma só treino aberto HOJE, e nunca a sessão do
+  uma matéria por vez, cada uma na escada com cota proporcional (em 10: 2
+  fáceis, 3 médias, 2 difíceis, 3 ENEM; desde 03/11/2026). Retoma só treino aberto HOJE, e nunca a sessão do
   simulado (as duas ficam em `TrainingSession`; filtrar `mode`).
 - **Conceitos antes do treino, um por vez (Pablo, 07/10/2026):** abrem sozinhos,
   em ordem, com Continuar (`components/treino/conceitos-do-dia.tsx`). Por
@@ -239,12 +239,18 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   enviado. "Pular este dia" saiu e o `pulado` antigo conta como pendente. O
   rótulo diz o dia de verdade: "Quinta-feira · conteúdo de segunda".
 - **Treino é escada, decidida pelo Pablo em 05/10/2026:** resumo do conteúdo
-  do dia → questões Base → Intermediárias → ENEM real por último. Só matérias
+  do dia → questões fáceis → médias → ENEM real por último. Só matérias
   do cronograma do dia. A etapa sai da ORIGEM (`lib/treino-etapas.ts`), não de
   `dificuldade`: as reais do ENEM estão cadastradas como fácil/médio e são as
   mais difíceis da sessão.
+- **4 níveis (Pablo, 03/11/2026):** Fácil (pergunta curta "O que é X?"),
+  Médio (texto um pouco maior), Difícil (texto longo no jeito do ENEM, NÃO
+  real), ENEM (só real: `anoProva` ou origem "ENEM 2022 ..."). Real nunca
+  aparece como Fácil, Médio ou Difícil; `modelo_enem` e "ENEM adaptado" não
+  são reais (viram Difícil e Médio). Vale no treino, no banco, no simulado e
+  em Criar prova (`etapaDaQuestao`).
 - **Degraus:** para até 2 questões do ENEM do assunto do dia (assunto no
-  subtema/tema, não no enunciado), a IA gera 2 base + 3 intermediárias que
+  subtema/tema, não no enunciado), a IA gera 2 fáceis + 2 médias + 1 difícil (desde 03/11/2026) que
   quebram a questão em peças; ficam no banco com `ancoraId` e a questão do
   ENEM vem logo depois delas. Sem âncora ou sem IA, cai na escada do banco.
 - **Explicação e dúvida (05/10/2026):** a IA descreve o desenho em JSON e o
