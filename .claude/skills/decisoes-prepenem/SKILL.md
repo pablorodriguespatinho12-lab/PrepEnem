@@ -214,6 +214,13 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 - **Flashcards antes moram em Provas (Pablo, 22/10/2026):** saíram da prova
   rápida. Em Criar prova, "Flashcards antes: Sem · 5 · 10 · 15" (os do dia);
   vão por `?cartoes=N` e aparecem só antes da 1ª questão.
+- **Aquecimento antes da prova (Pablo, 04/11/2026: "como na piscina, primeiro
+  aquecer o corpo"):** toda prova Médio, Difícil ou ENEM de Nova prova começa
+  com mais fáceis das mesmas matérias, A MAIS (1 a cada 4, mínimo 3; fácil
+  antes de médio; nunca real), `lib/aquecimento.ts`. Prova pronta feita à mão
+  ganha o aquecimento dela, do conteúdo de cada questão: "Aquecimento: antes
+  da Revisão final", 31 fáceis escritas na sessão com explicação pronta
+  (`data/revisao-final/aquecimento.json`, `scripts/criar-aquecimento-revisao-final.ts`).
 - **Prova responde na hora (22/10/2026):** o acerto é conferido no navegador
   (a letra certa já vem com a questão) e a resposta é gravada por trás, com
   3 tentativas; "Próxima" avança sem recarregar a prova. Antes: 1,5 s para ver
@@ -224,8 +231,8 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 - **Treino do dia (Pablo, 06/10/2026):** 10 questões de cada matéria do dia:
   as do cronograma, depois Português e Matemática (`cotasDoDia`; era 20 e ele
   baixou para 10 no mesmo dia);
-  uma matéria por vez, cada uma na escada com cota proporcional (em 10: 3
-  fáceis, 4 médias, 3 ENEM). Retoma só treino aberto HOJE, e nunca a sessão do
+  uma matéria por vez, cada uma na escada com cota proporcional (em 10: 2
+  fáceis, 3 médias, 2 difíceis, 3 ENEM; desde 03/11/2026). Retoma só treino aberto HOJE, e nunca a sessão do
   simulado (as duas ficam em `TrainingSession`; filtrar `mode`).
 - **Conceitos antes do treino, um por vez (Pablo, 07/10/2026):** abrem sozinhos,
   em ordem, com Continuar (`components/treino/conceitos-do-dia.tsx`). Por
@@ -239,12 +246,18 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   enviado. "Pular este dia" saiu e o `pulado` antigo conta como pendente. O
   rótulo diz o dia de verdade: "Quinta-feira · conteúdo de segunda".
 - **Treino é escada, decidida pelo Pablo em 05/10/2026:** resumo do conteúdo
-  do dia → questões Base → Intermediárias → ENEM real por último. Só matérias
+  do dia → questões fáceis → médias → ENEM real por último. Só matérias
   do cronograma do dia. A etapa sai da ORIGEM (`lib/treino-etapas.ts`), não de
   `dificuldade`: as reais do ENEM estão cadastradas como fácil/médio e são as
   mais difíceis da sessão.
+- **4 níveis (Pablo, 03/11/2026):** Fácil (pergunta curta "O que é X?"),
+  Médio (texto um pouco maior), Difícil (texto longo no jeito do ENEM, NÃO
+  real), ENEM (só real: `anoProva` ou origem "ENEM 2022 ..."). Real nunca
+  aparece como Fácil, Médio ou Difícil; `modelo_enem` e "ENEM adaptado" não
+  são reais (viram Difícil e Médio). Vale no treino, no banco, no simulado e
+  em Criar prova (`etapaDaQuestao`).
 - **Degraus:** para até 2 questões do ENEM do assunto do dia (assunto no
-  subtema/tema, não no enunciado), a IA gera 2 base + 3 intermediárias que
+  subtema/tema, não no enunciado), a IA gera 2 fáceis + 2 médias + 1 difícil (desde 03/11/2026) que
   quebram a questão em peças; ficam no banco com `ancoraId` e a questão do
   ENEM vem logo depois delas. Sem âncora ou sem IA, cai na escada do banco.
 - **Explicação e dúvida (05/10/2026):** a IA descreve o desenho em JSON e o
@@ -517,6 +530,34 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   `docs/redacao/prova-coringas/por_tema.py`; teste `autores-no-tema.e2e`.
   Já falhava antes (não é desta mudança): no `coringas.e2e`, a ficha do
   Luther King passa 19 px em 1440 px.
+- **Redação pronta parte por parte (Pablo, 02/11/2026: "primeiro mostra uma
+  redação nota 1000... essa é a introdução, essa é a tese... depois a minha
+  vez"):** o diálogo abre em "Parte por parte" (`redacao-por-partes.tsx`):
+  uma tela por parágrafo, cada frase com o nome da função do molde em cima, a
+  proposta com os 5 elementos grifados na frase e a legenda embaixo, e a
+  última tela "Agora é a sua vez". "Inteira, com grifos" é a versão de 28/10.
+  Medido: 0 px escondidos em 1366x768 e 2 px em 1440x762; no celular (375)
+  rola dentro da tela, 154 a 320 px. Aba Exemplo, Drummond: "Em palavras
+  simples" (de `MEMORIA`) e "Seu tema não tem uma lei própria?" com o molde
+  da ligação e o Pacto Internacional dos Direitos Econômicos, Sociais e
+  Culturais (`lib/redacao/lei-coringa.ts`; não é coringa, não passou pela
+  prova, é a lei da amarra). Baralho padrão "Autores por tema": 28 cartões,
+  um por tema, até 3 autores além do Drummond (que serve em todos), de
+  `coringas-por-tema.json` (`scripts/seed-autores-por-tema.ts`).
+  **2ª rodada (mesmo dia, "mais bonitinho, bem ilustrado", sem texto a
+  mais):** cada parte tem a folha da prova em miniatura à esquerda (as 30
+  linhas, a parte de agora colorida frase por frase), a frase com barra e
+  rótulo na cor da função dela (as mesmas `--grifo-*`), troca deslizando
+  (sem AnimatePresence sob movimento reduzido) e a tela "Sua vez" com a folha
+  inteira acesa. Quadro alargado para 58rem: 0 px escondidos em 1366x768,
+  1440x762 e 1920x1030. **Motivo próprio** (`meusMotivos` no rascunho): no
+  passo 2, "Tem outro motivo? Escreva do seu jeito", opcional; escrito, manda
+  na tese ("da desinformação... e da falta de empatia...") e nos moldes
+  (`meuMotivo` tira o ponto e põe o artigo em minúscula para contrair); a
+  causa marcada continua dando os autores, e vale passar só com os
+  escritos. **Correção:** número grudado na palavra ("desinformação1") é
+  sobra de digitação (`ehSobraDeDigitacao`), não conta na C1 nem no "Treine
+  agora". D2, "Mais dicas": ligar o 2º motivo ao 1º ("gerado pelo [motivo 1]").
 - As redações-modelo de `data/redacao/modelos.ts` (textos originais, temas
   reais, cada trecho comentado) seguem em /redacao/modelos. Não inventa
   texto-base com IA. Repertório nos modelos: só fato verificável.

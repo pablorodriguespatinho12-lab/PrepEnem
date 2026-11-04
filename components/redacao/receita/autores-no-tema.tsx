@@ -8,6 +8,8 @@ import { useState } from 'react';
 import { Check, X } from 'lucide-react';
 import { coringaPorNome } from '@/lib/redacao/autores';
 import type { AutorNoTema } from '@/lib/redacao/coringas-por-tema';
+import { MEMORIA } from '@/lib/redacao/cartoes-coringas';
+import { LEI_CORINGA, MOLDE_LIGACAO_SEM_LEI } from '@/lib/redacao/lei-coringa';
 
 const PARTES = [
   { chave: 'citacao', nome: 'A frase do autor', faz: 'copie igual' },
@@ -83,10 +85,18 @@ export function AutoresNoTema({ autores, escolhido, aoEscolher, aoUsarFrase }: {
                 <div className="min-w-0">
                   <p className="type-rotulo text-muted-foreground">{p.nome} · <span className="text-primary-text">{p.faz}</span></p>
                   <p className="font-reading type-body mt-1">{atual[p.chave]}</p>
+                  {/* Para dizer com suas palavras, primeiro é preciso entender a frase
+                      (Pablo, 02/11/2026: "os lírios não nascem da lei", o que é isso?). */}
+                  {p.chave === 'sentido' && MEMORIA[atual.coringa] && (
+                    <p className="type-meta text-muted-foreground mt-1.5">
+                      Em palavras simples: {MEMORIA[atual.coringa].mecanismo}.
+                    </p>
+                  )}
                 </div>
               </li>
             ))}
           </ol>
+          {atual.coringa === 'Drummond' && <LigacaoSemLei />}
           <button
             type="button"
             onClick={() => aoUsarFrase(atual.citacao ?? '')}
@@ -97,5 +107,24 @@ export function AutoresNoTema({ autores, escolhido, aoEscolher, aoUsarFrase }: {
         </div>
       )}
     </section>
+  );
+}
+
+/* Tema sem lei própria: o molde da ligação e uma lei que serve em quase tudo
+   e pouca gente usa (lib/redacao/lei-coringa.ts). */
+function LigacaoSemLei() {
+  return (
+    <div className="mt-5 border-l-2 border-primary pl-4">
+      <p className="type-rotulo text-primary-text">Seu tema não tem uma lei própria?</p>
+      <p className="font-reading type-body mt-1">{MOLDE_LIGACAO_SEM_LEI}</p>
+      <p className="type-meta text-muted-foreground mt-2">
+        Uma lei que serve em quase todo tema e pouca gente usa: o {LEI_CORINGA.nome} ({LEI_CORINGA.quando}).
+      </p>
+      <ul className="mt-1.5 type-meta text-muted-foreground">
+        {LEI_CORINGA.artigos.map((a) => (
+          <li key={a.artigo}><span className="text-foreground font-medium">{a.artigo}</span>: {a.assunto}</li>
+        ))}
+      </ul>
+    </div>
   );
 }

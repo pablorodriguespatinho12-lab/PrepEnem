@@ -1,0 +1,1090 @@
+{
+ "fonte": "Questões reais do ENEM 2009–2023 (api.enem.dev), classificadas por matéria e tema em 03/11/2026. Inglês: 5 por prova, sempre leitura.",
+ "anos": [
+  2009,
+  2010,
+  2011,
+  2012,
+  2013,
+  2014,
+  2015,
+  2016,
+  2017,
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023
+ ],
+ "areas": {
+  "Linguagens": {
+   "questoes": 668,
+   "porProva": 45,
+   "temas": [
+    {
+     "materia": "Português",
+     "tema": "Interpretação e Leitura de Texto",
+     "questoes": 115,
+     "pct": 17.2,
+     "porProva": 7.7,
+     "pctDesde2019": 18.1,
+     "acumulado": 17.2
+    },
+    {
+     "materia": "Português",
+     "tema": "Literatura Brasileira",
+     "questoes": 108,
+     "pct": 16.2,
+     "porProva": 7.2,
+     "pctDesde2019": 18.6,
+     "acumulado": 33.4
+    },
+    {
+     "materia": "Português",
+     "tema": "Gêneros Textuais e Multimodalidade",
+     "questoes": 107,
+     "pct": 16.0,
+     "porProva": 7.1,
+     "pctDesde2019": 14.5,
+     "acumulado": 49.4
+    },
+    {
+     "materia": "Inglês",
+     "tema": "Reading Comprehension e Interpretação",
+     "questoes": 75,
+     "pct": 11.2,
+     "porProva": 5.0,
+     "pctDesde2019": 11.3,
+     "acumulado": 60.6
+    },
+    {
+     "materia": "Português",
+     "tema": "Variação Linguística e Norma-Padrão",
+     "questoes": 67,
+     "pct": 10.0,
+     "porProva": 4.5,
+     "pctDesde2019": 7.2,
+     "acumulado": 70.7
+    },
+    {
+     "materia": "Artes",
+     "tema": "-",
+     "questoes": 65,
+     "pct": 9.7,
+     "porProva": 4.3,
+     "pctDesde2019": 10.0,
+     "acumulado": 80.4
+    },
+    {
+     "materia": "Educação Física",
+     "tema": "-",
+     "questoes": 39,
+     "pct": 5.8,
+     "porProva": 2.6,
+     "pctDesde2019": 8.1,
+     "acumulado": 86.2
+    },
+    {
+     "materia": "Português",
+     "tema": "Funções da Linguagem",
+     "questoes": 20,
+     "pct": 3.0,
+     "porProva": 1.3,
+     "pctDesde2019": 2.3,
+     "acumulado": 89.2
+    },
+    {
+     "materia": "Português",
+     "tema": "Semântica e Léxico",
+     "questoes": 18,
+     "pct": 2.7,
+     "porProva": 1.2,
+     "pctDesde2019": 2.3,
+     "acumulado": 91.9
+    },
+    {
+     "materia": "Português",
+     "tema": "Coesão e Coerência Textual",
+     "questoes": 17,
+     "pct": 2.5,
+     "porProva": 1.1,
+     "pctDesde2019": 1.4,
+     "acumulado": 94.5
+    },
+    {
+     "materia": "Português",
+     "tema": "Intertextualidade",
+     "questoes": 13,
+     "pct": 1.9,
+     "porProva": 0.9,
+     "pctDesde2019": 3.2,
+     "acumulado": 96.4
+    },
+    {
+     "materia": "Português",
+     "tema": "Produção Textual e Argumentação",
+     "questoes": 11,
+     "pct": 1.6,
+     "porProva": 0.7,
+     "pctDesde2019": 2.3,
+     "acumulado": 98.1
+    },
+    {
+     "materia": "Português",
+     "tema": "Figuras de Linguagem",
+     "questoes": 7,
+     "pct": 1.0,
+     "porProva": 0.5,
+     "pctDesde2019": 0.5,
+     "acumulado": 99.1
+    },
+    {
+     "materia": "Português",
+     "tema": "Morfologia",
+     "questoes": 3,
+     "pct": 0.4,
+     "porProva": 0.2,
+     "pctDesde2019": 0.5,
+     "acumulado": 99.6
+    },
+    {
+     "materia": "Português",
+     "tema": "Sintaxe",
+     "questoes": 2,
+     "pct": 0.3,
+     "porProva": 0.1,
+     "pctDesde2019": 0.0,
+     "acumulado": 99.9
+    },
+    {
+     "materia": "Português",
+     "tema": "Fonologia e Ortografia",
+     "questoes": 1,
+     "pct": 0.1,
+     "porProva": 0.1,
+     "pctDesde2019": 0.0,
+     "acumulado": 100.0
+    }
+   ]
+  },
+  "Humanas": {
+   "questoes": 698,
+   "porProva": 47,
+   "temas": [
+    {
+     "materia": "História",
+     "tema": "República Velha e Era Vargas",
+     "questoes": 44,
+     "pct": 6.3,
+     "porProva": 2.9,
+     "pctDesde2019": 3.0,
+     "acumulado": 6.3
+    },
+    {
+     "materia": "Geografia",
+     "tema": "Geopolítica Mundial",
+     "questoes": 38,
+     "pct": 5.4,
+     "porProva": 2.5,
+     "pctDesde2019": 6.1,
+     "acumulado": 11.7
+    },
+    {
+     "materia": "Geografia",
+     "tema": "Questão Agrária e Agronegócio",
+     "questoes": 37,
+     "pct": 5.3,
+     "porProva": 2.5,
+     "pctDesde2019": 5.2,
+     "acumulado": 17.0
+    },
+    {
+     "materia": "Geografia",
+     "tema": "Sustentabilidade e Problemas Ambientais",
+     "questoes": 29,
+     "pct": 4.2,
+     "porProva": 1.9,
+     "pctDesde2019": 4.3,
+     "acumulado": 21.2
+    },
+    {
+     "materia": "História",
+     "tema": "Antiguidade e Idade Média",
+     "questoes": 29,
+     "pct": 4.2,
+     "porProva": 1.9,
+     "pctDesde2019": 4.8,
+     "acumulado": 25.4
+    },
+    {
+     "materia": "Sociologia",
+     "tema": "Mídia, Cultura e Sociedade Digital",
+     "questoes": 23,
+     "pct": 3.3,
+     "porProva": 1.5,
+     "pctDesde2019": 2.2,
+     "acumulado": 28.7
+    },
+    {
+     "materia": "Geografia",
+     "tema": "Geologia e Geomorfologia",
+     "questoes": 23,
+     "pct": 3.3,
+     "porProva": 1.5,
+     "pctDesde2019": 3.9,
+     "acumulado": 31.9
+    },
+    {
+     "materia": "Filosofia",
+     "tema": "Filosofia Política",
+     "questoes": 22,
+     "pct": 3.2,
+     "porProva": 1.5,
+     "pctDesde2019": 2.2,
+     "acumulado": 35.1
+    },
+    {
+     "materia": "Sociologia",
+     "tema": "Trabalho e Sociedade",
+     "questoes": 22,
+     "pct": 3.2,
+     "porProva": 1.5,
+     "pctDesde2019": 4.3,
+     "acumulado": 38.3
+    },
+    {
+     "materia": "Sociologia",
+     "tema": "Cultura e Diversidade",
+     "questoes": 21,
+     "pct": 3.0,
+     "porProva": 1.4,
+     "pctDesde2019": 4.8,
+     "acumulado": 41.3
+    },
+    {
+     "materia": "Filosofia",
+     "tema": "Filosofia Antiga",
+     "questoes": 21,
+     "pct": 3.0,
+     "porProva": 1.4,
+     "pctDesde2019": 3.0,
+     "acumulado": 44.3
+    },
+    {
+     "materia": "História",
+     "tema": "Brasil Império",
+     "questoes": 20,
+     "pct": 2.9,
+     "porProva": 1.3,
+     "pctDesde2019": 2.6,
+     "acumulado": 47.1
+    },
+    {
+     "materia": "Geografia",
+     "tema": "Urbanização e Problemas Urbanos",
+     "questoes": 20,
+     "pct": 2.9,
+     "porProva": 1.3,
+     "pctDesde2019": 3.5,
+     "acumulado": 50.0
+    },
+    {
+     "materia": "Geografia",
+     "tema": "Demografia e Migrações",
+     "questoes": 20,
+     "pct": 2.9,
+     "porProva": 1.3,
+     "pctDesde2019": 1.7,
+     "acumulado": 52.9
+    },
+    {
+     "materia": "História",
+     "tema": "Ditadura Militar e Redemocratização",
+     "questoes": 20,
+     "pct": 2.9,
+     "porProva": 1.3,
+     "pctDesde2019": 1.3,
+     "acumulado": 55.7
+    },
+    {
+     "materia": "História",
+     "tema": "Historiografia e Memória",
+     "questoes": 17,
+     "pct": 2.4,
+     "porProva": 1.1,
+     "pctDesde2019": 1.7,
+     "acumulado": 58.2
+    },
+    {
+     "materia": "Geografia",
+     "tema": "Climatologia",
+     "questoes": 16,
+     "pct": 2.3,
+     "porProva": 1.1,
+     "pctDesde2019": 0.4,
+     "acumulado": 60.5
+    },
+    {
+     "materia": "História",
+     "tema": "Brasil Colonial",
+     "questoes": 16,
+     "pct": 2.3,
+     "porProva": 1.1,
+     "pctDesde2019": 1.7,
+     "acumulado": 62.8
+    },
+    {
+     "materia": "História",
+     "tema": "Escravidão e Resistência no Brasil",
+     "questoes": 16,
+     "pct": 2.3,
+     "porProva": 1.1,
+     "pctDesde2019": 1.7,
+     "acumulado": 65.0
+    },
+    {
+     "materia": "História",
+     "tema": "Iluminismo e Revoluções Burguesas",
+     "questoes": 15,
+     "pct": 2.1,
+     "porProva": 1.0,
+     "pctDesde2019": 2.2,
+     "acumulado": 67.2
+    },
+    {
+     "materia": "Sociologia",
+     "tema": "Movimentos Sociais e Cidadania",
+     "questoes": 14,
+     "pct": 2.0,
+     "porProva": 0.9,
+     "pctDesde2019": 3.0,
+     "acumulado": 69.2
+    },
+    {
+     "materia": "Geografia",
+     "tema": "Cartografia, Fusos Horários e Movimentos da Terra",
+     "questoes": 14,
+     "pct": 2.0,
+     "porProva": 0.9,
+     "pctDesde2019": 3.0,
+     "acumulado": 71.2
+    },
+    {
+     "materia": "Sociologia",
+     "tema": "Gênero e Violência",
+     "questoes": 14,
+     "pct": 2.0,
+     "porProva": 0.9,
+     "pctDesde2019": 3.0,
+     "acumulado": 73.2
+    },
+    {
+     "materia": "Geografia",
+     "tema": "Energia",
+     "questoes": 13,
+     "pct": 1.9,
+     "porProva": 0.9,
+     "pctDesde2019": 0.4,
+     "acumulado": 75.1
+    },
+    {
+     "materia": "História",
+     "tema": "Culturas Indígenas e Pré-Colombianas",
+     "questoes": 12,
+     "pct": 1.7,
+     "porProva": 0.8,
+     "pctDesde2019": 1.7,
+     "acumulado": 76.8
+    },
+    {
+     "materia": "História",
+     "tema": "Expansão Marítima e Colonização",
+     "questoes": 12,
+     "pct": 1.7,
+     "porProva": 0.8,
+     "pctDesde2019": 2.2,
+     "acumulado": 78.5
+    },
+    {
+     "materia": "História",
+     "tema": "Grandes Guerras e Entreguerras",
+     "questoes": 11,
+     "pct": 1.6,
+     "porProva": 0.7,
+     "pctDesde2019": 0.9,
+     "acumulado": 80.1
+    },
+    {
+     "materia": "Geografia",
+     "tema": "Hidrografia e Recursos Hídricos",
+     "questoes": 11,
+     "pct": 1.6,
+     "porProva": 0.7,
+     "pctDesde2019": 1.3,
+     "acumulado": 81.7
+    },
+    {
+     "materia": "Geografia",
+     "tema": "Biomas e Meio Ambiente",
+     "questoes": 11,
+     "pct": 1.6,
+     "porProva": 0.7,
+     "pctDesde2019": 1.3,
+     "acumulado": 83.2
+    },
+    {
+     "materia": "Filosofia",
+     "tema": "Racionalismo e Filosofia Moderna",
+     "questoes": 11,
+     "pct": 1.6,
+     "porProva": 0.7,
+     "pctDesde2019": 2.2,
+     "acumulado": 84.8
+    },
+    {
+     "materia": "Filosofia",
+     "tema": "Teoria do Conhecimento e Epistemologia",
+     "questoes": 11,
+     "pct": 1.6,
+     "porProva": 0.7,
+     "pctDesde2019": 2.6,
+     "acumulado": 86.4
+    },
+    {
+     "materia": "História",
+     "tema": "Guerra Fria e Descolonização",
+     "questoes": 10,
+     "pct": 1.4,
+     "porProva": 0.7,
+     "pctDesde2019": 0.9,
+     "acumulado": 87.8
+    },
+    {
+     "materia": "Filosofia",
+     "tema": "Ética",
+     "questoes": 9,
+     "pct": 1.3,
+     "porProva": 0.6,
+     "pctDesde2019": 0.9,
+     "acumulado": 89.1
+    },
+    {
+     "materia": "Geografia",
+     "tema": "Indicadores Socioeconômicos e Território",
+     "questoes": 8,
+     "pct": 1.1,
+     "porProva": 0.5,
+     "pctDesde2019": 1.3,
+     "acumulado": 90.3
+    },
+    {
+     "materia": "Sociologia",
+     "tema": "Clássicos da Sociologia",
+     "questoes": 7,
+     "pct": 1.0,
+     "porProva": 0.5,
+     "pctDesde2019": 0.4,
+     "acumulado": 91.3
+    },
+    {
+     "materia": "Filosofia",
+     "tema": "Foucault e Relações de Poder",
+     "questoes": 6,
+     "pct": 0.9,
+     "porProva": 0.4,
+     "pctDesde2019": 1.3,
+     "acumulado": 92.1
+    },
+    {
+     "materia": "Sociologia",
+     "tema": "Racismo e Relações Raciais",
+     "questoes": 6,
+     "pct": 0.9,
+     "porProva": 0.4,
+     "pctDesde2019": 0.9,
+     "acumulado": 93.0
+    },
+    {
+     "materia": "História",
+     "tema": "Independências na América",
+     "questoes": 5,
+     "pct": 0.7,
+     "porProva": 0.3,
+     "pctDesde2019": 1.3,
+     "acumulado": 93.7
+    },
+    {
+     "materia": "Filosofia",
+     "tema": "Filosofia Contemporânea e Brasileira",
+     "questoes": 5,
+     "pct": 0.7,
+     "porProva": 0.3,
+     "pctDesde2019": 1.3,
+     "acumulado": 94.4
+    },
+    {
+     "materia": "História",
+     "tema": "Movimentos Sociais e Migrações",
+     "questoes": 5,
+     "pct": 0.7,
+     "porProva": 0.3,
+     "pctDesde2019": 1.3,
+     "acumulado": 95.1
+    },
+    {
+     "materia": "Geografia",
+     "tema": "Industrialização Brasileira",
+     "questoes": 5,
+     "pct": 0.7,
+     "porProva": 0.3,
+     "pctDesde2019": 0.9,
+     "acumulado": 95.8
+    },
+    {
+     "materia": "Sociologia",
+     "tema": "Poder, Estado e Necropolítica",
+     "questoes": 5,
+     "pct": 0.7,
+     "porProva": 0.3,
+     "pctDesde2019": 0.9,
+     "acumulado": 96.6
+    },
+    {
+     "materia": "Filosofia",
+     "tema": "Marxismo e Escola de Frankfurt",
+     "questoes": 4,
+     "pct": 0.6,
+     "porProva": 0.3,
+     "pctDesde2019": 1.3,
+     "acumulado": 97.1
+    },
+    {
+     "materia": "Sociologia",
+     "tema": "Desigualdade Social",
+     "questoes": 4,
+     "pct": 0.6,
+     "porProva": 0.3,
+     "pctDesde2019": 1.3,
+     "acumulado": 97.7
+    },
+    {
+     "materia": "Sociologia",
+     "tema": "Sociologia da Educação",
+     "questoes": 3,
+     "pct": 0.4,
+     "porProva": 0.2,
+     "pctDesde2019": 0.9,
+     "acumulado": 98.1
+    },
+    {
+     "materia": "Filosofia",
+     "tema": "Filosofia Medieval",
+     "questoes": 3,
+     "pct": 0.4,
+     "porProva": 0.2,
+     "pctDesde2019": 0.4,
+     "acumulado": 98.6
+    },
+    {
+     "materia": "Sociologia",
+     "tema": "Sociologia Contemporânea",
+     "questoes": 3,
+     "pct": 0.4,
+     "porProva": 0.2,
+     "pctDesde2019": 0.4,
+     "acumulado": 99.0
+    },
+    {
+     "materia": "Filosofia",
+     "tema": "Existencialismo",
+     "questoes": 3,
+     "pct": 0.4,
+     "porProva": 0.2,
+     "pctDesde2019": 0.9,
+     "acumulado": 99.4
+    },
+    {
+     "materia": "Filosofia",
+     "tema": "Nietzsche e Crítica à Modernidade",
+     "questoes": 2,
+     "pct": 0.3,
+     "porProva": 0.1,
+     "pctDesde2019": 0.4,
+     "acumulado": 99.7
+    },
+    {
+     "materia": "Filosofia",
+     "tema": "Bioética e Feminismo",
+     "questoes": 1,
+     "pct": 0.1,
+     "porProva": 0.1,
+     "pctDesde2019": 0.0,
+     "acumulado": 99.9
+    },
+    {
+     "materia": "Sociologia",
+     "tema": "Interseccionalidade",
+     "questoes": 1,
+     "pct": 0.1,
+     "porProva": 0.1,
+     "pctDesde2019": 0.4,
+     "acumulado": 100.0
+    }
+   ]
+  },
+  "Natureza": {
+   "questoes": 655,
+   "porProva": 44,
+   "temas": [
+    {
+     "materia": "Biologia",
+     "tema": "Ecologia",
+     "questoes": 54,
+     "pct": 8.2,
+     "porProva": 3.6,
+     "pctDesde2019": 6.4,
+     "acumulado": 8.2
+    },
+    {
+     "materia": "Química",
+     "tema": "Química Orgânica",
+     "questoes": 51,
+     "pct": 7.8,
+     "porProva": 3.4,
+     "pctDesde2019": 7.3,
+     "acumulado": 16.0
+    },
+    {
+     "materia": "Química",
+     "tema": "Química Ambiental e Energia",
+     "questoes": 40,
+     "pct": 6.1,
+     "porProva": 2.7,
+     "pctDesde2019": 7.3,
+     "acumulado": 22.1
+    },
+    {
+     "materia": "Física",
+     "tema": "Eletricidade e Circuitos",
+     "questoes": 37,
+     "pct": 5.6,
+     "porProva": 2.5,
+     "pctDesde2019": 5.5,
+     "acumulado": 27.8
+    },
+    {
+     "materia": "Física",
+     "tema": "Termodinâmica e Calor",
+     "questoes": 36,
+     "pct": 5.5,
+     "porProva": 2.4,
+     "pctDesde2019": 7.3,
+     "acumulado": 33.3
+    },
+    {
+     "materia": "Física",
+     "tema": "Ondas e Acústica",
+     "questoes": 31,
+     "pct": 4.7,
+     "porProva": 2.1,
+     "pctDesde2019": 3.7,
+     "acumulado": 38.0
+    },
+    {
+     "materia": "Química",
+     "tema": "Soluções, pH e Titulação",
+     "questoes": 30,
+     "pct": 4.6,
+     "porProva": 2.0,
+     "pctDesde2019": 3.2,
+     "acumulado": 42.6
+    },
+    {
+     "materia": "Biologia",
+     "tema": "Fisiologia Humana e Saúde",
+     "questoes": 28,
+     "pct": 4.3,
+     "porProva": 1.9,
+     "pctDesde2019": 4.6,
+     "acumulado": 46.9
+    },
+    {
+     "materia": "Biologia",
+     "tema": "Genética",
+     "questoes": 25,
+     "pct": 3.8,
+     "porProva": 1.7,
+     "pctDesde2019": 3.2,
+     "acumulado": 50.7
+    },
+    {
+     "materia": "Química",
+     "tema": "Eletroquímica",
+     "questoes": 22,
+     "pct": 3.4,
+     "porProva": 1.5,
+     "pctDesde2019": 3.7,
+     "acumulado": 54.0
+    },
+    {
+     "materia": "Física",
+     "tema": "Óptica",
+     "questoes": 20,
+     "pct": 3.1,
+     "porProva": 1.3,
+     "pctDesde2019": 2.7,
+     "acumulado": 57.1
+    },
+    {
+     "materia": "Biologia",
+     "tema": "Citologia",
+     "questoes": 20,
+     "pct": 3.1,
+     "porProva": 1.3,
+     "pctDesde2019": 2.3,
+     "acumulado": 60.2
+    },
+    {
+     "materia": "Biologia",
+     "tema": "Evolução",
+     "questoes": 19,
+     "pct": 2.9,
+     "porProva": 1.3,
+     "pctDesde2019": 2.3,
+     "acumulado": 63.1
+    },
+    {
+     "materia": "Química",
+     "tema": "Estequiometria e Leis Ponderais",
+     "questoes": 18,
+     "pct": 2.7,
+     "porProva": 1.2,
+     "pctDesde2019": 1.4,
+     "acumulado": 65.8
+    },
+    {
+     "materia": "Física",
+     "tema": "Dinâmica e Leis de Newton",
+     "questoes": 17,
+     "pct": 2.6,
+     "porProva": 1.1,
+     "pctDesde2019": 2.7,
+     "acumulado": 68.4
+    },
+    {
+     "materia": "Biologia",
+     "tema": "Microbiologia e Doenças",
+     "questoes": 17,
+     "pct": 2.6,
+     "porProva": 1.1,
+     "pctDesde2019": 3.2,
+     "acumulado": 71.0
+    },
+    {
+     "materia": "Biologia",
+     "tema": "Metabolismo Energético e Enzimas",
+     "questoes": 16,
+     "pct": 2.4,
+     "porProva": 1.1,
+     "pctDesde2019": 4.1,
+     "acumulado": 73.4
+    },
+    {
+     "materia": "Biologia",
+     "tema": "Botânica e Fisiologia Vegetal",
+     "questoes": 16,
+     "pct": 2.4,
+     "porProva": 1.1,
+     "pctDesde2019": 3.7,
+     "acumulado": 75.9
+    },
+    {
+     "materia": "Física",
+     "tema": "Cinemática",
+     "questoes": 16,
+     "pct": 2.4,
+     "porProva": 1.1,
+     "pctDesde2019": 2.7,
+     "acumulado": 78.3
+    },
+    {
+     "materia": "Biologia",
+     "tema": "Biotecnologia",
+     "questoes": 15,
+     "pct": 2.3,
+     "porProva": 1.0,
+     "pctDesde2019": 1.8,
+     "acumulado": 80.6
+    },
+    {
+     "materia": "Física",
+     "tema": "Eletromagnetismo",
+     "questoes": 15,
+     "pct": 2.3,
+     "porProva": 1.0,
+     "pctDesde2019": 3.2,
+     "acumulado": 82.9
+    },
+    {
+     "materia": "Física",
+     "tema": "Hidrostática e Fluidos",
+     "questoes": 15,
+     "pct": 2.3,
+     "porProva": 1.0,
+     "pctDesde2019": 2.3,
+     "acumulado": 85.2
+    },
+    {
+     "materia": "Física",
+     "tema": "Trabalho, Energia e Potência",
+     "questoes": 13,
+     "pct": 2.0,
+     "porProva": 0.9,
+     "pctDesde2019": 1.8,
+     "acumulado": 87.2
+    },
+    {
+     "materia": "Biologia",
+     "tema": "Imunologia",
+     "questoes": 12,
+     "pct": 1.8,
+     "porProva": 0.8,
+     "pctDesde2019": 1.4,
+     "acumulado": 89.0
+    },
+    {
+     "materia": "Química",
+     "tema": "Tabela Periódica e Ligações Químicas",
+     "questoes": 11,
+     "pct": 1.7,
+     "porProva": 0.7,
+     "pctDesde2019": 0.9,
+     "acumulado": 90.7
+    },
+    {
+     "materia": "Química",
+     "tema": "Radioatividade",
+     "questoes": 10,
+     "pct": 1.5,
+     "porProva": 0.7,
+     "pctDesde2019": 2.7,
+     "acumulado": 92.2
+    },
+    {
+     "materia": "Física",
+     "tema": "Gravitação e Astronomia",
+     "questoes": 8,
+     "pct": 1.2,
+     "porProva": 0.5,
+     "pctDesde2019": 1.4,
+     "acumulado": 93.4
+    },
+    {
+     "materia": "Química",
+     "tema": "Termoquímica",
+     "questoes": 6,
+     "pct": 0.9,
+     "porProva": 0.4,
+     "pctDesde2019": 0.0,
+     "acumulado": 94.4
+    },
+    {
+     "materia": "Química",
+     "tema": "Equilíbrio Químico",
+     "questoes": 6,
+     "pct": 0.9,
+     "porProva": 0.4,
+     "pctDesde2019": 0.9,
+     "acumulado": 95.3
+    },
+    {
+     "materia": "Química",
+     "tema": "Polímeros",
+     "questoes": 5,
+     "pct": 0.8,
+     "porProva": 0.3,
+     "pctDesde2019": 1.4,
+     "acumulado": 96.0
+    },
+    {
+     "materia": "Física",
+     "tema": "Quantidade de Movimento e Colisões",
+     "questoes": 5,
+     "pct": 0.8,
+     "porProva": 0.3,
+     "pctDesde2019": 0.9,
+     "acumulado": 96.8
+    },
+    {
+     "materia": "Química",
+     "tema": "Cinética Química",
+     "questoes": 5,
+     "pct": 0.8,
+     "porProva": 0.3,
+     "pctDesde2019": 1.4,
+     "acumulado": 97.6
+    },
+    {
+     "materia": "Química",
+     "tema": "Geometria Molecular",
+     "questoes": 5,
+     "pct": 0.8,
+     "porProva": 0.3,
+     "pctDesde2019": 0.9,
+     "acumulado": 98.3
+    },
+    {
+     "materia": "Química",
+     "tema": "Estrutura Atômica e Modelos Atômicos",
+     "questoes": 4,
+     "pct": 0.6,
+     "porProva": 0.3,
+     "pctDesde2019": 0.5,
+     "acumulado": 98.9
+    },
+    {
+     "materia": "Biologia",
+     "tema": "Endocrinologia",
+     "questoes": 4,
+     "pct": 0.6,
+     "porProva": 0.3,
+     "pctDesde2019": 0.9,
+     "acumulado": 99.5
+    },
+    {
+     "materia": "Física",
+     "tema": "Física Moderna",
+     "questoes": 3,
+     "pct": 0.5,
+     "porProva": 0.2,
+     "pctDesde2019": 0.5,
+     "acumulado": 100.0
+    }
+   ]
+  },
+  "Matemática": {
+   "questoes": 673,
+   "porProva": 45,
+   "temas": [
+    {
+     "materia": "Matemática",
+     "tema": "Aritmética e Porcentagem",
+     "questoes": 128,
+     "pct": 19.0,
+     "porProva": 8.5,
+     "pctDesde2019": 19.4,
+     "acumulado": 19.0
+    },
+    {
+     "materia": "Matemática",
+     "tema": "Grandezas e Medidas",
+     "questoes": 81,
+     "pct": 12.0,
+     "porProva": 5.4,
+     "pctDesde2019": 11.3,
+     "acumulado": 31.1
+    },
+    {
+     "materia": "Matemática",
+     "tema": "Estatística",
+     "questoes": 75,
+     "pct": 11.1,
+     "porProva": 5.0,
+     "pctDesde2019": 10.8,
+     "acumulado": 42.2
+    },
+    {
+     "materia": "Matemática",
+     "tema": "Funções",
+     "questoes": 73,
+     "pct": 10.8,
+     "porProva": 4.9,
+     "pctDesde2019": 13.1,
+     "acumulado": 53.0
+    },
+    {
+     "materia": "Matemática",
+     "tema": "Geometria Plana",
+     "questoes": 67,
+     "pct": 10.0,
+     "porProva": 4.5,
+     "pctDesde2019": 7.7,
+     "acumulado": 63.0
+    },
+    {
+     "materia": "Matemática",
+     "tema": "Geometria Espacial",
+     "questoes": 66,
+     "pct": 9.8,
+     "porProva": 4.4,
+     "pctDesde2019": 10.4,
+     "acumulado": 72.8
+    },
+    {
+     "materia": "Matemática",
+     "tema": "Análise Combinatória e Probabilidade",
+     "questoes": 64,
+     "pct": 9.5,
+     "porProva": 4.3,
+     "pctDesde2019": 9.0,
+     "acumulado": 82.3
+    },
+    {
+     "materia": "Matemática",
+     "tema": "Álgebra",
+     "questoes": 32,
+     "pct": 4.8,
+     "porProva": 2.1,
+     "pctDesde2019": 6.3,
+     "acumulado": 87.1
+    },
+    {
+     "materia": "Matemática",
+     "tema": "Lógica e Numeração",
+     "questoes": 32,
+     "pct": 4.8,
+     "porProva": 2.1,
+     "pctDesde2019": 6.8,
+     "acumulado": 91.8
+    },
+    {
+     "materia": "Matemática",
+     "tema": "Progressões",
+     "questoes": 17,
+     "pct": 2.5,
+     "porProva": 1.1,
+     "pctDesde2019": 1.8,
+     "acumulado": 94.4
+    },
+    {
+     "materia": "Matemática",
+     "tema": "Geometria Analítica",
+     "questoes": 16,
+     "pct": 2.4,
+     "porProva": 1.1,
+     "pctDesde2019": 0.5,
+     "acumulado": 96.7
+    },
+    {
+     "materia": "Matemática",
+     "tema": "Trigonometria",
+     "questoes": 11,
+     "pct": 1.6,
+     "porProva": 0.7,
+     "pctDesde2019": 2.3,
+     "acumulado": 98.4
+    },
+    {
+     "materia": "Matemática",
+     "tema": "Matemática Financeira",
+     "questoes": 11,
+     "pct": 1.6,
+     "porProva": 0.7,
+     "pctDesde2019": 0.9,
+     "acumulado": 100.0
+    }
+   ]
+  }
+ }
+}

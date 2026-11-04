@@ -14,39 +14,9 @@ import {
   EXEMPLO_ANO, EXEMPLO_TEMA, FUNCOES, funcaoInfo, REDACAO_GRIFADA, textoDaFrase,
   type FuncaoTrecho, type Trecho,
 } from '@/lib/redacao/exemplo-receita';
+import { RedacaoPorPartes } from './redacao-por-partes';
+import { estiloGrifo } from './grifo';
 
-type Grifo = { cor: string; traco: 'solid' | 'dashed' | 'dotted' | 'double' | 'wavy' };
-/* Cor + sublinhado por função. Os 5 elementos da proposta têm cor e
-   sublinhado próprios: o aluno precisa achar cada um. */
-const GRIFO: Record<FuncaoTrecho, Grifo> = {
-  repertorio: { cor: '--grifo-repertorio', traco: 'solid' },
-  ponte: { cor: '--grifo-ponte', traco: 'dashed' },
-  tese: { cor: '--grifo-tese', traco: 'double' },
-  topico: { cor: '--grifo-topico', traco: 'wavy' },
-  explicacao: { cor: '--grifo-explicacao', traco: 'dotted' },
-  fechamento: { cor: '--grifo-fechamento', traco: 'solid' },
-  agente: { cor: '--grifo-agente', traco: 'solid' },
-  acao: { cor: '--grifo-acao', traco: 'dashed' },
-  meio: { cor: '--grifo-meio', traco: 'dotted' },
-  finalidade: { cor: '--grifo-finalidade', traco: 'double' },
-  detalhamento: { cor: '--grifo-detalhamento', traco: 'wavy' },
-};
-const estiloGrifo = (f: FuncaoTrecho, ativo: boolean): React.CSSProperties => {
-  const g = GRIFO[f];
-  return {
-    backgroundColor: `hsl(var(${g.cor}) var(${ativo ? '--grifo-luz-ativa' : '--grifo-luz'}))`,
-    textDecorationLine: 'underline',
-    textDecorationStyle: g.traco,
-    textDecorationColor: `hsl(var(${g.cor}) var(--grifo-luz-traco))`,
-    textDecorationThickness: '2px',
-    textUnderlineOffset: '5px',
-    /* Tocado: contorno na cor da função (a etiqueta acima cobria a linha de
-       cima no celular; o nome vai na barra de baixo). */
-    outline: ativo ? `2px solid hsl(var(${g.cor}) var(--grifo-luz-traco))` : undefined,
-    boxDecorationBreak: 'clone',
-    WebkitBoxDecorationBreak: 'clone',
-  };
-};
 const rotuloDoTrecho = (t: Trecho) => `${funcaoInfo(t.funcao!).rotulo}${t.fato ? ' · com fonte' : ''}`;
 export function BotaoRedacaoPronta({ destaque = false }: { destaque?: boolean }) {
   return (
@@ -54,7 +24,7 @@ export function BotaoRedacaoPronta({ destaque = false }: { destaque?: boolean })
       <Dialog.Trigger asChild>
         {destaque ? (
           <button type="button" className="inline-flex items-center gap-2 rounded-[var(--radius-control)] border border-border surface-1 px-4 py-3 type-meta font-semibold t-colors hover:bg-muted">
-            <BookOpenText className="w-4 h-4 text-primary-text" aria-hidden /> Ver uma redação pronta, explicada
+            <BookOpenText className="w-4 h-4 text-primary-text" aria-hidden /> Antes de escrever: veja uma redação pronta, parte por parte
           </button>
         ) : (
           <button type="button" className="inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors">
@@ -65,13 +35,50 @@ export function BotaoRedacaoPronta({ destaque = false }: { destaque?: boolean })
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 z-50 bg-black/60 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 motion-reduce:animate-none" />
         <Dialog.Content
-          className="fixed inset-0 z-50 flex flex-col bg-background md:inset-y-6 md:mx-auto md:w-[min(48rem,calc(100vw-3rem))] md:rounded-[var(--radius-surface)] md:shadow-elev-3 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:slide-in-from-bottom-4 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 motion-reduce:animate-none focus:outline-none"
+          className="fixed inset-0 z-50 flex flex-col bg-background md:inset-y-6 md:mx-auto md:w-[min(58rem,calc(100vw-3rem))] md:rounded-[var(--radius-surface)] md:shadow-elev-3 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:slide-in-from-bottom-4 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 motion-reduce:animate-none focus:outline-none"
           aria-describedby="redacao-grifada-descricao"
         >
-          <RedacaoGrifada />
+          <ConteudoDoDialogo />
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
+  );
+}
+
+/* Abre parte por parte (uma tela por parágrafo, Pablo 02/11/2026); "Inteira"
+   é a redação corrida com os grifos de tocar, a versão de 28/10. */
+function ConteudoDoDialogo() {
+  const [modo, setModo] = useState<'partes' | 'inteira'>('partes');
+  const linhas = contarLinhas(PARAGRAFOS.map((p) => REDACAO_GRIFADA[p.chave].map(textoDaFrase).join(' ')).join('\n'));
+  const aba = (m: typeof modo, nome: string) => (
+    <button
+      type="button"
+      onClick={() => setModo(m)}
+      aria-pressed={modo === m}
+      className="rounded-[var(--radius-control)] px-3 py-1.5 type-meta font-medium t-colors text-muted-foreground hover:text-foreground aria-pressed:bg-muted aria-pressed:text-foreground"
+    >
+      {nome}
+    </button>
+  );
+  return (
+    <>
+      <header className="flex items-start justify-between gap-4 border-b border-border px-4 py-4 md:px-8">
+        <div className="min-w-0">
+          <Dialog.Title className="font-display type-title font-semibold">Redação pronta, explicada</Dialog.Title>
+          <p id="redacao-grifada-descricao" className="type-meta text-muted-foreground mt-1">
+            <span data-numeric>ENEM {EXEMPLO_ANO}</span>: {EXEMPLO_TEMA}. <span data-numeric>{linhas}</span> linhas. Não copie.
+          </p>
+          <div className="mt-3 flex gap-1" role="group" aria-label="Como ver">
+            {aba('partes', 'Parte por parte')}
+            {aba('inteira', 'Inteira, com grifos')}
+          </div>
+        </div>
+        <Dialog.Close className="-mr-2 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-[var(--radius-control)] t-colors hover:bg-muted" aria-label="Fechar">
+          <X className="w-5 h-5" aria-hidden />
+        </Dialog.Close>
+      </header>
+      {modo === 'partes' ? <RedacaoPorPartes /> : <RedacaoGrifada />}
+    </>
   );
 }
 
@@ -79,21 +86,9 @@ function RedacaoGrifada() {
   const [escolhido, setEscolhido] = useState<string | null>(null);
   const trechos = PARAGRAFOS.flatMap((p) => REDACAO_GRIFADA[p.chave].flatMap((f, i) => f.map((t, j) => ({ id: `${p.chave}-${i}-${j}`, t }))));
   const atual = trechos.find((x) => x.id === escolhido)?.t;
-  const linhas = contarLinhas(PARAGRAFOS.map((p) => REDACAO_GRIFADA[p.chave].map(textoDaFrase).join(' ')).join('\n'));
 
   return (
     <>
-      <header className="flex items-start justify-between gap-4 border-b border-border px-4 py-4 md:px-8">
-        <div className="min-w-0">
-          <Dialog.Title className="font-display type-title font-semibold">Redação pronta, explicada</Dialog.Title>
-          <p id="redacao-grifada-descricao" className="type-meta text-muted-foreground mt-1">
-            <span data-numeric>ENEM {EXEMPLO_ANO}</span>: {EXEMPLO_TEMA}. <span data-numeric>{linhas}</span> linhas. Exemplo de estrutura, não copie.
-          </p>
-        </div>
-        <Dialog.Close className="-mr-2 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-[var(--radius-control)] t-colors hover:bg-muted" aria-label="Fechar">
-          <X className="w-5 h-5" aria-hidden />
-        </Dialog.Close>
-      </header>
 
       <div className="flex-1 overflow-y-auto px-4 py-5 md:px-8">
         <Legenda />

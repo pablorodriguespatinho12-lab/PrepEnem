@@ -145,7 +145,16 @@ function encaixar(molde: string, marcador: string, motivo: string): string {
 const comEsse = (s: string) => s.replace(/^(o|a|os|as)\s/i, (m) => ({ o: 'Esse ', a: 'Essa ', os: 'Esses ', as: 'Essas ' } as Record<string, string>)[m.trim().toLowerCase()]);
 /* O motivo com as palavras do tema (tema da receita) ou o nome entre
    colchetes (tema livre: o aluno completa). */
-export function motivoNoTema(causa: ChaveCausa | null, tema: string, reserva: string): string {
+/* O motivo escrito pelo aluno (Pablo, 02/11/2026: "a desinformação" e "a
+   falta de empatia", fora das 5 causas). Artigo do começo fica minúsculo para
+   entrar no meio da frase e contrair ("de a" vira "da"); ponto final sai. */
+export type MeusMotivos = [string, string];
+export const MOTIVOS_VAZIOS: MeusMotivos = ['', ''];
+export function meuMotivo(texto: string | undefined): string {
+  return (texto ?? '').trim().replace(/\s+/g, ' ').replace(/[.!?]+$/, '').replace(/^(O|A|Os|As)\s/, (m) => m.toLowerCase());
+}
+export function motivoNoTema(causa: ChaveCausa | null, tema: string, reserva: string, meu?: string): string {
+  if (meuMotivo(meu)) return meuMotivo(meu);
   const c = causaPorChave(causa);
   if (!c) return `[${reserva}]`;
   return conteudoDoTema(tema)?.topico[c.chave] ?? `[${c.nomeNaFrase}]`;
@@ -153,8 +162,20 @@ export function motivoNoTema(causa: ChaveCausa | null, tema: string, reserva: st
 /* Molde da tese ("Frases-esqueleto"). Tema da receita: "Esse estigma decorre,
    sobretudo, do [motivo 1 no tema] e da [motivo 2 no tema]". Tema livre: o
    problema inteiro no lugar de "Tal cenário" (Pablo, 27/10/2026). */
-export function moldeTese(causaA: ChaveCausa | null, causaB: ChaveCausa | null, tema = ''): string {
+export function moldeTese(causaA: ChaveCausa | null, causaB: ChaveCausa | null, tema = '', meus: MeusMotivos = MOTIVOS_VAZIOS): string {
   const conteudo = conteudoDoTema(tema);
+  /* Com motivo próprio, cada lado é "de [motivo]": o dele, o do tema ou o
+     genérico da causa (que já traz o "de"). */
+  if (meuMotivo(meus[0]) || meuMotivo(meus[1])) {
+    const lado = (meu: string, causa: ChaveCausa | null, reserva: string) => {
+      if (meuMotivo(meu)) return `de ${meuMotivo(meu)}`;
+      if (conteudo && causa) return `de ${conteudo.topico[causa]}`;
+      return causaPorChave(causa)?.naTese ?? `de [${reserva}]`;
+    };
+    const problema = problemaDoTema(tema);
+    const sujeito = conteudo ? comEsse(conteudo.formaCurta) : problema ? maiuscula(problema) : 'Tal cenário';
+    return contrair(encaixar(encaixar(`${sujeito} decorre, sobretudo, [A] e [B].`, '[A]', lado(meus[0], causaA, 'motivo 1')), '[B]', lado(meus[1], causaB, 'motivo 2')));
+  }
   if (conteudo && causaA && causaB) {
     const molde = `${comEsse(conteudo.formaCurta)} decorre, sobretudo, de [A] e de [B].`;
     return contrair(encaixar(encaixar(molde, '[A]', conteudo.topico[causaA]), '[B]', conteudo.topico[causaB]));
@@ -251,10 +272,10 @@ export const PARAGRAFOS: Paragrafo[] = [
 const ehPrimeiroUsoDoTema = (chave: ChaveParagrafo, i: number) => chave === 'introducao' && i === 1;
 /* O molde de uma frase pronto para a tela: motivos e problema trocados. A tese
    (3ª frase da introdução) vem de moldeTese. */
-export function moldeDaFrase(chave: ChaveParagrafo, i: number, tema: string, causaA: ChaveCausa | null, causaB: ChaveCausa | null): string {
-  if (chave === 'introducao' && i === 2) return moldeTese(causaA, causaB, tema);
+export function moldeDaFrase(chave: ChaveParagrafo, i: number, tema: string, causaA: ChaveCausa | null, causaB: ChaveCausa | null, meus: MeusMotivos = MOTIVOS_VAZIOS): string {
+  if (chave === 'introducao' && i === 2) return moldeTese(causaA, causaB, tema, meus);
   const molde = PARAGRAFOS.find((p) => p.chave === chave)?.frases[i]?.molde ?? '';
-  const comMotivos = encaixar(encaixar(molde, '[causa A]', motivoNoTema(causaA, tema, 'causa A')), '[causa B]', motivoNoTema(causaB, tema, 'causa B'));
+  const comMotivos = encaixar(encaixar(molde, '[causa A]', motivoNoTema(causaA, tema, 'causa A', meus[0])), '[causa B]', motivoNoTema(causaB, tema, 'causa B', meus[1]));
   return preencherProblema(comMotivos, tema, ehPrimeiroUsoDoTema(chave, i) ? 'ponte' : 'curta');
 }
 /* A tese do passo 3 entra sozinha como 3ª frase da introdução: o aluno não a

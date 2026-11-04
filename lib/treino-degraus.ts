@@ -1,5 +1,5 @@
 // Degraus: questões menores que quebram UMA questão do ENEM nas peças que ela
-// exige. O estudante resolve as peças (base → intermediária) e chega à questão
+// exige. O estudante resolve as peças (Fácil → Médio → Difícil) e chega à questão
 // real já com elas na mão. Gerados por IA uma vez por questão-âncora e salvos
 // com `ancoraId` — da segunda vez em diante saem do banco, sem custo nem espera.
 //
@@ -15,7 +15,8 @@ import { MODELO_IA } from '@/lib/ia-modelos';
 import { concorda, resolverIndependente } from '@/lib/verificar-respostas';
 
 const DEGRAUS_BASE = 2;
-const DEGRAUS_INTERMEDIARIOS = 3;
+const DEGRAUS_INTERMEDIARIOS = 2;
+const DEGRAUS_DIFICEIS = 1;
 const QUESTOES_ACIMA = 1;
 const ORCAMENTO_ACIMA_MS = 30_000; // geração avulsa do nível acima só se a rota ainda tem folga
 const TIMEOUT_GERACAO_MS = 25_000; // duas âncoras em série cabem nos 60 s da rota
@@ -29,7 +30,7 @@ interface DegrauGerado {
   alternativaD: string;
   alternativaE: string;
   respostaCorreta: string;
-  nivel: 'facil' | 'medio' | 'acima';
+  nivel: 'facil' | 'medio' | 'dificil' | 'acima';
   explicacao: string;
 }
 
@@ -57,14 +58,15 @@ ${ancora.enunciado}
 ${alternativas}
 Resposta correta: ${ancora.respostaCorreta}
 
-Gere exatamente ${DEGRAUS_BASE + DEGRAUS_INTERMEDIARIOS + QUESTOES_ACIMA} questões:
-- ${DEGRAUS_BASE} com nivel "facil": revisão direta de um conceito que a questão usa. Enunciado de 1 a 3 linhas.
-- ${DEGRAUS_INTERMEDIARIOS} com nivel "medio": aplicam uma peça num contexto pequeno, mais perto do raciocínio da questão. Enunciado de até 5 linhas.
+Gere exatamente ${DEGRAUS_BASE + DEGRAUS_INTERMEDIARIOS + DEGRAUS_DIFICEIS + QUESTOES_ACIMA} questões:
+- ${DEGRAUS_BASE} com nivel "facil": pergunta direta e curta sobre um conceito que a questão usa, do tipo "O que é X?" ou "O que acontece quando...?". Uma ou duas linhas, sem texto de apoio.
+- ${DEGRAUS_INTERMEDIARIOS} com nivel "medio": um texto curto (3 a 5 linhas) com uma situação, e a pergunta aplica uma peça nele.
+- ${DEGRAUS_DIFICEIS} com nivel "dificil": texto de apoio longo no jeito do ENEM (8 a 12 linhas: situação real, dado, gráfico descrito ou trecho), juntando as peças. Questão original: não copie nem cite questão real.
 ${regraAcima(ancora)}
 
 REGRAS:
 - NÃO copie nem resolva a questão do ENEM; ela vem depois, o estudante precisa resolvê-la sozinho. Nenhum degrau pergunta o que a questão do ENEM pergunta, nem cita o resultado dela (se a resposta do ENEM é "mês 5", nenhum degrau calcula o mês do máximo DAQUELA função). Use outros números e outras situações para treinar a mesma peça.
-- Nada de decoreba: nunca "qual é a fórmula de...". O degrau pede para USAR ou ENTENDER a peça (calcular, comparar, interpretar um gráfico).
+- Nada de decoreba de fórmula: nunca "qual é a fórmula de...". O fácil pergunta o que o conceito É; médio e difícil pedem para USAR a peça (calcular, comparar, interpretar um gráfico).
 - Faça cada conta duas vezes antes de marcar a alternativa correta.
 - 5 alternativas plausíveis, uma só correta.
 - Explicação: 2 ou 3 frases curtas, a conta principal e o porquê. O tutor do app faz a explicação desenhada; esta só fica atrás de "Ver texto completo" (e gastava a cota de tokens da Groq).
@@ -103,7 +105,7 @@ function validarDegrau(bruto: unknown): DegrauGerado | null {
   if (!textos.every((k) => typeof d[k] === 'string' && (d[k] as string).trim().length > 0)) return null;
   const resposta = String(d.respostaCorreta ?? '').trim().toUpperCase();
   if (!(LETRAS as readonly string[]).includes(resposta)) return null;
-  const nivel = d.nivel === 'facil' || d.nivel === 'acima' ? d.nivel : 'medio';
+  const nivel = d.nivel === 'facil' || d.nivel === 'dificil' || d.nivel === 'acima' ? d.nivel : 'medio';
   return { ...(d as unknown as DegrauGerado), respostaCorreta: resposta, nivel };
 }
 
@@ -192,7 +194,8 @@ async function verificarESalvar(ancora: Question, dado: DegrauGerado[], minimo: 
   );
 }
 
-const ordemNivel = (q: Question) => (q.nivel === 'facil' ? 0 : ehAcima(q) ? 2 : 1);
+const ORDEM_NIVEL: Record<string, number> = { facil: 0, medio: 1, dificil: 2, acima: 3 };
+const ordemNivel = (q: Question) => ORDEM_NIVEL[q.nivel ?? 'medio'] ?? 1;
 
 /* Degraus de cada âncora, do banco ou gerados agora (um por vez). Âncora
    cuja geração falhar volta sem degraus — quem chama decide o que fazer. */

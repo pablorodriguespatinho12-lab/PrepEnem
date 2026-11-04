@@ -21,8 +21,8 @@ function embaralhar<T>(arr: T[]): T[] {
   return a;
 }
 
-/* Questões médias primeiro; se faltar, completa com as do ENEM e depois as
-   fáceis. A matéria some da prova se não houver nenhuma questão dela. */
+/* Questões médias primeiro; se faltar, completa com as difíceis, as do ENEM
+   e por fim as fáceis. A matéria some da prova se não houver nenhuma questão dela. */
 async function montarMistura(mistura: unknown[]) {
   const pedidos = mistura
     .filter((m): m is { materia: string; quantidade: number } =>
@@ -31,7 +31,7 @@ async function montarMistura(mistura: unknown[]) {
 
   const blocos = await Promise.all(pedidos.map(async ({ materia, quantidade }) => {
     const todas = embaralhar(await prisma.question.findMany({ where: { materia } }));
-    const preferencia = ['intermediaria', 'enem', 'base'];
+    const preferencia = ['medio', 'dificil', 'enem', 'facil'];
     const ordenadas = preferencia.flatMap((e) => todas.filter((q) => etapaDaQuestao(q) === e));
     return ordenadas.slice(0, quantidade);
   }));

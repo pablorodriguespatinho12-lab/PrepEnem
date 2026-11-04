@@ -11,7 +11,7 @@ import { useEffect, useState, type ReactNode } from 'react';
 import { Check, ChevronDown, LifeBuoy } from 'lucide-react';
 import {
   causaPorChave, coringasDosMotivos, CONECTIVOS,ELEMENTOS, ERROS_PROPOSTA, introducaoComTese, moldeDaFrase, PONTE, PONTE_AVISO,
-  type ChaveCausa, type ChaveElemento, type Paragrafo,
+  type ChaveCausa, type ChaveElemento, type MeusMotivos, type Paragrafo,
 } from '@/lib/redacao/receita';
 import { EXEMPLO_ANO, EXEMPLO_PARAGRAFOS } from '@/lib/redacao/exemplo-receita';
 import { juntarComeco, ondeEstou, type OndeEstou } from '@/lib/redacao/onde-estou';
@@ -31,6 +31,7 @@ interface Props {
   aoMudar: (t: string) => void;
   causaA: ChaveCausa | null;
   causaB: ChaveCausa | null;
+  meusMotivos: MeusMotivos;
   tese: string;
   elementos: Record<ChaveElemento, boolean>;
   aoMarcarElemento: (e: ChaveElemento, v: boolean) => void;
@@ -145,6 +146,13 @@ function MaisDicas({ paragrafo }: { paragrafo: Paragrafo }) {
           {temPonte && <Ponte titulo="Ponte em 3 passos" itens={PONTE.map((p) => ({ passo: p.passo, texto: p.o_que }))} />}
           {temPonte && <p className="type-meta text-muted-foreground mt-2">{PONTE_AVISO}</p>}
           {paragrafo.chave === 'desenvolvimento1' && <p className="type-meta text-muted-foreground mt-4">Conectivos para variar: {CONECTIVOS.join(' / ')}.</p>}
+          {/* Motivo 2 que nasce do 1 (Pablo, 02/11/2026: a desinformação gera a
+              falta de empatia): dizer isso liga os 2 parágrafos. */}
+          {paragrafo.chave === 'desenvolvimento2' && (
+            <p className="type-meta text-muted-foreground mt-4">
+              Seu 2º motivo nasce do 1º? Diga isso na 1ª frase: <span className="text-foreground">&quot;Em segundo lugar, [motivo 2], gerado pelo [motivo 1], agrava [o problema].&quot;</span> Assim os 2 parágrafos ficam ligados.
+            </p>
+          )}
           {paragrafo.chave === 'conclusao' && <p className="type-meta text-muted-foreground mt-4">Erros: {ERROS_PROPOSTA}</p>}
         </>
       )}
@@ -189,7 +197,7 @@ function Painel({ jaMarcados, onde, aba, aoTrocarAba, aberto, aoAbrir, ajuda, co
       {exemplo.ponte && <Ponte titulo="A ponte neste exemplo" itens={exemplo.ponte.map((p) => ({ passo: p.passo, texto: p.trecho }))} />}
     </>
   );
-  const moldes = paragrafo.frases.map((_, i) => moldeDaFrase(paragrafo.chave, i, tema, causaA, causaB));
+  const moldes = paragrafo.frases.map((_, i) => moldeDaFrase(paragrafo.chave, i, tema, causaA, causaB, props.meusMotivos));
 
   return (
     <section
@@ -347,7 +355,7 @@ export function PassoParagrafo(props: Props) {
   const pedir = async (pergunta: string) => {
     setAjuda((a) => ({ ...a, carregando: true, erro: null }));
     try {
-      const resposta = await pedirAjuda({ tema, paragrafo, texto, tese, causaA, causaB }, pergunta);
+      const resposta = await pedirAjuda({ tema, paragrafo, texto, tese, causaA, causaB, meusMotivos: props.meusMotivos }, pergunta);
       setAjuda((a) => ({ ...a, carregando: false, resposta, pergunta: pergunta ? '' : a.pergunta }));
     } catch (e) {
       setAjuda((a) => ({ ...a, carregando: false, erro: (e as Error).message }));

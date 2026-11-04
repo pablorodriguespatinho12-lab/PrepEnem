@@ -83,7 +83,7 @@ async function cenarioSugeridos(browser: Browser) {
   await page.locator('#tema-livre').fill(LIVRE);
   await conferirMotivos(page, c, 'ao trocar para livre', [null, null]);
   await proximo(page);
-  const semMotivo = await page.getByText('Escolha 2 motivos.').count();
+  const semMotivo = await page.getByText('Escolha ou escreva 2 motivos.', { exact: true }).count();
   anotar(c, 'passo 2 (livre) trava sem motivo', 'trava', semMotivo > 0 ? 'trava' : 'não trava');
   await page.context().close();
 }

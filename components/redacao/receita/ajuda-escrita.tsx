@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { ArrowRight, Check, Loader2 } from 'lucide-react';
 import type { RespostaAjuda } from '@/lib/redacao/ajuda';
 import type { OndeEstou } from '@/lib/redacao/onde-estou';
-import type { ChaveCausa, Paragrafo } from '@/lib/redacao/receita';
+import type { ChaveCausa, MeusMotivos, Paragrafo } from '@/lib/redacao/receita';
 import { PerguntasGuia } from './pecas';
 
 export interface DadosDaAjuda {
@@ -18,6 +18,7 @@ export interface DadosDaAjuda {
   tese: string;
   causaA: ChaveCausa | null;
   causaB: ChaveCausa | null;
+  meusMotivos: MeusMotivos;
 }
 
 /* Estado da ajuda guardado pelo pai: trocar de aba não apaga a resposta. */
@@ -35,7 +36,7 @@ export async function pedirAjuda(dados: DadosDaAjuda, pergunta: string): Promise
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       tema: dados.tema, paragrafo: dados.paragrafo.chave, texto: dados.texto, tese: dados.tese,
-      causaA: dados.causaA, causaB: dados.causaB, pergunta,
+      causaA: dados.causaA, causaB: dados.causaB, meusMotivos: dados.meusMotivos, pergunta,
     }),
   });
   const corpo = await res.json().catch(() => ({}));

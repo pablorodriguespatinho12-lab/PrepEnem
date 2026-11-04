@@ -11,6 +11,7 @@ import {
   Check, X, Layers
 } from 'lucide-react';
 import { toast } from 'sonner';
+import { semMarcaDeImagem } from '@/lib/enunciado-sem-alternativas';
 import { materiaColors } from '@/lib/theme-colors';
 import { fireConfetti, spawnCorrectParticles, flashScreen } from '@/components/animations';
 import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
@@ -927,7 +928,7 @@ export default function TreinoPage() {
           {/* Enunciado — serifada de leitura, medida travada em 60–70 caracteres.
               Antes: 646px a 16px, ~81 caracteres por linha. */}
           <div className="prose-reading mb-6">
-            <MathText text={currentQ?.enunciado ?? ''} />
+            <MathText text={semMarcaDeImagem(currentQ?.enunciado ?? '')} />
           </div>
 
           {/* Scan da prova original. O container é o passe-partout: ver .exam-scan

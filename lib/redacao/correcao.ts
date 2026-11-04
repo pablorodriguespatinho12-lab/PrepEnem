@@ -45,12 +45,21 @@ const bool = (v: unknown): boolean => v === true;
 /* Desvio que não está no texto, ou cuja "correção" é o próprio trecho, não
    conta: com raciocínio 'low' a IA apontou "Eremos Seis" → "Eremas Seis" e
    aspas trocadas por aspas iguais (Cartilha 2026 #2, 27/10/2026). */
+/* Sobra de digitação no computador (Pablo, 02/11/2026: "desinformação1",
+   "na prova isso nem vai existir"): o trecho só difere da correção por um
+   número grudado na palavra. Na folha à mão não acontece, então não conta
+   como erro de português nem gasta o "Treine agora". */
+const tirarNumeroGrudado = (t: string) => t.replace(/(\p{L})\d+/gu, '$1').replace(/\d+(\p{L})/gu, '$1');
+export function ehSobraDeDigitacao(d: Pick<Desvio, 'trecho' | 'correcao'>): boolean {
+  const limpo = (t: string) => t.trim().replace(/\s+/g, ' ').toLowerCase();
+  return /\p{L}\d|\d\p{L}/u.test(d.trecho) && limpo(tirarNumeroGrudado(d.trecho)) === limpo(d.correcao);
+}
 function limparDesvios(desvios: Desvio[], texto?: string): Desvio[] {
   const vistos = new Set<string>();
   return desvios.filter((d) => {
     const limpo = (t: string) => t.trim().replace(/\s+/g, ' ');
     const chave = limpo(d.trecho).toLowerCase();
-    if (!chave || limpo(d.trecho) === limpo(d.correcao) || (texto !== undefined && !trechoExiste(d.trecho, texto)) || vistos.has(chave)) return false;
+    if (!chave || limpo(d.trecho) === limpo(d.correcao) || ehSobraDeDigitacao(d) || (texto !== undefined && !trechoExiste(d.trecho, texto)) || vistos.has(chave)) return false;
     vistos.add(chave);
     return true;
   });

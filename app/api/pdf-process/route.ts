@@ -259,7 +259,7 @@ export async function POST(req: Request) {
 
         // Check for image references in enunciado
         const enunciado = q.enunciado ?? `Questão ${i + 1}`;
-        const imagePatterns = /\[IMAGEM\]|imagem|figura|gráfico|tirinha|charge|quadrinho|esquema|diagrama|tabela|mapa|ilustração/i;
+        const imagePatterns = /\[IMAGEM\]|imagem|figura(?! de linguagem)|gráfico|tirinha|charge|quadrinho|esquema|diagrama|tabela|mapa|ilustração/i;
         const dependeImagem = imagePatterns.test(enunciado);
 
         // Build origin string

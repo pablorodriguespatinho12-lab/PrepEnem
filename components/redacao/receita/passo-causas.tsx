@@ -5,7 +5,7 @@
 // Os autores ficam fora do botão de escolher (botão dentro de botão não vale):
 // cada nome abre a ficha.
 
-import { CAUSAS, causaPorChave, motivosQueCombinamPouco, type ChaveCausa } from '@/lib/redacao/receita';
+import { CAUSAS, causaPorChave, meuMotivo, motivosQueCombinamPouco, type ChaveCausa, type MeusMotivos } from '@/lib/redacao/receita';
 import { conteudoDoTema } from '@/lib/redacao/conteudo-temas';
 import { EXEMPLO_CAUSAS } from '@/lib/redacao/exemplo-receita';
 import { CabecalhoPasso } from './pecas';
@@ -15,13 +15,15 @@ import { AutoresEmLinha, VerExemplo } from './autores';
 const DESTAQUE = { borderColor: 'hsl(var(--primary))', backgroundColor: 'hsl(var(--primary) / 0.1)' };
 const SELO = { backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' };
 
-export function PassoCausas({ perguntas, tema, causaA, causaB, sugeridas, aoMudar }: {
+export function PassoCausas({ perguntas, tema, causaA, causaB, sugeridas, aoMudar, meusMotivos, aoMudarMeus }: {
   perguntas: string[];
   tema: string;
   causaA: ChaveCausa | null;
   causaB: ChaveCausa | null;
   sugeridas: ChaveCausa[];
   aoMudar: (a: ChaveCausa | null, b: ChaveCausa | null) => void;
+  meusMotivos: MeusMotivos;
+  aoMudarMeus: (m: MeusMotivos) => void;
 }) {
   const tocar = (c: ChaveCausa) => {
     if (c === causaA) return aoMudar(causaB, null);
@@ -32,7 +34,7 @@ export function PassoCausas({ perguntas, tema, causaA, causaB, sugeridas, aoMuda
   };
   return (
     <div>
-      <CabecalhoPasso titulo="Por que esse problema existe?" instrucao={criarMarcador()('Escolha 2 motivos. Eles viram sua tese e os 2 parágrafos do meio.')} perguntas={perguntas} />
+      <CabecalhoPasso titulo="Por que esse problema existe?" instrucao={criarMarcador()('Escolha 2 motivos, ou escreva os seus no fim da página. Eles viram sua tese e os 2 parágrafos do meio.')} perguntas={perguntas} />
       {/* O aviso fica em cima dos cartões: embaixo, ficava fora da tela. */}
       <AvisoMotivo tema={tema} causaA={causaA} causaB={causaB} />
       <ul className="grid gap-3 sm:grid-cols-2">
@@ -62,7 +64,8 @@ export function PassoCausas({ perguntas, tema, causaA, causaB, sugeridas, aoMuda
           );
         })}
       </ul>
-      <MiniMapa causaA={causaA} causaB={causaB} />
+      <MeusMotivosCampos meus={meusMotivos} aoMudar={aoMudarMeus} />
+      <MiniMapa causaA={causaA} causaB={causaB} meus={meusMotivos} />
       <VerExemplo>
         <p className="type-meta"><span className="font-semibold">1º motivo:</span> {causaPorChave(EXEMPLO_CAUSAS[0])?.nome}</p>
         <p className="type-meta"><span className="font-semibold">2º motivo:</span> {causaPorChave(EXEMPLO_CAUSAS[1])?.nome}</p>
@@ -72,16 +75,46 @@ export function PassoCausas({ perguntas, tema, causaA, causaB, sugeridas, aoMuda
   );
 }
 
+/* O motivo com as palavras dele (Pablo, 02/11/2026: escreveu "a
+   desinformação" e "a falta de empatia", que não estão nas 5 causas, e o
+   molde seguia outro caminho). Opcional: escrito, ele manda no molde e na
+   tese; a causa escolhida acima continua dando os autores. */
+function MeusMotivosCampos({ meus, aoMudar }: { meus: MeusMotivos; aoMudar: (m: MeusMotivos) => void }) {
+  const campo = (i: 0 | 1, rotulo: string, exemplo: string) => (
+    <div>
+      <label htmlFor={`meu-motivo-${i}`} className="type-meta font-semibold block mb-1.5">{rotulo}</label>
+      <input
+        id={`meu-motivo-${i}`}
+        value={meus[i]}
+        maxLength={160}
+        onChange={(e) => aoMudar(i === 0 ? [e.target.value, meus[1]] : [meus[0], e.target.value])}
+        placeholder={exemplo}
+        className="block w-full rounded-[var(--radius-control)] border border-muted-foreground bg-[hsl(var(--surface-2))] px-4 py-2.5 type-body placeholder:text-muted-foreground focus:outline-none"
+      />
+    </div>
+  );
+  return (
+    <section className="mt-6" aria-labelledby="meus-motivos-titulo">
+      <h3 id="meus-motivos-titulo" className="font-display type-lead font-semibold">Tem outro motivo? Escreva do seu jeito</h3>
+      <p className="type-meta text-muted-foreground mt-1 mb-3">Opcional. O que você escrever aqui vai para a tese e para os moldes no lugar da frase do cartão.</p>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {campo(0, '1º motivo, com suas palavras', 'Ex.: a desinformação sobre o assunto')}
+        {campo(1, '2º motivo, com suas palavras', 'Ex.: a falta de empatia da população')}
+      </div>
+    </section>
+  );
+}
 /* Onde cada motivo vai parar na redação, preenchido ao escolher. */
-function MiniMapa({ causaA, causaB }: { causaA: ChaveCausa | null; causaB: ChaveCausa | null }) {
-  const linhas: [string, ChaveCausa | null, string][] = [['1º motivo', causaA, 'Desenvolvimento 1'], ['2º motivo', causaB, 'Desenvolvimento 2']];
+function MiniMapa({ causaA, causaB, meus }: { causaA: ChaveCausa | null; causaB: ChaveCausa | null; meus: MeusMotivos }) {
+  const nome = (causa: ChaveCausa | null, meu: string) => meuMotivo(meu) || causaPorChave(causa)?.nome || null;
+  const linhas: [string, string | null, string][] = [['1º motivo', nome(causaA, meus[0]), 'Desenvolvimento 1'], ['2º motivo', nome(causaB, meus[1]), 'Desenvolvimento 2']];
   return (
     <section className="surface-1 rounded-[var(--radius-surface)] p-4 mt-5" aria-label="Para onde vai cada motivo">
       <ul className="space-y-1.5">
         {linhas.map(([ordem, causa, destino]) => (
           <li key={ordem} className="type-meta">
             <span className="font-semibold">{ordem}</span>
-            <span className="text-muted-foreground">{causa ? ` (${causaPorChave(causa)?.nome})` : ' (escolha acima)'}</span>
+            <span className="text-muted-foreground">{causa ? ` (${causa})` : ' (escolha ou escreva acima)'}</span>
             <span aria-hidden> → </span><span className="sr-only"> vai para o </span>{destino}
           </li>
         ))}

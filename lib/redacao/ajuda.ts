@@ -11,7 +11,7 @@
 // escreveu 2 frases fora do molde (aluno-do-zero, 29/10/2026).
 
 import { autorPorNome, coringaPorNome } from './autores';
-import { causaPorChave, moldeDaFrase, PARAGRAFOS, type ChaveCausa, type ChaveParagrafo } from './receita';
+import { causaPorChave, meuMotivo, moldeDaFrase, PARAGRAFOS, type ChaveCausa, type ChaveParagrafo, type MeusMotivos } from './receita';
 import { ondeEstou } from './onde-estou';
 import { semPalavraChula } from '@/lib/tutor/validar';
 
@@ -29,6 +29,8 @@ export interface PedidoAjuda {
   tese: string;
   causaA: ChaveCausa | null;
   causaB: ChaveCausa | null;
+  /* Os motivos com as palavras dele; vazios = vale a causa. */
+  meusMotivos?: MeusMotivos;
   pergunta: string;
 }
 
@@ -70,6 +72,7 @@ export function lerPedidoAjuda(corpo: unknown): PedidoAjuda | null {
     tese: texto(c.tese, 600),
     causaA: causa(c.causaA),
     causaB: causa(c.causaB),
+    meusMotivos: Array.isArray(c.meusMotivos) ? [texto(c.meusMotivos[0], 160), texto(c.meusMotivos[1], 160)] : ['', ''],
     pergunta: texto(c.pergunta, LIMITE_PERGUNTA).trim(),
   };
 }
@@ -93,13 +96,13 @@ function fichas(p: PedidoAjuda): string {
 export function promptAjuda(p: PedidoAjuda): string {
   const par = PARAGRAFOS.find((x) => x.chave === p.paragrafo)!;
   const onde = ondeEstou(p.texto, p.paragrafo, par.frases.length);
-  const molde = par.frases.map((f, i) => `${i + 1}. ${f.funcao}: ${moldeDaFrase(p.paragrafo, i, p.tema, p.causaA, p.causaB)}`).join('\n');
+  const molde = par.frases.map((f, i) => `${i + 1}. ${f.funcao}: ${moldeDaFrase(p.paragrafo, i, p.tema, p.causaA, p.causaB, p.meusMotivos)}`).join('\n');
   const agora = `Ele escreveu ${onde.completas} frase(s) com ponto final${onde.escrevendo ? ' e está no meio de outra (o pedaço sem ponto no fim)' : ''}. Ele escreve ${onde.total} frases neste parágrafo. Contar não basta: frase que não faz a função do molde não conta como feita.`;
   return `Você ajuda um aluno do ensino médio que está escrevendo uma redação do ENEM, parte por parte, seguindo um molde. Ele sabe pouco de redação. Fale simples, em português do Brasil, frases curtas, "você".
 
 TEMA: ${p.tema}
 PARÁGRAFO: ${par.titulo} (meta: ${par.linhasMin} a ${par.linhasMax} linhas)
-MOTIVOS (causas) que ele escolheu: A = ${causaPorChave(p.causaA)?.nome ?? 'nenhum'}; B = ${causaPorChave(p.causaB)?.nome ?? 'nenhum'}
+MOTIVOS que ele escolheu: A = ${meuMotivo(p.meusMotivos?.[0]) || causaPorChave(p.causaA)?.nome || 'nenhum'}; B = ${meuMotivo(p.meusMotivos?.[1]) || causaPorChave(p.causaB)?.nome || 'nenhum'}
 TESE DELE: ${p.tese || '(ainda sem tese)'}
 
 MOLDE DO PARÁGRAFO (uma frase por função):

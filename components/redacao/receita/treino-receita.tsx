@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/alert-dialog';
 import { duplaSugerida, montarRedacao, PARAGRAFOS, type ChaveParagrafo } from '@/lib/redacao/receita';
 import {
-  apagarRascunho, atualizarTese, lerRascunho, rascunhoVazio, salvarRascunho, sincronizarTese, teseDesatualizada, trocarTema, type Rascunho,
+  apagarRascunho, atualizarTese, lerRascunho, rascunhoVazio, salvarRascunho, sincronizarTese, temMotivo, teseDesatualizada, trocarTema, type Rascunho,
 } from '@/lib/redacao/rascunho-receita';
 import { BarraProgresso, TOTAL_PASSOS } from './pecas';
 import { perguntasDoPasso } from '@/lib/redacao/conteudo-temas';
@@ -34,7 +34,7 @@ const PARAGRAFO_DO_PASSO: Record<number, ChaveParagrafo> = { 4: 'introducao', 5:
    o resto o aluno pode deixar para depois. */
 function falta(r: Rascunho): string | null {
   if (r.passo === 1 && !r.tema.trim()) return 'Escolha ou digite um tema.';
-  if (r.passo === 2 && !(r.causaA && r.causaB)) return 'Escolha 2 motivos.';
+  if (r.passo === 2 && !(temMotivo(r.causaA, r.meusMotivos[0]) && temMotivo(r.causaB, r.meusMotivos[1]))) return 'Escolha ou escreva 2 motivos.';
   return null;
 }
 
@@ -56,7 +56,7 @@ export function TreinoReceita() {
 
   const mudar = (parcial: Partial<Rascunho>) => setR((atual) => ({ ...atual, ...parcial }));
   /* Tema e motivos mexem na tese: automática é regerada, editada ganha aviso. */
-  const mudarMotivos = (parcial: Pick<Partial<Rascunho>, 'causaA' | 'causaB'>) =>
+  const mudarMotivos = (parcial: Pick<Partial<Rascunho>, 'causaA' | 'causaB' | 'meusMotivos'>) =>
     setR((atual) => sincronizarTese({ ...atual, ...parcial }));
   const mudarTema = (tema: string) => setR((atual) => trocarTema(atual, tema, textosDaLista));
   const marcarMoldeVisto = (chave: ChaveParagrafo) =>
@@ -91,7 +91,7 @@ export function TreinoReceita() {
   const conteudo = (
     <>
       {r.passo === 1 && <PassoTema perguntas={perguntas} tema={r.tema} temas={temas} erro={erroTemas} causaA={r.causaA} causaB={r.causaB} aoMudar={mudarTema} />}
-      {r.passo === 2 && <PassoCausas perguntas={perguntas} tema={r.tema} causaA={r.causaA} causaB={r.causaB} sugeridas={duplaSugerida(r.tema, textosDaLista) ?? []} aoMudar={(causaA, causaB) => mudarMotivos({ causaA, causaB })} />}
+      {r.passo === 2 && <PassoCausas perguntas={perguntas} tema={r.tema} causaA={r.causaA} causaB={r.causaB} sugeridas={duplaSugerida(r.tema, textosDaLista) ?? []} aoMudar={(causaA, causaB) => mudarMotivos({ causaA, causaB })} meusMotivos={r.meusMotivos} aoMudarMeus={(meusMotivos) => mudarMotivos({ meusMotivos })} />}
       {r.passo === 3 && (
         <PassoTese
           perguntas={perguntas}
@@ -99,6 +99,7 @@ export function TreinoReceita() {
           tema={r.tema}
           causaA={r.causaA}
           causaB={r.causaB}
+          meusMotivos={r.meusMotivos}
           aoMudar={(tese) => mudar({ tese })}
           desatualizada={teseDesatualizada(r)}
           aoAtualizar={() => setR(atualizarTese)}
@@ -113,6 +114,7 @@ export function TreinoReceita() {
           aoMudar={(t) => mudarParagrafo(paragrafo.chave, t)}
           causaA={r.causaA}
           causaB={r.causaB}
+          meusMotivos={r.meusMotivos}
           tese={r.tese}
           elementos={r.elementos}
           aoMarcarElemento={(e, v) => setR((atual) => ({ ...atual, elementos: { ...atual.elementos, [e]: v } }))}

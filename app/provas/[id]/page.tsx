@@ -5,6 +5,10 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { ChevronLeft, Trophy, Loader2, ArrowRight, Target, Brain, AlertCircle, Check, X } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
+import { ETAPA_LABEL, etapaDaQuestao } from '@/lib/treino-etapas';
+import { PaginaDaProva } from '@/components/pagina-da-prova';
+import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
+import { semMarcaDeImagem } from '@/lib/enunciado-sem-alternativas';
 import dynamic from 'next/dynamic';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
@@ -210,7 +214,7 @@ export default function ProvaDetailPage() {
                   )}
                 </div>
                 <div className="prose-reading mb-3">
-                  <MathText text={q.enunciado} />
+                  <MathText text={semMarcaDeImagem(q.enunciado)} />
                 </div>
                 <div className="type-meta text-muted-foreground">
                   Sua resposta:{' '}
@@ -369,6 +373,10 @@ export default function ProvaDetailPage() {
               />
               {q.materia}
             </span>
+            {/* Nível da questão (Pablo, 03/11/2026: "cadê o nível das questões?"). */}
+            <span className="type-caption px-2 py-0.5 rounded-[var(--radius-data)] bg-muted text-foreground font-medium">
+              {etapaDaQuestao(q) === 'enem' && q.anoProva ? `ENEM ${q.anoProva} · questão real` : ETAPA_LABEL[etapaDaQuestao(q)]}
+            </span>
             {q.subtema && (
               <>
                 <span aria-hidden className="text-border">/</span>
@@ -377,8 +385,21 @@ export default function ProvaDetailPage() {
             )}
           </div>
           <div className="prose-reading mb-6">
-            <MathText text={q.enunciado} />
+            <MathText text={semMarcaDeImagem(q.enunciado)} />
           </div>
+          {/* A figura da questão real (a prova não mostrava; Pablo, 03/11/2026). */}
+          {q.pdfFileUrl && q.paginaPdf && (
+            <PaginaDaProva
+              key={q.id}
+              pdfUrl={q.pdfFileUrl}
+              pagina={q.paginaPdf}
+              imagemUrl={q.imagemUrl}
+              imagemUrlExpandida={q.imagemUrlExpandida}
+              precisaDaImagem={Boolean(q.dependeImagem)}
+              className="mb-6"
+            />
+          )}
+          {q.dependeImagem && !q.pdfFileUrl && <ImagemIndisponivel className="mb-6" />}
 
           <div className="space-y-2">
             {alternativas.map((alt, i) => {

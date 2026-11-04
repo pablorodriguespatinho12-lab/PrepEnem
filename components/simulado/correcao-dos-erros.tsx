@@ -6,6 +6,7 @@
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { Check, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { semMarcaDeImagem } from '@/lib/enunciado-sem-alternativas';
 import { materiaColors } from '@/lib/theme-colors';
 import { PaginaDaProva } from '@/components/pagina-da-prova';
 import { ExplicacaoTutor, type QuestaoTutor } from '@/components/tutor/explicacao-tutor';
@@ -93,7 +94,7 @@ export function CorrecaoDosErros({ questoes, respostas }: Props) {
             <span className="font-medium text-foreground">{q.materia}</span>
             {q.subtema && <><span aria-hidden className="text-border">/</span><span className="truncate">{q.subtema}</span></>}
           </div>
-          <div className="prose-reading"><MathText text={q.enunciado} /></div>
+          <div className="prose-reading"><MathText text={semMarcaDeImagem(q.enunciado)} /></div>
           {q.pdfFileUrl && q.paginaPdf && (
             <PaginaDaProva
               pdfUrl={q.pdfFileUrl}
