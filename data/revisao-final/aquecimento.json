@@ -1,0 +1,671 @@
+{
+ "nome": "Aquecimento: antes da Revisão final",
+ "descricao": "31 questões fáceis (pergunta curta, nível Fácil) com o conceito que cada questão da prova 'Revisão final: o que mais cai' exige. Escritas pelo Claude na sessão, não são reais. Mesma ordem da prova: dia 1, depois dia 2.",
+ "questoes": [
+  {
+   "id": "aquec-rf-01", "area": "Linguagens", "materia": "Português", "tema": "Literatura Brasileira", "prepara": [2, 3],
+   "enunciado": "O que é tradição oral?",
+   "A": "Conhecimento passado de geração em geração pela fala, em cantigas e histórias.",
+   "B": "Texto escrito só em livros antigos.",
+   "C": "Regra de gramática da norma-padrão.",
+   "D": "Discurso feito por políticos na televisão.",
+   "E": "Língua usada apenas em documentos oficiais.",
+   "resposta": "A",
+   "explicacao": {
+    "conferencia": "Tradição oral = saber transmitido pela fala entre gerações. A.",
+    "ideia": "Tradição oral é o que a avó conta e o neto repete: passa de boca em boca, sem livro.",
+    "pecas": [{"termo": "Oral", "significado": "Falado, feito com a boca. Como uma história contada antes de dormir."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "A questão quer saber como esse saber passa de uma pessoa para outra.", "visual": {"tipo": "tabela", "titulo": "Como o saber passa", "cabecalho": ["Jeito", "Exemplo"], "linhas": [["Pela fala (oral)", "cantiga, conto, reza"], ["Pela escrita", "livro, jornal"]]}},
+     {"titulo": "A resposta", "texto": "Letra A: passa pela fala, de geração em geração. No ENEM ela aparece guardando a cultura africana e indígena.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Uma cantiga que a bisavó ensinou e a família canta até hoje é exemplo de quê?", "opcoes": ["Tradição oral", "Norma-padrão", "Texto técnico", "Propaganda"], "certa": "Tradição oral", "resposta": "Passou pela fala, de geração em geração."}
+   }
+  },
+  {
+   "id": "aquec-rf-02", "area": "Linguagens", "materia": "Português", "tema": "Gêneros Textuais e Multimodalidade", "prepara": [4, 5],
+   "enunciado": "Um post de rede social feito com a cara de um anúncio de jornal está fazendo o quê?",
+   "A": "Copiando um texto sem dar o crédito.",
+   "B": "Usando a forma de um gênero para cumprir a função de outro.",
+   "C": "Seguindo só as regras da norma-padrão.",
+   "D": "Trocando o português pelo inglês.",
+   "E": "Escrevendo um poema com rimas.",
+   "resposta": "B",
+   "explicacao": {
+    "conferencia": "Forma de anúncio + função de post = um gênero emprestando a forma de outro. B.",
+    "ideia": "É como ir de terno a uma festa à fantasia: a roupa é de um lugar, o objetivo é de outro.",
+    "pecas": [{"termo": "Gênero textual", "significado": "O tipo de texto pelo seu uso: receita, anúncio, notícia, post."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "Separe a forma (como parece) da função (para que serve).", "visual": {"tipo": "tabela", "titulo": "Forma e função", "cabecalho": ["Parte", "De onde vem"], "linhas": [["Forma", "anúncio de jornal"], ["Função", "post que informa ou convence"]]}},
+     {"titulo": "A resposta", "texto": "Letra B: pega a forma de um gênero para cumprir a função de outro. No ENEM, pergunte sempre: qual é o objetivo do texto?", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Uma campanha contra a dengue escrita como receita de bolo usa a forma de qual gênero?", "opcoes": ["Receita", "Notícia", "Poema", "Carta"], "certa": "Receita", "resposta": "A forma é de receita; a função é alertar."}
+   }
+  },
+  {
+   "id": "aquec-rf-03", "area": "Linguagens", "materia": "Português", "tema": "Variação Linguística e Norma-Padrão", "prepara": [8],
+   "enunciado": "O que é variação linguística?",
+   "A": "Erro de quem não estudou gramática.",
+   "B": "A troca de uma língua por outra.",
+   "C": "As diferentes formas de falar a mesma língua, conforme a região, o grupo e a situação.",
+   "D": "Uma regra que só vale para a escrita.",
+   "E": "Uma língua que tem poucos falantes.",
+   "resposta": "C",
+   "explicacao": {
+    "conferencia": "Variação = formas diferentes da mesma língua (região, grupo, situação). Não é erro. C.",
+    "ideia": "Mandioca, aipim e macaxeira: três nomes, a mesma raiz. Toda língua varia, até a Libras.",
+    "pecas": [{"termo": "Variação linguística", "significado": "Jeitos diferentes de falar a mesma língua. Como o “tu” no Sul e o “você” em São Paulo."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "A questão quer o que faz a língua mudar de um falante para outro.", "visual": {"tipo": "tabela", "titulo": "Por que a língua varia", "cabecalho": ["Causa", "Exemplo"], "linhas": [["Região", "aipim ou macaxeira"], ["Grupo", "gíria dos jovens"], ["Situação", "conversa ou entrevista de emprego"]]}},
+     {"titulo": "A resposta", "texto": "Letra C. Para o ENEM, variação nunca é erro: é como toda língua funciona, inclusive a Libras.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Um gaúcho diz “bergamota” e um paulista diz “mexerica”. Isso é:", "opcoes": ["Variação linguística", "Erro de português", "Outra língua", "Estrangeirismo"], "certa": "Variação linguística", "resposta": "A mesma fruta tem nomes diferentes por região."}
+   }
+  },
+  {
+   "id": "aquec-rf-04", "area": "Linguagens", "materia": "Português", "tema": "Variação Linguística e Norma-Padrão", "prepara": [9],
+   "enunciado": "Usar palavras difíceis de advogado (o “juridiquês”) numa conversa com amigos é um problema de:",
+   "A": "falta de vocabulário.",
+   "B": "erro de ortografia.",
+   "C": "uso de gíria.",
+   "D": "adequação da linguagem à situação.",
+   "E": "tradução do inglês.",
+   "resposta": "D",
+   "explicacao": {
+    "conferencia": "Linguagem certa para o lugar errado = falta de adequação. D.",
+    "ideia": "Ir de terno à praia: o terno não está errado, só não combina com o lugar. A linguagem também.",
+    "pecas": [{"termo": "Adequação", "significado": "Escolher o jeito de falar que combina com quem ouve e com o lugar."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "O juridiquês não está errado. A questão é onde ele foi usado.", "visual": {"tipo": "tabela", "titulo": "Onde cada fala combina", "cabecalho": ["Fala", "Combina com"], "linhas": [["Juridiquês", "documento de tribunal"], ["Fala do dia a dia", "conversa com amigos"]]}},
+     {"titulo": "A resposta", "texto": "Letra D: adequação à situação. No ENEM, a melhor linguagem é a que serve ao momento.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Mandar “E aí, mano!” num e-mail para o diretor da escola é problema de:", "opcoes": ["Adequação", "Ortografia", "Acentuação", "Tradução"], "certa": "Adequação", "resposta": "A fala é de amigo, e o leitor pede formalidade."}
+   }
+  },
+  {
+   "id": "aquec-rf-05", "area": "Linguagens", "materia": "Inglês", "tema": "Reading Comprehension e Interpretação", "prepara": [6, 7],
+   "enunciado": "Num cartum, o chefe diz: “Nobody treats you any differently here” (“Aqui ninguém trata você diferente”). O desenho mostra que todos no escritório são iguais entre si. O efeito do cartum é:",
+   "A": "elogio sincero ao escritório.",
+   "B": "propaganda da empresa.",
+   "C": "descrição neutra do trabalho.",
+   "D": "um erro do desenhista.",
+   "E": "ironia: a frase diz uma coisa e o desenho mostra outra.",
+   "resposta": "E",
+   "explicacao": {
+    "conferencia": "Frase de igualdade + escritório sem diversidade = ironia. E.",
+    "ideia": "Dizer “que dia lindo” debaixo de chuva é ironia. No cartum, a frase e o desenho brigam de propósito.",
+    "pecas": [{"termo": "Ironia", "significado": "Dizer uma coisa querendo mostrar o contrário. Como chamar de “rapidinho” uma fila de 2 horas."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "Compare o que a frase diz com o que o desenho mostra.", "visual": {"tipo": "tabela", "titulo": "Frase contra desenho", "cabecalho": ["Parte", "Mostra"], "linhas": [["Frase", "ninguém é tratado diferente"], ["Desenho", "só gente igual: não há diversidade"]]}},
+     {"titulo": "A resposta", "texto": "Letra E: ironia. Em cartum do ENEM, sempre leia o desenho junto com a frase.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Um aluno tira zero e o colega diz “Parabéns, gênio!”. Isso é:", "opcoes": ["Ironia", "Elogio", "Pergunta", "Ordem"], "certa": "Ironia", "resposta": "Diz parabéns querendo dizer o contrário."}
+   }
+  },
+  {
+   "id": "aquec-rf-06", "area": "Humanas", "materia": "História", "tema": "República Velha e Era Vargas", "prepara": [12],
+   "enunciado": "O que fazia o DIP (Departamento de Imprensa e Propaganda) no Estado Novo de Vargas?",
+   "A": "Garantia a liberdade total de imprensa.",
+   "B": "Censurava jornais e rádios e fazia propaganda do governo.",
+   "C": "Organizava as eleições para presidente.",
+   "D": "Cuidava da saúde dos trabalhadores.",
+   "E": "Construía estradas e ferrovias.",
+   "resposta": "B",
+   "explicacao": {
+    "conferencia": "DIP (1939): censura + propaganda do Estado Novo. B.",
+    "ideia": "O DIP era a tesoura e o megafone de Vargas: cortava a notícia contra e espalhava a notícia a favor.",
+    "pecas": [{"termo": "Estado Novo", "significado": "A ditadura de Getúlio Vargas, de 1937 a 1945."}, {"termo": "Censura", "significado": "Proibir que algo seja publicado ou dito."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "O nome já diz duas tarefas: imprensa e propaganda.", "visual": {"tipo": "tabela", "titulo": "As duas tarefas do DIP", "cabecalho": ["Tarefa", "O que fazia"], "linhas": [["Imprensa", "censurava jornal e rádio"], ["Propaganda", "exaltava Vargas"]]}},
+     {"titulo": "A resposta", "texto": "Letra B. No ENEM, DIP quase sempre leva a “cerceamento da liberdade de expressão”.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Um governo que proíbe notícias contra ele está fazendo:", "opcoes": ["Censura", "Eleição", "Reforma agrária", "Abolição"], "certa": "Censura", "resposta": "Proibir notícia é censura."}
+   }
+  },
+  {
+   "id": "aquec-rf-07", "area": "Humanas", "materia": "Geografia", "tema": "Geopolítica Mundial", "prepara": [13],
+   "enunciado": "O que é dumping?",
+   "A": "Proibir a entrada de produtos estrangeiros.",
+   "B": "Juntar países num bloco econômico.",
+   "C": "Vender abaixo do custo para tirar os concorrentes do mercado.",
+   "D": "Cobrar imposto sobre importação.",
+   "E": "Trocar produtos sem usar dinheiro.",
+   "resposta": "C",
+   "explicacao": {
+    "conferencia": "Dumping = preço abaixo do custo para quebrar concorrentes. C.",
+    "ideia": "Um mercadão vende o pão mais barato do que custa fazer, a padaria do bairro fecha, e depois ele sobe o preço.",
+    "pecas": [{"termo": "Concorrente", "significado": "Quem vende a mesma coisa que você, disputando o mesmo cliente."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "Dumping é uma arma da competição entre empresas e países.", "visual": {"tipo": "tabela", "titulo": "O dumping em 3 tempos", "cabecalho": ["Tempo", "O que acontece"], "linhas": [["1", "vende abaixo do custo"], ["2", "o concorrente quebra"], ["3", "fica sozinho no mercado"]]}},
+     {"titulo": "A resposta", "texto": "Letra C. No ENEM, “competitividade como guerra em que tudo vale” aponta para o dumping.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Um país vende aço tão barato que as fábricas dos outros fecham. Isso é:", "opcoes": ["Dumping", "Embargo", "Bloco econômico", "Escambo"], "certa": "Dumping", "resposta": "Preço baixo de propósito para quebrar concorrente."}
+   }
+  },
+  {
+   "id": "aquec-rf-08", "area": "Humanas", "materia": "Geografia", "tema": "Sustentabilidade e Problemas Ambientais", "prepara": [14],
+   "enunciado": "Qual é a principal medida para frear o aquecimento global?",
+   "A": "Construir mais represas.",
+   "B": "Aumentar o desmatamento para plantar.",
+   "C": "Usar mais carros a gasolina.",
+   "D": "Diminuir a emissão de gás carbônico, como a da queima de petróleo e carvão.",
+   "E": "Tirar o ozônio da atmosfera.",
+   "resposta": "D",
+   "explicacao": {
+    "conferencia": "Aquecimento global vem do excesso de gases estufa, principalmente CO₂. Medida: cortar emissões. D.",
+    "ideia": "O gás carbônico é um cobertor em volta da Terra: quanto mais grosso, mais quente. Tirar cobertor é emitir menos.",
+    "pecas": [{"termo": "Efeito estufa", "significado": "Gases que seguram o calor perto da Terra, como o vidro de um carro ao sol."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "Descubra o que causa o aquecimento e corte a causa.", "visual": {"tipo": "tabela", "titulo": "Causa e solução", "cabecalho": ["Causa", "Solução"], "linhas": [["queima de petróleo e carvão", "energia limpa"], ["desmatamento", "reflorestar"]]}},
+     {"titulo": "A resposta", "texto": "Letra D: controlar as emissões de carbono. As outras pioram ou não têm relação.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Trocar ônibus a diesel por ônibus elétrico ajuda o clima porque:", "opcoes": ["Emite menos gás carbônico", "Gasta mais petróleo", "Aumenta o ozônio", "Esquenta a cidade"], "certa": "Emite menos gás carbônico", "resposta": "Menos queima de diesel, menos CO₂."}
+   }
+  },
+  {
+   "id": "aquec-rf-09", "area": "Humanas", "materia": "Geografia", "tema": "Geologia e Geomorfologia", "prepara": [15],
+   "enunciado": "Como se formam montanhas muito altas, como o Himalaia?",
+   "A": "Pela chuva que acumula terra.",
+   "B": "Pelo vento que empilha areia.",
+   "C": "Por meteoritos que caíram ali.",
+   "D": "Pelo gelo que congela a rocha.",
+   "E": "Pelo choque entre placas tectônicas, que empurra a rocha para cima.",
+   "resposta": "E",
+   "explicacao": {
+    "conferencia": "Himalaia = choque das placas Indiana e Euroasiática; ainda cresce. E.",
+    "ideia": "Empurre dois tapetes um contra o outro: o meio enruga e sobe. As placas fazem isso com a rocha.",
+    "pecas": [{"termo": "Placa tectônica", "significado": "Pedaço gigante da casca da Terra que se move devagar, poucos centímetros por ano."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "Montanha que ainda cresce precisa de uma força que continua agindo.", "visual": {"tipo": "tabela", "titulo": "Placas e o que fazem", "cabecalho": ["Movimento", "Forma"], "linhas": [["se chocam", "cordilheira (Himalaia, Andes)"], ["se afastam", "fenda, oceano novo"]]}},
+     {"titulo": "A resposta", "texto": "Letra E: encontro de placas tectônicas. Chuva e vento só desgastam a montanha.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Os Andes, na América do Sul, nasceram de quê?", "opcoes": ["Choque de placas", "Chuva forte", "Vento", "Meteorito"], "certa": "Choque de placas", "resposta": "A placa de Nazca empurra a Sul-Americana."}
+   }
+  },
+  {
+   "id": "aquec-rf-10", "area": "Humanas", "materia": "Filosofia", "tema": "Filosofia Política", "prepara": [16],
+   "enunciado": "O que é Estado de direito?",
+   "A": "Um país onde todos, até os governantes, obedecem às leis.",
+   "B": "Um país governado por um rei sem limite.",
+   "C": "Um governo que só serve aos ricos.",
+   "D": "Um país sem leis escritas.",
+   "E": "Um governo escolhido pelo exército.",
+   "resposta": "A",
+   "explicacao": {
+    "conferencia": "Estado de direito: o poder também está preso à lei. A.",
+    "ideia": "No futebol, até o dono da bola segue a regra. No Estado de direito, até o presidente segue a lei.",
+    "pecas": [{"termo": "Estado", "significado": "O país organizado com governo, leis e instituições."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "A palavra-chave é “direito”: o governo também tem limites.", "visual": {"tipo": "tabela", "titulo": "Quem obedece à lei", "cabecalho": ["Regime", "O governante"], "linhas": [["Estado de direito", "obedece à lei"], ["Absolutismo, ditadura", "fica acima da lei"]]}},
+     {"titulo": "A resposta", "texto": "Letra A. No ENEM, acabar com eleições ou com a lei para o governante é violar o Estado de direito.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Um presidente cancela as eleições sozinho. Isso viola:", "opcoes": ["O Estado de direito", "A tradição oral", "A seleção natural", "A norma-padrão"], "certa": "O Estado de direito", "resposta": "Ele se pôs acima da lei."}
+   }
+  },
+  {
+   "id": "aquec-rf-11", "area": "Humanas", "materia": "Filosofia", "tema": "Filosofia Antiga", "prepara": [18],
+   "enunciado": "Para os estoicos, como Sêneca, viver bem é:",
+   "A": "buscar todo prazer possível.",
+   "B": "controlar as paixões com a razão e aceitar o que não depende de nós.",
+   "C": "acumular riquezas.",
+   "D": "obedecer só aos desejos do corpo.",
+   "E": "fugir de todas as pessoas.",
+   "resposta": "B",
+   "explicacao": {
+    "conferencia": "Estoicismo: razão domina as paixões; serenidade diante do que não controlamos. B.",
+    "ideia": "O estoico no trânsito: não manda no engarrafamento, então não perde a calma com ele.",
+    "pecas": [{"termo": "Paixões", "significado": "Para os antigos, emoções fortes que tiram o controle: raiva, medo, desejo."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "Separe o que depende de você do que não depende.", "visual": {"tipo": "tabela", "titulo": "A régua do estoico", "cabecalho": ["Depende de mim", "Não depende"], "linhas": [["minha reação", "o tempo, a doença"], ["meu esforço", "a opinião dos outros"]]}},
+     {"titulo": "A resposta", "texto": "Letra B. No ENEM, Sêneca leva a “moderação das paixões”.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Choveu no dia do passeio. A reação estoica é:", "opcoes": ["Aceitar com calma", "Gritar com o céu", "Desistir de tudo", "Culpar o amigo"], "certa": "Aceitar com calma", "resposta": "A chuva não depende de você."}
+   }
+  },
+  {
+   "id": "aquec-rf-12", "area": "Humanas", "materia": "Geografia", "tema": "Demografia e Migrações", "prepara": [20],
+   "enunciado": "O que é movimento pendular?",
+   "A": "Mudar de país para sempre.",
+   "B": "Sair do campo para morar na cidade.",
+   "C": "Ir e voltar todo dia entre a cidade onde mora e a cidade onde trabalha ou estuda.",
+   "D": "Viajar só nas férias.",
+   "E": "Mudar de casa dentro do mesmo bairro.",
+   "resposta": "C",
+   "explicacao": {
+    "conferencia": "Pendular = deslocamento diário de ida e volta casa-trabalho. C.",
+    "ideia": "Como o pêndulo do relógio: vai e volta, todo dia, sem mudar de casa.",
+    "pecas": [{"termo": "Pendular", "significado": "Que vai e volta, como o pêndulo de um relógio."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "A pessoa muda de casa ou só se desloca e volta?", "visual": {"tipo": "tabela", "titulo": "Tipos de movimento", "cabecalho": ["Movimento", "Muda de casa?"], "linhas": [["êxodo rural", "sim, do campo para a cidade"], ["pendular", "não, vai e volta todo dia"]]}},
+     {"titulo": "A resposta", "texto": "Letra C. No ENEM, “horas no trânsito até o trabalho” é movimento pendular.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Quem mora em Guarulhos e trabalha em São Paulo todo dia faz qual movimento?", "opcoes": ["Pendular", "Êxodo rural", "Emigração", "Transumância"], "certa": "Pendular", "resposta": "Vai e volta no mesmo dia."}
+   }
+  },
+  {
+   "id": "aquec-rf-13", "area": "Humanas", "materia": "Sociologia", "tema": "Movimentos Sociais e Cidadania", "prepara": [21],
+   "enunciado": "O que é um apátrida?",
+   "A": "Quem tem duas nacionalidades.",
+   "B": "Quem mora fora do país onde nasceu.",
+   "C": "Um estrangeiro de férias.",
+   "D": "Uma pessoa que nenhum país reconhece como cidadã.",
+   "E": "Quem perdeu o título de eleitor.",
+   "resposta": "D",
+   "explicacao": {
+    "conferencia": "Apátrida = sem nacionalidade reconhecida por nenhum Estado. D.",
+    "ideia": "É como não ter certidão em lugar nenhum: nenhum país diz “essa pessoa é minha”.",
+    "pecas": [{"termo": "Pátria", "significado": "O país de quem a pessoa é cidadã. O “a” no começo de apátrida quer dizer “sem”."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "Desmonte a palavra: a + pátrida.", "visual": {"tipo": "tabela", "titulo": "A palavra em pedaços", "cabecalho": ["Pedaço", "Quer dizer"], "linhas": [["a-", "sem"], ["pátria", "país de cidadania"]]}},
+     {"titulo": "A resposta", "texto": "Letra D: sem país que a reconheça. Sem registro, fica sem direitos básicos.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Uma criança que nenhum país aceita registrar é:", "opcoes": ["Apátrida", "Turista", "Imigrante legal", "Diplomata"], "certa": "Apátrida", "resposta": "Nenhum país a reconhece como cidadã."}
+   }
+  },
+  {
+   "id": "aquec-rf-14", "area": "Humanas", "materia": "Geografia", "tema": "Cartografia, Fusos Horários e Movimentos da Terra", "prepara": [22],
+   "enunciado": "Num mapa de escala 1 : 100 000, 1 cm no papel vale quanto na realidade?",
+   "A": "1 m",
+   "B": "10 m",
+   "C": "100 m",
+   "D": "10 km",
+   "E": "1 km",
+   "resposta": "E",
+   "explicacao": {
+    "conferencia": "1 cm no mapa = 100 000 cm reais = 1 000 m = 1 km. E.",
+    "ideia": "Escala é a lupa ao contrário: 1 cm no papel é o mesmo que 100 000 cm na rua. Cortando 5 zeros, sobra 1 km.",
+    "pecas": [{"termo": "Escala", "significado": "Quantas vezes o mapa é menor que a realidade."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "Escala 1 : 100 000 quer dizer: 1 cm no mapa vale 100 000 cm de verdade.", "visual": {"tipo": "tabela", "titulo": "Cortando zeros", "cabecalho": ["Unidade", "Valor"], "linhas": [["centímetros", "100 000 cm"], ["metros (÷ 100)", "1 000 m"], ["quilômetros (÷ 1 000)", "1 km"]]}},
+     {"titulo": "A resposta", "texto": "Letra E, 1 km. Atalho: corte 5 zeros da escala e a resposta sai em km.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Na escala 1 : 500 000, 1 cm no mapa vale quantos km?", "opcoes": ["5 km", "50 km", "500 m", "0,5 km"], "certa": "5 km", "resposta": "Cortando 5 zeros de 500 000 sobra 5."}
+   }
+  },
+  {
+   "id": "aquec-rf-15", "area": "Humanas", "materia": "História", "tema": "Ditadura Militar e Redemocratização", "prepara": [28],
+   "enunciado": "Durante a ditadura militar, por que o governo controlava os sindicatos?",
+   "A": "Para evitar greves e protestos dos trabalhadores.",
+   "B": "Para aumentar os salários.",
+   "C": "Para dar mais poder aos operários.",
+   "D": "Para fazer eleições diretas.",
+   "E": "Para acabar com as empresas.",
+   "resposta": "A",
+   "explicacao": {
+    "conferencia": "Ditadura controlava sindicatos para conter greve e oposição. A.",
+    "ideia": "Sindicato é a voz junta dos trabalhadores. Quem quer silêncio tenta segurar essa voz.",
+    "pecas": [{"termo": "Sindicato", "significado": "Grupo que representa os trabalhadores de uma profissão e negocia por eles."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "Um governo autoritário teme o que os sindicatos podem fazer.", "visual": {"tipo": "tabela", "titulo": "Sindicato livre e controlado", "cabecalho": ["Sindicato", "Faz"], "linhas": [["livre", "greve, protesto, negociação"], ["controlado", "fica quieto"]]}},
+     {"titulo": "A resposta", "texto": "Letra A: evitar greves e protestos, ou seja, controlar as tensões políticas.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Proibir greves ajuda um governo autoritário a:", "opcoes": ["Calar a oposição", "Aumentar salários", "Fazer eleições", "Libertar presos"], "certa": "Calar a oposição", "resposta": "Sem greve, há menos protesto contra o governo."}
+   }
+  },
+  {
+   "id": "aquec-rf-16", "area": "Natureza", "materia": "Biologia", "tema": "Ecologia", "prepara": [33],
+   "enunciado": "Um veneno que o corpo não elimina passa da presa para o predador. Onde ele fica mais concentrado?",
+   "A": "Nas algas.",
+   "B": "No predador do topo da cadeia, como o golfinho.",
+   "C": "Na água do mar.",
+   "D": "Nos peixes que comem algas.",
+   "E": "Fica igual em todos.",
+   "resposta": "B",
+   "explicacao": {
+    "conferencia": "Bioacumulação/magnificação: a concentração sobe a cada nível; topo = maior. B.",
+    "ideia": "O golfinho come muitos peixes, e cada peixe comeu muitas algas. O veneno de todos se soma nele.",
+    "pecas": [{"termo": "Bioacumulação", "significado": "Veneno que o corpo não joga fora e vai juntando, nível após nível da cadeia."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "Siga o veneno pela cadeia alimentar.", "visual": {"tipo": "tabela", "titulo": "O veneno subindo", "cabecalho": ["Nível", "Veneno"], "linhas": [["algas", "pouco"], ["peixe herbívoro", "mais"], ["golfinho (topo)", "o máximo"]]}},
+     {"titulo": "A resposta", "texto": "Letra B: no topo da cadeia. No ENEM, a resposta é quase sempre o último bicho da cadeia.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Na cadeia capim, gafanhoto, sapo, cobra, quem acumula mais inseticida?", "opcoes": ["Cobra", "Capim", "Gafanhoto", "Sapo"], "certa": "Cobra", "resposta": "É o topo da cadeia."}
+   }
+  },
+  {
+   "id": "aquec-rf-17", "area": "Natureza", "materia": "Química", "tema": "Química Ambiental e Energia", "prepara": [35],
+   "enunciado": "O que é decantação?",
+   "A": "Ferver a mistura para separar os líquidos.",
+   "B": "Passar a mistura num filtro de papel.",
+   "C": "Deixar a mistura parada para o sólido mais pesado descer e ficar no fundo.",
+   "D": "Separar com um ímã.",
+   "E": "Congelar a mistura.",
+   "resposta": "C",
+   "explicacao": {
+    "conferencia": "Decantação = repouso; o mais denso vai ao fundo (lodo). C.",
+    "ideia": "Deixe um copo de água com terra parado: a terra desce sozinha. Isso é decantar.",
+    "pecas": [{"termo": "Lodo", "significado": "A sujeira sólida do esgoto que se junta no fundo do tanque."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "Cada separação usa um truque diferente.", "visual": {"tipo": "tabela", "titulo": "Separações", "cabecalho": ["Nome", "Como funciona"], "linhas": [["decantação", "parado, o sólido desce"], ["filtração", "o filtro segura o sólido"], ["destilação", "ferve e junta o vapor"]]}},
+     {"titulo": "A resposta", "texto": "Letra C. No tratamento de esgoto, o tanque onde a água fica parada é onde o lodo decanta.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Suco de laranja parado com a polpa no fundo mostra qual separação?", "opcoes": ["Decantação", "Destilação", "Filtração", "Imantação"], "certa": "Decantação", "resposta": "Parado, o mais pesado desce."}
+   }
+  },
+  {
+   "id": "aquec-rf-18", "area": "Natureza", "materia": "Física", "tema": "Termodinâmica e Calor", "prepara": [36],
+   "enunciado": "Como o calor do Sol chega à Terra, atravessando o espaço vazio?",
+   "A": "Por condução, de átomo em átomo.",
+   "B": "Por convecção, com o ar subindo.",
+   "C": "Pelo vento solar quente.",
+   "D": "Por irradiação: ondas que viajam até no vácuo.",
+   "E": "Pela água das nuvens.",
+   "resposta": "D",
+   "explicacao": {
+    "conferencia": "Sem matéria no caminho só a irradiação funciona. D.",
+    "ideia": "Perto da fogueira você sente o calor no rosto sem tocar nela: isso é irradiação.",
+    "pecas": [{"termo": "Vácuo", "significado": "Lugar sem ar nem matéria nenhuma, como o espaço entre o Sol e a Terra."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "No espaço não há ar nem nada encostado. Qual jeito de passar calor sobra?", "visual": {"tipo": "tabela", "titulo": "Os 3 jeitos do calor", "cabecalho": ["Jeito", "Precisa de", "Exemplo"], "linhas": [["condução", "encostar", "colher quente na panela"], ["convecção", "ar ou água que se move", "brisa do mar"], ["irradiação", "nada", "Sol aquecendo a Terra"]]}},
+     {"titulo": "A resposta", "texto": "Letra D: irradiação. Na questão do ENEM, Sol para a cidade é irradiação e a brisa é convecção.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "O ar quente que sobe e o frio que desce dentro de uma sala é:", "opcoes": ["Convecção", "Condução", "Irradiação", "Refração"], "certa": "Convecção", "resposta": "O próprio ar se move levando o calor."}
+   }
+  },
+  {
+   "id": "aquec-rf-19", "area": "Natureza", "materia": "Química", "tema": "Soluções, pH e Titulação", "prepara": [37],
+   "enunciado": "Quando um ácido cai numa pedra de carbonato, como o mármore (CaCO₃), sai bolha. Que gás é esse?",
+   "A": "Hidrogênio (H₂)",
+   "B": "Oxigênio (O₂)",
+   "C": "Cloro (Cl₂)",
+   "D": "Nitrogênio (N₂)",
+   "E": "Gás carbônico (CO₂)",
+   "resposta": "E",
+   "explicacao": {
+    "conferencia": "Ácido + carbonato → sal + água + CO₂. E.",
+    "ideia": "Vinagre na casca de ovo faz bolha. A bolha é gás carbônico, o mesmo do refrigerante.",
+    "pecas": [{"termo": "Carbonato", "significado": "O pedaço CO₃ que existe no mármore, no calcário e na casca de ovo."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "O carbonato tem carbono e oxigênio. O ácido o desmonta e sai gás.", "visual": {"tipo": "tabela", "titulo": "Regra de bolso", "cabecalho": ["Entra", "Sai"], "linhas": [["ácido + carbonato", "sal + água + gás carbônico"]]}},
+     {"titulo": "A resposta", "texto": "Letra E: gás carbônico. O C e o O do carbonato viram as bolhas.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Vinagre no bicarbonato de sódio solta bolhas de qual gás?", "opcoes": ["Gás carbônico", "Oxigênio", "Hidrogênio", "Cloro"], "certa": "Gás carbônico", "resposta": "Bicarbonato também tem carbonato."}
+   }
+  },
+  {
+   "id": "aquec-rf-20", "area": "Natureza", "materia": "Biologia", "tema": "Fisiologia Humana e Saúde", "prepara": [38],
+   "enunciado": "Quem coordena o reflexo do joelho (a perna que levanta sozinha quando o médico bate o martelinho)?",
+   "A": "A medula espinhal.",
+   "B": "O cerebelo.",
+   "C": "O coração.",
+   "D": "O estômago.",
+   "E": "Os olhos.",
+   "resposta": "A",
+   "explicacao": {
+    "conferencia": "Reflexo patelar = arco reflexo medular, sem passar pelo cérebro. A.",
+    "ideia": "O reflexo é um atalho: o recado vai só até a medula e volta, sem esperar o cérebro decidir.",
+    "pecas": [{"termo": "Medula espinhal", "significado": "O cabo de nervos dentro da coluna, que liga o cérebro ao corpo."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "A perna levanta antes de você pensar. Então quem decide não é o cérebro.", "visual": {"tipo": "tabela", "titulo": "O caminho do reflexo", "cabecalho": ["Etapa", "Onde"], "linhas": [["martelada", "joelho"], ["recado sobe", "nervo até a medula"], ["ordem volta", "medula manda o músculo chutar"]]}},
+     {"titulo": "A resposta", "texto": "Letra A: a medula. Reflexo rápido e sem querer quase sempre é a medula.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Tirar a mão da panela quente antes de pensar é coordenado por:", "opcoes": ["Medula", "Coração", "Estômago", "Pulmão"], "certa": "Medula", "resposta": "É um reflexo, como o do joelho."}
+   }
+  },
+  {
+   "id": "aquec-rf-21", "area": "Natureza", "materia": "Física", "tema": "Óptica", "prepara": [39],
+   "enunciado": "O que é refração da luz?",
+   "A": "A luz voltar ao bater num espelho.",
+   "B": "A luz mudar de direção ao passar de um meio para outro, como do ar para a água.",
+   "C": "A luz apagar no escuro.",
+   "D": "A luz virar som.",
+   "E": "A luz ficar parada.",
+   "resposta": "B",
+   "explicacao": {
+    "conferencia": "Refração = mudança de meio, muda a velocidade e a direção. B. Reflexão é a do espelho.",
+    "ideia": "O canudo no copo parece quebrado: a luz entorta ao sair da água para o ar. Isso é refração.",
+    "pecas": [{"termo": "Meio", "significado": "Aquilo por onde a luz passa: ar, água, vidro."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "Não confunda refração com reflexão.", "visual": {"tipo": "tabela", "titulo": "Refração e reflexão", "cabecalho": ["Nome", "A luz", "Exemplo"], "linhas": [["refração", "atravessa e entorta", "canudo no copo"], ["reflexão", "bate e volta", "espelho"]]}},
+     {"titulo": "A resposta", "texto": "Letra B. A “luz engarrafada” do ENEM funciona porque a água da garrafa entorta e espalha a luz do sol.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Uma piscina parece mais rasa do que é por causa da:", "opcoes": ["Refração", "Reflexão", "Convecção", "Condução"], "certa": "Refração", "resposta": "A luz entorta ao sair da água."}
+   }
+  },
+  {
+   "id": "aquec-rf-22", "area": "Natureza", "materia": "Biologia", "tema": "Citologia", "prepara": [40],
+   "enunciado": "Uma célula colocada em água pura (meio hipotônico, com menos sal que ela):",
+   "A": "perde água e murcha.",
+   "B": "não muda nada.",
+   "C": "ganha água e incha.",
+   "D": "vira outra célula.",
+   "E": "perde o núcleo.",
+   "resposta": "C",
+   "explicacao": {
+    "conferencia": "Osmose: água vai para onde há mais sal (dentro da célula). Incha; vacúolo aumenta. C.",
+    "ideia": "A água corre para onde tem mais sal. A célula é mais salgada que a água pura, então a água entra.",
+    "pecas": [{"termo": "Osmose", "significado": "A água passando pela película da célula para o lado com mais sal."}, {"termo": "Hipotônico", "significado": "Com menos sal do que a célula."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "Compare o sal de dentro com o de fora.", "visual": {"tipo": "tabela", "titulo": "Para onde a água vai", "cabecalho": ["Meio de fora", "A célula"], "linhas": [["menos sal (hipotônico)", "ganha água, incha"], ["mais sal (hipertônico)", "perde água, murcha"]]}},
+     {"titulo": "A resposta", "texto": "Letra C: incha. Na planta, o vacúolo cresce e a cor dentro dele fica mais clara.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Alface com sal murcha porque o meio ficou:", "opcoes": ["Hipertônico", "Hipotônico", "Neutro", "Ácido"], "certa": "Hipertônico", "resposta": "Fora tem mais sal, a água sai da folha."}
+   }
+  },
+  {
+   "id": "aquec-rf-23", "area": "Natureza", "materia": "Física", "tema": "Eletricidade e Circuitos", "prepara": [43],
+   "enunciado": "Pela lei de Ohm, R = U ÷ i. Se a tensão é 12 V e a corrente é 2 A, qual é a resistência?",
+   "A": "24 Ω",
+   "B": "10 Ω",
+   "C": "14 Ω",
+   "D": "6 Ω",
+   "E": "0,16 Ω",
+   "resposta": "D",
+   "explicacao": {
+    "conferencia": "R = 12 ÷ 2 = 6 Ω. D. Erros: 24 = multiplicar; 14 = somar; 10 = subtrair.",
+    "ideia": "Resistência é o quanto o fio segura a corrente. Divide a tensão pela corrente: 12 ÷ 2 = 6.",
+    "pecas": [{"termo": "Tensão (U)", "significado": "O empurrão da eletricidade, em volts (V). Como a pressão da água no cano."}, {"termo": "Corrente (i)", "significado": "Quanta eletricidade passa, em ampères (A). Como a quantidade de água que sai."}, {"termo": "Resistência (R)", "significado": "O quanto o caminho dificulta, em ohms (Ω). Como um cano fino."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "A questão dá tensão e corrente e pede a resistência.", "visual": {"tipo": "tabela", "titulo": "Os dados", "cabecalho": ["Letra", "Valor"], "linhas": [["U (tensão)", "12 V"], ["i (corrente)", "2 A"], ["R (resistência)", "?"]]}},
+     {"titulo": "Jeito rápido", "texto": "Troque as letras pelos números e divida.", "visual": {"tipo": "quadro", "titulo": "Lei de Ohm", "dados": ["U = 12\\,\\text{V}", "i = 2\\,\\text{A}"], "formula": "R = \\frac{U}{i}", "legenda": ["U: o empurrão", "i: o que passa"], "contas": ["R = \\frac{12}{2}"], "resultado": "R = 6\\,\\Omega", "nota": "Resistência de 6 ohms."}},
+     {"titulo": "Por que funciona", "texto": "Mesmo empurrão com menos corrente passando quer dizer caminho mais difícil, então mais resistência.", "visual": {"tipo": "tabela", "titulo": "Mesmo U = 12 V", "cabecalho": ["Corrente", "Resistência"], "linhas": [["4 A", "3 Ω"], ["2 A", "6 Ω"], ["1 A", "12 Ω"]]}},
+     {"titulo": "A resposta", "texto": "Letra D, 6 Ω. Na questão do ENEM, calcule R = U ÷ i de cada rota e ordene da menor para a maior.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Tensão de 20 V e corrente de 5 A. Qual é a resistência?", "opcoes": ["4 Ω", "100 Ω", "25 Ω", "15 Ω"], "certa": "4 Ω", "resposta": "20 ÷ 5 = 4."}
+   }
+  },
+  {
+   "id": "aquec-rf-24", "area": "Natureza", "materia": "Biologia", "tema": "Genética", "prepara": [45],
+   "enunciado": "Na tradução, o que acontece quando o ribossomo chega a um códon de parada (como UAG)?",
+   "A": "A proteína dobra de tamanho.",
+   "B": "O DNA se duplica.",
+   "C": "A célula morre.",
+   "D": "Entra um aminoácido extra.",
+   "E": "A proteína termina ali.",
+   "resposta": "E",
+   "explicacao": {
+    "conferencia": "Códon de parada encerra a tradução. Parada cedo = proteína menor. E.",
+    "ideia": "O códon de parada é o ponto final da frase: o ribossomo para de escrever a proteína ali.",
+    "pecas": [{"termo": "Códon", "significado": "Trio de letras do RNA que diz qual peça (aminoácido) entra na proteína."}, {"termo": "Ribossomo", "significado": "A máquina da célula que lê o RNA e monta a proteína."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "Cada códon manda pôr uma peça. O de parada manda parar.", "visual": {"tipo": "tabela", "titulo": "Lendo o RNA", "cabecalho": ["Códon", "Ordem"], "linhas": [["AUG", "começa"], ["UUU, GUU...", "põe uma peça"], ["UAG, UAA", "para"]]}},
+     {"titulo": "A resposta", "texto": "Letra E. No ENEM, a menor proteína vem da mutação que cria um códon de parada mais cedo.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Se uma mutação cria UAA logo no 2º códon, a proteína fica:", "opcoes": ["Bem menor", "Bem maior", "Igual", "Dobrada"], "certa": "Bem menor", "resposta": "Ela para no 2º códon."}
+   }
+  },
+  {
+   "id": "aquec-rf-25", "area": "Natureza", "materia": "Biologia", "tema": "Evolução", "prepara": [47],
+   "enunciado": "Pela seleção natural, por que uma característica (como imitar outros animais) se espalha numa espécie?",
+   "A": "Porque quem a tem sobrevive mais e deixa mais filhotes.",
+   "B": "Porque o animal decide mudar.",
+   "C": "Porque o animal treina e passa o treino aos filhos.",
+   "D": "Porque o ambiente nunca muda.",
+   "E": "Por sorte, sem relação com sobreviver.",
+   "resposta": "A",
+   "explicacao": {
+    "conferencia": "Darwin: variação + sobrevivência diferencial + reprodução. A. B e C são Lamarck.",
+    "ideia": "O polvo que se disfarça escapa do predador, vive mais e tem mais filhotes disfarçados.",
+    "pecas": [{"termo": "Seleção natural", "significado": "O ambiente “escolhe” quem sobrevive. Quem tem a característica útil deixa mais filhos."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "Darwin explica pela sobrevivência; Lamarck, pelo uso e esforço.", "visual": {"tipo": "tabela", "titulo": "Darwin ou Lamarck", "cabecalho": ["Ideia", "De quem"], "linhas": [["quem sobrevive deixa mais filhos", "Darwin (aceita)"], ["o animal se esforça e passa aos filhos", "Lamarck (errada)"]]}},
+     {"titulo": "A resposta", "texto": "Letra A. No ENEM, procure “sobreviveram às pressões seletivas”.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Bactérias resistentes ao remédio se espalham porque:", "opcoes": ["Sobrevivem e se multiplicam", "Decidem resistir", "Treinam contra o remédio", "O remédio as ajuda"], "certa": "Sobrevivem e se multiplicam", "resposta": "As outras morrem; as resistentes ficam."}
+   }
+  },
+  {
+   "id": "aquec-rf-26", "area": "Matemática", "materia": "Matemática", "tema": "Aritmética e Porcentagem", "prepara": [49, 50, 51],
+   "enunciado": "Quanto é 10% de 250?",
+   "A": "2,5",
+   "B": "25",
+   "C": "10",
+   "D": "240",
+   "E": "260",
+   "resposta": "B",
+   "explicacao": {
+    "conferencia": "10% = ÷ 10: 250 ÷ 10 = 25. B.",
+    "ideia": "10% é cortar um zero (ou andar a vírgula uma casa): 250 vira 25.",
+    "pecas": [{"termo": "Porcentagem (%)", "significado": "Uma parte de 100. 10% é 10 de cada 100."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "A questão quer 10 partes de cada 100 de 250.", "visual": {"tipo": "tabela", "titulo": "Os dados", "cabecalho": ["O quê", "Valor"], "linhas": [["total", "250"], ["parte", "10%"]]}},
+     {"titulo": "Jeito rápido", "texto": "10% é dividir por 10.", "visual": {"tipo": "quadro", "titulo": "10% de 250", "dados": ["\\text{total} = 250", "10\\% = \\frac{10}{100}"], "formula": "10\\% \\text{ de } x = x \\div 10", "legenda": ["x: o total"], "contas": ["250 \\div 10"], "resultado": "25", "nota": "10% de 250 é 25."}},
+     {"titulo": "Por que funciona", "texto": "10% é 10 de cada 100, ou seja, 1 de cada 10. Dividir por 10 dá exatamente isso.", "visual": {"tipo": "tabela", "titulo": "Atalhos", "cabecalho": ["Porcentagem", "Faça"], "linhas": [["10%", "÷ 10"], ["50%", "÷ 2"], ["1%", "÷ 100"]]}},
+     {"titulo": "A resposta", "texto": "Letra B, 25. 2,5 seria 1%; 240 seria tirar 10 em vez de 10%.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Quanto é 10% de 80?", "opcoes": ["8", "0,8", "70", "18"], "certa": "8", "resposta": "80 ÷ 10 = 8."}
+   }
+  },
+  {
+   "id": "aquec-rf-27", "area": "Matemática", "materia": "Matemática", "tema": "Aritmética e Porcentagem", "prepara": [49, 51],
+   "enunciado": "Um produto de R$ 100 sobe 10% e depois cai 10%. Qual é o preço final?",
+   "A": "R$ 100",
+   "B": "R$ 90",
+   "C": "R$ 99",
+   "D": "R$ 101",
+   "E": "R$ 110",
+   "resposta": "C",
+   "explicacao": {
+    "conferencia": "100 × 1,1 = 110; 110 × 0,9 = 99. C. Pegadinha: A (achar que volta a 100).",
+    "ideia": "O desconto de 10% é sobre 110, não sobre 100. Ele tira 11, não 10. Sobra 99.",
+    "pecas": [{"termo": "Fator", "significado": "O número que multiplica: subir 10% é × 1,1; cair 10% é × 0,9."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "São duas mudanças, uma depois da outra.", "visual": {"tipo": "tabela", "titulo": "Os dados", "cabecalho": ["Momento", "Preço"], "linhas": [["início", "R$ 100"], ["sobe 10%", "?"], ["cai 10%", "?"]]}},
+     {"titulo": "Jeito rápido", "texto": "Multiplique pelos dois fatores, um de cada vez.", "visual": {"tipo": "quadro", "titulo": "Sobe e desce", "dados": ["\\text{preço} = 100", "\\text{sobe } 10\\% \\to \\times 1{,}1", "\\text{cai } 10\\% \\to \\times 0{,}9"], "formula": "\\text{final} = \\text{preço} \\times 1{,}1 \\times 0{,}9", "legenda": ["1,1: o preço mais 10%", "0,9: o preço menos 10%"], "contas": ["100 \\times 1{,}1 = 110", "110 \\times 0{,}9 = 99"], "resultado": "99", "nota": "Termina em R$ 99, não volta a 100."}},
+     {"titulo": "Por que funciona", "texto": "Cada porcentagem vale sobre o preço daquele momento. Os 10% de 110 são 11, maior que os 10 que subiram.", "visual": {"tipo": "tabela", "titulo": "Passo a passo", "cabecalho": ["Mudança", "Sobre", "Valor"], "linhas": [["+10%", "100", "+10 → 110"], ["−10%", "110", "−11 → 99"]]}},
+     {"titulo": "A resposta", "texto": "Letra C, R$ 99. Subir e descer a mesma porcentagem sempre termina um pouco abaixo.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "R$ 200 sobe 50% e depois cai 50%. Fica:", "opcoes": ["R$ 150", "R$ 200", "R$ 250", "R$ 100"], "certa": "R$ 150", "resposta": "200 × 1,5 = 300; 300 × 0,5 = 150."}
+   }
+  },
+  {
+   "id": "aquec-rf-28", "area": "Matemática", "materia": "Matemática", "tema": "Aritmética e Porcentagem", "prepara": [50],
+   "enunciado": "As vendas foram de 50 mil para 110 mil caixas. Qual foi o aumento percentual?",
+   "A": "60%",
+   "B": "110%",
+   "C": "220%",
+   "D": "120%",
+   "E": "55%",
+   "resposta": "D",
+   "explicacao": {
+    "conferencia": "Aumento 60; 60 ÷ 50 = 1,2 = 120%. D. Erros: 60% (aumento sem dividir), 220% (110 ÷ 50).",
+    "ideia": "Primeiro veja quanto cresceu (60), depois compare com o começo (50): 60 é 1,2 vez 50, ou 120%.",
+    "pecas": [{"termo": "Aumento percentual", "significado": "Quanto cresceu, comparado com o valor do começo."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "A questão dá o antes e o depois.", "visual": {"tipo": "tabela", "titulo": "Os dados", "cabecalho": ["Momento", "Vendas (mil)"], "linhas": [["antes", "50"], ["depois", "110"]]}},
+     {"titulo": "Jeito rápido", "texto": "Aumento dividido pelo valor do começo.", "visual": {"tipo": "quadro", "titulo": "Aumento percentual", "dados": ["\\text{antes} = 50", "\\text{depois} = 110"], "formula": "\\text{aumento} = \\frac{\\text{depois} - \\text{antes}}{\\text{antes}}", "legenda": ["antes: sempre embaixo"], "contas": ["\\frac{110 - 50}{50} = \\frac{60}{50} = 1{,}2"], "resultado": "120\\%", "nota": "Cresceu 120%."}},
+     {"titulo": "Por que funciona", "texto": "Porcentagem compara com o começo. Se tivesse dobrado (de 50 para 100), o aumento seria 100%.", "visual": {"tipo": "tabela", "titulo": "Comparando com 50", "cabecalho": ["Depois", "Aumento"], "linhas": [["100", "50 → 100%"], ["110", "60 → 120%"]]}},
+     {"titulo": "A resposta", "texto": "Letra D, 120%. 60% é a pegadinha de esquecer de dividir.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "De 20 para 30. Qual o aumento percentual?", "opcoes": ["50%", "10%", "150%", "30%"], "certa": "50%", "resposta": "Cresceu 10; 10 ÷ 20 = 0,5 = 50%."}
+   }
+  },
+  {
+   "id": "aquec-rf-29", "area": "Matemática", "materia": "Matemática", "tema": "Estatística", "prepara": [54, 55],
+   "enunciado": "Qual é a mediana de 3, 7, 9 e 12?",
+   "A": "7",
+   "B": "9",
+   "C": "7,75",
+   "D": "31",
+   "E": "8",
+   "resposta": "E",
+   "explicacao": {
+    "conferencia": "Ordenado, 4 números: média dos 2 do meio (7 e 9) = 8. E. 7,75 é a média.",
+    "ideia": "Mediana é o número do meio da fila. Com 4 números há dois no meio: tire a média deles.",
+    "pecas": [{"termo": "Mediana", "significado": "O valor do meio quando os números estão em ordem."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "Os números já estão em ordem. Ache o meio.", "visual": {"tipo": "tabela", "titulo": "A fila", "cabecalho": ["Posição", "Número"], "linhas": [["1º", "3"], ["2º (meio)", "7"], ["3º (meio)", "9"], ["4º", "12"]]}},
+     {"titulo": "Jeito rápido", "texto": "Quantidade par: some os dois do meio e divida por 2.", "visual": {"tipo": "quadro", "titulo": "Mediana", "dados": ["3,\\ 7,\\ 9,\\ 12"], "formula": "\\text{mediana} = \\frac{\\text{meio}_1 + \\text{meio}_2}{2}", "legenda": ["meio: os dois do centro"], "contas": ["\\frac{7 + 9}{2} = \\frac{16}{2}"], "resultado": "8", "nota": "Metade dos números fica abaixo de 8."}},
+     {"titulo": "Por que funciona", "texto": "Mediana divide a fila ao meio. Com quantidade ímpar, é o do centro; com par, fica entre os dois.", "visual": {"tipo": "tabela", "titulo": "Par ou ímpar", "cabecalho": ["Quantidade", "Mediana"], "linhas": [["ímpar (3, 5, 8)", "o do meio: 5"], ["par (3, 7, 9, 12)", "média dos 2 do meio: 8"]]}},
+     {"titulo": "A resposta", "texto": "Letra E, 8. 7,75 é a média de todos, outra medida. No ENEM, sempre ordene antes.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Qual é a mediana de 10, 2 e 6?", "opcoes": ["6", "2", "10", "18"], "certa": "6", "resposta": "Em ordem: 2, 6, 10. O meio é 6."}
+   }
+  },
+  {
+   "id": "aquec-rf-30", "area": "Matemática", "materia": "Matemática", "tema": "Geometria Plana", "prepara": [58, 60],
+   "enunciado": "Qual é a área de um círculo de raio 2 cm? Use π = 3.",
+   "A": "12 cm²",
+   "B": "6 cm²",
+   "C": "4 cm²",
+   "D": "24 cm²",
+   "E": "36 cm²",
+   "resposta": "A",
+   "explicacao": {
+    "conferencia": "A = π r² = 3 × 4 = 12. A. 6 = π × r (esqueceu o quadrado); 36 = (π r)².",
+    "ideia": "Área do círculo: raio vezes raio, vezes π. 2 × 2 = 4, vezes 3 = 12.",
+    "pecas": [{"termo": "Raio", "significado": "A distância do centro até a borda do círculo."}, {"termo": "π (pi)", "significado": "Um número fixo, perto de 3,14. O ENEM costuma mandar usar 3."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "A questão dá o raio e o valor de π.", "visual": {"tipo": "tabela", "titulo": "Os dados", "cabecalho": ["Letra", "Valor"], "linhas": [["r (raio)", "2 cm"], ["π", "3"]]}},
+     {"titulo": "Jeito rápido", "texto": "Raio ao quadrado, depois vezes π.", "visual": {"tipo": "quadro", "titulo": "Área do círculo", "dados": ["r = 2\\,\\text{cm}", "\\pi = 3"], "formula": "A = \\pi \\cdot r^2", "legenda": ["r²: raio vezes raio"], "contas": ["A = 3 \\cdot 2^2 = 3 \\cdot 4"], "resultado": "A = 12\\,\\text{cm}^2", "nota": "Cabem 12 quadradinhos de 1 cm."}},
+     {"titulo": "Por que funciona", "texto": "O círculo cabe num quadrado de lado 2r. Ele ocupa quase 3/4 desse quadrado, e é daí que vem o π perto de 3.", "visual": {"tipo": "tabela", "titulo": "Círculo e quadrado em volta", "cabecalho": ["Figura", "Área"], "linhas": [["quadrado de lado 4", "16 cm²"], ["círculo de raio 2", "12 cm²"]]}},
+     {"titulo": "A resposta", "texto": "Letra A, 12 cm². 6 é a pegadinha de esquecer o quadrado do raio.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Uma pizza tem raio de 10 cm. Com pi valendo 3, quanto mede sua área?", "opcoes": ["300 cm²", "30 cm²", "60 cm²", "100 cm²"], "certa": "300 cm²", "resposta": "10 × 10 = 100, vezes 3 = 300."}
+   }
+  },
+  {
+   "id": "aquec-rf-31", "area": "Matemática", "materia": "Matemática", "tema": "Geometria Espacial", "prepara": [59],
+   "enunciado": "Um cilindro tem base de área 3 cm² e altura 10 cm. Qual é o volume? (volume = área da base × altura)",
+   "A": "13 cm³",
+   "B": "30 cm³",
+   "C": "300 cm³",
+   "D": "3,3 cm³",
+   "E": "60 cm³",
+   "resposta": "B",
+   "explicacao": {
+    "conferencia": "V = 3 × 10 = 30 cm³. B. 13 = somou.",
+    "ideia": "Volume é empilhar a base: 10 andares de 3 cm² dão 30 cm³.",
+    "pecas": [{"termo": "Volume", "significado": "Quanto espaço o sólido ocupa, em cm³. Como quanto de água cabe nele."}],
+    "passos": [
+     {"titulo": "A pergunta", "texto": "A questão já dá a área da base e a altura.", "visual": {"tipo": "tabela", "titulo": "Os dados", "cabecalho": ["O quê", "Valor"], "linhas": [["área da base", "3 cm²"], ["altura", "10 cm"]]}},
+     {"titulo": "Jeito rápido", "texto": "Multiplique a base pela altura.", "visual": {"tipo": "quadro", "titulo": "Volume do cilindro", "dados": ["A_b = 3\\,\\text{cm}^2", "h = 10\\,\\text{cm}"], "formula": "V = A_b \\cdot h", "legenda": ["A_b: área da base", "h: altura"], "contas": ["V = 3 \\cdot 10"], "resultado": "V = 30\\,\\text{cm}^3", "nota": "Cabem 30 cubinhos de 1 cm."}},
+     {"titulo": "Por que funciona", "texto": "Pense em moedas empilhadas: cada camada de 1 cm ocupa 3 cm³. Com 10 camadas, 30 cm³.", "visual": {"tipo": "tabela", "titulo": "Empilhando a base", "cabecalho": ["Altura", "Volume"], "linhas": [["1 cm", "3 cm³"], ["5 cm", "15 cm³"], ["10 cm", "30 cm³"]]}},
+     {"titulo": "A resposta", "texto": "Letra B, 30 cm³. No ENEM das esferas, divida o volume do cilindro pelo volume de uma esfera.", "visual": null}
+    ],
+    "seuErro": null,
+    "checagem": {"pergunta": "Base de 5 cm² e altura de 4 cm. Volume?", "opcoes": ["20 cm³", "9 cm³", "54 cm³", "1,25 cm³"], "certa": "20 cm³", "resposta": "5 × 4 = 20."}
+   }
+  }
+ ]
+}

@@ -7,6 +7,7 @@ import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
 import { EscolhaDeNumero } from '@/components/escolha-de-numero';
 import { MATERIAS_COM_QUESTOES, nomeAutomatico } from '@/lib/materias-com-questoes';
+import { tamanhoDoAquecimento } from '@/lib/aquecimento';
 
 const MATERIAS_DISPONIVEIS = MATERIAS_COM_QUESTOES;
 
@@ -49,6 +50,8 @@ export default function CriarProvaPage() {
   // Flashcards do dia antes da 1ª questão (Pablo, 22/10/2026; antes ficavam no Simulado).
   const [cartoesAntes, setCartoesAntes] = useState(0);
   const [criando, setCriando] = useState(false);
+  // Fáceis antes das do nível (Pablo, 04/11/2026: "aquecer, como na piscina").
+  const aquecimento = tamanhoDoAquecimento(nivel, totalQuestoes);
 
   const toggleMateria = (m: string) => {
     setMaterias((prev) => (prev.includes(m) ? prev.filter((x) => x !== m) : [...prev, m]));
@@ -206,6 +209,11 @@ export default function CriarProvaPage() {
         >
           <p className="type-meta font-semibold text-foreground mb-3">Número de questões</p>
           <EscolhaDeNumero rotulo="Número de questões" opcoes={[5, 10, 20, 30, 45]} valor={totalQuestoes} aoEscolher={setTotalQuestoes} />
+          {aquecimento > 0 && (
+            <p className="type-meta text-muted-foreground mt-3">
+              Antes, {aquecimento} mais fáceis das mesmas matérias para aquecer.
+            </p>
+          )}
         </motion.div>
 
         {/* Flashcards antes */}

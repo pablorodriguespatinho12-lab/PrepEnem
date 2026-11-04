@@ -214,6 +214,13 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 - **Flashcards antes moram em Provas (Pablo, 22/10/2026):** saíram da prova
   rápida. Em Criar prova, "Flashcards antes: Sem · 5 · 10 · 15" (os do dia);
   vão por `?cartoes=N` e aparecem só antes da 1ª questão.
+- **Aquecimento antes da prova (Pablo, 04/11/2026: "como na piscina, primeiro
+  aquecer o corpo"):** toda prova Médio, Difícil ou ENEM de Nova prova começa
+  com mais fáceis das mesmas matérias, A MAIS (1 a cada 4, mínimo 3; fácil
+  antes de médio; nunca real), `lib/aquecimento.ts`. Prova pronta feita à mão
+  ganha o aquecimento dela, do conteúdo de cada questão: "Aquecimento: antes
+  da Revisão final", 31 fáceis escritas na sessão com explicação pronta
+  (`data/revisao-final/aquecimento.json`, `scripts/criar-aquecimento-revisao-final.ts`).
 - **Prova responde na hora (22/10/2026):** o acerto é conferido no navegador
   (a letra certa já vem com a questão) e a resposta é gravada por trás, com
   3 tentativas; "Próxima" avança sem recarregar a prova. Antes: 1,5 s para ver

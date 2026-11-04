@@ -5,6 +5,7 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 
 import { etapaDaQuestao, type Etapa } from '@/lib/treino-etapas';
+import { montarAquecimento } from '@/lib/aquecimento';
 // Os 4 níveis (Pablo, 03/11/2026): Fácil, Médio, Difícil e ENEM (só real).
 // Se faltar questão no nível pedido, completa com o vizinho mais perto.
 // 'vestibular' fica para provas antigas criadas com esse nível.
@@ -47,12 +48,16 @@ export async function POST(request: Request) {
     const todas = embaralhar(await prisma.question.findMany({
       where: { materia: { in: materias }, ancoraId: null },
     }));
-    const selected = ordem
+    const doNivel = ordem
       .flatMap((etapa) => todas.filter((q) => etapaDaQuestao(q) === etapa))
       .slice(0, totalQuestoes);
-    if (selected.length === 0) {
+    if (doNivel.length === 0) {
       return NextResponse.json({ error: 'Nenhuma questão disponível para os critérios escolhidos' }, { status: 400 });
     }
+    // Aquecimento (lib/aquecimento.ts): fáceis das mesmas matérias antes das do nível.
+    const usadas = new Set(doNivel.map((q) => q.id));
+    const aquecimento = montarAquecimento(nivel, totalQuestoes, todas.filter((q) => !usadas.has(q.id)), etapaDaQuestao);
+    const selected = [...aquecimento, ...doNivel];
     // Create exam
     const exam = await prisma.customExam.create({
       data: {
@@ -70,7 +75,7 @@ export async function POST(request: Request) {
       },
     });
 
-    return NextResponse.json({ examId: exam.id, totalQuestoes: selected.length });
+    return NextResponse.json({ examId: exam.id, totalQuestoes: selected.length, aquecimento: aquecimento.length });
   } catch (error: any) {
     console.error('Erro ao criar prova:', error);
     return NextResponse.json({ error: 'Erro ao criar prova' }, { status: 500 });
