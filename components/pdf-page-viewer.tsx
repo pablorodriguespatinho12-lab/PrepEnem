@@ -20,6 +20,9 @@ type PdfPageViewerProps = {
   pageNumber: number;
   imagemUrl?: string | null;
   imagemUrlExpandida?: string | null;
+  /* Questão que depende da figura abre ampliada: na caixa de 400 px o cartaz
+     do meio da página ficava escondido (Pablo, 03/11/2026). */
+  abrirAmpliada?: boolean;
   className?: string;
 };
 
@@ -73,12 +76,12 @@ export function ImagemIndisponivel({ className = '' }: ImagemIndisponivelProps) 
 // Caminho principal: a imagem já foi pré-renderizada em scripts/generate-question-images.ts
 // e vive em public/questoes-imagens/. Isso substitui o fetch+render client-side do pdf.js
 // (que gerava múltiplos downloads de 6.7MB em paralelo e derrubava a function com 502).
-type PreRenderedPdfPageProps = Pick<PdfPageViewerProps, 'pdfUrl' | 'pageNumber' | 'imagemUrlExpandida' | 'className'> & {
+type PreRenderedPdfPageProps = Pick<PdfPageViewerProps, 'pdfUrl' | 'pageNumber' | 'imagemUrlExpandida' | 'abrirAmpliada' | 'className'> & {
   imagemUrl: string;
 };
 
-function PreRenderedPdfPage({ pdfUrl, pageNumber, imagemUrl, imagemUrlExpandida, className = '' }: PreRenderedPdfPageProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
+function PreRenderedPdfPage({ pdfUrl, pageNumber, imagemUrl, imagemUrlExpandida, abrirAmpliada = false, className = '' }: PreRenderedPdfPageProps) {
+  const [isExpanded, setIsExpanded] = useState(abrirAmpliada);
   const [hasError, setHasError] = useState(false);
   const [retryCount, setRetryCount] = useState(0);
 
@@ -189,7 +192,7 @@ function LegacyPdfRender({ pdfUrl, pageNumber, className = '' }: Pick<PdfPageVie
   );
 }
 
-export default function PdfPageViewer({ pdfUrl, pageNumber, imagemUrl, imagemUrlExpandida, className = '' }: PdfPageViewerProps) {
+export default function PdfPageViewer({ pdfUrl, pageNumber, imagemUrl, imagemUrlExpandida, abrirAmpliada = false, className = '' }: PdfPageViewerProps) {
   if (imagemUrl) {
     return (
       <PreRenderedPdfPage
@@ -197,6 +200,7 @@ export default function PdfPageViewer({ pdfUrl, pageNumber, imagemUrl, imagemUrl
         pageNumber={pageNumber}
         imagemUrl={imagemUrl}
         imagemUrlExpandida={imagemUrlExpandida}
+        abrirAmpliada={abrirAmpliada}
         className={className}
       />
     );

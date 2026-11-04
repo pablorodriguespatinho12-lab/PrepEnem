@@ -26,7 +26,7 @@ export function PaginaDaProva({ pdfUrl, pagina, imagemUrl, imagemUrlExpandida, p
   if (aberta) {
     return (
       <figure className={className}>
-        <PdfPageViewer pdfUrl={pdfUrl} pageNumber={pagina} imagemUrl={imagemUrl} imagemUrlExpandida={imagemUrlExpandida} />
+        <PdfPageViewer pdfUrl={pdfUrl} pageNumber={pagina} imagemUrl={imagemUrl} imagemUrlExpandida={imagemUrlExpandida} abrirAmpliada={precisaDaImagem} />
         {!precisaDaImagem && (
           <button type="button" onClick={() => setAberta(false)} className="mt-2 inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors">
             <ChevronDown className="w-4 h-4 rotate-180" /> Esconder a página da prova
