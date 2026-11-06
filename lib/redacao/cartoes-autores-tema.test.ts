@@ -23,9 +23,10 @@ describe('baralho dos autores por tema', () => {
     }
   });
 
-  test('violência contra a mulher: Rui Barbosa, Dom Hélder e Elie Wiesel', () => {
+  /* Brecht e Wiesel empatam em 18 de 28 e os dois passaram neste tema. */
+  test('violência contra a mulher: Rui Barbosa, Dom Hélder e Brecht', () => {
     const c = cartoes.find((x) => x.frente.includes('violência contra a mulher'))!;
-    expect(c.verso).toBe('Rui Barbosa, Dom Hélder e Elie Wiesel.');
+    expect(c.verso).toBe('Rui Barbosa, Dom Hélder e Brecht.');
   });
 
   test('a dica nunca entrega um nome do verso', () => {

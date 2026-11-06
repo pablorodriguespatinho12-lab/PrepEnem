@@ -5,6 +5,60 @@ fáceis de decorar (frases de autor ou dados), e **provar** que funcionam, com
 base nas redações nota 1000, sem achismo. Dados brutos e scripts:
 `docs/redacao/prova-coringas/`.
 
+## Rodada 3 (06/11/2026): 5 coringas novos, juízes mais baratos
+
+Pedido do Pablo: achar outros coringas, com os juízes, sem gastar muito.
+Mesmo método nos mesmos 11 temas (2015 a 2025), com 1 escritor Sonnet e 3
+juízes cegos: Haiku, Sonnet e Fable. Dados e scripts em `prova-coringas/r3/`.
+
+| Coringa | Temas (de 11) | Reprovou em |
+|---|---|---|
+| João Cabral, "é difícil defender, só com palavras, a vida" | **9** | doenças mentais, dados na internet |
+| Darcy Ribeiro, "A crise da educação no Brasil não é uma crise; é um projeto." | **8** | doenças mentais, envelhecimento, intolerância religiosa |
+| Brecht, "Do rio que tudo arrasta se diz que é violento, mas ninguém diz violentas as margens que o comprimem." | 7 | dados na internet, cinema, envelhecimento, registro civil |
+| Galeano, "Os ninguéns: os filhos de ninguém, os donos de nada." | 6 | violência contra a mulher, envelhecimento, dados, herança africana, doenças mentais |
+| Milton Santos (ideia, sem aspas): o consumidor ocupou o lugar do cidadão | 2 | 9 temas |
+
+- **Os juízes baratos repetiram a régua:** as âncoras da rodada 1 deram o mesmo
+  resultado (Drummond 11 de 11, dado do esgoto 0 de 11, Bauman de bolso 0 de 11).
+- Concordância no "sustenta 200": de 70 a 80 em 88 por par de juízes.
+- Escritor x juízes: "ok" aprovado em 25 de 26; "forçado" em 0 de 30.
+- Custo: ~340 mil tokens nos 4 agentes.
+- **Fontes:** João Cabral em *Morte e Vida Severina* (1955); Darcy na reunião da
+  SBPC de 1977 (há quem cite "programa" no lugar de "projeto"); Brecht no poema
+  "Sobre a violência", com tradução que varia; Galeano em *O Livro dos Abraços*
+  (1989). Milton Santos: a frase exata não foi achada, só a ideia.
+- Ainda não foram ao site nem à prova dos 28 temas.
+
+**2ª confirmação, sem juiz (busca por palavra nas 47 redações nota 1000 de
+`tests/redacao/textos/`):**
+- Galeano (invisibilidade, apagamento, marginalizados): **35 de 47**, nas 5
+  cartilhas, mesmo nos temas cujo título não fala em invisibilidade. A ideia é
+  forte; a frase dele ("donos de nada") é que estreita para a pobreza.
+- Darcy (o problema é proposital): **1 de 47** (povos tradicionais, 2022). É
+  raro nas nota 1000: destaca, mas não tem apoio na base real.
+- João Cabral (discurso ou promessa não basta): 0 de 47 pela busca. É o mesmo
+  mecanismo do Drummond ("a lei não basta"), que a leitura do censo achou em 18
+  de 47. Por isso João Cabral e Drummond não entram na mesma redação.
+- Limite: busca por palavra conta menos que leitura.
+
+**Rodada 4 (06/11/2026): os 17 temas que faltavam (1998 a 2014).** Mesmos
+juízes; âncoras: Drummond 17 de 17, Bauman de bolso 0 de 17; concordância de
+92 a 97 em 102. Scripts em `prova-coringas/r4/` (`quartetos.py` junta os 28).
+
+| Coringa | 17 temas antigos | Total nos 28 |
+|---|---|---|
+| Galeano | 12 | **18** (0 de 3 em saúde, 1 de 4 em tecnologia) |
+| Brecht | 11 | **18** (2 de 2 em meio ambiente, 3 de 3 em segurança) |
+| Darcy | 8 | 16 (0 de 3 em saúde) |
+| João Cabral | **3** | 12: caiu, era 9 de 11 só por causa dos temas recentes |
+
+**Quartetos** (Pacto + Drummond na introdução, 2 coringas nos
+desenvolvimentos; conta = temas em que os 3 coringas passaram juntos):
+1. Drummond + Rui Barbosa + Dom Hélder: 18 de 28, com tema nos 9 grandes assuntos.
+2. Drummond + Rui Barbosa + Brecht: 16 de 28, nos 9 grandes assuntos.
+3. Drummond + Dom Hélder + Brecht: 14 de 28, nos 9 (sem o Rui, que é difícil de decorar).
+
 ## Atualização de 30/10/2026: grandes assuntos e redações nota 1000
 
 O Pablo perguntou se os coringas servem para os grandes assuntos (economia,
@@ -240,9 +294,9 @@ coringa nele, mas a ordem não foi a combinada.
 
 - **Estado:** Drummond, Dom Hélder, Rui Barbosa.
 - **Acesso:** Rui Barbosa, Dom Hélder, Drummond.
-- **Estigma:** Elie Wiesel, Graciliano, Luther King.
+- **Estigma:** Graciliano, Elie Wiesel, Galeano (06/11: no lugar do Luther King).
 - **História:** Drummond (Lei Áurea), Rui Barbosa (cotas), dado de 1888 (com aviso).
-- **Mercado:** Drummond (leis do trabalho), Graciliano, Machado (com aviso).
+- **Mercado:** Drummond (leis do trabalho), Graciliano, Brecht (06/11: no lugar do Machado).
 
 Cada ficha mostra "Testado: serviu em X de 11 temas do ENEM de 2015 a 2025".
 Fontes das frases conferidas por checagem: Drummond em *A Rosa do Povo*

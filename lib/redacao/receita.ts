@@ -48,13 +48,13 @@ export const CAUSAS: Causa[] = [
     naTese: 'do estigma social, que torna invisível quem sofre com o problema',
     fraseDeTese: '...pelo estigma social, que torna invisível quem sofre com o problema',
     repertorios: ['Goffman', 'Hannah Arendt', 'Foucault', 'Nise da Silveira'],
-    coringas: ['Graciliano', 'Elie Wiesel', 'Luther King'],
+    coringas: ['Graciliano', 'Elie Wiesel', 'Galeano'],
   },
   {
     chave: 'mercado', nomeNaFrase: 'mercado acima das pessoas', nome: 'Mercado acima das pessoas', naTese: 'da lógica de lucro que se sobrepõe ao bem-estar',
     fraseDeTese: '...pela lógica de lucro que se sobrepõe ao bem-estar',
     repertorios: ['Zuboff', 'Ricardo Antunes', 'Byung-Chul Han', 'Ulrich Beck'],
-    coringas: ['Drummond', 'Graciliano', 'Machado'],
+    coringas: ['Drummond', 'Graciliano', 'Brecht'],
   },
 ];
 

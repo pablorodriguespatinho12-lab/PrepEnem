@@ -18,8 +18,8 @@ export const MEMORIA: Record<string, { mecanismo: string; imagem: string }> = {
   'Rui Barbosa': { mecanismo: 'tratar igual quem é desigual é injusto', imagem: 'Dar o mesmo a quem começou atrás.' },
   'Elie Wiesel': { mecanismo: 'a sociedade ignora quem sofre', imagem: 'Fingir que não vê quem sofre.' },
   Graciliano: { mecanismo: 'tratado como menos que gente', imagem: 'Um sertanejo e a seca.' },
-  'Luther King': { mecanismo: 'a injustiça contra um grupo ameaça todos', imagem: 'Escrita atrás das grades, em 1963.' },
-  Machado: { mecanismo: 'quem vence leva tudo, quem perde ganha pena', imagem: 'Um prêmio que se come.' },
+  Galeano: { mecanismo: 'a sociedade trata gente como se não existisse', imagem: 'Gente que a sociedade apaga.' },
+  Brecht: { mecanismo: 'culpam a reação, e não a causa', imagem: 'Água forte presa entre duas paredes.' },
   'Dado 1888': { mecanismo: 'a herança da escravidão', imagem: 'Treze de maio.' },
 };
 

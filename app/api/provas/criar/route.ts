@@ -6,6 +6,7 @@ import { authOptions } from '@/lib/auth';
 
 import { etapaDaQuestao, type Etapa } from '@/lib/treino-etapas';
 import { montarAquecimento } from '@/lib/aquecimento';
+import { ineditasPrimeiro } from '@/lib/ineditas-primeiro';
 // Os 4 níveis (Pablo, 03/11/2026): Fácil, Médio, Difícil e ENEM (só real).
 // Se faltar questão no nível pedido, completa com o vizinho mais perto.
 // 'vestibular' fica para provas antigas criadas com esse nível.
@@ -45,9 +46,16 @@ export async function POST(request: Request) {
 
     const ordem = VIZINHOS[nivel] ?? VIZINHOS.medio;
     // Degraus (ancoraId) só fazem sentido junto da própria questão do ENEM.
-    const todas = embaralhar(await prisma.question.findMany({
-      where: { materia: { in: materias }, ancoraId: null },
-    }));
+    const respondidas = await prisma.customExamQuestion.findMany({
+      where: { answered: true, exam: { userId: user.id } },
+      select: { questionId: true },
+    });
+    const todas = ineditasPrimeiro(
+      embaralhar(await prisma.question.findMany({
+        where: { materia: { in: materias }, ancoraId: null },
+      })),
+      new Set(respondidas.map((r) => r.questionId)),
+    );
     const doNivel = ordem
       .flatMap((etapa) => todas.filter((q) => etapaDaQuestao(q) === etapa))
       .slice(0, totalQuestoes);

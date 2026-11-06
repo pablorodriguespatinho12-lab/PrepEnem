@@ -4,8 +4,14 @@ import bcrypt from 'bcryptjs';
 const prisma = new PrismaClient();
 
 async function main() {
-  const hashedPassword = await bcrypt.hash('johndoe123', 10);
-  const hashedPassword2 = await bcrypt.hash('prepenem123', 10);
+  // Senhas vêm do .env: o código é público e senha escrita aqui vira porta aberta.
+  const senhaAdmin = process.env.SEED_ADMIN_PASSWORD;
+  const senhaEstudante = process.env.SEED_ESTUDANTE_PASSWORD;
+  if (!senhaAdmin || !senhaEstudante) {
+    throw new Error('Defina SEED_ADMIN_PASSWORD e SEED_ESTUDANTE_PASSWORD no .env antes do seed.');
+  }
+  const hashedPassword = await bcrypt.hash(senhaAdmin, 10);
+  const hashedPassword2 = await bcrypt.hash(senhaEstudante, 10);
 
   // Admin test user
   await prisma.user.upsert({

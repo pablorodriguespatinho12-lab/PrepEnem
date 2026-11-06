@@ -1,0 +1,4 @@
+- Context7: logar com `/mcp` → context7 (docs atualizadas de Next/Prisma).
+- Repo público: pegar a URL no Neon (Conectar → copiar), pôr na Vercel, trocar a senha admin.
+- Push: commits do PrepEnem esperando `! git push`.
+- Dezembro: instalar o Codex (segunda opinião), enxugar `decisoes-prepenem` (49 KB), golden set da redação em partes.

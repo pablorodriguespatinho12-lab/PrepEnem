@@ -507,6 +507,14 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   17/47 do original). Regra: coringa é o esqueleto do parágrafo, nunca enfeite.
   Graciliano construído ficou 1/5 (forçado em racismo e velhice), então ganhou
   `restricao`. Relatório: `docs/redacao/repertorios-coringa.md`.
+  **Rodadas 3 e 4 (06/11/2026):** 5 candidatos novos nos 28 temas, juízes
+  mais baratos (Haiku, Sonnet, Fable), que repetiram as âncoras. Galeano e
+  Brecht passaram em 18/28 e ENTRARAM no lugar de Luther King (12) e Machado
+  (6), que saíram do site (estigma: Graciliano, Wiesel, Galeano; mercado:
+  Drummond, Graciliano, Brecht). Darcy 16, João Cabral 12 (era 9/11 só nos
+  temas recentes) e Milton Santos ficaram de fora. Melhor quarteto: Pacto +
+  Drummond + Rui Barbosa + Dom Hélder (os 3 passaram juntos em 18 de 28).
+  Gerador dos exemplos: `prova-coringas/novos.py`.
 - **Menos poluição nos passos 4 a 7 (mesmo dia):** o molde destaca só a frase
   de agora (feitas com visto, futuras apagadas); "Pense antes" mudou para a
   aba Ajuda; ponte, conectivos e erros da proposta foram para "Mais dicas";

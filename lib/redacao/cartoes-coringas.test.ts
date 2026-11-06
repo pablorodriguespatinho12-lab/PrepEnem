@@ -27,7 +27,7 @@ describe('baralho dos coringas', () => {
     expect(drummond.verso).toBe('"As leis não bastam. Os lírios não nascem da lei."');
   });
   test('quem só serve em alguns temas avisa onde usar', () => {
-    const machado = cartoes.find((c) => c.frente === 'Coringa para: quem vence leva tudo, quem perde ganha pena')!;
-    expect(machado.verso).toContain('Use em temas como:');
+    const dado1888 = cartoes.find((c) => c.frente === 'Coringa para: a herança da escravidão')!;
+    expect(dado1888.verso).toContain('Use em temas como:');
   });
 });

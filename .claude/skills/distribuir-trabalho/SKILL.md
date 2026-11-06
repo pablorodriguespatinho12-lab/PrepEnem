@@ -56,6 +56,13 @@ O resultado chega na notificação. **Nunca abra o transcript** (JSONL inteiro).
 Relatório é testemunho, não veredito: achado que importa, confira na fonte;
 achado descartado, diga por quê.
 
+## Duas frentes ao mesmo tempo
+
+Frentes que mexem em arquivos diferentes (ex.: corretor de redação e prova)
+rodam em paralelo, cada uma na sua cópia: `EnterWorktree` nesta sessão, ou
+`isolation: "worktree"` no agente. Sem isso, duas edições no mesmo checkout
+se atropelam.
+
 ## Quando não delegar
 
 Arquivo único que já sei onde fica; decisão de produto; contexto já curto.
