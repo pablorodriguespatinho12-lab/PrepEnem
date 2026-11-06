@@ -42,6 +42,23 @@ juízes cegos: Haiku, Sonnet e Fable. Dados e scripts em `prova-coringas/r3/`.
   de 47. Por isso João Cabral e Drummond não entram na mesma redação.
 - Limite: busca por palavra conta menos que leitura.
 
+**Rodada 4 (06/11/2026): os 17 temas que faltavam (1998 a 2014).** Mesmos
+juízes; âncoras: Drummond 17 de 17, Bauman de bolso 0 de 17; concordância de
+92 a 97 em 102. Scripts em `prova-coringas/r4/` (`quartetos.py` junta os 28).
+
+| Coringa | 17 temas antigos | Total nos 28 |
+|---|---|---|
+| Galeano | 12 | **18** (0 de 3 em saúde, 1 de 4 em tecnologia) |
+| Brecht | 11 | **18** (2 de 2 em meio ambiente, 3 de 3 em segurança) |
+| Darcy | 8 | 16 (0 de 3 em saúde) |
+| João Cabral | **3** | 12: caiu, era 9 de 11 só por causa dos temas recentes |
+
+**Quartetos** (Pacto + Drummond na introdução, 2 coringas nos
+desenvolvimentos; conta = temas em que os 3 coringas passaram juntos):
+1. Drummond + Rui Barbosa + Dom Hélder: 18 de 28, com tema nos 9 grandes assuntos.
+2. Drummond + Rui Barbosa + Brecht: 16 de 28, nos 9 grandes assuntos.
+3. Drummond + Dom Hélder + Brecht: 14 de 28, nos 9 (sem o Rui, que é difícil de decorar).
+
 ## Atualização de 30/10/2026: grandes assuntos e redações nota 1000
 
 O Pablo perguntou se os coringas servem para os grandes assuntos (economia,
