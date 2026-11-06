@@ -5,6 +5,31 @@ fáceis de decorar (frases de autor ou dados), e **provar** que funcionam, com
 base nas redações nota 1000, sem achismo. Dados brutos e scripts:
 `docs/redacao/prova-coringas/`.
 
+## Rodada 3 (06/11/2026): 5 coringas novos, juízes mais baratos
+
+Pedido do Pablo: achar outros coringas, com os juízes, sem gastar muito.
+Mesmo método nos mesmos 11 temas (2015 a 2025), com 1 escritor Sonnet e 3
+juízes cegos: Haiku, Sonnet e Fable. Dados e scripts em `prova-coringas/r3/`.
+
+| Coringa | Temas (de 11) | Reprovou em |
+|---|---|---|
+| João Cabral, "é difícil defender, só com palavras, a vida" | **9** | doenças mentais, dados na internet |
+| Darcy Ribeiro, "A crise da educação no Brasil não é uma crise; é um projeto." | **8** | doenças mentais, envelhecimento, intolerância religiosa |
+| Brecht, "Do rio que tudo arrasta se diz que é violento, mas ninguém diz violentas as margens que o comprimem." | 7 | dados na internet, cinema, envelhecimento, registro civil |
+| Galeano, "Os ninguéns: os filhos de ninguém, os donos de nada." | 6 | violência contra a mulher, envelhecimento, dados, herança africana, doenças mentais |
+| Milton Santos (ideia, sem aspas): o consumidor ocupou o lugar do cidadão | 2 | 9 temas |
+
+- **Os juízes baratos repetiram a régua:** as âncoras da rodada 1 deram o mesmo
+  resultado (Drummond 11 de 11, dado do esgoto 0 de 11, Bauman de bolso 0 de 11).
+- Concordância no "sustenta 200": de 70 a 80 em 88 por par de juízes.
+- Escritor x juízes: "ok" aprovado em 25 de 26; "forçado" em 0 de 30.
+- Custo: ~340 mil tokens nos 4 agentes.
+- **Fontes:** João Cabral em *Morte e Vida Severina* (1955); Darcy na reunião da
+  SBPC de 1977 (há quem cite "programa" no lugar de "projeto"); Brecht no poema
+  "Sobre a violência", com tradução que varia; Galeano em *O Livro dos Abraços*
+  (1989). Milton Santos: a frase exata não foi achada, só a ideia.
+- Ainda não foram ao site nem à prova dos 28 temas.
+
 ## Atualização de 30/10/2026: grandes assuntos e redações nota 1000
 
 O Pablo perguntou se os coringas servem para os grandes assuntos (economia,
