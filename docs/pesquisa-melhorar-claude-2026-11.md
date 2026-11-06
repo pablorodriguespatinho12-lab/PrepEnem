@@ -75,13 +75,13 @@ Drive…) e o plugin Context7, ligado mas sem login — ou seja, não funciona.
 
 | Candidato | Veredito | Por quê |
 |---|---|---|
-| **Neon MCP** (oficial) | **1º a instalar em dezembro** | Login por OAuth (sem senha em arquivo), modo só-leitura, preso a um projeto. Ver tabelas e dados sem script. Soma com `db-inspector` e `prisma-neon-safety`. |
+| **Neon MCP** (oficial) | **Instalado 06/11 (falta login)** | Login por OAuth (sem senha em arquivo), modo só-leitura, preso a um projeto. Ver tabelas e dados sem script. Soma com `db-inspector` e `prisma-neon-safety`. |
 | Context7 (já instalado) | Logar ou desligar | Hoje ocupa espaço sem funcionar. Logado, traz docs atualizadas de bibliotecas. |
 | next-devtools-mcp (Vercel) | Só depois do Next 16 | As ferramentas de erro e rota em tempo real exigem Next 16; estamos no 14.2.35. |
 | Prisma MCP | Não | É para Prisma Postgres; usamos Neon. |
 | Playwright MCP | Não | Já usamos Playwright por script e a skill `verificacao-local`; MCP gasta contexto toda sessão. |
 | GitHub MCP | Não | O `gh` já faz o mesmo. |
-| mattpocock/skills | Copiar 1 ou 2, não o pacote | Já temos `grill-me`. Vale `handoff` e talvez `improve-codebase-architecture`. |
+| mattpocock/skills | `handoff` instalada 06/11 | Já temos `grill-me`. Vale `handoff` e talvez `improve-codebase-architecture`. |
 | obra/superpowers | Já temos o núcleo | `writing-plans`, `systematic-debugging`, `test-driven-development`… |
 | anthropics/skills, karpathy-guidelines, ui-ux-pro-max | Já instalados | — |
 
