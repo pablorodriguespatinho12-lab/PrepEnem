@@ -30,6 +30,18 @@ juízes cegos: Haiku, Sonnet e Fable. Dados e scripts em `prova-coringas/r3/`.
   (1989). Milton Santos: a frase exata não foi achada, só a ideia.
 - Ainda não foram ao site nem à prova dos 28 temas.
 
+**2ª confirmação, sem juiz (busca por palavra nas 47 redações nota 1000 de
+`tests/redacao/textos/`):**
+- Galeano (invisibilidade, apagamento, marginalizados): **35 de 47**, nas 5
+  cartilhas, mesmo nos temas cujo título não fala em invisibilidade. A ideia é
+  forte; a frase dele ("donos de nada") é que estreita para a pobreza.
+- Darcy (o problema é proposital): **1 de 47** (povos tradicionais, 2022). É
+  raro nas nota 1000: destaca, mas não tem apoio na base real.
+- João Cabral (discurso ou promessa não basta): 0 de 47 pela busca. É o mesmo
+  mecanismo do Drummond ("a lei não basta"), que a leitura do censo achou em 18
+  de 47. Por isso João Cabral e Drummond não entram na mesma redação.
+- Limite: busca por palavra conta menos que leitura.
+
 ## Atualização de 30/10/2026: grandes assuntos e redações nota 1000
 
 O Pablo perguntou se os coringas servem para os grandes assuntos (economia,
