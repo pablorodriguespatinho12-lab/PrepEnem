@@ -46,7 +46,10 @@ fonte sair no redesign de 05/08/2026 (virou só ponteiro em 23/10/2026).
    chamar); história e número vão no corpo.
 5. **A guarda automática.** `.claude/hooks/` (commit-guard, push-guard,
    db-guard, typecheck) e os dois `settings.json`. Guarda podre roda sozinha,
-   em toda ferramenta.
+   em toda ferramenta. Para saber qual guarda atrapalha, conte as barradas nas
+   conversas da semana (`~/.claude/projects/*/*.jsonl`, `tool_result` com
+   `is_error`): em 06/11/2026 foram 13 do Safety Net e 7 do db-guard
+   (`docs/pesquisa-melhorar-claude-2026-11-parte2.md`).
 
 ## O que não cortar
 

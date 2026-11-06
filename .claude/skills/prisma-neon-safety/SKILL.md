@@ -24,6 +24,9 @@ O banco real ficou dessincronizado do `schema.prisma`: faltavam as colunas
 Prisma Client gerado corretamente. A causa era simplesmente nunca ter
 rodado `db push` após editar o schema.
 
+**Só ler dados (SELECT, contar, conferir)?** Use o MCP `neon` (`run_sql`, só-leitura):
+o `db-guard` barra `tsx scripts/` e `db pull` (7 voltas perdidas em 7 dias, nov/2026).
+
 **Sempre, antes de rodar qualquer script que leia/escreva no banco:**
 
 ```bash
