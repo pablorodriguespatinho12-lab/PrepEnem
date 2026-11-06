@@ -19,7 +19,7 @@ import sys
 from pathlib import Path
 
 CLAUDE = Path(os.environ.get("CLAUDE_HOME", Path.home() / ".claude"))
-BACKUP = CLAUDE / "backups" / "enxugar-2026-11-06-r4"
+BACKUP = CLAUDE / "backups" / "enxugar-2026-11-06-r5"
 APLICAR = "--aplicar" in sys.argv
 
 # Sincronizados da conta claude.ai: 0 chamadas em 9 projetos.
@@ -45,30 +45,15 @@ RELIGAR_NO_PROJETO = {
     CLAUDE.parent / "leukemia-lab": ["bio-research@synced"],
 }
 
-# Skills globais sem uso: three.js e gsap (ficam threejs-fundamentals,
-# gsap-core e gsap-react), jogos, mobile, devops e z.ai (não instalado).
-SKILLS_FICAM = {"threejs-fundamentals", "gsap-core", "gsap-react"}
-SKILLS_PREFIXOS = ("threejs-", "gsap-")
-SKILLS_SAEM = ["game-developer", "game-development", "react-native",
-               "devops-engineer", "monitoring-expert", "consult-zai"]
-
-# Comandos ECC de linguagens e fluxos que nenhum projeto usa (0 chamadas).
-# code-review e loop-* também batiam de frente com /code-review e /loop oficiais.
-COMANDOS_SAEM = [
-    "cpp-build", "cpp-review", "cpp-test", "go-build", "go-review", "go-test",
-    "rust-build", "rust-review", "rust-test", "kotlin-build", "kotlin-review",
-    "kotlin-test", "flutter-build", "flutter-review", "flutter-test",
-    "gradle-build", "fastapi-review", "python-review", "vue-review", "pm2",
-    "jira", "epic-claim", "epic-decompose", "epic-publish", "epic-review",
-    "epic-sync", "epic-unblock", "epic-validate", "gan-build", "gan-design",
-    "marketing-campaign", "multi-backend", "multi-execute", "multi-frontend",
-    "multi-plan", "multi-workflow", "orch-add-feature", "orch-build-mvp",
-    "orch-change-feature", "orch-fix-defect", "orch-refine-code", "prp-commit",
-    "prp-implement", "prp-plan", "prp-pr", "prp-prd", "instinct-export",
-    "instinct-import", "instinct-status", "santa-loop", "setup-pm",
-    "model-route", "project-init", "projects", "promote", "prune", "evolve",
-    "loop-start", "loop-status", "auto-update", "ecc-guide", "code-review",
-]
+# 5ª rodada (06/11, /context depois da 4ª: 218 -> 186 itens, mas Skills
+# seguiu 9,9 mil = 1,0% e medir-fluidez sem descrição). Contagem de
+# "name":"Skill" em todos os projetos: das 80 skills globais só 5 foram
+# chamadas. Agora é lista do que FICA: as usadas, as do Pablo citadas no
+# CLAUDE.md global e a pasta synced (do claude.ai). consult-codex teve 2
+# chamadas, mas o Codex não está instalado: sai também.
+SKILLS_FICAM = {"write-a-skill", "ln-162-skill-reviewer", "senior-prompt-engineer",
+                "design-taste-frontend", "revisao-visual-slides",
+                "sem-controle-deslizante", "seguranca-site-nextjs", "synced"}
 
 
 def passo(texto):
@@ -137,21 +122,22 @@ def religar_nos_projetos():
 def desligar_skills():
     pasta = CLAUDE / "skills"
     nomes = [p.name for p in sorted(pasta.iterdir()) if p.is_dir()] if pasta.is_dir() else []
-    saem = [n for n in nomes
-            if (n.startswith(SKILLS_PREFIXOS) and n not in SKILLS_FICAM) or n in SKILLS_SAEM]
+    saem = [n for n in nomes if n not in SKILLS_FICAM]
     movidas = [n for n in saem if mover(pasta / n, CLAUDE / "skills-disabled")]
     if movidas:
-        passo(f"{len(movidas)} skills globais -> skills-disabled/ (three.js, gsap, jogos…)")
+        passo(f"{len(movidas)} skills globais -> skills-disabled/ (0 chamadas)")
     else:
         print("OK     skills já enxutas")
 
 
 def desligar_comandos():
     pasta = CLAUDE / "commands"
-    saem = [pasta / f"{n}.md" for n in COMANDOS_SAEM if (pasta / f"{n}.md").exists()]
+    # 5ª rodada: os 30 comandos que sobraram também tinham 0 chamadas
+    # (<command-name> nos transcritos só mostra /clear, /resume, /context…).
+    saem = sorted(pasta.glob("*.md")) if pasta.is_dir() else []
     movidos = [c for c in saem if mover(c, CLAUDE / "commands-disabled")]
     if movidos:
-        passo(f"{len(movidos)} comandos -> commands-disabled/ (cpp, go, rust, epic, orch…)")
+        passo(f"{len(movidos)} comandos -> commands-disabled/ (0 chamadas)")
     else:
         print("OK     comandos já enxutos")
 
