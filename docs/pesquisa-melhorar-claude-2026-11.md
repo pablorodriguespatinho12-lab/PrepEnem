@@ -68,6 +68,33 @@ modelo aplicar a regra demais.
 - Skills já instaladas para treinar: `seguranca-site-nextjs`, `ai-security`,
   `prompt-injection`.
 
+## MCPs e skills do GitHub (2ª pesquisa, 06/11/2026)
+
+Hoje não há nenhum MCP local. Só os conectores do claude.ai (Vercel, Exa, Gmail,
+Drive…) e o plugin Context7, ligado mas sem login — ou seja, não funciona.
+
+| Candidato | Veredito | Por quê |
+|---|---|---|
+| **Neon MCP** (oficial) | **1º a instalar em dezembro** | Login por OAuth (sem senha em arquivo), modo só-leitura, preso a um projeto. Ver tabelas e dados sem script. Soma com `db-inspector` e `prisma-neon-safety`. |
+| Context7 (já instalado) | Logar ou desligar | Hoje ocupa espaço sem funcionar. Logado, traz docs atualizadas de bibliotecas. |
+| next-devtools-mcp (Vercel) | Só depois do Next 16 | As ferramentas de erro e rota em tempo real exigem Next 16; estamos no 14.2.35. |
+| Prisma MCP | Não | É para Prisma Postgres; usamos Neon. |
+| Playwright MCP | Não | Já usamos Playwright por script e a skill `verificacao-local`; MCP gasta contexto toda sessão. |
+| GitHub MCP | Não | O `gh` já faz o mesmo. |
+| mattpocock/skills | Copiar 1 ou 2, não o pacote | Já temos `grill-me`. Vale `handoff` e talvez `improve-codebase-architecture`. |
+| obra/superpowers | Já temos o núcleo | `writing-plans`, `systematic-debugging`, `test-driven-development`… |
+| anthropics/skills, karpathy-guidelines, ui-ux-pro-max | Já instalados | — |
+
+**Regra para escolher MCP:** servidor oficial do fabricante; modo só-leitura quando
+existir; versão fixa; desconfiar de servidor que muda a descrição das ferramentas
+depois de aprovado ("rug pull", envenenamento de ferramenta).
+
+**Comandos de dezembro (não rodar antes):**
+
+- Neon: `claude mcp add --transport http neon "https://mcp.neon.tech/mcp?readonly=true" --scope project` e logar no navegador.
+- Context7: `/mcp` → logar, ou desligar o plugin.
+- `handoff`: ler o SKILL.md em github.com/mattpocock/skills e copiar para `~/.claude/skills/`.
+
 ## Fontes
 
 - https://code.claude.com/docs/en/best-practices
@@ -79,3 +106,9 @@ modelo aplicar a regra demais.
 - https://arxiv.org/html/2512.09882v2 (agentes x profissionais em pentest)
 - https://arxiv.org/html/2605.21497v1 (agentes e CTF)
 - Segunda opinião: Antigravity (Google), `agy -p`, 06/11/2026
+- https://nextjs.org/docs/app/guides/mcp
+- https://neon.com/docs/ai/neon-mcp-server
+- https://www.prisma.io/docs/postgres/integrations/mcp-server
+- https://github.com/mattpocock/skills
+- https://mailtrap.io/blog/mcp-server-security/
+- https://zuplo.com/blog/remote-mcp-server-rug-pull/
