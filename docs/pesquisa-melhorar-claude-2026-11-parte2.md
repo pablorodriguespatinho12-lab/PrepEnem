@@ -26,8 +26,9 @@ onde parou). O aviso de pendências no início já cobre isso.
 ## O que fica para o Pablo
 
 1. Trocar o hook do banco pela versão que deixa `db pull --print` passar:
-   `! cp scripts/claude-config/db-guard.sh .claude/hooks/db-guard.sh`
-   (testar antes de confiar: o teste automático também foi barrado).
+   **Feito em 06/11.** Testado com 6 comandos: `db pull --print` e `ls` passam;
+   `db pull`, `db push` e `db pull --print && tsx scripts/` seguem barrados;
+   `DB_CONFIRMED=1` passa.
 2. Rodar `/doctor` uma vez e ver o que ele diz do CLAUDE.md.
 
 ## Fontes

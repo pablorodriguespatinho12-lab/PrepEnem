@@ -28,6 +28,13 @@ printf '%s' "$CMD" | grep -qE '(tsx|ts-node|node)[[:space:]]+[^[:space:]]*script
 
 [ -z "$TOUCHES_DB" ] && exit 0
 
+# `db pull --print` só lê o schema (a skill prisma-neon-safety manda rodar).
+# Barrá-lo custou 3 voltas em 7 dias. Passa se nada mais no comando toca o banco.
+if printf '%s' "$CMD" | grep -qE 'prisma[[:space:]]+db[[:space:]]+pull[[:space:]]+--print' \
+  && ! printf '%s' "$CMD" | grep -qE 'db[[:space:]]+(push|execute|seed)|migrate|studio|psql|(tsx|ts-node|node)[[:space:]]'; then
+  exit 0
+fi
+
 cat >&2 <<EOF
 [db-guard] ATENÇÃO: $TOUCHES_DB — o Neon é o MESMO banco de dev e de produção.
 
@@ -41,5 +48,7 @@ Antes de prosseguir, confirme:
 
 Para executar mesmo assim, repita o comando com o acknowledgment explícito:
   DB_CONFIRMED=1 <comando>
+
+Só leitura (SELECT)? Use o MCP neon run_sql: é só-leitura e não passa por aqui.
 EOF
 exit 2
