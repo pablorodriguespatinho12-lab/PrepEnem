@@ -95,6 +95,54 @@ depois de aprovado ("rug pull", envenenamento de ferramenta).
 - Context7: `/mcp` → logar, ou desligar o plugin.
 - `handoff`: ler o SKILL.md em github.com/mattpocock/skills e copiar para `~/.claude/skills/`.
 
+## 3ª rodada: enxugar o que entra em toda sessão (06/11/2026, fim da tarde)
+
+**Fato das docs que muda tudo:** a lista de skills tem teto de **1% da janela de
+contexto**. Passou do teto, o Claude Code **apaga as descrições das skills menos
+usadas** (o nome fica). Ou seja: sobra global = skill do PrepEnem sem descrição =
+eu não acho a skill certa. Não é só custo, é acerto.
+
+Medido com `scripts/claude-config/medir-listagem.py` (soma das descrições, teto):
+
+| | Antes | Depois do `enxugar.py` |
+|---|---|---|
+| Descrições listadas | 131,7 KB | ~53 KB (−60%) |
+| Itens | 380 | ~167 |
+
+Uso real contado nos `.jsonl` dos 9 projetos: **zero chamadas** para tudo que sai.
+
+| Sai | Tamanho |
+|---|---|
+| Plugin sincronizado small-business (44 skills + Gmail, Drive, Shopify) | 33,8 KB |
+| figma, data, engineering, product-management, design, productivity | 18,5 KB |
+| 45 skills three.js/gsap/jogos/mobile/devops (ficam threejs-fundamentals, gsap-core, gsap-react) + plugin core-3d-animation | 19,7 KB |
+| 62 comandos ECC (cpp, go, rust, epic, orch, prp, `code-review` e `loop-*` que batiam com os oficiais) | 6,5 KB |
+
+**Erro da faxina anterior achado:** o PubMed (plugin bio-research) teve **31 chamadas**,
+quase todas no leukemia-lab, e foi desligado em todo lugar. Agora volta **só lá**
+(`leukemia-lab/.claude/settings.local.json`).
+
+Aplicar: `! python3 scripts/claude-config/enxugar.py --aplicar`, fechar e abrir.
+Conferir: `/skill-doctor` (custo e uso por skill) e `/context` (linha Skills).
+
+### Recursos novos das docs (pesquisa de hoje)
+
+| Recurso | O que faz | Uso aqui |
+|---|---|---|
+| `skillOverrides` | por skill: `on`, `name-only`, `user-invocable-only`, `off`; menu `/skills` grava sozinho | para skill rara que eu quero manter sem pagar descrição (não vale para skill de plugin) |
+| `skillListingBudgetFraction` | aumenta o teto de 1% (ex.: `0.02`) | não: melhor tirar sobra que pagar mais |
+| `/skill-doctor` | custo por skill, nunca usadas, plugins sem uso | **rodar 1× por mês** |
+| `syncClaudeAiPlugins: false` | para de sincronizar plugins da conta | não: o pdf-viewer e o PubMed servem |
+| `disableClaudeAiConnectors` | tira os conectores do claude.ai | não: Vercel (40 chamadas) e Exa (9) são usados |
+| `/effort` | `low`…`max`; padrão `medium` no Opus 5.5; trocar invalida o cache | `high` em frente difícil, no começo da sessão |
+| Tarefas agendadas (`/schedule`) | agente na nuvem por cron (mín. 1 h); gasta do plano | dezembro, se ele quiser |
+| Sandbox | funciona no WSL2 com `bubblewrap` e `socat` | dezembro: testar se `localhost:3000` continua |
+| `claude plugin eval` | testa skill/plugin N vezes, relatório HTML; cada rodada gasta | não agora |
+
+Segunda opinião (Antigravity): sem risco novo. Lembrou de fechar **todas** as
+janelas do Claude Code antes de medir, e que pasta `*-disabled` fica fora de
+`skills/` e `commands/` (já é assim).
+
 ## Fontes
 
 - https://code.claude.com/docs/en/best-practices
@@ -112,3 +160,9 @@ depois de aprovado ("rug pull", envenenamento de ferramenta).
 - https://github.com/mattpocock/skills
 - https://mailtrap.io/blog/mcp-server-security/
 - https://zuplo.com/blog/remote-mcp-server-rug-pull/
+- https://code.claude.com/docs/en/skills.md (skillOverrides, teto de 1%, /skill-doctor)
+- https://code.claude.com/docs/en/plugins/loading.md (plugins @synced)
+- https://code.claude.com/docs/en/mcp.md (desligar conectores do claude.ai)
+- https://code.claude.com/docs/en/model-config.md (/effort)
+- https://code.claude.com/docs/en/scheduled-tasks.md
+- https://code.claude.com/docs/en/sandboxing.md

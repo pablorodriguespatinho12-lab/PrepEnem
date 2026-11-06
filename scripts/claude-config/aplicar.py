@@ -18,8 +18,7 @@ BACKUP = CLAUDE / "backups" / "faxina-2026-11-06"
 APLICAR = "--aplicar" in sys.argv
 
 # Plugins sincronizados da conta que não servem para o que o Pablo faz.
-# Ficam: small-business (Gmail/Drive), design, engineering, data, productivity,
-# product-management, figma, pdf-viewer.
+# (Os que ficaram aqui — small-business, figma, design… — saem no enxugar.py.)
 PLUGINS_DESLIGAR = [
     "zoom-plugin", "sales", "bio-research", "bigdata-com", "sp-global",
     "spglobal-plugin", "legal", "finance", "human-resources", "pendo-analytics",
