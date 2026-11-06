@@ -59,6 +59,16 @@ desenvolvimentos; conta = temas em que os 3 coringas passaram juntos):
 2. Drummond + Rui Barbosa + Brecht: 16 de 28, nos 9 grandes assuntos.
 3. Drummond + Dom Hélder + Brecht: 14 de 28, nos 9 (sem o Rui, que é difícil de decorar).
 
+**Dois quartetos para decorar (escolha do Pablo, 06/11/2026).** O melhor par
+de quartetos, procurado entre todos os pares possíveis:
+- Quarteto 1: Pacto + Drummond, Rui Barbosa, Dom Hélder.
+- Quarteto 2: Pacto + Drummond, Graciliano, Galeano.
+- Juntos servem em **25 de 28** temas, com 5 coringas decorados. O 2º melhor
+  par cobre 23.
+- Ficam fora: meio ambiente (Dom Hélder + Galeano, misturando os dois
+  quartetos, resolve), ética nacional e publicidade infantil (só o Rui
+  Barbosa passou, além do Drummond).
+
 ## Atualização de 30/10/2026: grandes assuntos e redações nota 1000
 
 O Pablo perguntou se os coringas servem para os grandes assuntos (economia,
