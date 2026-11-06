@@ -179,24 +179,26 @@ export const CORINGAS: Record<string, Coringa> = {
       mercado: 'Enganado nas contas pelo patrão, Fabiano aceita calado: quem trabalha sem direitos se sente menos que gente.',
     },
   },
-  'Luther King': {
-    tipo: 'fala', rotulo: 'Martin Luther King Jr.', quando: '1963', prova: { aprovados: 12, temas: 28 },
-    restricao: 'serviu em temas de preconceito e direitos: intolerância religiosa, violência contra a mulher, convivência com a diferença, herança africana',
-    texto: 'A injustiça em qualquer lugar é uma ameaça à justiça em todo lugar.',
-    sentido: 'Quando um grupo perde direitos, ninguém está seguro: a injustiça se espalha.',
-    fonte: 'Carta da Prisão de Birmingham, em tradução',
+  /* Rodadas 3 e 4 (06/11/2026): Galeano e Brecht passaram em 18 de 28 e
+     entraram no lugar de Luther King (12) e Machado (6), na mesma posição para
+     o baralho manter a ordem dos cartões. João Cabral (12) e Darcy (16) ficaram
+     de fora. Fontes: docs/redacao/repertorios-coringa.md. */
+  Galeano: {
+    tipo: 'fala', rotulo: 'Eduardo Galeano', quando: '1989', prova: { aprovados: 18, temas: 28 },
+    texto: 'Os ninguéns: os filhos de ninguém, os donos de nada.',
+    sentido: 'Há gente que a sociedade trata como se não existisse: sem nome, sem voz e sem nada.',
+    fonte: 'texto "Os ninguéns", em O Livro dos Abraços',
     amarra: {
-      estigma: 'O preconceito contra um grupo ameaça os direitos de todos, não só os de quem é atingido.',
+      estigma: 'Como os "ninguéns" de Galeano, quem sofre com o problema vira invisível: ninguém vê, ninguém cuida.',
     },
   },
-  Machado: {
-    tipo: 'fala', rotulo: 'Machado de Assis', quando: '1891', prova: { aprovados: 6, temas: 28 },
-    restricao: 'serviu em temas de desigualdade e disputa: herança africana, povos tradicionais, trabalho de cuidado, cinema, violência',
-    texto: 'Ao vencido, ódio ou compaixão; ao vencedor, as batatas.',
-    sentido: 'Quem vence a disputa leva o prêmio (as batatas); quem perde ganha só raiva ou pena. Machado zomba dessa lei do mais forte.',
-    fonte: 'romance Quincas Borba, capítulo VI',
+  Brecht: {
+    tipo: 'fala', rotulo: 'Bertolt Brecht', quando: 'anos 1930', prova: { aprovados: 18, temas: 28 },
+    texto: 'Do rio que tudo arrasta se diz que é violento, mas ninguém diz violentas as margens que o comprimem.',
+    sentido: 'Culpam a força do rio, mas não as margens que o apertam: culpam a reação de quem sofre, e não o que a causou.',
+    fonte: 'poema "Sobre a violência", em tradução',
     amarra: {
-      mercado: 'Na competição sem limites, como ironizava Machado, quem vence leva tudo e quem perde recebe, no máximo, pena.',
+      mercado: 'Condena-se a reação de quem é explorado, mas não a lógica de lucro que o aperta, como as margens do rio.',
     },
   },
   'Dado 1888': {

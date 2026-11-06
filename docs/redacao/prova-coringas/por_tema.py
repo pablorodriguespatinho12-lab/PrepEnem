@@ -18,8 +18,11 @@ sys.path.insert(0, str(P))
 sys.argv = ['', str(M), str(P)]
 import io, contextlib  # noqa: E401
 with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
-    from somar_macro import carregar, CORINGAS, R2  # noqa: E402
+    from somar_macro import carregar, aprovar, CORINGAS, R2  # noqa: E402
     import exemplos as ex  # noqa: E402  (reaproveita textos e o corte em partes)
+import novos  # noqa: E402
+
+CORINGAS = novos.no_site(CORINGAS)
 
 veredito: dict[tuple[str, str], dict] = {}
 for chave, prefixo, pasta in [('chave.json', 'juiz-', P), ('chave-r2.json', 'juiz-r2-', P), ('chave-m.json', 'juiz-m-', M)]:
@@ -32,6 +35,10 @@ for chave, prefixo, pasta in [('chave.json', 'juiz-', P), ('chave-r2.json', 'jui
         # Mais de uma rodada no mesmo tema: vale a aprovada de melhor qualidade.
         if atual is None or (r['aprovado'], q) > (atual['aprovado'], atual['q']):
             veredito[(r['tema'], item)] = {'aprovado': bool(r['aprovado']), 'q': q}
+
+for tema, item, ok, ns in novos.vereditos_novos(aprovar):
+    q = sum(2 * (n['pertinente'] + n['produtivo']) for n in ns) / len(ns)
+    veredito[(tema, item)] = {'aprovado': bool(ok), 'q': q}
 
 saida: dict[str, dict[str, dict]] = {}
 for (tema, item), v in sorted(veredito.items()):

@@ -32,8 +32,8 @@ export const PERGUNTA_DO_CORINGA: Record<string, string> = {
   'Rui Barbosa': 'No seu tema, quem está em desvantagem e precisa de um cuidado diferente?',
   'Elie Wiesel': 'No seu tema, quem sofre enquanto a sociedade não se importa?',
   Graciliano: 'No seu tema, quem é tratado como menos que gente, e por quê?',
-  'Luther King': 'No seu tema, que injustiça contra um grupo ameaça os direitos de todos?',
-  Machado: 'No seu tema, quem ganha a disputa e quem fica só com a pena?',
+  Galeano: 'No seu tema, quem a sociedade trata como se não existisse?',
+  Brecht: 'No seu tema, que reação de quem sofre é condenada, enquanto a causa dela ninguém critica?',
   'Dado 1888': 'No seu tema, que efeito da escravidão ainda aparece hoje?',
 };
 

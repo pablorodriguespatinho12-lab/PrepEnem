@@ -14,9 +14,12 @@ sys.path.insert(0, str(M))
 sys.argv = ['', str(M), str(P)]
 import io, contextlib  # noqa: E401
 with contextlib.redirect_stdout(io.StringIO()):
-    from somar_macro import carregar, macros, CORINGAS, R2  # noqa: E402
+    from somar_macro import carregar, macros, aprovar, CORINGAS, R2  # noqa: E402
+sys.path.insert(0, str(P))
+import novos  # noqa: E402
 
-textos: dict[tuple[str, str], str] = {}
+CORINGAS = novos.no_site(CORINGAS)
+textos: dict[tuple[str, str], str] = {**novos.textos_novos()}
 for arq in [*P.glob('escritor-*.json'), *M.glob('temas-antigos-escritor-*.json')]:
     for t in json.loads(arq.read_text()):
         textos[(t['tema'], R2.get(t['item'], t['item']))] = t['trecho']
@@ -34,12 +37,16 @@ for chave, prefixo, pasta in [('chave.json', 'juiz-', P), ('chave-r2.json', 'jui
         # A 1ª rodada não deu nota de qualidade: vale a soma pertinente + produtivo.
         q = sum(n.get('qualidade', 2 * (n['pertinente'] + n['produtivo'])) for n in r['ns']) / 3
         aprovados.append({'coringa': item, 'tema': r['tema'], 'texto': texto, 'qualidade': round(q, 2), 'assuntos': macros(r['tema'])})
+for tema, item, ok, ns in novos.vereditos_novos(aprovar):
+    if ok and (tema, item) in textos:
+        q = sum(2 * (n['pertinente'] + n['produtivo']) for n in ns) / len(ns)
+        aprovados.append({'coringa': item, 'tema': tema, 'texto': textos[(tema, item)], 'qualidade': round(q, 2), 'assuntos': macros(tema)})
 
 # Onde termina a frase do autor (ou o dado) em cada coringa.
 FIM_CITACAO = {
     'Drummond': 'nascem da lei', 'Dom Hélder': 'comunista', 'Rui Barbosa': 'igualdade real',
     'Elie Wiesel': 'indiferença', 'Graciliano': 'bicho, Fabiano', 'Luther King': 'em todo lugar',
-    'Machado': 'as batatas', 'Dado 1888': '1888',
+    'Machado': 'as batatas', 'Dado 1888': '1888', 'Brecht': 'comprimem', 'Galeano': 'donos de nada',
 }
 def fim_da_frase(texto: str, de: int) -> int:
     i = texto.find('. ', de)

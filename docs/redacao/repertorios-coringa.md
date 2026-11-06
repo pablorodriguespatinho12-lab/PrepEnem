@@ -294,9 +294,9 @@ coringa nele, mas a ordem não foi a combinada.
 
 - **Estado:** Drummond, Dom Hélder, Rui Barbosa.
 - **Acesso:** Rui Barbosa, Dom Hélder, Drummond.
-- **Estigma:** Elie Wiesel, Graciliano, Luther King.
+- **Estigma:** Graciliano, Elie Wiesel, Galeano (06/11: no lugar do Luther King).
 - **História:** Drummond (Lei Áurea), Rui Barbosa (cotas), dado de 1888 (com aviso).
-- **Mercado:** Drummond (leis do trabalho), Graciliano, Machado (com aviso).
+- **Mercado:** Drummond (leis do trabalho), Graciliano, Brecht (06/11: no lugar do Machado).
 
 Cada ficha mostra "Testado: serviu em X de 11 temas do ENEM de 2015 a 2025".
 Fontes das frases conferidas por checagem: Drummond em *A Rosa do Povo*
