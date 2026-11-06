@@ -23,7 +23,9 @@
 4. Layout que não muda com o conserto → medir no navegador antes do 2º palpite.
 5. Pesquisa longa vai para um arquivo `docs/` + commit no mesmo turno.
 6. **Commit sim, push nunca** (o push é dele, com `!`).
-7. Em entrega importante: segunda opinião com `agy -p "..." --print-timeout 120s`
+7. **Antes de pedir para ele fechar/reabrir** o Claude Code: gravar na memória o que
+   importa e o que conferir depois, e dizer "guardei: X".
+8. Em entrega importante: segunda opinião com `agy -p "..." --print-timeout 120s`
    (Codex e zai não estão instalados).
 
 ## Pegadinhas desta máquina (já custaram caro)
