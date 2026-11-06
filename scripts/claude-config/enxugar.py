@@ -19,7 +19,7 @@ import sys
 from pathlib import Path
 
 CLAUDE = Path(os.environ.get("CLAUDE_HOME", Path.home() / ".claude"))
-BACKUP = CLAUDE / "backups" / "enxugar-2026-11-06"
+BACKUP = CLAUDE / "backups" / "enxugar-2026-11-06-r4"
 APLICAR = "--aplicar" in sys.argv
 
 # Sincronizados da conta claude.ai: 0 chamadas em 9 projetos.
@@ -28,7 +28,16 @@ APLICAR = "--aplicar" in sys.argv
 PLUGINS_SYNCED = ["small-business", "figma", "data", "engineering",
                   "product-management", "design", "productivity"]
 # Plugins instalados: 3D/animação — o PrepEnem tem 1 cena 3D só.
-PLUGINS_INSTALADOS = ["core-3d-animation@claude-design-skillstack"]
+PLUGINS_INSTALADOS = ["core-3d-animation@claude-design-skillstack",
+    # 4ª rodada (06/11, depois do /context: Skills 9,9 mil = 1,0%, ~70 sem
+    # descrição, inclusive medir-fluidez). Todos com 0 chamadas nos 9 projetos.
+    # example-skills repete as anthropic-skills do claude.ai (canvas-design,
+    # skill-creator...); claude-api repete a skill claude-api que já vem embutida.
+    "example-skills@anthropic-agent-skills",
+    "claude-api@anthropic-agent-skills",
+    "design-systems@designer-skills",
+    "frontend-mobile-development@claude-code-workflows",
+    "full-stack-orchestration@claude-code-workflows"]
 
 # PubMed (bio-research) teve 31 chamadas, quase todas no leukemia-lab:
 # volta a ser ligado SÓ lá (a faxina anterior desligou em todo lugar).
