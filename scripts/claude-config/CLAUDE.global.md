@@ -29,6 +29,8 @@
 ## Pegadinhas desta máquina (já custaram caro)
 - **WSL**: `/chrome` não funciona → pedir print. Aviso no Windows: `powershell.exe`.
 - `gh` existe e está logado (conta pablorodriguespatinho12-lab).
+- Comportamento estranho do terminal (linha sumindo, comando mudado): olhar
+  `~/.claude/hooks/` ANTES de culpar o Bash. O "Bash apaga linhas" era um hook.
 - Hooks globais leem o comando como texto: o `secret-guard` barra comando que cite
   `.env` e `git add -A` (listar arquivos); o `destructive-guard` barra `rm -rf` em
   qualquer posição. Não contornar: mudar o comando.
