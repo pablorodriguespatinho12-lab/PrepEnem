@@ -14,7 +14,7 @@ dependência adotada por parecer legal que vira bug. **A entrega não é o achad
 | Pergunta | Ferramenta | Nunca |
 |---|---|---|
 | como se usa a API desta lib | `context7` | responder de memória |
-| existe implementação pronta | API do GitHub via `curl` | `gh` — **não existe nesta máquina** |
+| existe implementação pronta | `gh search repos` / `gh api` (instalado e logado desde nov/2026) ou o `curl` abaixo | ler o README inteiro de 10 repos |
 | isto existe, como se chama | `WebSearch` | abrir os dez resultados |
 | descoberta ampla, se as de cima falharam | Exa | usar primeiro |
 | ler a página que já sei que é a certa | `WebFetch` | usar para decidir relevância |
