@@ -17,7 +17,7 @@ export const TRIOS = {
 export type NumeroDoTrio = keyof typeof TRIOS;
 
 export const AUTORES_DOS_TRIOS = ['Drummond', 'Rui Barbosa', 'Dom Hélder', 'Graciliano', 'Galeano'] as const;
-type AutorDosTrios = (typeof AUTORES_DOS_TRIOS)[number];
+export type AutorDosTrios = (typeof AUTORES_DOS_TRIOS)[number];
 
 /* 8 temas reais do ENEM em que só um dos trios passou na prova dos 28
  * (coringas-por-tema.json): 4 de cada. */

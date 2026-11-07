@@ -411,8 +411,14 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   SEMPRE inteiros e na ordem (`lib/flashcards/ordem-fixa.ts`); os outros baralhos
   seguem embaralhados e pela fila do dia. Coringas da redação, Autores por tema e
   Quartetos 1-3 foram apagados. Depois dos baralhos: Redação → "Redações prontas
-  dos trios" (`/redacao/modelos`, abas Trio 1 e Trio 2 primeiro, em
-  `data/redacao/modelos.ts`). Tela `/redacao/plano` ("Planejar com os trios"):
+  dos trios" (`/redacao/modelos`, abas "Trio N · tema" primeiro, em
+  `data/redacao/modelos.ts` + `modelos-trios.ts`). **3 temas por trio (07/11/2026:
+  "como você usa cada argumento em vários temas"):** Trio 1 = povos tradicionais,
+  saúde mental, dados na internet; Trio 2 = imigração, criança, diferença. Acima da
+  redação, "o mesmo autor em 3 temas" (`components/redacao/autor-em-temas.tsx`):
+  fala igual, 1 linha de ligação por tema (`RedacaoModelo.usos`), molde. Ligações =
+  as aprovadas no `coringas-por-tema.json` (o teste barra autor reprovado no tema);
+  Pacto por tema: art. 10 criança, 11 moradia, 12 saúde, 13 educação, 15 ciência. Tela `/redacao/plano` ("Planejar com os trios"):
   tema real dos 28, ele escreve o plano à vontade e o site avalia sem IA
   (`lib/redacao/plano-quarteto.ts`, veredito de `coringas-por-tema.json`).
 - **Treino por partes = guia da receita de bolso (Pablo, 27/10/2026), sem IA por partes:**

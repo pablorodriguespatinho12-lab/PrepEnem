@@ -41,7 +41,7 @@ async function abrirBaralho(page: Page, nome = NOME): Promise<CartaoDoBanco[]> {
 async function main(): Promise<void> {
   const browser = await chromium.launch();
   const ctx = await browser.newContext({ viewport: { width: 390, height: 844 } });
-  await ctx.addCookies([{ name: '__Secure-next-auth.session-token', value: TOKEN, domain: 'localhost', path: '/', httpOnly: true, secure: true, sameSite: 'Lax' }]);
+  await ctx.addCookies([{ name: '__Secure-next-auth.session-token', value: TOKEN, domain: new URL(BASE).hostname, path: '/', httpOnly: true, secure: true, sameSite: 'Lax' }]);
   const page = await ctx.newPage();
   await page.route('**/api/**', (r) => (r.request().method() === 'GET' ? r.continue() : r.fulfill({ json: {} })));
   const errosJs: string[] = [];

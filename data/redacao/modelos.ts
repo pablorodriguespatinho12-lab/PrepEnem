@@ -7,6 +7,9 @@
 // Repertório: só fato verificável (autor, obra, lei, ano). Os textos de
 // contexto são resumos escritos aqui, não os textos motivadores oficiais.
 
+import type { AutorDosTrios } from '@/lib/redacao/cartoes-trios';
+import { TRIO1_MAIS, TRIO2_MAIS } from './modelos-trios';
+
 export type TipoParte = 'introducao' | 'desenvolvimento1' | 'desenvolvimento2' | 'conclusao';
 
 export const ROTULO_PARTE: Record<TipoParte, string> = {
@@ -40,6 +43,11 @@ export interface RedacaoModelo {
   contexto: string;
   /* Redação montada com um dos 2 trios de coringas (lib/redacao/cartoes-trios.ts). */
   trio?: 1 | 2;
+  /* Nome curto do tema na aba ("Saúde mental"). */
+  rotulo?: string;
+  /* Redação de trio: como cada autor foi ligado a ESTE tema, em 1 linha
+     (a tela "O mesmo autor em 3 temas" põe as 3 lado a lado). */
+  usos?: Partial<Record<AutorDosTrios, string>>;
   partes: Record<TipoParte, ParteModelo>;
 }
 
@@ -53,6 +61,12 @@ export const MODELOS: RedacaoModelo[] = [
     tema: 'Desafios para a valorização de comunidades e povos tradicionais no Brasil',
     anoEnem: 2022,
     trio: 1,
+    rotulo: 'Povos tradicionais',
+    usos: {
+      Drummond: 'Pacto, art. 11 (alimentação e moradia). A Constituição reconhece as terras, mas os povos não são valorizados.',
+      'Rui Barbosa': 'As mesmas regras da cidade para quem vive da terra.',
+      'Dom Hélder': 'Cesta básica na crise, sem perguntar por que perderam a terra.',
+    },
     contexto: 'Povos e comunidades tradicionais, como indígenas, quilombolas e ribeirinhos, vivem de um jeito ligado à terra onde estão: dela tiram o sustento, a cultura e a história. Esta redação usa o Trio 1: Pacto + Drummond na introdução, Rui Barbosa no 1º desenvolvimento e Dom Hélder no 2º.',
     partes: {
       introducao: {
@@ -101,11 +115,18 @@ export const MODELOS: RedacaoModelo[] = [
       },
     },
   },
+  ...TRIO1_MAIS,
   {
     id: 'trio2-imigracao-2012',
     tema: 'O movimento imigratório para o Brasil no século XXI',
     anoEnem: 2012,
     trio: 2,
+    rotulo: 'Imigração',
+    usos: {
+      Drummond: 'Pacto, art. 6º e 7º (trabalho). A Lei de Migração existe, mas o imigrante não tem os direitos na prática.',
+      Graciliano: 'O imigrante explorado na oficina de costura é o Fabiano de hoje.',
+      Galeano: 'Sem documento e sem português, o imigrante vira um ninguém.',
+    },
     contexto: 'No século XXI, o Brasil passou a receber imigrantes de vários países, como haitianos, venezuelanos e bolivianos, que chegam em busca de trabalho e de uma vida melhor. Esta redação usa o Trio 2: Pacto + Drummond na introdução, Graciliano no 1º desenvolvimento e Galeano no 2º.',
     partes: {
       introducao: {
@@ -154,6 +175,7 @@ export const MODELOS: RedacaoModelo[] = [
       },
     },
   },
+  ...TRIO2_MAIS,
   {
     id: 'saude-mental-2020',
     tema: 'O estigma associado às doenças mentais na sociedade brasileira',

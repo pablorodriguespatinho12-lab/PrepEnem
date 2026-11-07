@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { ChevronLeft, PenTool } from 'lucide-react';
 import { MODELOS, ORDEM_PARTES, ROTULO_PARTE } from '@/data/redacao/modelos';
 import { ModeloComentado } from '@/components/redacao/modelo-comentado';
+import { AutorEmTemas } from '@/components/redacao/autor-em-temas';
 
 export default function RedacaoModelosPage() {
   const [id, setId] = useState(MODELOS[0].id);
@@ -32,10 +33,16 @@ export default function RedacaoModelosPage() {
             onClick={() => setId(m.id)}
             className={`px-3 py-1.5 rounded-[var(--radius-control)] border type-meta t-colors ${m.id === id ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:bg-muted'}`}
           >
-            <span data-numeric>{m.trio ? `Trio ${m.trio}` : `ENEM ${m.anoEnem}`}</span>
+            <span data-numeric>{m.trio ? `Trio ${m.trio} · ${m.rotulo ?? m.anoEnem}` : `ENEM ${m.anoEnem}`}</span>
           </button>
         ))}
       </div>
+
+      {modelo.trio && (
+        <div className="mb-6">
+          <AutorEmTemas trio={modelo.trio} modeloAtualId={modelo.id} onEscolherModelo={setId} />
+        </div>
+      )}
 
       <article className="space-y-6" aria-labelledby="tema-modelo">
         <header className="surface-1 rounded-[var(--radius-surface)] p-5">
