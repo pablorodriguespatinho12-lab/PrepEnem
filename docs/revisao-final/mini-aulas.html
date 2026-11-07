@@ -1,0 +1,410 @@
+<title>Mini-aulas do ENEM</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Layout: uma tela por vez (dia → matéria → aula), cartão central, nada para rolar */
+:root{
+  --bg:#f6f5f1; --card:#ffffff; --fg:#1d1f24; --muted:#636873; --line:#e2e0d8;
+  --d1:#c2562f; --d1-soft:#fbe9e1; --d2:#2a6f8f; --d2-soft:#e0eef4;
+  --ok:#2f7d4f; --warn:#a1580b; --warn-soft:#fdf0dc;
+  --acc:var(--d1); --acc-soft:var(--d1-soft);
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#15171b; --card:#1e2127; --fg:#ecebe6; --muted:#a0a5ae; --line:#30343c;
+  --d1:#f08a62; --d1-soft:#3a2219; --d2:#6cb8da; --d2-soft:#16303c;
+  --ok:#6fcf97; --warn:#f2b35e; --warn-soft:#3a2a12; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#15171b; --card:#1e2127; --fg:#ecebe6; --muted:#a0a5ae; --line:#30343c;
+  --d1:#f08a62; --d1-soft:#3a2219; --d2:#6cb8da; --d2-soft:#16303c;
+  --ok:#6fcf97; --warn:#f2b35e; --warn-soft:#3a2a12; color-scheme:dark }
+.dia2{ --acc:var(--d2); --acc-soft:var(--d2-soft) }
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font:17px/1.45 var(--body);margin:0}
+#app{min-height:100%;box-sizing:border-box;max-width:720px;margin:0 auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:20px 24px;display:flex;flex-direction:column;gap:14px}
+button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:focus{outline:none}
+button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+h1,h2{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(28px,6vw,40px);font-weight:800}
+h2{font-size:clamp(22px,4.6vw,30px);font-weight:800;line-height:1.15}
+.sub{color:var(--muted);margin:0}
+.view{display:flex;flex-direction:column;gap:14px;animation:entra .32s cubic-bezier(.2,.7,.2,1)}
+.view.volta{animation-name:entraVolta}
+@keyframes entra{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:none}}
+@keyframes entraVolta{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.view{animation:none}}
+.topo{display:flex;align-items:center;gap:10px;min-height:40px}
+.voltar{border:0;background:transparent;color:var(--muted);padding:8px 10px 8px 0;font-size:16px}
+.migalha{color:var(--muted);font-size:15px}
+/* Dias */
+.dias{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:520px){.dias{grid-template-columns:1fr}}
+.dia{border:0;border-radius:18px;padding:22px 20px;text-align:left;display:flex;flex-direction:column;gap:6px;
+  background:var(--acc-soft);transition:transform .18s ease}
+.dia:hover{transform:translateY(-2px)}
+.dia b{font-family:var(--display);font-size:26px;color:var(--acc)}
+.dia span{color:var(--fg)}
+.dia small{color:var(--muted)}
+/* Matérias */
+.mats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.mat{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:14px 16px;text-align:left;
+  display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:center;transition:border-color .18s, transform .18s}
+.mat:hover{border-color:var(--acc);transform:translateY(-1px)}
+.mat b{font-family:var(--display);font-size:19px}
+.mat .q{grid-row:span 2;font-family:var(--display);font-weight:800;font-size:22px;color:var(--acc);font-variant-numeric:tabular-nums;text-align:right;line-height:1}
+.mat .q small{display:block;font:12px var(--body);color:var(--muted);font-weight:400}
+.mat .lidas{font-size:13px;color:var(--muted)}
+.mat .lidas.tudo{color:var(--ok)}
+/* Aula */
+.aula{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:14px}
+.cab{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pill{font-size:13px;letter-spacing:.03em;padding:4px 10px;border-radius:999px;background:var(--acc-soft);color:var(--acc);font-weight:700}
+.pill.cinza{background:transparent;color:var(--muted);border:1px solid var(--line);font-weight:400}
+.bloco{display:flex;flex-direction:column;gap:6px}
+.rot{font-size:12px;text-transform:uppercase;letter-spacing:.09em;font-weight:700;color:var(--muted)}
+.ent p{margin:0;font-size:18px}
+.dec ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px}
+.dec li{padding-left:18px;position:relative}
+.dec li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--acc)}
+.dec li b{color:var(--acc)}
+.peg{background:var(--warn-soft);border-radius:12px;padding:12px 14px}
+.peg .rot{color:var(--warn)}
+.peg p{margin:0}
+.nav{display:flex;gap:10px;align-items:center}
+.nav button{border:0;border-radius:12px;padding:13px 18px;font-weight:700}
+.nav .ant{background:transparent;border:1px solid var(--line)}
+.nav .prox{background:var(--acc);color:#fff;margin-left:auto;flex:1;max-width:260px}
+:root[data-theme="dark"] .nav .prox{color:#111}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .nav .prox{color:#111}}
+.pontos{display:flex;gap:5px;justify-content:center;flex-wrap:wrap}
+.pontos i{width:7px;height:7px;border-radius:50%;background:var(--line);transition:background .2s, transform .2s}
+.pontos i.on{background:var(--acc);transform:scale(1.35)}
+.fonte{font-size:13px;color:var(--muted);margin:0}
+@media (max-width:520px){
+  body{font-size:16px} #app{padding-block:12px 16px;gap:10px} .view{gap:10px}
+  .aula{padding:16px;gap:11px} .ent p{font-size:17px} .dec ul{gap:5px}
+  .topo{min-height:32px} .nav button{padding:12px 16px}
+}
+</style>
+
+<div id="app"></div>
+
+<script>
+const DIAS = {
+  1: { nome: "Dia 1", desc: "Linguagens e Humanas", obs: "Português, Inglês, Artes, Ed. Física, História, Geografia, Sociologia, Filosofia",
+    mats: ["Português","Inglês","Artes","Educação Física","Geografia","História","Sociologia","Filosofia"] },
+  2: { nome: "Dia 2", desc: "Natureza e Matemática", obs: "Biologia, Química, Física, Matemática",
+    mats: ["Matemática","Biologia","Física","Química"] }
+};
+
+// n = questões por prova (média 2009–2023). q = total da matéria por prova.
+const MATERIAS = {
+"Português": { q: 32.6, aulas: [
+ { t:"Interpretação de texto", n:7.7,
+   ent:"A resposta está no texto, não na sua opinião. Ache a ideia central e o que o autor quer com ela.",
+   dec:["<b>Tema</b> é do que o texto fala; <b>tese</b> é o que ele defende","\"Infere-se\" = conclusão que o texto <b>sustenta</b>, não que ele copia","Alternativa com <b>sempre, nunca, todos</b> costuma estar errada"],
+   peg:"A alternativa é verdade no mundo, mas o texto não diz isso. Está errada." },
+ { t:"Literatura brasileira", n:7.2,
+   ent:"O ENEM mostra um trecho e pergunta o que ele revela da época ou do estilo. Ligue a escola ao jeito de escrever.",
+   dec:["<b>Romantismo</b>: idealiza o amor e o índio (Alencar, <i>Iracema</i>)","<b>Realismo</b>: critica a sociedade com ironia (Machado, <i>Dom Casmurro</i>)","<b>Modernismo</b> (Semana de 22): fala do dia a dia, verso livre, humor (Oswald, Mário); Drummond vem logo depois, em 1930","<b>Romance de 30</b>: seca e miséria no Nordeste (Graciliano, <i>Vidas Secas</i>)"],
+   peg:"Raramente pedem data ou nome. Pedem o efeito do trecho: crítica, ironia, linguagem popular." },
+ { t:"Gêneros textuais e texto com imagem", n:7.1,
+   ent:"Gênero é o tipo de texto pela função: convencer, informar, ensinar. Em charge e propaganda, a imagem também conta.",
+   dec:["<b>Propaganda e campanha</b>: convencer, verbo no imperativo (\"Vacine-se\")","<b>Notícia</b>: informar, em 3ª pessoa","<b>Charge e tirinha</b>: humor + crítica a um fato atual","<b>Multimodal</b> = palavra + imagem juntas dando o sentido"],
+   peg:"Texto com a forma de um gênero e a função de outro (um poema em forma de receita). Pergunte para que ele serve." },
+ { t:"Variação linguística", n:4.5,
+   ent:"Não existe fala certa ou errada. Existe fala adequada ou não à situação. O ENEM condena o preconceito linguístico.",
+   dec:["<b>Regional</b>: muda com o lugar (\"mandioca, aipim, macaxeira\")","<b>Social</b>: muda com o grupo (gíria, jargão de profissão)","<b>Situacional</b>: formal ou informal","<b>Histórica</b>: muda com o tempo (\"vossa mercê\" virou \"você\")"],
+   peg:"Alternativa que chama a fala popular de \"erro\" quase sempre está errada." }
+]},
+"Inglês": { q: 5, aulas: [
+ { t:"Leitura em inglês", n:5,
+   ent:"São 5 questões e todas são de leitura. A pergunta vem em português e diz o que procurar no texto.",
+   dec:["Leia a <b>pergunta antes</b> do texto","Use as palavras parecidas com o português (<i>important, social, problem</i>)","Falsos amigos: <b>actually</b> = na verdade; <b>pretend</b> = fingir; <b>library</b> = biblioteca; <b>push</b> = empurrar; <b>eventually</b> = no fim","Título, fonte e imagem já dizem o gênero do texto"],
+   peg:"Alternativa que copia uma palavra do texto, mas com outro sentido." }
+]},
+"Artes": { q: 4.3, aulas: [
+ { t:"Arte e o seu contexto", n:4.3,
+   ent:"O ENEM não pergunta se a obra é bonita. Pergunta o que ela critica ou propõe no tempo em que foi feita.",
+   dec:["<b>Modernismo</b>: Tarsila (<i>Abaporu</i>, 1928), Antropofagia = \"devorar\" a arte de fora e criar uma brasileira","<b>Arte contemporânea</b>: a ideia vale mais que o objeto (instalação, performance)","<b>Grafite e arte urbana</b>: ocupar a cidade, dar voz à periferia","Arte indígena e afro-brasileira como <b>patrimônio</b>"],
+   peg:"Julgar a obra pelo gosto. A resposta é sempre a intenção do artista." }
+]},
+"Educação Física": { q: 2.6, aulas: [
+ { t:"Corpo, esporte e cultura", n:2.6,
+   ent:"O corpo é visto como cultura: jogo, dança, luta e esporte contam a história de um povo.",
+   dec:["<b>Capoeira</b>: luta + dança + música, patrimônio afro-brasileiro","<b>Atividade física</b> é qualquer movimento; <b>exercício</b> é planejado e repetido","Padrão de beleza da mídia pode gerar <b>distorção da imagem</b> do corpo","Lazer e inclusão valem mais que vencer"],
+   peg:"Alternativa que só fala de rendimento e competição, quando a questão fala de inclusão e saúde." }
+]},
+"História": { q: 15.3, aulas: [
+ { t:"República Velha e Era Vargas", n:2.9,
+   ent:"República Velha (1889–1930): os grandes fazendeiros mandam. Vargas (1930–1945): Estado forte e leis do trabalho.",
+   dec:["<b>Café com leite</b>: São Paulo e Minas revezam a presidência","<b>Coronelismo</b> e voto de cabresto (o voto era aberto)","Revoltas no campo: <b>Canudos</b> e <b>Contestado</b>","Vargas: <b>CLT (1943)</b>, salário mínimo, <b>Estado Novo (1937)</b> = ditadura"],
+   peg:"Os direitos do trabalho vieram junto com o controle dos sindicatos pelo governo." },
+ { t:"Grécia, Roma e Idade Média", n:1.9,
+   ent:"Antiguidade: como gregos e romanos decidiam a política. Idade Média: a terra e a Igreja dão o poder.",
+   dec:["<b>Democracia de Atenas</b>: só homens livres nascidos lá votavam (mulheres, escravos e estrangeiros fora)","<b>Roma</b>: patrícios (ricos) x plebeus; \"pão e circo\"","<b>Feudalismo</b>: senhor dá terra e proteção, servo trabalha e paga","A <b>Igreja</b> controla o saber e a moral"],
+   peg:"Dizer que a democracia grega era para todos, igual à de hoje." },
+ { t:"Brasil Império e escravidão", n:2.4,
+   ent:"De 1822 a 1889 o Brasil é um império movido a café e trabalho escravo, que acaba aos poucos.",
+   dec:["<b>Constituição de 1824</b>: Poder Moderador (o imperador manda sobre os outros poderes)","<b>Regência</b>: revoltas (Cabanagem, Farroupilha, Balaiada, Malês)","Fim da escravidão em etapas: <b>1850</b> fim do tráfico, <b>1871</b> Ventre Livre, <b>1885</b> Sexagenários, <b>1888</b> Lei Áurea","Resistência: <b>quilombos</b>, desde a Colônia (Palmares, Zumbi)"],
+   peg:"A abolição não deu terra nem trabalho aos libertos. Daí vem a exclusão que a questão cobra." },
+ { t:"Ditadura militar", n:1.3,
+   ent:"De 1964 a 1985 os militares governam, tiram direitos e calam quem critica.",
+   dec:["<b>Golpe de 1964</b>","<b>AI-5 (1968)</b>: censura, Congresso fechado, tortura","<b>\"Milagre econômico\"</b>: cresce, mas com dívida e renda concentrada","Volta da democracia: <b>Diretas Já (1984)</b> e <b>Constituição de 1988</b>"],
+   peg:"A Lei da Anistia (1979) perdoou presos políticos e também os agentes que torturaram." }
+]},
+"Geografia": { q: 16.1, aulas: [
+ { t:"Geopolítica mundial", n:2.5,
+   ent:"Quem manda no mundo e por quê: blocos, guerras, refugiados e globalização.",
+   dec:["<b>Guerra Fria</b> (1947–1991): EUA capitalista x URSS socialista, sem guerra direta","<b>Queda do Muro de Berlim</b> (1989) e fim da URSS (1991)","<b>Blocos</b>: Mercosul, União Europeia; e o grupo <b>BRICS</b>","<b>Globalização</b>: integra o mundo, mas aumenta a desigualdade"],
+   peg:"Achar que a globalização beneficia todos os países por igual." },
+ { t:"Campo e agronegócio", n:2.5,
+   ent:"No Brasil a terra é concentrada. O agronegócio exporta; a agricultura familiar põe comida na mesa.",
+   dec:["<b>Latifúndio</b>: muita terra na mão de poucos","<b>Agronegócio</b>: soja e carne para exportar, com muita máquina","<b>Revolução Verde</b>: agrotóxico, semente melhorada e máquina = mais produção, mas êxodo rural e dano ambiental","<b>MST</b> luta pela <b>reforma agrária</b>"],
+   peg:"Máquina no campo gera menos emprego, não mais." },
+ { t:"Meio ambiente e sustentabilidade", n:1.9,
+   ent:"Sustentável é usar hoje sem estragar o amanhã. O ENEM cobra o problema e a causa dele.",
+   dec:["<b>Efeito estufa</b> é natural; o excesso de CO₂ causa o <b>aquecimento global</b>","<b>Ilha de calor</b>: cidade com asfalto e sem verde esquenta mais","<b>Inversão térmica</b>: ar frio prende a poluição perto do chão (inverno)","<b>Chuva ácida</b>: gases de enxofre e nitrogênio das fábricas e carros"],
+   peg:"Confundir aquecimento global (CO₂) com buraco na camada de ozônio (gás CFC)." },
+ { t:"Relevo e rochas", n:1.5,
+   ent:"O relevo nasce das forças de dentro da Terra (placas) e é gasto pelas de fora (chuva, vento, rio).",
+   dec:["<b>Placas tectônicas</b> se chocam: terremoto, vulcão, montanha","O Brasil fica no <b>meio de uma placa</b>: quase só tremores fracos","<b>Rocha sedimentar</b>: camadas, guarda fóssil e petróleo","<b>Intemperismo</b> quebra a rocha; <b>erosão</b> leva o pedaço embora"],
+   peg:"\"O Brasil não tem terremoto.\" Tem, só que fraco." },
+ { t:"Cidades e urbanização", n:1.3,
+   ent:"O Brasil virou urbano rápido e sem plano. Daí vêm favela, trânsito e enchente.",
+   dec:["<b>Êxodo rural</b>: o povo sai do campo para a cidade","<b>Conurbação</b>: duas cidades crescem até se juntar","<b>Segregação</b>: ricos e pobres em lugares separados","<b>Gentrificação</b>: bairro valoriza e expulsa quem morava lá"],
+   peg:"Enchente na cidade vem mais do asfalto, que não deixa a água entrar no chão, do que da chuva." }
+]},
+"Sociologia": { q: 8.2, aulas: [
+ { t:"Trabalho e sociedade", n:1.5,
+   ent:"Os três clássicos explicam o trabalho, e o ENEM liga isso ao trabalho de hoje (aplicativo, bico).",
+   dec:["<b>Marx</b>: mais-valia (o patrão lucra com o trabalho não pago) e alienação","<b>Durkheim</b>: a divisão do trabalho une a sociedade","<b>Fordismo</b>: linha de montagem, cada um faz uma parte; <b>Toyotismo</b>: produzir sob demanda","<b>Uberização</b>: trabalho sem carteira e sem direitos"],
+   peg:"Ver a precarização como \"liberdade\" do trabalhador." },
+ { t:"Mídia e sociedade digital", n:1.5,
+   ent:"A mídia molda o que a gente pensa e compra. Hoje o algoritmo faz isso.",
+   dec:["<b>Indústria cultural</b> (Adorno): cultura vira produto padronizado para vender","<b>Bolha</b>: o algoritmo só mostra o que você já concorda","<b>Fake news</b> se espalham mais rápido que a correção","<b>Modernidade líquida</b> (Bauman): relações rápidas e frágeis"],
+   peg:"Achar que a internet, sozinha, democratiza a informação." },
+ { t:"Cultura, diversidade e cidadania", n:2.3,
+   ent:"Cultura é tudo o que se aprende vivendo em grupo. Nenhuma é superior a outra.",
+   dec:["<b>Etnocentrismo</b>: julgar a cultura do outro pela sua","<b>Relativismo cultural</b>: entender cada cultura pelo olhar dela","<b>Racismo estrutural</b>: está nas regras e instituições, não só em pessoas","<b>Movimentos sociais</b> conquistam direitos (indígena, negro, mulheres)"],
+   peg:"Palavras como \"atrasado\" ou \"primitivo\" para outro povo indicam a alternativa errada." }
+]},
+"Filosofia": { q: 6.5, aulas: [
+ { t:"Filosofia política", n:1.5,
+   ent:"Por que existe governo e quem manda. Cada autor tem uma ideia-chave.",
+   dec:["<b>Maquiavel</b>: o governante faz o necessário para manter o poder (melhor ser temido)","<b>Hobbes</b>: sem Estado, é guerra de todos contra todos; o Estado forte (Leviatã) dá paz","<b>Locke</b>: direitos naturais (vida, liberdade, propriedade); o povo pode tirar o mau governo","<b>Rousseau</b>: o homem nasce bom, a sociedade corrompe; vontade geral. <b>Montesquieu</b>: três poderes"],
+   peg:"Trocar Hobbes (Estado forte) por Locke (Estado limitado)." },
+ { t:"Filosofia antiga", n:1.4,
+   ent:"Os gregos trocam o mito pela razão para explicar o mundo e a vida.",
+   dec:["<b>Pré-socráticos</b>: buscam a origem de tudo (Tales: a água)","<b>Sócrates</b>: \"só sei que nada sei\"; pergunta até a pessoa achar a verdade","<b>Platão</b>: mito da caverna; mundo das ideias x mundo dos sentidos","<b>Aristóteles</b>: virtude é o meio-termo; o homem é animal político"],
+   peg:"Atribuir a caverna a Sócrates. É de Platão (Sócrates é o personagem)." },
+ { t:"Conhecimento e ética moderna", n:2.0,
+   ent:"De onde vem o que sabemos: da razão ou da experiência? E como agir certo?",
+   dec:["<b>Descartes</b> (racionalismo): \"penso, logo existo\"; duvida de tudo","<b>Empirismo</b> (Locke, Hume): a mente nasce em branco, tudo vem da experiência","<b>Kant</b>: junta os dois; ética do dever (agir como se fosse lei para todos)","<b>Utilitarismo</b>: certo é o que traz mais felicidade para mais gente"],
+   peg:"Kant julga a intenção (o dever), não o resultado. Quem olha o resultado é o utilitarismo." }
+]},
+"Biologia": { q: 15.2, aulas: [
+ { t:"Ecologia", n:3.6,
+   ent:"É o que mais cai em Biologia. Quem come quem, quem ajuda quem, e o que o ser humano estraga.",
+   dec:["<b>Cadeia</b>: produtor → consumidores → decompositores; a energia <b>diminui</b> a cada nível","Relações: <b>mutualismo</b> (os dois ganham), <b>parasitismo</b> (um perde), <b>competição</b>","<b>Eutrofização</b>: esgoto → algas demais → falta oxigênio → peixes morrem","<b>Biomagnificação</b>: mercúrio e DDT se acumulam mais no topo da cadeia"],
+   peg:"A matéria circula (ciclos); a energia não volta, só se perde." },
+ { t:"Corpo humano e saúde", n:1.9,
+   ent:"Como o corpo se defende e funciona. Cai muito vacina e soro.",
+   dec:["<b>Vacina</b>: prevenção; ensina o corpo a fazer anticorpo (memória)","<b>Soro</b>: anticorpo pronto; tratamento rápido (picada de cobra)","<b>Insulina</b> baixa o açúcar do sangue (diabetes)","<b>Rim</b> filtra o sangue e faz a urina"],
+   peg:"Antibiótico não mata vírus. Só bactéria." },
+ { t:"Genética", n:1.7,
+   ent:"Como a característica passa de pai para filho. A conta é de probabilidade.",
+   dec:["<b>DNA → RNA → proteína</b>","<b>Aa × Aa</b> dá 1 AA : 2 Aa : 1 aa; o recessivo aparece em <b>1/4</b>","Sangue: <b>O</b> doa para todos; <b>AB</b> recebe de todos","<b>Daltonismo e hemofilia</b> vêm no X: mais comuns em homens"],
+   peg:"\"Menino e afetado\": multiplique também por 1/2, a chance de ser menino." },
+ { t:"Célula e energia", n:2.4,
+   ent:"A planta faz o açúcar com luz; todo ser vivo queima esse açúcar para ter energia.",
+   dec:["<b>Fotossíntese</b> (cloroplasto): CO₂ + água + luz → glicose + O₂","<b>Respiração</b> (mitocôndria): glicose + O₂ → CO₂ + água + energia","<b>Fermentação</b>: sem oxigênio; pão, iogurte, álcool","<b>Enzima</b> é proteína: calor ou pH errado faz ela parar"],
+   peg:"Planta também respira, de dia e de noite." },
+ { t:"Evolução", n:1.3,
+   ent:"O ambiente escolhe quem já nasceu mais adaptado. Ninguém muda porque precisa.",
+   dec:["<b>Darwin</b>: seleção natural; a variação já existe, o ambiente seleciona","<b>Lamarck</b> (errado): uso e desuso; o pescoço da girafa cresceu de esticar","<b>Mutação</b> é a fonte de variação, e acontece ao acaso","Bactéria resistente a antibiótico = seleção natural"],
+   peg:"\"O antibiótico fez a bactéria mudar.\" Não: ele matou as outras e sobraram as resistentes." },
+ { t:"Doenças e micróbios", n:1.1,
+   ent:"Qual micróbio causa a doença e como ela passa. Prevenção quase sempre é saneamento.",
+   dec:["<b>Vírus</b>: dengue, zika e chikungunya (mosquito <i>Aedes</i>), covid, HIV","<b>Bactéria</b>: tuberculose, cólera, leptospirose (urina de rato)","<b>Protozoário</b>: malária (mosquito <i>Anopheles</i>), Chagas (barbeiro)","<b>Verme</b>: esquistossomose (caramujo na água parada)"],
+   peg:"Combater o mosquito não cura. Previne." }
+]},
+"Química": { q: 14.2, aulas: [
+ { t:"Química orgânica", n:3.4,
+   ent:"Química do carbono. Reconheça a função pelo pedaço da molécula.",
+   dec:["Carbono faz <b>4 ligações</b>","<b>Álcool</b> –OH · <b>ácido</b> –COOH · <b>amina</b> –NH₂ · <b>éster</b> (cheiro de fruta)","<b>Isômeros</b>: mesma fórmula, estrutura diferente; carbono com 4 grupos diferentes = <b>quiral</b>","<b>Polímero</b> (plástico) = a mesma unidade repetida muitas vezes"],
+   peg:"Achar a função pelo nome do produto. Olhe o grupo desenhado." },
+ { t:"Química do ambiente e energia", n:2.7,
+   ent:"Que gás causa qual problema, e qual energia polui menos.",
+   dec:["Queimar combustível solta <b>CO₂</b> → efeito estufa","<b>SO₂ e NOx</b> → chuva ácida","<b>CFC</b> → buraco na camada de ozônio","Tratar a água: <b>floculação → decantação → filtração → cloro</b>"],
+   peg:"Etanol também solta CO₂, mas a cana absorveu esse CO₂ ao crescer. Por isso é renovável." },
+ { t:"Soluções e pH", n:2.0,
+   ent:"Quanto de soluto tem na água e se a mistura é ácida ou básica.",
+   dec:["<b>pH &lt; 7</b> ácido · <b>7</b> neutro · <b>&gt; 7</b> básico","Cada 1 ponto de pH = <b>10 vezes</b> mais ácido","Concentração = massa ÷ volume (<b>g/L</b>); diluir: <b>C₁·V₁ = C₂·V₂</b>","<b>Ácido + base → sal + água</b> (neutralização)"],
+   peg:"pH 3 não é \"2 a mais\" que pH 5: é 100 vezes mais ácido." },
+ { t:"Pilha e eletrólise", n:1.5,
+   ent:"Pilha: a reação gera eletricidade sozinha. Eletrólise: a eletricidade força a reação.",
+   dec:["<b>Oxidar</b> = perder elétron; <b>reduzir</b> = ganhar","<b>Ânodo</b> = oxidação; <b>cátodo</b> = redução","Maior potencial de redução: esse <b>reduz</b>","<b>Zinco</b> protege o ferro: ele oxida no lugar (metal de sacrifício)"],
+   peg:"O metal que oxida é o que se desgasta. Quem ganha massa é o cátodo." }
+]},
+"Física": { q: 14.4, aulas: [
+ { t:"Eletricidade", n:2.5,
+   ent:"Conta de luz, chuveiro e tomada. Três fórmulas resolvem quase tudo.",
+   dec:["<b>U = R · i</b> (tensão = resistência × corrente)","<b>P = U · i</b> (potência)","<b>Energia = P · t</b>; a conta vem em <b>kWh</b>","Casa é ligada em <b>paralelo</b>: mesma tensão, uma lâmpada queima e o resto funciona"],
+   peg:"Chuveiro mais quente = resistência MENOR (na mesma tensão, mais potência)." },
+ { t:"Calor e temperatura", n:2.4,
+   ent:"Calor passa do quente para o frio. O ENEM cobra como ele passa e quanto é preciso.",
+   dec:["<b>Q = m · c · ΔT</b> (aquecer); <b>Q = m · L</b> (mudar de estado)","<b>Condução</b> (sólido), <b>convecção</b> (ar e água circulam), <b>irradiação</b> (sem meio, como o Sol)","Ar-condicionado <b>no alto</b>, aquecedor <b>embaixo</b> (convecção)","A água tem <b>calor específico alto</b>: o mar esquenta e esfria devagar"],
+   peg:"Na mudança de estado a temperatura NÃO muda, mesmo recebendo calor." },
+ { t:"Ondas e som", n:2.1,
+   ent:"Som, luz, rádio e celular são ondas. Uma fórmula e três qualidades do som.",
+   dec:["<b>v = λ · f</b> (velocidade = comprimento × frequência)","<b>Som</b> precisa de meio (não passa no vácuo); <b>luz</b> não precisa","<b>Altura</b> = grave ou agudo (frequência) · <b>intensidade</b> = volume · <b>timbre</b> = a \"voz\" de cada instrumento","<b>Ressonância</b>: taça quebra com a nota certa"],
+   peg:"Ao mudar de meio, a frequência não muda. Mudam a velocidade e o comprimento." },
+ { t:"Óptica", n:1.3,
+   ent:"Como a luz bate e entorta. Óculos e espelhos.",
+   dec:["<b>Refração</b>: a luz muda de meio e desvia (canudo \"quebrado\" no copo)","<b>Miopia</b> → lente <b>divergente</b>; <b>hipermetropia</b> → <b>convergente</b>","Espelho <b>convexo</b> (retrovisor, mercado): vê mais área","A cor do objeto é a cor que ele <b>reflete</b>"],
+   peg:"Uma camisa vermelha sob luz azul parece preta: não há vermelho para refletir." },
+ { t:"Movimento e leis de Newton", n:2.2,
+   ent:"Velocidade, força e por que as coisas param ou continuam.",
+   dec:["<b>v = d ÷ t</b>; velocidade média = distância total ÷ tempo total","<b>1ª lei (inércia)</b>: o corpo continua como está; por isso o cinto","<b>2ª lei</b>: <b>F = m · a</b>","<b>3ª lei</b>: ação e reação, em corpos diferentes"],
+   peg:"Velocidade média não é a média das velocidades. Divida a distância total pelo tempo total." }
+]},
+"Matemática": { q: 44.8, aulas: [
+ { t:"Porcentagem e proporção", n:8.5,
+   ent:"O conteúdo que mais cai na prova inteira. Troque porcentagem por multiplicação.",
+   dec:["Aumento de 20% = <b>× 1,2</b>; desconto de 20% = <b>× 0,8</b>","Aumentos seguidos <b>multiplicam</b>: 10% e 10% = 1,1 × 1,1 = <b>21%</b>","<b>Regra de três</b>: diretamente ou inversamente proporcional?","Juros compostos: <b>× (1 + i)ⁿ</b>"],
+   peg:"Subir 10% e depois descer 10% não volta ao preço: 100 → 110 → 99." },
+ { t:"Grandezas, medidas e escala", n:5.4,
+   ent:"Converter unidade e ler escala de mapa ou planta.",
+   dec:["Escala <b>1:100</b> = 1 cm no papel é 100 cm (1 m) de verdade","<b>1 m³ = 1.000 L</b>; <b>1 dm³ = 1 L</b>","m → cm: <b>× 100</b>; m² → cm²: <b>× 10.000</b>","km/h ÷ <b>3,6</b> = m/s"],
+   peg:"Em área, a escala vai ao quadrado. Dobrar o lado multiplica a área por 4." },
+ { t:"Estatística", n:5.0,
+   ent:"Média, mediana, moda e leitura de gráfico e tabela.",
+   dec:["<b>Média</b> = soma ÷ quantidade","<b>Mediana</b> = o do meio, com a lista <b>em ordem</b>; se a quantidade é par, média dos dois do meio","<b>Moda</b> = o que mais repete","<b>Desvio padrão</b> menor = dados mais regulares"],
+   peg:"Calcular a mediana sem pôr os números em ordem." },
+ { t:"Funções e gráficos", n:4.9,
+   ent:"Uma coisa depende da outra. O ENEM dá a situação e pede a fórmula ou o gráfico.",
+   dec:["<b>1º grau</b> (y = ax + b): reta; <b>b</b> é a taxa fixa, <b>a</b> é o quanto sobe por unidade","<b>2º grau</b>: parábola; o ponto máximo ou mínimo está em <b>x = −b ÷ 2a</b>","<b>a negativo</b>: boca para baixo, tem máximo (lucro máximo)","<b>Exponencial</b>: multiplica sempre pelo mesmo (bactéria que dobra)"],
+   peg:"Ler o eixo errado. Confira o que está no x e o que está no y." },
+ { t:"Geometria plana", n:4.5,
+   ent:"Área e perímetro de figura do dia a dia: terreno, piso, pizza.",
+   dec:["Retângulo <b>b · h</b> · triângulo <b>b · h ÷ 2</b>","Círculo: área <b>π · r²</b>, contorno <b>2 · π · r</b>","<b>Pitágoras</b>: a² = b² + c² (triângulo 3, 4, 5)","Figuras <b>semelhantes</b>: lado × k, área × k²"],
+   peg:"Usar o diâmetro no lugar do raio. Raio é a metade." },
+ { t:"Geometria espacial", n:4.4,
+   ent:"Volume de caixa, cilindro e cone, e como o sólido fica aberto ou visto de cima.",
+   dec:["Prisma e cilindro: <b>área da base × altura</b>","Cone e pirâmide: <b>÷ 3</b> disso","<b>Planificação</b>: o sólido aberto no papel","<b>Vistas</b>: de cima, de frente, de lado"],
+   peg:"Esquecer de passar m³ para litros (× 1.000) no fim." },
+ { t:"Contagem e probabilidade", n:4.3,
+   ent:"Quantas formas existem e qual a chance de acontecer.",
+   dec:["Probabilidade = <b>casos bons ÷ casos possíveis</b>","\"<b>E</b>\" multiplica; \"<b>ou</b>\" soma","3 camisas e 2 calças = <b>3 × 2 = 6</b> roupas","Ordem importa (senha, pódio): <b>arranjo</b>; não importa (comissão): <b>combinação</b>"],
+   peg:"Anagrama com letra repetida: divida pelas repetições (ARARA = 5! ÷ (3! · 2!) = 10)." }
+]}
+};
+
+const fmt = n => n.toLocaleString("pt-BR", {maximumFractionDigits:1});
+const KEY = "mini-aulas-lidas";
+let lidas = new Set();
+try { lidas = new Set(JSON.parse(localStorage.getItem(KEY) || "[]")); } catch (e) {}
+function marcar(id){ lidas.add(id); try { localStorage.setItem(KEY, JSON.stringify([...lidas])); } catch (e) {} }
+
+const app = document.getElementById("app");
+let estado = { tela: "inicio" };
+
+function ir(novo, volta = false){ estado = novo; render(volta); }
+
+function render(volta){
+  const dia = estado.dia;
+  document.body.classList.toggle("dia2", dia === 2);
+  const v = document.createElement("div");
+  v.className = "view" + (volta ? " volta" : "");
+  if (estado.tela === "inicio") v.innerHTML = telaInicio();
+  if (estado.tela === "dia") v.innerHTML = telaDia(dia);
+  if (estado.tela === "aula") v.innerHTML = telaAula();
+  app.replaceChildren(v);
+  ligar(v);
+}
+
+function telaInicio(){
+  const card = d => `<button class="dia" data-dia="${d}" style="${d===2?'--acc:var(--d2);--acc-soft:var(--d2-soft)':''}">
+    <b>${DIAS[d].nome}</b><span>${DIAS[d].desc}</span><small>${DIAS[d].obs}</small></button>`;
+  return `<h1>Mini-aulas do ENEM</h1>
+  <p class="sub">Os conteúdos que mais caem em cada matéria. Uma tela por conteúdo: entender, decorar e a pegadinha.</p>
+  <div class="dias">${card(1)}${card(2)}</div>
+  <p class="fonte">Contagem de todas as questões do ENEM de 2009 a 2023. O número é a média de questões por prova.</p>`;
+}
+
+function telaDia(d){
+  const mats = DIAS[d].mats.map(m => {
+    const a = MATERIAS[m].aulas, feitas = a.filter((x,i)=>lidas.has(m+i)).length;
+    return `<button class="mat" data-mat="${m}"><b>${m}</b>
+      <span class="q">${fmt(MATERIAS[m].q)}<small>por prova</small></span>
+      <span class="lidas ${feitas===a.length?'tudo':''}">${feitas===a.length?'Tudo visto':`Vistos: ${feitas} de ${a.length}`}</span></button>`;
+  }).join("");
+  return `<div class="topo"><button class="voltar" data-ir="inicio">← Dias</button></div>
+  <h2>${DIAS[d].nome}: ${DIAS[d].desc}</h2>
+  <p class="sub">Escolha a matéria. O número é quantas questões dela caem, em média.</p>
+  <div class="mats">${mats}</div>`;
+}
+
+function telaAula(){
+  const { mat, i } = estado, a = MATERIAS[mat].aulas, x = a[i];
+  marcar(mat + i);
+  const mats = DIAS[estado.dia].mats, mi = mats.indexOf(mat);
+  const ultima = i === a.length - 1, proxMat = mats[mi + 1];
+  const proxTxt = !ultima ? "Próximo →" : proxMat ? `${proxMat} →` : "Terminar ✓";
+  return `<div class="topo"><button class="voltar" data-ir="dia">← ${mat}</button>
+    <span class="migalha">${i+1} de ${a.length}</span></div>
+  <article class="aula">
+    <div class="cab"><span class="pill">≈ ${fmt(x.n)} por prova</span><span class="pill cinza">${mat}</span></div>
+    <h2>${x.t}</h2>
+    <div class="bloco ent"><span class="rot">Entender</span><p>${x.ent}</p></div>
+    <div class="bloco dec"><span class="rot">Decorar</span><ul>${x.dec.map(d=>`<li>${d}</li>`).join("")}</ul></div>
+    <div class="bloco peg"><span class="rot">Pegadinha</span><p>${x.peg}</p></div>
+  </article>
+  <div class="nav"><button class="ant" data-acao="ant">← Voltar</button><button class="prox" data-acao="prox">${proxTxt}</button></div>
+  <div class="pontos">${a.map((_,k)=>`<i class="${k===i?'on':''}"></i>`).join("")}</div>`;
+}
+
+function avancar(){
+  const { mat, i, dia } = estado, a = MATERIAS[mat].aulas, mats = DIAS[dia].mats;
+  if (i < a.length - 1) return ir({ ...estado, i: i + 1 });
+  const prox = mats[mats.indexOf(mat) + 1];
+  if (prox) return ir({ ...estado, mat: prox, i: 0 });
+  ir({ tela: "dia", dia });
+}
+function recuar(){
+  const { mat, i, dia } = estado, mats = DIAS[dia].mats;
+  if (i > 0) return ir({ ...estado, i: i - 1 }, true);
+  const ant = mats[mats.indexOf(mat) - 1];
+  if (ant) return ir({ ...estado, mat: ant, i: MATERIAS[ant].aulas.length - 1 }, true);
+  ir({ tela: "dia", dia }, true);
+}
+
+function ligar(v){
+  v.querySelectorAll("[data-dia]").forEach(b => b.onclick = () => ir({ tela: "dia", dia: +b.dataset.dia }));
+  v.querySelectorAll("[data-mat]").forEach(b => b.onclick = () => ir({ tela: "aula", dia: estado.dia, mat: b.dataset.mat, i: 0 }));
+  v.querySelectorAll("[data-ir]").forEach(b => b.onclick = () => ir({ tela: b.dataset.ir, dia: estado.dia }, true));
+  v.querySelectorAll("[data-acao]").forEach(b => b.onclick = () => b.dataset.acao === "prox" ? avancar() : recuar());
+}
+
+document.addEventListener("keydown", e => {
+  if (estado.tela !== "aula") return;
+  if (e.key === "ArrowRight") avancar();
+  if (e.key === "ArrowLeft") recuar();
+});
+let x0 = null;
+document.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; }, { passive: true });
+document.addEventListener("touchend", e => {
+  if (estado.tela !== "aula" || x0 === null) return;
+  const dx = e.changedTouches[0].clientX - x0; x0 = null;
+  if (Math.abs(dx) > 60) dx < 0 ? avancar() : recuar();
+}, { passive: true });
+
+render();
+</script>
