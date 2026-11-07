@@ -50,19 +50,28 @@ function cartoesDaEscolha(): Cartao[] {
   ];
 }
 
-/* Cada autor em 3 cartões seguidos: a frase, o sentido, onde entra. */
-function cartoesDosAutores(): Cartao[] {
-  return NOS_QUARTETOS.flatMap((nome) => {
+/* Progressão por etapa (Pablo, 07/11/2026: "primeiro as falas, depois o que
+ * eles querem dizer, depois os quartetos"): todas as frases, todos os sentidos,
+ * e por último onde cada um entra. */
+function cartoesDasFrases(): Cartao[] {
+  return NOS_QUARTETOS.map((nome) => {
     const k = CORINGAS[nome];
     const frase = k.curta ? `Sem aspas: ${k.curta}` : `"${k.texto}"`;
-    return [
-      { frente: `${k.rotulo}: qual é a frase?`, verso: `${frase} (${k.fonte}, ${k.quando})`, dica: MEMORIA[nome].imagem },
-      { frente: `O que a frase de ${k.rotulo} quer dizer?`, verso: k.sentido ?? MEMORIA[nome].mecanismo, dica: 'Diga com as suas palavras antes de virar.' },
-      { frente: `${k.rotulo}: em que quarteto e em que parte?`, ...ONDE_ENTRA[nome] },
-    ];
+    return { frente: `${k.rotulo}: qual é a frase?`, verso: `${frase} (${k.fonte}, ${k.quando})`, dica: MEMORIA[nome].imagem };
   });
 }
 
+function cartoesDosSentidos(): Cartao[] {
+  return NOS_QUARTETOS.map((nome) => {
+    const k = CORINGAS[nome];
+    return { frente: `O que a frase de ${k.rotulo} quer dizer?`, verso: k.sentido ?? MEMORIA[nome].mecanismo, dica: 'Diga com as suas palavras antes de virar.' };
+  });
+}
+
+function cartoesDeOndeEntra(): Cartao[] {
+  return NOS_QUARTETOS.map((nome) => ({ frente: `${CORINGAS[nome].rotulo}: em que quarteto e em que parte?`, ...ONDE_ENTRA[nome] }));
+}
+
 export function cartoesDosQuartetos(): Cartao[] {
-  return [...cartoesDaVisaoGeral(), ...cartoesDosAutores(), ...cartoesDaEscolha()];
+  return [...cartoesDasFrases(), ...cartoesDosSentidos(), ...cartoesDaVisaoGeral(), ...cartoesDeOndeEntra(), ...cartoesDaEscolha()];
 }
