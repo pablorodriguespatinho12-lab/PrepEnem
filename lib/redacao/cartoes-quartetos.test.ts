@@ -6,8 +6,17 @@ const cartoes = cartoesDosQuartetos();
 const palavras = (s: string) => s.toLowerCase().match(/\p{L}{5,}/gu) ?? [];
 
 describe('baralho dos quartetos', () => {
-  test('18 cartões, todos com frente, verso e dica', () => {
-    expect(cartoes).toHaveLength(18);
+  test('cada autor vem em 3 cartões seguidos: frase, sentido, onde entra', () => {
+    const i = cartoes.findIndex((c) => c.frente === 'Rui Barbosa: qual é a frase?');
+    expect(cartoes[i + 1].frente).toBe('O que a frase de Rui Barbosa quer dizer?');
+    expect(cartoes[i + 2].frente).toBe('Rui Barbosa: em que quarteto e em que parte?');
+    expect(cartoes[0].frente).toContain('em quantos temas');
+  });
+  test('frentes únicas (o seed casa o progresso pela frente)', () => {
+    expect(new Set(cartoes.map((c) => c.frente)).size).toBe(cartoes.length);
+  });
+  test('24 cartões, todos com frente, verso e dica', () => {
+    expect(cartoes).toHaveLength(24);
     for (const c of cartoes) expect(c.frente && c.verso && c.dica, c.frente).toBeTruthy();
   });
   test('a dica nunca entrega uma palavra do verso', () => {
