@@ -21,6 +21,7 @@ plausível que ninguém confere e entra no commit com cara de revisado.
 | `layout-organizer` / `ui-animations` | mudança mecânica de layout / Framer Motion | mexer em lógica de negócio |
 | `revisor-adversarial` | defeito no diff, em contexto limpo | opinar sobre layout |
 | `inspetor-visual` | se a composição fecha, olhando a imagem | conferir lógica |
+| `general-purpose` | edição mecânica em lote, busca na web | decidir; **passe `model: "sonnet"`** (132 chamadas em 30 dias = 14% do gasto, nov/2026) |
 
 ## A ordem
 

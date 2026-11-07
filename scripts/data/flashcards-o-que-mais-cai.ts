@@ -37,6 +37,13 @@ export const CARTOES_O_QUE_MAIS_CAI: CartaoRevisao[] = [
   { materia: 'Português', tema: 'Educação Física|-', frente: 'O que o ENEM critica sobre o corpo?', verso: 'O padrão de beleza da mídia e o corpo como produto. A saída valorizada é saúde, inclusão e respeito à diferença.' },
   { materia: 'Português', tema: 'Português|Funções da Linguagem', frente: 'Função apelativa (conativa): como reconhecer?', verso: 'Fala com o leitor para convencê-lo: verbo de ordem ou pedido ("compre", "vote") e "você". Típica de anúncio e campanha.' },
   { materia: 'Português', tema: 'Português|Funções da Linguagem', frente: 'Função metalinguística: o que é?', verso: 'A linguagem fala dela mesma: poema sobre fazer poema, dicionário explicando palavra, filme sobre cinema.' },
+  // Acrescentados em 07/11/2026 (revisão do dia 1): as outras 4 funções, no fim
+  // do tema, que é o último do baralho de Português, para não mexer no progresso.
+  { materia: 'Português', tema: 'Português|Funções da Linguagem', frente: 'Função referencial: como reconhecer?', verso: 'Informa um fato, sem opinião: 3ª pessoa, linguagem objetiva. Típica de notícia, verbete e texto científico.', dica: 'Foco no assunto.' },
+  { materia: 'Português', tema: 'Português|Funções da Linguagem', frente: 'Função emotiva (expressiva): como reconhecer?', verso: 'Mostra o que quem escreve sente e pensa: "eu", exclamação, adjetivo de opinião. Típica de diário, carta e depoimento.', dica: 'Foco em quem fala.' },
+  { materia: 'Português', tema: 'Português|Funções da Linguagem', frente: 'Função fática: como reconhecer?', verso: 'Testa ou mantém o contato, sem passar conteúdo: "alô?", "tá me ouvindo?", "oi, tudo bem?", "né?".', dica: 'Foco no canal.' },
+  { materia: 'Português', tema: 'Português|Funções da Linguagem', frente: 'Função poética: como reconhecer?', verso: 'Capricha na forma da mensagem: rima, ritmo, jogo de palavras, repetição de som. Aparece em poema, mas também em slogan.', dica: 'Foco na mensagem.' },
+  { materia: 'Português', tema: 'Português|Funções da Linguagem', frente: 'Pegadinha: um texto tem uma função só?', verso: 'Não. Quase todo texto mistura várias; o ENEM pergunta a PREDOMINANTE: qual é a intenção principal? Anúncio com rima continua apelativo se o objetivo é vender.' },
 
   // ── Matemática ────────────────────────────────────────────────────
   { materia: 'Matemática', tema: 'Matemática|Aritmética e Porcentagem', frente: 'Aumento de 20%: por quanto multiplica?', verso: '20% = 20/100 = 0,2. Com aumento de 20% fica 100% + 20% = 120% = 1,2: multiplique por 1,2. Desconto de 20% sobra 80%: multiplique por 0,8. Ex.: R$ 50 + 20% = 50 × 1,2 = R$ 60.' },

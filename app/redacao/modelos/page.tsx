@@ -14,8 +14,8 @@ export default function RedacaoModelosPage() {
 
   return (
     <div className="p-4 md:p-8 max-w-[52rem] mx-auto">
-      <Link href="/redacao/partes" className="inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors mb-4">
-        <ChevronLeft className="w-4 h-4" /> Treino por partes
+      <Link href="/redacao" className="inline-flex items-center gap-1.5 type-meta text-muted-foreground hover:text-foreground t-colors mb-4">
+        <ChevronLeft className="w-4 h-4" /> Redação
       </Link>
       <h1 className="font-display type-headline font-bold mb-2">Redações-modelo comentadas</h1>
       <p className="type-meta text-muted-foreground mb-6 measure-reading">
@@ -32,7 +32,7 @@ export default function RedacaoModelosPage() {
             onClick={() => setId(m.id)}
             className={`px-3 py-1.5 rounded-[var(--radius-control)] border type-meta t-colors ${m.id === id ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:bg-muted'}`}
           >
-            <span data-numeric>ENEM {m.anoEnem}</span>
+            <span data-numeric>{m.trio ? `Trio ${m.trio}` : `ENEM ${m.anoEnem}`}</span>
           </button>
         ))}
       </div>

@@ -1,0 +1,207 @@
+<title>Revisão do dia 1</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* Layout: uma coluna estreita; abas em botões no topo; cada aba = cartões curtos de leitura rápida. */
+:root{
+  --bg:#f6f7f4; --card:#ffffff; --fg:#1d2420; --muted:#5d6862; --line:#dde3de;
+  --accent:#2f6b4f; --accent-soft:#e3efe8; --warn:#9a5b12; --warn-soft:#fbf0dc;
+  --display:"Fraunces",Georgia,serif; --body:"Atkinson Hyperlegible",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141a17; --card:#1c2420; --fg:#e8eee9; --muted:#9fb0a6; --line:#2d3833;
+  --accent:#7cc49f; --accent-soft:#1f3529; --warn:#e3b06a; --warn-soft:#3a2c17; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141a17; --card:#1c2420; --fg:#e8eee9; --muted:#9fb0a6; --line:#2d3833;
+  --accent:#7cc49f; --accent-soft:#1f3529; --warn:#e3b06a; --warn-soft:#3a2c17; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:17px/1.55 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 48px}
+main{max-width:640px;margin:0 auto;display:grid;gap:20px}
+h1{font:600 2rem/1.15 var(--display);margin:0;text-wrap:balance}
+h2{font:600 1.35rem/1.2 var(--display);margin:0;text-wrap:balance}
+h3{font-size:1.05rem;margin:0}
+p{margin:0}
+.sub{color:var(--muted)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding-block:8px;z-index:5}
+.tabs button{font:700 1rem var(--body);border:1px solid var(--line);background:var(--card);color:var(--fg);
+  padding:10px 16px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s}
+.tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+button:focus{outline:none} button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+section{display:grid;gap:14px;animation:entra .25s ease-out}
+@keyframes entra{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){section{animation:none}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:6px;min-width:0}
+.quote{font-family:var(--display);font-size:1.05rem}
+.tag{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.passo{display:grid;grid-template-columns:2rem 1fr;gap:10px;align-items:start}
+.num{width:2rem;height:2rem;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-weight:700;display:grid;place-items:center}
+.alerta{background:var(--warn-soft);border-color:transparent}
+.alerta .tag{color:var(--warn)}
+.grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+ul{margin:0;padding-left:1.1rem;display:grid;gap:4px}
+b{font-weight:700}
+a{color:var(--accent)}
+.molde{background:var(--accent-soft);border-radius:8px;padding:8px 10px;font-size:.95rem}
+</style>
+
+<main>
+  <header style="display:grid;gap:6px">
+    <h1>Revisão do dia 1</h1>
+    <p class="sub">Redação, funções da linguagem e humanas. Leia uma aba por vez.</p>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" id="t-redacao" data-aba="redacao" aria-selected="true">Redação</button>
+    <button role="tab" id="t-funcoes" data-aba="funcoes" aria-selected="false">Funções</button>
+    <button role="tab" id="t-humanas" data-aba="humanas" aria-selected="false">Humanas</button>
+  </nav>
+
+  <!-- REDAÇÃO -->
+  <section id="aba-redacao">
+    <h2>Os 2 quartetos</h2>
+    <div class="card">
+      <span class="tag">Escolha em 5 segundos</span>
+      <p><b>Tema de direito, acesso, Estado, saúde, tecnologia</b> → Quarteto 1.</p>
+      <p><b>Tema de gente excluída ou invisível</b> (violência, criança, imigração, trabalho) → Quarteto 2.</p>
+      <p><b>Meio ambiente</b> → misture: Dom Hélder + Galeano.</p>
+    </div>
+
+    <div class="card">
+      <span class="tag">Introdução (os dois quartetos)</span>
+      <p><b>Pacto Internacional sobre Direitos Econômicos, Sociais e Culturais</b> (ONU, 1966; Brasil adotou em 1992).</p>
+      <p class="sub">Art. 6º e 7º trabalho · art. 11 alimentação e moradia · art. 12 saúde · art. 13 educação.</p>
+      <p class="quote">"As leis não bastam. Os lírios não nascem da lei."</p>
+      <p class="sub">Drummond, poema "Nosso tempo", A Rosa do Povo (1945). A lei existe, mas a vida boa não nasce sozinha.</p>
+    </div>
+
+    <div class="grade">
+      <div class="card">
+        <span class="tag">Quarteto 1 · D1</span>
+        <p class="quote">"Tratar com desigualdade a iguais, ou a desiguais com igualdade, seria desigualdade flagrante, e não igualdade real."</p>
+        <p class="sub">Rui Barbosa, Oração aos Moços (1921). Quem começa atrás precisa de mais.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Quarteto 1 · D2</span>
+        <p class="quote">"Quando dou comida aos pobres, chamam-me de santo. Quando pergunto por que eles são pobres, chamam-me de comunista."</p>
+        <p class="sub">Dom Hélder Câmara (escreva sem data). Ajudar é aplaudido; perguntar a causa incomoda.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Quarteto 2 · D1</span>
+        <p class="quote">"Você é um bicho, Fabiano."</p>
+        <p class="sub">Graciliano Ramos, Vidas Secas (1938). Tão maltratado que se vê como bicho.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Quarteto 2 · D2</span>
+        <p class="quote">"Os ninguéns: os filhos de ninguém, os donos de nada."</p>
+        <p class="sub">Eduardo Galeano, O Livro dos Abraços (1989). Gente tratada como se não existisse.</p>
+      </div>
+    </div>
+
+    <h2>Como usar o coringa</h2>
+    <div class="passo"><span class="num">1</span><p><b>Cite</b> quem disse e onde.</p></div>
+    <div class="passo"><span class="num">2</span><p><b>Explique</b> com suas palavras (uma frase).</p></div>
+    <div class="passo"><span class="num">3</span><p><b>Ligue ao tema</b>:</p></div>
+    <p class="molde">"Isso se vê no Brasil quando [um fato do tema]."</p>
+    <div class="card alerta">
+      <span class="tag">Pegadinha</span>
+      <p>Coringa solto, sem ligar ao tema, <b>não vale ponto</b> na competência 2. O passo 3 é o que conta.</p>
+    </div>
+    <p class="sub">No site: <b>Flashcards → Redação → Meus quartetos da redação</b> (24 cartões: primeiro as 5 falas, depois o que querem dizer, depois os quartetos).</p>
+  </section>
+
+  <!-- FUNÇÕES -->
+  <section id="aba-funcoes" hidden>
+    <h2>Funções da linguagem</h2>
+    <div class="card">
+      <span class="tag">Como fazer a questão</span>
+      <p>Pergunte: <b>qual é o objetivo principal deste texto?</b> A resposta aponta a função.</p>
+    </div>
+    <div class="grade">
+      <div class="card"><span class="tag">Foco no assunto</span><h3>Referencial</h3>
+        <p><b>Informa</b> um fato, sem opinião. 3ª pessoa.</p><p class="sub">Notícia, verbete, texto científico.</p></div>
+      <div class="card"><span class="tag">Foco em quem fala</span><h3>Emotiva</h3>
+        <p><b>Mostra o que sente</b>: "eu", exclamação, opinião.</p><p class="sub">Diário, carta, depoimento.</p></div>
+      <div class="card"><span class="tag">Foco em quem lê</span><h3>Apelativa (conativa)</h3>
+        <p><b>Quer convencer</b>: "você", verbo de ordem ("compre", "vote").</p><p class="sub">Anúncio, campanha.</p></div>
+      <div class="card"><span class="tag">Foco no canal</span><h3>Fática</h3>
+        <p><b>Testa o contato</b>: "alô?", "tá me ouvindo?", "né?".</p><p class="sub">Começo de conversa, telefone.</p></div>
+      <div class="card"><span class="tag">Foco no código</span><h3>Metalinguística</h3>
+        <p><b>A linguagem fala dela mesma.</b></p><p class="sub">Poema sobre poema, dicionário, filme sobre cinema.</p></div>
+      <div class="card"><span class="tag">Foco na mensagem</span><h3>Poética</h3>
+        <p><b>Capricha na forma</b>: rima, ritmo, jogo de palavras.</p><p class="sub">Poema, mas também slogan.</p></div>
+    </div>
+    <div class="card alerta">
+      <span class="tag">Pegadinha</span>
+      <p>Todo texto mistura funções. O ENEM pede a <b>predominante</b>. Anúncio com rima continua <b>apelativo</b> se o objetivo é vender.</p>
+    </div>
+    <p class="sub">No site: <b>Flashcards → Português → O que mais cai</b> (cartões 18 a 24 são as funções).</p>
+  </section>
+
+  <!-- HUMANAS -->
+  <section id="aba-humanas" hidden>
+    <h2>Como fazer a questão de humanas</h2>
+    <div class="passo"><span class="num">1</span><p>Leia <b>o comando primeiro</b>: ele diz o que procurar.</p></div>
+    <div class="passo"><span class="num">2</span><p>Ache no texto <b>o autor ou o conceito</b> (Hobbes, fato social, coronelismo).</p></div>
+    <div class="passo"><span class="num">3</span><p>Diga <b>a ideia-chave</b> dele com suas palavras (a cola abaixo).</p></div>
+    <div class="passo"><span class="num">4</span><p><b>Corte</b> a alternativa que exagera ("sempre", "nunca"), que é fora de época ou que é só opinião.</p></div>
+    <div class="card alerta">
+      <span class="tag">Dica</span>
+      <p>Na dúvida entre duas, o ENEM costuma ficar com a que <b>valoriza direitos, diversidade e olhar crítico</b>.</p>
+    </div>
+
+    <h2>Filosofia: uma ideia por autor</h2>
+    <div class="card"><ul>
+      <li><b>Sócrates</b>: "só sei que nada sei"; pergunta até a pessoa achar a verdade.</li>
+      <li><b>Platão</b>: mito da caverna; o mundo que vemos é sombra do mundo das ideias.</li>
+      <li><b>Aristóteles</b>: virtude é o meio-termo; o ser humano é animal político.</li>
+      <li><b>Maquiavel</b>: política como ela é, não como deveria ser.</li>
+      <li><b>Hobbes</b>: sem Estado, guerra de todos contra todos; trocamos liberdade por segurança.</li>
+      <li><b>Locke</b>: direitos naturais (vida, liberdade, propriedade); pode-se resistir ao governo injusto.</li>
+      <li><b>Rousseau</b>: o ser humano nasce bom, a sociedade corrompe; vontade geral.</li>
+      <li><b>Descartes</b>: "penso, logo existo"; duvidar de tudo para achar o certo (razão).</li>
+      <li><b>Hume / empiristas</b>: o conhecimento vem da experiência.</li>
+      <li><b>Kant</b>: aja como se a sua ação virasse regra para todos; esclarecimento é pensar por si.</li>
+      <li><b>Sartre</b>: a existência vem antes da essência; somos o que fazemos.</li>
+      <li><b>Hannah Arendt</b>: banalidade do mal; gente comum faz o mal só obedecendo.</li>
+    </ul></div>
+
+    <h2>Sociologia</h2>
+    <div class="card"><ul>
+      <li><b>Durkheim</b>: fato social (geral, exterior, se impõe a você); anomia é quando as regras falham.</li>
+      <li><b>Marx</b>: luta de classes; mais-valia é o trabalho não pago; alienação.</li>
+      <li><b>Weber</b>: ação social; dominação tradicional, carismática e legal.</li>
+      <li><b>Adorno e Horkheimer</b>: indústria cultural; cultura vira mercadoria em série.</li>
+      <li><b>Bauman</b>: modernidade líquida; tudo frágil e passageiro.</li>
+      <li><b>Etnocentrismo</b>: julgar outra cultura pela sua. <b>Relativismo</b>: entender cada uma por dentro.</li>
+    </ul></div>
+
+    <h2>História e Geografia</h2>
+    <div class="card"><ul>
+      <li><b>República Velha</b>: coronelismo, voto de cabresto, café com leite.</li>
+      <li><b>Era Vargas</b>: Estado forte; CLT em 1943.</li>
+      <li><b>Ditadura (1964–1985)</b>: AI-5 em 1968; Diretas Já; Constituição de 1988.</li>
+      <li><b>Escravidão</b>: fim lento (Eusébio de Queirós 1850, Lei Áurea 1888) e sem apoio aos libertos.</li>
+      <li><b>Globalização</b>: mundo ligado por mercado e informação, mas com desigualdade.</li>
+      <li><b>Urbanização</b>: rápida e sem plano → favela, trânsito, enchente.</li>
+      <li><b>Campo</b>: terra concentrada; agronegócio exporta, agricultura familiar alimenta.</li>
+    </ul></div>
+    <p class="sub">Mais detalhe: <a href="https://claude.ai/artifact/1akhoPdLP4M42v5c2YHdwW">Mini-aulas por matéria</a>. No site: <b>Flashcards → História, Geografia, Sociologia, Filosofia → O que mais cai</b>.</p>
+  </section>
+</main>
+
+<script>
+(function(){
+  const botoes = document.querySelectorAll('.tabs button');
+  function mostrar(aba){
+    if(!document.getElementById('aba-'+aba)) aba = 'redacao';
+    botoes.forEach(b => {
+      const ativo = b.dataset.aba === aba;
+      b.setAttribute('aria-selected', String(ativo));
+      document.getElementById('aba-'+b.dataset.aba).hidden = !ativo;
+    });
+  }
+  botoes.forEach(b => b.addEventListener('click', () => { mostrar(b.dataset.aba); location.hash = b.dataset.aba; window.scrollTo({top:0}); }));
+  window.addEventListener('hashchange', () => mostrar(location.hash.slice(1)));
+  mostrar(location.hash.slice(1));
+})();
+</script>

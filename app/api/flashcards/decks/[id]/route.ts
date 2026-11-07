@@ -8,6 +8,7 @@ import { escolherCartoesDoDia } from '@/lib/flashcards-dia';
 import { getCycleInfoForDay } from '@/lib/schedule-data';
 import { getActiveStudyDay } from '@/lib/study-progress';
 import { cotasDoDia } from '@/lib/treino-etapas';
+import { deveManterOrdem, ordenarParaEstudo } from '@/lib/flashcards/ordem-fixa';
 
 // Deck virtual "dia": 10 cartões de cada matéria do treino de hoje, montado na
 // hora a partir dos decks padrão e dos do usuário (lib/flashcards-dia.ts).
@@ -120,12 +121,13 @@ export async function GET(request: Request, { params }: { params: { id: string }
       });
     } else {
       // 'todos': sai da fila só com 3 acertos em dias diferentes (lib/flashcard-dominio.ts)
-      cardsToStudy = filaDeHoje;
+      // Baralho em escadinha (quartetos): sempre inteiro, senão a sequência
+      // chega com buracos (Pablo, 07/11/2026: "está sempre voltando a mesma coisa").
+      cardsToStudy = deveManterOrdem(deck.nome) ? deck.cards : filaDeHoje;
     }
 
-    // Shuffle
-    const cartoes = [...cardsToStudy]
-      .sort(() => Math.random() - 0.5)
+    // Embaralha, exceto baralho de progressão (lib/flashcards/ordem-fixa.ts)
+    const cartoes = ordenarParaEstudo(cardsToStudy, deck.nome)
       .map((c) => ({ ...c, acertosSeguidos: situacao[c.id].acertosSeguidos }));
 
     return NextResponse.json({
@@ -143,7 +145,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
       totalCards: deck.cards.length,
       cardsToRevise: deck.cards.filter((c) => latestProgress[c.id]?.precisaRevisar).length,
       cardsAcertados: deck.cards.filter((c) => situacao[c.id].dominado).length,
-      cardsParaHoje: filaDeHoje.length,
+      cardsParaHoje: deveManterOrdem(deck.nome) ? deck.cards.length : filaDeHoje.length,
     });
   } catch (error: any) {
     console.error('Erro ao buscar deck:', error);

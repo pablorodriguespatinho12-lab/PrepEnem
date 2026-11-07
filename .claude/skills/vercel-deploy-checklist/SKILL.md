@@ -6,9 +6,10 @@ description: "Use antes de fazer commit/push ou quando um build da Vercel falhar
 # Checklist de Deploy na Vercel — PrepEnem
 
 **O site do ar é o projeto `prep-enem`** (`prj_lrUuqulABBSD8EHjCoxo1uvIZGNd`,
-time `team_a7PD1Od3lH4xFGeqesETzANl`). O `.vercel/project.json` aponta para um
-projeto antigo (`prepenem.app`) que a API responde 404: para ver se o push já
-publicou, liste os deploys do `prep-enem` e confira o `githubCommitSha`.
+time `team_a7PD1Od3lH4xFGeqesETzANl`). O `.vercel/project.json` (fora do git)
+apontava para um projeto antigo (`prepenem.app`, 404 na API; 3 chamadas perdidas
+em 7 dias); corrigido em 06/11. Se der 404 de novo, compare com `list_projects`.
+Para ver se o push já publicou, liste os deploys do `prep-enem` e confira o `githubCommitSha`.
 
 Erros que **já aconteceram** neste projeto e a causa raiz confirmada:
 
