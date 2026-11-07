@@ -44,4 +44,16 @@ describe('o mesmo autor em 3 temas', () => {
       expect(new Set(comecos).size, m.id).toBe(comecos.length);
     }
   });
+
+  /* Pablo, 07/11/2026: "eu só sei os trios... esses trios, nada mais". Ano só
+     dos repertórios do trio; nenhuma lei, órgão, campanha ou detalhe de livro. */
+  test('redação de trio usa só o repertório do trio', () => {
+    const ANOS_DO_TRIO = new Set(['1966', '1992', '1921', '1938', '1989']);
+    const DE_FORA = /\bLei\b|Constitui|Estatuto|STF|LGPD|Setembro|IBGE|Funai|Incra|Autoridade Nacional|inferno|cascudo|bolivian/;
+    for (const m of MODELOS.filter((x) => x.trio)) {
+      const texto = Object.values(m.partes).map((p) => p.texto).join(' ');
+      for (const ano of texto.match(/\b\d{4}\b/g) ?? []) expect(ANOS_DO_TRIO.has(ano), `${m.id}: ano ${ano}`).toBe(true);
+      expect(texto.match(DE_FORA)?.[0], m.id).toBeUndefined();
+    }
+  });
 });
