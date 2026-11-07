@@ -57,7 +57,7 @@ a{color:var(--accent)}
   </nav>
 
   <!-- REDAÇÃO -->
-  <section id="redacao">
+  <section id="aba-redacao">
     <h2>Os 2 quartetos</h2>
     <div class="card">
       <span class="tag">Escolha em 5 segundos</span>
@@ -110,7 +110,7 @@ a{color:var(--accent)}
   </section>
 
   <!-- FUNÇÕES -->
-  <section id="funcoes" hidden>
+  <section id="aba-funcoes" hidden>
     <h2>Funções da linguagem</h2>
     <div class="card">
       <span class="tag">Como fazer a questão</span>
@@ -138,7 +138,7 @@ a{color:var(--accent)}
   </section>
 
   <!-- HUMANAS -->
-  <section id="humanas" hidden>
+  <section id="aba-humanas" hidden>
     <h2>Como fazer a questão de humanas</h2>
     <div class="passo"><span class="num">1</span><p>Leia <b>o comando primeiro</b>: ele diz o que procurar.</p></div>
     <div class="passo"><span class="num">2</span><p>Ache no texto <b>o autor ou o conceito</b> (Hobbes, fato social, coronelismo).</p></div>
@@ -193,11 +193,11 @@ a{color:var(--accent)}
 (function(){
   const botoes = document.querySelectorAll('.tabs button');
   function mostrar(aba){
-    if(!document.getElementById(aba)) aba = 'redacao';
+    if(!document.getElementById('aba-'+aba)) aba = 'redacao';
     botoes.forEach(b => {
       const ativo = b.dataset.aba === aba;
       b.setAttribute('aria-selected', String(ativo));
-      document.getElementById(b.dataset.aba).hidden = !ativo;
+      document.getElementById('aba-'+b.dataset.aba).hidden = !ativo;
     });
   }
   botoes.forEach(b => b.addEventListener('click', () => { mostrar(b.dataset.aba); location.hash = b.dataset.aba; window.scrollTo({top:0}); }));
