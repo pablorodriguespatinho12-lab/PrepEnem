@@ -416,8 +416,12 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   "como você usa cada argumento em vários temas"):** Trio 1 = povos tradicionais,
   saúde mental, dados na internet; Trio 2 = imigração, criança, diferença. Acima da
   redação, "o mesmo autor em 3 temas" (`components/redacao/autor-em-temas.tsx`):
-  fala igual, 1 linha de ligação por tema (`RedacaoModelo.usos`), molde. Ligações =
-  as aprovadas no `coringas-por-tema.json` (o teste barra autor reprovado no tema);
+  fala igual, 1 linha de ligação por tema (`RedacaoModelo.usos`), molde. Autor só
+  em tema onde os juízes aprovaram. **Só o repertório do trio (Pablo, mesmo dia: "eu
+  só sei os trios... nada mais"):** a 1ª versão copiou a ligação dos juízes, com
+  Lei 10.216, LGPD, ECA, STF, Setembro Amarelo. Agora o Drummond se liga ao próprio
+  Pacto ("o Brasil assumiu esse compromisso há mais de trinta anos, mas...") e o
+  resto é fato do dia a dia sem nome nem número; o teste barra ano e lei de fora.
   Pacto por tema: art. 10 criança, 11 moradia, 12 saúde, 13 educação, 15 ciência. Tela `/redacao/plano` ("Planejar com os trios"):
   tema real dos 28, ele escreve o plano à vontade e o site avalia sem IA
   (`lib/redacao/plano-quarteto.ts`, veredito de `coringas-por-tema.json`).
