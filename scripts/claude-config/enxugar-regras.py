@@ -37,6 +37,14 @@ TROCAS = {
         ("2. Use **security-reviewer** agent",
          "2. Review with a clean-context reviewer (PrepEnem: `revisor-adversarial`; sites: skill `seguranca-site-nextjs`)"),
     ],
+    "typescript/security.md": [
+        ("- Use **security-reviewer** skill for comprehensive security audits",
+         "- For comprehensive audits: `revisor-adversarial` (PrepEnem) or skill `seguranca-site-nextjs`"),
+    ],
+    "react/security.md": [
+        ("- Use `security-reviewer` agent for comprehensive security audits across the codebase",
+         "- For comprehensive audits: `revisor-adversarial` (PrepEnem) or skill `seguranca-site-nextjs`"),
+    ],
     "common/git-workflow.md": [
         ("Note: Attribution disabled globally via ~/.claude/settings.json.\n\n", ""),
         ("5. Push with `-u` flag if new branch\n", "5. Never push: Pablo pushes by hand with `!`\n"),
