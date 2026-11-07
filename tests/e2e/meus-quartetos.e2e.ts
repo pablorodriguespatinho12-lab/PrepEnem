@@ -1,5 +1,7 @@
-// Baralho "Meus quartetos da redação" no navegador (Pablo, 06/11/2026: "testar
-// mais para ver se tá tudo certo"). Confere:
+// Baralhos "Quartetos 1, 2 e 3" no navegador (Pablo, 06/11/2026: "testar
+// mais para ver se tá tudo certo"; 07/11: escadinha em 3 baralhos). Confere:
+//  0. cada baralho abre INTEIRO e NA ORDEM da lib, e o 1º cartão na tela é o 1º
+//     da escadinha (a fila do dia e o embaralhar já quebraram isso);
 //  1. os cartões do banco são os mesmos de lib/redacao/cartoes-quartetos.ts
 //     (o seed pode ter ficado para trás de uma mudança na lib);
 //  2. abrir, virar, responder e passar para o próximo cartão;
@@ -11,11 +13,11 @@
 
 import { readFileSync } from 'fs';
 import { chromium, type Page } from 'playwright';
-import { cartoesDosQuartetos } from '@/lib/redacao/cartoes-quartetos';
+import { baralhosDosQuartetos, cartoesDosQuartetos } from '@/lib/redacao/cartoes-quartetos';
 
 const BASE = process.env.BASE ?? 'http://localhost:3000';
 const TOKEN = readFileSync(process.env.TOKEN_FILE ?? '', 'utf8').trim();
-const NOME = 'Meus quartetos da redação';
+const NOME = 'Quartetos 3: em que quarteto cabem';
 const ESPERA = 120000;
 
 type CartaoDoBanco = { frente: string; verso: string };
@@ -25,11 +27,11 @@ const conferir = (ok: boolean, msg: string) => {
   if (!ok) falhas.push(msg);
 };
 
-async function abrirBaralho(page: Page): Promise<CartaoDoBanco[]> {
+async function abrirBaralho(page: Page, nome = NOME): Promise<CartaoDoBanco[]> {
   await page.goto(`${BASE}/flashcards`, { waitUntil: 'networkidle', timeout: ESPERA });
   await page.getByRole('button', { name: /^Abrir Redação/ }).first().click();
   const resposta = page.waitForResponse((r) => /\/api\/flashcards\/decks\/[^/?]+\?mode=/.test(r.url()), { timeout: ESPERA });
-  await page.getByRole('button', { name: `Abrir o baralho ${NOME}` }).click();
+  await page.getByRole('button', { name: `Abrir o baralho ${nome}` }).click();
   const corpo = await (await resposta).json();
   const lista = (corpo.cards ?? corpo.deck?.cards ?? corpo.flashcards ?? []) as CartaoDoBanco[];
   await page.getByRole('button', { name: /Virar para ver a resposta/ }).first().waitFor({ timeout: ESPERA });
@@ -45,8 +47,18 @@ async function main(): Promise<void> {
   const errosJs: string[] = [];
   page.on('pageerror', (e) => errosJs.push(e.message));
 
-  // 1. Banco = lib
-  const doBanco = await abrirBaralho(page);
+  // 0. Escadinha: inteiro, na ordem, e o 1º na tela é o 1º da lib
+  const doBanco: CartaoDoBanco[] = [];
+  for (const b of baralhosDosQuartetos()) {
+    const lista = await abrirBaralho(page, b.nome);
+    doBanco.push(...lista);
+    conferir(lista.map((c) => c.frente).join('|') === b.cartoes.map((c) => c.frente).join('|'), `${b.nome}: ${lista.length} de ${b.cartoes.length} cartões, na ordem`);
+    const tela = (await page.locator('main').innerText()).slice(0, 4000);
+    conferir(tela.includes(b.cartoes[0].frente), `${b.nome}: a tela começa por "${b.cartoes[0].frente.slice(0, 40)}"`);
+  }
+
+  // 1. Banco = lib (o baralho 3 fica aberto para o passo 2)
+  await abrirBaralho(page);
   const daLib = cartoesDosQuartetos();
   conferir(doBanco.length > 0, `API devolveu ${doBanco.length} cartões`);
   const frentesBanco = new Set(doBanco.map((c) => c.frente));
@@ -75,7 +87,7 @@ async function main(): Promise<void> {
   await page.waitForTimeout(1500);
   conferir(true, 'Voltar levou para a lista de baralhos');
   const deNovo = await abrirBaralho(page);
-  conferir(deNovo.length === doBanco.length, `reabrir mostra o baralho de novo (${deNovo.length} cartões)`);
+  conferir(deNovo.length === baralhosDosQuartetos()[2].cartoes.length, `reabrir mostra o baralho de novo (${deNovo.length} cartões)`);
 
   conferir(errosJs.length === 0, `sem erro de JavaScript${errosJs.length ? `: ${errosJs.join(' | ')}` : ''}`);
   await browser.close();
