@@ -114,12 +114,12 @@ export const REDACAO_GRIFADA: Record<ChaveParagrafo, Frase[]> = {
     ],
     [
       { texto: 'Sob essa ótica, ' },
-      { texto: 'a Lei 10.216, de 2001, conhecida como Lei da Reforma Psiquiátrica, determina que o tratamento ocorra, de preferência, em serviços comunitários, e não pelo isolamento em hospícios', funcao: 'repertorio', fato: true, nota: 'Repertório do 2º motivo e fato histórico: a lei de 2001 que fechou o caminho dos hospícios.' },
+      { texto: 'a Lei 10.216, de 2001, conhecida como Lei da Reforma Psiquiátrica, determina que o tratamento ocorra, de preferência, em serviços comunitários, e não pelo isolamento em hospícios', funcao: 'repertorio', fato: true, nota: 'Repertório do 2º motivo e fato histórico: a lei de 2001 manda tratar, de preferência, perto de casa e não trancado num hospício. Não precisa decorar o número da lei.' },
       { texto: '.' },
     ],
     [
       { texto: 'Na realidade brasileira, porém, ' },
-      { texto: '44,8% dos municípios têm até 10 mil habitantes, porte menor que o indicado pelo Ministério da Saúde para abrir um CAPS', funcao: 'explicacao', fato: true, nota: 'Dado com fonte (IBGE, Censo 2022; Portaria 3.088/2011): a lei existe, mas o serviço não chega às cidades pequenas.' },
+      { texto: '44,8% dos municípios têm até 10 mil habitantes, porte menor que o indicado pelo Ministério da Saúde para abrir um CAPS', funcao: 'explicacao', fato: true, nota: 'Dado com fonte (IBGE, Censo 2022; Portaria 3.088/2011). A conta: o menor CAPS (centro público de saúde mental) é indicado para cidades com mais de 15 mil moradores; quase metade das cidades tem até 10 mil e fica sem. A lei existe, mas o serviço não chega lá.' },
       { texto: ', o que agrava o estigma.' },
     ],
     [
@@ -150,7 +150,7 @@ export const REDACAO_GRIFADA: Record<ChaveParagrafo, Frase[]> = {
       { texto: ' ' },
       { texto: 'deve ampliar os CAPS', funcao: 'acao' },
       { texto: ', ' },
-      { texto: 'por meio de verba vinculada', funcao: 'meio' },
+      { texto: 'por meio de verba vinculada', funcao: 'meio', nota: 'Verba vinculada: dinheiro que só pode ser gasto nisso.' },
       { texto: ', ' },
       { texto: 'com centros regionais para cidades vizinhas', funcao: 'detalhamento' },
       { texto: ', ' },

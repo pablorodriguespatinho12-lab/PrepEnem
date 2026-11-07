@@ -1,0 +1,174 @@
+<title>Folha da Redação</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: uma coluna de leitura, como a folha de redação do ENEM; abas fixas no topo levam a cada parte. */
+:root {
+  --papel: #f5f7fa;
+  --cartao: #ffffff;
+  --tinta: #1c2533;
+  --apagado: #5b6778;
+  --linha: #d9e0ea;
+  --azul: #1f5fbf;
+  --vazio: #fff1c7;
+  --vazio-tinta: #6b4d00;
+  --display: "Bitter", Georgia, serif;
+  --texto: "Source Sans 3", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --papel: #121821; --cartao: #1a222e; --tinta: #e6ebf2; --apagado: #9aa6b6;
+    --linha: #2c3746; --azul: #7fb0ff; --vazio: #3b3115; --vazio-tinta: #f3d27a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --papel: #121821; --cartao: #1a222e; --tinta: #e6ebf2; --apagado: #9aa6b6;
+  --linha: #2c3746; --azul: #7fb0ff; --vazio: #3b3115; --vazio-tinta: #f3d27a; color-scheme: dark;
+}
+body { background: var(--papel); color: var(--tinta); font: 17px/1.55 var(--texto); }
+.pagina { max-width: 640px; margin: 0 auto; padding-block: 8px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 28px; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--papel); }
+nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--papel); border-bottom: 1px solid var(--linha); padding-block: 10px; display: flex; gap: 8px; overflow-x: auto; }
+nav a { flex: none; color: var(--tinta); text-decoration: none; font-weight: 600; font-size: 15px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--linha); background: var(--cartao); }
+nav a:focus-visible, button:focus-visible { outline: 2px solid var(--azul); outline-offset: 2px; }
+h1 { font: 700 30px/1.15 var(--display); margin: 8px 0 0; text-wrap: balance; }
+h2 { font: 700 22px/1.2 var(--display); margin: 0; text-wrap: balance; scroll-margin-top: 64px; }
+h3 { font: 600 17px/1.3 var(--texto); margin: 0; color: var(--azul); }
+p { margin: 0; }
+section { display: grid; gap: 12px; }
+.sub { color: var(--apagado); font-size: 15px; }
+.frase { background: var(--cartao); border: 1px solid var(--linha); border-radius: 10px; padding: 14px 16px; display: grid; gap: 8px; }
+.frase p { font-size: 17px; }
+.v { background: var(--vazio); color: var(--vazio-tinta); padding: 0 4px; border-radius: 4px; font-weight: 600; }
+.passos { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; counter-reset: p; }
+.passos li { counter-increment: p; display: grid; grid-template-columns: 28px 1fr; gap: 8px; }
+.passos li::before { content: counter(p); font: 700 15px/1.6 var(--display); color: var(--azul); }
+.tabela { overflow-x: auto; border: 1px solid var(--linha); border-radius: 10px; background: var(--cartao); }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--linha); vertical-align: top; }
+th { font-weight: 600; color: var(--apagado); font-size: 13px; letter-spacing: .03em; text-transform: uppercase; }
+tr:last-child td { border-bottom: 0; }
+td.n { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tema { background: var(--cartao); border: 1px solid var(--linha); border-radius: 10px; padding: 14px 16px; display: grid; gap: 6px; }
+.tema b { font-family: var(--display); font-size: 17px; }
+.tema dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; font-size: 15px; }
+.tema dt { color: var(--apagado); }
+.tema dd { margin: 0; }
+.checar { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.checar label { display: flex; gap: 10px; align-items: flex-start; background: var(--cartao); border: 1px solid var(--linha); border-radius: 10px; padding: 12px 14px; cursor: pointer; }
+.checar input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--azul); flex: none; }
+.checar input:checked + span { color: var(--apagado); text-decoration: line-through; }
+.aviso { border-left: 3px solid var(--azul); padding-left: 12px; font-size: 15px; }
+button.limpar { justify-self: start; font: 600 15px var(--texto); color: var(--azul); background: none; border: 1px solid var(--linha); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+<nav aria-label="Partes da folha">
+  <a href="#tempo">Tempo</a>
+  <a href="#quarteto">Qual quarteto</a>
+  <a href="#frases">Frases prontas</a>
+  <a href="#temas">5 temas</a>
+  <a href="#zera">Antes de entregar</a>
+</nav>
+
+<main class="pagina">
+  <header>
+    <h1>Folha da Redação</h1>
+    <p class="sub">Só o que você já decorou: Pacto + Drummond e os 2 quartetos. O que está em amarelo você troca pelo tema do dia.</p>
+  </header>
+
+  <section id="tempo">
+    <h2>O tempo: cerca de 1 h 10</h2>
+    <div class="tabela"><table>
+      <tr><th>Etapa</th><th>Tempo</th><th>O que fazer</th></tr>
+      <tr><td>Ler o tema</td><td class="n">5 min</td><td>Sublinhar as palavras do tema. Elas vão na introdução, na tese e no começo de cada desenvolvimento.</td></tr>
+      <tr><td>Escolher</td><td class="n">5 min</td><td>Quarteto 1 ou 2. Escrever no canto: motivo A, motivo B.</td></tr>
+      <tr><td>Rascunho</td><td class="n">40 min</td><td>Um parágrafo de cada vez, na ordem abaixo.</td></tr>
+      <tr><td>Passar a limpo</td><td class="n">20 min</td><td>Letra legível, entre 25 e 30 linhas.</td></tr>
+    </table></div>
+    <h3>A receita</h3>
+    <ol class="passos">
+      <li><span><b>Introdução:</b> Pacto + Drummond, liga ao Brasil com as palavras do tema, tese com motivo A e motivo B.</span></li>
+      <li><span><b>Desenvolvimento 1:</b> motivo A, coringa 1, o que ele prova, volta à tese.</span></li>
+      <li><span><b>Desenvolvimento 2:</b> motivo B, coringa 2, o que ele prova, volta à tese.</span></li>
+      <li><span><b>Conclusão:</b> uma proposta contra cada motivo, cada uma com os 5 elementos.</span></li>
+      <li><span><b>Última frase:</b> volta ao Drummond.</span></li>
+    </ol>
+  </section>
+
+  <section id="quarteto">
+    <h2>Qual quarteto?</h2>
+    <div class="frase"><h3>Quarteto 1: Rui Barbosa + Dom Hélder</h3><p>Tema de direito, acesso ou Estado. Serve em 18 dos 28 temas do ENEM. <b>Na dúvida, é este.</b></p></div>
+    <div class="frase"><h3>Quarteto 2: Graciliano + Galeano</h3><p>Gente excluída ou invisível: violência, criança, imigração, trabalho.</p></div>
+    <div class="frase"><h3>Meio ambiente</h3><p>Dom Hélder + Galeano, um de cada quarteto.</p></div>
+  </section>
+
+  <section id="frases">
+    <h2>Frases prontas</h2>
+    <h3>Introdução (igual nos 2 quartetos)</h3>
+    <div class="frase"><p>O Pacto Internacional sobre Direitos Econômicos, Sociais e Culturais, adotado pela ONU em 1966 e assumido pelo Brasil em 1992, garante <span class="v">o direito do tema</span> a todos. Contudo, como escreveu Carlos Drummond de Andrade no poema "Nosso tempo", "as leis não bastam. Os lírios não nascem da lei". Essa reflexão se aplica ao Brasil de hoje, onde <span class="v">o problema do tema</span> ainda persiste. Tal cenário decorre, sobretudo, de <span class="v">motivo A</span> e de <span class="v">motivo B</span>.</p></div>
+    <div class="tabela"><table>
+      <tr><th>Artigo do Pacto</th><th>Direito</th></tr>
+      <tr><td class="n">6º e 7º</td><td>trabalho digno</td></tr>
+      <tr><td class="n">11</td><td>alimentação e moradia</td></tr>
+      <tr><td class="n">12</td><td>saúde física e mental</td></tr>
+      <tr><td class="n">13</td><td>educação</td></tr>
+    </table></div>
+
+    <h3>Quarteto 1: desenvolvimento 1 (Rui Barbosa)</h3>
+    <div class="frase"><p>Em primeiro lugar, <span class="v">motivo A</span> mantém <span class="v">o problema</span>. Na Oração aos Moços, Rui Barbosa ensina que tratar com desigualdade a iguais, ou a desiguais com igualdade, seria desigualdade flagrante, e não igualdade real. Assim, quem começa em desvantagem precisa de mais apoio para chegar ao mesmo lugar, e <span class="v">ligação com o tema</span>.</p></div>
+    <h3>Quarteto 1: desenvolvimento 2 (Dom Hélder)</h3>
+    <div class="frase"><p>Além disso, <span class="v">motivo B</span> também contribui para <span class="v">o problema</span>. Como dizia Dom Hélder Câmara, "quando dou comida aos pobres, chamam-me de santo. Quando pergunto por que eles são pobres, chamam-me de comunista". Ou seja, ajudar é aplaudido, mas perguntar a causa incomoda, e <span class="v">ligação com o tema</span>.</p></div>
+
+    <h3>Quarteto 2: desenvolvimento 1 (Graciliano)</h3>
+    <div class="frase"><p>Em primeiro lugar, <span class="v">motivo A</span> mantém <span class="v">o problema</span>. Em Vidas Secas, de Graciliano Ramos, Fabiano, sertanejo maltratado pela seca e pelo patrão, passa a se ver como bicho. Do mesmo modo, <span class="v">quem sofre com o tema</span> <span class="v">ligação com o tema</span>.</p></div>
+    <h3>Quarteto 2: desenvolvimento 2 (Galeano)</h3>
+    <div class="frase"><p>Além disso, <span class="v">motivo B</span> também contribui para <span class="v">o problema</span>. Eduardo Galeano, em O Livro dos Abraços, descreve "os ninguéns: os filhos de ninguém, os donos de nada". Assim, <span class="v">quem sofre com o tema</span> é tratado como se não existisse, e <span class="v">ligação com o tema</span>.</p></div>
+
+    <h3>Conclusão (igual nos 2 quartetos)</h3>
+    <div class="frase"><p>Portanto, é preciso enfrentar <span class="v">motivo A</span> e <span class="v">motivo B</span>. Para isso, <span class="v">agente 1</span> deve <span class="v">ação contra A</span>, por meio de <span class="v">meio</span>, com <span class="v">detalhe</span>, a fim de <span class="v">finalidade</span>. Já <span class="v">agente 2</span> deve <span class="v">ação contra B</span>, por meio de <span class="v">meio</span>, com <span class="v">detalhe</span>, a fim de <span class="v">finalidade</span>. Dessa forma, a lei deixará de ser só papel, e os lírios de Drummond poderão, enfim, nascer.</p></div>
+
+    <h3>Os 5 elementos num exemplo do dia a dia</h3>
+    <div class="frase"><p><b>A escola</b> (agente) <b>deve dar aula de reforço</b> (ação), <b>pelo celular</b> (meio), <b>com vídeos curtos de 5 minutos</b> (detalhe), <b>para que o aluno não fique para trás</b> (finalidade).</p><p class="sub">O detalhe é um pedaço a mais de um dos outros elementos: aqui, como são os vídeos.</p></div>
+  </section>
+
+  <section id="temas">
+    <h2>5 temas de treino, já resolvidos</h2>
+    <p class="sub">Temas que não caíram no ENEM, só para treinar a escolha.</p>
+    <div class="tema"><b>Desafios para combater a fome no Brasil</b><dl><dt>Quarteto</dt><dd>1, Pacto art. 11</dd><dt>Motivo A</dt><dd>renda desigual → Rui</dd><dt>Motivo B</dt><dd>ajuda que não ataca a causa → Dom Hélder</dd><dt>Agentes</dt><dd>Governo Federal; ONGs com as prefeituras</dd></dl><p class="sub">Tese: "Tal cenário decorre, sobretudo, da renda desigual entre os brasileiros e de ações que apenas matam a fome do dia, sem atacar a causa."</p></div>
+    <div class="tema"><b>Caminhos para reduzir o abandono escolar</b><dl><dt>Quarteto</dt><dd>1, Pacto art. 13</dd><dt>Motivo A</dt><dd>quem começa em desvantagem sai primeiro → Rui</dd><dt>Motivo B</dt><dd>dar a vaga sem perguntar por que o aluno sai → Dom Hélder</dd><dt>Agentes</dt><dd>Ministério da Educação; escolas</dd></dl></div>
+    <div class="tema"><b>O cuidado com a saúde mental dos jovens</b><dl><dt>Quarteto</dt><dd>1, Pacto art. 12</dd><dt>Motivo A</dt><dd>atendimento igual para necessidades diferentes → Rui</dd><dt>Motivo B</dt><dd>remédio sem olhar a causa → Dom Hélder</dd><dt>Agentes</dt><dd>Ministério da Saúde; escolas</dd></dl></div>
+    <div class="tema"><b>Os desafios do trabalho por aplicativo</b><dl><dt>Quarteto</dt><dd>2, Pacto art. 6º e 7º</dd><dt>Motivo A</dt><dd>trabalho que desumaniza → Graciliano</dd><dt>Motivo B</dt><dd>trabalhador invisível para a lei → Galeano</dd><dt>Agentes</dt><dd>Ministério do Trabalho; Congresso Nacional</dd></dl></div>
+    <div class="tema"><b>A população em situação de rua no Brasil</b><dl><dt>Quarteto</dt><dd>2, Pacto art. 11</dd><dt>Motivo A</dt><dd>pobreza que tira a dignidade → Graciliano</dd><dt>Motivo B</dt><dd>gente que a cidade finge não ver → Galeano</dd><dt>Agentes</dt><dd>prefeituras; Ministério do Desenvolvimento Social</dd></dl></div>
+  </section>
+
+  <section id="zera">
+    <h2>Antes de entregar</h2>
+    <p class="sub">Qualquer "não" aqui pode zerar a redação.</p>
+    <ul class="checar">
+      <li><label><input type="checkbox" id="c1"><span>As palavras do tema estão na introdução e na tese (não fugi do tema).</span></label></li>
+      <li><label><input type="checkbox" id="c2"><span>Tem mais de 7 linhas.</span></label></li>
+      <li><label><input type="checkbox" id="c3"><span>É texto de opinião defendida, e não história ou poema.</span></label></li>
+      <li><label><input type="checkbox" id="c4"><span>Nenhum nome, assinatura ou recado no texto.</span></label></li>
+      <li><label><input type="checkbox" id="c5"><span>Nenhum desenho, palavrão ou parte sem ligação com o tema.</span></label></li>
+      <li><label><input type="checkbox" id="c6"><span>Letra legível e em português.</span></label></li>
+    </ul>
+    <button class="limpar" type="button" id="limpar">Desmarcar tudo</button>
+    <p class="aviso"><b>Não zera, mas tira a nota da Competência 5:</b> proposta que desrespeita os direitos humanos, ou sem ligação com o tema. Leia a proposta como se você fosse quem sofre com o problema.</p>
+  </section>
+</main>
+
+<script>
+  const caixas = [...document.querySelectorAll('.checar input')];
+  const CHAVE = 'folha-redacao-checar';
+  try {
+    const salvo = JSON.parse(localStorage.getItem(CHAVE) || '[]');
+    caixas.forEach((c) => { c.checked = salvo.includes(c.id); });
+  } catch (e) { /* sem armazenamento: começa desmarcado */ }
+  const guardar = () => {
+    try { localStorage.setItem(CHAVE, JSON.stringify(caixas.filter((c) => c.checked).map((c) => c.id))); } catch (e) { /* ignora */ }
+  };
+  caixas.forEach((c) => c.addEventListener('change', guardar));
+  document.getElementById('limpar').addEventListener('click', () => { caixas.forEach((c) => { c.checked = false; }); guardar(); });
+</script>
