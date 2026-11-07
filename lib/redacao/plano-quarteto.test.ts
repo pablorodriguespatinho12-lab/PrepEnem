@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { avaliarPlano, lerPlano, quartetosQueServem, respostaSugerida, TEMAS_DO_PLANO } from './plano-quarteto';
+import { avaliarPlano, lerPlano, triosQueServem, respostaSugerida, TEMAS_DO_PLANO } from './plano-quarteto';
 
 const MULHER = 'A persistência da violência contra a mulher na sociedade brasileira'; // só Quarteto 1
 const IMIGRACAO = 'O movimento imigratório para o Brasil no século XXI'; // só Quarteto 2
@@ -37,14 +37,14 @@ describe('avaliarPlano', () => {
   test('quarteto certo no tema certo: "dá certo"', () => {
     const a = avaliarPlano(MULHER, 'Pacto e Drummond no começo, Rui no primeiro e Dom Hélder no segundo')!;
     expect(a.certo).toBe(true);
-    expect(a.titulo).toBe('Boa ideia: dá certo. É o Quarteto 1.');
+    expect(a.titulo).toBe('Boa ideia: dá certo. É o Trio 1.');
     expect(a.ligacoes.length).toBeGreaterThan(0);
   });
   test('quarteto que não passou no tema: aponta quem trocar', () => {
     const a = avaliarPlano(MULHER, 'Pacto e Drummond na introdução, Graciliano no primeiro, Galeano no segundo')!;
     expect(a.certo).toBe(false);
     expect(a.dicas.some((d) => d.includes('não passou'))).toBe(true);
-    expect(respostaSugerida(MULHER)).toContain('Quarteto 1');
+    expect(respostaSugerida(MULHER)).toContain('Trio 1');
   });
   test('faltou uma parte', () => {
     const a = avaliarPlano(IMIGRACAO, 'Pacto e Drummond na introdução e Graciliano no primeiro')!;
@@ -60,17 +60,17 @@ describe('avaliarPlano', () => {
 });
 
 describe('os 28 temas', () => {
-  test('28 temas; os quartetos juntos servem em 25', () => {
+  test('28 temas; os trios juntos servem em 25', () => {
     expect(TEMAS_DO_PLANO).toHaveLength(28);
-    expect(TEMAS_DO_PLANO.filter((t) => quartetosQueServem(t).length > 0)).toHaveLength(25);
-    expect(quartetosQueServem(MULHER)).toEqual([1]);
-    expect(quartetosQueServem(IMIGRACAO)).toEqual([2]);
-    expect(quartetosQueServem(ETICA)).toEqual([]);
+    expect(TEMAS_DO_PLANO.filter((t) => triosQueServem(t).length > 0)).toHaveLength(25);
+    expect(triosQueServem(MULHER)).toEqual([1]);
+    expect(triosQueServem(IMIGRACAO)).toEqual([2]);
+    expect(triosQueServem(ETICA)).toEqual([]);
   });
   test('todo tema tem resposta sugerida, e ela passa na própria avaliação', () => {
     for (const t of TEMAS_DO_PLANO) {
       const r = respostaSugerida(t);
-      if (quartetosQueServem(t).length > 0) expect(avaliarPlano(t, r)!.certo, t).toBe(true);
+      if (triosQueServem(t).length > 0) expect(avaliarPlano(t, r)!.certo, t).toBe(true);
     }
   });
 });

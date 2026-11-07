@@ -400,14 +400,21 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   `docs/redacao/fontes/`, os dois fora do git). As cartilhas NÃO dizem que as
   redações tiraram 1000: o teste compara com o nível que o comentário do INEP
   declara (`tests/redacao/niveis-inep.ts`).
-- **Quartetos em escadinha (Pablo, 07/11/2026):** 3 baralhos "Quartetos 1: o que
-  os autores falam", "2: o que eles querem dizer" (a fala na frente), "3: em que
-  quarteto cabem". Estudam SEMPRE inteiros e na ordem (`lib/flashcards/ordem-fixa.ts`);
-  os outros baralhos seguem embaralhados e pela fila do dia. Um baralho só com
-  tudo misturado foi recusado 2 vezes. Tela `/redacao/plano` ("Planejar com os
-  quartetos", cartão abaixo do Treino por partes): tema real dos 28, ele escreve
-  o plano à vontade e o site avalia sem IA (`lib/redacao/plano-quarteto.ts`,
-  veredito de `coringas-por-tema.json`).
+- **Flashcards de Redação = só a escadinha dos TRIOS (Pablo, 07/11/2026: "apaga
+  todos os flash cards da parte de redação"; "seria na verdade um trio"):** trio =
+  introdução (Drummond + Pacto), 1º e 2º desenvolvimento. Trio 1 = Rui + Dom Hélder;
+  Trio 2 = Graciliano + Galeano. 4 baralhos, nada mais em Redação: "1. O que cada
+  autor fala", "2. O que cada autor quer dizer" (fala na frente), "3. Onde cada um
+  entra", "4. Tema e trio" (8 temas reais, 4 de cada). Fonte
+  `lib/redacao/cartoes-trios.ts`; `scripts/seed-trios-redacao.ts` APAGA todo baralho
+  padrão de Redação e recria os 4 (rodar de novo zera o progresso deles). Estudam
+  SEMPRE inteiros e na ordem (`lib/flashcards/ordem-fixa.ts`); os outros baralhos
+  seguem embaralhados e pela fila do dia. Coringas da redação, Autores por tema e
+  Quartetos 1-3 foram apagados. Depois dos baralhos: Redação → "Redações prontas
+  dos trios" (`/redacao/modelos`, abas Trio 1 e Trio 2 primeiro, em
+  `data/redacao/modelos.ts`). Tela `/redacao/plano` ("Planejar com os trios"):
+  tema real dos 28, ele escreve o plano à vontade e o site avalia sem IA
+  (`lib/redacao/plano-quarteto.ts`, veredito de `coringas-por-tema.json`).
 - **Treino por partes = guia da receita de bolso (Pablo, 27/10/2026), sem IA por partes:**
   tema → 2 das 5 causas coringa → tese no molde → introdução, D1, D2,
   conclusão (molde à esquerda, caixa à direita, contador de ~70 caracteres
@@ -503,8 +510,8 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   da redação" (matéria Redação, cor #0E7490), gerado de `CORINGAS` por
   `lib/redacao/cartoes-coringas.ts`. São 2 cartões por coringa: "Coringa para:
   <argumento>" e "complete a frase". A dica é a imagem e nunca usa palavra do
-  verso (o teste barra). Criar ou atualizar: `DB_CONFIRMED=1 npx tsx
-  --env-file=.env scripts/seed-coringas-redacao.ts`; roda de novo quando
+  verso (o teste barra). APAGADO em 07/11/2026 (ver "Flashcards de Redação = só a
+  escadinha dos TRIOS"); o MEMORIA de cartoes-coringas.ts segue em uso. Antes:
   CORINGAS mudar. A lista de baralhos mostra o subtema como título.
   **Grandes assuntos (30/10):** nos 28 temas do ENEM de 1998 a 2025, agrupados
   em 9 grupos (o maior é "grupos vulneráveis", com 11), Drummond passou em
@@ -559,7 +566,7 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   Culturais (`lib/redacao/lei-coringa.ts`; não é coringa, não passou pela
   prova, é a lei da amarra). Baralho padrão "Autores por tema": 28 cartões,
   um por tema, até 3 autores além do Drummond (que serve em todos), de
-  `coringas-por-tema.json` (`scripts/seed-autores-por-tema.ts`).
+  `coringas-por-tema.json` (apagado em 07/11/2026 com a escadinha dos trios).
   **2ª rodada (mesmo dia, "mais bonitinho, bem ilustrado", sem texto a
   mais):** cada parte tem a folha da prova em miniatura à esquerda (as 30
   linhas, a parte de agora colorida frase por frase), a frase com barra e

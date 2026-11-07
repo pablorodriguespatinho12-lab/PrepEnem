@@ -1,11 +1,11 @@
-// "Planejar com os quartetos" (Pablo, 07/11/2026): aparece um tema real do
+// "Planejar com os trios" (Pablo, 07/11/2026): aparece um tema real do
 // ENEM, ele escreve com as palavras dele quem vai em cada parte ("Drummond no
 // começo, Rui na argumentação e Dom Hélder na segunda") e o site avalia.
 // Sem IA: o veredito é a prova dos coringas nos 28 temas
 // (coringas-por-tema.json, a mesma fonte da aba Exemplo).
 
 import dados from './coringas-por-tema.json';
-import { QUARTETOS } from './cartoes-quartetos';
+import { TRIOS } from './cartoes-trios';
 
 export const PARTES = ['introducao', 'd1', 'd2'] as const;
 export type Parte = (typeof PARTES)[number];
@@ -18,7 +18,7 @@ export const NOME_DA_PARTE: Record<Parte, string> = {
 export const AUTORES_DO_PLANO = ['Drummond', 'Rui Barbosa', 'Dom Hélder', 'Graciliano', 'Galeano'] as const;
 export type AutorDoPlano = (typeof AUTORES_DO_PLANO)[number];
 
-/* Onde cada autor fica no quarteto dele. */
+/* Onde cada autor fica no trio dele. */
 const LUGAR_CERTO: Record<AutorDoPlano, Parte> = {
   Drummond: 'introducao',
   'Rui Barbosa': 'd1',
@@ -64,7 +64,7 @@ function autoresNoTrecho(trecho: string): (AutorDoPlano | 'Pacto')[] {
 
 /* "quarteto 1" não é "1º argumento". */
 const parteDoTrecho = (trecho: string): Parte | null => {
-  const limpo = trecho.replace(/\bquartetos? \d\b/g, ' ');
+  const limpo = trecho.replace(/\b(quartetos?|trios?) \d\b/g, ' ');
   return MARCAS_DE_PARTE.find(([, re]) => re.test(limpo))?.[0] ?? null;
 };
 
@@ -125,17 +125,17 @@ export interface Avaliacao {
   titulo: string;
   partes: ParteAvaliada[];
   dicas: string[];
-  /* Quartetos que servem neste tema (1, 2 ou nenhum). */
-  quartetosQueServem: (1 | 2)[];
+  /* Trios que servem neste tema (1, 2 ou nenhum). */
+  triosQueServem: (1 | 2)[];
   /* Exemplo de ligação com o tema para cada autor que serve no plano. */
   ligacoes: { autor: AutorDoPlano; texto: string }[];
 }
 
 export const serveNoTema = (tema: string, autor: AutorDoPlano): boolean => POR_TEMA[tema]?.[autor]?.serve === true;
 
-export function quartetosQueServem(tema: string): (1 | 2)[] {
+export function triosQueServem(tema: string): (1 | 2)[] {
   return ([1, 2] as const).filter((n) => {
-    const q = QUARTETOS[n];
+    const q = TRIOS[n];
     const d1 = q.d1 as AutorDoPlano;
     const d2 = q.d2 as AutorDoPlano;
     return serveNoTema(tema, 'Drummond') && serveNoTema(tema, d1) && serveNoTema(tema, d2);
@@ -143,10 +143,10 @@ export function quartetosQueServem(tema: string): (1 | 2)[] {
 }
 
 export function respostaSugerida(tema: string): string {
-  const qs = quartetosQueServem(tema);
+  const qs = triosQueServem(tema);
   if (qs.length > 0) {
-    const q = QUARTETOS[qs[0]];
-    return `Quarteto ${qs[0]}: Pacto + Drummond na introdução, ${q.d1} no 1º argumento, ${q.d2} no 2º.`;
+    const q = TRIOS[qs[0]];
+    return `Trio ${qs[0]}: Pacto + Drummond na introdução, ${q.d1} no 1º argumento, ${q.d2} no 2º.`;
   }
   const servem = AUTORES_DO_PLANO.filter((a) => a !== 'Drummond' && serveNoTema(tema, a));
   if (servem.length === 0) return 'Neste tema, nenhum dos 5 passou além do Drummond.';
@@ -163,12 +163,12 @@ export function avaliarPlano(tema: string, texto: string): Avaliacao | null {
     const aviso = lugar !== parte
       ? (autor === 'Drummond' || parte === 'introducao'
         ? `O Drummond abre o texto: ele vai na introdução.`
-        : `Pode, mas no quarteto dele ${autor} vai no ${NOME_DA_PARTE[lugar]}.`)
+        : `Pode, mas no trio dele ${autor} vai no ${NOME_DA_PARTE[lugar]}.`)
       : undefined;
     return { parte, autor, serve: serveNoTema(tema, autor), aviso };
   });
 
-  const qs = quartetosQueServem(tema);
+  const qs = triosQueServem(tema);
   const faltando = avaliadas.filter((p) => !p.autor);
   const naoServem = avaliadas.filter((p) => p.autor && !p.serve);
   const drummondFora = avaliadas.some((p) => p.autor === 'Drummond' && p.parte !== 'introducao');
@@ -182,14 +182,14 @@ export function avaliarPlano(tema: string, texto: string): Avaliacao | null {
   if (sobrando.length > 0) dicas.push(`Sobrou: ${sobrando.join(', ')}. Cada parte leva um autor.`);
 
   const usados = avaliadas.map((p) => p.autor);
-  const ehQuarteto = qs.find((n) => usados[1] === QUARTETOS[n].d1 && usados[2] === QUARTETOS[n].d2 && usados[0] === 'Drummond');
+  const ehTrio = qs.find((n) => usados[1] === TRIOS[n].d1 && usados[2] === TRIOS[n].d2 && usados[0] === 'Drummond');
   const titulo = certo
-    ? `Boa ideia: dá certo.${ehQuarteto ? ` É o Quarteto ${ehQuarteto}.` : ''}`
+    ? `Boa ideia: dá certo.${ehTrio ? ` É o Trio ${ehTrio}.` : ''}`
     : faltando.length === 3 ? 'Não entendi o plano.' : 'Quase. Ajuste o que está marcado.';
 
   const ligacoes = avaliadas
     .filter((p): p is ParteAvaliada & { autor: AutorDoPlano } => !!p.autor && p.serve && !!POR_TEMA[tema][p.autor]?.ligacao)
     .map((p) => ({ autor: p.autor, texto: POR_TEMA[tema][p.autor].ligacao! }));
 
-  return { certo, titulo, partes: avaliadas, dicas, quartetosQueServem: qs, ligacoes };
+  return { certo, titulo, partes: avaliadas, dicas, triosQueServem: qs, ligacoes };
 }

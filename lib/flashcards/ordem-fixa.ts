@@ -1,11 +1,9 @@
-// Baralhos que estudam na ordem gravada, sem embaralhar (Pablo, 07/11/2026:
-// "primeiro as falas, depois o que eles querem dizer, depois os quartetos").
-// Os outros baralhos continuam embaralhados.
-const BARALHOS_EM_ORDEM = new Set([
-  'Quartetos 1: o que os autores falam',
-  'Quartetos 2: o que eles querem dizer',
-  'Quartetos 3: em que quarteto cabem',
-]);
+// Baralhos que estudam inteiros e na ordem gravada, sem embaralhar (Pablo,
+// 07/11/2026: a escadinha de redação, falas → sentidos → posições → temas).
+// Os outros baralhos continuam embaralhados e pela fila do dia.
+import { baralhosDosTrios } from '../redacao/cartoes-trios';
+
+const BARALHOS_EM_ORDEM = new Set(baralhosDosTrios().map((b) => b.nome));
 
 interface CartaoComOrdem {
   ordem: number;

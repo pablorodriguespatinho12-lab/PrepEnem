@@ -1,4 +1,4 @@
-// Treino "Planejar com os quartetos" (Pablo, 07/11/2026).
+// Treino "Planejar com os trios" (Pablo, 07/11/2026).
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
 import { PlanoQuarteto } from '@/components/redacao/plano-quarteto';

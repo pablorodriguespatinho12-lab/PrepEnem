@@ -1,5 +1,5 @@
 'use client';
-// Treino "Planejar com os quartetos" (Pablo, 07/11/2026): tema real do ENEM,
+// Treino "Planejar com os trios" (Pablo, 07/11/2026): tema real do ENEM,
 // ele escreve o plano com as palavras dele e o site avalia na hora, sem IA
 // (lib/redacao/plano-quarteto.ts).
 
@@ -85,7 +85,7 @@ export function PlanoQuarteto() {
 
   return (
     <div className="max-w-2xl">
-      <h1 className="font-display type-title font-semibold">Planejar com os quartetos</h1>
+      <h1 className="font-display type-title font-semibold">Planejar com os trios</h1>
       <p className="type-meta text-muted-foreground mt-1">Leia o tema e escreva quem vai na introdução, no 1º e no 2º argumento.</p>
 
       <div className="mt-5 rounded-[var(--radius-surface)] border border-border bg-card p-5 shadow-elev-1">
@@ -112,6 +112,9 @@ export function PlanoQuarteto() {
 
         {avaliacao && <Resultado key={`${tema}|${texto}`} tema={tema} avaliacao={avaliacao} />}
       </div>
+      <a href="/redacao/modelos" className="inline-block mt-4 type-meta font-medium text-primary-text py-2 t-colors">
+        Ver as redações prontas do Trio 1 e do Trio 2 →
+      </a>
     </div>
   );
 }

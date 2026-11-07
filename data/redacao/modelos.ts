@@ -38,10 +38,122 @@ export interface RedacaoModelo {
   tema: string;
   anoEnem: number;
   contexto: string;
+  /* Redação montada com um dos 2 trios de coringas (lib/redacao/cartoes-trios.ts). */
+  trio?: 1 | 2;
   partes: Record<TipoParte, ParteModelo>;
 }
 
 export const MODELOS: RedacaoModelo[] = [
+  // Redações dos trios (Pablo, 07/11/2026: "depois vem a redação para eu
+  // aprender"). Molde de docs/redacao/folha-da-prova.md; citação, sentido e
+  // ligação de cada autor = os aprovados pelos juízes neste tema
+  // (lib/redacao/coringas-por-tema.json). Sem fato além desses e do Pacto.
+  {
+    id: 'trio1-povos-tradicionais-2022',
+    tema: 'Desafios para a valorização de comunidades e povos tradicionais no Brasil',
+    anoEnem: 2022,
+    trio: 1,
+    contexto: 'Povos e comunidades tradicionais, como indígenas, quilombolas e ribeirinhos, vivem de um jeito ligado à terra onde estão: dela tiram o sustento, a cultura e a história. Esta redação usa o Trio 1: Pacto + Drummond na introdução, Rui Barbosa no 1º desenvolvimento e Dom Hélder no 2º.',
+    partes: {
+      introducao: {
+        texto: 'O Pacto Internacional sobre Direitos Econômicos, Sociais e Culturais, adotado pela ONU em 1966 e assumido pelo Brasil em 1992, garante a todos, em seu artigo 11, o direito à alimentação e à moradia. Contudo, como escreveu Carlos Drummond de Andrade no poema "Nosso tempo", "as leis não bastam. Os lírios não nascem da lei". Essa reflexão se aplica ao Brasil de hoje: a Constituição de 1988 reconhece os direitos dos povos indígenas e das comunidades quilombolas sobre seus territórios, mas esses povos ainda não são valorizados na prática. Tal cenário decorre, sobretudo, de regras iguais para quem vive de modo diferente e da falta de atenção às causas da perda de seus territórios.',
+        anotacoes: [
+          { trecho: 'O Pacto Internacional sobre Direitos Econômicos, Sociais e Culturais, adotado pela ONU em 1966 e assumido pelo Brasil em 1992, garante a todos, em seu artigo 11, o direito à alimentação e à moradia', papel: 'repertorio', porque: 'A lei do trio: abre a introdução. O artigo 11 (alimentação e moradia) combina com povos que vivem da terra.' },
+          { trecho: 'como escreveu Carlos Drummond de Andrade no poema "Nosso tempo", "as leis não bastam. Os lírios não nascem da lei"', papel: 'repertorio', porque: 'Drummond, a introdução dos dois trios: a lei existe, mas sozinha não muda a vida.' },
+          { trecho: 'a Constituição de 1988 reconhece os direitos dos povos indígenas e das comunidades quilombolas sobre seus territórios', papel: 'contextualizacao', porque: 'Liga o Drummond ao Brasil com as palavras do tema: a lei já existe.' },
+          { trecho: 'esses povos ainda não são valorizados na prática', papel: 'tese', porque: 'A tese responde à palavra "valorização" do tema.' },
+          { trecho: 'de regras iguais para quem vive de modo diferente e da falta de atenção às causas da perda de seus territórios', papel: 'anuncio', porque: 'Motivo A (vai com o Rui) e motivo B (vai com o Dom Hélder).' },
+        ],
+      },
+      desenvolvimento1: {
+        texto: 'Em primeiro lugar, tratar os povos tradicionais com as mesmas regras pensadas para a cidade mantém a sua desvalorização. Na "Oração aos Moços" (1921), Rui Barbosa ensina que tratar com desigualdade a iguais, ou a desiguais com igualdade, seria desigualdade flagrante, e não igualdade real. Ou seja, quem vive em situação diferente precisa de cuidado diferente para ter os mesmos direitos. Por isso, a demarcação de terras e uma escola que respeite a língua e o modo de vida de indígenas, quilombolas e ribeirinhos não são privilégio, mas condição para que esses povos sejam valorizados. Logo, a igualdade apenas no papel apaga justamente o que os torna diferentes.',
+        anotacoes: [
+          { trecho: 'Em primeiro lugar', papel: 'operador', porque: 'Abre o 1º desenvolvimento.' },
+          { trecho: 'tratar os povos tradicionais com as mesmas regras pensadas para a cidade mantém a sua desvalorização', papel: 'topico', porque: 'Retoma o motivo A da introdução.' },
+          { trecho: 'Na "Oração aos Moços" (1921), Rui Barbosa ensina que tratar com desigualdade a iguais, ou a desiguais com igualdade, seria desigualdade flagrante, e não igualdade real', papel: 'repertorio', porque: 'Rui Barbosa, o 1º desenvolvimento do Trio 1, citado como ideia (sem aspas).' },
+          { trecho: 'Ou seja, quem vive em situação diferente precisa de cuidado diferente para ter os mesmos direitos', papel: 'analise', porque: 'O que o Rui quer dizer, com palavras simples.' },
+          { trecho: 'a demarcação de terras e uma escola que respeite a língua e o modo de vida de indígenas, quilombolas e ribeirinhos não são privilégio', papel: 'analise', porque: 'A ligação com o tema: mostra o Rui funcionando aqui.' },
+          { trecho: 'Logo, a igualdade apenas no papel apaga justamente o que os torna diferentes', papel: 'fecho', porque: 'Volta à tese.' },
+        ],
+      },
+      desenvolvimento2: {
+        texto: 'Além disso, a sociedade costuma ajudar esses povos nas crises sem perguntar por que elas acontecem. Como dizia Dom Hélder Câmara, "quando dou comida aos pobres, chamam-me de santo. Quando pergunto por que eles são pobres, chamam-me de comunista". Em outras palavras, socorrer é aplaudido, mas investigar a causa incomoda. Assim, entregar cestas a aldeias e comunidades em crise é necessário, mas valorizar os povos tradicionais exige perguntar por que eles perderam a terra de onde tiravam o próprio sustento. Dessa forma, enquanto só a urgência for atendida, o problema continuará a se repetir.',
+        anotacoes: [
+          { trecho: 'Além disso', papel: 'operador', porque: 'Abre o 2º desenvolvimento.' },
+          { trecho: 'a sociedade costuma ajudar esses povos nas crises sem perguntar por que elas acontecem', papel: 'topico', porque: 'Retoma o motivo B da introdução.' },
+          { trecho: 'Como dizia Dom Hélder Câmara, "quando dou comida aos pobres, chamam-me de santo. Quando pergunto por que eles são pobres, chamam-me de comunista"', papel: 'repertorio', porque: 'Dom Hélder, o 2º desenvolvimento do Trio 1. Sem data: "como dizia".' },
+          { trecho: 'Em outras palavras, socorrer é aplaudido, mas investigar a causa incomoda', papel: 'analise', porque: 'O que o Dom Hélder quer dizer.' },
+          { trecho: 'valorizar os povos tradicionais exige perguntar por que eles perderam a terra de onde tiravam o próprio sustento', papel: 'analise', porque: 'A ligação com o tema.' },
+          { trecho: 'Dessa forma, enquanto só a urgência for atendida, o problema continuará a se repetir', papel: 'fecho', porque: 'Volta à tese.' },
+        ],
+      },
+      conclusao: {
+        texto: 'Portanto, para que os direitos dos povos tradicionais saiam do papel, são necessárias duas medidas. Primeiramente, o Governo Federal, por meio da Funai e do Incra, deve concluir a demarcação dos territórios indígenas e a titulação dos quilombolas, com equipes permanentes de fiscalização contra invasores, a fim de garantir a esses povos a terra de onde tiram o sustento. Além disso, o Ministério da Educação deve ampliar as escolas indígenas e quilombolas, com professores das próprias comunidades e material na língua de cada povo, para que a diferença seja tratada como valor. Assim, além da lei, haverá ação, e os lírios de Drummond poderão enfim nascer.',
+        anotacoes: [
+          { trecho: 'para que os direitos dos povos tradicionais saiam do papel', papel: 'retomada', porque: 'Retoma a tese e o Drummond (a lei no papel).' },
+          { trecho: 'o Governo Federal, por meio da Funai e do Incra', papel: 'agente', porque: 'Quem faz.' },
+          { trecho: 'concluir a demarcação dos territórios indígenas e a titulação dos quilombolas', papel: 'acao', porque: 'O que faz: ataca o motivo B (a perda da terra).' },
+          { trecho: 'com equipes permanentes de fiscalização contra invasores', papel: 'modo', porque: 'Como faz.' },
+          { trecho: 'a fim de garantir a esses povos a terra de onde tiram o sustento', papel: 'efeito', porque: 'Para quê.' },
+          { trecho: 'com professores das próprias comunidades e material na língua de cada povo', papel: 'detalhamento', porque: 'Detalhe da 2ª proposta, que ataca o motivo A (regras iguais).' },
+          { trecho: 'os lírios de Drummond poderão enfim nascer', papel: 'retomada', porque: 'Última frase: volta ao Drummond.' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'trio2-imigracao-2012',
+    tema: 'O movimento imigratório para o Brasil no século XXI',
+    anoEnem: 2012,
+    trio: 2,
+    contexto: 'No século XXI, o Brasil passou a receber imigrantes de vários países, como haitianos, venezuelanos e bolivianos, que chegam em busca de trabalho e de uma vida melhor. Esta redação usa o Trio 2: Pacto + Drummond na introdução, Graciliano no 1º desenvolvimento e Galeano no 2º.',
+    partes: {
+      introducao: {
+        texto: 'O Pacto Internacional sobre Direitos Econômicos, Sociais e Culturais, adotado pela ONU em 1966 e assumido pelo Brasil em 1992, garante a todos, em seus artigos 6º e 7º, o direito ao trabalho digno. Contudo, como escreveu Carlos Drummond de Andrade no poema "Nosso tempo", "as leis não bastam. Os lírios não nascem da lei". Essa reflexão se aplica ao Brasil do século XXI: a Lei de Migração, de 2017, trata o imigrante como sujeito de direitos, mas muitos dos que chegam ao país ainda não têm esses direitos na prática. Tal cenário decorre, sobretudo, da exploração do trabalho de quem está sem documentos e da invisibilidade desses imigrantes na sociedade.',
+        anotacoes: [
+          { trecho: 'O Pacto Internacional sobre Direitos Econômicos, Sociais e Culturais, adotado pela ONU em 1966 e assumido pelo Brasil em 1992, garante a todos, em seus artigos 6º e 7º, o direito ao trabalho digno', papel: 'repertorio', porque: 'A lei do trio: abre a introdução. Artigos 6º e 7º (trabalho) combinam com quem migra para trabalhar.' },
+          { trecho: 'como escreveu Carlos Drummond de Andrade no poema "Nosso tempo", "as leis não bastam. Os lírios não nascem da lei"', papel: 'repertorio', porque: 'Drummond, a introdução dos dois trios.' },
+          { trecho: 'a Lei de Migração, de 2017, trata o imigrante como sujeito de direitos', papel: 'contextualizacao', porque: 'Liga o Drummond ao tema: a lei já existe.' },
+          { trecho: 'muitos dos que chegam ao país ainda não têm esses direitos na prática', papel: 'tese', porque: 'A tese: a lei não chegou ao imigrante.' },
+          { trecho: 'da exploração do trabalho de quem está sem documentos e da invisibilidade desses imigrantes na sociedade', papel: 'anuncio', porque: 'Motivo A (vai com o Graciliano) e motivo B (vai com o Galeano).' },
+        ],
+      },
+      desenvolvimento1: {
+        texto: 'Em primeiro lugar, a falta de documentos deixa o imigrante exposto à exploração. Em "Vidas Secas" (1938), de Graciliano Ramos, Fabiano, retirante explorado pelo patrão, passa a se ver como bicho: "Você é um bicho, Fabiano". Ou seja, quem migra sem direitos acaba perdendo a noção da própria dignidade. Da mesma forma, imigrantes bolivianos já foram encontrados em oficinas de costura em São Paulo em condição análoga à escravidão, explorados justamente por estarem sem documentos. Logo, sem trabalho formal, o imigrante de hoje repete a história do retirante do sertão.',
+        anotacoes: [
+          { trecho: 'Em primeiro lugar', papel: 'operador', porque: 'Abre o 1º desenvolvimento.' },
+          { trecho: 'a falta de documentos deixa o imigrante exposto à exploração', papel: 'topico', porque: 'Retoma o motivo A da introdução.' },
+          { trecho: 'Em "Vidas Secas" (1938), de Graciliano Ramos, Fabiano, retirante explorado pelo patrão, passa a se ver como bicho: "Você é um bicho, Fabiano"', papel: 'repertorio', porque: 'Graciliano, o 1º desenvolvimento do Trio 2.' },
+          { trecho: 'Ou seja, quem migra sem direitos acaba perdendo a noção da própria dignidade', papel: 'analise', porque: 'O que o Graciliano quer dizer.' },
+          { trecho: 'imigrantes bolivianos já foram encontrados em oficinas de costura em São Paulo em condição análoga à escravidão', papel: 'analise', porque: 'A ligação com o tema: o Fabiano de hoje.' },
+          { trecho: 'Logo, sem trabalho formal, o imigrante de hoje repete a história do retirante do sertão', papel: 'fecho', porque: 'Volta à tese.' },
+        ],
+      },
+      desenvolvimento2: {
+        texto: 'Além disso, a sociedade ainda trata o imigrante recém-chegado como se ele não existisse. Eduardo Galeano, no texto "Os ninguéns", de "O Livro dos Abraços" (1989), descreve "os ninguéns: os filhos de ninguém, os donos de nada". Em outras palavras, há gente que a sociedade apaga, sem nome, sem voz e sem nada. Assim, o imigrante sem documentos, sem rede de apoio e sem falar português corre o risco de virar esse ninguém, invisível para os serviços públicos e para os vizinhos. Dessa forma, acolhê-lo é, antes de tudo, reconhecer que ele existe e tem direitos.',
+        anotacoes: [
+          { trecho: 'Além disso', papel: 'operador', porque: 'Abre o 2º desenvolvimento.' },
+          { trecho: 'a sociedade ainda trata o imigrante recém-chegado como se ele não existisse', papel: 'topico', porque: 'Retoma o motivo B da introdução.' },
+          { trecho: 'Eduardo Galeano, no texto "Os ninguéns", de "O Livro dos Abraços" (1989), descreve "os ninguéns: os filhos de ninguém, os donos de nada"', papel: 'repertorio', porque: 'Galeano, o 2º desenvolvimento do Trio 2.' },
+          { trecho: 'Em outras palavras, há gente que a sociedade apaga, sem nome, sem voz e sem nada', papel: 'analise', porque: 'O que o Galeano quer dizer.' },
+          { trecho: 'o imigrante sem documentos, sem rede de apoio e sem falar português corre o risco de virar esse ninguém', papel: 'analise', porque: 'A ligação com o tema.' },
+          { trecho: 'Dessa forma, acolhê-lo é, antes de tudo, reconhecer que ele existe e tem direitos', papel: 'fecho', porque: 'Volta à tese.' },
+        ],
+      },
+      conclusao: {
+        texto: 'Portanto, para que a Lei de Migração saia do papel, são necessárias duas medidas. Primeiramente, o Ministério do Trabalho e Emprego deve ampliar a fiscalização em oficinas e fazendas que empregam imigrantes, por meio de equipes que visitem esses locais e ajudem os trabalhadores a tirar a carteira de trabalho, a fim de acabar com a exploração de quem está sem documentos. Além disso, as prefeituras das cidades que mais recebem imigrantes devem oferecer cursos gratuitos de português e centros de acolhida, para que essas pessoas deixem de ser invisíveis. Assim, além da lei, haverá ação, e os lírios de Drummond poderão enfim nascer.',
+        anotacoes: [
+          { trecho: 'para que a Lei de Migração saia do papel', papel: 'retomada', porque: 'Retoma a tese e o Drummond (a lei no papel).' },
+          { trecho: 'o Ministério do Trabalho e Emprego', papel: 'agente', porque: 'Quem faz.' },
+          { trecho: 'ampliar a fiscalização em oficinas e fazendas que empregam imigrantes', papel: 'acao', porque: 'O que faz: ataca o motivo A (exploração).' },
+          { trecho: 'por meio de equipes que visitem esses locais', papel: 'modo', porque: 'Como faz.' },
+          { trecho: 'ajudem os trabalhadores a tirar a carteira de trabalho', papel: 'detalhamento', porque: 'Detalha o modo.' },
+          { trecho: 'a fim de acabar com a exploração de quem está sem documentos', papel: 'efeito', porque: 'Para quê.' },
+          { trecho: 'os lírios de Drummond poderão enfim nascer', papel: 'retomada', porque: 'Última frase: volta ao Drummond.' },
+        ],
+      },
+    },
+  },
   {
     id: 'saude-mental-2020',
     tema: 'O estigma associado às doenças mentais na sociedade brasileira',
