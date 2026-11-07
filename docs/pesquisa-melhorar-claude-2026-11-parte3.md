@@ -58,3 +58,14 @@ Pablo roda: `python3 scripts/claude-config/enxugar-regras.py` (cópia em `~/.cla
 - https://github.com/MPIsaac-Per/claude-code-loop-patterns
 - https://dev.to/shipwithaiio/how-to-build-a-self-verification-loop-in-claude-code-3-layers-20-minutes-m1p
 - https://codingwithroby.substack.com/p/the-stop-hook-that-wont-let-claude
+
+## Medição do texto fixo de cada sessão (06/11, 22h)
+
+Cópia de 14h (backups/faxina-2026-11-06) x agora, script em scratchpad (medir.py):
+
+- CLAUDE.md global: 1857 -> 3375 bytes (regras da máquina vieram da memória para cá)
+- Regras sempre ligadas: 17466 -> 3892 bytes
+- Índice da memória: 6843 -> 4489 bytes
+- Total: 26166 -> 11756 bytes (-55%, ~6,5 mil -> ~2,9 mil tokens)
+
+Fora disso: 78 ferramentas de conectores e 26 plugins desligados.
