@@ -32,6 +32,24 @@ Limite conhecido: confere que o teste passa, não que o teste está certo.
 | Regras com `paths:` | shanraisshan | as regras globais de React e TypeScript já carregam só nesses arquivos |
 | Bloquear edição na branch main | ChrisWiles | `branch-guard` já existe |
 
+## Parte 4: por dentro, sem nova pesquisa (06/11/2026, noite)
+
+Erros de ferramenta nas 4 sessões depois da parte 2: **6** (antes, 32). Não há erro grande a caçar;
+o ganho agora está no que entra em **toda sessão** (~20 KB medidos).
+
+Correção da tabela acima: "regras com `paths:`" valia só para React e TypeScript.
+`web/performance.md` e `web/security.md` não tinham `paths:` e carregavam em todo pedido.
+
+| O quê | Antes | Depois | Como |
+|---|---|---|---|
+| Índice da memória (`MEMORY.md`) | 6,8 KB | 4,5 KB | linhas encurtadas; as 44 memórias seguem no índice |
+| Regras `web/*` | sempre (3,4 KB) | só em .tsx/.css/next.config | `enxugar-regras.py` |
+| `common/security.md` | manda usar `security-reviewer` (não existe) | `revisor-adversarial` / `seguranca-site-nextjs` | idem |
+| `common/git-workflow.md` | "Attribution disabled", "push com -u", link para arquivo inexistente | "nunca push" | idem |
+
+O script foi testado numa cópia: 1ª vez ajusta 4 arquivos, 2ª vez não muda nada.
+Pablo roda: `python3 scripts/claude-config/enxugar-regras.py` (cópia em `~/.claude/rules-backup-<data>/`).
+
 ## Fontes
 
 - https://github.com/ChrisWiles/claude-code-showcase
