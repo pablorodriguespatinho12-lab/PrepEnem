@@ -1,15 +1,23 @@
 import { describe, expect, test } from 'vitest';
-import { cartoesDosQuartetos } from './cartoes-quartetos';
+import { baralhosDosQuartetos, cartoesDosQuartetos } from './cartoes-quartetos';
+import { deveManterOrdem } from '../flashcards/ordem-fixa';
 import { CORINGAS } from './autores';
 
 const cartoes = cartoesDosQuartetos();
 const palavras = (s: string) => s.toLowerCase().match(/\p{L}{5,}/gu) ?? [];
 
 describe('baralho dos quartetos', () => {
-  test('progressão por etapa: 5 falas, 5 sentidos, depois os quartetos', () => {
-    expect(cartoes.slice(0, 5).every((c) => c.frente.endsWith('qual é a frase?'))).toBe(true);
-    expect(cartoes.slice(5, 10).every((c) => c.frente.endsWith('quer dizer?'))).toBe(true);
-    expect(cartoes[10].frente).toContain('em quantos temas');
+  test('escadinha em 3 baralhos: falas, sentidos, quartetos', () => {
+    const [falas, sentidos, quartetos] = baralhosDosQuartetos();
+    expect(falas.cartoes.map((c) => c.frente.split(':')[0])).toEqual(['Carlos Drummond de Andrade', 'Rui Barbosa', 'Dom Hélder Câmara', 'Graciliano Ramos', 'Eduardo Galeano']);
+    expect(falas.cartoes.every((c) => c.frente.endsWith('qual é a frase?'))).toBe(true);
+    expect(sentidos.cartoes.every((c) => c.frente.endsWith('O que ele quer dizer?'))).toBe(true);
+    expect(sentidos.cartoes[0].frente).toContain('Os lírios não nascem da lei');
+    expect(quartetos.cartoes[0].frente).toContain('em quantos temas');
+    expect(quartetos.cartoes).toHaveLength(14);
+  });
+  test('os 3 baralhos estudam em ordem (não embaralham)', () => {
+    for (const b of baralhosDosQuartetos()) expect(deveManterOrdem(b.nome), b.nome).toBe(true);
   });
   test('frentes únicas (o seed casa o progresso pela frente)', () => {
     expect(new Set(cartoes.map((c) => c.frente)).size).toBe(cartoes.length);

@@ -400,6 +400,14 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   `docs/redacao/fontes/`, os dois fora do git). As cartilhas NÃO dizem que as
   redações tiraram 1000: o teste compara com o nível que o comentário do INEP
   declara (`tests/redacao/niveis-inep.ts`).
+- **Quartetos em escadinha (Pablo, 07/11/2026):** 3 baralhos "Quartetos 1: o que
+  os autores falam", "2: o que eles querem dizer" (a fala na frente), "3: em que
+  quarteto cabem". Estudam SEMPRE inteiros e na ordem (`lib/flashcards/ordem-fixa.ts`);
+  os outros baralhos seguem embaralhados e pela fila do dia. Um baralho só com
+  tudo misturado foi recusado 2 vezes. Tela `/redacao/plano` ("Planejar com os
+  quartetos", cartão abaixo do Treino por partes): tema real dos 28, ele escreve
+  o plano à vontade e o site avalia sem IA (`lib/redacao/plano-quarteto.ts`,
+  veredito de `coringas-por-tema.json`).
 - **Treino por partes = guia da receita de bolso (Pablo, 27/10/2026), sem IA por partes:**
   tema → 2 das 5 causas coringa → tese no molde → introdução, D1, D2,
   conclusão (molde à esquerda, caixa à direita, contador de ~70 caracteres

@@ -566,6 +566,16 @@ export default function RedacaoPage() {
           </span>
           <ArrowRight className="w-5 h-5 shrink-0 transition-transform duration-200 group-hover:translate-x-1" aria-hidden />
         </a>
+        <a
+          href="/redacao/plano"
+          className="group mb-4 flex items-center justify-between gap-4 p-4 rounded-[var(--radius-surface)] border border-primary/30 bg-primary/[0.06] hover:bg-primary/[0.1] t-colors"
+        >
+          <span>
+            <span className="block font-display type-lead font-semibold">Planejar com os quartetos</span>
+            <span className="block type-meta text-muted-foreground mt-1">Um tema do ENEM: diga quem vai em cada parte e veja se dá certo.</span>
+          </span>
+          <ArrowRight className="w-5 h-5 shrink-0 text-primary-text transition-transform duration-200 group-hover:translate-x-1" aria-hidden />
+        </a>
         <nav aria-label="Outras ferramentas de redação" className="flex flex-wrap gap-x-5 gap-y-1 mb-6 type-meta">
           <button onClick={() => setView('history')} className="inline-flex items-center gap-1.5 py-2 text-muted-foreground hover:text-foreground t-colors">
             <History className="w-4 h-4" /> Histórico

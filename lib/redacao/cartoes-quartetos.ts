@@ -1,4 +1,5 @@
-// Baralho "Meus quartetos da redação" (Pablo, 06/11/2026: "2 quartetos vou
+// Baralhos "Quartetos 1, 2 e 3" (eram um só, "Meus quartetos da redação", até
+// 07/11/2026). Pablo, 06/11/2026: "2 quartetos vou
 // decorar para todos os temas que os dois cobrem"; "lembra dos flashcards para
 // decorar os repertórios para não esquecer"). Os 2 quartetos são o melhor par
 // nos 28 temas do ENEM: juntos servem em 25 (docs/redacao/repertorios-coringa.md).
@@ -61,10 +62,13 @@ function cartoesDasFrases(): Cartao[] {
   });
 }
 
+/* A frente repete a fala: no baralho 2 a pessoa lembra o que foi dito e
+ * responde o sentido. */
 function cartoesDosSentidos(): Cartao[] {
   return NOS_QUARTETOS.map((nome) => {
     const k = CORINGAS[nome];
-    return { frente: `O que a frase de ${k.rotulo} quer dizer?`, verso: k.sentido ?? MEMORIA[nome].mecanismo, dica: 'Diga com as suas palavras antes de virar.' };
+    const fala = k.curta ?? k.texto;
+    return { frente: `${k.rotulo}: "${fala}" O que ele quer dizer?`, verso: k.sentido ?? MEMORIA[nome].mecanismo, dica: 'Diga com as suas palavras antes de virar.' };
   });
 }
 
@@ -72,6 +76,23 @@ function cartoesDeOndeEntra(): Cartao[] {
   return NOS_QUARTETOS.map((nome) => ({ frente: `${CORINGAS[nome].rotulo}: em que quarteto e em que parte?`, ...ONDE_ENTRA[nome] }));
 }
 
+export interface BaralhoDosQuartetos {
+  /* Nome e título na lista (a lista ordena por ele: 1, 2, 3). */
+  nome: string;
+  descricao: string;
+  cartoes: Cartao[];
+}
+
+/* Escadinha em 3 baralhos (Pablo, 07/11/2026: "pode dividir em 3 baralhos: o
+ * que os autores falam, o que querem dizer, em que quarteto eles cabem"). */
+export function baralhosDosQuartetos(): BaralhoDosQuartetos[] {
+  return [
+    { nome: 'Quartetos 1: o que os autores falam', descricao: 'As 5 falas dos quartetos, na ordem: Drummond, Rui Barbosa, Dom Hélder, Graciliano e Galeano.', cartoes: cartoesDasFrases() },
+    { nome: 'Quartetos 2: o que eles querem dizer', descricao: 'A fala na frente; o sentido atrás. Diga com as suas palavras antes de virar.', cartoes: cartoesDosSentidos() },
+    { nome: 'Quartetos 3: em que quarteto cabem', descricao: 'Os 2 quartetos servem em 25 dos 28 temas do ENEM: quem vai em cada parte, a lei e qual usar em cada tema.', cartoes: [...cartoesDaVisaoGeral(), ...cartoesDeOndeEntra(), ...cartoesDaEscolha()] },
+  ];
+}
+
 export function cartoesDosQuartetos(): Cartao[] {
-  return [...cartoesDasFrases(), ...cartoesDosSentidos(), ...cartoesDaVisaoGeral(), ...cartoesDeOndeEntra(), ...cartoesDaEscolha()];
+  return baralhosDosQuartetos().flatMap((b) => b.cartoes);
 }
