@@ -1,0 +1,16 @@
+{
+  "_comentario": "Palavras do pedido do Pablo -> skills do projeto que servem. Lido por sugerir-skills.py. Regex sem acento: o pedido é normalizado antes.",
+  "sempre": ["explicar-ao-pablo"],
+  "regras": [
+    { "palavras": "redac|repertori|coringa|quarteto|tese|proposta de interven", "skills": ["decisoes-prepenem"] },
+    { "palavras": "flashcard|baralho|cartao|cartoes|deck|decorar", "skills": ["flashcard-pattern"] },
+    { "palavras": "banco|seed|neon|prisma|schema|tabela", "skills": ["prisma-neon-safety"] },
+    { "palavras": "tela|layout|cor |cores|botao|visual|feio|bonit|design|celular", "skills": ["decisoes-prepenem", "perguntar-ao-pablo"] },
+    { "palavras": "anima|transic|flip|particula|moviment", "skills": ["animation-system"] },
+    { "palavras": "lent|travan|trava |fps|engasg|pesad", "skills": ["medir-fluidez"] },
+    { "palavras": "commit|deploy|vercel|publicar|no ar", "skills": ["vercel-deploy-checklist"] },
+    { "palavras": "navegador|playwright|testar a tela|print|e2e", "skills": ["verificacao-local"] },
+    { "palavras": "ideia|o que (a gente )?faz|pesquis|github|garimp", "skills": ["inventar-daqui", "garimpar-da-web"] },
+    { "palavras": "skill|agente|hook|claude\\.md|memoria", "skills": ["auditar-o-repertorio", "desenhar-skill"] }
+  ]
+}
