@@ -36,7 +36,7 @@ function cartoesDasFrases(): Cartao[] {
   const cartoes: Cartao[] = [];
   for (const nome of NOS_QUARTETOS) {
     const k = CORINGAS[nome];
-    const frase = k.curta ?? `"${k.texto}"`;
+    const frase = k.curta ? `Sem aspas: ${k.curta}` : `"${k.texto}"`;
     cartoes.push({ frente: `${k.rotulo}: qual é a frase?`, verso: `${frase} (${k.fonte}, ${k.quando})`, dica: MEMORIA[nome].imagem });
   }
   for (const nome of NOS_QUARTETOS) {

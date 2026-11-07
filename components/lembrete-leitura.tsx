@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import { X } from 'lucide-react';
@@ -11,6 +11,8 @@ const CHAVE_FECHADO = 'prepenem-leitura-fechado';
 // celular, os botões de Criar prova (22/10/2026). Treino por partes: cobria
 // o Próximo da barra de baixo (27/10/2026).
 const TELA_DE_QUESTAO = /^\/(provas|simulado|treino|redacao\/partes)(\/|$)/;
+/* bottom-4 (16 px) + 16 px de folga entre o conteúdo e o cartão. */
+const ESPACO_ABAIXO_PX = 32;
 
 /* Lembrete de leitura ao entrar no site (Pablo, 21/10/2026): os livros e a
    página onde parou, num cartão no canto. Fechado, só volta na próxima vez
@@ -24,6 +26,26 @@ export function LembreteLeitura() {
   // como lembrado. Entrou pelo Início: a seção Leitura de lá já é o lembrete.
   const [primeiraTela, setPrimeiraTela] = useState<string | null>(null);
   const { paginas, meta, mudarPagina } = useLeitura();
+  const visivel = aberto && pathname !== '/dashboard' && !TELA_DE_QUESTAO.test(pathname ?? '');
+  const cartao = useRef<HTMLElement>(null);
+
+  // Espaço embaixo da página do tamanho do cartão (06/11/2026): no celular,
+  // rolando até o fim, ele cobria 204 de 230 px do último baralho (Redação).
+  // Vale para toda tela, em vez de tirar o cartão de uma tela por vez.
+  useEffect(() => {
+    const el = cartao.current;
+    if (!visivel || !el) return;
+    const reservar = () => {
+      document.body.style.paddingBottom = `${el.offsetHeight + ESPACO_ABAIXO_PX}px`;
+    };
+    reservar();
+    const observador = new ResizeObserver(reservar);
+    observador.observe(el);
+    return () => {
+      observador.disconnect();
+      document.body.style.paddingBottom = '';
+    };
+  }, [visivel]);
 
   useEffect(() => {
     try {
@@ -55,8 +77,9 @@ export function LembreteLeitura() {
 
   return (
     <AnimatePresence>
-      {aberto && pathname !== '/dashboard' && !TELA_DE_QUESTAO.test(pathname ?? '') && (
+      {visivel && (
         <motion.aside
+          ref={cartao}
           aria-label="Lembrete de leitura"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

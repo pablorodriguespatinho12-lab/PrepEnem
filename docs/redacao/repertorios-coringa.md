@@ -310,7 +310,7 @@ coringa nele, mas a ordem não foi a combinada.
 
 Cada ficha mostra "Testado: serviu em X de 11 temas do ENEM de 2015 a 2025".
 Fontes das frases conferidas por checagem: Drummond em *A Rosa do Povo*
-(1945); Rui Barbosa em *Oração aos Moços* (1920); Wiesel na *US News & World
+(1945); Rui Barbosa em *Oração aos Moços* (escrita em 1920, lida e publicada em 1921); Wiesel na *US News & World
 Report* (27/10/1986); Luther King na Carta de Birmingham (1963); Graciliano em
 *Vidas Secas* (1938); Machado em *Quincas Borba*, cap. VI (1891). Dom Hélder
 não tem documento datado: cite "como dizia Dom Hélder".

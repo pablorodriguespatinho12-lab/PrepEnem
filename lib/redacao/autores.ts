@@ -137,8 +137,8 @@ export const CORINGAS: Record<string, Coringa> = {
     },
   },
   'Dom Hélder': {
-    tipo: 'fala', rotulo: 'Dom Hélder Câmara', quando: 'anos 1960 e 1970', prova: { aprovados: 21, temas: 28 },
-    texto: 'Quando dou comida aos pobres, chamam-me de santo. Quando pergunto por que eles não têm comida, chamam-me de comunista.',
+    tipo: 'fala', rotulo: 'Dom Hélder Câmara', quando: 'viveu de 1909 a 1999', prova: { aprovados: 21, temas: 28 },
+    texto: 'Quando dou comida aos pobres, chamam-me de santo. Quando pergunto por que eles são pobres, chamam-me de comunista.',
     sentido: 'Ajudar é aplaudido; perguntar a causa do problema incomoda. Na redação, escreva "como dizia Dom Hélder", sem data.',
     fonte: 'arcebispo de Olinda e Recife',
     amarra: {
@@ -147,7 +147,7 @@ export const CORINGAS: Record<string, Coringa> = {
     },
   },
   'Rui Barbosa': {
-    tipo: 'fala', rotulo: 'Rui Barbosa', quando: '1920', prova: { aprovados: 24, temas: 28 },
+    tipo: 'fala', rotulo: 'Rui Barbosa', quando: '1921', prova: { aprovados: 24, temas: 28 },
     texto: 'Tratar com desigualdade a iguais, ou a desiguais com igualdade, seria desigualdade flagrante, e não igualdade real.',
     sentido: 'Tratar todo mundo igual parece justo, mas quem começa em desvantagem precisa de mais para chegar ao mesmo lugar.',
     curta: 'Tratar igual quem é desigual é desigualdade, e não igualdade real.',
