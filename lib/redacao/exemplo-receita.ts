@@ -8,20 +8,10 @@
 // índices: mudar uma palavra não desloca o grifo dos outros trechos. O "Ver
 // exemplo" de cada passo e a "redação pronta, explicada" saem daqui.
 //
-// Fontes dos fatos (só fato com fonte):
-// - Hospital Colônia de Barbacena (MG), cerca de 60 mil mortos no século XX:
-//   Daniela Arbex, Holocausto Brasileiro (Geração Editorial, 2013).
-// - Lei 10.216, de 6 de abril de 2001 (Reforma Psiquiátrica), art. 2º,
-//   parágrafo único, IX: tratamento "preferencialmente, em serviços
-//   comunitários de saúde mental". planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm
-// - CAPS I (o menor CAPS) indicado para municípios com mais de 20 mil
-//   habitantes: Portaria GM/MS 3.088/2011, art. 7º, § 4º, I
-//   (bvsms.saude.gov.br/bvs/saudelegis/gm/2011/prt3088_23_12_2011_rep.html);
-//   a regra atual fala em 15 mil. Os dois limites ficam acima de 10 mil.
-// - 2.495 dos 5.570 municípios (44,8%) têm até 10 mil habitantes: IBGE,
-//   Censo 2022 (noticiado pela Band, 28/06/2023).
-// - Michel Foucault, História da Loucura (1961); Erving Goffman, Estigma
-//   (1963): as ideias são as de lib/redacao/autores.ts.
+// Só o repertório do Trio 1 (Pablo, 07/11/2026: "eu só sei os trios...
+// nada mais"): Drummond + Pacto na introdução, Rui Barbosa no D1, Dom Hélder
+// no D2. Antes eram Foucault, Barbacena, Goffman, Lei 10.216 e um dado do
+// IBGE, fatos que ele não decorou. Ligação = fato do dia a dia, sem número.
 
 import type { ChaveCausa, ChaveParagrafo } from './receita';
 
@@ -72,15 +62,15 @@ export const REDACAO_GRIFADA: Record<ChaveParagrafo, Frase[]> = {
   introducao: [
     [
       { texto: 'Segundo ' },
-      { texto: 'Michel Foucault, em História da Loucura (1961)', funcao: 'repertorio', nota: 'Ponte, passo 1 (cita): autor, obra e ano.' },
+      { texto: 'Carlos Drummond de Andrade, em "Nosso tempo"', funcao: 'repertorio', nota: 'Ponte, passo 1 (cita): autor e obra. É o Drummond do Trio 1.' },
       { texto: ', ' },
-      { texto: 'a sociedade aprendeu a isolar quem foge da norma', funcao: 'repertorio', nota: 'Ponte, passo 2 (explica): a ideia do autor com suas palavras.' },
+      { texto: 'as leis não bastam, pois os lírios não nascem da lei', funcao: 'repertorio', nota: 'Ponte, passo 2 (explica): a lei sozinha não muda a vida.' },
       { texto: '.' },
     ],
     [
-      { texto: 'Essa reflexão se aplica ao Brasil contemporâneo, onde o estigma associado às doenças mentais tem raízes antigas', funcao: 'ponte', nota: 'Isso é a ponte (passo 3, amarra): liga o autor ao Brasil de hoje, com as palavras do tema.' },
+      { texto: 'Essa reflexão se aplica ao Brasil contemporâneo, onde o estigma associado às doenças mentais ainda persiste', funcao: 'ponte', nota: 'Isso é a ponte (passo 3, amarra): liga o autor ao Brasil de hoje, com as palavras do tema.' },
       { texto: ': ' },
-      { texto: 'no Hospital Colônia de Barbacena (MG), cerca de 60 mil internos morreram ao longo do século XX', funcao: 'explicacao', fato: true, nota: 'Fato histórico com fonte (Daniela Arbex, Holocausto Brasileiro, 2013): prova que o problema é antigo.' },
+      { texto: 'o país assumiu o Pacto Internacional sobre Direitos Econômicos, Sociais e Culturais, mas o preconceito continua', funcao: 'explicacao', nota: 'O Pacto, a lei do Trio 1: o direito existe no papel, mas não na vida.' },
       { texto: '.' },
     ],
     [
@@ -95,11 +85,11 @@ export const REDACAO_GRIFADA: Record<ChaveParagrafo, Frase[]> = {
     ],
     [
       { texto: 'Nesse sentido, ' },
-      { texto: 'o sociólogo Erving Goffman, em Estigma (1963), mostra que a pessoa estigmatizada é reduzida a uma única marca e deixa de ser vista por inteiro', funcao: 'repertorio', nota: 'Repertório do 1º motivo: cita e explica a ideia do autor.' },
+      { texto: 'Rui Barbosa, na "Oração aos Moços", mostra que tratar com igualdade quem está em situação desigual é desigualdade, e não igualdade real', funcao: 'repertorio', nota: 'Repertório do 1º motivo: Rui Barbosa, do Trio 1, citado como ideia.' },
       { texto: '.' },
     ],
     [
-      { texto: 'Isso se verifica no país quando alguém com depressão é chamado de fraco ou exagerado, o que o leva a esconder o sofrimento e a adiar a busca por ajuda', funcao: 'explicacao', nota: 'Ponte, passo 3 (amarra): onde a ideia de Goffman aparece no Brasil.' },
+      { texto: 'Isso se verifica no país quando alguém com depressão recebe a mesma cobrança de quem está saudável e é chamado de fraco, o que o leva a esconder o sofrimento e a adiar a busca por ajuda', funcao: 'explicacao', nota: 'Ponte, passo 3 (amarra): quem está "desigual" aqui é quem está doente.' },
       { texto: '.' },
     ],
     [
@@ -114,12 +104,12 @@ export const REDACAO_GRIFADA: Record<ChaveParagrafo, Frase[]> = {
     ],
     [
       { texto: 'Sob essa ótica, ' },
-      { texto: 'a Lei 10.216, de 2001, conhecida como Lei da Reforma Psiquiátrica, determina que o tratamento ocorra, de preferência, em serviços comunitários, e não pelo isolamento em hospícios', funcao: 'repertorio', fato: true, nota: 'Repertório do 2º motivo e fato histórico: a lei de 2001 manda tratar, de preferência, perto de casa e não trancado num hospício. Não precisa decorar o número da lei.' },
+      { texto: 'Dom Hélder Câmara, chamado de santo ao dar comida aos pobres e de comunista ao perguntar por que eram pobres, evidencia que socorrer é aplaudido, mas investigar a causa incomoda', funcao: 'repertorio', nota: 'Repertório do 2º motivo: Dom Hélder, do Trio 1.' },
       { texto: '.' },
     ],
     [
-      { texto: 'Na realidade brasileira, porém, ' },
-      { texto: '44,8% dos municípios têm até 10 mil habitantes, porte menor que o indicado pelo Ministério da Saúde para abrir um CAPS', funcao: 'explicacao', fato: true, nota: 'Dado com fonte (IBGE, Censo 2022; Portaria 3.088/2011). A conta: o menor CAPS (centro público de saúde mental) é indicado para cidades com mais de 15 mil moradores; quase metade das cidades tem até 10 mil e fica sem. A lei existe, mas o serviço não chega lá.' },
+      { texto: 'Na realidade brasileira, ' },
+      { texto: 'campanhas de conscientização de um mês são elogiadas, mas pouco se pergunta por que é tão difícil conseguir um psicólogo de graça', funcao: 'explicacao', nota: 'Fato do dia a dia, sem número: a "comida" é a campanha; a pergunta incômoda é a falta de psicólogo.' },
       { texto: ', o que agrava o estigma.' },
     ],
     [
@@ -137,7 +127,7 @@ export const REDACAO_GRIFADA: Record<ChaveParagrafo, Frase[]> = {
       { texto: ' ' },
       { texto: 'deve criar campanhas contra o estigma', funcao: 'acao' },
       { texto: ', ' },
-      { texto: 'por meio das redes sociais e das UBS', funcao: 'meio' },
+      { texto: 'por meio das redes sociais e dos postos de saúde', funcao: 'meio' },
       { texto: ', ' },
       { texto: 'com relatos de pacientes', funcao: 'detalhamento' },
       { texto: ', ' },
@@ -148,17 +138,17 @@ export const REDACAO_GRIFADA: Record<ChaveParagrafo, Frase[]> = {
       { texto: 'Já ' },
       { texto: 'o governo federal', funcao: 'agente', nota: 'Proposta 2 (contra a omissão do Estado), agente: quem faz.' },
       { texto: ' ' },
-      { texto: 'deve ampliar os CAPS', funcao: 'acao' },
+      { texto: 'deve contratar psicólogos', funcao: 'acao' },
       { texto: ', ' },
       { texto: 'por meio de verba vinculada', funcao: 'meio', nota: 'Verba vinculada: dinheiro que só pode ser gasto nisso.' },
       { texto: ', ' },
-      { texto: 'com centros regionais para cidades vizinhas', funcao: 'detalhamento' },
+      { texto: 'nas cidades pequenas', funcao: 'detalhamento' },
       { texto: ', ' },
       { texto: 'a fim de levar tratamento ao interior', funcao: 'finalidade' },
       { texto: '.' },
     ],
     [
-      { texto: 'Dessa forma, o país não repetirá o isolamento criticado por Foucault.', funcao: 'fechamento', nota: 'Frase final: volta ao autor da introdução.' },
+      { texto: 'Dessa forma, os lírios de Drummond poderão enfim nascer.', funcao: 'fechamento', nota: 'Frase final: volta ao autor da introdução.' },
     ],
   ],
 };
@@ -182,25 +172,25 @@ export const EXEMPLO_PARAGRAFOS: Record<ChaveParagrafo, ExemploParagrafo> = {
   introducao: {
     frases: frasesDe('introducao'),
     ponte: [
-      { passo: 'Cita', trecho: 'Michel Foucault, em História da Loucura (1961)' },
-      { passo: 'Explica', trecho: 'a sociedade aprendeu a isolar quem foge da norma' },
-      { passo: 'Amarra', trecho: 'em Barbacena (MG), cerca de 60 mil internos morreram ao longo do século XX' },
+      { passo: 'Cita', trecho: 'Carlos Drummond de Andrade, em "Nosso tempo"' },
+      { passo: 'Explica', trecho: 'a lei sozinha não muda a vida' },
+      { passo: 'Amarra', trecho: 'o Brasil assumiu o Pacto, mas o preconceito continua' },
     ],
   },
   desenvolvimento1: {
     frases: frasesDe('desenvolvimento1'),
     ponte: [
-      { passo: 'Cita', trecho: 'Erving Goffman, em Estigma (1963)' },
-      { passo: 'Explica', trecho: 'a pessoa é reduzida a uma única marca' },
-      { passo: 'Amarra', trecho: 'quem tem depressão é chamado de fraco e esconde o sofrimento' },
+      { passo: 'Cita', trecho: 'Rui Barbosa, na "Oração aos Moços"' },
+      { passo: 'Explica', trecho: 'tratar igual quem está desigual não é igualdade real' },
+      { passo: 'Amarra', trecho: 'quem tem depressão recebe a mesma cobrança dos saudáveis e é chamado de fraco' },
     ],
   },
   desenvolvimento2: {
     frases: frasesDe('desenvolvimento2'),
     ponte: [
-      { passo: 'Cita', trecho: 'Lei 10.216, de 2001 (Reforma Psiquiátrica)' },
-      { passo: 'Explica', trecho: 'tratar em serviços perto de casa, não isolar' },
-      { passo: 'Amarra', trecho: '44,8% dos municípios têm até 10 mil habitantes, menos que o mínimo para um CAPS' },
+      { passo: 'Cita', trecho: 'Dom Hélder Câmara' },
+      { passo: 'Explica', trecho: 'socorrer é aplaudido; perguntar a causa incomoda' },
+      { passo: 'Amarra', trecho: 'campanhas de um mês são elogiadas, mas falta psicólogo de graça' },
     ],
   },
   conclusao: { frases: frasesDe('conclusao') },

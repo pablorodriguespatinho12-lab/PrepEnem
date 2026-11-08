@@ -414,8 +414,10 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   dos trios" (`/redacao/modelos`, abas "Trio N · tema" primeiro, em
   `data/redacao/modelos.ts` + `modelos-trios.ts`). **3 temas por trio (07/11/2026:
   "como você usa cada argumento em vários temas"):** Trio 1 = povos tradicionais,
-  saúde mental, dados na internet; Trio 2 = imigração, criança, diferença. Acima da
-  redação, "o mesmo autor em 3 temas" (`components/redacao/autor-em-temas.tsx`):
+  saúde mental, dados na internet, cinema, cuidado; Trio 2 = imigração, criança,
+  diferença, registro civil. TODA redação-modelo é de trio (as 4 antigas com Arendt,
+  Beauvoir, Cinema Paradiso foram reescritas; o teste barra modelo sem trio). Acima da
+  redação, "o mesmo autor em N temas" (`components/redacao/autor-em-temas.tsx`):
   fala igual, 1 linha de ligação por tema (`RedacaoModelo.usos`), molde. Autor só
   em tema onde os juízes aprovaram. **Só o repertório do trio (Pablo, mesmo dia: "eu
   só sei os trios... nada mais"):** a 1ª versão copiou a ligação dos juízes, com
@@ -439,7 +441,9 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   tese já vem com as palavras do tema (`moldeTese`) e avisa sem palavra-chave;
   linha fixa com o tema e [problema] trocado nos moldes (`problemaDoTema`);
   "Ver exemplo" em cada passo, tema de 2020, escrito à mão
-  (`lib/redacao/exemplo-receita.ts`, o teste confere molde, ponte e linhas).
+  (`lib/redacao/exemplo-receita.ts`, o teste confere molde, ponte e linhas). Desde
+  07/11/2026 só com o Trio 1 (Drummond + Pacto, Rui, Dom Hélder); saíram Foucault,
+  Barbacena, Goffman, Lei 10.216 e o dado do IBGE.
   **Rodada de qualidade (Pablo, 28/10/2026):** conteúdo por tema escrito à mão
   em `lib/redacao/conteudo-temas.ts` (7 temas da receita: forma curta, tópico
   por motivo, motivos fracos, perguntas-guia); o tema inteiro só na ponte da
@@ -593,7 +597,7 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   agora". D2, "Mais dicas": ligar o 2º motivo ao 1º ("gerado pelo [motivo 1]").
 - As redações-modelo de `data/redacao/modelos.ts` (textos originais, temas
   reais, cada trecho comentado) seguem em /redacao/modelos. Não inventa
-  texto-base com IA. Repertório nos modelos: só fato verificável.
+  texto-base com IA. Repertório nos modelos: só o dos trios (ver acima).
 
 ## Trilha de Cálculo
 

@@ -10,7 +10,8 @@
 // nível possível de saúde física e mental"; art. 13 educação (que favoreça
 // "a compreensão, a tolerância e a amizade" entre grupos raciais, étnicos ou
 // religiosos); art. 10 proteção especial a crianças e adolescentes; art. 15
-// "desfrutar o progresso científico e suas aplicações".
+// participar da vida cultural e "desfrutar o progresso científico e suas
+// aplicações"; art. 9º "o direito de toda pessoa à previdência social".
 
 export const MOLDE_LIGACAO_SEM_LEI =
   'No Brasil, [o problema do tema] confirma isso: a lei garante [o direito], mas na prática [o que acontece de verdade].';
@@ -22,8 +23,9 @@ export const LEI_CORINGA = {
     { artigo: 'art. 6º e 7º', assunto: 'trabalho digno' },
     { artigo: 'art. 11', assunto: 'alimentação e moradia' },
     { artigo: 'art. 12', assunto: 'saúde física e mental' },
+    { artigo: 'art. 9º', assunto: 'previdência social' },
     { artigo: 'art. 10', assunto: 'proteção da criança e do adolescente' },
     { artigo: 'art. 13', assunto: 'educação' },
-    { artigo: 'art. 15', assunto: 'progresso científico (tecnologia)' },
+    { artigo: 'art. 15', assunto: 'vida cultural e progresso científico' },
   ],
 } as const;
