@@ -1,0 +1,330 @@
+<title>Revisão do dia 2</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+  /* Layout: uma coluna estreita, uma tela por passo, barra Voltar/Próximo presa embaixo. */
+  :root {
+    --bg: #f2f7f8;
+    --surface: #ffffff;
+    --fg: #0f2a30;
+    --muted: #4d676d;
+    --line: #d3e2e5;
+    --accent: #0b7285;
+    --on-accent: #ffffff;
+    --accent-soft: #dff3f7;
+    --good: #17734a;
+    --good-soft: #e0f4ea;
+    --bad: #b3261e;
+    --bad-soft: #fbe6e4;
+    --mat: #0b7285;
+    --bio: #2f7d32;
+    --qui: #9a5b00;
+    --fis: #6a4bb5;
+    --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+    --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0b181c; --surface: #13252a; --fg: #e6f1f3; --muted: #95afb5; --line: #27424a;
+      --accent: #22c7e0; --on-accent: #06242a; --accent-soft: #123a44;
+      --good: #58d597; --good-soft: #123a2a; --bad: #ff8f85; --bad-soft: #45201d;
+      --mat: #22c7e0; --bio: #7fd083; --qui: #f0b45a; --fis: #b7a2f2;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0b181c; --surface: #13252a; --fg: #e6f1f3; --muted: #95afb5; --line: #27424a;
+    --accent: #22c7e0; --on-accent: #06242a; --accent-soft: #123a44;
+    --good: #58d597; --good-soft: #123a2a; --bad: #ff8f85; --bad-soft: #45201d;
+    --mat: #22c7e0; --bio: #7fd083; --qui: #f0b45a; --fis: #b7a2f2;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--fg);
+    font-family: var(--font-body); font-size: 17px; line-height: 1.55;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 20px 0;
+  }
+  #app { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; padding-bottom: 28px; }
+  h1, h2 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+  h1 { font-size: clamp(1.9rem, 6vw, 2.6rem); font-weight: 700; letter-spacing: -0.01em; }
+  h2 { font-size: clamp(1.4rem, 4.6vw, 1.8rem); font-weight: 600; }
+  p { margin: 0; }
+  button { font: inherit; color: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  button:focus { outline: none; }
+  button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .rotulo { font-size: 0.8rem; font-weight: 600; color: var(--muted); }
+  .suave { color: var(--muted); }
+  .num { font-variant-numeric: tabular-nums; }
+
+  .pilula {
+    border: 0; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+    font-weight: 600; padding: 13px 24px; min-height: 48px;
+  }
+  .pilula[disabled] { opacity: 0.4; cursor: default; }
+  .fantasma {
+    border: 1px solid var(--line); border-radius: 999px; background: transparent;
+    padding: 12px 20px; min-height: 48px; font-weight: 500;
+  }
+  .fantasma[disabled] { opacity: 0.4; cursor: default; }
+
+  /* Início */
+  .topo { display: flex; flex-direction: column; gap: 8px; }
+  .continuar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .grupo { display: flex; flex-direction: column; gap: 4px; }
+  .grupo-titulo { display: flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  .ponto { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+  .linha {
+    display: flex; align-items: center; gap: 12px; width: 100%; text-align: left;
+    background: transparent; border: 0; border-bottom: 1px solid var(--line); padding: 12px 4px; min-height: 56px;
+  }
+  .linha:hover { background: var(--accent-soft); }
+  .linha-texto { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+  .linha-tema { font-weight: 600; }
+  .linha-estado { flex: none; font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+  .linha-estado.feito { color: var(--good); }
+
+  /* Estudo */
+  .cabeca { display: flex; flex-direction: column; gap: 10px; }
+  .voltar-inicio { align-self: flex-start; background: transparent; border: 0; padding: 6px 0; color: var(--muted); font-weight: 500; }
+  .passos { display: flex; gap: 6px; }
+  .passo { flex: 1; height: 5px; border-radius: 999px; background: var(--line); }
+  .passo.feito { background: var(--accent); opacity: 0.45; }
+  .passo.agora { background: var(--accent); }
+  .tela { display: flex; flex-direction: column; gap: 16px; animation: entra 0.28s ease-out; }
+  @keyframes entra { from { opacity: 0; transform: translateX(14px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .tela { animation: none; } }
+  .nivel { font-size: 0.8rem; font-weight: 600; color: var(--accent); }
+  .aula { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .aula li { background: var(--surface); border-radius: 14px; padding: 14px 16px; font-size: 1.05rem; }
+  .enunciado { white-space: pre-line; font-size: 1.05rem; max-width: 65ch; }
+  .alts { display: flex; flex-direction: column; gap: 8px; }
+  .alt {
+    display: flex; align-items: flex-start; gap: 12px; width: 100%; text-align: left;
+    background: var(--surface); border: 1.5px solid var(--line); border-radius: 14px; padding: 12px 14px; min-height: 52px;
+  }
+  .alt:not([disabled]):hover { border-color: var(--accent); }
+  .alt[disabled] { cursor: default; }
+  .letra { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 600; font-size: 0.9rem; display: grid; place-items: center; }
+  .alt-texto { flex: 1; min-width: 0; }
+  .marca { flex: none; font-size: 0.78rem; font-weight: 600; padding-top: 4px; }
+  .alt.certa { border-color: var(--good); background: var(--good-soft); }
+  .alt.certa .marca { color: var(--good); }
+  .alt.errada { border-color: var(--bad); background: var(--bad-soft); }
+  .alt.errada .marca { color: var(--bad); }
+  .resolucao { background: var(--surface); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 6px; }
+  .veredito { font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; }
+  .veredito.ok { color: var(--good); }
+  .veredito.nao { color: var(--bad); }
+  .barra {
+    position: sticky; bottom: 0; display: flex; justify-content: space-between; gap: 12px;
+    background: var(--bg); padding-block: 12px calc(12px + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid var(--line);
+  }
+  .fim { background: var(--accent-soft); border-radius: 14px; padding: 16px; }
+</style>
+
+<div id="app"></div>
+
+<script src="dia-2/matematica.js"></script>
+<script src="dia-2/biologia.js"></script>
+<script src="dia-2/quimica.js"></script>
+<script src="dia-2/fisica.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var CONTEUDOS = window.DIA2 || [];
+  var NIVEIS = ["Fácil", "Médio", "Difícil", "ENEM real"];
+  var LETRAS = ["A", "B", "C", "D", "E"];
+  var MATERIAS = [
+    { nome: "Matemática", cor: "var(--mat)" },
+    { nome: "Biologia", cor: "var(--bio)" },
+    { nome: "Química", cor: "var(--qui)" },
+    { nome: "Física", cor: "var(--fis)" }
+  ];
+  var CHAVE = "revisao-dia-2-v1";
+  var PROVAS = 15;
+  var app = document.getElementById("app");
+
+  // respostas[tema] = [índice marcado ou null] para as 4 questões
+  var respostas = ler();
+  var estado = { tela: "inicio", conteudo: 0, passo: 0 };
+
+  function ler() {
+    try { return JSON.parse(localStorage.getItem(CHAVE) || "{}") || {}; } catch (erro) { return {}; }
+  }
+  function gravar() {
+    try { localStorage.setItem(CHAVE, JSON.stringify(respostas)); } catch (erro) { /* sem armazenamento: a página segue funcionando */ }
+  }
+  function marcadas(c) { return respostas[c.t] || [null, null, null, null]; }
+  function feitas(c) { return marcadas(c).filter(function (r) { return r !== null; }).length; }
+  function certas(c) {
+    return marcadas(c).filter(function (r, i) { return r !== null && r === c.q[i].g; }).length;
+  }
+
+  function el(tag, props, filhos) {
+    var no = document.createElement(tag);
+    Object.keys(props || {}).forEach(function (k) {
+      if (k === "texto") no.textContent = props[k];
+      else if (k === "aoClicar") no.addEventListener("click", props[k]);
+      else if (k === "estilo") no.style.cssText = props[k];
+      else if (props[k] !== false && props[k] != null) no.setAttribute(k, props[k] === true ? "" : props[k]);
+    });
+    (filhos || []).forEach(function (f) { if (f) no.appendChild(f); });
+    return no;
+  }
+
+  function ir(novo) {
+    estado = Object.assign({}, estado, novo);
+    desenhar();
+    window.scrollTo(0, 0);
+  }
+
+  function desenhar() {
+    app.replaceChildren.apply(app, estado.tela === "inicio" ? telaInicio() : telaEstudo());
+  }
+
+  function telaInicio() {
+    var total = CONTEUDOS.length;
+    var prontos = CONTEUDOS.filter(function (c) { return feitas(c) === 4; }).length;
+    var proximo = CONTEUDOS.findIndex(function (c) { return feitas(c) < 4; });
+
+    var topo = el("header", { class: "topo" }, [
+      el("p", { class: "rotulo", texto: "Matemática e Ciências da Natureza" }),
+      el("h1", { texto: "Dia 2: o que mais cai" }),
+      el("p", { class: "suave", texto: total + " conteúdos que somam 70% das questões do ENEM de 2009 a 2023. Em cada um: explicação, fácil, médio, difícil e uma questão real." })
+    ]);
+
+    var continuar = el("div", { class: "continuar" }, [
+      proximo >= 0
+        ? el("button", { class: "pilula", id: "continuar", texto: (prontos === 0 && feitas(CONTEUDOS[proximo]) === 0 ? "Começar: " : "Continuar: ") + CONTEUDOS[proximo].t,
+            aoClicar: function () { abrir(proximo); } })
+        : null,
+      el("span", { class: "suave num", texto: prontos + " de " + total + " feitos" })
+    ]);
+
+    var grupos = MATERIAS.map(function (m) {
+      var linhas = CONTEUDOS.map(function (c, i) { return { c: c, i: i }; })
+        .filter(function (x) { return x.c.m === m.nome; })
+        .map(function (x) {
+          var f = feitas(x.c);
+          var estadoTexto = f === 0 ? "Começar" : f < 4 ? "Parou no passo " + (f + 2) + " de 5" : certas(x.c) + " de 4 certas";
+          return el("button", { class: "linha", aoClicar: function () { abrir(x.i); } }, [
+            el("span", { class: "linha-texto" }, [
+              el("span", { class: "linha-tema", texto: x.c.t }),
+              el("span", { class: "rotulo num", texto: x.c.n + " questões em " + PROVAS + " provas" })
+            ]),
+            el("span", { class: "linha-estado" + (f === 4 ? " feito" : ""), texto: estadoTexto })
+          ]);
+        });
+      return el("section", { class: "grupo" }, [
+        el("div", { class: "grupo-titulo" }, [
+          el("span", { class: "ponto", estilo: "background:" + m.cor }),
+          el("span", { texto: m.nome })
+        ])
+      ].concat(linhas));
+    });
+
+    return [topo, continuar].concat(grupos);
+  }
+
+  function abrir(i) {
+    var f = feitas(CONTEUDOS[i]);
+    ir({ tela: "estudo", conteudo: i, passo: f === 4 || f === 0 ? 0 : f + 1 });
+  }
+
+  function telaEstudo() {
+    var c = CONTEUDOS[estado.conteudo];
+    var passo = estado.passo;
+    var marc = marcadas(c);
+
+    var cabeca = el("header", { class: "cabeca" }, [
+      el("button", { class: "voltar-inicio", texto: "‹ Todos os conteúdos", aoClicar: function () { ir({ tela: "inicio" }); } }),
+      el("p", { class: "rotulo", texto: c.m + " · " + c.t }),
+      el("div", { class: "passos", role: "img", "aria-label": "Passo " + (passo + 1) + " de 5" },
+        [0, 1, 2, 3, 4].map(function (p) {
+          return el("span", { class: "passo" + (p === passo ? " agora" : p < passo ? " feito" : "") });
+        }))
+    ]);
+
+    var corpo = passo === 0 ? telaAula(c) : telaQuestao(c, passo - 1, marc);
+    var respondida = passo === 0 || marc[passo - 1] !== null;
+    var ultimo = passo === 4;
+
+    var barra = el("div", { class: "barra" }, [
+      el("button", { class: "fantasma", texto: "Voltar", disabled: passo === 0,
+        aoClicar: function () { ir({ passo: passo - 1 }); } }),
+      el("button", { class: "pilula", id: "proximo", disabled: !respondida,
+        texto: ultimo ? "Concluir" : passo === 0 ? "Ir para o fácil" : "Próximo",
+        aoClicar: function () { if (ultimo) ir({ tela: "inicio" }); else ir({ passo: passo + 1 }); } })
+    ]);
+
+    return [cabeca, corpo, barra];
+  }
+
+  function telaAula(c) {
+    return el("main", { class: "tela" }, [
+      el("p", { class: "nivel", texto: "Explicação · passo 1 de 5" }),
+      el("h2", { texto: c.t }),
+      el("p", { class: "suave num", texto: "Caiu em " + c.n + " questões nas " + PROVAS + " provas de 2009 a 2023." }),
+      el("ul", { class: "aula" }, c.aula.map(function (linha) { return el("li", { texto: linha }); }))
+    ]);
+  }
+
+  function telaQuestao(c, i, marc) {
+    var q = c.q[i];
+    var marcada = marc[i];
+    var respondida = marcada !== null;
+    var rotulo = NIVEIS[i] + " · passo " + (i + 2) + " de 5" + (q.o ? " · " + q.o : "");
+
+    var alts = q.a.map(function (texto, k) {
+      var classe = "alt";
+      var marca = "";
+      if (respondida && k === q.g) { classe += " certa"; marca = "Certa"; }
+      else if (respondida && k === marcada) { classe += " errada"; marca = "Sua resposta"; }
+      return el("button", { class: classe, disabled: respondida,
+        aoClicar: function () { responder(c, i, k); } }, [
+        el("span", { class: "letra", texto: LETRAS[k] }),
+        el("span", { class: "alt-texto", texto: texto }),
+        marca ? el("span", { class: "marca", texto: marca }) : null
+      ]);
+    });
+
+    var acertou = marcada === q.g;
+    var resolucao = respondida ? el("section", { class: "resolucao", id: "resolucao" }, [
+      el("p", { class: "veredito " + (acertou ? "ok" : "nao"), texto: acertou ? "Certo." : "A certa é a " + LETRAS[q.g] + "." }),
+      el("p", { texto: q.r })
+    ]) : null;
+
+    var fim = respondida && i === 3 ? el("p", { class: "fim num", texto: "Conteúdo feito: " + certas(c) + " de 4 certas." }) : null;
+
+    return el("main", { class: "tela" }, [
+      el("p", { class: "nivel", texto: rotulo }),
+      el("p", { class: "enunciado", texto: q.e }),
+      el("div", { class: "alts" }, alts),
+      resolucao,
+      fim
+    ]);
+  }
+
+  function responder(c, i, k) {
+    var nova = marcadas(c).slice();
+    nova[i] = k;
+    var copia = Object.assign({}, respostas);
+    copia[c.t] = nova;
+    respostas = copia;
+    gravar();
+    desenhar();
+    var caixa = document.getElementById("resolucao");
+    var semMovimento = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (caixa) caixa.scrollIntoView({ behavior: semMovimento ? "auto" : "smooth", block: "nearest" });
+  }
+
+  desenhar();
+})();
+</script>
