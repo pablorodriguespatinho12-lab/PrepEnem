@@ -18,7 +18,9 @@ CORRECAO = re.compile(
     r"\b(errad[oa]|errou|nao era (isso|assim|pra)|nao e isso|nao foi isso|eu quis dizer"
     r"|ja (te )?(falei|disse|pedi)|nao funcion|nao resolv|nao apareceu?|nao mudou"
     r"|continua (errad|igual|o mesmo|quebr)|quebrad|piorou|(vc|voce) esqueceu"
-    r"|[gh]eneric|(esses?|essas?|isso|isse) (ai )?ja exist|nao gostei|ficou (feio|ruim))"
+    r"|[gh]eneric|(esses?|essas?|isso|isse) (ai )?ja exist|nao gostei|ficou (feio|ruim)"
+    r"|nao faz sentido|(nao|n) cometa|esse erro|(nao|n) deu\b|(resolve|arruma|conserta|corrige) (isso|esse|essa)"
+    r"|que .{1,25} e esse\b|por que (voce|vc) |pq (voce|vc) )"
 )
 AVISO = (
     "[aprender] Esta mensagem parece correção de um erro meu. Se for, carregar a skill "
