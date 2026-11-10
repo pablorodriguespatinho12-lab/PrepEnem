@@ -5,14 +5,14 @@ window.DIA2 = (window.DIA2 || []).concat([
     aula: [
       "Química orgânica estuda os compostos de carbono. O carbono faz 4 ligações.",
       "Função orgânica é a família da molécula. Você reconhece por um pedaço dela.",
-      "Álcool: tem OH preso a um carbono (etanol). Ácido carboxílico: tem COOH (vinagre). Éster: tem COO no meio da cadeia (aromas de fruta, gorduras). Amina: tem nitrogênio (N).",
+      "Álcool: tem OH preso a um carbono que só faz ligações simples (etanol). OH preso ao anel benzênico é fenol. Ácido carboxílico: tem COOH (vinagre). Éster: tem COO no meio da cadeia (aromas de fruta, gorduras). Amina: tem nitrogênio (N).",
       "Ácido + álcool → éster + água (esterificação). Gordura + base forte, como a soda cáustica → sabão (saponificação).",
       "Cadeia saturada: só ligações simples entre os carbonos. O anel benzênico (C6H5 nas fórmulas) tem ligações duplas, então não é saturado."
     ],
     q: [
       { e: "Qual grupo identifica um álcool?",
-        a: ["OH ligado a um carbono.", "COOH no fim da cadeia.", "COO no meio da cadeia.", "Um átomo de nitrogênio.", "Uma ligação dupla entre carbonos."], g: 0,
-        r: "Álcool tem o grupo OH preso a um carbono. COOH é ácido carboxílico. COO no meio é éster. Nitrogênio é amina." },
+        a: ["OH ligado a um carbono de ligações simples.", "COOH no fim da cadeia.", "COO no meio da cadeia.", "Um átomo de nitrogênio.", "Uma ligação dupla entre carbonos."], g: 0,
+        r: "Álcool tem o grupo OH preso a um carbono de ligações simples. COOH é ácido carboxílico. COO no meio é éster. Nitrogênio é amina." },
       { e: "O vinagre tem ácido acético (CH3COOH) e a cachaça tem etanol (CH3CH2OH). Quando um ácido carboxílico reage com um álcool, forma-se água e um composto usado como aroma artificial.\nA função orgânica desse composto é",
         a: ["álcool.", "amina.", "éster.", "cetona.", "hidrocarboneto."], g: 2,
         r: "Ácido + álcool → éster + água. Essa reação se chama esterificação. Muitos aromas de fruta são ésteres." },

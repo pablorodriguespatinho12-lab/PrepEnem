@@ -97,7 +97,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Matemática", t: "Geometria Plana", n: 67,
     aula: [
-      "Perímetro é a volta (a soma dos lados). Área é o que cabe dentro.",
+      "Perímetro é a volta (a soma dos lados). Área é o tamanho da superfície, o chão que a figura cobre.",
       "Retângulo: área = base × altura. Triângulo: base × altura ÷ 2.",
       "Círculo: área = π × raio². Volta = 2 × π × raio. O raio é a metade do diâmetro. O π (pi) vale cerca de 3,14.",
       "Triângulo retângulo é o que tem um canto de 90°. Pitágoras: cateto² + cateto² = hipotenusa². A hipotenusa é o lado maior, de frente para o canto de 90°. Os catetos são os outros dois.",

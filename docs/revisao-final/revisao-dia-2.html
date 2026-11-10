@@ -41,7 +41,9 @@
   }
 
   * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
   body {
+    margin: 0;
     background: var(--bg); color: var(--fg);
     font-family: var(--font-body); font-size: 17px; line-height: 1.55;
     padding-left: max(16px, env(safe-area-inset-left, 0px));
@@ -90,7 +92,7 @@
 
   /* Estudo */
   .cabeca { display: flex; flex-direction: column; gap: 10px; }
-  .voltar-inicio { align-self: flex-start; background: transparent; border: 0; padding: 6px 0; color: var(--muted); font-weight: 500; }
+  .voltar-inicio { align-self: flex-start; background: transparent; border: 0; padding: 6px 0; color: var(--muted); font-weight: 500; text-decoration: none; }
   .passos { display: flex; gap: 6px; }
   .passo { flex: 1; height: 5px; border-radius: 999px; background: var(--line); }
   .passo.feito { background: var(--accent); opacity: 0.45; }
@@ -126,6 +128,25 @@
     border-top: 1px solid var(--line);
   }
   .fim { background: var(--accent-soft); border-radius: 14px; padding: 16px; }
+
+  /* Cartão de virar: flip firme de 0,42 s, sem mola. Sob movimento reduzido fica mais curto, mas continua. */
+  .cartao { perspective: 1200px; width: 100%; background: transparent; border: 0; padding: 0; text-align: left; }
+  .cartao-dentro { display: grid; transform-style: preserve-3d; transition: transform 0.42s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .cartao.virado .cartao-dentro { transform: rotateY(180deg); }
+  @media (prefers-reduced-motion: reduce) { .cartao-dentro { transition: transform 0.25s ease-out; } }
+  .face {
+    grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden;
+    background: var(--surface); border: 1.5px solid var(--line); border-radius: 18px;
+    padding: 22px 20px; min-height: 210px; display: flex; flex-direction: column; justify-content: center; gap: 10px;
+  }
+  .face.verso { transform: rotateY(180deg); border-color: var(--accent); }
+  .face-frente { font-family: var(--font-display); font-weight: 600; font-size: 1.3rem; line-height: 1.25; text-wrap: balance; }
+  .face-verso { font-size: 1.12rem; }
+  .dupla { display: flex; gap: 12px; }
+  .dupla button { flex: 1; border-radius: 999px; min-height: 52px; font-weight: 600; border: 1.5px solid; }
+  .errei { border-color: var(--bad); color: var(--bad); background: var(--bad-soft); }
+  .acertei { border-color: var(--good); color: var(--good); background: var(--good-soft); }
+  .virar { align-self: stretch; }
 </style>
 
 <div id="app"></div>
@@ -134,11 +155,13 @@
 <script src="dia-2/biologia.js"></script>
 <script src="dia-2/quimica.js"></script>
 <script src="dia-2/fisica.js"></script>
+<script src="dia-2/cartoes.js"></script>
 <script>
 (function () {
   "use strict";
 
   var CONTEUDOS = window.DIA2 || [];
+  var CARTOES = window.DIA2_CARTOES || {};
   var NIVEIS = ["Fácil", "Médio", "Difícil", "ENEM real"];
   var LETRAS = ["A", "B", "C", "D", "E"];
   var MATERIAS = [
@@ -148,23 +171,38 @@
     { nome: "Física", cor: "var(--fis)" }
   ];
   var CHAVE = "revisao-dia-2-v1";
+  var CHAVE_CARTOES = "revisao-dia-2-cartoes-v1";
   var PROVAS = 15;
+  var PASSOS = 6; // explicação, cartões, fácil, médio, difícil, ENEM
+  var PRIMEIRA_QUESTAO = 2;
+  // A mesma página é publicada no link e copiada para o site (public/revisao/): só no site há para onde voltar.
+  var DENTRO_DO_SITE = location.pathname.indexOf("/revisao/") === 0;
   var app = document.getElementById("app");
 
   // respostas[tema] = [índice marcado ou null] para as 4 questões
-  var respostas = ler();
-  var estado = { tela: "inicio", conteudo: 0, passo: 0 };
+  var respostas = ler(CHAVE);
+  // cartoes[tema] = [true (acertei), false (errei) ou null] para cada cartão
+  var cartoes = ler(CHAVE_CARTOES);
+  var estado = { tela: "inicio", conteudo: 0, passo: 0, fila: [] };
 
-  function ler() {
-    try { return JSON.parse(localStorage.getItem(CHAVE) || "{}") || {}; } catch (erro) { return {}; }
+  function ler(chave) {
+    try { return JSON.parse(localStorage.getItem(chave) || "{}") || {}; } catch (erro) { return {}; }
   }
-  function gravar() {
-    try { localStorage.setItem(CHAVE, JSON.stringify(respostas)); } catch (erro) { /* sem armazenamento: a página segue funcionando */ }
+  function gravar(chave, valor) {
+    try { localStorage.setItem(chave, JSON.stringify(valor)); } catch (erro) { /* sem armazenamento: a página segue funcionando */ }
   }
   function marcadas(c) { return respostas[c.t] || [null, null, null, null]; }
   function feitas(c) { return marcadas(c).filter(function (r) { return r !== null; }).length; }
   function certas(c) {
     return marcadas(c).filter(function (r, i) { return r !== null && r === c.q[i].g; }).length;
+  }
+  function cartoesDe(tema) { return CARTOES[tema] || []; }
+  function filaDoTema(tema) { return cartoesDe(tema).map(function (_, k) { return { t: tema, k: k }; }); }
+  function filaDosErrados() {
+    return CONTEUDOS.reduce(function (lista, c) {
+      var estadoDoTema = cartoes[c.t] || [];
+      return lista.concat(filaDoTema(c.t).filter(function (item) { return estadoDoTema[item.k] === false; }));
+    }, []);
   }
 
   function el(tag, props, filhos) {
@@ -180,30 +218,42 @@
   }
 
   function ir(novo) {
-    estado = Object.assign({}, estado, novo);
+    var proximo = Object.assign({}, estado, novo);
+    // ao chegar no passo dos cartões, a fila começa com os 5 do conteúdo
+    if (proximo.tela === "estudo" && proximo.passo === 1 && !novo.fila) {
+      proximo.fila = filaDoTema(CONTEUDOS[proximo.conteudo].t);
+    }
+    estado = proximo;
     desenhar();
     window.scrollTo(0, 0);
   }
 
   function desenhar() {
-    app.replaceChildren.apply(app, estado.tela === "inicio" ? telaInicio() : telaEstudo());
+    var telas = estado.tela === "inicio" ? telaInicio() : estado.tela === "errados" ? telaErrados() : telaEstudo();
+    app.replaceChildren.apply(app, telas);
   }
 
   function telaInicio() {
     var total = CONTEUDOS.length;
     var prontos = CONTEUDOS.filter(function (c) { return feitas(c) === 4; }).length;
     var proximo = CONTEUDOS.findIndex(function (c) { return feitas(c) < 4; });
+    var errados = filaDosErrados();
 
     var topo = el("header", { class: "topo" }, [
+      DENTRO_DO_SITE ? el("a", { class: "voltar-inicio", href: "/provas", texto: "‹ Voltar ao Treino" }) : null,
       el("p", { class: "rotulo", texto: "Matemática e Ciências da Natureza" }),
       el("h1", { texto: "Dia 2: o que mais cai" }),
-      el("p", { class: "suave", texto: total + " conteúdos que somam 70% das questões do ENEM de 2009 a 2023. Em cada um: explicação, fácil, médio, difícil e uma questão real." })
+      el("p", { class: "suave", texto: total + " conteúdos que somam 70% das questões do ENEM de 2009 a 2023. Em cada um: explicação, cartões, fácil, médio, difícil e uma questão real." })
     ]);
 
     var continuar = el("div", { class: "continuar" }, [
       proximo >= 0
         ? el("button", { class: "pilula", id: "continuar", texto: (prontos === 0 && feitas(CONTEUDOS[proximo]) === 0 ? "Começar: " : "Continuar: ") + CONTEUDOS[proximo].t,
             aoClicar: function () { abrir(proximo); } })
+        : null,
+      errados.length
+        ? el("button", { class: "fantasma num", id: "errados", texto: "Cartões que errei: " + errados.length,
+            aoClicar: function () { ir({ tela: "errados", fila: errados }); } })
         : null,
       el("span", { class: "suave num", texto: prontos + " de " + total + " feitos" })
     ]);
@@ -213,7 +263,7 @@
         .filter(function (x) { return x.c.m === m.nome; })
         .map(function (x) {
           var f = feitas(x.c);
-          var estadoTexto = f === 0 ? "Começar" : f < 4 ? "Parou no passo " + (f + 2) + " de 5" : certas(x.c) + " de 4 certas";
+          var estadoTexto = f === 0 ? "Começar" : f < 4 ? "Parou no passo " + (f + PRIMEIRA_QUESTAO + 1) + " de " + PASSOS : certas(x.c) + " de 4 certas";
           return el("button", { class: "linha", aoClicar: function () { abrir(x.i); } }, [
             el("span", { class: "linha-texto" }, [
               el("span", { class: "linha-tema", texto: x.c.t }),
@@ -235,32 +285,33 @@
 
   function abrir(i) {
     var f = feitas(CONTEUDOS[i]);
-    ir({ tela: "estudo", conteudo: i, passo: f === 4 || f === 0 ? 0 : f + 1 });
+    ir({ tela: "estudo", conteudo: i, passo: f === 4 || f === 0 ? 0 : f + PRIMEIRA_QUESTAO });
   }
 
   function telaEstudo() {
     var c = CONTEUDOS[estado.conteudo];
     var passo = estado.passo;
     var marc = marcadas(c);
+    var iQuestao = passo - PRIMEIRA_QUESTAO;
 
     var cabeca = el("header", { class: "cabeca" }, [
       el("button", { class: "voltar-inicio", texto: "‹ Todos os conteúdos", aoClicar: function () { ir({ tela: "inicio" }); } }),
       el("p", { class: "rotulo", texto: c.m + " · " + c.t }),
-      el("div", { class: "passos", role: "img", "aria-label": "Passo " + (passo + 1) + " de 5" },
-        [0, 1, 2, 3, 4].map(function (p) {
+      el("div", { class: "passos", role: "img", "aria-label": "Passo " + (passo + 1) + " de " + PASSOS },
+        Array.from({ length: PASSOS }, function (_, p) {
           return el("span", { class: "passo" + (p === passo ? " agora" : p < passo ? " feito" : "") });
         }))
     ]);
 
-    var corpo = passo === 0 ? telaAula(c) : telaQuestao(c, passo - 1, marc);
-    var respondida = passo === 0 || marc[passo - 1] !== null;
-    var ultimo = passo === 4;
+    var corpo = passo === 0 ? telaAula(c) : passo === 1 ? telaCartoes(c) : telaQuestao(c, iQuestao, marc);
+    var respondida = iQuestao < 0 || marc[iQuestao] !== null;
+    var ultimo = passo === PASSOS - 1;
+    var rotuloProximo = ultimo ? "Concluir" : passo === 0 ? "Ir para os cartões" : passo === 1 ? "Ir para o fácil" : "Próximo";
 
     var barra = el("div", { class: "barra" }, [
       el("button", { class: "fantasma", texto: "Voltar", disabled: passo === 0,
         aoClicar: function () { ir({ passo: passo - 1 }); } }),
-      el("button", { class: "pilula", id: "proximo", disabled: !respondida,
-        texto: ultimo ? "Concluir" : passo === 0 ? "Ir para o fácil" : "Próximo",
+      el("button", { class: "pilula", id: "proximo", disabled: !respondida, texto: rotuloProximo,
         aoClicar: function () { if (ultimo) ir({ tela: "inicio" }); else ir({ passo: passo + 1 }); } })
     ]);
 
@@ -269,18 +320,85 @@
 
   function telaAula(c) {
     return el("main", { class: "tela" }, [
-      el("p", { class: "nivel", texto: "Explicação · passo 1 de 5" }),
+      el("p", { class: "nivel", texto: "Explicação · passo 1 de " + PASSOS }),
       el("h2", { texto: c.t }),
       el("p", { class: "suave num", texto: "Caiu em " + c.n + " questões nas " + PROVAS + " provas de 2009 a 2023." }),
       el("ul", { class: "aula" }, c.aula.map(function (linha) { return el("li", { texto: linha }); }))
     ]);
   }
 
+  function telaCartoes(c) {
+    var total = cartoesDe(c.t).length;
+    var filhos = [el("p", { class: "nivel num", texto: "Cartões · passo 2 de " + PASSOS + (estado.fila.length ? " · faltam " + estado.fila.length : "") })];
+    if (estado.fila.length) filhos = filhos.concat(blocoDoCartao());
+    else filhos.push(el("p", { class: "fim num", texto: "Cartões feitos: " + total + " de " + total + "." }));
+    return el("main", { class: "tela" }, filhos);
+  }
+
+  function telaErrados() {
+    var cabeca = el("header", { class: "cabeca" }, [
+      el("button", { class: "voltar-inicio", texto: "‹ Todos os conteúdos", aoClicar: function () { ir({ tela: "inicio" }); } }),
+      el("h2", { texto: "Cartões que errei" })
+    ]);
+    var filhos = estado.fila.length
+      ? [el("p", { class: "nivel num", texto: estado.fila[0].t + " · faltam " + estado.fila.length })].concat(blocoDoCartao())
+      : [el("p", { class: "fim", texto: "Nenhum cartão errado agora." }),
+         el("button", { class: "pilula", texto: "Voltar aos conteúdos", aoClicar: function () { ir({ tela: "inicio" }); } })];
+    return [cabeca, el("main", { class: "tela" }, filhos)];
+  }
+
+  // O cartão do topo da fila: toca (ou "Virar") para ver a resposta, depois Errei ou Acertei.
+  function blocoDoCartao() {
+    var item = estado.fila[0];
+    var dados = cartoesDe(item.t)[item.k];
+    var verso = el("span", { class: "face verso", "aria-hidden": "true" }, [
+      el("span", { class: "rotulo", texto: "Resposta" }),
+      el("span", { class: "face-verso", texto: dados.v })
+    ]);
+    var cartao = el("button", { class: "cartao", id: "cartao", "aria-label": "Virar o cartão" }, [
+      el("span", { class: "cartao-dentro" }, [
+        el("span", { class: "face" }, [
+          el("span", { class: "rotulo", texto: "Pergunta" }),
+          el("span", { class: "face-frente", texto: dados.f })
+        ]),
+        verso
+      ])
+    ]);
+    var virar = el("button", { class: "fantasma virar", id: "virar", texto: "Virar" });
+    var dupla = el("div", { class: "dupla", hidden: true }, [
+      el("button", { class: "errei", id: "errei", texto: "Errei", aoClicar: function () { marcarCartao(item, false); } }),
+      el("button", { class: "acertei", id: "acertei", texto: "Acertei", aoClicar: function () { marcarCartao(item, true); } })
+    ]);
+    function mostrarVerso() {
+      var virado = cartao.classList.toggle("virado");
+      verso.setAttribute("aria-hidden", virado ? "false" : "true");
+      // depois da 1ª virada os botões de resposta ficam; virar de novo só relê a pergunta
+      virar.hidden = true;
+      dupla.hidden = false;
+    }
+    cartao.addEventListener("click", mostrarVerso);
+    virar.addEventListener("click", mostrarVerso);
+    return [cartao, virar, dupla];
+  }
+
+  function marcarCartao(item, acertou) {
+    var doTema = (cartoes[item.t] || cartoesDe(item.t).map(function () { return null; })).slice();
+    doTema[item.k] = acertou;
+    var copia = Object.assign({}, cartoes);
+    copia[item.t] = doTema;
+    cartoes = copia;
+    gravar(CHAVE_CARTOES, cartoes);
+    // errou: o cartão volta para o fim da fila
+    var resto = estado.fila.slice(1);
+    estado = Object.assign({}, estado, { fila: acertou ? resto : resto.concat([item]) });
+    desenhar();
+  }
+
   function telaQuestao(c, i, marc) {
     var q = c.q[i];
     var marcada = marc[i];
     var respondida = marcada !== null;
-    var rotulo = NIVEIS[i] + " · passo " + (i + 2) + " de 5" + (q.o ? " · " + q.o : "");
+    var rotulo = NIVEIS[i] + " · passo " + (i + PRIMEIRA_QUESTAO + 1) + " de " + PASSOS + (q.o ? " · " + q.o : "");
 
     var alts = q.a.map(function (texto, k) {
       var classe = "alt";
@@ -318,7 +436,7 @@
     var copia = Object.assign({}, respostas);
     copia[c.t] = nova;
     respostas = copia;
-    gravar();
+    gravar(CHAVE, respostas);
     desenhar();
     var caixa = document.getElementById("resolucao");
     var semMovimento = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;

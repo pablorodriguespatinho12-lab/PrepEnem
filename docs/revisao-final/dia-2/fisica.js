@@ -78,15 +78,15 @@ window.DIA2 = (window.DIA2 || []).concat([
     m: "Física", t: "Óptica", n: 20,
     aula: [
       "Reflexão: a luz bate e volta (espelho).",
-      "Refração: a luz passa de um meio para outro (do ar para a água), muda de velocidade e desvia. É o que faz o canudo parecer quebrado no copo.",
+      "Refração: a luz passa de um meio para outro (do ar para a água) e muda de velocidade. Se entra inclinada, também desvia. É o que faz o canudo parecer quebrado no copo.",
       "Lentes funcionam por refração. A que junta a luz (convergente) é a da lupa. A que espalha (divergente) corrige a miopia.",
       "Difração: a onda contorna um obstáculo ou uma abertura de tamanho parecido com o comprimento de onda.",
       "Absorção: a luz vira calor (roupa preta esquenta mais)."
     ],
     q: [
       { e: "O que é a refração da luz?",
-        a: ["A volta da luz ao bater em uma superfície.", "A transformação da luz em calor.", "A separação da luz em duas cópias iguais.", "O desvio da luz ao passar de um meio para outro.", "O contorno da luz em volta de um obstáculo."], g: 3,
-        r: "Refração é o desvio da luz quando ela troca de meio. Bater e voltar é reflexão. Virar calor é absorção. Contornar é difração." },
+        a: ["A volta da luz ao bater em uma superfície.", "A transformação da luz em calor.", "A separação da luz em duas cópias iguais.", "A mudança de velocidade da luz ao passar de um meio para outro, que pode desviá-la.", "O contorno da luz em volta de um obstáculo."], g: 3,
+        r: "Refração é a mudança de velocidade da luz quando ela troca de meio. Entrando inclinada, ela desvia. Bater e voltar é reflexão. Virar calor é absorção. Contornar é difração." },
       { e: "Uma colher dentro de um copo com água parece quebrada na altura da superfície da água. Isso acontece porque a luz",
         a: ["muda de velocidade ao sair da água para o ar e desvia.", "é absorvida pela água e perde brilho.", "bate na superfície da água e volta toda para dentro.", "contorna a colher, que é um obstáculo pequeno.", "passa a vibrar em uma única direção."], g: 0,
         r: "A luz que vem da parte da colher dentro da água desvia ao sair para o ar (refração). O olho enxerga essa parte fora do lugar." },
