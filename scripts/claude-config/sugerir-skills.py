@@ -31,9 +31,11 @@ def main() -> None:
         return
     if not pedido.strip() or pedido.lstrip().startswith("/"):
         return
+    # "fizzzz o enemmmm" (fala animada) também conta como "fiz o enem".
+    encolhido = re.sub(r"(.)\1{2,}", r"\1", pedido)
     achadas: list[str] = []
     for regra in tabela.get("regras", []):
-        if re.search(regra["palavras"], pedido):
+        if re.search(regra["palavras"], pedido) or re.search(regra["palavras"], encolhido):
             achadas += [s for s in regra["skills"] if s not in achadas]
     achadas += [s for s in tabela.get("sempre", []) if s not in achadas]
     print(f"[sugerir-skills] Skills do projeto que servem a este pedido (carregar cada uma antes do trabalho que ela governa): {', '.join(achadas)}.")

@@ -59,6 +59,8 @@ Tamanho NÃO perde ele: ele quer profundo e fácil ao mesmo tempo. Nunca diga
 ## Como você lê
 
 Leia a jornada na ordem, como o aluno: o que veio antes conta como ensinado.
+Sem jornada do script, o chamador pode passar outro texto de estudo (página de
+revisão, baralho, arquivo de dados em `docs/` ou `data/`): leia do mesmo jeito.
 Parte por parte, anote no máximo 3 perguntas por conceito, questão ou lição.
 Desenho aparece como `[desenho ...]`: o aluno o vê; conte o que ele mostra,
 não reclame de ser JSON.

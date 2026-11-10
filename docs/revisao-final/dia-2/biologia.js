@@ -22,7 +22,7 @@ window.DIA2 = (window.DIA2 || []).concat([
       { o: "ENEM 2022 · questão 104",
         e: "A extinção de espécies é uma ameaça real que afeta diversas regiões do país. A introdução de espécies exóticas pode ser considerada um fator maximizador desse processo. A jaqueira (Artocarpus heterophyllus), por exemplo, é uma árvore originária da Índia e de regiões do Sudeste Asiático que foi introduzida ainda na era colonial e se aclimatou muito bem em praticamente todo o território nacional.\nCasos como o dessa árvore podem provocar a redução da biodiversidade, pois elas",
         a: ["ocupam áreas de vegetação nativa e substituem parcialmente a flora original.", "estimulam a competição por seus frutos entre animais típicos da região e eliminam as espécies perdedoras.", "alteram os nichos e aumentam o número de possibilidades de relações entre os seres vivos daquele ambiente.", "apresentam alta taxa de reprodução e se mantêm com um número de indivíduos superior à capacidade suporte do ambiente.", "diminuem a relação de competição entre os polinizadores e facilitam a ação de dispersores de sementes de espécies nativas."], g: 0,
-        r: "A jaqueira se espalha pela mata e disputa espaço, luz e nutrientes com as plantas nativas. Parte da flora original some, e a biodiversidade (a variedade de espécies) cai. A alternativa D não se sustenta: nenhuma população se mantém acima do que o ambiente aguenta." }
+        r: "A jaqueira se espalha pela mata e disputa espaço, luz e nutrientes com as plantas nativas. Parte da flora original some, e a biodiversidade (a variedade de espécies) cai. A alternativa D não se sustenta: uma população não fica muito tempo acima do que o ambiente aguenta." }
     ]
   },
   {
