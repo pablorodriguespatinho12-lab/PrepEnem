@@ -9,7 +9,7 @@ export function VoltarAoTreino() {
       href="/provas"
       className="inline-flex items-center gap-1 mb-4 py-1 type-meta text-muted-foreground hover:text-foreground t-colors"
     >
-      <ChevronLeft className="w-4 h-4" aria-hidden /> Treino
+      <ChevronLeft className="w-4 h-4" aria-hidden /> Estudar
     </Link>
   );
 }

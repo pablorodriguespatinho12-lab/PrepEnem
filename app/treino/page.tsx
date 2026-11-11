@@ -291,9 +291,16 @@ export default function TreinoPage() {
     // eslint-disable-next-line
   }, [isReview, isFiltered, filterMateria, filterSubtema]);
 
+  // /treino sem nada na URL é o endereço antigo (o navegador ainda lembra):
+  // abria a sessão do plano em vez das provas (Pablo, 11/11/2026).
+  const enderecoAntigo = (searchParams?.toString() ?? '') === '';
   useEffect(() => {
+    if (enderecoAntigo) {
+      router.replace('/provas');
+      return;
+    }
     startSession();
-  }, [startSession]);
+  }, [startSession, enderecoAntigo, router]);
 
   const currentQ = questions?.[currentIdx];
   // Assunto que a Revisão de Conceitos não cobriu: o conceito vem antes da questão.

@@ -127,7 +127,7 @@ export default function ProgressoPage() {
           <div className="min-w-0">
             <p className="font-display type-lead font-semibold">Sua evolução aparece aqui</p>
             <p className="type-meta text-muted-foreground mt-1">Responda <span data-numeric>{MIN_QUESTOES_PARA_TAXA}</span> questões e a linha começa a subir.</p>
-            <Link href="/treino" className="inline-block mt-2 py-2 type-meta font-semibold text-primary-text hover:underline underline-offset-4">Começar o treino</Link>
+            <Link href="/provas" className="inline-block mt-2 py-2 type-meta font-semibold text-primary-text hover:underline underline-offset-4">Começar o treino</Link>
           </div>
         </div>
       )}

@@ -63,10 +63,10 @@ export default function ProvasPage() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <h1 className="font-display type-display font-semibold text-foreground">
-              Treino
+              Estudar
             </h1>
             <p className="text-muted-foreground mt-2 type-lead">
-              Escolha um jeito de treinar. Não sabe qual? Comece pela Nova prova.
+              Escolha um jeito de estudar. Não sabe qual? Comece pela Nova prova.
             </p>
           </div>
         </div>

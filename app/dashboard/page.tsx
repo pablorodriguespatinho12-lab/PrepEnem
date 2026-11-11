@@ -68,7 +68,7 @@ export default function DashboardPage() {
   };
   const comecarHref = activeDaySchedule?.isSimulado
     ? '/simulado'
-    : activeDay ? `/treino?weekNumber=${activeDay.weekNumber}&dayIndex=${activeDay.dayIndex}` : '/treino';
+    : activeDay ? `/treino?weekNumber=${activeDay.weekNumber}&dayIndex=${activeDay.dayIndex}` : '/provas';
   // Dia de verdade, no horário de Brasília: "Quinta-feira".
   const hojeNome = (() => {
     const nome = new Intl.DateTimeFormat('pt-BR', { weekday: 'long', timeZone: 'America/Sao_Paulo' }).format(new Date());
