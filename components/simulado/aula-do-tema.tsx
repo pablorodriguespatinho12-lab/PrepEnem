@@ -20,7 +20,13 @@ export function AulaDoTema({ tema, className }: { tema: string | null | undefine
   const reduzir = useReducedMotion();
   if (!aula || !tema) return null;
 
-  const total = 1 + aula.degraus.length;
+  const telas: { rotulo: string; listas?: string[]; degrau?: Degrau }[] = [
+    { rotulo: 'Aula', listas: aula.aula },
+    ...(aula.paraSubir.length ? [{ rotulo: 'Para subir de nível', listas: aula.paraSubir }] : []),
+    ...aula.degraus.map((d) => ({ rotulo: `Como cai no ${d.nivel}`, degrau: d })),
+  ];
+  const atual = telas[tela];
+  const total = telas.length;
   const ultima = tela === total - 1;
   const abrir = () => { setTela(0); setAberta(true); };
 
@@ -42,7 +48,7 @@ export function AulaDoTema({ tema, className }: { tema: string | null | undefine
         >
           <div className="pr-8">
             <p className="type-caption text-primary-text font-medium">
-              {tela === 0 ? 'Aula' : `Como cai no ${aula.degraus[tela - 1].nivel}`}
+              {atual.rotulo}
             </p>
             <DialogTitle className="font-display type-title font-semibold">{tema}</DialogTitle>
             <DialogDescription className="sr-only">
@@ -58,9 +64,9 @@ export function AulaDoTema({ tema, className }: { tema: string | null | undefine
               exit={reduzir ? { opacity: 0 } : { opacity: 0, x: -24 }}
               transition={{ duration: reduzir ? 0.12 : 0.22 }}
             >
-              {tela === 0 ? (
+              {atual.listas ? (
                 <ul className="space-y-3">
-                  {aula.aula.map((frase) => (
+                  {atual.listas.map((frase) => (
                     <li key={frase} className="flex gap-3 font-reading type-body">
                       <span aria-hidden className="mt-2.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                       <span><MathText text={frase} /></span>
@@ -68,7 +74,7 @@ export function AulaDoTema({ tema, className }: { tema: string | null | undefine
                   ))}
                 </ul>
               ) : (
-                <QuestaoDegrau degrau={aula.degraus[tela - 1]} />
+                atual.degrau && <QuestaoDegrau degrau={atual.degrau} />
               )}
             </motion.div>
           </AnimatePresence>
@@ -93,7 +99,7 @@ export function AulaDoTema({ tema, className }: { tema: string | null | undefine
               onClick={() => (ultima ? setAberta(false) : setTela((t) => t + 1))}
               className="h-11 px-4 inline-flex items-center gap-1.5 rounded-[var(--radius-control)] bg-primary text-primary-foreground type-meta font-medium t-colors hover:bg-[hsl(var(--primary-hover))]"
             >
-              {ultima ? 'Voltar à questão' : tela === 0 ? 'Ver como cai' : 'Próximo'}
+              {ultima ? 'Voltar à questão' : 'Próximo'}
               {!ultima && <ChevronRight className="w-4 h-4" aria-hidden />}
             </button>
           </div>

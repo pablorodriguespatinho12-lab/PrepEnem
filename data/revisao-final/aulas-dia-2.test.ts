@@ -38,6 +38,16 @@ describe('aulas do dia 2', () => {
     }
   });
 
+  it('"Para subir de nível" curto e sem frase de bastidor', () => {
+    const comSubir = TEMAS_COM_AULA.filter((t) => aulaDoTema(t)!.paraSubir.length > 0);
+    expect(comSubir.length).toBeGreaterThanOrEqual(20);
+    for (const tema of TEMAS_COM_AULA) {
+      const a = aulaDoTema(tema)!;
+      expect(a.paraSubir.length, tema).toBeLessThanOrEqual(6);
+      for (const d of a.degraus) expect(d.resolucao, tema).not.toMatch(/também está na prova/);
+    }
+  });
+
   it('tema desconhecido não tem aula', () => {
     expect(aulaDoTema('Literatura')).toBeNull();
     expect(aulaDoTema(null)).toBeNull();

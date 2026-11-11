@@ -18,6 +18,11 @@ for (const f of ['fisica', 'quimica', 'biologia', 'matematica']) {
   require(path.join(PASTA_DOCS, `${f}.js`));
 }
 
+// O que a questão de cima cobra e a aula não ensina (aluno-do-zero, 11/11/2026).
+const SUBIR = JSON.parse(fs.readFileSync(path.join(RAIZ, 'scripts/data/aulas-dia-2-subir.json'), 'utf8'));
+// Frase de bastidor da página de revisão não vai para a tela do aluno.
+const semBastidor = (texto) => texto.replace(/\s*Esta questão também está na prova[^.]*\./g, '');
+
 const naProva = new Set();
 for (const f of fs.readdirSync(PASTA_PROVAS).filter((n) => n.endsWith('.json') && n !== 'aulas.json')) {
   for (const q of JSON.parse(fs.readFileSync(path.join(PASTA_PROVAS, f), 'utf8'))) {
@@ -36,10 +41,12 @@ for (const c of window.DIA2) {
       enunciado: q.e,
       alternativas: q.a,
       certa: q.g,
-      resolucao: q.r,
+      resolucao: semBastidor(q.r),
     }));
-  aulas[c.t] = { materia: c.m, aula: c.aula, degraus };
+  aulas[c.t] = { materia: c.m, aula: c.aula, paraSubir: SUBIR[c.t] ?? [], degraus };
 }
+const sobrando = Object.keys(SUBIR).filter((t) => !aulas[t]);
+if (sobrando.length) throw new Error(`tema sem aula em aulas-dia-2-subir.json: ${sobrando.join(', ')}`);
 
 fs.writeFileSync(SAIDA, JSON.stringify(aulas, null, 2) + '\n');
 console.log(`${Object.keys(aulas).length} temas, ${Object.values(aulas).reduce((s, a) => s + a.degraus.length, 0)} degraus`);

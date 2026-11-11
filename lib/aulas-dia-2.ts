@@ -13,7 +13,8 @@ export type Degrau = {
   resolucao: string;
 };
 
-export type AulaDoTema = { materia: string; aula: string[]; degraus: Degrau[] };
+// paraSubir: o que a questão de cima cobra e a aula não ensina (scripts/data/aulas-dia-2-subir.json).
+export type AulaDoTema = { materia: string; aula: string[]; paraSubir: string[]; degraus: Degrau[] };
 
 const TODAS = aulas as Record<string, AulaDoTema>;
 
