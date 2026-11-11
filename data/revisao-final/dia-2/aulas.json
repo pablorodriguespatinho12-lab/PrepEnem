@@ -8,6 +8,7 @@
       "Conta de luz: energia = potência × tempo. Em kWh: quilowatts × horas. 1 kW = 1 000 W.",
       "Em série (um depois do outro), as resistências somam."
     ],
+    "paraSubir": [],
     "degraus": [
       {
         "nivel": "Médio",
@@ -44,6 +45,10 @@
       "O calor anda de 3 jeitos: condução (encostando, como no cabo da panela), convecção (o líquido ou o ar quente sobe e o frio desce) e radiação (sem encostar, como o calor do Sol).",
       "Para esquentar algo: Q = m × c × ΔT. É massa × calor específico × quanto a temperatura mudou. O calor específico (c) diz quanto o material custa para esquentar.",
       "Metal conduz bem o calor (condutor). Ar, isopor e lã conduzem mal (isolantes)."
+    ],
+    "paraSubir": [
+      "Densidade é quanto pesa um pedaço de mesmo tamanho. Ar quente é menos denso (mais leve) e sobe; ar frio é mais denso e desce.",
+      "cal (caloria) é a unidade de calor. Na água, c = 1 cal/(g·°C): 1 caloria esquenta 1 grama de água em 1 grau."
     ],
     "degraus": [
       {
@@ -82,6 +87,12 @@
       "Comprimento de onda (λ, a letra lambda): o tamanho de uma onda inteira.",
       "Velocidade da onda: v = λ × f. E, como toda velocidade, v = distância ÷ tempo.",
       "O som anda a cerca de 340 m/s no ar. Na água e nos sólidos é mais rápido."
+    ],
+    "paraSubir": [
+      "Virar a fórmula: se v = λ × f, então λ = v ÷ f. O que multiplica de um lado passa dividindo para o outro.",
+      "Do mesmo jeito: distância = velocidade × tempo, então tempo = distância ÷ velocidade.",
+      "O som anda cerca de 340 m/s no ar e cerca de 1 500 m/s na água. Pela água, ele chega antes.",
+      "Quando a mesma letra aparece em dois lugares da conta, teste as alternativas: troque a letra por cada número e veja qual fecha a conta."
     ],
     "degraus": [
       {
@@ -135,6 +146,10 @@
       "Difração: a onda contorna um obstáculo ou uma abertura de tamanho parecido com o comprimento de onda.",
       "Absorção: a luz vira calor (roupa preta esquenta mais)."
     ],
+    "paraSubir": [
+      "Polarização: um filtro deixa passar só a luz que vibra em uma direção, como nos óculos escuros polarizados. A luz polariza; o som não.",
+      "Difração no dia a dia: você ouve alguém atrás de um muro porque o som contorna o muro."
+    ],
     "degraus": [
       {
         "nivel": "Médio",
@@ -174,7 +189,7 @@
           "Refração."
         ],
         "certa": 4,
-        "resolucao": "A luz do Sol entra pela parte de cima da garrafa, passa do ar para a água e da água para o ar. A cada troca de meio ela desvia (refração) e se espalha pelo cômodo. Não é difração: o texto avisa que o buraco é muito maior que o comprimento de onda da luz. Esta questão também está na prova Revisão final do site."
+        "resolucao": "A luz do Sol entra pela parte de cima da garrafa, passa do ar para a água e da água para o ar. A cada troca de meio ela desvia (refração) e se espalha pelo cômodo. Não é difração: o texto avisa que o buraco é muito maior que o comprimento de onda da luz."
       }
     ]
   },
@@ -186,6 +201,11 @@
       "2ª lei: força resultante = massa × aceleração (F = m × a).",
       "3ª lei: toda força tem um par. Se você empurra a parede, a parede empurra você com a mesma força.",
       "Peso é a força da gravidade: P = m × g. Na Terra, g vale cerca de 10 m/s²."
+    ],
+    "paraSubir": [
+      "m/s² (metros por segundo ao quadrado) é a unidade da aceleração: quanto a velocidade muda a cada segundo.",
+      "Virar a fórmula: se F = m × a, então a = F ÷ m.",
+      "Forças em sentidos opostos se subtraem: cabo puxa 6 000 N para cima, peso puxa 5 000 N para baixo, sobra 1 000 N para cima."
     ],
     "degraus": [
       {
@@ -225,6 +245,11 @@
       "Ácido + álcool → éster + água (esterificação). Gordura + base forte, como a soda cáustica → sabão (saponificação).",
       "Cadeia saturada: só ligações simples entre os carbonos. O anel benzênico (C6H5 nas fórmulas) tem ligações duplas, então não é saturado."
     ],
+    "paraSubir": [
+      "Anel benzênico: 6 carbonos ligados em hexágono, como no benzeno. Fenol é esse anel com um OH preso.",
+      "Óleo e gordura são ésteres. Com base forte, viram sabão e glicerina.",
+      "Hidrocarboneto tem só carbono e hidrogênio, como a gasolina. Cetona tem C=O no meio da cadeia."
+    ],
     "degraus": [
       {
         "nivel": "Médio",
@@ -261,6 +286,11 @@
       "Chuva ácida: gases de enxofre e de nitrogênio, vindos da queima de combustíveis, viram ácido na água da chuva.",
       "Biocombustíveis vêm de seres vivos: etanol (cana), biodiesel (óleos) e biogás (metano de lixo e esterco apodrecendo sem oxigênio).",
       "Camada de ozônio (O3): fica no alto da atmosfera e filtra os raios ultravioleta do Sol."
+    ],
+    "paraSubir": [
+      "Fotossíntese: a planta tira CO2 do ar e, com a luz, faz açúcar e solta O2.",
+      "Por isso o etanol da cana é renovável: o CO2 da queima é o que a cana tirou do ar enquanto crescia.",
+      "Matriz energética é a lista das fontes de energia de um país. Suíno é porco."
     ],
     "degraus": [
       {
@@ -314,6 +344,14 @@
       "pH mede a acidez, de 0 a 14. Abaixo de 7 é ácido (limão). 7 é neutro (água pura). Acima de 7 é básico (sabão).",
       "Ácido + base se neutralizam e formam sal e água. A titulação usa isso: gasta-se uma base de concentração conhecida até neutralizar o ácido. Pela quantidade gasta, descobre-se quanto ácido havia."
     ],
+    "paraSubir": [
+      "1 L = 1 000 mL. De mL para L, divida por 1 000: 500 mL = 0,5 L e 8 mL = 0,008 L.",
+      "Virar a fórmula: se concentração = mol ÷ volume, então mol = concentração × volume.",
+      "Ácido baixa o pH e base sobe; caráter básico quer dizer que age como base. O calcário (CaCO3) neutraliza o ácido do solo e sobe o pH: é a calagem.",
+      "O número na frente da fórmula, na reação, é a proporção: em '1 ácido + 2 NaOH', cada ácido gasta 2 NaOH.",
+      "mol L⁻¹ é o mesmo que mol/L (mol por litro): o ⁻¹ quer dizer 'por'.",
+      "Dividir por número com vírgula: ande a vírgula dos dois para a direita até sumir. 20 ÷ 0,5 = 200 ÷ 5 = 40; 0,06 ÷ 0,025 = 60 ÷ 25 = 2,4."
+    ],
     "degraus": [
       {
         "nivel": "Médio",
@@ -365,6 +403,9 @@
       "Eletrólise é o contrário: gasta-se energia elétrica para forçar a reação. É assim que se produz alumínio.",
       "Ferrugem é o ferro oxidando com oxigênio e água. Duas proteções: cobrir o ferro (barreira, como a tinta) ou ligar a ele um metal que oxida mais fácil, como o zinco (metal de sacrifício)."
     ],
+    "paraSubir": [
+      "Espontânea quer dizer que acontece sozinha, sem tomada. A pilha é uma reação espontânea."
+    ],
     "degraus": [
       {
         "nivel": "Médio",
@@ -402,6 +443,10 @@
       "Massa molar transforma mol em gramas. H = 1, C = 12, O = 16. Água (H2O): 1 + 1 + 16 = 18 g por mol.",
       "Proporção em massa vale como regra de três: se 100 g dão 50 g, então 200 g dão 100 g.",
       "Rendimento de 80%: sai só 80% do que a conta prevê. Densidade = massa ÷ volume."
+    ],
+    "paraSubir": [
+      "Porcentagem vira decimal dividindo por 100: 90% = 0,90 e 80% = 0,80.",
+      "A proporção vale em qualquer unidade: se 100 g dão 56 g, então 100 kg dão 56 kg, e 1 000 kg (10 vezes mais) dão 560 kg."
     ],
     "degraus": [
       {
@@ -441,6 +486,7 @@
       "Espécie exótica é a trazida de fora. Sem inimigo natural, pode virar invasora e tomar o espaço das nativas.",
       "Veneno que o corpo não elimina se acumula ao longo da cadeia: quem está no topo fica com mais."
     ],
+    "paraSubir": [],
     "degraus": [
       {
         "nivel": "Médio",
@@ -478,6 +524,11 @@
       "Digestão: quebra o alimento em pedaços pequenos, que passam para o sangue no intestino delgado.",
       "Sistema nervoso: neurônios levam mensagens elétricas rápidas. Hormônios são mensagens químicas que vão pelo sangue, mais lentas. A insulina é o hormônio que baixa o açúcar do sangue.",
       "Rins filtram o sangue e fazem a urina."
+    ],
+    "paraSubir": [
+      "A insulina é feita no pâncreas, um órgão atrás do estômago.",
+      "Hemorragia é sangramento forte. Coagulação é o sangue endurecer para fechar o corte; o que segura a coagulação faz sangrar mais.",
+      "Hereditário é o que passa de pais para filhos pelos genes."
     ],
     "degraus": [
       {
@@ -531,6 +582,11 @@
       "Cruzamento Aa × Aa: os filhos podem ser AA, Aa, Aa ou aa. Chance de aa: 1 em 4 (25%).",
       "Do gene à proteína: o DNA é copiado em RNA, e o RNA é lido para montar a proteína."
     ],
+    "paraSubir": [
+      "De onde vêm os filhos de Aa × Aa: cada pai passa A ou a. Junte um de cada: AA, Aa, aA (que é Aa) e aa.",
+      "Cromossomo é o pacote de DNA onde ficam os genes. Progenitores são os pais.",
+      "Codominância: os dois genes aparecem juntos, como no sangue AB."
+    ],
     "degraus": [
       {
         "nivel": "Médio",
@@ -582,6 +638,11 @@
       "Respiração celular em 3 etapas: glicólise, ciclo de Krebs (também chamado ciclo do ácido cítrico) e fosforilação oxidativa. A última acontece na mitocôndria e produz quase todo o ATP.",
       "Osmose: a água atravessa a membrana indo do lado com menos coisa dissolvida para o lado com mais.",
       "Bactéria não tem núcleo (procarionte). Plantas, animais e fungos têm (eucariontes)."
+    ],
+    "paraSubir": [
+      "A mitocôndria usa oxigênio para tirar energia do alimento: é a respiração celular. Sem oxigênio, a célula faz fermentação, que dá bem menos ATP.",
+      "Dentro da mitocôndria, a ATP sintetase é a peça que fabrica o ATP, movida por prótons (partículas de carga positiva) que passam por ela.",
+      "As etapas da respiração: glicólise (quebra o açúcar em piruvato), oxidação do piruvato, ciclo de Krebs e, por último, a cadeia respiratória, onde a ATP sintetase faz quase todo o ATP. Fermentação lática é o caminho sem oxigênio (músculo cansado)."
     ],
     "degraus": [
       {
@@ -635,6 +696,9 @@
       "Lamarck (ideia superada): o uso faria o órgão crescer, e isso passaria aos filhos.",
       "Parasita e hospedeiro evoluem juntos (coevolução). Com muito tempo de convivência, o parasita tende a matar menos, porque hospedeiro morto não espalha parasita."
     ],
+    "paraSubir": [
+      "Lamarck achava que o uso fortalece um órgão e passa aos filhos (a girafa esticando o pescoço). Hoje se sabe que não é assim."
+    ],
     "degraus": [
       {
         "nivel": "Médio",
@@ -672,6 +736,11 @@
       "Protozoário: uma célula com núcleo (malária, doença de Chagas, leishmaniose). Verme: um animal (esquistossomose, lombriga, filariose).",
       "Vetor é o animal que leva o causador de uma pessoa a outra. O mosquito Aedes leva o vírus da dengue. O mosquito não é o causador.",
       "A prevenção depende do caminho da doença. Mosquito: acabar com os criadouros. Água e esgoto: saneamento. A vacina treina a defesa antes da doença. Profilaxia é o nome dado à prevenção."
+    ],
+    "paraSubir": [
+      "Alguns parasitas chegam pelo mosquito: a filariose (um verme) pelo pernilongo Culex, e a leishmaniose (um protozoário) pelo mosquito-palha. Contra elas, vale combater o mosquito.",
+      "Vermífugo é remédio contra verme. Esgoto tratado evita os vermes que vêm da água e do solo.",
+      "Tênia (a solitária) é um verme que vem da carne de porco ou de boi mal cozida."
     ],
     "degraus": [
       {
@@ -724,6 +793,9 @@
       "Aumentar 10%: multiplique por 1,10. Descontar 10%: multiplique por 0,90.",
       "Pegadinha: se caiu 75%, sobrou 25%. A conta usa o que sobrou."
     ],
+    "paraSubir": [
+      "De volta para %: parte ÷ todo × 100. 40 de 1 000: 40 ÷ 1 000 = 0,04, que é 4%."
+    ],
     "degraus": [
       {
         "nivel": "Médio",
@@ -762,6 +834,10 @@
       "Unidades: 1 km = 1 000 m. 1 m = 100 cm. 1 h = 60 min. 1 L = 1 000 mL.",
       "Escala 1 : 50 quer dizer: 1 cm no desenho vale 50 cm de verdade."
     ],
+    "paraSubir": [
+      "Regra de três com 1 de um lado vira só dividir: se 12 partes dão 180, 1 parte dá 180 ÷ 12 = 15.",
+      "Na inversa, pense no trabalho todo: 6 pedreiros em 10 dias = 60 dias de 1 pedreiro. Com 15 pedreiros: 60 ÷ 15 = 4 dias."
+    ],
     "degraus": [
       {
         "nivel": "Médio",
@@ -798,6 +874,9 @@
       "Mediana: ponha em ordem e pegue o valor do meio. Se a quantidade for par, faça a média dos dois do meio.",
       "Moda: o valor que mais aparece.",
       "Média ponderada: multiplique cada valor pelo seu peso, some, e divida pela soma dos pesos."
+    ],
+    "paraSubir": [
+      "Média ao contrário: se a média de 2 notas tem que dar 7, a soma tem que dar 2 × 7 = 14. Tire a nota que você já tem; sobra a que falta."
     ],
     "degraus": [
       {
@@ -836,6 +915,11 @@
       "Função do 2º grau: y = ax² + bx + c. O gráfico é uma curva chamada parábola. Com a negativo, ela tem um ponto mais alto.",
       "O x do ponto mais alto (o vértice): x = −b ÷ (2a)."
     ],
+    "paraSubir": [
+      "x² (x ao quadrado) é x × x: 4² = 16. Então −10 × 4² = −10 × 16 = −160.",
+      "Sinais: menos com menos dá mais (−80 ÷ (−20) = 4); menos com mais dá menos.",
+      "L(x) ou f(x) é o mesmo que y: o valor da função para aquele x. O x do vértice diz qual valor dá o máximo; troque esse x na fórmula para achar o máximo."
+    ],
     "degraus": [
       {
         "nivel": "Médio",
@@ -873,6 +957,9 @@
       "Círculo: área = π × raio². Volta = 2 × π × raio. O raio é a metade do diâmetro. O π (pi) vale cerca de 3,14.",
       "Triângulo retângulo é o que tem um canto de 90°. Pitágoras: cateto² + cateto² = hipotenusa². A hipotenusa é o lado maior, de frente para o canto de 90°. Os catetos são os outros dois.",
       "1 hectare = 10 000 m²."
+    ],
+    "paraSubir": [
+      "² é ao quadrado: 5² = 5 × 5 = 25. A raiz quadrada faz o contrário: o número que ao quadrado dá 25 é 5."
     ],
     "degraus": [
       {
@@ -925,6 +1012,10 @@
       "Cilindro (forma de lata): área da base × altura = π × raio² × altura.",
       "1 m³ = 1 000 L. 1 L = 1 000 cm³.",
       "Dobrou todas as medidas? O volume fica 2 × 2 × 2 = 8 vezes maior."
+    ],
+    "paraSubir": [
+      "π (pi) vale cerca de 3,14; o ENEM costuma mandar usar 3.",
+      "O raio entra ao quadrado: se ele cai pela metade, a base fica 1/2 × 1/2 = 1/4 do que era, e o volume também (mesma altura)."
     ],
     "degraus": [
       {
