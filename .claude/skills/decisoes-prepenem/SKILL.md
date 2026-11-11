@@ -230,6 +230,10 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   e os tropeços do aluno-do-zero em `data/revisao-final/dia-2/LEIA-ME.md`;
   conferência em `provas-dia-2.test.ts` (inclui texto que o validador cortaria
   calado); gravar com `scripts/criar-provas-dia-2.ts`.
+  **Estudar pela questão (Pablo, 11/11/2026):** em toda questão dos 22 conteúdos,
+  "Não sei isso: ver a aula" abre a aula de 5 frases e depois o mesmo conteúdo
+  no Médio, Difícil e ENEM (`components/simulado/aula-do-tema.tsx`, dados de
+  `scripts/gerar-aulas-dia-2.cjs`). Zero IA; exemplo que já está numa prova fica fora.
 - **Prova responde na hora (22/10/2026):** o acerto é conferido no navegador
   (a letra certa já vem com a questão) e a resposta é gravada por trás, com
   3 tentativas; "Próxima" avança sem recarregar a prova. Antes: 1,5 s para ver
