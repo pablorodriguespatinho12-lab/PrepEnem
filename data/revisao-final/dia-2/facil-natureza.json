@@ -1,0 +1,1893 @@
+[
+  {
+    "id": "d2-facil-nat-01",
+    "materia": "Física",
+    "tema": "Eletricidade e Circuitos",
+    "enunciado": "Um ferro de passar roupa ligado na tomada de 110 V é percorrido por uma corrente de 10 A. Qual é a potência desse ferro?",
+    "A": "11 W",
+    "B": "120 W",
+    "C": "1 100 W",
+    "D": "100 W",
+    "E": "11 000 W",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "P = U × i = 110 × 10 = 1 100 W. C. Erros: 11 = dividir 110 ÷ 10; 120 = somar; 100 = subtrair; 11 000 = um zero a mais na multiplicação.",
+      "ideia": "Potência é o quanto de energia o aparelho gasta a cada segundo. Basta multiplicar a tensão da tomada pela corrente: 110 × 10 = 1 100 W.",
+      "pecas": [
+        {
+          "termo": "Tensão (U)",
+          "significado": "O empurrão que a tomada dá na eletricidade, medido em volts (V). É o número escrito na tomada: 110 V ou 220 V."
+        },
+        {
+          "termo": "Corrente (i)",
+          "significado": "Quanta eletricidade passa pelo fio, medida em ampères (A). Como a quantidade de água que sai da torneira."
+        },
+        {
+          "termo": "Potência (P)",
+          "significado": "Quanta energia o aparelho gasta por segundo, em watts (W). Chuveiro tem potência alta; lâmpada de casa, baixa."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A questão dá a tensão e a corrente e pede a potência.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "U (tensão)",
+                "110 V"
+              ],
+              [
+                "i (corrente)",
+                "10 A"
+              ],
+              [
+                "P (potência)",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Troque as letras pelos números e multiplique.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Potência elétrica",
+            "dados": [
+              "U = 110\\,\\text{V}",
+              "i = 10\\,\\text{A}"
+            ],
+            "formula": "P = U \\times i",
+            "legenda": [
+              "U: o empurrão",
+              "i: o que passa no fio"
+            ],
+            "contas": [
+              "P = 110 \\times 10"
+            ],
+            "resultado": "P = 1100\\,\\text{W}",
+            "nota": "O ferro gasta 1 100 watts."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Mais empurrão ou mais corrente passando fazem o aparelho gastar mais energia. Por isso as duas coisas se multiplicam.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Mesma tomada de 110 V",
+            "cabecalho": [
+              "Corrente",
+              "Potência"
+            ],
+            "linhas": [
+              [
+                "1 A",
+                "110 W"
+              ],
+              [
+                "5 A",
+                "550 W"
+              ],
+              [
+                "10 A",
+                "1 100 W"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 1 100 W. A (11 W) vem de dividir 110 ÷ 10; B (120 W), de somar 110 + 10; D (100 W), de subtrair 110 − 10; E (11 000 W) tem um zero a mais na multiplicação.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma lâmpada ligada em 220 V tem corrente de 0,5 A. Qual é a potência dela?",
+        "opcoes": [
+          "110 W",
+          "440 W",
+          "220,5 W",
+          "219,5 W"
+        ],
+        "certa": "110 W",
+        "resposta": "220 × 0,5 = 110 W (multiplicar por 0,5 é pegar a metade)."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-02",
+    "materia": "Física",
+    "tema": "Eletricidade e Circuitos",
+    "enunciado": "Dois resistores, um de 4 Ω e outro de 6 Ω, estão ligados em série (um depois do outro, no mesmo fio). Qual é a resistência equivalente?",
+    "A": "10 Ω",
+    "B": "24 Ω",
+    "C": "2,4 Ω",
+    "D": "2 Ω",
+    "E": "1,5 Ω",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Em série soma: 4 + 6 = 10 Ω. A. Erros: 24 = multiplicar; 2,4 = conta do paralelo (4 × 6 ÷ 10); 2 = subtrair; 1,5 = dividir 6 ÷ 4.",
+      "ideia": "Em série, a corrente tem que passar por um resistor e depois pelo outro, então as dificuldades se somam: 4 + 6 = 10 Ω.",
+      "pecas": [
+        {
+          "termo": "Resistor",
+          "significado": "Peça que dificulta a passagem da corrente e esquenta. A resistência do chuveiro é um resistor."
+        },
+        {
+          "termo": "Ohm (Ω)",
+          "significado": "A unidade da resistência. Quanto mais ohms, mais difícil é para a corrente passar, como um cano mais fino."
+        },
+        {
+          "termo": "Resistência equivalente",
+          "significado": "Um resistor só que faria o mesmo efeito que todos juntos. Como trocar dois trechos de cano fino por um cano só, do mesmo tamanho total."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "São dois resistores em fila, no mesmo fio. A questão quer saber quanto eles valem juntos.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Peça",
+              "Resistência"
+            ],
+            "linhas": [
+              [
+                "R₁ (primeiro)",
+                "4 Ω"
+              ],
+              [
+                "R₂ (segundo)",
+                "6 Ω"
+              ],
+              [
+                "Juntos em série",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Em série, é só somar.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Resistores em série",
+            "dados": [
+              "R_1 = 4\\,\\Omega",
+              "R_2 = 6\\,\\Omega"
+            ],
+            "formula": "R_{eq} = R_1 + R_2",
+            "legenda": [
+              "R_eq: o resistor que vale pelos dois",
+              "R_1 e R_2: cada resistor"
+            ],
+            "contas": [
+              "R_{eq} = 4 + 6"
+            ],
+            "resultado": "R_{eq} = 10\\,\\Omega",
+            "nota": "Os dois juntos valem 10 ohms."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É como andar por dois trechos de estrada ruim, um depois do outro: o atraso de cada trecho se soma. A corrente enfrenta o primeiro e depois o segundo.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Em série, sempre soma",
+            "cabecalho": [
+              "Resistores",
+              "Juntos"
+            ],
+            "linhas": [
+              [
+                "2 Ω e 3 Ω",
+                "5 Ω"
+              ],
+              [
+                "4 Ω e 6 Ω",
+                "10 Ω"
+              ],
+              [
+                "5 Ω e 5 Ω",
+                "10 Ω"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 10 Ω. B (24 Ω) vem de multiplicar 4 × 6. C (2,4 Ω) é a conta de resistores lado a lado (paralelo), que não é o caso aqui. D (2 Ω) vem de subtrair 6 − 4. E (1,5 Ω) vem de dividir 6 ÷ 4.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Três resistores de 2 Ω, 3 Ω e 5 Ω estão em série. Quanto valem juntos?",
+        "opcoes": [
+          "10 Ω",
+          "30 Ω",
+          "5 Ω",
+          "1 Ω"
+        ],
+        "certa": "10 Ω",
+        "resposta": "Em série soma tudo: 2 + 3 + 5 = 10 Ω."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-03",
+    "materia": "Física",
+    "tema": "Termodinâmica e Calor",
+    "enunciado": "Sob o mesmo sol, a areia da praia esquenta muito mais rápido que a água do mar. Por quê?",
+    "A": "A água do mar recebe menos luz do Sol que a areia.",
+    "B": "A areia guarda o calor do dia anterior.",
+    "C": "O vento esfria só a água, nunca a areia.",
+    "D": "A água reflete todo o calor que chega do Sol.",
+    "E": "A água precisa de muito mais energia para subir cada grau (tem calor específico maior).",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "Calor específico da água ≈ 1 cal/(g·°C); da areia ≈ 0,2. Com o mesmo calor, a areia sobe uns 5 vezes mais graus. E. A: o sol é o mesmo; B: a areia esfria de noite; C: o vento passa nas duas; D: a água absorve boa parte da luz.",
+      "ideia": "Cada material pede uma quantidade de energia para esquentar 1 grau: a água pede muito; a areia, pouco. Por isso a areia queima o pé ao meio-dia e a água continua fresca.",
+      "pecas": [
+        {
+          "termo": "Calor específico",
+          "significado": "Quanta energia 1 grama de um material precisa para esquentar 1 grau. A água tem um dos maiores: por isso a panela de água demora a ferver."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Areia e água recebem o mesmo sol. Por que uma esquenta rápido e a outra não?",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Energia para esquentar 1 grama em 1 grau",
+            "cabecalho": [
+              "Material",
+              "Energia",
+              "Esquenta"
+            ],
+            "linhas": [
+              [
+                "água",
+                "1 caloria",
+                "devagar"
+              ],
+              [
+                "areia",
+                "cerca de 0,2 caloria",
+                "rápido"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Com a mesma energia do Sol, a areia sobe muitos graus e a água sobe poucos. É a mesma razão de a água do mar ainda estar morna no começo da noite: ela também demora para esfriar.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E: a água tem calor específico maior. A falha porque o sol que chega nas duas é o mesmo. B falha porque a areia perde o calor de noite e amanhece fria. C falha porque o vento sopra na areia e na água. D falha porque a água fica com boa parte da luz: é por isso que o mar esquenta, só que devagar.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma panela de ferro e a mesma massa de água recebem o mesmo calor. Qual esquenta mais rápido?",
+        "opcoes": [
+          "O ferro",
+          "A água",
+          "Os dois igual"
+        ],
+        "certa": "O ferro",
+        "resposta": "O ferro tem calor específico bem menor que o da água."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-04",
+    "materia": "Física",
+    "tema": "Ondas e Acústica",
+    "enunciado": "Uma onda tem comprimento de onda de 2 m e frequência de 5 Hz. Qual é a velocidade dessa onda?",
+    "A": "2,5 m/s",
+    "B": "10 m/s",
+    "C": "7 m/s",
+    "D": "0,4 m/s",
+    "E": "3 m/s",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "v = λ × f = 2 × 5 = 10 m/s. B. Erros: 2,5 = 5 ÷ 2; 0,4 = 2 ÷ 5; 7 = somar; 3 = subtrair.",
+      "ideia": "A cada segundo passam 5 ondas, e cada uma tem 2 m. Então a onda anda 5 × 2 = 10 metros por segundo.",
+      "pecas": [
+        {
+          "termo": "Comprimento de onda (λ)",
+          "significado": "O tamanho de uma onda inteira, de uma crista (ponto mais alto) até a próxima. λ é a letra grega lambda."
+        },
+        {
+          "termo": "Frequência (f)",
+          "significado": "Quantas ondas passam por segundo, em hertz (Hz). 5 Hz = 5 ondas por segundo."
+        },
+        {
+          "termo": "Velocidade (v)",
+          "significado": "Quantos metros a onda anda em 1 segundo, em m/s (lê-se metros por segundo)."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A questão dá o tamanho de cada onda e quantas passam por segundo. Quer a velocidade.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "λ (tamanho de 1 onda)",
+                "2 m"
+              ],
+              [
+                "f (ondas por segundo)",
+                "5 Hz"
+              ],
+              [
+                "v (velocidade)",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Multiplique o tamanho da onda pela frequência.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Equação da onda",
+            "dados": [
+              "\\lambda = 2\\,\\text{m}",
+              "f = 5\\,\\text{Hz}"
+            ],
+            "formula": "v = \\lambda \\times f",
+            "legenda": [
+              "λ: tamanho de uma onda",
+              "f: ondas por segundo"
+            ],
+            "contas": [
+              "v = 2 \\times 5"
+            ],
+            "resultado": "v = 10\\,\\text{m/s}",
+            "nota": "A onda anda 10 metros a cada segundo."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Pense em vagões de trem de 2 m passando na sua frente: se passam 5 vagões por segundo, o trem andou 10 m nesse segundo.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Ondas de 2 m",
+            "cabecalho": [
+              "Ondas por segundo",
+              "Velocidade"
+            ],
+            "linhas": [
+              [
+                "1 Hz",
+                "2 m/s"
+              ],
+              [
+                "3 Hz",
+                "6 m/s"
+              ],
+              [
+                "5 Hz",
+                "10 m/s"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 10 m/s. A (2,5) vem de 5 ÷ 2 e D (0,4) de 2 ÷ 5: dividiram em vez de multiplicar. C (7) vem de somar 2 + 5. E (3) vem de subtrair 5 − 2.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma onda tem 4 m de comprimento e frequência de 3 Hz. Qual é a velocidade?",
+        "opcoes": [
+          "12 m/s",
+          "7 m/s",
+          "1 m/s"
+        ],
+        "certa": "12 m/s",
+        "resposta": "4 × 3 = 12 m/s."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-05",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Sob a luz branca do Sol, uma camiseta parece vermelha porque ela:",
+    "A": "produz luz vermelha própria, como uma lâmpada.",
+    "B": "absorve só a luz vermelha.",
+    "C": "separa as cores da luz, como um prisma.",
+    "D": "reflete a luz vermelha e absorve as outras cores.",
+    "E": "reflete todas as cores do mesmo jeito.",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "A cor que vemos é a luz que o objeto reflete até o olho. D. A: tecido não emite luz; B: é o contrário (a vermelha volta); C: isso é o prisma; E: refletir todas é a camiseta branca.",
+      "ideia": "A luz branca tem todas as cores misturadas. O objeto fica com algumas e devolve outras; a cor que ele devolve é a que chega ao seu olho.",
+      "pecas": [
+        {
+          "termo": "Refletir",
+          "significado": "Devolver a luz que chega, como o espelho faz. A luz refletida é a que entra no olho."
+        },
+        {
+          "termo": "Absorver",
+          "significado": "Ficar com a luz, que vira calor. Por isso a roupa preta esquenta mais no sol."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A luz do Sol traz todas as cores. O que a camiseta faz com elas para parecer vermelha?",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "O que cada objeto faz com a luz branca",
+            "cabecalho": [
+              "Objeto",
+              "Devolve (reflete)",
+              "Fica com (absorve)"
+            ],
+            "linhas": [
+              [
+                "camiseta vermelha",
+                "vermelho",
+                "as outras cores"
+              ],
+              [
+                "papel branco",
+                "todas",
+                "nenhuma"
+              ],
+              [
+                "roupa preta",
+                "nenhuma",
+                "todas"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D. A falha porque tecido não produz luz: no quarto escuro a camiseta some. B é a armadilha: se a camiseta ficasse com o vermelho, justamente o vermelho não chegaria ao seu olho. C falha porque quem separa as cores é o prisma (um vidro em forma de cunha que faz arco-íris), não o pano. E falha porque refletir todas as cores é o que a camiseta branca faz.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um papel preto no sol fica preto por quê?",
+        "opcoes": [
+          "absorve todas as cores",
+          "reflete todas as cores",
+          "reflete só o preto"
+        ],
+        "certa": "absorve todas as cores",
+        "resposta": "Nenhuma cor volta para o olho, então vemos preto."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-06",
+    "materia": "Física",
+    "tema": "Dinâmica e Leis de Newton",
+    "enunciado": "Na Terra, a gravidade vale g = 10 m/s². Qual é o peso de uma pessoa de 60 kg de massa?",
+    "A": "6 N",
+    "B": "60 N",
+    "C": "70 N",
+    "D": "600 N",
+    "E": "50 N",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "P = m × g = 60 × 10 = 600 N. D. Erros: 60 = confundir peso com massa; 6 = dividir; 70 = somar; 50 = subtrair.",
+      "ideia": "Massa é quanto de matéria você tem (em kg); peso é a força com que a Terra te puxa (em newtons, N). Peso = massa × gravidade: 60 kg × 10 = 600 N.",
+      "pecas": [
+        {
+          "termo": "Massa (m)",
+          "significado": "Quanto de matéria um corpo tem, em quilogramas (kg). É o número que a balança mostra, e não muda se você for para a Lua."
+        },
+        {
+          "termo": "Peso (P)",
+          "significado": "A força com que o planeta puxa o corpo para baixo, em newtons (N). 1 newton é mais ou menos o peso de uma maçã pequena, de 100 g. Na Lua, o peso fica menor."
+        },
+        {
+          "termo": "Gravidade (g)",
+          "significado": "O quanto o planeta puxa cada quilo. Na Terra, 10 m/s²: um objeto solto ganha 10 m/s (metros por segundo) de velocidade a cada segundo de queda."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A questão dá a massa e a gravidade e pede o peso, que é uma força.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "m (massa)",
+                "60 kg"
+              ],
+              [
+                "g (gravidade)",
+                "10 m/s²"
+              ],
+              [
+                "P (peso)",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Multiplique a massa pela gravidade.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Peso",
+            "dados": [
+              "m = 60\\,\\text{kg}",
+              "g = 10\\,\\text{m/s}^2"
+            ],
+            "formula": "P = m \\times g",
+            "legenda": [
+              "m: quanto de matéria",
+              "g: o puxão do planeta em cada quilo"
+            ],
+            "contas": [
+              "P = 60 \\times 10"
+            ],
+            "resultado": "P = 600\\,\\text{N}",
+            "nota": "A Terra puxa a pessoa com 600 newtons."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada quilo é puxado com 10 N. Com 60 quilos, são 60 puxões de 10 N somados: 60 × 10 = 600 N. É a 2ª lei de Newton: força = massa × aceleração (aceleração é o quanto a velocidade aumenta a cada segundo), usando a aceleração da gravidade.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Na Terra, g = 10 m/s²",
+            "cabecalho": [
+              "Massa",
+              "Peso"
+            ],
+            "linhas": [
+              [
+                "1 kg",
+                "10 N"
+              ],
+              [
+                "5 kg",
+                "50 N"
+              ],
+              [
+                "60 kg",
+                "600 N"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 600 N. B (60 N) é a armadilha: 60 é a massa em kg, não o peso. A (6 N) vem de dividir 60 ÷ 10. C (70 N) vem de somar 60 + 10. E (50 N) vem de subtrair 60 − 10.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma mochila tem 5 kg de massa. Com g = 10 m/s², qual é o peso dela?",
+        "opcoes": [
+          "50 N",
+          "5 N",
+          "15 N",
+          "0,5 N"
+        ],
+        "certa": "50 N",
+        "resposta": "5 × 10 = 50 N."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-07",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Um composto formado só por carbono e hidrogênio, como o metano do gás natural, é chamado de:",
+    "A": "hidrocarboneto.",
+    "B": "álcool.",
+    "C": "ácido carboxílico.",
+    "D": "éster.",
+    "E": "cetona.",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Só C e H = hidrocarboneto (hidro = hidrogênio, carbono = carbono). A. Álcool, ácido carboxílico, éster e cetona têm oxigênio.",
+      "ideia": "O nome já diz: hidro (hidrogênio) + carboneto (carbono). Gás de cozinha, gasolina e metano são hidrocarbonetos.",
+      "pecas": [
+        {
+          "termo": "Composto orgânico",
+          "significado": "Substância feita principalmente de carbono, como o açúcar, o álcool e a gasolina."
+        },
+        {
+          "termo": "Átomo e molécula",
+          "significado": "Átomo é a pecinha mínima de que tudo é feito (C é carbono, H é hidrogênio, O é oxigênio). Molécula é um grupinho de átomos grudados, que forma a substância."
+        },
+        {
+          "termo": "Função orgânica",
+          "significado": "Família de compostos que têm o mesmo pedaço na molécula e se comportam parecido. Ex.: todo álcool tem o grupo OH."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O composto só tem carbono (C) e hidrogênio (H). Qual família tem só esses dois?",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Quem tem o quê",
+            "cabecalho": [
+              "Família",
+              "Tem oxigênio?",
+              "Exemplo"
+            ],
+            "linhas": [
+              [
+                "hidrocarboneto",
+                "não",
+                "metano, gasolina"
+              ],
+              [
+                "álcool",
+                "sim (OH)",
+                "álcool de posto"
+              ],
+              [
+                "ácido carboxílico",
+                "sim (COOH)",
+                "vinagre"
+              ],
+              [
+                "éster",
+                "sim",
+                "cheiro de fruta"
+              ],
+              [
+                "cetona",
+                "sim (C=O no meio)",
+                "acetona"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, hidrocarboneto. B (álcool) tem o grupo OH, com oxigênio. C (ácido carboxílico) tem COOH, como o vinagre. D (éster) tem oxigênio no meio da cadeia, como o cheiro de fruta. E (cetona) tem um oxigênio preso a um carbono do meio, como a acetona de tirar esmalte. Todas as quatro têm oxigênio, então não servem.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "O etanol (CH₃CH₂OH) tem oxigênio além de C e H. Ele é hidrocarboneto?",
+        "opcoes": [
+          "Não, é um álcool",
+          "Sim, é hidrocarboneto"
+        ],
+        "certa": "Não, é um álcool",
+        "resposta": "Tem o grupo OH, que é a marca do álcool."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-08",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "O propano, um dos gases do botijão de cozinha, tem quantos átomos de carbono?",
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4",
+    "E": "8",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "Prefixo prop = 3 carbonos (propano, C₃H₈). C. Erros: 1 = met; 2 = et; 4 = but; 8 = número de hidrogênios do propano.",
+      "ideia": "O começo do nome conta os carbonos: met = 1, et = 2, prop = 3, but = 4. Propano tem 3.",
+      "pecas": [
+        {
+          "termo": "Prefixo",
+          "significado": "O pedaço do começo da palavra. Em química orgânica, ele diz quantos carbonos a cadeia tem."
+        },
+        {
+          "termo": "Cadeia carbônica",
+          "significado": "A fila de átomos de carbono ligados (átomo é a pecinha mínima de que tudo é feito). Forma o esqueleto da molécula, como as contas de um colar."
+        },
+        {
+          "termo": "C₃H₈",
+          "significado": "A fórmula do propano. O número pequeno depois da letra conta os átomos: 3 de C (carbono) e 8 de H (hidrogênio)."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O nome é propano. O pedaço que conta os carbonos é o começo: prop.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "O começo do nome conta os carbonos",
+            "cabecalho": [
+              "Começo",
+              "Carbonos",
+              "Exemplo"
+            ],
+            "linhas": [
+              [
+                "met",
+                "1",
+                "metano"
+              ],
+              [
+                "et",
+                "2",
+                "etano"
+              ],
+              [
+                "prop",
+                "3",
+                "propano"
+              ],
+              [
+                "but",
+                "4",
+                "butano"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 3 carbonos. A (1) é o met, do metano. B (2) é o et, do etano. D (4) é o but, do butano, o outro gás do botijão. E (8) engana: são os hidrogênios do propano (C₃H₈), não os carbonos.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "O etano, gás que vem junto com o petróleo, tem quantos carbonos na cadeia?",
+        "opcoes": [
+          "2",
+          "1",
+          "3",
+          "6"
+        ],
+        "certa": "2",
+        "resposta": "O começo et quer dizer 2 carbonos."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-09",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Qual gás, solto na queima de gasolina, carvão e lenha, é o principal responsável pelo aumento do efeito estufa?",
+    "A": "Oxigênio (O₂)",
+    "B": "Gás carbônico (CO₂)",
+    "C": "Nitrogênio (N₂)",
+    "D": "Hidrogênio (H₂)",
+    "E": "Hélio (He)",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Toda queima de combustível com carbono solta CO₂, que segura calor na atmosfera. B. Oxigênio é gasto na queima, não solto; nitrogênio e hélio não seguram calor; hidrogênio queimando vira água.",
+      "ideia": "Gasolina, carvão e lenha têm carbono. Quando queimam, o carbono se junta ao oxigênio do ar e vira gás carbônico, que segura o calor perto da Terra.",
+      "pecas": [
+        {
+          "termo": "Efeito estufa",
+          "significado": "Alguns gases do ar seguram parte do calor da Terra, como o vidro de um carro fechado no sol. Na medida certa mantém a vida; em excesso, aquece o planeta."
+        },
+        {
+          "termo": "Combustão",
+          "significado": "Queima: o combustível reage com o oxigênio do ar e solta calor. Ex.: o fogão a gás aceso."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O que entra e o que sai quando um combustível com carbono queima?",
+          "visual": {
+            "tipo": "processo",
+            "titulo": "Queima de combustível",
+            "etapas": [
+              {
+                "nome": "Queima",
+                "entra": [
+                  "combustível com C",
+                  "O₂ do ar"
+                ],
+                "sai": [
+                  "CO₂",
+                  "água",
+                  "calor"
+                ]
+              },
+              {
+                "nome": "Atmosfera",
+                "entra": [
+                  "CO₂"
+                ],
+                "sai": [
+                  "calor preso"
+                ]
+              }
+            ],
+            "ligacoes": [
+              {
+                "de": 0,
+                "para": 1,
+                "leva": "CO₂"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, gás carbônico. A (oxigênio) engana porque participa da queima, mas ele é gasto, não solto. C (nitrogênio) e E (hélio) não seguram calor no ar e não saem da queima. D (hidrogênio) não sai da queima de gasolina; e o hidrogênio que queima vira água, não gás de estufa.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual gás, além do gás carbônico, sai do arroto do gado e também esquenta o planeta?",
+        "opcoes": [
+          "Metano",
+          "Oxigênio",
+          "Nitrogênio"
+        ],
+        "certa": "Metano",
+        "resposta": "O metano (CH₄) também é gás de efeito estufa."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-10",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Qual destas fontes de energia é renovável?",
+    "A": "Petróleo",
+    "B": "Carvão mineral",
+    "C": "Gás natural",
+    "D": "Urânio, das usinas nucleares",
+    "E": "Luz do Sol, nas placas solares",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "Renovável = não acaba no tempo da vida humana. Sol, vento e água dos rios são renováveis. E. Petróleo, carvão e gás natural levaram milhões de anos para se formar; urânio é minério que se esgota.",
+      "ideia": "Renovável é o que volta sozinho: o Sol nasce todo dia. Petróleo, carvão, gás natural e urânio acabam quando a gente tira tudo do chão.",
+      "pecas": [
+        {
+          "termo": "Fonte renovável",
+          "significado": "Fonte de energia que se refaz rápido e não acaba, como o sol, o vento e a água dos rios."
+        },
+        {
+          "termo": "Combustível fóssil",
+          "significado": "Petróleo, carvão e gás natural: restos de seres vivos de milhões de anos atrás, que viraram combustível debaixo da terra."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Qual dessas fontes volta sozinha depois de usada?",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Acaba ou não acaba?",
+            "cabecalho": [
+              "Fonte",
+              "Renovável?",
+              "Por quê"
+            ],
+            "linhas": [
+              [
+                "petróleo",
+                "não",
+                "levou milhões de anos"
+              ],
+              [
+                "carvão mineral",
+                "não",
+                "levou milhões de anos"
+              ],
+              [
+                "gás natural",
+                "não",
+                "levou milhões de anos"
+              ],
+              [
+                "urânio",
+                "não",
+                "minério que se esgota"
+              ],
+              [
+                "luz do Sol",
+                "sim",
+                "chega todo dia"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, luz do Sol. A (petróleo), B (carvão mineral) e C (gás natural) são combustíveis fósseis: levaram milhões de anos para se formar e acabam. O gás natural engana pelo nome, mas é fóssil como o petróleo. D (urânio) é um minério, pedra tirada do chão, que também se esgota.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "O biogás, feito do lixo orgânico que apodrece, é fonte renovável?",
+        "opcoes": [
+          "Sim, o lixo sempre se forma de novo",
+          "Não, ele acaba como o petróleo"
+        ],
+        "certa": "Sim, o lixo sempre se forma de novo",
+        "resposta": "Todo dia sai lixo novo de restos de comida e de plantas."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-11",
+    "materia": "Química",
+    "tema": "Soluções, pH e Titulação",
+    "enunciado": "Dissolvem-se 40 g de sal em água até completar 2 L de solução. Qual é a concentração dessa solução?",
+    "A": "20 g/L",
+    "B": "80 g/L",
+    "C": "42 g/L",
+    "D": "38 g/L",
+    "E": "0,05 g/L",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "C = m ÷ V = 40 ÷ 2 = 20 g/L. A. Erros: 80 = multiplicar; 42 = somar; 38 = subtrair; 0,05 = dividir ao contrário (2 ÷ 40).",
+      "ideia": "Concentração diz quantos gramas há em cada litro. 40 g repartidos em 2 litros dá 20 g em cada litro.",
+      "pecas": [
+        {
+          "termo": "Solução",
+          "significado": "Mistura em que uma coisa se dissolve na outra e some à vista, como sal na água ou açúcar no café."
+        },
+        {
+          "termo": "Concentração (C)",
+          "significado": "Quantos gramas da coisa dissolvida há em 1 litro, em g/L (lê-se gramas por litro). Café mais forte tem concentração maior."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A questão dá a massa de sal e o volume da solução. Quer saber quanto sal há em cada litro.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "m (massa de sal)",
+                "40 g"
+              ],
+              [
+                "V (volume da solução)",
+                "2 L"
+              ],
+              [
+                "C (concentração)",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Divida a massa pelo volume. No quadro, o traço da fração quer dizer dividir: 40 em cima e 2 embaixo é 40 ÷ 2 = 20.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Concentração",
+            "dados": [
+              "m = 40\\,\\text{g}",
+              "V = 2\\,\\text{L}"
+            ],
+            "formula": "C = \\frac{m}{V}",
+            "legenda": [
+              "m: quanto sal",
+              "V: quanto de solução"
+            ],
+            "contas": [
+              "C = \\frac{40}{2}"
+            ],
+            "resultado": "C = 20\\,\\text{g/L}",
+            "nota": "Cada litro tem 20 gramas de sal."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É como repartir 40 balas em 2 potes iguais: cada pote fica com 20. O sal se espalha por igual em toda a solução.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os mesmos 40 g de sal",
+            "cabecalho": [
+              "Volume",
+              "Concentração"
+            ],
+            "linhas": [
+              [
+                "1 L",
+                "40 g/L"
+              ],
+              [
+                "2 L",
+                "20 g/L"
+              ],
+              [
+                "4 L",
+                "10 g/L"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 20 g/L. B (80) vem de multiplicar 40 × 2. C (42) vem de somar 40 + 2. D (38) vem de subtrair 40 − 2. E (0,05) vem de dividir 2 ÷ 40, na ordem errada.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Há 30 g de açúcar em 3 L de suco. Qual é a concentração?",
+        "opcoes": [
+          "10 g/L",
+          "90 g/L",
+          "33 g/L",
+          "0,1 g/L"
+        ],
+        "certa": "10 g/L",
+        "resposta": "30 ÷ 3 = 10 g/L."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-12",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Numa pilha, o polo de onde saem os elétrons, onde acontece a oxidação (perda de elétrons), chama-se:",
+    "A": "cátodo.",
+    "B": "eletrólito.",
+    "C": "ânodo.",
+    "D": "ponte salina.",
+    "E": "resistor.",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "Na pilha, oxidação acontece no ânodo, e os elétrons saem dele pelo fio. C. Cátodo é onde há redução (ganho); eletrólito e ponte salina deixam passar íons; resistor é peça de circuito.",
+      "ideia": "Truque das vogais: Ânodo e Oxidação começam com vogal; Cátodo e Redução, com consoante. Os elétrons saem do ânodo e chegam ao cátodo.",
+      "pecas": [
+        {
+          "termo": "Elétron",
+          "significado": "Partícula pequenina com carga negativa. Elétrons andando pelo fio são a corrente elétrica que acende a lanterna."
+        },
+        {
+          "termo": "Oxidação e redução",
+          "significado": "Oxidação é perder elétrons (o ferro que enferruja). Redução é ganhar elétrons. Numa pilha, as duas acontecem juntas, uma em cada polo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A pilha tem dois polos. Num, alguém perde elétrons; no outro, alguém ganha. A questão quer o nome do polo que perde.",
+          "visual": {
+            "tipo": "processo",
+            "titulo": "Os elétrons na pilha",
+            "etapas": [
+              {
+                "nome": "Ânodo (oxidação)",
+                "entra": [
+                  "metal"
+                ],
+                "sai": [
+                  "elétrons"
+                ]
+              },
+              {
+                "nome": "Cátodo (redução)",
+                "entra": [
+                  "elétrons"
+                ],
+                "sai": [
+                  "metal formado"
+                ]
+              }
+            ],
+            "ligacoes": [
+              {
+                "de": 0,
+                "para": 1,
+                "leva": "elétrons pelo fio"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, ânodo. A (cátodo) é o polo do outro lado: lá os elétrons chegam e acontece a redução. B (eletrólito) é o líquido ou a pasta dentro da pilha, e D (ponte salina) é o tubo que liga as duas metades; os dois deixam passar íons (partículas com carga), mas não são o polo. E (resistor) é peça de circuito que esquenta, não parte da pilha.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "O lado que ganha elétrons (redução) recebe que nome?",
+        "opcoes": [
+          "cátodo",
+          "ânodo"
+        ],
+        "certa": "cátodo",
+        "resposta": "Cátodo e redução começam com consoante."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-13",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "Qual é a massa de 1 mol de gás carbônico (CO₂)? Use C = 12 e O = 16.",
+    "A": "28 g",
+    "B": "32 g",
+    "C": "192 g",
+    "D": "44 g",
+    "E": "56 g",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "CO₂ = 1 C + 2 O = 12 + 16 + 16 = 44 g. D. Erros: 28 = contou 1 O só; 32 = só os dois O; 192 = multiplicou 12 × 16; 56 = pôs 2 no C também (24 + 32).",
+      "ideia": "Some a massa de cada átomo da molécula. CO₂ tem 1 carbono e 2 oxigênios: 12 + 16 + 16 = 44 g.",
+      "pecas": [
+        {
+          "termo": "Mol",
+          "significado": "Um pacote com um número enorme e fixo de partículas, como a dúzia é um pacote de 12. Serve para contar átomos (as pecinhas mínimas de que tudo é feito) pesando."
+        },
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol de uma substância, em gramas. É a soma das massas dos átomos dela."
+        },
+        {
+          "termo": "CO₂",
+          "significado": "A fórmula do gás carbônico: uma molécula (grupinho de átomos grudados) com 1 átomo de C (carbono) e 2 de O (oxigênio). O número pequeno embaixo conta os átomos."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A molécula tem 1 carbono e 2 oxigênios. A questão quer o peso de 1 mol dela.",
+          "visual": {
+            "tipo": "molecula",
+            "titulo": "Massa do gás carbônico",
+            "nome": "CO₂",
+            "atomos": [
+              {
+                "simbolo": "C",
+                "massa": 12
+              },
+              {
+                "simbolo": "O",
+                "massa": 16
+              },
+              {
+                "simbolo": "O",
+                "massa": 16
+              }
+            ],
+            "soma": true
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Some o carbono com os dois oxigênios.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Massa molar",
+            "dados": [
+              "C = 12\\,\\text{g}",
+              "O = 16\\,\\text{g}"
+            ],
+            "formula": "M = C + 2 \\times O",
+            "legenda": [
+              "M: quanto pesa 1 mol",
+              "o 2 vem do número pequeno em CO₂"
+            ],
+            "contas": [
+              "M = 12 + 2 \\times 16",
+              "M = 12 + 32"
+            ],
+            "resultado": "M = 44\\,\\text{g}",
+            "nota": "1 mol de gás carbônico pesa 44 gramas."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O número pequeno depois do O (o ₂) vale só para o O. Por isso conta o oxigênio duas vezes e o carbono uma vez só.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Conte cada átomo",
+            "cabecalho": [
+              "Átomo",
+              "Quantos",
+              "Massa"
+            ],
+            "linhas": [
+              [
+                "C",
+                "1",
+                "12"
+              ],
+              [
+                "O",
+                "2",
+                "32"
+              ],
+              [
+                "Total",
+                "3",
+                "44"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 44 g. A (28) vem de esquecer o segundo oxigênio: 12 + 16. B (32) conta só os dois oxigênios e esquece o carbono. C (192) multiplica 12 × 16 em vez de somar. E (56) põe o 2 no carbono também: 24 + 32.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Com C = 12 e H = 1, quanto pesa 1 mol de metano (CH₄)?",
+        "opcoes": [
+          "16 g",
+          "13 g",
+          "48 g"
+        ],
+        "certa": "16 g",
+        "resposta": "12 + 4 × 1 = 16 g."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-14",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Na cadeia alimentar capim → gafanhoto → sapo → cobra, quem é o consumidor secundário?",
+    "A": "O capim",
+    "B": "O sapo",
+    "C": "O gafanhoto",
+    "D": "A cobra",
+    "E": "Os fungos que decompõem os restos",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Capim = produtor; gafanhoto = consumidor primário; sapo = secundário; cobra = terciário. B. Fungos são decompositores e não entram na contagem.",
+      "ideia": "Conte só os animais, a partir do primeiro que come planta: o 1º é o primário, o 2º é o secundário. Gafanhoto é o 1º, sapo é o 2º.",
+      "pecas": [
+        {
+          "termo": "Cadeia alimentar",
+          "significado": "A fila de quem come quem. A seta aponta para quem come: capim → gafanhoto quer dizer que o gafanhoto come o capim."
+        },
+        {
+          "termo": "Produtor",
+          "significado": "Ser que faz o próprio alimento com a luz do Sol, como as plantas."
+        },
+        {
+          "termo": "Consumidor secundário",
+          "significado": "O animal que come o consumidor primário (o que come planta). Ex.: o sapo que come o gafanhoto."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Siga as setas e numere os comedores.",
+          "visual": {
+            "tipo": "processo",
+            "titulo": "Quem come quem",
+            "etapas": [
+              {
+                "nome": "Capim (produtor)",
+                "entra": [
+                  "luz do Sol"
+                ],
+                "sai": [
+                  "folhas"
+                ]
+              },
+              {
+                "nome": "Gafanhoto (1º consumidor)",
+                "entra": [
+                  "folhas"
+                ],
+                "sai": [
+                  "energia"
+                ]
+              },
+              {
+                "nome": "Sapo (2º consumidor)",
+                "entra": [
+                  "gafanhoto"
+                ],
+                "sai": [
+                  "energia"
+                ]
+              },
+              {
+                "nome": "Cobra (3º consumidor)",
+                "entra": [
+                  "sapo"
+                ],
+                "sai": [
+                  "energia"
+                ]
+              }
+            ],
+            "ligacoes": [
+              {
+                "de": 0,
+                "para": 1,
+                "leva": "energia"
+              },
+              {
+                "de": 1,
+                "para": 2,
+                "leva": "energia"
+              },
+              {
+                "de": 2,
+                "para": 3,
+                "leva": "energia"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, o sapo. A (capim) é produtor, não consumidor. C (gafanhoto) engana por ser o segundo da fila, mas é o consumidor primário: o primeiro que come planta. D (cobra) é o terciário: come o sapo. E (fungos) são decompositores: comem restos e ficam fora da contagem.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Em alga → peixe pequeno → garça, quem é o produtor?",
+        "opcoes": [
+          "alga",
+          "peixe pequeno",
+          "garça"
+        ],
+        "certa": "alga",
+        "resposta": "A alga faz o próprio alimento com a luz."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-15",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "O piolho vive na cabeça de uma pessoa e se alimenta do sangue dela, sem matá-la. Que relação ecológica é essa?",
+    "A": "Mutualismo",
+    "B": "Comensalismo",
+    "C": "Competição",
+    "D": "Predatismo",
+    "E": "Parasitismo",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "Um ganha (piolho), outro perde (pessoa) e o hospedeiro continua vivo: parasitismo. E. Mutualismo: os dois ganham; comensalismo: um ganha e o outro nem ganha nem perde; competição: disputam o mesmo recurso; predatismo: o predador mata a presa.",
+      "ideia": "Pergunte quem ganha e quem perde: o piolho ganha comida; a pessoa perde sangue, mas não morre. Um ganha e o outro perde sem morrer é parasitismo.",
+      "pecas": [
+        {
+          "termo": "Relação ecológica",
+          "significado": "O jeito como dois seres vivos convivem: se ajudam, se atrapalham ou um come o outro."
+        },
+        {
+          "termo": "Parasita",
+          "significado": "Ser que vive no corpo de outro e tira proveito dele sem matá-lo logo, como o piolho, a lombriga e o carrapato."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Quem ganha e quem perde na convivência do piolho com a pessoa?",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Quem ganha e quem perde",
+            "cabecalho": [
+              "Relação",
+              "Um",
+              "Outro",
+              "Exemplo"
+            ],
+            "linhas": [
+              [
+                "mutualismo",
+                "ganha",
+                "ganha",
+                "abelha e flor: néctar para a abelha, pólen levado para a flor"
+              ],
+              [
+                "comensalismo",
+                "ganha",
+                "nem ganha nem perde",
+                "urubu come os restos da caça da onça"
+              ],
+              [
+                "parasitismo",
+                "ganha",
+                "perde, mas vive",
+                "carrapato suga o sangue do cachorro"
+              ],
+              [
+                "predatismo",
+                "ganha",
+                "morre",
+                "onça mata e come a capivara"
+              ],
+              [
+                "competição",
+                "perde",
+                "perde",
+                "dois gaviões disputando o mesmo rato"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, parasitismo. A (mutualismo) falha: nele os dois ganham, e a pessoa perde sangue. B (comensalismo) falha: nele o outro nem ganha nem perde. C (competição) falha: piolho e pessoa não disputam a mesma comida. D (predatismo) engana, mas nele o predador mata e come a presa; o piolho não mata a pessoa.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "A rêmora pega restos de comida do tubarão sem prejudicá-lo. Que relação é essa?",
+        "opcoes": [
+          "comensalismo",
+          "parasitismo",
+          "predatismo"
+        ],
+        "certa": "comensalismo",
+        "resposta": "A rêmora ganha e o tubarão nem ganha nem perde."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-16",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Em que parte do sistema digestório a maior parte dos nutrientes da comida passa para o sangue?",
+    "A": "Intestino delgado",
+    "B": "Estômago",
+    "C": "Intestino grosso",
+    "D": "Esôfago",
+    "E": "Boca",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "A absorção dos nutrientes acontece quase toda no intestino delgado, que é longo e cheio de dobrinhas. A. Estômago digere proteína; intestino grosso absorve a água que sobrou e forma as fezes; esôfago só leva a comida; boca mastiga e começa a digerir o amido.",
+      "ideia": "A comida é quebrada na boca e no estômago, mas é no intestino delgado, um tubo de vários metros cheio de dobrinhas, que os nutrientes entram no sangue.",
+      "pecas": [
+        {
+          "termo": "Nutriente",
+          "significado": "O que o corpo aproveita da comida: açúcar, proteína, gordura, vitaminas."
+        },
+        {
+          "termo": "Absorção",
+          "significado": "O nutriente atravessa a parede do intestino e entra no sangue, como a água que entra numa esponja."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Siga a comida pelo tubo digestório e veja onde os nutrientes saem para o sangue.",
+          "visual": {
+            "tipo": "processo",
+            "titulo": "Caminho da comida",
+            "etapas": [
+              {
+                "nome": "Boca",
+                "entra": [
+                  "comida"
+                ],
+                "sai": [
+                  "comida mastigada"
+                ]
+              },
+              {
+                "nome": "Estômago",
+                "entra": [
+                  "comida mastigada"
+                ],
+                "sai": [
+                  "pasta ácida"
+                ]
+              },
+              {
+                "nome": "Intestino delgado",
+                "entra": [
+                  "pasta ácida"
+                ],
+                "sai": [
+                  "nutrientes ao sangue"
+                ]
+              },
+              {
+                "nome": "Intestino grosso",
+                "entra": [
+                  "restos"
+                ],
+                "sai": [
+                  "água ao corpo",
+                  "fezes"
+                ]
+              }
+            ],
+            "ligacoes": [
+              {
+                "de": 0,
+                "para": 1,
+                "leva": "pelo esôfago"
+              },
+              {
+                "de": 1,
+                "para": 2,
+                "leva": "pasta"
+              },
+              {
+                "de": 2,
+                "para": 3,
+                "leva": "restos"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, intestino delgado. B (estômago) quebra a comida, mas quase não absorve. C (intestino grosso) recupera a água que sobrou e forma as fezes. D (esôfago) é só o tubo que leva a comida da boca ao estômago. E (boca) mastiga e começa a digestão, mas não absorve.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Que parte do tubo digestório recupera a água que sobrou e forma as fezes?",
+        "opcoes": [
+          "intestino grosso",
+          "estômago",
+          "esôfago"
+        ],
+        "certa": "intestino grosso",
+        "resposta": "É a última parte do tubo, antes da saída."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-17",
+    "materia": "Biologia",
+    "tema": "Genética",
+    "enunciado": "Uma pessoa que tem dois alelos (versões de um gene) diferentes, como Aa, é chamada de:",
+    "A": "homozigota dominante.",
+    "B": "heterozigota.",
+    "C": "homozigota recessiva.",
+    "D": "mutante.",
+    "E": "clone.",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Hetero = diferente; homo = igual. Aa = heterozigota. B. AA = homozigota dominante; aa = homozigota recessiva; mutante e clone não falam de par de alelos.",
+      "ideia": "Hetero quer dizer diferente, homo quer dizer igual. Letras diferentes (Aa) = heterozigota.",
+      "pecas": [
+        {
+          "termo": "Gene",
+          "significado": "Pedaço do DNA (o manual de instruções guardado em cada célula do corpo) com uma instrução, como a cor dos olhos. Recebemos uma cópia do pai e uma da mãe."
+        },
+        {
+          "termo": "Alelo",
+          "significado": "Cada versão de um gene. Ex.: o alelo A dá olho escuro e o a dá olho claro. A letra maiúscula é o dominante, que aparece mesmo com uma cópia só."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A pessoa tem um A e um a: duas versões diferentes do mesmo gene.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os três pares possíveis",
+            "cabecalho": [
+              "Par",
+              "Alelos",
+              "Nome"
+            ],
+            "linhas": [
+              [
+                "AA",
+                "iguais",
+                "homozigoto dominante"
+              ],
+              [
+                "Aa",
+                "diferentes",
+                "heterozigoto"
+              ],
+              [
+                "aa",
+                "iguais",
+                "homozigoto recessivo"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, heterozigota. A (homozigota dominante) engana porque o A maiúsculo aparece, mas exige as duas letras iguais: AA. C (homozigota recessiva) é aa. D (mutante) é quem teve o DNA alterado e E (clone) é cópia idêntica de outro ser: nenhum dos dois fala do par de letras.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma planta AA tem os dois alelos iguais. Ela é:",
+        "opcoes": [
+          "homozigota",
+          "heterozigota"
+        ],
+        "certa": "homozigota",
+        "resposta": "Homo quer dizer igual."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-18",
+    "materia": "Biologia",
+    "tema": "Citologia",
+    "enunciado": "Qual organela (pecinha dentro da célula) faz a fotossíntese nas células das folhas?",
+    "A": "Mitocôndria",
+    "B": "Ribossomo",
+    "C": "Núcleo",
+    "D": "Cloroplasto",
+    "E": "Complexo golgiense",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "Fotossíntese acontece no cloroplasto, que tem a clorofila verde. D. Mitocôndria faz a respiração; ribossomo monta proteínas; núcleo guarda o DNA; complexo golgiense embala e envia substâncias.",
+      "ideia": "Cloroplasto tem cloro de clorofila, o pigmento verde que captura a luz. É ele que transforma luz, água e gás carbônico em açúcar.",
+      "pecas": [
+        {
+          "termo": "Fotossíntese",
+          "significado": "A planta usa a luz do Sol para fazer açúcar com água e gás carbônico, soltando oxigênio. É a comida que ela mesma fabrica."
+        },
+        {
+          "termo": "Clorofila",
+          "significado": "O pigmento (substância que dá cor) verde das folhas, que captura a luz. Fica dentro do cloroplasto."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Onde, dentro da célula da folha, a luz vira açúcar?",
+          "visual": {
+            "tipo": "processo",
+            "titulo": "Fotossíntese no cloroplasto",
+            "etapas": [
+              {
+                "nome": "Cloroplasto",
+                "entra": [
+                  "luz",
+                  "água (H₂O)",
+                  "gás carbônico (CO₂)"
+                ],
+                "sai": [
+                  "glicose (açúcar)",
+                  "oxigênio (O₂)"
+                ]
+              }
+            ],
+            "ligacoes": []
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, cloroplasto. A (mitocôndria) engana porque também mexe com energia, mas faz o contrário: queima o açúcar para soltar energia. B (ribossomo) monta proteínas. C (núcleo) guarda o DNA, o manual de instruções da célula. E (complexo golgiense) embala e despacha substâncias. Nenhum dos quatro tem clorofila.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual organela usa o oxigênio para tirar energia do açúcar?",
+        "opcoes": [
+          "mitocôndria",
+          "cloroplasto",
+          "ribossomo"
+        ],
+        "certa": "mitocôndria",
+        "resposta": "É a respiração celular, que acontece na mitocôndria."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-19",
+    "materia": "Biologia",
+    "tema": "Evolução",
+    "enunciado": "A asa de um morcego e a asa de uma borboleta servem para voar, mas se formaram de jeitos diferentes, sem um ancestral (antepassado) comum com asas. Esses órgãos são chamados de:",
+    "A": "homólogos.",
+    "B": "vestigiais.",
+    "C": "mutantes.",
+    "D": "adquiridos pelo uso.",
+    "E": "análogos.",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "Mesma função, origem diferente = órgãos análogos. E. Homólogos: mesma origem, função pode mudar (braço humano e asa do morcego); vestigiais: sem função quase nenhuma (apêndice); adquiridos pelo uso é a ideia de Lamarck, que não é aceita.",
+      "ideia": "Análogo é o parecido na função: os dois voam. Homólogo é o parecido na origem: os mesmos ossos herdados de um antepassado.",
+      "pecas": [
+        {
+          "termo": "Órgãos análogos",
+          "significado": "Fazem a mesma coisa, mas vieram de caminhos diferentes. Ex.: asa de inseto e asa de ave."
+        },
+        {
+          "termo": "Órgãos homólogos",
+          "significado": "Vieram do mesmo antepassado, mesmo que hoje sirvam para coisas diferentes. Ex.: o braço humano e a nadadeira da baleia têm os mesmos ossos."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "As duas asas fazem a mesma coisa, mas não vieram de um antepassado comum. Qual nome junta mesma função com origem diferente?",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Função x origem",
+            "cabecalho": [
+              "Nome",
+              "Função",
+              "Origem",
+              "Exemplo"
+            ],
+            "linhas": [
+              [
+                "análogos",
+                "igual",
+                "diferente",
+                "asa de morcego e de borboleta"
+              ],
+              [
+                "homólogos",
+                "pode mudar",
+                "igual",
+                "braço humano e asa de morcego"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, análogos. A (homólogos) engana porque é a outra palavra da dupla, mas exige o mesmo antepassado, que aqui não existe. B (vestigiais) são órgãos que quase não servem mais, como o apêndice. C (mutantes) fala de DNA alterado, não de órgãos parecidos. D (adquiridos pelo uso) é a ideia antiga de Lamarck, que a ciência não aceita.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "O braço humano e a nadadeira da baleia têm os mesmos ossos, herdados de um antepassado. São órgãos:",
+        "opcoes": [
+          "homólogos",
+          "análogos"
+        ],
+        "certa": "homólogos",
+        "resposta": "Mesma origem, mesmo com funções diferentes."
+      }
+    }
+  },
+  {
+    "id": "d2-facil-nat-20",
+    "materia": "Biologia",
+    "tema": "Microbiologia e Doenças",
+    "enunciado": "Qual destas doenças é causada por um vírus?",
+    "A": "Tuberculose",
+    "B": "Cólera",
+    "C": "Sarampo",
+    "D": "Malária",
+    "E": "Micose",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "Sarampo é causado por vírus. C. Tuberculose e cólera: bactérias; malária: protozoário (ser de uma célula só, passado pelo mosquito); micose: fungo.",
+      "ideia": "Decore os grupos: vírus (sarampo, gripe, dengue), bactéria (tuberculose, cólera), protozoário, que é um ser de uma célula só (malária, doença de Chagas), e fungo, parente do mofo (micose).",
+      "pecas": [
+        {
+          "termo": "Vírus",
+          "significado": "Agente bem menor que uma célula, que só se multiplica dentro das células de outro ser. Antibiótico não mata vírus; vacina previne."
+        },
+        {
+          "termo": "Bactéria",
+          "significado": "Ser vivo de uma célula só, sem núcleo. Algumas causam doença e são tratadas com antibiótico."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Separe cada doença pelo causador.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Quem causa cada doença",
+            "cabecalho": [
+              "Doença",
+              "Causador"
+            ],
+            "linhas": [
+              [
+                "tuberculose",
+                "bactéria"
+              ],
+              [
+                "cólera",
+                "bactéria"
+              ],
+              [
+                "sarampo",
+                "vírus"
+              ],
+              [
+                "malária",
+                "protozoário"
+              ],
+              [
+                "micose",
+                "fungo"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, sarampo, que se previne com vacina. A (tuberculose) e B (cólera) são causadas por bactérias. D (malária) engana porque é passada por mosquito, como a dengue, mas o causador é um protozoário. E (micose) é causada por fungo.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "A tuberculose, tratada com antibiótico por meses, é causada por:",
+        "opcoes": [
+          "bactéria",
+          "vírus",
+          "fungo"
+        ],
+        "certa": "bactéria",
+        "resposta": "Antibiótico mata bactéria; a tuberculose é causada por uma."
+      }
+    }
+  }
+]

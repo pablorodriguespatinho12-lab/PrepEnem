@@ -1,0 +1,3092 @@
+[
+  {
+    "id": "d2-dificil-mat-01",
+    "materia": "Matemática",
+    "tema": "Aritmética e Porcentagem",
+    "enunciado": "Um contrato de aluguel prevê um reajuste por ano, de acordo com a inflação do período. Um apartamento era alugado por R$ 1 200,00. No primeiro reajuste, o índice foi de 10%. Um ano depois, no segundo reajuste, o índice foi de 5%, aplicado sobre o aluguel que já tinha sido reajustado.\nDepois dos dois reajustes, o valor do aluguel passou a ser de",
+    "A": "R$ 1 215,00.",
+    "B": "R$ 1 260,00.",
+    "C": "R$ 1 320,00.",
+    "D": "R$ 1 380,00.",
+    "E": "R$ 1 386,00.",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "1 200 × 1,10 = 1 320; 1 320 × 1,05 = 1 386. E. Erros: 1 380 = somou 10% + 5% = 15% de uma vez; 1 320 = só o primeiro reajuste; 1 260 = só o segundo; 1 215 = somou 15 reais em vez de 15%.",
+      "ideia": "Cada reajuste é calculado sobre o valor que já estava valendo. Por isso se multiplica duas vezes: por 1,10 e depois por 1,05.",
+      "pecas": [
+        {
+          "termo": "Reajuste",
+          "significado": "Aumento do preço para acompanhar a subida dos outros preços. Aluguel de R$ 100 com reajuste de 10% passa a R$ 110."
+        },
+        {
+          "termo": "Porcentagem (%)",
+          "significado": "Uma parte de cada 100. 5% de R$ 100 são R$ 5; 5% de R$ 200 são R$ 10."
+        },
+        {
+          "termo": "Fator de aumento",
+          "significado": "O número que já faz a conta do aumento. Subir 10% é multiplicar por 1,10: o 1 é o preço antigo, o 0,10 é o aumento."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O aluguel começa em R$ 1 200, sobe 10% e depois sobe mais 5% em cima do valor novo. A pergunta é o valor no fim.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "aluguel no começo",
+                "R$ 1 200"
+              ],
+              [
+                "1º reajuste",
+                "10%"
+              ],
+              [
+                "2º reajuste",
+                "5% sobre o novo"
+              ],
+              [
+                "aluguel no fim",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "No 1º ano, 10% de 1 200 são 120: o aluguel vai a 1 320. No 2º ano, os 5% são de 1 320, e não de 1 200: 5% de 1 320 são 66.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Ano a ano",
+            "cabecalho": [
+              "Momento",
+              "Aumento",
+              "Aluguel"
+            ],
+            "linhas": [
+              [
+                "começo",
+                "-",
+                "1 200"
+              ],
+              [
+                "1º reajuste",
+                "+120",
+                "1 320"
+              ],
+              [
+                "2º reajuste",
+                "+66",
+                "1 386"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Troque cada aumento pelo seu fator: 10% vira 1,10 e 5% vira 1,05. Multiplique o aluguel pelos dois. De cabeça: 1 200 + 120 = 1 320. Depois 10% de 1 320 é 132, e a metade disso, 5%, é 66: 1 320 + 66 = 1 386.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Dois reajustes seguidos",
+            "dados": [
+              "\\text{começo} = 1\\,200",
+              "10\\% \\to 1{,}10",
+              "5\\% \\to 1{,}05"
+            ],
+            "formula": "P = \\text{começo} \\times 1{,}10 \\times 1{,}05",
+            "legenda": [
+              "começo: aluguel do começo",
+              "$P$: aluguel depois dos dois reajustes"
+            ],
+            "contas": [
+              "P = 1\\,200 \\times 1{,}10 \\times 1{,}05",
+              "P = 1\\,320 \\times 1{,}05"
+            ],
+            "resultado": "P = 1\\,386",
+            "nota": "O aluguel passa a R$ 1 386."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O segundo aumento também incide sobre os 120 reais do primeiro: 5% de 120 são 6 reais a mais. Por isso dois aumentos seguidos dão um pouco mais que a soma das porcentagens: 1 380 + 6 = 1 386, e não 1 380.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Somar ou multiplicar",
+            "cabecalho": [
+              "Conta",
+              "Aluguel"
+            ],
+            "linhas": [
+              [
+                "somando 15%",
+                "1 380"
+              ],
+              [
+                "10% e depois 5%",
+                "1 386"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, R$ 1 386,00. A (R$ 1 215,00) soma 15 reais em vez de 15%. B (R$ 1 260,00) faz só o segundo reajuste, de 5%. C (R$ 1 320,00) para no primeiro reajuste. D (R$ 1 380,00) soma 10% e 5% como se os dois fossem sobre os R$ 1 200.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Salário de R$ 2 000 sobe 20% e depois mais 10%. Qual o salário final?",
+        "opcoes": [
+          "R$ 2 600",
+          "R$ 2 640",
+          "R$ 2 400",
+          "R$ 2 030"
+        ],
+        "certa": "R$ 2 640",
+        "resposta": "2 000 × 1,20 = 2 400, e 2 400 × 1,10 = 2 640."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-02",
+    "materia": "Matemática",
+    "tema": "Aritmética e Porcentagem",
+    "enunciado": "Uma loja de eletrônicos fez uma liquidação de fones de ouvido no fim de semana. No sábado, vendeu 60% dos fones que tinha em estoque. No domingo, vendeu 25% dos fones que tinham sobrado do sábado. Na segunda-feira, o gerente contou 90 fones ainda no estoque.\nAntes da liquidação, a quantidade de fones no estoque era de",
+    "A": "120.",
+    "B": "225.",
+    "C": "300.",
+    "D": "360.",
+    "E": "600.",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "Sobra do sábado: 40%. Sobra do domingo: 75% de 40% = 30%. 90 ÷ 0,30 = 300. C. Erros: 600 = somou 60% + 25% = 85% e achou que sobraram 15%; 225 = esqueceu o domingo (90 ÷ 0,40); 120 = esqueceu o sábado (90 ÷ 0,75); 360 = tomou os 90 como 25% (90 × 4).",
+      "ideia": "Trabalhe com o que SOBROU em cada dia, não com o que foi vendido. Sobrou 40% no sábado e, desses, 75% no domingo.",
+      "pecas": [
+        {
+          "termo": "Estoque",
+          "significado": "A quantidade de produto guardada na loja para vender. Se havia 50 fones e 10 foram vendidos, o estoque fica com 40."
+        },
+        {
+          "termo": "Porcentagem de porcentagem",
+          "significado": "Uma parte de uma parte. Metade da metade de uma pizza é 50% de 50% = 25% da pizza inteira."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Sabemos quanto sobrou no fim (90 fones) e as porcentagens vendidas em cada dia. A pergunta é quanto havia no começo.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Dia",
+              "O que aconteceu"
+            ],
+            "linhas": [
+              [
+                "sábado",
+                "vendeu 60% do estoque"
+              ],
+              [
+                "domingo",
+                "vendeu 25% do que sobrou"
+              ],
+              [
+                "segunda",
+                "sobraram 90"
+              ],
+              [
+                "começo",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Se vendeu 60%, sobraram 40%. No domingo vendeu 25% dessa sobra, então ficaram 75% dela, ou seja, três quartos (dividir por 4 e pegar 3). Três quartos de 40: 40 ÷ 4 = 10, e 3 × 10 = 30. Sobraram 30% do estoque inicial.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "O que sobra em cada dia",
+            "cabecalho": [
+              "Dia",
+              "Vendeu",
+              "Sobrou do total"
+            ],
+            "linhas": [
+              [
+                "sábado",
+                "60%",
+                "40%"
+              ],
+              [
+                "domingo",
+                "25% da sobra",
+                "30%"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Os 90 fones são 30% do estoque do começo. Para achar o todo, divida a parte pela porcentagem: 90 ÷ 0,30. Multiplique os dois por 10 para sumir a vírgula: 900 ÷ 3 = 300. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Volta ao estoque inicial",
+            "dados": [
+              "\\text{sobra} = 90",
+              "\\text{sábado: fica } 0{,}40",
+              "\\text{domingo: fica } 0{,}75"
+            ],
+            "formula": "E \\times 0{,}40 \\times 0{,}75 = 90",
+            "legenda": [
+              "$E$: fones no começo"
+            ],
+            "contas": [
+              "E \\times 0{,}30 = 90",
+              "E = \\dfrac{90}{0{,}30}"
+            ],
+            "resultado": "E = 300",
+            "nota": "Havia 300 fones antes da liquidação."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Confira andando para frente: 60% de 300 são 180 vendidos, sobram 120. 25% de 120 são 30 vendidos, sobram 90. Os 25% do domingo são de 120, e não de 300: por isso não dá para somar 60% com 25%.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Conferindo com 300",
+            "cabecalho": [
+              "Momento",
+              "Fones"
+            ],
+            "linhas": [
+              [
+                "começo",
+                "300"
+              ],
+              [
+                "depois do sábado",
+                "120"
+              ],
+              [
+                "depois do domingo",
+                "90"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 300 fones. A (120) esquece o sábado: 90 ÷ 0,75. B (225) esquece o domingo: 90 ÷ 0,40. D (360) trata os 90 como 25%: 90 × 4. E (600) soma 60% + 25% como se fossem do mesmo total e acha que sobraram 15%.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Gastei 50% do salário e depois 20% do resto. Sobraram R$ 800. Qual o salário?",
+        "opcoes": [
+          "R$ 2 000",
+          "R$ 2 667",
+          "R$ 1 600",
+          "R$ 1 000"
+        ],
+        "certa": "R$ 2 000",
+        "resposta": "Sobra 50% e depois 80% disso: 40%. 800 ÷ 0,40 = 2 000."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-03",
+    "materia": "Matemática",
+    "tema": "Aritmética e Porcentagem",
+    "enunciado": "Duas lojas vendem o mesmo pote de sorvete por R$ 40,00 a unidade, e cada uma anunciou uma promoção. Na loja A, a promoção é \"leve 4, pague 3\". Na loja B, cada pote sai com 20% de desconto, qualquer que seja a quantidade comprada. Uma pessoa precisa de exatamente 4 potes para uma festa.\nComparando o que ela pagaria nas duas lojas, é correto afirmar que",
+    "A": "a loja A sai R$ 8,00 mais barata.",
+    "B": "a loja B sai R$ 8,00 mais barata.",
+    "C": "as duas lojas cobram o mesmo valor.",
+    "D": "a loja A sai R$ 2,00 mais barata.",
+    "E": "a loja A sai R$ 40,00 mais barata.",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Loja A: 3 × 40 = 120. Loja B: 40 × 0,80 = 32, e 4 × 32 = 128. A é 8 reais mais barata. A. Erros: C = achou que leve 4 pague 3 é 20% de desconto; D = comparou o preço de 1 pote (30 contra 32); E = comparou com 4 potes sem desconto (160 − 120); B = trocou as lojas.",
+      "ideia": "Transforme as duas promoções em preço final dos 4 potes e compare. Leve 4 pague 3 dá 1 pote grátis em 4, ou seja, 25% de desconto.",
+      "pecas": [
+        {
+          "termo": "Desconto de 20%",
+          "significado": "Tirar 20 de cada 100 do preço. Um pote de R$ 40 com 20% de desconto perde R$ 8 e sai por R$ 32."
+        },
+        {
+          "termo": "Leve 4, pague 3",
+          "significado": "Você leva 4 produtos e paga só 3; um sai de graça. É o mesmo que 1 de cada 4 grátis: 25% de desconto."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "São duas promoções diferentes para a mesma compra de 4 potes. A pergunta é qual sai mais barata e por quanto.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "preço do pote",
+                "R$ 40"
+              ],
+              [
+                "loja A",
+                "leve 4, pague 3"
+              ],
+              [
+                "loja B",
+                "20% em cada pote"
+              ],
+              [
+                "potes",
+                "4"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Na loja A ela paga 3 potes: 3 × 40 = 120. Na loja B, cada pote perde 20% (8 reais) e sai por 32; os 4 dão 128.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Total de 4 potes",
+            "cabecalho": [
+              "Loja",
+              "Conta",
+              "Total"
+            ],
+            "linhas": [
+              [
+                "A",
+                "3 × 40",
+                "R$ 120"
+              ],
+              [
+                "B",
+                "4 × 32",
+                "R$ 128"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Calcule o total de cada loja e subtraia.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Comparando as lojas",
+            "dados": [
+              "p = 40",
+              "n = 4",
+              "\\text{B: desconto } 20\\% \\to 0{,}80"
+            ],
+            "formula": "\\text{diferença} = B - A",
+            "legenda": [
+              "$A$: total na loja A",
+              "$B$: total na loja B"
+            ],
+            "contas": [
+              "A = 3 \\times 40 = 120",
+              "B = 4 \\times 40 \\times 0{,}80 = 128",
+              "\\text{diferença} = 128 - 120"
+            ],
+            "resultado": "\\text{diferença} = 8",
+            "nota": "A loja A sai 8 reais mais barata."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Na loja A, cada pote sai em média por 120 ÷ 4 = 30 reais: 10 reais a menos em 40, que é 25% de desconto. Na loja B o desconto é 20%. Desconto maior, total menor.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Desconto de cada loja",
+            "cabecalho": [
+              "Loja",
+              "Preço por pote",
+              "Desconto"
+            ],
+            "linhas": [
+              [
+                "A",
+                "R$ 30",
+                "25%"
+              ],
+              [
+                "B",
+                "R$ 32",
+                "20%"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A. B troca as lojas: a B é a mais cara. C acha que pagar 3 de 4 é parecido com 20%, mas é 25%. D compara um pote só (30 contra 32), mas a pessoa leva 4. E compara com 4 potes sem desconto nenhum: 160 − 120.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Camisa de R$ 60: leve 3, pague 2, ou 30% em cada. Para 3 camisas, qual é melhor?",
+        "opcoes": [
+          "leve 3, pague 2",
+          "30% em cada",
+          "tanto faz"
+        ],
+        "certa": "leve 3, pague 2",
+        "resposta": "Leve 3 pague 2: R$ 120. Com 30%: 3 × 42 = R$ 126."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-04",
+    "materia": "Matemática",
+    "tema": "Aritmética e Porcentagem",
+    "enunciado": "O rotativo do cartão de crédito é a dívida que fica quando o cliente não paga a fatura inteira. Um banco cobra juros de 10% ao mês nesse tipo de dívida, no regime de juros compostos: a cada mês, os juros são calculados sobre o total do mês anterior. Uma pessoa deixou R$ 2 000,00 de dívida no rotativo e não pagou nada durante 3 meses.\nAo fim desses 3 meses, a dívida será de",
+    "A": "R$ 662,00.",
+    "B": "R$ 2 200,00.",
+    "C": "R$ 2 420,00.",
+    "D": "R$ 2 600,00.",
+    "E": "R$ 2 662,00.",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "2 000 × 1,1 = 2 200; × 1,1 = 2 420; × 1,1 = 2 662. E. Erros: 2 600 = juros simples (3 × 200); 2 420 = parou em 2 meses; 2 200 = só 1 mês; 662 = só os juros, sem a dívida.",
+      "ideia": "Nos juros compostos, cada mês cobra 10% sobre a dívida que já cresceu. É multiplicar por 1,1 uma vez para cada mês.",
+      "pecas": [
+        {
+          "termo": "Juros",
+          "significado": "O aluguel do dinheiro: quem deve paga um extra por cada mês de atraso. Dívida de R$ 100 com 10% ao mês ganha R$ 10 no mês."
+        },
+        {
+          "termo": "Juros compostos",
+          "significado": "Juros sobre juros: o extra de um mês entra na dívida e também paga juros no mês seguinte. É como bola de neve rolando."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A dívida começa em R$ 2 000 e cresce 10% por mês, sempre sobre o valor do mês anterior. A pergunta é o valor depois de 3 meses.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "dívida no começo",
+                "R$ 2 000"
+              ],
+              [
+                "juros",
+                "10% ao mês, compostos"
+              ],
+              [
+                "tempo",
+                "3 meses"
+              ],
+              [
+                "dívida no fim",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Mês 1: 10% de 2 000 = 200, dívida de 2 200. Mês 2: 10% de 2 200 = 220, dívida de 2 420. Mês 3: 10% de 2 420 = 242, dívida de 2 662.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Mês a mês",
+            "cabecalho": [
+              "Mês",
+              "Juros do mês",
+              "Dívida"
+            ],
+            "linhas": [
+              [
+                "0",
+                "-",
+                "2 000"
+              ],
+              [
+                "1",
+                "200",
+                "2 200"
+              ],
+              [
+                "2",
+                "220",
+                "2 420"
+              ],
+              [
+                "3",
+                "242",
+                "2 662"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Subir 10% é multiplicar por 1,1. Três meses: multiplique três vezes.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Dívida com juros compostos",
+            "dados": [
+              "C = 2\\,000",
+              "i = 10\\% \\to 1{,}1",
+              "t = 3\\,\\text{meses}"
+            ],
+            "formula": "M = C \\times 1{,}1 \\times 1{,}1 \\times 1{,}1",
+            "legenda": [
+              "$C$: dívida do começo",
+              "$M$: dívida no fim"
+            ],
+            "contas": [
+              "M = 2\\,000 \\times 1{,}1 = 2\\,200",
+              "M = 2\\,200 \\times 1{,}1 = 2\\,420",
+              "M = 2\\,420 \\times 1{,}1"
+            ],
+            "resultado": "M = 2\\,662",
+            "nota": "Em 3 meses a dívida vira R$ 2 662."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Nos juros simples, os juros seriam sempre 200 por mês, dando 2 600. Nos compostos, os juros do mês entram na dívida e também pagam juros: 200, depois 220, depois 242. Por isso a dívida cresce cada vez mais rápido.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Simples x compostos",
+            "cabecalho": [
+              "Mês",
+              "Simples",
+              "Compostos"
+            ],
+            "linhas": [
+              [
+                "1",
+                "2 200",
+                "2 200"
+              ],
+              [
+                "2",
+                "2 400",
+                "2 420"
+              ],
+              [
+                "3",
+                "2 600",
+                "2 662"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, R$ 2 662,00. A (R$ 662,00) são só os juros, sem a dívida. B (R$ 2 200,00) conta só 1 mês. C (R$ 2 420,00) para no 2º mês. D (R$ 2 600,00) usa juros simples, que a questão descartou ao dizer que os juros são sobre o total do mês anterior.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Dívida de R$ 1 000 a 20% ao mês, juros compostos, por 2 meses. Quanto fica?",
+        "opcoes": [
+          "R$ 1 400",
+          "R$ 1 440",
+          "R$ 1 200",
+          "R$ 440"
+        ],
+        "certa": "R$ 1 440",
+        "resposta": "1 000 × 1,2 = 1 200, e 1 200 × 1,2 = 1 440."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-05",
+    "materia": "Matemática",
+    "tema": "Aritmética e Porcentagem",
+    "enunciado": "Três amigas abriram uma pequena confeitaria. Para começar, Bia investiu R$ 20 000,00, Carla investiu R$ 30 000,00 e Dani investiu R$ 50 000,00. Elas combinaram que o lucro de cada ano seria dividido em partes proporcionais ao valor que cada uma investiu. No primeiro ano, o lucro foi de R$ 36 000,00.\nA parte do lucro que coube a Carla foi de",
+    "A": "R$ 7 200,00.",
+    "B": "R$ 10 800,00.",
+    "C": "R$ 12 000,00.",
+    "D": "R$ 14 400,00.",
+    "E": "R$ 18 000,00.",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Total investido: 100 000. Carla pôs 30 000, que é 30%. 30% de 36 000 = 10 800. B. Erros: 12 000 = dividiu igual por 3; 7 200 = parte da Bia (20%); 18 000 = parte da Dani (50%); 14 400 = usou 40%, confundindo a soma das outras duas sócias.",
+      "ideia": "Quem pôs mais dinheiro recebe uma fatia maior do lucro. A fatia de cada uma é a fração do investimento total que ela pôs.",
+      "pecas": [
+        {
+          "termo": "Proporcional",
+          "significado": "Que cresce na mesma medida. Quem investiu o dobro recebe o dobro. Como dividir a conta de uma pizza pelo número de fatias que cada um comeu."
+        },
+        {
+          "termo": "Lucro",
+          "significado": "O dinheiro que sobra depois de pagar todos os gastos. Vendeu R$ 500 e gastou R$ 300: lucro de R$ 200."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Três sócias investiram valores diferentes. O lucro de R$ 36 000 é dividido de acordo com quanto cada uma pôs. A pergunta é a parte da Carla.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Sócia",
+              "Investiu"
+            ],
+            "linhas": [
+              [
+                "Bia",
+                "R$ 20 000"
+              ],
+              [
+                "Carla",
+                "R$ 30 000"
+              ],
+              [
+                "Dani",
+                "R$ 50 000"
+              ],
+              [
+                "lucro",
+                "R$ 36 000"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Somando tudo, elas investiram R$ 100 000. A Carla pôs 30 000 desses 100 000, ou seja, 30% do total. Então ela recebe 30% do lucro.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A fatia de cada uma",
+            "cabecalho": [
+              "Sócia",
+              "Fração",
+              "Lucro"
+            ],
+            "linhas": [
+              [
+                "Bia",
+                "20%",
+                "7 200"
+              ],
+              [
+                "Carla",
+                "30%",
+                "10 800"
+              ],
+              [
+                "Dani",
+                "50%",
+                "18 000"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Fatia da Carla = o que ela pôs dividido pelo total, vezes o lucro. 30 000 ÷ 100 000: corte quatro zeros dos dois, fica 3 ÷ 10 = 0,3. Depois, 10% de 36 000 é 3 600, e 30% é 3 × 3 600 = 10 800. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Divisão proporcional",
+            "dados": [
+              "c = 30\\,000",
+              "T = 100\\,000",
+              "L = 36\\,000"
+            ],
+            "formula": "\\text{parte} = \\dfrac{c}{T} \\times L",
+            "legenda": [
+              "$c$: o que a Carla investiu",
+              "$T$: total investido",
+              "$L$: lucro do ano"
+            ],
+            "contas": [
+              "\\text{parte} = \\dfrac{30\\,000}{100\\,000} \\times 36\\,000",
+              "\\text{parte} = 0{,}30 \\times 36\\,000"
+            ],
+            "resultado": "\\text{parte} = 10\\,800",
+            "nota": "A Carla recebe R$ 10 800."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Confira somando as três partes: 7 200 + 10 800 + 18 000 = 36 000, o lucro inteiro. E a Dani, que pôs mais que o dobro da Bia, recebe mais que o dobro.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A soma fecha",
+            "cabecalho": [
+              "Parte",
+              "Reais"
+            ],
+            "linhas": [
+              [
+                "Bia",
+                "7 200"
+              ],
+              [
+                "Carla",
+                "10 800"
+              ],
+              [
+                "Dani",
+                "18 000"
+              ],
+              [
+                "total",
+                "36 000"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, R$ 10 800,00. A (R$ 7 200,00) é a parte da Bia (20%). C (R$ 12 000,00) divide igual para as três, o que só valeria se todas tivessem investido o mesmo. D (R$ 14 400,00) usa 40%, que não é a parte de ninguém. E (R$ 18 000,00) é a parte da Dani (50%).",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Dois sócios põem R$ 10 mil e R$ 30 mil. Lucro de R$ 8 mil, proporcional. Quanto recebe o 1º?",
+        "opcoes": [
+          "R$ 2 000",
+          "R$ 4 000",
+          "R$ 6 000",
+          "R$ 2 667"
+        ],
+        "certa": "R$ 2 000",
+        "resposta": "Ele pôs 10 de 40 mil, 25%. 25% de 8 000 = 2 000."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-06",
+    "materia": "Matemática",
+    "tema": "Grandezas e Medidas",
+    "enunciado": "Numa oficina de costura, 8 costureiras, trabalhando 6 horas por dia, fizeram 240 camisetas em 5 dias. A oficina recebeu uma nova encomenda de 480 camisetas iguais. Para entregar mais rápido, passou a trabalhar com 10 costureiras, 8 horas por dia. Considere que todas as costureiras trabalham sempre no mesmo ritmo.\nO número de dias necessários para fazer a nova encomenda é",
+    "A": "6.",
+    "B": "7,5.",
+    "C": "8.",
+    "D": "10.",
+    "E": "12,5.",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Ritmo: 240 ÷ (8 × 6 × 5) = 1 camiseta por costureira por hora. Nova: 10 × 8 = 80 por dia; 480 ÷ 80 = 6. A. Erros: 10 = só dobrou as camisetas; 8 = esqueceu as horas (10 × 8/10); 7,5 = esqueceu as costureiras (10 × 6/8); 12,5 = tratou mais costureiras como mais dias (10 × 10/8).",
+      "ideia": "Descubra quantas camisetas UMA costureira faz em UMA hora. Depois veja quantas a equipe nova faz por dia.",
+      "pecas": [
+        {
+          "termo": "Regra de três composta",
+          "significado": "Conta com três ou mais coisas que mudam juntas. Aqui: costureiras, horas por dia, dias e camisetas."
+        },
+        {
+          "termo": "Grandeza inversa",
+          "significado": "Quando uma sobe, a outra desce. Mais costureiras, menos dias: com o dobro de gente, o serviço sai na metade do tempo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Mudam três coisas: a encomenda dobrou, há mais costureiras e mais horas por dia. A pergunta é quantos dias leva.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Antes",
+              "Agora"
+            ],
+            "linhas": [
+              [
+                "costureiras",
+                "8",
+                "10"
+              ],
+              [
+                "horas por dia",
+                "6",
+                "8"
+              ],
+              [
+                "camisetas",
+                "240",
+                "480"
+              ],
+              [
+                "dias",
+                "5",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Antes, foram 8 × 6 × 5 = 240 horas de trabalho (somando todas as costureiras) para 240 camisetas: 1 camiseta por hora de uma costureira. Agora, por dia, são 10 × 8 = 80 horas de trabalho, ou seja, 80 camisetas por dia.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Horas de trabalho",
+            "cabecalho": [
+              "Equipe",
+              "Horas por dia",
+              "Camisetas por dia"
+            ],
+            "linhas": [
+              [
+                "antes: 8 × 6",
+                "48",
+                "48"
+              ],
+              [
+                "agora: 10 × 8",
+                "80",
+                "80"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Divida a encomenda pelo que a equipe nova faz em um dia. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Dias para a encomenda",
+            "dados": [
+              "\\text{ritmo} = \\dfrac{240}{8 \\times 6 \\times 5} = 1",
+              "c = 10",
+              "h = 8",
+              "N = 480"
+            ],
+            "formula": "d = \\dfrac{N}{c \\times h \\times \\text{ritmo}}",
+            "legenda": [
+              "$N$: camisetas da encomenda",
+              "$c$: costureiras",
+              "$h$: horas por dia"
+            ],
+            "contas": [
+              "d = \\dfrac{480}{10 \\times 8 \\times 1}",
+              "d = \\dfrac{480}{80}"
+            ],
+            "resultado": "d = 6",
+            "nota": "A encomenda fica pronta em 6 dias."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Camisetas a mais pedem mais dias (direta); costureiras e horas a mais pedem menos dias (inversa). Partindo de 5 dias: o dobro de camisetas dá × 2. Antes eram 8 costureiras, agora 10: × 8 ÷ 10 = × 0,8. Antes 6 horas, agora 8: × 6 ÷ 8 = × 0,75 (6 de 8 é 3 de 4). Juntando: 5 × 2 = 10; 10 × 0,8 = 8; 8 × 0,75 = 6.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Cada mudança",
+            "cabecalho": [
+              "Mudança",
+              "Efeito nos dias"
+            ],
+            "linhas": [
+              [
+                "camisetas 240 → 480",
+                "× 2"
+              ],
+              [
+                "costureiras 8 → 10",
+                "× 0,8"
+              ],
+              [
+                "horas 6 → 8",
+                "× 0,75"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 6 dias. B (7,5) esquece as costureiras a mais: 10 × 6 ÷ 8. C (8) esquece as horas a mais: 10 × 8 ÷ 10. D (10) só olha a encomenda que dobrou. E (12,5) trata as costureiras como se mais gente desse mais dias.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "4 pintores fazem 2 casas em 6 dias. Quantos dias 6 pintores levam para 3 casas?",
+        "opcoes": [
+          "6",
+          "9",
+          "4",
+          "13,5"
+        ],
+        "certa": "6",
+        "resposta": "Cada casa pede 12 dias de um pintor. 3 casas = 36; 36 ÷ 6 = 6 dias."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-07",
+    "materia": "Matemática",
+    "tema": "Grandezas e Medidas",
+    "enunciado": "Um ciclista foi de casa até um sítio, a 18 km de distância, pela mesma estrada na ida e na volta. Na ida, com o vento a favor, manteve a velocidade de 24 km/h o tempo todo. Na volta, cansado e com vento contra, manteve 12 km/h. A velocidade média de um percurso é a distância total dividida pelo tempo total.\nA velocidade média do ciclista no percurso de ida e volta foi de",
+    "A": "8 km/h.",
+    "B": "12 km/h.",
+    "C": "16 km/h.",
+    "D": "18 km/h.",
+    "E": "24 km/h.",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "Ida: 18 ÷ 24 = 0,75 h. Volta: 18 ÷ 12 = 1,5 h. Total: 36 km em 2,25 h. 36 ÷ 2,25 = 16. C. Erros: 18 = média das velocidades (24 + 12) ÷ 2; 8 = só a ida (18 km) dividida pelo tempo total; 24 e 12 = velocidade de um trecho só.",
+      "ideia": "Velocidade média não é a média das velocidades. O ciclista passa mais tempo devagar, então a média fica mais perto da velocidade baixa.",
+      "pecas": [
+        {
+          "termo": "Velocidade média",
+          "significado": "Quantos quilômetros, em média, a pessoa anda por hora no trajeto todo. Andou 60 km em 2 h: 30 km/h."
+        },
+        {
+          "termo": "km/h",
+          "significado": "Quilômetros por hora. 24 km/h quer dizer que, em 1 hora, a bicicleta anda 24 km."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Ida e volta têm a mesma distância, mas velocidades diferentes. A pergunta é a velocidade média do passeio inteiro.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Trecho",
+              "Distância",
+              "Velocidade"
+            ],
+            "linhas": [
+              [
+                "ida",
+                "18 km",
+                "24 km/h"
+              ],
+              [
+                "volta",
+                "18 km",
+                "12 km/h"
+              ],
+              [
+                "total",
+                "36 km",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Tempo = distância ÷ velocidade. Ida: 18 ÷ 24; 18 de 24 é 3 de 4 (divida os dois por 6), e 3 ÷ 4 = 0,75 h (45 minutos). Volta: 18 ÷ 12 = 1,5 h (1 hora e meia). O passeio todo leva 0,75 + 1,5 = 2,25 h.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "O tempo de cada trecho",
+            "cabecalho": [
+              "Trecho",
+              "Conta",
+              "Tempo"
+            ],
+            "linhas": [
+              [
+                "ida",
+                "18 ÷ 24",
+                "0,75 h"
+              ],
+              [
+                "volta",
+                "18 ÷ 12",
+                "1,5 h"
+              ],
+              [
+                "total",
+                "0,75 + 1,5",
+                "2,25 h"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Distância total dividida pelo tempo total: 36 ÷ 2,25. Para sumir a vírgula, multiplique os dois por 4: 144 ÷ 9 = 16 (9 × 16 = 144).",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Velocidade média",
+            "dados": [
+              "d = 18 + 18 = 36\\,\\text{km}",
+              "\\text{ida} = 18 \\div 24 = 0{,}75\\,\\text{h}",
+              "\\text{volta} = 18 \\div 12 = 1{,}5\\,\\text{h}"
+            ],
+            "formula": "v = \\dfrac{d}{\\text{ida} + \\text{volta}}",
+            "legenda": [
+              "$d$: quilômetros de ida e volta",
+              "ida, volta: horas de cada trecho",
+              "o traço: dividir o de cima pelo de baixo"
+            ],
+            "contas": [
+              "v = \\dfrac{36}{0{,}75 + 1{,}5}",
+              "v = \\dfrac{36}{2{,}25}"
+            ],
+            "resultado": "v = 16\\,\\text{km/h}",
+            "nota": "Na média, 16 km a cada hora."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O ciclista ficou 1,5 h a 12 km/h e só 0,75 h a 24 km/h. O tempo lento pesa o dobro, por isso a média (16) fica abaixo de 18, a média simples das duas velocidades.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Quanto tempo em cada ritmo",
+            "cabecalho": [
+              "Velocidade",
+              "Tempo"
+            ],
+            "linhas": [
+              [
+                "24 km/h",
+                "0,75 h"
+              ],
+              [
+                "12 km/h",
+                "1,5 h"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 16 km/h. A (8 km/h) divide só os 18 km da ida pelo tempo total. B (12 km/h) é só a velocidade da volta. D (18 km/h) tira a média de 24 e 12 sem olhar o tempo. E (24 km/h) é só a velocidade da ida.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Ida de 30 km a 30 km/h e volta de 30 km a 15 km/h. Qual a velocidade média?",
+        "opcoes": [
+          "22,5 km/h",
+          "20 km/h",
+          "15 km/h",
+          "25 km/h"
+        ],
+        "certa": "20 km/h",
+        "resposta": "Tempo: 1 h + 2 h = 3 h. 60 km ÷ 3 h = 20 km/h."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-08",
+    "materia": "Matemática",
+    "tema": "Grandezas e Medidas",
+    "enunciado": "Na planta de um apartamento, feita na escala 1 : 50, a sala aparece como um retângulo de 12 cm por 8 cm. O dono quer trocar o piso da sala e precisa saber a área real do cômodo para comprar o material. Lembre que 1 m = 100 cm.\nA área real da sala, em metro quadrado, é",
+    "A": "0,48.",
+    "B": "4,8.",
+    "C": "20.",
+    "D": "24.",
+    "E": "240.",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "12 × 50 = 600 cm = 6 m; 8 × 50 = 400 cm = 4 m. Área: 6 × 4 = 24 m². D. Erros: 0,48 = aplicou a escala uma vez só na área (96 × 50 = 4 800 cm²); 4,8 = mesmo erro e ainda dividiu por 1 000; 240 = área certa em cm² (240 000) dividida por 1 000; 20 = perímetro (6 + 4 + 6 + 4).",
+      "ideia": "Converta cada lado para o tamanho real ANTES de multiplicar. Depois a área já sai em metro quadrado.",
+      "pecas": [
+        {
+          "termo": "Escala 1 : 50",
+          "significado": "Cada 1 cm na planta vale 50 cm de verdade. Uma porta de 2 cm na planta tem 100 cm, ou 1 m, na casa."
+        },
+        {
+          "termo": "Metro quadrado (m²)",
+          "significado": "A medida de área: um quadrado de 1 m por 1 m. Um chão de 3 m por 2 m tem 6 desses quadrados, ou 6 m²."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A planta mostra a sala menor que a real. A pergunta é a área de verdade, em m².",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "escala",
+                "1 : 50"
+              ],
+              [
+                "comprimento na planta",
+                "12 cm"
+              ],
+              [
+                "largura na planta",
+                "8 cm"
+              ],
+              [
+                "área real",
+                "? m²"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Cada lado real é 50 vezes o da planta. 12 cm viram 600 cm, que são 6 m. 8 cm viram 400 cm, que são 4 m.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Planta e realidade",
+            "cabecalho": [
+              "Lado",
+              "Planta",
+              "Real"
+            ],
+            "linhas": [
+              [
+                "comprimento",
+                "12 cm",
+                "6 m"
+              ],
+              [
+                "largura",
+                "8 cm",
+                "4 m"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Converta os dois lados para metro e multiplique.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Área real da sala",
+            "dados": [
+              "12\\,\\text{cm} \\times 50 = 600\\,\\text{cm} = 6\\,\\text{m}",
+              "8\\,\\text{cm} \\times 50 = 400\\,\\text{cm} = 4\\,\\text{m}"
+            ],
+            "formula": "A = c \\times l",
+            "legenda": [
+              "$c$: comprimento real",
+              "$l$: largura real"
+            ],
+            "contas": [
+              "A = 6 \\times 4"
+            ],
+            "resultado": "A = 24\\,\\text{m}^2",
+            "nota": "A sala tem 24 m² de piso."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A escala vale para cada lado. Como a área usa dois lados, ela cresce 50 × 50 = 2 500 vezes: 96 cm² (quadradinhos de 1 cm de lado) × 2 500 = 240 000 cm². Isso dá 24 m², porque 1 m² tem 100 × 100 = 10 000 cm².",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Duas contas, mesmo valor",
+            "cabecalho": [
+              "Caminho",
+              "Resultado"
+            ],
+            "linhas": [
+              [
+                "lados em metro: 6 × 4",
+                "24 m²"
+              ],
+              [
+                "96 cm² × 2 500 ÷ 10 000",
+                "24 m²"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 24 m². A (0,48) aplica a escala uma vez só na área. B (4,8) faz o mesmo erro e ainda divide por 1 000. C (20) é o contorno da sala, 6 + 4 + 6 + 4, não o chão. E (240) divide os cm² por 1 000, mas 1 m² tem 10 000 cm².",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Planta em escala 1 : 100: quarto de 3 cm por 4 cm. Qual a área real?",
+        "opcoes": [
+          "12 m²",
+          "1,2 m²",
+          "120 m²",
+          "14 m²"
+        ],
+        "certa": "12 m²",
+        "resposta": "3 cm = 3 m e 4 cm = 4 m. 3 × 4 = 12 m²."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-09",
+    "materia": "Matemática",
+    "tema": "Estatística",
+    "enunciado": "Uma agente de saúde visitou as 20 famílias de uma rua e anotou quantas crianças cada uma tinha. O resultado foi: 4 famílias sem nenhuma criança, 6 famílias com 1 criança, 7 famílias com 2 crianças e 3 famílias com 3 crianças. Esses números vão para um relatório da prefeitura.\nA média de crianças por família nessa rua é",
+    "A": "1,45.",
+    "B": "1,5.",
+    "C": "2.",
+    "D": "5.",
+    "E": "7,25.",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Crianças: 0 × 4 + 1 × 6 + 2 × 7 + 3 × 3 = 29. Famílias: 20. 29 ÷ 20 = 1,45. A. Erros: 1,5 = média de 0, 1, 2 e 3 sem os pesos; 2 = moda (o valor mais comum); 5 = média das quantidades de famílias (20 ÷ 4); 7,25 = dividiu as 29 crianças por 4 em vez de 20.",
+      "ideia": "Cada número de crianças aparece várias vezes. Multiplique cada um por quantas famílias o têm, some e divida pelo total de famílias.",
+      "pecas": [
+        {
+          "termo": "Média",
+          "significado": "Some todos os valores e divida pela quantidade deles. Notas 6 e 8: média (6 + 8) ÷ 2 = 7."
+        },
+        {
+          "termo": "Média ponderada",
+          "significado": "Média em que um valor conta mais vezes que outro. Se 7 famílias têm 2 crianças, o 2 entra 7 vezes na soma."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A agente juntou as famílias pelo número de crianças. A pergunta é a média de crianças por família.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Crianças",
+              "Famílias"
+            ],
+            "linhas": [
+              [
+                "0",
+                "4"
+              ],
+              [
+                "1",
+                "6"
+              ],
+              [
+                "2",
+                "7"
+              ],
+              [
+                "3",
+                "3"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Conte todas as crianças: as 6 famílias de 1 criança somam 6; as 7 de 2 somam 14; as 3 de 3 somam 9. Total: 29 crianças em 20 famílias.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Crianças de cada grupo",
+            "cabecalho": [
+              "Crianças",
+              "Famílias",
+              "Total"
+            ],
+            "linhas": [
+              [
+                "0",
+                "4",
+                "0"
+              ],
+              [
+                "1",
+                "6",
+                "6"
+              ],
+              [
+                "2",
+                "7",
+                "14"
+              ],
+              [
+                "3",
+                "3",
+                "9"
+              ],
+              [
+                "soma",
+                "20",
+                "29"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Total de crianças dividido pelo total de famílias: 29 ÷ 20. Multiplique os dois por 5: 145 ÷ 100 = 1,45.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Média de crianças",
+            "dados": [
+              "0 \\times 4 = 0",
+              "1 \\times 6 = 6",
+              "2 \\times 7 = 14",
+              "3 \\times 3 = 9",
+              "\\text{famílias} = 20"
+            ],
+            "formula": "\\text{média} = \\dfrac{\\text{total de crianças}}{\\text{total de famílias}}",
+            "legenda": [
+              "o traço: dividir o de cima pelo de baixo"
+            ],
+            "contas": [
+              "\\text{média} = \\dfrac{0 + 6 + 14 + 9}{20}",
+              "\\text{média} = \\dfrac{29}{20}"
+            ],
+            "resultado": "\\text{média} = 1{,}45",
+            "nota": "Em média, 1,45 criança por família."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A média é o valor que cada família teria se as crianças fossem repartidas igualmente. Dividir 29 crianças por 4 tipos de família não tem sentido: são 20 famílias. E 1,5 ignora que há mais famílias com poucas crianças.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "De onde vêm os erros",
+            "cabecalho": [
+              "Conta",
+              "Dá"
+            ],
+            "linhas": [
+              [
+                "29 ÷ 20 (certo)",
+                "1,45"
+              ],
+              [
+                "(0+1+2+3) ÷ 4",
+                "1,5"
+              ],
+              [
+                "29 ÷ 4",
+                "7,25"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 1,45. B (1,5) faz a média de 0, 1, 2 e 3 como se cada um aparecesse uma vez só. C (2) é a moda, o número de crianças mais comum. D (5) divide as 20 famílias pelos 4 grupos. E (7,25) divide as 29 crianças por 4 em vez de 20.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "5 alunos tiraram 6, 3 tiraram 8 e 2 tiraram 10. Qual é a média da turma?",
+        "opcoes": [
+          "7,4",
+          "8",
+          "7",
+          "24"
+        ],
+        "certa": "7,4",
+        "resposta": "30 + 24 + 20 = 74 pontos em 10 alunos: 7,4."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-10",
+    "materia": "Matemática",
+    "tema": "Estatística",
+    "enunciado": "Um banco quer divulgar o tempo de espera na fila. Um funcionário cronometrou 10 clientes, em minutos: 5, 12, 8, 30, 7, 9, 6, 40, 10 e 8. A diretoria discute se o cartaz deve mostrar a média ou a mediana desses tempos, já que dois clientes esperaram muito mais que os outros.\nSe o banco divulgar a mediana em vez da média, o tempo divulgado ficará menor em",
+    "A": "4,5 minutos.",
+    "B": "5 minutos.",
+    "C": "5,5 minutos.",
+    "D": "8,5 minutos.",
+    "E": "13,5 minutos.",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Média: 135 ÷ 10 = 13,5. Em ordem: 5, 6, 7, 8, 8, 9, 10, 12, 30, 40; meio = 8 e 9; mediana 8,5. 13,5 − 8,5 = 5. B. Erros: 5,5 = pegou só o 5º valor (8) ou a moda; 4,5 = pegou só o 6º (9); 8,5 = deu a mediana; 13,5 = deu a média.",
+      "ideia": "A mediana é o valor do meio com os números em ordem. Com quantidade par, é a média dos dois do meio.",
+      "pecas": [
+        {
+          "termo": "Mediana",
+          "significado": "O valor do meio quando os números estão em ordem. Em 2, 5, 9 a mediana é 5. Valores muito altos não a puxam."
+        },
+        {
+          "termo": "Média",
+          "significado": "Soma de tudo dividida pela quantidade. Um valor muito alto puxa a média para cima: 2, 3 e 40 dão média 15."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "São 10 tempos, com dois bem altos (30 e 40). A pergunta é quanto a mediana fica abaixo da média.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Cliente",
+              "Minutos"
+            ],
+            "linhas": [
+              [
+                "1 a 5",
+                "5, 12, 8, 30, 7"
+              ],
+              [
+                "6 a 10",
+                "9, 6, 40, 10, 8"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Para a mediana, ponha em ordem: 5, 6, 7, 8, 8, 9, 10, 12, 30, 40. São 10 números, então o meio fica entre o 5º (8) e o 6º (9). A mediana é a média deles: 8,5.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Em ordem",
+            "cabecalho": [
+              "Posição",
+              "Minutos"
+            ],
+            "linhas": [
+              [
+                "1º a 4º",
+                "5, 6, 7, 8"
+              ],
+              [
+                "5º e 6º (meio)",
+                "8 e 9"
+              ],
+              [
+                "7º a 10º",
+                "10, 12, 30, 40"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Calcule as duas e subtraia. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Média menos mediana",
+            "dados": [
+              "\\text{soma} = 135",
+              "n = 10",
+              "5^{\\text{o}} = 8,\\; 6^{\\text{o}} = 9"
+            ],
+            "formula": "\\text{diferença} = \\text{média} - \\text{mediana}",
+            "legenda": [
+              "$n$: quantos clientes"
+            ],
+            "contas": [
+              "\\text{média} = \\dfrac{135}{10} = 13{,}5",
+              "\\text{mediana} = \\dfrac{8 + 9}{2} = 8{,}5",
+              "\\text{diferença} = 13{,}5 - 8{,}5"
+            ],
+            "resultado": "\\text{diferença} = 5",
+            "nota": "A mediana fica 5 minutos abaixo da média."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Os dois clientes de 30 e 40 minutos somam 70 dos 135 minutos e puxam a média para 13,5, mais que 8 dos 10 clientes esperaram. A mediana só olha o meio da fila em ordem, então esses dois não a mudam.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Quem esperou menos que 13,5",
+            "cabecalho": [
+              "Grupo",
+              "Clientes"
+            ],
+            "linhas": [
+              [
+                "menos de 13,5 min",
+                "8"
+              ],
+              [
+                "mais de 13,5 min",
+                "2"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 5 minutos. A (4,5) usa só o 6º valor (9) como mediana: 13,5 − 9. C (5,5) usa só o 5º valor (8), que também é o que mais se repete: 13,5 − 8. D (8,5) é a mediana, não a diferença. E (13,5) é a média, não a diferença.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Tempos 2, 4, 6, 8, 20 minutos. Qual a diferença entre média e mediana?",
+        "opcoes": [
+          "2 minutos",
+          "6 minutos",
+          "8 minutos",
+          "4 minutos"
+        ],
+        "certa": "2 minutos",
+        "resposta": "Média 40 ÷ 5 = 8; mediana 6. Diferença 2."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-11",
+    "materia": "Matemática",
+    "tema": "Estatística",
+    "enunciado": "Uma loja tem 24 funcionários, e a média de idade deles é de 30 anos. Neste mês, o funcionário mais velho, com 54 anos, se aposentou. No lugar dele foi contratado um jovem aprendiz de 18 anos. O número de funcionários continuou o mesmo, e ninguém fez aniversário no período.\nDepois da troca, a média de idade dos funcionários da loja passou a ser de",
+    "A": "24 anos.",
+    "B": "27,75 anos.",
+    "C": "28,5 anos.",
+    "D": "30 anos.",
+    "E": "31,5 anos.",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "Soma antiga: 24 × 30 = 720. Nova soma: 720 − 54 + 18 = 684. 684 ÷ 24 = 28,5. C. Erros: 30 = achou que trocar 1 por 1 não muda a média; 27,75 = tirou 54 e esqueceu de somar 18 (666 ÷ 24); 31,5 = somou a diferença em vez de subtrair; 24 = média de 30 e 18.",
+      "ideia": "A média esconde uma soma: média × quantidade = soma das idades. Mexa na soma e divida de novo.",
+      "pecas": [
+        {
+          "termo": "Média",
+          "significado": "Soma de todos os valores dividida pela quantidade. 3 amigos com 10, 12 e 14 anos: média (10 + 12 + 14) ÷ 3 = 12."
+        },
+        {
+          "termo": "Soma pela média",
+          "significado": "Se a média de 24 pessoas é 30, as idades somam 24 × 30 = 720. É fazer a conta da média de trás para frente."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Sai uma pessoa de 54 anos e entra uma de 18. A pergunta é a nova média, com os mesmos 24 funcionários.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "funcionários",
+                "24"
+              ],
+              [
+                "média antes",
+                "30 anos"
+              ],
+              [
+                "saiu",
+                "54 anos"
+              ],
+              [
+                "entrou",
+                "18 anos"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A soma das idades era 24 × 30 = 720. Tirando os 54 do aposentado, fica 666. Somando os 18 do aprendiz, fica 684. A quantidade continua 24.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A soma das idades",
+            "cabecalho": [
+              "Momento",
+              "Soma"
+            ],
+            "linhas": [
+              [
+                "antes",
+                "720"
+              ],
+              [
+                "tirou 54",
+                "666"
+              ],
+              [
+                "pôs 18",
+                "684"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Nova soma dividida pela quantidade: 684 ÷ 24. De cabeça: 24 × 28 = 672, sobram 12, e 12 ÷ 24 = 0,5. Dá 28,5.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Nova média de idade",
+            "dados": [
+              "24 \\text{ funcionários}",
+              "\\text{média antes} = 30",
+              "\\text{sai } 54,\\; \\text{entra } 18"
+            ],
+            "formula": "\\text{nova} = \\dfrac{24 \\times 30 - 54 + 18}{24}",
+            "legenda": [
+              "nova: a média depois da troca",
+              "o traço: dividir o de cima pelo de baixo"
+            ],
+            "contas": [
+              "\\text{nova} = \\dfrac{720 - 54 + 18}{24}",
+              "\\text{nova} = \\dfrac{684}{24}"
+            ],
+            "resultado": "\\text{nova} = 28{,}5",
+            "nota": "A média cai para 28,5 anos."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A troca tirou 54 − 18 = 36 anos da soma. Esses 36 anos são repartidos entre os 24 funcionários: 36 de 24 é 3 de 2 (divida os dois por 12), e 3 ÷ 2 = 1,5 ano a menos para cada. 30 − 1,5 = 28,5.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Outro caminho",
+            "cabecalho": [
+              "Conta",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "anos que saíram da soma",
+                "36"
+              ],
+              [
+                "por funcionário",
+                "36 ÷ 24 = 1,5"
+              ],
+              [
+                "nova média",
+                "30 − 1,5 = 28,5"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 28,5 anos. A (24) faz a média só de 30 e 18. B (27,75) tira os 54 e esquece de somar os 18 do aprendiz. D (30) acha que a média não muda porque o número de pessoas não mudou, mas as idades mudaram. E (31,5) soma a diferença em vez de tirar.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "10 alunos têm média 7. Uma nota 2 é trocada por 8. Qual a nova média?",
+        "opcoes": [
+          "7,6",
+          "7",
+          "8",
+          "6,4"
+        ],
+        "certa": "7,6",
+        "resposta": "Soma 70 − 2 + 8 = 76; 76 ÷ 10 = 7,6."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-12",
+    "materia": "Matemática",
+    "tema": "Funções",
+    "enunciado": "Uma companhia de água cobra assim: quem gasta até 10 m³ no mês paga uma tarifa fixa de R$ 40,00. Quem passa de 10 m³ paga os R$ 40,00 mais R$ 6,00 por metro cúbico que passar dos 10. Em março, uma família gastou 17 m³ de água.\nO valor da conta de água dessa família em março foi de",
+    "A": "R$ 42,00.",
+    "B": "R$ 68,00.",
+    "C": "R$ 82,00.",
+    "D": "R$ 102,00.",
+    "E": "R$ 142,00.",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "Passou 17 − 10 = 7 m³. Conta: 40 + 7 × 6 = 82. C. Erros: 142 = cobrou os 17 m³ a 6 reais e ainda somou 40; 102 = cobrou os 17 m³ a 6 sem a tarifa fixa; 42 = só o que passou, sem os 40; 68 = achou que os 40 reais valem 4 por m³ e fez 17 × 4.",
+      "ideia": "Os primeiros 10 m³ já estão pagos pela tarifa fixa. Só o que passa de 10 é cobrado a R$ 6.",
+      "pecas": [
+        {
+          "termo": "Metro cúbico (m³)",
+          "significado": "Uma caixa de 1 m por 1 m por 1 m. Cabem 1 000 litros de água: o tamanho de uma caixa-d’água comum de casa."
+        },
+        {
+          "termo": "Função por faixas",
+          "significado": "Uma regra de preço que muda depois de um limite. Até 10 m³, preço fixo; depois de 10, o preço sobe a cada m³."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A conta tem uma parte fixa e uma parte que depende do quanto passou de 10 m³. A família gastou 17 m³.",
+          "visual": {
+            "tipo": "legenda",
+            "titulo": "Conta para quem passa de 10 m³",
+            "partes": [
+              {
+                "texto": "C",
+                "rotulo": "valor da conta",
+                "cor": "a"
+              },
+              {
+                "texto": "= 40",
+                "rotulo": "tarifa fixa"
+              },
+              {
+                "texto": "+ 6",
+                "rotulo": "reais por m³ a mais"
+              },
+              {
+                "texto": "\\times (x - 10)",
+                "rotulo": "m³ que passaram de 10",
+                "cor": "b"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Dos 17 m³, os primeiros 10 estão dentro da tarifa fixa. Só 17 − 10 = 7 m³ são cobrados a parte, a R$ 6 cada.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Partes da conta",
+            "cabecalho": [
+              "Parte",
+              "Reais"
+            ],
+            "linhas": [
+              [
+                "tarifa fixa (até 10 m³)",
+                "40"
+              ],
+              [
+                "7 m³ a mais × 6",
+                "42"
+              ],
+              [
+                "total",
+                "82"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ponha x = 17 na regra da conta.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Conta de 17 m³",
+            "dados": [
+              "x = 17\\,\\text{m}^3",
+              "\\text{fixo} = 40",
+              "\\text{por m}^3 = 6"
+            ],
+            "formula": "C = 40 + 6 \\times (x - 10)",
+            "legenda": [
+              "$x$: m³ gastos no mês",
+              "$C$: valor da conta"
+            ],
+            "contas": [
+              "C = 40 + 6 \\times (17 - 10)",
+              "C = 40 + 6 \\times 7",
+              "C = 40 + 42"
+            ],
+            "resultado": "C = 82",
+            "nota": "A conta de março foi R$ 82."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Veja a conta subir: até 10 m³ ela fica parada em 40; a partir daí sobe 6 reais a cada m³. Em 17 m³, foram 7 degraus de 6.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Conta por consumo",
+            "cabecalho": [
+              "m³",
+              "Conta"
+            ],
+            "linhas": [
+              [
+                "8",
+                "R$ 40"
+              ],
+              [
+                "10",
+                "R$ 40"
+              ],
+              [
+                "11",
+                "R$ 46"
+              ],
+              [
+                "17",
+                "R$ 82"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, R$ 82,00. A (R$ 42,00) cobra só o que passou e esquece a tarifa fixa. B (R$ 68,00) acha que os 40 reais valem 4 por m³ e faz 17 × 4. D (R$ 102,00) cobra os 17 m³ a 6 reais, sem tarifa fixa. E (R$ 142,00) cobra os 17 m³ inteiros e ainda soma os 40, como se a tarifa não cobrisse os 10 primeiros.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Tarifa: R$ 30 até 10 m³ e R$ 5 por m³ acima. Quanto paga quem gasta 14 m³?",
+        "opcoes": [
+          "R$ 50",
+          "R$ 100",
+          "R$ 70",
+          "R$ 20"
+        ],
+        "certa": "R$ 50",
+        "resposta": "Passou 4 m³: 30 + 4 × 5 = 50."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-13",
+    "materia": "Matemática",
+    "tema": "Funções",
+    "enunciado": "Um agricultor tem 80 m de tela para cercar uma horta retangular encostada no muro do sítio. O muro faz um dos lados, então a tela só cobre os outros três: dois lados de largura x e um lado de frente, que mede 80 − 2x. A área da horta, em metro quadrado, é dada por A = x · (80 − 2x).\nA maior área que a horta pode ter, usando toda a tela, é de",
+    "A": "600 m².",
+    "B": "800 m².",
+    "C": "1 200 m².",
+    "D": "1 600 m².",
+    "E": "3 200 m².",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "A = 0 em x = 0 e em x = 40; o espelho fica em x = 20. A = 20 × (80 − 40) = 20 × 40 = 800. B. Erros: 1 200 = esqueceu o 2 (20 × 60); 1 600 = fez um quadrado 40 × 40; 3 200 = 80 × 40; 600 = testou x = 10 (ou 30) e parou.",
+      "ideia": "A área é zero nas duas pontas (x = 0 e x = 40) e máxima bem no meio delas. Pelo espelho, o meio é x = 20.",
+      "pecas": [
+        {
+          "termo": "Parábola",
+          "significado": "A curva da área: sobe, chega num topo e desce, igual a uma bola chutada para cima. Os dois lados são espelho um do outro."
+        },
+        {
+          "termo": "Vértice",
+          "significado": "O ponto mais alto da parábola, o topo. Ele fica exatamente no meio de dois pontos de mesma altura, como o meio de uma ponte."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A fórmula dá a área para cada largura x. A pergunta é a maior área possível.",
+          "visual": {
+            "tipo": "legenda",
+            "titulo": "A área da horta",
+            "partes": [
+              {
+                "texto": "A",
+                "rotulo": "área da horta",
+                "cor": "a"
+              },
+              {
+                "texto": "= x",
+                "rotulo": "largura do lado"
+              },
+              {
+                "texto": "\\cdot (80 - 2x)",
+                "rotulo": "tela que sobra na frente",
+                "cor": "b"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Teste algumas larguras. Com x = 0 a horta não existe; com x = 40 a frente fica 80 − 80 = 0. Entre elas, a área sobe e depois desce. x = 10 e x = 30 dão a mesma área: 600.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Área para cada largura",
+            "cabecalho": [
+              "x (m)",
+              "frente (m)",
+              "área (m²)"
+            ],
+            "linhas": [
+              [
+                "0",
+                "80",
+                "0"
+              ],
+              [
+                "10",
+                "60",
+                "600"
+              ],
+              [
+                "20",
+                "40",
+                "800"
+              ],
+              [
+                "30",
+                "20",
+                "600"
+              ],
+              [
+                "40",
+                "0",
+                "0"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "O topo fica no meio de 0 e 40, os dois zeros. Ponha esse x na fórmula. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Maior área pelo espelho",
+            "dados": [
+              "A = 0 \\text{ em } x = 0",
+              "A = 0 \\text{ em } x = 40",
+              "\\text{topo: } x = \\dfrac{0 + 40}{2} = 20"
+            ],
+            "formula": "A = x \\cdot (80 - 2x)",
+            "legenda": [
+              "$x$: largura do lado, em metros"
+            ],
+            "contas": [
+              "A = 20 \\cdot (80 - 2 \\cdot 20)",
+              "A = 20 \\cdot 40"
+            ],
+            "resultado": "A = 800\\,\\text{m}^2",
+            "nota": "Com 20 m de lado e 40 m de frente, a horta tem 800 m²."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A parábola é igual dos dois lados do topo: x = 10 e x = 30 dão 600, x = 0 e x = 40 dão 0. Pontos de mesma altura ficam à mesma distância do topo, então o topo está no meio deles.",
+          "visual": {
+            "tipo": "grafico",
+            "titulo": "Sobe e desce igual",
+            "funcoes": [
+              {
+                "expr": "x*(80-2*x)",
+                "rotulo": "A(x)",
+                "cor": "a"
+              }
+            ],
+            "pontos": [
+              {
+                "x": 10,
+                "y": 600,
+                "rotulo": "x = 10"
+              },
+              {
+                "x": 30,
+                "y": 600,
+                "rotulo": "x = 30"
+              },
+              {
+                "x": 20,
+                "y": 800,
+                "rotulo": "topo",
+                "cor": "b"
+              }
+            ],
+            "x": [
+              -2,
+              42
+            ],
+            "y": [
+              -60,
+              900
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 800 m². A (600) testa x = 10 ou x = 30 e para antes do topo. C (1 200) esquece o 2 da fórmula: 20 × 60. D (1 600) faz um quadrado de 40 m, mas a tela não fecha quatro lados. E (3 200) multiplica 80 × 40, usando a tela toda como lado.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Lucro L = x · (20 − x). Em x = 0 e x = 20 o lucro é 0. Qual o lucro máximo?",
+        "opcoes": [
+          "100",
+          "200",
+          "400",
+          "10"
+        ],
+        "certa": "100",
+        "resposta": "Meio de 0 e 20: x = 10. L = 10 × 10 = 100."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-14",
+    "materia": "Matemática",
+    "tema": "Funções",
+    "enunciado": "Num laboratório, uma cultura de bactérias foi colocada para crescer num meio com alimento à vontade. Às 8 h da manhã havia 500 bactérias, e a pesquisadora observou que a quantidade dobra a cada 3 horas. Assim, a quantidade é dada por $N = 500 \\cdot 2^{t/3}$, em que t é o número de horas depois das 8 h.\nSe o ritmo se mantiver, às 20 h do mesmo dia a cultura terá",
+    "A": "2 000 bactérias.",
+    "B": "2 500 bactérias.",
+    "C": "4 000 bactérias.",
+    "D": "6 000 bactérias.",
+    "E": "8 000 bactérias.",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "De 8 h a 20 h são 12 h; 12 ÷ 3 = 4 dobras. 500 × 2 × 2 × 2 × 2 = 500 × 16 = 8 000. E. Erros: 2 000 = 500 × 4 (multiplicou pelo número de dobras); 2 500 = somou 500 a cada dobra; 4 000 = contou 3 dobras; 6 000 = 500 × 12 (multiplicou pelas horas).",
+      "ideia": "Dobrar 4 vezes é multiplicar por 2 quatro vezes: por 16, e não por 4. Conte primeiro quantas dobras cabem no tempo.",
+      "pecas": [
+        {
+          "termo": "Ponto (·)",
+          "significado": "Quer dizer vezes. 500 · 16 é o mesmo que 500 × 16."
+        },
+        {
+          "termo": "Potência (2⁴)",
+          "significado": "Multiplicar um número por ele mesmo várias vezes. O número pequeno no alto diz quantas vezes: 2⁴ (dois elevado a quatro) é 2 × 2 × 2 × 2 = 16."
+        },
+        {
+          "termo": "Expoente t/3",
+          "significado": "É o número no alto do 2. O traço quer dizer dividir: t/3 é t ÷ 3, as horas divididas por 3, ou seja, quantas vezes a cultura já dobrou. Em 12 horas: 12 ÷ 3 = 4 dobras."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A fórmula diz quantas bactérias há t horas depois das 8 h. A pergunta é quantas há às 20 h.",
+          "visual": {
+            "tipo": "legenda",
+            "titulo": "A cultura de bactérias",
+            "partes": [
+              {
+                "texto": "N",
+                "rotulo": "quantas bactérias",
+                "cor": "a"
+              },
+              {
+                "texto": "= 500",
+                "rotulo": "bactérias às 8 h"
+              },
+              {
+                "texto": "\\cdot 2^{t/3}",
+                "rotulo": "dobra a cada 3 horas",
+                "cor": "b"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Das 8 h às 20 h passam 12 horas, ou seja, t = 12. Em 12 horas cabem 12 ÷ 3 = 4 períodos de 3 horas: a cultura dobra 4 vezes.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Dobra a cada 3 horas",
+            "cabecalho": [
+              "Hora",
+              "Bactérias"
+            ],
+            "linhas": [
+              [
+                "8 h",
+                "500"
+              ],
+              [
+                "11 h",
+                "1 000"
+              ],
+              [
+                "14 h",
+                "2 000"
+              ],
+              [
+                "17 h",
+                "4 000"
+              ],
+              [
+                "20 h",
+                "8 000"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ponha t = 12 na fórmula. O 500 é a quantidade do começo (às 8 h). O expoente fica 12 ÷ 3 = 4, e 2⁴ = 16. Por fim, 500 × 16: 5 × 16 = 80, mais dois zeros, 8 000.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Bactérias às 20 h",
+            "dados": [
+              "\\text{começo} = 500",
+              "t = 20 - 8 = 12\\,\\text{h}",
+              "\\text{dobra a cada } 3\\,\\text{h}"
+            ],
+            "formula": "N = 500 \\cdot 2^{t/3}",
+            "legenda": [
+              "$t$: horas depois das 8 h",
+              "t/3 = t ÷ 3: quantas vezes dobrou",
+              "·: vezes"
+            ],
+            "contas": [
+              "N = 500 \\times 2^{12/3}",
+              "N = 500 \\times 2^{4}",
+              "N = 500 \\times 16"
+            ],
+            "resultado": "N = 8\\,000",
+            "nota": "Às 20 h serão 8 000 bactérias."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada dobra multiplica o que já existe, inclusive as bactérias que nasceram antes. Por isso 4 dobras dão × 16 (2 × 2 × 2 × 2), e não × 4. Somar 500 por vez daria sempre o mesmo pulo de 500 (1 000, 1 500, 2 000, 2 500). Dobrando, o pulo cresce: +500, +1 000, +2 000, +4 000.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Dobrar x somar",
+            "cabecalho": [
+              "Dobras",
+              "Dobrando",
+              "Somando 500"
+            ],
+            "linhas": [
+              [
+                "1",
+                "1 000",
+                "1 000"
+              ],
+              [
+                "2",
+                "2 000",
+                "1 500"
+              ],
+              [
+                "3",
+                "4 000",
+                "2 000"
+              ],
+              [
+                "4",
+                "8 000",
+                "2 500"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 8 000. A (2 000) multiplica 500 por 4, o número de dobras. B (2 500) soma 500 a cada dobra em vez de dobrar. C (4 000) conta só 3 dobras, esquecendo a das 20 h. D (6 000) multiplica 500 por 12, as horas.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Começa com 100 e triplica a cada 2 horas. Quantas há depois de 6 horas?",
+        "opcoes": [
+          "2 700",
+          "900",
+          "1 800",
+          "600"
+        ],
+        "certa": "2 700",
+        "resposta": "6 ÷ 2 = 3 períodos: 100 × 3 × 3 × 3 = 2 700."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-15",
+    "materia": "Matemática",
+    "tema": "Geometria Plana",
+    "enunciado": "O quintal retangular de uma casa mede 20 m por 15 m. No meio dele há uma piscina redonda de 3 m de raio. O dono quer cobrir com grama todo o quintal, menos a piscina. A grama custa R$ 12,00 o metro quadrado, já com a instalação. Use 3 como valor aproximado de π.\nO gasto com a grama será de",
+    "A": "R$ 3 276,00.",
+    "B": "R$ 3 384,00.",
+    "C": "R$ 3 492,00.",
+    "D": "R$ 3 600,00.",
+    "E": "R$ 3 924,00.",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Quintal: 20 × 15 = 300. Piscina: 3 × 3² = 27. Grama: 273 × 12 = 3 276. A. Erros: 3 600 = não tirou a piscina; 3 384 = tirou a volta da piscina (2 × 3 × 3 = 18) em vez da área; 3 492 = esqueceu o π (tirou 9); 3 924 = somou a piscina em vez de tirar.",
+      "ideia": "Área da grama = área do quintal menos a área da piscina. Depois multiplique pelo preço do m².",
+      "pecas": [
+        {
+          "termo": "Área do círculo",
+          "significado": "O espaço dentro de uma roda: π × raio × raio. Uma pizza de raio 10 cm cobre 3 × 10 × 10 = 300 quadradinhos de 1 cm de lado (300 cm²)."
+        },
+        {
+          "termo": "π (pi)",
+          "significado": "Pi, o número 3,14 que liga a volta do círculo ao seu tamanho. A questão manda usar 3 para a conta ficar simples."
+        },
+        {
+          "termo": "Raio",
+          "significado": "A distância do centro da roda até a borda. É metade do diâmetro, a largura total da roda."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O quintal é um retângulo com uma roda (a piscina) dentro. A pergunta é quanto custa gramar o que não é piscina.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "quintal",
+                "20 m × 15 m"
+              ],
+              [
+                "raio da piscina",
+                "3 m"
+              ],
+              [
+                "grama",
+                "R$ 12 por m²"
+              ],
+              [
+                "π",
+                "3"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O quintal todo tem 20 × 15 = 300 m² (300 quadrados de 1 m de lado). A piscina ocupa 3 × 3 × 3 = 27 m². Sobram 300 − 27 = 273 m² para a grama.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Áreas",
+            "cabecalho": [
+              "Parte",
+              "m²"
+            ],
+            "linhas": [
+              [
+                "quintal",
+                "300"
+              ],
+              [
+                "piscina",
+                "27"
+              ],
+              [
+                "grama",
+                "273"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Tire a área da piscina e multiplique pelo preço. No quadro, πr² quer dizer π × r × r. De cabeça: 273 × 10 = 2 730, e 273 × 2 = 546; somando, 3 276.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Gasto com grama",
+            "dados": [
+              "\\text{quintal} = 20 \\times 15 = 300\\,\\text{m}^2",
+              "r = 3\\,\\text{m}",
+              "\\pi = 3",
+              "p = 12 \\text{ por m}^2"
+            ],
+            "formula": "G = (300 - \\pi r^2) \\times p",
+            "legenda": [
+              "$r$: raio da piscina",
+              "$p$: preço do m² de grama"
+            ],
+            "contas": [
+              "G = (300 - 3 \\times 3^2) \\times 12",
+              "G = (300 - 27) \\times 12",
+              "G = 273 \\times 12"
+            ],
+            "resultado": "G = 3\\,276",
+            "nota": "A grama custa R$ 3 276."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A grama cobre a superfície, então a conta é de área (π × r × r = 27), não da volta da piscina (2 × π × r = 18). A volta mede a borda, em metros; a área mede o chão, em m².",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Área x volta da piscina",
+            "cabecalho": [
+              "Medida",
+              "Conta",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "área (chão)",
+                "3 × 3 × 3",
+                "27 m²"
+              ],
+              [
+                "volta (borda)",
+                "2 × 3 × 3",
+                "18 m"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, R$ 3 276,00. B (R$ 3 384,00) tira a volta da piscina (18) em vez da área. C (R$ 3 492,00) esquece o π e tira só 3 × 3 = 9. D (R$ 3 600,00) grama o quintal inteiro, por cima da piscina. E (R$ 3 924,00) soma a piscina em vez de tirar.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Sala de 10 m por 8 m com tapete redondo de raio 2 m. Use π = 3. Quanto piso aparece?",
+        "opcoes": [
+          "68 m²",
+          "80 m²",
+          "76 m²",
+          "56 m²"
+        ],
+        "certa": "68 m²",
+        "resposta": "80 − 3 × 2 × 2 = 80 − 12 = 68 m²."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-16",
+    "materia": "Matemática",
+    "tema": "Geometria Plana",
+    "enunciado": "Para saber a altura de um poste sem subir nele, um técnico usou as sombras. No mesmo horário, com o sol batendo igual nos dois, ele mediu a sombra do poste, de 6 m, e a sua própria sombra, de 1,20 m. O técnico tem 1,80 m de altura. O poste e o técnico estão de pé, retos, num chão plano.\nA altura do poste é de",
+    "A": "4 m.",
+    "B": "6,6 m.",
+    "C": "7,2 m.",
+    "D": "7,8 m.",
+    "E": "9 m.",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "Altura ÷ sombra é igual nos dois: 1,80 ÷ 1,20 = 1,5. Poste: 6 × 1,5 = 9 m. E. Erros: 4 = inverteu a razão (6 ÷ 1,5); 6,6 = somou a diferença 0,60 à sombra; 7,2 = 6 × 1,2; 7,8 = 6 + 1,8.",
+      "ideia": "No mesmo horário, tudo que está de pé tem sombra na mesma proporção da altura. O técnico é 1,5 vez a sua sombra; o poste também.",
+      "pecas": [
+        {
+          "termo": "Semelhança de triângulos",
+          "significado": "Dois triângulos com o mesmo formato, um maior que o outro, como uma foto e sua ampliação. Os lados crescem na mesma proporção."
+        },
+        {
+          "termo": "Razão",
+          "significado": "A divisão que compara dois números. Altura 1,80 e sombra 1,20: razão 1,80 ÷ 1,20 = 1,5, a altura é 1,5 vez a sombra."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O poste e o técnico formam, com suas sombras, dois triângulos de mesmo formato. A pergunta é a altura do poste.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Objeto",
+              "Altura",
+              "Sombra"
+            ],
+            "linhas": [
+              [
+                "técnico",
+                "1,80 m",
+                "1,20 m"
+              ],
+              [
+                "poste",
+                "?",
+                "6 m"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "No técnico, a altura é 1,80 ÷ 1,20 vez a sombra. Tire as vírgulas: 180 ÷ 120; divida os dois por 60: 3 ÷ 2 = 1,5. Como o sol bate igual, no poste vale o mesmo: altura = 1,5 × 6 = 9.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Altura ÷ sombra",
+            "cabecalho": [
+              "Objeto",
+              "Razão"
+            ],
+            "linhas": [
+              [
+                "técnico",
+                "1,80 ÷ 1,20 = 1,5"
+              ],
+              [
+                "poste",
+                "? ÷ 6 = 1,5"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Monte a proporção: altura do poste está para 6 assim como 1,80 está para 1,20.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Altura pela sombra",
+            "dados": [
+              "\\text{técnico: altura } 1{,}80\\,\\text{m}",
+              "\\text{técnico: sombra } 1{,}20\\,\\text{m}",
+              "\\text{poste: sombra } 6\\,\\text{m}"
+            ],
+            "formula": "\\dfrac{H}{6} = \\dfrac{1{,}80}{1{,}20}",
+            "legenda": [
+              "$H$: altura do poste",
+              "o traço: dividir (altura ÷ sombra)"
+            ],
+            "contas": [
+              "\\dfrac{H}{6} = 1{,}5",
+              "H = 6 \\times 1{,}5"
+            ],
+            "resultado": "H = 9\\,\\text{m}",
+            "nota": "O poste tem 9 m de altura."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Os raios de sol chegam com a mesma inclinação nos dois. O triângulo do poste (poste, sombra, raio) é uma ampliação do triângulo do técnico: a sombra cresceu 5 vezes (1,20 → 6), então a altura também cresce 5 vezes (1,80 → 9).",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Ampliação de 5 vezes",
+            "cabecalho": [
+              "Medida",
+              "Técnico",
+              "Poste"
+            ],
+            "linhas": [
+              [
+                "sombra",
+                "1,20",
+                "6"
+              ],
+              [
+                "altura",
+                "1,80",
+                "9"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 9 m. A (4 m) inverte a razão: daria um poste mais baixo que a própria sombra, mas o técnico é mais alto que a dele. B (6,6 m) soma à sombra a diferença 0,60. C (7,2 m) multiplica 6 por 1,2. D (7,8 m) soma 6 + 1,8 em vez de multiplicar.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Pessoa de 1,60 m faz sombra de 0,80 m. Uma árvore faz sombra de 5 m. Qual a altura dela?",
+        "opcoes": [
+          "10 m",
+          "2,5 m",
+          "5,8 m",
+          "8 m"
+        ],
+        "certa": "10 m",
+        "resposta": "1,60 ÷ 0,80 = 2. Árvore: 5 × 2 = 10 m."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-17",
+    "materia": "Matemática",
+    "tema": "Geometria Plana",
+    "enunciado": "Uma antena de rádio de 15 m de altura será firmada por 4 cabos de aço. Cada cabo sai do topo da antena e vai, esticado e reto, até um gancho no chão. Todos os ganchos ficam a 8 m da base da antena, e o chão é plano, formando um canto de 90° com a antena. O instalador vai comprar o cabo sem sobras.\nA quantidade total de cabo necessária é de",
+    "A": "17 m.",
+    "B": "28 m.",
+    "C": "60 m.",
+    "D": "68 m.",
+    "E": "92 m.",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "Cada cabo é a hipotenusa: 15² + 8² = 225 + 64 = 289, e 17 × 17 = 289, então 17 m. 4 cabos: 68 m. D. Erros: 17 = um cabo só; 92 = 4 × (15 + 8), somou os lados; 60 = 4 × 15, usou a altura; 28 = 4 × (15 − 8).",
+      "ideia": "Antena, chão e cabo formam um triângulo com canto de 90°. O cabo é o lado maior, achado por Pitágoras, e depois é só multiplicar por 4.",
+      "pecas": [
+        {
+          "termo": "Triângulo retângulo",
+          "significado": "Triângulo com um canto de 90°, como o canto de uma folha de papel. Os dois lados do canto são os catetos; o lado maior, a hipotenusa."
+        },
+        {
+          "termo": "Teorema de Pitágoras",
+          "significado": "Cateto × cateto + cateto × cateto = hipotenusa × hipotenusa. Com 3 e 4: 9 + 16 = 25, e 5 × 5 = 25, então a hipotenusa é 5."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Cada cabo liga o topo da antena a um ponto do chão. A pergunta é quantos metros de cabo os 4 juntos usam.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "altura da antena",
+                "15 m"
+              ],
+              [
+                "gancho até a base",
+                "8 m"
+              ],
+              [
+                "cabos",
+                "4"
+              ],
+              [
+                "total de cabo",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A antena (15 m) e o chão até o gancho (8 m) são os catetos, os lados do canto de 90°. O cabo é a hipotenusa, o lado de frente para o canto.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "O triângulo de cada cabo",
+            "cabecalho": [
+              "Lado",
+              "Medida"
+            ],
+            "linhas": [
+              [
+                "cateto: antena",
+                "15 m"
+              ],
+              [
+                "cateto: chão",
+                "8 m"
+              ],
+              [
+                "hipotenusa: cabo",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Pitágoras dá um cabo; vezes 4 dá o total.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Cabo da antena",
+            "dados": [
+              "a = 15\\,\\text{m}",
+              "b = 8\\,\\text{m}",
+              "\\text{cabos} = 4"
+            ],
+            "formula": "c^2 = a^2 + b^2",
+            "legenda": [
+              "$a$, $b$: os lados do canto de 90°",
+              "$c$: o cabo"
+            ],
+            "contas": [
+              "c^2 = 15^2 + 8^2",
+              "c^2 = 225 + 64 = 289",
+              "c = 17 \\text{ pois } 17 \\times 17 = 289",
+              "\\text{total} = 4 \\times 17"
+            ],
+            "resultado": "\\text{total} = 68\\,\\text{m}",
+            "nota": "Os 4 cabos usam 68 m."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Esticado, o cabo é o caminho reto do topo ao gancho, mais curto que subir 15 e andar 8 (23 m), e mais longo que a antena. 17 está entre 15 e 23, como tinha que ser.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Cabo entre dois limites",
+            "cabecalho": [
+              "Caminho",
+              "Metros"
+            ],
+            "linhas": [
+              [
+                "só a antena",
+                "15"
+              ],
+              [
+                "cabo reto",
+                "17"
+              ],
+              [
+                "antena + chão",
+                "23"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 68 m. A (17 m) acerta um cabo, mas esquece que são 4. B (28 m) usa 15 − 8 em cada cabo. C (60 m) usa a altura da antena como cabo. E (92 m) soma 15 e 8, que seria o cabo dando a volta pelo canto.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Escada encostada no muro: pé a 6 m do muro, topo a 8 m do chão. Qual o comprimento?",
+        "opcoes": [
+          "10 m",
+          "14 m",
+          "7 m",
+          "12 m"
+        ],
+        "certa": "10 m",
+        "resposta": "36 + 64 = 100, e 10 × 10 = 100: 10 m."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-18",
+    "materia": "Matemática",
+    "tema": "Geometria Espacial",
+    "enunciado": "Uma escola vai encher uma caixa-d'água nova, em forma de cilindro, que estava vazia. A caixa tem 4 m de diâmetro e 3 m de altura. A bomba que puxa água do poço manda 400 litros por minuto, sem parar. Use 3 como valor aproximado de π e lembre que 1 m³ = 1 000 litros.\nO tempo para a bomba encher a caixa-d'água é de",
+    "A": "9 minutos.",
+    "B": "30 minutos.",
+    "C": "45 minutos.",
+    "D": "1 hora e 30 minutos.",
+    "E": "6 horas.",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "Raio = 4 ÷ 2 = 2. V = 3 × 2² × 3 = 36 m³ = 36 000 L. 36 000 ÷ 400 = 90 min = 1 h 30 min. D. Erros: 6 h = usou o diâmetro 4 como raio (144 m³); 45 min = esqueceu de elevar o raio ao quadrado (18 m³); 30 min = esqueceu o π (12 m³); 9 min = achou que 1 m³ tem 100 L.",
+      "ideia": "Ache o volume da caixa, passe para litros e divida pelo que a bomba manda por minuto. O raio é metade do diâmetro.",
+      "pecas": [
+        {
+          "termo": "π (pi)",
+          "significado": "Pi, o número 3,14 que liga a volta do círculo ao seu tamanho. A área do fundo redondo é π × raio × raio. A questão manda usar 3."
+        },
+        {
+          "termo": "m² e m³",
+          "significado": "m² é um quadrado de 1 m de lado no chão; m³ é uma caixa de 1 m de cada lado. Nela cabem 10 × 10 × 10 = 1 000 cubinhos de 10 cm de lado, e cada cubinho guarda 1 litro (o tamanho de uma caixa de leite). Por isso 1 m³ = 1 000 L."
+        },
+        {
+          "termo": "Diâmetro e raio",
+          "significado": "Diâmetro é a largura toda da roda, passando pelo centro. Raio é a metade: roda de 4 m de diâmetro tem 2 m de raio."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A caixa é um cilindro (forma de lata de leite em pé: fundo redondo e paredes retas) e está vazia. A bomba enche 400 L por minuto. A pergunta é quanto tempo leva para encher.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "diâmetro",
+                "4 m"
+              ],
+              [
+                "altura",
+                "3 m"
+              ],
+              [
+                "bomba",
+                "400 L por minuto"
+              ],
+              [
+                "π",
+                "3"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Raio: 4 ÷ 2 = 2 m. Fundo: 3 × 2 × 2 = 12 m² (12 quadrados de 1 m de lado). Volume = área do fundo × altura, como empilhar 3 camadas de 1 m com 12 m³ cada: 12 × 3 = 36 m³ (36 caixas de 1 m de lado). Cada m³ tem 1 000 L: 36 000 litros.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Do tamanho ao volume",
+            "cabecalho": [
+              "Etapa",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "raio",
+                "2 m"
+              ],
+              [
+                "área da base",
+                "12 m²"
+              ],
+              [
+                "volume",
+                "36 m³"
+              ],
+              [
+                "em litros",
+                "36 000 L"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Primeiro o volume em m³. Depois passe para litros (vezes 1 000), porque a bomba conta em litros por minuto: m³ e litros não se dividem direto. Só então divida pela vazão (quantos litros a bomba manda por minuto): 36 000 ÷ 400; corte dois zeros dos dois, 360 ÷ 4 = 90 minutos, que são 60 + 30 = 1 h 30 min.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Tempo para encher",
+            "dados": [
+              "r = 4 \\div 2 = 2\\,\\text{m}",
+              "h = 3\\,\\text{m}",
+              "\\pi = 3",
+              "\\text{bomba} = 400\\,\\text{L por minuto}"
+            ],
+            "formula": "t = \\dfrac{\\text{litros da caixa}}{400}",
+            "legenda": [
+              "litros da caixa: π × r × r × h em m³, vezes 1 000",
+              "$t$: minutos para encher",
+              "o traço: dividir o de cima pelo de baixo"
+            ],
+            "contas": [
+              "V = 3 \\times 2^2 \\times 3 = 36\\,\\text{m}^3",
+              "36 \\times 1\\,000 = 36\\,000\\,\\text{L}",
+              "t = \\dfrac{36\\,000}{400} = \\dfrac{360}{4}"
+            ],
+            "resultado": "t = 90\\,\\text{min} = 1\\,\\text{h}\\,30\\,\\text{min}",
+            "nota": "A caixa enche em 1 hora e meia."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O raio entra duas vezes na conta (raio × raio). Trocar o raio 2 pelo diâmetro 4 deixa a conta 4 vezes maior: 144 m³ e 6 horas. Por isso o primeiro passo é sempre dividir o diâmetro por 2.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Raio certo x diâmetro",
+            "cabecalho": [
+              "Usou",
+              "Volume",
+              "Tempo"
+            ],
+            "linhas": [
+              [
+                "raio 2",
+                "36 m³",
+                "1 h 30 min"
+              ],
+              [
+                "diâmetro 4",
+                "144 m³",
+                "6 h"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 1 hora e 30 minutos. A (9 minutos) acha que 1 m³ tem 100 L. B (30 minutos) esquece o π. C (45 minutos) esquece de multiplicar o raio por ele mesmo. E (6 horas) usa o diâmetro 4 como raio.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Tanque cilíndrico: raio 1 m, altura 2 m, π = 3. Quantos litros cabem?",
+        "opcoes": [
+          "6 000 L",
+          "600 L",
+          "12 000 L",
+          "3 000 L"
+        ],
+        "certa": "6 000 L",
+        "resposta": "3 × 1 × 1 × 2 = 6 m³ = 6 000 L."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-19",
+    "materia": "Matemática",
+    "tema": "Geometria Espacial",
+    "enunciado": "Uma sorveteria vende casquinhas em forma de cone, com 6 cm de diâmetro na boca e 10 cm de altura. Cada casquinha é enchida de sorvete até a boca, sem bola por cima. O volume de um cone é dado por V = (π · r² · h) ÷ 3, em que r é o raio da boca e h é a altura. A máquina tem 5,4 litros de sorvete. Use π = 3 e 1 litro = 1 000 cm³.\nO número de casquinhas que podem ser enchidas com esse sorvete é",
+    "A": "6.",
+    "B": "15.",
+    "C": "20.",
+    "D": "60.",
+    "E": "180.",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "r = 3. V = 3 × 9 × 10 ÷ 3 = 90 cm³. 5,4 L = 5 400 cm³. 5 400 ÷ 90 = 60. D. Erros: 20 = esqueceu de dividir por 3 (270 cm³); 15 = usou o diâmetro 6 como raio (360 cm³); 180 = esqueceu de elevar o raio ao quadrado (30 cm³); 6 = achou que 1 L tem 100 cm³.",
+      "ideia": "Calcule o volume de uma casquinha, passe o sorvete para cm³ e divida um pelo outro.",
+      "pecas": [
+        {
+          "termo": "Cone",
+          "significado": "Sólido de base redonda que afina até uma ponta, como a casquinha ou um chapéu de festa. A fórmula do texto divide por 3: o cone leva um terço do que cabe numa lata de mesma boca e altura."
+        },
+        {
+          "termo": "π (pi)",
+          "significado": "Pi, o número 3,14 que liga a volta do círculo ao seu tamanho. A questão manda usar 3. Na fórmula, π · r² · h quer dizer π × r × r × h."
+        },
+        {
+          "termo": "Centímetro cúbico (cm³)",
+          "significado": "Um cubinho de 1 cm de cada lado, do tamanho de um dado pequeno. 1 litro tem 1 000 deles."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A fórmula do cone está no texto. A pergunta é quantas casquinhas os 5,4 litros enchem.",
+          "visual": {
+            "tipo": "legenda",
+            "titulo": "Volume do cone",
+            "partes": [
+              {
+                "texto": "V",
+                "rotulo": "sorvete numa casquinha",
+                "cor": "a"
+              },
+              {
+                "texto": "= \\pi \\cdot r^2",
+                "rotulo": "tamanho da boca"
+              },
+              {
+                "texto": "\\cdot h",
+                "rotulo": "altura"
+              },
+              {
+                "texto": "\\div 3",
+                "rotulo": "um terço do cilindro",
+                "cor": "b"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A boca tem 6 cm de diâmetro, então o raio é 3 cm, e 3² = 3 × 3 = 9. Uma lata com essa boca e 10 cm de altura teria 3 × 9 × 10 = 270 cm³; o cone leva um terço (divide por 3): 90 cm³.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Cilindro e cone",
+            "cabecalho": [
+              "Sólido",
+              "Volume"
+            ],
+            "linhas": [
+              [
+                "cilindro de mesma boca",
+                "270 cm³"
+              ],
+              [
+                "cone (um terço)",
+                "90 cm³"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Volume de uma casquinha e depois quantas cabem em 5 400 cm³ (5,4 L × 1 000). 5 400 ÷ 90: corte um zero dos dois, 540 ÷ 9 = 60 (9 × 6 = 54). No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Casquinhas com 5,4 L",
+            "dados": [
+              "r = 6 \\div 2 = 3\\,\\text{cm}",
+              "h = 10\\,\\text{cm}",
+              "\\pi = 3",
+              "5{,}4\\,\\text{L} = 5\\,400\\,\\text{cm}^3"
+            ],
+            "formula": "n = \\dfrac{5\\,400}{V}",
+            "legenda": [
+              "$V$: volume de uma casquinha",
+              "$n$: número de casquinhas"
+            ],
+            "contas": [
+              "V = \\dfrac{3 \\times 3^2 \\times 10}{3}",
+              "V = \\dfrac{270}{3} = 90\\,\\text{cm}^3",
+              "n = \\dfrac{5\\,400}{90}"
+            ],
+            "resultado": "n = 60",
+            "nota": "Dá para encher 60 casquinhas."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A ponta da casquinha é fina, então ela leva bem menos que uma lata de mesma boca; a fórmula da questão diz quanto: um terço. Quem esquece o ÷ 3 acha que cada casquinha leva 270 cm³ e conta só 20.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "De onde vêm os erros",
+            "cabecalho": [
+              "Conta da casquinha",
+              "Volume",
+              "Casquinhas"
+            ],
+            "linhas": [
+              [
+                "certa",
+                "90 cm³",
+                "60"
+              ],
+              [
+                "sem ÷ 3",
+                "270 cm³",
+                "20"
+              ],
+              [
+                "raio = 6",
+                "360 cm³",
+                "15"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 60 casquinhas. A (6) acha que 1 L tem 100 cm³. B (15) usa o diâmetro 6 como se fosse o raio. C (20) esquece de dividir por 3. E (180) esquece de multiplicar o raio por ele mesmo.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Cone de raio 2 cm e altura 9 cm, π = 3. Quantos cm³ cabem?",
+        "opcoes": [
+          "36 cm³",
+          "108 cm³",
+          "18 cm³",
+          "54 cm³"
+        ],
+        "certa": "36 cm³",
+        "resposta": "3 × 2 × 2 × 9 = 108; 108 ÷ 3 = 36 cm³."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-mat-20",
+    "materia": "Matemática",
+    "tema": "Geometria Espacial",
+    "enunciado": "Um perfume é vendido num frasco em forma de caixa (paralelepípedo) de 4 cm por 3 cm por 10 cm, cheio, por R$ 240,00. A fábrica vai lançar um frasco de viagem com o mesmo formato, mas com cada uma das três medidas reduzida à metade. O preço do frasco de viagem será proporcional à quantidade de perfume, ou seja, ao volume.\nO preço do frasco de viagem será de",
+    "A": "R$ 15,00.",
+    "B": "R$ 30,00.",
+    "C": "R$ 60,00.",
+    "D": "R$ 80,00.",
+    "E": "R$ 120,00.",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Grande: 4 × 3 × 10 = 120 cm³, R$ 2 por cm³. Viagem: 2 × 1,5 × 5 = 15 cm³; 15 × 2 = 30. B. Erros: 120 = cortou o preço pela metade; 60 = cortou em quatro (pensou em área); 80 = dividiu por 3 por serem três medidas; 15 = dividiu por 16.",
+      "ideia": "Metade em cada uma das três medidas deixa o volume 2 × 2 × 2 = 8 vezes menor. Preço proporcional ao volume: 240 ÷ 8.",
+      "pecas": [
+        {
+          "termo": "Paralelepípedo",
+          "significado": "Sólido com forma de caixa de sapato. Volume = comprimento × largura × altura, em cm³: quantos cubinhos de 1 cm de lado cabem."
+        },
+        {
+          "termo": "Proporcional ao volume",
+          "significado": "Paga-se pela quantidade de perfume. Metade do perfume, metade do preço; um oitavo do perfume (dividir por 8), um oitavo do preço."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O frasco pequeno tem cada medida pela metade. A pergunta é o preço, que segue o volume.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Frasco",
+              "Medidas",
+              "Preço"
+            ],
+            "linhas": [
+              [
+                "grande",
+                "4 × 3 × 10 cm",
+                "R$ 240"
+              ],
+              [
+                "viagem",
+                "2 × 1,5 × 5 cm",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Grande: 4 × 3 × 10 = 120 cm³. Viagem: 2 × 1,5 = 3, e 3 × 5 = 15 cm³. O frasco de viagem tem 8 vezes menos perfume (15 × 8 = 120).",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Volume de cada frasco",
+            "cabecalho": [
+              "Frasco",
+              "Volume"
+            ],
+            "linhas": [
+              [
+                "grande",
+                "120 cm³"
+              ],
+              [
+                "viagem",
+                "15 cm³"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ache o preço de 1 cm³ no frasco grande e multiplique pelo volume do pequeno.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Preço do frasco de viagem",
+            "dados": [
+              "\\text{grande} = 4 \\times 3 \\times 10 = 120\\,\\text{cm}^3",
+              "\\text{viagem} = 2 \\times 1{,}5 \\times 5 = 15\\,\\text{cm}^3",
+              "\\text{preço grande} = 240"
+            ],
+            "formula": "P = \\dfrac{240}{120} \\times 15",
+            "legenda": [
+              "240 ÷ 120 = 2: reais por cm³",
+              "$P$: preço do frasco de viagem",
+              "o traço: dividir o de cima pelo de baixo"
+            ],
+            "contas": [
+              "P = 2 \\times 15"
+            ],
+            "resultado": "P = 30",
+            "nota": "O frasco de viagem custa R$ 30."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada medida pela metade divide o volume por 2 três vezes: comprimento, largura e altura. 2 × 2 × 2 = 8. Só uma medida pela metade cortaria o volume pela metade; duas, em quatro; três, em oito.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Metade em quantas medidas",
+            "cabecalho": [
+              "Medidas pela metade",
+              "Volume fica"
+            ],
+            "linhas": [
+              [
+                "1",
+                "÷ 2"
+              ],
+              [
+                "2",
+                "÷ 4"
+              ],
+              [
+                "3",
+                "÷ 8"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, R$ 30,00. A (R$ 15,00) divide o preço por 16, um corte a mais. C (R$ 60,00) divide por 4, que vale para área, não para volume. D (R$ 80,00) divide por 3 por serem três medidas. E (R$ 120,00) só divide por 2, como se uma medida tivesse mudado.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Caixa de 2 × 2 × 2 cm custa R$ 8. Outra tem 4 × 4 × 4 cm. Preço proporcional ao volume?",
+        "opcoes": [
+          "R$ 64",
+          "R$ 16",
+          "R$ 32",
+          "R$ 24"
+        ],
+        "certa": "R$ 64",
+        "resposta": "Volume 8 vezes maior (64 ÷ 8): 8 × 8 = R$ 64."
+      }
+    }
+  }
+]

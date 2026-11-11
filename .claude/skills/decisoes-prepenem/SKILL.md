@@ -224,6 +224,12 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   ganha o aquecimento dela, do conteúdo de cada questão: "Aquecimento: antes
   da Revisão final", 31 fáceis escritas na sessão com explicação pronta
   (`data/revisao-final/aquecimento.json`, `scripts/criar-aquecimento-revisao-final.ts`).
+- **Provas do dia 2 (Pablo, 10/11/2026):** "Dia 2 · 1 Fácil", "2 Médio",
+  "3 Difícil" (escritas à mão) e "4 ENEM real", 40 cada, só os 22 conteúdos que
+  mais caem, explicação pronta. A Fácil é o aquecimento das outras. Molde, cotas
+  e os tropeços do aluno-do-zero em `data/revisao-final/dia-2/LEIA-ME.md`;
+  conferência em `provas-dia-2.test.ts` (inclui texto que o validador cortaria
+  calado); gravar com `scripts/criar-provas-dia-2.ts`.
 - **Prova responde na hora (22/10/2026):** o acerto é conferido no navegador
   (a letra certa já vem com a questão) e a resposta é gravada por trás, com
   3 tentativas; "Próxima" avança sem recarregar a prova. Antes: 1,5 s para ver

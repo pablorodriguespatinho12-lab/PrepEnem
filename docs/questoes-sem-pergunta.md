@@ -30,3 +30,16 @@ A busca pode deixar passar caso em que a pergunta sumiu e o texto termina sem po
 - **Dia 1 (59 questões):** em aberto. O texto certo está na imagem da página
   (`public/questoes-imagens/<id>.webp`); o PDF do INEP não serve (fonte codificada).
   Mesmo caminho das 14 corrigidas em 06/10/2026: transcrever para o arquivo de correções.
+
+## Outras estragadas achadas ao montar as provas do dia 2 (10/11/2026)
+
+Os agentes resolveram cada candidata; estas não fecharam com o texto do banco e
+ficaram fora da prova "Dia 2 · 4 ENEM real". Conferir na página escaneada antes de consertar.
+
+| Questão | Problema |
+|---|---|
+| ENEM 2021 Q158 (pneus) | texto cortado ("ficou reduzido de pessoas"); a conta não dá nenhuma alternativa |
+| ENEM 2021 Q159 (suplementos) | a conta dá o fornecedor V, o gabarito do banco é D |
+| ENEM 2022 Q154 (gemas) | a conta dá 500 000, o gabarito do banco é 400 000 |
+| ENEM 2021 Q112 | trecho ilegível no meio do enunciado (ruído de leitura da página) |
+| ENEM 2021 Q92 | cadastrada como Física, mas é pilha (Química) |

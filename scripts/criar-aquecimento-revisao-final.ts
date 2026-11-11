@@ -77,6 +77,8 @@ async function main() {
     await prisma.explicacaoPronta.upsert({ where: { questionId: q.id }, create: { questionId: q.id, ...explicacao }, update: explicacao });
   }
   console.log(`${prova.questoes.length} questões e explicações gravadas.`);
+  // Conserto de texto com a prova já começada: atualiza as questões e não cria prova nova.
+  if (process.argv.includes('--so-questoes')) return;
 
   const ja = await prisma.customExam.findFirst({ where: { userId: user.id, nome: prova.nome, status: 'pendente' } });
   if (ja) return console.log(`Prova já existe (não começada): ${ja.id}`);
