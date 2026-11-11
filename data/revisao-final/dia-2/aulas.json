@@ -1,0 +1,958 @@
+{
+  "Eletricidade e Circuitos": {
+    "materia": "Física",
+    "aula": [
+      "Tensão (U, em volts, V) é o empurrão nas cargas. Corrente (i, em ampères, A) é quanta carga passa. Resistência (R, em ohms, Ω) é o que atrapalha a passagem.",
+      "Lei de Ohm: U = R × i.",
+      "Potência (P, em watts, W) é a energia gasta por segundo: P = U × i.",
+      "Conta de luz: energia = potência × tempo. Em kWh: quilowatts × horas. 1 kW = 1 000 W.",
+      "Em série (um depois do outro), as resistências somam."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Um chuveiro ligado em 220 V é percorrido por uma corrente de 20 A. Qual é a potência desse chuveiro?",
+        "alternativas": [
+          "11 W",
+          "240 W",
+          "2 200 W",
+          "4 400 W",
+          "8 800 W"
+        ],
+        "certa": 3,
+        "resolucao": "P = U × i = 220 × 20 = 4 400 W."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Uma família quer saber quanto o chuveiro pesa na conta de luz. O chuveiro tem potência de 5 000 W e fica ligado, somando todos os banhos, 1 hora por dia. A distribuidora cobra R$ 0,80 por kWh.\nQuanto o chuveiro custa em um mês de 30 dias?",
+        "alternativas": [
+          "R$ 4,00",
+          "R$ 40,00",
+          "R$ 120,00",
+          "R$ 150,00",
+          "R$ 400,00"
+        ],
+        "certa": 2,
+        "resolucao": "5 000 W = 5 kW. Por dia: 5 kW × 1 h = 5 kWh. No mês: 5 × 30 = 150 kWh. Custo: 150 × 0,80 = 120 reais. O 150 é a energia, não o preço."
+      }
+    ]
+  },
+  "Termodinâmica e Calor": {
+    "materia": "Física",
+    "aula": [
+      "Temperatura mede a agitação das partículas. Calor é energia passando do mais quente para o mais frio.",
+      "O calor anda de 3 jeitos: condução (encostando, como no cabo da panela), convecção (o líquido ou o ar quente sobe e o frio desce) e radiação (sem encostar, como o calor do Sol).",
+      "Para esquentar algo: Q = m × c × ΔT. É massa × calor específico × quanto a temperatura mudou. O calor específico (c) diz quanto o material custa para esquentar.",
+      "Metal conduz bem o calor (condutor). Ar, isopor e lã conduzem mal (isolantes)."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Quanta energia é necessária para aquecer 200 g de água de 20 °C até 70 °C? O calor específico da água é 1 cal/(g·°C).",
+        "alternativas": [
+          "1 000 cal",
+          "4 000 cal",
+          "10 000 cal",
+          "14 000 cal",
+          "18 000 cal"
+        ],
+        "certa": 2,
+        "resolucao": "A temperatura mudou 70 − 20 = 50 °C. Q = m × c × ΔT = 200 × 1 × 50 = 10 000 cal. Usar 70 no lugar de 50 dá 14 000."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Em uma casa, o aparelho de ar-condicionado costuma ser instalado no alto da parede, e o aquecedor fica perto do chão. A escolha tem a ver com o jeito como o ar se movimenta quando muda de temperatura.\nO ar-condicionado fica no alto porque o ar frio",
+        "alternativas": [
+          "é menos denso e sobe, ficando preso no teto.",
+          "conduz calor melhor que o ar quente.",
+          "é mais denso e desce, empurrando o ar quente para cima.",
+          "emite mais radiação que o ar quente.",
+          "ocupa mais espaço que o ar quente."
+        ],
+        "certa": 2,
+        "resolucao": "Ar frio é mais denso (mais pesado para o mesmo espaço) e desce. O ar quente sobe, é resfriado pelo aparelho e desce de novo. Esse vai e vem é a convecção, e ele resfria a sala inteira."
+      }
+    ]
+  },
+  "Ondas e Acústica": {
+    "materia": "Física",
+    "aula": [
+      "Onda leva energia sem levar matéria. O som é uma onda no ar, na água ou no metal.",
+      "Frequência (f, em hertz, Hz): quantas vibrações por segundo. Som agudo tem frequência alta. Som grave, baixa.",
+      "Comprimento de onda (λ, a letra lambda): o tamanho de uma onda inteira.",
+      "Velocidade da onda: v = λ × f. E, como toda velocidade, v = distância ÷ tempo.",
+      "O som anda a cerca de 340 m/s no ar. Na água e nos sólidos é mais rápido."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Uma onda sonora no ar tem velocidade de 340 m/s e frequência de 170 Hz. Qual é o comprimento dessa onda?",
+        "alternativas": [
+          "0,5 m",
+          "2 m",
+          "170 m",
+          "510 m",
+          "57 800 m"
+        ],
+        "certa": 1,
+        "resolucao": "v = λ × f, então λ = v ÷ f = 340 ÷ 170 = 2 m."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Durante uma tempestade, uma pessoa vê o clarão de um raio e começa a contar. O trovão chega 5 segundos depois. A luz chega praticamente na hora, e o som viaja pelo ar a 340 m/s.\nA que distância da pessoa o raio caiu, aproximadamente?",
+        "alternativas": [
+          "68 m",
+          "340 m",
+          "1 700 m",
+          "3 400 m",
+          "17 000 m"
+        ],
+        "certa": 2,
+        "resolucao": "Distância = velocidade × tempo = 340 × 5 = 1 700 m."
+      },
+      {
+        "nivel": "ENEM",
+        "origem": "ENEM 2022 · questão 95",
+        "enunciado": "O sinal sonoro oriundo da queda de um grande bloco de gelo de uma geleira é detectado por dois dispositivos situados em um barco, sendo que o detector A está imerso em água e o B, na proa da embarcação. Sabe-se que a velocidade do som na água é de 1 540 m/s e no ar é de 340 m/s.\n[Figura da prova: o barco está a uma distância L da geleira. O detector A fica dentro da água e o B fica no ar.]\nOs gráficos indicam, em tempo real, o sinal sonoro detectado pelos dois dispositivos, os quais foram ligados simultaneamente em um instante anterior à queda do bloco de gelo. Ao comparar pontos correspondentes desse sinal em cada dispositivo, é possível obter informações sobre a onda sonora.\n[Gráficos da prova: no detector A, o sinal aparece perto de 220 s. No detector B, o mesmo sinal aparece perto de 232 s.]\nA distância L, em metro, entre o barco e a geleira é mais próxima de",
+        "alternativas": [
+          "339 000.",
+          "78 900.",
+          "14 400.",
+          "5 240.",
+          "100."
+        ],
+        "certa": 3,
+        "resolucao": "O som sai junto pelos dois caminhos e chega antes pela água. Diferença nos gráficos: 232 − 220 = 12 s. Tempo = distância ÷ velocidade, então L ÷ 340 − L ÷ 1 540 = 12. Teste a alternativa 5 240: pelo ar, 5 240 ÷ 340 ≈ 15,4 s. Pela água, 5 240 ÷ 1 540 ≈ 3,4 s. Diferença: 12 s. Fecha."
+      }
+    ]
+  },
+  "Óptica": {
+    "materia": "Física",
+    "aula": [
+      "Reflexão: a luz bate e volta (espelho).",
+      "Refração: a luz passa de um meio para outro (do ar para a água) e muda de velocidade. Se entra inclinada, também desvia. É o que faz o canudo parecer quebrado no copo.",
+      "Lentes funcionam por refração. A que junta a luz (convergente) é a da lupa. A que espalha (divergente) corrige a miopia.",
+      "Difração: a onda contorna um obstáculo ou uma abertura de tamanho parecido com o comprimento de onda.",
+      "Absorção: a luz vira calor (roupa preta esquenta mais)."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Uma colher dentro de um copo com água parece quebrada na altura da superfície da água. Isso acontece porque a luz",
+        "alternativas": [
+          "muda de velocidade ao sair da água para o ar e desvia.",
+          "é absorvida pela água e perde brilho.",
+          "bate na superfície da água e volta toda para dentro.",
+          "contorna a colher, que é um obstáculo pequeno.",
+          "passa a vibrar em uma única direção."
+        ],
+        "certa": 0,
+        "resolucao": "A luz que vem da parte da colher dentro da água desvia ao sair para o ar (refração). O olho enxerga essa parte fora do lugar."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Uma pessoa com miopia enxerga bem de perto, mas vê embaçado o que está longe. No olho dela, a imagem dos objetos distantes se forma antes da retina (o fundo do olho, onde a imagem deveria cair). Os óculos corrigem isso com uma lente que desvia a luz antes de ela entrar no olho.\nA lente usada e o fenômeno em que ela se baseia são",
+        "alternativas": [
+          "convergente, reflexão.",
+          "convergente, refração.",
+          "divergente, reflexão.",
+          "divergente, refração.",
+          "plana, absorção."
+        ],
+        "certa": 3,
+        "resolucao": "A imagem cai antes da retina porque a luz se junta cedo demais. A lente divergente espalha um pouco a luz e empurra a imagem para trás, até a retina. Toda lente funciona por refração."
+      },
+      {
+        "nivel": "ENEM",
+        "origem": "ENEM 2022 · questão 96",
+        "enunciado": "Em 2002, um mecânico da cidade mineira de Uberaba (MG) teve uma ideia para economizar o consumo de energia elétrica e iluminar a própria casa num dia de sol. Para isso, ele utilizou garrafas plásticas PET com água e cloro, conforme ilustram as figuras.\nCada garrafa foi fixada ao telhado de sua casa em um buraco com diâmetro igual ao da garrafa, muito maior que o comprimento de onda da luz. Nos últimos dois anos, sua ideia já alcançou diversas partes do mundo e deve atingir a marca de 1 milhão de casas utilizando a “luz engarrafada”.\n[Fotos da prova: uma garrafa com água presa no telhado, brilhando, e um galpão iluminado por várias delas.]\nQue fenômeno óptico explica o funcionamento da “luz engarrafada”?",
+        "alternativas": [
+          "Difração.",
+          "Absorção.",
+          "Polarização.",
+          "Reflexão.",
+          "Refração."
+        ],
+        "certa": 4,
+        "resolucao": "A luz do Sol entra pela parte de cima da garrafa, passa do ar para a água e da água para o ar. A cada troca de meio ela desvia (refração) e se espalha pelo cômodo. Não é difração: o texto avisa que o buraco é muito maior que o comprimento de onda da luz. Esta questão também está na prova Revisão final do site."
+      }
+    ]
+  },
+  "Dinâmica e Leis de Newton": {
+    "materia": "Física",
+    "aula": [
+      "Força é empurrão ou puxão, medida em newtons (N).",
+      "1ª lei (inércia): sem força resultante, o corpo continua como está, parado ou em linha reta com a mesma velocidade. Força resultante é a soma de todas as forças.",
+      "2ª lei: força resultante = massa × aceleração (F = m × a).",
+      "3ª lei: toda força tem um par. Se você empurra a parede, a parede empurra você com a mesma força.",
+      "Peso é a força da gravidade: P = m × g. Na Terra, g vale cerca de 10 m/s²."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Um carrinho de 20 kg é empurrado sobre um piso liso por uma força resultante de 60 N. Qual é a aceleração do carrinho?",
+        "alternativas": [
+          "0,3 m/s²",
+          "3 m/s²",
+          "40 m/s²",
+          "80 m/s²",
+          "1 200 m/s²"
+        ],
+        "certa": 1,
+        "resolucao": "F = m × a, então a = F ÷ m = 60 ÷ 20 = 3 m/s²."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Um elevador de 500 kg, já contando os passageiros, começa a subir puxado por um cabo de aço. Na arrancada, ele acelera para cima a 2 m/s². Considere g = 10 m/s².\nDurante a arrancada, a força que o cabo faz sobre o elevador é de",
+        "alternativas": [
+          "1 000 N",
+          "4 000 N",
+          "5 000 N",
+          "6 000 N",
+          "10 000 N"
+        ],
+        "certa": 3,
+        "resolucao": "Peso: 500 × 10 = 5 000 N, para baixo. Para acelerar para cima, sobra uma força resultante de m × a = 500 × 2 = 1 000 N para cima. O cabo precisa segurar o peso e ainda dar essa sobra: 5 000 + 1 000 = 6 000 N."
+      }
+    ]
+  },
+  "Química Orgânica": {
+    "materia": "Química",
+    "aula": [
+      "Química orgânica estuda os compostos de carbono. O carbono faz 4 ligações.",
+      "Função orgânica é a família da molécula. Você reconhece por um pedaço dela.",
+      "Álcool: tem OH preso a um carbono que só faz ligações simples (etanol). OH preso ao anel benzênico é fenol. Ácido carboxílico: tem COOH (vinagre). Éster: tem COO no meio da cadeia (aromas de fruta, gorduras). Amina: tem nitrogênio (N).",
+      "Ácido + álcool → éster + água (esterificação). Gordura + base forte, como a soda cáustica → sabão (saponificação).",
+      "Cadeia saturada: só ligações simples entre os carbonos. O anel benzênico (C6H5 nas fórmulas) tem ligações duplas, então não é saturado."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "O vinagre tem ácido acético (CH3COOH) e a cachaça tem etanol (CH3CH2OH). Quando um ácido carboxílico reage com um álcool, forma-se água e um composto usado como aroma artificial.\nA função orgânica desse composto é",
+        "alternativas": [
+          "álcool.",
+          "amina.",
+          "éster.",
+          "cetona.",
+          "hidrocarboneto."
+        ],
+        "certa": 2,
+        "resolucao": "Ácido + álcool → éster + água. Essa reação se chama esterificação. Muitos aromas de fruta são ésteres."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "O biodiesel é um combustível feito a partir de óleos vegetais, como o de soja. Os óleos são ésteres de cadeia longa. Na fábrica, o óleo reage com um álcool de cadeia curta (metanol ou etanol), na presença de uma base, e o resultado são ésteres menores, que são o biodiesel, e glicerina.\nSe, em vez do álcool, o óleo reagisse só com a base forte em água, o produto principal seria",
+        "alternativas": [
+          "açúcar.",
+          "etanol.",
+          "gasolina.",
+          "plástico.",
+          "sabão."
+        ],
+        "certa": 4,
+        "resolucao": "Óleo ou gordura + base forte em água → sabão. É a saponificação, a mesma reação de quem faz sabão em casa com óleo usado e soda cáustica."
+      }
+    ]
+  },
+  "Química Ambiental e Energia": {
+    "materia": "Química",
+    "aula": [
+      "Efeito estufa: gases como o gás carbônico (CO2) e o metano (CH4) seguram o calor na Terra. Queimar petróleo e carvão joga CO2 extra no ar.",
+      "Chuva ácida: gases de enxofre e de nitrogênio, vindos da queima de combustíveis, viram ácido na água da chuva.",
+      "Biocombustíveis vêm de seres vivos: etanol (cana), biodiesel (óleos) e biogás (metano de lixo e esterco apodrecendo sem oxigênio).",
+      "Camada de ozônio (O3): fica no alto da atmosfera e filtra os raios ultravioleta do Sol."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Usinas que queimam carvão com muito enxofre soltam dióxido de enxofre (SO2) no ar. Na atmosfera, esse gás reage com a água e volta ao solo.\nO problema ambiental ligado diretamente a essa emissão é",
+        "alternativas": [
+          "o buraco na camada de ozônio.",
+          "a maré vermelha.",
+          "a ilha de calor.",
+          "a chuva ácida.",
+          "a inversão térmica."
+        ],
+        "certa": 3,
+        "resolucao": "O SO2 reage com a água da atmosfera e forma ácido, que cai com a chuva. Ela corrói monumentos e deixa solos e lagos ácidos."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "O etanol de cana e a gasolina soltam gás carbônico (CO2) quando queimam no motor. Mesmo assim, o etanol é considerado melhor para o clima. A gasolina vem do petróleo, que guarda carbono preso debaixo da terra há milhões de anos. A cana, enquanto cresce, faz fotossíntese.\nA vantagem do etanol para o clima é que o CO2 liberado na queima",
+        "alternativas": [
+          "é mais leve e escapa para o espaço.",
+          "não é um gás de efeito estufa.",
+          "foi retirado do ar pela cana durante o crescimento.",
+          "vira oxigênio ao sair do escapamento.",
+          "é absorvido pelo motor antes de sair."
+        ],
+        "certa": 2,
+        "resolucao": "Na fotossíntese, a cana tira CO2 do ar para crescer. A queima do etanol devolve esse mesmo CO2: o ciclo quase fecha. A gasolina põe no ar um carbono que estava guardado debaixo da terra."
+      },
+      {
+        "nivel": "ENEM",
+        "origem": "ENEM 2021 · questão 109",
+        "enunciado": "Com o aumento da população de suínos no Brasil, torna-se necessária a adoção de métodos para reduzir o potencial poluidor dos resíduos dessa agroindústria, uma vez que, comparativamente ao esgoto doméstico, os dejetos suínos são 200 vezes mais poluentes. Sendo assim, a utilização desses resíduos como matéria-prima na obtenção de combustíveis é uma alternativa que permite diversificar a matriz energética nacional, ao mesmo tempo em que parte dos recursos hídricos do país são preservados.\nO biocombustível a que se refere o texto é o",
+        "alternativas": [
+          "etanol.",
+          "biogás.",
+          "butano.",
+          "metanol.",
+          "biodiesel."
+        ],
+        "certa": 1,
+        "resolucao": "Dejetos (esterco) apodrecendo sem oxigênio soltam metano: é o biogás. Etanol vem da cana ou do milho. Biodiesel vem de óleos e gorduras. Butano vem do petróleo."
+      }
+    ]
+  },
+  "Soluções, pH e Titulação": {
+    "materia": "Química",
+    "aula": [
+      "Solução é uma mistura homogênea: soluto (o que é dissolvido, como o sal) + solvente (onde dissolve, como a água).",
+      "Concentração é quanto soluto há em cada litro. Em g/L: massa ÷ volume. Em mol/L: quantidade em mol ÷ volume.",
+      "Mol é um pacote de contar partículas, como a dúzia. Massa molar é quanto pesa 1 mol.",
+      "pH mede a acidez, de 0 a 14. Abaixo de 7 é ácido (limão). 7 é neutro (água pura). Acima de 7 é básico (sabão).",
+      "Ácido + base se neutralizam e formam sal e água. A titulação usa isso: gasta-se uma base de concentração conhecida até neutralizar o ácido. Pela quantidade gasta, descobre-se quanto ácido havia."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Dissolvem-se 20 g de sal em água até completar 500 mL de solução. Qual é a concentração dessa solução?",
+        "alternativas": [
+          "0,04 g/L",
+          "4 g/L",
+          "10 g/L",
+          "40 g/L",
+          "10 000 g/L"
+        ],
+        "certa": 3,
+        "resolucao": "Passe o volume para litros: 500 mL = 0,5 L. Concentração = massa ÷ volume = 20 ÷ 0,5 = 40 g/L."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Um agricultor mediu o pH do solo e encontrou 4,5, ácido demais para o milho, que produz melhor com pH perto de 6,5. Para corrigir, ele precisa espalhar no terreno uma substância que neutralize parte dessa acidez, prática conhecida como calagem.\nA substância adequada para isso é",
+        "alternativas": [
+          "o vinagre (ácido acético), que eleva o pH.",
+          "o calcário (CaCO3), que reage com ácidos e eleva o pH.",
+          "o sal de cozinha (NaCl), que é neutro e eleva o pH.",
+          "o ácido sulfúrico (H2SO4), que consome a acidez.",
+          "a água destilada, que reage com os ácidos."
+        ],
+        "certa": 1,
+        "resolucao": "Para subir o pH é preciso algo de caráter básico. O calcário reage com os ácidos do solo e os neutraliza. Vinagre e ácido sulfúrico deixariam o solo mais ácido. O sal e a água não neutralizam."
+      },
+      {
+        "nivel": "ENEM",
+        "origem": "ENEM 2022 · questão 110",
+        "enunciado": "O ácido tartárico é o principal ácido do vinho e está diretamente relacionado com sua qualidade. Na avaliação de um vinho branco em produção, uma analista neutralizou uma alíquota de 25,0 mL do vinho com NaOH a 0,10 mol L⁻¹, consumindo um volume igual a 8,0 mL dessa base. A reação para esse processo de titulação é representada pela equação química:\n[Equação da prova, desenhada com as fórmulas: 1 ácido tartárico + 2 NaOH → 1 sal + 2 H2O. Ácido tartárico: massa molar 150 g mol⁻¹.]\nA concentração de ácido tartárico no vinho analisado é mais próxima de:",
+        "alternativas": [
+          "1,8 g L⁻¹",
+          "2,4 g L⁻¹",
+          "3,6 g L⁻¹",
+          "4,8 g L⁻¹",
+          "9,6 g L⁻¹"
+        ],
+        "certa": 1,
+        "resolucao": "Alíquota é uma amostra. g L⁻¹ é o mesmo que g/L. NaOH gasto: 0,10 mol/L × 0,008 L = 0,0008 mol. Cada ácido gasta 2 NaOH, então havia a metade: 0,0004 mol de ácido. Em gramas: 0,0004 × 150 = 0,06 g, dentro de 25 mL (0,025 L). 0,06 ÷ 0,025 = 2,4 g/L. Pegadinha: esquecer o 2 da equação dá 4,8."
+      }
+    ]
+  },
+  "Eletroquímica": {
+    "materia": "Química",
+    "aula": [
+      "Oxidar é perder elétrons. Reduzir é ganhar elétrons. As duas coisas acontecem juntas.",
+      "Pilha: uma reação que acontece sozinha e gera corrente elétrica. Os elétrons saem do metal que oxida e vão pelo fio até quem reduz.",
+      "Eletrólise é o contrário: gasta-se energia elétrica para forçar a reação. É assim que se produz alumínio.",
+      "Ferrugem é o ferro oxidando com oxigênio e água. Duas proteções: cobrir o ferro (barreira, como a tinta) ou ligar a ele um metal que oxida mais fácil, como o zinco (metal de sacrifício)."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Uma pilha comum faz uma lanterna acender. Dentro da pilha, o que produz a corrente elétrica?",
+        "alternativas": [
+          "O atrito entre as partes de metal.",
+          "A energia da tomada guardada na fábrica.",
+          "Uma reação química espontânea que transfere elétrons.",
+          "O calor do ambiente em volta da pilha.",
+          "A quebra de núcleos dos átomos de zinco."
+        ],
+        "certa": 2,
+        "resolucao": "Na pilha, um material oxida (perde elétrons) e outro reduz (ganha). Os elétrons passam pelo fio de um para o outro: essa passagem é a corrente."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Cascos de navio são de aço, feito de ferro, e ficam o tempo todo na água do mar, onde enferrujam rápido. Para proteger o casco, prendem-se nele blocos de zinco, que são trocados de tempos em tempos porque vão sendo consumidos. O zinco perde elétrons com mais facilidade que o ferro.\nOs blocos de zinco protegem o casco porque",
+        "alternativas": [
+          "formam uma camada de tinta que isola o casco.",
+          "deixam a água do mar menos salgada.",
+          "reduzem no lugar do ferro.",
+          "oxidam no lugar do ferro.",
+          "esfriam o casco e param a reação."
+        ],
+        "certa": 3,
+        "resolucao": "O zinco perde elétrons mais fácil, então é ele que oxida, e o ferro fica inteiro. Por isso o bloco é consumido e precisa ser trocado. O nome é metal de sacrifício."
+      }
+    ]
+  },
+  "Estequiometria": {
+    "materia": "Química",
+    "aula": [
+      "Estequiometria é a conta da receita química: quanto entra e quanto sai.",
+      "A equação balanceada é a receita. Em 2 H2 + O2 → 2 H2O, cada 2 mol de H2 reagem com 1 mol de O2 e dão 2 mol de água.",
+      "Massa molar transforma mol em gramas. H = 1, C = 12, O = 16. Água (H2O): 1 + 1 + 16 = 18 g por mol.",
+      "Proporção em massa vale como regra de três: se 100 g dão 50 g, então 200 g dão 100 g.",
+      "Rendimento de 80%: sai só 80% do que a conta prevê. Densidade = massa ÷ volume."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Na equação 2 H2 + O2 → 2 H2O, quantos mols de água se formam quando 4 mol de H2 reagem com oxigênio suficiente?",
+        "alternativas": [
+          "1",
+          "2",
+          "4",
+          "6",
+          "8"
+        ],
+        "certa": 2,
+        "resolucao": "A receita diz: 2 mol de H2 dão 2 mol de água, um para um. Então 4 mol de H2 dão 4 mol de água."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "A cal viva (CaO), usada na construção, é feita aquecendo calcário (CaCO3) em fornos: CaCO3 → CaO + CO2. Pela massa molar, cada 100 g de calcário produzem 56 g de cal viva. Um forno recebeu 1 000 kg de calcário, mas a queima teve rendimento de 90%.\nQuantos quilos de cal viva foram produzidos?",
+        "alternativas": [
+          "396",
+          "504",
+          "560",
+          "622",
+          "900"
+        ],
+        "certa": 1,
+        "resolucao": "Se 100 g dão 56 g, então 1 000 kg dão 560 kg. Com rendimento de 90%: 560 × 0,90 = 504 kg. Parar em 560 é esquecer o rendimento."
+      }
+    ]
+  },
+  "Ecologia": {
+    "materia": "Biologia",
+    "aula": [
+      "Cadeia alimentar: produtor (planta, faz o próprio alimento) → consumidor (come outro ser) → decompositor (fungos e bactérias, devolvem os nutrientes ao solo).",
+      "A energia diminui a cada degrau da cadeia: só cerca de 10% passa para o próximo.",
+      "Relações: competição (os dois disputam o mesmo recurso), predação (um come o outro), mutualismo (os dois ganham), parasitismo (um ganha, o outro perde).",
+      "Espécie exótica é a trazida de fora. Sem inimigo natural, pode virar invasora e tomar o espaço das nativas.",
+      "Veneno que o corpo não elimina se acumula ao longo da cadeia: quem está no topo fica com mais."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Abelhas visitam flores para colher néctar e, ao fazer isso, levam pólen de uma flor para outra, o que permite a reprodução da planta.\nA relação entre a abelha e a planta é de",
+        "alternativas": [
+          "canibalismo.",
+          "competição.",
+          "mutualismo.",
+          "parasitismo.",
+          "predação."
+        ],
+        "certa": 2,
+        "resolucao": "A abelha ganha alimento e a planta ganha a reprodução. Os dois ganham: mutualismo."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Um rio recebeu por anos o despejo de mercúrio de um garimpo. O mercúrio não é eliminado pelos seres vivos: fica guardado no corpo. Nesse rio, algas são comidas por peixes pequenos, que são comidos por peixes maiores, que são comidos por aves pescadoras.\nAo medir o mercúrio no corpo desses seres, espera-se encontrar a maior concentração",
+        "alternativas": [
+          "nas algas, que absorvem direto da água.",
+          "nos peixes pequenos, que comem mais vezes.",
+          "nos peixes maiores, que vivem mais no fundo.",
+          "nas aves pescadoras, que estão no topo da cadeia.",
+          "igual em todos, pois a água é a mesma."
+        ],
+        "certa": 3,
+        "resolucao": "Cada ser guarda o mercúrio de tudo o que comeu na vida. O peixe grande junta o de muitos peixes pequenos, e a ave junta o de muitos peixes grandes. O topo da cadeia fica com a maior concentração."
+      }
+    ]
+  },
+  "Fisiologia Humana e Saúde": {
+    "materia": "Biologia",
+    "aula": [
+      "Circulação: o coração bombeia o sangue. As hemácias (glóbulos vermelhos) levam oxigênio. Os glóbulos brancos defendem. As plaquetas fazem o sangue coagular, que é fechar o corte.",
+      "Respiração: no pulmão, o sangue solta gás carbônico e pega oxigênio.",
+      "Digestão: quebra o alimento em pedaços pequenos, que passam para o sangue no intestino delgado.",
+      "Sistema nervoso: neurônios levam mensagens elétricas rápidas. Hormônios são mensagens químicas que vão pelo sangue, mais lentas. A insulina é o hormônio que baixa o açúcar do sangue.",
+      "Rins filtram o sangue e fazem a urina."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Depois de uma refeição com muito doce, a quantidade de açúcar (glicose) no sangue sobe. O pâncreas então libera um hormônio que faz as células retirarem glicose do sangue.\nEsse hormônio é a",
+        "alternativas": [
+          "adrenalina.",
+          "hemoglobina.",
+          "insulina.",
+          "melatonina.",
+          "testosterona."
+        ],
+        "certa": 2,
+        "resolucao": "A insulina faz a glicose entrar nas células, e o açúcar do sangue baixa. No diabetes, a insulina falta ou não funciona bem."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Uma pessoa com hemofilia tem um defeito hereditário: o corpo dela não produz uma das proteínas que participam da coagulação do sangue. As células do sangue são normais e estão em quantidade normal.\nEm um corte pequeno, que em outra pessoa pararia de sangrar em minutos, o hemofílico",
+        "alternativas": [
+          "fica sem oxigênio, porque as hemácias não funcionam.",
+          "pega infecção na hora, porque não tem glóbulos brancos.",
+          "forma coágulos demais, que entopem as veias.",
+          "sangra por muito mais tempo, porque o coágulo demora a se formar.",
+          "não sangra, porque o sangue é mais grosso."
+        ],
+        "certa": 3,
+        "resolucao": "Coagular é fechar o corte com um coágulo. Sem uma das proteínas da coagulação, o coágulo demora a se formar e o sangramento continua. Hemácias e glóbulos brancos estão normais, como diz o texto."
+      },
+      {
+        "nivel": "ENEM",
+        "origem": "ENEM 2022 · questão 114",
+        "enunciado": "O veneno da cascavel pode causar hemorragia com risco de morte a quem é picado pela serpente. No entanto, pesquisadores do Brasil e da Bélgica desenvolveram uma molécula de interesse farmacêutico, a PEG-collineína-1, a partir de uma proteína encontrada no veneno dessa cobra, capaz de modular a coagulação sanguínea. Embora a técnica não seja nova, foi a primeira vez que o método foi usado a partir de uma toxina animal na sua forma recombinante, ou seja, produzida em laboratório por um fungo geneticamente modificado.\nEsse novo medicamento apresenta potencial aplicação para",
+        "alternativas": [
+          "impedir a formação de trombos, típicos em alguns casos de acidente vascular cerebral.",
+          "tratar consequências da anemia profunda, em razão da perda de grande volume de sangue.",
+          "evitar a manifestação de urticárias, comumente relacionadas a processos alérgicos.",
+          "reduzir o inchaço dos linfonodos, parte da resposta imunitária de diferentes infecções.",
+          "regular a oscilação da pressão arterial, característica dos quadros de hipertensão."
+        ],
+        "certa": 0,
+        "resolucao": "O texto diz que a molécula modula (controla) a coagulação, e o veneno de onde ela vem causa hemorragia, ou seja, segura a coagulação. Trombo é um coágulo formado dentro do vaso, que entope a passagem do sangue e pode causar o acidente vascular cerebral (o derrame). Um remédio que segura a coagulação impede o trombo. As outras alternativas falam de anemia, alergia, defesa e pressão."
+      }
+    ]
+  },
+  "Genética": {
+    "materia": "Biologia",
+    "aula": [
+      "Gene é um trecho do DNA com a receita de uma característica. Cada pessoa tem 2 cópias de cada gene: uma do pai, uma da mãe. As versões de um gene se chamam alelos.",
+      "Alelo dominante (letra maiúscula, A) aparece mesmo com 1 cópia. Alelo recessivo (letra minúscula, a) só aparece com 2 cópias (aa).",
+      "Aa é o portador: tem o alelo recessivo, mas não mostra.",
+      "Cruzamento Aa × Aa: os filhos podem ser AA, Aa, Aa ou aa. Chance de aa: 1 em 4 (25%).",
+      "Do gene à proteína: o DNA é copiado em RNA, e o RNA é lido para montar a proteína."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Em ervilhas, a cor amarela da semente (A) domina sobre a verde (a). Cruzando duas plantas Aa, qual é a chance de nascer uma planta de semente verde?",
+        "alternativas": [
+          "0%",
+          "25%",
+          "50%",
+          "75%",
+          "100%"
+        ],
+        "certa": 1,
+        "resolucao": "Aa × Aa dá AA, Aa, Aa e aa. Só aa é verde: 1 em 4, ou 25%."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Um casal sem albinismo teve o primeiro filho albino. O albinismo (falta do pigmento melanina na pele) é causado por um alelo recessivo: só é albino quem tem duas cópias dele. O casal agora espera o segundo filho. Um filho não muda a chance do outro.\nA chance de essa segunda criança NÃO ser albina é de",
+        "alternativas": [
+          "0%",
+          "25%",
+          "50%",
+          "75%",
+          "100%"
+        ],
+        "certa": 3,
+        "resolucao": "O filho albino (aa) recebeu um a de cada um, então os dois pais são Aa. Aa × Aa dá AA, Aa, Aa e aa. Três em 4 não são albinos: 75%. Pegadinha: marcar 25%, que é a chance de ser albino."
+      },
+      {
+        "nivel": "ENEM",
+        "origem": "ENEM 2021 · questão 91",
+        "enunciado": "A deficiência de lipase ácida lisossômica é uma doença hereditária associada a um gene do cromossomo 10. Os pais dos pacientes podem não saber que são portadores dos genes da doença até o nascimento do primeiro filho afetado. Quando ambos os progenitores são portadores, existe uma chance, em quatro, de que seu bebê possa nascer com essa doença.\nEssa é uma doença hereditária de caráter",
+        "alternativas": [
+          "recessivo.",
+          "dominante.",
+          "codominante.",
+          "poligênico.",
+          "polialélico."
+        ],
+        "certa": 0,
+        "resolucao": "Duas pistas. Os pais têm o gene e não têm a doença: são portadores (Aa). E a chance é de 1 em 4, o resultado de Aa × Aa para aa. Só aparece com duas cópias: recessivo."
+      }
+    ]
+  },
+  "Citologia": {
+    "materia": "Biologia",
+    "aula": [
+      "Célula é a menor parte viva. A membrana é a pele da célula: controla o que entra e sai. O núcleo guarda o DNA.",
+      "Organelas: mitocôndria (tira energia do alimento e produz ATP, a moeda de energia da célula), ribossomo (monta proteínas), cloroplasto (faz fotossíntese, só em plantas e algas), lisossomo (faz a digestão dentro da célula).",
+      "Respiração celular em 3 etapas: glicólise, ciclo de Krebs (também chamado ciclo do ácido cítrico) e fosforilação oxidativa. A última acontece na mitocôndria e produz quase todo o ATP.",
+      "Osmose: a água atravessa a membrana indo do lado com menos coisa dissolvida para o lado com mais.",
+      "Bactéria não tem núcleo (procarionte). Plantas, animais e fungos têm (eucariontes)."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Uma folha de alface murcha foi deixada em um pote com água pura e, depois de um tempo, ficou firme de novo.\nA água entrou nas células da folha porque",
+        "alternativas": [
+          "a membrana das células se rompeu.",
+          "dentro das células há mais substâncias dissolvidas que na água pura.",
+          "as células gastaram ATP para sugar a água.",
+          "a água pura tem mais sal que as células.",
+          "os cloroplastos puxaram a água para a fotossíntese."
+        ],
+        "certa": 1,
+        "resolucao": "Na osmose, a água vai do lado com menos coisa dissolvida (a água pura) para o lado com mais (dentro da célula). A célula enche e a folha fica firme. Não gasta ATP."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "O cianeto é um veneno que age rápido. Ele trava uma proteína da mitocôndria, e a célula deixa de usar o oxigênio que recebe. O sangue da vítima continua cheio de oxigênio, mas as células param de funcionar em poucos minutos, primeiro as que mais gastam energia, como as do cérebro e as do coração.\nAs células param porque, sem a mitocôndria funcionando, falta",
+        "alternativas": [
+          "DNA para fazer novas células.",
+          "água dentro da célula.",
+          "ATP, a energia que a célula usa.",
+          "glicose no sangue.",
+          "membrana em volta da célula."
+        ],
+        "certa": 2,
+        "resolucao": "A mitocôndria usa o oxigênio para produzir ATP. Com ela travada, o ATP acaba, e as células que mais gastam energia param primeiro."
+      },
+      {
+        "nivel": "ENEM",
+        "origem": "ENEM 2022 · questão 98",
+        "enunciado": "Os ursos, por não apresentarem uma hibernação verdadeira, acordam por causa da presença de termogenina, uma proteína mitocondrial que impede a chegada dos prótons até a ATP sintetase, gerando calor. Esse calor é importante para aquecer o organismo, permitindo seu despertar.\nEm qual etapa do metabolismo energético celular a termogenina interfere?",
+        "alternativas": [
+          "Glicólise.",
+          "Fermentação lática.",
+          "Ciclo do ácido cítrico.",
+          "Oxidação do piruvato.",
+          "Fosforilação oxidativa."
+        ],
+        "certa": 4,
+        "resolucao": "A ATP sintetase é a peça que fabrica ATP na última etapa da respiração celular, usando a passagem de prótons. Essa etapa é a fosforilação oxidativa. Com a termogenina, os prótons não passam pela ATP sintetase, e a energia sai como calor."
+      }
+    ]
+  },
+  "Evolução": {
+    "materia": "Biologia",
+    "aula": [
+      "Evolução é a mudança das populações ao longo das gerações.",
+      "Seleção natural (Darwin): os indivíduos já nascem diferentes. Quem tem a característica que ajuda naquele ambiente sobrevive mais e deixa mais filhos. Com o tempo, ela fica comum.",
+      "O ambiente não cria a característica: ele seleciona a que já existia. A bactéria não aprende a resistir ao antibiótico. As resistentes é que sobram.",
+      "Lamarck (ideia superada): o uso faria o órgão crescer, e isso passaria aos filhos.",
+      "Parasita e hospedeiro evoluem juntos (coevolução). Com muito tempo de convivência, o parasita tende a matar menos, porque hospedeiro morto não espalha parasita."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Um hospital usou o mesmo antibiótico por anos. Com o tempo, ele deixou de fazer efeito contra certa bactéria.\nA explicação aceita pela biologia é que",
+        "alternativas": [
+          "as bactérias se acostumaram com o remédio aos poucos.",
+          "o antibiótico provocou a mutação certa em cada bactéria.",
+          "os pacientes ficaram resistentes ao antibiótico.",
+          "bactérias que já eram resistentes sobreviveram e se multiplicaram.",
+          "o antibiótico perdeu a validade dentro do hospital."
+        ],
+        "certa": 3,
+        "resolucao": "Algumas bactérias já eram resistentes antes do remédio. O antibiótico matou as outras, e as resistentes ficaram com o espaço e se multiplicaram. O remédio seleciona, não cria."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Em uma ilha vivem besouros de cor verde e de cor marrom, e a cor é hereditária. Os pássaros da ilha caçam os besouros que enxergam com mais facilidade. Depois de uma longa seca, a vegetação verde deu lugar a solo e galhos secos, de cor marrom, e assim ficou por muitas gerações de besouros.\nAo fim desse período, espera-se que a população de besouros",
+        "alternativas": [
+          "tenha mais verdes, porque eles se esforçaram para fugir.",
+          "fique toda verde, porque a cor verde é dominante.",
+          "tenha mais marrons, porque os verdes foram mais caçados.",
+          "mude de cor a cada estação, conforme o solo.",
+          "fique igual, porque a cor não muda a sobrevivência."
+        ],
+        "certa": 2,
+        "resolucao": "No fundo marrom, o besouro verde aparece mais e é mais caçado. Os marrons sobrevivem mais e deixam mais filhos marrons. Nenhum besouro mudou de cor: mudou a proporção na população."
+      }
+    ]
+  },
+  "Microbiologia e Doenças": {
+    "materia": "Biologia",
+    "aula": [
+      "Vírus: não tem célula e só se multiplica dentro de uma. Antibiótico não funciona contra vírus (dengue, gripe, covid, aids).",
+      "Bactéria: uma célula sem núcleo. Antibiótico funciona (tuberculose, cólera, leptospirose).",
+      "Protozoário: uma célula com núcleo (malária, doença de Chagas, leishmaniose). Verme: um animal (esquistossomose, lombriga, filariose).",
+      "Vetor é o animal que leva o causador de uma pessoa a outra. O mosquito Aedes leva o vírus da dengue. O mosquito não é o causador.",
+      "A prevenção depende do caminho da doença. Mosquito: acabar com os criadouros. Água e esgoto: saneamento. A vacina treina a defesa antes da doença. Profilaxia é o nome dado à prevenção."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Uma pessoa com gripe, que é causada por vírus, pede antibiótico na farmácia.\nO antibiótico não vai curar a gripe porque",
+        "alternativas": [
+          "o vírus da gripe é grande demais para o remédio.",
+          "antibiótico só funciona junto com vacina.",
+          "a gripe é causada por protozoário.",
+          "o corpo destrói o antibiótico antes de ele agir.",
+          "antibióticos atacam estruturas de bactérias, que os vírus não têm."
+        ],
+        "certa": 4,
+        "resolucao": "O antibiótico ataca partes da célula da bactéria. O vírus não tem célula, então o remédio não tem o que atacar."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Depois de uma enchente, um bairro sem rede de esgoto registrou muitos casos de leptospirose. A doença é causada por uma bactéria que sai na urina de ratos e entra no corpo pela pele, no contato com água ou lama contaminada. A prefeitura quer evitar novos surtos nas próximas chuvas.\nA medida que ataca a causa do problema é",
+        "alternativas": [
+          "distribuir repelente contra mosquitos.",
+          "controlar os ratos e levar saneamento ao bairro.",
+          "vacinar a população contra a gripe.",
+          "orientar a população a cozinhar bem a carne.",
+          "aplicar inseticida nas casas."
+        ],
+        "certa": 1,
+        "resolucao": "O caminho da doença é rato → urina → água da enchente → pele. Corta-se o caminho com menos ratos e com saneamento (esgoto, coleta de lixo, drenagem). Mosquito e carne não entram nessa doença."
+      },
+      {
+        "nivel": "ENEM",
+        "origem": "ENEM 2022 · questão 123",
+        "enunciado": "De acordo com a Organização Mundial da Saúde, a filariose e a leishmaniose são consideradas doenças tropicais infecciosas e constituem uma preocupação para a saúde pública por ser alto o índice de mortalidade a elas associado.\nUma medida profilática comum a essas duas doenças é o(a)",
+        "alternativas": [
+          "incineração do lixo orgânico.",
+          "construção de rede de esgoto.",
+          "uso de vermífugo pela população.",
+          "controle das populações dos vetores.",
+          "consumo de carnes vermelhas bem cozidas."
+        ],
+        "certa": 3,
+        "resolucao": "Medida profilática é medida de prevenção. As duas doenças são levadas por insetos que picam: a filariose por mosquito e a leishmaniose pelo mosquito-palha. Controlar os vetores serve para as duas. Rede de esgoto e vermífugo servem para verminoses de água e solo. Carne bem cozida evita a tênia."
+      }
+    ]
+  },
+  "Aritmética e Porcentagem": {
+    "materia": "Matemática",
+    "aula": [
+      "Porcentagem é uma fração de 100. 25% = 25 ÷ 100 = 0,25.",
+      "Achar 25% de 80: 0,25 × 80 = 20.",
+      "Aumentar 10%: multiplique por 1,10. Descontar 10%: multiplique por 0,90.",
+      "Pegadinha: se caiu 75%, sobrou 25%. A conta usa o que sobrou."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Uma camiseta custa R$ 80,00 e está com 15% de desconto. Qual é o preço com o desconto?",
+        "alternativas": [
+          "R$ 65,00",
+          "R$ 68,00",
+          "R$ 70,00",
+          "R$ 72,00",
+          "R$ 92,00"
+        ],
+        "certa": 1,
+        "resolucao": "Desconto de 15% deixa 85% do preço. 0,85 × 80 = 68."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Uma loja aumentou o preço de um fogão em 20%. Como as vendas caíram, o dono deu 20% de desconto sobre o preço novo. Antes do aumento, o fogão custava R$ 1 000,00.\nEm relação ao preço inicial, o preço final ficou",
+        "alternativas": [
+          "igual.",
+          "2% maior.",
+          "4% maior.",
+          "4% menor.",
+          "20% menor."
+        ],
+        "certa": 3,
+        "resolucao": "1 000 × 1,20 = 1 200. Depois, 1 200 × 0,80 = 960. Faltam 40 reais em 1 000: 4% menor. O desconto foi calculado sobre um número maior, por isso não empata."
+      }
+    ]
+  },
+  "Grandezas e Medidas": {
+    "materia": "Matemática",
+    "aula": [
+      "Grandezas diretas: uma dobra, a outra dobra (mais gasolina, mais quilômetros).",
+      "Grandezas inversas: uma dobra, a outra cai pela metade (mais pedreiros, menos dias).",
+      "Regra de três: escreva as duas grandezas lado a lado e multiplique cruzado. Na inversa, o produto das duas fica igual.",
+      "Unidades: 1 km = 1 000 m. 1 m = 100 cm. 1 h = 60 min. 1 L = 1 000 mL.",
+      "Escala 1 : 50 quer dizer: 1 cm no desenho vale 50 cm de verdade."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Um carro percorre 12 km com 1 litro de gasolina. Quantos litros ele gasta para percorrer 180 km?",
+        "alternativas": [
+          "12",
+          "15",
+          "18",
+          "20",
+          "2 160"
+        ],
+        "certa": 1,
+        "resolucao": "Mais quilômetros, mais litros: é direta. 180 ÷ 12 = 15 litros."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Em uma obra, 6 pedreiros levantam um muro em 10 dias, todos no mesmo ritmo. O dono quer o muro pronto antes e contrata mais pedreiros, ficando com 15 no total.\nMantido o ritmo de cada um, em quantos dias o muro fica pronto?",
+        "alternativas": [
+          "3",
+          "4",
+          "5",
+          "9",
+          "25"
+        ],
+        "certa": 1,
+        "resolucao": "Mais pedreiros, menos dias: é inversa. O trabalho todo vale 6 × 10 = 60 dias de um pedreiro. 60 ÷ 15 = 4 dias. A regra de três direta daria 25 dias, mais tempo com mais gente: sinal de erro."
+      }
+    ]
+  },
+  "Estatística": {
+    "materia": "Matemática",
+    "aula": [
+      "Média: some tudo e divida pela quantidade.",
+      "Mediana: ponha em ordem e pegue o valor do meio. Se a quantidade for par, faça a média dos dois do meio.",
+      "Moda: o valor que mais aparece.",
+      "Média ponderada: multiplique cada valor pelo seu peso, some, e divida pela soma dos pesos."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "As idades de cinco jogadores de um time são 18, 20, 20, 23 e 34 anos. Qual é a mediana dessas idades?",
+        "alternativas": [
+          "16",
+          "20",
+          "21",
+          "23",
+          "34"
+        ],
+        "certa": 1,
+        "resolucao": "Já estão em ordem. O valor do meio (o 3º de 5) é 20. A média daria 23, puxada pelo 34. Por isso a mediana é usada quando há um valor muito diferente dos outros."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Em uma disciplina, a nota final é a média ponderada de duas provas: a primeira tem peso 2 e a segunda tem peso 3. Um aluno tirou 5,0 na primeira prova. Para ser aprovado, ele precisa de nota final de pelo menos 6,5.\nQual é a menor nota que ele precisa tirar na segunda prova?",
+        "alternativas": [
+          "6,5",
+          "7,0",
+          "7,5",
+          "8,0",
+          "8,5"
+        ],
+        "certa": 2,
+        "resolucao": "A soma dos pesos é 5. Para a média dar 6,5, o total precisa ser 6,5 × 5 = 32,5. A primeira prova já deu 2 × 5,0 = 10. Falta 22,5, que vem de 3 × nota. 22,5 ÷ 3 = 7,5."
+      }
+    ]
+  },
+  "Funções": {
+    "materia": "Matemática",
+    "aula": [
+      "Função é uma máquina: entra um número (x), sai outro (y).",
+      "Função do 1º grau: y = ax + b. O b é o valor de partida. O a é quanto sobe a cada 1 de x. O gráfico é uma reta.",
+      "Função do 2º grau: y = ax² + bx + c. O gráfico é uma curva chamada parábola. Com a negativo, ela tem um ponto mais alto.",
+      "O x do ponto mais alto (o vértice): x = −b ÷ (2a)."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Um táxi cobra R$ 5,00 de bandeirada (valor fixo) mais R$ 3,00 por quilômetro rodado. Qual função dá o preço P, em reais, de uma corrida de x quilômetros?",
+        "alternativas": [
+          "P = 5x + 3",
+          "P = 3x + 5",
+          "P = 8x",
+          "P = 3x − 5",
+          "P = 15x"
+        ],
+        "certa": 1,
+        "resolucao": "O valor fixo (5) é o de partida, fica sozinho. O 3 é cobrado a cada quilômetro, então multiplica o x. P = 3x + 5."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Um vendedor de sucos percebeu que o lucro diário L, em reais, depende do preço x, em reais, cobrado por copo, segundo a função L(x) = −10x² + 80x − 60. Com preço muito baixo ele ganha pouco por copo. Com preço muito alto, vende poucos copos.\nQual preço por copo dá o maior lucro?",
+        "alternativas": [
+          "R$ 2,00",
+          "R$ 3,00",
+          "R$ 4,00",
+          "R$ 6,00",
+          "R$ 8,00"
+        ],
+        "certa": 2,
+        "resolucao": "Aqui a = −10 e b = 80. O ponto mais alto fica em x = −b ÷ (2a) = −80 ÷ (−20) = 4. Com R$ 4,00 o lucro é −160 + 320 − 60 = 100 reais."
+      }
+    ]
+  },
+  "Geometria Plana": {
+    "materia": "Matemática",
+    "aula": [
+      "Perímetro é a volta (a soma dos lados). Área é o tamanho da superfície, o chão que a figura cobre.",
+      "Retângulo: área = base × altura. Triângulo: base × altura ÷ 2.",
+      "Círculo: área = π × raio². Volta = 2 × π × raio. O raio é a metade do diâmetro. O π (pi) vale cerca de 3,14.",
+      "Triângulo retângulo é o que tem um canto de 90°. Pitágoras: cateto² + cateto² = hipotenusa². A hipotenusa é o lado maior, de frente para o canto de 90°. Os catetos são os outros dois.",
+      "1 hectare = 10 000 m²."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Uma praça circular tem 10 m de raio. Usando 3 como aproximação para π, qual é a área da praça?",
+        "alternativas": [
+          "30 m²",
+          "60 m²",
+          "100 m²",
+          "300 m²",
+          "900 m²"
+        ],
+        "certa": 3,
+        "resolucao": "Área = π × raio² = 3 × 10² = 3 × 100 = 300 m². O 60 é a volta (2 × 3 × 10)."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Uma escada será apoiada em uma parede para alcançar uma janela que fica a 4 m do chão. Por segurança, o pé da escada deve ficar a 3 m da parede. O chão é plano e a parede é reta, formando um canto de 90°.\nQual é o menor comprimento que a escada precisa ter?",
+        "alternativas": [
+          "3,5 m",
+          "5 m",
+          "7 m",
+          "12 m",
+          "25 m"
+        ],
+        "certa": 1,
+        "resolucao": "Parede, chão e escada formam um triângulo retângulo. A escada é a hipotenusa. 3² + 4² = 9 + 16 = 25. O número que ao quadrado dá 25 é 5. A escada precisa de 5 m."
+      },
+      {
+        "nivel": "ENEM",
+        "origem": "ENEM 2021 · questão 138",
+        "enunciado": "Uma unidade de medida comum usada para expressar áreas de terrenos de grandes dimensões é o hectare, que equivale a 10 000 m². Um fazendeiro decide fazer um loteamento utilizando 3 hectares de sua fazenda, dos quais 0,9 hectare será usado para a construção de ruas e calçadas e o restante será dividido em terrenos com área de 300 m² cada um. Os 20 primeiros terrenos vendidos terão preços promocionais de R$ 20 000,00 cada um, e os demais, R$ 30 000,00 cada um.\nNas condições estabelecidas, o valor total, em real, obtido pelo fazendeiro com a venda de todos os terrenos será igual a",
+        "alternativas": [
+          "700 000.",
+          "1 600 000.",
+          "1 900 000.",
+          "2 200 000.",
+          "2 800 000."
+        ],
+        "certa": 2,
+        "resolucao": "Sobra para terrenos: 3 − 0,9 = 2,1 hectares = 21 000 m². Terrenos: 21 000 ÷ 300 = 70. Os 20 primeiros: 20 × 20 000 = 400 000. Os outros 50: 50 × 30 000 = 1 500 000. Total: 1 900 000."
+      }
+    ]
+  },
+  "Geometria Espacial": {
+    "materia": "Matemática",
+    "aula": [
+      "Volume é quanto cabe dentro de um sólido.",
+      "Caixa (paralelepípedo): comprimento × largura × altura.",
+      "Cilindro (forma de lata): área da base × altura = π × raio² × altura.",
+      "1 m³ = 1 000 L. 1 L = 1 000 cm³.",
+      "Dobrou todas as medidas? O volume fica 2 × 2 × 2 = 8 vezes maior."
+    ],
+    "degraus": [
+      {
+        "nivel": "Médio",
+        "enunciado": "Uma caixa-d'água tem a forma de um paralelepípedo com 2 m de comprimento, 1 m de largura e 1,5 m de altura. Quantos litros de água cabem nela?",
+        "alternativas": [
+          "3",
+          "30",
+          "300",
+          "3 000",
+          "4 500"
+        ],
+        "certa": 3,
+        "resolucao": "Volume = 2 × 1 × 1,5 = 3 m³. Cada m³ tem 1 000 L. Cabem 3 000 L."
+      },
+      {
+        "nivel": "Difícil",
+        "enunciado": "Uma lata de tinta tem a forma de um cilindro com 10 cm de raio e 30 cm de altura. O fabricante vai lançar uma lata menor, também cilíndrica, com metade do raio e a mesma altura. Use 3 como aproximação para π.\nQuantos litros de tinta cabem na lata menor?",
+        "alternativas": [
+          "1,125",
+          "2,25",
+          "4,5",
+          "9",
+          "22,5"
+        ],
+        "certa": 1,
+        "resolucao": "Raio novo: 5 cm. Volume = 3 × 5² × 30 = 3 × 25 × 30 = 2 250 cm³ = 2,25 L. A lata grande tem 9 L: metade do raio dá um quarto do volume, porque o raio entra ao quadrado."
+      }
+    ]
+  }
+}
