@@ -234,6 +234,12 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   "Não sei isso: ver a aula" abre a aula de 5 frases e depois o mesmo conteúdo
   no Médio, Difícil e ENEM (`components/simulado/aula-do-tema.tsx`, dados de
   `scripts/gerar-aulas-dia-2.cjs`). Zero IA; exemplo que já está numa prova fica fora.
+  **Aula começa pelo desenho (Pablo, 11/11/2026: "preciso de uma imagem"; aprovou a
+  mangueira):** 3 telas antes das frases: Em desenho (analogia + o que é o quê), Por que
+  faz sentido (+ conta com números que não estão nas provas) e Direta ou inversa
+  ("fica mais fácil de entender a lógica"; ex.: mais aperto, menos água). Fonte única
+  `lib/aulas-desenho-dados.js`; prévia gerada por `scripts/gerar-aulas-em-desenho.mjs`.
+  O movimento do desenho continua com "reduzir movimento", só mais lento (explica, como o flip).
 - **Prova responde na hora (22/10/2026):** o acerto é conferido no navegador
   (a letra certa já vem com a questão) e a resposta é gravada por trás, com
   3 tentativas; "Próxima" avança sem recarregar a prova. Antes: 1,5 s para ver

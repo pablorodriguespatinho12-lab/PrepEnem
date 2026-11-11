@@ -1,0 +1,166 @@
+<title>Aulas em desenho</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=DM+Sans:wght@400;500;600&display=swap">
+<style>
+/* Uma aula por tela: desenho em cima, "o que é o quê" e a conta embaixo. */
+:root {
+  --bg: hsl(195 30% 97%);
+  --card: hsl(0 0% 100%);
+  --fg: hsl(200 30% 14%);
+  --muted: hsl(200 12% 42%);
+  --line: hsl(195 20% 86%);
+  --accent: hsl(189 80% 34%);
+  --accent-soft: hsl(189 70% 92%);
+  --water: hsl(210 85% 55%);
+  --water-soft: hsl(210 85% 88%);
+  --warm: hsl(24 90% 52%);
+  --warm-soft: hsl(24 90% 90%);
+  --good: hsl(150 55% 36%);
+  --ink: hsl(200 30% 14%);
+  --display: "Fraunces", Georgia, serif;
+  --read: "Source Serif 4", Georgia, serif;
+  --ui: "DM Sans", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: hsl(200 25% 8%); --card: hsl(200 22% 12%); --fg: hsl(195 20% 92%); --muted: hsl(195 10% 66%);
+  --line: hsl(200 15% 24%); --accent: hsl(189 80% 56%); --accent-soft: hsl(189 50% 18%);
+  --water: hsl(210 90% 66%); --water-soft: hsl(210 50% 24%); --warm: hsl(24 95% 62%); --warm-soft: hsl(24 50% 22%);
+  --good: hsl(150 55% 55%); --ink: hsl(195 20% 92%); color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: hsl(200 25% 8%); --card: hsl(200 22% 12%); --fg: hsl(195 20% 92%); --muted: hsl(195 10% 66%);
+  --line: hsl(200 15% 24%); --accent: hsl(189 80% 56%); --accent-soft: hsl(189 50% 18%);
+  --water: hsl(210 90% 66%); --water-soft: hsl(210 50% 24%); --warm: hsl(24 95% 62%); --warm-soft: hsl(24 50% 22%);
+  --good: hsl(150 55% 55%); --ink: hsl(195 20% 92%); color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--ui); margin: 0; }
+.wrap { max-width: 860px; margin: 0 auto; padding-block: 20px 32px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 16px; }
+.topo { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+.abas { display: flex; flex-wrap: wrap; gap: 6px; }
+.abas button { font: 500 14px var(--ui); border: 0; border-radius: 999px; padding: 8px 14px; background: var(--card); color: var(--muted); cursor: pointer; }
+.abas button[aria-pressed="true"] { background: var(--accent); color: var(--card); }
+.conta-tela { font: 500 13px var(--ui); color: var(--muted); font-variant-numeric: tabular-nums; }
+.cartao { background: var(--card); border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 16px; }
+.olho { font: 600 12px var(--ui); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0; }
+h1 { font: 600 clamp(24px, 4vw, 32px)/1.15 var(--display); margin: 2px 0 0; text-wrap: balance; }
+figure { margin: 0; background: var(--bg); border-radius: 14px; padding: 8px; overflow-x: auto; }
+figure svg { display: block; width: 100%; max-width: 560px; height: auto; margin: 0 auto; }
+.grade { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grade > * { min-width: 0; }
+@media (max-width: 640px) { .grade { grid-template-columns: 1fr; } }
+h2 { font: 600 13px var(--ui); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+.pecas { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.pecas li { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 8px; align-items: baseline; font: 16px/1.4 var(--read); }
+.pecas .seta { color: var(--muted); font-family: var(--ui); }
+.pecas b { font-weight: 600; color: var(--accent); }
+.texto { font: 17px/1.55 var(--read); margin: 0; }
+.conta { background: var(--accent-soft); border-radius: 12px; padding: 12px 14px; font: 16px/1.5 var(--read); margin-top: 10px; }
+.conta strong { font-family: var(--ui); font-weight: 600; }
+.nav { display: flex; justify-content: space-between; gap: 12px; }
+.nav button { font: 600 15px var(--ui); border: 0; border-radius: 12px; padding: 12px 18px; cursor: pointer; }
+#voltar { background: var(--card); color: var(--fg); }
+#proximo { background: var(--accent); color: var(--card); }
+.nav button:disabled { opacity: .35; cursor: default; }
+button:focus { outline: none; }
+button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+/* desenho */
+svg text { font: 500 12px var(--ui); fill: var(--fg); }
+svg .t-forte { font-weight: 600; fill: var(--accent); }
+svg .t-calor { font-weight: 600; fill: var(--warm); }
+svg .t-agua { font-weight: 600; fill: var(--water); }
+svg .t-fraco { fill: var(--muted); }
+.tinta { stroke: var(--ink); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.tinta-f { stroke: var(--muted); fill: none; stroke-width: 1.5; stroke-dasharray: 4 4; }
+.agua { fill: var(--water-soft); stroke: var(--water); stroke-width: 2; }
+.calor { fill: var(--warm-soft); stroke: var(--warm); stroke-width: 2; }
+.realce { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2; }
+.cheio { fill: var(--accent); }
+.cheio-agua { fill: var(--water); }
+.cheio-calor { fill: var(--warm); }
+.fundo { fill: var(--card); stroke: var(--line); stroke-width: 1.5; }
+.fluxo { stroke: var(--water); stroke-width: 4; fill: none; stroke-dasharray: 8 10; stroke-linecap: round; animation: correr 0.9s linear infinite; }
+.fluxo-pouco { stroke: var(--water); stroke-width: 3; fill: none; stroke-dasharray: 4 26; stroke-linecap: round; animation: correr-pouco 1.8s linear infinite; }
+@keyframes correr-pouco { to { stroke-dashoffset: -30; } }
+figure + .prop { margin-top: 12px; }
+.prop { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.prop li { font: 16px/1.45 var(--read); display: flex; flex-direction: column; gap: 2px; }
+.prop .cab { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font: 600 15px var(--ui); }
+.selo { font: 600 11px var(--ui); letter-spacing: .06em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; }
+.selo-direta { background: var(--accent-soft); color: var(--accent); }
+.selo-inversa { background: var(--warm-soft); color: var(--warm); }
+.selo-outra { background: var(--bg); color: var(--muted); }
+.fluxo-e { stroke: var(--accent); stroke-width: 4; fill: none; stroke-dasharray: 3 12; stroke-linecap: round; animation: correr 0.9s linear infinite; }
+.sobe { stroke: var(--warm); stroke-width: 3; fill: none; stroke-dasharray: 6 8; animation: correr 0.8s linear infinite; }
+.gira { animation: girar 2.4s linear infinite; transform-box: fill-box; transform-origin: center; }
+.onda { animation: andar 1.6s linear infinite; }
+@keyframes correr { to { stroke-dashoffset: -18; } }
+@keyframes girar { to { transform: rotate(360deg); } }
+@keyframes andar { to { transform: translateX(100px); } }
+/* O movimento aqui explica a ideia (a água corre, a onda anda): fica, só mais lento. */
+@media (prefers-reduced-motion: reduce) {
+  .fluxo, .fluxo-e, .sobe { animation-duration: 1.8s; }
+  .fluxo-pouco { animation-duration: 3.6s; }
+  .gira { animation-duration: 4.8s; }
+  .onda { animation-duration: 3.2s; }
+}
+</style>
+
+<div class="wrap">
+  <div class="topo">
+    <div class="abas" id="abas" role="group" aria-label="Matéria"></div>
+    <span class="conta-tela" id="contador"></span>
+  </div>
+  <article class="cartao" id="cartao" aria-live="polite"></article>
+  <div class="nav">
+    <button id="voltar" type="button">‹ Voltar</button>
+    <button id="proximo" type="button">Próximo ›</button>
+  </div>
+</div>
+
+<script>
+/*DADOS*/
+const MATERIAS = ['Física', 'Química', 'Biologia', 'Matemática'];
+let atual = 0;
+try { atual = Math.min(AULAS.length - 1, Math.max(0, Number(localStorage.getItem('aula-desenho')) || 0)); } catch (e) { atual = 0; }
+
+const abas = document.getElementById('abas');
+abas.innerHTML = MATERIAS.map((m) => `<button type="button" data-m="${m}">${m}</button>`).join('');
+abas.addEventListener('click', (e) => {
+  const m = e.target.closest('button')?.dataset.m;
+  if (m) mostrar(AULAS.findIndex((a) => a.m === m));
+});
+
+const SELO = { direta: 'Direta', inversa: 'Inversa', outra: 'Nem direta nem inversa' };
+function logica(t) {
+  const p = PROPORCOES[t];
+  if (!p) return '';
+  const desenho = DESENHO_LOGICA[t] ? `<figure>${DESENHO_LOGICA[t]}</figure>` : '';
+  return `<section><h2>Direta ou inversa</h2>${desenho}<ul class="prop">${p.map(([tipo, par, ex]) =>
+    `<li><span class="cab"><span class="selo selo-${tipo}">${SELO[tipo]}</span>${par}</span><span>${ex}</span></li>`).join('')}</ul></section>`;
+}
+function mostrar(i) {
+  atual = i;
+  const a = AULAS[i];
+  document.getElementById('cartao').innerHTML = `
+    <div><p class="olho">${a.m}</p><h1>${a.t}</h1></div>
+    <figure>${a.svg}</figure>
+    <div class="grade">
+      <section><h2>O que é o quê</h2><ul class="pecas">${a.pecas.map(([img, nome]) => `<li><span>${img}</span><span class="seta">→</span><b>${nome}</b></li>`).join('')}</ul></section>
+      <section><h2>Por que faz sentido</h2><p class="texto">${a.sentido}</p><div class="conta">${a.conta}</div></section>
+    </div>${logica(a.t)}`;
+  document.getElementById('contador').textContent = `${i + 1} de ${AULAS.length}`;
+  abas.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.m === a.m)));
+  document.getElementById('voltar').disabled = i === 0;
+  document.getElementById('proximo').disabled = i === AULAS.length - 1;
+  try { localStorage.setItem('aula-desenho', String(i)); } catch (e) { /* sem memória: tudo bem */ }
+}
+document.getElementById('voltar').onclick = () => atual > 0 && mostrar(atual - 1);
+document.getElementById('proximo').onclick = () => atual < AULAS.length - 1 && mostrar(atual + 1);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight' && atual < AULAS.length - 1) mostrar(atual + 1);
+  if (e.key === 'ArrowLeft' && atual > 0) mostrar(atual - 1);
+});
+mostrar(atual);
+</script>

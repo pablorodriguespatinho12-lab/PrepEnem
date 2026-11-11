@@ -762,3 +762,58 @@ html [data-sonner-toaster][data-theme] {
   border: 1px solid hsl(var(--quadro-linha));
   box-shadow: var(--elev-1);
 }
+
+/* Aulas em desenho (components/simulado/aula-do-tema.tsx, dados em lib/aulas-desenho-dados.js).
+   Mesmas classes da prévia em docs/revisao-final/dia-2/aulas-em-desenho.html. */
+.aula-desenho {
+  --accent: hsl(var(--primary));
+  --accent-soft: hsl(var(--primary) / 0.14);
+  --water: hsl(210 85% 48%);
+  --water-soft: hsl(210 85% 90%);
+  --warm: hsl(24 90% 46%);
+  --warm-soft: hsl(24 90% 90%);
+  --good: hsl(var(--success));
+  --ink: hsl(var(--foreground));
+  --fg: hsl(var(--foreground));
+  --muted: hsl(var(--muted-foreground));
+  --line: hsl(var(--border));
+  --card: hsl(var(--background));
+}
+.dark .aula-desenho {
+  --water: hsl(210 90% 66%);
+  --water-soft: hsl(210 50% 24%);
+  --warm: hsl(24 95% 62%);
+  --warm-soft: hsl(24 50% 22%);
+}
+.aula-desenho svg { display: block; width: 100%; height: auto; }
+.aula-desenho svg text { font: 500 12px var(--font-sans, system-ui), sans-serif; fill: var(--fg); }
+.aula-desenho svg .t-forte { font-weight: 600; fill: var(--accent); }
+.aula-desenho svg .t-calor { font-weight: 600; fill: var(--warm); }
+.aula-desenho svg .t-agua { font-weight: 600; fill: var(--water); }
+.aula-desenho svg .t-fraco { fill: var(--muted); }
+.aula-desenho .tinta { stroke: var(--ink); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.aula-desenho .tinta-f { stroke: var(--muted); fill: none; stroke-width: 1.5; stroke-dasharray: 4 4; }
+.aula-desenho .agua { fill: var(--water-soft); stroke: var(--water); stroke-width: 2; }
+.aula-desenho .calor { fill: var(--warm-soft); stroke: var(--warm); stroke-width: 2; }
+.aula-desenho .realce { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2; }
+.aula-desenho .cheio { fill: var(--accent); }
+.aula-desenho .cheio-agua { fill: var(--water); }
+.aula-desenho .cheio-calor { fill: var(--warm); }
+.aula-desenho .fundo { fill: var(--card); stroke: var(--line); stroke-width: 1.5; }
+.aula-desenho .fluxo { stroke: var(--water); stroke-width: 4; fill: none; stroke-dasharray: 8 10; stroke-linecap: round; animation: aula-correr 0.9s linear infinite; }
+.aula-desenho .fluxo-pouco { stroke: var(--water); stroke-width: 3; fill: none; stroke-dasharray: 4 26; stroke-linecap: round; animation: aula-correr-pouco 1.8s linear infinite; }
+.aula-desenho .fluxo-e { stroke: var(--accent); stroke-width: 4; fill: none; stroke-dasharray: 3 12; stroke-linecap: round; animation: aula-correr 0.9s linear infinite; }
+.aula-desenho .sobe { stroke: var(--warm); stroke-width: 3; fill: none; stroke-dasharray: 6 8; animation: aula-correr 0.8s linear infinite; }
+.aula-desenho .gira { animation: aula-girar 2.4s linear infinite; transform-box: fill-box; transform-origin: center; }
+.aula-desenho .onda { animation: aula-andar 1.6s linear infinite; }
+@keyframes aula-correr { to { stroke-dashoffset: -18; } }
+@keyframes aula-correr-pouco { to { stroke-dashoffset: -30; } }
+@keyframes aula-girar { to { transform: rotate(360deg); } }
+@keyframes aula-andar { to { transform: translateX(100px); } }
+/* Aqui o movimento explica (a água corre, a onda anda), como o flip do flashcard: fica, mais lento. */
+@media (prefers-reduced-motion: reduce) {
+  .aula-desenho .fluxo, .aula-desenho .fluxo-e, .aula-desenho .sobe { animation-duration: 1.8s; }
+  .aula-desenho .fluxo-pouco { animation-duration: 3.6s; }
+  .aula-desenho .gira { animation-duration: 4.8s; }
+  .aula-desenho .onda { animation-duration: 3.2s; }
+}
