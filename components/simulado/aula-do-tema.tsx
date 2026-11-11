@@ -1,11 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import dynamic from 'next/dynamic';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { BookOpen, Check, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@/components/ui/dialog';
 import { aulaDoTema, type Degrau } from '@/lib/aulas-dia-2';
+import { desenhoDoTema } from '@/lib/aulas-desenho';
+import { TelaDesenho, TelaProporcoes, TelaSentido } from '@/components/simulado/telas-desenho';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 
@@ -20,7 +22,15 @@ export function AulaDoTema({ tema, className }: { tema: string | null | undefine
   const reduzir = useReducedMotion();
   if (!aula || !tema) return null;
 
-  const telas: { rotulo: string; listas?: string[]; degrau?: Degrau }[] = [
+  const desenho = desenhoDoTema(tema);
+  const telas: { rotulo: string; listas?: string[]; degrau?: Degrau; conteudo?: ReactNode }[] = [
+    ...(desenho
+      ? [
+          { rotulo: 'Em desenho', conteudo: <TelaDesenho d={desenho} /> },
+          { rotulo: 'Por que faz sentido', conteudo: <TelaSentido d={desenho} /> },
+          ...(desenho.proporcoes.length ? [{ rotulo: 'Direta ou inversa', conteudo: <TelaProporcoes d={desenho} /> }] : []),
+        ]
+      : []),
     { rotulo: 'Aula', listas: aula.aula },
     ...(aula.paraSubir.length ? [{ rotulo: 'Para subir de nível', listas: aula.paraSubir }] : []),
     ...aula.degraus.map((d) => ({ rotulo: `Como cai no ${d.nivel}`, degrau: d })),
@@ -64,7 +74,9 @@ export function AulaDoTema({ tema, className }: { tema: string | null | undefine
               exit={reduzir ? { opacity: 0 } : { opacity: 0, x: -24 }}
               transition={{ duration: reduzir ? 0.12 : 0.22 }}
             >
-              {atual.listas ? (
+              {atual.conteudo ? (
+                atual.conteudo
+              ) : atual.listas ? (
                 <ul className="space-y-3">
                   {atual.listas.map((frase) => (
                     <li key={frase} className="flex gap-3 font-reading type-body">
