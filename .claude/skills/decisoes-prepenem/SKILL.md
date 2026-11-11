@@ -240,6 +240,11 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   ("fica mais fácil de entender a lógica"; ex.: mais aperto, menos água). Fonte única
   `lib/aulas-desenho-dados.js`; prévia gerada por `scripts/gerar-aulas-em-desenho.mjs`.
   O movimento do desenho continua com "reduzir movimento", só mais lento (explica, como o flip).
+  **Aula de CADA questão (Pablo, mesmo dia: "cada exercício tem uma aula diferente"):**
+  conceito em desenho (do tema) → a explicação pronta DESTA questão, passo a passo, sem
+  "A resposta" → "Tentar responder"; o resto do conteúdo fica atrás de "Mais do
+  conteúdo". Só explicação pronta (`soPronta`, a rota nunca chama a IA); 160 de 160 têm.
+  As 40 reais estão no banco com `tema` vazio: `temaDaQuestao` acha pelo id nos JSON.
 - **Prova responde na hora (22/10/2026):** o acerto é conferido no navegador
   (a letra certa já vem com a questão) e a resposta é gravada por trás, com
   3 tentativas; "Próxima" avança sem recarregar a prova. Antes: 1,5 s para ver

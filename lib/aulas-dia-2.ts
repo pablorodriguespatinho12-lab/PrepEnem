@@ -1,4 +1,6 @@
 import aulas from '@/data/revisao-final/dia-2/aulas.json';
+import enemNatureza from '@/data/revisao-final/dia-2/enem-natureza.json';
+import enemMatematica from '@/data/revisao-final/dia-2/enem-matematica.json';
 
 // Aula de cada um dos 22 conteúdos do dia 2, aberta de dentro da questão
 // (Pablo, 11/11/2026: estudar pela questão e chegar pronto no Médio, Difícil e ENEM).
@@ -24,3 +26,14 @@ export function aulaDoTema(tema: string | null | undefined): AulaDoTema | null {
 }
 
 export const TEMAS_COM_AULA = Object.keys(TODAS);
+
+// As 40 reais do ENEM estão no banco com `tema` vazio; o tema delas está nos arquivos
+// da prova, pelo id do banco (11/11/2026). Sem isso o botão não aparecia na prova 4.
+const TEMA_DA_REAL = new Map<string, string>(
+  [...(enemNatureza as { id: string; tema: string }[]), ...(enemMatematica as { id: string; tema: string }[])].map((q) => [q.id, q.tema]),
+);
+
+export function temaDaQuestao(q: { id: string; tema?: string | null }): string | null {
+  if (q.tema && TODAS[q.tema]) return q.tema;
+  return TEMA_DA_REAL.get(q.id) ?? q.tema ?? null;
+}

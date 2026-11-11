@@ -16,6 +16,7 @@ import { ExplicacaoTutor } from '@/components/tutor/explicacao-tutor';
 import { EsqueletoQuestao } from '@/components/esqueletos';
 import { AquecimentoFlashcards } from '@/components/simulado/aquecimento-flashcards';
 import { AulaDoTema } from '@/components/simulado/aula-do-tema';
+import { temaDaQuestao } from '@/lib/aulas-dia-2';
 
 /* Limiares de dado esparso — mesma regra usada em app/dashboard/page.tsx. */
 const MIN_QUESTOES_PARA_TAXA = 5;
@@ -388,7 +389,7 @@ export default function ProvaDetailPage() {
           <div className="prose-reading mb-6">
             <MathText text={semMarcaDeImagem(q.enunciado)} />
           </div>
-          <AulaDoTema tema={q.tema} className="mb-6" />
+          <AulaDoTema key={q.id} tema={temaDaQuestao(q)} questao={q} className="mb-6" />
           {/* A figura da questão real (a prova não mostrava; Pablo, 03/11/2026). */}
           {q.pdfFileUrl && q.paginaPdf && (
             <PaginaDaProva
