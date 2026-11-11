@@ -8,8 +8,8 @@ export function TelaDesenho({ d }: { d: AulaEmDesenho }) {
     <div className="aula-desenho space-y-4">
       <div className="rounded-[var(--radius-control)] bg-muted/60 p-2" dangerouslySetInnerHTML={{ __html: d.svg }} />
       <ul className="space-y-2">
-        {d.pecas.map(([imagem, nome]) => (
-          <li key={nome} className="grid grid-cols-[1fr_auto_1fr] gap-2 items-baseline font-reading type-body">
+        {d.pecas.map(([imagem, nome], i) => (
+          <li key={`${i}-${nome}`} className="grid grid-cols-[1fr_auto_1fr] gap-2 items-baseline font-reading type-body">
             <span>{imagem}</span>
             <span aria-hidden className="text-muted-foreground">→</span>
             <span className="font-semibold text-primary-text">{nome}</span>

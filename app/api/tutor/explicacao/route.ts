@@ -30,6 +30,8 @@ export async function POST(req: Request) {
     const valida = pronta?.versao === VERSAO_EXPLICACAO ? validarExplicacao(pronta.conteudo, questao.materia) : null;
     if (valida) return NextResponse.json({ explicacao: { ...valida, seuErro: null }, pronta: true });
   }
+  // A aula antes de responder ("Não sei isso") só usa a pronta: nunca gasta a IA.
+  if (corpo?.soPronta === true) return NextResponse.json({ error: 'Esta questão ainda não tem aula pronta.' }, { status: 404 });
 
   // Mesma questão e mesma alternativa marcada = mesmo prompt (lib/cache-ia.ts).
   // A conferência roda dentro do cache: cada questão é conferida uma vez.

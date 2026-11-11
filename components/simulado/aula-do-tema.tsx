@@ -8,36 +8,55 @@ import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@/compone
 import { aulaDoTema, type Degrau } from '@/lib/aulas-dia-2';
 import { desenhoDoTema } from '@/lib/aulas-desenho';
 import { TelaDesenho, TelaProporcoes, TelaSentido } from '@/components/simulado/telas-desenho';
+import { TelaEstaQuestao, TelaPasso, useAulaDaQuestao } from '@/components/simulado/resolver-esta-questao';
+import type { QuestaoTutor } from '@/components/tutor/explicacao-tutor';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 
 const LETRAS = ['A', 'B', 'C', 'D', 'E'];
 
-// Botão "Não sei isso" das provas do dia 2: abre a aula do conteúdo e depois
-// mostra como ele cai no Médio, no Difícil e no ENEM, uma tela por vez.
-export function AulaDoTema({ tema, className }: { tema: string | null | undefined; className?: string }) {
+type Tela = { rotulo: string; listas?: string[]; degrau?: Degrau; conteudo?: ReactNode };
+
+// Botão "Não sei isso" das provas do dia 2. Ordem (Pablo, 11/11/2026: "cada exercício
+// tem uma aula diferente"): o conceito em desenho → a aula DESTA questão, passo a passo,
+// sem a resposta → "Tentar responder". Depois, opcional: o conteúdo e como cai no Médio,
+// Difícil e ENEM.
+export function AulaDoTema({ tema, questao, className }: { tema: string | null | undefined; questao?: QuestaoTutor; className?: string }) {
   const aula = aulaDoTema(tema);
   const [aberta, setAberta] = useState(false);
   const [tela, setTela] = useState(0);
   const reduzir = useReducedMotion();
+  const daQuestao = useAulaDaQuestao(questao, aberta);
   if (!aula || !tema) return null;
 
   const desenho = desenhoDoTema(tema);
-  const telas: { rotulo: string; listas?: string[]; degrau?: Degrau; conteudo?: ReactNode }[] = [
-    ...(desenho
-      ? [
-          { rotulo: 'Em desenho', conteudo: <TelaDesenho d={desenho} /> },
-          { rotulo: 'Por que faz sentido', conteudo: <TelaSentido d={desenho} /> },
-          ...(desenho.proporcoes.length ? [{ rotulo: 'Direta ou inversa', conteudo: <TelaProporcoes d={desenho} /> }] : []),
-        ]
-      : []),
-    { rotulo: 'Aula', listas: aula.aula },
+  const conceito: Tela[] = desenho
+    ? [
+        { rotulo: 'O conceito em desenho', conteudo: <TelaDesenho d={desenho} /> },
+        ...(desenho.proporcoes.length ? [{ rotulo: 'Direta ou inversa', conteudo: <TelaProporcoes d={desenho} /> }] : []),
+      ]
+    : [];
+  const estaQuestao: Tela[] = !questao || !daQuestao
+    ? []
+    : [
+        { rotulo: 'Esta questão: a ideia', conteudo: <TelaEstaQuestao aula={daQuestao} /> },
+        ...(daQuestao.estado === 'pronta'
+          ? daQuestao.passos.map((p) => ({ rotulo: `Esta questão: ${p.titulo}`, conteudo: <TelaPasso passo={p} /> }))
+          : []),
+      ];
+  const fimDaQuestao = conceito.length + estaQuestao.length - 1;
+  const telas: Tela[] = [
+    ...conceito,
+    ...estaQuestao,
+    ...(desenho ? [{ rotulo: 'Por que faz sentido', conteudo: <TelaSentido d={desenho} /> }] : []),
+    { rotulo: 'Aula do conteúdo', listas: aula.aula },
     ...(aula.paraSubir.length ? [{ rotulo: 'Para subir de nível', listas: aula.paraSubir }] : []),
     ...aula.degraus.map((d) => ({ rotulo: `Como cai no ${d.nivel}`, degrau: d })),
   ];
-  const atual = telas[tela];
+  const atual = telas[Math.min(tela, telas.length - 1)];
   const total = telas.length;
   const ultima = tela === total - 1;
+  const naHoraDeTentar = tela === fimDaQuestao && !ultima;
   const abrir = () => { setTela(0); setAberta(true); };
 
   return (
@@ -106,15 +125,34 @@ export function AulaDoTema({ tema, className }: { tema: string | null | undefine
                 <span key={i} className={`w-2 h-2 rounded-full ${i === tela ? 'bg-primary' : 'bg-muted'}`} />
               ))}
             </div>
+            {naHoraDeTentar ? (
+              <button
+                type="button"
+                onClick={() => setAberta(false)}
+                className="h-11 px-4 inline-flex items-center rounded-[var(--radius-control)] bg-primary text-primary-foreground type-meta font-medium t-colors hover:bg-[hsl(var(--primary-hover))]"
+              >
+                Tentar responder
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => (ultima ? setAberta(false) : setTela((t) => t + 1))}
+                className="h-11 px-4 inline-flex items-center gap-1.5 rounded-[var(--radius-control)] bg-primary text-primary-foreground type-meta font-medium t-colors hover:bg-[hsl(var(--primary-hover))]"
+              >
+                {ultima ? 'Voltar à questão' : 'Próximo'}
+                {!ultima && <ChevronRight className="w-4 h-4" aria-hidden />}
+              </button>
+            )}
+          </div>
+          {naHoraDeTentar && (
             <button
               type="button"
-              onClick={() => (ultima ? setAberta(false) : setTela((t) => t + 1))}
-              className="h-11 px-4 inline-flex items-center gap-1.5 rounded-[var(--radius-control)] bg-primary text-primary-foreground type-meta font-medium t-colors hover:bg-[hsl(var(--primary-hover))]"
+              onClick={() => setTela((t) => t + 1)}
+              className="justify-self-end type-meta text-primary-text font-medium hover:underline"
             >
-              {ultima ? 'Voltar à questão' : 'Próximo'}
-              {!ultima && <ChevronRight className="w-4 h-4" aria-hidden />}
+              Mais do conteúdo (Médio, Difícil, ENEM)
             </button>
-          </div>
+          )}
         </DialogContent>
       </Dialog>
     </>

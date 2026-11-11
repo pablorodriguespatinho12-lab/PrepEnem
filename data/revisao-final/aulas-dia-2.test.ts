@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
-import { TEMAS_COM_AULA, aulaDoTema } from '@/lib/aulas-dia-2';
+import { TEMAS_COM_AULA, aulaDoTema, temaDaQuestao } from '@/lib/aulas-dia-2';
 
 // O botão "Não sei isso" das provas do dia 2 acha a aula pelo tema da questão.
 const PASTA = join(process.cwd(), 'data/revisao-final/dia-2');
@@ -46,6 +46,15 @@ describe('aulas do dia 2', () => {
       expect(a.paraSubir.length, tema).toBeLessThanOrEqual(6);
       for (const d of a.degraus) expect(d.resolucao, tema).not.toMatch(/também está na prova/);
     }
+  });
+
+  it('questão real sem tema no banco acha o tema pelo id', () => {
+    const reais = ['enem-natureza.json', 'enem-matematica.json'].flatMap(
+      (f) => JSON.parse(readFileSync(join(PASTA, f), 'utf8')) as { id: string; tema: string }[],
+    );
+    expect(reais).toHaveLength(40);
+    for (const q of reais) expect(temaDaQuestao({ id: q.id, tema: null }), q.id).toBe(q.tema);
+    expect(temaDaQuestao({ id: 'qualquer', tema: 'Genética' })).toBe('Genética');
   });
 
   it('tema desconhecido não tem aula', () => {
