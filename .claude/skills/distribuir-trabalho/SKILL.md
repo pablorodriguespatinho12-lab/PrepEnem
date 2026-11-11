@@ -18,7 +18,7 @@ plausível que ninguém confere e entra no commit com cara de revisado.
 | `build-guard` | build com só os erros | interpretar o erro |
 | `db-inspector` | schema vs Neon real antes de script | rodar o script |
 | `design-system-auditor` | tabela de contraste, raio, transição | opinar sobre composição |
-| `layout-organizer` / `ui-animations` | mudança mecânica de layout / Framer Motion | mexer em lógica de negócio |
+| `revisor-de-fatos` | conta, gabarito único e fato de material de estudo escrito à mão | consertar ou opinar sobre estilo |
 | `revisor-adversarial` | defeito no diff, em contexto limpo | opinar sobre layout |
 | `inspetor-visual` | se a composição fecha, olhando a imagem | conferir lógica |
 | `general-purpose` | edição mecânica em lote, busca na web | decidir; **passe `model: "sonnet"`** (132 chamadas em 30 dias = 14% do gasto, nov/2026) |

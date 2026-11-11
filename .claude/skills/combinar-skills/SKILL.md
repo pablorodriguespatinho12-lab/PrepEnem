@@ -27,8 +27,8 @@ para tomar (02/09/2026). Anunciar não é usar.
 
 | Frente | Cadeia, na ordem |
 |---|---|
-| **tela / design** | `decisoes-prepenem` → `montar-referencia` (medir a tela equivalente lá fora e a nossa) → `perguntar-ao-pablo` (2 opções numa página `Artifact`) → `animation-system` se tiver movimento → implementar (agentes `layout-organizer` / `ui-animations` se couber) → agente `design-system-auditor` → `chamar-revisor` (inspetor-visual?) → `explicar-ao-pablo` |
-| **conteúdo de IA** (explicação, flashcard) | `decisoes-prepenem` → `flashcard-pattern` se for card → mudar o prompt → rodar contra 3 questões reais e ler a saída → `scripts/jornada-do-aluno.mts` + agente `aluno-do-zero` (onde quem nunca viu o assunto se perde) → `explicar-ao-pablo` |
+| **tela / design** | `decisoes-prepenem` → `montar-referencia` (medir a tela equivalente lá fora e a nossa) → `perguntar-ao-pablo` (2 opções numa página `Artifact`) → `animation-system` se tiver movimento → implementar → agente `design-system-auditor` → `chamar-revisor` (inspetor-visual?) → `explicar-ao-pablo` |
+| **conteúdo de IA** (explicação, flashcard) | `decisoes-prepenem` → `flashcard-pattern` se for card → mudar o prompt → rodar contra 3 questões reais e ler a saída → `scripts/jornada-do-aluno.mts` + agente `aluno-do-zero` (onde quem nunca viu o assunto se perde) → `explicar-ao-pablo`. Material escrito à mão (aula, cartão, questão com gabarito): agente `revisor-de-fatos` antes de entregar |
 | **banco / script de dados** | `prisma-neon-safety` → agente `db-inspector` → rodar → conferir a contagem depois |
 | **bug** | `verificacao-local` (reproduzir no navegador antes de acreditar no código) → corrigir → agente `build-guard` |
 | **lento / fps / travando** | `medir-fluidez` (medir no build, eliminar um suspeito por vez) → `animation-system` → corrigir → medir de novo → agente `build-guard` |

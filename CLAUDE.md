@@ -21,8 +21,9 @@
 - **Falar com o Pablo:** `perguntar-ao-pablo`, `explicar-ao-pablo`.
 - **Manter as ferramentas:** `desenhar-skill`, `auditar-o-repertorio`.
 - **Agentes:** `build-guard`, `db-inspector`, `design-system-auditor`,
-  `layout-organizer`, `ui-animations`, `aluno-do-zero` (lê a jornada de
-  `scripts/jornada-do-aluno.mts` como quem só sabe as 4 operações), `revisor-adversarial` e
+  `aluno-do-zero` (lê a jornada de `scripts/jornada-do-aluno.mts`, ou um texto de
+  estudo, como quem só sabe as 4 operações), `revisor-de-fatos` (conta, gabarito e
+  fato de material de estudo, antes de entregar), `revisor-adversarial` e
   `inspetor-visual` (~66 mil tokens cada: decidir com `chamar-revisor`).
 
 Skills globais de design ficam fora: o PrepEnem já tem direção fechada

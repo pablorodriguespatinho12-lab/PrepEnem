@@ -88,7 +88,7 @@
   },
   {
    "id": "aquec-rf-05", "area": "Linguagens", "materia": "Inglês", "tema": "Reading Comprehension e Interpretação", "prepara": [6, 7],
-   "enunciado": "Num cartum, o chefe diz: “Nobody treats you any differently here” (“Aqui ninguém trata você diferente”). O desenho mostra que todos no escritório são iguais entre si. O efeito do cartum é:",
+   "enunciado": "Num cartum, o chefe diz ao funcionário novo: “Nobody treats you any differently here” (“Aqui ninguém trata você diferente”). Mas, no desenho, os colegas olham torto e se afastam dele. O efeito do cartum é:",
    "A": "elogio sincero ao escritório.",
    "B": "propaganda da empresa.",
    "C": "descrição neutra do trabalho.",
@@ -96,11 +96,11 @@
    "E": "ironia: a frase diz uma coisa e o desenho mostra outra.",
    "resposta": "E",
    "explicacao": {
-    "conferencia": "Frase de igualdade + escritório sem diversidade = ironia. E.",
+    "conferencia": "A frase promete tratamento igual + o desenho mostra os colegas se afastando = ironia. E.",
     "ideia": "Dizer “que dia lindo” debaixo de chuva é ironia. No cartum, a frase e o desenho brigam de propósito.",
     "pecas": [{"termo": "Ironia", "significado": "Dizer uma coisa querendo mostrar o contrário. Como chamar de “rapidinho” uma fila de 2 horas."}],
     "passos": [
-     {"titulo": "A pergunta", "texto": "Compare o que a frase diz com o que o desenho mostra.", "visual": {"tipo": "tabela", "titulo": "Frase contra desenho", "cabecalho": ["Parte", "Mostra"], "linhas": [["Frase", "ninguém é tratado diferente"], ["Desenho", "só gente igual: não há diversidade"]]}},
+     {"titulo": "A pergunta", "texto": "Compare o que a frase diz com o que o desenho mostra.", "visual": {"tipo": "tabela", "titulo": "Frase contra desenho", "cabecalho": ["Parte", "Mostra"], "linhas": [["Frase", "ninguém é tratado diferente"], ["Desenho", "os colegas olham torto e se afastam dele"]]}},
      {"titulo": "A resposta", "texto": "Letra E: ironia. Em cartum do ENEM, sempre leia o desenho junto com a frase.", "visual": null}
     ],
     "seuErro": null,

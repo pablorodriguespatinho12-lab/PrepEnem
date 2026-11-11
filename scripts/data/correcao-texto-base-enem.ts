@@ -270,4 +270,27 @@ KHEL, M. R. Disponível em: https://alias.estadao.com.br. Acesso em: 19 out. 202
 
 A representação da mulher apresentada no Texto I pode ser explicada pelo Texto II no que diz respeito à(às)`,
   },
+  // 09/11/2026: duas do 2º dia que estavam sem a frase da pergunta (o enunciado
+  // acabava no texto-base e as alternativas ficavam soltas). Transcritas da
+  // página em public/questoes-imagens/<id>.webp; o gabarito já estava certo.
+  {
+    id: 'cmoudnnsk001ouoz94ovrthg9',
+    rotulo: 'ENEM 2021 D2 Q91 (lipase ácida lisossômica)',
+    enunciadoAtualComeca: 'A deficiência de lipase ácida lisossômica é uma doença hereditária',
+    enunciado: `A deficiência de lipase ácida lisossômica é uma doença hereditária associada a um gene do cromossomo 10. Os pais dos pacientes podem não saber que são portadores dos genes da doença até o nascimento do primeiro filho afetado. Quando ambos os progenitores são portadores, existe uma chance, em quatro, de que seu bebê possa nascer com essa doença.
+
+ANDERSON, R. A. et. al. In: Situ Localization of the Genetic Locus Encoding the Lysosomal Acid Lipase/Cholesteryl Esterase (LIPA) Deficient in Wolman Disease to Chromosome 10q23.2-q23.3. Genomics, n. 1, jan. 1993 (adaptado).
+
+Essa é uma doença hereditária de caráter`,
+  },
+  {
+    id: 'cmoudnnts0026uoz9sp6lvi9f',
+    rotulo: 'ENEM 2021 D2 Q109 (dejetos suínos)',
+    enunciadoAtualComeca: 'Com o aumento da população de suínos no Brasil',
+    enunciado: `Com o aumento da população de suínos no Brasil, torna-se necessária a adoção de métodos para reduzir o potencial poluidor dos resíduos dessa agroindústria, uma vez que, comparativamente ao esgoto doméstico, os dejetos suínos são 200 vezes mais poluentes. Sendo assim, a utilização desses resíduos como matéria-prima na obtenção de combustíveis é uma alternativa que permite diversificar a matriz energética nacional, ao mesmo tempo em que parte dos recursos hídricos do país são preservados.
+
+BECK, A. M. Resíduos suínos como alternativa energética sustentável. XXVII Encontro Nacional de Engenharia de Produção. Anais ENEGEP, Foz do Iguaçu, 2007 (adaptado).
+
+O biocombustível a que se refere o texto é o`,
+  },
 ];

@@ -153,6 +153,13 @@ Antes de afirmar que um bug existe ou foi corrigido, reproduza no navegador.
 E se não reproduzir localmente, considere que produção pode estar rodando
 código anterior ao último push antes de sair caçando causa no código atual.
 Ver [[decisoes-prepenem]] (validar em produção depois do push).
+**Prova pronta nova (questões escritas à mão ou reais com explicação pronta):**
+antes de dizer "está no site", `scripts/varrer-prova.mts <idDaProva>` (com
+`DB_CONFIRMED=1`: o db-guard barra todo `scripts/`, mas este só abre o navegador).
+Marca errado de propósito, abre todos os passos e procura fórmula quebrada, LaTeX
+cru, passo sem desenho e letra certa diferente do banco. Em 10/11/2026: 160
+questões, 840 passos, ~15 min; `--ate=5 --largura=390` para o celular.
+
 `scripts/varrer-telas.mts` (antes `geral.cjs` no scratchpad): abre as telas em
 1366 px e 375 px, com o cookie da sessão, e **devolve `{}` a todo POST/PUT/DELETE
 em `/api/**`** (menos `/api/caneta`, que só converte conta): assim nada grava na

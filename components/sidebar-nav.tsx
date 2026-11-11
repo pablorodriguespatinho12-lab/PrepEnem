@@ -22,7 +22,7 @@ const principais: ItemNav[] = [
   // Treino = Provas (Pablo, 02/11/2026: a prova escolhida, com flashcards antes,
   // faz o papel do treino). O treino do dia segue pelo "Começar" do Início,
   // porque é ele que faz o cronograma andar.
-  { href: '/provas', label: 'Treino', icon: BookOpen, tambem: ['/treino', '/simulado', '/caderno-erros'] },
+  { href: '/provas', label: 'Estudar', icon: BookOpen, tambem: ['/treino', '/simulado', '/caderno-erros'] },
   { href: '/flashcards', label: 'Flashcards', icon: Layers },
   { href: '/redacao', label: 'Redação', icon: PenTool },
   { href: '/calculo', label: 'Cálculo', icon: Sigma },

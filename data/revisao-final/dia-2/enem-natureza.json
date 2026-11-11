@@ -1,0 +1,2272 @@
+[
+  {
+    "id": "cmouei97t0073uoz9docgkvnz",
+    "materia": "Física",
+    "tema": "Eletricidade e Circuitos",
+    "origem": "ENEM 2022 · questão 133",
+    "enunciado": "Uma lanterna funciona com três pilhas de resistência interna igual a 0,5 Ω cada, ligadas em série. Quando posicionadas corretamente, devem acender a lâmpada incandescente de especificações 4,5 W e 4,5 V. Cada pilha na posição correta gera uma f.e.m. (força eletromotriz) de 1,5 V. Uma pessoa, ao trocar as pilhas da lanterna, comete o equívoco de inverter a posição de uma das pilhas. Considere que as pilhas mantêm contato independentemente da posição.\nCom esse equívoco, qual é a intensidade de corrente que passa pela lâmpada ao se ligar a lanterna?",
+    "A": "0,25 A",
+    "B": "0,33 A",
+    "C": "0,75 A",
+    "D": "1,00 A",
+    "E": "1,33 A",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Lâmpada: R = U² ÷ P = 4,5 × 4,5 ÷ 4,5 = 4,5 Ω. Pilhas: 1,5 + 1,5 − 1,5 = 1,5 V. Resistência das pilhas: 3 × 0,5 = 1,5 Ω. i = 1,5 ÷ (4,5 + 1,5) = 0,25 A. A. Erros: 0,33 = 1,5 ÷ 4,5 (esqueceu a resistência das pilhas); 0,75 = 4,5 ÷ 6 (esqueceu a pilha virada); 1,00 = 4,5 ÷ 4,5 (lanterna certa, sem as pilhas); 1,33 = 6 ÷ 4,5 (divisão invertida).",
+      "ideia": "A pilha virada empurra contra uma das outras, e sobra o empurrão de uma pilha só: 1,5 V. Esse empurrão dividido por tudo que atrapalha, lâmpada mais pilhas (6 Ω), dá 0,25 A.",
+      "pecas": [
+        {
+          "termo": "f.e.m. (força eletromotriz)",
+          "significado": "O empurrão que a pilha dá na eletricidade, em volts (V); também se chama tensão. Pilha comum de controle remoto dá 1,5 V."
+        },
+        {
+          "termo": "Resistência interna",
+          "significado": "A pequena dificuldade que a própria pilha põe no caminho da corrente, em ohms (Ω). Por isso pilha gasta esquenta e rende menos."
+        },
+        {
+          "termo": "Corrente (i)",
+          "significado": "Quanta eletricidade passa por segundo, em ampères (A). Como a quantidade de água que corre num cano."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Três pilhas em fila, uma delas virada. A questão pede a corrente que passa na lâmpada.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "cada pilha",
+                "1,5 V e 0,5 Ω"
+              ],
+              [
+                "pilhas",
+                "3, uma virada"
+              ],
+              [
+                "lâmpada",
+                "4,5 W e 4,5 V"
+              ],
+              [
+                "corrente (i)",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Primeiro: a resistência da lâmpada sai da etiqueta dela: tensão vezes tensão, dividido pela potência (é o que sai de juntar P = U × i com i = U ÷ R). 4,5 × 4,5 ÷ 4,5: dividir por 4,5 desfaz o vezes 4,5, e sobra 4,5 Ω. Depois: a pilha virada cancela uma das certas e sobra 1,5 V. Por fim: as três pilhas continuam no caminho, com 0,5 Ω cada, somando 3 × 0,5 = 1,5 Ω.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Somando as pilhas",
+            "cabecalho": [
+              "Pilha",
+              "Empurrão"
+            ],
+            "linhas": [
+              [
+                "1ª",
+                "+1,5 V"
+              ],
+              [
+                "2ª",
+                "+1,5 V"
+              ],
+              [
+                "3ª (virada)",
+                "−1,5 V"
+              ],
+              [
+                "total",
+                "1,5 V"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Corrente é o empurrão que sobrou dividido por toda a resistência do caminho: 1,5 ÷ (4,5 + 1,5) = 1,5 ÷ 6. Como um quarto de 6 é 1,5 (6 × 0,25 = 1,5), dá 0,25 A. No quadro, ε (a letra grega épsilon) é o empurrão que sobrou e o traço da fração quer dizer dividir.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Lanterna com pilha virada",
+            "dados": [
+              "\\varepsilon = 1{,}5 + 1{,}5 - 1{,}5 = 1{,}5\\,\\text{V}",
+              "R = \\dfrac{4{,}5 \\times 4{,}5}{4{,}5} = 4{,}5\\,\\Omega",
+              "r = 3 \\times 0{,}5 = 1{,}5\\,\\Omega"
+            ],
+            "formula": "i = \\dfrac{\\varepsilon}{R + r}",
+            "legenda": [
+              "$\\varepsilon$: empurrão que sobrou",
+              "$R$: resistência da lâmpada",
+              "$r$: resistência das 3 pilhas"
+            ],
+            "contas": [
+              "i = \\dfrac{1{,}5}{4{,}5 + 1{,}5}",
+              "i = \\dfrac{1{,}5}{6}"
+            ],
+            "resultado": "i = 0{,}25\\,\\text{A}",
+            "nota": "Um quarto de ampère: a lâmpada acende fraca."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Com as pilhas certas seriam 4,5 V ÷ 6 Ω = 0,75 A (6 × 0,75 = 4,5). Virar uma pilha tira 3 V de uma vez: ela deixa de somar 1,5 V e passa a tirar 1,5 V. A resistência das pilhas continua lá, porque elas seguem no caminho.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Mesmo caminho de 6 Ω",
+            "cabecalho": [
+              "Pilhas",
+              "Empurrão",
+              "Corrente"
+            ],
+            "linhas": [
+              [
+                "todas certas",
+                "4,5 V",
+                "0,75 A"
+              ],
+              [
+                "uma virada",
+                "1,5 V",
+                "0,25 A"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 0,25 A. B (0,33 A) faz 1,5 ÷ 4,5 e esquece a resistência das próprias pilhas. C (0,75 A) faz 4,5 ÷ 6 e esquece que uma pilha está virada. D (1,00 A) é a lanterna certa sem contar as pilhas: 4,5 ÷ 4,5. E (1,33 A) inverte a divisão: 6 ÷ 4,5.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Quatro pilhas de 1,5 V em fila, uma virada, numa lâmpada de 3 Ω (pilhas sem resistência). Qual a corrente?",
+        "opcoes": [
+          "1 A",
+          "2 A",
+          "1,5 A",
+          "0,5 A"
+        ],
+        "certa": "1 A",
+        "resposta": "1,5 + 1,5 + 1,5 − 1,5 = 3 V; 3 ÷ 3 = 1 A."
+      }
+    }
+  },
+  {
+    "id": "cmoudnnsx001tuoz9obomxs7x",
+    "materia": "Física",
+    "tema": "Eletricidade e Circuitos",
+    "origem": "ENEM 2021 · questão 96",
+    "enunciado": "Carros elétricos estão cada vez mais baratos, no entanto, os órgãos governamentais e a indústria se preocupam com o tempo de recarga das baterias, que é muito mais lento quando comparado ao tempo gasto para encher o tanque de combustível. Portanto, os usuários de transporte individual precisam se conscientizar dos ganhos ambientais dessa mudança e planejar com antecedência seus percursos, pensando em pausas necessárias para recargas.\nApós realizar um percurso de 110 km, um motorista pretende recarregar as baterias de seu carro elétrico, que tem um desempenho médio de 5,0 km/kWh, usando um carregador ideal que opera a uma tensão de 220 V e é percorrido por uma corrente de 20 A.\nQuantas horas são necessárias para recarregar a energia utilizada nesse percurso?",
+    "A": "0,005",
+    "B": "0,125",
+    "C": "2,5",
+    "D": "5,0",
+    "E": "8,0",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "Energia: 110 ÷ 5 = 22 kWh. Potência: 220 × 20 = 4 400 W = 4,4 kW. Tempo: 22 ÷ 4,4 = 5 h. D. Erros: 0,005 = 22 ÷ 4 400 (não passou watt para quilowatt); 0,125, 2,5 e 8,0 não seguem a ordem distância → energia → tempo.",
+      "ideia": "Primeiro descubra quanta energia o carro gastou, como achar quantos litros um carro a gasolina gastou. Depois divida pela energia que o carregador entrega por hora.",
+      "pecas": [
+        {
+          "termo": "kWh (quilowatt-hora)",
+          "significado": "Energia que um aparelho de 1 000 W gasta em 1 hora. É a unidade que aparece na conta de luz."
+        },
+        {
+          "termo": "Desempenho (km/kWh)",
+          "significado": "Quantos km o carro anda com 1 kWh. Igual ao 'km por litro' de um carro a gasolina."
+        },
+        {
+          "termo": "Potência (P = U × i)",
+          "significado": "Energia entregue por segundo, em watts (W): tensão (o empurrão da eletricidade, em volts) vezes corrente (A). 1 kW (quilowatt) = 1 000 W."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O carro andou 110 km. A questão pede quantas horas o carregador leva para repor a energia gasta.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "percurso",
+                "110 km"
+              ],
+              [
+                "desempenho",
+                "5 km por kWh"
+              ],
+              [
+                "tensão (U)",
+                "220 V"
+              ],
+              [
+                "corrente (i)",
+                "20 A"
+              ],
+              [
+                "tempo (t)",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Primeiro: energia gasta = 110 ÷ 5 = 22 kWh (5 × 22 = 110). Depois: potência do carregador = 220 × 20 = 4 400 W (22 × 2 = 44, mais os dois zeros), que é 4,4 kW, porque 1 kW = 1 000 W. Por fim: tempo = energia ÷ potência.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Com a energia em kWh e a potência em kW, a divisão já sai em horas. 22 ÷ 4,4: multiplique os dois por 10 e fica 220 ÷ 44 = 5, porque 44 × 5 = 220. No quadro, o traço da fração quer dizer dividir.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Tempo de recarga",
+            "dados": [
+              "E = \\dfrac{110}{5} = 22\\,\\text{kWh}",
+              "P = 220 \\times 20 = 4400\\,\\text{W} = 4{,}4\\,\\text{kW}"
+            ],
+            "formula": "t = \\dfrac{E}{P}",
+            "legenda": [
+              "$E$: energia a repor",
+              "$P$: energia entregue a cada hora"
+            ],
+            "contas": [
+              "t = \\dfrac{22}{4{,}4}"
+            ],
+            "resultado": "t = 5\\,\\text{h}",
+            "nota": "Cinco horas na tomada."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Potência de 4,4 kW quer dizer 4,4 kWh entregues a cada hora. Para juntar 22 kWh, basta contar as horas.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Enchendo a bateria",
+            "cabecalho": [
+              "Horas",
+              "Energia reposta"
+            ],
+            "linhas": [
+              [
+                "1",
+                "4,4 kWh"
+              ],
+              [
+                "2",
+                "8,8 kWh"
+              ],
+              [
+                "3",
+                "13,2 kWh"
+              ],
+              [
+                "4",
+                "17,6 kWh"
+              ],
+              [
+                "5",
+                "22 kWh"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 5,0 h. A (0,005) divide 22 por 4 400 sem passar watt para quilowatt. As outras não repõem os 22 kWh: B (0,125 h) daria só 4,4 × 0,125 = 0,55 kWh; C (2,5 h) daria 4,4 × 2,5 = 11 kWh, metade do gasto; E (8,0 h) daria 4,4 × 8 = 35,2 kWh, mais do que o carro gastou.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um carro gastou 30 kWh. O carregador entrega 6 kW. Quantas horas para repor?",
+        "opcoes": [
+          "5 h",
+          "180 h",
+          "0,2 h",
+          "36 h"
+        ],
+        "certa": "5 h",
+        "resposta": "30 ÷ 6 = 5 horas."
+      }
+    }
+  },
+  {
+    "id": "cmoudnnuu002nuoz9m6m2tszm",
+    "materia": "Física",
+    "tema": "Termodinâmica e Calor",
+    "origem": "ENEM 2021 · questão 126",
+    "enunciado": "Na montagem de uma cozinha para um restaurante, a escolha do material correto para as panelas é importante, pois a panela que conduz mais calor é capaz de cozinhar os alimentos mais rapidamente e, com isso, há economia de gás. A taxa de condução do calor depende da condutividade k do material, de sua área A, da diferença de temperatura ΔT e da espessura d do material, sendo dada pela relação ΔQ/Δt = kA(ΔT/d). Em panelas com dois materiais, a taxa de condução é dada por ΔQ/Δt = AΔT/(d1/k1 + d2/k2), em que d1 e d2 são as espessuras dos dois materiais, e k1 e k2 são as condutividades de cada material. Os materiais mais comuns no mercado para panelas são o alumínio (k = 20 W/m·K), o ferro (k = 8 W/m·K) e o aço (k = 5 W/m·K) combinado com o cobre (k = 40 W/m·K). Compara-se uma panela de ferro, uma de alumínio e uma composta de 1/2 da espessura em cobre e 1/2 da espessura em aço, todas com a mesma espessura total e com a mesma área de fundo. A ordem crescente de mais econômica para a menos econômica é",
+    "A": "cobre-aço, alumínio e ferro.",
+    "B": "alumínio, cobre-aço e ferro.",
+    "C": "cobre-aço, ferro e alumínio.",
+    "D": "alumínio, ferro e cobre-aço.",
+    "E": "ferro, alumínio e cobre-aço.",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Grossura total d = 1. Ferro: 8. Alumínio: 20. Cobre-aço: 1 ÷ (0,5/40 + 0,5/5) = 1 ÷ (0,0125 + 0,1) = 1 ÷ 0,1125 ≈ 8,9. Ordem: alumínio (20), cobre-aço (8,9), ferro (8). B. Erros: A = achar que o cobre (40) vale sozinho; D = fazer a média errada e pôr a mista por último; E = ordem invertida; C = mista primeiro e alumínio por último.",
+      "ideia": "Panela que conduz mais calor cozinha mais rápido e gasta menos gás. Compare quanto cada uma conduz: alumínio 20, cobre-aço cerca de 8,9, ferro 8.",
+      "pecas": [
+        {
+          "termo": "Condutividade (k)",
+          "significado": "Quanto o material deixa o calor passar. Cabo de madeira tem k baixo (não queima a mão); fundo de metal, alto."
+        },
+        {
+          "termo": "Espessura (d)",
+          "significado": "A grossura do fundo da panela. Aqui é igual nas três, então só o material muda."
+        },
+        {
+          "termo": "Taxa de condução (ΔQ/Δt)",
+          "significado": "Quanto calor atravessa o fundo a cada segundo. O Δ (delta) quer dizer 'quanto mudou'."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Três panelas de mesma área e mesma grossura. A mais econômica é a que deixa passar mais calor.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os materiais",
+            "cabecalho": [
+              "Material",
+              "k"
+            ],
+            "linhas": [
+              [
+                "cobre",
+                "40"
+              ],
+              [
+                "alumínio",
+                "20"
+              ],
+              [
+                "ferro",
+                "8"
+              ],
+              [
+                "aço",
+                "5"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Área e diferença de temperatura são iguais, então só a parte do material decide. Para ferro e alumínio é o próprio k. Na panela mista, cada metade atrapalha separada: soma-se grossura ÷ k de cada camada e depois se divide 1 pelo resultado.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Chame a grossura total de 1; cada camada tem 0,5. Cobre: 0,5 ÷ 40 = 5 ÷ 400 = 1 ÷ 80 = 0,0125. Aço: 0,5 ÷ 5 = 0,1. Somando: 0,1125. Agora 1 ÷ 0,1125: como 0,1125 × 9 = 1,0125, um pouco mais que 1, o resultado é um pouco menos que 9, cerca de 8,9. No quadro, o traço da fração quer dizer dividir.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Quanto a panela mista conduz",
+            "dados": [
+              "d = 1 \\text{ (grossura total)}",
+              "d_1 = d_2 = 0{,}5",
+              "k_{cobre} = 40",
+              "k_{aço} = 5"
+            ],
+            "formula": "k_{mista} = \\dfrac{d}{\\frac{d_1}{k_1} + \\frac{d_2}{k_2}}",
+            "legenda": [
+              "$d_1, d_2$: grossura de cada camada",
+              "$k_1, k_2$: quanto cada camada conduz"
+            ],
+            "contas": [
+              "k_{mista} = \\dfrac{1}{\\frac{0{,}5}{40} + \\frac{0{,}5}{5}}",
+              "k_{mista} = \\dfrac{1}{0{,}0125 + 0{,}1}",
+              "k_{mista} = \\dfrac{1}{0{,}1125}"
+            ],
+            "resultado": "k_{mista} \\approx 8{,}9",
+            "nota": "A mista conduz como um material de k perto de 8,9."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O calor tem de atravessar as duas camadas, e o aço conduz mal (5). É como um cano largo emendado num fino: o fino manda. Por isso o cobre (40) não salva tudo e a mista fica só um pouco acima do ferro.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Da mais para a menos econômica",
+            "cabecalho": [
+              "Panela",
+              "Conduz"
+            ],
+            "linhas": [
+              [
+                "alumínio",
+                "20"
+              ],
+              [
+                "cobre-aço",
+                "8,9"
+              ],
+              [
+                "ferro",
+                "8"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B: alumínio, cobre-aço e ferro. A põe a mista em primeiro, como se o cobre (40) valesse sozinho. C põe a mista em primeiro e o alumínio por último, mas o alumínio (20) é o maior. D põe a mista por último, mas 8,9 é mais que o 8 do ferro. E começa pelo ferro (8), o pior, e põe a mista (8,9) depois do alumínio (20); a mista vem antes do ferro.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Panela mista: metade da grossura com k = 20 e metade com k = 5. Ela conduz como um k de:",
+        "opcoes": [
+          "8",
+          "12,5",
+          "25",
+          "4"
+        ],
+        "certa": "8",
+        "resposta": "1 ÷ (0,5/20 + 0,5/5) = 1 ÷ 0,125 = 8. A camada fraca manda."
+      }
+    }
+  },
+  {
+    "id": "cmouei95e005yuoz9wkrh222v",
+    "materia": "Física",
+    "tema": "Dinâmica e Leis de Newton",
+    "origem": "ENEM 2022 · questão 92",
+    "enunciado": "Em um autódromo, os carros podem derrapar em uma curva e bater na parede de proteção. Para diminuir o impacto de uma batida, pode-se colocar na parede uma barreira de pneus, isso faz com que a colisão seja mais demorada e o carro retorne com velocidade reduzida. Outra opção é colocar uma barreira de blocos de um material que se deforma, tornando-a tão demorada quanto a colisão com os pneus, mas que não permite a volta do carro após a colisão.\nComparando as duas situações, como ficam a força média exercida sobre o carro e a energia mecânica dissipada?",
+    "A": "A força é maior na colisão com a barreira de pneus, e a energia dissipada é maior na colisão com a barreira de blocos.",
+    "B": "A força é maior na colisão com a barreira de blocos, e a energia dissipada é maior na colisão com a barreira de pneus.",
+    "C": "A força é maior na colisão com a barreira de blocos, e a energia dissipada é a mesma nas duas situações.",
+    "D": "A força é maior na colisão com a barreira de pneus, e a energia dissipada é maior na colisão com a barreira de pneus.",
+    "E": "A força é maior na colisão com a barreira de blocos, e a energia dissipada é maior na colisão com a barreira de blocos.",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Mesmo tempo de batida. Força média = variação da quantidade de movimento ÷ tempo. Pneus: o carro para e volta (a velocidade muda de +v até −v'), muda mais; blocos: só para (de v até 0). Força maior nos pneus. Energia: nos blocos todo o movimento se perde; nos pneus parte volta (o carro sai andando). Dissipa mais nos blocos. A. Erros: B, C e E trocam a força; C ainda diz energia igual; D erra a energia.",
+      "ideia": "Fazer o carro voltar exige mais empurrão do que só pará-lo, então a força é maior nos pneus. Mas nos blocos o carro fica parado: toda a energia do movimento se perde ali.",
+      "pecas": [
+        {
+          "termo": "Força média",
+          "significado": "O empurrão médio durante a batida. No mesmo tempo, quanto mais a velocidade muda, maior o empurrão."
+        },
+        {
+          "termo": "Quantidade de movimento",
+          "significado": "Massa vezes velocidade. Um caminhão a 10 km/h é mais difícil de parar que uma bicicleta a 10 km/h."
+        },
+        {
+          "termo": "Energia dissipada",
+          "significado": "Energia do movimento que vira calor, barulho e amassado e não volta a ser movimento."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "As duas batidas duram o mesmo tempo. A diferença é o que acontece depois.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Pneus × blocos",
+            "cabecalho": [
+              "",
+              "Pneus",
+              "Blocos"
+            ],
+            "linhas": [
+              [
+                "tempo da batida",
+                "igual",
+                "igual"
+              ],
+              [
+                "depois da batida",
+                "volta devagar",
+                "fica parado"
+              ],
+              [
+                "quanto a velocidade muda",
+                "para e volta",
+                "só para"
+              ],
+              [
+                "movimento que sobra",
+                "um pouco",
+                "nenhum"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Força: com o mesmo tempo, empurra mais quem muda mais a velocidade. Nos pneus o carro para e ainda volta; nos blocos ele só para. Energia: nos blocos todo o movimento some; nos pneus parte dele fica, porque o carro sai andando.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A: força maior nos pneus, energia perdida maior nos blocos. B, C e E dizem que a força é maior nos blocos, mas, no mesmo tempo, só parar empurra menos do que parar e ainda voltar. C ainda diz que a energia perdida é igual, mas nos pneus parte do movimento volta. D acerta a força, mas erra a energia: perde mais quem fica parado, nos blocos.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma bola bate na parede no mesmo tempo: na 1ª vez gruda, na 2ª quica de volta. Onde a força é maior?",
+        "opcoes": [
+          "Quando quica",
+          "Quando gruda",
+          "Igual nas duas"
+        ],
+        "certa": "Quando quica",
+        "resposta": "Voltar muda mais a velocidade do que só parar."
+      }
+    }
+  },
+  {
+    "id": "cmouei967006buoz9sn75cdpe",
+    "materia": "Física",
+    "tema": "Dinâmica e Leis de Newton",
+    "origem": "ENEM 2022 · questão 105",
+    "enunciado": "Em um dia de calor intenso, dois colegas estão a brincar com a água da mangueira. Um deles quer saber até que altura o jato de água alcança, a partir da saída de água, quando a mangueira está posicionada totalmente na direção vertical. O outro colega propõe então o seguinte experimento: eles posicionarem a saída de água da mangueira na direção horizontal, a 1 m de altura em relação ao chão, e então medirem a distância horizontal entre a mangueira e o local onde a água atinge o chão. A medida dessa distância foi de 3 m, e a partir disso eles calcularam o alcance vertical do jato de água. Considere a aceleração da gravidade de 10 m s-2.\nO resultado que eles obtiveram foi de",
+    "A": "1,50 m.",
+    "B": "2,25 m.",
+    "C": "4,00 m.",
+    "D": "4,50 m.",
+    "E": "5,00 m.",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Queda de 1 m: 1 = 5t², t² = 0,2. Para frente: v = 3 ÷ t, então v² = 9 ÷ 0,2 = 45. Para cima: H = v² ÷ (2 × 10) = 45 ÷ 20 = 2,25 m. B. Erros: 4,50 = 45 ÷ 10 (esqueceu o 2); 1,50 = 3 ÷ 2; 4,00 = 3 + 1 (somou as distâncias); 5,00 não sai de conta com estes dados.",
+      "ideia": "A água sai sempre com a mesma velocidade; só muda a direção. Descubra essa velocidade pelo voo deitado e use-a apontada para cima: o jato sobe 2,25 m.",
+      "pecas": [
+        {
+          "termo": "Gravidade (g)",
+          "significado": "Quanto a velocidade de queda cresce a cada segundo: 10 m/s a mais por segundo. 'm s-2' é 'm/s por segundo'."
+        },
+        {
+          "termo": "Lançamento horizontal",
+          "significado": "Algo que sai deitado, como a água da mangueira na horizontal: anda para frente com velocidade fixa enquanto cai."
+        },
+        {
+          "termo": "Altura máxima (H)",
+          "significado": "O ponto onde o jato que sobe para e começa a voltar."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A mangueira deitada a 1 m do chão joga a água a 3 m. A questão pede quanto o jato subiria com a mangueira em pé.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "altura da mangueira (h)",
+                "1 m"
+              ],
+              [
+                "distância até cair (x)",
+                "3 m"
+              ],
+              [
+                "gravidade (g)",
+                "10 m/s²"
+              ],
+              [
+                "altura do jato em pé (H)",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Primeiro: o tempo de voo é o tempo de cair 1 m. A queda segue $h = 5t^2$ (5 é metade de g, e $t^2$ é t vezes t), então $t^2 = 1 \\div 5 = 0{,}2$. Depois: nesse tempo a água anda 3 m para frente, então $v = 3 \\div t$ e $v^2 = 9 \\div 0{,}2$. Como 0,2 é um quinto, dividir por 0,2 é multiplicar por 5: $9 \\times 5 = 45$. Por fim: com essa velocidade para cima, ela sobe até $v^2 \\div 20$: 45 ÷ 20 = 2,25 (20 × 2 = 40; sobram 5, e 5 ÷ 20 = 0,25).",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Não precisa tirar raiz quadrada (achar o número que, vezes ele mesmo, dá 45): a fórmula da altura já usa a velocidade ao quadrado, $v^2$. No quadro, o traço da fração quer dizer dividir.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Jato para cima",
+            "dados": [
+              "h = 1\\,\\text{m}",
+              "x = 3\\,\\text{m}",
+              "g = 10\\,\\text{m/s}^2",
+              "t^2 = \\dfrac{1}{5} = 0{,}2",
+              "v^2 = \\dfrac{9}{0{,}2} = 45"
+            ],
+            "formula": "H = \\dfrac{v^2}{2g}",
+            "legenda": [
+              "$H$: altura que o jato alcança",
+              "$v$: velocidade de saída da água"
+            ],
+            "contas": [
+              "H = \\dfrac{45}{2 \\times 10}",
+              "H = \\dfrac{45}{20}"
+            ],
+            "resultado": "H = 2{,}25\\,\\text{m}",
+            "nota": "Em pé, o jato chega a 2,25 m."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Deitada, a velocidade da água só leva a água para frente, e a gravidade a puxa para baixo ao mesmo tempo. Em pé, a mesma velocidade aponta para cima e a gravidade a freia 10 m/s a cada segundo, até parar no alto.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 2,25 m. A (1,50 m) faz 3 ÷ 2, sem usar a altura nem a gravidade. C (4,00 m) soma 3 m com 1 m, conta sem sentido aqui. D (4,50 m) esquece o 2 de $2g$ e divide 45 só por 10. E (5,00 m) não sai de nenhuma conta com estes dados.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um jato sai para cima com v² = 80 (g = 10). Até que altura ele chega?",
+        "opcoes": [
+          "4 m",
+          "8 m",
+          "40 m",
+          "2 m"
+        ],
+        "certa": "4 m",
+        "resposta": "80 ÷ 20 = 4 m."
+      }
+    }
+  },
+  {
+    "id": "cmouei97g006wuoz9y3g2z37b",
+    "materia": "Física",
+    "tema": "Dinâmica e Leis de Newton",
+    "origem": "ENEM 2022 · questão 126",
+    "enunciado": "Um pai faz um balanço utilizando dois segmentos paralelos e iguais da mesma corda para fixar uma tábua a uma barra horizontal. Por segurança, opta por um tipo de corda cuja tensão de ruptura seja 25% superior à tensão máxima calculada nas seguintes condições: • O ângulo máximo atingido pelo balanço em relação à vertical é igual a 90°; • Os filhos utilizarão o balanço até que tenham uma massa de 24 kg. Além disso, ele aproxima o movimento do balanço para o movimento circular uniforme, considera que a aceleração da gravidade é igual a 10 m/s² e despreza forças dissipativas. Qual é a tensão de ruptura da corda escolhida?",
+    "A": "120 N",
+    "B": "300 N",
+    "C": "360 N",
+    "D": "450 N",
+    "E": "900 N",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "Solto de 90°, cai a altura L (comprimento da corda): embaixo v² = 2gL. No ponto mais baixo: T − mg = mv²/L = 2mg, então T = 3mg = 3 × 240 = 720 N nas duas cordas; 360 N em cada. Com 25% a mais: 360 × 1,25 = 450 N. D. Erros: 360 = esqueceu os 25%; 900 = 720 × 1,25 (tudo numa corda); 300 = 240 × 1,25 (só o peso parado); 120 = 240 ÷ 2 (peso dividido nas cordas).",
+      "ideia": "Embaixo, a corda segura o peso e ainda faz a criança virar a curva: soltando do alto, isso dá 3 vezes o peso. Divida entre as 2 cordas e some a folga de 25%.",
+      "pecas": [
+        {
+          "termo": "Tensão (T)",
+          "significado": "A força com que a corda puxa, em newtons (N). Se passar do que a corda aguenta, ela arrebenta."
+        },
+        {
+          "termo": "Peso (mg)",
+          "significado": "Massa vezes gravidade: 24 × 10 = 240 N. É o quanto a Terra puxa a criança para baixo."
+        },
+        {
+          "termo": "Força centrípeta",
+          "significado": "A força que faz algo andar em curva, apontada para o centro. Como o puxão do cinto quando o carro faz a curva."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A questão quer a tensão que a corda deve aguentar, com folga, no pior momento do balanço.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "massa (m)",
+                "24 kg"
+              ],
+              [
+                "ângulo máximo",
+                "90°"
+              ],
+              [
+                "cordas",
+                "2 iguais"
+              ],
+              [
+                "folga",
+                "25% a mais"
+              ],
+              [
+                "tensão de ruptura",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Primeiro: soltando de 90°, a criança cai a altura da corda (L) e chega embaixo com $v^2 = 2gL$ (velocidade ao quadrado = 2 vezes g vezes a altura da queda). Depois: no ponto mais baixo, as cordas seguram o peso e ainda fazem a curva: $T - mg = m v^2 \\div L$. Trocando $v^2$ por $2gL$, o L de cima corta com o de baixo e fica $2mg$; então $T = mg + 2mg = 3mg$. Por fim: dividir pelas 2 cordas e pôr os 25%.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Triplo do peso, dividido por 2 cordas, vezes 1,25. Peso: 24 × 10 = 240 N. Triplo: 3 × 240 = 720 N. Por corda: 720 ÷ 2 = 360 N. Vezes 1,25 é somar um quarto: 360 ÷ 4 = 90, e 360 + 90 = 450 N.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Corda do balanço",
+            "dados": [
+              "m = 24\\,\\text{kg}",
+              "g = 10\\,\\text{m/s}^2",
+              "mg = 240\\,\\text{N}",
+              "2 \\text{ cordas}",
+              "\\text{folga} = 25\\% \\Rightarrow \\times 1{,}25"
+            ],
+            "formula": "T_{corda} = 1{,}25 \\times \\dfrac{3mg}{2}",
+            "legenda": [
+              "$3mg$: puxão total no ponto mais baixo",
+              "$1{,}25$: folga de um quarto a mais"
+            ],
+            "contas": [
+              "T = 1{,}25 \\times \\dfrac{3 \\times 240}{2}",
+              "T = 1{,}25 \\times \\dfrac{720}{2}",
+              "T = 1{,}25 \\times 360"
+            ],
+            "resultado": "T = 450\\,\\text{N}",
+            "nota": "Cada corda precisa aguentar 450 N."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Embaixo, a corda faz dois trabalhos: segura a criança (1 peso) e a faz virar a curva (2 pesos, porque ela chegou rápido). Por isso o puxão é o triplo do peso, não o peso.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Somando os puxões",
+            "cabecalho": [
+              "Parte",
+              "Força"
+            ],
+            "linhas": [
+              [
+                "segurar o peso",
+                "240 N"
+              ],
+              [
+                "fazer a curva",
+                "480 N"
+              ],
+              [
+                "total nas 2 cordas",
+                "720 N"
+              ],
+              [
+                "cada corda",
+                "360 N"
+              ],
+              [
+                "com 25% a mais",
+                "450 N"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 450 N. A (120 N) só divide o peso entre as cordas: 240 ÷ 2. B (300 N) olha só o peso, como se o balanço estivesse parado: 240 × 1,25. C (360 N) esquece a folga de 25%. E (900 N) põe tudo numa corda só: 720 × 1,25.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Mesmo balanço solto de 90°, criança de 40 kg, 2 cordas, sem folga. Quanto puxa cada corda embaixo?",
+        "opcoes": [
+          "600 N",
+          "200 N",
+          "1 200 N",
+          "400 N"
+        ],
+        "certa": "600 N",
+        "resposta": "3 × 400 = 1 200 N nas duas; 600 N em cada."
+      }
+    }
+  },
+  {
+    "id": "cmoudnnt2001vuoz97s5sifsi",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "origem": "ENEM 2021 · questão 98",
+    "enunciado": "Com o objetivo de proporcionar aroma e sabor a diversos alimentos, a indústria alimentícia se utiliza de flavorizantes. Em geral, essas substâncias são ésteres, como as apresentadas no quadro.\nNome | Fórmula | Aroma\nBenzoato de metila | C6H5CO2CH3 | Kiwi\nAcetato de isoamila | CH3CO2(CH2)2CH(CH3)2 | Banana\nAcetato de benzila | CH3CO2CH2C6H5 | Pêssego\nPropanoato de isobutila | CH3CH2CO2CH2CH(CH3)2 | Rum\nAntranilato de metila | C6H4NH2CO2CH3 | Uva\nO aroma do flavorizante derivado do ácido etanoico e que apresenta cadeia carbônica saturada é de",
+    "A": "kiwi.",
+    "B": "banana.",
+    "C": "pêssego.",
+    "D": "rum.",
+    "E": "uva.",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Ácido etanoico (acético) dá o nome 'acetato': isoamila (banana) e benzila (pêssego). A benzila tem o anel C6H5, com ligações duplas: cadeia insaturada. Sobra o acetato de isoamila, só com ligações simples: banana. B. Erros: C = acetato, mas com anel; D = saturado, mas vem do ácido propanoico; A = ácido benzoico; E = ácido antranílico.",
+      "ideia": "Ácido etanoico vira 'acetato' no nome do éster. Dos dois acetatos, o de benzila tem o anel C6H5, que tem ligações duplas; o de isoamila só tem ligações simples: banana.",
+      "pecas": [
+        {
+          "termo": "Éster",
+          "significado": "Substância de cheiro de fruta feita juntando um ácido com um álcool. O nome tem o pedaço do ácido ('acetato') e o do álcool ('de isoamila')."
+        },
+        {
+          "termo": "Ácido etanoico",
+          "significado": "O ácido do vinagre, também chamado ácido acético. No éster ele vira 'acetato' e aparece como CH3CO2 na fórmula."
+        },
+        {
+          "termo": "Cadeia saturada",
+          "significado": "Cadeia de carbonos só com ligações simples entre eles. O anel C6H5 (6 carbonos fechados em roda, o do benzeno) tem ligações duplas, então não é saturado."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Dois filtros: vir do ácido etanoico e ter só ligações simples.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os cinco aromas",
+            "cabecalho": [
+              "Aroma",
+              "Vem do ácido",
+              "Tem anel de benzeno?"
+            ],
+            "linhas": [
+              [
+                "kiwi",
+                "benzoico",
+                "sim"
+              ],
+              [
+                "banana",
+                "etanoico (acetato)",
+                "não"
+              ],
+              [
+                "pêssego",
+                "etanoico (acetato)",
+                "sim"
+              ],
+              [
+                "rum",
+                "propanoico",
+                "não"
+              ],
+              [
+                "uva",
+                "antranílico",
+                "sim"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Filtro 1: o ácido etanoico dá o nome 'acetato' e o pedaço CH₃CO₂ no começo da fórmula. Sobram banana e pêssego. Filtro 2: saturada quer dizer só ligação simples. O pêssego tem C₆H₅, o anel do benzeno, com ligações duplas. Sobra a banana.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Leia o nome: a 1ª palavra diz o ácido; procure o anel C₆H₅ na fórmula.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Os dois acetatos",
+            "dados": [
+              "\\text{acetato} = CH_3CO_2 \\text{ (2 carbonos)}",
+              "C_6H_5 = \\text{anel com 3 duplas}"
+            ],
+            "formula": "\\text{éster} = \\text{ácido} + \\text{álcool}",
+            "legenda": [
+              "ácido: dá a 1ª palavra do nome",
+              "álcool: dá o 'de ...' do nome"
+            ],
+            "contas": [
+              "CH_3CO_2(CH_2)_2CH(CH_3)_2 \\to \\text{só simples}",
+              "CH_3CO_2CH_2C_6H_5 \\to \\text{tem anel}"
+            ],
+            "resultado": "\\text{acetato de isoamila: banana}",
+            "nota": "Só ele vem do ácido etanoico e não tem dupla."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Ligação dupla é dois carbonos presos por duas ligações em vez de uma. No anel C₆H₅, os 6 carbonos se revezam em 3 duplas. Em (CH₂)₂CH(CH₃)₂ não há nenhuma dupla.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, banana. A (kiwi) vem do ácido benzoico, não do etanoico, e tem anel. C (pêssego) também é acetato, mas o anel C₆H₅ tem ligações duplas. D (rum) é saturada, mas vem do ácido propanoico, de 3 carbonos. E (uva) vem do ácido antranílico e também tem anel.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "O butanoato de etila (cheiro de abacaxi) vem de qual ácido?",
+        "opcoes": [
+          "Butanoico",
+          "Etanoico",
+          "Propanoico"
+        ],
+        "certa": "Butanoico",
+        "resposta": "A 1ª palavra do nome do éster vem do ácido: butanoato, ácido butanoico."
+      }
+    }
+  },
+  {
+    "id": "cmoudnnv5002suoz9ey6fzprw",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "origem": "ENEM 2021 · questão 131",
+    "enunciado": "A simples atitude de não jogar direto no lixo ou no ralo da pia o óleo de cozinha usado pode contribuir para a redução da poluição ambiental. Mas o que fazer com ele? Não existe um modelo ideal de descarte, mas uma alternativa simples e reaproveitável para fazer sabão. Para isso, são necessários, além do próprio óleo, água e soda cáustica. Com base no texto, a reação química que permite o reaproveitamento do óleo vegetal é denominada",
+    "A": "redução.",
+    "B": "epoxidação.",
+    "C": "substituição.",
+    "D": "esterificação.",
+    "E": "saponificação.",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "Óleo (gordura, um éster) + soda cáustica (base forte, NaOH) → sabão + glicerina: saponificação. E. Erros: D = esterificação é o caminho contrário (ácido + álcool → éster); C = substituição é troca de átomo numa molécula, não é o nome dessa reação; A e B não usam base.",
+      "ideia": "Óleo com soda cáustica vira sabão. O próprio nome diz: 'sapo', em latim, quer dizer sabão.",
+      "pecas": [
+        {
+          "termo": "Soda cáustica",
+          "significado": "Hidróxido de sódio (NaOH), uma base forte (base é o contrário de ácido e desmancha gordura): o produto que desentope pia e queima a pele."
+        },
+        {
+          "termo": "Óleo ou gordura",
+          "significado": "Um éster grande: três 'braços' de ácido graxo (cadeia longa de carbonos com uma ponta ácida) presos à glicerina."
+        },
+        {
+          "termo": "Saponificação",
+          "significado": "Reação de gordura com base forte que produz sabão e glicerina."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O texto dá os ingredientes: óleo, água e soda cáustica. Qual reação junta gordura com base?",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Duas reações que confundem",
+            "cabecalho": [
+              "Reação",
+              "O que entra",
+              "O que sai"
+            ],
+            "linhas": [
+              [
+                "saponificação",
+                "gordura + base",
+                "sabão + glicerina"
+              ],
+              [
+                "esterificação",
+                "ácido + álcool",
+                "éster + água"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A soda cáustica quebra a gordura do óleo em dois pedaços: glicerina e sal de ácido graxo, que é o sabão. Gordura mais base forte é saponificação.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E. D (esterificação) é o caminho contrário: ela fabrica um éster, e aqui o éster (o óleo) é quebrado. C (substituição) é trocar um átomo por outro numa molécula, não o nome dessa reação. A (redução) é ganhar elétrons, e B (epoxidação) é prender um oxigênio entre dois carbonos: nenhuma das duas usa soda cáustica nem faz sabão.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Banha de porco fervida com soda, como no sabão de cinzas da avó. Que reação é essa?",
+        "opcoes": [
+          "Saponificação",
+          "Esterificação",
+          "Combustão"
+        ],
+        "certa": "Saponificação",
+        "resposta": "Gordura mais base forte dá sabão."
+      }
+    }
+  },
+  {
+    "id": "cmoudnnv1002quoz9i62sjhmx",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "origem": "ENEM 2021 · questão 129",
+    "enunciado": "Os pesticidas organoclorados foram amplamente empregados na agricultura, contudo, em razão das suas elevadas toxicidades e persistências no meio ambiente, eles foram banidos. Considere a aplicação de 500 g de um pesticida organoclorado em uma cultura e que, em certas condições, o tempo de meia-vida do pesticida no solo seja de 5 anos. A massa do pesticida no decorrer de 35 anos será mais próxima de",
+    "A": "3,9 g.",
+    "B": "31,2 g.",
+    "C": "62,5 g.",
+    "D": "125,0 g.",
+    "E": "250,0 g.",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "35 ÷ 5 = 7 meias-vidas. 500 ÷ 2⁷ = 500 ÷ 128 ≈ 3,9 g. A. Erros: 31,2 = 4 metades (500 ÷ 16); 62,5 = 3 metades; 125 = 2 metades; 250 = 1 metade. Todos param a divisão cedo.",
+      "ideia": "Meia-vida é o tempo para sobrar metade. Em 35 anos cabem 7 meias-vidas de 5 anos: divida 500 por 2 sete vezes.",
+      "pecas": [
+        {
+          "termo": "Meia-vida",
+          "significado": "Tempo para a quantidade cair pela metade. Como um bolo em que, a cada 5 minutos, comem metade do que ainda resta."
+        },
+        {
+          "termo": "Organoclorado",
+          "significado": "Pesticida com cloro na molécula, que demora muito para sumir do solo. Por isso foi proibido."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Começa com 500 g e, a cada 5 anos, sobra metade. Quanto resta em 35 anos?",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Metade a cada 5 anos",
+            "cabecalho": [
+              "Anos",
+              "Massa"
+            ],
+            "linhas": [
+              [
+                "0",
+                "500 g"
+              ],
+              [
+                "5",
+                "250 g"
+              ],
+              [
+                "10",
+                "125 g"
+              ],
+              [
+                "15",
+                "62,5 g"
+              ],
+              [
+                "20",
+                "31,25 g"
+              ],
+              [
+                "25",
+                "15,6 g"
+              ],
+              [
+                "30",
+                "7,8 g"
+              ],
+              [
+                "35",
+                "3,9 g"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Primeiro: contar quantas meias-vidas cabem: 35 ÷ 5 = 7. Depois: cortar pela metade 7 vezes, o mesmo que dividir por 2 × 2 × 2 × 2 × 2 × 2 × 2 = 128. Como 128 × 4 = 512, um pouco mais que 500, o resultado é um pouco menos que 4: cerca de 3,9 g.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Divida a massa do começo por 2 elevado ao número de meias-vidas. $2^7$ (lê-se 2 elevado a 7) é o 2 multiplicado por ele mesmo 7 vezes. No quadro, o traço da fração quer dizer dividir.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Pesticida no solo",
+            "dados": [
+              "m_0 = 500\\,\\text{g}",
+              "\\text{meia-vida} = 5\\,\\text{anos}",
+              "t = 35\\,\\text{anos}",
+              "n = \\dfrac{35}{5} = 7"
+            ],
+            "formula": "m = \\dfrac{m_0}{2^n}",
+            "legenda": [
+              "$m_0$: massa no começo",
+              "$n$: quantas vezes cai pela metade"
+            ],
+            "contas": [
+              "m = \\dfrac{500}{2^7}",
+              "m = \\dfrac{500}{128}"
+            ],
+            "resultado": "m \\approx 3{,}9\\,\\text{g}",
+            "nota": "Depois de 35 anos ainda sobram quase 4 g."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A cada 5 anos some metade do que ainda resta, não metade do começo. Por isso a massa cai rápido no início e devagar depois, sem chegar a zero.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 3,9 g. B (31,2 g) para depois de 4 metades, em 20 anos. C (62,5 g) para em 3 metades, 15 anos. D (125 g) para em 2 metades, 10 anos. E (250 g) usa uma meia-vida só, 5 anos.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Remédio de 800 mg com meia-vida de 6 horas. Quanto sobra depois de 24 horas?",
+        "opcoes": [
+          "50 mg",
+          "200 mg",
+          "100 mg",
+          "0 mg"
+        ],
+        "certa": "50 mg",
+        "resposta": "24 ÷ 6 = 4 metades: 800 → 400 → 200 → 100 → 50."
+      }
+    }
+  },
+  {
+    "id": "cmouei95p0063uoz91tlsl3v2",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "origem": "ENEM 2022 · questão 97",
+    "enunciado": "A água bruta coletada de mananciais apresenta alto índice de sólidos suspensos, o que a deixa com um aspecto turvo. Para se obter uma água límpida e potável, ela deve passar por um processo de purificação numa estação de tratamento de água. Nesse processo, as principais etapas são, nesta ordem: coagulação, decantação, filtração, desinfecção e fluoretação.\nQual é a etapa de retirada de grande parte desses sólidos?",
+    "A": "Coagulação.",
+    "B": "Decantação.",
+    "C": "Filtração.",
+    "D": "Desinfecção.",
+    "E": "Fluoretação.",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Coagulação junta as partículas em flocos (não retira); decantação deixa os flocos pesados descerem ao fundo e tira a maior parte; filtração tira o resto fino; desinfecção mata micróbios; fluoretação põe flúor. B. Erros tentadores: A (só junta) e C (pega só o que sobrou).",
+      "ideia": "Primeiro a sujeira é grudada em flocos; depois os flocos pesados descem para o fundo do tanque. Essa descida, a decantação, tira a maior parte.",
+      "pecas": [
+        {
+          "termo": "Sólidos suspensos",
+          "significado": "Grãozinhos de terra e sujeira boiando na água, que a deixam turva. Como o barro numa poça."
+        },
+        {
+          "termo": "Coagulação",
+          "significado": "Pôr um produto que gruda as partículas pequenas em flocos maiores e mais pesados."
+        },
+        {
+          "termo": "Decantação",
+          "significado": "Deixar a água parada para o que é pesado ir ao fundo. Como o pó de café que assenta no fundo da xícara."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Das cinco etapas, qual tira a maior parte da sujeira que deixa a água turva?",
+          "visual": {
+            "tipo": "processo",
+            "titulo": "Estação de tratamento",
+            "etapas": [
+              {
+                "nome": "Coagulação",
+                "entra": [
+                  "água turva",
+                  "coagulante"
+                ],
+                "sai": [
+                  "flocos"
+                ]
+              },
+              {
+                "nome": "Decantação",
+                "entra": [
+                  "flocos"
+                ],
+                "sai": [
+                  "lodo no fundo"
+                ]
+              },
+              {
+                "nome": "Filtração",
+                "entra": [
+                  "água quase limpa"
+                ],
+                "sai": [
+                  "água límpida"
+                ]
+              },
+              {
+                "nome": "Desinfecção",
+                "entra": [
+                  "cloro"
+                ],
+                "sai": [
+                  "água potável"
+                ]
+              }
+            ],
+            "ligacoes": [
+              {
+                "de": 0,
+                "para": 1,
+                "leva": "flocos"
+              },
+              {
+                "de": 1,
+                "para": 2,
+                "leva": "água de cima"
+              },
+              {
+                "de": 2,
+                "para": 3,
+                "leva": "água filtrada"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A coagulação só junta a sujeira, não tira. Na decantação, os flocos pesados descem e ficam no fundo do tanque: sai ali a maior parte. O filtro pega só o que sobrou de mais fino.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B. A (coagulação) é tentadora, mas ela só gruda a sujeira em flocos, não tira. C (filtração) tira o resto miúdo que sobrou, não a maior parte. D (desinfecção) mata micróbios com cloro, sem tirar sujeira. E (fluoretação) só põe flúor para os dentes.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Água com areia num balde: você espera a areia descer e despeja a água de cima. Que processo é esse?",
+        "opcoes": [
+          "Decantação",
+          "Filtração",
+          "Destilação"
+        ],
+        "certa": "Decantação",
+        "resposta": "Separar pelo peso, esperando o pesado descer, é decantação."
+      }
+    }
+  },
+  {
+    "id": "cmoudnnu2002auoz9dskgmqnx",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "origem": "ENEM 2021 · questão 113",
+    "enunciado": "A obtenção de etanol utilizando a cana-de-açúcar envolve a fermentação dos monossacarídeos formadores da sacarose contida no melaço. Um desses formadores é a glicose (C6H12O6), cuja fermentação produz cerca de 50 g de etanol a partir de 100 g de glicose, conforme a equação química descrita: C6H12O6 → (fermentação alcoólica) 2 CH3CH2OH + 2 CO2. Em uma condição específica de fermentação, obtém-se 80% de conversão em etanol que, após sua purificação, apresenta densidade igual a 0,80 g/mL. O melaço utilizado apresentou 50 kg de monossacarídeos na forma de glicose. O volume de etanol, em litro, obtido nesse processo é mais próximo de",
+    "A": "16.",
+    "B": "20.",
+    "C": "25.",
+    "D": "64.",
+    "E": "100.",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "100 g de glicose → 50 g de etanol, então 50 kg → 25 kg. 80% de 25 = 20 kg = 20 000 g. V = 20 000 ÷ 0,80 = 25 000 mL = 25 L. C. Erros: 20 = parou na massa e esqueceu a densidade; 16 = multiplicou pela densidade (20 × 0,8); 64 e 100 não saem da ordem massa → rendimento → volume.",
+      "ideia": "Metade da glicose vira etanol, e só 80% disso dá certo: 20 kg. Para passar de quilo a litro, divida pela densidade 0,8: 25 L.",
+      "pecas": [
+        {
+          "termo": "Fermentação",
+          "significado": "A levedura (o fermento do pão) come açúcar e solta álcool e gás carbônico."
+        },
+        {
+          "termo": "Rendimento (80%)",
+          "significado": "Quanto do que podia sair saiu de verdade. 80% de 25 kg = 20 kg."
+        },
+        {
+          "termo": "Densidade",
+          "significado": "Quanto pesa cada mL. Etanol de 0,8 g/mL é mais leve que a água (1 g/mL): 1 L dele pesa 800 g."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Com 50 kg de glicose (o açúcar simples que vem da cana), quantos litros de etanol saem?",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "glicose",
+                "50 kg"
+              ],
+              [
+                "regra",
+                "100 g de glicose → 50 g de etanol"
+              ],
+              [
+                "rendimento",
+                "80%"
+              ],
+              [
+                "densidade do etanol (d)",
+                "0,80 g/mL"
+              ],
+              [
+                "volume (V)",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Primeiro: 100 g de glicose dão 50 g de etanol, a metade. Então 50 kg dão 25 kg. Depois: com 80% de rendimento, sobram 25 × 0,8 kg; como 0,8 é 8 décimos, 25 ÷ 10 = 2,5 e 2,5 × 8 = 20 kg, que são 20 000 g. Por fim: transformar massa em volume com a densidade.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Volume é a massa dividida pela densidade. 20 000 ÷ 0,8: multiplique os dois por 10 e fica 200 000 ÷ 8 = 25 000 mL, que são 25 L (1 L = 1 000 mL). No quadro, o traço da fração quer dizer dividir.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Etanol da glicose",
+            "dados": [
+              "\\text{glicose} = 50\\,\\text{kg}",
+              "\\text{etanol possível} = \\dfrac{50}{2} = 25\\,\\text{kg}",
+              "m = 25 \\times 0{,}8 = 20\\,\\text{kg} = 20\\,000\\,\\text{g}",
+              "d = 0{,}80\\,\\text{g/mL}"
+            ],
+            "formula": "V = \\dfrac{m}{d}",
+            "legenda": [
+              "$m$: massa de etanol obtida",
+              "$d$: quanto pesa cada mL"
+            ],
+            "contas": [
+              "V = \\dfrac{20\\,000}{0{,}8}",
+              "V = 25\\,000\\,\\text{mL}"
+            ],
+            "resultado": "V = 25\\,\\text{L}",
+            "nota": "Saem 25 litros de etanol."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Densidade 0,8 quer dizer que cada litro de etanol pesa só 0,8 kg. Então 20 kg ocupam mais que 20 L: 20 ÷ 0,8 = 25 L, porque 0,8 × 25 = 20.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Litros e quilos de etanol",
+            "cabecalho": [
+              "Volume",
+              "Massa"
+            ],
+            "linhas": [
+              [
+                "1 L",
+                "0,8 kg"
+              ],
+              [
+                "10 L",
+                "8 kg"
+              ],
+              [
+                "25 L",
+                "20 kg"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 25 L. A (16) multiplica pela densidade em vez de dividir: 20 × 0,8. B (20) para na massa e esquece a densidade. D (64) e E (100) não saem de nenhum caminho certo: 64 L de etanol pesariam 64 × 0,8 = 51,2 kg, mais que os 50 kg de glicose; 100 L pesariam 80 kg.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Com 10 kg de glicose, mesmo rendimento de 80% e densidade 0,8 g/mL, quantos litros de etanol saem?",
+        "opcoes": [
+          "5 L",
+          "4 L",
+          "3,2 L",
+          "8 L"
+        ],
+        "certa": "5 L",
+        "resposta": "10 kg → 5 kg; 80% de 5 = 4 kg; 4 ÷ 0,8 = 5 L."
+      }
+    }
+  },
+  {
+    "id": "cmouei97i006xuoz91gjs17c4",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "origem": "ENEM 2022 · questão 127",
+    "enunciado": "A nanotecnologia é responsável pelo aprimoramento de diversos materiais, incluindo os que são impactados com a presença de poluentes e da umidade na atmosfera, causadores de corrosão. O processo de corrosão é espontâneo e provoca a deterioração de metais como o ferro, que, em presença de oxigênio e água, sofre oxidação, conforme ilustra a equação química: 4 Fe (s) + 2 H2O (l) + 3 O2 (g) → 2 Fe2O3 ⋅H2O (s) Uma forma de garantir a durabilidade da estrutura metálica e a sua resistência à umidade consiste na deposição de filmes finos nanocerâmicos à base de zircônia (ZrO2) e alumina (Al2O3) sobre a superfície do objeto que se deseja proteger. Essa nanotecnologia aplicada na proteção contra a corrosão se baseia no(a)",
+    "A": "proteção catódica, que utiliza um metal fortemente redutor.",
+    "B": "uso de metais de sacrifício, que se oxidam no lugar do ferro.",
+    "C": "passivação do ferro, que fica revestido pelo seu próprio óxido.",
+    "D": "efeito de barreira, que impede o contato com o agente oxidante.",
+    "E": "galvanização, que usa outros metais de menor potencial de redução.",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "ZrO2 e Al2O3 são cerâmicas, já oxidadas: não perdem elétrons no lugar do ferro. O filme só cobre o ferro e impede o contato com O2 e água: barreira. D. Erros: A, B e E dependem de outro metal que se oxida antes do ferro; C = passivação é o óxido do PRÓPRIO ferro, e aqui o óxido é de zircônio e alumínio.",
+      "ideia": "Ferrugem precisa de ferro, oxigênio e água juntos. O filme cerâmico é uma capa que tira o oxigênio e a água do contato, como a tinta num portão.",
+      "pecas": [
+        {
+          "termo": "Oxidação",
+          "significado": "Perder elétrons (partículas pequeninas, de carga negativa, da parte de fora do átomo). No ferro, é virar ferrugem."
+        },
+        {
+          "termo": "Agente oxidante",
+          "significado": "Quem rouba os elétrons do ferro: aqui, o gás oxigênio (O₂), com ajuda da água."
+        },
+        {
+          "termo": "Metal de sacrifício",
+          "significado": "Metal que enferruja no lugar do ferro, como o zinco do arame galvanizado."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Um filme fino de cerâmica cobre o ferro. Qual tipo de proteção é essa?",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Jeitos de proteger o ferro",
+            "cabecalho": [
+              "Proteção",
+              "Como funciona",
+              "Usa outro metal?"
+            ],
+            "linhas": [
+              [
+                "barreira",
+                "capa que isola do ar e da água",
+                "não"
+              ],
+              [
+                "metal de sacrifício",
+                "outro metal se oxida antes",
+                "sim"
+              ],
+              [
+                "passivação",
+                "óxido do próprio ferro",
+                "não"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A equação mostra que o ferro só enferruja com O₂ e água juntos. ZrO₂ e Al₂O₃ já são óxidos (metal já combinado com oxigênio, como a própria ferrugem): não perdem mais elétrons, então não protegem se sacrificando. Eles só formam uma capa fina por cima.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Tire um dos ingredientes da ferrugem e ela não acontece.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Os ingredientes da ferrugem",
+            "dados": [
+              "4\\,Fe + 3\\,O_2 + 2\\,H_2O \\to 2\\,Fe_2O_3 \\cdot H_2O",
+              "\\text{filme: } ZrO_2 \\text{ e } Al_2O_3"
+            ],
+            "formula": "\\text{ferrugem} = Fe + O_2 + H_2O",
+            "legenda": [
+              "$Fe$: ferro",
+              "$O_2$: oxigênio do ar",
+              "$H_2O$: água da umidade"
+            ],
+            "contas": [
+              "\\text{filme tira } O_2 \\text{ e } H_2O \\text{ do contato}"
+            ],
+            "resultado": "\\text{sem } O_2 \\text{ e água} \\Rightarrow \\text{sem ferrugem}",
+            "nota": "Faltou um ingrediente, a reação para."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É o mesmo jeito de proteger um portão com tinta: o ferro continua lá, mas o ar e a água não chegam nele. Metal de sacrifício e proteção catódica precisariam de um metal que perde elétrons no lugar do ferro, e cerâmica não faz isso.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, efeito de barreira. C (passivação) é tentadora, mas ali a capa seria de óxido do próprio ferro, e aqui é de zircônio e alumínio. A (proteção catódica), B (metal de sacrifício) e E (galvanização) dependem de outro metal que se oxida no lugar do ferro; a cerâmica já está oxidada e não faz isso.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um prego coberto de óleo não enferruja. Que tipo de proteção é essa?",
+        "opcoes": [
+          "Barreira",
+          "Metal de sacrifício",
+          "Proteção catódica"
+        ],
+        "certa": "Barreira",
+        "resposta": "O óleo isola o ferro do ar e da água."
+      }
+    }
+  },
+  {
+    "id": "cmoudnnso001puoz93jgvg2as",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "origem": "ENEM 2021 · questão 92",
+    "enunciado": "O quadro lista alguns dispositivos eletrônicos que estão presentes no dia a dia, bem como a faixa de força eletromotriz necessária ao seu funcionamento.\nDispositivo eletrônico | Faixa de força eletromotriz (V)\nI Relógio de parede | 1,2 a 1,5\nII Celular | 3,5 a 3,8\nIII Câmera digital | 7,5 a 7,8\nIV Carrinho de controle remoto | 10,5 a 10,9\nV Notebook/Laptop | 19,5 a 20,0\nConsidere que uma bateria é construída pela associação em série de três pilhas de lítio-iodo, nas condições-padrão, conforme as semiequações de redução apresentadas.\nI2 + 2 e− → 2 I−   E° = +0,54 V\nLi+ + e− → Li   E° = −3,05 V\nEssa bateria é adequada para o funcionamento de qual dispositivo eletrônico?",
+    "A": "I",
+    "B": "II",
+    "C": "III",
+    "D": "IV",
+    "E": "V",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "Uma pilha: 0,54 − (−3,05) = 3,59 V. Três em série: 3 × 3,59 = 10,77 V, dentro de 10,5 a 10,9: IV. D. Erros: B (celular) = uma pilha só; C (câmera) = 3,05 − 0,54 = 2,51 × 3 = 7,53 V (subtração ao contrário); A e E não saem da conta.",
+      "ideia": "Cada pilha dá a diferença entre os dois valores: 0,54 − (−3,05) = 3,59 V. Três em série somam 10,77 V, a faixa do carrinho de controle remoto.",
+      "pecas": [
+        {
+          "termo": "Potencial de redução (E°)",
+          "significado": "Quanto a substância 'quer' receber elétrons (partículas de carga negativa), em volts; E° se lê 'E zero'. O iodo quer muito (+0,54); o lítio quase nada (−3,05), então ele entrega."
+        },
+        {
+          "termo": "Associação em série",
+          "significado": "Pilhas uma atrás da outra, como no controle remoto: as tensões se somam."
+        },
+        {
+          "termo": "Força eletromotriz",
+          "significado": "O empurrão que a pilha dá na eletricidade, em volts (V); também se chama tensão."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Três pilhas de lítio-iodo em fila. Em qual faixa cai a tensão total?",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As faixas",
+            "cabecalho": [
+              "Aparelho",
+              "Faixa (V)"
+            ],
+            "linhas": [
+              [
+                "I relógio",
+                "1,2 a 1,5"
+              ],
+              [
+                "II celular",
+                "3,5 a 3,8"
+              ],
+              [
+                "III câmera",
+                "7,5 a 7,8"
+              ],
+              [
+                "IV carrinho",
+                "10,5 a 10,9"
+              ],
+              [
+                "V notebook",
+                "19,5 a 20,0"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Primeiro: a tensão de uma pilha é o E° de quem recebe elétrons (iodo) menos o de quem entrega (lítio): 3,59 V. Depois: três pilhas em série dão três vezes essa tensão: 3 × 3,59 = 10,77 V (3 × 3 = 9 e 3 × 0,59 = 1,77; 9 + 1,77 = 10,77). Por fim: procurar a faixa no quadro.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Maior menos menor, vezes o número de pilhas.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Bateria de lítio-iodo",
+            "dados": [
+              "E^\\circ_{iodo} = +0{,}54\\,\\text{V}",
+              "E^\\circ_{lítio} = -3{,}05\\,\\text{V}",
+              "3 \\text{ pilhas em série}"
+            ],
+            "formula": "U = 3 \\times (E^\\circ_{maior} - E^\\circ_{menor})",
+            "legenda": [
+              "$E^\\circ$: vontade de receber elétrons",
+              "$U$: tensão da bateria"
+            ],
+            "contas": [
+              "U = 3 \\times (0{,}54 - (-3{,}05))",
+              "U = 3 \\times 3{,}59"
+            ],
+            "resultado": "U = 10{,}77\\,\\text{V}",
+            "nota": "Cabe na faixa de 10,5 a 10,9 V."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Tirar um número negativo é somar: $0{,}54 - (-3{,}05) = 0{,}54 + 3{,}05$. É como a distância num termômetro de −3 °C até +0,5 °C: soma as duas partes.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Pilhas em fila",
+            "cabecalho": [
+              "Pilhas",
+              "Tensão",
+              "Serve para"
+            ],
+            "linhas": [
+              [
+                "1",
+                "3,59 V",
+                "celular (II)"
+              ],
+              [
+                "2",
+                "7,18 V",
+                "nenhum"
+              ],
+              [
+                "3",
+                "10,77 V",
+                "carrinho (IV)"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, o carrinho (IV). B (celular) usa uma pilha só, 3,59 V, esquecendo que são três. C (câmera) vem de fazer 3,05 − 0,54 = 2,51 e multiplicar por 3: 7,53 V. A (relógio, até 1,5 V) e E (notebook, perto de 20 V) ficam longe de qualquer conta com estes números: nem uma pilha dá tão pouco, nem três dão tanto.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Pilha com E° de +0,80 V e −0,40 V. Duas delas em série dão quantos volts?",
+        "opcoes": [
+          "2,4 V",
+          "0,8 V",
+          "1,2 V",
+          "0,4 V"
+        ],
+        "certa": "2,4 V",
+        "resposta": "0,80 − (−0,40) = 1,20 V; vezes 2 = 2,4 V."
+      }
+    }
+  },
+  {
+    "id": "cmoudnnsv001suoz9mkenlgyd",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "origem": "ENEM 2021 · questão 95",
+    "enunciado": "Estudo aponta que a extinção de preguiças-gigantes, cuja base da dieta eram frutos e sementes, provocou impactos consideráveis na vegetação do Pantanal brasileiro. A flora, embora não tenha desaparecido, tornou-se menos abundante que no passado, além de ocupar áreas mais restritas.\nO evento descrito com a flora ocorreu em razão da redução",
+    "A": "da produção de flores.",
+    "B": "do tamanho das plantas.",
+    "C": "de fatores de disseminação das sementes.",
+    "D": "da quantidade de sementes por fruto.",
+    "E": "dos hábitats disponíveis para as plantas.",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "As preguiças comiam os frutos e soltavam as sementes nas fezes, longe da planta-mãe. Sem elas, menos sementes viajam: a planta fica menos abundante e em áreas menores. C. Erros: E = o lugar continua lá, faltou quem levasse a semente; A, B e D falam de mudança na própria planta, que o texto não cita.",
+      "ideia": "A preguiça comia o fruto e 'plantava' a semente longe, nas fezes. Sem ela, as sementes caem perto da mãe e a planta ocupa menos lugar.",
+      "pecas": [
+        {
+          "termo": "Disseminação de sementes",
+          "significado": "Levar a semente para longe da planta-mãe. Passarinho que come goiaba e espalha sementes pelo quintal faz isso."
+        },
+        {
+          "termo": "Flora",
+          "significado": "O conjunto das plantas de um lugar."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "As plantas não sumiram, mas ficaram mais raras e em áreas menores. O que faltou?",
+          "visual": {
+            "tipo": "processo",
+            "titulo": "A preguiça plantando",
+            "etapas": [
+              {
+                "nome": "Come o fruto",
+                "entra": [
+                  "fruto com semente"
+                ],
+                "sai": [
+                  "semente na barriga"
+                ]
+              },
+              {
+                "nome": "Anda e defeca",
+                "entra": [
+                  "semente"
+                ],
+                "sai": [
+                  "semente longe"
+                ]
+              },
+              {
+                "nome": "Germina",
+                "entra": [
+                  "semente",
+                  "solo"
+                ],
+                "sai": [
+                  "planta nova"
+                ]
+              }
+            ],
+            "ligacoes": [
+              {
+                "de": 0,
+                "para": 1,
+                "leva": "semente"
+              },
+              {
+                "de": 1,
+                "para": 2,
+                "leva": "semente"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Com a preguiça extinta, sumiu quem levava as sementes para longe. As que caem embaixo da planta-mãe disputam luz e espaço, e muitas morrem. Resultado: menos plantas, em áreas menores.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C. E (hábitat) é tentadora, mas o lugar continua lá; faltou quem levasse a semente até ele. A (flores), B (tamanho das plantas) e D (sementes por fruto) falam de mudança na própria planta, que o texto não cita: o que sumiu foi o animal que comia os frutos.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Se o passarinho que come amora desaparecer de um bairro, o que acontece com as amoreiras?",
+        "opcoes": [
+          "Espalham-se menos",
+          "Dão frutos maiores",
+          "Crescem mais altas"
+        ],
+        "certa": "Espalham-se menos",
+        "resposta": "Ninguém mais leva as sementes para longe."
+      }
+    }
+  },
+  {
+    "id": "cmouei965006auoz9ase22eof",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "origem": "ENEM 2022 · questão 104",
+    "enunciado": "A extinção de espécies é uma ameaça real que afeta diversas regiões do país. A introdução de espécies exóticas pode ser considerada um fator maximizador desse processo. A jaqueira (Artocarpus heterophyllus), por exemplo, é uma árvore originária da Índia e de regiões do Sudeste Asiático que foi introduzida ainda na era colonial e se aclimatou muito bem em praticamente todo o território nacional.\nCasos como o dessa árvore podem provocar a redução da biodiversidade, pois elas",
+    "A": "ocupam áreas de vegetação nativa e substituem parcialmente a flora original.",
+    "B": "estimulam a competição por seus frutos entre animais típicos da região e eliminam as espécies perdedoras.",
+    "C": "alteram os nichos e aumentam o número de possibilidades de relações entre os seres vivos daquele ambiente.",
+    "D": "apresentam alta taxa de reprodução e se mantêm com um número de indivíduos superior à capacidade suporte do ambiente.",
+    "E": "diminuem a relação de competição entre os polinizadores e facilitam a ação de dispersores de sementes de espécies nativas.",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Exótica que se adapta bem cresce e toma o lugar das plantas nativas: menos espécies. A. Erros: D = nenhuma população fica acima da capacidade suporte por muito tempo; C e E dizem que a jaqueira enriquece ou ajuda a mata, o contrário; B = os animais comem a jaca, mas o texto não fala de animais eliminados.",
+      "ideia": "A jaqueira veio da Ásia, não tem inimigos aqui e se espalha. Ela ocupa o espaço das árvores nativas, e a mata fica com menos espécies.",
+      "pecas": [
+        {
+          "termo": "Espécie exótica",
+          "significado": "Ser vivo trazido de outro lugar do mundo. A jaqueira é da Índia."
+        },
+        {
+          "termo": "Biodiversidade",
+          "significado": "Variedade de espécies num lugar. Mata com 100 tipos de árvore tem mais biodiversidade que uma com 10."
+        },
+        {
+          "termo": "Capacidade suporte",
+          "significado": "O número máximo de indivíduos que o ambiente consegue sustentar por muito tempo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Por que uma árvore de fora, que se deu muito bem aqui, diminui a variedade de espécies?",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Mata com jaqueiras",
+            "cabecalho": [
+              "",
+              "Antes",
+              "Depois"
+            ],
+            "linhas": [
+              [
+                "árvores nativas",
+                "muitas",
+                "menos"
+              ],
+              [
+                "jaqueiras",
+                "nenhuma",
+                "muitas"
+              ],
+              [
+                "espécies na mata",
+                "mais",
+                "menos"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A jaqueira cresce bem, dá muita semente e não tem doença nem bicho daqui que a controle. Ela toma o chão e a luz que eram das nativas, que vão sumindo.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A. B erra porque os animais comem a jaca, mas o texto não fala de animais eliminados. C erra porque diz que a jaqueira aumenta as relações e muda os nichos (o 'emprego' de cada espécie na mata) para melhor, quando ela tira espécies. D erra porque nenhuma população fica acima da capacidade suporte por muito tempo: falta comida e espaço. E erra porque diz que a jaqueira ajuda as nativas, quando ela toma o lugar delas.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "O tucunaré, solto num lago onde não existia, come os peixes de lá. A variedade de peixes do lago:",
+        "opcoes": [
+          "Diminui",
+          "Aumenta",
+          "Fica igual"
+        ],
+        "certa": "Diminui",
+        "resposta": "Espécie de fora que se espalha elimina as nativas."
+      }
+    }
+  },
+  {
+    "id": "cmouei95y0067uoz9w3x3r9uv",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "origem": "ENEM 2022 · questão 101",
+    "enunciado": "No processo de captação da luz pelo olho para a formação de imagens estão envolvidas duas estruturas celulares: os cones e os bastonetes. Os cones são sensíveis à energia dos fótons, e os bastonetes, à quantidade de fótons incidentes. A energia dos fótons que compõem os raios luminosos está associada à sua frequência, e a intensidade, ao número de fótons incidentes.\nUm animal que tem bastonetes mais sensíveis irá",
+    "A": "apresentar daltonismo.",
+    "B": "perceber cores fora do espectro do visível.",
+    "C": "enxergar bem em ambientes mal iluminados.",
+    "D": "necessitar de mais luminosidade para enxergar.",
+    "E": "fazer uma pequena distinção de cores em ambientes iluminados.",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "Bastonete percebe a quantidade de luz; cone, a cor. Bastonete mais sensível = enxerga com pouca luz. C. Erros: D é o contrário (precisaria de MENOS luz); A, B e E falam de cor, que é trabalho do cone.",
+      "ideia": "Bastonete é o sensor de pouca luz; cone é o sensor de cor. Bastonete mais sensível quer dizer enxergar melhor no escuro, como a coruja e o gato.",
+      "pecas": [
+        {
+          "termo": "Fóton",
+          "significado": "Grãozinho de luz. Luz forte tem muitos fótons; a cor depende da energia de cada um."
+        },
+        {
+          "termo": "Cones",
+          "significado": "Células do olho (célula é a menor parte viva do corpo) que veem cor; precisam de bastante luz."
+        },
+        {
+          "termo": "Bastonetes",
+          "significado": "Células do olho que percebem pouca luz, mas não distinguem cor. Por isso, à noite, tudo parece cinza."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O texto diz o trabalho de cada célula. Bastonete mais sensível muda o quê?",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Cone × bastonete",
+            "cabecalho": [
+              "",
+              "Cone",
+              "Bastonete"
+            ],
+            "linhas": [
+              [
+                "percebe",
+                "a cor",
+                "a quantidade de luz"
+              ],
+              [
+                "trabalha bem",
+                "com luz forte",
+                "com pouca luz"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Se o bastonete é mais sensível, poucos fótons já bastam para ele avisar o cérebro. O animal enxerga em lugar escuro.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C. D é o contrário: bastonete melhor precisa de MENOS luz. A (daltonismo, não distinguir certas cores), B (ver cores fora do visível) e E (distinguir cores) falam de cor, que é trabalho do cone, não do bastonete.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma pessoa com cones falhando, mas bastonetes bons, tem dificuldade para:",
+        "opcoes": [
+          "Ver cores",
+          "Ver no escuro",
+          "Ouvir"
+        ],
+        "certa": "Ver cores",
+        "resposta": "Cor é trabalho do cone."
+      }
+    }
+  },
+  {
+    "id": "cmouei976006ruoz9ybzcgxam",
+    "materia": "Biologia",
+    "tema": "Genética",
+    "origem": "ENEM 2022 · questão 121",
+    "enunciado": "A Agência Nacional de Vigilância Sanitária (Anvisa) aprovou um produto de terapia gênica no país, indicado para o tratamento da distrofia hereditária da retina. O procedimento é recomendado para crianças acima de 12 meses e adultos com perda de visão causada pela mutação do gene humano RPE65. O produto, elaborado por engenharia genética, é composto por um vírus, no qual foi inserida uma cópia do gene normal humano RPE65 para corrigir o funcionamento das células da retina.\nO sucesso dessa terapia advém do fato de que o produto favorecerá a",
+    "A": "correção do código genético para a tradução da proteína.",
+    "B": "alteração do RNA ribossômico ligado à síntese da proteína.",
+    "C": "produção de mutações benéficas para a correção do problema.",
+    "D": "liberação imediata da proteína normal na região ocular humana.",
+    "E": "expressão do gene responsável pela produção da enzima normal.",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "O vírus leva uma cópia normal do gene RPE65 às células da retina; a célula lê esse gene e produz a enzima normal (expressão do gene). E. Erros: A = o código genético (a regra trio de letras → aminoácido) é o mesmo em todo ser vivo e não estava errado; B = não mexe no RNA do ribossomo; C = não cria mutação; D = o vírus leva o gene, não a proteína pronta.",
+      "ideia": "O vírus funciona como um carteiro: entrega a receita certa (o gene normal) dentro da célula. A própria célula lê a receita e fabrica a enzima que faltava.",
+      "pecas": [
+        {
+          "termo": "Gene",
+          "significado": "Trecho do DNA (o manual de instruções guardado em cada célula) com a receita de uma proteína."
+        },
+        {
+          "termo": "Expressão do gene",
+          "significado": "A célula ler o gene e fabricar a proteína dele. Aqui a proteína é uma enzima, a que faz uma reação acontecer na retina."
+        },
+        {
+          "termo": "Terapia gênica",
+          "significado": "Tratamento que põe um gene que funciona dentro das células doentes, usando um vírus 'desarmado' como entregador."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O vírus carrega uma cópia do gene normal. O que isso permite à célula fazer?",
+          "visual": {
+            "tipo": "processo",
+            "titulo": "Terapia gênica",
+            "etapas": [
+              {
+                "nome": "Vírus entra na retina",
+                "entra": [
+                  "vírus com gene RPE65"
+                ],
+                "sai": [
+                  "gene normal na célula"
+                ]
+              },
+              {
+                "nome": "Célula lê o gene",
+                "entra": [
+                  "gene normal"
+                ],
+                "sai": [
+                  "RNA mensageiro"
+                ]
+              },
+              {
+                "nome": "Fabrica a enzima",
+                "entra": [
+                  "RNA mensageiro"
+                ],
+                "sai": [
+                  "enzima normal"
+                ]
+              }
+            ],
+            "ligacoes": [
+              {
+                "de": 0,
+                "para": 1,
+                "leva": "gene"
+              },
+              {
+                "de": 1,
+                "para": 2,
+                "leva": "RNA"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A célula doente tem a receita com erro. O vírus deixa nela uma cópia da receita certa. A célula passa a ler essa cópia (fazendo dela uma cópia de trabalho, o RNA mensageiro) e a fazer a enzima normal, e a retina volta a funcionar.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E. A é tentadora, mas o código genético (a regra 'trio de letras → peça da proteína') é igual em todo ser vivo e não estava errado; o errado era o gene. B erra porque a terapia não mexe no RNA do ribossomo, a pecinha que monta proteína. C erra porque o tratamento não cria mutação: entrega um gene normal. D falha porque o vírus leva o gene, não a proteína pronta.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Para tratar uma doença do sangue, cientistas usam um vírus desarmado. O que ele leva às células?",
+        "opcoes": [
+          "Um gene que funciona",
+          "A proteína pronta",
+          "Um antibiótico"
+        ],
+        "certa": "Um gene que funciona",
+        "resposta": "A célula lê o gene novo e fabrica a proteína sozinha."
+      }
+    }
+  },
+  {
+    "id": "cmouei97k006yuoz9ua39q9rf",
+    "materia": "Biologia",
+    "tema": "Citologia",
+    "origem": "ENEM 2022 · questão 128",
+    "enunciado": "As células da epiderme da folha da Tradescantia pallida purpurea, uma herbácea popularmente conhecida como trapoeraba-roxa, contém um vacúolo onde se encontra um pigmento que dá a coloração arroxeada a esse tecido. Em um experimento, um corte da epiderme de uma folha da trapoeraba-roxa foi imerso em ambiente hipotônico e, logo em seguida, foi colocado em uma lâmina e observado em microscópio óptico. Durante a observação desse corte, foi possível identificar o(a)",
+    "A": "acúmulo do solvente com fragmentação da organela.",
+    "B": "rompimento da membrana celular com liberação do citosol.",
+    "C": "aumento do vacúolo com diluição do pigmento no seu interior.",
+    "D": "quebra da parede celular com extravasamento do pigmento.",
+    "E": "murchamento da célula com expulsão do pigmento do vacúolo.",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "Meio hipotônico (menos coisa dissolvida fora) → a água entra na célula por osmose → o vacúolo incha e o pigmento fica diluído (roxo mais claro). A parede celular impede que a célula estoure. C. Erros: B e D = a parede segura a célula; E = é o que acontece em meio hipertônico (salgado); A = a organela não se parte.",
+      "ideia": "Na água com pouco sal, a água entra na célula da planta. O vacúolo enche como um balão e a cor roxa fica mais fraca; a parede celular impede que estoure.",
+      "pecas": [
+        {
+          "termo": "Hipotônico",
+          "significado": "Meio com menos coisa dissolvida (sal, açúcar) que o lado de dentro da célula. Água pura é hipotônica."
+        },
+        {
+          "termo": "Osmose",
+          "significado": "A água passa pela membrana (a película fina que envolve a célula) para o lado com mais coisa dissolvida. Por isso a uva-passa incha na água."
+        },
+        {
+          "termo": "Vacúolo",
+          "significado": "Bolsa de água dentro da célula da planta; aqui ela guarda o pigmento roxo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A folha foi posta num meio com pouca coisa dissolvida. Para onde vai a água?",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Célula de planta em dois meios",
+            "cabecalho": [
+              "Meio",
+              "Água",
+              "Vacúolo"
+            ],
+            "linhas": [
+              [
+                "hipotônico (pouco sal)",
+                "entra",
+                "incha, roxo mais claro"
+              ],
+              [
+                "hipertônico (muito sal)",
+                "sai",
+                "murcha, roxo mais escuro"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Dentro do vacúolo há mais coisa dissolvida que fora. A água entra por osmose, o vacúolo cresce e o mesmo pigmento fica espalhado em mais água, mais diluído. A parede celular, dura como uma caixa, segura a célula, e ela não estoura.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C. E (murchar) é o que aconteceria em água salgada, o contrário. B e D falham porque a parede da célula de planta impede o rompimento; em célula animal, sem parede, ela poderia estourar. A falha porque a organela (pecinha dentro da célula, aqui o vacúolo) só incha, não se parte.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Alface murcha mergulhada em água pura fica:",
+        "opcoes": [
+          "Firme",
+          "Mais murcha",
+          "Igual"
+        ],
+        "certa": "Firme",
+        "resposta": "A água entra por osmose e enche as células."
+      }
+    }
+  },
+  {
+    "id": "cmoudnnt6001xuoz9ms9vebd6",
+    "materia": "Biologia",
+    "tema": "Evolução",
+    "origem": "ENEM 2021 · questão 100",
+    "enunciado": "Entre 2014 e 2016, as regiões central e oeste da África sofreram uma grave epidemia de febre hemorrágica causada pelo vírus ebola, que se manifesta em até 21 dias após a infecção e cuja taxa de letalidade (enfermos que vão a óbito) pode chegar a 90%. Em regiões de clima tropical e subtropical, um outro vírus também pode causar febre hemorrágica: o vírus da dengue, que, embora tenha período de incubação menor (até 10 dias), apresenta taxa de letalidade abaixo de 1%. Segundo as informações do texto e aplicando princípios de evolução biológica às relações do tipo patógeno-hospedeiro, qual dos dois vírus infecta os humanos há mais tempo?",
+    "A": "Ebola, pois o maior período de incubação reflete duração mais longa do processo de coevolução patógeno-hospedeiro.",
+    "B": "Dengue, pois o menor período de incubação reflete duração mais longa do processo de coevolução patógeno-hospedeiro.",
+    "C": "Ebola, cuja alta letalidade indica maior eficiência do vírus em parasitar seus hospedeiros, estabelecida ao longo de sua evolução.",
+    "D": "Ebola, cujos surtos epidêmicos concentram-se no continente africano, reconhecido como berço da origem evolutiva dos seres humanos.",
+    "E": "Dengue, cuja baixa letalidade indica maior eficiência do vírus em parasitar seus hospedeiros, estabelecida ao longo de sua longa coevolução patógeno-hospedeiro.",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "Em convivência longa, a seleção natural favorece o vírus que mata pouco: hospedeiro vivo continua espalhando o vírus. Letalidade abaixo de 1% (dengue) indica convivência mais antiga. E. Erros: C = matar muito não é eficiência, o vírus perde o hospedeiro; A e B = o tempo de incubação não mede há quanto tempo o vírus nos infecta; D = a geografia também não mede isso.",
+      "ideia": "Vírus que mata o hospedeiro rápido perde a 'casa' e espalha menos. Com o tempo sobram as versões que deixam o hospedeiro vivo: a dengue, que mata menos de 1%, convive conosco há mais tempo.",
+      "pecas": [
+        {
+          "termo": "Letalidade",
+          "significado": "Dos doentes, quantos morrem. 90% são 9 em cada 10."
+        },
+        {
+          "termo": "Coevolução",
+          "significado": "Duas espécies que mudam juntas ao longo das gerações, uma se ajustando à outra."
+        },
+        {
+          "termo": "Hospedeiro",
+          "significado": "O ser vivo onde o parasita mora e se multiplica. Aqui, o ser humano."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Qual número do texto mostra há quanto tempo o vírus convive conosco?",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Ebola × dengue",
+            "cabecalho": [
+              "",
+              "Ebola",
+              "Dengue"
+            ],
+            "linhas": [
+              [
+                "incubação",
+                "até 21 dias",
+                "até 10 dias"
+              ],
+              [
+                "letalidade",
+                "até 90%",
+                "menos de 1%"
+              ],
+              [
+                "convívio com humanos",
+                "mais recente",
+                "mais antigo"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Um vírus que mata 9 em cada 10 doentes destrói o próprio caminho para se espalhar. Ao longo das gerações, a seleção natural (quem sobrevive deixa mais descendentes) favorece vírus mais brandos e pessoas mais resistentes. Letalidade baixa é sinal de convivência longa.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E. C é a mais tentadora, mas matar muito não é ser eficiente: o vírus perde o hospedeiro. A e B usam o tempo de incubação (o tempo entre pegar o vírus e ficar doente), que não mede há quanto tempo o vírus nos infecta. D usa o lugar dos surtos, que também não mede esse tempo.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um parasita mata quase todos os hospedeiros; outro, quase nenhum. Qual deve conviver há mais tempo com essa espécie?",
+        "opcoes": [
+          "O que mata pouco",
+          "O que mata muito",
+          "Não dá para saber"
+        ],
+        "certa": "O que mata pouco",
+        "resposta": "Na convivência longa, sobram os parasitas brandos."
+      }
+    }
+  },
+  {
+    "id": "cmouei96b006duoz933p2v5ko",
+    "materia": "Biologia",
+    "tema": "Microbiologia e Doenças",
+    "origem": "ENEM 2022 · questão 107",
+    "enunciado": "Entre as diversas técnicas para diagnóstico da covid-19, destaca-se o teste genético. Considerando as diferentes variantes e cargas virais, um exemplo é a PCR, reação efetuada por uma enzima do tipo polimerase. Essa técnica permite identificar, com confiabilidade, o material genético do SARS-CoV-2, um vírus de RNA. Para comprovação da infecção por esse coronavírus, são coletadas amostras de secreções do indivíduo. Uma etapa que antecede a reação de PCR precisa ser realizada para permitir a amplificação do material genético do vírus.\nEssa etapa deve ser realizada para",
+    "A": "concentrar o RNA viral para otimizar a técnica.",
+    "B": "identificar nas amostras anticorpos anti-SARS-CoV-2.",
+    "C": "proliferar o vírus em culturas, aumentando a carga viral.",
+    "D": "purificar ácidos nucleicos virais, facilitando a ação da enzima.",
+    "E": "obter moléculas de cDNA viral por meio da transcrição reversa.",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "A polimerase da PCR copia DNA; o SARS-CoV-2 tem RNA. Antes é preciso a transcrição reversa: RNA → cDNA (DNA complementar). E. Erros: D = purificar ajuda, mas o RNA purificado continua sendo RNA; A = concentrar também não resolve isso; B = anticorpo é outro exame (sorologia); C = não se cultiva vírus para o diagnóstico.",
+      "ideia": "A máquina de PCR só copia DNA, e o coronavírus é feito de RNA. Por isso primeiro se transforma o RNA em DNA (o cDNA) e só então se copia.",
+      "pecas": [
+        {
+          "termo": "PCR",
+          "significado": "Técnica que faz milhões de cópias de um pedaço de DNA (a molécula com as instruções dos seres vivos; o RNA é uma prima dela), até dar para detectar. Como uma fotocopiadora de genes."
+        },
+        {
+          "termo": "Transcrição reversa",
+          "significado": "Fazer DNA a partir de RNA, o caminho inverso do normal. Quem faz é a enzima (proteína que faz uma reação acontecer) transcriptase reversa."
+        },
+        {
+          "termo": "cDNA",
+          "significado": "DNA complementar: a cópia em DNA do RNA do vírus."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O vírus é de RNA. O que precisa acontecer antes da PCR?",
+          "visual": {
+            "tipo": "processo",
+            "titulo": "Teste RT-PCR",
+            "etapas": [
+              {
+                "nome": "Coleta",
+                "entra": [
+                  "secreção do nariz"
+                ],
+                "sai": [
+                  "RNA do vírus"
+                ]
+              },
+              {
+                "nome": "Transcrição reversa",
+                "entra": [
+                  "RNA"
+                ],
+                "sai": [
+                  "cDNA"
+                ]
+              },
+              {
+                "nome": "PCR",
+                "entra": [
+                  "cDNA",
+                  "polimerase"
+                ],
+                "sai": [
+                  "milhões de cópias"
+                ]
+              }
+            ],
+            "ligacoes": [
+              {
+                "de": 0,
+                "para": 1,
+                "leva": "RNA"
+              },
+              {
+                "de": 1,
+                "para": 2,
+                "leva": "cDNA"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A polimerase da PCR (a enzima que copia) só sabe copiar DNA. O material do coronavírus é RNA, então ela não consegue copiar direto. A etapa anterior transforma o RNA em cDNA, e aí a cópia funciona.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E. D é tentadora: purificar ajuda, mas o RNA purificado continua sendo RNA, e a polimerase não o copia. A falha pelo mesmo motivo: concentrar o RNA não o transforma em DNA. B é outro exame, o de anticorpos no sangue. C erra porque não se cultiva o vírus para o diagnóstico: a PCR já faz as cópias.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Para achar por PCR um vírus de DNA, como o da herpes, precisa de transcrição reversa?",
+        "opcoes": [
+          "Não",
+          "Sim"
+        ],
+        "certa": "Não",
+        "resposta": "Ele já é DNA: a PCR copia direto."
+      }
+    }
+  }
+]

@@ -39,7 +39,7 @@ Markdown, exatamente estas colunas:
 `Passa` usa apenas `sim`, `nao` ou `n/a`. `Medido` sempre traz o número ou
 o valor concreto — nunca um adjetivo. Quando houver violação, cite o
 arquivo e a linha na própria célula `Medido`
-(ex.: `3 (components/hero/Hero.tsx:42,57,91)`).
+(ex.: `3 (components/tutor/explicacao-tutor.tsx:42,57,91)`).
 
 ## Checagens
 

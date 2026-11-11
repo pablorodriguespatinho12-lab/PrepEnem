@@ -15,17 +15,19 @@ describe('conteúdo confere com a receita', () => {
       }
     }
     /* A 2ª proposta ataca a omissão do Estado: o serviço que falta. */
-    expect(textoDaFrase(propostas[1])).toMatch(/CAPS/);
+    expect(textoDaFrase(propostas[1])).toMatch(/psicólogo/);
   });
-  test('a ponte da introdução não mistura presente e passado no mesmo fato', () => {
+  /* Pablo, 07/11/2026: "eu só sei os trios... nada mais". */
+  test('a ponte da introdução liga o Drummond ao Pacto, sem lei de fora', () => {
     const ponte = textoDaFrase(REDACAO_GRIFADA.introducao[1]);
-    expect(ponte).not.toMatch(/ainda persiste:.*morreram/);
-    expect(ponte).toContain('tem raízes antigas: no Hospital Colônia de Barbacena (MG), cerca de 60 mil internos morreram ao longo do século XX');
+    expect(ponte).toContain('Pacto Internacional sobre Direitos Econômicos, Sociais e Culturais');
+    expect(textoDaFrase(REDACAO_GRIFADA.introducao[0])).toContain('Drummond');
   });
-  test('nada vago no lugar de dado: o D2 traz número com fonte', () => {
-    const d2 = REDACAO_GRIFADA.desenvolvimento2.flat();
-    expect(d2.map((t) => t.texto).join('')).not.toMatch(/muitas cidades/);
-    expect(d2.some((t) => t.fato && /\d/.test(t.texto))).toBe(true);
+  test('os desenvolvimentos usam o Trio 1 e fato do dia a dia, sem número', () => {
+    expect(textoDaFrase(REDACAO_GRIFADA.desenvolvimento1[1])).toContain('Rui Barbosa');
+    expect(textoDaFrase(REDACAO_GRIFADA.desenvolvimento2[1])).toContain('Dom Hélder');
+    const d2 = REDACAO_GRIFADA.desenvolvimento2.flat().map((t) => t.texto).join('');
+    expect(d2).not.toMatch(/\d/);
   });
 });
 

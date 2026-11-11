@@ -8,6 +8,7 @@ import { ChevronLeft, PenTool } from 'lucide-react';
 import { MODELOS, ORDEM_PARTES, ROTULO_PARTE } from '@/data/redacao/modelos';
 import { ModeloComentado } from '@/components/redacao/modelo-comentado';
 import { AutorEmTemas } from '@/components/redacao/autor-em-temas';
+import { quemVaiNoTrio } from '@/lib/redacao/cartoes-trios';
 
 export default function RedacaoModelosPage() {
   const [id, setId] = useState(MODELOS[0].id);
@@ -49,6 +50,7 @@ export default function RedacaoModelosPage() {
           <p className="type-caption text-muted-foreground mb-1" data-numeric>Tema · ENEM {modelo.anoEnem}</p>
           <h2 id="tema-modelo" className="font-display type-lead font-semibold">{modelo.tema}</h2>
           <p className="type-meta text-muted-foreground mt-2 measure-reading">{modelo.contexto}</p>
+          {modelo.trio && <p className="type-meta text-muted-foreground mt-2 measure-reading">Trio {modelo.trio}. {quemVaiNoTrio(modelo.trio)}</p>}
         </header>
         {ORDEM_PARTES.map((parte) => (
           <section key={parte} className="surface-1 rounded-[var(--radius-surface)] p-6" aria-labelledby={`parte-${parte}`}>

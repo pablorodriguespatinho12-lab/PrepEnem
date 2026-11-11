@@ -151,10 +151,11 @@ describe('redação pronta, grifada por função', () => {
     const usadas = new Set(todas.map((t) => t.funcao).filter(Boolean));
     for (const f of FUNCOES) expect(usadas.has(f.chave), f.chave).toBe(true);
   });
-  test('fato histórico com fonte em pelo menos 2 lugares', () => {
-    expect(todas.filter((t) => t.fato).length).toBeGreaterThanOrEqual(2);
-    expect(todas.some((t) => t.fato && t.texto.includes('Barbacena'))).toBe(true);
-    expect(todas.some((t) => t.fato && t.texto.includes('10.216'))).toBe(true);
+  /* Pablo, 07/11/2026: só o repertório do trio, nenhum fato que ele não decorou. */
+  test('repertório só do Trio 1: Drummond, Pacto, Rui Barbosa e Dom Hélder', () => {
+    const texto = todas.map((t) => t.texto).join('');
+    for (const nome of ['Drummond', 'Pacto', 'Rui Barbosa', 'Dom Hélder']) expect(texto, nome).toContain(nome);
+    expect(todas.filter((t) => t.fato)).toEqual([]);
   });
   test('trecho grifado tem função conhecida e texto não vazio', () => {
     for (const t of todas) {

@@ -1,0 +1,2176 @@
+[
+  {
+    "id": "d2-dificil-nat-01",
+    "materia": "Física",
+    "tema": "Eletricidade e Circuitos",
+    "enunciado": "Na cozinha de um apartamento, todas as tomadas estão no mesmo circuito, protegido por um disjuntor (chave que desliga sozinha a energia quando a corrente passa do limite) de 20 A. A tensão da casa é 220 V. Já estão ligados ao mesmo tempo um micro-ondas de 1 100 W e uma air fryer de 1 980 W. A potência de um circuito é a tensão vezes a corrente (P = U × i).\nA maior potência que um terceiro aparelho pode ter, para ser ligado junto sem desarmar o disjuntor, é de",
+    "A": "4 400 W",
+    "B": "3 080 W",
+    "C": "1 320 W",
+    "D": "3 300 W",
+    "E": "6 W",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "Limite: 220 × 20 = 4 400 W. Já ligados: 1 100 + 1 980 = 3 080 W. Sobra: 4 400 − 3 080 = 1 320 W. C. Erros: A = limite sem descontar nada; B = o que já está ligado; D = descontou só o micro-ondas (4 400 − 1 100); E = a corrente que sobra (20 − 14 = 6 A) escrita como watts.",
+      "ideia": "O disjuntor aguenta uma potência total. Calcule esse total, tire o que já está ligado e veja o que sobra.",
+      "pecas": [
+        {
+          "termo": "Disjuntor",
+          "significado": "Chave do quadro de luz que desliga sozinha quando passa corrente demais. É ela que \"cai\" quando se liga muita coisa junta."
+        },
+        {
+          "termo": "Potência (P)",
+          "significado": "Energia gasta por segundo, em watts (W). Uma lâmpada de casa gasta uns 9 W; um chuveiro, uns 5 000 W."
+        },
+        {
+          "termo": "Corrente (i)",
+          "significado": "Quanta eletricidade passa pelo fio, em ampères (A). Como a quantidade de água que passa num cano."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A questão quer saber quanta potência ainda cabe no circuito antes de o disjuntor desligar. A tensão da casa (o empurrão da eletricidade, em volts) é 220 V.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O que",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "tensão (U)",
+                "220 V"
+              ],
+              [
+                "limite do disjuntor (i)",
+                "20 A"
+              ],
+              [
+                "micro-ondas",
+                "1 100 W"
+              ],
+              [
+                "air fryer",
+                "1 980 W"
+              ],
+              [
+                "terceiro aparelho",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Aparelhos ligados juntos somam as potências. O disjuntor só olha o total: se o total passar do que ele aguenta, desliga.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Primeiro o total que o circuito aguenta, depois a sobra. 220 × 20: faça 22 × 2 = 44 e ponha os dois zeros, 4 400 W. Depois, 4 400 − 3 080 = 1 320 W.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Potência que sobra",
+            "dados": [
+              "U = 220\\,\\text{V}",
+              "i = 20\\,\\text{A}",
+              "\\text{já ligados} = 1\\,100 + 1\\,980 = 3\\,080\\,\\text{W}"
+            ],
+            "formula": "P = U \\times i",
+            "legenda": [
+              "P: potência máxima do circuito",
+              "U: tensão da casa",
+              "i: corrente máxima do disjuntor"
+            ],
+            "contas": [
+              "P = 220 \\times 20 = 4\\,400\\,\\text{W}",
+              "\\text{sobra} = 4\\,400 - 3\\,080"
+            ],
+            "resultado": "\\text{sobra} = 1\\,320\\,\\text{W}",
+            "nota": "O terceiro aparelho pode ter até 1 320 W."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Com a tensão fixa em 220 V, cada watt a mais puxa mais corrente. Conferindo pela corrente: os dois aparelhos puxam 3 080 ÷ 220 = 14 A (220 × 10 = 2 200 e 220 × 4 = 880; 2 200 + 880 = 3 080). Sobram 20 − 14 = 6 A, e 6 × 220 = 1 320 W. Mesma resposta.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 1 320 W. A (4 400 W) é o limite inteiro, sem descontar os aparelhos que já estão ligados. B (3 080 W) é o que já está ligado, não o que sobra. D (3 300 W) desconta só o micro-ondas: 4 400 − 1 100. E (6 W) é a corrente que sobra, 6 A, escrita como se fosse potência.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Disjuntor de 10 A em 127 V, com um aparelho de 870 W já ligado. Quanto de potência ainda cabe?",
+        "opcoes": [
+          "400 W",
+          "1 270 W",
+          "870 W",
+          "2 140 W"
+        ],
+        "certa": "400 W",
+        "resposta": "127 × 10 = 1 270 W; 1 270 − 870 = 400 W."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-02",
+    "materia": "Física",
+    "tema": "Eletricidade e Circuitos",
+    "enunciado": "Na instalação elétrica de uma casa, os aparelhos ficam ligados em paralelo: cada um tem seu próprio caminho até o quadro de luz e recebe a tensão inteira da casa. Numa casa de 120 V, um aquecedor de resistência 20 Ω e uma lâmpada de resistência 60 Ω estão ligados ao mesmo tempo. Pela lei de Ohm, a corrente em cada aparelho é i = U ÷ R (tensão dividida pela resistência).\nA corrente total que sai do quadro de luz para esses dois aparelhos é de",
+    "A": "1,5 A",
+    "B": "6 A",
+    "C": "2 A",
+    "D": "4 A",
+    "E": "8 A",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "Aquecedor: 120 ÷ 20 = 6 A. Lâmpada: 120 ÷ 60 = 2 A. Total: 6 + 2 = 8 A. E. Erros: A = tratou como série, 120 ÷ (20 + 60) = 1,5 A; B = só o aquecedor; C = só a lâmpada; D = subtraiu as correntes, 6 − 2.",
+      "ideia": "Em paralelo, cada aparelho recebe os 120 V inteiros e puxa a sua própria corrente. O fio do quadro leva a soma delas.",
+      "pecas": [
+        {
+          "termo": "Resistência (R)",
+          "significado": "O quanto o aparelho dificulta a passagem da corrente, em ohms (Ω). Como um cano fino, que deixa passar menos água."
+        },
+        {
+          "termo": "Em paralelo",
+          "significado": "Cada aparelho num caminho separado, todos com a mesma tensão. Como as torneiras de uma casa, cada uma ligada direto na caixa-d'água."
+        },
+        {
+          "termo": "Tensão (U)",
+          "significado": "O empurrão da eletricidade, em volts (V). Como a pressão da água no cano."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Dois aparelhos ligados ao mesmo tempo. A questão quer a corrente que os dois puxam juntos.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Aparelho",
+              "Tensão",
+              "Resistência"
+            ],
+            "linhas": [
+              [
+                "aquecedor",
+                "120 V",
+                "20 Ω"
+              ],
+              [
+                "lâmpada",
+                "120 V",
+                "60 Ω"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Em paralelo, cada aparelho recebe os 120 V inteiros. Calcula-se a corrente de cada um e depois soma-se, porque o fio que sai do quadro leva as duas.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Lei de Ohm para cada aparelho, depois a soma. No quadro, o traço da fração quer dizer dividir: 120 ÷ 20 = 6 (20 × 6 = 120) e 120 ÷ 60 = 2 (60 × 2 = 120).",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Corrente total",
+            "dados": [
+              "U = 120\\,\\text{V}",
+              "R_1 = 20\\,\\Omega",
+              "R_2 = 60\\,\\Omega"
+            ],
+            "formula": "i = \\frac{U}{R}",
+            "legenda": [
+              "i: corrente de cada aparelho",
+              "U: tensão da casa",
+              "R: resistência do aparelho"
+            ],
+            "contas": [
+              "i_1 = \\frac{120}{20} = 6\\,\\text{A}",
+              "i_2 = \\frac{120}{60} = 2\\,\\text{A}",
+              "i_{total} = 6 + 2"
+            ],
+            "resultado": "i_{total} = 8\\,\\text{A}",
+            "nota": "O quadro manda 8 A para os dois aparelhos."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O aquecedor tem resistência menor, então deixa passar mais corrente: 6 A contra 2 A. Se fosse em série (um depois do outro no mesmo fio), as resistências somariam, 20 + 60 = 80, e a corrente seria 120 ÷ 80 = 1,5 A (80 cabe 1 vez em 120 e sobram 40, que é meio 80). Nenhum aparelho receberia os 120 V inteiros. Casa não é ligada assim.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 8 A. A (1,5 A) é a conta de série, 120 ÷ (20 + 60), que não vale para as tomadas de uma casa. B (6 A) é só o aquecedor. C (2 A) é só a lâmpada. D (4 A) subtrai as correntes, 6 − 2, em vez de somar.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Em 220 V, em paralelo: um ferro de 22 Ω e uma lâmpada de 110 Ω. Qual é a corrente total?",
+        "opcoes": [
+          "12 A",
+          "10 A",
+          "8 A",
+          "1,7 A"
+        ],
+        "certa": "12 A",
+        "resposta": "Ferro: 220 ÷ 22 = 10 A. Lâmpada: 220 ÷ 110 = 2 A. Total: 12 A."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-03",
+    "materia": "Física",
+    "tema": "Termodinâmica e Calor",
+    "enunciado": "Para dar banho num bebê, uma pessoa coloca 6 L de água da torneira, a 20 °C, numa banheira. Depois acrescenta água fervendo, a 100 °C, até a mistura chegar a 40 °C, temperatura boa para o banho. Considere que nenhum calor se perde para o ar nem para a banheira e que 1 L de água tem 1 kg. Na mistura, o calor que a água quente perde é igual ao calor que a água fria ganha.\nA quantidade de água fervendo acrescentada foi de",
+    "A": "2 L",
+    "B": "3 L",
+    "C": "1,5 L",
+    "D": "6 L",
+    "E": "18 L",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Fria ganha: 6 × (40 − 20) = 120. Quente perde: m × (100 − 40) = m × 60. m = 120 ÷ 60 = 2 L. A. Erros: B = usou 40 como a mudança da água quente (120 ÷ 40); C = usou 100 − 20 = 80 (120 ÷ 80); D = achou que precisa da mesma quantidade (meio a meio daria 60 °C); E = inverteu a conta, 6 × 60 ÷ 20.",
+      "ideia": "Calor perdido pela água quente = calor ganho pela fria. Cada lado é a quantidade de água vezes quanto a temperatura dela mudou.",
+      "pecas": [
+        {
+          "termo": "Equilíbrio térmico",
+          "significado": "Quando a mistura para de mudar de temperatura, porque quente e fria ficaram iguais. Café com leite gelado para numa temperatura do meio."
+        },
+        {
+          "termo": "Variação de temperatura (ΔT)",
+          "significado": "Quanto a temperatura mudou: a maior menos a menor. De 20 °C para 40 °C, mudou 20 °C. O símbolo Δ (delta) quer dizer \"quanto mudou\"."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Duas águas se misturam. A questão dá a fria inteira e pede quanto da quente foi usada.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Água",
+              "Quantidade",
+              "Começa",
+              "Termina"
+            ],
+            "linhas": [
+              [
+                "fria",
+                "6 L",
+                "20 °C",
+                "40 °C"
+              ],
+              [
+                "fervendo",
+                "?",
+                "100 °C",
+                "40 °C"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A água fervendo esfria de 100 °C até 40 °C: cai 60 °C. A fria esquenta de 20 °C até 40 °C: sobe 20 °C. O calor que sai de uma entra na outra.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Iguale o calor perdido ao calor ganho. A fria ganha 6 × 20 = 120. A quente perde (litros de quente) × 60. Que número vezes 60 dá 120? 2, porque 2 × 60 = 120.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Mistura de águas",
+            "dados": [
+              "m_{fria} = 6\\,\\text{L}",
+              "\\Delta T_{fria} = 40 - 20 = 20\\,^\\circ\\text{C}",
+              "\\Delta T_{quente} = 100 - 40 = 60\\,^\\circ\\text{C}"
+            ],
+            "formula": "m_{quente} \\times \\Delta T_{quente} = m_{fria} \\times \\Delta T_{fria}",
+            "legenda": [
+              "m: litros de cada água",
+              "$\\Delta T$: quanto a temperatura mudou"
+            ],
+            "contas": [
+              "m_{quente} \\times 60 = 6 \\times 20",
+              "m_{quente} \\times 60 = 120",
+              "m_{quente} = \\frac{120}{60}"
+            ],
+            "resultado": "m_{quente} = 2\\,\\text{L}",
+            "nota": "Bastam 2 litros de água fervendo."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O calor depende da quantidade de água e de quanto a temperatura muda. Como as duas são água, o resto da fórmula (o calor específico, a energia que 1 grama pede para subir 1 grau) é igual dos dois lados e se cancela. Cada litro fervendo cai 60 °C, e 60 ÷ 20 = 3: ele esquenta 3 litros de fria em 20 °C. Para 6 litros, bastam 6 ÷ 3 = 2.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 2 L. B (3 L) usa 40 °C como a mudança da água quente, mas ela caiu 100 − 40 = 60 °C: 120 ÷ 40. C (1,5 L) usa 100 − 20 = 80 °C: 120 ÷ 80. D (6 L) acha que precisa da mesma quantidade; meio a meio daria 60 °C, quente demais. E (18 L) inverte a conta: 6 × 60 ÷ 20.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Misturam-se 3 L de água a 10 °C com água a 90 °C até dar 30 °C. Quantos litros de água quente?",
+        "opcoes": [
+          "1 L",
+          "3 L",
+          "1,5 L",
+          "2 L"
+        ],
+        "certa": "1 L",
+        "resposta": "A fria ganha 3 × 20 = 60; cada litro quente cai 60 °C: 60 ÷ 60 = 1 L."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-04",
+    "materia": "Física",
+    "tema": "Ondas e Acústica",
+    "enunciado": "Um barco de pesca usa um sonar: um aparelho no casco solta um pulso de ultrassom (som agudo demais para o ouvido humano), que desce, bate num cardume e volta como eco. O som anda a 340 m/s no ar e a 1 500 m/s na água. O pulso voltou ao barco 0,4 s depois de sair.\nA profundidade em que está o cardume é de",
+    "A": "600 m",
+    "B": "68 m",
+    "C": "3 750 m",
+    "D": "300 m",
+    "E": "136 m",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "Caminho na água: 1 500 × 0,4 = 600 m, ida e volta. Profundidade: 600 ÷ 2 = 300 m. D. Erros: A = esqueceu que o som foi e voltou; E = usou a velocidade do ar (340 × 0,4); B = velocidade do ar e dividiu por 2; C = dividiu 1 500 por 0,4.",
+      "ideia": "Distância = velocidade × tempo. Mas o tempo do eco é de ida e volta: a profundidade é metade do caminho.",
+      "pecas": [
+        {
+          "termo": "Eco",
+          "significado": "Som que bate em algo e volta. É gritar perto de um paredão e ouvir a própria voz um pouco depois."
+        },
+        {
+          "termo": "Ultrassom",
+          "significado": "Som agudo demais para o nosso ouvido. É o mesmo usado no exame de ultrassom da gravidez."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O som desce até o cardume e volta. A questão quer a distância do barco até o cardume.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Dado",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "meio",
+                "água"
+              ],
+              [
+                "velocidade do som na água",
+                "1 500 m/s"
+              ],
+              [
+                "tempo de ida e volta",
+                "0,4 s"
+              ],
+              [
+                "profundidade",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Os 0,4 s contam duas viagens: a descida e a subida. O pulso anda na água, então vale 1 500 m/s (metros por segundo); os 340 m/s do ar não entram na conta.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Calcule o caminho todo e divida por 2. 1 500 × 0,4: como 0,4 é 4 décimos, faça 1 500 ÷ 10 = 150 e 150 × 4 = 600 m. Metade: 600 ÷ 2 = 300 m.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Profundidade pelo eco",
+            "dados": [
+              "v = 1\\,500\\,\\text{m/s}",
+              "t = 0{,}4\\,\\text{s}\\ \\text{(ida e volta)}"
+            ],
+            "formula": "d = v \\times t",
+            "legenda": [
+              "d: distância percorrida",
+              "v: velocidade do som na água",
+              "t: tempo"
+            ],
+            "contas": [
+              "d = 1\\,500 \\times 0{,}4 = 600\\,\\text{m}",
+              "\\text{profundidade} = \\frac{600}{2}"
+            ],
+            "resultado": "\\text{profundidade} = 300\\,\\text{m}",
+            "nota": "O cardume está 300 m abaixo do barco."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Com o cardume a 300 m, o som anda 300 m descendo e 300 m subindo: 600 m. A 1 500 m/s, isso leva 0,4 s, porque 1 500 × 0,4 = 600, como acabamos de ver. Bate com o tempo medido.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 300 m. A (600 m) esquece de dividir por 2. E (136 m) usa a velocidade do som no ar, 340 × 0,4, mas o pulso viajou na água. B (68 m) usa o ar e ainda divide por 2. C (3 750 m) divide 1 500 por 0,4 em vez de multiplicar.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "O eco volta 0,2 s depois, com o som a 1 500 m/s na água. Qual é a profundidade?",
+        "opcoes": [
+          "150 m",
+          "300 m",
+          "7 500 m",
+          "34 m"
+        ],
+        "certa": "150 m",
+        "resposta": "1 500 × 0,2 = 300 m de ida e volta; metade: 150 m."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-05",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Num salão de beleza, a cliente está sentada de frente para um espelho plano, a 1,5 m dele. A cabeleireira está em pé logo atrás da cliente, na mesma linha, 0,5 m mais longe do espelho. Num espelho plano, a imagem aparece atrás do espelho, à mesma distância que o objeto está na frente dele.\nA distância entre a cabeleireira e a imagem da cliente que ela vê no espelho é de",
+    "A": "3,0 m",
+    "B": "3,5 m",
+    "C": "4,0 m",
+    "D": "1,5 m",
+    "E": "2,0 m",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Imagem da cliente: 1,5 m atrás do espelho. Cabeleireira: 1,5 + 0,5 = 2,0 m na frente. Distância: 2,0 + 1,5 = 3,5 m. B. Erros: A = distância da cliente até a própria imagem (1,5 + 1,5); C = cabeleireira até a imagem dela mesma (2,0 + 2,0); D = só da imagem ao espelho; E = só da cabeleireira ao espelho.",
+      "ideia": "A imagem fica do outro lado do espelho, à mesma distância. Some o trecho na frente do espelho com o trecho atrás.",
+      "pecas": [
+        {
+          "termo": "Espelho plano",
+          "significado": "Espelho reto, sem curva, como o do banheiro."
+        },
+        {
+          "termo": "Imagem virtual",
+          "significado": "A figura que parece estar atrás do espelho. Ninguém consegue tocá-la: a luz só parece vir de lá."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "São três posições na mesma linha: a cabeleireira, a cliente e a imagem da cliente.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Distâncias até o espelho",
+            "cabecalho": [
+              "Quem",
+              "Onde"
+            ],
+            "linhas": [
+              [
+                "cliente",
+                "1,5 m na frente"
+              ],
+              [
+                "cabeleireira",
+                "1,5 + 0,5 = 2,0 m na frente"
+              ],
+              [
+                "imagem da cliente",
+                "1,5 m atrás"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A linha que vai da cabeleireira até a imagem atravessa o espelho. Por isso soma-se o trecho da frente com o de trás.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Some as duas distâncias até o espelho.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Espelho plano",
+            "dados": [
+              "d_{cliente} = 1{,}5\\,\\text{m}",
+              "d_{cabeleireira} = 1{,}5 + 0{,}5 = 2{,}0\\,\\text{m}"
+            ],
+            "formula": "D = d_{cabeleireira} + d_{imagem}",
+            "legenda": [
+              "D: da cabeleireira até a imagem",
+              "$d_{imagem}$: igual à distância da cliente ao espelho"
+            ],
+            "contas": [
+              "d_{imagem} = 1{,}5\\,\\text{m}",
+              "D = 2{,}0 + 1{,}5"
+            ],
+            "resultado": "D = 3{,}5\\,\\text{m}",
+            "nota": "A cabeleireira vê a cliente 3,5 m à frente."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O espelho plano faz uma cópia do salão do mesmo tamanho e à mesma distância, só que do outro lado. A cliente vê a si mesma a 1,5 + 1,5 = 3 m; a cabeleireira, que está mais longe, vê a imagem da cliente a 3,5 m.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 3,5 m. A (3,0 m) é o que a cliente vê dela mesma: 1,5 + 1,5. C (4,0 m) é a cabeleireira até a própria imagem: 2,0 + 2,0. D (1,5 m) é só da imagem até o espelho. E (2,0 m) é só da cabeleireira até o espelho.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Você está a 2 m de um espelho plano e seu amigo, 1 m atrás de você. A que distância ele vê a sua imagem?",
+        "opcoes": [
+          "5 m",
+          "4 m",
+          "6 m",
+          "3 m"
+        ],
+        "certa": "5 m",
+        "resposta": "Ele está a 3 m do espelho e sua imagem, 2 m atrás dele: 3 + 2 = 5 m."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-06",
+    "materia": "Física",
+    "tema": "Dinâmica e Leis de Newton",
+    "enunciado": "Num teste de segurança, um carro a 72 km/h bate numa barreira. Um boneco de 60 kg, preso pelo cinto de segurança, para por completo em 0,5 s. Pela 2ª lei de Newton, a força média do cinto no boneco é F = m × a, em que a aceleração a é quanto a velocidade muda a cada segundo (mudança da velocidade ÷ tempo). Para passar km/h para m/s, divida por 3,6.\nA força média que o cinto faz sobre o boneco é de",
+    "A": "8 640 N",
+    "B": "600 N",
+    "C": "1 200 N",
+    "D": "40 N",
+    "E": "2 400 N",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "72 ÷ 3,6 = 20 m/s. a = 20 ÷ 0,5 = 40 m/s². F = 60 × 40 = 2 400 N. E. Erros: A = não converteu (72 ÷ 0,5 × 60); B = multiplicou 20 × 0,5 em vez de dividir (a = 10; 60 × 10 = 600), que também é o peso do boneco; C = esqueceu o tempo (60 × 20); D = parou na aceleração, 40.",
+      "ideia": "Primeiro a velocidade em m/s, depois quanto ela cai por segundo, depois a força. Parada rápida = força grande.",
+      "pecas": [
+        {
+          "termo": "Aceleração (a)",
+          "significado": "Quanto a velocidade muda a cada segundo, em m/s² (metros por segundo, a cada segundo). Frear de 20 m/s até parar em 2 s é perder 10 m/s por segundo."
+        },
+        {
+          "termo": "Newton (N)",
+          "significado": "Unidade de força. O peso de um corpo em newtons é a massa vezes 10: 1 kg pesa 10 N, e o boneco de 60 kg pesa 60 × 10 = 600 N."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O cinto tira toda a velocidade do boneco em meio segundo. A questão quer a força que isso exige.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Dado",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "massa (m)",
+                "60 kg"
+              ],
+              [
+                "velocidade antes",
+                "72 km/h"
+              ],
+              [
+                "velocidade depois",
+                "0"
+              ],
+              [
+                "tempo da parada",
+                "0,5 s"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A velocidade cai de 72 km/h até zero em 0,5 s. Primeiro, passe para m/s (metros por segundo): 72 ÷ 3,6. Pense em 72 ÷ 36 = 2; como 3,6 é dez vezes menor que 36, a resposta fica dez vezes maior: 72 ÷ 3,6 = 20 m/s. Depois, a aceleração diz quanto a velocidade cai por segundo; com ela, sai a força.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Converta, ache a aceleração, multiplique pela massa. No quadro, o traço da fração quer dizer dividir, e Δ (a letra grega delta) quer dizer 'quanto mudou'.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Força do cinto",
+            "dados": [
+              "m = 60\\,\\text{kg}",
+              "v = 72\\,\\text{km/h} \\div 3{,}6 = 20\\,\\text{m/s}",
+              "\\Delta t = 0{,}5\\,\\text{s}"
+            ],
+            "formula": "F = m \\times \\frac{\\Delta v}{\\Delta t}",
+            "legenda": [
+              "F: força do cinto",
+              "$\\Delta v$: quanto a velocidade mudou",
+              "$\\Delta t$: em quanto tempo mudou"
+            ],
+            "contas": [
+              "a = \\frac{20}{0{,}5} = 40\\,\\text{m/s}^2",
+              "F = 60 \\times 40"
+            ],
+            "resultado": "F = 2\\,400\\,\\text{N}",
+            "nota": "Quatro vezes o peso do boneco, que é 600 N."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Para 20 ÷ 0,5: 0,5 é meio; quantos meios cabem em 20? 40, porque cada inteiro tem 2 meios e 20 × 2 = 40. A velocidade cai 40 m/s a cada segundo, e a força é 60 × 40 = 2 400 N (6 × 4 = 24, mais os dois zeros). Por isso o airbag e o cinto que estica um pouco salvam vidas: aumentam o tempo da parada e diminuem a força.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 2 400 N. A (8 640 N) usa 72 sem passar para m/s: 72 ÷ 0,5 = 144 e 144 × 60. B (600 N) multiplica 20 × 0,5 = 10 em vez de dividir, e 60 × 10 = 600; 600 N também é o peso do boneco (60 kg × 10 = 600 N), que não é a força do cinto. C (1 200 N) esquece o tempo: 60 × 20. D (40) para na aceleração e não multiplica pela massa.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Moto a 36 km/h; o piloto, de 80 kg, para em 0,4 s. Qual é a força média sobre ele?",
+        "opcoes": [
+          "2 000 N",
+          "320 N",
+          "800 N",
+          "7 200 N"
+        ],
+        "certa": "2 000 N",
+        "resposta": "36 ÷ 3,6 = 10 m/s; a = 10 ÷ 0,4 = 25 m/s²; F = 80 × 25 = 2 000 N."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-07",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Num laboratório de escola, dois frascos têm o mesmo rótulo: C₂H₆O. Um deles guarda etanol, o álcool do posto, de fórmula CH₃–CH₂–OH, que é líquido à temperatura ambiente. O outro guarda éter dimetílico, CH₃–O–CH₃, um gás usado em sprays. Nos dois, os átomos são de carbono, hidrogênio e oxigênio, mas o oxigênio está preso de jeitos diferentes.\nEtanol e éter dimetílico são",
+    "A": "isômeros de função: mesma fórmula molecular, com grupos funcionais diferentes (álcool e éter).",
+    "B": "isômeros de posição: o mesmo grupo funcional, em lugares diferentes da cadeia.",
+    "C": "a mesma substância, já que a fórmula do rótulo é igual.",
+    "D": "isômeros de cadeia: um tem cadeia aberta e o outro, cadeia fechada em anel.",
+    "E": "substâncias de massas molares diferentes, já que uma é líquida e a outra é gás.",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Etanol: 2 C, 6 H, 1 O. Éter: 2 C, 6 H, 1 O. Mesma fórmula; grupo –OH (álcool) contra O entre dois carbonos (éter). A. Erros: B = posição exige o mesmo grupo nos dois; C = mesma fórmula não é mesma substância (um é líquido, o outro gás); D = as duas cadeias são abertas; E = mesma fórmula dá a mesma massa.",
+      "ideia": "Isômeros são como anagramas: as mesmas letras (átomos) montadas de jeitos diferentes formam palavras (substâncias) diferentes.",
+      "pecas": [
+        {
+          "termo": "Isômeros",
+          "significado": "Substâncias com os mesmos átomos (as pecinhas mínimas da matéria), nas mesmas quantidades, mas montados de outro jeito. Como \"amor\" e \"roma\"."
+        },
+        {
+          "termo": "Grupo funcional",
+          "significado": "Pedaço da molécula que dá o jeito dela de se comportar. O –OH faz um álcool; o O entre dois carbonos faz um éter."
+        },
+        {
+          "termo": "Fórmula molecular",
+          "significado": "Quantos átomos de cada tipo a molécula tem. C₂H₆O: 2 carbonos, 6 hidrogênios e 1 oxigênio."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Conte os átomos de cada fórmula e veja o que é igual e o que muda.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Contando os átomos",
+            "cabecalho": [
+              "Átomo",
+              "Etanol",
+              "Éter dimetílico"
+            ],
+            "linhas": [
+              [
+                "C",
+                "2",
+                "2"
+              ],
+              [
+                "H",
+                "6",
+                "6"
+              ],
+              [
+                "O",
+                "1",
+                "1"
+              ],
+              [
+                "grupo",
+                "–OH (álcool)",
+                "–O– (éter)"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "No etanol, CH₃ + CH₂ + OH dá 2 C, 3 + 2 + 1 = 6 H e 1 O. No éter, CH₃ + O + CH₃ dá 2 C, 3 + 3 = 6 H e 1 O. Fórmula igual, montagem diferente.",
+          "visual": null
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O grupo funcional decide o tipo de substância. Com –OH, as moléculas de etanol se seguram umas nas outras e ele fica líquido; o éter, sem –OH, vira gás. Mudou o grupo: isomeria de função.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A. C é a armadilha: mesma fórmula não quer dizer mesma substância; o próprio texto diz que uma é líquida e a outra, gás. B pediria o mesmo grupo nos dois, só mudando de lugar. D erra porque as duas cadeias são abertas: nenhuma forma anel. E erra porque mesma fórmula dá a mesma massa, já que os átomos são os mesmos.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Propanal (um aldeído) e propanona (uma cetona) têm a mesma fórmula, C₃H₆O. Eles são isômeros de:",
+        "opcoes": [
+          "função",
+          "posição",
+          "cadeia"
+        ],
+        "certa": "função",
+        "resposta": "Mesma fórmula, grupos funcionais diferentes: aldeído e cetona."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-08",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Para fazer margarina, a indústria passa o óleo vegetal por hidrogenação: cada ligação dupla entre dois carbonos (C=C) recebe uma molécula de H₂ e vira ligação simples, e o óleo líquido endurece. Uma molécula de óleo tem três cadeias longas, como três braços. Considere uma molécula com 2 braços de ácido linoleico, que tem 2 ligações duplas C=C cada, e 1 braço de ácido oleico, que tem 1 ligação dupla C=C.\nO número de moléculas de H₂ necessárias para acabar com todas as ligações duplas C=C dessa molécula de óleo é",
+    "A": "3",
+    "B": "6",
+    "C": "10",
+    "D": "5",
+    "E": "4",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "Linoleicos: 2 × 2 = 4 duplas. Oleico: 1. Total: 5 duplas, 5 H₂. D. Erros: A = contou os braços; B = pôs 2 duplas em cada um dos 3 braços; C = contou átomos de H (5 × 2); E = esqueceu o braço de oleico.",
+      "ideia": "Cada ligação dupla C=C gasta exatamente um H₂. Basta contar as duplas da molécula inteira.",
+      "pecas": [
+        {
+          "termo": "Ligação dupla (C=C)",
+          "significado": "Dois carbonos presos por duas ligações (dois tracinhos) em vez de uma. É ela que entorta a cadeia e deixa o óleo líquido."
+        },
+        {
+          "termo": "H₂",
+          "significado": "Molécula de hidrogênio: dois átomos de H grudados (átomo é a pecinha mínima da matéria; molécula é um grupinho de átomos)."
+        },
+        {
+          "termo": "Hidrogenação",
+          "significado": "Pôr hidrogênio na molécula. Cada H₂ desfaz uma ligação dupla e a cadeia fica reta, como a da gordura sólida."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A molécula tem 3 braços, mas o que gasta H₂ são as ligações duplas. Conte as duplas de cada braço.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os braços",
+            "cabecalho": [
+              "Braço",
+              "Quantos",
+              "Duplas em cada"
+            ],
+            "linhas": [
+              [
+                "linoleico",
+                "2",
+                "2"
+              ],
+              [
+                "oleico",
+                "1",
+                "1"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Cada dupla C=C recebe um H₂ e vira simples. Então o número de H₂ é o total de duplas.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Multiplique e some.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Contando as duplas",
+            "dados": [
+              "\\text{linoleico}: 2 \\text{ braços} \\times 2 \\text{ duplas}",
+              "\\text{oleico}: 1 \\text{ braço} \\times 1 \\text{ dupla}"
+            ],
+            "formula": "n_{H_2} = \\text{total de duplas C=C}",
+            "legenda": [
+              "$n_{H_2}$: moléculas de H₂ gastas"
+            ],
+            "contas": [
+              "n_{H_2} = 2 \\times 2 + 1 \\times 1",
+              "n_{H_2} = 4 + 1"
+            ],
+            "resultado": "n_{H_2} = 5",
+            "nota": "Cinco moléculas de H₂."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Um H₂ tem 2 átomos de hidrogênio: um vai para cada carbono da dupla, e ela vira simples. Por isso conta-se 1 H₂ por dupla, não 1 por braço nem 1 por átomo de hidrogênio.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 5. A (3) conta braços, mas o que gasta H₂ é cada dupla. B (6) põe 2 duplas em cada um dos 3 braços, mas o oleico só tem 1. C (10) conta átomos de hidrogênio (5 × 2), não moléculas de H₂. E (4) esquece o braço de oleico.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma molécula de óleo tem 3 braços de ácido linolênico, com 3 duplas C=C cada. Quantos H₂ para acabar com todas?",
+        "opcoes": [
+          "9",
+          "3",
+          "6",
+          "18"
+        ],
+        "certa": "9",
+        "resposta": "3 braços × 3 duplas = 9 duplas, e cada uma gasta 1 H₂."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-09",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Uma pessoa vai de carro ao trabalho, a 15 km de casa, e volta de carro, 20 dias por mês. O carro anda 10 km com 1 litro de gasolina, e cada litro queimado solta cerca de 2,3 kg de gás carbônico (CO₂), o principal gás do efeito estufa. Ela decide passar a fazer esse trajeto de bicicleta.\nA massa de CO₂ que ela deixa de lançar no ar por mês é de",
+    "A": "69 kg",
+    "B": "6,9 kg",
+    "C": "138 kg",
+    "D": "1 380 kg",
+    "E": "60 kg",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "Por dia: 15 + 15 = 30 km. No mês: 30 × 20 = 600 km. Litros: 600 ÷ 10 = 60 L. CO₂: 60 × 2,3 = 138 kg. C. Erros: A = contou só a ida; B = parou num dia (3 L × 2,3); D = esqueceu de dividir pelos 10 km por litro; E = tomou os 60 litros como quilos de CO₂.",
+      "ideia": "A conta vai em cadeia: quilômetros no mês, depois litros gastos, depois o CO₂ desses litros.",
+      "pecas": [
+        {
+          "termo": "Consumo (km/L)",
+          "significado": "Quantos quilômetros o carro anda com 1 litro. Com 10 km/L, 3 litros dão 30 km."
+        },
+        {
+          "termo": "Gás carbônico (CO₂)",
+          "significado": "Gás que sai de toda queima de combustível. No ar, ele segura o calor e esquenta o planeta (efeito estufa)."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A questão quer o CO₂ de um mês inteiro de idas e voltas.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Dado",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "ida",
+                "15 km"
+              ],
+              [
+                "volta",
+                "15 km"
+              ],
+              [
+                "dias no mês",
+                "20"
+              ],
+              [
+                "consumo",
+                "10 km por litro"
+              ],
+              [
+                "CO₂ por litro",
+                "2,3 kg"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Cada etapa troca uma unidade por outra: quilômetro vira litro (divide pelo consumo) e litro vira quilo de CO₂ (multiplica por 2,3). Por dia: 15 + 15 = 30 km. No mês: 30 × 20 = 600 km. Litros: 600 ÷ 10 = 60 L. CO₂: 60 × 2,3, que se faz em dois pedaços: 60 × 2 = 120 e 60 × 0,3 = 18; 120 + 18 = 138 kg.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Siga a cadeia de contas.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "CO₂ do mês",
+            "dados": [
+              "\\text{ida e volta} = 15 + 15 = 30\\,\\text{km/dia}",
+              "\\text{dias} = 20",
+              "\\text{consumo} = 10\\,\\text{km/L}",
+              "2{,}3\\,\\text{kg de CO}_2\\text{ por litro}"
+            ],
+            "formula": "\\text{CO}_2 = \\frac{\\text{km no mês}}{\\text{km/L}} \\times 2{,}3",
+            "legenda": [
+              "km no mês: tudo o que o carro roda",
+              "km/L: quanto anda com 1 litro"
+            ],
+            "contas": [
+              "\\text{km no mês} = 30 \\times 20 = 600",
+              "\\text{litros} = \\frac{600}{10} = 60",
+              "\\text{CO}_2 = 60 \\times 2{,}3"
+            ],
+            "resultado": "\\text{CO}_2 = 138\\,\\text{kg}",
+            "nota": "A bicicleta evita 138 kg de CO₂ por mês."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Conferindo de outro jeito: por dia ela roda 30 km e gasta 3 L, que soltam 3 × 2,3 = 6,9 kg (3 × 2 = 6 e 3 × 0,3 = 0,9). Em 20 dias, 6,9 × 20: 6,9 × 2 = 13,8, e vezes 10 dá 138 kg.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 138 kg. A (69 kg) esquece a volta. B (6,9 kg) é de um dia só, e a pergunta é por mês. D (1 380 kg) esquece de dividir pelos 10 km por litro. E (60) são os litros, não o CO₂.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um carro que faz 12 km/L roda 240 km no mês. Com 2,3 kg de CO₂ por litro, quanto CO₂ ele solta?",
+        "opcoes": [
+          "46 kg",
+          "20 kg",
+          "552 kg",
+          "24 kg"
+        ],
+        "certa": "46 kg",
+        "resposta": "240 ÷ 12 = 20 L; 20 × 2,3 = 46 kg."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-10",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Uma notícia contou que uma família passou mal durante o banho: dor de cabeça, tontura e até desmaio. O aquecedor a gás ficava dentro do banheiro, com a janela fechada. Quando a chama queima o gás com bastante oxigênio, sai gás carbônico (CO₂) e água. Com a janela fechada, o oxigênio do banheiro foi acabando, e a chama ficou amarelada.\nO gás que mais provavelmente causou os sintomas é o",
+    "A": "gás carbônico (CO₂), que é venenoso mesmo em pouca quantidade.",
+    "B": "monóxido de carbono (CO), que se forma quando falta oxigênio na queima e se prende à hemoglobina do sangue no lugar do oxigênio.",
+    "C": "metano, que sai da chama quando a queima do gás é completa.",
+    "D": "ozônio (O₃), que a chama do aquecedor produz e que irrita os pulmões.",
+    "E": "vapor de água, que enche o banheiro e impede a respiração.",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Pouco oxigênio → queima incompleta → CO. O CO se prende à hemoglobina e o sangue leva menos oxigênio: tontura, desmaio. B. Erros: A = CO₂ sai da queima completa e só faz mal em quantidade muito grande; C = metano é gás que queima (combustível), não o que sai da chama; D = chama de aquecedor não é fonte importante de ozônio; E = vapor de água não tira o oxigênio a ponto de desmaiar.",
+      "ideia": "Queima com pouco oxigênio solta monóxido de carbono (CO), um gás sem cheiro que ocupa o lugar do oxigênio no sangue.",
+      "pecas": [
+        {
+          "termo": "Combustão incompleta",
+          "significado": "Queima com pouco oxigênio. A chama fica amarelada e sai fuligem e monóxido de carbono, como numa fogueira abafada."
+        },
+        {
+          "termo": "Hemoglobina",
+          "significado": "Proteína das hemácias (células vermelhas do sangue) que carrega o oxigênio do pulmão para o corpo todo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Janela fechada, oxigênio acabando, chama amarelada. O que a chama passa a soltar?",
+          "visual": {
+            "tipo": "processo",
+            "titulo": "Do aquecedor ao sangue",
+            "etapas": [
+              {
+                "nome": "Queima com ar de sobra",
+                "entra": [
+                  "gás",
+                  "muito O₂"
+                ],
+                "sai": [
+                  "CO₂",
+                  "H₂O"
+                ]
+              },
+              {
+                "nome": "Queima com pouco ar",
+                "entra": [
+                  "gás",
+                  "pouco O₂"
+                ],
+                "sai": [
+                  "CO",
+                  "H₂O"
+                ]
+              },
+              {
+                "nome": "Sangue",
+                "entra": [
+                  "CO respirado"
+                ],
+                "sai": [
+                  "menos O₂ no corpo"
+                ]
+              }
+            ],
+            "ligacoes": [
+              {
+                "de": 1,
+                "para": 2,
+                "leva": "CO"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Sem oxigênio suficiente, o carbono do gás não consegue pegar dois oxigênios e sai como CO, com um só. O CO não tem cheiro nem cor: ninguém percebe.",
+          "visual": null
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O CO se prende à hemoglobina com muito mais força que o oxigênio e toma o lugar dele. O sangue continua circulando, mas leva menos oxigênio ao cérebro: dor de cabeça, tontura, desmaio.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B. A é a pegadinha: o CO₂ sai da queima completa e só faz mal em quantidade muito grande. C erra porque o metano é o gás que queima (combustível), não o que sai da chama. D erra porque a chama do aquecedor não produz ozônio que importe. E erra porque o vapor de água embaça o banheiro, mas não tira o oxigênio a ponto de desmaiar.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Deixar um carro ligado dentro de uma garagem fechada é perigoso por causa de qual gás?",
+        "opcoes": [
+          "Monóxido de carbono (CO)",
+          "Gás carbônico (CO₂)",
+          "Oxigênio (O₂)",
+          "Vapor de água"
+        ],
+        "certa": "Monóxido de carbono (CO)",
+        "resposta": "O motor queima sem oxigênio suficiente e solta CO, que toma o lugar do oxigênio no sangue."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-11",
+    "materia": "Química",
+    "tema": "Soluções, pH e Titulação",
+    "enunciado": "O rótulo de um desinfetante concentrado diz que ele tem 40 g de princípio ativo (a substância que mata os germes) por litro. Para limpar o chão, a concentração certa é de 2 g por litro. Uma pessoa quer encher um balde com 5 L da solução pronta, misturando o concentrado com água. Ao diluir (pôr água), a quantidade de princípio ativo não muda: só se espalha em mais líquido.\nO volume de desinfetante concentrado que ela deve usar é de",
+    "A": "25 mL",
+    "B": "50 mL",
+    "C": "125 mL",
+    "D": "4 750 mL",
+    "E": "250 mL",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "O balde precisa de 2 × 5 = 10 g. O concentrado tem 40 g por litro: 10 ÷ 40 = 0,25 L = 250 mL. E. Erros: A = errou a vírgula ao passar 0,25 L para mL; B = 2 ÷ 40 = 0,05 L, esqueceu os 5 L; C = 5 ÷ 40, ignorou os 2 g/L; D = 4 750 mL é a água a acrescentar, não o concentrado.",
+      "ideia": "Veja quantos gramas o balde precisa e depois quanto concentrado tem esses gramas.",
+      "pecas": [
+        {
+          "termo": "Concentração (g/L)",
+          "significado": "Quantos gramas de substância há em cada litro. 2 g/L: em 1 litro, 2 gramas; em 5 litros, 10 gramas."
+        },
+        {
+          "termo": "Diluir",
+          "significado": "Pôr mais água sem pôr mais substância. Suco concentrado com água: mesma fruta, mais líquido."
+        },
+        {
+          "termo": "mL (mililitro)",
+          "significado": "A milésima parte de 1 litro: 1 L = 1 000 mL. Um copo americano tem uns 200 mL."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Duas soluções: a forte, do frasco, e a fraca, do balde. A questão quer quanto da forte vai no balde.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Solução",
+              "Concentração",
+              "Volume"
+            ],
+            "linhas": [
+              [
+                "concentrado",
+                "40 g/L",
+                "?"
+              ],
+              [
+                "pronta (balde)",
+                "2 g/L",
+                "5 L"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O balde pronto precisa de 2 g em cada um dos 5 litros: 10 g. Esses 10 g vêm todos do concentrado; a água não traz nada.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Iguale a massa de princípio ativo antes e depois. C × V é concentração vezes volume, que dá os gramas: 40 × V = 2 × 5 = 10. Então V = 10 ÷ 40. Corte o zero dos dois: 1 ÷ 4, um quarto de litro, 0,25 L. Em mL: 1 000 ÷ 4 = 250 mL.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Diluição",
+            "dados": [
+              "C_{pronta} = 2\\,\\text{g/L}",
+              "V_{pronta} = 5\\,\\text{L}",
+              "C_{conc} = 40\\,\\text{g/L}"
+            ],
+            "formula": "C_{conc} \\times V_{conc} = C_{pronta} \\times V_{pronta}",
+            "legenda": [
+              "C: gramas por litro",
+              "V: volume em litros"
+            ],
+            "contas": [
+              "40 \\times V_{conc} = 2 \\times 5 = 10",
+              "V_{conc} = \\frac{10}{40} = 0{,}25\\,\\text{L}",
+              "0{,}25 \\times 1\\,000 = 250\\,\\text{mL}"
+            ],
+            "resultado": "V_{conc} = 250\\,\\text{mL}",
+            "nota": "Um copo e pouco de concentrado, completado com água até 5 L."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada lado da conta é a massa de princípio ativo, em gramas. 250 mL de concentrado têm 40 × 0,25 = 10 g (um quarto de 40). Com 4 750 mL de água, viram 5 L com 2 g em cada litro.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 250 mL. A (25 mL) erra ao passar 0,25 L para mL: multiplica-se por 1 000, e 0,25 × 1 000 = 250. B (50 mL) faz 2 ÷ 40 e esquece os 5 litros do balde. C (125 mL) faz 5 ÷ 40 e esquece os 2 g por litro. D (4 750 mL) é a água que vai junto, não o concentrado.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um concentrado tem 50 g/L. Para fazer 2 L com 5 g/L, quanto concentrado se usa?",
+        "opcoes": [
+          "200 mL",
+          "20 mL",
+          "500 mL",
+          "1 800 mL"
+        ],
+        "certa": "200 mL",
+        "resposta": "Precisa de 5 × 2 = 10 g; 10 ÷ 50 = 0,2 L = 200 mL."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-12",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Uma pilha de Daniell usa uma placa de zinco (Zn) e uma de cobre (Cu). Cada metal tem um potencial de redução, que mede a vontade de receber elétrons: cobre, +0,34 V; zinco, −0,76 V. Na pilha, recebe os elétrons quem tem o maior potencial, e a tensão da pilha é o maior potencial menos o menor. Um estudante quer acender um LED que precisa de pelo menos 2,0 V, ligando pilhas iguais em série (uma depois da outra, com as tensões somando).\nO menor número de pilhas que acende o LED, e a tensão que elas dão juntas, é",
+    "A": "2 pilhas, que dão 2,20 V juntas.",
+    "B": "5 pilhas, que dão 2,10 V juntas.",
+    "C": "3 pilhas, que dão 2,28 V juntas.",
+    "D": "1 pilha, que dá 2,20 V sozinha.",
+    "E": "6 pilhas, que dão 2,04 V juntas.",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Pilha: 0,34 − (−0,76) = 0,34 + 0,76 = 1,10 V. Uma não basta; 2 dão 2,20 V, que passa de 2,0 V. A. Erros: B = somou com o sinal (0,34 − 0,76 = −0,42, ou 0,42 V por pilha); C = usou só o zinco (0,76 V); D = dobrou a tensão por causa dos 2 elétrons trocados; E = usou só o cobre (0,34 V).",
+      "ideia": "A tensão da pilha é a distância entre os dois potenciais: de −0,76 até +0,34 são 1,10 V. Uma pilha não chega a 2,0 V; duas, sim.",
+      "pecas": [
+        {
+          "termo": "Tensão e volt (V)",
+          "significado": "Tensão é o empurrão que a pilha dá na eletricidade; volt (V) é a unidade dela. Pilha comum tem 1,5 V; a tomada, 127 ou 220 V. Quanto mais volts, mais forte o empurrão."
+        },
+        {
+          "termo": "Elétron e potencial de redução",
+          "significado": "Elétron é uma partícula pequenina, de carga negativa, da parte de fora do átomo; elétrons andando no fio são a corrente. Potencial de redução é a vontade do metal de receber elétrons, em volts: número maior puxa mais."
+        },
+        {
+          "termo": "LED",
+          "significado": "Lampadinha que só acende se receber pelo menos uma certa tensão. É a luzinha de aparelho ligado e a das lâmpadas econômicas de casa."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Primeiro a tensão de uma pilha; depois quantas pilhas passam de 2,0 V.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os metais",
+            "cabecalho": [
+              "Metal",
+              "Potencial de redução",
+              "Papel na pilha"
+            ],
+            "linhas": [
+              [
+                "cobre (Cu)",
+                "+0,34 V",
+                "recebe elétrons"
+              ],
+              [
+                "zinco (Zn)",
+                "−0,76 V",
+                "entrega elétrons"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O cobre tem o maior potencial e recebe os elétrons que o zinco entrega (cada átomo de zinco solta 2). A tensão é o maior menos o menor: 0,34 − (−0,76). Pense numa régua com o zero no meio: de −0,76 até 0 são 0,76, e de 0 até +0,34 são mais 0,34. Por isso a conta vira 0,34 + 0,76 = 1,10 V.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Tensão de uma pilha, depois some pilhas até passar de 2,0 V. Em série, as tensões somam: 1 pilha dá 1,10 V, pouco; 2 dão 1,10 + 1,10 = 2,20 V, que passa de 2,0. No quadro, ΔE é a tensão de uma pilha (Δ, a letra grega delta, quer dizer diferença).",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Pilha de Daniell",
+            "dados": [
+              "E_{Cu} = +0{,}34\\,\\text{V}",
+              "E_{Zn} = -0{,}76\\,\\text{V}",
+              "\\text{LED}: \\text{pelo menos } 2{,}0\\,\\text{V}"
+            ],
+            "formula": "\\Delta E = E_{maior} - E_{menor}",
+            "legenda": [
+              "$\\Delta E$: tensão de 1 pilha",
+              "E: potencial de redução de cada metal"
+            ],
+            "contas": [
+              "\\Delta E = 0{,}34 - (-0{,}76) = 1{,}10\\,\\text{V}",
+              "1 \\text{ pilha}: 1{,}10\\,\\text{V} < 2{,}0\\,\\text{V}",
+              "2 \\text{ pilhas}: 2 \\times 1{,}10 = 2{,}20\\,\\text{V}"
+            ],
+            "resultado": "2 \\text{ pilhas}, 2{,}20\\,\\text{V}",
+            "nota": "Duas pilhas já passam de 2,0 V."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A tensão mede a distância entre os dois pontos da régua, passando pelo zero; por isso tirar o número negativo vira somar. Os 2 elétrons de cada átomo de zinco não mudam a tensão: mudam só quantos elétrons passam pelo fio, como abrir mais a torneira sem mudar a altura da caixa-d'água.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 2 pilhas e 2,20 V. B esquece os sinais e faz 0,76 − 0,34 = 0,42 V por pilha: precisaria de 5 (2,10 V). C usa só o zinco, 0,76 V por pilha: 3 dão 2,28 V. D dobra a tensão por causa dos 2 elétrons, mas a tensão de uma pilha não depende disso. E usa só o cobre, 0,34 V por pilha: 6 dão 2,04 V.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma pilha de prata (+0,80 V) e cobre (+0,34 V). Qual é a tensão dela?",
+        "opcoes": [
+          "0,46 V",
+          "1,14 V",
+          "0,80 V",
+          "0,34 V"
+        ],
+        "certa": "0,46 V",
+        "resposta": "Maior menos menor: 0,80 − 0,34 = 0,46 V."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-13",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "Um comprimido efervescente contra azia tem 1,68 g de bicarbonato de sódio (NaHCO₃). Na água com ácido, ele reage assim: NaHCO₃ + HCl → NaCl + H₂O + CO₂. Cada NaHCO₃ que reage solta um CO₂, o gás das bolhas. Massas molares (quanto pesa 1 mol, um pacote fixo de partículas): NaHCO₃ = 84 g/mol; CO₂ = 44 g/mol.\nA massa de CO₂ que sai quando todo o bicarbonato do comprimido reage é de",
+    "A": "1,68 g",
+    "B": "0,02 g",
+    "C": "0,44 g",
+    "D": "0,88 g",
+    "E": "1,76 g",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "Mols de bicarbonato: 1,68 ÷ 84 = 0,02 mol. Sai o mesmo número de mols de CO₂: 0,02 × 44 = 0,88 g. D. Erros: A = achou que a massa toda vira gás; B = parou no número de mols; C = pôs metade, como se 2 NaHCO₃ dessem 1 CO₂; E = dobrou, como se cada NaHCO₃ desse 2 CO₂.",
+      "ideia": "Massa não passa direto de uma substância para outra. Passe para mol, use a proporção da reação (1 para 1) e volte para massa.",
+      "pecas": [
+        {
+          "termo": "Mol",
+          "significado": "Um pacote com um número fixo e enorme de partículas, como a dúzia é um pacote de 12. Comparar mols é comparar quantas partículas."
+        },
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol de uma substância, em g/mol (gramas por mol). CO₂ = 44 g/mol: 1 mol de CO₂ pesa 44 g."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A questão dá a massa do bicarbonato e pede a massa do gás. A ponte entre os dois é o mol. Na reação, a seta → quer dizer 'vira'. O 44 do CO₂ vem de 1 carbono e 2 oxigênios: 12 + 16 + 16.",
+          "visual": {
+            "tipo": "molecula",
+            "titulo": "Massa do CO₂",
+            "nome": "CO₂",
+            "atomos": [
+              {
+                "simbolo": "C",
+                "massa": 12
+              },
+              {
+                "simbolo": "O",
+                "massa": 16
+              },
+              {
+                "simbolo": "O",
+                "massa": 16
+              }
+            ],
+            "soma": true
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pela reação, 1 NaHCO₃ dá 1 CO₂. Então o número de mols de gás é igual ao de bicarbonato. Mas 1 mol de cada pesa diferente: 84 g contra 44 g.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Massa vira mol, mol vira massa. O traço da fração quer dizer dividir: 1,68 ÷ 84. Como 84 × 2 = 168, então 84 × 0,02 = 1,68: são 0,02 mol. Depois, 0,02 × 44: 2 × 44 = 88, e 0,02 é 2 centésimos, então dá 0,88 g.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Do comprimido ao gás",
+            "dados": [
+              "m_{NaHCO_3} = 1{,}68\\,\\text{g}",
+              "M_{NaHCO_3} = 84\\,\\text{g/mol}",
+              "M_{CO_2} = 44\\,\\text{g/mol}"
+            ],
+            "formula": "n = \\frac{m}{M}",
+            "legenda": [
+              "n: número de mols",
+              "m: massa em gramas",
+              "M: massa molar"
+            ],
+            "contas": [
+              "n = \\frac{1{,}68}{84} = 0{,}02\\,\\text{mol}",
+              "m_{CO_2} = 0{,}02 \\times 44"
+            ],
+            "resultado": "m_{CO_2} = 0{,}88\\,\\text{g}",
+            "nota": "Menos de 1 grama de gás faz todas aquelas bolhas."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada 84 g de bicarbonato soltam 44 g de gás. O comprimido tem 1,68 g, que é 84 dividido por 50 (50 × 1,68 = 84). Então sai 44 ÷ 50 = 0,88 g (44 ÷ 100 = 0,44, e o dobro é 0,88). O resto da massa fica no copo, como sal (NaCl) e água.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 0,88 g. A (1,68 g) supõe que o comprimido inteiro vira gás. B (0,02) é o número de mols, não a massa. C (0,44 g) é metade, como se 2 NaHCO₃ dessem 1 CO₂. E (1,76 g) é o dobro, como se cada NaHCO₃ desse 2 CO₂.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Com 4,2 g de NaHCO₃ (84 g/mol), quantos gramas de CO₂ (44 g/mol) saem?",
+        "opcoes": [
+          "2,2 g",
+          "4,2 g",
+          "0,05 g",
+          "4,4 g"
+        ],
+        "certa": "2,2 g",
+        "resposta": "4,2 ÷ 84 = 0,05 mol; 0,05 × 44 = 2,2 g."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-14",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Num campo, o capim captura pela fotossíntese 50 000 kcal (quilocalorias, a mesma unidade de energia dos rótulos de comida) num certo período. A cadeia alimentar é: capim → preá → cobra → gavião. A cada passagem de um ser para quem o come, só cerca de 10% da energia segue adiante; o resto é gasto para viver (andar, respirar, manter o corpo quente) ou não chega a ser comido.\nA energia do capim que chega ao gavião nesse período é de",
+    "A": "500 kcal",
+    "B": "5 000 kcal",
+    "C": "50 kcal",
+    "D": "5 kcal",
+    "E": "36 450 kcal",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "Preá: 10% de 50 000 = 5 000. Cobra: 500. Gavião: 50 kcal. C. Erros: A = parou na cobra; B = parou no preá; D = fez uma passagem a mais; E = tirou 10% em cada passagem (50 000 × 0,9 × 0,9 × 0,9) em vez de ficar só com 10%.",
+      "ideia": "Ficar com 10% é dividir por 10. Do capim ao gavião são 3 passagens: três divisões por 10.",
+      "pecas": [
+        {
+          "termo": "Cadeia alimentar",
+          "significado": "A fila de quem come quem. A seta aponta para quem come: capim → preá quer dizer que o preá come o capim."
+        },
+        {
+          "termo": "Nível trófico",
+          "significado": "O lugar de cada ser na fila: produtor (capim), consumidor primário (preá), secundário (cobra), terciário (gavião)."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Siga a energia do capim até o gavião. São 3 passagens: capim para preá, preá para cobra, cobra para gavião.",
+          "visual": {
+            "tipo": "processo",
+            "titulo": "A energia na cadeia",
+            "etapas": [
+              {
+                "nome": "Capim",
+                "entra": [
+                  "luz do Sol"
+                ],
+                "sai": [
+                  "50 000 kcal"
+                ]
+              },
+              {
+                "nome": "Preá",
+                "entra": [
+                  "5 000 kcal"
+                ],
+                "sai": [
+                  "calor",
+                  "movimento"
+                ]
+              },
+              {
+                "nome": "Cobra",
+                "entra": [
+                  "500 kcal"
+                ],
+                "sai": [
+                  "calor",
+                  "movimento"
+                ]
+              },
+              {
+                "nome": "Gavião",
+                "entra": [
+                  "50 kcal"
+                ],
+                "sai": [
+                  "calor",
+                  "movimento"
+                ]
+              }
+            ],
+            "ligacoes": [
+              {
+                "de": 0,
+                "para": 1,
+                "leva": "10%"
+              },
+              {
+                "de": 1,
+                "para": 2,
+                "leva": "10%"
+              },
+              {
+                "de": 2,
+                "para": 3,
+                "leva": "10%"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Cada passagem guarda só 10%, o mesmo que dividir por 10: 50 000 ÷ 10 = 5 000 (preá); ÷ 10 = 500 (cobra); ÷ 10 = 50 (gavião).",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Energia que cada um recebe",
+            "cabecalho": [
+              "Ser",
+              "Energia"
+            ],
+            "linhas": [
+              [
+                "capim",
+                "50 000 kcal"
+              ],
+              [
+                "preá",
+                "5 000 kcal"
+              ],
+              [
+                "cobra",
+                "500 kcal"
+              ],
+              [
+                "gavião",
+                "50 kcal"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada ser usa quase tudo o que come para se manter vivo. Só o pouco que vira corpo dele pode ser comido pelo próximo. Por isso um campo tem muito capim, alguns preás e poucos gaviões.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 50 kcal. A (500) para na cobra. B (5 000) para no preá. D (5) faz uma passagem a mais: do capim ao gavião são só 3. E (36 450) tira 10% em cada passagem, mas o texto diz que só 10% SEGUE.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Algas com 20 000 kcal → camarão → peixe. Com 10% por passagem, quanto chega ao peixe?",
+        "opcoes": [
+          "200 kcal",
+          "2 000 kcal",
+          "20 kcal",
+          "16 200 kcal"
+        ],
+        "certa": "200 kcal",
+        "resposta": "Duas passagens: 20 000 ÷ 10 = 2 000; ÷ 10 = 200."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-15",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Moradores notaram que uma lagoa que recebe esgoto de casas e água de plantações adubadas ficou verde e turva. Semanas depois, muitos peixes apareceram mortos na margem. Análises mostraram que a água tinha muito fosfato e nitrato (sais que funcionam como adubo) e quase nenhum oxigênio dissolvido no fundo.\nA sequência que explica a morte dos peixes é:",
+    "A": "os sais do adubo envenenam os peixes, e as algas só aparecem depois, sobre os peixes mortos.",
+    "B": "os sais adubam as algas, que se multiplicam e depois morrem; as bactérias que decompõem tanta alga morta gastam o oxigênio da água.",
+    "C": "as algas fazem fotossíntese demais, e o excesso de oxigênio na água intoxica os peixes.",
+    "D": "o esgoto esquenta a água, e na água quente as algas comem o alimento dos peixes.",
+    "E": "os peixes comem algas demais e morrem de indigestão; depois, as bactérias decompõem os corpos.",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Adubo → explosão de algas → algas morrem → bactérias decompõem e respiram → falta oxigênio → peixes morrem. B. Erros: A = ignora a falta de oxigênio que a análise mostrou; C = o problema é falta de oxigênio, não excesso; D = alga não come alimento de peixe, ela faz fotossíntese; E = não explica o oxigênio quase zerado.",
+      "ideia": "Adubo demais na água faz as algas explodirem. Quando elas morrem, as bactérias que as comem gastam o oxigênio, e os peixes sufocam.",
+      "pecas": [
+        {
+          "termo": "Eutrofização",
+          "significado": "Excesso de nutrientes na água, que faz as algas crescerem demais. Como adubar demais um vaso: cresce tudo de uma vez."
+        },
+        {
+          "termo": "Decompositores",
+          "significado": "Bactérias e fungos que se alimentam de seres mortos. Como nós, eles gastam oxigênio para respirar."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Os dados que importam: muito adubo na água e quase nenhum oxigênio no fundo. Quem gastou esse oxigênio?",
+          "visual": {
+            "tipo": "processo",
+            "titulo": "Eutrofização",
+            "etapas": [
+              {
+                "nome": "Esgoto e adubo",
+                "entra": [
+                  "fosfato",
+                  "nitrato"
+                ],
+                "sai": [
+                  "algas demais"
+                ]
+              },
+              {
+                "nome": "Algas morrem",
+                "entra": [
+                  "algas demais"
+                ],
+                "sai": [
+                  "matéria morta"
+                ]
+              },
+              {
+                "nome": "Bactérias decompõem",
+                "entra": [
+                  "matéria morta",
+                  "O₂"
+                ],
+                "sai": [
+                  "CO₂"
+                ]
+              },
+              {
+                "nome": "Peixes",
+                "entra": [
+                  "pouco O₂"
+                ],
+                "sai": [
+                  "morte"
+                ]
+              }
+            ],
+            "ligacoes": [
+              {
+                "de": 0,
+                "para": 1,
+                "leva": "algas"
+              },
+              {
+                "de": 1,
+                "para": 2,
+                "leva": "alga morta"
+              },
+              {
+                "de": 2,
+                "para": 3,
+                "leva": "água sem O₂"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A camada verde de cima tapa a luz, e as algas de baixo morrem. As bactérias que comem essa alga morta respiram e gastam o oxigênio do fundo. Sem oxigênio, os peixes morrem.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B. C é a pegadinha: o problema é falta de oxigênio, não excesso, e a análise mostrou quase nenhum. A ignora justamente essa falta de oxigênio, e a alga não aparece depois: ela cresce com o adubo. D erra porque alga não come comida de peixe: faz o próprio alimento com a luz (fotossíntese). E erra porque não explica o oxigênio quase zerado que a análise achou.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Que medida ajuda a evitar a eutrofização de um rio?",
+        "opcoes": [
+          "Tratar o esgoto antes de soltar no rio",
+          "Pôr mais adubo nas plantações",
+          "Soltar mais peixes no rio"
+        ],
+        "certa": "Tratar o esgoto antes de soltar no rio",
+        "resposta": "Menos nutriente chegando, menos alga crescendo demais."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-16",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Um corredor brasileiro passou um mês treinando em La Paz, na Bolívia, cidade a cerca de 3 600 m de altitude, onde cada respiração traz menos oxigênio que ao nível do mar. Na volta, o exame de sangue mostrou mais hemácias (células vermelhas do sangue) que antes. Os rins dele, percebendo pouco oxigênio no sangue, liberaram um hormônio (mensageiro químico do corpo) que faz a medula dos ossos fabricar mais hemácias.\nEssa mudança pode ajudá-lo numa prova ao nível do mar porque",
+    "A": "com mais hemácias há mais hemoglobina, e o sangue leva mais oxigênio aos músculos a cada volta pelo corpo.",
+    "B": "as hemácias a mais fazem a respiração celular no lugar das células dos músculos, que se cansam menos.",
+    "C": "o sangue com mais hemácias fica mais ralo e corre mais rápido pelos vasos.",
+    "D": "as hemácias a mais combatem os micróbios que causam o cansaço na corrida.",
+    "E": "o pulmão cresce na altitude e passa a guardar oxigênio de reserva para a prova.",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Pouco O₂ → rins soltam o hormônio (eritropoetina) → medula faz mais hemácias → mais hemoglobina → mais O₂ levado aos músculos. A. Erros: B = quem faz respiração celular são as mitocôndrias do músculo, e a hemácia madura nem tem mitocôndria; C = mais hemácias deixam o sangue mais grosso, não mais ralo; D = defesa é papel dos glóbulos brancos; E = pulmão não guarda oxigênio de reserva.",
+      "ideia": "Hemácia é o caminhão do oxigênio. Mais caminhões, mais oxigênio entregue aos músculos.",
+      "pecas": [
+        {
+          "termo": "Hemácia",
+          "significado": "Célula vermelha do sangue (célula é a menor parte viva do corpo). Carrega o oxigênio do pulmão até o corpo todo, como um caminhão de entrega."
+        },
+        {
+          "termo": "Hemoglobina",
+          "significado": "A proteína dentro da hemácia onde o oxigênio fica preso durante a viagem. É ela que deixa o sangue vermelho."
+        },
+        {
+          "termo": "Altitude",
+          "significado": "Quão alto um lugar está acima do nível do mar. Lá em cima o ar é mais rarefeito: cada respiração traz menos oxigênio."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O texto conta o que mudou no corpo. A questão quer saber por que isso ajuda depois, ao nível do mar.",
+          "visual": {
+            "tipo": "processo",
+            "titulo": "Do ar rarefeito às hemácias",
+            "etapas": [
+              {
+                "nome": "Altitude",
+                "entra": [
+                  "ar com pouco O₂"
+                ],
+                "sai": [
+                  "sangue com pouco O₂"
+                ]
+              },
+              {
+                "nome": "Rins",
+                "entra": [
+                  "pouco O₂"
+                ],
+                "sai": [
+                  "hormônio EPO"
+                ]
+              },
+              {
+                "nome": "Medula dos ossos",
+                "entra": [
+                  "EPO"
+                ],
+                "sai": [
+                  "mais hemácias"
+                ]
+              }
+            ],
+            "ligacoes": [
+              {
+                "de": 0,
+                "para": 1,
+                "leva": "aviso"
+              },
+              {
+                "de": 1,
+                "para": 2,
+                "leva": "EPO"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada hemácia leva oxigênio preso na hemoglobina. Ao nível do mar, com ar normal e mais hemácias, o músculo recebe mais oxigênio e demora mais para cansar.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A. B erra: quem faz a respiração celular (tirar energia do açúcar) são as mitocôndrias, as usinas de energia dentro das células do músculo; a hemácia madura nem tem mitocôndria. C erra: mais hemácias deixam o sangue mais grosso, não mais ralo. D descreve os glóbulos brancos, que defendem de micróbios. E erra porque o pulmão não guarda oxigênio de reserva: só troca o ar a cada respiração.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma pessoa com anemia (poucas hemácias) costuma sentir:",
+        "opcoes": [
+          "Cansaço fácil",
+          "Mais fôlego que o normal",
+          "Sangue mais grosso"
+        ],
+        "certa": "Cansaço fácil",
+        "resposta": "Com menos hemácias, chega menos oxigênio aos músculos."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-17",
+    "materia": "Biologia",
+    "tema": "Genética",
+    "enunciado": "Uma mulher tem sangue tipo A, e o pai dela tem sangue tipo O. O marido tem sangue tipo B, e a mãe dele tem sangue tipo O. No sistema ABO, cada pessoa tem 2 alelos (versões do gene), um vindo do pai e outro da mãe. Os alelos IA e IB mandam sobre o alelo i, e só quem tem dois alelos i (ii) tem sangue tipo O.\nA chance de o primeiro filho do casal ter sangue tipo O é de",
+    "A": "0%",
+    "B": "50%",
+    "C": "75%",
+    "D": "12,5%",
+    "E": "25%",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "Mulher A com pai O recebeu i do pai: IAi. Marido B com mãe O: IBi. Filho O precisa de i dos dois: 1/2 × 1/2 = 1/4 = 25%. E. Erros: A = achou que A com B nunca dá O; B = olhou só um dos pais (1/2); C = a chance de NÃO ser O; D = multiplicou ainda por 1/2 de ser menino ou menina, o que a pergunta não pede.",
+      "ideia": "Quem é tipo O só pode passar i. Então a mulher e o marido carregam um i escondido, e o filho O precisa receber o i dos dois.",
+      "pecas": [
+        {
+          "termo": "Alelo",
+          "significado": "Cada versão de um gene. Para o tipo de sangue há três: IA, IB e i. Cada pessoa tem dois, um do pai e outro da mãe."
+        },
+        {
+          "termo": "Recessivo",
+          "significado": "Alelo que só aparece em dose dupla. O i só dá sangue tipo O quando vem dos dois lados: ii."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Descubra os alelos do casal pelos pais deles e depois cruze.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A família",
+            "cabecalho": [
+              "Pessoa",
+              "Tipo",
+              "Alelos"
+            ],
+            "linhas": [
+              [
+                "pai da mulher",
+                "O",
+                "i i"
+              ],
+              [
+                "mulher",
+                "A",
+                "IA i"
+              ],
+              [
+                "mãe do marido",
+                "O",
+                "i i"
+              ],
+              [
+                "marido",
+                "B",
+                "IB i"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Cada um passa um alelo ao filho, ao acaso. Cruzando IA i com IB i saem 4 casas iguais em chance; só uma é i i.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Cruzamento",
+            "cabecalho": [
+              "Da mãe / do pai",
+              "IB",
+              "i"
+            ],
+            "linhas": [
+              [
+                "IA",
+                "IA IB: tipo AB",
+                "IA i: tipo A"
+              ],
+              [
+                "i",
+                "IB i: tipo B",
+                "i i: tipo O"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A mulher recebeu obrigatoriamente um i do pai dela (tipo O só tem i para dar); o marido, da mãe dele. Cada um passa o i em metade das vezes: metade de metade é um quarto (1/4, ou 1 de cada 4), e um quarto de 100% é 100 ÷ 4 = 25%.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 25%. A (0%) esquece os alelos i escondidos. B (50%) olha só um dos pais. C (75%) é a chance de o filho NÃO ser tipo O: 3 das 4 casas. D (12,5%) multiplica ainda por 1/2 de ser menino, mas a pergunta não fala de sexo.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Pai AB e mãe O. De cada 4 filhos, quantos tendem a nascer com sangue O?",
+        "opcoes": [
+          "Nenhum",
+          "1",
+          "2"
+        ],
+        "certa": "Nenhum",
+        "resposta": "O pai AB não tem i para passar: todo filho recebe IA ou IB dele."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-18",
+    "materia": "Biologia",
+    "tema": "Citologia",
+    "enunciado": "Pesquisadores deram a células do pâncreas, que fabricam e exportam enzimas digestivas, aminoácidos (as peças que formam as proteínas) marcados, que podem ser seguidos com um aparelho. Eles anotaram, minuto a minuto, por onde a marca passava dentro da célula, até ela sair da célula dentro das enzimas.\nA ordem esperada do caminho da marca dentro da célula é:",
+    "A": "mitocôndria → complexo de Golgi → núcleo → fora da célula.",
+    "B": "complexo de Golgi → retículo endoplasmático rugoso → lisossomo → fora da célula.",
+    "C": "núcleo → retículo endoplasmático liso → mitocôndria → fora da célula.",
+    "D": "retículo endoplasmático rugoso → complexo de Golgi → vesículas → fora da célula.",
+    "E": "lisossomo → núcleo → complexo de Golgi → fora da célula.",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "Aminoácidos viram proteína nos ribossomos do retículo rugoso → Golgi embala → vesículas levam à membrana → enzima sai. D. Erros: B = inverte retículo e Golgi; A = mitocôndria faz energia, não proteína; C = retículo liso faz gordura, e núcleo guarda o DNA; E = lisossomo digere, não fabrica.",
+      "ideia": "A célula que exporta proteína funciona como fábrica: linha de montagem (retículo rugoso), embalagem (Golgi) e entrega (vesículas).",
+      "pecas": [
+        {
+          "termo": "Retículo endoplasmático rugoso",
+          "significado": "Rede de canais coberta de ribossomos (fabriquinhas de proteína). Como uma linha de montagem."
+        },
+        {
+          "termo": "Complexo de Golgi",
+          "significado": "Organela que termina, embala e despacha as proteínas em bolsinhas (vesículas). Como o setor de embalagem de uma loja."
+        },
+        {
+          "termo": "Enzima",
+          "significado": "Proteína que acelera uma reação, como quebrar a comida na digestão. Proteína é uma molécula comprida, feita de aminoácidos em fila, como contas de colar."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A marca vai junto com os aminoácidos. Onde eles viram proteína, e por onde a proteína sai?",
+          "visual": {
+            "tipo": "processo",
+            "titulo": "Caminho da enzima",
+            "etapas": [
+              {
+                "nome": "Retículo rugoso",
+                "entra": [
+                  "aminoácidos"
+                ],
+                "sai": [
+                  "proteína"
+                ]
+              },
+              {
+                "nome": "Complexo de Golgi",
+                "entra": [
+                  "proteína"
+                ],
+                "sai": [
+                  "vesícula"
+                ]
+              },
+              {
+                "nome": "Membrana",
+                "entra": [
+                  "vesícula"
+                ],
+                "sai": [
+                  "enzima fora"
+                ]
+              }
+            ],
+            "ligacoes": [
+              {
+                "de": 0,
+                "para": 1,
+                "leva": "proteína"
+              },
+              {
+                "de": 1,
+                "para": 2,
+                "leva": "vesícula"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Organela é cada pecinha dentro da célula com um trabalho próprio, como os setores de uma fábrica. A tabela mostra o trabalho de cada uma que aparece nas alternativas: só o retículo rugoso, o Golgi e as vesículas mexem com proteína para exportar.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Cada setor da célula",
+            "cabecalho": [
+              "Organela",
+              "O que faz"
+            ],
+            "linhas": [
+              [
+                "núcleo",
+                "guarda o DNA, o manual de instruções"
+              ],
+              [
+                "mitocôndria",
+                "tira energia do açúcar"
+              ],
+              [
+                "retículo rugoso",
+                "monta a proteína com seus ribossomos"
+              ],
+              [
+                "retículo liso",
+                "faz gordura, sem ribossomos"
+              ],
+              [
+                "complexo de Golgi",
+                "embala a proteína em vesículas"
+              ],
+              [
+                "vesícula",
+                "bolsinha que leva a carga para fora"
+              ],
+              [
+                "lisossomo",
+                "saquinho que digere coisas dentro da célula"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Os ribossomos grudados no retículo rugoso juntam os aminoácidos em proteína. O retículo manda a proteína ao Golgi, que a embala em vesículas. As vesículas se juntam à membrana (a película fina que envolve a célula, como a pele de um balão) e soltam a enzima para fora.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D. A erra porque começa na mitocôndria, que produz energia e não monta proteína, e passa pelo núcleo, que só guarda o DNA. B inverte: o Golgi embala o que o retículo fabricou, e o lisossomo digere, não exporta. C erra porque o retículo liso faz gordura, não proteína, e núcleo e mitocôndria não montam proteína. E erra porque começa no lisossomo, que digere em vez de fabricar.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "As glândulas da boca exportam amilase, a enzima da saliva. Que organela embala a amilase para sair?",
+        "opcoes": [
+          "Complexo de Golgi",
+          "Mitocôndria",
+          "Núcleo",
+          "Lisossomo"
+        ],
+        "certa": "Complexo de Golgi",
+        "resposta": "O Golgi embala em vesículas o que o retículo rugoso fabricou."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-19",
+    "materia": "Biologia",
+    "tema": "Evolução",
+    "enunciado": "Uma reportagem sobre peixes que vivem em cavernas totalmente escuras disse: \"Esses peixes ficaram cegos porque, sem luz, deixaram de usar os olhos, que foram atrofiando, e cada geração passou aos filhotes os olhos já menores.\" Biólogos responderam que essa ideia não é a aceita hoje. Estudos mostram que, no escuro, manter olhos grandes gasta energia e não traz vantagem nenhuma.\nA explicação aceita pela biologia é que",
+    "A": "a reportagem está certa: órgão que não se usa diminui, e essa diminuição passa aos filhotes.",
+    "B": "já havia peixes com olhos de tamanhos diferentes, por mutações ao acaso; no escuro, os de olhos menores gastavam menos energia, deixavam mais filhotes, e a característica se espalhou.",
+    "C": "a escuridão provocou nos peixes as mutações de que eles precisavam para viver sem enxergar.",
+    "D": "os peixes se esforçaram para usar outros sentidos, e esse esforço encolheu os olhos dos filhotes.",
+    "E": "os peixes chegaram à caverna já cegos, e a escuridão não teve nenhum papel na mudança.",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Variação ao acaso + vantagem no ambiente + mais filhotes = seleção natural. B. Erros: A e D = uso e desuso, a ideia de Lamarck que a reportagem trazia; C = mutação acontece ao acaso, não sob encomenda do ambiente; E = contradiz os estudos do texto, que ligam o escuro à vantagem de olhos menores.",
+      "ideia": "O que o peixe faz durante a vida não passa aos filhotes. O que muda a espécie é quem, por acaso, nasce com uma característica que ajuda a deixar mais filhotes.",
+      "pecas": [
+        {
+          "termo": "Seleção natural",
+          "significado": "Quem nasce com uma característica que ajuda a viver e se reproduzir naquele lugar deixa mais filhotes, e a característica fica mais comum."
+        },
+        {
+          "termo": "Mutação",
+          "significado": "Mudança ao acaso no DNA (o manual de instruções guardado nas células, que passa aos filhos), como um erro de cópia. Pode ajudar, atrapalhar ou não fazer diferença."
+        },
+        {
+          "termo": "Lamarckismo",
+          "significado": "Ideia antiga de Lamarck: o que se usa cresce, o que não se usa some, e isso passa aos filhos. Hoje se sabe que não é assim."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A reportagem usa a ideia de Lamarck. Qual é a explicação que vale hoje?",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Duas explicações",
+            "cabecalho": [
+              "Ideia",
+              "O que diz",
+              "Vale hoje?"
+            ],
+            "linhas": [
+              [
+                "Lamarck",
+                "uso e desuso passam aos filhos",
+                "não"
+              ],
+              [
+                "Darwin (seleção natural)",
+                "variação ao acaso; quem deixa mais filhotes",
+                "sim"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Usar ou não usar o olho não muda o DNA que o peixe passa. No escuro, olho grande só gasta energia; quem nasceu com olho menor sobrou energia para crescer e se reproduzir. Geração após geração, os olhos menores ficaram mais comuns.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B. A e D são a ideia de Lamarck, que a própria reportagem trazia: o que muda na vida do peixe não passa aos filhotes. C erra porque a mutação acontece ao acaso, não sob encomenda do ambiente. E erra porque contradiz os estudos do texto, que mostram que no escuro o olho menor é vantagem.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um halterofilista de braços fortes terá filhos de braços fortes por causa do treino dele?",
+        "opcoes": [
+          "Não, o treino não muda o DNA passado aos filhos",
+          "Sim, o músculo treinado passa aos filhos"
+        ],
+        "certa": "Não, o treino não muda o DNA passado aos filhos",
+        "resposta": "O que se ganha durante a vida não passa pelo DNA."
+      }
+    }
+  },
+  {
+    "id": "d2-dificil-nat-20",
+    "materia": "Biologia",
+    "tema": "Microbiologia e Doenças",
+    "enunciado": "Um trabalhador rural foi mordido na mão por um cão desconhecido, que fugiu. No posto de saúde, no mesmo dia, ele recebeu soro antirrábico e começou o esquema de vacina antirrábica, com novas doses nos dias seguintes. A raiva é causada por um vírus que viaja pelos nervos até o cérebro e, quando chega lá, quase sempre mata.\nO motivo de usar soro e vacina juntos é que",
+    "A": "o soro mata o vírus da raiva, e a vacina mata as bactérias da ferida.",
+    "B": "a vacina age na hora, e o soro protege a pessoa pelo resto da vida.",
+    "C": "o soro traz anticorpos prontos, que agem logo, enquanto a vacina faz o corpo produzir seus próprios anticorpos e memória, o que leva dias.",
+    "D": "os dois trazem anticorpos prontos, e usar os dois dobra a dose de proteção.",
+    "E": "o soro é um antibiótico contra o vírus, e a vacina impede que o cão passe a doença para outras pessoas.",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "Soro = anticorpos prontos, proteção imediata e curta. Vacina = ensina o corpo, demora dias, deixa memória. Juntos cobrem o intervalo. C. Erros: A = vacina antirrábica não age em bactéria; B = inverte os dois; D = vacina não traz anticorpo pronto; E = antibiótico não age em vírus, e a vacina é do homem, não do cão.",
+      "ideia": "O soro protege já, enquanto a vacina ainda ensina o corpo. Quando o soro acaba, as defesas do próprio corpo estão prontas.",
+      "pecas": [
+        {
+          "termo": "Anticorpo",
+          "significado": "Proteína do sangue que gruda no micróbio (ser vivo pequeno demais para ver a olho nu) e ajuda a destruí-lo. Como uma etiqueta de \"pegue este\"."
+        },
+        {
+          "termo": "Soro",
+          "significado": "Anticorpos prontos, tirados de outro animal ou pessoa e injetados. Protege na hora, mas some em semanas."
+        },
+        {
+          "termo": "Vacina",
+          "significado": "Micróbio morto, fraco ou só um pedaço dele, que ensina o corpo a fazer os próprios anticorpos. Demora dias, mas deixa memória: o corpo lembra como fazer o anticorpo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Compare o que cada um faz e quando começa a agir.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Soro e vacina",
+            "cabecalho": [
+              "O que",
+              "Soro",
+              "Vacina"
+            ],
+            "linhas": [
+              [
+                "traz",
+                "anticorpos prontos",
+                "vírus morto, que ensina o corpo"
+              ],
+              [
+                "começa a agir",
+                "na hora",
+                "em alguns dias"
+              ],
+              [
+                "dura",
+                "semanas",
+                "anos (memória)"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O vírus da raiva anda devagar pelos nervos da mão até o cérebro. O soro segura o vírus no começo, enquanto a vacina ensina o corpo. Quando o soro acaba, os anticorpos do próprio corpo já estão prontos.",
+          "visual": null
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C. A erra porque a vacina antirrábica não age em bactéria: ela é contra o vírus da raiva. B inverte os dois: quem age na hora é o soro. D erra porque a vacina não traz anticorpo pronto: ensina o corpo a fazer. E erra porque antibiótico não age contra vírus, e a vacina foi dada ao homem, não ao cão.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Depois da picada de uma cobra venenosa, o tratamento certo é:",
+        "opcoes": [
+          "Soro antiofídico, que age na hora",
+          "Vacina, que leva dias para agir",
+          "Antibiótico contra o veneno"
+        ],
+        "certa": "Soro antiofídico, que age na hora",
+        "resposta": "O veneno age em horas: só anticorpos prontos chegam a tempo."
+      }
+    }
+  }
+]

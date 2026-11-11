@@ -21,7 +21,7 @@ export function AutorEmTemas({ trio, modeloAtualId, onEscolherModelo }: AutorEmT
   return (
     <section className="surface-1 rounded-[var(--radius-surface)] p-5 space-y-4" aria-labelledby="autor-em-temas">
       <div>
-        <h2 id="autor-em-temas" className="font-display type-body font-semibold">Trio {trio}: o mesmo autor em 3 temas</h2>
+        <h2 id="autor-em-temas" className="font-display type-body font-semibold">Trio {trio}: o mesmo autor em {atual.usos.length} temas</h2>
         <p className="type-meta text-muted-foreground">A fala você decora 1 vez. Só a ligação muda.</p>
       </div>
 

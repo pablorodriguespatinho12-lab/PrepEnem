@@ -89,7 +89,7 @@ export default function CadernoErrosPage() {
             <>
               <p className="font-display type-lead font-semibold">Ainda não há erro para refazer</p>
               <p className="type-meta text-muted-foreground mb-4">Quando você errar uma questão no treino, ela aparece aqui.</p>
-              <Link href="/provas" className="inline-flex items-center px-5 py-2.5 rounded-[var(--radius-control)] bg-primary text-primary-foreground type-meta font-medium">Ir para o Treino</Link>
+              <Link href="/provas" className="inline-flex items-center px-5 py-2.5 rounded-[var(--radius-control)] bg-primary text-primary-foreground type-meta font-medium">Ir para Estudar</Link>
             </>
           ) : (
             <p className="font-display type-lead font-semibold">Nenhum erro com essa busca</p>

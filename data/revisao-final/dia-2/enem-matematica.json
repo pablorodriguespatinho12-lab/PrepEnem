@@ -1,0 +1,3268 @@
+[
+  {
+    "id": "cmouei98m007iuoz97az16rw2",
+    "materia": "Matemática",
+    "tema": "Aritmética e Porcentagem",
+    "origem": "ENEM 2022 · questão 149",
+    "enunciado": "Em janeiro de 2013, foram declaradas 1 794 272 admissões e 1 765 372 desligamentos no Brasil, ou seja, foram criadas 28 900 vagas de emprego, segundo dados do Cadastro Geral de Empregados e Desempregados (Caged), divulgados pelo Ministério do Trabalho e Emprego (MTE). Segundo o Caged, o número de vagas criadas em janeiro de 2013 sofreu uma queda de 75%, quando comparado com o mesmo período de 2012. De acordo com as informações dadas, o número de vagas criadas em janeiro de 2012 foi",
+    "A": "16 514.",
+    "B": "86 700.",
+    "C": "115 600.",
+    "D": "441 343.",
+    "E": "448 568.",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "28 900 é o que SOBROU depois de cair 75%: sobrou 25%. 28 900 ÷ 0,25 = 115 600. C. Erros: B (86 700) = 75% de 115 600, o tamanho da queda; A (16 514) = 28 900 ÷ 1,75; D e E = um quarto dos desligamentos e das admissões, números que não entram na conta.",
+      "ideia": "Cair 75% quer dizer que sobrou 25%, que é um quarto (1 de cada 4 partes). Se 28 900 é um quarto do valor de 2012, o valor de 2012 é 4 vezes 28 900.",
+      "pecas": [
+        {
+          "termo": "Porcentagem (%)",
+          "significado": "Uma parte de cada 100. 25% é 25 de cada 100, ou seja, um quarto: 25% de R$ 100 são R$ 25."
+        },
+        {
+          "termo": "Queda de 75%",
+          "significado": "O valor perdeu 75 de cada 100 e ficou com 25 de cada 100. Uma pizza que perde 75% fica com 1 fatia de cada 4."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Admissões e desligamentos só mostram de onde saiu o 28 900. O que importa: em 2013 foram 28 900 vagas, e isso já é o número DEPOIS de uma queda de 75%. A pergunta é quantas vagas havia em 2012, antes da queda.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "vagas em jan/2013",
+                "28 900"
+              ],
+              [
+                "queda em relação a 2012",
+                "75%"
+              ],
+              [
+                "vagas em jan/2012",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O ano de 2012 é o inteiro, 100%. Caiu 75%, então 2013 ficou com 100% − 75% = 25% do de 2012. Os 28 900 são esses 25%.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Antes e depois",
+            "cabecalho": [
+              "Ano",
+              "Parte",
+              "Vagas"
+            ],
+            "linhas": [
+              [
+                "2012",
+                "100%",
+                "?"
+              ],
+              [
+                "queda",
+                "−75%",
+                ""
+              ],
+              [
+                "2013",
+                "25%",
+                "28 900"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Se 25% vale 28 900, o inteiro é 28 900 dividido por 0,25. Dividir por 0,25 é o mesmo que multiplicar por 4, porque 0,25 cabe 4 vezes em 1. De cabeça: 28 900 × 2 = 57 800, e dobrando de novo, 115 600.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Voltar ao valor antigo",
+            "dados": [
+              "\\text{vagas em 2013} = 28\\,900",
+              "\\text{queda} = 75\\%",
+              "1 - 0{,}75 = 0{,}25"
+            ],
+            "formula": "x = \\dfrac{28\\,900}{0{,}25}",
+            "legenda": [
+              "$x$: vagas em 2012",
+              "o traço: dividir o de cima pelo de baixo",
+              "÷ 0,25 é × 4: 0,25 cabe 4 vezes em 1"
+            ],
+            "contas": [
+              "x = 28\\,900 \\times 4"
+            ],
+            "resultado": "x = 115\\,600",
+            "nota": "Em 2012 foram 115 600 vagas."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Confira de trás para frente: um quarto de 115 600 é 28 900, então três quartos são 3 × 28 900 = 86 700 (o tanto que caiu). 115 600 − 86 700 = 28 900, exatamente o número de 2013.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Conferindo",
+            "cabecalho": [
+              "Conta",
+              "Resultado"
+            ],
+            "linhas": [
+              [
+                "vagas de 2012",
+                "115 600"
+              ],
+              [
+                "queda: 75% de 115 600",
+                "86 700"
+              ],
+              [
+                "sobra: 115 600 − 86 700",
+                "28 900"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 115 600. A (16 514) faz 28 900 ÷ 1,75, como se 2013 fosse 75% MAIOR que 2012. B (86 700) é o tamanho da queda, não o número de vagas de 2012. D (441 343) é um quarto dos desligamentos, e E (448 568) é um quarto das admissões: esses números só serviam de contexto.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma loja vendeu 300 bolos em 2024, queda de 40% em relação a 2023. Quantos vendeu em 2023?",
+        "opcoes": [
+          "500",
+          "420",
+          "750",
+          "120"
+        ],
+        "certa": "500",
+        "resposta": "Caiu 40%, sobrou 60%: 300 ÷ 0,6 = 500."
+      }
+    }
+  },
+  {
+    "id": "cmouei9850079uoz9am4gd7bz",
+    "materia": "Matemática",
+    "tema": "Aritmética e Porcentagem",
+    "origem": "ENEM 2022 · questão 140",
+    "enunciado": "Em uma loja, o preço promocional de uma geladeira é de R$ 1 000,00 para pagamento somente em dinheiro. Seu preço normal, fora da promoção, é 10% maior. Para pagamento feito com o cartão de crédito da loja, é dado um desconto de 2% sobre o preço normal.\nUma cliente decidiu comprar essa geladeira, optando pelo pagamento com o cartão de crédito da loja. Ela calculou que o valor a ser pago seria o preço promocional acrescido de 8%. Ao ser informada pela loja do valor a pagar, segundo sua opção, percebeu uma diferença entre seu cálculo e o valor que lhe foi apresentado.\nO valor apresentado pela loja, comparado ao valor calculado pela cliente, foi",
+    "A": "R$ 2,00 menor.",
+    "B": "R$ 100,00 menor.",
+    "C": "R$ 200,00 menor.",
+    "D": "R$ 42,00 maior.",
+    "E": "R$ 80,00 maior.",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Normal = 1 000 × 1,10 = 1 100. Cartão = 1 100 × 0,98 = 1 078. Cliente: 1 000 × 1,08 = 1 080. 1 078 é R$ 2 menor. A. Erros: E (R$ 80 maior) = só os 8% de 1 000; B (R$ 100 menor) = os 10% de 1 000; C e D não saem de conta certa.",
+      "ideia": "O desconto de 2% vale sobre o preço normal (1 100), não sobre o de 1 000. Por isso subir 10% e tirar 2% não é o mesmo que subir 8%.",
+      "pecas": [
+        {
+          "termo": "Desconto de 2%",
+          "significado": "Tirar 2 de cada 100. Em R$ 100, desconto de 2% deixa R$ 98. Multiplicar por 0,98 faz isso de uma vez."
+        },
+        {
+          "termo": "Aumento de 10%",
+          "significado": "Somar 10 de cada 100. Em R$ 100, vira R$ 110. Multiplicar por 1,10 faz isso de uma vez."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Há três preços: o promocional (R$ 1 000, só em dinheiro), o normal (10% acima) e o do cartão (2% abaixo do normal). A cliente achou que o cartão sairia 1 000 + 8%. A pergunta é a diferença entre o preço da loja e o da cliente.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "preço promocional",
+                "R$ 1 000"
+              ],
+              [
+                "preço normal",
+                "10% a mais"
+              ],
+              [
+                "no cartão",
+                "2% a menos do normal"
+              ],
+              [
+                "conta da cliente",
+                "1 000 + 8%"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A loja faz em dois passos: 1 000 sobe 10% e vai a 1 100; depois tira 2% de 1 100, que são 22 reais, e fica 1 078. A cliente fez 10 − 2 = 8% de uma vez sobre 1 000: 1 000 + 80 = 1 080.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Loja e cliente",
+            "cabecalho": [
+              "Quem",
+              "Conta",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "loja",
+                "1 100 − 22",
+                "R$ 1 078"
+              ],
+              [
+                "cliente",
+                "1 000 + 80",
+                "R$ 1 080"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Troque cada porcentagem pelo seu fator (o número que já faz a conta) e multiplique.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Preço no cartão",
+            "dados": [
+              "P = 1\\,000",
+              "+10\\% \\to 1{,}10",
+              "-2\\% \\to 0{,}98"
+            ],
+            "formula": "V = P \\times 1{,}10 \\times 0{,}98",
+            "legenda": [
+              "$P$: preço promocional",
+              "$V$: preço no cartão"
+            ],
+            "contas": [
+              "V = 1\\,000 \\times 1{,}10 \\times 0{,}98",
+              "V = 1\\,100 \\times 0{,}98",
+              "1\\,080 - 1\\,078 = 2"
+            ],
+            "resultado": "V = 1\\,078",
+            "nota": "A loja cobra R$ 2 a menos que a conta da cliente."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Os 2% de desconto são tirados de 1 100, e 2% de 1 100 são 22 reais, não 20. Por isso o resultado fica 2 reais abaixo do que a cliente pensou.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "De onde vêm os 2 reais",
+            "cabecalho": [
+              "Conta",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "2% de 1 000",
+                "R$ 20"
+              ],
+              [
+                "2% de 1 100",
+                "R$ 22"
+              ],
+              [
+                "diferença",
+                "R$ 2"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, R$ 2,00 menor. B (R$ 100,00 menor) usa só os 10% de 1 000. C (R$ 200,00 menor) não sai de nenhuma conta com os dados: a diferença real é de 2 reais. D (R$ 42,00 maior) erra o sentido: a loja cobra menos que a cliente pensou, não mais. E (R$ 80,00 maior) são só os 8% de 1 000, e não a diferença entre as duas contas.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma camisa de R$ 200 sobe 10% e depois tem desconto de 10%. Por quanto fica?",
+        "opcoes": [
+          "R$ 198",
+          "R$ 200",
+          "R$ 202",
+          "R$ 180"
+        ],
+        "certa": "R$ 198",
+        "resposta": "200 × 1,10 = 220; 220 × 0,90 = 198."
+      }
+    }
+  },
+  {
+    "id": "cmoudnnx3003iuoz9dzbc13hb",
+    "materia": "Matemática",
+    "tema": "Aritmética e Porcentagem",
+    "origem": "ENEM 2021 · questão 157",
+    "enunciado": "Para realizar um voo entre duas cidades que distam 2 000 km uma da outra, uma companhia aérea utilizava um modelo de aeronave A, capaz de transportar até 200 passageiros. Quando uma dessas aeronaves está lotada de passageiros, o consumo de combustível é de 0,02 litro por quilômetro por passageiro. Essa companhia resolveu trocar o modelo de aeronave A pelo modelo de aeronave B, que é capaz de transportar 10% de passageiros a mais do que o modelo A, mas consumindo 10% menos combustível por quilômetro por passageiro. A quantidade de combustível consumida pelo modelo de aeronave B, em relação à do modelo de aeronave A, em um voo lotado entre as duas cidades, é",
+    "A": "10% menor",
+    "B": "1% menor",
+    "C": "igual",
+    "D": "1% maior",
+    "E": "11% maior",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "A: 200 × 0,02 × 2 000 = 8 000 L. B: 220 × 0,018 × 2 000 = 7 920 L. 7 920 ÷ 8 000 = 0,99: 1% menor. B. Erros: C (igual) = somar +10% e −10% e achar que anula; A (10% menor) = olhar só o consumo; D (1% maior) = sinal trocado; E (11%) não sai de conta certa.",
+      "ideia": "Mais 10% de passageiros e 10% menos de consumo por passageiro não se anulam: 1,10 × 0,90 = 0,99. O avião B gasta 99% do que o A gasta.",
+      "pecas": [
+        {
+          "termo": "Litro por quilômetro por passageiro",
+          "significado": "Quanto combustível cada pessoa \"gasta\" a cada km. 0,02 L por km por pessoa: 10 pessoas em 100 km gastam 10 × 100 × 0,02 = 20 L."
+        },
+        {
+          "termo": "Fator",
+          "significado": "O número que já faz a conta da porcentagem. +10% é × 1,10; −10% é × 0,90."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O avião A leva 200 pessoas e gasta 0,02 L por km por pessoa. O B leva 10% mais gente e gasta 10% menos por pessoa. A pergunta compara o gasto total dos dois no mesmo voo de 2 000 km.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Avião A",
+              "Avião B"
+            ],
+            "linhas": [
+              [
+                "passageiros",
+                "200",
+                "10% a mais"
+              ],
+              [
+                "L por km por pessoa",
+                "0,02",
+                "10% a menos"
+              ],
+              [
+                "distância",
+                "2 000 km",
+                "2 000 km"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "No B: 200 + 10% = 200 + 20 = 220 pessoas. O consumo cai 10%: 10% de 0,02 é 0,002, e 0,02 − 0,002 = 0,018 L por km por pessoa. O gasto total é pessoas × consumo × distância.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Avião B",
+            "cabecalho": [
+              "O quê",
+              "Conta",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "passageiros",
+                "200 × 1,10",
+                "220"
+              ],
+              [
+                "consumo",
+                "0,02 × 0,90",
+                "0,018"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Calcule o gasto total de cada avião e divida um pelo outro. A: 200 × 0,02 = 4 litros por km; 4 × 2 000 = 8 000. B: 220 × 0,018 = 3,96; 3,96 × 2 000 = 7 920. Em 7 920 de 8 000 faltam 80, que é 1% de 8 000: o B gasta 99%.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Combustível no voo",
+            "dados": [
+              "\\text{A: } 200 \\text{ pessoas},\\ 0{,}02\\,\\text{L}",
+              "\\text{B: } 220 \\text{ pessoas},\\ 0{,}018\\,\\text{L}",
+              "d = 2\\,000\\,\\text{km}"
+            ],
+            "formula": "\\text{gasto} = \\text{pessoas} \\times \\text{consumo} \\times d",
+            "legenda": [
+              "consumo: litros por km por pessoa",
+              "$d$: distância",
+              "o traço: dividir o de cima pelo de baixo"
+            ],
+            "contas": [
+              "\\text{A} = 200 \\times 0{,}02 \\times 2\\,000 = 8\\,000",
+              "\\text{B} = 220 \\times 0{,}018 \\times 2\\,000 = 7\\,920",
+              "\\dfrac{7\\,920}{8\\,000} = 0{,}99"
+            ],
+            "resultado": "\\text{B} = 0{,}99 \\times \\text{A}",
+            "nota": "O B gasta 99% do A: 1% menos."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O aumento de 10% e o corte de 10% não são sobre a mesma base. Multiplicando os fatores: 1,10 × 0,90 = 0,99. Quanto maiores as duas porcentagens, maior a perda.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Sobe e desce a mesma %",
+            "cabecalho": [
+              "Mudança",
+              "Fator",
+              "Resultado"
+            ],
+            "linhas": [
+              [
+                "+10% e −10%",
+                "1,10 × 0,90",
+                "0,99 (1% menor)"
+              ],
+              [
+                "+20% e −20%",
+                "1,20 × 0,80",
+                "0,96 (4% menor)"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 1% menor. A (10% menor) olha só o consumo por pessoa e esquece que o B leva mais gente. C (igual) acha que +10% e −10% se cancelam, mas 1,10 × 0,90 = 0,99. D (1% maior) troca o sentido: o B gasta menos. E (11% maior) não sai de nenhuma conta com os dados: o B gasta menos, não mais.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um preço sobe 20% e depois cai 20%. Em relação ao começo, ele fica:",
+        "opcoes": [
+          "4% menor",
+          "igual",
+          "4% maior",
+          "20% menor"
+        ],
+        "certa": "4% menor",
+        "resposta": "1,20 × 0,80 = 0,96, ou seja, 4% menor."
+      }
+    }
+  },
+  {
+    "id": "cmouei98g007fuoz9zgosga5e",
+    "materia": "Matemática",
+    "tema": "Aritmética e Porcentagem",
+    "origem": "ENEM 2022 · questão 146",
+    "enunciado": "Uma pessoa precisa contratar um operário para fazer um serviço em sua casa. Para isso, ela postou um anúncio em uma rede social. Cinco pessoas responderam informando preços por hora trabalhada, gasto diário com transporte e tempo necessário para conclusão do serviço, conforme valores apresentados no quadro. Operário | Preço por hora (real) | Preço do transporte (real) | Tempo até conclusão (hora) I | 120 | 0,00 | 8 II | 180 | 0,00 | 6 III | 170 | 20,00 | 6 IV | 110 | 10,00 | 9 V | 110 | 0,00 | 10 Se a pessoa pretende gastar o mínimo possível com essa contratação, irá contratar o operário",
+    "A": "I.",
+    "B": "II.",
+    "C": "III.",
+    "D": "IV.",
+    "E": "V.",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Gasto = preço por hora × horas + transporte. I: 120 × 8 = 960. II: 180 × 6 = 1 080. III: 170 × 6 + 20 = 1 040. IV: 110 × 9 + 10 = 1 000. V: 110 × 10 = 1 100. Menor: I. A. Transporte contado 1 vez; mesmo contando 2 dias no IV (1 010), o I continua o menor. Erros: IV e V têm a hora mais barata, mas mais horas; II e III terminam mais rápido, mas a hora é cara.",
+      "ideia": "O que importa é o total que sai do bolso: preço por hora vezes o número de horas, mais o transporte. Hora barata com muitas horas pode sair mais cara.",
+      "pecas": [
+        {
+          "termo": "Preço por hora",
+          "significado": "Quanto o operário cobra a cada hora de trabalho. R$ 120 por hora em 8 horas dá 120 × 8 = R$ 960."
+        },
+        {
+          "termo": "Gasto total",
+          "significado": "Tudo o que a pessoa paga no fim: as horas trabalhadas mais o transporte."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Cinco operários, cada um com preço por hora, transporte e horas para acabar. A pergunta é qual sai mais barato no total.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "O quadro da questão",
+            "cabecalho": [
+              "Operário",
+              "R$ por hora",
+              "Transporte",
+              "Horas"
+            ],
+            "linhas": [
+              [
+                "I",
+                "120",
+                "0",
+                "8"
+              ],
+              [
+                "II",
+                "180",
+                "0",
+                "6"
+              ],
+              [
+                "III",
+                "170",
+                "20",
+                "6"
+              ],
+              [
+                "IV",
+                "110",
+                "10",
+                "9"
+              ],
+              [
+                "V",
+                "110",
+                "0",
+                "10"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Para cada operário: multiplique o preço por hora pelas horas e some o transporte. Só depois compare.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Gasto de cada um",
+            "cabecalho": [
+              "Operário",
+              "Conta",
+              "Total"
+            ],
+            "linhas": [
+              [
+                "I",
+                "120 × 8",
+                "960"
+              ],
+              [
+                "II",
+                "180 × 6",
+                "1 080"
+              ],
+              [
+                "III",
+                "170 × 6 + 20",
+                "1 040"
+              ],
+              [
+                "IV",
+                "110 × 9 + 10",
+                "1 000"
+              ],
+              [
+                "V",
+                "110 × 10",
+                "1 100"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "A mesma conta para todos, com a fórmula do gasto.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Gasto de cada operário",
+            "dados": [
+              "I: p = 120,\\ t = 8,\\ c = 0",
+              "IV: p = 110,\\ t = 9,\\ c = 10",
+              "V: p = 110,\\ t = 10,\\ c = 0"
+            ],
+            "formula": "G = p \\times t + c",
+            "legenda": [
+              "$p$: preço por hora",
+              "$t$: horas de trabalho",
+              "$c$: transporte"
+            ],
+            "contas": [
+              "\\text{I: } 120 \\times 8 + 0 = 960",
+              "\\text{II: } 180 \\times 6 = 1\\,080",
+              "\\text{III: } 170 \\times 6 + 20 = 1\\,040",
+              "\\text{IV: } 110 \\times 9 + 10 = 1\\,000",
+              "\\text{V: } 110 \\times 10 = 1\\,100"
+            ],
+            "resultado": "\\text{I: } G = 960",
+            "nota": "O operário I é o mais barato: R$ 960."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O V cobra R$ 10 a menos por hora que o I, mas trabalha 2 horas a mais. Essas 2 horas custam 220 reais, muito mais que a economia de 10 × 8 = 80 reais.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "I contra V",
+            "cabecalho": [
+              "O quê",
+              "I",
+              "V"
+            ],
+            "linhas": [
+              [
+                "R$ por hora",
+                "120",
+                "110"
+              ],
+              [
+                "horas",
+                "8",
+                "10"
+              ],
+              [
+                "total",
+                "960",
+                "1 100"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, operário I. B (II) acaba rápido, mas a hora cara dá R$ 1 080. C (III) dá R$ 1 040 com o transporte. D (IV) tem a hora mais barata, mas trabalha 9 horas: R$ 1 000. E (V) também cobra pouco por hora, mas leva 10 horas: R$ 1 100.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Pintor A: R$ 50 por hora, 6 horas. Pintor B: R$ 40 por hora, 8 horas. Qual sai mais barato?",
+        "opcoes": [
+          "A, R$ 300",
+          "B, R$ 320",
+          "Os dois iguais"
+        ],
+        "certa": "A, R$ 300",
+        "resposta": "A: 50 × 6 = 300. B: 40 × 8 = 320."
+      }
+    }
+  },
+  {
+    "id": "cmouei995007suoz9gra5gb0g",
+    "materia": "Matemática",
+    "tema": "Aritmética e Porcentagem",
+    "origem": "ENEM 2022 · questão 159",
+    "enunciado": "Cada número que identifica uma agência bancária tem quatro dígitos: N1, N2, N3, N4 mais um dígito verificador N5. Todos esses dígitos são números naturais pertencentes ao conjunto {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}. Para a determinação de N5, primeiramente multiplica-se ordenadamente os quatro primeiros dígitos do número da agência por 5, 4, 3 e 2, respectivamente, somam-se os resultados e obtém-se S = 5 N1 + 4 N2 + 3 N3 + 2 N4. Posteriormente, encontra-se o resto da divisão de S por 11, denotando por R esse resto. Dessa forma, N5 é a diferença 11 − R. Considere o número de uma agência bancária cujos quatro primeiros dígitos são 0100. Qual é o dígito verificador N5 dessa agência bancária?",
+    "A": "0",
+    "B": "6",
+    "C": "7",
+    "D": "8",
+    "E": "9",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "S = 5·0 + 4·1 + 3·0 + 2·0 = 4. 4 ÷ 11 dá 0 e sobra 4: R = 4. N5 = 11 − 4 = 7. C. Erros: D (8) = pesos ao contrário (o 1 vezes 3, S = 3); E (9) = o 1 vezes 2; B (6) = S = 5; A (0) não sai da regra.",
+      "ideia": "Multiplique cada dígito pelo seu peso (5, 4, 3, 2), some, ache o resto da divisão por 11 e tire esse resto de 11.",
+      "pecas": [
+        {
+          "termo": "Dígito verificador",
+          "significado": "Um número a mais no fim que confere se os outros foram digitados certo. Como o último número do CPF."
+        },
+        {
+          "termo": "Resto da divisão",
+          "significado": "O que sobra quando a divisão não é exata. 13 ÷ 5 dá 2 e sobra 3. Se o número é menor que o divisor, sobra ele inteiro: 4 ÷ 11 dá 0 e sobra 4."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Os quatro dígitos da agência são 0, 1, 0, 0. A regra dá um peso a cada posição. A pergunta é o 5º dígito, N5.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Posição",
+              "Dígito",
+              "Peso"
+            ],
+            "linhas": [
+              [
+                "N1",
+                "0",
+                "5"
+              ],
+              [
+                "N2",
+                "1",
+                "4"
+              ],
+              [
+                "N3",
+                "0",
+                "3"
+              ],
+              [
+                "N4",
+                "0",
+                "2"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Cada dígito vezes o seu peso: 0 × 5 = 0, 1 × 4 = 4, 0 × 3 = 0, 0 × 2 = 0. A soma S dá 4. Agora divida 4 por 11: não cabe nenhuma vez, e sobra 4. Esse resto é o R.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Peso vezes dígito",
+            "cabecalho": [
+              "Posição",
+              "Conta",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "N1",
+                "5 × 0",
+                "0"
+              ],
+              [
+                "N2",
+                "4 × 1",
+                "4"
+              ],
+              [
+                "N3",
+                "3 × 0",
+                "0"
+              ],
+              [
+                "N4",
+                "2 × 0",
+                "0"
+              ],
+              [
+                "soma S",
+                "",
+                "4"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Siga a regra do enunciado, uma linha de cada vez. Lá, 5 N1 quer dizer 5 × N1 (o número colado na letra é multiplicação), e N1, N2, N3, N4 são os dígitos na ordem.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Dígito verificador",
+            "dados": [
+              "N1 = 0,\\ N2 = 1",
+              "N3 = 0,\\ N4 = 0"
+            ],
+            "formula": "S = 5 \\times N1 + 4 \\times N2 + 3 \\times N3 + 2 \\times N4",
+            "legenda": [
+              "$S$: soma com os pesos",
+              "$R$: resto de S dividido por 11",
+              "N5: o 5º dígito, 11 menos R"
+            ],
+            "contas": [
+              "S = 5 \\times 0 + 4 \\times 1 + 3 \\times 0 + 2 \\times 0 = 4",
+              "4 \\div 11 = 0,\\ \\text{resto } 4, \\text{ então } R = 4",
+              "N5 = 11 - 4"
+            ],
+            "resultado": "N5 = 7",
+            "nota": "O dígito verificador é 7."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Quando o número é menor que 11, a divisão dá zero e o resto é o próprio número. Só acima de 11 é preciso tirar os onzes que cabem.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Resto da divisão por 11",
+            "cabecalho": [
+              "Número",
+              "Cabe quantas vezes",
+              "Resto"
+            ],
+            "linhas": [
+              [
+                "4",
+                "0",
+                "4"
+              ],
+              [
+                "15",
+                "1",
+                "4"
+              ],
+              [
+                "25",
+                "2",
+                "3"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 7. A (0) não sai da regra: daria 0 só se o resto fosse 11, e o resto de uma divisão por 11 vai até 10. B (6) dá ao 1 o peso 5, da 1ª posição. D (8) usa os pesos na ordem errada: o 1 vezes 3. E (9) dá ao 1 o peso 2, da última posição.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Pela mesma regra, qual é o N5 da agência de dígitos 1, 0, 0, 0?",
+        "opcoes": [
+          "6",
+          "5",
+          "7",
+          "1"
+        ],
+        "certa": "6",
+        "resposta": "S = 5 × 1 = 5; resto 5; 11 − 5 = 6."
+      }
+    }
+  },
+  {
+    "id": "cmouei9810077uoz94kqj3d7a",
+    "materia": "Matemática",
+    "tema": "Grandezas e Medidas",
+    "origem": "ENEM 2022 · questão 137",
+    "enunciado": "Um borrifador de atuação automática libera, a cada acionamento, uma mesma quantidade de inseticida. O recipiente desse produto, quando cheio, contém 360 mL de inseticida, que duram 60 dias se o borrifador permanecer ligado ininterruptamente e for acionado a cada 48 minutos.\nA quantidade de inseticida que é liberada a cada acionamento do borrifador, em mililitro, é",
+    "A": "0,125.",
+    "B": "0,200.",
+    "C": "4,800.",
+    "D": "6,000.",
+    "E": "12,000.",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "60 dias = 60 × 24 × 60 = 86 400 min. 86 400 ÷ 48 = 1 800 acionamentos. 360 ÷ 1 800 = 0,2 mL. B. Erros: D (6) = 360 ÷ 60, o gasto por dia e não por acionamento; E (12) = 360 ÷ 30; C (4,8) = 48 ÷ 10; A (0,125) não sai de conta certa.",
+      "ideia": "Descubra quantas vezes o borrifador dispara em 60 dias e divida os 360 mL por esse número.",
+      "pecas": [
+        {
+          "termo": "mL (mililitro)",
+          "significado": "Uma parte de mil de um litro. Uma colher de chá tem uns 5 mL."
+        },
+        {
+          "termo": "Acionamento",
+          "significado": "Cada vez que o borrifador solta o jato. Um a cada 48 minutos."
+        },
+        {
+          "termo": "Ininterruptamente",
+          "significado": "Sem parar nunca, dia e noite."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O frasco tem 360 mL e dura 60 dias, com um jato a cada 48 minutos, sem parar. A pergunta é quanto sai em cada jato.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "frasco cheio",
+                "360 mL"
+              ],
+              [
+                "dura",
+                "60 dias"
+              ],
+              [
+                "um jato a cada",
+                "48 min"
+              ],
+              [
+                "mL por jato",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Primeiro passe tudo para minutos: 1 dia tem 24 horas e 1 hora tem 60 minutos, então 1 dia tem 24 × 60 = 1 440 minutos. Em 1 dia cabem 1 440 ÷ 48 = 30 jatos (48 × 3 = 144, então 48 × 30 = 1 440). Em 60 dias: 30 × 60 = 1 800 jatos.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Contando os jatos",
+            "cabecalho": [
+              "Período",
+              "Minutos",
+              "Jatos"
+            ],
+            "linhas": [
+              [
+                "1 dia",
+                "1 440",
+                "30"
+              ],
+              [
+                "60 dias",
+                "86 400",
+                "1 800"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Número de jatos = minutos totais ÷ 48. Depois, mL por jato = 360 ÷ jatos. De cabeça: 360 ÷ 1 800, corte um zero dos dois, 36 ÷ 180; e 36 cabe 5 vezes em 180, então dá 1 ÷ 5 = 0,2. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Quanto sai por jato",
+            "dados": [
+              "V = 360\\,\\text{mL}",
+              "T = 60 \\times 24 \\times 60 = 86\\,400\\,\\text{min}",
+              "a cada 48\\,\\text{min}"
+            ],
+            "formula": "q = \\dfrac{V}{n},\\quad n = \\dfrac{T}{48}",
+            "legenda": [
+              "$V$: inseticida do frasco",
+              "$n$: número de jatos",
+              "$q$: mL em cada jato"
+            ],
+            "contas": [
+              "n = \\dfrac{86\\,400}{48} = 1\\,800",
+              "q = \\dfrac{360}{1\\,800}"
+            ],
+            "resultado": "q = 0{,}2\\,\\text{mL}",
+            "nota": "Cada jato solta 0,2 mL."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Dá para conferir por dia: 360 mL em 60 dias são 6 mL por dia. Em 1 dia são 30 jatos, então cada um solta 6 ÷ 30 = 0,2 mL. Mesmo resultado pelos dois caminhos.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Conferindo por dia",
+            "cabecalho": [
+              "Conta",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "mL por dia: 360 ÷ 60",
+                "6"
+              ],
+              [
+                "jatos por dia: 1 440 ÷ 48",
+                "30"
+              ],
+              [
+                "mL por jato: 6 ÷ 30",
+                "0,2"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 0,200 mL. A (0,125) não sai de nenhuma conta com os dados. C (4,800) é 48 ÷ 10, que mistura minutos com mL. D (6,000) é quanto sai por DIA, não por jato. E (12,000) divide 360 por 30, os jatos de um dia, em vez de dividir pelos jatos dos 60 dias.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma torneira pinga 1 vez a cada 30 min e perde 24 mL por dia. Quanto sai em cada pingo?",
+        "opcoes": [
+          "0,5 mL",
+          "1 mL",
+          "2 mL",
+          "24 mL"
+        ],
+        "certa": "0,5 mL",
+        "resposta": "1 dia = 1 440 min; 1 440 ÷ 30 = 48 pingos; 24 ÷ 48 = 0,5 mL."
+      }
+    }
+  },
+  {
+    "id": "cmouei9830078uoz92ndxbljm",
+    "materia": "Matemática",
+    "tema": "Grandezas e Medidas",
+    "origem": "ENEM 2022 · questão 138",
+    "enunciado": "Definem-se o dia e o ano de um planeta de um sistema solar como sendo, respectivamente, o tempo que o planeta leva para dar 1 volta completa em torno de seu próprio eixo de rotação e o tempo para dar 1 volta completa em torno de seu Sol.\nSuponha que exista um planeta Z, em algum sistema solar, onde um dia corresponda a 73 dias terrestres e que 2 de seus anos correspondam a 1 ano terrestre. Considere que 1 ano terrestre tem 365 de seus dias.\nNo planeta Z, seu ano corresponderia a quantos de seus dias?",
+    "A": "2,5",
+    "B": "10,0",
+    "C": "730,0",
+    "D": "13 322,5",
+    "E": "53 290,0",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "2 anos de Z = 1 ano da Terra = 365 dias da Terra, então 1 ano de Z = 182,5 dias da Terra. 1 dia de Z = 73 dias da Terra. 182,5 ÷ 73 = 2,5. A. Erros: B (10) = 730 ÷ 73, dobrou o ano em vez de dividir; C (730) = 365 × 2; D (13 322,5) = 182,5 × 73; E (53 290) = 730 × 73.",
+      "ideia": "Meça tudo em dias da Terra: o ano de Z é metade do nosso (182,5) e o dia de Z tem 73. Os dias de Z num ano de Z são 182,5 ÷ 73.",
+      "pecas": [
+        {
+          "termo": "Dia de um planeta",
+          "significado": "O tempo de 1 volta em torno de si mesmo, como um pião. Na Terra, 24 horas."
+        },
+        {
+          "termo": "Ano de um planeta",
+          "significado": "O tempo de 1 volta em torno do Sol. Na Terra, 365 dias."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Em Z, o dia dura 73 dias da Terra, e 2 anos de Z cabem em 1 ano da Terra. A pergunta é quantos dias de Z tem um ano de Z.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Em dias da Terra"
+            ],
+            "linhas": [
+              [
+                "1 ano da Terra",
+                "365"
+              ],
+              [
+                "1 dia de Z",
+                "73"
+              ],
+              [
+                "2 anos de Z",
+                "365"
+              ],
+              [
+                "1 ano de Z",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Se 2 anos de Z valem 365 dias da Terra, 1 ano de Z vale a metade: 365 ÷ 2 = 182,5 dias da Terra. O ano de Z é mais curto que o nosso.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "O ano de Z",
+            "cabecalho": [
+              "Conta",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "2 anos de Z",
+                "365"
+              ],
+              [
+                "1 ano de Z = 365 ÷ 2",
+                "182,5"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Com o ano e o dia de Z na mesma unidade (dias da Terra), basta dividir: 182,5 ÷ 73. De cabeça: 73 × 2 = 146, e sobram 182,5 − 146 = 36,5, que é metade de 73. São 2 dias e meio.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Dias de Z num ano de Z",
+            "dados": [
+              "\\text{dia de Z} = 73 \\text{ dias da Terra}",
+              "2 \\text{ anos de Z} = 365 \\text{ dias da Terra}"
+            ],
+            "formula": "n = \\dfrac{\\text{ano de Z}}{\\text{dia de Z}}",
+            "legenda": [
+              "$n$: dias de Z num ano de Z",
+              "o traço: dividir o de cima pelo de baixo"
+            ],
+            "contas": [
+              "\\text{ano de Z} = \\dfrac{365}{2} = 182{,}5",
+              "n = \\dfrac{182{,}5}{73}"
+            ],
+            "resultado": "n = 2{,}5",
+            "nota": "O ano de Z tem só 2 dias e meio de Z."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É como perguntar quantas semanas tem um mês: divide o tamanho do mês pelo tamanho da semana. Aqui, o dia de Z é longo (73 dias nossos) e o ano é curto, por isso cabem poucos dias.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Mesma ideia",
+            "cabecalho": [
+              "Pergunta",
+              "Conta",
+              "Resposta"
+            ],
+            "linhas": [
+              [
+                "semanas num mês de 28 dias",
+                "28 ÷ 7",
+                "4"
+              ],
+              [
+                "dias de Z num ano de Z",
+                "182,5 ÷ 73",
+                "2,5"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 2,5. B (10,0) acha que o ano de Z é o DOBRO do nosso (730 ÷ 73), mas cabem 2 anos de Z em 1 nosso: ele é a metade. C (730,0) é 365 × 2 e nem divide pelo dia de Z. D (13 322,5) faz 182,5 × 73: multiplica onde era para dividir. E (53 290,0) faz 730 × 73, os dois erros juntos.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Num planeta, o dia dura 10 dias da Terra e o ano dura 50 dias da Terra. Quantos dias dele tem o ano?",
+        "opcoes": [
+          "5",
+          "500",
+          "40",
+          "60"
+        ],
+        "certa": "5",
+        "resposta": "50 ÷ 10 = 5."
+      }
+    }
+  },
+  {
+    "id": "cmouei997007tuoz9525ttsvy",
+    "materia": "Matemática",
+    "tema": "Grandezas e Medidas",
+    "origem": "ENEM 2022 · questão 160",
+    "enunciado": "Um casal está reformando a cozinha de casa e decidiu comprar um refrigerador novo. Observando a planta da nova cozinha, desenhada na escala de 1 : 50, notaram que o espaço destinado ao refrigerador tinha 3,8 cm de altura e 1,6 cm de largura. Eles sabem que os fabricantes de refrigeradores indicam que, para um bom funcionamento e fácil manejo na limpeza, esses eletrodomésticos devem ser colocados em espaços que permitam uma distância de, pelo menos, 10 cm de outros móveis ou paredes, tanto na parte superior quanto nas laterais. O casal comprou um refrigerador que caberia no local a ele destinado na nova cozinha, seguindo as instruções do fabricante. Esse refrigerador tem altura e largura máximas, em metro, respectivamente, iguais a",
+    "A": "1,80 e 0,60.",
+    "B": "1,80 e 0,70.",
+    "C": "1,90 e 0,80.",
+    "D": "2,00 e 0,90.",
+    "E": "2,00 e 1,00.",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Real = papel × 50: altura 3,8 × 50 = 190 cm; largura 1,6 × 50 = 80 cm. Folga de 10 cm em cima: 190 − 10 = 180 cm. Folga de 10 cm em CADA lado: 80 − 20 = 60 cm. 1,80 e 0,60. A. Erros: B (0,70) tirou 10 cm de um lado só; C (1,90 e 0,80) esqueceu as folgas; D e E somaram as folgas.",
+      "ideia": "Escala 1 : 50 quer dizer que 1 cm no papel são 50 cm de verdade. Passe o espaço para o tamanho real e tire 10 cm em cima e 10 cm de cada lado.",
+      "pecas": [
+        {
+          "termo": "Escala 1 : 50",
+          "significado": "Cada 1 cm do desenho vale 50 cm de verdade. Uma porta de 2 cm na planta tem 100 cm, ou 1 m, de verdade."
+        },
+        {
+          "termo": "Folga",
+          "significado": "O espaço vazio que precisa sobrar em volta da geladeira para ela ventilar."
+        },
+        {
+          "termo": "Laterais",
+          "significado": "Os dois lados, esquerdo e direito. Folga nas laterais são 2 folgas."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Na planta, o espaço da geladeira tem 3,8 cm de altura e 1,6 cm de largura, na escala 1 : 50. A geladeira precisa de 10 cm livres em cima e nos dois lados. A pergunta é a maior altura e a maior largura dela.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "altura na planta",
+                "3,8 cm"
+              ],
+              [
+                "largura na planta",
+                "1,6 cm"
+              ],
+              [
+                "escala",
+                "1 : 50"
+              ],
+              [
+                "folga",
+                "10 cm em cima e em cada lado"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Passe para o real multiplicando por 50. De cabeça: 3,8 × 100 = 380, e a metade é 190 cm; 1,6 × 100 = 160, e a metade é 80 cm. Embaixo não tem folga, a geladeira fica no chão. Em cima sai 10 cm. Na largura saem 10 cm da esquerda e 10 cm da direita.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Onde vai folga",
+            "cabecalho": [
+              "Lado",
+              "Folga"
+            ],
+            "linhas": [
+              [
+                "em cima",
+                "10 cm"
+              ],
+              [
+                "esquerda",
+                "10 cm"
+              ],
+              [
+                "direita",
+                "10 cm"
+              ],
+              [
+                "embaixo (chão)",
+                "0"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Multiplique por 50 e depois tire as folgas.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Do papel para a cozinha",
+            "dados": [
+              "\\text{papel: } 3{,}8\\,\\text{cm por } 1{,}6\\,\\text{cm}",
+              "\\text{escala } 1 : 50",
+              "\\text{folga} = 10\\,\\text{cm}"
+            ],
+            "formula": "\\text{real} = \\text{papel} \\times 50",
+            "legenda": [
+              "real: a medida na cozinha",
+              "papel: a medida na planta"
+            ],
+            "contas": [
+              "\\text{altura} = 3{,}8 \\times 50 = 190\\,\\text{cm}",
+              "\\text{largura} = 1{,}6 \\times 50 = 80\\,\\text{cm}",
+              "190 - 10 = 180\\,\\text{cm}",
+              "80 - 10 - 10 = 60\\,\\text{cm}"
+            ],
+            "resultado": "1{,}80\\,\\text{m} \\text{ por } 0{,}60\\,\\text{m}",
+            "nota": "A geladeira pode ter até 1,80 m por 0,60 m."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A largura perde duas folgas porque a geladeira tem dois lados, e a altura perde uma só porque só tem folga em cima. Por fim, 100 cm = 1 m: 180 cm = 1,80 m e 60 cm = 0,60 m.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Conferindo",
+            "cabecalho": [
+              "Medida",
+              "Espaço",
+              "Geladeira"
+            ],
+            "linhas": [
+              [
+                "altura",
+                "190 cm",
+                "180 cm"
+              ],
+              [
+                "largura",
+                "80 cm",
+                "60 cm"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 1,80 e 0,60. B (1,80 e 0,70) tira a folga de um lado só. C (1,90 e 0,80) esquece as folgas e dá o tamanho do espaço inteiro. D (2,00 e 0,90) e E (2,00 e 1,00) somam as folgas em vez de tirar, e a geladeira não caberia.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Numa planta 1 : 100, uma porta mede 0,8 cm de largura. Qual a largura real?",
+        "opcoes": [
+          "80 cm",
+          "8 cm",
+          "800 cm",
+          "100,8 cm"
+        ],
+        "certa": "80 cm",
+        "resposta": "0,8 × 100 = 80 cm."
+      }
+    }
+  },
+  {
+    "id": "cmouei97z0076uoz9jmlp0m0r",
+    "materia": "Matemática",
+    "tema": "Estatística",
+    "origem": "ENEM 2022 · questão 136",
+    "enunciado": "Em uma universidade, atuam professores que estão enquadrados funcionalmente pela sua maior titulação: mestre ou doutor. Nela há, atualmente, 60 mestres e 40 doutores. Os salários mensais dos professores mestres e dos doutores são, respectivamente, R$ 8 000,00 e R$ 12 000,00.\nA diretoria da instituição pretende proporcionar um aumento salarial diferenciado para o ano seguinte, de tal forma que o salário médio mensal dos professores dessa instituição não ultrapasse R$ 12 240,00. A universidade já estabeleceu que o aumento salarial será de 25% para os mestres e precisa ainda definir o percentual de reajuste para os doutores.\nMantido o número atual de professores com suas atuais titulações, o aumento salarial, em porcentagem, a ser concedido aos doutores deverá ser de, no máximo,",
+    "A": "14,4.",
+    "B": "20,7.",
+    "C": "22,0.",
+    "D": "30,0.",
+    "E": "37,5.",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "Mestres: 8 000 × 1,25 = 10 000. Média máxima × 100 = 1 224 000. 1 224 000 − 60 × 10 000 = 624 000 para os 40 doutores: 15 600 cada. 15 600 ÷ 12 000 = 1,30: 30%. D. Erros: B (20,7) = média simples (10 000 + x) ÷ 2 = 12 240, sem pesar 60 e 40; A, C e E não saem de conta certa.",
+      "ideia": "Com 100 professores e média de até 12 240, o total da folha pode ir até 1 224 000. Tire o que vai para os mestres e divida o resto pelos 40 doutores.",
+      "pecas": [
+        {
+          "termo": "Média",
+          "significado": "Tudo somado dividido por quantos são. Notas 6, 8 e 10: (6 + 8 + 10) ÷ 3 = 8."
+        },
+        {
+          "termo": "Média ponderada",
+          "significado": "Média em que cada valor conta tantas vezes quantas aparece. 60 mestres pesam mais que 40 doutores."
+        },
+        {
+          "termo": "Aumento de 25%",
+          "significado": "Somar 25 de cada 100. 8 000 + 25% = 8 000 × 1,25 = 10 000."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "São 60 mestres e 40 doutores. Os mestres vão ganhar 25% a mais. A média de todos não pode passar de R$ 12 240. A pergunta é o maior aumento possível para os doutores.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Grupo",
+              "Quantos",
+              "Salário hoje",
+              "Aumento"
+            ],
+            "linhas": [
+              [
+                "mestres",
+                "60",
+                "8 000",
+                "25%"
+              ],
+              [
+                "doutores",
+                "40",
+                "12 000",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A média vezes o número de pessoas dá o total da folha. 12 240 × 100 = 1 224 000. Os mestres, com aumento, ganham 10 000 cada: 60 × 10 000 = 600 000. O que sobra é dos doutores.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A folha de pagamento",
+            "cabecalho": [
+              "Parte",
+              "Conta",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "total máximo",
+                "12 240 × 100",
+                "1 224 000"
+              ],
+              [
+                "mestres",
+                "60 × 10 000",
+                "600 000"
+              ],
+              [
+                "doutores",
+                "1 224 000 − 600 000",
+                "624 000"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ache o novo salário do doutor e compare com o de hoje. No quadro, 40x quer dizer 40 × x. Dos 1 224 000 tire os 600 000 dos mestres: sobram 624 000. Dividido por 40: 624 ÷ 4 = 156, mais os zeros, 15 600. E 15 600 ÷ 12 000 = 1,30, porque 12 000 + 30% (3 600) = 15 600.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Salário máximo do doutor",
+            "dados": [
+              "60 \\text{ mestres a } 10\\,000",
+              "40 \\text{ doutores a } x",
+              "M = 12\\,240"
+            ],
+            "formula": "M = \\dfrac{60 \\times 10\\,000 + 40x}{100}",
+            "legenda": [
+              "$M$: média dos salários",
+              "$x$: novo salário do doutor",
+              "o traço: dividir o de cima pelo de baixo"
+            ],
+            "contas": [
+              "12\\,240 \\times 100 = 600\\,000 + 40x",
+              "40x = 624\\,000",
+              "x = 15\\,600",
+              "\\dfrac{15\\,600}{12\\,000} = 1{,}30"
+            ],
+            "resultado": "\\text{aumento} = 30\\%",
+            "nota": "Os doutores podem ganhar até 30% a mais."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Confira: com doutores a 15 600, o total é 600 000 + 40 × 15 600 = 600 000 + 624 000 = 1 224 000, e 1 224 000 ÷ 100 = 12 240. Bate exatamente com o máximo.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Conferindo a média",
+            "cabecalho": [
+              "Grupo",
+              "Quantos",
+              "Salário",
+              "Total"
+            ],
+            "linhas": [
+              [
+                "mestres",
+                "60",
+                "10 000",
+                "600 000"
+              ],
+              [
+                "doutores",
+                "40",
+                "15 600",
+                "624 000"
+              ],
+              [
+                "todos",
+                "100",
+                "",
+                "1 224 000"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 30%. A (14,4%) cabe no limite, mas não é o máximo: a média ficaria em R$ 11 491,20. B (20,7%) faz a média simples de um mestre e um doutor, como se houvesse o mesmo número de cada. C (22,0%) também cabe, mas não é o máximo: média de R$ 11 856. E (37,5%) passa do limite: a média iria a R$ 12 600.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Numa sala, 3 alunos tiraram 6 e 2 alunos tiraram 9. Qual é a média da sala?",
+        "opcoes": [
+          "7,2",
+          "7,5",
+          "15",
+          "6"
+        ],
+        "certa": "7,2",
+        "resposta": "(3 × 6 + 2 × 9) ÷ 5 = 36 ÷ 5 = 7,2."
+      }
+    }
+  },
+  {
+    "id": "cmoudnny7003yuoz9rl5k4j71",
+    "materia": "Matemática",
+    "tema": "Estatística",
+    "origem": "ENEM 2021 · questão 173",
+    "enunciado": "Um zootecnista pretende testar se uma nova ração para coelhos é mais eficiente do que a que ele vem utilizando atualmente. A ração atual proporciona uma massa média de 10 kg por coelho, com um desvio padrão de 1 kg, alimentando-os com essa ração durante um período de três meses. O zootecnista selecionou uma amostra de coelhos e os alimentou com a nova ração pelo mesmo período de tempo. Ao final, anotou a massa de cada coelho, obtendo um desvio padrão de 1,5 kg para a distribuição das massas dos coelhos dessa amostra. Para avaliar a eficiência dessa ração, ele utilizará o coeficiente de variação (CV), que é uma medida de dispersão definida por CV = s/x, em que s representa o desvio padrão e x, a média das massas dos coelhos que foram alimentados com uma determinada ração. O zootecnista substituirá a ração que vinha utilizando pela nova, caso o coeficiente de variação da distribuição das massas dos coelhos que foram alimentados com a nova ração seja menor do que o coeficiente de variação da distribuição das massas dos coelhos que foram alimentados com a ração atual. A substituição da ração ocorrerá se a média da distribuição das massas dos coelhos da amostra, em quilograma, for superior a",
+    "A": "5,0.",
+    "B": "9,5.",
+    "C": "10,0.",
+    "D": "10,5.",
+    "E": "15,0.",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "Ração atual: CV = 1 ÷ 10 = 0,1. Nova: 1,5 ÷ x < 0,1, então x > 1,5 ÷ 0,1 = 15. E. Erros: C (10) mantém a média antiga, mas aí CV = 0,15, maior; D (10,5) soma à média os 0,5 kg a mais de desvio; B (9,5) subtrai; A (5) = 0,5 ÷ 0,1.",
+      "ideia": "O coeficiente de variação compara o espalhamento com o tamanho da média. Para o da nova ração ficar menor que 0,1, a média dela precisa passar de 15 kg.",
+      "pecas": [
+        {
+          "termo": "Desvio padrão (s)",
+          "significado": "O quanto os valores se espalham em volta da média. Coelhos de 9, 10 e 11 kg espalham pouco; de 5, 10 e 15 kg espalham muito."
+        },
+        {
+          "termo": "Média (x)",
+          "significado": "Tudo somado dividido por quantos são. Coelhos de 9, 10 e 11 kg têm média 10 kg."
+        },
+        {
+          "termo": "Coeficiente de variação (CV)",
+          "significado": "Desvio ÷ média. Mede o espalhamento em proporção: espalhar 1 kg em coelhos de 10 kg é muito mais que em bois de 500 kg."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A ração atual dá média 10 kg e desvio 1 kg. A nova deu desvio 1,5 kg. A troca acontece se o CV da nova for MENOR que o da atual. A pergunta é a partir de que média isso acontece.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "Ração",
+              "Média",
+              "Desvio"
+            ],
+            "linhas": [
+              [
+                "atual",
+                "10 kg",
+                "1 kg"
+              ],
+              [
+                "nova",
+                "?",
+                "1,5 kg"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "CV da atual: 1 ÷ 10 = 0,1. Na nova, o desvio é maior (1,5). Para a divisão 1,5 ÷ média dar menos que 0,1, a média tem que ser grande o bastante.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "CV da ração atual",
+            "cabecalho": [
+              "Conta",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "s ÷ x = 1 ÷ 10",
+                "0,1"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Escreva a condição e descubra a média que deixa o CV da nova igual a 0,1. No quadro, < quer dizer \"menor que\" e > quer dizer \"maior que\". Dividir por 0,1 é o mesmo que multiplicar por 10: 1,5 ÷ 0,1 = 15. Qualquer média acima disso serve.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Média mínima da nova ração",
+            "dados": [
+              "\\text{atual: média } 10\\,\\text{kg},\\ \\text{desvio } 1\\,\\text{kg}",
+              "\\text{nova: desvio } 1{,}5\\,\\text{kg}"
+            ],
+            "formula": "CV = \\dfrac{s}{x}",
+            "legenda": [
+              "$s$: desvio padrão",
+              "$x$: média das massas",
+              "o traço: dividir o de cima pelo de baixo"
+            ],
+            "contas": [
+              "\\text{atual: } \\dfrac{1}{10} = 0{,}1",
+              "\\text{nova: } \\dfrac{1{,}5}{x} < 0{,}1",
+              "x > \\dfrac{1{,}5}{0{,}1}"
+            ],
+            "resultado": "x > 15\\,\\text{kg}",
+            "nota": "A média da nova tem que passar de 15 kg."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Quanto maior a média, menor fica 1,5 dividido por ela. Em 15 kg o CV empata com o da atual (0,1); acima de 15, fica menor.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "CV da nova para cada média",
+            "cabecalho": [
+              "Média",
+              "1,5 ÷ média",
+              "Troca?"
+            ],
+            "linhas": [
+              [
+                "10 kg",
+                "0,15",
+                "não"
+              ],
+              [
+                "12 kg",
+                "0,125",
+                "não"
+              ],
+              [
+                "15 kg",
+                "0,1",
+                "empata"
+              ],
+              [
+                "20 kg",
+                "0,075",
+                "sim"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 15,0. A (5,0) faz 0,5 ÷ 0,1, usando só o 0,5 kg de desvio a mais. B (9,5) tira esse 0,5 da média. C (10,0) mantém a média de antes, mas aí o CV da nova fica 0,15, MAIOR. D (10,5) soma o 0,5 à média, conta que não tem sentido.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Desvio padrão de 2 kg e média de 40 kg. Qual é o coeficiente de variação?",
+        "opcoes": [
+          "0,05",
+          "20",
+          "0,5",
+          "42"
+        ],
+        "certa": "0,05",
+        "resposta": "2 ÷ 40 = 0,05."
+      }
+    }
+  },
+  {
+    "id": "cmoudnnyg0042uoz9kc45yues",
+    "materia": "Matemática",
+    "tema": "Estatística",
+    "origem": "ENEM 2021 · questão 177",
+    "enunciado": "O organizador de uma competição de lançamento de dardos pretende tornar o campeonato mais competitivo. Pelas regras atuais da competição, numa rodada, o jogador lança 3 dardos e pontua caso acerte pelo menos um deles no alvo. O organizador considera que, em média, os jogadores têm, em cada lançamento, 1/2 de probabilidade de acertar um dardo no alvo. A fim de tornar o jogo mais atrativo, planeja modificar as regras de modo que a probabilidade de um jogador pontuar em uma rodada seja igual ou superior a 9/10. Para isso, decide aumentar a quantidade de dardos a serem lançados em cada rodada. Com base nos valores considerados pelo organizador da competição, a quantidade mínima de dardos que deve ser disponibilizada em uma rodada para tornar o jogo mais atrativo é",
+    "A": "2.",
+    "B": "4.",
+    "C": "6.",
+    "D": "9.",
+    "E": "10.",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Pontuar = acertar pelo menos 1 = 1 − (errar todos). Errar todos com n dardos = (1/2)^n. n = 3: 1 − 1/8 = 0,875 < 0,9. n = 4: 1 − 1/16 = 0,9375 ≥ 0,9. B. Erros: D (9) e E (10) leem 9/10 como 9 ou 10 dardos; C (6) passa do mínimo; A (2) é menos que os 3 de hoje.",
+      "ideia": "É mais fácil contar a chance de errar TODOS os dardos e tirar de 1. Cada dardo a mais corta essa chance pela metade.",
+      "pecas": [
+        {
+          "termo": "Probabilidade",
+          "significado": "A chance de algo acontecer, escrita como fração. O traço quer dizer dividir: 1/2 é 1 ÷ 2, metade das vezes, como dar cara numa moeda; 9/10 é 9 ÷ 10 = 0,9."
+        },
+        {
+          "termo": "Pelo menos um",
+          "significado": "Um, dois ou mais acertos. É o contrário de errar todos: chance de pelo menos um = 1 − chance de errar todos."
+        },
+        {
+          "termo": "(1/2) elevado a n",
+          "significado": "1/2 multiplicado por ele mesmo n vezes. Com 3 dardos: 1/2 × 1/2 × 1/2 = 1/8."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Cada dardo acerta com chance 1/2. O jogador pontua se acertar pelo menos 1. A regra nova quer chance de pontuar de 9/10 ou mais. A pergunta é o menor número de dardos.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "chance de acertar 1 dardo",
+                "1/2"
+              ],
+              [
+                "dardos hoje",
+                "3"
+              ],
+              [
+                "chance desejada",
+                "9/10 = 0,9"
+              ],
+              [
+                "dardos novos",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Errar 1 dardo tem chance 1/2. Errar 2 seguidos: metade da metade, 1/4. Cada dardo divide por 2 a chance de errar todos. A chance de pontuar é o que falta para 1.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Dardo a dardo",
+            "cabecalho": [
+              "Dardos",
+              "Errar todos",
+              "Pontuar"
+            ],
+            "linhas": [
+              [
+                "1",
+                "1/2",
+                "0,5"
+              ],
+              [
+                "2",
+                "1/4",
+                "0,75"
+              ],
+              [
+                "3",
+                "1/8",
+                "0,875"
+              ],
+              [
+                "4",
+                "1/16",
+                "0,9375"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Teste o número de dardos até a chance de pontuar chegar a 0,9. Com 3: 1/8 = 1 ÷ 8 = 0,125, e 1 − 0,125 = 0,875. Com 4: 1/16 é a metade de 0,125, ou 0,0625, e 1 − 0,0625 = 0,9375. No quadro, ≥ quer dizer \"maior ou igual\".",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Menor número de dardos",
+            "dados": [
+              "p = \\tfrac{1}{2} \\text{ de errar cada um}",
+              "\\text{alvo: } 0{,}9"
+            ],
+            "formula": "P = 1 - \\left(\\tfrac{1}{2}\\right)^n",
+            "legenda": [
+              "$P$: chance de pontuar",
+              "$n$: número de dardos"
+            ],
+            "contas": [
+              "n = 3:\\ 1 - \\tfrac{1}{8} = 0{,}875 < 0{,}9",
+              "n = 4:\\ 1 - \\tfrac{1}{16} = 0{,}9375 \\geq 0{,}9"
+            ],
+            "resultado": "n = 4",
+            "nota": "Com 4 dardos a chance de pontuar passa de 9 em 10."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Pontuar com 9/10 é o mesmo que errar todos com no máximo 1/10. Com 3 dardos, errar todos é 1/8 (0,125), mais que 0,1. Com 4, é 1/16 (0,0625), menos que 0,1.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Errar todos contra o limite 0,1",
+            "cabecalho": [
+              "Dardos",
+              "Errar todos",
+              "Passa?"
+            ],
+            "linhas": [
+              [
+                "3",
+                "0,125",
+                "não"
+              ],
+              [
+                "4",
+                "0,0625",
+                "sim"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 4 dardos. A (2) é menos que os 3 de hoje: a chance cai para 0,75. C (6) funciona, mas não é o mínimo. D (9) e E (10) leem o 9/10 como número de dardos.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma moeda é lançada 2 vezes. Qual a chance de sair cara pelo menos uma vez?",
+        "opcoes": [
+          "3/4",
+          "1/2",
+          "1/4",
+          "1"
+        ],
+        "certa": "3/4",
+        "resposta": "Coroa nas duas: 1/4. Pelo menos uma cara: 1 − 1/4 = 3/4."
+      }
+    }
+  },
+  {
+    "id": "cmoudnnye0041uoz9ryp2dxoj",
+    "materia": "Matemática",
+    "tema": "Funções",
+    "origem": "ENEM 2021 · questão 176",
+    "enunciado": "Aplicativos que gerenciam serviços de hospedagem têm ganhado espaço no Brasil e no mundo por oferecer opções diferenciadas em termos de localização e valores de hospedagem. Em um desses aplicativos, o preço P a ser pago pela hospedagem é calculado considerando um preço por diária d, acrescido de uma taxa fixa de limpeza L e de uma taxa de serviço. Essa taxa de serviço é um valor percentual s calculado sobre o valor pago pelo total das diárias. Nessa situação, o preço a ser pago pelo aplicativo para uma hospedagem de n diárias pode ser obtido pela expressão",
+    "A": "P = d·n + L + d·n·s",
+    "B": "P = d·n + L + d·s",
+    "C": "P = d + L + s",
+    "D": "P = d·n·s + L",
+    "E": "P = d·n + L + s",
+    "resposta": "A",
+    "explicacao": {
+      "conferencia": "Diárias: d·n. Limpeza: + L. Taxa de serviço: porcentagem s do total das diárias = d·n·s. P = d·n + L + d·n·s. A. Exemplo: d = 100, n = 3, L = 50, s = 10%: 300 + 50 + 30 = 380. Erros: B (d·s) cobra a taxa só de 1 diária; E (+ s) soma a porcentagem solta, sem ser de nada; C esquece n; D esquece as diárias e deixa só a taxa.",
+      "ideia": "Monte o preço por pedaços, como na nota fiscal: as diárias (preço vezes quantas), a limpeza e a taxa de serviço, que é uma porcentagem do valor das diárias.",
+      "pecas": [
+        {
+          "termo": "Expressão",
+          "significado": "Uma conta com letras no lugar de números. O ponto · quer dizer vezes: d·n é d × n. \"Preço = 2 × quantidade\" vale para qualquer quantidade."
+        },
+        {
+          "termo": "Taxa percentual (s)",
+          "significado": "Uma porcentagem cobrada em cima de um valor. Taxa de 10% sobre R$ 300 são R$ 30: 300 × 0,10."
+        },
+        {
+          "termo": "Taxa fixa (L)",
+          "significado": "Valor que não muda com o número de diárias. Limpeza de R$ 50 é R$ 50 para 1 ou 10 diárias."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O preço P junta três coisas: as diárias, a limpeza e a taxa de serviço. A pergunta é a fórmula que dá P para n diárias.",
+          "visual": {
+            "tipo": "legenda",
+            "titulo": "O preço em pedaços",
+            "partes": [
+              {
+                "texto": "P =",
+                "rotulo": "preço a pagar"
+              },
+              {
+                "texto": "d \\cdot n",
+                "rotulo": "diárias somadas",
+                "cor": "a"
+              },
+              {
+                "texto": "+ L",
+                "rotulo": "limpeza, valor fixo",
+                "cor": "b"
+              },
+              {
+                "texto": "+ d \\cdot n \\cdot s",
+                "rotulo": "taxa sobre as diárias",
+                "cor": "c"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Diária d vezes n diárias dá o total das diárias, d·n. A limpeza L entra uma vez só. A taxa de serviço é a porcentagem s do total das diárias, ou seja, d·n vezes s.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Cada pedaço",
+            "cabecalho": [
+              "Pedaço",
+              "Como se calcula",
+              "Na fórmula"
+            ],
+            "linhas": [
+              [
+                "diárias",
+                "diária × quantas",
+                "d·n"
+              ],
+              [
+                "limpeza",
+                "fixa",
+                "L"
+              ],
+              [
+                "taxa de serviço",
+                "s de (d·n)",
+                "d·n·s"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Teste a fórmula com números inventados: diária de R$ 100, 3 diárias, limpeza de R$ 50 e taxa de 10%.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Testando com números",
+            "dados": [
+              "d = 100,\\ n = 3",
+              "L = 50",
+              "s = 10\\% = 0{,}1"
+            ],
+            "formula": "P = d \\cdot n + L + d \\cdot n \\cdot s",
+            "legenda": [
+              "$d$: preço da diária",
+              "$n$: número de diárias",
+              "$s$: taxa de serviço"
+            ],
+            "contas": [
+              "P = 100 \\cdot 3 + 50 + 100 \\cdot 3 \\cdot 0{,}1",
+              "P = 300 + 50 + 30"
+            ],
+            "resultado": "P = 380",
+            "nota": "3 diárias custam R$ 380 no total."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Com os mesmos números, as outras fórmulas dão valores sem sentido. A taxa precisa ser de algum valor; sozinha (+ s) ela vira só 0,1 real.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As fórmulas com os mesmos números",
+            "cabecalho": [
+              "Letra",
+              "Conta",
+              "P"
+            ],
+            "linhas": [
+              [
+                "A",
+                "300 + 50 + 30",
+                "380"
+              ],
+              [
+                "B",
+                "300 + 50 + 10",
+                "360"
+              ],
+              [
+                "E",
+                "300 + 50 + 0,1",
+                "350,10"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A. B (d·s) calcula a taxa sobre UMA diária, mas ela é sobre o total das diárias (d·n·s). C (d + L + s) esquece o número de diárias e ainda soma a taxa solta. D (d·n·s + L) cobra a taxa e esquece de cobrar as próprias diárias. E (+ s) soma a porcentagem solta, sem dizer de quê.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Corrida de app: R$ 2 por km, x km, mais taxa fixa de R$ 5. Qual expressão dá o preço?",
+        "opcoes": [
+          "2x + 5",
+          "2 + x + 5",
+          "5x + 2",
+          "2x"
+        ],
+        "certa": "2x + 5",
+        "resposta": "Preço por km vezes os km, mais a taxa fixa."
+      }
+    }
+  },
+  {
+    "id": "cmouei99v0085uoz9r71wzkgb",
+    "materia": "Matemática",
+    "tema": "Funções",
+    "origem": "ENEM 2022 · questão 172",
+    "enunciado": "A luminosidade L de uma estrela está relacionada com o raio R e com a temperatura T dessa estrela segundo a Lei de Stefan-Boltzmann: L = c · R² · T⁴, em que c é uma constante igual para todas as estrelas. Considere duas estrelas E e F, sendo que a estrela E tem metade do raio da estrela F e o dobro da temperatura de F. Indique por LE e LF suas respectivas luminosidades. A relação entre as luminosidades dessas duas estrelas é dada por",
+    "A": "LE = LF/2",
+    "B": "LE = LF/4",
+    "C": "LE = LF",
+    "D": "LE = 4LF",
+    "E": "LE = 8LF",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "L_E = c · (R/2)² · (2T)⁴ = c · R²/4 · 16T⁴ = 4 · c R² T⁴ = 4 L_F. D. Erros: B (L_F/4) olha só o raio; C (igual) acha que metade e dobro se anulam; E (8) faz 2⁴ = 8; A (L_F/2) não eleva ao quadrado.",
+      "ideia": "Na fórmula, o raio entra ao quadrado e a temperatura à quarta: metade do raio divide por 4 e o dobro da temperatura multiplica por 16. Juntos, 16 ÷ 4 = 4.",
+      "pecas": [
+        {
+          "termo": "Potência",
+          "significado": "Um número multiplicado por ele mesmo. R² = R × R; T⁴ = T × T × T × T. Então 2⁴ = 2 × 2 × 2 × 2 = 16."
+        },
+        {
+          "termo": "Constante (c)",
+          "significado": "Um número que não muda. Igual para as duas estrelas, então some na comparação."
+        },
+        {
+          "termo": "Luminosidade",
+          "significado": "Quanta luz a estrela solta. Como a potência de uma lâmpada."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A estrela E tem metade do raio de F e o dobro da temperatura de F. LE e LF são a luz de E e a de F, e o ponto · quer dizer vezes. A pergunta é quantas vezes a luz de E é a de F.",
+          "visual": {
+            "tipo": "legenda",
+            "titulo": "A lei da questão",
+            "partes": [
+              {
+                "texto": "L =",
+                "rotulo": "luz da estrela"
+              },
+              {
+                "texto": "c",
+                "rotulo": "número fixo"
+              },
+              {
+                "texto": "\\cdot R^2",
+                "rotulo": "raio vezes raio",
+                "cor": "a"
+              },
+              {
+                "texto": "\\cdot T^4",
+                "rotulo": "temperatura 4 vezes",
+                "cor": "b"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Troque o raio pela metade e a temperatura pelo dobro. O traço quer dizer dividir: 1/2 é metade. O raio ao quadrado: (1/2) × (1/2) = 1/4, um quarto (dividir por 4). A temperatura à quarta: 2 × 2 × 2 × 2 = 16.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Efeito de cada mudança",
+            "cabecalho": [
+              "Mudança",
+              "Na fórmula",
+              "Fator"
+            ],
+            "linhas": [
+              [
+                "metade do raio",
+                "(1/2)²",
+                "1/4"
+              ],
+              [
+                "dobro da temperatura",
+                "2⁴",
+                "16"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Multiplique os dois efeitos.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Luz de E comparada à de F",
+            "dados": [
+              "\\text{raio de E} = \\text{raio de F} \\div 2",
+              "\\text{temperatura de E} = 2 \\times \\text{temperatura de F}"
+            ],
+            "formula": "L = c \\times R^2 \\times T^4",
+            "legenda": [
+              "$R$: raio; $T$: temperatura; $c$: número fixo",
+              "R² = R × R; T⁴ = T × T × T × T"
+            ],
+            "contas": [
+              "\\text{raio: } \\tfrac{1}{2} \\times \\tfrac{1}{2} = \\tfrac{1}{4}",
+              "\\text{temperatura: } 2 \\times 2 \\times 2 \\times 2 = 16",
+              "16 \\times \\tfrac{1}{4} = 16 \\div 4 = 4"
+            ],
+            "resultado": "\\text{LE} = 4 \\times \\text{LF}",
+            "nota": "E brilha 4 vezes mais que F."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Teste com números: F com raio 2 e temperatura 1 dá R² × T⁴ = 4 × 1 = 4. E com raio 1 e temperatura 2 dá 1 × 16 = 16. 16 ÷ 4 = 4. O c é igual nas duas e não muda a comparação.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Teste com números",
+            "cabecalho": [
+              "Estrela",
+              "R",
+              "T",
+              "R² × T⁴"
+            ],
+            "linhas": [
+              [
+                "F",
+                "2",
+                "1",
+                "4 × 1 = 4"
+              ],
+              [
+                "E",
+                "1",
+                "2",
+                "1 × 16 = 16"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, LE = 4LF. A (LF/2) usa só a metade do raio, sem o quadrado e sem a temperatura. B (LF/4) olha só o raio e esquece a temperatura. C (igual) acha que metade e dobro se anulam, mas cada um tem uma potência diferente. E (8LF) faz 2⁴ como 2 × 4 = 8 e ainda esquece o raio; o certo é 2 × 2 × 2 × 2 = 16.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Se A = x² e x fica 3 vezes maior, A fica quantas vezes maior?",
+        "opcoes": [
+          "9",
+          "3",
+          "6",
+          "27"
+        ],
+        "certa": "9",
+        "resposta": "3² = 3 × 3 = 9."
+      }
+    }
+  },
+  {
+    "id": "cmouei9a10088uoz90w2bqvc6",
+    "materia": "Matemática",
+    "tema": "Funções",
+    "origem": "ENEM 2022 · questão 176",
+    "enunciado": "Ao analisar os dados de uma epidemia em uma cidade, peritos obtiveram um modelo que avalia a quantidade de pessoas infectadas a cada mês, ao longo de um ano. O modelo é dado por p(t) = -t² + 10t + 24, sendo t um número natural, variando de 1 a 12, que representa os meses do ano, e p(t) a quantidade de pessoas infectadas no mês t do ano. Para tentar diminuir o número de infectados no próximo ano, a Secretaria Municipal de Saúde decidiu intensificar a propaganda oficial sobre os cuidados com a epidemia. Foram apresentadas cinco propostas (I, II, III, IV e V), com diferentes períodos de intensificação das propagandas: • I: 1 ≤ t ≤ 2; • II: 3 ≤ t ≤ 4; • III: 5 ≤ t ≤ 6; • IV: 7 ≤ t ≤ 9; • V: 10 ≤ t ≤ 12. A sugestão dos peritos é que seja escolhida a proposta cujo período de intensificação da propaganda englobe o mês em que, segundo o modelo, há a maior quantidade de infectados. A sugestão foi aceita. A proposta escolhida foi a",
+    "A": "I.",
+    "B": "II.",
+    "C": "III.",
+    "D": "IV.",
+    "E": "V.",
+    "resposta": "C",
+    "explicacao": {
+      "conferencia": "p(t) = −t² + 10t + 24. p(0) = 24 e p(10) = −100 + 100 + 24 = 24: valores iguais, o pico fica no meio, t = 5. p(5) = −25 + 50 + 24 = 49. t = 5 está em 5 ≤ t ≤ 6: III. C. Erros: E (10 a 12) lê o 10 de 10t como o mês do pico; B (3 a 4) e D (7 a 9) ficam de um lado do pico; A pega o começo do ano.",
+      "ideia": "A curva sobe e desce como um morro, igual dos dois lados. Ache dois meses com o mesmo número de infectados: o pico fica bem no meio deles.",
+      "pecas": [
+        {
+          "termo": "Parábola",
+          "significado": "A curva de uma conta com t² (t vezes t). Com o sinal de menos na frente, ela tem a forma de um morro: sobe, chega no pico e desce."
+        },
+        {
+          "termo": "Simetria (espelho)",
+          "significado": "Os dois lados do morro são iguais, como um rosto dos dois lados do nariz. Pontos de mesma altura ficam à mesma distância do pico."
+        },
+        {
+          "termo": "p(t)",
+          "significado": "O número de infectados no mês t. p(5) é a conta feita com t = 5."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O modelo dá o número de infectados p em cada mês t. A pergunta é qual proposta cobre o mês com MAIS infectados, o pico do morro. Nas propostas, 5 ≤ t ≤ 6 quer dizer \"do mês 5 ao mês 6\" (≤: menor ou igual).",
+          "visual": {
+            "tipo": "grafico",
+            "titulo": "Infectados por mês",
+            "funcoes": [
+              {
+                "expr": "-x^2+10*x+24",
+                "rotulo": "p(t)",
+                "cor": "a"
+              }
+            ],
+            "pontos": [
+              {
+                "x": 0,
+                "y": 24,
+                "rotulo": "24"
+              },
+              {
+                "x": 10,
+                "y": 24,
+                "rotulo": "24"
+              },
+              {
+                "x": 5,
+                "y": 49,
+                "rotulo": "pico",
+                "cor": "b"
+              }
+            ],
+            "x": [
+              0,
+              12
+            ],
+            "y": [
+              0,
+              55
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Em t = 0, sobra só o 24: p(0) = 24. Em t = 10: −100 + 100 + 24 = 24 de novo. Mesma altura em 0 e em 10, então pelo espelho o pico está no meio, em t = 5.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Dois pontos de mesma altura",
+            "cabecalho": [
+              "t",
+              "Conta",
+              "p(t)"
+            ],
+            "linhas": [
+              [
+                "0",
+                "0 + 0 + 24",
+                "24"
+              ],
+              [
+                "10",
+                "−100 + 100 + 24",
+                "24"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "O pico fica na metade entre dois meses de mesmo valor.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Mês do pico pelo espelho",
+            "dados": [
+              "p(t) = -t^2 + 10t + 24",
+              "p(0) = 24,\\ p(10) = 24"
+            ],
+            "formula": "\\text{pico} = \\dfrac{0 + 10}{2}",
+            "legenda": [
+              "pico: o mês com mais infectados",
+              "o traço: dividir o de cima pelo de baixo"
+            ],
+            "contas": [
+              "\\text{pico} = \\dfrac{10}{2} = 5",
+              "p(5) = -25 + 50 + 24"
+            ],
+            "resultado": "t = 5,\\ p(5) = 49",
+            "nota": "O pico é no mês 5, com 49 infectados."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Veja os meses em volta do 5: os valores sobem até 5 e descem igualzinho depois. O 4 e o 6 dão 48; o 3 e o 7 dão 45. É o espelho.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Em volta do pico",
+            "cabecalho": [
+              "Mês t",
+              "p(t)"
+            ],
+            "linhas": [
+              [
+                "3",
+                "45"
+              ],
+              [
+                "4",
+                "48"
+              ],
+              [
+                "5",
+                "49"
+              ],
+              [
+                "6",
+                "48"
+              ],
+              [
+                "7",
+                "45"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, proposta III (meses 5 e 6), que inclui o mês 5. A (I, meses 1 e 2) pega o começo do ano, quando os casos ainda sobem. B (II, meses 3 e 4) para antes do pico. D (IV, meses 7 a 9) começa depois do pico. E (V, meses 10 a 12) lê o 10 de 10t como o mês do pico.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Na curva f(x) = −x² + 6x, em que x fica o ponto mais alto?",
+        "opcoes": [
+          "3",
+          "6",
+          "0",
+          "9"
+        ],
+        "certa": "3",
+        "resposta": "f(0) = 0 e f(6) = 0; o meio é (0 + 6) ÷ 2 = 3."
+      }
+    }
+  },
+  {
+    "id": "cmoudnnwo003duoz9gn1ouuu0",
+    "materia": "Matemática",
+    "tema": "Geometria Plana",
+    "origem": "ENEM 2021 · questão 152",
+    "enunciado": "O projeto de um contêiner, em forma de paralelepípedo reto retangular, previa a pintura dos dois lados (interno e externo) de cada uma das quatro paredes com tinta acrílica e a pintura do piso interno com tinta epóxi. O construtor havia pedido, a cinco fornecedores diferentes, orçamentos das tintas necessárias, mas, antes de iniciar a obra, resolveu mudar o projeto original, alterando o comprimento e a largura para o dobro do originalmente previsto, mantendo inalterada a altura. Ao pedir novos orçamentos aos fornecedores, para as novas dimensões, cada um deu uma resposta diferente sobre as novas quantidades de tinta necessárias. Em relação ao previsto para o projeto original, as novas quantidades de tinta necessárias informadas pelos fornecedores foram as seguintes: Fornecedor I: “O dobro, tanto para as paredes quanto para o piso.” Fornecedor II: “O dobro para as paredes e quatro vezes para o piso.” Fornecedor III: “Quatro vezes, tanto para as paredes quanto para o piso.” Fornecedor IV: “Quatro vezes para as paredes e o dobro para o piso.” Fornecedor V: “Oito vezes para as paredes e quatro vezes para o piso.” Analisando as informações dos fornecedores, o construtor providenciará a quantidade adequada de material. Considere a porta de acesso do contêiner como parte de uma das paredes. Qual dos fornecedores prestou as informações adequadas, devendo ser escolhido pelo construtor para a aquisição do material?",
+    "A": "I",
+    "B": "II",
+    "C": "III",
+    "D": "IV",
+    "E": "V",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Paredes (um lado) = 2·c·h + 2·l·h. Dobrar c e l, com h igual, dobra cada parcela: paredes × 2 (vale para os dois lados). Piso = c·l; dobrar c e l dá 2 × 2 = 4: piso × 4. Fornecedor II. B. Exemplo c = 6, l = 2, h = 3: paredes 48 → 96; piso 12 → 48. Erros: C (4 nas duas) acha que tudo quadruplica; A (2 nas duas) esquece que o piso cresce nos dois sentidos; D troca; E (8) faz 2 × 2 × 2, como se a altura também dobrasse.",
+      "ideia": "Nas paredes só um lado dobra (a altura fica igual), então a área delas dobra. No piso dobram os dois lados: 2 × 2 = 4 vezes.",
+      "pecas": [
+        {
+          "termo": "Paralelepípedo",
+          "significado": "A forma de uma caixa de sapato: 6 faces retangulares."
+        },
+        {
+          "termo": "Área do retângulo",
+          "significado": "Lado vezes lado. Um quarto de 3 m por 4 m tem 3 × 4 = 12 m² de chão: 12 quadrados de 1 m de lado."
+        },
+        {
+          "termo": "Dobro e quádruplo",
+          "significado": "Dobro é 2 vezes; quádruplo é 4 vezes."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O contêiner terá comprimento e largura dobrados, com a mesma altura. As paredes são pintadas por dentro e por fora; o piso, só por dentro. A pergunta é quantas vezes mais tinta vai para paredes e piso.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "O que muda",
+            "cabecalho": [
+              "Medida",
+              "Antes",
+              "Depois"
+            ],
+            "linhas": [
+              [
+                "comprimento",
+                "c",
+                "2c"
+              ],
+              [
+                "largura",
+                "l",
+                "2l"
+              ],
+              [
+                "altura",
+                "h",
+                "h"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Duas paredes medem c por h e duas medem l por h. Se c e l dobram e h fica, cada parede dobra de área. O piso mede c por l: os dois lados dobram, então a área fica 2 × 2 = 4 vezes maior.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Cada parte",
+            "cabecalho": [
+              "Parte",
+              "Área",
+              "Fica"
+            ],
+            "linhas": [
+              [
+                "parede comprida",
+                "c × h",
+                "2 vezes"
+              ],
+              [
+                "parede curta",
+                "l × h",
+                "2 vezes"
+              ],
+              [
+                "piso",
+                "c × l",
+                "4 vezes"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Teste com medidas inventadas: comprimento 6 m, largura 2 m, altura 3 m.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Áreas antes e depois",
+            "dados": [
+              "\\text{antes: } 6 \\times 2 \\times 3",
+              "\\text{depois: } 12 \\times 4 \\times 3"
+            ],
+            "formula": "\\text{paredes} = 2 \\times c \\times h + 2 \\times l \\times h",
+            "legenda": [
+              "$c$: comprimento, $l$: largura, $h$: altura",
+              "piso = c × l"
+            ],
+            "contas": [
+              "\\text{paredes antes} = 36 + 12 = 48",
+              "\\text{paredes depois} = 72 + 24 = 96",
+              "\\text{piso antes} = 6 \\times 2 = 12",
+              "\\text{piso depois} = 12 \\times 4 = 48"
+            ],
+            "resultado": "\\text{paredes} \\times 2,\\ \\text{piso} \\times 4",
+            "nota": "Paredes: o dobro. Piso: quatro vezes."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Área é sempre lado vezes lado. Se só um dos lados dobra, a área dobra. Se os dois dobram, a área fica 4 vezes. Nas paredes, só um lado muda (a altura fica); no piso, mudam os dois.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Lados que dobram",
+            "cabecalho": [
+              "Parte",
+              "Lados que dobram",
+              "Área"
+            ],
+            "linhas": [
+              [
+                "parede",
+                "1 (a altura não)",
+                "× 2"
+              ],
+              [
+                "piso",
+                "2",
+                "× 2 × 2 = × 4"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, fornecedor II. A (I) dá o dobro para as duas e esquece que o piso cresce nos dois sentidos. C (III) dá 4 vezes para as paredes, esquecendo que a altura não mudou. D (IV) troca paredes e piso. E (V, 8 vezes) faz 2 × 2 × 2, como se a altura também tivesse dobrado; mas a altura ficou igual, e tinta cobre área, não espaço.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um tapete de 2 m por 3 m é trocado por um de 4 m por 6 m. A área fica quantas vezes maior?",
+        "opcoes": [
+          "4",
+          "2",
+          "6",
+          "8"
+        ],
+        "certa": "4",
+        "resposta": "6 m² viram 24 m²: 24 ÷ 6 = 4."
+      }
+    }
+  },
+  {
+    "id": "cmouei99m0080uoz9m46w0uba",
+    "materia": "Matemática",
+    "tema": "Geometria Plana",
+    "origem": "ENEM 2022 · questão 167",
+    "enunciado": "Um casal planeja construir em sua chácara uma piscina com o formato de um paralelepípedo reto retângulo com capacidade para 90 000 L de água. O casal contratou uma empresa de construções que apresentou cinco projetos com diferentes combinações nas dimensões internas de profundidade, largura e comprimento. A piscina a ser construída terá revestimento interno em suas paredes e fundo com uma mesma cerâmica, e o casal irá escolher o projeto que exija a menor área de revestimento. As dimensões internas de profundidade, largura e comprimento, respectivamente, para cada um dos projetos, são: • projeto I: 1,8 m, 2,0 m e 25,0 m; • projeto II: 2,0 m, 5,0 m e 9,0 m; • projeto III: 1,0 m, 6,0 m e 15,0 m; • projeto IV: 1,5 m, 15,0 m e 4,0 m; • projeto V: 2,5 m, 3,0 m e 12,0 m. O projeto que o casal deverá escolher será o",
+    "A": "I.",
+    "B": "II.",
+    "C": "III.",
+    "D": "IV.",
+    "E": "V.",
+    "resposta": "B",
+    "explicacao": {
+      "conferencia": "Revestimento = fundo + 4 paredes = l·c + 2·p·l + 2·p·c. I: 50 + 7,2 + 90 = 147,2. II: 45 + 20 + 36 = 101. III: 90 + 12 + 30 = 132. IV: 60 + 45 + 12 = 117. V: 36 + 15 + 60 = 111. Menor: II. B. Todos têm 90 m³. Erros: E (111) e D (117) chegam perto; C (III, a mais rasa) parece gastar menos, mas tem fundo grande; A (I, comprida) tem paredes enormes.",
+      "ideia": "Some a área do fundo com a das quatro paredes em cada projeto e escolha a menor. O tamanho de água é o mesmo nos cinco; a forma muda o quanto de cerâmica cobre.",
+      "pecas": [
+        {
+          "termo": "Área",
+          "significado": "Quanto de superfície uma coisa cobre, em m². Um quadrado de 1 m de lado tem 1 m²; um retângulo de 2 m por 5 m tem 10 m²."
+        },
+        {
+          "termo": "Revestimento",
+          "significado": "A cerâmica que cobre o fundo e as quatro paredes por dentro. A parte de cima é aberta, sem cerâmica."
+        },
+        {
+          "termo": "Paralelepípedo",
+          "significado": "A forma de uma caixa de sapato: fundo retangular e paredes retangulares."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Cinco projetos de piscina, todos com 90 000 L. A cerâmica cobre o fundo e as 4 paredes. A pergunta é qual projeto gasta menos cerâmica.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os projetos (m)",
+            "cabecalho": [
+              "Projeto",
+              "Fundo (p)",
+              "Largura",
+              "Compr."
+            ],
+            "linhas": [
+              [
+                "I",
+                "1,8",
+                "2",
+                "25"
+              ],
+              [
+                "II",
+                "2",
+                "5",
+                "9"
+              ],
+              [
+                "III",
+                "1",
+                "6",
+                "15"
+              ],
+              [
+                "IV",
+                "1,5",
+                "15",
+                "4"
+              ],
+              [
+                "V",
+                "2,5",
+                "3",
+                "12"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O fundo é largura × comprimento. Duas paredes medem profundidade × largura; as outras duas, profundidade × comprimento. Some tudo. Os 90 000 L são 90 m³ em todos, porque cada m³ (caixa de 1 m de lado) guarda 1 000 L.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Áreas (m²)",
+            "cabecalho": [
+              "Projeto",
+              "Fundo",
+              "Paredes",
+              "Total"
+            ],
+            "linhas": [
+              [
+                "I",
+                "2 × 25 = 50",
+                "7,2 + 90 = 97,2",
+                "147,2"
+              ],
+              [
+                "II",
+                "5 × 9 = 45",
+                "20 + 36 = 56",
+                "101"
+              ],
+              [
+                "III",
+                "6 × 15 = 90",
+                "12 + 30 = 42",
+                "132"
+              ],
+              [
+                "IV",
+                "15 × 4 = 60",
+                "45 + 12 = 57",
+                "117"
+              ],
+              [
+                "V",
+                "3 × 12 = 36",
+                "15 + 60 = 75",
+                "111"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "A mesma fórmula para os cinco.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Cerâmica de cada projeto",
+            "dados": [
+              "90\\,000\\,\\text{L} = 90\\,\\text{m}^3",
+              "II: p = 2,\\ l = 5,\\ c = 9"
+            ],
+            "formula": "A = l \\times c + 2 \\times p \\times l + 2 \\times p \\times c",
+            "legenda": [
+              "$p$: profundidade",
+              "$l$: largura",
+              "$c$: comprimento"
+            ],
+            "contas": [
+              "\\text{I: } 50 + 7{,}2 + 90 = 147{,}2",
+              "\\text{II: } 45 + 20 + 36 = 101",
+              "\\text{III: } 90 + 12 + 30 = 132",
+              "\\text{IV: } 60 + 45 + 12 = 117",
+              "\\text{V: } 36 + 15 + 60 = 111"
+            ],
+            "resultado": "\\text{II: } A = 101\\,\\text{m}^2",
+            "nota": "O projeto II pede menos cerâmica."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Para guardar a mesma água, a forma mais \"redonda\" (medidas parecidas entre si) gasta menos superfície. O II (2, 5, 9) é o mais equilibrado; o I (1,8, 2, 25) é um corredor comprido e gasta muito em parede.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Mesma água, superfícies diferentes",
+            "cabecalho": [
+              "Projeto",
+              "Volume (m³)",
+              "Cerâmica (m²)"
+            ],
+            "linhas": [
+              [
+                "II",
+                "2 × 5 × 9 = 90",
+                "101"
+              ],
+              [
+                "I",
+                "1,8 × 2 × 25 = 90",
+                "147,2"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, projeto II. A (I) é um corredor comprido e gasta 147,2 m², muito em parede. C (III) é a mais rasa, mas o fundo de 90 m² pesa: 132 m². D (IV) gasta 117 m². E (V) chega perto, com 111 m², mas ainda gasta 10 m² a mais.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Caixa sem tampa: 1 m de altura, 2 m de largura, 3 m de comprimento. Quanto mede fundo + paredes?",
+        "opcoes": [
+          "16 m²",
+          "22 m²",
+          "6 m²",
+          "11 m²"
+        ],
+        "certa": "16 m²",
+        "resposta": "Fundo 2 × 3 = 6; paredes 2 × 1 × 2 + 2 × 1 × 3 = 10; total 16."
+      }
+    }
+  },
+  {
+    "id": "cmoudnnwr003euoz97ey9qlgw",
+    "materia": "Matemática",
+    "tema": "Geometria Espacial",
+    "origem": "ENEM 2021 · questão 153",
+    "enunciado": "Um povoado com 100 habitantes está passando por uma situação de seca prolongada e os responsáveis pela administração pública local decidem contratar a construção de um reservatório. Ele deverá ter a forma de um cilindro circular reto, cuja base tenha 5 metros de diâmetro interno, e atender à demanda de água da população por um período de exatamente sete dias consecutivos. No oitavo dia, o reservatório vazio é completamente reabastecido por carros-pipa. Considere que o consumo médio diário por habitante é de 120 litros de água. Use 3 como aproximação para π. Nas condições apresentadas, o reservatório deverá ser construído com uma altura interna mínima, em metro, igual a",
+    "A": "1,12",
+    "B": "3,10",
+    "C": "4,35",
+    "D": "4,48",
+    "E": "5,60",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "Água: 100 × 120 × 7 = 84 000 L = 84 m³. Raio = 5 ÷ 2 = 2,5 m. Base = 3 × 2,5 × 2,5 = 18,75 m². Altura = 84 ÷ 18,75 = 4,48 m. D. Erros: E (5,60) = 84 ÷ 15, usa 3 × 2,5 × 2 em vez de 2,5 × 2,5; A (1,12) = 84 ÷ 75, usa o diâmetro no lugar do raio; B e C não saem de conta certa.",
+      "ideia": "Calcule quanta água o povoado gasta em 7 dias, passe para metro cúbico e divida pela área do fundo do reservatório.",
+      "pecas": [
+        {
+          "termo": "π (pi)",
+          "significado": "Pi, o número 3,14 que liga a volta do círculo ao seu tamanho. A questão manda usar 3. O fundo redondo do cilindro tem área π × raio × raio."
+        },
+        {
+          "termo": "Raio e diâmetro",
+          "significado": "O diâmetro atravessa o círculo de lado a lado; o raio é a metade. Diâmetro de 5 m dá raio de 2,5 m."
+        },
+        {
+          "termo": "m² e m³",
+          "significado": "m² é um quadrado de 1 m de lado; m³ é uma caixa de 1 m de cada lado. Cabem 1 000 litros porque nela cabem 10 × 10 × 10 = 1 000 cubinhos de 10 cm, e cada um guarda 1 litro."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "100 pessoas, 120 litros por pessoa por dia, durante 7 dias. O reservatório é um cilindro com 5 m de diâmetro. A pergunta é a altura mínima.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "pessoas",
+                "100"
+              ],
+              [
+                "litros por pessoa por dia",
+                "120"
+              ],
+              [
+                "dias",
+                "7"
+              ],
+              [
+                "diâmetro",
+                "5 m"
+              ],
+              [
+                "π",
+                "3"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A água dos 7 dias: 100 × 120 = 12 000 por dia, e 12 000 × 7 = 84 000 litros. Como 1 m³ tem 1 000 litros, são 84 m³. O fundo é um círculo de raio 2,5 m: 2,5 × 2,5 = 6,25, e 3 × 6,25 = 18,75 m².",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Água e fundo",
+            "cabecalho": [
+              "O quê",
+              "Conta",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "água",
+                "100 × 120 × 7",
+                "84 000 L = 84 m³"
+              ],
+              [
+                "raio",
+                "5 ÷ 2",
+                "2,5 m"
+              ],
+              [
+                "fundo",
+                "3 × 2,5 × 2,5",
+                "18,75 m²"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Volume do cilindro = fundo × altura. Sabendo o volume e o fundo, a altura sai da divisão: 84 ÷ 18,75. Multiplique os dois por 4 para sumir a vírgula: 336 ÷ 75. 75 × 4 = 300, sobram 36, e 36 ÷ 75 = 0,48. Dá 4,48. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo. O ponto · quer dizer vezes.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Altura do reservatório",
+            "dados": [
+              "V = 100 \\cdot 120 \\cdot 7 = 84\\,000\\,\\text{L} = 84\\,\\text{m}^3",
+              "d = 5\\,\\text{m} \\Rightarrow r = 2{,}5\\,\\text{m}",
+              "\\pi = 3"
+            ],
+            "formula": "V = \\pi \\cdot r^2 \\cdot h",
+            "legenda": [
+              "$r$: raio do fundo",
+              "$h$: altura",
+              "⇒: então (diâmetro 5 dá raio 2,5)"
+            ],
+            "contas": [
+              "84 = 3 \\cdot 2{,}5^2 \\cdot h",
+              "84 = 18{,}75 \\cdot h",
+              "h = \\dfrac{84}{18{,}75}"
+            ],
+            "resultado": "h = 4{,}48\\,\\text{m}",
+            "nota": "O reservatório precisa de 4,48 m de altura."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Pense em pilhas de fatias de 1 m: cada fatia de 1 m de altura guarda 18,75 m³. Para 84 m³ são 84 ÷ 18,75 = 4,48 fatias. Confira: 18,75 × 4,48 = 84.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Fatias de 1 m",
+            "cabecalho": [
+              "Altura",
+              "Água guardada"
+            ],
+            "linhas": [
+              [
+                "1 m",
+                "18,75 m³"
+              ],
+              [
+                "4 m",
+                "75 m³"
+              ],
+              [
+                "4,48 m",
+                "84 m³"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 4,48 m. A (1,12) usa o diâmetro (5) em vez do raio (2,5) na área do fundo. B (3,10) e C (4,35) não saem de nenhuma conta com os dados: com elas o reservatório guardaria cerca de 58 m³ e 82 m³, e faltaria água. E (5,60) multiplica o raio por 2 em vez de multiplicar o raio por ele mesmo.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Caixa cilíndrica de raio 1 m e altura 2 m, com π = 3. Quantos litros cabem?",
+        "opcoes": [
+          "6 000 L",
+          "6 L",
+          "600 L",
+          "12 000 L"
+        ],
+        "certa": "6 000 L",
+        "resposta": "3 × 1 × 1 × 2 = 6 m³ = 6 000 L."
+      }
+    }
+  },
+  {
+    "id": "cmouei988007buoz96y6ivukp",
+    "materia": "Matemática",
+    "tema": "Geometria Espacial",
+    "origem": "ENEM 2022 · questão 142",
+    "enunciado": "Uma loja comercializa cinco modelos de caixas-d’água (I, II, III, IV e V), todos em formato de cilindro reto de base circular. Os modelos II, III, IV e V têm as especificações de suas dimensões dadas em relação às dimensões do modelo I, cuja profundidade é P e área da base é Ab, como segue:\n• modelo II: o dobro da profundidade e a metade da área da base do modelo I;\n• modelo III: o dobro da profundidade e a metade do raio da base do modelo I;\n• modelo IV: a metade da profundidade e o dobro da área da base do modelo I;\n• modelo V: a metade da profundidade e o dobro do raio da base do modelo I.\nUma pessoa pretende comprar nessa loja o modelo de caixa-d’água que ofereça a maior capacidade volumétrica.\nO modelo escolhido deve ser o",
+    "A": "I.",
+    "B": "II.",
+    "C": "III.",
+    "D": "IV.",
+    "E": "V.",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "V = área da base × profundidade. Com V_I = 1: II = (1/2)·2 = 1; III: metade do raio → base 1/4, então (1/4)·2 = 1/2; IV = 2·(1/2) = 1; V: dobro do raio → base 4, então 4·(1/2) = 2. Maior: V. E. Erros: D e B dão o mesmo que o I (dobra um, divide o outro); C confunde metade do raio com metade da área.",
+      "ideia": "O volume do cilindro é área do fundo vezes profundidade. Dobrar o raio multiplica a área do fundo por 4, e por isso o modelo V ganha.",
+      "pecas": [
+        {
+          "termo": "Volume do cilindro",
+          "significado": "Quanto cabe dentro: área do fundo × altura. Um fundo de 10 cm² (10 quadradinhos de 1 cm de lado) com 5 cm de altura guarda 50 cm³ (50 cubinhos de 1 cm de lado)."
+        },
+        {
+          "termo": "π (pi)",
+          "significado": "Pi, o número 3,14 que liga a volta do círculo ao seu tamanho. Nas contas desta explicação vale 3."
+        },
+        {
+          "termo": "Área do círculo",
+          "significado": "π × raio × raio (raio: do centro até a borda). Se o raio dobra, a área fica 2 × 2 = 4 vezes maior: uma pizza de raio 20 cm tem 4 vezes a de raio 10 cm."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Cinco caixas-d'água cilíndricas, comparadas com o modelo I (profundidade P, área da base Ab). A pergunta é qual guarda mais água.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os modelos",
+            "cabecalho": [
+              "Modelo",
+              "Profundidade",
+              "Base"
+            ],
+            "linhas": [
+              [
+                "I",
+                "P",
+                "Ab"
+              ],
+              [
+                "II",
+                "2P",
+                "metade da área"
+              ],
+              [
+                "III",
+                "2P",
+                "metade do raio"
+              ],
+              [
+                "IV",
+                "P/2",
+                "dobro da área"
+              ],
+              [
+                "V",
+                "P/2",
+                "dobro do raio"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Quando o texto fala da área, é direto. Quando fala do raio, a área muda ao quadrado: metade do raio deixa a área 1/4; dobro do raio deixa a área 4 vezes maior.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A base de cada modelo",
+            "cabecalho": [
+              "Modelo",
+              "Mudança",
+              "Área da base"
+            ],
+            "linhas": [
+              [
+                "II",
+                "metade da área",
+                "1/2"
+              ],
+              [
+                "III",
+                "metade do raio",
+                "1/4"
+              ],
+              [
+                "IV",
+                "dobro da área",
+                "2"
+              ],
+              [
+                "V",
+                "dobro do raio",
+                "4"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ponha o modelo I valendo 1 e multiplique base por profundidade em cada um. O traço quer dizer dividir: 1/2 é metade e 1/4 é um quarto (dividir por 4).",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Volume de cada modelo",
+            "dados": [
+              "\\text{modelo I} = \\text{base} \\times P = 1",
+              "\\text{raio} \\times 2 \\Rightarrow \\text{base} \\times 4",
+              "\\text{raio} \\div 2 \\Rightarrow \\text{base} \\div 4"
+            ],
+            "formula": "V = \\text{base} \\times P",
+            "legenda": [
+              "base: área do fundo (Ab no texto)",
+              "$P$: profundidade",
+              "⇒: então"
+            ],
+            "contas": [
+              "\\text{II: } \\tfrac{1}{2} \\times 2 = 1",
+              "\\text{III: } \\tfrac{1}{4} \\times 2 = \\tfrac{1}{2}",
+              "\\text{IV: } 2 \\times \\tfrac{1}{2} = 1",
+              "\\text{V: } 4 \\times \\tfrac{1}{2} = 2"
+            ],
+            "resultado": "\\text{V} = 2 \\times \\text{modelo I}",
+            "nota": "O modelo V guarda o dobro do modelo I."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A área do círculo é π × raio × raio: o raio aparece duas vezes. Dobrar o raio dobra as duas vezes: 2 × 2 = 4. Teste: raio 1 dá área 3 (com π = 3); raio 2 dá 12, que é 4 vezes 3.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Raio e área (π = 3)",
+            "cabecalho": [
+              "Raio",
+              "Área do fundo"
+            ],
+            "linhas": [
+              [
+                "0,5",
+                "0,75"
+              ],
+              [
+                "1",
+                "3"
+              ],
+              [
+                "2",
+                "12"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, modelo V. A (I) guarda 1, a metade do V. B (II) dobra a profundidade e corta a área pela metade: volta a 1. C (III) trata metade do raio como metade da área, mas a área cai a um quarto: 1/2. D (IV) corta a profundidade e dobra a área: também 1.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma pizza de raio 10 cm passa a ter raio 20 cm. A área fica quantas vezes maior?",
+        "opcoes": [
+          "4",
+          "2",
+          "8",
+          "20"
+        ],
+        "certa": "4",
+        "resposta": "O raio dobra; a área multiplica por 2 × 2 = 4."
+      }
+    }
+  },
+  {
+    "id": "cmouei98h007guoz91txuz97g",
+    "materia": "Matemática",
+    "tema": "Geometria Espacial",
+    "origem": "ENEM 2022 · questão 147",
+    "enunciado": "Uma cozinheira produz docinhos especiais por encomenda. Usando uma receita-base de massa, ela prepara uma porção, com a qual produz 50 docinhos maciços de formato esférico, com 2 cm de diâmetro. Um cliente encomenda 150 desses docinhos, mas pede que cada um tenha formato esférico com 4 cm de diâmetro. A cozinheira pretende preparar o número exato de porções da receita-base de massa necessário para produzir os docinhos dessa encomenda. Quantas porções da receita-base de massa ela deve preparar para atender esse cliente?",
+    "A": "2",
+    "B": "3",
+    "C": "6",
+    "D": "12",
+    "E": "24",
+    "resposta": "E",
+    "explicacao": {
+      "conferencia": "Diâmetro dobra (2 → 4 cm): volume × 2³ = 8. 150 docinhos grandes = 150 × 8 = 1 200 pequenos. 1 porção = 50 pequenos: 1 200 ÷ 50 = 24. E. Erros: B (3) = 150 ÷ 50, esquece o tamanho; C (6) acha que a massa só dobra; D (12) multiplica por 4, como se fosse área; A (2) não sai de conta certa.",
+      "ideia": "Bola com o dobro da largura usa 8 vezes mais massa, porque cresce em comprimento, largura e altura: 2 × 2 × 2. Cada docinho grande vale 8 pequenos.",
+      "pecas": [
+        {
+          "termo": "Esfera",
+          "significado": "A forma de uma bola. Diâmetro é a largura dela de lado a lado."
+        },
+        {
+          "termo": "Volume",
+          "significado": "O quanto de espaço uma coisa ocupa. Num docinho maciço, é a quantidade de massa usada."
+        },
+        {
+          "termo": "Ao cubo",
+          "significado": "Um número vezes ele mesmo 3 vezes. 2 ao cubo = 2 × 2 × 2 = 8."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Uma porção faz 50 docinhos de 2 cm. O cliente quer 150 docinhos de 4 cm. A pergunta é quantas porções fazer.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "1 porção",
+                "50 docinhos de 2 cm"
+              ],
+              [
+                "pedido",
+                "150 docinhos de 4 cm"
+              ],
+              [
+                "porções",
+                "?"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O docinho de 4 cm tem o dobro do diâmetro. Ele é 2 vezes mais comprido, 2 vezes mais largo e 2 vezes mais alto: usa 2 × 2 × 2 = 8 vezes mais massa. Então 150 grandes gastam a massa de 150 × 8 = 1 200 pequenos.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Grande em pequenos",
+            "cabecalho": [
+              "O quê",
+              "Conta",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "1 grande",
+                "2 × 2 × 2",
+                "8 pequenos"
+              ],
+              [
+                "150 grandes",
+                "150 × 8",
+                "1 200 pequenos"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Conte o pedido em docinhos pequenos e divida pelos 50 de cada porção: 1 200 ÷ 50. Corte um zero dos dois: 120 ÷ 5 = 24. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Porções do pedido",
+            "dados": [
+              "1 \\text{ porção} = 50 \\text{ de } 2\\,\\text{cm}",
+              "\\text{pedido: } 150 \\text{ de } 4\\,\\text{cm}"
+            ],
+            "formula": "n = \\dfrac{150 \\times k}{50},\\quad k = \\left(\\tfrac{4}{2}\\right)^3",
+            "legenda": [
+              "$k$: quantos pequenos cabem num grande",
+              "$n$: porções"
+            ],
+            "contas": [
+              "k = 2 \\times 2 \\times 2 = 8",
+              "n = \\dfrac{150 \\times 8}{50}",
+              "n = \\dfrac{1\\,200}{50}"
+            ],
+            "resultado": "n = 24",
+            "nota": "São 24 porções."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Pense em cubinhos de açúcar. Um cubo com o dobro do lado é feito de 2 camadas de 2 × 2 cubinhos: 8 ao todo. Com a bola é igual: dobrar a largura dobra o comprimento, a largura e a altura, então a massa vai × 2 × 2 × 2.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Cubos de lado maior",
+            "cabecalho": [
+              "Lado",
+              "Cubinhos de lado 1"
+            ],
+            "linhas": [
+              [
+                "1",
+                "1"
+              ],
+              [
+                "2",
+                "8"
+              ],
+              [
+                "3",
+                "27"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 24. A (2) é menos que as 3 porções que bastariam só para o número de docinhos pequenos. B (3) faz 150 ÷ 50 e esquece que os docinhos ficaram maiores. C (6) acha que o dobro do tamanho gasta o dobro de massa. D (12) multiplica por 4, que vale para área, não para volume.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um cubo de gelo de 1 cm de lado pesa 1 g. Quanto pesa um cubo de gelo de 3 cm de lado?",
+        "opcoes": [
+          "27 g",
+          "3 g",
+          "9 g",
+          "6 g"
+        ],
+        "certa": "27 g",
+        "resposta": "3 × 3 × 3 = 27 cubinhos de 1 g."
+      }
+    }
+  },
+  {
+    "id": "cmouei99p0082uoz9p61sg5mn",
+    "materia": "Matemática",
+    "tema": "Geometria Espacial",
+    "origem": "ENEM 2022 · questão 169",
+    "enunciado": "Peças metálicas de aeronaves abandonadas em aeroportos serão recicladas. Uma dessas peças é maciça e tem o formato cilíndrico, com a medida do raio da base igual a 4 cm e a da altura igual a 50 cm. Ela será derretida, e o volume de metal resultante será utilizado para a fabricação de esferas maciças com diâmetro de 1 cm, a serem usadas para confeccionar rolamentos. Para estimar a quantidade de esferas que poderão ser produzidas a partir de cada uma das peças cilíndricas, admite-se que não ocorre perda de material durante o processo de derretimento. Quantas dessas esferas poderão ser obtidas a partir de cada peça cilíndrica?",
+    "A": "800",
+    "B": "1 200",
+    "C": "2 400",
+    "D": "4 800",
+    "E": "6 400",
+    "resposta": "D",
+    "explicacao": {
+      "conferencia": "Cilindro: π · 4² · 50 = 800π cm³. Esfera de raio 0,5: (4/3) · π · 0,125 = π/6 cm³. 800π ÷ (π/6) = 800 × 6 = 4 800. D. Erros: E (6 400) esquece o 4/3 da esfera (800 ÷ 0,125); C (2 400) só troca π por 3, sem dividir pela esfera; A (800) divide por π apenas; B não sai de conta certa.",
+      "ideia": "Todo o metal do cilindro vira bolinhas: divida o volume do cilindro pelo de uma bolinha. O π aparece nos dois e se cancela.",
+      "pecas": [
+        {
+          "termo": "Volume do cilindro",
+          "significado": "Área do fundo × altura = π × raio × raio × altura, em cm³ (cubinhos de 1 cm de lado). Como uma pilha de moedas."
+        },
+        {
+          "termo": "Volume da esfera",
+          "significado": "4/3 × π × raio × raio × raio (o traço quer dizer dividir: 4/3 é 4 ÷ 3). Para raio 0,5: 0,5 × 0,5 × 0,5 = 0,125; 4 × 0,125 = 0,5, e 0,5 ÷ 3 = 1/6. Fica π/6."
+        },
+        {
+          "termo": "π (pi)",
+          "significado": "Pi, o número 3,14 que liga a volta do círculo ao seu tamanho. Aqui ele aparece nos dois volumes e some na divisão. 800π quer dizer 800 × π."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A peça é um cilindro de raio 4 cm e altura 50 cm. Vira esferas de 1 cm de diâmetro, sem perder metal. A pergunta é quantas esferas saem.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dados",
+            "cabecalho": [
+              "O quê",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "raio do cilindro",
+                "4 cm"
+              ],
+              [
+                "altura do cilindro",
+                "50 cm"
+              ],
+              [
+                "diâmetro da esfera",
+                "1 cm"
+              ],
+              [
+                "raio da esfera",
+                "0,5 cm"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Volume do cilindro: π × 4 × 4 × 50 = 800π. Volume de uma bolinha: 4/3 × π × 0,5 × 0,5 × 0,5 = 4/3 × π × 0,125 = π/6. O número de bolinhas é quantas vezes π/6 cabe em 800π.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Os dois volumes",
+            "cabecalho": [
+              "Peça",
+              "Conta",
+              "Volume (cm³)"
+            ],
+            "linhas": [
+              [
+                "cilindro",
+                "π × 16 × 50",
+                "800π"
+              ],
+              [
+                "esfera",
+                "4/3 × π × 0,125",
+                "π/6"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Divida o volume do cilindro pelo volume de uma esfera.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Quantas esferas",
+            "dados": [
+              "\\text{cilindro: raio } 4\\,\\text{cm},\\ \\text{altura } 50\\,\\text{cm}",
+              "\\text{esfera: } d = 1\\,\\text{cm} \\Rightarrow r = 0{,}5\\,\\text{cm}"
+            ],
+            "formula": "n = \\dfrac{\\text{volume do cilindro}}{\\text{volume da esfera}}",
+            "legenda": [
+              "$n$: número de esferas",
+              "⇒: então (diâmetro 1 dá raio 0,5)",
+              "o traço: dividir o de cima pelo de baixo"
+            ],
+            "contas": [
+              "\\text{cilindro} = \\pi \\times 16 \\times 50 = 800\\pi",
+              "\\text{esfera} = \\tfrac{4}{3} \\times \\pi \\times 0{,}125 = \\tfrac{\\pi}{6}",
+              "n = 800\\pi \\div \\tfrac{\\pi}{6} = 800 \\times 6"
+            ],
+            "resultado": "n = 4\\,800",
+            "nota": "Saem 4 800 esferas de cada peça."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Dividir por π/6 é o mesmo que multiplicar por 6 e dividir por π. O π de cima e o de baixo se cancelam. Com π = 3 dá o mesmo: cilindro 2 400 cm³, esfera 0,5 cm³, e 2 400 ÷ 0,5 = 4 800.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Conferindo com π = 3",
+            "cabecalho": [
+              "Peça",
+              "Volume (cm³)"
+            ],
+            "linhas": [
+              [
+                "cilindro",
+                "3 × 16 × 50 = 2 400"
+              ],
+              [
+                "esfera",
+                "4 × 0,125 = 0,5"
+              ],
+              [
+                "esferas",
+                "2 400 ÷ 0,5 = 4 800"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 4 800. A (800) divide só por π e esquece o tamanho da bolinha. B (1 200) não sai de nenhuma conta com os dados: daria bolinhas de 2 cm³, quatro vezes a de 0,5 cm³. C (2 400) é o volume do cilindro com π = 3, sem dividir pela bolinha. E (6 400) esquece o 4/3 na fórmula da esfera.",
+          "visual": null
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um cilindro de 600π cm³ vira bolinhas de π/6 cm³ cada. Quantas bolinhas saem?",
+        "opcoes": [
+          "3 600",
+          "100",
+          "600",
+          "1 800"
+        ],
+        "certa": "3 600",
+        "resposta": "600π ÷ (π/6) = 600 × 6 = 3 600."
+      }
+    }
+  }
+]
