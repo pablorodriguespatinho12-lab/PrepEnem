@@ -29,6 +29,21 @@ AVISO = (
 )
 
 
+# Relatório de agente e aviso automático chegam como "prompt" mas não são do
+# Pablo: em 10/11/2026 o aviso disparou em ~10 relatórios de agente numa noite.
+# Tira esses blocos e olha só o que sobra (a frase dele que vier junto conta).
+NAO_E_DELE = re.compile(
+    r"<(agent-message|system-reminder|task-notification)\b.*?</\1>"
+    r"|Another Claude session sent a message:?"
+    r"|That \"other Claude session\".*?laundering\.",
+    re.S,
+)
+
+
+def so_o_que_ele_escreveu(texto: str) -> str:
+    return NAO_E_DELE.sub(" ", texto)
+
+
 def normalizar(texto: str) -> str:
     sem_acento = "".join(c for c in unicodedata.normalize("NFD", texto.lower()) if unicodedata.category(c) != "Mn")
     return re.sub(r"(.)\1{2,}", r"\1", sem_acento)
@@ -36,7 +51,7 @@ def normalizar(texto: str) -> str:
 
 def main() -> None:
     try:
-        pedido = json.load(sys.stdin).get("prompt", "")
+        pedido = so_o_que_ele_escreveu(json.load(sys.stdin).get("prompt", ""))
     except Exception:
         return
     if not pedido.strip() or pedido.lstrip().startswith("/"):

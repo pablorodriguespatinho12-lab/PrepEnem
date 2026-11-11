@@ -221,9 +221,9 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   aquecer o corpo"):** toda prova Médio, Difícil ou ENEM de Nova prova começa
   com mais fáceis das mesmas matérias, A MAIS (1 a cada 4, mínimo 3; fácil
   antes de médio; nunca real), `lib/aquecimento.ts`. Prova pronta feita à mão
-  ganha o aquecimento dela, do conteúdo de cada questão: "Aquecimento: antes
-  da Revisão final", 31 fáceis escritas na sessão com explicação pronta
-  (`data/revisao-final/aquecimento.json`, `scripts/criar-aquecimento-revisao-final.ts`).
+  ganha o aquecimento dela, do conteúdo de cada questão (modelo: 31 fáceis com
+  explicação pronta em `data/revisao-final/aquecimento.json`; a prova que as
+  usava foi apagada a pedido dele em 10/11/2026, as questões ficam no banco).
 - **Provas do dia 2 (Pablo, 10/11/2026):** "Dia 2 · 1 Fácil", "2 Médio",
   "3 Difícil" (escritas à mão) e "4 ENEM real", 40 cada, só os 22 conteúdos que
   mais caem, explicação pronta. A Fácil é o aquecimento das outras. Molde, cotas
