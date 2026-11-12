@@ -78,7 +78,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Pense na corrente como baldes de carga: 10 A são 10 baldes passando por segundo. A tensão é a força que cada balde entrega: 110. Dez baldes com 110 cada é 110 somado 10 vezes. Somar a mesma coisa várias vezes é multiplicar: 110 × 10.",
+          "texto": "Pense na corrente como baldes de carga: 10 A são 10 baldes passando por segundo.\nA tensão é a força que cada balde entrega: 110.\nDez baldes com 110 cada é 110 somado 10 vezes.\nSomar a mesma coisa várias vezes é multiplicar: 110 × 10.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Mesma tomada de 110 V",
@@ -298,7 +298,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E: a água tem calor específico maior. A falha porque o sol que chega nas duas é o mesmo. B falha porque a areia perde o calor de noite e amanhece fria. C falha porque o vento sopra na areia e na água. D falha porque a água fica com boa parte da luz: é por isso que o mar esquenta, só que devagar.",
+          "texto": "Letra E: a água tem calor específico maior.\nA: falha porque o sol que chega nas duas é o mesmo.\nB: falha porque a areia perde o calor de noite e amanhece fria.\nC: falha porque o vento sopra na areia e na água.\nD: falha porque a água fica com boa parte da luz. É por isso que o mar esquenta, só que devagar.",
           "visual": null
         }
       ],
@@ -494,7 +494,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D. A falha porque tecido não produz luz: no quarto escuro a camiseta some. B é a armadilha: se a camiseta ficasse com o vermelho, justamente o vermelho não chegaria ao seu olho. C falha porque quem separa as cores é o prisma (um vidro em forma de cunha que faz arco-íris), não o pano. E falha porque refletir todas as cores é o que a camiseta branca faz.",
+          "texto": "Letra D.\nA: falha porque tecido não produz luz. No quarto escuro a camiseta some.\nB: é a armadilha. Se a camiseta ficasse com o vermelho, justamente o vermelho não chegaria ao seu olho.\nC: falha porque quem separa as cores é o prisma (um vidro em forma de cunha que faz arco-íris), não o pano.\nE: falha porque refletir todas as cores é o que a camiseta branca faz.",
           "visual": null
         }
       ],
@@ -590,7 +590,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Cada quilo é puxado com 10 N. Com 60 quilos, são 60 puxões de 10 N somados: 60 × 10 = 600 N. É a 2ª lei de Newton: força = massa × aceleração (aceleração é o quanto a velocidade aumenta a cada segundo), usando a aceleração da gravidade.",
+          "texto": "Cada quilo é puxado com 10 N.\nCom 60 quilos, são 60 puxões de 10 N somados: 60 × 10 = 600 N.\nÉ a 2ª lei de Newton: força = massa × aceleração, usando a aceleração da gravidade.\nAceleração é o quanto a velocidade aumenta a cada segundo.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Na Terra, g = 10 m/s²",
@@ -705,7 +705,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, hidrocarboneto. B (álcool) tem o grupo OH, com oxigênio. C (ácido carboxílico) tem COOH, como o vinagre. D (éster) tem oxigênio no meio da cadeia, como o cheiro de fruta. E (cetona) tem um oxigênio preso a um carbono do meio, como a acetona de tirar esmalte. Todas as quatro têm oxigênio, então não servem.",
+          "texto": "Letra A, hidrocarboneto.\nB (álcool): tem o grupo OH, com oxigênio.\nC (ácido carboxílico): tem COOH, como o vinagre.\nD (éster): tem oxigênio no meio da cadeia, como o cheiro de fruta.\nE (cetona): tem um oxigênio preso a um carbono do meio, como a acetona de tirar esmalte.\nTodas as quatro têm oxigênio, então não servem.",
           "visual": null
         }
       ],
@@ -870,7 +870,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, gás carbônico. A (oxigênio) engana porque participa da queima, mas ele é gasto, não solto. C (nitrogênio) e E (hélio) não seguram calor no ar e não saem da queima. D (hidrogênio) não sai da queima de gasolina; e o hidrogênio que queima vira água, não gás de estufa.",
+          "texto": "Letra B, gás carbônico.\nA (oxigênio): engana porque participa da queima, mas ele é gasto, não solto.\nC (nitrogênio) e E (hélio): não seguram calor no ar e não saem da queima.\nD (hidrogênio): não sai da queima de gasolina. E o hidrogênio que queima vira água, não gás de estufa.",
           "visual": null
         }
       ],
@@ -954,7 +954,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, luz do Sol. A (petróleo), B (carvão mineral) e C (gás natural) são combustíveis fósseis: levaram milhões de anos para se formar e acabam. O gás natural engana pelo nome, mas é fóssil como o petróleo. D (urânio) é um minério, pedra tirada do chão, que também se esgota.",
+          "texto": "Letra E, luz do Sol.\nA (petróleo), B (carvão mineral) e C (gás natural): são combustíveis fósseis. Levaram milhões de anos para se formar e acabam.\nO gás natural engana pelo nome, mas é fóssil como o petróleo.\nD (urânio): é um minério, pedra tirada do chão, que também se esgota.",
           "visual": null
         }
       ],
@@ -1151,7 +1151,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C, ânodo. A (cátodo) é o polo do outro lado: lá os elétrons chegam e acontece a redução. B (eletrólito) é o líquido ou a pasta dentro da pilha, e D (ponte salina) é o tubo que liga as duas metades; os dois deixam passar íons (partículas com carga), mas não são o polo. E (resistor) é peça de circuito que esquenta, não parte da pilha.",
+          "texto": "Letra C, ânodo.\nA (cátodo): é o polo do outro lado. Lá os elétrons chegam e acontece a redução.\nB (eletrólito): é o líquido ou a pasta dentro da pilha.\nD (ponte salina): é o tubo que liga as duas metades.\nB e D deixam passar íons (partículas com carga), mas não são o polo.\nE (resistor): é peça de circuito que esquenta, não parte da pilha.",
           "visual": null
         }
       ],
@@ -1275,7 +1275,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, 44 g. A (28) vem de esquecer o segundo oxigênio: 12 + 16. B (32) conta só os dois oxigênios e esquece o carbono. C (192) multiplica 12 × 16 em vez de somar. E (56) põe o 2 no carbono também: 24 + 32.",
+          "texto": "Letra D, 44 g.\nA (28): esquece o segundo oxigênio, 12 + 16.\nB (32): conta só os dois oxigênios e esquece o carbono.\nC (192): multiplica 12 × 16 em vez de somar.\nE (56): põe o 2 no carbono também, 24 + 32.",
           "visual": null
         }
       ],
@@ -1386,7 +1386,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, o sapo. A (capim) é produtor, não consumidor. C (gafanhoto) engana por ser o segundo da fila, mas é o consumidor primário: o primeiro que come planta. D (cobra) é o terciário: come o sapo. E (fungos) são decompositores: comem restos e ficam fora da contagem.",
+          "texto": "Letra B, o sapo.\nA (capim): é produtor, não consumidor.\nC (gafanhoto): engana por ser o segundo da fila, mas é o consumidor primário, o primeiro que come planta.\nD (cobra): é o terciário. Come o sapo.\nE (fungos): são decompositores. Comem restos e ficam fora da contagem.",
           "visual": null
         }
       ],
@@ -1476,7 +1476,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, parasitismo. A (mutualismo) falha: nele os dois ganham, e a pessoa perde sangue. B (comensalismo) falha: nele o outro nem ganha nem perde. C (competição) falha: piolho e pessoa não disputam a mesma comida. D (predatismo) engana, mas nele o predador mata e come a presa; o piolho não mata a pessoa.",
+          "texto": "Letra E, parasitismo.\nA (mutualismo): nele os dois ganham, e a pessoa perde sangue.\nB (comensalismo): nele o outro nem ganha nem perde.\nC (competição): piolho e pessoa não disputam a mesma comida.\nD (predatismo): engana, mas nele o predador mata e come a presa. O piolho não mata a pessoa.",
           "visual": null
         }
       ],
@@ -1584,7 +1584,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, intestino delgado. B (estômago) quebra a comida, mas quase não absorve. C (intestino grosso) recupera a água que sobrou e forma as fezes. D (esôfago) é só o tubo que leva a comida da boca ao estômago. E (boca) mastiga e começa a digestão, mas não absorve.",
+          "texto": "Letra A, intestino delgado.\nB (estômago): quebra a comida, mas quase não absorve.\nC (intestino grosso): recupera a água que sobrou e forma as fezes.\nD (esôfago): é só o tubo que leva a comida da boca ao estômago.\nE (boca): mastiga e começa a digestão, mas não absorve.",
           "visual": null
         }
       ],
@@ -1658,7 +1658,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, heterozigota. A (homozigota dominante) engana porque o A maiúsculo aparece, mas exige as duas letras iguais: AA. C (homozigota recessiva) é aa. D (mutante) é quem teve o DNA alterado e E (clone) é cópia idêntica de outro ser: nenhum dos dois fala do par de letras.",
+          "texto": "Letra B, heterozigota.\nA (homozigota dominante): engana porque o A maiúsculo aparece, mas exige as duas letras iguais, AA.\nC (homozigota recessiva): é aa.\nD (mutante): é quem teve o DNA alterado. Não fala do par de letras.\nE (clone): é cópia idêntica de outro ser. Também não fala do par de letras.",
           "visual": null
         }
       ],
@@ -1724,7 +1724,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, cloroplasto. A (mitocôndria) engana porque também mexe com energia, mas faz o contrário: queima o açúcar para soltar energia. B (ribossomo) monta proteínas. C (núcleo) guarda o DNA, o manual de instruções da célula. E (complexo golgiense) embala e despacha substâncias. Nenhum dos quatro tem clorofila.",
+          "texto": "Letra D, cloroplasto.\nA (mitocôndria): engana porque também mexe com energia, mas faz o contrário. Queima o açúcar para soltar energia.\nB (ribossomo): monta proteínas.\nC (núcleo): guarda o DNA, o manual de instruções da célula.\nE (complexo golgiense): embala e despacha substâncias.\nNenhum dos quatro tem clorofila.",
           "visual": null
         }
       ],
@@ -1796,7 +1796,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, análogos. A (homólogos) engana porque é a outra palavra da dupla, mas exige o mesmo antepassado, que aqui não existe. B (vestigiais) são órgãos que quase não servem mais, como o apêndice. C (mutantes) fala de DNA alterado, não de órgãos parecidos. D (adquiridos pelo uso) é a ideia antiga de Lamarck, que a ciência não aceita.",
+          "texto": "Letra E, análogos.\nA (homólogos): engana porque é a outra palavra da dupla, mas exige o mesmo antepassado, que aqui não existe.\nB (vestigiais): são órgãos que quase não servem mais, como o apêndice.\nC (mutantes): fala de DNA alterado, não de órgãos parecidos.\nD (adquiridos pelo uso): é a ideia antiga de Lamarck, que a ciência não aceita.",
           "visual": null
         }
       ],
@@ -1873,7 +1873,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C, sarampo, que se previne com vacina. A (tuberculose) e B (cólera) são causadas por bactérias. D (malária) engana porque é passada por mosquito, como a dengue, mas o causador é um protozoário. E (micose) é causada por fungo.",
+          "texto": "Letra C, sarampo, que se previne com vacina.\nA (tuberculose) e B (cólera): são causadas por bactérias.\nD (malária): engana porque é passada por mosquito, como a dengue, mas o causador é um protozoário.\nE (micose): é causada por fungo.",
           "visual": null
         }
       ],

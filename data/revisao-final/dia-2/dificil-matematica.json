@@ -90,7 +90,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Troque cada aumento pelo seu fator: 10% vira 1,10 e 5% vira 1,05. Multiplique o aluguel pelos dois. De cabeça: 1 200 + 120 = 1 320. Depois 10% de 1 320 é 132, e a metade disso, 5%, é 66: 1 320 + 66 = 1 386.",
+          "texto": "Troque cada aumento pelo seu fator: 10% vira 1,10 e 5% vira 1,05.\nMultiplique o aluguel pelos dois.\nDe cabeça: 1 200 × 1,10 = 1 200 + 120 = 1 320.\nDepois 10% de 1 320 é 132, e a metade disso, 5%, é 66.\n1 320 × 1,05 = 1 320 + 66 = 1 386.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Dois reajustes seguidos",
@@ -114,7 +114,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "O segundo aumento também incide sobre os 120 reais do primeiro: 5% de 120 são 6 reais a mais. Por isso dois aumentos seguidos dão um pouco mais que a soma das porcentagens: 1 380 + 6 = 1 386, e não 1 380.",
+          "texto": "O segundo aumento também incide sobre os 120 reais do primeiro.\n5% de 120 são 6 reais a mais.\nPor isso dois aumentos seguidos dão um pouco mais que a soma das porcentagens.\n1 380 + 6 = 1 386, e não 1 380.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Somar ou multiplicar",
@@ -136,7 +136,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, R$ 1 386,00. A (R$ 1 215,00) soma 15 reais em vez de 15%. B (R$ 1 260,00) faz só o segundo reajuste, de 5%. C (R$ 1 320,00) para no primeiro reajuste. D (R$ 1 380,00) soma 10% e 5% como se os dois fossem sobre os R$ 1 200.",
+          "texto": "Letra E, R$ 1 386,00.\nA (R$ 1 215,00): soma 15 reais em vez de 15%.\nB (R$ 1 260,00): faz só o segundo reajuste, de 5%.\nC (R$ 1 320,00): para no primeiro reajuste.\nD (R$ 1 380,00): soma 10% e 5% como se os dois fossem sobre os R$ 1 200.",
           "visual": null
         }
       ],
@@ -211,7 +211,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Se vendeu 60%, sobraram 40%. No domingo vendeu 25% dessa sobra, então ficaram 75% dela, ou seja, três quartos (dividir por 4 e pegar 3). Três quartos de 40: 40 ÷ 4 = 10, e 3 × 10 = 30. Sobraram 30% do estoque inicial.",
+          "texto": "Se vendeu 60%, sobraram 40%.\nNo domingo vendeu 25% dessa sobra, então ficaram 75% dela: três quartos (dividir por 4 e pegar 3).\nTrês quartos de 40: 40 ÷ 4 = 10, e 3 × 10 = 30.\nSobraram 30% do estoque inicial.",
           "visual": {
             "tipo": "tabela",
             "titulo": "O que sobra em cada dia",
@@ -236,7 +236,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Os 90 fones são 30% do estoque do começo. Para achar o todo, divida a parte pela porcentagem: 90 ÷ 0,30. Multiplique os dois por 10 para sumir a vírgula: 900 ÷ 3 = 300. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Os 90 fones são 30% do estoque do começo.\nPara achar o todo, divida a parte pela porcentagem: 90 ÷ 0,30.\nMultiplique os dois por 10 para sumir a vírgula: 900 ÷ 3 = 300.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Volta ao estoque inicial",
@@ -285,7 +285,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C, 300 fones. A (120) esquece o sábado: 90 ÷ 0,75. B (225) esquece o domingo: 90 ÷ 0,40. D (360) trata os 90 como 25%: 90 × 4. E (600) soma 60% + 25% como se fossem do mesmo total e acha que sobraram 15%.",
+          "texto": "Letra C, 300 fones.\nA (120): esquece o sábado: 90 ÷ 0,75.\nB (225): esquece o domingo: 90 ÷ 0,40.\nD (360): trata os 90 como 25%: 90 × 4.\nE (600): soma 60% + 25% como se fossem do mesmo total e acha que sobraram 15%.",
           "visual": null
         }
       ],
@@ -435,7 +435,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A. B troca as lojas: a B é a mais cara. C acha que pagar 3 de 4 é parecido com 20%, mas é 25%. D compara um pote só (30 contra 32), mas a pessoa leva 4. E compara com 4 potes sem desconto nenhum: 160 − 120.",
+          "texto": "Letra A.\nB: troca as lojas. A B é a mais cara.\nC: acha que pagar 3 de 4 é parecido com 20%, mas é 25%.\nD: compara um pote só (30 contra 32), mas a pessoa leva 4.\nE: compara com 4 potes sem desconto nenhum: 160 − 120.",
           "visual": null
         }
       ],
@@ -569,7 +569,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Nos juros simples, os juros seriam sempre 200 por mês, dando 2 600. Nos compostos, os juros do mês entram na dívida e também pagam juros: 200, depois 220, depois 242. Por isso a dívida cresce cada vez mais rápido.",
+          "texto": "Nos juros simples, os juros seriam sempre 200 por mês, dando 2 600.\nNos compostos, os juros do mês entram na dívida e também pagam juros: 200, depois 220, depois 242.\nPor isso a dívida cresce cada vez mais rápido.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Simples x compostos",
@@ -599,7 +599,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, R$ 2 662,00. A (R$ 662,00) são só os juros, sem a dívida. B (R$ 2 200,00) conta só 1 mês. C (R$ 2 420,00) para no 2º mês. D (R$ 2 600,00) usa juros simples, que a questão descartou ao dizer que os juros são sobre o total do mês anterior.",
+          "texto": "Letra E, R$ 2 662,00.\nA (R$ 662,00): são só os juros, sem a dívida.\nB (R$ 2 200,00): conta só 1 mês.\nC (R$ 2 420,00): para no 2º mês.\nD (R$ 2 600,00): usa juros simples. A questão descartou isso ao dizer que os juros são sobre o total do mês anterior.",
           "visual": null
         }
       ],
@@ -704,7 +704,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Fatia da Carla = o que ela pôs dividido pelo total, vezes o lucro. 30 000 ÷ 100 000: corte quatro zeros dos dois, fica 3 ÷ 10 = 0,3. Depois, 10% de 36 000 é 3 600, e 30% é 3 × 3 600 = 10 800. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Fatia da Carla = o que ela pôs dividido pelo total, vezes o lucro.\n30 000 ÷ 100 000: corte quatro zeros dos dois, fica 3 ÷ 10 = 0,3.\n10% de 36 000 é 3 600.\n30% é 3 × 3 600 = 10 800.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Divisão proporcional",
@@ -759,7 +759,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, R$ 10 800,00. A (R$ 7 200,00) é a parte da Bia (20%). C (R$ 12 000,00) divide igual para as três, o que só valeria se todas tivessem investido o mesmo. D (R$ 14 400,00) usa 40%, que não é a parte de ninguém. E (R$ 18 000,00) é a parte da Dani (50%).",
+          "texto": "Letra B, R$ 10 800,00.\nA (R$ 7 200,00): é a parte da Bia (20%).\nC (R$ 12 000,00): divide igual para as três. Só valeria se todas tivessem investido o mesmo.\nD (R$ 14 400,00): usa 40%, que não é a parte de ninguém.\nE (R$ 18 000,00): é a parte da Dani (50%).",
           "visual": null
         }
       ],
@@ -839,7 +839,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Antes, foram 8 × 6 × 5 = 240 horas de trabalho (somando todas as costureiras) para 240 camisetas: 1 camiseta por hora de uma costureira. Agora, por dia, são 10 × 8 = 80 horas de trabalho, ou seja, 80 camisetas por dia.",
+          "texto": "Antes: 8 × 6 × 5 = 240 horas de trabalho (somando todas as costureiras) para 240 camisetas.\nOu seja, 1 camiseta por hora de uma costureira.\nAgora, por dia, são 10 × 8 = 80 horas de trabalho.\nIsso dá 80 camisetas por dia.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Horas de trabalho",
@@ -890,7 +890,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Camisetas a mais pedem mais dias (direta); costureiras e horas a mais pedem menos dias (inversa). Partindo de 5 dias: o dobro de camisetas dá × 2. Antes eram 8 costureiras, agora 10: × 8 ÷ 10 = × 0,8. Antes 6 horas, agora 8: × 6 ÷ 8 = × 0,75 (6 de 8 é 3 de 4). Juntando: 5 × 2 = 10; 10 × 0,8 = 8; 8 × 0,75 = 6.",
+          "texto": "Camisetas a mais pedem mais dias (direta). Costureiras e horas a mais pedem menos dias (inversa).\nPartindo de 5 dias: o dobro de camisetas dá × 2.\nCostureiras, antes 8, agora 10: × 8 ÷ 10 = × 0,8.\nHoras, antes 6, agora 8: × 6 ÷ 8 = × 0,75 (6 de 8 é 3 de 4).\nJuntando: 5 × 2 = 10. Depois 10 × 0,8 = 8. Depois 8 × 0,75 = 6.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Cada mudança",
@@ -916,7 +916,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, 6 dias. B (7,5) esquece as costureiras a mais: 10 × 6 ÷ 8. C (8) esquece as horas a mais: 10 × 8 ÷ 10. D (10) só olha a encomenda que dobrou. E (12,5) trata as costureiras como se mais gente desse mais dias.",
+          "texto": "Letra A, 6 dias.\nB (7,5): esquece as costureiras a mais: 10 × 6 ÷ 8.\nC (8): esquece as horas a mais: 10 × 8 ÷ 10.\nD (10): só olha a encomenda que dobrou.\nE (12,5): trata as costureiras como se mais gente desse mais dias.",
           "visual": null
         }
       ],
@@ -1068,7 +1068,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C, 16 km/h. A (8 km/h) divide só os 18 km da ida pelo tempo total. B (12 km/h) é só a velocidade da volta. D (18 km/h) tira a média de 24 e 12 sem olhar o tempo. E (24 km/h) é só a velocidade da ida.",
+          "texto": "Letra C, 16 km/h.\nA (8 km/h): divide só os 18 km da ida pelo tempo total.\nB (12 km/h): é só a velocidade da volta.\nD (18 km/h): tira a média de 24 e 12 sem olhar o tempo.\nE (24 km/h): é só a velocidade da ida.",
           "visual": null
         }
       ],
@@ -1190,7 +1190,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "A escala vale para cada lado. Como a área usa dois lados, ela cresce 50 × 50 = 2 500 vezes: 96 cm² (quadradinhos de 1 cm de lado) × 2 500 = 240 000 cm². Isso dá 24 m², porque 1 m² tem 100 × 100 = 10 000 cm².",
+          "texto": "A escala vale para cada lado.\nComo a área usa dois lados, ela cresce 50 × 50 = 2 500 vezes.\n96 cm² (quadradinhos de 1 cm de lado) × 2 500 = 240 000 cm².\nIsso dá 24 m², porque 1 m² tem 100 × 100 = 10 000 cm².",
           "visual": {
             "tipo": "tabela",
             "titulo": "Duas contas, mesmo valor",
@@ -1212,7 +1212,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, 24 m². A (0,48) aplica a escala uma vez só na área. B (4,8) faz o mesmo erro e ainda divide por 1 000. C (20) é o contorno da sala, 6 + 4 + 6 + 4, não o chão. E (240) divide os cm² por 1 000, mas 1 m² tem 10 000 cm².",
+          "texto": "Letra D, 24 m².\nA (0,48): aplica a escala uma vez só na área.\nB (4,8): faz o mesmo erro e ainda divide por 1 000.\nC (20): é o contorno da sala, 6 + 4 + 6 + 4, não o chão.\nE (240): divide os cm² por 1 000, mas 1 m² tem 10 000 cm².",
           "visual": null
         }
       ],
@@ -1352,7 +1352,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "A média é o valor que cada família teria se as crianças fossem repartidas igualmente. Dividir 29 crianças por 4 tipos de família não tem sentido: são 20 famílias. E 1,5 ignora que há mais famílias com poucas crianças.",
+          "texto": "A média é o valor que cada família teria se as crianças fossem repartidas igualmente.\nDividir 29 crianças por 4 tipos de família não tem sentido: são 20 famílias.\nE 1,5 ignora que há mais famílias com poucas crianças.",
           "visual": {
             "tipo": "tabela",
             "titulo": "De onde vêm os erros",
@@ -1378,7 +1378,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, 1,45. B (1,5) faz a média de 0, 1, 2 e 3 como se cada um aparecesse uma vez só. C (2) é a moda, o número de crianças mais comum. D (5) divide as 20 famílias pelos 4 grupos. E (7,25) divide as 29 crianças por 4 em vez de 20.",
+          "texto": "Letra A, 1,45.\nB (1,5): faz a média de 0, 1, 2 e 3 como se cada um aparecesse uma vez só.\nC (2): é a moda, o número de crianças mais comum.\nD (5): divide as 20 famílias pelos 4 grupos.\nE (7,25): divide as 29 crianças por 4 em vez de 20.",
           "visual": null
         }
       ],
@@ -1517,7 +1517,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, 5 minutos. A (4,5) usa só o 6º valor (9) como mediana: 13,5 − 9. C (5,5) usa só o 5º valor (8), que também é o que mais se repete: 13,5 − 8. D (8,5) é a mediana, não a diferença. E (13,5) é a média, não a diferença.",
+          "texto": "Letra B, 5 minutos.\nA (4,5): usa só o 6º valor (9) como mediana: 13,5 − 9.\nC (5,5): usa só o 5º valor (8), que também é o que mais se repete: 13,5 − 8.\nD (8,5): é a mediana, não a diferença.\nE (13,5): é a média, não a diferença.",
           "visual": null
         }
       ],
@@ -1668,7 +1668,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C, 28,5 anos. A (24) faz a média só de 30 e 18. B (27,75) tira os 54 e esquece de somar os 18 do aprendiz. D (30) acha que a média não muda porque o número de pessoas não mudou, mas as idades mudaram. E (31,5) soma a diferença em vez de tirar.",
+          "texto": "Letra C, 28,5 anos.\nA (24): faz a média só de 30 e 18.\nB (27,75): tira os 54 e esquece de somar os 18 do aprendiz.\nD (30): acha que a média não muda porque o número de pessoas não mudou. Mas as idades mudaram.\nE (31,5): soma a diferença em vez de tirar.",
           "visual": null
         }
       ],
@@ -1822,7 +1822,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C, R$ 82,00. A (R$ 42,00) cobra só o que passou e esquece a tarifa fixa. B (R$ 68,00) acha que os 40 reais valem 4 por m³ e faz 17 × 4. D (R$ 102,00) cobra os 17 m³ a 6 reais, sem tarifa fixa. E (R$ 142,00) cobra os 17 m³ inteiros e ainda soma os 40, como se a tarifa não cobrisse os 10 primeiros.",
+          "texto": "Letra C, R$ 82,00.\nA (R$ 42,00): cobra só o que passou e esquece a tarifa fixa.\nB (R$ 68,00): acha que os 40 reais valem 4 por m³ e faz 17 × 4.\nD (R$ 102,00): cobra os 17 m³ a 6 reais, sem tarifa fixa.\nE (R$ 142,00): cobra os 17 m³ inteiros e ainda soma os 40, como se a tarifa não cobrisse os 10 primeiros.",
           "visual": null
         }
       ],
@@ -1995,7 +1995,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, 800 m². A (600) testa x = 10 ou x = 30 e para antes do topo. C (1 200) esquece o 2 da fórmula: 20 × 60. D (1 600) faz um quadrado de 40 m, mas a tela não fecha quatro lados. E (3 200) multiplica 80 × 40, usando a tela toda como lado.",
+          "texto": "Letra B, 800 m².\nA (600): testa x = 10 ou x = 30 e para antes do topo.\nC (1 200): esquece o 2 da fórmula: 20 × 60.\nD (1 600): faz um quadrado de 40 m, mas a tela não fecha quatro lados.\nE (3 200): multiplica 80 × 40, usando a tela toda como lado.",
           "visual": null
         }
       ],
@@ -2128,7 +2128,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Cada dobra multiplica o que já existe, inclusive as bactérias que nasceram antes. Por isso 4 dobras dão × 16 (2 × 2 × 2 × 2), e não × 4. Somar 500 por vez daria sempre o mesmo pulo de 500 (1 000, 1 500, 2 000, 2 500). Dobrando, o pulo cresce: +500, +1 000, +2 000, +4 000.",
+          "texto": "Cada dobra multiplica o que já existe, inclusive as bactérias que nasceram antes.\nPor isso 4 dobras dão × 16 (2 × 2 × 2 × 2), e não × 4.\nSomar 500 por vez daria sempre o mesmo pulo de 500 (1 000, 1 500, 2 000, 2 500).\nDobrando, o pulo cresce: +500, +1 000, +2 000, +4 000.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Dobrar x somar",
@@ -2163,7 +2163,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, 8 000. A (2 000) multiplica 500 por 4, o número de dobras. B (2 500) soma 500 a cada dobra em vez de dobrar. C (4 000) conta só 3 dobras, esquecendo a das 20 h. D (6 000) multiplica 500 por 12, as horas.",
+          "texto": "Letra E, 8 000.\nA (2 000): multiplica 500 por 4, o número de dobras.\nB (2 500): soma 500 a cada dobra em vez de dobrar.\nC (4 000): conta só 3 dobras, esquecendo a das 20 h.\nD (6 000): multiplica 500 por 12, as horas.",
           "visual": null
         }
       ],
@@ -2319,7 +2319,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, R$ 3 276,00. B (R$ 3 384,00) tira a volta da piscina (18) em vez da área. C (R$ 3 492,00) esquece o π e tira só 3 × 3 = 9. D (R$ 3 600,00) grama o quintal inteiro, por cima da piscina. E (R$ 3 924,00) soma a piscina em vez de tirar.",
+          "texto": "Letra A, R$ 3 276,00.\nB (R$ 3 384,00): tira a volta da piscina (18) em vez da área.\nC (R$ 3 492,00): esquece o π e tira só 3 × 3 = 9.\nD (R$ 3 600,00): grama o quintal inteiro, por cima da piscina.\nE (R$ 3 924,00): soma a piscina em vez de tirar.",
           "visual": null
         }
       ],
@@ -2435,7 +2435,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Os raios de sol chegam com a mesma inclinação nos dois. O triângulo do poste (poste, sombra, raio) é uma ampliação do triângulo do técnico: a sombra cresceu 5 vezes (1,20 → 6), então a altura também cresce 5 vezes (1,80 → 9).",
+          "texto": "Os raios de sol chegam com a mesma inclinação nos dois.\nO triângulo do poste (poste, sombra, raio) é uma ampliação do triângulo do técnico.\nA sombra cresceu 5 vezes (1,20 → 6).\nEntão a altura também cresce 5 vezes (1,80 → 9).",
           "visual": {
             "tipo": "tabela",
             "titulo": "Ampliação de 5 vezes",
@@ -2460,7 +2460,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, 9 m. A (4 m) inverte a razão: daria um poste mais baixo que a própria sombra, mas o técnico é mais alto que a dele. B (6,6 m) soma à sombra a diferença 0,60. C (7,2 m) multiplica 6 por 1,2. D (7,8 m) soma 6 + 1,8 em vez de multiplicar.",
+          "texto": "Letra E, 9 m.\nA (4 m): inverte a razão. Daria um poste mais baixo que a própria sombra, mas o técnico é mais alto que a dele.\nB (6,6 m): soma à sombra a diferença 0,60.\nC (7,2 m): multiplica 6 por 1,2.\nD (7,8 m): soma 6 + 1,8 em vez de multiplicar.",
           "visual": null
         }
       ],
@@ -2613,7 +2613,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, 68 m. A (17 m) acerta um cabo, mas esquece que são 4. B (28 m) usa 15 − 8 em cada cabo. C (60 m) usa a altura da antena como cabo. E (92 m) soma 15 e 8, que seria o cabo dando a volta pelo canto.",
+          "texto": "Letra D, 68 m.\nA (17 m): acerta um cabo, mas esquece que são 4.\nB (28 m): usa 15 − 8 em cada cabo.\nC (60 m): usa a altura da antena como cabo.\nE (92 m): soma 15 e 8, que seria o cabo dando a volta pelo canto.",
           "visual": null
         }
       ],
@@ -2692,7 +2692,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Raio: 4 ÷ 2 = 2 m. Fundo: 3 × 2 × 2 = 12 m² (12 quadrados de 1 m de lado). Volume = área do fundo × altura, como empilhar 3 camadas de 1 m com 12 m³ cada: 12 × 3 = 36 m³ (36 caixas de 1 m de lado). Cada m³ tem 1 000 L: 36 000 litros.",
+          "texto": "Raio: 4 ÷ 2 = 2 m.\nFundo: 3 × 2 × 2 = 12 m² (12 quadrados de 1 m de lado).\nVolume = área do fundo × altura, como empilhar 3 camadas de 1 m com 12 m³ cada.\n12 × 3 = 36 m³ (36 caixas de 1 m de lado).\nCada m³ tem 1 000 L: 36 000 litros.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Do tamanho ao volume",
@@ -2722,7 +2722,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Primeiro o volume em m³. Depois passe para litros (vezes 1 000), porque a bomba conta em litros por minuto: m³ e litros não se dividem direto. Só então divida pela vazão (quantos litros a bomba manda por minuto): 36 000 ÷ 400; corte dois zeros dos dois, 360 ÷ 4 = 90 minutos, que são 60 + 30 = 1 h 30 min.",
+          "texto": "Primeiro o volume em m³.\nDepois passe para litros (vezes 1 000), porque a bomba conta em litros por minuto: m³ e litros não se dividem direto.\nSó então divida pela vazão (quantos litros a bomba manda por minuto): 36 000 ÷ 400.\nCorte dois zeros dos dois: 360 ÷ 4 = 90 minutos, que são 60 + 30 = 1 h 30 min.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Tempo para encher",
@@ -2873,7 +2873,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Volume de uma casquinha e depois quantas cabem em 5 400 cm³ (5,4 L × 1 000). 5 400 ÷ 90: corte um zero dos dois, 540 ÷ 9 = 60 (9 × 6 = 54). No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Ache o volume de uma casquinha.\nDepois veja quantas cabem em 5 400 cm³ (5,4 L × 1 000).\n5 400 ÷ 90: corte um zero dos dois, 540 ÷ 9 = 60 (9 × 6 = 54).\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Casquinhas com 5,4 L",
@@ -3071,7 +3071,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, R$ 30,00. A (R$ 15,00) divide o preço por 16, um corte a mais. C (R$ 60,00) divide por 4, que vale para área, não para volume. D (R$ 80,00) divide por 3 por serem três medidas. E (R$ 120,00) só divide por 2, como se uma medida tivesse mudado.",
+          "texto": "Letra B, R$ 30,00.\nA (R$ 15,00): divide o preço por 16, um corte a mais.\nC (R$ 60,00): divide por 4, que vale para área, não para volume.\nD (R$ 80,00): divide por 3 por serem três medidas.\nE (R$ 120,00): só divide por 2, como se uma medida tivesse mudado.",
           "visual": null
         }
       ],

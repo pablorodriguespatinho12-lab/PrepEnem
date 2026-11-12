@@ -82,7 +82,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Somar 10% é o mesmo que multiplicar por 1,10 (o 1 é a conta, o 0,10 é a taxa): 120 + 12 = 132. Depois divida por 4 de cabeça: metade de 132 é 66, e metade de 66 é 33. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Somar 10% é o mesmo que multiplicar por 1,10 (o 1 é a conta, o 0,10 é a taxa).\n120 × 1,10 = 132, o mesmo que 120 + 12.\nDivida por 4 de cabeça: metade de 132 é 66, e metade de 66 é 33.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Conta do jantar",
@@ -273,7 +273,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, R$ 945,00. B (R$ 900,00) soma os descontos como se fossem 40%. C (R$ 1 050,00) para no primeiro desconto. D (R$ 450,00) é só o valor do desconto de 30%, não o preço. E (R$ 1 040,00) tira 10 reais em vez de 10%.",
+          "texto": "Letra A, R$ 945,00.\nB (R$ 900,00): soma os descontos como se fossem 40%.\nC (R$ 1 050,00): para no primeiro desconto.\nD (R$ 450,00): é só o valor do desconto de 30%, não o preço.\nE (R$ 1 040,00): tira 10 reais em vez de 10%.",
           "visual": null
         }
       ],
@@ -370,7 +370,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Divida o preço novo pelo fator do aumento: 5 ÷ 1,25. Para sumir a vírgula, multiplique os dois por 100: fica 500 ÷ 125. De cabeça: 125 + 125 = 250, e 250 + 250 = 500, então 125 cabe 4 vezes em 500. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Divida o preço novo pelo fator do aumento: 5 ÷ 1,25.\nPara sumir a vírgula, multiplique os dois por 100: fica 500 ÷ 125.\nDe cabeça: 125 + 125 = 250, e 250 + 250 = 500.\nEntão 125 cabe 4 vezes em 500.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Desfazendo o aumento",
@@ -414,7 +414,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, R$ 4,00. A (R$ 3,75) tira 25% do preço novo, mas os 25% eram do preço velho. B (R$ 6,25) soma mais 25% em vez de desfazer. C (R$ 4,75) tira só 25 centavos. D (R$ 1,25) é só 25% de 5, um pedaço do preço.",
+          "texto": "Letra E, R$ 4,00.\nA (R$ 3,75): tira 25% do preço novo, mas os 25% eram do preço velho.\nB (R$ 6,25): soma mais 25% em vez de desfazer.\nC (R$ 4,75): tira só 25 centavos.\nD (R$ 1,25): é só 25% de 5, um pedaço do preço.",
           "visual": null
         }
       ],
@@ -712,7 +712,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, R$ 2 300,00. A (R$ 300,00) são só os juros, sem devolver o empréstimo. B (R$ 2 060,00) conta só um mês. C (R$ 2 015,00) soma 3 × 5 = 15 reais, como se 3% fossem 3 reais. E (R$ 2 600,00) usa 3% como 30%: 2 000 × 0,3 = 600 de juros.",
+          "texto": "Letra D, R$ 2 300,00.\nA (R$ 300,00): são só os juros, sem devolver o empréstimo.\nB (R$ 2 060,00): conta só um mês.\nC (R$ 2 015,00): soma 3 × 5 = 15 reais, como se 3% fossem 3 reais.\nE (R$ 2 600,00): usa 3% como 30%. 2 000 × 0,3 = 600 de juros.",
           "visual": null
         }
       ],
@@ -801,7 +801,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Na inversa, velocidade vezes tempo é igual nos dois dias: 60 × 40 = 2 400. Então 48 vezes o tempo novo também dá 2 400. Para achar 2 400 ÷ 48 de cabeça: 48 × 100 = 4 800, e a metade, 48 × 50, é 2 400. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Na inversa, velocidade vezes tempo é igual nos dois dias: 60 × 40 = 2 400.\nEntão 48 vezes o tempo novo também dá 2 400.\nPara achar 2 400 ÷ 48 de cabeça: 48 × 100 = 4 800.\nA metade, 48 × 50, é 2 400.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Regra de três inversa",
@@ -849,7 +849,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, 50 minutos. B (32) faz regra de três direta e dá menos tempo indo mais devagar. C (28) tira de 40 a diferença das velocidades (12). D (52) soma essa diferença, mas velocidade e minutos não se somam. E (48) copia a velocidade nova como se fosse o tempo.",
+          "texto": "Letra A, 50 minutos.\nB (32): faz regra de três direta e dá menos tempo indo mais devagar.\nC (28): tira de 40 a diferença das velocidades (12).\nD (52): soma essa diferença, mas velocidade e minutos não se somam.\nE (48): copia a velocidade nova como se fosse o tempo.",
           "visual": null
         }
       ],
@@ -1276,7 +1276,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, 9. A (7) acha que basta tirar a média: dá 26 pontos, faltam 2. C (2) usa só 3 provas: 7 × 3 − 19. D (8) compensa só o 6, mas o 5 também ficou 2 abaixo. E (10) passa da conta: a média viraria 7,25.",
+          "texto": "Letra B, 9.\nA (7): acha que basta tirar a média. Dá 26 pontos, faltam 2.\nC (2): usa só 3 provas, 7 × 3 − 19.\nD (8): compensa só o 6, mas o 5 também ficou 2 abaixo.\nE (10): passa da conta. A média viraria 7,25.",
           "visual": null
         }
       ],
@@ -1571,7 +1571,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, R$ 22,50. A (R$ 25,00) faz a média dos dois preços e ignora que vendeu 3 vezes mais camisetas baratas. B (R$ 450,00) divide 900 por 2, os preços, e não por 40 camisetas. C (R$ 900,00) para no dinheiro total. D (R$ 27,50) troca as quantidades: 1 100 ÷ 40.",
+          "texto": "Letra E, R$ 22,50.\nA (R$ 25,00): faz a média dos dois preços e ignora que vendeu 3 vezes mais camisetas baratas.\nB (R$ 450,00): divide 900 por 2, os preços, e não por 40 camisetas.\nC (R$ 900,00): para no dinheiro total.\nD (R$ 27,50): troca as quantidades, 1 100 ÷ 40.",
           "visual": null
         }
       ],
@@ -1716,7 +1716,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, 4 horas. B (4,5 h) divide 180 por 40 sem tirar a visita. C (5 h) soma a visita em vez de tirar: 200 ÷ 40. D (9 h) divide 180 pelo preço da visita, 20. E (3 h) tira a visita e mais 40: 120 ÷ 40.",
+          "texto": "Letra A, 4 horas.\nB (4,5 h): divide 180 por 40 sem tirar a visita.\nC (5 h): soma a visita em vez de tirar, 200 ÷ 40.\nD (9 h): divide 180 pelo preço da visita, 20.\nE (3 h): tira a visita e mais 40, 120 ÷ 40.",
           "visual": null
         }
       ],
@@ -1889,7 +1889,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C, 20 m. A (2) é o tempo até o topo, não a altura. B (15 m) é a altura no segundo 1, ainda subindo. D (40 m) usa só o 20t (20 × 2) e esquece o −5t², que puxa a bola para baixo. E (4) é o tempo de voltar ao chão.",
+          "texto": "Letra C, 20 m.\nA (2): é o tempo até o topo, não a altura.\nB (15 m): é a altura no segundo 1, ainda subindo.\nD (40 m): usa só o 20t (20 × 2) e esquece o −5t², que puxa a bola para baixo.\nE (4): é o tempo de voltar ao chão.",
           "visual": null
         }
       ],
@@ -2188,7 +2188,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, R$ 450,00. A (R$ 405,00) usa o contorno de 18 m como se fosse chão: 9 caixas. B (R$ 900,00) esquece que cada caixa cobre 2 m². C (R$ 1 800,00) multiplica por 2 em vez de dividir: 40 caixas. E (R$ 202,50) usa meio contorno: 4,5 caixas.",
+          "texto": "Letra D, R$ 450,00.\nA (R$ 405,00): usa o contorno de 18 m como se fosse chão, 9 caixas.\nB (R$ 900,00): esquece que cada caixa cobre 2 m².\nC (R$ 1 800,00): multiplica por 2 em vez de dividir, 40 caixas.\nE (R$ 202,50): usa meio contorno, 4,5 caixas.",
           "visual": null
         }
       ],
@@ -2434,7 +2434,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Contorno vezes número de voltas: 2 × 3 × 30 = 180 cm por volta, e 180 × 100 = 18 000 cm. Para ter metros, divida por 100 (1 m = 100 cm): corte dois zeros, 180 m. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Contorno vezes número de voltas.\nUma volta: 2 × 3 × 30 = 180 cm.\nCem voltas: 180 × 100 = 18 000 cm.\nPara ter metros, divida por 100 (1 m = 100 cm): corte dois zeros, 180 m.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Distância da bicicleta",
@@ -2717,7 +2717,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Calcule o volume do copo e divida a jarra por ele: 1 440 ÷ 480. De cabeça: 480 + 480 = 960, e 960 + 480 = 1 440. Cabe 3 vezes. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Calcule o volume do copo e divida a jarra por ele: 1 440 ÷ 480.\nDe cabeça: 480 + 480 = 960, e 960 + 480 = 1 440.\nCabe 3 vezes.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Copos na jarra",
@@ -2764,7 +2764,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, 3 copos. A (12) esquece de elevar o raio ao quadrado: copo de 120 mL. C (6) usa o contorno do copo no lugar da área do fundo: 240 mL. D (36) faz só raio × altura: 1 440 ÷ 40. E (30) lê 1,44 L como 14 400 mL.",
+          "texto": "Letra B, 3 copos.\nA (12): esquece de elevar o raio ao quadrado. Copo de 120 mL.\nC (6): usa o contorno do copo no lugar da área do fundo. 240 mL.\nD (36): faz só raio × altura, 1 440 ÷ 40.\nE (30): lê 1,44 L como 14 400 mL.",
           "visual": null
         }
       ],
@@ -2888,7 +2888,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "A pirâmide afina até virar uma ponta, então cabe menos que na caixa de mesma base e altura. Encha a pirâmide de areia e despeje na caixa: são precisas 3 viagens para encher. Por isso a regra que a questão deu divide por 3.",
+          "texto": "A pirâmide afina até virar uma ponta.\nEntão cabe menos que na caixa de mesma base e altura.\nEncha a pirâmide de areia e despeje na caixa: são precisas 3 viagens para encher.\nPor isso a regra que a questão deu divide por 3.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Três pirâmides, uma caixa",

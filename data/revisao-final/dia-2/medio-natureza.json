@@ -113,7 +113,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, 10 A. A (2 A) subtrai as potências: 440 ÷ 220. B (4 A) é só a chaleira, esquecendo o micro-ondas. C (6 A) é só o micro-ondas, esquecendo a chaleira. E (484 000 A) multiplica 2 200 × 220 em vez de dividir.",
+          "texto": "Letra D, 10 A.\nA (2 A): subtrai as potências, 440 ÷ 220.\nB (4 A): é só a chaleira, esquecendo o micro-ondas.\nC (6 A): é só o micro-ondas, esquecendo a chaleira.\nE (484 000 A): multiplica 2 200 × 220 em vez de dividir.",
           "visual": null
         }
       ],
@@ -245,7 +245,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, 1 A. B (1,5 A) usa só a lâmpada de 8 Ω: 12 ÷ 8. C (3 A) usa só a de 4 Ω: 12 ÷ 4. D (4,5 A) soma 3 + 1,5, que é a conta de lâmpadas lado a lado (paralelo), não o caso. E (144 A) multiplica 12 × 12 em vez de dividir.",
+          "texto": "Letra A, 1 A.\nB (1,5 A): usa só a lâmpada de 8 Ω, 12 ÷ 8.\nC (3 A): usa só a de 4 Ω, 12 ÷ 4.\nD (4,5 A): soma 3 + 1,5. Essa é a conta de lâmpadas lado a lado (paralelo), não o caso.\nE (144 A): multiplica 12 × 12 em vez de dividir.",
           "visual": null
         }
       ],
@@ -324,7 +324,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: a temperatura sobe 80 − 20 = 60 °C, e cada grama precisa de 1 caloria por grau. São 500 gramas subindo 60 graus: 500 × 60 = 30 000 calorias. Depois: o ebulidor dá 500 calorias a cada segundo; o tempo é o total dividido por 500.",
+          "texto": "Primeiro: a temperatura sobe 80 − 20 = 60 °C.\nCada grama precisa de 1 caloria por grau.\nSão 500 gramas subindo 60 graus: 500 × 60 = 30 000 calorias.\nDepois: o ebulidor dá 500 calorias a cada segundo.\nO tempo é o total dividido por 500.",
           "visual": null
         },
         {
@@ -380,7 +380,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, 60 s. A (0,06 s) usa a massa em quilos (0,5 kg) no lugar de gramas: 0,5 × 60 = 30 e 30 ÷ 500. C (80 s) usa só o 80 °C, esquecendo de tirar os 20 °C do começo. D (100 s) soma as temperaturas, 80 + 20. E (30 000 s) é o calor, não o tempo: faltou dividir por 500.",
+          "texto": "Letra B, 60 s.\nA (0,06 s): usa a massa em quilos (0,5 kg) no lugar de gramas. 0,5 × 60 = 30 e 30 ÷ 500.\nC (80 s): usa só o 80 °C, esquecendo de tirar os 20 °C do começo.\nD (100 s): soma as temperaturas, 80 + 20.\nE (30 000 s): é o calor, não o tempo. Faltou dividir por 500.",
           "visual": null
         }
       ],
@@ -455,7 +455,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: quanto o som andou ao todo em 0,4 s, que é 1 500 × 0,4. Como 0,4 é 4 décimos: 1 500 ÷ 10 = 150, e 150 × 4 = 600 m. Depois: esse caminho é descer + subir, então a profundidade é a metade: 600 ÷ 2 = 300 m.",
+          "texto": "Primeiro: quanto o som andou ao todo em 0,4 s, que é 1 500 × 0,4.\nComo 0,4 é 4 décimos: 1 500 ÷ 10 = 150.\nE 150 × 4 = 600 m.\nDepois: esse caminho é descer + subir, então a profundidade é a metade.\n600 ÷ 2 = 300 m.",
           "visual": null
         },
         {
@@ -513,7 +513,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, 300 m. C (600 m) é a armadilha: é o caminho de ida e volta, não a profundidade. A (150 m) divide por 2 duas vezes. E (3 750 m) divide 1 500 ÷ 0,4 em vez de multiplicar. D (1 875 m) é esse 3 750 dividido por 2.",
+          "texto": "Letra B, 300 m.\nC (600 m): é a armadilha. É o caminho de ida e volta, não a profundidade.\nA (150 m): divide por 2 duas vezes.\nE (3 750 m): divide 1 500 ÷ 0,4 em vez de multiplicar.\nD (1 875 m): é esse 3 750 dividido por 2.",
           "visual": null
         }
       ],
@@ -641,7 +641,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C, 3 m. A (1 m) dobra só o 0,5 m que ela andou. B (1,5 m) para no espelho e esquece a parte de trás. D (3,5 m) mistura antes e depois: 2 + 1,5. E (4 m) é a distância de antes de ela andar: 2 × 2.",
+          "texto": "Letra C, 3 m.\nA (1 m): dobra só o 0,5 m que ela andou.\nB (1,5 m): para no espelho e esquece a parte de trás.\nD (3,5 m): mistura antes e depois, 2 + 1,5.\nE (4 m): é a distância de antes de ela andar, 2 × 2.",
           "visual": null
         }
       ],
@@ -869,7 +869,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C, cetona. B (aldeído) é a confusão mais comum: também tem C=O, mas na ponta da cadeia, com um hidrogênio do lado. A (álcool) teria OH, e a acetona não tem. D (ácido carboxílico) teria COOH: C=O e OH no mesmo carbono da ponta. E (éster) teria o C=O preso a um oxigênio que segue para outro carbono.",
+          "texto": "Letra C, cetona.\nB (aldeído): é a confusão mais comum. Também tem C=O, mas na ponta da cadeia, com um hidrogênio do lado.\nA (álcool): teria OH, e a acetona não tem.\nD (ácido carboxílico): teria COOH, C=O e OH no mesmo carbono da ponta.\nE (éster): teria o C=O preso a um oxigênio que segue para outro carbono.",
           "visual": null
         }
       ],
@@ -1115,12 +1115,12 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: o fosfato aduba as algas, que crescem demais e tapam a luz; as de baixo morrem. Depois: muitas bactérias comem essa montanha de algas mortas e respiram o oxigênio da água. Sem oxigênio, os peixes morrem.",
+          "texto": "Primeiro: o fosfato aduba as algas, que crescem demais e tapam a luz.\nAs de baixo morrem.\nDepois: muitas bactérias comem essa montanha de algas mortas e respiram o oxigênio da água.\nSem oxigênio, os peixes morrem.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E. A é a armadilha: o fosfato não envenena, ele alimenta as algas. B inverte: vivas, as algas até soltam oxigênio; o problema é a falta dele depois. C falha porque o sol não mudou; o que mudou foi o esgoto. D falha porque o peixe não morre por enxergar mal: morre sem ar.",
+          "texto": "Letra E.\nA: é a armadilha. O fosfato não envenena, ele alimenta as algas.\nB: inverte. Vivas, as algas até soltam oxigênio. O problema é a falta dele depois.\nC: falha porque o sol não mudou. O que mudou foi o esgoto.\nD: falha porque o peixe não morre por enxergar mal. Morre sem ar.",
           "visual": null
         }
       ],
@@ -1190,7 +1190,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: quantos gramas de cada um dão 900 kJ. Etanol: 900 ÷ 30 = 30 g, porque 30 × 30 = 900. Gasolina: 900 ÷ 45 = 20 g, porque 45 × 20 = 900. Depois: tire a massa da gasolina da massa do etanol: 30 − 20 = 10 g.",
+          "texto": "Primeiro: quantos gramas de cada um dão 900 kJ.\nEtanol: 900 ÷ 30 = 30 g, porque 30 × 30 = 900.\nGasolina: 900 ÷ 45 = 20 g, porque 45 × 20 = 900.\nDepois: tire a massa da gasolina da massa do etanol: 30 − 20 = 10 g.",
           "visual": null
         },
         {
@@ -1380,7 +1380,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, 20 g/L. A (100) acha que a água não muda nada. C (25) divide só pelo volume da água, 20 ÷ 0,8, esquecendo o suco que também está no copo. D (80) multiplica 100 × 0,8. E (500) divide 100 ÷ 0,2.",
+          "texto": "Letra B, 20 g/L.\nA (100): acha que a água não muda nada.\nC (25): divide só pelo volume da água, 20 ÷ 0,8, esquecendo o suco que também está no copo.\nD (80): multiplica 100 × 0,8.\nE (500): divide 100 ÷ 0,2.",
           "visual": null
         }
       ],
@@ -1466,12 +1466,12 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: o zinco perde elétrons (oxidação), vira íon e se solta na água. A placa de zinco perde átomos e afina. Depois: os íons de cobre da água ganham esses elétrons (redução) e viram metal grudado na placa de cobre, que engrossa.",
+          "texto": "Primeiro: o zinco perde elétrons (oxidação), vira íon e se solta na água.\nA placa de zinco perde átomos e afina.\nDepois: os íons de cobre da água ganham esses elétrons (redução).\nEles viram metal grudado na placa de cobre, que engrossa.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A. B é a mais tentadora: inverte os papéis; quem perde elétrons é que se gasta. C falha porque não andam só elétrons: átomos de zinco saem da placa e átomos de cobre entram na outra. D falha porque a placa de cobre ganha metal. E falha porque receber elétrons faz o cobre virar metal e grudar, não desmanchar.",
+          "texto": "Letra A.\nB: é a mais tentadora. Inverte os papéis, e quem perde elétrons é que se gasta.\nC: falha porque não andam só elétrons. Átomos de zinco saem da placa e átomos de cobre entram na outra.\nD: falha porque a placa de cobre ganha metal.\nE: falha porque receber elétrons faz o cobre virar metal e grudar, não desmanchar.",
           "visual": null
         }
       ],
@@ -1552,7 +1552,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: 1 mol de metano pesa 16 g, então 32 g são 32 ÷ 16 = 2 mol. Depois: na equação, cada CH₄ vira 1 CO₂, então saem 2 mol de CO₂. Cada mol de CO₂ pesa 12 + 2 × 16 = 12 + 32 = 44 g, e 2 mol pesam 2 × 44 = 88 g.",
+          "texto": "Primeiro: 1 mol de metano pesa 16 g, então 32 g são 32 ÷ 16 = 2 mol.\nDepois: na equação, cada CH₄ vira 1 CO₂, então saem 2 mol de CO₂.\nCada mol de CO₂ pesa 12 + 2 × 16 = 12 + 32 = 44 g.\nE 2 mol pesam 2 × 44 = 88 g.",
           "visual": null
         },
         {
@@ -1707,12 +1707,12 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: do capim para o boi passa 10% de 10 000, que é 10 000 ÷ 10 = 1 000 kcal. O boi gasta o resto vivendo: andando, se aquecendo. Depois: do boi para a pessoa passa 10% de 1 000, que é 1 000 ÷ 10 = 100 kcal.",
+          "texto": "Primeiro: do capim para o boi passa 10% de 10 000, que é 10 000 ÷ 10 = 1 000 kcal.\nO boi gasta o resto vivendo: andando, se aquecendo.\nDepois: do boi para a pessoa passa 10% de 1 000, que é 1 000 ÷ 10 = 100 kcal.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C, 100 kcal. A (10 000) acha que a energia passa inteira. B (1 000) para no boi. D (8 100) tira 10% duas vezes: 10 000 vira 9 000, que vira 8 100. E (9 000) tira 10% uma vez, quando na verdade só FICAM 10%.",
+          "texto": "Letra C, 100 kcal.\nA (10 000): acha que a energia passa inteira.\nB (1 000): para no boi.\nD (8 100): tira 10% duas vezes. 10 000 vira 9 000, que vira 8 100.\nE (9 000): tira 10% uma vez, quando na verdade só FICAM 10%.",
           "visual": null
         }
       ],
@@ -1808,7 +1808,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, inquilinismo. A (parasitismo) é a pegada mais comum: estar presa na árvore parece parasita, mas a orquídea não tira seiva nem faz mal. C (mutualismo) exigiria que a árvore também ganhasse. D (predação) exigiria que uma matasse e comesse a outra. E (competição) exigiria que as duas disputassem a mesma coisa e perdessem.",
+          "texto": "Letra B, inquilinismo.\nA (parasitismo): é a pegada mais comum. Estar presa na árvore parece parasita, mas a orquídea não tira seiva nem faz mal.\nC (mutualismo): exigiria que a árvore também ganhasse.\nD (predação): exigiria que uma matasse e comesse a outra.\nE (competição): exigiria que as duas disputassem a mesma coisa e perdessem.",
           "visual": null
         }
       ],
@@ -1916,12 +1916,12 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: o rim percebe o sangue com menos oxigênio e solta um hormônio, a EPO (eritropoetina, um mensageiro químico). Depois: esse hormônio manda a medula óssea, dentro dos ossos, fabricar mais hemácias. Mais caminhões de entrega, mais oxigênio levado.",
+          "texto": "Primeiro: o rim percebe o sangue com menos oxigênio.\nEle solta um hormônio, a EPO (eritropoetina, um mensageiro químico).\nDepois: esse hormônio manda a medula óssea, dentro dos ossos, fabricar mais hemácias.\nMais caminhões de entrega, mais oxigênio levado.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E. A confunde as funções: plaqueta fecha machucado, não carrega oxigênio. B falha porque glóbulo branco defende de micróbios, não do frio nem da falta de ar. C faz o contrário do que o corpo precisa: menos hemácias levariam menos oxigênio. D falha porque o pulmão de um adulto não cresce em poucas semanas.",
+          "texto": "Letra E.\nA: confunde as funções. Plaqueta fecha machucado, não carrega oxigênio.\nB: falha porque glóbulo branco defende de micróbios, não do frio nem da falta de ar.\nC: faz o contrário do que o corpo precisa. Menos hemácias levariam menos oxigênio.\nD: falha porque o pulmão de um adulto não cresce em poucas semanas.",
           "visual": null
         }
       ],
@@ -2000,7 +2000,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C, 50%. A (0%) é a pegadinha: o filho não precisa ter o sangue de um dos pais; aqui, nenhum filho sai AB nem O. B (25%) e D (75%) vêm do quadro de Aa × Aa decorado, que não é este cruzamento. E (100%) acha que todo filho recebe Iᴬ, mas metade recebe Iᴮ.",
+          "texto": "Letra C, 50%.\nA (0%): é a pegadinha. O filho não precisa ter o sangue de um dos pais. Aqui, nenhum filho sai AB nem O.\nB (25%) e D (75%): vêm do quadro de Aa × Aa decorado, que não é este cruzamento.\nE (100%): acha que todo filho recebe Iᴬ, mas metade recebe Iᴮ.",
           "visual": null
         }
       ],
@@ -2098,12 +2098,12 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: enzima é proteína, e proteína se faz nos ribossomos. Os ribossomos que fazem proteína para mandar para fora ficam grudados no retículo rugoso. Depois, o complexo de Golgi (o setor de embalagem) empacota a proteína para sair. Muita exportação, muito retículo rugoso.",
+          "texto": "Primeiro: enzima é proteína, e proteína se faz nos ribossomos.\nOs ribossomos que fazem proteína para mandar para fora ficam grudados no retículo rugoso.\nDepois, o complexo de Golgi (o setor de embalagem) empacota a proteína para sair.\nMuita exportação, muito retículo rugoso.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A. C (lisossomos) é a mais tentadora por causa da palavra 'digestiva', mas o lisossomo é um saquinho que digere coisas dentro da própria célula, não fabrica enzima para fora. B (mitocôndrias) liberam energia, não montam proteína. D (cloroplastos) só existem em planta. E (centríolos) ajudam a célula a se dividir em duas.",
+          "texto": "Letra A.\nC (lisossomos): é a mais tentadora por causa da palavra 'digestiva'.\nMas o lisossomo é um saquinho que digere coisas dentro da própria célula, não fabrica enzima para fora.\nB (mitocôndrias): liberam energia, não montam proteína.\nD (cloroplastos): só existem em planta.\nE (centríolos): ajudam a célula a se dividir em duas.",
           "visual": null
         }
       ],
@@ -2182,12 +2182,12 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: 'de tanto rastejar, deixaram de usar' é uso e desuso, de Lamarck. Depois: 'passaram a perda aos filhos' é herdar o que o corpo mudou na vida, e a genética mostrou que isso não acontece. Pelo Darwin, cobras com patas menores sobreviveram mais e deixaram mais filhos.",
+          "texto": "Primeiro: 'de tanto rastejar, deixaram de usar' é uso e desuso, de Lamarck.\nDepois: 'passaram a perda aos filhos' é herdar o que o corpo mudou na vida.\nA genética mostrou que isso não acontece.\nPelo Darwin, cobras com patas menores sobreviveram mais e deixaram mais filhos.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D. A é a armadilha: a seleção de Darwin não fala em perder patas por desuso, e sim em cobras que já nasciam diferentes. B (Mendel) estudou como as características passam aos filhos, não por que mudam. C (neodarwinismo) é a seleção somada à genética, o oposto da frase. E erra porque a genética recusou essa ideia.",
+          "texto": "Letra D.\nA: é a armadilha. A seleção de Darwin não fala em perder patas por desuso, e sim em cobras que já nasciam diferentes.\nB (Mendel): estudou como as características passam aos filhos, não por que mudam.\nC (neodarwinismo): é a seleção somada à genética, o oposto da frase.\nE: erra porque a genética recusou essa ideia.",
           "visual": null
         }
       ],
@@ -2271,12 +2271,12 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: a toxina do tétano já pode estar agindo, então não dá para esperar. Depois: o soro traz anticorpos prontos, que desligam a toxina na hora; a vacina precisaria de semanas para o corpo fabricar os seus.",
+          "texto": "Primeiro: a toxina do tétano já pode estar agindo, então não dá para esperar.\nDepois: o soro traz anticorpos prontos, que desligam a toxina na hora.\nA vacina precisaria de semanas para o corpo fabricar os seus.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E. A erra o micróbio: o tétano vem de bactéria, não de vírus. B falha porque adulto também toma vacina. C falha porque soro não é antibiótico (remédio que mata bactéria): ele desliga a toxina. D inverte os tempos: a vacina é a lenta e a que dura muito. Depois do susto, a pessoa também deve tomar a vacina, para ficar protegida por anos.",
+          "texto": "Letra E.\nA: erra o micróbio. O tétano vem de bactéria, não de vírus.\nB: falha porque adulto também toma vacina.\nC: falha porque soro não é antibiótico (remédio que mata bactéria). Ele desliga a toxina.\nD: inverte os tempos. A vacina é a lenta e a que dura muito.\nDepois do susto, a pessoa também deve tomar a vacina, para ficar protegida por anos.",
           "visual": null
         }
       ],

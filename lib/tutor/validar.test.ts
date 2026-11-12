@@ -111,6 +111,13 @@ describe('validarExplicacao limpa o texto da IA', () => {
     expect(e.passos[0].texto).toBe('Frase curta.');
   });
 });
+test('passo escrito em linhas guarda as quebras (Pablo, 12/11/2026: uma ideia por linha)', () => {
+  const texto = 'Letra B, 2,25 m.\nA (1,50 m): faz 3 ÷ 2.\nD (4,50 m): divide 45 só por 10.';
+  const e = validarExplicacao({ ideia: 'Ideia.', passos: [{ titulo: 'A resposta', texto }] });
+  expect(e?.passos[0].texto).toBe(texto);
+  expect(validarExplicacao(e)?.passos[0].texto).toBe(texto);
+});
+
 test('explicação já validada continua igual ao ser validada de novo (cache)', () => {
   const bruto = { ideia: 'A energia depende da velocidade.', passos: [{ titulo: 'Conta', texto: 'Troca as letras.', visual: { tipo: 'quadro', dados: ['m = 2', 'v = 4'], formula: '$E_c = \\frac{1}{2}mv^2$', contas: ['E_c = \\frac{1}{2} \\cdot 2 \\cdot 4^2'], resultado: 'E_c = 16\\,\\text{J}' } }] };
   const uma = validarExplicacao(bruto, 'Física');

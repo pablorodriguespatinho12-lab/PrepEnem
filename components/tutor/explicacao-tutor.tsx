@@ -300,9 +300,17 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
           >
             <div className={`grid gap-2 md:gap-3 content-center min-w-0 ${temLadoDireito ? '' : 'max-w-2xl mx-auto text-center justify-items-center'}`}>
               <p className="type-caption font-semibold uppercase tracking-[0.08em] text-primary-text">{tela.rotulo}</p>
-              <h3 className={`font-display font-bold leading-snug text-balance ${tela.tipo === 'erro' ? 'text-[clamp(1.3rem,0.9rem+1.6vw,2.3rem)]' : 'text-[clamp(1.1rem,0.85rem+1vw,1.75rem)]'}`}>
-                <MathText text={tela.titulo} />
-              </h3>
+              {/* Passo escrito em linhas (12/11/2026): uma ideia por linha, com respiro,
+                  em letra de leitura; em bloco único de título ficava ilegível. */}
+              {tela.titulo.includes('\n') ? (
+                <div className="font-reading font-medium leading-snug space-y-2 text-[clamp(1rem,0.85rem+0.6vw,1.35rem)]">
+                  {tela.titulo.split('\n').filter((l) => l.trim()).map((linha, i) => <MathText key={i} text={linha} />)}
+                </div>
+              ) : (
+                <h3 className={`font-display font-bold leading-snug text-balance ${tela.tipo === 'erro' ? 'text-[clamp(1.3rem,0.9rem+1.6vw,2.3rem)]' : 'text-[clamp(1.1rem,0.85rem+1vw,1.75rem)]'}`}>
+                  <MathText text={tela.titulo} />
+                </h3>
+              )}
               {tela.texto && <MathText text={tela.texto} className="font-reading type-lead" />}
               {/* Empilhado, as peças roubavam o lugar do desenho; a legenda já diz o que cada letra é. */}
               {tela.tipo === 'passo' && tela.comPecas && ladoALado && <Pecas explicacao={explicacao} />}

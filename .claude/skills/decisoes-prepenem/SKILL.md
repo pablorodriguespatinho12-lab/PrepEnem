@@ -260,6 +260,13 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   velocidade média 5 × t vezes o tempo = 5 × t × t; subida: (v ÷ 2) × (v ÷ 10)).
   Potência ("t²") se escreve também como "t × t, o tempo vezes ele mesmo". Varridas
   as provas do dia 2 em 12/11: 2 casos (mangueira e balanço), corrigidos no banco.
+- **Passo em linhas (Pablo, 12/11/2026, foto do "Jeito rápido" da mangueira: "deixa
+  o texto mais organizado e entendível"):** texto de passo acima de 200 letras vai
+  em linhas separadas por `\n` (uma ideia por linha, até 170 letras cada); "A
+  resposta" = "Letra X" + uma linha por alternativa errada. Cada figura mostra a
+  conta DO SEU passo (a mangueira virou 3 telas: tempo, velocidade, altura). A tela
+  (`TelaPasso`) desenha cada linha separada e o validador guarda o `\n`.
+  Conferidor: `python3 scripts/conferir-passos-em-linhas.py` (números iguais ao commit).
 - **Questão de reforço (Pablo, 12/11/2026: "se eu errar, a próxima é para ver se
   entendi o erro"):** errou na prova, o botão vira "Tentar uma parecida" e vem uma
   questão guardada do MESMO conteúdo (`app/api/provas/reforco`, origem "Reforço do

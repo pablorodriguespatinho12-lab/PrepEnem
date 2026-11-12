@@ -94,12 +94,12 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Com a tensão fixa em 220 V, cada watt a mais puxa mais corrente. Conferindo pela corrente: os dois aparelhos puxam 3 080 ÷ 220 = 14 A (220 × 10 = 2 200 e 220 × 4 = 880; 2 200 + 880 = 3 080). Sobram 20 − 14 = 6 A, e 6 × 220 = 1 320 W. Mesma resposta.",
+          "texto": "Com a tensão fixa em 220 V, cada watt a mais puxa mais corrente.\nConferindo pela corrente: os dois aparelhos puxam 3 080 ÷ 220 = 14 A.\n(220 × 10 = 2 200 e 220 × 4 = 880; 2 200 + 880 = 3 080.)\nSobram 20 − 14 = 6 A, e 6 × 220 = 1 320 W. Mesma resposta.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C, 1 320 W. A (4 400 W) é o limite inteiro, sem descontar os aparelhos que já estão ligados. B (3 080 W) é o que já está ligado, não o que sobra. D (3 300 W) desconta só o micro-ondas: 4 400 − 1 100. E (6 W) é a corrente que sobra, 6 A, escrita como se fosse potência.",
+          "texto": "Letra C, 1 320 W.\nA (4 400 W): é o limite inteiro, sem descontar os aparelhos que já estão ligados.\nB (3 080 W): é o que já está ligado, não o que sobra.\nD (3 300 W): desconta só o micro-ondas: 4 400 − 1 100.\nE (6 W): é a corrente que sobra, 6 A, escrita como se fosse potência.",
           "visual": null
         }
       ],
@@ -204,12 +204,12 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "O aquecedor tem resistência menor, então deixa passar mais corrente: 6 A contra 2 A. Se fosse em série (um depois do outro no mesmo fio), as resistências somariam, 20 + 60 = 80, e a corrente seria 120 ÷ 80 = 1,5 A (80 cabe 1 vez em 120 e sobram 40, que é meio 80). Nenhum aparelho receberia os 120 V inteiros. Casa não é ligada assim.",
+          "texto": "O aquecedor tem resistência menor, então deixa passar mais corrente: 6 A contra 2 A.\nSe fosse em série (um depois do outro no mesmo fio), as resistências somariam: 20 + 60 = 80.\nA corrente seria 120 ÷ 80 = 1,5 A (80 cabe 1 vez em 120 e sobram 40, que é meio 80).\nNenhum aparelho receberia os 120 V inteiros. Casa não é ligada assim.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, 8 A. A (1,5 A) é a conta de série, 120 ÷ (20 + 60), que não vale para as tomadas de uma casa. B (6 A) é só o aquecedor. C (2 A) é só a lâmpada. D (4 A) subtrai as correntes, 6 − 2, em vez de somar.",
+          "texto": "Letra E, 8 A.\nA (1,5 A): é a conta de série, 120 ÷ (20 + 60), que não vale para as tomadas de uma casa.\nB (6 A): é só o aquecedor.\nC (2 A): é só a lâmpada.\nD (4 A): subtrai as correntes, 6 − 2, em vez de somar.",
           "visual": null
         }
       ],
@@ -312,12 +312,12 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "O calor depende da quantidade de água e de quanto a temperatura muda. Como as duas são água, o resto da fórmula (o calor específico, a energia que 1 grama pede para subir 1 grau) é igual dos dois lados e se cancela. Cada litro fervendo cai 60 °C, e 60 ÷ 20 = 3: ele esquenta 3 litros de fria em 20 °C. Para 6 litros, bastam 6 ÷ 3 = 2.",
+          "texto": "O calor depende da quantidade de água e de quanto a temperatura muda.\nComo as duas são água, o resto da fórmula (o calor específico, a energia que 1 grama pede para subir 1 grau) é igual dos dois lados e se cancela.\nCada litro fervendo cai 60 °C, e 60 ÷ 20 = 3: ele esquenta 3 litros de fria em 20 °C.\nPara 6 litros, bastam 6 ÷ 3 = 2.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, 2 L. B (3 L) usa 40 °C como a mudança da água quente, mas ela caiu 100 − 40 = 60 °C: 120 ÷ 40. C (1,5 L) usa 100 − 20 = 80 °C: 120 ÷ 80. D (6 L) acha que precisa da mesma quantidade; meio a meio daria 60 °C, quente demais. E (18 L) inverte a conta: 6 × 60 ÷ 20.",
+          "texto": "Letra A, 2 L.\nB (3 L): usa 40 °C como a mudança da água quente, mas ela caiu 100 − 40 = 60 °C: 120 ÷ 40.\nC (1,5 L): usa 100 − 20 = 80 °C: 120 ÷ 80.\nD (6 L): acha que precisa da mesma quantidade. Meio a meio daria 60 °C, quente demais.\nE (18 L): inverte a conta: 6 × 60 ÷ 20.",
           "visual": null
         }
       ],
@@ -426,7 +426,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, 300 m. A (600 m) esquece de dividir por 2. E (136 m) usa a velocidade do som no ar, 340 × 0,4, mas o pulso viajou na água. B (68 m) usa o ar e ainda divide por 2. C (3 750 m) divide 1 500 por 0,4 em vez de multiplicar.",
+          "texto": "Letra D, 300 m.\nA (600 m): esquece de dividir por 2.\nE (136 m): usa a velocidade do som no ar, 340 × 0,4, mas o pulso viajou na água.\nB (68 m): usa o ar e ainda divide por 2.\nC (3 750 m): divide 1 500 por 0,4 em vez de multiplicar.",
           "visual": null
         }
       ],
@@ -525,12 +525,12 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "O espelho plano faz uma cópia do salão do mesmo tamanho e à mesma distância, só que do outro lado. A cliente vê a si mesma a 1,5 + 1,5 = 3 m; a cabeleireira, que está mais longe, vê a imagem da cliente a 3,5 m.",
+          "texto": "O espelho plano faz uma cópia do salão do mesmo tamanho e à mesma distância, só que do outro lado.\nA cliente vê a si mesma a 1,5 + 1,5 = 3 m.\nA cabeleireira, que está mais longe, vê a imagem da cliente a 3,5 m.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, 3,5 m. A (3,0 m) é o que a cliente vê dela mesma: 1,5 + 1,5. C (4,0 m) é a cabeleireira até a própria imagem: 2,0 + 2,0. D (1,5 m) é só da imagem até o espelho. E (2,0 m) é só da cabeleireira até o espelho.",
+          "texto": "Letra B, 3,5 m.\nA (3,0 m): é o que a cliente vê dela mesma: 1,5 + 1,5.\nC (4,0 m): é a cabeleireira até a própria imagem: 2,0 + 2,0.\nD (1,5 m): é só da imagem até o espelho.\nE (2,0 m): é só da cabeleireira até o espelho.",
           "visual": null
         }
       ],
@@ -605,7 +605,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "A velocidade cai de 72 km/h até zero em 0,5 s. Primeiro, passe para m/s (metros por segundo): 72 ÷ 3,6. Pense em 72 ÷ 36 = 2; como 3,6 é dez vezes menor que 36, a resposta fica dez vezes maior: 72 ÷ 3,6 = 20 m/s. Depois, a aceleração diz quanto a velocidade cai por segundo; com ela, sai a força.",
+          "texto": "A velocidade cai de 72 km/h até zero em 0,5 s.\nPrimeiro, passe para m/s (metros por segundo): 72 ÷ 3,6.\nPense em 72 ÷ 36 = 2. Como 3,6 é dez vezes menor que 36, a resposta fica dez vezes maior: 72 ÷ 3,6 = 20 m/s.\nDepois, a aceleração diz quanto a velocidade cai por segundo. Com ela, sai a força.",
           "visual": null
         },
         {
@@ -635,12 +635,12 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Para 20 ÷ 0,5: 0,5 é meio; quantos meios cabem em 20? 40, porque cada inteiro tem 2 meios e 20 × 2 = 40. A velocidade cai 40 m/s a cada segundo, e a força é 60 × 40 = 2 400 N (6 × 4 = 24, mais os dois zeros). Por isso o airbag e o cinto que estica um pouco salvam vidas: aumentam o tempo da parada e diminuem a força.",
+          "texto": "Para 20 ÷ 0,5: 0,5 é meio. Quantos meios cabem em 20?\n40, porque cada inteiro tem 2 meios e 20 × 2 = 40.\nA velocidade cai 40 m/s a cada segundo.\nA força é 60 × 40 = 2 400 N (6 × 4 = 24, mais os dois zeros).\nPor isso o airbag e o cinto que estica um pouco salvam vidas: aumentam o tempo da parada e diminuem a força.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, 2 400 N. A (8 640 N) usa 72 sem passar para m/s: 72 ÷ 0,5 = 144 e 144 × 60. B (600 N) multiplica 20 × 0,5 = 10 em vez de dividir, e 60 × 10 = 600; 600 N também é o peso do boneco (60 kg × 10 = 600 N), que não é a força do cinto. C (1 200 N) esquece o tempo: 60 × 20. D (40) para na aceleração e não multiplica pela massa.",
+          "texto": "Letra E, 2 400 N.\nA (8 640 N): usa 72 sem passar para m/s: 72 ÷ 0,5 = 144 e 144 × 60.\nB (600 N): multiplica 20 × 0,5 = 10 em vez de dividir, e 60 × 10 = 600. 600 N também é o peso do boneco (60 kg × 10 = 600 N), não a força do cinto.\nC (1 200 N): esquece o tempo: 60 × 20.\nD (40): para na aceleração e não multiplica pela massa.",
           "visual": null
         }
       ],
@@ -734,7 +734,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A. C é a armadilha: mesma fórmula não quer dizer mesma substância; o próprio texto diz que uma é líquida e a outra, gás. B pediria o mesmo grupo nos dois, só mudando de lugar. D erra porque as duas cadeias são abertas: nenhuma forma anel. E erra porque mesma fórmula dá a mesma massa, já que os átomos são os mesmos.",
+          "texto": "Letra A.\nC: é a armadilha. Mesma fórmula não quer dizer mesma substância: o próprio texto diz que uma é líquida e a outra, gás.\nB: pediria o mesmo grupo nos dois, só mudando de lugar.\nD: erra porque as duas cadeias são abertas. Nenhuma forma anel.\nE: erra porque mesma fórmula dá a mesma massa, já que os átomos são os mesmos.",
           "visual": null
         }
       ],
@@ -839,7 +839,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, 5. A (3) conta braços, mas o que gasta H₂ é cada dupla. B (6) põe 2 duplas em cada um dos 3 braços, mas o oleico só tem 1. C (10) conta átomos de hidrogênio (5 × 2), não moléculas de H₂. E (4) esquece o braço de oleico.",
+          "texto": "Letra D, 5.\nA (3): conta braços, mas o que gasta H₂ é cada dupla.\nB (6): põe 2 duplas em cada um dos 3 braços, mas o oleico só tem 1.\nC (10): conta átomos de hidrogênio (5 × 2), não moléculas de H₂.\nE (4): esquece o braço de oleico.",
           "visual": null
         }
       ],
@@ -918,7 +918,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Cada etapa troca uma unidade por outra: quilômetro vira litro (divide pelo consumo) e litro vira quilo de CO₂ (multiplica por 2,3). Por dia: 15 + 15 = 30 km. No mês: 30 × 20 = 600 km. Litros: 600 ÷ 10 = 60 L. CO₂: 60 × 2,3, que se faz em dois pedaços: 60 × 2 = 120 e 60 × 0,3 = 18; 120 + 18 = 138 kg.",
+          "texto": "Cada etapa troca uma unidade por outra: quilômetro vira litro (divide pelo consumo) e litro vira quilo de CO₂ (multiplica por 2,3).\nPor dia: 15 + 15 = 30 km.\nNo mês: 30 × 20 = 600 km.\nLitros: 600 ÷ 10 = 60 L.\nCO₂: 60 × 2,3, em dois pedaços: 60 × 2 = 120 e 60 × 0,3 = 18. Somando, 120 + 18 = 138 kg.",
           "visual": null
         },
         {
@@ -1057,7 +1057,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B. A é a pegadinha: o CO₂ sai da queima completa e só faz mal em quantidade muito grande. C erra porque o metano é o gás que queima (combustível), não o que sai da chama. D erra porque a chama do aquecedor não produz ozônio que importe. E erra porque o vapor de água embaça o banheiro, mas não tira o oxigênio a ponto de desmaiar.",
+          "texto": "Letra B.\nA: é a pegadinha. O CO₂ sai da queima completa e só faz mal em quantidade muito grande.\nC: erra porque o metano é o gás que queima (combustível), não o que sai da chama.\nD: erra porque a chama do aquecedor não produz ozônio que importe.\nE: erra porque o vapor de água embaça o banheiro, mas não tira o oxigênio a ponto de desmaiar.",
           "visual": null
         }
       ],
@@ -1136,7 +1136,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Iguale a massa de princípio ativo antes e depois. C × V é concentração vezes volume, que dá os gramas: 40 × V = 2 × 5 = 10. Então V = 10 ÷ 40. Corte o zero dos dois: 1 ÷ 4, um quarto de litro, 0,25 L. Em mL: 1 000 ÷ 4 = 250 mL.",
+          "texto": "Iguale a massa de princípio ativo antes e depois.\nC × V é concentração vezes volume, que dá os gramas: 40 × V = 2 × 5 = 10.\nEntão V = 10 ÷ 40. Corte o zero dos dois: 1 ÷ 4, um quarto de litro, 0,25 L.\nEm mL: 1 000 ÷ 4 = 250 mL.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Diluição",
@@ -1166,7 +1166,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, 250 mL. A (25 mL) erra ao passar 0,25 L para mL: multiplica-se por 1 000, e 0,25 × 1 000 = 250. B (50 mL) faz 2 ÷ 40 e esquece os 5 litros do balde. C (125 mL) faz 5 ÷ 40 e esquece os 2 g por litro. D (4 750 mL) é a água que vai junto, não o concentrado.",
+          "texto": "Letra E, 250 mL.\nA (25 mL): erra ao passar 0,25 L para mL. Multiplica-se por 1 000, e 0,25 × 1 000 = 250.\nB (50 mL): faz 2 ÷ 40 e esquece os 5 litros do balde.\nC (125 mL): faz 5 ÷ 40 e esquece os 2 g por litro.\nD (4 750 mL): é a água que vai junto, não o concentrado.",
           "visual": null
         }
       ],
@@ -1240,12 +1240,12 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "O cobre tem o maior potencial e recebe os elétrons que o zinco entrega (cada átomo de zinco solta 2). A tensão é o maior menos o menor: 0,34 − (−0,76). Pense numa régua com o zero no meio: de −0,76 até 0 são 0,76, e de 0 até +0,34 são mais 0,34. Por isso a conta vira 0,34 + 0,76 = 1,10 V.",
+          "texto": "O cobre tem o maior potencial e recebe os elétrons que o zinco entrega (cada átomo de zinco solta 2).\nA tensão é o maior menos o menor: 0,34 − (−0,76).\nPense numa régua com o zero no meio: de −0,76 até 0 são 0,76, e de 0 até +0,34 são mais 0,34.\nPor isso a conta vira 0,34 + 0,76 = 1,10 V.",
           "visual": null
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Tensão de uma pilha, depois some pilhas até passar de 2,0 V. Em série, as tensões somam: 1 pilha dá 1,10 V, pouco; 2 dão 1,10 + 1,10 = 2,20 V, que passa de 2,0. No quadro, ΔE é a tensão de uma pilha (Δ, a letra grega delta, quer dizer diferença).",
+          "texto": "Tensão de uma pilha, depois some pilhas até passar de 2,0 V.\nEm série, as tensões somam.\n1 pilha dá 1,10 V, pouco.\n2 dão 1,10 + 1,10 = 2,20 V, que passa de 2,0.\nNo quadro, ΔE é a tensão de uma pilha (Δ, a letra grega delta, quer dizer diferença).",
           "visual": {
             "tipo": "quadro",
             "titulo": "Pilha de Daniell",
@@ -1270,12 +1270,12 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "A tensão mede a distância entre os dois pontos da régua, passando pelo zero; por isso tirar o número negativo vira somar. Os 2 elétrons de cada átomo de zinco não mudam a tensão: mudam só quantos elétrons passam pelo fio, como abrir mais a torneira sem mudar a altura da caixa-d'água.",
+          "texto": "A tensão mede a distância entre os dois pontos da régua, passando pelo zero.\nPor isso tirar o número negativo vira somar.\nOs 2 elétrons de cada átomo de zinco não mudam a tensão: mudam só quantos elétrons passam pelo fio.\nÉ como abrir mais a torneira sem mudar a altura da caixa-d'água.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, 2 pilhas e 2,20 V. B esquece os sinais e faz 0,76 − 0,34 = 0,42 V por pilha: precisaria de 5 (2,10 V). C usa só o zinco, 0,76 V por pilha: 3 dão 2,28 V. D dobra a tensão por causa dos 2 elétrons, mas a tensão de uma pilha não depende disso. E usa só o cobre, 0,34 V por pilha: 6 dão 2,04 V.",
+          "texto": "Letra A, 2 pilhas e 2,20 V.\nB: esquece os sinais e faz 0,76 − 0,34 = 0,42 V por pilha. Precisaria de 5 (2,10 V).\nC: usa só o zinco, 0,76 V por pilha. 3 dão 2,28 V.\nD: dobra a tensão por causa dos 2 elétrons, mas a tensão de uma pilha não depende disso.\nE: usa só o cobre, 0,34 V por pilha. 6 dão 2,04 V.",
           "visual": null
         }
       ],
@@ -1349,7 +1349,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Massa vira mol, mol vira massa. O traço da fração quer dizer dividir: 1,68 ÷ 84. Como 84 × 2 = 168, então 84 × 0,02 = 1,68: são 0,02 mol. Depois, 0,02 × 44: 2 × 44 = 88, e 0,02 é 2 centésimos, então dá 0,88 g.",
+          "texto": "Massa vira mol, mol vira massa.\nO traço da fração quer dizer dividir: 1,68 ÷ 84.\nComo 84 × 2 = 168, então 84 × 0,02 = 1,68: são 0,02 mol.\nDepois, 0,02 × 44: 2 × 44 = 88, e 0,02 é 2 centésimos, então dá 0,88 g.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Do comprimido ao gás",
@@ -1374,12 +1374,12 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Cada 84 g de bicarbonato soltam 44 g de gás. O comprimido tem 1,68 g, que é 84 dividido por 50 (50 × 1,68 = 84). Então sai 44 ÷ 50 = 0,88 g (44 ÷ 100 = 0,44, e o dobro é 0,88). O resto da massa fica no copo, como sal (NaCl) e água.",
+          "texto": "Cada 84 g de bicarbonato soltam 44 g de gás.\nO comprimido tem 1,68 g, que é 84 dividido por 50 (50 × 1,68 = 84).\nEntão sai 44 ÷ 50 = 0,88 g (44 ÷ 100 = 0,44, e o dobro é 0,88).\nO resto da massa fica no copo, como sal (NaCl) e água.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, 0,88 g. A (1,68 g) supõe que o comprimido inteiro vira gás. B (0,02) é o número de mols, não a massa. C (0,44 g) é metade, como se 2 NaHCO₃ dessem 1 CO₂. E (1,76 g) é o dobro, como se cada NaHCO₃ desse 2 CO₂.",
+          "texto": "Letra D, 0,88 g.\nA (1,68 g): supõe que o comprimido inteiro vira gás.\nB (0,02): é o número de mols, não a massa.\nC (0,44 g): é metade, como se 2 NaHCO₃ dessem 1 CO₂.\nE (1,76 g): é o dobro, como se cada NaHCO₃ desse 2 CO₂.",
           "visual": null
         }
       ],
@@ -1640,7 +1640,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B. C é a pegadinha: o problema é falta de oxigênio, não excesso, e a análise mostrou quase nenhum. A ignora justamente essa falta de oxigênio, e a alga não aparece depois: ela cresce com o adubo. D erra porque alga não come comida de peixe: faz o próprio alimento com a luz (fotossíntese). E erra porque não explica o oxigênio quase zerado que a análise achou.",
+          "texto": "Letra B.\nC: é a pegadinha. O problema é falta de oxigênio, não excesso, e a análise mostrou quase nenhum.\nA: ignora justamente essa falta de oxigênio. E a alga não aparece depois: ela cresce com o adubo.\nD: erra porque alga não come comida de peixe. Faz o próprio alimento com a luz (fotossíntese).\nE: erra porque não explica o oxigênio quase zerado que a análise achou.",
           "visual": null
         }
       ],
@@ -1742,7 +1742,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A. B erra: quem faz a respiração celular (tirar energia do açúcar) são as mitocôndrias, as usinas de energia dentro das células do músculo; a hemácia madura nem tem mitocôndria. C erra: mais hemácias deixam o sangue mais grosso, não mais ralo. D descreve os glóbulos brancos, que defendem de micróbios. E erra porque o pulmão não guarda oxigênio de reserva: só troca o ar a cada respiração.",
+          "texto": "Letra A.\nB: erra. Quem faz a respiração celular (tirar energia do açúcar) são as mitocôndrias, as usinas de energia das células do músculo.\nA hemácia madura nem tem mitocôndria.\nC: erra. Mais hemácias deixam o sangue mais grosso, não mais ralo.\nD: descreve os glóbulos brancos, que defendem de micróbios.\nE: erra porque o pulmão não guarda oxigênio de reserva. Só troca o ar a cada respiração.",
           "visual": null
         }
       ],
@@ -1846,12 +1846,12 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "A mulher recebeu obrigatoriamente um i do pai dela (tipo O só tem i para dar); o marido, da mãe dele. Cada um passa o i em metade das vezes: metade de metade é um quarto (1/4, ou 1 de cada 4), e um quarto de 100% é 100 ÷ 4 = 25%.",
+          "texto": "A mulher recebeu obrigatoriamente um i do pai dela (tipo O só tem i para dar). O marido, da mãe dele.\nCada um passa o i em metade das vezes.\nMetade de metade é um quarto (1/4, ou 1 de cada 4).\nUm quarto de 100% é 100 ÷ 4 = 25%.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, 25%. A (0%) esquece os alelos i escondidos. B (50%) olha só um dos pais. C (75%) é a chance de o filho NÃO ser tipo O: 3 das 4 casas. D (12,5%) multiplica ainda por 1/2 de ser menino, mas a pergunta não fala de sexo.",
+          "texto": "Letra E, 25%.\nA (0%): esquece os alelos i escondidos.\nB (50%): olha só um dos pais.\nC (75%): é a chance de o filho NÃO ser tipo O: 3 das 4 casas.\nD (12,5%): multiplica ainda por 1/2 de ser menino, mas a pergunta não fala de sexo.",
           "visual": null
         }
       ],
@@ -1948,7 +1948,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Organela é cada pecinha dentro da célula com um trabalho próprio, como os setores de uma fábrica. A tabela mostra o trabalho de cada uma que aparece nas alternativas: só o retículo rugoso, o Golgi e as vesículas mexem com proteína para exportar.",
+          "texto": "Organela é cada pecinha dentro da célula com um trabalho próprio, como os setores de uma fábrica.\nA tabela mostra o trabalho de cada uma que aparece nas alternativas.\nSó o retículo rugoso, o Golgi e as vesículas mexem com proteína para exportar.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Cada setor da célula",
@@ -1990,12 +1990,12 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Os ribossomos grudados no retículo rugoso juntam os aminoácidos em proteína. O retículo manda a proteína ao Golgi, que a embala em vesículas. As vesículas se juntam à membrana (a película fina que envolve a célula, como a pele de um balão) e soltam a enzima para fora.",
+          "texto": "Os ribossomos grudados no retículo rugoso juntam os aminoácidos em proteína.\nO retículo manda a proteína ao Golgi, que a embala em vesículas.\nAs vesículas se juntam à membrana (a película fina que envolve a célula, como a pele de um balão) e soltam a enzima para fora.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D. A erra porque começa na mitocôndria, que produz energia e não monta proteína, e passa pelo núcleo, que só guarda o DNA. B inverte: o Golgi embala o que o retículo fabricou, e o lisossomo digere, não exporta. C erra porque o retículo liso faz gordura, não proteína, e núcleo e mitocôndria não montam proteína. E erra porque começa no lisossomo, que digere em vez de fabricar.",
+          "texto": "Letra D.\nA: começa na mitocôndria, que produz energia e não monta proteína, e passa pelo núcleo, que só guarda o DNA.\nB: inverte. O Golgi embala o que o retículo fabricou, e o lisossomo digere, não exporta.\nC: o retículo liso faz gordura, não proteína, e núcleo e mitocôndria não montam proteína.\nE: começa no lisossomo, que digere em vez de fabricar.",
           "visual": null
         }
       ],
@@ -2069,12 +2069,12 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Usar ou não usar o olho não muda o DNA que o peixe passa. No escuro, olho grande só gasta energia; quem nasceu com olho menor sobrou energia para crescer e se reproduzir. Geração após geração, os olhos menores ficaram mais comuns.",
+          "texto": "Usar ou não usar o olho não muda o DNA que o peixe passa.\nNo escuro, olho grande só gasta energia. Quem nasceu com olho menor sobrou energia para crescer e se reproduzir.\nGeração após geração, os olhos menores ficaram mais comuns.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B. A e D são a ideia de Lamarck, que a própria reportagem trazia: o que muda na vida do peixe não passa aos filhotes. C erra porque a mutação acontece ao acaso, não sob encomenda do ambiente. E erra porque contradiz os estudos do texto, que mostram que no escuro o olho menor é vantagem.",
+          "texto": "Letra B.\nA e D: são a ideia de Lamarck, que a própria reportagem trazia. O que muda na vida do peixe não passa aos filhotes.\nC: a mutação acontece ao acaso, não sob encomenda do ambiente.\nE: contradiz os estudos do texto, que mostram que no escuro o olho menor é vantagem.",
           "visual": null
         }
       ],
@@ -2151,12 +2151,12 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "O vírus da raiva anda devagar pelos nervos da mão até o cérebro. O soro segura o vírus no começo, enquanto a vacina ensina o corpo. Quando o soro acaba, os anticorpos do próprio corpo já estão prontos.",
+          "texto": "O vírus da raiva anda devagar pelos nervos da mão até o cérebro.\nO soro segura o vírus no começo, enquanto a vacina ensina o corpo.\nQuando o soro acaba, os anticorpos do próprio corpo já estão prontos.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C. A erra porque a vacina antirrábica não age em bactéria: ela é contra o vírus da raiva. B inverte os dois: quem age na hora é o soro. D erra porque a vacina não traz anticorpo pronto: ensina o corpo a fazer. E erra porque antibiótico não age contra vírus, e a vacina foi dada ao homem, não ao cão.",
+          "texto": "Letra C.\nA: a vacina antirrábica não age em bactéria. Ela é contra o vírus da raiva.\nB: inverte os dois. Quem age na hora é o soro.\nD: a vacina não traz anticorpo pronto. Ensina o corpo a fazer.\nE: antibiótico não age contra vírus, e a vacina foi dada ao homem, não ao cão.",
           "visual": null
         }
       ],
