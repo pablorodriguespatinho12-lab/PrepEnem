@@ -1,0 +1,1272 @@
+[
+  {
+    "id": "d2-reforco-fis-ele-01",
+    "materia": "Física",
+    "tema": "Eletricidade e Circuitos",
+    "enunciado": "Uma lanterna usa 4 pilhas iguais em série, cada uma com 1,5 V e resistência interna de 0,25 Ω. A lâmpada tem resistência de 5 Ω. Ao trocar as pilhas, uma pessoa coloca uma delas invertida, e todas continuam encostadas. Qual é a corrente que passa pela lâmpada?",
+    "A": "0,25 A",
+    "B": "0,5 A",
+    "C": "0,6 A",
+    "D": "1,0 A",
+    "E": "1,2 A",
+    "resposta": "B",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Empurrão: 3 × 1,5 − 1,5 = 3 V. Atrapalha: 5 + 4 × 0,25 = 6 Ω. i = 3 ÷ 6 = 0,5 A. B. Erros: A = 1,5 ÷ 6; C = 3 ÷ 5 (esqueceu as pilhas); D = 6 ÷ 6 (esqueceu a virada); E = 6 ÷ 5.",
+      "ideia": "A pilha virada anula uma das certas: sobram 2 pilhas empurrando, 3 V. Esse empurrão dividido por tudo que atrapalha (6 Ω) dá 0,5 A.",
+      "pecas": [
+        {
+          "termo": "Pilha virada",
+          "significado": "Empurra contra as outras. Ela não só deixa de ajudar: anula uma pilha certa. E continua atrapalhando com a resistência dela."
+        },
+        {
+          "termo": "Resistência interna",
+          "significado": "O pouco que a própria pilha atrapalha a corrente, em ohms (Ω). Soma com a da lâmpada."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Quatro pilhas em fila acendem uma lâmpada de 5 Ω. Uma pilha está virada. A questão quer a corrente que passa agora.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "circuito-simples",
+            "titulo": "4 pilhas, 1 virada",
+            "rotulos": [
+              "4 × 1,5 V (1 virada)",
+              "lâmpada 5 Ω",
+              "",
+              "r = 0,25 Ω cada"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Três pilhas empurram para a frente e uma empurra para trás: 1,5 + 1,5 + 1,5 − 1,5 = 3 V. A virada anula uma das certas, então sobram duas: 3 V."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Some tudo que atrapalha: a lâmpada (5 Ω) e as 4 pilhas (4 × 0,25 = 1 Ω), até a virada. Dá 6 Ω. Corrente = empurrão ÷ atrapalha = 3 ÷ 6 = 0,5 A.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Pilha virada",
+            "dados": [
+              "\\varepsilon = 3 \\times 1{,}5 - 1{,}5 = 3\\,\\text{V}",
+              "R = 5 + 4 \\times 0{,}25 = 6\\,\\Omega"
+            ],
+            "formula": "i = \\frac{\\varepsilon}{R}",
+            "legenda": [
+              "ε: o empurrão que sobra",
+              "R: tudo que atrapalha"
+            ],
+            "contas": [
+              "i = \\frac{3}{6}"
+            ],
+            "resultado": "i = 0{,}5\\,\\text{A}",
+            "nota": "Passa meio ampère."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A pilha virada continua no caminho da corrente, então a resistência dela conta. Ela só muda o empurrão. Confira: 6 × 0,5 = 3."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 0,5 A. A (0,25 A) usa o empurrão de uma pilha só. C (0,6 A) esquece a resistência das pilhas. D (1,0 A) esquece que uma está virada. E (1,2 A) erra as duas coisas."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "2 pilhas de 1,5 V em série, uma virada. Quanto sobra de empurrão?",
+        "opcoes": [
+          "0 V",
+          "1,5 V",
+          "3 V",
+          "0,75 V"
+        ],
+        "certa": "0 V",
+        "resposta": "1,5 − 1,5 = 0: uma anula a outra."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-fis-ele-02",
+    "materia": "Física",
+    "tema": "Eletricidade e Circuitos",
+    "enunciado": "Um chuveiro elétrico tem a etiqueta 5 500 W e 220 V. Para escolher o disjuntor certo, o eletricista precisa saber a corrente que passa pelo chuveiro ligado. Qual é essa corrente?",
+    "A": "0,04 A",
+    "B": "250 A",
+    "C": "5 280 A",
+    "D": "25 A",
+    "E": "2,5 A",
+    "resposta": "D",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "i = P ÷ U = 5 500 ÷ 220 = 25 A. D. Erros: A = 220 ÷ 5 500 (dividiu ao contrário); B e E = zero a mais ou a menos; C = 5 500 − 220.",
+      "ideia": "Potência é empurrão vezes corrente (P = U × i). Então a corrente é a potência dividida pelo empurrão: 5 500 ÷ 220 = 25 A.",
+      "pecas": [
+        {
+          "termo": "Potência (P)",
+          "significado": "Quanta energia o aparelho gasta por segundo, em watts (W). Está na etiqueta."
+        },
+        {
+          "termo": "Tensão (U)",
+          "significado": "O empurrão da tomada, em volts (V). No Brasil, 127 V ou 220 V."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A etiqueta dá a potência (5 500 W) e a tensão (220 V). A questão quer a corrente.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "circuito-simples",
+            "titulo": "O chuveiro na tomada",
+            "rotulos": [
+              "tomada 220 V",
+              "chuveiro 5 500 W",
+              "i = ?",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "P = U × i. Aqui a corrente é o que falta. Se 220 vezes a corrente dá 5 500, a corrente é 5 500 dividido por 220."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Corte um zero de cima e de baixo: 550 ÷ 22. Como 22 × 25 = 550, a corrente é 25 A.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Corrente do chuveiro",
+            "dados": [
+              "P = 5\\,500\\,\\text{W}",
+              "U = 220\\,\\text{V}"
+            ],
+            "formula": "i = \\frac{P}{U}",
+            "legenda": [
+              "P: a potência",
+              "U: a tensão"
+            ],
+            "contas": [
+              "i = \\frac{5\\,500}{220}",
+              "i = \\frac{550}{22}"
+            ],
+            "resultado": "i = 25\\,\\text{A}",
+            "nota": "25 ampères no fio."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Mais empurrão faz a mesma potência com menos corrente. Por isso um chuveiro de 220 V puxa bem menos corrente que um de mesma potência em 127 V."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 25 A. A (0,04 A) dividiu ao contrário. C (5 280 A) subtraiu. B (250 A) e E (2,5 A) erraram o zero."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma TV de 110 W ligada em 110 V puxa quanto de corrente?",
+        "opcoes": [
+          "1 A",
+          "10 A",
+          "220 A",
+          "0,1 A"
+        ],
+        "certa": "1 A",
+        "resposta": "110 ÷ 110 = 1 A."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-fis-ele-03",
+    "materia": "Física",
+    "tema": "Eletricidade e Circuitos",
+    "enunciado": "Uma lâmpada de 60 W fica acesa 5 horas por dia durante 30 dias. Quanta energia ela gasta no mês, em quilowatt-hora (kWh), a unidade da conta de luz?",
+    "A": "9 kWh",
+    "B": "0,9 kWh",
+    "C": "1,8 kWh",
+    "D": "90 kWh",
+    "E": "9 000 kWh",
+    "resposta": "A",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "60 × 5 × 30 = 9 000 Wh = 9 kWh. A. Erros: B e D = vírgula no lugar errado; C = 60 × 30 = 1 800 Wh (esqueceu as 5 horas); E = 9 000 sem passar para kWh.",
+      "ideia": "Energia é potência vezes tempo. 60 W por 150 horas dá 9 000 Wh, e 1 kWh são 1 000 Wh: 9 kWh.",
+      "pecas": [
+        {
+          "termo": "kWh (quilowatt-hora)",
+          "significado": "A energia de 1 000 W ligados por 1 hora. É o que a conta de luz cobra."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Uma lâmpada de 60 W fica acesa 5 horas por dia, por 30 dias. A questão quer a energia do mês em kWh.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "circuito-simples",
+            "titulo": "A lâmpada ligada o mês todo",
+            "rotulos": [
+              "tomada",
+              "lâmpada 60 W",
+              "5 h por dia",
+              "30 dias"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Primeiro, as horas do mês: 5 × 30 = 150 horas. Depois, energia = potência × tempo: 60 × 150 = 9 000 Wh."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Passe para kWh dividindo por 1 000: 9 000 ÷ 1 000 = 9 kWh.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Energia do mês",
+            "dados": [
+              "P = 60\\,\\text{W}",
+              "t = 5 \\times 30 = 150\\,\\text{h}"
+            ],
+            "formula": "E = P \\times t",
+            "legenda": [
+              "P: a potência",
+              "t: as horas ligadas"
+            ],
+            "contas": [
+              "E = 60 \\times 150",
+              "E = 9\\,000\\,\\text{Wh}"
+            ],
+            "resultado": "E = 9\\,\\text{kWh}",
+            "nota": "9 000 Wh são 9 kWh."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Quilo quer dizer mil. Então 1 kWh são 1 000 Wh, como 1 km são 1 000 m."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 9 kWh. C (1,8 kWh) esqueceu as 5 horas por dia. E (9 000) não passou para kWh. B e D erraram a vírgula."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um aparelho de 1 000 W ligado 2 horas gasta quanto?",
+        "opcoes": [
+          "2 kWh",
+          "0,5 kWh",
+          "2 000 kWh",
+          "20 kWh"
+        ],
+        "certa": "2 kWh",
+        "resposta": "1 000 × 2 = 2 000 Wh = 2 kWh."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-fis-din-01",
+    "materia": "Física",
+    "tema": "Dinâmica e Leis de Newton",
+    "enunciado": "Uma pessoa empurra uma caixa de 20 kg no chão com uma força de 100 N. O atrito com o chão faz uma força de 40 N no sentido contrário. Qual é a aceleração da caixa?",
+    "A": "5 m/s²",
+    "B": "7 m/s²",
+    "C": "3 m/s²",
+    "D": "2 m/s²",
+    "E": "60 m/s²",
+    "resposta": "C",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Resultante = 100 − 40 = 60 N. a = 60 ÷ 20 = 3 m/s². C. Erros: A = 100 ÷ 20 (esqueceu o atrito); B = 140 ÷ 20 (somou o atrito); D = 40 ÷ 20; E = só a força resultante.",
+      "ideia": "Só a força que sobra acelera: 100 − 40 = 60 N. Dividida pela massa, dá 60 ÷ 20 = 3 m/s².",
+      "pecas": [
+        {
+          "termo": "Força resultante",
+          "significado": "O que sobra quando as forças se enfrentam. Para lados contrários, subtrai."
+        },
+        {
+          "termo": "F = m × a",
+          "significado": "Força resultante = massa × aceleração. A aceleração é quanto a velocidade aumenta a cada segundo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Uma caixa de 20 kg é empurrada com 100 N, e o atrito puxa 40 N para trás. A questão quer a aceleração.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "bloco-forca",
+            "titulo": "A caixa empurrada",
+            "rotulos": [
+              "empurrão 100 N",
+              "atrito 40 N",
+              "20 kg",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O empurrão e o atrito estão em lados contrários, então um desconta do outro: 100 − 40 = 60 N. É essa força que sobra que acelera a caixa."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "a = força que sobra ÷ massa = 60 ÷ 20 = 3 m/s².",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "A caixa",
+            "dados": [
+              "F = 100 - 40 = 60\\,\\text{N}",
+              "m = 20\\,\\text{kg}"
+            ],
+            "formula": "a = \\frac{F}{m}",
+            "legenda": [
+              "F: a força que sobra",
+              "m: a massa"
+            ],
+            "contas": [
+              "a = \\frac{60}{20}"
+            ],
+            "resultado": "a = 3\\,\\text{m/s}^2",
+            "nota": "Ganha 3 m/s a cada segundo."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "F = m × a vale para a força resultante. Se o atrito fosse igual ao empurrão, a resultante seria zero e a caixa não ganharia velocidade."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 3 m/s². A (5) esqueceu o atrito. B (7) somou o atrito. D (2) usou só o atrito. E (60) parou na força e não dividiu pela massa."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Empurrão de 50 N e atrito de 50 N numa caixa. A aceleração é:",
+        "opcoes": [
+          "zero",
+          "1 m/s²",
+          "100 m/s²",
+          "50 m/s²"
+        ],
+        "certa": "zero",
+        "resposta": "50 − 50 = 0: não sobra força."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-fis-din-02",
+    "materia": "Física",
+    "tema": "Dinâmica e Leis de Newton",
+    "enunciado": "Um astronauta tem massa de 80 kg. Na Lua, a gravidade vale 1,6 m/s². Considere g = 10 m/s² na Terra. Na Lua, a massa e o peso do astronauta são, respectivamente:",
+    "A": "80 kg e 800 N",
+    "B": "13 kg e 128 N",
+    "C": "128 kg e 80 N",
+    "D": "8 kg e 80 N",
+    "E": "80 kg e 128 N",
+    "resposta": "E",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Massa não muda: 80 kg. Peso = m × g = 80 × 1,6 = 128 N. E. Erros: A = peso da Terra; B = mudou a massa; C = trocou massa e peso; D = dividiu por 10.",
+      "ideia": "Massa é quanta matéria o corpo tem e não muda de lugar para lugar. Peso é a força da gravidade: 80 × 1,6 = 128 N na Lua.",
+      "pecas": [
+        {
+          "termo": "Massa",
+          "significado": "Quanta matéria o corpo tem, em kg. É a mesma na Terra, na Lua ou no espaço."
+        },
+        {
+          "termo": "Peso",
+          "significado": "A força com que o planeta puxa o corpo, em newtons (N): P = m × g."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O astronauta tem 80 kg e está na Lua, onde g = 1,6 m/s². A questão quer a massa e o peso dele lá.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "bloco-forca",
+            "titulo": "Massa fica, peso muda",
+            "rotulos": [
+              "",
+              "",
+              "80 kg",
+              "na Lua: g = 1,6 m/s²"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A massa é a mesma em qualquer lugar: 80 kg. O peso depende de quem puxa. A Lua puxa menos que a Terra."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Peso = massa × gravidade = 80 × 1,6 = 128 N.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Peso na Lua",
+            "dados": [
+              "m = 80\\,\\text{kg}",
+              "g = 1{,}6\\,\\text{m/s}^2"
+            ],
+            "formula": "P = m \\times g",
+            "legenda": [
+              "m: a massa",
+              "g: a gravidade"
+            ],
+            "contas": [
+              "P = 80 \\times 1{,}6"
+            ],
+            "resultado": "P = 128\\,\\text{N}",
+            "nota": "A massa continua 80 kg."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Na Terra o mesmo astronauta pesa 80 × 10 = 800 N. A Lua puxa 6 vezes menos, por isso lá ele pula muito mais alto."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 80 kg e 128 N. A (800 N) é o peso na Terra. B e D mudaram a massa, que não muda. C trocou massa com peso."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma bola de 2 kg na Terra (g = 10 m/s²) pesa:",
+        "opcoes": [
+          "20 N",
+          "2 N",
+          "12 N",
+          "0,2 N"
+        ],
+        "certa": "20 N",
+        "resposta": "2 × 10 = 20 N."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-fis-din-03",
+    "materia": "Física",
+    "tema": "Dinâmica e Leis de Newton",
+    "enunciado": "Um carro de 1 000 kg anda a 20 m/s e freia até parar em 4 segundos, perdendo velocidade sempre no mesmo ritmo. Qual é a força média que os freios fazem?",
+    "A": "250 N",
+    "B": "5 000 N",
+    "C": "20 000 N",
+    "D": "80 000 N",
+    "E": "5 N",
+    "resposta": "B",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "a = 20 ÷ 4 = 5 m/s². F = 1 000 × 5 = 5 000 N. B. Erros: A = 1 000 ÷ 4; C = 1 000 × 20; D = 1 000 × 20 × 4; E = só a aceleração.",
+      "ideia": "Primeiro a aceleração: perde 20 m/s em 4 s, ou seja, 5 m/s a cada segundo. Depois F = m × a = 1 000 × 5 = 5 000 N.",
+      "pecas": [
+        {
+          "termo": "Aceleração (a)",
+          "significado": "Quanto a velocidade muda a cada segundo. Velocidade que mudou ÷ tempo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Um carro de 1 000 kg vai de 20 m/s a zero em 4 s. A questão quer a força dos freios.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "bloco-forca",
+            "titulo": "O carro freando",
+            "rotulos": [
+              "",
+              "freio = ?",
+              "1 000 kg",
+              "20 m/s até parar, em 4 s"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Em 4 segundos o carro perde 20 m/s. A cada segundo perde 20 ÷ 4 = 5 m/s. Essa é a aceleração (de freada): 5 m/s²."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "F = m × a = 1 000 × 5 = 5 000 N.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "A freada",
+            "dados": [
+              "\\Delta v = 20\\,\\text{m/s}",
+              "t = 4\\,\\text{s}",
+              "m = 1\\,000\\,\\text{kg}"
+            ],
+            "formula": "F = m \\times \\frac{\\Delta v}{t}",
+            "legenda": [
+              "Δv: a velocidade perdida",
+              "t: o tempo"
+            ],
+            "contas": [
+              "F = 1\\,000 \\times \\frac{20}{4}",
+              "F = 1\\,000 \\times 5"
+            ],
+            "resultado": "F = 5\\,000\\,\\text{N}",
+            "nota": "Os freios fazem 5 000 N."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Parar mais rápido pede mais força. Se o carro parasse em 2 s, a aceleração dobraria (10 m/s²) e a força também (10 000 N)."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 5 000 N. A (250 N) dividiu a massa pelo tempo. C e D multiplicaram pela velocidade. E (5) parou na aceleração."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma bicicleta perde 10 m/s em 5 s. A aceleração de freada é:",
+        "opcoes": [
+          "2 m/s²",
+          "50 m/s²",
+          "0,5 m/s²",
+          "15 m/s²"
+        ],
+        "certa": "2 m/s²",
+        "resposta": "10 ÷ 5 = 2 m/s²."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-fis-ter-01",
+    "materia": "Física",
+    "tema": "Termodinâmica e Calor",
+    "enunciado": "Para fazer um café, uma pessoa aquece 2 kg de água de 20 °C até 70 °C. O calor específico da água é 1 cal/(g·°C). Quanto calor a água recebe?",
+    "A": "140 000 cal",
+    "B": "40 000 cal",
+    "C": "100 cal",
+    "D": "100 000 cal",
+    "E": "50 cal",
+    "resposta": "D",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Q = m × c × ΔT = 2 000 × 1 × 50 = 100 000 cal. D. Erros: A = usou 70 no lugar de 50; B = usou 20; C = usou 2 em vez de 2 000 g; E = só a variação.",
+      "ideia": "QUE MACETE: Q = m × c × ΔT. Com a massa em gramas: 2 000 × 1 × (70 − 20) = 100 000 cal.",
+      "pecas": [
+        {
+          "termo": "ΔT (variação)",
+          "significado": "Quanto a temperatura mudou: final menos inicial. Aqui, 70 − 20 = 50 °C."
+        },
+        {
+          "termo": "Calor específico (c)",
+          "significado": "Quanto calor 1 g do material pede para subir 1 °C. Água: 1 cal/(g·°C)."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "2 kg de água vão de 20 °C a 70 °C. A questão quer o calor recebido.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "calor-panela",
+            "titulo": "A água esquentando",
+            "rotulos": [
+              "2 kg de água",
+              "20 °C → 70 °C",
+              "Q = ?",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O calor específico está em gramas, então passe a massa: 2 kg = 2 000 g. A temperatura sobe 70 − 20 = 50 °C."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Q = m × c × ΔT = 2 000 × 1 × 50 = 100 000 cal.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Esquentando a água",
+            "dados": [
+              "m = 2\\,000\\,\\text{g}",
+              "c = 1",
+              "\\Delta T = 70 - 20 = 50"
+            ],
+            "formula": "Q = m \\times c \\times \\Delta T",
+            "legenda": [
+              "m: a massa em gramas",
+              "ΔT: quanto subiu"
+            ],
+            "contas": [
+              "Q = 2\\,000 \\times 1 \\times 50"
+            ],
+            "resultado": "Q = 100\\,000\\,\\text{cal}",
+            "nota": "Cem mil calorias."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Mais água ou mais graus pedem mais calor, na mesma proporção. O dobro de água pede o dobro de calor."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 100 000 cal. A usou a temperatura final (70) no lugar da variação. B usou a inicial (20). C esqueceu de passar kg para g. E parou na variação."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "100 g de água sobem 10 °C (c = 1). Quanto calor?",
+        "opcoes": [
+          "1 000 cal",
+          "110 cal",
+          "10 cal",
+          "100 cal"
+        ],
+        "certa": "1 000 cal",
+        "resposta": "100 × 1 × 10 = 1 000 cal."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-fis-ter-02",
+    "materia": "Física",
+    "tema": "Termodinâmica e Calor",
+    "enunciado": "Para derreter totalmente 500 g de gelo que já está a 0 °C, é preciso fornecer calor. O calor latente de fusão do gelo é 80 cal/g. Quanto calor é necessário, e o que acontece com a temperatura enquanto o gelo derrete?",
+    "A": "Zero, pois a temperatura não muda.",
+    "B": "580 cal, e a temperatura sobe.",
+    "C": "40 000 cal, e a temperatura fica em 0 °C.",
+    "D": "40 000 cal, e a temperatura sobe até 80 °C.",
+    "E": "6,25 cal, e a temperatura fica em 0 °C.",
+    "resposta": "C",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Q = m × L = 500 × 80 = 40 000 cal; na fusão a temperatura fica parada em 0 °C. C. Erros: A = usou m × c × ΔT com ΔT = 0; B = somou; D = achou que a temperatura sobe; E = 500 ÷ 80.",
+      "ideia": "Mudando de estado, a temperatura fica parada e o calor só serve para derreter: Q = m × L = 500 × 80 = 40 000 cal.",
+      "pecas": [
+        {
+          "termo": "Calor latente (L)",
+          "significado": "Quanto calor 1 g pede para mudar de estado (derreter, ferver) sem mudar de temperatura."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "500 g de gelo a 0 °C vão derreter. A questão quer o calor e o que a temperatura faz.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "calor-panela",
+            "titulo": "O gelo derretendo",
+            "rotulos": [
+              "500 g de gelo",
+              "fica em 0 °C",
+              "Q = m × L",
+              "L = 80 cal/g"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Enquanto derrete, todo o calor vai para soltar as partículas do gelo. A temperatura fica parada em 0 °C até o último pedaço derreter."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Q = m × L = 500 × 80 = 40 000 cal.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Derretendo o gelo",
+            "dados": [
+              "m = 500\\,\\text{g}",
+              "L = 80\\,\\text{cal/g}"
+            ],
+            "formula": "Q = m \\times L",
+            "legenda": [
+              "m: a massa",
+              "L: o calor para mudar de estado"
+            ],
+            "contas": [
+              "Q = 500 \\times 80"
+            ],
+            "resultado": "Q = 40\\,000\\,\\text{cal}",
+            "nota": "A temperatura fica em 0 °C."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O QUE MACETE (Q = m × c × ΔT) é só para quando a temperatura muda. Aqui ΔT = 0, e a conta daria zero: por isso, na mudança de estado, usa-se Q = m × L."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 40 000 cal, e a temperatura fica em 0 °C. A caiu na pegadinha do ΔT = 0. D achou que a temperatura sobe. B somou e E dividiu os números."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Enquanto a água ferve a 100 °C, a temperatura dela:",
+        "opcoes": [
+          "fica em 100 °C",
+          "sobe sem parar",
+          "cai",
+          "vai a 0 °C"
+        ],
+        "certa": "fica em 100 °C",
+        "resposta": "Mudança de estado: o calor vai para virar vapor."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-fis-ter-03",
+    "materia": "Física",
+    "tema": "Termodinâmica e Calor",
+    "enunciado": "Panelas costumam ter o corpo de metal e o cabo de madeira ou plástico. Qual é o motivo dessa escolha de materiais?",
+    "A": "A madeira conduz bem o calor e esfria o metal.",
+    "B": "O metal conduz bem o calor até a comida, e a madeira conduz mal, protegendo a mão.",
+    "C": "O metal isola o calor e a madeira esquenta mais rápido.",
+    "D": "A madeira irradia o calor da chama para longe da mão.",
+    "E": "Os dois conduzem igual; a madeira é só mais barata.",
+    "resposta": "B",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Metal é bom condutor (leva o calor à comida); madeira e plástico são isolantes (conduzem mal e não queimam a mão). B. Erros: A e C invertem condutor e isolante; D confunde com radiação; E nega a diferença.",
+      "ideia": "Metal é bom condutor: passa o calor da chama para a comida. Madeira e plástico são isolantes: passam pouco calor, então o cabo não queima a mão.",
+      "pecas": [
+        {
+          "termo": "Condução",
+          "significado": "O calor passando por dentro do material, de partícula em partícula, encostando."
+        },
+        {
+          "termo": "Isolante",
+          "significado": "Material que conduz mal o calor: madeira, plástico, isopor, lã, ar."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Corpo de metal e cabo de madeira. A questão quer saber o porquê de cada um.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "calor-panela",
+            "titulo": "A panela no fogo",
+            "rotulos": [
+              "metal: conduz bem",
+              "",
+              "chama",
+              "cabo: madeira, conduz mal"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O calor da chama passa pelo metal até a comida, por condução. No cabo de madeira, quase não passa."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Pense no que cada parte precisa fazer: o fundo tem que levar calor (condutor) e o cabo tem que segurar o calor longe da mão (isolante)."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É o mesmo motivo de usar luva de pano para tirar a forma do forno: tecido e madeira seguram o calor."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B. A e C trocam quem conduz e quem isola. D fala de radiação, que não é o caso do cabo. E diz que conduzem igual, o que é falso."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual destes conduz MAL o calor?",
+        "opcoes": [
+          "isopor",
+          "alumínio",
+          "cobre",
+          "ferro"
+        ],
+        "certa": "isopor",
+        "resposta": "Isopor é isolante; os metais conduzem bem."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-fis-ond-01",
+    "materia": "Física",
+    "tema": "Ondas e Acústica",
+    "enunciado": "Uma rádio FM transmite na frequência de 100 MHz (100 milhões de vibrações por segundo). As ondas de rádio viajam a 300 000 000 m/s. Qual é o comprimento de onda dessa rádio?",
+    "A": "0,3 m",
+    "B": "30 m",
+    "C": "3 m",
+    "D": "300 m",
+    "E": "3 000 m",
+    "resposta": "C",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "λ = v ÷ f = 300 000 000 ÷ 100 000 000 = 3 m. C. Erros: A, B, D e E erraram a quantidade de zeros.",
+      "ideia": "VÊ LÁ FORA: v = λ × f. O comprimento é a velocidade dividida pela frequência: 300 milhões ÷ 100 milhões = 3 m.",
+      "pecas": [
+        {
+          "termo": "Comprimento de onda (λ)",
+          "significado": "O tamanho de uma onda inteira, de um pico ao próximo, em metros."
+        },
+        {
+          "termo": "Frequência (f)",
+          "significado": "Quantas ondas passam por segundo, em hertz (Hz). Mega (M) quer dizer milhão."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A rádio vibra 100 milhões de vezes por segundo e a onda anda 300 milhões de metros por segundo. A questão quer o tamanho de uma onda.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "onda",
+            "titulo": "A onda de rádio",
+            "rotulos": [
+              "λ = ?",
+              "f = 100 MHz",
+              "v = 300 000 000 m/s"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Em 1 segundo a onda anda 300 milhões de metros, e nesse caminho cabem 100 milhões de ondas. Cada uma tem 300 ÷ 100 = 3 m."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "λ = v ÷ f. Corte os milhões de cima e de baixo: 300 ÷ 100 = 3 m.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "A rádio FM",
+            "dados": [
+              "v = 300\\,000\\,000\\,\\text{m/s}",
+              "f = 100\\,000\\,000\\,\\text{Hz}"
+            ],
+            "formula": "\\lambda = \\frac{v}{f}",
+            "legenda": [
+              "v: a velocidade",
+              "f: a frequência"
+            ],
+            "contas": [
+              "\\lambda = \\frac{300}{100}"
+            ],
+            "resultado": "\\lambda = 3\\,\\text{m}",
+            "nota": "Cada onda tem 3 metros."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "v = λ × f: cada onda tem λ metros e passam f ondas por segundo. Então a onda anda λ vezes f metros por segundo."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 3 m. As outras erram os zeros: cortar os milhões dos dois lados evita esse erro."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Onda com λ = 2 m e f = 5 Hz anda a quanto?",
+        "opcoes": [
+          "10 m/s",
+          "2,5 m/s",
+          "7 m/s",
+          "0,4 m/s"
+        ],
+        "certa": "10 m/s",
+        "resposta": "v = λ × f = 2 × 5 = 10 m/s."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-fis-ond-02",
+    "materia": "Física",
+    "tema": "Ondas e Acústica",
+    "enunciado": "Uma pessoa grita de frente para um paredão de pedra e ouve o eco 2 segundos depois. O som anda a 340 m/s no ar. A que distância ela está do paredão?",
+    "A": "680 m",
+    "B": "170 m",
+    "C": "342 m",
+    "D": "340 m",
+    "E": "1 360 m",
+    "resposta": "D",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Ida e volta: 340 × 2 = 680 m; só a ida: 680 ÷ 2 = 340 m. D. Erros: A = ida e volta; B = dividiu duas vezes; C = somou 340 + 2; E = multiplicou por 4.",
+      "ideia": "O eco é o som que vai até o paredão e volta. Em 2 s o som anda 680 m, mas isso é ida e volta: a distância é a metade, 340 m.",
+      "pecas": [
+        {
+          "termo": "Eco",
+          "significado": "O som que bate num obstáculo e volta. O tempo do eco é de ida e volta."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O eco volta em 2 s, e o som anda 340 m/s. A questão quer a distância até o paredão.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "onda",
+            "titulo": "O som indo e voltando",
+            "rotulos": [
+              "vai e volta",
+              "eco em 2 s",
+              "v = 340 m/s"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Distância = velocidade × tempo: 340 × 2 = 680 m. Mas o som foi até o paredão e voltou."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Divida por 2 para ficar só com a ida: 680 ÷ 2 = 340 m.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "O eco",
+            "dados": [
+              "v = 340\\,\\text{m/s}",
+              "t = 2\\,\\text{s}"
+            ],
+            "formula": "d = \\frac{v \\times t}{2}",
+            "legenda": [
+              "v × t: ida e volta",
+              "÷ 2: só a ida"
+            ],
+            "contas": [
+              "d = \\frac{340 \\times 2}{2}",
+              "d = \\frac{680}{2}"
+            ],
+            "resultado": "d = 340\\,\\text{m}",
+            "nota": "O paredão está a 340 m."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O mesmo truque vale para o sonar do navio e para o morcego: o tempo medido é sempre de ida e volta."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 340 m. A (680 m) esqueceu de dividir por 2. B dividiu duas vezes. C somou números que não se somam. E multiplicou demais."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Eco em 1 s com som a 340 m/s. A parede está a:",
+        "opcoes": [
+          "170 m",
+          "340 m",
+          "680 m",
+          "1 m"
+        ],
+        "certa": "170 m",
+        "resposta": "340 × 1 = 340 m de ida e volta; metade: 170 m."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-fis-ond-03",
+    "materia": "Física",
+    "tema": "Ondas e Acústica",
+    "enunciado": "Numa corda esticada, uma pessoa faz ondas com comprimento de 0,5 m, balançando a mão 4 vezes por segundo. Com que velocidade as ondas andam na corda?",
+    "A": "8 m/s",
+    "B": "2 m/s",
+    "C": "0,125 m/s",
+    "D": "4,5 m/s",
+    "E": "3,5 m/s",
+    "resposta": "B",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "v = λ × f = 0,5 × 4 = 2 m/s. B. Erros: A = 4 ÷ 0,5; C = 0,5 ÷ 4; D = 4 + 0,5; E = 4 − 0,5.",
+      "ideia": "VÊ LÁ FORA: v = λ × f. Cada onda tem 0,5 m e passam 4 por segundo: 0,5 × 4 = 2 m/s.",
+      "pecas": [
+        {
+          "termo": "Frequência (f)",
+          "significado": "Quantas ondas por segundo. A mão balançando 4 vezes por segundo faz f = 4 Hz."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Cada onda tem 0,5 m e a mão faz 4 ondas por segundo. A questão quer a velocidade.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "onda",
+            "titulo": "A onda na corda",
+            "rotulos": [
+              "λ = 0,5 m",
+              "f = 4 Hz",
+              "v = ?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Em 1 segundo saem 4 ondas, uma atrás da outra. Juntas, elas ocupam 4 × 0,5 = 2 m de corda."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "v = λ × f = 0,5 × 4 = 2 m/s.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "A corda",
+            "dados": [
+              "\\lambda = 0{,}5\\,\\text{m}",
+              "f = 4\\,\\text{Hz}"
+            ],
+            "formula": "v = \\lambda \\times f",
+            "legenda": [
+              "λ: o tamanho da onda",
+              "f: ondas por segundo"
+            ],
+            "contas": [
+              "v = 0{,}5 \\times 4"
+            ],
+            "resultado": "v = 2\\,\\text{m/s}",
+            "nota": "A onda anda 2 m por segundo."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Se em 1 segundo a frente da onda chegou 2 m adiante, ela anda 2 metros por segundo."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 2 m/s. A e C dividiram em vez de multiplicar. D somou e E subtraiu."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "λ = 1 m e f = 3 Hz. A velocidade é:",
+        "opcoes": [
+          "3 m/s",
+          "0,33 m/s",
+          "4 m/s",
+          "1 m/s"
+        ],
+        "certa": "3 m/s",
+        "resposta": "1 × 3 = 3 m/s."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-fis-opt-01",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Um canudo dentro de um copo com água parece quebrado na linha da água. Esse efeito acontece porque a luz:",
+    "A": "é absorvida pela água e some.",
+    "B": "bate na água e volta inteira para trás.",
+    "C": "contorna o canudo, como o som contorna um muro.",
+    "D": "muda de velocidade ao passar da água para o ar e desvia.",
+    "E": "fica mais rápida dentro da água e não desvia.",
+    "resposta": "D",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Refração: a luz muda de velocidade entre água e ar e, saindo inclinada, desvia; o canudo parece quebrado. D. Erros: A = absorção; B = reflexão; C = difração; E = na água a luz fica mais lenta.",
+      "ideia": "É a refração: a luz muda de velocidade ao passar da água para o ar e, como sai inclinada, muda de direção. O olho vê o canudo num lugar diferente.",
+      "pecas": [
+        {
+          "termo": "Refração",
+          "significado": "A luz passando de um meio para outro e mudando de velocidade. Se entra inclinada, também muda de direção."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O canudo parece quebrado bem na linha da água. A questão quer o motivo.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "A luz passando da água para o ar",
+            "rotulos": [
+              "ar",
+              "água",
+              "a luz desvia",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A luz que vem da parte do canudo dentro da água sai para o ar mais rápida e muda de direção. O olho segue a linha reta e imagina o canudo em outro lugar."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "BATE, PASSA, CONTORNA: aqui a luz passa da água para o ar. Passar é refração."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Na água a luz anda mais devagar que no ar. É a mudança de velocidade, com a luz chegando inclinada, que faz o desvio."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D. A é absorção, B é reflexão e C é difração. E erra: dentro da água a luz fica mais lenta, não mais rápida."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Ver seu rosto no espelho é exemplo de:",
+        "opcoes": [
+          "reflexão",
+          "refração",
+          "difração",
+          "absorção"
+        ],
+        "certa": "reflexão",
+        "resposta": "A luz bate no espelho e volta."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-fis-opt-02",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Um raio de luz chega a um espelho plano fazendo um ângulo de 30° com a reta normal (a linha perpendicular ao espelho no ponto onde a luz bate). Qual é o ângulo entre o raio refletido e essa mesma reta normal?",
+    "A": "30°",
+    "B": "60°",
+    "C": "90°",
+    "D": "15°",
+    "E": "120°",
+    "resposta": "A",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Na reflexão, ângulo de incidência = ângulo de reflexão, ambos medidos da normal: 30°. A. Erros: B = 90 − 30 (ângulo com o espelho); C = a normal; D = metade; E = 90 + 30.",
+      "ideia": "No espelho, a luz sai com o mesmo ângulo com que chegou, medido a partir da normal. Chegou com 30°, sai com 30°.",
+      "pecas": [
+        {
+          "termo": "Normal",
+          "significado": "A reta em pé (perpendicular, 90°) sobre o espelho no ponto onde a luz bate. Os ângulos se medem a partir dela."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A luz chega a 30° da normal. A questão quer o ângulo com que ela sai, também medido da normal.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "A luz batendo e voltando",
+            "rotulos": [
+              "luz chegando",
+              "",
+              "30° com a normal",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A luz bate e volta como uma bola de bilhar na tabela: o ângulo de saída é igual ao de chegada."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ângulo de reflexão = ângulo de incidência = 30°.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "O espelho",
+            "dados": [
+              "i = 30^\\circ"
+            ],
+            "formula": "r = i",
+            "legenda": [
+              "i: ângulo de chegada",
+              "r: ângulo de saída"
+            ],
+            "contas": [
+              "r = 30^\\circ"
+            ],
+            "resultado": "r = 30^\\circ",
+            "nota": "Medidos da normal."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cuidado com a pegadinha: 60° é o ângulo com o espelho, não com a normal. A questão pediu da normal."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 30°. B (60°) mediu do espelho. C é a própria normal. D e E fizeram contas que a reflexão não pede."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Luz chega a 45° da normal num espelho. Sai com:",
+        "opcoes": [
+          "45°",
+          "90°",
+          "135°",
+          "22,5°"
+        ],
+        "certa": "45°",
+        "resposta": "Sai com o mesmo ângulo: 45°."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-fis-opt-03",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Uma pessoa míope enxerga bem de perto, mas vê embaçado de longe, porque a imagem se forma antes da retina. Que lente corrige a miopia?",
+    "A": "Convergente, que junta a luz, como a da lupa.",
+    "B": "Lente sem curvatura, só para proteger o olho.",
+    "C": "Divergente, que espalha um pouco a luz antes de ela entrar no olho.",
+    "D": "Espelho côncavo preso aos óculos.",
+    "E": "Prisma, que separa as cores da luz.",
+    "resposta": "C",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Na miopia a imagem se forma antes da retina; a lente divergente espalha a luz e empurra a imagem para a retina. C. Erros: A corrige hipermetropia; B não corrige; D e E não são lentes de óculos.",
+      "ideia": "No míope a luz se junta cedo demais, antes da retina. A lente divergente espalha um pouco a luz e faz a imagem cair no lugar certo.",
+      "pecas": [
+        {
+          "termo": "Lente divergente",
+          "significado": "Lente mais fina no meio que nas bordas. Espalha a luz."
+        },
+        {
+          "termo": "Retina",
+          "significado": "O fundo do olho, onde a imagem precisa se formar para ficar nítida."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "No míope, a imagem se forma antes da retina. A questão quer a lente que corrige.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "A luz entrando na lente",
+            "rotulos": [
+              "luz de longe",
+              "lente divergente",
+              "espalha a luz",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O olho do míope junta a luz forte demais, e o ponto nítido fica antes da retina. Para empurrar esse ponto para trás, a luz precisa chegar um pouco espalhada."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Míope junta demais, então corrige quem espalha: lente divergente."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Lentes funcionam por refração. A convergente junta a luz (lupa, óculos de quem tem hipermetropia). A divergente espalha (óculos de míope)."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, divergente. A é a lente da hipermetropia, que piora a miopia. B, D e E não corrigem o foco."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "A lupa usa uma lente:",
+        "opcoes": [
+          "convergente",
+          "divergente",
+          "plana",
+          "espelhada"
+        ],
+        "certa": "convergente",
+        "resposta": "A lupa junta a luz."
+      }
+    }
+  }
+]

@@ -143,3 +143,30 @@ describe('provas do dia 2', () => {
     }
   }
 });
+
+/* Questões de reforço (Pablo, 12/11/2026): errou na prova, a próxima é uma
+   parecida do mesmo conteúdo, estilo ENEM (nunca "ENEM real"). Mesma
+   conferência das provas e uma figura em pixel no 1º passo. */
+describe('reforço do dia 2', () => {
+  for (const area of AREAS) {
+    const qs = ler('reforco', area);
+    if (!qs) continue;
+    describe(`reforco-${area}`, () => {
+      it('cada questão passa na conferência da explicação', () => {
+        const ruins = qs.map((q) => [q.id, problemasDaQuestao(q)] as const).filter(([, e]) => e.length > 0);
+        expect(ruins.map(([id, e]) => `${id}: ${e.join('; ')}`)).toEqual([]);
+      });
+      it('toda questão abre com figura em pixel e é do reforço', () => {
+        const sem = qs.filter((q) => (q.explicacao.passos as { visual?: { tipo?: string } }[])[0]?.visual?.tipo !== 'figura' || q.origem !== 'Reforço do dia 2');
+        expect(sem.map((q) => q.id)).toEqual([]);
+      });
+      it('ids únicos no padrão d2-reforco-', () => {
+        expect(qs.filter((q) => !q.id.startsWith('d2-reforco-')).map((q) => q.id)).toEqual([]);
+        expect(new Set(qs.map((q) => q.id)).size).toBe(qs.length);
+      });
+      it('não pede figura que não existe no enunciado', () => {
+        expect(qs.filter((q) => PEDE_FIGURA.test(q.enunciado)).map((q) => q.id)).toEqual([]);
+      });
+    });
+  }
+});

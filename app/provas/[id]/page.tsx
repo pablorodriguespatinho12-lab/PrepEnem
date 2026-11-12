@@ -19,6 +19,8 @@ import { AulaDoTema } from '@/components/simulado/aula-do-tema';
 import { temaDaQuestao } from '@/lib/aulas-dia-2';
 import { MundoPixel } from '@/components/pixel/mundo-pixel';
 import { CenaFim } from '@/components/pixel/cena-fim';
+import { FiguraPixel } from '@/components/visual/figura-pixel';
+import type { NomeFigura } from '@/lib/visual/especificacao';
 import { useMundoAnimado } from '@/hooks/use-mundo-animado';
 import { useTelaCheia } from '@/hooks/use-tela-cheia';
 
@@ -26,6 +28,33 @@ import { useTelaCheia } from '@/hooks/use-tela-cheia';
 const FAISCAS: [number, number][] = [[-26, -18], [0, -28], [26, -18], [-26, 18], [0, 28], [26, 18]];
 /* Anéis do acerto/erro (voto 3A): três, um atrás do outro. */
 const ANEIS_MS = [0, 90, 180];
+
+/* Questão de reforço (Pablo, 12/11/2026): errou, vem uma parecida do mesmo
+   conteúdo para ver se entendeu (app/api/provas/reforco). Não conta na nota.
+   As já vistas ficam no navegador, para a próxima vez trazer outra. */
+type Reforco = { questao: any; figura: { nome: NomeFigura; rotulos?: string[] } | null };
+const CHAVE_REFORCO = 'prepenem:reforco-usadas';
+const lerUsadas = (): string[] => {
+  try {
+    return JSON.parse(localStorage.getItem(CHAVE_REFORCO) ?? '[]');
+  } catch {
+    return [];
+  }
+};
+const marcarUsada = (id: string) => {
+  try {
+    localStorage.setItem(CHAVE_REFORCO, JSON.stringify([...lerUsadas().filter((x) => x !== id), id].slice(-200)));
+  } catch {
+    // sem armazenamento: só repete reforço
+  }
+};
+async function buscarReforco(tema: string | null | undefined, excluir: string): Promise<Reforco | null> {
+  if (!tema) return null;
+  const usadas = [...lerUsadas(), excluir].join(',');
+  const res = await fetch(`/api/provas/reforco?tema=${encodeURIComponent(tema)}&usadas=${encodeURIComponent(usadas)}`).catch(() => null);
+  const dados = res?.ok ? await res.json().catch(() => null) : null;
+  return dados?.questao ? { questao: dados.questao, figura: dados.figura ?? null } : null;
+}
 
 /* Limiares de dado esparso — mesma regra usada em app/dashboard/page.tsx. */
 const MIN_QUESTOES_PARA_TAXA = 5;
@@ -59,6 +88,9 @@ export default function ProvaDetailPage() {
   const telaCheia = useTelaCheia();
   // muda a cada toque numa alternativa: remonta as faíscas para tocarem de novo
   const [toque, setToque] = useState(0);
+  // Reforço: errou, a próxima é uma parecida do mesmo conteúdo (não conta na nota).
+  const [reforcoPronto, setReforcoPronto] = useState<Reforco | null>(null);
+  const [reforcoAtivo, setReforcoAtivo] = useState<Reforco | null>(null);
 
   const [exam, setExam] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -276,7 +308,7 @@ export default function ProvaDetailPage() {
     );
   }
 
-  const q = currentEQ.question;
+  const q = reforcoAtivo?.questao ?? currentEQ.question;
   const alternativas = [
     { letra: 'A', texto: q.alternativaA },
     { letra: 'B', texto: q.alternativaB },
@@ -292,6 +324,15 @@ export default function ProvaDetailPage() {
     const acertou = selectedAnswer === q.respostaCorreta;
     setFeedback({ acertou, respostaCorreta: q.respostaCorreta });
     setSubmitted(true);
+    // Reforço é treino: não grava nem mexe na nota da prova.
+    if (reforcoAtivo) {
+      marcarUsada(q.id);
+      return;
+    }
+    // Errou: já busca a parecida, para a "Próxima" trazer ela.
+    if (!acertou) {
+      buscarReforco(temaDaQuestao(q) ?? q.tema, q.id).then(setReforcoPronto);
+    }
     setExam((e: any) => ({
       ...e,
       acertos: e.acertos + (acertou ? 1 : 0),
@@ -311,6 +352,17 @@ export default function ProvaDetailPage() {
   // Próxima troca a questão na hora. Antes recarregava a prova inteira e, até
   // chegar, a questão de antes voltava sem resposta na tela.
   const handleNext = async () => {
+    // Errou e há uma parecida guardada: ela vem antes da próxima da prova.
+    if (!reforcoAtivo && reforcoPronto) {
+      setReforcoAtivo(reforcoPronto);
+      setReforcoPronto(null);
+      setSelectedAnswer(null);
+      setSubmitted(false);
+      setFeedback(null);
+      window.scrollTo({ top: 0 });
+      return;
+    }
+    setReforcoAtivo(null);
     if (isLast) {
       setFechando(true);
       await Promise.allSettled(salvando.current);
@@ -396,7 +448,7 @@ export default function ProvaDetailPage() {
             </span>
             {/* Nível da questão (Pablo, 03/11/2026: "cadê o nível das questões?"). */}
             <span className="type-caption px-2 py-0.5 rounded-[var(--radius-data)] bg-muted text-foreground font-medium">
-              {etapaDaQuestao(q) === 'enem' && q.anoProva ? `ENEM ${q.anoProva} · questão real` : ETAPA_LABEL[etapaDaQuestao(q)]}
+              {reforcoAtivo ? 'Reforço · estilo ENEM' : etapaDaQuestao(q) === 'enem' && q.anoProva ? `ENEM ${q.anoProva} · questão real` : ETAPA_LABEL[etapaDaQuestao(q)]}
             </span>
             {q.subtema && (
               <>
@@ -405,9 +457,20 @@ export default function ProvaDetailPage() {
               </>
             )}
           </div>
+          {reforcoAtivo && (
+            <p className="mb-4 px-4 py-3 rounded-[var(--radius-control)] bg-primary/10 type-meta text-foreground">
+              <strong className="text-primary-text">Questão de reforço:</strong> parecida com a que você errou, para ver se ficou claro. Não conta na nota da prova.
+            </p>
+          )}
           <div className="prose-reading mb-6">
             <MathText text={semMarcaDeImagem(q.enunciado)} />
           </div>
+          {/* Desenho em pixel da questão de reforço, sem a conta (só ajuda a entender). */}
+          {reforcoAtivo?.figura && (
+            <div className="mb-6">
+              <FiguraPixel nome={reforcoAtivo.figura.nome} rotulos={reforcoAtivo.figura.rotulos} semConta />
+            </div>
+          )}
           <AulaDoTema key={`aula-${q.id}`} tema={temaDaQuestao(q)} questao={q} className="mb-6" />
           {/* A figura da questão real (a prova não mostrava; Pablo, 03/11/2026). */}
           {q.pdfFileUrl && q.paginaPdf && (
@@ -536,7 +599,12 @@ export default function ProvaDetailPage() {
                 disabled={fechando}
                 className="px-6 py-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3 flex items-center gap-2"
               >
-                {isLast ? (
+                {!reforcoAtivo && reforcoPronto ? (
+                  <>
+                    Tentar uma parecida
+                    <ArrowRight className="w-4 h-4" />
+                  </>
+                ) : isLast ? (
                   <>
                     {fechando ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trophy className="w-4 h-4" />}
                     Finalizar Prova
