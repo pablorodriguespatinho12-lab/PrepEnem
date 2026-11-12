@@ -1,0 +1,1321 @@
+[
+  {
+    "id": "d2-reforco-bio-eco-01",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Num pasto, o capim guarda 20 000 kcal de energia. Gafanhotos comem o capim, e sapos comem os gafanhotos. Considere que, a cada degrau da cadeia alimentar, só 10% da energia passa para o degrau seguinte. Quanta energia do capim chega aos sapos?",
+    "A": "20 000 kcal",
+    "B": "10 000 kcal",
+    "C": "200 kcal",
+    "D": "2 000 kcal",
+    "E": "20 kcal",
+    "resposta": "C",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Capim → gafanhoto: 20 000 × 0,1 = 2 000. Gafanhoto → sapo: 2 000 × 0,1 = 200 kcal. C. Erros: A = nada se perde; B = metade; D = parou no gafanhoto; E = andou um degrau a mais.",
+      "ideia": "A energia cai para 10% em cada degrau. Do capim ao sapo são dois degraus: 20 000 vira 2 000 e depois 200 kcal.",
+      "pecas": [
+        {
+          "termo": "Degrau da cadeia",
+          "significado": "Cada passo de quem come quem. Capim é o produtor (faz o próprio alimento), o gafanhoto é o consumidor 1º e o sapo é o consumidor 2º."
+        },
+        {
+          "termo": "Os 10%",
+          "significado": "Só cerca de 10% da energia passa para o degrau seguinte. O resto o bicho gasta para viver e sai como calor."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O capim tem 20 000 kcal. O gafanhoto come o capim e o sapo come o gafanhoto. A questão quer quanto dessa energia chega ao sapo.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Capim, gafanhoto, sapo",
+            "rotulos": ["capim 20 000 kcal", "gafanhoto", "sapo", "passa 10% por degrau"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O gafanhoto recebe só 10% da energia do capim. O sapo recebe só 10% do que o gafanhoto tinha. São dois cortes, um em cada degrau."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Tirar 10% de um número é cortar um zero. 20 000 vira 2 000 no gafanhoto. 2 000 vira 200 no sapo.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Energia que sobe",
+            "dados": [
+              "\\text{capim} = 20\\,000\\,\\text{kcal}",
+              "\\text{passa } 10\\% = 0{,}1"
+            ],
+            "formula": "E = 20\\,000 \\times 0{,}1 \\times 0{,}1",
+            "legenda": [
+              "um × 0,1 para cada degrau",
+              "dois degraus até o sapo"
+            ],
+            "contas": [
+              "20\\,000 \\times 0{,}1 = 2\\,000",
+              "2\\,000 \\times 0{,}1 = 200"
+            ],
+            "resultado": "E = 200\\,\\text{kcal}",
+            "nota": "Chegam 200 kcal ao sapo."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada bicho gasta quase toda a energia que come para andar, respirar e se manter quente. Só o pouco que vira corpo dele fica para quem o come. Por isso a energia diminui a cada degrau."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 200 kcal. A (20 000) esquece que a energia se perde. B (10 000) corta pela metade. D (2 000) para no gafanhoto. E (20) corta uma vez a mais, como se houvesse mais um bicho."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma alga guarda 5 000 kcal. Quanto chega ao peixe que come a alga?",
+        "opcoes": ["5 000 kcal", "500 kcal", "50 kcal", "2 500 kcal"],
+        "certa": "500 kcal",
+        "resposta": "Um degrau só: 5 000 × 0,1 = 500 kcal."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-eco-02",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Uma lagoa perto de uma plantação recebeu por anos a água da chuva com um agrotóxico que os seres vivos não conseguem eliminar: ele fica guardado no corpo. Na lagoa, o plâncton (seres minúsculos que boiam na água) é comido por peixes pequenos, que são comidos por peixes grandes, que são comidos por garças. Em qual desses seres se espera achar a maior quantidade do agrotóxico por quilo de corpo?",
+    "A": "No plâncton, que fica em contato direto com a água.",
+    "B": "Nos peixes pequenos, que comem muitas vezes ao dia.",
+    "C": "Nos peixes grandes, que vivem no fundo da lagoa.",
+    "D": "Em todos igual, porque a água da lagoa é a mesma.",
+    "E": "Nas garças, que estão no topo da cadeia alimentar.",
+    "resposta": "E",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Veneno que não sai do corpo se acumula subindo a cadeia. O topo (garça) fica com mais. E. Erros: A pensa no contato com a água; B confunde comer muitas vezes com acumular mais; C chuta pelo fundo da lagoa; D esquece o acúmulo.",
+      "ideia": "Cada ser guarda o veneno de tudo o que comeu na vida. Quem está no topo come muitos que já tinham veneno, então junta mais.",
+      "pecas": [
+        {
+          "termo": "Topo da cadeia",
+          "significado": "O último bicho da cadeia, que come os outros e não é comido por eles. Aqui é a garça."
+        },
+        {
+          "termo": "Acúmulo do veneno",
+          "significado": "Se o corpo não consegue jogar o veneno fora, ele vai se somando. Cada degrau junta o veneno de muitos seres do degrau de baixo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Um agrotóxico que não sai do corpo chegou à lagoa. A cadeia é plâncton, peixe pequeno, peixe grande e garça. A questão quer quem fica com mais veneno.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "A cadeia da lagoa",
+            "rotulos": ["plâncton", "peixe pequeno", "peixe grande", "garça no topo"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Um peixe pequeno come muito plâncton e guarda o veneno de todos eles. Um peixe grande come muitos peixes pequenos e soma o veneno de todos. A garça come muitos peixes grandes e soma tudo de novo."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Veneno que o corpo não elimina: procure o topo da cadeia. Ele é a resposta."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A energia cai a cada degrau, mas o veneno não: ele fica no corpo. Para viver, a garça precisa comer muitos peixes, e cada peixe traz o veneno que juntou. Por isso a quantidade por quilo sobe em cada degrau."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, as garças. A erra porque o plâncton tem contato com a água, mas só pega o veneno dela, sem somar de outros seres. B e C param no meio da cadeia. D esquece que o veneno se soma ao subir."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Capim, boi e onça receberam mercúrio, que não sai do corpo. Quem fica com mais?",
+        "opcoes": ["Capim", "Boi", "Onça", "Todos igual"],
+        "certa": "Onça",
+        "resposta": "A onça está no topo e soma o mercúrio dos bois que comeu."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-eco-03",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "O caramujo-africano foi trazido ao Brasil para ser criado e vendido como comida. A venda não deu certo, e muitos foram soltos na natureza. Hoje ele se espalhou por quase todo o país, come plantações e ocupa o espaço de caramujos nativos (os que já viviam aqui). O que mais explica esse caramujo ter se espalhado tão rápido?",
+    "A": "Aqui ele não tem predadores e doenças que controlavam sua população na África.",
+    "B": "Ele ficou maior no Brasil por comer mais, e passou isso aos filhotes.",
+    "C": "Ele faz fotossíntese e não depende de comida.",
+    "D": "Os caramujos nativos ajudam o africano a encontrar alimento.",
+    "E": "O clima do Brasil faz ele se reproduzir sem parceiro.",
+    "resposta": "A",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Espécie exótica (de fora) sem inimigo natural cresce sem freio e vira invasora. A. Erros: B é a ideia superada de Lamarck; C confunde com planta; D inventa mutualismo; E inventa reprodução.",
+      "ideia": "Na terra de origem, predadores e doenças seguram o número de caramujos. Aqui ninguém o segura, então ele se multiplica e toma o espaço dos nativos.",
+      "pecas": [
+        {
+          "termo": "Espécie exótica",
+          "significado": "Ser vivo trazido de outro lugar pelo ser humano. Quando se espalha e prejudica os nativos, vira espécie invasora."
+        },
+        {
+          "termo": "Inimigo natural",
+          "significado": "Predador (quem come) ou doença que mantém o número de uma espécie sob controle no lugar de onde ela veio."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Um caramujo da África foi solto no Brasil e se espalhou pelo país todo. A questão quer o motivo de ele crescer tão rápido aqui.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Caramujo de fora",
+            "rotulos": ["plantações", "caramujo-africano", "predador?", "veio da África"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Na África, o caramujo tem bichos que o comem e doenças que o atacam. No Brasil, esses inimigos não vieram junto. Sem nada para frear, cada caramujo deixa muitos filhotes que sobrevivem."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Espécie trazida de fora que se espalha demais: a resposta é quase sempre falta de inimigo natural no lugar novo."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O tamanho de uma população depende de quantos nascem e de quantos morrem. Tirando o predador e a doença, morrem bem menos. A população cresce e passa a disputar comida e espaço com os caramujos nativos, que perdem."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, falta de predadores e doenças. B usa a ideia superada de que o uso muda o corpo e passa aos filhos. C erra: caramujo é animal e não faz fotossíntese. D e E inventam fatos que o texto não dá."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um peixe de outro país, solto num rio, some com os peixes nativos. Ele é uma espécie:",
+        "opcoes": ["Nativa", "Invasora", "Produtora", "Decompositora"],
+        "certa": "Invasora",
+        "resposta": "Veio de fora e prejudica os nativos: espécie exótica invasora."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-eco-04",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Num experimento, um pedaço de terra de floresta foi tratado para não ter nenhum fungo nem bactéria. Folhas e galhos continuaram caindo das árvores sobre ele. Depois de alguns meses, o que se espera encontrar nesse pedaço de terra?",
+    "A": "Mais plantas crescendo, porque o solo ficou livre de doenças.",
+    "B": "Menos folhas no chão, porque as plantas pararam de perder folhas.",
+    "C": "O mesmo que no resto da floresta, porque fungos e bactérias não fazem diferença.",
+    "D": "Folhas e galhos acumulados, e o solo mais pobre em nutrientes.",
+    "E": "Mais energia passando das plantas para os animais.",
+    "resposta": "D",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Fungos e bactérias são os decompositores: desmancham restos e devolvem nutrientes ao solo. Sem eles, os restos se acumulam e o solo empobrece. D. Erros: A acha que fungo e bactéria só fazem mal; B e E não têm relação; C nega o papel deles.",
+      "ideia": "Fungos e bactérias desmancham folhas mortas e devolvem os nutrientes à terra. Sem eles, as folhas ficam inteiras no chão e a terra fica sem nutriente novo.",
+      "pecas": [
+        {
+          "termo": "Decompositor",
+          "significado": "Ser que se alimenta de restos de seres mortos, como fungos e bactérias. Ele desmancha o resto e os nutrientes voltam para o solo."
+        },
+        {
+          "termo": "Nutriente",
+          "significado": "Substância que a planta tira do solo para crescer, como o nitrogênio e o fósforo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Um pedaço de terra ficou sem fungos e sem bactérias, e as folhas continuaram caindo. A questão quer o que aparece nessa terra meses depois.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Terra sem decompositor",
+            "rotulos": ["folhas caídas", "sem fungo", "sem bactéria", "depois de meses?"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Quem desmancha a folha morta são os fungos e as bactérias. Sem eles, ninguém desmancha. As folhas e os galhos ficam empilhados, e os nutrientes que estavam neles não voltam para a terra."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Sumiu o decompositor: lixo de restos se acumula e o solo fica pobre. É sempre esse par."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A planta tira nutrientes do solo e os guarda nas folhas. Quando a folha cai e é desmanchada, o nutriente volta e outra planta usa. Sem decompositor, esse ciclo para e o nutriente fica preso na folha morta."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, restos acumulados e solo pobre. A erra porque, sem nutriente novo, as plantas crescem menos. B: as árvores seguem perdendo folhas. C nega o papel dos decompositores. E não tem relação com o experimento."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual destes seres devolve os nutrientes de um animal morto ao solo?",
+        "opcoes": ["Capim", "Fungo", "Gafanhoto", "Gavião"],
+        "certa": "Fungo",
+        "resposta": "O fungo é decompositor: desmancha o resto e devolve os nutrientes."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-fis-01",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Uma adolescente vive cansada, sem fôlego para subir escadas, e está pálida. O exame de sangue mostra anemia: ela tem bem menos hemácias (glóbulos vermelhos) do que o normal. Por que a falta de hemácias deixa a pessoa cansada?",
+    "A": "Porque o sangue dela coagula devagar e ela perde sangue.",
+    "B": "Porque chega menos oxigênio às células, que produzem menos energia.",
+    "C": "Porque ela fica sem defesa e pega infecções o tempo todo.",
+    "D": "Porque o pâncreas para de fazer insulina.",
+    "E": "Porque os rins param de filtrar o sangue.",
+    "resposta": "B",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Hemácia leva oxigênio. Pouca hemácia = pouco oxigênio nas células = pouca energia = cansaço. B. Erros: A é papel da plaqueta; C é do glóbulo branco; D é a insulina (açúcar); E é o rim.",
+      "ideia": "A hemácia é o caminhão do oxigênio. Com poucas, o oxigênio chega pouco às células, elas produzem menos energia e a pessoa cansa.",
+      "pecas": [
+        {
+          "termo": "Hemácia",
+          "significado": "O glóbulo vermelho do sangue. Ela carrega o oxigênio do pulmão para o corpo todo."
+        },
+        {
+          "termo": "Anemia",
+          "significado": "Falta de hemácias ou de hemoglobina, a parte da hemácia que segura o oxigênio. Deixa a pessoa pálida e cansada."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Uma moça com anemia tem poucas hemácias e vive cansada. A questão quer o motivo do cansaço.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Poucas hemácias",
+            "rotulos": ["coração", "hemácias: poucas", "cansaço", "pele pálida"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "As hemácias pegam oxigênio no pulmão e levam para as células. As células usam o oxigênio para tirar energia do alimento. Com menos hemácias, chega menos oxigênio e sobra menos energia."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Lembre a palavra-chave: vermelho leva, branco defende, plaqueta fecha. Faltou o vermelho, falta o que ele leva: oxigênio."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Músculo que trabalha precisa de muita energia, e a energia depende do oxigênio. Subir escada pede mais do que o sangue com pouca hemácia consegue entregar, e a pessoa perde o fôlego."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, chega menos oxigênio. A fala da plaqueta, que fecha o corte. C fala do glóbulo branco, que defende. D fala da insulina, que baixa o açúcar. E fala do rim, que filtra o sangue."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma pessoa pega infecção toda hora. O que deve estar baixo no sangue dela?",
+        "opcoes": ["Hemácias", "Glóbulos brancos", "Plaquetas", "Glicose"],
+        "certa": "Glóbulos brancos",
+        "resposta": "O glóbulo branco defende o corpo. Baixo, as infecções entram fácil."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-fis-02",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Um menino de 10 anos tem diabetes tipo 1: o pâncreas dele quase não produz insulina. Antes de começar o tratamento, os exames mostravam muito açúcar (glicose) no sangue, mesmo ele comendo normalmente. Por que a glicose ficava alta no sangue dele?",
+    "A": "Porque ele comia doce demais.",
+    "B": "Porque as hemácias dele não carregavam a glicose.",
+    "C": "Porque o rim dele fabricava glicose.",
+    "D": "Porque a insulina em excesso puxava glicose para o sangue.",
+    "E": "Porque, sem insulina, a glicose não entrava nas células e ficava no sangue.",
+    "resposta": "E",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "A insulina faz a glicose sair do sangue e entrar nas células. Sem insulina, a glicose fica no sangue. E. Erros: A culpa a comida (o texto diz que ele comia normalmente); B troca hemácia (leva oxigênio); C inventa; D inverte o papel da insulina.",
+      "ideia": "A insulina é a chave que abre a célula para a glicose entrar. Sem a chave, a glicose fica parada no sangue e o açúcar sobe.",
+      "pecas": [
+        {
+          "termo": "Insulina",
+          "significado": "Hormônio (mensagem química que vai pelo sangue) feito pelo pâncreas. Ela faz as células tirarem glicose do sangue e baixa o açúcar."
+        },
+        {
+          "termo": "Glicose",
+          "significado": "O açúcar que vem da comida e vai pelo sangue. A célula usa a glicose para fazer energia."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O pâncreas de um menino quase não faz insulina, e o açúcar do sangue dele vive alto. A questão quer o porquê.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Diabetes tipo 1",
+            "rotulos": ["pâncreas", "insulina: quase zero", "glicose no sangue", "10 anos"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Depois de comer, a glicose vai para o sangue. Normalmente, o pâncreas solta insulina e a glicose entra nas células. Sem insulina, a porta da célula não abre, e a glicose se junta no sangue."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: insulina baixa o açúcar. Pouca insulina, açúcar alto."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O sangue só transporta a glicose. Quem a usa são as células. Se ela não entra nas células, fica rodando no sangue. Por isso o tratamento do diabetes tipo 1 é tomar insulina."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, a glicose não entra nas células. A erra porque o texto diz que ele comia normalmente. B troca o papel: hemácia leva oxigênio. C inventa. D inverte: a insulina tira glicose do sangue, e no caso ela falta."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual órgão produz a insulina?",
+        "opcoes": ["Fígado", "Pâncreas", "Rim", "Pulmão"],
+        "certa": "Pâncreas",
+        "resposta": "O pâncreas produz a insulina e a solta no sangue."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-fis-03",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Na dengue grave, o número de plaquetas no sangue pode cair muito. Por isso, o médico avisa a família para levar o doente ao hospital se ele tiver sangramento na gengiva ou no nariz. Por que a queda de plaquetas causa sangramento?",
+    "A": "Porque as plaquetas ajudam a formar o coágulo que fecha os pequenos cortes.",
+    "B": "Porque as plaquetas levam oxigênio às gengivas.",
+    "C": "Porque as plaquetas matam o vírus da dengue no sangue.",
+    "D": "Porque as plaquetas fazem o coração bater mais devagar.",
+    "E": "Porque as plaquetas produzem a insulina do sangue.",
+    "resposta": "A",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Plaqueta faz o sangue coagular (fechar o corte). Poucas plaquetas = o sangue não fecha os pequenos cortes = sangramento. A. Erros: B é a hemácia; C é o glóbulo branco; D e E não são função da plaqueta.",
+      "ideia": "A plaqueta é o tampão do corte. Com poucas, até os vasinhos da gengiva e do nariz não se fecham e sangram.",
+      "pecas": [
+        {
+          "termo": "Plaqueta",
+          "significado": "Pedacinho de célula que circula no sangue. Ela gruda no lugar do corte e ajuda a formar o coágulo."
+        },
+        {
+          "termo": "Coagular",
+          "significado": "Formar o coágulo, uma rolha de sangue firme que fecha o corte e para o sangramento."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Na dengue grave as plaquetas caem, e o doente pode sangrar pela gengiva e pelo nariz. A questão quer o porquê do sangramento.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Plaquetas em queda",
+            "rotulos": ["sangue", "plaquetas: poucas", "gengiva e nariz", "dengue grave"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O corpo tem pequenos cortes o tempo todo, na gengiva e no nariz. As plaquetas fecham esses cortes sem a gente perceber. Com poucas plaquetas, eles ficam abertos e sangram."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: vermelho leva, branco defende, plaqueta fecha. Sangramento é problema de quem fecha: a plaqueta."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O coágulo começa com as plaquetas grudando no lugar ferido. Sem plaquetas suficientes, o coágulo não se forma a tempo, e o sangue continua saindo. Por isso a dengue grave pede hospital."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, a plaqueta ajuda a formar o coágulo. B é a hemácia, que leva oxigênio. C é o glóbulo branco, que defende. D e E não são funções da plaqueta: o coração tem ritmo próprio e a insulina vem do pâncreas."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual parte do sangue defende o corpo contra micróbios?",
+        "opcoes": ["Hemácia", "Plaqueta", "Glóbulo branco", "Plasma"],
+        "certa": "Glóbulo branco",
+        "resposta": "O glóbulo branco defende. Plaqueta fecha e hemácia leva oxigênio."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-fis-04",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "O sangue que chega aos pulmões vem do corpo todo, depois de passar pelos músculos e órgãos. Comparando esse sangue que chega com o sangue que sai dos pulmões em direção ao coração, o sangue que sai tem",
+    "A": "mais gás carbônico e menos oxigênio.",
+    "B": "mais glicose e menos insulina.",
+    "C": "mais oxigênio e menos gás carbônico.",
+    "D": "menos hemácias e mais plaquetas.",
+    "E": "a mesma quantidade de gases, porque o pulmão só esfria o sangue.",
+    "resposta": "C",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "No pulmão, o sangue solta gás carbônico e pega oxigênio. Sai rico em oxigênio e pobre em gás carbônico. C. Erros: A inverte; B fala de açúcar; D troca células; E nega a troca de gases.",
+      "ideia": "O pulmão é a troca de gases: o sangue entrega o gás carbônico e recebe oxigênio. Então o sangue que sai do pulmão tem mais oxigênio.",
+      "pecas": [
+        {
+          "termo": "Gás carbônico",
+          "significado": "O gás que as células soltam quando tiram energia do alimento. O sangue o leva até o pulmão, e ele sai na expiração."
+        },
+        {
+          "termo": "Troca de gases",
+          "significado": "No pulmão, o sangue solta gás carbônico no ar e pega oxigênio do ar."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Um sangue chega ao pulmão vindo do corpo, e outro sai do pulmão rumo ao coração. A questão quer o que muda entre eles.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Entra e sai do pulmão",
+            "rotulos": ["pulmão", "chega do corpo", "sai para o coração", "o que muda?"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pelo corpo, as células pegaram o oxigênio e soltaram gás carbônico. Por isso o sangue chega ao pulmão com pouco oxigênio e muito gás carbônico. No pulmão, ele joga o gás carbônico fora e enche de oxigênio."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Saindo do pulmão: cheio de oxigênio. Saindo do corpo: cheio de gás carbônico."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada gás vai de onde tem mais para onde tem menos. O ar que respiramos tem muito oxigênio e o sangue que chega tem pouco, então o oxigênio entra no sangue. Com o gás carbônico é o contrário."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, mais oxigênio e menos gás carbônico. A inverte: esse é o sangue que chega. B fala de açúcar, que não muda no pulmão. D troca as células do sangue. E nega a troca de gases, que é o papel do pulmão."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Quem carrega o oxigênio que o sangue pega no pulmão?",
+        "opcoes": ["Plaquetas", "Hemácias", "Glóbulos brancos", "Insulina"],
+        "certa": "Hemácias",
+        "resposta": "As hemácias levam o oxigênio do pulmão para o corpo."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-gen-01",
+    "materia": "Biologia",
+    "tema": "Genética",
+    "enunciado": "A fibrose cística é uma doença que deixa o muco do pulmão grosso. Ela é causada por um alelo recessivo: só tem a doença quem recebe duas cópias dele (aa). Um casal sem a doença fez um exame e descobriu que os dois são portadores (Aa). Qual é a chance de um filho desse casal nascer com fibrose cística?",
+    "A": "0%",
+    "B": "25%",
+    "C": "50%",
+    "D": "75%",
+    "E": "100%",
+    "resposta": "B",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Aa × Aa dá AA, Aa, Aa, aa. Só aa tem a doença: 1 em 4 = 25%. B. Erros: A acha que pais sem doença não passam; C pensa num pai só; D é a chance de NÃO ter; E acha que todos herdam.",
+      "ideia": "Cada pai passa A ou a, meio a meio. Para o filho ser aa, os dois precisam passar o a: 1 em 4, ou 25%.",
+      "pecas": [
+        {
+          "termo": "Alelo recessivo",
+          "significado": "Versão do gene escrita com letra minúscula (a). Só aparece quando a pessoa tem duas cópias (aa)."
+        },
+        {
+          "termo": "Portador",
+          "significado": "Quem é Aa: tem o alelo da doença guardado, mas não tem a doença. Pode passar o a para os filhos."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Pai e mãe são Aa, portadores da fibrose cística. A questão quer a chance de um filho ser aa e ter a doença.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cruzamento",
+            "titulo": "Dois portadores",
+            "rotulos": ["pai Aa", "mãe Aa", "chance de aa?", "doença só com aa"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O pai manda A ou a. A mãe manda A ou a. Juntando, saem 4 caminhos iguais: AA, Aa, aA e aa. Só um deles, o aa, tem a doença."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Monte o quadro 2 × 2 e conte as casas aa. Aa × Aa sempre dá aa em 1 de 4.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Quadro do casal",
+            "dados": [
+              "\\text{pai} = Aa",
+              "\\text{mãe} = Aa",
+              "\\text{casas} = 2 \\times 2 = 4"
+            ],
+            "formula": "\\text{chance} = \\frac{\\text{casas } aa}{\\text{casas no quadro}}",
+            "legenda": [
+              "cada casa: um alelo de cada pai",
+              "4 casas iguais"
+            ],
+            "contas": [
+              "AA,\\ Aa,\\ Aa,\\ aa",
+              "\\text{chance} = \\frac{1}{4}"
+            ],
+            "resultado": "\\text{chance} = 25\\%",
+            "nota": "1 filho em 4, em média."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada pai passa um alelo só para o filho, sorteado meio a meio. A chance de os dois passarem o a ao mesmo tempo é metade da metade: 1 em 4. Confira: 4 casas, 1 é aa."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 25%. A erra porque pais sem a doença podem passar o a escondido. C (50%) olha para um pai só. D (75%) é a chance de o filho NÃO ter a doença. E (100%) acha que todo filho herda."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "No cruzamento Aa × Aa, quantas das 4 casas do quadro são Aa?",
+        "opcoes": ["1", "2", "3", "4"],
+        "certa": "2",
+        "resposta": "AA, Aa, Aa, aa: duas casas são Aa, os portadores."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-gen-02",
+    "materia": "Biologia",
+    "tema": "Genética",
+    "enunciado": "O albinismo (falta do pigmento melanina na pele) é causado por um alelo recessivo: só é albino quem tem duas cópias dele (aa). Uma mulher albina se casou com um homem que não é albino, mas cuja mãe era albina. Qual é a chance de o primeiro filho do casal ser albino?",
+    "A": "0%",
+    "B": "25%",
+    "C": "50%",
+    "D": "75%",
+    "E": "100%",
+    "resposta": "C",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Mulher aa. Homem não albino com mãe aa: recebeu a dela, então é Aa. Aa × aa dá Aa, Aa, aa, aa: 2 em 4 = 50%. C. Erros: A acha que o homem é AA; B usa Aa × Aa; D e E erram o quadro.",
+      "ideia": "O homem recebeu um a da mãe albina, então é Aa. Cruzando Aa com aa, metade dos filhos sai aa: 50%.",
+      "pecas": [
+        {
+          "termo": "Albinismo",
+          "significado": "Falta de melanina, o pigmento que dá cor à pele, ao cabelo e aos olhos. É recessivo: aparece só com aa."
+        },
+        {
+          "termo": "Descobrir o alelo escondido",
+          "significado": "Quem não mostra a característica, mas tem pai ou mãe aa, recebeu um a com certeza. Então é Aa."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A mulher é albina. O homem não é, mas a mãe dele era. A questão quer a chance de o filho ser albino.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cruzamento",
+            "titulo": "Albinismo na família",
+            "rotulos": ["pai: mãe dele albina", "mãe albina", "chance de aa?", "albino só com aa"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A mulher albina é aa. O homem não é albino, então tem pelo menos um A. A mãe dele era aa e só podia passar a, então ele é Aa. O casal é Aa × aa."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Monte o quadro 2 × 2. A mãe só manda a. O pai manda A ou a. Metade das casas sai aa.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Quadro do casal",
+            "dados": [
+              "\\text{pai} = Aa",
+              "\\text{mãe} = aa",
+              "\\text{casas} = 2 \\times 2 = 4"
+            ],
+            "formula": "\\text{chance} = \\frac{\\text{casas } aa}{\\text{casas no quadro}}",
+            "legenda": [
+              "o pai é Aa por causa da mãe dele",
+              "4 casas iguais"
+            ],
+            "contas": [
+              "Aa,\\ Aa,\\ aa,\\ aa",
+              "\\text{chance} = \\frac{2}{4}"
+            ],
+            "resultado": "\\text{chance} = 50\\%",
+            "nota": "Metade dos filhos, em média."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A mãe sempre manda a. Então quem decide é o pai: se ele mandar a, o filho é aa e albino; se mandar A, o filho é Aa. O pai manda cada um meio a meio, então a chance é 50%."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 50%. A (0%) acha que o homem é AA e esquece a mãe dele. B (25%) usa a conta de Aa × Aa. D (75%) e E (100%) contam errado as casas do quadro."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Pai aa e mãe aa: de 4 filhos, quantos se espera que sejam aa?",
+        "opcoes": ["0", "1", "2", "4"],
+        "certa": "4",
+        "resposta": "Os dois só têm a para passar: os 4 são aa."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-gen-03",
+    "materia": "Biologia",
+    "tema": "Genética",
+    "enunciado": "Em ervilhas, a semente lisa (A) domina sobre a semente rugosa (a). Um agricultor cruzou uma planta pura de semente lisa (AA) com uma planta de semente rugosa (aa). Qual é a chance de nascer uma planta de semente rugosa nesse cruzamento?",
+    "A": "0%",
+    "B": "25%",
+    "C": "50%",
+    "D": "75%",
+    "E": "100%",
+    "resposta": "A",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "AA × aa: um pai só manda A, o outro só manda a. Todos os filhos são Aa, lisos. Chance de rugosa (aa) = 0%. A. Erros: B usa Aa × Aa; C acha que é meio a meio; D e E erram o quadro.",
+      "ideia": "A planta AA só tem A para passar, então todo filho recebe um A. Com um A, a semente já é lisa: nenhuma rugosa.",
+      "pecas": [
+        {
+          "termo": "Dominante",
+          "significado": "Versão do gene com letra maiúscula (A). Basta uma cópia para aparecer."
+        },
+        {
+          "termo": "Planta pura",
+          "significado": "Planta com as duas cópias iguais, como AA ou aa. Ela só tem um tipo de alelo para passar."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Uma ervilha AA, de semente lisa, cruzou com uma aa, de semente rugosa. A questão quer a chance de sair semente rugosa.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cruzamento",
+            "titulo": "Lisa com rugosa",
+            "rotulos": ["lisa AA", "rugosa aa", "chance de rugosa?", "A domina a"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A planta AA só manda A. A planta aa só manda a. Todo filho recebe um de cada: Aa. Como A domina, toda semente sai lisa."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Monte o quadro 2 × 2. As 4 casas saem Aa. Nenhuma é aa.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Quadro das ervilhas",
+            "dados": [
+              "\\text{lisa} = AA",
+              "\\text{rugosa} = aa",
+              "\\text{casas} = 2 \\times 2 = 4"
+            ],
+            "formula": "\\text{chance} = \\frac{\\text{casas } aa}{\\text{casas no quadro}}",
+            "legenda": [
+              "rugosa só com aa",
+              "4 casas iguais"
+            ],
+            "contas": [
+              "Aa,\\ Aa,\\ Aa,\\ Aa",
+              "\\text{chance} = \\frac{0}{4}"
+            ],
+            "resultado": "\\text{chance} = 0\\%",
+            "nota": "Todos lisos, todos portadores."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Para sair rugosa, a planta precisa receber a dos dois lados. A planta AA não tem a para dar. Então nenhum filho pode ser aa. O a fica escondido nos filhos Aa e pode voltar na geração seguinte."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 0%. B (25%) usa a conta de Aa × Aa. C (50%) acha que cada lado vale meio a meio. D (75%) e E (100%) esquecem que A domina a."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Cruzando duas plantas Aa, a chance de semente rugosa é:",
+        "opcoes": ["0%", "25%", "50%", "75%"],
+        "certa": "25%",
+        "resposta": "Aa × Aa dá aa em 1 de 4 casas: 25%."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-cit-01",
+    "materia": "Biologia",
+    "tema": "Citologia",
+    "enunciado": "Ao comparar ao microscópio as células do músculo da perna de um maratonista com as de uma pessoa que não treina, pesquisadores viram que as do atleta têm bem mais de uma certa organela (parte da célula com uma função). Essa organela ajuda o músculo a aguentar o esforço longo porque ela",
+    "A": "guarda o DNA da célula.",
+    "B": "monta as proteínas do músculo.",
+    "C": "faz fotossíntese para o músculo.",
+    "D": "produz o ATP, a energia que a célula usa.",
+    "E": "digere os restos dentro da célula.",
+    "resposta": "D",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Esforço longo pede muita energia; a organela da energia é a mitocôndria, que produz ATP. D. Erros: A é o núcleo; B é o ribossomo; C é o cloroplasto (não existe em animal); E é o lisossomo.",
+      "ideia": "Músculo que trabalha muito precisa de muita energia. A mitocôndria é a usina que produz ATP, então o atleta tem mais delas.",
+      "pecas": [
+        {
+          "termo": "Mitocôndria",
+          "significado": "Organela que usa oxigênio para tirar energia do alimento e produzir ATP. É a usina da célula."
+        },
+        {
+          "termo": "ATP",
+          "significado": "A moeda de energia da célula. Toda tarefa da célula, como o músculo se contrair, gasta ATP."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O músculo do maratonista tem mais de uma organela que o de quem não treina. A questão quer o que essa organela faz.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "celula",
+            "titulo": "Músculo do atleta",
+            "rotulos": ["organela em excesso", "o que ela faz?", "músculo da perna", "corrida longa"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Correr por horas faz o músculo se contrair milhares de vezes. Cada contração gasta ATP. Com o treino, as células do músculo passam a ter mais mitocôndrias para produzir mais ATP."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: mitocôndria é a usina (ATP). Se a questão fala de energia ou esforço, a organela é a mitocôndria."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada organela tem um trabalho. A que mais muda com o esforço é a que dá energia. Por isso células que gastam muito, como as do músculo e do coração, têm muitas mitocôndrias."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, produz ATP. A é o núcleo. B é o ribossomo. C é o cloroplasto, que só existe em plantas e algas. E é o lisossomo."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Onde fica guardado o DNA da célula humana?",
+        "opcoes": ["Na mitocôndria", "No núcleo", "No ribossomo", "Na membrana"],
+        "certa": "No núcleo",
+        "resposta": "O núcleo guarda o DNA. A mitocôndria tem um pouco, mas o principal fica no núcleo."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-cit-02",
+    "materia": "Biologia",
+    "tema": "Citologia",
+    "enunciado": "Alguns antibióticos, como a tetraciclina, se prendem ao ribossomo das bactérias e o travam. O ribossomo das bactérias é um pouco diferente do das células humanas, e por isso o remédio age mais sobre ele. Com o ribossomo travado, a bactéria deixa de",
+    "A": "guardar o DNA.",
+    "B": "montar as proteínas de que precisa.",
+    "C": "fazer fotossíntese.",
+    "D": "deixar a água entrar por osmose.",
+    "E": "ter núcleo.",
+    "resposta": "B",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Ribossomo monta proteína. Travado, a bactéria não monta proteínas e não cresce nem se multiplica. B. Erros: A é papel do DNA/núcleo; C é cloroplasto; D é a membrana; E: bactéria já não tem núcleo.",
+      "ideia": "O ribossomo é a fábrica de proteína. Travando ele, a bactéria fica sem as proteínas de que precisa para viver e se multiplicar.",
+      "pecas": [
+        {
+          "termo": "Ribossomo",
+          "significado": "Organela pequena que lê a receita vinda do DNA e monta as proteínas."
+        },
+        {
+          "termo": "Proteína",
+          "significado": "Peça que a célula usa para quase tudo: construir partes, acelerar reações e se dividir."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Um antibiótico trava o ribossomo da bactéria. A questão quer o que a bactéria deixa de fazer.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "celula",
+            "titulo": "Ribossomo travado",
+            "rotulos": ["ribossomo", "o que ele faz?", "bactéria", "tetraciclina"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O ribossomo monta as proteínas. Com ele travado, a fábrica para. Sem proteínas novas, a bactéria não cresce e não se divide, e a defesa do corpo dá conta das que sobram."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: ribossomo monta proteína. Travou o ribossomo, parou a proteína."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O remédio ataca uma peça que a bactéria tem diferente da nossa. Assim ele trava mais a bactéria do que as nossas células. Vírus não tem ribossomo próprio, e por isso esse remédio não age em vírus."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, montar proteínas. A: quem guarda o DNA não é o ribossomo. C é o cloroplasto, que bactéria não tem. D é a membrana. E: bactéria nunca teve núcleo, é procarionte."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual organela faz a fotossíntese?",
+        "opcoes": ["Mitocôndria", "Ribossomo", "Cloroplasto", "Lisossomo"],
+        "certa": "Cloroplasto",
+        "resposta": "O cloroplasto faz fotossíntese, e só existe em plantas e algas."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-cit-03",
+    "materia": "Biologia",
+    "tema": "Citologia",
+    "enunciado": "Uma salada de alface foi temperada com bastante sal meia hora antes do almoço. Na hora de comer, as folhas estavam murchas e havia água no fundo da tigela. As folhas murcharam porque",
+    "A": "o sal entrou nas células e as fez estourar.",
+    "B": "as células gastaram toda a energia e morreram.",
+    "C": "os cloroplastos pararam de fazer fotossíntese.",
+    "D": "a água de fora entrou nas células da folha.",
+    "E": "a água saiu das células para o lado com mais sal, fora delas.",
+    "resposta": "E",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Osmose: a água vai do lado com menos coisa dissolvida para o lado com mais. Fora (com sal) tem mais, então a água sai da célula e a folha murcha. E. Erros: A inverte e inventa; B e C não explicam a água na tigela; D inverte o caminho.",
+      "ideia": "O sal deixa o lado de fora mais concentrado. A água sai das células para lá, a célula esvazia e a folha murcha.",
+      "pecas": [
+        {
+          "termo": "Osmose",
+          "significado": "Passagem da água pela membrana, do lado com menos coisa dissolvida para o lado com mais."
+        },
+        {
+          "termo": "Membrana",
+          "significado": "A pele da célula. Ela deixa a água passar e segura muitas outras substâncias."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A alface com muito sal murchou e soltou água na tigela. A questão quer o motivo.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "celula",
+            "titulo": "Alface com sal",
+            "rotulos": ["membrana", "deixa a água passar", "sal do lado de fora", "água na tigela"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O sal ficou do lado de fora das células. Agora fora tem mais coisa dissolvida que dentro. A água atravessa a membrana e sai da célula. A célula esvazia, a folha murcha e a água vai para o fundo da tigela."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Na osmose, a água corre para onde tem mais sal ou açúcar. Ache esse lado e você sabe para onde a água vai."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A água tenta igualar os dois lados. O sal não passa fácil pela membrana, então quem se move é a água. É o caminho contrário da alface murcha que fica firme na água pura."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, a água saiu para o lado com mais sal. A erra o caminho: célula que estoura é a que recebe água demais. B e C não explicam a água na tigela. D inverte: a água saiu, não entrou."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma uva-passa ficou de molho em água pura. O que acontece com ela?",
+        "opcoes": ["Murcha mais", "Incha", "Fica igual", "Vira açúcar"],
+        "certa": "Incha",
+        "resposta": "Dentro da passa tem muito açúcar, então a água entra e ela incha."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-evo-01",
+    "materia": "Biologia",
+    "tema": "Evolução",
+    "enunciado": "As girafas de hoje têm pescoço longo. Pela teoria da seleção natural de Darwin, a explicação aceita pela biologia é que",
+    "A": "as girafas antigas já nasciam com pescoços de tamanhos diferentes, e as de pescoço mais longo comiam mais, sobreviviam mais e deixavam mais filhotes.",
+    "B": "as girafas esticavam o pescoço para alcançar as folhas, e o pescoço esticado passava para os filhotes.",
+    "C": "o ambiente mandou as girafas criarem pescoço longo porque as árvores eram altas.",
+    "D": "as girafas de pescoço curto aprenderam a esticar o pescoço com as de pescoço longo.",
+    "E": "o ser humano escolheu as girafas de pescoço longo para se reproduzirem.",
+    "resposta": "A",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Darwin: variação que já existe + o ambiente favorece uma + quem tem sobrevive e se reproduz mais. A. Erros: B é Lamarck (uso e desuso, ideia superada); C acha que o ambiente cria; D é aprendizado, não herança; E é seleção artificial.",
+      "ideia": "As girafas já nasciam diferentes. As de pescoço longo comiam melhor e deixavam mais filhotes, e com muitas gerações o pescoço longo ficou comum.",
+      "pecas": [
+        {
+          "termo": "Seleção natural",
+          "significado": "Quem nasce com uma característica que ajuda naquele ambiente sobrevive mais e deixa mais filhos. Com o tempo, ela fica comum."
+        },
+        {
+          "termo": "Lamarck",
+          "significado": "Ideia antiga e superada: o uso faria o órgão crescer, e isso passaria aos filhos. Não é assim que a herança funciona."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "As girafas têm pescoço longo. A questão quer a explicação de Darwin, a aceita hoje.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "selecao-natural",
+            "titulo": "Pescoços diferentes",
+            "rotulos": ["árvores altas", "pescoço longo", "pescoço curto", "muitas gerações"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Entre as girafas antigas, umas nasciam com pescoço maior, outras menor. Na seca, só as de pescoço maior alcançavam as folhas altas. Elas sobreviviam mais e tinham mais filhotes, que herdavam o pescoço longo."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: o ambiente escolhe, não cria. Alternativa com esforço, uso ou vontade passando aos filhos é Lamarck, e está errada."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O que passa para os filhos é o que está no DNA, não o que o corpo ganhou com uso. Esticar o pescoço não muda o DNA. Muda quem sobrevive e se reproduz, e assim muda a população."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, variação que já existia e foi escolhida pelo ambiente. B é Lamarck, ideia superada. C diz que o ambiente cria, mas ele só escolhe. D troca herança por aprendizado. E é seleção artificial, feita pelo ser humano."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um fisiculturista ganha músculo. O filho dele nasce musculoso por isso?",
+        "opcoes": ["Sim, sempre", "Não, músculo de treino não passa", "Só se for menino", "Só se a mãe treinar"],
+        "certa": "Não, músculo de treino não passa",
+        "resposta": "O treino muda o corpo, não o DNA. Achar que passa é Lamarck."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-evo-02",
+    "materia": "Biologia",
+    "tema": "Evolução",
+    "enunciado": "Numa escola, um xampu contra piolho funcionou bem no primeiro ano. Ele foi usado muitas vezes, e alguns anos depois quase não matava mais os piolhos das crianças. Pela biologia, a explicação é que",
+    "A": "os piolhos se acostumaram com o xampu e ensinaram os filhotes.",
+    "B": "o xampu criou nos piolhos a mutação que os protege.",
+    "C": "as crianças ficaram resistentes ao xampu.",
+    "D": "alguns piolhos já eram resistentes, sobreviveram ao xampu e se multiplicaram.",
+    "E": "o xampu perdeu a força com o tempo na prateleira.",
+    "resposta": "D",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "O xampu mata os sensíveis; os poucos resistentes que já existiam sobram e se multiplicam. D. Erros: A é Lamarck; B acha que o veneno cria a mutação; C troca o piolho pela criança; E inventa.",
+      "ideia": "O xampu não cria piolho resistente: ele escolhe. Mata os sensíveis, e os resistentes que já existiam ficam com o espaço e se multiplicam.",
+      "pecas": [
+        {
+          "termo": "Resistente",
+          "significado": "Piolho que nasce com uma diferença no DNA que o faz sobreviver ao veneno."
+        },
+        {
+          "termo": "Mutação",
+          "significado": "Mudança no DNA que acontece por acaso, antes de o veneno aparecer. O veneno não escolhe qual mutação surge."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Um xampu matava piolhos e, depois de anos de uso, parou de funcionar. A questão quer a explicação da biologia.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "selecao-natural",
+            "titulo": "Piolhos e xampu",
+            "rotulos": ["cabeça com xampu", "piolho resistente", "piolho sensível", "anos de uso"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "No começo, quase todo piolho morria, mas alguns poucos já eram resistentes. Cada lavagem matava os sensíveis e deixava os resistentes. Eles tinham filhotes resistentes, e com o tempo quase todos os piolhos passaram a ser assim."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Remédio ou veneno que para de funcionar: a resposta é sempre que os resistentes já existiam e foram selecionados."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É a seleção natural em pouco tempo. O ambiente (aqui, o xampu) não cria a resistência, só decide quem sobra. É o mesmo que acontece com bactéria e antibiótico."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, os resistentes já existiam e se multiplicaram. A é a ideia de Lamarck, superada. B diz que o veneno cria a mutação: ele só escolhe. C troca o piolho pela criança. E inventa algo que o texto não diz."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Quem cria a característica que ajuda um ser a sobreviver?",
+        "opcoes": ["O ambiente", "O esforço do ser", "A mutação por acaso", "O remédio"],
+        "certa": "A mutação por acaso",
+        "resposta": "A mutação surge por acaso. O ambiente só escolhe quem fica."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-evo-03",
+    "materia": "Biologia",
+    "tema": "Evolução",
+    "enunciado": "Na Inglaterra, uma mariposa tem forma clara e forma escura, e a cor passa dos pais para os filhos. Ela pousa em troncos de árvores, onde pássaros a caçam. Quando a fumaça das fábricas escureceu os troncos, as escuras ficaram mais comuns. Décadas depois, leis contra a poluição deixaram os troncos claros de novo. Depois disso, espera-se que",
+    "A": "as mariposas escuras fiquem claras ao pousar nos troncos claros.",
+    "B": "a proporção fique a mesma, porque a cor já tinha sido escolhida.",
+    "C": "as mariposas claras voltem a ficar mais comuns.",
+    "D": "as duas formas desapareçam.",
+    "E": "surjam mariposas verdes para se esconder melhor.",
+    "resposta": "C",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Tronco claro: a escura aparece mais e é mais caçada; a clara se esconde e se reproduz mais. A clara volta a ficar comum. C. Erros: A acha que o bicho muda de cor; B acha que a seleção para; D não tem motivo; E acha que o ambiente cria característica nova.",
+      "ideia": "O ambiente mudou de novo, e com ele mudou quem se esconde melhor. No tronco claro, a mariposa clara escapa mais dos pássaros e volta a ser a mais comum.",
+      "pecas": [
+        {
+          "termo": "Camuflagem",
+          "significado": "Ter a cor parecida com o lugar onde se vive. O bicho camuflado é visto menos pelo predador."
+        },
+        {
+          "termo": "Proporção na população",
+          "significado": "Quantas de cada tipo existem no grupo. A seleção natural muda a proporção, não a cor de cada bicho."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Os troncos voltaram a ser claros depois do fim da fumaça. A questão quer o que acontece com as mariposas claras e escuras.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "selecao-natural",
+            "titulo": "Troncos limpos de novo",
+            "rotulos": ["tronco claro de novo", "mariposa clara", "mariposa escura", "pássaros caçam"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "No tronco claro, a mariposa escura fica à vista e o pássaro a pega mais. A clara se confunde com o tronco e escapa. As claras deixam mais filhotes claros, e a proporção vira de novo."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Pergunte: neste ambiente, quem o predador vê menos? Esse fica mais comum."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A seleção natural não tem direção fixa: ela segue o ambiente de agora. As claras nunca sumiram de vez, só ficaram raras. Quando o tronco clareou, elas voltaram a ter vantagem."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, as claras voltam a ser comuns. A erra porque nenhuma mariposa muda de cor ao pousar. B esquece que a seleção continua. D não tem motivo. E acha que o ambiente cria cor nova, mas ele só escolhe entre as que já existem."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Coelhos brancos e marrons vivem na neve, caçados por raposas. Qual fica mais comum?",
+        "opcoes": ["Brancos", "Marrons", "Os dois igual", "Nenhum"],
+        "certa": "Brancos",
+        "resposta": "Na neve, o branco é visto menos e escapa mais da raposa."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-mic-01",
+    "materia": "Biologia",
+    "tema": "Microbiologia e Doenças",
+    "enunciado": "Uma cidade teve muitos casos de dengue no verão. A dengue é causada por um vírus, e o mosquito Aedes aegypti, que põe ovos em água parada, leva esse vírus de uma pessoa a outra. Qual medida mais ajuda a diminuir os casos na cidade?",
+    "A": "Dar antibiótico para quem está com dengue.",
+    "B": "Acabar com a água parada em vasos, pneus e caixas-d'água abertas.",
+    "C": "Ferver a água de beber.",
+    "D": "Matar os ratos da cidade.",
+    "E": "Evitar abraçar quem está com dengue.",
+    "resposta": "B",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "O caminho da dengue é o mosquito; o mosquito nasce na água parada. Sem criadouro, menos mosquito e menos dengue. B. Erros: A: antibiótico não age em vírus; C é para doença da água suja; D é para leptospirose; E: dengue não passa de pessoa a pessoa pelo abraço.",
+      "ideia": "O mosquito leva o vírus, não causa a dengue. Cortando o mosquito, corta o caminho: e ele nasce na água parada.",
+      "pecas": [
+        {
+          "termo": "Vetor",
+          "significado": "O animal que leva o causador de uma pessoa a outra. O mosquito Aedes é o vetor da dengue. O causador é o vírus."
+        },
+        {
+          "termo": "Criadouro",
+          "significado": "Lugar onde o mosquito põe os ovos e as larvas crescem: qualquer água parada, até a de tampinha."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Uma cidade tem muita dengue. A questão quer a medida que mais diminui os casos.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "virus-bacteria",
+            "titulo": "O caminho da dengue",
+            "rotulos": ["vírus da dengue", "mosquito Aedes", "dengue", "como prevenir?"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O mosquito pica alguém doente, pega o vírus e depois pica outra pessoa. Sem mosquito, o vírus não chega à pessoa seguinte. E o mosquito só nasce onde há água parada."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Prevenção segue o caminho da doença. Caminho é mosquito: acabe com os criadouros."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada fêmea põe centenas de ovos na água parada. Tirando a água, os ovos não viram mosquito. Menos mosquito, menos picadas que levam o vírus."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, acabar com a água parada. A erra: antibiótico não age em vírus. C serve para doenças da água suja, como a cólera. D serve para a leptospirose. E erra porque a dengue não passa pelo abraço, só pelo mosquito."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Na dengue, quem é o causador da doença?",
+        "opcoes": ["O mosquito", "Um vírus", "Uma bactéria", "A água parada"],
+        "certa": "Um vírus",
+        "resposta": "O vírus causa; o mosquito só leva."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-mic-02",
+    "materia": "Biologia",
+    "tema": "Microbiologia e Doenças",
+    "enunciado": "Num posto de saúde, o médico atendeu cinco pessoas, cada uma com uma doença diferente: gripe, dengue, covid, tuberculose e aids. Ele receitou antibiótico (remédio que mata bactérias) para curar a doença de apenas uma delas. Qual?",
+    "A": "A pessoa com gripe.",
+    "B": "A pessoa com dengue.",
+    "C": "A pessoa com covid.",
+    "D": "A pessoa com tuberculose.",
+    "E": "A pessoa com aids.",
+    "resposta": "D",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Antibiótico só age em bactéria. Tuberculose é bactéria; gripe, dengue, covid e aids são vírus. D. Erros: A, B, C e E são vírus, e o antibiótico não age neles.",
+      "ideia": "Antibiótico ataca partes da célula da bactéria. Vírus não tem célula, então só a tuberculose, que é bactéria, se cura com ele.",
+      "pecas": [
+        {
+          "termo": "Bactéria",
+          "significado": "Ser de uma célula só, sem núcleo. Causa tuberculose, cólera e leptospirose. Antibiótico funciona."
+        },
+        {
+          "termo": "Vírus",
+          "significado": "Não tem célula e só se multiplica dentro de uma. Causa gripe, dengue, covid e aids. Antibiótico não funciona."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Cinco doentes: gripe, dengue, covid, tuberculose e aids. A questão quer qual se cura com antibiótico.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "virus-bacteria",
+            "titulo": "Vírus ou bactéria?",
+            "rotulos": ["vírus ou bactéria?", "", "5 doenças", "antibiótico em quem?"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Separe cada doença pelo causador. Gripe, dengue, covid e aids são causadas por vírus. Tuberculose é causada por uma bactéria."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: vírus não liga para antibiótico. Procure a única doença de bactéria da lista."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O antibiótico trava peças que só a bactéria tem, como a parede da célula ou o ribossomo dela. O vírus não tem essas peças: usa as da nossa célula. Por isso o antibiótico não tem onde agir no vírus."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, tuberculose, que é bactéria. A, B, C e E são doenças de vírus: gripe, dengue, covid e aids. Tomar antibiótico nelas não cura e ainda ajuda a criar bactérias resistentes."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "A malária é causada por qual tipo de ser?",
+        "opcoes": ["Vírus", "Bactéria", "Protozoário", "Verme"],
+        "certa": "Protozoário",
+        "resposta": "A malária é causada por um protozoário e levada pelo mosquito."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-bio-mic-03",
+    "materia": "Biologia",
+    "tema": "Microbiologia e Doenças",
+    "enunciado": "A doença de Chagas pode atacar o coração. Ela é transmitida pelo barbeiro, um inseto que se esconde em frestas de casas de pau a pique e pica as pessoas à noite. Junto com as fezes do inseto, entra no corpo um protozoário (ser de uma célula com núcleo) chamado Trypanosoma cruzi. Nessa doença, o barbeiro e o protozoário são, nessa ordem,",
+    "A": "o causador e o vetor.",
+    "B": "o causador e o hospedeiro.",
+    "C": "o hospedeiro e o vetor.",
+    "D": "dois causadores.",
+    "E": "o vetor e o causador.",
+    "resposta": "E",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Quem leva é o vetor (barbeiro); quem faz a doença é o causador (o protozoário). Ordem pedida: barbeiro, protozoário = vetor e causador. E. Erros: A inverte; B e C trocam o papel de cada um (o barbeiro leva; o protozoário causa); D junta os dois.",
+      "ideia": "O barbeiro leva, o protozoário causa. É igual ao mosquito da dengue: o inseto é o vetor, não o causador.",
+      "pecas": [
+        {
+          "termo": "Causador",
+          "significado": "O ser que faz a doença dentro do corpo. Na doença de Chagas, é o protozoário Trypanosoma cruzi."
+        },
+        {
+          "termo": "Hospedeiro",
+          "significado": "O ser onde o causador vive e se multiplica. Aqui, o que importa é a pessoa doente (o inseto também abriga o parasita, mas o papel dele na pergunta é levar)."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Na doença de Chagas aparecem o barbeiro e um protozoário. A questão quer o papel de cada um, nessa ordem.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "virus-bacteria",
+            "titulo": "Doença de Chagas",
+            "rotulos": ["Trypanosoma cruzi", "barbeiro", "doença de Chagas", "casa sem frestas"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O barbeiro pica a pessoa e solta fezes perto da picada. O protozoário está nas fezes e entra no corpo. Dentro do corpo, é o protozoário que ataca o coração."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: o inseto leva, não causa. Inseto é vetor; o micróbio é o causador."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Sem o protozoário, a picada do barbeiro não dá a doença de Chagas. Então quem causa é o protozoário. O barbeiro só é o transporte. Por isso a prevenção é fechar as frestas da casa, onde ele se esconde."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, vetor e causador. A inverte a ordem. B e C trocam o papel de cada um: o barbeiro leva e o protozoário causa. D erra porque o barbeiro sozinho não causa a doença."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Na malária, o mosquito Anopheles é o quê?",
+        "opcoes": ["O causador", "O vetor", "A vítima", "O remédio"],
+        "certa": "O vetor",
+        "resposta": "O mosquito leva o protozoário da malária: é o vetor."
+      }
+    }
+  }
+]

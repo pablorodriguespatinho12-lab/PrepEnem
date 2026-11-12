@@ -1,0 +1,1418 @@
+[
+  {
+    "id": "d2-reforco-qui-org-01",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "O vinagre de cozinha tem gosto azedo por causa do ácido acético, de fórmula CH₃–COOH. Na química orgânica, as moléculas são separadas em funções (famílias que têm o mesmo pedaço, ou grupo, preso na cadeia de carbonos). A que função orgânica pertence o ácido acético?",
+    "A": "Álcool",
+    "B": "Ácido carboxílico",
+    "C": "Éster",
+    "D": "Aldeído",
+    "E": "Fenol",
+    "resposta": "B",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "O pedaço é COOH: um carbono com =O e com OH no mesmo carbono = ácido carboxílico. B. Erros: A vê só o OH e esquece o =O no mesmo carbono; C confunde COOH com COO sem H; D vê só o C=O; E pede OH preso num anel, e aqui não há anel.",
+      "ideia": "Procure o pedaço maior primeiro: COOH na ponta é ácido carboxílico. O OH ali faz parte do COOH, então não é álcool.",
+      "pecas": [
+        {
+          "termo": "Função orgânica",
+          "significado": "Família de moléculas de carbono que têm o mesmo pedaço (grupo) e por isso se comportam parecido."
+        },
+        {
+          "termo": "COOH (carboxila)",
+          "significado": "Um carbono com um oxigênio por ligação dupla (=O) e um OH, tudo no mesmo carbono. É a marca do ácido carboxílico."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O vinagre tem ácido acético, CH₃–COOH. A questão quer saber de qual família (função) é essa molécula, olhando o pedaço da ponta.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "Ácido acético",
+            "rotulos": ["CH₃–COOH", "pedaço COOH", "qual a função?", "vinagre"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A molécula tem duas partes: CH₃ (só carbono e hidrogênio) e COOH. O CH₃ não decide nada. Quem dá o nome da família é o pedaço COOH: um carbono com =O e OH juntos."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Leia do pedaço maior para o menor: COOH = ácido; COO sem H = éster; OH num carbono comum = álcool; OH no anel = fenol. Achou COOH, parou: é ácido carboxílico."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O H do COOH se solta na água, e soltar H na água é o que faz algo ser ácido. Por isso o vinagre é azedo e tem pH abaixo de 7."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, ácido carboxílico. A (álcool) olha só o OH e esquece o =O no mesmo carbono. C (éster) seria COO sem o H. D (aldeído) olha só o C=O. E (fenol) pede OH preso num anel, e não há anel."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "O ácido fórmico, da picada de formiga, é HCOOH. Qual é a função dele?",
+        "opcoes": ["Ácido carboxílico", "Álcool", "Éster", "Fenol"],
+        "certa": "Ácido carboxílico",
+        "resposta": "Tem COOH: ácido carboxílico."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-org-02",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "O timol, tirado da planta tomilho, é usado em enxaguantes bucais para matar germes. Na molécula dele, um grupo OH (oxigênio ligado a hidrogênio) está preso direto num anel aromático (o anel de seis carbonos do benzeno, com ligações simples e duplas alternadas). Por causa desse OH, a que função orgânica o timol pertence?",
+    "A": "Álcool",
+    "B": "Ácido carboxílico",
+    "C": "Éter",
+    "D": "Fenol",
+    "E": "Aldeído",
+    "resposta": "D",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "OH preso direto no anel aromático = fenol. D. Erros: A é OH num carbono comum, fora do anel (a troca mais comum); B pede COOH; C é um O entre dois carbonos, sem H; E pede C=O com H na ponta.",
+      "ideia": "O mesmo OH muda de família conforme o lugar: num carbono comum é álcool, preso no anel aromático é fenol. No timol ele está no anel.",
+      "pecas": [
+        {
+          "termo": "Anel aromático",
+          "significado": "Anel de seis carbonos com ligações simples e duplas alternadas, como no benzeno. Costuma ser desenhado como um hexágono."
+        },
+        {
+          "termo": "Fenol",
+          "significado": "Molécula com OH preso direto num carbono do anel aromático. Não é álcool, mesmo tendo OH."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O timol tem um OH grudado no anel aromático. A questão quer a família (função) dele por causa desse OH.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "Timol",
+            "rotulos": ["timol (tomilho)", "OH no anel", "qual a função?", "enxaguante bucal"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Álcool e fenol têm o mesmo OH. O que separa os dois é onde o OH está preso: num carbono de cadeia comum, ou num carbono do anel aromático."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Achou OH? Olhe o carbono em que ele está. Carbono do anel aromático: fenol. Carbono comum: álcool. No timol, é o anel."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Preso no anel, o OH age diferente: o fenol é um pouco ácido, e o álcool quase não é. Por isso o fenol tem família própria."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, fenol. A (álcool) seria OH num carbono comum, fora do anel. B (ácido carboxílico) pede COOH. C (éter) é um O entre dois carbonos, sem H. E (aldeído) pede C=O com H na ponta."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "O etanol do posto é CH₃–CH₂–OH, sem anel. Qual é a função dele?",
+        "opcoes": ["Álcool", "Fenol", "Éster", "Amina"],
+        "certa": "Álcool",
+        "resposta": "OH num carbono comum, sem anel: álcool."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-org-03",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "O paracetamol, remédio para dor e febre, tem na molécula este pedaço: um nitrogênio (N) ligado direto a um carbono que tem um oxigênio por ligação dupla, escrito –NH–C(=O)–. A que função orgânica pertence esse pedaço?",
+    "A": "Amida",
+    "B": "Amina",
+    "C": "Ácido carboxílico",
+    "D": "Éster",
+    "E": "Aldeído",
+    "resposta": "A",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "N colado no carbono do C=O = amida. A. Erros: B (amina) é N ligado só a C ou H, sem C=O ao lado, a troca mais comum; C pede COOH; D pede COO entre carbonos; E (aldeído) pede C=O com H na ponta, sem N.",
+      "ideia": "Amina e amida têm nitrogênio. Se o N está colado num carbono com =O, é amida; se não, é amina.",
+      "pecas": [
+        {
+          "termo": "Amida",
+          "significado": "Função com nitrogênio (N) preso direto num carbono que tem =O. Pedaço: –C(=O)–N."
+        },
+        {
+          "termo": "Amina",
+          "significado": "Função com nitrogênio ligado só a carbono ou hidrogênio, sem C=O ao lado. Exemplo: CH₃–NH₂."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O paracetamol tem um N grudado num carbono com =O. A questão quer o nome da família desse pedaço.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "Paracetamol",
+            "rotulos": ["paracetamol", "–NH–C(=O)–", "qual a função?", "remédio de febre"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Olhe os vizinhos do N. De um lado, um H. Do outro, um carbono que tem um oxigênio por ligação dupla (C=O). O N está colado no C=O."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Achou N? Pergunte: o carbono do lado tem =O? Sim: amida. Não: amina. Aqui tem, então é amida."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O C=O ao lado muda o jeito do N: a amina é básica (lembra a amônia), a amida quase não é. Por isso são famílias diferentes, mesmo com o mesmo N."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, amida. B (amina) seria o N sem C=O ao lado, e é a troca mais comum. C (ácido) pede COOH. D (éster) pede COO entre dois carbonos. E (aldeído) pede C=O com H na ponta, sem N."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "A metilamina é CH₃–NH₂: o N está preso só a C e H. Qual é a função?",
+        "opcoes": ["Amina", "Amida", "Álcool", "Fenol"],
+        "certa": "Amina",
+        "resposta": "Sem C=O ao lado do N: amina."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-org-04",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "O cheiro de banana de muitas balas vem do acetato de isoamila. A fábrica faz essa substância juntando ácido acético (o do vinagre, com o pedaço COOH) e um álcool (com OH). Os dois se unem, sai água, e o produto fica com o pedaço COO preso a carbono dos dois lados, sem H. A que função orgânica pertence o produto que dá o cheiro?",
+    "A": "Ácido carboxílico",
+    "B": "Álcool",
+    "C": "Aldeído",
+    "D": "Amida",
+    "E": "Éster",
+    "resposta": "E",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Ácido + álcool → éster + água; COO entre dois carbonos, sem H = éster. E. Erros: A vê COO e acha que ainda é COOH, mas o H saiu; B olha para o álcool que entrou, não para o produto; C pede C=O com H na ponta; D pede N, e não há N.",
+      "ideia": "Ácido mais álcool dá éster mais água. O COO sem H no meio de dois carbonos é a marca do éster, a família dos cheiros de fruta.",
+      "pecas": [
+        {
+          "termo": "Éster",
+          "significado": "Função com o pedaço COO preso a carbono dos dois lados, sem H. Muitos têm cheiro de fruta."
+        },
+        {
+          "termo": "Esterificação",
+          "significado": "Reação de um ácido carboxílico com um álcool: o ácido perde o OH, o álcool perde o H, e os dois juntos saem como água."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Ácido acético mais um álcool viram a substância com cheiro de banana. A questão quer a família do produto.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "Cheiro de banana",
+            "rotulos": ["acetato de isoamila", "pedaço COO", "ácido + álcool", "cheiro de banana"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O ácido tem COOH e o álcool tem OH. Na reação, o ácido solta o OH e o álcool solta o H: juntos viram água (H₂O). O resto se une pelo O, e fica COO com carbono dos dois lados."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ácido + álcool → éster + água. Ou leia só o produto: COO sem H no meio de dois carbonos = éster."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O H que deixava a molécula ácida foi embora junto com a água. Sem ele, não é mais ácido: é outra família, a dos ésteres, que dão cheiro a frutas e balas."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, éster. A (ácido) esquece que o H do COOH saiu na água. B (álcool) olha para o que entrou, não para o produto. C (aldeído) pede C=O com H na ponta. D (amida) pede nitrogênio, e não há N."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual pedaço marca um éster?",
+        "opcoes": ["COO sem H, entre carbonos", "COOH na ponta", "OH preso no anel", "N colado no C=O"],
+        "certa": "COO sem H, entre carbonos",
+        "resposta": "COOH é ácido, OH no anel é fenol, N no C=O é amida."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-amb-01",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Perto de uma usina que queima carvão rico em enxofre, os moradores notaram estátuas de mármore se desfazendo, folhas manchadas e um lago cada vez mais ácido. A causa é a chuva ácida (chuva mais ácida que o normal, que corrói pedras e metais). Qual gás solto pela chaminé é o principal causador desse problema?",
+    "A": "Gás carbônico (CO₂)",
+    "B": "Metano (CH₄)",
+    "C": "Dióxido de enxofre (SO₂)",
+    "D": "Oxigênio (O₂)",
+    "E": "Vapor de água (H₂O)",
+    "resposta": "C",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Carvão com enxofre solta SO₂, que vira ácido sulfúrico na água da chuva. C. Erros: A e B são do efeito estufa (o CO₂ deixa a chuva só um pouco ácida, não é o principal); D não sai da queima, é gasto nela; E não acidifica.",
+      "ideia": "Enxofre azeda: o SO₂ da queima de carvão vira ácido na água da chuva. CO₂ e metano esquentam o planeta, mas não são a causa principal da chuva ácida.",
+      "pecas": [
+        {
+          "termo": "Chuva ácida",
+          "significado": "Chuva mais ácida que o normal, por gases de enxofre e de nitrogênio que viram ácido na água. Corrói mármore e metal e mata a vida de lagos."
+        },
+        {
+          "termo": "SO₂ (dióxido de enxofre)",
+          "significado": "Gás que sai da queima de carvão e de diesel com enxofre. No ar, com água, vira ácido sulfúrico."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Uma usina queima carvão com enxofre e, por perto, a chuva desmancha mármore e azeda o lago. A questão quer o gás culpado.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "Usina a carvão",
+            "rotulos": ["gases da queima", "chuva ácida", "carvão com enxofre", "mármore desfeito"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O enxofre do carvão queima junto e sai como SO₂. No ar, esse gás encontra água e vira ácido sulfúrico. A chuva cai ácida e ataca o mármore e o lago."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Use a palavra-chave: CO₂ esquenta, enxofre azeda. A questão falou em enxofre e chuva ácida? O gás é o SO₂."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O mármore é feito de carbonato de cálcio, que reage com ácido e se desfaz. O ácido forte que faz isso vem do enxofre, não do gás carbônico."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, dióxido de enxofre. A (gás carbônico) e B (metano) aumentam o efeito estufa; o CO₂ deixa a chuva só um pouco ácida, mas não é o principal. D (oxigênio) é gasto na queima, não sai dela. E (vapor de água) não acidifica nada."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual destes gases também causa chuva ácida?",
+        "opcoes": ["Óxidos de nitrogênio", "Metano", "Gás carbônico", "Gás hélio"],
+        "certa": "Óxidos de nitrogênio",
+        "resposta": "Enxofre e nitrogênio azedam a chuva; metano e CO₂ esquentam o planeta."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-amb-02",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Uma família vai viajar 300 km de carro. O carro anda 12 km com 1 litro de gasolina, e cada litro queimado solta cerca de 2,3 kg de gás carbônico (CO₂), o principal gás do efeito estufa. Quanto gás carbônico a viagem de ida solta, mais ou menos?",
+    "A": "57,5 kg",
+    "B": "690 kg",
+    "C": "27,6 kg",
+    "D": "25 kg",
+    "E": "130,4 kg",
+    "resposta": "A",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Litros: 300 ÷ 12 = 25 L. CO₂: 25 × 2,3 = 57,5 kg. A. Erros: B = 300 × 2,3 (usou km no lugar de litros); C = 12 × 2,3; D = 25 (parou nos litros); E = 300 ÷ 2,3.",
+      "ideia": "Primeiro ache os litros gastos, depois multiplique pelo CO₂ de cada litro. São 25 litros e 57,5 kg de gás carbônico.",
+      "pecas": [
+        {
+          "termo": "Efeito estufa",
+          "significado": "Gases como o CO₂ e o metano seguram o calor perto da Terra. Mais desses gases no ar, mais o planeta esquenta."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Viagem de 300 km, o carro faz 12 km por litro e cada litro solta 2,3 kg de CO₂. A questão quer o total de CO₂.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "Viagem de carro",
+            "rotulos": ["CO₂", "efeito estufa", "gasolina", "300 km, 12 km/L"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O CO₂ vem de cada litro queimado, não de cada quilômetro. Então a conta tem dois andares: quantos litros a viagem gasta, e quanto CO₂ esses litros soltam."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Litros gastos: 300 ÷ 12 = 25 litros. CO₂: 25 × 2,3 = 57,5 kg.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "CO₂ da viagem",
+            "dados": [
+              "d = 300\\,\\text{km}",
+              "12\\,\\text{km por litro}",
+              "2{,}3\\,\\text{kg de CO}_2\\text{ por litro}"
+            ],
+            "formula": "\\text{CO}_2 = \\dfrac{d}{12} \\times 2{,}3",
+            "legenda": [
+              "d: a distância da viagem",
+              "12: quantos km o carro anda com 1 litro"
+            ],
+            "contas": [
+              "\\dfrac{300}{12} = 25\\,\\text{L}",
+              "25 \\times 2{,}3"
+            ],
+            "resultado": "\\text{CO}_2 = 57{,}5\\,\\text{kg}",
+            "nota": "Quase 60 kg de gás só na ida."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Confira de trás para a frente: 57,5 ÷ 2,3 = 25 litros, e 25 × 12 = 300 km. Bate com a viagem."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 57,5 kg. B (690 kg) multiplica os quilômetros por 2,3, como se cada km gastasse um litro. C (27,6 kg) usa o 12 no lugar dos litros. D (25 kg) parou nos litros. E (130,4 kg) dividiu 300 por 2,3."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um carro gasta 10 litros. Cada litro solta 2,3 kg de CO₂. Quanto sai?",
+        "opcoes": ["23 kg", "12,3 kg", "4,3 kg", "230 kg"],
+        "certa": "23 kg",
+        "resposta": "10 × 2,3 = 23 kg."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-amb-03",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Carros que usam etanol de cana-de-açúcar também soltam gás carbônico pelo escapamento. Mesmo assim, o etanol é chamado de combustível renovável e pesa menos no efeito estufa que a gasolina. Qual é o motivo?",
+    "A": "A queima do etanol não solta gás carbônico.",
+    "B": "O etanol vem do petróleo, que se forma de novo em poucos anos.",
+    "C": "A queima do etanol solta metano no lugar do gás carbônico.",
+    "D": "O gás carbônico do etanol vai para a camada de ozônio e some.",
+    "E": "A cana, ao crescer, tira do ar o gás carbônico que a queima do etanol devolve, e é plantada de novo a cada safra.",
+    "resposta": "E",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Renovável = a fonte volta em pouco tempo; a cana nova absorve o CO₂ na fotossíntese. E. Erros: A contradiz o próprio enunciado; B troca etanol por gasolina (o petróleo leva milhões de anos); C inventa metano; D confunde efeito estufa com camada de ozônio.",
+      "ideia": "O CO₂ do etanol faz uma volta: sai do carro e entra na cana nova pela fotossíntese. O da gasolina estava guardado no subsolo e só sai.",
+      "pecas": [
+        {
+          "termo": "Renovável",
+          "significado": "Fonte que se refaz em pouco tempo, como a cana, que volta a cada safra. O petróleo leva milhões de anos para se formar: não é renovável."
+        },
+        {
+          "termo": "Fotossíntese",
+          "significado": "Processo em que a planta usa luz, água e gás carbônico do ar para fazer açúcar e soltar oxigênio."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O carro a etanol solta CO₂ como o de gasolina. A questão quer saber por que, mesmo assim, o etanol pesa menos no efeito estufa.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "Carro a etanol",
+            "rotulos": ["gás carbônico", "efeito estufa", "etanol de cana", "renovável?"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A cana cresce fazendo fotossíntese: puxa CO₂ do ar para virar açúcar. Esse açúcar vira etanol. Quando o etanol queima, o CO₂ volta para o ar, e a próxima safra puxa de novo."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Pergunte de onde veio o carbono. Do ar, há pouco tempo (cana): volta para o ar, faz uma volta. Do subsolo, há milhões de anos (petróleo): é carbono novo somado ao ar."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O efeito estufa piora quando aumenta o total de CO₂ no ar. O etanol devolve o que a cana tirou, então soma pouco. A gasolina tira carbono que estava preso no subsolo e soma tudo."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E. A está errada: o próprio enunciado diz que sai CO₂. B troca etanol por gasolina, e o petróleo leva milhões de anos. C inventa metano. D confunde efeito estufa com a camada de ozônio, que é outro problema."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual destas fontes de energia é renovável?",
+        "opcoes": ["Lenha de reflorestamento", "Carvão mineral", "Gasolina", "Gás natural"],
+        "certa": "Lenha de reflorestamento",
+        "resposta": "A árvore plantada cresce de novo em poucos anos; carvão, petróleo e gás levam milhões."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-amb-04",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Num lixão, restos de comida ficam enterrados e apodrecem sem ar. Nessa decomposição, bactérias soltam muito metano (CH₄), um gás que, quilo por quilo, segura muito mais calor que o gás carbônico. Por isso, aterros modernos captam esse gás e o queimam para gerar energia. Solto no ar, o metano contribui principalmente para:",
+    "A": "a chuva ácida.",
+    "B": "o aumento do efeito estufa.",
+    "C": "o buraco na camada de ozônio.",
+    "D": "a ferrugem de carros e pontes.",
+    "E": "a falta de oxigênio nos rios.",
+    "resposta": "B",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Metano é gás de efeito estufa (palavra-chave: CO₂ e metano = estufa). B. Erros: A é de gases de enxofre e nitrogênio; C é do CFC (gás de spray e geladeira antiga); D é corrosão do ferro com água e oxigênio; E vem de esgoto e adubo na água.",
+      "ideia": "CO₂ e metano esquentam o planeta; enxofre e nitrogênio azedam a chuva. O metano fica do lado do efeito estufa.",
+      "pecas": [
+        {
+          "termo": "Metano (CH₄)",
+          "significado": "Gás do lixo que apodrece sem ar, do arroto do gado e do gás natural. Cada quilo segura muito mais calor que um quilo de CO₂."
+        },
+        {
+          "termo": "Camada de ozônio",
+          "significado": "Faixa alta do ar que barra parte da luz ultravioleta do Sol. Quem mais a estragou foi o CFC, gás de spray e geladeira antiga."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O lixo que apodrece sem ar solta metano. A questão quer o principal problema que esse gás causa no ar.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "Gás do lixão",
+            "rotulos": ["metano (CH₄)", "efeito no ar?", "lixo apodrecendo", "bactérias sem ar"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "As bactérias comem o lixo sem oxigênio e soltam metano. No ar, ele funciona como um cobertor: deixa a luz do Sol entrar e segura o calor que a Terra devolveria."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Separe os gases em dois times. Esquentam: CO₂ e metano. Azedam a chuva: enxofre e nitrogênio. O metano está no primeiro time: efeito estufa."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Queimado no aterro, o metano vira CO₂ e água. O CO₂ também esquenta, mas bem menos que o metano que sairia. Por isso captar o gás ajuda o clima, e ainda gera energia."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, efeito estufa. A (chuva ácida) vem de gases de enxofre e nitrogênio. C (camada de ozônio) foi estragada pelo CFC, gás de spray e geladeira antiga. D (ferrugem) é o ferro com água e oxigênio. E (falta de oxigênio nos rios) vem de esgoto e adubo na água."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "O arroto do gado solta metano. Isso piora o quê?",
+        "opcoes": ["Efeito estufa", "Chuva ácida", "Camada de ozônio", "Ferrugem"],
+        "certa": "Efeito estufa",
+        "resposta": "Metano é do time que esquenta: efeito estufa."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-ph-01",
+    "materia": "Química",
+    "tema": "Soluções, pH e Titulação",
+    "enunciado": "Um copo tem 250 mL de suco de caixinha, e o rótulo diz que nesse copo há 25 g de açúcar dissolvido. A concentração comum diz quantos gramas de soluto (o que foi dissolvido) há em cada litro de solução. Qual é a concentração de açúcar nesse suco, em gramas por litro (g/L)?",
+    "A": "0,1 g/L",
+    "B": "6,25 g/L",
+    "C": "10 g/L",
+    "D": "100 g/L",
+    "E": "6.250 g/L",
+    "resposta": "D",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "250 mL = 0,25 L. C = 25 ÷ 0,25 = 100 g/L. D. Erros: A = 25 ÷ 250 (não passou mL para L); B = 25 × 0,25; C = 25 ÷ 2,5 (vírgula no lugar errado); E = 25 × 250.",
+      "ideia": "Passe 250 mL para litro (0,25 L) e divida a massa pelo volume. 25 ÷ 0,25 = 100 g/L.",
+      "pecas": [
+        {
+          "termo": "Concentração comum (g/L)",
+          "significado": "Quantos gramas do que foi dissolvido há em cada litro da mistura. Conta: massa ÷ volume em litros."
+        },
+        {
+          "termo": "mL para L",
+          "significado": "1 L = 1000 mL. Para passar de mL para L, divida por 1000: 250 mL = 0,25 L."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Um copo de 250 mL de suco tem 25 g de açúcar. A questão quer quanto açúcar haveria em 1 litro desse suco.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "bequer-ph",
+            "titulo": "Suco no copo",
+            "rotulos": ["suco de caixinha", "? g/L", "250 mL", "25 g de açúcar"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O copo é só um quarto de litro. Se um quarto de litro tem 25 g, um litro inteiro (quatro copos) tem quatro vezes mais."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Passe o volume para litro: 250 mL = 0,25 L. Divida: 25 ÷ 0,25 = 100 g/L.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Concentração",
+            "dados": [
+              "m = 25\\,\\text{g}",
+              "V = 250\\,\\text{mL} = 0{,}25\\,\\text{L}"
+            ],
+            "formula": "C = \\dfrac{m}{V}",
+            "legenda": [
+              "m: massa de açúcar",
+              "V: volume do suco, em litros"
+            ],
+            "contas": [
+              "C = \\dfrac{25}{0{,}25}"
+            ],
+            "resultado": "C = 100\\,\\text{g/L}",
+            "nota": "Quatro copos fazem 1 litro."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Confira pelos copos: 4 copos de 250 mL dão 1 litro, e 4 × 25 g = 100 g. Mesmo número."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 100 g/L. A (0,1 g/L) dividiu por 250 sem passar para litro. B (6,25 g/L) multiplicou em vez de dividir. C (10 g/L) errou a vírgula: dividiu por 2,5. E (6.250 g/L) multiplicou 25 por 250."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Há 10 g de sal em 500 mL de água. Qual é a concentração?",
+        "opcoes": ["20 g/L", "5 g/L", "0,02 g/L", "50 g/L"],
+        "certa": "20 g/L",
+        "resposta": "500 mL = 0,5 L; 10 ÷ 0,5 = 20 g/L."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-ph-02",
+    "materia": "Química",
+    "tema": "Soluções, pH e Titulação",
+    "enunciado": "Um professor mediu o pH (escala de 0 a 14 que mostra se algo é ácido ou básico) de cinco líquidos de casa: suco de limão, pH 2; refrigerante de cola, pH 3; café, pH 5; água pura, pH 7; água com sabão, pH 10. Quantos desses líquidos são ácidos?",
+    "A": "1",
+    "B": "3",
+    "C": "2",
+    "D": "4",
+    "E": "5",
+    "resposta": "B",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Ácido é pH abaixo de 7: limão (2), refrigerante (3) e café (5) = 3. B. Erros: D conta a água pura (pH 7), que é neutra; C só conta os muito azedos (2 e 3); A só o menor; E conta todos.",
+      "ideia": "Sete é o meio: abaixo de 7 é ácido, acima é básico, igual a 7 é neutro. Limão, refrigerante e café ficam abaixo: três ácidos.",
+      "pecas": [
+        {
+          "termo": "pH",
+          "significado": "Número de 0 a 14. Abaixo de 7: ácido. Igual a 7: neutro. Acima de 7: básico. Quanto menor, mais ácido."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Cinco líquidos com o pH medido: 2, 3, 5, 7 e 10. A questão quer quantos são ácidos.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "bequer-ph",
+            "titulo": "Cinco líquidos",
+            "rotulos": ["limão, cola, café...", "pH 2, 3, 5, 7 e 10", "", "quantos são ácidos?"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Cada pH é comparado com 7, o meio da régua. O café, com pH 5, não parece azedo como o limão, mas também está abaixo de 7."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Compare cada número com 7. Abaixo: 2, 3 e 5. São três ácidos. O 7 é neutro e o 10 é básico.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Abaixo de 7",
+            "dados": [
+              "\\text{limão: } 2",
+              "\\text{cola: } 3",
+              "\\text{café: } 5",
+              "\\text{água pura: } 7",
+              "\\text{sabão: } 10"
+            ],
+            "formula": "\\text{pH} < 7 \\Rightarrow \\text{ácido}",
+            "contas": [
+              "2 < 7,\\quad 3 < 7,\\quad 5 < 7",
+              "7 = 7 \\;(\\text{neutro}),\\quad 10 > 7 \\;(\\text{básico})"
+            ],
+            "resultado": "3\\ \\text{ácidos}",
+            "nota": "A água pura é neutra."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A régua do pH tem o 7 no meio. Ácido solta H⁺ na água e puxa o pH para baixo; base puxa para cima. A água pura fica bem no meio."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 3. D (4) conta a água pura, mas pH 7 é neutro. C (2) conta só os muito azedos e esquece o café. A (1) fica só com o limão. E (5) conta até o sabão, que é básico."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "O leite de magnésia tem pH 10. Ele é:",
+        "opcoes": ["Básico", "Ácido", "Neutro", "Ácido fraco"],
+        "certa": "Básico",
+        "resposta": "10 é maior que 7: básico."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-ph-03",
+    "materia": "Química",
+    "tema": "Soluções, pH e Titulação",
+    "enunciado": "Para conferir a acidez de um vinagre, um técnico pega 10 mL dele e vai pingando soda cáustica (NaOH) de concentração 0,5 mol/L até neutralizar todo o ácido (ácido + base = sal + água). Ele gasta 20 mL de soda. O ácido do vinagre reage com a soda na proporção de 1 para 1. Qual é a concentração de ácido no vinagre, em mol/L (mols, ou pacotes de partículas, em cada litro)?",
+    "A": "0,25 mol/L",
+    "B": "0,5 mol/L",
+    "C": "1,0 mol/L",
+    "D": "10 mol/L",
+    "E": "0,01 mol/L",
+    "resposta": "C",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Mols de soda: 0,5 × 0,020 = 0,01 mol = mols de ácido (1 para 1). C = 0,01 ÷ 0,010 = 1,0 mol/L. C. Erros: A = 0,5 × 10 ÷ 20 (volumes trocados); B copiou a concentração da soda; D dividiu por 0,001 L; E parou nos mols.",
+      "ideia": "No ponto neutro, os mols de ácido igualam os mols de base. Foi preciso o dobro de volume de soda, então o vinagre é duas vezes mais concentrado: 1,0 mol/L.",
+      "pecas": [
+        {
+          "termo": "Titulação",
+          "significado": "Pingar uma solução de concentração conhecida até neutralizar a outra, para descobrir quanto a outra tem."
+        },
+        {
+          "termo": "mol/L",
+          "significado": "Quantos mols (pacotes com o mesmo número de partículas) há em cada litro da solução."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "10 mL de vinagre foram neutralizados por 20 mL de soda a 0,5 mol/L. A questão quer a concentração do ácido no vinagre.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "bequer-ph",
+            "titulo": "Titulação do vinagre",
+            "rotulos": ["vinagre", "? mol/L", "10 mL", "soda: 20 mL, 0,5 mol/L"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Cada partícula de ácido gasta uma de soda (1 para 1). Quando tudo neutraliza, a quantidade de soda que entrou é igual à de ácido que havia no vinagre."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Mols de ácido = mols de base: concentração do ácido × 10 = 0,5 × 20 = 10. Então a concentração do ácido é 10 ÷ 10 = 1,0 mol/L.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Ácido = base",
+            "dados": [
+              "C_b = 0{,}5\\,\\text{mol/L}",
+              "V_b = 20\\,\\text{mL}",
+              "V_a = 10\\,\\text{mL}"
+            ],
+            "formula": "C_a \\times V_a = C_b \\times V_b",
+            "legenda": [
+              "a: ácido (vinagre)",
+              "b: base (soda)"
+            ],
+            "contas": [
+              "C_a \\times 10 = 0{,}5 \\times 20",
+              "C_a = \\dfrac{10}{10}"
+            ],
+            "resultado": "C_a = 1{,}0\\,\\text{mol/L}",
+            "nota": "Pode deixar em mL dos dois lados."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Gastou o dobro de volume de soda para neutralizar o vinagre. Então, em cada mL, o vinagre tem o dobro de ácido do que a soda tem de base: 2 × 0,5 = 1,0."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 1,0 mol/L. A (0,25) trocou os volumes de lugar. B (0,5) copiou a concentração da soda. D (10) errou a passagem de mL para L. E (0,01) parou nos mols e não dividiu pelo volume."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "20 mL de ácido gastam 20 mL de base a 0,1 mol/L (1 para 1). Concentração do ácido?",
+        "opcoes": ["0,1 mol/L", "0,2 mol/L", "0,05 mol/L", "2 mol/L"],
+        "certa": "0,1 mol/L",
+        "resposta": "Volumes iguais: concentrações iguais, 0,1 mol/L."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-ph-04",
+    "materia": "Química",
+    "tema": "Soluções, pH e Titulação",
+    "enunciado": "Uma pessoa tem 0,5 L de suco concentrado com 120 g/L de açúcar (120 gramas em cada litro). Ela coloca água até a jarra completar 2 L de suco. Qual é a concentração de açúcar no suco pronto?",
+    "A": "30 g/L",
+    "B": "60 g/L",
+    "C": "240 g/L",
+    "D": "24 g/L",
+    "E": "120 g/L",
+    "resposta": "A",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Açúcar: 120 × 0,5 = 60 g, que não muda. Novo: 60 ÷ 2 = 30 g/L. A. Erros: B = 120 ÷ 2 (esqueceu que eram 0,5 L); C = 120 × 2; D = 60 ÷ 2,5 (somou 2 L de água aos 0,5 L, mas a jarra fica em 2 L); E acha que água não muda a concentração.",
+      "ideia": "Água nova não traz açúcar: os 60 g ficam e só se espalham em 2 L. 60 ÷ 2 = 30 g/L.",
+      "pecas": [
+        {
+          "termo": "Diluição",
+          "significado": "Pôr mais água (solvente) numa solução. A massa do que estava dissolvido não muda; o volume aumenta e a concentração cai."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "0,5 L de suco com 120 g/L vira 2 L com água. A questão quer a concentração depois.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "bequer-ph",
+            "titulo": "Suco diluído",
+            "rotulos": ["suco concentrado", "120 g/L", "0,5 L até 2 L", "só entra água"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Primeiro, quanto açúcar há: 0,5 L × 120 g/L = 60 g. A água entra, mas não traz açúcar. Os mesmos 60 g agora estão em 2 L."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Massa antes = massa depois: 120 × 0,5 = 60 g. Divida pelo volume novo: 60 ÷ 2 = 30 g/L.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Diluição",
+            "dados": [
+              "C_1 = 120\\,\\text{g/L}",
+              "V_1 = 0{,}5\\,\\text{L}",
+              "V_2 = 2\\,\\text{L}"
+            ],
+            "formula": "C_1 \\times V_1 = C_2 \\times V_2",
+            "legenda": [
+              "1: antes da água",
+              "2: depois da água"
+            ],
+            "contas": [
+              "120 \\times 0{,}5 = C_2 \\times 2",
+              "60 = C_2 \\times 2"
+            ],
+            "resultado": "C_2 = 30\\,\\text{g/L}",
+            "nota": "Volume 4 vezes maior, concentração 4 vezes menor."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O volume passou de 0,5 L para 2 L: ficou 4 vezes maior. O açúcar se espalhou 4 vezes mais: 120 ÷ 4 = 30 g/L. Mesmo resultado."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 30 g/L. B (60) divide 120 por 2 e esquece que eram só 0,5 L. C (240) multiplicou. D (24) somou 2 L de água aos 0,5 L, mas a jarra fechou em 2 L. E (120) acha que a água não muda a concentração."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "1 L de suco com 80 g/L vira 4 L com água. Nova concentração?",
+        "opcoes": ["20 g/L", "80 g/L", "320 g/L", "40 g/L"],
+        "certa": "20 g/L",
+        "resposta": "Os 80 g ficam em 4 L: 80 ÷ 4 = 20 g/L."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-ele-01",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Numa pilha feita com uma placa de zinco (Zn) e uma de cobre (Cu), cada uma na sua solução e ligadas por um fio, os elétrons saem do zinco e vão para o cobre. Depois de horas acendendo um LED, o que acontece com a placa de zinco?",
+    "A": "Fica mais pesada, porque recebe elétrons e reduz.",
+    "B": "Se desgasta, porque o zinco reduz (ganha elétrons).",
+    "C": "Não muda, porque só o fio trabalha na pilha.",
+    "D": "Fica igual, e quem se desgasta é a placa de cobre.",
+    "E": "Se desgasta, porque o zinco oxida (perde elétrons) e vira íon que se solta na solução.",
+    "resposta": "E",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Elétrons saem do zinco: ele perde elétrons, oxida, vira Zn²⁺ e se solta, e a placa afina. E. Erros: A troca quem recebe; B acerta o desgaste mas troca o nome (ganhar é reduzir); C ignora que a corrente nasce nas placas; D troca os metais (o cobre ganha massa).",
+      "ideia": "Perde oxida, ganha reduz. O zinco perde elétrons, vira íon e se solta na solução, então a placa dele afina.",
+      "pecas": [
+        {
+          "termo": "Oxidação",
+          "significado": "Perder elétrons. Na pilha, o metal que oxida vira íon (átomo com carga) e se solta: a placa se desgasta. Esse polo se chama ânodo."
+        },
+        {
+          "termo": "Redução",
+          "significado": "Ganhar elétrons. Na pilha, íons da solução ganham elétrons e grudam como metal na placa: ela engorda. Esse polo se chama cátodo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Pilha de zinco e cobre; os elétrons saem do zinco pelo fio. A questão quer o que acontece com a placa de zinco.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilha-eletrodos",
+            "titulo": "Pilha zinco-cobre",
+            "rotulos": ["zinco (Zn)", "cobre (Cu)", "elétrons", "LED aceso"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Cada átomo de zinco que solta dois elétrons vira íon Zn²⁺ e sai da placa para a solução. Os elétrons andam pelo fio, acendem o LED e chegam ao cobre, onde íons Cu²⁺ da solução viram cobre metálico."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "De onde os elétrons saem, alguém perdeu: ali é oxidação, e a placa afina. Para onde eles vão, alguém ganhou: ali é redução, e a placa engorda."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Uma placa de metal é feita de átomos. Se átomos viram íons e vão para a solução, sobra menos metal na placa. Por isso uma pilha velha tem o ânodo comido."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E. A troca o zinco pelo cobre: quem recebe elétrons e engorda é o cobre. B acerta o desgaste, mas ganhar elétrons é reduzir, e o zinco perde. C esquece que a corrente nasce nas placas. D diz que o cobre se desgasta, mas ele ganha massa."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Na pilha, o polo onde o metal perde elétrons chama-se:",
+        "opcoes": ["Ânodo", "Cátodo", "Fio", "Ponte salina"],
+        "certa": "Ânodo",
+        "resposta": "Perde elétrons, oxida: ânodo."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-ele-02",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Dentro de muitos aquecedores de água, há uma barra de magnésio (Mg) presa ao tanque de aço, que é feito quase só de ferro (Fe). Com os anos, a barra vai sendo comida e o tanque continua inteiro. Por que a barra de magnésio protege o ferro da ferrugem?",
+    "A": "O magnésio reduz (ganha elétrons) no lugar do ferro.",
+    "B": "O magnésio forma uma tinta que isola o ferro da água.",
+    "C": "O magnésio perde elétrons com mais facilidade que o ferro, então oxida no lugar dele.",
+    "D": "O magnésio faz o ferro perder elétrons mais rápido.",
+    "E": "O magnésio recebe elétrons com mais facilidade que o ferro (é mais nobre).",
+    "resposta": "C",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Mg perde elétrons mais fácil que Fe: oxida no lugar dele e manda elétrons para o ferro (metal de sacrifício). C. Erros: A troca oxidar por reduzir; B confunde com pintura; D é o contrário (o ferro fica protegido); E descreve um metal mais nobre, que não se sacrificaria.",
+      "ideia": "O magnésio se sacrifica pelo ferro: perde elétrons mais fácil, então oxida primeiro. O ferro fica recebendo elétrons e não enferruja.",
+      "pecas": [
+        {
+          "termo": "Metal de sacrifício",
+          "significado": "Metal que oxida mais fácil que o ferro e fica ligado a ele. É comido no lugar do ferro e precisa ser trocado de tempos em tempos."
+        },
+        {
+          "termo": "Ferrugem",
+          "significado": "Ferro oxidado: o ferro perde elétrons para o oxigênio, com ajuda da água."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Barra de magnésio presa ao tanque de ferro: a barra some e o tanque fica inteiro. A questão quer o motivo.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilha-eletrodos",
+            "titulo": "Barra de sacrifício",
+            "rotulos": ["magnésio (Mg)", "ferro (Fe)", "elétrons", "água do tanque"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Magnésio e ferro encostados na água formam uma pilha. Quem perde elétrons mais fácil vira o polo que oxida. O magnésio ganha essa disputa: ele se desfaz e manda elétrons para o ferro."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: o zinco se sacrifica pelo ferro. Com o magnésio é igual. O metal que oxida mais fácil é comido; o ferro, ligado a ele, fica protegido."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Enquanto o magnésio manda elétrons, o ferro não precisa perder os dele, e sem perder elétrons não há ferrugem. Quando a barra acaba, a proteção acaba: por isso ela é trocada."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C. A troca os nomes: quem se sacrifica perde elétrons, ou seja, oxida. B confunde com pintura, que é outro jeito de proteger. D diz o contrário do que acontece. E descreve um metal mais nobre, que não se sacrificaria."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual metal serve para proteger um cano de ferro enterrado?",
+        "opcoes": ["Zinco", "Cobre", "Ouro", "Prata"],
+        "certa": "Zinco",
+        "resposta": "O zinco oxida mais fácil que o ferro; cobre, ouro e prata, não."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-ele-03",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Uma pilha usa uma placa de cobre (Cu) e uma de prata (Ag). O potencial de redução mede a vontade de cada um de receber elétrons: prata, +0,80 V; cobre, +0,34 V. Quem tem o maior potencial recebe elétrons (reduz) e o outro perde (oxida). A reação é Cu + 2 Ag⁺ → Cu²⁺ + 2 Ag. Qual é a voltagem (ddp) dessa pilha?",
+    "A": "1,14 V",
+    "B": "0,46 V",
+    "C": "0,80 V",
+    "D": "0,34 V",
+    "E": "1,26 V",
+    "resposta": "B",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "ddp = maior − menor = 0,80 − 0,34 = 0,46 V. B. Erros: A somou (0,80 + 0,34); C e D copiaram um potencial só; E = 2 × 0,80 − 0,34 (multiplicou pelo 2 da reação, e potencial não se multiplica).",
+      "ideia": "A voltagem da pilha é o potencial maior menos o menor. 0,80 − 0,34 = 0,46 V, e o 2 da reação não entra na conta.",
+      "pecas": [
+        {
+          "termo": "Potencial de redução",
+          "significado": "Número em volts que mede a vontade de um metal (ou íon) de receber elétrons. Maior número, mais vontade: esse lado reduz."
+        },
+        {
+          "termo": "ddp",
+          "significado": "Diferença de potencial: a voltagem da pilha, o empurrão nos elétrons. Na pilha, é o potencial maior menos o menor."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Pilha de cobre (+0,34 V) e prata (+0,80 V). A questão quer a voltagem.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilha-eletrodos",
+            "titulo": "Pilha cobre-prata",
+            "rotulos": ["cobre +0,34 V", "prata +0,80 V", "elétrons", "ddp = ?"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A prata tem o maior potencial: recebe elétrons e reduz (cátodo). O cobre perde elétrons e oxida (ânodo). Os elétrons andam pelo fio do cobre para a prata."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Maior menos menor: 0,80 − 0,34 = 0,46 V.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Voltagem da pilha",
+            "dados": [
+              "E_{prata} = +0{,}80\\,\\text{V}",
+              "E_{cobre} = +0{,}34\\,\\text{V}"
+            ],
+            "formula": "\\Delta E = E_{maior} - E_{menor}",
+            "legenda": [
+              "ΔE: a voltagem da pilha"
+            ],
+            "contas": [
+              "\\Delta E = 0{,}80 - 0{,}34"
+            ],
+            "resultado": "\\Delta E = 0{,}46\\,\\text{V}",
+            "nota": "O 2 da reação não multiplica o potencial."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O potencial mede a força de puxar elétrons, não a quantidade. O 2 na frente da prata diz quantos íons reagem, não quanto cada um puxa. Por isso ele fica fora da conta."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 0,46 V. A (1,14 V) somou os dois. C (0,80 V) e D (0,34 V) usaram um potencial só. E (1,26 V) multiplicou o da prata pelo 2 da reação, e potencial não se multiplica."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Potenciais: +0,80 V e −0,76 V. Qual é a ddp da pilha?",
+        "opcoes": ["1,56 V", "0,04 V", "0,80 V", "0,76 V"],
+        "certa": "1,56 V",
+        "resposta": "Maior menos menor: 0,80 − (−0,76) = 1,56 V."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-ele-04",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Numa pilha com uma placa de alumínio (Al) e uma de níquel (Ni), um aparelho mostra que os elétrons saem do alumínio, passam pelo fio e chegam ao níquel. Ânodo é o polo onde há oxidação (perda de elétrons), e cátodo, onde há redução (ganho de elétrons). Qual frase descreve essa pilha?",
+    "A": "O alumínio é o cátodo, porque perde elétrons.",
+    "B": "O níquel oxida, porque recebe os elétrons.",
+    "C": "Os elétrons passam pela solução, e não pelo fio.",
+    "D": "O alumínio é o ânodo e oxida; no níquel, íons da solução ganham elétrons e reduzem.",
+    "E": "O alumínio reduz, porque os elétrons saem dele.",
+    "resposta": "D",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Elétrons saem do Al: ele perde, oxida, é o ânodo; chegam ao Ni: lá há redução, é o cátodo. D. Erros: A acerta que perde mas erra o nome do polo; B e E trocam oxidar e reduzir; C troca o caminho (no fio andam elétrons; na solução, íons).",
+      "ideia": "De onde saem os elétrons, alguém perdeu: oxidação, ânodo. Para onde vão, alguém ganhou: redução, cátodo.",
+      "pecas": [
+        {
+          "termo": "Ânodo",
+          "significado": "Polo da pilha onde acontece a oxidação (perda de elétrons). É de onde os elétrons saem para o fio."
+        },
+        {
+          "termo": "Cátodo",
+          "significado": "Polo da pilha onde acontece a redução (ganho de elétrons). É para onde os elétrons chegam pelo fio."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Elétrons saem do alumínio e chegam ao níquel pelo fio. A questão quer a frase certa sobre os polos.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilha-eletrodos",
+            "titulo": "Pilha alumínio-níquel",
+            "rotulos": ["alumínio (Al)", "níquel (Ni)", "elétrons no fio", "quem é o ânodo?"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O alumínio solta elétrons e vira íon Al³⁺, que vai para a solução. Os elétrons andam pelo fio até o níquel. Lá, íons Ni²⁺ da solução pegam esses elétrons e viram níquel metálico."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Siga os elétrons. Saem de: perdeu, oxida, ânodo. Chegam em: ganhou, reduz, cátodo. Ânodo e oxidação começam com vogal; cátodo e redução, com consoante."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O alumínio perde elétrons mais fácil que o níquel, por isso é ele que oxida. A pilha só funciona porque um lado perde e o outro ganha ao mesmo tempo."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D. A acerta que o alumínio perde elétrons, mas quem perde é ânodo, não cátodo. B diz que o níquel oxida, mas receber elétrons é reduzir. C erra o caminho: pelo fio passam elétrons; pela solução, íons. E diz que o alumínio reduz, mas quem solta elétrons oxida."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Os elétrons saem do ferro e vão para o cobre. Quem oxida?",
+        "opcoes": ["Ferro", "Cobre", "Os dois", "Nenhum"],
+        "certa": "Ferro",
+        "resposta": "Saiu elétron do ferro: ele perdeu, oxidou."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-est-01",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "O gás natural do fogão é quase todo metano. A queima segue a receita: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Uma família queima 32 g de metano para cozinhar o almoço. Quanto gás carbônico (CO₂) sai? Use as massas dos átomos: C = 12, H = 1, O = 16.",
+    "A": "88 g",
+    "B": "44 g",
+    "C": "32 g",
+    "D": "176 g",
+    "E": "64 g",
+    "resposta": "A",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "CH₄ = 12 + 4 = 16 g/mol; 32 g = 2 mol. Receita 1 CH₄ → 1 CO₂: 2 mol de CO₂ × 44 g = 88 g. A. Erros: B = 1 mol só; C acha que sai a mesma massa; D = 2 × 88 (dobrou de novo); E = 2 × 32 (usou a massa do O₂).",
+      "ideia": "Ache quantos mols de metano são 32 g e leia a receita: cada metano dá um CO₂. 2 mols de metano viram 2 mols de CO₂, que pesam 88 g.",
+      "pecas": [
+        {
+          "termo": "Mol",
+          "significado": "Um pacote com o mesmo número de partículas. A massa de 1 mol, em gramas, é a soma das massas dos átomos."
+        },
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol. CH₄: 12 + 4 × 1 = 16 g. CO₂: 12 + 2 × 16 = 44 g."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Queimam 32 g de metano: CH₄ + 2 O₂ → CO₂ + 2 H₂O. A questão quer a massa de CO₂ que sai.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Queima do metano",
+            "rotulos": ["32 g de CH₄", "CO₂ = ?", "1 CH₄ : 1 CO₂", "C = 12, H = 1, O = 16"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A receita diz: 1 metano vira 1 gás carbônico. Então basta saber quantos metanos (em mols) há em 32 g e trocar pelo mesmo número de CO₂."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Massa de 1 mol de metano: 16 g. Então 32 g = 2 mols. A receita é 1 para 1: saem 2 mols de CO₂, e 2 × 44 = 88 g.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Receita do metano",
+            "dados": [
+              "M(\\text{CH}_4) = 12 + 4 \\times 1 = 16\\,\\text{g}",
+              "M(\\text{CO}_2) = 12 + 2 \\times 16 = 44\\,\\text{g}",
+              "1\\,\\text{CH}_4 \\to 1\\,\\text{CO}_2"
+            ],
+            "formula": "n = \\dfrac{m}{M}",
+            "legenda": [
+              "n: quantos mols",
+              "m: massa; M: massa de 1 mol"
+            ],
+            "contas": [
+              "n = \\dfrac{32}{16} = 2\\,\\text{mol}",
+              "m(\\text{CO}_2) = 2 \\times 44"
+            ],
+            "resultado": "m = 88\\,\\text{g de CO}_2",
+            "nota": "No 1 para 1, mols de metano = mols de CO₂."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A massa total se conserva: 32 g de metano + 128 g de O₂ (4 mols) = 160 g. Saem 88 g de CO₂ + 72 g de água (4 mols de 18 g). 88 + 72 = 160. Bate."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 88 g. B (44 g) é 1 mol só, mas eram 2. C (32 g) acha que sai a mesma massa de metano. D (176 g) dobrou duas vezes. E (64 g) usou a massa do O₂ no lugar da do CO₂."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Se só 16 g de CH₄ queimassem, sairia quanto CO₂?",
+        "opcoes": ["44 g", "88 g", "16 g", "22 g"],
+        "certa": "44 g",
+        "resposta": "16 g = 1 mol de metano: sai 1 mol de CO₂, 44 g."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-est-02",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "Na usina, o açúcar glicose vira etanol pela fermentação (o fermento come o açúcar): C₆H₁₂O₆ → 2 C₂H₅OH + 2 CO₂. Pela receita, 180 g de glicose dão 92 g de etanol. Quanto etanol sai de 900 g de glicose, se tudo reagir?",
+    "A": "92 g",
+    "B": "184 g",
+    "C": "230 g",
+    "D": "460 g",
+    "E": "900 g",
+    "resposta": "D",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "900 ÷ 180 = 5 vezes a receita; 5 × 92 = 460 g. D. Erros: A copiou a receita; B = 2 × 92 (usou o 2 da equação de novo); C = 5 × 46 (um etanol só por receita); E acha que a massa passa inteira para o etanol (parte sai como CO₂).",
+      "ideia": "A equação é a receita: 900 g é 5 vezes 180 g, então sai 5 vezes 92 g de etanol. Dá 460 g.",
+      "pecas": [
+        {
+          "termo": "Regra de três",
+          "significado": "Se 180 dá 92, então 900 dá x. Multiplica cruzado: 180 × x = 900 × 92."
+        },
+        {
+          "termo": "Fermentação",
+          "significado": "O fermento (um fungo) come açúcar sem oxigênio e solta etanol e gás carbônico."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Receita: 180 g de glicose dão 92 g de etanol. A questão quer o etanol que sai de 900 g de glicose.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Fermentação",
+            "rotulos": ["900 g de glicose", "etanol = ?", "180 g → 92 g", "+ gás carbônico"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A receita não muda com o tamanho da panela. Se a glicose fica 5 vezes maior, o etanol também fica 5 vezes maior."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "900 ÷ 180 = 5 receitas. 5 × 92 = 460 g de etanol.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Regra de três",
+            "dados": [
+              "180\\,\\text{g glicose} \\to 92\\,\\text{g etanol}",
+              "900\\,\\text{g glicose} \\to x"
+            ],
+            "formula": "x = \\dfrac{900 \\times 92}{180}",
+            "legenda": [
+              "x: etanol que sai"
+            ],
+            "contas": [
+              "\\dfrac{900}{180} = 5",
+              "x = 5 \\times 92"
+            ],
+            "resultado": "x = 460\\,\\text{g}",
+            "nota": "Cinco receitas inteiras."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "De onde vem o 92: são 2 etanóis de 46 g cada (C₂H₅OH: 2 × 12 + 6 × 1 + 16 = 46). O resto da glicose, 180 − 92 = 88 g, sai como 2 CO₂ (2 × 44 = 88). Tudo confere."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 460 g. A (92 g) copiou a receita sem aumentar. B (184 g) multiplicou pelo 2 da equação, que já está dentro do 92. C (230 g) usou 46 g, um etanol só. E (900 g) esquece que parte da glicose vira gás carbônico."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Se 180 g de glicose dão 92 g de etanol, 360 g dão:",
+        "opcoes": ["184 g", "92 g", "46 g", "360 g"],
+        "certa": "184 g",
+        "resposta": "360 é o dobro de 180: 2 × 92 = 184 g."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-est-03",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "Num experimento, 5,6 g de ferro reagem com 3,2 g de enxofre, sem sobrar nada, e formam sulfeto de ferro (FeS). Um aluno quer repetir usando 11,2 g de ferro, de novo sem sobra de nenhum dos dois. Quanto enxofre ele precisa e quanto sulfeto de ferro vai se formar?",
+    "A": "3,2 g de enxofre e 14,4 g de FeS",
+    "B": "6,4 g de enxofre e 8,8 g de FeS",
+    "C": "6,4 g de enxofre e 11,2 g de FeS",
+    "D": "1,6 g de enxofre e 12,8 g de FeS",
+    "E": "6,4 g de enxofre e 17,6 g de FeS",
+    "resposta": "E",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Ferro dobrou (5,6 → 11,2), então o enxofre dobra: 6,4 g. FeS = 11,2 + 6,4 = 17,6 g. E. Erros: A não dobrou o enxofre (11,2 + 3,2); B dobrou o enxofre mas copiou o FeS antigo (8,8 g); C conta só o ferro; D dividiu o enxofre em vez de multiplicar (11,2 + 1,6).",
+      "ideia": "A proporção da receita não muda: dobrou o ferro, dobra o enxofre. E nada some: o produto pesa ferro mais enxofre.",
+      "pecas": [
+        {
+          "termo": "Proporção constante",
+          "significado": "Uma substância sempre se forma com a mesma proporção de massas. FeS: 5,6 g de ferro para 3,2 g de enxofre, ou qualquer múltiplo disso."
+        },
+        {
+          "termo": "Conservação da massa",
+          "significado": "Num recipiente fechado, a massa que entra é igual à que sai. Nada se perde, só se rearranja."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "5,6 g de ferro + 3,2 g de enxofre formam FeS. A questão quer o enxofre e o FeS para 11,2 g de ferro.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Ferro com enxofre",
+            "rotulos": ["ferro + enxofre", "sulfeto de ferro (FeS)", "5,6 g : 3,2 g", "agora 11,2 g de ferro"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "11,2 g é o dobro de 5,6 g. Para não sobrar nada, o enxofre também tem que dobrar. E o FeS é tudo o que entrou, junto."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ferro dobrou: 11,2 ÷ 5,6 = 2. Enxofre: 2 × 3,2 = 6,4 g. FeS: 11,2 + 6,4 = 17,6 g.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Receita dobrada",
+            "dados": [
+              "5{,}6\\,\\text{g Fe} + 3{,}2\\,\\text{g S}",
+              "11{,}2\\,\\text{g Fe}"
+            ],
+            "formula": "\\text{FeS} = \\text{Fe} + \\text{S}",
+            "legenda": [
+              "o produto pesa a soma do que entrou"
+            ],
+            "contas": [
+              "\\dfrac{11{,}2}{5{,}6} = 2",
+              "\\text{S} = 2 \\times 3{,}2 = 6{,}4\\,\\text{g}",
+              "\\text{FeS} = 11{,}2 + 6{,}4"
+            ],
+            "resultado": "\\text{FeS} = 17{,}6\\,\\text{g}",
+            "nota": "Ou: 2 × 8,8 g = 17,6 g."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Confira de outro jeito: a primeira vez formou 5,6 + 3,2 = 8,8 g de FeS. Dobrando tudo, 2 × 8,8 = 17,6 g. Mesmo número."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E. A esqueceu de dobrar o enxofre. B dobrou o enxofre, mas copiou o FeS da primeira vez (8,8 g). C conta só o ferro no produto. D dividiu o enxofre por 2 quando devia multiplicar."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Se 5,6 g de ferro pedem 3,2 g de enxofre, 2,8 g de ferro pedem:",
+        "opcoes": ["1,6 g", "3,2 g", "6,4 g", "0,8 g"],
+        "certa": "1,6 g",
+        "resposta": "2,8 é metade de 5,6: metade de 3,2 = 1,6 g."
+      }
+    }
+  },
+  {
+    "id": "d2-reforco-qui-est-04",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "Um antiácido (remédio contra azia) tem hidróxido de magnésio, que neutraliza o ácido do estômago: Mg(OH)₂ + 2 HCl → MgCl₂ + 2 H₂O. Pela receita, 58 g de Mg(OH)₂ neutralizam 73 g de HCl. Uma colher do remédio tem 0,58 g de Mg(OH)₂. Quanto HCl essa colher neutraliza?",
+    "A": "0,365 g",
+    "B": "7,3 g",
+    "C": "0,73 g",
+    "D": "1,46 g",
+    "E": "0,58 g",
+    "resposta": "C",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "0,58 = 58 ÷ 100, então HCl = 73 ÷ 100 = 0,73 g. C. Erros: A = metade (dividiu pelo 2 do HCl, que já está no 73); B errou a vírgula (÷ 10); D dobrou pelo 2 da equação; E acha que neutraliza a mesma massa.",
+      "ideia": "A colher tem 100 vezes menos Mg(OH)₂ que a receita, então neutraliza 100 vezes menos HCl. 73 ÷ 100 = 0,73 g.",
+      "pecas": [
+        {
+          "termo": "Neutralização",
+          "significado": "Ácido + base = sal + água. Aqui a base é o Mg(OH)₂ e o ácido é o HCl do estômago."
+        },
+        {
+          "termo": "HCl",
+          "significado": "Ácido clorídrico, o ácido do suco do estômago. Em excesso, causa a queimação da azia."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Receita: 58 g de Mg(OH)₂ neutralizam 73 g de HCl. A questão quer quanto HCl a colher com 0,58 g neutraliza.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Antiácido",
+            "rotulos": ["0,58 g de Mg(OH)₂", "HCl = ?", "58 g : 73 g", "sal + água"]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A receita vale em qualquer tamanho. A colher tem 0,58 g, que é 58 g dividido por 100. O HCl neutralizado também cai 100 vezes."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "58 ÷ 0,58 = 100: a colher é 100 vezes menor que a receita. 73 ÷ 100 = 0,73 g de HCl.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Receita em miniatura",
+            "dados": [
+              "58\\,\\text{g Mg(OH)}_2 \\to 73\\,\\text{g HCl}",
+              "0{,}58\\,\\text{g Mg(OH)}_2 \\to x"
+            ],
+            "formula": "x = \\dfrac{0{,}58 \\times 73}{58}",
+            "legenda": [
+              "x: HCl que a colher neutraliza"
+            ],
+            "contas": [
+              "\\dfrac{58}{0{,}58} = 100",
+              "x = \\dfrac{73}{100}"
+            ],
+            "resultado": "x = 0{,}73\\,\\text{g}",
+            "nota": "O 2 do HCl já está dentro do 73."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "De onde vem o 73: são 2 HCl de 36,5 g cada (1 + 35,5). E o 58: Mg(OH)₂ = 24 + 2 × (16 + 1) = 58. Com a receita já em gramas, é só regra de três."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 0,73 g. A (0,365 g) dividiu pelo 2 do HCl, que já estava no 73. B (7,3 g) errou a vírgula. D (1,46 g) multiplicou pelo 2 de novo. E (0,58 g) acha que o remédio neutraliza a mesma massa de ácido."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Se 58 g de Mg(OH)₂ neutralizam 73 g de HCl, 5,8 g neutralizam:",
+        "opcoes": ["7,3 g", "73 g", "0,73 g", "5,8 g"],
+        "certa": "7,3 g",
+        "resposta": "5,8 é 58 ÷ 10: 73 ÷ 10 = 7,3 g."
+      }
+    }
+  }
+]

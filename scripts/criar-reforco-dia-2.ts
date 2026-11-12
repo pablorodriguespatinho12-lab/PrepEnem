@@ -1,6 +1,6 @@
 import { loadEnvConfig } from '@next/env';
 loadEnvConfig(process.cwd());
-import { existsSync, readFileSync } from 'fs';
+import { readFileSync, readdirSync } from 'fs';
 import { join } from 'path';
 import { PrismaClient } from '@prisma/client';
 import { validarExplicacao } from '../lib/tutor/validar';
@@ -25,10 +25,9 @@ type Questao = {
 
 async function main() {
   const gravar = process.argv.includes('--gravar');
-  const questoes = ['natureza', 'matematica']
-    .map((a) => join(PASTA, `reforco-${a}.json`))
-    .filter(existsSync)
-    .flatMap((f) => JSON.parse(readFileSync(f, 'utf8')) as Questao[]);
+  const questoes = readdirSync(PASTA)
+    .filter((f) => f.startsWith('reforco-') && f.endsWith('.json'))
+    .flatMap((f) => JSON.parse(readFileSync(join(PASTA, f), 'utf8')) as Questao[]);
 
   const porTema: Record<string, number> = {};
   for (const q of questoes) {

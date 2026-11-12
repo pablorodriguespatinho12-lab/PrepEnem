@@ -176,7 +176,16 @@ export interface VisualLegenda {
    figura-pixel.tsx), pelo nome. Só entra por explicação escrita à mão (JSON
    do repositório); NÃO está no formato da IA (Pablo, 12/11/2026: "imagem
    da bateria em pixel art, com animação"). */
-export const FIGURAS_PIXEL = ['pilhas-lanterna', 'circuito-simples', 'bloco-forca', 'calor-panela', 'onda', 'luz-raio'] as const;
+export const FIGURAS_PIXEL = [
+  'pilhas-lanterna', 'circuito-simples', 'bloco-forca', 'calor-panela', 'onda', 'luz-raio',
+  // Química
+  'molecula-cadeia', 'fumaca-chamine', 'bequer-ph', 'pilha-eletrodos', 'balanca-receita',
+  // Biologia
+  'cadeia-alimentar', 'celula', 'cruzamento', 'corpo-sangue', 'selecao-natural', 'virus-bacteria',
+  // Matemática
+  'porcentagem-barra', 'grafico-barras', 'funcao-reta', 'solido-caixa', 'figura-plana', 'escala-regua',
+  'cone', 'parabola',
+] as const;
 export type NomeFigura = (typeof FIGURAS_PIXEL)[number];
 /* rotulos: os números da questão escritos nos lugares fixos da figura (até 4). */
 export interface VisualFigura {

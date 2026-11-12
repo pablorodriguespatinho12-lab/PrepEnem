@@ -4,6 +4,7 @@ import { circulo, ponto, type Pincel } from '@/lib/pixel/desenho';
 import { imagemPixel } from '@/components/pixel/imagem-pixel';
 import { useMundoAnimado } from '@/hooks/use-mundo-animado';
 import type { NomeFigura } from '@/lib/visual/especificacao';
+import { FIGURAS_AREAS } from './figuras-areas';
 
 /* Figuras em pixel art animada, feitas à mão (Pablo, 12/11/2026: "a imagem
    realmente de uma bateria, e a solução do cálculo em imagem, em pixel").
@@ -246,6 +247,7 @@ const FIGURAS: Record<NomeFigura, (p: Props) => JSX.Element> = {
   'calor-panela': CalorPanela,
   onda: Onda,
   'luz-raio': LuzRaio,
+  ...FIGURAS_AREAS,
 };
 
 /** semConta: na tela da questão a figura ajuda a entender sem entregar a conta. */

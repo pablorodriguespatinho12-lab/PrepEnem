@@ -918,6 +918,8 @@ html[data-letra-pixel] :is(button, a) :is(p, .type-meta, .type-body) { font-fami
 .figura-pixel .fig-rotulo {
   position: absolute; transform: translateX(-50%); white-space: nowrap;
   font-family: var(--font-pixel-texto), monospace; font-size: clamp(11px, 2.6vw, 16px); line-height: 1;
+  /* fundo da lousa atrás do texto: lê mesmo em cima de parte escura do desenho */
+  background: rgba(238, 244, 234, .88); padding: 1px 3px;
 }
 .figura-pixel .fig-contra { color: #a85a1c; }
 .figura-pixel .fig-fraco { color: #4f6157; }
@@ -966,6 +968,29 @@ html[data-letra-pixel] :is(button, a) :is(p, .type-meta, .type-body) { font-fami
 @keyframes fig-chama { 0% { transform: scaleY(1); } 50% { transform: scaleY(1.5); } 100% { transform: scaleY(.8); } }
 @keyframes fig-onda { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes fig-luz-anda { 0% { transform: translate(0, 0); } 50% { transform: translate(25%, 43%); } 100% { transform: translate(39%, 87%); } }
+
+/* Pontos que se mexem nas figuras de Química, Biologia e Matemática
+   (components/visual/pixel-cena.tsx). O invólucro tem o tamanho da cena:
+   translate em % anda em % da cena. */
+.figura-pixel .fig-mov { position: absolute; inset: 0; pointer-events: none; }
+.figura-pixel .fig-ponto { position: absolute; aspect-ratio: 1; display: block; }
+.figura-pixel .fig-sangue::before { background: #d64545; box-shadow: 0 0 0 1px #7a2020; }
+.figura-pixel .fig-enche-largura { position: absolute; left: 27.5%; top: 11.4%; width: 46%; height: 78.6%; background: rgba(79, 174, 106, .35); transform-origin: left; }
+.figura-pixel .fig-enche-altura { position: absolute; left: 29.2%; top: 27%; width: 35%; height: 54%; background: rgba(90, 163, 192, .45); transform-origin: bottom; }
+.figura-pixel .fig-linha-media { position: absolute; left: 18%; top: 50%; width: 72%; height: 2px; border-top: 2px dashed #d64545; }
+.figura-pixel[data-animado="sim"] .fig-pulso .fig-ponto { animation: fig-m-pulso var(--dur) steps(4) var(--atraso) infinite !important; }
+.figura-pixel[data-animado="sim"] .fig-pisca .fig-ponto { animation: fig-m-pisca var(--dur) steps(2) var(--atraso) infinite !important; }
+.figura-pixel[data-animado="sim"] .fig-anda { animation: fig-m-anda var(--dur) steps(16) var(--atraso) infinite !important; }
+.figura-pixel[data-animado="sim"] .fig-vai-e-volta { animation: fig-m-vai var(--dur) steps(24) var(--atraso) infinite alternate !important; }
+.figura-pixel[data-animado="sim"] .fig-enche-largura { animation: fig-m-largura 4s steps(10) infinite !important; }
+.figura-pixel[data-animado="sim"] .fig-enche-altura { animation: fig-m-altura 4s steps(12) infinite !important; }
+.figura-pixel[data-animado="sim"] .fig-linha-media { animation: fig-m-pisca 1.6s steps(2) infinite !important; }
+@keyframes fig-m-pulso { 0%, 100% { transform: scale(.85); opacity: .6; } 50% { transform: scale(1.15); opacity: 1; } }
+@keyframes fig-m-pisca { 0%, 100% { opacity: 1; } 50% { opacity: .15; } }
+@keyframes fig-m-anda { from { transform: translate(0, 0); opacity: 1; } 85% { opacity: 1; } to { transform: translate(var(--dx), var(--dy)); opacity: 0; } }
+@keyframes fig-m-vai { from { transform: translate(0, 0); } to { transform: translate(var(--dx), var(--dy)); } }
+@keyframes fig-m-largura { 0% { transform: scaleX(0); } 70%, 100% { transform: scaleX(1); } }
+@keyframes fig-m-altura { 0% { transform: scaleY(0); } 70%, 100% { transform: scaleY(1); } }
 
 /* Véu sobre o mundo nas telas comuns: a serra aparece, o texto continua legível. */
 .mundo-veu { position: fixed; inset: 0; z-index: 0; pointer-events: none; background: hsl(var(--surface-0) / .84); }
