@@ -447,9 +447,10 @@ escolha, nível acima) estão em `calculo.md`, nesta pasta. **Leia antes de mexe
   borda de pixel e faíscas (`.px-alt`); acerto/erro abre anéis (`.px-anel`);
   fim da prova é a casinha acesa (`CenaFim`). Desenho em canvas UMA vez
   (`lib/pixel/desenho.ts`), movimento só CSS. **Exceção ao "respeitam sempre":**
-  ele pediu "bastante animação", mas o Windows dele reduz movimento. Sem escolha,
-  o mundo segue o sistema (parado); o botão "Mundo animado" liga no site e fica
-  guardado (`useMundoAnimado`). A seleção da alternativa anima sempre (0,25 s),
+  ele pediu "bastante animação" e, no mesmo dia, "deixa como padrão do site; quem
+  quiser muda nas configurações". O mundo nasce ANIMADO mesmo com reduzir
+  movimento no sistema; desliga em Perfil > "Mundo pixel animado"
+  (`useMundoAnimado`, guardado no navegador). Não há botão disso na prova. A seleção da alternativa anima sempre (0,25 s),
   como o flip. As regras animadas levam `!important` porque a regra geral do
   reduced-motion também leva; o mesmo faltava na aula em desenho (água parada no
   PC dele) e foi corrigido no mesmo dia. Letra da alternativa em sans: sozinho,

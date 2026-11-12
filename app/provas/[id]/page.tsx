@@ -338,9 +338,6 @@ export default function ProvaDetailPage() {
       <MundoPixel animado={mundo.animado} />
       <div className="relative z-[1] min-h-screen px-4 pb-10 md:px-10 pt-[min(20vh,170px)] max-w-4xl mx-auto">
       <div className="absolute top-4 right-4 md:right-10 flex gap-3">
-        <button type="button" className="px-chip" aria-pressed={mundo.animado} onClick={mundo.alternar}>
-          {mundo.animado ? 'Mundo animado' : 'Mundo parado'}
-        </button>
         <button type="button" className="px-chip" aria-pressed={telaCheia.ativa} onClick={telaCheia.alternar}>
           {telaCheia.ativa ? 'Sair da tela cheia' : 'Tela cheia'}
         </button>
