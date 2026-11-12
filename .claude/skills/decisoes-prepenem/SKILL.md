@@ -262,8 +262,9 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   para a próxima vez trazer outra. Rótulo "Reforço · estilo ENEM", nunca "ENEM real".
   Errou o reforço também: segue a prova. Conteúdo em
   `data/revisao-final/dia-2/reforco-*.json` (mesma conferência das provas), gravado
-  por `scripts/criar-reforco-dia-2.ts`. Feito: Física (15, 3 por conteúdo).
-  Falta: Química, Biologia e Matemática.
+  por `scripts/criar-reforco-dia-2.ts`. Feito (12/11/2026): 80 questões, 20 por
+  área (Física, Química, Biologia, Matemática), 3 ou 4 por conteúdo, cada uma com
+  figura em pixel própria do tema (`components/visual/figuras-areas.tsx`).
 - **Prova responde na hora (22/10/2026):** o acerto é conferido no navegador
   (a letra certa já vem com a questão) e a resposta é gravada por trás, com
   3 tentativas; "Próxima" avança sem recarregar a prova. Antes: 1,5 s para ver
