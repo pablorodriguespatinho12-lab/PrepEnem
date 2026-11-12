@@ -462,8 +462,11 @@ escolha, nível acima) estão em `calculo.md`, nesta pasta. **Leia antes de mexe
   sem véu.
   **Letras em pixel (mesmo dia, "até as letras e as palavras"):** com
   `html[data-letra-pixel]` (padrão; desliga em Perfil > "Letras em pixel",
-  `useLetraPixel`) o texto todo vira Jersey 15 (size-adjust 125%) e os títulos
-  Jersey 10. Pixelify Sans foi testada e caiu: "C" vira "O" e "5" vira "8" em
+  `useLetraPixel`) só palavra curta vira pixel: títulos (h1-h3) em Jersey 10,
+  botões, menu e rótulos em Jersey 15 (size-adjust 125%), sem negrito inventado
+  (`font-synthesis: none`). Frase, enunciado, alternativa e cartão ficam na letra
+  normal: com pixel em tudo ele "não estava conseguindo ler" (print de /provas,
+  mesmo dia). Pixelify Sans foi testada e caiu: "C" vira "O" e "5" vira "8" em
   negrito ("15%" lia "18%"). **Flip em CSS** (`.cartao-flip`, 0,45 s nos dois
   modos), não em framer: roda no compositor e não trava ao virar.
 - **Flashcard é a opção A, escolhida pelo Pablo em 05/10/2026** (entre A "flip

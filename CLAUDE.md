@@ -27,7 +27,7 @@
   `inspetor-visual` (~66 mil tokens cada: decidir com `chamar-revisor`).
 
 Skills globais de design ficam fora: o PrepEnem já tem direção fechada
-(ver `combinar-skills`). Sem push automático — o Pablo faz na mão.
+(ver `combinar-skills`). Push é meu desde 12/11/2026 (o Pablo autorizou sempre), depois de build e testes.
 
 # PrepEnem
 
