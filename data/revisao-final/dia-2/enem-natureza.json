@@ -524,7 +524,7 @@
     "resposta": "B",
     "explicacao": {
       "conferencia": "Queda de 1 m: 1 = 5t², t² = 0,2. Para frente: v = 3 ÷ t, então v² = 9 ÷ 0,2 = 45. Para cima: H = v² ÷ (2 × 10) = 45 ÷ 20 = 2,25 m. B. Erros: 4,50 = 45 ÷ 10 (esqueceu o 2); 1,50 = 3 ÷ 2; 4,00 = 3 + 1 (somou as distâncias); 5,00 não sai de conta com estes dados.",
-      "ideia": "A água sai sempre com a mesma velocidade; só muda a direção. Pela queda de 1 m achamos essa velocidade (v × v = 45) e, apontada para cima, ela sobe 45 ÷ 20 = 2,25 m.",
+      "ideia": "A água sai sempre com a mesma velocidade; só muda a direção. Pela queda de 1 m achamos essa velocidade vezes ela mesma (45) e, apontada para cima, ela sobe 45 ÷ 20 = 2,25 m.",
       "pecas": [
         {
           "termo": "Gravidade (g)",
@@ -542,7 +542,7 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "A mangueira deitada a 1 m do chão joga a água a 3 m. A questão pede quanto o jato subiria com a mangueira em pé.",
+          "texto": "A mangueira deitada a 1 m do chão joga a água a 3 m. A questão pede quanto o jato subiria com a mangueira em pé.\nA água sai sempre com a mesma velocidade; só muda para onde ela aponta.\nVamos em 3 partes: quanto tempo ela leva para cair 1 m, que velocidade ela tem e até onde essa velocidade sobe.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Os dados",
@@ -561,7 +561,7 @@
               ],
               [
                 "gravidade (g)",
-                "10 m/s²"
+                "10 m/s² (10 m/s a mais por segundo)"
               ],
               [
                 "altura do jato em pé (H)",
@@ -571,13 +571,48 @@
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "A água sai da mangueira sempre com a mesma velocidade. Só muda para onde ela aponta.\nSão 3 contas, uma por tela:\n1) quanto tempo a água leva para cair 1 m;\n2) que velocidade ela tem, se andou 3 m nesse tempo;\n3) até onde essa velocidade sobe com a mangueira em pé.",
-          "visual": null
+          "titulo": "1) Como a água cai",
+          "texto": "Para baixo, a água começa parada e ganha 10 m/s a cada segundo (é isso que o \"10 m/s²\" quer dizer).\nDepois de 1 s ela cai a 10 m/s; depois de 2 s, a 20 m/s; depois de 3 s, a 30 m/s.\nA velocidade cresce por igual, então a média é sempre o meio: entre 0 e 10 é 5; entre 0 e 20 é 10.\nCom a média, a conta é a do carro: 60 km/h por 2 horas dá 120 km. Distância = média × tempo.\nNa tabela, a última linha faz o mesmo para um tempo qualquer, que chamamos de t.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Segundo a segundo",
+            "cabecalho": [
+              "Tempo",
+              "Velocidade no fim",
+              "Média (metade)",
+              "Distância (média × tempo)"
+            ],
+            "linhas": [
+              [
+                "1 s",
+                "10 × 1 = 10",
+                "5",
+                "5 × 1 = 5 m"
+              ],
+              [
+                "2 s",
+                "10 × 2 = 20",
+                "10",
+                "10 × 2 = 20 m"
+              ],
+              [
+                "3 s",
+                "10 × 3 = 30",
+                "15",
+                "15 × 3 = 45 m"
+              ],
+              [
+                "t segundos",
+                "10 × t",
+                "5 × t",
+                "5 × t × t"
+              ]
+            ]
+          }
         },
         {
-          "titulo": "1) Tempo de queda",
-          "texto": "A água começa sem velocidade para baixo e ganha 10 m/s a cada segundo.\nDepois de t segundos ela cai a 10 × t. A velocidade média é a metade: 5 × t.\nDistância = velocidade média × tempo = 5 × t × t.\nPara cair 1 m: 5 × t × t = 1, então t × t = 1 ÷ 5 = 0,2.",
+          "titulo": "1) Tempo para cair 1 m",
+          "texto": "Pela tabela: em t segundos a água cai 5 × t × t (a média 5 × t, vezes o tempo t).\nEm 1 s a água cairia 5 m, mas ela só cai 1 m. Então o tempo é menor que 1 s.\nQueremos 5 × t × t = 1. Dividindo por 5: t × t = 1 ÷ 5 = 0,2.\nNão precisamos do t sozinho: o 0,2 já basta para a próxima parte.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Tempo de queda",
@@ -599,7 +634,7 @@
         },
         {
           "titulo": "2) Velocidade da água",
-          "texto": "Nesse tempo a água anda 3 m para frente: v = 3 ÷ t.\nNão precisamos achar t sozinho. Basta v × v:\nv × v = (3 × 3) ÷ (t × t) = 9 ÷ 0,2 = 45.",
+          "texto": "Para frente a água não ganha nem perde velocidade: vai sempre com a velocidade de saída, que chamamos de v.\nVelocidade = distância ÷ tempo. Andar 3 m em 1 s é 3 m/s; andar 3 m em meio segundo é 6 m/s. Aqui, v = 3 ÷ t.\nSó sabemos t × t (0,2), então multiplicamos v por ele mesmo: (3 ÷ t) × (3 ÷ t) = (3 × 3) ÷ (t × t) = 9 ÷ (t × t).\nDividir por 0,2 é contar quantos 0,2 cabem: em 1 cabem 5, em 9 cabem 45. Então v × v = 45.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Velocidade da água",
@@ -620,7 +655,7 @@
         },
         {
           "titulo": "3) Até onde sobe: por que funciona",
-          "texto": "Subir é cair ao contrário: a gravidade tira 10 m/s a cada segundo até a água parar.\nTempo até parar: v ÷ 10. Velocidade média na subida: v ÷ 2.\nAltura = (v ÷ 2) × (v ÷ 10) = v × v ÷ 20 = 45 ÷ 20 = 2,25 m.",
+          "texto": "Subir é cair ao contrário: a gravidade tira 10 m/s a cada segundo até a água parar.\nExemplo: saindo a 20 m/s, para em 2 s (20 ÷ 10). A média é 10 m/s (metade de 20), e sobe 10 × 2 = 20 m.\nRepare: (20 ÷ 2) × (20 ÷ 10) = 10 × 2 = 20, o mesmo que 20 × 20 ÷ 20 = 20. Dividir por 2 e por 10 é dividir por 20.\nCom a nossa água: média × tempo = (v ÷ 2) × (v ÷ 10) = v × v ÷ 20.\nComo v × v = 45, o jato sobe 45 ÷ 20 = 2,25 m.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Jato para cima",
@@ -648,7 +683,7 @@
       ],
       "seuErro": null,
       "checagem": {
-        "pergunta": "Um jato sai para cima com v² = 80 (g = 10). Até que altura ele chega?",
+        "pergunta": "Um jato sai para cima com v × v = 80 (g = 10). Até que altura ele chega?",
         "opcoes": [
           "4 m",
           "8 m",

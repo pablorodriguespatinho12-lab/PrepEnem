@@ -260,6 +260,11 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   velocidade média 5 × t vezes o tempo = 5 × t × t; subida: (v ÷ 2) × (v ÷ 10)).
   Potência ("t²") se escreve também como "t × t, o tempo vezes ele mesmo". Varridas
   as provas do dia 2 em 12/11: 2 casos (mangueira e balanço), corrigidos no banco.
+- **Número antes de letra (Pablo, 12/11/2026, mangueira: "por que colocou o 10
+  ali?"):** conta com letra (10 × t) ou regra ("a média é a metade", "distância =
+  velocidade × tempo") só DEPOIS da mesma conta com números (1 s, 2 s) e um caso
+  do dia a dia (carro a 60 km/h por 2 h). Tabela "segundo a segundo" cuja última
+  linha é a letra. O `aluno-do-zero` procura isso (tropeço 7).
 - **Passo em linhas (Pablo, 12/11/2026, foto do "Jeito rápido" da mangueira: "deixa
   o texto mais organizado e entendível"):** texto de passo acima de 200 letras vai
   em linhas separadas por `\n` (uma ideia por linha, até 170 letras cada); "A
