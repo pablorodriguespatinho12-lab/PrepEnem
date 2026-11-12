@@ -76,6 +76,7 @@ export function SidebarNav() {
       {/* Mobile toggle */}
       <motion.button
         onClick={() => setOpen(!open)}
+        data-menu-lateral
         className="fixed top-4 left-4 z-50 p-3 rounded-[var(--radius-control)] bg-primary text-primary-foreground shadow-lg md:hidden"
         aria-label="Menu"
         whileTap={{ scale: 0.9 }}
@@ -98,6 +99,7 @@ export function SidebarNav() {
 
       {/* Sidebar */}
       <aside
+        data-menu-lateral
         className={cn(
           'fixed top-0 left-0 z-40 h-full w-64 bg-[hsl(var(--surface-1))] border-r border-border flex flex-col transition-transform duration-300',
           'md:translate-x-0',

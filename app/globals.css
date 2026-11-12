@@ -811,9 +811,149 @@ html [data-sonner-toaster][data-theme] {
 @keyframes aula-girar { to { transform: rotate(360deg); } }
 @keyframes aula-andar { to { transform: translateX(100px); } }
 /* Aqui o movimento explica (a água corre, a onda anda), como o flip do flashcard: fica, mais lento. */
+/* !important: sem ele a regra geral do REDUCED MOTION (acima, também !important)
+   ganhava e a água parava no Windows do Pablo (achado em 12/11/2026). */
 @media (prefers-reduced-motion: reduce) {
-  .aula-desenho .fluxo, .aula-desenho .fluxo-e, .aula-desenho .sobe { animation-duration: 1.8s; }
-  .aula-desenho .fluxo-pouco { animation-duration: 3.6s; }
-  .aula-desenho .gira { animation-duration: 4.8s; }
-  .aula-desenho .onda { animation-duration: 3.2s; }
+  .aula-desenho .fluxo, .aula-desenho .fluxo-e, .aula-desenho .sobe { animation-duration: 1.8s !important; animation-iteration-count: infinite !important; }
+  .aula-desenho .fluxo-pouco { animation-duration: 3.6s !important; animation-iteration-count: infinite !important; }
+  .aula-desenho .gira { animation-duration: 4.8s !important; animation-iteration-count: infinite !important; }
+  .aula-desenho .onda { animation-duration: 3.2s !important; animation-iteration-count: infinite !important; }
 }
+
+/* ===== MUNDO PIXEL (Pablo, 12/11/2026) ======================================
+   Votos na prévia https://claude.ai/artifact/QVn75VnVMV9JmptgX1pJXG: 1B (anéis
+   no Início), 2A (alternativa afunda com borda de pixel e faíscas), 3A (anéis
+   de pixel no acerto/erro), 4A (casinha acesa no fim). Tudo é transform e
+   opacity com steps(): o compositor anima, a página não trava.
+   Movimento reduzido: o mundo segue o botão "Mundo animado" (data-animado);
+   a seleção da alternativa é resposta ao toque e continua, como o flip. */
+.mundo-pixel { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; background: #bfe3f2; }
+.mundo-pixel > *, .mundo-pixel .mp-camada { position: absolute; }
+.mundo-pixel .mp-camada { inset: 0; background-size: 100% 100%; image-rendering: pixelated; }
+.mundo-pixel .mp-noite { opacity: 0; }
+.mundo-pixel .mp-dia { inset: 0; opacity: 1; }
+.mundo-pixel[data-fase="noite"] .mp-noite { opacity: 1; }
+.mundo-pixel[data-fase="noite"] .mp-dia { opacity: 0; }
+
+.mp-nuvens { left: 0; top: 0; width: 200%; height: 50%; background-size: 100% 100%; image-rendering: pixelated; }
+.mp-braco { left: 50%; top: 66%; width: 0; height: 0; transform: rotate(0deg); }
+.mundo-pixel[data-fase="noite"] .mp-braco { transform: rotate(180deg); }
+.mp-sol, .mp-lua { position: absolute; width: var(--astro); height: var(--astro); left: calc(var(--astro) / -2); background-size: 100% 100%; image-rendering: pixelated; }
+.mp-sol { top: calc(-1 * var(--raio) - var(--astro) / 2); }
+.mp-lua { top: calc(var(--raio) - var(--astro) / 2); transform: rotate(180deg); }
+.mp-estrela, .mp-vagalume { position: absolute; width: var(--px); height: var(--px); background: #f6efd9; }
+.mp-vagalume { background: #ffe58a; box-shadow: 0 0 0 1px rgba(255, 229, 138, .25); }
+.mp-passaro { position: absolute; left: -5%; top: 20%; width: var(--px); height: var(--px); color: #2f3e45;
+  box-shadow: calc(-1 * var(--px)) calc(-1 * var(--px)) 0 0, var(--px) calc(-1 * var(--px)) 0 0, calc(-2 * var(--px)) calc(-2 * var(--px)) 0 0, calc(2 * var(--px)) calc(-2 * var(--px)) 0 0; }
+.mp-passaro-2 { top: 27%; }
+.mp-fumaca { width: 0; height: 0; }
+.mp-fumaca span { position: absolute; left: calc(-1 * var(--px)); top: calc(-2 * var(--px)); width: calc(2 * var(--px)); height: calc(2 * var(--px)); background: #ffffff; opacity: .85;
+  box-shadow: 0 var(--px) 0 0 #d6e0e4; }
+.mundo-pixel[data-fase="noite"] .mp-fumaca span { background: #9aa9c0; box-shadow: 0 var(--px) 0 0 #73839d; }
+.mp-fumaca span:nth-child(2) { transform: translate(calc(1.5 * var(--px)), calc(-5 * var(--px))) scale(1.5); opacity: .6; }
+.mp-fumaca span:nth-child(3) { transform: translate(calc(3 * var(--px)), calc(-10 * var(--px))) scale(2); opacity: .35; }
+
+/* animado: dia e noite passando, sol e lua girando, nuvens, pássaros, fumaça.
+   Tudo com !important: a regra geral do REDUCED MOTION também é !important e,
+   sem isto, o botão "Mundo animado" não ligaria nada no Windows do Pablo. */
+.mundo-pixel[data-animado="sim"] .mp-noite { animation: mp-noite var(--ciclo) linear var(--atraso) infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-dia { animation: mp-dia var(--ciclo) linear var(--atraso) infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-braco { animation: mp-girar var(--ciclo) linear var(--atraso) infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-nuvens { animation: mp-deriva 220s linear infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-nuvens.mp-noite { animation: mp-deriva 220s linear infinite, mp-noite var(--ciclo) linear var(--atraso) infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-estrela { animation: mp-piscar 2.4s steps(2) infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-vagalume { animation: mp-vagalume 5s steps(10) infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-passaro { animation: mp-voar 46s steps(160) infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-passaro-2 { animation: mp-voar 58s steps(200) -14s infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-fumaca span { animation: mp-fumaca 3.6s steps(9) infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-fumaca span:nth-child(2) { animation: mp-fumaca 3.6s steps(9) -1.2s infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-fumaca span:nth-child(3) { animation: mp-fumaca 3.6s steps(9) -2.4s infinite !important; }
+.mundo-pixel[data-pausado="sim"] *, .mundo-pixel[data-pausado="sim"] { animation-play-state: paused !important; }
+
+@keyframes mp-noite { 0% { opacity: .6; } 4% { opacity: 0; } 44% { opacity: 0; } 54% { opacity: 1; } 94% { opacity: 1; } 100% { opacity: .6; } }
+@keyframes mp-dia { 0% { opacity: .4; } 4% { opacity: 1; } 44% { opacity: 1; } 54% { opacity: 0; } 94% { opacity: 0; } 100% { opacity: .4; } }
+@keyframes mp-girar { from { transform: rotate(-90deg); } to { transform: rotate(270deg); } }
+@keyframes mp-deriva { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes mp-piscar { 0% { opacity: 1; } 50% { opacity: .25; } 100% { opacity: 1; } }
+@keyframes mp-vagalume { 0% { transform: translate(0, 0); opacity: 0; } 30% { opacity: 1; } 60% { transform: translate(calc(3 * var(--px)), calc(-3 * var(--px))); opacity: .8; } 100% { transform: translate(calc(-2 * var(--px)), calc(-6 * var(--px))); opacity: 0; } }
+@keyframes mp-voar { from { transform: translateX(0); } to { transform: translateX(115vw); } }
+@keyframes mp-fumaca { 0% { transform: translate(0, 0) scale(1); opacity: 0; } 15% { opacity: .9; } 100% { transform: translate(calc(4 * var(--px)), calc(-16 * var(--px))) scale(2.4); opacity: 0; } }
+
+/* Tela cheia: some o menu, a prova ocupa tudo. */
+html[data-imersivo] [data-menu-lateral] { display: none !important; }
+html[data-imersivo] main { margin-left: 0 !important; padding-top: 0 !important; }
+
+/* Cartão com borda de pixel (cantos recortados por 4 sombras sem desfoque). */
+.px-cartao {
+  background: hsl(var(--surface-1));
+  box-shadow: 0 -4px 0 0 hsl(var(--foreground) / .85), 0 4px 0 0 hsl(var(--foreground) / .85),
+              -4px 0 0 0 hsl(var(--foreground) / .85), 4px 0 0 0 hsl(var(--foreground) / .85),
+              0 12px 0 0 hsl(var(--foreground) / .18);
+}
+.px-chip {
+  font-family: var(--font-pixel), monospace; font-size: 20px; line-height: 1; letter-spacing: .02em;
+  background: hsl(var(--surface-1)); color: hsl(var(--foreground)); padding: 8px 12px; cursor: pointer;
+  box-shadow: 0 -3px 0 0 hsl(var(--foreground) / .85), 0 3px 0 0 hsl(var(--foreground) / .85),
+              -3px 0 0 0 hsl(var(--foreground) / .85), 3px 0 0 0 hsl(var(--foreground) / .85), 0 7px 0 0 hsl(var(--foreground) / .25);
+  transition: transform .12s steps(2);
+}
+.px-chip:active { transform: translateY(3px); }
+.px-chip[aria-pressed="true"] { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+
+/* Alternativa (voto 2A): afunda 4 px, borda vira pixel, a letra acende. */
+.px-alt {
+  position: relative; width: 100%; display: flex; align-items: flex-start; gap: .875rem; padding: .875rem .875rem .875rem 1rem; text-align: left;
+  background: hsl(var(--surface-2)); border: 2px solid hsl(var(--border)); border-radius: var(--radius-control);
+  box-shadow: 0 4px 0 0 hsl(var(--border));
+  transition: transform .14s steps(2), box-shadow .14s steps(2), border-color .14s steps(2);
+}
+.px-alt:enabled:hover { border-color: hsl(var(--primary) / .55); }
+.px-alt .px-letra {
+  width: 2.1rem; height: 2.1rem; flex-shrink: 0; display: grid; place-items: center; border-radius: 6px;
+  /* letra em sans: sozinha, o "A" da Jersey 10 parece "Â" */
+  font-family: var(--font-sans), sans-serif; font-weight: 700; font-size: 15px; line-height: 1;
+  background: hsl(var(--muted)); color: hsl(var(--muted-foreground));
+}
+.px-alt[data-state="selecionada"], .px-alt[data-state="correta"], .px-alt[data-state="errada"] {
+  --cor: hsl(var(--primary)); border-color: transparent; border-radius: 0; transform: translateY(4px);
+  box-shadow: 0 -4px 0 0 var(--cor), 0 4px 0 0 var(--cor), -4px 0 0 0 var(--cor), 4px 0 0 0 var(--cor);
+}
+.px-alt[data-state="correta"] { --cor: hsl(var(--success)); background: hsl(var(--success-surface)); }
+.px-alt[data-state="errada"] { --cor: hsl(var(--danger)); background: hsl(var(--danger-surface)); }
+.px-alt[data-state="selecionada"] .px-letra, .px-alt[data-state="correta"] .px-letra, .px-alt[data-state="errada"] .px-letra {
+  border-radius: 0; background: var(--cor); color: hsl(var(--surface-1));
+}
+.px-faisca { position: absolute; width: 6px; height: 6px; background: hsl(var(--primary)); pointer-events: none;
+  animation: px-faisca .42s steps(4) forwards !important; }
+@keyframes px-faisca { from { transform: translate(0, 0); opacity: 1; } to { transform: translate(var(--dx), var(--dy)); opacity: 0; } }
+/* voto 3A: anéis de pixel que se abrem a partir da alternativa respondida */
+.px-anel { position: absolute; inset: -4px; border: 4px solid var(--cor); pointer-events: none; opacity: 0;
+  animation: px-anel .5s steps(5) var(--atraso, 0ms) forwards !important; }
+@keyframes px-anel { 0% { transform: scale(.97); opacity: 1; } 100% { transform: scale(1.06, 1.7); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  /* a seleção responde ao toque: continua, mais curta (mesma exceção do flip) */
+  .px-alt { transition-duration: .25s !important; }
+  .px-alt .px-faisca { animation-duration: .25s !important; }
+}
+
+/* Início (voto 1B): anéis e luz atrás do bloco de hoje. */
+.anel-inicio { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.anel-inicio .ai-imagem { position: absolute; inset: 0; background-size: 100% 100%; image-rendering: pixelated; }
+.anel-inicio .ai-brilho { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(255, 244, 214, .55), rgba(159, 224, 230, .15) 45%, transparent 70%); }
+.anel-inicio .ai-faisca { position: absolute; width: 5px; height: 5px; background: #fff4d6; opacity: .8; }
+.anel-inicio[data-animado="sim"] .ai-brilho { animation: ai-respirar 4.5s ease-in-out infinite !important; }
+.anel-inicio[data-animado="sim"] .ai-faisca { animation: ai-faisca 3s steps(6) var(--atraso, 0s) infinite !important; }
+@keyframes ai-respirar { 0%, 100% { transform: scale(.92); opacity: .75; } 50% { transform: scale(1.08); opacity: 1; } }
+@keyframes ai-faisca { 0% { transform: translateY(0); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(-28px); opacity: 0; } }
+
+/* Fim da prova (voto 4A): casinha acesa no escuro, anéis respirando. */
+.cena-fim { position: relative; overflow: hidden; background: #062022; }
+.cena-fim .cf-imagem { display: block; width: 100%; height: auto; image-rendering: pixelated; }
+.cena-fim .cf-brilho { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(255, 217, 138, .45), rgba(127, 224, 208, .12) 50%, transparent 70%); }
+.cena-fim .cf-fumaca { position: absolute; width: 0; height: 0; }
+.cena-fim .cf-fumaca span { position: absolute; width: 8px; height: 8px; background: #7fbdb4; opacity: .7; }
+.cena-fim .cf-fumaca span { --px: 4px; }
+.cena-fim[data-animado="sim"] .cf-brilho { animation: ai-respirar 3.6s ease-in-out infinite !important; }
+.cena-fim[data-animado="sim"] .cf-fumaca span { animation: mp-fumaca 3.2s steps(8) infinite !important; }
+.cena-fim[data-animado="sim"] .cf-fumaca span:nth-child(2) { animation: mp-fumaca 3.2s steps(8) -1.1s infinite !important; }
+.cena-fim[data-animado="sim"] .cf-fumaca span:nth-child(3) { animation: mp-fumaca 3.2s steps(8) -2.2s infinite !important; }

@@ -9,6 +9,7 @@ import { useLeitura } from '@/hooks/use-leitura';
 import { LivrosDaLeitura } from '@/components/livros-da-leitura';
 import { Atalhos } from '@/components/inicio/atalhos';
 import { Semana } from '@/components/inicio/semana';
+import { AnelInicio } from '@/components/pixel/anel-inicio';
 
 // Mesma curva de --ease-entrance (globals.css).
 const ENTRADA = [0.16, 1, 0.3, 1] as const;
@@ -90,8 +91,10 @@ export default function DashboardPage() {
     <div className="relative" style={{ zIndex: 1 }}>
       {/* Bloco de cor de ponta a ponta. No celular sobe por baixo do botão do
           menu (o main tem pt-12 para ele). */}
-      <header className="-mt-12 md:mt-0 bg-primary text-primary-foreground dark:bg-primary/20 dark:text-foreground" aria-labelledby="hoje-titulo">
-        <div className="max-w-6xl mx-auto px-4 md:px-10 pt-[4.5rem] pb-6 md:pt-14 md:pb-12 flex flex-col gap-5">
+      {/* Anéis e luz atrás do bloco (voto 1B, 12/11/2026); texto sempre claro sobre eles. */}
+      <header className="relative overflow-hidden -mt-12 md:mt-0 bg-primary text-white" aria-labelledby="hoje-titulo">
+        <AnelInicio />
+        <div className="relative max-w-6xl mx-auto px-4 md:px-10 pt-[4.5rem] pb-6 md:pt-14 md:pb-12 flex flex-col gap-5">
           {carregandoDia && !activeDay ? (
             <div role="status" aria-label="Carregando o cronograma de hoje" className="space-y-5">
               <div className="h-4 w-48 rounded-full bg-current opacity-20 motion-safe:animate-pulse" />
