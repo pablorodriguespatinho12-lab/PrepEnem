@@ -265,6 +265,12 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   velocidade × tempo") só DEPOIS da mesma conta com números (1 s, 2 s) e um caso
   do dia a dia (carro a 60 km/h por 2 h). Tabela "segundo a segundo" cuja última
   linha é a letra. O `aluno-do-zero` procura isso (tropeço 7).
+- **Antes da questão (Pablo, 12/11/2026: "ela ensinava usando velocidade média, que
+  eu não tinha estudado; coloca os exercícios antes"):** conteúdo que a questão cobra
+  e a aula do TEMA não ensina vira aula curta + 2 exercícios ANTES da explicação, na
+  aula "Não sei isso" (`data/revisao-final/antes-da-questao.json`, `lib/antes-da-questao.ts`).
+  Em 12/11: velocidade, velocidade média e aceleração em 8 questões de Física. Falta:
+  "força para fazer a curva" (balanço) e varrer Química, Biologia e Matemática.
 - **Passo em linhas (Pablo, 12/11/2026, foto do "Jeito rápido" da mangueira: "deixa
   o texto mais organizado e entendível"):** texto de passo acima de 200 letras vai
   em linhas separadas por `\n` (uma ideia por linha, até 170 letras cada); "A

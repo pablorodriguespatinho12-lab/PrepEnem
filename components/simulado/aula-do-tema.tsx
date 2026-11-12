@@ -6,6 +6,7 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { BookOpen, Check, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@/components/ui/dialog';
 import { aulaDoTema, type Degrau } from '@/lib/aulas-dia-2';
+import { antesDaQuestao, type Exercicio } from '@/lib/antes-da-questao';
 import { desenhoDoTema } from '@/lib/aulas-desenho';
 import { TelaDesenho, TelaProporcoes, TelaSentido } from '@/components/simulado/telas-desenho';
 import { TelaEstaQuestao, TelaPasso, useAulaDaQuestao } from '@/components/simulado/resolver-esta-questao';
@@ -36,6 +37,14 @@ export function AulaDoTema({ tema, questao, className }: { tema: string | null |
         ...(desenho.proporcoes.length ? [{ rotulo: 'Direta ou inversa', conteudo: <TelaProporcoes d={desenho} /> }] : []),
       ]
     : [];
+  // O que a questão cobra e a aula do tema não ensina: aula curta + exercícios (12/11/2026).
+  const antes: Tela[] = antesDaQuestao(questao?.id).flatMap((c) => [
+    { rotulo: `Antes: ${c.titulo}`, conteudo: <TelaPasso passo={c.aula} /> },
+    ...c.exercicios.map((e, i) => ({
+      rotulo: `Antes: ${c.titulo}, exercício ${i + 1}`,
+      conteudo: <QuestaoDegrau degrau={e} />,
+    })),
+  ]);
   const estaQuestao: Tela[] = !questao || !daQuestao
     ? []
     : [
@@ -44,9 +53,10 @@ export function AulaDoTema({ tema, questao, className }: { tema: string | null |
           ? daQuestao.passos.map((p) => ({ rotulo: `Esta questão: ${p.titulo}`, conteudo: <TelaPasso passo={p} /> }))
           : []),
       ];
-  const fimDaQuestao = conceito.length + estaQuestao.length - 1;
+  const fimDaQuestao = conceito.length + antes.length + estaQuestao.length - 1;
   const telas: Tela[] = [
     ...conceito,
+    ...antes,
     ...estaQuestao,
     ...(desenho ? [{ rotulo: 'Por que faz sentido', conteudo: <TelaSentido d={desenho} /> }] : []),
     { rotulo: 'Aula do conteúdo', listas: aula.aula },
@@ -160,13 +170,14 @@ export function AulaDoTema({ tema, questao, className }: { tema: string | null |
 }
 
 // Uma questão de nível mais alto do mesmo conteúdo: toca numa letra e vê a resolução.
-function QuestaoDegrau({ degrau }: { degrau: Degrau }) {
+// Também serve ao exercício do "Antes" (sem nível nem origem).
+function QuestaoDegrau({ degrau }: { degrau: Degrau | Exercicio }) {
   const [marcada, setMarcada] = useState<number | null>(null);
   const respondeu = marcada !== null;
 
   return (
     <div className="space-y-4">
-      {degrau.origem && <p className="type-caption text-muted-foreground">{degrau.origem}</p>}
+      {(degrau as Partial<Degrau>).origem && <p className="type-caption text-muted-foreground">{(degrau as Partial<Degrau>).origem}</p>}
       <div className="font-reading type-body whitespace-pre-line"><MathText text={degrau.enunciado} /></div>
       <div className="space-y-2">
         {degrau.alternativas.map((texto, i) => {

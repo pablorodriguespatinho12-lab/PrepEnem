@@ -46,7 +46,10 @@ siga. "Entendi tudo" é resposta válida.
    como é isso na vida real?".
 4. **Pré-requisito pulado.** O texto usa algo que o aluno das quatro operações
    não tem (fração, porcentagem, potência, isolar a incógnita) sem passar por
-   ele. Pergunte "e isso, como faz?" citando a conta.
+   ele. Pergunte "e isso, como faz?" citando a conta. Vale também para
+   CONTEÚDO de outro tema: a questão de "Dinâmica" cuja aula só ensina F = m × a
+   e a explicação usa velocidade média (Pablo, 12/11/2026: "eu não tinha estudado
+   isso ainda"). Pergunte "onde eu aprendi isso?" e diga qual conteúdo faltou.
 5. **Pegadinha não dita.** O enunciado traz um número que não entra na conta e
    a explicação não diz por quê. Pergunte "e o [número] do enunciado?".
 6. **Erro que não é o dele.** "Onde seu raciocínio desviou" descreve uma conta
