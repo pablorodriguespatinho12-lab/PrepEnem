@@ -4,6 +4,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Matemática", t: "Aritmética e Porcentagem", n: 128,
     aula: [
+      "Fração: 3/4 quer dizer dividir em 4 partes iguais e pegar 3. Exemplo: 3/4 de 40 = 40 ÷ 4 × 3 = 30.",
       "Porcentagem é uma fração de 100. 25% = 25 ÷ 100 = 0,25.",
       "Achar 25% de 80: 0,25 × 80 = 20.",
       "Aumentar 10%: multiplique por 1,10. Descontar 10%: multiplique por 0,90.",

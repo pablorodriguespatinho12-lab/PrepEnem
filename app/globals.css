@@ -924,7 +924,7 @@ html[data-imersivo] main { margin-left: 0 !important; padding-top: 0 !important;
 }
 .px-chip {
   font-family: var(--font-pixel), monospace; font-size: 20px; line-height: 1; letter-spacing: .02em;
-  background: hsl(var(--surface-1)); color: hsl(var(--foreground)); padding: 8px 12px; cursor: pointer;
+  background: hsl(var(--surface-1)); color: hsl(var(--foreground)); padding: 8px 14px; min-height: 44px; cursor: pointer;
   box-shadow: 0 -3px 0 0 hsl(var(--foreground) / .85), 0 3px 0 0 hsl(var(--foreground) / .85),
               -3px 0 0 0 hsl(var(--foreground) / .85), 3px 0 0 0 hsl(var(--foreground) / .85), 0 7px 0 0 hsl(var(--foreground) / .25);
   transition: transform .12s steps(2);

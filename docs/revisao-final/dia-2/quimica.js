@@ -4,6 +4,7 @@ window.DIA2 = (window.DIA2 || []).concat([
     m: "Química", t: "Química Orgânica", n: 51,
     aula: [
       "Química orgânica estuda os compostos de carbono. O carbono faz 4 ligações.",
+      "Hidrocarboneto: só tem carbono (C) e hidrogênio (H). Exemplo: o metano do gás de cozinha.",
       "Função orgânica é a família da molécula. Você reconhece por um pedaço dela.",
       "Álcool: tem OH preso a um carbono que só faz ligações simples (etanol). OH preso ao anel benzênico é fenol. Ácido carboxílico: tem COOH (vinagre). Éster: tem COO no meio da cadeia (aromas de fruta, gorduras). Amina: tem nitrogênio (N).",
       "Ácido + álcool → éster + água (esterificação). Gordura + base forte, como a soda cáustica → sabão (saponificação).",

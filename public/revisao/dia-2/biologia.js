@@ -4,6 +4,7 @@ window.DIA2 = (window.DIA2 || []).concat([
     m: "Biologia", t: "Ecologia", n: 54,
     aula: [
       "Cadeia alimentar: produtor (planta, faz o próprio alimento) → consumidor (come outro ser) → decompositor (fungos e bactérias, devolvem os nutrientes ao solo).",
+      "Quem come a planta é o consumidor primário (1º). Quem come esse bicho é o secundário (2º).",
       "A energia diminui a cada degrau da cadeia: só cerca de 10% passa para o próximo.",
       "Relações: competição (os dois disputam o mesmo recurso), predação (um come o outro), mutualismo (os dois ganham), parasitismo (um ganha, o outro perde).",
       "Espécie exótica é a trazida de fora. Sem inimigo natural, pode virar invasora e tomar o espaço das nativas.",

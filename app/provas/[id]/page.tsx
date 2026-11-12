@@ -138,7 +138,7 @@ export default function ProvaDetailPage() {
           initial={{ opacity: 0, x: -12 }}
           animate={{ opacity: 1, x: 0 }}
           onClick={() => router.push('/provas')}
-          className="flex items-center gap-2 type-meta text-muted-foreground hover:text-foreground t-colors mb-6"
+          className="flex items-center gap-2 type-meta text-muted-foreground hover:text-foreground t-colors mb-6 py-3 pr-3 -my-3"
         >
           <ChevronLeft className="w-4 h-4" />
           Voltar
@@ -350,7 +350,7 @@ export default function ProvaDetailPage() {
         initial={{ opacity: 0, x: -12 }}
         animate={{ opacity: 1, x: 0 }}
         onClick={() => router.push('/provas')}
-        className="flex items-center gap-2 type-meta text-muted-foreground hover:text-foreground t-colors mb-6"
+        className="flex items-center gap-2 type-meta text-muted-foreground hover:text-foreground t-colors mb-6 py-3 pr-3 -my-3"
       >
         <ChevronLeft className="w-4 h-4" />
         Voltar
