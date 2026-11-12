@@ -455,6 +455,11 @@ escolha, nível acima) estão em `calculo.md`, nesta pasta. **Leia antes de mexe
   reduced-motion também leva; o mesmo faltava na aula em desenho (água parada no
   PC dele) e foi corrigido no mesmo dia. Letra da alternativa em sans: sozinho,
   o "A" da Jersey 10 parece "Â".
+  **Site inteiro (mesmo dia, "literalmente tudo"):** o `AppLayout` põe o
+  `MundoPixel` no fundo de toda tela, com um véu `.mundo-veu` da cor da página a
+  84% por cima (texto cinza segue AA mesmo sobre o pinheiro mais escuro; a 78%
+  dava 4,1:1). Substituiu as partículas. A prova aberta tem o mundo dela, forte,
+  sem véu.
 - **Flashcard é a opção A, escolhida pelo Pablo em 05/10/2026** (entre A "flip
   firme" e B "revelar embaixo, pergunta fica na tela"): flip 3D de 0,42 s sem
   mola, pilha atrás, saída para o lado da resposta, Espaço vira e 1/2 respondem.

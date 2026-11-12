@@ -879,6 +879,9 @@ html [data-sonner-toaster][data-theme] {
 @keyframes mp-voar { from { transform: translateX(0); } to { transform: translateX(115vw); } }
 @keyframes mp-fumaca { 0% { transform: translate(0, 0) scale(1); opacity: 0; } 15% { opacity: .9; } 100% { transform: translate(calc(4 * var(--px)), calc(-16 * var(--px))) scale(2.4); opacity: 0; } }
 
+/* Véu sobre o mundo nas telas comuns: a serra aparece, o texto continua legível. */
+.mundo-veu { position: fixed; inset: 0; z-index: 0; pointer-events: none; background: hsl(var(--surface-0) / .84); }
+
 /* Tela cheia: some o menu, a prova ocupa tudo. */
 html[data-imersivo] [data-menu-lateral] { display: none !important; }
 html[data-imersivo] main { margin-left: 0 !important; padding-top: 0 !important; }
