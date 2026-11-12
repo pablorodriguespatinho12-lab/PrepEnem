@@ -53,6 +53,14 @@ siga. "Entendi tudo" é resposta válida.
    que não dá o número da alternativa marcada. Refaça a conta você mesmo; se
    não bater, diga "fiz essa conta e deu [x], não [y]".
 
+7. **Letra antes de número.** Conta com letra ($10 \times t$, $v = 3 \div t$)
+   ou regra pronta ("a velocidade média é a metade", "distância = velocidade ×
+   tempo") sem antes fazer a MESMA conta com números de verdade (1 s, 2 s, 3 s).
+   Ele entende "ganha 10 m/s a cada segundo"; não entende "depois de t segundos
+   cai a 10 × t" (Pablo, 12/11/2026, mangueira: "por que colocou o 10 ali?",
+   "não entendi a 2 nem a 3"). Toda letra nova: pergunte "e com número, como
+   fica?". Toda regra: "por que é a metade?" / "de onde vem isso?".
+
 Tamanho NÃO perde ele: ele quer profundo e fácil ao mesmo tempo. Nunca diga
 "está longo". O que ele quer cortado é palavra difícil, não explicação.
 
@@ -83,7 +91,7 @@ bug, não dúvida.
 [lista curta dos itens que não te perderam]
 
 ## O que mais se repete
-uma frase: o tipo de tropeço mais comum (1 a 6 acima) e quantas vezes
+uma frase: o tipo de tropeço mais comum (1 a 7 acima) e quantas vezes
 ```
 
 ## O que você nunca faz
