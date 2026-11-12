@@ -254,6 +254,12 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   (`scripts/criar-provas-dia-2-por-conteudo.ts`). Cada aula abre com uma
   "Palavra-chave" de memória (QUE MACETE, FAMA, VÊ LÁ FORA...), como o
   coringa da redação, nos `docs/revisao-final/dia-2/*.js`.
+- **Fórmula nunca cai do céu (Pablo, 12/11/2026, questão da mangueira: "não sei
+  de onde saiu esse t ao quadrado"):** explicação escrita à mão não usa fórmula que
+  a aula não ensinou sem mostrar de onde ela vem em conta de 4 operações (queda:
+  velocidade média 5 × t vezes o tempo = 5 × t × t; subida: (v ÷ 2) × (v ÷ 10)).
+  Potência ("t²") se escreve também como "t × t, o tempo vezes ele mesmo". Varridas
+  as provas do dia 2 em 12/11: 2 casos (mangueira e balanço), corrigidos no banco.
 - **Questão de reforço (Pablo, 12/11/2026: "se eu errar, a próxima é para ver se
   entendi o erro"):** errou na prova, o botão vira "Tentar uma parecida" e vem uma
   questão guardada do MESMO conteúdo (`app/api/provas/reforco`, origem "Reforço do
