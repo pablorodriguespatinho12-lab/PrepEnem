@@ -83,6 +83,20 @@ const texto = (v: unknown, max: number, maxFrases = Infinity): string | null => 
   if (!saida && limpas[0]) saida = limpas[0].slice(0, max).replace(/\s+\S*$/, '') + '…';
   return saida || null;
 };
+/* Passo escrito em linhas (uma ideia por linha, Pablo, 12/11/2026): limpa cada
+   linha e para na que estoura o teto. Antes o texto() juntava tudo com espaço
+   e a quebra sumia no banco. */
+const textoEmLinhas = (v: unknown, max: number): string | null => {
+  if (typeof v !== 'string') return null;
+  const linhas: string[] = [];
+  for (const bruta of v.split('\n')) {
+    const linha = texto(bruta, max);
+    if (!linha) continue;
+    if ([...linhas, linha].join('\n').length > max) break;
+    linhas.push(linha);
+  }
+  return linhas.length ? linhas.join('\n') : texto(v, max);
+};
 /* "Onde seu raciocínio desviou" errado é pior que nenhum: o aluno refaz a conta
    e perde a confiança na explicação inteira. Na jornada de 18/10/2026, 2 de 7
    chutavam ("Provavelmente calculou 60% de 30 como 10", que dá 18; "√8 ≈ 2,8,
@@ -171,7 +185,7 @@ export function validarExplicacao(bruto: unknown, materia?: string): Explicacao 
   const e = objeto(bruto);
   const passos = lista(e.passos).map(objeto)
     .filter((p) => !temCalculo(p))
-    .map((p) => ({ titulo: texto(p.titulo, 80), texto: texto(p.texto, 900), visual: visualDaMateria(validarVisual(p.visual), materia) }))
+    .map((p) => ({ titulo: texto(p.titulo, 80), texto: textoEmLinhas(p.texto, 900), visual: visualDaMateria(validarVisual(p.visual), materia) }))
     .filter((p): p is PassoExplicacao => p.titulo !== null && p.texto !== null)
     .slice(0, MAX_PASSOS);
   const ideia = texto(e.ideia, 300, 2);

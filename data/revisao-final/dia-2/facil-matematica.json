@@ -444,7 +444,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, R$ 2.100,00. A (R$ 100,00) é só o aumento. C (R$ 2.005,00) soma 5 reais, mas 5% de 2.000 são 100 reais. D (R$ 2.500,00) trata 5% como 500 reais. E (R$ 1.900,00) tira em vez de somar: isso seria desconto.",
+          "texto": "Letra B, R$ 2.100,00.\nA (R$ 100,00): é só o aumento.\nC (R$ 2.005,00): soma 5 reais, mas 5% de 2.000 são 100 reais.\nD (R$ 2.500,00): trata 5% como 500 reais.\nE (R$ 1.900,00): tira em vez de somar. Isso seria desconto.",
           "visual": null
         }
       ],
@@ -541,7 +541,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Primeiro, divida os dois números por 15: os de óculos são 1 de cada 4 alunos. Depois, para chegar a \"de cada 100\", veja que 4 × 25 = 100: multiplique os dois por 25, e 1 × 25 = 25. Ou seja, um quarto de 100 é 100 ÷ 4 = 25.",
+          "texto": "Primeiro, divida os dois números por 15: os de óculos são 1 de cada 4 alunos.\nPara chegar a \"de cada 100\", veja que 4 × 25 = 100.\nMultiplique os dois por 25: 1 × 25 = 25.\nOu seja, um quarto de 100 é 100 ÷ 4 = 25.",
           "visual": {
             "tipo": "tabela",
             "cabecalho": [
@@ -570,7 +570,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, 25%. A (4%) divide ao contrário: 60 ÷ 15. B (15%) copia o número de alunos, mas 15 de 60 não é 15 de 100. C (45%) é 60 − 15, quantos não usam, e ainda sem virar %. E (75%) é a porcentagem dos que NÃO usam óculos.",
+          "texto": "Letra D, 25%.\nA (4%): divide ao contrário, 60 ÷ 15.\nB (15%): copia o número de alunos, mas 15 de 60 não é 15 de 100.\nC (45%): é 60 − 15, quantos não usam, e ainda sem virar %.\nE (75%): é a porcentagem dos que NÃO usam óculos.",
           "visual": null
         }
       ],
@@ -801,7 +801,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, 90 pães. A (34) soma 4 aos 30, mas proporção é de multiplicar. B (10) divide 30 por 3, e mais farinha não pode dar menos pão. C (60) só dobra, mas 6 kg é o triplo de 2 kg. D (180) faz 30 × 6, mas os 30 pães são de 2 kg, não de 1 kg.",
+          "texto": "Letra E, 90 pães.\nA (34): soma 4 aos 30, mas proporção é de multiplicar.\nB (10): divide 30 por 3, e mais farinha não pode dar menos pão.\nC (60): só dobra, mas 6 kg é o triplo de 2 kg.\nD (180): faz 30 × 6, mas os 30 pães são de 2 kg, não de 1 kg.",
           "visual": null
         }
       ],
@@ -916,7 +916,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, 180 km. B (20 km) divide, mas mais tempo andando dá mais distância. C (63 km) soma horas com quilômetros. D (57 km) tira 3 de 60, também misturando horas e km. E (1 800 km) tem um zero a mais: 60 × 3 é 180.",
+          "texto": "Letra A, 180 km.\nB (20 km): divide, mas mais tempo andando dá mais distância.\nC (63 km): soma horas com quilômetros.\nD (57 km): tira 3 de 60, também misturando horas e km.\nE (1 800 km): tem um zero a mais. 60 × 3 é 180.",
           "visual": null
         }
       ],
@@ -1462,7 +1462,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, R$ 25,00. A (R$ 20,00) esquece a parte fixa. C (R$ 70,00) cobra os 5 reais a cada km: (5 + 2) × 10. D (R$ 17,00) soma 5 + 2 + 10 sem multiplicar pelos km. E (R$ 50,00) faz 5 × 10, trocando o fixo pelo preço do km.",
+          "texto": "Letra B, R$ 25,00.\nA (R$ 20,00): esquece a parte fixa.\nC (R$ 70,00): cobra os 5 reais a cada km, (5 + 2) × 10.\nD (R$ 17,00): soma 5 + 2 + 10 sem multiplicar pelos km.\nE (R$ 50,00): faz 5 × 10, trocando o fixo pelo preço do km.",
           "visual": null
         }
       ],
@@ -1574,7 +1574,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, 4. A (−4) troca o sinal: 2 × (−4) − 8 dá −16. B (8) para antes de dividir por 2: 2 × 8 − 8 dá 8. C (16) multiplica 8 por 2 em vez de dividir: 2 × 16 − 8 dá 24. E (6) faz 8 − 2: 2 × 6 − 8 dá 4, não zero.",
+          "texto": "Letra D, 4.\nA (−4): troca o sinal. 2 × (−4) − 8 dá −16.\nB (8): para antes de dividir por 2. 2 × 8 − 8 dá 8.\nC (16): multiplica 8 por 2 em vez de dividir. 2 × 16 − 8 dá 24.\nE (6): faz 8 − 2. 2 × 6 − 8 dá 4, não zero.",
           "visual": null
         }
       ],
@@ -1913,7 +1913,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, 10 cm. A (14) soma os lados, mas um lado é sempre menor que os outros dois juntos. B (48) multiplica 6 × 8. C (100) para antes da raiz: 100 é a hipotenusa ao quadrado. D (7) é a metade de 6 + 8, menor que o cateto de 8, e a hipotenusa é o lado maior.",
+          "texto": "Letra E, 10 cm.\nA (14): soma os lados, mas um lado é sempre menor que os outros dois juntos.\nB (48): multiplica 6 × 8.\nC (100): para antes da raiz. 100 é a hipotenusa ao quadrado.\nD (7): é a metade de 6 + 8. É menor que o cateto de 8, e a hipotenusa é o lado maior.",
           "visual": null
         }
       ],

@@ -12,6 +12,7 @@ import { VERSAO_EXPLICACAO } from '../lib/tutor/pronta';
 // porquê (d2-facil-mat-01) e P = U × i sem origem (d2-facil-nat-01).
 // Sem --gravar só mostra o antes e o depois. Uso:
 //   DB_CONFIRMED=1 npx tsx scripts/atualizar-explicacoes-dia-2.ts <id> [<id>...] [--gravar]
+//   DB_CONFIRMED=1 npx tsx scripts/atualizar-explicacoes-dia-2.ts --todas [--gravar]
 
 const prisma = new PrismaClient();
 const PASTA = join(process.cwd(), 'data/revisao-final/dia-2');
@@ -25,7 +26,8 @@ const textos = (c: unknown): string[] =>
   ((c as { passos?: Passo[] })?.passos ?? []).map((p) => `${p.titulo}: ${p.texto}`);
 
 async function main() {
-  const ids = process.argv.slice(2).filter((a) => !a.startsWith('--'));
+  // --todas: as 160 questões das 4 provas (passos em linhas, 12/11/2026).
+  const ids = process.argv.includes('--todas') ? todas.map((q) => q.id) : process.argv.slice(2).filter((a) => !a.startsWith('--'));
   const gravar = process.argv.includes('--gravar');
   if (ids.length === 0) throw new Error('Passe ao menos um id de questão');
 

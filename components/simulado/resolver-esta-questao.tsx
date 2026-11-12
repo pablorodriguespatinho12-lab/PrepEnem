@@ -84,9 +84,16 @@ export function TelaEstaQuestao({ aula }: { aula: AulaDaQuestao }) {
 export function TelaPasso({ passo }: { passo: PassoExplicacao }) {
   return (
     <div className="space-y-4">
-      <div className="font-reading type-lead"><MathText text={passo.texto} /></div>
+      {/* Uma ideia por linha, com respiro entre elas (Pablo, 12/11/2026: o passo
+          vinha num bloco de 8 linhas e ele não entendia). Texto longo desce de
+          type-lead para type-body, para a figura não encolher. */}
+      <div className={`font-reading space-y-2 ${passo.texto.length > 220 ? 'type-body' : 'type-lead'}`}>
+        {passo.texto.split('\n').filter((l) => l.trim()).map((linha, i) => (
+          <MathText key={i} text={linha} />
+        ))}
+      </div>
       {passo.visual && (
-        <div className="h-[min(18rem,38dvh)] rounded-[var(--radius-control)] border border-border bg-[hsl(var(--surface-2))] p-2">
+        <div className="passo-visual h-[min(18rem,38dvh)] rounded-[var(--radius-control)] border border-border bg-[hsl(var(--surface-2))] p-2">
           <CaberNaCaixa>
             <VisualDesenho visual={passo.visual} semMoldura />
           </CaberNaCaixa>

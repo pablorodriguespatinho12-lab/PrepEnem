@@ -27,7 +27,7 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "Admissões e desligamentos só mostram de onde saiu o 28 900. O que importa: em 2013 foram 28 900 vagas, e isso já é o número DEPOIS de uma queda de 75%. A pergunta é quantas vagas havia em 2012, antes da queda.",
+          "texto": "Admissões e desligamentos só mostram de onde saiu o 28 900.\nO que importa: em 2013 foram 28 900 vagas, já DEPOIS de uma queda de 75%.\nA pergunta é quantas vagas havia em 2012, antes da queda.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Os dados",
@@ -133,7 +133,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C, 115 600. A (16 514) faz 28 900 ÷ 1,75, como se 2013 fosse 75% MAIOR que 2012. B (86 700) é o tamanho da queda, não o número de vagas de 2012. D (441 343) é um quarto dos desligamentos, e E (448 568) é um quarto das admissões: esses números só serviam de contexto.",
+          "texto": "Letra C, 115 600.\nA (16 514): faz 28 900 ÷ 1,75, como se 2013 fosse 75% MAIOR que 2012.\nB (86 700): é o tamanho da queda, não o número de vagas de 2012.\nD (441 343): é um quarto dos desligamentos; esse número só servia de contexto.\nE (448 568): é um quarto das admissões; esse número também só servia de contexto.",
           "visual": null
         }
       ],
@@ -179,7 +179,7 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "Há três preços: o promocional (R$ 1 000, só em dinheiro), o normal (10% acima) e o do cartão (2% abaixo do normal). A cliente achou que o cartão sairia 1 000 + 8%. A pergunta é a diferença entre o preço da loja e o da cliente.",
+          "texto": "Há três preços: o promocional (R$ 1 000, só em dinheiro), o normal (10% acima) e o do cartão (2% abaixo do normal).\nA cliente achou que o cartão sairia 1 000 + 8%.\nA pergunta é a diferença entre o preço da loja e o da cliente.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Os dados",
@@ -285,7 +285,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, R$ 2,00 menor. B (R$ 100,00 menor) usa só os 10% de 1 000. C (R$ 200,00 menor) não sai de nenhuma conta com os dados: a diferença real é de 2 reais. D (R$ 42,00 maior) erra o sentido: a loja cobra menos que a cliente pensou, não mais. E (R$ 80,00 maior) são só os 8% de 1 000, e não a diferença entre as duas contas.",
+          "texto": "Letra A, R$ 2,00 menor.\nB (R$ 100,00 menor): usa só os 10% de 1 000.\nC (R$ 200,00 menor): não sai de nenhuma conta com os dados; a diferença real é de 2 reais.\nD (R$ 42,00 maior): erra o sentido; a loja cobra menos que a cliente pensou, não mais.\nE (R$ 80,00 maior): são só os 8% de 1 000, e não a diferença entre as duas contas.",
           "visual": null
         }
       ],
@@ -386,7 +386,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Calcule o gasto total de cada avião e divida um pelo outro. A: 200 × 0,02 = 4 litros por km; 4 × 2 000 = 8 000. B: 220 × 0,018 = 3,96; 3,96 × 2 000 = 7 920. Em 7 920 de 8 000 faltam 80, que é 1% de 8 000: o B gasta 99%.",
+          "texto": "Calcule o gasto total de cada avião e divida um pelo outro.\nA: 200 × 0,02 = 4 litros por km; no voo, 4 × 2 000 = 8 000.\nB: 220 × 0,018 = 3,96; no voo, 3,96 × 2 000 = 7 920.\nEm 7 920 de 8 000 faltam 80, que é 1% de 8 000: o B gasta 99%.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Combustível no voo",
@@ -437,7 +437,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, 1% menor. A (10% menor) olha só o consumo por pessoa e esquece que o B leva mais gente. C (igual) acha que +10% e −10% se cancelam, mas 1,10 × 0,90 = 0,99. D (1% maior) troca o sentido: o B gasta menos. E (11% maior) não sai de nenhuma conta com os dados: o B gasta menos, não mais.",
+          "texto": "Letra B, 1% menor.\nA (10% menor): olha só o consumo por pessoa e esquece que o B leva mais gente.\nC (igual): acha que +10% e −10% se cancelam, mas 1,10 × 0,90 = 0,99.\nD (1% maior): troca o sentido; o B gasta menos.\nE (11% maior): não sai de nenhuma conta com os dados; o B gasta menos, não mais.",
           "visual": null
         }
       ],
@@ -627,7 +627,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, operário I. B (II) acaba rápido, mas a hora cara dá R$ 1 080. C (III) dá R$ 1 040 com o transporte. D (IV) tem a hora mais barata, mas trabalha 9 horas: R$ 1 000. E (V) também cobra pouco por hora, mas leva 10 horas: R$ 1 100.",
+          "texto": "Letra A, operário I: 120 × 8 = R$ 960.\nB (II): acaba rápido, mas a hora cara dá R$ 1 080.\nC (III): dá R$ 1 040 com o transporte.\nD (IV): cobra R$ 110 por hora, mas trabalha 9 horas e paga R$ 10 de transporte: R$ 1 000.\nE (V): também cobra pouco por hora, mas leva 10 horas: R$ 1 100.",
           "visual": null
         }
       ],
@@ -802,7 +802,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C, 7. A (0) não sai da regra: daria 0 só se o resto fosse 11, e o resto de uma divisão por 11 vai até 10. B (6) dá ao 1 o peso 5, da 1ª posição. D (8) usa os pesos na ordem errada: o 1 vezes 3. E (9) dá ao 1 o peso 2, da última posição.",
+          "texto": "Letra C, 7.\nA (0): não sai da regra; daria 0 só se o resto fosse 11, e o resto de uma divisão por 11 vai até 10.\nB (6): dá ao 1 o peso 5, da 1ª posição.\nD (8): usa os pesos na ordem errada, o 1 vezes 3.\nE (9): dá ao 1 o peso 2, da última posição.",
           "visual": null
         }
       ],
@@ -882,7 +882,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro passe tudo para minutos: 1 dia tem 24 horas e 1 hora tem 60 minutos, então 1 dia tem 24 × 60 = 1 440 minutos. Em 1 dia cabem 1 440 ÷ 48 = 30 jatos (48 × 3 = 144, então 48 × 30 = 1 440). Em 60 dias: 30 × 60 = 1 800 jatos.",
+          "texto": "Primeiro passe tudo para minutos.\n1 dia tem 24 horas e 1 hora tem 60 minutos.\nEntão 1 dia tem 24 × 60 = 1 440 minutos.\nEm 1 dia cabem 1 440 ÷ 48 = 30 jatos (48 × 3 = 144, então 48 × 30 = 1 440).\nEm 60 dias: 30 × 60 = 1 800 jatos.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Contando os jatos",
@@ -907,7 +907,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Número de jatos = minutos totais ÷ 48. Depois, mL por jato = 360 ÷ jatos. De cabeça: 360 ÷ 1 800, corte um zero dos dois, 36 ÷ 180; e 36 cabe 5 vezes em 180, então dá 1 ÷ 5 = 0,2. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Número de jatos = minutos totais ÷ 48.\nDepois, mL por jato = 360 ÷ jatos.\nDe cabeça: 360 ÷ 1 800. Corte um zero dos dois: 36 ÷ 180.\n36 cabe 5 vezes em 180, então dá 1 ÷ 5 = 0,2.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Quanto sai por jato",
@@ -958,7 +958,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, 0,200 mL. A (0,125) não sai de nenhuma conta com os dados. C (4,800) é 48 ÷ 10, que mistura minutos com mL. D (6,000) é quanto sai por DIA, não por jato. E (12,000) divide 360 por 30, os jatos de um dia, em vez de dividir pelos jatos dos 60 dias.",
+          "texto": "Letra B, 0,200 mL.\nA (0,125): não sai de nenhuma conta com os dados.\nC (4,800): é 48 ÷ 10, que mistura minutos com mL.\nD (6,000): é quanto sai por DIA, não por jato.\nE (12,000): divide 360 por 30, os jatos de um dia, em vez de dividir pelos jatos dos 60 dias.",
           "visual": null
         }
       ],
@@ -1104,7 +1104,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, 2,5. B (10,0) acha que o ano de Z é o DOBRO do nosso (730 ÷ 73), mas cabem 2 anos de Z em 1 nosso: ele é a metade. C (730,0) é 365 × 2 e nem divide pelo dia de Z. D (13 322,5) faz 182,5 × 73: multiplica onde era para dividir. E (53 290,0) faz 730 × 73, os dois erros juntos.",
+          "texto": "Letra A, 2,5.\nB (10,0): acha que o ano de Z é o DOBRO do nosso (730 ÷ 73), mas cabem 2 anos de Z em 1 nosso: ele é a metade.\nC (730,0): é 365 × 2 e nem divide pelo dia de Z.\nD (13 322,5): faz 182,5 × 73, multiplica onde era para dividir.\nE (53 290,0): faz 730 × 73, os dois erros juntos.",
           "visual": null
         }
       ],
@@ -1154,7 +1154,7 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "Na planta, o espaço da geladeira tem 3,8 cm de altura e 1,6 cm de largura, na escala 1 : 50. A geladeira precisa de 10 cm livres em cima e nos dois lados. A pergunta é a maior altura e a maior largura dela.",
+          "texto": "Na planta, o espaço da geladeira tem 3,8 cm de altura e 1,6 cm de largura, na escala 1 : 50.\nA geladeira precisa de 10 cm livres em cima e nos dois lados.\nA pergunta é a maior altura e a maior largura dela.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Os dados",
@@ -1184,7 +1184,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Passe para o real multiplicando por 50. De cabeça: 3,8 × 100 = 380, e a metade é 190 cm; 1,6 × 100 = 160, e a metade é 80 cm. Embaixo não tem folga, a geladeira fica no chão. Em cima sai 10 cm. Na largura saem 10 cm da esquerda e 10 cm da direita.",
+          "texto": "Passe para o real multiplicando por 50.\nDe cabeça: 3,8 × 100 = 380, e a metade é 190 cm.\n1,6 × 100 = 160, e a metade é 80 cm.\nEmbaixo não tem folga: a geladeira fica no chão. Em cima sai 10 cm.\nNa largura saem 10 cm da esquerda e 10 cm da direita.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Onde vai folga",
@@ -1265,7 +1265,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, 1,80 e 0,60. B (1,80 e 0,70) tira a folga de um lado só. C (1,90 e 0,80) esquece as folgas e dá o tamanho do espaço inteiro. D (2,00 e 0,90) e E (2,00 e 1,00) somam as folgas em vez de tirar, e a geladeira não caberia.",
+          "texto": "Letra A, 1,80 e 0,60.\nB (1,80 e 0,70): tira a folga de um lado só.\nC (1,90 e 0,80): esquece as folgas e dá o tamanho do espaço inteiro.\nD (2,00 e 0,90): soma as folgas em vez de tirar, e a geladeira não caberia.\nE (2,00 e 1,00): também soma as folgas em vez de tirar.",
           "visual": null
         }
       ],
@@ -1373,7 +1373,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ache o novo salário do doutor e compare com o de hoje. No quadro, 40x quer dizer 40 × x. Dos 1 224 000 tire os 600 000 dos mestres: sobram 624 000. Dividido por 40: 624 ÷ 4 = 156, mais os zeros, 15 600. E 15 600 ÷ 12 000 = 1,30, porque 12 000 + 30% (3 600) = 15 600.",
+          "texto": "Ache o novo salário do doutor e compare com o de hoje.\nNo quadro, 40x quer dizer 40 × x.\nDos 1 224 000 tire os 600 000 dos mestres: sobram 624 000.\nDividido por 40: 624 ÷ 4 = 156, mais os zeros, 15 600.\nE 15 600 ÷ 12 000 = 1,30, porque 12 000 + 30% (3 600) = 15 600.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Salário máximo do doutor",
@@ -1434,7 +1434,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, 30%. A (14,4%) cabe no limite, mas não é o máximo: a média ficaria em R$ 11 491,20. B (20,7%) faz a média simples de um mestre e um doutor, como se houvesse o mesmo número de cada. C (22,0%) também cabe, mas não é o máximo: média de R$ 11 856. E (37,5%) passa do limite: a média iria a R$ 12 600.",
+          "texto": "Letra D, 30%.\nA (14,4%): cabe no limite, mas não é o máximo; a média ficaria em R$ 11 491,20.\nB (20,7%): faz a média simples de um mestre e um doutor, como se houvesse o mesmo número de cada.\nC (22,0%): também cabe, mas não é o máximo; a média fica em R$ 11 856.\nE (37,5%): passa do limite; a média iria a R$ 12 600.",
           "visual": null
         }
       ],
@@ -1527,7 +1527,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Escreva a condição e descubra a média que deixa o CV da nova igual a 0,1. No quadro, < quer dizer \"menor que\" e > quer dizer \"maior que\". Dividir por 0,1 é o mesmo que multiplicar por 10: 1,5 ÷ 0,1 = 15. Qualquer média acima disso serve.",
+          "texto": "Escreva a condição e descubra a média que deixa o CV da nova igual a 0,1.\nNo quadro, < quer dizer \"menor que\" e > quer dizer \"maior que\".\nDividir por 0,1 é o mesmo que multiplicar por 10: 1,5 ÷ 0,1 = 15.\nQualquer média acima disso serve.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Média mínima da nova ração",
@@ -1587,7 +1587,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, 15,0. A (5,0) faz 0,5 ÷ 0,1, usando só o 0,5 kg de desvio a mais. B (9,5) tira esse 0,5 da média. C (10,0) mantém a média de antes, mas aí o CV da nova fica 0,15, MAIOR. D (10,5) soma o 0,5 à média, conta que não tem sentido.",
+          "texto": "Letra E, 15,0.\nA (5,0): faz 0,5 ÷ 0,1, usando só o 0,5 kg de desvio a mais.\nB (9,5): tira esse 0,5 da média.\nC (10,0): mantém a média de antes, mas aí o CV da nova fica 0,15, MAIOR.\nD (10,5): soma o 0,5 à média, conta que não tem sentido.",
           "visual": null
         }
       ],
@@ -1702,7 +1702,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Teste o número de dardos até a chance de pontuar chegar a 0,9. Com 3: 1/8 = 1 ÷ 8 = 0,125, e 1 − 0,125 = 0,875. Com 4: 1/16 é a metade de 0,125, ou 0,0625, e 1 − 0,0625 = 0,9375. No quadro, ≥ quer dizer \"maior ou igual\".",
+          "texto": "Teste o número de dardos até a chance de pontuar chegar a 0,9.\nCom 3: 1/8 = 1 ÷ 8 = 0,125, e 1 − 0,125 = 0,875.\nCom 4: 1/16 é a metade de 0,125, ou 0,0625, e 1 − 0,0625 = 0,9375.\nNo quadro, ≥ quer dizer \"maior ou igual\".",
           "visual": {
             "tipo": "quadro",
             "titulo": "Menor número de dardos",
@@ -1914,7 +1914,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A. B (d·s) calcula a taxa sobre UMA diária, mas ela é sobre o total das diárias (d·n·s). C (d + L + s) esquece o número de diárias e ainda soma a taxa solta. D (d·n·s + L) cobra a taxa e esquece de cobrar as próprias diárias. E (+ s) soma a porcentagem solta, sem dizer de quê.",
+          "texto": "Letra A.\nB (d·s): calcula a taxa sobre UMA diária, mas ela é sobre o total das diárias (d·n·s).\nC (d + L + s): esquece o número de diárias e ainda soma a taxa solta.\nD (d·n·s + L): cobra a taxa e esquece de cobrar as próprias diárias.\nE (+ s): soma a porcentagem solta, sem dizer de quê.",
           "visual": null
         }
       ],
@@ -1992,7 +1992,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Troque o raio pela metade e a temperatura pelo dobro. O traço quer dizer dividir: 1/2 é metade. O raio ao quadrado: (1/2) × (1/2) = 1/4, um quarto (dividir por 4). A temperatura à quarta: 2 × 2 × 2 × 2 = 16.",
+          "texto": "Troque o raio pela metade e a temperatura pelo dobro.\nO traço quer dizer dividir: 1/2 é metade.\nO raio ao quadrado: (1/2) × (1/2) = 1/4, um quarto (dividir por 4).\nA temperatura à quarta: 2 × 2 × 2 × 2 = 16.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Efeito de cada mudança",
@@ -2069,7 +2069,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, LE = 4LF. A (LF/2) usa só a metade do raio, sem o quadrado e sem a temperatura. B (LF/4) olha só o raio e esquece a temperatura. C (igual) acha que metade e dobro se anulam, mas cada um tem uma potência diferente. E (8LF) faz 2⁴ como 2 × 4 = 8 e ainda esquece o raio; o certo é 2 × 2 × 2 × 2 = 16.",
+          "texto": "Letra D, LE = 4LF.\nA (LF/2): usa só a metade do raio, sem o quadrado e sem a temperatura.\nB (LF/4): olha só o raio e esquece a temperatura.\nC (igual): acha que metade e dobro se anulam, mas cada um tem uma potência diferente.\nE (8LF): faz 2⁴ como 2 × 4 = 8 e ainda esquece o raio; o certo é 2 × 2 × 2 × 2 = 16.",
           "visual": null
         }
       ],
@@ -2119,7 +2119,7 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "O modelo dá o número de infectados p em cada mês t. A pergunta é qual proposta cobre o mês com MAIS infectados, o pico do morro. Nas propostas, 5 ≤ t ≤ 6 quer dizer \"do mês 5 ao mês 6\" (≤: menor ou igual).",
+          "texto": "O modelo dá o número de infectados p em cada mês t.\nA pergunta é qual proposta cobre o mês com MAIS infectados, o pico do morro.\nNas propostas, 5 ≤ t ≤ 6 quer dizer \"do mês 5 ao mês 6\" (≤: menor ou igual).",
           "visual": {
             "tipo": "grafico",
             "titulo": "Infectados por mês",
@@ -2242,7 +2242,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C, proposta III (meses 5 e 6), que inclui o mês 5. A (I, meses 1 e 2) pega o começo do ano, quando os casos ainda sobem. B (II, meses 3 e 4) para antes do pico. D (IV, meses 7 a 9) começa depois do pico. E (V, meses 10 a 12) lê o 10 de 10t como o mês do pico.",
+          "texto": "Letra C, proposta III (meses 5 e 6), que inclui o mês 5.\nA (I, meses 1 e 2): pega o começo do ano, quando os casos ainda sobem.\nB (II, meses 3 e 4): para antes do pico.\nD (IV, meses 7 a 9): começa depois do pico.\nE (V, meses 10 a 12): lê o 10 de 10t como o mês do pico.",
           "visual": null
         }
       ],
@@ -2292,7 +2292,7 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "O contêiner terá comprimento e largura dobrados, com a mesma altura. As paredes são pintadas por dentro e por fora; o piso, só por dentro. A pergunta é quantas vezes mais tinta vai para paredes e piso.",
+          "texto": "O contêiner terá comprimento e largura dobrados, com a mesma altura.\nAs paredes são pintadas por dentro e por fora; o piso, só por dentro.\nA pergunta é quantas vezes mais tinta vai para paredes e piso.",
           "visual": {
             "tipo": "tabela",
             "titulo": "O que muda",
@@ -2402,7 +2402,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, fornecedor II. A (I) dá o dobro para as duas e esquece que o piso cresce nos dois sentidos. C (III) dá 4 vezes para as paredes, esquecendo que a altura não mudou. D (IV) troca paredes e piso. E (V, 8 vezes) faz 2 × 2 × 2, como se a altura também tivesse dobrado; mas a altura ficou igual, e tinta cobre área, não espaço.",
+          "texto": "Letra B, fornecedor II.\nA (I): dá o dobro para as duas e esquece que o piso cresce nos dois sentidos.\nC (III): dá 4 vezes para as paredes, esquecendo que a altura não mudou.\nD (IV): troca paredes e piso.\nE (V, 8 vezes): faz 2 × 2 × 2, como se a altura também tivesse dobrado; mas ela ficou igual, e tinta cobre área, não espaço.",
           "visual": null
         }
       ],
@@ -2498,7 +2498,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "O fundo é largura × comprimento. Duas paredes medem profundidade × largura; as outras duas, profundidade × comprimento. Some tudo. Os 90 000 L são 90 m³ em todos, porque cada m³ (caixa de 1 m de lado) guarda 1 000 L.",
+          "texto": "O fundo é largura × comprimento.\nDuas paredes medem profundidade × largura; as outras duas, profundidade × comprimento. Some tudo.\nOs 90 000 L são 90 m³ em todos, porque cada m³ (caixa de 1 m de lado) guarda 1 000 L.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Áreas (m²)",
@@ -2571,7 +2571,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Para guardar a mesma água, a forma mais \"redonda\" (medidas parecidas entre si) gasta menos superfície. O II (2, 5, 9) é o mais equilibrado; o I (1,8, 2, 25) é um corredor comprido e gasta muito em parede.",
+          "texto": "Para guardar a mesma água, a forma mais \"redonda\" (medidas parecidas entre si) gasta menos superfície.\nO II (2, 5, 9) é o mais equilibrado.\nO I (1,8, 2, 25) é um corredor comprido e gasta muito em parede.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Mesma água, superfícies diferentes",
@@ -2596,7 +2596,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, projeto II. A (I) é um corredor comprido e gasta 147,2 m², muito em parede. C (III) é a mais rasa, mas o fundo de 90 m² pesa: 132 m². D (IV) gasta 117 m². E (V) chega perto, com 111 m², mas ainda gasta 10 m² a mais.",
+          "texto": "Letra B, projeto II.\nA (I): é um corredor comprido e gasta 147,2 m², muito em parede.\nC (III): é a mais rasa, mas o fundo de 90 m² pesa: 132 m².\nD (IV): gasta 117 m².\nE (V): chega perto, com 111 m², mas ainda gasta 10 m² a mais.",
           "visual": null
         }
       ],
@@ -2710,7 +2710,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Volume do cilindro = fundo × altura. Sabendo o volume e o fundo, a altura sai da divisão: 84 ÷ 18,75. Multiplique os dois por 4 para sumir a vírgula: 336 ÷ 75. 75 × 4 = 300, sobram 36, e 36 ÷ 75 = 0,48. Dá 4,48. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo. O ponto · quer dizer vezes.",
+          "texto": "Volume do cilindro = fundo × altura.\nSabendo o volume e o fundo, a altura sai da divisão: 84 ÷ 18,75.\nMultiplique os dois por 4 para sumir a vírgula: 336 ÷ 75.\n75 × 4 = 300, sobram 36, e 36 ÷ 75 = 0,48. Dá 4,48.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo. O ponto · quer dizer vezes.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Altura do reservatório",
@@ -2762,7 +2762,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, 4,48 m. A (1,12) usa o diâmetro (5) em vez do raio (2,5) na área do fundo. B (3,10) e C (4,35) não saem de nenhuma conta com os dados: com elas o reservatório guardaria cerca de 58 m³ e 82 m³, e faltaria água. E (5,60) multiplica o raio por 2 em vez de multiplicar o raio por ele mesmo.",
+          "texto": "Letra D, 4,48 m.\nA (1,12): usa o diâmetro (5) em vez do raio (2,5) na área do fundo.\nB (3,10): não sai de nenhuma conta com os dados; o reservatório guardaria cerca de 58 m³, e faltaria água.\nC (4,35): também não sai de conta nenhuma; guardaria cerca de 82 m³, e faltaria água.\nE (5,60): multiplica o raio por 2 em vez de multiplicar o raio por ele mesmo.",
           "visual": null
         }
       ],
@@ -2940,7 +2940,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, modelo V. A (I) guarda 1, a metade do V. B (II) dobra a profundidade e corta a área pela metade: volta a 1. C (III) trata metade do raio como metade da área, mas a área cai a um quarto: 1/2. D (IV) corta a profundidade e dobra a área: também 1.",
+          "texto": "Letra E, modelo V.\nA (I): guarda 1, a metade do V.\nB (II): dobra a profundidade e corta a área pela metade; volta a 1.\nC (III): trata metade do raio como metade da área, mas a área cai a um quarto: 1/2.\nD (IV): corta a profundidade e dobra a área; também 1.",
           "visual": null
         }
       ],
@@ -3016,7 +3016,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "O docinho de 4 cm tem o dobro do diâmetro. Ele é 2 vezes mais comprido, 2 vezes mais largo e 2 vezes mais alto: usa 2 × 2 × 2 = 8 vezes mais massa. Então 150 grandes gastam a massa de 150 × 8 = 1 200 pequenos.",
+          "texto": "O docinho de 4 cm tem o dobro do diâmetro.\nEle é 2 vezes mais comprido, 2 vezes mais largo e 2 vezes mais alto.\nPor isso usa 2 × 2 × 2 = 8 vezes mais massa.\nEntão 150 grandes gastam a massa de 150 × 8 = 1 200 pequenos.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Grande em pequenos",
@@ -3065,7 +3065,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Pense em cubinhos de açúcar. Um cubo com o dobro do lado é feito de 2 camadas de 2 × 2 cubinhos: 8 ao todo. Com a bola é igual: dobrar a largura dobra o comprimento, a largura e a altura, então a massa vai × 2 × 2 × 2.",
+          "texto": "Pense em cubinhos de açúcar.\nUm cubo com o dobro do lado é feito de 2 camadas de 2 × 2 cubinhos: 8 ao todo.\nCom a bola é igual: dobrar a largura dobra o comprimento, a largura e a altura.\nEntão a massa vai × 2 × 2 × 2.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Cubos de lado maior",
@@ -3091,7 +3091,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, 24. A (2) é menos que as 3 porções que bastariam só para o número de docinhos pequenos. B (3) faz 150 ÷ 50 e esquece que os docinhos ficaram maiores. C (6) acha que o dobro do tamanho gasta o dobro de massa. D (12) multiplica por 4, que vale para área, não para volume.",
+          "texto": "Letra E, 24.\nA (2): é menos que as 3 porções que bastariam só para o número de docinhos pequenos.\nB (3): faz 150 ÷ 50 e esquece que os docinhos ficaram maiores.\nC (6): acha que o dobro do tamanho gasta o dobro de massa.\nD (12): multiplica por 4, que vale para área, não para volume.",
           "visual": null
         }
       ],
@@ -3247,7 +3247,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, 4 800. A (800) divide só por π e esquece o tamanho da bolinha. B (1 200) não sai de nenhuma conta com os dados: daria bolinhas de 2 cm³, quatro vezes a de 0,5 cm³. C (2 400) é o volume do cilindro com π = 3, sem dividir pela bolinha. E (6 400) esquece o 4/3 na fórmula da esfera.",
+          "texto": "Letra D, 4 800.\nA (800): divide só por π e esquece o tamanho da bolinha.\nB (1 200): não sai de nenhuma conta com os dados; daria bolinhas de 2 cm³, quatro vezes a de 0,5 cm³.\nC (2 400): é o volume do cilindro com π = 3, sem dividir pela bolinha.\nE (6 400): esquece o 4/3 na fórmula da esfera.",
           "visual": null
         }
       ],

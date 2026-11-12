@@ -70,7 +70,7 @@
         },
         {
           "titulo": "Tudo que atrapalha",
-          "texto": "A lâmpada atrapalha 4,5 Ω. Isso sai da etiqueta dela: com 4,5 V ela puxa 4,5 W ÷ 4,5 V = 1 A, então atrapalha 4,5 V ÷ 1 A = 4,5 Ω. Cada pilha também atrapalha 0,5 Ω, até a virada: 3 × 0,5 = 1,5 Ω. Somando: 4,5 + 1,5 = 6 Ω.",
+          "texto": "A lâmpada atrapalha 4,5 Ω. Isso sai da etiqueta dela.\nCom 4,5 V ela puxa 4,5 W ÷ 4,5 V = 1 A.\nEntão atrapalha 4,5 V ÷ 1 A = 4,5 Ω.\nCada pilha também atrapalha 0,5 Ω, até a virada: 3 × 0,5 = 1,5 Ω.\nSomando: 4,5 + 1,5 = 6 Ω.",
           "visual": {
             "tipo": "tabela",
             "titulo": "O que atrapalha a corrente",
@@ -121,7 +121,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, 0,25 A. B (0,33 A) faz 1,5 ÷ 4,5 e esquece a resistência das próprias pilhas. C (0,75 A) faz 4,5 ÷ 6 e esquece que uma pilha está virada. D (1,00 A) é a lanterna certa sem contar as pilhas: 4,5 ÷ 4,5. E (1,33 A) inverte a divisão: 6 ÷ 4,5.",
+          "texto": "Letra A, 0,25 A.\nB (0,33 A): faz 1,5 ÷ 4,5 e esquece a resistência das próprias pilhas.\nC (0,75 A): faz 4,5 ÷ 6 e esquece que uma pilha está virada.\nD (1,00 A): é a lanterna certa sem contar as pilhas: 4,5 ÷ 4,5.\nE (1,33 A): inverte a divisão: 6 ÷ 4,5.",
           "visual": null
         }
       ],
@@ -205,7 +205,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: energia gasta = 110 ÷ 5 = 22 kWh (5 × 22 = 110). Depois: potência do carregador = 220 × 20 = 4 400 W (22 × 2 = 44, mais os dois zeros), que é 4,4 kW, porque 1 kW = 1 000 W. Por fim: tempo = energia ÷ potência.",
+          "texto": "Primeiro, a energia gasta: 110 ÷ 5 = 22 kWh (5 × 22 = 110).\nDepois, a potência do carregador: 220 × 20 = 4 400 W (22 × 2 = 44, mais os dois zeros).\nIsso é 4,4 kW, porque 1 kW = 1 000 W.\nPor fim: tempo = energia ÷ potência.",
           "visual": null
         },
         {
@@ -266,7 +266,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, 5,0 h. A (0,005) divide 22 por 4 400 sem passar watt para quilowatt. As outras não repõem os 22 kWh: B (0,125 h) daria só 4,4 × 0,125 = 0,55 kWh; C (2,5 h) daria 4,4 × 2,5 = 11 kWh, metade do gasto; E (8,0 h) daria 4,4 × 8 = 35,2 kWh, mais do que o carro gastou.",
+          "texto": "Letra D, 5,0 h.\nA (0,005): divide 22 por 4 400 sem passar watt para quilowatt.\nB (0,125 h): não repõe os 22 kWh; daria só 4,4 × 0,125 = 0,55 kWh.\nC (2,5 h): daria 4,4 × 2,5 = 11 kWh, metade do gasto.\nE (8,0 h): daria 4,4 × 8 = 35,2 kWh, mais do que o carro gastou.",
           "visual": null
         }
       ],
@@ -346,12 +346,12 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Área e diferença de temperatura são iguais, então só a parte do material decide. Para ferro e alumínio é o próprio k. Na panela mista, cada metade atrapalha separada: soma-se grossura ÷ k de cada camada e depois se divide 1 pelo resultado.",
+          "texto": "Área e diferença de temperatura são iguais, então só a parte do material decide.\nPara ferro e alumínio é o próprio k.\nNa panela mista, cada metade atrapalha separada.\nSoma-se grossura ÷ k de cada camada e depois se divide 1 pelo resultado.",
           "visual": null
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Chame a grossura total de 1; cada camada tem 0,5. Cobre: 0,5 ÷ 40 = 5 ÷ 400 = 1 ÷ 80 = 0,0125. Aço: 0,5 ÷ 5 = 0,1. Somando: 0,1125. Agora 1 ÷ 0,1125: como 0,1125 × 9 = 1,0125, um pouco mais que 1, o resultado é um pouco menos que 9, cerca de 8,9. No quadro, o traço da fração quer dizer dividir.",
+          "texto": "Chame a grossura total de 1; cada camada tem 0,5.\nCobre: 0,5 ÷ 40 = 5 ÷ 400 = 1 ÷ 80 = 0,0125.\nAço: 0,5 ÷ 5 = 0,1. Somando: 0,1125.\nAgora 1 ÷ 0,1125. Como 0,1125 × 9 = 1,0125, um pouco mais que 1, o resultado é um pouco menos que 9: cerca de 8,9.\nNo quadro, o traço da fração quer dizer dividir.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Quanto a panela mista conduz",
@@ -403,7 +403,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B: alumínio, cobre-aço e ferro. A põe a mista em primeiro, como se o cobre (40) valesse sozinho. C põe a mista em primeiro e o alumínio por último, mas o alumínio (20) é o maior. D põe a mista por último, mas 8,9 é mais que o 8 do ferro. E começa pelo ferro (8), o pior, e põe a mista (8,9) depois do alumínio (20); a mista vem antes do ferro.",
+          "texto": "Letra B: alumínio, cobre-aço e ferro.\nA: põe a mista em primeiro, como se o cobre (40) valesse sozinho.\nC: põe a mista em primeiro e o alumínio por último, mas o alumínio (20) é o maior.\nD: põe a mista por último, mas 8,9 é mais que o 8 do ferro.\nE: começa pelo ferro (8), o pior, e põe a mista (8,9) depois do alumínio (20); a mista vem antes do ferro.",
           "visual": null
         }
       ],
@@ -488,12 +488,12 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Força: com o mesmo tempo, empurra mais quem muda mais a velocidade. Nos pneus o carro para e ainda volta; nos blocos ele só para. Energia: nos blocos todo o movimento some; nos pneus parte dele fica, porque o carro sai andando.",
+          "texto": "Força: com o mesmo tempo, empurra mais quem muda mais a velocidade.\nNos pneus o carro para e ainda volta; nos blocos ele só para.\nEnergia: nos blocos todo o movimento some.\nNos pneus parte dele fica, porque o carro sai andando.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A: força maior nos pneus, energia perdida maior nos blocos. B, C e E dizem que a força é maior nos blocos, mas, no mesmo tempo, só parar empurra menos do que parar e ainda voltar. C ainda diz que a energia perdida é igual, mas nos pneus parte do movimento volta. D acerta a força, mas erra a energia: perde mais quem fica parado, nos blocos.",
+          "texto": "Letra A: força maior nos pneus, energia perdida maior nos blocos.\nB, C e E: dizem que a força é maior nos blocos; mas, no mesmo tempo, só parar empurra menos do que parar e ainda voltar.\nC: ainda diz que a energia perdida é igual, mas nos pneus parte do movimento volta.\nD: acerta a força, mas erra a energia; perde mais quem fica parado, nos blocos.",
           "visual": null
         }
       ],
@@ -572,25 +572,65 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "A água sai da mangueira sempre com a mesma velocidade; só muda para onde ela aponta. Então são 3 contas: quanto tempo a água leva para cair 1 m, que velocidade ela tem (andou 3 m nesse tempo) e até onde essa mesma velocidade sobe se a mangueira apontar para cima."
+          "texto": "A água sai da mangueira sempre com a mesma velocidade. Só muda para onde ela aponta.\nSão 3 contas, uma por tela:\n1) quanto tempo a água leva para cair 1 m;\n2) que velocidade ela tem, se andou 3 m nesse tempo;\n3) até onde essa velocidade sobe com a mangueira em pé.",
+          "visual": null
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Cair: a água começa sem velocidade para baixo e ganha 10 m/s a cada segundo. Depois de t segundos ela cai a 10 × t; a velocidade média da queda é a metade, 5 × t. Distância = velocidade média × tempo = 5 × t × t. Esse t × t é o \"t ao quadrado\" (t²): o tempo vezes ele mesmo. Para cair 1 m: 5 × t × t = 1, então t × t = 1 ÷ 5 = 0,2. Para frente a água anda 3 m nesse tempo: v = 3 ÷ t, e v × v = 9 ÷ (t × t) = 9 ÷ 0,2 = 45.",
+          "titulo": "1) Tempo de queda",
+          "texto": "A água começa sem velocidade para baixo e ganha 10 m/s a cada segundo.\nDepois de t segundos ela cai a 10 × t. A velocidade média é a metade: 5 × t.\nDistância = velocidade média × tempo = 5 × t × t.\nPara cair 1 m: 5 × t × t = 1, então t × t = 1 ÷ 5 = 0,2.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Tempo de queda",
+            "dados": [
+              "h = 1\\,\\text{m}",
+              "g = 10\\,\\text{m/s}^2"
+            ],
+            "formula": "h = 5 \\times t \\times t",
+            "legenda": [
+              "$t$: tempo da queda, em segundos"
+            ],
+            "contas": [
+              "1 = 5 \\times t \\times t",
+              "t \\times t = 1 \\div 5"
+            ],
+            "resultado": "t \\times t = 0{,}2",
+            "nota": "t × t é o \"t ao quadrado\" (t²): o tempo vezes ele mesmo."
+          }
+        },
+        {
+          "titulo": "2) Velocidade da água",
+          "texto": "Nesse tempo a água anda 3 m para frente: v = 3 ÷ t.\nNão precisamos achar t sozinho. Basta v × v:\nv × v = (3 × 3) ÷ (t × t) = 9 ÷ 0,2 = 45.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Velocidade da água",
+            "dados": [
+              "x = 3\\,\\text{m}",
+              "t \\times t = 0{,}2"
+            ],
+            "formula": "v \\times v = \\dfrac{x \\times x}{t \\times t}",
+            "legenda": [
+              "$v$: velocidade com que a água sai"
+            ],
+            "contas": [
+              "v \\times v = \\dfrac{9}{0{,}2}"
+            ],
+            "resultado": "v \\times v = 45",
+            "nota": "v × v = 45 é o que vamos usar no jato para cima."
+          }
+        },
+        {
+          "titulo": "3) Até onde sobe: por que funciona",
+          "texto": "Subir é cair ao contrário: a gravidade tira 10 m/s a cada segundo até a água parar.\nTempo até parar: v ÷ 10. Velocidade média na subida: v ÷ 2.\nAltura = (v ÷ 2) × (v ÷ 10) = v × v ÷ 20 = 45 ÷ 20 = 2,25 m.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Jato para cima",
             "dados": [
-              "h = 1\\,\\text{m}",
-              "x = 3\\,\\text{m}",
-              "g = 10\\,\\text{m/s}^2",
-              "t^2 = \\dfrac{1}{5} = 0{,}2",
-              "v^2 = \\dfrac{9}{0{,}2} = 45"
+              "v \\times v = 45",
+              "g = 10\\,\\text{m/s}^2"
             ],
-            "formula": "H = \\dfrac{v^2}{2g}",
+            "formula": "H = \\dfrac{v \\times v}{2 \\times g}",
             "legenda": [
-              "$H$: altura que o jato alcança",
-              "$v$: velocidade de saída da água"
+              "$H$: altura que o jato alcança"
             ],
             "contas": [
               "H = \\dfrac{45}{2 \\times 10}",
@@ -601,12 +641,8 @@
           }
         },
         {
-          "titulo": "Por que funciona",
-          "texto": "Subir é cair ao contrário: a gravidade tira 10 m/s a cada segundo até a água parar no alto. O tempo para parar é v ÷ 10, e a velocidade média na subida é a metade, v ÷ 2. Altura = velocidade média × tempo = (v ÷ 2) × (v ÷ 10) = v × v ÷ 20 = 45 ÷ 20 = 2,25 m. Repare que nunca precisamos do t nem do v sozinhos, só de t × t e v × v."
-        },
-        {
           "titulo": "A resposta",
-          "texto": "Letra B, 2,25 m. A (1,50 m) faz 3 ÷ 2, sem usar a altura nem a gravidade. C (4,00 m) soma 3 m com 1 m, conta sem sentido aqui. D (4,50 m) esquece o 2 de $2g$ e divide 45 só por 10. E (5,00 m) não sai de nenhuma conta com estes dados.",
+          "texto": "Letra B, 2,25 m.\nA (1,50 m): faz 3 ÷ 2, sem usar a altura nem a gravidade.\nC (4,00 m): soma 3 m com 1 m, conta sem sentido aqui.\nD (4,50 m): esquece o 2 de 2 × g e divide 45 só por 10.\nE (5,00 m): não sai de nenhuma conta com estes dados.",
           "visual": null
         }
       ],
@@ -690,7 +726,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: soltando de 90°, a criança cai a altura da corda (L) e chega embaixo com $v^2 = 2gL$. De onde vem: caindo a altura L, a velocidade média é v ÷ 2 e o tempo é v ÷ g, então L = (v ÷ 2) × (v ÷ g), ou seja, v × v = 2 × g × L. Depois: no ponto mais baixo, as cordas seguram o peso e ainda fazem a curva: $T - mg = m v^2 \\div L$. Trocando $v^2$ por $2gL$, o L de cima corta com o de baixo e fica $2mg$; então $T = mg + 2mg = 3mg$. Por fim: dividir pelas 2 cordas e pôr os 25%.",
+          "texto": "Primeiro: soltando de 90°, a criança cai a altura da corda (L) e chega embaixo com $v^2 = 2gL$.\nDe onde vem: caindo a altura L, a velocidade média é v ÷ 2 e o tempo é v ÷ g.\nEntão L = (v ÷ 2) × (v ÷ g), ou seja, v × v = 2 × g × L.\nDepois: no ponto mais baixo, as cordas seguram o peso e ainda fazem a curva: $T - mg = m v^2 \\div L$.\nTrocando $v^2$ por $2gL$, o L de cima corta com o de baixo e fica $2mg$.\nEntão $T = mg + 2mg = 3mg$.\nPor fim: dividir pelas 2 cordas e pôr os 25%.",
           "visual": null
         },
         {
@@ -756,7 +792,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, 450 N. A (120 N) só divide o peso entre as cordas: 240 ÷ 2. B (300 N) olha só o peso, como se o balanço estivesse parado: 240 × 1,25. C (360 N) esquece a folga de 25%. E (900 N) põe tudo numa corda só: 720 × 1,25.",
+          "texto": "Letra D, 450 N.\nA (120 N): só divide o peso entre as cordas: 240 ÷ 2.\nB (300 N): olha só o peso, como se o balanço estivesse parado: 240 × 1,25.\nC (360 N): esquece a folga de 25%.\nE (900 N): põe tudo numa corda só: 720 × 1,25.",
           "visual": null
         }
       ],
@@ -846,7 +882,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Filtro 1: o ácido etanoico dá o nome 'acetato' e o pedaço CH₃CO₂ no começo da fórmula. Sobram banana e pêssego. Filtro 2: saturada quer dizer só ligação simples. O pêssego tem C₆H₅, o anel do benzeno, com ligações duplas. Sobra a banana.",
+          "texto": "Filtro 1: o ácido etanoico dá o nome 'acetato' e o pedaço CH₃CO₂ no começo da fórmula.\nSobram banana e pêssego.\nFiltro 2: saturada quer dizer só ligação simples.\nO pêssego tem C₆H₅, o anel do benzeno, com ligações duplas. Sobra a banana.",
           "visual": null
         },
         {
@@ -879,7 +915,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, banana. A (kiwi) vem do ácido benzoico, não do etanoico, e tem anel. C (pêssego) também é acetato, mas o anel C₆H₅ tem ligações duplas. D (rum) é saturada, mas vem do ácido propanoico, de 3 carbonos. E (uva) vem do ácido antranílico e também tem anel.",
+          "texto": "Letra B, banana.\nA (kiwi): vem do ácido benzoico, não do etanoico, e tem anel.\nC (pêssego): também é acetato, mas o anel C₆H₅ tem ligações duplas.\nD (rum): é saturada, mas vem do ácido propanoico, de 3 carbonos.\nE (uva): vem do ácido antranílico e também tem anel.",
           "visual": null
         }
       ],
@@ -958,7 +994,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E. D (esterificação) é o caminho contrário: ela fabrica um éster, e aqui o éster (o óleo) é quebrado. C (substituição) é trocar um átomo por outro numa molécula, não o nome dessa reação. A (redução) é ganhar elétrons, e B (epoxidação) é prender um oxigênio entre dois carbonos: nenhuma das duas usa soda cáustica nem faz sabão.",
+          "texto": "Letra E.\nD (esterificação): é o caminho contrário; ela fabrica um éster, e aqui o éster (o óleo) é quebrado.\nC (substituição): é trocar um átomo por outro numa molécula, não o nome dessa reação.\nA (redução): é ganhar elétrons; não usa soda cáustica nem faz sabão.\nB (epoxidação): é prender um oxigênio entre dois carbonos; também não usa soda cáustica nem faz sabão.",
           "visual": null
         }
       ],
@@ -1049,7 +1085,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: contar quantas meias-vidas cabem: 35 ÷ 5 = 7. Depois: cortar pela metade 7 vezes, o mesmo que dividir por 2 × 2 × 2 × 2 × 2 × 2 × 2 = 128. Como 128 × 4 = 512, um pouco mais que 500, o resultado é um pouco menos que 4: cerca de 3,9 g.",
+          "texto": "Primeiro: contar quantas meias-vidas cabem: 35 ÷ 5 = 7.\nDepois: cortar pela metade 7 vezes, o mesmo que dividir por 2 × 2 × 2 × 2 × 2 × 2 × 2 = 128.\nComo 128 × 4 = 512, um pouco mais que 500, o resultado é um pouco menos que 4: cerca de 3,9 g.",
           "visual": null
         },
         {
@@ -1203,7 +1239,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B. A (coagulação) é tentadora, mas ela só gruda a sujeira em flocos, não tira. C (filtração) tira o resto miúdo que sobrou, não a maior parte. D (desinfecção) mata micróbios com cloro, sem tirar sujeira. E (fluoretação) só põe flúor para os dentes.",
+          "texto": "Letra B.\nA (coagulação): é tentadora, mas ela só gruda a sujeira em flocos, não tira.\nC (filtração): tira o resto miúdo que sobrou, não a maior parte.\nD (desinfecção): mata micróbios com cloro, sem tirar sujeira.\nE (fluoretação): só põe flúor para os dentes.",
           "visual": null
         }
       ],
@@ -1286,7 +1322,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: 100 g de glicose dão 50 g de etanol, a metade. Então 50 kg dão 25 kg. Depois: com 80% de rendimento, sobram 25 × 0,8 kg; como 0,8 é 8 décimos, 25 ÷ 10 = 2,5 e 2,5 × 8 = 20 kg, que são 20 000 g. Por fim: transformar massa em volume com a densidade.",
+          "texto": "Primeiro: 100 g de glicose dão 50 g de etanol, a metade. Então 50 kg dão 25 kg.\nDepois: com 80% de rendimento, sobram 25 × 0,8 kg.\nComo 0,8 é 8 décimos: 25 ÷ 10 = 2,5 e 2,5 × 8 = 20 kg, que são 20 000 g.\nPor fim: transformar massa em volume com a densidade.",
           "visual": null
         },
         {
@@ -1342,7 +1378,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C, 25 L. A (16) multiplica pela densidade em vez de dividir: 20 × 0,8. B (20) para na massa e esquece a densidade. D (64) e E (100) não saem de nenhum caminho certo: 64 L de etanol pesariam 64 × 0,8 = 51,2 kg, mais que os 50 kg de glicose; 100 L pesariam 80 kg.",
+          "texto": "Letra C, 25 L.\nA (16): multiplica pela densidade em vez de dividir: 20 × 0,8.\nB (20): para na massa e esquece a densidade.\nD (64): não sai de nenhum caminho certo; 64 L de etanol pesariam 64 × 0,8 = 51,2 kg, mais que os 50 kg de glicose.\nE (100): também não; 100 L pesariam 80 kg.",
           "visual": null
         }
       ],
@@ -1422,7 +1458,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "A equação mostra que o ferro só enferruja com O₂ e água juntos. ZrO₂ e Al₂O₃ já são óxidos (metal já combinado com oxigênio, como a própria ferrugem): não perdem mais elétrons, então não protegem se sacrificando. Eles só formam uma capa fina por cima.",
+          "texto": "A equação mostra que o ferro só enferruja com O₂ e água juntos.\nZrO₂ e Al₂O₃ já são óxidos: metal já combinado com oxigênio, como a própria ferrugem.\nPor isso não perdem mais elétrons e não protegem se sacrificando.\nEles só formam uma capa fina por cima.",
           "visual": null
         },
         {
@@ -1450,12 +1486,12 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "É o mesmo jeito de proteger um portão com tinta: o ferro continua lá, mas o ar e a água não chegam nele. Metal de sacrifício e proteção catódica precisariam de um metal que perde elétrons no lugar do ferro, e cerâmica não faz isso.",
+          "texto": "É o mesmo jeito de proteger um portão com tinta: o ferro continua lá, mas o ar e a água não chegam nele.\nMetal de sacrifício e proteção catódica precisariam de um metal que perde elétrons no lugar do ferro.\nCerâmica não faz isso.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, efeito de barreira. C (passivação) é tentadora, mas ali a capa seria de óxido do próprio ferro, e aqui é de zircônio e alumínio. A (proteção catódica), B (metal de sacrifício) e E (galvanização) dependem de outro metal que se oxida no lugar do ferro; a cerâmica já está oxidada e não faz isso.",
+          "texto": "Letra D, efeito de barreira.\nC (passivação): é tentadora, mas ali a capa seria de óxido do próprio ferro, e aqui é de zircônio e alumínio.\nA (proteção catódica): depende de outro metal que se oxida no lugar do ferro; a cerâmica já está oxidada e não faz isso.\nB (metal de sacrifício): também depende de outro metal que se oxida no lugar do ferro.\nE (galvanização): também depende de outro metal que se oxida no lugar do ferro.",
           "visual": null
         }
       ],
@@ -1538,7 +1574,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: a tensão de uma pilha é o E° de quem recebe elétrons (iodo) menos o de quem entrega (lítio): 3,59 V. Depois: três pilhas em série dão três vezes essa tensão: 3 × 3,59 = 10,77 V (3 × 3 = 9 e 3 × 0,59 = 1,77; 9 + 1,77 = 10,77). Por fim: procurar a faixa no quadro.",
+          "texto": "Primeiro: a tensão de uma pilha é o E° de quem recebe elétrons (iodo) menos o de quem entrega (lítio): 3,59 V.\nDepois: três pilhas em série dão três vezes essa tensão: 3 × 3,59 = 10,77 V.\nConta: 3 × 3 = 9 e 3 × 0,59 = 1,77; 9 + 1,77 = 10,77.\nPor fim: procurar a faixa no quadro.",
           "visual": null
         },
         {
@@ -1597,7 +1633,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, o carrinho (IV). B (celular) usa uma pilha só, 3,59 V, esquecendo que são três. C (câmera) vem de fazer 3,05 − 0,54 = 2,51 e multiplicar por 3: 7,53 V. A (relógio, até 1,5 V) e E (notebook, perto de 20 V) ficam longe de qualquer conta com estes números: nem uma pilha dá tão pouco, nem três dão tanto.",
+          "texto": "Letra D, o carrinho (IV).\nB (celular): usa uma pilha só, 3,59 V, esquecendo que são três.\nC (câmera): vem de fazer 3,05 − 0,54 = 2,51 e multiplicar por 3: 7,53 V.\nA (relógio, até 1,5 V): fica longe de qualquer conta com estes números; nem uma pilha dá tão pouco.\nE (notebook, perto de 20 V): também fica longe; nem três pilhas dão tanto.",
           "visual": null
         }
       ],
@@ -1698,7 +1734,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C. E (hábitat) é tentadora, mas o lugar continua lá; faltou quem levasse a semente até ele. A (flores), B (tamanho das plantas) e D (sementes por fruto) falam de mudança na própria planta, que o texto não cita: o que sumiu foi o animal que comia os frutos.",
+          "texto": "Letra C.\nE (hábitat): é tentadora, mas o lugar continua lá; faltou quem levasse a semente até ele.\nA (flores): fala de mudança na própria planta, que o texto não cita.\nB (tamanho das plantas): também fala de mudança na própria planta.\nD (sementes por fruto): também; o que sumiu foi o animal que comia os frutos.",
           "visual": null
         }
       ],
@@ -1782,7 +1818,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A. B erra porque os animais comem a jaca, mas o texto não fala de animais eliminados. C erra porque diz que a jaqueira aumenta as relações e muda os nichos (o 'emprego' de cada espécie na mata) para melhor, quando ela tira espécies. D erra porque nenhuma população fica acima da capacidade suporte por muito tempo: falta comida e espaço. E erra porque diz que a jaqueira ajuda as nativas, quando ela toma o lugar delas.",
+          "texto": "Letra A.\nB: erra porque os animais comem a jaca, mas o texto não fala de animais eliminados.\nC: diz que a jaqueira aumenta as relações e muda os nichos (o 'emprego' de cada espécie na mata) para melhor, quando ela tira espécies.\nD: nenhuma população fica acima da capacidade suporte por muito tempo; falta comida e espaço.\nE: diz que a jaqueira ajuda as nativas, quando ela toma o lugar delas.",
           "visual": null
         }
       ],
@@ -1861,7 +1897,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C. D é o contrário: bastonete melhor precisa de MENOS luz. A (daltonismo, não distinguir certas cores), B (ver cores fora do visível) e E (distinguir cores) falam de cor, que é trabalho do cone, não do bastonete.",
+          "texto": "Letra C.\nD: é o contrário; bastonete melhor precisa de MENOS luz.\nA (daltonismo, não distinguir certas cores): fala de cor, que é trabalho do cone, não do bastonete.\nB (ver cores fora do visível): também fala de cor, trabalho do cone.\nE (distinguir cores): também fala de cor, trabalho do cone.",
           "visual": null
         }
       ],
@@ -1959,12 +1995,12 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "A célula doente tem a receita com erro. O vírus deixa nela uma cópia da receita certa. A célula passa a ler essa cópia (fazendo dela uma cópia de trabalho, o RNA mensageiro) e a fazer a enzima normal, e a retina volta a funcionar.",
+          "texto": "A célula doente tem a receita com erro.\nO vírus deixa nela uma cópia da receita certa.\nA célula passa a ler essa cópia (fazendo dela uma cópia de trabalho, o RNA mensageiro) e a fazer a enzima normal.\nE a retina volta a funcionar.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E. A é tentadora, mas o código genético (a regra 'trio de letras → peça da proteína') é igual em todo ser vivo e não estava errado; o errado era o gene. B erra porque a terapia não mexe no RNA do ribossomo, a pecinha que monta proteína. C erra porque o tratamento não cria mutação: entrega um gene normal. D falha porque o vírus leva o gene, não a proteína pronta.",
+          "texto": "Letra E.\nA: é tentadora, mas o código genético (a regra 'trio de letras → peça da proteína') é igual em todo ser vivo e não estava errado; o errado era o gene.\nB: a terapia não mexe no RNA do ribossomo, a pecinha que monta proteína.\nC: o tratamento não cria mutação; entrega um gene normal.\nD: o vírus leva o gene, não a proteína pronta.",
           "visual": null
         }
       ],
@@ -2038,12 +2074,12 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Dentro do vacúolo há mais coisa dissolvida que fora. A água entra por osmose, o vacúolo cresce e o mesmo pigmento fica espalhado em mais água, mais diluído. A parede celular, dura como uma caixa, segura a célula, e ela não estoura.",
+          "texto": "Dentro do vacúolo há mais coisa dissolvida que fora.\nA água entra por osmose e o vacúolo cresce.\nO mesmo pigmento fica espalhado em mais água, mais diluído.\nA parede celular, dura como uma caixa, segura a célula, e ela não estoura.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra C. E (murchar) é o que aconteceria em água salgada, o contrário. B e D falham porque a parede da célula de planta impede o rompimento; em célula animal, sem parede, ela poderia estourar. A falha porque a organela (pecinha dentro da célula, aqui o vacúolo) só incha, não se parte.",
+          "texto": "Letra C.\nE (murchar): é o que aconteceria em água salgada, o contrário.\nB e D: a parede da célula de planta impede o rompimento; em célula animal, sem parede, ela poderia estourar.\nA: a organela (pecinha dentro da célula, aqui o vacúolo) só incha, não se parte.",
           "visual": null
         }
       ],
@@ -2122,12 +2158,12 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Um vírus que mata 9 em cada 10 doentes destrói o próprio caminho para se espalhar. Ao longo das gerações, a seleção natural (quem sobrevive deixa mais descendentes) favorece vírus mais brandos e pessoas mais resistentes. Letalidade baixa é sinal de convivência longa.",
+          "texto": "Um vírus que mata 9 em cada 10 doentes destrói o próprio caminho para se espalhar.\nAo longo das gerações, a seleção natural (quem sobrevive deixa mais descendentes) favorece vírus mais brandos e pessoas mais resistentes.\nLetalidade baixa é sinal de convivência longa.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E. C é a mais tentadora, mas matar muito não é ser eficiente: o vírus perde o hospedeiro. A e B usam o tempo de incubação (o tempo entre pegar o vírus e ficar doente), que não mede há quanto tempo o vírus nos infecta. D usa o lugar dos surtos, que também não mede esse tempo.",
+          "texto": "Letra E.\nC: é a mais tentadora, mas matar muito não é ser eficiente; o vírus perde o hospedeiro.\nA e B: usam o tempo de incubação (o tempo entre pegar o vírus e ficar doente), que não mede há quanto tempo o vírus nos infecta.\nD: usa o lugar dos surtos, que também não mede esse tempo.",
           "visual": null
         }
       ],
@@ -2231,7 +2267,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E. D é tentadora: purificar ajuda, mas o RNA purificado continua sendo RNA, e a polimerase não o copia. A falha pelo mesmo motivo: concentrar o RNA não o transforma em DNA. B é outro exame, o de anticorpos no sangue. C erra porque não se cultiva o vírus para o diagnóstico: a PCR já faz as cópias.",
+          "texto": "Letra E.\nD: é tentadora; purificar ajuda, mas o RNA purificado continua sendo RNA, e a polimerase não o copia.\nA: falha pelo mesmo motivo; concentrar o RNA não o transforma em DNA.\nB: é outro exame, o de anticorpos no sangue.\nC: não se cultiva o vírus para o diagnóstico; a PCR já faz as cópias.",
           "visual": null
         }
       ],

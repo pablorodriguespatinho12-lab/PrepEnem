@@ -26,7 +26,9 @@ export function QuadroEscola({ v }: { v: VisualQuadro }) {
     // flex-wrap: em caixa estreita a resolução desce para baixo dos dados em
     // vez de ficar espremida e cortada (tutor em tela grande, 23/10/2026).
     <div
-      className="quadro-escola rounded-[var(--radius-control)] px-4 py-3.5 md:px-5 md:py-4 flex flex-wrap gap-3 gap-x-5 md:gap-x-6 items-start"
+      // Na tela do passo da aula (.passo-visual: caixa larga e baixa) fica sempre deitado:
+      // quebrado em pé, a lanterna media 420 px de alto e encolhia para 60% (12/11/2026).
+      className="quadro-escola rounded-[var(--radius-control)] px-4 py-3.5 md:px-5 md:py-4 flex flex-wrap sm:[.passo-visual_&]:flex-nowrap gap-3 gap-x-5 md:gap-x-6 items-start"
       style={{ color: 'hsl(var(--quadro-tinta))' }}
     >
       {/* Os dados que a questão deu, como o professor anota no canto. */}
@@ -34,7 +36,9 @@ export function QuadroEscola({ v }: { v: VisualQuadro }) {
         <Caneta linhas={v.dados} jaEscrita />
       </section>
 
-      <section aria-label="Resolução" className="flex-1 min-w-[min(100%,18rem)] space-y-1.5">
+      {/* 11rem e não 18rem: com 18rem o quadro do passo (caixa de 508 px) quebrava
+          em pé no computador do Pablo e encolhia até ficar ilegível (12/11/2026). */}
+      <section aria-label="Resolução" className="flex-1 min-w-[min(100%,11rem)] space-y-1.5">
         <Caneta linhas={[v.formula]} jaEscrita className="text-[1.1em]" />
         {trocaLetras && (
           <p className="type-meta font-medium" style={{ color: 'hsl(var(--quadro-laranja))' }}>
