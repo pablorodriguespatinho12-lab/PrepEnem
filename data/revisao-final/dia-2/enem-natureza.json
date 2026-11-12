@@ -13,7 +13,7 @@
     "resposta": "A",
     "explicacao": {
       "conferencia": "Lâmpada: R = U² ÷ P = 4,5 × 4,5 ÷ 4,5 = 4,5 Ω. Pilhas: 1,5 + 1,5 − 1,5 = 1,5 V. Resistência das pilhas: 3 × 0,5 = 1,5 Ω. i = 1,5 ÷ (4,5 + 1,5) = 0,25 A. A. Erros: 0,33 = 1,5 ÷ 4,5 (esqueceu a resistência das pilhas); 0,75 = 4,5 ÷ 6 (esqueceu a pilha virada); 1,00 = 4,5 ÷ 4,5 (lanterna certa, sem as pilhas); 1,33 = 6 ÷ 4,5 (divisão invertida).",
-      "ideia": "A pilha virada empurra contra uma das outras, e sobra o empurrão de uma pilha só: 1,5 V. Esse empurrão dividido por tudo que atrapalha, lâmpada mais pilhas (6 Ω), dá 0,25 A.",
+      "ideia": "A pilha virada empurra contra e anula uma das outras: sobra o empurrão de uma pilha só, 1,5 V. Esse empurrão dividido por tudo que atrapalha (6 Ω) dá 0,25 A.",
       "pecas": [
         {
           "termo": "f.e.m. (força eletromotriz)",
@@ -31,51 +31,30 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "Três pilhas em fila, uma delas virada. A questão pede a corrente que passa na lâmpada.",
+          "texto": "Três pilhas em fila acendem a lâmpada. Uma delas foi colocada virada. A questão quer saber quanta corrente passa agora.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "Os dados",
-            "cabecalho": [
-              "O quê",
-              "Valor"
-            ],
-            "linhas": [
-              [
-                "cada pilha",
-                "1,5 V e 0,5 Ω"
-              ],
-              [
-                "pilhas",
-                "3, uma virada"
-              ],
-              [
-                "lâmpada",
-                "4,5 W e 4,5 V"
-              ],
-              [
-                "corrente (i)",
-                "?"
-              ]
-            ]
+            "tipo": "figura",
+            "nome": "pilhas-lanterna",
+            "titulo": "As pilhas, a lâmpada e a conta"
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Primeiro: a resistência da lâmpada sai da etiqueta dela: tensão vezes tensão, dividido pela potência (é o que sai de juntar P = U × i com i = U ÷ R). 4,5 × 4,5 ÷ 4,5: dividir por 4,5 desfaz o vezes 4,5, e sobra 4,5 Ω. Depois: a pilha virada cancela uma das certas e sobra 1,5 V. Por fim: as três pilhas continuam no caminho, com 0,5 Ω cada, somando 3 × 0,5 = 1,5 Ω.",
+          "titulo": "O empurrão que sobra",
+          "texto": "Cada pilha empurra 1,5 V. Duas empurram para a frente e a virada empurra para trás. Então 1,5 + 1,5 − 1,5 = 1,5 V. Sobra o empurrão de uma pilha só.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Somando as pilhas",
+            "titulo": "Quem empurra para onde",
             "cabecalho": [
               "Pilha",
               "Empurrão"
             ],
             "linhas": [
               [
-                "1ª",
+                "1ª (certa)",
                 "+1,5 V"
               ],
               [
-                "2ª",
+                "2ª (certa)",
                 "+1,5 V"
               ],
               [
@@ -83,15 +62,41 @@
                 "−1,5 V"
               ],
               [
-                "total",
+                "Sobra",
                 "1,5 V"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Corrente é o empurrão que sobrou dividido por toda a resistência do caminho: 1,5 ÷ (4,5 + 1,5) = 1,5 ÷ 6. Como um quarto de 6 é 1,5 (6 × 0,25 = 1,5), dá 0,25 A. No quadro, ε (a letra grega épsilon) é o empurrão que sobrou e o traço da fração quer dizer dividir.",
+          "titulo": "Tudo que atrapalha",
+          "texto": "A lâmpada atrapalha 4,5 Ω. Isso sai da etiqueta dela: com 4,5 V ela puxa 4,5 W ÷ 4,5 V = 1 A, então atrapalha 4,5 V ÷ 1 A = 4,5 Ω. Cada pilha também atrapalha 0,5 Ω, até a virada: 3 × 0,5 = 1,5 Ω. Somando: 4,5 + 1,5 = 6 Ω.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "O que atrapalha a corrente",
+            "cabecalho": [
+              "Peça",
+              "Atrapalha"
+            ],
+            "linhas": [
+              [
+                "Lâmpada",
+                "4,5 Ω"
+              ],
+              [
+                "3 pilhas × 0,5",
+                "1,5 Ω"
+              ],
+              [
+                "Total",
+                "6 Ω"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Corrente é o empurrão que sobra dividido por tudo que atrapalha: 1,5 ÷ 6 = 0,25 A (confira: 6 × 0,25 = 1,5). Por isso a pilha virada pesa tanto: ela tira empurrão e continua atrapalhando.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Lanterna com pilha virada",
@@ -112,31 +117,6 @@
             ],
             "resultado": "i = 0{,}25\\,\\text{A}",
             "nota": "Um quarto de ampère: a lâmpada acende fraca."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "Com as pilhas certas seriam 4,5 V ÷ 6 Ω = 0,75 A (6 × 0,75 = 4,5). Virar uma pilha tira 3 V de uma vez: ela deixa de somar 1,5 V e passa a tirar 1,5 V. A resistência das pilhas continua lá, porque elas seguem no caminho.",
-          "visual": {
-            "tipo": "tabela",
-            "titulo": "Mesmo caminho de 6 Ω",
-            "cabecalho": [
-              "Pilhas",
-              "Empurrão",
-              "Corrente"
-            ],
-            "linhas": [
-              [
-                "todas certas",
-                "4,5 V",
-                "0,75 A"
-              ],
-              [
-                "uma virada",
-                "1,5 V",
-                "0,25 A"
-              ]
-            ]
           }
         },
         {
