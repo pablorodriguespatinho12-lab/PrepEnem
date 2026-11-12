@@ -1,0 +1,140 @@
+'use client';
+import { useEffect, useState, type CSSProperties } from 'react';
+import { useTheme } from 'next-themes';
+import { PALETA_DIA, PALETA_NOITE, astro, ceu, nuvens, paisagem } from '@/lib/pixel/desenho';
+import { imagemPixel, tamanhoDoPixel } from './imagem-pixel';
+
+/* Fundo da prova: serra em pixel com o dia e a noite passando (Pablo, 12/11/2026:
+   "tem um sol, depois vem a noite"). Duas versões de cada camada (dia e noite)
+   desenhadas UMA vez; o ciclo é só opacidade e giro em CSS (compositor). Parado,
+   mostra o dia no tema claro e a noite no escuro. CSS em globals.css (.mundo-pixel). */
+
+/** Um dia inteiro (dia + noite), em segundos. */
+const CICLO_S = 360;
+
+interface Imagens {
+  ceuDia: string;
+  ceuNoite: string;
+  nuvensDia: string;
+  nuvensNoite: string;
+  terraDia: string;
+  terraNoite: string;
+  sol: string;
+  lua: string;
+  chamine: { fx: number; fy: number };
+  px: number;
+  raioAstro: number;
+}
+
+function desenhar(): Imagens {
+  const px = tamanhoDoPixel();
+  const W = Math.ceil(window.innerWidth / px);
+  const H = Math.ceil(window.innerHeight / px);
+  const k = `${W}x${H}`;
+  const terraDia = imagemPixel(`terra-dia-${k}`, W, H, (c) => {
+    paisagem(c, W, H, PALETA_DIA);
+  });
+  const terraNoite = imagemPixel(`terra-noite-${k}`, W, H, (c) => {
+    paisagem(c, W, H, PALETA_NOITE);
+  });
+  // onde fica a chaminé (não depende da cor; vale também quando a imagem veio guardada)
+  const { chamine } = paisagem({ fillStyle: '', fillRect: () => {} }, W, H, PALETA_DIA);
+  const r = Math.max(4, Math.round(H * 0.05));
+  const lado = 2 * r + 3;
+  const hn = Math.round(H * 0.5);
+  return {
+    ceuDia: imagemPixel(`ceu-dia-${k}`, W, H, (c) => ceu(c, W, H, PALETA_DIA)),
+    ceuNoite: imagemPixel(`ceu-noite-${k}`, W, H, (c) => ceu(c, W, H, PALETA_NOITE)),
+    nuvensDia: imagemPixel(`nuvens-dia-${k}`, W * 2, hn, (c) => nuvens(c, W, hn, PALETA_DIA)),
+    nuvensNoite: imagemPixel(`nuvens-noite-${k}`, W * 2, hn, (c) => nuvens(c, W, hn, PALETA_NOITE)),
+    terraDia,
+    terraNoite,
+    sol: imagemPixel(`sol-${r}`, lado, lado, (c) => astro(c, PALETA_DIA, r, false)),
+    lua: imagemPixel(`lua-${r}`, lado, lado, (c) => astro(c, PALETA_NOITE, r, true)),
+    chamine,
+    px,
+    raioAstro: lado * px,
+  };
+}
+
+const fundo = (url: string): CSSProperties => ({ backgroundImage: `url(${url})` });
+
+/** Estrelas que piscam e vagalumes: posições fixas (sem sorteio a cada render). */
+const ESTRELAS = [[12, 8], [27, 15], [41, 6], [58, 12], [71, 4], [86, 10], [93, 18], [35, 22]];
+const VAGALUMES = [[18, 88], [33, 92], [52, 86], [64, 94], [79, 90]];
+
+export function MundoPixel({ animado }: { animado: boolean }) {
+  const { resolvedTheme } = useTheme();
+  const [img, setImg] = useState<Imagens | null>(null);
+  const [pausado, setPausado] = useState(false);
+
+  useEffect(() => {
+    setImg(desenhar());
+    let espera: ReturnType<typeof setTimeout>;
+    const aoRedimensionar = () => {
+      clearTimeout(espera);
+      espera = setTimeout(() => setImg(desenhar()), 200);
+    };
+    // aba escondida: o mundo para (nada roda fora da tela)
+    const aoTrocarAba = () => setPausado(document.hidden);
+    window.addEventListener('resize', aoRedimensionar);
+    document.addEventListener('visibilitychange', aoTrocarAba);
+    return () => {
+      clearTimeout(espera);
+      window.removeEventListener('resize', aoRedimensionar);
+      document.removeEventListener('visibilitychange', aoTrocarAba);
+    };
+  }, []);
+
+  if (!img) return <div className="mundo-pixel" aria-hidden />;
+
+  const noite = resolvedTheme === 'dark';
+  const estilo = {
+    '--ciclo': `${CICLO_S}s`,
+    // abre no meio da manhã (claro) ou no começo da noite (escuro)
+    '--atraso': `-${CICLO_S * (noite ? 0.6 : 0.12)}s`,
+    '--px': `${img.px}px`,
+    // caminho largo: ao meio-dia o sol passa por cima do cartão, não atrás dele
+    '--raio': 'min(56vh, 46vw)',
+    '--astro': `${img.raioAstro}px`,
+  } as CSSProperties;
+
+  return (
+    <div
+      className="mundo-pixel"
+      aria-hidden
+      data-animado={animado ? 'sim' : 'nao'}
+      data-fase={noite ? 'noite' : 'dia'}
+      data-pausado={pausado ? 'sim' : 'nao'}
+      style={estilo}
+    >
+      <div className="mp-camada" style={fundo(img.ceuDia)} />
+      <div className="mp-camada mp-noite" style={fundo(img.ceuNoite)}>
+        {ESTRELAS.map(([x, y], i) => (
+          <span key={i} className="mp-estrela" style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${i * 0.7}s` }} />
+        ))}
+      </div>
+      <div className="mp-braco">
+        <div className="mp-sol" style={fundo(img.sol)} />
+        <div className="mp-lua" style={fundo(img.lua)} />
+      </div>
+      <div className="mp-nuvens" style={fundo(img.nuvensDia)} />
+      <div className="mp-nuvens mp-noite" style={fundo(img.nuvensNoite)} />
+      <div className="mp-dia">
+        <span className="mp-passaro" />
+        <span className="mp-passaro mp-passaro-2" />
+      </div>
+      <div className="mp-camada" style={fundo(img.terraDia)} />
+      <div className="mp-camada mp-noite" style={fundo(img.terraNoite)}>
+        {VAGALUMES.map(([x, y], i) => (
+          <span key={i} className="mp-vagalume" style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${i * 1.3}s` }} />
+        ))}
+      </div>
+      <div className="mp-fumaca" style={{ left: `${img.chamine.fx * 100}%`, top: `${img.chamine.fy * 100}%` }}>
+        <span />
+        <span />
+        <span />
+      </div>
+    </div>
+  );
+}

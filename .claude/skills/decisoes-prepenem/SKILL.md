@@ -438,6 +438,22 @@ escolha, nível acima) estão em `calculo.md`, nesta pasta. **Leia antes de mexe
   (`{ duration: 0.25, ease: 'easeOut' }`), mas continua visível.
 - **Partículas de fundo e parallax respeitam sempre** — esses são
   decorativos e são exatamente o tipo de movimento que a diretriz mira.
+- **Mundo pixel (Pablo, 12/11/2026, votos 1B 2A 3A 4A na prévia
+  https://claude.ai/artifact/QVn75VnVMV9JmptgX1pJXG; gosto na skill global
+  `design-do-pablo`):** Início com anéis e luz atrás do bloco (`AnelInicio`);
+  prova com a serra em pixel no fundo e o dia e a noite passando (`MundoPixel`,
+  ciclo de 6 min), questão num `.px-cartao`, botões "Mundo animado" e "Tela
+  cheia" (esconde o menu, `html[data-imersivo]`); alternativa afunda 4 px com
+  borda de pixel e faíscas (`.px-alt`); acerto/erro abre anéis (`.px-anel`);
+  fim da prova é a casinha acesa (`CenaFim`). Desenho em canvas UMA vez
+  (`lib/pixel/desenho.ts`), movimento só CSS. **Exceção ao "respeitam sempre":**
+  ele pediu "bastante animação", mas o Windows dele reduz movimento. Sem escolha,
+  o mundo segue o sistema (parado); o botão "Mundo animado" liga no site e fica
+  guardado (`useMundoAnimado`). A seleção da alternativa anima sempre (0,25 s),
+  como o flip. As regras animadas levam `!important` porque a regra geral do
+  reduced-motion também leva; o mesmo faltava na aula em desenho (água parada no
+  PC dele) e foi corrigido no mesmo dia. Letra da alternativa em sans: sozinho,
+  o "A" da Jersey 10 parece "Â".
 - **Flashcard é a opção A, escolhida pelo Pablo em 05/10/2026** (entre A "flip
   firme" e B "revelar embaixo, pergunta fica na tela"): flip 3D de 0,42 s sem
   mola, pilha atrás, saída para o lado da resposta, Espaço vira e 1/2 respondem.

@@ -17,6 +17,15 @@ import { EsqueletoQuestao } from '@/components/esqueletos';
 import { AquecimentoFlashcards } from '@/components/simulado/aquecimento-flashcards';
 import { AulaDoTema } from '@/components/simulado/aula-do-tema';
 import { temaDaQuestao } from '@/lib/aulas-dia-2';
+import { MundoPixel } from '@/components/pixel/mundo-pixel';
+import { CenaFim } from '@/components/pixel/cena-fim';
+import { useMundoAnimado } from '@/hooks/use-mundo-animado';
+import { useTelaCheia } from '@/hooks/use-tela-cheia';
+
+/* Faíscas da alternativa escolhida (voto 2A): 6 quadradinhos saindo da letra. */
+const FAISCAS: [number, number][] = [[-26, -18], [0, -28], [26, -18], [-26, 18], [0, 28], [26, 18]];
+/* Anéis do acerto/erro (voto 3A): três, um atrás do outro. */
+const ANEIS_MS = [0, 90, 180];
 
 /* Limiares de dado esparso — mesma regra usada em app/dashboard/page.tsx. */
 const MIN_QUESTOES_PARA_TAXA = 5;
@@ -46,6 +55,10 @@ export default function ProvaDetailPage() {
   const params = useParams();
   const examId = params.id as string;
   const shouldReduceMotion = useReducedMotion();
+  const mundo = useMundoAnimado();
+  const telaCheia = useTelaCheia();
+  // muda a cada toque numa alternativa: remonta as faíscas para tocarem de novo
+  const [toque, setToque] = useState(0);
 
   const [exam, setExam] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -136,16 +149,10 @@ export default function ProvaDetailPage() {
           animate={{ opacity: 1, scale: 1 }}
           className="text-center mb-10 surface-1 rounded-[var(--radius-container)] p-8 md:p-10"
         >
-          <motion.div
-            initial={{ rotate: -180, scale: 0 }}
-            animate={{ rotate: 0, scale: 1 }}
-            transition={{ type: 'spring', delay: 0.2 }}
-            className="inline-block mb-4"
-          >
-            <Trophy className="w-16 h-16 text-amber-500" />
-          </motion.div>
-          <h1 className="font-display type-headline font-semibold mb-2">Prova Finalizada!</h1>
-          <p className="text-muted-foreground mb-6">{exam.nome}</p>
+          {/* Casinha acesa no escuro (voto 4A, 12/11/2026). */}
+          <CenaFim acertos={exam.acertos} total={totalQuestoes} />
+          <h1 className="sr-only">Prova finalizada</h1>
+          <p className="text-muted-foreground mt-5 mb-6">{exam.nome}</p>
 
           <div className="grid grid-cols-3 gap-3 max-w-md mx-auto">
             <motion.div
@@ -324,8 +331,21 @@ export default function ProvaDetailPage() {
 
   const progress = (exam.currentIdx + (submitted ? 1 : 0)) / exam.totalQuestoes;
 
+  // Mundo pixel atrás da prova (Pablo, 12/11/2026): o céu aparece em cima do
+  // cartão, a serra embaixo, e o dia e a noite passam enquanto ele estuda.
   return (
-    <div className="min-h-screen p-6 md:p-10 max-w-4xl mx-auto">
+    <div className="relative min-h-screen">
+      <MundoPixel animado={mundo.animado} />
+      <div className="relative z-[1] min-h-screen px-4 pb-10 md:px-10 pt-[min(20vh,170px)] max-w-4xl mx-auto">
+      <div className="absolute top-4 right-4 md:right-10 flex gap-3">
+        <button type="button" className="px-chip" aria-pressed={mundo.animado} onClick={mundo.alternar}>
+          {mundo.animado ? 'Mundo animado' : 'Mundo parado'}
+        </button>
+        <button type="button" className="px-chip" aria-pressed={telaCheia.ativa} onClick={telaCheia.alternar}>
+          {telaCheia.ativa ? 'Sair da tela cheia' : 'Tela cheia'}
+        </button>
+      </div>
+      <div className="px-cartao p-5 md:p-8">
       <motion.button
         initial={{ opacity: 0, x: -12 }}
         animate={{ opacity: 1, x: 0 }}
@@ -364,7 +384,6 @@ export default function ProvaDetailPage() {
           animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, x: 0 }}
           exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, x: -40 }}
           transition={{ duration: shouldReduceMotion ? 0.01 : 0.3 }}
-          className="surface-1 rounded-[var(--radius-surface)] p-6 md:p-8"
         >
           <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-6 type-meta text-muted-foreground">
             <span className="inline-flex items-center gap-1.5 font-medium text-foreground">
@@ -389,7 +408,7 @@ export default function ProvaDetailPage() {
           <div className="prose-reading mb-6">
             <MathText text={semMarcaDeImagem(q.enunciado)} />
           </div>
-          <AulaDoTema key={q.id} tema={temaDaQuestao(q)} questao={q} className="mb-6" />
+          <AulaDoTema key={`aula-${q.id}`} tema={temaDaQuestao(q)} questao={q} className="mb-6" />
           {/* A figura da questão real (a prova não mostrava; Pablo, 03/11/2026). */}
           {q.pdfFileUrl && q.paginaPdf && (
             <PaginaDaProva
@@ -413,77 +432,49 @@ export default function ProvaDetailPage() {
               const isWrong = submitted && selectedAnswer === alt.letra && alt.letra !== feedback?.respostaCorreta;
               const isSelected = !submitted && selectedAnswer === alt.letra;
 
+              // A alternativa respondida (a marcada) abre os anéis; a certa só acende.
+              const respondida = submitted && selectedAnswer === alt.letra;
               return (
-                <motion.button
+                // A entrada fica no invólucro: o transform do framer no botão
+                // apagaria o "afundar" de 4 px do CSS (.px-alt).
+                <motion.div
                   key={alt.letra}
                   initial={{ opacity: 0, x: -20 }}
-                  animate={
-                    isCorrect && !shouldReduceMotion
-                      ? { opacity: 1, x: 0, scale: [1, 1.08, 1] }
-                      : { opacity: 1, x: 0, scale: 1 }
-                  }
-                  transition={
-                    isCorrect && !shouldReduceMotion
-                      ? { duration: 0.35, ease: 'easeOut' }
-                      : { delay: i * 0.08, duration: 0.3 }
-                  }
-                  disabled={submitted}
-                  onClick={() => !submitted && setSelectedAnswer(alt.letra)}
-                  data-alt={alt.letra}
-                  data-state={isCorrect ? 'correta' : isWrong ? 'errada' : isSelected ? 'selecionada' : 'repouso'}
-                  style={
-                    isCorrect
-                      ? { backgroundColor: 'hsl(var(--success-surface))', borderColor: 'hsl(var(--success-border))' }
-                      : isWrong
-                      ? { backgroundColor: 'hsl(var(--danger-surface))', borderColor: 'hsl(var(--danger-border))' }
-                      : undefined
-                  }
-                  className={`group relative w-full flex items-start gap-3.5 p-3.5 pl-4 text-left rounded-[var(--radius-control)] border t-lift ${
-                    isCorrect
-                      ? 'shadow-elev-1'
-                      : isWrong
-                      ? 'shadow-elev-1 animate-shake'
-                      : isSelected
-                      ? 'bg-primary/[0.07] border-primary shadow-elev-2'
-                      : 'bg-[hsl(var(--surface-2))] border-border shadow-elev-1 enabled:hover:border-primary/45 enabled:hover:shadow-elev-2 enabled:hover:-translate-y-px'
-                  }`}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.08, duration: 0.3 }}
                 >
-                  {(isSelected || isCorrect || isWrong) && (
-                    <span
-                      aria-hidden
-                      className="absolute left-0 top-2 bottom-2 w-[3px] rounded-r-[var(--radius-data)]"
-                      style={{
-                        backgroundColor: isCorrect
-                          ? 'hsl(var(--success))'
-                          : isWrong
-                          ? 'hsl(var(--danger))'
-                          : 'hsl(var(--primary))',
-                      }}
-                    />
-                  )}
-                  <span
-                    aria-hidden
-                    style={
-                      isCorrect
-                        ? { backgroundColor: 'hsl(var(--success))', color: 'hsl(var(--surface-1))' }
-                        : isWrong
-                        ? { backgroundColor: 'hsl(var(--danger))', color: 'hsl(var(--surface-1))' }
-                        : undefined
-                    }
-                    className={`w-8 h-8 rounded-[var(--radius-control)] flex items-center justify-center flex-shrink-0 type-meta font-semibold t-colors ${
-                      isCorrect || isWrong
-                        ? ''
-                        : isSelected
-                        ? 'bg-primary text-primary-foreground'
-                        : 'bg-muted text-muted-foreground group-enabled:group-hover:bg-primary/15 group-enabled:group-hover:text-primary-text'
-                    }`}
+                  <button
+                    type="button"
+                    disabled={submitted}
+                    onClick={() => {
+                      if (submitted) return;
+                      setSelectedAnswer(alt.letra);
+                      setToque((t) => t + 1);
+                    }}
+                    data-alt={alt.letra}
+                    data-state={isCorrect ? 'correta' : isWrong ? 'errada' : isSelected ? 'selecionada' : 'repouso'}
+                    className="px-alt"
                   >
-                    {alt.letra}
-                  </span>
-                  <span className="font-reading text-body leading-[var(--lh-reading)] pt-0.5 flex-1">
-                    <MathText text={alt.texto} />
-                  </span>
-                </motion.button>
+                    <span aria-hidden className="px-letra">{alt.letra}</span>
+                    <span className="font-reading text-body leading-[var(--lh-reading)] pt-0.5 flex-1">
+                      <MathText text={alt.texto} />
+                    </span>
+                    {isSelected &&
+                      FAISCAS.map(([dx, dy], k) => (
+                        <span
+                          key={`${toque}-${k}`}
+                          aria-hidden
+                          className="px-faisca"
+                          style={{ left: 'calc(1rem + 1.05rem - 3px)', top: 'calc(.875rem + 1.05rem - 3px)', ['--dx' as string]: `${dx}px`, ['--dy' as string]: `${dy}px` }}
+                        />
+                      ))}
+                    {respondida &&
+                      mundo.animado &&
+                      ANEIS_MS.map((ms) => (
+                        <span key={ms} aria-hidden className="px-anel" style={{ ['--atraso' as string]: `${ms}ms` }} />
+                      ))}
+                  </button>
+                </motion.div>
               );
             })}
           </div>
@@ -561,6 +552,8 @@ export default function ProvaDetailPage() {
           </div>
         </motion.div>
       </AnimatePresence>
+      </div>
+      </div>
     </div>
   );
 }
