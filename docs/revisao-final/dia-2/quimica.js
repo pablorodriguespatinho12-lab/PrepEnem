@@ -3,6 +3,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Química", t: "Química Orgânica", n: 51,
     aula: [
+      "Palavra-chave: Ache o pedaço, do maior para o menor: COOH = ácido; COO sem H = éster; OH num carbono comum = álcool (no anel = fenol); N ligado só a C ou H = amina (N colado no C=O = amida); só C e H = hidrocarboneto.",
       "Química orgânica estuda os compostos de carbono. O carbono faz 4 ligações.",
       "Hidrocarboneto: só tem carbono (C) e hidrogênio (H). Exemplo: o metano do gás de cozinha.",
       "Função orgânica é a família da molécula. Você reconhece por um pedaço dela.",
@@ -29,6 +30,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Química", t: "Química Ambiental e Energia", n: 40,
     aula: [
+      "Palavra-chave: CO2 esquenta, enxofre azeda: CO2 e metano = efeito estufa; enxofre e nitrogênio = chuva ácida.",
       "Efeito estufa: gases como o gás carbônico (CO2) e o metano (CH4) seguram o calor na Terra. Queimar petróleo e carvão joga CO2 extra no ar.",
       "Chuva ácida: gases de enxofre e de nitrogênio, vindos da queima de combustíveis, viram ácido na água da chuva.",
       "Biocombustíveis vêm de seres vivos: etanol (cana), biodiesel (óleos) e biogás (metano de lixo e esterco apodrecendo sem oxigênio).",
@@ -53,6 +55,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Química", t: "Soluções, pH e Titulação", n: 30,
     aula: [
+      "Palavra-chave: 7 é o meio: abaixo de 7 é ácido, acima é básico. Ácido + base = sal + água.",
       "Solução é uma mistura homogênea: soluto (o que é dissolvido, como o sal) + solvente (onde dissolve, como a água).",
       "Concentração é quanto soluto há em cada litro. Em g/L: massa ÷ volume. Em mol/L: quantidade em mol ÷ volume.",
       "Mol é um pacote de contar partículas, como a dúzia. Massa molar é quanto pesa 1 mol.",
@@ -77,6 +80,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Química", t: "Eletroquímica", n: 22,
     aula: [
+      "Palavra-chave: PERDE OXIDA, GANHA REDUZ (elétrons). O zinco se sacrifica pelo ferro.",
       "Oxidar é perder elétrons. Reduzir é ganhar elétrons. As duas coisas acontecem juntas.",
       "Pilha: uma reação que acontece sozinha e gera corrente elétrica. Os elétrons saem do metal que oxida e vão pelo fio até quem reduz.",
       "Eletrólise é o contrário: gasta-se energia elétrica para forçar a reação. É assim que se produz alumínio.",
@@ -101,6 +105,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Química", t: "Estequiometria", n: 18,
     aula: [
+      "Palavra-chave: A equação é a receita: pegue a proporção da receita e faça regra de três.",
       "Estequiometria é a conta da receita química: quanto entra e quanto sai.",
       "A equação balanceada é a receita. Em 2 H2 + O2 → 2 H2O, cada 2 mol de H2 reagem com 1 mol de O2 e dão 2 mol de água.",
       "Massa molar transforma mol em gramas. H = 1, C = 12, O = 16. Água (H2O): 1 + 1 + 16 = 18 g por mol.",

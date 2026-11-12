@@ -18,6 +18,8 @@ const nivelLabels: Record<string, { label: string; dotColor: string; icon: any }
   dificil: { label: 'Difícil', dotColor: 'hsl(var(--chart-3))', icon: Flame },
   enem: { label: 'ENEM', dotColor: 'hsl(var(--chart-4))', icon: Trophy },
   vestibular: { label: 'Vestibular', dotColor: 'hsl(var(--chart-4))', icon: Trophy },
+  // provas por conteúdo do dia 2: cada conteúdo vai do Fácil ao ENEM (12/11/2026)
+  escada: { label: 'Do fácil ao ENEM', dotColor: 'hsl(var(--chart-1))', icon: Target },
 };
 
 export default function ProvasPage() {
