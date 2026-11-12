@@ -172,7 +172,18 @@ export interface VisualLegenda {
   titulo?: string;
   partes: { texto: string; rotulo: string; cor?: CorVisual }[];
 }
-export type Visual = VisualLegenda | VisualQuadro | VisualPalavra | VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula;
+/* Figura em pixel art animada, desenhada à mão no código (components/visual/
+   figura-pixel.tsx), pelo nome. Só entra por explicação escrita à mão (JSON
+   do repositório); NÃO está no formato da IA (Pablo, 12/11/2026: "imagem
+   da bateria em pixel art, com animação"). */
+export const FIGURAS_PIXEL = ['pilhas-lanterna'] as const;
+export type NomeFigura = (typeof FIGURAS_PIXEL)[number];
+export interface VisualFigura {
+  tipo: 'figura';
+  titulo?: string;
+  nome: NomeFigura;
+}
+export type Visual = VisualLegenda | VisualQuadro | VisualPalavra | VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula | VisualFigura;
 
 const MAX_FUNCOES = 4;
 const MAX_PONTOS = 8;
@@ -463,8 +474,13 @@ function formulaComLegenda(v: Record<string, unknown>): VisualLegenda | null {
     .slice(0, MAX_PARTES_LEGENDA);
   return partes.length >= 2 ? { tipo: 'legenda', titulo: texto(v.titulo), partes } : null;
 }
+function figura(v: Record<string, unknown>): VisualFigura | null {
+  const nome = FIGURAS_PIXEL.find((n) => n === v.nome);
+  return nome ? { tipo: 'figura', titulo: texto(v.titulo), nome } : null;
+}
+
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {
-  legenda: formulaComLegenda, quadro, grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias, processo, molecula, palavra,
+  legenda: formulaComLegenda, quadro, grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias, processo, molecula, palavra, figura,
 };
 
 /* Devolve o visual limpo, ou null se não der para desenhar com segurança. */

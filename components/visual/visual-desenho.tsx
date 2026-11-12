@@ -20,6 +20,7 @@ import { Roda } from './roda';
 import { Retangulo } from './retangulo';
 import { Fatias } from './fatias';
 import { Processo } from './processo';
+import { FiguraPixel } from './figura-pixel';
 function Reta({ v }: { v: VisualReta }) {
   const reduzir = useReducedMotion() ?? false;
   const altura = 110;
@@ -168,6 +169,7 @@ export function VisualDesenho({ visual, semMoldura = false }: { visual: Visual; 
       {visual.tipo === 'processo' && <Processo v={visual} />}
       {visual.tipo === 'molecula' && <Molecula v={visual} />}
       {visual.tipo === 'palavra' && <Palavra v={visual} />}
+      {visual.tipo === 'figura' && <FiguraPixel nome={visual.nome} />}
     </figure>
   );
 }
