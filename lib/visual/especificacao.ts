@@ -176,13 +176,17 @@ export interface VisualLegenda {
    figura-pixel.tsx), pelo nome. Só entra por explicação escrita à mão (JSON
    do repositório); NÃO está no formato da IA (Pablo, 12/11/2026: "imagem
    da bateria em pixel art, com animação"). */
-export const FIGURAS_PIXEL = ['pilhas-lanterna'] as const;
+export const FIGURAS_PIXEL = ['pilhas-lanterna', 'circuito-simples', 'bloco-forca', 'calor-panela', 'onda', 'luz-raio'] as const;
 export type NomeFigura = (typeof FIGURAS_PIXEL)[number];
+/* rotulos: os números da questão escritos nos lugares fixos da figura (até 4). */
 export interface VisualFigura {
   tipo: 'figura';
   titulo?: string;
   nome: NomeFigura;
+  rotulos?: string[];
 }
+const MAX_ROTULOS = 4;
+const MAX_ROTULO = 28;
 export type Visual = VisualLegenda | VisualQuadro | VisualPalavra | VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula | VisualFigura;
 
 const MAX_FUNCOES = 4;
@@ -476,7 +480,9 @@ function formulaComLegenda(v: Record<string, unknown>): VisualLegenda | null {
 }
 function figura(v: Record<string, unknown>): VisualFigura | null {
   const nome = FIGURAS_PIXEL.find((n) => n === v.nome);
-  return nome ? { tipo: 'figura', titulo: texto(v.titulo), nome } : null;
+  if (!nome) return null;
+  const rotulos = lista(v.rotulos).map((r) => texto(r, MAX_ROTULO) ?? '').slice(0, MAX_ROTULOS);
+  return { tipo: 'figura', titulo: texto(v.titulo), nome, ...(rotulos.some(Boolean) ? { rotulos } : {}) };
 }
 
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {

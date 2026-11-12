@@ -169,7 +169,7 @@ export function VisualDesenho({ visual, semMoldura = false }: { visual: Visual; 
       {visual.tipo === 'processo' && <Processo v={visual} />}
       {visual.tipo === 'molecula' && <Molecula v={visual} />}
       {visual.tipo === 'palavra' && <Palavra v={visual} />}
-      {visual.tipo === 'figura' && <FiguraPixel nome={visual.nome} />}
+      {visual.tipo === 'figura' && <FiguraPixel nome={visual.nome} rotulos={visual.rotulos} />}
     </figure>
   );
 }

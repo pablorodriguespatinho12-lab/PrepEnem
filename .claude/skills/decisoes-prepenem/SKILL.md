@@ -254,6 +254,16 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   (`scripts/criar-provas-dia-2-por-conteudo.ts`). Cada aula abre com uma
   "Palavra-chave" de memória (QUE MACETE, FAMA, VÊ LÁ FORA...), como o
   coringa da redação, nos `docs/revisao-final/dia-2/*.js`.
+- **Questão de reforço (Pablo, 12/11/2026: "se eu errar, a próxima é para ver se
+  entendi o erro"):** errou na prova, o botão vira "Tentar uma parecida" e vem uma
+  questão guardada do MESMO conteúdo (`app/api/provas/reforco`, origem "Reforço do
+  dia 2", ids `d2-reforco-*`), com a figura em pixel do caso na tela da questão (sem
+  a conta). Não conta na nota nem grava resposta; as já vistas ficam no navegador
+  para a próxima vez trazer outra. Rótulo "Reforço · estilo ENEM", nunca "ENEM real".
+  Errou o reforço também: segue a prova. Conteúdo em
+  `data/revisao-final/dia-2/reforco-*.json` (mesma conferência das provas), gravado
+  por `scripts/criar-reforco-dia-2.ts`. Feito: Física (15, 3 por conteúdo).
+  Falta: Química, Biologia e Matemática.
 - **Prova responde na hora (22/10/2026):** o acerto é conferido no navegador
   (a letra certa já vem com a questão) e a resposta é gravada por trás, com
   3 tentativas; "Próxima" avança sem recarregar a prova. Antes: 1,5 s para ver
