@@ -524,7 +524,7 @@
     "resposta": "B",
     "explicacao": {
       "conferencia": "Queda de 1 m: 1 = 5t², t² = 0,2. Para frente: v = 3 ÷ t, então v² = 9 ÷ 0,2 = 45. Para cima: H = v² ÷ (2 × 10) = 45 ÷ 20 = 2,25 m. B. Erros: 4,50 = 45 ÷ 10 (esqueceu o 2); 1,50 = 3 ÷ 2; 4,00 = 3 + 1 (somou as distâncias); 5,00 não sai de conta com estes dados.",
-      "ideia": "A água sai sempre com a mesma velocidade; só muda a direção. Descubra essa velocidade pelo voo deitado e use-a apontada para cima: o jato sobe 2,25 m.",
+      "ideia": "A água sai sempre com a mesma velocidade; só muda a direção. Pela queda de 1 m achamos essa velocidade (v × v = 45) e, apontada para cima, ela sobe 45 ÷ 20 = 2,25 m.",
       "pecas": [
         {
           "termo": "Gravidade (g)",
@@ -572,12 +572,11 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: o tempo de voo é o tempo de cair 1 m. A queda segue $h = 5t^2$ (5 é metade de g, e $t^2$ é t vezes t), então $t^2 = 1 \\div 5 = 0{,}2$. Depois: nesse tempo a água anda 3 m para frente, então $v = 3 \\div t$ e $v^2 = 9 \\div 0{,}2$. Como 0,2 é um quinto, dividir por 0,2 é multiplicar por 5: $9 \\times 5 = 45$. Por fim: com essa velocidade para cima, ela sobe até $v^2 \\div 20$: 45 ÷ 20 = 2,25 (20 × 2 = 40; sobram 5, e 5 ÷ 20 = 0,25).",
-          "visual": null
+          "texto": "A água sai da mangueira sempre com a mesma velocidade; só muda para onde ela aponta. Então são 3 contas: quanto tempo a água leva para cair 1 m, que velocidade ela tem (andou 3 m nesse tempo) e até onde essa mesma velocidade sobe se a mangueira apontar para cima."
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Não precisa tirar raiz quadrada (achar o número que, vezes ele mesmo, dá 45): a fórmula da altura já usa a velocidade ao quadrado, $v^2$. No quadro, o traço da fração quer dizer dividir.",
+          "texto": "Cair: a água começa sem velocidade para baixo e ganha 10 m/s a cada segundo. Depois de t segundos ela cai a 10 × t; a velocidade média da queda é a metade, 5 × t. Distância = velocidade média × tempo = 5 × t × t. Esse t × t é o \"t ao quadrado\" (t²): o tempo vezes ele mesmo. Para cair 1 m: 5 × t × t = 1, então t × t = 1 ÷ 5 = 0,2. Para frente a água anda 3 m nesse tempo: v = 3 ÷ t, e v × v = 9 ÷ (t × t) = 9 ÷ 0,2 = 45.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Jato para cima",
@@ -603,8 +602,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Deitada, a velocidade da água só leva a água para frente, e a gravidade a puxa para baixo ao mesmo tempo. Em pé, a mesma velocidade aponta para cima e a gravidade a freia 10 m/s a cada segundo, até parar no alto.",
-          "visual": null
+          "texto": "Subir é cair ao contrário: a gravidade tira 10 m/s a cada segundo até a água parar no alto. O tempo para parar é v ÷ 10, e a velocidade média na subida é a metade, v ÷ 2. Altura = velocidade média × tempo = (v ÷ 2) × (v ÷ 10) = v × v ÷ 20 = 45 ÷ 20 = 2,25 m. Repare que nunca precisamos do t nem do v sozinhos, só de t × t e v × v."
         },
         {
           "titulo": "A resposta",
@@ -692,7 +690,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: soltando de 90°, a criança cai a altura da corda (L) e chega embaixo com $v^2 = 2gL$ (velocidade ao quadrado = 2 vezes g vezes a altura da queda). Depois: no ponto mais baixo, as cordas seguram o peso e ainda fazem a curva: $T - mg = m v^2 \\div L$. Trocando $v^2$ por $2gL$, o L de cima corta com o de baixo e fica $2mg$; então $T = mg + 2mg = 3mg$. Por fim: dividir pelas 2 cordas e pôr os 25%.",
+          "texto": "Primeiro: soltando de 90°, a criança cai a altura da corda (L) e chega embaixo com $v^2 = 2gL$. De onde vem: caindo a altura L, a velocidade média é v ÷ 2 e o tempo é v ÷ g, então L = (v ÷ 2) × (v ÷ g), ou seja, v × v = 2 × g × L. Depois: no ponto mais baixo, as cordas seguram o peso e ainda fazem a curva: $T - mg = m v^2 \\div L$. Trocando $v^2$ por $2gL$, o L de cima corta com o de baixo e fica $2mg$; então $T = mg + 2mg = 3mg$. Por fim: dividir pelas 2 cordas e pôr os 25%.",
           "visual": null
         },
         {
