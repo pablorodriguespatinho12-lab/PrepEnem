@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState, type CSSProperties } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { useTheme } from 'next-themes';
 import { PALETA_DIA, PALETA_NOITE, astro, ceu, nuvens, paisagem } from '@/lib/pixel/desenho';
 import { imagemPixel, tamanhoDoPixel } from './imagem-pixel';
@@ -67,6 +67,23 @@ export function MundoPixel({ animado }: { animado: boolean }) {
   const { resolvedTheme } = useTheme();
   const [img, setImg] = useState<Imagens | null>(null);
   const [pausado, setPausado] = useState(false);
+  const raiz = useRef<HTMLDivElement>(null);
+
+  // Rolando: o mundo espera. Mexe só no atributo, sem passar pelo React
+  // (medir-fluidez: nada que rode no scroll pode passar pelo React).
+  useEffect(() => {
+    let fim: ReturnType<typeof setTimeout>;
+    const aoRolar = () => {
+      raiz.current?.setAttribute('data-rolando', 'sim');
+      clearTimeout(fim);
+      fim = setTimeout(() => raiz.current?.removeAttribute('data-rolando'), 180);
+    };
+    window.addEventListener('scroll', aoRolar, { passive: true, capture: true });
+    return () => {
+      clearTimeout(fim);
+      window.removeEventListener('scroll', aoRolar, { capture: true });
+    };
+  }, []);
 
   useEffect(() => {
     setImg(desenhar());
@@ -101,6 +118,7 @@ export function MundoPixel({ animado }: { animado: boolean }) {
 
   return (
     <div
+      ref={raiz}
       className="mundo-pixel"
       aria-hidden
       data-animado={animado ? 'sim' : 'nao'}

@@ -46,6 +46,14 @@ apareceu num trace.
   tela. Agora 60 na entrada, 30 depois, 0 fora da tela. Para conferir, contar
   quadros desenhados interceptando `drawElements` (não basta ver o print).
 
+- **Mundo pixel (12/11/2026, "parece lento")**: dia/noite, sol e nuvens em
+  `linear` redesenhavam a tela inteira a 60 fps: composição parada de 2.254 ms
+  em 3 s no Início, 1.623 nos flashcards, 1.482 na prova. Com `steps()` (o
+  anoitecer em degraus de 3 s, a nuvem 1 pixel por vez) e pausa ao rolar
+  (`data-rolando`, sem React): **180 / 271 / 191 ms**. Fundo grande animado:
+  sempre em passos. A seleção da alternativa em `steps(2)` parecia atrasada;
+  virou 90 ms liso.
+
 ## Regras para animação nova
 
 - Animação contínua (loop, fundo, 3D) precisa **parar quando ninguém vê**:

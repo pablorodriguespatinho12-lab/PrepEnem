@@ -154,7 +154,9 @@ export default function ProvaDetailPage() {
           <h1 className="sr-only">Prova finalizada</h1>
           <p className="text-muted-foreground mt-5 mb-6">{exam.nome}</p>
 
-          <div className="grid grid-cols-3 gap-3 max-w-md mx-auto">
+          {/* min-w-0 + quebra: "APROVEITAMENTO" passava 1 px da tela de 390 px */}
+          <div className="grid grid-cols-3 gap-3 max-w-md mx-auto [&>*]:min-w-0 [&_p]:break-words">
+
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -334,7 +336,8 @@ export default function ProvaDetailPage() {
   // Mundo pixel atrás da prova (Pablo, 12/11/2026): o céu aparece em cima do
   // cartão, a serra embaixo, e o dia e a noite passam enquanto ele estuda.
   return (
-    <div className="relative min-h-screen">
+    // overflow-x-clip: os anéis do acerto/erro passam da borda no celular e a página rolava para o lado
+    <div className="relative min-h-screen overflow-x-clip">
       <MundoPixel animado={mundo.animado} />
       <div className="relative z-[1] min-h-screen px-4 pb-10 md:px-10 pt-[min(20vh,170px)] max-w-4xl mx-auto">
       <div className="absolute top-4 right-4 md:right-10 flex gap-3">
