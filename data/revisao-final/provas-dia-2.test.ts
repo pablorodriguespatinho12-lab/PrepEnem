@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { existsSync, readFileSync } from 'fs';
+import { existsSync, readFileSync, readdirSync } from 'fs';
 import { join } from 'path';
 import { frases, validarExplicacao } from '@/lib/tutor/validar';
 import { problemasDaExplicacao } from '@/lib/tutor/pronta';
@@ -148,10 +148,14 @@ describe('provas do dia 2', () => {
    parecida do mesmo conteúdo, estilo ENEM (nunca "ENEM real"). Mesma
    conferência das provas e uma figura em pixel no 1º passo. */
 describe('reforço do dia 2', () => {
-  for (const area of AREAS) {
-    const qs = ler('reforco', area);
-    if (!qs) continue;
-    describe(`reforco-${area}`, () => {
+  const arquivos = readdirSync(PASTA).filter((f) => f.startsWith('reforco-') && f.endsWith('.json'));
+  it('ids únicos entre todos os arquivos de reforço', () => {
+    const ids = arquivos.flatMap((f) => (JSON.parse(readFileSync(join(PASTA, f), 'utf8')) as Questao[]).map((q) => q.id));
+    expect(ids.filter((id, i) => ids.indexOf(id) !== i)).toEqual([]);
+  });
+  for (const arquivo of arquivos) {
+    const qs = JSON.parse(readFileSync(join(PASTA, arquivo), 'utf8')) as Questao[];
+    describe(arquivo, () => {
       it('cada questão passa na conferência da explicação', () => {
         const ruins = qs.map((q) => [q.id, problemasDaQuestao(q)] as const).filter(([, e]) => e.length > 0);
         expect(ruins.map(([id, e]) => `${id}: ${e.join('; ')}`)).toEqual([]);

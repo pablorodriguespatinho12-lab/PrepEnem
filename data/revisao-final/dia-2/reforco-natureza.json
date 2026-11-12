@@ -1268,5 +1268,383 @@
         "resposta": "A lupa junta a luz."
       }
     }
+  },
+  {
+    "id": "d2-reforco-fis-ele-04",
+    "materia": "Física",
+    "tema": "Eletricidade e Circuitos",
+    "enunciado": "Duas lâmpadas, uma de 3 Ω e outra de 6 Ω, estão ligadas em série (uma depois da outra) numa bateria de 18 V. Qual é a corrente que passa pelas lâmpadas?",
+    "A": "6 A",
+    "B": "3 A",
+    "C": "2 A",
+    "D": "0,5 A",
+    "E": "162 A",
+    "resposta": "C",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Em série as resistências somam: 3 + 6 = 9 Ω. i = 18 ÷ 9 = 2 A. C. Erros: A = 18 ÷ 3; B = 18 ÷ 6; D = 9 ÷ 18; E = 18 × 9.",
+      "ideia": "Em série, uma lâmpada atrapalha depois da outra: as resistências somam, 3 + 6 = 9 Ω. A corrente é o empurrão dividido pelo total: 18 ÷ 9 = 2 A.",
+      "pecas": [
+        {
+          "termo": "Em série",
+          "significado": "Um aparelho depois do outro, no mesmo fio. A mesma corrente passa pelos dois, e as resistências somam."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Uma bateria de 18 V e duas lâmpadas em fila, de 3 Ω e 6 Ω. A questão quer a corrente.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "circuito-simples",
+            "titulo": "Duas lâmpadas em série",
+            "rotulos": [
+              "bateria 18 V",
+              "3 Ω + 6 Ω em série",
+              "i = ?",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A corrente passa pela primeira lâmpada e depois pela segunda. As duas atrapalham no mesmo caminho, então somam: 3 + 6 = 9 Ω."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Corrente = empurrão ÷ tudo que atrapalha = 18 ÷ 9 = 2 A.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Lâmpadas em série",
+            "dados": [
+              "U = 18\\,\\text{V}",
+              "R = 3 + 6 = 9\\,\\Omega"
+            ],
+            "formula": "i = \\frac{U}{R}",
+            "legenda": [
+              "U: o empurrão",
+              "R: a soma das resistências"
+            ],
+            "contas": [
+              "i = \\frac{18}{9}"
+            ],
+            "resultado": "i = 2\\,\\text{A}",
+            "nota": "A mesma corrente passa nas duas."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "U = R × i vale para o caminho inteiro. Em série, o caminho inteiro atrapalha 9 Ω. Confira: 9 × 2 = 18."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 2 A. A e B usaram só uma lâmpada. D dividiu ao contrário. E multiplicou em vez de dividir."
+        }
+      ],
+      "checagem": {
+        "pergunta": "Resistências de 2 Ω e 4 Ω em série somam:",
+        "opcoes": [
+          "6 Ω",
+          "8 Ω",
+          "2 Ω",
+          "1,3 Ω"
+        ],
+        "certa": "6 Ω",
+        "resposta": "Em série soma: 2 + 4 = 6 Ω."
+      },
+      "seuErro": null
+    }
+  },
+  {
+    "id": "d2-reforco-fis-din-04",
+    "materia": "Física",
+    "tema": "Dinâmica e Leis de Newton",
+    "enunciado": "Uma pessoa de patins empurra uma parede com uma força de 50 N e sai deslizando para trás. Que força a parede faz na pessoa?",
+    "A": "Nenhuma, parede não empurra.",
+    "B": "25 N, metade da força.",
+    "C": "100 N, o dobro da força.",
+    "D": "50 N, no sentido contrário ao do empurrão.",
+    "E": "50 N, no mesmo sentido do empurrão.",
+    "resposta": "D",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "3ª lei de Newton: ação e reação têm o mesmo tamanho e sentidos contrários: 50 N para trás. D. Erros: A nega a reação; B e C mudam o tamanho; E erra o sentido.",
+      "ideia": "Toda força tem um par: se você empurra a parede com 50 N, a parede empurra você com 50 N para o outro lado. É por isso que a pessoa de patins vai para trás.",
+      "pecas": [
+        {
+          "termo": "3ª lei de Newton",
+          "significado": "Ação e reação: as duas forças têm o mesmo tamanho, sentidos contrários e agem em corpos diferentes."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A pessoa empurra a parede com 50 N e vai para trás. A questão quer a força da parede nela.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "bloco-forca",
+            "titulo": "Empurrou, foi empurrado",
+            "rotulos": [
+              "você empurra 50 N",
+              "parede empurra ?",
+              "parede",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A pessoa só começa a deslizar para trás porque alguma força a empurrou para trás. Quem empurrou foi a parede."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Reação = ação, ao contrário: 50 N, de volta para a pessoa.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Ação e reação",
+            "dados": [
+              "F_{\\text{ação}} = 50\\,\\text{N}"
+            ],
+            "formula": "F_{\\text{reação}} = F_{\\text{ação}}",
+            "legenda": [
+              "ação: você na parede",
+              "reação: a parede em você"
+            ],
+            "contas": [
+              "F_{\\text{reação}} = 50\\,\\text{N}"
+            ],
+            "resultado": "50\\,\\text{N},\\ \\text{para trás}",
+            "nota": "Mesmo tamanho, sentido contrário."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É o mesmo motivo de o barco ir para trás quando você pula dele para o cais: você empurra o barco e o barco empurra você."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 50 N no sentido contrário. A nega a reação. B e C mudam o tamanho, que é sempre igual. E erra o sentido."
+        }
+      ],
+      "checagem": {
+        "pergunta": "Um foguete empurra os gases para baixo. Os gases empurram o foguete para:",
+        "opcoes": [
+          "cima",
+          "baixo",
+          "o lado",
+          "lugar nenhum"
+        ],
+        "certa": "cima",
+        "resposta": "Ação para baixo, reação para cima."
+      },
+      "seuErro": null
+    }
+  },
+  {
+    "id": "d2-reforco-fis-ter-04",
+    "materia": "Física",
+    "tema": "Termodinâmica e Calor",
+    "enunciado": "O ar-condicionado costuma ser instalado no alto da parede, e o aquecedor, perto do chão. Qual é o motivo dessa escolha?",
+    "A": "O ar frio sobe e o quente desce.",
+    "B": "O calor só anda por condução, encostando.",
+    "C": "A posição não muda nada; é só para não atrapalhar.",
+    "D": "O ar frio é mais leve que o quente.",
+    "E": "O ar frio desce e o quente sobe, e assim o ar da sala circula (convecção).",
+    "resposta": "E",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Convecção: ar frio é mais denso e desce; ar quente é menos denso e sobe; o ar circula pela sala. E. Erros: A e D invertem; B ignora a convecção; C nega o efeito.",
+      "ideia": "Ar frio é mais pesado e desce; ar quente é mais leve e sobe. Soltando o frio no alto e o quente embaixo, o ar da sala gira sozinho: é a convecção.",
+      "pecas": [
+        {
+          "termo": "Convecção",
+          "significado": "O calor viajando junto com um líquido ou gás que se move: o quente sobe, o frio desce, e forma uma corrente."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Ar-condicionado no alto, aquecedor embaixo. A questão quer o porquê.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "calor-panela",
+            "titulo": "O quente sobe, o frio desce",
+            "rotulos": [
+              "ar quente sobe",
+              "",
+              "calor embaixo",
+              "ar frio desce"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O ar frio que sai do alto desce e empurra o ar quente para cima, onde ele é resfriado. O ar da sala inteira passa pelo aparelho."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Lembre da panela no fogo: a água quente do fundo sobe e a fria desce. No ar é igual."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Esquentar faz o ar se espalhar e ficar menos denso (mais leve para o mesmo espaço). Por isso ele sobe, como o balão de ar quente."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E. A e D invertem quem sobe e quem desce. B esquece a convecção. C diz que não muda nada, mas muda."
+        }
+      ],
+      "checagem": {
+        "pergunta": "O balão de ar quente sobe porque o ar quente é:",
+        "opcoes": [
+          "menos denso",
+          "mais denso",
+          "mais frio",
+          "mais pesado"
+        ],
+        "certa": "menos denso",
+        "resposta": "Ar quente é menos denso e sobe."
+      },
+      "seuErro": null
+    }
+  },
+  {
+    "id": "d2-reforco-fis-ond-04",
+    "materia": "Física",
+    "tema": "Ondas e Acústica",
+    "enunciado": "O apito de cachorro faz um som tão agudo que as pessoas não ouvem, mas o cachorro ouve. Comparado a um som grave, esse som tem:",
+    "A": "frequência muito alta, com muitas vibrações por segundo.",
+    "B": "frequência muito baixa, com poucas vibrações por segundo.",
+    "C": "volume muito alto, que estoura o ouvido humano.",
+    "D": "velocidade maior no ar que a dos outros sons.",
+    "E": "comprimento de onda maior que o do som grave.",
+    "resposta": "A",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Agudo = frequência alta; o apito passa do limite humano (cerca de 20 000 Hz). A. Erros: B é o grave; C confunde altura com volume; D a velocidade do som no ar é a mesma; E agudo tem onda mais curta.",
+      "ideia": "Agudo ou grave depende da frequência: som agudo vibra muitas vezes por segundo. O apito vibra mais do que o ouvido humano consegue perceber.",
+      "pecas": [
+        {
+          "termo": "Frequência",
+          "significado": "Quantas vibrações por segundo, em hertz (Hz). Alta = agudo; baixa = grave."
+        },
+        {
+          "termo": "Volume",
+          "significado": "O quanto o som é forte ou fraco. Não é o mesmo que agudo ou grave."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O apito é agudo demais para nós. A questão quer o que esse som tem de diferente.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "onda",
+            "titulo": "Som agudo: ondas apertadas",
+            "rotulos": [
+              "onda curta",
+              "frequência alta",
+              "agudo demais para nós"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Quanto mais vibrações por segundo, mais agudo o som. O ouvido humano vai até cerca de 20 000 vibrações por segundo; o cachorro ouve além disso."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Agudo = frequência alta. Grave = frequência baixa. Volume é outra coisa."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Todo som anda no ar com a mesma velocidade (cerca de 340 m/s). Como v = λ × f, frequência alta vem com onda curta."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A. B descreve o grave. C confunde agudo com volume. D erra: no ar todo som anda igual. E erra: o agudo tem onda mais curta."
+        }
+      ],
+      "checagem": {
+        "pergunta": "O som da tuba é grave. A frequência dele é:",
+        "opcoes": [
+          "baixa",
+          "alta",
+          "zero",
+          "infinita"
+        ],
+        "certa": "baixa",
+        "resposta": "Grave = poucas vibrações por segundo."
+      },
+      "seuErro": null
+    }
+  },
+  {
+    "id": "d2-reforco-fis-opt-04",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Num dia de sol forte, uma pessoa de camiseta preta sente mais calor que outra de camiseta branca. Por quê?",
+    "A": "A roupa preta reflete mais luz.",
+    "B": "A roupa preta absorve mais luz, e a luz absorvida vira calor.",
+    "C": "A roupa branca absorve toda a luz.",
+    "D": "A roupa preta faz a luz contornar o corpo.",
+    "E": "As duas absorvem igual; é só impressão.",
+    "resposta": "B",
+    "origem": "Reforço do dia 2",
+    "explicacao": {
+      "conferencia": "Preto absorve quase toda a luz e ela vira calor; branco reflete a maior parte. B. Erros: A e C invertem; D é difração; E nega o efeito.",
+      "ideia": "Preto absorve quase toda a luz que chega, e a luz absorvida vira calor. Branco reflete a maior parte da luz, então esquenta menos.",
+      "pecas": [
+        {
+          "termo": "Absorção",
+          "significado": "A luz que entra no material e não volta: ela vira calor."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Camiseta preta esquenta mais que a branca no sol. A questão quer o motivo.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "A luz do sol chegando",
+            "rotulos": [
+              "luz do sol",
+              "roupa preta",
+              "absorve: vira calor",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A luz do sol chega nas duas camisetas. A preta segura quase toda a luz; a branca devolve boa parte dela."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Escuro absorve, claro reflete. O que fica absorvido esquenta."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A gente vê branco porque a luz volta para o olho, e preto porque quase nenhuma volta: ela ficou no tecido, virando calor."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B. A e C invertem as cores. D descreve a difração, que não é o caso. E nega um efeito que existe."
+        }
+      ],
+      "checagem": {
+        "pergunta": "Por que casas em lugar quente são pintadas de branco?",
+        "opcoes": [
+          "refletem a luz",
+          "absorvem a luz",
+          "conduzem calor",
+          "fazem vento"
+        ],
+        "certa": "refletem a luz",
+        "resposta": "Branco reflete e esquenta menos."
+      },
+      "seuErro": null
+    }
   }
 ]
