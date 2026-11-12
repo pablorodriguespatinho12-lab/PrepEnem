@@ -2,6 +2,7 @@
   "Eletricidade e Circuitos": {
     "materia": "Física",
     "aula": [
+      "Palavra-chave: URI e PUI. U = R × i e P = U × i: o empurrão (U) vezes a corrente (i) dá a potência.",
       "Tensão (U, em volts, V) é o empurrão nas cargas. Corrente (i, em ampères, A) é quanta carga passa. Resistência (R, em ohms, Ω) é o que atrapalha a passagem.",
       "Lei de Ohm: U = R × i.",
       "Potência (P, em watts, W) é a energia gasta por segundo: P = U × i.",
@@ -41,6 +42,7 @@
   "Termodinâmica e Calor": {
     "materia": "Física",
     "aula": [
+      "Palavra-chave: QUE MACETE: Q = m × c × ΔT quando a temperatura muda. Mudando de estado (gelo derretendo), a temperatura fica parada e Q = m × L.",
       "Temperatura mede a agitação das partículas. Calor é energia passando do mais quente para o mais frio.",
       "O calor anda de 3 jeitos: condução (encostando, como no cabo da panela), convecção (o líquido ou o ar quente sobe e o frio desce) e radiação (sem encostar, como o calor do Sol).",
       "Para esquentar algo: Q = m × c × ΔT. É massa × calor específico × quanto a temperatura mudou. O calor específico (c) diz quanto o material custa para esquentar.",
@@ -82,6 +84,7 @@
   "Ondas e Acústica": {
     "materia": "Física",
     "aula": [
+      "Palavra-chave: VÊ LÁ FORA: v = λ × f. Som agudo = frequência alta.",
       "Onda leva energia sem levar matéria. O som é uma onda no ar, na água ou no metal.",
       "Frequência (f, em hertz, Hz): quantas vibrações por segundo. Som agudo tem frequência alta. Som grave, baixa.",
       "Comprimento de onda (λ, a letra lambda): o tamanho de uma onda inteira.",
@@ -140,6 +143,7 @@
   "Óptica": {
     "materia": "Física",
     "aula": [
+      "Palavra-chave: BATE, PASSA, CONTORNA: reflexão bate e volta; refração passa e muda de velocidade (desvia se entrar inclinada); difração contorna.",
       "Reflexão: a luz bate e volta (espelho).",
       "Refração: a luz passa de um meio para outro (do ar para a água) e muda de velocidade. Se entra inclinada, também desvia. É o que faz o canudo parecer quebrado no copo.",
       "Lentes funcionam por refração. A que junta a luz (convergente) é a da lupa. A que espalha (divergente) corrige a miopia.",
@@ -196,6 +200,7 @@
   "Dinâmica e Leis de Newton": {
     "materia": "Física",
     "aula": [
+      "Palavra-chave: FAMA: F = m × a. Toda força tem um par.",
       "Força é empurrão ou puxão, medida em newtons (N).",
       "1ª lei (inércia): sem força resultante, o corpo continua como está, parado ou em linha reta com a mesma velocidade. Força resultante é a soma de todas as forças.",
       "2ª lei: força resultante = massa × aceleração (F = m × a).",
@@ -239,6 +244,7 @@
   "Química Orgânica": {
     "materia": "Química",
     "aula": [
+      "Palavra-chave: Ache o pedaço, do maior para o menor: COOH = ácido; COO sem H = éster; OH num carbono comum = álcool (no anel = fenol); N ligado só a C ou H = amina (N colado no C=O = amida); só C e H = hidrocarboneto.",
       "Química orgânica estuda os compostos de carbono. O carbono faz 4 ligações.",
       "Hidrocarboneto: só tem carbono (C) e hidrogênio (H). Exemplo: o metano do gás de cozinha.",
       "Função orgânica é a família da molécula. Você reconhece por um pedaço dela.",
@@ -283,6 +289,7 @@
   "Química Ambiental e Energia": {
     "materia": "Química",
     "aula": [
+      "Palavra-chave: CO2 esquenta, enxofre azeda: CO2 e metano = efeito estufa; enxofre e nitrogênio = chuva ácida.",
       "Efeito estufa: gases como o gás carbônico (CO2) e o metano (CH4) seguram o calor na Terra. Queimar petróleo e carvão joga CO2 extra no ar.",
       "Chuva ácida: gases de enxofre e de nitrogênio, vindos da queima de combustíveis, viram ácido na água da chuva.",
       "Biocombustíveis vêm de seres vivos: etanol (cana), biodiesel (óleos) e biogás (metano de lixo e esterco apodrecendo sem oxigênio).",
@@ -339,6 +346,7 @@
   "Soluções, pH e Titulação": {
     "materia": "Química",
     "aula": [
+      "Palavra-chave: 7 é o meio: abaixo de 7 é ácido, acima é básico. Ácido + base = sal + água.",
       "Solução é uma mistura homogênea: soluto (o que é dissolvido, como o sal) + solvente (onde dissolve, como a água).",
       "Concentração é quanto soluto há em cada litro. Em g/L: massa ÷ volume. Em mol/L: quantidade em mol ÷ volume.",
       "Mol é um pacote de contar partículas, como a dúzia. Massa molar é quanto pesa 1 mol.",
@@ -399,6 +407,7 @@
   "Eletroquímica": {
     "materia": "Química",
     "aula": [
+      "Palavra-chave: PERDE OXIDA, GANHA REDUZ (elétrons). O zinco se sacrifica pelo ferro.",
       "Oxidar é perder elétrons. Reduzir é ganhar elétrons. As duas coisas acontecem juntas.",
       "Pilha: uma reação que acontece sozinha e gera corrente elétrica. Os elétrons saem do metal que oxida e vão pelo fio até quem reduz.",
       "Eletrólise é o contrário: gasta-se energia elétrica para forçar a reação. É assim que se produz alumínio.",
@@ -439,6 +448,7 @@
   "Estequiometria": {
     "materia": "Química",
     "aula": [
+      "Palavra-chave: A equação é a receita: pegue a proporção da receita e faça regra de três.",
       "Estequiometria é a conta da receita química: quanto entra e quanto sai.",
       "A equação balanceada é a receita. Em 2 H2 + O2 → 2 H2O, cada 2 mol de H2 reagem com 1 mol de O2 e dão 2 mol de água.",
       "Massa molar transforma mol em gramas. H = 1, C = 12, O = 16. Água (H2O): 1 + 1 + 16 = 18 g por mol.",
@@ -481,6 +491,7 @@
   "Ecologia": {
     "materia": "Biologia",
     "aula": [
+      "Palavra-chave: A seta aponta para quem come. Cada degrau passa só cerca de 10% da energia (se a questão der outro número, use o dela).",
       "Cadeia alimentar: produtor (planta, faz o próprio alimento) → consumidor (come outro ser) → decompositor (fungos e bactérias, devolvem os nutrientes ao solo).",
       "Quem come a planta é o consumidor primário (1º). Quem come esse bicho é o secundário (2º).",
       "A energia diminui a cada degrau da cadeia: só cerca de 10% passa para o próximo.",
@@ -521,6 +532,7 @@
   "Fisiologia Humana e Saúde": {
     "materia": "Biologia",
     "aula": [
+      "Palavra-chave: Vermelho leva, branco defende, plaqueta fecha. Insulina baixa o açúcar.",
       "Circulação: o coração bombeia o sangue. As hemácias (glóbulos vermelhos) levam oxigênio. Os glóbulos brancos defendem. As plaquetas fazem o sangue coagular, que é fechar o corte.",
       "Respiração: no pulmão, o sangue solta gás carbônico e pega oxigênio.",
       "Digestão: quebra o alimento em pedaços pequenos, que passam para o sangue no intestino delgado.",
@@ -578,6 +590,7 @@
   "Genética": {
     "materia": "Biologia",
     "aula": [
+      "Palavra-chave: Aa × Aa dá aa 1 em 4. Maiúscula manda; minúscula precisa de duas.",
       "Gene é um trecho do DNA com a receita de uma característica. Cada pessoa tem 2 cópias de cada gene: uma do pai, uma da mãe. As versões de um gene se chamam alelos.",
       "Alelo dominante (letra maiúscula, A) aparece mesmo com 1 cópia. Alelo recessivo (letra minúscula, a) só aparece com 2 cópias (aa).",
       "Aa é o portador: tem o alelo recessivo, mas não mostra.",
@@ -635,6 +648,7 @@
   "Citologia": {
     "materia": "Biologia",
     "aula": [
+      "Palavra-chave: Mitocôndria é a usina (ATP). Núcleo guarda o DNA. Ribossomo monta proteína.",
       "Célula é a menor parte viva. A membrana é a pele da célula: controla o que entra e sai. O núcleo guarda o DNA.",
       "Organelas: mitocôndria (tira energia do alimento e produz ATP, a moeda de energia da célula), ribossomo (monta proteínas), cloroplasto (faz fotossíntese, só em plantas e algas), lisossomo (faz a digestão dentro da célula).",
       "Respiração celular em 3 etapas: glicólise, ciclo de Krebs (também chamado ciclo do ácido cítrico) e fosforilação oxidativa. A última acontece na mitocôndria e produz quase todo o ATP.",
@@ -692,6 +706,7 @@
   "Evolução": {
     "materia": "Biologia",
     "aula": [
+      "Palavra-chave: O ambiente escolhe, não cria (Darwin). Uso e desuso é Lamarck, ideia superada.",
       "Evolução é a mudança das populações ao longo das gerações.",
       "Seleção natural (Darwin): os indivíduos já nascem diferentes. Quem tem a característica que ajuda naquele ambiente sobrevive mais e deixa mais filhos. Com o tempo, ela fica comum.",
       "O ambiente não cria a característica: ele seleciona a que já existia. A bactéria não aprende a resistir ao antibiótico. As resistentes é que sobram.",
@@ -733,6 +748,7 @@
   "Microbiologia e Doenças": {
     "materia": "Biologia",
     "aula": [
+      "Palavra-chave: Vírus não liga para antibiótico. O mosquito leva, não causa.",
       "Vírus: não tem célula e só se multiplica dentro de uma. Antibiótico não funciona contra vírus (dengue, gripe, covid, aids).",
       "Bactéria: uma célula sem núcleo. Antibiótico funciona (tuberculose, cólera, leptospirose).",
       "Protozoário: uma célula com núcleo (malária, doença de Chagas, leishmaniose). Verme: um animal (esquistossomose, lombriga, filariose).",
@@ -790,6 +806,7 @@
   "Aritmética e Porcentagem": {
     "materia": "Matemática",
     "aula": [
+      "Palavra-chave: Por cento = de cada 100: divida por 100. Desconto de 10% = × 0,90.",
       "Fração: 3/4 quer dizer dividir em 4 partes iguais e pegar 3. Exemplo: 3/4 de 40 = 40 ÷ 4 × 3 = 30.",
       "Porcentagem é uma fração de 100. 25% = 25 ÷ 100 = 0,25.",
       "Achar 25% de 80: 0,25 × 80 = 20.",
@@ -831,6 +848,7 @@
   "Grandezas e Medidas": {
     "materia": "Matemática",
     "aula": [
+      "Palavra-chave: Dobra e dobra é direta; dobra e cai à metade é inversa. Depois, regra de três.",
       "Grandezas diretas: uma dobra, a outra dobra (mais gasolina, mais quilômetros).",
       "Grandezas inversas: uma dobra, a outra cai pela metade (mais pedreiros, menos dias).",
       "Regra de três: escreva as duas grandezas lado a lado e multiplique cruzado. Na inversa, o produto das duas fica igual.",
@@ -873,6 +891,7 @@
   "Estatística": {
     "materia": "Matemática",
     "aula": [
+      "Palavra-chave: Média soma e divide; mediana: ponha em ordem e pegue a do meio (2 no meio? a média deles); moda é a que mais aparece.",
       "Média: some tudo e divida pela quantidade.",
       "Mediana: ponha em ordem e pegue o valor do meio. Se a quantidade for par, faça a média dos dois do meio.",
       "Moda: o valor que mais aparece.",
@@ -913,6 +932,7 @@
   "Funções": {
     "materia": "Matemática",
     "aula": [
+      "Palavra-chave: Máquina de números: troque o x. Reta é do 1º grau; parábola, do 2º.",
       "Função é uma máquina: entra um número (x), sai outro (y).",
       "Função do 1º grau: y = ax + b. O b é o valor de partida. O a é quanto sobe a cada 1 de x. O gráfico é uma reta.",
       "Função do 2º grau: y = ax² + bx + c. O gráfico é uma curva chamada parábola. Com a negativo, ela tem um ponto mais alto.",
@@ -955,6 +975,7 @@
   "Geometria Plana": {
     "materia": "Matemática",
     "aula": [
+      "Palavra-chave: Retângulo: base × altura; triângulo: a metade disso (círculo e trapézio têm fórmula própria). Pitágoras: cateto² + cateto² = hipotenusa².",
       "Perímetro é a volta (a soma dos lados). Área é o tamanho da superfície, o chão que a figura cobre.",
       "Retângulo: área = base × altura. Triângulo: base × altura ÷ 2.",
       "Círculo: área = π × raio². Volta = 2 × π × raio. O raio é a metade do diâmetro. O π (pi) vale cerca de 3,14.",
@@ -1010,6 +1031,7 @@
   "Geometria Espacial": {
     "materia": "Matemática",
     "aula": [
+      "Palavra-chave: Prisma e cilindro: área da base × altura (pirâmide e cone: 1/3 disso). 1 m³ = 1 000 L. Dobrou as 3 medidas: o volume fica 8 vezes maior.",
       "Volume é quanto cabe dentro de um sólido.",
       "Caixa (paralelepípedo): comprimento × largura × altura.",
       "Cilindro (forma de lata): área da base × altura = π × raio² × altura.",

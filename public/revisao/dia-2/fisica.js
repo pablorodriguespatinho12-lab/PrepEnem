@@ -3,6 +3,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Física", t: "Eletricidade e Circuitos", n: 37,
     aula: [
+      "Palavra-chave: URI e PUI. U = R × i e P = U × i: o empurrão (U) vezes a corrente (i) dá a potência.",
       "Tensão (U, em volts, V) é o empurrão nas cargas. Corrente (i, em ampères, A) é quanta carga passa. Resistência (R, em ohms, Ω) é o que atrapalha a passagem.",
       "Lei de Ohm: U = R × i.",
       "Potência (P, em watts, W) é a energia gasta por segundo: P = U × i.",
@@ -28,6 +29,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Física", t: "Termodinâmica e Calor", n: 36,
     aula: [
+      "Palavra-chave: QUE MACETE: Q = m × c × ΔT quando a temperatura muda. Mudando de estado (gelo derretendo), a temperatura fica parada e Q = m × L.",
       "Temperatura mede a agitação das partículas. Calor é energia passando do mais quente para o mais frio.",
       "O calor anda de 3 jeitos: condução (encostando, como no cabo da panela), convecção (o líquido ou o ar quente sobe e o frio desce) e radiação (sem encostar, como o calor do Sol).",
       "Para esquentar algo: Q = m × c × ΔT. É massa × calor específico × quanto a temperatura mudou. O calor específico (c) diz quanto o material custa para esquentar.",
@@ -52,6 +54,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Física", t: "Ondas e Acústica", n: 31,
     aula: [
+      "Palavra-chave: VÊ LÁ FORA: v = λ × f. Som agudo = frequência alta.",
       "Onda leva energia sem levar matéria. O som é uma onda no ar, na água ou no metal.",
       "Frequência (f, em hertz, Hz): quantas vibrações por segundo. Som agudo tem frequência alta. Som grave, baixa.",
       "Comprimento de onda (λ, a letra lambda): o tamanho de uma onda inteira.",
@@ -77,6 +80,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Física", t: "Óptica", n: 20,
     aula: [
+      "Palavra-chave: BATE, PASSA, CONTORNA: reflexão bate e volta; refração passa e muda de velocidade (desvia se entrar inclinada); difração contorna.",
       "Reflexão: a luz bate e volta (espelho).",
       "Refração: a luz passa de um meio para outro (do ar para a água) e muda de velocidade. Se entra inclinada, também desvia. É o que faz o canudo parecer quebrado no copo.",
       "Lentes funcionam por refração. A que junta a luz (convergente) é a da lupa. A que espalha (divergente) corrige a miopia.",
@@ -102,6 +106,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Física", t: "Dinâmica e Leis de Newton", n: 17,
     aula: [
+      "Palavra-chave: FAMA: F = m × a. Toda força tem um par.",
       "Força é empurrão ou puxão, medida em newtons (N).",
       "1ª lei (inércia): sem força resultante, o corpo continua como está, parado ou em linha reta com a mesma velocidade. Força resultante é a soma de todas as forças.",
       "2ª lei: força resultante = massa × aceleração (F = m × a).",

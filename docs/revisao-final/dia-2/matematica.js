@@ -4,6 +4,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Matemática", t: "Aritmética e Porcentagem", n: 128,
     aula: [
+      "Palavra-chave: Por cento = de cada 100: divida por 100. Desconto de 10% = × 0,90.",
       "Fração: 3/4 quer dizer dividir em 4 partes iguais e pegar 3. Exemplo: 3/4 de 40 = 40 ÷ 4 × 3 = 30.",
       "Porcentagem é uma fração de 100. 25% = 25 ÷ 100 = 0,25.",
       "Achar 25% de 80: 0,25 × 80 = 20.",
@@ -28,6 +29,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Matemática", t: "Grandezas e Medidas", n: 81,
     aula: [
+      "Palavra-chave: Dobra e dobra é direta; dobra e cai à metade é inversa. Depois, regra de três.",
       "Grandezas diretas: uma dobra, a outra dobra (mais gasolina, mais quilômetros).",
       "Grandezas inversas: uma dobra, a outra cai pela metade (mais pedreiros, menos dias).",
       "Regra de três: escreva as duas grandezas lado a lado e multiplique cruzado. Na inversa, o produto das duas fica igual.",
@@ -52,6 +54,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Matemática", t: "Estatística", n: 75,
     aula: [
+      "Palavra-chave: Média soma e divide; mediana: ponha em ordem e pegue a do meio (2 no meio? a média deles); moda é a que mais aparece.",
       "Média: some tudo e divida pela quantidade.",
       "Mediana: ponha em ordem e pegue o valor do meio. Se a quantidade for par, faça a média dos dois do meio.",
       "Moda: o valor que mais aparece.",
@@ -75,6 +78,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Matemática", t: "Funções", n: 73,
     aula: [
+      "Palavra-chave: Máquina de números: troque o x. Reta é do 1º grau; parábola, do 2º.",
       "Função é uma máquina: entra um número (x), sai outro (y).",
       "Função do 1º grau: y = ax + b. O b é o valor de partida. O a é quanto sobe a cada 1 de x. O gráfico é uma reta.",
       "Função do 2º grau: y = ax² + bx + c. O gráfico é uma curva chamada parábola. Com a negativo, ela tem um ponto mais alto.",
@@ -98,6 +102,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Matemática", t: "Geometria Plana", n: 67,
     aula: [
+      "Palavra-chave: Retângulo: base × altura; triângulo: a metade disso (círculo e trapézio têm fórmula própria). Pitágoras: cateto² + cateto² = hipotenusa².",
       "Perímetro é a volta (a soma dos lados). Área é o tamanho da superfície, o chão que a figura cobre.",
       "Retângulo: área = base × altura. Triângulo: base × altura ÷ 2.",
       "Círculo: área = π × raio². Volta = 2 × π × raio. O raio é a metade do diâmetro. O π (pi) vale cerca de 3,14.",
@@ -123,6 +128,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Matemática", t: "Geometria Espacial", n: 66,
     aula: [
+      "Palavra-chave: Prisma e cilindro: área da base × altura (pirâmide e cone: 1/3 disso). 1 m³ = 1 000 L. Dobrou as 3 medidas: o volume fica 8 vezes maior.",
       "Volume é quanto cabe dentro de um sólido.",
       "Caixa (paralelepípedo): comprimento × largura × altura.",
       "Cilindro (forma de lata): área da base × altura = π × raio² × altura.",

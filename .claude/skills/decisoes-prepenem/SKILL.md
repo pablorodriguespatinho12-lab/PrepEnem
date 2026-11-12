@@ -245,6 +245,15 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   "A resposta" → "Tentar responder"; o resto do conteúdo fica atrás de "Mais do
   conteúdo". Só explicação pronta (`soPronta`, a rota nunca chama a IA); 160 de 160 têm.
   As 40 reais estão no banco com `tema` vazio: `temaDaQuestao` acha pelo id nos JSON.
+- **Provas do dia 2 por conteúdo (Pablo, 12/11/2026: "começa com uma fácil de
+  velocidade média, depois média, difícil, ENEM; aí vai para o próximo
+  conteúdo"):** 5 provas "Dia 2 por conteúdo · Física/Química/Biologia/
+  Matemática 1/Matemática 2" (24, 28, 28, 44, 36), nível `escada` ("Do fácil ao
+  ENEM" na lista). As MESMAS 160 questões das 4 por nível, que continuam lá; em
+  cada conteúdo, Fácil → Médio → Difícil → ENEM e repete
+  (`scripts/criar-provas-dia-2-por-conteudo.ts`). Cada aula abre com uma
+  "Palavra-chave" de memória (QUE MACETE, FAMA, VÊ LÁ FORA...), como o
+  coringa da redação, nos `docs/revisao-final/dia-2/*.js`.
 - **Prova responde na hora (22/10/2026):** o acerto é conferido no navegador
   (a letra certa já vem com a questão) e a resposta é gravada por trás, com
   3 tentativas; "Próxima" avança sem recarregar a prova. Antes: 1,5 s para ver

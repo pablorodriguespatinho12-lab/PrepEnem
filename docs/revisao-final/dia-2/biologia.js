@@ -3,6 +3,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Biologia", t: "Ecologia", n: 54,
     aula: [
+      "Palavra-chave: A seta aponta para quem come. Cada degrau passa só cerca de 10% da energia (se a questão der outro número, use o dela).",
       "Cadeia alimentar: produtor (planta, faz o próprio alimento) → consumidor (come outro ser) → decompositor (fungos e bactérias, devolvem os nutrientes ao solo).",
       "Quem come a planta é o consumidor primário (1º). Quem come esse bicho é o secundário (2º).",
       "A energia diminui a cada degrau da cadeia: só cerca de 10% passa para o próximo.",
@@ -29,6 +30,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Biologia", t: "Fisiologia Humana e Saúde", n: 28,
     aula: [
+      "Palavra-chave: Vermelho leva, branco defende, plaqueta fecha. Insulina baixa o açúcar.",
       "Circulação: o coração bombeia o sangue. As hemácias (glóbulos vermelhos) levam oxigênio. Os glóbulos brancos defendem. As plaquetas fazem o sangue coagular, que é fechar o corte.",
       "Respiração: no pulmão, o sangue solta gás carbônico e pega oxigênio.",
       "Digestão: quebra o alimento em pedaços pequenos, que passam para o sangue no intestino delgado.",
@@ -54,6 +56,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Biologia", t: "Genética", n: 25,
     aula: [
+      "Palavra-chave: Aa × Aa dá aa 1 em 4. Maiúscula manda; minúscula precisa de duas.",
       "Gene é um trecho do DNA com a receita de uma característica. Cada pessoa tem 2 cópias de cada gene: uma do pai, uma da mãe. As versões de um gene se chamam alelos.",
       "Alelo dominante (letra maiúscula, A) aparece mesmo com 1 cópia. Alelo recessivo (letra minúscula, a) só aparece com 2 cópias (aa).",
       "Aa é o portador: tem o alelo recessivo, mas não mostra.",
@@ -79,6 +82,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Biologia", t: "Citologia", n: 20,
     aula: [
+      "Palavra-chave: Mitocôndria é a usina (ATP). Núcleo guarda o DNA. Ribossomo monta proteína.",
       "Célula é a menor parte viva. A membrana é a pele da célula: controla o que entra e sai. O núcleo guarda o DNA.",
       "Organelas: mitocôndria (tira energia do alimento e produz ATP, a moeda de energia da célula), ribossomo (monta proteínas), cloroplasto (faz fotossíntese, só em plantas e algas), lisossomo (faz a digestão dentro da célula).",
       "Respiração celular em 3 etapas: glicólise, ciclo de Krebs (também chamado ciclo do ácido cítrico) e fosforilação oxidativa. A última acontece na mitocôndria e produz quase todo o ATP.",
@@ -104,6 +108,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Biologia", t: "Evolução", n: 19,
     aula: [
+      "Palavra-chave: O ambiente escolhe, não cria (Darwin). Uso e desuso é Lamarck, ideia superada.",
       "Evolução é a mudança das populações ao longo das gerações.",
       "Seleção natural (Darwin): os indivíduos já nascem diferentes. Quem tem a característica que ajuda naquele ambiente sobrevive mais e deixa mais filhos. Com o tempo, ela fica comum.",
       "O ambiente não cria a característica: ele seleciona a que já existia. A bactéria não aprende a resistir ao antibiótico. As resistentes é que sobram.",
@@ -129,6 +134,7 @@ window.DIA2 = (window.DIA2 || []).concat([
   {
     m: "Biologia", t: "Microbiologia e Doenças", n: 17,
     aula: [
+      "Palavra-chave: Vírus não liga para antibiótico. O mosquito leva, não causa.",
       "Vírus: não tem célula e só se multiplica dentro de uma. Antibiótico não funciona contra vírus (dengue, gripe, covid, aids).",
       "Bactéria: uma célula sem núcleo. Antibiótico funciona (tuberculose, cólera, leptospirose).",
       "Protozoário: uma célula com núcleo (malária, doença de Chagas, leishmaniose). Verme: um animal (esquistossomose, lombriga, filariose).",
