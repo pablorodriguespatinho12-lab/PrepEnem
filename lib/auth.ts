@@ -2,6 +2,7 @@ import { NextAuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { prisma } from '@/lib/db';
 import bcrypt from 'bcryptjs';
+import { MSG_BLOQUEIO, anotarErro, bloqueado, hashDoIp, ipDoPedido, limparErros } from '@/lib/limite-login';
 
 // Intervalo mínimo entre revalidações do usuário contra o banco no callback
 // jwt. Evita bater no Neon (serverless, cobra compute por conexão) a cada
@@ -10,6 +11,8 @@ import bcrypt from 'bcryptjs';
 // abertura do app acordava o Neon e prendia a tela no círculo (06/10/2026).
 // 30 min: em troca, uma conta apagada leva até meia hora para cair.
 const SESSION_REVALIDATE_INTERVAL_MS = 30 * 60_000;
+// Hash de mentira para comparar quando o usuário não existe (mesmo tempo de resposta).
+const HASH_FALSO = bcrypt.hashSync('usuario-que-nao-existe', 10);
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -20,9 +23,17 @@ export const authOptions: NextAuthOptions = {
         email: { label: 'Email', type: 'text' },
         password: { label: 'Senha', type: 'password' },
       },
-      async authorize(credentials) {
+      async authorize(credentials, req) {
         const loginId = credentials?.username || credentials?.email || '';
         if (!loginId || !credentials?.password) return null;
+        // Limite contra chute de senha (lib/limite-login.ts). Bloqueado: nem
+        // confere a senha. A mensagem chega à tela de login como res.error.
+        const ipHash = hashDoIp(ipDoPedido(req?.headers as Record<string, string> | undefined));
+        if (await bloqueado(ipHash).catch(() => false)) throw new Error(MSG_BLOQUEIO);
+        const falhou = async () => {
+          await anotarErro(ipHash).catch(() => {});
+          return null;
+        };
         try {
           // Try username first, then email fallback
           let user = await prisma.user.findUnique({
@@ -33,9 +44,14 @@ export const authOptions: NextAuthOptions = {
               where: { email: loginId },
             });
           }
-          if (!user) return null;
+          if (!user) {
+            // compara mesmo assim: o tempo de resposta não revela se o usuário existe
+            await bcrypt.compare(credentials.password, HASH_FALSO);
+            return falhou();
+          }
           const valid = await bcrypt.compare(credentials.password, user.password);
-          if (!valid) return null;
+          if (!valid) return falhou();
+          await limparErros(ipHash).catch(() => {});
           return {
             id: user.id,
             username: user.username,

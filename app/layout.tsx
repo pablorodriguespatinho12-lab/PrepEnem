@@ -1,5 +1,6 @@
 import { DM_Sans, Fraunces, Source_Serif_4, JetBrains_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
+import { headers } from 'next/headers';
 import './globals.css';
 import { Providers } from '@/components/providers';
 import { FocoTeclado } from '@/components/foco-teclado';
@@ -58,7 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-BR" suppressHydrationWarning data-letra-pixel="">
       <body className={`${dmSans.variable} ${fraunces.variable} ${sourceSerif.variable} ${jetbrainsMono.variable} ${jersey.variable} ${jerseyTexto.variable} font-sans`}>
-        <Providers>
+        <Providers nonce={headers().get('x-nonce') ?? undefined}>
           <AppLayout>
             {children}
           </AppLayout>

@@ -369,3 +369,13 @@ model ExplicacaoPronta {
   question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
   @@index([versao, revisada])
 }
+
+// Tentativa de login que FALHOU (12/11/2026, limite contra chute de senha).
+// Guarda só o hash SHA-256 do IP, nunca o IP nem a senha. Apagadas depois de 1 dia.
+model TentativaLogin {
+  id       String   @id @default(cuid())
+  ipHash   String
+  criadaEm DateTime @default(now())
+  @@index([ipHash, criadaEm])
+  @@index([criadaEm])
+}
