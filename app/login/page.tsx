@@ -20,15 +20,17 @@ export default function LoginPage() {
     }
     setLoading(true);
     try {
-      const res = await signIn('credentials', {
-        username,
-        password,
-        redirect: true,
-        callbackUrl: '/dashboard',
-      });
+      // Sem redirecionar sozinho: assim a tela mostra o motivo do erro
+      // (senha errada ou bloqueio por tentativas, lib/limite-login.ts).
+      const res = await signIn('credentials', { username, password, redirect: false });
       if (res?.error) {
-        toast.error('Usuário ou senha inválidos');
+        toast.error(res.error.startsWith('Muitas tentativas') ? res.error : 'Usuário ou senha inválidos');
+        return;
       }
+      // Volta para onde ia (o middleware manda ?callbackUrl=). Só caminho interno.
+      const destino = new URLSearchParams(window.location.search).get('callbackUrl') ?? '';
+      const seguro = destino.startsWith('/') && !destino.startsWith('//') && !destino.startsWith('/\\');
+      window.location.assign(seguro ? destino : '/dashboard');
     } catch {
       toast.error('Erro ao fazer login');
     } finally {

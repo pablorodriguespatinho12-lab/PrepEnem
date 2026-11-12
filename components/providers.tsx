@@ -6,7 +6,9 @@ import { Toaster } from 'sonner';
 import { MotionConfig } from 'framer-motion';
 import React from 'react';
 
-export function Providers({ children }: { children: React.ReactNode }) {
+/* nonce: o script do next-themes (evita piscar o tema) é inline; sem o nonce do
+   middleware.ts a Content-Security-Policy o bloqueia (12/11/2026). */
+export function Providers({ children, nonce }: { children: React.ReactNode; nonce?: string }) {
   return (
     <SessionProvider>
       <SessionGuard />
@@ -15,6 +17,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         defaultTheme="system"
         enableSystem={true}
         storageKey="prepenem-theme"
+        nonce={nonce}
       >
         {/* Reduzir movimento do sistema vale no app inteiro: o framer desliga
             transform (x, y, scale) e mantém opacity. Antes cada tela tratava por
