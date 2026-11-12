@@ -460,6 +460,12 @@ escolha, nível acima) estão em `calculo.md`, nesta pasta. **Leia antes de mexe
   84% por cima (texto cinza segue AA mesmo sobre o pinheiro mais escuro; a 78%
   dava 4,1:1). Substituiu as partículas. A prova aberta tem o mundo dela, forte,
   sem véu.
+  **Letras em pixel (mesmo dia, "até as letras e as palavras"):** com
+  `html[data-letra-pixel]` (padrão; desliga em Perfil > "Letras em pixel",
+  `useLetraPixel`) o texto todo vira Jersey 15 (size-adjust 125%) e os títulos
+  Jersey 10. Pixelify Sans foi testada e caiu: "C" vira "O" e "5" vira "8" em
+  negrito ("15%" lia "18%"). **Flip em CSS** (`.cartao-flip`, 0,45 s nos dois
+  modos), não em framer: roda no compositor e não trava ao virar.
 - **Flashcard é a opção A, escolhida pelo Pablo em 05/10/2026** (entre A "flip
   firme" e B "revelar embaixo, pergunta fica na tela"): flip 3D de 0,42 s sem
   mola, pilha atrás, saída para o lado da resposta, Espaço vira e 1/2 respondem.

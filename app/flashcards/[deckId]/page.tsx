@@ -2,7 +2,7 @@
 import { useSession } from 'next-auth/react';
 import { useEffect, useState, useCallback, useRef } from 'react';
 import { useRouter, useParams, useSearchParams } from 'next/navigation';
-import { motion, AnimatePresence, MotionConfig, useReducedMotion, type Variants } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion, type Variants } from 'framer-motion';
 import { ChevronLeft, CheckCircle, XCircle, RotateCw, Trophy, Lightbulb, Loader2, RefreshCw, Sparkles, Plus, Trash2, Check, X } from 'lucide-react';
 import { toast } from 'sonner';
 import { corDoBaralho } from '@/lib/theme-colors';
@@ -695,23 +695,14 @@ export default function FlashcardDeckPage() {
               aria-label={flipped ? 'Virar para a pergunta' : 'Virar para ver a resposta'}
             >
               {/* reducedMotion global do app (Providers) desliga transform; o flip é a exceção (decisoes-prepenem). */}
-              <MotionConfig reducedMotion="never">
-              <motion.div
-                animate={{ rotateY: flipped ? 180 : 0 }}
-                // Exceção deliberada ao padrão de reduced-motion do resto do
-                // app: aqui a rotação é o próprio feedback de que a resposta
-                // trocou de lado, não decoração (diferente do parallax de
-                // fundo, que é puramente estético). Uma rotação de eixo único
-                // em 250-600ms não é o tipo de movimento que a diretriz mira
-                // (parallax rápido, zoom, deslocamento grande) — só encurta
-                // e tira o bounce quando reduced-motion está ativo.
-                transition={
-                  shouldReduceMotion
-                    ? { duration: 0.25, ease: 'easeOut' }
-                    : { duration: 0.42, ease: [0.2, 0.8, 0.2, 1] } // opção A (05/10/2026): firme, sem quique
-                }
-                style={{ transformStyle: 'preserve-3d', minHeight: '400px' }}
-                className="relative w-full"
+              {/* Flip em CSS (.cartao-flip em globals.css), não em framer: a
+                  rotação roda no compositor e não perde quadro quando a tela
+                  reage ao toque (Pablo, 12/11/2026: "fica meio travado"). Exceção
+                  deliberada ao reduced-motion: a rotação É o feedback de que a
+                  resposta trocou de lado. Mesma curva da opção A (05/10/2026). */}
+              <div
+                style={{ transform: `rotateY(${flipped ? 180 : 0}deg)`, minHeight: '400px' }}
+                className="cartao-flip relative w-full"
               >
                 {/* Front — surface-2 (elevada): a frente é o lado ativo da
                     pergunta. Identidade da matéria vira ponto de cor, não
@@ -772,8 +763,7 @@ export default function FlashcardDeckPage() {
                   )}
                   <div className="absolute bottom-4 left-0 right-0 text-center type-meta text-muted-foreground">Toque para virar <span className="hidden md:inline">· 1 errei · 2 acertei</span></div>
                 </div>
-              </motion.div>
-              </MotionConfig>
+              </div>
             </div>
 
             {/* Hint overlay (front side only) */}

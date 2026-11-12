@@ -23,6 +23,16 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mon
    Arquivo local porque o Next 14 não tem ela na lista do Google. A Pixelify Sans
    foi descartada: o "C" dela parece "O" ("Oafé", 12/11/2026). */
 const jersey = localFont({ src: '../public/fonts/jersey-10-latin.woff2', variable: '--font-pixel', display: 'swap' });
+/* Jersey 15 (texto em pixel, 12/11/2026: "até as letras e as palavras").
+   Testada contra Pixelify Sans (o "C" vira "O" e o "5" vira "8" em negrito),
+   Tiny5, VT323 e Silkscreen. Desenho pequeno: size-adjust de 125% para ler
+   como o corpo de antes. Liga/desliga em Perfil > "Letras em pixel". */
+const jerseyTexto = localFont({
+  src: '../public/fonts/jersey-15-latin.woff2',
+  variable: '--font-pixel-texto',
+  display: 'swap',
+  declarations: [{ prop: 'size-adjust', value: '125%' }],
+});
 
 export const dynamic = 'force-dynamic';
 
@@ -46,8 +56,8 @@ export async function generateMetadata() {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${dmSans.variable} ${fraunces.variable} ${sourceSerif.variable} ${jetbrainsMono.variable} ${jersey.variable} font-sans`}>
+    <html lang="pt-BR" suppressHydrationWarning data-letra-pixel="">
+      <body className={`${dmSans.variable} ${fraunces.variable} ${sourceSerif.variable} ${jetbrainsMono.variable} ${jersey.variable} ${jerseyTexto.variable} font-sans`}>
         <Providers>
           <AppLayout>
             {children}

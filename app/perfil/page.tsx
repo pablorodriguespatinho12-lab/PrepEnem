@@ -2,13 +2,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useSession, signOut } from 'next-auth/react';
 import { motion } from 'framer-motion';
-import { Settings, User, Palette, Save, LogOut, Check, Moon, Sun, Volume2, VolumeX, Sparkles } from 'lucide-react';
+import { Settings, User, Palette, Save, LogOut, Check, Moon, Sun, Volume2, VolumeX, Sparkles, Type } from 'lucide-react';
 import { toast } from 'sonner';
 import { themeColors, DEFAULT_THEME_COLOR } from '@/lib/theme-colors';
 import { useAppTheme } from '@/components/app-theme-provider';
 import { useTheme } from 'next-themes';
 import { useSoundEnabled } from '@/lib/use-sound-preference';
 import { useMundoAnimado } from '@/hooks/use-mundo-animado';
+import { useLetraPixel } from '@/hooks/use-letra-pixel';
 
 const THEME_OPTIONS = Object.entries(themeColors).map(([key, set]) => ({
   key,
@@ -26,6 +27,7 @@ export default function PerfilPage() {
   const { theme: darkMode, setTheme: setDarkMode } = useTheme();
   const [soundEnabled, setSoundEnabled] = useSoundEnabled();
   const mundo = useMundoAnimado();
+  const letra = useLetraPixel();
 
   const fetchProfile = useCallback(async () => {
     try {
@@ -246,6 +248,37 @@ export default function PerfilPage() {
             <motion.div
               className="absolute top-0.5 left-0.5 w-6 h-6 bg-white rounded-full shadow-elev-1"
               animate={{ x: mundo.animado ? 28 : 0 }}
+              transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+            />
+          </button>
+        </div>
+      </motion.div>
+
+      {/* Letras em pixel: ligado por padrão (Pablo, 12/11/2026); texto longo cansa? desliga aqui. */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.45 }}
+        className="surface-1 rounded-[var(--radius-surface)] p-6 mb-6"
+      >
+        <div className="flex items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <Type className="w-5 h-5 text-primary-text" />
+            <div>
+              <h2 className="font-display type-body font-semibold">Letras em pixel</h2>
+              <p className="type-meta text-muted-foreground">Todo o texto do site em letra de pixel</p>
+            </div>
+          </div>
+          <button
+            onClick={letra.alternar}
+            role="switch"
+            aria-checked={letra.ligado}
+            aria-label="Letras em pixel"
+            className={`relative w-14 h-7 rounded-full t-colors flex-shrink-0 ${letra.ligado ? 'bg-primary' : 'bg-muted'}`}
+          >
+            <motion.div
+              className="absolute top-0.5 left-0.5 w-6 h-6 bg-white rounded-full shadow-elev-1"
+              animate={{ x: letra.ligado ? 28 : 0 }}
               transition={{ type: 'spring', stiffness: 500, damping: 30 }}
             />
           </button>

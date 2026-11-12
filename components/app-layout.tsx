@@ -7,6 +7,7 @@ import { AppThemeProvider } from './app-theme-provider';
 import { ScrollProgress } from './animations';
 import { MundoPixel } from './pixel/mundo-pixel';
 import { useMundoAnimado } from '@/hooks/use-mundo-animado';
+import { useLetraPixel } from '@/hooks/use-letra-pixel';
 import { LembreteLeitura } from './lembrete-leitura';
 import { EsqueletoApp } from './esqueletos';
 
@@ -15,6 +16,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const pathname = usePathname();
   const mundo = useMundoAnimado();
+  useLetraPixel(); // aplica a escolha de "Letras em pixel" em toda tela
   // A prova tem o mundo dela, forte e sem véu (components/pixel/mundo-pixel.tsx).
   const provaAberta = /^\/provas\/(?!criar)[^/]+/.test(pathname ?? '');
 

@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence, MotionConfig, useReducedMotion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle2, XCircle } from 'lucide-react';
 import { materiaColors } from '@/lib/theme-colors';
 
@@ -16,7 +16,6 @@ type Props = {
 };
 
 export function AquecimentoFlashcards({ deckId, quantidade, onFim }: Props) {
-  const reduzir = useReducedMotion();
   const [cartoes, setCartoes] = useState<Cartao[] | null>(null);
   const [materiaDoDeck, setMateriaDoDeck] = useState('');
   const [idx, setIdx] = useState(0);
@@ -107,14 +106,11 @@ export function AquecimentoFlashcards({ deckId, quantidade, onFim }: Props) {
         aria-pressed={virado}
         aria-label={virado ? 'Virar para a pergunta' : 'Virar para ver a resposta'}
       >
-        {/* reducedMotion global do app (Providers) desliga transform; o flip é a exceção (decisoes-prepenem). */}
-        <MotionConfig reducedMotion="never">
-        <motion.div
+        {/* Flip em CSS (.cartao-flip), igual ao dos flashcards: roda no compositor (12/11/2026). */}
+        <div
           key={cartao.id}
-          animate={{ rotateY: virado ? 180 : 0 }}
-          transition={reduzir ? { duration: 0.25, ease: 'easeOut' } : { duration: 0.42, ease: [0.2, 0.8, 0.2, 1] }}
-          style={{ transformStyle: 'preserve-3d', minHeight: '320px' }}
-          className="relative w-full"
+          style={{ transform: `rotateY(${virado ? 180 : 0}deg)`, minHeight: '320px' }}
+          className="cartao-flip relative w-full"
         >
           <div
             className="absolute inset-0 rounded-[var(--radius-container)] surface-2 flex items-center justify-center p-8"
@@ -137,8 +133,7 @@ export function AquecimentoFlashcards({ deckId, quantidade, onFim }: Props) {
             </span>
             <p className="font-reading type-lead measure-reading text-center font-medium">{cartao.verso}</p>
           </div>
-        </motion.div>
-        </MotionConfig>
+        </div>
       </div>
 
       <AnimatePresence>
