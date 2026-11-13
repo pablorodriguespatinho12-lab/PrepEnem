@@ -62,7 +62,7 @@ def conferir(caminho: str, reescritas: set) -> list:
 
 def main() -> int:
     arquivos = sys.argv[1:] or sorted(f for f in glob.glob(f'{PASTA}/*.json') if 'aulas' not in f)
-    reescritas = {'cmouei967006buoz9sn75cdpe', 'd2-medio-mat-01', 'd2-dificil-mat-01', 'cmouei98g007fuoz9zgosga5e'}
+    reescritas = {'cmouei967006buoz9sn75cdpe', 'd2-medio-mat-01', 'd2-dificil-mat-01', 'cmouei98g007fuoz9zgosga5e', 'cmouei97g006wuoz9y3g2z37b'}
     total = 0
     for caminho in arquivos:
         erros = conferir(caminho, reescritas)

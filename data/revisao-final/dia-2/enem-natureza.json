@@ -727,7 +727,7 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "A questão quer a tensão que a corda deve aguentar, com folga, no pior momento do balanço.",
+          "texto": "A questão quer quanto cada corda deve aguentar, com folga de 25%, no pior momento do balanço.\nTensão é o puxão da corda, em newtons (N). \"Tensão de ruptura\" é o puxão em que ela arrebenta.\n\"Despreza forças dissipativas\" quer dizer sem atrito nem vento: nada freia a criança.\nO pior momento é lá embaixo, onde a criança passa mais rápido.\nVamos em 3 partes: a velocidade lá embaixo, o puxão para fazer a curva e a divisão pelas 2 cordas com a folga.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Os dados",
@@ -760,40 +760,67 @@
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Primeiro: soltando de 90°, a criança cai a altura da corda (L) e chega embaixo com $v^2 = 2gL$.\nDe onde vem: caindo a altura L, a velocidade média é v ÷ 2 e o tempo é v ÷ g.\nEntão L = (v ÷ 2) × (v ÷ g), ou seja, v × v = 2 × g × L.\nDepois: no ponto mais baixo, as cordas seguram o peso e ainda fazem a curva: $T - mg = m v^2 \\div L$.\nTrocando $v^2$ por $2gL$, o L de cima corta com o de baixo e fica $2mg$.\nEntão $T = mg + 2mg = 3mg$.\nPor fim: dividir pelas 2 cordas e pôr os 25%.",
-          "visual": null
-        },
-        {
-          "titulo": "Jeito rápido",
-          "texto": "Triplo do peso, dividido por 2 cordas, vezes 1,25. Peso: 24 × 10 = 240 N. Triplo: 3 × 240 = 720 N. Por corda: 720 ÷ 2 = 360 N. Vezes 1,25 é somar um quarto: 360 ÷ 4 = 90, e 360 + 90 = 450 N.",
+          "titulo": "1) Velocidade lá embaixo",
+          "texto": "Solta de 90° (corda deitada), a criança desce a altura da corda.\nA corda puxa sempre de lado, para o centro, nunca na direção em que ela anda: não freia nem acelera. Só a gravidade muda a velocidade.\nEntão ela chega embaixo com a mesma velocidade de uma pedra que caísse essa altura.\nPela pedra caindo (tabela): v × v dá 20 × a altura nas 3 linhas. O 20 é 2 × 10, o dobro da gravidade.\nExemplo: corda de 2 m. Ela cai 2 m e chega com v × v = 20 × 2 = 40.",
           "visual": {
-            "tipo": "quadro",
-            "titulo": "Corda do balanço",
-            "dados": [
-              "m = 24\\,\\text{kg}",
-              "g = 10\\,\\text{m/s}^2",
-              "mg = 240\\,\\text{N}",
-              "2 \\text{ cordas}",
-              "\\text{folga} = 25\\% \\Rightarrow \\times 1{,}25"
+            "tipo": "tabela",
+            "titulo": "Pedra caindo",
+            "cabecalho": [
+              "Caiu",
+              "Velocidade no fim",
+              "v × v",
+              "20 × altura"
             ],
-            "formula": "T_{corda} = 1{,}25 \\times \\dfrac{3mg}{2}",
-            "legenda": [
-              "$3mg$: puxão total no ponto mais baixo",
-              "$1{,}25$: folga de um quarto a mais"
-            ],
-            "contas": [
-              "T = 1{,}25 \\times \\dfrac{3 \\times 240}{2}",
-              "T = 1{,}25 \\times \\dfrac{720}{2}",
-              "T = 1{,}25 \\times 360"
-            ],
-            "resultado": "T = 450\\,\\text{N}",
-            "nota": "Cada corda precisa aguentar 450 N."
+            "linhas": [
+              [
+                "5 m (1 s)",
+                "10 m/s",
+                "10 × 10 = 100",
+                "20 × 5 = 100"
+              ],
+              [
+                "20 m (2 s)",
+                "20 m/s",
+                "20 × 20 = 400",
+                "20 × 20 = 400"
+              ],
+              [
+                "45 m (3 s)",
+                "30 m/s",
+                "30 × 30 = 900",
+                "20 × 45 = 900"
+              ]
+            ]
           }
         },
         {
-          "titulo": "Por que funciona",
-          "texto": "Embaixo, a corda faz dois trabalhos: segura a criança (1 peso) e a faz virar a curva (2 pesos, porque ela chegou rápido). Por isso o puxão é o triplo do peso, não o peso.",
+          "titulo": "2) Puxão da curva: por que funciona",
+          "texto": "Lá embaixo ela está fazendo uma curva, e a curva pede um puxão para o centro, que fica em cima.\nO raio dessa curva é o tamanho da corda. Puxão da curva = massa × v × v ÷ tamanho da corda.\nCorda de 2 m: 24 × 40 ÷ 2 = 480 N.\nCorda de 5 m: ela chega com v × v = 20 × 5 = 100, e o puxão é 24 × 100 ÷ 5 = 480 N. O mesmo!\nCorda maior dá mais velocidade, mas curva mais aberta. Uma coisa cancela a outra: sempre 480 N, 2 vezes o peso.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "O tamanho da corda não importa",
+            "cabecalho": [
+              "Corda",
+              "v × v (20 × corda)",
+              "Puxão da curva"
+            ],
+            "linhas": [
+              [
+                "2 m",
+                "40",
+                "24 × 40 ÷ 2 = 480 N"
+              ],
+              [
+                "5 m",
+                "100",
+                "24 × 100 ÷ 5 = 480 N"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "3) O puxão total",
+          "texto": "Peso da criança: 24 × 10 = 240 N, puxando para baixo.\nA corda puxa para cima. Os primeiros 240 N só empatam com o peso: sozinhos, não fazem curva nenhuma.\nO que sobra para cima é que faz a curva, e a curva pede 480 N.\nEntão a corda puxa 240 + 480 = 720 N, que é 3 vezes o peso.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Somando os puxões",
@@ -813,16 +840,33 @@
               [
                 "total nas 2 cordas",
                 "720 N"
-              ],
-              [
-                "cada corda",
-                "360 N"
-              ],
-              [
-                "com 25% a mais",
-                "450 N"
               ]
             ]
+          }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "As 2 cordas dividem o puxão: 720 ÷ 2 = 360 N em cada.\n25% é 25 de cada 100, ou seja, 1 de cada 4: um quarto.\nFolga de 25% é somar um quarto: 360 ÷ 4 = 90, e 360 + 90 = 450 N.\nNo quadro, × 1,25 faz o mesmo: 1 inteiro mais 0,25, que é um quarto.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Corda do balanço",
+            "dados": [
+              "\\text{peso} = 24 \\times 10 = 240\\,\\text{N}",
+              "2 \\text{ cordas}",
+              "\\text{folga} = 25\\% = \\text{um quarto}"
+            ],
+            "formula": "T = \\dfrac{3 \\times \\text{peso}}{2} \\times 1{,}25",
+            "legenda": [
+              "$T$: puxão que cada corda deve aguentar",
+              "$3 \\times \\text{peso}$: puxão total lá embaixo"
+            ],
+            "contas": [
+              "T = \\dfrac{3 \\times 240}{2} \\times 1{,}25",
+              "T = \\dfrac{720}{2} \\times 1{,}25",
+              "T = 360 \\times 1{,}25"
+            ],
+            "resultado": "T = 450\\,\\text{N}",
+            "nota": "Cada corda precisa aguentar 450 N."
           }
         },
         {
