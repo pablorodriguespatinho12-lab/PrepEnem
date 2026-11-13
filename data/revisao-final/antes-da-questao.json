@@ -1,0 +1,135 @@
+{
+  "conceitos": {
+    "velocidade": {
+      "titulo": "Velocidade",
+      "linhas": [
+        "Velocidade diz quanto a coisa anda a cada segundo (ou a cada hora).",
+        "Um carro a 60 km/h anda 60 km a cada hora. Em 2 horas: 60 × 2 = 120 km.",
+        "Então: distância = velocidade × tempo.",
+        "Ao contrário: andou 120 km em 2 horas? Velocidade = 120 ÷ 2 = 60 km/h. Velocidade = distância ÷ tempo."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Carro a 60 km/h",
+        "cabecalho": ["Tempo", "Conta", "Distância"],
+        "linhas": [["1 hora", "60 × 1", "60 km"], ["2 horas", "60 × 2", "120 km"], ["3 horas", "60 × 3", "180 km"]]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Uma bicicleta anda a 5 m/s (5 metros a cada segundo). Quanto ela anda em 4 segundos?",
+          "alternativas": ["9 m", "20 m", "1,25 m", "0,8 m"],
+          "certa": 1,
+          "resolucao": "Distância = velocidade × tempo = 5 × 4 = 20 m.\n9 m é somar 5 + 4; 1,25 m é 5 ÷ 4; 0,8 m é 4 ÷ 5."
+        },
+        {
+          "enunciado": "Um som anda 30 m em 6 segundos. Qual é a velocidade dele?",
+          "alternativas": ["5 m/s", "180 m/s", "24 m/s", "36 m/s"],
+          "certa": 0,
+          "resolucao": "Velocidade = distância ÷ tempo = 30 ÷ 6 = 5 m/s.\n180 é 30 × 6; 24 é 30 − 6; 36 é 30 + 6."
+        }
+      ]
+    },
+    "queda": {
+      "titulo": "Velocidade que cresce: a média",
+      "linhas": [
+        "Uma pedra solta cai cada vez mais rápido: ganha 10 m/s a cada segundo. É isso que \"g = 10 m/s²\" quer dizer.",
+        "Depois de 1 s ela está a 10 m/s; depois de 2 s, a 20 m/s; depois de 3 s, a 30 m/s.",
+        "Ela não anda sempre igual, então não dá para usar só a velocidade do fim.",
+        "Mas a velocidade cresce por igual: a média é o meio entre o começo e o fim. Entre 0 e 20, a média é 10.",
+        "O devagar do começo compensa o rápido do fim. Por isso: distância = média × tempo. Em 2 s: 10 × 2 = 20 m."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Pedra caindo",
+        "cabecalho": ["Tempo", "Velocidade no fim", "Média (o meio)", "Distância (média × tempo)"],
+        "linhas": [["1 s", "10 m/s", "5 m/s", "5 × 1 = 5 m"], ["2 s", "20 m/s", "10 m/s", "10 × 2 = 20 m"], ["3 s", "30 m/s", "15 m/s", "15 × 3 = 45 m"]]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Um carro sai parado e, crescendo por igual, chega a 20 m/s em 4 segundos. Qual é a velocidade média dele nesse tempo?",
+          "alternativas": ["20 m/s", "10 m/s", "5 m/s", "80 m/s"],
+          "certa": 1,
+          "resolucao": "O meio entre 0 e 20 é 10 m/s (20 ÷ 2).\n20 m/s é só a do fim; 5 m/s é 20 ÷ 4, quanto ele ganha por segundo; 80 é 20 × 4."
+        },
+        {
+          "enunciado": "Uma pedra cai por 3 segundos, ganhando 10 m/s a cada segundo. Quantos metros ela caiu?",
+          "alternativas": ["30 m", "45 m", "90 m", "15 m"],
+          "certa": 1,
+          "resolucao": "No fim ela está a 10 × 3 = 30 m/s. A média é o meio: 15 m/s. Distância = 15 × 3 = 45 m.\n90 m usa a velocidade do fim (30 × 3); 30 m e 15 m esquecem de multiplicar pelo tempo."
+        }
+      ]
+    },
+    "aceleracao": {
+      "titulo": "Aceleração",
+      "linhas": [
+        "Aceleração diz quanto a velocidade muda a cada segundo.",
+        "Um carro a 20 m/s freia e para em 4 s. Perdeu 20 m/s em 4 s: 20 ÷ 4 = 5 m/s a cada segundo.",
+        "Essa é a aceleração: 5 m/s², que se lê \"5 m/s a cada segundo\".",
+        "Aceleração = quanto a velocidade mudou ÷ tempo. Parar mais rápido é aceleração maior.",
+        "Com ela entra a força da aula: F = m × a."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Carro freando",
+        "cabecalho": ["Tempo", "Velocidade"],
+        "linhas": [["0 s", "20 m/s"], ["1 s", "15 m/s"], ["2 s", "10 m/s"], ["3 s", "5 m/s"], ["4 s", "0 (parou)"]]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Uma moto sai parada e chega a 30 m/s em 6 segundos. Qual é a aceleração dela?",
+          "alternativas": ["5 m/s²", "180 m/s²", "24 m/s²", "36 m/s²"],
+          "certa": 0,
+          "resolucao": "A velocidade mudou 30 m/s em 6 s: 30 ÷ 6 = 5 m/s a cada segundo.\n180 é 30 × 6; 24 é 30 − 6; 36 é 30 + 6."
+        },
+        {
+          "enunciado": "Uma bola a 10 m/s para em 0,5 segundo. Qual é a aceleração dela?",
+          "alternativas": ["5 m/s²", "20 m/s²", "10,5 m/s²", "2 m/s²"],
+          "certa": 1,
+          "resolucao": "10 ÷ 0,5: quantos meios cabem em 10? Cada inteiro tem 2 meios, então 10 × 2 = 20 m/s².\n5 é 10 × 0,5; 10,5 é 10 + 0,5; 2 é 1 ÷ 0,5."
+        }
+      ]
+    }
+    ,
+    "curva": {
+      "titulo": "Força para fazer a curva",
+      "linhas": [
+        "Para andar em curva, alguma coisa tem que puxar para o centro. No carro são os pneus; no balanço, a corda.",
+        "Quanto mais rápido, muito mais puxão: com o dobro da velocidade, o puxão fica 4 vezes maior (2 × 2).",
+        "Raio é a distância do centro da curva até o que gira: no barbante, o tamanho do barbante; no balanço, o da corda.",
+        "Curva mais aberta pede menos puxão. Bola de 2 kg a 2 m/s: barbante de 1 m, 2 × 2 × 2 ÷ 1 = 8 N; de 2 m, 8 ÷ 2 = 4 N, metade.",
+        "Juntando: puxão da curva = massa × v × v ÷ raio.",
+        "Exemplo: bola de 2 kg a 3 m/s num barbante de 1 m: 2 × 3 × 3 ÷ 1 = 18 N."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Bola de 2 kg num barbante de 1 m",
+        "cabecalho": ["Velocidade", "v × v", "Puxão (2 × v × v ÷ 1)"],
+        "linhas": [["1 m/s", "1", "2 N"], ["2 m/s", "4", "8 N"], ["3 m/s", "9", "18 N"]]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Um carrinho de 1 kg faz uma curva de raio 2 m a 4 m/s. Qual é o puxão da curva?",
+          "alternativas": ["8 N", "2 N", "32 N", "16 N"],
+          "certa": 0,
+          "resolucao": "1 × 4 × 4 ÷ 2 = 16 ÷ 2 = 8 N.\n2 N esquece o v × v (4 ÷ 2); 32 N multiplica pelo raio; 16 N esquece de dividir pelo raio."
+        },
+        {
+          "enunciado": "Uma pedra gira presa num barbante. Se ela passar a girar com o dobro da velocidade, o puxão do barbante fica:",
+          "alternativas": ["igual", "2 vezes maior", "4 vezes maior", "pela metade"],
+          "certa": 2,
+          "resolucao": "v × v cresce 2 × 2 = 4 vezes, então o puxão fica 4 vezes maior.\n\"2 vezes\" esquece que a velocidade aparece duas vezes na conta."
+        }
+      ]
+    }
+  },
+  "questoes": {
+    "cmouei967006buoz9sn75cdpe": ["velocidade", "queda"],
+    "cmouei97g006wuoz9y3g2z37b": ["queda", "curva"],
+    "d2-dificil-nat-04": ["velocidade"],
+    "d2-medio-nat-04": ["velocidade"],
+    "d2-reforco-fis-ond-02": ["velocidade"],
+    "cmouei95e005yuoz9wkrh222v": ["aceleracao"],
+    "d2-dificil-nat-06": ["aceleracao"],
+    "d2-reforco-fis-din-03": ["aceleracao"]
+  }
+}
