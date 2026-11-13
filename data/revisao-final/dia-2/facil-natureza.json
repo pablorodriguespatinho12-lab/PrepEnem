@@ -227,7 +227,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, 10 Ω. B (24 Ω) vem de multiplicar 4 × 6. C (2,4 Ω) é a conta de resistores lado a lado (paralelo), que não é o caso aqui. D (2 Ω) vem de subtrair 6 − 4. E (1,5 Ω) vem de dividir 6 ÷ 4.",
+          "texto": "Letra A, 10 Ω.\nB (24 Ω) vem de multiplicar 4 × 6.\nC (2,4 Ω) é a conta de resistores em paralelo: cada um no seu próprio fio, lado a lado, e a corrente se divide entre eles. Aqui estão em fila.\nD (2 Ω) vem de subtrair 6 − 4.\nE (1,5 Ω) vem de dividir 6 ÷ 4.",
           "visual": null
         }
       ],

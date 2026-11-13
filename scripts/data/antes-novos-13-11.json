@@ -1,0 +1,223 @@
+{
+  "conceitos": {
+    "porcentagem": {
+      "titulo": "Porcentagem",
+      "linhas": [
+        "Porcentagem quer dizer \"de cada 100\". 10% é 10 de cada 100.",
+        "10 de cada 100 é o mesmo que 1 de cada 10: 10% de 500 é 500 ÷ 10 = 50.",
+        "25 de cada 100 é 1 de cada 4, um quarto: 25% de 200 é 200 ÷ 4 = 50.",
+        "Com vírgula: 10% = 0,10; 25% = 0,25; 30% = 0,30. Então 30% de 200 = 200 × 0,30 = 60.",
+        "Aumentar 10% é somar 10% ao valor: 200 + 20 = 220, o mesmo que 200 × 1,10."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Os atalhos",
+        "cabecalho": ["Porcentagem", "De cada 100", "Jeito fácil"],
+        "linhas": [["50%", "50", "÷ 2 (metade)"], ["25%", "25", "÷ 4 (um quarto)"], ["10%", "10", "÷ 10"], ["1%", "1", "÷ 100"]]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Quanto é 10% de 300?",
+          "alternativas": ["30", "3", "310", "0,3"],
+          "certa": 0,
+          "resolucao": "10% é dividir por 10: 300 ÷ 10 = 30.\n3 é 1% (300 ÷ 100); 310 soma 10 em vez de tirar 10%."
+        },
+        {
+          "enunciado": "Um produto de R$ 80 fica 25% mais caro. Quanto passa a custar?",
+          "alternativas": ["R$ 100", "R$ 105", "R$ 20", "R$ 60"],
+          "certa": 0,
+          "resolucao": "25% de 80 é 80 ÷ 4 = 20; 80 + 20 = R$ 100.\nR$ 105 soma 25 reais; R$ 20 é só o aumento; R$ 60 tira em vez de somar."
+        }
+      ]
+    },
+    "numero-que-falta": {
+      "titulo": "Achar o número que falta",
+      "linhas": [
+        "Numa conta com um número escondido, desfaça as contas de trás para frente.",
+        "Exemplo: 2 × ? + 8 = 20. Tire o 8 que foi somado: 20 − 8 = 12. Sobra 2 × ? = 12.",
+        "Desfaça o × 2 dividindo: 12 ÷ 2 = 6. Confira: 2 × 6 + 8 = 20.",
+        "É como balança equilibrada: tirar ou dividir igual dos dois lados mantém o igual.",
+        "Em fórmula é o mesmo. Se P = U × i e você quer o i, desfaça o × U: i = P ÷ U. Com 60 = 12 × i, i = 60 ÷ 12 = 5."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Desfazendo passo a passo",
+        "cabecalho": ["Conta", "Desfaz", "Fica"],
+        "linhas": [["2 × ? + 8 = 20", "tira 8 dos dois lados", "2 × ? = 12"], ["2 × ? = 12", "divide os dois lados por 2", "? = 6"], ["60 = 12 × i", "divide os dois lados por 12", "i = 5"]]
+      },
+      "exercicios": [
+        {
+          "enunciado": "3 × ? + 5 = 26. Quanto vale o número escondido?",
+          "alternativas": ["7", "31", "21", "63"],
+          "certa": 0,
+          "resolucao": "Tire o 5: 26 − 5 = 21. Desfaça o × 3: 21 ÷ 3 = 7.\n31 soma o 5; 21 esquece de dividir; 63 multiplica em vez de dividir."
+        },
+        {
+          "enunciado": "Pela lei de Ohm, U = R × i. Com U = 12 V e R = 4 Ω, quanto é a corrente i?",
+          "alternativas": ["3 A", "48 A", "8 A", "16 A"],
+          "certa": 0,
+          "resolucao": "Desfaça o × 4: i = 12 ÷ 4 = 3 A.\n48 multiplica; 8 é 12 − 4; 16 é 12 + 4."
+        }
+      ]
+    },
+    "dividir-por-decimal": {
+      "titulo": "Dividir por número com vírgula",
+      "linhas": [
+        "Dividir é perguntar quantos cabem: 10 ÷ 2 = 5, porque cabem 5 pedaços de 2 em 10.",
+        "Com vírgula é igual: 1 ÷ 0,5 = 2, porque cabem 2 metades em 1.",
+        "Por isso dividir por número menor que 1 dá resultado MAIOR: 6 ÷ 0,5 = 12.",
+        "Truque: multiplique os dois números por 10 até sumir a vírgula. 57,5 ÷ 2,3 vira 575 ÷ 23 = 25.",
+        "Outro: 840 ÷ 0,70 vira 8 400 ÷ 7 = 1 200."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Sumindo com a vírgula",
+        "cabecalho": ["Conta", "Vira", "Resultado"],
+        "linhas": [["1 ÷ 0,5", "10 ÷ 5", "2"], ["9 ÷ 0,2", "90 ÷ 2", "45"], ["57,5 ÷ 2,3", "575 ÷ 23", "25"]]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Quanto é 3 ÷ 0,5?",
+          "alternativas": ["6", "1,5", "0,6", "15"],
+          "certa": 0,
+          "resolucao": "Cabem 2 metades em cada inteiro: 3 × 2 = 6 (ou 30 ÷ 5 = 6).\n1,5 é 3 × 0,5; 0,6 é 3 ÷ 5; 15 é 3 × 5."
+        },
+        {
+          "enunciado": "Quanto é 4,8 ÷ 1,2?",
+          "alternativas": ["4", "0,4", "40", "5,76"],
+          "certa": 0,
+          "resolucao": "Multiplique os dois por 10: 48 ÷ 12 = 4.\n0,4 e 40 erram a vírgula; 5,76 é 4,8 × 1,2."
+        }
+      ]
+    },
+    "mol": {
+      "titulo": "Mol e massa molar",
+      "linhas": [
+        "Mol é um pacote de contar, como a dúzia: dúzia são 12 coisas; mol é um número enorme de partículas.",
+        "Na prova importa o peso: 1 mol de um átomo pesa, em gramas, o número da tabela. C = 12 g, H = 1 g, O = 16 g.",
+        "1 mol de uma molécula pesa a soma dos átomos dela: água, H₂O = 2 × 1 + 16 = 18 g.",
+        "Esse peso de 1 mol se chama massa molar. CO₂ = 12 + 2 × 16 = 44 g.",
+        "Mais mols, mais peso: 2 mols de água pesam 2 × 18 = 36 g."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Peso de 1 mol",
+        "cabecalho": ["Molécula", "Conta", "1 mol pesa"],
+        "linhas": [["H₂O", "2 × 1 + 16", "18 g"], ["CO₂", "12 + 2 × 16", "44 g"], ["CH₄", "12 + 4 × 1", "16 g"]]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Quanto pesa 1 mol de gás oxigênio, O₂? (O = 16)",
+          "alternativas": ["32 g", "16 g", "18 g", "2 g"],
+          "certa": 0,
+          "resolucao": "O₂ tem 2 átomos de O: 2 × 16 = 32 g.\n16 g conta um átomo só; 18 g é a água; 2 g conta só os átomos."
+        },
+        {
+          "enunciado": "Quanto pesam 3 mols de metano, CH₄? (C = 12, H = 1)",
+          "alternativas": ["48 g", "16 g", "45 g", "51 g"],
+          "certa": 0,
+          "resolucao": "1 mol de CH₄ = 12 + 4 × 1 = 16 g; 3 mols = 3 × 16 = 48 g.\n16 g é 1 mol só; 45 e 51 erram a conta dos átomos."
+        }
+      ]
+    },
+    "pilha": {
+      "titulo": "Pilha por dentro: íon, ânodo e cátodo",
+      "linhas": [
+        "Um átomo tem o mesmo tanto de cargas + e −. Se perde 2 elétrons (−), sobra +2: o zinco vira o íon Zn²⁺.",
+        "Na pilha, um metal perde elétrons (oxida). Essa placa se chama ânodo e vai sendo comida.",
+        "O outro lado recebe os elétrons (reduz). Essa placa se chama cátodo e ganha metal.",
+        "Macete: Ânodo e Oxidação começam com vogal; Cátodo e Redução, com consoante.",
+        "Os elétrons andam pelo fio, do ânodo para o cátodo: essa é a corrente que acende a lâmpada."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Os dois lados da pilha",
+        "cabecalho": ["Placa", "Elétrons", "Nome do que acontece", "A placa"],
+        "linhas": [["ânodo", "perde", "oxidação", "é comida"], ["cátodo", "recebe", "redução", "ganha metal"]]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Um átomo de cobre (Cu) perde 2 elétrons. Ele vira:",
+          "alternativas": ["Cu²⁺", "Cu²⁻", "Cu", "Cu⁴⁺"],
+          "certa": 0,
+          "resolucao": "Perdeu 2 cargas negativas, então sobra +2: Cu²⁺.\nCu²⁻ seria ganhar 2 elétrons."
+        },
+        {
+          "enunciado": "Numa pilha, a placa que perde massa (é comida) é o:",
+          "alternativas": ["ânodo", "cátodo", "fio", "íon"],
+          "certa": 0,
+          "resolucao": "A placa que perde elétrons oxida e se desfaz: é o ânodo.\nO cátodo recebe elétrons e ganha metal."
+        }
+      ]
+    },
+    "anticorpo": {
+      "titulo": "Defesa do corpo: anticorpo, vacina e soro",
+      "linhas": [
+        "Anticorpos são peças que o corpo fabrica para grudar num invasor (vírus, bactéria, veneno) e desligá-lo.",
+        "Cada anticorpo serve para um invasor só, como chave para uma fechadura.",
+        "Vacina mostra ao corpo um invasor fraco ou um pedaço dele. O corpo aprende e fabrica os anticorpos: demora dias, mas dura.",
+        "Soro já traz anticorpos prontos, feitos em outro animal: age na hora, mas some em semanas.",
+        "Por isso picada de cobra pede soro (é urgente) e prevenção pede vacina."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Vacina ou soro",
+        "cabecalho": ["O quê", "Vacina", "Soro"],
+        "linhas": [["traz", "invasor fraco", "anticorpos prontos"], ["quem fabrica", "o próprio corpo", "outro animal"], ["age", "depois de dias", "na hora"], ["dura", "anos", "semanas"]]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Uma pessoa acabou de ser picada por uma cobra venenosa. O que ela deve receber?",
+          "alternativas": ["soro", "vacina", "antibiótico", "vitamina"],
+          "certa": 0,
+          "resolucao": "O soro traz anticorpos prontos e age na hora.\nA vacina demoraria dias; antibiótico mata bactéria, não veneno."
+        },
+        {
+          "enunciado": "A vacina protege por muito tempo porque:",
+          "alternativas": ["faz o corpo fabricar os próprios anticorpos", "traz anticorpos prontos", "mata o vírus na hora", "é um antibiótico"],
+          "certa": 0,
+          "resolucao": "Ela faz o corpo aprender e fabricar os próprios anticorpos, e o corpo guarda essa lição.\nAnticorpo pronto é o soro, que some em semanas."
+        }
+      ]
+    },
+    "hemoglobina": {
+      "titulo": "Como o sangue leva oxigênio",
+      "linhas": [
+        "No sangue há as hemácias, células vermelhas. Dentro delas fica a hemoglobina, a peça que segura o oxigênio.",
+        "No pulmão a hemoglobina pega o oxigênio; nos músculos e órgãos ela solta.",
+        "Mais hemácias, mais hemoglobina, mais oxigênio levado. É o que o corpo faz na montanha, onde o ar tem menos oxigênio.",
+        "O monóxido de carbono (CO) gruda na hemoglobina mais forte que o oxigênio e toma o lugar dele. Por isso é venenoso."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "O caminho do oxigênio",
+        "cabecalho": ["Onde", "O que a hemoglobina faz"],
+        "linhas": [["pulmão", "pega o oxigênio"], ["sangue", "leva dentro da hemácia"], ["músculo", "solta o oxigênio"]]
+      },
+      "exercicios": [
+        {
+          "enunciado": "O que segura o oxigênio dentro da hemácia?",
+          "alternativas": ["hemoglobina", "plaqueta", "anticorpo", "insulina"],
+          "certa": 0,
+          "resolucao": "A hemoglobina segura o oxigênio dentro da hemácia.\nPlaqueta fecha cortes; anticorpo defende; insulina cuida do açúcar."
+        },
+        {
+          "enunciado": "Por que o CO de um carro ligado numa garagem fechada pode matar?",
+          "alternativas": ["ocupa a hemoglobina no lugar do oxigênio", "entope o pulmão de fumaça", "aumenta as hemácias", "vira ácido no sangue"],
+          "certa": 0,
+          "resolucao": "O CO ocupa a hemoglobina no lugar do oxigênio, e o corpo fica sem oxigênio.\nEle não precisa entupir nada: gruda na peça que levaria o oxigênio."
+        }
+      ]
+    }
+  },
+  "questoes": {
+    "porcentagem": ["d2-medio-nat-14", "d2-reforco-bio-eco-01", "cmouei97g006wuoz9y3g2z37b"],
+    "numero-que-falta": ["d2-medio-nat-01", "d2-medio-nat-02", "d2-medio-mat-14", "d2-facil-mat-14", "d2-reforco-mat-fun-02"],
+    "dividir-por-decimal": ["d2-reforco-qui-est-04", "d2-reforco-qui-amb-02", "d2-reforco-mat-ari-02"],
+    "mol": ["d2-facil-nat-13", "d2-medio-nat-08", "d2-reforco-qui-est-01", "d2-reforco-qui-est-04"],
+    "pilha": ["d2-reforco-qui-ele-01", "d2-reforco-qui-ele-03"],
+    "anticorpo": ["d2-dificil-nat-20", "d2-medio-nat-20"],
+    "hemoglobina": ["d2-dificil-nat-10", "d2-dificil-nat-16"],
+    "velocidade": ["d2-dificil-mat-07", "d2-reforco-mat-gra-03", "d2-facil-mat-08"]
+  }
+}

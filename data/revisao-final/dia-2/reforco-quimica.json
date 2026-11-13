@@ -45,7 +45,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "O H do COOH se solta na água, e soltar H na água é o que faz algo ser ácido. Por isso o vinagre é azedo e tem pH abaixo de 7."
+          "texto": "O H do COOH se solta na água, e soltar H na água é o que faz algo ser ácido.\nPor isso o vinagre é azedo e tem pH abaixo de 7.\nO pH é a régua da acidez, de 0 a 14: abaixo de 7 é ácido, 7 é neutro (água pura), acima é básico."
         },
         {
           "titulo": "A resposta",
@@ -169,7 +169,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "O C=O ao lado muda o jeito do N: a amina é básica (lembra a amônia), a amida quase não é. Por isso são famílias diferentes, mesmo com o mesmo N."
+          "texto": "O C=O ao lado muda o jeito do N.\nA amina é básica (age como base, o contrário do ácido, como o sabão), parecida com a amônia (NH₃, de cheiro forte).\nA amida quase não é básica. Por isso são famílias diferentes, mesmo com o mesmo N."
         },
         {
           "titulo": "A resposta",
@@ -293,7 +293,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "O mármore é feito de carbonato de cálcio, que reage com ácido e se desfaz. O ácido forte que faz isso vem do enxofre, não do gás carbônico."
+          "texto": "O mármore é feito de carbonato de cálcio, o mesmo da casca de ovo.\nEle reage com ácido e se desfaz, como a casca de ovo que amolece no vinagre.\nO ácido forte que faz isso vem do enxofre, não do gás carbônico."
         },
         {
           "titulo": "A resposta",
@@ -499,7 +499,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, efeito estufa.\nA (chuva ácida): vem de gases de enxofre e nitrogênio.\nC (camada de ozônio): foi estragada pelo CFC, gás de spray e geladeira antiga.\nD (ferrugem): é o ferro com água e oxigênio.\nE (falta de oxigênio nos rios): vem de esgoto e adubo na água."
+          "texto": "Letra B, efeito estufa.\nA (chuva ácida): vem de gases de enxofre e nitrogênio.\nC (camada de ozônio): foi estragada pelo CFC, um gás fabricado que era usado em spray e geladeira antiga.\nD (ferrugem): é o ferro com água e oxigênio.\nE (falta de oxigênio nos rios): vem de esgoto e adubo na água."
         }
       ],
       "seuErro": null,
@@ -651,7 +651,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "A régua do pH tem o 7 no meio. Ácido solta H⁺ na água e puxa o pH para baixo; base puxa para cima. A água pura fica bem no meio."
+          "texto": "A régua do pH tem o 7 no meio.\nÁcido solta H⁺ na água (um hidrogênio solto, com carga positiva). Quanto mais H⁺, mais ácida a água e mais baixo o pH.\nBase puxa o pH para cima. A água pura fica bem no meio."
         },
         {
           "titulo": "A resposta",
@@ -709,7 +709,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Mols de ácido = mols de base: concentração do ácido × 10 = 0,5 × 20 = 10. Então a concentração do ácido é 10 ÷ 10 = 1,0 mol/L.",
+          "texto": "Mols de ácido = mols de base: concentração do ácido × 10 = 0,5 × 20 = 10.\nEntão a concentração do ácido é 10 ÷ 10 = 1,0 mol/L.\nPode deixar em mL dos dois lados: passar para litro dividiria os dois volumes por 1 000, e a resposta seria a mesma.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Ácido = base",
@@ -1158,7 +1158,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "A massa total se conserva: 32 g de metano + 128 g de O₂ (4 mols) = 160 g. Saem 88 g de CO₂ + 72 g de água (4 mols de 18 g). 88 + 72 = 160. Bate."
+          "texto": "A massa total se conserva: o que entra pesa o mesmo que o que sai.\nO₂ = 2 × 16 = 32 g por mol. São 2 O₂ para cada metano, e há 2 metanos: 4 mols de O₂ = 4 × 32 = 128 g.\nEntra: 32 g de metano + 128 g de O₂ = 160 g.\nSai: 88 g de CO₂ + 72 g de água (4 mols de 18 g). 88 + 72 = 160. Bate."
         },
         {
           "titulo": "A resposta",
@@ -1292,7 +1292,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "11,2 g é o dobro de 5,6 g. Para não sobrar nada, o enxofre também tem que dobrar. E o FeS é tudo o que entrou, junto."
+          "texto": "11,2 g é o dobro de 5,6 g. Para não sobrar nada, o enxofre também tem que dobrar.\nE o FeS é tudo o que entrou, junto: na reação nada some e nada aparece, então a massa que sai é a soma da que entrou."
         },
         {
           "titulo": "Jeito rápido",
@@ -1399,7 +1399,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "De onde vem o 73: são 2 HCl de 36,5 g cada (1 + 35,5). E o 58: Mg(OH)₂ = 24 + 2 × (16 + 1) = 58. Com a receita já em gramas, é só regra de três."
+          "texto": "Massas dos átomos: Mg = 24, O = 16, H = 1, Cl = 35,5.\nDe onde vem o 73: são 2 HCl de 36,5 g cada (1 + 35,5), e 2 × 36,5 = 73.\nE o 58: Mg(OH)₂ = 24 + 2 × (16 + 1) = 58.\nCom a receita já em gramas, é só regra de três."
         },
         {
           "titulo": "A resposta",

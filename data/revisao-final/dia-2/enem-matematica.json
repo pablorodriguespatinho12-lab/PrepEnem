@@ -1484,7 +1484,7 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "A ração atual dá média 10 kg e desvio 1 kg. A nova deu desvio 1,5 kg. A troca acontece se o CV da nova for MENOR que o da atual. A pergunta é a partir de que média isso acontece.",
+          "texto": "A ração atual dá média 10 kg e desvio 1 kg.\nDesvio padrão diz quanto as massas fogem da média: com média 10 e desvio 1, a maioria dos coelhos fica perto de 9 a 11 kg.\nA nova deu desvio 1,5 kg. A troca acontece se o CV (desvio ÷ média) da nova for MENOR que o da atual.\nA pergunta é a partir de que média isso acontece.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Os dados",
@@ -1527,7 +1527,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Escreva a condição e descubra a média que deixa o CV da nova igual a 0,1.\nNo quadro, < quer dizer \"menor que\" e > quer dizer \"maior que\".\nDividir por 0,1 é o mesmo que multiplicar por 10: 1,5 ÷ 0,1 = 15.\nQualquer média acima disso serve.",
+          "texto": "Teste médias: 1,5 ÷ 10 = 0,15 (maior que 0,1, não serve); 1,5 ÷ 15 = 0,1 (empata); 1,5 ÷ 20 = 0,075 (menor, serve).\nEscreva a condição e descubra a média que deixa o CV da nova igual a 0,1.\nNo quadro, < quer dizer \"menor que\" e > quer dizer \"maior que\".\nSe 1,5 ÷ média = 0,1, então média = 1,5 ÷ 0,1 (como em 6 ÷ 2 = 3 e 6 ÷ 3 = 2: o divisor e o resultado trocam de lugar).\nDividir por 0,1 é o mesmo que multiplicar por 10: 1,5 ÷ 0,1 = 15.\nQualquer média acima disso serve.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Média mínima da nova ração",
@@ -1667,7 +1667,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Errar 1 dardo tem chance 1/2. Errar 2 seguidos: metade da metade, 1/4. Cada dardo divide por 2 a chance de errar todos. A chance de pontuar é o que falta para 1.",
+          "texto": "Chance 1/2 é como cara ou coroa: dá certo 1 vez em cada 2.\nErrar 1 dardo tem chance 1/2.\nDois dardos podem dar 4 jeitos: erra-erra, erra-acerta, acerta-erra, acerta-acerta. Só 1 dos 4 é errar os dois: 1/4, metade da metade.\nCada dardo divide por 2 a chance de errar todos. A chance de pontuar é o que falta para 1.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Dardo a dardo",
@@ -1829,7 +1829,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Diária d vezes n diárias dá o total das diárias, d·n. A limpeza L entra uma vez só. A taxa de serviço é a porcentagem s do total das diárias, ou seja, d·n vezes s.",
+          "texto": "Com números: diária de R$ 100 por 3 diárias dá 100 × 3 = 300.\nCom letras: diária d vezes n diárias dá o total das diárias, d·n.\nA limpeza L entra uma vez só.\nA taxa de serviço é a porcentagem s do total das diárias: 10% de 300 = 30. Com letras, d·n vezes s.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Cada pedaço",
@@ -2160,7 +2160,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Em t = 0, sobra só o 24: p(0) = 24. Em t = 10: −100 + 100 + 24 = 24 de novo. Mesma altura em 0 e em 10, então pelo espelho o pico está no meio, em t = 5.",
+          "texto": "Em t = 0, sobra só o 24: p(0) = 24. Em t = 10: −100 + 100 + 24 = 24 de novo.\nEsta conta sobe e desce igual dos dois lados, como num espelho.\nNo 4: −(4 × 4) + 10 × 4 + 24 = −16 + 40 + 24 = 48.\nNo 6: −(6 × 6) + 10 × 6 + 24 = −36 + 60 + 24 = 48. Mesmo valor.\nMesma altura em 0 e em 10, então o pico está no meio: (0 + 10) ÷ 2 = 5.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Dois pontos de mesma altura",
@@ -2322,7 +2322,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Duas paredes medem c por h e duas medem l por h. Se c e l dobram e h fica, cada parede dobra de área. O piso mede c por l: os dois lados dobram, então a área fica 2 × 2 = 4 vezes maior.",
+          "texto": "Com números: uma parede de 6 m por 3 m tem 18 m². Dobrando o 6, fica 12 × 3 = 36 m², o dobro.\nO piso de 6 m por 2 m tem 12 m². Dobrando os dois, fica 12 × 4 = 48 m², 4 vezes.\nCom letras: duas paredes medem c por h e duas medem l por h. Se c e l dobram e h fica, cada parede dobra de área.\nO piso mede c por l: os dois lados dobram, então a área fica 2 × 2 = 4 vezes maior.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Cada parte",
@@ -2571,7 +2571,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Para guardar a mesma água, a forma mais \"redonda\" (medidas parecidas entre si) gasta menos superfície.\nO II (2, 5, 9) é o mais equilibrado.\nO I (1,8, 2, 25) é um corredor comprido e gasta muito em parede.",
+          "texto": "Teste com 8 m³: a caixa 2 × 2 × 2 gasta 4 de fundo + 16 de parede = 20 m².\nO corredor de 1 m de fundo, 1 m de largura e 8 m de comprimento gasta 8 de fundo + 18 de parede = 26 m².\nPara guardar a mesma água, a forma mais \"redonda\" (medidas parecidas entre si) gasta menos superfície.\nO II (2, 5, 9) é o mais equilibrado.\nO I (1,8, 2, 25) é um corredor comprido e gasta muito em parede.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Mesma água, superfícies diferentes",
@@ -3171,7 +3171,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Volume do cilindro: π × 4 × 4 × 50 = 800π. Volume de uma bolinha: 4/3 × π × 0,5 × 0,5 × 0,5 = 4/3 × π × 0,125 = π/6. O número de bolinhas é quantas vezes π/6 cabe em 800π.",
+          "texto": "Volume do cilindro: π × 4 × 4 × 50 = 800π.\nVolume da bola: 4/3 × π × raio × raio × raio. É uma regra pronta que o ENEM costuma dar no enunciado; não precisa saber de onde vem.\nO raio é metade do diâmetro: 1 ÷ 2 = 0,5 cm.\nRaio × raio × raio: 0,5 × 0,5 = 0,25, e 0,25 × 0,5 = 0,125.\nUma bolinha: 4/3 × π × 0,125.\n4 × 0,125 = 0,5, e 0,5 ÷ 3 = 1/6 (0,5 são 3 sextos; dividindo por 3, sobra 1 sexto). A bolinha tem π/6.\nO número de bolinhas é quantas vezes π/6 cabe em 800π.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Os dois volumes",
@@ -3221,7 +3221,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Dividir por π/6 é o mesmo que multiplicar por 6 e dividir por π. O π de cima e o de baixo se cancelam. Com π = 3 dá o mesmo: cilindro 2 400 cm³, esfera 0,5 cm³, e 2 400 ÷ 0,5 = 4 800.",
+          "texto": "Dividir por 1/6 é contar quantos sextos cabem: em 1 cabem 6, em 2 cabem 12. É multiplicar por 6.\nEntão dividir por π/6 é o mesmo que multiplicar por 6 e dividir por π. O π de cima e o de baixo se cancelam: 800 × 6 = 4 800.\nCom π = 3 dá o mesmo: cilindro 2 400 cm³, esfera 0,5 cm³, e 2 400 ÷ 0,5 = 4 800.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Conferindo com π = 3",

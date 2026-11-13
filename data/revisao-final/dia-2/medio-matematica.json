@@ -824,7 +824,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Velocidade vezes tempo é a distância, e a distância não mudou. Os 2 400 são a mesma distância nos dois dias.",
+          "texto": "Velocidade vezes tempo dá a distância, e o caminho não mudou.\nMas 2 400 não é a distância: a 60 km/h Rita anda 1 km por minuto, então em 40 minutos anda 40 km.\nO 2 400 é 60 × 40 com o tempo em minutos. Como a mesma conta é feita nos dois dias, o resultado fica igual: 48 × 50 = 2 400.",
           "visual": {
             "tipo": "tabela",
             "titulo": "O produto fica igual",
@@ -1616,7 +1616,7 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "Sabemos o total pago e a regra do preço. A questão quer o número de horas.",
+          "texto": "Sabemos o total pago e a regra do preço. A questão quer o número de horas.\nCom número primeiro: em 2 horas, o preço é 20 + 40 × 2 = 100.\nCom h horas, vira P = 20 + 40h (40h quer dizer 40 × h).",
           "visual": {
             "tipo": "legenda",
             "titulo": "A regra do preço",
@@ -2695,7 +2695,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "O fundo é um círculo de área 3 × 16 = 48 cm² (48 quadradinhos de 1 cm de lado). Empilhando 10 cm de altura, 48 × 10 = 480 cm³, ou 480 mL.",
+          "texto": "O fundo é um círculo de área 3 × 16 = 48 cm² (48 quadradinhos de 1 cm de lado).\nEmpilhando 10 cm de altura, 48 × 10 = 480 cm³.\n1 L tem 1 000 cm³ e também 1 000 mL, então 1 cm³ = 1 mL: o copo tem 480 mL.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Copo e jarra",
