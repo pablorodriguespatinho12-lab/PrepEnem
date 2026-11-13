@@ -269,8 +269,10 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   eu não tinha estudado; coloca os exercícios antes"):** conteúdo que a questão cobra
   e a aula do TEMA não ensina vira aula curta + 2 exercícios ANTES da explicação, na
   aula "Não sei isso" (`data/revisao-final/antes-da-questao.json`, `lib/antes-da-questao.ts`).
-  Em 12/11: velocidade, velocidade média e aceleração em 8 questões de Física. Falta:
-  "força para fazer a curva" (balanço) e varrer Química, Biologia e Matemática.
+  Varridas as 240 questões em 13/11 (`scripts/jornada-aula-questoes.py` + `aluno-do-zero`;
+  achados em `docs/revisao-final/varredura-conteudo-nao-estudado.md`): 11 aulas "Antes"
+  em 30 questões; o resto consertado no texto (palavra explicada na hora, número antes
+  da letra). Material novo: rodar a mesma varredura antes de entregar.
 - **Passo em linhas (Pablo, 12/11/2026, foto do "Jeito rápido" da mangueira: "deixa
   o texto mais organizado e entendível"):** texto de passo acima de 200 letras vai
   em linhas separadas por `\n` (uma ideia por linha, até 170 letras cada); "A

@@ -102,7 +102,7 @@
             "titulo": "Lanterna com pilha virada",
             "dados": [
               "\\varepsilon = 1{,}5 + 1{,}5 - 1{,}5 = 1{,}5\\,\\text{V}",
-              "R = \\dfrac{4{,}5 \\times 4{,}5}{4{,}5} = 4{,}5\\,\\Omega",
+              "R = \\dfrac{4{,}5}{1} = 4{,}5\\,\\Omega",
               "r = 3 \\times 0{,}5 = 1{,}5\\,\\Omega"
             ],
             "formula": "i = \\dfrac{\\varepsilon}{R + r}",
@@ -346,12 +346,12 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Área e diferença de temperatura são iguais, então só a parte do material decide.\nPara ferro e alumínio é o próprio k.\nNa panela mista, cada metade atrapalha separada.\nSoma-se grossura ÷ k de cada camada e depois se divide 1 pelo resultado.",
+          "texto": "k diz quanto o material deixa o calor passar: quanto maior, mais rápido passa (cobre 40, aço 5).\nÁrea e diferença de temperatura são iguais, então só a parte do material decide.\nPara ferro e alumínio é o próprio k.\nNa panela mista, cada metade atrapalha separada, como duas portas seguidas: o calor tem de passar pelas duas.\nSoma-se grossura ÷ k de cada camada e depois se divide 1 pelo resultado.",
           "visual": null
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Chame a grossura total de 1; cada camada tem 0,5.\nCobre: 0,5 ÷ 40 = 5 ÷ 400 = 1 ÷ 80 = 0,0125.\nAço: 0,5 ÷ 5 = 0,1. Somando: 0,1125.\nAgora 1 ÷ 0,1125. Como 0,1125 × 9 = 1,0125, um pouco mais que 1, o resultado é um pouco menos que 9: cerca de 8,9.\nNo quadro, o traço da fração quer dizer dividir.",
+          "texto": "Chame a grossura total de 1; cada camada tem 0,5.\nTeste a regra com duas metades de ferro (k = 8): 0,5 ÷ 8 = 0,0625; 0,0625 + 0,0625 = 0,125; 1 ÷ 0,125 = 8, o próprio ferro.\nCobre: 0,5 ÷ 40 = 5 ÷ 400 = 1 ÷ 80 = 0,0125.\nAço: 0,5 ÷ 5 = 0,1. Somando: 0,1125.\nAgora 1 ÷ 0,1125. Como 0,1125 × 9 = 1,0125, um pouco mais que 1, o resultado é um pouco menos que 9: cerca de 8,9.\nNo quadro, o traço da fração quer dizer dividir.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Quanto a panela mista conduz",
@@ -488,7 +488,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Força: com o mesmo tempo, empurra mais quem muda mais a velocidade.\nNos pneus o carro para e ainda volta; nos blocos ele só para.\nEnergia: nos blocos todo o movimento some.\nNos pneus parte dele fica, porque o carro sai andando.",
+          "texto": "Força: com o mesmo tempo, empurra mais quem muda mais a velocidade.\nNos pneus o carro para e ainda volta; nos blocos ele só para.\nCom números: a 20 m/s, só parar muda 20; parar e voltar a 5 m/s muda 20 + 5 = 25, mais que 20.\nEnergia: o carro andando tem energia do movimento; parado, tem zero.\nNos blocos todo o movimento some: o carro termina parado.\nNos pneus parte dele fica, porque o carro sai andando.",
           "visual": null
         },
         {
@@ -634,7 +634,7 @@
         },
         {
           "titulo": "2) Velocidade da água",
-          "texto": "Para frente a água não ganha nem perde velocidade: vai sempre com a velocidade de saída, que chamamos de v.\nVelocidade = distância ÷ tempo. Andar 3 m em 1 s é 3 m/s; andar 3 m em meio segundo é 6 m/s. Aqui, v = 3 ÷ t.\nSó sabemos t × t (0,2), então multiplicamos v por ele mesmo: (3 ÷ t) × (3 ÷ t) = (3 × 3) ÷ (t × t) = 9 ÷ (t × t).\nDividir por 0,2 é contar quantos 0,2 cabem: em 1 cabem 5, em 9 cabem 45. Então v × v = 45.",
+          "texto": "Para frente a água não ganha nem perde velocidade: vai sempre com a velocidade de saída, que chamamos de v.\nVelocidade = distância ÷ tempo. Andar 3 m em 1 s é 3 m/s; andar 3 m em meio segundo é 6 m/s. Aqui, v = 3 ÷ t.\nSó sabemos t × t (0,2), então multiplicamos v por ele mesmo: (3 ÷ t) × (3 ÷ t) = (3 × 3) ÷ (t × t) = 9 ÷ (t × t).\nVeja com t = 0,5: 3 ÷ 0,5 = 6, e 6 × 6 = 36. Pelo outro lado: 0,5 × 0,5 = 0,25, e 9 ÷ 0,25 = 36. Dá igual.\nDividir por 0,2 é contar quantos 0,2 cabem: em 1 cabem 5, em 9 cabem 45. Então v × v = 45.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Velocidade da água",
@@ -966,7 +966,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Leia o nome: a 1ª palavra diz o ácido; procure o anel C₆H₅ na fórmula.",
+          "texto": "Leia o nome: a 1ª palavra diz o ácido; procure o anel C₆H₅ na fórmula.\nNo nome, “etan” quer dizer 2 carbonos e “propan”, 3. O acetato vem do ácido etanoico (o do vinagre), por isso tem 2 carbonos.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Os dois acetatos",
@@ -1431,7 +1431,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Densidade 0,8 quer dizer que cada litro de etanol pesa só 0,8 kg. Então 20 kg ocupam mais que 20 L: 20 ÷ 0,8 = 25 L, porque 0,8 × 25 = 20.",
+          "texto": "Densidade 0,8 g/mL quer dizer que cada mL de etanol pesa 0,8 g.\nUm litro tem 1 000 mL: pesa 1 000 × 0,8 = 800 g, que são 0,8 kg.\nEntão 20 kg ocupam mais que 20 L: 20 ÷ 0,8 = 25 L, porque 0,8 × 25 = 20.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Litros e quilos de etanol",
@@ -1565,7 +1565,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "É o mesmo jeito de proteger um portão com tinta: o ferro continua lá, mas o ar e a água não chegam nele.\nMetal de sacrifício e proteção catódica precisariam de um metal que perde elétrons no lugar do ferro.\nCerâmica não faz isso.",
+          "texto": "É o mesmo jeito de proteger um portão com tinta: o ferro continua lá, mas o ar e a água não chegam nele.\nMetal de sacrifício (proteção catódica): prender ao ferro outro metal que se gasta no lugar dele, como um guarda-costas que leva o golpe.\nIsso precisaria de um metal que perde elétrons no lugar do ferro.\nCerâmica não faz isso.",
           "visual": null
         },
         {
@@ -1653,7 +1653,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Primeiro: a tensão de uma pilha é o E° de quem recebe elétrons (iodo) menos o de quem entrega (lítio): 3,59 V.\nDepois: três pilhas em série dão três vezes essa tensão: 3 × 3,59 = 10,77 V.\nConta: 3 × 3 = 9 e 3 × 0,59 = 1,77; 9 + 1,77 = 10,77.\nPor fim: procurar a faixa no quadro.",
+          "texto": "Primeiro: o E° diz quanto cada um quer receber elétrons. O iodo (+0,54) quer mais: ele recebe. O lítio (−3,05) quer menos: ele entrega.\nA tensão de uma pilha é o maior menos o menor: 0,54 − (−3,05).\nTirar um negativo é somar, como no termômetro: de −3 °C até 1 °C ele sobe 3 + 1 = 4 graus.\nAqui: 0,54 − (−3,05) = 0,54 + 3,05 = 3,59 V.\nDepois: três pilhas em série dão três vezes essa tensão: 3 × 3,59 = 10,77 V.\nConta: 3 × 3 = 9 e 3 × 0,59 = 1,77; 9 + 1,77 = 10,77.\nPor fim: procurar a faixa no quadro.",
           "visual": null
         },
         {
@@ -1971,7 +1971,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Se o bastonete é mais sensível, poucos fótons já bastam para ele avisar o cérebro. O animal enxerga em lugar escuro.",
+          "texto": "Fóton é um grãozinho de luz: a luz chega em pedacinhos, e no escuro chegam poucos.\nSe o bastonete é mais sensível, poucos fótons já bastam para ele avisar o cérebro. O animal enxerga em lugar escuro.",
           "visual": null
         },
         {
@@ -2074,7 +2074,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "A célula doente tem a receita com erro.\nO vírus deixa nela uma cópia da receita certa.\nA célula passa a ler essa cópia (fazendo dela uma cópia de trabalho, o RNA mensageiro) e a fazer a enzima normal.\nE a retina volta a funcionar.",
+          "texto": "A célula doente tem a receita com erro.\nO vírus deixa nela uma cópia da receita certa.\nA célula passa a ler essa cópia (fazendo dela uma cópia de trabalho, o RNA mensageiro) e a fazer a enzima normal.\nEnzima é uma proteína que faz um trabalho na célula, como uma ferramenta; a da retina saía com defeito.\nE a retina volta a funcionar.",
           "visual": null
         },
         {

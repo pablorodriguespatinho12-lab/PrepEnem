@@ -312,7 +312,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "O calor depende da quantidade de água e de quanto a temperatura muda.\nComo as duas são água, o resto da fórmula (o calor específico, a energia que 1 grama pede para subir 1 grau) é igual dos dois lados e se cancela.\nCada litro fervendo cai 60 °C, e 60 ÷ 20 = 3: ele esquenta 3 litros de fria em 20 °C.\nPara 6 litros, bastam 6 ÷ 3 = 2.",
+          "texto": "O calor depende da quantidade de água e de quanto a temperatura muda.\nComo as duas são água, o resto da fórmula (o calor específico, a energia que 1 grama pede para subir 1 grau) é o mesmo número dos dois lados.\nNúmero igual multiplicando os dois lados pode sair: 2 × 60 × 4 = 480 e 6 × 20 × 4 = 480; sem o × 4, fica 120 = 120, igual do mesmo jeito.\nCada litro fervendo cai 60 °C, e 60 ÷ 20 = 3: ele esquenta 3 litros de fria em 20 °C.\nPara 6 litros, bastam 6 ÷ 3 = 2.",
           "visual": null
         },
         {
@@ -729,7 +729,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "O grupo funcional decide o tipo de substância. Com –OH, as moléculas de etanol se seguram umas nas outras e ele fica líquido; o éter, sem –OH, vira gás. Mudou o grupo: isomeria de função.",
+          "texto": "O grupo funcional (o pedaço que diz a família, como na aula) decide o tipo de substância.\nNo etanol, o O fica na ponta, com um H: –OH, família álcool. No éter, o O fica no meio, entre dois carbonos: –O–, família éter.\nCom –OH, as moléculas de etanol se seguram umas nas outras e ele fica líquido; o éter, sem –OH, vira gás.\nIsômeros são moléculas com os mesmos átomos montados de outro jeito, como as letras de AMOR e ROMA.\nMudou o grupo (a família): isomeria de função.",
           "visual": null
         },
         {
@@ -1570,7 +1570,7 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "Os dados que importam: muito adubo na água e quase nenhum oxigênio no fundo. Quem gastou esse oxigênio?",
+          "texto": "Os dados que importam: muito adubo na água e quase nenhum oxigênio no fundo.\nQuem gastou esse oxigênio?\nEutrofização (nome no desenho): adubo demais na água faz as algas crescerem sem parar, como mato num canteiro bem adubado.",
           "visual": {
             "tipo": "processo",
             "titulo": "Eutrofização",
@@ -1635,7 +1635,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "A camada verde de cima tapa a luz, e as algas de baixo morrem. As bactérias que comem essa alga morta respiram e gastam o oxigênio do fundo. Sem oxigênio, os peixes morrem.",
+          "texto": "A camada verde de cima tapa a luz, e as algas de baixo morrem.\nAs bactérias que comem essa alga morta são decompositoras, as mesmas que fazem a comida esquecida apodrecer.\nElas respiram como nós: gastam oxigênio. Muita alga morta, muita bactéria respirando, e o oxigênio do fundo acaba.\nSem oxigênio, os peixes morrem.",
           "visual": null
         },
         {
@@ -1688,7 +1688,7 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "O texto conta o que mudou no corpo. A questão quer saber por que isso ajuda depois, ao nível do mar.",
+          "texto": "O texto conta o que mudou no corpo. A questão quer saber por que isso ajuda depois, ao nível do mar.\nNo desenho, EPO é o nome do hormônio que os rins soltam: o recado que manda a medula dos ossos fazer mais hemácias.",
           "visual": {
             "tipo": "processo",
             "titulo": "Do ar rarefeito às hemácias",

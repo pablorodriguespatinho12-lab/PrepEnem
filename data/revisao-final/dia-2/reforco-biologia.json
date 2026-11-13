@@ -192,7 +192,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, falta de predadores e doenças. B usa a ideia superada de que o uso muda o corpo e passa aos filhos. C erra: caramujo é animal e não faz fotossíntese. D e E inventam fatos que o texto não dá."
+          "texto": "Letra A, falta de predadores e doenças.\nB usa a ideia de Lamarck, já superada: o uso mudaria o corpo e isso passaria aos filhos. Hoje se sabe que não é assim.\nC erra: caramujo é animal e não faz fotossíntese.\nD e E inventam fatos que o texto não dá."
         }
       ],
       "seuErro": null,
@@ -304,7 +304,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "As hemácias pegam oxigênio no pulmão e levam para as células. As células usam o oxigênio para tirar energia do alimento. Com menos hemácias, chega menos oxigênio e sobra menos energia."
+          "texto": "As hemácias pegam oxigênio no pulmão e levam para as células.\nAs células usam o oxigênio para tirar energia do alimento, como o fogo precisa de ar para queimar a lenha. Isso é a respiração celular.\nCom menos hemácias, chega menos oxigênio e sobra menos energia."
         },
         {
           "titulo": "Jeito rápido",
@@ -366,7 +366,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Depois de comer, a glicose vai para o sangue. Normalmente, o pâncreas solta insulina e a glicose entra nas células. Sem insulina, a porta da célula não abre, e a glicose se junta no sangue."
+          "texto": "Depois de comer, a glicose vai para o sangue.\nNormalmente, o pâncreas solta insulina, que funciona como a chave da porta da célula: com ela, a glicose entra.\nSem insulina, a porta da célula não abre, e a glicose se junta no sangue."
         },
         {
           "titulo": "Jeito rápido",
@@ -498,7 +498,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Cada gás vai de onde tem mais para onde tem menos. O ar que respiramos tem muito oxigênio e o sangue que chega tem pouco, então o oxigênio entra no sangue. Com o gás carbônico é o contrário."
+          "texto": "Cada gás vai de onde tem mais para onde tem menos (é a difusão), como o cheiro do café que se espalha pela casa.\nO ar que respiramos tem muito oxigênio e o sangue que chega tem pouco, então o oxigênio entra no sangue.\nCom o gás carbônico é o contrário."
         },
         {
           "titulo": "A resposta",
@@ -868,7 +868,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "O remédio ataca uma peça que a bactéria tem diferente da nossa. Assim ele trava mais a bactéria do que as nossas células. Vírus não tem ribossomo próprio, e por isso esse remédio não age em vírus."
+          "texto": "O remédio ataca uma peça que a bactéria tem diferente da nossa.\nAssim ele trava mais a bactéria do que as nossas células.\nVírus não é célula e não tem ribossomo próprio: usa os da célula que invade. Por isso esse remédio não age em vírus."
         },
         {
           "titulo": "A resposta",
@@ -992,11 +992,11 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "O que passa para os filhos é o que está no DNA, não o que o corpo ganhou com uso. Esticar o pescoço não muda o DNA. Muda quem sobrevive e se reproduz, e assim muda a população."
+          "texto": "O DNA é a receita do corpo que passa de pais para filhos.\nO que passa para os filhos é o que está no DNA, não o que o corpo ganhou com uso.\nEsticar o pescoço não muda o DNA. Muda quem sobrevive e se reproduz, e assim muda a população."
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A, variação que já existia e foi escolhida pelo ambiente.\nB: é a ideia de Lamarck, já superada.\nC: diz que o ambiente cria, mas ele só escolhe.\nD: troca herança por aprendizado.\nE: é seleção artificial, feita pelo ser humano."
+          "texto": "Letra A, variação que já existia e foi escolhida pelo ambiente.\nB: é a ideia de Lamarck, já superada.\nC: diz que o ambiente cria, mas ele só escolhe.\nD: troca herança por aprendizado.\nE: é seleção artificial: o ser humano escolhe quais bichos têm filhotes, como nas raças de cachorro. Nas girafas, quem escolheu foi o ambiente."
         }
       ],
       "seuErro": null,
@@ -1058,7 +1058,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, os resistentes já existiam e se multiplicaram.\nA: é a ideia de Lamarck, superada.\nB: diz que o veneno cria a mutação, mas ele só escolhe.\nC: troca o piolho pela criança.\nE: inventa algo que o texto não diz."
+          "texto": "Letra D, os resistentes já existiam e se multiplicaram.\nA: é a ideia de Lamarck, superada.\nB: diz que o veneno cria a mutação (mudança no DNA que faz o bicho nascer diferente), mas ele só escolhe.\nC: troca o piolho pela criança.\nE: inventa algo que o texto não diz."
         }
       ],
       "seuErro": null,
@@ -1240,11 +1240,11 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "O antibiótico trava peças que só a bactéria tem, como a parede da célula ou o ribossomo dela. O vírus não tem essas peças: usa as da nossa célula. Por isso o antibiótico não tem onde agir no vírus."
+          "texto": "O antibiótico trava peças que só a bactéria tem.\nExemplos: a parede da célula (uma capa dura em volta da bactéria) ou o ribossomo dela (a peça que monta as proteínas).\nO vírus não tem essas peças: usa as da nossa célula. Por isso o antibiótico não tem onde agir no vírus."
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, tuberculose, que é bactéria. A, B, C e E são doenças de vírus: gripe, dengue, covid e aids. Tomar antibiótico nelas não cura e ainda ajuda a criar bactérias resistentes."
+          "texto": "Letra D, tuberculose, que é bactéria.\nA, B, C e E são doenças de vírus: gripe, dengue, covid e aids.\nTomar antibiótico nelas não cura e ainda ajuda a criar bactérias resistentes.\nResistente é a bactéria que o remédio não mata: ele mata as outras, sobram só as resistentes, e elas se multiplicam."
         }
       ],
       "seuErro": null,

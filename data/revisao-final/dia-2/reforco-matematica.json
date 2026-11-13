@@ -59,7 +59,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B, R$ 138,00. A (R$ 105,00) dá desconto em vez de aumento. C (R$ 135,00) soma 15 reais em vez de 15%. D (R$ 132,00) usa 10%. E (R$ 180,00) multiplica por 1,5, que é um aumento de 50%."
+          "texto": "Letra B, R$ 138,00.\nA (R$ 105,00): tira 15 reais (120 − 15 = 105), em vez de somar 15%.\nC (R$ 135,00): soma 15 reais em vez de 15%.\nD (R$ 132,00): usa 10%.\nE (R$ 180,00): multiplica por 1,5, que é um aumento de 50%."
         }
       ],
       "seuErro": null,
@@ -1236,7 +1236,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Multiplique pela escala e divida por 100 000 para ter km.",
+          "texto": "Multiplique pela escala e divida por 100 000 para ter km.\nPor que 100 000: 1 km = 1 000 m, e 1 m = 100 cm. Então 1 km = 1 000 × 100 = 100 000 cm.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Do mapa para a estrada",

@@ -236,7 +236,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Os 90 fones são 30% do estoque do começo.\nPara achar o todo, divida a parte pela porcentagem: 90 ÷ 0,30.\nMultiplique os dois por 10 para sumir a vírgula: 900 ÷ 3 = 300.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Os 90 fones são 30% do estoque do começo.\nPrimeiro com número pequeno: 30% de 100 é 100 × 0,30 = 30. Na volta, 30 ÷ 0,30 = 100, o todo.\nEntão, para achar o todo, divida a parte pela porcentagem: 90 ÷ 0,30.\nMultiplique os dois por 10 para sumir a vírgula: 900 ÷ 3 = 300.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Volta ao estoque inicial",
@@ -890,7 +890,7 @@
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Camisetas a mais pedem mais dias (direta). Costureiras e horas a mais pedem menos dias (inversa).\nPartindo de 5 dias: o dobro de camisetas dá × 2.\nCostureiras, antes 8, agora 10: × 8 ÷ 10 = × 0,8.\nHoras, antes 6, agora 8: × 6 ÷ 8 = × 0,75 (6 de 8 é 3 de 4).\nJuntando: 5 × 2 = 10. Depois 10 × 0,8 = 8. Depois 8 × 0,75 = 6.",
+          "texto": "Camisetas a mais pedem mais dias (direta). Costureiras e horas a mais pedem menos dias (inversa).\nPartindo de 5 dias: o dobro de camisetas dá × 2.\nCom dias de verdade: o que 8 costureiras fazem em 10 dias, 10 costureiras fazem em 8 (8 × 10 = 80 = 10 × 8).\nCostureiras, antes 8, agora 10: × 8 ÷ 10 = × 0,8 (10 dias × 0,8 = 8 dias).\nHoras, antes 6, agora 8: × 6 ÷ 8 = × 0,75 (6 de 8 é 3 de 4).\nJuntando: 5 × 2 = 10. Depois 10 × 0,8 = 8. Depois 8 × 0,75 = 6.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Cada mudança",
@@ -1713,7 +1713,7 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "A conta tem uma parte fixa e uma parte que depende do quanto passou de 10 m³. A família gastou 17 m³.",
+          "texto": "A conta tem uma parte fixa e uma parte que depende do quanto passou de 10 m³. A família gastou 17 m³.\nCom número primeiro: quem gasta 12 m³ passa 12 − 10 = 2 e paga 40 + 6 × 2 = 52.\nNo desenho, x é o gasto do mês no lugar do 12: a conta é 40 + 6 × (x − 10).",
           "visual": {
             "tipo": "legenda",
             "titulo": "Conta para quem passa de 10 m³",
@@ -1853,7 +1853,7 @@
     "resposta": "B",
     "explicacao": {
       "conferencia": "A = 0 em x = 0 e em x = 40; o espelho fica em x = 20. A = 20 × (80 − 40) = 20 × 40 = 800. B. Erros: 1 200 = esqueceu o 2 (20 × 60); 1 600 = fez um quadrado 40 × 40; 3 200 = 80 × 40; 600 = testou x = 10 (ou 30) e parou.",
-      "ideia": "A área é zero nas duas pontas (x = 0 e x = 40) e máxima bem no meio delas. Pelo espelho, o meio é x = 20.",
+      "ideia": "A área é zero em x = 0 e em x = 40, e x = 10 e x = 30 dão a mesma área, 600. Pelo espelho, o topo fica no meio desses pares: x = 20.",
       "pecas": [
         {
           "termo": "Parábola",
@@ -2102,7 +2102,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ponha t = 12 na fórmula. O 500 é a quantidade do começo (às 8 h). O expoente fica 12 ÷ 3 = 4, e 2⁴ = 16. Por fim, 500 × 16: 5 × 16 = 80, mais dois zeros, 8 000.",
+          "texto": "Ponha t = 12 na fórmula. O 500 é a quantidade do começo (às 8 h).\nO expoente fica 12 ÷ 3 = 4. Ele diz quantas vezes o 2 se multiplica: 2⁴ = 2 × 2 × 2 × 2 = 16 (como x² é x × x).\nPor fim, 500 × 16: 5 × 16 = 80, mais dois zeros, 8 000.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Bactérias às 20 h",
@@ -2389,7 +2389,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "No técnico, a altura é 1,80 ÷ 1,20 vez a sombra. Tire as vírgulas: 180 ÷ 120; divida os dois por 60: 3 ÷ 2 = 1,5. Como o sol bate igual, no poste vale o mesmo: altura = 1,5 × 6 = 9.",
+          "texto": "No técnico, a altura é 1,80 ÷ 1,20 vez a sombra.\nTire as vírgulas: 180 ÷ 120; divida os dois por 60: 3 ÷ 2 = 1,5.\nCom o sol inclinado igual, a sombra cresce junto com a altura: se uma vara de 1,5 m faz sombra de 1 m, uma de 3 m faz sombra de 2 m.\nEntão no poste vale o mesmo: altura = 1,5 × 6 = 9.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Altura ÷ sombra",
