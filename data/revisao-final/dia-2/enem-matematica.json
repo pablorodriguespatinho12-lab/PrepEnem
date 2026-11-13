@@ -1527,7 +1527,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Teste médias: 1,5 ÷ 10 = 0,15 (maior que 0,1, não serve); 1,5 ÷ 15 = 0,1 (empata); 1,5 ÷ 20 = 0,075 (menor, serve).\nEscreva a condição e descubra a média que deixa o CV da nova igual a 0,1.\nNo quadro, < quer dizer \"menor que\" e > quer dizer \"maior que\".\nDividir por 0,1 é o mesmo que multiplicar por 10: 1,5 ÷ 0,1 = 15.\nQualquer média acima disso serve.",
+          "texto": "Teste médias: 1,5 ÷ 10 = 0,15 (maior que 0,1, não serve); 1,5 ÷ 15 = 0,1 (empata); 1,5 ÷ 20 = 0,075 (menor, serve).\nEscreva a condição e descubra a média que deixa o CV da nova igual a 0,1.\nNo quadro, < quer dizer \"menor que\" e > quer dizer \"maior que\".\nSe 1,5 ÷ média = 0,1, então média = 1,5 ÷ 0,1 (como em 6 ÷ 2 = 3 e 6 ÷ 3 = 2: o divisor e o resultado trocam de lugar).\nDividir por 0,1 é o mesmo que multiplicar por 10: 1,5 ÷ 0,1 = 15.\nQualquer média acima disso serve.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Média mínima da nova ração",
@@ -2160,7 +2160,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Em t = 0, sobra só o 24: p(0) = 24. Em t = 10: −100 + 100 + 24 = 24 de novo.\nEsta conta sobe e desce igual dos dois lados, como num espelho: o 4 e o 6 dão 48.\nMesma altura em 0 e em 10, então o pico está no meio: (0 + 10) ÷ 2 = 5.",
+          "texto": "Em t = 0, sobra só o 24: p(0) = 24. Em t = 10: −100 + 100 + 24 = 24 de novo.\nEsta conta sobe e desce igual dos dois lados, como num espelho.\nNo 4: −(4 × 4) + 10 × 4 + 24 = −16 + 40 + 24 = 48.\nNo 6: −(6 × 6) + 10 × 6 + 24 = −36 + 60 + 24 = 48. Mesmo valor.\nMesma altura em 0 e em 10, então o pico está no meio: (0 + 10) ÷ 2 = 5.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Dois pontos de mesma altura",
@@ -3171,7 +3171,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Volume do cilindro: π × 4 × 4 × 50 = 800π.\nVolume da bola é 4/3 × π × raio × raio × raio (regra pronta da esfera). O raio é metade do diâmetro: 0,5 cm.\nUma bolinha: 4/3 × π × 0,5 × 0,5 × 0,5 = 4/3 × π × 0,125.\n4 × 0,125 = 0,5, e 0,5 ÷ 3 = 1/6 (0,5 são 3 sextos; dividindo por 3, sobra 1 sexto). A bolinha tem π/6.\nO número de bolinhas é quantas vezes π/6 cabe em 800π.",
+          "texto": "Volume do cilindro: π × 4 × 4 × 50 = 800π.\nVolume da bola: 4/3 × π × raio × raio × raio. É uma regra pronta que o ENEM costuma dar no enunciado; não precisa saber de onde vem.\nO raio é metade do diâmetro: 1 ÷ 2 = 0,5 cm.\nRaio × raio × raio: 0,5 × 0,5 = 0,25, e 0,25 × 0,5 = 0,125.\nUma bolinha: 4/3 × π × 0,125.\n4 × 0,125 = 0,5, e 0,5 ÷ 3 = 1/6 (0,5 são 3 sextos; dividindo por 3, sobra 1 sexto). A bolinha tem π/6.\nO número de bolinhas é quantas vezes π/6 cabe em 800π.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Os dois volumes",
