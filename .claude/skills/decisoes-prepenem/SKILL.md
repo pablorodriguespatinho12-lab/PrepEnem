@@ -505,7 +505,12 @@ escolha, nível acima) estão em `calculo.md`, nesta pasta. **Leia antes de mexe
   `MundoPixel` no fundo de toda tela, com um véu `.mundo-veu` da cor da página a
   84% por cima (texto cinza segue AA mesmo sobre o pinheiro mais escuro; a 78%
   dava 4,1:1). Substituiu as partículas. A prova aberta tem o mundo dela, forte,
-  sem véu.
+  sem véu. **Cartão da questão translúcido (13/11/2026, "transparente para ver o
+  fundo, mas que dê para ler"):** `.px-cartao` a 75% e `.px-alt` a 70%, SEM
+  backdrop-filter (desfoque sobre fundo animado repinta todo quadro); o cinza dentro
+  do cartão fica mais forte para manter AA sobre o pior pixel do fundo
+  (`scripts/contraste-cartao.py`). Medido no build: prova parada 99 ms de composição
+  em 3 s, marcar alternativa 35 a 47 ms com CPU 4× mais lenta.
   **Letras em pixel (mesmo dia, "até as letras e as palavras"):** com
   `html[data-letra-pixel]` (padrão; desliga em Perfil > "Letras em pixel",
   `useLetraPixel`) só palavra curta vira pixel: títulos (h1-h3) em Jersey 10,
