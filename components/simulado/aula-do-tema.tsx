@@ -43,17 +43,23 @@ export function AulaDoTema({ tema, questao, className }: { tema: string | null |
   const antes: Tela[] = antesDaQuestao(questao?.id).map((c) => (
     { rotulo: `Antes: ${c.titulo}`, conteudo: <TelaPasso passo={c.aula} /> }
   ));
+  // "Os dados" (o passo A pergunta) logo depois dos desenhos (Pablo, 14/11/2026: "gostei
+  // desse negócio de coletar dados, acho que teria que ser o primeiro a aparecer depois
+  // das imagens"). Depois vem a aula Antes, a ideia e o resto dos passos.
+  const passos = daQuestao?.estado === 'pronta' ? daQuestao.passos : [];
+  const pergunta = passos.length > 0 && /pergunta/i.test(passos[0].titulo) ? passos[0] : null;
+  const telaDoPasso = (p: (typeof passos)[number]) => ({ rotulo: `Esta questão: ${p.titulo}`, conteudo: <TelaPasso passo={p} /> });
+  const dados: Tela[] = questao && pergunta ? [telaDoPasso(pergunta)] : [];
   const estaQuestao: Tela[] = !questao || !daQuestao
     ? []
     : [
         { rotulo: 'Esta questão: a ideia', conteudo: <TelaEstaQuestao aula={daQuestao} /> },
-        ...(daQuestao.estado === 'pronta'
-          ? daQuestao.passos.map((p) => ({ rotulo: `Esta questão: ${p.titulo}`, conteudo: <TelaPasso passo={p} /> }))
-          : []),
+        ...passos.filter((p) => p !== pergunta).map(telaDoPasso),
       ];
-  const fimDaQuestao = conceito.length + antes.length + estaQuestao.length - 1;
+  const fimDaQuestao = conceito.length + dados.length + antes.length + estaQuestao.length - 1;
   const telas: Tela[] = [
     ...conceito,
+    ...dados,
     ...antes,
     ...estaQuestao,
     ...(desenho ? [{ rotulo: 'Por que faz sentido', conteudo: <TelaSentido d={desenho} /> }] : []),

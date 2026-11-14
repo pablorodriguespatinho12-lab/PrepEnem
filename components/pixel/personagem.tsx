@@ -12,7 +12,7 @@ export type Reacao = 'acerto' | 'erro' | null;
 export function Personagem({ materia, reacao, animado }: { materia: string | null | undefined; reacao: Reacao; animado: boolean }) {
   const tipo = tipoDaMateria(materia);
   const [url, setUrl] = useState('');
-  useEffect(() => setUrl(imagemPixel(`boneco-${tipo}`, QUADRO_W * QUADROS, QUADRO_H, (c) => desenharPersonagem(c, tipo))), [tipo]);
+  useEffect(() => setUrl(imagemPixel(`astronauta`, QUADRO_W * QUADROS, QUADRO_H, (c) => desenharPersonagem(c, tipo))), [tipo]);
   if (!url) return null;
   return (
     <div

@@ -125,11 +125,43 @@ function objeto(c: Pincel, ox: number, q: number, t: Tipo) {
 }
 
 /** Folha com os 4 quadros, de QUADRO_W × QUADRO_H cada. */
-export function desenharPersonagem(c: Pincel, t: Tipo): void {
-  const r = ROUPAS[t];
-  for (let q = 0; q < QUADROS; q++) {
-    const ox = q * QUADRO_W + 1;
-    pessoa(c, ox, q, r);
-    objeto(c, ox, q, t);
+/** Mini astronauta (Pablo, 14/11/2026: "deixa um mini astronauta, que eu acho mais
+    legal"), no lugar da pessoa da matéria. Mesmos 4 quadros: parado (o reflexo do visor
+    anda), pulo e mão no capacete com "?". Roupa branca COM contorno: sem ele, sumia no céu. */
+function astronauta(c: Pincel, ox: number, q: number) {
+  const dy = q === 1 ? 1 : 0;
+  const x = ox + 5;
+  const branco = '#f4f4ee';
+  const sombra = '#c9d0d6';
+  const braco = (bx: number, by: number, h: number, mao: 'cima' | 'baixo') => {
+    ponto(c, TINTA, bx - 1, by - 1, 4, h + 3);
+    ponto(c, branco, bx, by, 2, h);
+    ponto(c, '#9aa3a8', bx, mao === 'baixo' ? by + h : by - 1, 2, 1); // luva
+  };
+  // mochila de oxigênio atrás
+  ponto(c, TINTA, x - 1, 9 + dy, 3, 7); ponto(c, '#9aa3a8', x, 10 + dy, 1, 5);
+  // braços
+  if (q === 2) { braco(x + 1, 5, 4, 'cima'); braco(x + 11, 5, 4, 'cima'); }
+  else if (q === 3) { braco(x + 1, 10, 4, 'baixo'); braco(x + 11, 3, 5, 'cima'); }
+  else { braco(x + 1, 10 + dy, 4, 'baixo'); braco(x + 11, 10 + dy, 4, 'baixo'); }
+  // pernas e botas
+  ponto(c, TINTA, x + 3, 16, 4, 5); ponto(c, branco, x + 4, 16, 2, 4); ponto(c, '#55615b', x + 3, 20, 4, 1);
+  ponto(c, TINTA, x + 7, 16, 4, 5); ponto(c, branco, x + 8, 16, 2, 4); ponto(c, '#55615b', x + 7, 20, 4, 1);
+  // corpo com o emblema laranja
+  ponto(c, TINTA, x + 2, 9 + dy, 10, 8 - dy);
+  ponto(c, branco, x + 3, 10 + dy, 8, 6 - dy);
+  ponto(c, sombra, x + 3, 15, 8, 1);
+  ponto(c, '#e0923f', x + 4, 11 + dy, 2, 2);
+  // capacete redondo e visor escuro com reflexo
+  circulo(c, TINTA, x + 7, 5 + dy, 5);
+  circulo(c, branco, x + 7, 5 + dy, 4);
+  ponto(c, '#2a3f6b', x + 4, 3 + dy, 6, 4);
+  ponto(c, '#7ab8e8', x + (q === 1 ? 7 : 5), 3 + dy, 2, 1);
+  if (q === 3) {
+    ponto(c, '#f2c94c', x + 13, 0, 3, 1); ponto(c, '#f2c94c', x + 15, 1, 1, 2); ponto(c, '#f2c94c', x + 14, 3, 1, 1); ponto(c, '#f2c94c', x + 14, 5, 1, 1);
   }
+}
+
+export function desenharPersonagem(c: Pincel, _t: Tipo): void {
+  for (let q = 0; q < QUADROS; q++) astronauta(c, q * QUADRO_W + 1, q);
 }

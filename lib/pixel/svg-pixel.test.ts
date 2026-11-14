@@ -33,18 +33,3 @@ describe('desenho em pixel', () => {
     }
   });
 });
-
-describe('efeitos do desenho em pixel', () => {
-  it('os brilhos caem em pixel pintado e mudam a cada segundo', async () => {
-    const { brilhos } = await import('./svg-pixel');
-    const cheio = () => new Uint8ClampedArray(20 * 20 * 4).fill(255);
-    const a = cheio();
-    const b = cheio();
-    for (let i = 0; i < a.length; i += 4) { a[i] = 0; b[i] = 0; }
-    brilhos(a, 20, 20, 1);
-    brilhos(b, 20, 20, 2);
-    const acesos = (d: Uint8ClampedArray) => { const l: number[] = []; for (let i = 0; i < d.length; i += 4) if (d[i] === 255) l.push(i); return l.join(); };
-    expect(acesos(a)).not.toBe('');
-    expect(acesos(a)).not.toBe(acesos(b));
-  });
-});

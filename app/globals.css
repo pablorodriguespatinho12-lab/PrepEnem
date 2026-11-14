@@ -811,6 +811,13 @@ html [data-sonner-toaster][data-theme] {
 .aula-desenho .sobe { stroke: var(--warm); stroke-width: 3; fill: none; stroke-dasharray: 6 8; animation: aula-correr 0.8s linear infinite; }
 .aula-desenho .gira { animation: aula-girar 2.4s linear infinite; transform-box: fill-box; transform-origin: center; }
 .aula-desenho .onda { animation: aula-andar 1.6s linear infinite; }
+/* Água fervendo e termômetro subindo (Pablo, 14/11/2026: "mais animação na água e no
+   medidor de temperatura"). */
+.aula-desenho .bolha { fill: #ffffff; opacity: .9; transform-box: fill-box; animation: aula-bolha 1.8s linear infinite; }
+.aula-desenho .marola { stroke: #ffffff; stroke-width: 3; fill: none; stroke-dasharray: 10 8; opacity: .8; animation: aula-correr 1.2s linear infinite; }
+.aula-desenho .termo-sobe { transform-box: fill-box; transform-origin: 50% 100%; animation: aula-termo 3s ease-in-out infinite alternate; }
+@keyframes aula-bolha { from { transform: translateY(0); opacity: .9; } 85% { opacity: .9; } to { transform: translateY(-54px); opacity: 0; } }
+@keyframes aula-termo { from { transform: scaleY(.3); } to { transform: scaleY(1); } }
 @keyframes aula-correr { to { stroke-dashoffset: -18; } }
 @keyframes aula-correr-pouco { to { stroke-dashoffset: -30; } }
 @keyframes aula-girar { to { transform: rotate(360deg); } }
@@ -823,6 +830,9 @@ html [data-sonner-toaster][data-theme] {
   .aula-desenho .fluxo-pouco { animation-duration: 3.6s !important; animation-iteration-count: infinite !important; }
   .aula-desenho .gira { animation-duration: 4.8s !important; animation-iteration-count: infinite !important; }
   .aula-desenho .onda { animation-duration: 3.2s !important; animation-iteration-count: infinite !important; }
+  .aula-desenho .bolha { animation-duration: 2.4s !important; animation-iteration-count: infinite !important; }
+  .aula-desenho .marola { animation-duration: 2s !important; animation-iteration-count: infinite !important; }
+  .aula-desenho .termo-sobe { animation-duration: 3s !important; animation-iteration-count: infinite !important; }
 }
 
 /* ===== MUNDO PIXEL (Pablo, 12/11/2026) ======================================
@@ -892,7 +902,7 @@ html [data-sonner-toaster][data-theme] {
 /* Personagem da matéria em pé em cima do cartão (14/11/2026). 4 quadros na folha:
    0-1 parado (respira, pisca), 2 pulo (acertou), 3 coça a cabeça (errou). Anda de
    um lado para o outro em passos de pixel; vira o rosto na volta. */
-.px-boneco { position: absolute; bottom: calc(100% + 4px); left: 20px; width: clamp(60px, 7vw, 88px); z-index: 2;
+.px-boneco { position: absolute; bottom: calc(100% + 4px); left: 20px; width: clamp(44px, 4.5vw, 60px); z-index: 2;
   background-size: 400% 100%; background-position: 0% 0; image-rendering: pixelated; pointer-events: none; }
 .px-boneco[data-animado="sim"] { animation: boneco-pisca 3.2s steps(1) infinite, boneco-anda 26s steps(14) infinite !important; }
 .px-boneco[data-reacao="acerto"] { background-position: 66.667% 0; }
