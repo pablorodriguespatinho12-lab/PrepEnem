@@ -1140,7 +1140,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Iguale a massa de princípio ativo antes e depois.\nC × V é concentração vezes volume, que dá os gramas: 40 × V = 2 × 5 = 10.\nEntão V = 10 ÷ 40. Corte o zero dos dois: 1 ÷ 4, um quarto de litro, 0,25 L.\nEm mL: 1 000 ÷ 4 = 250 mL.",
+          "texto": "No balde pronto: 5 litros × 2 g = 10 g de princípio ativo.\nCada litro do concentrado tem 40 g. Quanto dele tem 10 g?\n10 é um quarto de 40: um quarto de litro, 1 000 ÷ 4 = 250 mL.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Diluição",
@@ -1155,9 +1155,9 @@
               "V: volume em litros"
             ],
             "contas": [
-              "40 \\times V_{conc} = 2 \\times 5 = 10",
-              "V_{conc} = \\frac{10}{40} = 0{,}25\\,\\text{L}",
-              "0{,}25 \\times 1\\,000 = 250\\,\\text{mL}"
+              "5 \\times 2 = 10\\,\\text{g no balde}",
+              "10 \\text{ é } \\tfrac{1}{4} \\text{ de } 40",
+              "\\tfrac{1}{4}\\,\\text{L} = 1\\,000 \\div 4 = 250\\,\\text{mL}"
             ],
             "resultado": "V_{conc} = 250\\,\\text{mL}",
             "nota": "Um copo e pouco de concentrado, completado com água até 5 L."
@@ -1353,7 +1353,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Massa vira mol, mol vira massa.\nO traço da fração quer dizer dividir: 1,68 ÷ 84.\nComo 84 × 2 = 168, então 84 × 0,02 = 1,68: são 0,02 mol.\nDepois, 0,02 × 44: 2 × 44 = 88, e 0,02 é 2 centésimos, então dá 0,88 g.",
+          "texto": "Pela reação, 84 g de bicarbonato soltam 44 g de gás.\nO comprimido tem 1,68 g. 84 × 2 = 168, então 1,68 é 84 × 0,02 (2 centésimos).\nO gás é 2 centésimos de 44 também: 44 × 0,02 = 0,88 g.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Do comprimido ao gás",
@@ -1369,8 +1369,9 @@
               "M: massa molar"
             ],
             "contas": [
-              "n = \\frac{1{,}68}{84} = 0{,}02\\,\\text{mol}",
-              "m_{CO_2} = 0{,}02 \\times 44"
+              "84\\,\\text{g} \\to 44\\,\\text{g de gás}",
+              "1{,}68 = 84 \\times 0{,}02",
+              "44 \\times 0{,}02 = 0{,}88\\,\\text{g}"
             ],
             "resultado": "m_{CO_2} = 0{,}88\\,\\text{g}",
             "nota": "Menos de 1 grama de gás faz todas aquelas bolhas."

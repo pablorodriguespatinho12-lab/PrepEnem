@@ -329,7 +329,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Calcule o calor com Q = m × c × ΔT (o × é vezes) e divida pelo que entra por segundo. 30 000 ÷ 500: corte dois zeros dos dois e fica 300 ÷ 5 = 60.",
+          "texto": "Calcule o calor com Q = m × c × ΔT (o × é vezes) e divida pelo que entra por segundo. 30 000 ÷ 500: corte dois zeros dos dois e fica 300 ÷ 5 = 60.\nDividir é contar quantos segundos de 500 cabem em 30 000.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Calor e tempo",
