@@ -5,6 +5,7 @@ import { imagemPixel } from '@/components/pixel/imagem-pixel';
 import { useMundoAnimado } from '@/hooks/use-mundo-animado';
 import type { NomeFigura } from '@/lib/visual/especificacao';
 import { FIGURAS_AREAS } from './figuras-areas';
+import { CENAS_QUESTOES } from './cenas-questoes';
 
 /* Figuras em pixel art animada, feitas à mão (Pablo, 12/11/2026: "a imagem
    realmente de uma bateria, e a solução do cálculo em imagem, em pixel").
@@ -248,6 +249,7 @@ const FIGURAS: Record<NomeFigura, (p: Props) => JSX.Element> = {
   onda: Onda,
   'luz-raio': LuzRaio,
   ...FIGURAS_AREAS,
+  ...CENAS_QUESTOES,
 };
 
 /* Mouse na figura (Pablo, 14/11/2026: "se eu passar o cursor interage"): uma luz de

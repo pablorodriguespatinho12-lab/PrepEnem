@@ -892,6 +892,14 @@ html [data-sonner-toaster][data-theme] {
 @keyframes fig-pulinho { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
 @keyframes fig-faisca { from { transform: translate(-3px, -3px); opacity: 1; } to { transform: translate(calc(var(--fx) - 3px), calc(var(--fy) - 3px)); opacity: 0; } }
 
+/* Cena da questão (14/11/2026): sprite de N quadros + pontos que andam 1 pixel por passo. */
+.figura-pixel .fig-sprite { position: absolute; overflow: hidden; pointer-events: none; }
+.figura-pixel .fig-sprite-faixa { height: 100%; background-size: 100% 100%; image-rendering: pixelated; }
+.figura-pixel[data-animado="sim"] .fig-sprite-faixa { animation: fig-sprite var(--dur) steps(var(--quadros)) infinite !important; }
+@keyframes fig-sprite { to { transform: translateX(-100%); } }
+.figura-pixel[data-animado="sim"] .fig-cena-fluida .fig-anda { animation-timing-function: steps(40) !important; }
+.figura-pixel[data-animado="sim"] .fig-cena-fluida .fig-vai-e-volta { animation-timing-function: steps(40) !important; }
+
 /* Personagem da matéria em pé em cima do cartão (14/11/2026). 4 quadros na folha:
    0-1 parado (respira, pisca), 2 pulo (acertou), 3 coça a cabeça (errou). Anda de
    um lado para o outro em passos de pixel; vira o rosto na volta. */

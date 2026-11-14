@@ -1,0 +1,77 @@
+{
+  "_leia": "Cena em pixel da SITUAÇÃO de cada questão, mostrada na tela da questão (Pablo, 14/11/2026). Desenhos em components/visual/cenas-questoes.tsx.",
+  "cenas": {
+    "d2-facil-nat-07": {
+      "nome": "cena-fogao-metano",
+      "rotulos": [
+        "gás natural",
+        "metano",
+        "fogão aceso",
+        ""
+      ]
+    },
+    "d2-medio-nat-07": {
+      "nome": "cena-esmalte",
+      "rotulos": [
+        "removedor",
+        "acetona",
+        "",
+        ""
+      ]
+    },
+    "d2-dificil-nat-07": {
+      "nome": "cena-dois-frascos",
+      "rotulos": [
+        "C₂H₆O",
+        "C₂H₆O",
+        "líquido",
+        "gás (spray)"
+      ]
+    },
+    "cmoudnnt2001vuoz97s5sifsi": {
+      "nome": "cena-aroma-frutas",
+      "rotulos": [
+        "kiwi",
+        "banana",
+        "pêssego",
+        "uva"
+      ]
+    },
+    "d2-facil-nat-08": {
+      "nome": "cena-botijao",
+      "rotulos": [
+        "botijão",
+        "propano",
+        "",
+        ""
+      ]
+    },
+    "d2-medio-nat-08": {
+      "nome": "cena-isqueiro",
+      "rotulos": [
+        "isqueiro",
+        "butano",
+        "",
+        ""
+      ]
+    },
+    "d2-dificil-nat-08": {
+      "nome": "cena-margarina",
+      "rotulos": [
+        "óleo",
+        "+ H₂",
+        "margarina",
+        ""
+      ]
+    },
+    "cmoudnnv5002suoz9ey6fzprw": {
+      "nome": "cena-oleo-sabao",
+      "rotulos": [
+        "óleo usado",
+        "óleo",
+        "soda",
+        "sabão"
+      ]
+    }
+  }
+}
