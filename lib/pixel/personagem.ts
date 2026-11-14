@@ -20,8 +20,8 @@ export function tipoDaMateria(materia: string | null | undefined): Tipo {
   return 'leitura';
 }
 
-type Roupa = { cabelo: string; pele: string; peleSombra: string; camisa: string; camisaLuz: string; calca: string; sapato: string };
-const ROUPAS: Record<Tipo, Roupa> = {
+export type Roupa = { cabelo: string; pele: string; peleSombra: string; camisa: string; camisaLuz: string; calca: string; sapato: string };
+export const ROUPAS: Record<Tipo, Roupa> = {
   fisica: { cabelo: '#4a2f1d', pele: '#e8b48a', peleSombra: '#c98f66', camisa: '#e0923f', camisaLuz: '#f2b872', calca: '#3a4f7a', sapato: '#22302a' },
   quimica: { cabelo: '#22302a', pele: '#c98f66', peleSombra: '#a8704b', camisa: '#f4f4ee', camisaLuz: '#ffffff', calca: '#4f6157', sapato: '#22302a' },
   biologia: { cabelo: '#8a5a2b', pele: '#f0c9a0', peleSombra: '#d6a678', camisa: '#4fae6a', camisaLuz: '#7cc98a', calca: '#5b3f2b', sapato: '#22302a' },
@@ -31,7 +31,7 @@ const ROUPAS: Record<Tipo, Roupa> = {
 const TINTA = '#22302a';
 
 /** Uma pessoa no quadro `q`, com o canto em (ox, 0). */
-function pessoa(c: Pincel, ox: number, q: number, r: Roupa) {
+export function pessoa(c: Pincel, ox: number, q: number, r: Roupa) {
   const dy = q === 1 ? 1 : 0; // respiro: o corpo desce 1 pixel
   const x = ox + 6;
   // pernas e sapatos

@@ -43,3 +43,29 @@ export function Ponto({ x, y, tam = 3, cor, anim, dx = 0, dy = 0, dur = 2, atras
     </div>
   );
 }
+
+/** Sprite com `quadros` desenhos lado a lado, trocando a `fps` (14/11/2026: "um
+    menino se mexendo, bem fluido"). A faixa anda por transform em steps: compositor. */
+export function Sprite({ chave, w, h, quadros, desenhar, x, y, largura, fps = 6 }: {
+  chave: string; w: number; h: number; quadros: number; desenhar: (c: Pincel, quadro: number) => void;
+  x: number; y: number; largura: number; fps?: number;
+}) {
+  const [url, setUrl] = useState('');
+  useEffect(() => setUrl(imagemPixel(chave, w * quadros, h, (c) => {
+    for (let q = 0; q < quadros; q++) {
+      const desloca: Pincel = {
+        get fillStyle() { return c.fillStyle; },
+        set fillStyle(v) { c.fillStyle = v; },
+        fillRect: (px, py, pw, ph) => c.fillRect(px + q * w, py, pw, ph),
+      };
+      desenhar(desloca, q);
+    }
+  })), [chave, w, h, quadros, desenhar]);
+  if (!url) return null;
+  const faixa = { width: `${quadros * 100}%`, backgroundImage: `url(${url})`, '--quadros': quadros, '--dur': `${quadros / fps}s` } as CSSProperties;
+  return (
+    <div className="fig-sprite" aria-hidden style={{ left: `${x}%`, top: `${y}%`, width: `${largura}%`, aspectRatio: `${w} / ${h}` }}>
+      <div className="fig-sprite-faixa" style={faixa} />
+    </div>
+  );
+}

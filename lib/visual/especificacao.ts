@@ -185,6 +185,9 @@ export const FIGURAS_PIXEL = [
   // Matemática
   'porcentagem-barra', 'grafico-barras', 'funcao-reta', 'solido-caixa', 'figura-plana', 'escala-regua',
   'cone', 'parabola',
+  // Cena da situação da questão (14/11/2026), na tela da questão
+  'cena-fogao-metano', 'cena-esmalte', 'cena-dois-frascos', 'cena-aroma-frutas', 'cena-botijao', 'cena-isqueiro',
+  'cena-margarina', 'cena-oleo-sabao',
 ] as const;
 export type NomeFigura = (typeof FIGURAS_PIXEL)[number];
 /* rotulos: os números da questão escritos nos lugares fixos da figura (até 4). */

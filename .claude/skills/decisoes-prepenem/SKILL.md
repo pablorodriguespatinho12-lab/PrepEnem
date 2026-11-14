@@ -538,6 +538,13 @@ escolha, nível acima) estão em `calculo.md`, nesta pasta. **Leia antes de mexe
   clique. Desenho da aula: brilhos piscando e onda de luz no cursor. Medido no build
   (prova de Química): composição parada 128 → 168 ms (+31%), zero tarefa longa nova;
   vento contínuo dava +85%, por isso rajada.
+  **Cena da situação da questão (Pablo, 14/11/2026: "personagem no sentido de: se a
+  questão fala de um menino puxando uma corda, desenha o menino, pixelado, se mexendo,
+  bem fluido"):** desenho em pixel da HISTÓRIA do enunciado, embaixo dele, na tela da
+  questão. Kit em `components/visual/cenas-questoes.tsx` (pessoa que respira e pisca,
+  chama de 3 quadros, bolhas e gotas andando 1 pixel por passo); mapa questão → cena em
+  `data/revisao-final/cenas-das-questoes.json`. Feito: as 8 de Química Orgânica da prova
+  por conteúdo; as outras esperam ele aprovar o jeito.
 - **Flashcard é a opção A, escolhida pelo Pablo em 05/10/2026** (entre A "flip
   firme" e B "revelar embaixo, pergunta fica na tela"): flip 3D de 0,42 s sem
   mola, pilha atrás, saída para o lado da resposta, Espaço vira e 1/2 respondem.

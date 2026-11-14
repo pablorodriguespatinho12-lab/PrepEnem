@@ -21,6 +21,7 @@ import { MundoPixel } from '@/components/pixel/mundo-pixel';
 import { CenaFim } from '@/components/pixel/cena-fim';
 import { Personagem } from '@/components/pixel/personagem';
 import { FiguraPixel } from '@/components/visual/figura-pixel';
+import { cenaDaQuestao } from '@/lib/cenas-das-questoes';
 import type { NomeFigura } from '@/lib/visual/especificacao';
 import { useMundoAnimado } from '@/hooks/use-mundo-animado';
 import { useTelaCheia } from '@/hooks/use-tela-cheia';
@@ -467,6 +468,13 @@ export default function ProvaDetailPage() {
           <div className="prose-reading mb-6">
             <MathText text={semMarcaDeImagem(q.enunciado)} />
           </div>
+          {/* Cena em pixel da situação da questão (Pablo, 14/11/2026: "se fala de um menino
+              puxando uma corda, desenha o menino"). Mapa em data/revisao-final/cenas-das-questoes.json. */}
+          {!reforcoAtivo && cenaDaQuestao(q.id) && (
+            <div className="mb-6">
+              <FiguraPixel nome={cenaDaQuestao(q.id)!.nome} rotulos={cenaDaQuestao(q.id)!.rotulos} semConta />
+            </div>
+          )}
           {/* Desenho em pixel da questão de reforço, sem a conta (só ajuda a entender). */}
           {reforcoAtivo?.figura && (
             <div className="mb-6">
