@@ -90,7 +90,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Troque cada aumento pelo seu fator: 10% vira 1,10 e 5% vira 1,05.\nMultiplique o aluguel pelos dois.\nDe cabeça: 1 200 × 1,10 = 1 200 + 120 = 1 320.\nDepois 10% de 1 320 é 132, e a metade disso, 5%, é 66.\n1 320 × 1,05 = 1 320 + 66 = 1 386.",
+          "texto": "Macete de Porcentagem: aumentos seguidos: um de cada vez.\n10% de 1 200 = 120: fica 1 320.\n5% de 1 320 é a metade de 10% (132): 66. Fica 1 320 + 66 = R$ 1 386.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Dois reajustes seguidos",
@@ -236,7 +236,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Os 90 fones que sobraram são 30% do estoque do começo.\n30% = 90. Divida os dois por 3: 10% = 30.\n100% é 10 vezes 10%: 30 × 10 = 300 fones.",
+          "texto": "Macete de Porcentagem: veja quanto sobrou e volte ao todo.\nSábado vendeu 60%: sobram 40%. Domingo, 25% disso (um quarto de 40% = 10%): sobram 30%.\n30% = 90 → 10% = 30 → 100% = 300 fones.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Volta ao estoque inicial",
@@ -386,7 +386,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Calcule o total de cada loja e subtraia.",
+          "texto": "Macete de Porcentagem: faça a mesma conta para as duas lojas.\nLoja A: leva 4, paga 3 × 40 = R$ 120.\nLoja B: 20% de 40 = 8, cada pote sai 32; 4 × 32 = 128. A sai R$ 8 mais barata.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Comparando as lojas",
@@ -545,7 +545,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Subir 10% é multiplicar por 1,1. Três meses: multiplique três vezes.",
+          "texto": "Macete de Porcentagem: aumentos seguidos: 10% de cada vez.\n2 000 + 200 = 2 200. 2 200 + 220 = 2 420.\n2 420 + 242 = R$ 2 662.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Dívida com juros compostos",
@@ -705,7 +705,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "A Carla pôs 30 mil de um total de 100 mil: 30 de cada 100, ou seja, 30%.\n10% de 36 000 é 3 600 (corte um zero).\n30% é 3 vezes isso: 3 × 3 600 = 10 800.",
+          "texto": "Macete de Porcentagem: ache 10% e multiplique.\nA Carla pôs 30 mil de um total de 100 mil: 30%.\n10% de 36 000 = 3 600; 30% = 3 × 3 600 = R$ 10 800.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Divisão proporcional",
@@ -1329,7 +1329,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Total de crianças dividido pelo total de famílias: 29 ÷ 20. Multiplique os dois por 5: 145 ÷ 100 = 1,45.",
+          "texto": "Macete de Estatística: média = total ÷ quantos, com pesos.\nCrianças: 4 × 0 + 6 × 1 + 7 × 2 + 3 × 3 = 0 + 6 + 14 + 9 = 29, em 20 famílias.\n29 ÷ 20: multiplique os dois por 5. 145 ÷ 100 = 1,45.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Média de crianças",
@@ -1473,7 +1473,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Calcule as duas e subtraia. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Estatística: média = total ÷ quantos; mediana = o do meio.\nMédia: soma 135 ÷ 10 = 13,5. Mediana: em ordem, os do meio são 8 e 9, então 8,5.\n13,5 − 8,5 = 5 minutos. Os dois tempos grandes puxam a média, não a mediana.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Média menos mediana",
@@ -1620,7 +1620,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Nova soma dividida pela quantidade: 684 ÷ 24. De cabeça: 24 × 28 = 672, sobram 12, e 12 ÷ 24 = 0,5. Dá 28,5.",
+          "texto": "Macete de Estatística: média = total ÷ quantos; veja quanto o total mudou.\nSai 54 e entra 18: o total cai 36.\nEspalhado em 24 pessoas: 36 ÷ 24 = 1,5 a menos cada. Média: 30 − 1,5 = 28,5.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Nova média de idade",
@@ -1769,7 +1769,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ponha x = 17 na regra da conta.",
+          "texto": "Macete de Funções: fixo + preço × quantidade.\nPassou de 10 m³: 17 − 10 = 7 m³ a mais.\n40 + 6 × 7 = 40 + 42 = R$ 82.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Conta de 17 m³",
@@ -1933,7 +1933,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "O topo fica no meio de 0 e 40, os dois zeros. Ponha esse x na fórmula. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Funções: o topo da parábola fica no meio dos dois zeros.\nA área dá zero quando x = 0 ou quando 80 − 2x = 0, x = 40. O meio: x = 20.\nA = 20 × (80 − 40) = 20 × 40 = 800 m².",
           "visual": {
             "tipo": "quadro",
             "titulo": "Maior área pelo espelho",
@@ -2104,7 +2104,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ponha t = 12 na fórmula. O 500 é a quantidade do começo (às 8 h).\nO expoente fica 12 ÷ 3 = 4. Ele diz quantas vezes o 2 se multiplica: 2⁴ = 2 × 2 × 2 × 2 = 16 (como x² é x × x).\nPor fim, 500 × 16: 5 × 16 = 80, mais dois zeros, 8 000.",
+          "texto": "Macete de Funções: dobra a cada tanto: conte as dobras.\nDe 8 h às 20 h são 12 h; 12 ÷ 3 = 4 dobras.\n500 → 1 000 → 2 000 → 4 000 → 8 000.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Bactérias às 20 h",

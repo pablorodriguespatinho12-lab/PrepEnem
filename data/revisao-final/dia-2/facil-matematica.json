@@ -48,7 +48,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "30% são 3 vezes 10%. Ache 10% dividindo por 10: 200 ÷ 10 = 20. Depois multiplique por 3: 20 × 3 = 60. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Porcentagem: ache 10% e multiplique.\n10% de 200 = 20 (corte um zero).\n30% = 3 × 20 = 60.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Porcentagem",
@@ -163,7 +163,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ache 10% (divida por 10): 50 ÷ 10 = 5. Dobre para ter 20%: 5 × 2 = 10. Tire do preço: 50 − 10 = 40. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Porcentagem: ache 10% e multiplique.\n10% de 50 = 5. 20% = 2 × 5 = 10.\nPaga 50 − 10 = R$ 40.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Desconto",
@@ -277,7 +277,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Divida pelo número de baixo e multiplique pelo de cima.",
+          "texto": "Macete de Porcentagem: fração é parte: divida pelo de baixo e multiplique pelo de cima.\n1/4 de 60 = 60 ÷ 4 = 15.\n3/4 = 3 × 15 = 45.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Fração de um número",
@@ -396,7 +396,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ache 1%: 2 000 ÷ 100 = 20 (corte dois zeros). Multiplique por 5: 20 × 5 = 100. Some ao salário: 2 000 + 100 = 2 100. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Porcentagem: ache 1% e multiplique.\n1% de 2 000 = 20 (corte dois zeros). 5% = 5 × 20 = 100.\nNovo salário: 2 000 + 100 = R$ 2 100.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Aumento",
@@ -519,7 +519,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Divida a parte pelo total e multiplique por 100. De cabeça: 15 de 60 é a mesma parte que 1 de 4 (divida os dois por 15: 15 ÷ 15 = 1 e 60 ÷ 15 = 4). E 1 ÷ 4 = 0,25. Por fim, 0,25 × 100 = 25.",
+          "texto": "Macete de Porcentagem: a parte é quantos % do todo?\n15 de 60: divida os dois por 15. Fica 1 de 4.\n1 de 4 = 25 de 100 = 25%.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Que porcentagem é",
@@ -987,7 +987,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Some as notas e divida por quantas são. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Estatística: média = total ÷ quantos.\nTotal: 4 + 6 + 9 + 9 = 28. São 4 notas.\n28 ÷ 4 = 7.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Média",
@@ -1105,7 +1105,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Pegue o número com a maior contagem. No quadro, o sinal > quer dizer \"maior que\".",
+          "texto": "Macete de Estatística: moda é o que mais repete.\n38 aparece 3 vezes; 40, 2 vezes; 42, 1 vez.\nModa: 38.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Moda",
@@ -1204,7 +1204,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Com a lista em ordem e 5 valores, conte: 2 ficam antes, 2 ficam depois, e o do meio é o 3º.\nA fórmula do quadro faz a mesma conta: (5 + 1) ÷ 2 = 6 ÷ 2 = 3.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Estatística: mediana: ponha em ordem e pegue o do meio.\nEm ordem: 12, 14, 15, 18, 20.\nO do meio (o 3º de 5): 15.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Mediana",
@@ -1297,7 +1297,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Troque o x por 4. Primeiro a multiplicação, depois a soma.",
+          "texto": "Macete de Funções: troque o x pelo número.\nf(4) = 3 × 4 + 2 = 12 + 2 = 14.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Valor da função",
@@ -1409,7 +1409,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Troque o x por 10. Multiplique antes de somar.",
+          "texto": "Macete de Funções: fixo + preço × quantidade.\n5 + 2 × 10 = 5 + 20 = R$ 25.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Preço da corrida",
@@ -1524,7 +1524,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Some 8 dos dois lados: fica 2x = 8. Depois divida os dois lados por 2. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Funções: troque o x e veja quando dá zero.\n2 × x − 8 = 0: que número vezes 2 dá 8?\nx = 4.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Raiz",
