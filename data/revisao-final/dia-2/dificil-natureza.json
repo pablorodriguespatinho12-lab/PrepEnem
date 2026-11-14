@@ -69,7 +69,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Primeiro o total que o circuito aguenta, depois a sobra. 220 × 20: faça 22 × 2 = 44 e ponha os dois zeros, 4 400 W. Depois, 4 400 − 3 080 = 1 320 W.",
+          "texto": "Macete de Eletricidade: P = U × i, e em paralelo some as potências.\nO disjuntor aguenta P = 220 × 20 = 4 400 W.\nJá ligados: 1 100 + 1 980 = 3 080 W. Sobra: 4 400 − 3 080 = 1 320 W.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Potência que sobra",
@@ -178,7 +178,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Lei de Ohm para cada aparelho, depois a soma. No quadro, o traço da fração quer dizer dividir: 120 ÷ 20 = 6 (20 × 6 = 120) e 120 ÷ 60 = 2 (60 × 2 = 120).",
+          "texto": "Macete de Eletricidade: em paralelo, cada um tem a tensão inteira; some as correntes.\nAquecedor: 120 ÷ 20 = 6 A. Lâmpada: 120 ÷ 60 = 2 A.\nTotal: 6 + 2 = 8 A.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Corrente total",
@@ -287,7 +287,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "1 litro fervendo cai 60 °C. 1 litro da fria sobe 20 °C.\n60 é 3 vezes 20: cada litro fervendo esquenta 3 litros da fria.\nSão 6 litros de fria: 6 ÷ 3 = 2 litros fervendo.",
+          "texto": "Macete de Termodinâmica: na mistura, compare os graus.\n1 litro fervendo cai 60 °C; 1 litro da fria sobe 20 °C. 60 é 3 vezes 20: cada litro fervendo esquenta 3 da fria.\nSão 6 litros de fria: 6 ÷ 3 = 2 litros fervendo.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Mistura de águas",
@@ -396,7 +396,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Calcule o caminho todo e divida por 2. 1 500 × 0,4: como 0,4 é 4 décimos, faça 1 500 ÷ 10 = 150 e 150 × 4 = 600 m. Metade: 600 ÷ 2 = 300 m.",
+          "texto": "Macete de Ondas: distância = velocidade × tempo; no eco, a metade.\nO som está na água: use 1 500 m/s (o 340 é do ar).\nIda e volta: 1 500 × 0,4 = 600 m. Metade: 300 m.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Profundidade pelo eco",
@@ -501,7 +501,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Some as duas distâncias até o espelho.",
+          "texto": "Macete de Óptica: a imagem fica atrás do espelho, à mesma distância.\nA imagem da cliente está 1,5 m atrás do espelho. A cabeleireira está a 1,5 + 0,5 = 2 m na frente.\nDistância: 2 + 1,5 = 3,5 m.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Espelho plano",
@@ -609,7 +609,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Converta, ache a aceleração, multiplique pela massa. No quadro, o traço da fração quer dizer dividir, e Δ (a letra grega delta) quer dizer 'quanto mudou'.",
+          "texto": "Macete de Dinâmica: aceleração = quanto a velocidade muda ÷ tempo; depois F = m × a.\n72 km/h ÷ 3,6 = 20 m/s. Para em 0,5 s: a = 20 ÷ 0,5 = 40 m/s² (2 metades em cada 1).\nF = 60 × 40 = 2 400 N.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Força do cinto",

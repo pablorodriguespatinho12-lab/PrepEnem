@@ -39,6 +39,11 @@
           }
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Eletricidade: em série, some (a pilha virada subtrai); depois U = R × i.\nTensão: 1,5 + 1,5 − 1,5 = 1,5 V. Lâmpada: i = P ÷ U = 4,5 ÷ 4,5 = 1 A, então R = 4,5 ÷ 1 = 4,5 Ω.\nResistência total: 4,5 + 3 × 0,5 = 6 Ω. Corrente: 1,5 ÷ 6 = 0,25 A.",
+          "visual": null
+        },
+        {
           "titulo": "O empurrão que sobra",
           "texto": "Cada pilha empurra 1,5 V. Duas empurram para a frente e a virada empurra para trás. Então 1,5 + 1,5 − 1,5 = 1,5 V. Sobra o empurrão de uma pilha só.",
           "visual": {
@@ -210,7 +215,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Com a energia em kWh e a potência em kW, a divisão já sai em horas. 22 ÷ 4,4: multiplique os dois por 10 e fica 220 ÷ 44 = 5, porque 44 × 5 = 220. No quadro, o traço da fração quer dizer dividir.\nDividir é contar quantas horas de 4,4 kWh cabem em 22 kWh.",
+          "texto": "Macete de Eletricidade: energia = potência × tempo, então tempo = energia ÷ potência.\nEnergia: 110 km ÷ 5 km por kWh = 22 kWh. Potência: 220 × 20 = 4 400 W = 4,4 kW.\nTempo: quantas horas de 4,4 kWh cabem em 22? 22 ÷ 4,4 = 5 h.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Tempo de recarga",
@@ -351,7 +356,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Macete: compare quanto cada panela ATRAPALHA o calor. Atrapalho = grossura ÷ k.\nEscolha grossura 40, que divide fácil por 20, 8 e 5. Alumínio: 40 ÷ 20 = 2. Ferro: 40 ÷ 8 = 5.\nMista: metade de cobre, 20 ÷ 40 = 0,5; metade de aço, 20 ÷ 5 = 4. Soma: 4,5.\nMenos atrapalho, menos gás: alumínio (2), cobre-aço (4,5), ferro (5).",
+          "texto": "Macete de Termodinâmica: na condução, compare o atrapalho = grossura ÷ k.\nEscolha grossura 40, que divide fácil por 20, 8 e 5. Alumínio: 40 ÷ 20 = 2. Ferro: 40 ÷ 8 = 5.\nMista: cobre 20 ÷ 40 = 0,5 + aço 20 ÷ 5 = 4 = 4,5. Menos atrapalho, menos gás: alumínio, cobre-aço, ferro.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Quanto cada panela atrapalha",
@@ -491,6 +496,11 @@
           "visual": null
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Dinâmica: a força depende de quanto a velocidade muda no mesmo tempo.\nNos pneus o carro para E volta: a velocidade muda mais. Nos blocos, só para. Força maior: pneus.\nNos blocos o carro não volta: perde toda a energia de movimento. Energia dissipada maior: blocos.",
+          "visual": null
+        },
+        {
           "titulo": "A resposta",
           "texto": "Letra A: força maior nos pneus, energia perdida maior nos blocos.\nB, C e E: dizem que a força é maior nos blocos; mas, no mesmo tempo, só parar empurra menos do que parar e ainda voltar.\nC: ainda diz que a energia perdida é igual, mas nos pneus parte do movimento volta.\nD: acerta a força, mas erra a energia; perde mais quem fica parado, nos blocos.",
           "visual": null
@@ -570,8 +580,8 @@
           }
         },
         {
-          "titulo": "1) Como a água cai",
-          "texto": "Para baixo, a água começa parada e ganha 10 m/s a cada segundo (é isso que o \"10 m/s²\" quer dizer).\nDepois de 1 s ela cai a 10 m/s; depois de 2 s, a 20 m/s; depois de 3 s, a 30 m/s.\nA velocidade cresce por igual, então a média é sempre o meio: entre 0 e 10 é 5; entre 0 e 20 é 10.\nCom a média, a conta é a do carro: 60 km/h por 2 horas dá 120 km. Distância = média × tempo.\nNa tabela, a última linha faz o mesmo para um tempo qualquer, que chamamos de t.",
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Dinâmica: queda: cai 5 × t × t; subir até parar é cair ao contrário.\nCaindo 1 m: 5 × t × t = 1, então t × t = 0,2. Nesse tempo anda 3 m: v × v = 9 ÷ 0,2 = 45.\nSubindo até parar: altura = (v ÷ 2) × (v ÷ 10) = v × v ÷ 20 = 45 ÷ 20 = 2,25 m.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Segundo a segundo",
@@ -845,7 +855,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "As 2 cordas dividem o puxão: 720 ÷ 2 = 360 N em cada.\n25% é 25 de cada 100, ou seja, 1 de cada 4: um quarto.\nFolga de 25% é somar um quarto: 360 ÷ 4 = 90, e 360 + 90 = 450 N.\nNo quadro, × 1,25 faz o mesmo: 1 inteiro mais 0,25, que é um quarto.",
+          "texto": "Macete de Dinâmica: força que sobra = m × a; na curva, é o puxão da curva.\nCaindo da corda deitada: v × v = 20 × raio. Puxão da curva = 24 × v × v ÷ raio = 24 × 20 = 480 N.\nCordas: peso 240 + 480 = 720 N, 360 N em cada. Com 25% a mais (um quarto): 360 + 90 = 450 N.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Corda do balanço",

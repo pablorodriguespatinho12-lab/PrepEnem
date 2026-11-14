@@ -37,7 +37,17 @@
         "certa": 2,
         "resolucao": "5 000 W = 5 kW. Por dia: 5 kW × 1 h = 5 kWh. No mês: 5 × 30 = 150 kWh. Custo: 150 × 0,80 = 120 reais. O 150 é a energia, não o preço."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "PUI e URI",
+      "regra": "Duas contas fazem tudo: P = U × i (potência) e U = R × i (Ohm). A letra que falta sai desfazendo a conta de vezes.",
+      "passos": [
+        "Em série (um atrás do outro): some as resistências e as pilhas; pilha virada subtrai.",
+        "Em paralelo (cada um no seu fio, como na casa): todos têm a tensão inteira; some as correntes ou as potências.",
+        "Energia = potência × tempo (kWh = kW × horas)."
+      ],
+      "exemplo": "Ferro de 110 V com 10 A: P = 110 × 10 = 1 100 W."
+    }
   },
   "Termodinâmica e Calor": {
     "materia": "Física",
@@ -79,7 +89,17 @@
         "certa": 2,
         "resolucao": "Ar frio é mais denso (mais pesado para o mesmo espaço) e desce. O ar quente sobe, é resfriado pelo aparelho e desce de novo. Esse vai e vem é a convecção, e ele resfria a sala inteira."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Quantidade × quanto muda",
+      "regra": "Calor = quantidade × c × quanto a temperatura muda. Compare em vezes: o dobro de água pede o dobro de calor.",
+      "passos": [
+        "Água: c = 1. Quem tem c maior sobe menos graus com a mesma energia.",
+        "Mistura: o que a quente perde, a fria ganha. Compare os graus (quente cai 60, fria sobe 20: 1 L quente vale 3 frios).",
+        "Tempo = calor ÷ o que entra por segundo. Condução: atrapalho = grossura ÷ k."
+      ],
+      "exemplo": "500 g de 20 °C a 80 °C: 500 × 60 = 30 000 cal. Entrando 500 por segundo: 60 s."
+    }
   },
   "Ondas e Acústica": {
     "materia": "Física",
@@ -138,7 +158,17 @@
         "certa": 3,
         "resolucao": "O som sai junto pelos dois caminhos e chega antes pela água. Diferença nos gráficos: 232 − 220 = 12 s. Tempo = distância ÷ velocidade, então L ÷ 340 − L ÷ 1 540 = 12. Teste a alternativa 5 240: pelo ar, 5 240 ÷ 340 ≈ 15,4 s. Pela água, 5 240 ÷ 1 540 ≈ 3,4 s. Diferença: 12 s. Fecha."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Distância = velocidade × tempo",
+      "regra": "Tudo é distância = velocidade × tempo. Na onda: v = λ × f (o tamanho de cada onda × quantas por segundo).",
+      "passos": [
+        "Eco: o som vai e volta. A distância de verdade é a metade.",
+        "Use a velocidade do meio onde o som está (ar 340 m/s, água 1 500 m/s).",
+        "Tempo = distância ÷ velocidade: quantos \"metros por segundo\" cabem na distância."
+      ],
+      "exemplo": "Sonar: 1 500 × 0,4 = 600 m de ida e volta. Metade: 300 m de fundo."
+    }
   },
   "Óptica": {
     "materia": "Física",
@@ -195,7 +225,17 @@
         "certa": 4,
         "resolucao": "A luz do Sol entra pela parte de cima da garrafa, passa do ar para a água e da água para o ar. A cada troca de meio ela desvia (refração) e se espalha pelo cômodo. Não é difração: o texto avisa que o buraco é muito maior que o comprimento de onda da luz."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Atrás do espelho, à mesma distância",
+      "regra": "No espelho plano, a imagem fica atrás dele, à mesma distância. A cor que você vê é a que o objeto devolve.",
+      "passos": [
+        "Distância da pessoa até a própria imagem = 2 × a distância até o espelho.",
+        "Outra pessoa vendo: some a distância dela até o espelho com a da imagem até o espelho.",
+        "Vermelho devolve o vermelho e engole o resto; branco devolve tudo; preto engole tudo."
+      ],
+      "exemplo": "A 1,5 m do espelho, a imagem fica 1,5 m atrás. Distância até ela: 3 m."
+    }
   },
   "Dinâmica e Leis de Newton": {
     "materia": "Física",
@@ -239,7 +279,17 @@
         "certa": 3,
         "resolucao": "Peso: 500 × 10 = 5 000 N, para baixo. Para acelerar para cima, sobra uma força resultante de m × a = 500 × 2 = 1 000 N para cima. O cabo precisa segurar o peso e ainda dar essa sobra: 5 000 + 1 000 = 6 000 N."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "A força que sobra",
+      "regra": "Ache a força que sobra (o que empurra menos o que segura) e use F = m × a.",
+      "passos": [
+        "Aceleração = quanto a velocidade muda ÷ tempo (km/h ÷ 3,6 vira m/s). Peso = m × 10.",
+        "Mesmo tempo de parada: quanto mais a velocidade muda (parar e voltar), maior a força.",
+        "Queda: em t segundos cai 5 × t × t. Subir até parar é cair ao contrário."
+      ],
+      "exemplo": "200 N empurram e 80 N seguram: sobram 120 N. Caixa de 40 kg: 120 ÷ 40 = 3 m/s²."
+    }
   },
   "Química Orgânica": {
     "materia": "Química",

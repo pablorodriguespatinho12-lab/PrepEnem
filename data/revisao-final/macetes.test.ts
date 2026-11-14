@@ -5,7 +5,10 @@ import aulas from './dia-2/aulas.json';
 
 // Macete curinga por conteúdo (Pablo, 14/11/2026): um macete que serve da fácil ao ENEM,
 // e o Jeito rápido de cada questão aplicando ele. Vai entrando por matéria (Química primeiro).
-const COM_MACETE = ['Química Orgânica', 'Química Ambiental e Energia', 'Estequiometria', 'Eletroquímica', 'Soluções, pH e Titulação'];
+const COM_MACETE = [
+  'Química Orgânica', 'Química Ambiental e Energia', 'Estequiometria', 'Eletroquímica', 'Soluções, pH e Titulação',
+  'Eletricidade e Circuitos', 'Dinâmica e Leis de Newton', 'Termodinâmica e Calor', 'Ondas e Acústica', 'Óptica',
+];
 type Macete = { nome: string; regra: string; passos: string[]; exemplo: string };
 const A = aulas as unknown as Record<string, { macete?: Macete }>;
 
