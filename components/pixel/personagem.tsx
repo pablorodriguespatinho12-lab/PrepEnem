@@ -9,7 +9,9 @@ import { imagemPixel } from './imagem-pixel';
 
 export type Reacao = 'acerto' | 'erro' | null;
 
-export function Personagem({ materia, reacao, animado }: { materia: string | null | undefined; reacao: Reacao; animado: boolean }) {
+/* naCena: mora dentro do desenho da questão, num canto, flutuando (Pablo, 14/11/2026:
+   "prefiro ele mais na imagenzinha da questão"). */
+export function Personagem({ materia, reacao, animado, naCena = false }: { materia: string | null | undefined; reacao: Reacao; animado: boolean; naCena?: boolean }) {
   const tipo = tipoDaMateria(materia);
   const [url, setUrl] = useState('');
   useEffect(() => setUrl(imagemPixel(`astronauta`, QUADRO_W * QUADROS, QUADRO_H, (c) => desenharPersonagem(c, tipo))), [tipo]);
@@ -17,7 +19,7 @@ export function Personagem({ materia, reacao, animado }: { materia: string | nul
   return (
     <div
       aria-hidden
-      className="px-boneco"
+      className={`px-boneco${naCena ? ' px-boneco-cena' : ''}`}
       data-tipo={tipo}
       data-reacao={reacao ?? 'nenhuma'}
       data-animado={animado ? 'sim' : 'nao'}

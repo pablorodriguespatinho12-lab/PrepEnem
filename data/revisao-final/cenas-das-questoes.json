@@ -72,6 +72,186 @@
         "soda",
         "sabão"
       ]
+    },
+    "d2-facil-nat-09": {
+      "nome": "cena-carro-fumaca",
+      "rotulos": [
+        "CO₂ do escapamento",
+        "efeito estufa",
+        "calor preso",
+        ""
+      ]
+    },
+    "d2-medio-nat-09": {
+      "nome": "cena-lago-algas",
+      "rotulos": [
+        "esgoto e adubo",
+        "algas cobrem a água",
+        "pouco oxigênio",
+        ""
+      ]
+    },
+    "d2-dificil-nat-09": {
+      "nome": "cena-carro-trabalho",
+      "rotulos": [
+        "casa",
+        "trabalho",
+        "15 km",
+        "ida e volta"
+      ]
+    },
+    "cmoudnnv1002quoz9i62sjhmx": {
+      "nome": "cena-pulverizador",
+      "rotulos": [
+        "pesticida",
+        "solo",
+        "meia-vida: 5 anos",
+        ""
+      ]
+    },
+    "d2-facil-nat-10": {
+      "nome": "cena-cata-vento",
+      "rotulos": [
+        "vento",
+        "energia renovável",
+        "",
+        ""
+      ]
+    },
+    "d2-medio-nat-10": {
+      "nome": "cena-posto-etanol",
+      "rotulos": [
+        "etanol",
+        "gasolina",
+        "",
+        ""
+      ]
+    },
+    "d2-dificil-nat-10": {
+      "nome": "cena-banheiro-aquecedor",
+      "rotulos": [
+        "aquecedor a gás",
+        "chama amarela",
+        "CO (monóxido)",
+        "janela fechada"
+      ]
+    },
+    "cmouei95p0063uoz91tlsl3v2": {
+      "nome": "cena-tratamento-agua",
+      "rotulos": [
+        "coagulante",
+        "água turva",
+        "flocos descem",
+        "lodo no fundo"
+      ]
+    },
+    "d2-facil-nat-13": {
+      "nome": "cena-balanca-co2",
+      "rotulos": [
+        "1 mol de CO₂",
+        "C = 12 g/mol",
+        "O = 16 g/mol",
+        "?"
+      ]
+    },
+    "d2-medio-nat-13": {
+      "nome": "cena-fogao-co2",
+      "rotulos": [
+        "metano (CH₄)",
+        "CO₂ + água",
+        "",
+        ""
+      ]
+    },
+    "d2-dificil-nat-13": {
+      "nome": "cena-comprimido",
+      "rotulos": [
+        "comprimido efervescente",
+        "água",
+        "gás CO₂",
+        ""
+      ]
+    },
+    "cmoudnnu2002auoz9dskgmqnx": {
+      "nome": "cena-cana-etanol",
+      "rotulos": [
+        "cana-de-açúcar",
+        "fermentação",
+        "etanol",
+        ""
+      ]
+    },
+    "d2-facil-nat-12": {
+      "nome": "cena-pilha-lampada",
+      "rotulos": [
+        "polo −",
+        "polo +",
+        "elétrons",
+        "lâmpada"
+      ]
+    },
+    "d2-medio-nat-12": {
+      "nome": "cena-pilha-zinco-cobre",
+      "rotulos": [
+        "Zn",
+        "Cu",
+        "elétrons",
+        ""
+      ]
+    },
+    "d2-dificil-nat-12": {
+      "nome": "cena-pilhas-led",
+      "rotulos": [
+        "pilha 1",
+        "pilha 2",
+        "LED",
+        "em série"
+      ]
+    },
+    "cmouei97i006xuoz91gjs17c4": {
+      "nome": "cena-ferrugem-chuva",
+      "rotulos": [
+        "chuva",
+        "camada protetora",
+        "ferro",
+        "ferrugem"
+      ]
+    },
+    "cmoudnnso001puoz93jgvg2as": {
+      "nome": "cena-carrinho-pilhas",
+      "rotulos": [
+        "3 pilhas",
+        "controle remoto",
+        "",
+        ""
+      ]
+    },
+    "d2-facil-nat-11": {
+      "nome": "cena-sal-jarra",
+      "rotulos": [
+        "40 g de sal",
+        "2 L de água",
+        "",
+        ""
+      ]
+    },
+    "d2-medio-nat-11": {
+      "nome": "cena-suco-jarra",
+      "rotulos": [
+        "suco concentrado",
+        "água",
+        "suco pronto",
+        ""
+      ]
+    },
+    "d2-dificil-nat-11": {
+      "nome": "cena-desinfetante-balde",
+      "rotulos": [
+        "desinfetante",
+        "balde com água",
+        "",
+        ""
+      ]
     }
   }
 }

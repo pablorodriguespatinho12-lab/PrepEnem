@@ -6,6 +6,7 @@ import { useMundoAnimado } from '@/hooks/use-mundo-animado';
 import type { NomeFigura } from '@/lib/visual/especificacao';
 import { FIGURAS_AREAS } from './figuras-areas';
 import { CENAS_QUESTOES } from './cenas-questoes';
+import { Personagem, type Reacao } from '@/components/pixel/personagem';
 
 /* Figuras em pixel art animada, feitas à mão (Pablo, 12/11/2026: "a imagem
    realmente de uma bateria, e a solução do cálculo em imagem, em pixel").
@@ -253,12 +254,24 @@ const FIGURAS: Record<NomeFigura, (p: Props) => JSX.Element> = {
 };
 
 /** semConta: na tela da questão a figura ajuda a entender sem entregar a conta. */
-export function FiguraPixel({ nome, rotulos, semConta = false }: { nome: NomeFigura; rotulos?: string[]; semConta?: boolean }) {
+export function FiguraPixel({ nome, rotulos, semConta = false, astronauta }: {
+  nome: NomeFigura; rotulos?: string[]; semConta?: boolean;
+  /** Na tela da questão: o mini astronauta flutua num canto do desenho e reage à resposta. */
+  astronauta?: { reacao: Reacao };
+}) {
   const { animado } = useMundoAnimado();
   const Figura = FIGURAS[nome];
   return (
     <div className="figura-pixel" data-animado={animado ? 'sim' : 'nao'}>
-      <Figura rotulos={rotulos} semConta={semConta} />
+      {astronauta ? (
+        // mesma largura do desenho (máx. 460 px), para o astronauta ficar dentro dele
+        <div className="relative mx-auto max-w-[460px]">
+          <Figura rotulos={rotulos} semConta={semConta} />
+          <Personagem materia={null} reacao={astronauta.reacao} animado={animado} naCena />
+        </div>
+      ) : (
+        <Figura rotulos={rotulos} semConta={semConta} />
+      )}
     </div>
   );
 }

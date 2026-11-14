@@ -188,6 +188,11 @@ export const FIGURAS_PIXEL = [
   // Cena da situação da questão (14/11/2026), na tela da questão
   'cena-fogao-metano', 'cena-esmalte', 'cena-dois-frascos', 'cena-aroma-frutas', 'cena-botijao', 'cena-isqueiro',
   'cena-margarina', 'cena-oleo-sabao',
+  // Química 2 (14/11/2026): Ambiental, Estequiometria, Eletroquímica, Soluções
+  'cena-carro-fumaca', 'cena-lago-algas', 'cena-carro-trabalho', 'cena-pulverizador', 'cena-cata-vento',
+  'cena-posto-etanol', 'cena-banheiro-aquecedor', 'cena-tratamento-agua', 'cena-balanca-co2', 'cena-fogao-co2',
+  'cena-comprimido', 'cena-cana-etanol', 'cena-pilha-lampada', 'cena-pilha-zinco-cobre', 'cena-pilhas-led',
+  'cena-ferrugem-chuva', 'cena-carrinho-pilhas', 'cena-sal-jarra', 'cena-suco-jarra', 'cena-desinfetante-balde',
 ] as const;
 export type NomeFigura = (typeof FIGURAS_PIXEL)[number];
 /* rotulos: os números da questão escritos nos lugares fixos da figura (até 4). */
