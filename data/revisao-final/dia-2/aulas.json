@@ -1004,7 +1004,18 @@
         "certa": 3,
         "resolucao": "1 000 × 1,20 = 1 200. Depois, 1 200 × 0,80 = 960. Faltam 40 reais em 1 000: 4% menor. O desconto foi calculado sobre um número maior, por isso não empata."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Ache 10%",
+      "regra": "Ache 10% (corte um zero) ou 1% (corte dois) e multiplique. Aumentos e descontos seguidos: um de cada vez.",
+      "passos": [
+        "Desconto: ache a parte e tire. Aumento: ache a parte e some.",
+        "Voltar ao todo: se 30% = 90, então 10% = 30 e 100% = 300.",
+        "Seguidos de uma vez: multiplique os fatores (10% a mais = 1,10; 10% a menos = 0,90).",
+        "Regra ou custos do texto: faça a mesma conta para todos, uma linha por item."
+      ],
+      "exemplo": "R$ 50 com 20% de desconto: 10% = 5, 20% = 10. Paga 50 − 10 = 40."
+    }
   },
   "Grandezas e Medidas": {
     "materia": "Matemática",
@@ -1088,7 +1099,18 @@
         "certa": 2,
         "resolucao": "A soma dos pesos é 5. Para a média dar 6,5, o total precisa ser 6,5 × 5 = 32,5. A primeira prova já deu 2 × 5,0 = 10. Falta 22,5, que vem de 3 × nota. 22,5 ÷ 3 = 7,5."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Total ÷ quantos",
+      "regra": "Média = total ÷ quantos. Mediana = o do meio, com a lista em ordem. Moda = o que mais repete.",
+      "passos": [
+        "Nota que falta: total que precisa (média × quantos) menos o que já tem.",
+        "Com pesos: cada valor × quantas vezes aparece, some e divida pelo total.",
+        "Número par de valores: a mediana é a média dos dois do meio. Valor muito grande puxa a média, não a mediana.",
+        "Chance de pelo menos um = 1 − chance de errar todos."
+      ],
+      "exemplo": "Notas 6, 8 e 5; quer média 7 em 4 provas: precisa de 28, tem 19, falta 9."
+    }
   },
   "Funções": {
     "materia": "Matemática",
@@ -1131,7 +1153,18 @@
         "certa": 2,
         "resolucao": "Aqui a = −10 e b = 80. O ponto mais alto fica em x = −b ÷ (2a) = −80 ÷ (−20) = 4. Com R$ 4,00 o lucro é −160 + 320 − 60 = 100 reais."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Troque o x",
+      "regra": "Função é uma regra de conta: troque a letra pelo número. Conta comum: fixo + preço × quantidade.",
+      "passos": [
+        "Para achar a quantidade: tire o fixo e divida pelo preço de cada uma.",
+        "Parábola (com x² ou t²): o topo fica no meio de dois pontos de mesma altura.",
+        "Dobra a cada tanto: conte quantas dobras cabem no tempo e dobre essa quantidade de vezes.",
+        "Comparar fórmulas: teste com números pequenos inventados."
+      ],
+      "exemplo": "Táxi: R$ 5 fixos + R$ 2 por km. 10 km: 5 + 2 × 10 = 25."
+    }
   },
   "Geometria Plana": {
     "materia": "Matemática",

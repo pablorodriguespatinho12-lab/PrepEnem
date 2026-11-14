@@ -9,6 +9,7 @@ const COM_MACETE = [
   'Química Orgânica', 'Química Ambiental e Energia', 'Estequiometria', 'Eletroquímica', 'Soluções, pH e Titulação',
   'Eletricidade e Circuitos', 'Dinâmica e Leis de Newton', 'Termodinâmica e Calor', 'Ondas e Acústica', 'Óptica',
   'Ecologia', 'Fisiologia Humana e Saúde', 'Genética', 'Citologia', 'Evolução', 'Microbiologia e Doenças',
+  'Aritmética e Porcentagem', 'Estatística', 'Funções',
 ];
 type Macete = { nome: string; regra: string; passos: string[]; exemplo: string };
 const A = aulas as unknown as Record<string, { macete?: Macete }>;
@@ -27,7 +28,7 @@ describe('macete curinga', () => {
 
   it('o Jeito rápido de toda questão desses conteúdos aplica o macete', () => {
     const pasta = join(__dirname, 'dia-2');
-    const arquivos = readdirSync(pasta).filter((f) => /^(facil|medio|dificil|enem)-natureza\.json$/.test(f));
+    const arquivos = readdirSync(pasta).filter((f) => /^(facil|medio|dificil|enem)-(natureza|matematica)\.json$/.test(f));
     let conferidas = 0;
     for (const f of arquivos) {
       const qs = JSON.parse(readFileSync(join(pasta, f), 'utf8')) as { id: string; tema: string; explicacao: { passos: { titulo: string; texto: string }[] } }[];

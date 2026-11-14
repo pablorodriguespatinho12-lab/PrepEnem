@@ -83,7 +83,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Se 25% vale 28 900, o inteiro é 28 900 dividido por 0,25. Dividir por 0,25 é o mesmo que multiplicar por 4, porque 0,25 cabe 4 vezes em 1. De cabeça: 28 900 × 2 = 57 800, e dobrando de novo, 115 600.",
+          "texto": "Macete de Porcentagem: volte ao todo.\nCaiu 75%: sobrou 25% = 28 900.\n25% é um quarto: o todo é 4 × 28 900 = 115 600.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Voltar ao valor antigo",
@@ -234,7 +234,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Troque cada porcentagem pelo seu fator (o número que já faz a conta) e multiplique.",
+          "texto": "Macete de Porcentagem: um de cada vez, sobre o valor certo.\nLoja: normal 1 000 + 10% = 1 100; cartão tira 2% de 1 100 = 22: paga 1 078.\nCliente: 1 000 + 8% = 1 080. A loja cobra R$ 2 a menos.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Preço no cartão",
@@ -386,7 +386,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Calcule o gasto total de cada avião e divida um pelo outro.\nA: 200 × 0,02 = 4 litros por km; no voo, 4 × 2 000 = 8 000.\nB: 220 × 0,018 = 3,96; no voo, 3,96 × 2 000 = 7 920.\nEm 7 920 de 8 000 faltam 80, que é 1% de 8 000: o B gasta 99%.",
+          "texto": "Macete de Porcentagem: seguidos de uma vez: multiplique os fatores.\n10% a mais de passageiros: × 1,10. 10% a menos de combustível por passageiro: × 0,90.\n1,10 × 0,90 = 0,99: gasta 99% do A, ou seja, 1% menor.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Combustível no voo",
@@ -569,7 +569,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "A mesma conta para todos, com a fórmula do gasto.",
+          "texto": "Macete de Porcentagem: faça a mesma conta para todos.\nI: 120 × 8 = 960. II: 180 × 6 = 1 080. III: 170 × 6 = 1 020, mais o transporte.\nIV: 110 × 9 = 990, mais o transporte. V: 110 × 10 = 1 100. O menor é o I.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Gasto de cada operário",
@@ -747,7 +747,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Siga a regra do enunciado, uma linha de cada vez. Lá, 5 N1 quer dizer 5 × N1 (o número colado na letra é multiplicação), e N1, N2, N3, N4 são os dígitos na ordem.",
+          "texto": "Macete de Porcentagem: siga a regra do texto, uma linha por vez.\nS = 5 × 0 + 4 × 1 + 3 × 0 + 2 × 0 = 4. O resto de 4 dividido por 11 é 4.\nN5 = 11 − 4 = 7.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Dígito verificador",
@@ -1373,7 +1373,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ache o novo salário do doutor e compare com o de hoje.\nNo quadro, 40x quer dizer 40 × x.\nDos 1 224 000 tire os 600 000 dos mestres: sobram 624 000.\nDividido por 40: 624 ÷ 4 = 156, mais os zeros, 15 600.\nE 15 600 ÷ 12 000 = 1,30, porque 12 000 + 30% (3 600) = 15 600.",
+          "texto": "Macete de Estatística: total = média × quantos.\nMáximo: 12 240 × 100 = 1 224 000. Mestres: 60 × 8 000 = 480 000, mais 25% (120 000) = 600 000.\nDoutores: 624 000 ÷ 40 = 15 600. De 12 000 para 15 600 subiu 3 600: 10% é 1 200, então 30%.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Salário máximo do doutor",
@@ -1527,7 +1527,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Teste médias: 1,5 ÷ 10 = 0,15 (maior que 0,1, não serve); 1,5 ÷ 15 = 0,1 (empata); 1,5 ÷ 20 = 0,075 (menor, serve).\nEscreva a condição e descubra a média que deixa o CV da nova igual a 0,1.\nNo quadro, < quer dizer \"menor que\" e > quer dizer \"maior que\".\nSe 1,5 ÷ média = 0,1, então média = 1,5 ÷ 0,1 (como em 6 ÷ 2 = 3 e 6 ÷ 3 = 2: o divisor e o resultado trocam de lugar).\nDividir por 0,1 é o mesmo que multiplicar por 10: 1,5 ÷ 0,1 = 15.\nQualquer média acima disso serve.",
+          "texto": "Macete de Estatística: troque as letras pelo que o texto dá.\nCV de hoje: 1 ÷ 10 = 0,1. Nova: 1,5 ÷ média, que tem de dar menos que 0,1.\n1,5 ÷ 15 = 0,1 (empata). Média acima de 15 dá menos: a resposta é 15.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Média mínima da nova ração",
@@ -1702,7 +1702,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Teste o número de dardos até a chance de pontuar chegar a 0,9.\nCom 3: 1/8 = 1 ÷ 8 = 0,125, e 1 − 0,125 = 0,875.\nCom 4: 1/16 é a metade de 0,125, ou 0,0625, e 1 − 0,0625 = 0,9375.\nNo quadro, ≥ quer dizer \"maior ou igual\".",
+          "texto": "Macete de Estatística: chance de pelo menos um = 1 − chance de errar todos.\nErrar todos: 1/2 a cada dardo. 3 dardos: 1/8, pontua 7/8 = 0,875 (pouco).\n4 dardos: 1/16, pontua 15/16 = 0,94, passa de 0,9. Mínimo: 4.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Menor número de dardos",
@@ -1859,7 +1859,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Teste a fórmula com números inventados: diária de R$ 100, 3 diárias, limpeza de R$ 50 e taxa de 10%.",
+          "texto": "Macete de Funções: teste com números pequenos inventados.\nDiária 100, 3 diárias, limpeza 50, taxa de 10%: diárias 300, taxa 30. Total 380.\nSó a A dá 380: 300 + 50 + 30 = d·n + L + d·n·s.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Testando com números",
@@ -2017,7 +2017,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Multiplique os dois efeitos.",
+          "texto": "Macete de Funções: teste com números pequenos inventados.\nF com raio 2 e temperatura 1: 2 × 2 × 1 = 4.\nE com raio 1 e temperatura 2: 1 × 2 × 2 × 2 × 2 = 16. E é 4 vezes F: LE = 4LF.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Luz de E comparada à de F",
@@ -2185,7 +2185,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "O pico fica na metade entre dois meses de mesmo valor.",
+          "texto": "Macete de Funções: o topo da parábola fica no meio de dois pontos de mesma altura.\np(0) = 24 e p(10) = −100 + 100 + 24 = 24. O meio de 0 e 10 é 5.\nO pico é no mês 5: a proposta III (5 ≤ t ≤ 6).",
           "visual": {
             "tipo": "quadro",
             "titulo": "Mês do pico pelo espelho",
