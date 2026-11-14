@@ -1,0 +1,1815 @@
+[
+ {
+  "id": "d2-banco-fis-ele-01",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Uma escola trocou as lâmpadas incandescentes (as antigas, de filamento) por lâmpadas de LED. Em cada sala, uma lâmpada de 100 W deu lugar a uma de LED de 12 W, que ilumina igual. Cada lâmpada fica acesa 6 horas por dia, durante 30 dias no mês, e a distribuidora cobra R$ 0,75 por quilowatt-hora (kWh).\nQuanto a escola economiza por mês, em cada sala, com essa troca?",
+  "A": "R$ 11,88",
+  "B": "R$ 13,50",
+  "C": "R$ 15,84",
+  "D": "R$ 1,62",
+  "E": "R$ 11 880,00",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Economia de potência: 100 − 12 = 88 W. Horas: 6 × 30 = 180 h. Energia: 88 × 180 = 15 840 Wh = 15,84 kWh. Custo: 15,84 × 0,75 = R$ 11,88. A. Erros: B usa os 100 W inteiros; C é a energia em kWh, não o dinheiro; D é o gasto do LED; E esqueceu de passar Wh para kWh.",
+   "ideia": "A economia é a diferença de potência, 88 W, vezes as 180 horas do mês. Isso dá 15,84 kWh, e cada kWh custa R$ 0,75.",
+   "pecas": [
+    {
+     "termo": "kWh",
+     "significado": "Quilowatt-hora: 1 000 W ligados durante 1 hora. É a unidade que a conta de luz cobra."
+    },
+    {
+     "termo": "Incandescente",
+     "significado": "Lâmpada antiga que acende esquentando um fio. Gasta muito mais energia que o LED para iluminar igual."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Cada sala trocou uma lâmpada de 100 W por uma de LED de 12 W.\nA lâmpada fica acesa 6 horas por dia, 30 dias no mês.\nA questão quer o dinheiro economizado no mês, com o kWh a R$ 0,75.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "A lâmpada trocada",
+      "rotulos": [
+       "tomada",
+       "100 W → LED 12 W",
+       "6 h por dia",
+       "30 dias"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Antes, a sala gastava 100 W. Agora gasta 12 W.\nA cada hora, 100 − 12 = 88 W deixam de ser gastos.\nCom números pequenos: 88 W por 1 h = 88 Wh; por 2 h = 88 + 88 = 176 Wh, que é 88 × 2.\nNo mês são 6 × 30 = 180 horas."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Energia = potência × tempo: 88 × 180 = 15 840 Wh.\nPara virar kWh, divida por 1 000: 15,84 kWh.\nDinheiro = kWh × preço: 15,84 × 0,75 = R$ 11,88.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Economia da troca",
+      "dados": [
+       "P = 100 - 12 = 88\\,\\text{W}",
+       "t = 6 \\times 30 = 180\\,\\text{h}"
+      ],
+      "formula": "E = P \\times t",
+      "legenda": [
+       "P: a potência que deixou de gastar",
+       "t: as horas do mês"
+      ],
+      "contas": [
+       "E = 88 \\times 180 = 15\\,840\\,\\text{Wh}",
+       "E = 15{,}84\\,\\text{kWh}",
+       "15{,}84 \\times 0{,}75 = 11{,}88"
+      ],
+      "resultado": "11{,}88\\,\\text{reais}",
+      "nota": "Economia por sala, por mês."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A conta de luz cobra energia, e energia é potência vezes tempo.\nComo as duas lâmpadas ficam o mesmo tempo acesas, dá para subtrair as potências antes.\nConfira pelo outro caminho: 18 kWh antes − 2,16 kWh depois = 15,84 kWh."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, R$ 11,88 por mês em cada sala.\nB (R$ 13,50) usa os 100 W inteiros, como se o LED não gastasse nada.\nC (R$ 15,84) é a energia em kWh, não o dinheiro.\nD (R$ 1,62) é o que o LED gasta, não o que se economiza.\nE (R$ 11 880,00) esqueceu de dividir os Wh por 1 000."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma lâmpada de 20 W fica acesa 50 horas. Quanto ela gasta?",
+    "opcoes": [
+     "1 kWh",
+     "70 kWh",
+     "1 000 kWh",
+     "0,4 kWh"
+    ],
+    "certa": "1 kWh",
+    "resposta": "20 × 50 = 1 000 Wh, que é 1 kWh."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-02",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Uma loja vende o mesmo modelo de fritadeira elétrica (air fryer) em duas versões: uma para tomada de 110 V e outra para tomada de 220 V. As duas têm potência de 1 760 W e fritam igual. O vendedor avisa que a versão de 110 V pede um fio mais grosso na instalação, porque passa mais corrente por ela.\nComparada com a versão de 220 V, a corrente na versão de 110 V é de",
+  "A": "8 A, igual à da versão de 220 V.",
+  "B": "16 A, o dobro da versão de 220 V.",
+  "C": "8 A, a metade da versão de 220 V.",
+  "D": "16 A, a metade da versão de 220 V.",
+  "E": "32 A, o quádruplo da versão de 220 V.",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "i = P ÷ U. 110 V: 1 760 ÷ 110 = 16 A. 220 V: 1 760 ÷ 220 = 8 A. 16 é o dobro de 8. B. Erros: A acha que a corrente não muda; C troca as versões; D acerta 16 A mas inverte a comparação; E dobra duas vezes.",
+   "ideia": "Mesma potência com metade do empurrão exige o dobro de corrente. Por isso a versão de 110 V puxa 16 A e a de 220 V puxa 8 A.",
+   "pecas": [
+    {
+     "termo": "Potência",
+     "significado": "Energia gasta por segundo, em watts (W). Aqui é a mesma nas duas versões: 1 760 W."
+    },
+    {
+     "termo": "Corrente",
+     "significado": "Quanta carga passa pelo fio, em ampères (A). Corrente alta esquenta o fio, por isso pede fio grosso."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Duas air fryers de 1 760 W: uma em 110 V, outra em 220 V.\nA potência é igual nas duas.\nA questão quer a corrente da versão de 110 V e como ela se compara com a de 220 V.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "A air fryer na tomada",
+      "rotulos": [
+       "tomada 110 V ou 220 V",
+       "air fryer 1 760 W",
+       "i = ?",
+       ""
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "P = U × i: a potência é o empurrão vezes a corrente.\nCom números pequenos: 10 V × 2 A = 20 W. Para dar os mesmos 20 W com 5 V, precisa de 4 A, porque 5 × 4 = 20.\nMetade do empurrão, dobro da corrente."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Corrente = potência ÷ tensão.\n110 V: 1 760 ÷ 110 = 16 A.\n220 V: 1 760 ÷ 220 = 8 A.\n16 é o dobro de 8.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Corrente nas duas versões",
+      "dados": [
+       "P = 1\\,760\\,\\text{W}",
+       "U = 110\\,\\text{V} \\text{ ou } 220\\,\\text{V}"
+      ],
+      "formula": "i = \\frac{P}{U}",
+      "legenda": [
+       "P: a potência",
+       "U: a tensão da tomada"
+      ],
+      "contas": [
+       "i_{110} = \\frac{1\\,760}{110} = 16\\,\\text{A}",
+       "i_{220} = \\frac{1\\,760}{220} = 8\\,\\text{A}"
+      ],
+      "resultado": "16\\,\\text{A} = 2 \\times 8\\,\\text{A}",
+      "nota": "Na de 110 V passa o dobro."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "As duas fritam igual, então gastam a mesma energia por segundo.\nSe o empurrão cai pela metade, a corrente tem que dobrar para U × i continuar igual.\nConfira: 110 × 16 = 1 760 e 220 × 8 = 1 760."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 16 A, o dobro da versão de 220 V.\nA (8 A, igual) acha que a corrente não muda com a tomada.\nC (8 A, metade) troca as versões: 8 A é a de 220 V.\nD (16 A, metade) acerta a conta, mas inverte a comparação.\nE (32 A) dobra duas vezes: a conta é só uma divisão."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um aparelho de 600 W fica numa tomada de 120 V. Qual a corrente?",
+    "opcoes": [
+     "5 A",
+     "72 000 A",
+     "0,2 A",
+     "480 A"
+    ],
+    "certa": "5 A",
+    "resposta": "600 ÷ 120 = 5 A. Confira: 120 × 5 = 600."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-03",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Um carregador comum de celular entrega 5 V e 1 A. Um carregador rápido, do mesmo celular, entrega 9 V e 2 A. A propaganda diz que o rápido carrega em muito menos tempo porque entrega mais energia a cada segundo, isto é, tem mais potência.\nQuantas vezes a potência do carregador rápido é maior que a do comum?",
+  "A": "1,8",
+  "B": "2,0",
+  "C": "3,6",
+  "D": "13",
+  "E": "18",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Comum: 5 × 1 = 5 W. Rápido: 9 × 2 = 18 W. 18 ÷ 5 = 3,6. C. Erros: A compara só a tensão (9 ÷ 5); B compara só a corrente (2 ÷ 1); D é a diferença 18 − 5; E é a potência do rápido.",
+   "ideia": "Potência é tensão vezes corrente: o comum dá 5 W e o rápido dá 18 W. 18 dividido por 5 dá 3,6 vezes.",
+   "pecas": [
+    {
+     "termo": "Potência",
+     "significado": "Energia entregue por segundo, em watts (W): P = U × i."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Carregador comum: 5 V e 1 A.\nCarregador rápido: 9 V e 2 A.\nA questão quer quantas vezes a potência do rápido é maior.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "Os dois carregadores",
+      "rotulos": [
+       "comum 5 V · rápido 9 V",
+       "celular",
+       "rápido 2 A",
+       "comum 1 A"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "A potência depende das duas coisas juntas: o empurrão e a corrente.\nCom números pequenos: 2 V e 3 A dão 2 × 3 = 6 W; 4 V e 3 A dão 4 × 3 = 12 W.\nAumentar só um dos dois já aumenta a potência. Aqui os dois aumentam."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Comum: 5 × 1 = 5 W.\nRápido: 9 × 2 = 18 W.\nQuantas vezes: 18 ÷ 5 = 3,6.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Potência dos carregadores",
+      "dados": [
+       "U_1 = 5\\,\\text{V},\\; i_1 = 1\\,\\text{A}",
+       "U_2 = 9\\,\\text{V},\\; i_2 = 2\\,\\text{A}"
+      ],
+      "formula": "P = U \\times i",
+      "legenda": [
+       "U: a tensão",
+       "i: a corrente"
+      ],
+      "contas": [
+       "P_1 = 5 \\times 1 = 5\\,\\text{W}",
+       "P_2 = 9 \\times 2 = 18\\,\\text{W}",
+       "\\frac{18}{5} = 3{,}6"
+      ],
+      "resultado": "3{,}6 \\text{ vezes}",
+      "nota": "O rápido entrega 3,6 vezes mais por segundo."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A tensão foi de 5 para 9 (1,8 vez) e a corrente de 1 para 2 (2 vezes).\nComo a potência é uma vezes a outra, os aumentos se multiplicam: 1,8 × 2 = 3,6.\nDá o mesmo que a conta direta."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 3,6 vezes.\nA (1,8) olha só a tensão e esquece que a corrente também dobrou.\nB (2,0) olha só a corrente.\nD (13) é a diferença 18 − 5 em watts, não quantas vezes.\nE (18) é a potência do rápido, não a comparação."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um carregador de 12 V e 3 A tem qual potência?",
+    "opcoes": [
+     "36 W",
+     "15 W",
+     "4 W",
+     "9 W"
+    ],
+    "certa": "36 W",
+    "resposta": "12 × 3 = 36 W."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-04",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Uma régua de tomadas (filtro de linha) traz a etiqueta \"127 V – 10 A no máximo\". Todos os aparelhos ligados nela recebem os 127 V da tomada, e as correntes deles se somam no fio da régua. Uma pessoa quer ligar alguns destes aparelhos ao mesmo tempo: secador de cabelo de 1 250 W, ferro de passar de 1 000 W, chapinha de 200 W e ventilador de 60 W.\nQual grupo pode ficar ligado junto sem passar do limite da régua?",
+  "A": "Secador e ventilador.",
+  "B": "Secador e chapinha.",
+  "C": "Secador e ferro.",
+  "D": "Ferro, chapinha e ventilador.",
+  "E": "Secador, chapinha e ventilador.",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Limite: 127 × 10 = 1 270 W. A = 1 310 W; B = 1 450 W; C = 2 250 W; D = 1 000 + 200 + 60 = 1 260 W (cabe); E = 1 510 W. D. Erros: A e E parecem pouca coisa porque ventilador e chapinha são pequenos; B e C olham cada aparelho sozinho, abaixo de 1 270 W.",
+   "ideia": "A régua aguenta 127 V × 10 A = 1 270 W somando tudo. Só ferro, chapinha e ventilador juntos ficam abaixo: 1 260 W.",
+   "pecas": [
+    {
+     "termo": "Régua de tomadas",
+     "significado": "Extensão com várias tomadas. Tudo que entra nela passa pelo mesmo fio, então as correntes se somam."
+    },
+    {
+     "termo": "Limite de corrente",
+     "significado": "A maior corrente que o fio aguenta sem esquentar demais: 10 A nesta régua."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A régua aguenta no máximo 10 A, na tomada de 127 V.\nAparelhos: secador 1 250 W, ferro 1 000 W, chapinha 200 W, ventilador 60 W.\nA questão quer o grupo que cabe no limite.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "A régua de tomadas",
+      "rotulos": [
+       "tomada 127 V",
+       "régua: até 10 A",
+       "secador 1 250 · ferro 1 000",
+       "chapinha 200 · ventilador 60"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Primeiro, transforme o limite de corrente em limite de potência: P = U × i.\nCom números pequenos: 10 V e 2 A no máximo dariam 10 × 2 = 20 W no máximo.\nAqui: 127 × 10 = 1 270 W. Os aparelhos ligados juntos somam as potências."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Limite: 1 270 W.\nSome cada grupo: ferro + chapinha + ventilador = 1 000 + 200 + 60 = 1 260 W.\n1 260 é menor que 1 270: cabe. Os outros grupos passam de 1 270 W.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Limite da régua",
+      "dados": [
+       "U = 127\\,\\text{V}",
+       "i_{max} = 10\\,\\text{A}"
+      ],
+      "formula": "P_{max} = U \\times i_{max}",
+      "legenda": [
+       "U: a tensão da tomada",
+       "i max: o limite da régua"
+      ],
+      "contas": [
+       "P_{max} = 127 \\times 10 = 1\\,270\\,\\text{W}",
+       "1\\,000 + 200 + 60 = 1\\,260\\,\\text{W}"
+      ],
+      "resultado": "1\\,260 < 1\\,270",
+      "nota": "Ferro, chapinha e ventilador cabem."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Todos os aparelhos recebem os mesmos 127 V, e as correntes se somam no fio da régua.\nSomar correntes com o mesmo 127 V é o mesmo que somar as potências.\nConfira pela corrente: 1 260 ÷ 127 dá quase 9,9 A, abaixo de 10 A."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, ferro, chapinha e ventilador: 1 260 W.\nA (secador e ventilador) dá 1 310 W: até o ventilador pequeno estoura o limite.\nB (secador e chapinha) dá 1 450 W.\nC (secador e ferro) dá 2 250 W: cada um sozinho cabe, os dois juntos não.\nE (secador, chapinha e ventilador) dá 1 510 W."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma régua de 220 V aguenta 5 A. Qual a maior potência somada?",
+    "opcoes": [
+     "1 100 W",
+     "225 W",
+     "44 W",
+     "2 200 W"
+    ],
+    "certa": "1 100 W",
+    "resposta": "220 × 5 = 1 100 W."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-05",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Um eletricista foi chamado porque uma torneira elétrica de cozinha não esquentava bem. Com um aparelho de medir, ele viu que a tomada entrega 220 V e que, com a torneira ligada, passam 20 A pelo fio. Para comprar a peça de reposição, ele precisa saber a resistência da torneira, em ohms (Ω).\nQual é essa resistência?",
+  "A": "0,09 Ω",
+  "B": "200 Ω",
+  "C": "240 Ω",
+  "D": "4 400 Ω",
+  "E": "11 Ω",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "U = R × i, então R = U ÷ i = 220 ÷ 20 = 11 Ω. E. Erros: A = 20 ÷ 220 (dividiu ao contrário); B = 220 − 20; C = 220 + 20; D = 220 × 20, que é a potência em W.",
+   "ideia": "A Lei de Ohm diz U = R × i. Se 220 = R × 20, a resistência é 220 ÷ 20 = 11 Ω.",
+   "pecas": [
+    {
+     "termo": "Resistência",
+     "significado": "O quanto a peça atrapalha a corrente, em ohms (Ω). Na torneira, é ela que esquenta a água."
+    },
+    {
+     "termo": "Lei de Ohm",
+     "significado": "U = R × i: o empurrão é a resistência vezes a corrente."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A tomada entrega 220 V.\nCom a torneira ligada, passam 20 A.\nA questão quer a resistência da torneira, em ohms.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "A torneira na tomada",
+      "rotulos": [
+       "tomada 220 V",
+       "torneira R = ?",
+       "i = 20 A",
+       ""
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "A Lei de Ohm liga as três coisas: U = R × i.\nCom números pequenos: se 12 = R × 3, qual número vezes 3 dá 12? É 4, porque 12 ÷ 3 = 4.\nAqui é igual: qual número vezes 20 dá 220?"
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Para achar o número que falta numa multiplicação, divida.\nR = U ÷ i = 220 ÷ 20 = 11 Ω.\nConfira já: 11 × 20 = 220.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Resistência da torneira",
+      "dados": [
+       "U = 220\\,\\text{V}",
+       "i = 20\\,\\text{A}"
+      ],
+      "formula": "R = \\frac{U}{i}",
+      "legenda": [
+       "U: a tensão",
+       "i: a corrente"
+      ],
+      "contas": [
+       "R = \\frac{220}{20}"
+      ],
+      "resultado": "R = 11\\,\\Omega",
+      "nota": "11 ohms."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Resistência maior segura mais a corrente; menor deixa passar mais.\nCom 11 Ω no caminho, os 220 V empurram exatamente 20 A.\nSe a peça nova tivesse 22 Ω, passariam só 10 A, e a água esquentaria menos."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, 11 Ω.\nA (0,09 Ω) dividiu ao contrário: 20 ÷ 220.\nB (200 Ω) subtraiu 220 − 20.\nC (240 Ω) somou 220 + 20.\nD (4 400 Ω) multiplicou 220 × 20: isso é a potência, em watts."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma lâmpada em 120 V tem corrente de 0,5 A. Qual a resistência?",
+    "opcoes": [
+     "240 Ω",
+     "60 Ω",
+     "120,5 Ω",
+     "0,004 Ω"
+    ],
+    "certa": "240 Ω",
+    "resposta": "Dividir por 0,5 é o mesmo que multiplicar por 2: 120 × 2 = 240 Ω. Confira: 240 × 0,5 = 120."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-06",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Uma reportagem sobre economia de energia mostrou que aparelhos desligados pelo controle remoto continuam gastando um pouco, no modo de espera (stand-by). Numa casa, 5 aparelhos ficam assim, cada um gastando 2 W, durante 20 horas por dia. A tarifa da distribuidora é de R$ 0,90 por kWh.\nQuanto esses aparelhos custam, juntos, em 30 dias?",
+  "A": "R$ 5,40",
+  "B": "R$ 1,08",
+  "C": "R$ 6,00",
+  "D": "R$ 5 400,00",
+  "E": "R$ 0,18",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Potência junta: 5 × 2 = 10 W. Horas: 20 × 30 = 600 h. Energia: 10 × 600 = 6 000 Wh = 6 kWh. Custo: 6 × 0,90 = R$ 5,40. A. Erros: B conta 1 aparelho só; C confunde kWh com reais; D esqueceu de passar para kWh; E esqueceu os 30 dias.",
+   "ideia": "Os 5 aparelhos somam 10 W, ligados 600 horas no mês: 6 kWh. A R$ 0,90 cada kWh, dá R$ 5,40.",
+   "pecas": [
+    {
+     "termo": "Stand-by",
+     "significado": "Modo de espera: o aparelho parece desligado, mas gasta um pouco para obedecer ao controle remoto."
+    },
+    {
+     "termo": "kWh",
+     "significado": "Quilowatt-hora: 1 000 W durante 1 hora. É o que a conta de luz cobra."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "5 aparelhos em espera, cada um com 2 W.\nFicam assim 20 horas por dia, por 30 dias.\nA questão quer o custo do mês, com o kWh a R$ 0,90.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "Aparelhos em espera",
+      "rotulos": [
+       "tomada",
+       "5 aparelhos × 2 W",
+       "20 h por dia",
+       "30 dias"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Aparelhos ligados juntos somam as potências: 5 × 2 = 10 W.\nCom números pequenos: 10 W por 1 hora = 10 Wh; por 3 horas = 10 + 10 + 10 = 30 Wh, que é 10 × 3.\nNo mês são 20 × 30 = 600 horas."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Energia = potência × tempo: 10 × 600 = 6 000 Wh.\nDivida por 1 000 para virar kWh: 6 kWh.\nCusto: 6 × 0,90 = R$ 5,40.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Gasto em espera",
+      "dados": [
+       "P = 5 \\times 2 = 10\\,\\text{W}",
+       "t = 20 \\times 30 = 600\\,\\text{h}"
+      ],
+      "formula": "E = P \\times t",
+      "legenda": [
+       "P: a potência somada",
+       "t: as horas no mês"
+      ],
+      "contas": [
+       "E = 10 \\times 600 = 6\\,000\\,\\text{Wh} = 6\\,\\text{kWh}",
+       "6 \\times 0{,}90 = 5{,}40"
+      ],
+      "resultado": "5{,}40\\,\\text{reais}",
+      "nota": "Pouco por mês, mas gasto sem uso."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A conta de luz cobra a energia, não a potência.\nUma potência pequena, ligada muitas horas, vira energia que aparece na conta.\nConfira: 1 aparelho por 600 h gasta 2 × 600 = 1 200 Wh = 1,2 kWh; vezes 5 aparelhos, 6 kWh."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, R$ 5,40.\nB (R$ 1,08) faz a conta de um aparelho só.\nC (R$ 6,00) é a energia, 6 kWh, escrita como se fosse dinheiro.\nD (R$ 5 400,00) esqueceu de dividir os Wh por 1 000.\nE (R$ 0,18) faz a conta de um dia só."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um aparelho de 4 W fica ligado 250 horas. Quanta energia?",
+    "opcoes": [
+     "1 kWh",
+     "254 kWh",
+     "1 000 kWh",
+     "62,5 kWh"
+    ],
+    "certa": "1 kWh",
+    "resposta": "4 × 250 = 1 000 Wh, que é 1 kWh."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-07",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Um pisca-pisca de Natal tem 40 lampadinhas iguais ligadas em série (uma depois da outra, num único caminho). Cada lampadinha tem resistência de 5 Ω, e o fio quase não atrapalha. O enfeite é ligado numa tomada de 120 V. Quando uma lampadinha queima, o caminho se abre e todas apagam.\nCom todas funcionando, qual é a corrente que passa pelo pisca-pisca?",
+  "A": "24 A",
+  "B": "0,6 A",
+  "C": "1,67 A",
+  "D": "3 A",
+  "E": "24 000 A",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Em série, as resistências somam: 40 × 5 = 200 Ω. i = U ÷ R = 120 ÷ 200 = 0,6 A. B. Erros: A usa só uma lampadinha (120 ÷ 5); C divide ao contrário (200 ÷ 120); D divide a tensão pelo número de lâmpadas (120 ÷ 40 dá volts, não ampères); E multiplica 120 × 200.",
+   "ideia": "Em série, as 40 resistências de 5 Ω somam 200 Ω. A corrente é 120 ÷ 200 = 0,6 A, a mesma em todas as lampadinhas.",
+   "pecas": [
+    {
+     "termo": "Em série",
+     "significado": "Uma depois da outra, num caminho só. A mesma corrente passa por todas, e as resistências somam."
+    },
+    {
+     "termo": "Resistência total",
+     "significado": "Uma só resistência que atrapalha igual a todas juntas. Aqui, 200 Ω."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "40 lampadinhas de 5 Ω, uma depois da outra.\nO pisca-pisca está numa tomada de 120 V.\nA questão quer a corrente que passa por ele.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "O pisca-pisca",
+      "rotulos": [
+       "tomada 120 V",
+       "40 × 5 Ω em série",
+       "i = ?",
+       ""
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Em série, tudo que atrapalha se soma, porque a corrente passa por uma e depois pela outra.\nCom números pequenos: 2 lampadinhas de 5 Ω dão 5 + 5 = 10 Ω; 3 dão 15 Ω.\nCom 40 lampadinhas: 40 × 5 = 200 Ω."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Corrente = tensão ÷ resistência total.\ni = 120 ÷ 200 = 0,6 A.\nDividir 120 por 200 é como 12 ÷ 20 = 0,6.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Corrente do pisca-pisca",
+      "dados": [
+       "U = 120\\,\\text{V}",
+       "R = 40 \\times 5 = 200\\,\\Omega"
+      ],
+      "formula": "i = \\frac{U}{R}",
+      "legenda": [
+       "U: a tensão da tomada",
+       "R: as 40 resistências somadas"
+      ],
+      "contas": [
+       "i = \\frac{120}{200}"
+      ],
+      "resultado": "i = 0{,}6\\,\\text{A}",
+      "nota": "A mesma corrente em todas."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Num caminho só, a carga que passa pela 1ª lampadinha passa por todas: a corrente é uma só.\nPor isso, se uma queima, o caminho abre e todas apagam.\nConfira com a Lei de Ohm: 200 × 0,6 = 120 V."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 0,6 A.\nA (24 A) usou uma lampadinha só: 120 ÷ 5.\nC (1,67 A) dividiu ao contrário: 200 ÷ 120.\nD (3 A) dividiu 120 V por 40 lâmpadas: isso dá os volts de cada uma, não a corrente.\nE (24 000 A) multiplicou 120 × 200 em vez de dividir."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Três resistências de 4 Ω em série numa pilha de 6 V. Qual a corrente?",
+    "opcoes": [
+     "0,5 A",
+     "1,5 A",
+     "2 A",
+     "72 A"
+    ],
+    "certa": "0,5 A",
+    "resposta": "4 + 4 + 4 = 12 Ω. 6 ÷ 12 = 0,5 A."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-08",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Uma bicicleta elétrica tem bateria de 36 V. Num passeio pelo parque, o motor puxou da bateria uma corrente de 10 A, quase sem variar, durante 2 horas. O dono quer comparar esse gasto com o de outros aparelhos da casa, que aparecem em quilowatt-hora (kWh) na conta de luz.\nQuanta energia o motor gastou nesse passeio?",
+  "A": "0,36 kWh",
+  "B": "0,072 kWh",
+  "C": "0,72 kWh",
+  "D": "720 kWh",
+  "E": "7,2 kWh",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "P = 36 × 10 = 360 W. E = 360 × 2 = 720 Wh = 0,72 kWh. C. Erros: A esqueceu as 2 horas; B esqueceu a corrente (36 × 2); D não dividiu por 1 000; E errou a vírgula (dividiu por 100).",
+   "ideia": "O motor gasta 36 V × 10 A = 360 W. Em 2 horas são 720 Wh, que é 0,72 kWh.",
+   "pecas": [
+    {
+     "termo": "Potência",
+     "significado": "Energia gasta por segundo: P = U × i, em watts (W)."
+    },
+    {
+     "termo": "Wh e kWh",
+     "significado": "Watt-hora: 1 W ligado 1 hora. 1 kWh = 1 000 Wh."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Bateria de 36 V; o motor puxa 10 A.\nO passeio durou 2 horas.\nA questão quer a energia gasta, em kWh.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "A bateria da bicicleta",
+      "rotulos": [
+       "bateria 36 V",
+       "motor",
+       "10 A",
+       "2 horas"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Primeiro a potência: P = U × i = 36 × 10 = 360 W.\nDepois a energia, potência vezes tempo. Com números pequenos: 360 W por 1 h = 360 Wh; por 2 h = 360 + 360 = 720 Wh.\nIsso é 360 × 2."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Energia = potência × tempo = 360 × 2 = 720 Wh.\nPara kWh, divida por 1 000: 720 ÷ 1 000 = 0,72 kWh.\nDividir por 1 000 anda a vírgula 3 casas para a esquerda.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Energia do passeio",
+      "dados": [
+       "U = 36\\,\\text{V},\\; i = 10\\,\\text{A}",
+       "t = 2\\,\\text{h}"
+      ],
+      "formula": "E = U \\times i \\times t",
+      "legenda": [
+       "U × i: a potência",
+       "t: as horas"
+      ],
+      "contas": [
+       "P = 36 \\times 10 = 360\\,\\text{W}",
+       "E = 360 \\times 2 = 720\\,\\text{Wh}"
+      ],
+      "resultado": "E = 0{,}72\\,\\text{kWh}",
+      "nota": "720 Wh = 0,72 kWh."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Potência diz quanto se gasta a cada instante; energia é esse gasto somado no tempo.\nA conta de luz cobra energia, por isso as 2 horas entram.\nPara comparar: um chuveiro de 7 200 W gasta os mesmos 0,72 kWh em só 6 minutos."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 0,72 kWh.\nA (0,36 kWh) esqueceu que foram 2 horas.\nB (0,072 kWh) esqueceu a corrente: fez 36 × 2.\nD (720 kWh) achou os 720 Wh, mas não dividiu por 1 000.\nE (7,2 kWh) andou a vírgula só duas casas."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um motor de 24 V puxa 5 A por 3 horas. Quanta energia?",
+    "opcoes": [
+     "360 Wh",
+     "120 Wh",
+     "32 Wh",
+     "72 Wh"
+    ],
+    "certa": "360 Wh",
+    "resposta": "24 × 5 = 120 W. 120 × 3 = 360 Wh."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-09",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Uma pessoa comprou, numa viagem, um aquecedor portátil com a etiqueta \"220 V – 4 840 W\". Em casa, ligou o aparelho numa tomada de 110 V e achou que ele esquentava pouco. Considere que a resistência do aquecedor é a mesma nas duas tomadas.\nQual é a potência do aquecedor ligado na tomada de 110 V?",
+  "A": "4 840 W",
+  "B": "2 420 W",
+  "C": "9 680 W",
+  "D": "1 210 W",
+  "E": "11 W",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Na etiqueta: i = 4 840 ÷ 220 = 22 A; R = 220 ÷ 22 = 10 Ω. Em 110 V: i = 110 ÷ 10 = 11 A; P = 110 × 11 = 1 210 W. D. Erros: A acha que a potência não muda; B só cortou pela metade; C dobrou; E é a corrente em 110 V (11 A) lida como watts.",
+   "ideia": "A resistência fica igual: 10 Ω. Com metade do empurrão passa metade da corrente, e a potência, que é um vezes o outro, cai para um quarto: 1 210 W.",
+   "pecas": [
+    {
+     "termo": "Etiqueta do aparelho",
+     "significado": "Diz a potência quando ele está ligado na tensão certa. Em outra tensão, a potência muda."
+    },
+    {
+     "termo": "Um quarto",
+     "significado": "Dividir por 4: 4 840 ÷ 4 = 1 210."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A etiqueta diz 220 V e 4 840 W.\nO aquecedor foi ligado em 110 V, com a mesma resistência.\nA questão quer a potência nessa tomada.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "O aquecedor da viagem",
+      "rotulos": [
+       "etiqueta 220 V · 4 840 W",
+       "aquecedor",
+       "tomada de casa 110 V",
+       "R não muda"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Primeiro, ache a resistência com os dados da etiqueta.\nCorrente: 4 840 ÷ 220 = 22 A, porque 220 × 22 = 4 840.\nResistência: 220 ÷ 22 = 10 Ω, porque 10 × 22 = 220."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Em 110 V, a corrente é 110 ÷ 10 = 11 A.\nPotência: P = U × i = 110 × 11 = 1 210 W.\nMetade do empurrão deu metade da corrente.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O aquecedor em 110 V",
+      "dados": [
+       "R = \\frac{220}{22} = 10\\,\\Omega",
+       "U = 110\\,\\text{V}"
+      ],
+      "formula": "P = U \\times i",
+      "legenda": [
+       "U: a nova tensão",
+       "i: a nova corrente"
+      ],
+      "contas": [
+       "i = \\frac{110}{10} = 11\\,\\text{A}",
+       "P = 110 \\times 11"
+      ],
+      "resultado": "P = 1\\,210\\,\\text{W}",
+      "nota": "Um quarto dos 4 840 W."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Ao cortar o empurrão pela metade, a corrente também cai pela metade: 22 A viram 11 A.\nA potência é empurrão vezes corrente: metade vezes metade dá um quarto.\nCom números pequenos: 4 × 4 = 16; com a metade de cada, 2 × 2 = 4, e 4 é 16 ÷ 4, um quarto.\nConfira: 4 840 ÷ 4 = 1 210 W."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, 1 210 W.\nA (4 840 W) acha que a etiqueta vale em qualquer tomada.\nB (2 420 W) cortou só a tensão pela metade e esqueceu que a corrente também cai.\nC (9 680 W) dobrou, como se menos tensão desse mais potência.\nE (11 W) é a corrente, 11 A, escrita como potência."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma lâmpada de 20 Ω é ligada em 40 V. Qual a potência?",
+    "opcoes": [
+     "80 W",
+     "800 W",
+     "2 W",
+     "60 W"
+    ],
+    "certa": "80 W",
+    "resposta": "i = 40 ÷ 20 = 2 A. P = 40 × 2 = 80 W."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-10",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Uma campanha de economia de energia comparou dois gastos. Um chuveiro de 5 000 W, ligado durante um banho de 6 minutos, gasta certa quantidade de energia. Uma lâmpada de LED de 10 W gasta a mesma quantidade se ficar acesa por muito mais tempo.\nPor quanto tempo a lâmpada de LED precisa ficar acesa para gastar a mesma energia desse banho?",
+  "A": "0,5 h",
+  "B": "5 h",
+  "C": "500 h",
+  "D": "3 000 h",
+  "E": "50 h",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "6 min = 0,1 h. Banho: 5 000 × 0,1 = 500 Wh. LED: 500 ÷ 10 = 50 h. E. Erros: A é a energia do banho em kWh (0,5) lida como horas; B errou a vírgula; C é a energia em Wh lida como horas; D tratou 6 minutos como 6 horas (5 000 × 6 ÷ 10).",
+   "ideia": "O chuveiro tem 500 vezes a potência do LED (5 000 ÷ 10). Então o LED precisa de 500 vezes o tempo: 500 × 6 min = 3 000 min = 50 h.",
+   "pecas": [
+    {
+     "termo": "Energia",
+     "significado": "Potência vezes tempo. Para a mesma energia, quem tem menos potência precisa de mais tempo."
+    },
+    {
+     "termo": "6 minutos em horas",
+     "significado": "1 hora tem 60 minutos. 6 minutos é 6 ÷ 60 = 0,1 hora."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Chuveiro de 5 000 W, banho de 6 minutos.\nLâmpada de LED de 10 W.\nA questão quer quanto tempo o LED leva para gastar a mesma energia.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "Banho contra LED",
+      "rotulos": [
+       "tomada",
+       "chuveiro 5 000 W",
+       "6 minutos",
+       "LED 10 W"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Mesma energia, potências diferentes. Com números pequenos: 4 W por 1 h gastam 4 Wh; 2 W levam 2 h para gastar os mesmos 4 Wh.\nMetade da potência, dobro do tempo.\nAqui o LED tem uma potência muito menor, então leva muito mais tempo."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Passe 6 minutos para horas: 6 ÷ 60 = 0,1 h.\nEnergia do banho: 5 000 × 0,1 = 500 Wh.\nTempo do LED: 500 ÷ 10 = 50 h.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Mesma energia",
+      "dados": [
+       "P_{ch} = 5\\,000\\,\\text{W},\\; t = 0{,}1\\,\\text{h}",
+       "P_{LED} = 10\\,\\text{W}"
+      ],
+      "formula": "E = P \\times t",
+      "legenda": [
+       "P: a potência",
+       "t: o tempo em horas"
+      ],
+      "contas": [
+       "E = 5\\,000 \\times 0{,}1 = 500\\,\\text{Wh}",
+       "t_{LED} = \\frac{500}{10}"
+      ],
+      "resultado": "t_{LED} = 50\\,\\text{h}",
+      "nota": "Um banho = 50 horas de LED."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "O chuveiro tem 5 000 ÷ 10 = 500 vezes a potência do LED.\nPara gastar a mesma energia, o LED fica 500 vezes mais tempo: 500 × 6 = 3 000 minutos.\n3 000 minutos ÷ 60 = 50 horas. Dá igual."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, 50 horas.\nA (0,5 h) pegou a energia do banho em kWh, 0,5, e chamou de horas.\nB (5 h) errou a vírgula.\nC (500 h) pegou a energia em Wh, 500, e chamou de horas.\nD (3 000 h) usou 6 horas no lugar de 6 minutos."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um forno de 2 000 W fica ligado 30 minutos. Quanto gasta?",
+    "opcoes": [
+     "1 000 Wh",
+     "60 000 Wh",
+     "2 030 Wh",
+     "4 000 Wh"
+    ],
+    "certa": "1 000 Wh",
+    "resposta": "30 minutos = 0,5 h. 2 000 × 0,5 = 1 000 Wh, que é 1 kWh."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-11",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Numa aula de laboratório, um grupo ligou um resistor (peça feita para atrapalhar a corrente) a uma fonte de tensão ajustável e anotou: com 2 V, a corrente foi 0,1 A; com 4 V, 0,2 A; com 6 V, 0,3 A. A resistência não mudou durante o experimento.\nSe o grupo ajustar a fonte para 9 V, qual corrente vai passar pelo resistor?",
+  "A": "0,45 A",
+  "B": "0,4 A",
+  "C": "180 A",
+  "D": "0,9 A",
+  "E": "2,2 A",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "R = 2 ÷ 0,1 = 20 Ω (igual nas 3 medidas). i = 9 ÷ 20 = 0,45 A. A. Erros: B é a corrente de 8 V (0,1 a cada 2 V); C multiplicou 9 × 20; D usou 0,1 A por volt; E dividiu ao contrário (20 ÷ 9).",
+   "ideia": "Nas três medidas, a tensão dividida pela corrente dá 20 Ω. Com 9 V, a corrente é 9 ÷ 20 = 0,45 A.",
+   "pecas": [
+    {
+     "termo": "Resistor",
+     "significado": "Peça feita para atrapalhar a corrente. A resistência dele fica igual: aqui, 20 Ω."
+    },
+    {
+     "termo": "Lei de Ohm",
+     "significado": "U = R × i. Com a resistência fixa, tensão e corrente crescem juntas: dobra uma, dobra a outra."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Medidas: 2 V dá 0,1 A; 4 V dá 0,2 A; 6 V dá 0,3 A.\nA resistência não muda.\nA questão quer a corrente com 9 V.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "O resistor na fonte",
+      "rotulos": [
+       "fonte 9 V",
+       "resistor",
+       "i = ?",
+       "2 V → 0,1 A"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "A cada 2 V a mais, a corrente sobe 0,1 A: as duas crescem juntas.\nDivida tensão por corrente: 2 ÷ 0,1 = 20; 4 ÷ 0,2 = 20; 6 ÷ 0,3 = 20.\n2 ÷ 0,1 é quantas vezes 0,1 cabe em 2: 20 vezes. Dá sempre 20: a resistência é 20 Ω."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Com R = 20 Ω e U = 9 V: i = U ÷ R.\ni = 9 ÷ 20 = 0,45 A.\n9 ÷ 20 é o mesmo que 45 ÷ 100 (multiplicando os dois por 5).",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O resistor em 9 V",
+      "dados": [
+       "R = \\frac{2}{0{,}1} = 20\\,\\Omega",
+       "U = 9\\,\\text{V}"
+      ],
+      "formula": "i = \\frac{U}{R}",
+      "legenda": [
+       "U: a nova tensão",
+       "R: a resistência da tabela"
+      ],
+      "contas": [
+       "i = \\frac{9}{20} = \\frac{45}{100}"
+      ],
+      "resultado": "i = 0{,}45\\,\\text{A}",
+      "nota": "Entre 0,4 A e 0,5 A, como esperado."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Pela Lei de Ohm, U = R × i. Com R fixo, a corrente acompanha a tensão.\n9 V fica entre 8 V e 10 V, então a corrente fica entre 0,4 A e 0,5 A.\nConfira: 20 × 0,45 = 9 V."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, 0,45 A.\nB (0,4 A) é a corrente de 8 V, não de 9 V.\nC (180 A) multiplicou 9 × 20 em vez de dividir.\nD (0,9 A) achou que cada volt dá 0,1 A; na tabela, cada 2 V dão 0,1 A.\nE (2,2 A) dividiu ao contrário: 20 ÷ 9."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um resistor dá 0,5 A com 5 V. Qual a corrente com 15 V?",
+    "opcoes": [
+     "1,5 A",
+     "1,0 A",
+     "0,15 A",
+     "75 A"
+    ],
+    "certa": "1,5 A",
+    "resposta": "R = 5 ÷ 0,5 = 10 Ω. 15 ÷ 10 = 1,5 A."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-12",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Um estudante quer acender um LED (pequena luz usada em brinquedos e placas) com uma bateria de 9 V. O LED funciona bem com 2 V e corrente de 0,02 A. Para não queimá-lo, ele liga um resistor em série com o LED, e o resistor fica com o resto da tensão da bateria.\nQual deve ser a resistência desse resistor?",
+  "A": "450 Ω",
+  "B": "350 Ω",
+  "C": "100 Ω",
+  "D": "0,14 Ω",
+  "E": "550 Ω",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "O resistor fica com 9 − 2 = 7 V. R = 7 ÷ 0,02 = 350 Ω. B. Erros: A usa os 9 V inteiros (9 ÷ 0,02); C usa a tensão do LED (2 ÷ 0,02); D multiplica 7 × 0,02; E soma 9 + 2 = 11 V.",
+   "ideia": "Em série, a tensão da bateria se reparte: 2 V no LED e 7 V no resistor. Com 0,02 A passando, o resistor precisa de 7 ÷ 0,02 = 350 Ω.",
+   "pecas": [
+    {
+     "termo": "Em série",
+     "significado": "Um depois do outro, num caminho só. A mesma corrente passa pelos dois."
+    },
+    {
+     "termo": "Tensão repartida",
+     "significado": "Em série, o empurrão da bateria se divide entre as peças, como 9 reais divididos em 2 + 7."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Bateria de 9 V; LED que quer 2 V e 0,02 A.\nUm resistor fica em série com o LED.\nA questão quer a resistência desse resistor.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "O LED protegido",
+      "rotulos": [
+       "bateria 9 V",
+       "LED 2 V e resistor",
+       "0,02 A",
+       "R = ?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Em série, o empurrão da bateria se reparte entre as peças.\nCom números pequenos: uma pilha de 3 V com duas lâmpadas iguais dá 1,5 V para cada, porque 1,5 + 1,5 = 3.\nAqui: 2 V vão para o LED, e o resto, 9 − 2 = 7 V, para o resistor."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "No resistor: U = 7 V e i = 0,02 A (a mesma corrente do LED).\nR = U ÷ i = 7 ÷ 0,02.\nEm 1 cabem 50 pedaços de 0,02, porque 0,02 × 50 = 1. Então dividir por 0,02 é multiplicar por 50.\nR = 7 × 50 = 350 Ω.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Resistor do LED",
+      "dados": [
+       "U_R = 9 - 2 = 7\\,\\text{V}",
+       "i = 0{,}02\\,\\text{A}"
+      ],
+      "formula": "R = \\frac{U_R}{i}",
+      "legenda": [
+       "U R: a tensão que sobra para o resistor",
+       "i: a corrente do LED"
+      ],
+      "contas": [
+       "R = \\frac{7}{0{,}02} = \\frac{700}{2}"
+      ],
+      "resultado": "R = 350\\,\\Omega",
+      "nota": "350 ohms protegem o LED."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Num caminho só, a corrente do LED é a mesma do resistor: 0,02 A.\nO resistor segura os 7 V que sobram, e o LED recebe só os 2 V que aguenta.\nConfira: 350 × 0,02 = 7 V; e 7 + 2 = 9 V da bateria."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 350 Ω.\nA (450 Ω) usou os 9 V inteiros, esquecendo os 2 V do LED.\nC (100 Ω) usou a tensão do LED, 2 V, em vez da do resistor.\nD (0,14 Ω) multiplicou 7 × 0,02 em vez de dividir.\nE (550 Ω) somou 9 + 2 em vez de subtrair."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Bateria de 12 V; LED usa 2 V. Quanto sobra para o resistor em série?",
+    "opcoes": [
+     "10 V",
+     "14 V",
+     "6 V",
+     "24 V"
+    ],
+    "certa": "10 V",
+    "resposta": "12 − 2 = 10 V ficam no resistor."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-13",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Num campo de futebol de bairro, um refletor (lâmpada forte) foi ligado a uma tomada de 220 V por um fio muito comprido. Somando a ida e a volta, o fio tem resistência de 2 Ω, e o refletor tem 20 Ω. Fio e refletor ficam em série, e a luz ficou mais fraca que o esperado.\nQual é a tensão que chega ao refletor?",
+  "A": "220 V",
+  "B": "20 V",
+  "C": "200 V",
+  "D": "110 V",
+  "E": "11 V",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "R total = 20 + 2 = 22 Ω. i = 220 ÷ 22 = 10 A. No refletor: U = 20 × 10 = 200 V. C. Erros: A esqueceu o fio; B é a tensão perdida no fio (2 × 10); D dividiu 220 ao meio; E é 220 ÷ 20, a corrente sem o fio, lida como volts.",
+   "ideia": "Fio e refletor em série somam 22 Ω, e passam 220 ÷ 22 = 10 A. No refletor ficam 20 × 10 = 200 V; os outros 20 V se perdem no fio.",
+   "pecas": [
+    {
+     "termo": "Resistência do fio",
+     "significado": "Fio comprido também atrapalha a corrente. Aqui ele soma 2 Ω ao caminho."
+    },
+    {
+     "termo": "Tensão repartida",
+     "significado": "Em série, o empurrão da tomada se divide entre as peças, como 220 reais divididos em 200 + 20."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Tomada de 220 V; fio de 2 Ω; refletor de 20 Ω, em série.\nA luz ficou fraca.\nA questão quer a tensão que chega ao refletor.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "O refletor no fio longo",
+      "rotulos": [
+       "tomada 220 V",
+       "refletor 20 Ω",
+       "fio 2 Ω",
+       ""
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Em série, as resistências somam: 20 + 2 = 22 Ω.\nA corrente é a mesma no fio e no refletor: i = 220 ÷ 22 = 10 A.\nConfira com números: 22 × 10 = 220."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Tensão no refletor: U = R × i = 20 × 10 = 200 V.\nTensão no fio: 2 × 10 = 20 V.\nSomando: 200 + 20 = 220 V, a tomada inteira.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Tensão no refletor",
+      "dados": [
+       "R = 20 + 2 = 22\\,\\Omega",
+       "U = 220\\,\\text{V}"
+      ],
+      "formula": "U_{ref} = R_{ref} \\times i",
+      "legenda": [
+       "R ref: a resistência do refletor",
+       "i: a corrente do caminho"
+      ],
+      "contas": [
+       "i = \\frac{220}{22} = 10\\,\\text{A}",
+       "U_{ref} = 20 \\times 10"
+      ],
+      "resultado": "U_{ref} = 200\\,\\text{V}",
+      "nota": "20 V ficam pelo fio."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "O empurrão da tomada se reparte entre as peças em série.\nQuem atrapalha mais fica com mais: o refletor (20 Ω) leva 200 V, o fio (2 Ω) leva 20 V.\nPor isso a luz fica mais fraca: o refletor não recebe os 220 V inteiros."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 200 V.\nA (220 V) esqueceu que o fio também atrapalha.\nB (20 V) é a tensão que fica no fio, não no refletor.\nD (110 V) dividiu a tomada ao meio, como se fio e refletor fossem iguais.\nE (11 V) fez 220 ÷ 20, que daria a corrente sem o fio, e chamou de volts."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Em série: lâmpada de 8 Ω e fio de 2 Ω, numa fonte de 50 V. Qual a corrente?",
+    "opcoes": [
+     "5 A",
+     "6,25 A",
+     "25 A",
+     "500 A"
+    ],
+    "certa": "5 A",
+    "resposta": "8 + 2 = 10 Ω. 50 ÷ 10 = 5 A."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-14",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "A caixa de um celular informa que a bateria tem 3,7 V e 4 000 mAh. A sigla mAh (miliampère-hora) diz quanta corrente a bateria consegue entregar por quanto tempo: 4 000 mAh quer dizer 4 000 mA durante 1 hora, e 1 000 mA = 1 A. Um estudante quer saber quanta energia cabe nessa bateria, em watt-hora (Wh).\nQual é essa energia?",
+  "A": "0,925 Wh",
+  "B": "7,7 Wh",
+  "C": "1,08 Wh",
+  "D": "14,8 Wh",
+  "E": "14 800 Wh",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "4 000 mA = 4 A. P = 3,7 × 4 = 14,8 W, durante 1 h: 14,8 Wh. D. Erros: A = 3,7 ÷ 4; B = 3,7 + 4; C = 4 ÷ 3,7; E não passou mA para A (3,7 × 4 000).",
+   "ideia": "4 000 mAh é 4 A durante 1 hora. Com 3,7 V, a potência é 3,7 × 4 = 14,8 W, e em 1 hora a energia é 14,8 Wh.",
+   "pecas": [
+    {
+     "termo": "mAh",
+     "significado": "Miliampère-hora: corrente vezes tempo. 4 000 mAh = 4 A por 1 hora, ou 2 A por 2 horas."
+    },
+    {
+     "termo": "Wh",
+     "significado": "Watt-hora: 1 W ligado durante 1 hora. Energia = potência × tempo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Bateria de 3,7 V e 4 000 mAh.\n4 000 mAh = 4 000 mA durante 1 hora.\nA questão quer a energia guardada, em Wh.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "A bateria do celular",
+      "rotulos": [
+       "bateria 3,7 V",
+       "celular",
+       "4 000 mAh",
+       "Wh = ?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Primeiro passe miliampère para ampère: 1 000 mA = 1 A, então 4 000 mA = 4 A.\nDepois a potência: P = U × i. Com números pequenos: 2 V × 3 A = 6 W.\nAqui: 3,7 × 4 = 14,8 W."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Energia = potência × tempo = 14,8 × 1 = 14,8 Wh.\nO tempo é 1 hora, porque 4 000 mAh é a corrente de 4 A por 1 hora.\n3,7 × 4 por partes: 3 × 4 = 12 e 0,7 × 4 = 2,8; somando, 14,8.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Energia da bateria",
+      "dados": [
+       "U = 3{,}7\\,\\text{V}",
+       "i = 4\\,000\\,\\text{mA} = 4\\,\\text{A},\\; t = 1\\,\\text{h}"
+      ],
+      "formula": "E = U \\times i \\times t",
+      "legenda": [
+       "U × i: a potência",
+       "t: as horas"
+      ],
+      "contas": [
+       "P = 3{,}7 \\times 4 = 14{,}8\\,\\text{W}",
+       "E = 14{,}8 \\times 1"
+      ],
+      "resultado": "E = 14{,}8\\,\\text{Wh}",
+      "nota": "Cabem 14,8 Wh na bateria."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A mesma bateria poderia dar 2 A por 2 horas: 3,7 × 2 × 2 = 14,8 Wh. Dá igual.\nO mAh conta só a carga; a tensão diz a força do empurrão.\nPor isso a energia junta as duas: tensão vezes corrente vezes tempo."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, 14,8 Wh.\nA (0,925 Wh) dividiu 3,7 ÷ 4 em vez de multiplicar.\nB (7,7 Wh) somou 3,7 + 4.\nC (1,08 Wh) dividiu 4 ÷ 3,7.\nE (14 800 Wh) esqueceu de passar 4 000 mA para 4 A."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Bateria de 5 V e 2 000 mAh. Quanta energia?",
+    "opcoes": [
+     "10 Wh",
+     "10 000 Wh",
+     "2,5 Wh",
+     "7 Wh"
+    ],
+    "certa": "10 Wh",
+    "resposta": "2 000 mA = 2 A. 5 × 2 × 1 h = 10 Wh."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-15",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Um folheto de segurança explica por que é perigoso mexer em aparelhos com as mãos molhadas. Entre as mãos, a pele seca tem resistência de cerca de 100 000 Ω; molhada, cai para cerca de 1 000 Ω. Considere um toque acidental num fio de 127 V.\nComparada com a corrente pela pele seca, a corrente pela pele molhada é",
+  "A": "10 vezes menor.",
+  "B": "100 vezes menor.",
+  "C": "igual, porque a tensão é a mesma.",
+  "D": "10 vezes maior.",
+  "E": "100 vezes maior.",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Seca: 127 ÷ 100 000 = 0,00127 A. Molhada: 127 ÷ 1 000 = 0,127 A. 0,127 ÷ 0,00127 = 100. E. Erros: B inverte (acha que menos resistência dá menos corrente); C confunde tensão com corrente; A e D erram a conta dos zeros (100 000 ÷ 1 000 = 100, não 10).",
+   "ideia": "Com a mesma tensão, a corrente é a tensão dividida pela resistência. A resistência molhada é 100 vezes menor, então passa 100 vezes mais corrente.",
+   "pecas": [
+    {
+     "termo": "Resistência da pele",
+     "significado": "O quanto o corpo atrapalha a corrente. Água na pele deixa a corrente passar muito mais fácil."
+    },
+    {
+     "termo": "Choque",
+     "significado": "Corrente passando pelo corpo. Quanto maior a corrente, maior o perigo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Mesmo fio de 127 V.\nPele seca: 100 000 Ω. Pele molhada: 1 000 Ω.\nA questão quer comparar a corrente nos dois casos.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "O toque no fio",
+      "rotulos": [
+       "fio 127 V",
+       "mão",
+       "seca 100 000 Ω",
+       "molhada 1 000 Ω"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Mesma tensão, resistências diferentes. Com números pequenos: 12 V em 6 Ω dá 12 ÷ 6 = 2 A; em 3 Ω dá 12 ÷ 3 = 4 A.\nMetade da resistência, o dobro da corrente.\nResistência menor deixa passar mais."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Corrente = tensão ÷ resistência.\nDividir por 10 anda a vírgula 1 casa para a esquerda: 127 ÷ 10 = 12,7. Cada zero, uma casa.\nMolhada: 127 ÷ 1 000 (3 zeros) = 0,127 A. Seca: 127 ÷ 100 000 (5 zeros) = 0,00127 A.\n0,127 é 100 vezes 0,00127: 0,00127 × 100 anda a vírgula 2 casas para a direita.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Pele seca e molhada",
+      "dados": [
+       "U = 127\\,\\text{V}",
+       "R_{seca} = 100\\,000\\,\\Omega,\\; R_{molh} = 1\\,000\\,\\Omega"
+      ],
+      "formula": "i = \\frac{U}{R}",
+      "legenda": [
+       "U: a tensão do fio",
+       "R: a resistência da pele"
+      ],
+      "contas": [
+       "i_{seca} = \\frac{127}{100\\,000} = 0{,}00127\\,\\text{A}",
+       "i_{molh} = \\frac{127}{1\\,000} = 0{,}127\\,\\text{A}"
+      ],
+      "resultado": "i_{molh} = 100 \\times i_{seca}",
+      "nota": "Molhada passa 100 vezes mais."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Pela Lei de Ohm, i = U ÷ R. Se U fica igual e R cai 100 vezes, i sobe 100 vezes.\n100 000 ÷ 1 000 = 100: corte os três zeros de cima e de baixo.\nPor isso mão molhada perto de tomada é tão perigoso."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, 100 vezes maior.\nA (10 vezes menor) erra a direção e os zeros.\nB (100 vezes menor) inverte: menos resistência deixa passar mais corrente, não menos.\nC (igual) confunde tensão com corrente: a tensão é igual, a corrente não.\nD (10 vezes maior) acerta a direção, mas conta errado os zeros."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Mesma tomada; a resistência cai pela metade. A corrente fica:",
+    "opcoes": [
+     "o dobro",
+     "a metade",
+     "igual",
+     "o quádruplo"
+    ],
+    "certa": "o dobro",
+    "resposta": "i = U ÷ R: dividir por um número menor dá um resultado maior. Metade da resistência, dobro da corrente."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-16",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Uma família quer instalar placas solares no telhado para produzir toda a energia que gasta. A conta de luz mostra consumo de 240 kWh por mês. Cada placa produz 400 W enquanto há sol forte, e na cidade há, em média, 5 horas de sol forte por dia.\nQuantas placas, no mínimo, a família precisa para produzir 240 kWh em 30 dias?",
+  "A": "4",
+  "B": "120",
+  "C": "20",
+  "D": "48",
+  "E": "0,6",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Por placa: 400 × 5 = 2 000 Wh = 2 kWh por dia; 2 × 30 = 60 kWh por mês. 240 ÷ 60 = 4 placas. A. Erros: B esqueceu os 30 dias (240 ÷ 2); C esqueceu as 5 horas (400 × 30 = 12 kWh); D dividiu 240 pelas 5 horas; E dividiu 240 por 400.",
+   "ideia": "Cada placa produz 400 W por 5 horas, 30 dias: 60 kWh no mês. Para chegar a 240 kWh, são 240 ÷ 60 = 4 placas.",
+   "pecas": [
+    {
+     "termo": "Placa solar",
+     "significado": "Transforma a luz do sol em energia elétrica. 400 W é o que ela entrega com sol forte."
+    },
+    {
+     "termo": "kWh",
+     "significado": "Quilowatt-hora: 1 000 W durante 1 hora. A conta de luz mede o gasto nessa unidade."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A família gasta 240 kWh por mês.\nCada placa dá 400 W, por 5 horas de sol por dia.\nA questão quer quantas placas cobrem o mês de 30 dias.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "Placas no telhado",
+      "rotulos": [
+       "placa 400 W",
+       "casa: 240 kWh por mês",
+       "5 h de sol por dia",
+       "30 dias"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Primeiro, quanto uma placa produz. Energia = potência × tempo.\nCom números pequenos: 400 W por 1 h = 400 Wh; por 2 h = 800 Wh.\nPor 5 h: 400 × 5 = 2 000 Wh = 2 kWh por dia."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "No mês: 2 × 30 = 60 kWh por placa.\nPlacas: 240 ÷ 60 = 4.\nConfira: 4 × 60 = 240.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Placas para o mês",
+      "dados": [
+       "P = 400\\,\\text{W},\\; 5\\,\\text{h por dia}",
+       "30\\,\\text{dias}"
+      ],
+      "formula": "E = P \\times t",
+      "legenda": [
+       "P: a potência da placa",
+       "t: as horas de sol no mês"
+      ],
+      "contas": [
+       "E = 400 \\times 5 \\times 30 = 60\\,000\\,\\text{Wh}",
+       "E = 60\\,\\text{kWh}",
+       "\\frac{240}{60} = 4"
+      ],
+      "resultado": "4 \\text{ placas}",
+      "nota": "Cada placa cobre 60 kWh."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A placa só produz enquanto há sol forte, por isso entram as 5 horas, não as 24 do dia.\nA conta de luz fala em mês, então a produção também tem que ser do mês inteiro.\nCom tudo na mesma unidade (kWh por mês), é só dividir."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, 4 placas.\nB (120) esqueceu os 30 dias: dividiu 240 pela produção de 1 dia.\nC (20) esqueceu as 5 horas de sol.\nD (48) dividiu 240 pelas 5 horas, sem a potência.\nE (0,6) dividiu 240 por 400 e misturou kWh com W."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma placa de 500 W pega 4 horas de sol. Quanto produz no dia?",
+    "opcoes": [
+     "2 kWh",
+     "20 kWh",
+     "0,125 kWh",
+     "504 Wh"
+    ],
+    "certa": "2 kWh",
+    "resposta": "500 × 4 = 2 000 Wh = 2 kWh."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-17",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "No carro, a bateria fornece 12 V. Os dois faróis dianteiros são iguais, e cada um tem 60 W. Cada farol recebe os 12 V da bateria, e as correntes dos dois se somam no fio que sai dela. O mecânico precisa da corrente total para escolher o fusível (peça que se rompe se a corrente passar do limite).\nQual é a corrente total que sai da bateria com os dois faróis acesos?",
+  "A": "5 A",
+  "B": "10 A",
+  "C": "0,1 A",
+  "D": "720 A",
+  "E": "1 440 A",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Potência dos dois: 60 + 60 = 120 W. i = 120 ÷ 12 = 10 A (5 A em cada farol). B. Erros: A conta um farol só; C divide ao contrário (12 ÷ 120); D multiplica 60 × 12; E multiplica 120 × 12.",
+   "ideia": "Cada farol puxa 60 ÷ 12 = 5 A. Os dois juntos: 5 + 5 = 10 A, o mesmo que 120 W ÷ 12 V.",
+   "pecas": [
+    {
+     "termo": "Fusível",
+     "significado": "Peça de segurança que se rompe e corta a corrente se ela passar do limite."
+    },
+    {
+     "termo": "Correntes somadas",
+     "significado": "Quando cada aparelho tem seu caminho até a bateria, o fio principal leva a soma das correntes."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Bateria de 12 V; dois faróis de 60 W cada.\nAs correntes dos dois se somam no fio da bateria.\nA questão quer a corrente total.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "Os faróis do carro",
+      "rotulos": [
+       "bateria 12 V",
+       "2 faróis de 60 W",
+       "i total = ?",
+       ""
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Para cada farol: P = U × i, então i = P ÷ U.\nCom números pequenos: uma lâmpada de 24 W em 12 V puxa 24 ÷ 12 = 2 A.\nCada farol: 60 ÷ 12 = 5 A."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Somando os dois: 5 + 5 = 10 A.\nOu some as potências primeiro: 120 W ÷ 12 V = 10 A. Dá igual.\nO fusível precisa aguentar pelo menos esses 10 A.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Corrente dos faróis",
+      "dados": [
+       "P = 60 + 60 = 120\\,\\text{W}",
+       "U = 12\\,\\text{V}"
+      ],
+      "formula": "i = \\frac{P}{U}",
+      "legenda": [
+       "P: a potência dos dois faróis",
+       "U: a tensão da bateria"
+      ],
+      "contas": [
+       "i = \\frac{120}{12}"
+      ],
+      "resultado": "i = 10\\,\\text{A}",
+      "nota": "5 A em cada farol."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Cada farol tem seu próprio caminho até a bateria e recebe os 12 V inteiros.\nO fio que sai da bateria leva a corrente dos dois juntos.\nConfira: 12 × 10 = 120 W, a potência dos dois faróis."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 10 A.\nA (5 A) é a corrente de um farol só.\nC (0,1 A) dividiu ao contrário: 12 ÷ 120.\nD (720 A) multiplicou 60 × 12, que não é corrente.\nE (1 440 A) multiplicou 120 × 12 em vez de dividir."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Três lâmpadas de 24 W numa bateria de 12 V. Qual a corrente total?",
+    "opcoes": [
+     "6 A",
+     "2 A",
+     "864 A",
+     "0,5 A"
+    ],
+    "certa": "6 A",
+    "resposta": "24 + 24 + 24 = 72 W. 72 ÷ 12 = 6 A."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-18",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Um chuveiro de 220 V tem uma chave com duas posições. Na posição \"inverno\", a água sai mais quente e o chuveiro tem 5 500 W; na posição \"verão\", tem 2 750 W. Muita gente acha que a água esquenta mais porque a resistência é maior.\nNa posição \"inverno\", a resistência do chuveiro vale",
+  "A": "17,6 Ω, o dobro da posição verão.",
+  "B": "8,8 Ω, o dobro da posição verão.",
+  "C": "8,8 Ω, a metade da posição verão.",
+  "D": "17,6 Ω, a metade da posição verão.",
+  "E": "25 Ω, maior que a da posição verão.",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Inverno: i = 5 500 ÷ 220 = 25 A; R = 220 ÷ 25 = 8,8 Ω. Verão: i = 2 750 ÷ 220 = 12,5 A; R = 220 ÷ 12,5 = 17,6 Ω. 8,8 é a metade de 17,6. C. Erros: A segue a ideia errada de 'mais quente = mais resistência'; B acerta o número e inverte a comparação; D é a resistência do verão; E é a corrente (25 A) lida como resistência.",
+   "ideia": "Na mesma tomada de 220 V, mais potência exige mais corrente, e mais corrente só passa com menos resistência. No inverno: 8,8 Ω, metade dos 17,6 Ω do verão.",
+   "pecas": [
+    {
+     "termo": "Resistência",
+     "significado": "O quanto o fio do chuveiro atrapalha a corrente, em ohms (Ω). Menos atrapalho, mais corrente passa."
+    },
+    {
+     "termo": "Chave do chuveiro",
+     "significado": "Muda o pedaço de fio por onde a corrente passa, e assim muda a resistência."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Chuveiro de 220 V com duas posições.\nInverno: 5 500 W. Verão: 2 750 W.\nA questão quer a resistência no inverno e como ela se compara com a do verão.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "As duas posições",
+      "rotulos": [
+       "tomada 220 V",
+       "inverno 5 500 W",
+       "verão 2 750 W",
+       "R = ?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Primeiro a corrente, i = P ÷ U. Com números pequenos: 20 W em 10 V puxam 20 ÷ 10 = 2 A.\nInverno: 5 500 ÷ 220 = 25 A, porque 220 × 25 = 5 500.\nVerão: 2 750 ÷ 220 = 12,5 A, porque 220 × 12 = 2 640 e meio de 220 é 110: 2 640 + 110 = 2 750.\nNo inverno passa o dobro de corrente."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Depois a resistência, R = U ÷ i.\nInverno: 220 ÷ 25 = 8,8 Ω, porque 25 × 8,8 = 220.\nVerão: 220 ÷ 12,5. Dobrar os dois não muda a divisão (6 ÷ 3 = 12 ÷ 6 = 2) e tira a vírgula: 440 ÷ 25 = 17,6 Ω.\n8,8 é a metade de 17,6.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Resistência no inverno",
+      "dados": [
+       "U = 220\\,\\text{V}",
+       "i_{inv} = 25\\,\\text{A},\\; i_{ver} = 12{,}5\\,\\text{A}"
+      ],
+      "formula": "R = \\frac{U}{i}",
+      "legenda": [
+       "U: a tensão da tomada",
+       "i: a corrente em cada posição"
+      ],
+      "contas": [
+       "R_{inv} = \\frac{220}{25} = 8{,}8\\,\\Omega",
+       "R_{ver} = \\frac{220}{12{,}5} = 17{,}6\\,\\Omega"
+      ],
+      "resultado": "R_{inv} = 8{,}8\\,\\Omega",
+      "nota": "Metade da resistência do verão."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A tomada dá sempre os mesmos 220 V.\nPara gastar mais energia por segundo, precisa passar mais corrente, e isso só acontece com menos resistência.\nConfira: 220 × 25 = 5 500 W e 220 × 12,5 = 2 750 W."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 8,8 Ω, a metade da posição verão.\nA (17,6 Ω, o dobro) segue a ideia errada de que mais quente é mais resistência.\nB (8,8 Ω, o dobro) acerta o número, mas inverte a comparação.\nD (17,6 Ω) é a resistência da posição verão.\nE (25 Ω) usou a corrente, 25 A, como se fosse a resistência."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Na mesma tomada, o aparelho A tem 10 Ω e o B tem 20 Ω. Qual tem mais potência?",
+    "opcoes": [
+     "A, de 10 Ω",
+     "B, de 20 Ω",
+     "Os dois iguais",
+     "Não dá para saber"
+    ],
+    "certa": "A, de 10 Ω",
+    "resposta": "Menos resistência deixa passar mais corrente, e P = U × i fica maior."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-19",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "O medidor de energia de uma casa (o \"relógio de luz\") mostra o total de kWh gastos desde que foi instalado. No dia da leitura de outubro, ele marcava 4 523 kWh; no dia da leitura de novembro, marcava 4 703 kWh. A distribuidora cobra R$ 0,85 por kWh.\nQual foi o valor da energia gasta nesse mês?",
+  "A": "R$ 180,00",
+  "B": "R$ 3 844,55",
+  "C": "R$ 211,76",
+  "D": "R$ 153,00",
+  "E": "R$ 3 997,55",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Gasto: 4 703 − 4 523 = 180 kWh. Valor: 180 × 0,85 = R$ 153,00. D. Erros: A é o gasto em kWh lido como reais; B cobra a leitura de outubro inteira (4 523 × 0,85); C divide 180 ÷ 0,85; E cobra a leitura de novembro inteira (4 703 × 0,85).",
+   "ideia": "O relógio soma tudo desde a instalação; o gasto do mês é a diferença das leituras, 180 kWh. A R$ 0,85 cada, dá R$ 153,00.",
+   "pecas": [
+    {
+     "termo": "Relógio de luz",
+     "significado": "Medidor que vai somando os kWh gastos, sem zerar. Mês a mês, o número só aumenta."
+    },
+    {
+     "termo": "Leitura",
+     "significado": "O número que o relógio marca no dia em que o funcionário anota."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Leitura de outubro: 4 523 kWh. Leitura de novembro: 4 703 kWh.\nCada kWh custa R$ 0,85.\nA questão quer o valor da energia do mês.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "O relógio de luz",
+      "rotulos": [
+       "rua",
+       "casa",
+       "outubro: 4 523 kWh",
+       "novembro: 4 703 kWh"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O relógio é como o marcador de quilômetros do carro: soma tudo, nunca zera.\nCom números pequenos: se marcava 10 e agora marca 13, gastou 13 − 10 = 3.\nAqui: 4 703 − 4 523 = 180 kWh no mês."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Valor = kWh gastos × preço de cada kWh.\n180 × 0,85 = 153.\nConta por partes: 180 × 0,8 = 144 e 180 × 0,05 = 9; somando, 153.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Conta do mês",
+      "dados": [
+       "E = 4\\,703 - 4\\,523 = 180\\,\\text{kWh}",
+       "\\text{preço} = 0{,}85 \\text{ por kWh}"
+      ],
+      "formula": "\\text{valor} = E \\times \\text{preço}",
+      "legenda": [
+       "E: a energia do mês",
+       "preço: quanto custa 1 kWh"
+      ],
+      "contas": [
+       "180 \\times 0{,}85 = 144 + 9"
+      ],
+      "resultado": "153\\,\\text{reais}",
+      "nota": "Só a diferença das leituras é cobrada."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A leitura de outubro já incluía todos os meses anteriores, que já foram pagos.\nPor isso só a diferença entre as leituras é o gasto deste mês.\nConfira: 153 ÷ 0,85 = 180 kWh."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, R$ 153,00.\nA (R$ 180,00) é a energia, 180 kWh, escrita como dinheiro.\nB (R$ 3 844,55) cobrou a leitura de outubro inteira.\nC (R$ 211,76) dividiu 180 por 0,85 em vez de multiplicar.\nE (R$ 3 997,55) cobrou a leitura de novembro inteira."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "O relógio foi de 1 200 kWh para 1 350 kWh, a R$ 1,00 o kWh. Quanto pagar?",
+    "opcoes": [
+     "R$ 150,00",
+     "R$ 1 350,00",
+     "R$ 2 550,00",
+     "R$ 1 200,00"
+    ],
+    "certa": "R$ 150,00",
+    "resposta": "1 350 − 1 200 = 150 kWh. 150 × 1 = R$ 150,00."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ele-20",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Num viveiro de mudas, duas resistências de aquecimento, uma de 30 Ω e outra de 10 Ω, foram ligadas em série (uma depois da outra) a uma fonte de 120 V, para esquentar o chão da estufa. O dono quer saber quanto o conjunto gasta para calcular a conta de luz.\nQual é a potência total das duas resistências juntas?",
+  "A": "3 W",
+  "B": "4 800 W",
+  "C": "1 440 W",
+  "D": "270 W",
+  "E": "360 W",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Série: 30 + 10 = 40 Ω. i = 120 ÷ 40 = 3 A. P = 120 × 3 = 360 W. E. Erros: A é a corrente (3 A) como watts; B multiplica 120 × 40; C usa só a de 10 Ω (120 ÷ 10 = 12 A, × 120); D é só a resistência de 30 Ω (90 V × 3 A).",
+   "ideia": "Em série, as resistências somam 40 Ω, e passam 120 ÷ 40 = 3 A. A potência total é 120 V × 3 A = 360 W.",
+   "pecas": [
+    {
+     "termo": "Em série",
+     "significado": "Uma depois da outra, num caminho só: as resistências somam e a corrente é a mesma nas duas."
+    },
+    {
+     "termo": "Potência",
+     "significado": "Energia gasta por segundo: P = U × i, em watts (W)."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Resistências de 30 Ω e 10 Ω, em série.\nFonte de 120 V.\nA questão quer a potência das duas juntas.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "circuito-simples",
+      "titulo": "O aquecedor da estufa",
+      "rotulos": [
+       "fonte 120 V",
+       "30 Ω + 10 Ω em série",
+       "P = ?",
+       ""
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Em série, as resistências somam: 30 + 10 = 40 Ω.\nCorrente: i = U ÷ R. Com números pequenos: 12 V em 4 Ω dão 12 ÷ 4 = 3 A.\nAqui: 120 ÷ 40 = 3 A."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Potência = tensão × corrente.\nP = 120 × 3 = 360 W.\nEsse é o gasto do conjunto a cada segundo.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Potência do conjunto",
+      "dados": [
+       "R = 30 + 10 = 40\\,\\Omega",
+       "U = 120\\,\\text{V}"
+      ],
+      "formula": "P = U \\times i",
+      "legenda": [
+       "U: a tensão da fonte",
+       "i: a corrente do caminho"
+      ],
+      "contas": [
+       "i = \\frac{120}{40} = 3\\,\\text{A}",
+       "P = 120 \\times 3"
+      ],
+      "resultado": "P = 360\\,\\text{W}",
+      "nota": "As duas juntas gastam 360 W."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A corrente de 3 A passa pelas duas. A de 30 Ω fica com 30 × 3 = 90 V; a de 10 Ω, com 10 × 3 = 30 V.\nPotências: 90 × 3 = 270 W e 30 × 3 = 90 W.\nSomando: 270 + 90 = 360 W. Dá o mesmo."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, 360 W.\nA (3 W) é a corrente, 3 A, escrita como potência.\nB (4 800 W) multiplicou 120 × 40 em vez de achar a corrente.\nC (1 440 W) esqueceu a resistência de 30 Ω: fez 120 ÷ 10 = 12 A e 120 × 12.\nD (270 W) é a potência só da resistência de 30 Ω."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Em série: 4 Ω e 2 Ω numa bateria de 12 V. Qual a potência total?",
+    "opcoes": [
+     "24 W",
+     "72 W",
+     "2 W",
+     "36 W"
+    ],
+    "certa": "24 W",
+    "resposta": "4 + 2 = 6 Ω. 12 ÷ 6 = 2 A. 12 × 2 = 24 W."
+   }
+  }
+ }
+]

@@ -1,0 +1,1669 @@
+[
+ {
+  "id": "d2-banco-fis-ter-01",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Uma família instalou um aquecedor solar no telhado. As placas escuras recebem a luz do Sol e esquentam a água de um reservatório de 50 litros. Num dia de verão, a água passou de 20 °C, de manhã, para 60 °C, no fim da tarde. Considere que 1 litro de água tem 1 kg (1 000 g) e que o calor específico da água é 1 cal/(g·°C).\nQuanto calor a água do reservatório recebeu do Sol nesse dia?",
+  "A": "40 cal",
+  "B": "2 000 cal",
+  "C": "2 000 000 cal",
+  "D": "3 000 000 cal",
+  "E": "1 000 000 cal",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "50 L = 50 000 g; ΔT = 60 − 20 = 40; Q = 50 000 × 1 × 40 = 2 000 000 cal. C. Erros: A = só o ΔT; B = massa em kg (50 × 40); D = usou 60; E = usou 20.",
+   "ideia": "QUE MACETE: Q = m × c × ΔT, com a massa em gramas. Aqui, 50 000 × 1 × 40 = 2 000 000 cal.",
+   "pecas": [
+    {
+     "termo": "ΔT (variação)",
+     "significado": "Quanto a temperatura mudou: final menos inicial. De 20 °C para 60 °C, o ΔT é 60 − 20 = 40 °C."
+    },
+    {
+     "termo": "Calor específico (c)",
+     "significado": "Quanto calor 1 g do material pede para subir 1 °C. Na água, 1 cal. Quanto maior o c, mais caro é esquentar."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O Sol esquenta 50 litros de água no reservatório.\nA água sai de 20 °C e chega a 60 °C.\nA questão quer saber quanto calor entrou na água.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "A água do reservatório",
+      "rotulos": [
+       "50 L de água",
+       "20 °C → 60 °C",
+       "Q = ?",
+       "c = 1 cal/(g·°C)"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O calor específico da água fala em gramas, então a massa tem que estar em gramas.\n50 litros = 50 kg = 50 000 g.\nA temperatura subiu 60 − 20 = 40 °C. Esse 40 é o ΔT, o quanto mudou."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Com números pequenos: 1 g de água subindo 1 °C pede 1 cal.\n1 g subindo 40 °C pede 40 cal. Então 50 000 g subindo 40 °C pedem 50 000 × 40 cal.\nIsso é Q = m × c × ΔT = 50 000 × 1 × 40 = 2 000 000 cal.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Esquentando o reservatório",
+      "dados": [
+       "m = 50\\,000\\,\\text{g}",
+       "c = 1",
+       "\\Delta T = 60 - 20 = 40"
+      ],
+      "formula": "Q = m \\times c \\times \\Delta T",
+      "legenda": [
+       "m: a massa em gramas",
+       "ΔT: quanto a temperatura subiu"
+      ],
+      "contas": [
+       "Q = 50\\,000 \\times 1 \\times 40"
+      ],
+      "resultado": "Q = 2\\,000\\,000\\,\\text{cal}",
+      "nota": "Dois milhões de calorias."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Cada grama de água pede 1 cal para cada grau que sobe.\nMais água pede mais calor, e mais graus também.\nPor isso a conta multiplica as três coisas: massa, calor específico e ΔT."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 2 000 000 cal.\nA parou no ΔT (40) e esqueceu a massa.\nB usou a massa em kg (50 × 40), mas o c está em gramas.\nD usou a temperatura final, 60, no lugar de 40.\nE usou a temperatura inicial, 20, no lugar de 40."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um balde com 3 000 g de água sobe de 25 °C para 35 °C (c = 1). Quanto calor recebeu?",
+    "opcoes": [
+     "30 000 cal",
+     "105 000 cal",
+     "10 cal",
+     "3 000 cal"
+    ],
+    "certa": "30 000 cal",
+    "resposta": "ΔT = 35 − 25 = 10. Q = 3 000 × 1 × 10 = 30 000 cal."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-02",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Numa aula prática, a professora colocou 200 g de água numa panela e 200 g de óleo de cozinha em outra panela igual. As duas foram para bocas de fogão iguais e, no mesmo tempo, cada uma recebeu 3 000 cal. O calor específico da água é 1 cal/(g·°C) e o do óleo é 0,5 cal/(g·°C).\nQuanto subiu a temperatura de cada líquido?",
+  "A": "Água: 15 °C; óleo: 30 °C.",
+  "B": "Água: 30 °C; óleo: 15 °C.",
+  "C": "Água: 15 °C; óleo: 15 °C.",
+  "D": "Água: 15 °C; óleo: 7,5 °C.",
+  "E": "Água: 3 000 °C; óleo: 6 000 °C.",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "ΔT = Q ÷ (m × c). Água: 3 000 ÷ 200 = 15 °C. Óleo: 3 000 ÷ (200 × 0,5) = 3 000 ÷ 100 = 30 °C. A. Erros: B inverte; C ignora o c; D multiplica pelo c em vez de dividir; E esquece a massa.",
+   "ideia": "Com o mesmo calor e a mesma massa, sobe mais quem tem o calor específico menor. O óleo (c = 0,5) sobe o dobro da água (c = 1): 30 °C contra 15 °C.",
+   "pecas": [
+    {
+     "termo": "Calor específico (c)",
+     "significado": "Quanto calor 1 g do material pede para subir 1 °C. Água: 1 cal. Óleo: só 0,5 cal, a metade. O óleo é mais barato de esquentar."
+    },
+    {
+     "termo": "Achar o número que falta",
+     "significado": "Se 200 × ΔT = 3 000, o ΔT é o número que, vezes 200, dá 3 000. Divida: 3 000 ÷ 200 = 15."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Duas panelas iguais: uma com 200 g de água, outra com 200 g de óleo.\nCada uma recebe 3 000 cal.\nA questão quer saber quantos graus cada líquido sobe.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "Água e óleo no fogo",
+      "rotulos": [
+       "200 g de água",
+       "200 g de óleo",
+       "3 000 cal cada",
+       "ΔT = ?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Água: 1 g sobe 1 °C com 1 cal, então 200 g pedem 200 cal para cada grau.\nCom 3 000 cal: 3 000 ÷ 200 = 15. A água sobe 15 °C.\nÓleo: 1 g sobe 1 °C com 0,5 cal, então 200 g pedem 200 × 0,5 = 100 cal por grau.\nCom 3 000 cal: 3 000 ÷ 100 = 30. O óleo sobe 30 °C."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "É a mesma Q = m × c × ΔT, só que agora o ΔT é o número que falta.\nÁgua: 200 × 1 × ΔT = 3 000, então ΔT = 3 000 ÷ 200 = 15 °C.\nÓleo: 200 × 0,5 × ΔT = 3 000, então ΔT = 3 000 ÷ 100 = 30 °C.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O mesmo calor, dois líquidos",
+      "dados": [
+       "Q = 3\\,000\\,\\text{cal}",
+       "m = 200\\,\\text{g}",
+       "c_{\\text{água}} = 1,\\; c_{\\text{óleo}} = 0{,}5"
+      ],
+      "formula": "\\Delta T = Q \\div (m \\times c)",
+      "legenda": [
+       "c: quanto custa esquentar",
+       "ΔT: quanto sobe"
+      ],
+      "contas": [
+       "\\text{água: } 3\\,000 \\div 200 = 15",
+       "\\text{óleo: } 3\\,000 \\div 100 = 30"
+      ],
+      "resultado": "15\\,^\\circ\\text{C} \\text{ e } 30\\,^\\circ\\text{C}",
+      "nota": "O óleo sobe o dobro."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "O calor específico diz quanto o material custa para esquentar.\nO óleo custa metade da água por grau.\nCom o mesmo calor, ele sobe o dobro de graus. Por isso o óleo de fritura esquenta tão rápido."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, água 15 °C e óleo 30 °C.\nB trocou os dois: quem tem c menor sobe mais, não menos.\nC esqueceu o calor específico, como se os dois líquidos fossem iguais.\nD multiplicou pelo 0,5 em vez de dividir pelo custo por grau.\nE esqueceu de dividir pela massa de 200 g."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "100 g de óleo (c = 0,5) recebem 1 000 cal. Quanto ele sobe?",
+    "opcoes": [
+     "20 °C",
+     "10 °C",
+     "5 °C",
+     "50 °C"
+    ],
+    "certa": "20 °C",
+    "resposta": "Cada grau custa 100 × 0,5 = 50 cal. 1 000 ÷ 50 = 20 °C."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-03",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Num churrasco, uma pessoa colocou um termômetro dentro de um copo com água e muito gelo, deixado ao ar livre num dia quente. Durante um bom tempo, enquanto ainda havia pedras de gelo boiando, o termômetro marcou sempre zero grau Celsius, mesmo com o ar em volta bem mais quente. Só depois que o último pedaço de gelo sumiu a temperatura da água começou a subir.\nEnquanto ainda havia gelo no copo, o calor que vinha do ar",
+  "A": "não entrava no copo, porque o gelo funciona como isolante.",
+  "B": "saía do copo para o ar, deixando a água fria.",
+  "C": "esfriava o ar em volta, e não o copo.",
+  "D": "era usado para derreter o gelo, e não para subir a temperatura.",
+  "E": "entrava no copo, mas o termômetro não consegue medir abaixo do ar.",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Mudança de estado: enquanto o gelo derrete, o calor recebido vai todo para Q = m × L e a temperatura fica parada. D. Erros: A = gelo isolante (o calor entrava, o gelo derretia); B = inverte o sentido do calor; C = calor não 'esfria'; E = termômetro inventado.",
+   "ideia": "QUE MACETE: mudando de estado (gelo derretendo), a temperatura fica parada e Q = m × L. O calor do ar entra e vai todo para derreter o gelo.",
+   "pecas": [
+    {
+     "termo": "Calor latente (L)",
+     "significado": "Quanto calor cada grama pede para mudar de estado (gelo virar água, água virar vapor). Enquanto muda, a temperatura fica parada."
+    },
+    {
+     "termo": "Sentido do calor",
+     "significado": "Calor sempre anda do mais quente para o mais frio. Ar quente e copo gelado: o calor vai do ar para o copo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Um copo com água e gelo fica num dia quente.\nO termômetro fica parado em zero grau enquanto ainda há gelo.\nA questão quer saber para onde foi o calor que vinha do ar.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "Copo com gelo ao sol",
+      "rotulos": [
+       "copo com gelo",
+       "termômetro parado",
+       "calor do ar",
+       "gelo derretendo"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O ar está mais quente que o copo, então o calor anda do ar para o copo.\nO gelo vai sumindo: ele está derretendo, mudando de sólido para líquido.\nMudar de estado gasta calor. Esse calor não sobra para esquentar a água."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Pense em 10 g de gelo. L = 80 cal/g quer dizer: cada grama de gelo pede 80 cal (calorias, a medida de calor) para virar água.\nPara derreter tudo: 10 × 80 = 800 cal.\nAs primeiras 800 cal que entram vão só para derreter. A temperatura não sai do zero.\nIsso é Q = m × L. Só depois de derreter tudo, Q = m × c × ΔT volta a valer e a água esquenta."
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Para derreter, o calor tem que soltar as partículas do gelo, que estavam presas umas nas outras.\nEnquanto faz isso, a agitação não aumenta, e temperatura mede a agitação.\nPor isso o termômetro fica parado até o último pedaço de gelo sumir."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, o calor era usado para derreter o gelo.\nA está errada: o calor entrava, tanto que o gelo derretia.\nB inverte o sentido: o calor vai do mais quente (ar) para o mais frio (copo).\nC fala de calor que esfria, o que não existe.\nE inventa um defeito no termômetro."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma panela com 500 g de gelo vai ao fogo. Enquanto o gelo derrete, a temperatura dele",
+    "opcoes": [
+     "fica parada",
+     "sobe aos poucos",
+     "desce",
+     "sobe de uma vez"
+    ],
+    "certa": "fica parada",
+    "resposta": "Mudando de estado, o calor vai para derreter. A temperatura só volta a subir quando acaba o gelo."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-04",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Depois de torcer o tornozelo, um atleta usou uma bolsa com 100 g de gelo a 0 °C. Com o calor da perna, o gelo derreteu todo, e a água da bolsa ainda esquentou até 20 °C, quando a bolsa foi retirada. Para derreter, o gelo pede 80 cal por grama (L = 80 cal/g). Depois de virar água, o calor específico é 1 cal/(g·°C).\nQuanto calor, ao todo, a bolsa tirou da perna do atleta?",
+  "A": "8 000 cal",
+  "B": "10 000 cal",
+  "C": "2 000 cal",
+  "D": "1 600 cal",
+  "E": "8 020 cal",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Derreter: 100 × 80 = 8 000 cal. Esquentar a água: 100 × 1 × 20 = 2 000 cal. Total 10 000 cal. B. Erros: A = só derreter; C = só esquentar; D = 80 × 20; E = somou 8 000 + 20.",
+   "ideia": "São duas etapas: primeiro derreter (Q = m × L), depois esquentar (Q = m × c × ΔT). O total é 8 000 + 2 000 = 10 000 cal.",
+   "pecas": [
+    {
+     "termo": "Calor latente (L)",
+     "significado": "Quanto calor cada grama pede para mudar de estado (gelo virar água, água virar vapor). Enquanto muda, a temperatura fica parada."
+    },
+    {
+     "termo": "ΔT (variação)",
+     "significado": "Quanto a temperatura mudou: final menos inicial. De 20 °C para 60 °C, o ΔT é 60 − 20 = 40 °C."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Uma bolsa com 100 g de gelo a 0 °C encosta na perna.\nO gelo derrete todo e a água ainda chega a 20 °C.\nA questão quer o calor total que a bolsa tirou da perna.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "Bolsa de gelo na perna",
+      "rotulos": [
+       "100 g de gelo a 0 °C",
+       "derrete: L = 80 cal/g",
+       "depois vai a 20 °C",
+       "Q total = ?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Primeira etapa: o gelo derrete. A temperatura fica parada em 0 °C.\nSegunda etapa: a água do gelo derretido esquenta de 0 °C até 20 °C.\nAs duas etapas pedem calor, e esse calor sai da perna. É preciso somar as duas."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Derreter: 1 g pede 80 cal, então 100 g pedem 100 × 80 = 8 000 cal. Isso é Q = m × L.\nEsquentar: 1 g sobe 1 °C com 1 cal; 100 g subindo 20 °C pedem 100 × 20 = 2 000 cal. É Q = m × c × ΔT.\nTotal: 8 000 + 2 000 = 10 000 cal.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Derreter e depois esquentar",
+      "dados": [
+       "m = 100\\,\\text{g}",
+       "L = 80",
+       "\\Delta T = 20 - 0 = 20"
+      ],
+      "formula": "Q = m \\times L + m \\times c \\times \\Delta T",
+      "legenda": [
+       "L: calor para derreter cada grama",
+       "ΔT: quanto a água subiu"
+      ],
+      "contas": [
+       "100 \\times 80 = 8\\,000",
+       "100 \\times 1 \\times 20 = 2\\,000",
+       "8\\,000 + 2\\,000"
+      ],
+      "resultado": "Q = 10\\,000\\,\\text{cal}",
+      "nota": "Derreter custa mais que esquentar."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Derreter é a parte mais cara: 8 000 das 10 000 calorias.\nPor isso gelo derretendo resfria muito mais do que a mesma água já gelada.\nCada etapa tem a sua fórmula, e o calor total é a soma delas."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 10 000 cal.\nA contou só o derretimento e esqueceu que a água esquentou depois.\nC contou só o esquentar e esqueceu o derretimento.\nD multiplicou 80 por 20, misturando as duas etapas.\nE somou 8 000 com 20, os graus, e não com o calor de 2 000 cal."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "10 g de gelo a 0 °C derretem (L = 80) e a água vai a 10 °C. Calor total?",
+    "opcoes": [
+     "900 cal",
+     "800 cal",
+     "100 cal",
+     "810 cal"
+    ],
+    "certa": "900 cal",
+    "resposta": "Derreter: 10 × 80 = 800. Esquentar: 10 × 1 × 10 = 100. Total: 900 cal."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-05",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Numa manhã fria, uma criança sai da cama e pisa descalça no chão do quarto. Um pé fica sobre o tapete de lã e o outro sobre o piso de cerâmica. Ela tem a sensação de que a cerâmica está muito mais gelada que o tapete. Porém, um termômetro mostra que o tapete e o piso estão na mesma temperatura, porque passaram a noite inteira no mesmo quarto.\nA sensação de que a cerâmica é mais fria acontece porque a cerâmica",
+  "A": "está, na verdade, numa temperatura mais baixa que o tapete.",
+  "B": "solta frio para o pé, e a lã não solta.",
+  "C": "esquenta o ar perto do chão, que sobe e leva o calor do pé.",
+  "D": "recebe calor do Sol pela radiação, e o tapete não.",
+  "E": "conduz melhor o calor e tira o calor do pé mais depressa que a lã.",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Mesma temperatura; a cerâmica é melhor condutora que a lã (isolante), então tira calor do pé mais rápido e o pé sente frio. E. Erros: A contradiz o termômetro; B 'frio' não passa, quem anda é o calor; C inventa convecção; D a radiação do Sol não explica.",
+   "ideia": "A pele não mede temperatura: ela sente a rapidez com que perde calor. A cerâmica conduz bem e puxa o calor do pé depressa; a lã é isolante e quase não puxa.",
+   "pecas": [
+    {
+     "termo": "Condutor e isolante",
+     "significado": "Condutor (metal, pedra) deixa o calor passar rápido. Isolante (ar, lã, isopor) deixa passar devagar."
+    },
+    {
+     "termo": "Sentido do calor",
+     "significado": "Calor sempre anda do mais quente para o mais frio. Pé quente, chão frio: o calor sai do pé. Frio não anda; o que anda é o calor."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Um pé no tapete de lã, outro no piso de cerâmica.\nOs dois estão na mesma temperatura, mas a cerâmica parece mais gelada.\nA questão quer saber o motivo dessa sensação.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "Pé no chão frio",
+      "rotulos": [
+       "tapete de lã",
+       "piso de cerâmica",
+       "mesma temperatura",
+       "sensação diferente"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O pé está mais quente que o chão, então o calor sai do pé para o chão.\nIsso acontece encostando, então é condução.\nA cerâmica conduz bem; a lã tem muito ar preso e conduz mal (é isolante)."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Compare o calor que sai do pé em 1 minuto, com números de exemplo.\nNa cerâmica, digamos 10 cal por minuto. Na lã, só 1 cal por minuto.\nO pé na cerâmica perde 10 vezes mais calor no mesmo tempo, e é essa perda que a gente sente como frio."
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A pele não é um termômetro. Ela sente o calor indo embora.\nQuanto mais rápido o calor sai, mais frio parece.\nPor isso maçaneta de metal parece mais fria que a porta de madeira, mesmo na mesma temperatura."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, a cerâmica conduz melhor e tira o calor do pé mais rápido.\nA contradiz o termômetro: os dois estão na mesma temperatura.\nB fala de frio andando, mas quem anda é o calor.\nC inventa um ar quente subindo, que não tira calor do pé.\nD fala do Sol, mas a cena é de manhã dentro do quarto."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Maçaneta de metal e porta de madeira, no mesmo lugar. Qual parece mais fria ao toque?",
+    "opcoes": [
+     "A maçaneta de metal",
+     "A porta de madeira",
+     "As duas iguais",
+     "Depende da cor"
+    ],
+    "certa": "A maçaneta de metal",
+    "resposta": "O metal conduz bem e tira o calor da mão mais rápido. Por isso parece mais frio."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-06",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Em cidades do litoral, durante o dia, costuma soprar um vento que vem do mar para a praia, chamado brisa marítima. Sob o mesmo Sol, a areia esquenta muito mais depressa que a água do mar, e o ar que fica em cima da areia também esquenta. Pescadores conhecem bem esse vento e o usam para voltar para a praia à tarde.\nA brisa marítima acontece porque o ar em cima da areia",
+  "A": "fica mais denso, desce e empurra o ar do mar para longe.",
+  "B": "fica menos denso e sobe, e o ar mais frio do mar vem ocupar o lugar dele.",
+  "C": "conduz o calor da areia até a água do mar.",
+  "D": "esfria a areia, que puxa o ar do mar por radiação.",
+  "E": "fica mais pesado e escorrega da praia em direção ao mar.",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Convecção: ar quente sobre a areia fica menos denso e sobe; o ar frio e denso do mar entra por baixo, dando o vento do mar para a terra. B. Erros: A e E dizem que o ar quente fica mais denso; C é condução, não explica vento; D inventa radiação puxando ar.",
+   "ideia": "QUE MACETE da convecção: o ar quente sobe e o frio desce. Em cima da areia o ar esquenta e sobe; o ar frio do mar entra por baixo, e esse ar andando é a brisa.",
+   "pecas": [
+    {
+     "termo": "Densidade",
+     "significado": "Quanto pesa um pedaço de mesmo tamanho. Ar quente é menos denso (mais leve) e sobe; ar frio é mais denso e desce."
+    },
+    {
+     "termo": "Convecção",
+     "significado": "O líquido ou o ar quente sobe, o frio desce para ocupar o lugar, e forma uma roda de ar andando."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Durante o dia, a areia esquenta mais rápido que o mar.\nO ar em cima da areia esquenta junto.\nA questão quer saber por que, então, o vento sopra do mar para a praia.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "Brisa na praia",
+      "rotulos": [
+       "ar quente sobe",
+       "areia quente",
+       "Sol",
+       "ar frio do mar entra"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Ar quente é menos denso, ou seja, mais leve para o mesmo tamanho. Ele sobe.\nCom esse ar subindo, sobra um espaço perto do chão da praia.\nO ar em cima do mar está mais frio e mais denso, e ele entra por baixo para ocupar esse espaço."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Os passos da roda de ar:\n1) areia quente esquenta o ar; 2) o ar quente sobe;\n3) o ar frio do mar anda para a praia; 4) esse ar andando é o vento que o pescador sente.\nIsso é convecção: o quente sobe, o frio desce e ocupa o lugar."
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A areia tem calor específico menor que a água, então esquenta mais rápido com o mesmo Sol.\nCom ar quente em cima da terra e ar frio em cima do mar, a roda de convecção começa.\nÀ noite a areia esfria primeiro e a roda vira: o vento sopra da terra para o mar."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, o ar quente fica menos denso e sobe, e o ar frio do mar entra no lugar.\nA e E dizem que o ar quente fica mais denso e pesado, que é o contrário.\nC fala de condução, que é calor passando encostando, não vento.\nD inventa a radiação puxando ar, o que não existe."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "À noite, a areia esfria mais rápido que o mar. Para onde vai o vento?",
+    "opcoes": [
+     "Da terra para o mar",
+     "Do mar para a terra",
+     "Para cima, sem andar",
+     "Não venta"
+    ],
+    "certa": "Da terra para o mar",
+    "resposta": "O mar fica mais quente, o ar em cima dele sobe e o ar frio da terra vai ocupar o lugar."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-07",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Uma garrafa térmica tem duas paredes de vidro, uma dentro da outra. O espaço entre elas fica quase sem ar (vácuo), e as faces das paredes são espelhadas, como um espelho. Com isso, o café fica quente por horas. Um aluno quer saber o papel de cada parte da garrafa.\nO vácuo entre as paredes ajuda a manter o café quente porque",
+  "A": "reflete de volta o calor que o café solta.",
+  "B": "esquenta o café quando ele começa a esfriar.",
+  "C": "impede a condução e a convecção, que precisam de matéria para levar o calor.",
+  "D": "deixa o calor sair só por radiação, que é a forma mais rápida.",
+  "E": "transforma o calor do café em frio do lado de fora.",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Condução precisa de partículas encostando e convecção precisa de ar ou líquido andando; no vácuo quase não há matéria, então as duas param. A radiação é bloqueada pelo espelho. C. Erros: A é o papel do espelho; B inventa fonte; D diz que a radiação é a mais rápida e que isso ajuda; E calor não vira frio.",
+   "ideia": "Condução e convecção precisam de matéria: partículas encostando ou ar andando. No vácuo quase não há nada, então o calor do café não tem por onde ir por esses dois jeitos.",
+   "pecas": [
+    {
+     "termo": "Vácuo",
+     "significado": "Espaço sem ar, quase sem nenhuma partícula."
+    },
+    {
+     "termo": "Radiação",
+     "significado": "Calor que viaja sem encostar e sem precisar de ar, como o calor do Sol que atravessa o espaço vazio até a Terra."
+    },
+    {
+     "termo": "Os 3 jeitos do calor",
+     "significado": "Condução (encostando), convecção (ar ou líquido quente subindo) e radiação (sem encostar, como o Sol)."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A garrafa tem duas paredes, com vácuo entre elas e faces espelhadas.\nO café fica quente por horas.\nA questão pergunta só o papel do vácuo.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "A garrafa térmica",
+      "rotulos": [
+       "café quente",
+       "vácuo entre paredes",
+       "paredes espelhadas",
+       "como o calor sai?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O calor do café quer sair para o ar de fora, que é mais frio.\nPelo vácuo, ele teria 3 jeitos de passar: condução, convecção ou radiação.\nCondução precisa de coisas encostando. Convecção precisa de ar ou líquido para subir e descer."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Faça a lista dos 3 jeitos e risque o que o vácuo impede:\ncondução: precisa de matéria encostando, e no vácuo não tem. Riscada.\nconvecção: precisa de ar andando, e no vácuo não tem ar. Riscada.\nradiação: passa até no vazio, como o calor do Sol. Quem segura essa é o espelho."
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Cada parte da garrafa fecha uma saída do calor.\nO vácuo fecha a condução e a convecção.\nO espelho reflete a radiação de volta para o café. Com as 3 saídas quase fechadas, o café demora a esfriar."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, o vácuo impede a condução e a convecção.\nA descreve o papel do espelho, não do vácuo.\nB inventa uma fonte de calor: a garrafa não esquenta nada.\nD está errada: a radiação passa pelo vácuo, e quem a segura é o espelho.\nE fala de calor virando frio, o que não existe."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Na garrafa térmica, qual parte segura o calor que sai por radiação?",
+    "opcoes": [
+     "As paredes espelhadas",
+     "O vácuo",
+     "A tampa de plástico",
+     "O vidro grosso"
+    ],
+    "certa": "As paredes espelhadas",
+    "resposta": "A radiação passa pelo vácuo, mas o espelho a reflete de volta para o café."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-08",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Num sábado de calor, um vendedor de picolé na praia não tinha caixa de isopor. Para levar os picolés, ele os embrulhou num cobertor grosso de lã. Um banhista riu e disse: \"Assim o cobertor vai esquentar os picolés e eles vão derreter mais rápido\". Outro banhista discordou da ideia.\nComparado com os picolés deixados sem nada, os picolés embrulhados no cobertor",
+  "A": "derretem mais devagar, porque a lã é isolante e atrapalha a chegada do calor do ar.",
+  "B": "derretem mais rápido, porque o cobertor produz calor.",
+  "C": "derretem mais rápido, porque a lã conduz bem o calor.",
+  "D": "derretem no mesmo tempo, porque o cobertor não muda nada.",
+  "E": "não derretem nunca, porque a lã solta frio.",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "A lã tem ar preso e é isolante: atrapalha o calor do ar quente chegar ao picolé. O cobertor não produz calor. A. Erros: B acha que o cobertor gera calor; C troca isolante por condutor; D ignora o isolante; E frio não anda e o calor chega devagar, não nunca.",
+   "ideia": "Cobertor não produz calor: ele só atrapalha o calor de passar. No inverno ele segura o calor do corpo; na praia, segura o calor do ar longe do picolé.",
+   "pecas": [
+    {
+     "termo": "Condutor e isolante",
+     "significado": "Condutor (metal, pedra) deixa o calor passar rápido. Isolante (ar, lã, isopor) deixa passar devagar."
+    },
+    {
+     "termo": "Sentido do calor",
+     "significado": "O calor anda do mais quente para o mais frio. Na praia, sai do ar quente e vai para o picolé gelado."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Os picolés estão embrulhados num cobertor de lã, num dia quente.\nUm banhista diz que o cobertor vai esquentar os picolés.\nA questão quer saber se eles derretem mais rápido ou mais devagar.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "Picolé no cobertor",
+      "rotulos": [
+       "ar quente da praia",
+       "cobertor de lã",
+       "picolé gelado",
+       "derrete mais rápido?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O ar da praia está mais quente que o picolé, então o calor anda do ar para o picolé.\nO cobertor fica no meio do caminho.\nA lã tem muito ar preso entre os fios, e ar conduz mal o calor: a lã é isolante."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Pense numa conta de exemplo: sem nada, entram 10 cal por minuto no picolé.\nCom o cobertor no meio, digamos que entre só 2 cal por minuto.\nCom 5 vezes menos calor chegando, o picolé leva bem mais tempo para derreter."
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "No inverno, o cobertor parece quente porque segura o calor do nosso corpo perto da pele.\nEle não fabrica calor nenhum: só deixa o calor passar devagar, nos dois sentidos.\nPor isso o mesmo cobertor que aquece a gente protege o picolé do calor do ar."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, derretem mais devagar porque a lã é isolante.\nB acha que o cobertor produz calor, mas ele só segura.\nC troca as coisas: a lã conduz mal, não bem.\nD ignora que o isolante atrapalha o calor de chegar.\nE exagera: o calor chega devagar, mas chega, e frio não anda."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Por que um cobertor parece esquentar a gente no inverno?",
+    "opcoes": [
+     "Segura o calor do corpo",
+     "Produz calor",
+     "Solta o frio",
+     "Recebe calor do Sol"
+    ],
+    "certa": "Segura o calor do corpo",
+    "resposta": "A lã é isolante: o calor do corpo sai devagar, e a gente fica quente."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-09",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Numa casa, a mesma boca do fogão é usada para dois preparos. De manhã, esquenta 1 litro de água para o café; no almoço, esquenta 5 litros de água para cozinhar macarrão. Nos dois casos, a água sai da torneira a 20 °C e é levada até a fervura, a 100 °C. Considere que 1 litro de água tem 1 000 g.\nA água do macarrão precisa de quantas vezes o calor que a água do café precisa?",
+  "A": "A mesma quantidade, porque as duas vão até 100 °C.",
+  "B": "4 vezes.",
+  "C": "25 vezes.",
+  "D": "Um quinto.",
+  "E": "5 vezes.",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Café: 1 000 × 1 × 80 = 80 000 cal. Macarrão: 5 000 × 1 × 80 = 400 000 cal. 400 000 ÷ 80 000 = 5. E. Erros: A confunde temperatura com calor; B = 5 − 1; C = 5 × 5; D inverte a divisão.",
+   "ideia": "Mesma variação de temperatura e mesma substância: o calor segue a massa. Cinco vezes mais água pede cinco vezes mais calor.",
+   "pecas": [
+    {
+     "termo": "ΔT (variação)",
+     "significado": "Quanto a temperatura mudou: final menos inicial. De 20 °C para 60 °C, o ΔT é 60 − 20 = 40 °C."
+    },
+    {
+     "termo": "Temperatura x calor",
+     "significado": "Temperatura mede a agitação das partículas. Calor é a energia que passa. Dois potes a 100 °C têm a mesma temperatura, mas o maior pediu mais calor."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Uma panela esquenta 1 litro de água; a outra, 5 litros.\nAs duas vão de 20 °C a 100 °C.\nA questão quer saber quantas vezes mais calor a panela do macarrão pede.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "Café e macarrão",
+      "rotulos": [
+       "1 L para o café",
+       "5 L para o macarrão",
+       "20 °C → 100 °C",
+       "quantas vezes?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Nos dois casos a temperatura sobe 100 − 20 = 80 °C. O ΔT é o mesmo.\nO que muda é a massa: 1 000 g no café, 5 000 g no macarrão.\nChegar a 100 °C é igual, mas esquentar mais água pede mais calor."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Café: Q = m × c × ΔT = 1 000 × 1 × 80 = 80 000 cal.\nMacarrão: Q = 5 000 × 1 × 80 = 400 000 cal.\nQuantas vezes: 400 000 ÷ 80 000 = 5. O macarrão pede 5 vezes mais calor.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Mesma subida, massas diferentes",
+      "dados": [
+       "\\Delta T = 100 - 20 = 80",
+       "m_{\\text{café}} = 1\\,000\\,\\text{g}",
+       "m_{\\text{macarrão}} = 5\\,000\\,\\text{g}"
+      ],
+      "formula": "Q = m \\times c \\times \\Delta T",
+      "legenda": [
+       "ΔT: igual nos dois",
+       "m: a única coisa que muda"
+      ],
+      "contas": [
+       "1\\,000 \\times 1 \\times 80 = 80\\,000",
+       "5\\,000 \\times 1 \\times 80 = 400\\,000",
+       "400\\,000 \\div 80\\,000"
+      ],
+      "resultado": "5 \\text{ vezes}",
+      "nota": "Cinco vezes mais água, cinco vezes mais calor."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Na conta Q = m × c × ΔT, o c e o ΔT são iguais nos dois casos.\nSó a massa muda, e ela ficou 5 vezes maior.\nSe um lado da multiplicação fica 5 vezes maior, o resultado também fica 5 vezes maior."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, 5 vezes.\nA confunde temperatura com calor: a mesma temperatura final não quer dizer o mesmo calor.\nB fez 5 − 1 = 4, mas a pergunta é quantas vezes, então é divisão.\nC fez 5 × 5, multiplicando a mais.\nD inverteu a divisão: o macarrão pede mais, não menos."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Esquentar 3 L de água de 20 °C a 60 °C pede quantas vezes o calor de 1 L?",
+    "opcoes": [
+     "3 vezes",
+     "2 vezes",
+     "9 vezes",
+     "A mesma"
+    ],
+    "certa": "3 vezes",
+    "resposta": "O ΔT é igual (40 °C). A massa é 3 vezes maior, então o calor é 3 vezes maior."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-10",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "O motor de um carro esquenta muito, e um líquido passa por dentro dele para carregar esse calor até o radiador. Um engenheiro compara quatro líquidos pelo calor específico, em cal/(g·°C): mercúrio, 0,03; óleo, 0,5; álcool, 0,6; água, 1,0. Ele quer o líquido que receba bastante calor do motor esquentando pouco, para não ferver.\nDos quatro, o líquido mais indicado e o motivo são:",
+  "A": "mercúrio, porque o menor calor específico faz o líquido esquentar menos.",
+  "B": "óleo, porque é mais grosso e prende o calor.",
+  "C": "álcool, porque fica no meio da tabela.",
+  "D": "água, porque o maior calor específico faz o líquido subir menos de temperatura com o mesmo calor.",
+  "E": "qualquer um, porque todos recebem o mesmo calor do motor.",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Com o mesmo Q e a mesma m, ΔT = Q ÷ (m × c): maior c, menor ΔT. Água (c = 1,0): 1 000 cal em 100 g sobem 10 °C; mercúrio: 1 000 ÷ 3 ≈ 333 °C. D. Erros: A inverte; B inventa 'grosso'; C chute; E ignora o c.",
+   "ideia": "Calor específico alto quer dizer que o material é caro de esquentar. A água (c = 1,0) recebe muito calor subindo poucos graus, ótimo para esfriar o motor.",
+   "pecas": [
+    {
+     "termo": "Calor específico (c)",
+     "significado": "Quanto calor 1 g do material pede para subir 1 °C. Na água, 1 cal. Quanto maior o c, mais caro é esquentar."
+    },
+    {
+     "termo": "Achar o número que falta",
+     "significado": "Se 100 × 1 × ΔT = 1 000, o ΔT é 1 000 ÷ 100 = 10. É só dividir o calor pelo custo de cada grau."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Um líquido carrega o calor do motor até o radiador.\nSão quatro opções com calores específicos diferentes: 0,03; 0,5; 0,6 e 1,0.\nA questão quer o líquido que recebe bastante calor e esquenta pouco.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "Esfriando o motor",
+      "rotulos": [
+       "motor quente",
+       "mercúrio 0,03; óleo 0,5",
+       "álcool 0,6; água 1,0",
+       "esquentar pouco"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Dê o mesmo calor, 1 000 cal, a 100 g de cada líquido.\nÁgua: cada grau custa 100 × 1,0 = 100 cal. Com 1 000 cal, sobe 1 000 ÷ 100 = 10 °C.\nÓleo: cada grau custa 100 × 0,5 = 50 cal. Sobe 1 000 ÷ 50 = 20 °C.\nMercúrio: cada grau custa 100 × 0,03 = 3 cal. Sobe cerca de 333 °C."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Pela Q = m × c × ΔT, com o mesmo Q e a mesma m, o ΔT é Q ÷ (m × c).\nQuanto maior o c, maior o divisor, e menor o ΔT.\nA água tem o maior c da lista (1,0), então é a que menos esquenta.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Mesmo calor, 100 g de cada",
+      "dados": [
+       "Q = 1\\,000\\,\\text{cal}",
+       "m = 100\\,\\text{g}",
+       "c: 1{,}0 \\;|\\; 0{,}5 \\;|\\; 0{,}03"
+      ],
+      "formula": "\\Delta T = Q \\div (m \\times c)",
+      "legenda": [
+       "c: quanto custa esquentar",
+       "ΔT: quanto o líquido sobe"
+      ],
+      "contas": [
+       "\\text{água: } 1\\,000 \\div 100 = 10",
+       "\\text{óleo: } 1\\,000 \\div 50 = 20",
+       "\\text{mercúrio: } 1\\,000 \\div 3 \\approx 333"
+      ],
+      "resultado": "\\text{água sobe só } 10\\,^\\circ\\text{C}",
+      "nota": "Maior c, menor subida."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "O calor específico diz quanto o material custa para esquentar.\nA água é a mais cara da lista: aguenta muito calor subindo pouco.\nPor isso a água (com aditivo) é o líquido usado no radiador dos carros."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, água, pelo maior calor específico.\nA inverte a ideia: o mercúrio, com c pequeno, esquentaria centenas de graus.\nB inventa um motivo (ser grosso) que não está na tabela.\nC escolhe pelo meio da tabela, sem conta.\nE esquece que o mesmo calor dá subidas diferentes em cada líquido."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Com o mesmo calor e a mesma massa, qual sobe mais: c = 0,2 ou c = 0,8?",
+    "opcoes": [
+     "c = 0,2",
+     "c = 0,8",
+     "Os dois iguais",
+     "Depende da cor"
+    ],
+    "certa": "c = 0,2",
+    "resposta": "c menor é mais barato de esquentar: com o mesmo calor, sobe mais graus."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-11",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Numa cozinha há duas vasilhas com água a 80 °C: uma xícara com 100 g e uma panela com 1 000 g. As duas são deixadas na pia até chegarem a 20 °C, a temperatura da cozinha. O calor específico da água é 1 cal/(g·°C).\nSobre o começo e o calor que cada uma solta até chegar a 20 °C, é correto dizer que",
+  "A": "a panela começa mais quente e solta 60 000 cal.",
+  "B": "a xícara começa mais quente, porque tem menos água.",
+  "C": "as duas soltam 6 000 cal, porque esfriam os mesmos 60 °C.",
+  "D": "começam na mesma temperatura, mas a xícara solta 6 000 cal e a panela, 60 000 cal.",
+  "E": "começam na mesma temperatura e soltam 80 000 cal cada.",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Mesma temperatura (80 °C). Calor solto: xícara 100 × 1 × 60 = 6 000 cal; panela 1 000 × 1 × 60 = 60 000 cal. D. Erros: A diz que a panela está mais quente; B diz que a xícara está mais quente; C ignora a massa; E usa 80 no lugar de 60 e ignora a massa.",
+   "ideia": "Temperatura mede a agitação, e as duas estão igualmente agitadas (80 °C). O calor depende também da massa: a panela, com 10 vezes mais água, solta 10 vezes mais calor.",
+   "pecas": [
+    {
+     "termo": "Temperatura x calor",
+     "significado": "Temperatura mede a agitação das partículas. Calor é a energia que passa do mais quente para o mais frio."
+    },
+    {
+     "termo": "ΔT (variação)",
+     "significado": "Quanto a temperatura mudou: final menos inicial. De 20 °C para 60 °C, o ΔT é 60 − 20 = 40 °C."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Xícara com 100 g e panela com 1 000 g, as duas a 80 °C.\nAs duas esfriam até 20 °C.\nA questão quer comparar a temperatura do começo e o calor que cada uma solta.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "Xícara e panela",
+      "rotulos": [
+       "xícara: 100 g",
+       "panela: 1 000 g",
+       "80 °C → 20 °C",
+       "quanto calor sai?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "As duas começam em 80 °C: mesma temperatura, mesma agitação das partículas.\nO tamanho não muda a temperatura. Uma gota e um balde a 80 °C estão igualmente quentes.\nAs duas esfriam 80 − 20 = 60 °C. Esse é o ΔT das duas."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Xícara: Q = m × c × ΔT = 100 × 1 × 60 = 6 000 cal.\nPanela: Q = 1 000 × 1 × 60 = 60 000 cal.\nA panela tem 10 vezes mais água e solta 10 vezes mais calor.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Mesma temperatura, massas diferentes",
+      "dados": [
+       "\\Delta T = 80 - 20 = 60",
+       "m_{\\text{xícara}} = 100\\,\\text{g}",
+       "m_{\\text{panela}} = 1\\,000\\,\\text{g}"
+      ],
+      "formula": "Q = m \\times c \\times \\Delta T",
+      "legenda": [
+       "ΔT: quanto esfriou",
+       "m: a massa de água"
+      ],
+      "contas": [
+       "100 \\times 1 \\times 60 = 6\\,000",
+       "1\\,000 \\times 1 \\times 60 = 60\\,000"
+      ],
+      "resultado": "6\\,000 \\text{ e } 60\\,000\\,\\text{cal}",
+      "nota": "Mesma temperatura, calores diferentes."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A fórmula Q = m × c × ΔT vale para esquentar e para esfriar.\nPara esquentar, é o calor que entra; para esfriar, é o calor que sai.\nComo a massa entra na conta, mais água guarda e solta mais calor, mesmo na mesma temperatura."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, mesma temperatura, 6 000 cal e 60 000 cal.\nA e B dizem que uma começa mais quente, mas as duas estão a 80 °C.\nC esquece a massa: o ΔT é igual, mas a massa não.\nE usou 80 no lugar do ΔT de 60 e ainda esqueceu a massa."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "200 g de água esfriam de 50 °C para 30 °C. Quanto calor soltam?",
+    "opcoes": [
+     "4 000 cal",
+     "10 000 cal",
+     "6 000 cal",
+     "20 cal"
+    ],
+    "certa": "4 000 cal",
+    "resposta": "ΔT = 50 − 30 = 20. Q = 200 × 1 × 20 = 4 000 cal."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-12",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Numa tarde quente, uma pessoa pega uma lata de refrigerante tirada da geladeira e segura com a mão por alguns minutos. Ela sente a mão ficar gelada e a lata vai ficando menos fria. Ela comenta com um amigo: \"O frio da lata passou para a minha mão\".\nDo ponto de vista da Física, o que aconteceu foi que",
+  "A": "o frio passou da lata para a mão, como ela disse.",
+  "B": "o calor e o frio trocaram de lugar ao mesmo tempo.",
+  "C": "a lata produziu frio por condução, e a mão produziu calor.",
+  "D": "nada passou entre elas: só a temperatura do ar mudou.",
+  "E": "o calor passou da mão para a lata, porque a mão estava mais quente.",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Calor anda do mais quente (mão) para o mais frio (lata), por condução. Frio não é energia e não anda. E. Erros: A e B tratam o frio como algo que anda; C idem; D ignora o contato.",
+   "ideia": "O que anda é sempre o calor, do mais quente para o mais frio. A mão perde calor para a lata, por isso esfria; a lata ganha calor, por isso esquenta.",
+   "pecas": [
+    {
+     "termo": "Sentido do calor",
+     "significado": "Calor é energia passando do mais quente para o mais frio. Frio não é uma coisa que anda; é só ter pouco calor."
+    },
+    {
+     "termo": "Condução",
+     "significado": "Calor passando por encostar, como no cabo da panela ou na mão segurando a lata."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Uma mão quente segura uma lata gelada.\nA mão esfria e a lata vai ficando menos fria.\nA questão quer saber o que realmente passou de uma para a outra.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "Mão e lata gelada",
+      "rotulos": [
+       "mão quente",
+       "lata gelada",
+       "encostando",
+       "quem anda?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Calor é energia passando do mais quente para o mais frio.\nA mão está mais quente que a lata, então o calor sai da mão e entra na lata.\nComo uma encosta na outra, esse jeito de passar é a condução."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Imagine a mão a 36 °C e a lata a 6 °C, só como exemplo.\nO calor sai de quem tem 36 e vai para quem tem 6.\nA mão perde calor e cai, digamos, para 30 °C. A lata ganha e sobe para 10 °C. Elas vão se aproximando."
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Frio não é uma coisa: é só ter pouco calor, partículas pouco agitadas.\nPor isso o frio não anda. Quem anda é o calor, sempre do quente para o frio.\nA sensação de mão gelada é a mão perdendo calor."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, o calor passou da mão para a lata.\nA fala de frio passando, mas frio não anda.\nB inventa o frio andando ao contrário do calor.\nC diz que a lata produz frio, o que não existe.\nD ignora que a mão encosta na lata e troca calor com ela."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um cubo de gelo na mão derrete. De onde veio o calor que o derreteu?",
+    "opcoes": [
+     "Da mão",
+     "Do próprio gelo",
+     "Do frio",
+     "De lugar nenhum"
+    ],
+    "certa": "Da mão",
+    "resposta": "A mão é mais quente. O calor anda da mão para o gelo e o derrete."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-13",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Durante uma corrida num dia quente, o corpo de um atleta produz suor. O suor vira vapor em cima da pele, e para isso cada grama de suor tira 540 cal do corpo (calor latente de vaporização, L = 540 cal/g). Numa parte da prova, 100 g de suor viraram vapor sobre a pele dele.\nQuanto calor essa evaporação tirou do corpo do atleta?",
+  "A": "54 000 cal",
+  "B": "640 cal",
+  "C": "540 cal",
+  "D": "5 400 cal",
+  "E": "5,4 cal",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Q = m × L = 100 × 540 = 54 000 cal. A. Erros: B = 100 + 540; C = só o L; D = 10 × 540 (zero a menos); E = 540 ÷ 100.",
+   "ideia": "Mudança de estado usa Q = m × L. Cada grama de suor que vira vapor leva 540 cal da pele, então 100 g levam 100 × 540 = 54 000 cal.",
+   "pecas": [
+    {
+     "termo": "Calor latente (L)",
+     "significado": "Quanto calor cada grama pede para mudar de estado (gelo virar água, água virar vapor). Enquanto muda, a temperatura fica parada."
+    },
+    {
+     "termo": "Evaporar",
+     "significado": "A água líquida virar vapor. Para isso ela precisa de calor, e tira esse calor de quem está encostado nela."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "100 g de suor viram vapor em cima da pele do atleta.\nCada grama pede 540 cal para virar vapor.\nA questão quer o calor total que saiu do corpo.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "Suor virando vapor",
+      "rotulos": [
+       "100 g de suor",
+       "L = 540 cal/g",
+       "vira vapor",
+       "Q = ?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Virar vapor é mudar de estado: de líquido para gás.\nMudar de estado pede calor, e o suor tira esse calor da pele, que está encostada nele.\nPor isso o suor resfria o corpo."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Comece pequeno: 1 g de suor tira 540 cal. 2 g tiram 2 × 540 = 1 080 cal.\n100 g tiram 100 × 540 = 54 000 cal.\nIsso é Q = m × L, a fórmula da mudança de estado.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Suor virando vapor",
+      "dados": [
+       "m = 100\\,\\text{g}",
+       "L = 540\\,\\text{cal/g}"
+      ],
+      "formula": "Q = m \\times L",
+      "legenda": [
+       "m: massa que muda de estado",
+       "L: calor por grama"
+      ],
+      "contas": [
+       "Q = 100 \\times 540"
+      ],
+      "resultado": "Q = 54\\,000\\,\\text{cal}",
+      "nota": "Cinquenta e quatro mil calorias."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Cada grama tem o seu preço fixo para mudar de estado: o L.\nMais gramas, mais calor, na mesma proporção.\nE como o calor sai da pele, o corpo esfria. Esse é o motivo de a gente suar no calor."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, 54 000 cal.\nB somou 100 com 540, mas a conta é de vezes.\nC deu o calor de 1 grama só.\nD multiplicou por 10, e não por 100.\nE dividiu 540 por 100 em vez de multiplicar."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Para virar vapor, 20 g de água pedem quanto calor (L = 540 cal/g)?",
+    "opcoes": [
+     "10 800 cal",
+     "560 cal",
+     "27 cal",
+     "1 080 cal"
+    ],
+    "certa": "10 800 cal",
+    "resposta": "Q = m × L = 20 × 540 = 10 800 cal."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-14",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Num laboratório, um estudante põe gelo tirado do congelador num béquer sobre uma chama fraca e anota a temperatura de tempos em tempos. As anotações foram: 0 min, −10 °C; 1 min, 0 °C; 9 min, 0 °C; 17 min, 0 °C; 19 min, 10 °C; 21 min, 20 °C. A chama ficou acesa e com a mesma força o tempo todo.\nEntre 1 e 17 minutos, a temperatura ficou parada porque",
+  "A": "a chama apagou nesse intervalo.",
+  "B": "o gelo deixou de receber calor.",
+  "C": "o calor estava sendo usado para derreter o gelo.",
+  "D": "o termômetro só mede a partir de zero grau.",
+  "E": "a água estava perdendo calor para o gelo.",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Patamar em 0 °C = mudança de estado: o calor da chama vai todo para Q = m × L (derreter). Antes (−10 a 0) e depois (0 a 20), Q = m × c × ΔT. C. Erros: A e B contradizem a chama acesa; D o termômetro mediu −10; E o calor vem da chama.",
+   "ideia": "QUE MACETE: mudando de estado, a temperatura fica parada e Q = m × L. O patamar (o trecho reto do gráfico, em que a temperatura não muda) em 0 °C é o tempo que o gelo leva para derreter.",
+   "pecas": [
+    {
+     "termo": "Calor latente (L)",
+     "significado": "Quanto calor cada grama pede para mudar de estado (gelo virar água, água virar vapor). Enquanto muda, a temperatura fica parada."
+    },
+    {
+     "termo": "Patamar",
+     "significado": "Trecho reto do gráfico: o tempo passa e a temperatura não muda, mesmo recebendo calor. Aparece quando o material muda de estado."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Gelo recebe calor de uma chama que fica igual o tempo todo.\nA temperatura sobe de −10 °C até 0 °C, fica parada de 1 a 17 minutos e depois sobe até 20 °C.\nA questão quer saber por que ela parou.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "Gelo na chama",
+      "rotulos": [
+       "gelo a −10 °C",
+       "chama sempre igual",
+       "1 a 17 min: 0 °C",
+       "por que parou?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "De 0 a 1 min: o gelo esquenta de −10 °C até 0 °C.\nDe 1 a 17 min: a temperatura não sai do 0 °C, mas a chama continua dando calor.\nDe 17 a 21 min: já é água, e ela esquenta de 0 °C até 20 °C."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Patamar é o trecho reto do gráfico, como um degrau plano: o tempo passa e a temperatura não muda.\nAntes e depois do patamar, o calor da chama faz a temperatura subir: é Q = m × c × ΔT.\nNo patamar, 16 minutos de chama (de 1 a 17) não sobem nenhum grau.\nEsse calor foi gasto para o gelo virar água: é Q = m × L. A temperatura fica parada em 0 °C.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "As anotações",
+      "dados": [
+       "0 \\to 1\\,\\text{min}: -10 \\to 0",
+       "1 \\to 17\\,\\text{min}: 0 \\to 0",
+       "17 \\to 21\\,\\text{min}: 0 \\to 20"
+      ],
+      "formula": "Q = m \\times L",
+      "legenda": [
+       "L: calor para derreter cada grama",
+       "patamar: trecho reto, temperatura parada"
+      ],
+      "contas": [
+       "\\text{subidas: gelo e depois água esquentando}",
+       "\\text{patamar: } 0\\,^\\circ\\text{C por } 16\\,\\text{min}"
+      ],
+      "resultado": "\\text{patamar} = \\text{gelo derretendo}",
+      "nota": "Parada no gráfico, calor mudando o estado."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Para derreter, o calor solta as partículas do gelo, que estavam presas umas nas outras.\nEnquanto faz isso, a agitação não aumenta, e temperatura mede a agitação.\nQuando o último pedaço derrete, o calor volta a esquentar, e a temperatura volta a subir."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, o calor estava derretendo o gelo.\nA e B contradizem a questão: a chama ficou acesa e igual o tempo todo.\nD não pode ser: o termômetro mediu −10 °C no começo.\nE inverte a ideia: o calor vinha da chama, não da água."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Água fervendo na panela, chama acesa. Enquanto ferve, a temperatura",
+    "opcoes": [
+     "fica parada",
+     "sobe sem parar",
+     "desce",
+     "dobra"
+    ],
+    "certa": "fica parada",
+    "resposta": "Ferver é mudar de estado (líquido para vapor). O calor vai para essa mudança, e a temperatura fica parada."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-15",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Povos do Ártico constroem iglus, casas feitas de blocos de neve bem apertada. Do lado de fora, o ar pode estar muito abaixo de zero, mas dentro do iglu, só com o calor do corpo das pessoas e de uma pequena lamparina, o ar fica bem menos frio. Muita gente acha estranho uma casa de neve proteger do frio.\nO iglu consegue manter o interior menos frio porque a neve",
+  "A": "solta calor quando fica apertada.",
+  "B": "tem muito ar preso entre os cristais e conduz mal o calor, sendo isolante.",
+  "C": "conduz bem o calor, levando o calor de fora para dentro.",
+  "D": "reflete o frio de fora para longe da casa.",
+  "E": "esquenta por convecção quando a lamparina é acesa.",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Neve é cheia de ar preso, e ar conduz mal: a neve é isolante e segura o calor das pessoas lá dentro. B. Erros: A inventa produção de calor; C troca isolante por condutor e o calor de fora é menor; D frio não anda; E convecção é do ar, não da parede.",
+   "ideia": "A neve tem muito ar preso entre os cristais, e ar conduz mal o calor. Por isso a parede de neve é isolante: o calor do corpo das pessoas sai bem devagar.",
+   "pecas": [
+    {
+     "termo": "Condutor e isolante",
+     "significado": "Condutor (metal, pedra) deixa o calor passar rápido. Isolante (ar, lã, isopor) deixa passar devagar."
+    },
+    {
+     "termo": "Sentido do calor",
+     "significado": "O calor anda do mais quente para o mais frio. No iglu, sai das pessoas e da lamparina e quer ir para o ar gelado de fora."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O iglu é feito de blocos de neve.\nFora está muito frio; dentro, só o corpo das pessoas e uma lamparina dão calor.\nA questão quer saber por que dentro fica menos frio.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "Dentro do iglu",
+      "rotulos": [
+       "ar de fora: muito frio",
+       "parede de neve",
+       "pessoas e lamparina",
+       "por que esquenta?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O calor anda de dentro (mais quente) para fora (mais frio).\nPara sair, ele tem que atravessar a parede de neve, encostando: é condução.\nA neve é cheia de ar preso entre os cristais, e ar conduz mal."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Compare duas paredes, com números de exemplo, para o mesmo calor de dentro.\nParede de pedra, que conduz bem: digamos que saem 10 cal por minuto.\nParede de neve, isolante: sai só 1 cal por minuto. O pouco calor das pessoas fica preso dentro."
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Isolante é o material que deixa o calor passar devagar: ar, lã, isopor, neve fofa.\nA neve não produz calor nenhum; ela só segura o calor que já existe dentro.\nÉ o mesmo motivo de o cobertor de lã esquentar a gente na cama."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, a neve tem ar preso e é isolante.\nA inventa que a neve produz calor.\nC troca as coisas: a neve conduz mal, e fora está mais frio.\nD fala em refletir o frio, mas frio não anda.\nE fala em convecção na parede, mas convecção é do ar ou do líquido andando."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Por que a caixa de isopor conserva o gelo por mais tempo?",
+    "opcoes": [
+     "O isopor é isolante",
+     "O isopor produz frio",
+     "O isopor conduz bem",
+     "O isopor é branco"
+    ],
+    "certa": "O isopor é isolante",
+    "resposta": "O isopor tem ar preso e conduz mal: o calor de fora demora a chegar no gelo."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-16",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Um balão de ar quente tem um grande saco de tecido aberto embaixo. Abaixo da abertura, um queimador a gás solta uma chama que esquenta o ar dentro do saco. Quando o piloto aumenta a chama, o balão sobe; quando deixa o ar de dentro esfriar, o balão desce. O saco não tem nenhum gás especial: só o ar comum da atmosfera.\nO balão sobe quando a chama aumenta porque o ar de dentro",
+  "A": "fica mais denso que o ar de fora e empurra o balão.",
+  "B": "perde calor por radiação e fica mais leve.",
+  "C": "conduz o calor para o tecido, que fica mais leve.",
+  "D": "vira outro gás, mais leve que o ar.",
+  "E": "fica menos denso que o ar de fora, como o ar quente que sobe numa sala.",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Ar quente é menos denso (mais leve para o mesmo tamanho) e sobe, levando o balão — mesma ideia da convecção. E. Erros: A diz mais denso; B esfriar deixa mais denso; C o tecido não muda de peso; D é o mesmo ar.",
+   "ideia": "Ar quente é menos denso e sobe; ar frio é mais denso e desce. A chama deixa o ar de dentro mais leve que o ar de fora, e o balão sobe junto com ele.",
+   "pecas": [
+    {
+     "termo": "Densidade",
+     "significado": "Quanto pesa um pedaço de mesmo tamanho. Ar quente é menos denso (mais leve) e sobe; ar frio é mais denso e desce."
+    },
+    {
+     "termo": "Convecção",
+     "significado": "O ar ou líquido quente sobe e o frio desce. É o mesmo motivo do ar quente perto do teto de uma sala."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O balão tem ar comum dentro, esquentado por uma chama.\nCom mais chama ele sobe; com o ar esfriando, ele desce.\nA questão quer saber por que o ar quente faz o balão subir.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "O balão de ar quente",
+      "rotulos": [
+       "ar quente dentro",
+       "ar frio fora",
+       "chama do queimador",
+       "sobe ou desce?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Esquentar o ar agita as partículas, e elas se espalham.\nO mesmo saco passa a ter menos ar dentro, e fica mais leve para o mesmo tamanho.\nIsso é ficar menos denso. O ar de fora, mais frio, é mais denso."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Exemplo com números: um saco com 1 000 kg de ar frio de fora pesaria como o ar em volta.\nEsquentando, saem partes do ar e sobram, digamos, 800 kg no mesmo tamanho.\nMais leve que o ar em volta, o saco sobe, como uma rolha na água."
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "É a mesma regra da convecção: o quente sobe, o frio desce.\nNa sala, o ar quente vai para o teto. No balão, o ar quente leva o saco junto.\nQuando o piloto deixa esfriar, o ar fica mais denso de novo e o balão desce."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, o ar de dentro fica menos denso que o de fora.\nA diz o contrário: mais denso desceria.\nB fala em esfriar, mas ar frio fica mais denso e desce.\nC acha que o tecido fica mais leve, mas o tecido não muda.\nD inventa outro gás: é o mesmo ar, só mais quente."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Numa sala com aquecedor, onde o ar fica mais quente?",
+    "opcoes": [
+     "Perto do teto",
+     "Perto do chão",
+     "Igual em todo lugar",
+     "Perto da janela"
+    ],
+    "certa": "Perto do teto",
+    "resposta": "Ar quente é menos denso e sobe. Por isso ele se junta perto do teto."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-17",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Uma cozinheira coloca uma frigideira de ferro vazia, de 1 000 g, sobre o fogo. Em pouco tempo, a frigideira recebe 5 000 cal da chama. O calor específico do ferro é 0,1 cal/(g·°C), bem menor que o da água. Despreze o calor que a frigideira perde para o ar.\nQuanto a temperatura da frigideira subiu?",
+  "A": "5 °C",
+  "B": "50 °C",
+  "C": "0,5 °C",
+  "D": "500 °C",
+  "E": "50 000 °C",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Cada grau custa 1 000 × 0,1 = 100 cal. ΔT = 5 000 ÷ 100 = 50 °C. B. Erros: A = 5 000 ÷ 1 000 (esqueceu o c); C = 5 000 × 0,1 ÷ 1 000; D = 5 000 ÷ 10; E = 5 000 ÷ 0,1.",
+   "ideia": "QUE MACETE: Q = m × c × ΔT, e aqui o ΔT é o número que falta. Cada grau da frigideira custa 1 000 × 0,1 = 100 cal, então 5 000 cal dão 50 °C.",
+   "pecas": [
+    {
+     "termo": "Calor específico (c)",
+     "significado": "Quanto calor 1 g do material pede para subir 1 °C. Na água, 1 cal. Quanto maior o c, mais caro é esquentar."
+    },
+    {
+     "termo": "Achar o número que falta",
+     "significado": "Se 100 × ΔT = 5 000, o ΔT é o número que, vezes 100, dá 5 000: 5 000 ÷ 100 = 50."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Uma frigideira de ferro de 1 000 g recebe 5 000 cal.\nO calor específico do ferro é 0,1 cal/(g·°C).\nA questão quer saber quantos graus ela subiu.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "Frigideira no fogo",
+      "rotulos": [
+       "frigideira de 1 000 g",
+       "ferro: c = 0,1",
+       "recebe 5 000 cal",
+       "ΔT = ?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Primeiro, quanto custa 1 grau para a frigideira toda.\n1 g de ferro sobe 1 °C com 0,1 cal. Então 1 000 g pedem 1 000 × 0,1 = 100 cal por grau.\nLembrete: vezes 0,1 é o mesmo que dividir por 10. 1 000 ÷ 10 = 100."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Se cada grau custa 100 cal, quantos graus cabem em 5 000 cal?\n5 000 ÷ 100 = 50. A frigideira sobe 50 °C.\nNa fórmula: 1 000 × 0,1 × ΔT = 5 000, então ΔT = 5 000 ÷ 100 = 50 °C.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Quantos graus a frigideira sobe",
+      "dados": [
+       "Q = 5\\,000\\,\\text{cal}",
+       "m = 1\\,000\\,\\text{g}",
+       "c = 0{,}1"
+      ],
+      "formula": "\\Delta T = Q \\div (m \\times c)",
+      "legenda": [
+       "m × c: o custo de cada grau",
+       "ΔT: quanto sobe"
+      ],
+      "contas": [
+       "1\\,000 \\times 0{,}1 = 100",
+       "5\\,000 \\div 100"
+      ],
+      "resultado": "\\Delta T = 50\\,^\\circ\\text{C}",
+      "nota": "Ferro esquenta rápido."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "O ferro tem c pequeno: é barato de esquentar.\nA mesma massa de água, com 5 000 cal, subiria só 5 °C, porque cada grau dela custa 1 000 cal.\nPor isso a frigideira vazia esquenta tão rápido e é perigoso deixá-la no fogo."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 50 °C.\nA dividiu 5 000 por 1 000 e esqueceu o calor específico.\nC multiplicou pelo 0,1 em vez de usar o custo de cada grau.\nD dividiu 5 000 por 10, esquecendo a massa.\nE dividiu 5 000 por 0,1 e esqueceu a massa."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "500 g de ferro (c = 0,1) recebem 1 000 cal. Quanto sobem?",
+    "opcoes": [
+     "20 °C",
+     "2 °C",
+     "200 °C",
+     "10 °C"
+    ],
+    "certa": "20 °C",
+    "resposta": "Cada grau custa 500 × 0,1 = 50 cal. 1 000 ÷ 50 = 20 °C."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-18",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Ao terminar uma maratona, os corredores recebem uma manta fina, prateada e brilhante, feita de plástico coberto com alumínio. Enrolado nela, o corredor suado não perde tanto calor para o ar frio da manhã. A manta é usada também por equipes de resgate para aquecer pessoas tiradas de lugares frios.\nA face brilhante da manta ajuda a segurar o calor do corpo porque",
+  "A": "produz calor ao encostar na pele suada.",
+  "B": "deixa passar mais ar frio, que esquenta o corpo.",
+  "C": "conduz o calor do corpo rapidamente para o ar.",
+  "D": "reflete de volta para o corpo o calor que ele solta por radiação.",
+  "E": "transforma o frio do ar em calor.",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "O corpo solta calor também por radiação (sem encostar); a face brilhante reflete essa radiação de volta, como o espelho da garrafa térmica. D. Erros: A manta não produz calor; B ar frio leva calor; C conduzir rápido esfriaria; E frio não vira calor.",
+   "ideia": "O corpo solta calor também por radiação, sem encostar em nada. A face brilhante funciona como espelho e manda esse calor de volta para o corpo.",
+   "pecas": [
+    {
+     "termo": "Radiação",
+     "significado": "Calor que viaja sem encostar e sem precisar de ar, como o calor do Sol que atravessa o espaço vazio até a Terra."
+    },
+    {
+     "termo": "Os 3 jeitos do calor",
+     "significado": "Condução (encostando), convecção (ar ou líquido quente subindo) e radiação (sem encostar, como o Sol)."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Corredores se enrolam numa manta fina e brilhante depois da prova.\nA manta faz o corpo perder menos calor para o ar frio.\nA questão quer saber o papel da face brilhante.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "A manta prateada",
+      "rotulos": [
+       "corpo quente",
+       "manta brilhante",
+       "ar frio da manhã",
+       "como segura o calor?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O calor sai do corpo de 3 jeitos: condução, convecção e radiação.\nA radiação é o calor que viaja sem encostar, como o calor que a gente sente perto de uma fogueira.\nUma face brilhante, como um espelho, rebate essa radiação."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Pense com números de exemplo: o corpo solta 10 cal de radiação por segundo.\nSem a manta, as 10 cal vão embora para o ar.\nCom a manta brilhante, digamos que 9 voltam para o corpo e só 1 se perde."
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "É o mesmo truque das paredes espelhadas da garrafa térmica.\nA manta também prende uma camada de ar parado junto ao corpo, o que atrapalha a convecção.\nEla não produz calor; só segura o calor que o próprio corpo faz."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, reflete de volta o calor que o corpo solta por radiação.\nA está errada: a manta não produz calor.\nB inverte: ar frio passando leva calor embora.\nC descreve o que esfriaria o corpo, o contrário do que se quer.\nE fala em transformar frio em calor, o que não existe."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Na fogueira, a gente sente calor no rosto sem encostar no fogo. Qual é o jeito?",
+    "opcoes": [
+     "Radiação",
+     "Condução",
+     "Convecção",
+     "Evaporação"
+    ],
+    "certa": "Radiação",
+    "resposta": "Radiação é o calor que viaja sem encostar, como o calor do Sol."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-19",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Para preparar um chá na temperatura certa, uma pessoa mistura, numa garrafa térmica, 100 g de água a 80 °C com 300 g de água a 20 °C. A garrafa não troca calor com o lado de fora, então todo o calor que a água quente perde vai para a água fria. O calor específico da água é 1 cal/(g·°C).\nQual é a temperatura final da mistura?",
+  "A": "35 °C",
+  "B": "50 °C",
+  "C": "100 °C",
+  "D": "60 °C",
+  "E": "65 °C",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Quente perde 100 × (80 − T); fria ganha 300 × (T − 20). Iguais: T = 35 °C (perde 100 × 45 = 4 500; ganha 300 × 15 = 4 500). A. Erros: B = média simples; C = soma 80 + 20; D = 80 − 20; E = 80 − 15.",
+   "ideia": "O calor que a água quente perde é igual ao que a água fria ganha. Como tem 3 vezes mais água fria, a temperatura final fica mais perto de 20 °C: 35 °C.",
+   "pecas": [
+    {
+     "termo": "Sentido do calor",
+     "significado": "Calor anda do mais quente para o mais frio até os dois ficarem na mesma temperatura."
+    },
+    {
+     "termo": "ΔT (variação)",
+     "significado": "Quanto a temperatura mudou: final menos inicial. De 20 °C para 60 °C, o ΔT é 60 − 20 = 40 °C."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "100 g de água a 80 °C se misturam com 300 g de água a 20 °C.\nNenhum calor sai da garrafa.\nA questão quer a temperatura em que as duas águas se encontram.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "Misturando água",
+      "rotulos": [
+       "100 g a 80 °C",
+       "300 g a 20 °C",
+       "garrafa fechada",
+       "T final = ?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O calor anda da água quente para a fria, até as duas ficarem na mesma temperatura.\nTodo calor que a quente perde, a fria ganha.\nCada grau que a quente cai solta 100 cal. Cada grau que a fria sobe pede 300 cal."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Teste um palpite: 50 °C. A quente cai 30 °C e solta 100 × 30 = 3 000 cal; a fria sobe 30 °C e pede 300 × 30 = 9 000 cal. Não fecha.\nTeste 35 °C. A quente cai 45 °C: 100 × 45 = 4 500 cal. A fria sobe 15 °C: 300 × 15 = 4 500 cal.\nFechou: o calor perdido é igual ao ganho. A mistura fica a 35 °C.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Calor perdido = calor ganho",
+      "dados": [
+       "\\text{quente: } 100\\,\\text{g a } 80",
+       "\\text{fria: } 300\\,\\text{g a } 20",
+       "c = 1"
+      ],
+      "formula": "m_1 \\times \\Delta T_1 = m_2 \\times \\Delta T_2",
+      "legenda": [
+       "ΔT da quente: quanto ela caiu",
+       "ΔT da fria: quanto ela subiu"
+      ],
+      "contas": [
+       "100 \\times (80 - 35) = 4\\,500",
+       "300 \\times (35 - 20) = 4\\,500"
+      ],
+      "resultado": "T = 35\\,^\\circ\\text{C}",
+      "nota": "Mais água fria puxa o final para baixo."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Cada lado usa Q = m × c × ΔT, e os dois Q têm que ser iguais.\nA água fria tem 3 vezes mais massa, então ela sobe 3 vezes menos graus que a quente cai: 15 contra 45.\nPor isso o resultado fica mais perto de 20 °C do que de 80 °C."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, 35 °C.\nB fez a média de 80 e 20, que só vale com massas iguais.\nC somou as temperaturas, mas temperatura não se soma na mistura.\nD fez 80 − 20 e parou na diferença.\nE tirou os 15 °C de 80, trocando o lado da conta."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Misturando 100 g de água a 60 °C com 100 g a 20 °C, a temperatura final é",
+    "opcoes": [
+     "40 °C",
+     "80 °C",
+     "30 °C",
+     "50 °C"
+    ],
+    "certa": "40 °C",
+    "resposta": "Massas iguais: a quente cai o mesmo que a fria sobe. 60 − 20 = 40; metade é 20; 20 + 20 = 40 °C."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ter-20",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "O rótulo de uma barra de cereal informa que ela tem 100 kcal (quilocalorias). Cada 1 kcal vale 1 000 cal. Um professor quer mostrar aos alunos o tamanho dessa energia: ele imagina toda ela sendo usada para esquentar água de 20 °C até 70 °C. O calor específico da água é 1 cal/(g·°C).\nQuanta água, no máximo, a energia da barra conseguiria esquentar assim?",
+  "A": "2 g",
+  "B": "1,4 kg",
+  "C": "2 kg",
+  "D": "5 kg",
+  "E": "100 kg",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Q = 100 × 1 000 = 100 000 cal. ΔT = 50. m = 100 000 ÷ 50 = 2 000 g = 2 kg. C. Erros: A = não passou kcal para cal (100 ÷ 50); B = usou 70; D = usou 20; E = esqueceu de dividir pelo ΔT.",
+   "ideia": "Q = m × c × ΔT, e agora o número que falta é a massa. 100 000 cal ÷ 50 °C = 2 000 g, ou seja, 2 kg de água.",
+   "pecas": [
+    {
+     "termo": "kcal (quilocaloria)",
+     "significado": "Mil calorias. A caloria do rótulo de comida é kcal: 100 kcal = 100 × 1 000 = 100 000 cal."
+    },
+    {
+     "termo": "ΔT (variação)",
+     "significado": "Quanto a temperatura mudou: final menos inicial. De 20 °C para 60 °C, o ΔT é 60 − 20 = 40 °C."
+    },
+    {
+     "termo": "Achar o número que falta",
+     "significado": "Se m × 50 = 100 000, a massa é o número que, vezes 50, dá 100 000: 100 000 ÷ 50 = 2 000."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A barra de cereal tem 100 kcal de energia.\nEssa energia esquentaria água de 20 °C a 70 °C.\nA questão quer saber quantos gramas de água dá para esquentar.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "calor-panela",
+      "titulo": "A energia da barra",
+      "rotulos": [
+       "barra: 100 kcal",
+       "água 20 °C → 70 °C",
+       "m = ?",
+       "1 kcal = 1 000 cal"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Primeiro passe a energia para calorias: 100 kcal = 100 × 1 000 = 100 000 cal.\nA água sobe 70 − 20 = 50 °C.\nCada grama de água subindo 50 °C pede 1 × 50 = 50 cal."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Se cada grama custa 50 cal, quantos gramas cabem em 100 000 cal?\n100 000 ÷ 50 = 2 000 g, que são 2 kg (uns 2 litros de água).\nNa fórmula: m × 1 × 50 = 100 000, então m = 100 000 ÷ 50 = 2 000 g.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "A energia da barra na água",
+      "dados": [
+       "Q = 100 \\times 1\\,000 = 100\\,000\\,\\text{cal}",
+       "\\Delta T = 70 - 20 = 50",
+       "c = 1"
+      ],
+      "formula": "m = Q \\div (c \\times \\Delta T)",
+      "legenda": [
+       "Q: a energia da barra em cal",
+       "c × ΔT: custo de cada grama"
+      ],
+      "contas": [
+       "m = 100\\,000 \\div 50"
+      ],
+      "resultado": "m = 2\\,000\\,\\text{g} = 2\\,\\text{kg}",
+      "nota": "Uns 2 litros de água."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "É a mesma Q = m × c × ΔT de sempre; só mudou o número que falta.\nPara achar a massa, divide o calor pelo custo de cada grama.\nAssim dá para ver: uma barrinha de cereal tem energia para esquentar 2 litros de água em 50 °C."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 2 kg.\nA não passou kcal para cal e fez 100 ÷ 50.\nB usou 70 no lugar do ΔT de 50.\nD usou 20 no lugar do ΔT de 50.\nE esqueceu de dividir pelos 50 °C."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um biscoito tem 10 kcal. Quantos gramas de água ele esquenta em 10 °C?",
+    "opcoes": [
+     "1 000 g",
+     "1 g",
+     "100 g",
+     "10 000 g"
+    ],
+    "certa": "1 000 g",
+    "resposta": "10 kcal = 10 000 cal. Cada grama subindo 10 °C pede 10 cal. 10 000 ÷ 10 = 1 000 g."
+   }
+  }
+ }
+]
