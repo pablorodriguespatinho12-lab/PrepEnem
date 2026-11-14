@@ -298,7 +298,7 @@
     "resposta": "B",
     "explicacao": {
       "conferencia": "Grossura total d = 1. Ferro: 8. Alumínio: 20. Cobre-aço: 1 ÷ (0,5/40 + 0,5/5) = 1 ÷ (0,0125 + 0,1) = 1 ÷ 0,1125 ≈ 8,9. Ordem: alumínio (20), cobre-aço (8,9), ferro (8). B. Erros: A = achar que o cobre (40) vale sozinho; D = fazer a média errada e pôr a mista por último; E = ordem invertida; C = mista primeiro e alumínio por último.",
-      "ideia": "Panela que conduz mais calor cozinha mais rápido e gasta menos gás. Compare quanto cada uma conduz: alumínio 20, cobre-aço cerca de 8,9, ferro 8.",
+      "ideia": "Panela que atrapalha menos o calor gasta menos gás. Com grossura 40: alumínio atrapalha 2, cobre-aço 4,5 e ferro 5.",
       "pecas": [
         {
           "termo": "Condutividade (k)",
@@ -346,78 +346,77 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "k diz quanto o material deixa o calor passar: quanto maior, mais rápido passa (cobre 40, aço 5).\nÁrea e diferença de temperatura são iguais, então só a parte do material decide.\nPara ferro e alumínio é o próprio k.\nNa panela mista, cada metade atrapalha separada, como duas portas seguidas: o calor tem de passar pelas duas.\nSoma-se grossura ÷ k de cada camada e depois se divide 1 pelo resultado.",
+          "texto": "k diz quanto o material deixa o calor passar: quanto maior, mais rápido passa (cobre 40, aço 5).\nÁrea e diferença de temperatura são iguais, então só o material decide.\nNa panela mista, o calor passa pelas duas camadas, uma depois da outra: o atrapalho das duas se soma.",
           "visual": null
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Chame a grossura total de 1; cada camada tem 0,5.\nTeste a regra com duas metades de ferro (k = 8): 0,5 ÷ 8 = 0,0625; 0,0625 + 0,0625 = 0,125; 1 ÷ 0,125 = 8, o próprio ferro.\nCobre: 0,5 ÷ 40 = 5 ÷ 400 = 1 ÷ 80 = 0,0125.\nAço: 0,5 ÷ 5 = 0,1. Somando: 0,1125.\nAgora 1 ÷ 0,1125. Como 0,1125 × 9 = 1,0125, um pouco mais que 1, o resultado é um pouco menos que 9: cerca de 8,9.\nNo quadro, o traço da fração quer dizer dividir.",
+          "texto": "Macete: compare quanto cada panela ATRAPALHA o calor. Atrapalho = grossura ÷ k.\nEscolha grossura 40, que divide fácil por 20, 8 e 5. Alumínio: 40 ÷ 20 = 2. Ferro: 40 ÷ 8 = 5.\nMista: metade de cobre, 20 ÷ 40 = 0,5; metade de aço, 20 ÷ 5 = 4. Soma: 4,5.\nMenos atrapalho, menos gás: alumínio (2), cobre-aço (4,5), ferro (5).",
           "visual": {
             "tipo": "quadro",
-            "titulo": "Quanto a panela mista conduz",
+            "titulo": "Quanto cada panela atrapalha",
             "dados": [
-              "d = 1 \\text{ (grossura total)}",
-              "d_1 = d_2 = 0{,}5",
-              "k_{cobre} = 40",
-              "k_{aço} = 5"
+              "d = 40 \\text{ (grossura total)}",
+              "d_{cobre} = d_{aço} = 20",
+              "k: \\text{ cobre } 40,\\ \\text{alumínio } 20,\\ \\text{ferro } 8,\\ \\text{aço } 5"
             ],
-            "formula": "k_{mista} = \\dfrac{d}{\\frac{d_1}{k_1} + \\frac{d_2}{k_2}}",
+            "formula": "\\text{atrapalho} = \\dfrac{d}{k}",
             "legenda": [
-              "$d_1, d_2$: grossura de cada camada",
-              "$k_1, k_2$: quanto cada camada conduz"
+              "$d$: grossura",
+              "$k$: quanto o material conduz"
             ],
             "contas": [
-              "k_{mista} = \\dfrac{1}{\\frac{0{,}5}{40} + \\frac{0{,}5}{5}}",
-              "k_{mista} = \\dfrac{1}{0{,}0125 + 0{,}1}",
-              "k_{mista} = \\dfrac{1}{0{,}1125}"
+              "\\text{alumínio: } 40 \\div 20 = 2",
+              "\\text{ferro: } 40 \\div 8 = 5",
+              "\\text{mista: } 20 \\div 40 + 20 \\div 5 = 0{,}5 + 4 = 4{,}5"
             ],
-            "resultado": "k_{mista} \\approx 8{,}9",
-            "nota": "A mista conduz como um material de k perto de 8,9."
+            "resultado": "2 < 4{,}5 < 5",
+            "nota": "Menos atrapalho, menos gás."
           }
         },
         {
           "titulo": "Por que funciona",
-          "texto": "O calor tem de atravessar as duas camadas, e o aço conduz mal (5). É como um cano largo emendado num fino: o fino manda. Por isso o cobre (40) não salva tudo e a mista fica só um pouco acima do ferro.",
+          "texto": "O calor tem de atravessar as duas camadas, e o aço conduz mal (5): sozinha, a metade de aço já atrapalha 4.\nÉ como um cano largo emendado num fino: o fino manda. Por isso o cobre não salva tudo.\nA fórmula da questão faz a mesma soma (d1/k1 + d2/k2 é o atrapalho), só que com vírgulas.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Da mais para a menos econômica",
             "cabecalho": [
               "Panela",
-              "Conduz"
+              "Atrapalha (grossura 40)"
             ],
             "linhas": [
               [
                 "alumínio",
-                "20"
+                "2"
               ],
               [
                 "cobre-aço",
-                "8,9"
+                "4,5"
               ],
               [
                 "ferro",
-                "8"
+                "5"
               ]
             ]
           }
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra B: alumínio, cobre-aço e ferro.\nA: põe a mista em primeiro, como se o cobre (40) valesse sozinho.\nC: põe a mista em primeiro e o alumínio por último, mas o alumínio (20) é o maior.\nD: põe a mista por último, mas 8,9 é mais que o 8 do ferro.\nE: começa pelo ferro (8), o pior, e põe a mista (8,9) depois do alumínio (20); a mista vem antes do ferro.",
+          "texto": "Letra B: alumínio, cobre-aço e ferro.\nA: põe a mista em primeiro, como se o cobre (40) valesse sozinho; mas o aço atrapalha 4.\nC: põe o alumínio por último, mas ele é o que menos atrapalha (2).\nD: põe a mista por último, mas ela atrapalha 4,5, menos que o ferro (5).\nE: começa pelo ferro, o que mais atrapalha (5).",
           "visual": null
         }
       ],
       "seuErro": null,
       "checagem": {
-        "pergunta": "Panela mista: metade da grossura com k = 20 e metade com k = 5. Ela conduz como um k de:",
+        "pergunta": "Panela de grossura 40: metade com k = 20 e metade com k = 5. Quanto ela atrapalha?",
         "opcoes": [
-          "8",
-          "12,5",
-          "25",
-          "4"
+          "5",
+          "2,5",
+          "4",
+          "8"
         ],
-        "certa": "8",
-        "resposta": "1 ÷ (0,5/20 + 0,5/5) = 1 ÷ 0,125 = 8. A camada fraca manda."
+        "certa": "5",
+        "resposta": "20 ÷ 20 = 1 e 20 ÷ 5 = 4: 1 + 4 = 5. A metade fraca manda."
       }
     }
   },
