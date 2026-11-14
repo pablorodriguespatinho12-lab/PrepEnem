@@ -1,9 +1,8 @@
 'use client';
 import { useEffect, useMemo, useRef } from 'react';
 import {
-  ENGROSSA_LINHA, LADO_DO_PIXEL, QUADROS_POR_SEGUNDO, brilhos, endurecerBordas, separarSvg, tamanhoDoViewBox,
+  ENGROSSA_LINHA, LADO_DO_PIXEL, QUADROS_POR_SEGUNDO, endurecerBordas, separarSvg, tamanhoDoViewBox,
 } from '@/lib/pixel/svg-pixel';
-import { useMundoAnimado } from '@/hooks/use-mundo-animado';
 
 // Desenho feito à mão (SVG) mostrado como pixel art (Pablo, 14/11/2026).
 // 1. O SVG das formas fica invisível na tela, só para o navegador calcular cor e
@@ -41,7 +40,6 @@ export function DesenhoPixel({ svg, className = '' }: { svg: string; className?:
   const largura = caixa ? Math.round(caixa.largura / LADO_DO_PIXEL) : 0;
   const altura = caixa ? Math.round(caixa.altura / LADO_DO_PIXEL) : 0;
 
-  const { animado: mundoAnimado } = useMundoAnimado();
 
   useEffect(() => {
     const original = fonte.current?.querySelector('svg');
@@ -51,12 +49,11 @@ export function DesenhoPixel({ svg, className = '' }: { svg: string; className?:
     let ocupado = false;
     let base: ImageData | null = null;
     const svgMexe = (original.getAnimations?.({ subtree: true }).length ?? 0) > 0;
-    // pinta a base + brilhos (a base só é refeita se o SVG se mexe). Sem mouse: o Pablo
-    // não gostou da onda de luz no cursor (14/11/2026).
+    // pinta a base (refeita a cada quadro só se o SVG se mexe). Sem mouse e sem brilhos:
+    // o Pablo não gostou de nenhum dos dois (14/11/2026).
     const pintar = () => {
       if (!base) return;
       const quadro = new ImageData(new Uint8ClampedArray(base.data), largura, altura);
-      if (mundoAnimado) brilhos(quadro.data, largura, altura, Math.floor(Date.now() / 900));
       ctx.putImageData(quadro, 0, 0);
     };
     const desenhar = () => {
@@ -80,10 +77,10 @@ export function DesenhoPixel({ svg, className = '' }: { svg: string; className?:
     desenhar();
     const relogio = window.setInterval(() => {
       if (document.hidden) return;
-      if (svgMexe || mundoAnimado) desenhar();
+      if (svgMexe) desenhar();
     }, 1000 / QUADROS_POR_SEGUNDO);
     return () => { vivo = false; window.clearInterval(relogio); };
-  }, [partes, largura, altura, mundoAnimado]);
+  }, [partes, largura, altura]);
 
   if (!partes || !caixa) return <div className={className} dangerouslySetInnerHTML={{ __html: svg }} />;
   return (

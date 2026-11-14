@@ -282,6 +282,13 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   **Sem exercício no meio (Pablo, 14/11/2026: "não precisa colocar questão no meio para ver
   se entendeu, só coloca a explicação"):** a aula "Antes" mostra só a explicação; os 2
   exercícios ficam no JSON, fora da tela. Isômeros (F-P-C) entrou como aula "Antes".
+  **Curta e sem rolar (Pablo, 14/11/2026: "não gosto de rolar telas, lembra disso"; "não
+  quero explicações muito grandes"):** o jeito que funcionou é uma conta por linha (passo dos
+  isômeros). Sem analogia de LEGO ("pode tirar o negócio de lego"). Tabela que repete o
+  texto sai. **"Os dados" primeiro (mesmo dia: "gostei desse negócio de coletar dados"):**
+  na aula da questão, o passo A pergunta (tabela dos dados) vem logo depois dos desenhos.
+  Sem brilhinhos no desenho da aula ("tira esse brilhinho"); a água ferve e o termômetro
+  sobe e desce no desenho de Termodinâmica. O boneco de cima do cartão é um mini astronauta.
 - **Passo em linhas (Pablo, 12/11/2026, foto do "Jeito rápido" da mangueira: "deixa
   o texto mais organizado e entendível"):** texto de passo acima de 200 letras vai
   em linhas separadas por `\n` (uma ideia por linha, até 170 letras cada); "A
