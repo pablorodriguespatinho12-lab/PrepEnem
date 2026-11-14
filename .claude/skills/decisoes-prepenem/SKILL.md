@@ -289,6 +289,11 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   na aula da questão, o passo A pergunta (tabela dos dados) vem logo depois dos desenhos.
   Sem brilhinhos no desenho da aula ("tira esse brilhinho"); a água ferve e o termômetro
   sobe e desce no desenho de Termodinâmica. O boneco de cima do cartão é um mini astronauta.
+  **Jeito rápido = o macete (Pablo, 14/11/2026: "vê se essas soluções são o jeito mais
+  rápido... isso é muito, muito importante"):** o passo Jeito rápido é o caminho mais curto
+  de prova; toda divisão diz o que conta ("quantos 60 cabem em 120? 1 litro dá 60, 2 dão
+  120"). Achado na mistura de águas: o atalho estava escondido no Por que funciona. Varredura
+  por regex: 25 nas provas do dia 2 e 76 no banco ENEM com divisão sem sentido dito.
 - **Passo em linhas (Pablo, 12/11/2026, foto do "Jeito rápido" da mangueira: "deixa
   o texto mais organizado e entendível"):** texto de passo acima de 200 letras vai
   em linhas separadas por `\n` (uma ideia por linha, até 170 letras cada); "A
