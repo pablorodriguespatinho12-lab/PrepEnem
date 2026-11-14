@@ -74,52 +74,52 @@
     "resposta": "D",
     "origem": "Reforço do dia 2",
     "explicacao": {
-      "conferencia": "OH preso direto no anel aromático = fenol. D. Erros: A é OH num carbono comum, fora do anel (a troca mais comum); B pede COOH; C é um O entre dois carbonos, sem H; E pede C=O com H na ponta.",
-      "ideia": "O mesmo OH muda de família conforme o lugar: num carbono comum é álcool, preso no anel aromático é fenol. No timol ele está no anel.",
+      "conferencia": "OH grudado direto num carbono do anel aromático = fenol. D. Erros: A é OH num carbono de fileira, fora do anel (a troca mais comum, e a de quem olha só para o OH); B pede COOH; C é um O entre dois carbonos, sem H; E pede C=O com H na ponta.",
+      "ideia": "OH grudado num carbono de fileira é álcool; grudado num carbono da roda de 6 (anel aromático), é fenol. No timol, o OH está na roda: fenol.",
       "pecas": [
         {
           "termo": "Anel aromático",
-          "significado": "Anel de seis carbonos com ligações simples e duplas alternadas, como no benzeno. Costuma ser desenhado como um hexágono."
+          "significado": "Seis carbonos de mãos dadas em roda, formando um hexágono (figura de 6 cantos), como no benzeno. Dentro da roda, uma ligação sim, outra não, é dupla (desenhada com dois tracinhos)."
         },
         {
           "termo": "Fenol",
-          "significado": "Molécula com OH preso direto num carbono do anel aromático. Não é álcool, mesmo tendo OH."
+          "significado": "OH grudado direto num carbono dessa roda. Tem o mesmo OH do álcool, mas é outra família."
         }
       ],
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "O timol tem um OH grudado no anel aromático. A questão quer a família (função) dele por causa desse OH.",
+          "texto": "O timol tem um OH: um O (oxigênio) com um H (hidrogênio).\nO texto diz onde ele está: grudado direto no anel aromático, a roda de 6 carbonos.\nA questão quer a família (função) do timol.",
           "visual": {
             "tipo": "figura",
-            "nome": "molecula-cadeia",
-            "titulo": "Timol",
-            "rotulos": ["timol (tomilho)", "OH no anel", "qual a função?", "enxaguante bucal"]
+            "nome": "alcool-fenol",
+            "titulo": "Mesmo OH, lugares diferentes",
+            "rotulos": ["álcool: OH na fileira", "fenol: OH na roda", "etanol do posto", "timol"]
           }
         },
         {
           "titulo": "O que acontece",
-          "texto": "Álcool e fenol têm o mesmo OH. O que separa os dois é onde o OH está preso: num carbono de cadeia comum, ou num carbono do anel aromático."
+          "texto": "Na figura, os dois lados têm o mesmo OH vermelho.\nNa esquerda, o OH está na ponta de uma fileira de carbonos: é álcool, como o etanol do posto.\nNa direita, o OH está grudado na roda: é fenol.\nNão importa se o OH aparece no começo ou no fim. Importa em que carbono ele está grudado."
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Achou OH? Olhe o carbono em que ele está. Carbono do anel aromático: fenol. Carbono comum: álcool. No timol, é o anel."
+          "texto": "Aqui só existe um grupo para olhar: o OH. Não tem outro para escolher.\nFaça uma pergunta só: o carbono que segura o OH é de uma roda de 6 com duplas?\nSim: fenol. Não, é de fileira: álcool.\nNo timol, o texto diz \"preso direto num anel aromático\". Sim: fenol."
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Preso no anel, o OH age diferente: o fenol é um pouco ácido, e o álcool quase não é. Por isso o fenol tem família própria."
+          "texto": "Grudado na roda, o OH muda de comportamento.\nO fenol é um pouco ácido. O álcool do posto quase não é.\nComportamento diferente, família diferente: por isso o fenol tem nome próprio."
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra D, fenol. A (álcool) seria OH num carbono comum, fora do anel. B (ácido carboxílico) pede COOH. C (éter) é um O entre dois carbonos, sem H. E (aldeído) pede C=O com H na ponta."
+          "texto": "Letra D, fenol: o OH está grudado na roda.\nA (álcool) seria o OH numa fileira, fora da roda. É a troca mais comum.\nB (ácido carboxílico) pede COOH: C com um O de ligação dupla e um OH no mesmo carbono.\nC (éter) é um O no meio de dois carbonos, sem H.\nE (aldeído) pede C=O com H na ponta."
         }
       ],
       "seuErro": null,
       "checagem": {
-        "pergunta": "O etanol do posto é CH₃–CH₂–OH, sem anel. Qual é a função dele?",
+        "pergunta": "O etanol do posto é CH₃–CH₂–OH: fileira de 2 carbonos, sem roda. Qual é a função dele?",
         "opcoes": ["Álcool", "Fenol", "Éster", "Amina"],
         "certa": "Álcool",
-        "resposta": "OH num carbono comum, sem anel: álcool."
+        "resposta": "OH num carbono de fileira, sem roda: álcool."
       }
     }
   },
@@ -351,20 +351,10 @@
           "visual": {
             "tipo": "quadro",
             "titulo": "CO₂ da viagem",
-            "dados": [
-              "d = 300\\,\\text{km}",
-              "12\\,\\text{km por litro}",
-              "2{,}3\\,\\text{kg de CO}_2\\text{ por litro}"
-            ],
+            "dados": ["d = 300\\,\\text{km}", "12\\,\\text{km por litro}", "2{,}3\\,\\text{kg de CO}_2\\text{ por litro}"],
             "formula": "\\text{CO}_2 = \\dfrac{d}{12} \\times 2{,}3",
-            "legenda": [
-              "d: a distância da viagem",
-              "12: quantos km o carro anda com 1 litro"
-            ],
-            "contas": [
-              "\\dfrac{300}{12} = 25\\,\\text{L}",
-              "25 \\times 2{,}3"
-            ],
+            "legenda": ["d: a distância da viagem", "12: quantos km o carro anda com 1 litro"],
+            "contas": ["\\dfrac{300}{12} = 25\\,\\text{L}", "25 \\times 2{,}3"],
             "resultado": "\\text{CO}_2 = 57{,}5\\,\\text{kg}",
             "nota": "Quase 60 kg de gás só na ida."
           }
@@ -557,18 +547,10 @@
           "visual": {
             "tipo": "quadro",
             "titulo": "Concentração",
-            "dados": [
-              "m = 25\\,\\text{g}",
-              "V = 250\\,\\text{mL} = 0{,}25\\,\\text{L}"
-            ],
+            "dados": ["m = 25\\,\\text{g}", "V = 250\\,\\text{mL} = 0{,}25\\,\\text{L}"],
             "formula": "C = \\dfrac{m}{V}",
-            "legenda": [
-              "m: massa de açúcar",
-              "V: volume do suco, em litros"
-            ],
-            "contas": [
-              "C = \\dfrac{25}{0{,}25}"
-            ],
+            "legenda": ["m: massa de açúcar", "V: volume do suco, em litros"],
+            "contas": ["C = \\dfrac{25}{0{,}25}"],
             "resultado": "C = 100\\,\\text{g/L}",
             "nota": "Quatro copos fazem 1 litro."
           }
@@ -633,18 +615,9 @@
           "visual": {
             "tipo": "quadro",
             "titulo": "Abaixo de 7",
-            "dados": [
-              "\\text{limão: } 2",
-              "\\text{cola: } 3",
-              "\\text{café: } 5",
-              "\\text{água pura: } 7",
-              "\\text{sabão: } 10"
-            ],
+            "dados": ["\\text{limão: } 2", "\\text{cola: } 3", "\\text{café: } 5", "\\text{água pura: } 7", "\\text{sabão: } 10"],
             "formula": "\\text{pH} < 7 \\Rightarrow \\text{ácido}",
-            "contas": [
-              "2 < 7,\\quad 3 < 7,\\quad 5 < 7",
-              "7 = 7 \\;(\\text{neutro}),\\quad 10 > 7 \\;(\\text{básico})"
-            ],
+            "contas": ["2 < 7,\\quad 3 < 7,\\quad 5 < 7", "7 = 7 \\;(\\text{neutro}),\\quad 10 > 7 \\;(\\text{básico})"],
             "resultado": "3\\ \\text{ácidos}",
             "nota": "A água pura é neutra."
           }
@@ -713,20 +686,10 @@
           "visual": {
             "tipo": "quadro",
             "titulo": "Ácido = base",
-            "dados": [
-              "C_b = 0{,}5\\,\\text{mol/L}",
-              "V_b = 20\\,\\text{mL}",
-              "V_a = 10\\,\\text{mL}"
-            ],
+            "dados": ["C_b = 0{,}5\\,\\text{mol/L}", "V_b = 20\\,\\text{mL}", "V_a = 10\\,\\text{mL}"],
             "formula": "C_a \\times V_a = C_b \\times V_b",
-            "legenda": [
-              "a: ácido (vinagre)",
-              "b: base (soda)"
-            ],
-            "contas": [
-              "C_a \\times 10 = 0{,}5 \\times 20",
-              "C_a = \\dfrac{10}{10}"
-            ],
+            "legenda": ["a: ácido (vinagre)", "b: base (soda)"],
+            "contas": ["C_a \\times 10 = 0{,}5 \\times 20", "C_a = \\dfrac{10}{10}"],
             "resultado": "C_a = 1{,}0\\,\\text{mol/L}",
             "nota": "Pode deixar em mL dos dois lados."
           }
@@ -791,20 +754,10 @@
           "visual": {
             "tipo": "quadro",
             "titulo": "Diluição",
-            "dados": [
-              "C_1 = 120\\,\\text{g/L}",
-              "V_1 = 0{,}5\\,\\text{L}",
-              "V_2 = 2\\,\\text{L}"
-            ],
+            "dados": ["C_1 = 120\\,\\text{g/L}", "V_1 = 0{,}5\\,\\text{L}", "V_2 = 2\\,\\text{L}"],
             "formula": "C_1 \\times V_1 = C_2 \\times V_2",
-            "legenda": [
-              "1: antes da água",
-              "2: depois da água"
-            ],
-            "contas": [
-              "120 \\times 0{,}5 = C_2 \\times 2",
-              "60 = C_2 \\times 2"
-            ],
+            "legenda": ["1: antes da água", "2: depois da água"],
+            "contas": ["120 \\times 0{,}5 = C_2 \\times 2", "60 = C_2 \\times 2"],
             "resultado": "C_2 = 30\\,\\text{g/L}",
             "nota": "Volume 4 vezes maior, concentração 4 vezes menor."
           }
@@ -997,17 +950,10 @@
           "visual": {
             "tipo": "quadro",
             "titulo": "Voltagem da pilha",
-            "dados": [
-              "E_{prata} = +0{,}80\\,\\text{V}",
-              "E_{cobre} = +0{,}34\\,\\text{V}"
-            ],
+            "dados": ["E_{prata} = +0{,}80\\,\\text{V}", "E_{cobre} = +0{,}34\\,\\text{V}"],
             "formula": "\\Delta E = E_{maior} - E_{menor}",
-            "legenda": [
-              "ΔE: a voltagem da pilha"
-            ],
-            "contas": [
-              "\\Delta E = 0{,}80 - 0{,}34"
-            ],
+            "legenda": ["ΔE: a voltagem da pilha"],
+            "contas": ["\\Delta E = 0{,}80 - 0{,}34"],
             "resultado": "\\Delta E = 0{,}46\\,\\text{V}",
             "nota": "O 2 da reação não multiplica o potencial."
           }
@@ -1144,14 +1090,8 @@
               "1\\,\\text{CH}_4 \\to 1\\,\\text{CO}_2"
             ],
             "formula": "n = \\dfrac{m}{M}",
-            "legenda": [
-              "n: quantos mols",
-              "m: massa; M: massa de 1 mol"
-            ],
-            "contas": [
-              "n = \\dfrac{32}{16} = 2\\,\\text{mol}",
-              "m(\\text{CO}_2) = 2 \\times 44"
-            ],
+            "legenda": ["n: quantos mols", "m: massa; M: massa de 1 mol"],
+            "contas": ["n = \\dfrac{32}{16} = 2\\,\\text{mol}", "m(\\text{CO}_2) = 2 \\times 44"],
             "resultado": "m = 88\\,\\text{g de CO}_2",
             "nota": "No 1 para 1, mols de metano = mols de CO₂."
           }
@@ -1220,18 +1160,10 @@
           "visual": {
             "tipo": "quadro",
             "titulo": "Regra de três",
-            "dados": [
-              "180\\,\\text{g glicose} \\to 92\\,\\text{g etanol}",
-              "900\\,\\text{g glicose} \\to x"
-            ],
+            "dados": ["180\\,\\text{g glicose} \\to 92\\,\\text{g etanol}", "900\\,\\text{g glicose} \\to x"],
             "formula": "x = \\dfrac{900 \\times 92}{180}",
-            "legenda": [
-              "x: etanol que sai"
-            ],
-            "contas": [
-              "\\dfrac{900}{180} = 5",
-              "x = 5 \\times 92"
-            ],
+            "legenda": ["x: etanol que sai"],
+            "contas": ["\\dfrac{900}{180} = 5", "x = 5 \\times 92"],
             "resultado": "x = 460\\,\\text{g}",
             "nota": "Cinco receitas inteiras."
           }
@@ -1300,19 +1232,10 @@
           "visual": {
             "tipo": "quadro",
             "titulo": "Receita dobrada",
-            "dados": [
-              "5{,}6\\,\\text{g Fe} + 3{,}2\\,\\text{g S}",
-              "11{,}2\\,\\text{g Fe}"
-            ],
+            "dados": ["5{,}6\\,\\text{g Fe} + 3{,}2\\,\\text{g S}", "11{,}2\\,\\text{g Fe}"],
             "formula": "\\text{FeS} = \\text{Fe} + \\text{S}",
-            "legenda": [
-              "o produto pesa a soma do que entrou"
-            ],
-            "contas": [
-              "\\dfrac{11{,}2}{5{,}6} = 2",
-              "\\text{S} = 2 \\times 3{,}2 = 6{,}4\\,\\text{g}",
-              "\\text{FeS} = 11{,}2 + 6{,}4"
-            ],
+            "legenda": ["o produto pesa a soma do que entrou"],
+            "contas": ["\\dfrac{11{,}2}{5{,}6} = 2", "\\text{S} = 2 \\times 3{,}2 = 6{,}4\\,\\text{g}", "\\text{FeS} = 11{,}2 + 6{,}4"],
             "resultado": "\\text{FeS} = 17{,}6\\,\\text{g}",
             "nota": "Ou: 2 × 8,8 g = 17,6 g."
           }
@@ -1381,18 +1304,10 @@
           "visual": {
             "tipo": "quadro",
             "titulo": "Receita em miniatura",
-            "dados": [
-              "58\\,\\text{g Mg(OH)}_2 \\to 73\\,\\text{g HCl}",
-              "0{,}58\\,\\text{g Mg(OH)}_2 \\to x"
-            ],
+            "dados": ["58\\,\\text{g Mg(OH)}_2 \\to 73\\,\\text{g HCl}", "0{,}58\\,\\text{g Mg(OH)}_2 \\to x"],
             "formula": "x = \\dfrac{0{,}58 \\times 73}{58}",
-            "legenda": [
-              "x: HCl que a colher neutraliza"
-            ],
-            "contas": [
-              "\\dfrac{58}{0{,}58} = 100",
-              "x = \\dfrac{73}{100}"
-            ],
+            "legenda": ["x: HCl que a colher neutraliza"],
+            "contas": ["\\dfrac{58}{0{,}58} = 100", "x = \\dfrac{73}{100}"],
             "resultado": "x = 0{,}73\\,\\text{g}",
             "nota": "O 2 do HCl já está dentro do 73."
           }

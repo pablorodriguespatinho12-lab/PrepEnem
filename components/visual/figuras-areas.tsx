@@ -45,6 +45,76 @@ const MoleculaCadeia = fig('fig-molecula', (c) => {
   ponto(c, '#dfe6e1', 101, 33, 4, 4);
 }, [L(46, 6), L(84, 66), L(46, 86), L(14, 66)], () => <Ponto x={89} y={42} tam={10} cor="rgba(214,69,69,.35)" anim="pulso" redondo dur={1.6} />);
 
+/* Anel de 6 carbonos de ponta para cima (Pablo, 14/11/2026, timol: "OH parece que está
+   no final"; a figura de fileira fazia todo OH parecer ponta de corrente). */
+function linha(c: Pincel, cor: string, x1: number, y1: number, x2: number, y2: number) {
+  const n = Math.max(Math.abs(x2 - x1), Math.abs(y2 - y1));
+  for (let k = 0; k <= n; k++) ponto(c, cor, x1 + ((x2 - x1) * k) / n, y1 + ((y2 - y1) * k) / n, 2, 2);
+}
+const R_ANEL = 14;
+function vertices(cx: number, cy: number, r = R_ANEL) {
+  return Array.from({ length: 6 }, (_, k) => {
+    const a = ((-90 + 60 * k) * Math.PI) / 180;
+    return [Math.round(cx + r * Math.cos(a)), Math.round(cy + r * Math.sin(a))] as const;
+  });
+}
+/** Anel; com `duplas`, a cada 2 lados um traço por dentro (ligação dupla). */
+function anel(c: Pincel, cx: number, cy: number, duplas: boolean) {
+  const v = vertices(cx, cy);
+  const dentro = vertices(cx, cy, R_ANEL - 4);
+  v.forEach(([x, y], k) => {
+    const [x2, y2] = v[(k + 1) % 6];
+    linha(c, TINTA, x, y, x2, y2);
+    if (duplas && k % 2 === 1) linha(c, '#4a6fd0', dentro[k][0], dentro[k][1], dentro[(k + 1) % 6][0], dentro[(k + 1) % 6][1]);
+  });
+  v.forEach(([x, y]) => circulo(c, '#3b4540', x, y, 2));
+}
+/** OH preso no topo do anel (ou na ponta da fileira): O vermelho e H claro. */
+function oh(c: Pincel, x: number, y: number) {
+  linha(c, TINTA, x, y, x, y - 7);
+  circulo(c, '#d64545', x, y - 10, 4);
+  circulo(c, '#dfe6e1', x + 7, y - 14, 2);
+}
+const ALCOOL_FENOL_LUGARES = [L(25, 88), L(73, 88), L(25, 8), L(93, 10)];
+/* Esquerda: OH na FILEIRA (álcool). Direita: OH no ANEL com duplas (fenol). */
+const AlcoolFenol = fig('fig-alcool-fenol', (c) => {
+  fundo(c);
+  [8, 20, 32].forEach((x, i) => { if (i < 2) linha(c, TINTA, x, 44, x + 12, 44); circulo(c, '#3b4540', x, 45, 3); });
+  oh(c, 32, 41);
+  for (let y = 4; y < 66; y += 4) ponto(c, '#b9c1c6', 52, y, 1, 2);
+  anel(c, 86, 42, true);
+  oh(c, 86, 28);
+}, ALCOOL_FENOL_LUGARES, () => (
+  <>
+    <Ponto x={22} y={33} tam={11} cor="rgba(214,69,69,.35)" anim="pulso" redondo dur={1.6} />
+    <Ponto x={66} y={14} tam={11} cor="rgba(214,69,69,.35)" anim="pulso" redondo dur={1.6} atraso={-0.8} />
+  </>
+));
+
+/* Esquerda: anel COM duplas + OH (fenol). Direita: anel SÓ de simples + OH (álcool). */
+const AnelDuplas = fig('fig-anel-duplas', (c) => {
+  fundo(c);
+  anel(c, 30, 42, true);
+  oh(c, 30, 28);
+  for (let y = 4; y < 66; y += 4) ponto(c, '#b9c1c6', 58, y, 1, 2);
+  anel(c, 86, 42, false);
+  oh(c, 86, 28);
+}, ALCOOL_FENOL_LUGARES, () => (
+  <Ponto x={13} y={42} tam={24} cor="rgba(74,111,208,.18)" anim="pulso" redondo dur={1.8} />
+));
+
+/* Dois anéis com duplas grudados (naftalina): só C e H. */
+const AneisBenzeno = fig('fig-aneis', (c) => {
+  fundo(c);
+  anel(c, 48, 36, true);
+  anel(c, 72, 36, true);
+}, [L(50, 88), L(14, 20), L(86, 20), L(50, 4)], () => (
+  <>
+    <Ponto x={30} y={27} tam={20} cor="rgba(74,111,208,.16)" anim="pulso" redondo dur={1.8} />
+    <Ponto x={50} y={27} tam={20} cor="rgba(74,111,208,.16)" anim="pulso" redondo dur={1.8} atraso={-0.9} />
+  </>
+));
+
 const FumacaChamine = fig('fig-chamine', (c) => {
   fundo(c);
   ponto(c, '#9a8a72', 0, 60, W, 10);
@@ -278,6 +348,9 @@ export const FIGURAS_AREAS = {
   cone: Cone,
   parabola: Parabola,
   'molecula-cadeia': MoleculaCadeia,
+  'alcool-fenol': AlcoolFenol,
+  'anel-duplas': AnelDuplas,
+  'aneis-benzeno': AneisBenzeno,
   'fumaca-chamine': FumacaChamine,
   'bequer-ph': BequerPh,
   'pilha-eletrodos': PilhaEletrodos,

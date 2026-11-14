@@ -179,7 +179,7 @@ export interface VisualLegenda {
 export const FIGURAS_PIXEL = [
   'pilhas-lanterna', 'circuito-simples', 'bloco-forca', 'calor-panela', 'onda', 'luz-raio',
   // Química
-  'molecula-cadeia', 'fumaca-chamine', 'bequer-ph', 'pilha-eletrodos', 'balanca-receita',
+  'molecula-cadeia', 'alcool-fenol', 'anel-duplas', 'aneis-benzeno', 'fumaca-chamine', 'bequer-ph', 'pilha-eletrodos', 'balanca-receita',
   // Biologia
   'cadeia-alimentar', 'celula', 'cruzamento', 'corpo-sangue', 'selecao-natural', 'virus-bacteria',
   // Matemática

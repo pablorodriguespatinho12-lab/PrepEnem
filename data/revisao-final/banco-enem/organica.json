@@ -337,13 +337,13 @@
           "texto": "O BPA tem dois anéis de seis carbonos.\nCada anel tem um OH preso direto nele.\nA questão quer a família marcada por esses OH.",
           "visual": {
             "tipo": "figura",
-            "nome": "molecula-cadeia",
+            "nome": "alcool-fenol",
             "titulo": "O BPA do plástico",
             "rotulos": [
-              "BPA (bisfenol A)",
-              "OH preso no anel",
-              "que família?",
-              "plástico duro"
+              "álcool: OH na fileira",
+              "fenol: OH na roda",
+              "etanol",
+              "BPA"
             ]
           }
         },
@@ -643,13 +643,13 @@
           "texto": "O mentol tem um anel de seis carbonos com OH preso nele.\nEsse anel só tem ligações simples: não é o anel benzênico.\nA questão quer a família certa do mentol.",
           "visual": {
             "tipo": "figura",
-            "nome": "molecula-cadeia",
+            "nome": "anel-duplas",
             "titulo": "Mentol da hortelã",
             "rotulos": [
-              "mentol (hortelã)",
-              "OH no anel",
-              "anel só de simples",
-              "fenol ou álcool?"
+              "fenol: roda com duplas",
+              "álcool: roda sem duplas",
+              "benzeno",
+              "mentol"
             ]
           }
         },
@@ -787,13 +787,13 @@
           "texto": "A naftalina é C₁₀H₈, com dois anéis benzênicos grudados.\nTodos os átomos são carbono ou hidrogênio.\nA questão quer a família da naftalina.",
           "visual": {
             "tipo": "figura",
-            "nome": "molecula-cadeia",
+            "nome": "aneis-benzeno",
             "titulo": "Bolinha de naftalina",
             "rotulos": [
               "naftalina C₁₀H₈",
-              "dois anéis benzênicos",
-              "só C e H",
-              "fenol?"
+              "roda 1",
+              "roda 2",
+              "só C e H"
             ]
           }
         },
@@ -951,13 +951,13 @@
           "texto": "Frasco azul: C₆H₅–CH₂–OH, com o OH num carbono fora do anel.\nFrasco verde: C₆H₅–OH, com o OH preso direto no anel.\nA questão quer a família de cada um.",
           "visual": {
             "tipo": "figura",
-            "nome": "molecula-cadeia",
+            "nome": "alcool-fenol",
             "titulo": "Dois frascos parecidos",
             "rotulos": [
-              "azul: C₆H₅–CH₂–OH",
-              "verde: C₆H₅–OH",
-              "onde está o OH?",
-              "perfume × antisséptico"
+              "azul: OH fora da roda",
+              "verde: OH na roda",
+              "frasco azul",
+              "frasco verde"
             ]
           }
         },
@@ -1351,13 +1351,13 @@
           "texto": "A dopamina tem um anel benzênico com dois OH presos direto nele.\nNa ponta da cadeia que sai do anel há um NH₂, sem C=O por perto.\nA questão quer as funções presentes.",
           "visual": {
             "tipo": "figura",
-            "nome": "molecula-cadeia",
+            "nome": "alcool-fenol",
             "titulo": "Dopamina",
             "rotulos": [
-              "dopamina",
-              "dois OH no anel",
-              "NH₂ na ponta",
-              "quais funções?"
+              "OH na fileira: álcool",
+              "OH na roda: fenol",
+              "NH₂ na ponta: amina",
+              "dopamina"
             ]
           }
         },
