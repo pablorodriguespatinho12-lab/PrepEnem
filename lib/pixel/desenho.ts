@@ -150,14 +150,38 @@ export function cume(W: number, H: number, base: number, ondas: [number, number,
   return Array.from({ length: W }, (_, x) => Math.round(H * base + ondas.reduce((s, [f, fase, a]) => s + Math.sin(x * f + fase) * H * a, 0)));
 }
 
-function pinheiro(c: Pincel, p: Paleta, x: number, chao: number, h: number): void {
+/** Pinheiro; `vento` (em pixels) entorta a metade de cima da copa para o lado. */
+function pinheiro(c: Pincel, p: Paleta, x: number, chao: number, h: number, vento = 0): void {
   ponto(c, p.tronco, x, chao - 2, 1, 3);
   for (let r = 0; r < h; r++) {
     const m = Math.floor(((r % 4) + r * 0.6) / 2.2);
     const y = chao - 2 - h + r;
-    ponto(c, p.pinho, x - m, y, m * 2 + 1, 1);
-    ponto(c, p.pinhoLuz, x - m, y);
+    const d = r < h * 0.25 ? vento : r < h * 0.55 ? Math.sign(vento) * Math.max(0, Math.abs(vento) - 1) : 0;
+    ponto(c, p.pinho, x - m + d, y, m * 2 + 1, 1);
+    ponto(c, p.pinhoLuz, x - m + d, y);
   }
+}
+
+/* Árvores ao vento (Pablo, 14/11/2026: "deixa mais animado tudo, as árvores").
+   A terra é desenhada SEM as árvores (base); depois as árvores retas por cima.
+   Cada camada de vento repinta o retângulo de cada árvore com a base e desenha
+   a árvore entortada: só ela muda, o resto da camada é transparente. */
+export type Arvore = { x: number; chao: number; h: number };
+export function arvores(c: Pincel, p: Paleta, lista: Arvore[]): void {
+  lista.forEach((a) => pinheiro(c, p, a.x, a.chao, a.h));
+}
+export function retanguloDaArvore(a: Arvore, folga = 3): { x: number; y: number; w: number; h: number } {
+  const m = Math.floor((3 + a.h * 0.6) / 2.2) + folga;
+  return { x: a.x - m, y: a.chao - 2 - a.h - 1, w: m * 2 + 1, h: a.h + 4 };
+}
+export function arvoresAoVento(
+  c: CanvasRenderingContext2D, base: CanvasImageSource, p: Paleta, lista: Arvore[], vento: number,
+): void {
+  lista.forEach((a) => {
+    const r = retanguloDaArvore(a);
+    c.drawImage(base, r.x, r.y, r.w, r.h, r.x, r.y, r.w, r.h);
+  });
+  lista.forEach((a) => pinheiro(c, p, a.x, a.chao, a.h, vento));
 }
 
 /** Casinha; devolve a boca da chaminé (onde a fumaça nasce). */
@@ -197,8 +221,15 @@ export function nuvens(c: Pincel, W: number, H: number, p: Paleta, semente = 11)
 }
 
 /** Serra com pinheiros, casinha, riacho e flores. Devolve a chaminé em fração de W e H. */
-export function paisagem(c: Pincel, W: number, H: number, p: Paleta, semente = 23): { chamine: { fx: number; fy: number } } {
+export function paisagem(
+  c: Pincel, W: number, H: number, p: Paleta, semente = 23, semArvores = false,
+): { chamine: { fx: number; fy: number }; arvores: Arvore[] } {
   const rnd = aleatorio(semente);
+  const lista: Arvore[] = [];
+  const planta = (x: number, chao: number, h: number) => {
+    lista.push({ x, chao, h });
+    if (!semArvores) pinheiro(c, p, x, chao, h);
+  };
   const longe = cume(W, H, 0.5, [[0.035, 1, 0.05], [0.09, 2, 0.02], [0.21, 0, 0.006]]);
   for (let x = 0; x < W; x++) {
     ponto(c, p.longe, x, longe[x], 1, H - longe[x]);
@@ -212,7 +243,7 @@ export function paisagem(c: Pincel, W: number, H: number, p: Paleta, semente = 2
   // à direita, fora do cartão da questão (que ocupa o meio no computador)
   const xCasa = Math.round(W * (W < 140 ? 0.66 : 0.9));
   for (let x = 2; x < W - 2; x += 3 + Math.round(rnd() * 5)) {
-    if ((x < xCasa - 4 || x > xCasa + 19) && rnd() > 0.35) pinheiro(c, p, x, perto[x] + 3 + Math.round(rnd() * 3), 7 + Math.round(rnd() * 7));
+    if ((x < xCasa - 4 || x > xCasa + 19) && rnd() > 0.35) planta(x, perto[x] + 3 + Math.round(rnd() * 3), 7 + Math.round(rnd() * 7));
   }
   const boca = casa(c, p, xCasa, perto[xCasa + 7] + 3);
   const y0 = Math.round(H * 0.84);
@@ -229,10 +260,10 @@ export function paisagem(c: Pincel, W: number, H: number, p: Paleta, semente = 2
   }
   for (let k = 0; k < W * 1.2; k++) ponto(c, rnd() > 0.5 ? p.gramaLuz : p.gramaEscura, rnd() * W, y0 + 2 + rnd() * (H - y0 - 2));
   for (let k = 0; k < W * 0.3; k++) ponto(c, p.flores[k % 3], rnd() * W, y0 + 3 + rnd() * (H - y0 - 4));
-  pinheiro(c, p, 4, H + 1, 16);
-  pinheiro(c, p, 10, H + 2, 12);
-  pinheiro(c, p, W - 6, H + 1, 15);
-  return { chamine: { fx: boca.x / W, fy: boca.y / H } };
+  planta(4, H + 1, 16);
+  planta(10, H + 2, 12);
+  planta(W - 6, H + 1, 15);
+  return { chamine: { fx: boca.x / W, fy: boca.y / H }, arvores: lista };
 }
 
 /** Anéis concêntricos com luz no centro e grão de papel (jeito BibleProject, sem as caveiras). */

@@ -879,6 +879,45 @@ html [data-sonner-toaster][data-theme] {
 .mundo-pixel[data-animado="sim"] .mp-fumaca span { animation: mp-fumaca 3.6s steps(9) infinite !important; }
 .mundo-pixel[data-animado="sim"] .mp-fumaca span:nth-child(2) { animation: mp-fumaca 3.6s steps(9) -1.2s infinite !important; }
 .mundo-pixel[data-animado="sim"] .mp-fumaca span:nth-child(3) { animation: mp-fumaca 3.6s steps(9) -2.4s infinite !important; }
+/* Mouse nas mini figuras (14/11/2026): luz de pixel no cursor, pulinho da cena e
+   faíscas no clique. Só transform/opacity. */
+.figura-pixel { position: relative; }
+.figura-pixel .fig-cursor { position: absolute; z-index: 3; left: var(--mx, 0); top: var(--my, 0); width: 12px; height: 12px; pointer-events: none; opacity: 0;
+  background: rgba(255, 243, 191, .55); box-shadow: 0 -3px 0 0 rgba(255, 243, 191, .4), 0 3px 0 0 rgba(255, 243, 191, .4), -3px 0 0 0 rgba(255, 243, 191, .4), 3px 0 0 0 rgba(255, 243, 191, .4);
+  transform: translate(-3px, -3px); }
+.figura-pixel[data-perto="sim"] .fig-cursor { opacity: 1; }
+.figura-pixel[data-perto="sim"] .fig-cena { animation: fig-pulinho .5s steps(2) 1 !important; }
+.figura-pixel .fig-faisca { position: absolute; z-index: 3; width: 8px; height: 8px; background: #f2c94c; box-shadow: 0 0 0 2px #fff3bf; pointer-events: none;
+  animation: fig-faisca .6s steps(5) forwards !important; }
+@keyframes fig-pulinho { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+@keyframes fig-faisca { from { transform: translate(-3px, -3px); opacity: 1; } to { transform: translate(calc(var(--fx) - 3px), calc(var(--fy) - 3px)); opacity: 0; } }
+
+/* Personagem da matéria em pé em cima do cartão (14/11/2026). 4 quadros na folha:
+   0-1 parado (respira, pisca), 2 pulo (acertou), 3 coça a cabeça (errou). Anda de
+   um lado para o outro em passos de pixel; vira o rosto na volta. */
+.px-boneco { position: absolute; bottom: calc(100% + 4px); left: 20px; width: clamp(60px, 7vw, 88px); z-index: 2;
+  background-size: 400% 100%; background-position: 0% 0; image-rendering: pixelated; pointer-events: none; }
+.px-boneco[data-animado="sim"] { animation: boneco-pisca 3.2s steps(1) infinite, boneco-anda 26s steps(14) infinite !important; }
+.px-boneco[data-reacao="acerto"] { background-position: 66.667% 0; }
+.px-boneco[data-reacao="erro"] { background-position: 100% 0; }
+.px-boneco[data-animado="sim"][data-reacao="acerto"] { animation: boneco-pulo .5s steps(4) 3 !important; }
+.px-boneco[data-animado="sim"][data-reacao="erro"] { animation: boneco-treme .4s steps(2) 3 !important; }
+@keyframes boneco-pisca { 0%, 85% { background-position: 0% 0; } 86%, 100% { background-position: 33.333% 0; } }
+/* anda, para um pouco, vira e volta (steps vale por trecho: parado não redesenha) */
+@keyframes boneco-anda {
+  0% { transform: translateX(0) scaleX(1); } 30% { transform: translateX(min(40vw, 320px)) scaleX(1); }
+  49.9% { transform: translateX(min(40vw, 320px)) scaleX(1); } 50% { transform: translateX(min(40vw, 320px)) scaleX(-1); }
+  80% { transform: translateX(0) scaleX(-1); } 99.9% { transform: translateX(0) scaleX(-1); } 100% { transform: translateX(0) scaleX(1); } }
+@keyframes boneco-pulo { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+@keyframes boneco-treme { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-3px); } }
+
+/* Vento nas árvores (14/11/2026): a camada da árvore entortada aparece e some em
+   degraus (steps), cada grupo num ritmo; o resto da camada é transparente. */
+.mundo-pixel .mp-vento { opacity: 0; }
+.mundo-pixel[data-animado="sim"] .mp-vento { animation: mp-vento 7s steps(1) infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-vento-b { animation: mp-vento 9s steps(1) -3s infinite !important; }
+/* rajada: quieto 3/4 do tempo, depois balança 2 vezes (medido: vento contínuo dobrava a composição) */
+@keyframes mp-vento { 0%, 74% { opacity: 0; } 75%, 83% { opacity: 1; } 84%, 88% { opacity: 0; } 89%, 96% { opacity: 1; } 97%, 100% { opacity: 0; } }
 .mundo-pixel[data-pausado="sim"] *, .mundo-pixel[data-pausado="sim"] { animation-play-state: paused !important; }
 
 @keyframes mp-noite { 0% { opacity: .6; } 4% { opacity: 0; } 44% { opacity: 0; } 54% { opacity: 1; } 94% { opacity: 1; } 100% { opacity: .6; } }

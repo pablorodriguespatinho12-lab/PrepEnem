@@ -19,6 +19,7 @@ import { AulaDoTema } from '@/components/simulado/aula-do-tema';
 import { temaDaQuestao } from '@/lib/aulas-dia-2';
 import { MundoPixel } from '@/components/pixel/mundo-pixel';
 import { CenaFim } from '@/components/pixel/cena-fim';
+import { Personagem } from '@/components/pixel/personagem';
 import { FiguraPixel } from '@/components/visual/figura-pixel';
 import type { NomeFigura } from '@/lib/visual/especificacao';
 import { useMundoAnimado } from '@/hooks/use-mundo-animado';
@@ -397,7 +398,8 @@ export default function ProvaDetailPage() {
           {telaCheia.ativa ? 'Sair da tela cheia' : 'Tela cheia'}
         </button>
       </div>
-      <div className="px-cartao p-5 md:p-8">
+      <div className="px-cartao relative p-5 md:p-8">
+      <Personagem materia={q?.materia} reacao={submitted && feedback ? (feedback.acertou ? 'acerto' : 'erro') : null} animado={mundo.animado} />
       <motion.button
         initial={{ opacity: 0, x: -12 }}
         animate={{ opacity: 1, x: 0 }}

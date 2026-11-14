@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { useTheme } from 'next-themes';
-import { PALETA_DIA, PALETA_NOITE, astro, ceu, nuvens, paisagem } from '@/lib/pixel/desenho';
+import { PALETA_DIA, PALETA_NOITE, arvores, arvoresAoVento, astro, ceu, nuvens, paisagem, type Arvore, type Paleta } from '@/lib/pixel/desenho';
 import { imagemPixel, tamanhoDoPixel } from './imagem-pixel';
 
 /* Fundo da prova: serra em pixel com o dia e a noite passando (Pablo, 12/11/2026:
@@ -19,6 +19,8 @@ interface Imagens {
   nuvensNoite: string;
   terraDia: string;
   terraNoite: string;
+  /** Árvores entortadas pelo vento: [dia grupo A, dia B, noite A, noite B]. */
+  vento: string[];
   sol: string;
   lua: string;
   chamine: { fx: number; fy: number };
@@ -31,14 +33,21 @@ function desenhar(): Imagens {
   const W = Math.ceil(window.innerWidth / px);
   const H = Math.ceil(window.innerHeight / px);
   const k = `${W}x${H}`;
+  // onde ficam a chaminé e as árvores (não depende da cor; vale também com a imagem guardada)
+  const { chamine, arvores: lista } = paisagem({ fillStyle: '', fillRect: () => {} }, W, H, PALETA_DIA);
   const terraDia = imagemPixel(`terra-dia-${k}`, W, H, (c) => {
-    paisagem(c, W, H, PALETA_DIA);
+    paisagem(c, W, H, PALETA_DIA, undefined, true);
+    arvores(c, PALETA_DIA, lista);
   });
   const terraNoite = imagemPixel(`terra-noite-${k}`, W, H, (c) => {
-    paisagem(c, W, H, PALETA_NOITE);
+    paisagem(c, W, H, PALETA_NOITE, undefined, true);
+    arvores(c, PALETA_NOITE, lista);
   });
-  // onde fica a chaminé (não depende da cor; vale também quando a imagem veio guardada)
-  const { chamine } = paisagem({ fillStyle: '', fillRect: () => {} }, W, H, PALETA_DIA);
+  // Vento (14/11/2026): metade das árvores em cada grupo, para não balançarem juntas.
+  const grupos = [lista.filter((_, i) => i % 2 === 0), lista.filter((_, i) => i % 2 === 1)];
+  const vento = [PALETA_DIA, PALETA_NOITE].flatMap((p, f) =>
+    grupos.map((g, j) => imagemPixel(`vento-${f}-${j}-${k}`, W, H, (c) => desenharVento(c, W, H, p, g))),
+  );
   const r = Math.max(4, Math.round(H * 0.05));
   const lado = 2 * r + 3;
   const hn = Math.round(H * 0.5);
@@ -49,12 +58,24 @@ function desenhar(): Imagens {
     nuvensNoite: imagemPixel(`nuvens-noite-${k}`, W * 2, hn, (c) => nuvens(c, W, hn, PALETA_NOITE)),
     terraDia,
     terraNoite,
+    vento,
     sol: imagemPixel(`sol-${r}`, lado, lado, (c) => astro(c, PALETA_DIA, r, false)),
     lua: imagemPixel(`lua-${r}`, lado, lado, (c) => astro(c, PALETA_NOITE, r, true)),
     chamine,
     px,
     raioAstro: lado * px,
   };
+}
+
+/** Camada de vento: a base (terra sem árvores) só onde há árvore, e a árvore entortada. */
+function desenharVento(c: { fillStyle: unknown }, W: number, H: number, p: Paleta, grupo: Arvore[]) {
+  const base = document.createElement('canvas');
+  base.width = W;
+  base.height = H;
+  const b = base.getContext('2d');
+  if (!b) return;
+  paisagem(b, W, H, p, undefined, true);
+  arvoresAoVento(c as CanvasRenderingContext2D, base, p, grupo, 2);
 }
 
 const fundo = (url: string): CSSProperties => ({ backgroundImage: `url(${url})` });
@@ -142,8 +163,13 @@ export function MundoPixel({ animado }: { animado: boolean }) {
         <span className="mp-passaro" />
         <span className="mp-passaro mp-passaro-2" />
       </div>
-      <div className="mp-camada" style={fundo(img.terraDia)} />
+      <div className="mp-camada" style={fundo(img.terraDia)}>
+        <div className="mp-camada mp-vento" style={fundo(img.vento[0])} />
+        <div className="mp-camada mp-vento mp-vento-b" style={fundo(img.vento[1])} />
+      </div>
       <div className="mp-camada mp-noite" style={fundo(img.terraNoite)}>
+        <div className="mp-camada mp-vento" style={fundo(img.vento[2])} />
+        <div className="mp-camada mp-vento mp-vento-b" style={fundo(img.vento[3])} />
         {VAGALUMES.map(([x, y], i) => (
           <span key={i} className="mp-vagalume" style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${i * 1.3}s` }} />
         ))}

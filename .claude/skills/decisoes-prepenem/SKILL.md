@@ -529,6 +529,15 @@ escolha, nível acima) estão em `calculo.md`, nesta pasta. **Leia antes de mexe
   mesmo dia). Pixelify Sans foi testada e caiu: "C" vira "O" e "5" vira "8" em
   negrito ("15%" lia "18%"). **Flip em CSS** (`.cartao-flip`, 0,45 s nos dois
   modos), não em framer: roda no compositor e não trava ao virar.
+  **Mais vivo (Pablo, 14/11/2026: "deixa mais animado tudo, as árvores, coloca até
+  personagens dependendo da questão"):** pinheiros com vento em rajadas (camadas
+  `mp-vento` só com as árvores entortadas, `arvoresAoVento`); personagem da matéria em pé
+  EM CIMA do cartão da prova (do lado não cabe: ~45 px na tela dele), anda, pisca, pula no
+  acerto e coça a cabeça no erro (`components/pixel/personagem.tsx`, folha de 4 quadros em
+  `lib/pixel/personagem.ts`). Mini figura: luz de pixel no cursor, pulinho e faíscas no
+  clique. Desenho da aula: brilhos piscando e onda de luz no cursor. Medido no build
+  (prova de Química): composição parada 128 → 168 ms (+31%), zero tarefa longa nova;
+  vento contínuo dava +85%, por isso rajada.
 - **Flashcard é a opção A, escolhida pelo Pablo em 05/10/2026** (entre A "flip
   firme" e B "revelar embaixo, pergunta fica na tela"): flip 3D de 0,42 s sem
   mola, pilha atrás, saída para o lado da resposta, Espaço vira e 1/2 respondem.
