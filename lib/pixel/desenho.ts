@@ -174,14 +174,18 @@ export function retanguloDaArvore(a: Arvore, folga = 3): { x: number; y: number;
   const m = Math.floor((3 + a.h * 0.6) / 2.2) + folga;
   return { x: a.x - m, y: a.chao - 2 - a.h - 1, w: m * 2 + 1, h: a.h + 4 };
 }
+/* Bug de 14/11/2026 ("às vezes as árvores somem"): o retângulo repintado com a base
+   apagava a árvore VIZINHA de outro grupo. Agora, depois da base, todas as árvores são
+   redesenhadas na ordem: as do grupo entortadas, as outras retas. */
 export function arvoresAoVento(
-  c: CanvasRenderingContext2D, base: CanvasImageSource, p: Paleta, lista: Arvore[], vento: number,
+  c: CanvasRenderingContext2D, base: CanvasImageSource, p: Paleta, todas: Arvore[], grupo: Arvore[], vento: number,
 ): void {
-  lista.forEach((a) => {
+  grupo.forEach((a) => {
     const r = retanguloDaArvore(a);
     c.drawImage(base, r.x, r.y, r.w, r.h, r.x, r.y, r.w, r.h);
   });
-  lista.forEach((a) => pinheiro(c, p, a.x, a.chao, a.h, vento));
+  const mexe = new Set(grupo);
+  todas.forEach((a) => pinheiro(c, p, a.x, a.chao, a.h, mexe.has(a) ? vento : 0));
 }
 
 /** Casinha; devolve a boca da chaminé (onde a fumaça nasce). */

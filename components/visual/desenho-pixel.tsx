@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useMemo, useRef } from 'react';
 import {
-  ENGROSSA_LINHA, LADO_DO_PIXEL, QUADROS_POR_SEGUNDO, brilhos, endurecerBordas, ondaDoCursor, separarSvg, tamanhoDoViewBox,
+  ENGROSSA_LINHA, LADO_DO_PIXEL, QUADROS_POR_SEGUNDO, brilhos, endurecerBordas, separarSvg, tamanhoDoViewBox,
 } from '@/lib/pixel/svg-pixel';
 import { useMundoAnimado } from '@/hooks/use-mundo-animado';
 
@@ -42,8 +42,6 @@ export function DesenhoPixel({ svg, className = '' }: { svg: string; className?:
   const altura = caixa ? Math.round(caixa.altura / LADO_DO_PIXEL) : 0;
 
   const { animado: mundoAnimado } = useMundoAnimado();
-  // cursor em pixels do desenho; escrito no pointermove, lido no próximo quadro (sem setState)
-  const cursor = useRef<{ x: number; y: number; desde: number } | null>(null);
 
   useEffect(() => {
     const original = fonte.current?.querySelector('svg');
@@ -53,13 +51,12 @@ export function DesenhoPixel({ svg, className = '' }: { svg: string; className?:
     let ocupado = false;
     let base: ImageData | null = null;
     const svgMexe = (original.getAnimations?.({ subtree: true }).length ?? 0) > 0;
-    // pinta a base + brilhos + onda do cursor (a base só é refeita se o SVG se mexe)
+    // pinta a base + brilhos (a base só é refeita se o SVG se mexe). Sem mouse: o Pablo
+    // não gostou da onda de luz no cursor (14/11/2026).
     const pintar = () => {
       if (!base) return;
       const quadro = new ImageData(new Uint8ClampedArray(base.data), largura, altura);
       if (mundoAnimado) brilhos(quadro.data, largura, altura, Math.floor(Date.now() / 900));
-      const c = cursor.current;
-      if (c) ondaDoCursor(quadro.data, largura, altura, c.x, c.y, Date.now() - c.desde);
       ctx.putImageData(quadro, 0, 0);
     };
     const desenhar = () => {
@@ -83,22 +80,14 @@ export function DesenhoPixel({ svg, className = '' }: { svg: string; className?:
     desenhar();
     const relogio = window.setInterval(() => {
       if (document.hidden) return;
-      if (svgMexe || mundoAnimado || cursor.current) desenhar();
+      if (svgMexe || mundoAnimado) desenhar();
     }, 1000 / QUADROS_POR_SEGUNDO);
     return () => { vivo = false; window.clearInterval(relogio); };
   }, [partes, largura, altura, mundoAnimado]);
 
-  const aoMover = (e: React.PointerEvent<HTMLDivElement>) => {
-    const r = e.currentTarget.getBoundingClientRect();
-    const x = ((e.clientX - r.left) / r.width) * largura;
-    const y = ((e.clientY - r.top) / r.height) * altura;
-    const antes = cursor.current;
-    cursor.current = { x, y, desde: antes?.desde ?? Date.now() };
-  };
-
   if (!partes || !caixa) return <div className={className} dangerouslySetInnerHTML={{ __html: svg }} />;
   return (
-    <div className={`relative ${className}`} onPointerMove={aoMover} onPointerLeave={() => { cursor.current = null; }}>
+    <div className={`relative ${className}`}>
       {/* só para o navegador calcular cores e animação; quem aparece é o canvas */}
       <div ref={fonte} aria-hidden className="desenho-pixel-fonte absolute inset-0 opacity-0 pointer-events-none" dangerouslySetInnerHTML={{ __html: partes.formas }} />
       <canvas ref={tela} width={largura} height={altura} className="desenho-pixel-tela block w-full h-auto" aria-hidden />

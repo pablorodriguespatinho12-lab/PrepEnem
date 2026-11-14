@@ -2,7 +2,7 @@
 import type { ReactNode } from 'react';
 import { circulo, ponto, type Pincel } from '@/lib/pixel/desenho';
 import { Cena, LOUSA, Ponto, Sprite, TINTA, type Lugar, type PropsFigura } from './pixel-cena';
-import { ROUPAS, pessoa, type Tipo } from '@/lib/pixel/personagem';
+import { GENTE, pessoa, type Jeito } from '@/lib/pixel/personagem';
 
 /* Cena da SITUAÇÃO de cada questão, na tela da questão (Pablo, 14/11/2026: "se a
    questão fala de um menino puxando uma corda, desenha o menino, pixelado, com uma
@@ -58,11 +58,12 @@ const gotas = (x: number, y: number, n: number, cor: string, queda = 22, dur = 1
     <Ponto key={`g${x}-${i}`} x={px(x)} y={py(y)} tam={2} cor={cor} anim="anda" dy={queda} dur={dur} atraso={-i * (dur / n)} />
   ));
 
-/** Pessoa de 22 × 22 respirando e piscando (2 quadros), em pé com os pés em `chao`. */
-const desenhosDePessoa: Partial<Record<Tipo, (c: Pincel, q: number) => void>> = {};
-function Gente({ tipo, x, chao, fps = 2 }: { tipo: Tipo; x: number; chao: number; fps?: number }) {
-  desenhosDePessoa[tipo] ??= (c, q) => pessoa(c, -5, q, ROUPAS[tipo]);
-  return <Sprite chave={`gente-${tipo}`} w={22} h={22} quadros={2} desenhar={desenhosDePessoa[tipo]!} x={px(x)} y={py(chao - 21)} largura={px(22)} fps={fps} />;
+/** Pessoa de 22 × 22 respirando e piscando (2 quadros), em pé com os pés em `chao`.
+    ox = -3: com -5 o braço esquerdo saía da borda do quadro e sumia (14/11/2026). */
+const desenhosDePessoa: Partial<Record<Jeito, (c: Pincel, q: number) => void>> = {};
+function Gente({ jeito, x, chao, fps = 2 }: { jeito: Jeito; x: number; chao: number; fps?: number }) {
+  desenhosDePessoa[jeito] ??= (c, q) => pessoa(c, -3, q, GENTE[jeito]);
+  return <Sprite chave={`gente2-${jeito}`} w={22} h={22} quadros={2} desenhar={desenhosDePessoa[jeito]!} x={px(x)} y={py(chao - 21)} largura={px(22)} fps={fps} />;
 }
 
 /* ---------- desenhos parados ---------- */
@@ -78,11 +79,12 @@ function panela(c: Pincel, x: number, y: number) {
   ponto(c, '#6fb7d6', x + 2, y + 2, 22, 3);
   ponto(c, TINTA, x - 4, y + 2, 4, 2);
 }
+/** Frasco: rótulo em cima, líquido no FUNDO (Pablo, 14/11/2026: "deixa o líquido mais ao chão"). */
 function frasco(c: Pincel, x: number, y: number, liquido: string | null, rotulo: string) {
   caixa(c, x + 5, y, 6, 5, '#dfe6e1');
   caixa(c, x, y + 4, 16, 22, '#eef6f8');
-  if (liquido) ponto(c, liquido, x + 1, y + 12, 14, 13);
-  caixa(c, x + 2, y + 13, 12, 6, rotulo);
+  caixa(c, x + 2, y + 6, 12, 6, rotulo);
+  if (liquido) { ponto(c, liquido, x + 1, y + 15, 14, 10); ponto(c, '#ffffff', x + 1, y + 15, 14, 1); }
 }
 
 /* ---------- as cenas ---------- */
@@ -93,7 +95,7 @@ const FogaoMetano = cena('cena-fogao-metano', (c) => {
   ponto(c, '#c2702a', 92, 50, 20, 2); // cano do gás saindo da parede
 }, [L(14, 4), L(80, 8), L(15, 86), L(85, 86)], () => (
   <>
-    <Gente tipo="biologia" x={22} chao={56} />
+    <Gente jeito="cozinheira" x={22} chao={56} />
     <Sprite chave="chama-azul" w={12} h={14} quadros={3} desenhar={chamaAzul} x={px(64)} y={py(24)} largura={px(12)} fps={8} />
     {bolhas(68, 12, 5, 'rgba(255,255,255,.85)', 18, 2.6)}
     {Array.from({ length: 4 }, (_, i) => <Ponto key={i} x={px(110 - i * 4)} y={py(50)} tam={1.6} cor="#4a8fe0" anim="anda" dx={-px(18)} dur={1.6} atraso={-i * 0.4} />)}
@@ -123,8 +125,8 @@ const DoisFrascos = cena('cena-dois-frascos', (c) => {
   caixa(c, 76, 39, 14, 6, '#f2d27a');
 }, [L(25, 4), L(70, 4), L(25, 86), L(70, 86)], () => (
   <>
-    <Gente tipo="quimica" x={46} chao={56} />
-    <Ponto x={px(23)} y={py(37)} tam={px(14)} cor="rgba(255,255,255,.55)" anim="vai-e-volta" dy={2} dur={1.2} />
+    <Gente jeito="cientista" x={46} chao={56} />
+    {bolhas(26, 49, 3, 'rgba(255,255,255,.9)', 9, 1.8)}
     {Array.from({ length: 5 }, (_, i) => <Ponto key={i} x={px(91)} y={py(25)} tam={3} cor="rgba(154,163,168,.7)" anim="anda" dx={22} dy={-8 - i * 2} dur={1.8} atraso={-i * 0.36} redondo />)}
   </>
 ));
@@ -153,7 +155,7 @@ const Botijao = cena('cena-botijao', (c) => {
 }, [L(16, 4), L(70, 4), L(16, 86), L(78, 86)], () => (
   <>
     <Sprite chave="chama-azul" w={12} h={14} quadros={3} desenhar={chamaAzul} x={px(64)} y={py(24)} largura={px(12)} fps={8} />
-    <Gente tipo="fisica" x={92} chao={56} />
+    <Gente jeito="menino" x={92} chao={56} />
     {Array.from({ length: 5 }, (_, i) => <Ponto key={i} x={px(28)} y={py(22)} tam={1.6} cor="#4a8fe0" anim="anda" dx={px(18)} dur={1.8} atraso={-i * 0.36} />)}
   </>
 ));
@@ -195,7 +197,7 @@ const OleoSabao = cena('cena-oleo-sabao', (c) => {
   caixa(c, 86, 44, 26, 12, '#bfe6f2'); ponto(c, '#ffffff', 90, 47, 6, 2); // barra de sabão
 }, [L(20, 4), L(45, 86), L(72, 86), L(84, 30)], () => (
   <>
-    <Gente tipo="leitura" x={-3} chao={56} />
+    <Gente jeito="vovo" x={1} chao={56} />
     {gotas(42, 33, 4, '#f2d27a', 12, 1.2)}
     {bolhas(96, 42, 5, 'rgba(255,255,255,.9)', 24, 2.4)}
   </>

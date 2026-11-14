@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { circulo, ponto, type Pincel } from '@/lib/pixel/desenho';
 import { imagemPixel } from '@/components/pixel/imagem-pixel';
 import { useMundoAnimado } from '@/hooks/use-mundo-animado';
@@ -252,55 +252,13 @@ const FIGURAS: Record<NomeFigura, (p: Props) => JSX.Element> = {
   ...CENAS_QUESTOES,
 };
 
-/* Mouse na figura (Pablo, 14/11/2026: "se eu passar o cursor interage"): uma luz de
-   pixel segue o cursor presa à grade, a cena dá um pulinho e o clique solta faíscas.
-   Tudo escrito direto no DOM (variável CSS e atributo), sem setState: mexer o mouse
-   não pode passar pelo React (medir-fluidez). */
-const GRADE_PX = 6;
-const FAISCAS = 8;
-function aoMover(e: ReactPointerEvent<HTMLDivElement>) {
-  const el = e.currentTarget;
-  const r = el.getBoundingClientRect();
-  const x = Math.floor((e.clientX - r.left) / GRADE_PX) * GRADE_PX;
-  const y = Math.floor((e.clientY - r.top) / GRADE_PX) * GRADE_PX;
-  el.style.setProperty('--mx', `${x}px`);
-  el.style.setProperty('--my', `${y}px`);
-  el.dataset.perto = 'sim';
-}
-function aoSair(e: ReactPointerEvent<HTMLDivElement>) {
-  e.currentTarget.dataset.perto = 'nao';
-}
-function faiscas(e: ReactPointerEvent<HTMLDivElement>) {
-  const el = e.currentTarget;
-  const r = el.getBoundingClientRect();
-  for (let i = 0; i < FAISCAS; i++) {
-    const f = document.createElement('span');
-    const ang = (i / FAISCAS) * Math.PI * 2;
-    f.className = 'fig-faisca';
-    f.style.left = `${e.clientX - r.left}px`;
-    f.style.top = `${e.clientY - r.top}px`;
-    f.style.setProperty('--fx', `${Math.round(Math.cos(ang) * 4) * GRADE_PX}px`);
-    f.style.setProperty('--fy', `${Math.round(Math.sin(ang) * 4) * GRADE_PX}px`);
-    el.appendChild(f);
-    window.setTimeout(() => f.remove(), 650);
-  }
-}
-
 /** semConta: na tela da questão a figura ajuda a entender sem entregar a conta. */
 export function FiguraPixel({ nome, rotulos, semConta = false }: { nome: NomeFigura; rotulos?: string[]; semConta?: boolean }) {
   const { animado } = useMundoAnimado();
   const Figura = FIGURAS[nome];
   return (
-    <div
-      className="figura-pixel"
-      data-animado={animado ? 'sim' : 'nao'}
-      data-perto="nao"
-      onPointerMove={aoMover}
-      onPointerLeave={aoSair}
-      onPointerDown={faiscas}
-    >
+    <div className="figura-pixel" data-animado={animado ? 'sim' : 'nao'}>
       <Figura rotulos={rotulos} semConta={semConta} />
-      <span className="fig-cursor" aria-hidden />
     </div>
   );
 }

@@ -879,18 +879,7 @@ html [data-sonner-toaster][data-theme] {
 .mundo-pixel[data-animado="sim"] .mp-fumaca span { animation: mp-fumaca 3.6s steps(9) infinite !important; }
 .mundo-pixel[data-animado="sim"] .mp-fumaca span:nth-child(2) { animation: mp-fumaca 3.6s steps(9) -1.2s infinite !important; }
 .mundo-pixel[data-animado="sim"] .mp-fumaca span:nth-child(3) { animation: mp-fumaca 3.6s steps(9) -2.4s infinite !important; }
-/* Mouse nas mini figuras (14/11/2026): luz de pixel no cursor, pulinho da cena e
-   faíscas no clique. Só transform/opacity. */
 .figura-pixel { position: relative; }
-.figura-pixel .fig-cursor { position: absolute; z-index: 3; left: var(--mx, 0); top: var(--my, 0); width: 12px; height: 12px; pointer-events: none; opacity: 0;
-  background: rgba(255, 243, 191, .55); box-shadow: 0 -3px 0 0 rgba(255, 243, 191, .4), 0 3px 0 0 rgba(255, 243, 191, .4), -3px 0 0 0 rgba(255, 243, 191, .4), 3px 0 0 0 rgba(255, 243, 191, .4);
-  transform: translate(-3px, -3px); }
-.figura-pixel[data-perto="sim"] .fig-cursor { opacity: 1; }
-.figura-pixel[data-perto="sim"] .fig-cena { animation: fig-pulinho .5s steps(2) 1 !important; }
-.figura-pixel .fig-faisca { position: absolute; z-index: 3; width: 8px; height: 8px; background: #f2c94c; box-shadow: 0 0 0 2px #fff3bf; pointer-events: none;
-  animation: fig-faisca .6s steps(5) forwards !important; }
-@keyframes fig-pulinho { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
-@keyframes fig-faisca { from { transform: translate(-3px, -3px); opacity: 1; } to { transform: translate(calc(var(--fx) - 3px), calc(var(--fy) - 3px)); opacity: 0; } }
 
 /* Cena da questão (14/11/2026): sprite de N quadros + pontos que andam 1 pixel por passo. */
 .figura-pixel .fig-sprite { position: absolute; overflow: hidden; pointer-events: none; }
@@ -922,10 +911,11 @@ html [data-sonner-toaster][data-theme] {
 /* Vento nas árvores (14/11/2026): a camada da árvore entortada aparece e some em
    degraus (steps), cada grupo num ritmo; o resto da camada é transparente. */
 .mundo-pixel .mp-vento { opacity: 0; }
-.mundo-pixel[data-animado="sim"] .mp-vento { animation: mp-vento 7s steps(1) infinite !important; }
-.mundo-pixel[data-animado="sim"] .mp-vento-b { animation: mp-vento 9s steps(1) -3s infinite !important; }
-/* rajada: quieto 3/4 do tempo, depois balança 2 vezes (medido: vento contínuo dobrava a composição) */
-@keyframes mp-vento { 0%, 74% { opacity: 0; } 75%, 83% { opacity: 1; } 84%, 88% { opacity: 0; } 89%, 96% { opacity: 1; } 97%, 100% { opacity: 0; } }
+.mundo-pixel[data-animado="sim"] .mp-vento { animation: mp-vento 2.4s steps(1) infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-vento-b { animation: mp-vento 3s steps(1) -1.1s infinite !important; }
+/* Sempre balançando (Pablo, 14/11/2026: "elas sempre se movimentando"); a rajada
+   de antes deixava as árvores paradas 3/4 do tempo. */
+@keyframes mp-vento { 0%, 49% { opacity: 0; } 50%, 100% { opacity: 1; } }
 .mundo-pixel[data-pausado="sim"] *, .mundo-pixel[data-pausado="sim"] { animation-play-state: paused !important; }
 
 @keyframes mp-noite { 0% { opacity: .6; } 4% { opacity: 0; } 44% { opacity: 0; } 54% { opacity: 1; } 94% { opacity: 1; } 100% { opacity: .6; } }

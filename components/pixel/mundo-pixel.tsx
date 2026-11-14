@@ -46,7 +46,7 @@ function desenhar(): Imagens {
   // Vento (14/11/2026): metade das árvores em cada grupo, para não balançarem juntas.
   const grupos = [lista.filter((_, i) => i % 2 === 0), lista.filter((_, i) => i % 2 === 1)];
   const vento = [PALETA_DIA, PALETA_NOITE].flatMap((p, f) =>
-    grupos.map((g, j) => imagemPixel(`vento-${f}-${j}-${k}`, W, H, (c) => desenharVento(c, W, H, p, g))),
+    grupos.map((g, j) => imagemPixel(`vento2-${f}-${j}-${k}`, W, H, (c) => desenharVento(c, W, H, p, lista, g))),
   );
   const r = Math.max(4, Math.round(H * 0.05));
   const lado = 2 * r + 3;
@@ -68,14 +68,14 @@ function desenhar(): Imagens {
 }
 
 /** Camada de vento: a base (terra sem árvores) só onde há árvore, e a árvore entortada. */
-function desenharVento(c: { fillStyle: unknown }, W: number, H: number, p: Paleta, grupo: Arvore[]) {
+function desenharVento(c: { fillStyle: unknown }, W: number, H: number, p: Paleta, todas: Arvore[], grupo: Arvore[]) {
   const base = document.createElement('canvas');
   base.width = W;
   base.height = H;
   const b = base.getContext('2d');
   if (!b) return;
   paisagem(b, W, H, p, undefined, true);
-  arvoresAoVento(c as CanvasRenderingContext2D, base, p, grupo, 2);
+  arvoresAoVento(c as CanvasRenderingContext2D, base, p, todas, grupo, 2);
 }
 
 const fundo = (url: string): CSSProperties => ({ backgroundImage: `url(${url})` });
