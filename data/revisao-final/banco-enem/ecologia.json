@@ -1,0 +1,1557 @@
+[
+  {
+    "id": "d2-banco-bio-eco-01",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Pesquisadores que estudam uma área de pesca descreveram esta cadeia alimentar: fitoplâncton (algas microscópicas que fazem o próprio alimento com a luz) → sardinhas → atuns. Eles mediram que os atuns da área recebem 600 kcal (quilocalorias, a unidade de energia dos rótulos de comida) por dia, vindas das sardinhas que comem. Considere que só 10% da energia de um degrau da cadeia passa para o degrau seguinte.\nQuanta energia, por dia, o fitoplâncton da área precisa ter para sustentar esses atuns?",
+    "A": "6 kcal",
+    "B": "6 000 kcal",
+    "C": "60 000 kcal",
+    "D": "600 000 kcal",
+    "E": "60 kcal",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Atum recebe 600 = 10% das sardinhas → sardinhas = 6 000. Sardinhas = 10% do fitoplâncton → fitoplâncton = 60 000 kcal. C. Erros: A = dividiu por 10 duas vezes; B = voltou um degrau só; D = voltou três degraus; E = dividiu por 10 uma vez.",
+      "ideia": "A conta anda de trás para a frente: cada degrau para baixo tem 10 vezes mais energia. 600 vira 6 000 nas sardinhas e 60 000 kcal no fitoplâncton.",
+      "pecas": [
+        {
+          "termo": "Fitoplâncton",
+          "significado": "Algas tão pequenas que só se veem no microscópio. Boiam na água do mar e fazem o próprio alimento com a luz: são o produtor da cadeia."
+        },
+        {
+          "termo": "Os 10%",
+          "significado": "Só cerca de 10% da energia de um degrau passa para quem o come. 10% = 10 de cada 100 = 1 de cada 10."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A cadeia é: fitoplâncton → sardinha → atum.\nO atum recebe 600 kcal por dia.\nA questão quer saber quanta energia precisa existir lá embaixo, no fitoplâncton.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Do fitoplâncton ao atum",
+            "rotulos": [
+              "fitoplâncton = ?",
+              "sardinhas",
+              "atuns 600 kcal",
+              "passa 10% por degrau"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Subindo a cadeia, a energia vira 10% a cada degrau.\nAqui a conta é ao contrário: já sabemos o topo e queremos a base.\nEntão cada degrau para baixo tem 10 vezes mais energia que o de cima."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Número pequeno primeiro: 10% de 100 é 10. Para voltar do 10 ao 100, multiplica por 10.\nAs sardinhas: 10% de quanto dá 600? De 6 000, porque 6 000 ÷ 10 = 600.\nO fitoplâncton: 10% de quanto dá 6 000? De 60 000.\nSão dois degraus, então são duas vezes × 10.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Voltando a cadeia",
+            "dados": [
+              "\\text{atuns} = 600\\,\\text{kcal}",
+              "\\text{passa } 10\\%"
+            ],
+            "formula": "E = 600 \\times 10 \\times 10",
+            "legenda": [
+              "um × 10 para cada degrau que desce",
+              "dois degraus: atum → sardinha → fitoplâncton"
+            ],
+            "contas": [
+              "600 \\times 10 = 6\\,000",
+              "6\\,000 \\times 10 = 60\\,000"
+            ],
+            "resultado": "E = 60\\,000\\,\\text{kcal}",
+            "nota": "O fitoplâncton precisa de 60 000 kcal."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada ser gasta quase toda a energia que come para se mexer, respirar e se manter vivo.\nSó cerca de 10% vira corpo e fica para quem o come.\nPor isso a base da cadeia precisa ser muito maior que o topo."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 60 000 kcal.\nA (6) dividiu por 10 duas vezes: andou para o lado errado.\nB (6 000) é a energia das sardinhas: voltou só um degrau.\nD (600 000) voltou três degraus, mas a cadeia só tem dois até o fitoplâncton.\nE (60) dividiu por 10 em vez de multiplicar."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma coruja recebe 30 kcal dos ratos. Quanta energia os ratos tinham, se passa 10%?",
+        "opcoes": [
+          "3 kcal",
+          "300 kcal",
+          "3 000 kcal",
+          "33 kcal"
+        ],
+        "certa": "300 kcal",
+        "resposta": "10% de 300 é 30. Um degrau para baixo: 30 × 10 = 300 kcal."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-02",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Um guia de alimentação para gestantes recomenda comer peixes pequenos, como a sardinha, e evitar comer com frequência peixes grandes que se alimentam de outros peixes, como o cação e o atum. O motivo é o mercúrio, um metal que chega aos rios e mares pelo garimpo e por indústrias. O corpo dos seres vivos não consegue eliminar o mercúrio.\nA recomendação do guia se explica porque os peixes grandes",
+    "A": "acumulam o mercúrio de todos os peixes que comeram ao longo da vida.",
+    "B": "têm mais água no corpo, e o mercúrio fica dissolvido nessa água.",
+    "C": "vivem perto da superfície, onde o mercúrio cai com a chuva.",
+    "D": "transformam o mercúrio em energia, que passa para quem os come.",
+    "E": "comem algas, que são os seres que mais guardam mercúrio.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Veneno que o corpo não elimina se acumula ao longo da cadeia: o topo (peixe que come peixe) tem mais. A. Erros: B e C inventam motivo sem relação com a cadeia; D confunde veneno com energia; E erra quem come o quê (alga é a base e tem menos).",
+      "ideia": "O mercúrio não sai do corpo. Quem come muitos peixes junta o mercúrio de todos eles, então o peixe grande, no topo da cadeia, fica com mais.",
+      "pecas": [
+        {
+          "termo": "Mercúrio",
+          "significado": "Metal tóxico usado no garimpo de ouro. Vai para a água, entra nos seres vivos e fica guardado no corpo, sem sair."
+        },
+        {
+          "termo": "Acúmulo na cadeia",
+          "significado": "Quando um veneno não sai do corpo, cada ser guarda o veneno de tudo o que comeu. Quanto mais alto na cadeia, mais veneno junto."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O guia manda preferir sardinha e evitar cação e atum.\nO motivo é o mercúrio, que o corpo não elimina.\nA questão quer saber por que o peixe grande é o mais perigoso.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Mercúrio no mar",
+            "rotulos": [
+              "algas",
+              "sardinha",
+              "cação e atum",
+              "mercúrio não sai do corpo"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "As algas pegam um pouco de mercúrio da água.\nA sardinha come muitas algas e guarda o mercúrio de todas.\nO atum come muitas sardinhas e guarda o mercúrio de todas elas.\nQuem está no topo junta mais."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Veneno que não sai do corpo + pergunta de quem tem mais = o topo da cadeia.\nPeixe que come peixe está acima do peixe que come alga.\nPor isso o guia manda evitar o cação e o atum."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A energia diminui a cada degrau, mas o mercúrio não: ele não é gasto nem eliminado.\nCada sardinha leva o seu mercúrio para dentro do atum que a come.\nUm atum que comeu mil sardinhas guarda o mercúrio de mil sardinhas."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, o peixe grande acumula o mercúrio de todos os peixes que comeu.\nB e C dão motivos (água no corpo, chuva) que não têm a ver com quem come quem.\nD confunde: o mercúrio não vira energia, ele fica guardado.\nE erra a cadeia: cação e atum comem peixes, e as algas estão na base, com menos mercúrio."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Cadeia: capim → gafanhoto → sapo → cobra. Um agrotóxico que não sai do corpo fica mais em qual?",
+        "opcoes": [
+          "Capim",
+          "Gafanhoto",
+          "Sapo",
+          "Cobra"
+        ],
+        "certa": "Cobra",
+        "resposta": "A cobra está no topo e junta o veneno de todos os sapos que comeu."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-03",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "O boi come capim, mas o corpo dele, sozinho, não consegue quebrar a celulose, a parte dura e fibrosa das folhas. No estômago do boi vivem bilhões de bactérias que quebram a celulose e soltam açúcares que o boi aproveita. As bactérias, por sua vez, ganham abrigo quente e comida chegando o tempo todo. Sem essas bactérias, o boi passaria fome mesmo comendo muito capim.\nA relação entre o boi e essas bactérias é de",
+    "A": "parasitismo, porque as bactérias vivem dentro do corpo do boi.",
+    "B": "competição, porque o boi e as bactérias querem o mesmo capim.",
+    "C": "predação, porque as bactérias comem o capim que é do boi.",
+    "D": "parasitismo, porque o boi rouba o alimento das bactérias.",
+    "E": "mutualismo, porque o boi e as bactérias ganham com a relação.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Boi ganha açúcar da celulose, bactéria ganha abrigo e comida: os dois ganham = mutualismo. E. Erros: A acha que morar dentro já é parasitismo; B vê disputa onde há troca; C confunde comer capim com predação; D inverte e diz que um perde.",
+      "ideia": "O boi ganha o açúcar que sozinho não tiraria do capim. As bactérias ganham casa e comida: os dois ganham, então é mutualismo.",
+      "pecas": [
+        {
+          "termo": "Celulose",
+          "significado": "A parte dura e fibrosa das folhas, como o fio do bagaço da cana. Tem açúcar preso dentro, mas o boi não consegue soltá-lo sozinho."
+        },
+        {
+          "termo": "Mutualismo",
+          "significado": "Relação em que os dois seres ganham, como a abelha (ganha néctar) e a flor (ganha o pólen levado a outra flor)."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Bactérias vivem no estômago do boi e quebram a celulose do capim.\nO boi aproveita o açúcar; as bactérias ganham abrigo e comida.\nA questão quer o nome dessa relação.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Boi e bactérias",
+            "rotulos": [
+              "capim (celulose)",
+              "boi",
+              "bactérias no estômago",
+              "cada um ganha o quê?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Olhe o que cada lado ganha ou perde.\nBoi: ganha açúcar do capim. Sem as bactérias, passaria fome.\nBactérias: ganham um lugar quente e comida sem parar.\nNinguém perde."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Monte a tabelinha de ganhos:\nos dois ganham = mutualismo; um ganha e o outro perde = parasitismo ou predação;\nos dois disputam a mesma coisa = competição.\nAqui é ganha e ganha: mutualismo."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Morar dentro de outro ser não decide a relação. O que decide é quem ganha e quem perde.\nO texto diz que o boi depende das bactérias para não passar fome.\nUm parasita faria o boi perder, e aqui ele ganha."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, mutualismo.\nA acha que viver dentro do boi já é parasitismo, mas o boi ganha com isso.\nB fala de disputa, mas as bactérias ajudam o boi a usar o capim.\nC chama de predação, mas ninguém está comendo o outro.\nD inverte os papéis e diz que um perde, o que o texto não mostra."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um peixe pequeno come os restos de comida entre os dentes de um peixe grande, que fica limpo. É:",
+        "opcoes": [
+          "Mutualismo",
+          "Parasitismo",
+          "Competição",
+          "Predação"
+        ],
+        "certa": "Mutualismo",
+        "resposta": "O pequeno ganha comida e o grande ganha limpeza: os dois ganham."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-04",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Em praças de algumas cidades, árvores antigas aparecem cobertas por erva-de-passarinho, uma planta que cresce presa nos galhos. Ela enfia raízes especiais dentro do galho e tira dali a água e os sais minerais que a árvore puxou do solo. Os galhos tomados ficam fracos e secam, e a prefeitura precisa cortá-los. As sementes da erva são espalhadas por aves que comem os seus frutos.\nA relação entre a erva-de-passarinho e a árvore é de",
+    "A": "decomposição, porque a erva desmancha os galhos secos.",
+    "B": "competição, porque as duas plantas disputam a luz do sol.",
+    "C": "predação, porque a erva mata a árvore e a come de uma vez.",
+    "D": "parasitismo, porque a erva ganha e a árvore perde.",
+    "E": "mutualismo, porque as aves espalham as sementes da erva.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "A erva tira água e sais da árvore e os galhos secam: um ganha, o outro perde, sem matar de uma vez = parasitismo. D. Erros: A confunde com decompositor; B não é o que o texto mostra; C exagera (não mata de uma vez); E fala da relação ave-erva, não erva-árvore.",
+      "ideia": "A erva-de-passarinho vive da água e dos sais que rouba do galho, e a árvore enfraquece. Um ganha e o outro perde: parasitismo.",
+      "pecas": [
+        {
+          "termo": "Erva-de-passarinho",
+          "significado": "Planta que nasce em cima de galhos de árvores. Tem esse nome porque passarinhos comem seus frutos e soltam as sementes em outros galhos."
+        },
+        {
+          "termo": "Parasitismo",
+          "significado": "Relação em que um ser vive às custas do outro: o parasita ganha e o hospedeiro perde, mas em geral não morre na hora. Exemplo: o piolho na cabeça."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A erva cresce no galho e tira dele água e sais minerais.\nOs galhos ficam fracos e secam.\nA questão quer a relação entre a erva e a árvore, não entre a erva e as aves.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Erva no galho",
+            "rotulos": [
+              "árvore da praça",
+              "erva-de-passarinho",
+              "aves comem o fruto",
+              "galhos secam"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Erva: ganha água e sais sem precisar de raiz no chão.\nÁrvore: perde água e sais, e os galhos tomados secam.\nA árvore não morre na hora: vai enfraquecendo aos poucos."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Um ganha e o outro perde. Sobram predação e parasitismo.\nPredação: um mata e come o outro, como a onça e o veado.\nParasitismo: um vive às custas do outro sem matar logo, como o piolho.\nA erva fica anos no galho: parasitismo."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O parasita precisa que o hospedeiro continue vivo, porque vive dele.\nSe a árvore morresse logo, a erva perderia a sua fonte de água.\nPor isso o dano é lento: galho a galho."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, parasitismo.\nA confunde com decompositor, que desmancha ser morto; a erva tira água de galho vivo.\nB fala de disputa por luz, mas o texto mostra a erva tirando água da árvore.\nC diz que a erva mata de uma vez, e o dano é lento.\nE descreve a erva e as aves, e a pergunta é sobre a erva e a árvore."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "O carrapato suga o sangue do cachorro, que fica fraco mas continua vivo. Que relação é essa?",
+        "opcoes": [
+          "Predação",
+          "Parasitismo",
+          "Mutualismo",
+          "Competição"
+        ],
+        "certa": "Parasitismo",
+        "resposta": "O carrapato ganha sangue e o cachorro perde, sem morrer: parasitismo."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-05",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "O capim-braquiária veio da África para virar pasto de gado no Brasil. Hoje ele também aparece dentro de áreas protegidas de cerrado. Ele cresce rápido, forma um tapete fechado que cobre o chão e faz sombra sobre as sementes e as mudinhas das plantas nativas do cerrado (as que já viviam aqui). Nos trechos onde o capim chega, o número de espécies nativas cai.\nO problema descrito acontece porque o capim-braquiária",
+    "A": "é um consumidor e come as mudas das plantas nativas.",
+    "B": "é uma espécie exótica invasora que vence a disputa por luz e espaço.",
+    "C": "é um parasita que suga a seiva das plantas nativas.",
+    "D": "solta um veneno que se acumula ao longo da cadeia alimentar.",
+    "E": "é nativo do cerrado e por isso cresce melhor que as outras plantas.",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Veio da África (exótica), se espalha e toma o espaço das nativas (invasora), disputando luz e chão (competição). B. Erros: A trata planta como consumidor; C inventa sugar seiva; D traz acúmulo de veneno que o texto não cita; E erra a origem.",
+      "ideia": "O capim veio de fora e cresce tão rápido que tampa a luz das mudinhas nativas. É uma espécie exótica invasora ganhando a competição por luz e espaço.",
+      "pecas": [
+        {
+          "termo": "Espécie exótica",
+          "significado": "Ser vivo trazido de outro lugar pelo ser humano. Quando se espalha e toma o espaço das nativas, vira espécie invasora."
+        },
+        {
+          "termo": "Competição",
+          "significado": "Dois seres disputam o mesmo recurso, como luz, água ou espaço. Quem pega mais deixa menos para o outro."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O capim-braquiária veio da África e entrou no cerrado.\nEle cobre o chão e faz sombra nas mudinhas nativas.\nA questão quer o motivo de as espécies nativas sumirem.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Capim de fora no cerrado",
+            "rotulos": [
+              "capim-braquiária",
+              "veio da África",
+              "mudas nativas na sombra",
+              "espécies nativas caem"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Planta precisa de luz para fazer o próprio alimento.\nO capim cresce rápido e fecha o chão como um tapete.\nAs mudinhas nativas ficam na sombra, crescem pouco e morrem.\nO capim fica com a luz e o espaço que eram delas."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Duas pistas no texto:\n\"veio da África\" = espécie exótica;\n\"tapete que cobre o chão e faz sombra\" = disputa por luz e espaço, ou seja, competição.\nJuntando: exótica invasora vencendo a competição."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Na África, o capim tem bichos e doenças que seguram o seu crescimento.\nAqui ele chegou sem esses inimigos naturais e se espalha sem freio.\nAs plantas nativas não estão adaptadas a disputar com ele e perdem o lugar."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, espécie exótica invasora que vence a disputa por luz e espaço.\nA erra: capim é planta, produtor, e não come outras plantas.\nC inventa: o texto não diz que ele suga seiva.\nD traz veneno na cadeia, que o texto não cita.\nE erra a origem: o texto diz que ele veio da África."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Duas plantas crescem lado a lado e disputam a água do mesmo solo. Que relação é essa?",
+        "opcoes": [
+          "Competição",
+          "Mutualismo",
+          "Parasitismo",
+          "Predação"
+        ],
+        "certa": "Competição",
+        "resposta": "As duas querem o mesmo recurso, a água: competição."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-06",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Um produtor de alface orgânica tinha problemas com pulgões, insetos pequenos que sugam a seiva (o caldo que corre dentro da planta) das folhas. Em vez de usar agrotóxico, ele comprou joaninhas e as soltou na estufa. Cada joaninha adulta come dezenas de pulgões por dia. Em um mês, os pulgões diminuíram muito e a alface foi vendida sem resto de veneno.\nNesse controle, a relação entre a joaninha e o pulgão e uma vantagem do método são, respectivamente,",
+    "A": "mutualismo; a joaninha ajuda o pulgão a se espalhar pela estufa.",
+    "B": "parasitismo; o veneno da joaninha se acumula na alface.",
+    "C": "predação; não deixa agrotóxico, que se acumularia na cadeia alimentar.",
+    "D": "competição; a joaninha disputa a seiva da alface com o pulgão.",
+    "E": "parasitismo; a joaninha vive dentro do pulgão sem matá-lo.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "A joaninha mata e come o pulgão = predação; sem agrotóxico, não há veneno que se acumule na cadeia. C. Erros: A vê ganha-ganha onde o pulgão morre; B e E chamam de parasitismo e inventam fatos; D diz que a joaninha come seiva, e ela come o pulgão.",
+      "ideia": "A joaninha caça e come o pulgão: é predação. Usar um predador no lugar do veneno deixa a alface limpa e não põe agrotóxico na cadeia alimentar.",
+      "pecas": [
+        {
+          "termo": "Pulgão",
+          "significado": "Inseto bem pequeno, verde ou preto, que fica embaixo das folhas sugando a seiva. A planta enfraquece e as folhas enrolam."
+        },
+        {
+          "termo": "Controle biológico",
+          "significado": "Usar um inimigo natural (predador ou doença) para segurar uma praga, no lugar do veneno. Exemplo: joaninhas contra pulgões."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Pulgões atacavam a alface. O produtor soltou joaninhas, que comem os pulgões.\nA questão pede duas coisas, nesta ordem:\nque relação há entre joaninha e pulgão, e que vantagem o método traz.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Joaninhas na estufa",
+            "rotulos": [
+              "alface",
+              "pulgão",
+              "joaninha",
+              "sem agrotóxico"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A cadeia na estufa é: alface → pulgão → joaninha.\nA joaninha mata e come o pulgão: um ganha, o outro morre.\nCom menos pulgões, a alface cresce sem precisar de veneno."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Um mata e come o outro = predação. Isso já elimina A, B, D e E.\nSobra conferir a vantagem de C: sem agrotóxico, nenhum veneno entra na cadeia alimentar.\nE veneno que entra na cadeia vai se acumulando em quem está mais no alto."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O agrotóxico que o corpo não elimina passa da alface para quem a come, e se acumula.\nA joaninha só come pulgões e não deixa nada na folha.\nPor isso o controle com predador protege a alface e quem come a alface."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, predação e nada de agrotóxico na cadeia.\nA chama de mutualismo, mas o pulgão morre.\nB e E chamam de parasitismo e inventam veneno da joaninha e joaninha dentro do pulgão.\nD diz que a joaninha come seiva, mas ela come o pulgão."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Corujas soltas num celeiro comem os ratos que atacam os grãos. A relação coruja-rato é:",
+        "opcoes": [
+          "Predação",
+          "Mutualismo",
+          "Competição",
+          "Parasitismo"
+        ],
+        "certa": "Predação",
+        "resposta": "A coruja mata e come o rato: predação."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-07",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Uma escola montou uma composteira: uma caixa onde cascas de frutas, restos de legumes e folhas secas são misturados com terra. Depois de cerca de dois meses, os restos viram um material escuro, parecido com terra, que é usado como adubo na horta da escola. A professora explicou que essa transformação é feita por seres vivos que aparecem sozinhos na caixa, como fungos (o bolor) e bactérias.\nNa cadeia alimentar, esses fungos e bactérias têm o papel de",
+    "A": "produtores, porque fazem o próprio alimento com a luz do sol.",
+    "B": "consumidores primários, porque comem as plantas vivas da horta.",
+    "C": "parasitas, porque vivem às custas das frutas e as prejudicam.",
+    "D": "consumidores do topo, porque juntam o veneno de toda a cadeia.",
+    "E": "decompositores, porque devolvem ao solo os nutrientes dos restos.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Fungos e bactérias desmancham restos mortos e devolvem os nutrientes ao solo = decompositores. E. Erros: A confunde com planta; B diz que comem planta viva; C usa parasitismo, que é com ser vivo; D confunde com o topo da cadeia.",
+      "ideia": "Os fungos e as bactérias comem os restos mortos e devolvem os nutrientes à terra. Esse é o papel dos decompositores, e por isso o resultado vira adubo.",
+      "pecas": [
+        {
+          "termo": "Composteira",
+          "significado": "Caixa ou buraco onde se juntam restos de comida e folhas para virar adubo. Quem faz o trabalho são fungos e bactérias."
+        },
+        {
+          "termo": "Nutriente",
+          "significado": "Substância de que a planta precisa para crescer, como o nitrogênio e o fósforo dos adubos. Fica presa nos restos até ser liberada."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Restos de frutas e folhas ficam na caixa com terra.\nFungos e bactérias aparecem e, em dois meses, os restos viram adubo.\nA questão quer o papel desses seres na cadeia alimentar.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Composteira da escola",
+            "rotulos": [
+              "cascas e folhas",
+              "fungos e bactérias",
+              "adubo da horta",
+              "papel na cadeia?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Os fungos e as bactérias comem os restos mortos devagar.\nAo comer, desmancham a casca e a folha em pedaços cada vez menores.\nOs nutrientes que estavam presos nos restos voltam para a terra, e a terra vira adubo."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Fungo ou bactéria + resto morto + volta para o solo = decompositor.\nÉ a última parte da cadeia da aula: produtor → consumidor → decompositor.\nSó a alternativa E fala em devolver nutrientes ao solo."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "As plantas tiram nutrientes do solo para crescer.\nSem decompositores, os nutrientes ficariam presos nas folhas mortas para sempre.\nOs decompositores fecham o círculo: o que saiu do solo volta para ele e serve de novo."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, decompositores.\nA descreve o produtor (planta), e fungo e bactéria do bolor não fazem alimento com a luz.\nB diz que comem plantas vivas, e eles comem restos mortos.\nC usa parasitismo, que é viver às custas de um ser vivo, e a casca já está morta.\nD confunde com o topo da cadeia, que junta veneno."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um tronco caído na mata fica cheio de cogumelos e vai se desmanchando. Os cogumelos são:",
+        "opcoes": [
+          "Produtores",
+          "Consumidores 1º",
+          "Decompositores",
+          "Consumidores 2º"
+        ],
+        "certa": "Decompositores",
+        "resposta": "Cogumelo é fungo: desmancha o tronco morto e devolve os nutrientes ao solo."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-08",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "No Pantanal, uma cadeia alimentar comum é: capim → capivara → onça-pintada. Ninguém costuma comer a onça adulta. Biólogos que estudam cadeias alimentares no mundo todo observam que elas raramente passam de quatro ou cinco degraus: quase nunca existe um bicho que come o que come o que come o que come uma planta.\nO principal motivo de as cadeias alimentares serem curtas é que",
+    "A": "a cada degrau só cerca de 10% da energia passa adiante, e logo sobra pouca para mais um degrau.",
+    "B": "os decompositores comem os bichos do topo antes que eles tenham filhotes.",
+    "C": "os bichos do topo fazem o próprio alimento e não precisam comer outros.",
+    "D": "a energia aumenta a cada degrau, e o bicho do topo não consegue gastar tudo.",
+    "E": "os produtores juntam veneno e matam os consumidores que os comem.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Energia passa só ~10% por degrau: 10 000 → 1 000 → 100 → 10 → 1. No 5º degrau quase não sobra nada para sustentar um bicho. A. Erros: B inventa; C confunde topo com produtor; D inverte (a energia diminui); E troca: veneno se acumula no topo, não na planta.",
+      "ideia": "Cada degrau recebe só cerca de 10% da energia do anterior. Depois de quatro ou cinco degraus, sobra tão pouca energia que não dá para sustentar mais um bicho.",
+      "pecas": [
+        {
+          "termo": "Degrau da cadeia",
+          "significado": "Cada passo de quem come quem. Capim é o produtor, a capivara é o consumidor 1º e a onça é o consumidor 2º."
+        },
+        {
+          "termo": "Os 10%",
+          "significado": "Só cerca de 10% da energia passa para o degrau seguinte. O resto o bicho gasta para se mexer e respirar, e sai como calor."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A cadeia do Pantanal é capim → capivara → onça.\nCadeias quase nunca passam de quatro ou cinco degraus.\nA questão quer o motivo de não existirem cadeias bem mais compridas.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Capim, capivara, onça",
+            "rotulos": [
+              "capim",
+              "capivara",
+              "onça-pintada",
+              "por que para aqui?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O capim guarda a energia da luz.\nA capivara recebe só cerca de 10% dela; a onça, só 10% do que a capivara tinha.\nA cada degrau a energia encolhe muito."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Faça com números: comece com 10 000 de energia no capim.\nCada degrau corta um zero: 10 000 → 1 000 → 100 → 10 → 1.\nNo quinto degrau sobra 1 de cada 10 000: não dá para um bicho grande viver disso.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "A energia encolhendo",
+            "dados": [
+              "\\text{produtor} = 10\\,000",
+              "\\text{passa } 10\\% = 0{,}1"
+            ],
+            "formula": "\\text{próximo} = \\text{anterior} \\times 0{,}1",
+            "legenda": [
+              "cada degrau corta um zero"
+            ],
+            "contas": [
+              "10\\,000 \\times 0{,}1 = 1\\,000",
+              "1\\,000 \\times 0{,}1 = 100",
+              "100 \\times 0{,}1 = 10",
+              "10 \\times 0{,}1 = 1"
+            ],
+            "resultado": "\\text{quinto degrau} = 1",
+            "nota": "Sobra 1 de cada 10 000."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada bicho gasta quase tudo o que come para andar, caçar e respirar.\nSó o pouco que vira corpo fica para quem o come.\nUm bicho no sexto degrau teria que caçar uma área enorme para achar comida suficiente."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, a energia cai para cerca de 10% em cada degrau.\nB inventa: decompositores comem seres mortos, não caçam a onça.\nC confunde o topo com o produtor: só a planta faz o próprio alimento.\nD inverte: a energia diminui a cada degrau, não aumenta.\nE troca o lugar do veneno: ele se acumula no topo, não na planta."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma planta tem 1 000 de energia. Quanto chega ao consumidor 2º, se passa 10% por degrau?",
+        "opcoes": [
+          "100",
+          "10",
+          "1",
+          "500"
+        ],
+        "certa": "10",
+        "resposta": "Planta 1 000 → consumidor 1º 100 → consumidor 2º 10."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-09",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Um campo de milho produz, numa colheita, comida suficiente para alimentar 50 pessoas durante um ano, se elas comerem o próprio milho. O dono do campo pensa em usar todo esse milho como ração para galinhas e vender a carne das galinhas. Considere que só 10% da energia do milho passa para o corpo das galinhas e que as pessoas precisam da mesma energia nos dois casos.\nQuantas pessoas, durante um ano, a carne dessas galinhas consegue alimentar?",
+    "A": "50",
+    "B": "5",
+    "C": "0,5",
+    "D": "45",
+    "E": "500",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "10% de 50 = 50 × 0,1 = 5 pessoas. B. Erros: A = nada se perde; C = cortou 10% duas vezes; D = tirou só 10% (50 − 5); E = multiplicou por 10 em vez de dividir.",
+      "ideia": "Passando pela galinha, a pessoa vira o consumidor 2º e fica com só 10% da energia do milho. 10% de 50 pessoas são 5 pessoas.",
+      "pecas": [
+        {
+          "termo": "Consumidor 1º e 2º",
+          "significado": "Quem come o milho direto é consumidor 1º. Quem come a galinha que comeu o milho é consumidor 2º, um degrau mais acima."
+        },
+        {
+          "termo": "Porcentagem",
+          "significado": "10% = 10 de cada 100 = 1 de cada 10. Tirar 10% de um número é dividir por 10: 10% de 50 = 5."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O milho alimenta 50 pessoas se for comido direto.\nSe o milho virar ração de galinha, só 10% da energia vai para a galinha.\nA questão quer quantas pessoas a carne das galinhas alimenta.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Milho direto ou galinha",
+            "rotulos": [
+              "milho: 50 pessoas",
+              "galinha",
+              "pessoa",
+              "passa 10%"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Comendo milho, a pessoa está no degrau logo acima da planta.\nComendo galinha, entra um degrau a mais no meio: milho → galinha → pessoa.\nNesse degrau a mais, 90% da energia se perde na vida da galinha."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "10% = 1 de cada 10. Número pequeno primeiro: 10% de 10 pessoas = 1 pessoa.\n50 pessoas são 5 grupos de 10. Cada grupo de 10 vira 1 pessoa.\nEntão sobram 5 pessoas. É o mesmo que 50 × 0,1 = 50 ÷ 10 = 5.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Pessoas alimentadas",
+            "dados": [
+              "\\text{milho direto} = 50\\ \\text{pessoas}",
+              "\\text{passa } 10\\% = 0{,}1"
+            ],
+            "formula": "P = 50 \\times 0{,}1",
+            "legenda": [
+              "um degrau a mais: a galinha",
+              "× 0,1 é o mesmo que ÷ 10"
+            ],
+            "contas": [
+              "50 \\times 0{,}1 = 50 \\div 10",
+              "50 \\div 10 = 5"
+            ],
+            "resultado": "P = 5\\ \\text{pessoas}",
+            "nota": "A carne das galinhas alimenta 5 pessoas."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A galinha gasta quase toda a energia do milho para andar, ciscar e se manter quente.\nSó cerca de 10% vira carne.\nPor isso, quanto mais perto da planta a pessoa come, mais gente a mesma plantação alimenta."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 5 pessoas.\nA (50) esquece que a energia se perde na galinha.\nC (0,5) cortou 10% duas vezes, como se houvesse dois bichos no meio.\nD (45) tirou só 10%; o certo é ficar com 10%.\nE (500) multiplicou por 10 em vez de dividir."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um pasto alimentaria 30 pessoas com planta. Virando carne de boi (10%), alimenta:",
+        "opcoes": [
+          "3 pessoas",
+          "27 pessoas",
+          "300 pessoas",
+          "30 pessoas"
+        ],
+        "certa": "3 pessoas",
+        "resposta": "10% de 30 = 30 ÷ 10 = 3 pessoas."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-10",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "O mexilhão-dourado é um molusco pequeno da Ásia. Ele chegou à América do Sul na água de lastro dos navios: a água que o navio enche no porto de saída para ficar firme no mar e despeja no porto de chegada. Aqui ele não tinha predadores que o controlassem, se espalhou pelos rios e gruda aos milhares em canos e grades de usinas, entupindo tudo.\nQual medida ajuda a evitar que outras espécies cheguem do mesmo jeito?",
+    "A": "Soltar mais mexilhões-dourados para que eles disputem comida entre si.",
+    "B": "Jogar agrotóxico nos rios para matar todos os moluscos.",
+    "C": "Aumentar o número de navios que trazem água de lastro da Ásia.",
+    "D": "Trocar a água de lastro em alto-mar, longe da costa, antes de entrar no porto.",
+    "E": "Proibir a pesca dos peixes nativos que vivem nos rios.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "A espécie exótica veio escondida na água de lastro; trocar essa água em alto-mar tira os seres do porto de saída antes de chegar. D. Erros: A aumenta a praga; B mata os nativos e põe veneno na cadeia; C traz mais invasores; E não mexe no caminho de entrada.",
+      "ideia": "O mexilhão veio escondido na água que o navio despeja no porto. Trocar essa água no meio do oceano, longe de rios e praias, fecha esse caminho de entrada.",
+      "pecas": [
+        {
+          "termo": "Água de lastro",
+          "significado": "Água que o navio guarda no fundo para não balançar demais. Junto com ela vêm ovos, larvas e bichinhos do porto onde foi enchida."
+        },
+        {
+          "termo": "Espécie exótica",
+          "significado": "Ser vivo trazido de outro lugar pelo ser humano. Sem inimigo natural, pode virar invasora e tomar o espaço das nativas."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O mexilhão-dourado veio da Ásia na água de lastro dos navios.\nSem predadores aqui, se espalhou e entope canos de usinas.\nA questão quer uma medida para outras espécies não chegarem do mesmo jeito.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Carona no navio",
+            "rotulos": [
+              "mexilhão-dourado",
+              "veio da Ásia",
+              "água de lastro",
+              "sem predador aqui"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O navio enche o tanque num porto da Ásia, com bichinhos do lugar junto.\nAtravessa o oceano e despeja essa água num porto daqui.\nOs bichinhos chegam vivos num lugar sem os seus inimigos naturais."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "A pergunta é sobre evitar novas chegadas, então a resposta tem que fechar o caminho de entrada.\nO caminho é a água de lastro.\nSó a D mexe nessa água antes de ela ser solta perto de rios e praias."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "No meio do oceano, longe da costa, a água do porto asiático é jogada fora e trocada por água do mar aberto.\nOs seres do porto ficam no oceano, onde não conseguem se instalar.\nOs seres do mar aberto, por sua vez, não sobrevivem bem num porto ou num rio."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, trocar a água de lastro em alto-mar.\nA solta mais da própria espécie invasora: só piora.\nB mata também os moluscos nativos e põe veneno que se acumula na cadeia.\nC traz ainda mais água com seres de fora.\nE não tem relação com o caminho por onde o mexilhão chegou."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma planta de jardim de outro país escapa e cobre a mata nativa. Ela é uma espécie:",
+        "opcoes": [
+          "Nativa e produtora",
+          "Exótica invasora",
+          "Decompositora",
+          "Parasita da mata"
+        ],
+        "certa": "Exótica invasora",
+        "resposta": "Veio de fora e toma o espaço das nativas: exótica invasora."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-11",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Em 1935, cerca de cem sapos-cururus foram levados das Américas para a Austrália para comer besouros que atacavam as plantações de cana-de-açúcar. Os sapos quase não comeram os besouros, mas se multiplicaram: hoje são milhões e ocupam boa parte do norte do país. Eles têm veneno na pele, e muitas cobras, lagartos e outros bichos australianos que tentam comê-los morrem.\nO que explica o sucesso do sapo-cururu na Austrália e o dano que ele causa?",
+    "A": "Ele fez mutualismo com os besouros e passou a proteger a praga da cana.",
+    "B": "Ele já era nativo da Austrália e só voltou a crescer depois de 1935.",
+    "C": "Chegou sem inimigos naturais que o controlassem, e os predadores nativos morrem ao comê-lo.",
+    "D": "Ele virou produtor e passou a fazer o próprio alimento com a luz.",
+    "E": "O veneno do sapo se acumulou nos besouros, que sumiram da cana.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Espécie exótica sem inimigo natural cresce sem freio (invasora); os predadores australianos não conhecem o veneno e morrem. C. Erros: A inventa mutualismo; B erra a origem (veio das Américas); D confunde bicho com planta; E contradiz o texto (os sapos quase não comeram os besouros).",
+      "ideia": "O sapo chegou a um lugar sem os seus inimigos naturais e se multiplicou. Os bichos australianos não conheciam o seu veneno e morrem quando tentam comê-lo.",
+      "pecas": [
+        {
+          "termo": "Espécie exótica invasora",
+          "significado": "Ser vivo trazido de outro lugar pelo ser humano que se espalha e prejudica os nativos (os que já viviam lá)."
+        },
+        {
+          "termo": "Inimigo natural",
+          "significado": "Predador (quem come) ou doença que mantém o número de uma espécie sob controle no lugar de onde ela veio."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Cerca de cem sapos foram levados das Américas para a Austrália.\nHoje são milhões, e os bichos que tentam comê-los morrem envenenados.\nA questão quer o motivo do sucesso do sapo e do dano que ele causa.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Sapo de fora",
+            "rotulos": [
+              "besouro da cana",
+              "sapo-cururu",
+              "cobra australiana",
+              "veneno na pele"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Nas Américas, o sapo tem predadores e doenças que seguram o seu número.\nNa Austrália, esses inimigos não existiam. Quase todos os filhotes sobrevivem.\nE as cobras e lagartos de lá não aprenderam a evitar o veneno: comem o sapo e morrem."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Espécie trazida de fora que se espalha demais = falta de inimigo natural.\nA pergunta tem duas partes: o sucesso e o dano.\nSó a C responde as duas: sem inimigo (sucesso) e predador nativo morrendo (dano)."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O tamanho de uma população depende de quantos nascem e de quantos morrem.\nSem predador, morrem poucos sapos, e a população explode.\nCom os predadores nativos morrendo, a cadeia alimentar do lugar fica desfalcada."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, sem inimigos naturais e com predadores nativos morrendo.\nA inventa mutualismo: o texto não mostra o sapo ajudando o besouro.\nB erra a origem: o sapo veio das Américas.\nD confunde bicho com planta: sapo não faz o próprio alimento.\nE contradiz o texto: os sapos quase não comeram os besouros."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Por que uma espécie trazida de fora costuma crescer tanto no lugar novo?",
+        "opcoes": [
+          "Falta inimigo natural",
+          "Ela faz fotossíntese",
+          "O clima a deixa maior",
+          "As nativas a ajudam"
+        ],
+        "certa": "Falta inimigo natural",
+        "resposta": "Sem predador nem doença que a segure, quase todos os filhotes sobrevivem."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-12",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "No fundo do mar da costa do oceano Pacífico crescem grandes algas que formam florestas submarinas, onde muitos peixes se abrigam. Ouriços-do-mar comem essas algas, e lontras-marinhas comem os ouriços. Nos séculos passados, as lontras foram tão caçadas por causa da pele que quase sumiram de vários trechos dessa costa.\nNesses trechos sem lontras, o esperado é que",
+    "A": "os ouriços diminuam e as florestas de algas cresçam.",
+    "B": "os ouriços e as florestas de algas aumentem juntos.",
+    "C": "nada mude, porque a lontra não come alga.",
+    "D": "as algas cresçam, porque as lontras competiam com elas por luz.",
+    "E": "os ouriços aumentem e as florestas de algas diminuam, junto com os peixes abrigados nelas.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Cadeia: alga → ouriço → lontra. Sem lontra, os ouriços não são comidos e aumentam; mais ouriços comem mais algas; sem floresta, os peixes perdem abrigo. E. Erros: A inverte; B esquece que ouriço come alga; C ignora o efeito em cascata; D inventa competição de bicho com alga.",
+      "ideia": "A lontra segurava o número de ouriços. Sem ela, os ouriços se multiplicam, comem as florestas de algas, e os peixes que viviam nelas perdem a casa.",
+      "pecas": [
+        {
+          "termo": "Ouriço-do-mar",
+          "significado": "Bicho redondo, coberto de espinhos, que vive no fundo do mar e raspa algas para comer."
+        },
+        {
+          "termo": "Efeito em cascata",
+          "significado": "Mexer num degrau da cadeia mexe nos outros, como dominó. Tirar o predador do topo faz a presa aumentar e a comida da presa diminuir."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Lontras comem ouriços, e ouriços comem as algas.\nAs lontras quase sumiram por causa da caça.\nA questão quer o que acontece com ouriços, algas e peixes depois disso.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Floresta de algas",
+            "rotulos": [
+              "algas",
+              "ouriço-do-mar",
+              "lontra caçada",
+              "peixes se abrigam"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Monte a cadeia com a seta apontando para quem come: alga → ouriço → lontra.\nSem a lontra, quase ninguém come o ouriço, e ele se multiplica.\nMais ouriços comem mais algas, e a floresta encolhe."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ande um degrau de cada vez, a partir de quem sumiu:\nlontra some → ouriço sobe → alga desce.\nOs peixes dependem da alga para se abrigar, então também diminuem."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada ser da cadeia controla o número de quem ele come.\nA lontra controlava os ouriços; os ouriços controlam as algas.\nTirar um degrau desequilibra os de baixo, mesmo os que a lontra nunca comeu."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, mais ouriços, menos algas e menos peixes abrigados.\nA inverte: sem quem os come, os ouriços aumentam.\nB esquece que mais ouriços comem mais algas.\nC ignora o efeito em cascata: a lontra não come alga, mas come quem come a alga.\nD inventa disputa por luz entre um bicho e uma alga."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Cadeia capim → preá → cobra. Se as cobras somem, o capim tende a:",
+        "opcoes": [
+          "Aumentar",
+          "Diminuir",
+          "Ficar igual",
+          "Virar consumidor"
+        ],
+        "certa": "Diminuir",
+        "resposta": "Sem cobras, os preás aumentam e comem mais capim."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-13",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Num milharal, ratos comem os grãos de milho. Cobras comem os ratos. Um gavião que vive na região come ratos e também come cobras. Os biólogos chamam esse conjunto de teia alimentar: várias cadeias alimentares que se cruzam e dividem os mesmos seres.\nNessa teia alimentar, o gavião é",
+    "A": "consumidor 2º quando come o rato e consumidor 3º quando come a cobra.",
+    "B": "consumidor 1º, porque come o rato, que é o primeiro bicho da teia.",
+    "C": "consumidor 3º sempre, porque está no topo da teia.",
+    "D": "consumidor 2º sempre, porque come dois tipos de bicho.",
+    "E": "decompositor, porque come outros bichos depois de mortos.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Cadeia 1: milho → rato → gavião (gavião = 2º). Cadeia 2: milho → rato → cobra → gavião (gavião = 3º). A. Erros: B conta o rato como produtor; C e D dão um lugar só; E confunde caçador com decompositor.",
+      "ideia": "O lugar de um bicho depende de cada cadeia em que ele aparece. Comendo rato, o gavião é consumidor 2º; comendo a cobra que comeu o rato, é consumidor 3º.",
+      "pecas": [
+        {
+          "termo": "Teia alimentar",
+          "significado": "Várias cadeias alimentares que se cruzam. Um mesmo bicho pode comer coisas diferentes e ficar em degraus diferentes em cada cadeia."
+        },
+        {
+          "termo": "Consumidor 1º, 2º, 3º",
+          "significado": "Quem come a planta é o 1º. Quem come o 1º é o 2º. Quem come o 2º é o 3º. Conte a partir da planta."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Rato come milho. Cobra come rato. Gavião come rato e também come cobra.\nA questão quer saber em que degrau o gavião fica.\nComo ele come duas coisas, pode estar em mais de um degrau.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Teia do milharal",
+            "rotulos": [
+              "milho",
+              "rato",
+              "cobra e gavião",
+              "gavião come os dois"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Separe a teia em cadeias, sempre com a seta apontando para quem come.\nCadeia 1: milho → rato → gavião.\nCadeia 2: milho → rato → cobra → gavião."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Conte os degraus depois da planta.\nCadeia 1: rato é o 1º, gavião é o 2º.\nCadeia 2: rato é o 1º, cobra é o 2º, gavião é o 3º.\nO gavião é 2º numa e 3º na outra."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O degrau mostra por quantas mãos a energia da planta passou até chegar ao bicho.\nNo rato, ela passou uma vez; na cobra, duas.\nPor isso o mesmo gavião recebe energia de dois degraus diferentes."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 2º comendo rato e 3º comendo cobra.\nB conta o rato como se fosse a planta; quem come o milho é o 1º, o gavião vem depois.\nC e D dão um lugar só, mas o gavião está em duas cadeias.\nE confunde: decompositores são fungos e bactérias que desmancham restos, não caçadores."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Cadeia folha → lagarta → passarinho → gato. O passarinho é consumidor:",
+        "opcoes": [
+          "1º",
+          "2º",
+          "3º",
+          "Produtor"
+        ],
+        "certa": "2º",
+        "resposta": "A lagarta come a folha (1º); o passarinho come a lagarta (2º)."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-14",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Num lago perto de plantações, pesquisadores mediram o inseticida DDT, que o corpo dos seres vivos não consegue eliminar. A medida foi em mg/kg (miligramas de veneno em cada quilo de corpo) numa cadeia: plâncton → peixe pequeno → peixe grande → garça. No plâncton havia 0,04 mg/kg. Considere que, a cada degrau acima, a concentração fica 10 vezes maior.\nQual era a concentração de DDT na garça?",
+    "A": "0,004 mg/kg",
+    "B": "0,4 mg/kg",
+    "C": "4 mg/kg",
+    "D": "40 mg/kg",
+    "E": "400 mg/kg",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Plâncton 0,04 → peixe pequeno 0,4 → peixe grande 4 → garça 40 mg/kg (três vezes × 10). D. Erros: A = dividiu por 10; B = um degrau só; C = dois degraus (parou no peixe grande); E = quatro degraus, contando o plâncton.",
+      "ideia": "O DDT fica guardado no corpo e se acumula a cada degrau. Do plâncton à garça são três degraus: 0,04 vira 0,4, depois 4, depois 40 mg/kg.",
+      "pecas": [
+        {
+          "termo": "Plâncton",
+          "significado": "Seres minúsculos que boiam na água, como algas tão pequenas que só se veem no microscópio. São a base da cadeia do lago."
+        },
+        {
+          "termo": "mg/kg",
+          "significado": "Miligramas de veneno em cada quilo de corpo. 1 miligrama é 1 grama partido em 1 000 pedacinhos."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A cadeia é plâncton → peixe pequeno → peixe grande → garça.\nO plâncton tem 0,04 mg/kg de DDT, e cada degrau acima tem 10 vezes mais.\nA questão quer o DDT na garça.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "DDT no lago",
+            "rotulos": [
+              "plâncton 0,04 mg/kg",
+              "peixes",
+              "garça = ?",
+              "× 10 a cada degrau"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O DDT não sai do corpo. Cada peixe pequeno guarda o DDT de muito plâncton.\nCada peixe grande guarda o de muitos peixes pequenos, e a garça o de muitos peixes grandes.\nDo plâncton até a garça, a seta passa três vezes: três vezes × 10."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Vezes 10 empurra a vírgula 1 casa para a direita. Pequeno primeiro: 0,1 × 10 = 1 (dez décimos fazem 1 inteiro).\n0,04 × 10 = 0,4 (peixe pequeno).\n0,4 × 10 = 4 (peixe grande).\n4 × 10 = 40 (garça).",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "DDT subindo a cadeia",
+            "dados": [
+              "\\text{plâncton} = 0{,}04\\,\\text{mg/kg}",
+              "\\times 10\\ \\text{por degrau}"
+            ],
+            "formula": "C = 0{,}04 \\times 10 \\times 10 \\times 10",
+            "legenda": [
+              "três degraus até a garça",
+              "× 10 anda a vírgula 1 casa"
+            ],
+            "contas": [
+              "0{,}04 \\times 10 = 0{,}4",
+              "0{,}4 \\times 10 = 4",
+              "4 \\times 10 = 40"
+            ],
+            "resultado": "C = 40\\,\\text{mg/kg}",
+            "nota": "A garça tem 1 000 vezes mais DDT que o plâncton."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A energia vai sendo gasta a cada degrau, mas o DDT não é gasto: fica no corpo.\nPara viver, um bicho do alto come muitos bichos de baixo e junta o veneno de todos.\nPor isso o veneno aumenta subindo a cadeia, ao contrário da energia."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 40 mg/kg.\nA (0,004) dividiu por 10, como se o veneno diminuísse subindo.\nB (0,4) é o peixe pequeno: subiu um degrau só.\nC (4) é o peixe grande: parou um degrau antes.\nE (400) contou quatro degraus, mas o plâncton é o ponto de partida."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "A alga tem 0,2 mg/kg de um veneno. O peixe que come a alga tem 10 vezes mais. Quanto?",
+        "opcoes": [
+          "0,02 mg/kg",
+          "2 mg/kg",
+          "20 mg/kg",
+          "10,2 mg/kg"
+        ],
+        "certa": "2 mg/kg",
+        "resposta": "0,2 × 10 = 2: a vírgula anda 1 casa para a direita."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-15",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Num experimento com um aquário grande, pesquisadores mediram quanta energia passa de um ser para outro. As algas do aquário guardavam 4 000 kcal. Os caramujos que comem as algas receberam 15% dessa energia. Os peixes que comem os caramujos receberam 15% da energia dos caramujos.\nQuanta energia das algas chegou aos peixes?",
+    "A": "600 kcal",
+    "B": "90 kcal",
+    "C": "40 kcal",
+    "D": "400 kcal",
+    "E": "1 200 kcal",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "4 000 × 0,15 = 600 (caramujos); 600 × 0,15 = 90 kcal (peixes). B. Erros: A = parou nos caramujos; C = usou 10% da aula duas vezes; D = 10% uma vez; E = somou 15% + 15% = 30% de 4 000.",
+      "ideia": "A questão deu 15% por degrau, então vale o número dela. 15% de 4 000 são 600 nos caramujos, e 15% de 600 são 90 kcal nos peixes.",
+      "pecas": [
+        {
+          "termo": "Porcentagem",
+          "significado": "15% = 15 de cada 100. De cada 100 kcal que um degrau tem, 15 kcal passam para o próximo."
+        },
+        {
+          "termo": "10% da aula",
+          "significado": "A aula diz que passa cerca de 10%. É uma média: se a questão der outro número, como 15%, use o da questão."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "As algas têm 4 000 kcal. Os caramujos recebem 15% disso.\nOs peixes recebem 15% do que os caramujos têm.\nA questão quer a energia que chega aos peixes.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Aquário do experimento",
+            "rotulos": [
+              "algas 4 000 kcal",
+              "caramujos",
+              "peixes = ?",
+              "passa 15% por degrau"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "São dois degraus: algas → caramujos e caramujos → peixes.\nEm cada um, passam 15% da energia de quem foi comido.\nO segundo corte é feito sobre o que sobrou do primeiro, não sobre as 4 000 kcal."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Número pequeno primeiro: 15% de 100 kcal = 15 kcal.\n4 000 são 40 grupos de 100. Cada grupo dá 15: 40 × 15 = 600 kcal nos caramujos.\n600 são 6 grupos de 100. Cada grupo dá 15: 6 × 15 = 90 kcal nos peixes.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Dois degraus de 15%",
+            "dados": [
+              "\\text{algas} = 4\\,000\\,\\text{kcal}",
+              "\\text{passa } 15\\% = 0{,}15"
+            ],
+            "formula": "E = 4\\,000 \\times 0{,}15 \\times 0{,}15",
+            "legenda": [
+              "15% de cada 100 = 15",
+              "segundo corte sobre o que sobrou"
+            ],
+            "contas": [
+              "40 \\times 15 = 600",
+              "6 \\times 15 = 90"
+            ],
+            "resultado": "E = 90\\,\\text{kcal}",
+            "nota": "Chegam 90 kcal aos peixes."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada ser gasta a maior parte do que come para viver, e só uma parte vira corpo.\nO peixe só pode receber o que virou corpo do caramujo, não o que o caramujo gastou.\nPor isso os 15% se aplicam em cima dos 600, e não das 4 000."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 90 kcal.\nA (600) é a energia dos caramujos: parou no primeiro degrau.\nC (40) usou os 10% da aula duas vezes, mas a questão deu 15%.\nD (400) usou 10% uma vez só.\nE (1 200) somou 15% + 15% = 30% das 4 000, como se os dois cortes fossem sobre o total."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Plantas têm 2 000 kcal e passam 20% para os coelhos. Quanto os coelhos recebem?",
+        "opcoes": [
+          "200 kcal",
+          "400 kcal",
+          "20 kcal",
+          "1 600 kcal"
+        ],
+        "certa": "400 kcal",
+        "resposta": "20% de 100 = 20. 2 000 são 20 grupos de 100: 20 × 20 = 400 kcal."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-16",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Produtores de maçã do sul do Brasil alugam caixas de abelhas na época em que as macieiras florescem. As abelhas visitam as flores para colher néctar e, nesse vaivém, levam pólen de uma flor para outra. Só a flor que recebe pólen vira fruto. Num ano em que um agrotóxico usado na região matou muitas abelhas, a colheita de maçã caiu bastante.\nA queda na colheita se explica porque",
+    "A": "as abelhas competiam com as macieiras pela água do solo, e a água sumiu junto.",
+    "B": "as abelhas eram parasitas das macieiras, que adoeceram sem elas.",
+    "C": "com menos abelhas, menos flores recebem pólen e viram fruto: a relação de mutualismo foi quebrada.",
+    "D": "as abelhas eram predadoras das maçãs e, sem elas, os frutos apodreceram.",
+    "E": "o agrotóxico se acumulou nas macieiras, que estão no topo da cadeia alimentar.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Abelha ganha néctar, flor ganha pólen levado a outra flor = mutualismo. Sem abelhas, menos flores viram fruto. C. Erros: A inventa competição por água; B chama de parasitismo; D chama de predação; E põe a planta no topo, mas ela é a base da cadeia.",
+      "ideia": "A macieira depende da abelha para levar o pólen, e a abelha depende do néctar. Sem abelhas, menos flores recebem pólen e menos maçãs nascem.",
+      "pecas": [
+        {
+          "termo": "Pólen",
+          "significado": "Pozinho amarelo das flores. Precisa ir de uma flor para outra para a flor virar fruto, e a abelha faz essa entrega sem querer."
+        },
+        {
+          "termo": "Mutualismo",
+          "significado": "Relação em que os dois seres ganham. A abelha ganha o néctar para comer; a macieira ganha o pólen levado e vira fruto."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "As abelhas levam pólen de flor em flor nas macieiras.\nUm agrotóxico matou muitas abelhas, e a colheita de maçã caiu.\nA questão quer o motivo da queda.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Abelhas no pomar",
+            "rotulos": [
+              "flor da macieira",
+              "abelha",
+              "agrotóxico",
+              "menos maçãs"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Cada abelha leva pólen para muitas flores ao colher néctar.\nCom muitas abelhas mortas, muitas flores ficam sem pólen.\nFlor sem pólen não vira maçã, então a colheita cai."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Pergunte o que cada lado ganha:\nabelha ganha néctar; macieira ganha o pólen entregue.\nOs dois ganham = mutualismo. Tirar um lado faz o outro perder."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "No mutualismo, cada ser ajuda o outro a viver ou a se reproduzir.\nA macieira não anda: precisa de alguém que leve o pólen por ela.\nO agrotóxico atingiu a abelha, mas o prejuízo apareceu na macieira."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, sem abelhas o mutualismo se quebra e menos flores viram fruto.\nA inventa disputa por água: o texto fala de pólen.\nB chama de parasitismo, mas a abelha não prejudica a macieira.\nD chama de predação, mas a abelha não come maçã.\nE erra a cadeia: a planta é o produtor, a base, e não o topo."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Formigas moram nos espinhos de uma árvore e atacam as lagartas que comeriam suas folhas. É:",
+        "opcoes": [
+          "Mutualismo",
+          "Predação",
+          "Parasitismo",
+          "Competição"
+        ],
+        "certa": "Mutualismo",
+        "resposta": "A formiga ganha casa e a árvore ganha proteção: os dois ganham."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-17",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Num experimento clássico, um biólogo criou duas espécies de paramécio (seres formados por uma célula só, vistos no microscópio) em tubos com água. Nos dois tubos ele colocou a mesma comida: bactérias. Separadas, cada espécie em seu tubo, as duas cresceram bem. Quando as duas espécies foram postas juntas no mesmo tubo, depois de cerca de duas semanas só uma delas continuava viva.\nO resultado do tubo com as duas espécies é explicado por",
+    "A": "predação, porque uma espécie comeu a outra.",
+    "B": "mutualismo, porque as duas espécies se ajudaram.",
+    "C": "parasitismo, porque uma espécie viveu dentro da outra.",
+    "D": "acúmulo de veneno, que matou a espécie do topo da cadeia.",
+    "E": "competição pela mesma comida, que uma das espécies venceu.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "As duas comiam as mesmas bactérias; separadas cresciam, juntas uma sumiu: disputa pelo mesmo recurso = competição. E. Erros: A, C e D inventam fatos que o texto não dá; B contradiz o resultado (uma morreu).",
+      "ideia": "As duas espécies comiam a mesma comida. No mesmo tubo, a que pegava comida mais rápido deixou a outra com fome até ela sumir: é competição.",
+      "pecas": [
+        {
+          "termo": "Paramécio",
+          "significado": "Ser vivo de uma célula só (a célula é o menor pedaço de um ser vivo, como um tijolo de uma parede). Nada na água e come bactérias."
+        },
+        {
+          "termo": "Competição",
+          "significado": "Dois seres disputam o mesmo recurso, como comida, luz ou espaço. Quem pega mais deixa menos para o outro."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Duas espécies de paramécio comem a mesma comida: bactérias.\nSeparadas, as duas vão bem. Juntas, só uma sobrevive.\nA questão quer a relação que explica o tubo com as duas.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Dois paramécios, um tubo",
+            "rotulos": [
+              "bactérias (comida)",
+              "paramécio 1",
+              "paramécio 2",
+              "juntos: só um fica"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "No tubo com as duas, a mesma comida é dividida entre as duas espécies.\nUma delas consegue comer mais rápido e se multiplica mais.\nA outra passa fome, deixa poucos filhotes e some."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Compare os tubos: separadas vão bem, juntas uma some.\nEntão o problema é estar junto disputando algo.\nO texto diz o que elas disputam: a mesma comida. Isso é competição."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A comida do tubo é limitada.\nCada bactéria comida por uma espécie é uma bactéria a menos para a outra.\nNinguém comeu ninguém: a perdedora sumiu de fome."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, competição pela mesma comida.\nA diz que uma comeu a outra, mas as duas comiam bactérias.\nB fala que as duas ganharam, e uma sumiu.\nC inventa que uma viveu dentro da outra.\nD fala de veneno, que o experimento não tinha."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Leões e hienas da mesma savana disputam as mesmas zebras. Que relação há entre leão e hiena?",
+        "opcoes": [
+          "Competição",
+          "Mutualismo",
+          "Parasitismo",
+          "Decomposição"
+        ],
+        "certa": "Competição",
+        "resposta": "Os dois querem a mesma comida, as zebras: competição."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-18",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Um aquário de escola tinha plantas aquáticas, caramujos que comem as plantas e peixes que comem os caramujos. Nas férias, a sala foi trancada e ficou no escuro total por várias semanas, sem nenhuma lâmpada acesa e sem luz entrando pela janela. Ninguém colocou ração no aquário nesse tempo.\nO que se espera que tenha acontecido com os seres do aquário?",
+    "A": "As plantas pararam de fazer o próprio alimento e, com o tempo, faltou comida para caramujos e peixes.",
+    "B": "Os peixes passaram a fazer o próprio alimento no lugar das plantas.",
+    "C": "Os caramujos aumentaram, porque no escuro os peixes não os veem.",
+    "D": "Só as plantas foram afetadas, porque os peixes não dependem delas.",
+    "E": "Os decompositores viraram produtores e sustentaram a cadeia sem luz.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "O produtor faz alimento com a luz; sem luz, ele para, e a energia que sustenta caramujo e peixe acaba. A. Erros: B e E dão papel de produtor a quem não é; C ignora que caramujo come planta; D esquece que o peixe come o caramujo, que come a planta.",
+      "ideia": "Toda a energia do aquário entra pela planta, que usa a luz para fazer alimento. Sem luz, a planta para, e a falta de comida sobe a cadeia até o peixe.",
+      "pecas": [
+        {
+          "termo": "Produtor",
+          "significado": "Ser que faz o próprio alimento com a luz, como a planta. Isso se chama fotossíntese: a planta fabrica açúcar usando luz, água e ar."
+        },
+        {
+          "termo": "Cadeia do aquário",
+          "significado": "Planta → caramujo → peixe. A seta aponta para quem come. A energia de todos começa na planta."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "No aquário: plantas, caramujos que comem plantas e peixes que comem caramujos.\nA sala ficou semanas no escuro total, sem ração.\nA questão quer o que acontece com esses seres.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Aquário no escuro",
+            "rotulos": [
+              "planta aquática",
+              "caramujo",
+              "peixe",
+              "sem luz e sem ração"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A planta precisa de luz para fazer o próprio alimento. No escuro, ela para.\nSem fazer alimento, a planta enfraquece e diminui.\nCom menos planta, falta comida para o caramujo; com menos caramujo, falta para o peixe."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ache quem faz o próprio alimento: a planta, o produtor.\nTudo o que o caramujo e o peixe comem começou na planta.\nSe o produtor para, a cadeia inteira fica sem energia."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A energia de uma cadeia vem da luz e entra só pelo produtor.\nOs bichos não fabricam comida: só passam adiante a energia que a planta guardou.\nSem ração nem luz, nada de energia nova entra no aquário."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, a planta para de fazer alimento e falta comida para todos.\nB erra: peixe é consumidor, não faz o próprio alimento.\nC ignora que o caramujo come planta, e a planta está diminuindo.\nD esquece que o peixe come o caramujo, que depende da planta.\nE erra: decompositores desmancham restos, não fazem alimento com luz."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Na cadeia capim → gafanhoto → sapo, quem coloca a energia da luz na cadeia?",
+        "opcoes": [
+          "Capim",
+          "Gafanhoto",
+          "Sapo",
+          "Decompositores"
+        ],
+        "certa": "Capim",
+        "resposta": "O capim é o produtor: só ele usa a luz para fazer alimento."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-19",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "Um criador pesou um novilho (boi jovem) no começo e no fim de um período de engorda no pasto: o animal ganhou 40 kg de corpo. Um técnico explicou que só 10% do capim que o novilho come vira corpo dele. O resto é gasto para andar, respirar e se manter quente, ou sai nas fezes.\nQuantos quilos de capim o novilho comeu nesse período?",
+    "A": "4 kg",
+    "B": "44 kg",
+    "C": "36 kg",
+    "D": "400 kg",
+    "E": "4 000 kg",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "10% do capim = 40 kg → capim = 40 × 10 = 400 kg (conferindo: 10% de 400 = 40). D. Erros: A = calculou 10% de 40; B = somou 40 + 4; C = tirou 10% de 40; E = multiplicou por 100.",
+      "ideia": "Só 1 de cada 10 quilos de capim vira boi. Para ganhar 40 kg, o novilho comeu 10 vezes mais capim: 400 kg.",
+      "pecas": [
+        {
+          "termo": "Os 10%",
+          "significado": "10% = 10 de cada 100 = 1 de cada 10. De cada 10 kg de capim, só 1 kg vira corpo do boi."
+        },
+        {
+          "termo": "Achar o número que falta",
+          "significado": "Se 10% de um número dá 40, o número inteiro é 10 vezes maior. Confira de volta: 10% de 400 é 40."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O novilho ganhou 40 kg de corpo.\nSó 10% do capim que ele come vira corpo.\nA questão quer quanto capim ele comeu ao todo.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Capim que vira boi",
+            "rotulos": [
+              "capim = ?",
+              "novilho",
+              "ganhou 40 kg",
+              "10% vira corpo"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O capim é o produtor e o novilho é o consumidor 1º.\nDe tudo o que o novilho come, a maior parte vai embora como calor, movimento e fezes.\nOs 40 kg que ficaram no corpo são só a parte de 10%."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Número pequeno primeiro: 10 kg de capim viram 1 kg de boi.\nEntão cada 1 kg de boi pede 10 kg de capim.\n40 kg de boi pedem 40 × 10 = 400 kg de capim.\nConfira: 10% de 400 é 400 ÷ 10 = 40. Bate.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Capim que o novilho comeu",
+            "dados": [
+              "\\text{ganho} = 40\\,\\text{kg}",
+              "\\text{vira corpo: } 10\\%"
+            ],
+            "formula": "C = 40 \\times 10",
+            "legenda": [
+              "1 kg de boi pede 10 kg de capim"
+            ],
+            "contas": [
+              "40 \\times 10 = 400",
+              "400 \\div 10 = 40\\ \\text{(confere)}"
+            ],
+            "resultado": "C = 400\\,\\text{kg}",
+            "nota": "O novilho comeu 400 kg de capim."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O boi não guarda tudo o que come: ele gasta energia o dia inteiro para viver.\nSó o que sobra vira músculo e gordura.\nPor isso, para saber quanto ele comeu, a conta volta do pouco (corpo) para o muito (capim)."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 400 kg.\nA (4) fez 10% de 40, andando para o lado errado.\nB (44) somou 40 + 4, o que não tem sentido aqui.\nC (36) tirou 10% de 40.\nE (4 000) multiplicou por 100 em vez de 10."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um porco ganhou 15 kg e só 10% da ração vira corpo. Quanta ração ele comeu?",
+        "opcoes": [
+          "1,5 kg",
+          "150 kg",
+          "25 kg",
+          "1 500 kg"
+        ],
+        "certa": "150 kg",
+        "resposta": "15 × 10 = 150 kg. Confira: 10% de 150 = 15."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-eco-20",
+    "materia": "Biologia",
+    "tema": "Ecologia",
+    "enunciado": "No Canadá, uma empresa comprou peles de lebres e de linces (um felino que caça lebres) durante quase cem anos, e os registros mostram um ciclo que se repete. Primeiro as lebres aumentam muito. Um ou dois anos depois, os linces também aumentam. Em seguida as lebres caem, e logo depois os linces caem também. Então o ciclo recomeça.\nA queda no número de linces logo depois da queda das lebres se explica porque",
+    "A": "os linces competiam com as lebres pelo mesmo capim.",
+    "B": "com menos lebres para caçar, falta comida para os linces, e menos filhotes sobrevivem.",
+    "C": "as lebres eram parasitas dos linces e os deixavam doentes.",
+    "D": "os linces são produtores e dependem da luz, que diminuiu.",
+    "E": "as lebres acumulavam um veneno que matava os linces.",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Relação de predação: o número do predador acompanha o da presa, com atraso. Menos lebres = menos comida = menos linces. B. Erros: A diz que lince come capim; C inverte quem ganha; D chama bicho de produtor; E inventa veneno.",
+      "ideia": "O lince depende da lebre para comer. Quando as lebres caem, falta caça, menos filhotes de lince sobrevivem, e os linces caem logo depois.",
+      "pecas": [
+        {
+          "termo": "Lince",
+          "significado": "Felino do tamanho de um cachorro médio, de orelhas pontudas, que vive em florestas frias e caça principalmente lebres."
+        },
+        {
+          "termo": "Predação",
+          "significado": "Relação em que um ser mata e come o outro. O predador ganha comida e a presa perde a vida. Exemplo: onça e veado."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "As lebres sobem, depois os linces sobem.\nAs lebres caem, depois os linces caem.\nA questão quer o motivo de os linces caírem logo depois das lebres.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "cadeia-alimentar",
+            "titulo": "Lebres e linces",
+            "rotulos": [
+              "capim",
+              "lebre",
+              "lince",
+              "um sobe, o outro segue"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A cadeia é capim → lebre → lince.\nMuitas lebres = muita caça: os linces comem bem e criam mais filhotes.\nPoucas lebres = pouca caça: muitos linces passam fome e menos filhotes sobrevivem."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Um mata e come o outro = predação.\nNa predação, o número do predador segue o da presa, sempre um pouco atrasado.\nPresa caiu, predador cai logo depois."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O lince demora para sentir a falta de comida, e os filhotes demoram para crescer.\nPor isso a queda dos linces vem com atraso.\nCom poucos linces, as lebres voltam a crescer, e o ciclo recomeça."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, menos lebres para caçar, menos comida para os linces.\nA diz que o lince come capim, mas ele come lebre.\nC inverte: quem ganha na relação é o lince, não a lebre.\nD chama o lince de produtor; só plantas fazem o próprio alimento.\nE inventa um veneno que o texto não cita."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Numa ilha, os ratos somem por uma doença. O que deve acontecer com as corujas que comem ratos?",
+        "opcoes": [
+          "Aumentar",
+          "Diminuir",
+          "Ficar iguais",
+          "Virar produtoras"
+        ],
+        "certa": "Diminuir",
+        "resposta": "Sem ratos, falta caça para as corujas, e o número delas cai."
+      }
+    }
+  }
+]

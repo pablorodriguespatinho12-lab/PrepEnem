@@ -1,0 +1,1804 @@
+[
+ {
+  "id": "d2-banco-fis-din-01",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Uma estudante de 60 kg está em pé sobre uma balança de banheiro, dentro de um elevador. A balança mede a força com que é apertada e mostra o resultado em kg, dividindo essa força por 10. Quando o elevador arranca para cima, ele ganha velocidade a 2 m/s² durante alguns segundos. Considere g = 10 m/s².\nDurante a arrancada, a balança mostra",
+  "A": "60 kg",
+  "B": "48 kg",
+  "C": "72 kg",
+  "D": "62 kg",
+  "E": "720 kg",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Peso: 60 × 10 = 600 N. Para acelerar para cima a 2 m/s², sobra m × a = 60 × 2 = 120 N para cima. A balança empurra 600 + 120 = 720 N e mostra 720 ÷ 10 = 72 kg. C. Erros: A ignora a arrancada; B subtrai os 12 kg; D soma os 2 m/s² direto na massa; E esquece de dividir por 10.",
+   "ideia": "Para a estudante subir acelerando, a balança precisa segurar o peso e ainda dar uma sobra de força para cima. Por isso ela aperta mais e o número da tela sobe.",
+   "pecas": [
+    {
+     "termo": "Balança de banheiro",
+     "significado": "Ela não mede a massa direto: mede a força com que é apertada e divide por 10 para mostrar em kg."
+    },
+    {
+     "termo": "m/s²",
+     "significado": "Metros por segundo ao quadrado: quanto a velocidade muda a cada segundo. 2 m/s² = a velocidade sobe 2 m/s a cada 1 s."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A estudante tem 60 kg e está sobre uma balança, dentro do elevador.\nO elevador arranca para cima, ganhando 2 m/s de velocidade a cada segundo.\nA questão quer o número que a balança mostra nessa arrancada.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "A balança no elevador",
+      "rotulos": [
+       "balança empurra ?",
+       "peso para baixo",
+       "60 kg",
+       "sobe a 2 m/s²"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Parado, a balança só segura o peso: 60 × 10 = 600 N, e mostra 600 ÷ 10 = 60 kg.\n2 m/s² quer dizer: em 1 s a velocidade é 2 m/s; em 2 s, 4 m/s; em 3 s, 6 m/s.\nPara a estudante ganhar essa velocidade para cima, precisa sobrar força para cima: 60 × 2 = 120 N.\nEntão a balança empurra o peso mais a sobra: 600 + 120 = 720 N."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Força da balança = peso + massa × aceleração.\n600 + 60 × 2 = 600 + 120 = 720 N.\nA balança divide por 10 e mostra 72 kg.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "A balança na arrancada",
+      "dados": [
+       "m = 60\\,\\text{kg}",
+       "a = 2\\,\\text{m/s}^2",
+       "P = 60 \\times 10 = 600\\,\\text{N}"
+      ],
+      "formula": "N = P + m \\times a",
+      "legenda": [
+       "N: a força da balança",
+       "P: o peso"
+      ],
+      "contas": [
+       "N = 600 + 60 \\times 2",
+       "N = 600 + 120 = 720\\,\\text{N}",
+       "720 \\div 10 = 72"
+      ],
+      "resultado": "72\\,\\text{kg na tela}",
+      "nota": "A massa continua 60 kg; só a força mudou."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Pela 3ª lei, a balança empurra a estudante com a mesma força que ela aperta a balança.\nSobre a estudante, sobra 720 − 600 = 120 N para cima.\nPela 2ª lei, a = F ÷ m = 120 ÷ 60 = 2 m/s², a aceleração do elevador. Confere."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 72 kg.\nA (60 kg) é o que a balança mostra com o elevador parado.\nB (48 kg) tirou os 12 kg em vez de somar: isso seria o elevador acelerando para baixo.\nD (62 kg) somou os 2 m/s² direto na massa.\nE (720 kg) é a força em newtons, sem dividir por 10."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Pessoa de 50 kg, elevador arrancando para cima a 2 m/s². A balança mostra:",
+    "opcoes": [
+     "60 kg",
+     "50 kg",
+     "40 kg",
+     "52 kg"
+    ],
+    "certa": "60 kg",
+    "resposta": "50 × 10 + 50 × 2 = 500 + 100 = 600 N, que aparece como 60 kg."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-02",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Uma empresa testa drones para entregar remédios em comunidades rurais. O drone tem massa de 2 kg e leva um pacote de 1 kg pendurado. Na decolagem, as hélices empurram o conjunto para cima com uma força total de 39 N. Despreze a resistência do ar e considere g = 10 m/s².\nA aceleração do conjunto drone e pacote, ao subir, é de",
+  "A": "3 m/s²",
+  "B": "13 m/s²",
+  "C": "4,5 m/s²",
+  "D": "19,5 m/s²",
+  "E": "9 m/s²",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Massa total: 2 + 1 = 3 kg. Peso: 3 × 10 = 30 N para baixo. Sobra: 39 − 30 = 9 N para cima. a = 9 ÷ 3 = 3 m/s². A. Erros: B esquece o peso (39 ÷ 3); C esquece o pacote na massa (9 ÷ 2); D usa 39 ÷ 2; E é a força que sobra, não a aceleração.",
+   "ideia": "As hélices puxam 39 N para cima, mas o peso puxa 30 N para baixo. Só os 9 N que sobram aceleram os 3 kg do conjunto.",
+   "pecas": [
+    {
+     "termo": "Força resultante",
+     "significado": "O que sobra depois de juntar todas as forças. Forças em sentidos contrários se subtraem."
+    },
+    {
+     "termo": "m/s²",
+     "significado": "Metros por segundo ao quadrado: quanto a velocidade muda a cada segundo. 2 m/s² = a velocidade sobe 2 m/s a cada 1 s."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O drone tem 2 kg e carrega um pacote de 1 kg.\nAs hélices empurram para cima com 39 N, e a gravidade puxa para baixo.\nA questão quer a aceleração na subida.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "O drone decolando",
+      "rotulos": [
+       "hélices 39 N",
+       "peso para baixo",
+       "2 kg + 1 kg",
+       "g = 10 m/s²"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Quem sobe é o drone junto com o pacote: 2 + 1 = 3 kg.\nCada 1 kg pesa 10 N; 2 kg pesam 20 N; 3 kg pesam 30 N.\nHélice para cima 39 N, peso para baixo 30 N: sobram 39 − 30 = 9 N para cima."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "a = força que sobra ÷ massa.\na = 9 ÷ 3 = 3 m/s².\nO conjunto sobe com 3 m/s em 1 s, 6 m/s em 2 s, 9 m/s em 3 s.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "A decolagem",
+      "dados": [
+       "F_{\\text{hélices}} = 39\\,\\text{N}",
+       "m = 2 + 1 = 3\\,\\text{kg}",
+       "P = 3 \\times 10 = 30\\,\\text{N}"
+      ],
+      "formula": "a = \\frac{F_{\\text{hélices}} - P}{m}",
+      "legenda": [
+       "F: o empurrão das hélices",
+       "P: o peso do conjunto"
+      ],
+      "contas": [
+       "a = \\frac{39 - 30}{3}",
+       "a = \\frac{9}{3}"
+      ],
+      "resultado": "a = 3\\,\\text{m/s}^2",
+      "nota": "Sobe ganhando 3 m/s a cada segundo."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Pela 2ª lei, F = m × a, e a força que vale é a resultante, o que sobra.\nVirando a fórmula: a = F ÷ m.\nConfira ao contrário: 3 kg × 3 m/s² = 9 N, exatamente o que sobra depois do peso."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, 3 m/s².\nB (13 m/s²) esqueceu o peso: fez 39 ÷ 3.\nC (4,5 m/s²) esqueceu o pacote na massa: fez 9 ÷ 2.\nD (19,5 m/s²) esqueceu o peso e o pacote: fez 39 ÷ 2.\nE (9) é a força que sobra, em newtons, e não a aceleração."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um balão de 2 kg com força de 30 N para cima (g = 10 m/s²). A aceleração é:",
+    "opcoes": [
+     "5 m/s²",
+     "15 m/s²",
+     "10 m/s²",
+     "20 m/s²"
+    ],
+    "certa": "5 m/s²",
+    "resposta": "Peso 20 N, sobram 30 − 20 = 10 N; 10 ÷ 2 = 5 m/s²."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-03",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Num ônibus urbano, vários passageiros viajam em pé, sem se segurar. Quando o motorista freia de repente, esses passageiros são lançados para a frente, mesmo sem que nada os empurre. Por isso, as empresas de ônibus pedem que todos se segurem nas barras.\nO movimento dos passageiros para a frente na freada é explicado porque",
+  "A": "uma força aparece na freada e empurra os passageiros para a frente.",
+  "B": "o peso dos passageiros aumenta quando o ônibus freia.",
+  "C": "o ônibus empurra os passageiros para trás, e eles reagem indo para a frente.",
+  "D": "o ar dentro do ônibus continua andando e arrasta os passageiros.",
+  "E": "os passageiros tendem a continuar com a velocidade que tinham, pela lei da inércia.",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "1ª lei (inércia): sem força resultante, o corpo continua como está. O freio para o ônibus, mas nada segura os pés soltos dos passageiros, que seguem para a frente. E. Erros: A inventa uma força; B confunde com peso; C usa a 3ª lei no lugar errado; D culpa o ar.",
+   "ideia": "Os passageiros já andavam junto com o ônibus. Na freada, o freio age no ônibus, não neles, então eles continuam indo para a frente.",
+   "pecas": [
+    {
+     "termo": "Inércia",
+     "significado": "Tendência de todo corpo de continuar como está: parado fica parado, andando continua andando em linha reta."
+    },
+    {
+     "termo": "1ª lei de Newton",
+     "significado": "Sem força resultante, o corpo não muda o movimento. É a lei da inércia."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O ônibus anda com os passageiros em pé, soltos.\nO motorista freia de repente e os passageiros vão para a frente.\nA questão quer a explicação física desse movimento.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "A freada do ônibus",
+      "rotulos": [
+       "passageiro segue",
+       "freio no ônibus",
+       "ônibus",
+       "sem se segurar"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Antes da freada, ônibus e passageiros andam juntos, na mesma velocidade.\nO freio age nas rodas e para o ônibus.\nNinguém faz força para parar o passageiro solto, então ele continua com a velocidade que tinha."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Pergunte: alguma força empurrou o passageiro para a frente? Não.\nEntão não é força nova: é o corpo continuando como estava.\nIsso é a 1ª lei, a inércia."
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A 1ª lei diz: sem força resultante, o corpo continua parado ou em linha reta com a mesma velocidade.\nQuem muda de velocidade é o ônibus, que recebeu a força do freio.\nSegurar na barra dá ao passageiro a força que faz ele frear junto."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, os passageiros continuam com a velocidade que tinham (inércia).\nA está errada: não aparece força para a frente; o passageiro só não freou.\nB está errada: o peso não muda na freada.\nC está errada: a 3ª lei fala de um par de forças, e aqui nada empurra o passageiro.\nD está errada: o ar não arrasta uma pessoa desse jeito."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Num ônibus parado, um passageiro solto. O ônibus arranca. Ele vai para:",
+    "opcoes": [
+     "trás",
+     "a frente",
+     "cima",
+     "lugar nenhum"
+    ],
+    "certa": "trás",
+    "resposta": "Pela inércia, ele tende a ficar parado enquanto o ônibus anda para a frente."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-04",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Numa gincana escolar, duas equipes disputam um cabo de guerra sobre um piso liso. A equipe Azul puxa a corda para a esquerda com 1 200 N, e a equipe Verde puxa para a direita com 1 000 N. Somando os alunos das duas equipes, a massa total é de 800 kg. Despreze a massa da corda.\nNo início da disputa, a aceleração do conjunto é de",
+  "A": "2,75 m/s²",
+  "B": "0,25 m/s²",
+  "C": "4 m/s²",
+  "D": "zero, porque as forças formam um par",
+  "E": "1,5 m/s²",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Forças contrárias se subtraem: 1 200 − 1 000 = 200 N para a esquerda. a = 200 ÷ 800 = 2 ÷ 8 = 0,25 m/s². B. Erros: A somou as forças (2 200 ÷ 800); C dividiu ao contrário (800 ÷ 200); D confundiu com par da 3ª lei; E usou só a Azul (1 200 ÷ 800).",
+   "ideia": "As duas equipes puxam para lados contrários, então sobram só 200 N para a esquerda. Esses 200 N movem os 800 kg de todo mundo.",
+   "pecas": [
+    {
+     "termo": "Força resultante",
+     "significado": "O que sobra depois de juntar todas as forças. Forças em sentidos contrários se subtraem."
+    },
+    {
+     "termo": "m/s²",
+     "significado": "Metros por segundo ao quadrado: quanto a velocidade muda a cada segundo. 2 m/s² = a velocidade sobe 2 m/s a cada 1 s."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A equipe Azul puxa 1 200 N para a esquerda; a Verde, 1 000 N para a direita.\nAs duas equipes juntas têm 800 kg.\nA questão quer a aceleração do conjunto no começo.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "O cabo de guerra",
+      "rotulos": [
+       "Verde 1 000 N",
+       "Azul 1 200 N",
+       "800 kg ao todo",
+       "piso liso"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Puxões em sentidos contrários se subtraem: 1 200 − 1 000 = 200 N, para o lado da Azul.\nQuem é acelerado são todos os alunos juntos: 800 kg.\nAgora é dividir 200 por 800, um número menor por um maior: o resultado fica menor que 1."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "a = 200 ÷ 800. Corte os zeros dos dois: 2 ÷ 8, porque dividir os dois pelo mesmo número não muda quantas vezes um cabe no outro (120 ÷ 40 = 12 ÷ 4 = 3).\n2 ÷ 8 = 1 ÷ 4: divida os dois por 2. Numa pizza, 2 pedaços de 8 são o mesmo tanto que 1 pedaço de 4.\n1 ÷ 4 = 0,25, porque 4 pedaços de 0,25 fazem 1 (0,25 + 0,25 + 0,25 + 0,25 = 1).\na = 0,25 m/s².",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O cabo de guerra",
+      "dados": [
+       "F = 1\\,200 - 1\\,000 = 200\\,\\text{N}",
+       "m = 800\\,\\text{kg}"
+      ],
+      "formula": "a = \\frac{F}{m}",
+      "legenda": [
+       "F: a força que sobra",
+       "m: a massa de todos"
+      ],
+      "contas": [
+       "a = \\frac{200}{800}",
+       "a = \\frac{2}{8} = \\frac{1}{4}"
+      ],
+      "resultado": "a = 0{,}25\\,\\text{m/s}^2",
+      "nota": "A cada segundo, ganham 0,25 m/s para o lado da Azul."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Pela 2ª lei, a = F ÷ m, com a força que sobra.\nConfira ao contrário: 800 × 0,25 = 800 ÷ 4 = 200 N. Bate com a sobra.\nPouca força para muita massa dá aceleração pequena."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 0,25 m/s².\nA (2,75) somou os puxões, 2 200 ÷ 800, mas eles são contrários.\nC (4) dividiu ao contrário: 800 ÷ 200.\nD está errada: par da 3ª lei age em corpos diferentes; aqui as duas forças agem no mesmo conjunto.\nE (1,5) usou só a Azul: 1 200 ÷ 800."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Força que sobra de 100 N num grupo de 400 kg. A aceleração é:",
+    "opcoes": [
+     "0,25 m/s²",
+     "4 m/s²",
+     "0,4 m/s²",
+     "40 m/s²"
+    ],
+    "certa": "0,25 m/s²",
+    "resposta": "100 ÷ 400 = 1 ÷ 4 = 0,25 m/s²."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-05",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Na entrada de uma ponte antiga, uma placa avisa que ela suporta no máximo 150 000 N de peso por vez. Um caminhão vazio tem massa de 8 000 kg e vai atravessar a ponte carregado de areia. Considere g = 10 m/s².\nPara não passar do limite da placa, a maior massa de areia que o caminhão pode levar é de",
+  "A": "15 000 kg",
+  "B": "142 000 kg",
+  "C": "70 000 kg",
+  "D": "7 000 kg",
+  "E": "700 kg",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Massa máxima: P = m × g, então m = 150 000 ÷ 10 = 15 000 kg. Areia: 15 000 − 8 000 = 7 000 kg. D. Erros: A é a massa total, com o caminhão; B subtraiu kg de N (150 000 − 8 000); C errou um zero (70 000); E errou outro zero (700).",
+   "ideia": "A placa fala de peso, em newtons. Dividindo por 10, vira a massa máxima, 15 000 kg; tirando o caminhão, sobra o que a areia pode ter.",
+   "pecas": [
+    {
+     "termo": "Peso",
+     "significado": "Força com que a Terra puxa um corpo: P = m × g. Na Terra, cada 1 kg pesa 10 N."
+    },
+    {
+     "termo": "Newton (N)",
+     "significado": "Unidade de força. Peso é força, então se mede em N, e massa em kg."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A ponte aguenta no máximo 150 000 N de peso.\nO caminhão vazio tem 8 000 kg e vai levar areia.\nA questão quer a maior massa de areia permitida.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "O caminhão na ponte",
+      "rotulos": [
+       "limite 150 000 N",
+       "peso para baixo",
+       "caminhão 8 000 kg",
+       "areia = ?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "A placa está em newtons, mas o caminhão está em kg: primeiro, ponha tudo na mesma medida.\nCom números pequenos: 1 kg pesa 10 N; 2 kg pesam 20 N; 3 kg pesam 30 N. O peso é a massa vezes 10.\nVoltando de peso para massa, divide por 10: 150 000 N vêm de 15 000 kg."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Massa total máxima: 150 000 ÷ 10 = 15 000 kg.\nTire o caminhão: 15 000 − 8 000 = 7 000 kg de areia.\nSó subtraia depois de passar tudo para kg.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O limite da ponte",
+      "dados": [
+       "P_{\\text{máx}} = 150\\,000\\,\\text{N}",
+       "g = 10\\,\\text{m/s}^2",
+       "m_{\\text{caminhão}} = 8\\,000\\,\\text{kg}"
+      ],
+      "formula": "m = \\frac{P}{g}",
+      "legenda": [
+       "P: o peso máximo",
+       "g: a gravidade"
+      ],
+      "contas": [
+       "m = \\frac{150\\,000}{10} = 15\\,000\\,\\text{kg}",
+       "15\\,000 - 8\\,000 = 7\\,000"
+      ],
+      "resultado": "7\\,000\\,\\text{kg de areia}",
+      "nota": "Com 7 000 kg de areia, o peso fica em 150 000 N."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "P = m × g, e virando a fórmula: m = P ÷ g.\nConfira: caminhão + areia = 8 000 + 7 000 = 15 000 kg; 15 000 × 10 = 150 000 N. Bate com a placa.\nSó dá para subtrair coisas da mesma medida: kg com kg."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, 7 000 kg.\nA (15 000 kg) é a massa total, esquecendo o caminhão.\nB (142 000 kg) subtraiu kg de N: 150 000 − 8 000.\nC (70 000 kg) e E (700 kg) erraram a quantidade de zeros.\nO peso da areia é 70 000 N, e não a massa."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um elevador aguenta 8 000 N (g = 10 m/s²). A maior massa que ele leva é:",
+    "opcoes": [
+     "800 kg",
+     "80 000 kg",
+     "80 kg",
+     "8 000 kg"
+    ],
+    "certa": "800 kg",
+    "resposta": "8 000 ÷ 10 = 800 kg."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-06",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Uma revista de carros testou um modelo compacto de 1 200 kg, já com o motorista. Partindo do repouso numa pista reta, o carro chegou a 18 m/s em 6 segundos, ganhando velocidade sempre no mesmo ritmo.\nDurante esse teste, a força resultante sobre o carro foi de",
+  "A": "21 600 N",
+  "B": "3 600 N",
+  "C": "200 N",
+  "D": "7 200 N",
+  "E": "400 N",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Aceleração: 18 ÷ 6 = 3 m/s² (a cada segundo, +3 m/s). F = m × a = 1 200 × 3 = 3 600 N. B. Erros: A multiplicou pela velocidade final (1 200 × 18); C dividiu a massa pelo tempo (1 200 ÷ 6); D multiplicou pelo tempo (1 200 × 6); E dividiu a massa pela aceleração (1 200 ÷ 3).",
+   "ideia": "Primeiro, ache quanto a velocidade sobe a cada segundo: 18 m/s em 6 s dá 3 m/s por segundo. Depois, F = m × a.",
+   "pecas": [
+    {
+     "termo": "Velocidade",
+     "significado": "Quantos metros o corpo anda em cada segundo. 5 m/s = 5 metros a cada 1 segundo."
+    },
+    {
+     "termo": "m/s²",
+     "significado": "Metros por segundo ao quadrado: quanto a velocidade muda a cada segundo. 3 m/s² = a velocidade sobe 3 m/s a cada 1 s."
+    },
+    {
+     "termo": "Repouso",
+     "significado": "Parado. O carro começa com velocidade zero."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O carro tem 1 200 kg e sai parado.\nEm 6 segundos, chega a 18 m/s, ganhando velocidade sempre no mesmo ritmo.\nA questão quer a força resultante nesse trecho.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "A arrancada do carro",
+      "rotulos": [
+       "força = ?",
+       "",
+       "1 200 kg",
+       "0 a 18 m/s em 6 s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Mesmo ritmo quer dizer: a velocidade sobe o mesmo tanto a cada segundo.\nSe sobe 3 m/s por segundo: em 1 s, 3 m/s; em 2 s, 6 m/s; em 3 s, 9 m/s; em 6 s, 18 m/s. Bate.\nEntão a aceleração é 18 ÷ 6 = 3 m/s²."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Aceleração: a = 18 ÷ 6 = 3 m/s².\nForça: F = m × a = 1 200 × 3 = 3 600 N.\nSão duas contas: primeiro a aceleração, depois a força.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "A arrancada",
+      "dados": [
+       "m = 1\\,200\\,\\text{kg}",
+       "\\Delta v = 18\\,\\text{m/s}",
+       "t = 6\\,\\text{s}"
+      ],
+      "formula": "F = m \\times \\frac{\\Delta v}{t}",
+      "legenda": [
+       "Δv: a velocidade ganha",
+       "t: o tempo"
+      ],
+      "contas": [
+       "a = \\frac{18}{6} = 3\\,\\text{m/s}^2",
+       "F = 1\\,200 \\times 3"
+      ],
+      "resultado": "F = 3\\,600\\,\\text{N}",
+      "nota": "Sobram 3 600 N empurrando o carro para a frente."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A 2ª lei usa a aceleração, que é quanto a velocidade muda por segundo, e não a velocidade em si.\nPor isso o 18 m/s não entra direto: ele vira 3 m/s² depois de dividir pelos 6 s.\nConfira ao contrário: 3 600 ÷ 1 200 = 3 m/s²."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 3 600 N.\nA (21 600 N) usou a velocidade final no lugar da aceleração: 1 200 × 18.\nC (200 N) dividiu a massa pelo tempo: 1 200 ÷ 6.\nD (7 200 N) multiplicou pelo tempo: 1 200 × 6.\nE (400 N) dividiu a massa pela aceleração: 1 200 ÷ 3."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma moto de 200 kg sai parada e chega a 20 m/s em 5 s. A força resultante é:",
+    "opcoes": [
+     "800 N",
+     "4 000 N",
+     "40 N",
+     "1 000 N"
+    ],
+    "certa": "800 N",
+    "resposta": "a = 20 ÷ 5 = 4 m/s²; F = 200 × 4 = 800 N."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-07",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Um paraquedista tem, com todo o equipamento, massa de 80 kg. Depois que o paraquedas abre, ele passa a descer em linha reta com velocidade constante de 5 m/s até chegar perto do chão. Considere g = 10 m/s².\nNesse trecho de velocidade constante, a força que o ar faz para cima sobre o paraquedista e o paraquedas é",
+  "A": "zero, porque ele não está acelerando.",
+  "B": "80 N, igual à massa.",
+  "C": "menor que 800 N, porque ele continua descendo.",
+  "D": "maior que 800 N, porque o paraquedas freia a queda.",
+  "E": "800 N, igual ao peso.",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Velocidade constante em linha reta: a = 0, então a força resultante é zero (1ª lei). Ar para cima = peso = 80 × 10 = 800 N. E. Erros: A confunde força resultante zero com força do ar zero; B confunde massa com peso; C acha que descer exige força para baixo sobrando; D seria para ele ir perdendo velocidade.",
+   "ideia": "Se a velocidade não muda, nada sobra: a força do ar para cima empata com o peso para baixo. O peso é 80 × 10 = 800 N.",
+   "pecas": [
+    {
+     "termo": "Velocidade constante",
+     "significado": "A velocidade não muda: 5 m/s no 1º segundo, 5 m/s no 2º, 5 m/s no 3º. A aceleração é zero."
+    },
+    {
+     "termo": "1ª lei de Newton",
+     "significado": "Sem força resultante, o corpo continua parado ou em linha reta com a mesma velocidade."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O paraquedista com equipamento tem 80 kg.\nCom o paraquedas aberto, ele desce sempre a 5 m/s, em linha reta.\nA questão quer a força do ar para cima nesse trecho.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "A descida de paraquedas",
+      "rotulos": [
+       "ar para cima = ?",
+       "peso para baixo",
+       "80 kg",
+       "desce sempre a 5 m/s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Velocidade constante: em 1 s, 5 m/s; em 2 s, 5 m/s; em 3 s, 5 m/s. Ela não sobe nem desce.\nSe a velocidade não muda, a aceleração é zero.\nSem aceleração, F = m × a = 80 × 0 = 0: as forças empatam."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Peso: 80 × 10 = 800 N para baixo.\nPara empatar, o ar faz 800 N para cima.\nSobra 800 − 800 = 0, e ele segue a 5 m/s.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O empate das forças",
+      "dados": [
+       "m = 80\\,\\text{kg}",
+       "g = 10\\,\\text{m/s}^2",
+       "a = 0"
+      ],
+      "formula": "F_{\\text{ar}} - P = m \\times a",
+      "legenda": [
+       "F_ar: o ar empurrando para cima",
+       "P: o peso"
+      ],
+      "contas": [
+       "F_{\\text{ar}} - 800 = 80 \\times 0",
+       "F_{\\text{ar}} - 800 = 0"
+      ],
+      "resultado": "F_{\\text{ar}} = 800\\,\\text{N}",
+      "nota": "Forças empatadas, velocidade parada em 5 m/s."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A 1ª lei diz que um corpo sem força resultante continua em linha reta com a mesma velocidade.\nNão é preciso força sobrando para continuar descendo: precisa só para mudar a velocidade.\nAntes de o paraquedas abrir, o ar fazia menos que 800 N e ele ganhava velocidade."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, 800 N, igual ao peso.\nA está errada: a soma das forças é zero, mas o ar faz força, e ela é grande.\nB está errada: 80 é a massa em kg; o peso é 80 × 10 = 800 N.\nC está errada: com ar menor que o peso, a velocidade aumentaria a cada segundo.\nD está errada: com ar maior que o peso, a velocidade diminuiria a cada segundo."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um elevador de 500 kg sobe sempre a 2 m/s (g = 10 m/s²). O cabo puxa com:",
+    "opcoes": [
+     "5 000 N",
+     "6 000 N",
+     "1 000 N",
+     "zero"
+    ],
+    "certa": "5 000 N",
+    "resposta": "Velocidade constante: o cabo empata com o peso, 500 × 10 = 5 000 N."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-08",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Num rinque de patinação no gelo, um menino de 40 kg e um adulto de 80 kg estão parados, frente a frente. O menino estica os braços e empurra o adulto com uma força de 120 N. Os dois começam a deslizar, cada um para um lado. Despreze o atrito com o gelo.\nDurante o empurrão, as acelerações do menino e do adulto são, respectivamente,",
+  "A": "3 m/s² e 1,5 m/s²",
+  "B": "1,5 m/s² e 3 m/s²",
+  "C": "3 m/s² e zero",
+  "D": "3 m/s² e 3 m/s²",
+  "E": "1,5 m/s² e 1,5 m/s²",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "3ª lei: o adulto empurra o menino de volta com os mesmos 120 N. Menino: 120 ÷ 40 = 3 m/s². Adulto: 120 ÷ 80 = 1,5 m/s². A. Erros: B trocou as massas; C esqueceu que o menino empurra o adulto; D acha que acelerações são iguais; E dividiu tudo por 80.",
+   "ideia": "Os dois recebem a mesma força de 120 N, um par da 3ª lei. Quem tem menos massa acelera mais: o menino, com metade da massa, tem o dobro da aceleração.",
+   "pecas": [
+    {
+     "termo": "3ª lei de Newton",
+     "significado": "Toda força tem um par: se o menino empurra o adulto, o adulto empurra o menino com a mesma força, em sentido contrário."
+    },
+    {
+     "termo": "m/s²",
+     "significado": "Quanto a velocidade muda a cada segundo. 3 m/s² = a velocidade sobe 3 m/s a cada 1 s."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Menino de 40 kg e adulto de 80 kg, parados no gelo.\nO menino empurra o adulto com 120 N e os dois deslizam para lados contrários.\nA questão quer a aceleração de cada um durante o empurrão.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "O empurrão no gelo",
+      "rotulos": [
+       "adulto 80 kg",
+       "menino 40 kg",
+       "empurrão 120 N",
+       "gelo sem atrito"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Atrito é a força que freia quando uma coisa raspa na outra, como o tênis no chão; no gelo ele é tão pequeno que a questão manda ignorar.\nPela 3ª lei, o adulto empurra o menino de volta com os mesmos 120 N.\nCom números pequenos: 12 N em 4 kg dá 12 ÷ 4 = 3 m/s²; 12 N em 8 kg dá 12 ÷ 8 = 1,5 m/s² (8 + metade de 8 = 12).\nAqui é igual, com um zero a mais na força e na massa."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Menino: a = 120 ÷ 40 = 3 m/s².\nAdulto: a = 120 ÷ 80 = 12 ÷ 8 = 1,5 m/s².\nConfira: 80 × 1,5 = 80 + 40 = 120 N.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O empurrão no gelo",
+      "dados": [
+       "F = 120\\,\\text{N}",
+       "m_{\\text{menino}} = 40\\,\\text{kg}",
+       "m_{\\text{adulto}} = 80\\,\\text{kg}"
+      ],
+      "formula": "a = \\frac{F}{m}",
+      "legenda": [
+       "F: a mesma força nos dois",
+       "m: a massa de cada um"
+      ],
+      "contas": [
+       "a_{\\text{menino}} = \\frac{120}{40} = 3",
+       "a_{\\text{adulto}} = \\frac{120}{80} = 1{,}5"
+      ],
+      "resultado": "3\\,\\text{m/s}^2\\ \\text{e}\\ 1{,}5\\,\\text{m/s}^2",
+      "nota": "Mesma força; metade da massa, dobro da aceleração."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "As duas forças do par têm o mesmo tamanho, mas agem em corpos diferentes.\nPela 2ª lei, a = F ÷ m: com a mesma força, a massa menor acelera mais.\nO menino tem metade da massa do adulto e por isso o dobro da aceleração."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, 3 m/s² e 1,5 m/s².\nB trocou as massas: deu a aceleração maior para quem tem mais massa.\nC esqueceu que o adulto também recebe o empurrão de 120 N.\nD acha que a mesma força dá a mesma aceleração, mas as massas são diferentes.\nE dividiu as duas forças por 80, a massa do adulto."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Dois skatistas: um de 50 kg e outro de 100 kg se empurram com 200 N. O de 50 kg acelera:",
+    "opcoes": [
+     "4 m/s²",
+     "2 m/s²",
+     "100 m/s²",
+     "zero"
+    ],
+    "certa": "4 m/s²",
+    "resposta": "200 ÷ 50 = 4 m/s²; o outro, 200 ÷ 100 = 2 m/s²."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-09",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Num supermercado de piso bem liso, uma cliente empurra o carrinho sempre com a mesma força de 60 N. Na entrada, o carrinho vazio tem 20 kg. Na saída, com as compras, o carrinho tem 60 kg ao todo. Despreze o atrito.\nAs acelerações do carrinho vazio e do carrinho cheio são, respectivamente,",
+  "A": "3 m/s² e 3 m/s²",
+  "B": "1 m/s² e 3 m/s²",
+  "C": "1 m/s² e 1 m/s²",
+  "D": "3 m/s² e 1 m/s²",
+  "E": "1 200 m/s² e 3 600 m/s²",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Vazio: 60 ÷ 20 = 3 m/s². Cheio: 60 ÷ 60 = 1 m/s². D. Erros: A acha que a mesma força dá a mesma aceleração; B inverteu; C usou só a massa cheia; E multiplicou força por massa.",
+   "ideia": "Com a mesma força, mais massa dá menos aceleração. O carrinho cheio tem o triplo da massa e por isso um terço da aceleração.",
+   "pecas": [
+    {
+     "termo": "Aceleração",
+     "significado": "Quanto a velocidade muda a cada segundo. 3 m/s² = sobe 3 m/s a cada 1 s."
+    },
+    {
+     "termo": "2ª lei de Newton",
+     "significado": "Força resultante = massa × aceleração (F = m × a). Virando: a = F ÷ m."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A cliente empurra sempre com 60 N.\nO carrinho vazio tem 20 kg; o cheio tem 60 kg ao todo.\nA questão quer a aceleração do vazio e do cheio, nessa ordem.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "O carrinho de compras",
+      "rotulos": [
+       "empurrão 60 N",
+       "",
+       "20 kg ou 60 kg",
+       "piso liso"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Atrito é a força que freia quando uma coisa raspa na outra, como o tênis no chão; a questão manda ignorar.\nA força é a mesma; só a massa muda.\nCom números pequenos: 6 N em 2 kg dá 3 m/s²; 6 N em 6 kg dá 1 m/s².\nAqui é igual, com um zero a mais em tudo: mais massa, menos aceleração."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "a = F ÷ m.\nVazio: 60 ÷ 20 = 3 m/s².\nCheio: 60 ÷ 60 = 1 m/s².",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Vazio e cheio",
+      "dados": [
+       "F = 60\\,\\text{N}",
+       "m_{\\text{vazio}} = 20\\,\\text{kg}",
+       "m_{\\text{cheio}} = 60\\,\\text{kg}"
+      ],
+      "formula": "a = \\frac{F}{m}",
+      "legenda": [
+       "F: o empurrão",
+       "m: a massa do carrinho"
+      ],
+      "contas": [
+       "a_{\\text{vazio}} = \\frac{60}{20} = 3",
+       "a_{\\text{cheio}} = \\frac{60}{60} = 1"
+      ],
+      "resultado": "3\\,\\text{m/s}^2\\ \\text{e}\\ 1\\,\\text{m/s}^2",
+      "nota": "O triplo da massa dá um terço da aceleração."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Pela 2ª lei, F = m × a. Se a força fica igual, massa e aceleração trocam de tamanho.\nA massa foi de 20 para 60 kg, o triplo; a aceleração foi de 3 para 1, um terço.\nPor isso o carrinho cheio é mais difícil de arrancar."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, 3 m/s² vazio e 1 m/s² cheio.\nA está errada: mesma força em massas diferentes dá acelerações diferentes.\nB inverteu: deu a maior aceleração para o carrinho mais pesado.\nC usou a massa cheia nos dois casos.\nE multiplicou força por massa (60 × 20 e 60 × 60), em vez de dividir."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um empurrão de 40 N num carrinho de 10 kg e noutro de 40 kg. As acelerações:",
+    "opcoes": [
+     "4 e 1 m/s²",
+     "1 e 4 m/s²",
+     "4 e 4 m/s²",
+     "400 e 1 600 m/s²"
+    ],
+    "certa": "4 e 1 m/s²",
+    "resposta": "40 ÷ 10 = 4 e 40 ÷ 40 = 1."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-10",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Num resgate durante uma enchente, um helicóptero iça uma maca com uma pessoa; a maca e a pessoa somam 100 kg. No começo da subida, o cabo puxa a maca e ela sobe ganhando velocidade a 0,5 m/s². Considere g = 10 m/s².\nNesse começo da subida, a força que o cabo faz na maca é de",
+  "A": "1 000 N",
+  "B": "950 N",
+  "C": "1 050 N",
+  "D": "50 N",
+  "E": "1 500 N",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Peso: 100 × 10 = 1 000 N. Sobra para acelerar: 100 × 0,5 = 50 N para cima. Cabo: 1 000 + 50 = 1 050 N. C. Erros: A esquece a aceleração; B subtrai a sobra; D é só a sobra; E fez 100 × 5 no lugar de 100 × 0,5.",
+   "ideia": "O cabo segura o peso de 1 000 N e ainda precisa sobrar 50 N para cima, que fazem a maca ganhar velocidade.",
+   "pecas": [
+    {
+     "termo": "Força resultante",
+     "significado": "O que sobra depois de juntar as forças. Para subir acelerando, precisa sobrar força para cima."
+    },
+    {
+     "termo": "m/s²",
+     "significado": "Quanto a velocidade muda a cada segundo. 0,5 m/s² = sobe meio metro por segundo a cada 1 s."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A maca com a pessoa tem 100 kg.\nO cabo puxa para cima e ela sobe ganhando 0,5 m/s de velocidade a cada segundo.\nA questão quer a força do cabo no começo da subida.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "O resgate de helicóptero",
+      "rotulos": [
+       "cabo = ?",
+       "peso para baixo",
+       "maca 100 kg",
+       "sobe a 0,5 m/s²"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "0,5 m/s² quer dizer: em 1 s, 0,5 m/s; em 2 s, 1 m/s; em 3 s, 1,5 m/s.\nO peso é 100 × 10 = 1 000 N. Só para segurar a maca parada, o cabo faria 1 000 N.\nPara ela subir ganhando velocidade, precisa sobrar força: 100 × 0,5."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "0,5 é metade de 1: 100 × 1 = 100, então 100 × 0,5 = metade de 100 = 50 N.\nCabo = peso + sobra = 1 000 + 50 = 1 050 N.\nConfira: 1 050 − 1 000 = 50 N; 50 ÷ 100 = 0,5 m/s².",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "A força do cabo",
+      "dados": [
+       "m = 100\\,\\text{kg}",
+       "a = 0{,}5\\,\\text{m/s}^2",
+       "P = 100 \\times 10 = 1\\,000\\,\\text{N}"
+      ],
+      "formula": "T = P + m \\times a",
+      "legenda": [
+       "T: a força do cabo",
+       "P: o peso"
+      ],
+      "contas": [
+       "T = 1\\,000 + 100 \\times 0{,}5",
+       "T = 1\\,000 + 50"
+      ],
+      "resultado": "T = 1\\,050\\,\\text{N}",
+      "nota": "Um pouco mais que o peso, para a maca ganhar velocidade."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Pela 2ª lei, a força que sobra é m × a. Para cima sobram cabo − peso.\nEntão cabo − 1 000 = 50, e o cabo vale 1 050 N.\nAceleração pequena pede uma sobra pequena: só 50 N além do peso."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 1 050 N.\nA (1 000 N) só segura o peso: a maca ficaria parada ou com velocidade constante.\nB (950 N) tirou a sobra: a maca desceria ganhando velocidade.\nD (50 N) é só a sobra, sem o peso.\nE (1 500 N) fez 100 × 5 no lugar de 100 × 0,5."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma caixa de 200 kg sobe presa num cabo, acelerando a 0,5 m/s² (g = 10). O cabo faz:",
+    "opcoes": [
+     "2 100 N",
+     "2 000 N",
+     "1 900 N",
+     "100 N"
+    ],
+    "certa": "2 100 N",
+    "resposta": "Peso 2 000 N + 200 × 0,5 = 100 N; 2 000 + 100 = 2 100 N."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-11",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Médicos recomendam que a mochila escolar, já carregada, pese no máximo 10% do peso do aluno, para não prejudicar a coluna. Um aluno tem massa de 50 kg, e a mochila dele, vazia, tem 1 kg. Considere g = 10 m/s².\nSeguindo a recomendação, a maior massa de material que o aluno pode colocar dentro da mochila é de",
+  "A": "4 kg",
+  "B": "5 kg",
+  "C": "49 kg",
+  "D": "9 kg",
+  "E": "0,4 kg",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Peso do aluno: 50 × 10 = 500 N. 10% de 500 = 50 N. Massa da mochila cheia: 50 ÷ 10 = 5 kg. Material: 5 − 1 = 4 kg. A. Erros: B esquece a mochila vazia; C fez 50 − 1; D tomou 10% como 10 kg e tirou 1; E errou a vírgula.",
+   "ideia": "A mochila cheia pode pesar 10% de 500 N, que é 50 N, e isso são 5 kg. Tirando o 1 kg da mochila vazia, sobram 4 kg de material.",
+   "pecas": [
+    {
+     "termo": "Porcentagem",
+     "significado": "10% quer dizer 10 de cada 100: é só dividir por 10. 10% de 100 = 10; 10% de 500 = 50."
+    },
+    {
+     "termo": "Peso",
+     "significado": "Força da gravidade: P = m × g. Na Terra, cada 1 kg pesa 10 N."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O aluno tem 50 kg e a mochila vazia tem 1 kg.\nA mochila cheia pode pesar no máximo 10% do peso do aluno.\nA questão quer quanto de material cabe dentro dela.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "A mochila na coluna",
+      "rotulos": [
+       "máximo 10% do peso",
+       "peso para baixo",
+       "aluno 50 kg",
+       "mochila vazia 1 kg"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Peso do aluno: 50 × 10 = 500 N.\n10% é dividir por 10: 10% de 100 é 10; 10% de 500 é 50 N.\nEntão a mochila cheia pode pesar 50 N. Como cada 1 kg pesa 10 N, isso são 50 ÷ 10 = 5 kg."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Mochila cheia: 5 kg.\nMochila vazia: 1 kg.\nMaterial: 5 − 1 = 4 kg.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "A mochila",
+      "dados": [
+       "m_{\\text{aluno}} = 50\\,\\text{kg}",
+       "P_{\\text{aluno}} = 50 \\times 10 = 500\\,\\text{N}",
+       "m_{\\text{vazia}} = 1\\,\\text{kg}"
+      ],
+      "formula": "m = \\frac{P}{g}",
+      "legenda": [
+       "P: o peso máximo da mochila",
+       "g: a gravidade"
+      ],
+      "contas": [
+       "10\\% \\text{ de } 500 = 50\\,\\text{N}",
+       "m = \\frac{50}{10} = 5\\,\\text{kg}",
+       "5 - 1 = 4"
+      ],
+      "resultado": "4\\,\\text{kg de material}",
+      "nota": "Mochila cheia com 5 kg: 10% do aluno."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Peso e massa crescem juntos: 10% do peso é o mesmo que 10% da massa.\nAtalho: 10% de 50 kg = 5 kg, o mesmo resultado.\nA conta pelo peso mostra de onde vem: P = m × g, então m = P ÷ g."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, 4 kg.\nB (5 kg) é a mochila cheia, esquecendo que ela já tem 1 kg vazia.\nC (49 kg) fez 50 − 1, sem usar os 10%.\nD (9 kg) tomou 10% como 10 kg e tirou 1.\nE (0,4 kg) errou a vírgula: dividiu por 10 uma vez a mais."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma pessoa de 70 kg pode levar até 10% da massa dela. O limite é:",
+    "opcoes": [
+     "7 kg",
+     "70 kg",
+     "0,7 kg",
+     "10 kg"
+    ],
+    "certa": "7 kg",
+    "resposta": "10% é dividir por 10: 70 ÷ 10 = 7 kg."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-12",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Num cruzamento, um caminhão de 10 000 kg bate na traseira de um carro de 1 000 kg. Durante a batida, o caminhão empurra o carro para a frente com uma força de 50 000 N. Despreze as outras forças.\nDurante a batida, a força que o carro faz no caminhão e a aceleração do caminhão (que perde velocidade) são, respectivamente,",
+  "A": "5 000 N e 5 m/s²",
+  "B": "50 000 N e 50 m/s²",
+  "C": "zero e zero",
+  "D": "50 000 N e 5 m/s²",
+  "E": "5 000 N e 50 m/s²",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "3ª lei: o carro empurra o caminhão para trás com os mesmos 50 000 N. Caminhão: a = 50 000 ÷ 10 000 = 5 m/s². D. Erros: A achou que o carro, menor, faz menos força; B usou a massa do carro; C acha que carro não faz força; E juntou os dois erros.",
+   "ideia": "Na batida, carro e caminhão trocam a mesma força de 50 000 N. O caminhão tem muito mais massa, então perde pouca velocidade: 5 m/s².",
+   "pecas": [
+    {
+     "termo": "3ª lei de Newton",
+     "significado": "Toda força tem um par: se A empurra B, B empurra A com a mesma força, em sentido contrário."
+    },
+    {
+     "termo": "m/s²",
+     "significado": "Metros por segundo ao quadrado: quanto a velocidade muda a cada segundo. 2 m/s² = a velocidade sobe 2 m/s a cada 1 s."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O caminhão de 10 000 kg bate no carro de 1 000 kg.\nO caminhão empurra o carro com 50 000 N.\nA questão quer a força do carro no caminhão e a aceleração do caminhão.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "A batida",
+      "rotulos": [
+       "caminhão no carro 50 000 N",
+       "carro no caminhão = ?",
+       "caminhão 10 000 kg",
+       "carro 1 000 kg"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Pela 3ª lei, se o caminhão empurra o carro, o carro empurra o caminhão com a mesma força, para trás.\nEntão o carro faz 50 000 N no caminhão, mesmo sendo menor.\nO que muda é o efeito: a mesma força freia pouco quem tem muita massa."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Força no caminhão: 50 000 N, para trás.\nAceleração do caminhão: a = 50 000 ÷ 10 000.\nCorte os 4 zeros dos dois: 5 ÷ 1 = 5 m/s², porque dividir os dois pelo mesmo número não muda quantas vezes um cabe no outro (120 ÷ 40 = 12 ÷ 4 = 3).",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "A batida",
+      "dados": [
+       "F = 50\\,000\\,\\text{N}",
+       "m_{\\text{caminhão}} = 10\\,000\\,\\text{kg}"
+      ],
+      "formula": "a = \\frac{F}{m}",
+      "legenda": [
+       "F: a força do carro no caminhão",
+       "m: a massa do caminhão"
+      ],
+      "contas": [
+       "a = \\frac{50\\,000}{10\\,000}",
+       "a = \\frac{5}{1}"
+      ],
+      "resultado": "50\\,000\\,\\text{N}\\ \\text{e}\\ 5\\,\\text{m/s}^2",
+      "nota": "O caminhão perde 5 m/s a cada segundo de batida."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "As forças do par têm o mesmo tamanho, mas agem em corpos diferentes.\nPara o carro: 50 000 ÷ 1 000 = 50 m/s², dez vezes mais que o caminhão.\nPor isso o carro sofre muito mais na batida, mesmo com forças iguais."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, 50 000 N e 5 m/s².\nA (5 000 N) acha que o carro, por ser menor, faz menos força; a 3ª lei diz que é igual.\nB (50 m/s²) é a aceleração do carro, não a do caminhão.\nC está errada: o carro empurra o caminhão de volta.\nE juntou os dois erros: força menor e aceleração do carro."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma bola de 1 kg bate na parede com 30 N. A parede empurra a bola com:",
+    "opcoes": [
+     "30 N",
+     "zero",
+     "3 N",
+     "300 N"
+    ],
+    "certa": "30 N",
+    "resposta": "3ª lei: o par tem a mesma força, 30 N, em sentido contrário."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-13",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Numa feira de ciências, alunos lançam um foguete feito com garrafa PET, água e ar comprimido. O foguete tem massa de 0,5 kg. No lançamento, o foguete joga a água para baixo, e a água empurra o foguete para cima com uma força de 25 N. Considere g = 10 m/s² e despreze o ar.\nLogo após o lançamento, a aceleração do foguete é de",
+  "A": "10 m/s²",
+  "B": "40 m/s²",
+  "C": "50 m/s²",
+  "D": "12,5 m/s²",
+  "E": "60 m/s²",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Peso: 0,5 × 10 = 5 N. Sobra: 25 − 5 = 20 N para cima. a = 20 ÷ 0,5 = 40 m/s² (cabem 2 metades em 1, então 40 em 20). B. Erros: A multiplicou 20 × 0,5; C esqueceu o peso (25 ÷ 0,5); D fez 25 × 0,5; E somou o peso (30 ÷ 0,5).",
+   "ideia": "A água empurra 25 N para cima e o peso puxa 5 N para baixo: sobram 20 N. Dividir 20 por 0,5 é ver quantas metades cabem em 20: 40.",
+   "pecas": [
+    {
+     "termo": "3ª lei de Newton",
+     "significado": "O foguete empurra a água para baixo e a água empurra o foguete para cima, com a mesma força."
+    },
+    {
+     "termo": "m/s²",
+     "significado": "Quanto a velocidade muda a cada segundo. 40 m/s² = sobe 40 m/s a cada 1 s."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O foguete de garrafa tem 0,5 kg.\nA água sai para baixo e empurra o foguete para cima com 25 N.\nA questão quer a aceleração logo depois do lançamento.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "O foguete de garrafa",
+      "rotulos": [
+       "água empurra 25 N",
+       "peso para baixo",
+       "0,5 kg",
+       "g = 10 m/s²"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Peso: 0,5 × 10 = 5 N, porque meio quilo pesa metade de 10.\nForças contrárias se subtraem: 25 − 5 = 20 N para cima.\nAgora a = 20 ÷ 0,5. Num caso pequeno: 1 ÷ 0,5 = 2, porque cabem 2 metades em 1."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Se em 1 cabem 2 metades, em 20 cabem 20 × 2 = 40 metades.\na = 20 ÷ 0,5 = 40 m/s².\nConfira: 0,5 × 40 = metade de 40 = 20 N.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O lançamento",
+      "dados": [
+       "m = 0{,}5\\,\\text{kg}",
+       "F_{\\text{água}} = 25\\,\\text{N}",
+       "P = 0{,}5 \\times 10 = 5\\,\\text{N}"
+      ],
+      "formula": "a = \\frac{F_{\\text{água}} - P}{m}",
+      "legenda": [
+       "F: o empurrão da água",
+       "P: o peso do foguete"
+      ],
+      "contas": [
+       "a = \\frac{25 - 5}{0{,}5}",
+       "a = \\frac{20}{0{,}5} = 20 \\times 2"
+      ],
+      "resultado": "a = 40\\,\\text{m/s}^2",
+      "nota": "Dividir por 0,5 é o mesmo que multiplicar por 2."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "É a 3ª lei que faz o foguete subir: ele joga a água para baixo, a água o empurra para cima.\nDepois, a 2ª lei: a = força que sobra ÷ massa.\nDividir por um número menor que 1 dá um resultado MAIOR que o de cima: 20 ÷ 0,5 = 40."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 40 m/s².\nA (10 m/s²) multiplicou 20 × 0,5 em vez de dividir.\nC (50 m/s²) esqueceu o peso: fez 25 ÷ 0,5.\nD (12,5 m/s²) multiplicou 25 × 0,5.\nE (60 m/s²) somou o peso em vez de subtrair: 30 ÷ 0,5."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma força que sobra de 6 N num brinquedo de 0,5 kg. A aceleração é:",
+    "opcoes": [
+     "12 m/s²",
+     "3 m/s²",
+     "6,5 m/s²",
+     "5,5 m/s²"
+    ],
+    "certa": "12 m/s²",
+    "resposta": "6 ÷ 0,5: cabem 2 metades em cada 1, então 6 × 2 = 12 m/s²."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-14",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Na canoagem, o atleta mergulha a pá do remo na água e a puxa para trás. O barco, então, anda para a frente. Um estudante, vendo uma prova pela televisão, afirma que é o próprio remo que empurra o barco diretamente para a frente.\nA explicação correta, pelas leis de Newton, para o barco andar para a frente é que",
+  "A": "o remo empurra o barco para a frente, sem a água participar.",
+  "B": "a água empurra o remo para trás, junto com a pá.",
+  "C": "o barco fica sem peso na água e desliza sozinho.",
+  "D": "o atleta empurra o barco para a frente com os pés, e o remo só dá direção.",
+  "E": "o remo empurra a água para trás, e a água empurra o remo, e com ele o barco, para a frente.",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "3ª lei: a pá empurra a água para trás; a água empurra a pá para a frente com a mesma força. O remo está preso ao atleta e ao barco, que vão juntos. E. Erros: A esquece a água; B inverte o sentido da reação; C inventa perda de peso; D: forças de dentro do barco não o movem.",
+   "ideia": "O remo empurra a água para trás, e a água empurra o remo de volta para a frente. Essa reação da água é a força de fora que leva o barco.",
+   "pecas": [
+    {
+     "termo": "3ª lei de Newton",
+     "significado": "Toda força tem um par: se A empurra B, B empurra A com a mesma força, em sentido contrário."
+    },
+    {
+     "termo": "Força de fora",
+     "significado": "Força que vem de fora do conjunto barco + atleta. Só ela muda o movimento do conjunto; empurrar o próprio barco não adianta."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O atleta mergulha a pá e puxa o remo para trás.\nO barco anda para a frente.\nA questão quer a explicação certa pelas leis de Newton.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "A remada",
+      "rotulos": [
+       "água empurra a pá",
+       "pá empurra a água",
+       "barco + atleta",
+       "para a frente"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "A pá do remo empurra a água para trás.\nPela 3ª lei, a água empurra a pá de volta, para a frente, com a mesma força.\nO remo está na mão do atleta, sentado no barco: tudo vai junto para a frente."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Pergunte: quem empurra quem?\nRemo na água, para trás. Água no remo, para a frente.\nA força que move o barco é a da água, a reação."
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A 3ª lei diz que toda força tem um par, e as duas agem em corpos diferentes.\nAção e reação são esse par: a ação é o remo empurrando a água para trás; a reação é a água empurrando o remo para a frente.\nO mesmo vale para nadar: você empurra a água para trás e ela empurra você para a frente."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, a água empurra o remo, e com ele o barco, para a frente.\nA está errada: sem a água, o remo no ar não move o barco.\nB está errada: a água empurra a pá para a frente, o contrário do que a pá faz nela.\nC está errada: o barco não perde peso; a água só o sustenta.\nD está errada: empurrar o barco de dentro dele não o tira do lugar."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Você pula de um bote para o cais. Enquanto você vai para a frente, o bote vai para:",
+    "opcoes": [
+     "trás",
+     "frente",
+     "cima",
+     "fica parado"
+    ],
+    "certa": "trás",
+    "resposta": "Seus pés empurram o bote para trás; o bote empurra você para a frente."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-15",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Dois carregadores empurram um armário de 50 kg pelo chão de uma sala. Empurrando juntos com 150 N, eles conseguem deslizar o armário em linha reta com velocidade constante. Depois, para terminar logo, passam a empurrar com 250 N, e o atrito com o chão continua o mesmo.\nCom o empurrão de 250 N, a aceleração do armário passa a ser de",
+  "A": "5 m/s²",
+  "B": "3 m/s²",
+  "C": "2 m/s²",
+  "D": "zero",
+  "E": "8 m/s²",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Velocidade constante com 150 N: força resultante zero, então atrito = 150 N. Com 250 N: sobra 250 − 150 = 100 N. a = 100 ÷ 50 = 2 m/s². C. Erros: A esqueceu o atrito (250 ÷ 50); B usou o primeiro empurrão (150 ÷ 50); D acha que continua constante; E somou atrito e empurrão (400 ÷ 50).",
+   "ideia": "Se com 150 N o armário anda com velocidade constante, o atrito também vale 150 N. Com 250 N, sobram 100 N para acelerar os 50 kg.",
+   "pecas": [
+    {
+     "termo": "Atrito",
+     "significado": "Força do chão que segura o que desliza, sempre contra o movimento."
+    },
+    {
+     "termo": "Velocidade constante",
+     "significado": "A velocidade não muda: 1 m/s em 1 s, 1 m/s em 2 s, 1 m/s em 3 s. A aceleração é zero."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O armário tem 50 kg.\nCom 150 N, ele desliza com velocidade constante. Depois, os carregadores empurram com 250 N.\nA questão quer a aceleração com 250 N, com o mesmo atrito.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "O armário empurrado",
+      "rotulos": [
+       "empurrão 250 N",
+       "atrito = ?",
+       "armário 50 kg",
+       "antes: 150 N, constante"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Atrito é a força do chão que freia o que raspa nele, como quando você arrasta um móvel e ele resiste.\nVelocidade constante quer dizer aceleração zero, e pela 1ª lei nada sobra: as forças empatam.\nEntão, com 150 N de empurrão, o atrito também é 150 N.\nCom 250 N, sobram 250 − 150 = 100 N para a frente."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "a = força que sobra ÷ massa.\na = 100 ÷ 50 = 2 m/s².\nEm 1 s, o armário ganha 2 m/s; em 2 s, 4 m/s.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O armário",
+      "dados": [
+       "F = 250\\,\\text{N}",
+       "f_{\\text{atrito}} = 150\\,\\text{N}",
+       "m = 50\\,\\text{kg}"
+      ],
+      "formula": "a = \\frac{F - f_{\\text{atrito}}}{m}",
+      "legenda": [
+       "F: o empurrão novo",
+       "f: o atrito, achado antes"
+      ],
+      "contas": [
+       "a = \\frac{250 - 150}{50}",
+       "a = \\frac{100}{50}"
+      ],
+      "resultado": "a = 2\\,\\text{m/s}^2",
+      "nota": "O armário passa a ganhar 2 m/s a cada segundo."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A 1ª lei dá o atrito: velocidade constante, forças empatadas.\nA 2ª lei dá a aceleração: F = m × a, com a força que sobra.\nConfira: 50 × 2 = 100 N, e 150 + 100 = 250 N, o empurrão novo."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 2 m/s².\nA (5 m/s²) esqueceu o atrito: fez 250 ÷ 50.\nB (3 m/s²) usou o empurrão antigo: 150 ÷ 50.\nD (zero) está errada: agora o empurrão vence o atrito, e a velocidade aumenta.\nE (8 m/s²) somou empurrão e atrito: 400 ÷ 50."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma caixa de 10 kg desliza constante com 30 N. Com 50 N, a aceleração é:",
+    "opcoes": [
+     "2 m/s²",
+     "5 m/s²",
+     "3 m/s²",
+     "zero"
+    ],
+    "certa": "2 m/s²",
+    "resposta": "Atrito 30 N; sobram 50 − 30 = 20 N; 20 ÷ 10 = 2 m/s²."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-16",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Um passageiro de 60 kg viaja em pé no metrô, segurando firme numa barra vertical. Quando o trem sai da estação, ele ganha velocidade a 1,5 m/s², em linha reta. Considere que, na direção do movimento, só a barra puxa o passageiro.\nNa saída da estação, a força que a barra faz no passageiro, na direção do movimento, é de",
+  "A": "600 N",
+  "B": "40 N",
+  "C": "zero",
+  "D": "690 N",
+  "E": "90 N",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Para o passageiro acelerar junto com o trem: F = m × a = 60 × 1,5 = 60 + 30 = 90 N. E. Erros: A é o peso (60 × 10), que é vertical; B dividiu 60 ÷ 1,5; C acha que segurar não exige força; D somou peso e força.",
+   "ideia": "Para o passageiro ganhar velocidade junto com o trem, alguém tem que puxá-lo para a frente: é a barra. F = m × a = 60 × 1,5 = 90 N.",
+   "pecas": [
+    {
+     "termo": "m/s²",
+     "significado": "Quanto a velocidade muda a cada segundo. 1,5 m/s² = sobe 1,5 m/s a cada 1 s."
+    },
+    {
+     "termo": "2ª lei de Newton",
+     "significado": "Força resultante = massa × aceleração (F = m × a)."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O passageiro tem 60 kg e segura numa barra do metrô.\nO trem sai ganhando 1,5 m/s de velocidade a cada segundo.\nA questão quer a força da barra no passageiro, para a frente.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "A barra do metrô",
+      "rotulos": [
+       "barra puxa = ?",
+       "",
+       "passageiro 60 kg",
+       "trem a 1,5 m/s²"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "1,5 m/s² quer dizer: em 1 s, 1,5 m/s; em 2 s, 3 m/s; em 3 s, 4,5 m/s.\nO passageiro precisa ganhar velocidade igual ao trem, senão é jogado para trás (inércia).\nQuem dá a força para a frente é a barra que ele segura."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "F = m × a = 60 × 1,5.\n1,5 é 1 mais meio: 60 × 1 = 60 e 60 × 0,5 = metade de 60 = 30.\nF = 60 + 30 = 90 N.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "A força da barra",
+      "dados": [
+       "m = 60\\,\\text{kg}",
+       "a = 1{,}5\\,\\text{m/s}^2"
+      ],
+      "formula": "F = m \\times a",
+      "legenda": [
+       "F: a força da barra",
+       "a: a aceleração do trem"
+      ],
+      "contas": [
+       "F = 60 \\times 1{,}5",
+       "F = 60 + 30"
+      ],
+      "resultado": "F = 90\\,\\text{N}",
+      "nota": "A barra puxa o passageiro com 90 N para a frente."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Pela 1ª lei, sem força para a frente, o passageiro ficaria parado e o trem andaria sem ele.\nPela 2ª lei, a força para acompanhar o trem é m × a.\nO peso (600 N) puxa para baixo e não entra nessa conta, que é na direção do movimento."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, 90 N.\nA (600 N) é o peso, que puxa para baixo, não para a frente.\nB (40 N) dividiu 60 ÷ 1,5 em vez de multiplicar.\nC (zero) está errada: sem a barra, ele não acompanharia o trem.\nD (690 N) somou o peso, que é de outra direção."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma mala de 20 kg no bagageiro de um ônibus que acelera a 1,5 m/s². A força nela é:",
+    "opcoes": [
+     "30 N",
+     "200 N",
+     "13 N",
+     "21,5 N"
+    ],
+    "certa": "30 N",
+    "resposta": "20 × 1,5 = 20 + 10 = 30 N."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-17",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Um vaso de planta de 3 kg escorrega do parapeito de uma sacada e cai. Ele chega ao chão 2 segundos depois de começar a cair. Despreze a resistência do ar e considere g = 10 m/s².\nA velocidade do vaso ao tocar o chão é de",
+  "A": "10 m/s",
+  "B": "5 m/s",
+  "C": "20 m/s",
+  "D": "60 m/s",
+  "E": "40 m/s",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Na queda sem ar, só o peso age: a = P ÷ m = 30 ÷ 3 = 10 m/s². Partindo de 0: em 1 s, 10 m/s; em 2 s, 20 m/s. C. Erros: A é a velocidade em 1 s; B dividiu 10 ÷ 2; D multiplicou pela massa (3 × 10 × 2); E fez 10 × 2 × 2.",
+   "ideia": "Na queda, só o peso age, e ele dá ao vaso uma aceleração de 10 m/s²: a velocidade sobe 10 m/s a cada segundo. Em 2 s, chega a 20 m/s.",
+   "pecas": [
+    {
+     "termo": "Velocidade",
+     "significado": "Quantos metros o corpo anda em cada segundo. 20 m/s = 20 metros a cada 1 segundo."
+    },
+    {
+     "termo": "m/s²",
+     "significado": "Quanto a velocidade muda a cada segundo. 10 m/s² = sobe 10 m/s a cada 1 s."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O vaso de 3 kg cai da sacada, partindo parado.\nEle leva 2 segundos até o chão, sem resistência do ar.\nA questão quer a velocidade ao tocar o chão.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "funcao-reta",
+      "titulo": "A queda do vaso",
+      "rotulos": [
+       "velocidade = ?",
+       "parte de 0 m/s",
+       "",
+       "cai por 2 s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Na queda, a única força é o peso: 3 × 10 = 30 N.\nPela 2ª lei: a = F ÷ m = 30 ÷ 3 = 10 m/s². A massa some da conta: um vaso de 1 kg daria 10 ÷ 1 = 10 também.\n10 m/s² quer dizer: em 0 s, 0 m/s; em 1 s, 10 m/s; em 2 s, 20 m/s; em 3 s, 30 m/s."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "A velocidade é o que ele ganha por segundo vezes os segundos.\nv = 10 × 2 = 20 m/s.\nA massa de 3 kg não entra nesta conta.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "A queda",
+      "dados": [
+       "a = 10\\,\\text{m/s}^2",
+       "t = 2\\,\\text{s}",
+       "v_{\\text{início}} = 0"
+      ],
+      "formula": "v = a \\times t",
+      "legenda": [
+       "a: o que a velocidade ganha por segundo",
+       "t: os segundos de queda"
+      ],
+      "contas": [
+       "v = 10 \\times 2"
+      ],
+      "resultado": "v = 20\\,\\text{m/s}",
+      "nota": "Em 2 s de queda, o vaso chega a 20 m/s."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Corpo mais pesado tem mais força puxando, mas também mais massa para mover.\nAs duas coisas crescem juntas, então todo corpo cai com a = 10 m/s², sem ar.\nPor isso a velocidade só depende do tempo: 10 a cada segundo."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 20 m/s.\nA (10 m/s) é a velocidade depois de só 1 segundo.\nB (5 m/s) dividiu 10 ÷ 2, mas a velocidade cresce com o tempo.\nD (60 m/s) multiplicou também pela massa: 3 × 10 × 2.\nE (40 m/s) multiplicou o tempo duas vezes: 10 × 2 × 2."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma pedra cai, sem ar, por 3 s, partindo parada (g = 10 m/s²). A velocidade final é:",
+    "opcoes": [
+     "30 m/s",
+     "13 m/s",
+     "90 m/s",
+     "3 m/s"
+    ],
+    "certa": "30 m/s",
+    "resposta": "Ganha 10 m/s por segundo: 10, 20, 30 m/s."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-18",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Num treino de futebol, uma bola de 0,5 kg chega ao goleiro a 20 m/s. Ele a segura com as duas mãos, e a bola para por completo nas luvas em 0,1 s, perdendo velocidade sempre no mesmo ritmo.\nA força média que as luvas fazem na bola para pará-la é de",
+  "A": "100 N",
+  "B": "10 N",
+  "C": "1 N",
+  "D": "200 N",
+  "E": "400 N",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "a = 20 ÷ 0,1 = 200 m/s² (cabem 10 décimos em 1, então 20 × 10). F = 0,5 × 200 = 100 N. A. Erros: B fez 0,5 × 20 sem o tempo; C fez 0,5 × 20 × 0,1; D é só a aceleração; E dividiu 200 pela massa.",
+   "ideia": "A bola perde 20 m/s em só 0,1 s: é uma aceleração enorme, 200 m/s². Com meio quilo, a força é metade de 200: 100 N.",
+   "pecas": [
+    {
+     "termo": "Velocidade",
+     "significado": "Quantos metros o corpo anda em cada segundo. 20 m/s = 20 metros a cada 1 segundo."
+    },
+    {
+     "termo": "m/s²",
+     "significado": "Quanto a velocidade muda a cada segundo. 200 m/s² = muda 200 m/s a cada 1 s."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A bola tem 0,5 kg e chega a 20 m/s.\nNas luvas, ela para por completo em 0,1 s.\nA questão quer a força média das luvas na bola.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "A defesa do goleiro",
+      "rotulos": [
+       "",
+       "luvas = ?",
+       "bola 0,5 kg",
+       "20 m/s até parar, em 0,1 s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "A bola perde 20 m/s. Se levasse 1 s, perderia 20 m/s a cada segundo: a = 20 m/s².\nMas levou só 0,1 s, um décimo de segundo.\nNum caso pequeno: 1 ÷ 0,1 = 10, porque cabem 10 décimos em 1. Então 20 ÷ 0,1 = 20 × 10 = 200."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "a = 20 ÷ 0,1 = 200 m/s².\nF = m × a = 0,5 × 200 = metade de 200 = 100 N.\nDuas contas: primeiro a aceleração, depois a força.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "A defesa",
+      "dados": [
+       "m = 0{,}5\\,\\text{kg}",
+       "\\Delta v = 20\\,\\text{m/s}",
+       "t = 0{,}1\\,\\text{s}"
+      ],
+      "formula": "F = m \\times \\frac{\\Delta v}{t}",
+      "legenda": [
+       "Δv: a velocidade perdida",
+       "t: o tempo para parar"
+      ],
+      "contas": [
+       "a = \\frac{20}{0{,}1} = 20 \\times 10 = 200",
+       "F = 0{,}5 \\times 200"
+      ],
+      "resultado": "F = 100\\,\\text{N}",
+      "nota": "As luvas empurram a bola com 100 N, em média."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Dividir por 0,1 é o mesmo que multiplicar por 10: o resultado fica maior.\nQuanto menos tempo para parar, maior a aceleração e maior a força.\nPor isso o goleiro recua as mãos: parar em mais tempo dá menos força nas luvas."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, 100 N.\nB (10 N) fez 0,5 × 20, esquecendo o tempo de parada.\nC (1 N) multiplicou pelo tempo em vez de dividir: 0,5 × 20 × 0,1.\nD (200) é a aceleração, sem multiplicar pela massa.\nE (400 N) dividiu 200 por 0,5 em vez de multiplicar."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um carrinho de 2 kg perde 10 m/s em 0,1 s. A força média é:",
+    "opcoes": [
+     "200 N",
+     "20 N",
+     "2 N",
+     "100 N"
+    ],
+    "certa": "200 N",
+    "resposta": "a = 10 ÷ 0,1 = 100 m/s²; F = 2 × 100 = 200 N."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-19",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Um guincho reboca, com uma corda, um carro quebrado de 1 000 kg que estava parado numa rua plana. A corda puxa o carro para a frente com 2 500 N, e o atrito das rodas e a resistência do ar somam 1 500 N contra o movimento.\nSe essas forças não mudarem, a velocidade do carro 5 segundos depois de começar a andar será de",
+  "A": "1 m/s",
+  "B": "2,5 m/s",
+  "C": "12,5 m/s",
+  "D": "5 m/s",
+  "E": "20 m/s",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Sobra: 2 500 − 1 500 = 1 000 N. a = 1 000 ÷ 1 000 = 1 m/s². Em 5 s, partindo de 0: 1 × 5 = 5 m/s. D. Erros: A é a aceleração; B esquece o atrito e para no 2,5; C esquece o atrito (2,5 × 5); E soma as forças (4 × 5).",
+   "ideia": "Sobram 1 000 N, que dão ao carro de 1 000 kg uma aceleração de 1 m/s². Ganhando 1 m/s a cada segundo, em 5 s ele chega a 5 m/s.",
+   "pecas": [
+    {
+     "termo": "Força resultante",
+     "significado": "O que sobra depois de juntar as forças. Forças em sentidos contrários se subtraem."
+    },
+    {
+     "termo": "Velocidade",
+     "significado": "Quantos metros o corpo anda em cada segundo. 5 m/s = 5 metros a cada 1 segundo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O carro de 1 000 kg está parado.\nA corda puxa com 2 500 N e o atrito com o ar seguram com 1 500 N.\nA questão quer a velocidade depois de 5 segundos.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "O carro rebocado",
+      "rotulos": [
+       "corda 2 500 N",
+       "atrito e ar 1 500 N",
+       "carro 1 000 kg",
+       "parte parado"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Forças contrárias se subtraem: 2 500 − 1 500 = 1 000 N para a frente.\nPela 2ª lei: a = 1 000 ÷ 1 000 = 1 m/s².\n1 m/s² quer dizer: em 1 s, 1 m/s; em 2 s, 2 m/s; em 3 s, 3 m/s; em 5 s, 5 m/s."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Aceleração: a = (2 500 − 1 500) ÷ 1 000 = 1 m/s².\nVelocidade: v = a × t = 1 × 5 = 5 m/s.\nSão duas contas: a força dá a aceleração, e a aceleração dá a velocidade.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O reboque",
+      "dados": [
+       "F = 2\\,500 - 1\\,500 = 1\\,000\\,\\text{N}",
+       "m = 1\\,000\\,\\text{kg}",
+       "t = 5\\,\\text{s}"
+      ],
+      "formula": "v = \\frac{F}{m} \\times t",
+      "legenda": [
+       "F: a força que sobra",
+       "t: o tempo andando"
+      ],
+      "contas": [
+       "a = \\frac{1\\,000}{1\\,000} = 1\\,\\text{m/s}^2",
+       "v = 1 \\times 5"
+      ],
+      "resultado": "v = 5\\,\\text{m/s}",
+      "nota": "O carro ganha 1 m/s a cada segundo."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A 2ª lei liga força e aceleração; a aceleração diz quanto a velocidade sobe por segundo.\nComo o carro partiu de 0, a velocidade é o ganho por segundo vezes os segundos.\nConfira: 5 s × 1 m/s a cada segundo = 5 m/s."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, 5 m/s.\nA (1 m/s) é a aceleração, a velocidade depois de só 1 segundo.\nB (2,5 m/s) esqueceu o atrito e não multiplicou pelo tempo: 2 500 ÷ 1 000.\nC (12,5 m/s) esqueceu o atrito: 2,5 × 5.\nE (20 m/s) somou as forças, que são contrárias: 4 000 ÷ 1 000 × 5."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Sobram 600 N num barco de 300 kg parado. A velocidade depois de 4 s é:",
+    "opcoes": [
+     "8 m/s",
+     "2 m/s",
+     "6 m/s",
+     "0,5 m/s"
+    ],
+    "certa": "8 m/s",
+    "resposta": "a = 600 ÷ 300 = 2 m/s²; em 4 s, 2 × 4 = 8 m/s."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-din-20",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Na construção de um prédio, um guindaste levanta um bloco de concreto de 1 000 kg por um cabo de aço. O fabricante garante que o cabo aguenta no máximo 12 000 N sem arrebentar. Considere g = 10 m/s².\nPara o cabo não arrebentar, a maior aceleração para cima que o guindaste pode dar ao bloco é de",
+  "A": "12 m/s²",
+  "B": "2 m/s²",
+  "C": "22 m/s²",
+  "D": "10 m/s²",
+  "E": "0,2 m/s²",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Peso: 1 000 × 10 = 10 000 N. Sobra máxima: 12 000 − 10 000 = 2 000 N. a = 2 000 ÷ 1 000 = 2 m/s². B. Erros: A esqueceu o peso (12 000 ÷ 1 000); C somou o peso; D é a gravidade; E errou os zeros.",
+   "ideia": "Do limite de 12 000 N, 10 000 N vão só para segurar o peso. Os 2 000 N que sobram é que podem acelerar o bloco para cima.",
+   "pecas": [
+    {
+     "termo": "Peso",
+     "significado": "Força da gravidade: P = m × g. Na Terra, cada 1 kg pesa 10 N."
+    },
+    {
+     "termo": "m/s²",
+     "significado": "Quanto a velocidade muda a cada segundo. 2 m/s² = sobe 2 m/s a cada 1 s."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O bloco de concreto tem 1 000 kg.\nO cabo aguenta no máximo 12 000 N.\nA questão quer a maior aceleração para cima sem o cabo arrebentar.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bloco-forca",
+      "titulo": "O guindaste",
+      "rotulos": [
+       "cabo até 12 000 N",
+       "peso para baixo",
+       "bloco 1 000 kg",
+       "g = 10 m/s²"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Primeiro, o cabo precisa segurar o peso: 1 000 × 10 = 10 000 N.\nCom 10 000 N, o bloco fica parado ou sobe com velocidade constante: nada sobra.\nO que passa disso acelera: no máximo 12 000 − 10 000 = 2 000 N."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "a = força que sobra ÷ massa.\na = 2 000 ÷ 1 000 = 2 m/s².\nNo máximo, o bloco ganha 2 m/s a cada segundo.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O limite do cabo",
+      "dados": [
+       "T_{\\text{máx}} = 12\\,000\\,\\text{N}",
+       "m = 1\\,000\\,\\text{kg}",
+       "P = 1\\,000 \\times 10 = 10\\,000\\,\\text{N}"
+      ],
+      "formula": "a = \\frac{T - P}{m}",
+      "legenda": [
+       "T: a força do cabo",
+       "P: o peso"
+      ],
+      "contas": [
+       "a = \\frac{12\\,000 - 10\\,000}{1\\,000}",
+       "a = \\frac{2\\,000}{1\\,000}"
+      ],
+      "resultado": "a = 2\\,\\text{m/s}^2",
+      "nota": "Acelerar mais que isso arrebenta o cabo."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Pela 2ª lei, só a força que sobra acelera: cabo menos peso.\nConfira: com a = 2, o cabo faz 10 000 + 1 000 × 2 = 12 000 N, bem no limite.\nCom a = 3, precisaria de 13 000 N, e o cabo arrebentaria."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 2 m/s².\nA (12 m/s²) esqueceu o peso: fez 12 000 ÷ 1 000.\nC (22 m/s²) somou o peso em vez de subtrair: 22 000 ÷ 1 000.\nD (10 m/s²) é a gravidade, não a aceleração que o cabo permite.\nE (0,2 m/s²) errou os zeros na divisão."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma corda aguenta 900 N e levanta um saco de 60 kg (g = 10). A maior aceleração é:",
+    "opcoes": [
+     "5 m/s²",
+     "15 m/s²",
+     "10 m/s²",
+     "25 m/s²"
+    ],
+    "certa": "5 m/s²",
+    "resposta": "Peso 600 N; sobram 300 N; 300 ÷ 60 = 5 m/s²."
+   }
+  }
+ }
+]

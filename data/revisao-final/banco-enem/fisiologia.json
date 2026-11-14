@@ -1,0 +1,1466 @@
+[
+  {
+    "id": "d2-banco-bio-fis-01",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Numa noite fria, uma família fechou portas e janelas do banheiro e tomou banho com um aquecedor a gás antigo, que queimava mal. Depois de alguns minutos, duas pessoas sentiram tontura, dor de cabeça e sono, e uma desmaiou. No hospital, o médico explicou que a queima ruim do gás solta monóxido de carbono (CO), um gás sem cheiro que gruda na hemoglobina das hemácias com muito mais força que o oxigênio e não solta.\nOs sintomas aparecem porque o monóxido de carbono",
+    "A": "destrói os glóbulos brancos, e o corpo fica sem defesa.",
+    "B": "ocupa o lugar do oxigênio nas hemácias, e chega menos oxigênio às células.",
+    "C": "impede as plaquetas de agir, e a pessoa sangra por dentro.",
+    "D": "entope o intestino delgado, e a comida não passa para o sangue.",
+    "E": "aumenta o oxigênio no sangue, e o excesso intoxica o cérebro.",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "O CO gruda na hemoglobina e ocupa o lugar do oxigênio: menos oxigênio chega às células, e o cérebro sente primeiro (tontura, desmaio). B. Erros: A troca hemácia por glóbulo branco; C troca por plaqueta; D mistura com digestão; E inverte (o oxigênio diminui).",
+      "ideia": "O monóxido de carbono senta no lugar do oxigênio dentro da hemácia e não levanta mais. O sangue continua correndo, mas leva pouco oxigênio.",
+      "pecas": [
+        {
+          "termo": "Hemoglobina",
+          "significado": "Proteína vermelha dentro da hemácia que segura o oxigênio, como um caminhãozinho que pega a carga no pulmão e entrega no músculo."
+        },
+        {
+          "termo": "Monóxido de carbono (CO)",
+          "significado": "Gás sem cheiro e sem cor que sai quando gás, carvão ou gasolina queimam com pouco ar. Ele gruda na hemoglobina e tira o lugar do oxigênio."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Um aquecedor a gás queimou mal num banheiro fechado.\nSaiu monóxido de carbono, que gruda na hemoglobina da hemácia.\nA questão quer saber por que as pessoas ficaram tontas e uma desmaiou.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Gás no banheiro fechado",
+            "rotulos": [
+              "pulmão",
+              "hemácia com CO grudado",
+              "aquecedor queimando mal",
+              "tontura e desmaio"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pela aula, a hemácia (glóbulo vermelho) leva o oxigênio.\nQuem segura o oxigênio dentro dela é a hemoglobina, como um caminhãozinho com lugares para a carga.\nO CO ocupa esses lugares e não sai mais. Sobra pouco lugar para o oxigênio."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: vermelho leva.\nSe algo atrapalha a hemácia, o problema é falta de oxigênio, não de defesa nem de coagulação."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O coração continua bombeando e o sangue continua correndo.\nMas cada hemácia chega ao corpo quase vazia de oxigênio.\nO cérebro gasta muito oxigênio, então ele sente primeiro: tontura, sono, desmaio."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, o CO tira o lugar do oxigênio na hemácia.\nA: glóbulo branco defende; o texto fala de hemoglobina, que fica na hemácia.\nC: plaqueta fecha corte; ninguém sangrou.\nD: o gás foi respirado, não comido.\nE: inverte; o oxigênio que chega às células diminui."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Dentro de qual célula do sangue fica a hemoglobina, que segura o oxigênio?",
+        "opcoes": [
+          "Plaqueta",
+          "Glóbulo branco",
+          "Hemácia",
+          "Neurônio"
+        ],
+        "certa": "Hemácia",
+        "resposta": "A hemoglobina fica na hemácia, o glóbulo vermelho. Vermelho leva."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-02",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Um trabalhador rural foi picado por uma jararaca e chegou ao posto de saúde uma hora depois. O médico aplicou soro antiofídico, que é feito assim: injeta-se um pouco de veneno em cavalos, o corpo do cavalo produz anticorpos contra ele, e esses anticorpos são retirados do sangue do animal e purificados. O médico avisou que vacina não serviria naquele momento.\nO soro foi a escolha certa porque ele",
+    "A": "ensina o corpo do trabalhador a produzir os próprios anticorpos nas semanas seguintes.",
+    "B": "contém hemácias do cavalo, que levam mais oxigênio aos músculos atingidos.",
+    "C": "aumenta a quantidade de plaquetas, que fecham a picada.",
+    "D": "já traz anticorpos prontos, que agem na hora contra o veneno.",
+    "E": "contém veneno enfraquecido, que deixa o trabalhador protegido para sempre.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "O soro leva anticorpos já prontos (feitos pelo cavalo), que agem na hora. D. Erros: A e E descrevem vacina, que demora semanas; B fala de hemácias, que o soro não leva; C fala de plaquetas, que não neutralizam veneno.",
+      "ideia": "Soro é anticorpo pronto, emprestado de outro animal, e age na hora. Vacina ensina o corpo a fazer os próprios anticorpos, e isso leva semanas.",
+      "pecas": [
+        {
+          "termo": "Anticorpo",
+          "significado": "Proteína feita pelos glóbulos brancos que gruda num invasor certo e o desliga, como uma chave que só serve numa fechadura: o anticorpo contra o veneno da jararaca só pega esse veneno."
+        },
+        {
+          "termo": "Soro antiofídico",
+          "significado": "Remédio contra veneno de cobra. Ele é feito com anticorpos que um cavalo produziu e que foram tirados do sangue dele."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Uma jararaca picou um trabalhador.\nO médico deu soro, feito com anticorpos tirados do sangue de cavalos.\nA questão quer saber por que o soro serve e a vacina não.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "virus-bacteria",
+            "titulo": "Picada de jararaca",
+            "rotulos": [
+              "veneno de jararaca",
+              "picada na roça",
+              "envenenamento",
+              "soro ou vacina?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pela aula, os glóbulos brancos defendem o corpo.\nUma das armas deles é o anticorpo, que gruda no invasor certo, como chave na fechadura.\nO corpo do trabalhador levaria semanas para fazer anticorpos contra o veneno. Ele não tem semanas."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Soro: anticorpo pronto, age agora, para quem já foi atingido.\nVacina: ensina a fazer anticorpo, demora, serve para antes de pegar a doença."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O cavalo recebeu um pouco de veneno e fez os anticorpos no lugar do homem.\nQuando o médico injeta esses anticorpos, eles já começam a grudar no veneno.\nComo são emprestados, somem do corpo depois de um tempo: o soro protege só naquela vez."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, o soro traz anticorpos prontos.\nA: quem ensina o corpo a fazer anticorpos é a vacina, e demora.\nB: o soro tira os anticorpos do sangue do cavalo, não as hemácias.\nC: plaqueta fecha corte, não desliga veneno.\nE: veneno enfraquecido seria vacina, e o soro não protege para sempre."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma criança vai tomar a dose contra o sarampo antes de viajar. Isso é soro ou vacina?",
+        "opcoes": [
+          "Soro, porque age na hora",
+          "Vacina, porque é para antes de pegar",
+          "Soro, porque tem anticorpo pronto",
+          "Nenhum dos dois"
+        ],
+        "certa": "Vacina, porque é para antes de pegar",
+        "resposta": "É vacina: ela ensina o corpo a fazer anticorpos antes de a criança encontrar o vírus."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-03",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Num exame, duas pessoas em jejum beberam a mesma quantidade de água com açúcar, e o laboratório mediu a glicose (açúcar) do sangue delas duas horas depois. A medida de Ana foi 110 e voltou perto do valor de jejum. A de Bruno foi 240, mais do que o dobro, e continuava alta. O pâncreas dos dois é saudável, mas as células de Bruno quase não respondem ao hormônio que o pâncreas solta depois da refeição.\nO resultado de Bruno se explica porque",
+    "A": "a insulina dele não consegue fazer a glicose sair do sangue e entrar nas células.",
+    "B": "o pâncreas dele não fabrica nenhuma insulina.",
+    "C": "a insulina dele joga mais glicose no sangue do que a de Ana.",
+    "D": "as hemácias dele levam a glicose para fora do corpo pela urina.",
+    "E": "os glóbulos brancos dele comem a glicose, e ela se acumula.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "O pâncreas de Bruno faz insulina, mas as células não respondem: a glicose não entra nelas e fica no sangue (240 contra 110). A. Erros: B contradiz o texto (pâncreas saudável); C inverte o papel da insulina; D e E trocam a função das células do sangue.",
+      "ideia": "A insulina abre a porta da célula para a glicose. Se a célula não atende a insulina, a glicose fica presa no sangue e a medida sobe.",
+      "pecas": [
+        {
+          "termo": "Insulina",
+          "significado": "Hormônio do pâncreas que faz a glicose sair do sangue e entrar nas células, como uma chave que abre a porta da célula depois do almoço."
+        },
+        {
+          "termo": "Glicose",
+          "significado": "O açúcar que vem da comida e anda pelo sangue. A célula usa a glicose para ter energia."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Ana e Bruno beberam água com açúcar.\nDuas horas depois, Ana tinha 110 de glicose e Bruno, 240.\nO pâncreas de Bruno é saudável, mas as células dele quase não respondem ao hormônio.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Açúcar no sangue",
+            "rotulos": [
+              "pâncreas saudável",
+              "Ana: 110",
+              "Bruno: 240",
+              "2 horas depois"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Depois de beber açúcar, a glicose vai para o sangue.\nO pâncreas solta insulina, que funciona como a chave da porta da célula.\nNa Ana, a porta abre e a glicose sai do sangue. No Bruno, a chave existe, mas a fechadura quase não gira."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: insulina baixa o açúcar.\nSe o açúcar não baixou e o pâncreas é saudável, a insulina existe mas não está funcionando."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A glicose só sai do sangue quando entra nas células.\nSe as células não atendem a insulina, a glicose continua rodando no sangue.\nPor isso a medida de Bruno ficou em 240, mais que o dobro da de Ana."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, a insulina não consegue pôr a glicose nas células.\nB: o texto diz que o pâncreas dele é saudável e solta o hormônio.\nC: inverte; a insulina tira glicose do sangue.\nD: hemácia leva oxigênio, não glicose para a urina.\nE: glóbulo branco defende o corpo, não come açúcar."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma pessoa recebe uma injeção de insulina. O açúcar do sangue dela tende a",
+        "opcoes": [
+          "subir",
+          "baixar",
+          "ficar igual",
+          "virar oxigênio"
+        ],
+        "certa": "baixar",
+        "resposta": "A insulina põe a glicose dentro das células, então o açúcar do sangue baixa."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-04",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Um homem fumou dois maços por dia durante 30 anos e hoje tem enfisema pulmonar. Nessa doença, as paredes finas dos alvéolos, os saquinhos de ar no fim dos brônquios, se rompem e vários saquinhos viram poucas bolsas grandes. O pulmão dele ainda enche de ar, mas ele fica sem fôlego até para tomar banho. O exame mostra pouco oxigênio no sangue.\nO oxigênio no sangue ficou baixo principalmente porque",
+    "A": "o coração dele parou de bombear sangue para o pulmão.",
+    "B": "o ar que ele respira não tem mais oxigênio.",
+    "C": "as plaquetas entupiram os brônquios.",
+    "D": "os rins deixaram de filtrar o oxigênio do sangue.",
+    "E": "sobrou menos parede de alvéolo para o oxigênio passar do ar para o sangue.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "O oxigênio passa do alvéolo para o sangue por difusão, através da parede. Com menos parede (poucas bolsas grandes no lugar de muitos saquinhos), passa menos oxigênio. E. Erros: A inventa; B nega o texto (o pulmão enche de ar); C troca a função da plaqueta; D troca a função do rim.",
+      "ideia": "O oxigênio atravessa a parede do alvéolo para entrar no sangue. No enfisema sobra pouca parede, então passa pouco oxigênio, mesmo com o pulmão cheio de ar.",
+      "pecas": [
+        {
+          "termo": "Difusão",
+          "significado": "O gás vai de onde tem mais para onde tem menos, como o cheiro do café que sai da cozinha e se espalha pela casa."
+        },
+        {
+          "termo": "Alvéolo",
+          "significado": "Saquinho de ar no fim dos brônquios, dentro do pulmão. A parede dele é fininha e cheia de vasos de sangue: é ali que o sangue pega oxigênio."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Um fumante tem enfisema: muitos saquinhos de ar do pulmão viraram poucas bolsas grandes.\nO pulmão enche de ar, mas o sangue tem pouco oxigênio.\nA questão quer o motivo.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Pulmão com enfisema",
+            "rotulos": [
+              "pulmão",
+              "oxigênio no sangue baixo",
+              "alvéolos rompidos",
+              "30 anos fumando"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pela aula, no pulmão o sangue pega oxigênio e solta gás carbônico.\nO oxigênio passa por difusão: vai do ar do alvéolo, onde tem mais, para o sangue, onde tem menos.\nEle atravessa a parede fininha do alvéolo. Quanto mais parede, mais oxigênio passa."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Muitos saquinhos pequenos têm muito mais parede do que poucas bolsas grandes.\nMenos parede, menos lugar para o oxigênio atravessar, menos oxigênio no sangue."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Pense em pão picado: 1 pão inteiro tem só a casca de fora; picado em 10 pedaços, aparece muita superfície nova.\nO pulmão saudável é como o pão picado: muita parede para o gás passar.\nNo enfisema, os pedaços se juntaram de novo, e a parede para a troca encolheu."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, sobrou menos parede de alvéolo para o oxigênio passar.\nA: o texto não diz que o coração parou, e ele estaria morto.\nB: o ar que ele respira é o mesmo de todo mundo.\nC: plaqueta fecha corte, não entope brônquio.\nD: rim filtra o sangue e faz urina; quem põe oxigênio no sangue é o pulmão."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um perfume é aberto num canto da sala e logo o cheiro chega ao outro canto. Esse espalhar é",
+        "opcoes": [
+          "difusão",
+          "coagulação",
+          "digestão",
+          "filtração"
+        ],
+        "certa": "difusão",
+        "resposta": "É difusão: o cheiro vai de onde tem mais (o frasco) para onde tem menos (o resto da sala)."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-05",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Um professor de educação física mediu os batimentos do coração de uma aluna parada e depois de ela correr 10 minutos. Parada: 70 batimentos por minuto e respiração calma. Correndo: 150 batimentos por minuto e respiração rápida e funda. Ele explicou que os músculos das pernas passaram a gastar muito mais energia e que essa energia vem da glicose.\nO coração e a respiração aceleraram principalmente para",
+    "A": "levar mais glóbulos brancos às pernas, porque correr machuca o músculo.",
+    "B": "esfriar o corpo, porque o ar de fora é mais frio que o sangue.",
+    "C": "levar mais oxigênio aos músculos e retirar o gás carbônico que eles produzem.",
+    "D": "levar mais plaquetas às pernas, para evitar sangramento.",
+    "E": "mandar mais sangue aos rins, para fazer mais urina durante a corrida.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "O músculo faz energia pela respiração celular: glicose + oxigênio dão energia e gás carbônico. Correndo, ele gasta mais, então precisa de mais oxigênio e solta mais gás carbônico. C. Erros: A, D e E trocam o que o sangue leva; B inventa um motivo.",
+      "ideia": "O músculo que trabalha queima mais glicose, e para isso pede mais oxigênio. O coração bate mais rápido para entregar o oxigênio e levar embora o gás carbônico.",
+      "pecas": [
+        {
+          "termo": "Respiração celular",
+          "significado": "A célula queima glicose com oxigênio para ter energia e solta gás carbônico, como um fogão que queima o gás para fazer o fogo e solta fumaça."
+        },
+        {
+          "termo": "Batimentos por minuto",
+          "significado": "Quantas vezes o coração bombeia em 1 minuto. Cada batida empurra sangue para o corpo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Parada, a aluna tinha 70 batimentos por minuto.\nDepois de correr 10 minutos, tinha 150, e a respiração ficou rápida.\nA questão quer saber para que o corpo acelerou.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Coração na corrida",
+            "rotulos": [
+              "coração",
+              "parada: 70 por minuto",
+              "correndo: 150 por minuto",
+              "músculo das pernas"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A energia do músculo vem da respiração celular: a célula queima glicose com oxigênio, como um fogão queima gás.\nDessa queima sai gás carbônico, que é a fumaça da célula.\nCorrendo, o músculo queima mais. Então precisa de mais oxigênio e solta mais gás carbônico."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Mais trabalho no músculo = mais oxigênio pedido.\nQuem leva oxigênio é o sangue, empurrado pelo coração. Coração mais rápido, mais entrega por minuto."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A respiração rápida traz mais oxigênio ao pulmão e tira mais gás carbônico.\nO coração mais rápido leva esse oxigênio às pernas e traz o gás carbônico de volta ao pulmão.\nOs dois aceleram juntos porque fazem partes da mesma entrega."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, mais oxigênio para o músculo e menos gás carbônico parado nele.\nA: glóbulo branco defende de invasor; correr não é infecção.\nB: o texto liga a corrida ao gasto de energia, não ao frio.\nD: ninguém se cortou; plaqueta fecha corte.\nE: correr não serve para fazer urina."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Na respiração celular, a célula usa glicose e oxigênio. O que ela solta?",
+        "opcoes": [
+          "Gás carbônico",
+          "Insulina",
+          "Plaquetas",
+          "Hemoglobina"
+        ],
+        "certa": "Gás carbônico",
+        "resposta": "A célula solta gás carbônico, que o sangue leva ao pulmão para sair no ar."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-06",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Antes de arrancar um dente, a dentista perguntou ao paciente que remédios ele tomava. Ele contou que toma AAS (ácido acetilsalicílico) todo dia, por ordem do cardiologista, para evitar que se formem coágulos dentro dos vasos. A dentista combinou com o médico de mudar o cuidado antes da extração e explicou que o AAS deixa as plaquetas menos grudentas, e que elas são as primeiras a tampar um vaso cortado.\nA preocupação da dentista é que, durante a extração, o paciente",
+    "A": "sangre mais e por mais tempo, porque o corte demora a ser fechado.",
+    "B": "fique sem oxigênio no cérebro, porque o AAS destrói as hemácias.",
+    "C": "pegue infecção, porque o AAS mata os glóbulos brancos.",
+    "D": "tenha a glicose do sangue baixa, porque o AAS age como insulina.",
+    "E": "forme coágulos demais na boca, porque o AAS engrossa o sangue.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Plaquetas menos grudentas fecham o corte mais devagar: o sangramento dura mais. A. Erros: B troca por hemácia; C troca por glóbulo branco; D mistura com insulina; E inverte o efeito do AAS (ele segura a coagulação).",
+      "ideia": "A plaqueta é o tampão do corte. O AAS deixa a plaqueta menos grudenta, então o corte da extração demora mais para parar de sangrar.",
+      "pecas": [
+        {
+          "termo": "Plaqueta",
+          "significado": "Pedacinho de célula no sangue que gruda no corte e faz o sangue endurecer para fechar o buraco, como massa que tampa um furo no cano."
+        },
+        {
+          "termo": "Coágulo",
+          "significado": "O sangue endurecido que tampa o corte. Quando se forma dentro de um vaso inteiro, entope a passagem e se chama trombo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Um paciente toma AAS todo dia, e o AAS deixa as plaquetas menos grudentas.\nEle vai arrancar um dente, o que corta vasos da gengiva.\nA questão quer o risco que preocupa a dentista.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "AAS e extração de dente",
+            "rotulos": [
+              "gengiva cortada",
+              "plaquetas menos grudentas",
+              "AAS todo dia",
+              "extração do dente"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Palavra-chave da aula: plaqueta fecha.\nNo corte, as plaquetas grudam umas nas outras e o sangue coagula, que é endurecer para fechar o corte.\nCom AAS, elas grudam pior. O tampão se forma devagar."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "O que segura a coagulação faz sangrar mais.\nAAS segura a plaqueta, então o corte sangra mais e por mais tempo."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O cardiologista quer justamente isso dentro dos vasos: menos coágulo entupindo a passagem.\nMas na boca, onde há um corte de verdade, o mesmo efeito vira problema.\nPor isso o dentista e o médico combinam o cuidado antes de cortar."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, ele sangra mais porque o corte demora a fechar.\nB: o texto fala de plaqueta; hemácia leva oxigênio e não foi atingida.\nC: glóbulo branco defende, e o texto não fala dele.\nD: quem baixa o açúcar é a insulina, não o AAS.\nE: inverte; o AAS diminui os coágulos."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma pessoa com poucas plaquetas faz um corte no dedo. O que se espera?",
+        "opcoes": [
+          "Sangrar mais tempo",
+          "Parar de sangrar mais rápido",
+          "Ficar sem defesa",
+          "Ficar sem oxigênio"
+        ],
+        "certa": "Sangrar mais tempo",
+        "resposta": "Com poucas plaquetas, o tampão demora a se formar e o corte sangra mais tempo."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-07",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Uma paciente com os rins parados faz hemodiálise três vezes por semana. O sangue dela sai do braço e passa por uma máquina, dentro de tubinhos de uma película cheia de furos muito pequenos. Do lado de fora dos tubinhos corre um líquido limpo, sem ureia, a sujeira que os rins tiram do sangue. A ureia atravessa a película e passa para o líquido, e o sangue limpo volta para o corpo.\nA ureia sai do sangue e vai para o líquido porque",
+    "A": "o coração da paciente empurra a ureia para fora do braço.",
+    "B": "as plaquetas grudam na ureia e a arrastam para o líquido.",
+    "C": "tem muita ureia no sangue e nenhuma no líquido, e ela vai de onde tem mais para onde tem menos.",
+    "D": "a insulina da máquina tira a ureia do sangue.",
+    "E": "as hemácias levam a ureia até o líquido, como levam o oxigênio.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Difusão: a ureia vai do sangue (muita) para o líquido (nenhuma) pelos furinhos da película. C. Erros: A confunde bombear sangue com passar pela película; B e E trocam a função de plaqueta e hemácia; D inventa insulina na máquina.",
+      "ideia": "A máquina copia o rim usando difusão: a ureia vai de onde tem muita, o sangue, para onde não tem, o líquido limpo. Por isso o líquido precisa ser trocado o tempo todo.",
+      "pecas": [
+        {
+          "termo": "Difusão",
+          "significado": "A substância vai de onde tem mais para onde tem menos, como o cheiro do café que sai da cozinha e se espalha pela casa."
+        },
+        {
+          "termo": "Ureia",
+          "significado": "Sujeira que as células fazem e jogam no sangue. Os rins tiram a ureia do sangue e ela sai na urina."
+        },
+        {
+          "termo": "Hemodiálise",
+          "significado": "Tratamento em que uma máquina limpa o sangue no lugar dos rins, quando eles param de funcionar."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Os rins da paciente pararam, e uma máquina limpa o sangue dela.\nO sangue corre em tubinhos com furos; do lado de fora passa um líquido sem ureia.\nA questão quer saber por que a ureia passa do sangue para o líquido.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Hemodiálise",
+            "rotulos": [
+              "rins parados",
+              "sangue com ureia",
+              "líquido sem ureia",
+              "3 vezes por semana"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pela aula, os rins filtram o sangue e fazem a urina. Aqui a máquina faz esse trabalho.\nDentro do tubinho tem muita ureia; fora dele, nenhuma.\nPelos furinhos, a ureia vai de onde tem mais para onde tem menos: é a difusão."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Mais de um lado, menos do outro, com furo no meio: a substância passa para o lado de menos.\nNinguém precisa empurrar."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Pense em um saquinho de chá na água: a cor sai do saquinho, onde tem muita, para a água, onde não tem.\nNa máquina, o saquinho é o tubinho de sangue e a cor é a ureia.\nO líquido de fora é trocado sempre, para continuar sem ureia e a passagem não parar."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, a ureia vai de onde tem mais para onde tem menos.\nA: o coração empurra o sangue pelo tubo, mas não faz a ureia atravessar a película.\nB: plaqueta fecha corte, não carrega ureia.\nD: insulina mexe com açúcar, e a máquina não usa insulina.\nE: hemácia leva oxigênio, não leva a ureia para fora."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um saquinho de chá é posto num copo de água. Para onde vai a cor?",
+        "opcoes": [
+          "Da água para o saquinho",
+          "Do saquinho para a água",
+          "Fica parada no saquinho",
+          "Some no ar"
+        ],
+        "certa": "Do saquinho para a água",
+        "resposta": "A cor vai do saquinho, onde tem muita, para a água, onde não tem: é difusão."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-08",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Uma jovem de 19 anos emagreceu 6 kg em quatro meses comendo normalmente, tinha diarreia frequente e anemia. O exame mostrou doença celíaca: o glúten, uma proteína do trigo, inflama e achata as dobrinhas que forram por dentro o intestino delgado. Essas dobrinhas deixam a parede do intestino com uma área enorme, como uma toalha felpuda. Depois de meses sem glúten, as dobrinhas voltaram e ela recuperou o peso.\nA jovem emagrecia mesmo comendo normalmente porque",
+    "A": "o estômago dela parou de receber comida.",
+    "B": "o glúten virava gordura e saía na urina.",
+    "C": "os rins filtravam a comida antes de ela chegar ao sangue.",
+    "D": "a insulina dela foi destruída pelo trigo.",
+    "E": "com a parede do intestino delgado lisa, menos alimento digerido passava para o sangue.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "O alimento digerido passa para o sangue pela parede do intestino delgado. Dobrinhas achatadas = menos área = menos alimento passa, e ela emagrece mesmo comendo. E. Erros: A nega o texto (ela comia); B inventa; C troca a função do rim; D inventa (o texto não fala de insulina).",
+      "ideia": "A comida só alimenta quando passa do intestino delgado para o sangue. Com as dobrinhas achatadas, sobra pouca parede para essa passagem, e a comida vai embora na diarreia.",
+      "pecas": [
+        {
+          "termo": "Doença celíaca",
+          "significado": "Doença em que o glúten (proteína do trigo, da cevada e do centeio) inflama o intestino delgado e achata as dobrinhas da parede dele."
+        },
+        {
+          "termo": "Dobrinhas do intestino",
+          "significado": "Milhões de dobrinhas na parede de dentro do intestino delgado. Elas aumentam a área por onde o alimento passa para o sangue, como os fios de uma toalha felpuda."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A jovem comia normalmente, mas perdeu 6 kg em quatro meses.\nO glúten achatava as dobrinhas da parede do intestino delgado.\nA questão quer saber por que ela emagrecia.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Intestino sem dobrinhas",
+            "rotulos": [
+              "intestino delgado",
+              "pouco alimento passa",
+              "glúten do trigo",
+              "menos 6 kg"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pela aula, a digestão quebra o alimento em pedaços pequenos.\nEsses pedaços passam para o sangue no intestino delgado, atravessando a parede dele.\nCom as dobrinhas achatadas, a parede ficou lisa e muito menor. Passa menos alimento."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Comer não basta: o alimento precisa passar para o sangue.\nMenos parede no intestino delgado, menos passagem, menos alimento chegando ao corpo."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Uma toalha felpuda seca mais que um pano liso do mesmo tamanho, porque tem muito mais fio encostando na água.\nAs dobrinhas são os fios da toalha do intestino.\nO que não passou para o sangue segue pelo intestino e sai na diarreia. Por isso ela emagrecia e tinha anemia."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, a parede lisa deixa passar pouco alimento para o sangue.\nA: o texto diz que ela comia normalmente.\nB: o glúten não vira gordura na urina; isso foi inventado.\nC: rim filtra o sangue, não a comida.\nD: o texto não fala de insulina."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Em que parte do corpo o alimento já quebrado passa para o sangue?",
+        "opcoes": [
+          "Boca",
+          "Estômago",
+          "Intestino delgado",
+          "Rim"
+        ],
+        "certa": "Intestino delgado",
+        "resposta": "No intestino delgado, pela parede cheia de dobrinhas."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-09",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Duas situações do corpo humano: (1) uma criança encosta a mão numa panela quente e tira a mão antes mesmo de sentir dor, em menos de meio segundo; (2) um adolescente cresce cerca de 10 centímetros ao longo de um ano, comandado por uma substância que o cérebro solta no sangue aos poucos.\nAs duas respostas têm velocidades tão diferentes porque",
+    "A": "a primeira é comandada pelo sangue e a segunda, pelos nervos.",
+    "B": "a primeira usa mensagem elétrica nos neurônios, rápida; a segunda usa hormônio pelo sangue, lento.",
+    "C": "as duas usam hormônios, mas a criança tem mais sangue que o adolescente.",
+    "D": "a primeira depende da insulina e a segunda, das plaquetas.",
+    "E": "as duas usam neurônios, mas os do adolescente são mais lentos.",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Tirar a mão é mensagem elétrica nos neurônios (rápida). Crescer é comandado por hormônio que vai pelo sangue (lento). B. Erros: A inverte; C e E juntam os dois num tipo só; D cita insulina e plaquetas, que não comandam nada disso.",
+      "ideia": "O corpo tem dois correios: o nervo, que manda mensagem elétrica na hora, e o hormônio, que viaja pelo sangue e age devagar. Panela quente é nervo; crescer é hormônio.",
+      "pecas": [
+        {
+          "termo": "Neurônio",
+          "significado": "Célula dos nervos que leva mensagem elétrica, rápida como um fio de luz: da mão até a medula e de volta ao músculo."
+        },
+        {
+          "termo": "Hormônio",
+          "significado": "Mensagem química que uma glândula solta no sangue e que vai até o órgão-alvo. Age devagar e por bastante tempo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Uma criança tira a mão da panela quente em menos de meio segundo.\nUm adolescente cresce 10 cm em um ano, comandado por uma substância solta no sangue.\nA questão quer saber por que uma é tão rápida e a outra tão lenta.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Rápido e devagar",
+            "rotulos": [
+              "cérebro",
+              "panela: meio segundo",
+              "crescer: 10 cm por ano",
+              "mensagem pelo sangue"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pela aula, os neurônios levam mensagens elétricas rápidas.\nHormônios são mensagens químicas que vão pelo sangue, mais lentas.\nTirar a mão é o nervo agindo. Crescer é o hormônio agindo."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Pista no texto: \"solta no sangue aos poucos\" = hormônio.\nResposta em menos de 1 segundo = nervo."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O nervo é como um fio ligando a mão ao músculo: a mensagem corre direto e chega na hora.\nO hormônio é como uma carta no rio: precisa ser levada pelo sangue até o lugar certo.\nEm compensação, o hormônio age por meses, o que serve para crescer."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, nervo é rápido e hormônio pelo sangue é lento.\nA: inverte os dois.\nC: tirar a mão não depende de hormônio.\nD: insulina baixa o açúcar e plaqueta fecha corte; nenhuma comanda isso.\nE: crescer não é comandado por nervo, e sim por hormônio."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Depois de comer, o pâncreas solta insulina no sangue. Isso é mensagem de nervo ou de hormônio?",
+        "opcoes": [
+          "De nervo, elétrica",
+          "De hormônio, química",
+          "De plaqueta",
+          "De hemácia"
+        ],
+        "certa": "De hormônio, química",
+        "resposta": "A insulina é um hormônio: mensagem química que vai pelo sangue."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-10",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Um homem chegou à emergência com febre alta e dor forte no lado direito da barriga. O hemograma, exame que conta as células do sangue, trouxe: hemácias e plaquetas dentro do normal; glóbulos brancos 18 000 por milímetro cúbico, sendo que o laboratório considera normal de 4 000 a 11 000. O médico pediu outro exame e confirmou apendicite, a inflamação do apêndice.\nO número alto de glóbulos brancos indica que o corpo",
+    "A": "está sangrando por dentro e tenta fechar o corte.",
+    "B": "está com pouco oxigênio e tenta levar mais aos órgãos.",
+    "C": "está com o açúcar do sangue alto e tenta baixá-lo.",
+    "D": "está combatendo uma infecção e aumentou as células de defesa.",
+    "E": "está com os rins parados e tenta filtrar o sangue.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Glóbulo branco defende. 18 000 está acima de 11 000: o corpo aumentou a defesa porque há inflamação e infecção (apendicite). D. Erros: A é papel da plaqueta; B, da hemácia; C, da insulina; E, do rim.",
+      "ideia": "Glóbulo branco é o soldado do sangue. Quando o exame mostra soldados demais, o corpo está numa briga, como a infecção da apendicite.",
+      "pecas": [
+        {
+          "termo": "Hemograma",
+          "significado": "Exame de sangue que conta as hemácias, os glóbulos brancos e as plaquetas e compara com o normal."
+        },
+        {
+          "termo": "Apendicite",
+          "significado": "Inflamação do apêndice, um pedacinho em forma de dedo no começo do intestino grosso, do lado direito da barriga. Costuma ter bactéria."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O homem tem febre e apendicite.\nOs glóbulos brancos estão em 18 000, e o normal vai de 4 000 a 11 000.\nHemácias e plaquetas estão normais. A questão quer o que esse número alto indica.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Hemograma da emergência",
+            "rotulos": [
+              "glóbulos brancos: 18 000",
+              "normal: 4 000 a 11 000",
+              "hemácias normais",
+              "febre e dor na barriga"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Palavra-chave da aula: vermelho leva, branco defende, plaqueta fecha.\nSó os glóbulos brancos mudaram. Então o problema é de defesa.\nO corpo fabrica mais defensores quando há infecção, como na apendicite."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Veja qual célula saiu do normal e use a palavra-chave dela.\nBranco alto = corpo se defendendo."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "18 000 é bem mais que 11 000, o máximo normal: passa de 11 000 em 7 000.\nOs glóbulos brancos se multiplicam para atacar as bactérias do apêndice.\nA febre também faz parte dessa briga do corpo contra a infecção."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, o corpo está combatendo uma infecção.\nA: fechar corte é da plaqueta, e as plaquetas estão normais.\nB: levar oxigênio é da hemácia, e as hemácias estão normais.\nC: baixar o açúcar é da insulina.\nE: filtrar o sangue é do rim, e o exame não fala dele."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Num hemograma, só as plaquetas estão bem abaixo do normal. Qual risco aumenta?",
+        "opcoes": [
+          "Sangramento",
+          "Falta de oxigênio",
+          "Açúcar alto",
+          "Urina escura"
+        ],
+        "certa": "Sangramento",
+        "resposta": "Plaqueta fecha o corte. Com poucas plaquetas, o risco é de sangramento."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-11",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Num dia de 38 °C, um pedreiro trabalhou ao sol, suou muito e bebeu pouca água. No fim da tarde, urinou pouco, e a urina estava amarelo-escura. No domingo, em casa e na sombra, ele bebeu bastante água, urinou várias vezes e a urina ficou clarinha. Nos dois dias, a quantidade de ureia, a sujeira que sai na urina, foi parecida.\nA urina escura e em pouca quantidade no dia de trabalho mostra que os rins",
+    "A": "pararam de funcionar por causa do calor.",
+    "B": "devolveram mais água ao sangue, e a mesma sujeira saiu em pouca água.",
+    "C": "deixaram de tirar a ureia do sangue.",
+    "D": "passaram a filtrar o suor em vez do sangue.",
+    "E": "jogaram hemácias na urina, e elas escureceram a cor.",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Com pouca água no corpo, os rins seguram água e fazem pouca urina. A mesma ureia em pouca água deixa a urina escura (concentrada). B. Erros: A e C negam o texto (ele urinou e a ureia saiu igual); D inventa; E confunde urina escura com sangue.",
+      "ideia": "O rim economiza água quando o corpo perde muito suor. A sujeira sai do mesmo jeito, mas em pouca água, por isso a urina fica escura como suco com pouca água.",
+      "pecas": [
+        {
+          "termo": "Ureia",
+          "significado": "Sujeira que as células fazem e jogam no sangue. Os rins tiram a ureia do sangue e ela sai na urina."
+        },
+        {
+          "termo": "Urina concentrada",
+          "significado": "Urina com pouca água para a mesma quantidade de sujeira. Fica escura, como suco de pacote feito com metade da água."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "No dia de calor, o pedreiro suou muito, bebeu pouco e fez pouca urina escura.\nNo domingo, bebeu bastante e fez muita urina clara.\nA ureia foi parecida nos dois dias. A questão quer o que os rins fizeram.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Rins no calor",
+            "rotulos": [
+              "rins",
+              "urina pouca e escura",
+              "38 °C e muito suor",
+              "domingo: urina clara"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pela aula, os rins filtram o sangue e fazem a urina.\nNo calor, o corpo perdeu muita água no suor. Os rins então devolvem ao sangue o máximo de água que podem.\nA ureia precisa sair igual, mas sai dissolvida em pouca água."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Mesma sujeira em pouca água = urina escura.\nMesma sujeira em muita água = urina clara."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É como suco de pacote: o mesmo pó em 1 litro de água fica claro; em meio litro, fica escuro.\nO pó é a ureia, e a água é o que o rim deixa sair.\nPor isso urina escura é um sinal de que o corpo está precisando de água."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, os rins seguraram água e a mesma sujeira saiu em pouca água.\nA: ele urinou, então os rins funcionaram.\nC: o texto diz que a ureia saiu em quantidade parecida.\nD: suor sai pela pele, não pelo rim.\nE: hemácia na urina seria sangue, e o texto não fala disso."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Depois de beber 2 garrafas de água numa tarde fresca, a urina tende a ficar",
+        "opcoes": [
+          "mais clara e em maior quantidade",
+          "mais escura e em pouca quantidade",
+          "com sangue",
+          "igual à do dia quente"
+        ],
+        "certa": "mais clara e em maior quantidade",
+        "resposta": "Com água sobrando, o rim deixa mais água sair, e a urina fica clara e abundante."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-12",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Um motociclista se acidentou e perdeu 1,5 litro de sangue antes de chegar ao hospital. Um adulto do tamanho dele tem cerca de 5 litros de sangue no corpo. Ele chegou pálido, confuso e com o coração disparado, e os médicos fizeram uma transfusão de sangue, que é receber sangue doado.\nQue parte do sangue ele perdeu, e por que ficou confuso e com o coração disparado?",
+    "A": "15%, e chega menos oxigênio aos órgãos porque faltam hemácias.",
+    "B": "30%, e o corpo fica sem defesa porque faltam plaquetas.",
+    "C": "70%, e chega menos oxigênio aos órgãos porque faltam hemácias.",
+    "D": "3,3%, e o sangue fica grosso e coagula demais.",
+    "E": "30%, e chega menos oxigênio aos órgãos porque faltam hemácias.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "0,5 L é 10% de 5 L (10 × 0,5 = 5); 1,5 L = 3 × 0,5 L = 30%. Faltam hemácias, chega menos oxigênio ao cérebro (confusão) e o coração bate rápido para compensar. E. Erros: A leu 1,5 como 15%; B número certo, mas plaqueta fecha corte e não defende; C é o que sobrou (3,5 L); D fez 5 ÷ 1,5 e inventou o efeito.",
+      "ideia": "Ele perdeu 1,5 de 5 litros, que é 30% do sangue. Com menos hemácias, chega menos oxigênio ao cérebro, e o coração dispara para rodar o pouco sangue mais vezes.",
+      "pecas": [
+        {
+          "termo": "Hemoglobina",
+          "significado": "Proteína vermelha dentro da hemácia que segura o oxigênio, como um caminhãozinho que pega a carga no pulmão e entrega no cérebro."
+        },
+        {
+          "termo": "Porcentagem",
+          "significado": "Quantos de cada 100. 30% = 30 de cada 100 = 3 de cada 10."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O motociclista perdeu 1,5 litro de sangue.\nO corpo dele tinha cerca de 5 litros.\nA questão quer a porcentagem perdida e o motivo da confusão e do coração disparado.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Sangue perdido no acidente",
+            "rotulos": [
+              "coração disparado",
+              "perdeu 1,5 litro",
+              "total: 5 litros",
+              "pálido e confuso"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pela aula, as hemácias levam oxigênio. Quem segura o oxigênio dentro delas é a hemoglobina.\nCom menos sangue, há menos hemácias, e chega menos oxigênio ao cérebro: daí a confusão.\nO coração bate mais rápido para fazer o pouco sangue dar mais voltas."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Número pequeno primeiro: 0,5 L cabe 10 vezes em 5 L (10 × 0,5 = 5).\nEntão 0,5 L é 1 de cada 10 partes do sangue, ou seja, 10%.\n1,5 L = 3 × 0,5 L. Então é 3 × 10% = 30%.\nConfira: 30% = 3 de cada 10, e 3 décimos de 5 L dão 1,5 L.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Quanto do sangue saiu",
+            "dados": [
+              "p = 1{,}5\\,\\text{L}",
+              "V = 5\\,\\text{L}"
+            ],
+            "formula": "\\text{parte} = p \\div V",
+            "legenda": [
+              "p: sangue perdido",
+              "V: sangue do corpo"
+            ],
+            "contas": [
+              "0{,}5 \\div 5 = 0{,}1 = 10\\%",
+              "1{,}5 = 3 \\times 0{,}5",
+              "3 \\times 10\\% = 30\\%"
+            ],
+            "resultado": "\\text{parte} = 30\\%",
+            "nota": "Perdeu 30% do sangue."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Porcentagem é dividir o pedaço pelo total e ver quanto dá em 100.\nDividir 1,5 por 5 é o mesmo que 3 por 10, porque dobrar os dois não muda quantas vezes um cabe no outro.\n3 ÷ 10 = 0,3, que é 30 de cada 100: 30%."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 30%, com menos oxigênio por faltar hemácia.\nA: leu 1,5 litro como 15%, mas 1,5 é de 5, não de 10.\nB: o número está certo, mas plaqueta fecha corte; quem defende é o glóbulo branco.\nC: 70% é o que sobrou no corpo (3,5 L), não o que saiu.\nD: dividiu 5 por 1,5; e perder sangue não engrossa o sangue."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma pessoa com 5 litros de sangue doa 0,5 litro. Que porcentagem ela doou?",
+        "opcoes": [
+          "5%",
+          "10%",
+          "50%",
+          "0,5%"
+        ],
+        "certa": "10%",
+        "resposta": "0,5 cabe 10 vezes em 5, então é 1 de cada 10: 10%."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-13",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "A vacina contra a hepatite B é dada em três doses. Um estudo mediu os anticorpos no sangue de voluntários. Depois da primeira dose, eles apareceram devagar, em algumas semanas, e em pouca quantidade. Depois da segunda dose, que tem o mesmo conteúdo da primeira, os anticorpos subiram em poucos dias e em quantidade muito maior. A vacina não contém anticorpos, só pedaços inofensivos do vírus.\nA subida mais rápida e maior depois da segunda dose acontece porque",
+    "A": "os glóbulos brancos guardaram a lembrança da primeira dose e agora fazem anticorpos mais rápido.",
+    "B": "a segunda dose já traz anticorpos prontos, como um soro.",
+    "C": "a segunda dose leva mais hemácias, que carregam os anticorpos.",
+    "D": "a primeira dose enfraqueceu os glóbulos brancos, e a segunda os curou.",
+    "E": "os anticorpos da primeira dose se multiplicaram sozinhos no sangue.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Na 1ª dose, os glóbulos brancos aprendem a reconhecer o vírus e guardam células de memória. Na 2ª, a resposta é rápida e grande. A. Erros: B nega o texto (a vacina não tem anticorpos); C troca hemácia por glóbulo branco; D inventa; E erra porque anticorpo é proteína e não se multiplica.",
+      "ideia": "A primeira dose ensina os glóbulos brancos a reconhecer o vírus, e eles guardam a lição. Na segunda, já sabem e fazem anticorpos rápido e em grande quantidade.",
+      "pecas": [
+        {
+          "termo": "Anticorpo",
+          "significado": "Proteína feita pelos glóbulos brancos que gruda num invasor certo e o desliga, como uma chave que só serve numa fechadura: o anticorpo da hepatite B só pega esse vírus."
+        },
+        {
+          "termo": "Memória do corpo",
+          "significado": "Glóbulos brancos que ficam guardados depois do primeiro contato com o invasor. No segundo contato, eles reconhecem o invasor e agem logo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Depois da 1ª dose, os anticorpos vieram devagar e poucos.\nDepois da 2ª dose, igual à 1ª, vieram em poucos dias e muitos.\nA vacina não tem anticorpos. A questão quer o porquê da diferença.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "virus-bacteria",
+            "titulo": "Vacina em três doses",
+            "rotulos": [
+              "vírus da hepatite B",
+              "1ª dose: devagar",
+              "2ª dose: rápido",
+              "vacina"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pela aula, os glóbulos brancos defendem o corpo, e uma das armas deles é o anticorpo.\nNa 1ª dose, eles veem o pedaço do vírus pela primeira vez e demoram para montar a chave certa.\nAlguns ficam guardados como memória. Na 2ª dose, eles já sabem o caminho."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Primeiro contato: aprende devagar.\nSegundo contato: lembra e responde rápido e forte. É para isso que serve repetir a dose."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É como aprender um caminho novo na cidade: a 1ª vez demora; a 2ª vez você vai direto.\nComo a vacina só tem pedaços inofensivos, o corpo aprende sem ficar doente.\nSe o vírus de verdade aparecer depois, a resposta rápida chega antes de ele causar estrago."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, os glóbulos brancos lembram e respondem mais rápido.\nB: o texto diz que a vacina não tem anticorpos; anticorpo pronto é soro.\nC: hemácia leva oxigênio, não faz nem carrega a defesa.\nD: a primeira dose não enfraquece ninguém; ela ensina.\nE: anticorpo é proteína, não se multiplica sozinho."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Quem fabrica os anticorpos no corpo?",
+        "opcoes": [
+          "Hemácias",
+          "Plaquetas",
+          "Glóbulos brancos",
+          "Rins"
+        ],
+        "certa": "Glóbulos brancos",
+        "resposta": "Os glóbulos brancos fazem os anticorpos. Branco defende."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-14",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "O primeiro leite que a mãe produz depois do parto, chamado colostro, é amarelado e rico em anticorpos feitos pelo corpo dela. Pesquisas mostram que bebês alimentados só no peito até os 6 meses têm bem menos diarreia e infecções no pulmão do que bebês que tomam só mamadeira de fórmula. Nos primeiros meses, o bebê ainda produz poucos anticorpos próprios.\nO leite materno protege o bebê porque",
+    "A": "ensina o bebê a fazer anticorpos para sempre, como uma vacina.",
+    "B": "leva hemácias da mãe, que dão mais oxigênio ao bebê.",
+    "C": "leva anticorpos prontos da mãe, que protegem enquanto o bebê faz poucos.",
+    "D": "tem insulina, que mata os micróbios no intestino.",
+    "E": "tem plaquetas, que fecham o intestino contra os micróbios.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "O colostro e o leite levam anticorpos prontos feitos pela mãe. Eles protegem o bebê enquanto ele ainda produz poucos. C. Erros: A confunde com vacina (o anticorpo emprestado some com o tempo); B, D e E trocam a função de hemácia, insulina e plaqueta.",
+      "ideia": "A mãe empresta anticorpos prontos pelo leite. Eles defendem o bebê nos meses em que ele ainda fabrica poucos.",
+      "pecas": [
+        {
+          "termo": "Anticorpo",
+          "significado": "Proteína feita pelos glóbulos brancos que gruda num invasor certo e o desliga, como uma chave que só serve numa fechadura: o anticorpo contra uma bactéria de diarreia só pega essa bactéria."
+        },
+        {
+          "termo": "Colostro",
+          "significado": "O primeiro leite, dos primeiros dias depois do parto. É grosso, amarelado e cheio de anticorpos da mãe."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O colostro é rico em anticorpos feitos pela mãe.\nBebês que mamam no peito até os 6 meses têm menos diarreia e infecção.\nA questão quer como o leite protege.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "virus-bacteria",
+            "titulo": "Leite que protege",
+            "rotulos": [
+              "micróbio da diarreia",
+              "mamadeira ou peito",
+              "diarreia e infecção",
+              "peito até 6 meses"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pela aula, glóbulos brancos defendem o corpo, e o anticorpo é uma arma deles.\nO bebê ainda faz poucos anticorpos.\nA mãe já tem muitos, e eles passam para o leite. O bebê recebe a defesa pronta."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Anticorpo pronto vindo de fora = proteção na hora, mas emprestada.\nÉ a mesma ideia do soro: a defesa chega feita."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Os anticorpos do leite ficam no intestino e na garganta do bebê e grudam nos micróbios que ele engole.\nComo foram emprestados, vão sumindo; por isso o bebê precisa continuar mamando.\nEnquanto isso, o corpo dele aprende a fazer os próprios anticorpos, com a ajuda das vacinas."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, o leite leva anticorpos prontos da mãe.\nA: quem ensina a fazer anticorpo é a vacina; o anticorpo emprestado some.\nB: o leite não leva hemácias.\nD: insulina baixa o açúcar do sangue, não mata micróbio.\nE: plaqueta fecha corte e não está no leite."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Anticorpo pronto vindo de outro corpo protege para sempre ou por um tempo?",
+        "opcoes": [
+          "Para sempre",
+          "Por um tempo",
+          "Não protege",
+          "Só protege adultos"
+        ],
+        "certa": "Por um tempo",
+        "resposta": "Por um tempo: anticorpo emprestado vai sumindo, como no soro."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-15",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Numa creche, várias crianças viviam cansadas, pálidas e desatentas. O exame de sangue mostrou anemia por falta de ferro: hemácias pequenas e pálidas, com pouca hemoglobina. A nutricionista colocou no cardápio mais feijão, carne e folhas verde-escuras, alimentos ricos em ferro, e três meses depois os exames das crianças melhoraram. O ferro é parte da hemoglobina.\nA falta de ferro deixava as crianças cansadas porque",
+    "A": "sem ferro as plaquetas não fecham os cortes, e elas perdem sangue.",
+    "B": "sem ferro os glóbulos brancos atacam as hemácias.",
+    "C": "o ferro é o açúcar que dá energia direto aos músculos.",
+    "D": "sem ferro o corpo faz pouca hemoglobina, e o sangue leva menos oxigênio às células.",
+    "E": "sem ferro os rins param, e a sujeira se acumula no sangue.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "O ferro é parte da hemoglobina. Pouco ferro, pouca hemoglobina, menos oxigênio entregue; sem oxigênio a célula faz pouca energia (respiração celular), e vem o cansaço. D. Erros: A troca por plaqueta; B troca por glóbulo branco; C confunde ferro com glicose; E troca por rim.",
+      "ideia": "Sem ferro, a hemácia sai com pouca hemoglobina e leva pouco oxigênio. Com pouco oxigênio, a célula faz pouca energia, e a criança fica cansada.",
+      "pecas": [
+        {
+          "termo": "Hemoglobina",
+          "significado": "Proteína vermelha dentro da hemácia que segura o oxigênio, como um caminhãozinho que pega a carga no pulmão e entrega no músculo. O ferro é uma peça dela."
+        },
+        {
+          "termo": "Respiração celular",
+          "significado": "A célula queima glicose com oxigênio para ter energia e solta gás carbônico, como um fogão que queima o gás para fazer o fogo e solta fumaça."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Crianças com falta de ferro tinham hemácias com pouca hemoglobina.\nElas viviam cansadas e pálidas, e melhoraram comendo feijão, carne e folhas verde-escuras.\nA questão quer saber por que a falta de ferro cansa.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Anemia na creche",
+            "rotulos": [
+              "hemácias pálidas",
+              "pouca hemoglobina",
+              "feijão, carne, folhas",
+              "3 meses depois"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pela aula, a hemácia leva oxigênio. Quem segura o oxigênio dentro dela é a hemoglobina, e o ferro é peça dela.\nSem ferro, o corpo monta pouca hemoglobina: o caminhãozinho sai com poucos lugares para a carga.\nChega pouco oxigênio às células."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ferro → hemoglobina → oxigênio → energia.\nSe falta o primeiro da fila, falta tudo o que vem depois."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A célula faz energia pela respiração celular: queima glicose usando oxigênio, como um fogão queima gás.\nCom pouco oxigênio, o fogo fica fraco e sai pouca energia.\nPor isso a criança cansa à toa e fica pálida, com o sangue menos vermelho."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, pouca hemoglobina, pouco oxigênio para as células.\nA: plaqueta fecha corte; o texto não fala de sangramento.\nB: glóbulo branco defende contra invasor, não ataca hemácia por falta de ferro.\nC: quem dá energia é a glicose; o ferro ajuda a levar oxigênio.\nE: o texto não fala de rins."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "O ferro da comida vira parte de qual proteína do sangue?",
+        "opcoes": [
+          "Insulina",
+          "Hemoglobina",
+          "Anticorpo",
+          "Ureia"
+        ],
+        "certa": "Hemoglobina",
+        "resposta": "O ferro vira peça da hemoglobina, que segura o oxigênio na hemácia."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-16",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Uma senhora com diabetes aplicou a dose de insulina antes do almoço, mas recebeu uma visita e ficou duas horas sem comer. Começou a suar frio, tremer e ficar confusa. A filha mediu a glicose (açúcar) do sangue: 50, e o normal em jejum fica entre 70 e 99. Seguindo a orientação do médico, a filha deu um copo de suco com açúcar, e em 15 minutos a mãe melhorou.\nOs sintomas apareceram porque",
+    "A": "a insulina fez o açúcar do sangue subir demais.",
+    "B": "faltou insulina, e a glicose ficou presa no sangue.",
+    "C": "a insulina destruiu as hemácias, e faltou oxigênio.",
+    "D": "o jejum fez o pâncreas parar de produzir glóbulos brancos.",
+    "E": "a insulina continuou tirando glicose do sangue sem chegar comida, e o açúcar caiu demais.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Insulina baixa o açúcar. Sem comida chegando, ela continuou tirando glicose do sangue, e a medida caiu para 50, abaixo de 70. O suco devolveu glicose. E. Erros: A inverte o efeito; B inverte a situação (ela tomou insulina); C e D trocam a função de hemácia e de pâncreas.",
+      "ideia": "A insulina baixa o açúcar do sangue, e a comida é que repõe. Com insulina e sem comida, o açúcar caiu para 50, e o cérebro sentiu falta dele.",
+      "pecas": [
+        {
+          "termo": "Insulina",
+          "significado": "Hormônio do pâncreas que faz a glicose sair do sangue e entrar nas células, como uma chave que abre a porta da célula depois do almoço."
+        },
+        {
+          "termo": "Hipoglicemia",
+          "significado": "Açúcar baixo demais no sangue (abaixo de 70). Dá suor frio, tremor e confusão, porque o cérebro usa muita glicose."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A senhora tomou insulina e ficou 2 horas sem comer.\nA glicose dela caiu para 50, e o normal em jejum é de 70 a 99.\nEla suou frio e ficou confusa. A questão quer o motivo.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Insulina sem almoço",
+            "rotulos": [
+              "pâncreas",
+              "glicose: 50",
+              "normal: 70 a 99",
+              "2 horas sem comer"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Palavra-chave da aula: insulina baixa o açúcar.\nEla abre a porta das células, e a glicose sai do sangue e entra nelas.\nSem almoço, não chegou glicose nova, mas a insulina continuou abrindo as portas. O açúcar do sangue caiu demais."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Insulina tira açúcar do sangue; comida põe açúcar no sangue.\nInsulina sem comida = açúcar baixo. Comida sem insulina (no diabetes) = açúcar alto."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "50 está 20 abaixo de 70, o mínimo normal.\nO cérebro vive de glicose; com pouca, ele funciona mal, e vem a confusão.\nO suco com açúcar põe glicose de volta no sangue, por isso ela melhorou em 15 minutos."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, a insulina baixou o açúcar e não chegou comida para repor.\nA: inverte; insulina baixa o açúcar.\nB: ela tomou a insulina; o açúcar estava baixo, não alto.\nC: insulina não destrói hemácia.\nD: o pâncreas faz insulina; quem defende é o glóbulo branco."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "A glicose de alguém está em 180 depois do almoço e não baixa. O que falta funcionar?",
+        "opcoes": [
+          "A insulina",
+          "As plaquetas",
+          "A hemoglobina",
+          "Os rins"
+        ],
+        "certa": "A insulina",
+        "resposta": "É a insulina que tira o açúcar do sangue; se ele não baixa, ela falta ou não funciona."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-17",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Numa aula prática, a professora encheu dois copos com água de cal, um líquido transparente que fica turvo, esbranquiçado, quando recebe gás carbônico. No copo 1, um aluno soprou o ar dos pulmões com um canudo durante 1 minuto, e a água ficou turva. No copo 2, ela bombeou o ar da sala com uma bomba de encher bola, também por 1 minuto, e a água continuou quase transparente.\nO ar soprado pelo aluno turvou a água porque",
+    "A": "tem mais oxigênio, e o oxigênio turva a água de cal.",
+    "B": "tem mais gás carbônico, que as células do corpo produzem ao fazer energia e o sangue solta no pulmão.",
+    "C": "sai com mais força que o da bomba e agita mais a água.",
+    "D": "leva glicose da boca, que deixa a água esbranquiçada.",
+    "E": "passou pelo pulmão, que tira o gás carbônico do ar e devolve oxigênio puro.",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "A água de cal turva com gás carbônico. O ar soprado tem muito mais gás carbônico que o ar da sala, porque as células o produzem na respiração celular e o sangue o solta no pulmão. B. Erros: A troca o gás; C ignora que a turvação depende do gás, não da força; D inventa; E inverte a troca no pulmão.",
+      "ideia": "As células fazem energia queimando glicose e soltam gás carbônico. O sangue leva esse gás ao pulmão, e ele sai no sopro: por isso o ar soprado turva a água de cal.",
+      "pecas": [
+        {
+          "termo": "Respiração celular",
+          "significado": "A célula queima glicose com oxigênio para ter energia e solta gás carbônico, como um fogão que queima o gás para fazer o fogo e solta fumaça."
+        },
+        {
+          "termo": "Água de cal",
+          "significado": "Água com cal dissolvida. É transparente e fica esbranquiçada quando recebe gás carbônico, por isso serve para mostrar se esse gás está no ar."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Copo 1: ar soprado do pulmão por 1 minuto. A água de cal ficou turva.\nCopo 2: ar da sala, bombeado por 1 minuto. A água quase não mudou.\nA água de cal turva com gás carbônico. A questão quer o porquê da diferença.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Sopro na água de cal",
+            "rotulos": [
+              "pulmão",
+              "ar soprado: turvou",
+              "ar da sala: quase nada",
+              "1 minuto cada"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pela aula, no pulmão o sangue solta gás carbônico e pega oxigênio.\nEsse gás carbônico vem das células: é a fumaça da respiração celular, quando elas queimam glicose para ter energia.\nO ar que sai do pulmão leva esse gás, e por isso tem muito mais gás carbônico que o ar da sala."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Água de cal turva = tem gás carbônico.\nAr que sai do pulmão = ar com o gás carbônico das células."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O copo 2 é a comparação: mesmo tempo, mesmo copo, só muda o ar.\nComo só o ar soprado turvou, a diferença está no que o corpo pôs nele.\nO ar que sai do pulmão tem cerca de 100 vezes mais gás carbônico que o ar da sala."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, o ar soprado tem o gás carbônico feito pelas células.\nA: o ar soprado tem menos oxigênio que o da sala, não mais.\nC: a água turva por causa do gás, não da força do sopro.\nD: glicose não sai no sopro.\nE: inverte; o pulmão solta gás carbônico no ar e tira oxigênio dele."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual gás as células soltam quando queimam glicose para ter energia?",
+        "opcoes": [
+          "Oxigênio",
+          "Gás carbônico",
+          "Nitrogênio",
+          "Monóxido de carbono"
+        ],
+        "certa": "Gás carbônico",
+        "resposta": "Gás carbônico: é a fumaça da respiração celular, que sai pelo pulmão."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-18",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Um homem de 55 anos sentiu uma dor forte e apertada no peito. No hospital, o exame mostrou um infarto: uma das artérias que levam sangue ao próprio músculo do coração estava entupida por gordura e por um coágulo. Os médicos desentupiram a artéria o mais rápido possível, porque cada minuto de atraso faz morrer mais células do músculo do coração que dependiam dela.\nAs células do músculo do coração morrem quando essa artéria entope porque",
+    "A": "recebem sangue demais, que as faz inchar e estourar.",
+    "B": "ficam sem glóbulos brancos e são tomadas por infecção.",
+    "C": "o coágulo solta insulina, que tira toda a glicose delas.",
+    "D": "deixam de receber oxigênio e não conseguem fazer energia pela respiração celular.",
+    "E": "ficam sem plaquetas e sangram até morrer.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Artéria entupida, o sangue não passa: sem oxigênio, a célula não faz a respiração celular, fica sem energia e morre. D. Erros: A inverte (chega menos sangue); B, C e E trocam a função de glóbulo branco, insulina e plaqueta.",
+      "ideia": "O coração também precisa de sangue para ele mesmo. Se a artéria entope, o oxigênio não chega, a célula não faz energia e morre.",
+      "pecas": [
+        {
+          "termo": "Respiração celular",
+          "significado": "A célula queima glicose com oxigênio para ter energia e solta gás carbônico, como um fogão que queima o gás para fazer o fogo e solta fumaça."
+        },
+        {
+          "termo": "Infarto",
+          "significado": "Morte de uma parte de um músculo por falta de sangue. No coração, acontece quando uma artéria dele entope."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Uma artéria do próprio coração entupiu com gordura e um coágulo.\nAs células do músculo que dependiam dela começaram a morrer.\nA questão quer o motivo.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Artéria do coração entupida",
+            "rotulos": [
+              "coração",
+              "artéria entupida",
+              "gordura e coágulo",
+              "55 anos, dor no peito"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pela aula, o coração bombeia o sangue, e as hemácias levam oxigênio.\nO músculo do coração recebe sangue por artérias próprias. Uma delas entupiu.\nSem sangue passando, não chega oxigênio àquela parte do músculo."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Sem sangue, sem oxigênio. Sem oxigênio, sem energia. Sem energia, a célula morre.\nPor isso cada minuto conta."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A célula faz energia pela respiração celular: queima glicose usando oxigênio, como um fogão queima gás.\nSem oxigênio, o fogo apaga.\nO músculo do coração trabalha sem parar, então gasta muita energia e aguenta pouco tempo sem oxigênio."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, sem oxigênio a célula não faz energia.\nA: inverte; com a artéria entupida, chega menos sangue.\nB: o problema é a falta de sangue, não uma infecção.\nC: quem solta insulina é o pâncreas, não o coágulo.\nE: inverte; o problema é um coágulo a mais, não plaqueta a menos."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Sem oxigênio, o que a célula não consegue fazer?",
+        "opcoes": [
+          "Energia",
+          "Urina",
+          "Anticorpos para o sangue",
+          "Hemácias"
+        ],
+        "certa": "Energia",
+        "resposta": "Sem oxigênio, a célula não queima glicose e fica sem energia."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-19",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Uma criança de 2 anos está há um dia com diarreia forte e vômitos. A mãe percebeu que ela está com a boca seca, faz pouco xixi e chora sem lágrimas. No posto de saúde, a enfermeira ensinou a preparar o soro caseiro, água filtrada ou fervida com um pouco de sal e de açúcar na medida certa, e pediu que a criança bebesse aos golinhos depois de cada evacuação, sem parar de comer.\nO soro caseiro é indicado porque",
+    "A": "repõe a água e os sais que a criança está perdendo na diarreia e no vômito.",
+    "B": "mata as bactérias que estão no intestino.",
+    "C": "tem anticorpos que curam a infecção na hora.",
+    "D": "faz o açúcar agir como insulina e parar a diarreia.",
+    "E": "faz os rins pararem de fazer urina.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "A diarreia e o vômito tiram água e sais do corpo (boca seca, pouco xixi, choro sem lágrima = falta de água). O soro repõe água e sais. A. Erros: B confunde soro com remédio contra bactéria; C confunde com o soro de anticorpos; D inventa papel do açúcar; E confunde o sinal (pouco xixi) com o objetivo.",
+      "ideia": "Na diarreia, a água e os sais saem do corpo pelo intestino. O soro caseiro devolve essa água e esses sais, e assim evita a desidratação.",
+      "pecas": [
+        {
+          "termo": "Desidratação",
+          "significado": "Falta de água no corpo. Sinais: boca seca, pouco xixi, choro sem lágrimas, moleza."
+        },
+        {
+          "termo": "Soro caseiro",
+          "significado": "Água filtrada ou fervida com sal e açúcar na medida que o posto ensina. Não mata micróbio: só devolve água e sais."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A criança tem diarreia e vômito há um dia.\nEstá com boca seca, pouco xixi e chora sem lágrimas.\nO posto mandou dar soro caseiro. A questão quer para que ele serve.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Diarreia e soro caseiro",
+            "rotulos": [
+              "intestino",
+              "água e sais saindo",
+              "boca seca, pouco xixi",
+              "2 anos"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pela aula, o que comemos e bebemos passa para o sangue no intestino.\nNa diarreia, o intestino solta água e sais em vez de passá-los para o sangue.\nO corpo fica sem água. Os rins economizam, e por isso ela faz pouco xixi."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "O que saiu, volta: água e sais.\nO soro não cura a causa da diarreia; ele segura a criança até o corpo vencer a doença."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Água pura sozinha não basta, porque os sais também foram embora.\nO sal repõe os sais, e um pouco de açúcar ajuda o intestino a puxar o sal e a água para o sangue.\nAos golinhos, a criança não vomita tudo de novo."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, o soro repõe água e sais perdidos.\nB: sal e açúcar não matam bactérias.\nC: soro de anticorpos é outro, feito com sangue de animal; o caseiro é água, sal e açúcar.\nD: açúcar não é insulina e não para a diarreia.\nE: o pouco xixi é sinal do problema; o soro serve para o corpo voltar a ter água."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual destes é sinal de que o corpo está com pouca água?",
+        "opcoes": [
+          "Urina clara e abundante",
+          "Boca seca e pouco xixi",
+          "Febre baixa",
+          "Muita fome"
+        ],
+        "certa": "Boca seca e pouco xixi",
+        "resposta": "Boca seca e pouco xixi mostram falta de água: o rim está economizando."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-bio-fis-20",
+    "materia": "Biologia",
+    "tema": "Fisiologia Humana e Saúde",
+    "enunciado": "Um paciente recebeu um rim de um doador. Para o resto da vida, ele vai tomar remédios que diminuem a ação dos glóbulos brancos, porque sem eles o corpo pode reconhecer o rim novo como estranho e destruí-lo, o que se chama rejeição. O médico também avisou que ele deve lavar bem as mãos, evitar contato com pessoas gripadas e manter em dia as vacinas que a equipe indicar.\nOs remédios evitam a rejeição, mas aumentam o risco de infecção porque",
+    "A": "destroem as hemácias, e falta oxigênio para combater os micróbios.",
+    "B": "fazem o rim novo fabricar micróbios.",
+    "C": "os glóbulos brancos que atacariam o rim novo são os mesmos que combatem os micróbios.",
+    "D": "aumentam as plaquetas, que deixam os micróbios entrar.",
+    "E": "fazem o rim novo parar de filtrar o sangue.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Quem ataca o rim estranho e quem ataca micróbios são os mesmos defensores, os glóbulos brancos. Diminuir um diminui o outro. C. Erros: A troca por hemácia; B inventa; D troca a função da plaqueta; E contradiz o objetivo do remédio, que é salvar o rim.",
+      "ideia": "O corpo não tem uma defesa só para o rim e outra para os micróbios: são os mesmos glóbulos brancos. Ao acalmá-los para salvar o rim, sobra menos defesa contra infecção.",
+      "pecas": [
+        {
+          "termo": "Rejeição",
+          "significado": "Quando os glóbulos brancos reconhecem o órgão doado como estranho e o atacam, como fariam com um micróbio."
+        },
+        {
+          "termo": "Anticorpo",
+          "significado": "Proteína feita pelos glóbulos brancos que gruda num invasor certo e o desliga, como uma chave que só serve numa fechadura: o anticorpo da gripe só pega o vírus da gripe."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Um paciente recebeu um rim doado e toma remédios que diminuem a ação dos glóbulos brancos.\nIsso evita que o corpo destrua o rim novo.\nA questão quer saber por que, ao mesmo tempo, ele pega infecção mais fácil.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "Rim doado",
+            "rotulos": [
+              "rim novo",
+              "glóbulos brancos calmos",
+              "risco: rejeição",
+              "risco: infecção"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Palavra-chave da aula: branco defende.\nOs glóbulos brancos atacam o que é estranho ao corpo, com armas como os anticorpos.\nO rim de outra pessoa é estranho, e um micróbio também. Os mesmos defensores atacam os dois."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Um só exército para dois inimigos.\nSe o remédio acalma o exército para poupar o rim, sobra menos força contra os micróbios."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É como um cão de guarda que late para qualquer estranho: o vizinho convidado e o ladrão.\nSe você prende o cão para o convidado entrar, o ladrão também passa mais fácil.\nPor isso o médico pede mãos limpas, distância de gripados e vacinas em dia."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, os mesmos glóbulos brancos atacam o rim e os micróbios.\nA: hemácia leva oxigênio e não é atingida pelo remédio no texto.\nB: rim não fabrica micróbio.\nD: plaqueta fecha corte; não abre a porta para micróbio.\nE: o remédio serve justamente para o rim novo continuar funcionando."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Que célula do sangue ataca tanto um micróbio quanto um órgão doado?",
+        "opcoes": [
+          "Hemácia",
+          "Glóbulo branco",
+          "Plaqueta",
+          "Neurônio"
+        ],
+        "certa": "Glóbulo branco",
+        "resposta": "O glóbulo branco: ele defende o corpo de tudo que reconhece como estranho."
+      }
+    }
+  }
+]

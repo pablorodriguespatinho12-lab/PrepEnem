@@ -1,0 +1,1842 @@
+[
+ {
+  "id": "d2-banco-qui-ph-01",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "Em hospitais, o soro fisiológico é usado para hidratar pacientes e limpar ferimentos. Ele é uma solução de cloreto de sódio (NaCl, o sal de cozinha) em água. Uma bolsa de 500 mL traz no rótulo a informação de que contém 4,5 g de NaCl dissolvidos. Um estudante de enfermagem precisa anotar a concentração em gramas por litro (g/L), a unidade usada na tabela do hospital.\nQual é a concentração de NaCl nesse soro?",
+  "A": "9 g/L",
+  "B": "2,25 g/L",
+  "C": "0,009 g/L",
+  "D": "90 g/L",
+  "E": "4,5 g/L",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "500 mL = 0,5 L. C = 4,5 ÷ 0,5 = 45 ÷ 5 = 9 g/L. A. Erros: B multiplicou 4,5 × 0,5; C dividiu por 500 sem passar para litro; D errou a vírgula (4,5 ÷ 0,05); E copiou a massa como se a bolsa tivesse 1 L.",
+   "ideia": "Concentração em g/L é a massa dividida pelo volume em litros. Como 500 mL é meio litro, 4,5 g em meio litro dão 9 g em um litro inteiro.",
+   "pecas": [
+    {
+     "termo": "Soluto e solvente",
+     "significado": "Soluto é o que se dissolve (o sal). Solvente é onde ele se dissolve (a água). Os dois juntos formam a solução."
+    },
+    {
+     "termo": "g/L",
+     "significado": "Gramas de soluto em cada litro de solução. 9 g/L quer dizer 9 g de sal em cada litro."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Uma bolsa de soro tem 500 mL.\nDentro dela há 4,5 g de sal (NaCl) dissolvidos.\nA questão quer quantos gramas haveria em 1 litro: a concentração em g/L.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "O soro da bolsa",
+      "rotulos": [
+       "soro fisiológico",
+       "? g/L",
+       "500 mL",
+       "4,5 g de NaCl"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "500 mL é metade de 1 litro (1 000 mL), ou seja, 0,5 L.\nSe meio litro tem 4,5 g, o litro inteiro teria o dobro: 9 g.\nDividir por 0,5 é o mesmo que dobrar: 1 ÷ 0,5 = 2, porque cabem 2 metades em 1."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Concentração = massa ÷ volume, com o volume em litros.\nEm 4,5 ÷ 0,5, ande a vírgula dos dois uma casa para a direita.\n4,5 ÷ 0,5 = 45 ÷ 5 = 9 g/L.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Concentração do soro",
+      "dados": [
+       "m = 4{,}5\\,\\text{g}",
+       "V = 500\\,\\text{mL} = 0{,}5\\,\\text{L}"
+      ],
+      "formula": "C = \\dfrac{m}{V}",
+      "legenda": [
+       "m: massa do sal",
+       "V: volume da solução em litros"
+      ],
+      "contas": [
+       "C = \\dfrac{4{,}5}{0{,}5}",
+       "C = \\dfrac{45}{5}"
+      ],
+      "resultado": "C = 9\\,\\text{g/L}",
+      "nota": "Em cada litro de soro há 9 g de sal."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Concentração diz quanto soluto há em cada litro.\nNúmeros pequenos: 2 g em 1 L dão 2 g/L; 2 g em meio litro dão 4 g/L, porque o mesmo sal está num volume que é a metade.\nConfira: 9 g/L × 0,5 L = 4,5 g, que é o que está na bolsa."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, 9 g/L.\nB (2,25 g/L) multiplicou 4,5 por 0,5 em vez de dividir.\nC (0,009 g/L) dividiu por 500 sem passar mL para litro.\nD (90 g/L) errou a vírgula, como se fossem 50 mL (0,05 L).\nE (4,5 g/L) copiou a massa, como se a bolsa tivesse 1 litro."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Há 3 g de açúcar em 250 mL de chá. Qual é a concentração em g/L?",
+    "opcoes": [
+     "12 g/L",
+     "0,75 g/L",
+     "3 g/L",
+     "0,012 g/L"
+    ],
+    "certa": "12 g/L",
+    "resposta": "250 mL = 0,25 L. 3 ÷ 0,25 = 300 ÷ 25 = 12 g/L."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-02",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "O leite é uma das principais fontes de cálcio da alimentação. Uma tabela nutricional informa que o leite integral tem cerca de 1,2 g de cálcio em cada litro (1,2 g/L). Uma nutricionista recomenda que um adolescente tome um copo de 250 mL de leite no café da manhã e quer anotar no cardápio quanto cálcio vem desse copo, em miligramas (1 g = 1 000 mg).\nQuanto cálcio há nesse copo de leite?",
+  "A": "4 800 mg",
+  "B": "0,3 mg",
+  "C": "300 mg",
+  "D": "3 000 mg",
+  "E": "1 200 mg",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "250 mL = 0,25 L. m = 1,2 × 0,25 = 0,3 g = 300 mg. C. Erros: A dividiu 1,2 ÷ 0,25 = 4,8 g; B achou 0,3 g e escreveu mg; D usou 2,5 L; E é o cálcio do litro inteiro.",
+   "ideia": "Se cada litro tem 1,2 g, um quarto de litro tem um quarto disso: 0,3 g. Em miligramas, 0,3 × 1 000 = 300 mg.",
+   "pecas": [
+    {
+     "termo": "mg",
+     "significado": "Miligrama: 1 g dividido em 1 000 partes. 1 g = 1 000 mg e 0,3 g = 300 mg."
+    },
+    {
+     "termo": "Virar a fórmula",
+     "significado": "Se concentração = massa ÷ volume, então massa = concentração × volume. É como 10 ÷ 2 = 5, então 5 × 2 = 10."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O leite tem 1,2 g de cálcio em cada litro.\nO copo tem 250 mL.\nA questão quer o cálcio do copo, em miligramas (mg).",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "O copo de leite",
+      "rotulos": [
+       "leite",
+       "1,2 g/L de cálcio",
+       "copo de 250 mL",
+       "resposta em mg"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "250 mL é um quarto de litro: 4 copos de 250 mL enchem 1 000 mL.\nSe o litro tem 1,2 g, cada copo tem um quarto disso.\nNúmeros pequenos: com 4 g em 1 L, um copo de 250 mL teria 4 ÷ 4 = 1 g."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Massa = concentração × volume, com o volume em litros (250 mL = 0,25 L).\n1,2 × 0,25 = 0,3 g, o mesmo que 1,2 ÷ 4.\nEm mg: 0,3 × 1 000 = 300 mg.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Cálcio no copo",
+      "dados": [
+       "C = 1{,}2\\,\\text{g/L}",
+       "V = 250\\,\\text{mL} = 0{,}25\\,\\text{L}"
+      ],
+      "formula": "m = C \\times V",
+      "legenda": [
+       "C: gramas de cálcio em cada litro",
+       "V: volume do copo em litros"
+      ],
+      "contas": [
+       "m = 1{,}2 \\times 0{,}25",
+       "m = 0{,}3\\,\\text{g}",
+       "0{,}3 \\times 1\\,000 = 300\\,\\text{mg}"
+      ],
+      "resultado": "m = 300\\,\\text{mg}",
+      "nota": "Cálcio de um copo de 250 mL."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A concentração diz quanto tem em 1 litro; o volume diz quantos litros você pegou.\nPor isso multiplica: 2 litros de leite teriam 1,2 + 1,2 = 2,4 g, que é 1,2 × 2.\nConfira ao contrário: 4 copos × 300 mg = 1 200 mg = 1,2 g, o litro inteiro."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 300 mg.\nA (4 800 mg) dividiu 1,2 por 0,25 em vez de multiplicar.\nB (0,3 mg) achou 0,3 g e esqueceu de passar para miligramas.\nD (3 000 mg) errou a vírgula, como se o copo tivesse 2,5 L.\nE (1 200 mg) é o cálcio do litro inteiro, não do copo."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma água tem 0,8 g/L de sais. Quantos gramas de sais há em 2 L?",
+    "opcoes": [
+     "1,6 g",
+     "0,4 g",
+     "2,8 g",
+     "0,8 g"
+    ],
+    "certa": "1,6 g",
+    "resposta": "Massa = 0,8 × 2 = 1,6 g."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-03",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "O manual de uma piscina recomenda manter o pH da água entre 7,2 e 7,6. Fora dessa faixa, a água irrita os olhos e o cloro perde efeito. Depois de um fim de semana de muito uso, o dono mediu o pH com uma fita de teste e encontrou 8,2. Na loja, há produtos para aumentar o pH e produtos para diminuir o pH.\nSobre a água dessa piscina, é correto afirmar que ela está",
+  "A": "ácida, e deve receber um produto básico para subir o pH.",
+  "B": "neutra, pois 8,2 está perto de 7, e não precisa de correção.",
+  "C": "básica, e deve receber um produto básico para baixar o pH.",
+  "D": "ácida, e deve receber um produto ácido para baixar o pH.",
+  "E": "básica, e deve receber um produto ácido para baixar o pH.",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "8,2 > 7: básica. Precisa descer até 7,2 a 7,6, e ácido baixa o pH. E. Erros: A e D acharam que acima de 7 é ácido; B acha que perto de 7 é neutro; C acha que base baixa o pH.",
+   "ideia": "Acima de 7 é básico, então a água com pH 8,2 está básica. Para descer o pH até a faixa certa, entra um produto ácido, que neutraliza parte da base.",
+   "pecas": [
+    {
+     "termo": "pH",
+     "significado": "Régua de 0 a 14 que mede a acidez. Abaixo de 7 é ácido (limão), 7 é neutro (água pura), acima de 7 é básico (sabão)."
+    },
+    {
+     "termo": "Neutralizar",
+     "significado": "Ácido e base se anulam e formam sal e água. Um pouco de ácido gasta um pouco da base, e o pH desce."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A água da piscina está com pH 8,2.\nO certo é ficar entre 7,2 e 7,6.\nA questão quer saber se a água está ácida ou básica e o que pôr nela.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "A água da piscina",
+      "rotulos": [
+       "água da piscina",
+       "pH medido: 8,2",
+       "ideal: 7,2 a 7,6",
+       "sobe ou desce?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Na régua do pH, 7 é o meio.\nO 8,2 está acima de 7, então a água está básica.\nE 8,2 também passa de 7,6, o máximo do manual: o pH precisa descer."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Compare com 7: 8,2 é maior que 7, então é básica.\nPara descer o pH, use o oposto da base: um ácido.\nÁcido baixa o pH; base sobe.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Ácida ou básica?",
+      "dados": [
+       "\\text{pH} = 8{,}2",
+       "\\text{ideal} = 7{,}2 \\text{ a } 7{,}6"
+      ],
+      "formula": "\\text{pH} > 7 \\Rightarrow \\text{básico}",
+      "legenda": [
+       "abaixo de 7: ácido",
+       "acima de 7: básico"
+      ],
+      "contas": [
+       "8{,}2 > 7",
+       "8{,}2 > 7{,}6"
+      ],
+      "resultado": "\\text{pôr ácido para descer}",
+      "nota": "Ácido baixa o pH."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Ácido e base se neutralizam: um gasta o outro.\nSe a água tem base demais, um pouco de ácido gasta parte dessa base, e o pH desce para perto de 7.\nÉ a mesma ideia do antiácido para azia, ao contrário: lá a base gasta o ácido do estômago."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, básica, e precisa de um produto ácido para baixar o pH.\nA acha que acima de 7 é ácido e põe base, o que subiria ainda mais o pH.\nB acha que 8,2 é neutro, mas só o 7 é neutro.\nC acerta que é básica, mas base sobe o pH em vez de baixar.\nD acha que a água está ácida, e acima de 7 é básico."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um suco tem pH 3. Ele é:",
+    "opcoes": [
+     "ácido",
+     "neutro",
+     "básico",
+     "depende do volume"
+    ],
+    "certa": "ácido",
+    "resposta": "3 é menor que 7, então é ácido."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-04",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "Leite fresco tem pouca acidez. Quando fica velho, bactérias transformam o açúcar do leite em ácido lático, e o leite azeda. Para recusar leite azedo, uma cooperativa faz uma titulação: pega 20 mL de leite e pinga NaOH (soda cáustica) de concentração 0,1 mol/L até neutralizar o ácido. Nesta amostra, gastaram-se 4 mL da base. Cada ácido lático reage com 1 NaOH, e a massa molar do ácido lático é 90 g/mol.\nQual é a concentração de ácido lático nesse leite, em g/L?",
+  "A": "45 g/L",
+  "B": "1,8 g/L",
+  "C": "0,036 g/L",
+  "D": "9 g/L",
+  "E": "18 g/L",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "NaOH: 0,1 × 0,004 = 0,0004 mol = ácido (1 para 1). C = 0,0004 ÷ 0,02 = 0,02 mol/L. Em g/L: 0,02 × 90 = 1,8. B. Erros: A trocou os volumes (0,5 mol/L); C parou nos mols e fez 0,0004 × 90; D usou os 0,1 mol/L da base; E errou a vírgula (0,2 mol/L).",
+   "ideia": "No ponto neutro, os mols de ácido são iguais aos mols de NaOH gastos. Dividindo pelos 20 mL de leite e multiplicando pela massa molar, saem 1,8 g de ácido por litro.",
+   "pecas": [
+    {
+     "termo": "Titulação",
+     "significado": "Pingar uma solução de concentração conhecida até neutralizar a outra; pela quantidade gasta, descobre-se quanto a outra tinha."
+    },
+    {
+     "termo": "Mol e massa molar",
+     "significado": "Mol é um pacote de partículas, como a dúzia. Massa molar é quanto pesa 1 pacote: 1 mol de ácido lático pesa 90 g."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "20 mL de leite foram neutralizados por 4 mL de NaOH a 0,1 mol/L.\nCada ácido lático gasta 1 NaOH, e 1 mol de ácido pesa 90 g.\nA questão quer os gramas de ácido em cada litro de leite.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "Titulação do leite",
+      "rotulos": [
+       "leite azedo",
+       "? g/L de ácido",
+       "20 mL de leite",
+       "NaOH: 4 mL, 0,1 mol/L"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Primeiro, quanto NaOH entrou: 4 mL = 0,004 L.\nCaso pequeno: 0,2 × 0,1 = 0,02. Faça 2 × 1 = 2 e ande a vírgula 1 + 1 = 2 casas, porque cada casa depois da vírgula divide por 10.\nAqui: mols = concentração × volume = 0,1 × 0,004. Faça 1 × 4 = 4 e ande 1 + 3 = 4 casas: 0,0004 mol.\nComo é 1 para 1, havia 0,0004 mol de ácido lático nos 20 mL de leite."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Concentração do ácido = mols ÷ volume = 0,0004 ÷ 0,02 (20 mL = 0,02 L).\nAnde a vírgula dos dois 4 casas: 4 ÷ 200 = 2 ÷ 100 = 0,02 mol/L.\nEm gramas: 0,02 × 90 = 1,8 g/L.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Ácido do leite",
+      "dados": [
+       "C_b = 0{,}1\\,\\text{mol/L}",
+       "V_b = 4\\,\\text{mL} = 0{,}004\\,\\text{L}",
+       "V_a = 20\\,\\text{mL} = 0{,}02\\,\\text{L}",
+       "M = 90\\,\\text{g/mol}"
+      ],
+      "formula": "n = C \\times V",
+      "legenda": [
+       "n: mols (pacotes)",
+       "a: ácido; b: base (NaOH)"
+      ],
+      "contas": [
+       "n = 0{,}1 \\times 0{,}004 = 0{,}0004\\,\\text{mol}",
+       "C_a = \\dfrac{0{,}0004}{0{,}02} = 0{,}02\\,\\text{mol/L}",
+       "0{,}02 \\times 90 = 1{,}8"
+      ],
+      "resultado": "1{,}8\\,\\text{g/L}",
+      "nota": "Gramas de ácido lático em cada litro."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Ácido + base = sal + água: cada NaOH que entra gasta 1 ácido.\nQuando o ácido acaba, a quantidade de NaOH que entrou conta quantos ácidos havia, como tirar balas de um pote uma a uma.\nDepois é só pôr por litro e trocar mols por gramas: 1 mol = 90 g, então 0,02 mol = 0,02 × 90 = 1,8 g."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 1,8 g/L.\nA (45 g/L) trocou os volumes: fez 0,1 × 20 ÷ 4.\nC (0,036 g/L) parou nos mols e não dividiu pelo volume do leite.\nD (9 g/L) usou a concentração da base, 0,1 mol/L.\nE (18 g/L) errou a vírgula ao dividir e achou 0,2 mol/L."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Quanto pesam 0,5 mol de uma substância de 40 g/mol?",
+    "opcoes": [
+     "20 g",
+     "80 g",
+     "40,5 g",
+     "0,0125 g"
+    ],
+    "certa": "20 g",
+    "resposta": "0,5 × 40 = 20 g: meio pacote pesa metade de 40."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-05",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "Em hospitais, pacientes que não conseguem comer recebem soro com glicose (C6H12O6) na veia. Uma enfermeira precisa preparar 2 L de soro com concentração de glicose igual a 0,1 mol/L. A massa molar da glicose é 180 g/mol, ou seja, 1 mol de glicose pesa 180 g. Ela vai pesar a glicose numa balança e depois completar com água até os 2 L.\nQuantos gramas de glicose ela deve pesar?",
+  "A": "18 g",
+  "B": "360 g",
+  "C": "0,2 g",
+  "D": "36 g",
+  "E": "9 g",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "n = 0,1 × 2 = 0,2 mol. m = 0,2 × 180 = 36 g. D. Erros: A esqueceu os 2 L; B fez 180 × 2 sem o 0,1; C parou nos mols; E dividiu por 2 em vez de multiplicar.",
+   "ideia": "Cada litro precisa de 0,1 mol, então 2 litros precisam de 0,2 mol. Como 1 mol pesa 180 g, 0,2 mol pesa 36 g.",
+   "pecas": [
+    {
+     "termo": "mol/L",
+     "significado": "Quantos mols (pacotes de partículas) há em cada litro. 0,1 mol/L é um décimo de pacote por litro."
+    },
+    {
+     "termo": "Massa molar",
+     "significado": "Quanto pesa 1 mol. Glicose: 180 g/mol, então 1 mol pesa 180 g e 2 mol pesam 360 g."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O soro deve ter 0,1 mol de glicose em cada litro.\nSão 2 litros de soro, e 1 mol de glicose pesa 180 g.\nA questão quer quantos gramas de glicose pesar.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "O soro com glicose",
+      "rotulos": [
+       "soro com glicose",
+       "0,1 mol/L",
+       "2 L",
+       "180 g/mol"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Cada litro leva 0,1 mol. Dois litros levam o dobro: 0,1 + 0,1 = 0,2 mol.\nAgora troque mol por gramas, como trocar dúzias por unidades.\nNúmeros pequenos: 1 mol pesa 180 g; meio mol (0,5) pesa 90 g; 0,2 mol pesa 0,2 × 180."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Mols = concentração × volume: 0,1 × 2 = 0,2 mol.\nGramas = mols × massa molar: 0,2 × 180 = 36 g.\nDe cabeça: 2 × 180 = 360, e o 0,2 tem uma casa depois da vírgula: 36,0.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Glicose do soro",
+      "dados": [
+       "C = 0{,}1\\,\\text{mol/L}",
+       "V = 2\\,\\text{L}",
+       "M = 180\\,\\text{g/mol}"
+      ],
+      "formula": "n = C \\times V",
+      "legenda": [
+       "n: mols de glicose",
+       "M: quanto pesa 1 mol"
+      ],
+      "contas": [
+       "n = 0{,}1 \\times 2 = 0{,}2\\,\\text{mol}",
+       "m = 0{,}2 \\times 180"
+      ],
+      "resultado": "m = 36\\,\\text{g}",
+      "nota": "Glicose para os 2 L de soro."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Concentração em mol/L é mols divididos por litros; virando a fórmula, mols = concentração × litros.\nÉ como 10 ÷ 2 = 5, então 5 × 2 = 10.\nConfira: 36 g ÷ 180 = 0,2 mol, e 0,2 mol ÷ 2 L = 0,1 mol/L, o pedido."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, 36 g.\nA (18 g) calculou para 1 litro só e esqueceu os 2 L.\nB (360 g) multiplicou 180 por 2 e esqueceu o 0,1 mol/L.\nC (0,2 g) parou nos mols e chamou de gramas.\nE (9 g) dividiu pelos 2 L em vez de multiplicar."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Quantos mols há em 3 L de solução a 0,2 mol/L?",
+    "opcoes": [
+     "0,6 mol",
+     "15 mol",
+     "1,5 mol",
+     "0,2 mol"
+    ],
+    "certa": "0,6 mol",
+    "resposta": "0,2 × 3 = 0,6 mol."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-06",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "A azia acontece quando o ácido do estômago (ácido clorídrico, HCl) sobe e irrita o esôfago, o tubo que leva a comida até o estômago. Para aliviar, usa-se um antiácido, que neutraliza parte desse ácido e precisa ser fraco o bastante para ser engolido sem ferir. Um estudante mediu o pH de cinco produtos de casa: suco de laranja, pH 4; café, pH 5; água mineral, pH 7; leite de magnésia, pH 10; soda cáustica usada para desentupir pia, pH 14.\nQual desses produtos serve como antiácido?",
+  "A": "Suco de laranja, de pH 4.",
+  "B": "Café, de pH 5.",
+  "C": "Leite de magnésia, de pH 10.",
+  "D": "Água mineral, de pH 7.",
+  "E": "Soda cáustica, de pH 14.",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Antiácido precisa ser base: pH acima de 7. Sobram 10 e 14; a soda (14) corrói. C. Erros: A e B são ácidos (abaixo de 7) e piorariam; D é neutra e não neutraliza; E é base forte demais e queima.",
+   "ideia": "Para neutralizar um ácido é preciso uma base, ou seja, pH acima de 7. Entre as duas bases, a soda cáustica queima, então o antiácido é o leite de magnésia.",
+   "pecas": [
+    {
+     "termo": "Antiácido",
+     "significado": "Remédio para azia. É uma base fraca que neutraliza parte do ácido do estômago: ácido + base = sal + água."
+    },
+    {
+     "termo": "pH",
+     "significado": "Régua de 0 a 14: abaixo de 7 é ácido, 7 é neutro, acima de 7 é básico. Quanto mais longe de 7, mais forte."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O estômago tem ácido, e na azia ele irrita o esôfago.\nO antiácido tem que neutralizar esse ácido sem queimar quem engole.\nA questão quer qual dos 5 produtos faz isso.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "Os cinco produtos",
+      "rotulos": [
+       "produtos de casa",
+       "pH de 4 a 14",
+       "ácido do estômago",
+       "qual neutraliza?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Ácido só é neutralizado por base: ácido + base = sal + água.\nBase tem pH acima de 7. Dos cinco, só o leite de magnésia (10) e a soda (14) passam de 7.\nA soda cáustica desentope pia porque corrói; engolida, queimaria a boca e o esôfago."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Separe por pH: abaixo de 7 é ácido, 7 é neutro, acima de 7 é básico.\nLaranja (4) e café (5) são ácidos; a água (7) é neutra.\nSobra a base que pode ser engolida: leite de magnésia, pH 10.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Quem é base?",
+      "dados": [
+       "\\text{laranja} = 4",
+       "\\text{café} = 5",
+       "\\text{água} = 7",
+       "\\text{magnésia} = 10",
+       "\\text{soda} = 14"
+      ],
+      "formula": "\\text{pH} > 7 \\Rightarrow \\text{base}",
+      "legenda": [
+       "abaixo de 7: ácido",
+       "acima de 7: básico"
+      ],
+      "contas": [
+       "4 < 7 \\text{ e } 5 < 7",
+       "10 > 7 \\text{ e } 14 > 7"
+      ],
+      "resultado": "\\text{leite de magnésia}",
+      "nota": "Base fraca: neutraliza sem queimar."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Na azia sobra ácido; a base gasta parte dele e forma sal e água.\nSe entrasse mais ácido (laranja, café), a azia pioraria; a água não é base e não neutraliza.\nA base forte demais (soda, pH 14) também neutraliza, mas destrói a pele e o esôfago que toca."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, leite de magnésia, pH 10.\nA (suco de laranja, pH 4) é ácido e aumentaria a azia.\nB (café, pH 5) também é ácido.\nD (água, pH 7) é neutra: não neutraliza o ácido.\nE (soda cáustica, pH 14) é base, mas forte demais: corrói a boca e o esôfago."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Qual destes valores é o pH de uma base?",
+    "opcoes": [
+     "pH 9",
+     "pH 2",
+     "pH 7",
+     "pH 6"
+    ],
+    "certa": "pH 9",
+    "resposta": "Acima de 7 é básico: só o 9."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-07",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "Um agricultor usa um fertilizante líquido concentrado, cujo rótulo informa 200 g/L de nitrogênio. Para não queimar as folhas, o agrônomo recomenda borrifar uma calda (o líquido já misturado com água) com 4 g/L de nitrogênio. O pulverizador do agricultor tem capacidade para 10 L de calda.\nQue volume do fertilizante concentrado ele deve pôr no pulverizador, antes de completar com água até os 10 L?",
+  "A": "200 mL",
+  "B": "20 mL",
+  "C": "5 L",
+  "D": "50 mL",
+  "E": "800 mL",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Nitrogênio da calda: 4 × 10 = 40 g. Volume do concentrado: 40 ÷ 200 = 0,2 L = 200 mL. A. Erros: B passou 0,2 L para 20 mL; C dividiu 200 ÷ 40; D parou em 200 ÷ 4 = 50; E multiplicou 4 × 200.",
+   "ideia": "A calda inteira precisa de 4 g em cada um dos 10 litros: 40 g de nitrogênio. Como cada litro do concentrado tem 200 g, bastam 40 ÷ 200 = 0,2 L, ou 200 mL.",
+   "pecas": [
+    {
+     "termo": "Calda",
+     "significado": "O fertilizante já misturado com água, pronto para borrifar. A água entra só para espalhar o nitrogênio."
+    },
+    {
+     "termo": "Diluir",
+     "significado": "Pôr mais solvente (água). A quantidade de soluto não muda; ela só fica espalhada num volume maior."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O fertilizante concentrado tem 200 g de nitrogênio por litro.\nA calda pronta deve ter 4 g por litro, e o pulverizador leva 10 L.\nA questão quer quanto concentrado pôr antes de completar com água.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "Do frasco ao pulverizador",
+      "rotulos": [
+       "fertilizante",
+       "200 g/L → 4 g/L",
+       "calda de 10 L",
+       "? mL de concentrado"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "A água não traz nitrogênio: todo o nitrogênio da calda vem do concentrado.\nA calda precisa de 4 g em cada litro; em 10 litros, 4 × 10 = 40 g.\nEntão a pergunta vira: quanto concentrado tem 40 g de nitrogênio?"
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Caso pequeno: se 1 L do concentrado tem 200 g, então 100 g cabem em meio litro: 100 ÷ 200 = 0,5 L.\nEntão volume = massa ÷ concentração. Aqui: 40 ÷ 200.\nCorte um zero dos dois e depois divida os dois por 2: 40 ÷ 200 = 4 ÷ 20 = 2 ÷ 10 = 0,2 L.\nEm mL, multiplique por 1 000: 0,2 L = 200 mL.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Quanto concentrado",
+      "dados": [
+       "C_{\\text{calda}} = 4\\,\\text{g/L}",
+       "V_{\\text{calda}} = 10\\,\\text{L}",
+       "C_{\\text{conc}} = 200\\,\\text{g/L}"
+      ],
+      "formula": "V = \\dfrac{m}{C}",
+      "legenda": [
+       "m: gramas de nitrogênio que a calda precisa",
+       "C: gramas em cada litro do concentrado"
+      ],
+      "contas": [
+       "m = 4 \\times 10 = 40\\,\\text{g}",
+       "V = \\dfrac{40}{200} = 0{,}2\\,\\text{L}"
+      ],
+      "resultado": "V = 200\\,\\text{mL}",
+      "nota": "O resto dos 10 L é água."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Números pequenos: 1 L do concentrado tem 200 g; 0,5 L tem 100 g; 0,1 L tem 20 g.\nPara 40 g, são duas vezes 0,1 L: 0,2 L.\nConfira: 0,2 × 200 = 40 g, e 40 g em 10 L dão 40 ÷ 10 = 4 g/L, o recomendado."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, 200 mL de concentrado.\nB (20 mL) errou a troca de litro para mL: 0,2 L são 200 mL.\nC (5 L) dividiu ao contrário, 200 ÷ 40.\nD (50 mL) parou em 200 ÷ 4 = 50 e esqueceu os 10 L.\nE (800 mL) multiplicou as duas concentrações, 4 × 200."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um produto tem 50 g/L. Quantos litros dele têm 10 g?",
+    "opcoes": [
+     "0,2 L",
+     "5 L",
+     "500 L",
+     "0,5 L"
+    ],
+    "certa": "0,2 L",
+    "resposta": "10 ÷ 50 = 1 ÷ 5 = 0,2 L."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-08",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "Antes de lançar a água usada (efluente) no rio, uma fábrica precisa saber quanto ácido sulfúrico (H2SO4) sobrou nela. Um técnico pegou 50 mL do efluente e pingou NaOH de concentração 0,2 mol/L até neutralizar todo o ácido, gastando 10 mL da base. A reação é:\n1 H2SO4 + 2 NaOH → 1 Na2SO4 + 2 H2O\nQual é a concentração de ácido sulfúrico nesse efluente?",
+  "A": "0,04 mol/L",
+  "B": "0,002 mol/L",
+  "C": "1 mol/L",
+  "D": "0,02 mol/L",
+  "E": "0,001 mol/L",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "NaOH: 0,2 × 0,010 = 0,002 mol. Ácido: metade, 0,001 mol (1 ácido gasta 2 NaOH). C = 0,001 ÷ 0,05 = 0,02 mol/L. D. Erros: A esqueceu o 2 da equação; B parou nos mols de NaOH; C trocou os volumes (0,2 × 50 ÷ 10); E parou nos mols de ácido.",
+   "ideia": "Cada H2SO4 gasta 2 NaOH, então havia metade dos mols de base gastos: 0,001 mol de ácido. Divididos pelos 0,05 L de efluente, dão 0,02 mol/L.",
+   "pecas": [
+    {
+     "termo": "Efluente",
+     "significado": "A água que sai de uma fábrica depois de usada. Precisa ser tratada antes de ir para o rio."
+    },
+    {
+     "termo": "Número na frente",
+     "significado": "É a proporção da reação. Em 1 H2SO4 + 2 NaOH, cada ácido gasta 2 NaOH, como 1 bicicleta precisa de 2 rodas."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "50 mL do efluente foram neutralizados por 10 mL de NaOH a 0,2 mol/L.\nNa reação, 1 ácido sulfúrico gasta 2 NaOH.\nA questão quer a concentração do ácido em mol/L.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "Titulação do efluente",
+      "rotulos": [
+       "efluente da fábrica",
+       "? mol/L de H2SO4",
+       "50 mL",
+       "NaOH: 10 mL, 0,2 mol/L"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Mols de NaOH = 0,2 × 0,010 (10 mL = 0,010 L). O zero do fim não muda nada: 0,010 = 0,01.\nCaso pequeno: 0,2 × 0,1 = 0,02 (2 × 1 = 2, e a vírgula anda 1 + 1 = 2 casas, porque cada casa depois da vírgula divide por 10).\nAqui: 2 × 1 = 2, e a vírgula anda 1 + 2 = 3 casas: 0,002 mol.\nCada ácido gasta 2 NaOH, como cada bicicleta gasta 2 rodas: 10 rodas montam 5 bicicletas.\nEntão havia metade: 0,002 ÷ 2 = 0,001 mol de ácido."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Concentração = mols ÷ volume = 0,001 ÷ 0,05 (50 mL = 0,05 L).\nAnde a vírgula dos dois 3 casas: 0,001 ÷ 0,05 = 1 ÷ 50.\n1 ÷ 50 = 2 ÷ 100 = 0,02 mol/L.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Ácido no efluente",
+      "dados": [
+       "C_b = 0{,}2\\,\\text{mol/L}",
+       "V_b = 10\\,\\text{mL} = 0{,}01\\,\\text{L}",
+       "V_a = 50\\,\\text{mL} = 0{,}05\\,\\text{L}"
+      ],
+      "formula": "n_a = \\dfrac{n_b}{2}",
+      "legenda": [
+       "n: mols",
+       "a: ácido; b: base (NaOH)"
+      ],
+      "contas": [
+       "n_b = 0{,}2 \\times 0{,}01 = 0{,}002\\,\\text{mol}",
+       "n_a = 0{,}001\\,\\text{mol}",
+       "C_a = \\dfrac{0{,}001}{0{,}05}"
+      ],
+      "resultado": "C_a = 0{,}02\\,\\text{mol/L}",
+      "nota": "Ácido sulfúrico no efluente."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "No ponto neutro, todo o ácido foi gasto pela base, na proporção da equação.\nSem o 2 da equação, a conta daria o dobro (0,04), como contar 10 rodas como 10 bicicletas.\nConfira: 0,02 × 0,05 = 0,001 mol de ácido, que gasta 2 × 0,001 = 0,002 mol de NaOH, o que foi pingado."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, 0,02 mol/L.\nA (0,04 mol/L) esqueceu que cada ácido gasta 2 NaOH.\nB (0,002 mol/L) parou nos mols de NaOH e não dividiu pelo volume.\nC (1 mol/L) trocou os volumes: fez 0,2 × 50 ÷ 10.\nE (0,001 mol/L) parou nos mols de ácido e não dividiu pelo volume."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Numa reação 1 ácido + 2 base, 0,6 mol de base gastam quanto ácido?",
+    "opcoes": [
+     "0,3 mol",
+     "1,2 mol",
+     "0,6 mol",
+     "2 mol"
+    ],
+    "certa": "0,3 mol",
+    "resposta": "Cada ácido gasta 2 bases: 0,6 ÷ 2 = 0,3 mol."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-09",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "Azeitonas e pepinos em conserva ficam guardados em salmoura, uma solução de água com bastante sal (NaCl) que dificulta o crescimento de micróbios. Uma fábrica prepara sua salmoura com 117 g de NaCl em cada litro. Para comparar com uma receita escrita em mol/L, o técnico usa a massa molar do NaCl: 58,5 g/mol.\nQual é a concentração dessa salmoura em mol/L?",
+  "A": "6 844,5 mol/L",
+  "B": "0,5 mol/L",
+  "C": "0,117 mol/L",
+  "D": "58,5 mol/L",
+  "E": "2 mol/L",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Mols em 1 L = 117 ÷ 58,5 = 1 170 ÷ 585 = 2 mol. C = 2 mol/L. E. Erros: A multiplicou 117 × 58,5; B dividiu ao contrário (58,5 ÷ 117); C dividiu 117 por 1 000; D copiou a massa molar.",
+   "ideia": "Cada litro tem 117 g de sal, e cada mol de sal pesa 58,5 g. Como 117 é o dobro de 58,5, cada litro tem 2 mol: 2 mol/L.",
+   "pecas": [
+    {
+     "termo": "Mol",
+     "significado": "Pacote para contar partículas, como a dúzia. 1 mol de NaCl pesa 58,5 g, então 2 mol pesam 117 g."
+    },
+    {
+     "termo": "Salmoura",
+     "significado": "Água com muito sal dissolvido, usada para conservar alimentos."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Cada litro da salmoura tem 117 g de sal (NaCl).\nUm mol de NaCl pesa 58,5 g.\nA questão quer quantos mols de sal há em cada litro.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "A salmoura",
+      "rotulos": [
+       "salmoura",
+       "117 g/L de NaCl",
+       "58,5 g/mol",
+       "? mol/L"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Mol é um pacote, como a dúzia: para saber quantas dúzias há em 24 ovos, faz 24 ÷ 12 = 2.\nAqui é igual: quantos pacotes de 58,5 g cabem em 117 g?\nSomando: 58,5 + 58,5 = 117, então cabem 2 pacotes."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Mols = massa ÷ massa molar: 117 ÷ 58,5.\nAnde a vírgula dos dois uma casa: 1 170 ÷ 585 = 2.\nSão 2 mol em cada litro: 2 mol/L.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Gramas viram mols",
+      "dados": [
+       "m = 117\\,\\text{g em 1 L}",
+       "M = 58{,}5\\,\\text{g/mol}"
+      ],
+      "formula": "n = \\dfrac{m}{M}",
+      "legenda": [
+       "m: gramas de sal em 1 litro",
+       "M: quanto pesa 1 mol"
+      ],
+      "contas": [
+       "n = \\dfrac{117}{58{,}5}",
+       "n = \\dfrac{1\\,170}{585}"
+      ],
+      "resultado": "2\\,\\text{mol/L}",
+      "nota": "Dois pacotes de sal em cada litro."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Dividir é perguntar quantas vezes um número cabe no outro: 1 ÷ 0,5 = 2, porque cabem 2 metades em 1.\nAqui, 58,5 cabe 2 vezes em 117.\nConfira: 2 × 58,5 = 117 g, o que a fábrica põe em cada litro."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, 2 mol/L.\nA (6 844,5 mol/L) multiplicou 117 por 58,5 em vez de dividir.\nB (0,5 mol/L) dividiu ao contrário, 58,5 ÷ 117.\nC (0,117 mol/L) dividiu os gramas por 1 000, como se fosse passar mL para L.\nD (58,5 mol/L) copiou a massa molar."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Quantos mols há em 90 g de água (18 g/mol)?",
+    "opcoes": [
+     "5 mol",
+     "1 620 mol",
+     "0,2 mol",
+     "72 mol"
+    ],
+    "certa": "5 mol",
+    "resposta": "90 ÷ 18 = 5 mol."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-10",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "Numa aula de laboratório, a professora coloca num béquer um pouco de ácido clorídrico (HCl) diluído, de pH 1, e algumas gotas de fenolftaleína, um indicador que fica sem cor em meio ácido ou neutro e fica rosa em meio básico. Em seguida, vai pingando devagar uma solução de NaOH (uma base) e mexendo, até bem depois de a cor mudar.\nDo começo ao fim, o pH da mistura no béquer",
+  "A": "desce, porque a base deixa a mistura mais ácida.",
+  "B": "sobe, passa pelo neutro e termina acima de 7, quando a cor fica rosa.",
+  "C": "fica sempre em 1, porque a base não muda o ácido.",
+  "D": "sobe até 7 e para ali, mesmo com mais base pingada.",
+  "E": "começa acima de 7 e desce até 7, quando a cor some.",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "O ácido (pH 1) vai sendo gasto pela base: o pH sobe. Quando o ácido acaba, fica neutro (7); a base que sobra leva o pH acima de 7 e a fenolftaleína fica rosa. B. Erros: A acha que base acidifica; C ignora a neutralização; D esquece a base que sobra; E troca o começo, que é ácido.",
+   "ideia": "Cada gota de base gasta um pouco do ácido, e o pH sobe. Quando o ácido acaba, a base que continua entrando sobra, o pH passa de 7 e o indicador fica rosa.",
+   "pecas": [
+    {
+     "termo": "Indicador",
+     "significado": "Substância que muda de cor conforme o pH. A fenolftaleína fica sem cor no ácido e rosa na base."
+    },
+    {
+     "termo": "Neutralização",
+     "significado": "Ácido + base = sal + água. Quando os dois se gastam por inteiro, a mistura fica neutra, com pH perto de 7."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "No béquer há ácido (pH 1) com um indicador que fica rosa na base.\nA professora pinga base (NaOH) até passar do ponto em que a cor muda.\nA questão quer como o pH muda do começo ao fim.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "A titulação na aula",
+      "rotulos": [
+       "ácido clorídrico",
+       "pH no início: 1",
+       "pinga NaOH",
+       "fica rosa na base"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "No começo só há ácido: pH 1, bem abaixo de 7.\nCada gota de NaOH gasta um pouco do ácido (ácido + base = sal + água), e o pH vai subindo.\nQuando o ácido acaba, a mistura está neutra; a base pingada depois sobra e leva o pH para acima de 7."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Base sobe o pH; ácido baixa.\nComo só entra base, o pH só pode subir: sai de 1, passa por 7 e vai além.\nA cor rosa aparece um pouco acima de 7, por volta de pH 8, porque o indicador fica rosa na base.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O pH durante a titulação",
+      "dados": [
+       "\\text{pH no início} = 1",
+       "\\text{neutro} = 7"
+      ],
+      "formula": "\\text{ácido} + \\text{base} \\to \\text{sal} + \\text{água}",
+      "legenda": [
+       "antes do neutro: sobra ácido",
+       "depois do neutro: sobra base"
+      ],
+      "contas": [
+       "\\text{pH } 1 \\to 7",
+       "\\text{pH } 7 \\to \\text{acima de } 7"
+      ],
+      "resultado": "\\text{o pH sobe}",
+      "nota": "Rosa só depois de passar do neutro."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Pense em 10 balas (o ácido) e crianças chegando uma a uma, cada uma comendo 1 bala (a base).\nCom 4 crianças, sobram 6 balas; com 10, as balas acabam (neutro); a 11ª criança fica sobrando.\nA base que sobra deixa a mistura básica: o pH passa de 7 e, por volta de 8, a cor fica rosa."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, o pH sobe, passa por 7 e termina acima de 7; por volta de pH 8 a cor já fica rosa.\nA acha que a base deixa a mistura mais ácida, mas base sobe o pH.\nC esquece que a base gasta o ácido.\nD esquece a base pingada depois que o ácido acabou: ela sobra e passa de 7.\nE começa errado: o ácido do início tem pH 1, abaixo de 7."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Se pingar vinagre (ácido) em água com sabão, o pH:",
+    "opcoes": [
+     "desce",
+     "sobe",
+     "fica igual",
+     "vira 14"
+    ],
+    "certa": "desce",
+    "resposta": "Ácido baixa o pH: a mistura fica menos básica."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-11",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "Uma campanha sobre açúcar nas bebidas comparou cinco produtos da cantina de uma escola. Os rótulos informam:\nrefrigerante: 35 g de açúcar em uma lata de 350 mL;\nsuco de caixinha: 22 g em uma caixinha de 200 mL;\nenergético: 27 g em uma lata de 250 mL;\nchá gelado: 30 g em uma garrafa de 500 mL;\nachocolatado: 18 g em uma caixinha de 200 mL.\nQual bebida tem a maior concentração de açúcar, isto é, mais açúcar em cada litro?",
+  "A": "Refrigerante.",
+  "B": "Suco de caixinha.",
+  "C": "Energético.",
+  "D": "Chá gelado.",
+  "E": "Achocolatado.",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Em g/L: refri 35 ÷ 0,35 = 100; suco 22 ÷ 0,2 = 110; energético 27 ÷ 0,25 = 108; chá 30 ÷ 0,5 = 60; achocolatado 18 ÷ 0,2 = 90. B. Erros: A tem a maior massa (35 g), não a maior concentração; C fica perto (108); D tem muito açúcar numa garrafa grande; E perde para o suco na mesma caixinha.",
+   "ideia": "Concentração compara o açúcar no mesmo volume, 1 litro, e não o açúcar da embalagem inteira. Passando tudo para g/L, o suco de caixinha fica com 110 g/L, o maior.",
+   "pecas": [
+    {
+     "termo": "Concentração",
+     "significado": "Quanto soluto há em cada litro: massa ÷ volume. Serve para comparar embalagens de tamanhos diferentes."
+    },
+    {
+     "termo": "1 L = 1 000 mL",
+     "significado": "Para passar mL para L, divida por 1 000: 200 mL = 0,2 L e 350 mL = 0,35 L."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Refrigerante: 35 g em 350 mL. Suco: 22 g em 200 mL. Energético: 27 g em 250 mL.\nChá: 30 g em 500 mL. Achocolatado: 18 g em 200 mL.\nA questão quer qual tem mais açúcar em cada litro, não na embalagem.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "grafico-barras",
+      "titulo": "Cinco bebidas",
+      "rotulos": [
+       "açúcar por litro",
+       "35, 22, 27, 30 e 18 g",
+       "qual tem mais por litro?",
+       "5 embalagens"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "A embalagem com mais açúcar não é, só por isso, a mais concentrada: os tamanhos são diferentes.\nPara comparar, imagine todas com 1 litro (1 000 mL).\nA caixinha de 200 mL cabe 5 vezes em 1 litro: o suco teria 22 × 5 = 110 g em cada litro."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Concentração = massa ÷ volume em litros.\nSuco: 22 ÷ 0,2 = 220 ÷ 2 = 110. Refri: 35 ÷ 0,35 = 3 500 ÷ 35 = 100. Energético: 27 ÷ 0,25 = 2 700 ÷ 25.\n2 700 ÷ 25: 25 cabe 4 vezes em 100 (4 × 25 = 100), então cabe 27 × 4 = 108 vezes em 2 700. Energético: 108.\nChá: 30 ÷ 0,5 = 60. Achocolatado: 18 ÷ 0,2 = 90. O maior é 110, o do suco.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Açúcar em cada litro",
+      "dados": [
+       "\\text{refri} = 35\\,\\text{g} / 0{,}35\\,\\text{L}",
+       "\\text{suco} = 22\\,\\text{g} / 0{,}2\\,\\text{L}",
+       "\\text{energético} = 27\\,\\text{g} / 0{,}25\\,\\text{L}",
+       "\\text{chá} = 30\\,\\text{g} / 0{,}5\\,\\text{L}",
+       "\\text{achocolatado} = 18\\,\\text{g} / 0{,}2\\,\\text{L}"
+      ],
+      "formula": "C = \\dfrac{m}{V}",
+      "legenda": [
+       "m: gramas de açúcar na embalagem",
+       "V: volume da embalagem em litros"
+      ],
+      "contas": [
+       "\\text{suco: } 22 \\div 0{,}2 = 110",
+       "\\text{energético: } 27 \\div 0{,}25 = 108",
+       "\\text{refri: } 35 \\div 0{,}35 = 100",
+       "\\text{achocolatado: } 18 \\div 0{,}2 = 90",
+       "\\text{chá: } 30 \\div 0{,}5 = 60"
+      ],
+      "resultado": "\\text{suco: } 110\\,\\text{g/L}",
+      "nota": "Maior açúcar por litro."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Dividir por 0,2 é ver quantas caixinhas de 0,2 L cabem em 1 L: 1 ÷ 0,2 = 5.\nPor isso o suco vira 22 × 5 = 110 g/L, e o achocolatado, 18 × 5 = 90 g/L.\nA lata de refrigerante tem mais açúcar (35 g), mas também mais líquido: 100 g/L."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, suco de caixinha, 110 g/L.\nA (refrigerante) tem a maior massa, 35 g, mas em 350 mL: 100 g/L.\nC (energético) chega perto, 108 g/L, mas perde para o suco.\nD (chá gelado) tem 30 g, mas numa garrafa de 500 mL: só 60 g/L.\nE (achocolatado) tem 90 g/L, menos que o suco na mesma caixinha."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Qual é mais concentrado: 10 g em 100 mL ou 40 g em 1 L?",
+    "opcoes": [
+     "10 g em 100 mL",
+     "40 g em 1 L",
+     "os dois iguais"
+    ],
+    "certa": "10 g em 100 mL",
+    "resposta": "10 ÷ 0,1 = 100 g/L, contra 40 g/L."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-12",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "Um caminhão tombou numa rodovia e derramou 980 kg de ácido sulfúrico (H2SO4). Para que o ácido não chegue a um córrego próximo, a equipe de emergência cobre a área com calcário (CaCO3), que neutraliza o ácido pela reação:\n1 H2SO4 + 1 CaCO3 → 1 CaSO4 + 1 H2O + 1 CO2\nAs massas molares são 98 g/mol para o H2SO4 e 100 g/mol para o CaCO3.\nQual é a massa mínima de calcário para neutralizar todo o ácido derramado?",
+  "A": "980 kg",
+  "B": "10 000 kg",
+  "C": "100 kg",
+  "D": "2 000 kg",
+  "E": "1 000 kg",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Ácido: 980 000 g ÷ 98 = 10 000 mol. Calcário: 10 000 mol (1 para 1) × 100 g = 1 000 000 g = 1 000 kg. E. Erros: A acha que as massas são iguais; B confundiu mols com kg; C errou zeros ao passar g para kg; D usou proporção 1 para 2.",
+   "ideia": "Pela equação, cada mol de ácido gasta 1 mol de calcário. São 10 000 mol de ácido, então 10 000 mol de calcário, que pesam 10 000 × 100 g = 1 000 kg.",
+   "pecas": [
+    {
+     "termo": "Calcário",
+     "significado": "Pedra de carbonato de cálcio (CaCO3). Reage com ácidos e os neutraliza; é o mesmo usado para corrigir solo ácido."
+    },
+    {
+     "termo": "Mol",
+     "significado": "Pacote para contar partículas, como a dúzia. 1 mol de H2SO4 pesa 98 g; 1 mol de CaCO3 pesa 100 g."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Derramaram 980 kg de ácido sulfúrico.\nCada ácido é neutralizado por 1 calcário; 1 mol de ácido pesa 98 g e 1 mol de calcário, 100 g.\nA questão quer quantos kg de calcário jogar, no mínimo.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "balanca-receita",
+      "titulo": "A receita da neutralização",
+      "rotulos": [
+       "H2SO4 + CaCO3",
+       "CaSO4 + H2O + CO2",
+       "1 para 1",
+       "980 kg de ácido"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Primeiro conte o ácido em pacotes (mols): 980 kg = 980 000 g.\nCada pacote pesa 98 g: 980 000 ÷ 98 = 10 000 mol (porque 98 × 10 000 = 980 000).\nComo é 1 para 1, é preciso o mesmo número de pacotes de calcário: 10 000 mol."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Massa do calcário = mols × massa molar = 10 000 × 100 g.\n10 000 × 100 = 1 000 000 g.\nEm kg, divida por 1 000: 1 000 000 g = 1 000 kg.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Calcário para o ácido",
+      "dados": [
+       "m_{\\text{ácido}} = 980\\,\\text{kg} = 980\\,000\\,\\text{g}",
+       "M_{\\text{ácido}} = 98\\,\\text{g/mol}",
+       "M_{\\text{calcário}} = 100\\,\\text{g/mol}"
+      ],
+      "formula": "n = \\dfrac{m}{M}",
+      "legenda": [
+       "n: mols",
+       "m: massa; M: massa de 1 mol"
+      ],
+      "contas": [
+       "n = \\dfrac{980\\,000}{98} = 10\\,000\\,\\text{mol}",
+       "m = 10\\,000 \\times 100 = 1\\,000\\,000\\,\\text{g}"
+      ],
+      "resultado": "m = 1\\,000\\,\\text{kg}",
+      "nota": "Calcário mínimo para todo o ácido."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A equação conta partículas, não quilos: 1 ácido para 1 calcário, como 1 parafuso para 1 porca.\nUm parafuso pode pesar diferente de uma porca; aqui, 1 mol de calcário pesa 100 g e 1 mol de ácido, 98 g.\nPor isso o calcário pesa um pouco mais que o ácido: 1 000 kg contra 980 kg."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, 1 000 kg de calcário.\nA (980 kg) achou que a massa de calcário é igual à de ácido, mas 1 mol de cada pesa diferente.\nB (10 000 kg) confundiu os 10 000 mol com quilos.\nC (100 kg) errou os zeros ao passar gramas para quilos.\nD (2 000 kg) usou 2 calcários para cada ácido, mas a equação é 1 para 1."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Quantos gramas pesam 3 mol de uma substância de 100 g/mol?",
+    "opcoes": [
+     "300 g",
+     "33 g",
+     "103 g",
+     "3 g"
+    ],
+    "certa": "300 g",
+    "resposta": "3 × 100 = 300 g."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-13",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "Uma professora ensinou a fazer um indicador caseiro: bater folhas de repolho roxo com água e coar. O caldo roxo muda de cor conforme o pH: fica vermelho em meio ácido, continua roxo em meio neutro e fica verde em meio básico. Os alunos pingaram o caldo em dois copos: um com suco de limão, de pH 2, e outro com água e sabão em pó, de pH 10.\nAs cores no copo com limão e no copo com sabão, nessa ordem, foram",
+  "A": "vermelho e verde.",
+  "B": "verde e vermelho.",
+  "C": "roxo e roxo.",
+  "D": "vermelho e roxo.",
+  "E": "verde e verde.",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Limão, pH 2 < 7: ácido, vermelho. Sabão, pH 10 > 7: básico, verde. A. Erros: B trocou ácido e básico; C acha que nada muda; D acha que o sabão é neutro; E acha que os dois são básicos.",
+   "ideia": "Abaixo de 7 é ácido e acima de 7 é básico. O limão (pH 2) deixa o caldo vermelho, e o sabão (pH 10) deixa o caldo verde.",
+   "pecas": [
+    {
+     "termo": "Indicador",
+     "significado": "Substância que muda de cor conforme o pH. Aqui, o caldo de repolho roxo: vermelho no ácido, roxo no neutro, verde no básico."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O caldo de repolho fica vermelho no ácido, roxo no neutro e verde no básico.\nUm copo tem limão (pH 2); o outro, água com sabão (pH 10).\nA questão quer a cor de cada copo, nessa ordem.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "Dois copos com o indicador",
+      "rotulos": [
+       "caldo de repolho roxo",
+       "limão: pH 2",
+       "sabão: pH 10",
+       "que cor fica?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O caldo é um detetive de pH: a cor diz de que lado do 7 a mistura está.\nO limão tem pH 2, abaixo de 7: é ácido.\nO sabão tem pH 10, acima de 7: é básico."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Compare cada pH com 7.\n2 é menor que 7: ácido, vermelho.\n10 é maior que 7: básico, verde.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Cor de cada copo",
+      "dados": [
+       "\\text{limão} = 2",
+       "\\text{sabão} = 10"
+      ],
+      "formula": "\\text{pH} < 7 \\Rightarrow \\text{ácido}",
+      "legenda": [
+       "ácido: vermelho; neutro: roxo",
+       "básico: verde"
+      ],
+      "contas": [
+       "2 < 7 \\Rightarrow \\text{vermelho}",
+       "10 > 7 \\Rightarrow \\text{verde}"
+      ],
+      "resultado": "\\text{vermelho e verde}",
+      "nota": "Limão primeiro, sabão depois."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "O pH mede a acidez: o limão é o exemplo de ácido, e o sabão, de básico.\nO corante do repolho muda de forma com o ácido ou com a base, e cada forma tem uma cor.\nSe pingasse o caldo em água pura (pH 7), ele continuaria roxo."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, vermelho no limão e verde no sabão.\nB trocou os lados: achou o limão básico e o sabão ácido.\nC acha que o caldo não muda de cor, mas ele muda com o pH.\nD acertou o limão, mas achou o sabão neutro; pH 10 é básico.\nE pôs os dois como básicos; o limão, de pH 2, é ácido."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Com o mesmo caldo, que cor teria o vinagre, de pH 3?",
+    "opcoes": [
+     "vermelho",
+     "verde",
+     "roxo"
+    ],
+    "certa": "vermelho",
+    "resposta": "3 é menor que 7: ácido, vermelho."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-14",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "Uma cozinheira preparou 2 L de caldo de legumes com 10 g/L de sal. Ela deixou o caldo ferver com a panela destampada para engrossar, e parte da água evaporou (virou vapor e saiu), mas o sal ficou todo na panela. No fim, sobraram 1,6 L de caldo.\nQual é a concentração de sal no caldo depois da fervura?",
+  "A": "8 g/L",
+  "B": "32 g/L",
+  "C": "12,5 g/L",
+  "D": "10 g/L",
+  "E": "20 g/L",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Sal: 10 × 2 = 20 g, que fica na panela. Nova concentração: 20 ÷ 1,6 = 200 ÷ 16 = 12,5 g/L. C. Erros: A achou que a concentração cai junto com o volume (10 × 0,8); B multiplicou 20 × 1,6; D acha que não muda; E é a massa de sal, não a concentração.",
+   "ideia": "A água sai, mas o sal fica: são 20 g de sal agora em só 1,6 L. Dividindo, o caldo fica com 12,5 g/L, mais salgado que antes.",
+   "pecas": [
+    {
+     "termo": "Evaporar",
+     "significado": "A água vira vapor e sai da panela. O sal não evapora: fica todo no caldo."
+    },
+    {
+     "termo": "Concentração",
+     "significado": "Quanto soluto há em cada litro: massa ÷ volume. Menos água com o mesmo sal deixa o caldo mais concentrado."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A panela tinha 2 L de caldo com 10 g de sal em cada litro.\nNa fervura, a água evaporou até sobrar 1,6 L, e o sal ficou todo.\nA questão quer a nova concentração de sal.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "O caldo na panela",
+      "rotulos": [
+       "caldo de legumes",
+       "10 g/L no início",
+       "2 L → 1,6 L",
+       "? g/L no fim"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Primeiro, quanto sal há na panela: 10 g em cada litro × 2 litros = 20 g.\nNa fervura, só sai água; os 20 g de sal continuam lá.\nAgora os mesmos 20 g estão em 1,6 L: menos água, caldo mais salgado."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Concentração = massa ÷ volume = 20 ÷ 1,6.\nAnde a vírgula dos dois uma casa: 200 ÷ 16.\n200 ÷ 16 = 12,5 g/L (porque 16 × 12 = 192, e os 8 que faltam são meio 16).",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Depois da fervura",
+      "dados": [
+       "C_1 = 10\\,\\text{g/L}",
+       "V_1 = 2\\,\\text{L}",
+       "V_2 = 1{,}6\\,\\text{L}"
+      ],
+      "formula": "C = \\dfrac{m}{V}",
+      "legenda": [
+       "m: gramas de sal, que não mudam",
+       "V: volume de caldo no fim"
+      ],
+      "contas": [
+       "m = 10 \\times 2 = 20\\,\\text{g}",
+       "C_2 = \\dfrac{20}{1{,}6} = \\dfrac{200}{16}"
+      ],
+      "resultado": "C_2 = 12{,}5\\,\\text{g/L}",
+      "nota": "Menos água, mais sal por litro."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Números pequenos: 4 g de sal em 2 L dão 2 g/L; se a água cair para 1 L, os 4 g dão 4 g/L.\nO sal não some; ele só fica espremido num volume menor.\nConfira: 12,5 × 1,6 = 20 g, o sal que havia no começo."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 12,5 g/L.\nA (8 g/L) achou que a concentração cai junto com a água, mas ela sobe.\nB (32 g/L) multiplicou 20 por 1,6 em vez de dividir.\nD (10 g/L) acha que nada muda, mas saiu água e o sal ficou.\nE (20 g/L) é a massa de sal na panela, não a quantidade em cada litro."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Há 6 g de sal em 3 L de água. Se evaporar até sobrar 2 L, qual a concentração?",
+    "opcoes": [
+     "3 g/L",
+     "2 g/L",
+     "4 g/L",
+     "12 g/L"
+    ],
+    "certa": "3 g/L",
+    "resposta": "O sal fica todo: 6 ÷ 2 = 3 g/L."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-15",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "O rótulo de um comprimido de vitamina C (ácido ascórbico) diz que ele tem 500 mg da vitamina. Para conferir, um laboratório de controle de qualidade dissolveu um comprimido em água e fez uma titulação com NaOH de concentração 0,1 mol/L, gastando 25 mL da base até a neutralização. Nessa reação, cada ácido ascórbico reage com 1 NaOH, e a massa molar do ácido ascórbico é 176 g/mol.\nQuantos miligramas de vitamina C havia, de fato, no comprimido?",
+  "A": "44 mg",
+  "B": "0,0025 mg",
+  "C": "4 400 mg",
+  "D": "440 mg",
+  "E": "880 mg",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "NaOH: 0,1 × 0,025 = 0,0025 mol = vitamina C (1 para 1). Massa: 0,0025 × 176 = 0,44 g = 440 mg. D. Erros: A e C erraram a vírgula; B parou nos mols e chamou de mg; E dobrou os mols (1 para 2).",
+   "ideia": "Os mols de NaOH gastos são os mols de vitamina C, porque a reação é 1 para 1. São 0,0025 mol, que pesam 0,44 g, ou 440 mg: menos que os 500 mg do rótulo.",
+   "pecas": [
+    {
+     "termo": "Titulação",
+     "significado": "Pingar uma solução de concentração conhecida até neutralizar a outra; pela quantidade gasta, descobre-se quanto a outra tinha."
+    },
+    {
+     "termo": "Massa molar",
+     "significado": "Quanto pesa 1 mol. Vitamina C: 176 g/mol, então 1 mol pesa 176 g."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Um comprimido foi neutralizado por 25 mL de NaOH a 0,1 mol/L.\nCada vitamina C gasta 1 NaOH, e 1 mol de vitamina C pesa 176 g.\nA questão quer a massa real de vitamina C, em mg.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "Titulação do comprimido",
+      "rotulos": [
+       "comprimido de vitamina C",
+       "rótulo: 500 mg",
+       "NaOH: 25 mL, 0,1 mol/L",
+       "176 g/mol"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Mols de NaOH = concentração × volume, com 25 mL = 0,025 L.\nCaso pequeno: 0,2 × 0,1 = 0,02 (2 × 1 = 2, e a vírgula anda 1 + 1 = 2 casas, porque cada casa depois da vírgula divide por 10).\nAqui: 0,1 × 0,025. Faça 1 × 25 = 25 e ande a vírgula 1 + 3 = 4 casas: 0,0025 mol.\nComo é 1 para 1, o comprimido tinha 0,0025 mol de vitamina C."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Gramas = mols × massa molar = 0,0025 × 176.\n25 × 176 = 4 400; com 4 casas depois da vírgula, 0,4400 = 0,44 g.\nEm mg, multiplique por 1 000: 0,44 g = 440 mg.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Vitamina C real",
+      "dados": [
+       "C_b = 0{,}1\\,\\text{mol/L}",
+       "V_b = 25\\,\\text{mL} = 0{,}025\\,\\text{L}",
+       "M = 176\\,\\text{g/mol}"
+      ],
+      "formula": "n = C \\times V",
+      "legenda": [
+       "n: mols de NaOH, iguais aos de vitamina C",
+       "M: quanto pesa 1 mol"
+      ],
+      "contas": [
+       "n = 0{,}1 \\times 0{,}025 = 0{,}0025\\,\\text{mol}",
+       "m = 0{,}0025 \\times 176 = 0{,}44\\,\\text{g}"
+      ],
+      "resultado": "m = 440\\,\\text{mg}",
+      "nota": "Menos que os 500 mg do rótulo."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Cada NaOH que entra gasta 1 vitamina C; quando a vitamina C acaba, a conta da base é a conta do ácido.\nNúmeros pequenos: 1 mol pesa 176 g; 0,01 mol pesa 1,76 g; 0,0025 mol é um quarto disso, 0,44 g.\nPor isso o comprimido tem 500 − 440 = 60 mg a menos do que diz o rótulo."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, 440 mg.\nA (44 mg) errou uma casa da vírgula na multiplicação.\nB (0,0025 mg) parou nos mols e chamou de miligramas.\nC (4 400 mg) esqueceu as casas depois da vírgula.\nE (880 mg) achou que cada vitamina C gasta 2 NaOH, mas é 1 para 1."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Quanto é 0,2 × 0,03?",
+    "opcoes": [
+     "0,006",
+     "0,06",
+     "0,6",
+     "6"
+    ],
+    "certa": "0,006",
+    "resposta": "2 × 3 = 6; casas: 1 + 2 = 3, então 0,006."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-16",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "Um aluno preparou duas soluções para uma feira de ciências. Na garrafa 1, dissolveu 90 g de glicose (massa molar 180 g/mol) em água até completar 1 L. Na garrafa 2, dissolveu 171 g de sacarose, o açúcar de mesa (massa molar 342 g/mol), também até completar 1 L. Um colega disse que a garrafa 2 tem mais moléculas de açúcar, porque tem quase o dobro de gramas.\nComparando as duas garrafas, é correto afirmar que",
+  "A": "a garrafa 2 tem mais moléculas, pois tem mais gramas de açúcar.",
+  "B": "a garrafa 1 tem o dobro de moléculas, pois a glicose é mais leve.",
+  "C": "a garrafa 2 tem concentração de 171 mol/L.",
+  "D": "as duas têm 0,5 mol/L, ou seja, o mesmo número de moléculas por litro.",
+  "E": "a garrafa 1 tem 2 mol/L, e a garrafa 2, 0,5 mol/L.",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Glicose: 90 ÷ 180 = 0,5 mol. Sacarose: 171 ÷ 342 = 0,5 mol. As duas em 1 L: 0,5 mol/L. D. Erros: A compara gramas, não pacotes; B esquece que a garrafa 1 tem menos gramas; C copiou os gramas como mols; E dividiu ao contrário (180 ÷ 90) na glicose.",
+   "ideia": "Mol conta partículas, não gramas. 90 g de glicose e 171 g de sacarose são, cada um, meio mol, então as duas garrafas têm o mesmo número de moléculas.",
+   "pecas": [
+    {
+     "termo": "Mol",
+     "significado": "Pacote para contar partículas, como a dúzia. Uma dúzia de melancias pesa mais que uma dúzia de uvas, mas as duas têm 12."
+    },
+    {
+     "termo": "Massa molar",
+     "significado": "Quanto pesa 1 mol. Glicose: 180 g. Sacarose: 342 g, porque a molécula dela é maior."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Garrafa 1: 90 g de glicose (1 mol pesa 180 g) em 1 L.\nGarrafa 2: 171 g de sacarose (1 mol pesa 342 g) em 1 L.\nA questão quer comparar quantas moléculas há em cada garrafa.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "As duas garrafas",
+      "rotulos": [
+       "glicose e sacarose",
+       "90 g e 171 g",
+       "1 L cada",
+       "mais moléculas?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Mol é como a dúzia: uma dúzia de melancias pesa muito mais que uma dúzia de uvas, mas as duas têm 12.\nPara contar moléculas, transforme gramas em mols: gramas ÷ massa de 1 mol.\nGlicose: 90 é metade de 180. Sacarose: 171 é metade de 342."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Glicose: 90 ÷ 180 = 0,5 mol.\nSacarose: 171 ÷ 342 = 0,5 mol (porque 171 + 171 = 342).\nCada garrafa tem 1 L, então as duas têm 0,5 mol/L: o mesmo número de moléculas.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Gramas viram pacotes",
+      "dados": [
+       "m_1 = 90\\,\\text{g},\\ M_1 = 180\\,\\text{g/mol}",
+       "m_2 = 171\\,\\text{g},\\ M_2 = 342\\,\\text{g/mol}",
+       "V = 1\\,\\text{L}"
+      ],
+      "formula": "n = \\dfrac{m}{M}",
+      "legenda": [
+       "n: mols (pacotes)",
+       "m: gramas; M: massa de 1 mol"
+      ],
+      "contas": [
+       "n_1 = \\dfrac{90}{180} = 0{,}5\\,\\text{mol}",
+       "n_2 = \\dfrac{171}{342} = 0{,}5\\,\\text{mol}"
+      ],
+      "resultado": "\\text{as duas: } 0{,}5\\,\\text{mol/L}",
+      "nota": "Mesmo número de moléculas."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Dividir por 180 conta quantos pacotes de 180 g cabem em 90 g: cabe meio pacote, como 1 ÷ 2 = 0,5.\nA molécula de sacarose é maior e pesa mais, por isso o mesmo meio pacote dela pesa mais gramas.\nMais gramas não quer dizer mais moléculas: depende de quanto pesa cada uma."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, as duas têm 0,5 mol/L e o mesmo número de moléculas por litro.\nA comparou gramas, e gramas não contam moléculas.\nB esqueceu que a garrafa 1 também tem menos gramas: os dois efeitos se cancelam.\nC copiou os 171 g como se fossem mols.\nE dividiu ao contrário na glicose, 180 ÷ 90 = 2."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Quantos mols há em 36 g de água (18 g/mol)?",
+    "opcoes": [
+     "2 mol",
+     "0,5 mol",
+     "648 mol",
+     "18 mol"
+    ],
+    "certa": "2 mol",
+    "resposta": "36 ÷ 18 = 2 mol."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-17",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "Ao fim de uma aula prática, sobraram 100 mL de ácido clorídrico (HCl) de concentração 0,2 mol/L, que não podem ir para o descarte ainda ácidos. O técnico vai neutralizá-los com uma solução de NaOH de concentração 0,4 mol/L. A reação é:\n1 HCl + 1 NaOH → 1 NaCl + 1 H2O\nQual é o volume mínimo da solução de NaOH para neutralizar todo o ácido?",
+  "A": "200 mL",
+  "B": "50 mL",
+  "C": "100 mL",
+  "D": "25 mL",
+  "E": "5 mL",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "HCl: 0,2 × 0,1 = 0,02 mol. NaOH igual (1 para 1). V = 0,02 ÷ 0,4 = 0,2 ÷ 4 = 0,05 L = 50 mL. B. Erros: A inverteu as concentrações; C acha que volumes iguais neutralizam; D dividiu 100 por 4; E errou a vírgula (0,005 L).",
+   "ideia": "A base tem o dobro da concentração do ácido, então metade do volume já traz os mesmos mols. Metade de 100 mL é 50 mL.",
+   "pecas": [
+    {
+     "termo": "Neutralizar",
+     "significado": "Ácido + base = sal + água. Fica neutro quando os mols de base igualam os de ácido (aqui, 1 para 1)."
+    },
+    {
+     "termo": "mol/L",
+     "significado": "Mols (pacotes de partículas) em cada litro. 0,4 mol/L tem o dobro de partículas por litro que 0,2 mol/L."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Há 100 mL de ácido (HCl) a 0,2 mol/L para neutralizar.\nA base disponível é NaOH a 0,4 mol/L, e a reação é 1 para 1.\nA questão quer quantos mL de base usar.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "A sobra de ácido",
+      "rotulos": [
+       "sobra de HCl",
+       "0,2 mol/L",
+       "100 mL",
+       "NaOH a 0,4 mol/L"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Mols de ácido = concentração × volume = 0,2 × 0,1 (100 mL = 0,1 L).\n0,2 × 0,1 = 2 décimos de 1 décimo = 2 centésimos = 0,02 mol (2 × 1 = 2, e a vírgula anda 1 + 1 = 2 casas, porque cada casa depois da vírgula divide por 10).\nPara neutralizar 1 para 1, a base tem que trazer os mesmos 0,02 mol.\nCada litro de base tem 0,4 mol; quantos litros têm 0,02 mol?"
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Volume = mols ÷ concentração = 0,02 ÷ 0,4.\nAnde a vírgula dos dois uma casa: 0,2 ÷ 4 = 0,05 L.\nEm mL: 0,05 × 1 000 = 50 mL.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Base para a sobra",
+      "dados": [
+       "C_a = 0{,}2\\,\\text{mol/L}",
+       "V_a = 100\\,\\text{mL} = 0{,}1\\,\\text{L}",
+       "C_b = 0{,}4\\,\\text{mol/L}"
+      ],
+      "formula": "C_a \\times V_a = C_b \\times V_b",
+      "legenda": [
+       "a: ácido (HCl)",
+       "b: base (NaOH)"
+      ],
+      "contas": [
+       "0{,}2 \\times 0{,}1 = 0{,}4 \\times V_b",
+       "V_b = \\dfrac{0{,}02}{0{,}4} = 0{,}05\\,\\text{L}"
+      ],
+      "resultado": "V_b = 50\\,\\text{mL}",
+      "nota": "Base duas vezes mais forte: metade do volume."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Números pequenos: se a base tivesse a mesma concentração do ácido, 100 mL de cada bastariam.\nComo a base tem o dobro de partículas em cada mL, metade do volume já basta: 100 ÷ 2 = 50 mL.\nConfira: 0,4 × 0,05 = 0,02 mol de base, igual aos 0,02 mol de ácido."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 50 mL.\nA (200 mL) inverteu as concentrações e usou o dobro em vez da metade.\nC (100 mL) acha que volumes iguais neutralizam, mas as concentrações são diferentes.\nD (25 mL) dividiu 100 por 4 sem pensar nos mols.\nE (5 mL) errou a vírgula: 0,05 L são 50 mL, não 5 mL."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Para 10 mL de ácido a 1 mol/L, quantos mL de base a 2 mol/L (1 para 1)?",
+    "opcoes": [
+     "5 mL",
+     "20 mL",
+     "10 mL",
+     "2 mL"
+    ],
+    "certa": "5 mL",
+    "resposta": "Base com o dobro da concentração: metade do volume, 5 mL."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-18",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "A bula de um xarope infantil informa que a concentração do remédio é de 250 mg em cada 5 mL. O pediatra receitou 15 mg do remédio para cada quilograma (kg) da criança, em cada dose. A criança pesa 20 kg, e a mãe vai medir a dose com uma seringa marcada em mL.\nQual volume de xarope corresponde a uma dose?",
+  "A": "1,2 mL",
+  "B": "60 mL",
+  "C": "6 mL",
+  "D": "15 mL",
+  "E": "0,17 mL",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Dose: 15 × 20 = 300 mg. Concentração: 250 ÷ 5 = 50 mg/mL. Volume: 300 ÷ 50 = 6 mL. C. Erros: A dividiu 300 ÷ 250 sem os 5 mL; B dividiu 300 ÷ 5; D copiou o 15; E dividiu ao contrário (50 ÷ 300).",
+   "ideia": "A dose é 15 mg para cada um dos 20 kg: 300 mg. Como cada mL do xarope tem 50 mg, a dose cabe em 300 ÷ 50 = 6 mL.",
+   "pecas": [
+    {
+     "termo": "mg/mL",
+     "significado": "Miligramas de remédio em cada mililitro. 250 mg em 5 mL é o mesmo que 50 mg em cada 1 mL."
+    },
+    {
+     "termo": "Dose por kg",
+     "significado": "A quantidade muda com o peso: 15 mg por kg quer dizer 15 mg para cada quilo da criança."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O xarope tem 250 mg de remédio em cada 5 mL.\nA dose é 15 mg para cada kg, e a criança tem 20 kg.\nA questão quer quantos mL dão uma dose.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "O xarope e a seringa",
+      "rotulos": [
+       "xarope",
+       "250 mg em 5 mL",
+       "15 mg por kg",
+       "criança de 20 kg"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Primeiro, a dose em mg: 15 mg para cada kg × 20 kg = 300 mg.\nDepois, quanto remédio há em 1 mL: 250 mg ÷ 5 mL = 50 mg em cada mL.\nEntão a pergunta vira: quantos mL de 50 mg somam 300 mg?"
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Volume = dose ÷ concentração = 300 ÷ 50.\nCorte um zero dos dois: 30 ÷ 5 = 6.\nUma dose é 6 mL.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Volume da dose",
+      "dados": [
+       "\\text{dose} = 15\\,\\text{mg/kg} \\times 20\\,\\text{kg}",
+       "C = 250\\,\\text{mg} / 5\\,\\text{mL}"
+      ],
+      "formula": "V = \\dfrac{\\text{dose}}{C}",
+      "legenda": [
+       "dose: mg que a criança toma",
+       "C: mg em cada mL do xarope"
+      ],
+      "contas": [
+       "\\text{dose} = 300\\,\\text{mg}",
+       "C = 50\\,\\text{mg/mL}",
+       "V = \\dfrac{300}{50}"
+      ],
+      "resultado": "V = 6\\,\\text{mL}",
+      "nota": "Volume de uma dose."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Números pequenos: se cada mL tem 50 mg, 2 mL têm 100 mg e 4 mL têm 200 mg.\nPara 300 mg, são 6 mL: 6 × 50 = 300.\nConfira pelo frasco: 5 mL têm 250 mg; mais 1 mL (50 mg) dá 300 mg."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 6 mL.\nA (1,2 mL) dividiu 300 por 250 e esqueceu que os 250 mg estão em 5 mL.\nB (60 mL) dividiu 300 por 5, como se cada mL tivesse 5 mg.\nD (15 mL) copiou o 15 mg por kg como se fosse o volume.\nE (0,17 mL) dividiu ao contrário, 50 ÷ 300."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um remédio tem 100 mg em 10 mL. Quantos mg há em cada mL?",
+    "opcoes": [
+     "10 mg",
+     "1 000 mg",
+     "0,1 mg",
+     "110 mg"
+    ],
+    "certa": "10 mg",
+    "resposta": "100 ÷ 10 = 10 mg em cada mL."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-19",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "Para fazer limonada, uma pessoa espremeu limões num copo e mediu o pH do suco puro: 2. Depois, despejou o suco numa jarra e foi acrescentando água filtrada, de pH 7, provando aos poucos, até a jarra ficar cheia. A limonada foi ficando cada vez menos azeda.\nO que acontece com o pH à medida que a água é acrescentada?",
+  "A": "Sobe e se aproxima de 7, mas a limonada continua ácida.",
+  "B": "Desce, porque a mistura fica mais ácida.",
+  "C": "Sobe e passa de 7, porque a limonada vira uma base.",
+  "D": "Fica em 2, porque a água não muda a acidez.",
+  "E": "Vai direto para 7 logo nas primeiras gotas de água.",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "A água dilui o ácido: menos ácido em cada litro, e o pH sobe. Como a água pura tem pH 7 e não é base, a mistura não passa de 7. A. Erros: B acha que a água acidifica; C acha que passa de 7; D acha que o pH não muda; E acha que pouca água neutraliza tudo.",
+   "ideia": "A água espalha o ácido num volume maior, então há menos ácido em cada litro e o pH sobe. Mas água não é base: o pH chega perto de 7 sem passar dele.",
+   "pecas": [
+    {
+     "termo": "Diluir",
+     "significado": "Pôr mais solvente (água). O soluto continua o mesmo, mas fica espalhado: menos soluto em cada litro."
+    },
+    {
+     "termo": "pH",
+     "significado": "Régua de 0 a 14: abaixo de 7 é ácido, 7 é neutro, acima de 7 é básico."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O suco de limão puro tem pH 2.\nA pessoa vai pondo água (pH 7) até encher a jarra.\nA questão quer o que acontece com o pH.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "A limonada",
+      "rotulos": [
+       "suco de limão",
+       "pH 2 no início",
+       "+ água de pH 7",
+       "pH sobe ou desce?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O ácido do limão não some; ele fica espalhado num volume maior.\nNúmeros pequenos: 2 colheres de ácido em 1 copo, depois as mesmas 2 colheres em 10 copos: cada copo fica com bem menos ácido.\nMenos ácido em cada litro quer dizer menos acidez: o pH sobe."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Água pura tem pH 7: ela não é ácido nem base.\nMisturar algo de pH 2 com algo de pH 7 dá um pH entre 2 e 7.\nQuanto mais água, mais perto de 7; mas não passa de 7, porque nada ali é base.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Limão com água",
+      "dados": [
+       "\\text{limão} = 2",
+       "\\text{água} = 7"
+      ],
+      "formula": "2 < \\text{pH da mistura} < 7",
+      "legenda": [
+       "mais água: mais perto de 7",
+       "sem base: não passa de 7"
+      ],
+      "contas": [
+       "\\text{pouca água: pH perto de } 2",
+       "\\text{muita água: pH perto de } 7"
+      ],
+      "resultado": "\\text{sobe, mas fica ácido}",
+      "nota": "Diluir não vira base."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Para passar de 7, a mistura precisaria de base sobrando, como o sabão.\nA água só espalha o ácido; não gasta o ácido como uma base gastaria (ácido + base = sal + água).\nPor isso a limonada fica menos azeda, mas continua ácida."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, o pH sobe e se aproxima de 7, mas a limonada continua ácida.\nB acha que a água deixa mais ácido, mas ela espalha o ácido.\nC acha que passa de 7, mas sem base não há como ficar básico.\nD acha que o pH não muda, mas há menos ácido em cada litro.\nE acha que um pouco de água basta para chegar a 7; o pH sobe aos poucos."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Pôr muita água num sabão de pH 11 deixa o pH perto de:",
+    "opcoes": [
+     "7",
+     "11",
+     "14",
+     "2"
+    ],
+    "certa": "7",
+    "resposta": "A água espalha a base: o pH desce para perto de 7, sem passar dele."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-qui-ph-20",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "Um produto desentupidor de pia é uma solução de hidróxido de sódio (NaOH), uma base forte. Para conferir o rótulo, um técnico tirou 10 mL do produto e o neutralizou com ácido clorídrico (HCl) de concentração 0,5 mol/L, gastando 30 mL do ácido. A reação é 1 NaOH + 1 HCl → 1 NaCl + 1 H2O, e a massa molar do NaOH é 40 g/mol.\nQual é a concentração de NaOH no desentupidor, em g/L?",
+  "A": "6,7 g/L",
+  "B": "20 g/L",
+  "C": "0,6 g/L",
+  "D": "1,5 g/L",
+  "E": "60 g/L",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "HCl: 0,5 × 0,03 = 0,015 mol = NaOH (1 para 1). C = 0,015 ÷ 0,01 = 1,5 mol/L. Em g/L: 1,5 × 40 = 60. E. Erros: A trocou os volumes; B usou a concentração do ácido; C parou nos mols e fez 0,015 × 40; D parou em 1,5, que é mol/L.",
+   "ideia": "Os mols de ácido gastos são os mols de NaOH nos 10 mL, porque a reação é 1 para 1. Isso dá 1,5 mol/L, e como 1 mol de NaOH pesa 40 g, são 60 g/L.",
+   "pecas": [
+    {
+     "termo": "Titulação",
+     "significado": "Pingar uma solução de concentração conhecida até neutralizar a outra. Aqui o ácido é o conhecido e mede a base."
+    },
+    {
+     "termo": "Massa molar",
+     "significado": "Quanto pesa 1 mol. NaOH: 40 g/mol, então 1,5 mol pesam 1,5 × 40 = 60 g."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "10 mL de desentupidor (NaOH) foram neutralizados por 30 mL de HCl a 0,5 mol/L.\nA reação é 1 para 1, e 1 mol de NaOH pesa 40 g.\nA questão quer os gramas de NaOH em cada litro do produto.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "bequer-ph",
+      "titulo": "Titulação do desentupidor",
+      "rotulos": [
+       "desentupidor (NaOH)",
+       "? g/L",
+       "10 mL",
+       "HCl: 30 mL, 0,5 mol/L"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Mols de HCl = 0,5 × 0,03 (30 mL = 0,03 L).\nFaça 5 × 3 = 15 e ande a vírgula 1 + 2 = 3 casas, porque cada casa depois da vírgula divide por 10 (como 0,2 × 0,1 = 0,02): 0,015 mol.\nComo é 1 para 1, havia 0,015 mol de NaOH nos 10 mL.\nGastou o triplo de volume de ácido, então o produto é 3 vezes mais concentrado: 3 × 0,5 = 1,5 mol/L."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Concentração = mols ÷ volume = 0,015 ÷ 0,01 (10 mL = 0,01 L).\nAnde a vírgula dos dois 3 casas: 15 ÷ 10 = 1,5 mol/L.\nEm gramas: 1,5 × 40 = 60 g/L.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Base do desentupidor",
+      "dados": [
+       "C_a = 0{,}5\\,\\text{mol/L}",
+       "V_a = 30\\,\\text{mL} = 0{,}03\\,\\text{L}",
+       "V_b = 10\\,\\text{mL} = 0{,}01\\,\\text{L}",
+       "M = 40\\,\\text{g/mol}"
+      ],
+      "formula": "n = C \\times V",
+      "legenda": [
+       "a: ácido (HCl); b: base (NaOH)",
+       "M: quanto pesa 1 mol de NaOH"
+      ],
+      "contas": [
+       "n = 0{,}5 \\times 0{,}03 = 0{,}015\\,\\text{mol}",
+       "C_b = \\dfrac{0{,}015}{0{,}01} = 1{,}5\\,\\text{mol/L}",
+       "1{,}5 \\times 40 = 60"
+      ],
+      "resultado": "60\\,\\text{g/L}",
+      "nota": "Gramas de NaOH em cada litro."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Números pequenos: se 10 mL de base gastassem 10 mL do ácido, as duas teriam a mesma concentração.\nGastou 30 mL, o triplo; então cada mL de base tem o triplo de partículas: 1,5 mol/L.\nDepois troque pacotes por gramas: 1 mol = 40 g, então 1,5 mol = 60 g."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, 60 g/L.\nA (6,7 g/L) trocou os volumes e achou a base 3 vezes mais fraca que o ácido.\nB (20 g/L) usou a concentração do ácido, 0,5 mol/L, vezes 40.\nC (0,6 g/L) parou nos mols e não dividiu pelo volume.\nD (1,5 g/L) é a concentração em mol/L, não em g/L: faltou o vezes 40."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma solução de NaOH tem 2 mol/L. Quantos g/L isso dá (40 g/mol)?",
+    "opcoes": [
+     "80 g/L",
+     "20 g/L",
+     "42 g/L",
+     "0,05 g/L"
+    ],
+    "certa": "80 g/L",
+    "resposta": "2 × 40 = 80 g/L."
+   }
+  }
+ }
+]

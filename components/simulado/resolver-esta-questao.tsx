@@ -66,7 +66,8 @@ export function TelaEstaQuestao({ aula }: { aula: AulaDaQuestao }) {
   const { explicacao } = aula;
   return (
     <div className="space-y-4">
-      <div className="font-display type-lead font-semibold"><MathText text={explicacao.ideia} /></div>
+      {/* Frase em letra normal: em pixel e negrito ficava difícil de ler (14/11/2026). */}
+      <div className="font-reading type-lead font-semibold"><MathText text={explicacao.ideia} /></div>
       {explicacao.pecas.length > 0 && (
         <ul className="space-y-3">
           {explicacao.pecas.map((p, i) => (

@@ -1,0 +1,1681 @@
+[
+  {
+    "id": "d2-banco-qui-amb-01",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Uma granja de porcos passou a jogar o esterco num biodigestor: um tanque fechado, sem oxigênio, onde bactérias decompõem os dejetos e soltam biogás. O gás vai para o fogão do refeitório e para um gerador de energia. Os técnicos mediram que cada 1 kg de esterco rende 0,05 m³ de biogás. A granja coloca 400 kg de esterco no tanque por dia.\nQuantos metros cúbicos de biogás o biodigestor produz por dia?",
+    "A": "8 000 m³",
+    "B": "2 m³",
+    "C": "20 m³",
+    "D": "200 m³",
+    "E": "400,05 m³",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "400 × 0,05 = 20 m³ (100 kg dão 5 m³; 4 × 5 = 20). C. Erros: A = 400 ÷ 0,05; B = 400 × 0,005 (vírgula no lugar errado); D = 400 × 0,5; E = somou 400 + 0,05.",
+      "ideia": "Cada quilo de esterco rende um pouquinho de gás: é só multiplicar. 400 × 0,05 = 20 m³ de biogás por dia.",
+      "pecas": [
+        {
+          "termo": "Biodigestor",
+          "significado": "Tanque fechado, sem oxigênio, onde bactérias comem esterco e restos e soltam biogás. O biogás é quase todo metano (CH₄), o mesmo gás que queima no fogão."
+        },
+        {
+          "termo": "m³ (metro cúbico)",
+          "significado": "O espaço de uma caixa com 1 m de largura, 1 m de comprimento e 1 m de altura. Cabem 1 000 litros nela."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A granja põe 400 kg de esterco por dia no biodigestor.\nCada 1 kg de esterco vira 0,05 m³ de biogás.\nA questão quer o total de biogás de um dia.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Do esterco ao biogás",
+            "rotulos": [
+              "400 kg de esterco por dia",
+              "biogás = ?",
+              "1 kg → 0,05 m³",
+              "sem oxigênio"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "As bactérias, sem oxigênio, apodrecem o esterco e soltam metano: é o biogás da aula.\nCada quilo rende a mesma quantidade de gás.\nEntão o total é: quilos de esterco × gás de cada quilo."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "0,05 quer dizer 5 centésimos (5 partes de 100).\nNúmero pequeno primeiro: 100 kg rendem 100 × 0,05 = 5 m³, como 100 moedas de 5 centavos: 500 centavos = R$ 5.\n400 kg são 4 vezes 100 kg: 4 × 5 = 20 m³.\nÉ o mesmo que 400 × 0,05 = 20.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Biogás de um dia",
+            "dados": [
+              "m = 400\\,\\text{kg}",
+              "r = 0{,}05\\,\\text{m}^3\\ \\text{por kg}"
+            ],
+            "formula": "V = m \\times r",
+            "legenda": [
+              "m: esterco por dia",
+              "r: biogás de cada quilo"
+            ],
+            "contas": [
+              "100 \\times 0{,}05 = 5",
+              "4 \\times 5 = 20"
+            ],
+            "resultado": "V = 20\\,\\text{m}^3",
+            "nota": "20 m³ de biogás por dia."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "1 kg dá 0,05 m³, 2 kg dão o dobro, 10 kg dão dez vezes mais.\nQuando cada parte rende igual, o total é a quantidade de partes vezes o que cada uma rende.\nMultiplicar por 0,05 dá um número menor que 400, e faz sentido: cada quilo rende pouco gás."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 20 m³.\nA dividiu 400 por 0,05: dividir por um número menor que 1 aumenta, e deu gás demais.\nB errou a vírgula (usou 0,005).\nD usou 0,5 no lugar de 0,05.\nE somou 400 com 0,05, mas cada quilo rende: é vezes."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um sítio põe 200 kg de esterco por dia e 1 kg rende 0,05 m³ de biogás. Quanto gás sai por dia?",
+        "opcoes": [
+          "10 m³",
+          "4 000 m³",
+          "100 m³",
+          "1 m³"
+        ],
+        "certa": "10 m³",
+        "resposta": "100 kg dão 5 m³. 200 kg dão 2 × 5 = 10 m³."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-02",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Há algumas décadas, cientistas descobriram que certos gases usados em sprays e em geladeiras antigas, os CFCs, sobem até o alto da atmosfera e destroem um gás que fica lá em cima. Nas regiões onde esse gás ficou mais fino, médicos notaram mais casos de queimadura de sol e de câncer de pele. Por isso, vários países proibiram os CFCs.\nO gás destruído pelos CFCs e a função dele são:",
+    "A": "ozônio (O₃), que filtra os raios ultravioleta do Sol.",
+    "B": "gás carbônico (CO₂), que segura o calor perto da Terra.",
+    "C": "oxigênio (O₂), que as pessoas usam para respirar.",
+    "D": "metano (CH₄), que forma a chuva ácida.",
+    "E": "dióxido de enxofre (SO₂), que barra a luz do Sol.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Gás no alto da atmosfera + menos dele = mais câncer de pele: é o ozônio, que filtra ultravioleta. A. Erros: B é efeito estufa; C é o ar que respiramos, não é a camada; D: metano é estufa, não chuva ácida; E: enxofre é chuva ácida.",
+      "ideia": "A pista é a pele queimando: mais raio ultravioleta chegando. Quem filtra o ultravioleta lá no alto é a camada de ozônio (O₃).",
+      "pecas": [
+        {
+          "termo": "CFC",
+          "significado": "Gás que era usado em sprays e geladeiras antigas. Ele sobe até o alto da atmosfera e destrói o ozônio."
+        },
+        {
+          "termo": "Raio ultravioleta",
+          "significado": "Parte da luz do Sol que a gente não vê e que queima a pele. Em excesso, causa câncer de pele."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Gases de sprays e geladeiras (CFCs) sobem e destroem um gás do alto da atmosfera.\nOnde esse gás afinou, apareceu mais câncer de pele.\nA questão quer o nome do gás e o que ele faz.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "Spray e geladeira antiga",
+            "rotulos": [
+              "CFC",
+              "gás do alto fica fino",
+              "sprays e geladeiras",
+              "mais câncer de pele"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O câncer de pele e a queimadura vêm do raio ultravioleta do Sol.\nSe aumentou o problema, chegou mais ultravioleta aqui embaixo.\nEntão o gás destruído era o que barrava esse raio."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ligue cada problema ao seu gás, como na aula:\nPele queimando, raio ultravioleta: ozônio (O₃).\nCalor preso: gás carbônico e metano.\nChuva ácida: gases de enxofre e de nitrogênio."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A camada de ozônio fica no alto da atmosfera e funciona como um filtro solar do planeta.\nQuando o CFC a destrói, ela fica mais fina e passa mais ultravioleta.\nPor isso a proibição dos CFCs protege a pele das pessoas."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, ozônio, que filtra o ultravioleta.\nB troca pelo efeito estufa, que é calor, não raio que queima a pele.\nC: o oxigênio que respiramos fica aqui embaixo e não é a camada.\nD: metano segura calor, não faz chuva ácida.\nE: gás de enxofre faz chuva ácida."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual problema o ozônio do alto da atmosfera ajuda a evitar?",
+        "opcoes": [
+          "Excesso de raio ultravioleta",
+          "Chuva ácida",
+          "Calor preso na Terra",
+          "Falta de oxigênio"
+        ],
+        "certa": "Excesso de raio ultravioleta",
+        "resposta": "O ozônio filtra o ultravioleta do Sol, o raio que queima a pele."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-03",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Uma usina termelétrica queima 500 toneladas de carvão mineral por dia para gerar eletricidade. Uma análise mostrou que esse carvão tem 2% de enxofre, em massa. Na queima, quase todo esse enxofre sai pela chaminé como dióxido de enxofre (SO₂).\nQuantas toneladas de enxofre a usina queima por dia e que problema ambiental esse gás causa?",
+    "A": "10 toneladas; aumento do efeito estufa.",
+    "B": "250 toneladas; chuva ácida.",
+    "C": "1 000 toneladas; chuva ácida.",
+    "D": "10 toneladas; buraco na camada de ozônio.",
+    "E": "10 toneladas; chuva ácida.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "2% de 500 = 2 × 5 = 10 t; SO₂ = chuva ácida. E. Erros: A e D acertam a conta e erram o problema; B = 500 ÷ 2; C = 500 × 2.",
+      "ideia": "2% são 2 de cada 100: em 500 t há 5 × 2 = 10 t de enxofre. Gás de enxofre vira ácido na chuva.",
+      "pecas": [
+        {
+          "termo": "Porcentagem",
+          "significado": "Quantos de cada 100. 2% de enxofre: em cada 100 t de carvão, 2 t são enxofre."
+        },
+        {
+          "termo": "Dióxido de enxofre (SO₂)",
+          "significado": "Gás que sai quando algo com enxofre queima. Na atmosfera, ele se junta à água da chuva e vira ácido."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A usina queima 500 t de carvão por dia.\n2% desse carvão é enxofre, que sai como SO₂.\nA questão quer duas coisas: quanto enxofre e qual problema ele causa.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "A chaminé da termelétrica",
+            "rotulos": [
+              "SO₂",
+              "problema = ?",
+              "500 t de carvão por dia",
+              "2% de enxofre"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Primeiro a conta: quanto é 2% de 500 t.\nDepois a química: o gás de enxofre vai para o ar.\nComo na aula, enxofre e nitrogênio no ar viram ácido na água da chuva."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "2% quer dizer 2 de cada 100.\nEm 100 t de carvão há 2 t de enxofre.\n500 t são 5 vezes 100 t: 5 × 2 = 10 t de enxofre por dia.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Enxofre de um dia",
+            "dados": [
+              "\\text{carvao} = 500\\,\\text{t}",
+              "\\text{enxofre} = 2\\%"
+            ],
+            "formula": "S = 2\\% \\times 500",
+            "legenda": [
+              "2%: 2 t em cada 100 t",
+              "S: enxofre por dia"
+            ],
+            "contas": [
+              "100\\,\\text{t} \\to 2\\,\\text{t}",
+              "500 = 5 \\times 100",
+              "5 \\times 2 = 10"
+            ],
+            "resultado": "S = 10\\,\\text{t}",
+            "nota": "10 t de enxofre por dia: chuva ácida."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A porcentagem diz a parte de cada 100. Contar quantos 100 cabem no total e multiplicar dá a parte.\nE a palavra-chave da aula: CO₂ esquenta, enxofre azeda.\nAzedar é ficar ácido: chuva ácida."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 10 t e chuva ácida.\nA acerta a conta, mas efeito estufa é CO₂ e metano.\nB dividiu 500 por 2, esquecendo o \"de cada 100\".\nC multiplicou 500 por 2.\nD acerta a conta, mas a camada de ozônio é destruída pelos CFCs."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um carvão tem 3% de enxofre. Quanto enxofre há em 200 t dele?",
+        "opcoes": [
+          "6 t",
+          "60 t",
+          "600 t",
+          "3 t"
+        ],
+        "certa": "6 t",
+        "resposta": "Em 100 t há 3 t. 200 t são 2 vezes 100: 2 × 3 = 6 t."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-04",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Nas grandes cidades, caminhões e ônibus queimam óleo diesel. Por muitos anos, o diesel vendido no Brasil tinha bastante enxofre. Depois, o país passou a exigir um diesel com muito menos enxofre, e as fábricas adaptaram os motores. Ambientalistas comemoraram, mas lembraram que a troca não diminui o gás carbônico que sai do escapamento.\nA troca do combustível ajuda principalmente a reduzir",
+    "A": "o efeito estufa, porque o diesel novo não solta gás carbônico.",
+    "B": "a chuva ácida, porque sai menos gás de enxofre pelo escapamento.",
+    "C": "o buraco na camada de ozônio, porque o enxofre destrói o ozônio.",
+    "D": "o calor do motor, porque o enxofre é o que faz o diesel queimar.",
+    "E": "o consumo de oxigênio, porque o diesel novo queima sem ar.",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Menos enxofre no combustível = menos gás de enxofre no ar = menos chuva ácida. B. Erros: A contradiz o texto (o CO₂ continua); C: ozônio é CFC; D e E inventam: quem queima é o carbono do diesel, e toda queima usa oxigênio.",
+      "ideia": "Enxofre no combustível vira gás de enxofre no ar, e esse gás azeda a chuva. Tirar o enxofre do diesel corta a chuva ácida.",
+      "pecas": [
+        {
+          "termo": "Diesel",
+          "significado": "Combustível tirado do petróleo, usado em caminhões e ônibus. Pode carregar enxofre misturado."
+        },
+        {
+          "termo": "Chuva ácida",
+          "significado": "Chuva que ficou ácida porque gases de enxofre e de nitrogênio se juntaram à água dela. Corrói prédios e estraga lagos."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O diesel passou a ter muito menos enxofre.\nO texto avisa que o gás carbônico do escapamento continua o mesmo.\nA questão quer o problema que diminui de verdade.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "Escapamento do ônibus",
+            "rotulos": [
+              "menos gás de enxofre",
+              "qual problema cai?",
+              "diesel com menos enxofre",
+              "CO₂ continua igual"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O que está no combustível sai, depois da queima, pelo escapamento.\nCom menos enxofre no diesel, sai menos gás de enxofre.\nO carbono continua lá, então o CO₂ continua saindo."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Use a palavra-chave da aula: CO₂ esquenta, enxofre azeda.\nMexeu no enxofre, mexeu no azedo: chuva ácida.\nO esquenta (efeito estufa) ficou igual, como o texto diz."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O gás de enxofre sobe, encontra a água das nuvens e vira ácido.\nEsse ácido desce com a chuva.\nMenos gás de enxofre no ar quer dizer chuva menos ácida."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, a chuva ácida.\nA: o próprio texto diz que o gás carbônico não diminui.\nC: quem destrói o ozônio são os CFCs.\nD: o diesel queima pelo seu carbono e hidrogênio, não pelo enxofre.\nE: toda queima precisa de oxigênio."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual gás, solto pelos motores e pelas usinas, mais ajuda a deixar a chuva ácida?",
+        "opcoes": [
+          "Gás de enxofre",
+          "Gás carbônico",
+          "Ozônio",
+          "Oxigênio"
+        ],
+        "certa": "Gás de enxofre",
+        "resposta": "Enxofre azeda: o gás de enxofre vira ácido na água da chuva."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-05",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Um motorista tem um carro flex, que anda com gasolina ou com etanol. Ele leu que, no carro dele, 1 litro de etanol faz só 70% da distância que 1 litro de gasolina faz. Por isso, o etanol só compensa se o litro custar no máximo 70% do preço do litro da gasolina. No posto, a gasolina custa R$ 6,00 o litro.\nQual é o maior preço do litro de etanol que ainda compensa para ele?",
+    "A": "R$ 0,42",
+    "B": "R$ 5,30",
+    "C": "R$ 8,57",
+    "D": "R$ 4,20",
+    "E": "R$ 1,80",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "70% de 6,00 = 6 × 0,70 = 4,20. D. Erros: A = vírgula errada (6 × 0,07); B = 6,00 − 0,70; C = 6 ÷ 0,7; E = 30% de 6.",
+      "ideia": "70% de R$ 1,00 são 70 centavos. Então 70% de R$ 6,00 são 6 × 70 = 420 centavos, ou R$ 4,20.",
+      "pecas": [
+        {
+          "termo": "Carro flex",
+          "significado": "Carro que aceita gasolina, etanol ou a mistura dos dois no mesmo tanque."
+        },
+        {
+          "termo": "Porcentagem",
+          "significado": "Quantos de cada 100. 70% de R$ 1,00 são 70 centavos, porque R$ 1,00 tem 100 centavos."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A gasolina custa R$ 6,00 o litro.\nO etanol rende 70% da gasolina, então só compensa custando até 70% do preço dela.\nA questão quer esse preço máximo.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "porcentagem-barra",
+            "titulo": "Quanto pode custar o etanol",
+            "rotulos": [
+              "gasolina R$ 6,00",
+              "etanol rende 70%",
+              "preço máximo = ?",
+              "carro flex"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Com etanol, o carro anda menos por litro.\nPara empatar, o litro do etanol tem que ser mais barato na mesma proporção.\nEntão a conta é 70% de R$ 6,00."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Comece por R$ 1,00, que tem 100 centavos: 70% dele são 70 centavos.\nR$ 6,00 são 6 vezes R$ 1,00: 6 × 70 = 420 centavos.\n420 centavos = R$ 4,20.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Preço máximo do etanol",
+            "dados": [
+              "G = 6{,}00",
+              "70\\% \\text{ de } 1{,}00 = 0{,}70"
+            ],
+            "formula": "E = 70\\% \\times G",
+            "legenda": [
+              "G: preço da gasolina",
+              "E: preço máximo do etanol"
+            ],
+            "contas": [
+              "6 \\times 70 = 420\\,\\text{centavos}",
+              "420\\,\\text{centavos} = 4{,}20"
+            ],
+            "resultado": "E = R\\$\\,4{,}20",
+            "nota": "Até R$ 4,20 o etanol compensa."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Com números: se 1 L de gasolina faz 10 km, 1 L de etanol faz 70% disso, 7 km.\nGasolina: 600 centavos ÷ 10 km = 60 centavos por km. Etanol a R$ 4,20: 420 centavos ÷ 7 km = 60 centavos por km.\nEmpata. Por isso pagar 70% do preço deixa o custo por quilômetro igual.\nAbaixo de R$ 4,20, o etanol sai mais barato por quilômetro.\nAcima, a gasolina ganha."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, R$ 4,20.\nA errou a vírgula: fez 6 × 0,07.\nB tirou R$ 0,70 do preço, mas 70% não é 70 centavos de desconto.\nC dividiu 6 por 0,7 e achou mais que a gasolina.\nE calculou 30%, a parte que sobra."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Se a gasolina custar R$ 5,00, até quanto o etanol compensa (70%)?",
+        "opcoes": [
+          "R$ 3,50",
+          "R$ 4,30",
+          "R$ 7,14",
+          "R$ 1,50"
+        ],
+        "certa": "R$ 3,50",
+        "resposta": "70% de R$ 1,00 = 70 centavos. 5 × 70 = 350 centavos = R$ 3,50."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-06",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Um relatório mostra a origem da eletricidade de um país em um ano: hidrelétricas 60%, usinas eólicas (movidas pelo vento) 12%, biomassa (bagaço de cana e lenha de reflorestamento) 8%, painéis solares 5%, gás natural 10% e carvão mineral 5%. O governo quer divulgar quanto da eletricidade vem de fontes renováveis, aquelas que se refazem em pouco tempo.\nQual porcentagem da eletricidade desse país vem de fontes renováveis?",
+    "A": "85%",
+    "B": "60%",
+    "C": "15%",
+    "D": "80%",
+    "E": "95%",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Renováveis: 60 + 12 + 8 + 5 = 85%. A. Erros: B = só hidrelétrica; C = as não renováveis (10 + 5); D = esqueceu a solar (60 + 12 + 8); E = contou o gás natural como renovável.",
+      "ideia": "Some só as fontes que voltam em pouco tempo: água, vento, biomassa e Sol. 60 + 12 + 8 + 5 = 85%.",
+      "pecas": [
+        {
+          "termo": "Renovável",
+          "significado": "Fonte que se refaz em pouco tempo: a chuva enche o rio de novo, o vento volta, a cana é plantada a cada safra. Carvão e gás natural levam milhões de anos para se formar."
+        },
+        {
+          "termo": "Matriz elétrica",
+          "significado": "A lista das fontes que geram a eletricidade de um país, com a parte de cada uma. Somadas, dão 100%."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O relatório divide a eletricidade em seis fontes, que somam 100%.\nA questão quer só a parte renovável.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "grafico-barras",
+            "titulo": "De onde vem a eletricidade",
+            "rotulos": [
+              "fontes de eletricidade",
+              "60, 12, 8, 5, 10, 5 (%)",
+              "renováveis = ?",
+              "total = 100%"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Separe as fontes em dois grupos.\nRenováveis: água dos rios (hidrelétrica), vento, biomassa e Sol.\nNão renováveis: gás natural e carvão mineral, que vêm de baixo da terra e levam milhões de anos para se formar."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Some as renováveis uma de cada vez:\n60 + 12 = 72.\n72 + 8 = 80.\n80 + 5 = 85%.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Somando as renováveis",
+            "dados": [
+              "\\text{agua} = 60\\%",
+              "\\text{vento} = 12\\%",
+              "\\text{biomassa} = 8\\%",
+              "\\text{Sol} = 5\\%"
+            ],
+            "formula": "R = \\text{agua} + \\text{vento} + \\text{biomassa} + \\text{Sol}",
+            "legenda": [
+              "R: parte renovável",
+              "gás e carvão ficam de fora"
+            ],
+            "contas": [
+              "60 + 12 = 72",
+              "72 + 8 = 80",
+              "80 + 5 = 85"
+            ],
+            "resultado": "R = 85\\%",
+            "nota": "Os outros 15% são gás e carvão."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Para conferir, some o outro grupo: gás 10 + carvão 5 = 15%.\n85 + 15 = 100, o total do relatório.\nA biomassa é renovável pelo mesmo motivo do etanol da aula: a planta nova tira do ar o CO₂ que a queima soltou."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 85%.\nB contou só a hidrelétrica.\nC achou a parte NÃO renovável (10 + 5).\nD esqueceu os painéis solares.\nE pôs o gás natural entre as renováveis, mas ele vem de baixo da terra, como o petróleo."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Num país, 40% da luz vem de rios, 10% do vento e 50% do carvão. Quanto é renovável?",
+        "opcoes": [
+          "50%",
+          "40%",
+          "10%",
+          "90%"
+        ],
+        "certa": "50%",
+        "resposta": "Rio e vento são renováveis: 40 + 10 = 50%. O carvão não entra."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-07",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Uma família quer instalar placas solares no telhado para gerar a própria eletricidade e depender menos de usinas que queimam combustível. A conta de luz mostra que a casa gasta, em média, 12 kWh por dia. O vendedor explicou que, na cidade deles, cada placa gera 1,5 kWh por dia.\nQuantas placas, no mínimo, a família precisa para gerar tudo o que a casa gasta num dia?",
+    "A": "18",
+    "B": "80",
+    "C": "6",
+    "D": "12",
+    "E": "8",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "12 ÷ 1,5 = 120 ÷ 15 = 8 (confere: 8 × 1,5 = 12). E. Erros: A = 12 × 1,5; B = 120 ÷ 1,5 (só um lado × 10); C = arredondou 1,5 para 2; D = uma placa por kWh.",
+      "ideia": "Quantas vezes 1,5 cabe em 12? Tire a vírgula dos dois: 12 ÷ 1,5 = 120 ÷ 15 = 8 placas.",
+      "pecas": [
+        {
+          "termo": "kWh (quilowatt-hora)",
+          "significado": "A unidade de energia elétrica que aparece na conta de luz. Um chuveiro ligado 10 minutos gasta perto de 1 kWh."
+        },
+        {
+          "termo": "Placa solar",
+          "significado": "Painel no telhado que transforma a luz do Sol em eletricidade, sem queimar nada e sem soltar gás."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "kWh é a unidade que a conta de luz cobra: mede a energia gasta, e um ferro de passar ligado 1 hora gasta cerca de 1 kWh.\nA casa gasta 12 kWh por dia.\nCada placa gera 1,5 kWh por dia.\nA questão quer quantas placas juntas chegam a 12 kWh.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Placas para a casa toda",
+            "rotulos": [
+              "casa gasta 12 kWh/dia",
+              "placas = ?",
+              "1 placa → 1,5 kWh/dia",
+              "luz do Sol"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Cada placa entrega o mesmo tanto.\nEntão a pergunta é: quantas vezes 1,5 cabe dentro de 12?\nIsso é uma divisão: 12 ÷ 1,5."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Caso pequeno: 1 ÷ 0,5 = 2, porque cabem 2 metades em 1.\nPara tirar a vírgula, multiplique os DOIS números por 10: 12 ÷ 1,5 = 120 ÷ 15.\n120 ÷ 15 = 8, porque 15 × 8 = 120.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Quantas placas",
+            "dados": [
+              "\\text{casa} = 12\\,\\text{kWh}",
+              "\\text{placa} = 1{,}5\\,\\text{kWh}"
+            ],
+            "formula": "n = \\text{casa} \\div \\text{placa}",
+            "legenda": [
+              "n: número de placas",
+              "× 10 nos dois tira a vírgula"
+            ],
+            "contas": [
+              "1 \\div 0{,}5 = 2",
+              "12 \\div 1{,}5 = 120 \\div 15",
+              "15 \\times 8 = 120"
+            ],
+            "resultado": "n = 8",
+            "nota": "8 placas cobrem o dia todo."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Multiplicar os dois números por 10 não muda quantas vezes um cabe no outro.\nÉ como trocar reais por centavos nos dois lados da conta.\nConferindo somando: 2 placas dão 1,5 + 1,5 = 3 kWh; 8 placas dão 4 × 3 = 12 kWh."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 8 placas.\nA multiplicou 12 por 1,5, mas a pergunta é quantas cabem.\nB tirou a vírgula só do 12 (120 ÷ 1,5).\nC arredondou 1,5 para 2 e achou 6: faltaria energia.\nD pensou que cada placa dá 1 kWh."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma casa gasta 6 kWh por dia e cada placa gera 1,5 kWh. Quantas placas precisa?",
+        "opcoes": [
+          "4",
+          "9",
+          "3",
+          "60"
+        ],
+        "certa": "4",
+        "resposta": "6 ÷ 1,5 = 60 ÷ 15 = 4. Confere: 4 × 1,5 = 6."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-08",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Durante a estação seca, satélites registram milhares de focos de queimada na Amazônia, muitos feitos para abrir pasto. Pesquisadores alertam que a queimada prejudica o clima de dois jeitos ao mesmo tempo: um acontece no dia do fogo e o outro continua pelos anos seguintes, enquanto a área fica sem floresta.\nQuais são esses dois prejuízos?",
+    "A": "A fumaça destrói a camada de ozônio, e o solo queimado solta enxofre na chuva.",
+    "B": "O fogo consome o gás carbônico do ar, e as cinzas esfriam o planeta.",
+    "C": "A madeira queimada solta gás carbônico, e a floresta que some deixa de tirar gás carbônico do ar.",
+    "D": "A queimada solta oxigênio, e as árvores mortas passam a fazer fotossíntese à noite.",
+    "E": "A fumaça vira chuva ácida, e o pasto novo tira mais gás carbônico que a floresta.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Dia do fogo: a madeira queima e solta CO₂. Anos seguintes: sem árvores, não há fotossíntese tirando CO₂ do ar. C. Erros: A mistura ozônio e enxofre; B inverte (fogo solta CO₂); D inventa; E: pasto tira bem menos que a floresta.",
+      "ideia": "A queimada joga CO₂ no ar no dia do fogo. E, sem a floresta, some quem tirava CO₂ do ar pela fotossíntese.",
+      "pecas": [
+        {
+          "termo": "Fotossíntese",
+          "significado": "A planta tira gás carbônico do ar e, com a luz, faz açúcar e solta oxigênio. É assim que a madeira cresce."
+        },
+        {
+          "termo": "Queimada",
+          "significado": "Fogo posto na mata. A madeira tem muito carbono, que vira gás carbônico ao queimar."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A queimada estraga o clima no dia do fogo e também nos anos seguintes.\nA questão quer os dois prejuízos.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "Floresta queimando",
+            "rotulos": [
+              "gás carbônico",
+              "efeito estufa",
+              "floresta queimada",
+              "e depois do fogo?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "No dia do fogo: a madeira, cheia de carbono, queima e solta gás carbônico (CO₂).\nNos anos seguintes: a área fica sem floresta.\nSem árvores, não tem fotossíntese tirando CO₂ do ar."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Pense no CO₂ como uma conta de entrada e saída do ar.\nO fogo PÕE CO₂ no ar.\nA floresta viva TIRAVA CO₂ do ar, e parou de tirar.\nOs dois erros juntam mais CO₂ no ar: mais efeito estufa."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Como na aula, o CO₂ segura o calor na Terra.\nA árvore cresce guardando o carbono que tirou do ar.\nQueimar devolve esse carbono de uma vez, e a floresta que sumiu não guarda mais nada."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C.\nA: ozônio é destruído pelos CFCs, e o problema aqui é o CO₂.\nB: o fogo solta CO₂, não consome.\nD: queima gasta oxigênio, e árvore morta não faz fotossíntese.\nE: o pasto guarda bem menos carbono que a floresta, então ele não compensa a perda."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Por que plantar árvores ajuda a frear o efeito estufa?",
+        "opcoes": [
+          "Elas tiram CO₂ do ar",
+          "Elas soltam metano",
+          "Elas filtram ultravioleta",
+          "Elas produzem enxofre"
+        ],
+        "certa": "Elas tiram CO₂ do ar",
+        "resposta": "Na fotossíntese, a árvore tira CO₂ do ar e guarda o carbono na madeira."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-09",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Uma prefeitura fez uma campanha para as pessoas trocarem o carro pelo ônibus. Os dados da campanha: um ônibus urbano solta 1 200 g de gás carbônico por quilômetro e leva, em média, 40 passageiros. Um carro solta 120 g de gás carbônico por quilômetro e, em geral, leva só o motorista.\nPor passageiro, o carro solta quantas vezes mais gás carbônico que o ônibus?",
+    "A": "10 vezes",
+    "B": "4 vezes",
+    "C": "40 vezes",
+    "D": "3 vezes",
+    "E": "30 vezes",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Ônibus por pessoa: 1 200 ÷ 40 = 30 g/km. Carro: 120 g/km. 120 ÷ 30 = 4. B. Erros: A = 1 200 ÷ 120 (ônibus inteiro × carro); C = só os 40 passageiros; D = 120 ÷ 40; E = parou nos 30 g por pessoa.",
+      "ideia": "Divida o gás do ônibus pelos 40 passageiros: 30 g por pessoa. O carro solta 120 g para uma pessoa: 120 ÷ 30 = 4 vezes mais.",
+      "pecas": [
+        {
+          "termo": "Por passageiro",
+          "significado": "O gás dividido entre as pessoas que estão no veículo. Ônibus cheio reparte a fumaça entre muita gente."
+        },
+        {
+          "termo": "Gás carbônico (CO₂)",
+          "significado": "Gás que sai da queima de combustível e segura calor na Terra: é o principal do efeito estufa."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O ônibus solta 1 200 g de CO₂ por km e leva 40 pessoas.\nO carro solta 120 g por km e leva 1 pessoa.\nA questão compara o gás de cada passageiro.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "Ônibus contra carro",
+            "rotulos": [
+              "CO₂ por km",
+              "efeito estufa",
+              "ônibus 1 200 g, 40 pessoas",
+              "carro 120 g, 1 pessoa"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O ônibus inteiro solta mais, mas a fumaça se reparte entre 40 pessoas.\nEntão primeiro divida o gás do ônibus por 40.\nDepois compare com o carro, que tem uma pessoa só."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ônibus: 1 200 ÷ 40. Corte um zero dos dois: 120 ÷ 4 = 30 g por pessoa.\nCortar o zero não muda a conta, porque dividir os dois pelo mesmo número não muda quantas vezes um cabe no outro (120 ÷ 40 = 3 e 12 ÷ 4 = 3).\nCarro: 120 g para 1 pessoa.\nQuantas vezes 30 cabe em 120? 120 ÷ 30 = 4, porque 4 × 30 = 120.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Gás de cada passageiro",
+            "dados": [
+              "\\text{onibus} = 1\\,200\\,\\text{g/km}",
+              "40\\ \\text{passageiros}",
+              "\\text{carro} = 120\\,\\text{g/km}"
+            ],
+            "formula": "x = \\text{carro} \\div (\\text{onibus} \\div 40)",
+            "legenda": [
+              "x: quantas vezes mais",
+              "divide o ônibus pelos passageiros"
+            ],
+            "contas": [
+              "1\\,200 \\div 40 = 120 \\div 4 = 30",
+              "120 \\div 30 = 4"
+            ],
+            "resultado": "x = 4",
+            "nota": "O carro solta 4 vezes mais por pessoa."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Comparar \"quantas vezes\" é dividir um pelo outro.\nA conta só é justa se os dois estão na mesma medida: gás de UMA pessoa em UM quilômetro.\nPor isso o ônibus foi dividido pelos passageiros antes."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 4 vezes.\nA comparou o ônibus inteiro com o carro, sem dividir pelos passageiros.\nC pegou só o número de passageiros.\nD dividiu 120 por 40, misturando carro com passageiros do ônibus.\nE parou no gás de cada passageiro do ônibus."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma van solta 300 g de CO₂ por km e leva 10 pessoas. Quanto solta por pessoa?",
+        "opcoes": [
+          "30 g",
+          "3 000 g",
+          "310 g",
+          "3 g"
+        ],
+        "certa": "30 g",
+        "resposta": "300 ÷ 10 = 30 g por pessoa, em cada quilômetro."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-10",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Uma escola fez uma feira de ciências e calculou que o evento, somando transporte e energia, soltou 3 toneladas de gás carbônico. Para compensar, a escola vai plantar árvores nativas. Um técnico informou que cada árvore, ao crescer, tira do ar em média 15 kg de gás carbônico por ano, pela fotossíntese.\nQuantas árvores a escola precisa plantar para compensar o evento em um ano?",
+    "A": "45 000",
+    "B": "20",
+    "C": "5",
+    "D": "200",
+    "E": "2 000",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "3 t = 3 000 kg; 3 000 ÷ 15 = 200 (confere: 200 × 15 = 3 000). D. Erros: A = 3 000 × 15; B = usou 300 kg; C = 15 ÷ 3; E = usou 30 000 kg.",
+      "ideia": "Passe tonelada para quilo: 3 t = 3 000 kg. Cada árvore tira 15 kg, então 3 000 ÷ 15 = 200 árvores.",
+      "pecas": [
+        {
+          "termo": "Tonelada",
+          "significado": "1 tonelada = 1 000 kg. Então 3 toneladas são 3 000 kg."
+        },
+        {
+          "termo": "Compensar",
+          "significado": "Tirar do ar a mesma quantidade de gás carbônico que foi solta, por exemplo plantando árvores."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A feira soltou 3 toneladas de CO₂.\nCada árvore tira 15 kg de CO₂ do ar por ano.\nA questão quer quantas árvores tiram tudo em um ano.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Árvores contra o CO₂",
+            "rotulos": [
+              "3 t de CO₂ do evento",
+              "árvores = ?",
+              "1 árvore → 15 kg/ano",
+              "fotossíntese"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "As duas medidas estão em unidades diferentes: tonelada e quilo.\nPrimeiro passe tudo para quilo: 3 t = 3 × 1 000 = 3 000 kg.\nDepois veja quantas vezes 15 kg cabe em 3 000 kg."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Com números pequenos: 10 árvores tiram 10 × 15 = 150 kg.\n100 árvores tiram 1 500 kg.\n200 árvores tiram 2 × 1 500 = 3 000 kg.\nEntão 3 000 ÷ 15 = 200.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Quantas árvores",
+            "dados": [
+              "\\text{CO}_2 = 3\\,\\text{t} = 3\\,000\\,\\text{kg}",
+              "\\text{arvore} = 15\\,\\text{kg por ano}"
+            ],
+            "formula": "n = 3\\,000 \\div 15",
+            "legenda": [
+              "n: número de árvores",
+              "1 t = 1 000 kg"
+            ],
+            "contas": [
+              "100 \\times 15 = 1\\,500",
+              "200 \\times 15 = 3\\,000"
+            ],
+            "resultado": "n = 200",
+            "nota": "200 árvores em um ano."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada árvore tira a mesma quantidade, então o total é árvores × 15 kg.\nPara chegar a 3 000 kg, procuramos quantas vezes 15 cabe em 3 000.\nÉ a fotossíntese da aula: a planta tira CO₂ do ar para crescer."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 200 árvores.\nA multiplicou 3 000 por 15.\nB usou 300 kg no lugar de 3 000 kg.\nC dividiu 15 por 3, sem passar tonelada para quilo.\nE usou 30 000 kg: 1 tonelada tem 1 000 kg, não 10 000."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Cada árvore tira 20 kg de CO₂ por ano. Quantas compensam 1 tonelada?",
+        "opcoes": [
+          "50",
+          "20 000",
+          "200",
+          "5"
+        ],
+        "certa": "50",
+        "resposta": "1 t = 1 000 kg. 1 000 ÷ 20 = 50 árvores."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-11",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Uma cooperativa recolhe o óleo de cozinha usado em restaurantes e casas do bairro. Em vez de ir para o ralo, onde entope canos e suja os rios, o óleo é levado a uma pequena usina. Lá ele é transformado num combustível para tratores e caminhões, que é misturado ao diesel tirado do petróleo.\nO combustível produzido pela cooperativa é o",
+    "A": "biodiesel, feito de óleos e gorduras.",
+    "B": "biogás, feito de esterco apodrecido sem oxigênio.",
+    "C": "etanol, feito do açúcar da cana.",
+    "D": "gás natural, tirado de baixo da terra.",
+    "E": "carvão mineral, formado por plantas muito antigas.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Óleo de cozinha → combustível que vai no diesel = biodiesel. A. Erros: B é de esterco e lixo; C é de cana; D e E vêm de baixo da terra, não de óleo usado.",
+      "ideia": "Cada biocombustível da aula tem sua origem: cana dá etanol, esterco e lixo dão biogás, óleos e gorduras dão biodiesel.",
+      "pecas": [
+        {
+          "termo": "Biocombustível",
+          "significado": "Combustível feito de seres vivos ou de restos deles, como cana, óleo de soja ou esterco."
+        },
+        {
+          "termo": "Biodiesel",
+          "significado": "Combustível feito de óleos e gorduras, como o óleo de fritura. Vai misturado ao diesel de caminhões e tratores."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A cooperativa recolhe óleo de cozinha usado.\nUma usina transforma esse óleo em combustível para tratores e caminhões.\nA questão quer o nome desse combustível.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Do óleo usado ao tanque",
+            "rotulos": [
+              "óleo de fritura usado",
+              "combustível = ?",
+              "vai para tratores",
+              "misturado ao diesel"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O ponto de partida é óleo, uma gordura de planta (soja, girassol).\nO produto vai misturado ao diesel.\nOs dois detalhes apontam para o mesmo combustível da aula."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ligue a matéria-prima ao combustível, como na aula:\nCana: etanol.\nEsterco e lixo apodrecendo sem oxigênio: biogás.\nÓleos e gorduras: biodiesel, o \"diesel de origem viva\"."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Biodiesel vem de óleos de plantas ou de gordura animal, por isso é um biocombustível.\nEle substitui parte do diesel do petróleo, e ainda tira o óleo usado do ralo e dos rios."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, biodiesel.\nB: biogás vem de esterco e lixo, não de óleo.\nC: etanol vem do açúcar da cana.\nD: gás natural é tirado de baixo da terra, como o petróleo.\nE: carvão mineral também vem de baixo da terra."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "De onde vem o biogás?",
+        "opcoes": [
+          "Esterco e lixo apodrecendo",
+          "Óleo de cozinha usado",
+          "Caldo de cana",
+          "Petróleo"
+        ],
+        "certa": "Esterco e lixo apodrecendo",
+        "resposta": "Sem oxigênio, as bactérias apodrecem esterco e lixo e soltam metano: o biogás."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-12",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Uma família trocou as lâmpadas antigas da casa por lâmpadas de LED, que gastam bem menos, e passou a usar 30 kWh a menos de eletricidade por mês. A região é abastecida por uma usina termelétrica a gás natural, que solta 0,4 kg de gás carbônico para cada 1 kWh gerado.\nQuantos quilos de gás carbônico deixam de ir para o ar por mês com a troca?",
+    "A": "75 kg",
+    "B": "120 kg",
+    "C": "12 kg",
+    "D": "1,2 kg",
+    "E": "30,4 kg",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "30 × 0,4 = 12 kg (10 kWh → 4 kg; 3 × 4 = 12). C. Erros: A = 30 ÷ 0,4; B = 30 × 4 (esqueceu a vírgula); D = 30 × 0,04; E = somou 30 + 0,4.",
+      "ideia": "Cada kWh economizado deixa de soltar 0,4 kg de CO₂. Então 30 kWh deixam de soltar 30 × 0,4 = 12 kg.",
+      "pecas": [
+        {
+          "termo": "kWh (quilowatt-hora)",
+          "significado": "A unidade de energia elétrica que aparece na conta de luz."
+        },
+        {
+          "termo": "Termelétrica",
+          "significado": "Usina que queima combustível (gás, carvão, óleo) para gerar eletricidade. Por isso solta gás carbônico."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "kWh é a unidade que a conta de luz cobra: mede a energia gasta, e um ferro de passar ligado 1 hora gasta cerca de 1 kWh.\nA casa passou a gastar 30 kWh a menos por mês.\nCada kWh da usina soltava 0,4 kg de CO₂.\nA questão quer quanto CO₂ deixou de sair.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "Luz que vem da termelétrica",
+            "rotulos": [
+              "0,4 kg de CO₂ por kWh",
+              "efeito estufa",
+              "gás natural",
+              "30 kWh a menos por mês"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A usina queima gás natural para gerar cada kWh.\nkWh que a casa não usa é kWh que a usina não precisa gerar.\nEntão cada kWh economizado poupa 0,4 kg de CO₂."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "0,4 são 4 décimos.\nCaso pequeno: 10 kWh soltariam 10 × 0,4 = 4 kg (dez vezes 4 décimos dá 4 inteiros).\n30 kWh são 3 vezes 10 kWh: 3 × 4 = 12 kg.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "CO₂ que não saiu",
+            "dados": [
+              "E = 30\\,\\text{kWh}",
+              "f = 0{,}4\\,\\text{kg por kWh}"
+            ],
+            "formula": "\\text{CO}_2 = E \\times f",
+            "legenda": [
+              "E: energia economizada",
+              "f: CO₂ de cada kWh"
+            ],
+            "contas": [
+              "10 \\times 0{,}4 = 4",
+              "3 \\times 4 = 12"
+            ],
+            "resultado": "\\text{CO}_2 = 12\\,\\text{kg}",
+            "nota": "12 kg a menos por mês."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada kWh pesa o mesmo tanto de CO₂, então o total é kWh × 0,4.\nMultiplicar por 0,4 dá um número menor que 30, e faz sentido:\ncada kWh solta menos de 1 kg."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 12 kg.\nA dividiu 30 por 0,4 e achou mais que 30.\nB esqueceu a vírgula e fez 30 × 4.\nD pôs um zero a mais: 30 × 0,04.\nE somou 30 com 0,4, mas cada kWh solta: é vezes."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma loja economizou 50 kWh no mês, e cada kWh soltava 0,4 kg de CO₂. Quanto deixou de soltar?",
+        "opcoes": [
+          "20 kg",
+          "125 kg",
+          "200 kg",
+          "2 kg"
+        ],
+        "certa": "20 kg",
+        "resposta": "10 kWh soltam 4 kg. 50 kWh são 5 vezes 10: 5 × 4 = 20 kg."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-13",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Num sítio, o biogás de um biodigestor substituiu o gás de cozinha comprado em botijão. Pelos cálculos de um técnico agrícola, 1 m³ de biogás dá a mesma energia que 0,5 kg do gás de botijão. Antes, a família usava um botijão de 13 kg por mês.\nQuantos metros cúbicos de biogás por mês substituem esse botijão?",
+    "A": "6,5 m³",
+    "B": "13,5 m³",
+    "C": "2,6 m³",
+    "D": "130 m³",
+    "E": "26 m³",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "13 ÷ 0,5 = 26 (cada 1 kg pede 2 m³; 13 × 2 = 26). E. Erros: A = 13 × 0,5; B = 13 + 0,5; C = vírgula errada (13 ÷ 5); D = 13 × 10.",
+      "ideia": "Cada metro cúbico de biogás vale só meio quilo de gás de botijão. Então 1 kg pede 2 m³, e 13 kg pedem 13 × 2 = 26 m³.",
+      "pecas": [
+        {
+          "termo": "Biogás",
+          "significado": "Gás que sai do esterco e do lixo apodrecendo sem oxigênio. É quase todo metano (CH₄), e queima no fogão."
+        },
+        {
+          "termo": "m³ (metro cúbico)",
+          "significado": "O espaço de uma caixa de 1 m por 1 m por 1 m. Cabem 1 000 litros."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A família gastava 13 kg de gás de botijão por mês.\nCada 1 m³ de biogás vale 0,5 kg desse gás.\nA questão quer quantos m³ de biogás fazem o mesmo serviço.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Biogás no lugar do botijão",
+            "rotulos": [
+              "botijão de 13 kg",
+              "biogás = ?",
+              "1 m³ vale 0,5 kg",
+              "por mês"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Cada m³ de biogás cobre só meio quilo do botijão.\nEntão a pergunta é: quantas vezes 0,5 cabe em 13?\nIsso é 13 ÷ 0,5."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Caso pequeno: 1 ÷ 0,5 = 2, porque cabem 2 metades em 1.\nEntão 1 kg do botijão pede 2 m³ de biogás.\n13 kg pedem 13 × 2 = 26 m³.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Biogás que vale um botijão",
+            "dados": [
+              "\\text{botijao} = 13\\,\\text{kg}",
+              "1\\,\\text{m}^3 = 0{,}5\\,\\text{kg}"
+            ],
+            "formula": "V = 13 \\div 0{,}5",
+            "legenda": [
+              "V: biogás por mês",
+              "÷ 0,5 é o mesmo que × 2"
+            ],
+            "contas": [
+              "1 \\div 0{,}5 = 2",
+              "13 \\times 2 = 26"
+            ],
+            "resultado": "V = 26\\,\\text{m}^3",
+            "nota": "Confere: 26 × 0,5 = 13 kg."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Dividir por 0,5 é o mesmo que perguntar quantas metades cabem, e isso é o dobro.\nPor isso o resultado (26) é maior que 13: o biogás rende menos por m³ e precisa de mais volume.\nConfere: 26 × 0,5 = 13 kg."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 26 m³.\nA multiplicou por 0,5 e achou a metade, mas o biogás rende menos, então precisa de mais.\nB somou 13 com 0,5.\nC errou a vírgula (dividiu por 5).\nD multiplicou por 10."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Se 1 m³ de biogás vale 0,5 kg de gás de botijão, quanto biogás vale um botijão de 8 kg?",
+        "opcoes": [
+          "16 m³",
+          "4 m³",
+          "8,5 m³",
+          "0,8 m³"
+        ],
+        "certa": "16 m³",
+        "resposta": "Cabem 2 metades em cada quilo: 8 × 2 = 16 m³."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-14",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Num ano de pouca chuva, os reservatórios das hidrelétricas brasileiras ficaram baixos. Para não faltar energia, o governo ligou mais usinas termelétricas, que queimam gás natural, carvão e óleo. Os jornais noticiaram que a conta de luz ficou mais cara e que a poluição do setor elétrico também aumentou.\nO aumento das emissões nesse período agrava principalmente",
+    "A": "a destruição da camada de ozônio, pelo vapor de água das usinas.",
+    "B": "o efeito estufa, pelo gás carbônico da queima de combustíveis fósseis.",
+    "C": "a falta de oxigênio no ar das cidades.",
+    "D": "a chuva ácida, pela água parada nos reservatórios.",
+    "E": "o esfriamento do planeta, pela fumaça que bloqueia o Sol.",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Trocou água (hidrelétrica) por queima de gás, carvão e óleo (termelétrica) = mais CO₂ = mais efeito estufa. B. Erros: A: ozônio é CFC; C exagera, o oxigênio do ar não acaba; D: água parada não azeda a chuva; E inverte o efeito.",
+      "ideia": "Hidrelétrica usa a força da água e não queima nada. Termelétrica queima combustível fóssil e solta CO₂, que segura calor.",
+      "pecas": [
+        {
+          "termo": "Combustível fóssil",
+          "significado": "Combustível formado de restos de seres vivos de milhões de anos atrás, debaixo da terra: petróleo, carvão mineral e gás natural."
+        },
+        {
+          "termo": "Termelétrica",
+          "significado": "Usina que queima combustível para gerar eletricidade. A hidrelétrica, ao contrário, usa a água que desce do rio."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Com pouca chuva, as hidrelétricas produziram menos.\nO governo ligou termelétricas, que queimam gás natural, carvão e óleo.\nA questão quer o problema ambiental que mais piora.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "Termelétrica ligada na seca",
+            "rotulos": [
+              "gás da queima",
+              "qual problema piora?",
+              "gás, carvão e óleo",
+              "rios baixos"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A hidrelétrica gera luz com a água que gira a turbina: não queima nada.\nA termelétrica queima combustível que veio de baixo da terra.\nToda queima de carbono solta gás carbônico (CO₂)."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Use a palavra-chave da aula: CO₂ esquenta, enxofre azeda.\nQueimar petróleo, carvão e gás joga CO₂ extra no ar.\nCO₂ extra: efeito estufa."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O carbono do carvão, do óleo e do gás estava guardado debaixo da terra havia milhões de anos.\nQueimar esse carbono soma CO₂ novo no ar, e o CO₂ segura o calor da Terra.\nPor isso a seca deixou a luz mais cara e o clima mais quente."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, o efeito estufa.\nA: quem destrói o ozônio são os CFCs, não o vapor de água.\nC: a queima gasta oxigênio, mas não deixa as cidades sem ar.\nD: a chuva ácida vem de gases de enxofre e nitrogênio, não de água parada.\nE: os gases da queima seguram calor, não esfriam."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual destas usinas solta mais CO₂ para gerar a mesma energia?",
+        "opcoes": [
+          "Termelétrica a carvão",
+          "Eólica (vento)",
+          "Solar",
+          "Hidrelétrica"
+        ],
+        "certa": "Termelétrica a carvão",
+        "resposta": "Só a termelétrica queima combustível. Vento, Sol e água giram ou acendem sem queimar nada."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-15",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Um estudo numa fazenda calculou que cada boi solta pelo arroto cerca de 60 kg de metano (CH₄) por ano. A fazenda tem 200 bois. Para comparar com outras fontes de poluição, os pesquisadores usaram esta regra: 1 kg de metano segura tanto calor quanto 28 kg de gás carbônico.\nO metano da fazenda em um ano equivale a quantas toneladas de gás carbônico?",
+    "A": "12 t",
+    "B": "3 360 t",
+    "C": "33,6 t",
+    "D": "336 t",
+    "E": "40 t",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "200 × 60 = 12 000 kg = 12 t de metano; 12 × 28 = 336 t de CO₂. D. Erros: A = esqueceu o × 28; B = um zero a mais; C = um zero a menos; E = somou 12 + 28.",
+      "ideia": "Primeiro o metano do rebanho: 200 × 60 = 12 000 kg = 12 t. Cada tonelada de metano vale 28 de CO₂: 12 × 28 = 336 t.",
+      "pecas": [
+        {
+          "termo": "Metano (CH₄)",
+          "significado": "Gás que sai do arroto do boi e do lixo apodrecendo. Como o CO₂, segura calor na Terra: é gás de efeito estufa."
+        },
+        {
+          "termo": "Equivale a",
+          "significado": "Faz o mesmo efeito que. Aqui: o calor que 1 kg de metano segura é o mesmo que 28 kg de CO₂ seguram."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Cada boi solta 60 kg de metano por ano, e são 200 bois.\nCada 1 kg de metano vale 28 kg de CO₂.\nA questão quer o total em toneladas de CO₂.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "O arroto do rebanho",
+            "rotulos": [
+              "200 bois",
+              "CO₂ equivalente = ?",
+              "1 boi → 60 kg de CH₄/ano",
+              "1 kg CH₄ = 28 kg CO₂"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "São dois passos.\nPrimeiro: quanto metano o rebanho inteiro solta.\nDepois: trocar esse metano pelo tanto de CO₂ que faz o mesmo efeito."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Rebanho: 200 × 60 = 12 000 kg. Como 1 t = 1 000 kg, são 12 t de metano.\nCaso pequeno: 1 t de metano vale 28 t de CO₂; 2 t valem 56 t.\n12 t valem 12 × 28: 10 × 28 = 280 e 2 × 28 = 56; 280 + 56 = 336 t.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Metano virando CO₂",
+            "dados": [
+              "200\\ \\text{bois}",
+              "60\\,\\text{kg de CH}_4\\ \\text{por boi}",
+              "1\\,\\text{kg CH}_4 = 28\\,\\text{kg CO}_2"
+            ],
+            "formula": "C = \\text{bois} \\times 60 \\times 28",
+            "legenda": [
+              "C: CO₂ equivalente",
+              "1 t = 1 000 kg"
+            ],
+            "contas": [
+              "200 \\times 60 = 12\\,000\\,\\text{kg} = 12\\,\\text{t}",
+              "10 \\times 28 = 280",
+              "2 \\times 28 = 56",
+              "280 + 56 = 336"
+            ],
+            "resultado": "C = 336\\,\\text{t}",
+            "nota": "336 t de CO₂ equivalente por ano."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada boi solta igual, então o rebanho solta bois × 60.\nE cada quilo de metano vale 28 quilos de CO₂, então o total vezes 28.\nO número é grande porque o metano segura muito mais calor que o mesmo peso de CO₂."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 336 t.\nA parou no metano (12 t) e esqueceu de trocar por CO₂.\nB pôs um zero a mais.\nC pôs um zero a menos.\nE somou 12 com 28, mas cada tonelada vale 28: é vezes."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Se 1 kg de metano vale 28 kg de CO₂, quanto valem 3 kg de metano?",
+        "opcoes": [
+          "84 kg de CO₂",
+          "31 kg de CO₂",
+          "25 kg de CO₂",
+          "9,3 kg de CO₂"
+        ],
+        "certa": "84 kg de CO₂",
+        "resposta": "3 × 28 = 84 kg de CO₂."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-16",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Uma reportagem comparou carros elétricos em dois países. No país X, quase toda a eletricidade vem de hidrelétricas e de usinas eólicas (movidas pelo vento). No país Y, a maior parte vem de termelétricas que queimam carvão mineral. Nos dois países, o carro elétrico não solta nenhum gás pelo escapamento.\nSobre o efeito estufa, a reportagem concluiu corretamente que",
+    "A": "no país Y, o carro elétrico ajuda menos, porque o gás carbônico sai na chaminé da usina que gera a eletricidade.",
+    "B": "nos dois países, o carro elétrico não solta gás carbônico em nenhuma etapa.",
+    "C": "no país X, o carro elétrico polui mais, porque as hidrelétricas soltam enxofre.",
+    "D": "no país Y, o carro elétrico causa chuva ácida pelo escapamento.",
+    "E": "nos dois países, o carro elétrico destrói a camada de ozônio.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "O CO₂ não sai do carro, mas sai de onde a eletricidade foi feita: no país Y, da queima de carvão. A. Erros: B esquece a usina; C: água e vento não queimam nada; D: o texto diz que não sai gás do escapamento; E: ozônio é CFC.",
+      "ideia": "Carro elétrico não tem escapamento sujo, mas a tomada vem de algum lugar. Se a usina queima carvão, o CO₂ sai na chaminé dela.",
+      "pecas": [
+        {
+          "termo": "Termelétrica",
+          "significado": "Usina que queima combustível, como carvão, para gerar eletricidade. Solta gás carbônico pela chaminé."
+        },
+        {
+          "termo": "Eólica",
+          "significado": "Usina que gera eletricidade com o vento girando grandes hélices. Não queima nada."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O carro elétrico não solta gás pelo escapamento nos dois países.\nMas a eletricidade de X vem de água e vento, e a de Y vem de carvão.\nA questão quer o que muda no efeito estufa.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "De onde vem a carga do carro",
+            "rotulos": [
+              "gás carbônico",
+              "efeito estufa",
+              "país Y: carvão",
+              "país X: água e vento"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O carro elétrico anda com a eletricidade da tomada.\nNo país X, essa eletricidade vem de água e vento: ninguém queimou nada.\nNo país Y, ela vem da queima de carvão, que solta gás carbônico (CO₂) na usina."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Siga a energia até a origem e pergunte: alguém queimou carbono?\nPaís X: não. Pouco CO₂.\nPaís Y: sim, carvão. O CO₂ saiu, só que longe do carro."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Como diz a aula, queimar petróleo e carvão joga CO₂ extra no ar.\nPara o clima, tanto faz se o CO₂ sai no escapamento ou na chaminé da usina:\nele vai para o mesmo ar e segura calor do mesmo jeito."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A.\nB esquece a usina: no país Y o CO₂ sai lá.\nC: hidrelétrica e vento não queimam nada, nem soltam enxofre.\nD: o próprio texto diz que o carro não solta gás.\nE: quem destrói o ozônio são os CFCs."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um carro elétrico carregado só com placas solares solta CO₂ para andar?",
+        "opcoes": [
+          "Não, nem no carro nem na fonte",
+          "Sim, pelo escapamento",
+          "Sim, na chaminé da usina",
+          "Só em dia nublado"
+        ],
+        "certa": "Não, nem no carro nem na fonte",
+        "resposta": "A placa solar faz eletricidade com luz, sem queimar nada, e o carro não tem escapamento."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-17",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Uma usina de açúcar e álcool informa que cada tonelada de cana colhida rende 80 litros de etanol. Uma área plantada produziu 50 toneladas de cana nesta safra. Um carro popular percorre 10 km com 1 litro de etanol.\nQuantos quilômetros esse carro consegue rodar com todo o etanol feito da cana dessa área?",
+    "A": "4 000 km",
+    "B": "400 km",
+    "C": "40 000 km",
+    "D": "140 km",
+    "E": "500 km",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "50 × 80 = 4 000 L; 4 000 × 10 = 40 000 km. C. Erros: A = parou nos litros; B = um zero a menos; D = somou 50 + 80 + 10; E = 50 × 10 (pulou o etanol).",
+      "ideia": "Duas multiplicações em fila: cana vira litros (50 × 80 = 4 000 L), e litros viram quilômetros (4 000 × 10 = 40 000 km).",
+      "pecas": [
+        {
+          "termo": "Etanol",
+          "significado": "Combustível feito do açúcar da cana. É renovável: a cana nova tira do ar o CO₂ que a queima soltou."
+        },
+        {
+          "termo": "Rende",
+          "significado": "Quanto sai de cada parte. Aqui, cada 1 tonelada de cana vira 80 litros de etanol."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A área deu 50 t de cana.\nCada tonelada vira 80 L de etanol, e cada litro leva o carro 10 km.\nA questão quer quantos quilômetros dá todo esse etanol.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Da cana ao quilômetro",
+            "rotulos": [
+              "50 t de cana",
+              "km rodados = ?",
+              "1 t → 80 L de etanol",
+              "1 L → 10 km"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "São dois passos, um depois do outro.\nPrimeiro: quanta cana vira quanto etanol.\nDepois: quanto etanol leva o carro até onde."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Cana para litros: 1 t dá 80 L; 10 t dão 800 L; 50 t dão 5 × 800 = 4 000 L.\nLitros para km: 1 L dá 10 km; 4 000 L dão 4 000 × 10 = 40 000 km.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Cana, litros e quilômetros",
+            "dados": [
+              "\\text{cana} = 50\\,\\text{t}",
+              "1\\,\\text{t} \\to 80\\,\\text{L}",
+              "1\\,\\text{L} \\to 10\\,\\text{km}"
+            ],
+            "formula": "d = 50 \\times 80 \\times 10",
+            "legenda": [
+              "d: distância em km",
+              "primeiro litros, depois km"
+            ],
+            "contas": [
+              "10 \\times 80 = 800",
+              "5 \\times 800 = 4\\,000\\,\\text{L}",
+              "4\\,000 \\times 10 = 40\\,000"
+            ],
+            "resultado": "d = 40\\,000\\,\\text{km}",
+            "nota": "Quarenta mil quilômetros."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada tonelada rende igual, então o total de etanol é toneladas × 80.\nCada litro leva igual, então o total de km é litros × 10.\nQuando uma coisa vira outra que vira outra, as multiplicações vão em fila."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 40 000 km.\nA parou nos litros (4 000 L) e não passou para km.\nB perdeu um zero.\nD somou os três números.\nE fez 50 × 10, como se cada tonelada de cana fosse 1 litro."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Com 20 t de cana, a 80 L de etanol por tonelada, quantos litros saem?",
+        "opcoes": [
+          "1 600 L",
+          "100 L",
+          "160 L",
+          "16 000 L"
+        ],
+        "certa": "1 600 L",
+        "resposta": "10 t dão 800 L. 20 t dão 2 × 800 = 1 600 L."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-18",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Num dia de sol, um carro ficou estacionado com os vidros fechados. A luz do Sol atravessou os vidros e esquentou os bancos. Os bancos quentes soltaram calor, mas o vidro segurou boa parte desse calor dentro do carro, que ficou muito mais quente que a rua. Na atmosfera da Terra acontece algo parecido, em tamanho bem maior.\nO fenômeno da atmosfera parecido com o do carro e os gases que fazem o papel do vidro são:",
+    "A": "a chuva ácida; os gases de enxofre e de nitrogênio.",
+    "B": "o efeito estufa; o oxigênio e o nitrogênio do ar.",
+    "C": "a camada de ozônio; o ozônio, que segura o calor.",
+    "D": "a fotossíntese; o gás carbônico e o oxigênio.",
+    "E": "o efeito estufa; o gás carbônico e o metano.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Luz entra, calor fica preso = efeito estufa; quem segura o calor são CO₂ e metano. E. Erros: A é chuva ácida (azeda, não esquenta); B acerta o nome e erra os gases; C: ozônio filtra ultravioleta; D: fotossíntese é a planta fazendo açúcar.",
+      "ideia": "Luz entra e o calor fica preso: é o efeito estufa. Na Terra, o vidro do carro é feito de gases como o gás carbônico e o metano.",
+      "pecas": [
+        {
+          "termo": "Efeito estufa",
+          "significado": "Gases do ar seguram parte do calor que a Terra solta, como o vidro do carro. Sem ele a Terra seria gelada; com gás demais, esquenta."
+        },
+        {
+          "termo": "Metano (CH₄)",
+          "significado": "Gás que sai do lixo e do esterco apodrecendo e do arroto do boi. Também segura calor."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A luz entra no carro, esquenta os bancos, e o vidro não deixa o calor sair.\nNa Terra acontece algo parecido.\nA questão quer o nome do fenômeno e os gases que fazem o papel do vidro.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "calor-panela",
+            "titulo": "O carro fechado ao sol",
+            "rotulos": [
+              "luz entra pelo vidro",
+              "calor fica preso",
+              "gases = ?",
+              "carro mais quente"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Luz entra, calor não sai: o lugar esquenta.\nNa Terra, a luz do Sol passa pelo ar e esquenta o chão.\nO chão solta calor, e alguns gases do ar seguram parte dele."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave da aula: CO₂ esquenta, enxofre azeda.\nO carro ESQUENTOU, então é o lado do CO₂.\nOs gases que seguram calor na aula são o gás carbônico (CO₂) e o metano (CH₄)."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Na aula: gases como CO₂ e metano seguram o calor na Terra.\nEles deixam a luz passar, mas seguram o calor que volta, igual ao vidro.\nQuanto mais desses gases, mais calor preso."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, efeito estufa com CO₂ e metano.\nA: enxofre e nitrogênio azedam a chuva, não seguram calor.\nB acerta o nome e erra os gases: oxigênio e nitrogênio não seguram calor.\nC: o ozônio filtra ultravioleta.\nD: fotossíntese é a planta fazendo açúcar."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Quais gases da aula seguram o calor na Terra?",
+        "opcoes": [
+          "CO₂ e metano",
+          "Ozônio e oxigênio",
+          "Enxofre e nitrogênio",
+          "Oxigênio e hidrogênio"
+        ],
+        "certa": "CO₂ e metano",
+        "resposta": "Gás carbônico e metano: os gases do efeito estufa."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-19",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "A gasolina vendida nos postos brasileiros não é pura: ela vem misturada com etanol, que é renovável. Considere que essa mistura tenha 30% de etanol e o resto de gasolina pura, tirada do petróleo. Um motorista colocou 40 litros dessa gasolina no tanque.\nQuantos litros de gasolina pura, vinda do petróleo, ele colocou no tanque?",
+    "A": "12 L",
+    "B": "28 L",
+    "C": "10 L",
+    "D": "37 L",
+    "E": "13,3 L",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "30% de 40 = 12 L de etanol; 40 − 12 = 28 L de gasolina pura (ou 70% de 40 = 4 × 7 = 28). B. Erros: A = o etanol; C = 40 − 30; D = 40 − 3; E = 40 ÷ 3.",
+      "ideia": "Se 30% é etanol, os outros 70% são gasolina pura. Em cada 10 L, 7 L são gasolina: em 40 L, 4 × 7 = 28 L.",
+      "pecas": [
+        {
+          "termo": "Porcentagem",
+          "significado": "Quantos de cada 100. 30% de etanol: em 100 L de mistura, 30 L são etanol. Em 10 L, 3 L."
+        },
+        {
+          "termo": "Gasolina pura",
+          "significado": "A parte que vem do petróleo, um combustível fóssil, que não se refaz em pouco tempo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O motorista pôs 40 L de mistura no tanque.\n30% da mistura é etanol, e o resto é gasolina pura.\nA questão quer só a parte da gasolina pura.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "porcentagem-barra",
+            "titulo": "O que tem no tanque",
+            "rotulos": [
+              "40 L no tanque",
+              "30% de etanol",
+              "gasolina pura = ?",
+              "o resto é do petróleo"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A mistura inteira é 100%.\nSe 30% é etanol, sobra 100 − 30 = 70% de gasolina pura.\nEntão a conta é 70% de 40 L."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "30% é 30 de cada 100. Dividindo os dois por 10, é 3 de cada 10 (30 de 100 alunos = 3 de cada 10 alunos).\nEm 10 L de mistura: 3 L de etanol e 7 L de gasolina pura.\n40 L são 4 vezes 10 L: 4 × 7 = 28 L de gasolina pura.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Separando o tanque",
+            "dados": [
+              "\\text{tanque} = 40\\,\\text{L}",
+              "\\text{etanol} = 30\\%"
+            ],
+            "formula": "G = 70\\% \\times 40",
+            "legenda": [
+              "G: gasolina pura",
+              "100% − 30% = 70%"
+            ],
+            "contas": [
+              "10\\,\\text{L} \\to 3\\,\\text{L etanol} + 7\\,\\text{L gasolina}",
+              "4 \\times 7 = 28"
+            ],
+            "resultado": "G = 28\\,\\text{L}",
+            "nota": "Confere: 12 L de etanol + 28 L = 40 L."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "As duas partes juntas dão o tanque todo: 12 L de etanol + 28 L de gasolina = 40 L.\nOs 12 L de etanol vêm da cana, que é renovável: por isso a mistura joga menos CO₂ novo no ar que a gasolina pura."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 28 L.\nA achou o etanol (12 L), não a gasolina pura.\nC tirou 30 de 40, como se fossem litros, não porcentagem.\nD achou que 30% de 40 é 3.\nE dividiu 40 por 3."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Num tanque de 20 L com 30% de etanol, quantos litros são etanol?",
+        "opcoes": [
+          "6 L",
+          "14 L",
+          "10 L",
+          "60 L"
+        ],
+        "certa": "6 L",
+        "resposta": "Em 10 L há 3 L de etanol. 20 L são 2 vezes 10: 2 × 3 = 6 L."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-amb-20",
+    "materia": "Química",
+    "tema": "Química Ambiental e Energia",
+    "enunciado": "Alguns ônibus experimentais usam hidrogênio (H₂) como combustível. No ônibus, o hidrogênio reage com o oxigênio do ar para gerar energia, e pelo escapamento sai apenas vapor de água (H₂O). Pesquisadores destacam que, no escapamento, esse ônibus não aumenta o gás carbônico (CO₂) do ar, ao contrário dos ônibus a diesel.\nIsso acontece porque",
+    "A": "o hidrogênio absorve o gás carbônico que já está no ar.",
+    "B": "o vapor de água destrói o gás carbônico ao sair do escapamento.",
+    "C": "o hidrogênio vem da cana, que fez fotossíntese.",
+    "D": "o combustível não tem carbono, então não pode formar gás carbônico.",
+    "E": "o oxigênio do ar vira ozônio dentro do ônibus.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "CO₂ precisa de carbono (C); o H₂ só tem hidrogênio, e a reação só dá H₂O. D. Erros: A e B inventam que algo some com o CO₂; C confunde com o etanol; E confunde com a camada de ozônio.",
+      "ideia": "O \"C\" do CO₂ é o carbono, e ele tem que vir do combustível. O hidrogênio não tem carbono, então só sai água.",
+      "pecas": [
+        {
+          "termo": "Hidrogênio (H₂)",
+          "significado": "O gás mais leve que existe. Reage com o oxigênio e vira água, soltando energia."
+        },
+        {
+          "termo": "Carbono (C)",
+          "significado": "O elemento que está na gasolina, no diesel, no etanol, no carvão e na madeira. Ao queimar, ele vira o gás carbônico (CO₂)."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O ônibus usa hidrogênio e solta só vapor de água.\nO ônibus a diesel solta gás carbônico.\nA questão quer o motivo da diferença.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "O escapamento do ônibus",
+            "rotulos": [
+              "só vapor de água",
+              "e o CO₂?",
+              "hidrogênio (H₂)",
+              "diesel solta CO₂"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Leia as letras das fórmulas: CO₂ tem um C (carbono) e dois O (oxigênio).\nO O vem do ar, mas o C tem que vir do combustível.\nO diesel tem carbono. O hidrogênio, H₂, só tem H."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Pergunte: o combustível tem C?\nDiesel, gasolina, etanol, carvão, madeira: têm. Soltam CO₂.\nHidrogênio: não tem. Junta com o O do ar e vira só H₂O, água."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Na reação, nada aparece do nada: o que sai é feito do que entrou.\nSe não entrou carbono, não pode sair gás carbônico.\nPor isso o escapamento do ônibus a hidrogênio solta só água."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D.\nA: o hidrogênio não puxa CO₂ do ar.\nB: o vapor de água não destrói CO₂.\nC: quem vem da cana é o etanol.\nE: ozônio é a camada do alto da atmosfera, e o ônibus não fabrica ozônio."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual destes combustíveis, ao queimar, NÃO solta CO₂?",
+        "opcoes": [
+          "Hidrogênio",
+          "Etanol",
+          "Gasolina",
+          "Biogás"
+        ],
+        "certa": "Hidrogênio",
+        "resposta": "Só o hidrogênio não tem carbono. Os outros têm C e soltam CO₂."
+      }
+    }
+  }
+]
