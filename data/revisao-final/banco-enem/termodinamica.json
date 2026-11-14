@@ -46,7 +46,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Com números pequenos: 1 g de água subindo 1 °C pede 1 cal.\n1 g subindo 40 °C pede 40 cal. Então 50 000 g subindo 40 °C pedem 50 000 × 40 cal.\nIsso é Q = m × c × ΔT = 50 000 × 1 × 40 = 2 000 000 cal.",
+     "texto": "Macete de Termodinâmica: calor = quantidade × c × quanto a temperatura muda.\nQuantidade: 50 L = 50 000 g. Quanto muda: 60 − 20 = 40 °C. Na água, c = 1.\nQ = 50 000 × 1 × 40 = 2 000 000 cal.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Esquentando o reservatório",
@@ -137,7 +137,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "É a mesma Q = m × c × ΔT, só que agora o ΔT é o número que falta.\nÁgua: 200 × 1 × ΔT = 3 000, então ΔT = 3 000 ÷ 200 = 15 °C.\nÓleo: 200 × 0,5 × ΔT = 3 000, então ΔT = 3 000 ÷ 100 = 30 °C.",
+     "texto": "Macete de Termodinâmica: quem tem c maior sobe menos graus com a mesma energia. Compare em vezes.\nÁgua: cada grau custa 200 × 1 = 200 cal. Quantos 200 cabem em 3 000? 15. A água sobe 15 °C.\nO c do óleo (0,5) é metade do da água: com o mesmo calor, sobe o dobro. 2 × 15 = 30 °C.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O mesmo calor, dois líquidos",
@@ -153,7 +153,7 @@
       ],
       "contas": [
        "\\text{água: } 3\\,000 \\div 200 = 15",
-       "\\text{óleo: } 3\\,000 \\div 100 = 30"
+       "\\text{óleo: } 2 \\times 15 = 30"
       ],
       "resultado": "15\\,^\\circ\\text{C} \\text{ e } 30\\,^\\circ\\text{C}",
       "nota": "O óleo sobe o dobro."
@@ -229,7 +229,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Pense em 10 g de gelo. L = 80 cal/g quer dizer: cada grama de gelo pede 80 cal (calorias, a medida de calor) para virar água.\nPara derreter tudo: 10 × 80 = 800 cal.\nAs primeiras 800 cal que entram vão só para derreter. A temperatura não sai do zero.\nIsso é Q = m × L. Só depois de derreter tudo, Q = m × c × ΔT volta a valer e a água esquenta."
+     "texto": "Macete de Termodinâmica: quantidade × quanto muda. Mudando de estado, calor = quantidade × L (o preço de cada grama).\nNo gelo, L = 80 cal por grama. 10 g de gelo: 10 × 80 = 800 cal só para derreter.\nEnquanto derrete, a temperatura não muda: fica em 0 °C. O calor do ar vai todo para derreter o gelo."
     },
     {
      "titulo": "Por que funciona",
@@ -301,7 +301,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Derreter: 1 g pede 80 cal, então 100 g pedem 100 × 80 = 8 000 cal. Isso é Q = m × L.\nEsquentar: 1 g sobe 1 °C com 1 cal; 100 g subindo 20 °C pedem 100 × 20 = 2 000 cal. É Q = m × c × ΔT.\nTotal: 8 000 + 2 000 = 10 000 cal.",
+     "texto": "Macete de Termodinâmica: quantidade × quanto muda. Mudando de estado, calor = quantidade × L (o preço de cada grama).\nDerreter: 100 × 80 = 8 000 cal. Esquentar de 0 a 20 °C: 100 × 1 × 20 = 2 000 cal.\nCompare em vezes: derreter custa 4 vezes o esquentar. Total: 8 000 + 2 000 = 10 000 cal.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Derreter e depois esquentar",
@@ -394,7 +394,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Compare o calor que sai do pé em 1 minuto, com números de exemplo.\nNa cerâmica, digamos 10 cal por minuto. Na lã, só 1 cal por minuto.\nO pé na cerâmica perde 10 vezes mais calor no mesmo tempo, e é essa perda que a gente sente como frio."
+     "texto": "Macete de Termodinâmica: na condução, atrapalho = grossura ÷ k (k é quanto o material conduz).\nMesma grossura, 10. Exemplo: k da cerâmica 10, k da lã 1.\nCerâmica: quantos 10 cabem em 10? Atrapalho 1. Lã: 10 ÷ 1 = 10. A lã atrapalha 10 vezes mais.\nA cerâmica tira o calor do pé 10 vezes mais depressa. Essa perda é o frio que o pé sente."
     },
     {
      "titulo": "Por que funciona",
@@ -466,7 +466,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Os passos da roda de ar:\n1) areia quente esquenta o ar; 2) o ar quente sobe;\n3) o ar frio do mar anda para a praia; 4) esse ar andando é o vento que o pescador sente.\nIsso é convecção: o quente sobe, o frio desce e ocupa o lugar."
+     "texto": "Macete de Termodinâmica: quem tem c maior sobe menos graus com a mesma energia.\nMesmo Sol nos dois. A areia tem c menor que a água: sobe mais graus e esquenta o ar em cima dela.\nAr quente é menos denso e sobe. O ar frio do mar vem ocupar o lugar: esse ar andando é a brisa."
     },
     {
      "titulo": "Por que funciona",
@@ -542,7 +542,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Faça a lista dos 3 jeitos e risque o que o vácuo impede:\ncondução: precisa de matéria encostando, e no vácuo não tem. Riscada.\nconvecção: precisa de ar andando, e no vácuo não tem ar. Riscada.\nradiação: passa até no vazio, como o calor do Sol. Quem segura essa é o espelho."
+     "texto": "Macete de Termodinâmica: na condução, atrapalho = grossura ÷ k (k é quanto o material conduz).\nNo vácuo quase não há matéria: o k fica perto de zero e o atrapalho fica enorme. Condução riscada.\nConvecção precisa de ar andando, e lá não tem ar. Riscada. Só a radiação passa, e o espelho a segura."
     },
     {
      "titulo": "Por que funciona",
@@ -614,7 +614,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Pense numa conta de exemplo: sem nada, entram 10 cal por minuto no picolé.\nCom o cobertor no meio, digamos que entre só 2 cal por minuto.\nCom 5 vezes menos calor chegando, o picolé leva bem mais tempo para derreter."
+     "texto": "Macete de Termodinâmica: tempo = calor ÷ o que entra por segundo.\nExemplo: o picolé derrete com 600 cal. Sem nada, entram 10 por segundo: quantos 10 cabem em 600? 60 s.\nCom a lã (isolante), entram 2 por segundo: quantos 2 cabem em 600? 300 s.\n5 vezes menos calor entrando, 5 vezes mais tempo para derreter."
     },
     {
      "titulo": "Por que funciona",
@@ -686,7 +686,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "A água sobe os mesmos 80 °C nos dois preparos, e é a mesma água.\nEntão o calor só muda com a quantidade: 5 litros são 5 vezes 1 litro.\nO macarrão pede 5 vezes mais calor. Nem precisa fazer Q = m × c × ΔT.",
+     "texto": "Macete de Termodinâmica: calor = quantidade × c × quanto muda. Compare em vezes.\nOs dois sobem 100 − 20 = 80 °C, e é a mesma água: o c e o quanto muda são iguais.\nSó a quantidade muda: 5 L é 5 vezes 1 L. Então o calor é 5 vezes maior.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Mesma subida, massas diferentes",
@@ -701,9 +701,8 @@
        "m: a única coisa que muda"
       ],
       "contas": [
-       "1\\,000 \\times 1 \\times 80 = 80\\,000",
-       "5\\,000 \\times 1 \\times 80 = 400\\,000",
-       "400\\,000 \\div 80\\,000"
+       "\\Delta T = 100 - 20 = 80 \\text{ nos dois}",
+       "5\\,\\text{L} \\div 1\\,\\text{L} = 5"
       ],
       "resultado": "5 \\text{ vezes}",
       "nota": "Cinco vezes mais água, cinco vezes mais calor."
@@ -779,7 +778,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Pela Q = m × c × ΔT, com o mesmo Q e a mesma m, o ΔT é Q ÷ (m × c).\nQuanto maior o c, maior o divisor, e menor o ΔT.\nA água tem o maior c da lista (1,0), então é a que menos esquenta.",
+     "texto": "Macete de Termodinâmica: quem tem c maior sobe menos graus com a mesma energia.\nCompare em vezes: o c da água (1,0) é 2 vezes o do óleo (0,5). Com o mesmo calor, a água sobe metade dos graus.\nA água tem o maior c da lista: recebe o calor do motor subindo menos graus.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Mesmo calor, 100 g de cada",
@@ -872,7 +871,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Xícara: Q = m × c × ΔT = 100 × 1 × 60 = 6 000 cal.\nPanela: Q = 1 000 × 1 × 60 = 60 000 cal.\nA panela tem 10 vezes mais água e solta 10 vezes mais calor.",
+     "texto": "Macete de Termodinâmica: calor = quantidade × c × quanto muda. Compare em vezes.\nAs duas estão a 80 °C e caem 80 − 20 = 60 °C. Xícara: 100 × 1 × 60 = 6 000 cal.\nA panela tem 10 vezes mais água e cai os mesmos 60 °C: solta 10 × 6 000 = 60 000 cal.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Mesma temperatura, massas diferentes",
@@ -888,7 +887,7 @@
       ],
       "contas": [
        "100 \\times 1 \\times 60 = 6\\,000",
-       "1\\,000 \\times 1 \\times 60 = 60\\,000"
+       "10 \\times 6\\,000 = 60\\,000"
       ],
       "resultado": "6\\,000 \\text{ e } 60\\,000\\,\\text{cal}",
       "nota": "Mesma temperatura, calores diferentes."
@@ -964,7 +963,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Imagine a mão a 36 °C e a lata a 6 °C, só como exemplo.\nO calor sai de quem tem 36 e vai para quem tem 6.\nA mão perde calor e cai, digamos, para 30 °C. A lata ganha e sobe para 10 °C. Elas vão se aproximando."
+     "texto": "Macete de Termodinâmica: na mistura, o que a quente perde, a fria ganha.\nExemplo: mão a 36 °C, lata a 6 °C. A quente é a mão: ela perde calor e cai, digamos, para 30 °C.\nEsse calor entra na lata, que sobe para 10 °C. Quem andou foi o calor, da mão para a lata."
     },
     {
      "titulo": "Por que funciona",
@@ -1036,7 +1035,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Comece pequeno: 1 g de suor tira 540 cal. 2 g tiram 2 × 540 = 1 080 cal.\n100 g tiram 100 × 540 = 54 000 cal.\nIsso é Q = m × L, a fórmula da mudança de estado.",
+     "texto": "Macete de Termodinâmica: quantidade × quanto muda. Mudando de estado, calor = quantidade × L (o preço de cada grama).\nVirando vapor, cada grama de suor pede 540 cal. Quantidade: 100 g.\n100 vezes a quantidade, 100 vezes o calor: 100 × 540 = 54 000 cal.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Suor virando vapor",
@@ -1126,7 +1125,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Patamar é o trecho reto do gráfico, como um degrau plano: o tempo passa e a temperatura não muda.\nAntes e depois do patamar, o calor da chama faz a temperatura subir: é Q = m × c × ΔT.\nNo patamar, 16 minutos de chama (de 1 a 17) não sobem nenhum grau.\nEsse calor foi gasto para o gelo virar água: é Q = m × L. A temperatura fica parada em 0 °C.",
+     "texto": "Macete de Termodinâmica: tempo = calor ÷ o que entra por segundo. Mudando de estado, calor = quantidade × L.\nA chama é igual o tempo todo: de 1 a 17 são 16 minutos, então entra 16 vezes o calor de 1 minuto.\nTanto calor e nenhum grau de subida: ele foi gasto para derreter o gelo, não para esquentar.",
      "visual": {
       "tipo": "quadro",
       "titulo": "As anotações",
@@ -1141,8 +1140,8 @@
        "patamar: trecho reto, temperatura parada"
       ],
       "contas": [
-       "\\text{subidas: gelo e depois água esquentando}",
-       "\\text{patamar: } 0\\,^\\circ\\text{C por } 16\\,\\text{min}"
+       "17 - 1 = 16\\,\\text{min de chama}",
+       "\\text{subida no patamar: } 0\\,^\\circ\\text{C}"
       ],
       "resultado": "\\text{patamar} = \\text{gelo derretendo}",
       "nota": "Parada no gráfico, calor mudando o estado."
@@ -1218,7 +1217,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Compare duas paredes, com números de exemplo, para o mesmo calor de dentro.\nParede de pedra, que conduz bem: digamos que saem 10 cal por minuto.\nParede de neve, isolante: sai só 1 cal por minuto. O pouco calor das pessoas fica preso dentro."
+     "texto": "Macete de Termodinâmica: na condução, atrapalho = grossura ÷ k (k é quanto o material conduz).\nMesma grossura de parede, 10. Exemplo: k da pedra 10, k da neve 1.\nPedra: quantos 10 cabem em 10? Atrapalho 1. Neve: 10 ÷ 1 = 10. A neve atrapalha 10 vezes mais.\nO pouco calor das pessoas sai 10 vezes mais devagar e fica dentro do iglu."
     },
     {
      "titulo": "Por que funciona",
@@ -1290,7 +1289,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Exemplo com números: um saco com 1 000 kg de ar frio de fora pesaria como o ar em volta.\nEsquentando, saem partes do ar e sobram, digamos, 800 kg no mesmo tamanho.\nMais leve que o ar em volta, o saco sobe, como uma rolha na água."
+     "texto": "Macete de Termodinâmica: compare em vezes.\nExemplo: o saco cheio de ar de fora teria 1 000 kg. Esquentado, o ar se espalha e sobram 800 kg no mesmo tamanho.\n800 é 8 décimos de 1 000: o ar de dentro fica menos denso que o de fora e sobe, como o ar quente numa sala."
     },
     {
      "titulo": "Por que funciona",
@@ -1362,7 +1361,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Se cada grau custa 100 cal, quantos graus cabem em 5 000 cal?\n5 000 ÷ 100 = 50. A frigideira sobe 50 °C.\nNa fórmula: 1 000 × 0,1 × ΔT = 5 000, então ΔT = 5 000 ÷ 100 = 50 °C.",
+     "texto": "Macete de Termodinâmica: calor = quantidade × c × quanto muda.\nCada grau da frigideira custa 1 000 × 0,1 = 100 cal (vezes 0,1 é dividir por 10).\nQuantos 100 cabem em 5 000? 50. A frigideira sobe 50 °C.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Quantos graus a frigideira sobe",
@@ -1454,7 +1453,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Pense com números de exemplo: o corpo solta 10 cal de radiação por segundo.\nSem a manta, as 10 cal vão embora para o ar.\nCom a manta brilhante, digamos que 9 voltam para o corpo e só 1 se perde."
+     "texto": "Macete de Termodinâmica: tempo = calor ÷ o que sai por segundo.\nExemplo: o corpo solta 10 cal de radiação por segundo. Sem a manta, as 10 vão embora.\nCom a face brilhante, 9 voltam e só 1 se perde: 10 vezes menos saindo, 10 vezes mais tempo para esfriar."
     },
     {
      "titulo": "Por que funciona",
@@ -1526,7 +1525,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Teste um palpite: 50 °C. A quente cai 30 °C e solta 100 × 30 = 3 000 cal; a fria sobe 30 °C e pede 300 × 30 = 9 000 cal. Não fecha.\nTeste 35 °C. A quente cai 45 °C: 100 × 45 = 4 500 cal. A fria sobe 15 °C: 300 × 15 = 4 500 cal.\nFechou: o calor perdido é igual ao ganho. A mistura fica a 35 °C.",
+     "texto": "Macete de Termodinâmica: na mistura, compare os graus.\nA fria tem 300 g, 3 vezes os 100 g da quente: para cada grau que a fria sobe, a quente cai 3.\nJuntas, elas andam 80 − 20 = 60 graus, em 1 + 3 = 4 partes. Quantos 4 cabem em 60? 15.\nA fria sobe 15: 20 + 15 = 35 °C. A quente cai 3 × 15 = 45: 80 − 45 = 35 °C.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Calor perdido = calor ganho",
@@ -1541,8 +1540,9 @@
        "ΔT da fria: quanto ela subiu"
       ],
       "contas": [
-       "100 \\times (80 - 35) = 4\\,500",
-       "300 \\times (35 - 20) = 4\\,500"
+       "(80 - 20) \\div (1 + 3) = 15",
+       "20 + 15 = 35",
+       "80 - 3 \\times 15 = 35"
       ],
       "resultado": "T = 35\\,^\\circ\\text{C}",
       "nota": "Mais água fria puxa o final para baixo."
@@ -1622,7 +1622,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Se cada grama custa 50 cal, quantos gramas cabem em 100 000 cal?\n100 000 ÷ 50 = 2 000 g, que são 2 kg (uns 2 litros de água).\nNa fórmula: m × 1 × 50 = 100 000, então m = 100 000 ÷ 50 = 2 000 g.",
+     "texto": "Macete de Termodinâmica: calor = quantidade × c × quanto muda.\nCalor: 100 kcal = 100 000 cal. Cada grama sobe 70 − 20 = 50 °C e pede 1 × 50 = 50 cal.\nQuantos 50 cabem em 100 000? 2 000 g = 2 kg.",
      "visual": {
       "tipo": "quadro",
       "titulo": "A energia da barra na água",

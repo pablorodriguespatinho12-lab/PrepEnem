@@ -46,7 +46,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "0,05 quer dizer 5 centésimos (5 partes de 100).\nNúmero pequeno primeiro: 100 kg rendem 100 × 0,05 = 5 m³, como 100 moedas de 5 centavos: 500 centavos = R$ 5.\n400 kg são 4 vezes 100 kg: 4 × 5 = 20 m³.\nÉ o mesmo que 400 × 0,05 = 20.",
+          "texto": "Macete de Química Ambiental: siga as unidades, de kg de esterco para m³ de gás.\nCada 1 kg dá 0,05 m³ (5 centésimos). 100 kg dão 100 × 0,05 = 5 m³.\n400 kg são 4 vezes 100 kg: 4 × 5 = 20 m³ por dia.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Biogás de um dia",
@@ -137,7 +137,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ligue cada problema ao seu gás, como na aula:\nPele queimando, raio ultravioleta: ozônio (O₃).\nCalor preso: gás carbônico e metano.\nChuva ácida: gases de enxofre e de nitrogênio."
+          "texto": "Macete de Química Ambiental: siga a cadeia de causas, um elo por linha.\nCFC sobe → o gás lá no alto fica mais fino → passa mais raio ultravioleta do Sol.\nMais ultravioleta → pele queima e dá câncer. O gás que filtra ultravioleta é o ozônio (O₃)."
         },
         {
           "titulo": "Por que funciona",
@@ -209,7 +209,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "2% quer dizer 2 de cada 100.\nEm 100 t de carvão há 2 t de enxofre.\n500 t são 5 vezes 100 t: 5 × 2 = 10 t de enxofre por dia.",
+          "texto": "Macete de Química Ambiental: siga as unidades, de t de carvão para t de enxofre.\n2% é 2 de cada 100: 100 t de carvão têm 2 t de enxofre. 500 t são 5 vezes 100 t: 5 × 2 = 10 t.\nSiga a queima: enxofre → gás de enxofre → vira ácido na água da chuva: chuva ácida.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Enxofre de um dia",
@@ -301,7 +301,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Use a palavra-chave da aula: CO₂ esquenta, enxofre azeda.\nMexeu no enxofre, mexeu no azedo: chuva ácida.\nO esquenta (efeito estufa) ficou igual, como o texto diz."
+          "texto": "Macete de Química Ambiental: siga a queima; o que está no combustível sai pelo escapamento.\nMenos enxofre no diesel → menos gás de enxofre no ar → menos chuva ácida.\nO carbono continua no diesel → o CO₂ continua saindo → o efeito estufa fica igual."
         },
         {
           "titulo": "Por que funciona",
@@ -373,7 +373,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Comece por R$ 1,00, que tem 100 centavos: 70% dele são 70 centavos.\nR$ 6,00 são 6 vezes R$ 1,00: 6 × 70 = 420 centavos.\n420 centavos = R$ 4,20.",
+          "texto": "Macete de Química Ambiental: siga as unidades, de R$ da gasolina para R$ do etanol.\nR$ 1,00 são 100 centavos: 70% dele são 70 centavos.\nR$ 6,00 são 6 vezes R$ 1,00: 6 × 70 = 420 centavos = R$ 4,20.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Preço máximo do etanol",
@@ -464,7 +464,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Some as renováveis uma de cada vez:\n60 + 12 = 72.\n72 + 8 = 80.\n80 + 5 = 85%.",
+          "texto": "Macete de Química Ambiental: renovável é o que volta sozinho rápido (sol, vento, água, planta).\nFicam: água 60, vento 12, biomassa 8, Sol 5. Saem gás e carvão, que vêm de baixo da terra.\n60 + 12 = 72; 72 + 8 = 80; 80 + 5 = 85%.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Somando as renováveis",
@@ -558,7 +558,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Caso pequeno: 1 ÷ 0,5 = 2, porque cabem 2 metades em 1.\nPara tirar a vírgula, multiplique os DOIS números por 10: 12 ÷ 1,5 = 120 ÷ 15.\n120 ÷ 15 = 8, porque 15 × 8 = 120.",
+          "texto": "Macete de Química Ambiental: siga as unidades, de kWh da casa para número de placas.\nQuantos 1,5 kWh cabem em 12 kWh? Tire a vírgula: × 10 nos dois, 12 ÷ 1,5 = 120 ÷ 15.\n120 ÷ 15 = 8, porque 15 × 8 = 120. São 8 placas.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Quantas placas",
@@ -572,7 +572,6 @@
               "× 10 nos dois tira a vírgula"
             ],
             "contas": [
-              "1 \\div 0{,}5 = 2",
               "12 \\div 1{,}5 = 120 \\div 15",
               "15 \\times 8 = 120"
             ],
@@ -650,7 +649,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Pense no CO₂ como uma conta de entrada e saída do ar.\nO fogo PÕE CO₂ no ar.\nA floresta viva TIRAVA CO₂ do ar, e parou de tirar.\nOs dois erros juntam mais CO₂ no ar: mais efeito estufa."
+          "texto": "Macete de Química Ambiental: siga a queima e a cadeia de causas.\nDia do fogo: a madeira tem carbono → queima com oxigênio → solta CO₂.\nAnos seguintes: sem floresta → sem fotossíntese → o CO₂ fica no ar. Os dois somam efeito estufa."
         },
         {
           "titulo": "Por que funciona",
@@ -722,7 +721,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ônibus: 1 200 ÷ 40. Corte um zero dos dois: 120 ÷ 4 = 30 g por pessoa.\nCortar o zero não muda a conta, porque dividir os dois pelo mesmo número não muda quantas vezes um cabe no outro (120 ÷ 40 = 3 e 12 ÷ 4 = 3).\nCarro: 120 g para 1 pessoa.\nQuantas vezes 30 cabe em 120? 120 ÷ 30 = 4, porque 4 × 30 = 120.",
+          "texto": "Macete de Química Ambiental: siga as unidades, de g por ônibus para g por pessoa.\nÔnibus: quantos gramas para cada um dos 40? 1 200 ÷ 40 = 120 ÷ 4 = 30 g por pessoa.\nCarro: 120 g para 1 pessoa. Quantos 30 cabem em 120? 120 ÷ 30 = 4 vezes.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Gás de cada passageiro",
@@ -814,7 +813,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Com números pequenos: 10 árvores tiram 10 × 15 = 150 kg.\n100 árvores tiram 1 500 kg.\n200 árvores tiram 2 × 1 500 = 3 000 kg.\nEntão 3 000 ÷ 15 = 200.",
+          "texto": "Macete de Química Ambiental: siga as unidades, de t para kg e de kg para árvores.\n3 t = 3 × 1 000 = 3 000 kg de CO₂.\nQuantos 15 kg cabem em 3 000 kg? 100 árvores tiram 1 500 kg; 200 tiram 3 000. São 200 árvores.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Quantas árvores",
@@ -828,6 +827,7 @@
               "1 t = 1 000 kg"
             ],
             "contas": [
+              "3 \\times 1\\,000 = 3\\,000",
               "100 \\times 15 = 1\\,500",
               "200 \\times 15 = 3\\,000"
             ],
@@ -905,7 +905,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ligue a matéria-prima ao combustível, como na aula:\nCana: etanol.\nEsterco e lixo apodrecendo sem oxigênio: biogás.\nÓleos e gorduras: biodiesel, o \"diesel de origem viva\"."
+          "texto": "Macete de Química Ambiental: siga a cadeia, da matéria-prima ao combustível.\nÓleos e gorduras → biodiesel. Cana → etanol. Esterco e lixo apodrecendo sem oxigênio → biogás.\nAqui entra óleo de cozinha e sai combustível para misturar ao diesel: biodiesel."
         },
         {
           "titulo": "Por que funciona",
@@ -977,7 +977,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "0,4 são 4 décimos.\nCaso pequeno: 10 kWh soltariam 10 × 0,4 = 4 kg (dez vezes 4 décimos dá 4 inteiros).\n30 kWh são 3 vezes 10 kWh: 3 × 4 = 12 kg.",
+          "texto": "Macete de Química Ambiental: siga as unidades, de kWh para kg de CO₂.\nCada kWh solta 0,4 kg (4 décimos). 10 kWh soltam 10 × 0,4 = 4 kg.\n30 kWh são 3 vezes 10 kWh: 3 × 4 = 12 kg a menos por mês.",
           "visual": {
             "tipo": "quadro",
             "titulo": "CO₂ que não saiu",
@@ -1068,7 +1068,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Caso pequeno: 1 ÷ 0,5 = 2, porque cabem 2 metades em 1.\nEntão 1 kg do botijão pede 2 m³ de biogás.\n13 kg pedem 13 × 2 = 26 m³.",
+          "texto": "Macete de Química Ambiental: siga as unidades, de kg de botijão para m³ de biogás.\nQuantos 0,5 kg cabem em 1 kg? 2. Então 1 kg do botijão pede 2 m³.\n13 kg pedem 13 × 2 = 26 m³ por mês.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Biogás que vale um botijão",
@@ -1159,7 +1159,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Use a palavra-chave da aula: CO₂ esquenta, enxofre azeda.\nQueimar petróleo, carvão e gás joga CO₂ extra no ar.\nCO₂ extra: efeito estufa."
+          "texto": "Macete de Química Ambiental: siga a queima.\nHidrelétrica: a água gira a turbina, não queima nada. Termelétrica: queima gás, carvão e óleo.\nCarbono + oxigênio → CO₂ extra no ar → mais efeito estufa."
         },
         {
           "titulo": "Por que funciona",
@@ -1231,7 +1231,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Rebanho: 200 × 60 = 12 000 kg. Como 1 t = 1 000 kg, são 12 t de metano.\nCaso pequeno: 1 t de metano vale 28 t de CO₂; 2 t valem 56 t.\n12 t valem 12 × 28: 10 × 28 = 280 e 2 × 28 = 56; 280 + 56 = 336 t.",
+          "texto": "Macete de Química Ambiental: siga as unidades, de bois para kg de metano, para t, para CO₂.\nRebanho: 200 × 60 = 12 000 kg. Quantos 1 000 kg cabem em 12 000? 12 t de metano.\nCada 1 t vale 28 t de CO₂: 10 × 28 = 280 e 2 × 28 = 56; 280 + 56 = 336 t.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Metano virando CO₂",
@@ -1325,7 +1325,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Siga a energia até a origem e pergunte: alguém queimou carbono?\nPaís X: não. Pouco CO₂.\nPaís Y: sim, carvão. O CO₂ saiu, só que longe do carro."
+          "texto": "Macete de Química Ambiental: siga a queima até a origem da energia.\nPaís X: tomada → água e vento → ninguém queimou carbono → pouco CO₂.\nPaís Y: tomada → usina queima carvão → sai CO₂ na chaminé, longe do carro."
         },
         {
           "titulo": "Por que funciona",
@@ -1397,7 +1397,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Cana para litros: 1 t dá 80 L; 10 t dão 800 L; 50 t dão 5 × 800 = 4 000 L.\nLitros para km: 1 L dá 10 km; 4 000 L dão 4 000 × 10 = 40 000 km.",
+          "texto": "Macete de Química Ambiental: siga as unidades, de t de cana para litros e de litros para km.\nCana para litros: 50 × 80 = 4 000 L (10 t dão 800 L; 5 × 800 = 4 000).\nLitros para km: cada litro faz 10 km, 4 000 × 10 = 40 000 km.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Cana, litros e quilômetros",
@@ -1490,7 +1490,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Palavra-chave da aula: CO₂ esquenta, enxofre azeda.\nO carro ESQUENTOU, então é o lado do CO₂.\nOs gases que seguram calor na aula são o gás carbônico (CO₂) e o metano (CH₄)."
+          "texto": "Macete de Química Ambiental: siga a cadeia de causas, um elo por linha.\nLuz do Sol entra → esquenta o chão → o chão solta calor.\nGás carbônico (CO₂) e metano (CH₄) seguram esse calor, como o vidro do carro: efeito estufa."
         },
         {
           "titulo": "Por que funciona",
@@ -1562,7 +1562,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "30% é 30 de cada 100. Dividindo os dois por 10, é 3 de cada 10 (30 de 100 alunos = 3 de cada 10 alunos).\nEm 10 L de mistura: 3 L de etanol e 7 L de gasolina pura.\n40 L são 4 vezes 10 L: 4 × 7 = 28 L de gasolina pura.",
+          "texto": "Macete de Química Ambiental: siga as unidades, de litros de mistura para litros de gasolina pura.\nEm cada 100 partes, 30 são etanol e 100 − 30 = 70 são gasolina pura: 7 L em cada 10 L.\n40 L são 4 vezes 10 L: 4 × 7 = 28 L de gasolina pura.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Separando o tanque",
@@ -1653,7 +1653,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Pergunte: o combustível tem C?\nDiesel, gasolina, etanol, carvão, madeira: têm. Soltam CO₂.\nHidrogênio: não tem. Junta com o O do ar e vira só H₂O, água."
+          "texto": "Macete de Química Ambiental: siga a queima; o C do CO₂ tem que vir do combustível.\nDiesel tem carbono: carbono + oxigênio → CO₂.\nHidrogênio (H₂) não tem carbono: H₂ + oxigênio → só H₂O, água. Sem C, não há CO₂."
         },
         {
           "titulo": "Por que funciona",

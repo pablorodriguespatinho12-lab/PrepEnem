@@ -41,4 +41,19 @@ describe('macete curinga', () => {
     }
     expect(conferidas).toBeGreaterThanOrEqual(20);
   });
+
+  it('o banco ENEM também aplica o macete em todo Jeito rápido', () => {
+    const pasta = join(__dirname, 'banco-enem');
+    let conferidas = 0;
+    for (const f of readdirSync(pasta).filter((x) => x.endsWith('.json'))) {
+      const qs = JSON.parse(readFileSync(join(pasta, f), 'utf8')) as { id: string; explicacao: { passos: { titulo: string; texto: string }[] } }[];
+      for (const q of qs) {
+        const jr = q.explicacao.passos.find((p) => p.titulo === 'Jeito rápido');
+        expect(jr?.texto.startsWith('Macete de'), q.id).toBe(true);
+        expect(jr!.texto.split('\n').every((l) => l.length <= 170), q.id).toBe(true);
+        conferidas++;
+      }
+    }
+    expect(conferidas).toBeGreaterThanOrEqual(240);
+  });
 });

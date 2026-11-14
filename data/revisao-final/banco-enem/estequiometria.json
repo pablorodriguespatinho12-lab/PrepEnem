@@ -46,7 +46,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Regra de três com a receita.\n2 mol de azida estão para 3 mol de gás, assim como 4 mol estão para x.\nx = 4 × 3 ÷ 2 = 12 ÷ 2 = 6 mol de N₂.",
+          "texto": "Macete de Estequiometria: veja quantas vezes a sua quantidade cabe na receita; o produto muda as mesmas vezes.\nReceita: 2 mol de azida dão 3 mol de N₂. Aqui o dado já vem em mol, nem precisa de gramas.\n4 mol é 2 vezes 2 mol (4 ÷ 2 = 2 vezes). O gás também dobra: 2 × 3 = 6 mol.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Gás do airbag",
@@ -60,8 +60,8 @@
               "receita: 2 entram, 3 saem"
             ],
             "contas": [
-              "x = 4 \\times \\dfrac{3}{2}",
-              "x = \\dfrac{12}{2}"
+              "4 \\div 2 = 2\\ \\text{vezes}",
+              "x = 2 \\times 3"
             ],
             "resultado": "x = 6\\,\\text{mol N}_2",
             "nota": "A receita rodou 2 vezes, e cada vez dá 3 mol de gás."
@@ -141,7 +141,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Pese 1 pacote de glicose: 6 C, 12 H e 6 O.\n6 × 12 = 72; 12 × 1 = 12; 6 × 16 = 96.\n72 + 12 + 96 = 180 g. Como saiu 1 pacote, saem 180 g de glicose.",
+          "texto": "Macete de Estequiometria: escreva a receita em gramas e veja quantas vezes os seus 264 g cabem nela.\nReceita: 6 CO₂ (6 × 44 = 264 g) dão 1 glicose (6 × 12 + 12 × 1 + 6 × 16 = 72 + 12 + 96 = 180 g).\n264 g é a receita 1 vez certinha (264 ÷ 264 = 1 vez). Sai 1 vez a glicose: 180 g.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Glicose da muda",
@@ -155,8 +155,8 @@
               "glicose: 180 g por mol"
             ],
             "contas": [
-              "6\\,\\text{mol CO}_2 \\to 1\\,\\text{mol glicose}",
-              "6 \\times 12 + 12 \\times 1 + 6 \\times 16 = 180"
+              "6 \\times 44 = 264\\,\\text{g CO}_2 \\to 180\\,\\text{g glicose}",
+              "264 \\div 264 = 1\\ \\text{vez}"
             ],
             "resultado": "m = 180\\,\\text{g de glicose}",
             "nota": "Gramas viram pacotes, a receita troca pacotes, e os pacotes voltam a gramas."
@@ -232,7 +232,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Quantas vezes 160 cabe em 480? 160 × 3 = 480, então 3 vezes.\nCada vez saem 112 t de ferro.\n3 × 112 = 336 t de ferro.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nReceita: 1 Fe₂O₃ (160 t) dá 2 Fe (2 × 56 = 112 t).\n480 t é 3 vezes 160 t (480 ÷ 160 = 3 vezes). O ferro também triplica: 3 × 112 = 336 t.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Ferro do alto-forno",
@@ -246,7 +246,7 @@
               "receita: 160 entram, 112 de ferro saem"
             ],
             "contas": [
-              "x = 480 \\times \\dfrac{112}{160}",
+              "480 \\div 160 = 3\\ \\text{vezes}",
               "x = 3 \\times 112"
             ],
             "resultado": "x = 336\\,\\text{t de ferro}",
@@ -323,7 +323,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "128 kg de SO₂ é quantas vezes 64? 64 × 2 = 128, então 2 vezes.\nCada vez pede 100 kg de calcário.\n2 × 100 = 200 kg.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nReceita: 1 SO₂ (64 kg) pede 1 CaCO₃ (100 kg).\n128 kg é 2 vezes 64 kg (128 ÷ 64 = 2 vezes). O calcário também dobra: 2 × 100 = 200 kg.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Calcário do lavador",
@@ -337,7 +337,7 @@
               "receita: 64 de SO₂ pedem 100 de calcário"
             ],
             "contas": [
-              "x = 128 \\times \\dfrac{100}{64}",
+              "128 \\div 64 = 2\\ \\text{vezes}",
               "x = 2 \\times 100"
             ],
             "resultado": "x = 200\\,\\text{kg de calcário}",
@@ -414,7 +414,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Agora o rendimento: 20% = 20 de cada 100 = 1 de cada 5.\nDe 340 kg, sai 1 parte de 5: 340 ÷ 5 = 68 kg.\nOu: 340 × 0,20 = 68 kg.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nReceita: 1 N₂ (28 kg) dá 2 NH₃ (2 × 17 = 34 kg).\n280 kg é 10 vezes 28 kg (280 ÷ 28 = 10 vezes). A amônia prevista também: 10 × 34 = 340 kg.\nRendimento 20% = 1 parte de cada 5: 340 kg ÷ 5 partes = 68 kg por parte. Saem 68 kg.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Amônia com rendimento",
@@ -428,8 +428,8 @@
               "rendimento: 20 de cada 100"
             ],
             "contas": [
-              "\\text{previsto} = 280 \\times \\dfrac{34}{28} = 340",
-              "\\text{real} = 340 \\times 0{,}20"
+              "280 \\div 28 = 10\\ \\text{vezes} \\Rightarrow 10 \\times 34 = 340",
+              "\\text{real} = 340 \\div 5"
             ],
             "resultado": "\\text{real} = 68\\,\\text{kg de NH}_3",
             "nota": "Primeiro a receita, depois o rendimento."
@@ -505,7 +505,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Pese 1 pacote de CO₂: 12 + 16 + 16 = 44 g.\nSão 8 pacotes: 8 × 44 = 352 g.\n(8 × 40 = 320 e 8 × 4 = 32; 320 + 32 = 352.)",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nReceita: 2 C₄H₁₀ (2 × 58 = 116 g) dão 8 CO₂ (8 × 44 = 352 g).\n116 g é a receita 1 vez certinha (116 ÷ 116 = 1 vez). Sai 1 vez o CO₂: 352 g.\n(8 × 44: 8 × 40 = 320 e 8 × 4 = 32; 320 + 32 = 352.)",
           "visual": {
             "tipo": "quadro",
             "titulo": "CO₂ do cartucho",
@@ -519,8 +519,8 @@
               "CO₂: 44 g por mol"
             ],
             "contas": [
-              "2\\,\\text{mol butano} \\to 8\\,\\text{mol CO}_2",
-              "8 \\times 44"
+              "2 \\times 58 = 116\\,\\text{g} \\to 8 \\times 44 = 352\\,\\text{g}",
+              "116 \\div 116 = 1\\ \\text{vez}"
             ],
             "resultado": "m = 352\\,\\text{g de CO}_2",
             "nota": "Sai mais CO₂ do que butano porque o oxigênio do ar entra na conta."
@@ -596,7 +596,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Pese 1 pacote (mol) de etanol: 2 × 12 + 6 × 1 + 16 = 24 + 6 + 16 = 46 g.\n92 ÷ 46 = 2 pacotes de etanol (46 × 2 = 92).\nCada pacote dá 2 de CO₂: 2 × 2 = 4 pacotes. CO₂ = 44 g, então 4 × 44 = 176 g.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\". Os 115 mL já viraram 92 g.\nC₂H₅OH tem 2 C, 1 O e 6 H (5 do C₂H₅ + 1 do OH): 2 × 12 + 6 × 1 + 16 = 24 + 6 + 16 = 46 g.\nReceita: 1 etanol (46 g) dá 2 CO₂ (2 × 44 = 88 g).\n92 g é 2 vezes 46 g (92 ÷ 46 = 2 vezes). O CO₂ também dobra: 2 × 88 = 176 g.",
           "visual": {
             "tipo": "quadro",
             "titulo": "CO₂ do réchaud",
@@ -610,8 +610,8 @@
               "CO₂: 44 g por mol"
             ],
             "contas": [
-              "92 \\div 46 = 2\\,\\text{mol etanol}",
-              "2 \\times 2 = 4\\,\\text{mol CO}_2;\\ 4 \\times 44"
+              "92 \\div 46 = 2\\ \\text{vezes}",
+              "x = 2 \\times 88"
             ],
             "resultado": "m = 176\\,\\text{g de CO}_2",
             "nota": "mL → gramas → pacotes → pacotes de CO₂ → gramas."
@@ -687,7 +687,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "100 g dão 44 g, então 1 g dá 0,44 g (44 ÷ 100).\n9 g dão 9 × 0,44.\n9 × 44 = 396, e a vírgula anda 2 casas (0,44 tem 2): 3,96 g.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\". Só os 9 g de CaCO₃ entram.\nReceita: 1 CaCO₃ (100 g) dá 1 CO₂ (44 g).\n9 g cabe 0,09 vez em 100 g (9 ÷ 100 = 9 centésimos). O CO₂ também: 0,09 × 44.\n9 × 44 = 396, e a vírgula anda 2 casas (0,09 tem 2): 3,96 g.",
           "visual": {
             "tipo": "quadro",
             "titulo": "CO₂ da casca",
@@ -701,8 +701,8 @@
               "receita: 100 entram, 44 saem"
             ],
             "contas": [
-              "x = 9 \\times \\dfrac{44}{100}",
-              "x = 9 \\times 0{,}44"
+              "9 \\div 100 = 0{,}09\\ \\text{vez}",
+              "x = 0{,}09 \\times 44"
             ],
             "resultado": "x = 3{,}96\\,\\text{g de CO}_2",
             "nota": "Pureza primeiro: só o CaCO₃ entra na receita."
@@ -778,7 +778,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "690 ÷ 138 = 5 (138 × 5 = 690). A conta perfeita dá 5 × 180 = 900 kg.\n80% = 8 de cada 10.\n900 ÷ 10 = 90, e 90 × 8 = 720 kg.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nReceita: 1 ácido (138 kg) dá 1 aspirina (180 kg).\n690 kg é 5 vezes 138 kg (690 ÷ 138 = 5 vezes). A aspirina prevista também: 5 × 180 = 900 kg.\nRendimento 80% = 8 de cada 10: 900 kg ÷ 10 partes = 90 kg por parte; 8 partes = 8 × 90 = 720 kg.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Aspirina do lote",
@@ -792,7 +792,7 @@
               "rendimento: 80% = 0,8"
             ],
             "contas": [
-              "\\text{previsto} = 5 \\times 180 = 900",
+              "690 \\div 138 = 5\\ \\text{vezes} \\Rightarrow 5 \\times 180 = 900",
               "\\text{real} = 900 \\times 0{,}8"
             ],
             "resultado": "\\text{real} = 720\\,\\text{kg de aspirina}",
@@ -869,7 +869,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Regra de três: 60 kg de ureia têm 28 kg de N.\n120 kg é quantas vezes 60? 60 × 2 = 120, então 2 vezes.\n2 × 28 = 56 kg de nitrogênio.",
+          "texto": "Macete de Estequiometria: a fórmula é a receita em gramas; veja quantas vezes a sua quantidade cabe nela.\nReceita: 1 ureia (60 kg) tem 2 N (2 × 14 = 28 kg).\n120 kg é 2 vezes 60 kg (120 ÷ 60 = 2 vezes). O nitrogênio também dobra: 2 × 28 = 56 kg.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Nitrogênio da ureia",
@@ -883,7 +883,7 @@
               "28 de N a cada 60 de ureia"
             ],
             "contas": [
-              "x = 120 \\times \\dfrac{28}{60}",
+              "120 \\div 60 = 2\\ \\text{vezes}",
               "x = 2 \\times 28"
             ],
             "resultado": "x = 56\\,\\text{kg de N}",
@@ -964,7 +964,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "1 pacote de glicose dá 6 pacotes de água. Água: 1 + 1 + 16 = 18 g.\n6 × 18 = 108 g de água por pacote de glicose.\nMeio pacote dá metade: 108 ÷ 2 = 54 g.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nReceita: 1 glicose (180 g) dá 6 H₂O (6 × 18 = 108 g).\n90 g é metade de 180 g (90 ÷ 180 = meia vez). A água também cai pela metade: 108 ÷ 2 = 54 g.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Água do treino",
@@ -978,7 +978,7 @@
               "receita: 180 entram, 108 de água saem"
             ],
             "contas": [
-              "x = 90 \\times \\dfrac{108}{180}",
+              "90 \\div 180 = 0{,}5\\ \\text{vez}",
               "x = \\dfrac{108}{2}"
             ],
             "resultado": "x = 54\\,\\text{g de água}",
@@ -1055,7 +1055,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Se o sal é 10 vezes menos, o sódio também é 10 vezes menos.\n23 ÷ 10 = 2,3 g de sódio.\n(Dividir por 10 anda a vírgula 1 casa para a esquerda.)",
+          "texto": "Macete de Estequiometria: a fórmula é a receita em gramas; veja quantas vezes a sua quantidade cabe nela.\nReceita: 1 NaCl (58,5 g) tem 1 Na (23 g).\n5,85 g é 10 vezes menor que 58,5 g (58,5 ÷ 5,85 = 10 vezes). O sódio também: 23 ÷ 10 = 2,3 g.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Sódio da refeição",
@@ -1069,7 +1069,7 @@
               "23 de Na a cada 58,5 de sal"
             ],
             "contas": [
-              "x = 5{,}85 \\times \\dfrac{23}{58{,}5}",
+              "58{,}5 \\div 5{,}85 = 10\\ \\text{vezes menor}",
               "x = \\dfrac{23}{10}"
             ],
             "resultado": "x = 2{,}3\\,\\text{g de Na}",
@@ -1146,7 +1146,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "3 kg é quantas vezes menor que 12 kg? 12 ÷ 3 = 4, então 4 vezes menor.\nO CO₂ também fica 4 vezes menor: 44 ÷ 4 = 11 kg.\nNa regra de três: 3 × 44 ÷ 12 = 132 ÷ 12 = 11 kg.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nReceita: 1 C (12 kg) dá 1 CO₂ (44 kg).\n3 kg é 4 vezes menor que 12 kg (12 ÷ 3 = 4 vezes). O CO₂ também: 44 ÷ 4 = 11 kg.",
           "visual": {
             "tipo": "quadro",
             "titulo": "CO₂ do churrasco",
@@ -1160,7 +1160,7 @@
               "receita: 12 entram, 44 saem"
             ],
             "contas": [
-              "x = 3 \\times \\dfrac{44}{12}",
+              "12 \\div 3 = 4\\ \\text{vezes menor}",
               "x = \\dfrac{44}{4}"
             ],
             "resultado": "x = 11\\,\\text{kg de CO}_2",
@@ -1237,7 +1237,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "9 kg é quantas vezes menor que 36 kg? 36 ÷ 9 = 4, então 4 vezes menor.\nO hidrogênio também fica 4 vezes menor: 4 ÷ 4 = 1 kg.\nNa regra de três: 9 × 4 ÷ 36 = 36 ÷ 36 = 1 kg.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nReceita: 2 H₂O (2 × 18 = 36 kg) dão 2 H₂ (2 × 2 = 4 kg).\n9 kg é 4 vezes menor que 36 kg (36 ÷ 9 = 4 vezes). O hidrogênio também: 4 ÷ 4 = 1 kg.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Hidrogênio da água",
@@ -1251,8 +1251,8 @@
               "receita: 36 entram, 4 de H₂ saem"
             ],
             "contas": [
-              "x = 9 \\times \\dfrac{4}{36}",
-              "x = \\dfrac{36}{36}"
+              "36 \\div 9 = 4\\ \\text{vezes menor}",
+              "x = \\dfrac{4}{4}"
             ],
             "resultado": "x = 1\\,\\text{kg de H}_2",
             "nota": "O resto, 8 kg, sai como gás oxigênio."
@@ -1328,7 +1328,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Quantas vezes 102 cabe em 510? 102 × 5 = 510, então 5 vezes.\nCada vez saem 54 t de alumínio.\n5 × 54 = 270 t.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nReceita cortada ao meio: 1 Al₂O₃ (102 t) dá 2 Al (2 × 27 = 54 t).\n510 t é 5 vezes 102 t (510 ÷ 102 = 5 vezes). O alumínio também: 5 × 54 = 270 t.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Alumínio do mês",
@@ -1342,7 +1342,7 @@
               "receita: 102 entram, 54 de Al saem"
             ],
             "contas": [
-              "x = 510 \\times \\dfrac{54}{102}",
+              "510 \\div 102 = 5\\ \\text{vezes}",
               "x = 5 \\times 54"
             ],
             "resultado": "x = 270\\,\\text{t de alumínio}",
@@ -1415,29 +1415,29 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Nada some na reação: o pó pesa o magnésio mais o oxigênio que ele pegou.\nOxigênio do 1º teste: 8,0 − 4,8 = 3,2 g.\nAgora, quantas vezes 12 g é maior que 4,8 g? 12 ÷ 4,8: ande a vírgula dos dois, 120 ÷ 48 = 2,5.\nCabem 2 vezes e meia, como 1 ÷ 0,5 = 2 (cabem 2 metades em 1)."
+          "texto": "Nada some na reação: o pó pesa o magnésio mais o oxigênio que ele pegou.\nOxigênio do 1º teste: 8,0 − 4,8 = 3,2 g.\nAgora, quantas vezes 12 g é maior que 4,8 g? 12 ÷ 4,8: multiplique os dois por 10 (12 vira 120 e 4,8 vira 48), e 120 ÷ 48 = 2,5.\nCabem 2 vezes e meia, como 1 ÷ 0,5 = 2 (cabem 2 metades em 1)."
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Com 2,5 vezes mais magnésio, gasta 2,5 vezes mais oxigênio.\n3,2 × 2 = 6,4 e 3,2 × 0,5 = 1,6 (metade de 3,2).\n6,4 + 1,6 = 8 g de O₂.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nReceita: 2 Mg (2 × 24 = 48 g) gastam 1 O₂ (16 + 16 = 32 g).\n12 g é 4 vezes menor que 48 g (48 ÷ 12 = 4 vezes). O oxigênio também: 32 ÷ 4 = 8 g.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Oxigênio do 2º teste",
             "dados": [
-              "\\text{O}_2 = 8{,}0 - 4{,}8 = 3{,}2\\,\\text{g}",
-              "4{,}8\\,\\text{g Mg} \\to 3{,}2\\,\\text{g O}_2"
+              "2\\,\\text{Mg} = 2 \\times 24 = 48\\,\\text{g}",
+              "48\\,\\text{g Mg} \\to 1\\,\\text{O}_2 = 32\\,\\text{g}"
             ],
             "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
             "legenda": [
               "dado: 12 g de magnésio",
-              "1º teste: 4,8 de Mg pegaram 3,2 de O₂"
+              "receita: 48 de Mg gastam 32 de O₂"
             ],
             "contas": [
-              "x = 3{,}2 \\times \\dfrac{12}{4{,}8}",
-              "x = 3{,}2 \\times 2{,}5"
+              "48 \\div 12 = 4\\ \\text{vezes menor}",
+              "x = \\dfrac{32}{4}"
             ],
             "resultado": "x = 8\\,\\text{g de O}_2",
-            "nota": "Confira pela receita: 48 g de Mg (2 × 24) pedem 32 g de O₂; 12 g pedem um quarto, 8 g."
+            "nota": "Pelo 1º teste dá igual: 4,8 g de Mg pegaram 3,2 g; 12 g é 2,5 vezes 4,8, e 2,5 × 3,2 = 8 g."
           }
         },
         {
@@ -1510,7 +1510,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "2 pacotes de O₃ pesam 2 × 48 = 96 g.\nSaiu a mesma massa que entrou.\nO número de pacotes caiu (de 3 para 2), mas cada pacote ficou mais pesado.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nReceita: 3 O₂ (3 × 32 = 96 g) dão 2 O₃ (2 × 48 = 96 g).\n96 g é a receita 1 vez certinha (96 ÷ 96 = 1 vez). Saem 96 g de ozônio: a massa não muda.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Ozônio do teste",
@@ -1524,8 +1524,8 @@
               "receita: 3 entram, 2 saem"
             ],
             "contas": [
-              "x = 3 \\times \\dfrac{2}{3} = 2\\,\\text{mol O}_3",
-              "m = 2 \\times 48"
+              "3 \\times 32 = 96\\,\\text{g} \\to 2 \\times 48 = 96\\,\\text{g}",
+              "96 \\div 96 = 1\\ \\text{vez}"
             ],
             "resultado": "m = 96\\,\\text{g de O}_3",
             "nota": "Massa que entra = massa que sai."
@@ -1601,7 +1601,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "280 g de CO é quantas vezes 56 g? 56 × 5 = 280, então 5 vezes.\nCada vez gasta 32 g de O₂.\n5 × 32 = 160 g de oxigênio.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nReceita: 2 CO (2 × 28 = 56 g) gastam 1 O₂ (32 g).\n280 g é 5 vezes 56 g (280 ÷ 56 = 5 vezes). O oxigênio também: 5 × 32 = 160 g.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Oxigênio do catalisador",
@@ -1615,7 +1615,7 @@
               "receita: 56 de CO gastam 32 de O₂"
             ],
             "contas": [
-              "x = 280 \\times \\dfrac{32}{56}",
+              "280 \\div 56 = 5\\ \\text{vezes}",
               "x = 5 \\times 32"
             ],
             "resultado": "x = 160\\,\\text{g de O}_2",
@@ -1696,7 +1696,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "37 kg é metade de 74 kg (74 ÷ 2 = 37).\nMetade da cal pega metade do CO₂.\n44 ÷ 2 = 22 kg de CO₂.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nReceita: 1 Ca(OH)₂ (74 kg) pega 1 CO₂ (44 kg).\n37 kg é 2 vezes menor que 74 kg (74 ÷ 37 = 2 vezes). O CO₂ também: 44 ÷ 2 = 22 kg.",
           "visual": {
             "tipo": "quadro",
             "titulo": "CO₂ preso na parede",
@@ -1710,7 +1710,7 @@
               "receita: 74 de cal pegam 44 de CO₂"
             ],
             "contas": [
-              "x = 37 \\times \\dfrac{44}{74}",
+              "74 \\div 37 = 2\\ \\text{vezes menor}",
               "x = \\dfrac{44}{2}"
             ],
             "resultado": "x = 22\\,\\text{kg de CO}_2",
@@ -1787,7 +1787,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Agora, pacotes viram gramas. 1 pacote de O₂ = 16 + 16 = 32 g.\n10 pacotes: 10 × 32 = 320 g.\n(Multiplicar por 10 põe um zero no fim.)",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nReceita: 1 mol de propano gasta 5 O₂ (5 × 32 = 160 g).\n2 mol é 2 vezes a receita. O oxigênio também dobra: 2 × 160 = 320 g.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Oxigênio do almoço",
@@ -1801,8 +1801,8 @@
               "receita: 1 entra, 5 de O₂ são gastos"
             ],
             "contas": [
-              "n = 2 \\times 5 = 10\\,\\text{mol O}_2",
-              "m = 10 \\times 32"
+              "1\\,\\text{mol C}_3\\text{H}_8 \\to 5 \\times 32 = 160\\,\\text{g O}_2",
+              "x = 2 \\times 160"
             ],
             "resultado": "m = 320\\,\\text{g de O}_2",
             "nota": "Primeiro conta os pacotes, depois pesa."

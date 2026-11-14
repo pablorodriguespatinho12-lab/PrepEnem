@@ -46,7 +46,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ache os pedaços, do maior para o menor.\nCOOH na ponta = ácido carboxílico.\nOH preso a carbono comum, fora de anel = álcool.\nResultado: álcool e ácido carboxílico."
+          "texto": "Macete de Química Orgânica: olhe o O e o N; cada pedaço com O é uma família.\nCOOH na ponta = ácido carboxílico.\nOH do meio, em carbono comum, fora de anel = álcool. Resposta: álcool e ácido carboxílico."
         },
         {
           "titulo": "Por que funciona",
@@ -118,7 +118,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "N ligado só a C ou H = amina.\nN colado no C=O = amida.\nAqui não há C=O, então a resposta é amina."
+          "texto": "Macete de Química Orgânica: olhe o N.\nN sem C=O do lado = amina. (N colado no C=O seria amida.)\nNa cadaverina, o N só tem C e H em volta e não há O: amina."
         },
         {
           "titulo": "Por que funciona",
@@ -190,7 +190,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "H de cada carbono = 4 − ligações com outro carbono.\nCada carbono: 4 − 2 = 2 H.\nDois carbonos: 2 + 2 = 4 H. Fórmula: C₂H₄.",
+          "texto": "Macete de Química Orgânica: o começo do nome conta os carbonos; et = 2.\nCada C faz 4 ligações e a C=C gasta 2: sobram 4 − 2 = 2 H em cada C.\nDois carbonos: 2 + 2 = 4 H. Fórmula: C₂H₄.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Hidrogênios do eteno",
@@ -281,7 +281,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Olhe o vizinho do N.\nO vizinho é um carbono com C=O? Então é amida.\nNa ureia, os dois N estão no carbono do C=O: amida."
+          "texto": "Macete de Química Orgânica: olhe o N e o vizinho dele.\nN com C=O do lado = amida. (N só com C ou H seria amina.)\nNa ureia, os dois N estão colados no carbono do C=O: amida."
         },
         {
           "titulo": "Por que funciona",
@@ -353,7 +353,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Pergunte: o OH está no anel?\nSim, nos dois anéis. Então é fenol.\nO próprio nome avisa: bis-fenol quer dizer dois fenóis."
+          "texto": "Macete de Química Orgânica: olhe o O; OH na roda de 6 (anel benzênico) = fenol.\nNo BPA, cada OH está preso direto num anel benzênico: fenol.\nO nome avisa: bis-fenol quer dizer dois fenóis."
         },
         {
           "titulo": "Por que funciona",
@@ -425,7 +425,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Esteárico: só simples = saturada.\nOleico: tem uma C=C = não saturada (insaturada).\nResposta: a do esteárico é saturada, e a do oleico não é."
+          "texto": "Macete de Química Orgânica: cada C=C pede 1 H₂. Saturada = só ligações simples, sem C=C, então não pede H₂.\nOleico: 1 C=C, pede 1 H₂: não saturada.\nEsteárico: 0 C=C, não pede H₂: saturada."
         },
         {
           "titulo": "Por que funciona",
@@ -501,7 +501,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "COO sem H, preso a carbono dos dois lados = éster.\nO COOH tem H e fica na ponta: é o ácido, e não foi ele que quebrou.\nO pedaço quebrado é o éster."
+          "texto": "Macete de Química Orgânica: olhe o pedaço com O.\nCOO entre dois carbonos (aqui, entre o anel e outro C) = éster. COOH, com H, na ponta = ácido.\nA água quebrou o COO do meio: o pedaço é éster."
         },
         {
           "titulo": "Por que funciona",
@@ -573,7 +573,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Sabões = gorduras × COO de cada gordura.\n10 × 3 = 30 moléculas de sabão.\nE sobram 10 glicerinas, uma por gordura.",
+          "texto": "Macete de Química Orgânica: COO entre carbonos = éster; cada COO da gordura vira 1 sabão.\n10 gorduras × 3 COO = 30 sabões.\nE sobram 10 glicerinas, uma por gordura.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Sabões da cooperativa",
@@ -663,7 +663,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Pergunta 1: o anel tem duplas (é benzênico)? Não.\nPergunta 2: o OH está em carbono de ligações simples? Sim.\nOH em carbono de ligações simples = álcool."
+          "texto": "Macete de Química Orgânica: OH = álcool; só vira fenol se estiver na roda de 6 com duplas (anel benzênico).\nO anel do mentol só tem ligações simples: não é benzênico.\nOH fora de anel benzênico = álcool."
         },
         {
           "titulo": "Por que funciona",
@@ -735,7 +735,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Produto com COO entre carbonos = éster.\nÉster nasce de ácido + álcool.\nÁcido butanoico + etanol → butanoato de etila + água."
+          "texto": "Macete de Química Orgânica: COO entre carbonos = éster.\nÉster nasce de ácido + álcool → éster + água.\nO ácido já está aqui (butanoico); falta o álcool: etanol."
         },
         {
           "titulo": "Por que funciona",
@@ -807,7 +807,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Olhe a fórmula: C₁₀H₈ só tem as letras C e H.\nSó C e H = hidrocarboneto.\nO anel não muda isso: o benzeno também é hidrocarboneto."
+          "texto": "Macete de Química Orgânica: sem O e sem N = hidrocarboneto.\nC₁₀H₈ só tem as letras C e H.\nO anel não muda isso: fenol pede OH, e aqui não há O."
         },
         {
           "titulo": "Por que funciona",
@@ -879,7 +879,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "C: 2 + 2 = 4 (a água não leva C).\nH: 4 + 6 = 10, menos 2 da água = 8.\nO: 2 + 1 = 3, menos 1 da água = 2. Fórmula: C₄H₈O₂.",
+          "texto": "Macete de Química Orgânica: COO entre carbonos = éster, que é ácido + álcool − 1 água.\nC: 2 + 2 = 4 (a água não leva C).\nH: 4 + 6 − 2 = 8.\nO: 2 + 1 − 1 = 2. Fórmula: C₄H₈O₂.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Átomos do acetato de etila",
@@ -975,7 +975,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "OH encostado no anel = fenol.\nOH num carbono comum, mesmo perto de um anel = álcool.\nAzul: álcool. Verde: fenol."
+          "texto": "Macete de Química Orgânica: OH = álcool; OH preso direto na roda de 6 (anel benzênico) = fenol.\nAzul: OH no CH₂, fora do anel = álcool.\nVerde: OH direto no anel = fenol."
         },
         {
           "titulo": "Por que funciona",
@@ -1047,7 +1047,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Procure um O ou um N nas fórmulas.\nCH₃–CH₂–OH tem um O, no pedaço OH.\nOH em carbono de ligações simples = álcool, não hidrocarboneto."
+          "texto": "Macete de Química Orgânica: sem O e sem N = hidrocarboneto. Procure um O ou um N.\nCH₄, C₃H₈, C₄H₁₀, querosene e parafina: só C e H.\nCH₃–CH₂–OH tem O (o OH, álcool): o painel errou no etanol."
         },
         {
           "titulo": "Por que funciona",
@@ -1119,7 +1119,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "CH₂=CH₂: 2 + 2 = 4. Fecha.\nHC≡CH: 1 + 3 = 4. Fecha.\nCH₃=CH₂: o carbono da esquerda tem 3 + 2 = 5. Não fecha: impossível.",
+          "texto": "Macete de Química Orgânica: sem O e sem N = hidrocarboneto; então só confira se cada C fecha 4 ligações.\nCH₂=CH₂: 2 + 2 = 4. HC≡CH: 1 + 3 = 4. Fecham.\nCH₃=CH₂: o carbono da esquerda tem 3 H + 2 da dupla = 5. Impossível.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Ligações de cada carbono",
@@ -1211,7 +1211,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "OH em carbono de ligações simples, fora de anel = álcool.\nA glicerina tem três OH assim.\nVários OH continuam sendo álcool: é um álcool com três OH."
+          "texto": "Macete de Química Orgânica: OH = álcool (fenol só se o OH estiver na roda de 6).\nGlicerina: 3 OH em carbonos de ligações simples, sem anel.\nTrês OH continuam álcool: é um álcool com 3 OH."
         },
         {
           "titulo": "Por que funciona",
@@ -1283,7 +1283,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Pontas: 2 carbonos com 3 H cada = 2 × 3 = 6.\nMeio: 8 − 2 = 6 carbonos com 2 H cada = 6 × 2 = 12.\nTotal: 6 + 12 = 18 H. Fórmula: C₈H₁₈.",
+          "texto": "Macete de Química Orgânica: sem O e sem N = hidrocarboneto; conte os carbonos: o octano tem 8 em fila.\nPontas: 2 carbonos × 3 H = 6.\nMeio: 8 − 2 = 6 carbonos × 2 H = 12.\nTotal: 6 + 12 = 18 H. Fórmula: C₈H₁₈.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Hidrogênios do octano",
@@ -1379,7 +1379,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "OH no anel benzênico = fenol.\nN ligado só a C ou H = amina.\nDopamina: fenol e amina."
+          "texto": "Macete de Química Orgânica: olhe o O e o N.\nO: OH preso direto no anel benzênico = fenol.\nN: só com C e H, sem C=O do lado = amina. Dopamina: fenol e amina."
         },
         {
           "titulo": "Por que funciona",
@@ -1451,7 +1451,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Leia a ponta antes e depois.\nCH₂–OH = álcool. COOH = ácido carboxílico.\nMudou de álcool para ácido carboxílico."
+          "texto": "Macete de Química Orgânica: olhe o pedaço com O, antes e depois.\nAntes: CH₂–OH, OH em carbono comum = álcool.\nDepois: COOH = ácido carboxílico. Mudou de álcool para ácido carboxílico."
         },
         {
           "titulo": "Por que funciona",
@@ -1523,7 +1523,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ligações = moléculas − 1.\n100 − 1 = 99 ligações.\nCada ligação solta 1 água: 99 moléculas de água.",
+          "texto": "Macete de Química Orgânica: COO entre carbonos = éster; cada COO formado solta 1 água.\nFila de 100 moléculas: ligações = 100 − 1 = 99.\n99 COO × 1 água = 99 moléculas de água.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Águas do PLA",
@@ -1535,9 +1535,8 @@
               "cada ligação COO solta 1 água"
             ],
             "contas": [
-              "2 \\text{ moléculas} \\to 1 \\text{ ligação}",
-              "3 \\text{ moléculas} \\to 2 \\text{ ligações}",
-              "100 - 1 = 99"
+              "\\text{ligações} = 100 - 1 = 99",
+              "\\text{águas} = 99 \\times 1 = 99"
             ],
             "resultado": "99\\,\\text{águas}",
             "nota": "A fila tem uma ligação a menos que o número de moléculas."

@@ -42,7 +42,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Some o trecho da frente com o trecho de trás do espelho.",
+          "texto": "Macete de Óptica: a imagem fica atrás do espelho, à mesma distância.\nA porta está 4 m na frente; a imagem dela, 4 m atrás. O cliente está 3 m na frente.\nDo cliente até a imagem da porta: 3 + 4 = 7 m.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Espelho plano",
@@ -129,7 +129,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ache o ângulo com a normal e dobre.",
+          "texto": "Macete de Óptica: o espelho devolve a luz como uma cópia; a luz sai com o mesmo ângulo com que chegou, medido da normal.\nCom a normal (em pé, a 90°): 90 − 40 = 50°. A saída também faz 50°.\nEntre os raios: 50 + 50 = 100°.",
           "visual": {
             "tipo": "quadro",
             "titulo": "A reflexão",
@@ -143,7 +143,7 @@
             ],
             "contas": [
               "i = 90 - 40 = 50^\\circ",
-              "r = 50^\\circ",
+              "r = i = 50^\\circ",
               "50 + 50"
             ],
             "resultado": "\\text{entre os raios} = 100^\\circ",
@@ -220,7 +220,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Corte os zeros iguais: 300 000 ÷ 200 000 = 3 ÷ 2.",
+          "texto": "Macete de Óptica: atrás do espelho, à mesma distância; aqui é refração: a luz muda de meio e de velocidade.\nÍndice = quantas vezes mais lenta = velocidade no ar ÷ velocidade no vidro.\nCorte os zeros iguais: 300 000 ÷ 200 000 = 3 ÷ 2 = 1,5.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Índice de refração",
@@ -307,7 +307,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Palavra-chave: PASSA de um meio para outro e muda de velocidade = refração."
+          "texto": "Macete de Óptica: atrás do espelho, à mesma distância; aqui é refração: a luz muda de meio e de velocidade.\nA luz sai da água para o ar inclinada, então desvia.\nO olho segue o raio reto para trás e vê o fundo mais alto do que está."
         },
         {
           "titulo": "Por que funciona",
@@ -379,7 +379,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Porcentagem de cada um, depois a diferença.\n90% é 90 de cada 100: 90 ÷ 100 = 0,9. Então 90% de 1 000 = 0,9 × 1 000 = 900.\nDo mesmo jeito, 30% = 0,3: 0,3 × 1 000 = 300.",
+          "texto": "Macete de Óptica: a cor que você vê é a que o objeto devolve; preto engole quase tudo, e o que é engolido vira calor.\nPreto: 90% é 90 de cada 100 = 0,9; 0,9 × 1 000 = 900 J. Branco: 0,3 × 1 000 = 300 J.\nA mais no preto: 900 − 300 = 600 J.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Absorção",
@@ -471,7 +471,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Área grande dividida pela área pequena: 50 ÷ 0,5.\nQuantas metades cabem? Em 1 cabem 2 metades, porque 0,5 × 2 = 1.\nEntão dividir por 0,5 é multiplicar por 2: 50 × 2 = 100.",
+          "texto": "Macete de Óptica: atrás do espelho, à mesma distância; aqui é refração: lente que junta a luz = convergente; que espalha = divergente.\nA lupa junta a luz: convergente. Quantas vezes mais forte = área grande ÷ área pequena = 50 ÷ 0,5.\nDividir por 0,5 é contar metades: em 1 cabem 2, então 50 × 2 = 100 vezes.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Concentração da lupa",
@@ -558,7 +558,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Palavra-chave: CONTORNA o obstáculo = difração."
+          "texto": "Macete de Óptica: atrás do espelho, à mesma distância; aqui não há espelho: a onda CONTORNA = difração.\nSó contorna bem a onda do tamanho do obstáculo.\nAM (centenas de metros, como os morros) contorna a serra; FM (poucos metros) não."
         },
         {
           "titulo": "Por que funciona",
@@ -626,7 +626,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Palavra-chave: BATE e volta = reflexão."
+          "texto": "Macete de Óptica: o espelho devolve a luz (a imagem fica atrás dele, à mesma distância).\nNa fibra, a parede de dentro faz papel de espelho: a luz BATE e volta = reflexão.\nBate e volta de um lado ao outro: é o zigue-zague."
         },
         {
           "titulo": "Por que funciona",
@@ -698,7 +698,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "A cor é a luz que volta. Sem a cor dela na luz, o objeto fica preto."
+          "texto": "Macete de Óptica: a cor que você vê é a que o objeto devolve.\nA camiseta verde devolve só o verde. Na luz só vermelha não chega verde, e o vermelho é engolido.\nNada volta ao olho: a camiseta parece preta."
         },
         {
           "titulo": "Por que funciona",
@@ -766,7 +766,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Palavra-chave: filtro que escolhe UMA direção de vibração = polarização."
+          "texto": "Macete de Óptica: a cor que você vê é a luz que o objeto devolve; a luz que a água devolve vibra deitada.\nO filtro só passa luz que vibra em pé = polarização.\nBarra o brilho da água e deixa passar luz vinda dos peixes."
         },
         {
           "titulo": "Por que funciona",
@@ -838,7 +838,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Palavra-chave: PASSA de um meio para outro e muda de velocidade = refração."
+          "texto": "Macete de Óptica: atrás do espelho, à mesma distância; aqui é refração: a luz muda de meio e de velocidade.\nAr quente perto do asfalto e ar frio em cima são meios diferentes: a luz do céu desce inclinada e entorta.\nNão há água nem espelho no asfalto: a poça é o céu visto pela luz desviada."
         },
         {
           "titulo": "Por que funciona",
@@ -910,7 +910,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Palavra-chave: PASSA de um meio para outro e desvia = refração.\nCada cor desvia diferente, por isso elas se separam."
+          "texto": "Macete de Óptica: atrás do espelho, à mesma distância; aqui é refração: a luz muda de meio e de velocidade.\nDo ar para a água, cada cor muda de velocidade um pouco diferente, então desvia um pouco diferente.\nAs cores, que vinham juntas, se abrem em leque: o arco-íris."
         },
         {
           "titulo": "Por que funciona",
@@ -978,7 +978,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Palavra-chave: BATE e volta = reflexão.\nLiso devolve tudo junto; áspero espalha."
+          "texto": "Macete de Óptica: o espelho devolve a luz toda para o mesmo lado (a imagem fica atrás, à mesma distância).\nA água lisa vira espelho: a luz BATE e volta junta = reflexão, e acerta o olho.\nO asfalto seco, cheio de pedrinhas, espalha a luz para todo lado e não ofusca."
         },
         {
           "titulo": "Por que funciona",
@@ -1046,7 +1046,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Espelho plano: troca esquerda e direita. Duas trocas = palavra certa."
+          "texto": "Macete de Óptica: a imagem fica atrás do espelho, à mesma distância, olhando para você.\nPor isso o espelho troca esquerda por direita (em cima e embaixo ficam iguais).\nPalavra pintada trocada + troca do espelho = duas trocas = palavra certa."
         },
         {
           "titulo": "Por que funciona",
@@ -1118,7 +1118,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Junta pouco → corrige quem junta: lente convergente.\nJunta demais (míope) → corrige quem espalha: lente divergente."
+          "texto": "Macete de Óptica: atrás do espelho, à mesma distância; aqui é refração: lente que junta a luz = convergente; que espalha = divergente.\nO olho da avó junta pouco a luz: a imagem cai depois da retina.\nFalta juntar, então a lente tem que juntar: convergente."
         },
         {
           "titulo": "Por que funciona",
@@ -1186,7 +1186,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Palavra-chave: CONTORNA a abertura = difração.\nSó contorna bem quem tem onda do tamanho da abertura."
+          "texto": "Macete de Óptica: atrás do espelho, à mesma distância; aqui não há espelho: a onda CONTORNA = difração.\nSó contorna bem a onda do tamanho da abertura.\nSom: onda de palmos, como a fresta, então contorna. Luz: onda minúscula, então segue reta."
         },
         {
           "titulo": "Por que funciona",
@@ -1254,7 +1254,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Palavra-chave: luz que vira calor = absorção.\nEscuro absorve mais, branco absorve menos."
+          "texto": "Macete de Óptica: a cor que você vê é a que o objeto devolve; branco devolve quase tudo, escuro engole quase tudo.\nA luz engolida (absorvida) vira calor.\nBranco devolve mais, absorve menos: menos calor entra na casa."
         },
         {
           "titulo": "Por que funciona",
@@ -1322,7 +1322,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Mudar de meio = mudar de velocidade, sempre.\nDesviar = só se entrar inclinada."
+          "texto": "Macete de Óptica: atrás do espelho, à mesma distância; aqui é refração: a luz muda de meio e de velocidade.\nMudou de meio (ar → água) = mudou de velocidade: vale para os dois lasers.\nDesvia só quem entra inclinado: só o vermelho."
         },
         {
           "titulo": "Por que funciona",
@@ -1390,7 +1390,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Palavra-chave: CONTORNA abertura do tamanho da onda = difração."
+          "texto": "Macete de Óptica: atrás do espelho, à mesma distância; aqui não há espelho: a onda CONTORNA = difração.\nSó contorna bem a onda do tamanho da abertura.\nOs furinhos têm quase o tamanho da onda da luz: ela contorna as bordas e se abre em cruz."
         },
         {
           "titulo": "Por que funciona",
@@ -1458,7 +1458,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "A imagem anda igual à aluna, do outro lado. Some as duas rapidezes.",
+          "texto": "Macete de Óptica: a imagem fica atrás do espelho, à mesma distância.\nA aluna anda 1 m por segundo para o espelho; a imagem anda 1 m por segundo do outro lado.\nA distância entre as duas cai 1 + 1 = 2 m por segundo.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Espelho plano",

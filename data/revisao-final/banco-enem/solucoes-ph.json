@@ -46,7 +46,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Concentração = massa ÷ volume, com o volume em litros.\nEm 4,5 ÷ 0,5, ande a vírgula dos dois uma casa para a direita.\n4,5 ÷ 0,5 = 45 ÷ 5 = 9 g/L.",
+     "texto": "Macete de Soluções: concentração é quantos gramas há em cada litro.\n500 mL é meio litro. Quantos meios litros cabem em 1 L? 2.\nEntão o litro inteiro tem 2 vezes os 4,5 g: 4,5 × 2 = 9 g/L.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Concentração do soro",
@@ -61,7 +61,7 @@
       ],
       "contas": [
        "C = \\dfrac{4{,}5}{0{,}5}",
-       "C = \\dfrac{45}{5}"
+       "4{,}5 \\times 2 = 9"
       ],
       "resultado": "C = 9\\,\\text{g/L}",
       "nota": "Em cada litro de soro há 9 g de sal."
@@ -137,7 +137,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Massa = concentração × volume, com o volume em litros (250 mL = 0,25 L).\n1,2 × 0,25 = 0,3 g, o mesmo que 1,2 ÷ 4.\nEm mg: 0,3 × 1 000 = 300 mg.",
+     "texto": "Macete de Soluções: concentração é quantos gramas há em cada litro; compare em vezes.\nQuantos copos de 250 mL cabem em 1 000 mL? 4. O copo tem 4 vezes menos cálcio que o litro.\n1,2 g ÷ 4 = 0,3 g. Em mg: 0,3 × 1 000 = 300 mg.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Cálcio no copo",
@@ -151,8 +151,8 @@
        "V: volume do copo em litros"
       ],
       "contas": [
-       "m = 1{,}2 \\times 0{,}25",
-       "m = 0{,}3\\,\\text{g}",
+       "1\\,000 \\div 250 = 4 \\text{ copos}",
+       "1{,}2 \\div 4 = 0{,}3\\,\\text{g}",
        "0{,}3 \\times 1\\,000 = 300\\,\\text{mg}"
       ],
       "resultado": "m = 300\\,\\text{mg}",
@@ -229,7 +229,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Compare com 7: 8,2 é maior que 7, então é básica.\nPara descer o pH, use o oposto da base: um ácido.\nÁcido baixa o pH; base sobe.",
+     "texto": "Macete de Soluções: compare com o 7, que é o meio: abaixo é ácido, acima é básico.\n8,2 é maior que 7: básica. E passa de 7,6, o máximo do manual: o pH tem de descer.\nÁcido baixa o pH; base sobe. Então vai um produto ácido.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Ácida ou básica?",
@@ -320,7 +320,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Concentração do ácido = mols ÷ volume = 0,0004 ÷ 0,02 (20 mL = 0,02 L).\nAnde a vírgula dos dois 4 casas: 4 ÷ 200 = 2 ÷ 100 = 0,02 mol/L.\nEm gramas: 0,02 × 90 = 1,8 g/L.",
+     "texto": "Macete de Soluções: conte os mols; compare em vezes.\nCada ácido gasta 1 NaOH: os mols de ácido nos 20 mL são os mols de base nos 4 mL.\nQuantos 4 mL cabem em 20 mL? 5. Volume 5 vezes maior, concentração 5 vezes menor: 0,1 ÷ 5 = 0,02 mol/L.\nEm gramas: 0,02 × 90 = 1,8 g/L.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Ácido do leite",
@@ -336,8 +336,8 @@
        "a: ácido; b: base (NaOH)"
       ],
       "contas": [
-       "n = 0{,}1 \\times 0{,}004 = 0{,}0004\\,\\text{mol}",
-       "C_a = \\dfrac{0{,}0004}{0{,}02} = 0{,}02\\,\\text{mol/L}",
+       "20 \\div 4 = 5 \\text{ vezes}",
+       "C_a = 0{,}1 \\div 5 = 0{,}02\\,\\text{mol/L}",
        "0{,}02 \\times 90 = 1{,}8"
       ],
       "resultado": "1{,}8\\,\\text{g/L}",
@@ -414,7 +414,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Mols = concentração × volume: 0,1 × 2 = 0,2 mol.\nGramas = mols × massa molar: 0,2 × 180 = 36 g.\nDe cabeça: 2 × 180 = 360, e o 0,2 tem uma casa depois da vírgula: 36,0.",
+     "texto": "Macete de Soluções: conte os gramas que vão em cada litro.\n1 mol pesa 180 g, então 0,1 mol pesa 0,1 × 180 = 18 g: cada litro leva 18 g.\nSão 2 litros: 18 × 2 = 36 g.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Glicose do soro",
@@ -423,14 +423,14 @@
        "V = 2\\,\\text{L}",
        "M = 180\\,\\text{g/mol}"
       ],
-      "formula": "n = C \\times V",
+      "formula": "m = (C \\times M) \\times V",
       "legenda": [
-       "n: mols de glicose",
-       "M: quanto pesa 1 mol"
+       "C × M: gramas de glicose em cada litro",
+       "V: litros de soro"
       ],
       "contas": [
-       "n = 0{,}1 \\times 2 = 0{,}2\\,\\text{mol}",
-       "m = 0{,}2 \\times 180"
+       "0{,}1 \\times 180 = 18\\,\\text{g em cada litro}",
+       "18 \\times 2 = 36\\,\\text{g}"
       ],
       "resultado": "m = 36\\,\\text{g}",
       "nota": "Glicose para os 2 L de soro."
@@ -506,7 +506,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Separe por pH: abaixo de 7 é ácido, 7 é neutro, acima de 7 é básico.\nLaranja (4) e café (5) são ácidos; a água (7) é neutra.\nSobra a base que pode ser engolida: leite de magnésia, pH 10.",
+     "texto": "Macete de Soluções: compare com o 7, que é o meio: abaixo é ácido, acima é básico.\nLaranja (4) e café (5) são ácidos; a água (7) é neutra. Só 10 e 14 são bases.\nA soda (14) corrói e queimaria o esôfago. Sobra o leite de magnésia, pH 10.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Quem é base?",
@@ -600,7 +600,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Caso pequeno: se 1 L do concentrado tem 200 g, então 100 g cabem em meio litro: 100 ÷ 200 = 0,5 L.\nEntão volume = massa ÷ concentração. Aqui: 40 ÷ 200.\nCorte um zero dos dois e depois divida os dois por 2: 40 ÷ 200 = 4 ÷ 20 = 2 ÷ 10 = 0,2 L.\nEm mL, multiplique por 1 000: 0,2 L = 200 mL.",
+     "texto": "Macete de Soluções: conte os gramas; pondo água, eles não mudam.\nA calda precisa de 4 g em cada um dos 10 L: 4 × 10 = 40 g, todos vindos do concentrado.\n1 L do concentrado tem 200 g. Quantos 40 g cabem em 200 g? 5. Basta 1/5 de litro: 1 000 mL ÷ 5 = 200 mL.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Quanto concentrado",
@@ -616,7 +616,8 @@
       ],
       "contas": [
        "m = 4 \\times 10 = 40\\,\\text{g}",
-       "V = \\dfrac{40}{200} = 0{,}2\\,\\text{L}"
+       "200 \\div 40 = 5",
+       "1\\,000\\,\\text{mL} \\div 5 = 200\\,\\text{mL}"
       ],
       "resultado": "V = 200\\,\\text{mL}",
       "nota": "O resto dos 10 L é água."
@@ -692,7 +693,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Concentração = mols ÷ volume = 0,001 ÷ 0,05 (50 mL = 0,05 L).\nAnde a vírgula dos dois 3 casas: 0,001 ÷ 0,05 = 1 ÷ 50.\n1 ÷ 50 = 2 ÷ 100 = 0,02 mol/L.",
+     "texto": "Macete de Soluções: conte os mols; compare em vezes.\nQuantos 10 mL cabem em 50 mL? 5. O ácido está num volume 5 vezes maior que a base: 0,2 ÷ 5 = 0,04.\nCada ácido gasta 2 NaOH, então há metade dos mols de ácido: 0,04 ÷ 2 = 0,02 mol/L.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Ácido no efluente",
@@ -707,9 +708,9 @@
        "a: ácido; b: base (NaOH)"
       ],
       "contas": [
-       "n_b = 0{,}2 \\times 0{,}01 = 0{,}002\\,\\text{mol}",
-       "n_a = 0{,}001\\,\\text{mol}",
-       "C_a = \\dfrac{0{,}001}{0{,}05}"
+       "50 \\div 10 = 5 \\text{ vezes}",
+       "0{,}2 \\div 5 = 0{,}04",
+       "C_a = 0{,}04 \\div 2 = 0{,}02\\,\\text{mol/L}"
       ],
       "resultado": "C_a = 0{,}02\\,\\text{mol/L}",
       "nota": "Ácido sulfúrico no efluente."
@@ -785,7 +786,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Mols = massa ÷ massa molar: 117 ÷ 58,5.\nAnde a vírgula dos dois uma casa: 1 170 ÷ 585 = 2.\nSão 2 mol em cada litro: 2 mol/L.",
+     "texto": "Macete de Soluções: conte os mols: quantos pacotes de 1 mol cabem nos gramas de cada litro.\nQuantos 58,5 g cabem em 117 g? 58,5 + 58,5 = 117: cabem 2.\nSão 2 mol em cada litro: 2 mol/L.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Gramas viram mols",
@@ -800,7 +801,7 @@
       ],
       "contas": [
        "n = \\dfrac{117}{58{,}5}",
-       "n = \\dfrac{1\\,170}{585}"
+       "58{,}5 + 58{,}5 = 117"
       ],
       "resultado": "2\\,\\text{mol/L}",
       "nota": "Dois pacotes de sal em cada litro."
@@ -876,7 +877,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Base sobe o pH; ácido baixa.\nComo só entra base, o pH só pode subir: sai de 1, passa por 7 e vai além.\nA cor rosa aparece um pouco acima de 7, por volta de pH 8, porque o indicador fica rosa na base.",
+     "texto": "Macete de Soluções: compare com o 7, que é o meio; base sobe o pH.\nSó entra base: o pH sai de 1, chega a 7 quando o ácido acaba e passa de 7 com a base que sobra.\nA fenolftaleína fica rosa em meio básico, ou seja, acima de 7.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O pH durante a titulação",
@@ -967,7 +968,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Concentração = massa ÷ volume em litros.\nSuco: 22 ÷ 0,2 = 220 ÷ 2 = 110. Refri: 35 ÷ 0,35 = 3 500 ÷ 35 = 100. Energético: 27 ÷ 0,25 = 2 700 ÷ 25.\n2 700 ÷ 25: 25 cabe 4 vezes em 100 (4 × 25 = 100), então cabe 27 × 4 = 108 vezes em 2 700. Energético: 108.\nChá: 30 ÷ 0,5 = 60. Achocolatado: 18 ÷ 0,2 = 90. O maior é 110, o do suco.",
+     "texto": "Macete de Soluções: concentração é quantos gramas há em cada litro; compare em vezes.\nQuantas caixinhas de 200 mL cabem em 1 L? 5. Suco: 22 × 5 = 110. Achocolatado: 18 × 5 = 90.\nLatas de 250 mL cabem 4 vezes em 1 L: energético 27 × 4 = 108. A garrafa de 500 mL cabe 2: chá 30 × 2 = 60.\nRefri: 35 g em 350 mL é 10 g a cada 100 mL; 1 L tem 10 de 100 mL: 100 g/L. O maior é o suco, 110 g/L.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Açúcar em cada litro",
@@ -984,11 +985,11 @@
        "V: volume da embalagem em litros"
       ],
       "contas": [
-       "\\text{suco: } 22 \\div 0{,}2 = 110",
-       "\\text{energético: } 27 \\div 0{,}25 = 108",
-       "\\text{refri: } 35 \\div 0{,}35 = 100",
-       "\\text{achocolatado: } 18 \\div 0{,}2 = 90",
-       "\\text{chá: } 30 \\div 0{,}5 = 60"
+       "\\text{suco: } 22 \\times 5 = 110",
+       "\\text{energético: } 27 \\times 4 = 108",
+       "\\text{refri: } 10 \\times 10 = 100",
+       "\\text{achocolatado: } 18 \\times 5 = 90",
+       "\\text{chá: } 30 \\times 2 = 60"
       ],
       "resultado": "\\text{suco: } 110\\,\\text{g/L}",
       "nota": "Maior açúcar por litro."
@@ -1063,7 +1064,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Massa do calcário = mols × massa molar = 10 000 × 100 g.\n10 000 × 100 = 1 000 000 g.\nEm kg, divida por 1 000: 1 000 000 g = 1 000 kg.",
+     "texto": "Macete de Soluções: conte os mols; é 1 ácido para 1 calcário.\n980 kg = 980 000 g. Quantos 98 g cabem em 980 000 g? 10 000: são 10 000 mol de ácido e de calcário.\nCada mol de calcário pesa 100 g: 10 000 × 100 = 1 000 000 g = 1 000 kg.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Calcário para o ácido",
@@ -1151,7 +1152,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Compare cada pH com 7.\n2 é menor que 7: ácido, vermelho.\n10 é maior que 7: básico, verde.",
+     "texto": "Macete de Soluções: compare com o 7, que é o meio: abaixo é ácido, acima é básico.\nLimão: 2 é menor que 7, ácido, vermelho.\nSabão: 10 é maior que 7, básico, verde.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Cor de cada copo",
@@ -1241,7 +1242,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Concentração = massa ÷ volume = 20 ÷ 1,6.\nAnde a vírgula dos dois uma casa: 200 ÷ 16.\n200 ÷ 16 = 12,5 g/L (porque 16 × 12 = 192, e os 8 que faltam são meio 16).",
+     "texto": "Macete de Soluções: conte os gramas; a fervura tira água, não sal.\nSal na panela: 10 g em cada um dos 2 L = 20 g. No fim, continuam 20 g.\nQuantos gramas em cada litro? 20 ÷ 1,6 = 200 ÷ 16. 16 × 12 = 192, e os 8 que faltam são meio 16: 12,5 g/L.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Depois da fervura",
@@ -1333,7 +1334,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Gramas = mols × massa molar = 0,0025 × 176.\n25 × 176 = 4 400; com 4 casas depois da vírgula, 0,4400 = 0,44 g.\nEm mg, multiplique por 1 000: 0,44 g = 440 mg.",
+     "texto": "Macete de Soluções: conte os mols; cada NaOH gasto é 1 vitamina C.\nCada litro da base tem 0,1 mol, que equivale a 0,1 × 176 = 17,6 g de vitamina C.\nQuantos 25 mL cabem em 1 000 mL? 40. 17,6 ÷ 40: 17,6 ÷ 4 = 4,4 e ÷ 10 = 0,44 g = 440 mg.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Vitamina C real",
@@ -1348,8 +1349,9 @@
        "M: quanto pesa 1 mol"
       ],
       "contas": [
-       "n = 0{,}1 \\times 0{,}025 = 0{,}0025\\,\\text{mol}",
-       "m = 0{,}0025 \\times 176 = 0{,}44\\,\\text{g}"
+       "0{,}1 \\times 176 = 17{,}6\\,\\text{g por litro de base}",
+       "1\\,000 \\div 25 = 40",
+       "17{,}6 \\div 40 = 0{,}44\\,\\text{g}"
       ],
       "resultado": "m = 440\\,\\text{mg}",
       "nota": "Menos que os 500 mg do rótulo."
@@ -1425,7 +1427,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Glicose: 90 ÷ 180 = 0,5 mol.\nSacarose: 171 ÷ 342 = 0,5 mol (porque 171 + 171 = 342).\nCada garrafa tem 1 L, então as duas têm 0,5 mol/L: o mesmo número de moléculas.",
+     "texto": "Macete de Soluções: conte os mols, não os gramas.\nGlicose: quantos 180 g cabem em 90 g? Meio: 0,5 mol. Sacarose: 171 + 171 = 342, então também 0,5 mol.\nAs duas têm 0,5 mol em 1 L: 0,5 mol/L, o mesmo número de moléculas.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Gramas viram pacotes",
@@ -1517,7 +1519,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Volume = mols ÷ concentração = 0,02 ÷ 0,4.\nAnde a vírgula dos dois uma casa: 0,2 ÷ 4 = 0,05 L.\nEm mL: 0,05 × 1 000 = 50 mL.",
+     "texto": "Macete de Soluções: conte os mols; compare em vezes.\nCada HCl gasta 1 NaOH. Quantas vezes 0,2 cabe em 0,4? 2: a base é 2 vezes mais concentrada.\nEntão basta um volume 2 vezes menor: 100 mL ÷ 2 = 50 mL.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Base para a sobra",
@@ -1532,8 +1534,8 @@
        "b: base (NaOH)"
       ],
       "contas": [
-       "0{,}2 \\times 0{,}1 = 0{,}4 \\times V_b",
-       "V_b = \\dfrac{0{,}02}{0{,}4} = 0{,}05\\,\\text{L}"
+       "0{,}4 \\div 0{,}2 = 2 \\text{ vezes}",
+       "V_b = 100 \\div 2 = 50\\,\\text{mL}"
       ],
       "resultado": "V_b = 50\\,\\text{mL}",
       "nota": "Base duas vezes mais forte: metade do volume."
@@ -1609,7 +1611,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Volume = dose ÷ concentração = 300 ÷ 50.\nCorte um zero dos dois: 30 ÷ 5 = 6.\nUma dose é 6 mL.",
+     "texto": "Macete de Soluções: conte os miligramas da dose.\nDose: 15 mg para cada um dos 20 kg: 15 × 20 = 300 mg.\n250 mg em 5 mL dá 50 mg em cada mL. Quantos 50 mg cabem em 300 mg? 6: são 6 mL.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Volume da dose",
@@ -1701,7 +1703,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Água pura tem pH 7: ela não é ácido nem base.\nMisturar algo de pH 2 com algo de pH 7 dá um pH entre 2 e 7.\nQuanto mais água, mais perto de 7; mas não passa de 7, porque nada ali é base.",
+     "texto": "Macete de Soluções: pondo água, o ácido não muda de quantidade: só se espalha.\nMenos ácido em cada litro: a acidez cai e o pH sobe.\nA água tem pH 7 e não é base: o pH chega perto de 7, mas não passa. A limonada continua ácida.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Limão com água",
@@ -1792,7 +1794,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Concentração = mols ÷ volume = 0,015 ÷ 0,01 (10 mL = 0,01 L).\nAnde a vírgula dos dois 3 casas: 15 ÷ 10 = 1,5 mol/L.\nEm gramas: 1,5 × 40 = 60 g/L.",
+     "texto": "Macete de Soluções: conte os mols; compare em vezes.\nCada NaOH gasta 1 HCl. Quantos 10 mL cabem em 30 mL? 3: gastou 3 vezes o volume do produto.\nEntão o produto é 3 vezes mais concentrado: 0,5 × 3 = 1,5 mol/L. Em gramas: 1,5 × 40 = 60 g/L.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Base do desentupidor",
@@ -1808,8 +1810,8 @@
        "M: quanto pesa 1 mol de NaOH"
       ],
       "contas": [
-       "n = 0{,}5 \\times 0{,}03 = 0{,}015\\,\\text{mol}",
-       "C_b = \\dfrac{0{,}015}{0{,}01} = 1{,}5\\,\\text{mol/L}",
+       "30 \\div 10 = 3 \\text{ vezes}",
+       "C_b = 0{,}5 \\times 3 = 1{,}5\\,\\text{mol/L}",
        "1{,}5 \\times 40 = 60"
       ],
       "resultado": "60\\,\\text{g/L}",

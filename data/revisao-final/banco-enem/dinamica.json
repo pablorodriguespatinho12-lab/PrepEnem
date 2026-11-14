@@ -46,7 +46,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Força da balança = peso + massa × aceleração.\n600 + 60 × 2 = 600 + 120 = 720 N.\nA balança divide por 10 e mostra 72 kg.",
+     "texto": "Macete de Dinâmica: ache a força que sobra, depois F = m × a. Aqui a sobra para cima é 60 × 2 = 120 N.\nA balança segura o peso (60 × 10 = 600 N) e ainda dá a sobra: 600 + 120 = 720 N.\nA tela mostra quantos 10 N cabem em 720 N: 720 ÷ 10 = 72 kg.",
      "visual": {
       "tipo": "quadro",
       "titulo": "A balança na arrancada",
@@ -139,7 +139,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "a = força que sobra ÷ massa.\na = 9 ÷ 3 = 3 m/s².\nO conjunto sobe com 3 m/s em 1 s, 6 m/s em 2 s, 9 m/s em 3 s.",
+     "texto": "Macete de Dinâmica: o que empurra menos o que segura, depois F = m × a.\nPeso do drone com o pacote: 3 × 10 = 30 N. Sobra: 39 − 30 = 9 N para cima.\na = 9 ÷ 3 = 3 m/s² (9 N repartidos por 3 kg: 3 N por quilo).",
      "visual": {
       "tipo": "quadro",
       "titulo": "A decolagem",
@@ -231,7 +231,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Pergunte: alguma força empurrou o passageiro para a frente? Não.\nEntão não é força nova: é o corpo continuando como estava.\nIsso é a 1ª lei, a inércia."
+     "texto": "Macete de Dinâmica: só a força que sobra muda a velocidade (F = m × a).\nNo passageiro solto, nada empurra nem segura: sobra 0, então a = 0.\nSem aceleração, ele segue com a velocidade que tinha: é a inércia. Letra E."
     },
     {
      "titulo": "Por que funciona",
@@ -303,7 +303,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "a = 200 ÷ 800. Corte os zeros dos dois: 2 ÷ 8, porque dividir os dois pelo mesmo número não muda quantas vezes um cabe no outro (120 ÷ 40 = 12 ÷ 4 = 3).\n2 ÷ 8 = 1 ÷ 4: divida os dois por 2. Numa pizza, 2 pedaços de 8 são o mesmo tanto que 1 pedaço de 4.\n1 ÷ 4 = 0,25, porque 4 pedaços de 0,25 fazem 1 (0,25 + 0,25 + 0,25 + 0,25 = 1).\na = 0,25 m/s².",
+     "texto": "Macete de Dinâmica: o que empurra menos o que segura, depois F = m × a.\nSobra: 1 200 − 1 000 = 200 N para o lado da Azul.\na = 200 ÷ 800: 200 N repartidos por 800 kg dão um quarto de newton por quilo, 0,25 m/s².\nConfira: 800 × 0,25 = um quarto de 800 = 200 N.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O cabo de guerra",
@@ -394,7 +394,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Massa total máxima: 150 000 ÷ 10 = 15 000 kg.\nTire o caminhão: 15 000 − 8 000 = 7 000 kg de areia.\nSó subtraia depois de passar tudo para kg.",
+     "texto": "Macete de Dinâmica: peso = m × 10; ao contrário, massa = peso ÷ 10.\nMassa máxima: 150 000 ÷ 10 = 15 000 kg (quantos 10 N cabem, porque cada 1 kg pesa 10 N).\nTire o caminhão: 15 000 − 8 000 = 7 000 kg de areia.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O limite da ponte",
@@ -490,7 +490,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Aceleração: a = 18 ÷ 6 = 3 m/s².\nForça: F = m × a = 1 200 × 3 = 3 600 N.\nSão duas contas: primeiro a aceleração, depois a força.",
+     "texto": "Macete de Dinâmica: aceleração = quanto a velocidade muda ÷ tempo; depois F = m × a.\na = 18 ÷ 6 = 3 m/s² (18 m/s repartidos em 6 s: 3 m/s a cada segundo).\nF = 1 200 × 3 = 3 600 N.",
      "visual": {
       "tipo": "quadro",
       "titulo": "A arrancada",
@@ -582,7 +582,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Peso: 80 × 10 = 800 N para baixo.\nPara empatar, o ar faz 800 N para cima.\nSobra 800 − 800 = 0, e ele segue a 5 m/s.",
+     "texto": "Macete de Dinâmica: o que empurra menos o que segura dá m × a; velocidade constante quer dizer a = 0.\nPeso: 80 × 10 = 800 N para baixo. Sobra: 80 × 0 = 0.\nAr − 800 = 0, então o ar faz 800 N para cima.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O empate das forças",
@@ -674,7 +674,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Menino: a = 120 ÷ 40 = 3 m/s².\nAdulto: a = 120 ÷ 80 = 12 ÷ 8 = 1,5 m/s².\nConfira: 80 × 1,5 = 80 + 40 = 120 N.",
+     "texto": "Macete de Dinâmica: F = m × a, então a = força ÷ massa. Pela 3ª lei, os dois recebem os mesmos 120 N.\nMenino: 120 ÷ 40 = 3 m/s² (120 N repartidos por 40 kg: 3 N por quilo).\nAdulto: 120 ÷ 80 = 1,5 m/s² (confira: 80 × 1,5 = 80 + 40 = 120).",
      "visual": {
       "tipo": "quadro",
       "titulo": "O empurrão no gelo",
@@ -766,7 +766,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "a = F ÷ m.\nVazio: 60 ÷ 20 = 3 m/s².\nCheio: 60 ÷ 60 = 1 m/s².",
+     "texto": "Macete de Dinâmica: F = m × a, então a = força que sobra ÷ massa. Sem atrito, sobram os 60 N inteiros.\nVazio: 60 ÷ 20 = 3 m/s² (3 N para cada quilo).\nCheio: 60 ÷ 60 = 1 m/s² (1 N para cada quilo).",
      "visual": {
       "tipo": "quadro",
       "titulo": "Vazio e cheio",
@@ -858,7 +858,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "0,5 é metade de 1: 100 × 1 = 100, então 100 × 0,5 = metade de 100 = 50 N.\nCabo = peso + sobra = 1 000 + 50 = 1 050 N.\nConfira: 1 050 − 1 000 = 50 N; 50 ÷ 100 = 0,5 m/s².",
+     "texto": "Macete de Dinâmica: o que empurra menos o que segura = m × a.\nSobra para subir acelerando: 100 × 0,5 = metade de 100 = 50 N.\nPeso: 100 × 10 = 1 000 N. Cabo = peso + sobra = 1 000 + 50 = 1 050 N.",
      "visual": {
       "tipo": "quadro",
       "titulo": "A força do cabo",
@@ -950,7 +950,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Mochila cheia: 5 kg.\nMochila vazia: 1 kg.\nMaterial: 5 − 1 = 4 kg.",
+     "texto": "Macete de Dinâmica: peso = m × 10; ao contrário, massa = peso ÷ 10.\nPeso do aluno: 50 × 10 = 500 N. 10% de 500 (500 em 10 partes, pegue 1) = 50 N.\nMochila cheia: 50 ÷ 10 = 5 kg (cada 10 N é 1 kg). Material: 5 − 1 = 4 kg.",
      "visual": {
       "tipo": "quadro",
       "titulo": "A mochila",
@@ -1043,7 +1043,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Força no caminhão: 50 000 N, para trás.\nAceleração do caminhão: a = 50 000 ÷ 10 000.\nCorte os 4 zeros dos dois: 5 ÷ 1 = 5 m/s², porque dividir os dois pelo mesmo número não muda quantas vezes um cabe no outro (120 ÷ 40 = 12 ÷ 4 = 3).",
+     "texto": "Macete de Dinâmica: F = m × a, então a = força ÷ massa. Pela 3ª lei, o carro empurra o caminhão de volta com 50 000 N.\na = 50 000 ÷ 10 000 = 5 m/s² (50 000 N repartidos por 10 000 kg: 5 N por quilo).",
      "visual": {
       "tipo": "quadro",
       "titulo": "A batida",
@@ -1134,7 +1134,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Se em 1 cabem 2 metades, em 20 cabem 20 × 2 = 40 metades.\na = 20 ÷ 0,5 = 40 m/s².\nConfira: 0,5 × 40 = metade de 40 = 20 N.",
+     "texto": "Macete de Dinâmica: o que empurra menos o que segura, depois F = m × a.\nPeso: 0,5 × 10 = 5 N. Sobra: 25 − 5 = 20 N para cima.\na = 20 ÷ 0,5 = quantas metades cabem em 20 = 40 m/s² (confira: 0,5 × 40 = 20).",
      "visual": {
       "tipo": "quadro",
       "titulo": "O lançamento",
@@ -1226,7 +1226,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Pergunte: quem empurra quem?\nRemo na água, para trás. Água no remo, para a frente.\nA força que move o barco é a da água, a reação."
+     "texto": "Macete de Dinâmica: só a força que sobra no barco o faz andar; ache quem empurra o barco para a frente.\nA pá empurra a água para trás; pela 3ª lei, a água empurra a pá para a frente.\nEssa força de fora leva remo, atleta e barco juntos para a frente. Letra E."
     },
     {
      "titulo": "Por que funciona",
@@ -1298,7 +1298,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "a = força que sobra ÷ massa.\na = 100 ÷ 50 = 2 m/s².\nEm 1 s, o armário ganha 2 m/s; em 2 s, 4 m/s.",
+     "texto": "Macete de Dinâmica: o que empurra menos o que segura, depois F = m × a.\nCom 150 N, velocidade constante: sobra 0, então o atrito segura 150 N.\nCom 250 N: sobra 250 − 150 = 100 N; a = 100 ÷ 50 = 2 m/s² (2 N por quilo).",
      "visual": {
       "tipo": "quadro",
       "titulo": "O armário",
@@ -1390,7 +1390,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "F = m × a = 60 × 1,5.\n1,5 é 1 mais meio: 60 × 1 = 60 e 60 × 0,5 = metade de 60 = 30.\nF = 60 + 30 = 90 N.",
+     "texto": "Macete de Dinâmica: F = m × a; na direção do movimento só a barra puxa, então ela é a força que sobra.\nF = 60 × 1,5 = 60 × 1 + 60 × 0,5 = 60 + 30 = 90 N.",
      "visual": {
       "tipo": "quadro",
       "titulo": "A força da barra",
@@ -1481,7 +1481,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "A velocidade é o que ele ganha por segundo vezes os segundos.\nv = 10 × 2 = 20 m/s.\nA massa de 3 kg não entra nesta conta.",
+     "texto": "Macete de Dinâmica: peso = m × 10; na queda, a = peso ÷ massa = 30 ÷ 3 = 10 m/s² (10 N por quilo, para qualquer massa).\nA velocidade sobe 10 m/s a cada segundo: em 2 s, 10 × 2 = 20 m/s.",
      "visual": {
       "tipo": "quadro",
       "titulo": "A queda",
@@ -1572,7 +1572,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "a = 20 ÷ 0,1 = 200 m/s².\nF = m × a = 0,5 × 200 = metade de 200 = 100 N.\nDuas contas: primeiro a aceleração, depois a força.",
+     "texto": "Macete de Dinâmica: aceleração = quanto a velocidade muda ÷ tempo; depois F = m × a.\na = 20 ÷ 0,1 = 200 m/s² (cabem 10 décimos em cada 1: 20 × 10).\nF = 0,5 × 200 = metade de 200 = 100 N.",
      "visual": {
       "tipo": "quadro",
       "titulo": "A defesa",
@@ -1664,7 +1664,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Aceleração: a = (2 500 − 1 500) ÷ 1 000 = 1 m/s².\nVelocidade: v = a × t = 1 × 5 = 5 m/s.\nSão duas contas: a força dá a aceleração, e a aceleração dá a velocidade.",
+     "texto": "Macete de Dinâmica: o que empurra menos o que segura, depois F = m × a.\nSobra: 2 500 − 1 500 = 1 000 N. a = 1 000 ÷ 1 000 = 1 m/s² (1 N por quilo).\nA velocidade sobe 1 m/s a cada segundo: em 5 s, partindo de 0, v = 1 × 5 = 5 m/s.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O reboque",
@@ -1756,7 +1756,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "a = força que sobra ÷ massa.\na = 2 000 ÷ 1 000 = 2 m/s².\nNo máximo, o bloco ganha 2 m/s a cada segundo.",
+     "texto": "Macete de Dinâmica: o que empurra menos o que segura, depois F = m × a.\nPeso: 1 000 × 10 = 10 000 N. Sobra máxima: 12 000 − 10 000 = 2 000 N.\na = 2 000 ÷ 1 000 = 2 m/s² (2 N por quilo).",
      "visual": {
       "tipo": "quadro",
       "titulo": "O limite do cabo",

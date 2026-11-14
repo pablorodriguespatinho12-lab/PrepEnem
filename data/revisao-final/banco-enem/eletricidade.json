@@ -46,7 +46,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Energia = potência × tempo: 88 × 180 = 15 840 Wh.\nPara virar kWh, divida por 1 000: 15,84 kWh.\nDinheiro = kWh × preço: 15,84 × 0,75 = R$ 11,88.",
+     "texto": "Macete de Eletricidade: energia = potência × tempo (kWh = kW × horas).\nPotência poupada: 100 − 12 = 88 W. Horas no mês: 6 × 30 = 180 h.\nEnergia: 88 × 180 = 15 840 Wh. Quantos 1 000 cabem em 15 840? 15,84 kWh.\nDinheiro: 15,84 × 0,75 = R$ 11,88.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Economia da troca",
@@ -138,7 +138,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Corrente = potência ÷ tensão.\n110 V: 1 760 ÷ 110 = 16 A.\n220 V: 1 760 ÷ 220 = 8 A.\n16 é o dobro de 8.",
+     "texto": "Macete de Eletricidade: P = U × i, então a corrente sai de i = P ÷ U.\n110 V: quantos 110 cabem em 1 760? 1 760 ÷ 110 = 16 A.\n220 V: quantos 220 cabem em 1 760? 1 760 ÷ 220 = 8 A. 16 é o dobro de 8.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Corrente nas duas versões",
@@ -225,7 +225,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Comum: 5 × 1 = 5 W.\nRápido: 9 × 2 = 18 W.\nQuantas vezes: 18 ÷ 5 = 3,6.",
+     "texto": "Macete de Eletricidade: P = U × i.\nComum: 5 × 1 = 5 W. Rápido: 9 × 2 = 18 W.\nQuantos 5 cabem em 18? 18 ÷ 5 = 3,6 vezes.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Potência dos carregadores",
@@ -317,7 +317,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Limite: 1 270 W.\nSome cada grupo: ferro + chapinha + ventilador = 1 000 + 200 + 60 = 1 260 W.\n1 260 é menor que 1 270: cabe. Os outros grupos passam de 1 270 W.",
+     "texto": "Macete de Eletricidade: em paralelo (cada aparelho no seu fio), some as potências; o limite sai de P = U × i.\nLimite: 127 × 10 = 1 270 W.\nFerro + chapinha + ventilador: 1 000 + 200 + 60 = 1 260 W, abaixo de 1 270. Os outros grupos passam.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Limite da régua",
@@ -408,7 +408,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Para achar o número que falta numa multiplicação, divida.\nR = U ÷ i = 220 ÷ 20 = 11 Ω.\nConfira já: 11 × 20 = 220.",
+     "texto": "Macete de Eletricidade: U = R × i; a letra que falta sai desfazendo a conta de vezes.\nR = U ÷ i: quantos 20 cabem em 220? 220 ÷ 20 = 11 Ω.\nConfira: 11 × 20 = 220.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Resistência da torneira",
@@ -498,7 +498,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Energia = potência × tempo: 10 × 600 = 6 000 Wh.\nDivida por 1 000 para virar kWh: 6 kWh.\nCusto: 6 × 0,90 = R$ 5,40.",
+     "texto": "Macete de Eletricidade: em paralelo, some as potências; energia = potência × tempo.\nPotência: 5 × 2 = 10 W. Horas: 20 × 30 = 600 h.\nEnergia: 10 × 600 = 6 000 Wh. Quantos 1 000 cabem em 6 000? 6 kWh.\nCusto: 6 × 0,90 = R$ 5,40.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Gasto em espera",
@@ -589,7 +589,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Corrente = tensão ÷ resistência total.\ni = 120 ÷ 200 = 0,6 A.\nDividir 120 por 200 é como 12 ÷ 20 = 0,6.",
+     "texto": "Macete de Eletricidade: em série, some as resistências; depois U = R × i.\nTotal: 40 lampadinhas de 5 Ω somadas = 40 × 5 = 200 Ω.\nCorrente: i = U ÷ R; quantos 200 cabem em 120? 120 ÷ 200 = 0,6 A.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Corrente do pisca-pisca",
@@ -603,6 +603,7 @@
        "R: as 40 resistências somadas"
       ],
       "contas": [
+       "R = 40 \\times 5 = 200\\,\\Omega",
        "i = \\frac{120}{200}"
       ],
       "resultado": "i = 0{,}6\\,\\text{A}",
@@ -679,7 +680,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Energia = potência × tempo = 360 × 2 = 720 Wh.\nPara kWh, divida por 1 000: 720 ÷ 1 000 = 0,72 kWh.\nDividir por 1 000 anda a vírgula 3 casas para a esquerda.",
+     "texto": "Macete de Eletricidade: P = U × i; depois energia = potência × tempo.\nPotência: 36 × 10 = 360 W. Energia: 360 × 2 = 720 Wh.\nQuantos 1 000 cabem em 720? 720 ÷ 1 000 = 0,72 kWh.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Energia do passeio",
@@ -770,7 +771,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Em 110 V, a corrente é 110 ÷ 10 = 11 A.\nPotência: P = U × i = 110 × 11 = 1 210 W.\nMetade do empurrão deu metade da corrente.",
+     "texto": "Macete de Eletricidade: U = R × i, depois P = U × i; a resistência de 10 Ω não muda.\nEm 110 V: quantos 10 cabem em 110? i = 110 ÷ 10 = 11 A.\nPotência: P = 110 × 11 = 1 210 W.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O aquecedor em 110 V",
@@ -861,7 +862,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Passe 6 minutos para horas: 6 ÷ 60 = 0,1 h.\nEnergia do banho: 5 000 × 0,1 = 500 Wh.\nTempo do LED: 500 ÷ 10 = 50 h.",
+     "texto": "Macete de Eletricidade: energia = potência × tempo, então tempo = energia ÷ potência.\nBanho: 6 minutos são 6 ÷ 60 = 0,1 h (que pedaço da hora). Energia: 5 000 × 0,1 = 500 Wh.\nLED: quantas horas de 10 W cabem em 500 Wh? 500 ÷ 10 = 50 h.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Mesma energia",
@@ -952,7 +953,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Com R = 20 Ω e U = 9 V: i = U ÷ R.\ni = 9 ÷ 20 = 0,45 A.\n9 ÷ 20 é o mesmo que 45 ÷ 100 (multiplicando os dois por 5).",
+     "texto": "Macete de Eletricidade: U = R × i, então i = U ÷ R.\nCom R = 20 Ω e 9 V: quantos 20 cabem em 9? i = 9 ÷ 20.\nMultiplique os dois por 5: 9 ÷ 20 = 45 ÷ 100 = 0,45 A.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O resistor em 9 V",
@@ -1042,7 +1043,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "No resistor: U = 7 V e i = 0,02 A (a mesma corrente do LED).\nR = U ÷ i = 7 ÷ 0,02.\nEm 1 cabem 50 pedaços de 0,02, porque 0,02 × 50 = 1. Então dividir por 0,02 é multiplicar por 50.\nR = 7 × 50 = 350 Ω.",
+     "texto": "Macete de Eletricidade: em série, a corrente é a mesma e a tensão da bateria se reparte; depois U = R × i.\nResistor: 9 − 2 = 7 V, com os mesmos 0,02 A do LED.\nR = U ÷ i: quantos 0,02 cabem em 7? Em 1 cabem 50, então em 7 cabem 7 × 50 = 350 Ω.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Resistor do LED",
@@ -1056,7 +1057,7 @@
        "i: a corrente do LED"
       ],
       "contas": [
-       "R = \\frac{7}{0{,}02} = \\frac{700}{2}"
+       "R = \\frac{7}{0{,}02} = 7 \\times 50"
       ],
       "resultado": "R = 350\\,\\Omega",
       "nota": "350 ohms protegem o LED."
@@ -1132,7 +1133,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Tensão no refletor: U = R × i = 20 × 10 = 200 V.\nTensão no fio: 2 × 10 = 20 V.\nSomando: 200 + 20 = 220 V, a tomada inteira.",
+     "texto": "Macete de Eletricidade: em série, some as resistências; depois U = R × i.\nTotal: 20 + 2 = 22 Ω. Corrente: quantos 22 cabem em 220? 220 ÷ 22 = 10 A.\nRefletor: U = 20 × 10 = 200 V. Os outros 2 × 10 = 20 V ficam no fio.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Tensão no refletor",
@@ -1223,7 +1224,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Energia = potência × tempo = 14,8 × 1 = 14,8 Wh.\nO tempo é 1 hora, porque 4 000 mAh é a corrente de 4 A por 1 hora.\n3,7 × 4 por partes: 3 × 4 = 12 e 0,7 × 4 = 2,8; somando, 14,8.",
+     "texto": "Macete de Eletricidade: P = U × i; depois energia = potência × tempo.\nCorrente: quantos 1 000 mA cabem em 4 000 mA? 4, então 4 A.\nPotência: 3,7 × 4 = 14,8 W. Energia em 1 h: 14,8 × 1 = 14,8 Wh.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Energia da bateria",
@@ -1314,7 +1315,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Corrente = tensão ÷ resistência.\nDividir por 10 anda a vírgula 1 casa para a esquerda: 127 ÷ 10 = 12,7. Cada zero, uma casa.\nMolhada: 127 ÷ 1 000 (3 zeros) = 0,127 A. Seca: 127 ÷ 100 000 (5 zeros) = 0,00127 A.\n0,127 é 100 vezes 0,00127: 0,00127 × 100 anda a vírgula 2 casas para a direita.",
+     "texto": "Macete de Eletricidade: U = R × i, então i = U ÷ R: com a mesma tensão, menos resistência deixa passar mais corrente.\nQuantos 1 000 cabem em 100 000? 100 000 ÷ 1 000 = 100: a pele molhada atrapalha 100 vezes menos.\nConfira: molhada, i = 127 ÷ 1 000 = 0,127 A; seca, i = 127 ÷ 100 000 = 0,00127 A. 100 vezes maior.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Pele seca e molhada",
@@ -1405,7 +1406,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "No mês: 2 × 30 = 60 kWh por placa.\nPlacas: 240 ÷ 60 = 4.\nConfira: 4 × 60 = 240.",
+     "texto": "Macete de Eletricidade: energia = potência × tempo (kWh = kW × horas).\nUma placa: 400 W = 0,4 kW. No mês: 0,4 × 5 × 30 = 60 kWh.\nPlacas: quantos 60 cabem em 240? 240 ÷ 60 = 4.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Placas para o mês",
@@ -1419,8 +1420,7 @@
        "t: as horas de sol no mês"
       ],
       "contas": [
-       "E = 400 \\times 5 \\times 30 = 60\\,000\\,\\text{Wh}",
-       "E = 60\\,\\text{kWh}",
+       "E = 0{,}4 \\times 5 \\times 30 = 60\\,\\text{kWh}",
        "\\frac{240}{60} = 4"
       ],
       "resultado": "4 \\text{ placas}",
@@ -1497,7 +1497,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Somando os dois: 5 + 5 = 10 A.\nOu some as potências primeiro: 120 W ÷ 12 V = 10 A. Dá igual.\nO fusível precisa aguentar pelo menos esses 10 A.",
+     "texto": "Macete de Eletricidade: em paralelo, some as potências; depois P = U × i.\nTotal: 60 + 60 = 120 W.\nCorrente: quantos 12 cabem em 120? 120 ÷ 12 = 10 A.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Corrente dos faróis",
@@ -1587,7 +1587,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Depois a resistência, R = U ÷ i.\nInverno: 220 ÷ 25 = 8,8 Ω, porque 25 × 8,8 = 220.\nVerão: 220 ÷ 12,5. Dobrar os dois não muda a divisão (6 ÷ 3 = 12 ÷ 6 = 2) e tira a vírgula: 440 ÷ 25 = 17,6 Ω.\n8,8 é a metade de 17,6.",
+     "texto": "Macete de Eletricidade: U = R × i, então R = U ÷ i.\nInverno: quantos 25 cabem em 220? 220 ÷ 25 = 8,8 Ω, porque 25 × 8,8 = 220.\nVerão: quantos 12,5 cabem em 220? Dobre os dois para tirar a vírgula: 440 ÷ 25 = 17,6 Ω.\n8,8 é a metade de 17,6.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Resistência no inverno",
@@ -1678,7 +1678,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Valor = kWh gastos × preço de cada kWh.\n180 × 0,85 = 153.\nConta por partes: 180 × 0,8 = 144 e 180 × 0,05 = 9; somando, 153.",
+     "texto": "Macete de Eletricidade: energia em kWh (kW × horas) é o que a conta cobra; valor = kWh × preço.\nGasto: 4 703 − 4 523 = 180 kWh.\nValor: 180 × 0,85 = 180 × 0,8 + 180 × 0,05 = 144 + 9 = R$ 153,00.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Conta do mês",
@@ -1768,7 +1768,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Potência = tensão × corrente.\nP = 120 × 3 = 360 W.\nEsse é o gasto do conjunto a cada segundo.",
+     "texto": "Macete de Eletricidade: em série, some as resistências; depois U = R × i e P = U × i.\nTotal: 30 + 10 = 40 Ω. Corrente: quantos 40 cabem em 120? 120 ÷ 40 = 3 A.\nPotência: 120 × 3 = 360 W.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Potência do conjunto",
