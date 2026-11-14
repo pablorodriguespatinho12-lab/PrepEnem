@@ -1499,8 +1499,8 @@
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Cada passagem guarda só 10%, o mesmo que dividir por 10: 50 000 ÷ 10 = 5 000 (preá); ÷ 10 = 500 (cobra); ÷ 10 = 50 (gavião).",
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Ecologia: a cada seta, corte um zero (fica 10%).\nCapim 50 000 → preá 5 000 → cobra 500 → gavião 50 kcal.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Energia que cada um recebe",
@@ -1644,6 +1644,11 @@
           }
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Ecologia: siga a cadeia de causas, um elo por linha.\nAdubo (fosfato e nitrato) → alga cresce demais → alga morre.\nBactérias comem a alga morta e gastam o oxigênio → peixe sufoca.",
+          "visual": null
+        },
+        {
           "titulo": "Por que funciona",
           "texto": "A camada verde de cima tapa a luz, e as algas de baixo morrem.\nAs bactérias que comem essa alga morta são decompositoras, as mesmas que fazem a comida esquecida apodrecer.\nElas respiram como nós: gastam oxigênio. Muita alga morta, muita bactéria respirando, e o oxigênio do fundo acaba.\nSem oxigênio, os peixes morrem.",
           "visual": null
@@ -1746,6 +1751,11 @@
           }
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Fisiologia: siga o oxigênio.\nMais hemácias = mais hemoglobina = mais oxigênio em cada volta do sangue.\nDe volta ao nível do mar, o músculo recebe mais oxigênio e cansa menos.",
+          "visual": null
+        },
+        {
           "titulo": "Por que funciona",
           "texto": "Cada hemácia leva oxigênio preso na hemoglobina. Ao nível do mar, com ar normal e mais hemácias, o músculo recebe mais oxigênio e demora mais para cansar.",
           "visual": null
@@ -1830,8 +1840,8 @@
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Cada um passa um alelo ao filho, ao acaso. Cruzando IA i com IB i saem 4 casas iguais em chance; só uma é i i.",
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Genética: descubra os alelos, quadro 2 × 2 e conte.\nEla é A e o pai dela é O: ela é Iᴬi. Ele é B e a mãe dele é O: ele é Iᴮi.\nFilhos: IᴬIᴮ, Iᴬi, Iᴮi, ii. Tipo O (ii): 1 de 4 = 25%.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Cruzamento",
@@ -1957,8 +1967,8 @@
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Organela é cada pecinha dentro da célula com um trabalho próprio, como os setores de uma fábrica.\nA tabela mostra o trabalho de cada uma que aparece nas alternativas.\nSó o retículo rugoso, o Golgi e as vesículas mexem com proteína para exportar.",
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Citologia: siga a linha de montagem da proteína.\nRetículo rugoso fabrica → complexo de Golgi embala → vesícula leva para fora da célula.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Cada setor da célula",
@@ -2078,6 +2088,11 @@
           }
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Evolução: as diferenças já existiam; o ambiente escolhe.\nJá havia peixes com olhos maiores e menores (mutação ao acaso).\nNo escuro, olho pequeno gasta menos energia: esses deixaram mais filhos, e o olho pequeno ficou comum.",
+          "visual": null
+        },
+        {
           "titulo": "Por que funciona",
           "texto": "Usar ou não usar o olho não muda o DNA que o peixe passa.\nNo escuro, olho grande só gasta energia. Quem nasceu com olho menor sobrou energia para crescer e se reproduzir.\nGeração após geração, os olhos menores ficaram mais comuns.",
           "visual": null
@@ -2158,6 +2173,11 @@
               ]
             ]
           }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Microbiologia: soro é pronto, vacina ensina.\nO soro protege já, enquanto o vírus ainda viaja pelos nervos.\nA vacina faz o corpo criar os próprios anticorpos e a memória, que demoram dias.",
+          "visual": null
         },
         {
           "titulo": "Por que funciona",

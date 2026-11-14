@@ -8,6 +8,7 @@ import aulas from './dia-2/aulas.json';
 const COM_MACETE = [
   'Química Orgânica', 'Química Ambiental e Energia', 'Estequiometria', 'Eletroquímica', 'Soluções, pH e Titulação',
   'Eletricidade e Circuitos', 'Dinâmica e Leis de Newton', 'Termodinâmica e Calor', 'Ondas e Acústica', 'Óptica',
+  'Ecologia', 'Fisiologia Humana e Saúde', 'Genética', 'Citologia', 'Evolução', 'Microbiologia e Doenças',
 ];
 type Macete = { nome: string; regra: string; passos: string[]; exemplo: string };
 const A = aulas as unknown as Record<string, { macete?: Macete }>;

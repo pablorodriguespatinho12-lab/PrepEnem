@@ -1420,6 +1420,11 @@
           }
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Ecologia: siga a seta e conte.\nCapim é produtor. Gafanhoto: 1º consumidor. Sapo: 2º. Cobra: 3º.\nConsumidor secundário = o 2º: o sapo.",
+          "visual": null
+        },
+        {
           "titulo": "A resposta",
           "texto": "Letra B, o sapo.\nA (capim): é produtor, não consumidor.\nC (gafanhoto): engana por ser o segundo da fila, mas é o consumidor primário, o primeiro que come planta.\nD (cobra): é o terciário. Come o sapo.\nE (fungos): são decompositores. Comem restos e ficam fora da contagem.",
           "visual": null
@@ -1508,6 +1513,11 @@
               ]
             ]
           }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Ecologia: pergunte quem ganha e quem perde.\nO piolho ganha (come sangue); a pessoa perde, mas continua viva.\nUm ganha e o outro perde sem morrer: parasitismo.",
+          "visual": null
         },
         {
           "titulo": "A resposta",
@@ -1618,6 +1628,11 @@
           }
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Fisiologia: siga o caminho da comida.\nBoca → estômago → intestino delgado. É no intestino delgado que os nutrientes passam para o sangue.",
+          "visual": null
+        },
+        {
           "titulo": "A resposta",
           "texto": "Letra A, intestino delgado.\nB (estômago): quebra a comida, mas quase não absorve.\nC (intestino grosso): recupera a água que sobrou e forma as fezes.\nD (esôfago): é só o tubo que leva a comida da boca ao estômago.\nE (boca): mastiga e começa a digestão, mas não absorve.",
           "visual": null
@@ -1692,6 +1707,11 @@
           }
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Genética: letras iguais = homozigoto; diferentes = heterozigoto.\nAa tem letras diferentes: heterozigota.",
+          "visual": null
+        },
+        {
           "titulo": "A resposta",
           "texto": "Letra B, heterozigota.\nA (homozigota dominante): engana porque o A maiúsculo aparece, mas exige as duas letras iguais, AA.\nC (homozigota recessiva): é aa.\nD (mutante): é quem teve o DNA alterado. Não fala do par de letras.\nE (clone): é cópia idêntica de outro ser. Também não fala do par de letras.",
           "visual": null
@@ -1756,6 +1776,11 @@
             ],
             "ligacoes": []
           }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Citologia: pergunte qual é o trabalho.\nFotossíntese é o trabalho do cloroplasto (o verde da folha).",
+          "visual": null
         },
         {
           "titulo": "A resposta",
@@ -1828,6 +1853,11 @@
               ]
             ]
           }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Evolução: mesma origem, ou só o mesmo trabalho?\nMorcego e borboleta não têm antepassado comum com asas: só o trabalho é igual.\nMesmo trabalho e origem diferente = análogos.",
+          "visual": null
         },
         {
           "titulo": "A resposta",
@@ -1905,6 +1935,11 @@
               ]
             ]
           }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Microbiologia: lembre quem causa.\nVírus: gripe, sarampo, dengue, covid, raiva. Bactéria: tuberculose, tétano.\nO sarampo é causado por vírus.",
+          "visual": null
         },
         {
           "titulo": "A resposta",
