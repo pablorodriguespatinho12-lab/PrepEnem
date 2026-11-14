@@ -628,7 +628,17 @@
         "certa": 3,
         "resolucao": "Cada ser guarda o mercúrio de tudo o que comeu na vida. O peixe grande junta o de muitos peixes pequenos, e a ave junta o de muitos peixes grandes. O topo da cadeia fica com a maior concentração."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Siga a seta",
+      "regra": "Na cadeia, a seta aponta para quem come. Conte as setas, e a cada seta só fica 10% da energia (corte um zero).",
+      "passos": [
+        "Produtor (planta) → 1º consumidor → 2º → 3º: conte quem come quem.",
+        "Relação: um ganha e o outro perde = parasitismo; um ganha e o outro fica igual = inquilinismo; os dois ganham = mutualismo.",
+        "Tirou ou pôs um ser: siga o que muda (sem quem espalha a semente, a planta diminui)."
+      ],
+      "exemplo": "Capim 10 000 kcal → boi 1 000 → pessoa 100 kcal."
+    }
   },
   "Fisiologia Humana e Saúde": {
     "materia": "Biologia",
@@ -686,7 +696,17 @@
         "certa": 0,
         "resolucao": "O texto diz que a molécula modula (controla) a coagulação, e o veneno de onde ela vem causa hemorragia, ou seja, segura a coagulação. Trombo é um coágulo formado dentro do vaso, que entope a passagem do sangue e pode causar o acidente vascular cerebral (o derrame). Um remédio que segura a coagulação impede o trombo. As outras alternativas falam de anemia, alergia, defesa e pressão."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Siga o oxigênio e a comida",
+      "regra": "Pergunte para que serve cada parte: o corpo leva comida e oxigênio até as células.",
+      "passos": [
+        "Comida: boca → estômago → intestino delgado (é ali que ela passa para o sangue).",
+        "Oxigênio: pulmão → hemácia (hemoglobina) → músculo. Pouco oxigênio no ar: o corpo faz mais hemácias.",
+        "Cada célula tem um serviço: cone vê a cor; bastonete vê com pouca luz."
+      ],
+      "exemplo": "Treinou na montanha: mais hemácias, mais oxigênio a cada volta do sangue."
+    }
   },
   "Genética": {
     "materia": "Biologia",
@@ -744,7 +764,17 @@
         "certa": 0,
         "resolucao": "Duas pistas. Os pais têm o gene e não têm a doença: são portadores (Aa). E a chance é de 1 em 4, o resultado de Aa × Aa para aa. Só aparece com duas cópias: recessivo."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Quadradinho do cruzamento",
+      "regra": "Escreva os 2 alelos de cada pai, cruze num quadro 2 × 2 e conte: cada quadradinho vale 25%.",
+      "passos": [
+        "Descubra os alelos: sangue O é ii; quem tem pai O recebeu um i dele.",
+        "Conte os quadradinhos que a pergunta pede: 1 de 4 = 25%; 2 de 4 = 50%.",
+        "Letras iguais (AA, aa) = homozigoto; diferentes (Aa) = heterozigoto. Gene é a receita de uma proteína."
+      ],
+      "exemplo": "AB × ii: Iᴬi, Iᴬi, Iᴮi, Iᴮi. Tipo A: 2 de 4 = 50%."
+    }
   },
   "Citologia": {
     "materia": "Biologia",
@@ -802,7 +832,17 @@
         "certa": 4,
         "resolucao": "A ATP sintetase é a peça que fabrica ATP na última etapa da respiração celular, usando a passagem de prótons. Essa etapa é a fosforilação oxidativa. Com a termogenina, os prótons não passam pela ATP sintetase, e a energia sai como calor."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Cada organela, um trabalho",
+      "regra": "Pergunte qual é o trabalho e ache a organela que faz: cada uma tem um serviço.",
+      "passos": [
+        "Cloroplasto: fotossíntese. Mitocôndria: energia (respiração).",
+        "Proteína para exportar: retículo rugoso fabrica → Golgi embala → vesícula leva para fora.",
+        "Água vai para o lado mais concentrado (osmose): em água pura, a célula incha."
+      ],
+      "exemplo": "Célula que faz muita enzima (proteína) tem muito retículo rugoso."
+    }
   },
   "Evolução": {
     "materia": "Biologia",
@@ -844,7 +884,17 @@
         "certa": 2,
         "resolucao": "No fundo marrom, o besouro verde aparece mais e é mais caçado. Os marrons sobrevivem mais e deixam mais filhos marrons. Nenhum besouro mudou de cor: mudou a proporção na população."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Já existia, o ambiente escolheu",
+      "regra": "As diferenças já existiam (mutação ao acaso); o ambiente só escolhe quem deixa mais filhos.",
+      "passos": [
+        "Uso e desuso passando aos filhos = Lamarck, ideia recusada hoje.",
+        "Mesmo trabalho e origem diferente = análogos (asa de morcego e de borboleta); mesma origem = homólogos.",
+        "Parasita que convive há muito tempo com o hospedeiro tende a matar menos."
+      ],
+      "exemplo": "Já havia insetos escuros e claros; no tronco escuro, o pássaro come os claros. Os escuros ficam comuns."
+    }
   },
   "Microbiologia e Doenças": {
     "materia": "Biologia",
@@ -902,7 +952,17 @@
         "certa": 3,
         "resolucao": "Medida profilática é medida de prevenção. As duas doenças são levadas por insetos que picam: a filariose por mosquito e a leishmaniose pelo mosquito-palha. Controlar os vetores serve para as duas. Rede de esgoto e vermífugo servem para verminoses de água e solo. Carne bem cozida evita a tênia."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Soro é pronto, vacina ensina",
+      "regra": "Soro traz anticorpo pronto (protege já, some depois); vacina ensina o corpo a fazer (demora, mas fica memória).",
+      "passos": [
+        "Urgência (prego, mordida): soro na hora; vacina junto, para o futuro.",
+        "Vírus: gripe, sarampo, dengue, covid, raiva. Bactéria: tuberculose, tétano.",
+        "A PCR só copia DNA: vírus de RNA precisa virar DNA antes (transcrição reversa)."
+      ],
+      "exemplo": "Pisou num prego sem vacina: soro antitetânico já, porque a vacina leva semanas."
+    }
   },
   "Aritmética e Porcentagem": {
     "materia": "Matemática",

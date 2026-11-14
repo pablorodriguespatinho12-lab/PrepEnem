@@ -1830,6 +1830,11 @@
           "visual": null
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Ecologia: tirou um ser, siga o que muda na cadeia.\nA preguiça comia os frutos e soltava as sementes longe, nas fezes.\nSem ela, menos sementes espalhadas: a planta fica mais rara e em menos lugares.",
+          "visual": null
+        },
+        {
           "titulo": "A resposta",
           "texto": "Letra C.\nE (hábitat): é tentadora, mas o lugar continua lá; faltou quem levasse a semente até ele.\nA (flores): fala de mudança na própria planta, que o texto não cita.\nB (tamanho das plantas): também fala de mudança na própria planta.\nD (sementes por fruto): também; o que sumiu foi o animal que comia os frutos.",
           "visual": null
@@ -1914,6 +1919,11 @@
           "visual": null
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Ecologia: pôs um ser de fora, siga o que muda.\nA jaqueira se espalha sem os inimigos de onde veio e ocupa o espaço das plantas nativas.\nMenos nativas no lugar = menos biodiversidade.",
+          "visual": null
+        },
+        {
           "titulo": "A resposta",
           "texto": "Letra A.\nB: erra porque os animais comem a jaca, mas o texto não fala de animais eliminados.\nC: diz que a jaqueira aumenta as relações e muda os nichos (o 'emprego' de cada espécie na mata) para melhor, quando ela tira espécies.\nD: nenhuma população fica acima da capacidade suporte por muito tempo; falta comida e espaço.\nE: diz que a jaqueira ajuda as nativas, quando ela toma o lugar delas.",
           "visual": null
@@ -1990,6 +2000,11 @@
         {
           "titulo": "O que acontece",
           "texto": "Fóton é um grãozinho de luz: a luz chega em pedacinhos, e no escuro chegam poucos.\nSe o bastonete é mais sensível, poucos fótons já bastam para ele avisar o cérebro. O animal enxerga em lugar escuro.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Fisiologia: cada célula tem um serviço.\nBastonete sente a QUANTIDADE de luz (funciona com pouca luz). Cone sente a cor.\nBastonete mais sensível = enxerga melhor no escuro.",
           "visual": null
         },
         {
@@ -2096,6 +2111,11 @@
           "visual": null
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Genética: gene é a receita de uma proteína.\nO gene RPE65 com defeito não faz a enzima certa. O vírus leva uma cópia boa do gene.\nA célula passa a ler a cópia boa e volta a fazer a enzima normal: é a expressão do gene.",
+          "visual": null
+        },
+        {
           "titulo": "A resposta",
           "texto": "Letra E.\nA: é tentadora, mas o código genético (a regra 'trio de letras → peça da proteína') é igual em todo ser vivo e não estava errado; o errado era o gene.\nB: a terapia não mexe no RNA do ribossomo, a pecinha que monta proteína.\nC: o tratamento não cria mutação; entrega um gene normal.\nD: o vírus leva o gene, não a proteína pronta.",
           "visual": null
@@ -2172,6 +2192,11 @@
         {
           "titulo": "O que acontece",
           "texto": "Dentro do vacúolo há mais coisa dissolvida que fora.\nA água entra por osmose e o vacúolo cresce.\nO mesmo pigmento fica espalhado em mais água, mais diluído.\nA parede celular, dura como uma caixa, segura a célula, e ela não estoura.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Citologia: a água vai para o lado mais concentrado (osmose).\nHipotônico: fora tem menos coisa dissolvida que dentro. A água entra no vacúolo.\nO vacúolo incha, e o pigmento roxo fica mais diluído.",
           "visual": null
         },
         {
@@ -2256,6 +2281,11 @@
         {
           "titulo": "O que acontece",
           "texto": "Um vírus que mata 9 em cada 10 doentes destrói o próprio caminho para se espalhar.\nAo longo das gerações, a seleção natural (quem sobrevive deixa mais descendentes) favorece vírus mais brandos e pessoas mais resistentes.\nLetalidade baixa é sinal de convivência longa.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Evolução: parasita que convive há muito tempo com o hospedeiro mata menos.\nMatar o hospedeiro rápido é ruim para o vírus: ele some junto.\nA dengue mata menos de 1%: sinal de longa convivência (coevolução) e de parasitar melhor.",
           "visual": null
         },
         {
@@ -2360,6 +2390,11 @@
         {
           "titulo": "O que acontece",
           "texto": "A polimerase da PCR (a enzima que copia) só sabe copiar DNA. O material do coronavírus é RNA, então ela não consegue copiar direto. A etapa anterior transforma o RNA em cDNA, e aí a cópia funciona.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Microbiologia: a PCR só copia DNA.\nO coronavírus é de RNA. Antes, o RNA vira DNA (cDNA) pela transcrição reversa.\nDepois a PCR copia esse DNA.",
           "visual": null
         },
         {
