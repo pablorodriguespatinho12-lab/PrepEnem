@@ -1,8 +1,9 @@
 'use client';
 import { useEffect, useMemo, useRef } from 'react';
 import {
-  ENGROSSA_LINHA, LADO_DO_PIXEL, QUADROS_POR_SEGUNDO, endurecerBordas, separarSvg, tamanhoDoViewBox,
+  ENGROSSA_LINHA, LADO_DO_PIXEL, QUADROS_POR_SEGUNDO, brilhos, endurecerBordas, ondaDoCursor, separarSvg, tamanhoDoViewBox,
 } from '@/lib/pixel/svg-pixel';
+import { useMundoAnimado } from '@/hooks/use-mundo-animado';
 
 // Desenho feito à mão (SVG) mostrado como pixel art (Pablo, 14/11/2026).
 // 1. O SVG das formas fica invisível na tela, só para o navegador calcular cor e
@@ -40,14 +41,30 @@ export function DesenhoPixel({ svg, className = '' }: { svg: string; className?:
   const largura = caixa ? Math.round(caixa.largura / LADO_DO_PIXEL) : 0;
   const altura = caixa ? Math.round(caixa.altura / LADO_DO_PIXEL) : 0;
 
+  const { animado: mundoAnimado } = useMundoAnimado();
+  // cursor em pixels do desenho; escrito no pointermove, lido no próximo quadro (sem setState)
+  const cursor = useRef<{ x: number; y: number; desde: number } | null>(null);
+
   useEffect(() => {
     const original = fonte.current?.querySelector('svg');
     const ctx = tela.current?.getContext('2d', { willReadFrequently: true });
     if (!original || !ctx || !largura) return;
     let vivo = true;
     let ocupado = false;
+    let base: ImageData | null = null;
+    const svgMexe = (original.getAnimations?.({ subtree: true }).length ?? 0) > 0;
+    // pinta a base + brilhos + onda do cursor (a base só é refeita se o SVG se mexe)
+    const pintar = () => {
+      if (!base) return;
+      const quadro = new ImageData(new Uint8ClampedArray(base.data), largura, altura);
+      if (mundoAnimado) brilhos(quadro.data, largura, altura, Math.floor(Date.now() / 900));
+      const c = cursor.current;
+      if (c) ondaDoCursor(quadro.data, largura, altura, c.x, c.y, Date.now() - c.desde);
+      ctx.putImageData(quadro, 0, 0);
+    };
     const desenhar = () => {
       if (ocupado || !vivo) return;
+      if (base && !svgMexe) return pintar();
       ocupado = true;
       const img = new Image();
       img.onload = () => {
@@ -57,20 +74,31 @@ export function DesenhoPixel({ svg, className = '' }: { svg: string; className?:
         ctx.drawImage(img, 0, 0, largura, altura);
         const dados = ctx.getImageData(0, 0, largura, altura);
         endurecerBordas(dados.data);
-        ctx.putImageData(dados, 0, 0);
+        base = dados;
+        pintar();
       };
       img.onerror = () => { ocupado = false; };
       img.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(copiaComCores(original))}`;
     };
     desenhar();
-    const animado = original.getAnimations?.({ subtree: true }).length ?? 0;
-    const relogio = animado ? window.setInterval(desenhar, 1000 / QUADROS_POR_SEGUNDO) : undefined;
+    const relogio = window.setInterval(() => {
+      if (document.hidden) return;
+      if (svgMexe || mundoAnimado || cursor.current) desenhar();
+    }, 1000 / QUADROS_POR_SEGUNDO);
     return () => { vivo = false; window.clearInterval(relogio); };
-  }, [partes, largura, altura]);
+  }, [partes, largura, altura, mundoAnimado]);
+
+  const aoMover = (e: React.PointerEvent<HTMLDivElement>) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - r.left) / r.width) * largura;
+    const y = ((e.clientY - r.top) / r.height) * altura;
+    const antes = cursor.current;
+    cursor.current = { x, y, desde: antes?.desde ?? Date.now() };
+  };
 
   if (!partes || !caixa) return <div className={className} dangerouslySetInnerHTML={{ __html: svg }} />;
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${className}`} onPointerMove={aoMover} onPointerLeave={() => { cursor.current = null; }}>
       {/* só para o navegador calcular cores e animação; quem aparece é o canvas */}
       <div ref={fonte} aria-hidden className="desenho-pixel-fonte absolute inset-0 opacity-0 pointer-events-none" dangerouslySetInnerHTML={{ __html: partes.formas }} />
       <canvas ref={tela} width={largura} height={altura} className="desenho-pixel-tela block w-full h-auto" aria-hidden />
