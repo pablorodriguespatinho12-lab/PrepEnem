@@ -868,6 +868,11 @@
           "visual": null
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Química Orgânica: olhe onde está o O.\nNa acetona, o O está preso com ligação dupla (C=O) num carbono do MEIO.\nC=O no meio = cetona. (Na ponta, com H, seria aldeído.)",
+          "visual": null
+        },
+        {
           "titulo": "A resposta",
           "texto": "Letra C, cetona.\nB (aldeído): é a confusão mais comum. Também tem C=O, mas na ponta da cadeia, com um hidrogênio do lado.\nA (álcool): teria OH, e a acetona não tem.\nD (ácido carboxílico): teria COOH, C=O e OH no mesmo carbono da ponta.\nE (éster): teria o C=O preso a um oxigênio que segue para outro carbono.",
           "visual": null
@@ -953,7 +958,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Conte os átomos e multiplique cada um pela sua massa.",
+          "texto": "Macete de Química Orgânica: o começo do nome conta os carbonos; but = 4.\nAlcano: H = 2 × 4 + 2 = 10. Butano = C₄H₁₀.\nMassa: 4 × 12 = 48 e 10 × 1 = 10. Soma: 58 g/mol.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Massa do butano",
@@ -1119,6 +1124,11 @@
           "visual": null
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Química Ambiental: siga a cadeia de causas, um elo por linha.\nFosfato (adubo) → alga cresce demais → alga morre.\nBactérias comem a alga morta e gastam o oxigênio da água → o peixe sufoca.",
+          "visual": null
+        },
+        {
           "titulo": "A resposta",
           "texto": "Letra E.\nA: é a armadilha. O fosfato não envenena, ele alimenta as algas.\nB: inverte. Vivas, as algas até soltam oxigênio. O problema é a falta dele depois.\nC: falha porque o sol não mudou. O que mudou foi o esgoto.\nD: falha porque o peixe não morre por enxergar mal. Morre sem ar.",
           "visual": null
@@ -1195,7 +1205,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Massa = energia que quer ÷ energia por grama, para cada combustível. No quadro, o traço da fração quer dizer dividir.",
+          "texto": "Macete de Química Ambiental: siga as unidades.\nEtanol: cada grama dá 30 kJ. Quantos 30 cabem em 900? 900 ÷ 30 = 30 g.\nGasolina: quantos 45 cabem em 900? 20 g. A mais: 30 − 20 = 10 g.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Massa de combustível",
@@ -1330,7 +1340,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Massa de açúcar ÷ volume final. No quadro, o traço da fração quer dizer dividir: 20 ÷ 1 = 20.",
+          "texto": "Macete de Soluções: conte os gramas; pondo água, eles não mudam.\n200 mL é 0,2 L: 100 × 0,2 = 20 g de açúcar.\nVolume final: 200 + 800 = 1 000 mL = 1 L. São 20 g em cada litro: 20 g/L.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Diluição",
@@ -1470,6 +1480,11 @@
           "visual": null
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Eletroquímica: quem perde elétron se gasta; quem ganha engorda.\nO zinco perde elétrons e vira íon na água: a placa afina.\nO cobre da água ganha elétrons e vira metal na placa: ela engorda.",
+          "visual": null
+        },
+        {
           "titulo": "A resposta",
           "texto": "Letra A.\nB: é a mais tentadora. Inverte os papéis, e quem perde elétrons é que se gasta.\nC: falha porque não andam só elétrons. Átomos de zinco saem da placa e átomos de cobre entram na outra.\nD: falha porque a placa de cobre ganha metal.\nE: falha porque receber elétrons faz o cobre virar metal e grudar, não desmanchar.",
           "visual": null
@@ -1557,7 +1572,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Gramas → mol → proporção → gramas.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nReceita: 1 CH₄ (12 + 4 = 16 g) dá 1 CO₂ (44 g).\n32 g é 2 vezes 16 g. O CO₂ também dobra: 2 × 44 = 88 g.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Do metano ao gás carbônico",

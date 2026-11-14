@@ -965,25 +965,24 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Leia o nome: a 1ª palavra diz o ácido; procure o anel C₆H₅ na fórmula.\nNo nome, “etan” quer dizer 2 carbonos e “propan”, 3. O acetato vem do ácido etanoico (o do vinagre), por isso tem 2 carbonos.",
+          "texto": "Macete de Química Orgânica: olhe o pedaço com O e leia o nome.\nTodos são ésteres (COO entre carbonos). \"Acetato\" vem do ácido etanoico (2 C): só banana e pêssego são acetatos.\nSaturada = sem ligação dupla entre carbonos. O pêssego tem a roda de 6 (C₆H₅), que tem duplas. Sobra a banana.",
           "visual": {
             "tipo": "quadro",
-            "titulo": "Os dois acetatos",
+            "titulo": "Olhe o nome e a roda",
             "dados": [
-              "\\text{acetato} = CH_3CO_2 \\text{ (2 carbonos)}",
-              "C_6H_5 = \\text{anel com 3 duplas}"
+              "\\text{acetato} = 2\\,\\text{C}",
+              "C_6H_5 = \\text{roda de 6}"
             ],
-            "formula": "\\text{éster} = \\text{ácido} + \\text{álcool}",
+            "formula": "\\text{saturada} = \\text{sem C=C}",
             "legenda": [
-              "ácido: dá a 1ª palavra do nome",
-              "álcool: dá o 'de ...' do nome"
+              "C=C: ligação dupla entre carbonos"
             ],
             "contas": [
-              "CH_3CO_2(CH_2)_2CH(CH_3)_2 \\to \\text{só simples}",
-              "CH_3CO_2CH_2C_6H_5 \\to \\text{tem anel}"
+              "\\text{banana: acetato, sem roda}",
+              "\\text{pêssego: acetato, com roda}"
             ],
-            "resultado": "\\text{acetato de isoamila: banana}",
-            "nota": "Só ele vem do ácido etanoico e não tem dupla."
+            "resultado": "\\text{banana}",
+            "nota": "Acetato e sem roda: só a banana."
           }
         },
         {
@@ -1068,6 +1067,11 @@
         {
           "titulo": "O que acontece",
           "texto": "A soda cáustica quebra a gordura do óleo em dois pedaços: glicerina e sal de ácido graxo, que é o sabão. Gordura mais base forte é saponificação.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Química Orgânica: olhe o pedaço com O: óleo e gordura são ésteres.\nÉster + base forte (a soda cáustica) → sabão. Esse nome é saponificação.\nO caminho de volta (ácido + álcool → éster) seria esterificação.",
           "visual": null
         },
         {
@@ -1168,7 +1172,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Divida a massa do começo por 2 elevado ao número de meias-vidas. $2^7$ (lê-se 2 elevado a 7) é o 2 multiplicado por ele mesmo 7 vezes. No quadro, o traço da fração quer dizer dividir.",
+          "texto": "Macete de Química Ambiental: meia-vida corta pela metade a cada período.\nQuantos períodos de 5 anos cabem em 35? 35 ÷ 5 = 7 metades.\n500 → 250 → 125 → 62,5 → 31,25 → 15,6 → 7,8 → 3,9 g.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Pesticida no solo",
@@ -1316,6 +1320,11 @@
           "visual": null
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Química Ambiental: siga a ordem; o nome diz o que cada etapa faz.\nCoagulação junta a sujeira em flocos. Decantação: os flocos pesados descem para o fundo.\nÉ na decantação que sai a maior parte dos sólidos; o filtro só pega o resto.",
+          "visual": null
+        },
+        {
           "titulo": "A resposta",
           "texto": "Letra B.\nA (coagulação): é tentadora, mas ela só gruda a sujeira em flocos, não tira.\nC (filtração): tira o resto miúdo que sobrou, não a maior parte.\nD (desinfecção): mata micróbios com cloro, sem tirar sujeira.\nE (fluoretação): só põe flúor para os dentes.",
           "visual": null
@@ -1405,7 +1414,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Volume é a massa dividida pela densidade. 20 000 ÷ 0,8: multiplique os dois por 10 e fica 200 000 ÷ 8 = 25 000 mL, que são 25 L (1 L = 1 000 mL). No quadro, o traço da fração quer dizer dividir.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nO texto dá: 100 g de glicose → 50 g de etanol (a metade). 50 kg dariam 25 kg.\nCom 80%: 25 × 0,8 = 20 kg = 20 000 g. Cada mL pesa 0,8 g: 20 000 ÷ 0,8 = 25 000 mL = 25 L.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Etanol da glicose",
@@ -1541,7 +1550,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Tire um dos ingredientes da ferrugem e ela não acontece.",
+          "texto": "Macete de Eletroquímica: ferrugem pede ferro + água + oxigênio.\nTire um dos três e ela para.\nO filme cerâmico cobre o ferro: água e oxigênio não chegam. É um efeito de barreira.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Os ingredientes da ferrugem",
@@ -1657,7 +1666,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Maior menos menor, vezes o número de pilhas.",
+          "texto": "Macete de Eletroquímica: tensão = maior − menor; em série, some.\n0,54 − (−3,05) = 0,54 + 3,05 = 3,59 V por pilha.\n3 pilhas: 3 × 3,59 = 10,77 V, dentro de 10,5 a 10,9: carrinho de controle (IV).",
           "visual": {
             "tipo": "quadro",
             "titulo": "Bateria de lítio-iodo",

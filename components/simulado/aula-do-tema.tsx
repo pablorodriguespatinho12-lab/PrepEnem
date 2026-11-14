@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { BookOpen, Check, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@/components/ui/dialog';
-import { aulaDoTema, type Degrau } from '@/lib/aulas-dia-2';
+import { type Macete, aulaDoTema, type Degrau } from '@/lib/aulas-dia-2';
 import { antesDaQuestao, type Exercicio } from '@/lib/antes-da-questao';
 import { desenhoDoTema } from '@/lib/aulas-desenho';
 import { TelaDesenho, TelaProporcoes, TelaSentido } from '@/components/simulado/telas-desenho';
@@ -56,14 +56,17 @@ export function AulaDoTema({ tema, questao, className }: { tema: string | null |
         { rotulo: 'Esta questão: a ideia', conteudo: <TelaEstaQuestao aula={daQuestao} /> },
         ...passos.filter((p) => p !== pergunta).map(telaDoPasso),
       ];
-  const fimDaQuestao = conceito.length + dados.length + antes.length + estaQuestao.length - 1;
+  const macete: Tela[] = aula.macete ? [{ rotulo: `O macete: ${aula.macete.nome}`, conteudo: <TelaMacete m={aula.macete} /> }] : [];
+  const fimDaQuestao = conceito.length + dados.length + macete.length + antes.length + estaQuestao.length - 1;
   const telas: Tela[] = [
     ...conceito,
     ...dados,
+    ...macete,
     ...antes,
     ...estaQuestao,
     ...(desenho ? [{ rotulo: 'Por que faz sentido', conteudo: <TelaSentido d={desenho} /> }] : []),
-    { rotulo: 'Aula do conteúdo', listas: aula.aula },
+    // Com macete, ele entra no lugar da antiga "Palavra-chave".
+    { rotulo: 'Aula do conteúdo', listas: aula.macete ? [`Macete: ${aula.macete.regra}`, ...aula.aula.filter((l) => !l.startsWith('Palavra-chave'))] : aula.aula },
     ...(aula.paraSubir.length ? [{ rotulo: 'Para subir de nível', listas: aula.paraSubir }] : []),
     ...aula.degraus.map((d) => ({ rotulo: `Como cai no ${d.nivel}`, degrau: d })),
   ];
@@ -87,7 +90,7 @@ export function AulaDoTema({ tema, questao, className }: { tema: string | null |
       <Dialog open={aberta} onOpenChange={setAberta}>
         <DialogContent
           onOpenAutoFocus={(e) => e.preventDefault()}
-          className="max-w-xl max-h-[90dvh] overflow-y-auto rounded-[var(--radius-surface)]"
+          className="max-w-xl max-h-[90dvh] overflow-y-auto overflow-x-hidden rounded-[var(--radius-surface)] [&>*]:min-w-0"
         >
           <div className="pr-8">
             <p className="type-caption text-primary-text font-medium">
@@ -215,6 +218,21 @@ function QuestaoDegrau({ degrau }: { degrau: Degrau | Exercicio }) {
         </div>
       )}
       {!respondeu && <p className="type-caption text-muted-foreground">Tente antes de ver: toque numa letra.</p>}
+    </div>
+  );
+}
+
+/* O macete curinga do conteúdo: a regra, como usar (uma linha cada) e um exemplo pequeno. */
+function TelaMacete({ m }: { m: Macete }) {
+  return (
+    <div className="space-y-3">
+      <p className="font-reading type-lead font-semibold">{m.regra}</p>
+      <ol className="space-y-1.5 font-reading type-body list-decimal pl-5">
+        {m.passos.map((p) => <li key={p}>{p}</li>)}
+      </ol>
+      <p className="font-reading type-body rounded-[var(--radius-control)] bg-primary/10 px-3 py-2">
+        <span className="font-semibold text-primary-text">Exemplo: </span>{m.exemplo}
+      </p>
     </div>
   );
 }

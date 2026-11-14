@@ -294,6 +294,12 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   de prova; toda divisão diz o que conta ("quantos 60 cabem em 120? 1 litro dá 60, 2 dão
   120"). Achado na mistura de águas: o atalho estava escondido no Por que funciona. Varredura
   por regex: 25 nas provas do dia 2 e 76 no banco ENEM com divisão sem sentido dito.
+  **Macete curinga por conteúdo (mesmo dia: "um jeito curinga que serve para a maioria
+  das ocasiões... até o nível ENEM"):** campo `macete` em `aulas.json` (nome, regra, até 4
+  passos, exemplo), tela própria na aula da questão logo depois de "Os dados", e no lugar da
+  Palavra-chave em "Aula do conteúdo". Todo Jeito rápido começa por "Macete de <conteúdo>:"
+  e aplica o mesmo macete (teste `data/revisao-final/macetes.test.ts`). Feito: Química (5
+  macetes, 28 questões). Faltam Física, Biologia, Matemática e o banco ENEM.
 - **Passo em linhas (Pablo, 12/11/2026, foto do "Jeito rápido" da mangueira: "deixa
   o texto mais organizado e entendível"):** texto de passo acima de 200 letras vai
   em linhas separadas por `\n` (uma ideia por linha, até 170 letras cada); "A

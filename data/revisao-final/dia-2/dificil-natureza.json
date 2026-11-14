@@ -728,7 +728,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Macete F-P-C: mesmas peças? Pergunte nesta ordem o que mudou.\nF: mudou a Família? Isômero de função.\nP: família igual, o grupo só mudou de Posição? De posição.\nC: só o esqueleto de carbonos (a Cadeia) mudou: fila reta, com galho ou roda? De cadeia.\nAqui o OH (álcool) virou um O no meio (éter): mudou a família. F: função.",
+          "texto": "Macete de Química Orgânica: olhe onde está o O.\nEtanol: O na ponta, com H (OH, álcool). Éter: O no meio, entre dois C.\nAs duas têm 2 C, 6 H e 1 O, mas a família mudou: isômeros de função (o F do F-P-C).",
           "visual": null
         },
         {
@@ -816,7 +816,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Multiplique e some.",
+          "texto": "Macete de Química Orgânica: cada C=C pede 1 H₂.\nDois braços de linoleico, com 2 C=C cada: 2 × 2 = 4. Um de oleico: 1.\nTotal: 4 + 1 = 5 moléculas de H₂.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Contando as duplas",
@@ -927,7 +927,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Siga a cadeia de contas.",
+          "texto": "Macete de Química Ambiental: siga as unidades, uma conta por linha.\nPor dia: 15 + 15 = 30 km. No mês: 30 × 20 = 600 km.\nLitros: cada litro faz 10 km, então 600 ÷ 10 = 60 L. CO₂: 60 × 2,3 = 138 kg.",
           "visual": {
             "tipo": "quadro",
             "titulo": "CO₂ do mês",
@@ -1055,6 +1055,11 @@
           "visual": null
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Química Ambiental: siga a queima.\nCom oxigênio bastante: CO₂ e água. Com pouco (janela fechada, chama amarela): sai CO.\nO CO gruda na hemoglobina no lugar do oxigênio: tontura e desmaio.",
+          "visual": null
+        },
+        {
           "titulo": "Por que funciona",
           "texto": "O CO se prende à hemoglobina com muito mais força que o oxigênio e toma o lugar dele. O sangue continua circulando, mas leva menos oxigênio ao cérebro: dor de cabeça, tontura, desmaio.",
           "visual": null
@@ -1140,7 +1145,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "No balde pronto: 5 litros × 2 g = 10 g de princípio ativo.\nCada litro do concentrado tem 40 g. Quanto dele tem 10 g?\n10 é um quarto de 40: um quarto de litro, 1 000 ÷ 4 = 250 mL.",
+          "texto": "Macete de Soluções: conte os gramas; pondo água, eles não mudam.\nNo balde pronto: 5 litros × 2 g = 10 g de princípio ativo.\nCada litro do concentrado tem 40 g. 10 é um quarto de 40: 1/4 de litro = 250 mL.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Diluição",
@@ -1249,7 +1254,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Tensão de uma pilha, depois some pilhas até passar de 2,0 V.\nEm série, as tensões somam.\n1 pilha dá 1,10 V, pouco.\n2 dão 1,10 + 1,10 = 2,20 V, que passa de 2,0.\nNo quadro, ΔE é a tensão de uma pilha (Δ, a letra grega delta, quer dizer diferença).",
+          "texto": "Macete de Eletroquímica: tensão = maior − menor; em série, some.\n0,34 − (−0,76) = 0,34 + 0,76 = 1,10 V por pilha (tirar um negativo é somar).\n1 pilha: 1,10 V, pouco. 2 pilhas: 2,20 V, passa de 2,0 V.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Pilha de Daniell",
@@ -1353,7 +1358,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Pela reação, 84 g de bicarbonato soltam 44 g de gás.\nO comprimido tem 1,68 g. 84 × 2 = 168, então 1,68 é 84 × 0,02 (2 centésimos).\nO gás é 2 centésimos de 44 também: 44 × 0,02 = 0,88 g.",
+          "texto": "Macete de Estequiometria: receita em gramas, depois \"quantas vezes\".\nReceita: 84 g de bicarbonato soltam 44 g de gás.\n1,68 é 84 × 0,02 (pois 84 × 2 = 168). O gás também: 44 × 0,02 = 0,88 g.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Do comprimido ao gás",
