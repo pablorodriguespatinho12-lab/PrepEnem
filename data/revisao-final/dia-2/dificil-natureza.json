@@ -671,25 +671,25 @@
     "resposta": "A",
     "explicacao": {
       "conferencia": "Etanol: 2 C, 6 H, 1 O. Éter: 2 C, 6 H, 1 O. Mesma fórmula; grupo –OH (álcool) contra O entre dois carbonos (éter). A. Erros: B = posição exige o mesmo grupo nos dois; C = mesma fórmula não é mesma substância (um é líquido, o outro gás); D = as duas cadeias são abertas; E = mesma fórmula dá a mesma massa.",
-      "ideia": "Isômeros são como anagramas: as mesmas letras (átomos) montadas de jeitos diferentes formam palavras (substâncias) diferentes.",
+      "ideia": "Conte as peças: as duas têm 2 C, 6 H e 1 O, então são isômeros. O que mudou foi a família, álcool virou éter: isômeros de função.",
       "pecas": [
         {
           "termo": "Isômeros",
-          "significado": "Substâncias com os mesmos átomos (as pecinhas mínimas da matéria), nas mesmas quantidades, mas montados de outro jeito. Como \"amor\" e \"roma\"."
+          "significado": "Substâncias com as mesmas peças (mesmos átomos, nas mesmas quantidades), montadas de outro jeito. Como LEGO: as mesmas pecinhas viram um carro ou uma casa."
         },
         {
           "termo": "Grupo funcional",
-          "significado": "Pedaço da molécula que dá o jeito dela de se comportar. O –OH faz um álcool; o O entre dois carbonos faz um éter."
+          "significado": "O pedaço da molécula que diz a família. O OH numa fileira faz um álcool; o O no meio, entre dois carbonos, faz um éter."
         },
         {
-          "termo": "Fórmula molecular",
-          "significado": "Quantos átomos de cada tipo a molécula tem. C₂H₆O: 2 carbonos, 6 hidrogênios e 1 oxigênio."
+          "termo": "Éter",
+          "significado": "Família com um O no meio, preso entre dois carbonos, sem H. Ex.: o éter dimetílico do spray."
         }
       ],
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "Conte os átomos de cada fórmula e veja o que é igual e o que muda.",
+          "texto": "As duas fórmulas têm as mesmas peças?\nSe sim, são isômeros: mesmas pecinhas, montadas de outro jeito.\nA questão quer saber que tipo de isômero.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Contando os átomos",
@@ -715,26 +715,31 @@
                 "1"
               ],
               [
-                "grupo",
-                "–OH (álcool)",
-                "–O– (éter)"
+                "família",
+                "álcool (OH na ponta)",
+                "éter (O no meio)"
               ]
             ]
           }
         },
         {
           "titulo": "O que acontece",
-          "texto": "No etanol, CH₃ + CH₂ + OH dá 2 C, 3 + 2 + 1 = 6 H e 1 O. No éter, CH₃ + O + CH₃ dá 2 C, 3 + 3 = 6 H e 1 O. Fórmula igual, montagem diferente.",
+          "texto": "CH₃ quer dizer 1 C com 3 H grudados (o número pequeno conta o H).\nEtanol, CH₃–CH₂–OH: C = 1 + 1 = 2. H = 3 + 2 + 1 = 6. O = 1.\nÉter, CH₃–O–CH₃: C = 1 + 1 = 2. H = 3 + 3 = 6. O = 1.\nMesmas peças nos dois (2 C, 6 H, 1 O): são isômeros.",
+          "visual": null
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Macete F-P-C: mesmas peças? Pergunte nesta ordem o que mudou.\nF: mudou a Família? Isômero de função.\nP: família igual, o grupo só mudou de Posição? De posição.\nC: só o esqueleto de carbonos (a Cadeia) mudou: fila reta, com galho ou roda? De cadeia.\nAqui o OH (álcool) virou um O no meio (éter): mudou a família. F: função.",
           "visual": null
         },
         {
           "titulo": "Por que funciona",
-          "texto": "O grupo funcional (o pedaço que diz a família, como na aula) decide o tipo de substância.\nNo etanol, o O fica na ponta, com um H: –OH, família álcool. No éter, o O fica no meio, entre dois carbonos: –O–, família éter.\nCom –OH, as moléculas de etanol se seguram umas nas outras e ele fica líquido; o éter, sem –OH, vira gás.\nIsômeros são moléculas com os mesmos átomos montados de outro jeito, como as letras de AMOR e ROMA.\nMudou o grupo (a família): isomeria de função.",
+          "texto": "O grupo funcional, o pedaço que diz a família, muda o jeito da substância.\nCom OH, as moléculas de etanol se seguram umas nas outras: ele fica líquido.\nO éter não tem OH, as moléculas se soltam fácil: ele é gás.\nMesmas peças, família diferente, comportamento diferente.",
           "visual": null
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra A.\nC: é a armadilha. Mesma fórmula não quer dizer mesma substância: o próprio texto diz que uma é líquida e a outra, gás.\nB: pediria o mesmo grupo nos dois, só mudando de lugar.\nD: erra porque as duas cadeias são abertas. Nenhuma forma anel.\nE: erra porque mesma fórmula dá a mesma massa, já que os átomos são os mesmos.",
+          "texto": "Letra A: mesmas peças, família diferente (álcool × éter).\nC é a armadilha: mesmas peças não quer dizer mesma substância. O texto diz que uma é líquida e a outra, gás.\nB (posição) pediria a mesma família nos dois, com o grupo só trocando de lugar.\nD (cadeia) pediria esqueletos diferentes, como fila e roda. Aqui as duas são fileiras, sem roda.\nE erra: as mesmas peças pesam o mesmo, então a massa é igual.",
           "visual": null
         }
       ],
