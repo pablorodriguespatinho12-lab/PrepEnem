@@ -31,10 +31,13 @@ guardado no banco". Ele tem TDAH, sabe pouco e só estudou a aula do conteúdo.
 
 ## Andamento (atualizar a cada leva)
 - Leva 1 (13/11, gravada no banco, PR 22): eletricidade, termodinamica, ondas, optica.
-- Leva 2 (cortada pelo limite de uso, 13/11 ~20h): dinamica, organica, ambiental, solucoes-ph.
-  Nenhum arquivo dela foi salvo; recomeçar do zero.
-- Faltam: eletroquimica, estequiometria, ecologia, fisiologia, genetica, citologia, evolucao,
-  microbiologia, aritmetica, grandezas, estatistica, funcoes, geometria-plana, geometria-espacial.
+- Leva 2 (13/11, gravada no banco): dinamica, organica, ambiental, solucoes-ph.
+- Leva 3 (escrita, NÃO gravada): eletroquimica, estequiometria, ecologia, fisiologia.
+  Próximo passo dela em `docs/revisao-final/banco-enem-leva-3-achados.md`.
+- Faltam escrever (levas 4 a 6): genetica, citologia, evolucao, microbiologia, aritmetica,
+  grandezas, estatistica, funcoes, geometria-plana, geometria-espacial.
+- Slugs e ids: bio-gen, bio-cit, bio-evo, bio-mic, mat-ari, mat-gra, mat-est, mat-fun,
+  mat-pla, mat-esp (ex.: d2-banco-bio-gen-01). Tema = chave de `aulas.json`.
 - Ciclo de cada leva: 4 escritores → teste → revisor-de-fatos (2 arquivos cada) e
   aluno-do-zero (`scripts/jornada-aula-questoes.py`) → 1 consertador → commit →
   `DB_CONFIRMED=1 npx tsx scripts/criar-banco-enem.ts --gravar`. Divisão com vírgula foi o

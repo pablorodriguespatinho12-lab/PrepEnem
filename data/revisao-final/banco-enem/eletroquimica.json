@@ -1,0 +1,1568 @@
+[
+  {
+    "id": "d2-banco-qui-ele-01",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Numa feira de ciências, um grupo espetou num limão uma placa de zinco e uma moeda de cobre, sem deixar uma encostar na outra. Ligou as duas com um fio e pôs um pequeno LED (lâmpada minúscula) no meio do caminho: o LED acendeu fraquinho. O professor contou que o zinco perde elétrons com mais facilidade que o cobre e que, depois de alguns dias, a placa de zinco aparece corroída.\nNessa pilha, os elétrons que acendem o LED",
+    "A": "saem do cobre, passam pelo fio e chegam ao zinco.",
+    "B": "saem do suco do limão e vão para as duas placas ao mesmo tempo.",
+    "C": "saem do zinco, que oxida, passam pelo fio e chegam ao cobre.",
+    "D": "saem do zinco, que reduz, passam pelo fio e chegam ao cobre.",
+    "E": "são criados dentro do LED e depois voltam para o limão.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "O zinco perde elétrons mais fácil: ele oxida e é o ânodo (por isso fica corroído). Os elétrons saem dele, passam pelo fio e pelo LED e chegam ao cobre. C. Erros: A inverte o caminho; B põe o limão como fonte de elétrons; D troca oxidar por reduzir; E acha que o LED cria elétrons.",
+      "ideia": "Quem perde elétrons mais fácil oxida e manda os elétrons pelo fio. Aqui é o zinco, que vai sendo comido, e os elétrons chegam ao cobre.",
+      "pecas": [
+        {
+          "termo": "Ânodo e cátodo",
+          "significado": "Ânodo: o polo que perde elétrons (oxida) e vai sendo comido. Cátodo: o polo que ganha elétrons (reduz). Truque: vogal com vogal (Ânodo e Oxidação), consoante com consoante (Cátodo e Redução)."
+        },
+        {
+          "termo": "Oxidar e reduzir",
+          "significado": "Oxidar é perder elétrons; reduzir é ganhar elétrons. As duas coisas acontecem juntas: os elétrons que um perde, o outro ganha."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Zinco e cobre espetados num limão, ligados por um fio com um LED.\nO zinco perde elétrons mais fácil e, dias depois, aparece corroído.\nA questão quer saber de onde saem os elétrons e para onde vão.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilha-eletrodos",
+            "titulo": "Pilha de limão",
+            "rotulos": [
+              "placa de zinco",
+              "moeda de cobre",
+              "elétrons: para onde?",
+              "suco do limão"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Oxidar é perder elétrons. Reduzir é ganhar.\nO zinco perde elétrons: ele oxida. Por isso vai sendo comido.\nOs elétrons que o zinco solta andam pelo fio, passam pelo LED e chegam ao cobre, que os recebe."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: PERDE OXIDA, GANHA REDUZ.\nAchou quem perde elétrons mais fácil? Os elétrons saem dele.\nNa pilha, o polo que perde elétrons chama ânodo. Vogal com vogal: Ânodo e Oxidação."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Elétron não aparece do nada: quem solta um, outro recebe.\nA reação acontece sozinha (é espontânea), e a passagem dos elétrons pelo fio é a corrente que acende o LED.\nA placa que some é a que perdeu elétrons: o zinco."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, os elétrons saem do zinco, que oxida, e chegam ao cobre.\nA: inverte o caminho; o cobre recebe elétrons, não manda.\nB: o limão só ajuda a reação, não é de onde saem os elétrons.\nD: o zinco perde elétrons, então oxida, não reduz.\nE: o LED só usa a corrente; não cria elétrons."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Barra de magnésio presa num cano de ferro: qual dos dois é comido?",
+        "opcoes": [
+          "O magnésio",
+          "O ferro",
+          "Os dois",
+          "Nenhum"
+        ],
+        "certa": "O magnésio",
+        "resposta": "O magnésio perde elétrons mais fácil que o ferro: ele oxida, é o ânodo e vai sumindo."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-02",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "As fábricas que produzem alumínio a partir do minério (a bauxita) costumam ficar perto de grandes usinas hidrelétricas, e a conta de luz é um dos maiores gastos delas. No minério, o alumínio está na forma de íon, com carga positiva, porque perdeu elétrons. Na fábrica, uma corrente elétrica passa pelo minério derretido e o alumínio sai como metal. Esse processo se chama eletrólise.\nA fábrica precisa de tanta energia elétrica porque",
+    "A": "a reação não acontece sozinha: é a corrente elétrica que força o íon de alumínio a ganhar elétrons.",
+    "B": "a eletrólise funciona como uma pilha e devolve à usina a energia que recebe.",
+    "C": "a corrente serve só para esquentar as máquinas, sem participar da reação.",
+    "D": "a corrente arranca elétrons do íon de alumínio, e é isso que o transforma em metal.",
+    "E": "a energia elétrica impede que o alumínio enferruje durante a produção.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Eletrólise gasta energia elétrica para forçar uma reação que não acontece sozinha. O íon de alumínio perdeu elétrons; para virar metal, precisa ganhá-los de volta (reduzir). A. Erros: B confunde eletrólise com pilha; C tira a corrente da reação; D troca ganhar por perder; E confunde com proteção contra ferrugem.",
+      "ideia": "Na eletrólise, a energia da tomada força uma reação que não acontece sozinha. O íon de alumínio ganha elétrons e vira metal, e quem entrega esses elétrons é a corrente.",
+      "pecas": [
+        {
+          "termo": "Íon",
+          "significado": "Átomo com carga elétrica porque perdeu ou ganhou elétrons. Exemplo: o zinco perde 2 elétrons e vira íon de zinco, que se solta na água."
+        },
+        {
+          "termo": "Eletrólise",
+          "significado": "O contrário da pilha: gasta-se energia elétrica para forçar uma reação que não aconteceria sozinha. É assim que se produz alumínio."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O alumínio do minério é um íon: perdeu elétrons e tem carga positiva.\nA fábrica passa corrente elétrica pelo minério derretido e tira alumínio metal.\nA questão quer saber por que isso gasta tanta energia.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "Fábrica de alumínio",
+            "rotulos": [
+              "bauxita derretida",
+              "corrente da usina",
+              "alumínio metal",
+              "conta de luz alta"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Íon é átomo com carga porque perdeu ou ganhou elétrons.\nO íon de alumínio perdeu elétrons. Para voltar a ser metal, ele precisa ganhar elétrons: reduzir.\nIsso não acontece sozinho. A corrente elétrica empurra os elétrons até ele."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Pilha: reação que acontece sozinha e gera corrente.\nEletrólise: o contrário; gasta corrente para forçar a reação.\nSe a questão fala em produzir alumínio, pense em eletrólise e em muita energia gasta."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Uma reação que acontece sozinha anda para um lado. Para ir ao contrário, é preciso pagar com energia.\nCada íon de alumínio que vira metal precisa receber elétrons da corrente.\nMuito alumínio = muitos elétrons empurrados = muita energia elétrica."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, a corrente força o íon de alumínio a ganhar elétrons.\nB: quem gera energia sozinha é a pilha; a eletrólise gasta energia.\nC: a corrente participa da reação, entregando elétrons.\nD: o íon ganha elétrons (reduz) para virar metal; perder seria o contrário.\nE: a energia não está ali para evitar ferrugem."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Recarregar uma bateria na tomada é mais parecido com o quê?",
+        "opcoes": [
+          "Eletrólise",
+          "Pilha",
+          "Ferrugem",
+          "Pintura"
+        ],
+        "certa": "Eletrólise",
+        "resposta": "Na recarga, a energia da tomada força a reação a voltar, como na eletrólise."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-03",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Um aluno montou três tubos de ensaio, cada um com um prego de ferro novo, e esperou uma semana.\nNo primeiro, o prego ficou em água fervida (a fervura tira o ar da água), com uma camada de óleo por cima para o ar não entrar.\nNo segundo, o prego ficou no ar, com um pó secante que tira toda a umidade.\nNo terceiro, o prego ficou até a metade em água de torneira, com o tubo aberto.\nSó o prego do terceiro tubo enferrujou. O resultado mostra que a ferrugem precisa de",
+    "A": "água apenas, sem precisar de oxigênio.",
+    "B": "oxigênio apenas, sem precisar de água.",
+    "C": "óleo, que ajuda o ferro a perder elétrons.",
+    "D": "calor, porque a água fervida esquentou o prego.",
+    "E": "água e oxigênio ao mesmo tempo.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Primeiro tubo: tem água, sem oxigênio, não enferruja. Segundo: tem oxigênio, sem água, não enferruja. Terceiro: os dois juntos, enferruja. E. Erros: A ignora o primeiro tubo; B ignora o segundo; C inventa papel para o óleo (ele só barra o ar); D: a água esfriou antes, e o tubo com ferrugem não foi fervido.",
+      "ideia": "Ferrugem é o ferro perdendo elétrons para o oxigênio, com ajuda da água. Tirando qualquer um dos dois, o prego fica inteiro.",
+      "pecas": [
+        {
+          "termo": "Ferrugem",
+          "significado": "Ferro oxidado: o ferro perde elétrons para o oxigênio do ar, com ajuda da água."
+        },
+        {
+          "termo": "Oxidar e reduzir",
+          "significado": "Oxidar é perder elétrons; reduzir é ganhar elétrons. As duas coisas acontecem juntas: os elétrons que um perde, o outro ganha."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Três pregos iguais, uma semana:\nPrimeiro tubo: água sem ar. Segundo tubo: ar sem água. Terceiro tubo: água e ar.\nSó o terceiro enferrujou. A questão quer o que a ferrugem precisa.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilha-eletrodos",
+            "titulo": "Três pregos",
+            "rotulos": [
+              "prego de ferro",
+              "água ou ar?",
+              "uma semana",
+              "só um enferruja"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Compare um tubo de cada vez, como num teste em que só uma coisa muda.\nSó água (sem oxigênio): nada. Só oxigênio (sem água): nada.\nÁgua e oxigênio juntos: ferrugem."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave da aula: ferrugem é o ferro oxidando com oxigênio e água.\nSe falta um dos dois, a ferrugem não aparece.\nO óleo e o pó secante estão ali só para tirar o ar ou a água."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Na ferrugem, o ferro perde elétrons (oxida) e o oxigênio recebe esses elétrons (reduz).\nA água é o caminho que ajuda essa troca a acontecer.\nPor isso tinta funciona: ela tira o ferro do contato com os dois."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, água e oxigênio ao mesmo tempo.\nA: o primeiro tubo tinha água e não enferrujou.\nB: o segundo tubo tinha ar e não enferrujou.\nC: o óleo só impediu o ar de entrar.\nD: a água fervida esfriou antes, e o prego que enferrujou estava em água de torneira."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma bicicleta guardada em casa seca enferruja devagar. Falta o quê?",
+        "opcoes": [
+          "Água",
+          "Oxigênio",
+          "Calor",
+          "Luz"
+        ],
+        "certa": "Água",
+        "resposta": "Dentro de casa seca tem oxigênio, mas quase não tem água para a ferrugem."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-04",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Pilhas de botão, usadas em relógios, podem ter zinco e prata. Dentro delas, cada átomo de zinco perde 2 elétrons e vira um íon de zinco (átomo com carga, que fica na pasta úmida da pilha). Do outro lado, cada íon de prata ganha 1 elétron e vira um átomo de prata metálica. Os elétrons passam pelo relógio no caminho.\nSe 10 átomos de zinco oxidarem, quantos átomos de prata metálica se formam?",
+    "A": "10",
+    "B": "20",
+    "C": "5",
+    "D": "12",
+    "E": "2",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "10 átomos de Zn × 2 elétrons = 20 elétrons. Cada íon de prata usa 1 elétron: 20 ÷ 1 = 20 átomos de prata. B. Erros: A conta 1 prata por zinco; C divide 10 por 2; D soma 10 + 2; E usa só os 2 elétrons de um zinco.",
+      "ideia": "Todo elétron que o zinco perde, a prata ganha. Cada zinco solta 2 elétrons e cada prata precisa de 1, então cada zinco forma 2 pratas.",
+      "pecas": [
+        {
+          "termo": "Íon",
+          "significado": "Átomo com carga elétrica porque perdeu ou ganhou elétrons. Exemplo: o zinco perde 2 elétrons e vira íon de zinco, que se solta na água."
+        },
+        {
+          "termo": "Oxidar e reduzir",
+          "significado": "Oxidar é perder elétrons; reduzir é ganhar elétrons. As duas coisas acontecem juntas: os elétrons que um perde, o outro ganha."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Pilha de relógio com zinco e prata.\nCada zinco perde 2 elétrons; cada íon de prata ganha 1 elétron e vira prata metal.\nA questão quer quantas pratas se formam com 10 zincos.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilha-eletrodos",
+            "titulo": "Pilha de relógio",
+            "rotulos": [
+              "zinco: perde 2",
+              "prata: ganha 1",
+              "elétrons no fio",
+              "10 átomos de zinco"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Comece pequeno. 1 zinco solta 2 elétrons. Cada prata pega 1: dá para 2 pratas.\n2 zincos soltam 2 + 2 = 4 elétrons: dá para 4 pratas.\nCada zinco a mais faz 2 pratas a mais."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Elétrons soltos: 10 × 2 = 20.\nCada prata usa 1 elétron: 20 ÷ 1 = 20 pratas.\nRegra: elétrons que um perde = elétrons que o outro ganha.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Contando elétrons",
+            "dados": [
+              "10\\,\\text{átomos de Zn}",
+              "\\text{Zn perde } 2\\,e^-",
+              "\\text{Ag}^+\\text{ ganha } 1\\,e^-"
+            ],
+            "formula": "\\text{elétrons perdidos} = \\text{elétrons ganhos}",
+            "legenda": [
+              "e⁻: elétron",
+              "Ag: prata"
+            ],
+            "contas": [
+              "10 \\times 2 = 20\\,e^-",
+              "20 \\div 1 = 20"
+            ],
+            "resultado": "20\\,\\text{átomos de prata}",
+            "nota": "Elétron não some no caminho."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Oxidar e reduzir acontecem juntos: o que o zinco perde, a prata ganha.\nO elétron só passa pelo relógio; não fica preso lá.\nConfira ao contrário: 20 pratas × 1 elétron = 20 elétrons = 10 zincos × 2."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 20 átomos de prata.\nA (10): conta 1 prata por zinco e esquece que cada zinco solta 2 elétrons.\nC (5): divide 10 por 2 em vez de multiplicar.\nD (12): soma 10 + 2.\nE (2): usa só os elétrons de 1 zinco."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Cada átomo de cobre ganha 2 elétrons. Com 8 elétrons, quantos cobres?",
+        "opcoes": [
+          "4",
+          "8",
+          "16",
+          "10"
+        ],
+        "certa": "4",
+        "resposta": "8 ÷ 2 = 4: cada cobre usa 2 dos 8 elétrons."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-05",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Dois portões de ferro iguais foram instalados numa casa perto da praia. Um foi só pintado. O outro foi galvanizado, isto é, coberto por uma camada fina de zinco. Meses depois, os dois levaram um risco fundo que deixou o ferro à mostra. No portão pintado, apareceu ferrugem no risco; no galvanizado, não. O zinco perde elétrons com mais facilidade que o ferro.\nO portão galvanizado ficou protegido no risco porque",
+    "A": "a camada de zinco é uma tinta mais grossa, que tampa o risco.",
+    "B": "o zinco ganha elétrons com mais facilidade que o ferro.",
+    "C": "o ferro do risco ficou sem contato com a água e o ar.",
+    "D": "o zinco em volta do risco oxida no lugar do ferro.",
+    "E": "a maresia (ar úmido e salgado da praia) não chega ao ferro galvanizado.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Tinta é só barreira: riscou, o ferro fica exposto e enferruja. O zinco, além de cobrir, perde elétrons mais fácil: oxida no lugar do ferro (metal de sacrifício), mesmo com o risco. D. Erros: A trata o zinco como tinta; B troca perder por ganhar; C: no risco o ferro está exposto; E: a maresia chega aos dois portões.",
+      "ideia": "A tinta protege só enquanto cobre. O zinco protege de outro jeito: perde elétrons antes do ferro e é comido no lugar dele, mesmo onde há risco.",
+      "pecas": [
+        {
+          "termo": "Metal de sacrifício",
+          "significado": "Metal que perde elétrons mais fácil que o ferro e fica ligado a ele. É comido no lugar do ferro e precisa ser trocado de tempos em tempos."
+        },
+        {
+          "termo": "Galvanizar",
+          "significado": "Cobrir o ferro com uma camada de zinco. O zinco faz de barreira e, se riscar, ainda oxida no lugar do ferro."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Dois portões de ferro na praia: um pintado, outro coberto de zinco.\nOs dois foram riscados até o ferro aparecer.\nSó o pintado enferrujou no risco. A questão quer o porquê.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilha-eletrodos",
+            "titulo": "Risco no portão",
+            "rotulos": [
+              "zinco em volta",
+              "ferro no risco",
+              "maresia",
+              "pintado x galvanizado"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "No portão pintado, o risco tirou a barreira: ferro + água + oxigênio = ferrugem.\nNo galvanizado, o zinco em volta do risco continua ligado ao ferro.\nO zinco perde elétrons mais fácil, então é ele que oxida, e o ferro fica inteiro."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Duas proteções da aula:\nBarreira (tinta): funciona só enquanto cobre.\nMetal de sacrifício (zinco): funciona mesmo com risco, porque oxida no lugar do ferro."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Ferro e zinco encostados com água formam uma pilha.\nNa pilha, quem perde elétrons mais fácil é o ânodo, o polo que é comido. Vogal com vogal: Ânodo e Oxidação.\nO zinco é o ânodo e manda elétrons para o ferro, que não precisa perder os seus."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, o zinco oxida no lugar do ferro.\nA: se fosse só tinta, o risco enferrujaria como no portão pintado.\nB: é o contrário; o zinco perde elétrons mais fácil.\nC: no risco o ferro está à mostra, tocando água e ar.\nE: os dois portões estão na mesma casa, com a mesma maresia."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Que proteção ainda funciona se o ferro for riscado?",
+        "opcoes": [
+          "Zinco ligado ao ferro",
+          "Tinta",
+          "Verniz",
+          "Plástico em volta"
+        ],
+        "certa": "Zinco ligado ao ferro",
+        "resposta": "Tinta, verniz e plástico são barreira; o zinco oxida no lugar do ferro."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-06",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Um técnico precisa proteger uma tubulação de ferro enterrada num solo úmido, ligando a ela um bloco de outro metal. Ele consultou uma lista de metais em ordem de facilidade para perder elétrons, do que perde com mais facilidade para o que perde com menos:\nmagnésio > zinco > ferro > chumbo > cobre > prata.\nNo depósito da empresa, há blocos de chumbo, magnésio, cobre e prata.\nQual bloco protege a tubulação?",
+    "A": "O de chumbo.",
+    "B": "O de magnésio.",
+    "C": "O de cobre.",
+    "D": "O de prata.",
+    "E": "Qualquer um deles, porque todo metal ligado ao ferro o protege.",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "O metal de sacrifício tem que perder elétrons mais fácil que o ferro, ou seja, vir antes do ferro na lista. Dos blocos, só o magnésio está antes. B. Erros: A, C e D vêm depois do ferro: o ferro perderia elétrons primeiro e enferrujaria ainda mais; E ignora a ordem.",
+      "ideia": "O bloco protetor tem que perder elétrons antes do ferro. Na lista, só o magnésio vem antes do ferro entre os blocos que existem no depósito.",
+      "pecas": [
+        {
+          "termo": "Metal de sacrifício",
+          "significado": "Metal que perde elétrons mais fácil que o ferro e fica ligado a ele. É comido no lugar do ferro e precisa ser trocado de tempos em tempos."
+        },
+        {
+          "termo": "Ânodo e cátodo",
+          "significado": "Ânodo: o polo que perde elétrons (oxida) e vai sendo comido. Cátodo: o polo que ganha elétrons (reduz). Truque: vogal com vogal (Ânodo e Oxidação), consoante com consoante (Cátodo e Redução)."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Tubo de ferro enterrado, e quatro blocos à escolha: chumbo, magnésio, cobre e prata.\nA lista dá a ordem de quem perde elétrons mais fácil.\nA questão quer o bloco que protege o ferro.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilha-eletrodos",
+            "titulo": "Tubo enterrado",
+            "rotulos": [
+              "bloco: qual metal?",
+              "tubo de ferro",
+              "solo úmido",
+              "lista de perder elétrons"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Bloco e ferro ligados no solo úmido formam uma pilha.\nNa pilha, quem perde elétrons mais fácil oxida e é comido. Esse polo é o ânodo (vogal com vogal: Ânodo e Oxidação).\nPara proteger, o bloco tem que ser o comido, não o ferro."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Procure na lista quem está ANTES do ferro: magnésio e zinco.\nDos blocos do depósito, só o magnésio está lá.\nChumbo, cobre e prata vêm depois do ferro."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Se o bloco perde elétrons mais fácil, ele os manda para o ferro, e o ferro não precisa perder os seus.\nCom chumbo, cobre ou prata é o contrário: o ferro vira o polo comido.\nPalavra-chave: o zinco (ou o magnésio) se sacrifica pelo ferro."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, o bloco de magnésio.\nA: o chumbo vem depois do ferro; o ferro é que seria comido.\nC: o cobre também vem depois do ferro.\nD: a prata é a última da lista; perde elétrons com mais dificuldade ainda.\nE: só protege o metal que perde elétrons mais fácil que o ferro."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Para proteger um barco de ferro, qual destes serve?",
+        "opcoes": [
+          "Zinco",
+          "Cobre",
+          "Prata",
+          "Ouro"
+        ],
+        "certa": "Zinco",
+        "resposta": "O zinco perde elétrons mais fácil que o ferro e se sacrifica por ele."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-07",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Plataformas de petróleo têm as pernas de aço (quase só ferro) dentro do mar. Presas ao aço, ficam barras de zinco de 12 kg. Cada barra perde 1,5 kg por ano, porque o zinco vai sendo comido no lugar do ferro. A equipe troca a barra quando sobram 3 kg, para a proteção não falhar.\nDe quantos em quantos anos cada barra é trocada?",
+    "A": "8",
+    "B": "2",
+    "C": "13,5",
+    "D": "9",
+    "E": "6",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Pode gastar 12 − 3 = 9 kg. 9 ÷ 1,5 = 90 ÷ 15 = 6 anos. E. Erros: A faz 12 ÷ 1,5 = 8 e esquece os 3 kg que sobram; B faz 3 ÷ 1,5; C multiplica 9 × 1,5; D para em 9, que são quilos, não anos.",
+      "ideia": "A barra pode perder 9 kg antes da troca. Perdendo 1,5 kg por ano, isso leva 6 anos.",
+      "pecas": [
+        {
+          "termo": "Metal de sacrifício",
+          "significado": "Metal que perde elétrons mais fácil que o ferro e fica ligado a ele. É comido no lugar do ferro e precisa ser trocado de tempos em tempos."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Barra de zinco de 12 kg presa ao aço da plataforma.\nEla perde 1,5 kg por ano e é trocada quando sobram 3 kg.\nA questão quer de quantos em quantos anos acontece a troca.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Barra de zinco",
+            "rotulos": [
+              "barra de 12 kg",
+              "perde 1,5 kg/ano",
+              "troca com 3 kg",
+              "anos: quantos?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Primeiro, quanto a barra pode perder: 12 − 3 = 9 kg.\nAgora ano a ano: 1 ano, 1,5 kg; 2 anos, 3 kg; 4 anos, 6 kg; 6 anos, 9 kg.\nCada 2 anos são 3 kg, porque 1,5 + 1,5 = 3."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Anos = quilos que pode perder ÷ quilos por ano.\n9 ÷ 1,5: multiplique os dois por 10 e a vírgula some: 90 ÷ 15 = 6.\nIsso não muda a resposta, como 1 ÷ 0,5 = 10 ÷ 5 = 2.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Vida da barra",
+            "dados": [
+              "\\text{barra} = 12\\,\\text{kg}",
+              "\\text{sobra} = 3\\,\\text{kg}",
+              "\\text{perde } 1{,}5\\,\\text{kg por ano}"
+            ],
+            "formula": "\\text{anos} = \\text{quilos gastos} \\div \\text{quilos por ano}",
+            "contas": [
+              "12 - 3 = 9\\,\\text{kg}",
+              "9 \\div 1{,}5 = 90 \\div 15",
+              "90 \\div 15 = 6"
+            ],
+            "resultado": "6\\,\\text{anos}",
+            "nota": "Confira: 1,5 × 6 = 9."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O zinco perde elétrons mais fácil que o ferro: oxida no lugar dele e vai sendo comido.\nPor isso a barra diminui todo ano e o aço continua inteiro.\nConfira: 1,5 × 6 = 6 + 3 = 9 kg (6 inteiros e 6 metades)."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, de 6 em 6 anos.\nA (8): usa os 12 kg todos e esquece que a troca é com 3 kg sobrando.\nB (2): divide só os 3 kg que sobram.\nC (13,5): multiplica 9 por 1,5 em vez de dividir.\nD (9): para nos 9 kg, que são quilos, não anos."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Barra de 10 kg perde 2 kg por ano e é trocada com 2 kg. Quantos anos?",
+        "opcoes": [
+          "4",
+          "5",
+          "6",
+          "8"
+        ],
+        "certa": "4",
+        "resposta": "10 − 2 = 8 kg para gastar; 8 ÷ 2 = 4 anos."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-08",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Para pratear uma colher de latão, uma oficina mergulha a colher numa solução com íons de prata (prata dissolvida na água, com carga positiva). A colher é ligada a um polo de uma fonte de energia, e uma placa de prata, ao outro polo. Com a fonte ligada, uma camada fina de prata vai cobrindo a colher, e a placa de prata vai ficando mais fina.\nNa superfície da colher, os íons de prata",
+    "A": "ganham elétrons e viram prata metálica, e a colher é o cátodo.",
+    "B": "perdem elétrons e viram prata metálica, e a colher é o ânodo.",
+    "C": "ganham elétrons e viram prata metálica, e a colher é o ânodo.",
+    "D": "perdem elétrons, e a colher vai sendo comida.",
+    "E": "não trocam elétrons: a prata só gruda na colher pela cor.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Íon de prata tem carga positiva porque perdeu elétron; para virar metal, ganha elétron (reduz). Onde se reduz é o cátodo (consoante com consoante). A. Erros: B e D trocam ganhar por perder; C acerta a redução, mas erra o nome do polo; E nega a troca de elétrons.",
+      "ideia": "O íon de prata perdeu elétron; para voltar a ser metal, precisa ganhar. Quem ganha elétrons reduz, e o polo da redução é o cátodo: aqui, a colher.",
+      "pecas": [
+        {
+          "termo": "Íon",
+          "significado": "Átomo com carga elétrica porque perdeu ou ganhou elétrons. Exemplo: o zinco perde 2 elétrons e vira íon de zinco, que se solta na água."
+        },
+        {
+          "termo": "Ânodo e cátodo",
+          "significado": "Ânodo: o polo que perde elétrons (oxida) e vai sendo comido. Cátodo: o polo que ganha elétrons (reduz). Truque: vogal com vogal (Ânodo e Oxidação), consoante com consoante (Cátodo e Redução)."
+        },
+        {
+          "termo": "Eletrólise",
+          "significado": "O contrário da pilha: gasta-se energia elétrica para forçar uma reação que não aconteceria sozinha. É assim que se produz alumínio."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Colher numa solução com íons de prata, ligada a uma fonte de energia.\nA colher ganha uma camada de prata; a placa de prata afina.\nA questão quer o que acontece com os íons na colher e o nome desse polo.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilha-eletrodos",
+            "titulo": "Prateando a colher",
+            "rotulos": [
+              "placa de prata",
+              "colher de latão",
+              "fonte de energia",
+              "íons de prata na água"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Íon é átomo com carga porque perdeu ou ganhou elétrons. O íon de prata perdeu 1 elétron.\nPara virar prata metal de novo, ele precisa ganhar esse elétron: reduzir.\nA fonte empurra elétrons para a colher, e os íons os pegam ali."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ganha elétrons = reduz = cátodo. Consoante com consoante: Cátodo e Redução.\nPerde elétrons = oxida = ânodo, o polo comido. Vogal com vogal: Ânodo e Oxidação.\nA placa que afina é o ânodo; a colher que engorda é o cátodo."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É uma eletrólise: a fonte gasta energia para forçar a reação.\nA placa de prata perde elétrons e solta novos íons na água.\nEsses íons vão até a colher, ganham elétrons e viram a camada brilhante."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, os íons ganham elétrons e a colher é o cátodo.\nB: o íon já perdeu elétron; para virar metal, precisa ganhar.\nC: ganhar elétrons está certo, mas esse polo é o cátodo, não o ânodo.\nD: quem é comida é a placa de prata, não a colher.\nE: a prata só vira metal porque ganha elétrons."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Num polo, o metal vai sumindo. Esse polo é o quê?",
+        "opcoes": [
+          "Ânodo, onde se oxida",
+          "Cátodo, onde se oxida",
+          "Ânodo, onde se reduz",
+          "Cátodo, onde se reduz"
+        ],
+        "certa": "Ânodo, onde se oxida",
+        "resposta": "Quem some perde elétrons: oxida, e isso é no ânodo (vogal com vogal)."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-09",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Uma tabela mostra a vontade de cada metal de receber elétrons, chamada potencial de redução (em volts): quanto maior o número, mais o metal quer receber elétrons.\nprata: +0,80; cobre: +0,34; níquel: −0,25; zinco: −0,76.\nUma estudante montou uma pilha com uma placa de níquel e uma de prata, cada uma na sua solução, ligadas por um fio. Depois de algumas horas, uma das placas ficou mais fina.\nQual placa ficou mais fina, e qual o nome desse polo?",
+    "A": "A de prata, que é o ânodo.",
+    "B": "A de prata, que é o cátodo.",
+    "C": "A de níquel, que é o ânodo.",
+    "D": "A de níquel, que é o cátodo.",
+    "E": "As duas, porque as duas perdem elétrons.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Prata +0,80 é maior que níquel −0,25: a prata recebe elétrons (reduz) e o níquel perde (oxida). Quem oxida é comido e é o ânodo. C. Erros: A e B escolhem a prata por ter o número maior; D acerta a placa e erra o nome; E esquece que um perde e o outro ganha.",
+      "ideia": "Quem tem o maior número quer mais receber elétrons, então reduz. O outro perde elétrons, é comido e chama ânodo: aqui, o níquel.",
+      "pecas": [
+        {
+          "termo": "Ânodo e cátodo",
+          "significado": "Ânodo: o polo que perde elétrons (oxida) e vai sendo comido. Cátodo: o polo que ganha elétrons (reduz). Truque: vogal com vogal (Ânodo e Oxidação), consoante com consoante (Cátodo e Redução)."
+        },
+        {
+          "termo": "Oxidar e reduzir",
+          "significado": "Oxidar é perder elétrons; reduzir é ganhar elétrons. As duas coisas acontecem juntas: os elétrons que um perde, o outro ganha."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Pilha com uma placa de níquel e uma de prata.\nVontade de receber elétrons: prata +0,80; níquel −0,25.\nA questão quer a placa que afina e o nome desse polo.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilha-eletrodos",
+            "titulo": "Pilha de níquel e prata",
+            "rotulos": [
+              "placa de níquel",
+              "placa de prata",
+              "elétrons no fio",
+              "qual afina?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Compare como num termômetro: +0,80 é acima do zero; −0,25 é abaixo. Assim como 8 °C é mais quente que −2 °C.\nA prata tem o número maior: ela recebe elétrons, ou seja, reduz.\nEntão o níquel perde elétrons: oxida."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Maior número reduz (ganha elétrons). Menor número oxida (perde elétrons).\nQuem perde elétrons é comido e afina: o níquel.\nPolo que oxida = ânodo. Vogal com vogal: Ânodo e Oxidação.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Quem recebe elétrons",
+            "dados": [
+              "\\text{prata} = +0{,}80\\,\\text{V}",
+              "\\text{níquel} = -0{,}25\\,\\text{V}"
+            ],
+            "formula": "\\text{maior número} \\to \\text{reduz}",
+            "contas": [
+              "+0{,}80 > -0{,}25",
+              "\\text{prata reduz (cátodo)}",
+              "\\text{níquel oxida (ânodo)}"
+            ],
+            "resultado": "\\text{níquel afina: ânodo}",
+            "nota": "Cobre e zinco não estão nessa pilha."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Numa pilha, um sempre perde e o outro sempre ganha: os elétrons que um solta, o outro recebe.\nO níquel solta átomos para a água como íons (átomos com carga) e vai afinando.\nNa prata, íons da solução ganham elétrons e viram metal: a placa engorda."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, a placa de níquel, que é o ânodo.\nA: a prata tem o número maior, então ganha elétrons e não afina.\nB: a prata é o cátodo, mas é a que engorda, não a que afina.\nD: a placa certa, mas o polo que oxida é o ânodo.\nE: numa pilha, um perde e o outro ganha."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Cobre +0,34 e zinco −0,76 numa pilha. Quem é o cátodo?",
+        "opcoes": [
+          "O cobre",
+          "O zinco",
+          "Os dois",
+          "Nenhum"
+        ],
+        "certa": "O cobre",
+        "resposta": "O cobre tem o número maior: recebe elétrons, reduz e é o cátodo."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-10",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Uma lanterna ficou esquecida ligada dentro de uma gaveta até apagar. Ao abrir a pilha velha, do tipo comum, viu-se que a capa de zinco, que forma o polo negativo, estava fina e furada em vários pontos, e havia uma pasta vazando. Na pilha, o zinco é o metal que perde elétrons e os manda pelo fio até a lâmpada.\nA pilha parou de gerar corrente principalmente porque",
+    "A": "a energia elétrica guardada nela na fábrica acabou.",
+    "B": "o zinco ganhou elétrons demais e ficou cheio.",
+    "C": "a lâmpada da lanterna gastou todo o cobre da pilha.",
+    "D": "o zinco, que perdia elétrons e os mandava pelo fio, foi sendo consumido.",
+    "E": "a pasta de dentro da pilha esfriou e a reação congelou.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "A pilha gera corrente com uma reação: o zinco oxida (perde elétrons) e é comido. Quando o zinco que pode reagir acaba, acabam os elétrons para o fio. D. Erros: A acha que a pilha guarda energia da tomada; B troca perder por ganhar; C inventa cobre e põe a lâmpada gastando metal; E: a reação não depende de esfriar.",
+      "ideia": "A pilha não guarda eletricidade pronta: ela faz uma reação em que o zinco perde elétrons. Com o zinco comido, a reação para e a corrente também.",
+      "pecas": [
+        {
+          "termo": "Ânodo e cátodo",
+          "significado": "Ânodo: o polo que perde elétrons (oxida) e vai sendo comido. Cátodo: o polo que ganha elétrons (reduz). Truque: vogal com vogal (Ânodo e Oxidação), consoante com consoante (Cátodo e Redução)."
+        },
+        {
+          "termo": "Espontânea",
+          "significado": "Que acontece sozinha, sem tomada. A reação da pilha é espontânea: basta fechar o circuito."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Pilha velha de uma lanterna que ficou ligada até apagar.\nA capa de zinco, polo negativo, estava fina e furada.\nA questão quer por que a pilha parou de gerar corrente.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilhas-lanterna",
+            "titulo": "Pilha que acabou",
+            "rotulos": [
+              "capa de zinco",
+              "furada e fina",
+              "lanterna apagou",
+              "pasta vazando"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Dentro da pilha acontece uma reação: o zinco perde elétrons (oxida).\nEsses elétrons andam pelo fio, acendem a lâmpada e voltam para o outro polo da pilha.\nCada elétron que sai leva um pouquinho do zinco embora: a capa vai afinando."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "O metal que oxida na pilha é o ânodo, o polo comido. Vogal com vogal: Ânodo e Oxidação.\nAqui o ânodo é a capa de zinco.\nAcabou o zinco que pode reagir, acabou a corrente."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A pilha é uma reação espontânea, que acontece sozinha quando o circuito fecha.\nEla não guarda eletricidade como uma caixa d'água guarda água.\nO que ela guarda é material que pode reagir; quando ele acaba, a pilha morre."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, o zinco foi sendo consumido.\nA: a pilha não carrega energia da tomada; ela produz com uma reação.\nB: o zinco perde elétrons, não ganha.\nC: a lâmpada não gasta metal, e a capa da pilha é de zinco.\nE: o problema não é frio; é o zinco que acabou."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Numa pilha comum, qual parte vai sendo comida?",
+        "opcoes": [
+          "A capa de zinco",
+          "O fio",
+          "A lâmpada",
+          "O plástico de fora"
+        ],
+        "certa": "A capa de zinco",
+        "resposta": "O zinco perde elétrons, oxida e vai sumindo: é o ânodo."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-11",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "A bateria de um celular funciona como uma pilha quando o aparelho está fora da tomada: uma reação química acontece sozinha e manda elétrons pelo circuito do celular. Ligado ao carregador, acontece o contrário: a energia da tomada empurra a reação para trás, e a bateria fica pronta para ser usada de novo.\nDurante a recarga, a bateria funciona como",
+    "A": "uma pilha, porque a reação acontece sozinha.",
+    "B": "uma barreira, como a tinta que cobre o ferro.",
+    "C": "um metal de sacrifício, que é comido para proteger o celular.",
+    "D": "uma pilha, porque a corrente sai da bateria e vai para a tomada.",
+    "E": "uma eletrólise, porque a energia elétrica força a reação a acontecer.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Na recarga, a reação não acontece sozinha: a tomada gasta energia elétrica para forçá-la ao contrário. Isso é eletrólise. E. Erros: A descreve o uso (descarga), não a recarga; B e C confundem com proteção contra ferrugem; D inverte o sentido da energia.",
+      "ideia": "Usando o celular, a bateria é pilha: a reação acontece sozinha. Carregando, é eletrólise: a tomada gasta energia para empurrar a reação de volta.",
+      "pecas": [
+        {
+          "termo": "Eletrólise",
+          "significado": "O contrário da pilha: gasta-se energia elétrica para forçar uma reação que não aconteceria sozinha. É assim que se produz alumínio."
+        },
+        {
+          "termo": "Espontânea",
+          "significado": "Que acontece sozinha, sem tomada. A pilha é uma reação espontânea; a eletrólise não é."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Fora da tomada, a bateria do celular é uma pilha: a reação acontece sozinha.\nNa tomada, a energia elétrica empurra a reação para trás.\nA questão quer o nome do que acontece na recarga.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilhas-lanterna",
+            "titulo": "Bateria do celular",
+            "rotulos": [
+              "celular em uso",
+              "celular na tomada",
+              "reação para trás",
+              "qual é qual?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Duas situações, dois nomes:\nReação que acontece sozinha e gera corrente: pilha.\nReação forçada com energia elétrica de fora: eletrólise.\nNa recarga, quem manda é a tomada. A reação não andaria para trás sozinha."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Pergunte: precisa de tomada?\nNão precisa: pilha (espontânea, acontece sozinha).\nPrecisa: eletrólise, como na produção de alumínio."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Toda reação que anda sozinha para um lado só volta se alguém pagar com energia.\nA tomada paga essa conta: devolve os elétrons e refaz o material que a pilha gastou.\nPor isso a bateria de celular dura centenas de cargas, e a pilha comum, não."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, uma eletrólise.\nA: acontecer sozinha é o uso, fora da tomada; na recarga, a reação é forçada.\nB: tinta é proteção contra ferrugem, não tem a ver com carga.\nC: metal de sacrifício protege ferro; não recarrega nada.\nD: na recarga a energia entra pela tomada, não sai."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma lanterna acesa com pilha nova é exemplo de quê?",
+        "opcoes": [
+          "Pilha: reação sozinha",
+          "Eletrólise",
+          "Ferrugem",
+          "Metal de sacrifício"
+        ],
+        "certa": "Pilha: reação sozinha",
+        "resposta": "Sem tomada, a reação acontece sozinha e gera corrente: é pilha."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-12",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Num experimento, um pedaço de papel-alumínio foi mergulhado numa solução azul com íons de cobre (cobre dissolvido na água, com carga). Aos poucos, o papel foi ficando coberto por uma crosta avermelhada de cobre metálico. Cada átomo de alumínio perde 3 elétrons, e cada íon de cobre precisa ganhar 2 elétrons para virar cobre metálico.\nPara cada 2 átomos de alumínio que reagem, quantos átomos de cobre metálico se formam?",
+    "A": "2",
+    "B": "6",
+    "C": "3",
+    "D": "4",
+    "E": "12",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "2 átomos de Al × 3 elétrons = 6 elétrons. Cada cobre usa 2: 6 ÷ 2 = 3 átomos de cobre. C. Erros: A conta 1 cobre por alumínio; B para nos 6 elétrons; D faz 2 × 2; E multiplica tudo (2 × 3 × 2).",
+      "ideia": "Conte os elétrons que o alumínio solta e divida pelos que cada cobre precisa. Com 2 alumínios saem 6 elétrons, que dão para 3 cobres.",
+      "pecas": [
+        {
+          "termo": "Íon",
+          "significado": "Átomo com carga elétrica porque perdeu ou ganhou elétrons. Exemplo: o zinco perde 2 elétrons e vira íon de zinco, que se solta na água."
+        },
+        {
+          "termo": "Oxidar e reduzir",
+          "significado": "Oxidar é perder elétrons; reduzir é ganhar elétrons. As duas coisas acontecem juntas: os elétrons que um perde, o outro ganha."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Papel-alumínio numa solução azul com íons de cobre.\nCada alumínio perde 3 elétrons; cada íon de cobre ganha 2 e vira metal.\nA questão quer quantos cobres saem de 2 alumínios.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Alumínio no cobre",
+            "rotulos": [
+              "2 átomos de alumínio",
+              "cobres: quantos?",
+              "Al perde 3, Cu ganha 2",
+              "solução azul"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Comece pelos elétrons, porque são eles que passam de um para o outro.\n1 alumínio solta 3 elétrons. 2 alumínios soltam 3 + 3 = 6.\nCada cobre pega 2: 2 + 2 + 2 = 6. São 3 cobres."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Elétrons soltos: 2 × 3 = 6.\nCobres formados: 6 ÷ 2 = 3.\nRegra: elétrons perdidos = elétrons ganhos.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Contando elétrons",
+            "dados": [
+              "2\\,\\text{átomos de Al}",
+              "\\text{Al perde } 3\\,e^-",
+              "\\text{Cu ganha } 2\\,e^-"
+            ],
+            "formula": "\\text{elétrons perdidos} = \\text{elétrons ganhos}",
+            "legenda": [
+              "Al: alumínio",
+              "Cu: cobre",
+              "e⁻: elétron"
+            ],
+            "contas": [
+              "2 \\times 3 = 6\\,e^-",
+              "6 \\div 2 = 3"
+            ],
+            "resultado": "3\\,\\text{átomos de cobre}",
+            "nota": "Confira: 3 × 2 = 6 elétrons."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Oxidar (perder) e reduzir (ganhar) acontecem juntos.\nO alumínio oxida e se solta na água como íon. O cobre reduz e vira a crosta avermelhada.\nNenhum elétron fica sobrando: os 6 que o alumínio solta são os 6 que o cobre pega."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 3 átomos de cobre.\nA (2): conta 1 cobre por alumínio, como se trocassem o mesmo número de elétrons.\nB (6): para no número de elétrons, não de átomos.\nD (4): multiplica 2 × 2, esquecendo os 3 elétrons do alumínio.\nE (12): multiplica por 2 de novo em vez de dividir."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Cada átomo de magnésio perde 2 elétrons. 4 átomos soltam quantos?",
+        "opcoes": [
+          "8",
+          "6",
+          "4",
+          "2"
+        ],
+        "certa": "8",
+        "resposta": "4 × 2 = 8 elétrons."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-13",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Numa cidade do litoral, a lataria dos carros mostra ferrugem muito antes do que numa cidade do interior seco. No litoral, o ar é úmido e carrega gotinhas de água do mar, a maresia. A água salgada conduz eletricidade muito melhor que a água pura: os elétrons e as partículas com carga passam por ela com mais facilidade.\nA ferrugem aparece mais rápido no litoral porque",
+    "A": "há mais água em contato com o ferro, e a água salgada facilita a troca de elétrons entre o ferro e o oxigênio.",
+    "B": "o sal ganha os elétrons do ferro no lugar do oxigênio e protege a lataria.",
+    "C": "o ar do litoral tem menos oxigênio que o ar do interior.",
+    "D": "o calor do sol faz o ferro ganhar elétrons mais rápido.",
+    "E": "o sal funciona como metal de sacrifício e é comido no lugar do ferro.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Ferrugem = ferro perdendo elétrons para o oxigênio, com água. No litoral há mais água no ferro, e a água salgada deixa a troca de elétrons mais fácil. A. Erros: B dá ao sal um papel de proteção; C inventa menos oxigênio; D troca perder por ganhar; E confunde sal com metal de sacrifício.",
+      "ideia": "Ferrugem precisa de água e oxigênio. No litoral sobra água no ferro, e a água salgada facilita a passagem dos elétrons, então o ferro oxida mais rápido.",
+      "pecas": [
+        {
+          "termo": "Ferrugem",
+          "significado": "Ferro oxidado: o ferro perde elétrons para o oxigênio do ar, com ajuda da água."
+        },
+        {
+          "termo": "Oxidar e reduzir",
+          "significado": "Oxidar é perder elétrons; reduzir é ganhar elétrons. As duas coisas acontecem juntas: os elétrons que um perde, o outro ganha."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Carros no litoral enferrujam antes dos carros no interior seco.\nNo litoral há maresia: ar úmido com gotinhas de água salgada.\nA água salgada conduz eletricidade melhor. A questão quer o porquê da ferrugem rápida.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilha-eletrodos",
+            "titulo": "Carro na praia",
+            "rotulos": [
+              "lataria de ferro",
+              "oxigênio do ar",
+              "maresia",
+              "litoral x interior"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Na ferrugem, o ferro perde elétrons (oxida) e o oxigênio ganha esses elétrons (reduz).\nA água é o caminho dessa troca.\nNo litoral há mais água na lataria, e ela é salgada: os elétrons e as partículas com carga passam mais fácil."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Receita da ferrugem: ferro + oxigênio + água.\nMais água, e água que conduz melhor = ferrugem mais rápida.\nNo interior seco falta água: a receita fica incompleta boa parte do tempo."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Pense na água salgada como uma estrada melhor para a troca de elétrons.\nO oxigênio é o mesmo nos dois lugares; o que muda é a água.\nPor isso carro de praia precisa de mais lavagem e de tinta inteira."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, mais água e água salgada que facilita a troca de elétrons.\nB: o sal não protege; ele acelera a ferrugem.\nC: o ar do litoral tem oxigênio como o do interior.\nD: o ferro perde elétrons na ferrugem, não ganha.\nE: metal de sacrifício é um metal ligado ao ferro, como o zinco; sal não é."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Onde um prego enferruja mais rápido?",
+        "opcoes": [
+          "Em água salgada",
+          "Em óleo",
+          "No ar seco",
+          "Em água sem ar"
+        ],
+        "certa": "Em água salgada",
+        "resposta": "Tem água e oxigênio, e o sal facilita a troca de elétrons."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-14",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Numa aula, um fio de cobre enrolado foi deixado num copo com uma solução incolor de nitrato de prata, que tem íons de prata (prata dissolvida na água, com carga positiva). Em uma hora, cristais brilhantes de prata cresceram no fio, como galhos de uma árvore, e o líquido ficou azulado, que é a cor dos íons de cobre na água.\nO que aconteceu com o cobre e com os íons de prata?",
+    "A": "O cobre ganhou elétrons, e os íons de prata perderam elétrons.",
+    "B": "Os dois perderam elétrons ao mesmo tempo.",
+    "C": "O cobre reduziu e se transformou nos cristais de prata.",
+    "D": "O cobre perdeu elétrons e foi para a água; os íons de prata ganharam elétrons e viraram metal.",
+    "E": "Nenhum trocou elétrons: a prata só se separou da água.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "A cor azul mostra íons de cobre na água: o cobre perdeu elétrons (oxidou). A prata metálica nova mostra que os íons de prata ganharam elétrons (reduziram). D. Erros: A inverte; B esquece que um perde e outro ganha; C: um metal não vira outro, e o cobre oxidou; E ignora a troca.",
+      "ideia": "Duas pistas: a água ficou azul, então o cobre virou íon perdendo elétrons; apareceu prata metal, então os íons de prata ganharam esses elétrons.",
+      "pecas": [
+        {
+          "termo": "Íon",
+          "significado": "Átomo com carga elétrica porque perdeu ou ganhou elétrons. Exemplo: o zinco perde 2 elétrons e vira íon de zinco, que se solta na água."
+        },
+        {
+          "termo": "Oxidar e reduzir",
+          "significado": "Oxidar é perder elétrons; reduzir é ganhar elétrons. As duas coisas acontecem juntas: os elétrons que um perde, o outro ganha."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Fio de cobre num copo com íons de prata.\nCresceram cristais de prata no fio, e a água ficou azulada (cor dos íons de cobre).\nA questão quer o que cada um fez com os elétrons.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilha-eletrodos",
+            "titulo": "Árvore de prata",
+            "rotulos": [
+              "fio de cobre",
+              "íons de prata",
+              "água azulada",
+              "cristais brilhantes"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Íon é átomo com carga porque perdeu ou ganhou elétrons.\nPista 1: apareceu íon de cobre na água. O cobre do fio perdeu elétrons e se soltou: oxidou.\nPista 2: apareceu prata metal. Os íons de prata ganharam elétrons: reduziram."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: PERDE OXIDA, GANHA REDUZ.\nVirou íon e foi para a água: perdeu elétrons.\nSaiu da água e virou metal: ganhou elétrons."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Os elétrons que o cobre perde vão direto para os íons de prata encostados no fio.\nPor isso a prata cresce em cima do cobre, e o fio vai afinando.\nÉ a mesma troca de uma pilha, só que sem fio no meio."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, o cobre perdeu elétrons e os íons de prata ganharam.\nA: é o contrário; a cor azul mostra que o cobre virou íon.\nB: numa troca, um perde e o outro ganha.\nC: o cobre não vira prata, e ele oxidou, não reduziu.\nE: sem troca de elétrons, nem a cor nem os cristais mudariam."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um metal virou íon e foi para a água. Ele fez o quê?",
+        "opcoes": [
+          "Perdeu elétrons (oxidou)",
+          "Ganhou elétrons (reduziu)",
+          "Não trocou elétrons",
+          "Virou outro metal"
+        ],
+        "certa": "Perdeu elétrons (oxidou)",
+        "resposta": "Para virar íon positivo e se soltar, o metal perde elétrons: oxida."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-15",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Produzir alumínio a partir do minério, por eletrólise, gasta cerca de 15 000 kWh de energia elétrica por tonelada. Reciclar latinhas gasta só 5% dessa energia, porque o metal já está pronto e só precisa ser derretido.\nUma cooperativa reciclou 2 toneladas de latinhas. Quanta energia isso economizou, comparando com produzir as mesmas 2 toneladas a partir do minério?",
+    "A": "30 000 kWh",
+    "B": "28 500 kWh",
+    "C": "1 500 kWh",
+    "D": "14 250 kWh",
+    "E": "29 250 kWh",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Minério: 15 000 × 2 = 30 000 kWh. Reciclar: 5% de 30 000 = 1 500 kWh. Economia: 30 000 − 1 500 = 28 500 kWh. B. Erros: A é o gasto do minério; C é o gasto da reciclagem; D é a economia de 1 tonelada só; E tira 5% de 15 000 (750) em vez de 5% de 30 000.",
+      "ideia": "Duas toneladas pelo minério gastam 30 000 kWh. Reciclando, gasta-se 5% disso, 1 500 kWh, e o resto, 28 500 kWh, é a economia.",
+      "pecas": [
+        {
+          "termo": "kWh",
+          "significado": "Quilowatt-hora: 1 000 watts ligados durante 1 hora. É a unidade que a conta de luz cobra."
+        },
+        {
+          "termo": "Eletrólise",
+          "significado": "O contrário da pilha: gasta-se energia elétrica para forçar uma reação que não aconteceria sozinha. É assim que se produz alumínio."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Alumínio do minério: 15 000 kWh por tonelada.\nReciclar gasta só 5% disso.\nA cooperativa reciclou 2 toneladas. A questão quer a energia economizada.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Reciclar latinhas",
+            "rotulos": [
+              "2 toneladas",
+              "minério: 15 000 kWh/t",
+              "reciclar: 5%",
+              "economia?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Gasto pelo minério: 15 000 por tonelada; 2 toneladas = 15 000 + 15 000 = 30 000 kWh.\n5% quer dizer 5 de cada 100. Comece pequeno: 1% de 30 000 = 30 000 ÷ 100 = 300.\n5% = 5 × 300 = 1 500 kWh. Isso é o que a reciclagem gasta."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Economia = gasto do minério − gasto da reciclagem.\n30 000 − 1 500 = 28 500 kWh.\nAtalho: economiza 100% − 5% = 95%; 95 × 300 = 28 500.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Energia economizada",
+            "dados": [
+              "15\\,000\\,\\text{kWh por tonelada}",
+              "2\\,\\text{toneladas}",
+              "\\text{reciclar} = 5\\%"
+            ],
+            "formula": "\\text{economia} = \\text{minério} - \\text{reciclagem}",
+            "contas": [
+              "15\\,000 \\times 2 = 30\\,000",
+              "1\\% = 30\\,000 \\div 100 = 300",
+              "5\\% = 5 \\times 300 = 1\\,500",
+              "30\\,000 - 1\\,500 = 28\\,500"
+            ],
+            "resultado": "28\\,500\\,\\text{kWh}",
+            "nota": "Economia de 95%."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O minério gasta tanto porque a eletrólise força o íon de alumínio a ganhar elétrons com energia da tomada.\nNa reciclagem, o alumínio já é metal: não precisa receber elétrons de novo, só derreter.\nConfira: 1 500 + 28 500 = 30 000."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 28 500 kWh.\nA (30 000): é o gasto do minério, não a economia.\nC (1 500): é o que a reciclagem ainda gasta.\nD (14 250): é a economia de 1 tonelada só.\nE (29 250): tira 5% de 15 000 (750), esquecendo que são 2 toneladas."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Quanto é 5% de 2 000?",
+        "opcoes": [
+          "100",
+          "10",
+          "400",
+          "1 000"
+        ],
+        "certa": "100",
+        "resposta": "1% de 2 000 = 20; 5% = 5 × 20 = 100."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-16",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Latas de conserva são de aço (quase só ferro) coberto por uma camada fina de estanho, que separa o ferro do alimento e do ar. O estanho perde elétrons com MENOS facilidade que o ferro. Uma lata amassada, com um risco que deixou o ferro à mostra, enferruja no risco mais rápido do que uma chapa de ferro sem camada nenhuma.\nIsso acontece porque, no risco,",
+    "A": "o ferro passa a ser o metal que perde elétrons e é comido, enquanto o estanho fica inteiro.",
+    "B": "o estanho oxida no lugar do ferro, como um metal de sacrifício.",
+    "C": "o estanho ganha elétrons do ar e os passa ao ferro, protegendo-o.",
+    "D": "a camada de estanho continua tampando o ferro, como uma tinta.",
+    "E": "o alimento da lata é que perde elétrons e se estraga.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Estanho e ferro encostados, com umidade, formam uma pilha. Quem perde elétrons mais fácil é o ferro: ele vira o polo comido (ânodo), e o estanho em volta ainda ajuda puxando os elétrons. A. Erros: B serviria para o zinco, não para o estanho; C inventa proteção; D: no risco a camada sumiu; E: a questão é sobre o metal.",
+      "ideia": "O estanho só protege como barreira. Riscou, o ferro fica ligado a um metal que perde elétrons com menos facilidade, e o ferro vira o comido.",
+      "pecas": [
+        {
+          "termo": "Ânodo e cátodo",
+          "significado": "Ânodo: o polo que perde elétrons (oxida) e vai sendo comido. Cátodo: o polo que ganha elétrons (reduz). Truque: vogal com vogal (Ânodo e Oxidação), consoante com consoante (Cátodo e Redução)."
+        },
+        {
+          "termo": "Metal de sacrifício",
+          "significado": "Metal que perde elétrons mais fácil que o ferro e fica ligado a ele. É comido no lugar do ferro e precisa ser trocado de tempos em tempos."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Lata de aço (ferro) coberta de estanho.\nO estanho perde elétrons com MENOS facilidade que o ferro.\nRiscada, a lata enferruja no risco mais rápido que ferro sem camada. A questão quer o porquê.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilha-eletrodos",
+            "titulo": "Lata riscada",
+            "rotulos": [
+              "ferro no risco",
+              "estanho em volta",
+              "umidade",
+              "quem é comido?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Ferro e estanho encostados, com umidade, formam uma pilha.\nNa pilha, quem perde elétrons mais fácil oxida e é comido. Esse polo é o ânodo (vogal com vogal: Ânodo e Oxidação).\nEntre os dois, quem perde mais fácil é o ferro."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Compare com o zinco do portão galvanizado:\nZinco perde elétrons mais fácil que o ferro: o zinco é comido e protege.\nEstanho perde com menos facilidade: o ferro é comido, e mais rápido."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O estanho funciona como barreira, igual tinta: só protege enquanto cobre.\nNo risco, o ferro exposto manda elétrons para o estanho em volta.\nPor isso a ferrugem se concentra no risco, mais rápida que num ferro sozinho."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, o ferro vira o metal comido.\nB: só oxida no lugar do ferro quem perde elétrons mais fácil que ele, como o zinco.\nC: o estanho não protege o ferro no risco; ele piora.\nD: no risco a camada saiu, então não tampa mais nada.\nE: o que enferruja é o ferro da lata, não o alimento."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Cobre encostado num cano de ferro molhado. Quem é comido?",
+        "opcoes": [
+          "O ferro",
+          "O cobre",
+          "Nenhum dos dois",
+          "Os dois igual"
+        ],
+        "certa": "O ferro",
+        "resposta": "O ferro perde elétrons mais fácil que o cobre: é ele que oxida."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-17",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Um prego de ferro foi deixado numa solução azul com íons de cobre (cobre dissolvido na água, com carga). O ferro perde elétrons e vai se dissolvendo, e o cobre aparece sobre o prego como uma camada avermelhada. Pela proporção da reação, cada 56 g de ferro que se dissolvem fazem surgir 64 g de cobre.\nNo experimento, o prego perdeu 14 g de ferro. Quanto cobre se formou?",
+    "A": "14 g",
+    "B": "64 g",
+    "C": "50 g",
+    "D": "16 g",
+    "E": "4 g",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "14 g é a quarta parte de 56 g (56 ÷ 14 = 4). A quarta parte de 64 g é 64 ÷ 4 = 16 g. D. Erros: A acha que é 1 para 1 em gramas; B usa a proporção inteira; C faz 64 − 14; E faz 56 ÷ 14 e para no 4.",
+      "ideia": "Ferro e cobre aparecem sempre na mesma proporção, 56 para 64. Se o ferro foi um quarto de 56, o cobre é um quarto de 64.",
+      "pecas": [
+        {
+          "termo": "Íon",
+          "significado": "Átomo com carga elétrica porque perdeu ou ganhou elétrons. Exemplo: o zinco perde 2 elétrons e vira íon de zinco, que se solta na água."
+        },
+        {
+          "termo": "Oxidar e reduzir",
+          "significado": "Oxidar é perder elétrons; reduzir é ganhar elétrons. As duas coisas acontecem juntas: os elétrons que um perde, o outro ganha."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Prego de ferro numa solução com íons de cobre.\nProporção: 56 g de ferro dissolvido fazem surgir 64 g de cobre.\nO prego perdeu 14 g. A questão quer quanto cobre se formou.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Prego no cobre",
+            "rotulos": [
+              "entra: ferro",
+              "sai: cobre",
+              "56 g → 64 g",
+              "perdeu 14 g"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Comece com números redondos da receita:\n56 g de ferro → 64 g de cobre.\nMetade: 28 g → 32 g. Metade de novo: 14 g → 16 g."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Quantas vezes 14 cabe em 56? 56 ÷ 14 = 4. O prego perdeu a quarta parte da receita.\nEntão o cobre também é a quarta parte: 64 ÷ 4 = 16 g.\nRegra: a proporção da receita não muda.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Regra de três da receita",
+            "dados": [
+              "56\\,\\text{g Fe} \\to 64\\,\\text{g Cu}",
+              "\\text{perdeu } 14\\,\\text{g Fe}"
+            ],
+            "formula": "\\text{mesma fração dos dois lados}",
+            "legenda": [
+              "Fe: ferro",
+              "Cu: cobre"
+            ],
+            "contas": [
+              "56 \\div 14 = 4",
+              "64 \\div 4 = 16"
+            ],
+            "resultado": "16\\,\\text{g de cobre}",
+            "nota": "Confira: 14 × 4 = 56 e 16 × 4 = 64."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Os gramas não são iguais porque cada átomo de cobre pesa um pouco mais que um de ferro.\nO ferro oxida (perde elétrons) e vira íon na água; os íons de cobre ganham esses elétrons e viram metal.\nÉ uma receita: dobrou um lado, dobra o outro; dividiu por 4, divide por 4."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 16 g de cobre.\nA (14 g): acha que sai a mesma massa que entrou, mas a receita é 56 para 64.\nB (64 g): usa a receita inteira, como se o prego tivesse perdido 56 g.\nC (50 g): faz 64 − 14, subtração sem sentido aqui.\nE (4 g): para no 56 ÷ 14 = 4, que é quantas vezes, não gramas."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Receita: 10 g dão 20 g. Com 5 g, quanto sai?",
+        "opcoes": [
+          "10 g",
+          "15 g",
+          "25 g",
+          "40 g"
+        ],
+        "certa": "10 g",
+        "resposta": "5 g é metade de 10 g; metade de 20 g é 10 g."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-18",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Mergulhadores acharam um navio afundado havia séculos. Os pregos e canhões de ferro estavam cobertos de crostas de ferrugem, e muitos tinham se desfeito. Já as moedas de ouro, guardadas num baú perto deles, saíram do mar brilhando, como novas.\nA diferença entre o ferro e o ouro se explica porque o ouro",
+    "A": "perde elétrons com mais facilidade que o ferro.",
+    "B": "perde elétrons com muito mais dificuldade que o ferro, por isso quase não oxida.",
+    "C": "é um metal de sacrifício e foi comido no lugar do ferro.",
+    "D": "não tem elétrons, então não tem o que perder.",
+    "E": "ganhou uma camada de tinta dos fabricantes das moedas.",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Ferrugem é o metal perdendo elétrons para o oxigênio, com água. O ouro quase não perde elétrons, então fica inteiro mesmo no mar; o ferro perde fácil. B. Erros: A inverte; C: metal de sacrifício é comido, e o ouro ficou inteiro; D: todo átomo tem elétrons; E inventa tinta, e tinta não duraria séculos no mar.",
+      "ideia": "Os dois ficaram no mesmo mar, com água e oxigênio. O ferro perde elétrons fácil e enferrujou; o ouro quase não perde, então ficou brilhando.",
+      "pecas": [
+        {
+          "termo": "Oxidar e reduzir",
+          "significado": "Oxidar é perder elétrons; reduzir é ganhar elétrons. As duas coisas acontecem juntas: os elétrons que um perde, o outro ganha."
+        },
+        {
+          "termo": "Ferrugem",
+          "significado": "Ferro oxidado: o ferro perde elétrons para o oxigênio do ar, com ajuda da água."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Navio no fundo do mar por séculos.\nO ferro virou ferrugem; as moedas de ouro saíram brilhando.\nA questão quer por que o ouro não estragou.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilha-eletrodos",
+            "titulo": "Navio afundado",
+            "rotulos": [
+              "canhão de ferro",
+              "moedas de ouro",
+              "água do mar",
+              "séculos no fundo"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Os dois ficaram com a mesma água e o mesmo oxigênio.\nEntão a diferença está no metal: cada um perde elétrons com uma facilidade diferente.\nO ferro perde elétrons fácil e oxida. O ouro perde com muita dificuldade."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: PERDE OXIDA.\nMetal que quase não perde elétrons quase não oxida, e fica brilhando.\nPor isso ouro e prata são usados em joias que duram gerações."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Oxidar é perder elétrons. Se o metal segura bem seus elétrons, o oxigênio não consegue tirá-los.\nO ferro solta elétrons fácil: oxigênio e água vão comendo o ferro.\nÉ o contrário do zinco, que perde elétrons ainda mais fácil que o ferro."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, o ouro perde elétrons com muito mais dificuldade.\nA: se perdesse mais fácil, o ouro teria virado pó antes do ferro.\nC: metal de sacrifício some; o ouro ficou inteiro.\nD: todo metal tem elétrons; o ouro só não os solta fácil.\nE: tinta não aguentaria séculos no fundo do mar."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual destes perde elétrons com mais facilidade?",
+        "opcoes": [
+          "Zinco",
+          "Ouro",
+          "Prata",
+          "Cobre"
+        ],
+        "certa": "Zinco",
+        "resposta": "O zinco perde elétrons fácil; ouro, prata e cobre, não."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-19",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Uma receita caseira limpa talheres de prata escurecidos: forra-se uma bacia com papel-alumínio, põe-se água quente com bicarbonato e deixa-se o talher encostado no alumínio. A mancha escura é prata que perdeu elétrons: são íons de prata (prata com carga) presos a outra substância. Depois de alguns minutos, o talher volta a brilhar, e o papel-alumínio fica manchado e gasto.\nNesse processo,",
+    "A": "a prata perde mais elétrons, e a mancha se solta sozinha.",
+    "B": "o bicarbonato perde elétrons para o alumínio.",
+    "C": "o alumínio ganha elétrons, e por isso fica gasto.",
+    "D": "a água quente arranca a mancha sem nenhuma troca de elétrons.",
+    "E": "o alumínio perde elétrons, e os íons de prata da mancha ganham esses elétrons e voltam a ser prata.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "O alumínio fica gasto: ele perdeu elétrons (oxidou). Os íons de prata da mancha ganham esses elétrons (reduzem) e voltam a ser prata brilhante. E. Erros: A: a prata ganha, não perde; B põe o bicarbonato como quem dá elétrons; C troca perder por ganhar; D nega a troca, que é o que gasta o alumínio.",
+      "ideia": "O alumínio entrega elétrons e se gasta; os íons de prata da mancha pegam esses elétrons e voltam a ser metal brilhante.",
+      "pecas": [
+        {
+          "termo": "Íon",
+          "significado": "Átomo com carga elétrica porque perdeu ou ganhou elétrons. Exemplo: o zinco perde 2 elétrons e vira íon de zinco, que se solta na água."
+        },
+        {
+          "termo": "Oxidar e reduzir",
+          "significado": "Oxidar é perder elétrons; reduzir é ganhar elétrons. As duas coisas acontecem juntas: os elétrons que um perde, o outro ganha."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Talher de prata escurecido, encostado em papel-alumínio, em água quente com bicarbonato.\nA mancha é feita de íons de prata: prata que perdeu elétrons.\nO talher volta a brilhar e o alumínio fica gasto. A questão quer o que aconteceu.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "pilha-eletrodos",
+            "titulo": "Prata limpa",
+            "rotulos": [
+              "papel-alumínio",
+              "talher de prata",
+              "água com bicarbonato",
+              "mancha escura"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Íon é átomo com carga porque perdeu ou ganhou elétrons.\nPara a prata da mancha voltar a ser metal, ela precisa ganhar elétrons: reduzir.\nAlguém tem que dar esses elétrons. O alumínio, que ficou gasto, é quem deu: oxidou."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: PERDE OXIDA, GANHA REDUZ.\nQuem fica gasto, comido: perdeu elétrons.\nQuem volta a ser metal brilhante: ganhou elétrons."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Alumínio e prata encostados na água formam uma pilha pequena.\nO alumínio perde elétrons mais fácil: ele é o polo comido, o ânodo (vogal com vogal: Ânodo e Oxidação).\nA água com bicarbonato só ajuda os elétrons e as cargas a passarem."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, o alumínio perde elétrons e os íons de prata ganham.\nA: a prata da mancha ganha elétrons; é assim que volta a ser metal.\nB: o bicarbonato só ajuda; quem dá os elétrons é o alumínio.\nC: o alumínio se gasta porque perde elétrons, não porque ganha.\nD: se não houvesse troca, o alumínio não ficaria gasto."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Na limpeza com alumínio, quem vai sendo comido?",
+        "opcoes": [
+          "O alumínio",
+          "A prata",
+          "O bicarbonato",
+          "A bacia"
+        ],
+        "certa": "O alumínio",
+        "resposta": "O alumínio perde elétrons, oxida e se gasta."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-ele-20",
+    "materia": "Química",
+    "tema": "Eletroquímica",
+    "enunciado": "Uma fábrica de bijuterias cobre brincos com uma camada fina de ouro por eletrólise: os brincos ficam numa solução com íons de ouro e recebem elétrons de uma fonte de energia, e o ouro vai se formando sobre eles. A máquina deposita 0,4 g de ouro por minuto em cada lote de brincos. Cada lote precisa de 6 g de ouro.\nQuantos minutos leva para dourar um lote?",
+    "A": "2,4",
+    "B": "1,5",
+    "C": "15",
+    "D": "6,4",
+    "E": "150",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "6 ÷ 0,4 = 60 ÷ 4 = 15 minutos. C. Erros: A multiplica 6 × 0,4; B faz 6 ÷ 4, esquecendo a vírgula; D soma 6 + 0,4; E erra a vírgula e faz 60 ÷ 0,4.",
+      "ideia": "Em cada minuto entram 0,4 g; a pergunta é quantos 0,4 cabem em 6. Cabem 15, porque 15 × 0,4 = 6.",
+      "pecas": [
+        {
+          "termo": "Eletrólise",
+          "significado": "O contrário da pilha: gasta-se energia elétrica para forçar uma reação que não aconteceria sozinha. É assim que se produz alumínio."
+        },
+        {
+          "termo": "Íon",
+          "significado": "Átomo com carga elétrica porque perdeu ou ganhou elétrons. Exemplo: o zinco perde 2 elétrons e vira íon de zinco, que se solta na água."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Brincos ganham ouro por eletrólise: os íons de ouro ganham elétrons e viram metal.\nA máquina põe 0,4 g por minuto, e cada lote precisa de 6 g.\nA questão quer quantos minutos isso leva.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Dourando brincos",
+            "rotulos": [
+              "0,4 g por minuto",
+              "6 g por lote",
+              "íons de ouro",
+              "minutos: quantos?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Comece pequeno, minuto a minuto:\n1 min: 0,4 g. 5 min: 0,4 × 5 = 4 décimos × 5 = 20 décimos = 2 g.\n10 min: 4 g. 15 min: 6 g."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Minutos = gramas totais ÷ gramas por minuto.\n6 ÷ 0,4: multiplique os dois por 10 e a vírgula some: 60 ÷ 4 = 15.\nIsso não muda a resposta, como 1 ÷ 0,5 = 10 ÷ 5 = 2.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Tempo da eletrólise",
+            "dados": [
+              "6\\,\\text{g por lote}",
+              "0{,}4\\,\\text{g por minuto}"
+            ],
+            "formula": "\\text{minutos} = \\text{gramas} \\div \\text{gramas por minuto}",
+            "contas": [
+              "6 \\div 0{,}4 = 60 \\div 4",
+              "60 \\div 4 = 15"
+            ],
+            "resultado": "15\\,\\text{minutos}",
+            "nota": "Confira: 0,4 × 15 = 6."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Dividir por um número menor que 1 dá um resultado MAIOR, porque o pedaço é pequeno e cabe muitas vezes.\nPense em dinheiro: com R$ 6 e balas de R$ 0,40, você compra 15 balas.\nConfira: 0,4 × 15 = 4 + 2 = 6 (0,4 × 10 = 4 e 0,4 × 5 = 2)."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 15 minutos.\nA (2,4): multiplica 6 × 0,4 em vez de dividir.\nB (1,5): faz 6 ÷ 4, esquecendo que é 0,4, não 4.\nD (6,4): soma 6 + 0,4.\nE (150): erra a vírgula; multiplicou só o 6 por 10 e não o 0,4 junto."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Quantas vezes 0,5 cabe em 3?",
+        "opcoes": [
+          "6",
+          "1,5",
+          "3,5",
+          "15"
+        ],
+        "certa": "6",
+        "resposta": "3 ÷ 0,5 = 30 ÷ 5 = 6. Duas metades por inteiro: 3 × 2 = 6."
+      }
+    }
+  }
+]

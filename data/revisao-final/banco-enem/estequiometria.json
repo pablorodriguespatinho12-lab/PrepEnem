@@ -1,0 +1,1834 @@
+[
+  {
+    "id": "d2-banco-qui-est-01",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "Num carro, o airbag (bolsa de ar) enche em menos de um décimo de segundo depois da batida. Um sensor dispara a quebra da azida de sódio (NaN₃), que solta gás nitrogênio (N₂) e infla a bolsa. A receita da reação é: 2 NaN₃ → 2 Na + 3 N₂. Numa fábrica, a engenheira testa um airbag que leva 4 mol de azida de sódio. Lembre: mol é um pacote de contar, como a dúzia.\nQuantos mol de gás nitrogênio esse airbag produz quando toda a azida reage?",
+    "A": "4 mol",
+    "B": "6 mol",
+    "C": "3 mol",
+    "D": "12 mol",
+    "E": "2 mol",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Receita: 2 NaN₃ dão 3 N₂. 4 mol = 2 vezes a receita, então 2 × 3 = 6 mol. B. Erros: A copiou os 4 mol; C copiou o 3 da receita; D fez 4 × 3 sem dividir por 2; E fez 4 ÷ 2 e parou.",
+      "ideia": "A equação é a receita: 2 pacotes de azida dão 3 pacotes de gás. Com 4 pacotes, a receita roda 2 vezes e sai 6 mol de gás.",
+      "pecas": [
+        {
+          "termo": "Mol",
+          "significado": "Pacote de contar, como a dúzia: 1 dúzia = 12 ovos, e 1 mol = um número fixo e enorme de partículas. A receita (equação) conta em mol."
+        },
+        {
+          "termo": "Airbag",
+          "significado": "Bolsa de ar do volante. Ela enche com o gás N₂ que sai da azida de sódio na hora da batida."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O airbag tem 4 mol de azida de sódio (NaN₃).\nA receita é 2 NaN₃ → 2 Na + 3 N₂.\nA questão quer quantos mol de gás N₂ saem.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "A receita do airbag",
+            "rotulos": [
+              "entra: 4 mol de NaN₃",
+              "sai: N₂ (gás)",
+              "2 NaN₃ → 3 N₂",
+              "airbag do carro"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Mol é pacote de contar, como a dúzia: 2 mol são 2 pacotes.\nA receita diz: 2 pacotes de azida dão 3 pacotes de gás.\n4 pacotes de azida é a receita feita 2 vezes, porque 4 ÷ 2 = 2.\nCada vez saem 3 pacotes de gás: 2 × 3 = 6 mol."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Regra de três com a receita.\n2 mol de azida estão para 3 mol de gás, assim como 4 mol estão para x.\nx = 4 × 3 ÷ 2 = 12 ÷ 2 = 6 mol de N₂.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Gás do airbag",
+            "dados": [
+              "2\\,\\text{mol NaN}_3 \\to 3\\,\\text{mol N}_2",
+              "\\text{tem: } 4\\,\\text{mol NaN}_3"
+            ],
+            "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
+            "legenda": [
+              "dado: 4 mol de azida",
+              "receita: 2 entram, 3 saem"
+            ],
+            "contas": [
+              "x = 4 \\times \\dfrac{3}{2}",
+              "x = \\dfrac{12}{2}"
+            ],
+            "resultado": "x = 6\\,\\text{mol N}_2",
+            "nota": "A receita rodou 2 vezes, e cada vez dá 3 mol de gás."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A receita guarda a proporção: dobrou o que entra, dobra o que sai.\nNúmeros pequenos: 2 mol de azida dão 3 de gás; 6 mol (3 vezes) dariam 9.\nCom 4 mol (2 vezes), saem 2 × 3 = 6 mol."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 6 mol.\nA (4 mol) copiou a quantidade de azida, como se fosse 1 para 1.\nC (3 mol) copiou o número da receita sem ver que ela roda 2 vezes.\nD (12 mol) fez 4 × 3 e esqueceu de dividir pelos 2 da receita.\nE (2 mol) só contou quantas vezes a receita roda."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Receita 2 NaN₃ → 3 N₂. Com 10 mol de azida, quantos mol de N₂ saem?",
+        "opcoes": [
+          "15 mol",
+          "10 mol",
+          "30 mol",
+          "5 mol"
+        ],
+        "certa": "15 mol",
+        "resposta": "10 ÷ 2 = 5 vezes a receita. 5 × 3 = 15 mol de N₂."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-02",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "Numa estufa de pesquisa, um sensor mediu que uma muda de eucalipto retirou 264 g de gás carbônico (CO₂) do ar ao longo de um mês. Na fotossíntese, a planta usa esse gás para fazer glicose (açúcar), seguindo a receita: 6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂. Use as massas: C = 12, H = 1 e O = 16.\nSupondo que todo o CO₂ retirado virou glicose, quantos gramas de glicose (C₆H₁₂O₆) a muda produziu?",
+    "A": "44 g",
+    "B": "1 080 g",
+    "C": "30 g",
+    "D": "180 g",
+    "E": "264 g",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "CO₂ = 44 g/mol; 264 ÷ 44 = 6 mol. 6 CO₂ dão 1 glicose; glicose = 72 + 12 + 96 = 180 g. D. Erros: A é a massa de 1 mol de CO₂; B fez 6 × 180; C fez 180 ÷ 6; E achou que a massa passa igual.",
+      "ideia": "264 g de CO₂ são 6 pacotes (mol), e a receita diz que 6 CO₂ fazem 1 glicose. Então sai 1 mol de glicose, que pesa 180 g.",
+      "pecas": [
+        {
+          "termo": "Mol",
+          "significado": "Pacote de contar, como a dúzia: 1 dúzia = 12 ovos, e 1 mol = um número fixo e enorme de partículas. A receita (equação) conta em mol."
+        },
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol (1 pacote). Soma as massas dos átomos: água (H₂O) = 1 + 1 + 16 = 18 g por mol."
+        },
+        {
+          "termo": "Fotossíntese",
+          "significado": "A planta usa luz, gás carbônico e água para fazer açúcar (glicose) e soltar oxigênio."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A muda retirou 264 g de CO₂ do ar.\nA receita é 6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂.\nA questão quer a massa de glicose (C₆H₁₂O₆) que saiu.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "A receita da planta",
+            "rotulos": [
+              "entra: 264 g de CO₂",
+              "sai: glicose C₆H₁₂O₆",
+              "6 CO₂ → 1 glicose",
+              "C=12, H=1, O=16"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Mol é pacote de contar, como a dúzia. A receita conta em pacotes, então primeiro passe os gramas para pacotes.\n1 pacote de CO₂ pesa 12 + 16 + 16 = 44 g. Quantos de 44 cabem em 264? 44 × 6 = 264, então 6 pacotes.\nA receita diz: 6 pacotes de CO₂ fazem 1 pacote de glicose, como 6 ovos fazem 1 bolo."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Pese 1 pacote de glicose: 6 C, 12 H e 6 O.\n6 × 12 = 72; 12 × 1 = 12; 6 × 16 = 96.\n72 + 12 + 96 = 180 g. Como saiu 1 pacote, saem 180 g de glicose.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Glicose da muda",
+            "dados": [
+              "\\text{CO}_2 = 12 + 16 + 16 = 44\\,\\text{g/mol}",
+              "264 \\div 44 = 6\\,\\text{mol CO}_2"
+            ],
+            "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
+            "legenda": [
+              "receita: 6 CO₂ entram, 1 glicose sai",
+              "glicose: 180 g por mol"
+            ],
+            "contas": [
+              "6\\,\\text{mol CO}_2 \\to 1\\,\\text{mol glicose}",
+              "6 \\times 12 + 12 \\times 1 + 6 \\times 16 = 180"
+            ],
+            "resultado": "m = 180\\,\\text{g de glicose}",
+            "nota": "Gramas viram pacotes, a receita troca pacotes, e os pacotes voltam a gramas."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A receita fala de pacotes, não de gramas: 6 pacotes de CO₂ por 1 de glicose.\nPor isso não dá para passar 264 g direto: cada pacote pesa diferente (CO₂ 44 g, glicose 180 g).\nConfira: 1 pacote de glicose leva 6 C; 6 pacotes de CO₂ trazem 6 C. Bate."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 180 g.\nA (44 g) é o peso de 1 pacote de CO₂, não a resposta.\nB (1 080 g) fez 6 × 180, mas 6 CO₂ dão só 1 glicose.\nC (30 g) dividiu 180 por 6 sem precisar.\nE (264 g) achou que a massa de CO₂ vira toda glicose; parte vem da água e parte sai como O₂."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Se a muda retirasse 528 g de CO₂, quantos gramas de glicose faria?",
+        "opcoes": [
+          "360 g",
+          "180 g",
+          "528 g",
+          "88 g"
+        ],
+        "certa": "360 g",
+        "resposta": "528 ÷ 44 = 12 mol de CO₂, que dão 2 mol de glicose: 2 × 180 = 360 g."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-03",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "Em Minas Gerais, siderúrgicas transformam o minério hematita (Fe₂O₃) em ferro dentro do alto-forno, um forno enorme que passa dos 1 500 °C. A receita simplificada é: Fe₂O₃ + 3 CO → 2 Fe + 3 CO₂. Use as massas: Fe = 56 e O = 16. Num dia, um alto-forno recebeu 480 toneladas de hematita pura.\nQuantas toneladas de ferro (Fe), no máximo, podem sair desse lote?",
+    "A": "336 t",
+    "B": "168 t",
+    "C": "480 t",
+    "D": "112 t",
+    "E": "144 t",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Fe₂O₃ = 2 × 56 + 3 × 16 = 160; 160 t dão 2 × 56 = 112 t de Fe. 480 ÷ 160 = 3; 3 × 112 = 336 t. A. Erros: B contou só 1 Fe; C repetiu a massa; D parou em 1 vez a receita; E é o oxigênio que sai (480 − 336).",
+      "ideia": "Cada 160 t de hematita têm 112 t de ferro, porque cada Fe₂O₃ leva 2 ferros. 480 t são 3 vezes 160, então saem 3 × 112 = 336 t.",
+      "pecas": [
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol (1 pacote). Soma as massas dos átomos: água (H₂O) = 1 + 1 + 16 = 18 g por mol."
+        },
+        {
+          "termo": "Alto-forno",
+          "significado": "Forno gigante da siderúrgica. Lá dentro, o gás CO tira o oxigênio do minério e sobra ferro."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O alto-forno recebeu 480 t de hematita (Fe₂O₃).\nA receita é Fe₂O₃ + 3 CO → 2 Fe + 3 CO₂.\nA questão quer quantas toneladas de ferro saem.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Hematita vira ferro",
+            "rotulos": [
+              "entra: 480 t de Fe₂O₃",
+              "sai: ferro (Fe)",
+              "1 Fe₂O₃ → 2 Fe",
+              "Fe = 56, O = 16"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pese 1 pacote (mol) de hematita: 2 ferros e 3 oxigênios.\n2 × 56 = 112 e 3 × 16 = 48. Soma: 112 + 48 = 160.\nA receita diz que 1 hematita dá 2 Fe, então de cada 160 saem 112 de ferro.\nA proporção vale em qualquer unidade: 160 g dão 112 g, 160 t dão 112 t."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Quantas vezes 160 cabe em 480? 160 × 3 = 480, então 3 vezes.\nCada vez saem 112 t de ferro.\n3 × 112 = 336 t de ferro.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Ferro do alto-forno",
+            "dados": [
+              "\\text{Fe}_2\\text{O}_3 = 2 \\times 56 + 3 \\times 16 = 160",
+              "160\\,\\text{t} \\to 2 \\times 56 = 112\\,\\text{t de Fe}"
+            ],
+            "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
+            "legenda": [
+              "dado: 480 t de hematita",
+              "receita: 160 entram, 112 de ferro saem"
+            ],
+            "contas": [
+              "x = 480 \\times \\dfrac{112}{160}",
+              "x = 3 \\times 112"
+            ],
+            "resultado": "x = 336\\,\\text{t de ferro}",
+            "nota": "O resto (144 t) é o oxigênio que o CO leva embora."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A hematita é ferro preso a oxigênio. O alto-forno tira o oxigênio e o ferro fica.\nNúmeros pequenos: 160 t dão 112 t; 320 t (2 vezes) dão 224 t; 480 t (3 vezes) dão 336 t.\nConfira: 336 + 144 de oxigênio = 480 t. Nada sumiu."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 336 t.\nB (168 t) contou só 1 ferro por hematita; a fórmula Fe₂O₃ tem 2.\nC (480 t) achou que todo o minério vira ferro, esquecendo o oxigênio.\nD (112 t) é o ferro de 160 t, a receita feita só 1 vez.\nE (144 t) é o oxigênio que sai, não o ferro que fica."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Se o forno recebesse 800 t de hematita pura, quantas toneladas de ferro?",
+        "opcoes": [
+          "560 t",
+          "280 t",
+          "800 t",
+          "640 t"
+        ],
+        "certa": "560 t",
+        "resposta": "800 ÷ 160 = 5 vezes. 5 × 112 = 560 t de ferro."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-04",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "Usinas que queimam carvão soltam dióxido de enxofre (SO₂), gás que forma a chuva ácida. Para segurar esse gás, a chaminé passa por um lavador com calcário (CaCO₃) moído, que prende o enxofre: CaCO₃ + SO₂ → CaSO₃ + CO₂. Use as massas: Ca = 40, C = 12, O = 16 e S = 32. Numa hora, a usina produz 128 kg de SO₂.\nQuantos quilos de calcário o lavador precisa para prender todo esse SO₂?",
+    "A": "128 kg",
+    "B": "100 kg",
+    "C": "64 kg",
+    "D": "400 kg",
+    "E": "200 kg",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "SO₂ = 32 + 32 = 64; CaCO₃ = 40 + 12 + 48 = 100. 1 para 1: 64 kg pedem 100 kg. 128 = 2 × 64, então 2 × 100 = 200 kg. E. Erros: A copiou a massa; B parou em 1 vez; C é a massa de 1 mol de SO₂; D dobrou duas vezes.",
+      "ideia": "A receita é 1 calcário para 1 SO₂. Em massa, 100 kg de calcário seguram 64 kg de SO₂; 128 kg é o dobro, então pede 200 kg.",
+      "pecas": [
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol (1 pacote). Soma as massas dos átomos: água (H₂O) = 1 + 1 + 16 = 18 g por mol."
+        },
+        {
+          "termo": "Chuva ácida",
+          "significado": "Chuva que cai com ácido porque gases como o SO₂ se misturam à água das nuvens. Corrói prédios e mata plantas."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A usina solta 128 kg de SO₂ por hora.\nA receita é CaCO₃ + SO₂ → CaSO₃ + CO₂.\nA questão quer quantos quilos de calcário (CaCO₃) seguram tudo.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "O lavador da chaminé",
+            "rotulos": [
+              "SO₂: 128 kg por hora",
+              "chuva ácida",
+              "carvão",
+              "calcário CaCO₃ segura"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Mol é pacote de contar, como a dúzia. A receita diz: 1 pacote de calcário para 1 pacote de SO₂.\nPese cada pacote. SO₂: 32 + 16 + 16 = 64. CaCO₃: 40 + 12 + 3 × 16 = 40 + 12 + 48 = 100.\nEntão 64 kg de SO₂ pedem 100 kg de calcário."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "128 kg de SO₂ é quantas vezes 64? 64 × 2 = 128, então 2 vezes.\nCada vez pede 100 kg de calcário.\n2 × 100 = 200 kg.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Calcário do lavador",
+            "dados": [
+              "\\text{SO}_2 = 32 + 2 \\times 16 = 64",
+              "\\text{CaCO}_3 = 40 + 12 + 3 \\times 16 = 100"
+            ],
+            "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
+            "legenda": [
+              "dado: 128 kg de SO₂",
+              "receita: 64 de SO₂ pedem 100 de calcário"
+            ],
+            "contas": [
+              "x = 128 \\times \\dfrac{100}{64}",
+              "x = 2 \\times 100"
+            ],
+            "resultado": "x = 200\\,\\text{kg de calcário}",
+            "nota": "A receita é 1 para 1 em pacotes, mas os pacotes pesam diferente."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "1 para 1 em pacotes não quer dizer 1 para 1 em quilos.\nO pacote de calcário pesa 100 e o de SO₂ pesa 64, então o calcário sempre pesa mais.\nNúmeros pequenos: 64 kg pedem 100 kg; 32 kg (metade) pediriam 50 kg."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 200 kg.\nA (128 kg) copiou a massa do SO₂, como se 1 para 1 fosse em quilos.\nB (100 kg) fez a receita só 1 vez, para 64 kg de SO₂.\nC (64 kg) é o peso de 1 pacote de SO₂, não a resposta.\nD (400 kg) dobrou duas vezes: 2 × 2 × 100."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Se a usina soltasse 32 kg de SO₂, quanto calcário seria preciso?",
+        "opcoes": [
+          "50 kg",
+          "32 kg",
+          "100 kg",
+          "64 kg"
+        ],
+        "certa": "50 kg",
+        "resposta": "32 é metade de 64. Metade de 100 kg de calcário = 50 kg."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-05",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "A amônia (NH₃) é a base dos adubos que alimentam as lavouras do mundo. Ela é feita juntando nitrogênio do ar com hidrogênio: N₂ + 3 H₂ → 2 NH₃. Use as massas: N = 14 e H = 1. Numa fábrica, uma passagem pelo reator usa 280 kg de N₂, mas só 20% do que a conta prevê vira amônia de verdade (rendimento de 20%); o resto volta para o reator.\nQuantos quilos de amônia saem nessa passagem?",
+    "A": "340 kg",
+    "B": "56 kg",
+    "C": "68 kg",
+    "D": "272 kg",
+    "E": "1 700 kg",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "N₂ = 28; 2 NH₃ = 2 × 17 = 34. 280 = 10 × 28, então a conta prevê 10 × 34 = 340 kg. 20% de 340 = 340 ÷ 5 = 68 kg. C. Erros: A esqueceu o rendimento; B tirou 20% de 280; D tirou 80%; E dividiu por 0,2.",
+      "ideia": "A conta prevê 340 kg de amônia, mas o rendimento de 20% diz que só 1 de cada 5 partes sai. 340 ÷ 5 = 68 kg.",
+      "pecas": [
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol (1 pacote). Soma as massas dos átomos: água (H₂O) = 1 + 1 + 16 = 18 g por mol."
+        },
+        {
+          "termo": "Rendimento",
+          "significado": "Quanto da conta sai de verdade. Rendimento de 20% = só 20 de cada 100 previstos, ou 1 de cada 5."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O reator usa 280 kg de N₂.\nA receita é N₂ + 3 H₂ → 2 NH₃, e o rendimento é 20%.\nA questão quer quantos quilos de amônia saem de verdade.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Amônia do reator",
+            "rotulos": [
+              "entra: 280 kg de N₂",
+              "sai: amônia NH₃",
+              "1 N₂ → 2 NH₃",
+              "rendimento 20%"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Primeiro, a conta perfeita. Pese os pacotes (mol): N₂ = 14 + 14 = 28; NH₃ = 14 + 3 × 1 = 17.\nA receita diz: 1 N₂ dá 2 NH₃, então 28 kg dão 2 × 17 = 34 kg.\n280 kg é 10 vezes 28, então a conta perfeita dá 10 × 34 = 340 kg."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Agora o rendimento: 20% = 20 de cada 100 = 1 de cada 5.\nDe 340 kg, sai 1 parte de 5: 340 ÷ 5 = 68 kg.\nOu: 340 × 0,20 = 68 kg.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Amônia com rendimento",
+            "dados": [
+              "28\\,\\text{kg N}_2 \\to 2 \\times 17 = 34\\,\\text{kg NH}_3",
+              "\\text{rendimento} = 20\\% = 0{,}20"
+            ],
+            "formula": "\\text{real} = \\text{previsto} \\times \\text{rendimento}",
+            "legenda": [
+              "previsto: 280 × 34 ÷ 28",
+              "rendimento: 20 de cada 100"
+            ],
+            "contas": [
+              "\\text{previsto} = 280 \\times \\dfrac{34}{28} = 340",
+              "\\text{real} = 340 \\times 0{,}20"
+            ],
+            "resultado": "\\text{real} = 68\\,\\text{kg de NH}_3",
+            "nota": "Primeiro a receita, depois o rendimento."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Rendimento é como uma receita de bolo que queima um pouco: a conta prevê, mas sai menos.\nNúmeros pequenos: previsto 10 kg, rendimento 20%, sai 2 kg (1 de cada 5).\nAqui: previsto 340 kg, sai 340 ÷ 5 = 68 kg."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 68 kg.\nA (340 kg) é a conta perfeita; esqueceu o rendimento de 20%.\nB (56 kg) tirou 20% do N₂ (280 × 0,2), não da amônia.\nD (272 kg) tirou 80% em vez de 20%.\nE (1 700 kg) dividiu 340 por 0,2 em vez de multiplicar."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "A conta prevê 500 kg de produto e o rendimento é 20%. Quanto sai?",
+        "opcoes": [
+          "100 kg",
+          "400 kg",
+          "2 500 kg",
+          "500 kg"
+        ],
+        "certa": "100 kg",
+        "resposta": "20% = 1 de cada 5. 500 ÷ 5 = 100 kg."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-06",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "Num acampamento, um fogareiro portátil usa um cartucho com 116 g de gás butano (C₄H₁₀). Ao queimar, o butano solta gás carbônico, que aquece o planeta. A receita é: 2 C₄H₁₀ + 13 O₂ → 8 CO₂ + 10 H₂O. Use as massas: C = 12, H = 1 e O = 16. Um grupo de escoteiros quer calcular quanto CO₂ o cartucho inteiro manda para o ar.\nQuantos gramas de CO₂ se formam na queima de todo o butano do cartucho?",
+    "A": "352 g",
+    "B": "176 g",
+    "C": "88 g",
+    "D": "116 g",
+    "E": "704 g",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "C₄H₁₀ = 48 + 10 = 58; 116 ÷ 58 = 2 mol. Receita: 2 butano dão 8 CO₂. 8 × 44 = 352 g. A. Erros: B usou 4 CO₂; C fez 1 para 1; D repetiu a massa; E fez 2 × 8 = 16 mol.",
+      "ideia": "116 g de butano são 2 pacotes (mol), exatamente o que a receita pede, e ela dá 8 pacotes de CO₂. 8 × 44 = 352 g.",
+      "pecas": [
+        {
+          "termo": "Mol",
+          "significado": "Pacote de contar, como a dúzia: 1 dúzia = 12 ovos, e 1 mol = um número fixo e enorme de partículas. A receita (equação) conta em mol."
+        },
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol (1 pacote). Soma as massas dos átomos: água (H₂O) = 1 + 1 + 16 = 18 g por mol."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O cartucho tem 116 g de butano (C₄H₁₀).\nA receita é 2 C₄H₁₀ + 13 O₂ → 8 CO₂ + 10 H₂O.\nA questão quer a massa de CO₂ que vai para o ar.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "A queima do fogareiro",
+            "rotulos": [
+              "CO₂: quantos gramas?",
+              "aquece o planeta",
+              "116 g de butano C₄H₁₀",
+              "C=12, H=1, O=16"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Mol é pacote de contar, como a dúzia. Primeiro, quantos pacotes de butano há?\n1 pacote de C₄H₁₀: 4 × 12 + 10 × 1 = 48 + 10 = 58 g. E 58 × 2 = 116, então são 2 pacotes.\nA receita diz: 2 pacotes de butano dão 8 pacotes de CO₂. É a receita certinha, 1 vez."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Pese 1 pacote de CO₂: 12 + 16 + 16 = 44 g.\nSão 8 pacotes: 8 × 44 = 352 g.\n(8 × 40 = 320 e 8 × 4 = 32; 320 + 32 = 352.)",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "CO₂ do cartucho",
+            "dados": [
+              "\\text{C}_4\\text{H}_{10} = 4 \\times 12 + 10 = 58",
+              "116 \\div 58 = 2\\,\\text{mol}"
+            ],
+            "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
+            "legenda": [
+              "receita: 2 butano dão 8 CO₂",
+              "CO₂: 44 g por mol"
+            ],
+            "contas": [
+              "2\\,\\text{mol butano} \\to 8\\,\\text{mol CO}_2",
+              "8 \\times 44"
+            ],
+            "resultado": "m = 352\\,\\text{g de CO}_2",
+            "nota": "Sai mais CO₂ do que butano porque o oxigênio do ar entra na conta."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O CO₂ pesa mais que o butano queimado porque cada carbono pega 2 oxigênios do ar.\nConfira pelos carbonos: 2 butanos têm 2 × 4 = 8 C; 8 CO₂ têm 8 C. Bate.\nNúmeros pequenos: 1 pacote de butano (58 g) dá 4 de CO₂ (176 g)."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 352 g.\nB (176 g) usou 4 CO₂, o de 1 pacote só; mas 116 g são 2 pacotes.\nC (88 g) fez 1 para 1: 2 pacotes de butano para 2 de CO₂.\nD (116 g) achou que a massa de CO₂ é igual à de butano.\nE (704 g) multiplicou 2 × 8 = 16 pacotes, contando os 2 duas vezes."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Se o cartucho tivesse 58 g de butano, quantos gramas de CO₂?",
+        "opcoes": [
+          "176 g",
+          "352 g",
+          "44 g",
+          "58 g"
+        ],
+        "certa": "176 g",
+        "resposta": "58 g = 1 pacote de butano, metade da receita: 4 pacotes de CO₂. 4 × 44 = 176 g."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-07",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "Num restaurante, o réchaud (fogareiro de mesa) que esquenta a panela de fondue queima álcool etílico (etanol, C₂H₅OH). Numa noite, ele gastou 115 mL de etanol. A densidade do etanol é 0,8 g/mL, ou seja, cada mL pesa 0,8 g. A queima segue a receita: C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O. Use as massas: C = 12, H = 1 e O = 16.\nQuantos gramas de CO₂ o réchaud soltou nessa noite?",
+    "A": "88 g",
+    "B": "220 g",
+    "C": "92 g",
+    "D": "352 g",
+    "E": "176 g",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Massa = 115 × 0,8 = 92 g. Etanol = 24 + 6 + 16 = 46; 92 ÷ 46 = 2 mol. Receita: 1 dá 2 CO₂, então 4 mol × 44 = 176 g. E. Erros: A fez 1 para 1; B esqueceu a densidade (usou 115 g); C é a massa do etanol; D dobrou duas vezes.",
+      "ideia": "Primeiro, mL vira grama pela densidade: 115 × 0,8 = 92 g. São 2 pacotes de etanol, e cada um dá 2 de CO₂: 4 × 44 = 176 g.",
+      "pecas": [
+        {
+          "termo": "Mol",
+          "significado": "Pacote de contar, como a dúzia: 1 dúzia = 12 ovos, e 1 mol = um número fixo e enorme de partículas. A receita (equação) conta em mol."
+        },
+        {
+          "termo": "Densidade",
+          "significado": "Quanto pesa cada mL. Densidade 0,8 g/mL: 1 mL pesa 0,8 g, 10 mL pesam 8 g. Massa = volume × densidade."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O réchaud gastou 115 mL de etanol, que pesa 0,8 g por mL.\nA receita é C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O.\nA questão quer quantos gramas de CO₂ saíram.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "A queima do réchaud",
+            "rotulos": [
+              "entra: 115 mL de etanol",
+              "sai: CO₂",
+              "1 etanol → 2 CO₂",
+              "0,8 g por mL"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A receita pesa em gramas, e o dado veio em mL. Primeiro, a massa.\nNúmeros pequenos: 10 mL × 0,8 = 8 g.\nAqui: 115 × 0,8. Faça 115 × 8 = 920 e ande a vírgula 1 casa, porque 0,8 é 8 décimos: 92 g."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Pese 1 pacote (mol) de etanol: 2 × 12 + 6 × 1 + 16 = 24 + 6 + 16 = 46 g.\n92 ÷ 46 = 2 pacotes de etanol (46 × 2 = 92).\nCada pacote dá 2 de CO₂: 2 × 2 = 4 pacotes. CO₂ = 44 g, então 4 × 44 = 176 g.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "CO₂ do réchaud",
+            "dados": [
+              "m = 115 \\times 0{,}8 = 92\\,\\text{g}",
+              "\\text{etanol} = 2 \\times 12 + 6 + 16 = 46"
+            ],
+            "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
+            "legenda": [
+              "receita: 1 etanol dá 2 CO₂",
+              "CO₂: 44 g por mol"
+            ],
+            "contas": [
+              "92 \\div 46 = 2\\,\\text{mol etanol}",
+              "2 \\times 2 = 4\\,\\text{mol CO}_2;\\ 4 \\times 44"
+            ],
+            "resultado": "m = 176\\,\\text{g de CO}_2",
+            "nota": "mL → gramas → pacotes → pacotes de CO₂ → gramas."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Densidade liga volume e massa: o álcool é mais leve que a água, cada mL pesa só 0,8 g.\nSem esse passo, a conta usa 115 g, que é peso a mais.\nConfira pelos carbonos: 2 etanóis têm 4 C, e 4 CO₂ têm 4 C. Bate."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 176 g.\nA (88 g) fez 1 etanol para 1 CO₂; a receita dá 2.\nB (220 g) pulou a densidade e tratou 115 mL como 115 g.\nC (92 g) é a massa do etanol, não do CO₂.\nD (352 g) dobrou duas vezes: 8 pacotes de CO₂ em vez de 4."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Quanto pesam 50 mL de etanol, se cada mL pesa 0,8 g?",
+        "opcoes": [
+          "40 g",
+          "62,5 g",
+          "50 g",
+          "4 g"
+        ],
+        "certa": "40 g",
+        "resposta": "50 × 0,8: 50 × 8 = 400, e a vírgula anda 1 casa: 40 g."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-08",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "Numa aula prática, a professora moeu 10 g de casca de ovo e jogou num ácido. A casca solta bolhas de gás carbônico, porque 90% da massa dela é carbonato de cálcio (CaCO₃); o resto não solta gás. A receita é: CaCO₃ + 2 HCl → CaCl₂ + H₂O + CO₂. Use as massas: Ca = 40, C = 12 e O = 16.\nQuantos gramas de CO₂, no máximo, saem dessa casca?",
+    "A": "4,4 g",
+    "B": "3,96 g",
+    "C": "0,44 g",
+    "D": "9 g",
+    "E": "39,6 g",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Puro: 90% de 10 g = 9 g. CaCO₃ = 100, CO₂ = 44: 100 g dão 44 g. 9 × 0,44 = 3,96 g. B. Erros: A ignorou os 90%; C usou os 10% que sobram; D é o CaCO₃; E errou a vírgula.",
+      "ideia": "Só a parte pura solta gás: 90% de 10 g = 9 g. Se 100 g de CaCO₃ dão 44 g de CO₂, 9 g dão 9 × 0,44 = 3,96 g.",
+      "pecas": [
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol (1 pacote). Soma as massas dos átomos: água (H₂O) = 1 + 1 + 16 = 18 g por mol."
+        },
+        {
+          "termo": "Pureza",
+          "significado": "Quanto da amostra é a substância que reage. 90% puro: de cada 100 g, 90 g reagem e 10 g são outra coisa."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "São 10 g de casca, e só 90% dela é CaCO₃.\nA receita é CaCO₃ + 2 HCl → CaCl₂ + H₂O + CO₂.\nA questão quer quantos gramas de CO₂ saem.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "A casca no ácido",
+            "rotulos": [
+              "entra: 10 g de casca",
+              "sai: CO₂ (bolhas)",
+              "1 CaCO₃ → 1 CO₂",
+              "90% é CaCO₃"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Primeiro a parte que reage. 90% = 90 de cada 100 = 9 de cada 10.\nDe 10 g, 9 g são CaCO₃.\nPese os pacotes (mol): CaCO₃ = 40 + 12 + 3 × 16 = 100; CO₂ = 12 + 2 × 16 = 44.\nA receita é 1 para 1: 100 g de CaCO₃ dão 44 g de CO₂."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "100 g dão 44 g, então 1 g dá 0,44 g (44 ÷ 100).\n9 g dão 9 × 0,44.\n9 × 44 = 396, e a vírgula anda 2 casas (0,44 tem 2): 3,96 g.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "CO₂ da casca",
+            "dados": [
+              "m_{\\text{puro}} = 10 \\times 0{,}9 = 9\\,\\text{g}",
+              "100\\,\\text{g CaCO}_3 \\to 44\\,\\text{g CO}_2"
+            ],
+            "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
+            "legenda": [
+              "dado: 9 g de CaCO₃ puro",
+              "receita: 100 entram, 44 saem"
+            ],
+            "contas": [
+              "x = 9 \\times \\dfrac{44}{100}",
+              "x = 9 \\times 0{,}44"
+            ],
+            "resultado": "x = 3{,}96\\,\\text{g de CO}_2",
+            "nota": "Pureza primeiro: só o CaCO₃ entra na receita."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O resto da casca (1 g) não é CaCO₃, então não solta gás.\nNúmeros pequenos: 100 g puros dão 44 g; 10 g puros dariam 4,4 g; 9 g dão um pouco menos, 3,96 g.\nConfira: 3,96 é menor que 4,4, como tinha que ser."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 3,96 g.\nA (4,4 g) tratou a casca como 100% CaCO₃ e esqueceu os 90%.\nC (0,44 g) usou o 1 g que não reage, em vez dos 9 g.\nD (9 g) é a massa de CaCO₃, não de CO₂.\nE (39,6 g) errou a vírgula: andou só 1 casa."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma amostra de 20 g tem 80% de CaCO₃. Quantos gramas são CaCO₃?",
+        "opcoes": [
+          "16 g",
+          "4 g",
+          "20 g",
+          "8 g"
+        ],
+        "certa": "16 g",
+        "resposta": "80% = 8 de cada 10. 20 ÷ 10 = 2, e 2 × 8 = 16 g."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-09",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "A aspirina (C₉H₈O₄), remédio para dor e febre, é feita a partir do ácido salicílico (C₇H₆O₃), que no começo vinha da casca do salgueiro. Receita simplificada: C₇H₆O₃ + C₄H₆O₃ → C₉H₈O₄ + C₂H₄O₂. Use as massas: C = 12, H = 1 e O = 16. Uma indústria usou 690 kg de ácido salicílico num lote, e o rendimento foi de 80%.\nQuantos quilos de aspirina saíram nesse lote?",
+    "A": "900 kg",
+    "B": "552 kg",
+    "C": "1 125 kg",
+    "D": "720 kg",
+    "E": "180 kg",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Ácido = 84 + 6 + 48 = 138; aspirina = 108 + 8 + 64 = 180. 690 ÷ 138 = 5; 5 × 180 = 900 kg previstos. 900 × 0,8 = 720 kg. D. Erros: A esqueceu o rendimento; B tirou 80% de 690; C dividiu por 0,8; E fez a receita 1 vez.",
+      "ideia": "A receita é 1 para 1 em pacotes: 138 kg de ácido dão 180 kg de aspirina. 690 kg é 5 vezes isso (900 kg), e com 80% sai 720 kg.",
+      "pecas": [
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol (1 pacote). Soma as massas dos átomos: água (H₂O) = 1 + 1 + 16 = 18 g por mol."
+        },
+        {
+          "termo": "Rendimento",
+          "significado": "Quanto da conta sai de verdade. 80% = 80 de cada 100 previstos, ou 8 de cada 10."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A indústria usou 690 kg de ácido salicílico.\nA receita é 1 ácido → 1 aspirina, e o rendimento é 80%.\nA questão quer quantos quilos de aspirina saem.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Lote de aspirina",
+            "rotulos": [
+              "entra: 690 kg de ácido",
+              "sai: aspirina C₉H₈O₄",
+              "1 ácido → 1 aspirina",
+              "rendimento 80%"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pese 1 pacote (mol) de cada. Ácido C₇H₆O₃: 7 × 12 + 6 × 1 + 3 × 16 = 84 + 6 + 48 = 138.\nAspirina C₉H₈O₄: 9 × 12 + 8 × 1 + 4 × 16 = 108 + 8 + 64 = 180.\nA receita é 1 para 1: 138 kg de ácido dão 180 kg de aspirina."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "690 ÷ 138 = 5 (138 × 5 = 690). A conta perfeita dá 5 × 180 = 900 kg.\n80% = 8 de cada 10.\n900 ÷ 10 = 90, e 90 × 8 = 720 kg.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Aspirina do lote",
+            "dados": [
+              "\\text{ácido} = 7 \\times 12 + 6 + 3 \\times 16 = 138",
+              "\\text{aspirina} = 9 \\times 12 + 8 + 4 \\times 16 = 180"
+            ],
+            "formula": "\\text{real} = \\text{previsto} \\times \\text{rendimento}",
+            "legenda": [
+              "previsto: 690 × 180 ÷ 138",
+              "rendimento: 80% = 0,8"
+            ],
+            "contas": [
+              "\\text{previsto} = 5 \\times 180 = 900",
+              "\\text{real} = 900 \\times 0{,}8"
+            ],
+            "resultado": "\\text{real} = 720\\,\\text{kg de aspirina}",
+            "nota": "Primeiro a receita, depois o rendimento."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Rendimento é a parte da conta que sai de verdade; um pouco se perde no processo.\nNúmeros pequenos: previsto 10 kg, rendimento 80%, saem 8 kg.\nAqui: previsto 900 kg, saem 720 kg. Os 180 kg que faltam se perderam."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 720 kg.\nA (900 kg) é a conta perfeita; esqueceu o rendimento.\nB (552 kg) tirou 80% do ácido (690 × 0,8), não da aspirina.\nC (1 125 kg) dividiu 900 por 0,8 em vez de multiplicar.\nE (180 kg) é a aspirina de 1 pacote, a receita feita só 1 vez."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "A conta prevê 300 kg e o rendimento é 80%. Quanto sai?",
+        "opcoes": [
+          "240 kg",
+          "60 kg",
+          "375 kg",
+          "300 kg"
+        ],
+        "certa": "240 kg",
+        "resposta": "80% = 8 de cada 10. 300 ÷ 10 = 30, e 30 × 8 = 240 kg."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-10",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "A ureia (CO(NH₂)₂) é o adubo mais usado no Brasil para dar nitrogênio às plantas, como milho e capim. Na fórmula, cada ureia tem 1 C, 1 O, 2 N e 4 H. Use as massas: C = 12, O = 16, N = 14 e H = 1. Um agricultor espalha 120 kg de ureia num campo de milho e quer saber quanto nitrogênio (N) está entregando ao solo.\nQuantos quilos de nitrogênio há nos 120 kg de ureia?",
+    "A": "28 kg",
+    "B": "120 kg",
+    "C": "56 kg",
+    "D": "64 kg",
+    "E": "240 kg",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Ureia = 12 + 16 + 2 × 14 + 4 × 1 = 60; nela há 2 × 14 = 28 de N. 120 = 2 × 60, então 2 × 28 = 56 kg. C. Erros: A contou só 1 N; B achou que tudo é N; D é o resto (120 − 56); E dobrou a ureia.",
+      "ideia": "Cada 60 kg de ureia têm 28 kg de nitrogênio (os 2 N). 120 kg é o dobro de 60, então têm 2 × 28 = 56 kg de nitrogênio.",
+      "pecas": [
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol (1 pacote). Soma as massas dos átomos: água (H₂O) = 1 + 1 + 16 = 18 g por mol."
+        },
+        {
+          "termo": "Ureia",
+          "significado": "Adubo branco em bolinhas, feito de amônia e gás carbônico. É rico em nitrogênio, que a planta usa para crescer."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O agricultor espalha 120 kg de ureia, CO(NH₂)₂.\nCada ureia tem 1 C, 1 O, 2 N e 4 H.\nA questão quer quantos quilos são só de nitrogênio (N).",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "O nitrogênio da ureia",
+            "rotulos": [
+              "entra: 120 kg de ureia",
+              "sai: N para o solo",
+              "1 ureia tem 2 N",
+              "C=12 O=16 N=14 H=1"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pese 1 pacote (mol) de ureia, átomo por átomo.\nC = 12; O = 16; 2 N = 2 × 14 = 28; 4 H = 4 × 1 = 4.\n12 + 16 + 28 + 4 = 60. Desses 60, a parte de nitrogênio é 28."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Regra de três: 60 kg de ureia têm 28 kg de N.\n120 kg é quantas vezes 60? 60 × 2 = 120, então 2 vezes.\n2 × 28 = 56 kg de nitrogênio.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Nitrogênio da ureia",
+            "dados": [
+              "\\text{ureia} = 12 + 16 + 2 \\times 14 + 4 \\times 1 = 60",
+              "\\text{N em 1 ureia} = 2 \\times 14 = 28"
+            ],
+            "formula": "\\text{parte} = \\text{total} \\times \\dfrac{\\text{parte na fórmula}}{\\text{massa da fórmula}}",
+            "legenda": [
+              "total: 120 kg de ureia",
+              "28 de N a cada 60 de ureia"
+            ],
+            "contas": [
+              "x = 120 \\times \\dfrac{28}{60}",
+              "x = 2 \\times 28"
+            ],
+            "resultado": "x = 56\\,\\text{kg de N}",
+            "nota": "Quase metade da ureia é nitrogênio."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A fórmula é a receita da molécula: diz quantos de cada átomo ela tem.\nNúmeros pequenos: 60 kg têm 28 kg de N; 30 kg (metade) teriam 14 kg.\nConfira: 56 de N + 64 do resto (C, O e H) = 120 kg."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 56 kg.\nA (28 kg) contou só 1 N; a fórmula tem (NH₂)₂, ou seja, 2 N.\nB (120 kg) achou que a ureia inteira é nitrogênio.\nD (64 kg) é a parte de C, O e H, o que sobra sem o N.\nE (240 kg) dobrou a ureia em vez de achar a parte dela."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Quantos quilos de nitrogênio há em 30 kg de ureia (60 kg têm 28 kg)?",
+        "opcoes": [
+          "14 kg",
+          "28 kg",
+          "15 kg",
+          "7 kg"
+        ],
+        "certa": "14 kg",
+        "resposta": "30 kg é metade de 60. Metade de 28 = 14 kg de nitrogênio."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-11",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "Durante uma corrida longa, os músculos queimam glicose para ter energia. É a respiração das células: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O. Parte da água formada sai no suor e no ar que o corredor solta. Use as massas: C = 12, H = 1 e O = 16. Um corredor queimou 90 g de glicose num treino.\nQuantos gramas de água essa queima produziu dentro do corpo dele?",
+    "A": "108 g",
+    "B": "9 g",
+    "C": "54 g",
+    "D": "18 g",
+    "E": "216 g",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Glicose = 72 + 12 + 96 = 180; 90 g = meio pacote (0,5 mol). 1 glicose dá 6 H₂O = 6 × 18 = 108 g; metade = 54 g. C. Erros: A usou 1 pacote inteiro; B fez 1 para 1; D é 1 mol de água; E dobrou.",
+      "ideia": "90 g de glicose é meio pacote (180 ÷ 2). Um pacote inteiro dá 6 águas, ou 108 g; meio pacote dá metade: 54 g.",
+      "pecas": [
+        {
+          "termo": "Mol",
+          "significado": "Pacote de contar, como a dúzia: 1 dúzia = 12 ovos, e 1 mol = um número fixo e enorme de partículas. A receita (equação) conta em mol."
+        },
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol (1 pacote). Soma as massas dos átomos: água (H₂O) = 1 + 1 + 16 = 18 g por mol."
+        },
+        {
+          "termo": "Respiração da célula",
+          "significado": "A célula queima glicose com oxigênio para ter energia. Sobram gás carbônico e água."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O corredor queimou 90 g de glicose (C₆H₁₂O₆).\nA receita é C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O.\nA questão quer quantos gramas de água se formaram.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "corpo-sangue",
+            "titulo": "A queima nos músculos",
+            "rotulos": [
+              "músculo",
+              "90 g de glicose",
+              "sai: água (H₂O)",
+              "1 glicose → 6 H₂O"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Mol é pacote de contar, como a dúzia. Pese 1 pacote de glicose:\n6 × 12 + 12 × 1 + 6 × 16 = 72 + 12 + 96 = 180 g.\n90 g é metade de 180, então é meio pacote (0,5 mol)."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "1 pacote de glicose dá 6 pacotes de água. Água: 1 + 1 + 16 = 18 g.\n6 × 18 = 108 g de água por pacote de glicose.\nMeio pacote dá metade: 108 ÷ 2 = 54 g.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Água do treino",
+            "dados": [
+              "\\text{glicose} = 6 \\times 12 + 12 + 6 \\times 16 = 180",
+              "180\\,\\text{g} \\to 6 \\times 18 = 108\\,\\text{g H}_2\\text{O}"
+            ],
+            "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
+            "legenda": [
+              "dado: 90 g de glicose",
+              "receita: 180 entram, 108 de água saem"
+            ],
+            "contas": [
+              "x = 90 \\times \\dfrac{108}{180}",
+              "x = \\dfrac{108}{2}"
+            ],
+            "resultado": "x = 54\\,\\text{g de água}",
+            "nota": "90 é metade de 180, então a água também é a metade."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A receita guarda a proporção: metade da glicose, metade da água.\nNúmeros pequenos: 180 g dão 108 g; 360 g (o dobro) dariam 216 g; 90 g (a metade) dão 54 g.\nConfira pelos H: 1 glicose tem 12 H, e 6 águas têm 6 × 2 = 12 H. Bate."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 54 g.\nA (108 g) é a água de 1 pacote inteiro; mas 90 g é só meio.\nB (9 g) fez 1 glicose para 1 água: meio pacote × 18 = 9.\nD (18 g) é o peso de 1 pacote de água.\nE (216 g) dobrou em vez de tirar a metade."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "E se o corredor queimasse 360 g de glicose, quantos gramas de água?",
+        "opcoes": [
+          "216 g",
+          "108 g",
+          "54 g",
+          "36 g"
+        ],
+        "certa": "216 g",
+        "resposta": "360 g = 2 pacotes de glicose. 2 × 108 = 216 g de água."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-12",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "Quem tem pressão alta precisa contar o sódio (Na) da comida, e o sódio vem quase todo do sal de cozinha (NaCl). Uma nutricionista analisou uma refeição pronta de restaurante e achou 5,85 g de sal nela. Cada NaCl tem 1 Na e 1 Cl. Use as massas: Na = 23 e Cl = 35,5.\nQuantos gramas de sódio (Na) há nessa refeição?",
+    "A": "2,3 g",
+    "B": "5,85 g",
+    "C": "3,55 g",
+    "D": "0,23 g",
+    "E": "23 g",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "NaCl = 23 + 35,5 = 58,5; 58,5 g têm 23 g de Na. 5,85 = 58,5 ÷ 10, então Na = 23 ÷ 10 = 2,3 g. A. Erros: B é o sal todo; C é o cloro; D errou a vírgula (÷ 100); E é o Na de 1 pacote inteiro.",
+      "ideia": "Cada 58,5 g de sal têm 23 g de sódio. A refeição tem 5,85 g, que é 10 vezes menos, então tem 23 ÷ 10 = 2,3 g de sódio.",
+      "pecas": [
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol (1 pacote). Soma as massas dos átomos: água (H₂O) = 1 + 1 + 16 = 18 g por mol."
+        },
+        {
+          "termo": "Sódio e sal",
+          "significado": "Sal (NaCl) é sódio (Na) preso a cloro (Cl). O sódio é só uma parte do peso do sal."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A refeição tem 5,85 g de sal (NaCl).\nCada NaCl tem 1 Na e 1 Cl.\nA questão quer quantos gramas são só de sódio (Na).",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "O sódio do sal",
+            "rotulos": [
+              "entra: 5,85 g de NaCl",
+              "sai: só o Na",
+              "1 NaCl tem 1 Na",
+              "Na = 23, Cl = 35,5"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pese 1 pacote (mol) de sal: 23 + 35,5 = 58,5 g.\nDesses 58,5 g, 23 g são de sódio e 35,5 g de cloro.\nCompare 5,85 com 58,5: é o mesmo número com a vírgula 1 casa para a esquerda, ou seja, 10 vezes menos."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Se o sal é 10 vezes menos, o sódio também é 10 vezes menos.\n23 ÷ 10 = 2,3 g de sódio.\n(Dividir por 10 anda a vírgula 1 casa para a esquerda.)",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Sódio da refeição",
+            "dados": [
+              "\\text{NaCl} = 23 + 35{,}5 = 58{,}5",
+              "58{,}5\\,\\text{g sal} \\to 23\\,\\text{g Na}"
+            ],
+            "formula": "\\text{parte} = \\text{total} \\times \\dfrac{\\text{parte na fórmula}}{\\text{massa da fórmula}}",
+            "legenda": [
+              "total: 5,85 g de sal",
+              "23 de Na a cada 58,5 de sal"
+            ],
+            "contas": [
+              "x = 5{,}85 \\times \\dfrac{23}{58{,}5}",
+              "x = \\dfrac{23}{10}"
+            ],
+            "resultado": "x = 2{,}3\\,\\text{g de Na}",
+            "nota": "5,85 ÷ 58,5 = 0,1: a refeição tem um décimo de pacote."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A fórmula NaCl diz que o sal é 1 sódio para 1 cloro, mas os dois pesam diferente.\nPor isso o sódio é menos da metade do peso do sal (23 de 58,5).\nConfira: 2,3 g de Na + 3,55 g de Cl = 5,85 g de sal."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 2,3 g.\nB (5,85 g) é o sal inteiro; o sódio é só uma parte dele.\nC (3,55 g) é o cloro, a outra parte do sal.\nD (0,23 g) andou a vírgula 2 casas, dividindo por 100.\nE (23 g) é o sódio de 1 pacote inteiro (58,5 g de sal)."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Quantos gramas de sódio há em 117 g de sal (58,5 g têm 23 g)?",
+        "opcoes": [
+          "46 g",
+          "23 g",
+          "71 g",
+          "11,5 g"
+        ],
+        "certa": "46 g",
+        "resposta": "117 = 2 × 58,5. Então 2 × 23 = 46 g de sódio."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-13",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "No churrasco de domingo, uma família queimou 3 kg de carvão vegetal. Considere o carvão como carbono puro (C). Na queima completa, cada carbono pega oxigênio do ar e vira gás carbônico: C + O₂ → CO₂. Use as massas: C = 12 e O = 16. Um estudante quis comparar esse churrasco com a fumaça de um carro.\nQuantos quilos de CO₂ a queima do carvão manda para o ar?",
+    "A": "3 kg",
+    "B": "8 kg",
+    "C": "132 kg",
+    "D": "0,82 kg",
+    "E": "11 kg",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "12 kg de C dão 12 + 32 = 44 kg de CO₂. 3 = 12 ÷ 4, então 44 ÷ 4 = 11 kg. E. Erros: A repetiu a massa; B é só o oxigênio que entra; C fez 3 × 44; D inverteu a regra (3 × 12 ÷ 44).",
+      "ideia": "Cada 12 kg de carbono viram 44 kg de CO₂, porque ganham 32 kg de oxigênio do ar. 3 kg é um quarto de 12, então dão 44 ÷ 4 = 11 kg.",
+      "pecas": [
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol (1 pacote). Soma as massas dos átomos: água (H₂O) = 1 + 1 + 16 = 18 g por mol."
+        },
+        {
+          "termo": "Queima completa",
+          "significado": "Queima com oxigênio suficiente: todo o carbono vira CO₂. Sem oxigênio bastante, sai fumaça e CO."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A família queimou 3 kg de carvão (carbono puro).\nA receita é C + O₂ → CO₂.\nA questão quer quantos quilos de CO₂ vão para o ar.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "A fumaça do churrasco",
+            "rotulos": [
+              "CO₂: quantos kg?",
+              "aquece o planeta",
+              "3 kg de carvão (C)",
+              "C = 12, O = 16"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pese 1 pacote (mol) de cada. C = 12. CO₂ = 12 + 16 + 16 = 44.\nA receita é 1 para 1: 12 g de carbono viram 44 g de CO₂.\nA proporção vale em quilos também: 12 kg de C viram 44 kg de CO₂."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "3 kg é quantas vezes menor que 12 kg? 12 ÷ 3 = 4, então 4 vezes menor.\nO CO₂ também fica 4 vezes menor: 44 ÷ 4 = 11 kg.\nNa regra de três: 3 × 44 ÷ 12 = 132 ÷ 12 = 11 kg.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "CO₂ do churrasco",
+            "dados": [
+              "12\\,\\text{kg C} \\to 44\\,\\text{kg CO}_2",
+              "\\text{tem: } 3\\,\\text{kg C}"
+            ],
+            "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
+            "legenda": [
+              "dado: 3 kg de carbono",
+              "receita: 12 entram, 44 saem"
+            ],
+            "contas": [
+              "x = 3 \\times \\dfrac{44}{12}",
+              "x = \\dfrac{44}{4}"
+            ],
+            "resultado": "x = 11\\,\\text{kg de CO}_2",
+            "nota": "3 ÷ 12 é um quarto; um quarto de 44 é 11."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O CO₂ pesa mais que o carvão porque leva junto o oxigênio do ar.\nNúmeros pequenos: 12 kg de C pegam 32 kg de O₂ e viram 44 kg. 3 kg de C pegam 8 kg de O₂ e viram 11 kg.\nConfira: 3 + 8 = 11. Nada some."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 11 kg.\nA (3 kg) achou que o CO₂ pesa o mesmo que o carvão.\nB (8 kg) é o oxigênio que entra, não o CO₂ que sai.\nC (132 kg) fez 3 × 44 e esqueceu de dividir por 12.\nD (0,82 kg) virou a regra de cabeça para baixo: 3 × 12 ÷ 44."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Quantos quilos de CO₂ saem de 6 kg de carvão puro?",
+        "opcoes": [
+          "22 kg",
+          "11 kg",
+          "264 kg",
+          "6 kg"
+        ],
+        "certa": "22 kg",
+        "resposta": "6 kg é metade de 12 kg. Metade de 44 = 22 kg de CO₂."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-14",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "O hidrogênio verde é um combustível limpo: ele sai da água usando energia de painéis solares, sem queimar petróleo. A eletricidade quebra a água assim: 2 H₂O → 2 H₂ + O₂. Use as massas: H = 1 e O = 16. Numa usina de teste no Ceará, foram quebrados 9 kg de água (cerca de 9 litros, porque 1 L de água pesa 1 kg).\nQuantos quilos de gás hidrogênio (H₂) saíram dessa água?",
+    "A": "8 kg",
+    "B": "9 kg",
+    "C": "0,5 kg",
+    "D": "1 kg",
+    "E": "4 kg",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "2 H₂O = 2 × 18 = 36; 2 H₂ = 2 × 2 = 4. 36 kg de água dão 4 kg de H₂. 9 = 36 ÷ 4, então 4 ÷ 4 = 1 kg. D. Erros: A é o O₂; B repetiu a massa; C esqueceu o 2 na frente do H₂; E copiou o 4 da receita.",
+      "ideia": "A água é quase toda oxigênio: de cada 36 kg, só 4 kg são hidrogênio. 9 kg é um quarto de 36, então saem 4 ÷ 4 = 1 kg de H₂.",
+      "pecas": [
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol (1 pacote). Soma as massas dos átomos: água (H₂O) = 1 + 1 + 16 = 18 g por mol."
+        },
+        {
+          "termo": "Eletrólise",
+          "significado": "Quebrar uma substância usando eletricidade. Na água, a corrente separa o hidrogênio do oxigênio."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A usina quebrou 9 kg de água.\nA receita é 2 H₂O → 2 H₂ + O₂.\nA questão quer quantos quilos de gás hidrogênio (H₂) saíram.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Água vira hidrogênio",
+            "rotulos": [
+              "entra: 9 kg de água",
+              "sai: H₂ e O₂",
+              "2 H₂O → 2 H₂",
+              "H = 1, O = 16"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Mol é pacote de contar, como a dúzia. Pese os pacotes: H₂O = 1 + 1 + 16 = 18; H₂ = 1 + 1 = 2.\nA receita diz: 2 pacotes de água dão 2 de H₂.\nEm massa: 2 × 18 = 36 de água dão 2 × 2 = 4 de hidrogênio."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "9 kg é quantas vezes menor que 36 kg? 36 ÷ 9 = 4, então 4 vezes menor.\nO hidrogênio também fica 4 vezes menor: 4 ÷ 4 = 1 kg.\nNa regra de três: 9 × 4 ÷ 36 = 36 ÷ 36 = 1 kg.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Hidrogênio da água",
+            "dados": [
+              "2 \\times 18 = 36\\,\\text{kg H}_2\\text{O}",
+              "36\\,\\text{kg H}_2\\text{O} \\to 2 \\times 2 = 4\\,\\text{kg H}_2"
+            ],
+            "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
+            "legenda": [
+              "dado: 9 kg de água",
+              "receita: 36 entram, 4 de H₂ saem"
+            ],
+            "contas": [
+              "x = 9 \\times \\dfrac{4}{36}",
+              "x = \\dfrac{36}{36}"
+            ],
+            "resultado": "x = 1\\,\\text{kg de H}_2",
+            "nota": "O resto, 8 kg, sai como gás oxigênio."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O hidrogênio é o átomo mais leve: em cada água, ele pesa 2 e o oxigênio pesa 16.\nPor isso, de cada 9 kg de água, 1 kg é hidrogênio e 8 kg são oxigênio.\nConfira: 1 + 8 = 9 kg. Nada some."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 1 kg.\nA (8 kg) é o oxigênio que sai, não o hidrogênio.\nB (9 kg) achou que toda a água vira hidrogênio.\nC (0,5 kg) usou 1 H₂ (2 kg) para 36 kg de água; a receita tem 2 H₂.\nE (4 kg) copiou o 4 da receita sem fazer a regra de três."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Quantos quilos de H₂ saem de 18 kg de água?",
+        "opcoes": [
+          "2 kg",
+          "1 kg",
+          "16 kg",
+          "18 kg"
+        ],
+        "certa": "2 kg",
+        "resposta": "18 kg é metade de 36 kg. Metade de 4 kg = 2 kg de hidrogênio."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-15",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "O alumínio das latinhas vem da bauxita, um minério do Pará. Primeiro se tira dela a alumina (Al₂O₃) pura; depois, uma corrente elétrica forte separa o metal: 2 Al₂O₃ → 4 Al + 3 O₂. Use as massas: Al = 27 e O = 16. Uma fábrica processou 510 toneladas de alumina pura num mês.\nQuantas toneladas de alumínio (Al) saíram, no máximo?",
+    "A": "135 t",
+    "B": "270 t",
+    "C": "510 t",
+    "D": "240 t",
+    "E": "540 t",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Al₂O₃ = 54 + 48 = 102, com 2 × 27 = 54 de Al. 510 ÷ 102 = 5; 5 × 54 = 270 t. B. Erros: A contou 1 Al por Al₂O₃; C repetiu a massa; D é o oxigênio (510 − 270); E usou 4 Al por Al₂O₃.",
+      "ideia": "Cada Al₂O₃ tem 2 alumínios: de cada 102 t de alumina saem 54 t de metal. 510 t é 5 vezes 102, então saem 5 × 54 = 270 t.",
+      "pecas": [
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol (1 pacote). Soma as massas dos átomos: água (H₂O) = 1 + 1 + 16 = 18 g por mol."
+        },
+        {
+          "termo": "Alumina",
+          "significado": "Pó branco (Al₂O₃) tirado da bauxita. É alumínio preso a oxigênio; a eletricidade separa os dois."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A fábrica processou 510 t de alumina (Al₂O₃).\nA receita é 2 Al₂O₃ → 4 Al + 3 O₂.\nA questão quer quantas toneladas de alumínio saem.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Alumina vira metal",
+            "rotulos": [
+              "entra: 510 t de Al₂O₃",
+              "sai: alumínio (Al)",
+              "2 Al₂O₃ → 4 Al",
+              "Al = 27, O = 16"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pese 1 pacote (mol) de alumina: 2 × 27 + 3 × 16 = 54 + 48 = 102.\nA receita diz: 2 alumina dão 4 Al. Dividindo os dois por 2: 1 alumina dá 2 Al.\nEntão de cada 102 t de alumina saem 2 × 27 = 54 t de alumínio."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Quantas vezes 102 cabe em 510? 102 × 5 = 510, então 5 vezes.\nCada vez saem 54 t de alumínio.\n5 × 54 = 270 t.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Alumínio do mês",
+            "dados": [
+              "\\text{Al}_2\\text{O}_3 = 2 \\times 27 + 3 \\times 16 = 102",
+              "102\\,\\text{t} \\to 2 \\times 27 = 54\\,\\text{t de Al}"
+            ],
+            "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
+            "legenda": [
+              "dado: 510 t de alumina",
+              "receita: 102 entram, 54 de Al saem"
+            ],
+            "contas": [
+              "x = 510 \\times \\dfrac{54}{102}",
+              "x = 5 \\times 54"
+            ],
+            "resultado": "x = 270\\,\\text{t de alumínio}",
+            "nota": "O resto, 240 t, sai como gás oxigênio."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A receita 2 → 4 é o mesmo que 1 → 2: dividir os dois lados por 2 não muda a proporção.\nNúmeros pequenos: 102 t dão 54 t; 204 t (2 vezes) dão 108 t.\nConfira: 270 de Al + 240 de oxigênio = 510 t. Nada some."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 270 t.\nA (135 t) contou 1 alumínio por Al₂O₃; a fórmula tem 2.\nC (510 t) achou que toda a alumina vira metal.\nD (240 t) é o oxigênio que sai, não o alumínio.\nE (540 t) usou 4 Al para cada Al₂O₃, esquecendo o 2 na frente da alumina."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Quantas toneladas de alumínio saem de 204 t de alumina pura?",
+        "opcoes": [
+          "108 t",
+          "54 t",
+          "204 t",
+          "216 t"
+        ],
+        "certa": "108 t",
+        "resposta": "204 = 2 × 102. Então 2 × 54 = 108 t de alumínio."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-16",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "O magnésio (Mg) queima com uma luz branca forte, por isso aparece em fogos de artifício. Num laboratório, uma aluna queimou 4,8 g de fita de magnésio e pesou o pó branco formado, o óxido de magnésio: 8,0 g. A receita é 2 Mg + O₂ → 2 MgO (Mg = 24 e O = 16). Ela quer repetir o teste com 12 g de magnésio.\nQuantos gramas de gás oxigênio (O₂) serão consumidos com 12 g de magnésio?",
+    "A": "20 g",
+    "B": "3,2 g",
+    "C": "32 g",
+    "D": "7,2 g",
+    "E": "8 g",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "O₂ do teste: 8,0 − 4,8 = 3,2 g. 12 ÷ 4,8 = 2,5 vezes; 3,2 × 2,5 = 8 g. Conferência: 48 g de Mg pedem 32 g de O₂; 12 = 48 ÷ 4, e 32 ÷ 4 = 8. E. Erros: A é o óxido; B é o O₂ do 1º teste; C é 1 mol de O₂; D fez 12 − 4,8.",
+      "ideia": "Nada some: o pó pesa o magnésio mais o oxigênio, então o 1º teste usou 3,2 g de O₂. Com 2,5 vezes mais magnésio, usa 2,5 vezes mais O₂: 8 g.",
+      "pecas": [
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol (1 pacote). Soma as massas dos átomos: água (H₂O) = 1 + 1 + 16 = 18 g por mol."
+        },
+        {
+          "termo": "Conservação da massa",
+          "significado": "Numa reação, nada some nem aparece: a massa que entra é igual à que sai. 4,8 g de Mg + oxigênio = 8,0 g de pó."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "No 1º teste: 4,8 g de magnésio viraram 8,0 g de pó (MgO).\nAgora serão 12 g de magnésio.\nA questão quer quantos gramas de O₂ o 2º teste vai gastar.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Magnésio queimando",
+            "rotulos": [
+              "entra: 4,8 g de Mg",
+              "sai: 8,0 g de MgO",
+              "2 Mg + O₂ → 2 MgO",
+              "2º teste: 12 g de Mg"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Nada some na reação: o pó pesa o magnésio mais o oxigênio que ele pegou.\nOxigênio do 1º teste: 8,0 − 4,8 = 3,2 g.\nAgora, quantas vezes 12 g é maior que 4,8 g? 12 ÷ 4,8: ande a vírgula dos dois, 120 ÷ 48 = 2,5.\nCabem 2 vezes e meia, como 1 ÷ 0,5 = 2 (cabem 2 metades em 1)."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Com 2,5 vezes mais magnésio, gasta 2,5 vezes mais oxigênio.\n3,2 × 2 = 6,4 e 3,2 × 0,5 = 1,6 (metade de 3,2).\n6,4 + 1,6 = 8 g de O₂.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Oxigênio do 2º teste",
+            "dados": [
+              "\\text{O}_2 = 8{,}0 - 4{,}8 = 3{,}2\\,\\text{g}",
+              "4{,}8\\,\\text{g Mg} \\to 3{,}2\\,\\text{g O}_2"
+            ],
+            "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
+            "legenda": [
+              "dado: 12 g de magnésio",
+              "1º teste: 4,8 de Mg pegaram 3,2 de O₂"
+            ],
+            "contas": [
+              "x = 3{,}2 \\times \\dfrac{12}{4{,}8}",
+              "x = 3{,}2 \\times 2{,}5"
+            ],
+            "resultado": "x = 8\\,\\text{g de O}_2",
+            "nota": "Confira pela receita: 48 g de Mg (2 × 24) pedem 32 g de O₂; 12 g pedem um quarto, 8 g."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A proporção entre magnésio e oxigênio é sempre a mesma, em qualquer teste.\nConfira pela receita: 2 Mg pesam 2 × 24 = 48 g e o O₂ pesa 16 + 16 = 32 g.\n12 g é 48 ÷ 4, então pede 32 ÷ 4 = 8 g. As duas contas batem."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 8 g.\nA (20 g) é o pó que vai se formar (12 + 8), não o oxigênio.\nB (3,2 g) é o oxigênio do 1º teste, com 4,8 g de magnésio.\nC (32 g) é o peso de 1 pacote (mol) de O₂.\nD (7,2 g) fez 12 − 4,8, subtraindo em vez de usar a proporção."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Se 4,8 g de Mg pegam 3,2 g de O₂, quanto O₂ pegam 9,6 g de Mg?",
+        "opcoes": [
+          "6,4 g",
+          "3,2 g",
+          "4,8 g",
+          "12,8 g"
+        ],
+        "certa": "6,4 g",
+        "resposta": "9,6 é o dobro de 4,8. O dobro de 3,2 g é 6,4 g de O₂."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-17",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "Algumas piscinas e estações de água usam ozônio (O₃) no lugar de parte do cloro, porque ele mata germes e some rápido. Um aparelho chamado ozonizador transforma o oxigênio do ar em ozônio com descargas elétricas: 3 O₂ → 2 O₃. Use a massa O = 16. Num teste, 96 g de oxigênio (O₂) passaram pelo aparelho e todos viraram ozônio.\nQuantos gramas de ozônio se formaram?",
+    "A": "64 g",
+    "B": "96 g",
+    "C": "144 g",
+    "D": "48 g",
+    "E": "32 g",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "96 g de O₂ = 96 ÷ 32 = 3 mol, que dão 2 mol de O₃ = 2 × 48 = 96 g. A massa se conserva. B. Erros: A usou 2/3 dos gramas; C usou 3/2; D é 1 mol de O₃; E é 1 mol de O₂.",
+      "ideia": "Os mesmos átomos de oxigênio só mudam de arrumação: 3 O₂ e 2 O₃ têm 6 oxigênios cada. Por isso a massa não muda: 96 g viram 96 g.",
+      "pecas": [
+        {
+          "termo": "Mol",
+          "significado": "Pacote de contar, como a dúzia: 1 dúzia = 12 ovos, e 1 mol = um número fixo e enorme de partículas. A receita (equação) conta em mol."
+        },
+        {
+          "termo": "Ozônio",
+          "significado": "Gás feito só de oxigênio, com 3 átomos (O₃) em vez de 2 (O₂). Mata germes na água."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Passaram 96 g de oxigênio (O₂) pelo aparelho.\nA receita é 3 O₂ → 2 O₃, e tudo virou ozônio.\nA questão quer quantos gramas de ozônio (O₃) saíram.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Oxigênio vira ozônio",
+            "rotulos": [
+              "entra: 96 g de O₂",
+              "sai: ozônio O₃",
+              "3 O₂ → 2 O₃",
+              "O = 16"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Mol é pacote de contar, como a dúzia. Pese os pacotes: O₂ = 16 + 16 = 32; O₃ = 3 × 16 = 48.\n96 g de O₂ são 96 ÷ 32 = 3 pacotes (32 × 3 = 96).\nA receita diz: 3 pacotes de O₂ dão 2 pacotes de O₃."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "2 pacotes de O₃ pesam 2 × 48 = 96 g.\nSaiu a mesma massa que entrou.\nO número de pacotes caiu (de 3 para 2), mas cada pacote ficou mais pesado.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Ozônio do teste",
+            "dados": [
+              "\\text{O}_2 = 32;\\ 96 \\div 32 = 3\\,\\text{mol}",
+              "\\text{O}_3 = 3 \\times 16 = 48"
+            ],
+            "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
+            "legenda": [
+              "dado: 3 mol de O₂",
+              "receita: 3 entram, 2 saem"
+            ],
+            "contas": [
+              "x = 3 \\times \\dfrac{2}{3} = 2\\,\\text{mol O}_3",
+              "m = 2 \\times 48"
+            ],
+            "resultado": "m = 96\\,\\text{g de O}_3",
+            "nota": "Massa que entra = massa que sai."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Conte os átomos: 3 O₂ têm 3 × 2 = 6 oxigênios; 2 O₃ têm 2 × 3 = 6 oxigênios.\nOs mesmos 6 átomos só trocam de par para trio, como 6 pessoas em 3 duplas ou em 2 trios.\nSe nenhum átomo entra nem sai, o peso fica igual."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 96 g.\nA (64 g) usou 3 para 2 direto nos gramas: 96 × 2 ÷ 3. A receita conta pacotes, não gramas.\nC (144 g) fez 96 × 3 ÷ 2, virando a receita.\nD (48 g) é o peso de 1 pacote de O₃; saíram 2.\nE (32 g) é o peso de 1 pacote de O₂."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Se 48 g de O₂ virarem todos ozônio, quantos gramas de O₃ saem?",
+        "opcoes": [
+          "48 g",
+          "32 g",
+          "72 g",
+          "96 g"
+        ],
+        "certa": "48 g",
+        "resposta": "Os átomos de oxigênio são os mesmos: a massa não muda. 48 g viram 48 g."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-18",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "O catalisador do escapamento do carro (uma peça com metais que acelera a reação) transforma o monóxido de carbono (CO), gás venenoso, em gás carbônico: 2 CO + O₂ → 2 CO₂. Use as massas: C = 12 e O = 16. Num trajeto pela cidade, o motor de um carro soltou 280 g de CO, e o catalisador transformou tudo.\nQuantos gramas de gás oxigênio (O₂) o catalisador usou nesse trajeto?",
+    "A": "80 g",
+    "B": "440 g",
+    "C": "160 g",
+    "D": "320 g",
+    "E": "280 g",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "CO = 28; 2 CO = 56 pedem 1 O₂ = 32. 280 ÷ 56 = 5; 5 × 32 = 160 g. C. Erros: A usou O = 16 em vez de O₂ = 32; B é o CO₂ formado; D esqueceu o 2 na frente do CO; E repetiu a massa.",
+      "ideia": "A receita pede 2 CO para 1 O₂: 56 g de CO gastam 32 g de oxigênio. 280 g é 5 vezes 56, então gastam 5 × 32 = 160 g.",
+      "pecas": [
+        {
+          "termo": "Mol",
+          "significado": "Pacote de contar, como a dúzia: 1 dúzia = 12 ovos, e 1 mol = um número fixo e enorme de partículas. A receita (equação) conta em mol."
+        },
+        {
+          "termo": "Monóxido de carbono",
+          "significado": "Gás CO, sem cheiro e venenoso, que sai da queima com pouco ar. O catalisador o troca por CO₂."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O carro soltou 280 g de CO.\nA receita é 2 CO + O₂ → 2 CO₂.\nA questão quer quantos gramas de oxigênio (O₂) foram usados.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "O escapamento",
+            "rotulos": [
+              "CO: 280 g",
+              "CO é venenoso",
+              "motor do carro",
+              "2 CO + O₂ → 2 CO₂"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Mol é pacote de contar, como a dúzia. Pese os pacotes: CO = 12 + 16 = 28; O₂ = 16 + 16 = 32.\nA receita diz: 2 pacotes de CO gastam 1 pacote de O₂.\nEm massa: 2 × 28 = 56 g de CO gastam 32 g de O₂."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "280 g de CO é quantas vezes 56 g? 56 × 5 = 280, então 5 vezes.\nCada vez gasta 32 g de O₂.\n5 × 32 = 160 g de oxigênio.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Oxigênio do catalisador",
+            "dados": [
+              "2\\,\\text{CO} = 2 \\times (12 + 16) = 56",
+              "1\\,\\text{O}_2 = 2 \\times 16 = 32"
+            ],
+            "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
+            "legenda": [
+              "dado: 280 g de CO",
+              "receita: 56 de CO gastam 32 de O₂"
+            ],
+            "contas": [
+              "x = 280 \\times \\dfrac{32}{56}",
+              "x = 5 \\times 32"
+            ],
+            "resultado": "x = 160\\,\\text{g de O}_2",
+            "nota": "Os 2 na frente do CO dobram a massa de CO da receita."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O 2 na frente do CO diz que a receita usa 2 pacotes de CO; por isso a conta usa 56 e não 28.\nNúmeros pequenos: 56 g de CO gastam 32 g de O₂; 112 g (o dobro) gastariam 64 g.\nConfira: 280 de CO + 160 de O₂ = 440 g de CO₂. Nada some."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 160 g.\nA (80 g) usou um O só (16) em vez do gás O₂ (32).\nB (440 g) é a massa de CO₂ que se forma, não o oxigênio gasto.\nD (320 g) esqueceu o 2 na frente do CO: tratou 28 g de CO para 32 g de O₂.\nE (280 g) achou que o oxigênio pesa o mesmo que o CO."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Se o carro soltasse 112 g de CO, quantos gramas de O₂ seriam gastos?",
+        "opcoes": [
+          "64 g",
+          "32 g",
+          "128 g",
+          "112 g"
+        ],
+        "certa": "64 g",
+        "resposta": "112 = 2 × 56. Então 2 × 32 = 64 g de oxigênio."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-19",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "Na caiação, a parede é pintada com cal hidratada (Ca(OH)₂) misturada em água. Nos dias seguintes, a cal pega gás carbônico do ar e vira carbonato de cálcio, que endurece a pintura: Ca(OH)₂ + CO₂ → CaCO₃ + H₂O. Use as massas: Ca = 40, O = 16, H = 1 e C = 12. Um pintor usou 37 kg de cal hidratada numa casa, e toda ela reagiu.\nQuantos quilos de CO₂ essa pintura retirou do ar?",
+    "A": "22 kg",
+    "B": "50 kg",
+    "C": "44 kg",
+    "D": "37 kg",
+    "E": "9 kg",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Ca(OH)₂ = 40 + 2 × (16 + 1) = 74; CO₂ = 44. 1 para 1: 74 kg pegam 44 kg. 37 = 74 ÷ 2, então 44 ÷ 2 = 22 kg. A. Erros: B é o CaCO₃ formado; C é o CO₂ de 74 kg; D repetiu a massa; E é a água que sai.",
+      "ideia": "A receita é 1 cal para 1 CO₂: 74 kg de cal pegam 44 kg de CO₂. O pintor usou 37 kg, metade de 74, então a parede pegou 22 kg.",
+      "pecas": [
+        {
+          "termo": "Mol",
+          "significado": "Pacote de contar, como a dúzia: 1 dúzia = 12 ovos, e 1 mol = um número fixo e enorme de partículas. A receita (equação) conta em mol."
+        },
+        {
+          "termo": "Massa molar",
+          "significado": "Quanto pesa 1 mol (1 pacote). Soma as massas dos átomos: água (H₂O) = 1 + 1 + 16 = 18 g por mol."
+        },
+        {
+          "termo": "Caiação",
+          "significado": "Pintura antiga e barata com cal e água. Fica branca e dura porque a cal reage com o CO₂ do ar."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O pintor usou 37 kg de cal hidratada, Ca(OH)₂.\nA receita é Ca(OH)₂ + CO₂ → CaCO₃ + H₂O.\nA questão quer quantos quilos de CO₂ a parede tirou do ar.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "A cal endurecendo",
+            "rotulos": [
+              "entra: 37 kg de Ca(OH)₂",
+              "pega: CO₂ do ar",
+              "1 Ca(OH)₂ → 1 CO₂",
+              "Ca=40 O=16 H=1 C=12"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Mol é pacote de contar, como a dúzia. A receita é 1 pacote de cal para 1 de CO₂.\nPese a cal: o (OH)₂ quer dizer 2 vezes OH. Ca + 2 × (16 + 1) = 40 + 34 = 74.\nPese o CO₂: 12 + 16 + 16 = 44. Então 74 kg de cal pegam 44 kg de CO₂."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "37 kg é metade de 74 kg (74 ÷ 2 = 37).\nMetade da cal pega metade do CO₂.\n44 ÷ 2 = 22 kg de CO₂.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "CO₂ preso na parede",
+            "dados": [
+              "\\text{Ca(OH)}_2 = 40 + 2 \\times (16 + 1) = 74",
+              "\\text{CO}_2 = 12 + 2 \\times 16 = 44"
+            ],
+            "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
+            "legenda": [
+              "dado: 37 kg de cal",
+              "receita: 74 de cal pegam 44 de CO₂"
+            ],
+            "contas": [
+              "x = 37 \\times \\dfrac{44}{74}",
+              "x = \\dfrac{44}{2}"
+            ],
+            "resultado": "x = 22\\,\\text{kg de CO}_2",
+            "nota": "Cortar: 37 ÷ 74 = 1 ÷ 2, metade."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "1 para 1 em pacotes não é 1 para 1 em quilos: o pacote de cal pesa 74 e o de CO₂ pesa 44.\nNúmeros pequenos: 74 kg pegam 44 kg; 148 kg (o dobro) pegariam 88 kg; 37 kg (a metade) pegam 22 kg.\nConfira: 37 + 22 = 59 = 50 de CaCO₃ + 9 de água."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 22 kg.\nB (50 kg) é o carbonato de cálcio que se forma, não o CO₂.\nC (44 kg) é o CO₂ de 74 kg de cal; o pintor usou metade disso.\nD (37 kg) achou que 1 para 1 vale em quilos.\nE (9 kg) é a água que sai da reação."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Quantos quilos de CO₂ pegam 148 kg de cal (74 kg pegam 44 kg)?",
+        "opcoes": [
+          "88 kg",
+          "44 kg",
+          "22 kg",
+          "148 kg"
+        ],
+        "certa": "88 kg",
+        "resposta": "148 = 2 × 74. Então 2 × 44 = 88 kg de CO₂."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-est-20",
+    "materia": "Química",
+    "tema": "Estequiometria",
+    "enunciado": "O gás de botijão (GLP) é uma mistura em que um dos principais gases é o propano (C₃H₈). Para queimar bem, a chama precisa de muito oxigênio; com pouco ar, a chama fica amarela e solta fuligem. A receita é: C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O. Use a massa O = 16. Num almoço, o fogão queimou 2 mol de propano (mol é pacote de contar, como a dúzia).\nQuantos gramas de gás oxigênio (O₂) essa queima consumiu?",
+    "A": "160 g",
+    "B": "64 g",
+    "C": "10 g",
+    "D": "320 g",
+    "E": "640 g",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "1 propano gasta 5 O₂; 2 mol gastam 2 × 5 = 10 mol. O₂ = 32; 10 × 32 = 320 g. D. Erros: A fez a receita 1 vez; B fez 1 para 1; C parou nos pacotes; E dobrou duas vezes.",
+      "ideia": "Cada pacote de propano gasta 5 pacotes de oxigênio. Com 2 de propano, são 10 pacotes de O₂, e cada um pesa 32 g: 320 g.",
+      "pecas": [
+        {
+          "termo": "Mol",
+          "significado": "Pacote de contar, como a dúzia: 1 dúzia = 12 ovos, e 1 mol = um número fixo e enorme de partículas. A receita (equação) conta em mol."
+        },
+        {
+          "termo": "Fuligem",
+          "significado": "Pó preto de carbono que sobra quando falta oxigênio na queima. Suja o fundo da panela."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O fogão queimou 2 mol (2 pacotes) de propano.\nA receita é C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O.\nA questão quer quantos gramas de O₂ foram gastos.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "A chama do fogão",
+            "rotulos": [
+              "entra: 2 mol de C₃H₈",
+              "gasta: O₂",
+              "1 C₃H₈ → 5 O₂",
+              "O = 16"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Mol é pacote de contar, como a dúzia: 2 mol são 2 pacotes.\nA receita diz: 1 pacote de propano gasta 5 pacotes de O₂.\n2 pacotes de propano gastam 2 × 5 = 10 pacotes de O₂."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Agora, pacotes viram gramas. 1 pacote de O₂ = 16 + 16 = 32 g.\n10 pacotes: 10 × 32 = 320 g.\n(Multiplicar por 10 põe um zero no fim.)",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Oxigênio do almoço",
+            "dados": [
+              "1\\,\\text{mol C}_3\\text{H}_8 \\to 5\\,\\text{mol O}_2",
+              "\\text{O}_2 = 16 + 16 = 32\\,\\text{g/mol}"
+            ],
+            "formula": "\\text{pedido} = \\text{dado} \\times \\dfrac{\\text{sai na receita}}{\\text{entra na receita}}",
+            "legenda": [
+              "dado: 2 mol de propano",
+              "receita: 1 entra, 5 de O₂ são gastos"
+            ],
+            "contas": [
+              "n = 2 \\times 5 = 10\\,\\text{mol O}_2",
+              "m = 10 \\times 32"
+            ],
+            "resultado": "m = 320\\,\\text{g de O}_2",
+            "nota": "Primeiro conta os pacotes, depois pesa."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A receita conta pacotes, como uma receita de bolo conta ovos.\nNúmeros pequenos: 1 propano gasta 5 O₂; 3 propanos gastariam 15 O₂.\nSó no fim os pacotes viram gramas, com a massa de 1 pacote."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, 320 g.\nA (160 g) fez a receita só 1 vez: 5 × 32, mas são 2 pacotes de propano.\nB (64 g) fez 1 para 1: 2 pacotes de O₂, esquecendo o 5.\nC (10 g) parou nos 10 pacotes e chamou de gramas.\nE (640 g) dobrou duas vezes: 20 pacotes em vez de 10."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Butano: 2 C₄H₁₀ + 13 O₂ → 8 CO₂. Com 4 mol de butano, quantos mol de CO₂?",
+        "opcoes": [
+          "16 mol",
+          "8 mol",
+          "4 mol",
+          "26 mol"
+        ],
+        "certa": "16 mol",
+        "resposta": "4 mol de butano = 2 vezes a receita. 2 × 8 = 16 mol de CO₂."
+      }
+    }
+  }
+]
