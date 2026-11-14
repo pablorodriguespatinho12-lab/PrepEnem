@@ -670,6 +670,68 @@
           "resolucao": "O CO ocupa a hemoglobina no lugar do oxigênio, e o corpo fica sem oxigênio.\nEle não precisa entupir nada: gruda na peça que levaria o oxigênio."
         }
       ]
+    },
+    "isomeros": {
+      "titulo": "Isômeros: mesmas peças, outro brinquedo",
+      "linhas": [
+        "Pense em pecinhas de LEGO: com as MESMAS pecinhas dá para montar um carro ou uma casa.",
+        "Na química é igual. Isômeros são substâncias com as mesmas peças (mesmos átomos, nas mesmas quantidades), montadas de outro jeito.",
+        "Primeiro passo: conte as peças. CH₃ quer dizer 1 C com 3 H grudados (o número pequeno conta o H). Contou e deu igual nas duas? São isômeros.",
+        "Macete F-P-C: pergunte nesta ordem o que mudou.",
+        "F: mudou a Família (álcool virou éter)? Isômero de função.",
+        "P: família igual, e o grupo só mudou de Posição (OH na ponta ou no meio)? Isômero de posição.",
+        "C: só o esqueleto de carbonos, a Cadeia, mudou (fila reta, fila com galho, roda)? Isômero de cadeia."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Mesmas peças, montagem diferente",
+        "cabecalho": [
+          "O que mudou",
+          "Nome",
+          "Exemplo"
+        ],
+        "linhas": [
+          [
+            "a Família",
+            "de função",
+            "álcool × éter"
+          ],
+          [
+            "só a Posição do grupo",
+            "de posição",
+            "OH na ponta × OH no meio"
+          ],
+          [
+            "só a Cadeia (o esqueleto)",
+            "de cadeia",
+            "fila reta × fila com galho"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Butano e isobutano (gás de isqueiro) têm as mesmas peças, C₄H₁₀, e os dois só têm C e H. No butano os 4 carbonos ficam em fila reta. No isobutano, um carbono sai para o lado, como um galho. Eles são isômeros de:",
+          "alternativas": [
+            "função",
+            "posição",
+            "cadeia",
+            "não são isômeros"
+          ],
+          "certa": 2,
+          "resolucao": "Isômero de cadeia: só o esqueleto mudou, fila reta × fila com galho.\nMesmas peças (C₄H₁₀): são isômeros.\nF: a família é a mesma (só C e H). P: não tem grupo trocando de lugar. Sobra o C, de cadeia."
+        },
+        {
+          "enunciado": "Dois álcoois têm as mesmas peças, C₃H₈O. Os dois têm uma fila de 3 carbonos. Num, o OH fica no carbono da ponta. No outro, fica no carbono do meio. Eles são isômeros de:",
+          "alternativas": [
+            "função",
+            "posição",
+            "cadeia",
+            "não são isômeros"
+          ],
+          "certa": 1,
+          "resolucao": "Isômero de posição: o OH só trocou de lugar, da ponta para o meio.\nMesmas peças (C₃H₈O): são isômeros.\nF: os dois são álcool, a família não mudou. P: o grupo mudou de lugar."
+        }
+      ]
     }
   },
   "questoes": {
@@ -766,6 +828,9 @@
     ],
     "d2-facil-mat-08": [
       "velocidade"
+    ],
+    "d2-dificil-nat-07": [
+      "isomeros"
     ]
   }
 }

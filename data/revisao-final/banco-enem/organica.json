@@ -324,7 +324,7 @@
       "pecas": [
         {
           "termo": "Anel benzênico",
-          "significado": "Seis carbonos ligados em hexágono, com ligações duplas, como no benzeno."
+          "significado": "Seis carbonos de mãos dadas em roda, formando um hexágono (figura de 6 cantos), como no benzeno. Dentro da roda, uma ligação sim, outra não, é dupla (dois tracinhos)."
         },
         {
           "termo": "Fenol",
@@ -334,7 +334,7 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "O BPA tem dois anéis de seis carbonos.\nCada anel tem um OH preso direto nele.\nA questão quer a família marcada por esses OH.",
+          "texto": "O BPA tem dois anéis de seis carbonos.\nCada anel tem um OH preso direto nele.\nA questão quer a família marcada por esses OH.\nAnel benzênico: 6 carbonos de mãos dadas em roda, como na figura.",
           "visual": {
             "tipo": "figura",
             "nome": "alcool-fenol",
@@ -349,7 +349,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "O OH sozinho aparece em duas famílias: álcool e fenol.\nO que separa as duas é onde o OH está preso.\nEm carbono comum, de ligações simples, é álcool. No anel benzênico, é fenol."
+          "texto": "O OH sozinho aparece em duas famílias: álcool e fenol.\nO que separa as duas é onde o OH está preso.\nEm carbono comum, de ligações simples, é álcool. No anel benzênico, é fenol.\nNão importa se o OH aparece no começo ou no fim: importa o carbono em que ele está grudado."
         },
         {
           "titulo": "Jeito rápido",
@@ -467,6 +467,10 @@
       "ideia": "A água quebrou o COO entre dois carbonos, que é o pedaço do éster. É a esterificação andando para trás: éster + água devolve o ácido.",
       "pecas": [
         {
+          "termo": "Anel benzênico",
+          "significado": "Seis carbonos de mãos dadas em roda, formando um hexágono (figura de 6 cantos), como no benzeno. Dentro da roda, uma ligação sim, outra não, é dupla (dois tracinhos)."
+        },
+        {
           "termo": "Éster",
           "significado": "Função com COO preso a carbono dos dois lados, sem H."
         },
@@ -478,7 +482,7 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "A aspirina tem um COOH e um COO preso entre o anel e outro carbono.\nA água quebrou a molécula no COO e saiu ácido acético (cheiro de vinagre).\nA questão quer a família do pedaço que a água quebrou.",
+          "texto": "A aspirina tem um COOH e um COO preso entre o anel e outro carbono.\nA água quebrou a molécula no COO e saiu ácido acético (cheiro de vinagre).\nA questão quer a família do pedaço que a água quebrou.\nAnel benzênico: 6 carbonos de mãos dadas em roda, como na figura.",
           "visual": {
             "tipo": "figura",
             "nome": "molecula-cadeia",
@@ -937,6 +941,10 @@
       "ideia": "Quem decide é o carbono que segura o OH. No CH₂ fora do anel é álcool; direto no anel benzênico é fenol.",
       "pecas": [
         {
+          "termo": "Anel benzênico",
+          "significado": "Seis carbonos de mãos dadas em roda, formando um hexágono (figura de 6 cantos), como no benzeno. Dentro da roda, uma ligação sim, outra não, é dupla (dois tracinhos)."
+        },
+        {
           "termo": "Fenol",
           "significado": "OH preso direto num carbono do anel benzênico."
         },
@@ -948,7 +956,7 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "Frasco azul: C₆H₅–CH₂–OH, com o OH num carbono fora do anel.\nFrasco verde: C₆H₅–OH, com o OH preso direto no anel.\nA questão quer a família de cada um.",
+          "texto": "Frasco azul: C₆H₅–CH₂–OH, com o OH num carbono fora do anel.\nFrasco verde: C₆H₅–OH, com o OH preso direto no anel.\nA questão quer a família de cada um.\nAnel benzênico: 6 carbonos de mãos dadas em roda, como na figura.",
           "visual": {
             "tipo": "figura",
             "nome": "alcool-fenol",
@@ -963,7 +971,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Os dois têm anel e os dois têm OH. O que muda é o vizinho do OH.\nNo azul, entre o anel e o OH existe um CH₂, carbono de ligações simples.\nNo verde, o OH encosta direto num carbono do anel."
+          "texto": "Os dois têm anel e os dois têm OH. O que muda é o vizinho do OH.\nNo azul, entre o anel e o OH existe um CH₂, carbono de ligações simples.\nNo verde, o OH encosta direto num carbono do anel.\nNão importa se o OH aparece no começo ou no fim: importa o carbono em que ele está grudado."
         },
         {
           "titulo": "Jeito rápido",
@@ -1337,6 +1345,10 @@
       "ideia": "Os OH presos no anel benzênico são de fenol, e o N ligado só a carbono e hidrogênio é de amina. A dopamina tem as duas funções.",
       "pecas": [
         {
+          "termo": "Anel benzênico",
+          "significado": "Seis carbonos de mãos dadas em roda, formando um hexágono (figura de 6 cantos), como no benzeno. Dentro da roda, uma ligação sim, outra não, é dupla (dois tracinhos)."
+        },
+        {
           "termo": "Amina",
           "significado": "N ligado só a carbono ou hidrogênio, sem C=O colado nele."
         },
@@ -1348,7 +1360,7 @@
       "passos": [
         {
           "titulo": "A pergunta",
-          "texto": "A dopamina tem um anel benzênico com dois OH presos direto nele.\nNa ponta da cadeia que sai do anel há um NH₂, sem C=O por perto.\nA questão quer as funções presentes.",
+          "texto": "A dopamina tem um anel benzênico com dois OH presos direto nele.\nNa ponta da cadeia que sai do anel há um NH₂, sem C=O por perto.\nA questão quer as funções presentes.\nAnel benzênico: 6 carbonos de mãos dadas em roda, como na figura.",
           "visual": {
             "tipo": "figura",
             "nome": "alcool-fenol",
@@ -1363,7 +1375,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Há dois tipos de pedaço para olhar: os OH e o N.\nOs OH estão presos direto no anel benzênico.\nO N está ligado só a carbono e hidrogênio, sem nenhum C=O colado nele."
+          "texto": "Há dois tipos de pedaço para olhar: os OH e o N.\nOs OH estão presos direto no anel benzênico.\nO N está ligado só a carbono e hidrogênio, sem nenhum C=O colado nele.\nNão importa se o OH aparece no começo ou no fim: importa o carbono em que ele está grudado."
         },
         {
           "titulo": "Jeito rápido",
