@@ -10,19 +10,19 @@ import { GENTE, pessoa, type Jeito } from '@/lib/pixel/personagem';
    sprites de poucos quadros + pontos que andam 1 pixel por passo (.fig-cena-fluida).
    Grade 120 × 70; x e y dos pontos em % da cena. */
 
-const W = 120;
-const H = 70;
-const px = (x: number) => (x / W) * 100;
-const py = (y: number) => (y / H) * 100;
-const L = (left: number, top: number): Lugar => ({ left: `${left}%`, top: `${top}%` });
-const fundo = (c: Pincel) => ponto(c, LOUSA, 0, 0, W, H);
-function caixa(c: Pincel, x: number, y: number, w: number, h: number, cor: string) {
+export const W = 120;
+export const H = 70;
+export const px = (x: number) => (x / W) * 100;
+export const py = (y: number) => (y / H) * 100;
+export const L = (left: number, top: number): Lugar => ({ left: `${left}%`, top: `${top}%` });
+export const fundo = (c: Pincel) => ponto(c, LOUSA, 0, 0, W, H);
+export function caixa(c: Pincel, x: number, y: number, w: number, h: number, cor: string) {
   ponto(c, TINTA, x, y, w, h);
   ponto(c, cor, x + 1, y + 1, w - 2, h - 2);
 }
-const mesa = (c: Pincel) => { ponto(c, '#b98a5a', 0, 56, W, 3); ponto(c, '#8a6440', 0, 59, W, 11); };
+export const mesa = (c: Pincel) => { ponto(c, '#b98a5a', 0, 56, W, 3); ponto(c, '#8a6440', 0, 59, W, 11); };
 
-function cena(chave: string, desenhar: (c: Pincel) => void, lugares: Lugar[], filhos: () => ReactNode) {
+export function cena(chave: string, desenhar: (c: Pincel) => void, lugares: Lugar[], filhos: () => ReactNode) {
   return function CenaDaQuestao(p: PropsFigura) {
     return (
       <Cena chave={chave} w={W} h={H} desenhar={desenhar} lugares={lugares} rotulos={p.rotulos}
@@ -45,15 +45,15 @@ const desenharChama = (azul: boolean) => (c: Pincel, q: number) => {
   }
   for (let y = topo + 6; y < 13; y++) ponto(c, dentro, 5, y, 2, 1);
 };
-const chamaAzul = desenharChama(true);
-const chamaAmarela = desenharChama(false);
+export const chamaAzul = desenharChama(true);
+export const chamaAmarela = desenharChama(false);
 
 /** Mão com o dedo e a unha (para o esmalte): 3 quadros, o dedo mexe 1 pixel. */
-const bolhas = (x: number, y: number, n: number, cor: string, subida = 30, dur = 2.4) =>
+export const bolhas = (x: number, y: number, n: number, cor: string, subida = 30, dur = 2.4) =>
   Array.from({ length: n }, (_, i) => (
     <Ponto key={`b${x}-${i}`} x={px(x + (i % 3) * 3)} y={py(y)} tam={2.2} cor={cor} anim="anda" dy={-subida} dx={i % 2 ? 2 : -2} dur={dur} atraso={-i * (dur / n)} redondo />
   ));
-const gotas = (x: number, y: number, n: number, cor: string, queda = 22, dur = 1.6) =>
+export const gotas = (x: number, y: number, n: number, cor: string, queda = 22, dur = 1.6) =>
   Array.from({ length: n }, (_, i) => (
     <Ponto key={`g${x}-${i}`} x={px(x)} y={py(y)} tam={2} cor={cor} anim="anda" dy={queda} dur={dur} atraso={-i * (dur / n)} />
   ));
@@ -61,26 +61,32 @@ const gotas = (x: number, y: number, n: number, cor: string, queda = 22, dur = 1
 /** Pessoa de 22 × 22 respirando e piscando (2 quadros), em pé com os pés em `chao`.
     ox = -3: com -5 o braço esquerdo saía da borda do quadro e sumia (14/11/2026). */
 const desenhosDePessoa: Partial<Record<Jeito, (c: Pincel, q: number) => void>> = {};
-function Gente({ jeito, x, chao, fps = 2 }: { jeito: Jeito; x: number; chao: number; fps?: number }) {
+export function Gente({ jeito, x, chao, fps = 2 }: { jeito: Jeito; x: number; chao: number; fps?: number }) {
   desenhosDePessoa[jeito] ??= (c, q) => pessoa(c, -3, q, GENTE[jeito]);
   return <Sprite chave={`gente2-${jeito}`} w={22} h={22} quadros={2} desenhar={desenhosDePessoa[jeito]!} x={px(x)} y={py(chao - 21)} largura={px(22)} fps={fps} />;
 }
 
+/** Leva o que estiver dentro de um lado para o outro (dx, dy em % da cena), 1 pixel por passo. */
+export function Anda({ dx = 0, dy = 0, dur = 3, volta = true, atraso = 0, children }: { dx?: number; dy?: number; dur?: number; volta?: boolean; atraso?: number; children: ReactNode }) {
+  const estilo = { '--dx': `${dx}%`, '--dy': `${dy}%`, '--dur': `${dur}s`, '--atraso': `${atraso}s` } as React.CSSProperties;
+  return <div className={`fig-mov ${volta ? 'fig-vai-e-volta' : 'fig-anda'}`} style={estilo} aria-hidden>{children}</div>;
+}
+
 /* ---------- desenhos parados ---------- */
 
-function fogao(c: Pincel, x: number) {
+export function fogao(c: Pincel, x: number) {
   caixa(c, x, 40, 40, 18, '#dfe3e6');
   ponto(c, '#9aa3a8', x + 2, 40, 36, 2);
   ponto(c, TINTA, x + 6, 46, 4, 4); ponto(c, TINTA, x + 30, 46, 4, 4);
   ponto(c, '#55615b', x + 8, 37, 24, 3); // grade da boca
 }
-function panela(c: Pincel, x: number, y: number) {
+export function panela(c: Pincel, x: number, y: number) {
   caixa(c, x, y, 26, 12, '#8a96a0');
   ponto(c, '#6fb7d6', x + 2, y + 2, 22, 3);
   ponto(c, TINTA, x - 4, y + 2, 4, 2);
 }
 /** Frasco: rótulo em cima, líquido no FUNDO (Pablo, 14/11/2026: "deixa o líquido mais ao chão"). */
-function frasco(c: Pincel, x: number, y: number, liquido: string | null, rotulo: string) {
+export function frasco(c: Pincel, x: number, y: number, liquido: string | null, rotulo: string) {
   caixa(c, x + 5, y, 6, 5, '#dfe6e1');
   caixa(c, x, y + 4, 16, 22, '#eef6f8');
   caixa(c, x + 2, y + 6, 12, 6, rotulo);
@@ -203,7 +209,10 @@ const OleoSabao = cena('cena-oleo-sabao', (c) => {
   </>
 ));
 
+import { CENAS_QUIMICA_2 } from './cenas-quimica-2';
+
 export const CENAS_QUESTOES = {
+  ...CENAS_QUIMICA_2,
   'cena-fogao-metano': FogaoMetano,
   'cena-esmalte': Esmalte,
   'cena-dois-frascos': DoisFrascos,
