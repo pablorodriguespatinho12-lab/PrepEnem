@@ -704,6 +704,11 @@
           }
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Química Orgânica: olhe o O e o N.\nO metano só tem C e H: não tem O nem N.\nSem O e sem N = hidrocarboneto.",
+          "visual": null
+        },
+        {
           "titulo": "A resposta",
           "texto": "Letra A, hidrocarboneto.\nB (álcool): tem o grupo OH, com oxigênio.\nC (ácido carboxílico): tem COOH, como o vinagre.\nD (éster): tem oxigênio no meio da cadeia, como o cheiro de fruta.\nE (cetona): tem um oxigênio preso a um carbono do meio, como a acetona de tirar esmalte.\nTodas as quatro têm oxigênio, então não servem.",
           "visual": null
@@ -784,6 +789,11 @@
               ]
             ]
           }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Química Orgânica: o começo do nome conta os carbonos.\nmet = 1, et = 2, prop = 3, but = 4.\nPropano: prop = 3 carbonos.",
+          "visual": null
         },
         {
           "titulo": "A resposta",
@@ -867,6 +877,11 @@
               }
             ]
           }
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Química Ambiental: siga a queima.\nGasolina, carvão e lenha têm carbono. Queimando com oxigênio: carbono + O₂ → CO₂.\nO CO₂ segura o calor: efeito estufa.",
+          "visual": null
         },
         {
           "titulo": "A resposta",
@@ -953,6 +968,11 @@
           }
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Química Ambiental: renovável é o que volta sozinho rápido (sol, vento, água, planta).\nPetróleo, carvão e gás levaram milhões de anos para se formar: acabam.\nA luz do Sol volta todo dia: é renovável.",
+          "visual": null
+        },
+        {
           "titulo": "A resposta",
           "texto": "Letra E, luz do Sol.\nA (petróleo), B (carvão mineral) e C (gás natural): são combustíveis fósseis. Levaram milhões de anos para se formar e acabam.\nO gás natural engana pelo nome, mas é fóssil como o petróleo.\nD (urânio): é um minério, pedra tirada do chão, que também se esgota.",
           "visual": null
@@ -1023,7 +1043,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Divida a massa pelo volume. No quadro, o traço da fração quer dizer dividir: 40 em cima e 2 embaixo é 40 ÷ 2 = 20.",
+          "texto": "Macete de Soluções: concentração é quantos gramas há em cada litro.\n40 g em 2 L: em cada litro, 40 ÷ 2 = 20 g. São 20 g/L.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Concentração",
@@ -1150,6 +1170,11 @@
           }
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Eletroquímica: PERDE OXIDA, e é de lá que saem os elétrons.\nEsse polo é o ânodo (polo −). Quem ganha elétrons é o cátodo (polo +).\nDica: Ânodo e Oxidação começam por vogal; Cátodo e Redução, por consoante.",
+          "visual": null
+        },
+        {
           "titulo": "A resposta",
           "texto": "Letra C, ânodo.\nA (cátodo): é o polo do outro lado. Lá os elétrons chegam e acontece a redução.\nB (eletrólito): é o líquido ou a pasta dentro da pilha.\nD (ponte salina): é o tubo que liga as duas metades.\nB e D deixam passar íons (partículas com carga), mas não são o polo.\nE (resistor): é peça de circuito que esquenta, não parte da pilha.",
           "visual": null
@@ -1222,7 +1247,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Some o carbono com os dois oxigênios.",
+          "texto": "Macete de Estequiometria: a massa da peça é a soma dos átomos.\nCO₂ = 1 C + 2 O = 12 + 16 + 16 = 44 g.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Massa molar",

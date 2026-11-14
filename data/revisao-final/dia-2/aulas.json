@@ -284,7 +284,18 @@
         "certa": 4,
         "resolucao": "Óleo ou gordura + base forte em água → sabão. É a saponificação, a mesma reação de quem faz sabão em casa com óleo usado e soda cáustica."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Olhe o O e o N",
+      "regra": "Olhe só o O e o N da molécula: o pedaço onde eles estão diz a família. O começo do nome conta os carbonos.",
+      "passos": [
+        "Sem O e sem N: hidrocarboneto (só C e H).",
+        "Com O: OH = álcool (na roda de 6 = fenol); C=O no meio = cetona; COOH = ácido; COO entre carbonos = éster; O entre dois C = éter.",
+        "Com N: amina (N com C=O do lado = amida).",
+        "Contar: met = 1 C, et = 2, prop = 3, but = 4. Cada C=C pede 1 H₂."
+      ],
+      "exemplo": "Acetona, CH₃–CO–CH₃: o O está preso com ligação dupla num carbono do meio. C=O no meio = cetona."
+    }
   },
   "Química Ambiental e Energia": {
     "materia": "Química",
@@ -341,7 +352,17 @@
         "certa": 1,
         "resolucao": "Dejetos (esterco) apodrecendo sem oxigênio soltam metano: é o biogás. Etanol vem da cana ou do milho. Biodiesel vem de óleos e gorduras. Butano vem do petróleo."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Siga a cadeia",
+      "regra": "Siga a cadeia, um elo por linha: de queima, de causa ou de unidade.",
+      "passos": [
+        "Queima: com oxigênio bastante, sai CO₂ (efeito estufa) e água; com pouco oxigênio, sai CO, que gruda no sangue.",
+        "Causa: adubo → alga demais → alga morre → bactéria gasta o oxigênio → peixe morre.",
+        "Unidade: ande de uma para outra (km → litros → kg). Meia-vida: a cada período, a quantidade cai pela metade."
+      ],
+      "exemplo": "30 km por dia ÷ 10 km por litro = 3 litros. 3 × 2,3 kg = 6,9 kg de CO₂ por dia."
+    }
   },
   "Soluções, pH e Titulação": {
     "materia": "Química",
@@ -402,7 +423,17 @@
         "certa": 1,
         "resolucao": "Alíquota é uma amostra. g L⁻¹ é o mesmo que g/L. NaOH gasto: 0,10 mol/L × 0,008 L = 0,0008 mol. Cada ácido gasta 2 NaOH, então havia a metade: 0,0004 mol de ácido. Em gramas: 0,0004 × 150 = 0,06 g, dentro de 25 mL (0,025 L). 0,06 ÷ 0,025 = 2,4 g/L. Pegadinha: esquecer o 2 da equação dá 4,8."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Conte os gramas",
+      "regra": "Concentração é quantos gramas há em cada litro. Pondo água, os gramas não mudam: só se espalham.",
+      "passos": [
+        "Concentração: gramas ÷ litros (40 g em 2 L = 20 g em cada litro).",
+        "Diluir: conte os gramas que existem; no volume novo eles são os mesmos.",
+        "Compare em vezes: volume 5 vezes maior, concentração 5 vezes menor."
+      ],
+      "exemplo": "200 mL de suco a 100 g/L têm 20 g de açúcar. Com água até 1 L: 20 g/L."
+    }
   },
   "Eletroquímica": {
     "materia": "Química",
@@ -443,7 +474,17 @@
         "certa": 3,
         "resolucao": "O zinco perde elétrons mais fácil, então é ele que oxida, e o ferro fica inteiro. Por isso o bloco é consumido e precisa ser trocado. O nome é metal de sacrifício."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Perde oxida, ganha reduz",
+      "regra": "Quem tem o maior potencial ganha elétrons e engorda; o outro perde, se gasta e é o polo −.",
+      "passos": [
+        "Perde elétron (oxida): ânodo, polo −, a placa afina. Ganha (reduz): cátodo, polo +, a placa engorda.",
+        "Tensão de uma pilha = maior − menor. Em série, some as pilhas.",
+        "Ferrugem pede ferro + água + oxigênio: tire um (tinta, filme, zinco que se sacrifica) e ela para."
+      ],
+      "exemplo": "Cobre +0,34 V e zinco −0,76 V: 0,34 − (−0,76) = 0,34 + 0,76 = 1,10 V."
+    }
   },
   "Estequiometria": {
     "materia": "Química",
@@ -486,7 +527,17 @@
         "certa": 1,
         "resolucao": "Se 100 g dão 56 g, então 1 000 kg dão 560 kg. Com rendimento de 90%: 560 × 0,90 = 504 kg. Parar em 560 é esquecer o rendimento."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Receita em gramas",
+      "regra": "Escreva a receita em gramas e veja quantas vezes a sua quantidade cabe nela: o produto muda as mesmas vezes.",
+      "passos": [
+        "Massa de cada peça: some os átomos (CO₂ = 12 + 16 + 16 = 44 g).",
+        "Receita: o número na frente diz quantos pacotes (mols). Vire tudo em gramas.",
+        "Compare: sua massa é quantas vezes a da receita? O produto também é."
+      ],
+      "exemplo": "1 CH₄ (16 g) dá 1 CO₂ (44 g). 32 g de CH₄ é 2 vezes 16 g: dá 2 × 44 = 88 g de CO₂."
+    }
   },
   "Ecologia": {
     "materia": "Biologia",

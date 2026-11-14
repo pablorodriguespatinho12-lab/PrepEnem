@@ -83,8 +83,10 @@ export function TelaEstaQuestao({ aula }: { aula: AulaDaQuestao }) {
 }
 
 export function TelaPasso({ passo }: { passo: PassoExplicacao }) {
+  // min-w-0: um quadro largo (ésteres do ENEM) empurrava a janela para o lado e o
+  // Próximo sumia (14/11/2026). O desenho encolhe dentro da caixa; a janela não cresce.
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 min-w-0">
       {/* Uma ideia por linha, com respiro entre elas (Pablo, 12/11/2026: o passo
           vinha num bloco de 8 linhas e ele não entendia). Texto longo desce de
           type-lead para type-body, para a figura não encolher. */}
@@ -94,7 +96,7 @@ export function TelaPasso({ passo }: { passo: PassoExplicacao }) {
         ))}
       </div>
       {passo.visual && (
-        <div className="passo-visual h-[min(18rem,38dvh)] rounded-[var(--radius-control)] border border-border bg-[hsl(var(--surface-2))] p-2">
+        <div className="passo-visual h-[min(18rem,38dvh)] min-w-0 overflow-hidden rounded-[var(--radius-control)] border border-border bg-[hsl(var(--surface-2))] p-2">
           <CaberNaCaixa>
             <VisualDesenho visual={passo.visual} semMoldura />
           </CaberNaCaixa>
