@@ -56,7 +56,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Troque as letras pelos números e multiplique.",
+          "texto": "Macete de Eletricidade: P = U × i.\nP = 110 × 10 = 1 100 W.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Potência elétrica",
@@ -179,7 +179,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Em série, é só somar.",
+          "texto": "Macete de Eletricidade: em série, some.\n4 + 6 = 10 Ω.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Resistores em série",
@@ -297,6 +297,11 @@
           "visual": null
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Termodinâmica: calor = quantidade × c × quanto muda.\nMesmo sol, mesma energia. Quem tem c maior sobe menos graus com essa energia.\nA água tem c bem maior que a areia: esquenta mais devagar.",
+          "visual": null
+        },
+        {
           "titulo": "A resposta",
           "texto": "Letra E: a água tem calor específico maior.\nA: falha porque o sol que chega nas duas é o mesmo.\nB: falha porque a areia perde o calor de noite e amanhece fria.\nC: falha porque o vento sopra na areia e na água.\nD: falha porque a água fica com boa parte da luz. É por isso que o mar esquenta, só que devagar.",
           "visual": null
@@ -372,7 +377,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Multiplique o tamanho da onda pela frequência.",
+          "texto": "Macete de Ondas: v = λ × f (tamanho de cada onda × quantas por segundo).\nv = 2 × 5 = 10 m/s.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Equação da onda",
@@ -493,6 +498,11 @@
           }
         },
         {
+          "titulo": "Jeito rápido",
+          "texto": "Macete de Óptica: a cor que você vê é a que o objeto devolve.\nA camiseta devolve (reflete) o vermelho e engole (absorve) as outras cores.",
+          "visual": null
+        },
+        {
           "titulo": "A resposta",
           "texto": "Letra D.\nA: falha porque tecido não produz luz. No quarto escuro a camiseta some.\nB: é a armadilha. Se a camiseta ficasse com o vermelho, justamente o vermelho não chegaria ao seu olho.\nC: falha porque quem separa as cores é o prisma (um vidro em forma de cunha que faz arco-íris), não o pano.\nE: falha porque refletir todas as cores é o que a camiseta branca faz.",
           "visual": null
@@ -568,7 +578,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Multiplique a massa pela gravidade.",
+          "texto": "Macete de Dinâmica: o peso é a força da gravidade: P = m × 10.\nP = 60 × 10 = 600 N.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Peso",

@@ -65,7 +65,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Como P = U × i, a corrente é a potência dividida pela tensão. No quadro, o traço da fração quer dizer dividir: 2 200 ÷ 220. Corte um zero dos dois: 220 ÷ 22 = 10.",
+          "texto": "Macete de Eletricidade: em paralelo, some as potências; depois P = U × i.\nTotal: 1 320 + 880 = 2 200 W.\nCorrente: quantos 220 cabem em 2 200? 2 200 ÷ 220 = 10 A.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Corrente pela potência",
@@ -197,7 +197,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Some as resistências e divida a tensão pelo total. No quadro, o traço da fração quer dizer dividir: 12 ÷ 12 = 1.",
+          "texto": "Macete de Eletricidade: em série, some; depois U = R × i.\nTotal: 8 + 4 = 12 Ω.\nCorrente: quantos 12 cabem em 12 V? 12 ÷ 12 = 1 A.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Lei de Ohm em série",
@@ -329,7 +329,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Calcule o calor com Q = m × c × ΔT (o × é vezes) e divida pelo que entra por segundo. 30 000 ÷ 500: corte dois zeros dos dois e fica 300 ÷ 5 = 60.\nDividir é contar quantos segundos de 500 cabem em 30 000.",
+          "texto": "Macete de Termodinâmica: calor = quantidade × c × quanto muda; tempo = calor ÷ o que entra por segundo.\nQ = 500 × 1 × (80 − 20) = 500 × 60 = 30 000 cal.\nA cada segundo entram 500: quantos 500 cabem em 30 000? 60 s.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Calor e tempo",
@@ -460,7 +460,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Distância = velocidade × tempo, e depois divide por 2.",
+          "texto": "Macete de Ondas: distância = velocidade × tempo; no eco, a metade.\nIda e volta: 1 500 × 0,4 = 600 m (0,4 é 4 décimos: 150 × 4).\nProfundidade: 600 ÷ 2 = 300 m.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Eco do sonar",
@@ -588,7 +588,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Distância até a imagem = 2 × distância até o espelho.",
+          "texto": "Macete de Óptica: a imagem fica atrás do espelho, à mesma distância.\nAgora ela está a 2 − 0,5 = 1,5 m do espelho; a imagem, 1,5 m atrás.\nDistância até a imagem: 1,5 + 1,5 = 3 m.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Espelho plano",
@@ -725,7 +725,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Tire o atrito do empurrão e divida pela massa. O traço da fração é dividir: 120 ÷ 40. Pense ao contrário: 40 × 3 = 120, então dá 3.",
+          "texto": "Macete de Dinâmica: ache a força que sobra, depois F = m × a.\nSobra: 200 − 80 = 120 N.\nAceleração: 120 ÷ 40 = 3 m/s² (40 × 3 = 120).",
           "visual": {
             "tipo": "quadro",
             "titulo": "Segunda lei de Newton",

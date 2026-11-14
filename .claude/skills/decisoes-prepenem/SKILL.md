@@ -299,7 +299,7 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   passos, exemplo), tela própria na aula da questão logo depois de "Os dados", e no lugar da
   Palavra-chave em "Aula do conteúdo". Todo Jeito rápido começa por "Macete de <conteúdo>:"
   e aplica o mesmo macete (teste `data/revisao-final/macetes.test.ts`). Feito: Química (5
-  macetes, 28 questões). Faltam Física, Biologia, Matemática e o banco ENEM.
+  macetes, 28 questões) e Física (5 macetes, 24 questões). Faltam Biologia, Matemática e o banco ENEM.
 - **Passo em linhas (Pablo, 12/11/2026, foto do "Jeito rápido" da mangueira: "deixa
   o texto mais organizado e entendível"):** texto de passo acima de 200 letras vai
   em linhas separadas por `\n` (uma ideia por linha, até 170 letras cada); "A
