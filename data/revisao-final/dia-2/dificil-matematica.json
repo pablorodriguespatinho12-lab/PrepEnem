@@ -236,7 +236,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Os 90 fones são 30% do estoque do começo.\nPrimeiro com número pequeno: 30% de 100 é 100 × 0,30 = 30. Na volta, 30 ÷ 0,30 = 100, o todo.\nEntão, para achar o todo, divida a parte pela porcentagem: 90 ÷ 0,30.\nMultiplique os dois por 10 para sumir a vírgula: 900 ÷ 3 = 300.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Os 90 fones que sobraram são 30% do estoque do começo.\n30% = 90. Divida os dois por 3: 10% = 30.\n100% é 10 vezes 10%: 30 × 10 = 300 fones.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Volta ao estoque inicial",
@@ -250,8 +250,9 @@
               "$E$: fones no começo"
             ],
             "contas": [
-              "E \\times 0{,}30 = 90",
-              "E = \\dfrac{90}{0{,}30}"
+              "30\\% = 90",
+              "10\\% = 90 \\div 3 = 30",
+              "100\\% = 30 \\times 10"
             ],
             "resultado": "E = 300",
             "nota": "Havia 300 fones antes da liquidação."
@@ -704,7 +705,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Fatia da Carla = o que ela pôs dividido pelo total, vezes o lucro.\n30 000 ÷ 100 000: corte quatro zeros dos dois, fica 3 ÷ 10 = 0,3.\n10% de 36 000 é 3 600.\n30% é 3 × 3 600 = 10 800.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "A Carla pôs 30 mil de um total de 100 mil: 30 de cada 100, ou seja, 30%.\n10% de 36 000 é 3 600 (corte um zero).\n30% é 3 vezes isso: 3 × 3 600 = 10 800.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Divisão proporcional",
@@ -720,8 +721,9 @@
               "$L$: lucro do ano"
             ],
             "contas": [
-              "\\text{parte} = \\dfrac{30\\,000}{100\\,000} \\times 36\\,000",
-              "\\text{parte} = 0{,}30 \\times 36\\,000"
+              "\\text{Carla: } 30\\,000 \\text{ de } 100\\,000 = 30\\%",
+              "10\\% \\text{ de } 36\\,000 = 3\\,600",
+              "30\\% = 3 \\times 3\\,600"
             ],
             "resultado": "\\text{parte} = 10\\,800",
             "nota": "A Carla recebe R$ 10 800."
@@ -1021,7 +1023,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Distância total dividida pelo tempo total: 36 ÷ 2,25. Para sumir a vírgula, multiplique os dois por 4: 144 ÷ 9 = 16 (9 × 16 = 144).",
+          "texto": "Distância total dividida pelo tempo total: 36 ÷ 2,25. Para sumir a vírgula, multiplique os dois por 4: 144 ÷ 9 = 16 (9 × 16 = 144).\nDividir é contar quantos km ele anda em cada hora.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Velocidade média",
