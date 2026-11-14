@@ -791,6 +791,11 @@ html [data-sonner-toaster][data-theme] {
 .aula-desenho svg .t-calor { font-weight: 600; fill: var(--warm); }
 .aula-desenho svg .t-agua { font-weight: 600; fill: var(--water); }
 .aula-desenho svg .t-fraco { fill: var(--muted); }
+/* Desenho em pixel (14/11/2026): rótulo em letra pixel, sem negrito inventado. */
+.desenho-pixel-tela { image-rendering: pixelated; }
+/* Em pixel, o cinza da borda (--border) sumia: H2, cilindro, degraus. */
+.aula-desenho .desenho-pixel-fonte { --line: hsl(var(--muted-foreground) / .5); }
+.aula-desenho .desenho-pixel-rotulos svg text { font-family: var(--font-pixel-texto), monospace; font-size: 14px; font-weight: 400; font-synthesis: none; }
 .aula-desenho .tinta { stroke: var(--ink); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .aula-desenho .tinta-f { stroke: var(--muted); fill: none; stroke-width: 1.5; stroke-dasharray: 4 4; }
 .aula-desenho .agua { fill: var(--water-soft); stroke: var(--water); stroke-width: 2; }

@@ -1,12 +1,15 @@
 import type { AulaEmDesenho, TipoProporcao } from '@/lib/aulas-desenho';
+import { DesenhoPixel as Pixel } from '@/components/visual/desenho-pixel';
 
-// Telas do desenho dentro da aula do tema (Pablo, 11/11/2026: "preciso de uma imagem").
-// O HTML vem de lib/aulas-desenho-dados.js, escrito à mão no repositório.
+/* O desenho vira pixel art (Pablo, 14/11/2026); os rótulos ficam nítidos por cima. */
+function DesenhoPixel({ svg }: { svg: string }) {
+  return <div className="rounded-[var(--radius-control)] bg-muted/60 p-2"><Pixel svg={svg} /></div>;
+}
 
 export function TelaDesenho({ d }: { d: AulaEmDesenho }) {
   return (
     <div className="aula-desenho space-y-4">
-      <div className="rounded-[var(--radius-control)] bg-muted/60 p-2" dangerouslySetInnerHTML={{ __html: d.svg }} />
+      <DesenhoPixel svg={d.svg} />
       <ul className="space-y-2">
         {d.pecas.map(([imagem, nome], i) => (
           <li key={`${i}-${nome}`} className="grid grid-cols-[1fr_auto_1fr] gap-2 items-baseline font-reading type-body">
@@ -42,7 +45,7 @@ export function TelaProporcoes({ d }: { d: AulaEmDesenho }) {
   return (
     <div className="aula-desenho space-y-4">
       {d.desenhoLogica && (
-        <div className="rounded-[var(--radius-control)] bg-muted/60 p-2" dangerouslySetInnerHTML={{ __html: d.desenhoLogica }} />
+        <DesenhoPixel svg={d.desenhoLogica} />
       )}
       <ul className="space-y-3">
         {d.proporcoes.map((p) => (
