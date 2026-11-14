@@ -1,0 +1,1880 @@
+[
+ {
+  "id": "d2-banco-fis-ond-01",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Afinadores de instrumentos usam o diapasão, um garfo de metal que, depois de uma batidinha, vibra sempre na mesma nota. Numa aula de música, o professor bate num diapasão que vibra 680 vezes por segundo. O som se espalha pela sala, e no ar ele anda a 340 m/s.\nO comprimento de onda desse som no ar é de",
+  "A": "2 m",
+  "B": "0,5 m",
+  "C": "1 020 m",
+  "D": "231 200 m",
+  "E": "340 m",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "λ = v ÷ f = 340 ÷ 680 = 0,5 m. B. Erros: A = 680 ÷ 340 (dividiu ao contrário); C = 340 + 680 (somou); D = 340 × 680 (multiplicou); E = copiou a velocidade.",
+   "ideia": "VÊ LÁ FORA: v = λ × f, então λ = v ÷ f. Aqui, 340 ÷ 680 = 0,5 m.",
+   "pecas": [
+    {
+     "termo": "Diapasão",
+     "significado": "Garfo de metal que vibra numa nota só. Os músicos usam para afinar o instrumento."
+    },
+    {
+     "termo": "Comprimento de onda (λ)",
+     "significado": "O tamanho de uma onda inteira, em metros. A letra λ se chama lambda."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O diapasão vibra 680 vezes por segundo: f = 680 Hz (hertz).\nNo ar, o som anda 340 m em 1 segundo.\nA questão quer o tamanho de uma onda inteira: λ.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "O som do diapasão",
+      "rotulos": [
+       "λ = ?",
+       "f = 680 Hz",
+       "v = 340 m/s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Em 1 segundo, o som anda 340 m.\nNesse mesmo segundo, o diapasão solta 680 ondas, uma atrás da outra.\nEntão 680 ondas cabem em 340 m.\nHá mais ondas do que metros: cada onda tem menos de 1 m.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Com números pequenos: 10 m divididos em 20 ondas dão 10 ÷ 20 = 0,5 m para cada uma.\nAqui é igual: 340 m divididos em 680 ondas.\n340 ÷ 680 = 0,5 m, porque 680 é o dobro de 340.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O diapasão",
+      "dados": [
+       "v = 340\\,\\text{m/s}",
+       "f = 680\\,\\text{Hz}"
+      ],
+      "formula": "\\lambda = \\frac{v}{f}",
+      "legenda": [
+       "\\lambda: tamanho de uma onda",
+       "v: velocidade do som",
+       "f: vibrações por segundo"
+      ],
+      "contas": [
+       "\\lambda = \\frac{340}{680}"
+      ],
+      "resultado": "\\lambda = 0{,}5\\,\\text{m}",
+      "nota": "Cada onda tem meio metro."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Confira ao contrário: 680 ondas de 0,5 m dão 680 × 0,5 = 340 m.\nIsso é o caminho do som em 1 segundo. Bate com os 340 m/s.\nEssa conta é o v = λ × f da aula: 340 = 0,5 × 680.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 0,5 m.\nA (2 m): dividiu ao contrário, 680 ÷ 340.\nC (1 020 m): somou 340 + 680, e não há soma na fórmula.\nD (231 200 m): multiplicou 340 × 680. Isso seria achar a velocidade, que já foi dada.\nE (340 m): copiou a velocidade do som.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um diapasão de 170 Hz, no ar a 340 m/s. Qual é o λ?",
+    "opcoes": [
+     "2 m",
+     "0,5 m",
+     "57 800 m",
+     "510 m"
+    ],
+    "certa": "2 m",
+    "resposta": "λ = v ÷ f = 340 ÷ 170 = 2 m."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-02",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "No exame de ultrassom da gravidez, um aparelho encostado na barriga manda um som agudo demais para o ouvido humano. O som entra no corpo, bate no bebê e volta, e o computador monta a imagem. Dentro do corpo, esse som anda a cerca de 1 500 m/s, quase como na água. O aparelho vibra 3 000 000 de vezes por segundo (3 milhões de hertz).\nQual é o comprimento de onda desse som dentro do corpo?",
+  "A": "2 000 m",
+  "B": "5 mm",
+  "C": "0,05 mm",
+  "D": "0,5 mm",
+  "E": "4 500 000 000 m",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "λ = v ÷ f = 1 500 ÷ 3 000 000 = 0,0005 m = 0,5 mm. D. Erros: A = 3 000 000 ÷ 1 500 (ao contrário); B e C = zeros errados; E = 1 500 × 3 000 000 (multiplicou).",
+   "ideia": "VÊ LÁ FORA: λ = v ÷ f. Passe a velocidade para milímetros e corte os milhões: 1,5 ÷ 3 = 0,5 mm.",
+   "pecas": [
+    {
+     "termo": "Milímetro (mm)",
+     "significado": "Os risquinhos menores da régua. 1 metro tem 1 000 milímetros."
+    },
+    {
+     "termo": "Ultrassom",
+     "significado": "Som agudo demais para o nosso ouvido, com frequência acima de 20 000 Hz."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O aparelho vibra 3 milhões de vezes por segundo: f = 3 000 000 Hz.\nNo corpo, o som anda 1 500 m em 1 segundo.\nA questão quer o tamanho de uma onda: λ.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "O ultrassom no corpo",
+      "rotulos": [
+       "λ = ?",
+       "f = 3 000 000 Hz",
+       "v = 1 500 m/s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Em 1 segundo, o som anda 1 500 m e o aparelho solta 3 milhões de ondas.\nSão muito mais ondas do que metros, então cada onda é minúscula.\nPor isso a resposta vem em milímetros.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Passe para milímetros primeiro: 1 m tem 1 000 mm (os risquinhos menores da régua).\nEntão 1 500 m = 1 500 × 1 000 = 1 500 000 mm.\nAgora divida: 1 500 000 ÷ 3 000 000.\nCorte os milhões dos dois lados: 1,5 ÷ 3 = 0,5 mm, porque 3 × 0,5 = 1,5.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O ultrassom",
+      "dados": [
+       "v = 1\\,500\\,\\text{m/s} = 1\\,500\\,000\\,\\text{mm/s}",
+       "f = 3\\,000\\,000\\,\\text{Hz}"
+      ],
+      "formula": "\\lambda = \\frac{v}{f}",
+      "legenda": [
+       "\\lambda: tamanho de uma onda",
+       "v: velocidade no corpo",
+       "f: vibrações por segundo"
+      ],
+      "contas": [
+       "\\lambda = \\frac{1\\,500\\,000}{3\\,000\\,000}",
+       "\\lambda = \\frac{1{,}5}{3}"
+      ],
+      "resultado": "\\lambda = 0{,}5\\,\\text{mm}",
+      "nota": "Cada onda tem meio milímetro."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Com números pequenos: 6 m divididos em 12 ondas dão 6 ÷ 12 = 0,5 m cada.\nAqui são 1 500 000 mm divididos em 3 000 000 de ondas: a mesma metade, em milímetros.\nConfira: 3 000 000 × 0,5 mm = 1 500 000 mm = 1 500 m. Bate com a velocidade.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, 0,5 mm.\nA (2 000 m): dividiu ao contrário, 3 000 000 ÷ 1 500.\nB (5 mm): perdeu um zero na conta.\nC (0,05 mm): pôs um zero a mais.\nE (4 500 000 000 m): multiplicou 1 500 × 3 000 000.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Ultrassom de 2 000 000 Hz no corpo, a 1 500 m/s: qual é o λ?",
+    "opcoes": [
+     "0,75 mm",
+     "7,5 mm",
+     "1,3 mm",
+     "0,075 mm"
+    ],
+    "certa": "0,75 mm",
+    "resposta": "1 500 000 mm ÷ 2 000 000 = 1,5 ÷ 2 = 0,75 mm."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-03",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Em estádios de futebol, a torcida faz a \"ola\": cada torcedor fica em pé e senta na hora certa, e uma onda de gente dá a volta na arquibancada. Numa partida, a ola percorreu a volta inteira do estádio, de 600 m, em 30 s. Durante a ola, nenhum torcedor saiu da sua cadeira.\nSobre essa ola, é correto afirmar que ela",
+  "A": "anda a 20 m/s e leva o movimento pela arquibancada, sem levar os torcedores.",
+  "B": "anda a 20 m/s e leva os torcedores junto, 600 m em volta do estádio.",
+  "C": "anda a 18 000 m/s e leva o movimento, sem levar os torcedores.",
+  "D": "anda a 0,05 m/s e leva os torcedores junto.",
+  "E": "não é uma onda, porque nenhum torcedor sai do lugar.",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "v = d ÷ t = 600 ÷ 30 = 20 m/s; a onda leva energia (o movimento), não matéria (as pessoas). A. Erros: B = acha que a onda carrega as pessoas; C = 600 × 30; D = 30 ÷ 600 e carrega pessoas; E = nega a onda.",
+   "ideia": "Onda leva energia sem levar matéria: o movimento dá a volta, as pessoas ficam. A velocidade é 600 ÷ 30 = 20 m/s.",
+   "pecas": [
+    {
+     "termo": "Onda",
+     "significado": "Leva energia de um lugar para outro sem levar a matéria junto. Na ola, passa o movimento; as pessoas ficam."
+    },
+    {
+     "termo": "Velocidade",
+     "significado": "Distância ÷ tempo. Andar 10 m em 2 s é 10 ÷ 2 = 5 m por segundo (m/s)."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A ola dá uma volta de 600 m em 30 s.\nOs torcedores só levantam e sentam, sem sair da cadeira.\nA questão quer duas coisas: a velocidade da ola e o que ela leva.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "A ola na arquibancada",
+      "rotulos": [
+       "volta de 600 m",
+       "em 30 s",
+       "v = ?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Cada torcedor sobe e desce no seu lugar, um pouco depois do vizinho.\nO que anda pela arquibancada é o movimento, não as pessoas.\nÉ igual ao som: o ar vibra no lugar e o som chega longe.\nIsso é a aula: onda leva energia sem levar matéria.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Com números pequenos: andar 6 m em 3 s é 6 ÷ 3 = 2 m por segundo.\nAqui: 600 m em 30 s.\n600 ÷ 30 = 20 m/s. Corte um zero de cada: 60 ÷ 3 = 20.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "A ola",
+      "dados": [
+       "d = 600\\,\\text{m}",
+       "t = 30\\,\\text{s}"
+      ],
+      "formula": "v = \\frac{d}{t}",
+      "legenda": [
+       "d: distância da volta",
+       "t: tempo da volta"
+      ],
+      "contas": [
+       "v = \\frac{600}{30} = \\frac{60}{3}"
+      ],
+      "resultado": "v = 20\\,\\text{m/s}",
+      "nota": "O movimento anda 20 m por segundo; as pessoas, nada."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Confira: a 20 m por segundo, em 30 s a ola anda 20 × 30 = 600 m.\nÉ a volta inteira. Bate com o enunciado.\nE os torcedores andaram 0 m: só subiram e desceram.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, 20 m/s, levando o movimento e não as pessoas.\nB: a conta está certa, mas a onda não carrega os torcedores.\nC (18 000 m/s): multiplicou 600 × 30 em vez de dividir.\nD (0,05 m/s): dividiu ao contrário, 30 ÷ 600, e ainda leva as pessoas.\nE: é onda justamente porque o movimento passa e as pessoas ficam.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma ola dá a volta de 400 m em 25 s. Qual é a velocidade?",
+    "opcoes": [
+     "16 m/s",
+     "10 000 m/s",
+     "0,0625 m/s",
+     "425 m/s"
+    ],
+    "certa": "16 m/s",
+    "resposta": "v = 400 ÷ 25 = 16 m/s."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-04",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Numa corrida de 100 m, a largada é dada com um tiro de pistola. Antigamente, o cronometrista ficava na linha de chegada e só ligava o cronômetro quando ouvia o tiro, enquanto os corredores, ao lado da pistola, saíam na hora. O som anda no ar a cerca de 340 m/s.\nPor causa do caminho do som, o tempo marcado pelo cronometrista ficava",
+  "A": "cerca de 3,4 s maior que o tempo real.",
+  "B": "cerca de 0,3 s maior que o tempo real.",
+  "C": "cerca de 0,3 s menor que o tempo real.",
+  "D": "cerca de 3,4 s menor que o tempo real.",
+  "E": "igual ao tempo real, porque o som chega na hora.",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Atraso = 100 ÷ 340 ≈ 0,3 s. O cronômetro liga atrasado, então mede menos: 0,3 s menor. C. Erros: A e D = 340 ÷ 100 = 3,4 (dividiu ao contrário); B = sentido trocado; E = som não é instantâneo.",
+   "ideia": "Tempo = distância ÷ velocidade: o som leva 100 ÷ 340 ≈ 0,3 s até a chegada. O cronômetro liga tarde e marca 0,3 s a menos.",
+   "pecas": [
+    {
+     "termo": "Cronometrista",
+     "significado": "A pessoa que mede o tempo da corrida com o cronômetro."
+    },
+    {
+     "termo": "Tempo de viagem do som",
+     "significado": "Tempo = distância ÷ velocidade. 680 m a 340 m/s levam 680 ÷ 340 = 2 s."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O tiro é na largada; o cronometrista está 100 m adiante, na chegada.\nEle só liga o cronômetro quando o som chega.\nA questão quer saber quanto o tempo marcado erra, e para que lado.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "O tiro até a chegada",
+      "rotulos": [
+       "100 m de pista",
+       "tiro na largada",
+       "v = 340 m/s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Os corredores saem na hora do tiro.\nO som ainda está viajando os 100 m até o cronometrista.\nEle liga o cronômetro atrasado, quando os corredores já correram um pouco.\nCronômetro que começa tarde marca menos tempo do que o real.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Com números pequenos: 340 m a 340 m/s levam 1 s; 170 m levam meio segundo.\n100 m é menos que 170 m, então leva menos que meio segundo.\n100 ÷ 340: teste 0,3. 340 × 0,3 = 102, quase 100. O atraso é cerca de 0,3 s.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O atraso do tiro",
+      "dados": [
+       "d = 100\\,\\text{m}",
+       "v = 340\\,\\text{m/s}"
+      ],
+      "formula": "t = \\frac{d}{v}",
+      "legenda": [
+       "t: atraso do som",
+       "d: largada até a chegada",
+       "v: velocidade do som"
+      ],
+      "contas": [
+       "t = \\frac{100}{340}",
+       "340 \\times 0{,}3 = 102 \\approx 100"
+      ],
+      "resultado": "t \\approx 0{,}3\\,\\text{s}",
+      "nota": "O cronômetro liga 0,3 s tarde e marca 0,3 s a menos."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Tempo = distância ÷ velocidade vem de distância = velocidade × tempo.\nEm 0,3 s, o som anda 340 × 0,3 = 102 m: é a pista inteira.\nEsse 0,3 s some da conta do cronometrista, por isso o tempo fica menor.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, cerca de 0,3 s menor.\nA (3,4 s maior): dividiu 340 ÷ 100 e ainda trocou o sentido.\nB (0,3 s maior): a conta está certa, mas o cronômetro liga tarde e marca menos.\nD (3,4 s menor): o sentido está certo, mas dividiu ao contrário.\nE: o som anda 340 m/s; não chega na hora.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "E se o cronometrista estivesse a 68 m da pistola, qual seria o atraso?",
+    "opcoes": [
+     "0,2 s",
+     "5 s",
+     "2 s",
+     "0,02 s"
+    ],
+    "certa": "0,2 s",
+    "resposta": "t = 68 ÷ 340 = 0,2 s, porque 340 × 0,2 = 68."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-05",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Em filmes de faroeste, alguém encosta o ouvido no trilho para saber se o trem vem chegando. A ideia tem base: o som anda no aço do trilho a cerca de 5 000 m/s, e no ar a 340 m/s. O barulho das rodas de um trem, a 1 700 m de distância, chega a uma pessoa pelos dois caminhos: pelo trilho e pelo ar.\nQuanto tempo antes o barulho chega pelo trilho, em comparação com o que chega pelo ar?",
+  "A": "5 s",
+  "B": "0,34 s",
+  "C": "5,34 s",
+  "D": "Não chega antes: pelo trilho chega 4,7 s depois.",
+  "E": "Cerca de 4,7 s",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Ar: 1 700 ÷ 340 = 5 s. Trilho: 1 700 ÷ 5 000 = 0,34 s. Diferença: 5 − 0,34 = 4,66 ≈ 4,7 s. E. Erros: A = só o ar; B = só o trilho; C = somou; D = acha que no sólido é mais lento.",
+   "ideia": "Tempo = distância ÷ velocidade, feito duas vezes: pelo ar 5 s, pelo trilho 0,34 s. A diferença é cerca de 4,7 s.",
+   "pecas": [
+    {
+     "termo": "Aço",
+     "significado": "O metal do trilho. Nos sólidos o som anda mais rápido que no ar."
+    },
+    {
+     "termo": "Tempo de viagem do som",
+     "significado": "Tempo = distância ÷ velocidade. 680 m a 340 m/s levam 680 ÷ 340 = 2 s."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O barulho sai do trem a 1 700 m e corre por dois caminhos.\nPelo trilho, anda 5 000 m/s; pelo ar, 340 m/s.\nA questão quer a diferença entre os dois tempos de chegada.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "Dois caminhos do barulho",
+      "rotulos": [
+       "1 700 m até o trem",
+       "trilho: 5 000 m/s",
+       "ar: 340 m/s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Os dois caminhos têm a mesma distância: 1 700 m.\nQuem anda mais rápido chega antes: o trilho, de aço.\nEntão são duas contas de tempo e uma subtração no fim.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Com números pequenos: 20 m a 10 m/s levam 20 ÷ 10 = 2 s.\nPelo ar: 1 700 ÷ 340 = 5 s, porque 340 × 5 = 1 700.\nPelo trilho: 1 700 ÷ 5 000 = 17 ÷ 50 (corte dois zeros).\nDobre os dois: 17 ÷ 50 = 34 ÷ 100 = 0,34 s. Dividir por 100 anda a vírgula 2 casas para a esquerda.\nDiferença: 5 − 0,34 = 4,66 s, cerca de 4,7 s.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Trilho contra ar",
+      "dados": [
+       "d = 1\\,700\\,\\text{m}",
+       "v_{ar} = 340\\,\\text{m/s}",
+       "v_{trilho} = 5\\,000\\,\\text{m/s}"
+      ],
+      "formula": "t = \\frac{d}{v}",
+      "legenda": [
+       "t: tempo de chegada",
+       "d: distância até o trem",
+       "v: velocidade do som"
+      ],
+      "contas": [
+       "t_{ar} = \\frac{1\\,700}{340} = 5\\,\\text{s}",
+       "t_{trilho} = \\frac{1\\,700}{5\\,000} = 0{,}34\\,\\text{s}",
+       "5 - 0{,}34 = 4{,}66"
+      ],
+      "resultado": "\\text{diferença} \\approx 4{,}7\\,\\text{s}",
+      "nota": "Pelo trilho, o barulho chega quase 5 s antes."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Tempo = distância ÷ velocidade vem de distância = velocidade × tempo.\nConfira o trilho: 5 000 × 0,34 = 1 700 m. Confira o ar: 340 × 5 = 1 700 m.\nOs dois andaram o mesmo caminho; o do ar só demorou mais.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, cerca de 4,7 s.\nA (5 s): é só o tempo pelo ar, sem tirar o do trilho.\nB (0,34 s): é só o tempo pelo trilho.\nC (5,34 s): somou os tempos, mas a questão pede a diferença.\nD: o som anda mais rápido no sólido do que no ar, então o trilho chega antes.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um trem a 680 m: pelo ar (340 m/s), o barulho leva quanto?",
+    "opcoes": [
+     "2 s",
+     "0,5 s",
+     "231 200 s",
+     "1 020 s"
+    ],
+    "certa": "2 s",
+    "resposta": "t = 680 ÷ 340 = 2 s."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-06",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Morcegos caçam insetos no escuro usando o eco: soltam um som muito agudo e escutam o que volta. Uma espécie de morcego solta um som de 50 000 Hz. O ouvido humano só escuta sons de 20 Hz a 20 000 Hz. No ar, o som anda a 340 m/s.\nSobre o som desse morcego, é correto afirmar que",
+  "A": "as pessoas não o ouvem, e cada onda tem cerca de 7 mm.",
+  "B": "as pessoas o ouvem, e cada onda tem cerca de 7 mm.",
+  "C": "as pessoas não o ouvem, e cada onda tem cerca de 147 m.",
+  "D": "as pessoas não o ouvem, porque ele é grave demais.",
+  "E": "as pessoas o ouvem, e cada onda tem 17 000 000 m.",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "50 000 Hz passa de 20 000 Hz: ninguém ouve. λ = 340 ÷ 50 000 = 0,0068 m = 6,8 mm ≈ 7 mm. A. Erros: B = acha que ouve; C = 50 000 ÷ 340; D = agudo trocado por grave; E = 340 × 50 000 e ouve.",
+   "ideia": "Acima de 20 000 Hz o som é agudo demais para nós. E λ = v ÷ f = 340 ÷ 50 000 ≈ 7 mm, uma onda bem curta.",
+   "pecas": [
+    {
+     "termo": "Frequência (f)",
+     "significado": "Quantas vibrações por segundo, em hertz (Hz). Frequência alta é som agudo."
+    },
+    {
+     "termo": "Milímetro (mm)",
+     "significado": "Os risquinhos menores da régua. 1 metro tem 1 000 milímetros."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O morcego solta um som de 50 000 vibrações por segundo.\nNós só ouvimos até 20 000 por segundo.\nA questão quer duas coisas: se a gente ouve e o tamanho de cada onda.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "O grito do morcego",
+      "rotulos": [
+       "λ = ?",
+       "f = 50 000 Hz",
+       "v = 340 m/s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "50 000 Hz é mais que 20 000 Hz: passa do nosso limite.\nFrequência alta é som agudo. Então é agudo demais, e não grave.\nMuitas vibrações por segundo também deixam cada onda bem curta.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Passe para milímetros: 340 m = 340 × 1 000 = 340 000 mm.\nDivida: 340 000 ÷ 50 000. Corte os milhares: 340 ÷ 50 = 34 ÷ 5.\nDobre os dois para tirar a conta quebrada: 34 ÷ 5 = 68 ÷ 10 = 6,8 mm, quase 7 mm.\nConfira: 5 × 6,8 = 34.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O som do morcego",
+      "dados": [
+       "v = 340\\,\\text{m/s} = 340\\,000\\,\\text{mm/s}",
+       "f = 50\\,000\\,\\text{Hz}"
+      ],
+      "formula": "\\lambda = \\frac{v}{f}",
+      "legenda": [
+       "\\lambda: tamanho de uma onda",
+       "v: velocidade do som",
+       "f: vibrações por segundo"
+      ],
+      "contas": [
+       "\\lambda = \\frac{340\\,000}{50\\,000} = \\frac{34}{5}"
+      ],
+      "resultado": "\\lambda = 6{,}8\\,\\text{mm} \\approx 7\\,\\text{mm}",
+      "nota": "Onda curta, de som que não ouvimos."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Com números pequenos: 10 mm divididos em 2 ondas dão 5 mm cada.\nAqui são 340 000 mm por segundo divididos em 50 000 ondas.\nConfira: 50 000 × 6,8 mm = 340 000 mm = 340 m. Bate com a velocidade.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, não ouvimos, e a onda tem cerca de 7 mm.\nB: 50 000 Hz passa do limite de 20 000 Hz, então não ouvimos.\nC (147 m): dividiu ao contrário, 50 000 ÷ 340.\nD: frequência alta é agudo, não grave.\nE (17 000 000 m): multiplicou 340 × 50 000 e ainda disse que ouvimos.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um apito de 34 000 Hz, no ar a 340 m/s: qual é o λ?",
+    "opcoes": [
+     "1 cm",
+     "100 m",
+     "10 m",
+     "0,1 cm"
+    ],
+    "certa": "1 cm",
+    "resposta": "λ = 340 ÷ 34 000 = 0,01 m = 1 cm."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-07",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "O forno de micro-ondas esquenta a comida com ondas invisíveis, da mesma família da luz, que andam a 300 000 000 m/s. Dentro do forno, essas ondas vibram cerca de 2 500 000 000 de vezes por segundo (2,5 bilhões de hertz). A grade de furinhos da porta segura as ondas lá dentro porque os furos são bem menores que uma onda.\nO comprimento de onda das micro-ondas desse forno é de cerca de",
+  "A": "0,12 cm",
+  "B": "1,2 cm",
+  "C": "12 cm",
+  "D": "120 cm",
+  "E": "1 200 cm",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "λ = v ÷ f = 300 000 000 ÷ 2 500 000 000 = 3 ÷ 25 = 0,12 m = 12 cm. C. Erros: A, B, D e E = zeros ou vírgula fora do lugar (B e D: uma casa; A e E: duas casas).",
+   "ideia": "VÊ LÁ FORA: λ = v ÷ f vale para toda onda, não só para o som. Corte os zeros: 3 ÷ 25 = 0,12 m = 12 cm.",
+   "pecas": [
+    {
+     "termo": "Centímetro (cm)",
+     "significado": "Os números grandes da régua. 1 metro tem 100 centímetros."
+    },
+    {
+     "termo": "Micro-ondas",
+     "significado": "Ondas invisíveis da família da luz. Não precisam de ar para andar."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "As ondas do forno vibram 2,5 bilhões de vezes por segundo.\nElas andam 300 milhões de metros por segundo.\nA questão quer o tamanho de uma onda: λ.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "A onda do forno",
+      "rotulos": [
+       "λ = ?",
+       "f = 2 500 000 000 Hz",
+       "v = 300 000 000 m/s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Em 1 segundo, a onda anda 300 milhões de metros.\nNesse caminho cabem 2,5 bilhões de ondas, uma atrás da outra.\nSão mais ondas do que metros: cada onda tem menos de 1 m.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Corte os oito zeros iguais: 300 000 000 vira 3, e 2 500 000 000 vira 25.\nCom números pequenos: 3 ÷ 25. Teste 0,12: 25 × 0,12 = 3. Fecha.\nλ = 0,12 m. Em centímetros: 0,12 × 100 = 12 cm.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O micro-ondas",
+      "dados": [
+       "v = 300\\,000\\,000\\,\\text{m/s}",
+       "f = 2\\,500\\,000\\,000\\,\\text{Hz}"
+      ],
+      "formula": "\\lambda = \\frac{v}{f}",
+      "legenda": [
+       "\\lambda: tamanho de uma onda",
+       "v: velocidade da onda",
+       "f: vibrações por segundo"
+      ],
+      "contas": [
+       "\\lambda = \\frac{3}{25} = 0{,}12\\,\\text{m}",
+       "0{,}12 \\times 100 = 12"
+      ],
+      "resultado": "\\lambda = 12\\,\\text{cm}",
+      "nota": "Os furinhos da porta têm poucos milímetros."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Cortar o mesmo número de zeros em cima e embaixo não muda a divisão: 30 ÷ 10 = 3 ÷ 1.\nConfira: 2,5 bilhões de ondas de 0,12 m dão 300 milhões de metros.\nÉ o v = λ × f da aula, agora com uma onda de luz.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, cerca de 12 cm.\nA (0,12 cm): esqueceu de passar de metro para centímetro.\nB (1,2 cm): errou uma casa da vírgula para menos.\nD (120 cm): errou uma casa da vírgula para mais.\nE (1 200 cm): errou duas casas para mais.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Wi-fi de 5 000 000 000 Hz, ondas a 300 000 000 m/s: qual é o λ?",
+    "opcoes": [
+     "6 cm",
+     "0,6 cm",
+     "60 cm",
+     "16 cm"
+    ],
+    "certa": "6 cm",
+    "resposta": "Corte os zeros: 3 ÷ 50 = 0,06 m = 6 cm."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-08",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Numa aula de natação, o professor põe dentro da piscina uma caixa de som à prova d'água para marcar o ritmo do treino. A caixa toca uma nota de 500 Hz. No ar, o som anda a 340 m/s; na água, a 1 500 m/s. Quem decide quantas vibrações por segundo o som tem é a caixa, então a frequência é a mesma no ar e na água.\nO comprimento de onda dessa nota dentro da água é de",
+  "A": "0,68 m",
+  "B": "750 000 m",
+  "C": "0,33 m",
+  "D": "1 000 m",
+  "E": "3 m",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Na água: λ = 1 500 ÷ 500 = 3 m. E. Erros: A = 340 ÷ 500, é o λ no ar; B = 1 500 × 500; C = 500 ÷ 1 500 (ao contrário); D = 1 500 − 500.",
+   "ideia": "A frequência não muda de um meio para o outro; a velocidade muda. Na água, λ = 1 500 ÷ 500 = 3 m.",
+   "pecas": [
+    {
+     "termo": "Meio",
+     "significado": "Aquilo por onde a onda anda: ar, água ou metal."
+    },
+    {
+     "termo": "Comprimento de onda (λ)",
+     "significado": "O tamanho de uma onda inteira, em metros."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A caixa toca 500 vibrações por segundo, dentro da água.\nNa água, o som anda 1 500 m/s.\nA questão quer o tamanho de uma onda na água. O 340 m/s é do ar e não entra.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "A nota na piscina",
+      "rotulos": [
+       "λ na água = ?",
+       "f = 500 Hz",
+       "v na água = 1 500 m/s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "A caixa vibra 500 vezes por segundo, no ar ou na água.\nNa água, cada onda anda mais rápido. Com o mesmo número de ondas por segundo, cada uma fica mais comprida.\nEntão o λ na água é maior que no ar.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Com números pequenos: 15 m divididos em 5 ondas dão 15 ÷ 5 = 3 m cada.\nAqui: 1 500 m divididos em 500 ondas por segundo.\n1 500 ÷ 500 = 3 m. Corte dois zeros: 15 ÷ 5 = 3.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "A nota na água",
+      "dados": [
+       "v = 1\\,500\\,\\text{m/s}",
+       "f = 500\\,\\text{Hz}"
+      ],
+      "formula": "\\lambda = \\frac{v}{f}",
+      "legenda": [
+       "\\lambda: tamanho de uma onda",
+       "v: velocidade na água",
+       "f: vibrações por segundo"
+      ],
+      "contas": [
+       "\\lambda = \\frac{1\\,500}{500} = \\frac{15}{5}"
+      ],
+      "resultado": "\\lambda = 3\\,\\text{m}",
+      "nota": "Na água a onda fica mais comprida que no ar."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Confira: 500 ondas de 3 m dão 500 × 3 = 1 500 m em 1 segundo.\nBate com a velocidade na água.\nNo ar seria 340 ÷ 500 = 0,68 m: a mesma nota, com onda mais curta.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, 3 m.\nA (0,68 m): é o λ no ar, mas a caixa está na água.\nB (750 000 m): multiplicou 1 500 × 500.\nC (0,33 m): dividiu ao contrário, 500 ÷ 1 500.\nD (1 000 m): subtraiu 1 500 − 500, e não há subtração na fórmula.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "A mesma nota numa barra de aço, onde o som anda 5 000 m/s: qual é o λ?",
+    "opcoes": [
+     "10 m",
+     "0,1 m",
+     "2 500 000 m",
+     "4 500 m"
+    ],
+    "certa": "10 m",
+    "resposta": "λ = 5 000 ÷ 500 = 10 m."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-09",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Um aplicativo de celular ajuda a afinar o violão: ele escuta cada corda e mostra a frequência do som. Um violonista toca duas cordas. Na primeira, o aplicativo mostra 170 Hz; na segunda, 340 Hz. O som das duas cordas anda pelo ar da sala a 340 m/s.\nComparado ao som da primeira corda, o som da segunda é",
+  "A": "mais grave, com onda de 1 m.",
+  "B": "mais agudo, com onda de 1 m.",
+  "C": "mais agudo, com onda de 2 m.",
+  "D": "mais grave, com onda de 2 m.",
+  "E": "igual, porque os dois andam a 340 m/s.",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "340 Hz > 170 Hz: mais agudo. λ = 340 ÷ 340 = 1 m. B. Erros: A = grave/agudo trocados; C = λ da 1ª corda (340 ÷ 170); D = os dois erros; E = mesma velocidade não quer dizer mesmo som.",
+   "ideia": "Som agudo = frequência alta. A segunda corda, de 340 Hz, é mais aguda, e λ = 340 ÷ 340 = 1 m.",
+   "pecas": [
+    {
+     "termo": "Agudo e grave",
+     "significado": "Agudo é som fino, como apito; grave é som grosso, como tambor. Agudo tem frequência alta."
+    },
+    {
+     "termo": "Frequência (f)",
+     "significado": "Quantas vibrações por segundo, em hertz (Hz)."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A primeira corda vibra 170 vezes por segundo; a segunda, 340 vezes.\nAs duas andam no ar a 340 m/s.\nA questão quer se a segunda é aguda ou grave e o tamanho da onda dela.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "As duas cordas",
+      "rotulos": [
+       "λ da 2ª = ?",
+       "170 Hz e 340 Hz",
+       "v = 340 m/s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "A segunda vibra mais vezes por segundo: 340 é mais que 170.\nFrequência alta é som agudo, então a segunda é mais aguda.\nMais ondas por segundo, no mesmo ar, deixam cada onda mais curta.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Primeira corda: 340 m divididos em 170 ondas, 340 ÷ 170 = 2 m cada.\nSegunda corda: 340 m divididos em 340 ondas, 340 ÷ 340 = 1 m cada.\nDobrou a frequência, a onda caiu pela metade.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "A segunda corda",
+      "dados": [
+       "v = 340\\,\\text{m/s}",
+       "f = 340\\,\\text{Hz}"
+      ],
+      "formula": "\\lambda = \\frac{v}{f}",
+      "legenda": [
+       "\\lambda: tamanho de uma onda",
+       "v: velocidade do som",
+       "f: vibrações por segundo"
+      ],
+      "contas": [
+       "\\lambda = \\frac{340}{340}"
+      ],
+      "resultado": "\\lambda = 1\\,\\text{m}",
+      "nota": "Mais aguda e com onda mais curta que a primeira."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "v = λ × f com a segunda corda: 1 × 340 = 340 m/s.\nCom a primeira: 2 × 170 = 340 m/s. A velocidade é a mesma; muda a frequência.\nPor isso a velocidade não diz se o som é agudo ou grave.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, mais agudo, com onda de 1 m.\nA: trocou agudo com grave; 340 Hz é a mais aguda.\nC (2 m): é a onda da primeira corda, 340 ÷ 170.\nD: trocou agudo com grave e usou a onda da primeira corda.\nE: as duas andam igual, mas vibram diferente, e é a vibração que faz o som.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma corda de 85 Hz no mesmo ar: grave ou aguda, e qual o λ?",
+    "opcoes": [
+     "Mais grave, 4 m",
+     "Mais aguda, 4 m",
+     "Mais grave, 0,25 m",
+     "Mais aguda, 0,25 m"
+    ],
+    "certa": "Mais grave, 4 m",
+    "resposta": "85 Hz é menos que 170 Hz: mais grave. λ = 340 ÷ 85 = 4 m."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-10",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Pesquisadores descobriram que elefantes se comunicam a quilômetros de distância com sons muito graves, que as pessoas não percebem. Um microfone especial gravou o chamado de um elefante com frequência de 17 Hz. O ouvido humano só escuta sons de 20 Hz a 20 000 Hz, e o som anda no ar a 340 m/s.\nEsse chamado tem comprimento de onda de",
+  "A": "0,05 m, e as pessoas não o ouvem por ser agudo demais.",
+  "B": "20 m, e as pessoas o ouvem como um som grave.",
+  "C": "5 780 m, e as pessoas não o ouvem.",
+  "D": "20 m, e as pessoas não o ouvem por ser grave demais.",
+  "E": "0,05 m, e as pessoas o ouvem como um som agudo.",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "λ = 340 ÷ 17 = 20 m; 17 Hz < 20 Hz, grave demais para nós. D. Erros: A = 17 ÷ 340 e trocou grave por agudo; B = acha que ouve; C = 340 × 17; E = dois erros.",
+   "ideia": "Abaixo de 20 Hz o som é grave demais para nós. λ = v ÷ f = 340 ÷ 17 = 20 m, uma onda enorme.",
+   "pecas": [
+    {
+     "termo": "Frequência (f)",
+     "significado": "Quantas vibrações por segundo, em hertz (Hz). Frequência baixa é som grave."
+    },
+    {
+     "termo": "Comprimento de onda (λ)",
+     "significado": "O tamanho de uma onda inteira, em metros."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O elefante faz um som de 17 vibrações por segundo.\nNós escutamos de 20 a 20 000 vibrações por segundo.\nA questão quer o tamanho da onda e se a gente ouve.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "O chamado do elefante",
+      "rotulos": [
+       "λ = ?",
+       "f = 17 Hz",
+       "v = 340 m/s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "17 Hz é menos que 20 Hz: fica abaixo do nosso limite.\nFrequência baixa é som grave. Então é grave demais, e não agudo.\nPoucas vibrações por segundo deixam cada onda bem comprida.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Com números pequenos: 34 m divididos em 17 ondas dão 34 ÷ 17 = 2 m cada.\nAqui são 340 m divididos em 17 ondas, dez vezes mais metros.\n340 ÷ 17 = 20 m.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O chamado do elefante",
+      "dados": [
+       "v = 340\\,\\text{m/s}",
+       "f = 17\\,\\text{Hz}"
+      ],
+      "formula": "\\lambda = \\frac{v}{f}",
+      "legenda": [
+       "\\lambda: tamanho de uma onda",
+       "v: velocidade do som",
+       "f: vibrações por segundo"
+      ],
+      "contas": [
+       "\\lambda = \\frac{340}{17}"
+      ],
+      "resultado": "\\lambda = 20\\,\\text{m}",
+      "nota": "Cada onda tem 20 metros."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Confira: 17 ondas de 20 m dão 17 × 20 = 340 m em 1 segundo.\nBate com a velocidade do som no ar.\nÉ o v = λ × f da aula: 340 = 20 × 17.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, 20 m, e não ouvimos por ser grave demais.\nA (0,05 m): dividiu ao contrário, 17 ÷ 340, e trocou grave por agudo.\nB: a onda está certa, mas 17 Hz fica abaixo dos 20 Hz que ouvimos.\nC (5 780 m): multiplicou 340 × 17.\nE: dividiu ao contrário e ainda disse que ouvimos.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um som de 10 Hz no ar (340 m/s): qual o λ, e a gente ouve?",
+    "opcoes": [
+     "34 m, não ouve",
+     "34 m, ouve",
+     "3 400 m, não ouve",
+     "0,03 m, ouve"
+    ],
+    "certa": "34 m, não ouve",
+    "resposta": "λ = 340 ÷ 10 = 34 m. 10 Hz fica abaixo de 20 Hz: não ouvimos."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-11",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Um surfista, sentado na prancha longe da praia, observa as ondas do mar. Ele conta que passa uma crista (o ponto mais alto da onda) por ele a cada 10 segundos. Olhando duas boias, ele estima que a distância de uma crista até a próxima é de 50 m.\nCom que velocidade essas ondas andam em direção à praia?",
+  "A": "500 m/s",
+  "B": "0,2 m/s",
+  "C": "5 m/s",
+  "D": "60 m/s",
+  "E": "40 m/s",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "λ = 50 m; f = 1 onda em 10 s = 0,1 Hz; v = λ × f = 50 × 0,1 = 5 m/s (ou 50 m em 10 s). C. Erros: A = 50 × 10; B = 10 ÷ 50; D = 50 + 10; E = 50 − 10.",
+   "ideia": "Uma crista anda o tamanho de uma onda, 50 m, no tempo entre duas cristas, 10 s. Velocidade = 50 ÷ 10 = 5 m/s.",
+   "pecas": [
+    {
+     "termo": "Crista",
+     "significado": "O ponto mais alto da onda. De uma crista até a próxima é o comprimento de onda."
+    },
+    {
+     "termo": "Frequência (f)",
+     "significado": "Quantas ondas passam por segundo. 1 onda a cada 10 s é 1 ÷ 10 = 0,1 onda por segundo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Passa 1 crista a cada 10 s.\nDe uma crista à próxima: 50 m.\nA questão quer a velocidade das ondas.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "As ondas do mar",
+      "rotulos": [
+       "λ = 50 m",
+       "1 crista a cada 10 s",
+       "v = ?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Quando uma crista passa pelo surfista, a próxima está 50 m atrás.\nEssa próxima leva 10 s para chegar até ele.\nEntão a onda anda 50 m em 10 s.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Com números pequenos: 10 m em 2 s é 10 ÷ 2 = 5 m por segundo.\nAqui: 50 m em 10 s. 50 ÷ 10 = 5 m/s.\nO quadro faz o mesmo pela fórmula: 1 onda a cada 10 s é f = 1 ÷ 10 = 0,1 onda por segundo, porque 10 × 0,1 = 1.\nE v = 50 × 0,1 = 5 m/s: vezes 0,1 é o mesmo que dividir por 10.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "As ondas do mar",
+      "dados": [
+       "\\lambda = 50\\,\\text{m}",
+       "\\text{1 crista a cada } 10\\,\\text{s}"
+      ],
+      "formula": "v = \\lambda \\times f",
+      "legenda": [
+       "\\lambda: crista até crista",
+       "f: ondas por segundo"
+      ],
+      "contas": [
+       "f = \\frac{1}{10} = 0{,}1\\,\\text{Hz}",
+       "v = 50 \\times 0{,}1"
+      ],
+      "resultado": "v = 5\\,\\text{m/s}",
+      "nota": "O mesmo que 50 m em 10 s."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Pela fórmula da aula: f = 1 onda em 10 s = 1 ÷ 10 = 0,1 Hz.\nv = λ × f = 50 × 0,1 = 5 m/s. Dá o mesmo.\nVelocidade é sempre distância ÷ tempo; v = λ × f é esse mesmo jeito, contado em ondas.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 5 m/s.\nA (500 m/s): multiplicou 50 × 10 em vez de dividir.\nB (0,2 m/s): dividiu ao contrário, 10 ÷ 50.\nD (60 m/s): somou 50 + 10.\nE (40 m/s): subtraiu 50 − 10.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Cristas a 24 m uma da outra, passando uma a cada 8 s: qual a velocidade?",
+    "opcoes": [
+     "3 m/s",
+     "192 m/s",
+     "0,33 m/s",
+     "32 m/s"
+    ],
+    "certa": "3 m/s",
+    "resposta": "24 m em 8 s: 24 ÷ 8 = 3 m/s."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-12",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Em 2004, um tsunami (onda gigante causada por um terremoto no fundo do mar) atingiu vários países do Oceano Índico. Hoje, boias no oceano dão o alerta quando um tsunami se forma. Em mar fundo, um tsunami anda a cerca de 200 m/s, quase a velocidade de um avião. Uma boia detecta um tsunami a 360 km da costa (1 km = 1 000 m).\nQuanto tempo, no máximo, a população tem para sair da praia antes de a onda chegar?",
+  "A": "30 minutos",
+  "B": "1,8 segundo",
+  "C": "1 800 minutos",
+  "D": "18 minutos",
+  "E": "72 000 000 segundos",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "360 km = 360 000 m; t = 360 000 ÷ 200 = 1 800 s; 1 800 ÷ 60 = 30 min. A. Erros: B = não passou km para m; C = esqueceu de passar segundos para minutos; D = achou que 1 min tem 100 s; E = 360 000 × 200.",
+   "ideia": "Tempo = distância ÷ velocidade, com tudo em metros: 360 000 ÷ 200 = 1 800 s. Em minutos, 1 800 ÷ 60 = 30.",
+   "pecas": [
+    {
+     "termo": "Tsunami",
+     "significado": "Onda gigante causada por um terremoto no fundo do mar. Em mar aberto ela anda muito rápido."
+    },
+    {
+     "termo": "Quilômetro (km)",
+     "significado": "1 km = 1 000 m. 360 km = 360 × 1 000 = 360 000 m."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O tsunami está a 360 km da praia e anda 200 m por segundo.\nA questão quer quanto tempo ele leva para chegar.\nAtenção: a distância está em km e a velocidade em metros por segundo.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "O tsunami chegando",
+      "rotulos": [
+       "360 km da costa",
+       "v = 200 m/s",
+       "tempo = ?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Antes de dividir, as unidades têm que combinar.\nPasse km para metros: 360 × 1 000 = 360 000 m.\nA conta dá segundos; no fim, passe para minutos (1 minuto = 60 s).",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Com números pequenos: 1 000 m a 200 m/s levam 1 000 ÷ 200 = 5 s.\nAqui: 360 000 ÷ 200. Corte dois zeros: 3 600 ÷ 2 = 1 800 s.\nEm minutos: 1 800 ÷ 60 = 30 minutos.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O alerta do tsunami",
+      "dados": [
+       "d = 360\\,\\text{km} = 360\\,000\\,\\text{m}",
+       "v = 200\\,\\text{m/s}"
+      ],
+      "formula": "t = \\frac{d}{v}",
+      "legenda": [
+       "t: tempo até a praia",
+       "d: distância até a costa",
+       "v: velocidade do tsunami"
+      ],
+      "contas": [
+       "t = \\frac{360\\,000}{200} = 1\\,800\\,\\text{s}",
+       "\\frac{1\\,800}{60} = 30"
+      ],
+      "resultado": "t = 30\\,\\text{min}",
+      "nota": "Meia hora para sair da praia."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Tempo = distância ÷ velocidade vem de distância = velocidade × tempo.\nConfira: 200 × 1 800 = 360 000 m = 360 km.\nA onda leva meia hora, e esse é o tempo do alerta.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, 30 minutos.\nB (1,8 segundo): fez 360 ÷ 200 sem passar km para metros.\nC (1 800 minutos): a conta deu segundos, e não foi dividida por 60.\nD (18 minutos): dividiu 1 800 por 100, mas 1 minuto tem 60 s.\nE (72 000 000 segundos): multiplicou 360 000 × 200.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Tsunami a 200 m/s e boia a 120 km da costa: quantos minutos?",
+    "opcoes": [
+     "10 min",
+     "600 min",
+     "0,6 min",
+     "1 min"
+    ],
+    "certa": "10 min",
+    "resposta": "120 000 ÷ 200 = 600 s; 600 ÷ 60 = 10 min."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-13",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Num terremoto, saem do mesmo ponto, ao mesmo tempo, dois tipos de onda que andam pelo chão. A onda P, mais rápida, anda a 6 km/s; a onda S, mais lenta, anda a 3 km/s. Uma estação de medição registrou a chegada da onda P e, 20 s depois, a chegada da onda S.\nA que distância da estação ocorreu o terremoto?",
+  "A": "60 km",
+  "B": "120 km",
+  "C": "180 km",
+  "D": "40 km",
+  "E": "360 km",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Teste 120 km: P leva 120 ÷ 6 = 20 s, S leva 120 ÷ 3 = 40 s, diferença 20 s. Fecha. B. Erros: A = 20 × 3 (só a S); C = 20 × (6 + 3); D = não fecha (diferença de cerca de 6,7 s); E = 20 × 6 × 3.",
+   "ideia": "Tempo = distância ÷ velocidade para cada onda. A distância certa é a que deixa 20 s entre as duas: 120 km.",
+   "pecas": [
+    {
+     "termo": "Terremoto",
+     "significado": "Tremor do chão. Ele solta ondas que levam energia pela terra, sem levar a terra junto."
+    },
+    {
+     "termo": "Testar as alternativas",
+     "significado": "Quando a resposta aparece em duas contas, troque-a por cada número e veja qual fecha."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "As duas ondas saem juntas do mesmo ponto.\nA P anda 6 km por segundo; a S, 3 km por segundo.\nA S chega 20 s depois da P. A questão quer a distância.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "Duas ondas no chão",
+      "rotulos": [
+       "P: 6 km/s",
+       "S: 3 km/s",
+       "S chega 20 s depois"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "As duas andam a mesma distância, mas a S é mais lenta.\nA S anda metade da velocidade da P, então leva o dobro do tempo.\nA diferença entre os dois tempos tem que dar 20 s.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Teste as alternativas com tempo = distância ÷ velocidade.\n120 km: P leva 120 ÷ 6 = 20 s. S leva 120 ÷ 3 = 40 s. Diferença: 40 − 20 = 20 s. Fecha.\n60 km: 10 s e 20 s, diferença de 10 s. Não fecha.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Onda P e onda S",
+      "dados": [
+       "v_P = 6\\,\\text{km/s}",
+       "v_S = 3\\,\\text{km/s}",
+       "\\text{diferença} = 20\\,\\text{s}"
+      ],
+      "formula": "t = \\frac{d}{v}",
+      "legenda": [
+       "t: tempo de chegada",
+       "d: distância do terremoto",
+       "v: velocidade da onda"
+      ],
+      "contas": [
+       "\\text{teste } d = 120\\,\\text{km}",
+       "t_P = \\frac{120}{6} = 20\\,\\text{s}",
+       "t_S = \\frac{120}{3} = 40\\,\\text{s}",
+       "40 - 20 = 20\\,\\text{s}"
+      ],
+      "resultado": "d = 120\\,\\text{km}",
+      "nota": "A diferença de 20 s fecha."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Com números pequenos: 6 km leva 1 s para a P e 2 s para a S. Diferença de 1 s.\nCada 6 km de distância somam 1 s de diferença.\nPara 20 s de diferença: 20 × 6 = 120 km.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 120 km.\nA (60 km): fez 20 × 3, só com a onda S. A diferença daria 10 s.\nC (180 km): fez 20 × (6 + 3). A diferença daria 30 s.\nD (40 km): a diferença daria só cerca de 6,7 s.\nE (360 km): fez 20 × 6 × 3. A diferença daria 60 s.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Onda P a 8 km/s e S a 4 km/s, com 10 s de diferença. Qual a distância?",
+    "opcoes": [
+     "80 km",
+     "40 km",
+     "120 km",
+     "20 km"
+    ],
+    "certa": "80 km",
+    "resposta": "80 km: P leva 80 ÷ 8 = 10 s, S leva 80 ÷ 4 = 20 s. Diferença: 10 s."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-14",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Muitos carros têm sensor de estacionamento: um aparelho no para-choque solta um som agudo demais para a gente ouvir, que bate no obstáculo e volta. Quanto mais perto o obstáculo, mais rápido fica o bipe dentro do carro. Num teste, o eco voltou ao sensor 0,01 s depois de o som sair. No ar, o som anda a 340 m/s.\nA distância entre o para-choque e o obstáculo era de",
+  "A": "3,4 m",
+  "B": "34 000 m",
+  "C": "0,85 m",
+  "D": "34 m",
+  "E": "1,7 m",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Ida e volta: 340 × 0,01 = 3,4 m. Só a ida: 3,4 ÷ 2 = 1,7 m. E. Erros: A = esqueceu de dividir por 2; B = 340 ÷ 0,01; C = dividiu por 4; D = 340 × 0,1 (casa errada).",
+   "ideia": "Distância = velocidade × tempo. O tempo do eco é de ida e volta, então a distância até o obstáculo é a metade.",
+   "pecas": [
+    {
+     "termo": "Eco",
+     "significado": "Som que bate em algo e volta. É gritar perto de um paredão e ouvir a própria voz depois."
+    },
+    {
+     "termo": "Multiplicar por 0,01",
+     "significado": "É o mesmo que dividir por 100. 340 × 0,01 = 340 ÷ 100 = 3,4."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O som sai do para-choque, bate no obstáculo e volta em 0,01 s.\nNo ar, ele anda 340 m/s.\nA questão quer a distância do para-choque até o obstáculo.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "O sensor de ré",
+      "rotulos": [
+       "vai e volta",
+       "eco em 0,01 s",
+       "v = 340 m/s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Nos 0,01 s, o som fez duas viagens: a ida e a volta.\nDistância = velocidade × tempo dá o caminho todo.\nA distância até o obstáculo é a metade desse caminho.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Com números pequenos: em 1 s o som anda 340 m; em 0,1 s, 34 m; em 0,01 s, 3,4 m.\n340 × 0,01 = 340 ÷ 100 = 3,4 m de ida e volta.\nMetade: 3,4 ÷ 2 = 1,7 m.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O eco no para-choque",
+      "dados": [
+       "v = 340\\,\\text{m/s}",
+       "t = 0{,}01\\,\\text{s}\\ \\text{(ida e volta)}"
+      ],
+      "formula": "d = v \\times t",
+      "legenda": [
+       "d: caminho de ida e volta",
+       "v: velocidade do som",
+       "t: tempo do eco"
+      ],
+      "contas": [
+       "d = 340 \\times 0{,}01 = 3{,}4\\,\\text{m}",
+       "\\text{distância} = \\frac{3{,}4}{2}"
+      ],
+      "resultado": "\\text{distância} = 1{,}7\\,\\text{m}",
+      "nota": "O obstáculo está a 1,7 m."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Com o obstáculo a 1,7 m, o som anda 1,7 m para ir e 1,7 m para voltar: 3,4 m.\nA 340 m/s, isso leva 3,4 ÷ 340 = 0,01 s.\nBate com o tempo medido.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, 1,7 m.\nA (3,4 m): é o caminho de ida e volta; faltou dividir por 2.\nB (34 000 m): dividiu 340 por 0,01 em vez de multiplicar.\nC (0,85 m): dividiu por 2 duas vezes.\nD (34 m): usou 0,1 s no lugar de 0,01 s.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "O eco volta em 0,02 s, no ar a 340 m/s. A que distância está o obstáculo?",
+    "opcoes": [
+     "3,4 m",
+     "6,8 m",
+     "17 000 m",
+     "1,7 m"
+    ],
+    "certa": "3,4 m",
+    "resposta": "340 × 0,02 = 6,8 m de ida e volta; metade: 3,4 m."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-15",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Uma criança deixa uma rolha boiando num lago calmo e depois joga uma pedra na água, mais longe. As ondas que se formam passam pela rolha, que sobe e desce 2 vezes por segundo. Essas ondas têm 0,3 m de comprimento e andam a 0,6 m/s. As ondas passaram pela rolha durante 10 s.\nDepois desses 10 s, a rolha",
+  "A": "andou 6 m junto com as ondas.",
+  "B": "andou 3 m, um comprimento de onda por segundo.",
+  "C": "andou 20 m, um metro a cada subida.",
+  "D": "continua quase no mesmo lugar, depois de subir e descer 20 vezes.",
+  "E": "afundou, porque a onda empurra a rolha para baixo.",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Onda leva energia sem levar matéria: a rolha só sobe e desce, 2 × 10 = 20 vezes, no mesmo lugar. D. Erros: A = 0,6 × 10 (velocidade da onda como se fosse da rolha); B = 0,3 × 10; C = 2 × 10 como metros; E = a rolha boia.",
+   "ideia": "Onda leva energia sem levar matéria: a rolha sobe e desce no lugar. Em 10 s, a 2 vezes por segundo, são 20 subidas.",
+   "pecas": [
+    {
+     "termo": "Onda",
+     "significado": "Leva energia de um lugar para outro sem levar a matéria junto. A água sobe e desce; quem anda é a onda."
+    },
+    {
+     "termo": "Frequência (f)",
+     "significado": "Quantas vibrações por segundo. Subir e descer 2 vezes por segundo é f = 2 Hz."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "As ondas passam pela rolha por 10 s.\nA rolha sobe e desce 2 vezes por segundo.\nA questão quer onde a rolha está depois e o que ela fez.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "A rolha no lago",
+      "rotulos": [
+       "λ = 0,3 m",
+       "f = 2 Hz",
+       "v = 0,6 m/s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Quem anda pelo lago é a onda, a 0,6 m/s.\nA água, e a rolha com ela, só sobe e desce no lugar.\nIsso é a aula: onda leva energia sem levar matéria.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Com números pequenos: 2 subidas por segundo, em 3 s, são 2 × 3 = 6 subidas.\nEm 10 s: 2 × 10 = 20 subidas.\nE a rolha anda quase nada: continua no lugar.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "As subidas da rolha",
+      "dados": [
+       "f = 2\\,\\text{Hz}",
+       "t = 10\\,\\text{s}"
+      ],
+      "formula": "\\text{subidas} = f \\times t",
+      "legenda": [
+       "f: subidas por segundo",
+       "t: tempo das ondas"
+      ],
+      "contas": [
+       "2 \\times 10 = 20"
+      ],
+      "resultado": "20\\ \\text{subidas, no mesmo lugar}",
+      "nota": "A onda andou 6 m; a rolha, quase nada."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A onda andou 0,6 × 10 = 6 m pelo lago nesses 10 s.\nMas cada pedacinho de água só subiu e desceu, passando o movimento para o vizinho.\nÉ como a ola no estádio: o movimento passa, as pessoas ficam.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, quase no mesmo lugar, depois de 20 subidas e descidas.\nA (6 m): é o caminho da onda, 0,6 × 10, não o da rolha.\nB (3 m): multiplicou o comprimento de onda pelo tempo, 0,3 × 10.\nC (20 m): contou as 20 subidas como se fossem metros.\nE: a rolha boia; a onda só a levanta e abaixa.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma rolha sobe e desce 3 vezes por segundo, durante 5 s. O que acontece?",
+    "opcoes": [
+     "15 subidas, fica no lugar",
+     "15 subidas, anda 15 m",
+     "8 subidas, fica no lugar",
+     "15 subidas, anda 1,5 m"
+    ],
+    "certa": "15 subidas, fica no lugar",
+    "resposta": "3 × 5 = 15 subidas. A onda passa, a rolha fica."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-16",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Em muitos filmes de ficção, uma nave explode no espaço e o público ouve um estrondo. Num desses filmes, um astronauta flutua a 680 m da nave, no vácuo (lugar sem ar e sem nada), e seu rádio está desligado. Um aluno calculou: \"o som anda a 340 m/s, então ele ouve o estrondo 2 s depois\".\nDe acordo com a Física, o astronauta",
+  "A": "ouve o estrondo 2 s depois, como calculou o aluno.",
+  "B": "não ouve o estrondo, porque o som precisa de ar, água ou outro material para andar.",
+  "C": "ouve o estrondo na hora, porque no vácuo o som anda sem atraso.",
+  "D": "ouve o estrondo 0,5 s depois.",
+  "E": "ouve o estrondo 231 200 s depois.",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "O som é a vibração de um material (ar, água, metal); no vácuo não há o que vibrar, e o som não chega. B. Erros: A = usou 340 m/s do ar onde não há ar; C = vácuo não faz o som instantâneo; D = 340 ÷ 680; E = 340 × 680.",
+   "ideia": "O som é uma onda no ar, na água ou no metal. No vácuo não tem nada para vibrar, então o som não chega.",
+   "pecas": [
+    {
+     "termo": "Vácuo",
+     "significado": "Lugar sem ar e sem nada, como o espaço entre os planetas."
+    },
+    {
+     "termo": "Som",
+     "significado": "Onda que faz o ar, a água ou o metal vibrar. Sem esse material, não existe som."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A nave explode a 680 m do astronauta.\nEntre os dois não há ar: é vácuo.\nA questão quer saber se, e quando, ele ouve o estrondo.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "A explosão no espaço",
+      "rotulos": [
+       "680 m até a nave",
+       "vácuo: sem ar",
+       "som = ?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O som é o ar (ou a água, ou o metal) vibrando e passando a vibração adiante.\nNo vácuo não tem ar nem nada para vibrar.\nEntão o som da explosão não sai do lugar. O clarão, que é luz, chega.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Com ar, a conta do aluno estaria certa: 680 ÷ 340 = 2 s.\nMas os 340 m/s são a velocidade do som no ar.\nSem ar, não há velocidade nenhuma: o som não chega.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Som com e sem ar",
+      "dados": [
+       "d = 680\\,\\text{m}",
+       "v_{ar} = 340\\,\\text{m/s}"
+      ],
+      "formula": "t = \\frac{d}{v}",
+      "legenda": [
+       "t: tempo até o som chegar",
+       "d: distância até a nave"
+      ],
+      "contas": [
+       "\\text{com ar: } t = \\frac{680}{340} = 2\\,\\text{s}",
+       "\\text{no vácuo: o som não anda}"
+      ],
+      "resultado": "\\text{não ouve}",
+      "nota": "Ele vê o clarão, mas não ouve nada."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Na aula: o som é uma onda no ar, na água ou no metal. Sempre num material.\nNo ar, o som anda 340 m/s; na água, 1 500 m/s; no vácuo, não anda.\nPor isso, no espaço, astronautas conversam por rádio.\nA onda de rádio é parente da luz: não precisa de ar, como a luz do Sol, que chega até nós pelo espaço vazio.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, não ouve, porque o som precisa de um material para andar.\nA (2 s): a conta usa o ar, mas ali não tem ar.\nC (na hora): o vácuo não acelera o som; ele não deixa o som andar.\nD (0,5 s): dividiu ao contrário, 340 ÷ 680.\nE (231 200 s): multiplicou 340 × 680.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Na Lua não há ar. Dois astronautas, sem rádio, a 10 m: um ouve o grito do outro?",
+    "opcoes": [
+     "Não, falta ar",
+     "Sim, na hora",
+     "Sim, depois de 0,03 s",
+     "Sim, mais alto"
+    ],
+    "certa": "Não, falta ar",
+    "resposta": "Sem ar, o som não anda. Eles precisam do rádio."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-17",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Caixas de som de boa qualidade têm dois alto-falantes: um grande, para os sons graves, e um pequeno, para os agudos. Num trecho de música, o alto-falante grande toca uma nota de 34 Hz e o pequeno, uma nota de 17 000 Hz. Os dois sons andam pelo ar da sala a 340 m/s.\nO comprimento de onda da nota grave, comparado ao da nota aguda, é",
+  "A": "500 vezes menor.",
+  "B": "igual, porque os dois andam a 340 m/s.",
+  "C": "50 vezes maior.",
+  "D": "16 966 vezes maior.",
+  "E": "500 vezes maior.",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Grave: 340 ÷ 34 = 10 m. Aguda: 340 ÷ 17 000 = 0,02 m. 10 ÷ 0,02 = 500 (ou 17 000 ÷ 34 = 500). E. Erros: A = trocou maior por menor; B = mesma velocidade, frequências diferentes; C = zero perdido; D = 17 000 − 34.",
+   "ideia": "Som grave tem onda comprida, de 10 m, e o agudo, onda curta, de 0,02 m. A onda grave é 500 vezes maior.",
+   "pecas": [
+    {
+     "termo": "Agudo e grave",
+     "significado": "Agudo é som fino, de frequência alta; grave é som grosso, de frequência baixa."
+    },
+    {
+     "termo": "Quantas vezes maior",
+     "significado": "Divida o maior pelo menor. 10 m comparado a 2 m: 10 ÷ 2 = 5 vezes maior."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A nota grave vibra 34 vezes por segundo; a aguda, 17 000 vezes.\nAs duas andam a 340 m/s.\nA questão quer quantas vezes a onda grave é maior que a aguda.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "Grave contra agudo",
+      "rotulos": [
+       "λ grave ÷ λ agudo = ?",
+       "34 Hz e 17 000 Hz",
+       "v = 340 m/s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Com a mesma velocidade, quem vibra menos tem onda mais comprida.\nA grave vibra menos, então sua onda é maior.\nCalcule as duas ondas e divida a maior pela menor.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Grave: 340 ÷ 34 = 10 m.\nAguda: 340 ÷ 17 000 = 34 ÷ 1 700 = 0,02 m. Confira: 17 000 × 0,02 = 340.\nCompare: 10 ÷ 0,02 = 1 000 ÷ 2 = 500 vezes.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Grave e agudo",
+      "dados": [
+       "v = 340\\,\\text{m/s}",
+       "f_{grave} = 34\\,\\text{Hz}",
+       "f_{agudo} = 17\\,000\\,\\text{Hz}"
+      ],
+      "formula": "\\lambda = \\frac{v}{f}",
+      "legenda": [
+       "\\lambda: tamanho de uma onda",
+       "v: velocidade do som",
+       "f: vibrações por segundo"
+      ],
+      "contas": [
+       "\\lambda_{grave} = \\frac{340}{34} = 10\\,\\text{m}",
+       "\\lambda_{agudo} = \\frac{340}{17\\,000} = 0{,}02\\,\\text{m}",
+       "\\frac{10}{0{,}02} = 500"
+      ],
+      "resultado": "500\\ \\text{vezes maior}",
+      "nota": "Onda grave de 10 m; aguda de 2 cm."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Com números pequenos: notas de 1 Hz e 2 Hz no mesmo ar. A de 2 Hz tem onda com metade do tamanho.\nA frequência dobra e a onda cai pela metade.\nAqui a frequência aguda é 17 000 ÷ 34 = 500 vezes a grave. Então a onda grave é 500 vezes maior.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, 500 vezes maior.\nA (500 vezes menor): o número está certo, mas a onda grave é a maior.\nB: a velocidade é igual, mas as frequências não; as ondas ficam diferentes.\nC (50 vezes): perdeu um zero.\nD (16 966 vezes): subtraiu 17 000 − 34; comparar quantas vezes é dividir.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Notas de 85 Hz e 340 Hz no ar: o λ da grave é quantas vezes o da aguda?",
+    "opcoes": [
+     "4 vezes maior",
+     "4 vezes menor",
+     "255 vezes maior",
+     "igual"
+    ],
+    "certa": "4 vezes maior",
+    "resposta": "Grave: 340 ÷ 85 = 4 m. Aguda: 340 ÷ 340 = 1 m. 4 ÷ 1 = 4 vezes maior."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-18",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Um canal de ciência filmou em câmera lenta uma corda de contrabaixo sendo tocada. Contando quadro a quadro, a equipe viu que a corda vibrou 1 020 vezes em 12 segundos. O som dessa corda se espalha pelo ar do estúdio a 340 m/s.\nQual é o comprimento de onda desse som no ar?",
+  "A": "4 m",
+  "B": "0,33 m",
+  "C": "85 m",
+  "D": "0,25 m",
+  "E": "28 900 m",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "f = 1 020 ÷ 12 = 85 Hz; λ = 340 ÷ 85 = 4 m. A. Erros: B = 340 ÷ 1 020 (não achou a frequência); C = parou na frequência; D = 85 ÷ 340; E = 340 × 85.",
+   "ideia": "Primeiro a frequência: vibrações ÷ segundos = 1 020 ÷ 12 = 85 Hz. Depois λ = v ÷ f = 340 ÷ 85 = 4 m.",
+   "pecas": [
+    {
+     "termo": "Frequência (f)",
+     "significado": "Quantas vibrações por segundo. 30 vibrações em 3 s dão 30 ÷ 3 = 10 Hz."
+    },
+    {
+     "termo": "Contrabaixo",
+     "significado": "Instrumento de cordas grande, de som grave."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A corda vibrou 1 020 vezes em 12 s.\nO som anda no ar a 340 m/s.\nA questão quer o tamanho de uma onda: λ.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "A corda do contrabaixo",
+      "rotulos": [
+       "λ = ?",
+       "1 020 vibrações em 12 s",
+       "v = 340 m/s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "A fórmula pede a frequência: vibrações em 1 segundo.\nO enunciado deu vibrações em 12 segundos. Então são duas contas.\nPrimeiro a frequência, depois o comprimento de onda.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Frequência: 1 020 ÷ 12 = 85 vibrações por segundo. Confira: 12 × 85 = 1 020.\nCom números pequenos: 8 m divididos em 2 ondas dão 4 m cada.\nAqui: 340 ÷ 85 = 4 m. Confira: 85 × 4 = 340.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "A corda filmada",
+      "dados": [
+       "1\\,020\\ \\text{vibrações em } 12\\,\\text{s}",
+       "v = 340\\,\\text{m/s}"
+      ],
+      "formula": "\\lambda = \\frac{v}{f}",
+      "legenda": [
+       "\\lambda: tamanho de uma onda",
+       "v: velocidade do som",
+       "f: vibrações por segundo"
+      ],
+      "contas": [
+       "f = \\frac{1\\,020}{12} = 85\\,\\text{Hz}",
+       "\\lambda = \\frac{340}{85}"
+      ],
+      "resultado": "\\lambda = 4\\,\\text{m}",
+      "nota": "Som grave, de onda comprida."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Em 1 segundo, a corda solta 85 ondas e o som anda 340 m.\n85 ondas de 4 m dão 340 m. Bate com a velocidade.\nÉ o v = λ × f da aula: 340 = 4 × 85.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, 4 m.\nB (0,33 m): usou 1 020 como frequência, sem dividir por 12.\nC (85 m): achou a frequência e parou; 85 é em hertz, não em metros.\nD (0,25 m): dividiu ao contrário, 85 ÷ 340.\nE (28 900 m): multiplicou 340 × 85.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma corda vibra 680 vezes em 4 s. Qual é a frequência?",
+    "opcoes": [
+     "170 Hz",
+     "2 720 Hz",
+     "0,006 Hz",
+     "684 Hz"
+    ],
+    "certa": "170 Hz",
+    "resposta": "f = 680 ÷ 4 = 170 Hz."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-19",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Numa aula de campo num lago, dois grupos de alunos ficam em barcos a 3 000 m um do outro. Um grupo bate duas pedras debaixo d'água; o outro, com um microfone dentro da água, ouve a batida 2 s depois. Os alunos sabem que, no ar, o som anda a 340 m/s.\nO resultado mostra que, na água, o som andou",
+  "A": "a 6 000 m/s, cerca de 18 vezes mais rápido que no ar.",
+  "B": "a 1 500 m/s, mais devagar que no ar.",
+  "C": "a 1 500 m/s, cerca de 4 vezes mais rápido que no ar.",
+  "D": "a 1 500 m/s, cerca de 1 160 vezes mais rápido que no ar.",
+  "E": "a 340 m/s, igual ao ar, porque é o mesmo som.",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "v = 3 000 ÷ 2 = 1 500 m/s; 1 500 ÷ 340 ≈ 4,4: cerca de 4 vezes mais rápido. C. Erros: A = 3 000 × 2; B = sentido trocado; D = 1 500 − 340 (diferença, não vezes); E = o meio muda a velocidade.",
+   "ideia": "Velocidade = distância ÷ tempo: 3 000 ÷ 2 = 1 500 m/s. Comparado aos 340 m/s do ar, é cerca de 4 vezes mais rápido.",
+   "pecas": [
+    {
+     "termo": "Velocidade",
+     "significado": "Distância ÷ tempo. 10 m em 2 s é 10 ÷ 2 = 5 m/s."
+    },
+    {
+     "termo": "Quantas vezes mais rápido",
+     "significado": "Divida uma velocidade pela outra. 20 m/s comparado a 5 m/s: 20 ÷ 5 = 4 vezes."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O som andou 3 000 m pela água em 2 s.\nNo ar, ele anda 340 m/s.\nA questão quer a velocidade na água e a comparação com o ar.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "O som no lago",
+      "rotulos": [
+       "3 000 m entre os barcos",
+       "chega em 2 s",
+       "ar: 340 m/s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Primeiro a velocidade na água: distância ÷ tempo.\nDepois, quantas vezes ela cabe a do ar: divisão de uma pela outra.\nA aula já avisou: na água o som é mais rápido.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Com números pequenos: 10 m em 2 s é 5 m/s.\nAqui: 3 000 ÷ 2 = 1 500 m/s.\nComparar: 1 500 ÷ 340. Como 340 × 4 = 1 360 e 340 × 5 = 1 700, fica entre 4 e 5, perto de 4,4.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "O som na água",
+      "dados": [
+       "d = 3\\,000\\,\\text{m}",
+       "t = 2\\,\\text{s}",
+       "v_{ar} = 340\\,\\text{m/s}"
+      ],
+      "formula": "v = \\frac{d}{t}",
+      "legenda": [
+       "d: distância entre os barcos",
+       "t: tempo da batida"
+      ],
+      "contas": [
+       "v = \\frac{3\\,000}{2} = 1\\,500\\,\\text{m/s}",
+       "\\frac{1\\,500}{340} \\approx 4{,}4"
+      ],
+      "resultado": "\\text{cerca de 4 vezes mais rápido}",
+      "nota": "Pela água, o som chega antes."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Confira: a 1 500 m/s, em 2 s o som anda 1 500 × 2 = 3 000 m.\nÉ a distância entre os barcos.\nE 1 500 m/s é o valor da água que aparece na aula.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 1 500 m/s, cerca de 4 vezes mais rápido.\nA (6 000 m/s): multiplicou 3 000 × 2 em vez de dividir.\nB: a velocidade está certa, mas 1 500 é mais que 340, então é mais rápido.\nD (1 160 vezes): fez 1 500 − 340; isso é a diferença, não quantas vezes.\nE: o som muda de velocidade quando muda de meio.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "O som anda 4 500 m na água em 3 s. Qual a velocidade?",
+    "opcoes": [
+     "1 500 m/s",
+     "13 500 m/s",
+     "0,0007 m/s",
+     "4 503 m/s"
+    ],
+    "certa": "1 500 m/s",
+    "resposta": "v = 4 500 ÷ 3 = 1 500 m/s."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-fis-ond-20",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Numa final de campeonato, um torcedor está na arquibancada, a 340 m do gol. Outro torcedor está em casa, a 1 000 km do estádio, ouvindo o jogo por uma rádio cujo microfone fica ao lado do gol. As ondas de rádio andam a 300 000 km/s; o som anda no ar a 340 m/s. Despreze o caminho do som dentro da casa.\nQuando a bola bate na trave, quem ouve o barulho primeiro?",
+  "A": "O torcedor do estádio, porque está 1 000 km mais perto.",
+  "B": "Os dois ao mesmo tempo, porque toda onda anda igual.",
+  "C": "O torcedor do estádio, porque pelo rádio o som leva cerca de 49 minutos.",
+  "D": "O torcedor de casa: o rádio leva cerca de 0,003 s, e o som no estádio, 1 s.",
+  "E": "O torcedor de casa, porque o rádio leva 300 s.",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Estádio: 340 ÷ 340 = 1 s. Casa: 1 000 ÷ 300 000 = 1/300 ≈ 0,003 s. Casa primeiro. D. Erros: A = só olhou a distância; B = ondas diferentes andam diferente; C = usou 340 m/s para o rádio (1 000 000 ÷ 340 ≈ 2 941 s ≈ 49 min); E = 300 000 ÷ 1 000.",
+   "ideia": "Tempo = distância ÷ velocidade para cada caminho. O som leva 1 s até a arquibancada; o rádio, só 0,003 s até a casa.",
+   "pecas": [
+    {
+     "termo": "Onda de rádio",
+     "significado": "Onda da família da luz. Anda 300 000 km por segundo e não precisa de ar."
+    },
+    {
+     "termo": "Tempo de viagem",
+     "significado": "Tempo = distância ÷ velocidade. 680 m a 340 m/s levam 680 ÷ 340 = 2 s."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "No estádio, o som anda 340 m pelo ar, a 340 m/s.\nPara a casa, o barulho vai pelo rádio: 1 000 km a 300 000 km/s.\nA questão quer quem ouve primeiro.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "onda",
+      "titulo": "Estádio contra rádio",
+      "rotulos": [
+       "som: 340 m a 340 m/s",
+       "rádio: 1 000 km",
+       "a 300 000 km/s"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Distância maior nem sempre quer dizer chegar depois: depende da velocidade.\nO rádio é muitíssimo mais rápido que o som no ar.\nCalcule os dois tempos e compare.",
+     "visual": null
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Estádio: 340 ÷ 340 = 1 s.\nCasa: 1 000 ÷ 300 000 = 1 ÷ 300 de segundo (corte três zeros).\n1 ÷ 300 é 1 ÷ 3 e depois ÷ 100. 1 ÷ 3 dá cerca de 0,3, porque 3 × 0,3 = 0,9, quase 1.\nDividir por 100 anda a vírgula 2 casas para a esquerda: 0,3 vira 0,003 s, bem menos que 1 s.\nConfira: 300 × 0,003 = 0,9, quase 1.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Quem ouve primeiro",
+      "dados": [
+       "d_{casa} = 1\\,000\\,\\text{km}",
+       "v_{rádio} = 300\\,000\\,\\text{km/s}",
+       "d_{estádio} = 340\\,\\text{m}",
+       "v_{som} = 340\\,\\text{m/s}"
+      ],
+      "formula": "t = \\frac{d}{v}",
+      "legenda": [
+       "t: tempo até ouvir",
+       "d: distância",
+       "v: velocidade da onda"
+      ],
+      "contas": [
+       "t_{estádio} = \\frac{340}{340} = 1\\,\\text{s}",
+       "t_{casa} = \\frac{1\\,000}{300\\,000} = \\frac{1}{300}\\,\\text{s}"
+      ],
+      "resultado": "t_{casa} \\approx 0{,}003\\,\\text{s}",
+      "nota": "Quem está em casa ouve antes."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Com números pequenos: andar 10 m a 1 m/s leva 10 s; andar 100 m a 100 m/s leva só 1 s.\nQuem está mais longe chega antes se for bem mais rápido.\nAqui, o rádio anda quase um milhão de vezes mais rápido que o som.",
+     "visual": null
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, o torcedor de casa: 0,003 s contra 1 s.\nA: olhou só a distância, sem a velocidade.\nB: o som e a onda de rádio andam em velocidades bem diferentes.\nC (49 minutos): usou a velocidade do som para a onda de rádio.\nE (300 s): dividiu ao contrário, 300 000 ÷ 1 000.",
+     "visual": null
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um ouvinte a 3 000 km do estádio, pelo rádio (300 000 km/s): quanto tempo?",
+    "opcoes": [
+     "0,01 s",
+     "100 s",
+     "8,8 s",
+     "1 s"
+    ],
+    "certa": "0,01 s",
+    "resposta": "t = 3 000 ÷ 300 000 = 1 ÷ 100 = 0,01 s."
+   }
+  }
+ }
+]

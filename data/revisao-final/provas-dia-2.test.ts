@@ -174,3 +174,36 @@ describe('reforço do dia 2', () => {
     });
   }
 });
+
+/* Banco ENEM do dia 2 (Pablo, 13/11/2026: "umas 20 nível ENEM para cada conteúdo,
+   guardadinho no banco"): um arquivo por conteúdo em data/revisao-final/banco-enem,
+   mesma conferência do reforço, origem própria para não entrar em prova nem reforço. */
+const PASTA_BANCO = join(__dirname, 'banco-enem');
+describe('banco ENEM do dia 2', () => {
+  const arquivos = existsSync(PASTA_BANCO) ? readdirSync(PASTA_BANCO).filter((f) => f.endsWith('.json')) : [];
+  const todas = arquivos.flatMap((f) => JSON.parse(readFileSync(join(PASTA_BANCO, f), 'utf8')) as Questao[]);
+  it('ids únicos no padrão d2-banco-', () => {
+    const ids = todas.map((q) => q.id);
+    expect(ids.filter((id) => !id.startsWith('d2-banco-'))).toEqual([]);
+    expect(ids.filter((id, i) => ids.indexOf(id) !== i)).toEqual([]);
+  });
+  for (const arquivo of arquivos) {
+    const qs = JSON.parse(readFileSync(join(PASTA_BANCO, arquivo), 'utf8')) as Questao[];
+    describe(arquivo, () => {
+      it('cada questão passa na conferência da explicação', () => {
+        const ruins = qs.map((q) => [q.id, problemasDaQuestao(q)] as const).filter(([, e]) => e.length > 0);
+        expect(ruins.map(([id, e]) => `${id}: ${e.join('; ')}`)).toEqual([]);
+      });
+      it('abre com figura em pixel, é do banco e é de um tema só', () => {
+        const sem = qs.filter((q) => (q.explicacao.passos as { visual?: { tipo?: string } }[])[0]?.visual?.tipo !== 'figura' || q.origem !== 'Banco ENEM do dia 2');
+        expect(sem.map((q) => q.id)).toEqual([]);
+        expect(new Set(qs.map((q) => q.tema)).size).toBe(1);
+      });
+      it('letra certa espalhada e sem figura inexistente', () => {
+        const porLetra = LETRAS.map((l) => qs.filter((q) => q.resposta === l).length);
+        expect(Math.max(...porLetra) - Math.min(...porLetra)).toBeLessThanOrEqual(3);
+        expect(qs.filter((q) => PEDE_FIGURA.test(q.enunciado)).map((q) => q.id)).toEqual([]);
+      });
+    });
+  }
+});

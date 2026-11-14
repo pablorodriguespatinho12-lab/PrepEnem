@@ -1,0 +1,1503 @@
+[
+  {
+    "id": "d2-banco-fis-opt-01",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Uma loja de roupas estreita cobriu a parede do fundo com um espelho plano, para o ambiente parecer maior. Da porta de entrada até o espelho são 4 m. Um cliente entrou e parou a 3 m do espelho, de frente para ele. Num espelho plano, a imagem de cada coisa aparece atrás do espelho, à mesma distância em que a coisa está na frente dele.\nOlhando para o espelho, a que distância do cliente parece estar a porta de entrada da loja?",
+    "A": "7 m",
+    "B": "6 m",
+    "C": "8 m",
+    "D": "4 m",
+    "E": "1 m",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Imagem da porta: 4 m atrás do espelho. Cliente: 3 m na frente. Distância: 3 + 4 = 7 m. A. Erros: B = 3 + 3 (cliente até a própria imagem); C = 4 + 4 (porta até a imagem da porta); D = só a porta até o espelho; E = 4 − 3 (cliente até a porta de verdade).",
+      "ideia": "A imagem da porta fica 4 m atrás do espelho. O cliente está 3 m na frente, então ele a vê a 3 + 4 = 7 m.",
+      "pecas": [
+        {
+          "termo": "Espelho plano",
+          "significado": "Espelho reto, sem curva, como o do banheiro. A imagem aparece atrás dele, à mesma distância que a coisa está na frente."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "São três coisas na mesma linha: a porta, o cliente e o espelho.\nA questão quer a distância do cliente até a IMAGEM da porta, que fica atrás do espelho.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "A loja e o espelho",
+            "rotulos": [
+              "porta: 4 m do espelho",
+              "cliente: 3 m do espelho",
+              "imagem da porta = ?",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O espelho plano faz uma cópia da loja do outro lado, à mesma distância.\nA porta está 4 m na frente, então a imagem da porta fica 4 m atrás.\nDo cliente até o espelho: 3 m. Do espelho até a imagem: mais 4 m."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Some o trecho da frente com o trecho de trás do espelho.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Espelho plano",
+            "dados": [
+              "d_{cliente} = 3\\,\\text{m}",
+              "d_{porta} = 4\\,\\text{m}"
+            ],
+            "formula": "D = d_{cliente} + d_{imagem}",
+            "legenda": [
+              "D: do cliente até a imagem da porta",
+              "$d_{imagem}$: igual à distância da porta ao espelho"
+            ],
+            "contas": [
+              "d_{imagem} = 4\\,\\text{m}",
+              "D = 3 + 4"
+            ],
+            "resultado": "D = 7\\,\\text{m}",
+            "nota": "A loja parece ter o dobro do tamanho."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A linha do olho do cliente até a imagem atravessa o espelho.\nPor isso entra o pedaço da frente (3 m) e o pedaço de trás (4 m).\nSe ele estivesse colado na porta, veria a imagem dela a 4 + 4 = 8 m."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 7 m.\nB (6 m): é o cliente até a própria imagem, 3 + 3.\nC (8 m): é a porta até a imagem da porta, 4 + 4.\nD (4 m): é só da porta até o espelho.\nE (1 m): é do cliente até a porta de verdade."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Você está a 2 m de um espelho plano. A parede atrás de você está a 5 m dele. A que distância você vê a imagem da parede?",
+        "opcoes": [
+          "7 m",
+          "10 m",
+          "4 m",
+          "3 m"
+        ],
+        "certa": "7 m",
+        "resposta": "Você está 2 m na frente e a imagem da parede, 5 m atrás: 2 + 5 = 7 m."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-02",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Num show de luzes, um técnico aponta um laser para um espelho plano preso numa parede. O raio de laser chega ao espelho fazendo um ângulo de 40° com a superfície do espelho e volta para a plateia. Na reflexão, a luz sai do espelho com o mesmo ângulo com que chegou, os dois medidos a partir da normal (a reta em pé sobre o espelho).\nQual é o ângulo entre o raio que chega e o raio que sai do espelho?",
+    "A": "80°",
+    "B": "100°",
+    "C": "40°",
+    "D": "50°",
+    "E": "90°",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Com a normal: 90 − 40 = 50°. Sai a 50° do outro lado. Entre os raios: 50 + 50 = 100°. B. Erros: A = 40 + 40 (somou os ângulos com o espelho); C = só o ângulo dado; D = só um lado da normal; E = a própria normal.",
+      "ideia": "Primeiro troque o ângulo com o espelho pelo ângulo com a normal: 90 − 40 = 50°. A luz sai a 50° do outro lado, e entre os dois raios ficam 50 + 50 = 100°.",
+      "pecas": [
+        {
+          "termo": "Normal",
+          "significado": "A reta em pé (a 90°) sobre o espelho, no ponto onde a luz bate. Os ângulos da reflexão se medem a partir dela."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O laser faz 40° com a superfície do espelho, e não com a normal.\nA questão quer o ângulo aberto entre o raio que chega e o que volta.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "O laser no espelho",
+            "rotulos": [
+              "laser chegando",
+              "40° com o espelho",
+              "ângulo entre os raios = ?",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A normal fica em pé, a 90° do espelho. Se o raio faz 40° com o espelho, faz 90 − 40 = 50° com a normal.\nO raio sai a 50° da normal, do outro lado, como bola de bilhar na tabela.\nDe um raio até a normal: 50°. Da normal até o outro raio: mais 50°."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ache o ângulo com a normal e dobre.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "A reflexão",
+            "dados": [
+              "\\text{com o espelho} = 40^\\circ"
+            ],
+            "formula": "\\text{entre os raios} = i + r",
+            "legenda": [
+              "i: chegada, medida da normal",
+              "r: saída, igual a i"
+            ],
+            "contas": [
+              "i = 90 - 40 = 50^\\circ",
+              "r = 50^\\circ",
+              "50 + 50"
+            ],
+            "resultado": "\\text{entre os raios} = 100^\\circ",
+            "nota": "Mede-se sempre a partir da normal."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Teste com números pequenos: raio deitado quase no espelho, 10° com ele, faz 80° com a normal e os raios abrem 160°.\nRaio quase em pé, 80° com o espelho, faz 10° com a normal e os raios abrem só 20°.\nQuanto mais em pé chega, mais fechado volta."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 100°.\nA (80°): somou os ângulos com o espelho, 40 + 40, e não com a normal.\nC (40°): repetiu o ângulo dado.\nD (50°): é só de um raio até a normal.\nE (90°): é o ângulo da própria normal com o espelho."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um raio faz 30° com a superfície de um espelho. Qual o ângulo dele com a normal?",
+        "opcoes": [
+          "60°",
+          "30°",
+          "90°",
+          "120°"
+        ],
+        "certa": "60°",
+        "resposta": "A normal fica a 90° do espelho: 90 − 30 = 60°."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-03",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Uma ótica explica aos clientes por que as lentes de vidro desviam a luz: dentro do vidro a luz anda mais devagar. No ar, a luz anda cerca de 300 000 km por segundo; no vidro das lentes, cerca de 200 000 km por segundo. Os fabricantes chamam de índice de refração o número que diz quantas vezes a luz fica mais lenta dentro do material do que no ar.\nQual é o índice de refração desse vidro?",
+    "A": "0,67",
+    "B": "100 000",
+    "C": "1,5",
+    "D": "2",
+    "E": "3",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Índice = velocidade no ar ÷ velocidade no vidro = 300 000 ÷ 200 000 = 1,5. C. Erros: A = 200 000 ÷ 300 000 (conta invertida); B = 300 000 − 200 000 (subtraiu); D = 300 000 ÷ 150 000 = 2, seria a luz a 150 000 km/s no vidro; E = 300 000 ÷ 100 000 = 3, seria a luz a 100 000 km/s.",
+      "ideia": "Quantas vezes mais lenta é uma divisão: a velocidade no ar dividida pela velocidade no vidro. 300 000 ÷ 200 000 = 1,5.",
+      "pecas": [
+        {
+          "termo": "Refração",
+          "significado": "A luz passa de um meio para outro (do ar para o vidro) e muda de velocidade. Se entra inclinada, também desvia."
+        },
+        {
+          "termo": "Índice de refração",
+          "significado": "Quantas vezes a luz fica mais lenta no material do que no ar. Vidro com índice 1,5: a luz anda 1,5 vez mais devagar."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A luz anda 300 000 km por segundo no ar e 200 000 km por segundo no vidro.\nA questão quer QUANTAS VEZES mais lenta ela fica no vidro.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "A luz entrando na lente",
+            "rotulos": [
+              "ar: 300 000 km/s",
+              "vidro: 200 000 km/s",
+              "índice = ?",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "\"Quantas vezes\" se acha dividindo, não subtraindo.\nCom números pequenos: um carro a 6 km/h e outro a 3 km/h. O segundo é 6 ÷ 3 = 2 vezes mais lento.\nAqui é igual: 300 000 ÷ 200 000."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Corte os zeros iguais: 300 000 ÷ 200 000 = 3 ÷ 2.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Índice de refração",
+            "dados": [
+              "v_{ar} = 300\\,000\\,\\text{km/s}",
+              "v_{vidro} = 200\\,000\\,\\text{km/s}"
+            ],
+            "formula": "n = \\dfrac{v_{ar}}{v_{vidro}}",
+            "legenda": [
+              "n: índice de refração",
+              "v: velocidade da luz"
+            ],
+            "contas": [
+              "n = \\dfrac{300\\,000}{200\\,000}",
+              "n = \\dfrac{3}{2}"
+            ],
+            "resultado": "n = 1{,}5",
+            "nota": "No vidro a luz anda 1,5 vez mais devagar."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A conta tem o \"mais rápido\" em cima, por isso o índice dá maior que 1.\nConfira: 200 000 × 1,5 = 200 000 + 100 000 = 300 000. Bate.\nÉ essa mudança de velocidade que faz a lente desviar a luz (refração)."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, 1,5.\nA (0,67): fez a divisão de cabeça para baixo, 200 000 ÷ 300 000.\nB (100 000): subtraiu, e \"quantas vezes\" pede divisão.\nD (2): seria se a luz andasse 150 000 km/s no vidro.\nE (3): seria se andasse 100 000 km/s."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Na água a luz anda 225 000 km/s. Ela fica mais lenta que no ar (300 000 km/s)?",
+        "opcoes": [
+          "Sim, mais lenta",
+          "Não, mais rápida",
+          "Igual",
+          "Para"
+        ],
+        "certa": "Sim, mais lenta",
+        "resposta": "225 000 é menor que 300 000: na água a luz anda mais devagar."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-04",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Placas em clubes avisam: \"A piscina é mais funda do que parece\". Uma criança, de pé na borda, olha o fundo da parte funda e acha que a água vai bater na cintura. Ao entrar, a água chega ao pescoço. Os salva-vidas dizem que esse engano acontece com todo mundo, mesmo com a água limpa e parada.\nO fundo parece mais raso porque a luz que vem do fundo, ao sair da água para o ar,",
+    "A": "bate na superfície e volta toda para o fundo, como num espelho.",
+    "B": "contorna as bordas da piscina, que são obstáculos pequenos.",
+    "C": "é absorvida pela água e vira calor, perdendo o brilho.",
+    "D": "muda de velocidade e desvia, e o olho vê o fundo mais alto.",
+    "E": "passa a vibrar numa só direção e chega mais fraca.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Luz sai da água para o ar: muda de velocidade e, inclinada, desvia (refração). O olho segue o raio em linha reta e vê o fundo mais alto. D. Erros: A = reflexão (se voltasse toda, não veríamos o fundo); B = difração; C = absorção (não muda a posição); E = polarização.",
+      "ideia": "A luz do fundo muda de velocidade e desvia ao passar da água para o ar. O olho acha que ela veio em linha reta e põe o fundo mais alto do que está.",
+      "pecas": [
+        {
+          "termo": "Refração",
+          "significado": "A luz passa de um meio para outro (da água para o ar) e muda de velocidade. Se sai inclinada, desvia. É o canudo que parece quebrado no copo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A criança vê o fundo mais alto do que ele está.\nA questão quer o que a luz faz ao sair da água para o ar.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "A luz saindo da água",
+            "rotulos": [
+              "fundo da piscina",
+              "água → ar",
+              "fundo parece mais alto",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A luz sai do fundo, sobe pela água e passa para o ar.\nNa troca de meio ela muda de velocidade e, como sai inclinada, entorta o caminho.\nO olho não sabe que ela entortou: segue o raio em linha reta para trás e vê o fundo mais acima."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: PASSA de um meio para outro e muda de velocidade = refração."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É o mesmo do canudo que parece quebrado no copo.\nA parte dentro da água aparece fora do lugar porque a luz desviou na superfície.\nCom a piscina, o fundo inteiro aparece mais perto da superfície."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, refração.\nA: é reflexão; se a luz voltasse toda, ninguém veria o fundo.\nB: é difração, e a borda é enorme perto da onda da luz.\nC: absorção tira brilho, mas não muda o lugar do fundo.\nE: é polarização, que não muda a posição de nada."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma colher na água parece quebrada. Qual fenômeno?",
+        "opcoes": [
+          "refração",
+          "reflexão",
+          "difração",
+          "absorção"
+        ],
+        "certa": "refração",
+        "resposta": "A luz muda de velocidade e desvia ao sair da água para o ar."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-05",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Uma revista de carros testou duas pinturas num estacionamento ao sol. A pintura preta absorve 90% da luz que chega e transforma essa parte em calor; a pintura branca absorve só 30%. No horário do teste, chegavam ao teto de cada carro 1 000 J de energia de luz a cada segundo (J é o joule, a unidade de energia).\nA cada segundo, quanta energia o teto preto transforma em calor a mais que o teto branco?",
+    "A": "300 J",
+    "B": "900 J",
+    "C": "60 J",
+    "D": "1 200 J",
+    "E": "600 J",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Preto: 90% de 1 000 = 900 J. Branco: 30% de 1 000 = 300 J. Diferença: 900 − 300 = 600 J. E. Erros: A = só o branco; B = só o preto; C = 90 − 30 sem aplicar ao 1 000; D = 900 + 300 (somou).",
+      "ideia": "Ache quanto cada teto absorve e subtraia: 900 J no preto, 300 J no branco. Sobram 600 J a mais no preto.",
+      "pecas": [
+        {
+          "termo": "Absorção",
+          "significado": "A luz é engolida pelo material e vira calor. Roupa preta absorve mais e esquenta mais."
+        },
+        {
+          "termo": "Porcentagem",
+          "significado": "90% quer dizer 90 de cada 100. De 1 000, que são dez vezes 100, dá 10 × 90 = 900."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Chegam 1 000 J por segundo em cada teto.\nO preto absorve 90% e o branco 30%. A questão quer a diferença.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "calor-panela",
+            "titulo": "O teto esquentando ao sol",
+            "rotulos": [
+              "luz: 1 000 J por segundo",
+              "preto: 90%",
+              "branco: 30%",
+              "diferença = ?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Comece pelo 100: de 100 J, o preto absorve 90 J e o branco 30 J.\nDe 1 000 J (dez vezes mais): o preto absorve 900 J e o branco 300 J.\nA diferença é 900 − 300."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Porcentagem de cada um, depois a diferença.\n90% é 90 de cada 100: 90 ÷ 100 = 0,9. Então 90% de 1 000 = 0,9 × 1 000 = 900.\nDo mesmo jeito, 30% = 0,3: 0,3 × 1 000 = 300.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Absorção",
+            "dados": [
+              "E = 1\\,000\\,\\text{J}",
+              "\\text{preto} = 90\\%",
+              "\\text{branco} = 30\\%"
+            ],
+            "formula": "\\Delta = \\text{preto} - \\text{branco}",
+            "legenda": [
+              "$\\Delta$: quanto o preto absorve a mais"
+            ],
+            "contas": [
+              "\\text{preto} = 0{,}9 \\times 1\\,000 = 900",
+              "\\text{branco} = 0{,}3 \\times 1\\,000 = 300",
+              "\\Delta = 900 - 300"
+            ],
+            "resultado": "\\Delta = 600\\,\\text{J}",
+            "nota": "A cada segundo, 600 J a mais viram calor no preto."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Atalho que dá o mesmo: a diferença de porcentagem é 90 − 30 = 60%.\n60% de 1 000 = 600 J.\nA luz que o preto engole a mais vira calor: por isso carro preto esquenta mais por dentro."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 600 J.\nA (300 J): é só o que o branco absorve.\nB (900 J): é só o que o preto absorve.\nC (60 J): fez 90 − 30 e esqueceu de aplicar ao 1 000.\nD (1 200 J): somou, e a pergunta pede quanto a mais."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Chegam 200 J. O preto absorve 90%. Quanto vira calor?",
+        "opcoes": [
+          "180 J",
+          "90 J",
+          "20 J",
+          "110 J"
+        ],
+        "certa": "180 J",
+        "resposta": "90 de cada 100: de 200 são 2 × 90 = 180 J."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-06",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Num curso de sobrevivência, o instrutor acende folhas secas usando uma lupa ao sol. A face da lupa recebe a luz do Sol numa área de 50 cm² (centímetros quadrados) e junta toda essa luz num pontinho de 0,5 cm² sobre a folha. No pontinho, a folha recebe muito mais luz por cm² do que receberia sem a lupa, e esquenta até pegar fogo.\nA lente da lupa e quantas vezes mais luz cada cm² do pontinho recebe são, respectivamente,",
+    "A": "convergente; 100 vezes.",
+    "B": "divergente; 100 vezes.",
+    "C": "convergente; 49,5 vezes.",
+    "D": "convergente; 10 vezes.",
+    "E": "divergente; 0,01 vez.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Lupa junta a luz: convergente. Luz de 50 cm² em 0,5 cm²: 50 ÷ 0,5 = 100. A. Erros: B = lente trocada; C = 50 − 0,5 (subtraiu); D = dividiu por 5 em vez de 0,5; E = 0,5 ÷ 50 (invertido) e lente trocada.",
+      "ideia": "A lupa é convergente: junta a luz de 50 cm² num ponto de 0,5 cm². Cada cm² do ponto recebe 50 ÷ 0,5 = 100 vezes mais luz.",
+      "pecas": [
+        {
+          "termo": "Lente convergente",
+          "significado": "Lente que junta a luz num ponto, como a da lupa. Funciona por refração."
+        },
+        {
+          "termo": "Dividir por 0,5",
+          "significado": "Quantas metades cabem? Em 1 inteiro cabem 2 metades, então dividir por 0,5 é o mesmo que dobrar: 50 ÷ 0,5 = 100."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A luz que cai em 50 cm² vai toda para 0,5 cm².\nA questão quer o tipo de lente e quantas vezes a luz ficou mais concentrada.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "A lupa juntando a luz",
+            "rotulos": [
+              "face da lupa: 50 cm²",
+              "pontinho: 0,5 cm²",
+              "quantas vezes = ?",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Comece com números redondos: luz de 10 cm² espremida em 1 cm² fica 10 ÷ 1 = 10 vezes mais forte.\nLuz de 10 cm² em 2 cm² fica 10 ÷ 2 = 5 vezes.\nAqui: 50 cm² espremidos em 0,5 cm²."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Área grande dividida pela área pequena: 50 ÷ 0,5.\nQuantas metades cabem? Em 1 cabem 2 metades, porque 0,5 × 2 = 1.\nEntão dividir por 0,5 é multiplicar por 2: 50 × 2 = 100.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Concentração da lupa",
+            "dados": [
+              "A_{lupa} = 50\\,\\text{cm}^2",
+              "A_{ponto} = 0{,}5\\,\\text{cm}^2"
+            ],
+            "formula": "k = \\dfrac{A_{lupa}}{A_{ponto}}",
+            "legenda": [
+              "k: quantas vezes a luz fica mais forte",
+              "A: área"
+            ],
+            "contas": [
+              "k = \\dfrac{50}{0{,}5}",
+              "k = 50 \\times 2"
+            ],
+            "resultado": "k = 100",
+            "nota": "Cada cm² do ponto recebe 100 vezes mais luz."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A lente da lupa é mais grossa no meio e entorta a luz para dentro (refração).\nTodos os raios se encontram num ponto: por isso ela é convergente.\nA luz junta ali vira calor na folha (absorção) e a folha queima."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, convergente e 100 vezes.\nB: lente divergente espalha a luz e não acende fogo.\nC (49,5): subtraiu 50 − 0,5; \"quantas vezes\" pede divisão.\nD (10): dividiu por 5 em vez de 0,5.\nE (0,01): fez a divisão invertida e trocou a lente."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Luz de 20 cm² é juntada em 2 cm². Quantas vezes mais forte?",
+        "opcoes": [
+          "10 vezes",
+          "18 vezes",
+          "40 vezes",
+          "2 vezes"
+        ],
+        "certa": "10 vezes",
+        "resposta": "20 ÷ 2 = 10."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-07",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Moradores de um povoado que fica atrás de uma serra contam que a rádio AM pega bem, mas a rádio FM quase não pega. As duas emissoras ficam do outro lado da serra. As ondas da rádio AM têm comprimento de onda (o tamanho de uma onda, de um pico ao outro) de centenas de metros, parecido com o tamanho dos morros; as da FM têm só poucos metros.\nO que explica a rádio AM chegar ao povoado?",
+    "A": "Reflexão: a onda AM bate na serra e volta para o povoado.",
+    "B": "Difração: a onda AM, de tamanho parecido com os morros, contorna a serra.",
+    "C": "Refração: a onda AM muda de velocidade ao entrar na rocha da serra.",
+    "D": "Absorção: a serra engole a onda AM e solta do outro lado.",
+    "E": "Polarização: a onda AM vibra numa só direção e passa por cima.",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Onda que contorna obstáculo de tamanho parecido com o comprimento de onda: difração. AM (centenas de metros) contorna morros; FM (poucos metros) não. B. Erros: A = reflexão mandaria a onda de volta para a emissora; C = a rádio não atravessa rocha; D = absorção vira calor; E = polarização não faz contornar.",
+      "ideia": "Onda contorna obstáculo do tamanho dela: isso é difração. A onda AM é grande como os morros e dobra a serra; a FM é pequena demais para isso.",
+      "pecas": [
+        {
+          "termo": "Comprimento de onda",
+          "significado": "O tamanho de uma onda, de um pico ao pico seguinte. O do som é de palmos a metros; o da luz é centenas de vezes menor que um fio de cabelo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A emissora está de um lado da serra e o povoado, do outro.\nA onda AM é grande (centenas de metros); a FM é pequena (poucos metros).",
+          "visual": {
+            "tipo": "figura",
+            "nome": "onda",
+            "titulo": "A onda e a serra",
+            "rotulos": [
+              "AM: centenas de metros",
+              "FM: poucos metros",
+              "serra no meio",
+              "quem contorna?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pense numa onda do mar batendo num pilar do cais: ela dobra para trás dele e continua.\nSe o obstáculo for enorme perto da onda, como um navio, atrás dele a água fica parada.\nA serra é \"do tamanho\" da onda AM, mas é gigante perto da onda FM."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: CONTORNA o obstáculo = difração."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A difração é forte quando o obstáculo tem tamanho parecido com o comprimento de onda.\nAM: centenas de metros, como os morros, então dobra a serra.\nFM: poucos metros, muito menor que a serra, então a serra faz sombra."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, difração.\nA: na reflexão a onda volta para o lado da emissora, não passa para trás da serra.\nC: refração é passar para outro meio; a onda não atravessa a rocha.\nD: absorção vira calor, não solta a onda do outro lado.\nE: polarização escolhe a direção da vibração, não faz contornar."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Você ouve alguém atrás de um muro sem vê-lo. O som:",
+        "opcoes": [
+          "contorna o muro",
+          "reflete no muro",
+          "é absorvido",
+          "polariza"
+        ],
+        "certa": "contorna o muro",
+        "resposta": "O som tem onda de tamanho parecido com o muro e o contorna: difração."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-08",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "A internet de fibra óptica leva informação em pulsos de luz que viajam dentro de um fio de vidro mais fino que um fio de cabelo. Mesmo quando o cabo faz curvas pelas ruas, a luz não escapa pela lateral: ela segue presa dentro do vidro, em zigue-zague, de uma ponta à outra. Uma capa em volta do vidro garante que a luz que chega à parede de dentro não saia.\nO fenômeno que mantém a luz presa dentro da fibra é a",
+    "A": "refração, porque a luz muda de velocidade ao entrar no vidro.",
+    "B": "difração, porque a luz contorna as curvas do cabo.",
+    "C": "reflexão, porque a luz bate na parede interna e volta para dentro.",
+    "D": "absorção, porque o vidro guarda a luz em forma de calor.",
+    "E": "polarização, porque o vidro só deixa passar a luz numa direção.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "A luz bate na parede interna e volta, várias vezes: reflexão. C. Erros: A = a refração acontece na entrada, mas não segura a luz; B = a fibra é enorme perto da onda da luz; D = se virasse calor, a luz sumiria; E = polarização não prende a luz.",
+      "ideia": "Dentro da fibra, a luz bate na parede de dentro e volta, de novo e de novo. Isso é reflexão, a mesma do espelho.",
+      "pecas": [
+        {
+          "termo": "Fibra óptica",
+          "significado": "Fio de vidro muito fino que leva luz de uma ponta à outra, usado na internet."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A luz entra numa ponta e sai na outra, sem escapar nas curvas.\nA questão quer o fenômeno que a prende lá dentro.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "A luz na fibra",
+            "rotulos": [
+              "luz entrando",
+              "parede de dentro",
+              "zigue-zague",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Siga a luz: ela anda reto até bater na parede do fio.\nBate e volta para dentro, anda até a parede do outro lado, bate e volta de novo.\nÉ esse bate e volta que desenha o zigue-zague."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: BATE e volta = reflexão."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É como uma bola de bilhar quicando entre as tabelas de uma mesa comprida: ela chega à outra ponta sem sair.\nA capa em volta do vidro garante que cada batida mande a luz de volta.\nNa entrada a luz também passa do ar para o vidro, mas isso não a prende."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, reflexão.\nA: a refração acontece só na entrada; não é ela que segura a luz.\nB: difração é contornar algo do tamanho da onda; a fibra é muito maior que a onda da luz.\nD: se a luz virasse calor, o sinal sumiria.\nE: polarização escolhe a direção da vibração, não prende a luz."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "No espelho do banheiro, a luz:",
+        "opcoes": [
+          "bate e volta",
+          "passa e desvia",
+          "contorna",
+          "vira calor"
+        ],
+        "certa": "bate e volta",
+        "resposta": "No espelho a luz bate e volta: reflexão."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-09",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Num show, o cantor usa uma camiseta verde. Quando o palco fica iluminado só com luz vermelha, o público vê a camiseta preta. Quando volta a luz branca, que tem todas as cores misturadas, ela aparece verde de novo. A camiseta e a tinta são as mesmas o tempo todo.\nA camiseta parece preta sob a luz vermelha porque",
+    "A": "a luz vermelha se mistura com o verde do tecido e o escurece.",
+    "B": "a luz vermelha desvia no tecido e vai para longe do público.",
+    "C": "o tecido passa a devolver a luz vermelha, que o olho vê como preta.",
+    "D": "o tecido verde devolve só luz verde e absorve a vermelha; sem luz voltando, parece preto.",
+    "E": "a luz vermelha contorna a camiseta, que fica na sombra.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Objeto verde reflete só o verde e absorve as outras cores. Sob luz só vermelha, absorve tudo e nada volta ao olho: preto. D. Erros: A = luz não pinta tecido; B = refração não tira a cor; C = se devolvesse vermelho, pareceria vermelha; E = difração.",
+      "ideia": "A camiseta verde só devolve luz verde. Sob luz só vermelha, ela absorve tudo, nada chega ao olho e ela parece preta.",
+      "pecas": [
+        {
+          "termo": "Absorção",
+          "significado": "A luz é engolida pelo material e vira calor."
+        },
+        {
+          "termo": "Cor de um objeto",
+          "significado": "É a cor da luz que ele devolve ao olho. A camiseta verde devolve o verde e absorve as outras cores."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A mesma camiseta parece verde na luz branca e preta na luz vermelha.\nA questão quer o motivo.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "A luz no palco",
+            "rotulos": [
+              "luz só vermelha",
+              "camiseta verde",
+              "parece preta",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A cor que você vê é a luz que o objeto devolve ao olho, como a bola que bate na parede e volta.\nLuz branca é todas as cores juntas. A camiseta verde devolve o verde e absorve (engole) o resto: você vê verde.\nNa luz só vermelha, não chega verde nenhum para devolver.\nO vermelho é absorvido, nada volta ao olho, e o que não manda luz parece preto."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "A cor é a luz que volta. Sem a cor dela na luz, o objeto fica preto."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Faça o teste com uma camiseta vermelha: na luz vermelha ela devolve tudo e parece vermelha.\nUma branca devolve todas as cores, então na luz vermelha parece vermelha.\nSó a que não devolve vermelho, como a verde, fica preta."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D.\nA: a luz não pinta o tecido; a tinta é a mesma o tempo todo.\nB: desviar a luz (refração) não apaga a cor.\nC: se o tecido devolvesse vermelho, o público veria vermelho.\nE: contornar é difração e não deixa nada preto."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma bola branca sob luz só azul parece:",
+        "opcoes": [
+          "azul",
+          "branca",
+          "preta",
+          "vermelha"
+        ],
+        "certa": "azul",
+        "resposta": "A branca devolve toda cor que chega; só chega azul, então volta azul."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-10",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Pescadores usam óculos de sol polarizados para ver os peixes debaixo d'água. Sem eles, o brilho do Sol na superfície da água ofusca e esconde o que está embaixo. A luz do Sol que bate na água e volta vibra quase toda numa mesma direção, deitada; o filtro dos óculos deixa passar só a luz que vibra em pé.\nOs óculos polarizados ajudam o pescador porque",
+    "A": "a lente junta a luz como uma lupa e aumenta o tamanho dos peixes.",
+    "B": "a lente escura absorve igualmente toda a luz que chega.",
+    "C": "o filtro faz a luz contornar o brilho da água.",
+    "D": "o filtro devolve para a água a luz que vem dos peixes.",
+    "E": "o filtro barra a luz refletida, que vibra deitada, e deixa passar luz vinda de dentro d'água.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "O brilho é luz refletida vibrando deitada; o filtro polarizador só deixa passar a que vibra em pé. Barra o brilho, sobra a luz do fundo. E. Erros: A = lente convergente; B = óculos escuro comum, escurece tudo por igual; C = difração; D = barraria a própria imagem dos peixes.",
+      "ideia": "O brilho da água é luz que vibra deitada. O filtro polarizado só deixa passar a que vibra em pé, então corta o brilho e você vê o fundo.",
+      "pecas": [
+        {
+          "termo": "Polarização",
+          "significado": "Um filtro deixa passar só a luz que vibra em uma direção, como nos óculos escuros polarizados. A luz polariza; o som não."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O brilho da água esconde os peixes.\nO brilho vibra deitado e o filtro só deixa passar o que vibra em pé.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "O brilho na água",
+            "rotulos": [
+              "Sol batendo na água",
+              "brilho: vibra deitado",
+              "filtro: só em pé",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Imagine a luz como uma corda balançando. O brilho da água balança de lado.\nO filtro é uma grade de frestas em pé: só passa corda que balança para cima e para baixo.\nO brilho fica barrado; a luz que vem do fundo, que balança de vários jeitos, passa em parte."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: filtro que escolhe UMA direção de vibração = polarização."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Óculos escuros comuns escurecem tudo igual, brilho e peixe juntos, e o brilho continua ganhando.\nO polarizado escolhe: corta muito o brilho e pouco o resto.\nPor isso o fundo aparece."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E.\nA: juntar a luz é coisa de lente convergente, como a lupa.\nB: é o óculos escuro comum, que tira tudo por igual e não resolve o brilho.\nC: contornar é difração.\nD: se devolvesse a luz dos peixes, o pescador veria menos."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "O som pode ser polarizado por um filtro?",
+        "opcoes": [
+          "Não",
+          "Sim",
+          "Só o som alto",
+          "Só embaixo d'água"
+        ],
+        "certa": "Não",
+        "resposta": "A luz polariza; o som não."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-11",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Num dia muito quente, um motorista vê ao longe, na estrada, o que parece uma poça d'água refletindo o céu. Quando ele se aproxima, a poça some. O asfalto quente esquenta o ar logo acima dele, e a luz anda com velocidade um pouco diferente no ar quente e no ar mais frio de cima. A luz do céu vem descendo inclinada, muda de caminho entre as camadas de ar e chega ao olho vindo de baixo.\nA falsa poça na estrada é explicada principalmente pela",
+    "A": "refração, porque a luz muda de velocidade entre camadas de ar de temperaturas diferentes.",
+    "B": "reflexão, porque existe uma película de água no asfalto que espelha o céu.",
+    "C": "difração, porque a luz contorna os carros que vêm na estrada.",
+    "D": "absorção, porque o asfalto preto vira calor e passa a brilhar.",
+    "E": "polarização, porque o ar quente filtra a luz numa só direção.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Luz passa de ar frio para ar quente, muda de velocidade e, inclinada, desvia: refração. A. Erros: B = não há água (a poça some); C = difração; D = absorção não faz imagem do céu; E = polarização.",
+      "ideia": "A luz do céu muda de velocidade ao passar do ar frio para o ar quente e entorta. Ela chega ao olho vindo de baixo, e o céu aparece no chão.",
+      "pecas": [
+        {
+          "termo": "Refração",
+          "significado": "A luz passa de um meio para outro (aqui, de ar frio para ar quente) e muda de velocidade. Se entra inclinada, também desvia."
+        },
+        {
+          "termo": "Miragem",
+          "significado": "Imagem falsa, como a \"poça\" na estrada quente, que some quando você chega perto."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A \"poça\" é, na verdade, o céu aparecendo no chão.\nA questão quer o fenômeno que manda a luz do céu para o olho vindo de baixo.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "A luz na estrada quente",
+            "rotulos": [
+              "luz do céu",
+              "ar frio em cima",
+              "ar quente no asfalto",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O ar perto do asfalto é mais quente que o de cima: são dois \"meios\" diferentes.\nA luz do céu desce inclinada e, a cada camada, muda de velocidade e entorta um pouco.\nEla faz uma curva e sobe até o olho. O olho acha que ela veio do chão."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: PASSA de um meio para outro e muda de velocidade = refração."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Se fosse água de verdade (reflexão), a poça continuaria lá quando o carro chegasse.\nEla some porque, de perto, a luz do céu já não faz a curva até o olho.\nÉ a mesma refração do canudo no copo, só que entre ar quente e ar frio."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, refração.\nB: não há água; a poça some quando você chega.\nC: contornar é difração, e os carros não criam a imagem do céu.\nD: absorção esquenta o asfalto, mas não mostra o céu no chão.\nE: o ar quente não funciona como filtro de vibração."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "O canudo parece quebrado no copo d'água por:",
+        "opcoes": [
+          "refração",
+          "reflexão",
+          "difração",
+          "polarização"
+        ],
+        "certa": "refração",
+        "resposta": "A luz muda de velocidade e desvia entre a água e o ar."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-12",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Depois da chuva, com o Sol atrás de quem olha, aparece um arco-íris. A luz branca do Sol é a mistura de todas as cores. Cada gota de chuva funciona como um pequeno prisma: a luz entra na gota, se separa em cores e sai de volta para os olhos de quem olha.\nO que acontece com a luz branca, ao entrar na gota, que faz as cores se separarem?",
+    "A": "Ela bate na superfície da gota e volta inteira, sem mudar.",
+    "B": "Ela passa do ar para a água, muda de velocidade, e cada cor desvia um pouco diferente.",
+    "C": "A gota absorve a luz branca e solta só as cores.",
+    "D": "Ela contorna a gota, que é muito maior que a onda da luz.",
+    "E": "A gota filtra as cores que vibram numa só direção.",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Ao entrar na água a luz muda de velocidade e desvia (refração); cada cor desvia um pouco diferente e elas se abrem em leque. B. Erros: A = reflexão sem mudança não separa cor; C = absorção vira calor; D = difração exige obstáculo do tamanho da onda; E = polarização.",
+      "ideia": "Ao entrar na gota a luz passa do ar para a água e desvia. Cada cor desvia um pouco diferente, e a luz branca se abre em leque colorido.",
+      "pecas": [
+        {
+          "termo": "Refração",
+          "significado": "A luz passa de um meio para outro (do ar para a água) e muda de velocidade. Se entra inclinada, também desvia."
+        },
+        {
+          "termo": "Prisma",
+          "significado": "Peça de vidro que separa a luz branca em cores, como a gota de chuva."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A luz branca do Sol entra na gota e sai em várias cores.\nA questão quer o que acontece NA ENTRADA.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "A luz entrando na gota",
+            "rotulos": [
+              "luz branca",
+              "ar → água",
+              "sai em cores",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Na entrada a luz troca de meio: do ar para a água. Ela muda de velocidade e, como chega inclinada, desvia.\nNa água, cada cor fica com uma velocidade um pouco diferente: o violeta fica mais lento que o vermelho.\nQuem perde mais velocidade desvia mais: o vermelho desvia um pouco; o violeta desvia um pouco mais.\nAs cores, que vinham juntas, se abrem em leque."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: PASSA de um meio para outro e desvia = refração.\nCada cor desvia diferente, por isso elas se separam."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Pense numa fila de corredores que entram juntos na areia, cada um perdendo velocidade de um jeito.\nEles saem da areia espalhados.\nAs cores da luz branca fazem o mesmo ao entrar na água."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, refração.\nA: voltar inteira sem mudar não separa as cores.\nC: o que a gota absorve vira calor, não vira cor.\nD: contornar é difração, e a gota é grande demais perto da onda da luz.\nE: escolher a direção de vibração é polarização e não separa cores."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Quando a luz passa do ar para o vidro, o que sempre muda?",
+        "opcoes": [
+          "a velocidade",
+          "a cor",
+          "o brilho",
+          "nada"
+        ],
+        "certa": "a velocidade",
+        "resposta": "Trocar de meio muda a velocidade; se entrar inclinada, ela também desvia."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-13",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "À noite, depois da chuva, motoristas reclamam que o asfalto molhado ofusca: os faróis dos carros que vêm de frente aparecem repetidos no chão, como num espelho. Com o asfalto seco, isso quase não acontece. O asfalto seco é cheio de pedrinhas que espalham a luz para todo lado; a água cobre essas pedrinhas e deixa a superfície lisa.\nO ofuscamento no asfalto molhado acontece porque a luz dos faróis",
+    "A": "passa para dentro da água e é absorvida, virando calor.",
+    "B": "contorna as gotas de chuva e se espalha para todo lado.",
+    "C": "bate na água lisa e volta toda numa mesma direção, como num espelho.",
+    "D": "muda de velocidade na água e se junta num ponto, como numa lupa.",
+    "E": "entra na água, desvia e sobe de volta para o céu.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Superfície lisa: a luz bate e volta toda numa direção (reflexão, como espelho) e acerta o olho do motorista. Seco, as pedrinhas espalham. C. Erros: A = absorção tiraria brilho; B = difração; D = lente convergente; E = refração não devolve a luz para o motorista.",
+      "ideia": "A água deixa o asfalto liso como um espelho. A luz dos faróis bate e volta toda junta, direto no olho do motorista.",
+      "pecas": [
+        {
+          "termo": "Reflexão",
+          "significado": "A luz bate e volta, como no espelho. Superfície lisa devolve tudo numa direção; superfície áspera espalha para todo lado."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Seco, o asfalto não ofusca. Molhado, ofusca como um espelho.\nA diferença é a superfície: áspera ou lisa.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "O farol no asfalto molhado",
+            "rotulos": [
+              "farol do carro",
+              "água lisa",
+              "volta junto",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "No asfalto seco, cada pedrinha está virada para um lado: a luz bate e volta espalhada.\nA água cobre as pedrinhas e deixa tudo plano.\nAgora toda a luz bate e volta para o mesmo lado, como num espelho, e acerta o olho."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: BATE e volta = reflexão.\nLiso devolve tudo junto; áspero espalha."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É o mesmo que acontece com uma parede branca e um espelho: os dois devolvem luz.\nMas só no espelho você vê o farol inteiro, porque ele é liso.\nA água transforma o asfalto num espelho escuro."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, reflexão.\nA: se a luz fosse absorvida, o chão ficaria mais escuro, não ofuscaria.\nB: contornar é difração.\nD: juntar num ponto é coisa de lente convergente.\nE: a luz que entra na água não é a que ofusca o motorista."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Por que você se vê num espelho e não numa parede branca?",
+        "opcoes": [
+          "O espelho é liso",
+          "A parede absorve tudo",
+          "O espelho refrata",
+          "A parede é escura"
+        ],
+        "certa": "O espelho é liso",
+        "resposta": "Os dois refletem, mas só o liso devolve a luz toda numa direção."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-14",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Na frente das ambulâncias, a palavra AMBULÂNCIA vem pintada ao contrário, com as letras espelhadas e na ordem de trás para a frente. Isso parece um erro para quem olha o veículo diretamente. Mas o motorista do carro que está na frente lê a palavra certinha quando olha pelo retrovisor, que é um espelho plano.\nA palavra pintada ao contrário fica certa no retrovisor porque",
+    "A": "o vidro do carro refrata as letras e as desvira.",
+    "B": "o espelho inverte em cima e embaixo, e a palavra fica de pé.",
+    "C": "a luz contorna o carro e chega ao motorista ao contrário.",
+    "D": "o espelho plano troca a esquerda pela direita na imagem, e a palavra invertida volta ao normal.",
+    "E": "o retrovisor absorve as letras e mostra só a sombra delas.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Espelho plano troca esquerda por direita (reflexão). Palavra já invertida, invertida de novo, fica certa. D. Erros: A = vidro não desvira letra; B = espelho plano não vira de cabeça para baixo; C = difração; E = absorção não forma imagem.",
+      "ideia": "O espelho troca a esquerda pela direita. A palavra já foi pintada trocada, então, invertida de novo no retrovisor, volta a ficar certa.",
+      "pecas": [
+        {
+          "termo": "Espelho plano",
+          "significado": "Espelho reto, sem curva, como o do banheiro. A imagem aparece atrás dele, à mesma distância que a coisa está na frente."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A palavra está pintada ao contrário.\nNo retrovisor (espelho plano), o motorista lê certinho. Por quê?",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "A palavra no retrovisor",
+            "rotulos": [
+              "AMBULÂNCIA ao contrário",
+              "retrovisor plano",
+              "lida certa",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Levante a mão direita diante do espelho: a imagem levanta a mão que fica do mesmo lado que a sua.\nSó que a imagem olha para você, como um amigo de frente: a mão direita dele fica do lado da sua esquerda.\nEntão, para a imagem, a mão levantada é a esquerda. O espelho plano troca a esquerda pela direita, mas não em cima por embaixo.\nTrocar duas vezes desfaz a troca: a palavra pintada trocada volta ao normal."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Espelho plano: troca esquerda e direita. Duas trocas = palavra certa."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É a reflexão: a luz das letras bate no retrovisor e volta para o olho.\nA imagem aparece atrás do espelho, à mesma distância: letra a 1 m do espelho tem imagem 1 m atrás dele.\nE a imagem fica virada para você, olhando para o lado contrário. Por isso a ordem das letras aparece de trás para a frente."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D.\nA: o vidro do carro não desvira letra nenhuma.\nB: o espelho plano não deixa a imagem de cabeça para baixo.\nC: contornar é difração e não troca a ordem das letras.\nE: absorção vira calor e não forma imagem."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Você levanta a mão direita diante do espelho. A imagem levanta a mão do lado:",
+        "opcoes": [
+          "esquerdo dela",
+          "direito dela",
+          "de cima",
+          "nenhum"
+        ],
+        "certa": "esquerdo dela",
+        "resposta": "O espelho plano troca a esquerda pela direita."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-15",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Uma avó enxerga bem as placas de rua, mas não consegue ler a bula do remédio: de perto, as letras ficam embaçadas. O oftalmologista explica que, no olho dela, a imagem de coisas próximas se formaria depois da retina (o fundo do olho, onde a imagem precisa cair), porque o olho não consegue mais juntar a luz o bastante. Ele receita óculos de leitura.\nA lente dos óculos de leitura é",
+    "A": "divergente, porque espalha a luz e empurra a imagem para trás.",
+    "B": "divergente, porque junta a luz num ponto antes do olho.",
+    "C": "convergente, porque reflete a luz de volta para a bula.",
+    "D": "plana, porque só protege o olho e deixa a luz igual.",
+    "E": "convergente, porque junta um pouco a luz antes de ela entrar no olho e traz a imagem para a retina.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "A imagem cairia depois da retina porque o olho junta pouco a luz; a lente convergente ajuda a juntar e traz a imagem para a retina. E. Erros: A = divergente é dos míopes e piora; B = divergente espalha, não junta; C = lente funciona por refração, não reflexão; D = lente plana não muda o foco.",
+      "ideia": "O olho dela junta pouco a luz e a imagem passaria da retina. A lente convergente, a da lupa, ajuda a juntar e traz a imagem para o lugar.",
+      "pecas": [
+        {
+          "termo": "Lente convergente",
+          "significado": "Lente que junta a luz, como a da lupa. Mais grossa no meio que nas bordas."
+        },
+        {
+          "termo": "Retina",
+          "significado": "O fundo do olho, onde a imagem precisa se formar para ficar nítida."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "De perto, a imagem passaria da retina porque o olho junta pouco a luz.\nA questão quer a lente dos óculos de leitura.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "A luz entrando no olho",
+            "rotulos": [
+              "bula de perto",
+              "imagem passa da retina",
+              "lente = ?",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Para ver nítido, a luz tem que se juntar bem em cima da retina.\nNo olho dela, a luz se junta tarde, depois da retina.\nUma lente que já entregue a luz um pouco juntada adianta esse ponto até a retina."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Junta pouco → corrige quem junta: lente convergente.\nJunta demais (míope) → corrige quem espalha: lente divergente."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Lentes funcionam por refração: a luz passa do ar para o vidro, muda de velocidade e desvia.\nA convergente desvia os raios para dentro, um na direção do outro.\nÉ a mesma lente da lupa, que também ajuda a ler letra miúda."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, convergente.\nA: a divergente empurra a imagem ainda mais para trás; é a lente do míope.\nB: a divergente espalha a luz, não junta.\nC: lente não funciona refletindo, funciona por refração.\nD: a lente plana não muda onde a imagem cai."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um míope, que junta a luz demais, usa lente:",
+        "opcoes": [
+          "divergente",
+          "convergente",
+          "plana",
+          "espelhada"
+        ],
+        "certa": "divergente",
+        "resposta": "A divergente espalha um pouco a luz e empurra a imagem até a retina."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-16",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Da sala, com a porta da cozinha entreaberta, uma pessoa ouve perfeitamente a conversa de quem está na cozinha, mas não vê ninguém. A fresta da porta tem o tamanho de um palmo. O som da voz tem comprimento de onda (o tamanho de uma onda, de um pico ao outro) de palmos a metros; o da luz é centenas de vezes menor que um fio de cabelo.\nA pessoa ouve sem ver porque",
+    "A": "o som tem onda de tamanho parecido com a fresta e a contorna; a luz, de onda minúscula, segue em linha reta.",
+    "B": "o som reflete nas paredes, e a luz não reflete.",
+    "C": "a luz é absorvida pela porta, e o som atravessa a madeira.",
+    "D": "o som é polarizado pela porta, e a luz não.",
+    "E": "a luz anda mais devagar que o som e não chega a tempo.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Difração forte quando a abertura é do tamanho da onda: som (palmos) contorna a fresta; luz (minúscula) passa reto e não dobra para a sala. A. Erros: B = luz reflete sim; C = o som passa pela fresta, não precisa atravessar madeira; D = o som não polariza; E = a luz é muito mais rápida que o som.",
+      "ideia": "O som tem onda do tamanho da fresta e dobra ao passar por ela: isso é difração. A luz tem onda minúscula, passa reto e não dobra até os seus olhos.",
+      "pecas": [
+        {
+          "termo": "Comprimento de onda",
+          "significado": "O tamanho de uma onda, de um pico ao pico seguinte. O do som é de palmos a metros; o da luz é centenas de vezes menor que um fio de cabelo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Porta entreaberta: o som chega à sala, a imagem das pessoas não.\nA onda do som é do tamanho da fresta; a da luz é minúscula.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "onda",
+            "titulo": "O som passando pela fresta",
+            "rotulos": [
+              "fresta: um palmo",
+              "som: palmos a metros",
+              "luz: minúscula",
+              "quem dobra?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Ao passar pela fresta, a onda do som se abre para os lados e enche a sala.\nA luz que passa pela fresta segue reta, numa faixa fina, e não vira para onde a pessoa está.\nPor isso o som dobra a esquina da porta e a luz não."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: CONTORNA a abertura = difração.\nSó contorna bem quem tem onda do tamanho da abertura."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Na difração, o que manda é o tamanho da onda perto do tamanho da abertura.\nSom e fresta: tamanhos parecidos, dobra muito.\nLuz e fresta: a fresta é gigante perto da onda da luz, quase não dobra."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, difração.\nB: a luz reflete sim; é assim que o espelho funciona.\nC: o som passa pela fresta; não precisa atravessar a madeira.\nD: o som não polariza; quem polariza é a luz.\nE: a luz é muito mais rápida que o som."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "A rádio AM contorna morros porque a onda dela é:",
+        "opcoes": [
+          "do tamanho dos morros",
+          "minúscula",
+          "polarizada",
+          "mais lenta"
+        ],
+        "certa": "do tamanho dos morros",
+        "resposta": "Contorna bem a onda com tamanho parecido com o obstáculo."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-17",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Uma prefeitura pintou de branco os telhados de casas populares, que antes eram de telha escura. Os moradores contaram que as casas ficaram bem mais frescas por dentro nas tardes de verão. A quantidade de sol que chega aos telhados não mudou: o que mudou foi só a cor da superfície.\nAs casas ficaram mais frescas porque a tinta branca",
+    "A": "absorve mais luz e a guarda, sem passar para dentro da casa.",
+    "B": "devolve a maior parte da luz do Sol, e menos luz é absorvida e vira calor.",
+    "C": "desvia a luz para dentro da casa e espalha o calor.",
+    "D": "faz a luz contornar o telhado e passar ao lado da casa.",
+    "E": "deixa passar só a luz que vibra numa direção, que não esquenta.",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Branco reflete a maior parte da luz; menos luz é absorvida, menos vira calor. B. Erros: A = o branco absorve MENOS; C = refração e levaria mais calor para dentro; D = difração; E = polarização não decide o quanto esquenta.",
+      "ideia": "Luz absorvida vira calor. O telhado branco devolve a maior parte da luz, absorve pouco e esquenta menos.",
+      "pecas": [
+        {
+          "termo": "Absorção",
+          "significado": "A luz é engolida pelo material e vira calor. Roupa preta absorve mais e esquenta mais."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Mesmo sol, cor diferente. A telha escura esquentava; a branca esquenta menos.\nA questão quer o motivo.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "calor-panela",
+            "titulo": "O telhado ao sol",
+            "rotulos": [
+              "mesmo sol",
+              "telha escura",
+              "telha branca",
+              "qual esquenta?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A luz que chega ao telhado tem dois caminhos: ser devolvida ou ser absorvida.\nO que é absorvido vira calor e passa para dentro da casa.\nO branco devolve quase tudo; o escuro absorve quase tudo."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: luz que vira calor = absorção.\nEscuro absorve mais, branco absorve menos."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É a roupa preta da aula: no sol, a camiseta preta esquenta mais que a branca.\nO telhado é uma camiseta gigante da casa.\nTrocar de escuro para branco é trocar de camiseta preta para branca."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B.\nA: o branco absorve MENOS luz, e luz absorvida vira calor, não fica guardada.\nC: desviar a luz para dentro seria refração e esquentaria mais a casa.\nD: contornar é difração.\nE: escolher a direção de vibração é polarização e não decide o quanto esquenta."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "No sol, qual camiseta esquenta mais?",
+        "opcoes": [
+          "preta",
+          "branca",
+          "as duas igual",
+          "nenhuma"
+        ],
+        "certa": "preta",
+        "resposta": "A preta absorve mais luz, e luz absorvida vira calor."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-18",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Numa feira de ciências, um grupo aponta dois lasers para a superfície da água de um aquário. O laser verde desce reto, em pé, de cima para baixo. O laser vermelho chega inclinado. A fumaça de um incenso sobre a água e um pouco de leite na água deixam os dois caminhos visíveis.\nAo passar do ar para a água, o que os alunos devem observar?",
+    "A": "Os dois lasers desviam do caminho, porque os dois mudam de meio.",
+    "B": "Só o laser verde muda de velocidade; o laser vermelho apenas reflete.",
+    "C": "Os dois mudam de velocidade, mas só o laser vermelho, que chega inclinado, desvia.",
+    "D": "Nenhum muda de velocidade; só o laser vermelho desvia, por estar inclinado.",
+    "E": "Os dois batem na água e voltam todos para cima, como num espelho.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Refração: toda luz que passa do ar para a água muda de velocidade; desvia só se entrar inclinada. Laser verde (em pé) segue reto; laser vermelho desvia. C. Erros: A = o em pé não desvia; B = o inclinado também muda de velocidade e passa; D = os dois mudam de velocidade; E = a maior parte passa para dentro.",
+      "ideia": "Os dois lasers mudam de velocidade ao entrar na água. Só o que chega inclinado desvia; o que chega em pé segue reto.",
+      "pecas": [
+        {
+          "termo": "Refração",
+          "significado": "A luz passa de um meio para outro (do ar para a água) e muda de velocidade. Se entra inclinada, também desvia."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Dois lasers entram na água: um em pé e um inclinado.\nA questão quer o que cada um faz na passagem do ar para a água.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "Os lasers no aquário",
+            "rotulos": [
+              "laser verde: em pé",
+              "laser vermelho: inclinado",
+              "ar → água",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Os dois trocam de meio, então os dois mudam de velocidade.\nPense num carrinho entrando na areia: de frente, as duas rodas freiam juntas e ele segue reto.\nEntrando torto, uma roda freia antes da outra e o carrinho vira. A luz faz igual."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Mudar de meio = mudar de velocidade, sempre.\nDesviar = só se entrar inclinada."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É a frase da aula: a refração muda a velocidade e, se a luz entra inclinada, também desvia.\nO laser verde entra de frente: freia, mas segue reto.\nO laser vermelho entra torto: freia e entorta."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C.\nA: o laser em pé não desvia; segue reto.\nB: o inclinado também muda de velocidade e entra na água.\nD: os dois mudam de velocidade, porque os dois trocam de meio.\nE: a maior parte da luz entra na água; não volta toda."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "A luz entra no vidro bem em pé. Ela:",
+        "opcoes": [
+          "muda de velocidade e segue reto",
+          "desvia muito",
+          "volta toda",
+          "para"
+        ],
+        "certa": "muda de velocidade e segue reto",
+        "resposta": "Muda de meio, muda de velocidade; entrou em pé, não desvia."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-19",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "À noite, uma pessoa olha um poste de luz distante através de uma cortina de tecido muito fino, cheio de furinhos minúsculos. Em vez de um ponto de luz, ela vê a luz espalhada em forma de cruz, com manchinhas claras ao redor. Sem a cortina, o poste aparece como um ponto. Os furinhos do tecido são tão pequenos que quase têm o tamanho da onda da luz.\nO espalhamento da luz em cruz é explicado pela",
+    "A": "reflexão, porque a luz bate nos fios e volta para o poste.",
+    "B": "refração, porque a luz passa do ar para o tecido e muda de velocidade.",
+    "C": "absorção, porque o tecido engole a luz e brilha com o calor.",
+    "D": "difração, porque a luz contorna as bordas de furinhos de tamanho parecido com a onda dela.",
+    "E": "polarização, porque o tecido deixa passar só a luz que vibra em cruz.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Abertura de tamanho parecido com o comprimento de onda: a onda contorna as bordas e se abre (difração). Os fios em cruz do tecido dão a cruz. D. Erros: A = luz que volta não chega ao olho; B = a luz passa pelos furos, não pelo fio; C = absorção esquenta, não forma cruz; E = polarização não espalha.",
+      "ideia": "Os furinhos são quase do tamanho da onda da luz. Ao passar por eles, a luz contorna as bordas e se abre: isso é difração.",
+      "pecas": [
+        {
+          "termo": "Comprimento de onda",
+          "significado": "O tamanho de uma onda, de um pico ao pico seguinte. O do som é de palmos a metros; o da luz é centenas de vezes menor que um fio de cabelo."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Sem a cortina: um ponto. Com a cortina de furinhos minúsculos: uma cruz espalhada.\nA questão quer o fenômeno.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "onda",
+            "titulo": "A luz passando nos furinhos",
+            "rotulos": [
+              "poste distante",
+              "furinhos minúsculos",
+              "luz em cruz",
+              "fenômeno = ?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Por uma janela grande a luz passa reta: a janela é gigante perto da onda da luz.\nPor um furo quase do tamanho da onda, a luz contorna as bordas e se abre para os lados.\nOs fios do tecido correm em pé e deitados, então a luz se abre em cruz."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Palavra-chave: CONTORNA abertura do tamanho da onda = difração."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "É a mesma ideia do som passando pela porta entreaberta.\nO som tem onda grande e precisa de abertura grande; a luz tem onda minúscula e precisa de furo minúsculo.\nQuando os tamanhos batem, a onda se espalha."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, difração.\nA: luz que volta para o poste não chega ao olho de quem olha.\nB: a luz passa pelos furos, sem entrar no fio.\nC: absorção vira calor e não desenha cruz.\nE: polarização escolhe a direção da vibração, não espalha a luz."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "A luz passa por uma janela grande. Ela:",
+        "opcoes": [
+          "segue quase reta",
+          "contorna muito",
+          "some",
+          "volta"
+        ],
+        "certa": "segue quase reta",
+        "resposta": "A janela é gigante perto da onda da luz: quase não há difração."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-fis-opt-20",
+    "materia": "Física",
+    "tema": "Óptica",
+    "enunciado": "Numa academia, uma aluna caminha em direção ao espelho plano da parede, a 1 m/s (1 metro a cada segundo), para conferir a postura. Num espelho plano, a imagem fica atrás do espelho, à mesma distância em que a pessoa está na frente dele, e acompanha cada passo que ela dá.\nCom que rapidez diminui a distância entre a aluna e a imagem dela?",
+    "A": "1 m/s",
+    "B": "0,5 m/s",
+    "C": "0 m/s",
+    "D": "4 m/s",
+    "E": "2 m/s",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "A cada segundo a aluna chega 1 m mais perto do espelho e a imagem também chega 1 m mais perto: a distância entre elas cai 1 + 1 = 2 m por segundo. E. Erros: A = só a aluna; B = metade; C = achou que a imagem fica parada e confundiu; D = dobrou duas vezes.",
+      "ideia": "A aluna anda 1 m por segundo para o espelho, e a imagem anda 1 m por segundo para o espelho do outro lado. Juntas, encurtam 2 m a cada segundo.",
+      "pecas": [
+        {
+          "termo": "Espelho plano",
+          "significado": "Espelho reto, sem curva, como o do banheiro. A imagem aparece atrás dele, à mesma distância que a coisa está na frente."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A aluna anda 1 m por segundo para o espelho.\nA questão quer quanto encurta, por segundo, a distância entre ela e a imagem.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "luz-raio",
+            "titulo": "A aluna e o espelho",
+            "rotulos": [
+              "aluna: 1 m/s",
+              "imagem atrás do espelho",
+              "rapidez = ?",
+              ""
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Suponha que ela começa a 5 m do espelho: a imagem está 5 m atrás. Entre as duas: 5 + 5 = 10 m.\nDepois de 1 s, ela está a 4 m: entre as duas, 4 + 4 = 8 m.\nDepois de 2 s, a 3 m: entre as duas, 6 m. Cai 2 m a cada segundo."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "A imagem anda igual à aluna, do outro lado. Some as duas rapidezes.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Espelho plano",
+            "dados": [
+              "v_{aluna} = 1\\,\\text{m/s}",
+              "v_{imagem} = 1\\,\\text{m/s}"
+            ],
+            "formula": "v_{aproxima} = v_{aluna} + v_{imagem}",
+            "legenda": [
+              "$v_{aproxima}$: quanto a distância cai por segundo"
+            ],
+            "contas": [
+              "v_{aproxima} = 1 + 1"
+            ],
+            "resultado": "v_{aproxima} = 2\\,\\text{m/s}",
+            "nota": "Elas se aproximam com o dobro da rapidez da aluna."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A distância entre a aluna e a imagem é sempre o dobro da distância até o espelho.\nSe a distância até o espelho cai 1 m, o dobro dela cai 2 m.\nDuas pessoas andando uma para a outra a 1 m/s também se aproximam 2 m a cada segundo."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, 2 m/s.\nA (1 m/s): é só a aluna até o espelho; esqueceu que a imagem também anda.\nB (0,5 m/s): dividiu em vez de somar.\nC (0 m/s): a imagem não fica parada; ela acompanha a aluna.\nD (4 m/s): dobrou duas vezes."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Você anda para o espelho a 2 m/s. Você e sua imagem se aproximam a:",
+        "opcoes": [
+          "4 m/s",
+          "2 m/s",
+          "1 m/s",
+          "0 m/s"
+        ],
+        "certa": "4 m/s",
+        "resposta": "Você chega 2 m mais perto e a imagem também: 2 + 2 = 4 m por segundo."
+      }
+    }
+  }
+]
