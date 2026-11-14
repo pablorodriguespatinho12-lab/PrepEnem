@@ -37,14 +37,12 @@ export function AulaDoTema({ tema, questao, className }: { tema: string | null |
         ...(desenho.proporcoes.length ? [{ rotulo: 'Direta ou inversa', conteudo: <TelaProporcoes d={desenho} /> }] : []),
       ]
     : [];
-  // O que a questão cobra e a aula do tema não ensina: aula curta + exercícios (12/11/2026).
-  const antes: Tela[] = antesDaQuestao(questao?.id).flatMap((c) => [
-    { rotulo: `Antes: ${c.titulo}`, conteudo: <TelaPasso passo={c.aula} /> },
-    ...c.exercicios.map((e, i) => ({
-      rotulo: `Antes: ${c.titulo}, exercício ${i + 1}`,
-      conteudo: <QuestaoDegrau degrau={e} />,
-    })),
-  ]);
+  // O que a questão cobra e a aula do tema não ensina: aula curta (12/11/2026).
+  // Sem os exercícios no meio (Pablo, 14/11/2026: "não precisa colocar questão no meio
+  // para ver se entendeu, só coloca a explicação"). Ficam no JSON, fora da tela.
+  const antes: Tela[] = antesDaQuestao(questao?.id).map((c) => (
+    { rotulo: `Antes: ${c.titulo}`, conteudo: <TelaPasso passo={c.aula} /> }
+  ));
   const estaQuestao: Tela[] = !questao || !daQuestao
     ? []
     : [
