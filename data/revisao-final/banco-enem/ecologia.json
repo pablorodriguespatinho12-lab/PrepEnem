@@ -46,7 +46,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Número pequeno primeiro: 10% de 100 é 10. Para voltar do 10 ao 100, multiplica por 10.\nAs sardinhas: 10% de quanto dá 600? De 6 000, porque 6 000 ÷ 10 = 600.\nO fitoplâncton: 10% de quanto dá 6 000? De 60 000.\nSão dois degraus, então são duas vezes × 10.",
+          "texto": "Macete de Ecologia: a cada seta só fica 10% (corte um zero). Voltando a seta, ponha o zero de volta.\nAtum 600 → sardinhas 6 000 → fitoplâncton 60 000 kcal.\nConfira: 60 000 corta um zero = 6 000; corta outro = 600. Bate.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Voltando a cadeia",
@@ -56,7 +56,7 @@
             ],
             "formula": "E = 600 \\times 10 \\times 10",
             "legenda": [
-              "um × 10 para cada degrau que desce",
+              "cada seta voltada: ponha um zero (× 10)",
               "dois degraus: atum → sardinha → fitoplâncton"
             ],
             "contas": [
@@ -137,7 +137,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Veneno que não sai do corpo + pergunta de quem tem mais = o topo da cadeia.\nPeixe que come peixe está acima do peixe que come alga.\nPor isso o guia manda evitar o cação e o atum."
+          "texto": "Macete de Ecologia: siga a seta e veja quem fica no topo.\nAlgas → sardinha → cação e atum: o atum come muitas sardinhas e junta o mercúrio de todas.\nMercúrio não sai do corpo: quanto mais setas até o peixe, mais mercúrio. Evite o topo."
         },
         {
           "titulo": "Por que funciona",
@@ -166,7 +166,7 @@
     "id": "d2-banco-bio-eco-03",
     "materia": "Biologia",
     "tema": "Ecologia",
-    "enunciado": "O boi come capim, mas o corpo dele, sozinho, não consegue quebrar a celulose, a parte dura e fibrosa das folhas. No estômago do boi vivem bilhões de bactérias que quebram a celulose e soltam açúcares que o boi aproveita. As bactérias, por sua vez, ganham abrigo quente e comida chegando o tempo todo. Sem essas bactérias, o boi passaria fome mesmo comendo muito capim.\nA relação entre o boi e essas bactérias é de",
+    "enunciado": "O boi come capim, mas o corpo dele, sozinho, não consegue quebrar a celulose, a parte dura e fibrosa das folhas. No estômago do boi vivem bilhões de bactérias que quebram a celulose e a transformam em alimento que o boi aproveita. As bactérias, por sua vez, ganham abrigo quente e comida chegando o tempo todo. Sem essas bactérias, o boi passaria fome mesmo comendo muito capim.\nA relação entre o boi e essas bactérias é de",
     "A": "parasitismo, porque as bactérias vivem dentro do corpo do boi.",
     "B": "competição, porque o boi e as bactérias querem o mesmo capim.",
     "C": "predação, porque as bactérias comem o capim que é do boi.",
@@ -209,7 +209,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Monte a tabelinha de ganhos:\nos dois ganham = mutualismo; um ganha e o outro perde = parasitismo ou predação;\nos dois disputam a mesma coisa = competição.\nAqui é ganha e ganha: mutualismo."
+          "texto": "Macete de Ecologia: pergunte quem ganha e quem perde.\nO boi ganha o açúcar do capim; as bactérias ganham abrigo e comida.\nOs dois ganham = mutualismo."
         },
         {
           "titulo": "Por que funciona",
@@ -281,7 +281,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Um ganha e o outro perde. Sobram predação e parasitismo.\nPredação: um mata e come o outro, como a onça e o veado.\nParasitismo: um vive às custas do outro sem matar logo, como o piolho.\nA erva fica anos no galho: parasitismo."
+          "texto": "Macete de Ecologia: pergunte quem ganha e quem perde.\nA erva ganha água e sais; a árvore perde, e os galhos secam aos poucos.\nUm ganha e o outro perde, sem ser comido de uma vez = parasitismo."
         },
         {
           "titulo": "Por que funciona",
@@ -353,7 +353,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Duas pistas no texto:\n\"veio da África\" = espécie exótica;\n\"tapete que cobre o chão e faz sombra\" = disputa por luz e espaço, ou seja, competição.\nJuntando: exótica invasora vencendo a competição."
+          "texto": "Macete de Ecologia: pôs um ser de fora, siga o que muda.\nO capim da África fecha o chão e tira a luz das mudas nativas.\nAs nativas perdem a disputa por luz e espaço: espécie exótica (de fora) invasora vencendo."
         },
         {
           "titulo": "Por que funciona",
@@ -425,7 +425,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Um mata e come o outro = predação. Isso já elimina A, B, D e E.\nSobra conferir a vantagem de C: sem agrotóxico, nenhum veneno entra na cadeia alimentar.\nE veneno que entra na cadeia vai se acumulando em quem está mais no alto."
+          "texto": "Macete de Ecologia: pergunte quem ganha e quem perde.\nA joaninha ganha comida; o pulgão morre comido = predação. Só a C diz predação.\nVantagem: sem agrotóxico, nenhum veneno entra na cadeia alimentar."
         },
         {
           "titulo": "Por que funciona",
@@ -497,7 +497,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Fungo ou bactéria + resto morto + volta para o solo = decompositor.\nÉ a última parte da cadeia da aula: produtor → consumidor → decompositor.\nSó a alternativa E fala em devolver nutrientes ao solo."
+          "texto": "Macete de Ecologia: siga a seta até o fim da cadeia.\nPlanta → bicho → resto morto → fungos e bactérias → nutrientes de volta ao solo.\nQuem come resto morto e devolve os nutrientes ao solo = decompositor."
         },
         {
           "titulo": "Por que funciona",
@@ -569,17 +569,18 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Faça com números: comece com 10 000 de energia no capim.\nCada degrau corta um zero: 10 000 → 1 000 → 100 → 10 → 1.\nNo quinto degrau sobra 1 de cada 10 000: não dá para um bicho grande viver disso.",
+          "texto": "Macete de Ecologia: a cada seta, corte um zero (fica 10%).\nCapim 10 000 → 1 000 → 100 → 10 → 1: no quinto degrau sobra 1.\nSobra 1 de cada 10 000: não dá para mais um bicho viver disso.",
           "visual": {
             "tipo": "quadro",
             "titulo": "A energia encolhendo",
             "dados": [
               "\\text{produtor} = 10\\,000",
-              "\\text{passa } 10\\% = 0{,}1"
+              "10\\% = 10 \\text{ de cada } 100 = 0{,}1"
             ],
-            "formula": "\\text{próximo} = \\text{anterior} \\times 0{,}1",
+            "formula": "\\text{próximo} = \\text{anterior} \\times 0{,}1 = \\text{anterior} \\div 10",
             "legenda": [
-              "cada degrau corta um zero"
+              "10% = 10 de cada 100 = 0,1",
+              "× 0,1 = ÷ 10 = corta um zero"
             ],
             "contas": [
               "10\\,000 \\times 0{,}1 = 1\\,000",
@@ -661,7 +662,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "10% = 1 de cada 10. Número pequeno primeiro: 10% de 10 pessoas = 1 pessoa.\n50 pessoas são 5 grupos de 10. Cada grupo de 10 vira 1 pessoa.\nEntão sobram 5 pessoas. É o mesmo que 50 × 0,1 = 50 ÷ 10 = 5.",
+          "texto": "Macete de Ecologia: a cada seta, corte um zero (fica 10%).\nMilho → pessoa: 50 pessoas. Milho → galinha → pessoa: uma seta a mais.\nCorte um zero de 50: sobram 5 pessoas.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Pessoas alimentadas",
@@ -672,7 +673,7 @@
             "formula": "P = 50 \\times 0{,}1",
             "legenda": [
               "um degrau a mais: a galinha",
-              "× 0,1 é o mesmo que ÷ 10"
+              "× 0,1 = ÷ 10 = corte um zero"
             ],
             "contas": [
               "50 \\times 0{,}1 = 50 \\div 10",
@@ -752,7 +753,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "A pergunta é sobre evitar novas chegadas, então a resposta tem que fechar o caminho de entrada.\nO caminho é a água de lastro.\nSó a D mexe nessa água antes de ela ser solta perto de rios e praias."
+          "texto": "Macete de Ecologia: pôs um ser de fora, siga por onde ele entrou.\nO mexilhão entrou na água de lastro que o navio solta no porto.\nFeche esse caminho: trocar a água em alto-mar, longe da costa = D."
         },
         {
           "titulo": "Por que funciona",
@@ -824,7 +825,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Espécie trazida de fora que se espalha demais = falta de inimigo natural.\nA pergunta tem duas partes: o sucesso e o dano.\nSó a C responde as duas: sem inimigo (sucesso) e predador nativo morrendo (dano)."
+          "texto": "Macete de Ecologia: pôs um ser de fora, siga o que muda.\nSem inimigo natural aqui, quase todo sapo sobrevive: de cem viraram milhões.\nCobras e lagartos nativos comem o sapo e morrem do veneno. Só a C diz as duas coisas."
         },
         {
           "titulo": "Por que funciona",
@@ -896,7 +897,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ande um degrau de cada vez, a partir de quem sumiu:\nlontra some → ouriço sobe → alga desce.\nOs peixes dependem da alga para se abrigar, então também diminuem."
+          "texto": "Macete de Ecologia: tirou um ser, siga o que muda, uma seta por vez.\nAlga → ouriço → lontra. Lontra some → ouriço sobe → alga desce.\nMenos alga = menos abrigo: os peixes também diminuem."
         },
         {
           "titulo": "Por que funciona",
@@ -904,7 +905,7 @@
         },
         {
           "titulo": "A resposta",
-          "texto": "Letra E, mais ouriços, menos algas e menos peixes abrigados.\nA inverte: sem quem os come, os ouriços aumentam.\nB esquece que mais ouriços comem mais algas.\nC ignora o efeito em cascata: a lontra não come alga, mas come quem come a alga.\nD inventa disputa por luz entre um bicho e uma alga."
+          "texto": "Letra E, mais ouriços, menos algas e menos peixes abrigados.\nA inverte: sem quem os come, os ouriços aumentam.\nB esquece que mais ouriços comem mais algas.\nC ignora o efeito em cascata (um sumiço puxa outro, degrau por degrau da cadeia): a lontra não come alga, mas come quem come a alga.\nD inventa disputa por luz entre um bicho e uma alga."
         }
       ],
       "seuErro": null,
@@ -968,7 +969,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Conte os degraus depois da planta.\nCadeia 1: rato é o 1º, gavião é o 2º.\nCadeia 2: rato é o 1º, cobra é o 2º, gavião é o 3º.\nO gavião é 2º numa e 3º na outra."
+          "texto": "Macete de Ecologia: conte as setas a partir da planta.\nMilho → rato → gavião: 2 setas, o gavião é consumidor 2º.\nMilho → rato → cobra → gavião: 3 setas, o gavião é consumidor 3º."
         },
         {
           "titulo": "Por que funciona",
@@ -1040,7 +1041,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Vezes 10 empurra a vírgula 1 casa para a direita. Pequeno primeiro: 0,1 × 10 = 1 (dez décimos fazem 1 inteiro).\n0,04 × 10 = 0,4 (peixe pequeno).\n0,4 × 10 = 4 (peixe grande).\n4 × 10 = 40 (garça).",
+          "texto": "Macete de Ecologia: conte as setas. O veneno que não sai do corpo faz o contrário da energia: × 10 a cada seta.\nPlâncton → peixe pequeno → peixe grande → garça: 3 setas.\n0,04 → 0,4 → 4 → 40 mg/kg (× 10 anda a vírgula uma casa para a direita).",
           "visual": {
             "tipo": "quadro",
             "titulo": "DDT subindo a cadeia",
@@ -1132,22 +1133,22 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Número pequeno primeiro: 15% de 100 kcal = 15 kcal.\n4 000 são 40 grupos de 100. Cada grupo dá 15: 40 × 15 = 600 kcal nos caramujos.\n600 são 6 grupos de 100. Cada grupo dá 15: 6 × 15 = 90 kcal nos peixes.",
+          "texto": "Macete de Ecologia: a cada seta só passa uma parte. Aqui não é 10%: é 15%, ou 15 de cada 100.\n4 000 = 40 grupos de 100 → 40 × 15 = 600 kcal nos caramujos.\n600 = 6 grupos de 100 → 6 × 15 = 90 kcal nos peixes.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Dois degraus de 15%",
             "dados": [
               "\\text{algas} = 4\\,000\\,\\text{kcal}",
-              "\\text{passa } 15\\% = 0{,}15"
+              "15\\% = 15 \\text{ de cada } 100"
             ],
-            "formula": "E = 4\\,000 \\times 0{,}15 \\times 0{,}15",
+            "formula": "\\text{passa} = (\\text{quantos } 100) \\times 15",
             "legenda": [
-              "15% de cada 100 = 15",
+              "4 000 tem 40 grupos de 100; 600 tem 6",
               "segundo corte sobre o que sobrou"
             ],
             "contas": [
-              "40 \\times 15 = 600",
-              "6 \\times 15 = 90"
+              "4\\,000 \\div 100 = 40;\\ 40 \\times 15 = 600",
+              "600 \\div 100 = 6;\\ 6 \\times 15 = 90"
             ],
             "resultado": "E = 90\\,\\text{kcal}",
             "nota": "Chegam 90 kcal aos peixes."
@@ -1223,7 +1224,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Pergunte o que cada lado ganha:\nabelha ganha néctar; macieira ganha o pólen entregue.\nOs dois ganham = mutualismo. Tirar um lado faz o outro perder."
+          "texto": "Macete de Ecologia: tirou um ser, siga o que muda. Antes, veja quem ganha e quem perde.\nAbelha ganha néctar; macieira ganha o pólen levado de flor em flor = mutualismo.\nSem abelha → menos flor com pólen → menos maçã."
         },
         {
           "titulo": "Por que funciona",
@@ -1295,7 +1296,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Compare os tubos: separadas vão bem, juntas uma some.\nEntão o problema é estar junto disputando algo.\nO texto diz o que elas disputam: a mesma comida. Isso é competição."
+          "texto": "Macete de Ecologia: pergunte quem ganha e quem perde.\nSeparadas, as duas vão bem; juntas, disputam a mesma comida e uma some.\nAs duas disputam e uma perde, sem ninguém comer ninguém = competição."
         },
         {
           "titulo": "Por que funciona",
@@ -1367,7 +1368,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ache quem faz o próprio alimento: a planta, o produtor.\nTudo o que o caramujo e o peixe comem começou na planta.\nSe o produtor para, a cadeia inteira fica sem energia."
+          "texto": "Macete de Ecologia: tirou um ser, siga o que muda, seta por seta.\nNo escuro, a planta (o produtor) para de fazer alimento: é como tirar o começo da cadeia.\nPlanta → caramujo → peixe: falta comida para o caramujo e depois para o peixe."
         },
         {
           "titulo": "Por que funciona",
@@ -1439,7 +1440,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Número pequeno primeiro: 10 kg de capim viram 1 kg de boi.\nEntão cada 1 kg de boi pede 10 kg de capim.\n40 kg de boi pedem 40 × 10 = 400 kg de capim.\nConfira: 10% de 400 é 400 ÷ 10 = 40. Bate.",
+          "texto": "Macete de Ecologia: a cada seta só fica 10% (corte um zero). Voltando a seta, ponha o zero de volta.\nCapim → novilho: 40 kg de corpo vieram de 400 kg de capim.\nConfira: 400 corta um zero = 40. Bate.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Capim que o novilho comeu",
@@ -1529,7 +1530,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Um mata e come o outro = predação.\nNa predação, o número do predador segue o da presa, sempre um pouco atrasado.\nPresa caiu, predador cai logo depois."
+          "texto": "Macete de Ecologia: pergunte quem ganha e quem perde, e siga o que muda.\nCapim → lebre → lince: o lince mata e come a lebre = predação.\nLebre cai → falta comida para o lince → menos filhotes sobrevivem → lince cai logo depois."
         },
         {
           "titulo": "Por que funciona",

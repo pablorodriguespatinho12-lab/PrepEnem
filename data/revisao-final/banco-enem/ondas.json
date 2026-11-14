@@ -46,7 +46,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Com números pequenos: 10 m divididos em 20 ondas dão 10 ÷ 20 = 0,5 m para cada uma.\nAqui é igual: 340 m divididos em 680 ondas.\n340 ÷ 680 = 0,5 m, porque 680 é o dobro de 340.",
+     "texto": "Macete de Ondas: v = λ × f, então o tamanho de 1 onda é velocidade ÷ frequência.\nEm 1 s o som anda 340 m e cabem nele 680 ondas: quantos metros para cada onda? 340 ÷ 680.\n680 é o dobro de 340, então cada onda tem 0,5 m.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O diapasão",
@@ -139,7 +139,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Passe para milímetros primeiro: 1 m tem 1 000 mm (os risquinhos menores da régua).\nEntão 1 500 m = 1 500 × 1 000 = 1 500 000 mm.\nAgora divida: 1 500 000 ÷ 3 000 000.\nCorte os milhões dos dois lados: 1,5 ÷ 3 = 0,5 mm, porque 3 × 0,5 = 1,5.",
+     "texto": "Macete de Ondas: v = λ × f, então o tamanho de 1 onda é velocidade ÷ frequência.\nEm 1 s: 1 500 m = 1 500 000 mm, repartidos em 3 000 000 de ondas.\nCorte os milhões: 1,5 ÷ 3 = 0,5 mm para cada onda, porque 3 × 0,5 = 1,5.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O ultrassom",
@@ -233,7 +233,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Com números pequenos: andar 6 m em 3 s é 6 ÷ 3 = 2 m por segundo.\nAqui: 600 m em 30 s.\n600 ÷ 30 = 20 m/s. Corte um zero de cada: 60 ÷ 3 = 20.",
+     "texto": "Macete de Ondas: distância = velocidade × tempo, então velocidade = distância ÷ tempo.\nQuantos metros em cada segundo? 600 ÷ 30 = 60 ÷ 3 = 20 m/s.\nQuem anda é o movimento; cada torcedor fica na cadeira.",
      "visual": {
       "tipo": "quadro",
       "titulo": "A ola",
@@ -325,7 +325,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Com números pequenos: 340 m a 340 m/s levam 1 s; 170 m levam meio segundo.\n100 m é menos que 170 m, então leva menos que meio segundo.\n100 ÷ 340: teste 0,3. 340 × 0,3 = 102, quase 100. O atraso é cerca de 0,3 s.",
+     "texto": "Macete de Ondas: tempo = distância ÷ velocidade; quantas vezes 340 m cabem em 100 m?\nMenos de 1. Teste 0,3: 340 × 0,3 = 102, quase 100. Atraso de cerca de 0,3 s.\nO cronômetro liga 0,3 s tarde, então marca 0,3 s a menos.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O atraso do tiro",
@@ -419,7 +419,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Com números pequenos: 20 m a 10 m/s levam 20 ÷ 10 = 2 s.\nPelo ar: 1 700 ÷ 340 = 5 s, porque 340 × 5 = 1 700.\nPelo trilho: 1 700 ÷ 5 000 = 17 ÷ 50 (corte dois zeros).\nDobre os dois: 17 ÷ 50 = 34 ÷ 100 = 0,34 s. Dividir por 100 anda a vírgula 2 casas para a esquerda.\nDiferença: 5 − 0,34 = 4,66 s, cerca de 4,7 s.",
+     "texto": "Macete de Ondas: tempo = distância ÷ velocidade, com a velocidade de cada meio.\nAr: quantos 340 m cabem em 1 700 m? 5, porque 340 × 5 = 1 700. São 5 s.\nTrilho: 1 700 ÷ 5 000 = 17 ÷ 50 = 34 ÷ 100 = 0,34 s.\nDiferença: 5 − 0,34 = 4,66 s, cerca de 4,7 s.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Trilho contra ar",
@@ -515,7 +515,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Passe para milímetros: 340 m = 340 × 1 000 = 340 000 mm.\nDivida: 340 000 ÷ 50 000. Corte os milhares: 340 ÷ 50 = 34 ÷ 5.\nDobre os dois para tirar a conta quebrada: 34 ÷ 5 = 68 ÷ 10 = 6,8 mm, quase 7 mm.\nConfira: 5 × 6,8 = 34.",
+     "texto": "Macete de Ondas: v = λ × f, então o tamanho de 1 onda é velocidade ÷ frequência.\n340 m = 340 000 mm, repartidos em 50 000 ondas. Corte os milhares: 340 ÷ 50 = 34 ÷ 5.\nDobre os dois: 68 ÷ 10 = 6,8 mm, quase 7 mm. E 50 000 Hz passa dos 20 000 Hz: não ouvimos.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O som do morcego",
@@ -608,7 +608,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Corte os oito zeros iguais: 300 000 000 vira 3, e 2 500 000 000 vira 25.\nCom números pequenos: 3 ÷ 25. Teste 0,12: 25 × 0,12 = 3. Fecha.\nλ = 0,12 m. Em centímetros: 0,12 × 100 = 12 cm.",
+     "texto": "Macete de Ondas: v = λ × f, então o tamanho de 1 onda é velocidade ÷ frequência.\nCorte oito zeros dos dois: 300 000 000 vira 3 e 2 500 000 000 vira 25. Fica 3 ÷ 25.\nTeste 0,12: 25 × 0,12 = 3. λ = 0,12 m, e 0,12 × 100 = 12 cm.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O micro-ondas",
@@ -702,7 +702,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Com números pequenos: 15 m divididos em 5 ondas dão 15 ÷ 5 = 3 m cada.\nAqui: 1 500 m divididos em 500 ondas por segundo.\n1 500 ÷ 500 = 3 m. Corte dois zeros: 15 ÷ 5 = 3.",
+     "texto": "Macete de Ondas: use a velocidade do meio. A caixa está na água: 1 500 m/s (o 340 é do ar).\nλ = v ÷ f: 1 500 m repartidos em 500 ondas. Corte dois zeros: 15 ÷ 5 = 3 m cada.",
      "visual": {
       "tipo": "quadro",
       "titulo": "A nota na água",
@@ -795,13 +795,14 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Primeira corda: 340 m divididos em 170 ondas, 340 ÷ 170 = 2 m cada.\nSegunda corda: 340 m divididos em 340 ondas, 340 ÷ 340 = 1 m cada.\nDobrou a frequência, a onda caiu pela metade.",
+     "texto": "Macete de Ondas: no mesmo ar, frequência e comprimento andam ao contrário.\n340 Hz é o dobro de 170 Hz: som mais agudo, e a onda cai pela metade.\nPrimeira: 340 ÷ 170 = 2 m. Segunda: metade disso, 1 m.",
      "visual": {
       "tipo": "quadro",
       "titulo": "A segunda corda",
       "dados": [
        "v = 340\\,\\text{m/s}",
-       "f = 340\\,\\text{Hz}"
+       "f_1 = 170\\,\\text{Hz}",
+       "f_2 = 340\\,\\text{Hz}"
       ],
       "formula": "\\lambda = \\frac{v}{f}",
       "legenda": [
@@ -810,7 +811,8 @@
        "f: vibrações por segundo"
       ],
       "contas": [
-       "\\lambda = \\frac{340}{340}"
+       "\\lambda_1 = \\frac{340}{170} = 2\\,\\text{m}",
+       "\\lambda_2 = \\frac{2}{2}"
       ],
       "resultado": "\\lambda = 1\\,\\text{m}",
       "nota": "Mais aguda e com onda mais curta que a primeira."
@@ -888,7 +890,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Com números pequenos: 34 m divididos em 17 ondas dão 34 ÷ 17 = 2 m cada.\nAqui são 340 m divididos em 17 ondas, dez vezes mais metros.\n340 ÷ 17 = 20 m.",
+     "texto": "Macete de Ondas: v = λ × f, então o tamanho de 1 onda é velocidade ÷ frequência.\n340 m repartidos em 17 ondas: 340 ÷ 17 = 20 m cada, porque 17 × 20 = 340.\n17 Hz fica abaixo dos 20 Hz que ouvimos: grave demais.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O chamado do elefante",
@@ -981,7 +983,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Com números pequenos: 10 m em 2 s é 10 ÷ 2 = 5 m por segundo.\nAqui: 50 m em 10 s. 50 ÷ 10 = 5 m/s.\nO quadro faz o mesmo pela fórmula: 1 onda a cada 10 s é f = 1 ÷ 10 = 0,1 onda por segundo, porque 10 × 0,1 = 1.\nE v = 50 × 0,1 = 5 m/s: vezes 0,1 é o mesmo que dividir por 10.",
+     "texto": "Macete de Ondas: distância = velocidade × tempo. A onda anda de uma crista à próxima em 10 s.\nVelocidade = distância ÷ tempo: 50 ÷ 10 = 5 m/s.\nPela fórmula dá o mesmo: f = 1 ÷ 10 = 0,1 Hz e v = 50 × 0,1 = 5 m/s.",
      "visual": {
       "tipo": "quadro",
       "titulo": "As ondas do mar",
@@ -1074,7 +1076,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Com números pequenos: 1 000 m a 200 m/s levam 1 000 ÷ 200 = 5 s.\nAqui: 360 000 ÷ 200. Corte dois zeros: 3 600 ÷ 2 = 1 800 s.\nEm minutos: 1 800 ÷ 60 = 30 minutos.",
+     "texto": "Macete de Ondas: tempo = distância ÷ velocidade. Antes, passe para metros: 360 km = 360 000 m.\nQuantos 200 m cabem em 360 000 m? Corte dois zeros: 3 600 ÷ 2 = 1 800 s.\nEm minutos: 1 800 ÷ 60 = 30 minutos.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O alerta do tsunami",
@@ -1168,7 +1170,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Teste as alternativas com tempo = distância ÷ velocidade.\n120 km: P leva 120 ÷ 6 = 20 s. S leva 120 ÷ 3 = 40 s. Diferença: 40 − 20 = 20 s. Fecha.\n60 km: 10 s e 20 s, diferença de 10 s. Não fecha.",
+     "texto": "Macete de Ondas: tempo = distância ÷ velocidade, para cada onda.\nTeste 120 km: a P leva 120 ÷ 6 = 20 s; a S leva 120 ÷ 3 = 40 s.\nDiferença: 40 − 20 = 20 s. Fecha. Com 60 km daria só 10 s.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Onda P e onda S",
@@ -1265,7 +1267,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Com números pequenos: em 1 s o som anda 340 m; em 0,1 s, 34 m; em 0,01 s, 3,4 m.\n340 × 0,01 = 340 ÷ 100 = 3,4 m de ida e volta.\nMetade: 3,4 ÷ 2 = 1,7 m.",
+     "texto": "Macete de Ondas: distância = velocidade × tempo; no eco, a metade.\nIda e volta: 340 × 0,01 = 340 ÷ 100 = 3,4 m.\nAté o obstáculo: 3,4 ÷ 2 = 1,7 m.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O eco no para-choque",
@@ -1359,7 +1361,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Com números pequenos: 2 subidas por segundo, em 3 s, são 2 × 3 = 6 subidas.\nEm 10 s: 2 × 10 = 20 subidas.\nE a rolha anda quase nada: continua no lugar.",
+     "texto": "Macete de Ondas: distância = velocidade × tempo vale para a onda, não para a água.\nA onda anda 0,6 × 10 = 6 m pelo lago; a rolha só sobe e desce no lugar.\nSubidas: 2 por segundo × 10 s = 20.",
      "visual": {
       "tipo": "quadro",
       "titulo": "As subidas da rolha",
@@ -1451,7 +1453,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Com ar, a conta do aluno estaria certa: 680 ÷ 340 = 2 s.\nMas os 340 m/s são a velocidade do som no ar.\nSem ar, não há velocidade nenhuma: o som não chega.",
+     "texto": "Macete de Ondas: use a velocidade do meio. Os 340 m/s são do ar.\nCom ar, seria 680 ÷ 340 = 2 s (quantos 340 m cabem em 680 m).\nNo vácuo não há meio: o som não anda e não chega.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Som com e sem ar",
@@ -1544,7 +1546,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Os dois sons andam a 340 m/s. Com a mesma velocidade, frequência e comprimento de onda andam ao contrário: um sobe, o outro desce na mesma proporção.\nQuantas vezes a frequência da aguda é maior? 17 000 ÷ 34 = 500.\nEntão a onda grave é 500 vezes maior. Conferindo: grave 340 ÷ 34 = 10 m; aguda 340 ÷ 17 000 = 0,02 m.",
+     "texto": "Macete de Ondas: no mesmo ar, frequência e comprimento andam ao contrário.\nQuantas vezes 34 cabe em 17 000? 17 000 ÷ 34 = 500: a aguda vibra 500 vezes mais.\nEntão a onda grave é 500 vezes maior.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Grave e agudo",
@@ -1560,9 +1562,7 @@
        "f: vibrações por segundo"
       ],
       "contas": [
-       "\\lambda_{grave} = \\frac{340}{34} = 10\\,\\text{m}",
-       "\\lambda_{agudo} = \\frac{340}{17\\,000} = 0{,}02\\,\\text{m}",
-       "\\frac{10}{0{,}02} = 500"
+       "\\frac{17\\,000}{34} = 500"
       ],
       "resultado": "500\\ \\text{vezes maior}",
       "nota": "Onda grave de 10 m; aguda de 2 cm."
@@ -1640,7 +1640,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Frequência: 1 020 ÷ 12 = 85 vibrações por segundo. Confira: 12 × 85 = 1 020.\nCom números pequenos: 8 m divididos em 2 ondas dão 4 m cada.\nAqui: 340 ÷ 85 = 4 m. Confira: 85 × 4 = 340.",
+     "texto": "Macete de Ondas: v = λ × f, e f são as vibrações em 1 segundo.\nEm 1 s: 1 020 ÷ 12 = 85 vibrações, porque 12 × 85 = 1 020.\n340 m repartidos em 85 ondas: 340 ÷ 85 = 4 m cada, porque 85 × 4 = 340.",
      "visual": {
       "tipo": "quadro",
       "titulo": "A corda filmada",
@@ -1734,7 +1734,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Com números pequenos: 10 m em 2 s é 5 m/s.\nAqui: 3 000 ÷ 2 = 1 500 m/s.\nComparar: 1 500 ÷ 340. Como 340 × 4 = 1 360 e 340 × 5 = 1 700, fica entre 4 e 5, perto de 4,4.",
+     "texto": "Macete de Ondas: distância = velocidade × tempo, então velocidade = distância ÷ tempo.\nNa água: 3 000 ÷ 2 = 1 500 m/s.\nQuantas vezes 340 cabe em 1 500? 340 × 4 = 1 360, quase: cerca de 4 vezes.",
      "visual": {
       "tipo": "quadro",
       "titulo": "O som na água",
@@ -1828,7 +1828,7 @@
     },
     {
      "titulo": "Jeito rápido",
-     "texto": "Estádio: 340 ÷ 340 = 1 s.\nCasa: 1 000 ÷ 300 000 = 1 ÷ 300 de segundo (corte três zeros).\n1 ÷ 300 é 1 ÷ 3 e depois ÷ 100. 1 ÷ 3 dá cerca de 0,3, porque 3 × 0,3 = 0,9, quase 1.\nDividir por 100 anda a vírgula 2 casas para a esquerda: 0,3 vira 0,003 s, bem menos que 1 s.\nConfira: 300 × 0,003 = 0,9, quase 1.",
+     "texto": "Macete de Ondas: tempo = distância ÷ velocidade, com a velocidade de cada onda.\nEstádio: 340 ÷ 340 = 1 s.\nCasa: quantos 300 000 km cabem em 1 000 km? 1 000 ÷ 300 000 = 1 ÷ 300 de segundo.\n1 ÷ 300 é cerca de 0,003 s (300 × 0,003 = 0,9, quase 1): bem menos que 1 s.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Quem ouve primeiro",

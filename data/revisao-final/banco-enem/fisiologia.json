@@ -46,7 +46,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Palavra-chave: vermelho leva.\nSe algo atrapalha a hemácia, o problema é falta de oxigênio, não de defesa nem de coagulação."
+          "texto": "Macete de Fisiologia: siga o oxigênio.\nPulmão → hemácia → células. O CO ocupa o lugar do oxigênio na hemácia.\nA hemácia chega vazia, e o cérebro, que gasta muito oxigênio, sente primeiro: tontura e desmaio."
         },
         {
           "titulo": "Por que funciona",
@@ -118,7 +118,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Soro: anticorpo pronto, age agora, para quem já foi atingido.\nVacina: ensina a fazer anticorpo, demora, serve para antes de pegar a doença."
+          "texto": "Macete de Fisiologia: cada parte tem um serviço.\nO glóbulo branco defende com anticorpo, mas fazer anticorpo novo leva semanas.\nSoro traz o anticorpo pronto e age agora; vacina só ensina a fazer, e demora."
         },
         {
           "titulo": "Por que funciona",
@@ -147,7 +147,7 @@
     "id": "d2-banco-bio-fis-03",
     "materia": "Biologia",
     "tema": "Fisiologia Humana e Saúde",
-    "enunciado": "Num exame, duas pessoas em jejum beberam a mesma quantidade de água com açúcar, e o laboratório mediu a glicose (açúcar) do sangue delas duas horas depois. A medida de Ana foi 110 e voltou perto do valor de jejum. A de Bruno foi 240, mais do que o dobro, e continuava alta. O pâncreas dos dois é saudável, mas as células de Bruno quase não respondem ao hormônio que o pâncreas solta depois da refeição.\nO resultado de Bruno se explica porque",
+    "enunciado": "Num exame, duas pessoas em jejum (sem comer há horas) beberam a mesma quantidade de água com açúcar, e o laboratório mediu a glicose (açúcar) do sangue delas duas horas depois. A medida de Ana foi 110 e voltou perto do valor de jejum. A de Bruno foi 240, mais do que o dobro, e continuava alta. O pâncreas dos dois é saudável, mas as células de Bruno quase não respondem ao hormônio que o pâncreas solta depois da refeição.\nO resultado de Bruno se explica porque",
     "A": "a insulina dele não consegue fazer a glicose sair do sangue e entrar nas células.",
     "B": "o pâncreas dele não fabrica nenhuma insulina.",
     "C": "a insulina dele joga mais glicose no sangue do que a de Ana.",
@@ -190,7 +190,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Palavra-chave: insulina baixa o açúcar.\nSe o açúcar não baixou e o pâncreas é saudável, a insulina existe mas não está funcionando."
+          "texto": "Macete de Fisiologia: siga o caminho da comida.\nAçúcar → intestino delgado → sangue. Para sair do sangue, a insulina põe a glicose nas células.\nO pâncreas faz insulina, mas as células de Bruno não respondem: a glicose fica no sangue."
         },
         {
           "titulo": "Por que funciona",
@@ -262,7 +262,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Muitos saquinhos pequenos têm muito mais parede do que poucas bolsas grandes.\nMenos parede, menos lugar para o oxigênio atravessar, menos oxigênio no sangue."
+          "texto": "Macete de Fisiologia: siga o oxigênio.\nAr → parede do alvéolo → sangue. O oxigênio só entra no sangue atravessando essa parede.\nPoucas bolsas grandes têm menos parede que muitos saquinhos: passa menos oxigênio."
         },
         {
           "titulo": "Por que funciona",
@@ -334,7 +334,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Mais trabalho no músculo = mais oxigênio pedido.\nQuem leva oxigênio é o sangue, empurrado pelo coração. Coração mais rápido, mais entrega por minuto."
+          "texto": "Macete de Fisiologia: siga o oxigênio.\nPulmão → hemácia → músculo. Correndo, o músculo queima mais glicose e pede mais oxigênio.\nRespiração rápida pega mais oxigênio e solta o gás carbônico; coração rápido entrega mais por minuto."
         },
         {
           "titulo": "Por que funciona",
@@ -406,7 +406,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "O que segura a coagulação faz sangrar mais.\nAAS segura a plaqueta, então o corte sangra mais e por mais tempo."
+          "texto": "Macete de Fisiologia: cada parte tem um serviço.\nA plaqueta fecha o corte. O AAS deixa a plaqueta menos grudenta.\nPlaqueta fraca = corte fecha devagar = sangra mais e por mais tempo."
         },
         {
           "titulo": "Por que funciona",
@@ -482,7 +482,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Mais de um lado, menos do outro, com furo no meio: a substância passa para o lado de menos.\nNinguém precisa empurrar."
+          "texto": "Macete de Fisiologia: cada parte tem um serviço.\nO rim filtra a sujeira (ureia) do sangue; com o rim parado, a máquina faz esse serviço.\nMuita ureia dentro, nenhuma fora, furo no meio: ela passa para onde tem menos, sem empurrão."
         },
         {
           "titulo": "Por que funciona",
@@ -554,11 +554,11 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Comer não basta: o alimento precisa passar para o sangue.\nMenos parede no intestino delgado, menos passagem, menos alimento chegando ao corpo."
+          "texto": "Macete de Fisiologia: siga o caminho da comida.\nBoca → estômago → intestino delgado. É no intestino delgado que a comida passa para o sangue.\nParede lisa = menos passagem: ela comia, mas pouco alimento chegava ao corpo."
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Uma toalha felpuda seca mais que um pano liso do mesmo tamanho, porque tem muito mais fio encostando na água.\nAs dobrinhas são os fios da toalha do intestino.\nO que não passou para o sangue segue pelo intestino e sai na diarreia. Por isso ela emagrecia e tinha anemia."
+          "texto": "Uma toalha felpuda seca mais que um pano liso do mesmo tamanho; as dobrinhas são os fios da toalha do intestino.\nO que não passou para o sangue sai na diarreia, por isso ela emagrecia.\nO ferro da comida também não passava, e sem ferro o corpo faz menos hemácias: é a anemia (falta de hemácias, o que cansa)."
         },
         {
           "titulo": "A resposta",
@@ -626,7 +626,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Pista no texto: \"solta no sangue aos poucos\" = hormônio.\nResposta em menos de 1 segundo = nervo."
+          "texto": "Macete de Fisiologia: cada parte tem um serviço.\nNeurônio leva mensagem elétrica: rápida, menos de 1 segundo para tirar a mão.\nHormônio vai pelo sangue \"aos poucos\": lento, como crescer 10 cm em um ano."
         },
         {
           "titulo": "Por que funciona",
@@ -698,7 +698,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Veja qual célula saiu do normal e use a palavra-chave dela.\nBranco alto = corpo se defendendo."
+          "texto": "Macete de Fisiologia: cada parte tem um serviço.\nHemácia leva oxigênio, glóbulo branco defende, plaqueta fecha. Só o branco saiu do normal (18 000).\nBranco alto = corpo se defendendo de uma infecção, a apendicite."
         },
         {
           "titulo": "Por que funciona",
@@ -766,11 +766,11 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "Pela aula, os rins filtram o sangue e fazem a urina.\nNo calor, o corpo perdeu muita água no suor. Os rins então devolvem ao sangue o máximo de água que podem.\nA ureia precisa sair igual, mas sai dissolvida em pouca água."
+          "texto": "Pela aula, os rins filtram o sangue e fazem a urina. Ao filtrar, eles também devolvem ao sangue a água que o corpo precisa.\nNo calor, o corpo perdeu muita água no suor. Então os rins devolvem ao sangue o máximo de água que podem.\nA ureia precisa sair igual, mas sai dissolvida em pouca água."
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Mesma sujeira em pouca água = urina escura.\nMesma sujeira em muita água = urina clara."
+          "texto": "Macete de Fisiologia: cada parte tem um serviço.\nO rim filtra o sangue e devolve a água que o corpo precisa; o resto vira urina.\nCom pouca água no corpo, ele devolve mais água, e a mesma ureia sai em pouca água: urina escura."
         },
         {
           "titulo": "Por que funciona",
@@ -842,7 +842,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Número pequeno primeiro: 0,5 L cabe 10 vezes em 5 L (10 × 0,5 = 5).\nEntão 0,5 L é 1 de cada 10 partes do sangue, ou seja, 10%.\n1,5 L = 3 × 0,5 L. Então é 3 × 10% = 30%.\nConfira: 30% = 3 de cada 10, e 3 décimos de 5 L dão 1,5 L.",
+          "texto": "Macete de Fisiologia: siga o oxigênio. Menos sangue = menos hemácias = menos oxigênio no cérebro: confusão.\n0,5 L cabe 10 vezes em 5 L, então é 10%. 1,5 L = 3 × 0,5 L, então 3 × 10% = 30%.\nCoração disparado: o pouco sangue dá mais voltas para entregar oxigênio.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Quanto do sangue saiu",
@@ -934,7 +934,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Primeiro contato: aprende devagar.\nSegundo contato: lembra e responde rápido e forte. É para isso que serve repetir a dose."
+          "texto": "Macete de Fisiologia: cada parte tem um serviço.\nO glóbulo branco defende e guarda memória do que já viu.\n1ª dose: aprende devagar. 2ª dose: lembra e faz anticorpo rápido e em maior quantidade."
         },
         {
           "titulo": "Por que funciona",
@@ -1006,7 +1006,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Anticorpo pronto vindo de fora = proteção na hora, mas emprestada.\nÉ a mesma ideia do soro: a defesa chega feita."
+          "texto": "Macete de Fisiologia: cada parte tem um serviço.\nO glóbulo branco faz anticorpo, mas o do bebê ainda faz pouco.\nO leite traz anticorpo pronto da mãe: proteção na hora, emprestada, como o soro."
         },
         {
           "titulo": "Por que funciona",
@@ -1078,7 +1078,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ferro → hemoglobina → oxigênio → energia.\nSe falta o primeiro da fila, falta tudo o que vem depois."
+          "texto": "Macete de Fisiologia: siga o oxigênio.\nFerro → hemoglobina → hemácia leva oxigênio → célula faz energia.\nFalta ferro, falta hemoglobina: chega pouco oxigênio, e a criança cansa."
         },
         {
           "titulo": "Por que funciona",
@@ -1150,7 +1150,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Insulina tira açúcar do sangue; comida põe açúcar no sangue.\nInsulina sem comida = açúcar baixo. Comida sem insulina (no diabetes) = açúcar alto."
+          "texto": "Macete de Fisiologia: siga o caminho da comida. Comida → intestino → açúcar no sangue.\nDiabetes: o corpo não faz ou não usa bem a insulina, a chave que põe o açúcar nas células. Comida sem insulina = açúcar alto.\nEla tomou insulina e não comeu: a insulina tirou açúcar do sangue sem chegar comida, e ele caiu para 50."
         },
         {
           "titulo": "Por que funciona",
@@ -1222,7 +1222,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Água de cal turva = tem gás carbônico.\nAr que sai do pulmão = ar com o gás carbônico das células."
+          "texto": "Macete de Fisiologia: siga o oxigênio.\nPulmão → hemácia → célula. A célula usa o oxigênio e solta gás carbônico, que o sangue leva de volta ao pulmão.\nO ar soprado leva esse gás carbônico, e a água de cal turva com ele."
         },
         {
           "titulo": "Por que funciona",
@@ -1294,7 +1294,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Sem sangue, sem oxigênio. Sem oxigênio, sem energia. Sem energia, a célula morre.\nPor isso cada minuto conta."
+          "texto": "Macete de Fisiologia: siga o oxigênio.\nCoração → artéria → músculo do coração. Artéria entupida: o sangue com oxigênio não chega.\nSem oxigênio, a célula não faz energia e morre. Por isso cada minuto conta."
         },
         {
           "titulo": "Por que funciona",
@@ -1366,11 +1366,11 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "O que saiu, volta: água e sais.\nO soro não cura a causa da diarreia; ele segura a criança até o corpo vencer a doença."
+          "texto": "Macete de Fisiologia: siga o caminho da comida.\nO que se bebe passa para o sangue no intestino delgado. Na diarreia, água e sais saem em vez de passar.\nO soro devolve pela boca o que saiu: água e sais."
         },
         {
           "titulo": "Por que funciona",
-          "texto": "Água pura sozinha não basta, porque os sais também foram embora.\nO sal repõe os sais, e um pouco de açúcar ajuda o intestino a puxar o sal e a água para o sangue.\nAos golinhos, a criança não vomita tudo de novo."
+          "texto": "Água pura sozinha não basta, porque os sais também foram embora.\nO sal repõe os sais. O intestino puxa açúcar e sal juntos para o sangue, e a água vai atrás deles: por isso o soro leva um pouco de açúcar.\nAos golinhos, a criança não vomita tudo de novo."
         },
         {
           "titulo": "A resposta",
@@ -1438,7 +1438,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Um só exército para dois inimigos.\nSe o remédio acalma o exército para poupar o rim, sobra menos força contra os micróbios."
+          "texto": "Macete de Fisiologia: cada parte tem um serviço.\nO glóbulo branco defende: ataca o que é estranho, seja o rim de outra pessoa, seja um micróbio.\nRemédio que acalma o branco para poupar o rim deixa menos defesa contra micróbios."
         },
         {
           "titulo": "Por que funciona",
