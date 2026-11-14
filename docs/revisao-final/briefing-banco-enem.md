@@ -29,6 +29,17 @@ guardado no banco". Ele tem TDAH, sabe pouco e só estudou a aula do conteúdo.
 3. **Uma ideia por linha:** texto do passo em linhas separadas por "\n", cada linha até 170
    letras, 3 a 5 linhas. "A resposta": "Letra X, ..." e depois uma linha por alternativa errada.
 
+## Andamento (atualizar a cada leva)
+- Leva 1 (13/11, gravada no banco, PR 22): eletricidade, termodinamica, ondas, optica.
+- Leva 2 (cortada pelo limite de uso, 13/11 ~20h): dinamica, organica, ambiental, solucoes-ph.
+  Nenhum arquivo dela foi salvo; recomeçar do zero.
+- Faltam: eletroquimica, estequiometria, ecologia, fisiologia, genetica, citologia, evolucao,
+  microbiologia, aritmetica, grandezas, estatistica, funcoes, geometria-plana, geometria-espacial.
+- Ciclo de cada leva: 4 escritores → teste → revisor-de-fatos (2 arquivos cada) e
+  aluno-do-zero (`scripts/jornada-aula-questoes.py`) → 1 consertador → commit →
+  `DB_CONFIRMED=1 npx tsx scripts/criar-banco-enem.ts --gravar`. Divisão com vírgula foi o
+  tropeço mais comum da leva 1: já pedir no briefing do escritor.
+
 ## Antes de entregar
 - Refaça TODA conta. Uma só alternativa certa.
 - `npx vitest run data/revisao-final/provas-dia-2.test.ts` (bloco "banco ENEM do dia 2") passando.
