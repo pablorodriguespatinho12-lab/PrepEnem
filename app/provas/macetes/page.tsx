@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
 import aulas from '@/data/revisao-final/dia-2/aulas.json';
 import type { AulaDoTema } from '@/lib/aulas-dia-2';
+import { QuadroMacete } from '@/components/simulado/quadro-macete';
 
 // Os 22 macetes curinga numa tela (Pablo, 14/11/2026). Uma matéria por vez, em abas,
 // para caber sem rolar muito; cada cartão: o nome, a regra e o exemplo.
@@ -38,10 +39,7 @@ export default function MacetesPage() {
           <article key={tema} className="surface-1 rounded-[var(--radius-surface)] p-5 space-y-2">
             <p className="type-caption font-semibold uppercase tracking-[0.08em] text-primary-text">{tema}</p>
             <h2 className="font-display type-title font-semibold">{a.macete!.nome}</h2>
-            <p className="font-reading type-body">{a.macete!.regra}</p>
-            <p className="font-reading type-body rounded-[var(--radius-control)] bg-primary/10 px-3 py-2">
-              <span className="font-semibold text-primary-text">Exemplo: </span>{a.macete!.exemplo}
-            </p>
+            <QuadroMacete m={a.macete!} comPassos={false} />
           </article>
         ))}
       </div>

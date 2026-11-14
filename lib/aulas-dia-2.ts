@@ -18,7 +18,8 @@ export type Degrau = {
 // paraSubir: o que a questão de cima cobra e a aula não ensina (scripts/data/aulas-dia-2-subir.json).
 // Macete curinga do conteúdo (Pablo, 14/11/2026: "um jeito curinga que serve para a maioria
 // das ocasiões", da fácil até o ENEM). O Jeito rápido de cada questão aplica este macete.
-export type Macete = { nome: string; regra: string; passos: string[]; exemplo: string };
+// quadro: o exemplo resolvido, uma conta por linha ([rótulo, conta]); a última é a resposta.
+export type Macete = { nome: string; regra: string; passos: string[]; exemplo: string; quadro?: string[][] };
 export type AulaDoTema = { materia: string; aula: string[]; paraSubir: string[]; degraus: Degrau[]; macete?: Macete };
 
 const TODAS = aulas as Record<string, AulaDoTema>;

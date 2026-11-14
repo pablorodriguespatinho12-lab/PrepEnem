@@ -53,3 +53,8 @@ test('% sem barra dentro da fórmula não apaga o resto da linha (jornada de 18/
   expect(visivel).toContain('30');
   expect(visivel).toContain('%');
 });
+test('milhar não quebra no meio: 1 000 vira espaço fixo (geladeira, 14/11/2026)', () => {
+  expect(r('vai a 1 100 e fica 1 000 000')).toContain('1 100');
+  expect(r('fica 1 000 000')).toContain('1 000 000');
+  expect(r('2 de 4 = 50%')).toContain('2 de 4');
+});

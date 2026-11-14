@@ -11,6 +11,7 @@ import { desenhoDoTema } from '@/lib/aulas-desenho';
 import { TelaDesenho, TelaProporcoes, TelaSentido } from '@/components/simulado/telas-desenho';
 import { TelaEstaQuestao, TelaPasso, useAulaDaQuestao } from '@/components/simulado/resolver-esta-questao';
 import type { QuestaoTutor } from '@/components/tutor/explicacao-tutor';
+import { QuadroMacete } from '@/components/simulado/quadro-macete';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 
@@ -222,8 +223,9 @@ function QuestaoDegrau({ degrau }: { degrau: Degrau | Exercicio }) {
   );
 }
 
-/* O macete curinga do conteúdo: a regra, como usar (uma linha cada) e um exemplo pequeno. */
+/* O macete curinga do conteúdo: a regra e o exemplo no quadro, uma conta por linha. */
 function TelaMacete({ m }: { m: Macete }) {
+  if (m.quadro?.length) return <QuadroMacete m={m} />;
   return (
     <div className="space-y-3">
       <p className="font-reading type-lead font-semibold">{m.regra}</p>
