@@ -6,6 +6,7 @@ import { Trophy, Play, Trash2, BookOpen, Sparkles, Target, AlertCircle, Flame } 
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
 import { CaminhosDoTreino } from '@/components/treino/caminhos-do-treino';
+import { agruparProvas } from '@/lib/provas-grupos';
 
 /* Limiares de dado esparso — mesma regra usada em app/dashboard/page.tsx.
    < 5 questões: sem %. 5–15: % com indicador de baixa confiança. 15+: limpa. */
@@ -83,10 +84,12 @@ export default function ProvasPage() {
       {/* Exams list */}
       {loading ? (
         <div className="text-center py-20 text-muted-foreground type-meta">Carregando...</div>
-      ) : exams.length === 0 ? null : (
+      ) : exams.length === 0 ? null : agruparProvas(exams).map(({ titulo, lista }) => (
+        <section key={titulo} className="mb-10">
+        <h3 className="font-display type-lead font-semibold text-foreground mb-3">{titulo}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <AnimatePresence>
-            {exams.map((exam, idx) => {
+            {lista.map((exam, idx) => {
               const nivelInfo = nivelLabels[exam.nivel] || nivelLabels.medio;
               const NivelIcon = nivelInfo.icon;
               const isFinalizada = exam.status === 'finalizada';
@@ -196,7 +199,8 @@ export default function ProvasPage() {
             })}
           </AnimatePresence>
         </div>
-      )}
+        </section>
+      ))}
     </div>
   );
 }

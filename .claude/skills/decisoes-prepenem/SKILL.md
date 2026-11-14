@@ -254,6 +254,8 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   (`scripts/criar-provas-dia-2-por-conteudo.ts`). Cada aula abre com uma
   "Palavra-chave" de memória (QUE MACETE, FAMA, VÊ LÁ FORA...), como o
   coringa da redação, nos `docs/revisao-final/dia-2/*.js`.
+  Em 14/11 ele entrou na "Dia 2 · 1 Fácil" achando que era a escada: as
+  `escada` agora vêm num grupo próprio no topo de Estudar (`lib/provas-grupos.ts`).
 - **Fórmula nunca cai do céu (Pablo, 12/11/2026, questão da mangueira: "não sei
   de onde saiu esse t ao quadrado"):** explicação escrita à mão não usa fórmula que
   a aula não ensinou sem mostrar de onde ela vem em conta de 4 operações (queda:
