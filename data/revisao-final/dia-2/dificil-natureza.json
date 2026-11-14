@@ -287,7 +287,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Iguale o calor perdido ao calor ganho. A fria ganha 6 × 20 = 120. A quente perde (litros de quente) × 60. Que número vezes 60 dá 120? 2, porque 2 × 60 = 120.",
+          "texto": "1 litro fervendo cai 60 °C. 1 litro da fria sobe 20 °C.\n60 é 3 vezes 20: cada litro fervendo esquenta 3 litros da fria.\nSão 6 litros de fria: 6 ÷ 3 = 2 litros fervendo.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Mistura de águas",
@@ -296,23 +296,22 @@
               "\\Delta T_{fria} = 40 - 20 = 20\\,^\\circ\\text{C}",
               "\\Delta T_{quente} = 100 - 40 = 60\\,^\\circ\\text{C}"
             ],
-            "formula": "m_{quente} \\times \\Delta T_{quente} = m_{fria} \\times \\Delta T_{fria}",
+            "formula": "1\\,\\text{L quente esquenta } \\frac{60}{20}\\,\\text{L de fria}",
             "legenda": [
-              "m: litros de cada água",
-              "$\\Delta T$: quanto a temperatura mudou"
+              "60: quanto cada litro quente cai",
+              "20: quanto cada litro frio sobe"
             ],
             "contas": [
-              "m_{quente} \\times 60 = 6 \\times 20",
-              "m_{quente} \\times 60 = 120",
-              "m_{quente} = \\frac{120}{60}"
+              "60 \\div 20 = 3",
+              "6 \\div 3 = 2"
             ],
             "resultado": "m_{quente} = 2\\,\\text{L}",
-            "nota": "Bastam 2 litros de água fervendo."
+            "nota": "Cada litro fervendo dá conta de 3 litros da fria."
           }
         },
         {
           "titulo": "Por que funciona",
-          "texto": "O calor depende da quantidade de água e de quanto a temperatura muda.\nComo as duas são água, o resto da fórmula (o calor específico, a energia que 1 grama pede para subir 1 grau) é o mesmo número dos dois lados.\nNúmero igual multiplicando os dois lados pode sair: 2 × 60 × 4 = 480 e 6 × 20 × 4 = 480; sem o × 4, fica 120 = 120, igual do mesmo jeito.\nCada litro fervendo cai 60 °C, e 60 ÷ 20 = 3: ele esquenta 3 litros de fria em 20 °C.\nPara 6 litros, bastam 6 ÷ 3 = 2.",
+          "texto": "A fria precisa ganhar 6 × 20 = 120 de calor (litros × graus que ela sobe).\nCada litro fervendo entrega 60 (os graus que ele cai).\n1 litro entrega 60; 2 litros, 120: chegou. São 2 litros.\nPor isso 120 ÷ 60 = 2: dividir é contar quantos 60 cabem em 120.",
           "visual": null
         },
         {
@@ -331,7 +330,7 @@
           "2 L"
         ],
         "certa": "1 L",
-        "resposta": "A fria ganha 3 × 20 = 60; cada litro quente cai 60 °C: 60 ÷ 60 = 1 L."
+        "resposta": "Quente cai 60, fria sobe 20: 60 ÷ 20 = 3 litros de fria por litro quente. 3 ÷ 3 = 1 L."
       }
     }
   },
