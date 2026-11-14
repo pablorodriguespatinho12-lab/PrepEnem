@@ -35,15 +35,6 @@ describe('desenho em pixel', () => {
 });
 
 describe('efeitos do desenho em pixel', () => {
-  it('a onda do cursor só clareia pixel pintado', async () => {
-    const { ondaDoCursor } = await import('./svg-pixel');
-    const d = new Uint8ClampedArray(10 * 10 * 4);
-    d[(5 * 10 + 5) * 4 + 3] = 255; // um pixel pintado no meio
-    ondaDoCursor(d, 10, 10, 5, 5, 0);
-    expect(d[(5 * 10 + 5) * 4]).toBe(70);
-    expect(d[(0 * 10 + 0) * 4]).toBe(0);
-  });
-
   it('os brilhos caem em pixel pintado e mudam a cada segundo', async () => {
     const { brilhos } = await import('./svg-pixel');
     const cheio = () => new Uint8ClampedArray(20 * 20 * 4).fill(255);

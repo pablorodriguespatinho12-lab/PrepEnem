@@ -534,10 +534,11 @@ escolha, nível acima) estão em `calculo.md`, nesta pasta. **Leia antes de mexe
   `mp-vento` só com as árvores entortadas, `arvoresAoVento`); personagem da matéria em pé
   EM CIMA do cartão da prova (do lado não cabe: ~45 px na tela dele), anda, pisca, pula no
   acerto e coça a cabeça no erro (`components/pixel/personagem.tsx`, folha de 4 quadros em
-  `lib/pixel/personagem.ts`). Mini figura: luz de pixel no cursor, pulinho e faíscas no
-  clique. Desenho da aula: brilhos piscando e onda de luz no cursor. Medido no build
-  (prova de Química): composição parada 128 → 168 ms (+31%), zero tarefa longa nova;
-  vento contínuo dava +85%, por isso rajada.
+  `lib/pixel/personagem.ts`). Desenho da aula: brilhos piscando. **Sem interação de
+  mouse** (luz no cursor, faíscas, onda de luz): ele testou e disse "não gostei" (14/11).
+  Vento: ele pediu as árvores "sempre se movimentando" (14/11), então é contínuo, mesmo
+  custando mais (medido: rajada +31%, contínuo +85% de composição parada, sem tarefa longa).
+  Jaleco branco sumia no fundo claro: roupa de cena nunca da cor da lousa; braço com contorno.
   **Cena da situação da questão (Pablo, 14/11/2026: "personagem no sentido de: se a
   questão fala de um menino puxando uma corda, desenha o menino, pixelado, se mexendo,
   bem fluido"):** desenho em pixel da HISTÓRIA do enunciado, embaixo dele, na tela da
