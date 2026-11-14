@@ -19,7 +19,6 @@ import { AulaDoTema } from '@/components/simulado/aula-do-tema';
 import { temaDaQuestao } from '@/lib/aulas-dia-2';
 import { MundoPixel } from '@/components/pixel/mundo-pixel';
 import { CenaFim } from '@/components/pixel/cena-fim';
-import { Personagem } from '@/components/pixel/personagem';
 import { FiguraPixel } from '@/components/visual/figura-pixel';
 import { cenaDaQuestao } from '@/lib/cenas-das-questoes';
 import type { NomeFigura } from '@/lib/visual/especificacao';
@@ -311,6 +310,8 @@ export default function ProvaDetailPage() {
   }
 
   const q = reforcoAtivo?.questao ?? currentEQ.question;
+  // O astronauta reage à resposta dentro do desenho da questão (14/11/2026).
+  const reacao = submitted && feedback ? (feedback.acertou ? 'acerto' : 'erro') : null;
   const alternativas = [
     { letra: 'A', texto: q.alternativaA },
     { letra: 'B', texto: q.alternativaB },
@@ -400,7 +401,6 @@ export default function ProvaDetailPage() {
         </button>
       </div>
       <div className="px-cartao relative p-5 md:p-8">
-      <Personagem materia={q?.materia} reacao={submitted && feedback ? (feedback.acertou ? 'acerto' : 'erro') : null} animado={mundo.animado} />
       <motion.button
         initial={{ opacity: 0, x: -12 }}
         animate={{ opacity: 1, x: 0 }}
@@ -472,13 +472,13 @@ export default function ProvaDetailPage() {
               puxando uma corda, desenha o menino"). Mapa em data/revisao-final/cenas-das-questoes.json. */}
           {!reforcoAtivo && cenaDaQuestao(q.id) && (
             <div className="mb-6">
-              <FiguraPixel nome={cenaDaQuestao(q.id)!.nome} rotulos={cenaDaQuestao(q.id)!.rotulos} semConta />
+              <FiguraPixel nome={cenaDaQuestao(q.id)!.nome} rotulos={cenaDaQuestao(q.id)!.rotulos} semConta astronauta={{ reacao }} />
             </div>
           )}
           {/* Desenho em pixel da questão de reforço, sem a conta (só ajuda a entender). */}
           {reforcoAtivo?.figura && (
             <div className="mb-6">
-              <FiguraPixel nome={reforcoAtivo.figura.nome} rotulos={reforcoAtivo.figura.rotulos} semConta />
+              <FiguraPixel nome={reforcoAtivo.figura.nome} rotulos={reforcoAtivo.figura.rotulos} semConta astronauta={{ reacao }} />
             </div>
           )}
           <AulaDoTema key={`aula-${q.id}`} tema={temaDaQuestao(q)} questao={q} className="mb-6" />

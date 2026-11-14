@@ -83,6 +83,8 @@ const fundo = (url: string): CSSProperties => ({ backgroundImage: `url(${url})` 
 /** Estrelas que piscam e vagalumes: posições fixas (sem sorteio a cada render). */
 const ESTRELAS = [[12, 8], [27, 15], [41, 6], [58, 12], [71, 4], [86, 10], [93, 18], [35, 22]];
 const VAGALUMES = [[18, 88], [33, 92], [52, 86], [64, 94], [79, 90]];
+/** Folhas que caem do morro de dia: [x %, y %, atraso s]. */
+const FOLHAS = [[8, 62, 0], [23, 66, 3.1], [71, 63, 5.7], [88, 60, 1.6]];
 
 export function MundoPixel({ animado }: { animado: boolean }) {
   const { resolvedTheme } = useTheme();
@@ -162,6 +164,7 @@ export function MundoPixel({ animado }: { animado: boolean }) {
       <div className="mp-dia">
         <span className="mp-passaro" />
         <span className="mp-passaro mp-passaro-2" />
+
       </div>
       <div className="mp-camada" style={fundo(img.terraDia)}>
         <div className="mp-camada mp-vento" style={fundo(img.vento[0])} />
@@ -172,6 +175,12 @@ export function MundoPixel({ animado }: { animado: boolean }) {
         <div className="mp-camada mp-vento mp-vento-b" style={fundo(img.vento[3])} />
         {VAGALUMES.map(([x, y], i) => (
           <span key={i} className="mp-vagalume" style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${i * 1.3}s` }} />
+        ))}
+      </div>
+      {/* folhas na frente do morro (a camada do céu fica atrás da terra) */}
+      <div className="mp-dia">
+        {FOLHAS.map(([x, y, a], i) => (
+          <span key={`f${i}`} className="mp-folha" style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${a}s` }} />
         ))}
       </div>
       <div className="mp-fumaca" style={{ left: `${img.chamine.fx * 100}%`, top: `${img.chamine.fy * 100}%` }}>

@@ -877,9 +877,9 @@ html [data-sonner-toaster][data-theme] {
    o sol 1 passo a cada 0,5 s, a nuvem 1 pixel por vez. */
 .mundo-pixel[data-animado="sim"] .mp-noite { animation: mp-noite var(--ciclo) steps(12) var(--atraso) infinite !important; }
 .mundo-pixel[data-animado="sim"] .mp-dia { animation: mp-dia var(--ciclo) steps(12) var(--atraso) infinite !important; }
-.mundo-pixel[data-animado="sim"] .mp-braco { animation: mp-girar var(--ciclo) steps(720) var(--atraso) infinite !important; }
-.mundo-pixel[data-animado="sim"] .mp-nuvens { animation: mp-deriva 220s steps(280) infinite !important; }
-.mundo-pixel[data-animado="sim"] .mp-nuvens.mp-noite { animation: mp-deriva 220s steps(280) infinite, mp-noite var(--ciclo) steps(12) var(--atraso) infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-braco { animation: mp-girar var(--ciclo) steps(1440) var(--atraso) infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-nuvens { animation: mp-deriva 220s steps(560) infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-nuvens.mp-noite { animation: mp-deriva 220s steps(560) infinite, mp-noite var(--ciclo) steps(12) var(--atraso) infinite !important; }
 /* rolando a página: o mundo espera (a rolagem fica só para o texto) */
 .mundo-pixel[data-rolando="sim"] *, .mundo-pixel[data-rolando="sim"] { animation-play-state: paused !important; }
 .mundo-pixel[data-animado="sim"] .mp-estrela { animation: mp-piscar 2.4s steps(2) infinite !important; }
@@ -891,13 +891,14 @@ html [data-sonner-toaster][data-theme] {
 .mundo-pixel[data-animado="sim"] .mp-fumaca span:nth-child(3) { animation: mp-fumaca 3.6s steps(9) -2.4s infinite !important; }
 .figura-pixel { position: relative; }
 
-/* Cena da questão (14/11/2026): sprite de N quadros + pontos que andam 1 pixel por passo. */
+/* Cena da questão (14/11/2026): sprite de N quadros + pontos em 20 passos (com 40, a
+   composição parada da prova triplicava: medido no build). */
 .figura-pixel .fig-sprite { position: absolute; overflow: hidden; pointer-events: none; }
 .figura-pixel .fig-sprite-faixa { height: 100%; background-size: 100% 100%; image-rendering: pixelated; }
 .figura-pixel[data-animado="sim"] .fig-sprite-faixa { animation: fig-sprite var(--dur) steps(var(--quadros)) infinite !important; }
 @keyframes fig-sprite { to { transform: translateX(-100%); } }
-.figura-pixel[data-animado="sim"] .fig-cena-fluida .fig-anda { animation-timing-function: steps(40) !important; }
-.figura-pixel[data-animado="sim"] .fig-cena-fluida .fig-vai-e-volta { animation-timing-function: steps(40) !important; }
+.figura-pixel[data-animado="sim"] .fig-cena-fluida .fig-anda { animation-timing-function: steps(20) !important; }
+.figura-pixel[data-animado="sim"] .fig-cena-fluida .fig-vai-e-volta { animation-timing-function: steps(20) !important; }
 
 /* Personagem da matéria em pé em cima do cartão (14/11/2026). 4 quadros na folha:
    0-1 parado (respira, pisca), 2 pulo (acertou), 3 coça a cabeça (errou). Anda de
@@ -909,6 +910,11 @@ html [data-sonner-toaster][data-theme] {
 .px-boneco[data-reacao="erro"] { background-position: 100% 0; }
 .px-boneco[data-animado="sim"][data-reacao="acerto"] { animation: boneco-pulo .5s steps(4) 3 !important; }
 .px-boneco[data-animado="sim"][data-reacao="erro"] { animation: boneco-treme .4s steps(2) 3 !important; }
+.px-boneco.px-boneco-cena { bottom: 21%; left: auto; right: 2%; width: 9%; z-index: 2; }
+.px-boneco.px-boneco-cena[data-animado="sim"] { animation: boneco-pisca 3.2s steps(1) infinite, boneco-flutua 2.4s steps(4) infinite alternate !important; }
+@keyframes boneco-flutua { from { transform: translateY(0); } to { transform: translateY(-6%); } }
+.px-boneco.px-boneco-cena[data-animado="sim"][data-reacao="acerto"] { animation: boneco-pulo .5s steps(4) 3 !important; }
+.px-boneco.px-boneco-cena[data-animado="sim"][data-reacao="erro"] { animation: boneco-treme .4s steps(2) 3 !important; }
 @keyframes boneco-pisca { 0%, 85% { background-position: 0% 0; } 86%, 100% { background-position: 33.333% 0; } }
 /* anda, para um pouco, vira e volta (steps vale por trecho: parado não redesenha) */
 @keyframes boneco-anda {
@@ -926,6 +932,13 @@ html [data-sonner-toaster][data-theme] {
 /* Sempre balançando (Pablo, 14/11/2026: "elas sempre se movimentando"); a rajada
    de antes deixava as árvores paradas 3/4 do tempo. */
 @keyframes mp-vento { 0%, 49% { opacity: 0; } 50%, 100% { opacity: 1; } }
+/* Folhas caindo do morro, de dia (14/11/2026: "mais fluido, mais bonito"). */
+.mp-folha { position: absolute; width: var(--px); height: var(--px); background: #5f9e4f; box-shadow: var(--px) 0 0 0 #7cb85f; opacity: 0; }
+.mundo-pixel[data-animado="sim"] .mp-folha { animation: mp-folha 9s steps(45) infinite !important; }
+@keyframes mp-folha {
+  0% { transform: translate(0, 0); opacity: 0; } 8% { opacity: .9; }
+  50% { transform: translate(calc(6 * var(--px)), calc(14 * var(--px))); }
+  90% { opacity: .9; } 100% { transform: translate(calc(-2 * var(--px)), calc(28 * var(--px))); opacity: 0; } }
 .mundo-pixel[data-pausado="sim"] *, .mundo-pixel[data-pausado="sim"] { animation-play-state: paused !important; }
 
 @keyframes mp-noite { 0% { opacity: .6; } 4% { opacity: 0; } 44% { opacity: 0; } 54% { opacity: 1; } 94% { opacity: 1; } 100% { opacity: .6; } }

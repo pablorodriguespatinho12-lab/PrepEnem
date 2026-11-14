@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, BookOpen, ClipboardList, Plus, RotateCcw } from 'lucide-react';
+import { ArrowRight, BookOpen, ClipboardList, Lightbulb, Plus, RotateCcw } from 'lucide-react';
 
 /* Um lugar só para escolher COMO treinar (passeio do iniciante, Pablo,
    02/11/2026, opção B): eram 6 portas espalhadas (Treino, Simulado, Caderno
@@ -37,6 +37,15 @@ const CAMINHOS = [
     titulo: 'Revisão do dia 2',
     quando: 'Os 22 conteúdos que mais caem em Matemática e Natureza: explicação, cartões e 4 questões em cada.',
     Icone: BookOpen,
+    principal: false,
+  },
+  {
+    // Os 22 macetes curinga numa tela (Pablo, 14/11/2026: "um jeito curinga que serve
+    // para a maioria das ocasiões").
+    href: '/provas/macetes',
+    titulo: 'Macetes do dia 2',
+    quando: 'Um macete por conteúdo, que serve da questão fácil até a do ENEM.',
+    Icone: Lightbulb,
     principal: false,
   },
 ] as const;
