@@ -637,7 +637,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Multiplique os litros por 1 000.",
+          "texto": "Macete de Grandezas: converta a unidade.\n1 L = 1 000 mL. 1,5 L = 1 000 + 500 = 1 500 mL.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Litro para mililitro",
@@ -750,7 +750,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Descubra quantas vezes a farinha aumentou e multiplique os pães por isso. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Grandezas: veja quantas vezes.\n6 kg é 3 vezes 2 kg.\n3 × 30 = 90 pães.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Regra de três",
@@ -868,7 +868,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Multiplique a velocidade pelo tempo.",
+          "texto": "Macete de Grandezas: ache quanto vale 1 e multiplique.\nEm 1 hora: 60 km. Em 3 horas: 3 × 60 = 180 km.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Distância",
@@ -1641,7 +1641,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Multiplique os dois lados.",
+          "texto": "Macete de Geometria Plana: área = lado × lado.\n12 × 20 = 240 m².",
           "visual": {
             "tipo": "quadro",
             "titulo": "Área do retângulo",
@@ -1759,7 +1759,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Multiplique o lado por 4.",
+          "texto": "Macete de Geometria Plana: perímetro é a volta.\nO quadrado tem 4 lados de 15: 4 × 15 = 60 m.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Perímetro do quadrado",
@@ -1860,7 +1860,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Faça cada cateto ao quadrado, some e tire a raiz quadrada.",
+          "texto": "Macete de Geometria Plana: triângulos que se repetem: 6-8-10.\n6 × 6 + 8 × 8 = 36 + 64 = 100.\nQue número vezes ele mesmo dá 100? 10 cm.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Pitágoras",
@@ -1984,7 +1984,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Multiplique comprimento, largura e altura.",
+          "texto": "Macete de Geometria Espacial: volume = fundo × altura.\nFundo: 10 × 5 = 50. Volume: 50 × 4 = 200 cm³.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Volume da caixa",
@@ -2113,7 +2113,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Multiplique a aresta por ela mesma, três vezes.",
+          "texto": "Macete de Geometria Espacial: volume = fundo × altura.\nFundo: 3 × 3 = 9. Volume: 9 × 3 = 27 cm³.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Volume do cubo",
@@ -2226,7 +2226,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Divida por 1 000: corte três zeros. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Geometria Espacial: 1 L = 1 000 cm³.\nQuantos 1 000 cabem em 30 000? 30 L.",
           "visual": {
             "tipo": "quadro",
             "titulo": "cm³ para litro",

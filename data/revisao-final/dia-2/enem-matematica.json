@@ -907,7 +907,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Número de jatos = minutos totais ÷ 48.\nDepois, mL por jato = 360 ÷ jatos.\nDe cabeça: 360 ÷ 1 800. Corte um zero dos dois: 36 ÷ 180.\n36 cabe 5 vezes em 180, então dá 1 ÷ 5 = 0,2.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Grandezas: ache quanto vale 1.\nUm dia tem 24 × 60 = 1 440 min. Um disparo a cada 48 min: 1 440 ÷ 48 = 30 por dia. Em 60 dias: 1 800.\n360 mL ÷ 1 800 disparos = 0,2 mL por disparo.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Quanto sai por jato",
@@ -1056,7 +1056,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Com o ano e o dia de Z na mesma unidade (dias da Terra), basta dividir: 182,5 ÷ 73. De cabeça: 73 × 2 = 146, e sobram 182,5 − 146 = 36,5, que é metade de 73. São 2 dias e meio.",
+          "texto": "Macete de Grandezas: converta a unidade.\n1 ano da Terra (365 dias) = 2 anos de Z. Então 1 ano de Z = 182,5 dias da Terra.\nCada dia de Z tem 73 dias da Terra: 182,5 ÷ 73 = 2,5 dias de Z.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Dias de Z num ano de Z",
@@ -1214,7 +1214,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Multiplique por 50 e depois tire as folgas.",
+          "texto": "Macete de Grandezas: escala 1 : 50: cada 1 cm do papel = 50 cm de verdade.\nEspaço: 3,8 × 50 = 190 cm de altura; 1,6 × 50 = 80 cm de largura.\nFolgas: altura 190 − 10 = 180 cm (só em cima); largura 80 − 10 − 10 = 60 cm. 1,80 e 0,60.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Do papel para a cozinha",
@@ -2352,7 +2352,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Teste com medidas inventadas: comprimento 6 m, largura 2 m, altura 3 m.",
+          "texto": "Macete de Geometria Plana: dobrou os dois lados do chão, a área do chão fica 4 vezes.\nParedes: a altura é a mesma e a volta dobra (cada lado dobrou): o dobro de tinta.\nPiso: comprimento × 2 e largura × 2 = 4 vezes. É o fornecedor II.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Áreas antes e depois",
@@ -2544,7 +2544,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "A mesma fórmula para os cinco.",
+          "texto": "Macete de Geometria Plana: área = fundo + paredes; a mesma conta para todos.\nFundo = largura × comprimento. Paredes = 2 × profundidade × (largura + comprimento).\nI: 50 + 97,2 = 147,2. II: 45 + 56 = 101. III: 90 + 42 = 132. IV: 60 + 57 = 117. V: 36 + 75 = 111. Menor: II.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Cerâmica de cada projeto",
@@ -2710,7 +2710,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Volume do cilindro = fundo × altura.\nSabendo o volume e o fundo, a altura sai da divisão: 84 ÷ 18,75.\nMultiplique os dois por 4 para sumir a vírgula: 336 ÷ 75.\n75 × 4 = 300, sobram 36, e 36 ÷ 75 = 0,48. Dá 4,48.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo. O ponto · quer dizer vezes.",
+          "texto": "Macete de Geometria Espacial: volume = fundo × altura; a altura sai da divisão.\nÁgua: 100 × 120 × 7 = 84 000 L = 84 m³. Fundo: 3 × 2,5 × 2,5 = 18,75 m².\nAltura: 84 ÷ 18,75. Multiplique os dois por 4: 336 ÷ 75 = 4,48 m.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Altura do reservatório",
@@ -2887,7 +2887,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ponha o modelo I valendo 1 e multiplique base por profundidade em cada um. O traço quer dizer dividir: 1/2 é metade e 1/4 é um quarto (dividir por 4).",
+          "texto": "Macete de Geometria Espacial: mudou as medidas: compare em vezes.\nI = 1. II: altura × 2 e fundo ÷ 2 = 1. III: altura × 2 e raio ÷ 2 (fundo ÷ 4) = 1/2.\nIV: altura ÷ 2 e fundo × 2 = 1. V: altura ÷ 2 e raio × 2 (fundo × 4) = 2. O maior é o V.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Volume de cada modelo",
@@ -3041,7 +3041,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Conte o pedido em docinhos pequenos e divida pelos 50 de cada porção: 1 200 ÷ 50. Corte um zero dos dois: 120 ÷ 5 = 24. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Geometria Espacial: esfera: diâmetro dobra, volume × 8.\nUm docinho de 4 cm vale 8 de 2 cm. 150 × 8 = 1 200 docinhos pequenos.\nCada porção faz 50: 1 200 ÷ 50 = 24 porções.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Porções do pedido",
@@ -3196,7 +3196,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Divida o volume do cilindro pelo volume de uma esfera.",
+          "texto": "Macete de Geometria Espacial: volume = fundo × altura; esfera = 4 × raio × raio × raio (π = 3).\nCilindro: 3 × 4 × 4 × 50 = 2 400 cm³. Esfera de 1 cm: raio 0,5, 4 × 0,125 = 0,5 cm³.\nQuantas de 0,5 cabem em 2 400? 4 800.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Quantas esferas",

@@ -9,7 +9,7 @@ const COM_MACETE = [
   'Química Orgânica', 'Química Ambiental e Energia', 'Estequiometria', 'Eletroquímica', 'Soluções, pH e Titulação',
   'Eletricidade e Circuitos', 'Dinâmica e Leis de Newton', 'Termodinâmica e Calor', 'Ondas e Acústica', 'Óptica',
   'Ecologia', 'Fisiologia Humana e Saúde', 'Genética', 'Citologia', 'Evolução', 'Microbiologia e Doenças',
-  'Aritmética e Porcentagem', 'Estatística', 'Funções',
+  'Aritmética e Porcentagem', 'Estatística', 'Funções', 'Grandezas e Medidas', 'Geometria Plana', 'Geometria Espacial',
 ];
 type Macete = { nome: string; regra: string; passos: string[]; exemplo: string };
 const A = aulas as unknown as Record<string, { macete?: Macete }>;

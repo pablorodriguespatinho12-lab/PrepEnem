@@ -1058,7 +1058,18 @@
         "certa": 1,
         "resolucao": "Mais pedreiros, menos dias: é inversa. O trabalho todo vale 6 × 10 = 60 dias de um pedreiro. 60 ÷ 15 = 4 dias. A regra de três direta daria 25 dias, mais tempo com mais gente: sinal de erro."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Quanto vale 1",
+      "regra": "Ache quanto vale 1 e multiplique, ou veja quantas vezes uma quantidade cabe na outra.",
+      "passos": [
+        "Direta (mais farinha, mais pão): as duas crescem juntas. Inversa (mais rápido, menos tempo): uma sobe e a outra desce.",
+        "Escala 1 : 50: cada 1 cm do papel é 50 cm de verdade.",
+        "Unidades: 1 L = 1 000 mL; 1 m = 100 cm; 1 km = 1 000 m; 1 h = 60 min.",
+        "Muita coisa junto (costureiras, horas, dias): conte o trabalho total em \"horas de costureira\"."
+      ],
+      "exemplo": "2 kg de farinha → 30 pães. 6 kg é 3 vezes 2 kg: 3 × 30 = 90 pães."
+    }
   },
   "Estatística": {
     "materia": "Matemática",
@@ -1220,7 +1231,18 @@
         "certa": 2,
         "resolucao": "Sobra para terrenos: 3 − 0,9 = 2,1 hectares = 21 000 m². Terrenos: 21 000 ÷ 300 = 70. Os 20 primeiros: 20 × 20 000 = 400 000. Os outros 50: 50 × 30 000 = 1 500 000. Total: 1 900 000."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Quadradinhos e 3-4-5",
+      "regra": "Área = quantos quadradinhos de 1 cabem (lado × lado). Perímetro = a volta. Triângulo retângulo: use os que se repetem.",
+      "passos": [
+        "Retângulo: base × altura. Círculo: 3 × raio × raio. Volta da roda: 2 × 3 × raio.",
+        "Tirar um pedaço: área grande − área do buraco.",
+        "Triângulos que se repetem: 3-4-5, 6-8-10, 5-12-13, 8-15-17 (hipotenusa² = cateto² + cateto²).",
+        "Mesmo sol, mesma sombra: tudo cresce na mesma proporção."
+      ],
+      "exemplo": "Terreno de 12 m por 20 m: 12 × 20 = 240 quadradinhos de 1 m², ou seja, 240 m²."
+    }
   },
   "Geometria Espacial": {
     "materia": "Matemática",
@@ -1263,6 +1285,16 @@
         "certa": 1,
         "resolucao": "Raio novo: 5 cm. Volume = 3 × 5² × 30 = 3 × 25 × 30 = 2 250 cm³ = 2,25 L. A lata grande tem 9 L: metade do raio dá um quarto do volume, porque o raio entra ao quadrado."
       }
-    ]
+    ],
+    "macete": {
+      "nome": "Fundo × altura",
+      "regra": "Volume = área do fundo × altura. Com ponta (cone, pirâmide), divida por 3. 1 L = 1 000 cm³; 1 m³ = 1 000 L.",
+      "passos": [
+        "Caixa: comprimento × largura × altura. Cilindro: 3 × raio × raio × altura.",
+        "Mudou as medidas: lados × 2 → volume × 8; lados pela metade → volume ÷ 8.",
+        "Esfera (com π = 3): 4 × raio × raio × raio. Diâmetro dobra → volume × 8."
+      ],
+      "exemplo": "Caixa de 10 × 5 × 4 cm: fundo 50, volume 50 × 4 = 200 cm³."
+    }
   }
 }
