@@ -42,13 +42,19 @@ export function DesenhoPixel({ svg, className = '' }: { svg: string; className?:
 
 
   useEffect(() => {
-    const original = fonte.current?.querySelector('svg');
     const ctx = tela.current?.getContext('2d', { willReadFrequently: true });
-    if (!original || !ctx || !largura) return;
+    // O SVG escondido é buscado de novo a cada quadro: dentro da janela da aula ele é
+    // trocado por outro igual, e o antigo, solto da página, não tem cor (saía preto).
+    const svgAtual = () => fonte.current?.querySelector('svg') ?? null;
+    if (!svgAtual() || !ctx || !largura) return;
     let vivo = true;
     let ocupado = false;
     let base: ImageData | null = null;
-    const svgMexe = (original.getAnimations?.({ subtree: true }).length ?? 0) > 0;
+    // Nos primeiros segundos o desenho é refeito (as cores da janela podem chegar depois);
+    // "se mexe" é medido de novo a cada quadro.
+    const inicio = Date.now();
+    const mexe = () => (svgAtual()?.getAnimations?.({ subtree: true }).length ?? 0) > 0;
+    const PRIMEIROS_MS = 3000;
     // pinta a base (refeita a cada quadro só se o SVG se mexe). Sem mouse e sem brilhos:
     // o Pablo não gostou de nenhum dos dois (14/11/2026).
     const pintar = () => {
@@ -58,7 +64,9 @@ export function DesenhoPixel({ svg, className = '' }: { svg: string; className?:
     };
     const desenhar = () => {
       if (ocupado || !vivo) return;
-      if (base && !svgMexe) return pintar();
+      if (base && !mexe() && Date.now() - inicio > PRIMEIROS_MS) return pintar();
+      const original = svgAtual();
+      if (!original || !original.isConnected) return;
       ocupado = true;
       const img = new Image();
       img.onload = () => {
@@ -77,7 +85,7 @@ export function DesenhoPixel({ svg, className = '' }: { svg: string; className?:
     desenhar();
     const relogio = window.setInterval(() => {
       if (document.hidden) return;
-      if (svgMexe) desenhar();
+      if (mexe() || Date.now() - inicio <= PRIMEIROS_MS) desenhar();
     }, 1000 / QUADROS_POR_SEGUNDO);
     return () => { vivo = false; window.clearInterval(relogio); };
   }, [partes, largura, altura]);
