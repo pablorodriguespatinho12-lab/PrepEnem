@@ -866,7 +866,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Divida a encomenda pelo que a equipe nova faz em um dia. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Grandezas: conte o trabalho total.\nAntes: 8 costureiras × 6 h × 5 dias = 240 horas de costureira, para 240 camisetas: 1 hora cada.\n480 camisetas = 480 horas. Agora, por dia: 10 × 8 = 80 horas. 480 ÷ 80 = 6 dias.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Dias para a encomenda",
@@ -1023,7 +1023,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Distância total dividida pelo tempo total: 36 ÷ 2,25. Para sumir a vírgula, multiplique os dois por 4: 144 ÷ 9 = 16 (9 × 16 = 144).\nDividir é contar quantos km ele anda em cada hora.",
+          "texto": "Macete de Grandezas: ache o tempo de cada trecho.\nIda: 18 ÷ 24 = 0,75 h. Volta: 18 ÷ 12 = 1,5 h. Total: 2,25 h para 36 km.\nMédia: 36 ÷ 2,25. Multiplique os dois por 4: 144 ÷ 9 = 16 km/h.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Velocidade média",
@@ -1170,7 +1170,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Converta os dois lados para metro e multiplique.",
+          "texto": "Macete de Grandezas: escala: 1 cm da planta = 50 cm de verdade.\n12 cm → 600 cm = 6 m. 8 cm → 400 cm = 4 m.\nÁrea: 6 × 4 = 24 m².",
           "visual": {
             "tipo": "quadro",
             "titulo": "Área real da sala",
@@ -2270,7 +2270,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Tire a área da piscina e multiplique pelo preço. No quadro, πr² quer dizer π × r × r. De cabeça: 273 × 10 = 2 730, e 273 × 2 = 546; somando, 3 276.",
+          "texto": "Macete de Geometria Plana: tirar um pedaço: área grande − buraco.\nQuintal: 20 × 15 = 300 m². Piscina: 3 × 3 × 3 = 27 m². Grama: 300 − 27 = 273 m².\n273 × 12 = 3 276 (270 × 12 = 3 240; 3 × 12 = 36).",
           "visual": {
             "tipo": "quadro",
             "titulo": "Gasto com grama",
@@ -2413,7 +2413,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Monte a proporção: altura do poste está para 6 assim como 1,80 está para 1,20.",
+          "texto": "Macete de Geometria Plana: mesmo sol, mesma proporção.\nA sombra do poste é 6 ÷ 1,2 = 5 vezes a do técnico.\nO poste é 5 vezes mais alto: 5 × 1,80 = 9 m.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Altura pela sombra",
@@ -2563,7 +2563,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Pitágoras dá um cabo; vezes 4 dá o total.",
+          "texto": "Macete de Geometria Plana: triângulos que se repetem: 8-15-17.\n8 × 8 + 15 × 15 = 64 + 225 = 289 = 17 × 17: cada cabo tem 17 m.\n4 cabos: 4 × 17 = 68 m.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Cabo da antena",
@@ -2724,7 +2724,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Primeiro o volume em m³.\nDepois passe para litros (vezes 1 000), porque a bomba conta em litros por minuto: m³ e litros não se dividem direto.\nSó então divida pela vazão (quantos litros a bomba manda por minuto): 36 000 ÷ 400.\nCorte dois zeros dos dois: 360 ÷ 4 = 90 minutos, que são 60 + 30 = 1 h 30 min.",
+          "texto": "Macete de Geometria Espacial: cilindro: 3 × raio × raio × altura.\nRaio = metade de 4 = 2 m. 3 × 2 × 2 × 3 = 36 m³ = 36 000 L.\nQuantos 400 cabem em 36 000? 90 min = 1 hora e 30 minutos.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Tempo para encher",
@@ -2875,7 +2875,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ache o volume de uma casquinha.\nDepois veja quantas cabem em 5 400 cm³ (5,4 L × 1 000).\n5 400 ÷ 90: corte um zero dos dois, 540 ÷ 9 = 60 (9 × 6 = 54).\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Geometria Espacial: com ponta: fundo × altura ÷ 3.\nRaio 3: 3 × 3 × 3 × 10 ÷ 3 = 90 cm³ por casquinha.\n5,4 L = 5 400 cm³. 5 400 ÷ 90 = 60 casquinhas.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Casquinhas com 5,4 L",
@@ -3023,7 +3023,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Ache o preço de 1 cm³ no frasco grande e multiplique pelo volume do pequeno.",
+          "texto": "Macete de Geometria Espacial: lados pela metade → volume ÷ 8.\nMetade × metade × metade = 1/8 do volume.\nPreço: 240 ÷ 8 = R$ 30.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Preço do frasco de viagem",

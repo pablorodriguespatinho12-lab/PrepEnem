@@ -801,7 +801,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Na inversa, velocidade vezes tempo é igual nos dois dias: 60 × 40 = 2 400.\nEntão 48 vezes o tempo novo também dá 2 400.\nPara achar 2 400 ÷ 48 de cabeça: 48 × 100 = 4 800.\nA metade, 48 × 50, é 2 400.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Grandezas: ache quanto anda em 1 minuto.\nA 60 km/h anda 1 km por minuto: em 40 min, são 40 km de caminho.\nA 48 km/h anda 0,8 km por minuto. Quantos 0,8 cabem em 40? 50 min.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Regra de três inversa",
@@ -942,7 +942,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Multiplique pela escala e divida por 100 000 para chegar em km. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Grandezas: escala: 1 cm do mapa = 50 000 cm de verdade.\n6 cm → 6 × 50 000 = 300 000 cm.\n300 000 cm = 3 000 m = 3 km (÷ 100 vira metro; ÷ 1 000 vira km).",
           "visual": {
             "tipo": "quadro",
             "titulo": "Escala",
@@ -1094,7 +1094,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Multiplique tudo e divida por 1 000 no fim. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Grandezas: ache quanto vale 1 e multiplique.\nEm 1 dia: 50 × 24 = 1 200 mL. Em 30 dias: 30 × 1 200 = 36 000 mL.\n36 000 mL = 36 L.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Água perdida",
@@ -2139,7 +2139,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Área dividida pelo que a caixa cobre, vezes o preço da caixa. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Geometria Plana: área, depois quantas caixas.\nÁrea: 5 × 4 = 20 m². Caixas: 20 ÷ 2 = 10.\n10 × 45 = R$ 450.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Custo do piso",
@@ -2286,7 +2286,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Eleve os dois lados ao quadrado, some e tire a raiz.",
+          "texto": "Macete de Geometria Plana: triângulos que se repetem: 5-12-13.\nO caminho é a hipotenusa: 12 × 12 + 5 × 5 = 144 + 25 = 169.\n13 × 13 = 169: o caminho tem 13 m.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Diagonal do jardim",
@@ -2434,7 +2434,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Contorno vezes número de voltas.\nUma volta: 2 × 3 × 30 = 180 cm.\nCem voltas: 180 × 100 = 18 000 cm.\nPara ter metros, divida por 100 (1 m = 100 cm): corte dois zeros, 180 m.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Geometria Plana: volta da roda = 2 × 3 × raio.\n2 × 3 × 30 = 180 cm por volta. 100 voltas: 18 000 cm.\n18 000 cm = 180 m.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Distância da bicicleta",
@@ -2576,7 +2576,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Multiplique as três medidas e divida por 1 000. No quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Geometria Espacial: volume = fundo × altura; 1 L = 1 000 cm³.\nFundo: 30 × 20 = 600. Volume: 600 × 5 = 3 000 cm³.\n3 000 cm³ = 3 L.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Massa na forma",
@@ -2717,7 +2717,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Calcule o volume do copo e divida a jarra por ele: 1 440 ÷ 480.\nDe cabeça: 480 + 480 = 960, e 960 + 480 = 1 440.\nCabe 3 vezes.\nNo quadro, o traço de fração quer dizer dividir: o número de cima ÷ o de baixo.",
+          "texto": "Macete de Geometria Espacial: cilindro: 3 × raio × raio × altura.\nCopo: 3 × 4 × 4 × 10 = 480 cm³. Jarra: 1,44 L = 1 440 cm³.\nQuantos 480 cabem em 1 440? 3 copos.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Copos na jarra",
@@ -2863,7 +2863,7 @@
         },
         {
           "titulo": "Jeito rápido",
-          "texto": "Área da base, vezes a altura, dividido por 3.",
+          "texto": "Macete de Geometria Espacial: com ponta: fundo × altura ÷ 3.\nFundo: 6 × 6 = 36. 36 × 10 = 360.\n360 ÷ 3 = 120 cm³.",
           "visual": {
             "tipo": "quadro",
             "titulo": "Volume da embalagem",
