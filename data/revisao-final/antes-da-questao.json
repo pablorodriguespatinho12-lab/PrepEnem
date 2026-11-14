@@ -673,42 +673,15 @@
       ]
     },
     "isomeros": {
-      "titulo": "Isômeros: mesmas peças, outro brinquedo",
+      "titulo": "Isômeros: mesmas peças, montagem diferente",
       "linhas": [
-        "Pense em pecinhas de LEGO: com as MESMAS pecinhas dá para montar um carro ou uma casa.",
-        "Na química é igual. Isômeros são substâncias com as mesmas peças (mesmos átomos, nas mesmas quantidades), montadas de outro jeito.",
-        "Primeiro passo: conte as peças. CH₃ quer dizer 1 C com 3 H grudados (o número pequeno conta o H). Contou e deu igual nas duas? São isômeros.",
-        "Macete F-P-C: pergunte nesta ordem o que mudou.",
-        "F: mudou a Família (álcool virou éter)? Isômero de função.",
-        "P: família igual, e o grupo só mudou de Posição (OH na ponta ou no meio)? Isômero de posição.",
-        "C: só o esqueleto de carbonos, a Cadeia, mudou (fila reta, fila com galho, roda)? Isômero de cadeia."
+        "Isômeros: substâncias com as mesmas peças (mesmos átomos, na mesma quantidade), montadas de outro jeito.",
+        "1º conte as peças. CH₃ = 1 C com 3 H grudados (o número pequeno conta o H). Deu igual nas duas? São isômeros.",
+        "2º pergunte F-P-C, nesta ordem:",
+        "F: mudou a Família (álcool virou éter)? De função.",
+        "P: família igual, o grupo só mudou de Posição? De posição.",
+        "C: só o esqueleto de carbonos (a Cadeia) mudou? De cadeia."
       ],
-      "visual": {
-        "tipo": "tabela",
-        "titulo": "Mesmas peças, montagem diferente",
-        "cabecalho": [
-          "O que mudou",
-          "Nome",
-          "Exemplo"
-        ],
-        "linhas": [
-          [
-            "a Família",
-            "de função",
-            "álcool × éter"
-          ],
-          [
-            "só a Posição do grupo",
-            "de posição",
-            "OH na ponta × OH no meio"
-          ],
-          [
-            "só a Cadeia (o esqueleto)",
-            "de cadeia",
-            "fila reta × fila com galho"
-          ]
-        ]
-      },
       "exercicios": [
         {
           "enunciado": "Butano e isobutano (gás de isqueiro) têm as mesmas peças, C₄H₁₀, e os dois só têm C e H. No butano os 4 carbonos ficam em fila reta. No isobutano, um carbono sai para o lado, como um galho. Eles são isômeros de:",

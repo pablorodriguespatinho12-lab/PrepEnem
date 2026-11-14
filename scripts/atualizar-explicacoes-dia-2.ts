@@ -42,10 +42,12 @@ async function main() {
     const antes = textos(atual.conteudo);
     const depois = textos(conteudo);
     const mudou = depois.filter((t, i) => t !== antes[i]);
-    console.log(`\n${id}: ${mudou.length} passo(s) mudam`);
+    // Peça, ideia ou "Sua vez" também contam (14/11/2026: a peça sem o LEGO não era gravada).
+    const outroCampo = JSON.stringify(atual.conteudo) !== JSON.stringify(conteudo);
+    console.log(`\n${id}: ${mudou.length} passo(s) mudam${outroCampo && mudou.length === 0 ? '; muda peça, ideia ou Sua vez' : ''}`);
     mudou.forEach((t) => console.log(`  depois → ${t}`));
 
-    if (gravar && mudou.length > 0) {
+    if (gravar && (mudou.length > 0 || outroCampo)) {
       await prisma.explicacaoPronta.update({
         where: { questionId: id },
         data: { conteudo: conteudo as object, versao: VERSAO_EXPLICACAO },
