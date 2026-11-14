@@ -296,14 +296,16 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
             animate="parado"
             exit="sai"
             transition={{ duration: 0.2, ease: [0.25, 1, 0.5, 1] }}
-            className={`min-h-0 grid gap-4 md:gap-8 ${!temLadoDireito ? 'grid-rows-1' : ladoALado ? 'grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]' : 'grid-rows-[auto_minmax(0,1fr)]'} items-center`}
+            className={`min-h-0 h-full grid gap-4 md:gap-8 ${!temLadoDireito ? 'grid-rows-[minmax(0,1fr)]' : ladoALado ? 'grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] grid-rows-[minmax(0,1fr)]' : 'grid-rows-[auto_minmax(0,1fr)]'} items-center`}
           >
-            <div className={`grid gap-2 md:gap-3 content-center min-w-0 ${temLadoDireito ? '' : 'max-w-2xl mx-auto text-center justify-items-center'}`}>
+            {/* Texto longo (balanço do ENEM, 14/11/2026) passava do cartão e cobria Voltar e
+                Próximo: a coluna tem teto e rola só ela, e a letra desce um tamanho. */}
+            <div className={`grid gap-2 md:gap-3 content-start min-w-0 min-h-0 max-h-full overflow-y-auto pr-1 ${temLadoDireito ? '' : 'max-w-2xl mx-auto text-center justify-items-center'}`}>
               <p className="type-caption font-semibold uppercase tracking-[0.08em] text-primary-text">{tela.rotulo}</p>
               {/* Passo escrito em linhas (12/11/2026): uma ideia por linha, com respiro,
                   em letra de leitura; em bloco único de título ficava ilegível. */}
               {tela.titulo.includes('\n') ? (
-                <div className="font-reading font-medium leading-snug space-y-2 text-[clamp(1rem,0.85rem+0.6vw,1.35rem)]">
+                <div className={`font-reading font-medium leading-snug space-y-2 ${tela.titulo.length > TEXTO_LONGO ? 'text-[clamp(0.95rem,0.85rem+0.3vw,1.1rem)]' : 'text-[clamp(1rem,0.85rem+0.6vw,1.35rem)]'}`}>
                   {tela.titulo.split('\n').filter((l) => l.trim()).map((linha, i) => <MathText key={i} text={linha} />)}
                 </div>
               ) : (
@@ -368,6 +370,9 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
     </NaoEntendiContext.Provider>
   );
 }
+
+/* Passo acima disso desce um tamanho de letra (o do balanço tem 448 letras). */
+const TEXTO_LONGO = 300;
 
 /* O que cada termo é, em chips pequenos, no primeiro passo (pré-treino). */
 function Pecas({ explicacao }: { explicacao: Explicacao }) {

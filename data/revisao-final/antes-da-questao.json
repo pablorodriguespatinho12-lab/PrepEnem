@@ -190,12 +190,13 @@
     "curva": {
       "titulo": "Força para fazer a curva",
       "linhas": [
-        "Para andar em curva, alguma coisa tem que puxar para o centro. No carro são os pneus; no balanço, a corda.",
-        "Quanto mais rápido, muito mais puxão: com o dobro da velocidade, o puxão fica 4 vezes maior (2 × 2).",
-        "Raio é a distância do centro da curva até o que gira: no barbante, o tamanho do barbante; no balanço, o da corda.",
-        "Curva mais aberta pede menos puxão. Bola de 2 kg a 2 m/s: barbante de 1 m, 2 × 2 × 2 ÷ 1 = 8 N; de 2 m, 8 ÷ 2 = 4 N, metade.",
-        "Juntando: puxão da curva = massa × v × v ÷ raio.",
-        "Exemplo: bola de 2 kg a 3 m/s num barbante de 1 m: 2 × 3 × 3 ÷ 1 = 18 N."
+        "Para andar em curva, alguma coisa tem que puxar para o centro. No carro são os pneus; no balanço, a corda. É o puxão da curva.",
+        "Mais rápido pede mais puxão. Mas o dobro da velocidade não pede o dobro do puxão: pede 4 vezes. A velocidade conta 2 vezes.",
+        "1ª vez: mais rápido, você atravessa a curva em menos tempo. Com o dobro da velocidade, tem que virar o dobro a cada segundo.",
+        "2ª vez: o que você vira é a sua própria velocidade. Ela também é o dobro, então cada virada é o dobro maior.",
+        "Dobro vezes dobro: 2 × 2 = 4. Por isso a conta usa v × v (a velocidade vezes ela mesma). Veja na tabela: 1 m/s dá 2 N; 2 m/s dá 8 N, 4 vezes mais.",
+        "Raio é o tamanho da corda, do centro da curva até o que gira. Corda maior faz curva mais aberta e pede menos puxão: por isso divide pelo raio.",
+        "Juntando: puxão da curva = massa × v × v ÷ raio. Bola de 2 kg a 3 m/s, barbante de 1 m: 2 × 3 × 3 ÷ 1 = 18 N."
       ],
       "visual": {
         "tipo": "tabela",
