@@ -11,7 +11,7 @@ import { VERSAO_EXPLICACAO } from '../lib/tutor/pronta';
 // Estilo ENEM escrito à mão, com explicação pronta (não gasta a IA do site). Fica
 // fora das provas; o Treino já sorteia questões de qualquer origem que não seja IA.
 // Cria ou atualiza; não apaga nada. Sem --gravar só mostra. Uso:
-//   DB_CONFIRMED=1 npx tsx scripts/criar-banco-enem.ts [--gravar]
+//   DB_CONFIRMED=1 npx tsx scripts/criar-banco-enem.ts [conteudo ...] [--gravar]
 
 const prisma = new PrismaClient();
 const PASTA = join(process.cwd(), 'data/revisao-final/banco-enem');
@@ -26,8 +26,10 @@ type Questao = {
 async function main() {
   const gravar = process.argv.includes('--gravar');
   if (!existsSync(PASTA)) throw new Error(`Pasta ${PASTA} não existe`);
+  // Arquivos pedidos (ex.: dinamica organica): outra leva pode estar escrevendo na pasta.
+  const pedidos = process.argv.slice(2).filter((a) => !a.startsWith('--')).map((a) => (a.endsWith('.json') ? a : `${a}.json`));
   const questoes = readdirSync(PASTA)
-    .filter((f) => f.endsWith('.json'))
+    .filter((f) => f.endsWith('.json') && (pedidos.length === 0 || pedidos.includes(f)))
     .flatMap((f) => JSON.parse(readFileSync(join(PASTA, f), 'utf8')) as Questao[]);
 
   const porTema: Record<string, number> = {};

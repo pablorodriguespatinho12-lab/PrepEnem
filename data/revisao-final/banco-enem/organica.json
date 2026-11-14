@@ -1,0 +1,1557 @@
+[
+  {
+    "id": "d2-banco-qui-org-01",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Quando o leite azeda ou vira iogurte, bactérias transformam o açúcar do leite em ácido lático. O mesmo ácido aparece nos músculos depois de um exercício forte. A fórmula do ácido lático pode ser escrita assim: CH₃–CH(OH)–COOH. Nela, o OH do meio está preso a um carbono da cadeia, fora de qualquer anel, e o COOH fica na ponta.\nQuais funções orgânicas aparecem na molécula do ácido lático?",
+    "A": "Álcool e ácido carboxílico.",
+    "B": "Somente ácido carboxílico.",
+    "C": "Fenol e ácido carboxílico.",
+    "D": "Álcool e éster.",
+    "E": "Éster e amina.",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "OH no carbono da cadeia, fora de anel = álcool; COOH = ácido carboxílico. A. Erros: B ignora o OH do meio; C confunde álcool com fenol (não há anel); D confunde COOH com éster; E pede N, e não há N.",
+      "ideia": "Cada pedaço da molécula conta uma função. O ácido lático tem um OH no meio da cadeia (álcool) e um COOH na ponta (ácido carboxílico).",
+      "pecas": [
+        {
+          "termo": "Função orgânica",
+          "significado": "A família da molécula, reconhecida por um pedaço dela, como o COOH dos ácidos ou o OH dos álcoois."
+        },
+        {
+          "termo": "Ácido lático",
+          "significado": "Ácido que as bactérias fazem a partir do açúcar do leite. Dá o azedo do iogurte."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O ácido lático é CH₃–CH(OH)–COOH.\nEle tem um OH no meio da cadeia e um COOH na ponta.\nA questão quer todas as funções (famílias) que aparecem nessa molécula.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "Ácido lático",
+            "rotulos": [
+              "CH₃–CH(OH)–COOH",
+              "OH no meio, COOH na ponta",
+              "quais funções?",
+              "leite azedo"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Uma molécula pode ter mais de um pedaço de família.\nCada pedaço conta uma função. Aqui há dois: o OH do meio e o COOH da ponta.\nO OH que está dentro do COOH não conta sozinho: ele faz parte do COOH."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ache os pedaços, do maior para o menor.\nCOOH na ponta = ácido carboxílico.\nOH preso a carbono comum, fora de anel = álcool.\nResultado: álcool e ácido carboxílico."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A função é reconhecida pelo pedaço, não pelo nome da molécula.\nO nome diz \"ácido\" por causa do COOH, mas o OH do meio continua lá.\nNão há anel na molécula, então esse OH não pode ser fenol."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, álcool e ácido carboxílico.\nB (só ácido) esquece o OH do meio da cadeia.\nC (fenol) pede OH preso a um anel, e aqui não há anel.\nD (éster) pede COO entre dois carbonos, sem H; aqui o COOH tem H.\nE (éster e amina) pede nitrogênio (N), e a molécula não tem N."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Ácido salicílico: OH grudado no anel benzênico, mais COOH. Famílias?",
+        "opcoes": [
+          "fenol e ácido carboxílico",
+          "álcool e ácido carboxílico",
+          "éster e fenol",
+          "só ácido carboxílico"
+        ],
+        "certa": "fenol e ácido carboxílico",
+        "resposta": "OH no anel é fenol; COOH é ácido carboxílico. Os dois contam."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-02",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Quando a carne ou o peixe estragam, bactérias quebram as proteínas e liberam substâncias de cheiro muito forte. Uma delas tem o nome sugestivo de cadaverina, de fórmula H₂N–CH₂–CH₂–CH₂–CH₂–CH₂–NH₂. Nas duas pontas da cadeia, o nitrogênio (N) está ligado a um carbono e a dois hidrogênios, e não há oxigênio na molécula.\nA cadaverina pertence à função orgânica",
+    "A": "amida.",
+    "B": "álcool.",
+    "C": "amina.",
+    "D": "hidrocarboneto.",
+    "E": "ácido carboxílico.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "N ligado só a C e H, sem O na molécula = amina. C. Erros: A exige C=O colado no N; B exige OH; D ignora o N; E exige COOH (cheiro forte não quer dizer ácido).",
+      "ideia": "O N preso só a carbono e hidrogênio marca a amina. Sem oxigênio na molécula, não pode ser amida.",
+      "pecas": [
+        {
+          "termo": "Amina",
+          "significado": "Função com nitrogênio (N) ligado só a carbono ou hidrogênio. Muitas têm cheiro forte, como o de peixe estragado."
+        },
+        {
+          "termo": "NH₂",
+          "significado": "Um nitrogênio com dois hidrogênios presos. É o pedaço de amina mais comum na ponta de uma cadeia."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A cadaverina é H₂N–CH₂–CH₂–CH₂–CH₂–CH₂–NH₂.\nEla tem um NH₂ em cada ponta e nenhum oxigênio.\nA questão quer a família dessa molécula.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "Cheiro de carne estragada",
+            "rotulos": [
+              "cadaverina",
+              "NH₂ nas pontas",
+              "sem oxigênio",
+              "carne estragada"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O pedaço que marca a família aqui é o N.\nEle está preso a um carbono e a dois hidrogênios: só C e H em volta dele.\nPara ser amida, o N teria que estar colado num carbono com C=O, e não há O na molécula."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "N ligado só a C ou H = amina.\nN colado no C=O = amida.\nAqui não há C=O, então a resposta é amina."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A regra da aula manda achar o pedaço do maior para o menor.\nSem COOH, sem COO e sem OH, o pedaço que sobra é o N.\nA fila de CH₂ no meio só liga as duas pontas; ela não muda a família."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, amina.\nA (amida) pede o N colado num C=O, e a molécula nem tem oxigênio.\nB (álcool) pede OH; o NH₂ tem N, não O.\nD (hidrocarboneto) só vale com C e H, e aqui há N.\nE (ácido carboxílico) pede COOH; cheiro forte não quer dizer ácido."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Uma molécula tem um N colado num C=O. Qual a família?",
+        "opcoes": [
+          "amida",
+          "amina",
+          "álcool",
+          "éster"
+        ],
+        "certa": "amida",
+        "resposta": "N colado no carbono do C=O é amida. Sem o C=O, seria amina."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-03",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Supermercados guardam frutas verdes em câmaras com eteno, um gás que a própria fruta solta e que acelera o amadurecimento. A molécula de eteno tem 2 carbonos ligados entre si por uma ligação dupla (C=C), e o resto das ligações de cada carbono é feito com hidrogênios. Lembre: cada carbono faz 4 ligações, e a ligação dupla conta como 2.\nQual é a fórmula do eteno?",
+    "A": "C₂H₆",
+    "B": "C₂H₂",
+    "C": "C₂H₈",
+    "D": "CH₄",
+    "E": "C₂H₄",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Cada C: 4 ligações − 2 da dupla = 2 H. Dois carbonos: 2 + 2 = 4 H, então C₂H₄. E. Erros: A trata a dupla como simples (3 H por C); B seria com ligação tripla; C dá 4 H a cada C, esquecendo a ligação entre eles; D é o metano, de 1 carbono.",
+      "ideia": "Cada carbono faz 4 ligações, e a dupla C=C gasta 2 delas. Sobram 2 para hidrogênio em cada carbono, então o eteno é C₂H₄.",
+      "pecas": [
+        {
+          "termo": "Ligação dupla",
+          "significado": "Duas ligações entre os mesmos dois átomos, escrita C=C. Conta como 2 das 4 ligações do carbono."
+        },
+        {
+          "termo": "Eteno",
+          "significado": "Gás que as frutas soltam ao amadurecer. Câmaras com eteno fazem a fruta verde amadurecer mais rápido."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O eteno tem 2 carbonos presos por uma ligação dupla (C=C).\nO resto das ligações de cada carbono vai para hidrogênios.\nA questão quer quantos H há na molécula, para montar a fórmula.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "O gás que amadurece a fruta",
+            "rotulos": [
+              "eteno",
+              "C=C (ligação dupla)",
+              "quantos H?",
+              "amadurece frutas"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Cada carbono faz 4 ligações, como uma mão com 4 dedos para segurar.\nCom números pequenos: no metano (CH₄), o carbono está sozinho e segura 4 H.\nNo eteno, cada carbono já usa 2 dedos na dupla com o outro carbono.\nSobram 4 − 2 = 2 dedos, ou seja, 2 H em cada carbono."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "H de cada carbono = 4 − ligações com outro carbono.\nCada carbono: 4 − 2 = 2 H.\nDois carbonos: 2 + 2 = 4 H. Fórmula: C₂H₄.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Hidrogênios do eteno",
+            "dados": [
+              "\\text{carbonos} = 2",
+              "\\text{C=C vale } 2 \\text{ ligações}"
+            ],
+            "formula": "\\text{H de cada C} = 4 - \\text{ligações com C}",
+            "legenda": [
+              "4: as ligações que todo carbono faz",
+              "ligações com C: a dupla vale 2"
+            ],
+            "contas": [
+              "\\text{H de cada C} = 4 - 2 = 2",
+              "\\text{H total} = 2 + 2 = 4"
+            ],
+            "resultado": "\\text{C}_2\\text{H}_4",
+            "nota": "Cada carbono fica com 2 hidrogênios."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Toda ligação que o carbono não usa com outro carbono vai para um hidrogênio.\nA dupla gasta 2 das 4 ligações de cada lado, por isso sobra menos lugar para H.\nConfira desenhando: H₂C=CH₂ tem 2 + 2 = 4 H."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, C₂H₄.\nA (C₂H₆) conta a ligação entre os carbonos como simples, e ela é dupla.\nB (C₂H₂) seria com ligação tripla (C≡C), que gasta 3 ligações de cada carbono.\nC (C₂H₈) dá 4 H para cada carbono, esquecendo a ligação entre eles.\nD (CH₄) é o metano, com 1 carbono só."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Dois carbonos com ligação simples entre si. Quantos H?",
+        "opcoes": [
+          "6",
+          "4",
+          "8",
+          "2"
+        ],
+        "certa": "6",
+        "resposta": "Cada carbono: 4 − 1 = 3 H. Depois 3 + 3 = 6: é o etano, C₂H₆."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-04",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "A ureia é a substância que o corpo usa para jogar fora o nitrogênio pela urina. Ela também é fabricada em grande quantidade para virar adubo e entra em cremes hidratantes para pele ressecada. Sua fórmula é H₂N–CO–NH₂: um carbono no centro, ligado a um oxigênio por ligação dupla (C=O) e a dois grupos NH₂.\nPelo pedaço que caracteriza a molécula, a ureia pertence à função",
+    "A": "amina, porque tem NH₂.",
+    "B": "amida, porque tem N colado no C=O.",
+    "C": "ácido carboxílico, porque tem C=O.",
+    "D": "álcool, porque tem oxigênio.",
+    "E": "éster, porque tem C, O e N juntos.",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "N ligado ao carbono do C=O = amida. B. Erros: A não vê o C=O vizinho do N; C exige COOH (C=O e OH no mesmo carbono); D exige OH; E exige COO entre dois carbonos.",
+      "ideia": "Quando o N está colado no carbono do C=O, a família é amida. A ureia tem os dois N assim.",
+      "pecas": [
+        {
+          "termo": "Amida",
+          "significado": "Função com nitrogênio (N) colado num carbono que tem C=O. Exemplo: a ureia."
+        },
+        {
+          "termo": "C=O",
+          "significado": "Carbono ligado ao oxigênio por ligação dupla. Ele aparece no COOH, no COO e na amida."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A ureia é H₂N–CO–NH₂.\nTem um carbono no centro com C=O, e um NH₂ de cada lado, colado nesse carbono.\nA questão quer a família da ureia.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "Ureia",
+            "rotulos": [
+              "ureia",
+              "H₂N–CO–NH₂",
+              "N colado no C=O",
+              "adubo e hidratante"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Aqui há dois pedaços juntos: o N e o C=O.\nO N não está preso a um carbono qualquer: ele está colado no carbono do C=O.\nA aula separa os dois casos: N só com C ou H é amina; N colado no C=O é amida."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Olhe o vizinho do N.\nO vizinho é um carbono com C=O? Então é amida.\nNa ureia, os dois N estão no carbono do C=O: amida."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A palavra-chave manda ler do maior pedaço para o menor.\nO pedaço N + C=O é maior que o N sozinho, então ele decide a família.\nPor isso a ureia, mesmo com NH₂, não é amina."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, amida, porque tem N colado no C=O.\nA (amina) para no NH₂ e não vê que ele está colado no C=O.\nC (ácido) pede COOH, com OH no carbono; aqui não há OH.\nD (álcool) pede OH; o O da ureia está no C=O.\nE (éster) pede COO entre dois carbonos, e a ureia tem um O só."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "CH₃–NH₂: N preso a um carbono sem C=O. Família?",
+        "opcoes": [
+          "amina",
+          "amida",
+          "álcool",
+          "hidrocarboneto"
+        ],
+        "certa": "amina",
+        "resposta": "O N está num carbono sem C=O. N só com C ou H é amina."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-05",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Algumas garrafas e potes de plástico duro trazem o aviso \"livre de BPA\". O BPA (bisfenol A) é usado para fabricar esse plástico e pode passar para a comida quando o pote é aquecido. A molécula dele tem dois anéis benzênicos (anéis de seis carbonos, como no benzeno), ligados por um carbono, e cada anel tem um grupo OH preso diretamente nele.\nOs grupos OH do BPA caracterizam a função",
+    "A": "álcool.",
+    "B": "ácido carboxílico.",
+    "C": "éster.",
+    "D": "fenol.",
+    "E": "amina.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "OH preso direto ao anel benzênico = fenol. D. Erros: A trata todo OH como álcool; B exige COOH; C exige COO entre carbonos; E exige N.",
+      "ideia": "OH preso direto no anel benzênico é fenol, não álcool. O BPA tem dois, e por isso se chama bisfenol.",
+      "pecas": [
+        {
+          "termo": "Anel benzênico",
+          "significado": "Seis carbonos ligados em hexágono, com ligações duplas, como no benzeno."
+        },
+        {
+          "termo": "Fenol",
+          "significado": "Função com OH preso direto no anel benzênico."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O BPA tem dois anéis de seis carbonos.\nCada anel tem um OH preso direto nele.\nA questão quer a família marcada por esses OH.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "O BPA do plástico",
+            "rotulos": [
+              "BPA (bisfenol A)",
+              "OH preso no anel",
+              "que família?",
+              "plástico duro"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "O OH sozinho aparece em duas famílias: álcool e fenol.\nO que separa as duas é onde o OH está preso.\nEm carbono comum, de ligações simples, é álcool. No anel benzênico, é fenol."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Pergunte: o OH está no anel?\nSim, nos dois anéis. Então é fenol.\nO próprio nome avisa: bis-fenol quer dizer dois fenóis."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O anel benzênico tem ligações duplas, então o carbono que segura o OH não é de ligações só simples.\nPor isso a aula dá outro nome para esse caso: fenol.\nO OH é o mesmo pedaço; o vizinho dele é que muda a família."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, fenol.\nA (álcool) vale só para OH em carbono de ligações simples, fora do anel.\nB (ácido carboxílico) pede COOH, com C=O e OH no mesmo carbono.\nC (éster) pede COO entre dois carbonos.\nE (amina) pede nitrogênio, e o BPA não tem N."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "OH preso a um carbono comum, fora de anel. Família?",
+        "opcoes": [
+          "álcool",
+          "fenol",
+          "ácido carboxílico",
+          "éster"
+        ],
+        "certa": "álcool",
+        "resposta": "OH fora do anel, em carbono de ligações simples, é álcool."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-06",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Nutricionistas costumam recomendar o azeite de oliva no lugar da banha de porco. Uma diferença está nas cadeias de carbono das moléculas que formam essas gorduras. No azeite predomina o ácido oleico, cuja cadeia tem uma ligação dupla entre dois carbonos (C=C). Na banha há muito ácido esteárico, de cadeia do mesmo tamanho, mas só com ligações simples entre os carbonos.\nSobre as cadeias desses dois ácidos, é correto afirmar que",
+    "A": "as duas são saturadas, porque têm o mesmo tamanho.",
+    "B": "a do esteárico é saturada, e a do oleico não é saturada.",
+    "C": "a do oleico é saturada, e a do esteárico não é saturada.",
+    "D": "as duas não são saturadas, porque são de ácidos.",
+    "E": "o oleico deixou de ser ácido por causa da ligação dupla.",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Saturada = só ligações simples entre carbonos. Esteárico (só simples) é saturado; oleico (uma C=C) não é. B. Erros: A usa o tamanho; C inverte os dois; D acha que o COOH muda a regra; E acha que a C=C tira o COOH.",
+      "ideia": "Cadeia saturada tem só ligações simples entre os carbonos. O esteárico é assim; o oleico tem uma C=C, então não é saturado.",
+      "pecas": [
+        {
+          "termo": "Cadeia saturada",
+          "significado": "Cadeia com só ligações simples entre os carbonos."
+        },
+        {
+          "termo": "Ácido graxo",
+          "significado": "Ácido de cadeia longa que forma óleos e gorduras, como o oleico e o esteárico."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O ácido oleico (do azeite) tem uma ligação dupla C=C na cadeia.\nO ácido esteárico (da banha) tem só ligações simples entre os carbonos.\nA questão quer saber qual cadeia é saturada.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "Azeite e banha",
+            "rotulos": [
+              "oleico × esteárico",
+              "oleico: uma C=C",
+              "esteárico: só simples",
+              "qual é saturada?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Saturada é a cadeia com só ligações simples entre os carbonos.\nBasta uma ligação dupla entre carbonos para a cadeia deixar de ser saturada.\nO tamanho da cadeia e o COOH na ponta não entram nessa regra."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Esteárico: só simples = saturada.\nOleico: tem uma C=C = não saturada (insaturada).\nResposta: a do esteárico é saturada, e a do oleico não é."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Saturada quer dizer cheia: cada carbono segura o máximo de hidrogênios que pode.\nNa C=C, os dois carbonos gastam uma ligação a mais entre si e seguram menos H.\nPor isso a dupla tira a cadeia da lista das saturadas."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, a do esteárico é saturada, e a do oleico não é.\nA olha só o tamanho, mas o que decide são as ligações entre carbonos.\nC troca os dois: quem tem a C=C é o oleico.\nD acha que ser ácido muda a cadeia; o COOH não entra nessa regra.\nE erra: o oleico continua ácido, porque ainda tem o COOH na ponta."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "CH₃–CH=CH–CH₃: essa cadeia é saturada?",
+        "opcoes": [
+          "não, tem C=C",
+          "sim, tem só carbonos",
+          "sim, é pequena",
+          "não, falta COOH"
+        ],
+        "certa": "não, tem C=C",
+        "resposta": "Uma ligação dupla entre carbonos já tira a cadeia das saturadas."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-07",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Um farmacêutico avisa: comprimido de aspirina guardado no banheiro úmido pode estragar e ganhar cheiro de vinagre. A aspirina (ácido acetilsalicílico) tem na molécula um anel benzênico com um grupo COOH e um grupo COO preso entre o anel e outro carbono. Com a umidade, a água quebra a molécula exatamente nesse COO, e um dos pedaços que se formam é o ácido acético, o ácido do vinagre.\nO pedaço da aspirina que reagiu com a água é característico da função",
+    "A": "ácido carboxílico.",
+    "B": "fenol.",
+    "C": "álcool.",
+    "D": "amida.",
+    "E": "éster.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "COO entre o anel e outro carbono = éster; a água desfaz o éster e solta ácido acético. E. Erros: A é o COOH, que não quebrou; B pede OH preso no anel; C pede OH em carbono comum; D pede N.",
+      "ideia": "A água quebrou o COO entre dois carbonos, que é o pedaço do éster. É a esterificação andando para trás: éster + água devolve o ácido.",
+      "pecas": [
+        {
+          "termo": "Éster",
+          "significado": "Função com COO preso a carbono dos dois lados, sem H."
+        },
+        {
+          "termo": "Ácido acetilsalicílico",
+          "significado": "Nome químico da aspirina. O \"acetil\" vem do ácido acético, que volta a sair com a umidade."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A aspirina tem um COOH e um COO preso entre o anel e outro carbono.\nA água quebrou a molécula no COO e saiu ácido acético (cheiro de vinagre).\nA questão quer a família do pedaço que a água quebrou.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "Aspirina no banheiro úmido",
+            "rotulos": [
+              "aspirina",
+              "COO entre carbonos",
+              "água quebra aqui",
+              "cheiro de vinagre"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A aula ensina: ácido + álcool → éster + água.\nA reação também anda para trás, como peças de Lego que se encaixam e se desencaixam: éster + água → ácido + o outro pedaço.\nNo comprimido úmido aconteceu a volta: a água desfez o éster e soltou o ácido acético."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "COO sem H, preso a carbono dos dois lados = éster.\nO COOH tem H e fica na ponta: é o ácido, e não foi ele que quebrou.\nO pedaço quebrado é o éster."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Ida: ácido + álcool viram éster e soltam água.\nVolta: o éster pega a água de novo e se separa em ácido e no outro pedaço.\nPor isso o éster da aspirina, com umidade, devolve o ácido acético."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, éster.\nA (ácido carboxílico) é o COOH, que tem H e não foi o pedaço quebrado.\nB (fenol) pede OH preso no anel; antes de quebrar, esse O está dentro do COO.\nC (álcool) pede OH em carbono comum.\nD (amida) pede nitrogênio, e a aspirina não tem N."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Acetato de etila + H₂O: o que se forma?",
+        "opcoes": [
+          "ácido e álcool",
+          "sabão e glicerina",
+          "amina e água",
+          "só hidrocarboneto"
+        ],
+        "certa": "ácido e álcool",
+        "resposta": "É a esterificação ao contrário: éster + água → ácido + álcool."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-08",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Uma cooperativa faz sabão com gordura animal e soda cáustica (uma base forte). Cada molécula de gordura é um éster triplo: tem 3 pedaços COO, cada um ligando um ácido graxo de cadeia longa a uma glicerina. Na saponificação, cada pedaço COO reage com a base e libera 1 molécula de sabão; a glicerina sobra inteira, 1 por molécula de gordura.\nSe 10 moléculas de gordura reagirem por completo, quantas moléculas de sabão se formam?",
+    "A": "30",
+    "B": "10",
+    "C": "3",
+    "D": "13",
+    "E": "40",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "10 gorduras × 3 COO = 30 sabões (e sobram 10 glicerinas). A. Erros: B conta 1 sabão por gordura; C é o de uma gordura só; D soma 10 + 3; E soma as glicerinas (30 + 10).",
+      "ideia": "Cada gordura tem 3 pedaços COO, e cada um vira um sabão com a base forte. Então 10 gorduras dão 10 × 3 = 30 sabões.",
+      "pecas": [
+        {
+          "termo": "Saponificação",
+          "significado": "Reação de gordura ou óleo (que são ésteres) com base forte, como a soda cáustica. Dá sabão e glicerina."
+        },
+        {
+          "termo": "Glicerina",
+          "significado": "O pedaço que segurava os 3 ácidos graxos da gordura. Sai inteira, 1 por gordura."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Ácido graxo é o pedaço comprido da gordura, uma fila longa de átomos de carbono, como os que formam o óleo de cozinha.\nCada gordura tem 3 pedaços COO, e cada COO vira 1 sabão.\nA glicerina sai inteira, 1 por gordura.\nA questão quer quantos sabões saem de 10 gorduras.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Sabão de gordura",
+            "rotulos": [
+              "gordura + soda",
+              "sabão + glicerina",
+              "1 gordura → 3 sabões",
+              "10 gorduras"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Com números pequenos: 1 gordura tem 3 COO e dá 3 sabões.\n2 gorduras dão 3 + 3 = 6 sabões, que é 2 × 3.\nA glicerina não é sabão: ela é a parte que segurava os 3 ácidos graxos juntos."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Sabões = gorduras × COO de cada gordura.\n10 × 3 = 30 moléculas de sabão.\nE sobram 10 glicerinas, uma por gordura.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Sabões da cooperativa",
+            "dados": [
+              "\\text{gorduras} = 10",
+              "\\text{COO por gordura} = 3"
+            ],
+            "formula": "\\text{sabões} = \\text{gorduras} \\times \\text{COO por gordura}",
+            "legenda": [
+              "cada COO vira 1 sabão"
+            ],
+            "contas": [
+              "\\text{sabões} = 10 \\times 3",
+              "\\text{sabões} = 30"
+            ],
+            "resultado": "30\\,\\text{sabões}",
+            "nota": "E sobram 10 glicerinas, uma por gordura."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Óleo e gordura são ésteres, e cada COO é um ponto de quebra.\nA base forte quebra cada COO e solta um ácido graxo em forma de sabão.\nComo cada gordura tem 3 COO, cada uma rende 3 sabões."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 30 moléculas de sabão.\nB (10) conta 1 sabão por gordura, esquecendo os 3 COO.\nC (3) é o que sai de uma gordura só.\nD (13) soma 10 + 3 em vez de multiplicar.\nE (40) conta as 10 glicerinas como se fossem sabão."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "4 gorduras de 3 COO cada viram quantos sabões?",
+        "opcoes": [
+          "12",
+          "4",
+          "7",
+          "16"
+        ],
+        "certa": "12",
+        "resposta": "4 × 3 = 12. A glicerina não conta como sabão."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-09",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "O mentol, tirado da hortelã, dá a sensação de frescor em pastas de dente e balas. A molécula tem um anel de seis carbonos, mas, diferente do anel benzênico, esse anel só tem ligações simples entre os carbonos. Um grupo OH está preso a um dos carbonos desse anel.\nUm estudante disse que o mentol é um fenol, porque tem OH preso num anel. A classificação correta do mentol é",
+    "A": "fenol, como disse o estudante.",
+    "B": "ácido carboxílico, por ter oxigênio.",
+    "C": "éster, por ter OH no anel.",
+    "D": "álcool, porque o anel não é benzênico.",
+    "E": "hidrocarboneto, porque o anel só tem C e H.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Anel só de ligações simples, OH num carbono dele = álcool. D. Erros: A acha que todo anel é benzênico; B acha que oxigênio basta para ser ácido; C confunde OH com COO; E esquece o O do OH.",
+      "ideia": "Fenol é OH no anel benzênico, que tem ligações duplas. O anel do mentol só tem simples, então o OH dele é de álcool.",
+      "pecas": [
+        {
+          "termo": "Álcool",
+          "significado": "OH preso a carbono que só faz ligações simples. Pode ser em cadeia aberta ou em anel sem duplas."
+        },
+        {
+          "termo": "Anel benzênico",
+          "significado": "Seis carbonos em hexágono, com ligações duplas, como no benzeno."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O mentol tem um anel de seis carbonos com OH preso nele.\nEsse anel só tem ligações simples: não é o anel benzênico.\nA questão quer a família certa do mentol.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "Mentol da hortelã",
+            "rotulos": [
+              "mentol (hortelã)",
+              "OH no anel",
+              "anel só de simples",
+              "fenol ou álcool?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Fenol não é qualquer OH em anel: é OH no anel benzênico.\nO anel benzênico tem ligações duplas. O anel do mentol só tem simples.\nEntão o carbono que segura o OH faz só ligações simples, como no etanol."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Pergunta 1: o anel tem duplas (é benzênico)? Não.\nPergunta 2: o OH está em carbono de ligações simples? Sim.\nOH em carbono de ligações simples = álcool."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A aula define álcool como OH preso a carbono que só faz ligações simples.\nO formato de anel não muda isso: o que conta é o tipo de ligação do carbono.\nPor isso o mentol é álcool, mesmo com o OH num anel."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, álcool, porque o anel não é benzênico.\nA (fenol) pede o anel benzênico, com ligações duplas; este anel só tem simples.\nB (ácido carboxílico) pede COOH; ter oxigênio não basta.\nC (éster) pede COO entre dois carbonos.\nE (hidrocarboneto) pede só C e H, e o OH traz oxigênio."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Timol: OH grudado no anel benzênico. Família?",
+        "opcoes": [
+          "fenol",
+          "álcool",
+          "éster",
+          "amina"
+        ],
+        "certa": "fenol",
+        "resposta": "Anel benzênico com OH preso direto nele é fenol."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-10",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "A manteiga rançosa tem cheiro ruim por causa do ácido butanoico, CH₃–CH₂–CH₂–COOH. Já o butanoato de etila, que tem cheiro de abacaxi e é usado em balas e sucos artificiais, tem o pedaço COO entre dois carbonos: de um lado vem a cadeia do ácido butanoico; do outro, a cadeia do etanol, o álcool do posto (CH₃–CH₂–OH).\nPara fabricar o aroma de abacaxi a partir do ácido da manteiga rançosa, a indústria deve fazer esse ácido reagir com",
+    "A": "soda cáustica, formando sabão.",
+    "B": "água, formando um hidrocarboneto.",
+    "C": "etanol, formando um éster e água.",
+    "D": "uma amina, formando um álcool.",
+    "E": "outro ácido, formando um fenol.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Éster (COO entre carbonos) = ácido + álcool; o lado do álcool vem do etanol. C. Erros: A é a saponificação; B não traz a cadeia do etanol; D traria N; E não forma éster.",
+      "ideia": "O aroma de abacaxi é um éster, e éster nasce de ácido + álcool. O ácido da manteiga rançosa precisa reagir com etanol.",
+      "pecas": [
+        {
+          "termo": "Esterificação",
+          "significado": "Ácido carboxílico + álcool → éster + água."
+        },
+        {
+          "termo": "Rançoso",
+          "significado": "Gordura velha que se quebrou e soltou ácidos de cheiro ruim, como o butanoico."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O ácido butanoico (cheiro de ranço) tem COOH.\nO aroma de abacaxi tem COO com a cadeia desse ácido de um lado e a do etanol do outro.\nA questão quer com o que o ácido deve reagir.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Do ranço ao abacaxi",
+            "rotulos": [
+              "ácido butanoico + ?",
+              "aroma de abacaxi + ?",
+              "manteiga rançosa",
+              "COO entre carbonos"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "COO sem H, entre dois carbonos, é a marca do éster.\nA aula ensina a receita: ácido + álcool → éster + água.\nO lado do ácido já está aqui; falta o lado do álcool, que é o etanol."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Produto com COO entre carbonos = éster.\nÉster nasce de ácido + álcool.\nÁcido butanoico + etanol → butanoato de etila + água."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O ácido solta o OH do COOH, e o álcool solta o H do OH.\nEsses dois saem juntos como água (H₂O).\nO que sobra se une pelo O, e nasce o COO do éster com cheiro de fruta."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, etanol, formando um éster e água.\nA (soda cáustica) é a receita do sabão, com gordura; não dá aroma de fruta.\nB (água) não junta a cadeia do etanol ao ácido.\nD (amina) traria nitrogênio, e o aroma não tem N.\nE (outro ácido) não dá éster; e fenol pede OH num anel."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Ácido acético + metanol (um álcool) dão o quê?",
+        "opcoes": [
+          "éster e água",
+          "sabão e glicerina",
+          "amina e água",
+          "fenol e água"
+        ],
+        "certa": "éster e água",
+        "resposta": "Ácido + álcool → éster + água: é a esterificação."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-11",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "As bolinhas de naftalina, usadas para afastar traças de roupas guardadas, têm cheiro forte e somem aos poucos, virando gás. A naftalina tem fórmula C₁₀H₈: são dois anéis benzênicos grudados lado a lado, e todos os átomos da molécula são carbono ou hidrogênio.\nUm aluno classificou a naftalina como fenol, por causa dos anéis. A função correta da naftalina é",
+    "A": "fenol, porque tem anel benzênico.",
+    "B": "álcool, porque tem cheiro forte.",
+    "C": "éster, porque vira gás.",
+    "D": "amina, porque afasta insetos.",
+    "E": "hidrocarboneto, porque só tem C e H.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "C₁₀H₈ só tem C e H = hidrocarboneto. E. Erros: A esquece que fenol exige OH no anel; B, C e D usam cheiro, estado e uso, que não definem a família, e a molécula não tem O nem N.",
+      "ideia": "A fórmula C₁₀H₈ só tem carbono e hidrogênio, então é hidrocarboneto. Ter anel benzênico não basta para ser fenol: falta o OH.",
+      "pecas": [
+        {
+          "termo": "Hidrocarboneto",
+          "significado": "Composto só de carbono (C) e hidrogênio (H), como o metano e a gasolina."
+        },
+        {
+          "termo": "Naftalina",
+          "significado": "Dois anéis benzênicos grudados. Vira gás aos poucos e afasta traças."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A naftalina é C₁₀H₈, com dois anéis benzênicos grudados.\nTodos os átomos são carbono ou hidrogênio.\nA questão quer a família da naftalina.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "Bolinha de naftalina",
+            "rotulos": [
+              "naftalina C₁₀H₈",
+              "dois anéis benzênicos",
+              "só C e H",
+              "fenol?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Fenol pede duas coisas juntas: o anel benzênico e um OH preso nele.\nA naftalina tem os anéis, mas não tem OH: não tem nenhum oxigênio.\nSem O e sem N, não sobra pedaço de família além de C e H."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Olhe a fórmula: C₁₀H₈ só tem as letras C e H.\nSó C e H = hidrocarboneto.\nO anel não muda isso: o benzeno também é hidrocarboneto."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Os pedaços de família da aula têm O ou N: OH, COOH, COO, N.\nQuando a fórmula não tem O nem N, nenhum desses pedaços cabe.\nPor isso a molécula fica na família mais simples, a dos hidrocarbonetos."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, hidrocarboneto, porque só tem C e H.\nA (fenol) precisa de OH preso ao anel, e a naftalina não tem O.\nB (álcool) precisa de OH; cheiro forte não define família.\nC (éster) precisa de COO; virar gás não define família.\nD (amina) precisa de N, e a fórmula não tem N."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "C₆H₅–OH: benzeno com um OH. Qual a família?",
+        "opcoes": [
+          "fenol",
+          "hidrocarboneto",
+          "álcool",
+          "éster"
+        ],
+        "certa": "fenol",
+        "resposta": "Agora há OH preso ao anel benzênico: é fenol."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-12",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Esmaltes vendidos como \"sem acetona\" usam no removedor o acetato de etila, um éster. Ele é feito com ácido acético (C₂H₄O₂) e etanol (C₂H₆O). Na reação, as duas moléculas se juntam e soltam 1 molécula de água (H₂O); todos os outros átomos ficam no éster.\nQual é a fórmula do acetato de etila?",
+    "A": "C₄H₈O₂",
+    "B": "C₄H₁₀O₃",
+    "C": "C₄H₁₀O₂",
+    "D": "C₂H₈O₂",
+    "E": "C₄H₆O₂",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "C: 2 + 2 = 4; H: 4 + 6 − 2 = 8; O: 2 + 1 − 1 = 2, então C₄H₈O₂. A. Erros: B não tira a água; C tira só o O da água; D não soma os carbonos; E tira 4 H, mas a água leva 2.",
+      "ideia": "Some os átomos do ácido e do álcool e tire os da água que saiu. Dá C: 4, H: 10 − 2 = 8 e O: 3 − 1 = 2.",
+      "pecas": [
+        {
+          "termo": "Esterificação",
+          "significado": "Ácido + álcool → éster + água. O ácido solta OH e o álcool solta H."
+        },
+        {
+          "termo": "C₄H₈O₂",
+          "significado": "Quer dizer 4 carbonos, 8 hidrogênios e 2 oxigênios na molécula."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Ácido acético (C₂H₄O₂) + etanol (C₂H₆O) viram acetato de etila.\nNa reação sai 1 água (H₂O), e o resto fica no éster.\nA questão quer a fórmula do éster.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Removedor sem acetona",
+            "rotulos": [
+              "C₂H₄O₂ + C₂H₆O",
+              "éster + H₂O",
+              "sai 1 água",
+              "removedor de esmalte"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Pense numa receita: o que entra tem que sair, nada some.\nO número pequeno conta os átomos: C₂H₄O₂ tem 2 C, 4 H e 2 O, como 2 balas, 4 chicletes e 2 pirulitos.\nCom números pequenos: entram 3 balas e 2 balas, você dá 1, ficam 3 + 2 − 1 = 4.\nCom os átomos é igual: some tudo o que entrou e tire o que saiu na água.\nFaça letra por letra: C, depois H, depois O."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "C: 2 + 2 = 4 (a água não leva C).\nH: 4 + 6 = 10, menos 2 da água = 8.\nO: 2 + 1 = 3, menos 1 da água = 2. Fórmula: C₄H₈O₂.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Átomos do acetato de etila",
+            "dados": [
+              "\\text{ácido: C}_2\\text{H}_4\\text{O}_2",
+              "\\text{etanol: C}_2\\text{H}_6\\text{O}",
+              "\\text{sai: H}_2\\text{O}"
+            ],
+            "formula": "\\text{éster} = \\text{ácido} + \\text{álcool} - \\text{água}",
+            "legenda": [
+              "conte cada letra separado: C, H e O"
+            ],
+            "contas": [
+              "\\text{C}: 2 + 2 = 4",
+              "\\text{H}: 4 + 6 - 2 = 8",
+              "\\text{O}: 2 + 1 - 1 = 2"
+            ],
+            "resultado": "\\text{C}_4\\text{H}_8\\text{O}_2",
+            "nota": "Os átomos não somem: só a água sai."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Na esterificação, o ácido solta OH e o álcool solta H.\nEsse OH + H formam a água: 2 H e 1 O saem da conta.\nTodo o resto se junta no éster, por isso basta somar e tirar a água."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, C₄H₈O₂.\nB (C₄H₁₀O₃) somou tudo e esqueceu de tirar a água.\nC (C₄H₁₀O₂) tirou o O da água, mas esqueceu os 2 H.\nD (C₂H₈O₂) não somou os carbonos dos dois lados.\nE (C₄H₆O₂) tirou 4 H, mas a água leva só 2."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Metanol (CH₄O) + ácido acético: quantos H terá o produto?",
+        "opcoes": [
+          "6",
+          "8",
+          "4",
+          "10"
+        ],
+        "certa": "6",
+        "resposta": "4 + 4 = 8 H. Menos os 2 H da água que sai: 6 H."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-13",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Num laboratório escolar há dois frascos. O frasco azul tem álcool benzílico, usado em perfumes, de fórmula C₆H₅–CH₂–OH: o OH está preso a um carbono de fora do anel, que só faz ligações simples. O frasco verde tem C₆H₅–OH, um antisséptico antigo, em que o OH está preso direto no anel benzênico (C₆H₅). O professor pediu a função de cada um.\nA classificação correta é",
+    "A": "álcool nos dois, porque os dois têm OH.",
+    "B": "fenol nos dois, porque os dois têm anel.",
+    "C": "álcool no azul e fenol no verde.",
+    "D": "fenol no azul e álcool no verde.",
+    "E": "hidrocarboneto nos dois, porque o anel só tem C e H.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Azul: OH no CH₂, fora do anel = álcool. Verde: OH direto no anel = fenol. C. Erros: A trata todo OH como álcool; B acha que ter anel basta; D inverte os frascos; E esquece o O do OH.",
+      "ideia": "Quem decide é o carbono que segura o OH. No CH₂ fora do anel é álcool; direto no anel benzênico é fenol.",
+      "pecas": [
+        {
+          "termo": "Fenol",
+          "significado": "OH preso direto num carbono do anel benzênico."
+        },
+        {
+          "termo": "C₆H₅",
+          "significado": "Jeito de escrever o anel benzênico com um lugar livre para prender outro pedaço."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Frasco azul: C₆H₅–CH₂–OH, com o OH num carbono fora do anel.\nFrasco verde: C₆H₅–OH, com o OH preso direto no anel.\nA questão quer a família de cada um.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "Dois frascos parecidos",
+            "rotulos": [
+              "azul: C₆H₅–CH₂–OH",
+              "verde: C₆H₅–OH",
+              "onde está o OH?",
+              "perfume × antisséptico"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Os dois têm anel e os dois têm OH. O que muda é o vizinho do OH.\nNo azul, entre o anel e o OH existe um CH₂, carbono de ligações simples.\nNo verde, o OH encosta direto num carbono do anel."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "OH encostado no anel = fenol.\nOH num carbono comum, mesmo perto de um anel = álcool.\nAzul: álcool. Verde: fenol."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A família é decidida pelo carbono que segura o OH, e não pela molécula inteira.\nNo azul, quem segura o OH é o CH₂, que só faz ligações simples: regra do álcool.\nNo verde, quem segura é um carbono do anel benzênico: regra do fenol."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, álcool no azul e fenol no verde.\nA esquece que OH no anel tem nome próprio, fenol.\nB acha que basta ter anel; no azul, o OH está fora do anel.\nD troca os dois frascos.\nE esquece o OH, que traz oxigênio: não é só C e H."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "CH₃–CH₂–OH (etanol, sem anel). Qual a família?",
+        "opcoes": [
+          "álcool",
+          "fenol",
+          "éster",
+          "amina"
+        ],
+        "certa": "álcool",
+        "resposta": "OH em carbono de ligações simples, sem anel: álcool."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-14",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Um painel de museu de ciências afirma que todos estes combustíveis são hidrocarbonetos: o gás natural veicular (GNV), que é quase só metano (CH₄); o gás de botijão, mistura de propano (C₃H₈) e butano (C₄H₁₀); o etanol, CH₃–CH₂–OH; o querosene de avião, mistura de cadeias de carbono e hidrogênio; e a parafina das velas, também feita só de carbono e hidrogênio.\nO painel errou em qual combustível?",
+    "A": "GNV",
+    "B": "Etanol",
+    "C": "Gás de botijão",
+    "D": "Querosene de avião",
+    "E": "Parafina das velas",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Só o etanol tem O (pedaço OH, álcool); GNV, gás de botijão, querosene e parafina só têm C e H. B. Erros: A, C, D e E são hidrocarbonetos de verdade; marcá-los é achar que todo combustível tem oxigênio.",
+      "ideia": "Hidrocarboneto só tem C e H. Entre os combustíveis do painel, só o etanol tem oxigênio, no pedaço OH, e por isso é álcool.",
+      "pecas": [
+        {
+          "termo": "Hidrocarboneto",
+          "significado": "Composto só de carbono e hidrogênio, como o metano e o propano."
+        },
+        {
+          "termo": "GNV",
+          "significado": "Gás natural veicular: gás usado em carros, feito quase só de metano."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O painel lista GNV (CH₄), gás de botijão (C₃H₈ e C₄H₁₀), etanol (CH₃–CH₂–OH), querosene e parafina.\nQuerosene e parafina são feitos só de C e H.\nA questão quer o que não é hidrocarboneto.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "fumaca-chamine",
+            "titulo": "Combustíveis do museu",
+            "rotulos": [
+              "fumaça da queima",
+              "calor e movimento",
+              "cinco combustíveis",
+              "qual não é só C e H?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Hidrocarboneto é o composto feito só de carbono (C) e hidrogênio (H).\nBasta ler as letras de cada fórmula e procurar alguma diferente de C e H.\nCH₄, C₃H₈ e C₄H₁₀ só têm C e H. Querosene e parafina também."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Procure um O ou um N nas fórmulas.\nCH₃–CH₂–OH tem um O, no pedaço OH.\nOH em carbono de ligações simples = álcool, não hidrocarboneto."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Ser combustível não diz a família: o que diz são os átomos e os pedaços.\nO etanol queima como os outros, mas o OH coloca ele na família dos álcoois.\nOs outros quatro só têm C e H, por isso são hidrocarbonetos."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, etanol.\nA (GNV) é metano, CH₄: só C e H.\nC (gás de botijão) é propano e butano: só C e H.\nD (querosene) é mistura de cadeias de C e H.\nE (parafina) também é feita só de C e H."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Qual destes tem só C e H?",
+        "opcoes": [
+          "C₈H₁₈ (octano)",
+          "CH₃–OH (metanol)",
+          "CH₃–COOH",
+          "CH₃–NH₂"
+        ],
+        "certa": "C₈H₁₈ (octano)",
+        "resposta": "Só o octano não tem O nem N: é hidrocarboneto."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-15",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Num trabalho de química, um grupo desenhou cinco fórmulas de moléculas com carbono e hidrogênio e pediu à turma que achasse a impossível. A regra é: cada carbono faz exatamente 4 ligações, cada hidrogênio faz 1, a ligação dupla (=) conta como 2 e a tripla (≡) conta como 3.\nQual fórmula é impossível?",
+    "A": "CH₄",
+    "B": "CH₃–CH₃",
+    "C": "CH₂=CH₂",
+    "D": "CH₃=CH₂",
+    "E": "HC≡CH",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "No CH₃=CH₂, o carbono da esquerda faz 3 (H) + 2 (dupla) = 5 ligações: impossível. D. As outras fecham 4 em cada carbono: A 4; B 3 + 1; C 2 + 2; E 1 + 3.",
+      "ideia": "Cada carbono soma os H presos com as ligações com o outro carbono, e o total tem que dar 4. No CH₃=CH₂, o primeiro carbono dá 3 + 2 = 5.",
+      "pecas": [
+        {
+          "termo": "Ligação tripla",
+          "significado": "Três ligações entre os mesmos dois átomos, escrita C≡C. Conta como 3 das 4 ligações do carbono."
+        },
+        {
+          "termo": "Ligação dupla",
+          "significado": "Duas ligações entre os mesmos dois átomos, escrita C=C. Conta como 2."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "São cinco fórmulas com C e H.\nO carbono faz 4 ligações; a dupla vale 2 e a tripla vale 3.\nA questão quer a fórmula em que algum carbono não fecha 4.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "A fórmula impossível",
+            "rotulos": [
+              "cinco fórmulas",
+              "C faz 4 ligações",
+              "dupla 2, tripla 3",
+              "qual é impossível?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Conte as ligações de cada carbono: hidrogênios presos + ligações com o outro carbono.\nCom números pequenos: no CH₄, o carbono tem 4 H, então 4 + 0 = 4. Fecha.\nNo CH₃–CH₃, cada carbono tem 3 H e 1 ligação simples: 3 + 1 = 4. Fecha."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "CH₂=CH₂: 2 + 2 = 4. Fecha.\nHC≡CH: 1 + 3 = 4. Fecha.\nCH₃=CH₂: o carbono da esquerda tem 3 + 2 = 5. Não fecha: impossível.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Ligações de cada carbono",
+            "dados": [
+              "\\text{C faz } 4 \\text{ ligações}",
+              "\\text{dupla} = 2",
+              "\\text{tripla} = 3"
+            ],
+            "formula": "\\text{ligações do C} = \\text{H presos} + \\text{ligações com C}",
+            "legenda": [
+              "H presos: cada H vale 1"
+            ],
+            "contas": [
+              "\\text{CH}_2\\text{=CH}_2: 2 + 2 = 4",
+              "\\text{HC}\\equiv\\text{CH}: 1 + 3 = 4",
+              "\\text{CH}_3\\text{=CH}_2: 3 + 2 = 5"
+            ],
+            "resultado": "\\text{CH}_3\\text{=CH}_2\\ \\text{é impossível}",
+            "nota": "Carbono com 5 ligações não existe."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "O carbono tem 4 lugares para ligar, nem mais nem menos.\nQuando a ligação entre carbonos aumenta, o número de H tem que cair.\nNo CH₃=CH₂, a dupla subiu, mas o carbono da esquerda continuou com 3 H."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, CH₃=CH₂.\nA (CH₄): 4 H, total 4.\nB (CH₃–CH₃): 3 + 1 = 4 em cada carbono.\nC (CH₂=CH₂): 2 + 2 = 4 em cada carbono.\nE (HC≡CH): 1 + 3 = 4 em cada carbono."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Um carbono faz ligação tripla com outro. Quantos H cabem nele?",
+        "opcoes": [
+          "1",
+          "2",
+          "3",
+          "0"
+        ],
+        "certa": "1",
+        "resposta": "4 − 3 = 1 hidrogênio."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-16",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Na fabricação artesanal de sabão, a gordura de coco reage com soda cáustica. Além do sabão, sobra uma substância que muitas fábricas separam e vendem para cremes e sabonetes hidratantes: a glicerina, de fórmula HO–CH₂–CH(OH)–CH₂–OH. Na glicerina, cada um dos três carbonos faz só ligações simples e segura um grupo OH.\nA glicerina pertence à função",
+    "A": "éster, porque veio de uma gordura.",
+    "B": "ácido carboxílico, porque tem OH.",
+    "C": "fenol, porque tem mais de um OH.",
+    "D": "álcool, porque tem OH em carbonos de ligações simples.",
+    "E": "hidrocarboneto, porque tem cadeia de carbonos.",
+    "resposta": "D",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Três OH em carbonos de ligações simples, sem anel = álcool. D. Erros: A olha a origem (a gordura é éster); B confunde OH com COOH; C acha que vários OH fazem fenol; E esquece os O.",
+      "ideia": "Na glicerina, cada carbono de ligações simples segura um OH, e isso é álcool. A gordura era éster, mas o COO saiu junto com o sabão.",
+      "pecas": [
+        {
+          "termo": "Saponificação",
+          "significado": "Gordura (éster) + base forte → sabão + glicerina."
+        },
+        {
+          "termo": "Glicerina",
+          "significado": "Álcool com três OH que sobra na fabricação do sabão. Hidrata a pele."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Gordura + soda cáustica dão sabão e glicerina.\nA glicerina é HO–CH₂–CH(OH)–CH₂–OH: três carbonos, cada um com um OH.\nA questão quer a família da glicerina.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "O que sobra do sabão",
+            "rotulos": [
+              "gordura + soda",
+              "sabão + glicerina",
+              "três OH na glicerina",
+              "que família?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "A gordura era éster, mas a soda quebrou os pedaços COO.\nO que sobra na glicerina são OH presos a carbonos de ligações simples.\nNão há anel, não há COOH, não há COO e não há N."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "OH em carbono de ligações simples, fora de anel = álcool.\nA glicerina tem três OH assim.\nVários OH continuam sendo álcool: é um álcool com três OH."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A família é decidida pelo pedaço que a molécula tem agora, não por onde ela veio.\nOs COO da gordura viraram sabão; na glicerina ficou só o OH.\nFenol pediria o OH no anel benzênico, e a glicerina não tem anel."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra D, álcool, porque tem OH em carbonos de ligações simples.\nA (éster) olha a origem; o COO foi quebrado e saiu com o sabão.\nB (ácido carboxílico) pede COOH, não só OH.\nC (fenol) pede OH no anel benzênico, e não há anel.\nE (hidrocarboneto) esquece os O dos três OH."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "HO–CH₂–CH₂–OH, do anticongelante. Família?",
+        "opcoes": [
+          "álcool",
+          "fenol",
+          "éster",
+          "ácido carboxílico"
+        ],
+        "certa": "álcool",
+        "resposta": "Dois OH em carbonos de ligações simples, sem anel: álcool."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-17",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "O octano é um dos hidrocarbonetos que formam a gasolina. Sua molécula é uma cadeia aberta de 8 carbonos em fila, sem ramificações, ligados entre si só por ligações simples. Todas as ligações que sobram em cada carbono são feitas com hidrogênio. Lembre: cada carbono faz 4 ligações.\nQuantos átomos de hidrogênio tem a molécula de octano?",
+    "A": "16",
+    "B": "18",
+    "C": "32",
+    "D": "24",
+    "E": "12",
+    "resposta": "B",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Pontas: 2 × 3 = 6 H; meio: 6 × 2 = 12 H; total 18 (C₈H₁₈). B. Erros: A dá 2 H a todos (16); C dá 4 a todos (32); D dá 3 a todos (24); E esquece as pontas (12).",
+      "ideia": "Carbono de ponta tem 1 vizinho e fica com 3 H; carbono do meio tem 2 vizinhos e fica com 2 H. No octano: 2 × 3 + 6 × 2 = 18.",
+      "pecas": [
+        {
+          "termo": "Octano",
+          "significado": "Hidrocarboneto de 8 carbonos em fila, um dos que formam a gasolina."
+        },
+        {
+          "termo": "Cadeia aberta",
+          "significado": "Carbonos em fila, com duas pontas, sem fechar em anel."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O octano tem 8 carbonos em fila, só com ligações simples.\nCada carbono faz 4 ligações, e o que sobra vai para hidrogênio.\nA questão quer quantos H há na molécula.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "Octano da gasolina",
+            "rotulos": [
+              "octano (gasolina)",
+              "8 carbonos em fila",
+              "só ligações simples",
+              "quantos H?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Nem todo carbono tem o mesmo número de vizinhos.\nCom números pequenos: no etano, CH₃–CH₃, cada carbono tem 1 vizinho e 4 − 1 = 3 H. Total 6.\nNo propano, CH₃–CH₂–CH₃, o do meio tem 2 vizinhos: 4 − 2 = 2 H. Total 3 + 2 + 3 = 8."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Pontas: 2 carbonos com 3 H cada = 2 × 3 = 6.\nMeio: 8 − 2 = 6 carbonos com 2 H cada = 6 × 2 = 12.\nTotal: 6 + 12 = 18 H. Fórmula: C₈H₁₈.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Hidrogênios do octano",
+            "dados": [
+              "\\text{carbonos} = 8",
+              "\\text{pontas} = 2",
+              "\\text{meio} = 8 - 2 = 6"
+            ],
+            "formula": "\\text{H} = \\text{pontas} \\times 3 + \\text{meio} \\times 2",
+            "legenda": [
+              "ponta: 4 − 1 vizinho = 3 H",
+              "meio: 4 − 2 vizinhos = 2 H"
+            ],
+            "contas": [
+              "\\text{H} = 2 \\times 3 + 6 \\times 2",
+              "\\text{H} = 6 + 12"
+            ],
+            "resultado": "\\text{H} = 18",
+            "nota": "O octano é C₈H₁₈."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada ligação com um carbono vizinho tira um lugar de hidrogênio.\nAs pontas só têm 1 vizinho, então sobram 3 lugares; o meio tem 2 vizinhos e sobram 2.\nConfira com o propano: 3 + 2 + 3 = 8, e ele é mesmo C₃H₈."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra B, 18.\nA (16) dá 2 H para todos os carbonos, esquecendo que as pontas têm 3.\nC (32) dá 4 H para cada carbono, esquecendo as ligações entre eles.\nD (24) dá 3 H para todos, como se todos fossem pontas.\nE (12) conta só os 6 carbonos do meio e esquece as pontas."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Cadeia de 5 carbonos em fila, só simples. Quantos H?",
+        "opcoes": [
+          "12",
+          "10",
+          "15",
+          "20"
+        ],
+        "certa": "12",
+        "resposta": "Pontas: 2 × 3 = 6. Meio: 3 × 2 = 6. Total 12: é o pentano, C₅H₁₂."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-18",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "A dopamina é uma substância que o cérebro usa para passar mensagens entre as células nervosas e está ligada à sensação de prazer e de recompensa. A molécula tem um anel benzênico com dois grupos OH presos diretamente nele. Desse anel sai uma cadeia de dois carbonos com ligações simples, e na ponta dela há um grupo NH₂, com o nitrogênio ligado só a carbono e hidrogênio.\nAs funções orgânicas presentes na dopamina são",
+    "A": "álcool e amina.",
+    "B": "fenol e amida.",
+    "C": "álcool e amida.",
+    "D": "fenol e ácido carboxílico.",
+    "E": "fenol e amina.",
+    "resposta": "E",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "OH direto no anel = fenol; NH₂ sem C=O = amina. E. Erros: A chama o OH do anel de álcool; B e C pedem C=O colado no N para ser amida; D pede COOH.",
+      "ideia": "Os OH presos no anel benzênico são de fenol, e o N ligado só a carbono e hidrogênio é de amina. A dopamina tem as duas funções.",
+      "pecas": [
+        {
+          "termo": "Amina",
+          "significado": "N ligado só a carbono ou hidrogênio, sem C=O colado nele."
+        },
+        {
+          "termo": "Fenol",
+          "significado": "OH preso direto num carbono do anel benzênico."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "A dopamina tem um anel benzênico com dois OH presos direto nele.\nNa ponta da cadeia que sai do anel há um NH₂, sem C=O por perto.\nA questão quer as funções presentes.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "Dopamina",
+            "rotulos": [
+              "dopamina",
+              "dois OH no anel",
+              "NH₂ na ponta",
+              "quais funções?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Há dois tipos de pedaço para olhar: os OH e o N.\nOs OH estão presos direto no anel benzênico.\nO N está ligado só a carbono e hidrogênio, sem nenhum C=O colado nele."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "OH no anel benzênico = fenol.\nN ligado só a C ou H = amina.\nDopamina: fenol e amina."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada pedaço é lido pelo vizinho dele.\nO vizinho dos OH é carbono do anel, então é fenol, não álcool.\nO vizinho do N é um carbono sem C=O, então é amina, não amida."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra E, fenol e amina.\nA (álcool) erra o OH: ele está no anel, e isso é fenol.\nB (amida) pede o N colado num C=O, e não há C=O na dopamina.\nC erra os dois: o OH é fenol e o N é amina.\nD (ácido carboxílico) pede COOH, e a dopamina não tem."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Etanolamina, HO–CH₂–CH₂–NH₂: que famílias aparecem?",
+        "opcoes": [
+          "álcool e amina",
+          "fenol e amina",
+          "álcool e amida",
+          "fenol e amida"
+        ],
+        "certa": "álcool e amina",
+        "resposta": "OH fora de anel é álcool; N sem C=O é amina."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-19",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Uma garrafa de vinho esquecida aberta azeda e vira vinagre. Bactérias do ar usam o oxigênio para transformar o etanol do vinho, CH₃–CH₂–OH, em ácido acético, CH₃–COOH. A cadeia continua com dois carbonos, mas a ponta que tinha CH₂–OH passa a ter COOH.\nNessa transformação, a função orgânica mudou de",
+    "A": "álcool para éster.",
+    "B": "fenol para ácido carboxílico.",
+    "C": "álcool para ácido carboxílico.",
+    "D": "hidrocarboneto para álcool.",
+    "E": "ácido carboxílico para álcool.",
+    "resposta": "C",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Etanol: OH em carbono comum = álcool. Ácido acético: COOH = ácido carboxílico. C. Erros: A confunde COOH com COO; B pede anel; D ignora o OH do etanol; E inverte o sentido.",
+      "ideia": "O etanol tem OH em carbono comum, que é álcool. No vinagre, a ponta virou COOH, que é ácido carboxílico.",
+      "pecas": [
+        {
+          "termo": "Ácido carboxílico",
+          "significado": "Função com COOH: C=O e OH no mesmo carbono. O ácido acético do vinagre é um."
+        },
+        {
+          "termo": "Etanol",
+          "significado": "O álcool do vinho, da cachaça e do posto: CH₃–CH₂–OH."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "O etanol do vinho é CH₃–CH₂–OH.\nNo vinagre, ele vira ácido acético, CH₃–COOH.\nA questão quer de qual família para qual família a molécula passou.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "molecula-cadeia",
+            "titulo": "Vinho que vira vinagre",
+            "rotulos": [
+              "etanol → ácido acético",
+              "CH₂–OH vira COOH",
+              "vinho azedou",
+              "mudou de quê para quê?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Antes: OH preso a um carbono de ligações simples, sem anel. Isso é álcool.\nDepois: a ponta tem COOH, com C=O e OH no mesmo carbono. Isso é ácido carboxílico.\nO número de carbonos ficou igual: o que mudou foi a ponta."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Leia a ponta antes e depois.\nCH₂–OH = álcool. COOH = ácido carboxílico.\nMudou de álcool para ácido carboxílico."
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "A função é decidida pelo pedaço da ponta, não pelo tamanho da cadeia.\nO OH do etanol está num carbono comum; no ácido, o mesmo carbono ganhou um C=O.\nOH e C=O juntos no mesmo carbono formam o COOH, a marca do ácido."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra C, álcool para ácido carboxílico.\nA (éster) pede COO entre dois carbonos; aqui o COOH tem H e fica na ponta.\nB (fenol) pede OH no anel benzênico, e o etanol não tem anel.\nD erra o começo: o etanol já tem OH, não é só C e H.\nE inverte a ordem: o vinho (álcool) é que vira vinagre (ácido)."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Metanol CH₃–OH azeda e vira HCOOH. Família final?",
+        "opcoes": [
+          "ácido carboxílico",
+          "álcool",
+          "éster",
+          "fenol"
+        ],
+        "certa": "ácido carboxílico",
+        "resposta": "HCOOH tem COOH: é ácido carboxílico, o ácido da picada de formiga."
+      }
+    }
+  },
+  {
+    "id": "d2-banco-qui-org-20",
+    "materia": "Química",
+    "tema": "Química Orgânica",
+    "enunciado": "Copos e talheres de bioplástico PLA são feitos a partir do ácido lático, tirado do milho ou da cana. Cada molécula de ácido lático tem um COOH numa ponta e um OH no meio. Na fábrica, o COOH de uma molécula reage com o OH da molécula seguinte, formando um COO (como na receita ácido + álcool → éster + água), e cada ligação dessas solta 1 molécula de água. As moléculas vão se juntando numa fila única, sem fechar em anel.\nQuantas moléculas de água são liberadas quando 100 moléculas de ácido lático formam uma única fila?",
+    "A": "99",
+    "B": "100",
+    "C": "200",
+    "D": "50",
+    "E": "101",
+    "resposta": "A",
+    "origem": "Banco ENEM do dia 2",
+    "explicacao": {
+      "conferencia": "Fila de 100 moléculas tem 100 − 1 = 99 ligações COO, e cada uma solta 1 água: 99. A. Erros: B conta por molécula; C conta 2 por molécula; D faz pares separados (100 ÷ 2 = 50); E soma 1 em vez de tirar.",
+      "ideia": "Cada ligação entre vizinhos solta 1 água, e uma fila tem uma ligação a menos que o número de moléculas. Então 100 moléculas dão 99 águas.",
+      "pecas": [
+        {
+          "termo": "PLA",
+          "significado": "Plástico feito de ácido lático, que vem do milho ou da cana. As moléculas ficam presas em fila por pedaços COO."
+        },
+        {
+          "termo": "Esterificação",
+          "significado": "COOH + OH → COO + água. No PLA, isso acontece entre vizinhos da fila."
+        }
+      ],
+      "passos": [
+        {
+          "titulo": "A pergunta",
+          "texto": "Cada ácido lático liga o seu COOH ao OH do próximo.\nCada ligação forma um COO e solta 1 água.\nA questão quer quantas águas saem numa fila de 100 moléculas.",
+          "visual": {
+            "tipo": "figura",
+            "nome": "balanca-receita",
+            "titulo": "Copo de bioplástico",
+            "rotulos": [
+              "100 ácidos láticos",
+              "fila de PLA + água",
+              "1 ligação = 1 água",
+              "quantas águas?"
+            ]
+          }
+        },
+        {
+          "titulo": "O que acontece",
+          "texto": "Conte as ligações, não as moléculas.\nCom números pequenos: 2 moléculas lado a lado têm 1 ligação entre elas.\n3 moléculas em fila têm 2 ligações; 4 moléculas têm 3.\nA fila sempre tem uma ligação a menos que o número de moléculas."
+        },
+        {
+          "titulo": "Jeito rápido",
+          "texto": "Ligações = moléculas − 1.\n100 − 1 = 99 ligações.\nCada ligação solta 1 água: 99 moléculas de água.",
+          "visual": {
+            "tipo": "quadro",
+            "titulo": "Águas do PLA",
+            "dados": [
+              "\\text{moléculas na fila} = 100"
+            ],
+            "formula": "\\text{ligações} = \\text{moléculas} - 1",
+            "legenda": [
+              "cada ligação COO solta 1 água"
+            ],
+            "contas": [
+              "2 \\text{ moléculas} \\to 1 \\text{ ligação}",
+              "3 \\text{ moléculas} \\to 2 \\text{ ligações}",
+              "100 - 1 = 99"
+            ],
+            "resultado": "99\\,\\text{águas}",
+            "nota": "A fila tem uma ligação a menos que o número de moléculas."
+          }
+        },
+        {
+          "titulo": "Por que funciona",
+          "texto": "Cada ligação é uma esterificação: o COOH perde OH, o OH do vizinho perde H, e sai 1 água.\nA primeira molécula da fila fica com o OH livre, e a última com o COOH livre.\nEssas duas pontas não reagem com ninguém, por isso falta uma ligação."
+        },
+        {
+          "titulo": "A resposta",
+          "texto": "Letra A, 99 moléculas de água.\nB (100) conta uma água por molécula, mas a água sai por ligação.\nC (200) acha que o COOH e o OH de cada molécula soltam uma água cada.\nD (50) junta as moléculas de duas em duas, como pares separados: 100 ÷ 2.\nE (101) soma 1 em vez de tirar 1."
+        }
+      ],
+      "seuErro": null,
+      "checagem": {
+        "pergunta": "Fila de 6 moléculas ligadas uma a uma. Quantas ligações?",
+        "opcoes": [
+          "5",
+          "6",
+          "7",
+          "12"
+        ],
+        "certa": "5",
+        "resposta": "6 − 1 = 5 ligações, uma entre cada par de vizinhos."
+      }
+    }
+  }
+]
