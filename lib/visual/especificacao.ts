@@ -163,6 +163,9 @@ export interface VisualQuadro {
   contas: string[];
   resultado: string;
   nota?: string;
+  /* O que a questão quer descobrir, em palavras (banco ENEM, 16/11/2026). Com ele o
+     quadro abre com a tabela "O que eu tenho / O que quero descobrir". */
+  pede?: string;
 }
 /* A fórmula da questão com o que cada pedaço quer dizer escrito embaixo
    (Pablo, 22/10/2026, no artefato dos peixes: "p = quantos peixes, d = o dia").
@@ -193,6 +196,8 @@ export const FIGURAS_PIXEL = [
   'cena-posto-etanol', 'cena-banheiro-aquecedor', 'cena-tratamento-agua', 'cena-balanca-co2', 'cena-fogao-co2',
   'cena-comprimido', 'cena-cana-etanol', 'cena-pilha-lampada', 'cena-pilha-zinco-cobre', 'cena-pilhas-led',
   'cena-ferrugem-chuva', 'cena-carrinho-pilhas', 'cena-sal-jarra', 'cena-suco-jarra', 'cena-desinfetante-balde',
+  // Matemática do banco ENEM (16/11/2026): cada questão com uma situação própria
+  'cena-robo-aspirador', 'cena-irrigacao', 'cena-antena-bairro',
 ] as const;
 export type NomeFigura = (typeof FIGURAS_PIXEL)[number];
 /* rotulos: os números da questão escritos nos lugares fixos da figura (até 4). */
@@ -325,7 +330,7 @@ function quadro(v: Record<string, unknown>): VisualQuadro | null {
   const legenda = linhas(v.legenda, 3, 90);
   return {
     tipo: 'quadro', titulo: texto(v.titulo), dados, formula, contas, resultado,
-    legenda: legenda.length > 0 ? legenda : undefined, nota: texto(v.nota, 120),
+    legenda: legenda.length > 0 ? legenda : undefined, nota: texto(v.nota, 120), pede: texto(v.pede, 140),
   };
 }
 function transformacao(v: Record<string, unknown>): VisualTransformacao | null {

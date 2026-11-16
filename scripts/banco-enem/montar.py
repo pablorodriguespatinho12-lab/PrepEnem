@@ -46,11 +46,13 @@ def montar(f):
     longas = [l for l in rapido.split('\n') if len(l) > MAX_LINHA_RAPIDO]
     if longas:
         raise SystemExit(f"{f['id']}: linha do Jeito rápido com mais de {MAX_LINHA_RAPIDO} letras: {longas[0][:60]}")
-    nome, rotulos = f['fig']
+    # Questão nova (16/11/2026): cena da situação, que aparece na tela da questão e abre
+    # a explicação. Sem cena, a figura genérica antiga.
+    nome, rotulos = f.get('cena') or f['fig']
     quadro = {'tipo': 'quadro', **f['quadro']}
     passos = [
         {'titulo': 'A pergunta', 'texto': f['pergunta'], 'visual': {'tipo': 'figura', 'nome': nome, 'titulo': f.get('fig_titulo', 'A situação'), 'rotulos': rotulos}},
-        {'titulo': 'O que acontece', 'texto': f['acontece'], **({'visual': f['visual2']} if f.get('visual2') else {})},
+        {'titulo': f.get('titulo_acontece', 'O que acontece'), 'texto': f['acontece'], **({'visual': f['visual2']} if f.get('visual2') else {})},
         {'titulo': 'Jeito rápido', 'texto': rapido, 'visual': quadro},
         {'titulo': f.get('titulo_funciona', 'Por que funciona'), 'texto': f['funciona']},
         {'titulo': 'A resposta', 'texto': f['resposta']},
@@ -68,6 +70,23 @@ def montar(f):
     }
 
 
+CENAS = RAIZ / 'data/revisao-final/cenas-das-questoes.json'
+MAX_ROTULO = 24  # lib/cenas-das-questoes.test.ts
+
+
+def gravar_cenas(fichas):
+    """Põe a cena de cada ficha no mapa que a tela da questão lê."""
+    mapa = json.loads(CENAS.read_text(encoding='utf8'))
+    for f in fichas:
+        if 'cena' not in f:
+            continue
+        nome, rotulos = f['cena']
+        if len(rotulos) > 4 or any(len(r) > MAX_ROTULO for r in rotulos):
+            raise SystemExit(f"{f['id']}: até 4 rótulos de até {MAX_ROTULO} letras na cena")
+        mapa['cenas'][f['id']] = {'nome': nome, 'rotulos': rotulos}
+    CENAS.write_text(json.dumps(mapa, ensure_ascii=False, indent=2) + '\n', encoding='utf8')
+
+
 def main():
     for nome in sys.argv[1:]:
         sys.path.insert(0, str(pathlib.Path(__file__).parent))
@@ -76,6 +95,7 @@ def main():
         letras = {l: sum(q['resposta'] == l for q in questoes) for l in LETRAS}
         destino = PASTA / f"{modulo.ARQUIVO}.json"
         destino.write_text(json.dumps(questoes, ensure_ascii=False, indent=1) + '\n', encoding='utf8')
+        gravar_cenas(modulo.FICHAS)
         print(f'{destino.name}: {len(questoes)} questões, contas conferidas, letras {letras}')
 
 

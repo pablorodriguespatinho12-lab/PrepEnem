@@ -5,51 +5,10 @@ ARQUIVO = 'cobrir-e-chance'
 BASE = {'materia': 'Matemática', 'tema': 'Geometria Plana'}
 F = lambda **k: {**BASE, **k}
 PI = 3
+from amostra_cobrir import FICHAS as AMOSTRA  # 01 a 03 no jeito novo (16/11/2026)
 
 FICHAS = [
-F(id='d2-banco-mat-cob-01', resp='C', confere=100 * (10 - 2) ** 2 / 10 ** 2,
-  enun='Num jogo de feira, um disco de raio 2 cm é lançado sobre um alvo redondo de raio 10 cm. A jogada vale sempre que o centro do disco cai dentro do alvo. O jogador ganha se o disco ficar inteiramente dentro do alvo.\nA probabilidade de ganhar é de',
-  alts=['20%', '36%', '64%', '80%', '96%'],
-  fig=('figura-plana', ['alvo: raio 10', 'disco: raio 2', 'o centro decide', 'inteiro dentro']),
-  ideia='Quem decide é o centro do disco, que tem que ficar a 2 cm da borda: num círculo de raio 8. Chance = 8 × 8 ÷ (10 × 10) = 64%.',
-  pecas=[('Inteiramente dentro', 'Nenhum pedaço do disco passa da borda. Como uma moeda deitada que não encosta na beirada do prato.')],
-  pergunta='Um disco de raio 2 cai num alvo de raio 10.\nA questão quer a chance de ele ficar inteiro dentro.',
-  acontece='Se o centro cair bem na beirada, metade do disco fica para fora.\nO centro só pode chegar até 2 cm da borda.\nEntão o centro "ganhador" anda num círculo menor, de raio 10 − 2 = 8.',
-  rapido='Macete de chance pela área: chance = área onde ganha ÷ área onde a jogada vale.\nOnde vale: raio 10. Onde ganha: raio 10 − 2 = 8.\nÁrea é raio × raio: 8 × 8 = 64 e 10 × 10 = 100. O π aparece nas duas e corta.\n64 ÷ 100 = 64%.',
-  quadro=dict(titulo='Chance de ganhar', dados=['R = 10\\,\\text{cm}', 'r = 2\\,\\text{cm}'], formula='\\text{chance} = \\frac{(R - r)^2}{R^2}', legenda=['R: raio do alvo', 'r: raio do disco'], contas=['R - r = 10 - 2 = 8', '\\frac{8 \\times 8}{10 \\times 10} = \\frac{64}{100}'], resultado='64\\%', nota='O π corta: some com ele.'),
-  funciona='Área de círculo é π × raio × raio. Ganha: π × 64. Vale: π × 100.\nDividindo, o π some: 64 ÷ 100.\nOutro jeito de ver: o raio caiu para 8 de 10 (80%). Área é raio vezes raio, então 0,8 × 0,8 = 0,64.',
-  resposta='Letra C, 64%.\nD (80%) fez 8 ÷ 10 e esqueceu que área é raio × raio.\nB (36%) é a chance de perder: 100 − 64.\nE (96%) tirou a área do disco do alvo, mas quem decide é o centro.',
-  conferencia='(10-2)^2/10^2 = 64/100 = 64%. C. Erros: D = 8/10; B = 1 - 0,64; E = 1 - 4/100; A = 2/10.',
-  sua_vez=('Alvo de raio 5 e disco de raio 1. Chance de ficar inteiro dentro?', ['16%', '64%', '80%', '20%'], '64%', '(5 − 1)² ÷ 5² = 16 ÷ 25 = 64%.')),
-
-F(id='d2-banco-mat-cob-02', resp='A', confere=100 * (10 - 3) ** 2 / 100,
-  enun='Uma moeda de raio 1,5 cm é lançada sobre um tabuleiro quadrado de lado 10 cm, e o centro dela sempre cai no tabuleiro. O jogador ganha se a moeda ficar inteiramente dentro do tabuleiro, sem passar da borda.\nA probabilidade de ganhar é de',
-  alts=['49%', '51%', '70%', '72%', '85%'],
-  fig=('figura-plana', ['lado 10', 'moeda: raio 1,5', 'centro no tabuleiro', 'sem passar da borda']),
-  ideia='No quadrado a moeda bate em dois lados opostos, e cada um rouba 1,5: o lado ganhador é 10 − 3 = 7. Chance = 49 ÷ 100 = 49%.',
-  pergunta='Moeda de raio 1,5 num quadrado de lado 10.\nA questão quer a chance de ela ficar inteira dentro.',
-  acontece='Encostada na borda da esquerda, o centro está a 1,5 dela.\nEncostada na da direita, também 1,5.\nO centro anda num quadrado menor, com 1,5 a menos de cada lado.',
-  rapido='Macete de chance pela área: no quadrado, o lado ganhador é L − 2r (bate nos dois lados).\nLado onde ganha: 10 − 2 × 1,5 = 10 − 3 = 7.\nÁreas: 7 × 7 = 49 e 10 × 10 = 100.\n49 ÷ 100 = 49%.',
-  quadro=dict(titulo='Chance no quadrado', dados=['L = 10\\,\\text{cm}', 'r = 1{,}5\\,\\text{cm}'], formula='\\text{chance} = \\frac{(L - 2r)^2}{L^2}', legenda=['L: lado do tabuleiro', 'r: raio da moeda'], contas=['L - 2r = 10 - 3 = 7', '\\frac{7 \\times 7}{10 \\times 10} = \\frac{49}{100}'], resultado='49\\%', nota='Quadrado: tira r dos DOIS lados.'),
-  funciona='No círculo, o raio vai do centro até UMA borda: tira r uma vez.\nNo quadrado, o lado vai de uma borda até a outra: tira r duas vezes.\nConfira com um caso extremo: moeda de raio 5 num lado 10 só cabe no centro exato, e 10 − 2 × 5 = 0.',
-  resposta='Letra A, 49%.\nD (72%) tirou 1,5 só de um lado: 8,5 × 8,5 = 72,25.\nC (70%) fez 7 ÷ 10 sem multiplicar lado por lado.\nB (51%) é a chance de perder.',
-  conferencia='(10 - 3)^2/100 = 49%. A. D = 8,5^2 = 72,25; C = 7/10; B = 100 - 49; E = 8,5/10.',
-  sua_vez=('Quadrado de lado 20 e moeda de raio 1. Chance de ficar inteira?', ['81%', '90%', '95%', '64%'], '81%', '(20 − 2)² ÷ 20² = 324 ÷ 400 = 81%.')),
-
-F(id='d2-banco-mat-cob-03', resp='E', confere=3,
-  enun='Num alvo redondo de raio 10 cm, um disco de raio r é lançado, e a jogada vale quando o centro dele cai no alvo. O dono do jogo quer que a probabilidade de o disco ficar inteiramente dentro do alvo seja menor que 50%. O raio r é um número inteiro de centímetros.\nO menor valor de r que atende ao dono do jogo é',
-  alts=['7 cm', '6 cm', '5 cm', '4 cm', '3 cm'],
-  fig=('figura-plana', ['alvo: raio 10', 'disco: raio r', 'chance < 50%', 'r inteiro']),
-  ideia='Chance = (10 − r)² ÷ 100, que fica abaixo de 50% quando (10 − r)² < 50. O maior quadrado abaixo de 50 é 49 = 7 × 7, então 10 − r = 7 e r = 3.',
-  pergunta='Quanto maior o disco, menor a chance de ganhar.\nA questão quer o MENOR disco que já deixa a chance abaixo de 50%.',
-  acontece='Disco pequeno: quase sempre cabe, chance alta.\nDisco grande: quase nunca cabe, chance baixa.\nEntão existe um ponto de virada, e a gente procura o primeiro r depois dele.',
-  rapido='Macete de chance pela área: monte (R − r)² < limite e procure o quadrado perfeito.\n(10 − r)² ÷ 100 < 0,5 vira (10 − r)² < 50.\nQuadrados: 49 = 7², 64 = 8². O maior abaixo de 50 é 49.\n10 − r = 7, então r = 3.',
-  quadro=dict(titulo='O ponto de virada', dados=['R = 10\\,\\text{cm}', '\\text{chance} < 50\\%'], formula='\\frac{(10 - r)^2}{100} < 0{,}5', legenda=['10 − r: raio onde o centro ganha'], contas=['(10 - r)^2 < 50', '7^2 = 49 < 50', '10 - r = 7 \\Rightarrow r = 3'], resultado='r = 3\\,\\text{cm}', nota='Testa o vizinho: r = 2 dá 64%.'),
-  titulo_funciona='Por que funciona (testando)',
-  funciona='Outro jeito, sem montar conta: teste as letras da menor para a maior.\nr = 3: 7 × 7 = 49, chance 49%. Já serve.\nr = 2 (fora das letras): 8 × 8 = 64%. Não serve. Então 3 é o menor.',
-  resposta='Letra E, 3 cm.\nC (5 cm) pensou "metade do raio, metade da chance". Raio 5 dá 25%: serve, mas não é o menor.\nA, B e D também ficam abaixo de 50%, mas a questão pede o MENOR.',
-  conferencia='r=3: 49% < 50 ok; r=2: 64% nao. Menor = 3. E. r=4: 36%, r=5: 25%, r=6: 16%, r=7: 9%: todos servem mas nao sao o menor.',
-  sua_vez=('Alvo de raio 10. Menor r inteiro para a chance ficar abaixo de 70%?', ['2 cm', '1 cm', '3 cm', '4 cm'], '2 cm', 'r = 2: 64%, serve. r = 1: 81%, não serve.')),
+*AMOSTRA,
 
 F(id='d2-banco-mat-cob-04', resp='D', confere=2 * (1.4 / 2 + 0.10),
   enun='Uma mesa quadrada tem lado de 1,00 m. Uma toalha redonda, com o centro no centro da mesa, deve cobri-la e passar 10 cm além de cada ponta. Use 1,4 como valor de √2.\nO menor diâmetro possível da toalha é',

@@ -3,86 +3,107 @@
   "id": "d2-banco-mat-cob-01",
   "materia": "Matemática",
   "tema": "Geometria Plana",
-  "enunciado": "Num jogo de feira, um disco de raio 2 cm é lançado sobre um alvo redondo de raio 10 cm. A jogada vale sempre que o centro do disco cai dentro do alvo. O jogador ganha se o disco ficar inteiramente dentro do alvo.\nA probabilidade de ganhar é de",
-  "A": "20%",
-  "B": "36%",
-  "C": "64%",
-  "D": "80%",
-  "E": "96%",
-  "resposta": "C",
+  "enunciado": "Um robô aspirador redondo, de raio 20 cm, limpa uma sala quadrada de 2 m de lado. Ele anda encostado nas paredes, mas, por ser redondo, nunca alcança o fundo dos 4 cantos. Uma migalha cai num ponto qualquer do chão, ao acaso. Use π = 3.\nA probabilidade de a migalha cair num lugar que o robô não alcança é de",
+  "A": "0,25%",
+  "B": "1%",
+  "C": "3%",
+  "D": "4%",
+  "E": "0,75%",
+  "resposta": "B",
   "origem": "Banco ENEM do dia 2",
   "explicacao": {
-   "conferencia": "(10-2)^2/10^2 = 64/100 = 64%. C. Erros: D = 8/10; B = 1 - 0,64; E = 1 - 4/100; A = 2/10.",
-   "ideia": "Quem decide é o centro do disco, que tem que ficar a 2 cm da borda: num círculo de raio 8. Chance = 8 × 8 ÷ (10 × 10) = 64%.",
+   "conferencia": "1 canto: 400 - 3*400/4 = 100; 4 cantos 400; sala 40000; 400/40000 = 1%. B. A = 100/40000; E = 300/40000; C = 1200/40000; D = 1600/40000.",
+   "ideia": "Em cada canto sobra um quadradinho de 20 × 20 menos um quarto do robô: 400 − 300 = 100 cm². Os 4 cantos dão 400 cm², que é 1% dos 40 000 cm² da sala.",
    "pecas": [
     {
-     "termo": "Inteiramente dentro",
-     "significado": "Nenhum pedaço do disco passa da borda. Como uma moeda deitada que não encosta na beirada do prato."
+     "termo": "Probabilidade",
+     "significado": "A chance de algo acontecer. 1% quer dizer 1 vez a cada 100."
     }
    ],
    "passos": [
     {
      "titulo": "A pergunta",
-     "texto": "Um disco de raio 2 cai num alvo de raio 10.\nA questão quer a chance de ele ficar inteiro dentro.",
+     "texto": "O robô é redondo e a sala é quadrada.\nA questão quer a chance de uma migalha cair onde ele nunca passa.",
      "visual": {
       "tipo": "figura",
-      "nome": "figura-plana",
+      "nome": "cena-robo-aspirador",
       "titulo": "A situação",
       "rotulos": [
-       "alvo: raio 10",
-       "disco: raio 2",
-       "o centro decide",
-       "inteiro dentro"
+       "sala: 2 m × 2 m",
+       "robô: raio 20 cm",
+       "cantos sem limpar",
+       "π = 3"
       ]
      }
     },
     {
-     "titulo": "O que acontece",
-     "texto": "Se o centro cair bem na beirada, metade do disco fica para fora.\nO centro só pode chegar até 2 cm da borda.\nEntão o centro \"ganhador\" anda num círculo menor, de raio 10 − 2 = 8."
-    },
-    {
-     "titulo": "Jeito rápido",
-     "texto": "Macete de chance pela área: chance = área onde ganha ÷ área onde a jogada vale.\nOnde vale: raio 10. Onde ganha: raio 10 − 2 = 8.\nÁrea é raio × raio: 8 × 8 = 64 e 10 × 10 = 100. O π aparece nas duas e corta.\n64 ÷ 100 = 64%.",
+     "titulo": "Por que dividir área por área",
+     "texto": "Espalhe 100 migalhas pelo chão, bem misturadas. Cada pedaço do chão recebe migalha na proporção do tamanho dele.\nSe os cantos são 1% do chão, recebem 1 das 100 migalhas.\nPor isso a chance é a área que interessa dividida pela área toda.",
      "visual": {
-      "tipo": "quadro",
-      "titulo": "Chance de ganhar",
-      "dados": [
-       "R = 10\\,\\text{cm}",
-       "r = 2\\,\\text{cm}"
+      "tipo": "tabela",
+      "titulo": "100 migalhas espalhadas",
+      "cabecalho": [
+       "Parte do chão",
+       "Área",
+       "Migalhas"
       ],
-      "formula": "\\text{chance} = \\frac{(R - r)^2}{R^2}",
-      "legenda": [
-       "R: raio do alvo",
-       "r: raio do disco"
-      ],
-      "contas": [
-       "R - r = 10 - 2 = 8",
-       "\\frac{8 \\times 8}{10 \\times 10} = \\frac{64}{100}"
-      ],
-      "resultado": "64\\%",
-      "nota": "O π corta: some com ele."
+      "linhas": [
+       [
+        "Sala inteira",
+        "40 000 cm²",
+        "100"
+       ],
+       [
+        "Cantos sem limpar",
+        "400 cm²",
+        "1"
+       ]
+      ]
      }
     },
     {
-     "titulo": "Por que funciona",
-     "texto": "Área de círculo é π × raio × raio. Ganha: π × 64. Vale: π × 100.\nDividindo, o π some: 64 ÷ 100.\nOutro jeito de ver: o raio caiu para 8 de 10 (80%). Área é raio vezes raio, então 0,8 × 0,8 = 0,64."
+     "titulo": "Jeito rápido",
+     "texto": "Macete de chance pela área: chance = área que interessa ÷ área toda.\nNo canto, o robô encosta nas 2 paredes: sobra um quadradinho de 20 × 20 = 400 menos 1/4 do robô.\n1/4 do robô: 3 × 20 × 20 ÷ 4 = 300. Sobra 100 por canto; 4 cantos: 400 cm².\nSala: 200 × 200 = 40 000. Chance: 400 ÷ 40 000 = 1%.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Os cantos que o robô não alcança",
+      "pede": "A chance de a migalha cair num canto sem limpar",
+      "dados": [
+       "\\text{sala} = 200\\,\\text{cm}",
+       "r = 20\\,\\text{cm}",
+       "\\pi = 3"
+      ],
+      "formula": "\\text{chance} = \\frac{\\text{área dos cantos}}{\\text{área da sala}}",
+      "contas": [
+       "\\text{1 canto} = 20 \\times 20 - \\frac{3 \\times 20 \\times 20}{4} = 400 - 300 = 100",
+       "\\text{4 cantos} = 4 \\times 100 = 400\\,\\text{cm}^2",
+       "\\text{sala} = 200 \\times 200 = 40\\,000\\,\\text{cm}^2",
+       "\\frac{400}{40\\,000} = \\frac{1}{100}"
+      ],
+      "resultado": "1\\%",
+      "nota": "Passe tudo para cm antes."
+     }
+    },
+    {
+     "titulo": "Por que funciona: juntando os cantos",
+     "texto": "Junte os 4 cantos: eles formam um quadrado de 40 × 40 (1 600) menos um robô inteiro (3 × 400 = 1 200).\n1 600 − 1 200 = 400 cm², o mesmo de antes.\nCom π = 3, o robô ocupa 3/4 do quadrado em volta dele: sobra 1/4, que é 400 de 1 600."
     },
     {
      "titulo": "A resposta",
-     "texto": "Letra C, 64%.\nD (80%) fez 8 ÷ 10 e esqueceu que área é raio × raio.\nB (36%) é a chance de perder: 100 − 64.\nE (96%) tirou a área do disco do alvo, mas quem decide é o centro."
+     "texto": "Letra B, 1%.\nA (0,25%) contou um canto só.\nE (0,75%) usou o quarto de robô (300) no lugar do que sobra.\nC (3%) somou os 4 quartos de robô (1 200), que é a parte que ele limpa.\nD (4%) usou o quadradinho inteiro dos 4 cantos (1 600)."
     }
    ],
    "seuErro": null,
    "checagem": {
-    "pergunta": "Alvo de raio 5 e disco de raio 1. Chance de ficar inteiro dentro?",
+    "pergunta": "Robô de raio 10 cm, π = 3. Quanto ele deixa sem limpar em cada canto?",
     "opcoes": [
-     "16%",
-     "64%",
-     "80%",
-     "20%"
+     "25 cm²",
+     "75 cm²",
+     "100 cm²",
+     "300 cm²"
     ],
-    "certa": "64%",
-    "resposta": "(5 − 1)² ÷ 5² = 16 ÷ 25 = 64%."
+    "certa": "25 cm²",
+    "resposta": "10 × 10 = 100; menos 3 × 100 ÷ 4 = 75; sobra 25."
    }
   }
  },
@@ -90,81 +111,106 @@
   "id": "d2-banco-mat-cob-02",
   "materia": "Matemática",
   "tema": "Geometria Plana",
-  "enunciado": "Uma moeda de raio 1,5 cm é lançada sobre um tabuleiro quadrado de lado 10 cm, e o centro dela sempre cai no tabuleiro. O jogador ganha se a moeda ficar inteiramente dentro do tabuleiro, sem passar da borda.\nA probabilidade de ganhar é de",
-  "A": "49%",
-  "B": "51%",
-  "C": "70%",
-  "D": "72%",
-  "E": "85%",
-  "resposta": "A",
+  "enunciado": "Num terreno quadrado de 40 m de lado, um irrigador fica no centro e gira molhando um círculo que encosta nos 4 lados do terreno. Nos cantos, onde a água não chega, o dono vai plantar grama que aguenta seca, a R$ 5,00 o metro quadrado. Use π = 3.\nO gasto com essa grama será de",
+  "A": "R$ 400,00",
+  "B": "R$ 500,00",
+  "C": "R$ 6 000,00",
+  "D": "R$ 2 000,00",
+  "E": "R$ 8 000,00",
+  "resposta": "D",
   "origem": "Banco ENEM do dia 2",
   "explicacao": {
-   "conferencia": "(10 - 3)^2/100 = 49%. A. D = 8,5^2 = 72,25; C = 7/10; B = 100 - 49; E = 8,5/10.",
-   "ideia": "No quadrado a moeda bate em dois lados opostos, e cada um rouba 1,5: o lado ganhador é 10 − 3 = 7. Chance = 49 ÷ 100 = 49%.",
+   "conferencia": "1600 - 3*400 = 400; 400*5 = 2000. D. A = 400; B = 100*5; C = 1200*5; E = 1600*5.",
+   "ideia": "Os cantos secos são o terreno menos o círculo molhado: 1 600 − 1 200 = 400 m². A R$ 5 cada metro quadrado, dá R$ 2 000.",
    "pecas": [],
    "passos": [
     {
      "titulo": "A pergunta",
-     "texto": "Moeda de raio 1,5 num quadrado de lado 10.\nA questão quer a chance de ela ficar inteira dentro.",
+     "texto": "O irrigador molha um círculo dentro de um terreno quadrado.\nA questão quer o preço da grama para os 4 cantos que ficam secos.",
      "visual": {
       "tipo": "figura",
-      "nome": "figura-plana",
+      "nome": "cena-irrigacao",
       "titulo": "A situação",
       "rotulos": [
-       "lado 10",
-       "moeda: raio 1,5",
-       "centro no tabuleiro",
-       "sem passar da borda"
+       "terreno: 40 m",
+       "raio: 20 m",
+       "cantos secos",
+       "R$ 5 por m²"
       ]
      }
     },
     {
-     "titulo": "O que acontece",
-     "texto": "Encostada na borda da esquerda, o centro está a 1,5 dela.\nEncostada na da direita, também 1,5.\nO centro anda num quadrado menor, com 1,5 a menos de cada lado."
-    },
-    {
-     "titulo": "Jeito rápido",
-     "texto": "Macete de chance pela área: no quadrado, o lado ganhador é L − 2r (bate nos dois lados).\nLado onde ganha: 10 − 2 × 1,5 = 10 − 3 = 7.\nÁreas: 7 × 7 = 49 e 10 × 10 = 100.\n49 ÷ 100 = 49%.",
+     "titulo": "Onde a água não chega",
+     "texto": "O círculo encosta no meio de cada lado: o raio é metade do lado, 20 m.\nSobram 4 cantinhos secos, um em cada ponta do terreno.\nÁrea seca = terreno − círculo. Depois, cada m² custa R$ 5.",
      "visual": {
-      "tipo": "quadro",
-      "titulo": "Chance no quadrado",
-      "dados": [
-       "L = 10\\,\\text{cm}",
-       "r = 1{,}5\\,\\text{cm}"
+      "tipo": "tabela",
+      "titulo": "Terreno dividido",
+      "cabecalho": [
+       "Parte",
+       "Conta",
+       "Área"
       ],
-      "formula": "\\text{chance} = \\frac{(L - 2r)^2}{L^2}",
-      "legenda": [
-       "L: lado do tabuleiro",
-       "r: raio da moeda"
-      ],
-      "contas": [
-       "L - 2r = 10 - 3 = 7",
-       "\\frac{7 \\times 7}{10 \\times 10} = \\frac{49}{100}"
-      ],
-      "resultado": "49\\%",
-      "nota": "Quadrado: tira r dos DOIS lados."
+      "linhas": [
+       [
+        "Terreno",
+        "40 × 40",
+        "1 600 m²"
+       ],
+       [
+        "Molhado",
+        "3 × 20 × 20",
+        "1 200 m²"
+       ],
+       [
+        "Seco",
+        "1 600 − 1 200",
+        "400 m²"
+       ]
+      ]
      }
     },
     {
-     "titulo": "Por que funciona",
-     "texto": "No círculo, o raio vai do centro até UMA borda: tira r uma vez.\nNo quadrado, o lado vai de uma borda até a outra: tira r duas vezes.\nConfira com um caso extremo: moeda de raio 5 num lado 10 só cabe no centro exato, e 10 − 2 × 5 = 0."
+     "titulo": "Jeito rápido",
+     "texto": "Macete de cobrir: área que sobra = figura de fora − figura de dentro.\nTerreno: 40 × 40 = 1 600. Círculo: 3 × 20 × 20 = 1 200.\nSeco: 1 600 − 1 200 = 400 m².\nGrama: 400 × 5 = R$ 2 000.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Grama dos cantos",
+      "pede": "Quanto custa a grama dos cantos secos",
+      "dados": [
+       "L = 40\\,\\text{m}",
+       "r = 20\\,\\text{m}",
+       "\\pi = 3",
+       "5\\,\\text{reais por m}^2"
+      ],
+      "formula": "\\text{seco} = L^2 - \\pi r^2",
+      "contas": [
+       "\\text{seco} = 1\\,600 - 1\\,200 = 400\\,\\text{m}^2",
+       "400 \\times 5 = 2\\,000"
+      ],
+      "resultado": "2\\,000\\,\\text{reais}",
+      "nota": "Primeiro a área, depois o preço."
+     }
+    },
+    {
+     "titulo": "Por que funciona: 1/4 do terreno",
+     "texto": "Com π = 3, o círculo que encosta nos lados ocupa 3 de cada 4 partes do quadrado.\nSobra 1/4: 1 600 ÷ 4 = 400 m², sem calcular o círculo.\nVale para qualquer terreno quadrado com o círculo encostando nos lados."
     },
     {
      "titulo": "A resposta",
-     "texto": "Letra A, 49%.\nD (72%) tirou 1,5 só de um lado: 8,5 × 8,5 = 72,25.\nC (70%) fez 7 ÷ 10 sem multiplicar lado por lado.\nB (51%) é a chance de perder."
+     "texto": "Letra D, R$ 2 000,00.\nA (R$ 400) é a área seca, esquecendo o preço.\nB (R$ 500) é um canto só (100 m² × 5).\nC (R$ 6 000) pôs grama na parte MOLHADA (1 200 × 5).\nE (R$ 8 000) pôs grama no terreno todo."
     }
    ],
    "seuErro": null,
    "checagem": {
-    "pergunta": "Quadrado de lado 20 e moeda de raio 1. Chance de ficar inteira?",
+    "pergunta": "Terreno quadrado de 20 m e irrigador encostando nos lados, π = 3. Área seca?",
     "opcoes": [
-     "81%",
-     "90%",
-     "95%",
-     "64%"
+     "100 m²",
+     "300 m²",
+     "400 m²",
+     "25 m²"
     ],
-    "certa": "81%",
-    "resposta": "(20 − 2)² ÷ 20² = 324 ÷ 400 = 81%."
+    "certa": "100 m²",
+    "resposta": "20 × 20 = 400; molhado 3 × 10 × 10 = 300; seco 100."
    }
   }
  },
@@ -172,81 +218,106 @@
   "id": "d2-banco-mat-cob-03",
   "materia": "Matemática",
   "tema": "Geometria Plana",
-  "enunciado": "Num alvo redondo de raio 10 cm, um disco de raio r é lançado, e a jogada vale quando o centro dele cai no alvo. O dono do jogo quer que a probabilidade de o disco ficar inteiramente dentro do alvo seja menor que 50%. O raio r é um número inteiro de centímetros.\nO menor valor de r que atende ao dono do jogo é",
-  "A": "7 cm",
-  "B": "6 cm",
-  "C": "5 cm",
-  "D": "4 cm",
-  "E": "3 cm",
-  "resposta": "E",
+  "enunciado": "Um bairro tem a forma de um retângulo de 1,2 km por 1,6 km. A operadora vai pôr uma antena de celular bem no centro do bairro. O sinal chega até uma certa distância da antena, em todas as direções, e precisa alcançar até as casas dos 4 cantos.\nO menor alcance que a antena precisa ter é de",
+  "A": "0,6 km",
+  "B": "0,8 km",
+  "C": "1,0 km",
+  "D": "1,4 km",
+  "E": "2,0 km",
+  "resposta": "C",
   "origem": "Banco ENEM do dia 2",
   "explicacao": {
-   "conferencia": "r=3: 49% < 50 ok; r=2: 64% nao. Menor = 3. E. r=4: 36%, r=5: 25%, r=6: 16%, r=7: 9%: todos servem mas nao sao o menor.",
-   "ideia": "Chance = (10 − r)² ÷ 100, que fica abaixo de 50% quando (10 − r)² < 50. O maior quadrado abaixo de 50 é 49 = 7 × 7, então 10 − r = 7 e r = 3.",
-   "pecas": [],
+   "conferencia": "diag sqrt(1,44+2,56)=2; metade 1,0. C. A = 1,2/2; B = 1,6/2; D = 0,6+0,8; E = diagonal.",
+   "ideia": "O canto é o ponto mais longe do centro: fica a meia diagonal. A diagonal do 1,2 por 1,6 é 2,0 (triângulo 3-4-5), então o alcance é 1,0 km.",
+   "pecas": [
+    {
+     "termo": "Alcance",
+     "significado": "Até onde o sinal chega a partir da antena. O sinal forma um círculo, e o alcance é o raio dele."
+    }
+   ],
    "passos": [
     {
      "titulo": "A pergunta",
-     "texto": "Quanto maior o disco, menor a chance de ganhar.\nA questão quer o MENOR disco que já deixa a chance abaixo de 50%.",
+     "texto": "A antena fica no centro e o sinal forma um círculo.\nA questão quer o menor círculo que pega os 4 cantos do bairro.",
      "visual": {
       "tipo": "figura",
-      "nome": "figura-plana",
+      "nome": "cena-antena-bairro",
       "titulo": "A situação",
       "rotulos": [
-       "alvo: raio 10",
-       "disco: raio r",
-       "chance < 50%",
-       "r inteiro"
+       "bairro: 1,2 × 1,6 km",
+       "antena no centro",
+       "chegar nos cantos",
+       ""
       ]
      }
     },
     {
-     "titulo": "O que acontece",
-     "texto": "Disco pequeno: quase sempre cabe, chance alta.\nDisco grande: quase nunca cabe, chance baixa.\nEntão existe um ponto de virada, e a gente procura o primeiro r depois dele."
-    },
-    {
-     "titulo": "Jeito rápido",
-     "texto": "Macete de chance pela área: monte (R − r)² < limite e procure o quadrado perfeito.\n(10 − r)² ÷ 100 < 0,5 vira (10 − r)² < 50.\nQuadrados: 49 = 7², 64 = 8². O maior abaixo de 50 é 49.\n10 − r = 7, então r = 3.",
+     "titulo": "Quem fica mais longe",
+     "texto": "Andando do centro, o meio de cada lado está perto: 0,6 km ou 0,8 km.\nO canto está mais longe que todos: é o fim da meia diagonal.\nSe o sinal chega no canto, chega no bairro todo.",
      "visual": {
-      "tipo": "quadro",
-      "titulo": "O ponto de virada",
-      "dados": [
-       "R = 10\\,\\text{cm}",
-       "\\text{chance} < 50\\%"
+      "tipo": "tabela",
+      "titulo": "Do centro até...",
+      "cabecalho": [
+       "Lugar",
+       "Distância"
       ],
-      "formula": "\\frac{(10 - r)^2}{100} < 0{,}5",
-      "legenda": [
-       "10 − r: raio onde o centro ganha"
-      ],
-      "contas": [
-       "(10 - r)^2 < 50",
-       "7^2 = 49 < 50",
-       "10 - r = 7 \\Rightarrow r = 3"
-      ],
-      "resultado": "r = 3\\,\\text{cm}",
-      "nota": "Testa o vizinho: r = 2 dá 64%."
+      "linhas": [
+       [
+        "meio do lado menor",
+        "0,8 km"
+       ],
+       [
+        "meio do lado maior",
+        "0,6 km"
+       ],
+       [
+        "um canto",
+        "1,0 km"
+       ]
+      ]
      }
     },
     {
-     "titulo": "Por que funciona (testando)",
-     "texto": "Outro jeito, sem montar conta: teste as letras da menor para a maior.\nr = 3: 7 × 7 = 49, chance 49%. Já serve.\nr = 2 (fora das letras): 8 × 8 = 64%. Não serve. Então 3 é o menor."
+     "titulo": "Jeito rápido",
+     "texto": "Macete de cobrir: o alcance é do centro até a ponta mais longe.\n1,2 e 1,6 são 3 e 4 vezes 0,4. Triângulo 3-4-5: a diagonal é 5 × 0,4 = 2,0.\nDo centro ao canto: metade, 1,0 km.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Alcance da antena",
+      "pede": "O menor alcance que chega aos 4 cantos",
+      "dados": [
+       "1{,}2\\,\\text{km}",
+       "1{,}6\\,\\text{km}"
+      ],
+      "formula": "d^2 = 1{,}2^2 + 1{,}6^2",
+      "contas": [
+       "d^2 = 1{,}44 + 2{,}56 = 4",
+       "d = 2{,}0\\,\\text{km}",
+       "2{,}0 \\div 2 = 1{,}0"
+      ],
+      "resultado": "1{,}0\\,\\text{km}",
+      "nota": "3-4-5 pula a raiz."
+     }
+    },
+    {
+     "titulo": "Por que funciona: pelo meio do lado",
+     "texto": "Do centro, ande 0,8 km até o meio do lado e depois 0,6 km até o canto.\nEsse caminho forma um triângulo retângulo de lados 0,6 e 0,8: o 3-4-5 de novo, vezes 0,2.\nO lado que falta é 5 × 0,2 = 1,0 km, direto do centro ao canto."
     },
     {
      "titulo": "A resposta",
-     "texto": "Letra E, 3 cm.\nC (5 cm) pensou \"metade do raio, metade da chance\". Raio 5 dá 25%: serve, mas não é o menor.\nA, B e D também ficam abaixo de 50%, mas a questão pede o MENOR."
+     "texto": "Letra C, 1,0 km.\nB (0,8 km) chega no meio do lado, mas não no canto.\nE (2,0 km) usou a diagonal inteira: a antena está no meio dela.\nD (1,4 km) somou 0,6 + 0,8, como se o sinal andasse pelas ruas em L."
     }
    ],
    "seuErro": null,
    "checagem": {
-    "pergunta": "Alvo de raio 10. Menor r inteiro para a chance ficar abaixo de 70%?",
+    "pergunta": "Bairro de 0,6 km por 0,8 km, antena no centro. Menor alcance?",
     "opcoes": [
-     "2 cm",
-     "1 cm",
-     "3 cm",
-     "4 cm"
+     "0,5 km",
+     "0,4 km",
+     "1,0 km",
+     "0,7 km"
     ],
-    "certa": "2 cm",
-    "resposta": "r = 2: 64%, serve. r = 1: 81%, não serve."
+    "certa": "0,5 km",
+    "resposta": "Diagonal 1,0 (3-4-5 vezes 0,2); metade 0,5."
    }
   }
  },
