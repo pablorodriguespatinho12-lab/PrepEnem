@@ -4,12 +4,19 @@
 // grande, a regra curta e o exemplo resolvido uma conta por linha, como no quadro da
 // escola, com a resposta em verde. As linhas entram uma de cada vez.
 
+import dynamic from 'next/dynamic';
 import { motion, useReducedMotion } from 'framer-motion';
 import type { Macete } from '@/lib/aulas-dia-2';
 
+const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
+
+/** Os dados da questão aberta, para o exemplo ser ela e não um terreno qualquer
+    (Pablo, 16/11/2026: "de onde você tirou esse 12 e 20?"). Sem a conta: não entrega a resposta. */
+export type DadosDaQuestao = { dados: string[]; pede: string };
+
 const ATRASO_POR_LINHA = 0.35;
 
-export function QuadroMacete({ m, comPassos = true }: { m: Macete; comPassos?: boolean }) {
+export function QuadroMacete({ m, comPassos = true, desta }: { m: Macete; comPassos?: boolean; desta?: DadosDaQuestao }) {
   const reduzir = useReducedMotion();
   const linhas = m.quadro ?? [];
   const ultima = linhas.length - 1;
@@ -18,7 +25,20 @@ export function QuadroMacete({ m, comPassos = true }: { m: Macete; comPassos?: b
     <div className="space-y-3">
       <p className="font-reading type-lead">{m.regra}</p>
 
-      {linhas.length > 0 && (
+      {desta && (
+        <div className="quadro-escola rounded-[var(--radius-control)] px-4 py-3 md:px-5 grid grid-cols-1 sm:grid-cols-2 gap-3" style={{ color: 'hsl(var(--quadro-tinta))' }}>
+          <div className="min-w-0">
+            <p className="type-caption font-semibold uppercase tracking-[0.08em] mb-1" style={{ color: 'hsl(var(--quadro-laranja))' }}>Nesta questão, eu tenho</p>
+            <ul className="space-y-1 font-reading type-body">{desta.dados.map((d) => <li key={d}><MathText text={`$${d}$`} /></li>)}</ul>
+          </div>
+          <div className="min-w-0">
+            <p className="type-caption font-semibold uppercase tracking-[0.08em] mb-1" style={{ color: 'hsl(var(--quadro-laranja))' }}>Quero descobrir</p>
+            <p className="font-reading type-body font-semibold">{desta.pede}</p>
+          </div>
+        </div>
+      )}
+
+      {!desta && linhas.length > 0 && (
         <div className="quadro-escola rounded-[var(--radius-control)] px-4 py-3 md:px-5" style={{ color: 'hsl(var(--quadro-tinta))' }}>
           <p className="type-caption font-semibold uppercase tracking-[0.08em] mb-2" style={{ color: 'hsl(var(--quadro-laranja))' }}>
             Exemplo
