@@ -11,7 +11,7 @@ import { desenhoDoTema } from '@/lib/aulas-desenho';
 import { TelaDesenho, TelaProporcoes, TelaSentido } from '@/components/simulado/telas-desenho';
 import { TelaEstaQuestao, TelaPasso, useAulaDaQuestao } from '@/components/simulado/resolver-esta-questao';
 import type { QuestaoTutor } from '@/components/tutor/explicacao-tutor';
-import { QuadroMacete } from '@/components/simulado/quadro-macete';
+import { QuadroMacete, type DadosDaQuestao } from '@/components/simulado/quadro-macete';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 
@@ -57,7 +57,11 @@ export function AulaDoTema({ tema, questao, className }: { tema: string | null |
         { rotulo: 'Esta questão: a ideia', conteudo: <TelaEstaQuestao aula={daQuestao} /> },
         ...passos.filter((p) => p !== pergunta).map(telaDoPasso),
       ];
-  const macete: Tela[] = aula.macete ? [{ rotulo: `O macete: ${aula.macete.nome}`, conteudo: <TelaMacete m={aula.macete} /> }] : [];
+  // Questão com o quadro novo (campo "pede"): o exemplo do macete é ela mesma.
+  const quadroDaQuestao = passos.map((p) => p.visual).find((v) => v?.tipo === 'quadro' && v.pede);
+  const desta: DadosDaQuestao | undefined = quadroDaQuestao?.tipo === 'quadro' && quadroDaQuestao.pede
+    ? { dados: quadroDaQuestao.dados, pede: quadroDaQuestao.pede } : undefined;
+  const macete: Tela[] = aula.macete ? [{ rotulo: `O macete: ${aula.macete.nome}`, conteudo: <TelaMacete m={aula.macete} desta={desta} /> }] : [];
   const fimDaQuestao = conceito.length + dados.length + macete.length + antes.length + estaQuestao.length - 1;
   const telas: Tela[] = [
     ...conceito,
@@ -224,8 +228,8 @@ function QuestaoDegrau({ degrau }: { degrau: Degrau | Exercicio }) {
 }
 
 /* O macete curinga do conteúdo: a regra e o exemplo no quadro, uma conta por linha. */
-function TelaMacete({ m }: { m: Macete }) {
-  if (m.quadro?.length) return <QuadroMacete m={m} />;
+function TelaMacete({ m, desta }: { m: Macete; desta?: DadosDaQuestao }) {
+  if (m.quadro?.length || desta) return <QuadroMacete m={m} desta={desta} />;
   return (
     <div className="space-y-3">
       <p className="font-reading type-lead font-semibold">{m.regra}</p>
