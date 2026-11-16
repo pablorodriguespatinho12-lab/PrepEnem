@@ -142,6 +142,16 @@ export default function TreinoPage() {
           setLoading(false);
           return;
         }
+        // Link antigo da revisão de erros: vira prova, que guarda a questão no F5 e tem a
+        // tela cheia (Pablo, 16/11/2026: "voltei para a primeira questão"). Se a prova não
+        // abrir, segue no Treino como antes.
+        const prova = await fetch('/api/provas/revisar-erros', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ questionIds: ids }),
+        }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+        if (prova?.examId) {
+          router.replace(`/provas/${prova.examId}`);
+          return;
+        }
         const res = await fetch('/api/questions?ids=' + ids.join(','));
         const resData = await res.json();
         loadedQs = resData?.questions ?? [];
