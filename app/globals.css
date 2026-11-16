@@ -875,11 +875,13 @@ html [data-sonner-toaster][data-theme] {
    segundo, para sempre (2.254 ms de composição em 3 s no Início). Em passos de
    sprite a tela muda poucas vezes por segundo: o anoitecer em 12 degraus de 3 s,
    o sol 1 passo a cada 0,5 s, a nuvem 1 pixel por vez. */
-.mundo-pixel[data-animado="sim"] .mp-noite { animation: mp-noite var(--ciclo) steps(12) var(--atraso) infinite !important; }
-.mundo-pixel[data-animado="sim"] .mp-dia { animation: mp-dia var(--ciclo) steps(12) var(--atraso) infinite !important; }
+/* Dia e noite: o relógio do MundoPixel muda --op-noite e --op-dia a cada 3 s (16/11/2026).
+   Com animação de opacidade rodando nestas camadas da tela inteira, o tema escuro perdia
+   ~80 quadros em 3 s (medir-fluidez). */
+.mundo-pixel[data-animado="sim"][data-relogio="sim"] .mp-noite { opacity: var(--op-noite) !important; }
+.mundo-pixel[data-animado="sim"][data-relogio="sim"] .mp-dia { opacity: var(--op-dia) !important; }
 .mundo-pixel[data-animado="sim"] .mp-braco { animation: mp-girar var(--ciclo) steps(1440) var(--atraso) infinite !important; }
 .mundo-pixel[data-animado="sim"] .mp-nuvens { animation: mp-deriva 220s steps(560) infinite !important; }
-.mundo-pixel[data-animado="sim"] .mp-nuvens.mp-noite { animation: mp-deriva 220s steps(560) infinite, mp-noite var(--ciclo) steps(12) var(--atraso) infinite !important; }
 /* rolando a página: o mundo espera (a rolagem fica só para o texto) */
 .mundo-pixel[data-rolando="sim"] *, .mundo-pixel[data-rolando="sim"] { animation-play-state: paused !important; }
 .mundo-pixel[data-animado="sim"] .mp-estrela { animation: mp-piscar 2.4s steps(2) infinite !important; }
@@ -941,8 +943,6 @@ html [data-sonner-toaster][data-theme] {
   90% { opacity: .9; } 100% { transform: translate(calc(-2 * var(--px)), calc(28 * var(--px))); opacity: 0; } }
 .mundo-pixel[data-pausado="sim"] *, .mundo-pixel[data-pausado="sim"] { animation-play-state: paused !important; }
 
-@keyframes mp-noite { 0% { opacity: .6; } 4% { opacity: 0; } 44% { opacity: 0; } 54% { opacity: 1; } 94% { opacity: 1; } 100% { opacity: .6; } }
-@keyframes mp-dia { 0% { opacity: .4; } 4% { opacity: 1; } 44% { opacity: 1; } 54% { opacity: 0; } 94% { opacity: 0; } 100% { opacity: .4; } }
 @keyframes mp-girar { from { transform: rotate(-90deg); } to { transform: rotate(270deg); } }
 @keyframes mp-deriva { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes mp-piscar { 0% { opacity: 1; } 50% { opacity: .25; } 100% { opacity: 1; } }

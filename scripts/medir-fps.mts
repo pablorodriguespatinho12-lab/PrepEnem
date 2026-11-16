@@ -76,6 +76,8 @@ async function medirComposicao(browser: Browser, page: Page): Promise<number> {
 }
 async function medirRota(browser: Browser, page: Page, rota: string) {
   await page.goto(BASE + rota, { waitUntil: 'networkidle' });
+  // Eliminação (skill medir-fluidez, passo 4): ESCONDER='css' some com um suspeito.
+  if (process.env.ESCONDER) await page.addStyleTag({ content: process.env.ESCONDER });
   await page.waitForTimeout(1500); // entrada das animações + dados
   const cdp = await page.context().newCDPSession(page);
   await cdp.send('Performance.enable');
@@ -110,7 +112,7 @@ async function medirRota(browser: Browser, page: Page, rota: string) {
 
 const rotas = process.argv.slice(2).length ? process.argv.slice(2) : ROTAS_PADRAO;
 const browser = await chromium.launch();
-const context = await browser.newContext({ viewport: { width: 1366, height: 768 } });
+const context = await browser.newContext({ viewport: { width: 1366, height: 768 }, colorScheme: process.env.ESCURO ? 'dark' : 'light' });
 if (TOKEN) {
   await context.addCookies([{
     name: '__Secure-next-auth.session-token', value: TOKEN, domain: 'localhost', path: '/',

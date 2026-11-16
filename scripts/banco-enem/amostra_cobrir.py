@@ -32,7 +32,7 @@ F(id='d2-banco-mat-cob-01', resp='B', objeto='robô aspirador', cobra='chance',
 
 F(id='d2-banco-mat-cob-02', resp='D', objeto='irrigação', cobra='custo',
   confere=(40 * 40 - PI * 20 * 20) * 5,
-  enun='Num terreno quadrado de 40 m de lado, um irrigador fica no centro e gira molhando um círculo que encosta nos 4 lados do terreno. Nos cantos, onde a água não chega, o dono vai plantar grama que aguenta seca, a R$ 5,00 o metro quadrado. Use π = 3.\nO gasto com essa grama será de',
+  enun='Num terreno quadrado de 40 m de lado, um irrigador fica no centro e gira molhando um círculo que encosta nos 4 lados do terreno. Nos cantos, onde a água não chega, o dono vai plantar uma grama que aguenta seca. Cada metro quadrado dessa grama custa R$ 5,00. Use π = 3.\nO gasto com essa grama será de',
   alts=['R$ 400,00', 'R$ 500,00', 'R$ 6 000,00', 'R$ 2 000,00', 'R$ 8 000,00'],
   cena=('cena-irrigacao', ['terreno: 40 m', 'raio: 20 m', 'cantos secos', 'R$ 5 por m²']),
   ideia='Os cantos secos são o terreno menos o círculo molhado: 1 600 − 1 200 = 400 m². A R$ 5 cada metro quadrado, dá R$ 2 000.',

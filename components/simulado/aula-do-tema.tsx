@@ -23,11 +23,9 @@ type Tela = { rotulo: string; listas?: string[]; degrau?: Degrau; conteudo?: Rea
 // tem uma aula diferente"): o conceito em desenho → a aula DESTA questão, passo a passo,
 // sem a resposta → "Tentar responder". Depois, opcional: o conteúdo e como cai no Médio,
 // Difícil e ENEM.
-// abrirSozinha: a aula aparece antes da questão (Pablo, 16/11/2026: "prefiro ver a aula
-// antes"). O Treino liga na 1ª questão de cada conteúdo; nas outras fica o botão.
-export function AulaDoTema({ tema, questao, className, abrirSozinha = false }: { tema: string | null | undefined; questao?: QuestaoTutor; className?: string; abrirSozinha?: boolean }) {
+export function AulaDoTema({ tema, questao, className }: { tema: string | null | undefined; questao?: QuestaoTutor; className?: string }) {
   const aula = aulaDoTema(tema);
-  const [aberta, setAberta] = useState(abrirSozinha && Boolean(aula));
+  const [aberta, setAberta] = useState(false);
   const [tela, setTela] = useState(0);
   const reduzir = useReducedMotion();
   const daQuestao = useAulaDaQuestao(questao, aberta);

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { useTheme } from 'next-themes';
 import { PALETA_DIA, PALETA_NOITE, arvores, arvoresAoVento, astro, ceu, nuvens, paisagem, type Arvore, type Paleta } from '@/lib/pixel/desenho';
 import { imagemPixel, tamanhoDoPixel } from './imagem-pixel';
+import { quantoDeNoite } from '@/lib/pixel/ciclo-dia';
 
 /* Fundo da prova: serra em pixel com o dia e a noite passando (Pablo, 12/11/2026:
    "tem um sol, depois vem a noite"). Duas versões de cada camada (dia e noite)
@@ -11,6 +12,8 @@ import { imagemPixel, tamanhoDoPixel } from './imagem-pixel';
 
 /** Um dia inteiro (dia + noite), em segundos. */
 const CICLO_S = 360;
+/** De quanto em quanto tempo o céu muda de tom (os "degraus" do anoitecer). */
+const DEGRAU_S = 3;
 
 interface Imagens {
   ceuDia: string;
@@ -126,9 +129,34 @@ export function MundoPixel({ animado }: { animado: boolean }) {
     };
   }, []);
 
+  /* Dia e noite pelo relógio, não por animação CSS (fluidez, 16/11/2026): a camada da
+     noite com animação de opacidade rodando custava ~1 000 ms de composição em 3 s no
+     tema escuro, com 80 quadros perdidos; com a opacidade parada, ~300 ms e 1 perdido.
+     Agora muda a cada 3 s só a variável, sem passar pelo React. Para com a aba escondida,
+     junto do sol, para continuar sincronizado com ele. */
+  const noiteNoTema = resolvedTheme === 'dark';
+  const relogio = useRef({ tema: noiteNoTema, passado: 0 });
+  useEffect(() => {
+    const el = raiz.current;
+    if (!el || !img) return;
+    if (relogio.current.tema !== noiteNoTema) relogio.current = { tema: noiteNoTema, passado: 0 };
+    if (!animado) { el.removeAttribute('data-relogio'); return; }
+    const inicio = CICLO_S * (noiteNoTema ? 0.6 : 0.12);
+    const marcar = () => {
+      const n = quantoDeNoite((inicio + relogio.current.passado) / CICLO_S);
+      el.style.setProperty('--op-noite', n.toFixed(3));
+      el.style.setProperty('--op-dia', (1 - n).toFixed(3));
+      el.setAttribute('data-relogio', 'sim');
+    };
+    marcar();
+    if (pausado) return;
+    const id = setInterval(() => { relogio.current.passado += DEGRAU_S; marcar(); }, DEGRAU_S * 1000);
+    return () => clearInterval(id);
+  }, [animado, noiteNoTema, pausado, img]);
+
   if (!img) return <div className="mundo-pixel" aria-hidden />;
 
-  const noite = resolvedTheme === 'dark';
+  const noite = noiteNoTema;
   const estilo = {
     '--ciclo': `${CICLO_S}s`,
     // abre no meio da manhã (claro) ou no começo da noite (escuro)

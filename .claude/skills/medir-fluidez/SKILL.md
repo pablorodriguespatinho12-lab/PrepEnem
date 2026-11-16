@@ -54,6 +54,16 @@ apareceu num trace.
   sempre em passos. A seleção da alternativa em `steps(2)` parecia atrasada;
   virou 90 ms liso.
 
+- **Noite do mundo pixel (16/11/2026, "parece travadinho")**: no tema escuro a
+  prova tinha 1.038 ms de composição e 82 quadros perdidos; no claro, 267. O
+  culpado era a animação de opacidade (`mp-noite`) rodando nas camadas da tela
+  inteira, mesmo com o valor parado em 1. Esconder estrelas, vento ou `will-change`
+  não mudou nada. Trocada por um relógio em JS que muda `--op-noite` a cada 3 s
+  (`lib/pixel/ciclo-dia.ts`): **~300 ms e 2 perdidos**. Meça SEMPRE nos dois temas:
+  `ESCURO=1` no `medir-fps.mts`. `ESCONDER='css'` injeta o suspeito; use seletor
+  com prioridade maior que a da regra (`html body .mundo-pixel[data-animado="sim"] ...`),
+  senão o teste não vale.
+
 ## Regras para animação nova
 
 - Animação contínua (loop, fundo, 3D) precisa **parar quando ninguém vê**:
