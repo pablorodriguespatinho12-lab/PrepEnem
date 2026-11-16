@@ -7,11 +7,26 @@ import { materiaColors } from '@/lib/theme-colors';
 import { EsqueletoLista } from '@/components/esqueletos';
 import { VoltarAoTreino } from '@/components/treino/voltar-ao-treino';
 import Link from 'next/link';
+import { toast } from 'sonner';
 
 const MATERIAS = ['Matemática', 'Português', 'Biologia', 'Química', 'Física', 'História', 'Geografia', 'Filosofia', 'Sociologia'];
 
 export default function CadernoErrosPage() {
   const router = useRouter();
+  // A revisão abre na tela de Provas (Pablo, 16/11/2026): guarda a questão atual ao
+  // recarregar e tem a tela cheia com o astronauta. No Treino voltava para a 1ª.
+  const abrirRevisao = useCallback(async (ids: string[]) => {
+    try {
+      const r = await fetch('/api/provas/revisar-erros', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ questionIds: ids }),
+      });
+      const d = await r.json().catch(() => ({}));
+      if (!r.ok || !d?.examId) throw new Error(d?.error ?? 'Não deu para abrir a revisão.');
+      router.push(`/provas/${d.examId}`);
+    } catch (e) {
+      toast.error(e instanceof Error ? e.message : 'Não deu para abrir a revisão. Tente de novo.');
+    }
+  }, [router]);
   const [erros, setErros] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [materiaFilter, setMateriaFilter] = useState('');
@@ -100,8 +115,7 @@ export default function CadernoErrosPage() {
           {filtered.length > 1 && (
             <button
               onClick={() => {
-                const ids = filtered.map((e: any) => e?.question?.id).filter(Boolean).join(',');
-                router.push(`/treino?mode=erros&questionIds=${ids}`);
+                void abrirRevisao(filtered.map((e: any) => e?.question?.id).filter(Boolean));
               }}
               className="w-full py-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] type-meta font-medium hover:opacity-90 transition-opacity duration-micro shadow-elev-2 flex items-center justify-center gap-2"
             >
@@ -167,7 +181,7 @@ export default function CadernoErrosPage() {
               )}
 
               <button
-                onClick={() => router.push(`/treino?mode=erros&questionIds=${item?.question?.id}`)}
+                onClick={() => item?.question?.id && void abrirRevisao([item.question.id])}
                 className="flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary-text type-meta font-medium rounded-[var(--radius-control)] hover:bg-primary/20 t-colors"
               >
                 <RefreshCcw className="w-3 h-3" /> Revisar até acertar
