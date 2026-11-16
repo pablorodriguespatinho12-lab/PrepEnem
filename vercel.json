@@ -1,0 +1,8 @@
+{
+  "git": {
+    "deploymentEnabled": {
+      "pixel-em-tudo": false
+    }
+  },
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':(exclude)docs' ':(exclude).claude' ':(exclude)*.md'"
+}

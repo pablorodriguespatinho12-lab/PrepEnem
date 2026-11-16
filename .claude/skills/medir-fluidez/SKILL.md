@@ -22,7 +22,9 @@ apareceu num trace.
    um suspeito por vez (`.particulas{display:none}`, `*{backdrop-filter:none}`,
    `*{animation:none}`) e comparar a coluna de composição. Ler código não acha:
    o vidro com `backdrop-blur-xl` parecia o vilão e nem é usado.
-5. Medir de novo depois da mudança, na mesma máquina. Número absoluto do
+5. Mudança só de CSS: medir o depois no MESMO build com `INJETAR='<css novo>'`,
+   sem refazer o build (16/11/2026: 2 builds = ~6 min e o Pablo achou lento).
+   Medir de novo depois da mudança, na mesma máquina. Número absoluto do
    headless não vale; a diferença vale.
 
 ## Qual coluna olhar
