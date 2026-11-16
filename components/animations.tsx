@@ -4,34 +4,6 @@ import { motion, AnimatePresence, useInView } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { Sparkles } from 'lucide-react';
 
-// === SCROLL PROGRESS BAR ===
-export function ScrollProgress() {
-  // Escala no compositor, lida no máximo uma vez por quadro e sem estado do
-  // React. Antes era setState + width a cada evento de rolagem: re-render e
-  // layout da página a cada quadro (162 layouts em 3 s no /flashcards).
-  const barra = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    let quadro = 0;
-    const atualizar = () => {
-      quadro = 0;
-      const el = document.documentElement;
-      const max = el.scrollHeight - el.clientHeight;
-      const fracao = max > 0 ? el.scrollTop / max : 0;
-      if (!barra.current) return;
-      barra.current.style.transform = `scaleX(${fracao})`;
-      barra.current.style.opacity = fracao < 0.01 ? '0' : '1';
-    };
-    const aoRolar = () => { if (!quadro) quadro = requestAnimationFrame(atualizar); };
-    window.addEventListener('scroll', aoRolar, { passive: true });
-    atualizar();
-    return () => {
-      window.removeEventListener('scroll', aoRolar);
-      cancelAnimationFrame(quadro);
-    };
-  }, []);
-  return <div ref={barra} className="scroll-progress" style={{ transform: 'scaleX(0)', opacity: 0 }} aria-hidden="true" />;
-}
-
 // === ANIMATED COUNTER ===
 export function AnimatedCounter({ value, duration = 1.2, className = '' }: { value: number; duration?: number; className?: string }) {
   const [display, setDisplay] = useState(0);
