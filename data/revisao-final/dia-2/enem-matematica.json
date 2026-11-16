@@ -209,7 +209,7 @@
         },
         {
           "titulo": "O que acontece",
-          "texto": "A loja faz em dois passos: 1 000 sobe 10% e vai a 1 100; depois tira 2% de 1 100, que são 22 reais, e fica 1 078. A cliente fez 10 − 2 = 8% de uma vez sobre 1 000: 1 000 + 80 = 1 080.",
+          "texto": "A loja faz em 2 passos:\n1º o preço normal: 1 000 + 10% = 1 100.\n2º o cartão tira 2% de 1 100 (= 22): 1 100 − 22 = 1 078.\nA cliente fez 1 passo só: 1 000 + 8% = 1 080.\nOs 2% saem de 1 100, não de 1 000: por isso as contas não batem.",
           "visual": {
             "tipo": "tabela",
             "titulo": "Loja e cliente",
@@ -220,7 +220,12 @@
             ],
             "linhas": [
               [
-                "loja",
+                "loja, 1º",
+                "1 000 + 100",
+                "R$ 1 100"
+              ],
+              [
+                "loja, 2º",
                 "1 100 − 22",
                 "R$ 1 078"
               ],

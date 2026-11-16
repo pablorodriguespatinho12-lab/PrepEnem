@@ -27,6 +27,16 @@ import { useConceitoAntes } from '@/hooks/use-conceito-antes';
 import type { ResumoAssunto } from '@/lib/tutor/resumo';
 import { playSound } from '@/lib/sounds';
 import { EsqueletoQuestao } from '@/components/esqueletos';
+import { AulaDoTema } from '@/components/simulado/aula-do-tema';
+import { temaDaQuestao } from '@/lib/aulas-dia-2';
+import { FiguraPixel } from '@/components/visual/figura-pixel';
+import { cenaDaQuestao } from '@/lib/cenas-das-questoes';
+
+/* A aula abre sozinha só na 1ª questão de cada conteúdo da sessão. */
+function primeiraDoTema(questoes: { id: string; tema?: string | null }[], indice: number): boolean {
+  const tema = questoes[indice] ? temaDaQuestao(questoes[indice]) : null;
+  return Boolean(tema) && questoes.findIndex((q) => temaDaQuestao(q) === tema) === indice;
+}
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 const Results3DScene = dynamic(() => import('@/components/results-3d-scene'), { ssr: false });
@@ -937,6 +947,23 @@ export default function TreinoPage() {
           <div className="prose-reading mb-6">
             <MathText text={semMarcaDeImagem(currentQ?.enunciado ?? '')} />
           </div>
+
+          {/* Imagem da situação e aula antes, como na tela de Provas (Pablo, 16/11/2026:
+              "uma imagem para ter uma ideia" e "prefiro ver a aula antes"). */}
+          {cenaDaQuestao(currentQ?.id) && (
+            <div className="mb-6">
+              <FiguraPixel nome={cenaDaQuestao(currentQ?.id)!.nome} rotulos={cenaDaQuestao(currentQ?.id)!.rotulos} semConta />
+            </div>
+          )}
+          {currentQ && (
+            <AulaDoTema
+              key={`aula-${currentQ.id}`}
+              tema={temaDaQuestao(currentQ)}
+              questao={currentQ}
+              abrirSozinha={!answered && primeiraDoTema(questions ?? [], currentIdx)}
+              className="mb-6"
+            />
+          )}
 
           {/* Scan da prova original. O container é o passe-partout: ver .exam-scan
               em globals.css — no escuro, papel rebaixado em vez de branco puro. */}

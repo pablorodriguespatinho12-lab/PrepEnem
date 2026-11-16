@@ -37,9 +37,15 @@ function formula(latex: string, display: boolean): string {
   return katex.renderToString(corrigido, { displayMode: display, throwOnError: false, trust: false, strict: 'ignore', macros: MACROS_KATEX });
 }
 
+/* "1 000" não pode quebrar no meio da linha: virava "1" numa linha e "000" na outra
+   (Pablo, 14/11/2026, explicação da geladeira). O espaço de milhar vira espaço fixo. */
+export function semQuebrarNumero(texto: string): string {
+  return texto.replace(/(\d) (?=\d{3}(?!\d))/g, '$1 ');
+}
+
 /* Markdown mínimo, aplicado sobre texto JÁ escapado. */
 function marcarTexto(escapado: string): string {
-  return escapado
+  return semQuebrarNumero(escapado)
     .replace(/\[\[(a|b|c|erro):([^\]]+?)\]\]/g, (_m, c: string, termo: string) =>
       `<strong style="color:${CORES_TERMO[c]}">${termo}</strong>`)
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')

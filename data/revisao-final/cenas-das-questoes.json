@@ -252,6 +252,33 @@
         "",
         ""
       ]
+    },
+    "d2-banco-mat-cob-01": {
+      "nome": "cena-robo-aspirador",
+      "rotulos": [
+        "sala: 2 m × 2 m",
+        "robô: raio 20 cm",
+        "cantos sem limpar",
+        "π = 3"
+      ]
+    },
+    "d2-banco-mat-cob-02": {
+      "nome": "cena-irrigacao",
+      "rotulos": [
+        "terreno: 40 m",
+        "raio: 20 m",
+        "cantos secos",
+        "R$ 5 por m²"
+      ]
+    },
+    "d2-banco-mat-cob-03": {
+      "nome": "cena-antena-bairro",
+      "rotulos": [
+        "bairro: 1,2 × 1,6 km",
+        "antena no centro",
+        "chegar nos cantos",
+        ""
+      ]
     }
   }
 }

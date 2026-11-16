@@ -46,7 +46,25 @@
         "Em paralelo (cada um no seu fio, como na casa): todos têm a tensão inteira; some as correntes ou as potências.",
         "Energia = potência × tempo (kWh = kW × horas)."
       ],
-      "exemplo": "Ferro de 110 V com 10 A: P = 110 × 10 = 1 100 W."
+      "exemplo": "Ferro de 110 V com 10 A: P = 110 × 10 = 1 100 W.",
+      "quadro": [
+        [
+          "Ferro",
+          "110 V e 10 A"
+        ],
+        [
+          "Conta",
+          "P = U × i"
+        ],
+        [
+          "Troca",
+          "110 × 10"
+        ],
+        [
+          "Potência",
+          "1 100 W"
+        ]
+      ]
     }
   },
   "Termodinâmica e Calor": {
@@ -98,7 +116,25 @@
         "Mistura: o que a quente perde, a fria ganha. Compare os graus (quente cai 60, fria sobe 20: 1 L quente vale 3 frios).",
         "Tempo = calor ÷ o que entra por segundo. Condução: atrapalho = grossura ÷ k."
       ],
-      "exemplo": "500 g de 20 °C a 80 °C: 500 × 60 = 30 000 cal. Entrando 500 por segundo: 60 s."
+      "exemplo": "500 g de 20 °C a 80 °C: 500 × 60 = 30 000 cal. Entrando 500 por segundo: 60 s.",
+      "quadro": [
+        [
+          "Água",
+          "500 g, de 20 °C a 80 °C"
+        ],
+        [
+          "Muda",
+          "80 − 20 = 60 °C"
+        ],
+        [
+          "Calor",
+          "500 × 1 × 60 = 30 000 cal"
+        ],
+        [
+          "Tempo",
+          "30 000 ÷ 500 = 60 s"
+        ]
+      ]
     }
   },
   "Ondas e Acústica": {
@@ -167,7 +203,21 @@
         "Use a velocidade do meio onde o som está (ar 340 m/s, água 1 500 m/s).",
         "Tempo = distância ÷ velocidade: quantos \"metros por segundo\" cabem na distância."
       ],
-      "exemplo": "Sonar: 1 500 × 0,4 = 600 m de ida e volta. Metade: 300 m de fundo."
+      "exemplo": "Sonar: 1 500 × 0,4 = 600 m de ida e volta. Metade: 300 m de fundo.",
+      "quadro": [
+        [
+          "Sonar",
+          "som a 1 500 m/s, volta em 0,4 s"
+        ],
+        [
+          "Ida e volta",
+          "1 500 × 0,4 = 600 m"
+        ],
+        [
+          "Fundo",
+          "600 ÷ 2 = 300 m"
+        ]
+      ]
     }
   },
   "Óptica": {
@@ -234,7 +284,21 @@
         "Outra pessoa vendo: some a distância dela até o espelho com a da imagem até o espelho.",
         "Vermelho devolve o vermelho e engole o resto; branco devolve tudo; preto engole tudo."
       ],
-      "exemplo": "A 1,5 m do espelho, a imagem fica 1,5 m atrás. Distância até ela: 3 m."
+      "exemplo": "A 1,5 m do espelho, a imagem fica 1,5 m atrás. Distância até ela: 3 m.",
+      "quadro": [
+        [
+          "Você",
+          "1,5 m na frente do espelho"
+        ],
+        [
+          "Imagem",
+          "1,5 m atrás do espelho"
+        ],
+        [
+          "Até ela",
+          "1,5 + 1,5 = 3 m"
+        ]
+      ]
     }
   },
   "Dinâmica e Leis de Newton": {
@@ -288,7 +352,25 @@
         "Mesmo tempo de parada: quanto mais a velocidade muda (parar e voltar), maior a força.",
         "Queda: em t segundos cai 5 × t × t. Subir até parar é cair ao contrário."
       ],
-      "exemplo": "200 N empurram e 80 N seguram: sobram 120 N. Caixa de 40 kg: 120 ÷ 40 = 3 m/s²."
+      "exemplo": "200 N empurram e 80 N seguram: sobram 120 N. Caixa de 40 kg: 120 ÷ 40 = 3 m/s².",
+      "quadro": [
+        [
+          "Empurra",
+          "200 N"
+        ],
+        [
+          "Segura",
+          "80 N"
+        ],
+        [
+          "Sobra",
+          "200 − 80 = 120 N"
+        ],
+        [
+          "a = F ÷ m",
+          "120 ÷ 40 = 3 m/s²"
+        ]
+      ]
     }
   },
   "Química Orgânica": {
@@ -344,7 +426,25 @@
         "Com N: amina (N com C=O do lado = amida).",
         "Contar: met = 1 C, et = 2, prop = 3, but = 4. Cada C=C pede 1 H₂."
       ],
-      "exemplo": "Acetona, CH₃–CO–CH₃: o O está preso com ligação dupla num carbono do meio. C=O no meio = cetona."
+      "exemplo": "Acetona, CH₃–CO–CH₃: o O está preso com ligação dupla num carbono do meio. C=O no meio = cetona.",
+      "quadro": [
+        [
+          "Molécula",
+          "CH₃–CO–CH₃"
+        ],
+        [
+          "O e N",
+          "um O, com ligação dupla"
+        ],
+        [
+          "Onde",
+          "no carbono do meio"
+        ],
+        [
+          "Família",
+          "C=O no meio = cetona"
+        ]
+      ]
     }
   },
   "Química Ambiental e Energia": {
@@ -411,7 +511,21 @@
         "Causa: adubo → alga demais → alga morre → bactéria gasta o oxigênio → peixe morre.",
         "Unidade: ande de uma para outra (km → litros → kg). Meia-vida: a cada período, a quantidade cai pela metade."
       ],
-      "exemplo": "30 km por dia ÷ 10 km por litro = 3 litros. 3 × 2,3 kg = 6,9 kg de CO₂ por dia."
+      "exemplo": "30 km por dia ÷ 10 km por litro = 3 litros. 3 × 2,3 kg = 6,9 kg de CO₂ por dia.",
+      "quadro": [
+        [
+          "Carro",
+          "30 km por dia, 10 km por litro"
+        ],
+        [
+          "Litros",
+          "30 ÷ 10 = 3 L"
+        ],
+        [
+          "CO₂",
+          "3 × 2,3 = 6,9 kg por dia"
+        ]
+      ]
     }
   },
   "Soluções, pH e Titulação": {
@@ -482,7 +596,25 @@
         "Diluir: conte os gramas que existem; no volume novo eles são os mesmos.",
         "Compare em vezes: volume 5 vezes maior, concentração 5 vezes menor."
       ],
-      "exemplo": "200 mL de suco a 100 g/L têm 20 g de açúcar. Com água até 1 L: 20 g/L."
+      "exemplo": "200 mL de suco a 100 g/L têm 20 g de açúcar. Com água até 1 L: 20 g/L.",
+      "quadro": [
+        [
+          "Suco",
+          "200 mL a 100 g/L"
+        ],
+        [
+          "Gramas",
+          "0,2 × 100 = 20 g"
+        ],
+        [
+          "Pôs água",
+          "os 20 g ficam"
+        ],
+        [
+          "Em 1 L",
+          "20 g/L"
+        ]
+      ]
     }
   },
   "Eletroquímica": {
@@ -533,7 +665,25 @@
         "Tensão de uma pilha = maior − menor. Em série, some as pilhas.",
         "Ferrugem pede ferro + água + oxigênio: tire um (tinta, filme, zinco que se sacrifica) e ela para."
       ],
-      "exemplo": "Cobre +0,34 V e zinco −0,76 V: 0,34 − (−0,76) = 0,34 + 0,76 = 1,10 V."
+      "exemplo": "Cobre +0,34 V e zinco −0,76 V: 0,34 − (−0,76) = 0,34 + 0,76 = 1,10 V.",
+      "quadro": [
+        [
+          "Cobre",
+          "+0,34 V: maior, ganha elétrons"
+        ],
+        [
+          "Zinco",
+          "−0,76 V: perde, polo −"
+        ],
+        [
+          "Pilha",
+          "0,34 − (−0,76)"
+        ],
+        [
+          "Total",
+          "0,34 + 0,76 = 1,10 V"
+        ]
+      ]
     }
   },
   "Estequiometria": {
@@ -586,7 +736,21 @@
         "Receita: o número na frente diz quantos pacotes (mols). Vire tudo em gramas.",
         "Compare: sua massa é quantas vezes a da receita? O produto também é."
       ],
-      "exemplo": "1 CH₄ (16 g) dá 1 CO₂ (44 g). 32 g de CH₄ é 2 vezes 16 g: dá 2 × 44 = 88 g de CO₂."
+      "exemplo": "1 CH₄ (16 g) dá 1 CO₂ (44 g). 32 g de CH₄ é 2 vezes 16 g: dá 2 × 44 = 88 g de CO₂.",
+      "quadro": [
+        [
+          "Receita",
+          "16 g de CH₄ → 44 g de CO₂"
+        ],
+        [
+          "Você tem",
+          "32 g = 2 × 16 g"
+        ],
+        [
+          "Dá",
+          "2 × 44 = 88 g de CO₂"
+        ]
+      ]
     }
   },
   "Ecologia": {
@@ -637,7 +801,21 @@
         "Relação: um ganha e o outro perde = parasitismo; um ganha e o outro fica igual = inquilinismo; os dois ganham = mutualismo.",
         "Tirou ou pôs um ser: siga o que muda (sem quem espalha a semente, a planta diminui)."
       ],
-      "exemplo": "Capim 10 000 kcal → boi 1 000 → pessoa 100 kcal."
+      "exemplo": "Capim 10 000 kcal → boi 1 000 → pessoa 100 kcal.",
+      "quadro": [
+        [
+          "Capim",
+          "10 000 kcal"
+        ],
+        [
+          "→ Boi",
+          "corta um zero: 1 000 kcal"
+        ],
+        [
+          "→ Pessoa",
+          "corta um zero: 100 kcal"
+        ]
+      ]
     }
   },
   "Fisiologia Humana e Saúde": {
@@ -705,7 +883,25 @@
         "Oxigênio: pulmão → hemácia (hemoglobina) → músculo. Pouco oxigênio no ar: o corpo faz mais hemácias.",
         "Cada célula tem um serviço: cone vê a cor; bastonete vê com pouca luz."
       ],
-      "exemplo": "Treinou na montanha: mais hemácias, mais oxigênio a cada volta do sangue."
+      "exemplo": "Treinou na montanha: mais hemácias, mais oxigênio a cada volta do sangue.",
+      "quadro": [
+        [
+          "Pergunta",
+          "para que serve?"
+        ],
+        [
+          "Montanha",
+          "pouco oxigênio no ar"
+        ],
+        [
+          "Corpo",
+          "faz mais hemácias"
+        ],
+        [
+          "Resultado",
+          "mais oxigênio a cada volta"
+        ]
+      ]
     }
   },
   "Genética": {
@@ -773,7 +969,25 @@
         "Conte os quadradinhos que a pergunta pede: 1 de 4 = 25%; 2 de 4 = 50%.",
         "Letras iguais (AA, aa) = homozigoto; diferentes (Aa) = heterozigoto. Gene é a receita de uma proteína."
       ],
-      "exemplo": "AB × ii: Iᴬi, Iᴬi, Iᴮi, Iᴮi. Tipo A: 2 de 4 = 50%."
+      "exemplo": "AB × ii: Iᴬi, Iᴬi, Iᴮi, Iᴮi. Tipo A: 2 de 4 = 50%.",
+      "quadro": [
+        [
+          "Pai AB",
+          "Iᴬ e Iᴮ"
+        ],
+        [
+          "Mãe O",
+          "i e i"
+        ],
+        [
+          "Cruza",
+          "Iᴬi, Iᴬi, Iᴮi, Iᴮi"
+        ],
+        [
+          "Tipo A",
+          "2 de 4 = 50%"
+        ]
+      ]
     }
   },
   "Citologia": {
@@ -841,7 +1055,21 @@
         "Proteína para exportar: retículo rugoso fabrica → Golgi embala → vesícula leva para fora.",
         "Água vai para o lado mais concentrado (osmose): em água pura, a célula incha."
       ],
-      "exemplo": "Célula que faz muita enzima (proteína) tem muito retículo rugoso."
+      "exemplo": "Célula que faz muita enzima (proteína) tem muito retículo rugoso.",
+      "quadro": [
+        [
+          "Trabalho",
+          "fazer muita proteína (enzima)"
+        ],
+        [
+          "Quem faz",
+          "retículo rugoso"
+        ],
+        [
+          "Então",
+          "tem muito retículo rugoso"
+        ]
+      ]
     }
   },
   "Evolução": {
@@ -893,7 +1121,25 @@
         "Mesmo trabalho e origem diferente = análogos (asa de morcego e de borboleta); mesma origem = homólogos.",
         "Parasita que convive há muito tempo com o hospedeiro tende a matar menos."
       ],
-      "exemplo": "Já havia insetos escuros e claros; no tronco escuro, o pássaro come os claros. Os escuros ficam comuns."
+      "exemplo": "Já havia insetos escuros e claros; no tronco escuro, o pássaro come os claros. Os escuros ficam comuns.",
+      "quadro": [
+        [
+          "Antes",
+          "já havia insetos escuros e claros"
+        ],
+        [
+          "Ambiente",
+          "tronco escuro"
+        ],
+        [
+          "Escolha",
+          "o pássaro vê e come os claros"
+        ],
+        [
+          "Depois",
+          "os escuros ficam comuns"
+        ]
+      ]
     }
   },
   "Microbiologia e Doenças": {
@@ -961,7 +1207,21 @@
         "Vírus: gripe, sarampo, dengue, covid, raiva. Bactéria: tuberculose, tétano.",
         "A PCR só copia DNA: vírus de RNA precisa virar DNA antes (transcrição reversa)."
       ],
-      "exemplo": "Pisou num prego sem vacina: soro antitetânico já, porque a vacina leva semanas."
+      "exemplo": "Pisou num prego sem vacina: soro antitetânico já, porque a vacina leva semanas.",
+      "quadro": [
+        [
+          "Soro",
+          "anticorpo pronto: protege já"
+        ],
+        [
+          "Vacina",
+          "ensina o corpo: leva semanas"
+        ],
+        [
+          "Prego, sem vacina",
+          "soro agora"
+        ]
+      ]
     }
   },
   "Aritmética e Porcentagem": {
@@ -1007,14 +1267,32 @@
     ],
     "macete": {
       "nome": "Ache 10%",
-      "regra": "Ache 10% (corte um zero) ou 1% (corte dois) e multiplique. Aumentos e descontos seguidos: um de cada vez.",
+      "regra": "Para achar 10%, corte um zero do número. Desconto: tira. Aumento: soma. Dois seguidos: um de cada vez.",
       "passos": [
         "Desconto: ache a parte e tire. Aumento: ache a parte e some.",
         "Voltar ao todo: se 30% = 90, então 10% = 30 e 100% = 300.",
         "Seguidos de uma vez: multiplique os fatores (10% a mais = 1,10; 10% a menos = 0,90).",
         "Regra ou custos do texto: faça a mesma conta para todos, uma linha por item."
       ],
-      "exemplo": "R$ 50 com 20% de desconto: 10% = 5, 20% = 10. Paga 50 − 10 = 40."
+      "exemplo": "R$ 50 com 20% de desconto: 10% = 5, 20% = 10. Paga 50 − 10 = 40.",
+      "quadro": [
+        [
+          "Preço",
+          "R$ 50, com 20% de desconto"
+        ],
+        [
+          "10%",
+          "corta um zero: 5"
+        ],
+        [
+          "20%",
+          "2 × 5 = 10"
+        ],
+        [
+          "Paga",
+          "50 − 10 = R$ 40"
+        ]
+      ]
     }
   },
   "Grandezas e Medidas": {
@@ -1068,7 +1346,21 @@
         "Unidades: 1 L = 1 000 mL; 1 m = 100 cm; 1 km = 1 000 m; 1 h = 60 min.",
         "Muita coisa junto (costureiras, horas, dias): conte o trabalho total em \"horas de costureira\"."
       ],
-      "exemplo": "2 kg de farinha → 30 pães. 6 kg é 3 vezes 2 kg: 3 × 30 = 90 pães."
+      "exemplo": "2 kg de farinha → 30 pães. 6 kg é 3 vezes 2 kg: 3 × 30 = 90 pães.",
+      "quadro": [
+        [
+          "Receita",
+          "2 kg → 30 pães"
+        ],
+        [
+          "Você tem",
+          "6 kg = 3 × 2 kg"
+        ],
+        [
+          "Pães",
+          "3 × 30 = 90"
+        ]
+      ]
     }
   },
   "Estatística": {
@@ -1120,7 +1412,25 @@
         "Número par de valores: a mediana é a média dos dois do meio. Valor muito grande puxa a média, não a mediana.",
         "Chance de pelo menos um = 1 − chance de errar todos."
       ],
-      "exemplo": "Notas 6, 8 e 5; quer média 7 em 4 provas: precisa de 28, tem 19, falta 9."
+      "exemplo": "Notas 6, 8 e 5; quer média 7 em 4 provas: precisa de 28, tem 19, falta 9.",
+      "quadro": [
+        [
+          "Quer",
+          "média 7 em 4 provas"
+        ],
+        [
+          "Precisa",
+          "7 × 4 = 28"
+        ],
+        [
+          "Tem",
+          "6 + 8 + 5 = 19"
+        ],
+        [
+          "Falta",
+          "28 − 19 = 9"
+        ]
+      ]
     }
   },
   "Funções": {
@@ -1174,7 +1484,21 @@
         "Dobra a cada tanto: conte quantas dobras cabem no tempo e dobre essa quantidade de vezes.",
         "Comparar fórmulas: teste com números pequenos inventados."
       ],
-      "exemplo": "Táxi: R$ 5 fixos + R$ 2 por km. 10 km: 5 + 2 × 10 = 25."
+      "exemplo": "Táxi: R$ 5 fixos + R$ 2 por km. 10 km: 5 + 2 × 10 = 25.",
+      "quadro": [
+        [
+          "Táxi",
+          "R$ 5 fixos + R$ 2 por km"
+        ],
+        [
+          "Troca",
+          "km = 10"
+        ],
+        [
+          "Paga",
+          "5 + 2 × 10 = R$ 25"
+        ]
+      ]
     }
   },
   "Geometria Plana": {
@@ -1241,7 +1565,21 @@
         "Triângulos que se repetem: 3-4-5, 6-8-10, 5-12-13, 8-15-17 (hipotenusa² = cateto² + cateto²).",
         "Mesmo sol, mesma sombra: tudo cresce na mesma proporção."
       ],
-      "exemplo": "Terreno de 12 m por 20 m: 12 × 20 = 240 quadradinhos de 1 m², ou seja, 240 m²."
+      "exemplo": "Terreno de 12 m por 20 m: 12 × 20 = 240 quadradinhos de 1 m², ou seja, 240 m².",
+      "quadro": [
+        [
+          "Terreno",
+          "12 m por 20 m"
+        ],
+        [
+          "Área",
+          "12 × 20 = 240"
+        ],
+        [
+          "Quadradinhos",
+          "240 de 1 m² = 240 m²"
+        ]
+      ]
     }
   },
   "Geometria Espacial": {
@@ -1294,7 +1632,21 @@
         "Mudou as medidas: lados × 2 → volume × 8; lados pela metade → volume ÷ 8.",
         "Esfera (com π = 3): 4 × raio × raio × raio. Diâmetro dobra → volume × 8."
       ],
-      "exemplo": "Caixa de 10 × 5 × 4 cm: fundo 50, volume 50 × 4 = 200 cm³."
+      "exemplo": "Caixa de 10 × 5 × 4 cm: fundo 50, volume 50 × 4 = 200 cm³.",
+      "quadro": [
+        [
+          "Caixa",
+          "10 × 5 × 4 cm"
+        ],
+        [
+          "Fundo",
+          "10 × 5 = 50 cm²"
+        ],
+        [
+          "Volume",
+          "50 × 4 = 200 cm³"
+        ]
+      ]
     }
   }
 }

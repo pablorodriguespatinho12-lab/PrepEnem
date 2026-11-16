@@ -210,9 +210,11 @@ const OleoSabao = cena('cena-oleo-sabao', (c) => {
 ));
 
 import { CENAS_QUIMICA_2 } from './cenas-quimica-2';
+import { CENAS_MATEMATICA } from './cenas-matematica';
 
 export const CENAS_QUESTOES = {
   ...CENAS_QUIMICA_2,
+  ...CENAS_MATEMATICA,
   'cena-fogao-metano': FogaoMetano,
   'cena-esmalte': Esmalte,
   'cena-dois-frascos': DoisFrascos,

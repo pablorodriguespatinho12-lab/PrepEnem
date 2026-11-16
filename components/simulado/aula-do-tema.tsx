@@ -11,6 +11,7 @@ import { desenhoDoTema } from '@/lib/aulas-desenho';
 import { TelaDesenho, TelaProporcoes, TelaSentido } from '@/components/simulado/telas-desenho';
 import { TelaEstaQuestao, TelaPasso, useAulaDaQuestao } from '@/components/simulado/resolver-esta-questao';
 import type { QuestaoTutor } from '@/components/tutor/explicacao-tutor';
+import { QuadroMacete } from '@/components/simulado/quadro-macete';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 
@@ -22,9 +23,11 @@ type Tela = { rotulo: string; listas?: string[]; degrau?: Degrau; conteudo?: Rea
 // tem uma aula diferente"): o conceito em desenho → a aula DESTA questão, passo a passo,
 // sem a resposta → "Tentar responder". Depois, opcional: o conteúdo e como cai no Médio,
 // Difícil e ENEM.
-export function AulaDoTema({ tema, questao, className }: { tema: string | null | undefined; questao?: QuestaoTutor; className?: string }) {
+// abrirSozinha: a aula aparece antes da questão (Pablo, 16/11/2026: "prefiro ver a aula
+// antes"). O Treino liga na 1ª questão de cada conteúdo; nas outras fica o botão.
+export function AulaDoTema({ tema, questao, className, abrirSozinha = false }: { tema: string | null | undefined; questao?: QuestaoTutor; className?: string; abrirSozinha?: boolean }) {
   const aula = aulaDoTema(tema);
-  const [aberta, setAberta] = useState(false);
+  const [aberta, setAberta] = useState(abrirSozinha && Boolean(aula));
   const [tela, setTela] = useState(0);
   const reduzir = useReducedMotion();
   const daQuestao = useAulaDaQuestao(questao, aberta);
@@ -222,8 +225,9 @@ function QuestaoDegrau({ degrau }: { degrau: Degrau | Exercicio }) {
   );
 }
 
-/* O macete curinga do conteúdo: a regra, como usar (uma linha cada) e um exemplo pequeno. */
+/* O macete curinga do conteúdo: a regra e o exemplo no quadro, uma conta por linha. */
 function TelaMacete({ m }: { m: Macete }) {
+  if (m.quadro?.length) return <QuadroMacete m={m} />;
   return (
     <div className="space-y-3">
       <p className="font-reading type-lead font-semibold">{m.regra}</p>

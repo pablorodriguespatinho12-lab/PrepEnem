@@ -95,7 +95,14 @@ export function TelaPasso({ passo }: { passo: PassoExplicacao }) {
           <MathText key={i} text={linha} />
         ))}
       </div>
-      {passo.visual && (
+      {/* Tabela fica do tamanho dela: na caixa de altura fixa sobrava um vão vazio em
+          cima e embaixo (Pablo, 14/11/2026, tabela "Loja e cliente"). */}
+      {passo.visual?.tipo === 'tabela' && (
+        <div className="passo-visual min-w-0 overflow-x-auto rounded-[var(--radius-control)] border border-border bg-[hsl(var(--surface-2))] p-2">
+          <VisualDesenho visual={passo.visual} semMoldura />
+        </div>
+      )}
+      {passo.visual && passo.visual.tipo !== 'tabela' && (
         <div className="passo-visual h-[min(18rem,38dvh)] min-w-0 overflow-hidden rounded-[var(--radius-control)] border border-border bg-[hsl(var(--surface-2))] p-2">
           <CaberNaCaixa>
             <VisualDesenho visual={passo.visual} semMoldura />

@@ -1,0 +1,1774 @@
+[
+ {
+  "id": "d2-banco-mat-cob-01",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um robô aspirador redondo, de raio 20 cm, limpa uma sala quadrada de 2 m de lado. Ele anda encostado nas paredes, mas, por ser redondo, nunca alcança o fundo dos 4 cantos. Uma migalha cai num ponto qualquer do chão, ao acaso. Use π = 3.\nA probabilidade de a migalha cair num lugar que o robô não alcança é de",
+  "A": "0,25%",
+  "B": "1%",
+  "C": "3%",
+  "D": "4%",
+  "E": "0,75%",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "1 canto: 400 - 3*400/4 = 100; 4 cantos 400; sala 40000; 400/40000 = 1%. B. A = 100/40000; E = 300/40000; C = 1200/40000; D = 1600/40000.",
+   "ideia": "Em cada canto sobra um quadradinho de 20 × 20 menos um quarto do robô: 400 − 300 = 100 cm². Os 4 cantos dão 400 cm², que é 1% dos 40 000 cm² da sala.",
+   "pecas": [
+    {
+     "termo": "Probabilidade",
+     "significado": "A chance de algo acontecer. 1% quer dizer 1 vez a cada 100."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O robô é redondo e a sala é quadrada.\nA questão quer a chance de uma migalha cair onde ele nunca passa.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "cena-robo-aspirador",
+      "titulo": "A situação",
+      "rotulos": [
+       "sala: 2 m × 2 m",
+       "robô: raio 20 cm",
+       "cantos sem limpar",
+       "π = 3"
+      ]
+     }
+    },
+    {
+     "titulo": "Por que dividir área por área",
+     "texto": "Espalhe 100 migalhas pelo chão, bem misturadas. Cada pedaço do chão recebe migalha na proporção do tamanho dele.\nSe os cantos são 1% do chão, recebem 1 das 100 migalhas.\nPor isso a chance é a área que interessa dividida pela área toda.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "100 migalhas espalhadas",
+      "cabecalho": [
+       "Parte do chão",
+       "Área",
+       "Migalhas"
+      ],
+      "linhas": [
+       [
+        "Sala inteira",
+        "40 000 cm²",
+        "100"
+       ],
+       [
+        "Cantos sem limpar",
+        "400 cm²",
+        "1"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de chance pela área: chance = área que interessa ÷ área toda.\nNo canto, o robô encosta nas 2 paredes: sobra um quadradinho de 20 × 20 = 400 menos 1/4 do robô.\n1/4 do robô: 3 × 20 × 20 ÷ 4 = 300. Sobra 100 por canto; 4 cantos: 400 cm².\nSala: 200 × 200 = 40 000. Chance: 400 ÷ 40 000 = 1%.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Os cantos que o robô não alcança",
+      "pede": "A chance de a migalha cair num canto sem limpar",
+      "dados": [
+       "\\text{sala} = 200\\,\\text{cm}",
+       "r = 20\\,\\text{cm}",
+       "\\pi = 3"
+      ],
+      "formula": "\\text{chance} = \\frac{\\text{área dos cantos}}{\\text{área da sala}}",
+      "contas": [
+       "\\text{1 canto} = 20 \\times 20 - \\frac{3 \\times 20 \\times 20}{4} = 400 - 300 = 100",
+       "\\text{4 cantos} = 4 \\times 100 = 400\\,\\text{cm}^2",
+       "\\text{sala} = 200 \\times 200 = 40\\,000\\,\\text{cm}^2",
+       "\\frac{400}{40\\,000} = \\frac{1}{100}"
+      ],
+      "resultado": "1\\%",
+      "nota": "Passe tudo para cm antes."
+     }
+    },
+    {
+     "titulo": "Por que funciona: juntando os cantos",
+     "texto": "Junte os 4 cantos: eles formam um quadrado de 40 × 40 (1 600) menos um robô inteiro (3 × 400 = 1 200).\n1 600 − 1 200 = 400 cm², o mesmo de antes.\nCom π = 3, o robô ocupa 3/4 do quadrado em volta dele: sobra 1/4, que é 400 de 1 600."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 1%.\nA (0,25%) contou um canto só.\nE (0,75%) usou o quarto de robô (300) no lugar do que sobra.\nC (3%) somou os 4 quartos de robô (1 200), que é a parte que ele limpa.\nD (4%) usou o quadradinho inteiro dos 4 cantos (1 600)."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Robô de raio 10 cm, π = 3. Quanto ele deixa sem limpar em cada canto?",
+    "opcoes": [
+     "25 cm²",
+     "75 cm²",
+     "100 cm²",
+     "300 cm²"
+    ],
+    "certa": "25 cm²",
+    "resposta": "10 × 10 = 100; menos 3 × 100 ÷ 4 = 75; sobra 25."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-02",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Num terreno quadrado de 40 m de lado, um irrigador fica no centro e gira molhando um círculo que encosta nos 4 lados do terreno. Nos cantos, onde a água não chega, o dono vai plantar grama que aguenta seca, a R$ 5,00 o metro quadrado. Use π = 3.\nO gasto com essa grama será de",
+  "A": "R$ 400,00",
+  "B": "R$ 500,00",
+  "C": "R$ 6 000,00",
+  "D": "R$ 2 000,00",
+  "E": "R$ 8 000,00",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "1600 - 3*400 = 400; 400*5 = 2000. D. A = 400; B = 100*5; C = 1200*5; E = 1600*5.",
+   "ideia": "Os cantos secos são o terreno menos o círculo molhado: 1 600 − 1 200 = 400 m². A R$ 5 cada metro quadrado, dá R$ 2 000.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "O irrigador molha um círculo dentro de um terreno quadrado.\nA questão quer o preço da grama para os 4 cantos que ficam secos.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "cena-irrigacao",
+      "titulo": "A situação",
+      "rotulos": [
+       "terreno: 40 m",
+       "raio: 20 m",
+       "cantos secos",
+       "R$ 5 por m²"
+      ]
+     }
+    },
+    {
+     "titulo": "Onde a água não chega",
+     "texto": "O círculo encosta no meio de cada lado: o raio é metade do lado, 20 m.\nSobram 4 cantinhos secos, um em cada ponta do terreno.\nÁrea seca = terreno − círculo. Depois, cada m² custa R$ 5.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "Terreno dividido",
+      "cabecalho": [
+       "Parte",
+       "Conta",
+       "Área"
+      ],
+      "linhas": [
+       [
+        "Terreno",
+        "40 × 40",
+        "1 600 m²"
+       ],
+       [
+        "Molhado",
+        "3 × 20 × 20",
+        "1 200 m²"
+       ],
+       [
+        "Seco",
+        "1 600 − 1 200",
+        "400 m²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de cobrir: área que sobra = figura de fora − figura de dentro.\nTerreno: 40 × 40 = 1 600. Círculo: 3 × 20 × 20 = 1 200.\nSeco: 1 600 − 1 200 = 400 m².\nGrama: 400 × 5 = R$ 2 000.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Grama dos cantos",
+      "pede": "Quanto custa a grama dos cantos secos",
+      "dados": [
+       "L = 40\\,\\text{m}",
+       "r = 20\\,\\text{m}",
+       "\\pi = 3",
+       "5\\,\\text{reais por m}^2"
+      ],
+      "formula": "\\text{seco} = L^2 - \\pi r^2",
+      "contas": [
+       "\\text{seco} = 1\\,600 - 1\\,200 = 400\\,\\text{m}^2",
+       "400 \\times 5 = 2\\,000"
+      ],
+      "resultado": "2\\,000\\,\\text{reais}",
+      "nota": "Primeiro a área, depois o preço."
+     }
+    },
+    {
+     "titulo": "Por que funciona: 1/4 do terreno",
+     "texto": "Com π = 3, o círculo que encosta nos lados ocupa 3 de cada 4 partes do quadrado.\nSobra 1/4: 1 600 ÷ 4 = 400 m², sem calcular o círculo.\nVale para qualquer terreno quadrado com o círculo encostando nos lados."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, R$ 2 000,00.\nA (R$ 400) é a área seca, esquecendo o preço.\nB (R$ 500) é um canto só (100 m² × 5).\nC (R$ 6 000) pôs grama na parte MOLHADA (1 200 × 5).\nE (R$ 8 000) pôs grama no terreno todo."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Terreno quadrado de 20 m e irrigador encostando nos lados, π = 3. Área seca?",
+    "opcoes": [
+     "100 m²",
+     "300 m²",
+     "400 m²",
+     "25 m²"
+    ],
+    "certa": "100 m²",
+    "resposta": "20 × 20 = 400; molhado 3 × 10 × 10 = 300; seco 100."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-03",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um bairro tem a forma de um retângulo de 1,2 km por 1,6 km. A operadora vai pôr uma antena de celular bem no centro do bairro. O sinal chega até uma certa distância da antena, em todas as direções, e precisa alcançar até as casas dos 4 cantos.\nO menor alcance que a antena precisa ter é de",
+  "A": "0,6 km",
+  "B": "0,8 km",
+  "C": "1,0 km",
+  "D": "1,4 km",
+  "E": "2,0 km",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "diag sqrt(1,44+2,56)=2; metade 1,0. C. A = 1,2/2; B = 1,6/2; D = 0,6+0,8; E = diagonal.",
+   "ideia": "O canto é o ponto mais longe do centro: fica a meia diagonal. A diagonal do 1,2 por 1,6 é 2,0 (triângulo 3-4-5), então o alcance é 1,0 km.",
+   "pecas": [
+    {
+     "termo": "Alcance",
+     "significado": "Até onde o sinal chega a partir da antena. O sinal forma um círculo, e o alcance é o raio dele."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "A antena fica no centro e o sinal forma um círculo.\nA questão quer o menor círculo que pega os 4 cantos do bairro.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "cena-antena-bairro",
+      "titulo": "A situação",
+      "rotulos": [
+       "bairro: 1,2 × 1,6 km",
+       "antena no centro",
+       "chegar nos cantos",
+       ""
+      ]
+     }
+    },
+    {
+     "titulo": "Quem fica mais longe",
+     "texto": "Andando do centro, o meio de cada lado está perto: 0,6 km ou 0,8 km.\nO canto está mais longe que todos: é o fim da meia diagonal.\nSe o sinal chega no canto, chega no bairro todo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "Do centro até...",
+      "cabecalho": [
+       "Lugar",
+       "Distância"
+      ],
+      "linhas": [
+       [
+        "meio do lado menor",
+        "0,8 km"
+       ],
+       [
+        "meio do lado maior",
+        "0,6 km"
+       ],
+       [
+        "um canto",
+        "1,0 km"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de cobrir: o alcance é do centro até a ponta mais longe.\n1,2 e 1,6 são 3 e 4 vezes 0,4. Triângulo 3-4-5: a diagonal é 5 × 0,4 = 2,0.\nDo centro ao canto: metade, 1,0 km.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Alcance da antena",
+      "pede": "O menor alcance que chega aos 4 cantos",
+      "dados": [
+       "1{,}2\\,\\text{km}",
+       "1{,}6\\,\\text{km}"
+      ],
+      "formula": "d^2 = 1{,}2^2 + 1{,}6^2",
+      "contas": [
+       "d^2 = 1{,}44 + 2{,}56 = 4",
+       "d = 2{,}0\\,\\text{km}",
+       "2{,}0 \\div 2 = 1{,}0"
+      ],
+      "resultado": "1{,}0\\,\\text{km}",
+      "nota": "3-4-5 pula a raiz."
+     }
+    },
+    {
+     "titulo": "Por que funciona: pelo meio do lado",
+     "texto": "Do centro, ande 0,8 km até o meio do lado e depois 0,6 km até o canto.\nEsse caminho forma um triângulo retângulo de lados 0,6 e 0,8: o 3-4-5 de novo, vezes 0,2.\nO lado que falta é 5 × 0,2 = 1,0 km, direto do centro ao canto."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 1,0 km.\nB (0,8 km) chega no meio do lado, mas não no canto.\nE (2,0 km) usou a diagonal inteira: a antena está no meio dela.\nD (1,4 km) somou 0,6 + 0,8, como se o sinal andasse pelas ruas em L."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Bairro de 0,6 km por 0,8 km, antena no centro. Menor alcance?",
+    "opcoes": [
+     "0,5 km",
+     "0,4 km",
+     "1,0 km",
+     "0,7 km"
+    ],
+    "certa": "0,5 km",
+    "resposta": "Diagonal 1,0 (3-4-5 vezes 0,2); metade 0,5."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-04",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Uma mesa quadrada tem lado de 1,00 m. Uma toalha redonda, com o centro no centro da mesa, deve cobri-la e passar 10 cm além de cada ponta. Use 1,4 como valor de √2.\nO menor diâmetro possível da toalha é",
+  "A": "1,10 m",
+  "B": "1,20 m",
+  "C": "1,40 m",
+  "D": "1,60 m",
+  "E": "1,80 m",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "diag 1,4; meia 0,7; +0,1 = 0,8; dobro 1,6. D. B = 1+0,2; C = diagonal; E = 1,4+0,4; A = 1+0,1.",
+   "ideia": "A ponta do quadrado é o ponto mais longe do centro, a meia diagonal: 1,40 ÷ 2 = 0,70. Com a sobra, raio 0,80 e diâmetro 1,60.",
+   "pecas": [
+    {
+     "termo": "Diagonal",
+     "significado": "O segmento que liga duas pontas opostas, atravessando o quadrado. No quadrado, mede lado × 1,4."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Mesa quadrada de 1 m. Toalha redonda passando 10 cm das pontas.\nA questão quer o menor diâmetro.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "lado 1,00 m",
+       "toalha redonda",
+       "sobra 10 cm",
+       "nas pontas"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "A toalha redonda é presa pelo centro. Quem mais se afasta do centro é a ponta da mesa.\nSe a toalha alcança a ponta, alcança todo o resto."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de cobrir: raio da toalha = do centro até a ponta mais longe + sobra.\nDiagonal: 1,00 × 1,4 = 1,40. Do centro à ponta: metade, 0,70.\nRaio: 0,70 + 0,10 = 0,80. Diâmetro: 2 × 0,80 = 1,60.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Toalha na mesa quadrada",
+      "dados": [
+       "L = 1{,}00\\,\\text{m}",
+       "\\text{sobra} = 0{,}10\\,\\text{m}"
+      ],
+      "formula": "r = \\frac{L\\sqrt{2}}{2} + \\text{sobra}",
+      "legenda": [
+       "L√2: a diagonal"
+      ],
+      "contas": [
+       "1{,}00 \\times 1{,}4 = 1{,}40",
+       "1{,}40 \\div 2 = 0{,}70",
+       "0{,}70 + 0{,}10 = 0{,}80",
+       "2 \\times 0{,}80 = 1{,}60"
+      ],
+      "resultado": "1{,}60\\,\\text{m}",
+      "nota": "A ponta manda, não o lado."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A diagonal é a hipotenusa de um triângulo com catetos 1 e 1.\nPitágoras: diagonal² = 1 + 1 = 2, então diagonal = √2 ≈ 1,4.\nPor isso a ponta fica a 0,70 do centro, mais longe que o meio do lado (0,50)."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, 1,60 m.\nB (1,20 m) usou a largura (1,00 + 0,20): a toalha não alcança a ponta.\nC (1,40 m) achou a diagonal e esqueceu a sobra.\nE (1,80 m) somou a sobra 4 vezes."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Mesa quadrada de lado 3 m, sobra 5 cm, √2 = 1,4. Raio da toalha?",
+    "opcoes": [
+     "2,15 m",
+     "2,10 m",
+     "1,55 m",
+     "4,20 m"
+    ],
+    "certa": "2,15 m",
+    "resposta": "3 × 1,4 = 4,2; metade 2,10; mais 0,05 = 2,15."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-05",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Uma mesa retangular mede 1,60 m por 1,20 m. A toalha deve passar 20 cm da borda em toda a volta. A loja oferece:\nI. quadrada de lado 2,00 m;\nII. retangular de 2,00 m por 1,60 m;\nIII. redonda de diâmetro 2,40 m;\nIV. quadrada de lado 1,80 m;\nV. redonda de diâmetro 2,00 m.\nUse π = 3. Entre as que cobrem a mesa como pedido, a de menor área é a",
+  "A": "I",
+  "B": "II",
+  "C": "III",
+  "D": "IV",
+  "E": "V",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Mesa+sobra 2,0 x 1,6. Diagonal sqrt(1,6^2+1,2^2)=2,0; raio 1,0+0,2=1,2; diam 2,4. Cobrem I, II, III. Areas 4,00; 3,20; 4,32. Menor II = B.",
+   "ideia": "Primeiro quem cobre: a mesa com a sobra vira 2,00 por 1,60. Entre as que cobrem, a retangular 2,00 × 1,60 gasta menos: 3,20 m².",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "5 toalhas. A questão quer a que cobre E gasta menos pano.\nSão duas perguntas em ordem: cobre? Depois: qual a menor área?",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "1,60 m",
+       "1,20 m",
+       "sobra 20 cm",
+       "menor pano"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Área grande não garante cobrir: toalha comprida e fina pode deixar a ponta de fora.\nPor isso a medida vem primeiro e a área só no fim.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "Quem cobre",
+      "cabecalho": [
+       "Toalha",
+       "Precisa",
+       "Cobre?"
+      ],
+      "linhas": [
+       [
+        "I: 2,00 × 2,00",
+        "2,00 × 1,60",
+        "sim"
+       ],
+       [
+        "II: 2,00 × 1,60",
+        "2,00 × 1,60",
+        "sim"
+       ],
+       [
+        "III: redonda 2,40",
+        "diâmetro 2,40",
+        "sim"
+       ],
+       [
+        "IV: 1,80 × 1,80",
+        "2,00 de comprimento",
+        "não"
+       ],
+       [
+        "V: redonda 2,00",
+        "diâmetro 2,40",
+        "não"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de cobrir: 1º quem cobre (medida), 2º a menor área.\nMesa com sobra: 1,60 + 0,40 = 2,00 e 1,20 + 0,40 = 1,60.\nRedonda: diagonal 3-4-5 = 2,00; metade 1,00 + 0,20 = raio 1,20 (diâmetro 2,40).\nÁreas: I = 4,00; II = 3,20; III = 3 × 1,44 = 4,32. Menor: II.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Só entre as que cobrem",
+      "dados": [
+       "\\text{mesa} = 1{,}60 \\times 1{,}20",
+       "\\text{sobra} = 0{,}20"
+      ],
+      "formula": "\\text{área} = \\text{lado} \\times \\text{lado} \\quad \\text{ou} \\quad 3 \\times r^2",
+      "legenda": [
+       "r: raio da toalha redonda"
+      ],
+      "contas": [
+       "\\text{I: } 2{,}00 \\times 2{,}00 = 4{,}00",
+       "\\text{II: } 2{,}00 \\times 1{,}60 = 3{,}20",
+       "\\text{III: } 3 \\times 1{,}20^2 = 4{,}32"
+      ],
+      "resultado": "\\text{II} = 3{,}20\\,\\text{m}^2",
+      "nota": "IV e V nem entram: não cobrem."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A diagonal sai sem conta: 1,20 e 1,60 são 3 e 4 vezes 0,40.\nO triângulo 3-4-5 dá a diagonal 5 × 0,40 = 2,00.\nA redonda precisa alcançar a ponta, que fica a meia diagonal (1,00) do centro."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, toalha II.\nE (V, redonda 2,00) cabe na largura, mas não alcança a ponta.\nD (IV, 1,80) gasta menos, mas não cobre o comprimento de 2,00.\nC (III) cobre, mas gasta 4,32 m²."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Mesa 1,00 × 0,60 m, sobra 10 cm em volta. Tamanho da toalha retangular?",
+    "opcoes": [
+     "1,20 × 0,80",
+     "1,10 × 0,70",
+     "1,00 × 0,60",
+     "1,20 × 0,70"
+    ],
+    "certa": "1,20 × 0,80",
+    "resposta": "1,00 + 0,20 = 1,20 e 0,60 + 0,20 = 0,80."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-06",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Uma mesa tem a forma de um triângulo de lados iguais, cada um com 1,80 m. Uma toalha redonda, com o centro no centro da mesa, deve passar 10 cm além de cada ponta. Use 1,7 como valor de √3.\nO menor diâmetro da toalha é",
+  "A": "2,00 m",
+  "B": "2,04 m",
+  "C": "2,14 m",
+  "D": "2,24 m",
+  "E": "3,26 m",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "h = 1,8*1,7/2 = 1,53; 2/3 = 1,02; +0,1 = 1,12; x2 = 2,24. D. B = 2,04; E = 2*(1,53+0,1)=3,26; A = 1,8+0,2; C = 2,04+0,1.",
+   "ideia": "O centro do triângulo fica a 2/3 da altura (1,53), contando da ponta: 1,02. Com a sobra, raio 1,12 e diâmetro 2,24.",
+   "pecas": [
+    {
+     "termo": "Centro do triângulo",
+     "significado": "O ponto à mesma distância das 3 pontas. Fica na altura, a 2 partes da ponta e 1 parte da base."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Mesa em triângulo de lados iguais, 1,80 m.\nA questão quer a toalha redonda que passa 10 cm das 3 pontas.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "lado 1,80 m",
+       "centro da mesa",
+       "sobra 10 cm",
+       "√3 = 1,7"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "As 3 pontas são os pontos mais longe do centro.\nA altura do triângulo, dividida em 3 partes, tem 2 partes do centro até a ponta."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de cobrir: triângulo de lados iguais, altura = lado × 1,7 ÷ 2; centro até a ponta = 2/3 dela.\nAltura: 1,80 × 1,7 ÷ 2 = 1,53. Um terço: 0,51. Dois terços: 1,02.\nRaio: 1,02 + 0,10 = 1,12. Diâmetro: 2,24.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Do centro até a ponta",
+      "dados": [
+       "L = 1{,}80\\,\\text{m}",
+       "\\sqrt{3} = 1{,}7",
+       "\\text{sobra} = 0{,}10"
+      ],
+      "formula": "r = \\frac{2}{3} \\times \\frac{L\\sqrt{3}}{2} + \\text{sobra}",
+      "legenda": [
+       "L√3 ÷ 2: a altura"
+      ],
+      "contas": [
+       "h = 1{,}80 \\times 1{,}7 \\div 2 = 1{,}53",
+       "\\frac{2}{3} \\times 1{,}53 = 1{,}02",
+       "1{,}02 + 0{,}10 = 1{,}12",
+       "2 \\times 1{,}12 = 2{,}24"
+      ],
+      "resultado": "2{,}24\\,\\text{m}",
+      "nota": "2/3 da altura, nunca a altura inteira."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A altura corta o triângulo em duas metades com ângulo reto. Pitágoras: 1,80² = 0,90² + h², h² = 3,24 − 0,81 = 2,43, h ≈ 1,56 (com √3 = 1,7 dá 1,53).\nAs 3 alturas se cruzam no centro e se cortam na razão 2 para 1."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, 2,24 m.\nB (2,04 m) achou 2 × 1,02 e esqueceu a sobra.\nE (3,26 m) usou a altura inteira como raio.\nA (2,00 m) fez lado + 2 sobras, como se fosse a largura."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Triângulo de lados iguais com altura 0,90 m. Do centro até a ponta?",
+    "opcoes": [
+     "0,60 m",
+     "0,30 m",
+     "0,45 m",
+     "0,90 m"
+    ],
+    "certa": "0,60 m",
+    "resposta": "0,90 ÷ 3 = 0,30; dois terços: 0,60."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-07",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Uma ficha de raio 2 cm é jogada sobre uma bandeja retangular de 20 cm por 40 cm, e o centro dela sempre cai na bandeja. Ganha quem deixa a ficha inteiramente dentro, sem passar da borda.\nA probabilidade de ganhar é de",
+  "A": "72%",
+  "B": "80%",
+  "C": "81%",
+  "D": "90%",
+  "E": "28%",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "16*36/800 = 0,72. A. B = 0,8; D = 0,9; C = 18*38/800? nao; C = 0,9^2; E = 1-0,72.",
+   "ideia": "Cada lado da bandeja perde 2 cm de cada ponta: o retângulo onde o centro ganha mede 16 por 36. Chance = 576 ÷ 800 = 72%.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Ficha de raio 2 numa bandeja de 20 por 40.\nA questão quer a chance de ela ficar inteira dentro.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "20 cm",
+       "40 cm",
+       "ficha: raio 2",
+       "inteira dentro"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "A largura perde 2 de cada lado: 20 − 4 = 16.\nO comprimento também: 40 − 4 = 36.\nO centro ganhador anda num retângulo de 16 por 36."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de chance pela área: no retângulo, cada medida perde 2r.\nOnde ganha: (20 − 4) × (40 − 4) = 16 × 36 = 576.\nOnde vale: 20 × 40 = 800.\n576 ÷ 800 = 0,72 = 72%.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Retângulo menor",
+      "dados": [
+       "20 \\times 40\\,\\text{cm}",
+       "r = 2\\,\\text{cm}"
+      ],
+      "formula": "\\text{chance} = \\frac{(a - 2r)(b - 2r)}{a \\times b}",
+      "legenda": [
+       "a, b: lados da bandeja"
+      ],
+      "contas": [
+       "16 \\times 36 = 576",
+       "20 \\times 40 = 800",
+       "576 \\div 800 = 0{,}72"
+      ],
+      "resultado": "72\\%",
+      "nota": "Divide por 8: 72 ÷ 100."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Conta mais leve: 16 ÷ 20 = 0,8 e 36 ÷ 40 = 0,9.\nA chance é 0,8 × 0,9 = 0,72.\nCada direção entra separada e as duas se multiplicam."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, 72%.\nB (80%) olhou só a largura (16 ÷ 20).\nD (90%) olhou só o comprimento (36 ÷ 40).\nE (28%) é a chance de perder."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Bandeja 10 × 20 e ficha de raio 1. Chance de ficar inteira?",
+    "opcoes": [
+     "72%",
+     "80%",
+     "90%",
+     "64%"
+    ],
+    "certa": "72%",
+    "resposta": "8 × 18 = 144; 144 ÷ 200 = 72%."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-08",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um quadrado de lado 20 cm tem desenhado dentro dele um círculo que encosta nos 4 lados. Um dardo atinge o quadrado num ponto ao acaso. Use π = 3.\nA probabilidade de o dardo atingir o quadrado fora do círculo é de",
+  "A": "75%",
+  "B": "25%",
+  "C": "50%",
+  "D": "20%",
+  "E": "33%",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "(400-300)/400 = 25%. B. A = 300/400; E = 100/300; C chute metade; D = 100/500.",
+   "ideia": "O círculo que encosta nos lados tem raio 10 e área 3 × 100 = 300, dentro de um quadrado de 400. Fora dele sobram 100 de 400, ou 25%.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Círculo dentro do quadrado, encostando nos lados.\nA questão quer a chance de cair FORA do círculo: nos 4 cantinhos.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "lado 20",
+       "círculo: raio 10",
+       "fora do círculo",
+       "π = 3"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Os 4 cantinhos são o quadrado menos o círculo.\nA chance é a área dos cantinhos dividida pela área do quadrado."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de chance pela área: parte que você quer ÷ área toda.\nCírculo: 3 × 10 × 10 = 300. Quadrado: 20 × 20 = 400.\nCantinhos: 400 − 300 = 100.\n100 ÷ 400 = 25%.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Os 4 cantinhos",
+      "dados": [
+       "L = 20",
+       "r = 10",
+       "\\pi = 3"
+      ],
+      "formula": "\\text{chance} = \\frac{L^2 - \\pi r^2}{L^2}",
+      "legenda": [
+       "L²: quadrado",
+       "πr²: círculo"
+      ],
+      "contas": [
+       "400 - 300 = 100",
+       "100 \\div 400 = 0{,}25"
+      ],
+      "resultado": "25\\%",
+      "nota": "Leu \"fora\"? Tira o círculo."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Com π = 3, o círculo ocupa 3 de cada 4 partes do quadrado, em qualquer tamanho.\nConfira com lado 2: círculo 3 × 1 = 3, quadrado 4. Fora: 1 de 4, de novo 25%."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 25%.\nA (75%) é a chance de cair DENTRO do círculo: leu rápido o \"fora\".\nE (33%) dividiu cantinhos pelo círculo (100 ÷ 300), e não pelo quadrado."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Mesma figura, π = 3. Chance de cair DENTRO do círculo?",
+    "opcoes": [
+     "75%",
+     "25%",
+     "30%",
+     "50%"
+    ],
+    "certa": "75%",
+    "resposta": "300 ÷ 400 = 75%."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-09",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um alvo tem 4 círculos com o mesmo centro, de raios 1, 2, 3 e 4 dm. A faixa entre os círculos de raio 3 e 4 é a mais de fora. Uma flecha atinge o alvo num ponto ao acaso.\nA probabilidade de ela atingir a faixa mais de fora é de",
+  "A": "25%",
+  "B": "12,5%",
+  "C": "30%",
+  "D": "56,25%",
+  "E": "43,75%",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "(16-9)/16 = 0,4375. E. A = 1/4; D = 9/16; B = 1/8; C chute.",
+   "ideia": "A faixa de fora é o círculo de raio 4 menos o de raio 3: 16 − 9 = 7 partes de 16. Chance = 7 ÷ 16 = 43,75%, e o π corta.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Alvo com 4 faixas de mesma largura.\nA questão quer a chance de acertar a faixa mais de fora.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "raios 1, 2, 3, 4",
+       "faixa de fora",
+       "entre 3 e 4",
+       "ao acaso"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "As faixas têm a mesma largura, mas não a mesma área.\nA de fora é a mais comprida: dá a volta maior. Por isso pega mais área."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de chance pela área: faixa = círculo grande − círculo pequeno.\nRaio 4: 4 × 4 = 16. Raio 3: 3 × 3 = 9. Faixa: 16 − 9 = 7.\nChance: 7 ÷ 16 = 0,4375 = 43,75%.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Faixa de fora",
+      "dados": [
+       "R = 4\\,\\text{dm}",
+       "r = 3\\,\\text{dm}"
+      ],
+      "formula": "\\text{chance} = \\frac{R^2 - r^2}{R^2}",
+      "legenda": [
+       "o π corta em cima e embaixo"
+      ],
+      "contas": [
+       "16 - 9 = 7",
+       "7 \\div 16 = 0{,}4375"
+      ],
+      "resultado": "43{,}75\\%",
+      "nota": "Largura igual não é área igual."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Some todas as faixas: 1 + 3 + 5 + 7 = 16.\nSão as áreas 1 − 0, 4 − 1, 9 − 4, 16 − 9.\nA de fora tem 7 das 16 partes: quase metade do alvo."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, 43,75%.\nA (25%) achou que as 4 faixas são iguais: 1 de 4.\nD (56,25%) é 9 ÷ 16, a chance de cair DENTRO do raio 3.\nB (12,5%) não usou área: (4 − 3) ÷ (2 × 4)."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Mesmo alvo. Chance de acertar o círculo do meio, de raio 1?",
+    "opcoes": [
+     "1 em 16",
+     "1 em 4",
+     "1 em 8",
+     "1 em 2"
+    ],
+    "certa": "1 em 16",
+    "resposta": "1 × 1 = 1 de 4 × 4 = 16."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-10",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Uma mesa redonda tem 1,20 m de diâmetro. Quer-se uma toalha quadrada, com o centro no centro da mesa, que passe pelo menos 15 cm da borda da mesa em todas as direções.\nO menor lado possível da toalha é",
+  "A": "1,20 m",
+  "B": "1,35 m",
+  "C": "1,50 m",
+  "D": "1,68 m",
+  "E": "2,40 m",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "1,20 + 0,30 = 1,50. C. B = 1,35; A = 1,20; D = 1,2*1,4 = 1,68; E = 2 x 1,20.",
+   "ideia": "O círculo encosta no meio de cada lado do quadrado. O lado precisa ser o diâmetro mais a sobra dos dois lados: 1,20 + 0,30 = 1,50.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Mesa redonda de 1,20 m. Toalha quadrada por cima.\nA questão quer o menor lado que deixa 15 cm de sobra.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "diâmetro 1,20",
+       "toalha quadrada",
+       "sobra 15 cm",
+       "menor lado"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O ponto da mesa mais perto da borda da toalha é onde o círculo encosta no meio do lado.\nAli a sobra é a menor: tem que ser 15 cm. Nos cantos da toalha sobra mais."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de cobrir: régua atravessando a mesa + sobra dos dois lados.\nLargura da mesa: 1,20.\nSobra: 0,15 de cada lado = 0,30.\nLado: 1,20 + 0,30 = 1,50.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Quadrado em volta do círculo",
+      "dados": [
+       "d = 1{,}20\\,\\text{m}",
+       "\\text{sobra} = 0{,}15\\,\\text{m}"
+      ],
+      "formula": "L = d + 2 \\times \\text{sobra}",
+      "legenda": [
+       "d: diâmetro da mesa"
+      ],
+      "contas": [
+       "2 \\times 0{,}15 = 0{,}30",
+       "1{,}20 + 0{,}30 = 1{,}50"
+      ],
+      "resultado": "1{,}50\\,\\text{m}",
+      "nota": "A sobra aparece dos dois lados."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Faça o caminho de um lado ao outro da toalha passando pelo centro:\n0,15 de sobra, 0,60 de raio, 0,60 de raio, 0,15 de sobra.\n0,15 + 0,60 + 0,60 + 0,15 = 1,50."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 1,50 m.\nB (1,35 m) pôs a sobra de um lado só.\nA (1,20 m) esqueceu a sobra.\nD (1,68 m) usou a diagonal (1,20 × 1,4) onde não precisa."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Mesa redonda de 0,80 m e sobra de 10 cm. Lado da toalha quadrada?",
+    "opcoes": [
+     "1,00 m",
+     "0,90 m",
+     "1,20 m",
+     "0,80 m"
+    ],
+    "certa": "1,00 m",
+    "resposta": "0,80 + 2 × 0,10 = 1,00."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-11",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Uma mesa redonda tem raio de 0,60 m. A toalha redonda dela deve passar 20 cm da borda em toda a volta. Use π = 3.\nA área da toalha é de",
+  "A": "1,08 m²",
+  "B": "1,20 m²",
+  "C": "1,92 m²",
+  "D": "2,40 m²",
+  "E": "4,80 m²",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "3 x 0,8^2 = 1,92. C. A = 3x0,36; E = 2x3x0,8; D = 3x0,8; B = 1,08+0,12?.",
+   "ideia": "A sobra entra no raio: 0,60 + 0,20 = 0,80. Área da toalha: 3 × 0,80 × 0,80 = 1,92 m².",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Mesa redonda de raio 0,60. Toalha redonda com 20 cm de sobra.\nA questão quer a área da toalha.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "raio 0,60",
+       "sobra 20 cm",
+       "toalha redonda",
+       "π = 3"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "A toalha é um círculo maior, com o mesmo centro.\nO raio dela é o da mesa mais a sobra."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de cobrir: põe a sobra no raio ANTES de calcular a área.\nRaio da toalha: 0,60 + 0,20 = 0,80.\nÁrea: 3 × 0,80 × 0,80 = 3 × 0,64 = 1,92.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Área da toalha",
+      "dados": [
+       "r = 0{,}60\\,\\text{m}",
+       "\\text{sobra} = 0{,}20\\,\\text{m}",
+       "\\pi = 3"
+      ],
+      "formula": "A = \\pi \\times R^2",
+      "legenda": [
+       "R: raio da toalha (mesa + sobra)"
+      ],
+      "contas": [
+       "R = 0{,}60 + 0{,}20 = 0{,}80",
+       "0{,}80 \\times 0{,}80 = 0{,}64",
+       "3 \\times 0{,}64 = 1{,}92"
+      ],
+      "resultado": "1{,}92\\,\\text{m}^2",
+      "nota": "Sobra primeiro, área depois."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Se calculasse a área da mesa (1,08) e somasse a sobra, a conta não teria sentido: sobra é comprimento, área é quadradinho.\nA sobra muda o raio; o raio muda a área."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 1,92 m².\nA (1,08 m²) é a área da MESA (3 × 0,36).\nE (4,80 m²) é a volta da toalha (2 × 3 × 0,80), não a área.\nD (2,40 m²) fez 3 × 0,80 sem multiplicar raio por raio."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Mesa de raio 0,40 e sobra de 10 cm, π = 3. Área da toalha?",
+    "opcoes": [
+     "0,75 m²",
+     "0,48 m²",
+     "1,50 m²",
+     "0,60 m²"
+    ],
+    "certa": "0,75 m²",
+    "resposta": "Raio 0,50; 3 × 0,25 = 0,75."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-12",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Uma mesa tem a forma de um hexágono regular (6 lados iguais) de lado 0,60 m. Uma toalha redonda, com o centro no centro da mesa, deve passar 20 cm além de cada ponta.\nO menor diâmetro da toalha é",
+  "A": "1,60 m",
+  "B": "1,40 m",
+  "C": "1,20 m",
+  "D": "1,80 m",
+  "E": "2,00 m",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "raio = lado = 0,6; +0,2 = 0,8; diam 1,6. A. C = 1,2; B = 1,2+0,2; E = 1,2+0,8; D chute.",
+   "ideia": "Hexágono regular são 6 triângulos de lados iguais, então do centro até a ponta mede o lado: 0,60. Com a sobra, raio 0,80 e diâmetro 1,60.",
+   "pecas": [
+    {
+     "termo": "Hexágono regular",
+     "significado": "Figura de 6 lados iguais, como o favo de mel da abelha."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Mesa de 6 lados iguais de 0,60 m. Toalha redonda passando 20 cm das pontas.\nA questão quer o menor diâmetro.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "hexágono",
+       "lado 0,60",
+       "sobra 20 cm",
+       "6 triângulos"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Ligue o centro às 6 pontas: aparecem 6 triângulos iguais.\nCada um tem os 3 lados iguais. Então do centro até a ponta mede o mesmo que o lado."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de cobrir: hexágono regular, do centro até a ponta = o lado.\nCentro até a ponta: 0,60.\nRaio da toalha: 0,60 + 0,20 = 0,80.\nDiâmetro: 2 × 0,80 = 1,60.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Hexágono",
+      "dados": [
+       "L = 0{,}60\\,\\text{m}",
+       "\\text{sobra} = 0{,}20\\,\\text{m}"
+      ],
+      "formula": "r = L + \\text{sobra}",
+      "legenda": [
+       "no hexágono, centro até a ponta = L"
+      ],
+      "contas": [
+       "0{,}60 + 0{,}20 = 0{,}80",
+       "2 \\times 0{,}80 = 1{,}60"
+      ],
+      "resultado": "1{,}60\\,\\text{m}",
+      "nota": "Hexágono: o lado é o raio."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "A volta completa tem 360°. Dividida em 6 triângulos, cada ângulo no centro mede 60°.\nUm triângulo com um ângulo de 60° e dois lados iguais tem os 3 ângulos de 60°: lados todos iguais."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, 1,60 m.\nC (1,20 m) achou o diâmetro da mesa e esqueceu a sobra.\nB (1,40 m) pôs a sobra uma vez só no diâmetro.\nE (2,00 m) somou a sobra 4 vezes."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Hexágono regular de lado 1 m, sobra de 10 cm. Raio da toalha?",
+    "opcoes": [
+     "1,10 m",
+     "1,00 m",
+     "0,60 m",
+     "2,20 m"
+    ],
+    "certa": "1,10 m",
+    "resposta": "Centro até a ponta = 1; mais 0,10."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-13",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um piso é coberto por lajotas quadradas de 25 cm de lado. Numa brincadeira, uma moeda de raio 5 cm é jogada no chão. Ganha quem deixa a moeda sem tocar em nenhuma linha entre as lajotas. Considere que o centro da moeda cai em qualquer ponto de uma lajota com a mesma chance.\nA probabilidade de ganhar é de",
+  "A": "60%",
+  "B": "36%",
+  "C": "64%",
+  "D": "40%",
+  "E": "16%",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "(25-10)^2/625 = 225/625 = 0,36. B. A = 0,6; C = 0,8^2; D = 1-0,6; E = 0,4^2.",
+   "ideia": "Basta uma lajota: o centro tem que ficar a 5 cm de cada linha, num quadrado de lado 15. Chance = 15 × 15 ÷ (25 × 25) = 36%.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Moeda de raio 5 no piso de lajotas de 25.\nA questão quer a chance de ela não tocar nenhuma linha.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "lajota 25 cm",
+       "moeda: raio 5",
+       "sem tocar a linha",
+       "uma lajota basta"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O piso todo repete a mesma lajota. Então a chance numa lajota é a chance no piso todo.\nA moeda não toca a linha se o centro ficar longe 5 cm de cada um dos 4 lados."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de chance pela área: piso de lajotas = uma lajota só; lado ganhador = L − 2r.\nLado: 25 − 2 × 5 = 15.\nÁreas: 15 × 15 = 225 e 25 × 25 = 625.\n225 ÷ 625 = 0,36 = 36%.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Uma lajota só",
+      "dados": [
+       "L = 25\\,\\text{cm}",
+       "r = 5\\,\\text{cm}"
+      ],
+      "formula": "\\text{chance} = \\left(\\frac{L - 2r}{L}\\right)^2",
+      "legenda": [
+       "(15 ÷ 25) vezes ele mesmo"
+      ],
+      "contas": [
+       "\\frac{15}{25} = 0{,}6",
+       "0{,}6 \\times 0{,}6 = 0{,}36"
+      ],
+      "resultado": "36\\%",
+      "nota": "Divide antes: conta menor."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Dividir antes deixa a conta pequena: 15 ÷ 25 = 0,6.\nComo são duas direções (largura e comprimento), 0,6 × 0,6 = 0,36.\nMesmo resultado de 225 ÷ 625."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, 36%.\nA (60%) fez 15 ÷ 25 e esqueceu as duas direções.\nC (64%) tirou r só uma vez: 20 ÷ 25 = 0,8; 0,8 × 0,8 = 0,64.\nE (16%) olhou só o pedaço de 5 de cada lado."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Lajota de 20 cm, moeda de raio 2 cm. Chance de não tocar a linha?",
+    "opcoes": [
+     "64%",
+     "80%",
+     "81%",
+     "36%"
+    ],
+    "certa": "64%",
+    "resposta": "(20 − 4) ÷ 20 = 0,8; 0,8 × 0,8 = 0,64."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-14",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Num piso de lajotas quadradas de 20 cm de lado, uma moeda é jogada e o centro dela cai em qualquer ponto de uma lajota com a mesma chance. O fabricante do jogo quer que a probabilidade de a moeda NÃO tocar nenhuma linha seja de pelo menos 81%. O raio da moeda é um número inteiro de centímetros.\nO maior raio possível é",
+  "A": "4 cm",
+  "B": "3 cm",
+  "C": "2 cm",
+  "D": "1 cm",
+  "E": "9 cm",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "r=1: 18^2/400=0,81 ok; r=2: 0,64 nao. Maior = 1. D. C = esqueceu 2r; A = 0,36; B = 0,49; E = 81 confuso.",
+   "ideia": "81% é 0,9 × 0,9, então o lado ganhador tem que ser pelo menos 0,9 × 20 = 18. De 20 − 2r ≥ 18 sai r ≤ 1.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Agora é ao contrário: dá a chance mínima (81%) e pede o maior raio.\nMoeda maior = chance menor. Procura até onde dá para crescer.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "lajota 20 cm",
+       "chance ≥ 81%",
+       "r inteiro",
+       "maior r"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "81% tem raiz bonita: 0,9 × 0,9 = 0,81.\nEntão cada direção tem que manter pelo menos 90% da lajota."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de chance pela área: chance em quadrado perfeito? Tire a raiz e trabalhe só com o lado.\n√0,81 = 0,9. Lado ganhador: 0,9 × 20 = 18.\n20 − 2r ≥ 18, então 2r ≤ 2 e r ≤ 1.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Da chance para o raio",
+      "dados": [
+       "L = 20\\,\\text{cm}",
+       "\\text{chance} \\geq 0{,}81"
+      ],
+      "formula": "\\frac{L - 2r}{L} \\geq \\sqrt{0{,}81}",
+      "legenda": [
+       "√0,81 = 0,9"
+      ],
+      "contas": [
+       "20 - 2r \\geq 0{,}9 \\times 20 = 18",
+       "2r \\leq 2",
+       "r \\leq 1"
+      ],
+      "resultado": "r = 1\\,\\text{cm}",
+      "nota": "Testa r = 2: 16² ÷ 400 = 64%."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Testando: r = 1 dá lado 18; 18 × 18 = 324; 324 ÷ 400 = 81%. Serve, no limite.\nr = 2 dá lado 16; 256 ÷ 400 = 64%. Já não serve.\nEntão o maior é 1."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, 1 cm.\nC (2 cm) tirou r de um lado só: 20 − r ≥ 18.\nA (4 cm) e B (3 cm) deixam a chance em 36% e 49%.\nE (9 cm) usou o 81% como se fosse raio."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Lajota de 10 cm, chance mínima de 64%. Maior raio inteiro?",
+    "opcoes": [
+     "1 cm",
+     "2 cm",
+     "3 cm",
+     "4 cm"
+    ],
+    "certa": "1 cm",
+    "resposta": "√0,64 = 0,8; 10 − 2r ≥ 8; r ≤ 1."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-15",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um alvo quadrado de lado 40 cm tem, no meio, um buraco redondo de raio 10 cm. Uma bolinha é jogada e cai num ponto ao acaso do alvo. Use π = 3.\nA probabilidade de a bolinha cair no buraco é de",
+  "A": "25%",
+  "B": "75%",
+  "C": "6,25%",
+  "D": "30%",
+  "E": "18,75%",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "300/1600 = 0,1875. E. A = 400/1600; C = 100/1600; B = 3/4; D chute.",
+   "ideia": "Buraco: 3 × 10 × 10 = 300; alvo: 40 × 40 = 1 600. Chance = 300 ÷ 1 600 = 18,75%.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Quadrado de 40 com buraco redondo de raio 10.\nA questão quer a chance de cair no buraco.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "lado 40",
+       "buraco: raio 10",
+       "π = 3",
+       "cai no buraco"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O buraco é pequeno perto do quadrado: o diâmetro dele (20) é metade do lado (40).\nMetade do lado não é metade da área: a chance vai ser bem menor que 50%."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de chance pela área: parte que você quer ÷ área toda.\nBuraco: 3 × 10 × 10 = 300.\nQuadrado: 40 × 40 = 1 600.\n300 ÷ 1 600 = 3 ÷ 16 = 0,1875 = 18,75%.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Cair no buraco",
+      "dados": [
+       "L = 40\\,\\text{cm}",
+       "r = 10\\,\\text{cm}",
+       "\\pi = 3"
+      ],
+      "formula": "\\text{chance} = \\frac{\\pi r^2}{L^2}",
+      "legenda": [
+       "πr²: o buraco",
+       "L²: o alvo"
+      ],
+      "contas": [
+       "3 \\times 100 = 300",
+       "40 \\times 40 = 1\\,600",
+       "300 \\div 1\\,600 = 0{,}1875"
+      ],
+      "resultado": "18{,}75\\%",
+      "nota": "Corta os zeros: 3 ÷ 16."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Compare com a questão do círculo que encosta nos lados: ali o círculo ocupa 3 de 4 partes.\nAqui o diâmetro é metade do lado, então a área é 1/4 daquilo: 3/4 × 1/4 = 3/16."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, 18,75%.\nA (25%) usou o quadrado de 20 em volta do buraco (400 de 1 600), e não o círculo.\nC (6,25%) esqueceu o π: 100 ÷ 1 600.\nB (75%) usou a regra do círculo que encosta nos lados."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Alvo quadrado de lado 20 e buraco de raio 5, π = 3. Chance?",
+    "opcoes": [
+     "18,75%",
+     "25%",
+     "75%",
+     "37,5%"
+    ],
+    "certa": "18,75%",
+    "resposta": "3 × 25 = 75; 75 ÷ 400 = 18,75%."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-16",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Dois jogos usam a mesma ficha de raio 1 cm, e nos dois o centro da ficha cai no alvo. No jogo 1, o alvo é um círculo de raio 10 cm. No jogo 2, o alvo é um quadrado de lado 20 cm. Ganha quem deixa a ficha inteiramente dentro do alvo.\nComparando as chances de ganhar, conclui-se que",
+  "A": "o jogo 2 dá mais chance: 90,25% contra 81%",
+  "B": "os dois dão a mesma chance: 81%",
+  "C": "o jogo 2 dá mais chance: 90% contra 81%",
+  "D": "o jogo 1 dá mais chance: 90% contra 81%",
+  "E": "o jogo 2 dá mais chance: 81% contra 64%",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Circulo: 81/100. Quadrado: 18^2/400 = 324/400 = 0,81. Iguais. B.",
+   "ideia": "Círculo: (10 − 1)² ÷ 10² = 81%; quadrado: (20 − 2)² ÷ 20² = 81%. Dão a mesma chance.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Mesma ficha, dois alvos diferentes.\nA questão quer comparar as chances.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "círculo: raio 10",
+       "quadrado: lado 20",
+       "ficha: raio 1",
+       "qual ganha?"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O quadrado tem cantos, e o círculo não. Parece que o quadrado dá mais chance.\nMas a chance é uma divisão: o quadrado também tem área total maior."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de chance pela área: círculo usa R − r; quadrado usa L − 2r.\nCírculo: 9 ÷ 10 = 0,9; 0,9 × 0,9 = 0,81.\nQuadrado: 18 ÷ 20 = 0,9; 0,9 × 0,9 = 0,81.\nIguais: 81%.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Dois alvos",
+      "dados": [
+       "R = 10",
+       "L = 20",
+       "r = 1"
+      ],
+      "formula": "\\frac{R - r}{R} \\quad \\text{e} \\quad \\frac{L - 2r}{L}",
+      "legenda": [
+       "depois eleva ao quadrado"
+      ],
+      "contas": [
+       "\\frac{9}{10} = 0{,}9 \\Rightarrow 0{,}81",
+       "\\frac{18}{20} = 0{,}9 \\Rightarrow 0{,}81"
+      ],
+      "resultado": "\\text{iguais: } 81\\%",
+      "nota": "L = 2R: as contas viram a mesma."
+     }
+    },
+    {
+     "titulo": "Por que funciona (os dois jeitos)",
+     "texto": "O lado 20 é o dobro do raio 10, e o quadrado tira 2r em vez de r.\nEntão (20 − 2) ÷ 20 é a mesma fração que (10 − 1) ÷ 10.\nTudo dobra junto: a fração não muda."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra B, iguais.\nC achou 90% no quadrado: esqueceu de multiplicar 0,9 por ele mesmo.\nE tirou 2r no círculo também: (10 − 2)² = 64%.\nA tirou 1 só de um lado do quadrado: 19 × 19 ÷ 400 = 90,25%."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Ficha de raio 3: círculo de raio 15 ou quadrado de lado 30?",
+    "opcoes": [
+     "iguais: 64%",
+     "círculo: 64%",
+     "quadrado: 80%",
+     "iguais: 80%"
+    ],
+    "certa": "iguais: 64%",
+    "resposta": "12 ÷ 15 = 0,8 e 24 ÷ 30 = 0,8; 0,8 × 0,8 = 64%."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-17",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Uma mesa retangular de festa mede 2,40 m por 1,00 m. Para uma decoração, quer-se uma toalha redonda, com o centro no centro da mesa, que passe 10 cm além de cada canto.\nO menor diâmetro dessa toalha é",
+  "A": "2,80 m",
+  "B": "2,60 m",
+  "C": "2,70 m",
+  "D": "3,40 m",
+  "E": "2,50 m",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "diag sqrt(5,76+1)=2,6; +0,2 = 2,8. A. B = 2,6; C = 2,7; D = 3,4; E = 2,4+0,1.",
+   "ideia": "O canto manda, e 1,00 e 2,40 são 5 e 12 vezes 0,20: a diagonal é 13 × 0,20 = 2,60. Metade mais a sobra dá raio 1,40, diâmetro 2,80.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Mesa de 2,40 por 1,00. Toalha redonda passando 10 cm dos cantos.\nA questão quer o menor diâmetro.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "2,40 m",
+       "1,00 m",
+       "sobra 10 cm",
+       "canto manda"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "O centro da toalha fica no meio da diagonal da mesa.\nDo centro até o canto é meia diagonal."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de cobrir: canto manda; triângulos que se repetem dão a diagonal sem raiz.\n1,00 e 2,40 = 5 e 12 vezes 0,20. Triângulo 5-12-13: diagonal 13 × 0,20 = 2,60.\nRaio: 1,30 + 0,10 = 1,40. Diâmetro: 2,80.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Triângulo 5-12-13",
+      "dados": [
+       "2{,}40 \\times 1{,}00\\,\\text{m}",
+       "\\text{sobra} = 0{,}10"
+      ],
+      "formula": "d^2 = a^2 + b^2",
+      "legenda": [
+       "d: diagonal da mesa"
+      ],
+      "contas": [
+       "d^2 = 5{,}76 + 1 = 6{,}76",
+       "d = 2{,}60",
+       "r = 1{,}30 + 0{,}10 = 1{,}40",
+       "2 \\times 1{,}40 = 2{,}80"
+      ],
+      "resultado": "2{,}80\\,\\text{m}",
+      "nota": "5-12-13: decore junto com 3-4-5."
+     }
+    },
+    {
+     "titulo": "Por que funciona (com Pitágoras)",
+     "texto": "Pelo caminho longo: 2,40² = 5,76 e 1,00² = 1; soma 6,76.\nQue número vezes ele mesmo dá 6,76? 2,6 × 2,6 = 6,76.\nOs dois jeitos dão 2,60: o atalho só pula a raiz."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra A, 2,80 m.\nB (2,60 m) achou a diagonal e esqueceu a sobra.\nC (2,70 m) pôs a sobra uma vez só no diâmetro.\nD (3,40 m) somou os lados (2,40 + 1,00) no lugar da diagonal."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Mesa de 1,20 × 0,50 m. Quanto mede a diagonal?",
+    "opcoes": [
+     "1,30 m",
+     "1,70 m",
+     "1,20 m",
+     "1,50 m"
+    ],
+    "certa": "1,30 m",
+    "resposta": "0,50 e 1,20 = 5 e 12 vezes 0,10; 13 × 0,10."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-18",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Uma toalha quadrada de 2 m de lado cobre uma mesa redonda de raio 0,80 m, com os centros juntos. Uma migalha cai num ponto ao acaso da toalha. Use π = 3.\nA probabilidade de a migalha cair numa parte da toalha que está em cima da mesa é de",
+  "A": "40%",
+  "B": "60%",
+  "C": "75%",
+  "D": "52%",
+  "E": "48%",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "3*0,64/4 = 0,48. E. D = 0,52; A = 0,8/2; C = 3/4; B chute.",
+   "ideia": "Em cima da mesa é a área da mesa, 3 × 0,64 = 1,92, numa toalha de 2 × 2 = 4. Chance = 1,92 ÷ 4 = 48%.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Toalha quadrada grande sobre mesa redonda.\nA questão quer a chance de a migalha cair sobre a parte da mesa.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "toalha: lado 2",
+       "mesa: raio 0,80",
+       "π = 3",
+       "migalha"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "A parte da toalha em cima da mesa é um círculo igual à mesa.\nO resto pende para fora."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de chance pela área: parte que você quer ÷ área toda.\nMesa: 3 × 0,80 × 0,80 = 1,92.\nToalha: 2 × 2 = 4.\n1,92 ÷ 4 = 0,48 = 48%.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Em cima da mesa",
+      "dados": [
+       "L = 2\\,\\text{m}",
+       "r = 0{,}80\\,\\text{m}",
+       "\\pi = 3"
+      ],
+      "formula": "\\text{chance} = \\frac{\\pi r^2}{L^2}",
+      "legenda": [
+       "πr²: a mesa",
+       "L²: a toalha"
+      ],
+      "contas": [
+       "3 \\times 0{,}64 = 1{,}92",
+       "1{,}92 \\div 4 = 0{,}48"
+      ],
+      "resultado": "48\\%",
+      "nota": "Quase metade da toalha fica sobre a mesa."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Toalha e disco são o mesmo problema: área que interessa ÷ área toda.\nAqui quem \"decide\" é a migalha (um ponto), então não tira raio de ninguém."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra E, 48%.\nD (52%) é a chance de cair na parte que pende.\nA (40%) fez 0,80 ÷ 2 sem área.\nC (75%) usou a regra do círculo que encosta nos lados, mas aqui o círculo é menor."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Toalha quadrada de lado 2 e mesa de raio 1, π = 3. Chance?",
+    "opcoes": [
+     "75%",
+     "50%",
+     "25%",
+     "100%"
+    ],
+    "certa": "75%",
+    "resposta": "3 × 1 = 3; 3 ÷ 4 = 75%."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-19",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Num jogo, um disco de raio r é lançado sobre um alvo redondo de raio 12 cm, e a jogada vale quando o centro dele cai no alvo. Para o jogo ser justo com o cliente, a probabilidade de o disco ficar inteiramente dentro do alvo deve ser maior que 50%. O raio r é um número inteiro de centímetros.\nO maior valor de r que deixa o jogo justo é",
+  "A": "6 cm",
+  "B": "5 cm",
+  "C": "3 cm",
+  "D": "4 cm",
+  "E": "8 cm",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "r=3: 81/144=0,5625 ok; r=4: 64/144=0,444 nao. Maior = 3. C.",
+   "ideia": "A área ganhadora (12 − r)² tem que passar de metade de 144, que é 72. O menor quadrado acima de 72 é 81 = 9², então r = 12 − 9 = 3.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Disco maior, chance menor.\nA questão quer o MAIOR disco que ainda deixa a chance acima de 50%.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "alvo: raio 12",
+       "disco: raio r",
+       "chance > 50%",
+       "maior r"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "Metade da área do alvo é 144 ÷ 2 = 72.\nA área \"ganhadora\" (raio vezes raio) tem que passar de 72."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de chance pela área: monte (R − r)² e procure o quadrado perfeito no limite.\n144 ÷ 2 = 72. Quadrados: 64 = 8² (não passa), 81 = 9² (passa).\n12 − r = 9, então r = 3.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Maior r justo",
+      "dados": [
+       "R = 12\\,\\text{cm}",
+       "\\text{chance} > 50\\%"
+      ],
+      "formula": "(12 - r)^2 > \\frac{144}{2}",
+      "legenda": [
+       "144: 12 × 12"
+      ],
+      "contas": [
+       "(12 - r)^2 > 72",
+       "9^2 = 81 > 72",
+       "12 - r = 9 \\Rightarrow r = 3"
+      ],
+      "resultado": "r = 3\\,\\text{cm}",
+      "nota": "r = 4 dá 64 ÷ 144 = 44%."
+     }
+    },
+    {
+     "titulo": "Por que funciona (testando)",
+     "texto": "Teste da maior letra para a menor:\nr = 8: 4² = 16 de 144, 11%. r = 6: 36 de 144, 25%. r = 5: 49 de 144, 34%. r = 4: 64 de 144, 44%.\nr = 3: 81 de 144, 56%. O primeiro que passa de 50% é o 3."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra C, 3 cm.\nA (6 cm) pensou \"metade do raio, metade da chance\": dá 25%.\nD (4 cm) parou no 64, que fica abaixo de 72.\nE (8 cm) dá só 11%."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Alvo de raio 10. Maior r inteiro com chance maior que 60%?",
+    "opcoes": [
+     "2 cm",
+     "3 cm",
+     "1 cm",
+     "4 cm"
+    ],
+    "certa": "2 cm",
+    "resposta": "r = 2: 64%. r = 3: 49%, não passa."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-cob-20",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Uma mesa redonda tem raio de 0,50 m. Duas toalhas cobrem a mesa com 10 cm de sobra em toda a volta: uma quadrada (o menor quadrado possível) e uma redonda. Use π = 3.\nEm relação à quadrada, a toalha redonda gasta",
+  "A": "10% menos pano",
+  "B": "33% menos pano",
+  "C": "36% menos pano",
+  "D": "25% menos pano",
+  "E": "0,36% menos pano",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Quadrada 1,44; redonda 1,08; (1,44-1,08)/1,44 = 0,25. D. C = 0,36; E = 0,36%; B = 0,36/1,08.",
+   "ideia": "Com a sobra o raio é 0,60: quadrada 1,44 e redonda 3 × 0,36 = 1,08. A redonda gasta 0,36 a menos, que é 25% de 1,44.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A pergunta",
+     "texto": "Mesma mesa, duas toalhas com a mesma sobra.\nA questão quer quantos por cento a redonda economiza.",
+     "visual": {
+      "tipo": "figura",
+      "nome": "figura-plana",
+      "titulo": "A situação",
+      "rotulos": [
+       "mesa: raio 0,50",
+       "sobra 10 cm",
+       "quadrada ou redonda",
+       "π = 3"
+      ]
+     }
+    },
+    {
+     "titulo": "O que acontece",
+     "texto": "A quadrada tem 4 cantos que sobram sem cobrir nada.\nA redonda segue a forma da mesa: não tem esse desperdício."
+    },
+    {
+     "titulo": "Jeito rápido",
+     "texto": "Macete de cobrir: ponha a sobra no raio e compare as áreas.\nRaio 0,60. Quadrada: 1,20 × 1,20 = 1,44. Redonda: 3 × 0,36 = 1,08.\nEconomia: 1,44 − 1,08 = 0,36.\n0,36 ÷ 1,44 = 0,25 = 25%.",
+     "visual": {
+      "tipo": "quadro",
+      "titulo": "Quanto economiza",
+      "dados": [
+       "r = 0{,}50 + 0{,}10 = 0{,}60",
+       "\\pi = 3"
+      ],
+      "formula": "\\frac{\\text{quadrada} - \\text{redonda}}{\\text{quadrada}}",
+      "legenda": [
+       "por cento sempre sobre a de comparação"
+      ],
+      "contas": [
+       "1{,}20^2 = 1{,}44",
+       "3 \\times 0{,}36 = 1{,}08",
+       "\\frac{0{,}36}{1{,}44} = 0{,}25"
+      ],
+      "resultado": "25\\%\\ \\text{menos}",
+      "nota": "Com π = 3, sempre 1/4 a menos."
+     }
+    },
+    {
+     "titulo": "Por que funciona",
+     "texto": "Com π = 3, o círculo ocupa 3 de 4 partes do quadrado que o envolve.\nEntão a redonda gasta 3/4 da quadrada, em qualquer tamanho: 1/4 = 25% a menos.\nNem precisava das medidas."
+    },
+    {
+     "titulo": "A resposta",
+     "texto": "Letra D, 25%.\nC (36%) usou a diferença 0,36 como se fosse a porcentagem.\nE (0,36%) idem, com o símbolo trocado.\nB (33%) dividiu a diferença pela redonda (0,36 ÷ 1,08), e não pela quadrada."
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Mesa de raio 1, π = 3, sem sobra. Redonda gasta quanto a menos que a quadrada?",
+    "opcoes": [
+     "25%",
+     "33%",
+     "75%",
+     "50%"
+    ],
+    "certa": "25%",
+    "resposta": "Quadrada 4, redonda 3: 1 de 4."
+   }
+  }
+ }
+]
