@@ -531,19 +531,6 @@
   transition: transform var(--dur-medium) var(--ease-out-quart);
 }
 
-/* Antes: `transition: width 100ms` numa barra fixa no topo. */
-.scroll-progress {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 2px;
-  transform-origin: left center;
-  background: hsl(var(--primary));
-  z-index: 9999;
-  transition: transform var(--dur-micro) linear;
-}
-
-
 .perspective-1000 { perspective: 1000px; }
 
 /* ===== FEEDBACK DE RESPOSTA ================================================ */
@@ -881,16 +868,19 @@ html [data-sonner-toaster][data-theme] {
 .mundo-pixel[data-animado="sim"][data-relogio="sim"] .mp-noite { opacity: var(--op-noite) !important; }
 .mundo-pixel[data-animado="sim"][data-relogio="sim"] .mp-dia { opacity: var(--op-dia) !important; }
 .mundo-pixel[data-animado="sim"] .mp-braco { animation: mp-girar var(--ciclo) steps(1440) var(--atraso) infinite !important; }
-.mundo-pixel[data-animado="sim"] .mp-nuvens { animation: mp-deriva 220s steps(560) infinite !important; }
+/* Nuvem (16/11/2026, "travado"): 560 passos pulavam ~3 px da tela a cada 0,4 s. 1.920
+   passos = 1 px da tela por vez, ~9 por segundo; camada própria, sem repintar. */
+.mundo-pixel[data-animado="sim"] .mp-nuvens { will-change: transform; animation: mp-deriva 220s steps(1920) infinite !important; }
 /* rolando a página: o mundo espera (a rolagem fica só para o texto) */
 .mundo-pixel[data-rolando="sim"] *, .mundo-pixel[data-rolando="sim"] { animation-play-state: paused !important; }
 .mundo-pixel[data-animado="sim"] .mp-estrela { animation: mp-piscar 2.4s steps(2) infinite !important; }
 .mundo-pixel[data-animado="sim"] .mp-vagalume { animation: mp-vagalume 5s steps(10) infinite !important; }
 .mundo-pixel[data-animado="sim"] .mp-passaro { animation: mp-voar 46s steps(160) infinite !important; }
 .mundo-pixel[data-animado="sim"] .mp-passaro-2 { animation: mp-voar 58s steps(200) -14s infinite !important; }
-.mundo-pixel[data-animado="sim"] .mp-fumaca span { animation: mp-fumaca 3.6s steps(9) infinite !important; }
-.mundo-pixel[data-animado="sim"] .mp-fumaca span:nth-child(2) { animation: mp-fumaca 3.6s steps(9) -1.2s infinite !important; }
-.mundo-pixel[data-animado="sim"] .mp-fumaca span:nth-child(3) { animation: mp-fumaca 3.6s steps(9) -2.4s infinite !important; }
+/* Fumaça: 9 quadros em 3,6 s (2,5 por segundo) parecia engasgar; 36 = 10 por segundo. */
+.mundo-pixel[data-animado="sim"] .mp-fumaca span { will-change: transform, opacity; animation: mp-fumaca 3.6s steps(36) infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-fumaca span:nth-child(2) { animation: mp-fumaca 3.6s steps(36) -1.2s infinite !important; }
+.mundo-pixel[data-animado="sim"] .mp-fumaca span:nth-child(3) { animation: mp-fumaca 3.6s steps(36) -2.4s infinite !important; }
 .figura-pixel { position: relative; }
 
 /* Cena da questão (14/11/2026): sprite de N quadros + pontos em 20 passos (com 40, a

@@ -78,6 +78,8 @@ async function medirRota(browser: Browser, page: Page, rota: string) {
   await page.goto(BASE + rota, { waitUntil: 'networkidle' });
   // Eliminação (skill medir-fluidez, passo 4): ESCONDER='css' some com um suspeito.
   if (process.env.ESCONDER) await page.addStyleTag({ content: process.env.ESCONDER });
+  // INJETAR='css': mede o "depois" de mudança só de CSS sem refazer o build (~3 min).
+  if (process.env.INJETAR) await page.addStyleTag({ content: process.env.INJETAR });
   await page.waitForTimeout(1500); // entrada das animações + dados
   const cdp = await page.context().newCDPSession(page);
   await cdp.send('Performance.enable');

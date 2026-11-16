@@ -22,6 +22,10 @@ para tomar (02/09/2026). Anunciar não é usar.
 3. **Carregar cada skill no instante ANTES do trabalho que ela governa**, não
    na abertura. Carregada cedo, ela já saiu do foco quando o trabalho chega.
 4. `token-economy` não é etapa: vale dentro de todas.
+5. **Pedido pequeno** ("coisinha rápida", ≤ 3 arquivos, sem banco): só a skill da
+   área, sem revisor, 1 build (em segundo plano) e no fim UM comando `!` de git
+   para o Pablo. Agente só para busca paralela: não acelera build nem Vercel
+   (16/11/2026: 3 linhas de CSS levaram ~25 min e ele reclamou).
 
 ## As cadeias
 
