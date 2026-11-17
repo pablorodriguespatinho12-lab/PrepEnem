@@ -5,13 +5,13 @@ import dynamic from 'next/dynamic';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { BookOpen, Check, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@/components/ui/dialog';
-import { type Macete, aulaDoTema, type Degrau } from '@/lib/aulas-dia-2';
+import { aulaDoTema, type Degrau } from '@/lib/aulas-dia-2';
 import { antesDaQuestao, type Exercicio } from '@/lib/antes-da-questao';
 import { desenhoDoTema } from '@/lib/aulas-desenho';
 import { TelaDesenho, TelaProporcoes, TelaSentido } from '@/components/simulado/telas-desenho';
 import { TelaEstaQuestao, TelaPasso, useAulaDaQuestao } from '@/components/simulado/resolver-esta-questao';
 import type { QuestaoTutor } from '@/components/tutor/explicacao-tutor';
-import { QuadroMacete, type DadosDaQuestao } from '@/components/simulado/quadro-macete';
+import { TITULO_FORMULAS } from '@/lib/visual/especificacao';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 
@@ -57,21 +57,19 @@ export function AulaDoTema({ tema, questao, className }: { tema: string | null |
         { rotulo: 'Esta questão: a ideia', conteudo: <TelaEstaQuestao aula={daQuestao} /> },
         ...passos.filter((p) => p !== pergunta).map(telaDoPasso),
       ];
-  // Questão com o quadro novo (campo "pede"): o exemplo do macete é ela mesma.
-  const quadroDaQuestao = passos.map((p) => p.visual).find((v) => v?.tipo === 'quadro' && v.pede);
-  const desta: DadosDaQuestao | undefined = quadroDaQuestao?.tipo === 'quadro' && quadroDaQuestao.pede
-    ? { dados: quadroDaQuestao.dados, pede: quadroDaQuestao.pede } : undefined;
-  const macete: Tela[] = aula.macete ? [{ rotulo: `O macete: ${aula.macete.nome}`, conteudo: <TelaMacete m={aula.macete} desta={desta} /> }] : [];
-  const fimDaQuestao = conceito.length + dados.length + macete.length + antes.length + estaQuestao.length - 1;
-  const telas: Tela[] = [
+  // Sem a tela "O macete" (Pablo, 17/11/2026: "macete mesmo é entender a lógica da questão").
+  // Questão no jeito do robô (1º passo "As fórmulas desta questão", 17/11/2026): a aula
+  // é só ela, as fórmulas e depois os passos. Pablo: "macete mesmo é entender a lógica
+  // da questão; tira essas telas que sempre aparecem iguais".
+  const noMoldeDoRobo = passos[0]?.titulo === TITULO_FORMULAS;
+  const fimDaQuestao = noMoldeDoRobo ? passos.length - 1 : conceito.length + dados.length + antes.length + estaQuestao.length - 1;
+  const telas: Tela[] = noMoldeDoRobo ? passos.map((p) => ({ rotulo: p.titulo, conteudo: <TelaPasso passo={p} /> })) : [
     ...conceito,
     ...dados,
-    ...macete,
     ...antes,
     ...estaQuestao,
     ...(desenho ? [{ rotulo: 'Por que faz sentido', conteudo: <TelaSentido d={desenho} /> }] : []),
-    // Com macete, ele entra no lugar da antiga "Palavra-chave".
-    { rotulo: 'Aula do conteúdo', listas: aula.macete ? [`Macete: ${aula.macete.regra}`, ...aula.aula.filter((l) => !l.startsWith('Palavra-chave'))] : aula.aula },
+    { rotulo: 'Aula do conteúdo', listas: aula.aula },
     ...(aula.paraSubir.length ? [{ rotulo: 'Para subir de nível', listas: aula.paraSubir }] : []),
     ...aula.degraus.map((d) => ({ rotulo: `Como cai no ${d.nivel}`, degrau: d })),
   ];
@@ -223,22 +221,6 @@ function QuestaoDegrau({ degrau }: { degrau: Degrau | Exercicio }) {
         </div>
       )}
       {!respondeu && <p className="type-caption text-muted-foreground">Tente antes de ver: toque numa letra.</p>}
-    </div>
-  );
-}
-
-/* O macete curinga do conteúdo: a regra e o exemplo no quadro, uma conta por linha. */
-function TelaMacete({ m, desta }: { m: Macete; desta?: DadosDaQuestao }) {
-  if (m.quadro?.length || desta) return <QuadroMacete m={m} desta={desta} />;
-  return (
-    <div className="space-y-3">
-      <p className="font-reading type-lead font-semibold">{m.regra}</p>
-      <ol className="space-y-1.5 font-reading type-body list-decimal pl-5">
-        {m.passos.map((p) => <li key={p}>{p}</li>)}
-      </ol>
-      <p className="font-reading type-body rounded-[var(--radius-control)] bg-primary/10 px-3 py-2">
-        <span className="font-semibold text-primary-text">Exemplo: </span>{m.exemplo}
-      </p>
     </div>
   );
 }

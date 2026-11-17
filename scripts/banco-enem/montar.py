@@ -20,14 +20,16 @@ PASTA = RAIZ / 'data/revisao-final/banco-enem'
 LETRAS = 'ABCDE'
 ORIGEM = 'Banco ENEM do dia 2'  # o teste e o script de gravação esperam esta origem
 MAX_LINHA_RAPIDO = 170
+TITULO_FORMULAS = 'As fórmulas desta questão'  # components/simulado/aula-do-tema.tsx procura este título
 
 
 def numero(texto):
     """Primeiro número de uma alternativa ('R$ 1 200,50' -> 1200.5)."""
-    achado = re.search(r'-?\d[\d ]*(?:,\d+)?', texto)
+    # Ponto é separador de milhar ('R$ 2.100,00' = 2100); a vírgula é a decimal.
+    achado = re.search(r'-?\d(?:[\d ]|\.(?=\d{3}))*(?:,\d+)?', texto)
     if not achado:
         raise ValueError(f'sem número em: {texto}')
-    return float(achado.group().replace(' ', '').replace(',', '.'))
+    return float(achado.group().replace(' ', '').replace('.', '').replace(',', '.'))
 
 
 def passo_logica(f):
@@ -80,7 +82,14 @@ def passos_aula(f):
     exatamente essa explicação"): o que eu tenho → equação em letras → uma tela por
     letra (o seu jeito entra onde o erro acontece) → volta na equação → receita."""
     a = f['aula']
+    # 1ª tela: as fórmulas que a questão usa, já prontas (Pablo, 17/11/2026).
+    formulas = [{
+        'titulo': TITULO_FORMULAS,
+        'texto': a.get('formulas_texto', 'Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.'),
+        'visual': {'tipo': 'formulas', 'itens': [{'figura': fig, 'nome': nome, 'formula': conta} for fig, nome, conta in a['formulas']]},
+    }] if a.get('formulas') else []
     passos = [
+        *formulas,
         {'titulo': 'O que eu tenho', 'texto': a.get('tenho_texto', 'Primeiro, tire os números do enunciado.'),
          'visual': tabela('O que eu tenho', ['Informação', 'Valor'], a['tenho'])},
         {'titulo': 'A equação em letras', 'texto': f"{a['quer']}\n{a['equacao']}\n{a['porque']}\nAgora é só achar cada letra.",
@@ -113,9 +122,10 @@ def montar(f):
         raise SystemExit(f"{f['id']}: linha do Jeito rápido com mais de {MAX_LINHA_RAPIDO} letras: {longas[0][:60]}")
     # Questão nova (16/11/2026): cena da situação, que aparece na tela da questão e abre
     # a explicação. Sem cena, a figura genérica antiga.
-    nome, rotulos = f.get('cena') or f['fig']
+    # A aula no jeito do robô não usa a figura; questão sem cena fica sem ela.
+    cena_ou_fig = f.get('cena') or f.get('fig')
     quadro = {'tipo': 'quadro', **f['quadro']} if 'quadro' in f else None
-    figura = {'tipo': 'figura', 'nome': nome, 'titulo': f.get('fig_titulo', 'A situação'), 'rotulos': rotulos}
+    figura = {'tipo': 'figura', 'nome': cena_ou_fig[0], 'titulo': f.get('fig_titulo', 'A situação'), 'rotulos': cena_ou_fig[1]} if cena_ou_fig else None
     if 'aula' in f:
         passos = passos_aula(f)
     elif 'equacao' in f:

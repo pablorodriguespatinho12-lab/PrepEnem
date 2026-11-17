@@ -22,6 +22,7 @@ import { Fatias } from './fatias';
 import { Processo } from './processo';
 import { FiguraPixel } from './figura-pixel';
 import { Diagrama } from './diagramas';
+import { Formulas } from './formulas';
 function Reta({ v }: { v: VisualReta }) {
   const reduzir = useReducedMotion() ?? false;
   const altura = 110;
@@ -172,6 +173,7 @@ export function VisualDesenho({ visual, semMoldura = false }: { visual: Visual; 
       {visual.tipo === 'palavra' && <Palavra v={visual} />}
       {visual.tipo === 'figura' && <FiguraPixel nome={visual.nome} rotulos={visual.rotulos} />}
       {visual.tipo === 'diagrama' && <Diagrama nome={visual.nome} rotulos={visual.rotulos} />}
+      {visual.tipo === 'formulas' && <Formulas v={visual} />}
     </figure>
   );
 }

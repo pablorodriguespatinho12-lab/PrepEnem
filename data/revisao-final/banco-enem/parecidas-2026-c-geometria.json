@@ -1,0 +1,680 @@
+[
+ {
+  "id": "d2-banco-mat-p26-15",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Uma câmera de segurança anda sobre um trilho em forma de circunferência, de raio 15 m. Ela dá uma volta completa em 3 minutos, sempre na mesma velocidade. Use 3 como valor de π.\nEm 50 segundos, a distância que a câmera percorre no trilho é de",
+  "A": "1,8 m",
+  "B": "12,5 m",
+  "C": "25 m",
+  "D": "90 m",
+  "E": "324 m",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "C = 2*3*15 = 90; D = 90*50/180 = 25. C. A = 90/50; B = (3*15)*50/180, sem o 2; D = a volta toda; E = 90*180/50.",
+   "ideia": "A volta toda mede 2 × 3 × 15 = 90 m e leva 180 s. Em 50 s ela anda 90 × 50 ÷ 180 = 25 m.",
+   "pecas": [
+    {
+     "termo": "Circunferência",
+     "significado": "A linha da borda do círculo. A volta toda mede 2 × π × raio."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circulo",
+        "nome": "Comprimento da volta toda",
+        "formula": "2 × π × raio"
+       },
+       {
+        "figura": "circulo",
+        "nome": "Pedaço da volta",
+        "formula": "volta × tempo andado ÷ tempo da volta"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Raio do trilho",
+        "15 m"
+       ],
+       [
+        "Tempo da volta",
+        "3 min = 180 s"
+       ],
+       [
+        "Tempo andado",
+        "50 s"
+       ],
+       [
+        "π",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a distância que a câmera anda em 50 s.\nD = C × 50 ÷ 180 (distância = a volta toda × a parte do tempo que ela andou)\nPor que × 50 ÷ 180? Em 180 s a câmera anda a volta toda. Em 90 s, metade do tempo, anda metade da volta. Em 50 s anda 50 de 180 partes da volta.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "D",
+        "distância andada em 50 s (o que a questão quer)"
+       ],
+       [
+        "C",
+        "comprimento da volta toda"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando C: o seu jeito",
+     "texto": "Parece certo fazer 3 × 15 = 45, que é π × raio. Mas isso é só meia volta. A volta toda é 2 × π × raio.\nC = 2 × 3 × 15\nC = 90 m"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "D = 90 × 50 ÷ 180 = 90 ÷ 180 × 50 = 0,5 × 50 = 25\nLetra C. Em 50 s a câmera anda 25 m, um pouco mais que um quarto da volta.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "C",
+        "90"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: anda numa circunferência por um tempo → ache a volta toda (2 × π × raio) e tome a mesma parte do tempo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "raio 15, volta em 180 s, 50 s"
+       ],
+       [
+        "2. Equação em letras",
+        "D = C × 50 ÷ 180"
+       ],
+       [
+        "3. Achar cada letra",
+        "C = 90"
+       ],
+       [
+        "4. Substituir",
+        "90 × 50 ÷ 180 = 25"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Raio 10 m, π = 3, volta em 60 s. Quanto anda em 15 s?",
+    "opcoes": [
+     "15 m",
+     "30 m",
+     "5 m",
+     "60 m"
+    ],
+    "certa": "15 m",
+    "resposta": "C = 2 × 3 × 10 = 60. D = 60 × 15 ÷ 60 = 15."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-p26-16",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Uma câmera percorre um trilho circular de raio 30 m, sempre com velocidade de 2 m/s. Ela vai de um ponto a outro do trilho, e o arco entre os dois pontos forma 60° no centro do círculo. Use 3 como valor de π.\nO tempo que a câmera leva para ir de um ponto ao outro é de",
+  "A": "7,5 s",
+  "B": "15 s",
+  "C": "30 s",
+  "D": "60 s",
+  "E": "90 s",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "C = 2*3*30 = 180; A = 180*60/360 = 30; T = 30/2 = 15. B. A = com C = 3*30 (sem o 2): 15/2; C = parou no arco; D = 30*2; E = 180/2.",
+   "ideia": "A volta toda mede 2 × 3 × 30 = 180 m, e 60° é 1 sexto dela: 30 m. A 2 m/s, o tempo é 30 ÷ 2 = 15 s.",
+   "pecas": [
+    {
+     "termo": "Arco",
+     "significado": "Um pedaço da circunferência, entre dois pontos. Os 360° são a volta toda."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circulo",
+        "nome": "Comprimento da volta toda",
+        "formula": "2 × π × raio"
+       },
+       {
+        "figura": "circulo",
+        "nome": "Arco de um ângulo",
+        "formula": "volta × ângulo ÷ 360"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Raio do trilho",
+        "30 m"
+       ],
+       [
+        "Velocidade",
+        "2 m por segundo"
+       ],
+       [
+        "Ângulo do arco",
+        "60 graus"
+       ],
+       [
+        "Volta toda",
+        "360 graus"
+       ],
+       [
+        "π",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o tempo para a câmera andar o arco de 60 graus.\nT = A ÷ 2 (tempo = distância do arco ÷ velocidade)\nPor que dividir? Andando 2 m a cada segundo, 10 m levam 10 ÷ 2 = 5 s. Quanto mais longo o arco, mais tempo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "T",
+        "tempo gasto (o que a questão quer)"
+       ],
+       [
+        "A",
+        "comprimento do arco de 60 graus"
+       ],
+       [
+        "C",
+        "comprimento da volta toda"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando C (a volta toda)",
+     "texto": "A volta toda do círculo mede 2 × π × raio.\nC = 2 × 3 × 30\nC = 180 m"
+    },
+    {
+     "titulo": "Achando A (o arco)",
+     "texto": "A volta toda tem 360 graus. O arco tem 60 graus, que é uma parte da volta: 60 ÷ 360 = 1 ÷ 6.\nA = 180 ÷ 6\nA = 30 m"
+    },
+    {
+     "titulo": "Achando T: o seu jeito",
+     "texto": "Parece certo fazer 30 × 2 = 60. Mas 2 m/s quer dizer 2 metros por segundo. Para saber os segundos, divida os metros pela velocidade.\nT = 30 ÷ 2\nT = 15 s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "T = A ÷ 2 = 30 ÷ 2 = 15\nLetra B. A câmera leva 15 s para andar 1 sexto da volta.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "C",
+        "180"
+       ],
+       [
+        "A",
+        "30"
+       ],
+       [
+        "T",
+        "15"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: arco com ângulo e velocidade → volta toda × (ângulo ÷ 360) dá o arco; arco ÷ velocidade dá o tempo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "raio 30, 2 m/s, 60 graus"
+       ],
+       [
+        "2. Equação em letras",
+        "T = A ÷ 2"
+       ],
+       [
+        "3. Achar cada letra",
+        "C = 180; A = 30"
+       ],
+       [
+        "4. Substituir",
+        "30 ÷ 2 = 15"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Raio 10 m, π = 3, arco de 90°, velocidade 3 m/s. Quanto tempo?",
+    "opcoes": [
+     "5 s",
+     "15 s",
+     "45 s",
+     "2 s"
+    ],
+    "certa": "5 s",
+    "resposta": "C = 2 × 3 × 10 = 60. Arco = 60 ÷ 4 = 15. T = 15 ÷ 3 = 5."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-p26-17",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Num galpão, duas paredes formam um canto reto. A máquina X está encostada numa parede, a 9 m do canto, e a máquina Y está encostada na outra parede, a 12 m do canto. Numa reforma, X vai para 15 m do canto e Y para 20 m do canto, cada uma na sua parede. Um fio vai em linha reta de X até Y.\nCom a reforma, o fio aumenta em",
+  "A": "25 m",
+  "B": "15 m",
+  "C": "8 m",
+  "D": "14 m",
+  "E": "10 m",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "antes = raiz(81+144) = 15; depois = raiz(225+400) = 25; aumento = 10. E. A = o fio novo; B = o fio velho; C = 20-12; D = (15+20)-(9+12), somando os lados.",
+   "ideia": "Em linha reta, o fio é a diagonal do canto reto: 15 m antes e 25 m depois, por Pitágoras. O aumento é 25 − 15 = 10 m.",
+   "pecas": [
+    {
+     "termo": "Diagonal",
+     "significado": "A linha reta que liga os dois pontos, de frente para o canto reto."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "triangulo-retangulo",
+        "nome": "Pitágoras (canto reto)",
+        "formula": "diagonal × diagonal = lado × lado + outro lado × outro lado"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "X e Y antes",
+        "9 m e 12 m do canto"
+       ],
+       [
+        "X e Y depois",
+        "15 m e 20 m do canto"
+       ],
+       [
+        "Fio",
+        "em linha reta de X até Y"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quanto o fio aumenta.\nA = N − V (aumento = fio novo − fio velho)\nPor que tirar? Aumento é o quanto passou do que era. Se o fio era 7 m e ficou 9 m, aumentou 9 − 7 = 2 m.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "A",
+        "aumento do fio (o que a questão quer)"
+       ],
+       [
+        "V",
+        "fio velho, antes da reforma"
+       ],
+       [
+        "N",
+        "fio novo, depois da reforma"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando V: o seu jeito",
+     "texto": "Parece certo somar os lados: 9 + 12 = 21 m. Mas o fio vai em linha reta, na diagonal, e ela é mais curta que os dois lados somados.\nPitágoras: diagonal × diagonal = lado × lado + lado × lado\n9 × 9 = 81 e 12 × 12 = 144\n81 + 144 = 225\nQue número vezes ele mesmo dá 225? 15 × 15 = 225.\nV = 15 m"
+    },
+    {
+     "titulo": "Achando N (o fio novo)",
+     "texto": "Mesma conta, agora com 15 e 20.\n15 × 15 = 225 e 20 × 20 = 400\n225 + 400 = 625\n25 × 25 = 625\nN = 25 m"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "A = N − V = 25 − 15 = 10\nLetra E. O fio fica 10 m maior.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "V",
+        "15"
+       ],
+       [
+        "N",
+        "25"
+       ],
+       [
+        "A",
+        "10"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: distância em linha reta entre dois pontos em paredes em canto reto → Pitágoras; \"aumenta\" → fio novo − fio velho.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "9 e 12; 15 e 20"
+       ],
+       [
+        "2. Equação em letras",
+        "A = N − V"
+       ],
+       [
+        "3. Achar cada letra",
+        "V = 15; N = 25"
+       ],
+       [
+        "4. Substituir",
+        "25 − 15 = 10"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Dois lados de um canto reto: 3 m e 4 m. Qual a distância em linha reta?",
+    "opcoes": [
+     "5 m",
+     "7 m",
+     "12 m",
+     "25 m"
+    ],
+    "certa": "5 m",
+    "resposta": "3 × 3 = 9; 4 × 4 = 16; 9 + 16 = 25; 5 × 5 = 25."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-p26-18",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Uma antena é um poste reto de 12 m, em terreno plano. Um cabo de aço vai do topo do poste até um ponto no chão, em linha reta. Hoje o ponto no chão fica a 5 m da base do poste. Numa mudança, o ponto passa a ficar a 16 m da base, e o cabo é trocado por outro.\nO novo cabo é maior que o antigo em",
+  "A": "7 m",
+  "B": "4 m",
+  "C": "11 m",
+  "D": "13 m",
+  "E": "20 m",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "velho = raiz(144+25) = 13; novo = raiz(144+256) = 20; 20-13 = 7. A. B = 16-12; C = 16-5; D = o cabo velho; E = o cabo novo.",
+   "ideia": "Poste, chão e cabo formam um canto reto: o cabo velho mede 13 m e o novo, 20 m, por Pitágoras. O novo é maior em 20 − 13 = 7 m.",
+   "pecas": [
+    {
+     "termo": "Terreno plano",
+     "significado": "Chão sem subida nem descida. Por isso o poste e o chão formam um canto reto."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "triangulo-retangulo",
+        "nome": "Pitágoras (canto reto)",
+        "formula": "cabo × cabo = poste × poste + chão × chão"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Altura do poste",
+        "12 m"
+       ],
+       [
+        "Ponto no chão, antes",
+        "5 m da base"
+       ],
+       [
+        "Ponto no chão, depois",
+        "16 m da base"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quanto o cabo novo é maior que o antigo.\nM = N − V (a mais = cabo novo − cabo velho)\nPor que tirar? Quanto a mais é o que passou do que era. Se era 10 m e virou 13 m, são 13 − 10 = 3 m a mais.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "M",
+        "quanto o cabo cresceu (o que a questão quer)"
+       ],
+       [
+        "V",
+        "cabo velho, com o ponto a 5 m"
+       ],
+       [
+        "N",
+        "cabo novo, com o ponto a 16 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando V (o cabo antigo)",
+     "texto": "O poste, o chão e o cabo formam um triângulo com um canto reto. O cabo é o lado inclinado.\nPitágoras: cabo × cabo = poste × poste + chão × chão\n12 × 12 = 144 e 5 × 5 = 25\n144 + 25 = 169\n13 × 13 = 169\nV = 13 m"
+    },
+    {
+     "titulo": "Achando N: o seu jeito",
+     "texto": "Parece certo dizer que o cabo cresceu o mesmo que o ponto andou no chão: 16 − 5 = 11 m. Mas o cabo é inclinado e não cresce igual. Refaça a conta com 16.\n12 × 12 = 144 e 16 × 16 = 256\n144 + 256 = 400\n20 × 20 = 400\nN = 20 m"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "M = N − V = 20 − 13 = 7\nLetra A. O cabo novo é 7 m maior.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "V",
+        "13"
+       ],
+       [
+        "N",
+        "20"
+       ],
+       [
+        "M",
+        "7"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: lado inclinado entre dois lados em canto reto → Pitágoras; mudou a medida → refaça a conta com o número novo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "poste 12; chão 5 e 16"
+       ],
+       [
+        "2. Equação em letras",
+        "M = N − V"
+       ],
+       [
+        "3. Achar cada letra",
+        "V = 13; N = 20"
+       ],
+       [
+        "4. Substituir",
+        "20 − 13 = 7"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Poste de 8 m e ponto no chão a 6 m da base. Tamanho do cabo?",
+    "opcoes": [
+     "10 m",
+     "14 m",
+     "2 m",
+     "28 m"
+    ],
+    "certa": "10 m",
+    "resposta": "8 × 8 = 64; 6 × 6 = 36; 64 + 36 = 100; 10 × 10 = 100."
+   }
+  }
+ }
+]

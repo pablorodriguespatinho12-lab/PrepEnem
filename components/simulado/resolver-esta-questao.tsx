@@ -18,7 +18,8 @@ export type AulaDaQuestao =
   | { estado: 'sem-aula'; motivo: string }
   | { estado: 'pronta'; explicacao: Explicacao; passos: PassoExplicacao[] };
 
-const ehResposta = (p: PassoExplicacao) => /resposta/i.test(p.titulo);
+// No jeito do robô (17/11/2026), quem diz a letra é "Volta na equação".
+const ehResposta = (p: PassoExplicacao) => /resposta|volta na equa/i.test(p.titulo);
 
 export function useAulaDaQuestao(questao: QuestaoTutor | null | undefined, ativa: boolean): AulaDaQuestao | null {
   const [aula, setAula] = useState<AulaDaQuestao | null>(null);

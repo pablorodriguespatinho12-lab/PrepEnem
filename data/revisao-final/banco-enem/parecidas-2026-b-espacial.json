@@ -1,0 +1,342 @@
+[
+ {
+  "id": "d2-banco-mat-p26-09",
+  "materia": "Matemática",
+  "tema": "Geometria Espacial",
+  "enunciado": "Uma coluna de concreto tem a forma de um cilindro com 1 m de diâmetro e 3 m de altura. Para uma festa, ela será coberta por uma faixa de tecido que envolve só a lateral, sem cobrir o topo nem a base. Use π = 3.\nA área de tecido necessária é de",
+  "A": "9 m²",
+  "B": "4,5 m²",
+  "C": "10,5 m²",
+  "D": "1,5 m²",
+  "E": "18 m²",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "R = 1/2 = 0,5; C = 2*3*0,5 = 3; A = 3*3 = 9. A. B = 3*0,5*3 (sem o 2); C = 9 + 2 tampas; D = 2 tampas; E = 2*3*1*3 (diâmetro no lugar do raio).",
+   "ideia": "Aberta, a lateral vira um retângulo: a base é a volta da coluna, 2 × 3 × 0,5 = 3 m, e a altura é 3 m. A área é 3 × 3 = 9 m².",
+   "pecas": [
+    {
+     "termo": "Raio",
+     "significado": "Distância do centro até a borda do círculo: metade do diâmetro."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "cilindro",
+        "nome": "Volta do cilindro (borda do círculo)",
+        "formula": "2 × π × raio"
+       },
+       {
+        "figura": "retangulo",
+        "nome": "Área do retângulo",
+        "formula": "base × altura"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Diâmetro da coluna",
+        "1 m"
+       ],
+       [
+        "Altura da coluna",
+        "3 m"
+       ],
+       [
+        "π",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a área da faixa que cobre só a lateral.\nA = C × 3 (área = volta da coluna × altura)\nPor que multiplicar? Se você abrir a faixa, ela vira um retângulo. A área do retângulo é base × altura. A base é a volta da coluna, e a altura é 3 m.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "A",
+        "área da faixa (o que a questão quer)"
+       ],
+       [
+        "C",
+        "volta da coluna"
+       ],
+       [
+        "R",
+        "raio da coluna"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando R: o seu jeito",
+     "texto": "Parece certo usar 1 m na conta, porque é o número do enunciado. Mas a fórmula da volta pede o raio, e o enunciado deu o diâmetro.\nO raio é a metade do diâmetro.\nR = 1 ÷ 2 = 0,5 m"
+    },
+    {
+     "titulo": "Achando C (a volta)",
+     "texto": "A volta é a borda do círculo: 2 × π × raio.\nC = 2 × 3 × 0,5 = 3 m"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "A = 3 × 3 = 9\nLetra A. São 9 m² de tecido: uma faixa de 3 m por 3 m.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "C",
+        "3"
+       ],
+       [
+        "R",
+        "0,5"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: cobrir só a lateral de um cilindro → retângulo de (2 × π × raio) por altura; confira se deram raio ou diâmetro.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta coluna"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "diâmetro 1 m, altura 3 m"
+       ],
+       [
+        "2. Equação em letras",
+        "A = C × 3"
+       ],
+       [
+        "3. Achar cada letra",
+        "R = 0,5; C = 3"
+       ],
+       [
+        "4. Substituir",
+        "3 × 3 = 9"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Faixa em volta de um cilindro de raio 2 m, π = 3. Comprimento da volta?",
+    "opcoes": [
+     "12 m",
+     "6 m",
+     "24 m",
+     "4 m"
+    ],
+    "certa": "12 m",
+    "resposta": "2 × 3 × 2 = 12."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-p26-10",
+  "materia": "Matemática",
+  "tema": "Geometria Espacial",
+  "enunciado": "Um tanque de água tem a forma de um cilindro com 2 m de raio e 5 m de altura. Só a parede lateral será pintada, sem o topo nem o fundo. Cada litro de tinta cobre 6 m². Use π = 3.\nA quantidade mínima de tinta necessária é de",
+  "A": "5 L",
+  "B": "20 L",
+  "C": "60 L",
+  "D": "10 L",
+  "E": "14 L",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "C = 2*3*2 = 12; A = 12*5 = 60; N = 60/6 = 10. D. A = 3*2*5/6 (sem o 2); B = 2*3*4*5/6 (diâmetro no lugar do raio); C = 60 sem dividir; E = (60+24)/6 com topo e fundo.",
+   "ideia": "A parede aberta é um retângulo: a base é a volta, 2 × 3 × 2 = 12 m, e a altura é 5 m. A área é 60 m², e 60 ÷ 6 = 10 L.",
+   "pecas": [
+    {
+     "termo": "Lateral",
+     "significado": "A parede curva do cilindro, sem o topo e sem o fundo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "cilindro",
+        "nome": "Volta do cilindro (borda do círculo)",
+        "formula": "2 × π × raio"
+       },
+       {
+        "figura": "retangulo",
+        "nome": "Área do retângulo",
+        "formula": "base × altura"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Raio do tanque",
+        "2 m"
+       ],
+       [
+        "Altura do tanque",
+        "5 m"
+       ],
+       [
+        "1 L de tinta cobre",
+        "6 m²"
+       ],
+       [
+        "π",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quantos litros de tinta pintam só a parede lateral.\nN = A ÷ 6 (litros = área da parede ÷ área que 1 L cobre)\nPor que dividir? Cada litro cobre 6 m². Para 18 m² você precisa de 18 ÷ 6 = 3 litros.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "N",
+        "litros de tinta (o que a questão quer)"
+       ],
+       [
+        "A",
+        "área da parede"
+       ],
+       [
+        "C",
+        "volta do tanque"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando C (a volta)",
+     "texto": "A volta é a borda do círculo: 2 × π × raio.\nC = 2 × 3 × 2 = 12 m"
+    },
+    {
+     "titulo": "Achando A: o seu jeito",
+     "texto": "Parece certo pintar o tanque inteiro, somando o topo e o fundo: 60 + 12 + 12 = 84 m². Mas o enunciado só manda pintar a parede lateral.\nAberta, a parede é um retângulo: base × altura.\nA = 12 × 5 = 60 m²"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "N = 60 ÷ 6 = 10\nLetra D. São 10 litros de tinta para os 60 m² da parede.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "C",
+        "12"
+       ],
+       [
+        "A",
+        "60"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pintar ou cobrir só a lateral de um cilindro → retângulo de (2 × π × raio) por altura; depois divida pelo que 1 L cobre.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Neste tanque"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "raio 2, altura 5, 6 m² por L"
+       ],
+       [
+        "2. Equação em letras",
+        "N = A ÷ 6"
+       ],
+       [
+        "3. Achar cada letra",
+        "C = 12; A = 60"
+       ],
+       [
+        "4. Substituir",
+        "60 ÷ 6 = 10"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Parede de 36 m² e cada litro cobre 6 m². Quantos litros?",
+    "opcoes": [
+     "6 L",
+     "30 L",
+     "216 L",
+     "42 L"
+    ],
+    "certa": "6 L",
+    "resposta": "36 ÷ 6 = 6."
+   }
+  }
+ }
+]

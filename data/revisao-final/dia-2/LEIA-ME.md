@@ -10,6 +10,24 @@ Biologia) e `<nivel>-matematica.json`. Natureza vem antes, como na prova de verd
 Conferência automática: `data/revisao-final/provas-dia-2.test.ts` (`npx vitest run data/revisao-final/provas-dia-2.test.ts`).
 Gravar no banco (quem roda é o Pablo): `scripts/criar-provas-dia-2.ts`.
 
+## Jeito do robô (17/11/2026)
+
+O Pablo aprovou a "Aula do Robô Aspirador" e pediu esse jeito em todas as questões das provas.
+- A aula de cada questão é gerada por `passos_aula()` (`scripts/banco-enem/montar.py`), nesta ordem:
+  1. as fórmulas desta questão;
+  2. o que eu tenho;
+  3. a equação em letras (ou a regra em palavras);
+  4. uma tela por letra, com "o seu jeito";
+  5. volta na equação;
+  6. a receita.
+- As fichas ficam em `scripts/banco-enem/aulas/<nivel>_<area>.py`. Para gravar no JSON: `python3 scripts/banco-enem/refazer_aulas.py <modulo>`.
+- O "Ver aula" desta questão mostra só esses passos. Não tem mais macete.
+
+**Nível acima:** é um degrau depois do ENEM, no estilo de banca difícil, com 2 questões por conteúdo.
+- Arquivo: `acima-<area>.json`.
+- Gerado por `scripts/banco-enem/acima_<area>.py`.
+- Vira a prova "Dia 2 · 5 Nível acima".
+
 ## Quantas de cada conteúdo (por arquivo de 20)
 
 Matemática: Aritmética e Porcentagem 5 · Grandezas e Medidas 3 · Estatística 3 ·

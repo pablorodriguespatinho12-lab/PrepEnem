@@ -1,0 +1,786 @@
+[
+ {
+  "id": "d2-banco-mat-p26-03",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um tampo de mesa tem a forma de um triângulo de 3 lados iguais, cada um com 90 cm. Uma toalha redonda será posta com o centro no centro do tampo (o ponto que está à mesma distância das 3 pontas). A borda da toalha deve passar 10 cm além de cada ponta do tampo. Use 1,7 como valor de √3.\nO menor diâmetro possível para a toalha é de",
+  "A": "61 cm",
+  "B": "102 cm",
+  "C": "110 cm",
+  "D": "122 cm",
+  "E": "153 cm",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "H = 90*1,7/2 = 76,5; P = 2/3*76,5 = 51; T = 2*(51+10) = 122. D. A = só o raio 61; B = 2*51 sem a sobra; C = 2*(45+10) com metade do lado; E = 2*76,5.",
+   "ideia": "A ponta é o ponto do tampo mais longe do centro, a 2/3 da altura de 76,5 cm: 51 cm. Com 10 cm de sobra o raio é 61 cm, e o diâmetro, 122 cm.",
+   "pecas": [
+    {
+     "termo": "Diâmetro",
+     "significado": "Linha reta que atravessa o círculo passando pelo centro: vale 2 raios."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "triangulo",
+        "nome": "Altura do triângulo de 3 lados iguais",
+        "formula": "lado × √3 ÷ 2"
+       },
+       {
+        "figura": "circulo",
+        "nome": "Diâmetro do círculo",
+        "formula": "2 × raio"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado. Tudo em centímetros.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Lado do tampo",
+        "90 cm"
+       ],
+       [
+        "Sobra da toalha",
+        "10 cm"
+       ],
+       [
+        "√3",
+        "1,7"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o menor diâmetro da toalha, com 10 cm de sobra depois das pontas.\nT = 2 × (P + 10) (diâmetro = 2 raios; o raio vai do centro até a ponta e mais a sobra)\nPor que dobrar? O diâmetro atravessa a toalha toda: são 2 raios, um de cada lado do centro.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "T",
+        "diâmetro da toalha (o que a questão quer)"
+       ],
+       [
+        "P",
+        "distância do centro até a ponta"
+       ],
+       [
+        "H",
+        "altura do triângulo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando H (a altura)",
+     "texto": "A altura vai de uma ponta até o meio do lado de frente.\nNo triângulo de 3 lados iguais: altura = lado × √3 ÷ 2.\nH = 90 × 1,7 ÷ 2 = 153 ÷ 2 = 76,5 cm"
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo usar metade do lado, 45 cm. Mas o centro não fica na borda: fica dentro do triângulo.\nAs 3 alturas se cruzam no centro, e ele divide cada altura em 3 partes iguais: 2 partes até a ponta e 1 até o lado.\nP = 76,5 ÷ 3 × 2 = 25,5 × 2 = 51 cm"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "T = 2 × (51 + 10) = 2 × 61 = 122\nLetra D. A toalha tem 122 cm de diâmetro: 61 cm de raio, sendo 51 até a ponta e 10 de sobra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "H",
+        "76,5"
+       ],
+       [
+        "P",
+        "51"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: toalha redonda que cobre um triângulo de 3 lados iguais → raio = 2/3 da altura + a sobra; diâmetro = 2 raios.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Neste tampo"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "90 cm, 10 cm, √3 = 1,7"
+       ],
+       [
+        "2. Equação em letras",
+        "T = 2 × (P + 10)"
+       ],
+       [
+        "3. Achar cada letra",
+        "H = 76,5; P = 51"
+       ],
+       [
+        "4. Substituir",
+        "2 × 61 = 122"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Tampo de 3 lados iguais de 30 cm, √3 = 1,7. Do centro até a ponta?",
+    "opcoes": [
+     "17 cm",
+     "25,5 cm",
+     "15 cm",
+     "8,5 cm"
+    ],
+    "certa": "17 cm",
+    "resposta": "Altura 30 × 1,7 ÷ 2 = 25,5; 2/3 de 25,5 = 17."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-p26-07",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um jardim tem a forma de um quadrado de 20 m de lado. Um aspersor fica no centro do jardim e molha um círculo que passa exatamente pelos 4 cantos. Use 1,4 como valor de √2.\nO alcance do aspersor, do centro até um canto, é de",
+  "A": "10 m",
+  "B": "14 m",
+  "C": "20 m",
+  "D": "28 m",
+  "E": "7 m",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "D = 20*1,4 = 28; R = 28/2 = 14. B. A = metade do lado; C = o lado; D = a diagonal inteira; E = metade do raio.",
+   "ideia": "O círculo que passa pelos 4 cantos tem como diâmetro a diagonal do quadrado: 20 × 1,4 = 28 m. O alcance é o raio, a metade: 14 m.",
+   "pecas": [
+    {
+     "termo": "Diagonal",
+     "significado": "Linha reta de um canto até o canto do lado oposto."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "quadrado",
+        "nome": "Diagonal do quadrado",
+        "formula": "lado × √2"
+       },
+       {
+        "figura": "circulo",
+        "nome": "Diâmetro do círculo",
+        "formula": "2 × raio"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Lado do jardim",
+        "20 m"
+       ],
+       [
+        "√2",
+        "1,4"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o alcance do aspersor, do centro até um canto.\nR = D ÷ 2 (raio = diagonal ÷ 2)\nPor que dividir por 2? O círculo passa pelos 4 cantos, então a diagonal é o diâmetro do círculo. O alcance, do centro até a borda, é o raio: a metade do diâmetro.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "alcance do aspersor, o raio (o que a questão quer)"
+       ],
+       [
+        "D",
+        "diagonal do jardim"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando D: o seu jeito",
+     "texto": "Parece certo usar metade do lado, 10 m. Mas o canto fica mais longe do centro do que o meio de um lado.\nO caminho do centro ao canto vai pela diagonal, e a diagonal do quadrado é lado × √2.\nD = 20 × 1,4 = 28 m"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = 28 ÷ 2 = 14\nLetra B. O aspersor alcança 14 m e molha o jardim todo, até os cantos.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "D",
+        "28"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: círculo que passa pelos 4 cantos de um quadrado → diâmetro = diagonal = lado × √2; raio = metade.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Neste jardim"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "20 m, √2 = 1,4"
+       ],
+       [
+        "2. Equação em letras",
+        "R = D ÷ 2"
+       ],
+       [
+        "3. Achar cada letra",
+        "D = 28"
+       ],
+       [
+        "4. Substituir",
+        "28 ÷ 2 = 14"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Quadrado de 10 m de lado, √2 = 1,4. Quanto mede a diagonal?",
+    "opcoes": [
+     "14 m",
+     "10 m",
+     "20 m",
+     "7 m"
+    ],
+    "certa": "14 m",
+    "resposta": "10 × 1,4 = 14."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-p26-08",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "De um tronco de árvore redondo, com 70 cm de diâmetro, um marceneiro corta uma viga de seção quadrada, a maior possível: os 4 cantos do quadrado encostam na casca do tronco. Use 1,4 como valor de √2.\nO lado do quadrado da viga mede",
+  "A": "35 cm",
+  "B": "98 cm",
+  "C": "70 cm",
+  "D": "49 cm",
+  "E": "50 cm",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "D = 70; L = 70/1,4 = 50. E. A = o raio; B = 70*1,4; C = o diâmetro; D = 35*1,4.",
+   "ideia": "Os 4 cantos encostam na casca, então a diagonal do quadrado é o diâmetro do tronco: 70 cm. Como diagonal = lado × 1,4, o lado é 70 ÷ 1,4 = 50 cm.",
+   "pecas": [
+    {
+     "termo": "Diagonal",
+     "significado": "Linha reta de um canto até o canto do lado oposto."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "quadrado",
+        "nome": "Diagonal do quadrado",
+        "formula": "lado × √2"
+       },
+       {
+        "figura": "circulo",
+        "nome": "Diâmetro do círculo",
+        "formula": "2 × raio"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Diâmetro do tronco",
+        "70 cm"
+       ],
+       [
+        "√2",
+        "1,4"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o lado do quadrado da viga.\nL = D ÷ 1,4 (lado = diagonal ÷ √2)\nPor que dividir? A diagonal é o lado × 1,4. Se 12 = 3 × 4, então 3 = 12 ÷ 4. Do mesmo jeito, o lado é a diagonal ÷ 1,4.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "L",
+        "lado da viga (o que a questão quer)"
+       ],
+       [
+        "D",
+        "diagonal do quadrado"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando D: o seu jeito",
+     "texto": "Parece certo usar o raio, 35 cm, porque o centro está no meio. Mas a diagonal passa pelo centro e vai de um canto ao outro.\nOs dois cantos encostam na casca, em lados opostos: a diagonal é o diâmetro todo.\nD = 70 cm"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "L = 70 ÷ 1,4 = 700 ÷ 14 = 50\nLetra E. A viga tem 50 cm de lado. Confere: 50 × 1,4 = 70 cm de diagonal.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "D",
+        "70"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: quadrado com os 4 cantos no círculo → diagonal = diâmetro; do diâmetro para o lado, divida por √2.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Neste tronco"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "70 cm, √2 = 1,4"
+       ],
+       [
+        "2. Equação em letras",
+        "L = D ÷ 1,4"
+       ],
+       [
+        "3. Achar cada letra",
+        "D = 70"
+       ],
+       [
+        "4. Substituir",
+        "70 ÷ 1,4 = 50"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Tronco de 28 cm de diâmetro, viga quadrada maior possível, √2 = 1,4. Lado?",
+    "opcoes": [
+     "20 cm",
+     "39,2 cm",
+     "14 cm",
+     "28 cm"
+    ],
+    "certa": "20 cm",
+    "resposta": "28 ÷ 1,4 = 20."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-p26-11",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Numa mesa de sinuca, uma bola bate na tabela formando 35° com ela. Depois da batida, o ângulo de saída é igual ao de chegada, medido com a mesma tabela e do outro lado da batida. A bola desenha um V: o caminho de ida e o de volta partem do ponto da batida e ficam do lado da mesa.\nO ângulo de abertura desse V mede",
+  "A": "35°",
+  "B": "70°",
+  "C": "110°",
+  "D": "145°",
+  "E": "55°",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "S = 35+35 = 70; V = 180-70 = 110. C. A = só o ângulo de chegada; B = a soma S; D = 180-35; E = 90-35.",
+   "ideia": "A tabela é uma linha reta de 180°. A bola gasta 35° na chegada e 35° na saída, e o que sobra é a abertura do V: 180 − 70 = 110°.",
+   "pecas": [
+    {
+     "termo": "Ângulo",
+     "significado": "A abertura entre duas linhas que saem do mesmo ponto, medida em graus."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "triangulo",
+        "nome": "Linha reta (a tabela)",
+        "formula": "mede 180°"
+       },
+       {
+        "figura": "triangulo",
+        "nome": "Regra da batida",
+        "formula": "ângulo de chegada = ângulo de saída"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Ângulo de chegada com a tabela",
+        "35°"
+       ],
+       [
+        "Ângulo de saída com a tabela",
+        "35°"
+       ],
+       [
+        "A tabela inteira",
+        "180°"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a abertura do V que a bola desenha.\nV = 180 − S (abertura = 180° da tabela − os dois ângulos com a tabela)\nPor que tirar de 180? Em cima da tabela cabem três ângulos lado a lado: o de chegada, o V e o de saída. Juntos eles fecham a linha reta, 180°.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "V",
+        "abertura do V (o que a questão quer)"
+       ],
+       [
+        "S",
+        "chegada + saída juntas"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando S: o seu jeito",
+     "texto": "Parece certo marcar 70°, o valor de S. Mas 70° é só o que a bola gasta perto da tabela, nas duas pontas do V.\nS = 35 + 35 = 70°\nA abertura é o que sobra para chegar a 180°."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "V = 180 − 70 = 110\nLetra C. O V abre 110°. Confere: 35 + 110 + 35 = 180.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "S",
+        "70"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: bola na tabela → ângulo de saída = ângulo de chegada; chegada + abertura + saída = 180°.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta batida"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "35° na chegada e na saída"
+       ],
+       [
+        "2. Equação em letras",
+        "V = 180 − S"
+       ],
+       [
+        "3. Achar cada letra",
+        "S = 70"
+       ],
+       [
+        "4. Substituir",
+        "180 − 70 = 110"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Bola bate na tabela formando 20° e sai formando 20°. Abertura do V?",
+    "opcoes": [
+     "140°",
+     "40°",
+     "160°",
+     "70°"
+    ],
+    "certa": "140°",
+    "resposta": "180 − (20 + 20) = 140."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-p26-12",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Numa mesa de sinuca, a tabela de baixo e a da esquerda se encontram num canto reto, de 90°. Uma bola bate na tabela de baixo formando 30° com ela e segue, depois da batida, formando também 30° com essa tabela, em direção à tabela da esquerda. O ângulo de chegada é sempre igual ao de saída. A bola e as duas batidas formam um triângulo com o canto.\nAo bater na tabela da esquerda, a bola forma com ela um ângulo de",
+  "A": "60°",
+  "B": "30°",
+  "C": "45°",
+  "D": "90°",
+  "E": "120°",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "S = 90+30 = 120; X = 180-120 = 60. A. B = repetir os 30°; C = 90/2; D = o canto; E = 180-60.",
+   "ideia": "O caminho da bola entre as duas batidas, as duas tabelas e o canto formam um triângulo. Os ângulos são 90° do canto e 30° da primeira batida, então o outro é 180 − 90 − 30 = 60°.",
+   "pecas": [
+    {
+     "termo": "Triângulo",
+     "significado": "Figura de 3 lados e 3 ângulos. Os 3 ângulos somam 180°."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "triangulo",
+        "nome": "Ângulos do triângulo",
+        "formula": "os 3 somam 180°"
+       },
+       {
+        "figura": "quadrado",
+        "nome": "Canto reto",
+        "formula": "mede 90°"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Canto da mesa",
+        "90°"
+       ],
+       [
+        "Ângulo na tabela de baixo",
+        "30°"
+       ],
+       [
+        "Soma dos ângulos do triângulo",
+        "180°"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o ângulo da bola com a tabela da esquerda.\nX = 180 − S (ângulo que falta = 180° − os dois ângulos que já conheço)\nPor que tirar de 180? Os 3 ângulos de um triângulo sempre somam 180°. Se você sabe dois, o terceiro é o que falta.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "X",
+        "ângulo com a tabela da esquerda (o que a questão quer)"
+       ],
+       [
+        "S",
+        "os dois ângulos que já conheço juntos"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando S: o seu jeito",
+     "texto": "Parece certo repetir os 30°, porque a regra diz que chegada e saída são iguais. Mas essa regra vale numa batida só. Aqui são duas tabelas diferentes.\nO triângulo tem o canto de 90° e o ângulo de 30° da primeira batida.\nS = 90 + 30 = 120°"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "X = 180 − 120 = 60\nLetra A. A bola bate na tabela da esquerda formando 60°.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "S",
+        "120"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: bola que bate em duas tabelas num canto reto → triângulo; o ângulo que falta é 180° − 90° − o outro ângulo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta jogada"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "canto 90°, batida 30°"
+       ],
+       [
+        "2. Equação em letras",
+        "X = 180 − S"
+       ],
+       [
+        "3. Achar cada letra",
+        "S = 120"
+       ],
+       [
+        "4. Substituir",
+        "180 − 120 = 60"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Triângulo com ângulos de 90° e 20°. Quanto mede o 3º ângulo?",
+    "opcoes": [
+     "70°",
+     "20°",
+     "160°",
+     "90°"
+    ],
+    "certa": "70°",
+    "resposta": "180 − (90 + 20) = 70."
+   }
+  }
+ }
+]

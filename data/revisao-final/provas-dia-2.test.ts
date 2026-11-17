@@ -45,6 +45,31 @@ const ler = (nivel: string, area: string): Questao[] | null => {
   return existsSync(caminho) ? (JSON.parse(readFileSync(caminho, 'utf8')) as Questao[]) : null;
 };
 
+/* Molde da "Aula do Robô Aspirador" (17/11/2026, o Pablo aprovou: "copia exatamente
+   essa explicação"): o que eu tenho → equação em letras → uma tela por letra →
+   volta na equação → receita. Não tem quadro nem "A resposta"; cada letra da
+   equação, menos a que a questão pede, tem a sua tela "Achando <letra>". */
+type PassoBruto = { titulo: string; visual?: { tipo?: string; linhas?: string[][] } };
+const passosDe = (q: Questao) => (q.explicacao.passos as PassoBruto[]) ?? [];
+const TITULO_FORMULAS = 'As fórmulas desta questão';
+const ehMoldeRobo = (q: Questao) => ['O que eu tenho', TITULO_FORMULAS].includes(passosDe(q)[0]?.titulo);
+function problemasDoMolde(q: Questao): string[] {
+  const passos = passosDe(q);
+  const titulos = passos.map((p) => p.titulo);
+  const erros = ['O que eu tenho', 'Volta na equação', 'Questão parecida? Faça assim']
+    .filter((t) => !titulos.includes(t)).map((t) => `sem a tela "${t}"`);
+  // Questão sem conta (Biologia, parte de Química): "A regra em palavras" no lugar da equação.
+  const regra = passos.find((p) => p.titulo === 'A equação em letras' || p.titulo === 'A regra em palavras');
+  if (!regra) erros.push('sem a tela "A equação em letras" (ou "A regra em palavras")');
+  const letras = regra?.visual?.linhas?.map((l) => l[0]) ?? [];
+  if (letras.length < 2) erros.push('equação sem a tabela das letras');
+  for (const l of letras.slice(1)) {
+    if (!titulos.some((t) => t.startsWith(`Achando ${l} `) || t.startsWith(`Achando ${l}:`))) erros.push(`a letra ${l} não tem tela "Achando ${l}"`);
+  }
+  if (!passos.some((p) => p.visual?.tipo === 'diagrama' || p.visual?.tipo === 'formulas')) erros.push('sem desenho: nem fórmulas nem diagrama');
+  return erros;
+}
+
 function problemasDaQuestao(q: Questao): string[] {
   const erros: string[] = [];
   if (!LETRAS.includes(q.resposta as (typeof LETRAS)[number])) erros.push(`resposta inválida: ${q.resposta}`);
@@ -64,28 +89,8 @@ function problemasDaQuestao(q: Questao): string[] {
   if (!brutos[0]?.visual) erros.push('primeiro passo sem desenho');
   const sua = q.explicacao.checagem as { certa?: string; opcoes?: string[] } | null;
   if (!sua?.opcoes?.includes(sua.certa ?? '')) erros.push('"Sua vez" com a certa fora das opções');
-  return [...erros, ...textoCortado(q.explicacao), ...problemasDaExplicacao(valida, q.enunciado, q.materia)];
-}
-
-/* Molde da "Aula do Robô Aspirador" (17/11/2026, o Pablo aprovou: "copia exatamente
-   essa explicação"): o que eu tenho → equação em letras → uma tela por letra →
-   volta na equação → receita. Não tem quadro nem "A resposta"; cada letra da
-   equação, menos a que a questão pede, tem a sua tela "Achando <letra>". */
-type PassoBruto = { titulo: string; visual?: { tipo?: string; linhas?: string[][] } };
-const passosDe = (q: Questao) => (q.explicacao.passos as PassoBruto[]) ?? [];
-const ehMoldeRobo = (q: Questao) => passosDe(q)[0]?.titulo === 'O que eu tenho';
-function problemasDoMolde(q: Questao): string[] {
-  const passos = passosDe(q);
-  const titulos = passos.map((p) => p.titulo);
-  const erros = ['O que eu tenho', 'A equação em letras', 'Volta na equação', 'Questão parecida? Faça assim']
-    .filter((t) => !titulos.includes(t)).map((t) => `sem a tela "${t}"`);
-  const letras = passos.find((p) => p.titulo === 'A equação em letras')?.visual?.linhas?.map((l) => l[0]) ?? [];
-  if (letras.length < 2) erros.push('equação sem a tabela das letras');
-  for (const l of letras.slice(1)) {
-    if (!titulos.some((t) => t.startsWith(`Achando ${l} `) || t.startsWith(`Achando ${l}:`))) erros.push(`a letra ${l} não tem tela "Achando ${l}"`);
-  }
-  if (!passos.some((p) => p.visual?.tipo === 'diagrama')) erros.push('nenhum desenho que mostra o porquê');
-  return erros;
+  const doMolde = ehMoldeRobo(q) ? problemasDoMolde(q) : problemasDaExplicacao(valida, q.enunciado, q.materia);
+  return [...erros, ...textoCortado(q.explicacao), ...doMolde];
 }
 
 /* O validador corta texto longo sem avisar (ideia na 2ª frase, passo em 900
@@ -165,6 +170,33 @@ describe('provas do dia 2', () => {
   }
 });
 
+/* Nível acima (Pablo, 17/11/2026: "um nível a mais, banca difícil, para o ENEM ficar
+   leve"): 2 por conteúdo, todas no jeito do robô. */
+const POR_CONTEUDO_ACIMA = 2;
+describe('nível acima do dia 2', () => {
+  for (const area of AREAS) {
+    const questoes = ler('acima', area);
+    describe.skipIf(!questoes)(`acima-${area}`, () => {
+      const qs = questoes ?? [];
+      it('2 de cada conteúdo que mais cai', () => {
+        const contagem: Record<string, number> = {};
+        qs.forEach((q) => { contagem[`${q.materia}|${q.tema}`] = (contagem[`${q.materia}|${q.tema}`] ?? 0) + 1; });
+        expect(contagem).toEqual(Object.fromEntries(Object.keys(COTAS[area]).map((k) => [k, POR_CONTEUDO_ACIMA])));
+      });
+      it('cada questão no jeito do robô e conferida', () => {
+        const ruins = qs.map((q) => [q.id, ehMoldeRobo(q) ? problemasDaQuestao(q) : ['fora do jeito do robô']] as const).filter(([, e]) => e.length > 0);
+        expect(ruins.map(([id, e]) => `${id}: ${e.join('; ')}`)).toEqual([]);
+      });
+      it('id no padrão, letra certa espalhada e sem figura inexistente', () => {
+        expect(qs.filter((q) => !q.id.startsWith(`d2-acima-${area === 'matematica' ? 'mat' : 'nat'}-`)).map((q) => q.id)).toEqual([]);
+        const porLetra = LETRAS.map((l) => qs.filter((q) => q.resposta === l).length);
+        expect(Math.max(...porLetra) - Math.min(...porLetra)).toBeLessThanOrEqual(2);
+        expect(qs.filter((q) => PEDE_FIGURA.test(q.enunciado)).map((q) => q.id)).toEqual([]);
+      });
+    });
+  }
+});
+
 /* Questões de reforço (Pablo, 12/11/2026): errou na prova, a próxima é uma
    parecida do mesmo conteúdo, estilo ENEM (nunca "ENEM real"). Mesma
    conferência das provas e uma figura em pixel no 1º passo. */
@@ -213,14 +245,7 @@ describe('banco ENEM do dia 2', () => {
     const noMolde = qs.filter((q) => !ehMoldeRobo(q));
     describe(arquivo, () => {
       it('cada questão passa na conferência da explicação', () => {
-        const ruins = noMolde.map((q) => [q.id, problemasDaQuestao(q)] as const).filter(([, e]) => e.length > 0);
-        expect(ruins.map(([id, e]) => `${id}: ${e.join('; ')}`)).toEqual([]);
-      });
-      it('aula no molde do robô: uma tela por letra', () => {
-        const ruins = qs.filter(ehMoldeRobo).map((q) => {
-          const base = problemasDaQuestao(q).filter((e) => /validador|recusado|passa de 900|longo|proibido|alternativa|resposta inválida|conferencia/.test(e));
-          return [q.id, [...base, ...problemasDoMolde(q)]] as const;
-        }).filter(([, e]) => e.length > 0);
+        const ruins = qs.map((q) => [q.id, problemasDaQuestao(q)] as const).filter(([, e]) => e.length > 0);
         expect(ruins.map(([id, e]) => `${id}: ${e.join('; ')}`)).toEqual([]);
       });
       it('abre com figura em pixel, é do banco e é de um tema só', () => {

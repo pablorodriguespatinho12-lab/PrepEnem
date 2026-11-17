@@ -1,0 +1,518 @@
+[
+ {
+  "id": "d2-banco-mat-p26-14",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "De um barco, alguém lança um sinalizador para cima. A altura dele, em metros, depois de t segundos, é dada por h = −4t² + 24t + 5.\nA altura máxima que o sinalizador atinge é de",
+  "A": "3 m",
+  "B": "5 m",
+  "C": "36 m",
+  "D": "41 m",
+  "E": "77 m",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "T = 24/(2*4) = 3; H = -4*9 + 72 + 5 = 41. D. A = o tempo T; B = a altura de saída; C = sem o 5 (-36+72); E = 24*3+5, sem o termo do t ao quadrado.",
+   "ideia": "O topo da curva está em T = 24 ÷ (2 × 4) = 3 s. Colocando 3 na lei, H = −36 + 72 + 5 = 41 m.",
+   "pecas": [
+    {
+     "termo": "Vértice",
+     "significado": "O ponto mais alto da curva quando ela abre para baixo. Aqui, o topo do voo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Instante do topo",
+        "formula": "T = número do t ÷ (2 × número do t × t), sem o menos"
+       },
+       {
+        "figura": "grafico",
+        "nome": "Altura no topo",
+        "formula": "ponha o T na lei no lugar do t"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Lei da altura",
+        "−4 × t × t + 24 × t + 5"
+       ],
+       [
+        "t",
+        "tempo, em segundos"
+       ],
+       [
+        "Altura",
+        "em metros"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a altura máxima do sinalizador.\nH = −4 × T × T + 24 × T + 5 (altura = a lei, com T no lugar do t)\nPor que achar T antes? O sinalizador sobe, para e desce. O ponto mais alto acontece em um instante só, o T. Com ele na lei, sai a altura do topo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "H",
+        "altura máxima (o que a questão quer)"
+       ],
+       [
+        "T",
+        "instante em que ele chega ao topo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando T (o instante do topo)",
+     "texto": "A curva sobe e desce igual dos dois lados. O topo fica no meio.\nUse o número do t × t (4, sem o menos) e o número do t (24).\nT = 24 ÷ (2 × 4)\nT = 24 ÷ 8 = 3 segundos"
+    },
+    {
+     "titulo": "Achando H: o seu jeito",
+     "texto": "Parece certo responder 3, o que acabou de sair. Mas 3 é o tempo, em segundos. A questão pede metros.\nPara a altura, ponha T = 3 na lei:\nH = −4 × 3 × 3 + 24 × 3 + 5\nH = −36 + 72 + 5 = 41 m"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "H = −4 × 3 × 3 + 24 × 3 + 5 = −36 + 72 + 5 = 41\nLetra D. O sinalizador chega a 41 m, aos 3 segundos.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "T",
+        "3"
+       ],
+       [
+        "H",
+        "41"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: altura máxima de uma curva do 2º grau → ache o instante do topo (número do t ÷ 2 vezes o do t × t) e ponha na lei.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "lei com 4, 24 e 5"
+       ],
+       [
+        "2. Equação em letras",
+        "H = −4 × T × T + 24 × T + 5"
+       ],
+       [
+        "3. Achar cada letra",
+        "T = 3"
+       ],
+       [
+        "4. Substituir",
+        "−36 + 72 + 5 = 41"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Altura h = −2t² + 12t + 1, em metros. Qual a altura máxima?",
+    "opcoes": [
+     "19 m",
+     "37 m",
+     "3 m",
+     "25 m"
+    ],
+    "certa": "19 m",
+    "resposta": "T = 12 ÷ (2 × 2) = 3. H = −2 × 9 + 12 × 3 + 1 = −18 + 36 + 1 = 19."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-p26-23",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "Um site registra quantas visitas recebe por dia, em milhares. Os dados seguem uma curva do 2º grau, V = a × t × t + b × t, em que t é o dia (t = 1 é o 1º dia). No dia 1 foram 8 mil visitas, e no dia 2 foram 14 mil. Se a curva continuar do mesmo jeito, no dia 5 o site terá",
+  "A": "20 mil visitas",
+  "B": "14 mil visitas",
+  "C": "32 mil visitas",
+  "D": "45 mil visitas",
+  "E": "60 mil visitas",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "a+b = 8; 4a+2b = 14 -> 2a+b = 7 -> a = -1, b = 9. V(5) = -25+45 = 20. A. B = repetiu o dia 2; C = reta (8+4*6); D = 9*5, sem o termo do t*t; E = a=1 e b=7: 25+35.",
+   "ideia": "Os dois dias dão a = −1 e b = 9, então V = −t × t + 9 × t. No dia 5: −25 + 45 = 20 mil visitas.",
+   "pecas": [
+    {
+     "termo": "Extrapolar",
+     "significado": "Usar a lei descoberta para prever um valor além dos dados que você tem."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Lei da curva",
+        "formula": "V = a × t × t + b × t"
+       },
+       {
+        "figura": "grafico",
+        "nome": "Cada dia dá uma pista",
+        "formula": "ponha o t e o V do dia na lei"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Lei",
+        "V = a × t × t + b × t"
+       ],
+       [
+        "Dia 1",
+        "8 mil visitas"
+       ],
+       [
+        "Dia 2",
+        "14 mil visitas"
+       ],
+       [
+        "Dia pedido",
+        "dia 5"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer as visitas do dia 5.\nV = A × 5 × 5 + B × 5 (a lei, com o dia 5 no lugar do t)\nPor que achar A e B antes? A lei tem 2 números escondidos. Os 2 dias dados dão 2 pistas, uma para cada número. Com os dois descobertos, a lei serve para qualquer dia.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "V",
+        "visitas no dia 5 (o que a questão quer)"
+       ],
+       [
+        "A",
+        "número que multiplica o t × t"
+       ],
+       [
+        "B",
+        "número que multiplica o t"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando A: o seu jeito",
+     "texto": "Parece certo ligar os 2 dias com uma reta: de 8 para 14 sobe 6 por dia, e no dia 5 seria 8 + 4 × 6 = 32. Mas a curva é do 2º grau e não sobe sempre igual. Use as duas pistas:\nDia 1: A + B = 8\nDia 2: 4 × A + 2 × B = 14\nDividindo o dia 2 por 2: 2 × A + B = 7\nTire a pista do dia 1: 7 − 8 = −1\nA = −1\nO menos diz que a curva vira para baixo."
+    },
+    {
+     "titulo": "Achando B (o outro número)",
+     "texto": "Volte na pista do dia 1: A + B = 8\n−1 + B = 8\nB = 8 + 1 = 9"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "V = −1 × 5 × 5 + 9 × 5 = −25 + 45 = 20\nLetra A. No dia 5, o site terá 20 mil visitas.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "A",
+        "−1"
+       ],
+       [
+        "B",
+        "9"
+       ],
+       [
+        "V",
+        "20"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: curva do 2º grau com 2 pontos dados → cada ponto dá uma pista; ache os números da lei e depois ponha o valor pedido.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dia 1 = 8; dia 2 = 14"
+       ],
+       [
+        "2. Equação em letras",
+        "V = A × 5 × 5 + B × 5"
+       ],
+       [
+        "3. Achar cada letra",
+        "A = −1; B = 9"
+       ],
+       [
+        "4. Substituir",
+        "−25 + 45 = 20"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "V = a × t × t + b × t; dia 1 = 5 e dia 2 = 8. Quanto no dia 3?",
+    "opcoes": [
+     "9",
+     "11",
+     "15",
+     "12"
+    ],
+    "certa": "9",
+    "resposta": "a + b = 5 e 2a + b = 4 dão a = −1, b = 6. Dia 3: −9 + 18 = 9."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-p26-24",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "O gasto de uma fábrica com energia, em milhares de reais, segue a lei G = a × x × x + c, em que x é a produção em centenas de peças. Sem produzir nada (x = 0), o gasto é de 5 mil reais. Com 200 peças (x = 2), o gasto é de 13 mil reais. Mantida a lei, ao produzir 400 peças (x = 4), o gasto será de",
+  "A": "69 mil reais",
+  "B": "21 mil reais",
+  "C": "26 mil reais",
+  "D": "32 mil reais",
+  "E": "37 mil reais",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "c = 5; 13 = a*4 + 5 -> a = 2; G(4) = 2*16 + 5 = 37. E. A = a = 4 (÷ 2): 4*16+5; B = reta (5 + 4*4); C = 13*2; D = 2*16, sem o c.",
+   "ideia": "Em x = 0 sobra só c = 5, e em x = 2 a conta dá a = 8 ÷ 4 = 2. Em x = 4, G = 2 × 16 + 5 = 37 mil reais.",
+   "pecas": [
+    {
+     "termo": "Termo fixo",
+     "significado": "O número c, que não muda com x. É o gasto quando x vale 0."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Lei da curva",
+        "formula": "G = a × x × x + c"
+       },
+       {
+        "figura": "grafico",
+        "nome": "Quando x = 0",
+        "formula": "sobra só o c"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Lei",
+        "G = a × x × x + c"
+       ],
+       [
+        "x = 0",
+        "G = 5"
+       ],
+       [
+        "x = 2",
+        "G = 13"
+       ],
+       [
+        "x pedido",
+        "4"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o gasto quando x = 4.\nG = A × 4 × 4 + C (a lei, com x = 4)\nPor que achar A e C antes? A lei tem 2 números escondidos. Os 2 pontos dados dão 2 pistas, uma para cada número. Com os dois descobertos, dá para prever x = 4.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "G",
+        "gasto com x = 4 (o que a questão quer)"
+       ],
+       [
+        "C",
+        "termo fixo da lei"
+       ],
+       [
+        "A",
+        "número que multiplica o x × x"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando C (o termo fixo)",
+     "texto": "Com x = 0, as partes com x somem:\nG = A × 0 × 0 + C = C\nO gasto era 5, então C = 5"
+    },
+    {
+     "titulo": "Achando A: o seu jeito",
+     "texto": "Pista de x = 2: 13 = A × 2 × 2 + 5\n13 − 5 = A × 4\n8 = A × 4\nParece certo fazer 8 ÷ 2 = 4. Mas o x aparece duas vezes (2 × 2 = 4): divida por 4, não por 2.\nA = 8 ÷ 4 = 2"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "G = 2 × 4 × 4 + 5 = 32 + 5 = 37\nLetra E. A fábrica gastaria 37 mil reais.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "C",
+        "5"
+       ],
+       [
+        "A",
+        "2"
+       ],
+       [
+        "G",
+        "37"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: curva do 2º grau com pontos dados → o ponto x = 0 dá o termo fixo; o outro dá o resto; depois prevê o valor pedido.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "x = 0 dá 5; x = 2 dá 13"
+       ],
+       [
+        "2. Equação em letras",
+        "G = A × 4 × 4 + C"
+       ],
+       [
+        "3. Achar cada letra",
+        "C = 5; A = 2"
+       ],
+       [
+        "4. Substituir",
+        "32 + 5 = 37"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "G = a × x × x + c; x = 0 dá 3 e x = 2 dá 11. Quanto em x = 3?",
+    "opcoes": [
+     "21",
+     "15",
+     "39",
+     "18"
+    ],
+    "certa": "21",
+    "resposta": "c = 3. 11 = a × 4 + 3, então a = 2. x = 3: 2 × 9 + 3 = 21."
+   }
+  }
+ }
+]
