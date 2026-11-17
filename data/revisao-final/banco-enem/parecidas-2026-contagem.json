@@ -1,0 +1,193 @@
+[
+ {
+  "id": "d2-banco-mat-p26-02",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Num parque, o passeio vai da portaria ao lago, do lago ao mirante, do mirante à cachoeira e da cachoeira à saída, nessa ordem. Da portaria ao lago há 4 trilhas, e da cachoeira à saída há 3. O mapa não mostra quantas trilhas ligam o lago ao mirante nem o mirante à cachoeira, mas há mais trilhas entre o lago e o mirante. Ao todo, há 84 caminhos diferentes da portaria até a saída.\nO número de trilhas entre o lago e o mirante é",
+  "A": "12",
+  "B": "7",
+  "C": "77",
+  "D": "21",
+  "E": "28",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "84/(4*3) = 7 = 7*1 e L > M: L = 7. B. A = 84/(4+3); C = 84-(4+3); D = 84/4; E = 84/3.",
+   "ideia": "Trechos em sequência multiplicam: 4 × L × M × 3 = 84, então L × M = 7. Como 7 só é 7 × 1 e há mais trilhas no lago, L = 7.",
+   "pecas": [
+    {
+     "termo": "Número primo",
+     "significado": "Número que só se divide por 1 e por ele mesmo, como 2, 3, 5 e 7."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Portaria → lago",
+        "4 trilhas"
+       ],
+       [
+        "Cachoeira → saída",
+        "3 trilhas"
+       ],
+       [
+        "Caminhos ao todo",
+        "84"
+       ],
+       [
+        "Lago → mirante",
+        "mais que mirante → cachoeira"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quantas trilhas ligam o lago ao mirante.\n84 = 4 × L × M × 3 (caminhos = trilhas de cada trecho multiplicadas)\nPor que multiplicar? Para cada trilha do 1º trecho, você ainda pode pegar qualquer trilha do 2º. Com 2 trilhas e depois 3, são 2 × 3 = 6 caminhos, não 2 + 3.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "L",
+        "trilhas lago → mirante (o que a questão quer)"
+       ],
+       [
+        "M",
+        "trilhas mirante → cachoeira"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Por que multiplicar",
+     "texto": "Cada caminho escolhe 1 trilha em cada trecho. Trocou uma trilha, é outro caminho.\nVeja com 2 trilhas (a e b) e depois 3 (1, 2 e 3): cada letra vai com cada número.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "2 trilhas e depois 3",
+      "cabecalho": [
+       "1º trecho",
+       "2º trecho"
+      ],
+      "linhas": [
+       [
+        "a",
+        "1"
+       ],
+       [
+        "a",
+        "2"
+       ],
+       [
+        "a",
+        "3"
+       ],
+       [
+        "b",
+        "1"
+       ],
+       [
+        "b",
+        "2"
+       ],
+       [
+        "b",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando L × M: o seu jeito",
+     "texto": "Parece certo fazer 84 ÷ (4 + 3) = 12. Mas os trechos vêm um depois do outro: multiplica, não soma.\nTire o 4 e o 3 dividindo: L × M = 84 ÷ (4 × 3) = 84 ÷ 12 = 7"
+    },
+    {
+     "titulo": "Achando M (o trecho menor)",
+     "texto": "L × M = 7. Que números multiplicados dão 7? Só 7 × 1: o 7 é primo.\nComo há mais trilhas entre o lago e o mirante, L = 7 e M = 1. Aperte e veja alguns caminhos.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "trilhas-parque"
+     }
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "L = 7 ÷ M = 7 ÷ 1 = 7\nLetra B. Confere: 4 × 7 × 1 × 3 = 84 caminhos.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "L × M",
+        "7"
+       ],
+       [
+        "M",
+        "1"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: trechos um depois do outro → multiplica; falta um trecho → divida o total pelos que você sabe.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Neste parque"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "4, 3 e 84"
+       ],
+       [
+        "2. Equação em letras",
+        "84 = 4 × L × M × 3"
+       ],
+       [
+        "3. Achar cada letra",
+        "L × M = 7; M = 1"
+       ],
+       [
+        "4. Substituir",
+        "L = 7"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "3 estradas de A a B, ? de B a C e 2 de C a D. São 30 rotas de A a D. Estradas de B a C?",
+    "opcoes": [
+     "5",
+     "6",
+     "25",
+     "10"
+    ],
+    "certa": "5",
+    "resposta": "30 ÷ (3 × 2) = 30 ÷ 6 = 5."
+   }
+  }
+ }
+]

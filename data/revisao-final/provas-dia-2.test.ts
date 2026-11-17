@@ -67,6 +67,27 @@ function problemasDaQuestao(q: Questao): string[] {
   return [...erros, ...textoCortado(q.explicacao), ...problemasDaExplicacao(valida, q.enunciado, q.materia)];
 }
 
+/* Molde da "Aula do Robô Aspirador" (17/11/2026, o Pablo aprovou: "copia exatamente
+   essa explicação"): o que eu tenho → equação em letras → uma tela por letra →
+   volta na equação → receita. Não tem quadro nem "A resposta"; cada letra da
+   equação, menos a que a questão pede, tem a sua tela "Achando <letra>". */
+type PassoBruto = { titulo: string; visual?: { tipo?: string; linhas?: string[][] } };
+const passosDe = (q: Questao) => (q.explicacao.passos as PassoBruto[]) ?? [];
+const ehMoldeRobo = (q: Questao) => passosDe(q)[0]?.titulo === 'O que eu tenho';
+function problemasDoMolde(q: Questao): string[] {
+  const passos = passosDe(q);
+  const titulos = passos.map((p) => p.titulo);
+  const erros = ['O que eu tenho', 'A equação em letras', 'Volta na equação', 'Questão parecida? Faça assim']
+    .filter((t) => !titulos.includes(t)).map((t) => `sem a tela "${t}"`);
+  const letras = passos.find((p) => p.titulo === 'A equação em letras')?.visual?.linhas?.map((l) => l[0]) ?? [];
+  if (letras.length < 2) erros.push('equação sem a tabela das letras');
+  for (const l of letras.slice(1)) {
+    if (!titulos.some((t) => t.startsWith(`Achando ${l} `) || t.startsWith(`Achando ${l}:`))) erros.push(`a letra ${l} não tem tela "Achando ${l}"`);
+  }
+  if (!passos.some((p) => p.visual?.tipo === 'diagrama')) erros.push('nenhum desenho que mostra o porquê');
+  return erros;
+}
+
 /* O validador corta texto longo sem avisar (ideia na 2ª frase, passo em 900
    letras): a tela mostraria a explicação pela metade. Limites de lib/tutor/validar.ts. */
 const LIMITES = { ideia: 300, frasesIdeia: 2, titulo: 80, passo: 900, termo: 60, significado: 320, pecas: 3, opcao: 60, opcoes: 4 };
@@ -187,15 +208,19 @@ describe('banco ENEM do dia 2', () => {
     expect(ids.filter((id) => !id.startsWith('d2-banco-'))).toEqual([]);
     expect(ids.filter((id, i) => ids.indexOf(id) !== i)).toEqual([]);
   });
-  /* Aula copiada palavra por palavra de um artefato que o Pablo aprovou (17/11/2026:
-     "copia exatamente essa explicação"): não segue o molde pergunta → quadro → resposta. */
-  const COPIADAS = new Set(['d2-banco-mat-cob-01']);
   for (const arquivo of arquivos) {
     const qs = JSON.parse(readFileSync(join(PASTA_BANCO, arquivo), 'utf8')) as Questao[];
-    const noMolde = qs.filter((q) => !COPIADAS.has(q.id));
+    const noMolde = qs.filter((q) => !ehMoldeRobo(q));
     describe(arquivo, () => {
       it('cada questão passa na conferência da explicação', () => {
         const ruins = noMolde.map((q) => [q.id, problemasDaQuestao(q)] as const).filter(([, e]) => e.length > 0);
+        expect(ruins.map(([id, e]) => `${id}: ${e.join('; ')}`)).toEqual([]);
+      });
+      it('aula no molde do robô: uma tela por letra', () => {
+        const ruins = qs.filter(ehMoldeRobo).map((q) => {
+          const base = problemasDaQuestao(q).filter((e) => /validador|recusado|passa de 900|longo|proibido|alternativa|resposta inválida|conferencia/.test(e));
+          return [q.id, [...base, ...problemasDoMolde(q)]] as const;
+        }).filter(([, e]) => e.length > 0);
         expect(ruins.map(([id, e]) => `${id}: ${e.join('; ')}`)).toEqual([]);
       });
       it('abre com figura em pixel, é do banco e é de um tema só', () => {

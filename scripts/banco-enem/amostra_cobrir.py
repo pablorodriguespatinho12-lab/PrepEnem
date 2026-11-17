@@ -129,40 +129,67 @@ EM_LETRAS = {
 }
 FICHAS = [{**f, **EM_LETRAS.get(f['id'], {})} for f in FICHAS]
 
-# Robô: cópia da "Aula do Robô Aspirador" (artefato de 17/11/2026), palavra por palavra
-# e na mesma ordem. Pablo: "copia exatamente essa explicação, que ficou perfeita:
-# palavras, animaçãozinha do robô limpando".
-T = lambda titulo, cab, linhas: {'tipo': 'tabela', 'titulo': titulo, 'cabecalho': cab, 'linhas': [list(l) for l in linhas]}
-AULA_ROBO = [
-  {'titulo': 'O que eu tenho',
-   'texto': 'Primeiro, tire os números do enunciado. Tudo em cm, para não misturar.',
-   'visual': T('O que eu tenho', ['Informação', 'Valor'], [('Lado da sala', '2 m = 200 cm'), ('Raio do robô', '20 cm'), ('π', '3')])},
-  {'titulo': 'A equação em letras',
-   'texto': 'A questão quer a chance de a migalha cair num lugar sujo.\nC = AC ÷ AS (chance = área dos cantos sujos ÷ área da sala)\nPor que dividir? Chance é sempre o que eu quero ÷ o total. Num saco com 100 bolas e 1 premiada, a chance é 1 ÷ 100. Aqui o "total" é o chão todo, e "o que eu quero" é o chão sujo.\nAgora é só achar cada letra.',
-   'visual': T('As letras', ['Letra', 'O que é'], [('C', 'chance (o que a questão quer)'), ('AC', 'área dos cantos sujos'), ('AS', 'área da sala')])},
-  {'titulo': 'Achando AS (área da sala)',
-   'texto': 'A sala é um quadrado. Área do quadrado = lado × lado.\nAS = 200 × 200 = 40 000 cm²',
-   'visual': D('sala-quadrada')},
-  {'titulo': 'Achando AC: o seu jeito',
-   'texto': 'Você pensou: AC = AS − 4 × área do robô.\nÁrea do robô = 3 × 20 × 20 = 1 200 (não 12 000: são dois 20).\nDaria 40 000 − 4 800 = 35 200 sujos. Isso dá 88%, e essa letra nem existe.\nPor que não funciona: o robô anda. Ele é pequeno, mas passa pela sala toda, como uma vassoura. Aperte e veja.\nNo fim, ele limpou quase tudo. Só ficam sujas as 4 pontinhas dos cantos.',
-   'visual': D('robo-limpando')},
-  {'titulo': 'Por que o canto fica sujo',
-   'texto': 'O robô encosta nas 2 paredes. O centro dele fica a 20 cm (o raio) de cada parede.\nEle é redondo e o canto é reto: a pontinha nunca é alcançada.',
-   'visual': D('canto-zoom')},
-  {'titulo': 'Por que cabe 1/4 do robô',
-   'texto': 'Corte o robô em 4 fatias iguais pelas linhas que passam no centro.\nO quadradinho do canto tem 20 × 20 e pega exatamente 1 fatia.\nRobô inteiro: 3 × 20 × 20 = 1 200\n1 fatia (parte limpa do quadradinho): 1 200 ÷ 4 = 300',
-   'visual': D('robo-quatro-fatias')},
-  {'titulo': 'O raio vira o lado do quadradinho',
-   'texto': 'O lado do quadradinho é o raio. Então:\nsujo = r × r − (π × r × r) ÷ 4 (quadradinho − ¼ do círculo)\n20 × 20 − (3 × 20 × 20) ÷ 4 = 400 − 300 = 100',
-   'visual': D('canto-raio')},
-  {'titulo': 'A parte suja de 1 canto',
-   'texto': 'Sujo = quadradinho − parte limpa.\nSão 4 cantos iguais: AC = 4 × 100 = 400 cm²',
-   'visual': T('1 canto', ['Parte', 'Área'], [('Quadradinho do canto', '20 × 20 = 400'), ('Parte limpa (1 fatia)', '− 300'), ('Sujo em 1 canto', '100 cm²')])},
-  {'titulo': 'Volta na equação',
-   'texto': 'C = 400 ÷ 40 000 = 1 ÷ 100 = 1%\nLetra B. De cada 100 migalhas, 1 cai num canto sujo.',
-   'visual': T('As letras', ['Letra', 'Valor'], [('AS', '40 000'), ('AC', '400')])},
-  {'titulo': 'Questão parecida? Faça assim',
-   'texto': 'Pista: "cai ao acaso" numa figura → chance = área que eu quero ÷ área total.',
-   'visual': T('A receita', ['Passo', 'Neste robô'], [('1. Tabela do que eu tenho', '200 cm, 20 cm, π = 3'), ('2. Equação em letras', 'C = AC ÷ AS'), ('3. Achar cada letra', 'AS = 40 000; AC = 400'), ('4. Substituir', '400 ÷ 40 000 = 1%')])},
-]
-FICHAS = [{**f, 'passos_prontos': AULA_ROBO} if f['id'] == 'd2-banco-mat-cob-01' else f for f in FICHAS]
+# Molde da "Aula do Robô Aspirador" (artefato de 17/11/2026, que o Pablo achou
+# perfeito: "copia exatamente essa explicação"). O robô é o exemplo: as palavras
+# são as do artefato. Montado por passos_aula() em montar.py.
+AULAS = {
+  'd2-banco-mat-cob-01': dict(
+    tenho_texto='Primeiro, tire os números do enunciado. Tudo em cm, para não misturar.',
+    tenho=[('Lado da sala', '2 m = 200 cm'), ('Raio do robô', '20 cm'), ('π', '3')],
+    quer='A questão quer a chance de a migalha cair num lugar sujo.',
+    equacao='C = AC ÷ AS (chance = área dos cantos sujos ÷ área da sala)',
+    porque='Por que dividir? Chance é sempre o que eu quero ÷ o total. Num saco com 100 bolas e 1 premiada, a chance é 1 ÷ 100. Aqui o "total" é o chão todo, e "o que eu quero" é o chão sujo.',
+    letras=[('C', 'chance (o que a questão quer)'), ('AC', 'área dos cantos sujos'), ('AS', 'área da sala')],
+    telas=[
+      dict(titulo='Achando AS (área da sala)', visual=D('sala-quadrada'),
+        texto='A sala é um quadrado. Área do quadrado = lado × lado.\nAS = 200 × 200 = 40 000 cm²'),
+      dict(titulo='Achando AC: o seu jeito', visual=D('robo-limpando'),
+        texto='Você pensou: AC = AS − 4 × área do robô.\nÁrea do robô = 3 × 20 × 20 = 1 200 (não 12 000: são dois 20).\nDaria 40 000 − 4 800 = 35 200 sujos. Isso dá 88%, e essa letra nem existe.\nPor que não funciona: o robô anda. Ele é pequeno, mas passa pela sala toda, como uma vassoura. Aperte e veja.\nNo fim, ele limpou quase tudo. Só ficam sujas as 4 pontinhas dos cantos.'),
+      dict(titulo='Por que o canto fica sujo', visual=D('canto-zoom'),
+        texto='O robô encosta nas 2 paredes. O centro dele fica a 20 cm (o raio) de cada parede.\nEle é redondo e o canto é reto: a pontinha nunca é alcançada.'),
+      dict(titulo='Por que cabe 1/4 do robô', visual=D('robo-quatro-fatias'),
+        texto='Corte o robô em 4 fatias iguais pelas linhas que passam no centro.\nO quadradinho do canto tem 20 × 20 e pega exatamente 1 fatia.\nRobô inteiro: 3 × 20 × 20 = 1 200\n1 fatia (parte limpa do quadradinho): 1 200 ÷ 4 = 300'),
+      dict(titulo='O raio vira o lado do quadradinho', visual=D('canto-raio'),
+        texto='O lado do quadradinho é o raio. Então:\nsujo = r × r − (π × r × r) ÷ 4 (quadradinho − ¼ do círculo)\n20 × 20 − (3 × 20 × 20) ÷ 4 = 400 − 300 = 100'),
+      dict(titulo='A parte suja de 1 canto',
+        texto='Sujo = quadradinho − parte limpa.\nSão 4 cantos iguais: AC = 4 × 100 = 400 cm²',
+        visual={'tipo': 'tabela', 'titulo': '1 canto', 'cabecalho': ['Parte', 'Área'], 'linhas': [['Quadradinho do canto', '20 × 20 = 400'], ['Parte limpa (1 fatia)', '− 300'], ['Sujo em 1 canto', '100 cm²']]}),
+    ],
+    volta='C = 400 ÷ 40 000 = 1 ÷ 100 = 1%\nLetra B. De cada 100 migalhas, 1 cai num canto sujo.',
+    valores=[('AS', '40 000'), ('AC', '400')],
+    pista='"cai ao acaso" numa figura → chance = área que eu quero ÷ área total.',
+    coluna_receita='Neste robô',
+    receita=[('1. Tabela do que eu tenho', '200 cm, 20 cm, π = 3'), ('2. Equação em letras', 'C = AC ÷ AS'), ('3. Achar cada letra', 'AS = 40 000; AC = 400'), ('4. Substituir', '400 ÷ 40 000 = 1%')]),
+}
+
+# Amostra do molde (17/11/2026): situação nova de cobrir com círculo.
+PORTA = F(id='d2-banco-mat-cob-04', resp='D', objeto='porta', cobra='área',
+  confere=PI * 80 * 80 / 4,
+  enun='Num quarto, a porta tem 80 cm de largura e abre para dentro, girando presa na dobradiça. Ela abre até encostar na parede, dando um quarto de volta. Para não bater em nada, a parte do chão que a porta varre ao abrir precisa ficar sem móveis. Use π = 3.\nA área do chão que precisa ficar sem móveis é de',
+  alts=['1 600 cm²', '6 400 cm²', '19 200 cm²', '4 800 cm²', '2 400 cm²'],
+  cena=('cena-porta-quarto', ['porta: 80 cm', '1/4 de volta', 'π = 3', '']),
+  ideia='A ponta da porta gira em volta da dobradiça e desenha 1/4 de círculo de raio 80 cm. Área = 3 × 80 × 80 ÷ 4 = 4 800 cm².',
+  pecas=[('Dobradiça', 'A peça onde a porta fica presa e gira.')],
+  conferencia='3*80*80/4 = 4800. D. A = 6400-4800; B = 80*80; C = 3*80*80; E = 4800/2.',
+  sua_vez=('Porta de 60 cm, 1/4 de volta, π = 3. Área que ela varre?', ['2 700 cm²', '3 600 cm²', '10 800 cm²', '900 cm²'], '2 700 cm²', '3 × 60 × 60 = 10 800; ÷ 4 = 2 700.'))
+AULAS['d2-banco-mat-cob-04'] = dict(
+  tenho=[('Largura da porta', '80 cm'), ('Quanto ela gira', '1/4 de volta'), ('π', '3')],
+  quer='A questão quer a área do chão que a porta varre ao abrir.',
+  equacao='A = CI ÷ 4 (área varrida = área do círculo inteiro ÷ 4)',
+  porque='Por que dividir por 4? Uma volta inteira da porta seriam 4 quartos de volta. Ela só dá 1 quarto, então varre 1 dos 4 pedaços do círculo.',
+  letras=[('A', 'área varrida (o que a questão quer)'), ('CI', 'área do círculo inteiro')],
+  telas=[
+    dict(titulo='Por que vira círculo', visual=D('porta-abrindo'),
+      texto='A dobradiça fica parada. A ponta da porta fica sempre a 80 cm dela.\nTudo que fica à mesma distância de um ponto forma um círculo: o raio é a largura da porta, 80 cm. Aperte e veja.'),
+    dict(titulo='Achando CI (o círculo inteiro)',
+      texto='Área do círculo = π × raio × raio.\nCI = 3 × 80 × 80 = 19 200 cm²'),
+    dict(titulo='O seu jeito: o quadrado do canto', visual=D('canto-raio', 'r = 80', 'r = 80'),
+      texto='Parece certo fazer 80 × 80 = 6 400: o quadrado com o lado da porta.\nMas a ponta da porta anda em curva e nunca chega na pontinha rosa do canto.\nO quadrado conta essa pontinha. Por isso 6 400 passa do certo.'),
+  ],
+  volta='A = 19 200 ÷ 4 = 4 800 cm²\nLetra D. A porta varre 1/4 do círculo de raio 80.',
+  valores=[('CI', '19 200')],
+  pista='algo gira preso num ponto → desenha círculo; 1/4 de volta → área do círculo ÷ 4.',
+  coluna_receita='Nesta porta',
+  receita=[('1. Tabela do que eu tenho', '80 cm, 1/4 de volta, π = 3'), ('2. Equação em letras', 'A = CI ÷ 4'), ('3. Achar cada letra', 'CI = 19 200'), ('4. Substituir', '19 200 ÷ 4 = 4 800')])
+FICHAS = [*FICHAS, PORTA]
+FICHAS = [{**f, 'aula': AULAS[f['id']]} if f['id'] in AULAS else f for f in FICHAS]

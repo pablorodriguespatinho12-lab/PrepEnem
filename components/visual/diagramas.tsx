@@ -6,22 +6,8 @@
    completo; o robô só anda no clique (Pablo tem "reduzir movimento" ligado). */
 import { useEffect, useRef, useState } from 'react';
 import type { NomeDiagrama } from '@/lib/visual/especificacao';
-
-const PAPEL = '#f7f5ee';
-const TINTA = '#1f2a22';
-const CHAO = '#ead9b4';
-const LIMPO = '#9fd7c4';
-const SUJO = '#e86f8a';
-const ROBO = '#3d4a52';
-const CORTE = '#4f6bd8';
-const AGUA = '#8cc7e3';
-const SECO = '#e8c45a';
-
-type Props = { rotulos?: string[] };
-const r = (rotulos: string[] | undefined, i: number, padrao: string) => rotulos?.[i] || padrao;
-const Texto = ({ x, y, children, ancora = 'middle', cor = TINTA }: { x: number; y: number; children: string; ancora?: 'start' | 'middle' | 'end'; cor?: string }) => (
-  <text x={x} y={y} textAnchor={ancora} fontSize={15} fontWeight={700} fill={cor} style={{ fontFamily: 'var(--font-sans, system-ui)' }}>{children}</text>
-);
+import { AGUA, CHAO, CORTE, LIMPO, PAPEL, ROBO, SECO, SUJO, TINTA, Texto, r, type Props } from './diagramas-base';
+import { DESENHOS_PARECIDAS } from './diagramas-parecidas';
 
 // O robô dá a volta encostado nas paredes e depois varre o meio em faixas da largura dele:
 // o rastro limpo cobre tudo, menos as 4 pontinhas. Sem a volta, sobravam dentes nas laterais.
@@ -165,6 +151,7 @@ const DESENHOS: Record<NomeDiagrama, (p: Props) => JSX.Element> = {
   'sala-quadrada': SalaQuadrada, 'robo-limpando': RoboLimpando, 'canto-zoom': CantoZoom,
   'robo-quatro-fatias': RoboQuatroFatias, 'canto-raio': CantoRaio,
   'circulo-no-quadrado': CirculoNoQuadrado, 'retangulo-diagonal': RetanguloDiagonal,
+  ...DESENHOS_PARECIDAS,
 };
 
 export function Diagrama({ nome, rotulos }: { nome: NomeDiagrama; rotulos?: string[] }) {

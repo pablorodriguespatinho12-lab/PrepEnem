@@ -198,6 +198,7 @@ export const FIGURAS_PIXEL = [
   'cena-ferrugem-chuva', 'cena-carrinho-pilhas', 'cena-sal-jarra', 'cena-suco-jarra', 'cena-desinfetante-balde',
   // Matemática do banco ENEM (16/11/2026): cada questão com uma situação própria
   'cena-robo-aspirador', 'cena-irrigacao', 'cena-antena-bairro',
+  'cena-porta-quarto', 'cena-palco-holofote', 'cena-trilhas-parque',
 ] as const;
 export type NomeFigura = (typeof FIGURAS_PIXEL)[number];
 /* rotulos: os números da questão escritos nos lugares fixos da figura (até 4). */
@@ -213,7 +214,9 @@ const MAX_ROTULO = 28;
    prévia do robô: "a parte do robô limpando e a divisão de um quarto, perfeito").
    Mostra o PORQUÊ de uma conta (a fatia de 1/4, o canto que sobra). Só entra por
    explicação escrita à mão (components/visual/diagramas.tsx). */
-export const DIAGRAMAS = ['sala-quadrada', 'robo-limpando', 'canto-zoom', 'robo-quatro-fatias', 'canto-raio', 'circulo-no-quadrado', 'retangulo-diagonal'] as const;
+export const DIAGRAMAS = ['sala-quadrada', 'robo-limpando', 'canto-zoom', 'robo-quatro-fatias', 'canto-raio', 'circulo-no-quadrado', 'retangulo-diagonal',
+  // molde do robô (17/11/2026): components/visual/diagramas-parecidas.tsx
+  'porta-abrindo', 'triangulo-centro', 'holofote-palco', 'trilhas-parque'] as const;
 export type NomeDiagrama = (typeof DIAGRAMAS)[number];
 export interface VisualDiagrama {
   tipo: 'diagrama';
