@@ -15,9 +15,9 @@ export async function GET() {
     if (!user) return NextResponse.json({ error: 'Usuário não encontrado' }, { status: 404 });
 
     const exams = await prisma.customExam.findMany({
-      where: { userId: user.id },
+      where: { userId: user.id, arquivada: false },
       orderBy: { createdAt: 'desc' },
-      take: 50,
+      take: 100, // ~40 provas de escada (uma por conteúdo) + revisões
     });
 
     return NextResponse.json({ exams });

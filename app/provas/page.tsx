@@ -6,7 +6,7 @@ import { Trophy, Play, Trash2, BookOpen, Sparkles, Target, AlertCircle, Flame } 
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
 import { CaminhosDoTreino } from '@/components/treino/caminhos-do-treino';
-import { agruparProvas } from '@/lib/provas-grupos';
+import { agruparProvas, degrauDaProva } from '@/lib/provas-grupos';
 
 /* Limiares de dado esparso — mesma regra usada em app/dashboard/page.tsx.
    < 5 questões: sem %. 5–15: % com indicador de baixa confiança. 15+: limpa. */
@@ -19,8 +19,8 @@ const nivelLabels: Record<string, { label: string; dotColor: string; icon: any }
   dificil: { label: 'Difícil', dotColor: 'hsl(var(--chart-3))', icon: Flame },
   enem: { label: 'ENEM', dotColor: 'hsl(var(--chart-4))', icon: Trophy },
   vestibular: { label: 'Vestibular', dotColor: 'hsl(var(--chart-4))', icon: Trophy },
-  // provas por conteúdo do dia 2: cada conteúdo vai do Fácil ao ENEM (12/11/2026)
-  escada: { label: 'Do fácil ao ENEM', dotColor: 'hsl(var(--chart-1))', icon: Target },
+  // uma prova por conteúdo: Fácil → Médio → Difícil → ENEM → ITA (17/11/2026)
+  escada: { label: 'Do fácil ao ITA', dotColor: 'hsl(var(--chart-1))', icon: Target },
 };
 
 export default function ProvasPage() {
@@ -91,6 +91,7 @@ export default function ProvasPage() {
           <AnimatePresence>
             {lista.map((exam, idx) => {
               const nivelInfo = nivelLabels[exam.nivel] || nivelLabels.medio;
+              const daEscada = degrauDaProva(exam.nome);
               const NivelIcon = nivelInfo.icon;
               const isFinalizada = exam.status === 'finalizada';
               const totalQuestoes = exam.totalQuestoes || 0;
@@ -128,9 +129,16 @@ export default function ProvasPage() {
                     </button>
                   </div>
 
-                  <h3 className="font-display type-title font-semibold text-foreground mb-2 line-clamp-2">{exam.nome}</h3>
+                  <h3 className="font-display type-title font-semibold text-foreground mb-2 line-clamp-2">
+                    {daEscada ? `${daEscada.posicao}. ${daEscada.degrau.tema}` : exam.nome}
+                  </h3>
+                  {daEscada && (
+                    <p className="type-meta text-muted-foreground mb-2">
+                      {daEscada.degrau.precisaAntes ? `Precisa antes: ${daEscada.degrau.precisaAntes}` : 'Não depende de outro conteúdo'}
+                    </p>
+                  )}
 
-                  <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-3 type-meta text-muted-foreground">
+                  {!daEscada && <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-3 type-meta text-muted-foreground">
                     {(exam.materias || []).slice(0, 3).map((m: string, i: number) => (
                       <span key={m} className="inline-flex items-center gap-1.5">
                         {i > 0 && <span aria-hidden className="text-border">/</span>}
@@ -143,7 +151,7 @@ export default function ProvasPage() {
                       </span>
                     ))}
                     {(exam.materias || []).length > 3 && <span>+{exam.materias.length - 3}</span>}
-                  </div>
+                  </div>}
 
                   <div className="flex items-center justify-between type-meta text-muted-foreground mb-3">
                     <span data-numeric>{totalQuestoes} questões</span>

@@ -318,6 +318,14 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   por `scripts/criar-reforco-dia-2.ts`. Feito (12/11/2026): 80 questões, 20 por
   área (Física, Química, Biologia, Matemática), 3 ou 4 por conteúdo, cada uma com
   figura em pixel própria do tema (`components/visual/figuras-areas.tsx`).
+- **Escadas por conteúdo (Pablo, 17/11/2026: "só as provas que eu vou usar"; "conteúdo
+  de base antes"):** uma prova por conteúdo, Fácil → Médio → Difícil → ENEM → ITA, 2 de
+  cada (`lib/prova-da-escada.ts`, `scripts/criar-provas-escada.ts`). Ordem e "Precisa antes"
+  em `data/escadas.ts` (fonte única, também do cronograma). Estudar agrupa por matéria
+  (`lib/provas-grupos.ts`); as 15 provas antigas (por nível, por conteúdo do dia 2, amostras)
+  ficaram `arquivada` (não apagadas). Questão sem tema ganha tema pelo subtema
+  (`lib/tema-pelo-subtema.ts`). **Cronograma:** as 5 matérias (Física, Matemática, Português,
+  Biologia, Química) todo dia, sexta segue simulado; o dia avança o degrau da escada.
 - **Prova responde na hora (22/10/2026):** o acerto é conferido no navegador
   (a letra certa já vem com a questão) e a resposta é gravada por trás, com
   3 tentativas; "Próxima" avança sem recarregar a prova. Antes: 1,5 s para ver
