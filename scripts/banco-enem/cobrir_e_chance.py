@@ -5,7 +5,8 @@ ARQUIVO = 'cobrir-e-chance'
 BASE = {'materia': 'Matemática', 'tema': 'Geometria Plana'}
 F = lambda **k: {**BASE, **k}
 PI = 3
-from amostra_cobrir import FICHAS as AMOSTRA  # 01 a 03 no jeito novo (16/11/2026)
+from amostra_cobrir import FICHAS as AMOSTRA  # 01 a 04 no jeito novo (16 e 17/11/2026)
+NA_AMOSTRA = {f['id'] for f in AMOSTRA}
 
 FICHAS = [
 *AMOSTRA,
@@ -255,3 +256,5 @@ F(id='d2-banco-mat-cob-20', resp='D', confere=100 * (1.44 - PI * 0.6 * 0.6) / 1.
   conferencia='Quadrada 1,44; redonda 1,08; (1,44-1,08)/1,44 = 0,25. D. C = 0,36; E = 0,36%; B = 0,36/1,08.',
   sua_vez=('Mesa de raio 1, π = 3, sem sobra. Redonda gasta quanto a menos que a quadrada?', ['25%', '33%', '75%', '50%'], '25%', 'Quadrada 4, redonda 3: 1 de 4.')),
 ]
+# A amostra substitui a ficha antiga de mesmo id (cob-04 virou a porta em 17/11/2026).
+FICHAS = [*AMOSTRA, *(f for f in FICHAS[len(AMOSTRA):] if f['id'] not in NA_AMOSTRA)]

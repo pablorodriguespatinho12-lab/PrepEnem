@@ -71,6 +71,30 @@ def passos_em_letras(f, figura, quadro):
     return passos
 
 
+def tabela(titulo, cabecalho, linhas):
+    return {'tipo': 'tabela', 'titulo': titulo, 'cabecalho': cabecalho, 'linhas': [list(l) for l in linhas]}
+
+
+def passos_aula(f):
+    """Molde da "Aula do Robô Aspirador" (artefato aprovado em 17/11/2026: "copia
+    exatamente essa explicação"): o que eu tenho → equação em letras → uma tela por
+    letra (o seu jeito entra onde o erro acontece) → volta na equação → receita."""
+    a = f['aula']
+    passos = [
+        {'titulo': 'O que eu tenho', 'texto': a.get('tenho_texto', 'Primeiro, tire os números do enunciado.'),
+         'visual': tabela('O que eu tenho', ['Informação', 'Valor'], a['tenho'])},
+        {'titulo': 'A equação em letras', 'texto': f"{a['quer']}\n{a['equacao']}\n{a['porque']}\nAgora é só achar cada letra.",
+         'visual': tabela('As letras', ['Letra', 'O que é'], a['letras'])},
+    ]
+    for t in a['telas']:
+        passos.append({'titulo': t['titulo'], 'texto': t['texto'], **({'visual': t['visual']} if t.get('visual') else {})})
+    passos.append({'titulo': 'Volta na equação', 'texto': a['volta'],
+                   'visual': tabela('As letras', ['Letra', 'Valor'], a['valores'])})
+    passos.append({'titulo': 'Questão parecida? Faça assim', 'texto': f"Pista: {a['pista']}",
+                   'visual': tabela('A receita', ['Passo', a.get('coluna_receita', 'Nesta questão')], a['receita'])})
+    return passos
+
+
 def montar(f):
     certa = f['alts'][LETRAS.index(f['resp'])]
     if 'confere' in f:
@@ -90,10 +114,10 @@ def montar(f):
     # Questão nova (16/11/2026): cena da situação, que aparece na tela da questão e abre
     # a explicação. Sem cena, a figura genérica antiga.
     nome, rotulos = f.get('cena') or f['fig']
-    quadro = {'tipo': 'quadro', **f['quadro']}
+    quadro = {'tipo': 'quadro', **f['quadro']} if 'quadro' in f else None
     figura = {'tipo': 'figura', 'nome': nome, 'titulo': f.get('fig_titulo', 'A situação'), 'rotulos': rotulos}
-    if 'passos_prontos' in f:
-        passos = f['passos_prontos']
+    if 'aula' in f:
+        passos = passos_aula(f)
     elif 'equacao' in f:
         passos = passos_em_letras(f, figura, quadro)
     else:
@@ -139,12 +163,19 @@ def main():
     for nome in sys.argv[1:]:
         sys.path.insert(0, str(pathlib.Path(__file__).parent))
         modulo = importlib.import_module(nome)
-        questoes = [montar(f) for f in modulo.FICHAS]
-        letras = {l: sum(q['resposta'] == l for q in questoes) for l in LETRAS}
-        destino = PASTA / f"{modulo.ARQUIVO}.json"
-        destino.write_text(json.dumps(questoes, ensure_ascii=False, indent=1) + '\n', encoding='utf8')
+        # Um arquivo por tema (o teste do banco quer um tema só por arquivo). Módulo com
+        # temas misturados, como as parecidas com o ENEM 2026, diz o arquivo de cada tema.
+        por_tema = getattr(modulo, 'ARQUIVO_POR_TEMA', None)
+        grupos = {}
+        for f in modulo.FICHAS:
+            grupos.setdefault(por_tema[f['tema']] if por_tema else modulo.ARQUIVO, []).append(f)
+        for arquivo, fichas in grupos.items():
+            questoes = [montar(f) for f in fichas]
+            letras = {l: sum(q['resposta'] == l for q in questoes) for l in LETRAS}
+            destino = PASTA / f"{arquivo}.json"
+            destino.write_text(json.dumps(questoes, ensure_ascii=False, indent=1) + '\n', encoding='utf8')
+            print(f'{destino.name}: {len(questoes)} questões, contas conferidas, letras {letras}')
         gravar_cenas(modulo.FICHAS)
-        print(f'{destino.name}: {len(questoes)} questões, contas conferidas, letras {letras}')
 
 
 if __name__ == '__main__':

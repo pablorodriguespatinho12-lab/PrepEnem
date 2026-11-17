@@ -554,87 +554,156 @@
   "id": "d2-banco-mat-cob-04",
   "materia": "Matemática",
   "tema": "Geometria Plana",
-  "enunciado": "Uma mesa quadrada tem lado de 1,00 m. Uma toalha redonda, com o centro no centro da mesa, deve cobri-la e passar 10 cm além de cada ponta. Use 1,4 como valor de √2.\nO menor diâmetro possível da toalha é",
-  "A": "1,10 m",
-  "B": "1,20 m",
-  "C": "1,40 m",
-  "D": "1,60 m",
-  "E": "1,80 m",
+  "enunciado": "Num quarto, a porta tem 80 cm de largura e abre para dentro, girando presa na dobradiça. Ela abre até encostar na parede, dando um quarto de volta. Para não bater em nada, a parte do chão que a porta varre ao abrir precisa ficar sem móveis. Use π = 3.\nA área do chão que precisa ficar sem móveis é de",
+  "A": "1 600 cm²",
+  "B": "6 400 cm²",
+  "C": "19 200 cm²",
+  "D": "4 800 cm²",
+  "E": "2 400 cm²",
   "resposta": "D",
   "origem": "Banco ENEM do dia 2",
   "explicacao": {
-   "conferencia": "diag 1,4; meia 0,7; +0,1 = 0,8; dobro 1,6. D. B = 1+0,2; C = diagonal; E = 1,4+0,4; A = 1+0,1.",
-   "ideia": "A ponta do quadrado é o ponto mais longe do centro, a meia diagonal: 1,40 ÷ 2 = 0,70. Com a sobra, raio 0,80 e diâmetro 1,60.",
+   "conferencia": "3*80*80/4 = 4800. D. A = 6400-4800; B = 80*80; C = 3*80*80; E = 4800/2.",
+   "ideia": "A ponta da porta gira em volta da dobradiça e desenha 1/4 de círculo de raio 80 cm. Área = 3 × 80 × 80 ÷ 4 = 4 800 cm².",
    "pecas": [
     {
-     "termo": "Diagonal",
-     "significado": "O segmento que liga duas pontas opostas, atravessando o quadrado. No quadrado, mede lado × 1,4."
+     "termo": "Dobradiça",
+     "significado": "A peça onde a porta fica presa e gira."
     }
    ],
    "passos": [
     {
-     "titulo": "A pergunta",
-     "texto": "Mesa quadrada de 1 m. Toalha redonda passando 10 cm das pontas.\nA questão quer o menor diâmetro.",
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
      "visual": {
-      "tipo": "figura",
-      "nome": "figura-plana",
-      "titulo": "A situação",
-      "rotulos": [
-       "lado 1,00 m",
-       "toalha redonda",
-       "sobra 10 cm",
-       "nas pontas"
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Largura da porta",
+        "80 cm"
+       ],
+       [
+        "Quanto ela gira",
+        "1/4 de volta"
+       ],
+       [
+        "π",
+        "3"
+       ]
       ]
      }
     },
     {
-     "titulo": "O que acontece",
-     "texto": "A toalha redonda é presa pelo centro. Quem mais se afasta do centro é a ponta da mesa.\nSe a toalha alcança a ponta, alcança todo o resto."
-    },
-    {
-     "titulo": "Jeito rápido",
-     "texto": "Macete de cobrir: raio da toalha = do centro até a ponta mais longe + sobra.\nDiagonal: 1,00 × 1,4 = 1,40. Do centro à ponta: metade, 0,70.\nRaio: 0,70 + 0,10 = 0,80. Diâmetro: 2 × 0,80 = 1,60.",
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a área do chão que a porta varre ao abrir.\nA = CI ÷ 4 (área varrida = área do círculo inteiro ÷ 4)\nPor que dividir por 4? Uma volta inteira da porta seriam 4 quartos de volta. Ela só dá 1 quarto, então varre 1 dos 4 pedaços do círculo.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "quadro",
-      "titulo": "Toalha na mesa quadrada",
-      "dados": [
-       "L = 1{,}00\\,\\text{m}",
-       "\\text{sobra} = 0{,}10\\,\\text{m}"
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
       ],
-      "formula": "r = \\frac{L\\sqrt{2}}{2} + \\text{sobra}",
-      "legenda": [
-       "L√2: a diagonal"
-      ],
-      "contas": [
-       "1{,}00 \\times 1{,}4 = 1{,}40",
-       "1{,}40 \\div 2 = 0{,}70",
-       "0{,}70 + 0{,}10 = 0{,}80",
-       "2 \\times 0{,}80 = 1{,}60"
-      ],
-      "resultado": "1{,}60\\,\\text{m}",
-      "nota": "A ponta manda, não o lado."
+      "linhas": [
+       [
+        "A",
+        "área varrida (o que a questão quer)"
+       ],
+       [
+        "CI",
+        "área do círculo inteiro"
+       ]
+      ]
      }
     },
     {
-     "titulo": "Por que funciona",
-     "texto": "A diagonal é a hipotenusa de um triângulo com catetos 1 e 1.\nPitágoras: diagonal² = 1 + 1 = 2, então diagonal = √2 ≈ 1,4.\nPor isso a ponta fica a 0,70 do centro, mais longe que o meio do lado (0,50)."
+     "titulo": "Por que vira círculo",
+     "texto": "A dobradiça fica parada. A ponta da porta fica sempre a 80 cm dela.\nTudo que fica à mesma distância de um ponto forma um círculo: o raio é a largura da porta, 80 cm. Aperte e veja.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "porta-abrindo"
+     }
     },
     {
-     "titulo": "A resposta",
-     "texto": "Letra D, 1,60 m.\nB (1,20 m) usou a largura (1,00 + 0,20): a toalha não alcança a ponta.\nC (1,40 m) achou a diagonal e esqueceu a sobra.\nE (1,80 m) somou a sobra 4 vezes."
+     "titulo": "Achando CI (o círculo inteiro)",
+     "texto": "Área do círculo = π × raio × raio.\nCI = 3 × 80 × 80 = 19 200 cm²"
+    },
+    {
+     "titulo": "O seu jeito: o quadrado do canto",
+     "texto": "Parece certo fazer 80 × 80 = 6 400: o quadrado com o lado da porta.\nMas a ponta da porta anda em curva e nunca chega na pontinha rosa do canto.\nO quadrado conta essa pontinha. Por isso 6 400 passa do certo.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "canto-raio",
+      "rotulos": [
+       "r = 80",
+       "r = 80"
+      ]
+     }
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "A = 19 200 ÷ 4 = 4 800 cm²\nLetra D. A porta varre 1/4 do círculo de raio 80.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "CI",
+        "19 200"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: algo gira preso num ponto → desenha círculo; 1/4 de volta → área do círculo ÷ 4.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta porta"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "80 cm, 1/4 de volta, π = 3"
+       ],
+       [
+        "2. Equação em letras",
+        "A = CI ÷ 4"
+       ],
+       [
+        "3. Achar cada letra",
+        "CI = 19 200"
+       ],
+       [
+        "4. Substituir",
+        "19 200 ÷ 4 = 4 800"
+       ]
+      ]
+     }
     }
    ],
    "seuErro": null,
    "checagem": {
-    "pergunta": "Mesa quadrada de lado 3 m, sobra 5 cm, √2 = 1,4. Raio da toalha?",
+    "pergunta": "Porta de 60 cm, 1/4 de volta, π = 3. Área que ela varre?",
     "opcoes": [
-     "2,15 m",
-     "2,10 m",
-     "1,55 m",
-     "4,20 m"
+     "2 700 cm²",
+     "3 600 cm²",
+     "10 800 cm²",
+     "900 cm²"
     ],
-    "certa": "2,15 m",
-    "resposta": "3 × 1,4 = 4,2; metade 2,10; mais 0,05 = 2,15."
+    "certa": "2 700 cm²",
+    "resposta": "3 × 60 × 60 = 10 800; ÷ 4 = 2 700."
    }
   }
  },

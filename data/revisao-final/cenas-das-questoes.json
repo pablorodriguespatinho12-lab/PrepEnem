@@ -279,6 +279,33 @@
         "chegar nos cantos",
         ""
       ]
+    },
+    "d2-banco-mat-cob-04": {
+      "nome": "cena-porta-quarto",
+      "rotulos": [
+        "porta: 80 cm",
+        "1/4 de volta",
+        "π = 3",
+        ""
+      ]
+    },
+    "d2-banco-mat-p26-01": {
+      "nome": "cena-palco-holofote",
+      "rotulos": [
+        "lado: 12 m",
+        "sobra: 1 m",
+        "√3 = 1,7",
+        ""
+      ]
+    },
+    "d2-banco-mat-p26-02": {
+      "nome": "cena-trilhas-parque",
+      "rotulos": [
+        "4 trilhas",
+        "? trilhas",
+        "3 trilhas",
+        "84 caminhos"
+      ]
     }
   }
 }
