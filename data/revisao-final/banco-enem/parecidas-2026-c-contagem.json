@@ -1,0 +1,698 @@
+[
+ {
+  "id": "d2-banco-mat-p26-19",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Num banco de sangue, 4 em cada 10 doadores têm sangue do tipo A. Entre os doadores do tipo A, 1 em cada 5 tem fator Rh negativo. Um doador é sorteado ao acaso.\nA chance de esse doador ser do tipo A e ter Rh negativo é de",
+  "A": "8%",
+  "B": "20%",
+  "C": "32%",
+  "D": "40%",
+  "E": "60%",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "0,4*0,2 = 0,08 = 8%. A. B = só o Rh (1 em 5); C = 0,4*0,8, que é A e Rh positivo; D = só o tipo A; E = 40+20.",
+   "ideia": "Primeiro o doador precisa ser tipo A (0,4) e, dentro desse grupo, ter Rh negativo (0,2). Os dois juntos: 0,4 × 0,2 = 0,08, ou 8%.",
+   "pecas": [
+    {
+     "termo": "Fator Rh",
+     "significado": "Uma marca do sangue. Pode ser positivo ou negativo, além do tipo A, B, AB ou O."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "porcentagem",
+        "nome": "Parte de um todo",
+        "formula": "4 em 10 = 4 ÷ 10 = 0,4 = 40%"
+       },
+       {
+        "figura": "contagem",
+        "nome": "Dois eventos juntos",
+        "formula": "chance dos dois = chance do 1º × chance do 2º"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Tipo A",
+        "4 em 10 = 0,4"
+       ],
+       [
+        "Rh negativo, entre os A",
+        "1 em 5 = 0,2"
+       ],
+       [
+        "Rh positivo, entre os A",
+        "4 em 5 = 0,8"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a chance de ser tipo A e ter Rh negativo, os dois juntos.\nP = A × R (os dois juntos = chance de A × chance de Rh negativo dentro do A)\nPor que multiplicar? Primeiro a pessoa precisa estar no grupo A. Depois, dentro dele, ainda precisa ser Rh negativo. É uma parte de uma parte: metade de metade é 0,5 × 0,5 = 0,25.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "P",
+        "chance dos dois juntos (o que a questão quer)"
+       ],
+       [
+        "A",
+        "chance de ser tipo A"
+       ],
+       [
+        "R",
+        "chance de Rh negativo, entre os A"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando A (o tipo A)",
+     "texto": "4 em cada 10 doadores é tipo A.\nA = 4 ÷ 10 = 0,4"
+    },
+    {
+     "titulo": "Achando R: o seu jeito",
+     "texto": "Parece certo responder 20%, o 1 em 5. Mas esse 1 em 5 vale só dentro do grupo A, que são 0,4 dos doadores. Cuidado também com o 4 em 5: ele é o Rh positivo.\nR = 1 ÷ 5 = 0,2"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "P = A × R = 0,4 × 0,2 = 0,08 = 8%\nLetra A. De cada 100 doadores, 8 são tipo A com Rh negativo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "A",
+        "0,4"
+       ],
+       [
+        "R",
+        "0,2"
+       ],
+       [
+        "P",
+        "0,08 = 8%"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"e\" entre dois eventos, um dentro do outro → multiplique as chances; ache cada chance antes.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "0,4 e 0,2"
+       ],
+       [
+        "2. Equação em letras",
+        "P = A × R"
+       ],
+       [
+        "3. Achar cada letra",
+        "A = 0,4; R = 0,2"
+       ],
+       [
+        "4. Substituir",
+        "0,4 × 0,2 = 0,08"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Metade tem tipo O. Entre os O, 1 em 10 tem Rh negativo. Chance de O e Rh negativo?",
+    "opcoes": [
+     "5%",
+     "10%",
+     "40%",
+     "60%"
+    ],
+    "certa": "5%",
+    "resposta": "0,5 × 0,1 = 0,05, ou 5%."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-p26-20",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Numa fábrica, 1 em cada 20 camisetas sai com defeito na cor, e 1 em cada 10 sai com defeito no tamanho. Os dois defeitos acontecem de forma independente: um não muda a chance do outro. Uma camiseta é sorteada ao acaso.\nA chance de ela ter os dois defeitos é de",
+  "A": "5%",
+  "B": "10%",
+  "C": "15%",
+  "D": "0,5%",
+  "E": "50%",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "(1/20)*(1/10) = 0,005 = 0,5%. D. A = só a cor; B = só o tamanho; C = 5+10, somando; E = 0,05/0,1, dividindo.",
+   "ideia": "Para ter os dois defeitos, a camiseta precisa do da cor (0,05) e também do do tamanho (0,1). Os dois juntos: 0,05 × 0,1 = 0,005, ou 0,5%.",
+   "pecas": [
+    {
+     "termo": "Independentes",
+     "significado": "Um evento não muda a chance do outro. Por isso as chances se multiplicam."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Dois eventos independentes",
+        "formula": "chance dos dois = chance do 1º × chance do 2º"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "De fração para porcentagem",
+        "formula": "1 ÷ 20 = 0,05 = 5%"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Defeito na cor",
+        "1 em 20"
+       ],
+       [
+        "Defeito no tamanho",
+        "1 em 10"
+       ],
+       [
+        "Os defeitos",
+        "independentes"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a chance de a camiseta ter os dois defeitos.\nP = C × T (os dois juntos = chance da cor × chance do tamanho)\nPor que multiplicar? Para ter os dois, é preciso o 1º e também o 2º. Se metade das camisetas é branca e metade das brancas é grande, a chance de branca e grande é metade de metade: 0,5 × 0,5 = 0,25.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "P",
+        "chance dos dois defeitos (o que a questão quer)"
+       ],
+       [
+        "C",
+        "chance do defeito na cor"
+       ],
+       [
+        "T",
+        "chance do defeito no tamanho"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando C (a cor)",
+     "texto": "1 em cada 20 é 1 ÷ 20.\nC = 1 ÷ 20 = 0,05"
+    },
+    {
+     "titulo": "Achando T: o seu jeito",
+     "texto": "1 em cada 10 é 1 ÷ 10.\nT = 1 ÷ 10 = 0,1\nParece certo somar: 0,05 + 0,1 = 0,15, ou 15%. Mas somar dá a chance de ter um defeito ou o outro. Ter os dois exige o 1º e também o 2º: multiplica."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "P = C × T = 0,05 × 0,1 = 0,005 = 0,5%\nLetra D. Só 5 em cada 1 000 camisetas têm os dois defeitos.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "C",
+        "0,05"
+       ],
+       [
+        "T",
+        "0,1"
+       ],
+       [
+        "P",
+        "0,005 = 0,5%"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"os dois\" e eventos que não se influenciam → multiplique as chances; \"um ou outro\" seria outra conta.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1 em 20 e 1 em 10"
+       ],
+       [
+        "2. Equação em letras",
+        "P = C × T"
+       ],
+       [
+        "3. Achar cada letra",
+        "C = 0,05; T = 0,1"
+       ],
+       [
+        "4. Substituir",
+        "0,05 × 0,1 = 0,005"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "1 em 10 tem defeito A e 1 em 5 tem defeito B, independentes. Chance dos dois?",
+    "opcoes": [
+     "2%",
+     "30%",
+     "15%",
+     "50%"
+    ],
+    "certa": "2%",
+    "resposta": "0,1 × 0,2 = 0,02, ou 2%."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-p26-21",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Um calendário mostra a data como dia/mês, como 3/5. Mas algumas pessoas leem como mês/dia. A data tem o mesmo texto nos dois jeitos de ler quando o dia e o mês são o mesmo número, como 4/4. Considere as datas de 1º de janeiro a 30 de junho de um ano comum, com fevereiro de 28 dias. Uma delas é sorteada ao acaso.\nA chance de a data ser lida igual nos dois jeitos é de",
+  "A": "1 em 6",
+  "B": "6 em 181",
+  "C": "12 em 181",
+  "D": "6 em 365",
+  "E": "1 em 12",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "T = 31+28+31+30+31+30 = 181; F = 6 (1/1 a 6/6); P = 6/181. B. A = 1 data por mês, 6 meses; C = 12 datas (um ano todo) em 181; D = 6 em 365 (ano todo); E = 1 em 12.",
+   "ideia": "Entre janeiro e junho há 181 datas, e só 6 têm dia igual ao mês (1/1 até 6/6). A chance é 6 em 181.",
+   "pecas": [
+    {
+     "termo": "Ano comum",
+     "significado": "Ano que não é bissexto: fevereiro tem 28 dias e o ano tem 365 dias."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Chance (probabilidade)",
+        "formula": "datas que servem ÷ todas as datas"
+       },
+       {
+        "figura": "contagem",
+        "nome": "Data lida igual",
+        "formula": "o dia é igual ao mês, como 4/4"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Primeira data",
+        "1º de janeiro"
+       ],
+       [
+        "Última data",
+        "30 de junho"
+       ],
+       [
+        "Fevereiro",
+        "28 dias"
+       ],
+       [
+        "Data lida igual",
+        "dia = mês, como 4/4"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a chance de a data ter dia e mês iguais.\nP = F ÷ T (chance = datas que servem ÷ todas as datas)\nPor que dividir? Chance é a parte que serve dentro do total. Se 3 de 10 bolas são vermelhas, a chance de sortear uma vermelha é 3 ÷ 10.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "P",
+        "chance (o que a questão quer)"
+       ],
+       [
+        "F",
+        "datas com dia e mês iguais"
+       ],
+       [
+        "T",
+        "todas as datas de janeiro a junho"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando T (todas as datas)",
+     "texto": "Some os dias de cada mês, de janeiro a junho.\nJaneiro 31, fevereiro 28, março 31\nAbril 30, maio 31, junho 30\nT = 31 + 28 + 31 + 30 + 31 + 30 = 181"
+    },
+    {
+     "titulo": "Achando F: o seu jeito",
+     "texto": "Parece certo contar 12 datas, uma por mês do ano. Mas só 6 meses entram: janeiro a junho.\nEm cada mês, só 1 data tem dia = mês: 1/1, 2/2, 3/3, 4/4, 5/5 e 6/6.\nF = 6"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "P = F ÷ T = 6 ÷ 181, ou seja, 6 em 181\nLetra B. Cerca de 3 datas em cada 100.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "T",
+        "181"
+       ],
+       [
+        "F",
+        "6"
+       ],
+       [
+        "P",
+        "6 em 181"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: chance de uma data ter uma marca → conte as datas com a marca (F) e todas as datas (T); P = F ÷ T.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1/1 a 30/6, fevereiro de 28 dias"
+       ],
+       [
+        "2. Equação em letras",
+        "P = F ÷ T"
+       ],
+       [
+        "3. Achar cada letra",
+        "T = 181; F = 6"
+       ],
+       [
+        "4. Substituir",
+        "6 ÷ 181"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Só janeiro e fevereiro (59 dias, ano comum). Chance de dia = mês?",
+    "opcoes": [
+     "2 em 59",
+     "1 em 2",
+     "2 em 12",
+     "1 em 59"
+    ],
+    "certa": "2 em 59",
+    "resposta": "Só 1/1 e 2/2 servem: 2. Total: 31 + 28 = 59. Chance: 2 em 59."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-p26-22",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Na escola, o 2º semestre vai de 1º de agosto a 31 de outubro. A data aparece como dia/mês, como 4/9, e algumas pessoas leem como mês/dia. A data tem o mesmo texto nos dois jeitos de ler quando o dia e o mês são o mesmo número, como 9/9. Uma data desse período é sorteada ao acaso.\nA chance de ela ser lida igual nos dois jeitos é de",
+  "A": "3 em 31",
+  "B": "1 em 3",
+  "C": "12 em 92",
+  "D": "8 em 92",
+  "E": "3 em 92",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "T = 31+30+31 = 92; F = 3 (8/8, 9/9, 10/10); P = 3/92. E. A = 3 em um mês só; B = 1 data por mês em 3 meses; C = 12 datas (um ano todo); D = só a data 8/8 e outras 8.",
+   "ideia": "De agosto a outubro há 31 + 30 + 31 = 92 datas, e só 3 têm dia igual ao mês: 8/8, 9/9 e 10/10. A chance é 3 em 92.",
+   "pecas": [
+    {
+     "termo": "Chance",
+     "significado": "Quantas vezes o que você quer pode acontecer, dividido por todas as vezes possíveis."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Chance (probabilidade)",
+        "formula": "datas que servem ÷ todas as datas"
+       },
+       {
+        "figura": "contagem",
+        "nome": "Data lida igual",
+        "formula": "o dia é igual ao mês, como 9/9"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Primeira data",
+        "1º de agosto"
+       ],
+       [
+        "Última data",
+        "31 de outubro"
+       ],
+       [
+        "Meses",
+        "agosto 31, setembro 30, outubro 31"
+       ],
+       [
+        "Data lida igual",
+        "dia = mês, como 9/9"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a chance de a data ter dia e mês iguais.\nP = F ÷ T (chance = datas que servem ÷ todas as datas)\nPor que dividir? Chance é a parte que serve dentro do total. Se 2 de 8 cartas são ases, a chance de sortear um ás é 2 ÷ 8.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "P",
+        "chance (o que a questão quer)"
+       ],
+       [
+        "F",
+        "datas com dia e mês iguais"
+       ],
+       [
+        "T",
+        "todas as datas de agosto a outubro"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando T (todas as datas)",
+     "texto": "Some os dias dos 3 meses.\nAgosto 31, setembro 30, outubro 31\nT = 31 + 30 + 31 = 92"
+    },
+    {
+     "titulo": "Achando F: o seu jeito",
+     "texto": "Parece certo contar 12 datas, uma por mês do ano. Mas só 3 meses entram: agosto, setembro e outubro.\nEm cada mês, só 1 data tem dia = mês: 8/8, 9/9 e 10/10.\nF = 3"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "P = F ÷ T = 3 ÷ 92, ou seja, 3 em 92\nLetra E. Cerca de 3 datas em cada 100.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "T",
+        "92"
+       ],
+       [
+        "F",
+        "3"
+       ],
+       [
+        "P",
+        "3 em 92"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: chance de uma data ter uma marca → conte as datas com a marca (F) e todas as datas (T); P = F ÷ T.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1/8 a 31/10"
+       ],
+       [
+        "2. Equação em letras",
+        "P = F ÷ T"
+       ],
+       [
+        "3. Achar cada letra",
+        "T = 92; F = 3"
+       ],
+       [
+        "4. Substituir",
+        "3 ÷ 92"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Só novembro e dezembro (61 dias). Chance de dia = mês?",
+    "opcoes": [
+     "2 em 61",
+     "2 em 12",
+     "1 em 61",
+     "11 em 61"
+    ],
+    "certa": "2 em 61",
+    "resposta": "Só 11/11 e 12/12 servem: 2. Total: 30 + 31 = 61. Chance: 2 em 61."
+   }
+  }
+ }
+]

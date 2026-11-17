@@ -1,6 +1,6 @@
 import { loadEnvConfig } from '@next/env';
 loadEnvConfig(process.cwd());
-import { readFileSync } from 'fs';
+import { existsSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { PrismaClient } from '@prisma/client';
 import { validarExplicacao } from '../lib/tutor/validar';
@@ -26,6 +26,9 @@ const PROVAS = [
   { nivel: 'medio', nome: 'Dia 2 · 2 Médio' },
   { nivel: 'dificil', nome: 'Dia 2 · 3 Difícil' },
   { nivel: 'enem', nome: 'Dia 2 · 4 ENEM real' },
+  // Um degrau acima do ENEM, estilo banca difícil (Pablo, 17/11/2026: "treinar com 20 kg
+  // para os 10 ficarem leves"). Arquivos acima-<area>.json; a área sem arquivo ainda fica de fora.
+  { nivel: 'acima', nome: 'Dia 2 · 5 Nível acima' },
 ] as const;
 // Natureza antes, como no caderno de verdade (questões 91 a 135, depois 136 a 180).
 const AREAS = ['natureza', 'matematica'] as const;
@@ -38,7 +41,8 @@ interface Questao {
 }
 
 const lerProva = (nivel: string): Questao[] =>
-  AREAS.flatMap((a) => JSON.parse(readFileSync(join(PASTA, `${nivel}-${a}.json`), 'utf8')) as Questao[]);
+  AREAS.map((a) => join(PASTA, `${nivel}-${a}.json`)).filter(existsSync)
+    .flatMap((arquivo) => JSON.parse(readFileSync(arquivo, 'utf8')) as Questao[]);
 
 const normalizar = (t: string) => t.replace(/\s+/g, ' ').trim().slice(0, INICIO_COMPARADO);
 
@@ -64,7 +68,8 @@ const dadosDaQuestao = (q: Questao, nivel: string) => ({
   alternativaA: q.A, alternativaB: q.B, alternativaC: q.C, alternativaD: q.D, alternativaE: q.E,
   respostaCorreta: q.resposta,
   materia: q.materia, subtema: q.tema, tema: q.tema,
-  dificuldade: nivel, nivel, origem: ORIGEM,
+  // "acima" é difícil para o resto do site (mesmo jeito de lib/treino-degraus.ts).
+  dificuldade: nivel === 'acima' ? 'dificil' : nivel, nivel, origem: ORIGEM,
 });
 
 async function gravarQuestoes(questoes: Questao[], nivel: string): Promise<void> {
@@ -103,9 +108,10 @@ async function main() {
 
   for (const p of provas) {
     await gravarQuestoes(p.questoes, p.nivel);
-    const ja = await prisma.customExam.findFirst({ where: { userId: user.id, nome: p.nome, status: 'pendente' } });
+    // Prova que já existe (começada ou não) só ganha as questões e aulas novas: não duplica.
+    const ja = await prisma.customExam.findFirst({ where: { userId: user.id, nome: p.nome } });
     if (ja) {
-      console.log(`${p.nome}: questões atualizadas; a prova já existia (não começada).`);
+      console.log(`${p.nome}: questões e aulas atualizadas; a prova já existia.`);
       continue;
     }
     const ids = p.questoes.map((q) => q.id);

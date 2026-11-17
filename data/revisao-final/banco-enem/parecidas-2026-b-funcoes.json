@@ -1,0 +1,158 @@
+[
+ {
+  "id": "d2-banco-mat-p26-13",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "Um foguete de brinquedo é lançado do chão. Sua altura h, em metros, t segundos depois do lançamento, é dada por h = −2t² + 12t, até ele voltar ao chão.\nA altura máxima que o foguete atinge é de",
+  "A": "3 m",
+  "B": "18 m",
+  "C": "12 m",
+  "D": "36 m",
+  "E": "16 m",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "t = -12/(2*(-2)) = 3; h = -2*9 + 12*3 = 18. B. A = o tempo 3; C = o número 12 da fórmula; D = 12*3; E = h(2) = -8+24.",
+   "ideia": "A trajetória é uma parábola virada para baixo, e o ponto mais alto é o vértice. Ele ocorre em t = 12 ÷ 4 = 3 s, e h = −2 × 9 + 36 = 18 m.",
+   "pecas": [
+    {
+     "termo": "Vértice",
+     "significado": "O ponto mais alto da parábola virada para baixo. Ali a altura é máxima."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Instante do ponto mais alto",
+        "formula": "t = −b ÷ (2 × a)"
+       },
+       {
+        "figura": "grafico",
+        "nome": "Altura nesse instante",
+        "formula": "ponha esse t na fórmula de h"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Fórmula da altura",
+        "h = −2t² + 12t"
+       ],
+       [
+        "Valor de a (junto de t²)",
+        "−2"
+       ],
+       [
+        "Valor de b (junto de t)",
+        "12"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a altura máxima do foguete.\nH = −2 × T × T + 12 × T (altura máxima = a fórmula de h com o T do ponto mais alto)\nPor que usar o T do ponto mais alto? A fórmula dá a altura em cada segundo. A maior altura acontece num segundo só: o do vértice da parábola.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "H",
+        "altura máxima (o que a questão quer)"
+       ],
+       [
+        "T",
+        "segundo do ponto mais alto"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando T: o seu jeito",
+     "texto": "Parece certo marcar 3 como resposta. Mas T = 3 é em SEGUNDOS, e a questão pede metros.\nPara achar T: t = −b ÷ (2 × a).\nT = −12 ÷ (2 × −2) = −12 ÷ −4 = 3 s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "H = −2 × 3 × 3 + 12 × 3 = −18 + 36 = 18\nLetra B. O foguete chega a 18 m, no 3º segundo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "T",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: trajetória em parábola, pede ponto mais alto → ache t = −b ÷ (2 × a) e ponha esse t na fórmula de h.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Neste foguete"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "a = −2, b = 12"
+       ],
+       [
+        "2. Equação em letras",
+        "H = −2 × T × T + 12 × T"
+       ],
+       [
+        "3. Achar cada letra",
+        "T = 3"
+       ],
+       [
+        "4. Substituir",
+        "−18 + 36 = 18"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "h = −t² + 6t. Em que segundo a altura é máxima?",
+    "opcoes": [
+     "3 s",
+     "6 s",
+     "9 s",
+     "1 s"
+    ],
+    "certa": "3 s",
+    "resposta": "t = −6 ÷ (2 × −1) = −6 ÷ −2 = 3."
+   }
+  }
+ }
+]

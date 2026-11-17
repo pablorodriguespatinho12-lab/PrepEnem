@@ -29,18 +29,37 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "O aluguel começa em R$ 1 200, sobe 10% e depois sobe mais 5% em cima do valor novo. A pergunta é o valor no fim.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "porcentagem",
+                "nome": "Aumentar 10%",
+                "formula": "valor × 1,10"
+              },
+              {
+                "figura": "porcentagem",
+                "nome": "Aumentar 5%",
+                "formula": "valor × 1,05"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "O quê",
+              "Informação",
               "Valor"
             ],
             "linhas": [
               [
-                "aluguel no começo",
+                "Aluguel de hoje",
                 "R$ 1 200"
               ],
               [
@@ -49,95 +68,88 @@
               ],
               [
                 "2º reajuste",
-                "5% sobre o novo"
-              ],
-              [
-                "aluguel no fim",
-                "?"
+                "5% sobre o aluguel já reajustado"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "No 1º ano, 10% de 1 200 são 120: o aluguel vai a 1 320. No 2º ano, os 5% são de 1 320, e não de 1 200: 5% de 1 320 são 66.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer o aluguel depois dos dois reajustes.\nV = A1 × 1,05 (aluguel final = aluguel depois do 1º reajuste, mais 5%)\nPor que multiplicar? Aumentar 5% é ficar com 100% + 5% = 105% do valor. 105% é 1,05. Um produto de R$ 100 com 5% a mais passa a custar 100 × 1,05 = 105.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Ano a ano",
+            "titulo": "As letras",
             "cabecalho": [
-              "Momento",
-              "Aumento",
-              "Aluguel"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "começo",
-                "-",
-                "1 200"
+                "V",
+                "aluguel final (o que a questão quer)"
               ],
               [
-                "1º reajuste",
-                "+120",
+                "A1",
+                "aluguel depois do 1º reajuste"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Achando A1 (aluguel depois do 1º reajuste)",
+          "texto": "Aumentar 10% é multiplicar por 1,10.\nA1 = 1 200 × 1,10 = 1 320"
+        },
+        {
+          "titulo": "O seu jeito: somar 10% e 5%",
+          "texto": "Parece certo somar 10% + 5% = 15% e fazer 1 200 × 1,15 = 1 380.\nMas o 5% é sobre os R$ 1 320, não sobre os R$ 1 200.\n5% de 1 320 é mais que 5% de 1 200, então o aumento é maior que 15%."
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "V = 1 320 × 1,05 = 1 386\nLetra E. O aluguel passou a ser R$ 1 386.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "A1",
                 "1 320"
-              ],
-              [
-                "2º reajuste",
-                "+66",
-                "1 386"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Porcentagem: aumentos seguidos: um de cada vez.\n10% de 1 200 = 120: fica 1 320.\n5% de 1 320 é a metade de 10% (132): 66. Fica 1 320 + 66 = R$ 1 386.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Dois reajustes seguidos",
-            "dados": [
-              "\\text{começo} = 1\\,200",
-              "10\\% \\to 1{,}10",
-              "5\\% \\to 1{,}05"
-            ],
-            "formula": "P = \\text{começo} \\times 1{,}10 \\times 1{,}05",
-            "legenda": [
-              "começo: aluguel do começo",
-              "$P$: aluguel depois dos dois reajustes"
-            ],
-            "contas": [
-              "P = 1\\,200 \\times 1{,}10 \\times 1{,}05",
-              "P = 1\\,320 \\times 1{,}05"
-            ],
-            "resultado": "P = 1\\,386",
-            "nota": "O aluguel passa a R$ 1 386."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "O segundo aumento também incide sobre os 120 reais do primeiro.\n5% de 120 são 6 reais a mais.\nPor isso dois aumentos seguidos dão um pouco mais que a soma das porcentagens.\n1 380 + 6 = 1 386, e não 1 380.",
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: aumento depois de aumento → multiplique um fator por vez; nunca some as porcentagens.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Somar ou multiplicar",
+            "titulo": "A receita",
             "cabecalho": [
-              "Conta",
-              "Aluguel"
+              "Passo",
+              "Nesta questão"
             ],
             "linhas": [
               [
-                "somando 15%",
-                "1 380"
+                "1. Tabela do que eu tenho",
+                "1 200; 10%; 5%"
               ],
               [
-                "10% e depois 5%",
-                "1 386"
+                "2. Equação em letras",
+                "V = A1 × 1,05"
+              ],
+              [
+                "3. Achar cada letra",
+                "A1 = 1 320"
+              ],
+              [
+                "4. Substituir",
+                "1 320 × 1,05 = 1 386"
               ]
             ]
           }
-        },
-        {
-          "titulo": "A resposta",
-          "texto": "Letra E, R$ 1 386,00.\nA (R$ 1 215,00): soma 15 reais em vez de 15%.\nB (R$ 1 260,00): faz só o segundo reajuste, de 5%.\nC (R$ 1 320,00): para no primeiro reajuste.\nD (R$ 1 380,00): soma 10% e 5% como se os dois fossem sobre os R$ 1 200.",
-          "visual": null
         }
       ],
       "seuErro": null,
@@ -180,114 +192,130 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "Sabemos quanto sobrou no fim (90 fones) e as porcentagens vendidas em cada dia. A pergunta é quanto havia no começo.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "porcentagem",
+                "nome": "Porcentagem de um valor",
+                "formula": "valor × (% ÷ 100)"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "Dia",
-              "O que aconteceu"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "sábado",
+                "Sábado",
                 "vendeu 60% do estoque"
               ],
               [
-                "domingo",
+                "Domingo",
                 "vendeu 25% do que sobrou"
               ],
               [
-                "segunda",
-                "sobraram 90"
-              ],
-              [
-                "começo",
-                "?"
+                "Sobrou na segunda",
+                "90 fones"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Se vendeu 60%, sobraram 40%.\nNo domingo vendeu 25% dessa sobra, então ficaram 75% dela: três quartos (dividir por 4 e pegar 3).\nTrês quartos de 40: 40 ÷ 4 = 10, e 3 × 10 = 30.\nSobraram 30% do estoque inicial.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer o estoque de antes da liquidação.\nQ = 90 ÷ F (estoque = 90 ÷ fração que sobrou no fim)\nPor que dividir? Os 90 fones são só uma parte do estoque. Se 30% de um total dá 30, o total é 30 ÷ 0,30 = 100. Aqui é igual: 90 ÷ F.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "O que sobra em cada dia",
+            "titulo": "As letras",
             "cabecalho": [
-              "Dia",
-              "Vendeu",
-              "Sobrou do total"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "sábado",
-                "60%",
-                "40%"
+                "Q",
+                "estoque de antes (o que a questão quer)"
               ],
               [
-                "domingo",
-                "25% da sobra",
-                "30%"
+                "S1",
+                "fração que sobrou do sábado"
+              ],
+              [
+                "F",
+                "fração que sobrou no fim"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Porcentagem: veja quanto sobrou e volte ao todo.\nSábado vendeu 60%: sobram 40%. Domingo, 25% disso (um quarto de 40% = 10%): sobram 30%.\n30% = 90 → 10% = 30 → 100% = 300 fones.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Volta ao estoque inicial",
-            "dados": [
-              "\\text{sobra} = 90",
-              "\\text{sábado: fica } 0{,}40",
-              "\\text{domingo: fica } 0{,}75"
-            ],
-            "formula": "E \\times 0{,}40 \\times 0{,}75 = 90",
-            "legenda": [
-              "$E$: fones no começo"
-            ],
-            "contas": [
-              "30\\% = 90",
-              "10\\% = 90 \\div 3 = 30",
-              "100\\% = 30 \\times 10"
-            ],
-            "resultado": "E = 300",
-            "nota": "Havia 300 fones antes da liquidação."
-          }
+          "titulo": "Achando S1 (fração que sobrou do sábado)",
+          "texto": "Vendeu 60%, então sobrou 100% − 60% = 40%.\nS1 = 0,40"
         },
         {
-          "titulo": "Por que funciona",
-          "texto": "Confira andando para frente: 60% de 300 são 180 vendidos, sobram 120. 25% de 120 são 30 vendidos, sobram 90. Os 25% do domingo são de 120, e não de 300: por isso não dá para somar 60% com 25%.",
+          "titulo": "Achando F: o seu jeito",
+          "texto": "Parece certo somar 60% + 25% = 85% vendidos e achar que sobrou 15%.\nMas o 25% é só do que sobrou do sábado, não do estoque todo.\nNo domingo ficou 75% dos 40%.\nF = 0,40 × 0,75 = 0,30"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "Q = 90 ÷ 0,30 = 300\nLetra C. Antes da liquidação eram 300 fones.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Conferindo com 300",
+            "titulo": "As letras",
             "cabecalho": [
-              "Momento",
-              "Fones"
+              "Letra",
+              "Valor"
             ],
             "linhas": [
               [
-                "começo",
-                "300"
+                "S1",
+                "0,40"
               ],
               [
-                "depois do sábado",
-                "120"
-              ],
-              [
-                "depois do domingo",
-                "90"
+                "F",
+                "0,30"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra C, 300 fones.\nA (120): esquece o sábado: 90 ÷ 0,75.\nB (225): esquece o domingo: 90 ÷ 0,40.\nD (360): trata os 90 como 25%: 90 × 4.\nE (600): soma 60% + 25% como se fossem do mesmo total e acha que sobraram 15%.",
-          "visual": null
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: \"% do que sobrou\" → multiplique as frações que sobram; pediu o total de antes → divida.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "60%; 25% do que sobrou; 90 fones"
+              ],
+              [
+                "2. Equação em letras",
+                "Q = 90 ÷ F"
+              ],
+              [
+                "3. Achar cada letra",
+                "S1 = 0,40; F = 0,30"
+              ],
+              [
+                "4. Substituir",
+                "90 ÷ 0,30 = 300"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -330,114 +358,134 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "São duas promoções diferentes para a mesma compra de 4 potes. A pergunta é qual sai mais barata e por quanto.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "porcentagem",
+                "nome": "Desconto de 20%",
+                "formula": "preço × 0,80"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "O quê",
+              "Informação",
               "Valor"
             ],
             "linhas": [
               [
-                "preço do pote",
+                "Preço de 1 pote",
                 "R$ 40"
               ],
               [
-                "loja A",
+                "Loja A",
                 "leve 4, pague 3"
               ],
               [
-                "loja B",
-                "20% em cada pote"
+                "Loja B",
+                "20% de desconto em cada pote"
               ],
               [
-                "potes",
-                "4"
+                "Quantidade",
+                "4 potes"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Na loja A ela paga 3 potes: 3 × 40 = 120. Na loja B, cada pote perde 20% (8 reais) e sai por 32; os 4 dão 128.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer saber qual loja sai mais barata e quanto.\nD = PB − PA (diferença = o que paga na B − o que paga na A)\nPor que tirar um do outro? Para saber quanto uma loja é mais barata, veja a diferença dos dois preços: 128 contra 120 dá 8 de diferença.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Total de 4 potes",
+            "titulo": "As letras",
             "cabecalho": [
-              "Loja",
-              "Conta",
-              "Total"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "A",
-                "3 × 40",
-                "R$ 120"
+                "D",
+                "diferença (o que a questão quer)"
               ],
               [
-                "B",
-                "4 × 32",
-                "R$ 128"
+                "PA",
+                "o que paga na loja A"
+              ],
+              [
+                "PB",
+                "o que paga na loja B"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Porcentagem: faça a mesma conta para as duas lojas.\nLoja A: leva 4, paga 3 × 40 = R$ 120.\nLoja B: 20% de 40 = 8, cada pote sai 32; 4 × 32 = 128. A sai R$ 8 mais barata.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Comparando as lojas",
-            "dados": [
-              "p = 40",
-              "n = 4",
-              "\\text{B: desconto } 20\\% \\to 0{,}80"
-            ],
-            "formula": "\\text{diferença} = B - A",
-            "legenda": [
-              "$A$: total na loja A",
-              "$B$: total na loja B"
-            ],
-            "contas": [
-              "A = 3 \\times 40 = 120",
-              "B = 4 \\times 40 \\times 0{,}80 = 128",
-              "\\text{diferença} = 128 - 120"
-            ],
-            "resultado": "\\text{diferença} = 8",
-            "nota": "A loja A sai 8 reais mais barata."
-          }
+          "titulo": "Achando PA (o que paga na loja A)",
+          "texto": "Leva 4, mas paga só 3 potes.\nPA = 3 × 40 = 120"
         },
         {
-          "titulo": "Por que funciona",
-          "texto": "Na loja A, cada pote sai em média por 120 ÷ 4 = 30 reais: 10 reais a menos em 40, que é 25% de desconto. Na loja B o desconto é 20%. Desconto maior, total menor.",
+          "titulo": "Achando PB: o seu jeito",
+          "texto": "Parece certo achar que \"leve 4, pague 3\" é 20% de desconto, igual à loja B.\nMas 1 pote de graça em 4 é 40 ÷ 160 = 25%. Esse desconto é maior.\nNa loja B, cada pote sai por 40 × 0,80 = 32.\nPB = 4 × 32 = 128"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "D = 128 − 120 = 8\nLetra A. A loja A sai R$ 8,00 mais barata.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Desconto de cada loja",
+            "titulo": "As letras",
             "cabecalho": [
-              "Loja",
-              "Preço por pote",
-              "Desconto"
+              "Letra",
+              "Valor"
             ],
             "linhas": [
               [
-                "A",
-                "R$ 30",
-                "25%"
+                "PA",
+                "120"
               ],
               [
-                "B",
-                "R$ 32",
-                "20%"
+                "PB",
+                "128"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra A.\nB: troca as lojas. A B é a mais cara.\nC: acha que pagar 3 de 4 é parecido com 20%, mas é 25%.\nD: compara um pote só (30 contra 32), mas a pessoa leva 4.\nE: compara com 4 potes sem desconto nenhum: 160 − 120.",
-          "visual": null
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: duas promoções → calcule o total pago em cada uma, na mesma quantidade, e compare.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "R$ 40; leve 4 pague 3; 20%; 4 potes"
+              ],
+              [
+                "2. Equação em letras",
+                "D = PB − PA"
+              ],
+              [
+                "3. Achar cada letra",
+                "PA = 120; PB = 128"
+              ],
+              [
+                "4. Substituir",
+                "128 − 120 = 8"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -479,129 +527,130 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "A dívida começa em R$ 2 000 e cresce 10% por mês, sempre sobre o valor do mês anterior. A pergunta é o valor depois de 3 meses.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "porcentagem",
+                "nome": "Aumentar 10%",
+                "formula": "valor × 1,10"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "O quê",
+              "Informação",
               "Valor"
             ],
             "linhas": [
               [
-                "dívida no começo",
+                "Dívida de hoje",
                 "R$ 2 000"
               ],
               [
-                "juros",
+                "Juros",
                 "10% ao mês, compostos"
               ],
               [
-                "tempo",
-                "3 meses"
-              ],
-              [
-                "dívida no fim",
-                "?"
+                "Tempo",
+                "3 meses sem pagar"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Mês 1: 10% de 2 000 = 200, dívida de 2 200. Mês 2: 10% de 2 200 = 220, dívida de 2 420. Mês 3: 10% de 2 420 = 242, dívida de 2 662.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a dívida depois de 3 meses.\nD3 = D2 × 1,10 (dívida do mês 3 = dívida do mês 2, mais 10%)\nPor que multiplicar de novo a cada mês? Juros compostos são juros sobre o total do mês anterior. Cada mês, a dívida do mês passado vira 110% dela: × 1,10.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Mês a mês",
+            "titulo": "As letras",
             "cabecalho": [
-              "Mês",
-              "Juros do mês",
-              "Dívida"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "0",
-                "-",
-                "2 000"
+                "D3",
+                "dívida depois de 3 meses (o que a questão quer)"
               ],
               [
-                "1",
-                "200",
-                "2 200"
+                "D1",
+                "dívida depois de 1 mês"
               ],
               [
-                "2",
-                "220",
-                "2 420"
-              ],
-              [
-                "3",
-                "242",
-                "2 662"
+                "D2",
+                "dívida depois de 2 meses"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Porcentagem: aumentos seguidos: 10% de cada vez.\n2 000 + 200 = 2 200. 2 200 + 220 = 2 420.\n2 420 + 242 = R$ 2 662.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Dívida com juros compostos",
-            "dados": [
-              "C = 2\\,000",
-              "i = 10\\% \\to 1{,}1",
-              "t = 3\\,\\text{meses}"
-            ],
-            "formula": "M = C \\times 1{,}1 \\times 1{,}1 \\times 1{,}1",
-            "legenda": [
-              "$C$: dívida do começo",
-              "$M$: dívida no fim"
-            ],
-            "contas": [
-              "M = 2\\,000 \\times 1{,}1 = 2\\,200",
-              "M = 2\\,200 \\times 1{,}1 = 2\\,420",
-              "M = 2\\,420 \\times 1{,}1"
-            ],
-            "resultado": "M = 2\\,662",
-            "nota": "Em 3 meses a dívida vira R$ 2 662."
-          }
+          "titulo": "Achando D1 (dívida depois de 1 mês)",
+          "texto": "D1 = 2 000 × 1,10 = 2 200"
         },
         {
-          "titulo": "Por que funciona",
-          "texto": "Nos juros simples, os juros seriam sempre 200 por mês, dando 2 600.\nNos compostos, os juros do mês entram na dívida e também pagam juros: 200, depois 220, depois 242.\nPor isso a dívida cresce cada vez mais rápido.",
+          "titulo": "Achando D2 (dívida depois de 2 meses)",
+          "texto": "O 2º mês cobra 10% sobre 2 200, não sobre 2 000.\nD2 = 2 200 × 1,10 = 2 420"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "D3 = 2 420 × 1,10 = 2 662\nLetra E. Depois de 3 meses a dívida é R$ 2 662.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Simples x compostos",
+            "titulo": "As letras",
             "cabecalho": [
-              "Mês",
-              "Simples",
-              "Compostos"
+              "Letra",
+              "Valor"
             ],
             "linhas": [
               [
-                "1",
-                "2 200",
+                "D1",
                 "2 200"
               ],
               [
-                "2",
-                "2 400",
+                "D2",
                 "2 420"
-              ],
-              [
-                "3",
-                "2 600",
-                "2 662"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra E, R$ 2 662,00.\nA (R$ 662,00): são só os juros, sem a dívida.\nB (R$ 2 200,00): conta só 1 mês.\nC (R$ 2 420,00): para no 2º mês.\nD (R$ 2 600,00): usa juros simples. A questão descartou isso ao dizer que os juros são sobre o total do mês anterior.",
-          "visual": null
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: juros \"compostos\" → a cada mês, multiplique o total do mês anterior por 1,10.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "R$ 2 000; 10% ao mês; 3 meses"
+              ],
+              [
+                "2. Equação em letras",
+                "D3 = D2 × 1,10"
+              ],
+              [
+                "3. Achar cada letra",
+                "D1 = 2 200; D2 = 2 420"
+              ],
+              [
+                "4. Substituir",
+                "2 420 × 1,10 = 2 662"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -644,125 +693,134 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "Três sócias investiram valores diferentes. O lucro de R$ 36 000 é dividido de acordo com quanto cada uma pôs. A pergunta é a parte da Carla.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "porcentagem",
+                "nome": "Porcentagem de um valor",
+                "formula": "valor × (% ÷ 100)"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "Sócia",
-              "Investiu"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
                 "Bia",
-                "R$ 20 000"
+                "investiu R$ 20 000"
               ],
               [
                 "Carla",
-                "R$ 30 000"
+                "investiu R$ 30 000"
               ],
               [
                 "Dani",
-                "R$ 50 000"
+                "investiu R$ 50 000"
               ],
               [
-                "lucro",
-                "R$ 36 000"
+                "Lucro do ano",
+                "R$ 36 000, dividido pelo investido"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Somando tudo, elas investiram R$ 100 000. A Carla pôs 30 000 desses 100 000, ou seja, 30% do total. Então ela recebe 30% do lucro.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a parte do lucro que coube à Carla.\nP = F × 36 000 (parte da Carla = fração dela × lucro)\nPor que multiplicar a fração pelo lucro? Quem pôs 30 de cada 100 leva 30 de cada 100 do lucro. Com lucro de 200, a parte seria 0,30 × 200 = 60.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "A fatia de cada uma",
+            "titulo": "As letras",
             "cabecalho": [
-              "Sócia",
-              "Fração",
-              "Lucro"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "Bia",
-                "20%",
-                "7 200"
+                "P",
+                "parte da Carla (o que a questão quer)"
               ],
               [
-                "Carla",
-                "30%",
-                "10 800"
+                "T",
+                "total investido"
               ],
               [
-                "Dani",
-                "50%",
-                "18 000"
+                "F",
+                "fração que a Carla investiu"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Porcentagem: ache 10% e multiplique.\nA Carla pôs 30 mil de um total de 100 mil: 30%.\n10% de 36 000 = 3 600; 30% = 3 × 3 600 = R$ 10 800.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Divisão proporcional",
-            "dados": [
-              "c = 30\\,000",
-              "T = 100\\,000",
-              "L = 36\\,000"
-            ],
-            "formula": "\\text{parte} = \\dfrac{c}{T} \\times L",
-            "legenda": [
-              "$c$: o que a Carla investiu",
-              "$T$: total investido",
-              "$L$: lucro do ano"
-            ],
-            "contas": [
-              "\\text{Carla: } 30\\,000 \\text{ de } 100\\,000 = 30\\%",
-              "10\\% \\text{ de } 36\\,000 = 3\\,600",
-              "30\\% = 3 \\times 3\\,600"
-            ],
-            "resultado": "\\text{parte} = 10\\,800",
-            "nota": "A Carla recebe R$ 10 800."
-          }
+          "titulo": "Achando T (total investido)",
+          "texto": "T = 20 000 + 30 000 + 50 000 = 100 000"
         },
         {
-          "titulo": "Por que funciona",
-          "texto": "Confira somando as três partes: 7 200 + 10 800 + 18 000 = 36 000, o lucro inteiro. E a Dani, que pôs mais que o dobro da Bia, recebe mais que o dobro.",
+          "titulo": "Achando F: o seu jeito",
+          "texto": "Parece certo dividir o lucro igual: 36 000 ÷ 3 = 12 000 para cada uma.\nMas elas combinaram dividir pelo que cada uma investiu, e cada uma pôs um valor.\nA Carla pôs 30 000 dos 100 000.\nF = 30 000 ÷ 100 000 = 0,30"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "P = 0,30 × 36 000 = 10 800\nLetra B. A Carla fica com R$ 10 800.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "A soma fecha",
+            "titulo": "As letras",
             "cabecalho": [
-              "Parte",
-              "Reais"
+              "Letra",
+              "Valor"
             ],
             "linhas": [
               [
-                "Bia",
-                "7 200"
+                "T",
+                "100 000"
               ],
               [
-                "Carla",
-                "10 800"
-              ],
-              [
-                "Dani",
-                "18 000"
-              ],
-              [
-                "total",
-                "36 000"
+                "F",
+                "0,30"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra B, R$ 10 800,00.\nA (R$ 7 200,00): é a parte da Bia (20%).\nC (R$ 12 000,00): divide igual para as três. Só valeria se todas tivessem investido o mesmo.\nD (R$ 14 400,00): usa 40%, que não é a parte de ninguém.\nE (R$ 18 000,00): é a parte da Dani (50%).",
-          "visual": null
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: \"proporcional ao que cada um pôs\" → fração de cada um = o que pôs ÷ total; parte = fração × lucro.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "20 000; 30 000; 50 000; lucro 36 000"
+              ],
+              [
+                "2. Equação em letras",
+                "P = F × 36 000"
+              ],
+              [
+                "3. Achar cada letra",
+                "T = 100 000; F = 0,30"
+              ],
+              [
+                "4. Substituir",
+                "0,30 × 36 000 = 10 800"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -805,121 +863,134 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "Mudam três coisas: a encomenda dobrou, há mais costureiras e mais horas por dia. A pergunta é quantos dias leva.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "contagem",
+                "nome": "Trabalho feito",
+                "formula": "pessoas × horas × dias × ritmo"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "O quê",
-              "Antes",
-              "Agora"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "costureiras",
-                "8",
-                "10"
+                "Antes",
+                "8 costureiras, 6 h por dia, 5 dias"
               ],
               [
-                "horas por dia",
-                "6",
-                "8"
+                "Antes fizeram",
+                "240 camisetas"
               ],
               [
-                "camisetas",
-                "240",
-                "480"
+                "Agora",
+                "10 costureiras, 8 h por dia"
               ],
               [
-                "dias",
-                "5",
-                "?"
+                "Nova encomenda",
+                "480 camisetas"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Antes: 8 × 6 × 5 = 240 horas de trabalho (somando todas as costureiras) para 240 camisetas.\nOu seja, 1 camiseta por hora de uma costureira.\nAgora, por dia, são 10 × 8 = 80 horas de trabalho.\nIsso dá 80 camisetas por dia.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer os dias para fazer 480 camisetas.\nD = 480 ÷ C (dias = camisetas ÷ camisetas por dia)\nPor que dividir? Se a oficina faz 80 camisetas por dia e quer 480, ela precisa de quantos grupos de 80? 480 ÷ 80.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Horas de trabalho",
+            "titulo": "As letras",
             "cabecalho": [
-              "Equipe",
-              "Horas por dia",
-              "Camisetas por dia"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "antes: 8 × 6",
-                "48",
-                "48"
+                "D",
+                "dias (o que a questão quer)"
               ],
               [
-                "agora: 10 × 8",
-                "80",
+                "R",
+                "camisetas por costureira por hora"
+              ],
+              [
+                "C",
+                "camisetas por dia, agora"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Achando R (camisetas por costureira por hora)",
+          "texto": "Antes: 8 costureiras × 6 horas × 5 dias = 240 horas de trabalho.\nFizeram 240 camisetas.\nR = 240 ÷ 240 = 1 camiseta por hora"
+        },
+        {
+          "titulo": "Achando C: o seu jeito",
+          "texto": "Parece certo dobrar: 240 virou 480, então 5 dias viram 10.\nMas a oficina também ficou mais forte: tem mais gente e mais horas por dia.\nPor dia, agora: 10 costureiras × 8 horas × 1 camiseta.\nC = 10 × 8 × 1 = 80"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "D = 480 ÷ 80 = 6\nLetra A. A encomenda sai em 6 dias.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "R",
+                "1"
+              ],
+              [
+                "C",
                 "80"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Grandezas: conte o trabalho total.\nAntes: 8 costureiras × 6 h × 5 dias = 240 horas de costureira, para 240 camisetas: 1 hora cada.\n480 camisetas = 480 horas. Agora, por dia: 10 × 8 = 80 horas. 480 ÷ 80 = 6 dias.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Dias para a encomenda",
-            "dados": [
-              "\\text{ritmo} = \\dfrac{240}{8 \\times 6 \\times 5} = 1",
-              "c = 10",
-              "h = 8",
-              "N = 480"
-            ],
-            "formula": "d = \\dfrac{N}{c \\times h \\times \\text{ritmo}}",
-            "legenda": [
-              "$N$: camisetas da encomenda",
-              "$c$: costureiras",
-              "$h$: horas por dia"
-            ],
-            "contas": [
-              "d = \\dfrac{480}{10 \\times 8 \\times 1}",
-              "d = \\dfrac{480}{80}"
-            ],
-            "resultado": "d = 6",
-            "nota": "A encomenda fica pronta em 6 dias."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "Camisetas a mais pedem mais dias (direta). Costureiras e horas a mais pedem menos dias (inversa).\nPartindo de 5 dias: o dobro de camisetas dá × 2.\nCom dias de verdade: o que 8 costureiras fazem em 10 dias, 10 costureiras fazem em 8 (8 × 10 = 80 = 10 × 8).\nCostureiras, antes 8, agora 10: × 8 ÷ 10 = × 0,8 (10 dias × 0,8 = 8 dias).\nHoras, antes 6, agora 8: × 6 ÷ 8 = × 0,75 (6 de 8 é 3 de 4).\nJuntando: 5 × 2 = 10. Depois 10 × 0,8 = 8. Depois 8 × 0,75 = 6.",
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: gente × horas × dias → ache o ritmo de 1 pessoa em 1 hora; depois refaça com o novo time.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Cada mudança",
+            "titulo": "A receita",
             "cabecalho": [
-              "Mudança",
-              "Efeito nos dias"
+              "Passo",
+              "Nesta questão"
             ],
             "linhas": [
               [
-                "camisetas 240 → 480",
-                "× 2"
+                "1. Tabela do que eu tenho",
+                "8 × 6 × 5 = 240; agora 10 × 8; 480"
               ],
               [
-                "costureiras 8 → 10",
-                "× 0,8"
+                "2. Equação em letras",
+                "D = 480 ÷ C"
               ],
               [
-                "horas 6 → 8",
-                "× 0,75"
+                "3. Achar cada letra",
+                "R = 1; C = 80"
+              ],
+              [
+                "4. Substituir",
+                "480 ÷ 80 = 6"
               ]
             ]
           }
-        },
-        {
-          "titulo": "A resposta",
-          "texto": "Letra A, 6 dias.\nB (7,5): esquece as costureiras a mais: 10 × 6 ÷ 8.\nC (8): esquece as horas a mais: 10 × 8 ÷ 10.\nD (10): só olha a encomenda que dobrou.\nE (12,5): trata as costureiras como se mais gente desse mais dias.",
-          "visual": null
         }
       ],
       "seuErro": null,
@@ -962,116 +1033,151 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "Ida e volta têm a mesma distância, mas velocidades diferentes. A pergunta é a velocidade média do passeio inteiro.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "media",
+                "nome": "Velocidade média",
+                "formula": "distância total ÷ tempo total"
+              },
+              {
+                "figura": "media",
+                "nome": "Tempo de um trecho",
+                "formula": "distância ÷ velocidade"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "Trecho",
-              "Distância",
-              "Velocidade"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "ida",
-                "18 km",
+                "Distância da ida",
+                "18 km"
+              ],
+              [
+                "Velocidade na ida",
                 "24 km/h"
               ],
               [
-                "volta",
-                "18 km",
+                "Distância da volta",
+                "18 km"
+              ],
+              [
+                "Velocidade na volta",
                 "12 km/h"
-              ],
-              [
-                "total",
-                "36 km",
-                "?"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Tempo = distância ÷ velocidade. Ida: 18 ÷ 24; 18 de 24 é 3 de 4 (divida os dois por 6), e 3 ÷ 4 = 0,75 h (45 minutos). Volta: 18 ÷ 12 = 1,5 h (1 hora e meia). O passeio todo leva 0,75 + 1,5 = 2,25 h.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a velocidade média de ida e volta.\nVM = 36 ÷ T (velocidade média = distância total ÷ tempo total)\nPor que dividir a distância total pelo tempo total? Velocidade é quanto anda por hora. Se anda 36 km em 2 horas, anda 36 ÷ 2 = 18 km em 1 hora.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "O tempo de cada trecho",
+            "titulo": "As letras",
             "cabecalho": [
-              "Trecho",
-              "Conta",
-              "Tempo"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "ida",
-                "18 ÷ 24",
-                "0,75 h"
+                "VM",
+                "velocidade média (o que a questão quer)"
               ],
               [
-                "volta",
-                "18 ÷ 12",
-                "1,5 h"
+                "TI",
+                "tempo da ida"
               ],
               [
-                "total",
-                "0,75 + 1,5",
-                "2,25 h"
+                "TV",
+                "tempo da volta"
+              ],
+              [
+                "T",
+                "tempo total"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Grandezas: ache o tempo de cada trecho.\nIda: 18 ÷ 24 = 0,75 h. Volta: 18 ÷ 12 = 1,5 h. Total: 2,25 h para 36 km.\nMédia: 36 ÷ 2,25. Multiplique os dois por 4: 144 ÷ 9 = 16 km/h.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Velocidade média",
-            "dados": [
-              "d = 18 + 18 = 36\\,\\text{km}",
-              "\\text{ida} = 18 \\div 24 = 0{,}75\\,\\text{h}",
-              "\\text{volta} = 18 \\div 12 = 1{,}5\\,\\text{h}"
-            ],
-            "formula": "v = \\dfrac{d}{\\text{ida} + \\text{volta}}",
-            "legenda": [
-              "$d$: quilômetros de ida e volta",
-              "ida, volta: horas de cada trecho",
-              "o traço: dividir o de cima pelo de baixo"
-            ],
-            "contas": [
-              "v = \\dfrac{36}{0{,}75 + 1{,}5}",
-              "v = \\dfrac{36}{2{,}25}"
-            ],
-            "resultado": "v = 16\\,\\text{km/h}",
-            "nota": "Na média, 16 km a cada hora."
-          }
+          "titulo": "Achando TI (tempo da ida)",
+          "texto": "Tempo = distância ÷ velocidade.\nTI = 18 ÷ 24 = 0,75 hora"
         },
         {
-          "titulo": "Por que funciona",
-          "texto": "O ciclista ficou 1,5 h a 12 km/h e só 0,75 h a 24 km/h. O tempo lento pesa o dobro, por isso a média (16) fica abaixo de 18, a média simples das duas velocidades.",
+          "titulo": "Achando TV (tempo da volta)",
+          "texto": "TV = 18 ÷ 12 = 1,5 hora"
+        },
+        {
+          "titulo": "Achando T: o seu jeito",
+          "texto": "Parece certo tirar a média das velocidades: (24 + 12) ÷ 2 = 18.\nMas ele ficou mais tempo na velocidade baixa, a de 12.\nA média tem que contar o tempo de cada trecho.\nT = 0,75 + 1,5 = 2,25 horas"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "VM = 36 ÷ 2,25 = 16\nLetra C. Foram 36 km em 2,25 h: 16 km por hora.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Quanto tempo em cada ritmo",
+            "titulo": "As letras",
             "cabecalho": [
-              "Velocidade",
-              "Tempo"
+              "Letra",
+              "Valor"
             ],
             "linhas": [
               [
-                "24 km/h",
-                "0,75 h"
+                "TI",
+                "0,75"
               ],
               [
-                "12 km/h",
-                "1,5 h"
+                "TV",
+                "1,5"
+              ],
+              [
+                "T",
+                "2,25"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra C, 16 km/h.\nA (8 km/h): divide só os 18 km da ida pelo tempo total.\nB (12 km/h): é só a velocidade da volta.\nD (18 km/h): tira a média de 24 e 12 sem olhar o tempo.\nE (24 km/h): é só a velocidade da ida.",
-          "visual": null
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: velocidade média de ida e volta → distância total ÷ tempo total, nunca média das velocidades.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "18 km a 24; 18 km a 12"
+              ],
+              [
+                "2. Equação em letras",
+                "VM = 36 ÷ T"
+              ],
+              [
+                "3. Achar cada letra",
+                "TI = 0,75; TV = 1,5; T = 2,25"
+              ],
+              [
+                "4. Substituir",
+                "36 ÷ 2,25 = 16"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -1114,108 +1220,130 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "A planta mostra a sala menor que a real. A pergunta é a área de verdade, em m².",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "retangulo",
+                "nome": "Área do retângulo",
+                "formula": "base × altura"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "O quê",
+              "Informação",
               "Valor"
             ],
             "linhas": [
               [
-                "escala",
-                "1 : 50"
+                "Escala",
+                "1 : 50 (1 cm no papel = 50 cm no chão)"
               ],
               [
-                "comprimento na planta",
-                "12 cm"
+                "Sala na planta",
+                "12 cm por 8 cm"
               ],
               [
-                "largura na planta",
-                "8 cm"
-              ],
-              [
-                "área real",
-                "? m²"
+                "Conversão",
+                "1 m = 100 cm"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Cada lado real é 50 vezes o da planta. 12 cm viram 600 cm, que são 6 m. 8 cm viram 400 cm, que são 4 m.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a área real da sala, em m².\nA = LA × LB (área = lado real A × lado real B)\nPor que multiplicar os lados? Área do retângulo é quantos quadradinhos cabem: 6 fileiras de 4 quadradinhos dão 6 × 4 = 24.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Planta e realidade",
+            "titulo": "As letras",
             "cabecalho": [
-              "Lado",
-              "Planta",
-              "Real"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "comprimento",
-                "12 cm",
-                "6 m"
+                "A",
+                "área real (o que a questão quer)"
               ],
               [
-                "largura",
-                "8 cm",
-                "4 m"
+                "LA",
+                "lado real de 12 cm da planta"
+              ],
+              [
+                "LB",
+                "lado real de 8 cm da planta"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Grandezas: escala: 1 cm da planta = 50 cm de verdade.\n12 cm → 600 cm = 6 m. 8 cm → 400 cm = 4 m.\nÁrea: 6 × 4 = 24 m².",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Área real da sala",
-            "dados": [
-              "12\\,\\text{cm} \\times 50 = 600\\,\\text{cm} = 6\\,\\text{m}",
-              "8\\,\\text{cm} \\times 50 = 400\\,\\text{cm} = 4\\,\\text{m}"
-            ],
-            "formula": "A = c \\times l",
-            "legenda": [
-              "$c$: comprimento real",
-              "$l$: largura real"
-            ],
-            "contas": [
-              "A = 6 \\times 4"
-            ],
-            "resultado": "A = 24\\,\\text{m}^2",
-            "nota": "A sala tem 24 m² de piso."
-          }
+          "titulo": "Achando LA (lado real do 12 cm)",
+          "texto": "Cada cm da planta vale 50 cm no chão.\n12 × 50 = 600 cm\n600 cm ÷ 100 = 6 m\nLA = 6 m"
         },
         {
-          "titulo": "Por que funciona",
-          "texto": "A escala vale para cada lado.\nComo a área usa dois lados, ela cresce 50 × 50 = 2 500 vezes.\n96 cm² (quadradinhos de 1 cm de lado) × 2 500 = 240 000 cm².\nIsso dá 24 m², porque 1 m² tem 100 × 100 = 10 000 cm².",
+          "titulo": "Achando LB: o seu jeito",
+          "texto": "Parece certo achar a área na planta e multiplicar por 50: 12 × 8 = 96, e 96 × 50 = 4 800.\nMas a escala vale para o COMPRIMENTO, e cada lado cresce 50 vezes.\nA escala tem que entrar nos dois lados, antes de multiplicar.\n8 × 50 = 400 cm\n400 cm ÷ 100 = 4 m\nLB = 4 m"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "A = 6 × 4 = 24 m²\nLetra D. A sala tem 24 m².",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Duas contas, mesmo valor",
+            "titulo": "As letras",
             "cabecalho": [
-              "Caminho",
-              "Resultado"
+              "Letra",
+              "Valor"
             ],
             "linhas": [
               [
-                "lados em metro: 6 × 4",
-                "24 m²"
+                "LA",
+                "6"
               ],
               [
-                "96 cm² × 2 500 ÷ 10 000",
-                "24 m²"
+                "LB",
+                "4"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra D, 24 m².\nA (0,48): aplica a escala uma vez só na área.\nB (4,8): faz o mesmo erro e ainda divide por 1 000.\nC (20): é o contorno da sala, 6 + 4 + 6 + 4, não o chão.\nE (240): divide os cm² por 1 000, mas 1 m² tem 10 000 cm².",
-          "visual": null
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: planta em escala → passe cada lado para o tamanho real (× escala) e só depois ache a área.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "1 : 50; 12 cm por 8 cm; 1 m = 100 cm"
+              ],
+              [
+                "2. Equação em letras",
+                "A = LA × LB"
+              ],
+              [
+                "3. Achar cada letra",
+                "LA = 6 m; LB = 4 m"
+              ],
+              [
+                "4. Substituir",
+                "6 × 4 = 24 m²"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -1258,130 +1386,164 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "A agente juntou as famílias pelo número de crianças. A pergunta é a média de crianças por família.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "media",
+                "nome": "Média com pesos",
+                "formula": "soma de (valor × quantas vezes) ÷ total"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "Crianças",
-              "Famílias"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "0",
-                "4"
+                "Sem criança",
+                "4 famílias"
               ],
               [
-                "1",
-                "6"
+                "Com 1 criança",
+                "6 famílias"
               ],
               [
-                "2",
-                "7"
+                "Com 2 crianças",
+                "7 famílias"
               ],
               [
-                "3",
-                "3"
+                "Com 3 crianças",
+                "3 famílias"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Conte todas as crianças: as 6 famílias de 1 criança somam 6; as 7 de 2 somam 14; as 3 de 3 somam 9. Total: 29 crianças em 20 famílias.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a média de crianças por família.\nM = S ÷ N (média = total de crianças ÷ número de famílias)\nPor que dividir? Média é repartir igual. Se 29 crianças fossem repartidas igual entre 20 famílias, cada uma ficaria com 29 ÷ 20.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Crianças de cada grupo",
+            "titulo": "As letras",
             "cabecalho": [
-              "Crianças",
-              "Famílias",
-              "Total"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "0",
-                "4",
-                "0"
+                "M",
+                "média (o que a questão quer)"
               ],
               [
-                "1",
-                "6",
-                "6"
+                "S",
+                "total de crianças"
               ],
               [
-                "2",
-                "7",
-                "14"
+                "N",
+                "número de famílias"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Achando S (total de crianças)",
+          "texto": "Cada grupo conta: crianças por família × quantas famílias.\nSomando as 4 linhas: S = 0 + 6 + 14 + 9 = 29",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "Crianças em cada grupo",
+            "cabecalho": [
+              "Grupo",
+              "Conta"
+            ],
+            "linhas": [
+              [
+                "Sem criança",
+                "0 × 4 = 0"
               ],
               [
-                "3",
-                "3",
-                "9"
+                "1 criança",
+                "1 × 6 = 6"
               ],
               [
-                "soma",
-                "20",
+                "2 crianças",
+                "2 × 7 = 14"
+              ],
+              [
+                "3 crianças",
+                "3 × 3 = 9"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Achando N (número de famílias)",
+          "texto": "N = 4 + 6 + 7 + 3 = 20 famílias"
+        },
+        {
+          "titulo": "O seu jeito: média sem contar as famílias",
+          "texto": "Parece certo fazer a média de 0, 1, 2 e 3: (0 + 1 + 2 + 3) ÷ 4 = 1,5.\nMas assim cada número vale 1 família só, e há mais famílias com 1 e 2 crianças que com 0 ou 3.\nPor isso a conta certa conta cada grupo pela quantidade de famílias dele."
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "M = 29 ÷ 20 = 1,45\nLetra A. Em média, 1,45 criança por família.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "S",
                 "29"
+              ],
+              [
+                "N",
+                "20"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Estatística: média = total ÷ quantos, com pesos.\nCrianças: 4 × 0 + 6 × 1 + 7 × 2 + 3 × 3 = 0 + 6 + 14 + 9 = 29, em 20 famílias.\n29 ÷ 20: multiplique os dois por 5. 145 ÷ 100 = 1,45.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Média de crianças",
-            "dados": [
-              "0 \\times 4 = 0",
-              "1 \\times 6 = 6",
-              "2 \\times 7 = 14",
-              "3 \\times 3 = 9",
-              "\\text{famílias} = 20"
-            ],
-            "formula": "\\text{média} = \\dfrac{\\text{total de crianças}}{\\text{total de famílias}}",
-            "legenda": [
-              "o traço: dividir o de cima pelo de baixo"
-            ],
-            "contas": [
-              "\\text{média} = \\dfrac{0 + 6 + 14 + 9}{20}",
-              "\\text{média} = \\dfrac{29}{20}"
-            ],
-            "resultado": "\\text{média} = 1{,}45",
-            "nota": "Em média, 1,45 criança por família."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "A média é o valor que cada família teria se as crianças fossem repartidas igualmente.\nDividir 29 crianças por 4 tipos de família não tem sentido: são 20 famílias.\nE 1,5 ignora que há mais famílias com poucas crianças.",
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: tabela de \"quantos tem cada um\" → soma de (valor × quantidade) ÷ total de quantidades.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "De onde vêm os erros",
+            "titulo": "A receita",
             "cabecalho": [
-              "Conta",
-              "Dá"
+              "Passo",
+              "Nesta questão"
             ],
             "linhas": [
               [
-                "29 ÷ 20 (certo)",
-                "1,45"
+                "1. Tabela do que eu tenho",
+                "4, 6, 7 e 3 famílias; 0 a 3 crianças"
               ],
               [
-                "(0+1+2+3) ÷ 4",
-                "1,5"
+                "2. Equação em letras",
+                "M = S ÷ N"
               ],
               [
-                "29 ÷ 4",
-                "7,25"
+                "3. Achar cada letra",
+                "S = 29; N = 20"
+              ],
+              [
+                "4. Substituir",
+                "29 ÷ 20 = 1,45"
               ]
             ]
           }
-        },
-        {
-          "titulo": "A resposta",
-          "texto": "Letra A, 1,45.\nB (1,5): faz a média de 0, 1, 2 e 3 como se cada um aparecesse uma vez só.\nC (2): é a moda, o número de crianças mais comum.\nD (5): divide as 20 famílias pelos 4 grupos.\nE (7,25): divide as 29 crianças por 4 em vez de 20.",
-          "visual": null
         }
       ],
       "seuErro": null,
@@ -1424,103 +1586,135 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "São 10 tempos, com dois bem altos (30 e 40). A pergunta é quanto a mediana fica abaixo da média.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "media",
+                "nome": "Média",
+                "formula": "soma ÷ quantidade"
+              },
+              {
+                "figura": "grafico",
+                "nome": "Mediana",
+                "formula": "valor do meio, com tudo em ordem"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "Cliente",
-              "Minutos"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "1 a 5",
-                "5, 12, 8, 30, 7"
+                "Tempos (min)",
+                "5, 12, 8, 30, 7, 9, 6, 40, 10, 8"
               ],
               [
-                "6 a 10",
-                "9, 6, 40, 10, 8"
+                "Quantidade de clientes",
+                "10"
+              ],
+              [
+                "Quer comparar",
+                "média e mediana"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Para a mediana, ponha em ordem: 5, 6, 7, 8, 8, 9, 10, 12, 30, 40. São 10 números, então o meio fica entre o 5º (8) e o 6º (9). A mediana é a média deles: 8,5.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer quanto a mediana é menor que a média.\nD = ME − MD (diferença = média − mediana)\nPor que tirar uma da outra? Para saber \"menor em quanto\", subtraia: 13,5 menos 8,5 é a distância entre os dois números.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Em ordem",
+            "titulo": "As letras",
             "cabecalho": [
-              "Posição",
-              "Minutos"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "1º a 4º",
-                "5, 6, 7, 8"
+                "D",
+                "diferença (o que a questão quer)"
               ],
               [
-                "5º e 6º (meio)",
-                "8 e 9"
+                "ME",
+                "média"
               ],
               [
-                "7º a 10º",
-                "10, 12, 30, 40"
+                "MD",
+                "mediana"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Estatística: média = total ÷ quantos; mediana = o do meio.\nMédia: soma 135 ÷ 10 = 13,5. Mediana: em ordem, os do meio são 8 e 9, então 8,5.\n13,5 − 8,5 = 5 minutos. Os dois tempos grandes puxam a média, não a mediana.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Média menos mediana",
-            "dados": [
-              "\\text{soma} = 135",
-              "n = 10",
-              "5^{\\text{o}} = 8,\\; 6^{\\text{o}} = 9"
-            ],
-            "formula": "\\text{diferença} = \\text{média} - \\text{mediana}",
-            "legenda": [
-              "$n$: quantos clientes"
-            ],
-            "contas": [
-              "\\text{média} = \\dfrac{135}{10} = 13{,}5",
-              "\\text{mediana} = \\dfrac{8 + 9}{2} = 8{,}5",
-              "\\text{diferença} = 13{,}5 - 8{,}5"
-            ],
-            "resultado": "\\text{diferença} = 5",
-            "nota": "A mediana fica 5 minutos abaixo da média."
-          }
+          "titulo": "Achando ME (média)",
+          "texto": "Soma: 5 + 12 + 8 + 30 + 7 + 9 + 6 + 40 + 10 + 8 = 135\nME = 135 ÷ 10 = 13,5"
         },
         {
-          "titulo": "Por que funciona",
-          "texto": "Os dois clientes de 30 e 40 minutos somam 70 dos 135 minutos e puxam a média para 13,5, mais que 8 dos 10 clientes esperaram. A mediana só olha o meio da fila em ordem, então esses dois não a mudam.",
+          "titulo": "Achando MD: o seu jeito",
+          "texto": "Parece certo pegar um número só do meio, como o 8.\nMas são 10 tempos, e 10 é par: o meio são dois números.\nEm ordem: 5, 6, 7, 8, 8, 9, 10, 12, 30, 40\nOs do meio são 8 e 9.\nMD = (8 + 9) ÷ 2 = 8,5"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "D = 13,5 − 8,5 = 5\nLetra B. A mediana é 5 minutos menor que a média.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Quem esperou menos que 13,5",
+            "titulo": "As letras",
             "cabecalho": [
-              "Grupo",
-              "Clientes"
+              "Letra",
+              "Valor"
             ],
             "linhas": [
               [
-                "menos de 13,5 min",
-                "8"
+                "ME",
+                "13,5"
               ],
               [
-                "mais de 13,5 min",
-                "2"
+                "MD",
+                "8,5"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra B, 5 minutos.\nA (4,5): usa só o 6º valor (9) como mediana: 13,5 − 9.\nC (5,5): usa só o 5º valor (8), que também é o que mais se repete: 13,5 − 8.\nD (8,5): é a mediana, não a diferença.\nE (13,5): é a média, não a diferença.",
-          "visual": null
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: mediana → ponha em ordem e pegue o meio; se a quantidade é par, tire a média dos dois do meio.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "10 tempos; média e mediana"
+              ],
+              [
+                "2. Equação em letras",
+                "D = ME − MD"
+              ],
+              [
+                "3. Achar cada letra",
+                "ME = 13,5; MD = 8,5"
+              ],
+              [
+                "4. Substituir",
+                "13,5 − 8,5 = 5"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -1563,115 +1757,134 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "Sai uma pessoa de 54 anos e entra uma de 18. A pergunta é a nova média, com os mesmos 24 funcionários.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "media",
+                "nome": "Média",
+                "formula": "soma ÷ quantidade"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "O quê",
+              "Informação",
               "Valor"
             ],
             "linhas": [
               [
-                "funcionários",
+                "Funcionários",
                 "24"
               ],
               [
-                "média antes",
+                "Média de idade antes",
                 "30 anos"
               ],
               [
-                "saiu",
+                "Quem saiu",
                 "54 anos"
               ],
               [
-                "entrou",
+                "Quem entrou",
                 "18 anos"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "A soma das idades era 24 × 30 = 720. Tirando os 54 do aposentado, fica 666. Somando os 18 do aprendiz, fica 684. A quantidade continua 24.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a nova média de idade.\nM = S ÷ 24 (média nova = soma nova das idades ÷ 24)\nPor que ir pela soma? A média esconde as idades. Mas média × quantidade devolve a soma: 24 × 30 = 720. Daí é só tirar um e pôr outro.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "A soma das idades",
+            "titulo": "As letras",
             "cabecalho": [
-              "Momento",
-              "Soma"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "antes",
+                "M",
+                "média nova (o que a questão quer)"
+              ],
+              [
+                "S0",
+                "soma das idades antes"
+              ],
+              [
+                "S",
+                "soma das idades agora"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Achando S0 (soma das idades antes)",
+          "texto": "Média × quantidade = soma.\nS0 = 24 × 30 = 720"
+        },
+        {
+          "titulo": "Achando S: o seu jeito",
+          "texto": "Parece certo achar que trocar 1 pessoa por 1 pessoa não muda a média, ficando 30.\nMas quem saiu tem 54 e quem entrou tem 18: a soma caiu 54 − 18 = 36.\nS = 720 − 54 + 18 = 684"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "M = 684 ÷ 24 = 28,5\nLetra C. A média nova é 28,5 anos.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "S0",
                 "720"
               ],
               [
-                "tirou 54",
-                "666"
-              ],
-              [
-                "pôs 18",
+                "S",
                 "684"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Estatística: média = total ÷ quantos; veja quanto o total mudou.\nSai 54 e entra 18: o total cai 36.\nEspalhado em 24 pessoas: 36 ÷ 24 = 1,5 a menos cada. Média: 30 − 1,5 = 28,5.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Nova média de idade",
-            "dados": [
-              "24 \\text{ funcionários}",
-              "\\text{média antes} = 30",
-              "\\text{sai } 54,\\; \\text{entra } 18"
-            ],
-            "formula": "\\text{nova} = \\dfrac{24 \\times 30 - 54 + 18}{24}",
-            "legenda": [
-              "nova: a média depois da troca",
-              "o traço: dividir o de cima pelo de baixo"
-            ],
-            "contas": [
-              "\\text{nova} = \\dfrac{720 - 54 + 18}{24}",
-              "\\text{nova} = \\dfrac{684}{24}"
-            ],
-            "resultado": "\\text{nova} = 28{,}5",
-            "nota": "A média cai para 28,5 anos."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "A troca tirou 54 − 18 = 36 anos da soma. Esses 36 anos são repartidos entre os 24 funcionários: 36 de 24 é 3 de 2 (divida os dois por 12), e 3 ÷ 2 = 1,5 ano a menos para cada. 30 − 1,5 = 28,5.",
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: troca de um valor na média → volte para a soma (média × quantidade), faça a troca e divida de novo.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Outro caminho",
+            "titulo": "A receita",
             "cabecalho": [
-              "Conta",
-              "Valor"
+              "Passo",
+              "Nesta questão"
             ],
             "linhas": [
               [
-                "anos que saíram da soma",
-                "36"
+                "1. Tabela do que eu tenho",
+                "24 pessoas; média 30; sai 54; entra 18"
               ],
               [
-                "por funcionário",
-                "36 ÷ 24 = 1,5"
+                "2. Equação em letras",
+                "M = S ÷ 24"
               ],
               [
-                "nova média",
-                "30 − 1,5 = 28,5"
+                "3. Achar cada letra",
+                "S0 = 720; S = 684"
+              ],
+              [
+                "4. Substituir",
+                "684 ÷ 24 = 28,5"
               ]
             ]
           }
-        },
-        {
-          "titulo": "A resposta",
-          "texto": "Letra C, 28,5 anos.\nA (24): faz a média só de 30 e 18.\nB (27,75): tira os 54 e esquece de somar os 18 do aprendiz.\nD (30): acha que a média não muda porque o número de pessoas não mudou. Mas as idades mudaram.\nE (31,5): soma a diferença em vez de tirar.",
-          "visual": null
         }
       ],
       "seuErro": null,
@@ -1714,118 +1927,130 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "A conta tem uma parte fixa e uma parte que depende do quanto passou de 10 m³. A família gastou 17 m³.\nCom número primeiro: quem gasta 12 m³ passa 12 − 10 = 2 e paga 40 + 6 × 2 = 52.\nNo desenho, x é o gasto do mês no lugar do 12: a conta é 40 + 6 × (x − 10).",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
           "visual": {
-            "tipo": "legenda",
-            "titulo": "Conta para quem passa de 10 m³",
-            "partes": [
+            "tipo": "formulas",
+            "itens": [
               {
-                "texto": "C",
-                "rotulo": "valor da conta",
-                "cor": "a"
-              },
-              {
-                "texto": "= 40",
-                "rotulo": "tarifa fixa"
-              },
-              {
-                "texto": "+ 6",
-                "rotulo": "reais por m³ a mais"
-              },
-              {
-                "texto": "\\times (x - 10)",
-                "rotulo": "m³ que passaram de 10",
-                "cor": "b"
+                "figura": "contagem",
+                "nome": "Conta com faixa",
+                "formula": "tarifa fixa + extra × preço do extra"
               }
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Dos 17 m³, os primeiros 10 estão dentro da tarifa fixa. Só 17 − 10 = 7 m³ são cobrados a parte, a R$ 6 cada.",
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Partes da conta",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "Parte",
-              "Reais"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "tarifa fixa (até 10 m³)",
-                "40"
+                "Tarifa fixa",
+                "R$ 40 até 10 m³"
               ],
               [
-                "7 m³ a mais × 6",
+                "Passou de 10 m³",
+                "R$ 6 por m³ que passar"
+              ],
+              [
+                "Gasto em março",
+                "17 m³"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A equação em letras",
+          "texto": "A questão quer o valor da conta de março.\nC = 40 + X (conta = tarifa fixa + extra pelo que passou)\nPor que somar? Os R$ 40 já cobrem os 10 primeiros m³. O que passou é pago a mais, por cima. Dois valores que se juntam: soma.\nAgora é só achar cada letra.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "O que é"
+            ],
+            "linhas": [
+              [
+                "C",
+                "conta (o que a questão quer)"
+              ],
+              [
+                "E",
+                "m³ que passaram de 10"
+              ],
+              [
+                "X",
+                "extra pago pelo que passou"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Achando E (m³ que passaram de 10)",
+          "texto": "E = 17 − 10 = 7 m³"
+        },
+        {
+          "titulo": "Achando X: o seu jeito",
+          "texto": "Parece certo cobrar R$ 6 em todos os 17 m³: 17 × 6 = 102.\nMas os 10 primeiros m³ já estão nos R$ 40. Os R$ 6 valem só para o que passou.\nX = 7 × 6 = 42"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "C = 40 + 42 = 82\nLetra C. A conta de março foi R$ 82,00.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "E",
+                "7"
+              ],
+              [
+                "X",
                 "42"
-              ],
-              [
-                "total",
-                "82"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Funções: fixo + preço × quantidade.\nPassou de 10 m³: 17 − 10 = 7 m³ a mais.\n40 + 6 × 7 = 40 + 42 = R$ 82.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Conta de 17 m³",
-            "dados": [
-              "x = 17\\,\\text{m}^3",
-              "\\text{fixo} = 40",
-              "\\text{por m}^3 = 6"
-            ],
-            "formula": "C = 40 + 6 \\times (x - 10)",
-            "legenda": [
-              "$x$: m³ gastos no mês",
-              "$C$: valor da conta"
-            ],
-            "contas": [
-              "C = 40 + 6 \\times (17 - 10)",
-              "C = 40 + 6 \\times 7",
-              "C = 40 + 42"
-            ],
-            "resultado": "C = 82",
-            "nota": "A conta de março foi R$ 82."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "Veja a conta subir: até 10 m³ ela fica parada em 40; a partir daí sobe 6 reais a cada m³. Em 17 m³, foram 7 degraus de 6.",
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: preço com faixa → cobre cada faixa com o seu preço; só o que passou paga a taxa maior.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Conta por consumo",
+            "titulo": "A receita",
             "cabecalho": [
-              "m³",
-              "Conta"
+              "Passo",
+              "Nesta questão"
             ],
             "linhas": [
               [
-                "8",
-                "R$ 40"
+                "1. Tabela do que eu tenho",
+                "R$ 40 até 10; R$ 6 acima; 17 m³"
               ],
               [
-                "10",
-                "R$ 40"
+                "2. Equação em letras",
+                "C = 40 + X"
               ],
               [
-                "11",
-                "R$ 46"
+                "3. Achar cada letra",
+                "E = 7; X = 42"
               ],
               [
-                "17",
-                "R$ 82"
+                "4. Substituir",
+                "40 + 42 = 82"
               ]
             ]
           }
-        },
-        {
-          "titulo": "A resposta",
-          "texto": "Letra C, R$ 82,00.\nA (R$ 42,00): cobra só o que passou e esquece a tarifa fixa.\nB (R$ 68,00): acha que os 40 reais valem 4 por m³ e faz 17 × 4.\nD (R$ 102,00): cobra os 17 m³ a 6 reais, sem tarifa fixa.\nE (R$ 142,00): cobra os 17 m³ inteiros e ainda soma os 40, como se a tarifa não cobrisse os 10 primeiros.",
-          "visual": null
         }
       ],
       "seuErro": null,
@@ -1868,137 +2093,134 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "A fórmula dá a área para cada largura x. A pergunta é a maior área possível.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
           "visual": {
-            "tipo": "legenda",
-            "titulo": "A área da horta",
-            "partes": [
+            "tipo": "formulas",
+            "itens": [
               {
-                "texto": "A",
-                "rotulo": "área da horta",
-                "cor": "a"
-              },
-              {
-                "texto": "= x",
-                "rotulo": "largura do lado"
-              },
-              {
-                "texto": "\\cdot (80 - 2x)",
-                "rotulo": "tela que sobra na frente",
-                "cor": "b"
+                "figura": "retangulo",
+                "nome": "Área do retângulo",
+                "formula": "base × altura"
               }
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Teste algumas larguras. Com x = 0 a horta não existe; com x = 40 a frente fica 80 − 80 = 0. Entre elas, a área sobe e depois desce. x = 10 e x = 30 dão a mesma área: 600.",
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Área para cada largura",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "x (m)",
-              "frente (m)",
-              "área (m²)"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "0",
-                "80",
-                "0"
+                "Tela",
+                "80 m, cobre 3 lados"
               ],
               [
-                "10",
-                "60",
-                "600"
+                "Dois lados",
+                "x cada um"
               ],
               [
-                "20",
-                "40",
-                "800"
+                "Lado da frente",
+                "80 − 2x"
               ],
               [
-                "30",
-                "20",
-                "600"
-              ],
-              [
-                "40",
-                "0",
-                "0"
+                "Área",
+                "A = x · (80 − 2x)"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Funções: o topo da parábola fica no meio dos dois zeros.\nA área dá zero quando x = 0 ou quando 80 − 2x = 0, x = 40. O meio: x = 20.\nA = 20 × (80 − 40) = 20 × 40 = 800 m².",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a maior área possível da horta.\nA = X × F (área = x × frente, com F = 80 − 2 × x)\nPor que x no meio de dois zeros? A área vira zero em dois lugares: sem largura ou sem frente. Entre os dois zeros ela sobe e desce, e o topo fica no meio.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "quadro",
-            "titulo": "Maior área pelo espelho",
-            "dados": [
-              "A = 0 \\text{ em } x = 0",
-              "A = 0 \\text{ em } x = 40",
-              "\\text{topo: } x = \\dfrac{0 + 40}{2} = 20"
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "O que é"
             ],
-            "formula": "A = x \\cdot (80 - 2x)",
-            "legenda": [
-              "$x$: largura do lado, em metros"
-            ],
-            "contas": [
-              "A = 20 \\cdot (80 - 2 \\cdot 20)",
-              "A = 20 \\cdot 40"
-            ],
-            "resultado": "A = 800\\,\\text{m}^2",
-            "nota": "Com 20 m de lado e 40 m de frente, a horta tem 800 m²."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "A parábola é igual dos dois lados do topo: x = 10 e x = 30 dão 600, x = 0 e x = 40 dão 0. Pontos de mesma altura ficam à mesma distância do topo, então o topo está no meio deles.",
-          "visual": {
-            "tipo": "grafico",
-            "titulo": "Sobe e desce igual",
-            "funcoes": [
-              {
-                "expr": "x*(80-2*x)",
-                "rotulo": "A(x)",
-                "cor": "a"
-              }
-            ],
-            "pontos": [
-              {
-                "x": 10,
-                "y": 600,
-                "rotulo": "x = 10"
-              },
-              {
-                "x": 30,
-                "y": 600,
-                "rotulo": "x = 30"
-              },
-              {
-                "x": 20,
-                "y": 800,
-                "rotulo": "topo",
-                "cor": "b"
-              }
-            ],
-            "x": [
-              -2,
-              42
-            ],
-            "y": [
-              -60,
-              900
+            "linhas": [
+              [
+                "A",
+                "maior área (o que a questão quer)"
+              ],
+              [
+                "X",
+                "o x que dá a maior área"
+              ],
+              [
+                "F",
+                "frente quando x é o melhor"
+              ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra B, 800 m².\nA (600): testa x = 10 ou x = 30 e para antes do topo.\nC (1 200): esquece o 2 da fórmula: 20 × 60.\nD (1 600): faz um quadrado de 40 m, mas a tela não fecha quatro lados.\nE (3 200): multiplica 80 × 40, usando a tela toda como lado.",
-          "visual": null
+          "titulo": "Achando X (o x da maior área)",
+          "texto": "A área é 0 quando x = 0 (sem lado).\nA área também é 0 quando 80 − 2x = 0, ou seja, x = 40.\nO topo fica no meio dos dois zeros.\nX = (0 + 40) ÷ 2 = 20"
+        },
+        {
+          "titulo": "Achando F: o seu jeito",
+          "texto": "Parece certo fazer um quadrado de 40 × 40 = 1 600.\nMas a tela cobre 3 lados: 40 + 40 + 40 = 120 m, e só há 80 m.\nCom x = 20, a frente é 80 − 2 × 20.\nF = 40 m"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "A = 20 × 40 = 800\nLetra B. A maior área é 800 m².",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "X",
+                "20"
+              ],
+              [
+                "F",
+                "40"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: \"maior área\" com uma conta x · (algo − 2x) → ache onde ela dá zero e use o ponto do meio.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "80 m de tela; A = x · (80 − 2x)"
+              ],
+              [
+                "2. Equação em letras",
+                "A = X × F"
+              ],
+              [
+                "3. Achar cada letra",
+                "X = 20; F = 40"
+              ],
+              [
+                "4. Substituir",
+                "20 × 40 = 800"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -2045,128 +2267,130 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "A fórmula diz quantas bactérias há t horas depois das 8 h. A pergunta é quantas há às 20 h.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
           "visual": {
-            "tipo": "legenda",
-            "titulo": "A cultura de bactérias",
-            "partes": [
+            "tipo": "formulas",
+            "itens": [
               {
-                "texto": "N",
-                "rotulo": "quantas bactérias",
-                "cor": "a"
-              },
-              {
-                "texto": "= 500",
-                "rotulo": "bactérias às 8 h"
-              },
-              {
-                "texto": "\\cdot 2^{t/3}",
-                "rotulo": "dobra a cada 3 horas",
-                "cor": "b"
+                "figura": "contagem",
+                "nome": "Dobrar várias vezes",
+                "formula": "valor × 2 × 2 × ... (uma vez por dobra)"
               }
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Das 8 h às 20 h passam 12 horas, ou seja, t = 12. Em 12 horas cabem 12 ÷ 3 = 4 períodos de 3 horas: a cultura dobra 4 vezes.",
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Dobra a cada 3 horas",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "Hora",
-              "Bactérias"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "8 h",
+                "Bactérias às 8 h",
                 "500"
               ],
               [
-                "11 h",
-                "1 000"
+                "Ritmo",
+                "dobra a cada 3 horas"
               ],
               [
-                "14 h",
-                "2 000"
-              ],
-              [
-                "17 h",
-                "4 000"
-              ],
-              [
-                "20 h",
-                "8 000"
+                "Hora final",
+                "20 h"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Funções: dobra a cada tanto: conte as dobras.\nDe 8 h às 20 h são 12 h; 12 ÷ 3 = 4 dobras.\n500 → 1 000 → 2 000 → 4 000 → 8 000.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Bactérias às 20 h",
-            "dados": [
-              "\\text{começo} = 500",
-              "t = 20 - 8 = 12\\,\\text{h}",
-              "\\text{dobra a cada } 3\\,\\text{h}"
-            ],
-            "formula": "N = 500 \\cdot 2^{t/3}",
-            "legenda": [
-              "$t$: horas depois das 8 h",
-              "t/3 = t ÷ 3: quantas vezes dobrou",
-              "·: vezes"
-            ],
-            "contas": [
-              "N = 500 \\times 2^{12/3}",
-              "N = 500 \\times 2^{4}",
-              "N = 500 \\times 16"
-            ],
-            "resultado": "N = 8\\,000",
-            "nota": "Às 20 h serão 8 000 bactérias."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "Cada dobra multiplica o que já existe, inclusive as bactérias que nasceram antes.\nPor isso 4 dobras dão × 16 (2 × 2 × 2 × 2), e não × 4.\nSomar 500 por vez daria sempre o mesmo pulo de 500 (1 000, 1 500, 2 000, 2 500).\nDobrando, o pulo cresce: +500, +1 000, +2 000, +4 000.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a quantidade de bactérias às 20 h.\nN = 500 × F (bactérias = 500 × quanto elas multiplicaram)\nPor que multiplicar por 2 cada vez? Dobrar é multiplicar por 2. Dobrar duas vezes é 2 × 2 = 4 vezes mais, e não 2 + 2.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Dobrar x somar",
+            "titulo": "As letras",
             "cabecalho": [
-              "Dobras",
-              "Dobrando",
-              "Somando 500"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "1",
-                "1 000",
-                "1 000"
+                "N",
+                "bactérias às 20 h (o que a questão quer)"
               ],
               [
-                "2",
-                "2 000",
-                "1 500"
+                "D",
+                "quantas vezes dobrou"
               ],
               [
-                "3",
-                "4 000",
-                "2 000"
-              ],
-              [
-                "4",
-                "8 000",
-                "2 500"
+                "F",
+                "quantas vezes multiplicou"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra E, 8 000.\nA (2 000): multiplica 500 por 4, o número de dobras.\nB (2 500): soma 500 a cada dobra em vez de dobrar.\nC (4 000): conta só 3 dobras, esquecendo a das 20 h.\nD (6 000): multiplica 500 por 12, as horas.",
-          "visual": null
+          "titulo": "Achando D (quantas vezes dobrou)",
+          "texto": "De 8 h a 20 h: 20 − 8 = 12 horas.\nD = 12 ÷ 3 = 4 vezes"
+        },
+        {
+          "titulo": "Achando F: o seu jeito",
+          "texto": "Parece certo multiplicar por 4, que é o número de dobras: 500 × 4 = 2 000.\nMas cada dobra multiplica por 2, e as 4 dobras vêm uma depois da outra.\nF = 2 × 2 × 2 × 2 = 16"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "N = 500 × 16 = 8 000\nLetra E. Às 20 h são 8 000 bactérias.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "D",
+                "4"
+              ],
+              [
+                "F",
+                "16"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: \"dobra a cada ...\" → conte quantas dobras cabem no tempo e multiplique por 2 essa quantidade de vezes.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "500; dobra a cada 3 h; das 8 h às 20 h"
+              ],
+              [
+                "2. Equação em letras",
+                "N = 500 × F"
+              ],
+              [
+                "3. Achar cada letra",
+                "D = 4; F = 16"
+              ],
+              [
+                "4. Substituir",
+                "500 × 16 = 8 000"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -2213,26 +2437,45 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "O quintal é um retângulo com uma roda (a piscina) dentro. A pergunta é quanto custa gramar o que não é piscina.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "retangulo",
+                "nome": "Área do retângulo",
+                "formula": "base × altura"
+              },
+              {
+                "figura": "circulo",
+                "nome": "Área do círculo",
+                "formula": "π × raio × raio"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "O quê",
+              "Informação",
               "Valor"
             ],
             "linhas": [
               [
-                "quintal",
-                "20 m × 15 m"
+                "Quintal",
+                "20 m por 15 m"
               ],
               [
-                "raio da piscina",
+                "Raio da piscina",
                 "3 m"
               ],
               [
-                "grama",
+                "Preço da grama",
                 "R$ 12 por m²"
               ],
               [
@@ -2243,86 +2486,90 @@
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "O quintal todo tem 20 × 15 = 300 m² (300 quadrados de 1 m de lado). A piscina ocupa 3 × 3 × 3 = 27 m². Sobram 300 − 27 = 273 m² para a grama.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer quanto custa a grama do quintal, sem a piscina.\nG = (AQ − AP) × 12 (gasto = área com grama × preço de 1 m²)\nPor que tirar e depois multiplicar? A grama vai no quintal todo menos a piscina. E cada m² custa R$ 12: 10 m² custam 10 × 12.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Áreas",
+            "titulo": "As letras",
             "cabecalho": [
-              "Parte",
-              "m²"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "quintal",
-                "300"
+                "G",
+                "gasto (o que a questão quer)"
               ],
               [
-                "piscina",
-                "27"
+                "AQ",
+                "área do quintal"
               ],
               [
-                "grama",
-                "273"
+                "AP",
+                "área da piscina"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Geometria Plana: tirar um pedaço: área grande − buraco.\nQuintal: 20 × 15 = 300 m². Piscina: 3 × 3 × 3 = 27 m². Grama: 300 − 27 = 273 m².\n273 × 12 = 3 276 (270 × 12 = 3 240; 3 × 12 = 36).",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Gasto com grama",
-            "dados": [
-              "\\text{quintal} = 20 \\times 15 = 300\\,\\text{m}^2",
-              "r = 3\\,\\text{m}",
-              "\\pi = 3",
-              "p = 12 \\text{ por m}^2"
-            ],
-            "formula": "G = (300 - \\pi r^2) \\times p",
-            "legenda": [
-              "$r$: raio da piscina",
-              "$p$: preço do m² de grama"
-            ],
-            "contas": [
-              "G = (300 - 3 \\times 3^2) \\times 12",
-              "G = (300 - 27) \\times 12",
-              "G = 273 \\times 12"
-            ],
-            "resultado": "G = 3\\,276",
-            "nota": "A grama custa R$ 3 276."
-          }
+          "titulo": "Achando AQ (área do quintal)",
+          "texto": "O quintal é um retângulo: base × altura.\nAQ = 20 × 15 = 300 m²"
         },
         {
-          "titulo": "Por que funciona",
-          "texto": "A grama cobre a superfície, então a conta é de área (π × r × r = 27), não da volta da piscina (2 × π × r = 18). A volta mede a borda, em metros; a área mede o chão, em m².",
+          "titulo": "Achando AP: o seu jeito",
+          "texto": "Parece certo fazer 2 × 3 × 3 = 18. Mas essa é a VOLTA da piscina, a borda, não o chão dela.\nO chão da piscina é a área do círculo: π × raio × raio.\nAP = 3 × 3 × 3 = 27 m²"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "G = (300 − 27) × 12 = 273 × 12 = 3 276\nLetra A. São 273 m² de grama a R$ 12 cada.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Área x volta da piscina",
+            "titulo": "As letras",
             "cabecalho": [
-              "Medida",
-              "Conta",
+              "Letra",
               "Valor"
             ],
             "linhas": [
               [
-                "área (chão)",
-                "3 × 3 × 3",
-                "27 m²"
+                "AQ",
+                "300"
               ],
               [
-                "volta (borda)",
-                "2 × 3 × 3",
-                "18 m"
+                "AP",
+                "27"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra A, R$ 3 276,00.\nB (R$ 3 384,00): tira a volta da piscina (18) em vez da área.\nC (R$ 3 492,00): esquece o π e tira só 3 × 3 = 9.\nD (R$ 3 600,00): grama o quintal inteiro, por cima da piscina.\nE (R$ 3 924,00): soma a piscina em vez de tirar.",
-          "visual": null
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: cobrir \"tudo menos\" uma parte → área de fora − área de dentro; pediu preço → multiplique no fim.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "20 × 15, raio 3, R$ 12"
+              ],
+              [
+                "2. Equação em letras",
+                "G = (AQ − AP) × 12"
+              ],
+              [
+                "3. Achar cada letra",
+                "AQ = 300; AP = 27"
+              ],
+              [
+                "4. Substituir",
+                "273 × 12 = 3 276"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -2365,105 +2612,122 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "O poste e o técnico formam, com suas sombras, dois triângulos de mesmo formato. A pergunta é a altura do poste.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "triangulo",
+                "nome": "Sombra e altura",
+                "formula": "altura ÷ sombra é igual nos dois"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "Objeto",
-              "Altura",
-              "Sombra"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "técnico",
-                "1,80 m",
+                "Sombra do poste",
+                "6 m"
+              ],
+              [
+                "Sombra do técnico",
                 "1,20 m"
               ],
               [
-                "poste",
-                "?",
-                "6 m"
+                "Altura do técnico",
+                "1,80 m"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "No técnico, a altura é 1,80 ÷ 1,20 vez a sombra.\nTire as vírgulas: 180 ÷ 120; divida os dois por 60: 3 ÷ 2 = 1,5.\nCom o sol inclinado igual, a sombra cresce junto com a altura: se uma vara de 1,5 m faz sombra de 1 m, uma de 3 m faz sombra de 2 m.\nEntão no poste vale o mesmo: altura = 1,5 × 6 = 9.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a altura do poste.\nP = 6 × R (altura do poste = sombra do poste × razão altura ÷ sombra)\nPor que a razão é igual? O sol bate com o mesmo ângulo nos dois. Quem tem sombra 2 vezes maior também é 2 vezes mais alto.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Altura ÷ sombra",
+            "titulo": "As letras",
             "cabecalho": [
-              "Objeto",
-              "Razão"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "técnico",
-                "1,80 ÷ 1,20 = 1,5"
+                "P",
+                "altura do poste (o que a questão quer)"
               ],
               [
-                "poste",
-                "? ÷ 6 = 1,5"
+                "R",
+                "razão altura ÷ sombra do técnico"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Geometria Plana: mesmo sol, mesma proporção.\nA sombra do poste é 6 ÷ 1,2 = 5 vezes a do técnico.\nO poste é 5 vezes mais alto: 5 × 1,80 = 9 m.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Altura pela sombra",
-            "dados": [
-              "\\text{técnico: altura } 1{,}80\\,\\text{m}",
-              "\\text{técnico: sombra } 1{,}20\\,\\text{m}",
-              "\\text{poste: sombra } 6\\,\\text{m}"
-            ],
-            "formula": "\\dfrac{H}{6} = \\dfrac{1{,}80}{1{,}20}",
-            "legenda": [
-              "$H$: altura do poste",
-              "o traço: dividir (altura ÷ sombra)"
-            ],
-            "contas": [
-              "\\dfrac{H}{6} = 1{,}5",
-              "H = 6 \\times 1{,}5"
-            ],
-            "resultado": "H = 9\\,\\text{m}",
-            "nota": "O poste tem 9 m de altura."
-          }
+          "titulo": "Achando R (razão altura ÷ sombra)",
+          "texto": "Para o técnico: altura ÷ sombra.\nR = 1,80 ÷ 1,20 = 1,5\nCada 1 m de sombra vira 1,5 m de altura."
         },
         {
-          "titulo": "Por que funciona",
-          "texto": "Os raios de sol chegam com a mesma inclinação nos dois.\nO triângulo do poste (poste, sombra, raio) é uma ampliação do triângulo do técnico.\nA sombra cresceu 5 vezes (1,20 → 6).\nEntão a altura também cresce 5 vezes (1,80 → 9).",
+          "titulo": "O seu jeito: somar",
+          "texto": "Parece certo somar: o poste tem a sombra 6 e o técnico a altura 1,80, então 6 + 1,8 = 7,8.\nMas a sombra e a altura se ligam por multiplicação, não por soma.\nSe a sombra dobra, a altura dobra: 1,20 vira 2,40 e 1,80 vira 3,60."
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "P = 6 × 1,5 = 9\nLetra E. O poste tem 9 m.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Ampliação de 5 vezes",
+            "titulo": "As letras",
             "cabecalho": [
-              "Medida",
-              "Técnico",
-              "Poste"
+              "Letra",
+              "Valor"
             ],
             "linhas": [
               [
-                "sombra",
-                "1,20",
-                "6"
-              ],
-              [
-                "altura",
-                "1,80",
-                "9"
+                "R",
+                "1,5"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra E, 9 m.\nA (4 m): inverte a razão. Daria um poste mais baixo que a própria sombra, mas o técnico é mais alto que a dele.\nB (6,6 m): soma à sombra a diferença 0,60.\nC (7,2 m): multiplica 6 por 1,2.\nD (7,8 m): soma 6 + 1,8 em vez de multiplicar.",
-          "visual": null
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: sombras no mesmo horário → altura ÷ sombra é a mesma; ache num lado e use no outro.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "sombras 6 e 1,20; técnico 1,80"
+              ],
+              [
+                "2. Equação em letras",
+                "P = 6 × R"
+              ],
+              [
+                "3. Achar cada letra",
+                "R = 1,5"
+              ],
+              [
+                "4. Substituir",
+                "6 × 1,5 = 9"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -2506,117 +2770,134 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "Cada cabo liga o topo da antena a um ponto do chão. A pergunta é quantos metros de cabo os 4 juntos usam.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "triangulo-retangulo",
+                "nome": "Lado torto (Pitágoras)",
+                "formula": "torto × torto = lado × lado + lado × lado"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "O quê",
+              "Informação",
               "Valor"
             ],
             "linhas": [
               [
-                "altura da antena",
+                "Altura da antena",
                 "15 m"
               ],
               [
-                "gancho até a base",
+                "Gancho até a base",
                 "8 m"
               ],
               [
-                "cabos",
-                "4"
+                "Cabos",
+                "4, todos iguais"
               ],
               [
-                "total de cabo",
-                "?"
+                "Canto",
+                "90° entre antena e chão"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "A antena (15 m) e o chão até o gancho (8 m) são os catetos, os lados do canto de 90°. O cabo é a hipotenusa, o lado de frente para o canto.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer o total de cabo para os 4 cabos.\nT = 4 × C (total = 4 cabos × tamanho de um cabo)\nPor que multiplicar por 4? São 4 cabos do mesmo tamanho. Se cada um mede 10, os 4 juntos medem 4 × 10.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "O triângulo de cada cabo",
+            "titulo": "As letras",
             "cabecalho": [
-              "Lado",
-              "Medida"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "cateto: antena",
-                "15 m"
+                "T",
+                "total de cabo (o que a questão quer)"
               ],
               [
-                "cateto: chão",
-                "8 m"
+                "Q",
+                "soma dos quadrados dos dois lados"
               ],
               [
-                "hipotenusa: cabo",
-                "?"
+                "C",
+                "tamanho de um cabo"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Geometria Plana: triângulos que se repetem: 8-15-17.\n8 × 8 + 15 × 15 = 64 + 225 = 289 = 17 × 17: cada cabo tem 17 m.\n4 cabos: 4 × 17 = 68 m.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Cabo da antena",
-            "dados": [
-              "a = 15\\,\\text{m}",
-              "b = 8\\,\\text{m}",
-              "\\text{cabos} = 4"
-            ],
-            "formula": "c^2 = a^2 + b^2",
-            "legenda": [
-              "$a$, $b$: os lados do canto de 90°",
-              "$c$: o cabo"
-            ],
-            "contas": [
-              "c^2 = 15^2 + 8^2",
-              "c^2 = 225 + 64 = 289",
-              "c = 17 \\text{ pois } 17 \\times 17 = 289",
-              "\\text{total} = 4 \\times 17"
-            ],
-            "resultado": "\\text{total} = 68\\,\\text{m}",
-            "nota": "Os 4 cabos usam 68 m."
-          }
+          "titulo": "Achando Q (soma dos quadrados dos lados)",
+          "texto": "O cabo, a antena e o chão formam um triângulo com um canto de 90°.\nO cabo é o lado torto: o mais comprido.\nQ = 15 × 15 + 8 × 8 = 225 + 64 = 289"
         },
         {
-          "titulo": "Por que funciona",
-          "texto": "Esticado, o cabo é o caminho reto do topo ao gancho, mais curto que subir 15 e andar 8 (23 m), e mais longo que a antena. 17 está entre 15 e 23, como tinha que ser.",
+          "titulo": "Achando C: o seu jeito",
+          "texto": "Parece certo somar os dois lados: 15 + 8 = 23.\nMas o cabo corta o canto em linha reta, então é mais curto que ir 15 para cima e 8 para o lado.\nO cabo vezes ele mesmo tem que dar 289.\n17 × 17 = 289\nC = 17 m"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "T = 4 × 17 = 68\nLetra D. São 68 m de cabo.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Cabo entre dois limites",
+            "titulo": "As letras",
             "cabecalho": [
-              "Caminho",
-              "Metros"
+              "Letra",
+              "Valor"
             ],
             "linhas": [
               [
-                "só a antena",
-                "15"
+                "Q",
+                "289"
               ],
               [
-                "cabo reto",
+                "C",
                 "17"
-              ],
-              [
-                "antena + chão",
-                "23"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra D, 68 m.\nA (17 m): acerta um cabo, mas esquece que são 4.\nB (28 m): usa 15 − 8 em cada cabo.\nC (60 m): usa a altura da antena como cabo.\nE (92 m): soma 15 e 8, que seria o cabo dando a volta pelo canto.",
-          "visual": null
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: canto de 90° e uma ponta ligada à outra em reta → lado torto × lado torto = soma dos outros ao quadrado.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "15 m; 8 m; 4 cabos; 90°"
+              ],
+              [
+                "2. Equação em letras",
+                "T = 4 × C"
+              ],
+              [
+                "3. Achar cada letra",
+                "Q = 289; C = 17"
+              ],
+              [
+                "4. Substituir",
+                "4 × 17 = 68"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -2663,121 +2944,150 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "A caixa é um cilindro (forma de lata de leite em pé: fundo redondo e paredes retas) e está vazia. A bomba enche 400 L por minuto. A pergunta é quanto tempo leva para encher.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "cilindro",
+                "nome": "Volume do cilindro",
+                "formula": "π × raio × raio × altura"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "O quê",
+              "Informação",
               "Valor"
             ],
             "linhas": [
               [
-                "diâmetro",
+                "Diâmetro da caixa",
                 "4 m"
               ],
               [
-                "altura",
+                "Altura",
                 "3 m"
               ],
               [
-                "bomba",
-                "400 L por minuto"
+                "Bomba",
+                "400 litros por minuto"
               ],
               [
                 "π",
                 "3"
+              ],
+              [
+                "Conversão",
+                "1 m³ = 1 000 litros"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Raio: 4 ÷ 2 = 2 m.\nFundo: 3 × 2 × 2 = 12 m² (12 quadrados de 1 m de lado).\nVolume = área do fundo × altura, como empilhar 3 camadas de 1 m com 12 m³ cada.\n12 × 3 = 36 m³ (36 caixas de 1 m de lado).\nCada m³ tem 1 000 L: 36 000 litros.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer o tempo para a bomba encher a caixa.\nT = L ÷ 400 (tempo = litros da caixa ÷ litros por minuto)\nPor que dividir? Quantos minutos de 400 litros cabem na caixa? Para 1 000 litros, a bomba precisa de 1 000 ÷ 400 = 2,5 minutos.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Do tamanho ao volume",
+            "titulo": "As letras",
             "cabecalho": [
-              "Etapa",
+              "Letra",
+              "O que é"
+            ],
+            "linhas": [
+              [
+                "T",
+                "tempo em minutos (o que a questão quer)"
+              ],
+              [
+                "R",
+                "raio da caixa"
+              ],
+              [
+                "V",
+                "volume da caixa em m³"
+              ],
+              [
+                "L",
+                "volume da caixa em litros"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Achando R (raio da caixa)",
+          "texto": "O raio é a metade do diâmetro.\nR = 4 ÷ 2 = 2 m"
+        },
+        {
+          "titulo": "Achando V: o seu jeito",
+          "texto": "Parece certo usar o 4 que está no enunciado: 3 × 4 × 4 × 3 = 144.\nMas o 4 é o diâmetro, a largura toda. A fórmula pede o raio, que é 2.\nV = 3 × 2 × 2 × 3 = 36 m³"
+        },
+        {
+          "titulo": "Achando L (volume em litros)",
+          "texto": "1 m³ tem 1 000 litros.\nL = 36 × 1 000 = 36 000 litros"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "T = 36 000 ÷ 400 = 90 minutos\nLetra D. 90 minutos é 1 hora e 30 minutos.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
               "Valor"
             ],
             "linhas": [
               [
-                "raio",
-                "2 m"
+                "R",
+                "2"
               ],
               [
-                "área da base",
-                "12 m²"
+                "V",
+                "36"
               ],
               [
-                "volume",
-                "36 m³"
-              ],
-              [
-                "em litros",
-                "36 000 L"
+                "L",
+                "36 000"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Geometria Espacial: cilindro: 3 × raio × raio × altura.\nRaio = metade de 4 = 2 m. 3 × 2 × 2 × 3 = 36 m³ = 36 000 L.\nQuantos 400 cabem em 36 000? 90 min = 1 hora e 30 minutos.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Tempo para encher",
-            "dados": [
-              "r = 4 \\div 2 = 2\\,\\text{m}",
-              "h = 3\\,\\text{m}",
-              "\\pi = 3",
-              "\\text{bomba} = 400\\,\\text{L por minuto}"
-            ],
-            "formula": "t = \\dfrac{\\text{litros da caixa}}{400}",
-            "legenda": [
-              "litros da caixa: π × r × r × h em m³, vezes 1 000",
-              "$t$: minutos para encher",
-              "o traço: dividir o de cima pelo de baixo"
-            ],
-            "contas": [
-              "V = 3 \\times 2^2 \\times 3 = 36\\,\\text{m}^3",
-              "36 \\times 1\\,000 = 36\\,000\\,\\text{L}",
-              "t = \\dfrac{36\\,000}{400} = \\dfrac{360}{4}"
-            ],
-            "resultado": "t = 90\\,\\text{min} = 1\\,\\text{h}\\,30\\,\\text{min}",
-            "nota": "A caixa enche em 1 hora e meia."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "O raio entra duas vezes na conta (raio × raio). Trocar o raio 2 pelo diâmetro 4 deixa a conta 4 vezes maior: 144 m³ e 6 horas. Por isso o primeiro passo é sempre dividir o diâmetro por 2.",
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: encher com bomba → volume (na unidade da bomba) ÷ litros por minuto; cuidado: raio é metade do diâmetro.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Raio certo x diâmetro",
+            "titulo": "A receita",
             "cabecalho": [
-              "Usou",
-              "Volume",
-              "Tempo"
+              "Passo",
+              "Nesta questão"
             ],
             "linhas": [
               [
-                "raio 2",
-                "36 m³",
-                "1 h 30 min"
+                "1. Tabela do que eu tenho",
+                "diâmetro 4; altura 3; 400 L/min; π = 3"
               ],
               [
-                "diâmetro 4",
-                "144 m³",
-                "6 h"
+                "2. Equação em letras",
+                "T = L ÷ 400"
+              ],
+              [
+                "3. Achar cada letra",
+                "R = 2; V = 36; L = 36 000"
+              ],
+              [
+                "4. Substituir",
+                "36 000 ÷ 400 = 90 min"
               ]
             ]
           }
-        },
-        {
-          "titulo": "A resposta",
-          "texto": "Letra D, 1 hora e 30 minutos. A (9 minutos) acha que 1 m³ tem 100 L. B (30 minutos) esquece o π. C (45 minutos) esquece de multiplicar o raio por ele mesmo. E (6 horas) usa o diâmetro 4 como raio.",
-          "visual": null
         }
       ],
       "seuErro": null,
@@ -2824,115 +3134,146 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "A fórmula do cone está no texto. A pergunta é quantas casquinhas os 5,4 litros enchem.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
           "visual": {
-            "tipo": "legenda",
-            "titulo": "Volume do cone",
-            "partes": [
+            "tipo": "formulas",
+            "itens": [
               {
-                "texto": "V",
-                "rotulo": "sorvete numa casquinha",
-                "cor": "a"
-              },
-              {
-                "texto": "= \\pi \\cdot r^2",
-                "rotulo": "tamanho da boca"
-              },
-              {
-                "texto": "\\cdot h",
-                "rotulo": "altura"
-              },
-              {
-                "texto": "\\div 3",
-                "rotulo": "um terço do cilindro",
-                "cor": "b"
+                "figura": "cone",
+                "nome": "Volume do cone",
+                "formula": "π × raio × raio × altura ÷ 3"
               }
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "A boca tem 6 cm de diâmetro, então o raio é 3 cm, e 3² = 3 × 3 = 9. Uma lata com essa boca e 10 cm de altura teria 3 × 9 × 10 = 270 cm³; o cone leva um terço (divide por 3): 90 cm³.",
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Cilindro e cone",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "Sólido",
-              "Volume"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "cilindro de mesma boca",
-                "270 cm³"
+                "Diâmetro da boca",
+                "6 cm"
               ],
               [
-                "cone (um terço)",
-                "90 cm³"
+                "Altura",
+                "10 cm"
+              ],
+              [
+                "Sorvete na máquina",
+                "5,4 litros"
+              ],
+              [
+                "π e conversão",
+                "π = 3; 1 litro = 1 000 cm³"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Geometria Espacial: com ponta: fundo × altura ÷ 3.\nRaio 3: 3 × 3 × 3 × 10 ÷ 3 = 90 cm³ por casquinha.\n5,4 L = 5 400 cm³. 5 400 ÷ 90 = 60 casquinhas.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Casquinhas com 5,4 L",
-            "dados": [
-              "r = 6 \\div 2 = 3\\,\\text{cm}",
-              "h = 10\\,\\text{cm}",
-              "\\pi = 3",
-              "5{,}4\\,\\text{L} = 5\\,400\\,\\text{cm}^3"
-            ],
-            "formula": "n = \\dfrac{5\\,400}{V}",
-            "legenda": [
-              "$V$: volume de uma casquinha",
-              "$n$: número de casquinhas"
-            ],
-            "contas": [
-              "V = \\dfrac{3 \\times 3^2 \\times 10}{3}",
-              "V = \\dfrac{270}{3} = 90\\,\\text{cm}^3",
-              "n = \\dfrac{5\\,400}{90}"
-            ],
-            "resultado": "n = 60",
-            "nota": "Dá para encher 60 casquinhas."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "A ponta da casquinha é fina, então ela leva bem menos que uma lata de mesma boca; a fórmula da questão diz quanto: um terço. Quem esquece o ÷ 3 acha que cada casquinha leva 270 cm³ e conta só 20.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer quantas casquinhas dá para encher.\nN = L ÷ V (casquinhas = sorvete total ÷ sorvete de uma casquinha)\nPor que dividir? Quantas vezes o pouco cabe no muito: com 100 de sorvete e 10 por casquinha, são 100 ÷ 10 = 10 casquinhas.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "De onde vêm os erros",
+            "titulo": "As letras",
             "cabecalho": [
-              "Conta da casquinha",
-              "Volume",
-              "Casquinhas"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "certa",
-                "90 cm³",
-                "60"
+                "N",
+                "casquinhas (o que a questão quer)"
               ],
               [
-                "sem ÷ 3",
-                "270 cm³",
-                "20"
+                "R",
+                "raio da boca"
               ],
               [
-                "raio = 6",
-                "360 cm³",
-                "15"
+                "V",
+                "volume de uma casquinha"
+              ],
+              [
+                "L",
+                "sorvete total em cm³"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra D, 60 casquinhas. A (6) acha que 1 L tem 100 cm³. B (15) usa o diâmetro 6 como se fosse o raio. C (20) esquece de dividir por 3. E (180) esquece de multiplicar o raio por ele mesmo.",
-          "visual": null
+          "titulo": "Achando R (raio da boca)",
+          "texto": "O raio é a metade do diâmetro.\nR = 6 ÷ 2 = 3 cm"
+        },
+        {
+          "titulo": "Achando V: o seu jeito",
+          "texto": "Parece certo usar o 6 do enunciado como raio: 3 × 6 × 6 × 10 ÷ 3 = 360.\nMas o 6 é o diâmetro. A fórmula pede o raio, que é 3.\nV = 3 × 3 × 3 × 10 ÷ 3 = 270 ÷ 3 = 90 cm³"
+        },
+        {
+          "titulo": "Achando L (sorvete total em cm³)",
+          "texto": "1 litro tem 1 000 cm³.\nL = 5,4 × 1 000 = 5 400 cm³"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "N = 5 400 ÷ 90 = 60\nLetra D. Dá para encher 60 casquinhas.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "R",
+                "3"
+              ],
+              [
+                "V",
+                "90"
+              ],
+              [
+                "L",
+                "5 400"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: encher vários iguais → volume de um, volume total na mesma unidade, e divida.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "diâmetro 6; altura 10; 5,4 L; π = 3"
+              ],
+              [
+                "2. Equação em letras",
+                "N = L ÷ V"
+              ],
+              [
+                "3. Achar cada letra",
+                "R = 3; V = 90; L = 5 400"
+              ],
+              [
+                "4. Substituir",
+                "5 400 ÷ 90 = 60"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -2975,106 +3316,146 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "O frasco pequeno tem cada medida pela metade. A pergunta é o preço, que segue o volume.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "caixa",
+                "nome": "Volume da caixa",
+                "formula": "comprimento × largura × altura"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "Frasco",
-              "Medidas",
-              "Preço"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "grande",
-                "4 × 3 × 10 cm",
+                "Frasco grande",
+                "4 cm por 3 cm por 10 cm"
+              ],
+              [
+                "Preço do grande",
                 "R$ 240"
               ],
               [
-                "viagem",
-                "2 × 1,5 × 5 cm",
-                "?"
+                "Frasco de viagem",
+                "cada medida pela metade"
+              ],
+              [
+                "Preço",
+                "proporcional ao volume"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Grande: 4 × 3 × 10 = 120 cm³. Viagem: 2 × 1,5 = 3, e 3 × 5 = 15 cm³. O frasco de viagem tem 8 vezes menos perfume (15 × 8 = 120).",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer o preço do frasco de viagem.\nP = VV × PC (preço = volume de viagem × preço por cm³)\nPor que multiplicar? Se 1 cm³ custa R$ 2, então 15 cm³ custam 15 × 2. Preço proporcional ao volume é sempre volume × preço de 1 cm³.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Volume de cada frasco",
+            "titulo": "As letras",
             "cabecalho": [
-              "Frasco",
-              "Volume"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "grande",
-                "120 cm³"
+                "P",
+                "preço de viagem (o que a questão quer)"
               ],
               [
-                "viagem",
-                "15 cm³"
+                "VG",
+                "volume do frasco grande"
+              ],
+              [
+                "PC",
+                "preço de 1 cm³"
+              ],
+              [
+                "VV",
+                "volume do frasco de viagem"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Geometria Espacial: lados pela metade → volume ÷ 8.\nMetade × metade × metade = 1/8 do volume.\nPreço: 240 ÷ 8 = R$ 30.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Preço do frasco de viagem",
-            "dados": [
-              "\\text{grande} = 4 \\times 3 \\times 10 = 120\\,\\text{cm}^3",
-              "\\text{viagem} = 2 \\times 1{,}5 \\times 5 = 15\\,\\text{cm}^3",
-              "\\text{preço grande} = 240"
-            ],
-            "formula": "P = \\dfrac{240}{120} \\times 15",
-            "legenda": [
-              "240 ÷ 120 = 2: reais por cm³",
-              "$P$: preço do frasco de viagem",
-              "o traço: dividir o de cima pelo de baixo"
-            ],
-            "contas": [
-              "P = 2 \\times 15"
-            ],
-            "resultado": "P = 30",
-            "nota": "O frasco de viagem custa R$ 30."
-          }
+          "titulo": "Achando VG (volume do frasco grande)",
+          "texto": "VG = 4 × 3 × 10 = 120 cm³"
         },
         {
-          "titulo": "Por que funciona",
-          "texto": "Cada medida pela metade divide o volume por 2 três vezes: comprimento, largura e altura. 2 × 2 × 2 = 8. Só uma medida pela metade cortaria o volume pela metade; duas, em quatro; três, em oito.",
+          "titulo": "Achando PC (preço de 1 cm³)",
+          "texto": "PC = 240 ÷ 120 = R$ 2"
+        },
+        {
+          "titulo": "Achando VV: o seu jeito",
+          "texto": "Parece certo que tudo pela metade deixa o frasco com a metade do volume: 120 ÷ 2 = 60.\nMas a metade vale para as TRÊS medidas, e o volume é uma multiplicação de três.\nLados do frasco de viagem: 2, 1,5 e 5.\nVV = 2 × 1,5 × 5 = 3 × 5 = 15 cm³\nÉ 1 oitavo do grande (2 × 2 × 2 = 8)."
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "P = 15 × 2 = 30\nLetra B. O frasco de viagem custa R$ 30,00.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Metade em quantas medidas",
+            "titulo": "As letras",
             "cabecalho": [
-              "Medidas pela metade",
-              "Volume fica"
+              "Letra",
+              "Valor"
             ],
             "linhas": [
               [
-                "1",
-                "÷ 2"
+                "VG",
+                "120"
               ],
               [
-                "2",
-                "÷ 4"
+                "PC",
+                "2"
               ],
               [
-                "3",
-                "÷ 8"
+                "VV",
+                "15"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra B, R$ 30,00.\nA (R$ 15,00): divide o preço por 16, um corte a mais.\nC (R$ 60,00): divide por 4, que vale para área, não para volume.\nD (R$ 80,00): divide por 3 por serem três medidas.\nE (R$ 120,00): só divide por 2, como se uma medida tivesse mudado.",
-          "visual": null
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: \"todas as medidas pela metade\" → o volume fica 8 vezes menor; preço proporcional → volume × preço de 1 cm³.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "4 × 3 × 10 por R$ 240; viagem = metades"
+              ],
+              [
+                "2. Equação em letras",
+                "P = VV × PC"
+              ],
+              [
+                "3. Achar cada letra",
+                "VG = 120; PC = 2; VV = 15"
+              ],
+              [
+                "4. Substituir",
+                "15 × 2 = 30"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,

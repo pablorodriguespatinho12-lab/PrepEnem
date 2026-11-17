@@ -1,0 +1,517 @@
+[
+ {
+  "id": "d2-banco-mat-p26-04",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Um ônibus vai da cidade A à cidade E passando, nesta ordem, por B, C e D. De A a B há 3 estradas, e de D a E há 4. O mapa não mostra quantas estradas ligam B a C nem C a D, mas há menos estradas entre C e D do que entre B e C. Ao todo existem 132 rotas diferentes de A até E.\nO número de estradas entre C e D é",
+  "A": "11",
+  "B": "12",
+  "C": "33",
+  "D": "7",
+  "E": "1",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "132/(3*4) = 11 = 11*1 e Y < X: X = 11, Y = 1. E. A = X; B = 3*4; C = 132/4; D = 3+4.",
+   "ideia": "Trechos em sequência multiplicam: 3 × X × Y × 4 = 132, então X × Y = 11. Como 11 só é 11 × 1 e C a D tem menos estradas, Y = 1.",
+   "pecas": [
+    {
+     "termo": "Número primo",
+     "significado": "Número que só se divide por 1 e por ele mesmo, como 2, 3, 7 e 11."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Trechos um depois do outro",
+        "formula": "multiplique as escolhas de cada trecho"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "A → B",
+        "3 estradas"
+       ],
+       [
+        "D → E",
+        "4 estradas"
+       ],
+       [
+        "Rotas ao todo",
+        "132"
+       ],
+       [
+        "C → D",
+        "menos que B → C"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quantas estradas ligam C a D.\n132 = 3 × X × Y × 4 (rotas = estradas de cada trecho multiplicadas)\nPor que multiplicar? Para cada estrada do 1º trecho, você ainda pode pegar qualquer estrada do 2º. Com 2 e depois 3, são 2 × 3 = 6 rotas, não 2 + 3.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "Y",
+        "estradas C → D (o que a questão quer)"
+       ],
+       [
+        "X",
+        "estradas B → C"
+       ],
+       [
+        "P",
+        "X × Y juntos"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P (X × Y)",
+     "texto": "Tire o 3 e o 4 dividindo, porque eles já estão na conta.\nP = 132 ÷ (3 × 4) = 132 ÷ 12 = 11"
+    },
+    {
+     "titulo": "Achando X: o seu jeito",
+     "texto": "Parece certo responder 11, o número que apareceu. Mas 11 é X × Y, os dois trechos juntos.\n11 é primo: só se divide por 1 e por 11. Então X × Y = 11 × 1.\nO enunciado diz que C → D tem menos estradas. Logo X = 11 e Y = 1."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "Y = 11 ÷ X = 11 ÷ 11 = 1\nLetra E. Confere: 3 × 11 × 1 × 4 = 132 rotas.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "11"
+       ],
+       [
+        "X",
+        "11"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: trechos um depois do outro → multiplica; faltam dois trechos → divida o total pelos que você sabe e olhe o primo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta viagem"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "3, 4 e 132"
+       ],
+       [
+        "2. Equação em letras",
+        "132 = 3 × X × Y × 4"
+       ],
+       [
+        "3. Achar cada letra",
+        "P = 11; X = 11"
+       ],
+       [
+        "4. Substituir",
+        "Y = 11 ÷ 11 = 1"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "2 caminhos de A a B, ? de B a C e 3 de C a D. São 42 caminhos de A a D. Caminhos de B a C?",
+    "opcoes": [
+     "7",
+     "21",
+     "14",
+     "12"
+    ],
+    "certa": "7",
+    "resposta": "42 ÷ (2 × 3) = 42 ÷ 6 = 7."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-p26-05",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Num jogo de feira, uma moeda de raio 1 cm é jogada sobre uma mesa com círculos desenhados de raio 5 cm. Ganha quem fizer a moeda ficar toda dentro de um círculo, sem encostar na linha. A moeda cai sempre sobre um círculo, e o centro dela tem a mesma chance de cair em qualquer ponto dele. Use π = 3.\nA chance de ganhar é de",
+  "A": "64%",
+  "B": "80%",
+  "C": "96%",
+  "D": "36%",
+  "E": "20%",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Q = 5-1 = 4; B = 3*4*4 = 48; T = 3*5*5 = 75; P = 48/75 = 64%. A. B = 4/5 (raios sem área); C = 1-(1/5)^2; D = (3/5)^2 com o diâmetro; E = 1/5.",
+   "ideia": "A moeda fica toda dentro quando o centro dela cai a mais de 1 cm da linha, num círculo de raio 4 cm. A chance é a razão das áreas: 48 ÷ 75 = 64%.",
+   "pecas": [
+    {
+     "termo": "Chance",
+     "significado": "A parte que serve dividida pelo total, em porcentagem."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circulo",
+        "nome": "Área do círculo",
+        "formula": "π × raio × raio"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Chance (probabilidade)",
+        "formula": "parte que serve ÷ total"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Raio do círculo",
+        "5 cm"
+       ],
+       [
+        "Raio da moeda",
+        "1 cm"
+       ],
+       [
+        "π",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a chance de a moeda ficar toda dentro do círculo.\nP = B ÷ T (chance = área onde o centro pode cair ÷ área do círculo todo)\nPor que dividir áreas? O centro cai em qualquer ponto do círculo com a mesma chance. Então a chance é o tamanho da parte boa em relação ao tamanho do todo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "P",
+        "chance de ganhar (o que a questão quer)"
+       ],
+       [
+        "B",
+        "área onde o centro pode cair"
+       ],
+       [
+        "T",
+        "área do círculo todo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando T (o círculo todo)",
+     "texto": "É a área do círculo: π × raio × raio.\nT = 3 × 5 × 5 = 75 cm²"
+    },
+    {
+     "titulo": "Achando B: o seu jeito",
+     "texto": "Parece certo comparar só os raios: 4 ÷ 5 = 80%. Mas chance de cair numa região depende da ÁREA, não do raio.\nO centro não pode chegar perto da linha: precisa ficar a 1 cm dela. O raio da região boa é 5 − 1 = 4 cm.\nB = 3 × 4 × 4 = 48 cm²"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "P = 48 ÷ 75 = 0,64 = 64%\nLetra A. Em cada 100 jogadas, a moeda fica toda dentro em 64.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "T",
+        "75"
+       ],
+       [
+        "B",
+        "48"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: disco que precisa ficar todo dentro → o centro cai num círculo de raio (grande − disco); chance = área boa ÷ área total.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Neste jogo"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "raios 5 e 1, π = 3"
+       ],
+       [
+        "2. Equação em letras",
+        "P = B ÷ T"
+       ],
+       [
+        "3. Achar cada letra",
+        "T = 75; B = 48"
+       ],
+       [
+        "4. Substituir",
+        "48 ÷ 75 = 64%"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Círculo de raio 6 cm, moeda de raio 2 cm, π = 3. Área onde o centro pode cair?",
+    "opcoes": [
+     "48 cm²",
+     "108 cm²",
+     "72 cm²",
+     "24 cm²"
+    ],
+    "certa": "48 cm²",
+    "resposta": "Raio 6 − 2 = 4; área 3 × 4 × 4 = 48."
+   }
+  }
+ },
+ {
+  "id": "d2-banco-mat-p26-06",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Numa quermesse, uma ficha redonda de raio 3 cm é jogada sobre uma mesa com círculos desenhados de raio 10 cm. A ficha cai sempre sobre um círculo, e o centro dela tem a mesma chance de cair em qualquer ponto dele. Use π = 3.\nA chance de a ficha tocar a linha de um círculo é de",
+  "A": "49%",
+  "B": "70%",
+  "C": "51%",
+  "D": "30%",
+  "E": "91%",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Q = 10-3 = 7; B = 3*49 = 147; T = 3*100 = 300; G = 147/300 = 49%; P = 100-49 = 51%. C. A = só G; B = 7/10; D = 3/10; E = 100-3*3.",
+   "ideia": "A ficha fica toda dentro quando o centro cai num círculo de raio 7 cm: 147 ÷ 300 = 49%. Ela toca a linha nas outras jogadas: 100% − 49% = 51%.",
+   "pecas": [
+    {
+     "termo": "Chance",
+     "significado": "A parte que serve dividida pelo total, em porcentagem."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circulo",
+        "nome": "Área do círculo",
+        "formula": "π × raio × raio"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Chance (probabilidade)",
+        "formula": "parte que serve ÷ total"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Raio do círculo",
+        "10 cm"
+       ],
+       [
+        "Raio da ficha",
+        "3 cm"
+       ],
+       [
+        "π",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a chance de a ficha tocar a linha, e não a de ficar dentro.\nP = 100% − G (tocar = 100% menos a chance de ficar toda dentro)\nPor que tirar de 100%? Cada jogada ou fica toda dentro ou toca a linha. Não tem terceira opção, então as duas chances somam 100%.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "P",
+        "chance de tocar a linha (o que a questão quer)"
+       ],
+       [
+        "G",
+        "chance de ficar toda dentro"
+       ],
+       [
+        "B",
+        "área onde o centro pode cair"
+       ],
+       [
+        "T",
+        "área do círculo todo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando T (o círculo todo)",
+     "texto": "É a área do círculo: π × raio × raio.\nT = 3 × 10 × 10 = 300 cm²"
+    },
+    {
+     "titulo": "Achando B (onde o centro pode cair)",
+     "texto": "O centro precisa ficar a 3 cm da linha para a ficha não tocar nela.\nO raio da região boa é 10 − 3 = 7 cm.\nB = 3 × 7 × 7 = 147 cm²"
+    },
+    {
+     "titulo": "Achando G: o seu jeito",
+     "texto": "Parece certo parar em 49%. Mas 49% é a chance de ficar toda DENTRO. A questão pergunta o contrário, tocar a linha.\nG = 147 ÷ 300 = 0,49 = 49%"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "P = 100% − 49% = 51%\nLetra C. Em cada 100 jogadas, a ficha toca a linha em 51.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "T",
+        "300"
+       ],
+       [
+        "B",
+        "147"
+       ],
+       [
+        "G",
+        "49%"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: disco e círculos → área boa ÷ área total; se a pergunta é o contrário, tire o resultado de 100%.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta quermesse"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "raios 10 e 3, π = 3"
+       ],
+       [
+        "2. Equação em letras",
+        "P = 100% − G"
+       ],
+       [
+        "3. Achar cada letra",
+        "T = 300; B = 147; G = 49%"
+       ],
+       [
+        "4. Substituir",
+        "100% − 49% = 51%"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Círculo de raio 6 cm, ficha de raio 2 cm, π = 3. Área onde o centro pode cair?",
+    "opcoes": [
+     "48 cm²",
+     "108 cm²",
+     "72 cm²",
+     "24 cm²"
+    ],
+    "certa": "48 cm²",
+    "resposta": "Raio 6 − 2 = 4; área 3 × 4 × 4 = 48."
+   }
+  }
+ }
+]

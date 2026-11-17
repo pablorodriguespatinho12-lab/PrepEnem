@@ -224,7 +224,23 @@ export interface VisualDiagrama {
   nome: NomeDiagrama;
   rotulos?: string[];
 }
-export type Visual = VisualLegenda | VisualQuadro | VisualPalavra | VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula | VisualFigura | VisualDiagrama;
+/* "As fórmulas desta questão" (Pablo, 17/11/2026): a 1ª tela da aula mostra, já
+   prontas, as fórmulas e figuras que a questão usa (área do quadrado, do círculo...).
+   components/visual/formulas.tsx desenha cada figura. */
+export const FIGURAS_FORMULA = [
+  'quadrado', 'retangulo', 'triangulo', 'triangulo-retangulo', 'circulo', 'trapezio',
+  'cilindro', 'caixa', 'cone', 'esfera', 'porcentagem', 'grafico', 'contagem', 'media',
+] as const;
+export type FiguraFormula = (typeof FIGURAS_FORMULA)[number];
+export interface VisualFormulas {
+  tipo: 'formulas';
+  titulo?: string;
+  itens: { figura: FiguraFormula; nome: string; formula: string }[];
+}
+const MAX_FORMULAS = 4;
+/* Título da 1ª tela no jeito do robô; a aula da questão procura por ele (montar.py usa o mesmo). */
+export const TITULO_FORMULAS = 'As fórmulas desta questão';
+export type Visual = VisualFormulas | VisualLegenda | VisualQuadro | VisualPalavra | VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula | VisualFigura | VisualDiagrama;
 
 const MAX_FUNCOES = 4;
 const MAX_PONTOS = 8;
@@ -529,7 +545,18 @@ function diagrama(v: Record<string, unknown>): VisualDiagrama | null {
   return { tipo: 'diagrama', titulo: texto(v.titulo), nome, ...(rotulos.some(Boolean) ? { rotulos } : {}) };
 }
 
+function formulas(v: Record<string, unknown>): VisualFormulas | null {
+  const itens = lista(v.itens).map(objeto).flatMap((i) => {
+    const figura = FIGURAS_FORMULA.find((f) => f === i.figura);
+    const nome = texto(i.nome, 30);
+    const formula = texto(i.formula, 60);
+    return figura && nome && formula ? [{ figura, nome, formula }] : [];
+  }).slice(0, MAX_FORMULAS);
+  return itens.length > 0 ? { tipo: 'formulas', titulo: texto(v.titulo), itens } : null;
+}
+
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {
+  formulas,
   legenda: formulaComLegenda, quadro, grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias, processo, molecula, palavra, figura, diagrama,
 };
 

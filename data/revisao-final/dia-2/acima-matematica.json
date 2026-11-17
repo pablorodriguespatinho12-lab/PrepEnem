@@ -1,0 +1,2090 @@
+[
+ {
+  "id": "d2-acima-mat-01",
+  "materia": "Matemática",
+  "tema": "Aritmética e Porcentagem",
+  "enunciado": "Uma loja quer ganhar 20% do preço de VENDA em cada produto (e não 20% do custo). Um produto custa R$ 240 para a loja. Numa promoção, esse produto é vendido com 10% de desconto sobre o preço de venda. Nessa promoção, o lucro da loja, em porcentagem do custo, é de",
+  "A": "12,5%",
+  "B": "10%",
+  "C": "18%",
+  "D": "30%",
+  "E": "22,5%",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "PV = 240/0,8 = 300; PP = 300*0,9 = 270; L = (270-240)/240 = 12,5%. A. B = 20-10; C = 20*0,9; D = 30 reais lidos como %; E = 12,5+10.",
+   "ideia": "Lucro de 20% sobre a venda quer dizer que o custo é os outros 80% da venda: venda = 240 ÷ 0,80 = 300. Com 10% de desconto, a venda cai para 270 e o lucro é 30 sobre um custo de 240.",
+   "pecas": [
+    {
+     "termo": "Lucro sobre a venda",
+     "significado": "O lucro é uma parte do preço de venda, não do custo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "porcentagem",
+        "nome": "Custo com lucro sobre a venda",
+        "formula": "custo = venda × (1 − lucro)"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Desconto de 10%",
+        "formula": "preço × 0,90"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Lucro sobre o custo",
+        "formula": "lucro em reais ÷ custo × 100"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Custo do produto",
+        "R$ 240"
+       ],
+       [
+        "Lucro desejado",
+        "20% do preço de VENDA"
+       ],
+       [
+        "Desconto na promoção",
+        "10% sobre o preço de venda"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o lucro na promoção, em % do custo.\nL = (PP − 240) ÷ 240 × 100 (lucro em % = o que sobrou em reais ÷ custo × 100)\nPor que dividir pelo custo? A questão pede o lucro em relação ao custo. Se você gastou 200 e ganhou 50, o lucro é 50 ÷ 200 = 25% do custo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "L",
+        "lucro na promoção, em % do custo (o que a questão quer)"
+       ],
+       [
+        "PV",
+        "preço de venda, sem promoção"
+       ],
+       [
+        "PP",
+        "preço na promoção"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando PV: o seu jeito",
+     "texto": "Parece certo fazer 240 × 1,20 = 288. Mas esse 20% é do preço de VENDA, não do custo.\nSe o lucro é 20% da venda, o custo é os outros 80% da venda.\n240 = PV × 0,80\nPV = 240 ÷ 0,80 = 300"
+    },
+    {
+     "titulo": "Achando PP (preço na promoção)",
+     "texto": "O desconto de 10% é sobre o preço de venda, 300.\nPP = 300 × 0,90 = 270"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "L = (270 − 240) ÷ 240 × 100\nL = 30 ÷ 240 × 100 = 12,5\nLetra A. Na promoção a loja ganha 30 reais, que são 12,5% do custo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "PV",
+        "300"
+       ],
+       [
+        "PP",
+        "270"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: lucro \"sobre a venda\" → o custo é o que resta da venda: divida o custo por (1 − lucro). Depois aplique o desconto na venda.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "custo 240; 20% da venda; desconto 10%"
+       ],
+       [
+        "2. Equação em letras",
+        "L = (PP − 240) ÷ 240 × 100"
+       ],
+       [
+        "3. Achar cada letra",
+        "PV = 300; PP = 270"
+       ],
+       [
+        "4. Substituir",
+        "30 ÷ 240 × 100 = 12,5"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Custo R$ 80. A loja quer 20% de lucro sobre a venda. Qual o preço de venda?",
+    "opcoes": [
+     "R$ 96",
+     "R$ 100",
+     "R$ 120",
+     "R$ 84"
+    ],
+    "certa": "R$ 100",
+    "resposta": "80 ÷ 0,80 = 100. Os 80 são 80% da venda."
+   }
+  }
+ },
+ {
+  "id": "d2-acima-mat-02",
+  "materia": "Matemática",
+  "tema": "Aritmética e Porcentagem",
+  "enunciado": "Três funcionários, que faltaram 1, 2 e 3 vezes no ano, dividem um bônus de R$ 9 900 em partes inversamente proporcionais ao número de faltas: quem faltou menos recebe mais. A diferença entre o maior e o menor bônus é de",
+  "A": "R$ 3 300",
+  "B": "R$ 5 400",
+  "C": "R$ 3 600",
+  "D": "R$ 1 800",
+  "E": "R$ 4 500",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Partes 6,3,2 (soma 11); 1 parte = 9900/11 = 900; maior 5400, menor 1800; diferença = 4*900 = 3600. C. A = 4950-1650 (proporção direta); B = maior; D = menor; E = maior-900.",
+   "ideia": "Inversamente proporcional a 1, 2 e 3 faltas quer dizer proporcional a 1, 1/2 e 1/3. Multiplicando por 6, as partes viram 6, 3 e 2, que somam 11.",
+   "pecas": [
+    {
+     "termo": "Inversamente proporcional",
+     "significado": "Quanto maior o número de faltas, menor a parte que a pessoa recebe."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "porcentagem",
+        "nome": "Partes inversas",
+        "formula": "parte de cada um ∝ 1 ÷ faltas"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Valor de 1 parte",
+        "formula": "bônus ÷ soma das partes"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Faltas dos 3",
+        "1, 2 e 3"
+       ],
+       [
+        "Bônus total",
+        "R$ 9 900"
+       ],
+       [
+        "Regra",
+        "quem faltou menos recebe mais"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a diferença entre o maior e o menor bônus.\nD = (6 − 2) × U (diferença = diferença de partes × valor de 1 parte)\nPor que 6 e 2? Os inversos 1, 1/2 e 1/3 viram 6, 3 e 2 partes quando você multiplica tudo por 6. O maior é 6 partes e o menor é 2.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "D",
+        "diferença entre o maior e o menor bônus (o que a questão quer)"
+       ],
+       [
+        "S",
+        "soma das partes"
+       ],
+       [
+        "U",
+        "valor de 1 parte"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando S (soma das partes)",
+     "texto": "Inverso de cada número de faltas: 1, 1/2 e 1/3.\nMultiplique tudo por 6 para tirar as frações: 6, 3 e 2.\nQuem faltou 1 vez fica com 6 partes.\nS = 6 + 3 + 2 = 11"
+    },
+    {
+     "titulo": "Achando U: o seu jeito",
+     "texto": "Parece certo dividir direto, nas partes 1, 2 e 3. Isso dá 1 650, 3 300 e 4 950.\nMas aí quem mais faltou ganha mais. O contrário do pedido.\nCom as partes certas:\nU = 9 900 ÷ 11 = 900"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "D = (6 − 2) × 900 = 4 × 900 = 3 600\nLetra C. O maior bônus é 5 400 e o menor é 1 800.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "S",
+        "11"
+       ],
+       [
+        "U",
+        "900"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"inversamente proporcional\" → use o inverso (1 ÷ número) e multiplique tudo pelo mesmo número para tirar as frações; depois divida o total pela soma das partes.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "faltas 1, 2, 3; R$ 9 900"
+       ],
+       [
+        "2. Equação em letras",
+        "D = (6 − 2) × U"
+       ],
+       [
+        "3. Achar cada letra",
+        "S = 11; U = 900"
+       ],
+       [
+        "4. Substituir",
+        "4 × 900 = 3 600"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Bônus de R$ 600 em partes inversas a 1 e 2 faltas (partes 2 e 1). Quanto recebe quem faltou 1 vez?",
+    "opcoes": [
+     "R$ 400",
+     "R$ 200",
+     "R$ 300",
+     "R$ 500"
+    ],
+    "certa": "R$ 400",
+    "resposta": "2 + 1 = 3 partes. 600 ÷ 3 = 200 por parte. 2 partes = 400."
+   }
+  }
+ },
+ {
+  "id": "d2-acima-mat-03",
+  "materia": "Matemática",
+  "tema": "Grandezas e Medidas",
+  "enunciado": "Num mapa de escala 1 : 50 000, um lago ocupa 12 cm² de área. A área real desse lago, em km², é de",
+  "A": "0,3 km²",
+  "B": "3 km²",
+  "C": "6 km²",
+  "D": "12 km²",
+  "E": "300 km²",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "1 cm = 50000 cm = 0,5 km; 1 cm² = 0,25 km²; 12*0,25 = 3 km². B. A = casa decimal errada (12*0,025); C = 12*0,5; D = 12*1; E = 12*25 (lado de 5 km).",
+   "ideia": "Na escala 1 : 50 000, 1 cm do mapa vale 0,5 km no chão. Como área é lado × lado, 1 cm² do mapa vale 0,5 × 0,5 = 0,25 km², e não 0,5 km².",
+   "pecas": [
+    {
+     "termo": "Escala 1 : 50 000",
+     "significado": "1 cm no mapa mostra 50 000 cm no chão, que são 0,5 km."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "quadrado",
+        "nome": "Área do quadrado",
+        "formula": "lado × lado"
+       },
+       {
+        "figura": "retangulo",
+        "nome": "Metros e quilômetros",
+        "formula": "1 km = 1 000 m = 100 000 cm"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Escala do mapa",
+        "1 : 50 000"
+       ],
+       [
+        "Área do lago no mapa",
+        "12 cm²"
+       ],
+       [
+        "Pedido",
+        "área real em km²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a área real do lago, em km².\nA = 12 × K (área real = área do mapa × km² que vale 1 cm²)\nPor que 12 × K? Cada 1 cm² do mapa é um pedaço igual do chão. Se 1 cm² vale 0,25 km², 12 cm² valem 12 vezes isso.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "A",
+        "área real do lago (o que a questão quer)"
+       ],
+       [
+        "L",
+        "km do chão que 1 cm do mapa mostra"
+       ],
+       [
+        "K",
+        "km² do chão que 1 cm² do mapa mostra"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando L (km que 1 cm mostra)",
+     "texto": "A escala 1 : 50 000 diz: 1 cm no mapa = 50 000 cm no chão.\n50 000 cm = 500 m\n500 m = 0,5 km\nL = 0,5 km"
+    },
+    {
+     "titulo": "Achando K: o seu jeito",
+     "texto": "Parece certo usar o mesmo 0,5: 12 × 0,5 = 6 km².\nMas 1 cm² é um quadrado de 1 cm por 1 cm, e CADA lado vale 0,5 km.\nÁrea é lado × lado.\nK = 0,5 × 0,5 = 0,25 km²"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "A = 12 × 0,25 = 3\nLetra B. O lago real tem 3 km².",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "L",
+        "0,5 km"
+       ],
+       [
+        "K",
+        "0,25 km²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: escala com ÁREA → ache quanto vale 1 cm de lado e multiplique por ele DUAS vezes (lado × lado).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1 : 50 000; 12 cm²"
+       ],
+       [
+        "2. Equação em letras",
+        "A = 12 × K"
+       ],
+       [
+        "3. Achar cada letra",
+        "L = 0,5; K = 0,25"
+       ],
+       [
+        "4. Substituir",
+        "12 × 0,25 = 3"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Escala 1 : 100 000. 1 cm do mapa vale 1 km. Quantos km² vale 1 cm²?",
+    "opcoes": [
+     "1 km²",
+     "2 km²",
+     "10 km²",
+     "100 km²"
+    ],
+    "certa": "1 km²",
+    "resposta": "1 km × 1 km = 1 km²."
+   }
+  }
+ },
+ {
+  "id": "d2-acima-mat-04",
+  "materia": "Matemática",
+  "tema": "Grandezas e Medidas",
+  "enunciado": "Uma piscina é enchida por duas torneiras e esvaziada por um ralo. Sozinha, a torneira A enche a piscina em 6 h e a torneira B, em 4 h. O ralo, sozinho, esvazia a piscina cheia em 12 h. Com a piscina vazia, abrem-se as duas torneiras e o ralo ao mesmo tempo. O tempo para encher a piscina é de",
+  "A": "2 h 24 min",
+  "B": "4 h",
+  "C": "5 h",
+  "D": "3 h",
+  "E": "12 h",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "1/6+1/4-1/12 = 4/12 = 1/3 por hora; T = 3 h. D. A = ignora o ralo (12/5 h = 2 h 24 min); B = só a torneira B; C = média (6+4)/2; E = tempo do ralo.",
+   "ideia": "Não se somam tempos: somam-se as partes da piscina por hora. A enche 1/6, B enche 1/4 e o ralo tira 1/12, o que dá 1/3 por hora.",
+   "pecas": [
+    {
+     "termo": "Parte por hora",
+     "significado": "Quanto da piscina uma torneira enche em 1 hora: 1 ÷ horas."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "caixa",
+        "nome": "Parte por hora",
+        "formula": "1 piscina ÷ horas para encher sozinha"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Juntar tudo aberto",
+        "formula": "soma o que enche e tira o que esvazia"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Torneira A",
+        "enche em 6 h"
+       ],
+       [
+        "Torneira B",
+        "enche em 4 h"
+       ],
+       [
+        "Ralo",
+        "esvazia em 12 h"
+       ],
+       [
+        "Os 3 abertos juntos",
+        "piscina vazia no começo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o tempo para encher a piscina com tudo aberto.\nT = 1 ÷ R, com R = PA + PB − PR (tempo = 1 piscina ÷ parte que enche por hora)\nPor que 1 ÷ R? Se a piscina enche 1/3 por hora, em 3 horas enche 3 × 1/3 = 1 piscina inteira.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "T",
+        "tempo para encher (o que a questão quer)"
+       ],
+       [
+        "R",
+        "parte que enche por hora, tudo aberto"
+       ],
+       [
+        "PA",
+        "parte por hora da torneira A"
+       ],
+       [
+        "PB",
+        "parte por hora da torneira B"
+       ],
+       [
+        "PR",
+        "parte por hora que o ralo tira"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando PA (parte por hora da A)",
+     "texto": "A enche 1 piscina em 6 h. Em 1 h enche a sexta parte.\nPA = 1/6 = 2/12"
+    },
+    {
+     "titulo": "Achando PB (parte por hora da B)",
+     "texto": "B enche 1 piscina em 4 h. Em 1 h enche a quarta parte.\nPB = 1/4 = 3/12"
+    },
+    {
+     "titulo": "Achando PR (parte por hora do ralo)",
+     "texto": "O ralo esvazia 1 piscina em 12 h. Em 1 h tira a 12ª parte.\nPR = 1/12"
+    },
+    {
+     "titulo": "Achando R: o seu jeito",
+     "texto": "Parece certo tirar a média dos tempos: (6 + 4) ÷ 2 = 5 h. Mas tempos não se somam. O que se soma é a parte por hora.\nTorneiras enchem, o ralo tira:\nR = 2/12 + 3/12 − 1/12 = 4/12 = 1/3"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "T = 1 ÷ (1/3) = 3 h\nLetra D. Com o ralo aberto a piscina enche em 3 h.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "PA",
+        "1/6 = 2/12"
+       ],
+       [
+        "PB",
+        "1/4 = 3/12"
+       ],
+       [
+        "PR",
+        "1/12"
+       ],
+       [
+        "R",
+        "4/12 = 1/3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: vários que enchem e esvaziam juntos → some a PARTE POR HORA de cada um (quem esvazia entra negativo); o tempo é 1 ÷ o total.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "6 h, 4 h e ralo 12 h"
+       ],
+       [
+        "2. Equação em letras",
+        "T = 1 ÷ R; R = PA + PB − PR"
+       ],
+       [
+        "3. Achar cada letra",
+        "1/6; 1/4; 1/12; R = 1/3"
+       ],
+       [
+        "4. Substituir",
+        "1 ÷ 1/3 = 3 h"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "A enche em 3 h e B enche em 6 h. Juntas, que parte da piscina enchem em 1 h?",
+    "opcoes": [
+     "1/2",
+     "1/9",
+     "1/3",
+     "1/6"
+    ],
+    "certa": "1/2",
+    "resposta": "1/3 + 1/6 = 2/6 + 1/6 = 3/6 = 1/2."
+   }
+  }
+ },
+ {
+  "id": "d2-acima-mat-05",
+  "materia": "Matemática",
+  "tema": "Estatística",
+  "enunciado": "Cinco números inteiros positivos, escritos em ordem crescente (o menor primeiro, podendo haver repetidos), têm média 7, mediana 6 e uma única moda, igual a 4. O maior valor possível para o último número dessa lista é",
+  "A": "15",
+  "B": "13",
+  "C": "14",
+  "D": "21",
+  "E": "11",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "Soma = 7*5 = 35; lista 4,4,6,d,e; d=6 daria 2 modas; d=7; e = 35-14-7 = 14. C. A = d=6 (15); B = d=8; D = esquece d (35-14); E = d=10 (e=11).",
+   "ideia": "A moda 4 tem de aparecer 2 vezes e a mediana 6 é o 3º número, então a lista começa com 4, 4, 6. O 4º número não pode ser 6, senão haveria duas modas; o menor possível é 7.",
+   "pecas": [
+    {
+     "termo": "Moda única",
+     "significado": "Só um número aparece mais vezes que todos os outros."
+    },
+    {
+     "termo": "Mediana",
+     "significado": "Com 5 números em ordem, é o do meio, o 3º."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "media",
+        "nome": "Média",
+        "formula": "soma ÷ quantidade"
+       },
+       {
+        "figura": "media",
+        "nome": "Mediana de 5 números",
+        "formula": "o 3º, com os números em ordem"
+       },
+       {
+        "figura": "contagem",
+        "nome": "Moda",
+        "formula": "o número que mais aparece"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Quantidade de números",
+        "5, em ordem crescente"
+       ],
+       [
+        "Média",
+        "7"
+       ],
+       [
+        "Mediana",
+        "6"
+       ],
+       [
+        "Moda única",
+        "4"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o maior valor possível para o último número.\nE = S − P − D (último = soma de todos − os 3 primeiros − o 4º)\nPor que tirar? Todos somam S. O que já está fixo sai da soma, e o que sobra é o último. Para o último ser o maior, o 4º tem que ser o menor possível.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "E",
+        "último número (o que a questão quer)"
+       ],
+       [
+        "S",
+        "soma dos 5 números"
+       ],
+       [
+        "P",
+        "soma dos 3 primeiros"
+       ],
+       [
+        "D",
+        "menor 4º número possível"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando S (a soma)",
+     "texto": "Média = soma ÷ quantidade, então soma = média × quantidade.\nS = 7 × 5 = 35"
+    },
+    {
+     "titulo": "Achando P (os 3 primeiros)",
+     "texto": "A moda 4 tem que aparecer mais de uma vez. A mediana 6 é o 3º número.\nOs dois 4 só cabem nas 2 primeiras posições.\nA lista começa com 4, 4, 6.\nP = 4 + 4 + 6 = 14"
+    },
+    {
+     "titulo": "Achando D: o seu jeito",
+     "texto": "Parece certo usar o menor 4º número que existe: 6, igual ao 3º. Mas aí o 6 aparece 2 vezes, igual ao 4. Ficam duas modas, e a moda tem que ser única.\nO 4º tem que ser maior que 6.\nD = 7"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "E = 35 − 14 − 7 = 14\nLetra C. A lista é 4, 4, 6, 7, 14. A soma dá 35 e a média 7.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "S",
+        "35"
+       ],
+       [
+        "P",
+        "14"
+       ],
+       [
+        "D",
+        "7"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: média, mediana e moda juntas → soma = média × quantidade; fixe os que a moda e a mediana obrigam; confira se não criou uma moda nova.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "5 números; média 7; mediana 6; moda 4"
+       ],
+       [
+        "2. Equação em letras",
+        "E = S − P − D"
+       ],
+       [
+        "3. Achar cada letra",
+        "S = 35; P = 14; D = 7"
+       ],
+       [
+        "4. Substituir",
+        "35 − 14 − 7 = 14"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Cinco números somam 40. Os 4 primeiros somam 29. Qual é o último?",
+    "opcoes": [
+     "11",
+     "10",
+     "12",
+     "9"
+    ],
+    "certa": "11",
+    "resposta": "40 − 29 = 11."
+   }
+  }
+ },
+ {
+  "id": "d2-acima-mat-06",
+  "materia": "Matemática",
+  "tema": "Estatística",
+  "enunciado": "Num conjunto de dados, a média é 10 e o desvio-padrão é 3. Cada valor do conjunto é multiplicado por 2 e, em seguida, somado a 5. O coeficiente de variação (o desvio-padrão dividido pela média) do novo conjunto é de",
+  "A": "30%",
+  "B": "12%",
+  "C": "44%",
+  "D": "60%",
+  "E": "24%",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "M = 10*2+5 = 25; S = 3*2 = 6; CV = 6/25 = 24%. E. A = CV antigo (3/10); B = 3/25; C = 11/25 (3*2+5); D = 6/10.",
+   "ideia": "Multiplicar por 2 e somar 5 leva a média a 10 × 2 + 5 = 25. O desvio-padrão só é dobrado, 6, porque somar o mesmo valor em todos não muda o quanto eles se afastam uns dos outros.",
+   "pecas": [
+    {
+     "termo": "Desvio-padrão",
+     "significado": "Mede o quanto os valores se afastam da média."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "media",
+        "nome": "Nova média",
+        "formula": "média × k + s (k multiplica, s soma)"
+       },
+       {
+        "figura": "media",
+        "nome": "Novo desvio-padrão",
+        "formula": "desvio × k (somar não muda)"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Coeficiente de variação",
+        "formula": "desvio ÷ média × 100"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Média de antes",
+        "10"
+       ],
+       [
+        "Desvio-padrão de antes",
+        "3"
+       ],
+       [
+        "Mudança em cada valor",
+        "× 2, depois + 5"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o coeficiente de variação do novo conjunto.\nC = S ÷ M × 100 (coeficiente em % = novo desvio ÷ nova média × 100)\nPor que dividir o desvio pela média? Mostra o tamanho do desvio em relação à média. Desvio 6 com média 25 espalha menos que desvio 6 com média 10.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "C",
+        "coeficiente de variação em % (o que a questão quer)"
+       ],
+       [
+        "M",
+        "nova média"
+       ],
+       [
+        "S",
+        "novo desvio-padrão"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando M (nova média)",
+     "texto": "A média sofre as duas contas, na mesma ordem.\nM = 10 × 2 + 5 = 25"
+    },
+    {
+     "titulo": "Achando S: o seu jeito",
+     "texto": "Parece certo fazer a mesma conta no desvio: 3 × 2 + 5 = 11.\nMas desvio mede o quanto os valores se afastam uns dos outros. Somar 5 em todos move todos juntos: a distância entre eles não muda. Multiplicar por 2 abre as distâncias ao dobro.\nS = 3 × 2 = 6"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "C = 6 ÷ 25 × 100 = 24\nLetra E. O novo coeficiente é 24%. Antes era 3 ÷ 10 = 30%.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "M",
+        "25"
+       ],
+       [
+        "S",
+        "6"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dados × k + s → a média sofre as duas contas; o desvio só ganha o × k (o + s não muda o espalhamento).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "média 10; desvio 3; × 2, + 5"
+       ],
+       [
+        "2. Equação em letras",
+        "C = S ÷ M × 100"
+       ],
+       [
+        "3. Achar cada letra",
+        "M = 25; S = 6"
+       ],
+       [
+        "4. Substituir",
+        "6 ÷ 25 × 100 = 24"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Média 8, desvio 2. Cada valor é multiplicado por 3. Qual o novo desvio?",
+    "opcoes": [
+     "6",
+     "24",
+     "8",
+     "2"
+    ],
+    "certa": "6",
+    "resposta": "Só a multiplicação muda o desvio: 2 × 3 = 6."
+   }
+  }
+ },
+ {
+  "id": "d2-acima-mat-07",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "Um fazendeiro tem 100 m de tela e quer fazer um curral retangular encostado em um muro reto e longo. Só 3 lados precisam de tela, pois o muro serve de quarto lado, e toda a tela é usada. A maior área possível para o curral, em m², é de",
+  "A": "625",
+  "B": "1 250",
+  "C": "1 200",
+  "D": "2 500",
+  "E": "1 111",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "2X+Y = 100; A = X(100-2X) = 100X-2X^2; X = 100/4 = 25; Y = 50; A = 1250. B. A = 25*25 (4 lados iguais); C = 30*40 (chute); D = 50*50; E = 3 lados iguais (33,3^2).",
+   "ideia": "Com o muro, a tela cobre 2 lados de medida X e 1 lado de 100 − 2X, e a área X × (100 − 2X) é uma parábola de boca para baixo. O ponto mais alto está em X = 25.",
+   "pecas": [
+    {
+     "termo": "Ponto mais alto da parábola",
+     "significado": "Em uma parábola com a negativo, é o ponto em x = −b ÷ (2 × a)."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "retangulo",
+        "nome": "Área do retângulo",
+        "formula": "base × altura"
+       },
+       {
+        "figura": "grafico",
+        "nome": "Ponto mais alto da parábola",
+        "formula": "x = −b ÷ (2 × a)"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Tela",
+        "100 m, toda usada"
+       ],
+       [
+        "Lados com tela",
+        "3 (o muro é o 4º lado)"
+       ],
+       [
+        "Forma do curral",
+        "retângulo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a maior área possível do curral.\nA = X × Y (área = lado que sai do muro × lado paralelo ao muro)\nPor que multiplicar? A área de um retângulo é base × altura. O que muda é o jeito de repartir os 100 m de tela entre X e Y.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "A",
+        "área do curral (o que a questão quer)"
+       ],
+       [
+        "X",
+        "cada lado que sai do muro (são 2)"
+       ],
+       [
+        "Y",
+        "lado paralelo ao muro"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando X: o seu jeito",
+     "texto": "Parece certo dividir a tela em 4 lados iguais de 25 m: área 625. Mas o muro faz um lado de graça, então o lado do muro pode ser maior.\nA tela cobre 2X + Y = 100, logo Y = 100 − 2X.\nA = X × (100 − 2X) = 100X − 2X²\nParábola de boca para baixo: a = −2 e b = 100.\nX = −100 ÷ (2 × (−2)) = −100 ÷ (−4) = 25"
+    },
+    {
+     "titulo": "Achando Y (lado paralelo ao muro)",
+     "texto": "Y = 100 − 2X\nY = 100 − 2 × 25 = 100 − 50 = 50"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "A = 25 × 50 = 1 250\nLetra B. O curral é de 25 m por 50 m.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "X",
+        "25"
+       ],
+       [
+        "Y",
+        "50"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: perímetro fixo e pedido de área máxima → escreva a área com 1 letra só, vire parábola de boca para baixo e use x = −b ÷ (2 × a).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "100 m de tela; 3 lados"
+       ],
+       [
+        "2. Equação em letras",
+        "A = X × Y; Y = 100 − 2X"
+       ],
+       [
+        "3. Achar cada letra",
+        "X = 25; Y = 50"
+       ],
+       [
+        "4. Substituir",
+        "25 × 50 = 1 250"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Área = X × (80 − 2X). Em que X a área é máxima?",
+    "opcoes": [
+     "20",
+     "40",
+     "10",
+     "80"
+    ],
+    "certa": "20",
+    "resposta": "Área = 80X − 2X². X = 80 ÷ (2 × 2) = 20."
+   }
+  }
+ },
+ {
+  "id": "d2-acima-mat-08",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "Uma cultura começa com 500 bactérias, e o número de bactérias dobra a cada 20 minutos. A contagem é feita só a cada 20 minutos, logo depois de cada dobra. Use log 2 = 0,3 (logaritmo na base 10). O tempo mínimo para a contagem passar de 400 000 bactérias é de",
+  "A": "58 min",
+  "B": "180 min",
+  "C": "194 min",
+  "D": "200 min",
+  "E": "800 min",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "400000/500 = 800; log 800 = 3*0,3+2 = 2,9; N*0,3 > 2,9 → N > 9,67 → N = 10; T = 20*10 = 200. D. A = 2,9*20; B = 9 dobras (512 < 800); C = 9,67*20; E = 800 lido como minutos.",
+   "ideia": "O número precisa ficar 800 vezes maior, ou seja, 2 elevado a N maior que 800. Com log 2 = 0,3, N passa de 9,67; como só se conta a cada dobra, N é inteiro e vale 10.",
+   "pecas": [
+    {
+     "termo": "Logaritmo de potência",
+     "significado": "log de 2 elevado a N é N × log 2. Serve para achar N."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Dobrar N vezes",
+        "formula": "final = inicial × 2 elevado a N"
+       },
+       {
+        "figura": "grafico",
+        "nome": "Log de potência de 2",
+        "formula": "log (2 elevado a N) = N × log 2"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Começo",
+        "500 bactérias"
+       ],
+       [
+        "Dobra a cada",
+        "20 minutos"
+       ],
+       [
+        "Meta",
+        "passar de 400 000"
+       ],
+       [
+        "log 2",
+        "0,3 (base 10)"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o tempo mínimo para passar de 400 000 bactérias.\nT = 20 × N (tempo = 20 minutos × número de dobras)\nPor que 20 × N? Cada dobra leva 20 minutos. Com 3 dobras são 3 × 20 = 60 minutos.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "T",
+        "tempo em minutos (o que a questão quer)"
+       ],
+       [
+        "R",
+        "quantas vezes o número precisa crescer"
+       ],
+       [
+        "N",
+        "menor número inteiro de dobras"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando R (quantas vezes cresce)",
+     "texto": "Meta ÷ começo = 400 000 ÷ 500\nR = 800 vezes"
+    },
+    {
+     "titulo": "Achando N: o seu jeito",
+     "texto": "Precisamos de 2 elevado a N maior que 800.\nlog 800 = log 8 + log 100 = 3 × 0,3 + 2 = 2,9\nN × 0,3 > 2,9, então N > 9,67.\nParece certo usar 9,67 (194 min) ou 9. Mas a contagem só vem a cada dobra, então N é inteiro.\n9 dobras: 500 × 512 = 256 000 (não passou).\n10 dobras: 500 × 1 024 = 512 000 (passou).\nN = 10"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "T = 20 × 10 = 200\nLetra D. Em 200 minutos a contagem chega a 512 000.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "R",
+        "800"
+       ],
+       [
+        "N",
+        "10"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"dobra a cada...\" e pede quando passa de uma meta → ache quantas vezes cresce, use log para achar N e arredonde PARA CIMA se só conta a cada dobra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "500; dobra em 20 min; 400 000"
+       ],
+       [
+        "2. Equação em letras",
+        "T = 20 × N"
+       ],
+       [
+        "3. Achar cada letra",
+        "R = 800; N = 10"
+       ],
+       [
+        "4. Substituir",
+        "20 × 10 = 200"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "2 elevado a N passa de 100. Qual o menor N inteiro? (2^6 = 64 e 2^7 = 128)",
+    "opcoes": [
+     "7",
+     "6",
+     "5",
+     "8"
+    ],
+    "certa": "7",
+    "resposta": "2^6 = 64 ainda não passa de 100. 2^7 = 128 passa."
+   }
+  }
+ },
+ {
+  "id": "d2-acima-mat-09",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um terreno triangular tem lados de 13 m, 14 m e 15 m. Um jardineiro quer fazer nele um canteiro circular, o maior possível, que caiba inteiro dentro do terreno, encostando nos três lados. O raio desse canteiro é de",
+  "A": "4 m",
+  "B": "6 m",
+  "C": "2 m",
+  "D": "7 m",
+  "E": "8 m",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "p = 21; S = raiz(21*8*7*6) = 84; R = 84/21 = 4. A. B = 84/14; C = 84/42; D = 14/2; E = 84/10,5.",
+   "ideia": "O círculo que encosta nos 3 lados liga ao centro 3 triângulos de altura R, e juntos eles formam o terreno: área = R × semiperímetro. Com área 84 e semiperímetro 21, R = 4.",
+   "pecas": [
+    {
+     "termo": "Semiperímetro",
+     "significado": "Metade da soma dos 3 lados: (13 + 14 + 15) ÷ 2 = 21."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "triangulo",
+        "nome": "Área pelos 3 lados",
+        "formula": "raiz de p × (p − a) × (p − b) × (p − c)"
+       },
+       {
+        "figura": "circulo",
+        "nome": "Círculo que cabe no triângulo",
+        "formula": "área = raio × p"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Lados do terreno",
+        "13 m, 14 m e 15 m"
+       ],
+       [
+        "Canteiro",
+        "círculo que encosta nos 3 lados"
+       ],
+       [
+        "Pedido",
+        "raio do círculo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o raio do maior círculo que cabe no terreno.\nR = S ÷ P (raio = área do triângulo ÷ semiperímetro)\nPor que dividir? Ligue o centro às pontas: sobram 3 triângulos, todos de altura R, com bases 13, 14 e 15. A área vale R × 13 ÷ 2 + R × 14 ÷ 2 + R × 15 ÷ 2 = R × 21.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "raio do canteiro (o que a questão quer)"
+       ],
+       [
+        "P",
+        "semiperímetro (metade da soma dos lados)"
+       ],
+       [
+        "S",
+        "área do terreno"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P (semiperímetro)",
+     "texto": "Some os lados e divida por 2.\nP = (13 + 14 + 15) ÷ 2 = 42 ÷ 2 = 21"
+    },
+    {
+     "titulo": "Achando S: o seu jeito",
+     "texto": "Parece certo fazer base × altura ÷ 2 com 14 e 13. Mas 13 não é a altura: a altura forma canto reto com a base, e o lado de 13 é inclinado.\nUse a fórmula dos 3 lados:\nS = raiz de 21 × 8 × 7 × 6\n21 × 8 × 7 × 6 = 7 056\nS = 84 m²"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = 84 ÷ 21 = 4\nLetra A. O canteiro tem 4 m de raio.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "21"
+       ],
+       [
+        "S",
+        "84"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"maior círculo que cabe dentro do triângulo\" → raio = área ÷ semiperímetro; sem a altura, ache a área pelos 3 lados.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "lados 13, 14 e 15"
+       ],
+       [
+        "2. Equação em letras",
+        "R = S ÷ P"
+       ],
+       [
+        "3. Achar cada letra",
+        "P = 21; S = 84"
+       ],
+       [
+        "4. Substituir",
+        "84 ÷ 21 = 4"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Triângulo de lados 6, 8 e 10 e área 24. Qual o raio do círculo que cabe nele?",
+    "opcoes": [
+     "2",
+     "3",
+     "4",
+     "24"
+    ],
+    "certa": "2",
+    "resposta": "Semiperímetro = (6 + 8 + 10) ÷ 2 = 12. R = 24 ÷ 12 = 2."
+   }
+  }
+ },
+ {
+  "id": "d2-acima-mat-10",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Uma folha de papel quadrada ABCD, com vértices em sequência, tem 12 cm de lado. A folha é dobrada de modo que o vértice A fique exatamente sobre M, o ponto médio do lado CD. A dobra cruza o lado AD no ponto P. A distância de A até P é de",
+  "A": "7,5 cm",
+  "B": "9 cm",
+  "C": "6 cm",
+  "D": "8 cm",
+  "E": "10 cm",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "PA = X; PD = 12-X; DM = 6; X² = (12-X)² + 36 → 24X = 180 → X = 7,5. A. B = 9 (3/4 do lado); C = 6 (P no meio de AD); D = 8; E = 10.",
+   "ideia": "Ao dobrar, A cai em M, então o ponto P da dobra fica à mesma distância de A e de M: PM = PA. No triângulo com canto reto em D, X × X = (12 − X) × (12 − X) + 6 × 6 dá X = 7,5.",
+   "pecas": [
+    {
+     "termo": "Ponto médio",
+     "significado": "Ponto que divide o lado em duas partes iguais: DM = 12 ÷ 2 = 6."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "triangulo-retangulo",
+        "nome": "Pitágoras",
+        "formula": "hipotenusa × hipotenusa = cateto × cateto + cateto × cateto"
+       },
+       {
+        "figura": "quadrado",
+        "nome": "Quadrado",
+        "formula": "4 lados iguais e 4 cantos retos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Lado da folha",
+        "12 cm"
+       ],
+       [
+        "M",
+        "ponto médio de CD, então DM = 6 cm"
+       ],
+       [
+        "Dobra",
+        "A cai em M; P está no lado AD"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a distância de A até P.\nX × X = Q × Q + 6 × 6 (Pitágoras no triângulo P-D-M: a hipotenusa PM vale X)\nPor que PM vale X? A dobra faz o vértice A cair em M. O pedaço PA vira PM, com o mesmo tamanho. Então PM = PA = X.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "X",
+        "distância de A até P (o que a questão quer)"
+       ],
+       [
+        "Q",
+        "distância de P até D"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando Q (distância de P até D)",
+     "texto": "O lado AD tem 12 cm. Se AP = X, o que sobra é PD.\nQ = 12 − X"
+    },
+    {
+     "titulo": "Achando X: o seu jeito",
+     "texto": "Parece certo pôr P no meio de AD: X = 6. Mas aí PM daria mais que 6, e a dobra só vale se PM = PA.\nTroque Q por 12 − X:\nX × X = (12 − X) × (12 − X) + 36\nX × X = 144 − 24 × X + X × X + 36\nOs X × X se cortam: 24 × X = 180\nX = 180 ÷ 24 = 7,5"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "X = 180 ÷ 24 = 7,5\nLetra A. P fica a 7,5 cm de A e a 4,5 cm de D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Q",
+        "12 − X = 4,5"
+       ],
+       [
+        "X",
+        "7,5"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: papel dobrado → o ponto da dobra fica à mesma distância dos 2 pontos que se encontram; ache o triângulo com canto reto e use Pitágoras.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "lado 12; DM = 6"
+       ],
+       [
+        "2. Equação em letras",
+        "X × X = Q × Q + 36"
+       ],
+       [
+        "3. Achar cada letra",
+        "Q = 12 − X; X = 7,5"
+       ],
+       [
+        "4. Substituir",
+        "56,25 = 20,25 + 36"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Triângulo com canto reto: catetos 3 e 4. Qual a hipotenusa?",
+    "opcoes": [
+     "5",
+     "7",
+     "6",
+     "12"
+    ],
+    "certa": "5",
+    "resposta": "3×3 + 4×4 = 25, e a raiz de 25 é 5."
+   }
+  }
+ },
+ {
+  "id": "d2-acima-mat-11",
+  "materia": "Matemática",
+  "tema": "Geometria Espacial",
+  "enunciado": "Um recipiente cilíndrico alto tem raio da base de 4 cm e água até 10 cm de altura. Dentro dele são colocadas 3 bolinhas de aço maciças, cada uma com raio de 2 cm. As bolinhas afundam, ficam totalmente cobertas pela água e nada transborda. Use π = 3. O novo nível da água é de",
+  "A": "10,7 cm",
+  "B": "13 cm",
+  "C": "16 cm",
+  "D": "11,3 cm",
+  "E": "12 cm",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "V1 = 4*3*8/3 = 32; V = 96; base = 3*16 = 48; sobe 96/48 = 2; nível 12. E. A = 1 bola (32/48); B = área 4πr² no lugar do volume (3 de subida); C = sem ÷ 3 (6 de subida); D = 2 bolas.",
+   "ideia": "A água sobe porque as bolinhas ocupam lugar: a subida é o volume delas ÷ a área da base. As 3 bolinhas somam 96, a base é 48, e o nível sobe 2 cm.",
+   "pecas": [
+    {
+     "termo": "Volume da esfera",
+     "significado": "Quanto de espaço a bolinha ocupa: 4 × π × raio × raio × raio ÷ 3."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "esfera",
+        "nome": "Volume da esfera",
+        "formula": "4 × π × raio × raio × raio ÷ 3"
+       },
+       {
+        "figura": "cilindro",
+        "nome": "Área da base do cilindro",
+        "formula": "π × raio × raio"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Raio do recipiente",
+        "4 cm"
+       ],
+       [
+        "Água no começo",
+        "10 cm de altura"
+       ],
+       [
+        "Bolinhas",
+        "3, cada uma com raio 2 cm"
+       ],
+       [
+        "π",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o novo nível da água.\nN = 10 + V ÷ B (nível novo = nível de antes + volume das bolinhas ÷ área da base)\nPor que dividir pela base? A água que as bolinhas empurram vira uma camada fina sobre a base toda. Altura da camada = volume ÷ área da base.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "N",
+        "novo nível da água (o que a questão quer)"
+       ],
+       [
+        "V",
+        "volume das 3 bolinhas"
+       ],
+       [
+        "B",
+        "área da base do recipiente"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando V: o seu jeito",
+     "texto": "Parece certo usar 4 × π × raio × raio, a \"pele\" da bolinha. Mas a água sobe pelo VOLUME, o espaço que ela ocupa.\nVolume de 1 bolinha = 4 × 3 × 2 × 2 × 2 ÷ 3 = 96 ÷ 3 = 32\nV = 3 × 32 = 96 cm³"
+    },
+    {
+     "titulo": "Achando B (área da base)",
+     "texto": "A base é um círculo: π × raio × raio.\nB = 3 × 4 × 4 = 48 cm²"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "N = 10 + 96 ÷ 48 = 10 + 2 = 12\nLetra E. A água sobe 2 cm e chega a 12 cm.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "V",
+        "96 cm³"
+       ],
+       [
+        "B",
+        "48 cm²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: objeto afunda na água → a água sobe o volume do objeto ÷ área da base; some à altura de antes.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "raio 4; água 10; 3 bolinhas de raio 2"
+       ],
+       [
+        "2. Equação em letras",
+        "N = 10 + V ÷ B"
+       ],
+       [
+        "3. Achar cada letra",
+        "V = 96; B = 48"
+       ],
+       [
+        "4. Substituir",
+        "10 + 96 ÷ 48 = 12"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Cilindro com base de 48 cm². Um objeto de 24 cm³ afunda na água. Quanto o nível sobe?",
+    "opcoes": [
+     "0,5 cm",
+     "2 cm",
+     "1 cm",
+     "24 cm"
+    ],
+    "certa": "0,5 cm",
+    "resposta": "24 ÷ 48 = 0,5 cm."
+   }
+  }
+ },
+ {
+  "id": "d2-acima-mat-12",
+  "materia": "Matemática",
+  "tema": "Geometria Espacial",
+  "enunciado": "De um cubo maciço de aresta 10 cm, corta-se cada um dos 8 cantos com um plano, retirando de cada canto uma pequena pirâmide cujas 3 arestas que saem do canto medem 3 cm e formam cantos retos entre si. O volume do sólido que sobra, em cm³, é de",
+  "A": "784",
+  "B": "892",
+  "C": "928",
+  "D": "982",
+  "E": "964",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "explicacao": {
+   "conferencia": "B = 3*3/2 = 4,5; P = 4,5*3/3 = 4,5; V = 1000-8*4,5 = 964. E. A = 1000-8*27 (cubinho); B = 1000-8*13,5 (sem ÷ 3); C = 1000-8*9 (base sem ÷ 2); D = só 4 cantos.",
+   "ideia": "Cada canto cortado é uma pirâmide de base triângulo com catetos 3 e 3 e altura 3, e não um cubinho. Seu volume é 4,5 × 3 ÷ 3 = 4,5, e 8 cantos tiram 36 do cubo de 1 000.",
+   "pecas": [
+    {
+     "termo": "Pirâmide",
+     "significado": "Sólido com uma base e pontas que se juntam num só ponto."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "caixa",
+        "nome": "Volume do cubo",
+        "formula": "aresta × aresta × aresta"
+       },
+       {
+        "figura": "triangulo",
+        "nome": "Área do triângulo",
+        "formula": "base × altura ÷ 2"
+       },
+       {
+        "figura": "cone",
+        "nome": "Volume da pirâmide",
+        "formula": "área da base × altura ÷ 3"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Cubo",
+        "aresta 10 cm, volume 10 × 10 × 10 = 1 000"
+       ],
+       [
+        "Cantos cortados",
+        "8"
+       ],
+       [
+        "Cada canto",
+        "pirâmide com 3 arestas de 3 cm em canto reto"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o volume do sólido que sobra.\nV = 1 000 − 8 × P (sobra = cubo − 8 cantos cortados)\nPor que tirar? O sólido que sobra é o cubo sem os 8 cantos. Cada canto tirado diminui o volume do cubo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "V",
+        "volume que sobra (o que a questão quer)"
+       ],
+       [
+        "B",
+        "área da base de cada canto cortado"
+       ],
+       [
+        "P",
+        "volume de cada canto cortado"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando B (base do canto cortado)",
+     "texto": "Escolha 2 das 3 arestas do canto como base: um triângulo com canto reto e lados de 3 cm.\nB = 3 × 3 ÷ 2 = 4,5 cm²\nA 3ª aresta, de 3 cm, é a altura da pirâmide."
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo tratar o canto como um cubinho: 3 × 3 × 3 = 27. Mas o canto cortado é só a ponta, uma pirâmide.\nPirâmide = base × altura ÷ 3\nP = 4,5 × 3 ÷ 3 = 4,5 cm³"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "V = 1 000 − 8 × 4,5 = 1 000 − 36 = 964\nLetra E. O sólido que sobra tem 964 cm³.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "B",
+        "4,5"
+       ],
+       [
+        "P",
+        "4,5"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: canto de cubo cortado → é uma pirâmide (base × altura ÷ 3), não um cubinho; multiplique pela quantidade de cantos e tire do total.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "cubo 1 000; 8 cantos de 3 cm"
+       ],
+       [
+        "2. Equação em letras",
+        "V = 1 000 − 8 × P"
+       ],
+       [
+        "3. Achar cada letra",
+        "B = 4,5; P = 4,5"
+       ],
+       [
+        "4. Substituir",
+        "1 000 − 36 = 964"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Pirâmide com base de 12 cm² e altura de 5 cm. Qual o volume?",
+    "opcoes": [
+     "20 cm³",
+     "60 cm³",
+     "30 cm³",
+     "17 cm³"
+    ],
+    "certa": "20 cm³",
+    "resposta": "12 × 5 ÷ 3 = 60 ÷ 3 = 20."
+   }
+  }
+ }
+]
