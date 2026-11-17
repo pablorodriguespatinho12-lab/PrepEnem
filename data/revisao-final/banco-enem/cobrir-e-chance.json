@@ -13,7 +13,7 @@
   "origem": "Banco ENEM do dia 2",
   "explicacao": {
    "conferencia": "1 canto: 400 - 3*400/4 = 100; 4 cantos 400; sala 40000; 400/40000 = 1%. B. A = 100/40000; E = 300/40000; C = 1200/40000; D = 1600/40000.",
-   "ideia": "Em cada canto sobra um quadradinho de 20 × 20 menos um quarto do robô: 400 − 300 = 100 cm². Os 4 cantos dão 400 cm², que é 1% dos 40 000 cm² da sala.",
+   "ideia": "Chance = área onde o robô não passa ÷ área da sala. No canto, o robô fica a 20 cm (o raio) de cada parede: num quadradinho de 20 × 20 = 400 cabe 1/4 dele (300) e sobram 100 cm² sujos.",
    "pecas": [
     {
      "termo": "Probabilidade",
@@ -22,75 +22,174 @@
    ],
    "passos": [
     {
-     "titulo": "A pergunta",
-     "texto": "O robô é redondo e a sala é quadrada.\nA questão quer a chance de uma migalha cair onde ele nunca passa.",
-     "visual": {
-      "tipo": "figura",
-      "nome": "cena-robo-aspirador",
-      "titulo": "A situação",
-      "rotulos": [
-       "sala: 2 m × 2 m",
-       "robô: raio 20 cm",
-       "cantos sem limpar",
-       "π = 3"
-      ]
-     }
-    },
-    {
-     "titulo": "Por que dividir área por área",
-     "texto": "Espalhe 100 migalhas pelo chão, bem misturadas. Cada pedaço do chão recebe migalha na proporção do tamanho dele.\nSe os cantos são 1% do chão, recebem 1 das 100 migalhas.\nPor isso a chance é a área que interessa dividida pela área toda.",
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado. Tudo em cm, para não misturar.",
      "visual": {
       "tipo": "tabela",
-      "titulo": "100 migalhas espalhadas",
+      "titulo": "O que eu tenho",
       "cabecalho": [
-       "Parte do chão",
-       "Área",
-       "Migalhas"
+       "Informação",
+       "Valor"
       ],
       "linhas": [
        [
-        "Sala inteira",
-        "40 000 cm²",
-        "100"
+        "Lado da sala",
+        "2 m = 200 cm"
        ],
        [
-        "Cantos sem limpar",
-        "400 cm²",
-        "1"
+        "Raio do robô",
+        "20 cm"
+       ],
+       [
+        "π",
+        "3"
        ]
       ]
      }
     },
     {
-     "titulo": "Jeito rápido",
-     "texto": "Macete de chance pela área: chance = área que interessa ÷ área toda.\nNo canto, o robô encosta nas 2 paredes: sobra um quadradinho de 20 × 20 = 400 menos 1/4 do robô.\n1/4 do robô: 3 × 20 × 20 ÷ 4 = 300. Sobra 100 por canto; 4 cantos: 400 cm².\nSala: 200 × 200 = 40 000. Chance: 400 ÷ 40 000 = 1%.",
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a chance de a migalha cair num lugar sujo.\nC = AC ÷ AS (chance = área dos cantos sujos ÷ área da sala)\nPor que dividir? Chance é sempre o que eu quero ÷ o total. Num saco com 100 bolas e 1 premiada, a chance é 1 ÷ 100. Aqui o \"total\" é o chão todo, e \"o que eu quero\" é o chão sujo.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "quadro",
-      "titulo": "Os cantos que o robô não alcança",
-      "pede": "A chance de a migalha cair num canto sem limpar",
-      "dados": [
-       "\\text{sala} = 200\\,\\text{cm}",
-       "r = 20\\,\\text{cm}",
-       "\\pi = 3"
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
       ],
-      "formula": "\\text{chance} = \\frac{\\text{área dos cantos}}{\\text{área da sala}}",
-      "contas": [
-       "\\text{1 canto} = 20 \\times 20 - \\frac{3 \\times 20 \\times 20}{4} = 400 - 300 = 100",
-       "\\text{4 cantos} = 4 \\times 100 = 400\\,\\text{cm}^2",
-       "\\text{sala} = 200 \\times 200 = 40\\,000\\,\\text{cm}^2",
-       "\\frac{400}{40\\,000} = \\frac{1}{100}"
-      ],
-      "resultado": "1\\%",
-      "nota": "Passe tudo para cm antes."
+      "linhas": [
+       [
+        "C",
+        "chance (o que a questão quer)"
+       ],
+       [
+        "AC",
+        "área dos cantos sujos"
+       ],
+       [
+        "AS",
+        "área da sala"
+       ]
+      ]
      }
     },
     {
-     "titulo": "Por que funciona: juntando os cantos",
-     "texto": "Junte os 4 cantos: eles formam um quadrado de 40 × 40 (1 600) menos um robô inteiro (3 × 400 = 1 200).\n1 600 − 1 200 = 400 cm², o mesmo de antes.\nCom π = 3, o robô ocupa 3/4 do quadrado em volta dele: sobra 1/4, que é 400 de 1 600."
+     "titulo": "Achando AS (área da sala)",
+     "texto": "A sala é um quadrado. Área do quadrado = lado × lado.\nAS = 200 × 200 = 40 000 cm²",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "sala-quadrada"
+     }
     },
     {
-     "titulo": "A resposta",
-     "texto": "Letra B, 1%.\nA (0,25%) contou um canto só.\nE (0,75%) usou o quarto de robô (300) no lugar do que sobra.\nC (3%) somou os 4 quartos de robô (1 200), que é a parte que ele limpa.\nD (4%) usou o quadradinho inteiro dos 4 cantos (1 600)."
+     "titulo": "Achando AC: o seu jeito",
+     "texto": "Você pensou: AC = AS − 4 × área do robô.\nÁrea do robô = 3 × 20 × 20 = 1 200 (não 12 000: são dois 20).\nDaria 40 000 − 4 800 = 35 200 sujos. Isso dá 88%, e essa letra nem existe.\nPor que não funciona: o robô anda. Ele é pequeno, mas passa pela sala toda, como uma vassoura. Aperte e veja.\nNo fim, ele limpou quase tudo. Só ficam sujas as 4 pontinhas dos cantos.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "robo-limpando"
+     }
+    },
+    {
+     "titulo": "Por que o canto fica sujo",
+     "texto": "O robô encosta nas 2 paredes. O centro dele fica a 20 cm (o raio) de cada parede.\nEle é redondo e o canto é reto: a pontinha nunca é alcançada.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "canto-zoom"
+     }
+    },
+    {
+     "titulo": "Por que cabe 1/4 do robô",
+     "texto": "Corte o robô em 4 fatias iguais pelas linhas que passam no centro.\nO quadradinho do canto tem 20 × 20 e pega exatamente 1 fatia.\nRobô inteiro: 3 × 20 × 20 = 1 200\n1 fatia (parte limpa do quadradinho): 1 200 ÷ 4 = 300",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "robo-quatro-fatias"
+     }
+    },
+    {
+     "titulo": "O raio vira o lado do quadradinho",
+     "texto": "O lado do quadradinho é o raio. Então:\nsujo = r × r − (π × r × r) ÷ 4 (quadradinho − ¼ do círculo)\n20 × 20 − (3 × 20 × 20) ÷ 4 = 400 − 300 = 100",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "canto-raio"
+     }
+    },
+    {
+     "titulo": "A parte suja de 1 canto",
+     "texto": "Sujo = quadradinho − parte limpa.\nSão 4 cantos iguais: AC = 4 × 100 = 400 cm²",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "1 canto",
+      "cabecalho": [
+       "Parte",
+       "Área"
+      ],
+      "linhas": [
+       [
+        "Quadradinho do canto",
+        "20 × 20 = 400"
+       ],
+       [
+        "Parte limpa (1 fatia)",
+        "− 300"
+       ],
+       [
+        "Sujo em 1 canto",
+        "100 cm²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "C = 400 ÷ 40 000 = 1 ÷ 100 = 1%\nLetra B. De cada 100 migalhas, 1 cai num canto sujo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "AS",
+        "40 000"
+       ],
+       [
+        "AC",
+        "400"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"cai ao acaso\" numa figura → chance = área que eu quero ÷ área total.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Neste robô"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "200 cm, 20 cm, π = 3"
+       ],
+       [
+        "2. Equação em letras",
+        "C = AC ÷ AS"
+       ],
+       [
+        "3. Achar cada letra",
+        "AS = 40 000; AC = 400"
+       ],
+       [
+        "4. Substituir",
+        "400 ÷ 40 000 = 1%"
+       ]
+      ]
+     }
     }
    ],
    "seuErro": null,
@@ -140,38 +239,71 @@
      }
     },
     {
-     "titulo": "Onde a água não chega",
-     "texto": "O círculo encosta no meio de cada lado: o raio é metade do lado, 20 m.\nSobram 4 cantinhos secos, um em cada ponta do terreno.\nÁrea seca = terreno − círculo. Depois, cada m² custa R$ 5.",
+     "titulo": "O que eu tenho",
+     "texto": "Tire os números do enunciado, todos na mesma unidade.",
      "visual": {
       "tipo": "tabela",
-      "titulo": "Terreno dividido",
+      "titulo": "O que eu tenho",
       "cabecalho": [
-       "Parte",
-       "Conta",
-       "Área"
+       "Informação",
+       "Valor"
       ],
       "linhas": [
        [
-        "Terreno",
-        "40 × 40",
-        "1 600 m²"
+        "Lado do terreno",
+        "40 m"
        ],
        [
-        "Molhado",
-        "3 × 20 × 20",
-        "1 200 m²"
+        "π",
+        "3"
        ],
        [
-        "Seco",
-        "1 600 − 1 200",
-        "400 m²"
+        "Preço da grama",
+        "R$ 5 por m²"
        ]
       ]
      }
     },
     {
-     "titulo": "Jeito rápido",
-     "texto": "Macete de cobrir: área que sobra = figura de fora − figura de dentro.\nTerreno: 40 × 40 = 1 600. Círculo: 3 × 20 × 20 = 1 200.\nSeco: 1 600 − 1 200 = 400 m².\nGrama: 400 × 5 = R$ 2 000.",
+     "titulo": "A equação em letras",
+     "texto": "G = AS × 5. G é o gasto, AS é a área seca (os 4 cantos).\nPor que multiplicar: cada m² custa R$ 5, então o preço total é quantos m² × o preço de 1.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "legenda",
+      "partes": [
+       {
+        "texto": "G",
+        "rotulo": "gasto"
+       },
+       {
+        "texto": "= \\text{AS}",
+        "rotulo": "área seca"
+       },
+       {
+        "texto": "\\times 5",
+        "rotulo": "reais por m²"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando o raio",
+     "texto": "O círculo encosta no meio de cada lado: o raio vai do centro até o lado.\nRaio = metade do lado = 40 ÷ 2 = 20 m.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "circulo-no-quadrado"
+     }
+    },
+    {
+     "titulo": "Achando AS (área seca)",
+     "texto": "Seco = o terreno menos o círculo molhado.\nTerreno: 40 × 40 = 1 600. Círculo: 3 × 20 × 20 = 1 200.\nAS = 1 600 − 1 200 = 400 m²."
+    },
+    {
+     "titulo": "O jeito que parece certo",
+     "texto": "Parece certo fazer 1 200 × 5.\nMas 1 200 é a parte MOLHADA, onde a grama não vai. A grama vai no que sobra."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "AS = 400.\nG = 400 × 5 = R$ 2 000.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Grama dos cantos",
@@ -194,6 +326,36 @@
     {
      "titulo": "Por que funciona: 1/4 do terreno",
      "texto": "Com π = 3, o círculo que encosta nos lados ocupa 3 de cada 4 partes do quadrado.\nSobra 1/4: 1 600 ÷ 4 = 400 m², sem calcular o círculo.\nVale para qualquer terreno quadrado com o círculo encostando nos lados."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: sobra, onde não chega, cantos? Área de fora − área de dentro. Pediu preço? Multiplique no fim.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "40 m, π = 3, R$ 5"
+       ],
+       [
+        "2. Equação em letras",
+        "G = AS × 5"
+       ],
+       [
+        "3. Achar cada letra",
+        "AS = 1 600 − 1 200 = 400"
+       ],
+       [
+        "4. Substituir",
+        "400 × 5 = 2 000"
+       ]
+      ]
+     }
     },
     {
      "titulo": "A resposta",
@@ -252,34 +414,71 @@
      }
     },
     {
-     "titulo": "Quem fica mais longe",
-     "texto": "Andando do centro, o meio de cada lado está perto: 0,6 km ou 0,8 km.\nO canto está mais longe que todos: é o fim da meia diagonal.\nSe o sinal chega no canto, chega no bairro todo.",
+     "titulo": "O que eu tenho",
+     "texto": "Tire os números do enunciado, todos na mesma unidade.",
      "visual": {
       "tipo": "tabela",
-      "titulo": "Do centro até...",
+      "titulo": "O que eu tenho",
       "cabecalho": [
-       "Lugar",
-       "Distância"
+       "Informação",
+       "Valor"
       ],
       "linhas": [
        [
-        "meio do lado menor",
-        "0,8 km"
+        "Lado menor",
+        "1,2 km"
        ],
        [
-        "meio do lado maior",
-        "0,6 km"
+        "Lado maior",
+        "1,6 km"
        ],
        [
-        "um canto",
-        "1,0 km"
+        "Antena",
+        "no centro do bairro"
        ]
       ]
      }
     },
     {
-     "titulo": "Jeito rápido",
-     "texto": "Macete de cobrir: o alcance é do centro até a ponta mais longe.\n1,2 e 1,6 são 3 e 4 vezes 0,4. Triângulo 3-4-5: a diagonal é 5 × 0,4 = 2,0.\nDo centro ao canto: metade, 1,0 km.",
+     "titulo": "A equação em letras",
+     "texto": "A = D ÷ 2. A é o alcance, D é a diagonal do bairro.\nPor que dividir por 2: o ponto mais longe do centro é o canto, na ponta da diagonal. A antena está no meio dela.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "legenda",
+      "partes": [
+       {
+        "texto": "A",
+        "rotulo": "alcance"
+       },
+       {
+        "texto": "= D",
+        "rotulo": "diagonal do bairro"
+       },
+       {
+        "texto": "\\div 2",
+        "rotulo": "antena no meio"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Quem fica mais longe",
+     "texto": "Do centro, o meio dos lados está a 0,6 ou 0,8 km. O canto está mais longe que tudo.\nSe o sinal chega no canto, chega no bairro todo.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "retangulo-diagonal"
+     }
+    },
+    {
+     "titulo": "Achando D (a diagonal)",
+     "texto": "A diagonal é o lado maior de um triângulo retângulo de lados 1,2 e 1,6.\n1,2 e 1,6 são 3 e 4 vezes 0,4: é o triângulo 3-4-5.\nD = 5 × 0,4 = 2,0 km."
+    },
+    {
+     "titulo": "O jeito que parece certo",
+     "texto": "Parece certo somar 0,6 + 0,8 = 1,4 km.\nMas o sinal vai em linha reta, não pelas ruas em L. O caminho reto é a meia diagonal."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "D = 2,0.\nA = 2,0 ÷ 2 = 1,0 km.",
      "visual": {
       "tipo": "quadro",
       "titulo": "Alcance da antena",
@@ -301,6 +500,36 @@
     {
      "titulo": "Por que funciona: pelo meio do lado",
      "texto": "Do centro, ande 0,8 km até o meio do lado e depois 0,6 km até o canto.\nEsse caminho forma um triângulo retângulo de lados 0,6 e 0,8: o 3-4-5 de novo, vezes 0,2.\nO lado que falta é 5 × 0,2 = 1,0 km, direto do centro ao canto."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: alcançar tudo a partir do centro? Alcance = distância até o ponto mais longe.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1,2 km e 1,6 km"
+       ],
+       [
+        "2. Equação em letras",
+        "A = D ÷ 2"
+       ],
+       [
+        "3. Achar cada letra",
+        "D = 2,0 (3-4-5)"
+       ],
+       [
+        "4. Substituir",
+        "2,0 ÷ 2 = 1,0"
+       ]
+      ]
+     }
     },
     {
      "titulo": "A resposta",

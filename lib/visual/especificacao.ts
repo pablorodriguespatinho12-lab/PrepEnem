@@ -209,7 +209,19 @@ export interface VisualFigura {
 }
 const MAX_ROTULOS = 4;
 const MAX_ROTULO = 28;
-export type Visual = VisualLegenda | VisualQuadro | VisualPalavra | VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula | VisualFigura;
+/* Desenho de geometria em vetor, feito à mão por questão (Pablo, 16/11/2026, na
+   prévia do robô: "a parte do robô limpando e a divisão de um quarto, perfeito").
+   Mostra o PORQUÊ de uma conta (a fatia de 1/4, o canto que sobra). Só entra por
+   explicação escrita à mão (components/visual/diagramas.tsx). */
+export const DIAGRAMAS = ['sala-quadrada', 'robo-limpando', 'canto-zoom', 'robo-quatro-fatias', 'canto-raio', 'circulo-no-quadrado', 'retangulo-diagonal'] as const;
+export type NomeDiagrama = (typeof DIAGRAMAS)[number];
+export interface VisualDiagrama {
+  tipo: 'diagrama';
+  titulo?: string;
+  nome: NomeDiagrama;
+  rotulos?: string[];
+}
+export type Visual = VisualLegenda | VisualQuadro | VisualPalavra | VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula | VisualFigura | VisualDiagrama;
 
 const MAX_FUNCOES = 4;
 const MAX_PONTOS = 8;
@@ -507,8 +519,15 @@ function figura(v: Record<string, unknown>): VisualFigura | null {
   return { tipo: 'figura', titulo: texto(v.titulo), nome, ...(rotulos.some(Boolean) ? { rotulos } : {}) };
 }
 
+function diagrama(v: Record<string, unknown>): VisualDiagrama | null {
+  const nome = DIAGRAMAS.find((n) => n === v.nome);
+  if (!nome) return null;
+  const rotulos = lista(v.rotulos).map((r) => texto(r, MAX_ROTULO) ?? '').slice(0, MAX_ROTULOS);
+  return { tipo: 'diagrama', titulo: texto(v.titulo), nome, ...(rotulos.some(Boolean) ? { rotulos } : {}) };
+}
+
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {
-  legenda: formulaComLegenda, quadro, grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias, processo, molecula, palavra, figura,
+  legenda: formulaComLegenda, quadro, grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias, processo, molecula, palavra, figura, diagrama,
 };
 
 /* Devolve o visual limpo, ou null se não der para desenhar com segurança. */

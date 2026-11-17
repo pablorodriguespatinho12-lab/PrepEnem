@@ -187,15 +187,19 @@ describe('banco ENEM do dia 2', () => {
     expect(ids.filter((id) => !id.startsWith('d2-banco-'))).toEqual([]);
     expect(ids.filter((id, i) => ids.indexOf(id) !== i)).toEqual([]);
   });
+  /* Aula copiada palavra por palavra de um artefato que o Pablo aprovou (17/11/2026:
+     "copia exatamente essa explicação"): não segue o molde pergunta → quadro → resposta. */
+  const COPIADAS = new Set(['d2-banco-mat-cob-01']);
   for (const arquivo of arquivos) {
     const qs = JSON.parse(readFileSync(join(PASTA_BANCO, arquivo), 'utf8')) as Questao[];
+    const noMolde = qs.filter((q) => !COPIADAS.has(q.id));
     describe(arquivo, () => {
       it('cada questão passa na conferência da explicação', () => {
-        const ruins = qs.map((q) => [q.id, problemasDaQuestao(q)] as const).filter(([, e]) => e.length > 0);
+        const ruins = noMolde.map((q) => [q.id, problemasDaQuestao(q)] as const).filter(([, e]) => e.length > 0);
         expect(ruins.map(([id, e]) => `${id}: ${e.join('; ')}`)).toEqual([]);
       });
       it('abre com figura em pixel, é do banco e é de um tema só', () => {
-        const sem = qs.filter((q) => (q.explicacao.passos as { visual?: { tipo?: string } }[])[0]?.visual?.tipo !== 'figura' || q.origem !== 'Banco ENEM do dia 2');
+        const sem = noMolde.filter((q) => (q.explicacao.passos as { visual?: { tipo?: string } }[])[0]?.visual?.tipo !== 'figura' || q.origem !== 'Banco ENEM do dia 2');
         expect(sem.map((q) => q.id)).toEqual([]);
         expect(new Set(qs.map((q) => q.tema)).size).toBe(1);
       });

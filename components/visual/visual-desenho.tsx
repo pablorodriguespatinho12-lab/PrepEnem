@@ -21,6 +21,7 @@ import { Retangulo } from './retangulo';
 import { Fatias } from './fatias';
 import { Processo } from './processo';
 import { FiguraPixel } from './figura-pixel';
+import { Diagrama } from './diagramas';
 function Reta({ v }: { v: VisualReta }) {
   const reduzir = useReducedMotion() ?? false;
   const altura = 110;
@@ -170,6 +171,7 @@ export function VisualDesenho({ visual, semMoldura = false }: { visual: Visual; 
       {visual.tipo === 'molecula' && <Molecula v={visual} />}
       {visual.tipo === 'palavra' && <Palavra v={visual} />}
       {visual.tipo === 'figura' && <FiguraPixel nome={visual.nome} rotulos={visual.rotulos} />}
+      {visual.tipo === 'diagrama' && <Diagrama nome={visual.nome} rotulos={visual.rotulos} />}
     </figure>
   );
 }

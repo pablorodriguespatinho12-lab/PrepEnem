@@ -76,9 +76,9 @@ describe('validarExplicacao limpa o texto da IA', () => {
     expect(e.passos[0].texto).toBe('Olha isso.');
     expect(e.seuErro).toBe('Errou a conta.');
   });
-  test('no máximo 6 passos (a pergunta → o que acontece → jeito rápido → por que funciona → a resposta)', () => {
-    const e = validarExplicacao({ ideia: 'Ok.', passos: Array.from({ length: 8 }, (_, i) => passo(`Passo ${i}.`)) })!;
-    expect(e.passos).toHaveLength(6);
+  test('no máximo 14 passos (o jeito "equação em letras" tem uma tela por letra)', () => {
+    const e = validarExplicacao({ ideia: 'Ok.', passos: Array.from({ length: 16 }, (_, i) => passo(`Passo ${i}.`)) })!;
+    expect(e.passos).toHaveLength(14);
   });
   test('ideia fica nas 2 primeiras frases', () => {
     const e = validarExplicacao({ ideia: 'A planta precisa de energia. Carboidrato é energia. Sem ele, ela morre. E mais.', passos: [passo('x.')] })!;
