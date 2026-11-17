@@ -299,6 +299,8 @@ model CustomExam {
   erros         Int       @default(0)
   startedAt     DateTime?
   finishedAt    DateTime?
+  // Escondida da página Estudar, sem apagar as respostas (17/11/2026)
+  arquivada     Boolean   @default(false)
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
