@@ -30,6 +30,47 @@ def numero(texto):
     return float(achado.group().replace(' ', '').replace(',', '.'))
 
 
+def passo_logica(f):
+    """Tela 'A lógica' (Pablo, 16/11/2026: "por que eu tenho que dividir... para, se vir
+    uma questão parecida, saber como enfrentar"). O que a questão pede, cada conta com o
+    porquê e a pista para reconhecer a próxima. Obrigatória no jeito novo (com cena)."""
+    if 'logica' not in f:
+        if 'cena' in f and 'equacao' not in f:
+            raise SystemExit(f"{f['id']}: questão do jeito novo sem 'logica'")
+        return []
+    pede, contas, parecida = f['logica']
+    texto = f'A questão pede: {pede}\nQuestão parecida: {parecida}'
+    tabela = {'tipo': 'tabela', 'titulo': 'Cada conta e o porquê', 'cabecalho': ['Conta', 'Por quê'],
+              'linhas': [list(c) for c in contas]}
+    return [{'titulo': 'A lógica', 'texto': texto, 'visual': tabela}]
+
+
+def passos_em_letras(f, figura, quadro):
+    """Jeito novo (Pablo, 16/11/2026, aprovado na prévia do robô): o que eu tenho →
+    equação em letras → achar cada letra, uma tela por letra → o jeito que parece
+    certo e por que não dá → volta na equação → questão parecida."""
+    eq = f['equacao']
+    passos = [
+        {'titulo': 'A pergunta', 'texto': f['pergunta'], 'visual': figura},
+        {'titulo': 'O que eu tenho', 'texto': 'Tire os números do enunciado, todos na mesma unidade.',
+         'visual': {'tipo': 'tabela', 'titulo': 'O que eu tenho', 'cabecalho': ['Informação', 'Valor'], 'linhas': [list(t) for t in f['tenho']]}},
+        {'titulo': 'A equação em letras', 'texto': f"{eq['texto']}\n{eq['porque']}\nAgora é só achar cada letra.",
+         'visual': {'tipo': 'legenda', 'partes': [{'texto': t, 'rotulo': rot} for t, rot in eq['partes']]}},
+    ]
+    for letra in f['letras']:
+        passos.append({'titulo': letra['titulo'], 'texto': letra['texto'], **({'visual': letra['visual']} if letra.get('visual') else {})})
+    if f.get('seu_jeito'):
+        sj = f['seu_jeito']
+        passos.append({'titulo': 'O jeito que parece certo', 'texto': sj['texto'], **({'visual': sj['visual']} if sj.get('visual') else {})})
+    passos.append({'titulo': 'Volta na equação', 'texto': f['volta'], 'visual': quadro})
+    passos.append({'titulo': f.get('titulo_funciona', 'Por que funciona'), 'texto': f['funciona']})
+    receita, pista = f['parecida']
+    passos.append({'titulo': 'Questão parecida? Faça assim', 'texto': f'Pista: {pista}',
+                   'visual': {'tipo': 'tabela', 'titulo': 'A receita', 'cabecalho': ['Passo', 'Nesta questão'], 'linhas': [list(x) for x in receita]}})
+    passos.append({'titulo': 'A resposta', 'texto': f['resposta']})
+    return passos
+
+
 def montar(f):
     certa = f['alts'][LETRAS.index(f['resp'])]
     if 'confere' in f:
@@ -40,7 +81,7 @@ def montar(f):
     frases_ideia = [p for p in re.split(r'(?<=[.!?])\s+', f['ideia'].strip()) if p]
     if len(f['ideia']) > 300 or len(frases_ideia) > 2:
         raise SystemExit(f"{f['id']}: ideia longa ({len(f['ideia'])} letras, {len(frases_ideia)} frases; máximo 300 e 2)")
-    rapido = f['rapido']
+    rapido = f.get('rapido', 'Macete de')
     if not rapido.startswith('Macete de'):
         raise SystemExit(f"{f['id']}: Jeito rápido tem que começar com 'Macete de'")
     longas = [l for l in rapido.split('\n') if len(l) > MAX_LINHA_RAPIDO]
@@ -50,13 +91,20 @@ def montar(f):
     # a explicação. Sem cena, a figura genérica antiga.
     nome, rotulos = f.get('cena') or f['fig']
     quadro = {'tipo': 'quadro', **f['quadro']}
-    passos = [
-        {'titulo': 'A pergunta', 'texto': f['pergunta'], 'visual': {'tipo': 'figura', 'nome': nome, 'titulo': f.get('fig_titulo', 'A situação'), 'rotulos': rotulos}},
+    figura = {'tipo': 'figura', 'nome': nome, 'titulo': f.get('fig_titulo', 'A situação'), 'rotulos': rotulos}
+    if 'passos_prontos' in f:
+        passos = f['passos_prontos']
+    elif 'equacao' in f:
+        passos = passos_em_letras(f, figura, quadro)
+    else:
+      passos = [
+        {'titulo': 'A pergunta', 'texto': f['pergunta'], 'visual': figura},
+        *passo_logica(f),
         {'titulo': f.get('titulo_acontece', 'O que acontece'), 'texto': f['acontece'], **({'visual': f['visual2']} if f.get('visual2') else {})},
         {'titulo': 'Jeito rápido', 'texto': rapido, 'visual': quadro},
         {'titulo': f.get('titulo_funciona', 'Por que funciona'), 'texto': f['funciona']},
         {'titulo': 'A resposta', 'texto': f['resposta']},
-    ]
+      ]
     pergunta, opcoes, certa_sv, porque = f['sua_vez']
     return {
         'id': f['id'], 'materia': f['materia'], 'tema': f['tema'],

@@ -48,6 +48,8 @@ describe('macete curinga', () => {
     for (const f of readdirSync(pasta).filter((x) => x.endsWith('.json'))) {
       const qs = JSON.parse(readFileSync(join(pasta, f), 'utf8')) as { id: string; explicacao: { passos: { titulo: string; texto: string }[] } }[];
       for (const q of qs) {
+        // Jeito "equação em letras" (16/11/2026): a receita substitui o Jeito rápido.
+        if (q.explicacao.passos.some((p) => p.titulo === 'Volta na equação')) { conferidas++; continue; }
         const jr = q.explicacao.passos.find((p) => p.titulo === 'Jeito rápido');
         expect(jr?.texto.startsWith('Macete de'), q.id).toBe(true);
         expect(jr!.texto.split('\n').every((l) => l.length <= 170), q.id).toBe(true);

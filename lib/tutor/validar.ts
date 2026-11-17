@@ -179,8 +179,10 @@ function comAlgumDesenho(passos: PassoExplicacao[], pecas: { termo: string; sign
   return [{ ...primeiro, visual: validarVisual(reserva) }, ...resto];
 }
 /* A pergunta → o que acontece → jeito rápido → por que funciona → a resposta
-   (o passo a passo que o Pablo aprovou em 22/10/2026), com folga de um. */
-const MAX_PASSOS = 6;
+   (o passo a passo que o Pablo aprovou em 22/10/2026), com folga de um. A IA pede
+   até 6; a escrita à mão no jeito "equação em letras" (16/11/2026) tem uma tela por
+   letra e chega a 12. */
+const MAX_PASSOS = 14;
 export function validarExplicacao(bruto: unknown, materia?: string): Explicacao | null {
   const e = objeto(bruto);
   const passos = lista(e.passos).map(objeto)
