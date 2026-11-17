@@ -113,7 +113,7 @@ export function PlanoQuarteto() {
         {avaliacao && <Resultado key={`${tema}|${texto}`} tema={tema} avaliacao={avaliacao} />}
       </div>
       <a href="/redacao/modelos" className="inline-block mt-4 type-meta font-medium text-primary-text py-2 t-colors">
-        Ver as redações prontas do Trio 1 e do Trio 2 →
+        Ver as redações prontas →
       </a>
     </div>
   );

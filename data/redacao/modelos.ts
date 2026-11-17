@@ -41,8 +41,8 @@ export interface RedacaoModelo {
   tema: string;
   anoEnem: number;
   contexto: string;
-  /* Redação montada com um dos 2 trios de coringas (lib/redacao/cartoes-trios.ts). */
-  trio?: 1 | 2;
+  /* Redação montada com o trio de coringas (lib/redacao/cartoes-trios.ts). */
+  trio?: 1;
   /* Nome curto do tema na aba ("Saúde mental"). */
   rotulo?: string;
   /* Redação de trio: como cada autor foi ligado a ESTE tema, em 1 linha
