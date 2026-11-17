@@ -2,7 +2,7 @@
 /* Desenhos das aulas no molde do robô (17/11/2026): porta que abre, holofote no palco
    de 3 pontas (parecida com a 176 do ENEM 2026) e trilhas do parque (parecida com a 174).
    Mesmo papel e mesmas cores de diagramas.tsx; só se mexem no clique. */
-import { APAGADO, CHAO, CORTE, LIMPO, ROBO, SECO, SUJO, TINTA, Texto, BotaoVer, r, useAoClicar, type Props } from './diagramas-base';
+import { APAGADO, CHAO, CORTE, LIMPO, ROBO, SUJO, TINTA, Texto, BotaoVer, r, useAoClicar, type Props } from './diagramas-base';
 
 // Porta vista de cima: gira na dobradiça e varre 1/4 de círculo no chão.
 const DOBRA = { x: 40, y: 40 };
@@ -56,9 +56,9 @@ function HolofotePalco({ rotulos }: Props) {
   return (
     <div className="flex flex-col items-center gap-2">
       <svg viewBox="-15 0 330 340" className="w-full max-w-[300px] h-auto" role="img" aria-label="luz do holofote crescendo até passar das 3 pontas do palco">
-        <circle cx={G.x} cy={G.y} r={raio} fill={SECO} opacity={0.45} />
-        <path d={TRIANGULO} fill={CHAO} stroke={TINTA} strokeWidth={4} opacity={0.9} />
-        <line x1={G.x} y1={G.y} x2={A.x} y2={A.y} stroke={SUJO} strokeWidth={4} strokeDasharray="7 5" />
+        <circle cx={G.x} cy={G.y} r={raio} fill="#f6ecc4" stroke="#c99a2e" strokeWidth={3} />
+        <path d={TRIANGULO} fill={CHAO} stroke={TINTA} strokeWidth={4} />
+        <line x1={G.x} y1={G.y} x2={G.x} y2={G.y - raio} stroke={SUJO} strokeWidth={4} />
         <circle cx={G.x} cy={G.y} r={8} fill={TINTA} />
         <Texto x={G.x + 10} y={110} ancora="start">{r(rotulos, 0, 'centro até a ponta')}</Texto>
         <Texto x={G.x} y={334}>{r(rotulos, 1, '+ 1 m de sobra')}</Texto>
