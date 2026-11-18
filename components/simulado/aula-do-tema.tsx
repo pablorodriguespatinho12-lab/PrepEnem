@@ -28,10 +28,15 @@ export function AulaDoTema({ tema, questao, className }: { tema: string | null |
   const [aberta, setAberta] = useState(false);
   const [tela, setTela] = useState(0);
   const reduzir = useReducedMotion();
-  const daQuestao = useAulaDaQuestao(questao, aberta);
-  if (!aula || !tema) return null;
+  // Tema sem aula escrita (Equações, Cinemática, Português...): o botão aparece se a
+  // própria questão tem a aula do robô pronta; por isso ela é buscada já ao abrir a
+  // questão (Pablo, 18/11/2026: as questões novas das escadas ficavam sem o botão).
+  const daQuestao = useAulaDaQuestao(questao, aberta || !aula);
+  const passosProntos = daQuestao?.estado === 'pronta' ? daQuestao.passos : [];
+  const soDaQuestao = !aula && [TITULO_FORMULAS, TITULO_REGRAS].includes(passosProntos[0]?.titulo ?? '');
+  if (!soDaQuestao && (!aula || !tema)) return null;
 
-  const desenho = desenhoDoTema(tema);
+  const desenho = aula && tema ? desenhoDoTema(tema) : null;
   const conceito: Tela[] = desenho
     ? [
         { rotulo: 'O conceito em desenho', conteudo: <TelaDesenho d={desenho} /> },
@@ -69,9 +74,9 @@ export function AulaDoTema({ tema, questao, className }: { tema: string | null |
     ...antes,
     ...estaQuestao,
     ...(desenho ? [{ rotulo: 'Por que faz sentido', conteudo: <TelaSentido d={desenho} /> }] : []),
-    { rotulo: 'Aula do conteúdo', listas: aula.aula },
-    ...(aula.paraSubir.length ? [{ rotulo: 'Para subir de nível', listas: aula.paraSubir }] : []),
-    ...aula.degraus.map((d) => ({ rotulo: `Como cai no ${d.nivel}`, degrau: d })),
+    ...(aula ? [{ rotulo: 'Aula do conteúdo', listas: aula.aula }] : []),
+    ...(aula?.paraSubir.length ? [{ rotulo: 'Para subir de nível', listas: aula.paraSubir }] : []),
+    ...(aula?.degraus ?? []).map((d) => ({ rotulo: `Como cai no ${d.nivel}`, degrau: d })),
   ];
   const atual = telas[Math.min(tela, telas.length - 1)];
   const total = telas.length;

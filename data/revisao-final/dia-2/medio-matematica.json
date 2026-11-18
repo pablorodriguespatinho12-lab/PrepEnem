@@ -66,27 +66,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer quanto cada amigo paga.\nP = T ÷ 4 (cada um paga o total dividido por 4)\nPor que dividir? Dividir uma conta é repartir em partes iguais. Uma pizza de 8 fatias para 4 pessoas: 8 ÷ 4 = 2 fatias cada. Mas o total já tem que trazer a taxa.\nAgora é só achar cada letra.",
+          "texto": "A questão quer quanto cada amigo paga.\nPor que dividir? Dividir uma conta é repartir em partes iguais. Uma pizza de 8 fatias para 4 pessoas: 8 ÷ 4 = 2 fatias cada. Mas o total já tem que trazer a taxa.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "P",
-                "o que cada um paga (o que a questão quer)"
-              ],
-              [
-                "TX",
-                "taxa de serviço"
-              ],
-              [
-                "T",
-                "total com a taxa"
-              ]
+            "tipo": "equacao",
+            "formula": "P = T ÷ 4",
+            "leitura": "cada um paga o total dividido por 4",
+            "letras": [
+              {
+                "letra": "P",
+                "oque": "o que cada um paga (o que a questão quer)"
+              },
+              {
+                "letra": "TX",
+                "oque": "taxa de serviço"
+              },
+              {
+                "letra": "T",
+                "oque": "total com a taxa"
+              }
             ]
           }
         },
@@ -232,27 +229,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer o preço de quem paga no Pix.\nP = PP − DP (preço no Pix = preço da promoção − desconto do Pix)\nPor que tirar um de cada vez? O 2º desconto é sobre o preço novo, não sobre o antigo. Se uma camiseta de 100 cai para 80, os 10% seguintes são 10% de 80, não de 100.\nAgora é só achar cada letra.",
+          "texto": "A questão quer o preço de quem paga no Pix.\nPor que tirar um de cada vez? O 2º desconto é sobre o preço novo, não sobre o antigo. Se uma camiseta de 100 cai para 80, os 10% seguintes são 10% de 80, não de 100.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "P",
-                "preço no Pix (o que a questão quer)"
-              ],
-              [
-                "PP",
-                "preço da promoção"
-              ],
-              [
-                "DP",
-                "desconto do Pix"
-              ]
+            "tipo": "equacao",
+            "formula": "P = PP − DP",
+            "leitura": "preço no Pix = preço da promoção − desconto do Pix",
+            "letras": [
+              {
+                "letra": "P",
+                "oque": "preço no Pix (o que a questão quer)"
+              },
+              {
+                "letra": "PP",
+                "oque": "preço da promoção"
+              },
+              {
+                "letra": "DP",
+                "oque": "desconto do Pix"
+              }
             ]
           }
         },
@@ -394,23 +388,20 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer o preço ANTES do aumento.\nA × F = 5 (preço antigo × fator do aumento = preço novo)\nPor que dividir? Se 4 × 3 = 12, para voltar de 12 a 4 você divide: 12 ÷ 3 = 4. Aqui o aumento multiplicou o preço antigo por F, então para voltar divide por F.\nAgora é só achar cada letra.",
+          "texto": "A questão quer o preço ANTES do aumento.\nPor que dividir? Se 4 × 3 = 12, para voltar de 12 a 4 você divide: 12 ÷ 3 = 4. Aqui o aumento multiplicou o preço antigo por F, então para voltar divide por F.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "A",
-                "preço antes do aumento (o que a questão quer)"
-              ],
-              [
-                "F",
-                "fator do aumento"
-              ]
+            "tipo": "equacao",
+            "formula": "A × F = 5",
+            "leitura": "preço antigo × fator do aumento = preço novo",
+            "letras": [
+              {
+                "letra": "A",
+                "oque": "preço antes do aumento (o que a questão quer)"
+              },
+              {
+                "letra": "F",
+                "oque": "fator do aumento"
+              }
             ]
           }
         },
@@ -548,27 +539,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer quantas meninas usam óculos.\nO = 20 ÷ 100 × ME (meninas com óculos = 20% das meninas)\nPor que 20% das meninas e não da escola? Em \"20% das meninas\" o todo é o grupo das meninas. Se 10 pessoas de um grupo de 50 gostam de pizza, o todo é o grupo de 50.\nAgora é só achar cada letra.",
+          "texto": "A questão quer quantas meninas usam óculos.\nPor que 20% das meninas e não da escola? Em \"20% das meninas\" o todo é o grupo das meninas. Se 10 pessoas de um grupo de 50 gostam de pizza, o todo é o grupo de 50.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "O",
-                "meninas com óculos (o que a questão quer)"
-              ],
-              [
-                "PM",
-                "porcentagem de meninas"
-              ],
-              [
-                "ME",
-                "número de meninas"
-              ]
+            "tipo": "equacao",
+            "formula": "O = 20 ÷ 100 × ME",
+            "leitura": "meninas com óculos = 20% das meninas",
+            "letras": [
+              {
+                "letra": "O",
+                "oque": "meninas com óculos (o que a questão quer)"
+              },
+              {
+                "letra": "PM",
+                "oque": "porcentagem de meninas"
+              },
+              {
+                "letra": "ME",
+                "oque": "número de meninas"
+              }
             ]
           }
         },
@@ -714,27 +702,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer o total que Ana vai pagar.\nT = 2 000 + JT (total = empréstimo + juros dos 5 meses)\nPor que multiplicar por 5? Juros simples rendem o MESMO valor todo mês. Se você paga R$ 60 de juros por mês, em 5 meses são 5 × 60.\nAgora é só achar cada letra.",
+          "texto": "A questão quer o total que Ana vai pagar.\nPor que multiplicar por 5? Juros simples rendem o MESMO valor todo mês. Se você paga R$ 60 de juros por mês, em 5 meses são 5 × 60.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "T",
-                "total a pagar (o que a questão quer)"
-              ],
-              [
-                "J",
-                "juros de 1 mês"
-              ],
-              [
-                "JT",
-                "juros dos 5 meses"
-              ]
+            "tipo": "equacao",
+            "formula": "T = 2 000 + JT",
+            "leitura": "total = empréstimo + juros dos 5 meses",
+            "letras": [
+              {
+                "letra": "T",
+                "oque": "total a pagar (o que a questão quer)"
+              },
+              {
+                "letra": "J",
+                "oque": "juros de 1 mês"
+              },
+              {
+                "letra": "JT",
+                "oque": "juros dos 5 meses"
+              }
             ]
           }
         },
@@ -880,23 +865,20 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer o tempo no dia de trânsito.\n48 × T = K (velocidade nova × tempo = a conta que não muda)\nPor que a conta não muda? O caminho é o mesmo. Velocidade × tempo dá sempre o mesmo caminho. Se você anda mais devagar, precisa de MAIS tempo para o mesmo caminho.\nAgora é só achar cada letra.",
+          "texto": "A questão quer o tempo no dia de trânsito.\nPor que a conta não muda? O caminho é o mesmo. Velocidade × tempo dá sempre o mesmo caminho. Se você anda mais devagar, precisa de MAIS tempo para o mesmo caminho.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "T",
-                "tempo no trânsito (o que a questão quer)"
-              ],
-              [
-                "K",
-                "velocidade × tempo, igual nos dois dias"
-              ]
+            "tipo": "equacao",
+            "formula": "48 × T = K",
+            "leitura": "velocidade nova × tempo = a conta que não muda",
+            "letras": [
+              {
+                "letra": "T",
+                "oque": "tempo no trânsito (o que a questão quer)"
+              },
+              {
+                "letra": "K",
+                "oque": "velocidade × tempo, igual nos dois dias"
+              }
             ]
           }
         },
@@ -1038,27 +1020,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer a distância real, em quilômetros.\nD = M ÷ 1 000 (km = metros ÷ 1 000)\nPor que multiplicar por 50 000? Escala 1 : 50 000 diz que 1 cm no mapa vale 50 000 cm na rua. Seis vezes mais no mapa, seis vezes mais na rua.\nAgora é só achar cada letra.",
+          "texto": "A questão quer a distância real, em quilômetros.\nPor que multiplicar por 50 000? Escala 1 : 50 000 diz que 1 cm no mapa vale 50 000 cm na rua. Seis vezes mais no mapa, seis vezes mais na rua.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "D",
-                "distância real em km (o que a questão quer)"
-              ],
-              [
-                "CM",
-                "distância real em cm"
-              ],
-              [
-                "M",
-                "distância real em metros"
-              ]
+            "tipo": "equacao",
+            "formula": "D = M ÷ 1 000",
+            "leitura": "km = metros ÷ 1 000",
+            "letras": [
+              {
+                "letra": "D",
+                "oque": "distância real em km (o que a questão quer)"
+              },
+              {
+                "letra": "CM",
+                "oque": "distância real em cm"
+              },
+              {
+                "letra": "M",
+                "oque": "distância real em metros"
+              }
             ]
           }
         },
@@ -1209,27 +1188,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer quantos litros se perdem em 30 dias.\nL = ML ÷ 1 000 (litros = mL ÷ 1 000)\nPor que ÷ 1 000? 1 litro tem 1 000 mL. Se você tem 2 000 mL de suco, são 2 litros: 2 000 ÷ 1 000.\nAgora é só achar cada letra.",
+          "texto": "A questão quer quantos litros se perdem em 30 dias.\nPor que ÷ 1 000? 1 litro tem 1 000 mL. Se você tem 2 000 mL de suco, são 2 litros: 2 000 ÷ 1 000.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "L",
-                "litros em 30 dias (o que a questão quer)"
-              ],
-              [
-                "MD",
-                "mL perdidos em 1 dia"
-              ],
-              [
-                "ML",
-                "mL perdidos em 30 dias"
-              ]
+            "tipo": "equacao",
+            "formula": "L = ML ÷ 1 000",
+            "leitura": "litros = mL ÷ 1 000",
+            "letras": [
+              {
+                "letra": "L",
+                "oque": "litros em 30 dias (o que a questão quer)"
+              },
+              {
+                "letra": "MD",
+                "oque": "mL perdidos em 1 dia"
+              },
+              {
+                "letra": "ML",
+                "oque": "mL perdidos em 30 dias"
+              }
             ]
           }
         },
@@ -1371,27 +1347,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer a nota da 4ª prova.\nN = S − J (nota que falta = soma que precisa − soma que já tem)\nPor que pensar em soma? Média é a soma dividida pela quantidade. Se 4 provas dão média 7, a soma delas tem que ser 4 × 7. Falta só completar essa soma.\nAgora é só achar cada letra.",
+          "texto": "A questão quer a nota da 4ª prova.\nPor que pensar em soma? Média é a soma dividida pela quantidade. Se 4 provas dão média 7, a soma delas tem que ser 4 × 7. Falta só completar essa soma.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "N",
-                "nota que falta (o que a questão quer)"
-              ],
-              [
-                "S",
-                "soma que precisa"
-              ],
-              [
-                "J",
-                "soma que já tem"
-              ]
+            "tipo": "equacao",
+            "formula": "N = S − J",
+            "leitura": "nota que falta = soma que precisa − soma que já tem",
+            "letras": [
+              {
+                "letra": "N",
+                "oque": "nota que falta (o que a questão quer)"
+              },
+              {
+                "letra": "S",
+                "oque": "soma que precisa"
+              },
+              {
+                "letra": "J",
+                "oque": "soma que já tem"
+              }
             ]
           }
         },
@@ -1533,27 +1506,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer a mediana: o valor do meio da lista em ordem.\nM = (A + B) ÷ 2 (mediana = média dos dois do meio, porque são 6 números)\nPor que a média dos dois do meio? Com 6 números não existe um só no meio: existem dois. A mediana fica no meio deles, que é a média dos dois.\nAgora é só achar cada letra.",
+          "texto": "A questão quer a mediana: o valor do meio da lista em ordem.\nPor que a média dos dois do meio? Com 6 números não existe um só no meio: existem dois. A mediana fica no meio deles, que é a média dos dois.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "M",
-                "mediana (o que a questão quer)"
-              ],
-              [
-                "L",
-                "a lista em ordem"
-              ],
-              [
-                "AB",
-                "os dois números do meio"
-              ]
+            "tipo": "equacao",
+            "formula": "M = (A + B) ÷ 2",
+            "leitura": "mediana = média dos dois do meio, porque são 6 números",
+            "letras": [
+              {
+                "letra": "M",
+                "oque": "mediana (o que a questão quer)"
+              },
+              {
+                "letra": "L",
+                "oque": "a lista em ordem"
+              },
+              {
+                "letra": "AB",
+                "oque": "os dois números do meio"
+              }
             ]
           }
         },
@@ -1691,27 +1661,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer o preço médio de cada camiseta vendida.\nPM = T ÷ N (preço médio = total em reais ÷ número de camisetas)\nPor que total ÷ número? Média é tudo o que entrou dividido pelo número de peças. Se você ganhou R$ 100 vendendo 4 coisas, cada uma rendeu 100 ÷ 4 = 25.\nAgora é só achar cada letra.",
+          "texto": "A questão quer o preço médio de cada camiseta vendida.\nPor que total ÷ número? Média é tudo o que entrou dividido pelo número de peças. Se você ganhou R$ 100 vendendo 4 coisas, cada uma rendeu 100 ÷ 4 = 25.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "PM",
-                "preço médio (o que a questão quer)"
-              ],
-              [
-                "T",
-                "total vendido em reais"
-              ],
-              [
-                "N",
-                "número de camisetas"
-              ]
+            "tipo": "equacao",
+            "formula": "PM = T ÷ N",
+            "leitura": "preço médio = total em reais ÷ número de camisetas",
+            "letras": [
+              {
+                "letra": "PM",
+                "oque": "preço médio (o que a questão quer)"
+              },
+              {
+                "letra": "T",
+                "oque": "total vendido em reais"
+              },
+              {
+                "letra": "N",
+                "oque": "número de camisetas"
+              }
             ]
           }
         },
@@ -1857,23 +1824,20 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer quantas horas o técnico trabalhou.\nH = V ÷ 40 (horas = o que sobra depois da visita ÷ preço da hora)\nPor que tirar a visita antes de dividir? A visita é paga uma vez só e não depende das horas. Se você paga R$ 5 de entrada e R$ 10 por brinquedo, para descobrir os brinquedos tira a entrada e divide o resto.\nAgora é só achar cada letra.",
+          "texto": "A questão quer quantas horas o técnico trabalhou.\nPor que tirar a visita antes de dividir? A visita é paga uma vez só e não depende das horas. Se você paga R$ 5 de entrada e R$ 10 por brinquedo, para descobrir os brinquedos tira a entrada e divide o resto.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "H",
-                "horas trabalhadas (o que a questão quer)"
-              ],
-              [
-                "V",
-                "o que sobra depois da visita"
-              ]
+            "tipo": "equacao",
+            "formula": "H = V ÷ 40",
+            "leitura": "horas = o que sobra depois da visita ÷ preço da hora",
+            "letras": [
+              {
+                "letra": "H",
+                "oque": "horas trabalhadas (o que a questão quer)"
+              },
+              {
+                "letra": "V",
+                "oque": "o que sobra depois da visita"
+              }
             ]
           }
         },
@@ -2015,27 +1979,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer a altura mais alta da bola.\nA = −5 × T × T + 20 × T (altura no instante T mais alto)\nPor que no meio? A bola sobe e desce do mesmo jeito, como um espelho. O ponto mais alto fica no meio do tempo entre sair do chão e voltar ao chão.\nAgora é só achar cada letra.",
+          "texto": "A questão quer a altura mais alta da bola.\nPor que no meio? A bola sobe e desce do mesmo jeito, como um espelho. O ponto mais alto fica no meio do tempo entre sair do chão e voltar ao chão.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "A",
-                "altura máxima (o que a questão quer)"
-              ],
-              [
-                "Z",
-                "instante em que a bola volta ao chão"
-              ],
-              [
-                "T",
-                "instante do ponto mais alto"
-              ]
+            "tipo": "equacao",
+            "formula": "A = −5 × T × T + 20 × T",
+            "leitura": "altura no instante T mais alto",
+            "letras": [
+              {
+                "letra": "A",
+                "oque": "altura máxima (o que a questão quer)"
+              },
+              {
+                "letra": "Z",
+                "oque": "instante em que a bola volta ao chão"
+              },
+              {
+                "letra": "T",
+                "oque": "instante do ponto mais alto"
+              }
             ]
           }
         },
@@ -2177,23 +2138,20 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer quantos meses até as duas cobrarem o mesmo total.\nM = 40 ÷ D (meses = matrícula da X ÷ quanto Y cobra a mais por mês)\nPor que dividir? A Y começa R$ 40 na frente, mas ganha R$ 10 por mês em cima da X. Para tapar 40 a 10 por mês, precisa de 40 ÷ 10 meses.\nAgora é só achar cada letra.",
+          "texto": "A questão quer quantos meses até as duas cobrarem o mesmo total.\nPor que dividir? A Y começa R$ 40 na frente, mas ganha R$ 10 por mês em cima da X. Para tapar 40 a 10 por mês, precisa de 40 ÷ 10 meses.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "M",
-                "meses (o que a questão quer)"
-              ],
-              [
-                "D",
-                "quanto Y cobra a mais por mês"
-              ]
+            "tipo": "equacao",
+            "formula": "M = 40 ÷ D",
+            "leitura": "meses = matrícula da X ÷ quanto Y cobra a mais por mês",
+            "letras": [
+              {
+                "letra": "M",
+                "oque": "meses (o que a questão quer)"
+              },
+              {
+                "letra": "D",
+                "oque": "quanto Y cobra a mais por mês"
+              }
             ]
           }
         },
@@ -2335,27 +2293,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer o custo do piso da sala inteira.\nC = NC × 45 (custo = número de caixas × preço da caixa)\nPor que a área e não a volta? Piso cobre o chão, que é área. A volta (perímetro) só serviria para rodapé.\nAgora é só achar cada letra.",
+          "texto": "A questão quer o custo do piso da sala inteira.\nPor que a área e não a volta? Piso cobre o chão, que é área. A volta (perímetro) só serviria para rodapé.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "C",
-                "custo (o que a questão quer)"
-              ],
-              [
-                "AR",
-                "área da sala"
-              ],
-              [
-                "NC",
-                "número de caixas"
-              ]
+            "tipo": "equacao",
+            "formula": "C = NC × 45",
+            "leitura": "custo = número de caixas × preço da caixa",
+            "letras": [
+              {
+                "letra": "C",
+                "oque": "custo (o que a questão quer)"
+              },
+              {
+                "letra": "AR",
+                "oque": "área da sala"
+              },
+              {
+                "letra": "NC",
+                "oque": "número de caixas"
+              }
             ]
           }
         },
@@ -2505,23 +2460,20 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer o comprimento da diagonal do jardim.\nD × D = S (diagonal × diagonal = soma dos lados vezes eles mesmos)\nPor que lado × lado? A diagonal e os dois lados formam um triângulo com um canto reto. Nele, o quadrado da diagonal é igual à soma dos quadrados dos dois lados.\nAgora é só achar cada letra.",
+          "texto": "A questão quer o comprimento da diagonal do jardim.\nPor que lado × lado? A diagonal e os dois lados formam um triângulo com um canto reto. Nele, o quadrado da diagonal é igual à soma dos quadrados dos dois lados.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "D",
-                "diagonal (o que a questão quer)"
-              ],
-              [
-                "S",
-                "12 × 12 + 5 × 5"
-              ]
+            "tipo": "equacao",
+            "formula": "D × D = S",
+            "leitura": "diagonal × diagonal = soma dos lados vezes eles mesmos",
+            "letras": [
+              {
+                "letra": "D",
+                "oque": "diagonal (o que a questão quer)"
+              },
+              {
+                "letra": "S",
+                "oque": "12 × 12 + 5 × 5"
+              }
             ]
           }
         },
@@ -2663,27 +2615,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer a distância em metros.\nM = CM ÷ 100 (metros = cm ÷ 100)\nPor que a volta da roda? A cada volta, a roda deita no chão todo o seu contorno. Uma volta anda o tamanho do contorno; 100 voltas andam 100 vezes isso.\nAgora é só achar cada letra.",
+          "texto": "A questão quer a distância em metros.\nPor que a volta da roda? A cada volta, a roda deita no chão todo o seu contorno. Uma volta anda o tamanho do contorno; 100 voltas andam 100 vezes isso.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "M",
-                "metros andados (o que a questão quer)"
-              ],
-              [
-                "V",
-                "distância de 1 volta, em cm"
-              ],
-              [
-                "CM",
-                "distância de 100 voltas, em cm"
-              ]
+            "tipo": "equacao",
+            "formula": "M = CM ÷ 100",
+            "leitura": "metros = cm ÷ 100",
+            "letras": [
+              {
+                "letra": "M",
+                "oque": "metros andados (o que a questão quer)"
+              },
+              {
+                "letra": "V",
+                "oque": "distância de 1 volta, em cm"
+              },
+              {
+                "letra": "CM",
+                "oque": "distância de 100 voltas, em cm"
+              }
             ]
           }
         },
@@ -2830,27 +2779,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer quantos litros de massa cabem.\nL = V ÷ 1 000 (litros = cm³ ÷ 1 000)\nPor que ÷ 1 000? Um litro é uma caixinha de 10 × 10 × 10 = 1 000 cm³. Para saber quantas caixinhas de 1 litro enchem a massa, divide por 1 000.\nAgora é só achar cada letra.",
+          "texto": "A questão quer quantos litros de massa cabem.\nPor que ÷ 1 000? Um litro é uma caixinha de 10 × 10 × 10 = 1 000 cm³. Para saber quantas caixinhas de 1 litro enchem a massa, divide por 1 000.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "L",
-                "litros de massa (o que a questão quer)"
-              ],
-              [
-                "AF",
-                "área do fundo"
-              ],
-              [
-                "V",
-                "volume da massa em cm³"
-              ]
+            "tipo": "equacao",
+            "formula": "L = V ÷ 1 000",
+            "leitura": "litros = cm³ ÷ 1 000",
+            "letras": [
+              {
+                "letra": "L",
+                "oque": "litros de massa (o que a questão quer)"
+              },
+              {
+                "letra": "AF",
+                "oque": "área do fundo"
+              },
+              {
+                "letra": "V",
+                "oque": "volume da massa em cm³"
+              }
             ]
           }
         },
@@ -3009,27 +2955,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer quantos copos enchem a jarra.\nN = VJ ÷ VC (copos = volume da jarra ÷ volume de 1 copo)\nPor que dividir? É perguntar quantas vezes o copo cabe na jarra. Um balde de 12 litros e um copo de 2 litros: 12 ÷ 2 = 6 copos.\nAgora é só achar cada letra.",
+          "texto": "A questão quer quantos copos enchem a jarra.\nPor que dividir? É perguntar quantas vezes o copo cabe na jarra. Um balde de 12 litros e um copo de 2 litros: 12 ÷ 2 = 6 copos.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "N",
-                "número de copos (o que a questão quer)"
-              ],
-              [
-                "VC",
-                "volume de 1 copo"
-              ],
-              [
-                "VJ",
-                "volume da jarra em cm³"
-              ]
+            "tipo": "equacao",
+            "formula": "N = VJ ÷ VC",
+            "leitura": "copos = volume da jarra ÷ volume de 1 copo",
+            "letras": [
+              {
+                "letra": "N",
+                "oque": "número de copos (o que a questão quer)"
+              },
+              {
+                "letra": "VC",
+                "oque": "volume de 1 copo"
+              },
+              {
+                "letra": "VJ",
+                "oque": "volume da jarra em cm³"
+              }
             ]
           }
         },
@@ -3184,27 +3127,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer o volume da pirâmide, em cm³.\nV = T ÷ 3 (volume = área da base × altura, dividido por 3)\nPor que ÷ 3? A pirâmide ocupa 1 terço da caixa de mesma base e altura. Se a caixa tem 360, a pirâmide tem 360 ÷ 3.\nAgora é só achar cada letra.",
+          "texto": "A questão quer o volume da pirâmide, em cm³.\nPor que ÷ 3? A pirâmide ocupa 1 terço da caixa de mesma base e altura. Se a caixa tem 360, a pirâmide tem 360 ÷ 3.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "V",
-                "volume (o que a questão quer)"
-              ],
-              [
-                "AB",
-                "área da base"
-              ],
-              [
-                "T",
-                "área da base × altura"
-              ]
+            "tipo": "equacao",
+            "formula": "V = T ÷ 3",
+            "leitura": "volume = área da base × altura, dividido por 3",
+            "letras": [
+              {
+                "letra": "V",
+                "oque": "volume (o que a questão quer)"
+              },
+              {
+                "letra": "AB",
+                "oque": "área da base"
+              },
+              {
+                "letra": "T",
+                "oque": "área da base × altura"
+              }
             ]
           }
         },

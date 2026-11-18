@@ -76,23 +76,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o número na balança.\nL = N ÷ 10 (leitura = força na balança ÷ 10)\nPor que dividir por 10? É o que a balança faz: ela mede força e mostra em \"kg\".\nAgora é só achar cada letra.",
+     "texto": "A questão quer o número na balança.\nPor que dividir por 10? É o que a balança faz: ela mede força e mostra em \"kg\".\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "L",
-        "leitura da balança (o que a questão quer)"
-       ],
-       [
-        "N",
-        "força que a balança faz"
-       ]
+      "tipo": "equacao",
+      "formula": "L = N ÷ 10",
+      "leitura": "leitura = força na balança ÷ 10",
+      "letras": [
+       {
+        "letra": "L",
+        "oque": "leitura da balança (o que a questão quer)"
+       },
+       {
+        "letra": "N",
+        "oque": "força que a balança faz"
+       }
       ]
      }
     },
@@ -240,27 +237,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a aceleração do conjunto.\na = F ÷ m (aceleração = força que sobra ÷ massa)\nPor que a força que sobra? O peso puxa para baixo. Só o que as hélices fazem a mais acelera.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a aceleração do conjunto.\nPor que a força que sobra? O peso puxa para baixo. Só o que as hélices fazem a mais acelera.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "a",
-        "aceleração (o que a questão quer)"
-       ],
-       [
-        "F",
-        "força que sobra"
-       ],
-       [
-        "m",
-        "massa do conjunto"
-       ]
+      "tipo": "equacao",
+      "formula": "a = F ÷ m",
+      "leitura": "aceleração = força que sobra ÷ massa",
+      "letras": [
+       {
+        "letra": "a",
+        "oque": "aceleração (o que a questão quer)"
+       },
+       {
+        "letra": "F",
+        "oque": "força que sobra"
+       },
+       {
+        "letra": "m",
+        "oque": "massa do conjunto"
+       }
       ]
      }
     },

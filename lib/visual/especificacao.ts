@@ -246,7 +246,20 @@ const MAX_FORMULAS = 4;
 export const TITULO_FORMULAS = 'As fórmulas desta questão';
 /* O mesmo lugar em questão sem conta (Português, 18/11/2026): as regras prontas. */
 export const TITULO_REGRAS = 'A regra desta questão';
-export type Visual = VisualFormulas | VisualLegenda | VisualQuadro | VisualPalavra | VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula | VisualFigura | VisualDiagrama;
+/* A equação da aula num quadro branco (Pablo, 18/11/2026: "a equação montada em quadro,
+   não só texto, e explicar melhor o que é cada letra"): a fórmula grande, cada letra numa
+   cor, e embaixo o que cada uma é. components/visual/equacao-quadro.tsx. */
+export interface VisualEquacao {
+  tipo: 'equacao';
+  titulo?: string;
+  formula: string;
+  /** A mesma fórmula lida em palavras, menor, embaixo. */
+  leitura?: string;
+  letras: { letra: string; oque: string }[];
+}
+const MAX_LETRAS_EQUACAO = 6;
+
+export type Visual = VisualEquacao | VisualFormulas | VisualLegenda | VisualQuadro | VisualPalavra | VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula | VisualFigura | VisualDiagrama;
 
 const MAX_FUNCOES = 4;
 const MAX_PONTOS = 8;
@@ -561,8 +574,18 @@ function formulas(v: Record<string, unknown>): VisualFormulas | null {
   return itens.length > 0 ? { tipo: 'formulas', titulo: texto(v.titulo), itens } : null;
 }
 
+function equacao(v: Record<string, unknown>): VisualEquacao | null {
+  const formula = texto(v.formula, 160);
+  const letras = lista(v.letras).map(objeto).flatMap((l) => {
+    const letra = texto(l.letra, 10);
+    const oque = texto(l.oque, 140);
+    return letra && oque ? [{ letra, oque }] : [];
+  }).slice(0, MAX_LETRAS_EQUACAO);
+  return formula && letras.length > 0 ? { tipo: 'equacao', titulo: texto(v.titulo), formula, leitura: texto(v.leitura, 160), letras } : null;
+}
+
 const VALIDADORES: Record<Visual['tipo'], (v: Record<string, unknown>) => Visual | null> = {
-  formulas,
+  equacao, formulas,
   legenda: formulaComLegenda, quadro, grafico, reta, transformacao, tabela, vetores, cena, roda, retangulo, fatias, processo, molecula, palavra, figura, diagrama,
 };
 

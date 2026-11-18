@@ -76,23 +76,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a economia por mês.\nC = E × 0,75 (economia = energia economizada × preço)\nPor que a energia economizada? É a potência que deixou de ser gasta, durante todas as horas do mês.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a economia por mês.\nPor que a energia economizada? É a potência que deixou de ser gasta, durante todas as horas do mês.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "C",
-        "economia em reais (o que a questão quer)"
-       ],
-       [
-        "E",
-        "energia economizada, em kWh"
-       ]
+      "tipo": "equacao",
+      "formula": "C = E × 0,75",
+      "leitura": "economia = energia economizada × preço",
+      "letras": [
+       {
+        "letra": "C",
+        "oque": "economia em reais (o que a questão quer)"
+       },
+       {
+        "letra": "E",
+        "oque": "energia economizada, em kWh"
+       }
       ]
      }
     },
@@ -231,27 +228,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer comparar as correntes.\ni = P ÷ U (corrente = potência ÷ tensão)\nPor que dividir? Mesma potência com menos tensão precisa de mais corrente.\nAgora é só achar cada letra.",
+     "texto": "A questão quer comparar as correntes.\nPor que dividir? Mesma potência com menos tensão precisa de mais corrente.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "i",
-        "corrente (o que a questão quer)"
-       ],
-       [
-        "i1",
-        "corrente em 110 V"
-       ],
-       [
-        "i2",
-        "corrente em 220 V"
-       ]
+      "tipo": "equacao",
+      "formula": "i = P ÷ U",
+      "leitura": "corrente = potência ÷ tensão",
+      "letras": [
+       {
+        "letra": "i",
+        "oque": "corrente (o que a questão quer)"
+       },
+       {
+        "letra": "i1",
+        "oque": "corrente em 110 V"
+       },
+       {
+        "letra": "i2",
+        "oque": "corrente em 220 V"
+       }
       ]
      }
     },

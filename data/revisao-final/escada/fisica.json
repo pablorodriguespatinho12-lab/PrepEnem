@@ -69,27 +69,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a velocidade média do passeio todo.\nv = d ÷ t (velocidade média = distância total ÷ tempo total)\nPor que o total? A velocidade média diz quantos km o ciclista andou, em média, a cada hora do passeio inteiro, inclusive no tempo em que ficou parado.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a velocidade média do passeio todo.\nPor que o total? A velocidade média diz quantos km o ciclista andou, em média, a cada hora do passeio inteiro, inclusive no tempo em que ficou parado.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "v",
-        "velocidade média (o que a questão quer)"
-       ],
-       [
-        "d",
-        "distância total, em km"
-       ],
-       [
-        "t",
-        "tempo total, em horas"
-       ]
+      "tipo": "equacao",
+      "formula": "v = d ÷ t",
+      "leitura": "velocidade média = distância total ÷ tempo total",
+      "letras": [
+       {
+        "letra": "v",
+        "oque": "velocidade média (o que a questão quer)"
+       },
+       {
+        "letra": "d",
+        "oque": "distância total, em km"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo total, em horas"
+       }
       ]
      }
     },
@@ -238,31 +235,28 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a velocidade média da viagem toda.\nv = d ÷ (t1 + t2) (velocidade média = distância total ÷ tempo total)\nPor que não a média de 60 e 90? Essa média só vale quando ele passa o MESMO TEMPO em cada velocidade. Aqui a distância é a mesma, e o tempo devagar é maior.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a velocidade média da viagem toda.\nPor que não a média de 60 e 90? Essa média só vale quando ele passa o MESMO TEMPO em cada velocidade. Aqui a distância é a mesma, e o tempo devagar é maior.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "v",
-        "velocidade média (o que a questão quer)"
-       ],
-       [
-        "d",
-        "distância total"
-       ],
-       [
-        "t1",
-        "tempo da 1ª metade, em horas"
-       ],
-       [
-        "t2",
-        "tempo da 2ª metade, em horas"
-       ]
+      "tipo": "equacao",
+      "formula": "v = d ÷ (t1 + t2)",
+      "leitura": "velocidade média = distância total ÷ tempo total",
+      "letras": [
+       {
+        "letra": "v",
+        "oque": "velocidade média (o que a questão quer)"
+       },
+       {
+        "letra": "d",
+        "oque": "distância total"
+       },
+       {
+        "letra": "t1",
+        "oque": "tempo da 1ª metade, em horas"
+       },
+       {
+        "letra": "t2",
+        "oque": "tempo da 2ª metade, em horas"
+       }
       ]
      }
     },
@@ -428,31 +422,28 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a distância total até parar.\nD = dr + df (distância total = distância de reação + distância de frenagem)\nPor que somar? O carro anda nas duas fases: primeiro ainda na velocidade cheia, depois freando.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a distância total até parar.\nPor que somar? O carro anda nas duas fases: primeiro ainda na velocidade cheia, depois freando.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "D",
-        "distância total (o que a questão quer)"
-       ],
-       [
-        "v",
-        "velocidade em m/s"
-       ],
-       [
-        "dr",
-        "distância de reação"
-       ],
-       [
-        "df",
-        "distância de frenagem"
-       ]
+      "tipo": "equacao",
+      "formula": "D = dr + df",
+      "leitura": "distância total = distância de reação + distância de frenagem",
+      "letras": [
+       {
+        "letra": "D",
+        "oque": "distância total (o que a questão quer)"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade em m/s"
+       },
+       {
+        "letra": "dr",
+        "oque": "distância de reação"
+       },
+       {
+        "letra": "df",
+        "oque": "distância de frenagem"
+       }
       ]
      }
     },
@@ -613,31 +604,28 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a temperatura final T.\nT = (Qa − Qf) ÷ (m × 1) (o calor que sobra ÷ massa total)\nPor que assim? A água quente dá calor até 0 °C (Qa). O gelo usa uma parte só para derreter (Qf). O que sobra aquece toda a água junta, de 0 °C até T.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a temperatura final T.\nPor que assim? A água quente dá calor até 0 °C (Qa). O gelo usa uma parte só para derreter (Qf). O que sobra aquece toda a água junta, de 0 °C até T.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "T",
-        "temperatura final (o que a questão quer)"
-       ],
-       [
-        "Qa",
-        "calor que a água dá de 30 °C até 0 °C"
-       ],
-       [
-        "Qf",
-        "calor para derreter todo o gelo"
-       ],
-       [
-        "m",
-        "massa total de água no fim"
-       ]
+      "tipo": "equacao",
+      "formula": "T = (Qa − Qf) ÷ (m × 1)",
+      "leitura": "o calor que sobra ÷ massa total",
+      "letras": [
+       {
+        "letra": "T",
+        "oque": "temperatura final (o que a questão quer)"
+       },
+       {
+        "letra": "Qa",
+        "oque": "calor que a água dá de 30 °C até 0 °C"
+       },
+       {
+        "letra": "Qf",
+        "oque": "calor para derreter todo o gelo"
+       },
+       {
+        "letra": "m",
+        "oque": "massa total de água no fim"
+       }
       ]
      }
     },
@@ -798,27 +786,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a pressão no fim, P2.\nP2 = 30 × T2 ÷ T1 (a pressão cresce na mesma proporção da temperatura em kelvin)\nPor que kelvin? A pressão é proporcional à temperatura contada do zero absoluto. Em °C, o zero é só onde a água congela, e a proporção sai errada.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a pressão no fim, P2.\nPor que kelvin? A pressão é proporcional à temperatura contada do zero absoluto. Em °C, o zero é só onde a água congela, e a proporção sai errada.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "P2",
-        "pressão no fim (o que a questão quer)"
-       ],
-       [
-        "T1",
-        "temperatura antes, em kelvin"
-       ],
-       [
-        "T2",
-        "temperatura depois, em kelvin"
-       ]
+      "tipo": "equacao",
+      "formula": "P2 = 30 × T2 ÷ T1",
+      "leitura": "a pressão cresce na mesma proporção da temperatura em kelvin",
+      "letras": [
+       {
+        "letra": "P2",
+        "oque": "pressão no fim (o que a questão quer)"
+       },
+       {
+        "letra": "T1",
+        "oque": "temperatura antes, em kelvin"
+       },
+       {
+        "letra": "T2",
+        "oque": "temperatura depois, em kelvin"
+       }
       ]
      }
     },
@@ -953,27 +938,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a distância até o raio.\nd = v × t (distância = velocidade × tempo)\nPor que só o som? A luz anda tão rápido que chega quase na mesma hora do raio. Os 3 segundos são o tempo do som.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a distância até o raio.\nPor que só o som? A luz anda tão rápido que chega quase na mesma hora do raio. Os 3 segundos são o tempo do som.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "d",
-        "distância até o raio (o que a questão quer)"
-       ],
-       [
-        "v",
-        "velocidade do som"
-       ],
-       [
-        "t",
-        "tempo que o som levou"
-       ]
+      "tipo": "equacao",
+      "formula": "d = v × t",
+      "leitura": "distância = velocidade × tempo",
+      "letras": [
+       {
+        "letra": "d",
+        "oque": "distância até o raio (o que a questão quer)"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade do som"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo que o som levou"
+       }
       ]
      }
     },
@@ -1122,27 +1104,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o comprimento L2 que vibra a 330 Hz.\nL2 = v ÷ (2 × f2) (de v = λ × f, com λ = 2 × L)\nPor que 2 × L? Na nota da corda presa nas duas pontas, cabe meia onda na corda. Uma onda inteira tem o dobro do comprimento da corda.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o comprimento L2 que vibra a 330 Hz.\nPor que 2 × L? Na nota da corda presa nas duas pontas, cabe meia onda na corda. Uma onda inteira tem o dobro do comprimento da corda.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "L2",
-        "parte que vibra com o dedo (o que a questão quer)"
-       ],
-       [
-        "v",
-        "velocidade da onda na corda"
-       ],
-       [
-        "f2",
-        "nova frequência"
-       ]
+      "tipo": "equacao",
+      "formula": "L2 = v ÷ (2 × f2)",
+      "leitura": "de v = λ × f, com λ = 2 × L",
+      "letras": [
+       {
+        "letra": "L2",
+        "oque": "parte que vibra com o dedo (o que a questão quer)"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade da onda na corda"
+       },
+       {
+        "letra": "f2",
+        "oque": "nova frequência"
+       }
       ]
      }
     },
@@ -1291,27 +1270,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a distância D na hora do apito.\nD = (ds + dt) ÷ 2 (caminho do som + caminho do trem = 2 vezes a distância)\nPor que somar? O som vai D até o paredão. Na volta, o trem já chegou mais perto, então o som volta D menos o que o trem andou. Som + trem = 2D.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a distância D na hora do apito.\nPor que somar? O som vai D até o paredão. Na volta, o trem já chegou mais perto, então o som volta D menos o que o trem andou. Som + trem = 2D.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "D",
-        "distância na hora do apito (o que a questão quer)"
-       ],
-       [
-        "ds",
-        "caminho do som em 2 s"
-       ],
-       [
-        "dt",
-        "caminho do trem em 2 s"
-       ]
+      "tipo": "equacao",
+      "formula": "D = (ds + dt) ÷ 2",
+      "leitura": "caminho do som + caminho do trem = 2 vezes a distância",
+      "letras": [
+       {
+        "letra": "D",
+        "oque": "distância na hora do apito (o que a questão quer)"
+       },
+       {
+        "letra": "ds",
+        "oque": "caminho do som em 2 s"
+       },
+       {
+        "letra": "dt",
+        "oque": "caminho do trem em 2 s"
+       }
       ]
      }
     },
@@ -1464,31 +1440,28 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a altura i da figura na parede.\ni = o × q ÷ p (imagem = objeto × aumento)\nPor que q ÷ p? A imagem cresce na proporção das distâncias: quanto mais longe a parede, comparado com o slide, maior a figura.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a altura i da figura na parede.\nPor que q ÷ p? A imagem cresce na proporção das distâncias: quanto mais longe a parede, comparado com o slide, maior a figura.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "i",
-        "altura na parede (o que a questão quer)"
-       ],
-       [
-        "o",
-        "altura no slide"
-       ],
-       [
-        "q",
-        "distância da lente até a parede"
-       ],
-       [
-        "p",
-        "distância da lente até o slide"
-       ]
+      "tipo": "equacao",
+      "formula": "i = o × q ÷ p",
+      "leitura": "imagem = objeto × aumento",
+      "letras": [
+       {
+        "letra": "i",
+        "oque": "altura na parede (o que a questão quer)"
+       },
+       {
+        "letra": "o",
+        "oque": "altura no slide"
+       },
+       {
+        "letra": "q",
+        "oque": "distância da lente até a parede"
+       },
+       {
+        "letra": "p",
+        "oque": "distância da lente até o slide"
+       }
       ]
      }
     },
@@ -1645,27 +1618,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a potência P2 em 110 V.\nP2 = U2² ÷ R (potência = tensão ao quadrado ÷ resistência)\nPor que esta fórmula? Ela usa a tensão e a resistência, que são justamente o que a questão dá: a tensão nova e a resistência que não muda.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a potência P2 em 110 V.\nPor que esta fórmula? Ela usa a tensão e a resistência, que são justamente o que a questão dá: a tensão nova e a resistência que não muda.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "P2",
-        "potência em 110 V (o que a questão quer)"
-       ],
-       [
-        "U2",
-        "tensão da tomada usada"
-       ],
-       [
-        "R",
-        "resistência do chuveiro"
-       ]
+      "tipo": "equacao",
+      "formula": "P2 = U2² ÷ R",
+      "leitura": "potência = tensão ao quadrado ÷ resistência",
+      "letras": [
+       {
+        "letra": "P2",
+        "oque": "potência em 110 V (o que a questão quer)"
+       },
+       {
+        "letra": "U2",
+        "oque": "tensão da tomada usada"
+       },
+       {
+        "letra": "R",
+        "oque": "resistência do chuveiro"
+       }
       ]
      }
     },
@@ -1828,31 +1798,28 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a potência P em cada lâmpada do par.\nP = i × i × 12 (potência = corrente na lâmpada ao quadrado × resistência)\nPor que a corrente? As 3 lâmpadas têm a mesma resistência; o que muda de uma para outra é a corrente que passa nela.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a potência P em cada lâmpada do par.\nPor que a corrente? As 3 lâmpadas têm a mesma resistência; o que muda de uma para outra é a corrente que passa nela.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "P",
-        "potência em cada lâmpada do par (o que a questão quer)"
-       ],
-       [
-        "Req",
-        "resistência do circuito todo"
-       ],
-       [
-        "I",
-        "corrente que sai da bateria"
-       ],
-       [
-        "i",
-        "corrente em cada lâmpada do par"
-       ]
+      "tipo": "equacao",
+      "formula": "P = i × i × 12",
+      "leitura": "potência = corrente na lâmpada ao quadrado × resistência",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "potência em cada lâmpada do par (o que a questão quer)"
+       },
+       {
+        "letra": "Req",
+        "oque": "resistência do circuito todo"
+       },
+       {
+        "letra": "I",
+        "oque": "corrente que sai da bateria"
+       },
+       {
+        "letra": "i",
+        "oque": "corrente em cada lâmpada do par"
+       }
       ]
      }
     },
@@ -2009,27 +1976,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a força resultante.\nF = m × a (força = massa × aceleração)\nPor que precisa da aceleração? A força não aparece no texto; o que aparece é como a velocidade mudou. Isso é a aceleração, da prova de Cinemática.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a força resultante.\nPor que precisa da aceleração? A força não aparece no texto; o que aparece é como a velocidade mudou. Isso é a aceleração, da prova de Cinemática.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "F",
-        "força (o que a questão quer)"
-       ],
-       [
-        "m",
-        "massa"
-       ],
-       [
-        "a",
-        "aceleração"
-       ]
+      "tipo": "equacao",
+      "formula": "F = m × a",
+      "leitura": "força = massa × aceleração",
+      "letras": [
+       {
+        "letra": "F",
+        "oque": "força (o que a questão quer)"
+       },
+       {
+        "letra": "m",
+        "oque": "massa"
+       },
+       {
+        "letra": "a",
+        "oque": "aceleração"
+       }
       ]
      }
     },
@@ -2182,27 +2146,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a distância em 4 s.\nd = vm × t (distância = velocidade média × tempo)\nPor que a média? A velocidade sobe sempre igual, de 0 até a final. A média é o meio do caminho entre as duas.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a distância em 4 s.\nPor que a média? A velocidade sobe sempre igual, de 0 até a final. A média é o meio do caminho entre as duas.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "d",
-        "distância (o que a questão quer)"
-       ],
-       [
-        "a",
-        "aceleração"
-       ],
-       [
-        "vm",
-        "velocidade média"
-       ]
+      "tipo": "equacao",
+      "formula": "d = vm × t",
+      "leitura": "distância = velocidade média × tempo",
+      "letras": [
+       {
+        "letra": "d",
+        "oque": "distância (o que a questão quer)"
+       },
+       {
+        "letra": "a",
+        "oque": "aceleração"
+       },
+       {
+        "letra": "vm",
+        "oque": "velocidade média"
+       }
       ]
      }
     },
@@ -2346,23 +2307,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o calor, em calorias.\nQ = E ÷ 4 (calorias = joules ÷ 4)\nPor que ÷ 4? Cada caloria tem 4 joules. Quantas vezes 4 cabe na energia é o número de calorias.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o calor, em calorias.\nPor que ÷ 4? Cada caloria tem 4 joules. Quantas vezes 4 cabe na energia é o número de calorias.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "Q",
-        "calor em calorias (o que a questão quer)"
-       ],
-       [
-        "E",
-        "energia de movimento, em joules"
-       ]
+      "tipo": "equacao",
+      "formula": "Q = E ÷ 4",
+      "leitura": "calorias = joules ÷ 4",
+      "letras": [
+       {
+        "letra": "Q",
+        "oque": "calor em calorias (o que a questão quer)"
+       },
+       {
+        "letra": "E",
+        "oque": "energia de movimento, em joules"
+       }
       ]
      }
     },
@@ -2498,23 +2456,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a energia em kcal.\nK = E ÷ 4 200 (kcal = joules ÷ 4 200)\nPor que ÷ 4 200? Cada kcal tem 4 200 joules.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a energia em kcal.\nPor que ÷ 4 200? Cada kcal tem 4 200 joules.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "K",
-        "energia em kcal (o que a questão quer)"
-       ],
-       [
-        "E",
-        "energia de altura, em joules"
-       ]
+      "tipo": "equacao",
+      "formula": "K = E ÷ 4 200",
+      "leitura": "kcal = joules ÷ 4 200",
+      "letras": [
+       {
+        "letra": "K",
+        "oque": "energia em kcal (o que a questão quer)"
+       },
+       {
+        "letra": "E",
+        "oque": "energia de altura, em joules"
+       }
       ]
      }
     },
@@ -2650,27 +2605,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o caminho da bola até o som chegar.\nd = vb × t (distância da bola = velocidade da bola × tempo do som)\nPor que o tempo do som? A pergunta é \"quando o torcedor ouve\". Esse tempo é o que o som leva para andar 170 m.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o caminho da bola até o som chegar.\nPor que o tempo do som? A pergunta é \"quando o torcedor ouve\". Esse tempo é o que o som leva para andar 170 m.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "d",
-        "caminho da bola (o que a questão quer)"
-       ],
-       [
-        "t",
-        "tempo do som"
-       ],
-       [
-        "vb",
-        "velocidade da bola"
-       ]
+      "tipo": "equacao",
+      "formula": "d = vb × t",
+      "leitura": "distância da bola = velocidade da bola × tempo do som",
+      "letras": [
+       {
+        "letra": "d",
+        "oque": "caminho da bola (o que a questão quer)"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo do som"
+       },
+       {
+        "letra": "vb",
+        "oque": "velocidade da bola"
+       }
       ]
      }
     },
@@ -2814,23 +2766,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a velocidade a 35 °C.\nv = 340 + 0,6 × ΔT (velocidade = a de 15 °C + o aumento)\nPor que ΔT? O aumento conta só os graus A MAIS, a partir dos 15 °C.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a velocidade a 35 °C.\nPor que ΔT? O aumento conta só os graus A MAIS, a partir dos 15 °C.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "v",
-        "velocidade a 35 °C (o que a questão quer)"
-       ],
-       [
-        "ΔT",
-        "graus a mais"
-       ]
+      "tipo": "equacao",
+      "formula": "v = 340 + 0,6 × ΔT",
+      "leitura": "velocidade = a de 15 °C + o aumento",
+      "letras": [
+       {
+        "letra": "v",
+        "oque": "velocidade a 35 °C (o que a questão quer)"
+       },
+       {
+        "letra": "ΔT",
+        "oque": "graus a mais"
+       }
       ]
      }
     },
@@ -2962,27 +2911,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a frequência.\nf = v ÷ λ (frequência = velocidade ÷ comprimento de onda)\nPor que v = λ × f vale aqui? Luz é onda, como o som da prova anterior. Só é muito mais rápida e muito mais curta.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a frequência.\nPor que v = λ × f vale aqui? Luz é onda, como o som da prova anterior. Só é muito mais rápida e muito mais curta.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "f",
-        "frequência (o que a questão quer)"
-       ],
-       [
-        "λ",
-        "comprimento em metros"
-       ],
-       [
-        "v",
-        "velocidade da luz"
-       ]
+      "tipo": "equacao",
+      "formula": "f = v ÷ λ",
+      "leitura": "frequência = velocidade ÷ comprimento de onda",
+      "letras": [
+       {
+        "letra": "f",
+        "oque": "frequência (o que a questão quer)"
+       },
+       {
+        "letra": "λ",
+        "oque": "comprimento em metros"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade da luz"
+       }
       ]
      }
     },
@@ -3122,23 +3068,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a distância Sol–Terra.\nd = v × t (distância = velocidade × tempo)\nPor que a mesma conta do carro? A luz anda com velocidade fixa no espaço. É a Cinemática da 1ª prova.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a distância Sol–Terra.\nPor que a mesma conta do carro? A luz anda com velocidade fixa no espaço. É a Cinemática da 1ª prova.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "d",
-        "distância (o que a questão quer)"
-       ],
-       [
-        "t",
-        "tempo, em segundos"
-       ]
+      "tipo": "equacao",
+      "formula": "d = v × t",
+      "leitura": "distância = velocidade × tempo",
+      "letras": [
+       {
+        "letra": "d",
+        "oque": "distância (o que a questão quer)"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo, em segundos"
+       }
       ]
      }
     },
@@ -3278,27 +3221,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a temperatura de saída.\nTs = 20 + ΔT (saída = entrada + quanto esquentou)\nPor que somar? A água já entra a 20 °C. O chuveiro só acrescenta o ΔT.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a temperatura de saída.\nPor que somar? A água já entra a 20 °C. O chuveiro só acrescenta o ΔT.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "Ts",
-        "temperatura de saída (o que a questão quer)"
-       ],
-       [
-        "E",
-        "energia em 1 minuto"
-       ],
-       [
-        "ΔT",
-        "quanto a água esquenta"
-       ]
+      "tipo": "equacao",
+      "formula": "Ts = 20 + ΔT",
+      "leitura": "saída = entrada + quanto esquentou",
+      "letras": [
+       {
+        "letra": "Ts",
+        "oque": "temperatura de saída (o que a questão quer)"
+       },
+       {
+        "letra": "E",
+        "oque": "energia em 1 minuto"
+       },
+       {
+        "letra": "ΔT",
+        "oque": "quanto a água esquenta"
+       }
       ]
      }
     },
@@ -3451,27 +3391,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a corrente.\ni = P ÷ 220 (corrente = potência ÷ tensão)\nPor que a potência? De P = U × i: com a tensão fixa, a corrente depende de quanta potência o motor entrega.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a corrente.\nPor que a potência? De P = U × i: com a tensão fixa, a corrente depende de quanta potência o motor entrega.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "i",
-        "corrente (o que a questão quer)"
-       ],
-       [
-        "E",
-        "energia para subir"
-       ],
-       [
-        "P",
-        "potência do motor"
-       ]
+      "tipo": "equacao",
+      "formula": "i = P ÷ 220",
+      "leitura": "corrente = potência ÷ tensão",
+      "letras": [
+       {
+        "letra": "i",
+        "oque": "corrente (o que a questão quer)"
+       },
+       {
+        "letra": "E",
+        "oque": "energia para subir"
+       },
+       {
+        "letra": "P",
+        "oque": "potência do motor"
+       }
       ]
      }
     },

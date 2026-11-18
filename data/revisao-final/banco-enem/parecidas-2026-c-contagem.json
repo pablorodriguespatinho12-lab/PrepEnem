@@ -68,27 +68,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a chance de ser tipo A e ter Rh negativo, os dois juntos.\nP = A × R (os dois juntos = chance de A × chance de Rh negativo dentro do A)\nPor que multiplicar? Primeiro a pessoa precisa estar no grupo A. Depois, dentro dele, ainda precisa ser Rh negativo. É uma parte de uma parte: metade de metade é 0,5 × 0,5 = 0,25.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a chance de ser tipo A e ter Rh negativo, os dois juntos.\nPor que multiplicar? Primeiro a pessoa precisa estar no grupo A. Depois, dentro dele, ainda precisa ser Rh negativo. É uma parte de uma parte: metade de metade é 0,5 × 0,5 = 0,25.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "P",
-        "chance dos dois juntos (o que a questão quer)"
-       ],
-       [
-        "A",
-        "chance de ser tipo A"
-       ],
-       [
-        "R",
-        "chance de Rh negativo, entre os A"
-       ]
+      "tipo": "equacao",
+      "formula": "P = A × R",
+      "leitura": "os dois juntos = chance de A × chance de Rh negativo dentro do A",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "chance dos dois juntos (o que a questão quer)"
+       },
+       {
+        "letra": "A",
+        "oque": "chance de ser tipo A"
+       },
+       {
+        "letra": "R",
+        "oque": "chance de Rh negativo, entre os A"
+       }
       ]
      }
     },
@@ -240,27 +237,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a chance de a camiseta ter os dois defeitos.\nP = C × T (os dois juntos = chance da cor × chance do tamanho)\nPor que multiplicar? Para ter os dois, é preciso o 1º e também o 2º. Se metade das camisetas é branca e metade das brancas é grande, a chance de branca e grande é metade de metade: 0,5 × 0,5 = 0,25.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a chance de a camiseta ter os dois defeitos.\nPor que multiplicar? Para ter os dois, é preciso o 1º e também o 2º. Se metade das camisetas é branca e metade das brancas é grande, a chance de branca e grande é metade de metade: 0,5 × 0,5 = 0,25.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "P",
-        "chance dos dois defeitos (o que a questão quer)"
-       ],
-       [
-        "C",
-        "chance do defeito na cor"
-       ],
-       [
-        "T",
-        "chance do defeito no tamanho"
-       ]
+      "tipo": "equacao",
+      "formula": "P = C × T",
+      "leitura": "os dois juntos = chance da cor × chance do tamanho",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "chance dos dois defeitos (o que a questão quer)"
+       },
+       {
+        "letra": "C",
+        "oque": "chance do defeito na cor"
+       },
+       {
+        "letra": "T",
+        "oque": "chance do defeito no tamanho"
+       }
       ]
      }
     },
@@ -416,27 +410,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a chance de a data ter dia e mês iguais.\nP = F ÷ T (chance = datas que servem ÷ todas as datas)\nPor que dividir? Chance é a parte que serve dentro do total. Se 3 de 10 bolas são vermelhas, a chance de sortear uma vermelha é 3 ÷ 10.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a chance de a data ter dia e mês iguais.\nPor que dividir? Chance é a parte que serve dentro do total. Se 3 de 10 bolas são vermelhas, a chance de sortear uma vermelha é 3 ÷ 10.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "P",
-        "chance (o que a questão quer)"
-       ],
-       [
-        "F",
-        "datas com dia e mês iguais"
-       ],
-       [
-        "T",
-        "todas as datas de janeiro a junho"
-       ]
+      "tipo": "equacao",
+      "formula": "P = F ÷ T",
+      "leitura": "chance = datas que servem ÷ todas as datas",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "chance (o que a questão quer)"
+       },
+       {
+        "letra": "F",
+        "oque": "datas com dia e mês iguais"
+       },
+       {
+        "letra": "T",
+        "oque": "todas as datas de janeiro a junho"
+       }
       ]
      }
     },
@@ -592,27 +583,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a chance de a data ter dia e mês iguais.\nP = F ÷ T (chance = datas que servem ÷ todas as datas)\nPor que dividir? Chance é a parte que serve dentro do total. Se 2 de 8 cartas são ases, a chance de sortear um ás é 2 ÷ 8.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a chance de a data ter dia e mês iguais.\nPor que dividir? Chance é a parte que serve dentro do total. Se 2 de 8 cartas são ases, a chance de sortear um ás é 2 ÷ 8.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "P",
-        "chance (o que a questão quer)"
-       ],
-       [
-        "F",
-        "datas com dia e mês iguais"
-       ],
-       [
-        "T",
-        "todas as datas de agosto a outubro"
-       ]
+      "tipo": "equacao",
+      "formula": "P = F ÷ T",
+      "leitura": "chance = datas que servem ÷ todas as datas",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "chance (o que a questão quer)"
+       },
+       {
+        "letra": "F",
+        "oque": "datas com dia e mês iguais"
+       },
+       {
+        "letra": "T",
+        "oque": "todas as datas de agosto a outubro"
+       }
       ]
      }
     },

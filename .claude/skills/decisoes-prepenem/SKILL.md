@@ -269,6 +269,12 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   o SVG é desenhado pequeno num canvas e ampliado com pixel quadrado; rótulos nítidos por
   cima (`components/visual/desenho-pixel.tsx`). Filtro SVG (feTile) apagava tudo no Chrome
   sem placa de vídeo. Ainda vetor: `molecula`, `processo` e `grafico` da explicação.
+- **Equação no quadro (Pablo, 18/11/2026: "a equação montada em quadro, não só texto; e explicar melhor o que é cada letra"):**
+  na aula do robô, a tela "A equação em letras" mostra a equação num quadro branco (`components/visual/equacao-quadro.tsx`,
+  visual `equacao`), cada letra numa cor, a leitura em palavras embaixo e uma linha "letra = o que ela é" com frase
+  completa ("quantos reais vale cada pedaço", nunca "valor de 1 parte"). Saiu a tabela "As letras" e a equação não
+  se repete no texto. Gerado por `equacao_no_quadro()` em `montar.py` (leitura = o último parêntese com palavras).
+  Junto: o botão "Não sei isso: ver a aula" aparece também em tema sem aula escrita, quando a questão tem a aula do robô.
 - **Fórmula nunca cai do céu (Pablo, 12/11/2026, questão da mangueira: "não sei
   de onde saiu esse t ao quadrado"):** explicação escrita à mão não usa fórmula que
   a aula não ensinou sem mostrar de onde ela vem em conta de 4 operações (queda:

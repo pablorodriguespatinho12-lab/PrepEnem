@@ -53,23 +53,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer quantas trilhas ligam o lago ao mirante.\n84 = 4 × L × M × 3 (caminhos = trilhas de cada trecho multiplicadas)\nPor que multiplicar? Para cada trilha do 1º trecho, você ainda pode pegar qualquer trilha do 2º. Com 2 trilhas e depois 3, são 2 × 3 = 6 caminhos, não 2 + 3.\nAgora é só achar cada letra.",
+     "texto": "A questão quer quantas trilhas ligam o lago ao mirante.\nPor que multiplicar? Para cada trilha do 1º trecho, você ainda pode pegar qualquer trilha do 2º. Com 2 trilhas e depois 3, são 2 × 3 = 6 caminhos, não 2 + 3.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "L",
-        "trilhas lago → mirante (o que a questão quer)"
-       ],
-       [
-        "M",
-        "trilhas mirante → cachoeira"
-       ]
+      "tipo": "equacao",
+      "formula": "84 = 4 × L × M × 3",
+      "leitura": "caminhos = trilhas de cada trecho multiplicadas",
+      "letras": [
+       {
+        "letra": "L",
+        "oque": "trilhas lago → mirante (o que a questão quer)"
+       },
+       {
+        "letra": "M",
+        "oque": "trilhas mirante → cachoeira"
+       }
       ]
      }
     },

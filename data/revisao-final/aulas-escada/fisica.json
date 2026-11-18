@@ -40,27 +40,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a velocidade média.\nv = d ÷ t (velocidade = distância ÷ tempo)\nPor que dividir? Velocidade é quanto anda em cada hora. Se em 2 horas andou 100 km, em 1 hora andou a metade.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a velocidade média.\nPor que dividir? Velocidade é quanto anda em cada hora. Se em 2 horas andou 100 km, em 1 hora andou a metade.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "v",
-        "velocidade média (o que a questão quer)"
-       ],
-       [
-        "d",
-        "distância"
-       ],
-       [
-        "t",
-        "tempo"
-       ]
+      "tipo": "equacao",
+      "formula": "v = d ÷ t",
+      "leitura": "velocidade = distância ÷ tempo",
+      "letras": [
+       {
+        "letra": "v",
+        "oque": "velocidade média (o que a questão quer)"
+       },
+       {
+        "letra": "d",
+        "oque": "distância"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo"
+       }
       ]
      }
     },
@@ -190,27 +187,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a aceleração média.\na = Δv ÷ t (aceleração = quanto a velocidade mudou ÷ tempo)\nPor que dividir pelo tempo? Aceleração é quanto a velocidade sobe a cada segundo.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a aceleração média.\nPor que dividir pelo tempo? Aceleração é quanto a velocidade sobe a cada segundo.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "a",
-        "aceleração (o que a questão quer)"
-       ],
-       [
-        "Δv",
-        "quanto a velocidade mudou, em m/s"
-       ],
-       [
-        "t",
-        "tempo, em s"
-       ]
+      "tipo": "equacao",
+      "formula": "a = Δv ÷ t",
+      "leitura": "aceleração = quanto a velocidade mudou ÷ tempo",
+      "letras": [
+       {
+        "letra": "a",
+        "oque": "aceleração (o que a questão quer)"
+       },
+       {
+        "letra": "Δv",
+        "oque": "quanto a velocidade mudou, em m/s"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo, em s"
+       }
       ]
      }
     },
@@ -335,23 +329,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o tempo de queda.\nh = 5 × t × t (altura que cai = 5 vezes o tempo vezes ele mesmo)\nDe onde vem o 5? Caindo, a velocidade sobe 10 a cada segundo. Em 1 s cai 5 m; em 2 s, 20 m; em 3 s, 45 m; em 4 s, 80 m. É sempre 5 × t × t.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o tempo de queda.\nDe onde vem o 5? Caindo, a velocidade sobe 10 a cada segundo. Em 1 s cai 5 m; em 2 s, 20 m; em 3 s, 45 m; em 4 s, 80 m. É sempre 5 × t × t.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "t",
-        "tempo de queda (o que a questão quer)"
-       ],
-       [
-        "h",
-        "altura"
-       ]
+      "tipo": "equacao",
+      "formula": "h = 5 × t × t",
+      "leitura": "altura que cai = 5 vezes o tempo vezes ele mesmo",
+      "letras": [
+       {
+        "letra": "t",
+        "oque": "tempo de queda (o que a questão quer)"
+       },
+       {
+        "letra": "h",
+        "oque": "altura"
+       }
       ]
      }
     },
@@ -465,23 +456,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o que explica as duas situações.\nR = o que muda nas duas cenas ao mesmo tempo\nPor que \"ao mesmo tempo\"? No caso do papel, a massa é a MESMA e mesmo assim muda. Então a causa não pode ser peso nem massa.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o que explica as duas situações.\nPor que \"ao mesmo tempo\"? No caso do papel, a massa é a MESMA e mesmo assim muda. Então a causa não pode ser peso nem massa.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a causa comum (o que a questão quer)"
-       ],
-       [
-        "P",
-        "o que muda no papel"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o que muda nas duas cenas ao mesmo tempo",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a causa comum (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "o que muda no papel"
+       }
       ]
      }
     },
@@ -595,23 +582,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a velocidade v de disparo.\nv = 200 ÷ t (do lado: 120 = 0,6 × v × t)\nPor que separar em dois? A bala anda para o lado sempre igual (0,6 × v) e para cima vai freando. Cada direção dá uma conta.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a velocidade v de disparo.\nPor que separar em dois? A bala anda para o lado sempre igual (0,6 × v) e para cima vai freando. Cada direção dá uma conta.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "v",
-        "velocidade de disparo (o que a questão quer)"
-       ],
-       [
-        "t",
-        "tempo até chegar em A"
-       ]
+      "tipo": "equacao",
+      "formula": "v = 200 ÷ t",
+      "leitura": "do lado: 120 = 0,6 × v × t",
+      "letras": [
+       {
+        "letra": "v",
+        "oque": "velocidade de disparo (o que a questão quer)"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo até chegar em A"
+       }
       ]
      }
     },
@@ -728,27 +712,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a distância percorrida d.\nd = 2 × (xi − xm) (vai do início até o mínimo e volta)\nPor que 2 vezes? Velocidade média zero quer dizer que voltou para onde começou. A partícula foi até o ponto mais perto e voltou: o mesmo caminho duas vezes.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a distância percorrida d.\nPor que 2 vezes? Velocidade média zero quer dizer que voltou para onde começou. A partícula foi até o ponto mais perto e voltou: o mesmo caminho duas vezes.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "d",
-        "distância percorrida (o que a questão quer)"
-       ],
-       [
-        "xi",
-        "posição no início"
-       ],
-       [
-        "xm",
-        "posição mais perto do zero"
-       ]
+      "tipo": "equacao",
+      "formula": "d = 2 × (xi − xm)",
+      "leitura": "vai do início até o mínimo e volta",
+      "letras": [
+       {
+        "letra": "d",
+        "oque": "distância percorrida (o que a questão quer)"
+       },
+       {
+        "letra": "xi",
+        "oque": "posição no início"
+       },
+       {
+        "letra": "xm",
+        "oque": "posição mais perto do zero"
+       }
       ]
      }
     },
@@ -873,23 +854,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o episódio citado na música.\nR = o cientista que estudou a queda de objetos de massas diferentes\nPor que \"massas diferentes\"? Penas e ferro são o exemplo clássico de leve e pesado caindo. A música brinca invertendo o resultado.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o episódio citado na música.\nPor que \"massas diferentes\"? Penas e ferro são o exemplo clássico de leve e pesado caindo. A música brinca invertendo o resultado.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o episódio (o que a questão quer)"
-       ],
-       [
-        "P",
-        "o assunto dos versos"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o cientista que estudou a queda de objetos de massas diferentes",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o episódio (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "o assunto dos versos"
+       }
       ]
      }
     },
@@ -1002,27 +979,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o peso, em newtons.\nP = m × g (peso = massa × gravidade)\nPor que multiplicar? Cada quilo é puxado pela Terra com 10 N. Com 60 quilos, são 60 vezes 10.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o peso, em newtons.\nPor que multiplicar? Cada quilo é puxado pela Terra com 10 N. Com 60 quilos, são 60 vezes 10.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "P",
-        "peso (o que a questão quer)"
-       ],
-       [
-        "m",
-        "massa"
-       ],
-       [
-        "g",
-        "gravidade"
-       ]
+      "tipo": "equacao",
+      "formula": "P = m × g",
+      "leitura": "peso = massa × gravidade",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "peso (o que a questão quer)"
+       },
+       {
+        "letra": "m",
+        "oque": "massa"
+       },
+       {
+        "letra": "g",
+        "oque": "gravidade"
+       }
       ]
      }
     },
@@ -1134,23 +1108,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o nome da lei.\nR = a lei que diz \"cada coisa tende a continuar como está\"\nPor que \"continuar como está\"? É o que o texto descreve: parado fica parado, andando continua andando. Esse \"teimar\" se chama inércia.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o nome da lei.\nPor que \"continuar como está\"? É o que o texto descreve: parado fica parado, andando continua andando. Esse \"teimar\" se chama inércia.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a lei (o que a questão quer)"
-       ],
-       [
-        "P",
-        "a ideia central do texto"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a lei que diz \"cada coisa tende a continuar como está\"",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a lei (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "a ideia central do texto"
+       }
       ]
      }
     },
@@ -1267,27 +1237,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a aceleração da caixa.\na = F ÷ m (aceleração = força que sobra ÷ massa)\nPor que a força que sobra? O atrito puxa para trás. Só o que sobra do empurrão acelera a caixa.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a aceleração da caixa.\nPor que a força que sobra? O atrito puxa para trás. Só o que sobra do empurrão acelera a caixa.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "a",
-        "aceleração (o que a questão quer)"
-       ],
-       [
-        "F",
-        "força que sobra"
-       ],
-       [
-        "m",
-        "massa"
-       ]
+      "tipo": "equacao",
+      "formula": "a = F ÷ m",
+      "leitura": "aceleração = força que sobra ÷ massa",
+      "letras": [
+       {
+        "letra": "a",
+        "oque": "aceleração (o que a questão quer)"
+       },
+       {
+        "letra": "F",
+        "oque": "força que sobra"
+       },
+       {
+        "letra": "m",
+        "oque": "massa"
+       }
       ]
      }
     },
@@ -1399,27 +1366,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a aceleração.\na = F ÷ m (aceleração = força ÷ massa)\nPor que dividir pela massa? Quanto mais pesado, menos a mesma força consegue acelerar.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a aceleração.\nPor que dividir pela massa? Quanto mais pesado, menos a mesma força consegue acelerar.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "a",
-        "aceleração (o que a questão quer)"
-       ],
-       [
-        "F",
-        "força que sobra"
-       ],
-       [
-        "m",
-        "massa"
-       ]
+      "tipo": "equacao",
+      "formula": "a = F ÷ m",
+      "leitura": "aceleração = força ÷ massa",
+      "letras": [
+       {
+        "letra": "a",
+        "oque": "aceleração (o que a questão quer)"
+       },
+       {
+        "letra": "F",
+        "oque": "força que sobra"
+       },
+       {
+        "letra": "m",
+        "oque": "massa"
+       }
       ]
      }
     },
@@ -1553,23 +1517,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o número na balança.\nL = N ÷ 10 (leitura = força na balança ÷ 10)\nPor que dividir por 10? É o que a balança faz: ela mede força e mostra em \"kg\".\nAgora é só achar cada letra.",
+     "texto": "A questão quer o número na balança.\nPor que dividir por 10? É o que a balança faz: ela mede força e mostra em \"kg\".\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "L",
-        "leitura da balança (o que a questão quer)"
-       ],
-       [
-        "N",
-        "força que a balança faz"
-       ]
+      "tipo": "equacao",
+      "formula": "L = N ÷ 10",
+      "leitura": "leitura = força na balança ÷ 10",
+      "letras": [
+       {
+        "letra": "L",
+        "oque": "leitura da balança (o que a questão quer)"
+       },
+       {
+        "letra": "N",
+        "oque": "força que a balança faz"
+       }
       ]
      }
     },
@@ -1682,27 +1643,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a aceleração do conjunto.\na = F ÷ m (aceleração = força que sobra ÷ massa)\nPor que a força que sobra? O peso puxa para baixo. Só o que as hélices fazem a mais acelera.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a aceleração do conjunto.\nPor que a força que sobra? O peso puxa para baixo. Só o que as hélices fazem a mais acelera.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "a",
-        "aceleração (o que a questão quer)"
-       ],
-       [
-        "F",
-        "força que sobra"
-       ],
-       [
-        "m",
-        "massa do conjunto"
-       ]
+      "tipo": "equacao",
+      "formula": "a = F ÷ m",
+      "leitura": "aceleração = força que sobra ÷ massa",
+      "letras": [
+       {
+        "letra": "a",
+        "oque": "aceleração (o que a questão quer)"
+       },
+       {
+        "letra": "F",
+        "oque": "força que sobra"
+       },
+       {
+        "letra": "m",
+        "oque": "massa do conjunto"
+       }
       ]
      }
     },
@@ -1814,27 +1772,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer qual versão tem mais potência.\nP = E ÷ t (potência = energia ganha ÷ tempo)\nPor que energia ÷ tempo? Potência é a rapidez de entregar energia. Quem ganha a mesma energia em menos tempo é mais potente.\nAgora é só achar cada letra.",
+     "texto": "A questão quer qual versão tem mais potência.\nPor que energia ÷ tempo? Potência é a rapidez de entregar energia. Quem ganha a mesma energia em menos tempo é mais potente.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "P",
-        "potência (o que a questão quer)"
-       ],
-       [
-        "E",
-        "energia de movimento ganha"
-       ],
-       [
-        "t",
-        "tempo gasto"
-       ]
+      "tipo": "equacao",
+      "formula": "P = E ÷ t",
+      "leitura": "potência = energia ganha ÷ tempo",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "potência (o que a questão quer)"
+       },
+       {
+        "letra": "E",
+        "oque": "energia de movimento ganha"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo gasto"
+       }
       ]
      }
     },
@@ -1963,27 +1918,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a unidade do módulo K.\nu(K) = u(ρ) × u(v) × u(v) (unidade de K = unidade da densidade × velocidade × velocidade)\nPor que multiplicar unidades? Se K = ρ × v × v, a unidade dele é a das três juntas. Expoente se soma na multiplicação.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a unidade do módulo K.\nPor que multiplicar unidades? Se K = ρ × v × v, a unidade dele é a das três juntas. Expoente se soma na multiplicação.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "u(K)",
-        "unidade de K (o que a questão quer)"
-       ],
-       [
-        "u(ρ)",
-        "unidade da densidade"
-       ],
-       [
-        "u(v)",
-        "unidade da velocidade"
-       ]
+      "tipo": "equacao",
+      "formula": "u(K) = u(ρ) × u(v) × u(v)",
+      "leitura": "unidade de K = unidade da densidade × velocidade × velocidade",
+      "letras": [
+       {
+        "letra": "u(K)",
+        "oque": "unidade de K (o que a questão quer)"
+       },
+       {
+        "letra": "u(ρ)",
+        "oque": "unidade da densidade"
+       },
+       {
+        "letra": "u(v)",
+        "oque": "unidade da velocidade"
+       }
       ]
      }
     },
@@ -2108,27 +2060,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer U maior − U menor.\nΔU = G·M·m × (1 ÷ r1 − 1 ÷ r2) (r1 = mais perto, r2 = mais longe)\nPor que 1 ÷ r? A energia é − G·M·m ÷ r. Ela é mais baixa (mais negativa) quando o satélite está perto e mais alta quando está longe.\nAgora é só achar cada letra.",
+     "texto": "A questão quer U maior − U menor.\nPor que 1 ÷ r? A energia é − G·M·m ÷ r. Ela é mais baixa (mais negativa) quando o satélite está perto e mais alta quando está longe.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "ΔU",
-        "a diferença (o que a questão quer)"
-       ],
-       [
-        "r1",
-        "menor distância ao planeta"
-       ],
-       [
-        "r2",
-        "maior distância ao planeta"
-       ]
+      "tipo": "equacao",
+      "formula": "ΔU = G·M·m × (1 ÷ r1 − 1 ÷ r2)",
+      "leitura": "r1 = mais perto, r2 = mais longe",
+      "letras": [
+       {
+        "letra": "ΔU",
+        "oque": "a diferença (o que a questão quer)"
+       },
+       {
+        "letra": "r1",
+        "oque": "menor distância ao planeta"
+       },
+       {
+        "letra": "r2",
+        "oque": "maior distância ao planeta"
+       }
       ]
      }
     },
@@ -2258,23 +2207,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a força do ar na velocidade terminal.\nFar = P (força do ar = peso, porque a aceleração é zero)\nPor que igual? Velocidade constante quer dizer aceleração zero. Pela 2ª lei, a força que sobra é zero: o ar segura exatamente o peso.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a força do ar na velocidade terminal.\nPor que igual? Velocidade constante quer dizer aceleração zero. Pela 2ª lei, a força que sobra é zero: o ar segura exatamente o peso.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "Far",
-        "força do ar (o que a questão quer)"
-       ],
-       [
-        "P",
-        "peso"
-       ]
+      "tipo": "equacao",
+      "formula": "Far = P",
+      "leitura": "força do ar = peso, porque a aceleração é zero",
+      "letras": [
+       {
+        "letra": "Far",
+        "oque": "força do ar (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "peso"
+       }
       ]
      }
     },
@@ -2391,23 +2337,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer por que a areia esquenta mais rápido.\nR = quem pede menos energia por grau esquenta mais rápido\nPor que \"por grau\"? É o calor específico (c): a energia para subir 1 grau em 1 grama. A água tem c grande; a areia, pequeno.\nAgora é só achar cada pista.",
+     "texto": "A questão quer por que a areia esquenta mais rápido.\nPor que \"por grau\"? É o calor específico (c): a energia para subir 1 grau em 1 grama. A água tem c grande; a areia, pequeno.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o motivo (o que a questão quer)"
-       ],
-       [
-        "P",
-        "o que muda entre areia e água"
-       ]
+      "tipo": "equacao",
+      "formula": "R = quem pede menos energia por grau esquenta mais rápido",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o motivo (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "o que muda entre areia e água"
+       }
       ]
      }
     },
@@ -2511,23 +2453,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer como o calor atravessa o vácuo.\nR = o único jeito de passar calor sem matéria no caminho\nPor que \"sem matéria\"? Condução precisa de átomos encostados; convecção precisa de ar ou água se mexendo. No vácuo não há nenhum dos dois.\nAgora é só achar cada pista.",
+     "texto": "A questão quer como o calor atravessa o vácuo.\nPor que \"sem matéria\"? Condução precisa de átomos encostados; convecção precisa de ar ou água se mexendo. No vácuo não há nenhum dos dois.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o jeito de passar calor (o que a questão quer)"
-       ],
-       [
-        "P",
-        "o que existe no caminho"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o único jeito de passar calor sem matéria no caminho",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o jeito de passar calor (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "o que existe no caminho"
+       }
       ]
      }
     },
@@ -2639,23 +2577,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o tempo.\nt = Q ÷ 500 (tempo = calor necessário ÷ calor por segundo)\nPor que dividir? Se a cada segundo entram 500 cal, o tempo é quantas vezes 500 cabe no calor total.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o tempo.\nPor que dividir? Se a cada segundo entram 500 cal, o tempo é quantas vezes 500 cabe no calor total.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "t",
-        "tempo (o que a questão quer)"
-       ],
-       [
-        "Q",
-        "calor necessário"
-       ]
+      "tipo": "equacao",
+      "formula": "t = Q ÷ 500",
+      "leitura": "tempo = calor necessário ÷ calor por segundo",
+      "letras": [
+       {
+        "letra": "t",
+        "oque": "tempo (o que a questão quer)"
+       },
+       {
+        "letra": "Q",
+        "oque": "calor necessário"
+       }
       ]
      }
     },
@@ -2755,27 +2690,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o rendimento máximo.\nη = 1 − Tf ÷ Tq (rendimento = 1 − fria ÷ quente)\nPor que 1 − fria ÷ quente? A parte fria ÷ quente é o que a máquina joga fora. O resto vira trabalho.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o rendimento máximo.\nPor que 1 − fria ÷ quente? A parte fria ÷ quente é o que a máquina joga fora. O resto vira trabalho.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "η",
-        "rendimento (o que a questão quer)"
-       ],
-       [
-        "Tf",
-        "temperatura fria"
-       ],
-       [
-        "Tq",
-        "temperatura quente"
-       ]
+      "tipo": "equacao",
+      "formula": "η = 1 − Tf ÷ Tq",
+      "leitura": "rendimento = 1 − fria ÷ quente",
+      "letras": [
+       {
+        "letra": "η",
+        "oque": "rendimento (o que a questão quer)"
+       },
+       {
+        "letra": "Tf",
+        "oque": "temperatura fria"
+       },
+       {
+        "letra": "Tq",
+        "oque": "temperatura quente"
+       }
       ]
      }
     },
@@ -2904,27 +2836,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o calor recebido.\nQ = m × c × ΔT (calor = massa × calor específico × quanto subiu)\nPor que multiplicar? Cada grama pede 1 cal para subir 1 grau. Muitos gramas e muitos graus: multiplica tudo.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o calor recebido.\nPor que multiplicar? Cada grama pede 1 cal para subir 1 grau. Muitos gramas e muitos graus: multiplica tudo.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "Q",
-        "calor (o que a questão quer)"
-       ],
-       [
-        "m",
-        "massa, em gramas"
-       ],
-       [
-        "ΔT",
-        "quanto a temperatura subiu"
-       ]
+      "tipo": "equacao",
+      "formula": "Q = m × c × ΔT",
+      "leitura": "calor = massa × calor específico × quanto subiu",
+      "letras": [
+       {
+        "letra": "Q",
+        "oque": "calor (o que a questão quer)"
+       },
+       {
+        "letra": "m",
+        "oque": "massa, em gramas"
+       },
+       {
+        "letra": "ΔT",
+        "oque": "quanto a temperatura subiu"
+       }
       ]
      }
     },
@@ -3041,27 +2970,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer quanto subiu cada temperatura.\nΔT = Q ÷ (m × c) (subida = calor ÷ massa ÷ calor específico)\nPor que dividir pelo c? Quem pede menos energia por grau sobe mais graus com o mesmo calor.\nAgora é só achar cada letra.",
+     "texto": "A questão quer quanto subiu cada temperatura.\nPor que dividir pelo c? Quem pede menos energia por grau sobe mais graus com o mesmo calor.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "ΔT",
-        "subida de cada um (o que a questão quer)"
-       ],
-       [
-        "Ta",
-        "subida da água"
-       ],
-       [
-        "To",
-        "subida do óleo"
-       ]
+      "tipo": "equacao",
+      "formula": "ΔT = Q ÷ (m × c)",
+      "leitura": "subida = calor ÷ massa ÷ calor específico",
+      "letras": [
+       {
+        "letra": "ΔT",
+        "oque": "subida de cada um (o que a questão quer)"
+       },
+       {
+        "letra": "Ta",
+        "oque": "subida da água"
+       },
+       {
+        "letra": "To",
+        "oque": "subida do óleo"
+       }
       ]
      }
     },
@@ -3173,23 +3099,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o motivo da correção.\nR = o que o calor muda num líquido, sem mudar a quantidade de álcool\nPor que \"sem mudar a quantidade\"? O álcool na mistura é o mesmo. O que muda com a temperatura é o volume dos materiais, e a medida é em % de volume.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o motivo da correção.\nPor que \"sem mudar a quantidade\"? O álcool na mistura é o mesmo. O que muda com a temperatura é o volume dos materiais, e a medida é em % de volume.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o motivo (o que a questão quer)"
-       ],
-       [
-        "P",
-        "o que o calor faz no líquido"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o que o calor muda num líquido, sem mudar a quantidade de álcool",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o motivo (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "o que o calor faz no líquido"
+       }
       ]
      }
     },
@@ -3306,23 +3228,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o motivo do incômodo no dia úmido.\nR = o que a umidade atrapalha no jeito de o corpo perder calor\nPor que o suor? O corpo esfria quando o suor evapora. Com o ar já cheio de água, o suor evapora pouco e fica na pele.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o motivo do incômodo no dia úmido.\nPor que o suor? O corpo esfria quando o suor evapora. Com o ar já cheio de água, o suor evapora pouco e fica na pele.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o motivo (o que a questão quer)"
-       ],
-       [
-        "P",
-        "o que acontece com o suor"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o que a umidade atrapalha no jeito de o corpo perder calor",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o motivo (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "o que acontece com o suor"
+       }
       ]
      }
     },
@@ -3435,27 +3353,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a velocidade da onda.\nv = λ × f (velocidade = comprimento × frequência)\nPor que multiplicar? Passam 5 ondas por segundo e cada uma tem 2 m: a onda anda 5 × 2 metros a cada segundo.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a velocidade da onda.\nPor que multiplicar? Passam 5 ondas por segundo e cada uma tem 2 m: a onda anda 5 × 2 metros a cada segundo.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "v",
-        "velocidade (o que a questão quer)"
-       ],
-       [
-        "λ",
-        "comprimento de onda"
-       ],
-       [
-        "f",
-        "frequência"
-       ]
+      "tipo": "equacao",
+      "formula": "v = λ × f",
+      "leitura": "velocidade = comprimento × frequência",
+      "letras": [
+       {
+        "letra": "v",
+        "oque": "velocidade (o que a questão quer)"
+       },
+       {
+        "letra": "λ",
+        "oque": "comprimento de onda"
+       },
+       {
+        "letra": "f",
+        "oque": "frequência"
+       }
       ]
      }
     },
@@ -3563,27 +3478,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a profundidade.\np = (v × t) ÷ 2 (profundidade = caminho do som ÷ 2)\nPor que dividir por 2? No eco o som vai até o fundo e volta. O caminho todo é o dobro da profundidade.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a profundidade.\nPor que dividir por 2? No eco o som vai até o fundo e volta. O caminho todo é o dobro da profundidade.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "p",
-        "profundidade (o que a questão quer)"
-       ],
-       [
-        "v",
-        "velocidade do som"
-       ],
-       [
-        "t",
-        "tempo de ida e volta"
-       ]
+      "tipo": "equacao",
+      "formula": "p = (v × t) ÷ 2",
+      "leitura": "profundidade = caminho do som ÷ 2",
+      "letras": [
+       {
+        "letra": "p",
+        "oque": "profundidade (o que a questão quer)"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade do som"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo de ida e volta"
+       }
       ]
      }
     },
@@ -3691,27 +3603,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o comprimento de onda.\nλ = v ÷ f (comprimento = velocidade ÷ frequência)\nPor que dividir? De v = λ × f: o som anda 340 m por segundo e passam 440 ondas nesse tempo. Cada onda tem 340 ÷ 440 metros.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o comprimento de onda.\nPor que dividir? De v = λ × f: o som anda 340 m por segundo e passam 440 ondas nesse tempo. Cada onda tem 340 ÷ 440 metros.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "λ",
-        "comprimento de onda (o que a questão quer)"
-       ],
-       [
-        "v",
-        "velocidade"
-       ],
-       [
-        "f",
-        "frequência"
-       ]
+      "tipo": "equacao",
+      "formula": "λ = v ÷ f",
+      "leitura": "comprimento = velocidade ÷ frequência",
+      "letras": [
+       {
+        "letra": "λ",
+        "oque": "comprimento de onda (o que a questão quer)"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade"
+       },
+       {
+        "letra": "f",
+        "oque": "frequência"
+       }
       ]
      }
     },
@@ -3832,27 +3741,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o comprimento de onda.\nλ = v ÷ f (comprimento = velocidade ÷ frequência)\nPor que dividir? Em 1 s o som anda 340 m e cabem 680 ondas nesse caminho.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o comprimento de onda.\nPor que dividir? Em 1 s o som anda 340 m e cabem 680 ondas nesse caminho.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "λ",
-        "comprimento (o que a questão quer)"
-       ],
-       [
-        "v",
-        "velocidade"
-       ],
-       [
-        "f",
-        "frequência"
-       ]
+      "tipo": "equacao",
+      "formula": "λ = v ÷ f",
+      "leitura": "comprimento = velocidade ÷ frequência",
+      "letras": [
+       {
+        "letra": "λ",
+        "oque": "comprimento (o que a questão quer)"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade"
+       },
+       {
+        "letra": "f",
+        "oque": "frequência"
+       }
       ]
      }
     },
@@ -3961,27 +3867,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o comprimento de onda.\nλ = v ÷ f (comprimento = velocidade ÷ frequência)\nPor que dividir? Em 1 s o som anda 1 500 m, e nesse caminho cabem 3 milhões de ondas.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o comprimento de onda.\nPor que dividir? Em 1 s o som anda 1 500 m, e nesse caminho cabem 3 milhões de ondas.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "λ",
-        "comprimento (o que a questão quer)"
-       ],
-       [
-        "v",
-        "velocidade"
-       ],
-       [
-        "f",
-        "frequência"
-       ]
+      "tipo": "equacao",
+      "formula": "λ = v ÷ f",
+      "leitura": "comprimento = velocidade ÷ frequência",
+      "letras": [
+       {
+        "letra": "λ",
+        "oque": "comprimento (o que a questão quer)"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade"
+       },
+       {
+        "letra": "f",
+        "oque": "frequência"
+       }
       ]
      }
     },
@@ -4094,23 +3997,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer as batidas por minuto.\nN = 60 ÷ T (batidas = 60 segundos ÷ tempo de uma batida)\nPor que 60 ÷ T? Um minuto tem 60 segundos. Se uma batida leva T segundos, cabem 60 ÷ T batidas.\nAgora é só achar cada letra.",
+     "texto": "A questão quer as batidas por minuto.\nPor que 60 ÷ T? Um minuto tem 60 segundos. Se uma batida leva T segundos, cabem 60 ÷ T batidas.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "N",
-        "batidas por minuto (o que a questão quer)"
-       ],
-       [
-        "T",
-        "tempo entre dois picos"
-       ]
+      "tipo": "equacao",
+      "formula": "N = 60 ÷ T",
+      "leitura": "batidas = 60 segundos ÷ tempo de uma batida",
+      "letras": [
+       {
+        "letra": "N",
+        "oque": "batidas por minuto (o que a questão quer)"
+       },
+       {
+        "letra": "T",
+        "oque": "tempo entre dois picos"
+       }
       ]
      }
     },
@@ -4232,27 +4132,24 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer comparar f e v das duas barras.\nR = v depende do material; f depende do tamanho (curta = mais aguda)\nPor que separar? A velocidade do som no metal é do metal: igual nas duas. O tamanho muda a nota, como a corda curta do violão.\nAgora é só achar cada pista.",
+     "texto": "A questão quer comparar f e v das duas barras.\nPor que separar? A velocidade do som no metal é do metal: igual nas duas. O tamanho muda a nota, como a corda curta do violão.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "as duas relações (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "velocidades"
-       ],
-       [
-        "P2",
-        "frequências"
-       ]
+      "tipo": "equacao",
+      "formula": "R = v depende do material; f depende do tamanho",
+      "leitura": "curta = mais aguda",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "as duas relações (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "velocidades"
+       },
+       {
+        "letra": "P2",
+        "oque": "frequências"
+       }
       ]
      }
     },
@@ -4368,23 +4265,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer por que a camiseta parece vermelha.\nR = a cor que chega ao olho é a que o objeto devolve\nPor que a que devolve? O olho só vê a luz que vem do objeto. As cores que ele absorve não chegam.\nAgora é só achar cada pista.",
+     "texto": "A questão quer por que a camiseta parece vermelha.\nPor que a que devolve? O olho só vê a luz que vem do objeto. As cores que ele absorve não chegam.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o motivo (o que a questão quer)"
-       ],
-       [
-        "P",
-        "que luz sai da camiseta"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a cor que chega ao olho é a que o objeto devolve",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o motivo (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "que luz sai da camiseta"
+       }
       ]
      }
     },
@@ -4484,23 +4377,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer a definição de refração.\nR = a luz entortar ao passar de um meio para outro\nPor que \"outro meio\"? A luz muda de velocidade do ar para a água, e por isso entorta.\nAgora é só achar cada pista.",
+     "texto": "A questão quer a definição de refração.\nPor que \"outro meio\"? A luz muda de velocidade do ar para a água, e por isso entorta.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a definição (o que a questão quer)"
-       ],
-       [
-        "P",
-        "o que acontece com a luz"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a luz entortar ao passar de um meio para outro",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a definição (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "o que acontece com a luz"
+       }
       ]
      }
     },
@@ -4604,23 +4493,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a distância da pessoa até a imagem.\nD = 2 × d (até a imagem = 2 vezes até o espelho)\nPor que 2 vezes? A imagem fica atrás do espelho, à mesma distância que você está na frente. São dois pedaços iguais.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a distância da pessoa até a imagem.\nPor que 2 vezes? A imagem fica atrás do espelho, à mesma distância que você está na frente. São dois pedaços iguais.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "D",
-        "distância até a imagem (o que a questão quer)"
-       ],
-       [
-        "d",
-        "distância até o espelho agora"
-       ]
+      "tipo": "equacao",
+      "formula": "D = 2 × d",
+      "leitura": "até a imagem = 2 vezes até o espelho",
+      "letras": [
+       {
+        "letra": "D",
+        "oque": "distância até a imagem (o que a questão quer)"
+       },
+       {
+        "letra": "d",
+        "oque": "distância até o espelho agora"
+       }
       ]
      }
     },
@@ -4720,27 +4606,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer as 3 características da imagem.\nR = como a sua imagem aparece no espelho do banheiro\nPor que pensar no banheiro? Você vê a imagem atrás do vidro (virtual), em pé (direita) e do seu tamanho.\nAgora é só achar cada pista.",
+     "texto": "A questão quer as 3 características da imagem.\nPor que pensar no banheiro? Você vê a imagem atrás do vidro (virtual), em pé (direita) e do seu tamanho.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "as características (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "onde fica a imagem"
-       ],
-       [
-        "P2",
-        "tamanho e posição"
-       ]
+      "tipo": "equacao",
+      "formula": "R = como a sua imagem aparece no espelho do banheiro",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "as características (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "onde fica a imagem"
+       },
+       {
+        "letra": "P2",
+        "oque": "tamanho e posição"
+       }
       ]
      }
     },
@@ -4861,27 +4743,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a distância do cliente até a imagem da porta.\nD = c + p (cliente até o espelho + espelho até a imagem da porta)\nPor que somar? O cliente está na frente do espelho; a imagem da porta, atrás. O caminho passa pelo espelho.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a distância do cliente até a imagem da porta.\nPor que somar? O cliente está na frente do espelho; a imagem da porta, atrás. O caminho passa pelo espelho.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "D",
-        "distância até a imagem da porta (o que a questão quer)"
-       ],
-       [
-        "c",
-        "cliente até o espelho"
-       ],
-       [
-        "p",
-        "espelho até a imagem da porta"
-       ]
+      "tipo": "equacao",
+      "formula": "D = c + p",
+      "leitura": "cliente até o espelho + espelho até a imagem da porta",
+      "letras": [
+       {
+        "letra": "D",
+        "oque": "distância até a imagem da porta (o que a questão quer)"
+       },
+       {
+        "letra": "c",
+        "oque": "cliente até o espelho"
+       },
+       {
+        "letra": "p",
+        "oque": "espelho até a imagem da porta"
+       }
       ]
      }
     },
@@ -4989,23 +4868,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o ângulo entre os dois raios.\nA = 2 × i (ângulo entre os raios = 2 vezes o ângulo com a normal)\nPor que 2 vezes? O raio chega com i de um lado da normal e sai com o mesmo i do outro.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o ângulo entre os dois raios.\nPor que 2 vezes? O raio chega com i de um lado da normal e sai com o mesmo i do outro.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "A",
-        "ângulo entre os raios (o que a questão quer)"
-       ],
-       [
-        "i",
-        "ângulo com a normal"
-       ]
+      "tipo": "equacao",
+      "formula": "A = 2 × i",
+      "leitura": "ângulo entre os raios = 2 vezes o ângulo com a normal",
+      "letras": [
+       {
+        "letra": "A",
+        "oque": "ângulo entre os raios (o que a questão quer)"
+       },
+       {
+        "letra": "i",
+        "oque": "ângulo com a normal"
+       }
       ]
      }
     },
@@ -5109,27 +4985,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o fenômeno da luz engarrafada.\nR = o que a água faz com a luz que a atravessa\nPor que \"atravessa\"? A luz passa do ar para a água e da água para o ar, entortando e se espalhando pela casa.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o fenômeno da luz engarrafada.\nPor que \"atravessa\"? A luz passa do ar para a água e da água para o ar, entortando e se espalhando pela casa.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o fenômeno (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o que a luz faz na garrafa"
-       ],
-       [
-        "P2",
-        "para que serve o dado do buraco"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o que a água faz com a luz que a atravessa",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o fenômeno (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o que a luz faz na garrafa"
+       },
+       {
+        "letra": "P2",
+        "oque": "para que serve o dado do buraco"
+       }
       ]
      }
     },
@@ -5241,23 +5113,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer por que as cores se separam.\nR = cada cor sofre refração com um ângulo diferente\nPor que ângulos diferentes? Cada cor tem uma frequência e entorta um pouco diferente no vidro. Elas saem separadas.\nAgora é só achar cada pista.",
+     "texto": "A questão quer por que as cores se separam.\nPor que ângulos diferentes? Cada cor tem uma frequência e entorta um pouco diferente no vidro. Elas saem separadas.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o motivo (o que a questão quer)"
-       ],
-       [
-        "P",
-        "o que muda de uma cor para outra"
-       ]
+      "tipo": "equacao",
+      "formula": "R = cada cor sofre refração com um ângulo diferente",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o motivo (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "o que muda de uma cor para outra"
+       }
       ]
      }
     },
@@ -5379,23 +5247,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer Δi, quanto a imagem anda.\nΔi = f′ − f (com objeto longe, a imagem está no foco)\nPor que i = f? Raios de muito longe chegam paralelos e se cruzam no foco. Então mudar o foco é mudar a imagem.\nAgora é só achar cada letra.",
+     "texto": "A questão quer Δi, quanto a imagem anda.\nPor que i = f? Raios de muito longe chegam paralelos e se cruzam no foco. Então mudar o foco é mudar a imagem.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "Δi",
-        "quanto a imagem anda (o que a questão quer)"
-       ],
-       [
-        "f′",
-        "o foco novo"
-       ]
+      "tipo": "equacao",
+      "formula": "Δi = f′ − f",
+      "leitura": "com objeto longe, a imagem está no foco",
+      "letras": [
+       {
+        "letra": "Δi",
+        "oque": "quanto a imagem anda (o que a questão quer)"
+       },
+       {
+        "letra": "f′",
+        "oque": "o foco novo"
+       }
       ]
      }
     },
@@ -5508,27 +5373,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a potência do ferro.\nP = U × i (potência = tensão × corrente)\nPor que multiplicar? A tensão é o \"empurrão\" em cada carga e a corrente é quantas cargas passam por segundo.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a potência do ferro.\nPor que multiplicar? A tensão é o \"empurrão\" em cada carga e a corrente é quantas cargas passam por segundo.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "P",
-        "potência (o que a questão quer)"
-       ],
-       [
-        "U",
-        "tensão"
-       ],
-       [
-        "i",
-        "corrente"
-       ]
+      "tipo": "equacao",
+      "formula": "P = U × i",
+      "leitura": "potência = tensão × corrente",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "potência (o que a questão quer)"
+       },
+       {
+        "letra": "U",
+        "oque": "tensão"
+       },
+       {
+        "letra": "i",
+        "oque": "corrente"
+       }
       ]
      }
     },
@@ -5640,27 +5502,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a resistência equivalente.\nR = R1 + R2 (em série, soma)\nPor que somar? Em série a corrente passa por um e depois pelo outro: enfrenta as duas dificuldades.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a resistência equivalente.\nPor que somar? Em série a corrente passa por um e depois pelo outro: enfrenta as duas dificuldades.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "resistência equivalente (o que a questão quer)"
-       ],
-       [
-        "R1",
-        "primeiro resistor"
-       ],
-       [
-        "R2",
-        "segundo resistor"
-       ]
+      "tipo": "equacao",
+      "formula": "R = R1 + R2",
+      "leitura": "em série, soma",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "resistência equivalente (o que a questão quer)"
+       },
+       {
+        "letra": "R1",
+        "oque": "primeiro resistor"
+       },
+       {
+        "letra": "R2",
+        "oque": "segundo resistor"
+       }
       ]
      }
     },
@@ -5772,27 +5631,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a corrente total.\ni = P ÷ U (corrente = potência total ÷ tensão)\nPor que dividir? De P = U × i: a corrente é quanto de potência cada volt carrega.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a corrente total.\nPor que dividir? De P = U × i: a corrente é quanto de potência cada volt carrega.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "i",
-        "corrente total (o que a questão quer)"
-       ],
-       [
-        "P",
-        "potência total"
-       ],
-       [
-        "U",
-        "tensão"
-       ]
+      "tipo": "equacao",
+      "formula": "i = P ÷ U",
+      "leitura": "corrente = potência total ÷ tensão",
+      "letras": [
+       {
+        "letra": "i",
+        "oque": "corrente total (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "potência total"
+       },
+       {
+        "letra": "U",
+        "oque": "tensão"
+       }
       ]
      }
     },
@@ -5913,27 +5769,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a corrente.\ni = U ÷ R (corrente = tensão ÷ resistência total)\nPor que a resistência total? Em série, a mesma corrente atravessa as duas lâmpadas.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a corrente.\nPor que a resistência total? Em série, a mesma corrente atravessa as duas lâmpadas.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "i",
-        "corrente (o que a questão quer)"
-       ],
-       [
-        "U",
-        "tensão"
-       ],
-       [
-        "R",
-        "resistência total"
-       ]
+      "tipo": "equacao",
+      "formula": "i = U ÷ R",
+      "leitura": "corrente = tensão ÷ resistência total",
+      "letras": [
+       {
+        "letra": "i",
+        "oque": "corrente (o que a questão quer)"
+       },
+       {
+        "letra": "U",
+        "oque": "tensão"
+       },
+       {
+        "letra": "R",
+        "oque": "resistência total"
+       }
       ]
      }
     },
@@ -6054,23 +5907,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a economia por mês.\nC = E × 0,75 (economia = energia economizada × preço)\nPor que a energia economizada? É a potência que deixou de ser gasta, durante todas as horas do mês.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a economia por mês.\nPor que a energia economizada? É a potência que deixou de ser gasta, durante todas as horas do mês.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "C",
-        "economia em reais (o que a questão quer)"
-       ],
-       [
-        "E",
-        "energia economizada, em kWh"
-       ]
+      "tipo": "equacao",
+      "formula": "C = E × 0,75",
+      "leitura": "economia = energia economizada × preço",
+      "letras": [
+       {
+        "letra": "C",
+        "oque": "economia em reais (o que a questão quer)"
+       },
+       {
+        "letra": "E",
+        "oque": "energia economizada, em kWh"
+       }
       ]
      }
     },
@@ -6174,27 +6024,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer comparar as correntes.\ni = P ÷ U (corrente = potência ÷ tensão)\nPor que dividir? Mesma potência com menos tensão precisa de mais corrente.\nAgora é só achar cada letra.",
+     "texto": "A questão quer comparar as correntes.\nPor que dividir? Mesma potência com menos tensão precisa de mais corrente.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "i",
-        "corrente (o que a questão quer)"
-       ],
-       [
-        "i1",
-        "corrente em 110 V"
-       ],
-       [
-        "i2",
-        "corrente em 220 V"
-       ]
+      "tipo": "equacao",
+      "formula": "i = P ÷ U",
+      "leitura": "corrente = potência ÷ tensão",
+      "letras": [
+       {
+        "letra": "i",
+        "oque": "corrente (o que a questão quer)"
+       },
+       {
+        "letra": "i1",
+        "oque": "corrente em 110 V"
+       },
+       {
+        "letra": "i2",
+        "oque": "corrente em 220 V"
+       }
       ]
      }
     },
@@ -6311,23 +6158,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o dispositivo certo.\nU = 3 × e (tensão da bateria = 3 × tensão de uma pilha)\nPor que 3 vezes? Pilhas em série somam as tensões, como resistores em série somam as resistências.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o dispositivo certo.\nPor que 3 vezes? Pilhas em série somam as tensões, como resistores em série somam as resistências.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "U",
-        "tensão da bateria (o que a questão quer)"
-       ],
-       [
-        "e",
-        "tensão de uma pilha"
-       ]
+      "tipo": "equacao",
+      "formula": "U = 3 × e",
+      "leitura": "tensão da bateria = 3 × tensão de uma pilha",
+      "letras": [
+       {
+        "letra": "U",
+        "oque": "tensão da bateria (o que a questão quer)"
+       },
+       {
+        "letra": "e",
+        "oque": "tensão de uma pilha"
+       }
       ]
      }
     },
@@ -6441,27 +6285,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o tempo de recarga.\nt = E ÷ P (tempo = energia gasta ÷ potência do carregador)\nPor que dividir? O carregador entrega P de energia a cada hora. O tempo é quantas horas cabem na energia gasta.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o tempo de recarga.\nPor que dividir? O carregador entrega P de energia a cada hora. O tempo é quantas horas cabem na energia gasta.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "t",
-        "tempo em horas (o que a questão quer)"
-       ],
-       [
-        "E",
-        "energia gasta"
-       ],
-       [
-        "P",
-        "potência do carregador"
-       ]
+      "tipo": "equacao",
+      "formula": "t = E ÷ P",
+      "leitura": "tempo = energia gasta ÷ potência do carregador",
+      "letras": [
+       {
+        "letra": "t",
+        "oque": "tempo em horas (o que a questão quer)"
+       },
+       {
+        "letra": "E",
+        "oque": "energia gasta"
+       },
+       {
+        "letra": "P",
+        "oque": "potência do carregador"
+       }
       ]
      }
     },

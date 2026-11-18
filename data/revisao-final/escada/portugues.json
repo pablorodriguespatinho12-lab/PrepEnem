@@ -59,23 +59,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o prazo para devolver.\nR = a frase do texto que fala de devolver\nPor que procurar a frase? Pergunta de \"segundo o texto\" se responde com o que está escrito, não com o que achamos.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o prazo para devolver.\nPor que procurar a frase? Pergunta de \"segundo o texto\" se responde com o que está escrito, não com o que achamos.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o prazo de devolução (o que a questão quer)"
-       ],
-       [
-        "P",
-        "a frase que tem a palavra \"devolver\""
-       ]
+      "tipo": "equacao",
+      "formula": "R = a frase do texto que fala de devolver",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o prazo de devolução (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "a frase que tem a palavra \"devolver\""
+       }
       ]
      }
     },
@@ -206,23 +202,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer a ideia central.\nR = o que as três frases defendem juntas\nPor que juntas? Um detalhe vale para uma frase só. A ideia central aparece em todas.\nAgora é só achar cada pista.",
+     "texto": "A questão quer a ideia central.\nPor que juntas? Um detalhe vale para uma frase só. A ideia central aparece em todas.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a ideia central (o que a questão quer)"
-       ],
-       [
-        "P",
-        "o que se repete nas três frases"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o que as três frases defendem juntas",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a ideia central (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "o que se repete nas três frases"
+       }
       ]
      }
     },
@@ -353,27 +345,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o que se conclui sobre Ana.\nR = o que as pistas, juntas, mostram\nPor que juntas? Uma pista só pode enganar. Céu cinzento sozinho não basta; com o guarda-chuva, fica claro.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o que se conclui sobre Ana.\nPor que juntas? Uma pista só pode enganar. Céu cinzento sozinho não basta; com o guarda-chuva, fica claro.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a conclusão (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o que o céu indica"
-       ],
-       [
-        "P2",
-        "o que ela voltou para buscar"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o que as pistas, juntas, mostram",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a conclusão (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o que o céu indica"
+       },
+       {
+        "letra": "P2",
+        "oque": "o que ela voltou para buscar"
+       }
       ]
      }
     },
@@ -508,23 +496,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o que a frase deixa claro sem dizer.\nR = o que precisa ser verdade para \"parou de\" fazer sentido\nPor que \"parou de\"? Só para quem fazia antes. Palavras como parar, voltar, continuar e ainda escondem informação.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o que a frase deixa claro sem dizer.\nPor que \"parou de\"? Só para quem fazia antes. Palavras como parar, voltar, continuar e ainda escondem informação.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o pressuposto (o que a questão quer)"
-       ],
-       [
-        "P",
-        "a palavra que esconde a informação"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o que precisa ser verdade para \"parou de\" fazer sentido",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o pressuposto (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "a palavra que esconde a informação"
+       }
       ]
      }
     },
@@ -655,27 +639,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o argumento central.\nR = a conclusão (depois do \"portanto\"), sem negar o que o autor aceitou antes\nPor que o \"portanto\"? Ele anuncia a conclusão. E o \"É verdade\" mostra o que o autor aceita: o acesso aumentou.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o argumento central.\nPor que o \"portanto\"? Ele anuncia a conclusão. E o \"É verdade\" mostra o que o autor aceita: o acesso aumentou.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o argumento central (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o que o autor aceita"
-       ],
-       [
-        "P2",
-        "o que ele conclui"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a conclusão (depois do \"portanto\"), sem negar o que o autor aceitou antes",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o argumento central (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o que o autor aceita"
+       },
+       {
+        "letra": "P2",
+        "oque": "o que ele conclui"
+       }
       ]
      }
     },
@@ -814,23 +794,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o sentido da oposição.\nR = completar a 2ª parte com a palavra que sumiu e ler de novo\nPor que completar? A vírgula está no lugar de \"é\". Lida inteira: \"a insegurança não é tão nova\".\nAgora é só achar cada pista.",
+     "texto": "A questão quer o sentido da oposição.\nPor que completar? A vírgula está no lugar de \"é\". Lida inteira: \"a insegurança não é tão nova\".\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o sentido da frase (o que a questão quer)"
-       ],
-       [
-        "P",
-        "a frase completa"
-       ]
+      "tipo": "equacao",
+      "formula": "R = completar a 2ª parte com a palavra que sumiu e ler de novo",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o sentido da frase (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "a frase completa"
+       }
       ]
      }
     },
@@ -966,27 +942,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer por que o trecho reforça a crítica.\nR = o trecho pedido ligado a outro trecho do texto que explica a mesma falha\nPor que ligar trechos? Na banca difícil, a resposta não está na expressão sozinha: está na ponte com outra parte do texto.\nAgora é só achar cada pista.",
+     "texto": "A questão quer por que o trecho reforça a crítica.\nPor que ligar trechos? Na banca difícil, a resposta não está na expressão sozinha: está na ponte com outra parte do texto.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o que a expressão sugere (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o tom do texto"
-       ],
-       [
-        "P2",
-        "o trecho que explica o \"de carro\""
-       ]
+      "tipo": "equacao",
+      "formula": "R = o trecho pedido ligado a outro trecho do texto que explica a mesma falha",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o que a expressão sugere (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o tom do texto"
+       },
+       {
+        "letra": "P2",
+        "oque": "o trecho que explica o \"de carro\""
+       }
       ]
      }
     },
@@ -1130,27 +1102,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o que se conclui com certeza.\nR = o mínimo que a frase garante sobre o grupo de que ela fala\nPor que o mínimo? \"Com certeza\" pede o que é verdade em qualquer caso. Se só 1 aluno reprovou, a frase já é verdadeira.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o que se conclui com certeza.\nPor que o mínimo? \"Com certeza\" pede o que é verdade em qualquer caso. Se só 1 aluno reprovou, a frase já é verdadeira.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a conclusão certa (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "de qual grupo a frase fala"
-       ],
-       [
-        "P2",
-        "quantos do grupo, no mínimo"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o mínimo que a frase garante sobre o grupo de que ela fala",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a conclusão certa (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "de qual grupo a frase fala"
+       },
+       {
+        "letra": "P2",
+        "oque": "quantos do grupo, no mínimo"
+       }
       ]
      }
     },
@@ -1289,23 +1257,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer a finalidade do texto.\nR = o que os verbos de ordem pedem que o leitor faça\nPor que os verbos? Verbo que manda fazer (imperativo) é marca de texto que ensina.\nAgora é só achar cada pista.",
+     "texto": "A questão quer a finalidade do texto.\nPor que os verbos? Verbo que manda fazer (imperativo) é marca de texto que ensina.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a finalidade (o que a questão quer)"
-       ],
-       [
-        "P",
-        "o tipo de verbo"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o que os verbos de ordem pedem que o leitor faça",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a finalidade (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "o tipo de verbo"
+       }
       ]
      }
     },
@@ -1436,23 +1400,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer a marca do classificado.\nR = as partes que todo classificado tem\nPor que as partes? Cada gênero tem um formato que se repete; é por ele que se reconhece.\nAgora é só achar cada pista.",
+     "texto": "A questão quer a marca do classificado.\nPor que as partes? Cada gênero tem um formato que se repete; é por ele que se reconhece.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a marca do gênero (o que a questão quer)"
-       ],
-       [
-        "P",
-        "as partes do texto"
-       ]
+      "tipo": "equacao",
+      "formula": "R = as partes que todo classificado tem",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a marca do gênero (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "as partes do texto"
+       }
       ]
      }
     },
@@ -1583,23 +1543,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer a diferença do trecho 2.\nR = a palavra do trecho 2 que julga o fato\nPor que a palavra que julga? Informação pode ser conferida; julgamento (\"descaso\") é a opinião de quem escreve.\nAgora é só achar cada pista.",
+     "texto": "A questão quer a diferença do trecho 2.\nPor que a palavra que julga? Informação pode ser conferida; julgamento (\"descaso\") é a opinião de quem escreve.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a diferença (o que a questão quer)"
-       ],
-       [
-        "P",
-        "a palavra que julga"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a palavra do trecho 2 que julga o fato",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a diferença (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "a palavra que julga"
+       }
       ]
      }
     },
@@ -1730,27 +1686,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o que frase e desenho fazem juntos.\nR = o que a frase diz + o que o desenho mostra\nPor que os dois? Lendo um só, você cai na letra que só fala de pneu ou só de água.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o que frase e desenho fazem juntos.\nPor que os dois? Lendo um só, você cai na letra que só fala de pneu ou só de água.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a finalidade (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o que a frase diz"
-       ],
-       [
-        "P2",
-        "o que o desenho mostra"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o que a frase diz + o que o desenho mostra",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a finalidade (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o que a frase diz"
+       },
+       {
+        "letra": "P2",
+        "oque": "o que o desenho mostra"
+       }
       ]
      }
     },
@@ -1889,27 +1841,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o que o texto faz ao usar a bula.\nR = de qual gênero é a FORMA + de qual gênero é a FUNÇÃO\nPor que separar? Na banca difícil, forma e função vêm de gêneros diferentes. Quem olha só a forma marca \"bula\".\nAgora é só achar cada pista.",
+     "texto": "A questão quer o que o texto faz ao usar a bula.\nPor que separar? Na banca difícil, forma e função vêm de gêneros diferentes. Quem olha só a forma marca \"bula\".\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o efeito (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o gênero da forma"
-       ],
-       [
-        "P2",
-        "o gênero da função"
-       ]
+      "tipo": "equacao",
+      "formula": "R = de qual gênero é a FORMA + de qual gênero é a FUNÇÃO",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o efeito (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o gênero da forma"
+       },
+       {
+        "letra": "P2",
+        "oque": "o gênero da função"
+       }
       ]
      }
     },
@@ -2053,27 +2001,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer por que o texto é editorial.\nR = de quem é a opinião\nPor que \"de quem\"? Os dois textos opinam. O que muda é a voz: uma pessoa ou o jornal.\nAgora é só achar cada pista.",
+     "texto": "A questão quer por que o texto é editorial.\nPor que \"de quem\"? Os dois textos opinam. O que muda é a voz: uma pessoa ou o jornal.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a marca do editorial (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "se o texto opina"
-       ],
-       [
-        "P2",
-        "quem fala no texto"
-       ]
+      "tipo": "equacao",
+      "formula": "R = de quem é a opinião",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a marca do editorial (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "se o texto opina"
+       },
+       {
+        "letra": "P2",
+        "oque": "quem fala no texto"
+       }
       ]
      }
     },
@@ -2212,23 +2156,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o que a fala do personagem é.\nR = por que o autor escreveu a fala assim\nPor que perguntar \"por quê\"? O narrador mostra que o autor conhece a norma. Então a fala diferente é escolha.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o que a fala do personagem é.\nPor que perguntar \"por quê\"? O narrador mostra que o autor conhece a norma. Então a fala diferente é escolha.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o que a fala é (o que a questão quer)"
-       ],
-       [
-        "P",
-        "como o narrador escreve"
-       ]
+      "tipo": "equacao",
+      "formula": "R = por que o autor escreveu a fala assim",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o que a fala é (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "como o narrador escreve"
+       }
       ]
      }
     },
@@ -2359,23 +2299,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o tipo de variação.\nR = o que faz a palavra mudar\nPor que \"o que faz mudar\"? Cada tipo de variação tem uma causa: lugar, tempo, grupo social ou situação.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o tipo de variação.\nPor que \"o que faz mudar\"? Cada tipo de variação tem uma causa: lugar, tempo, grupo social ou situação.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o tipo de variação (o que a questão quer)"
-       ],
-       [
-        "P",
-        "a causa da mudança"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o que faz a palavra mudar",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o tipo de variação (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "a causa da mudança"
+       }
       ]
      }
     },
@@ -2506,23 +2442,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o tipo de variação.\nR = a causa das diferenças\nPor que a causa? Se a mudança veio com o tempo, é histórica. A data é a pista mais forte.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o tipo de variação.\nPor que a causa? Se a mudança veio com o tempo, é histórica. A data é a pista mais forte.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o tipo de variação (o que a questão quer)"
-       ],
-       [
-        "P",
-        "o que separa as duas frases"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a causa das diferenças",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o tipo de variação (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "o que separa as duas frases"
+       }
       ]
      }
     },
@@ -2658,27 +2590,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer a posição do linguista.\nR = os dois lados que ele defende, juntos\nPor que os dois? A banca difícil coloca letras que ficam com um lado só e exageram. A certa mantém o equilíbrio do texto.\nAgora é só achar cada pista.",
+     "texto": "A questão quer a posição do linguista.\nPor que os dois? A banca difícil coloca letras que ficam com um lado só e exageram. A certa mantém o equilíbrio do texto.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a posição do linguista (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o que ele diz da fala"
-       ],
-       [
-        "P2",
-        "o que ele diz da norma"
-       ]
+      "tipo": "equacao",
+      "formula": "R = os dois lados que ele defende, juntos",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a posição do linguista (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o que ele diz da fala"
+       },
+       {
+        "letra": "P2",
+        "oque": "o que ele diz da norma"
+       }
       ]
      }
     },
@@ -2817,27 +2745,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer a afirmação mais adequada.\nR = julgar a frase em CADA situação, separado\nPor que separado? A mesma frase pode caber numa situação e não caber na outra. Quem julga \"certo\" ou \"errado\" para as duas cai na pegadinha.\nAgora é só achar cada pista.",
+     "texto": "A questão quer a afirmação mais adequada.\nPor que separado? A mesma frase pode caber numa situação e não caber na outra. Quem julga \"certo\" ou \"errado\" para as duas cai na pegadinha.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a avaliação (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "a frase no churrasco"
-       ],
-       [
-        "P2",
-        "a frase na entrevista"
-       ]
+      "tipo": "equacao",
+      "formula": "R = julgar a frase em CADA situação, separado",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a avaliação (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "a frase no churrasco"
+       },
+       {
+        "letra": "P2",
+        "oque": "a frase na entrevista"
+       }
       ]
      }
     },
@@ -2976,27 +2900,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o conectivo certo.\nR = a relação entre o que a parte 1 faz esperar e o que a parte 2 diz\nPor que a relação? O conectivo não tem sentido sozinho: ele mostra se a parte 2 confirma, explica ou contraria a 1.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o conectivo certo.\nPor que a relação? O conectivo não tem sentido sozinho: ele mostra se a parte 2 confirma, explica ou contraria a 1.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o conectivo (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o que a parte 1 faz esperar"
-       ],
-       [
-        "P2",
-        "o que aconteceu"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a relação entre o que a parte 1 faz esperar e o que a parte 2 diz",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o conectivo (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o que a parte 1 faz esperar"
+       },
+       {
+        "letra": "P2",
+        "oque": "o que aconteceu"
+       }
       ]
      }
     },
@@ -3135,27 +3055,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o que \"aquele\" e \"este\" retomam.\nR = a regra da distância + conferir pelo sentido\nPor que conferir pelo sentido? A regra resolve, e o verbo prova: livro é o que se lê; caderno é o que se enche.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o que \"aquele\" e \"este\" retomam.\nPor que conferir pelo sentido? A regra resolve, e o verbo prova: livro é o que se lê; caderno é o que se enche.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "os dois termos retomados (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o que \"aquele\" retoma"
-       ],
-       [
-        "P2",
-        "o que \"este\" retoma"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a regra da distância + conferir pelo sentido",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "os dois termos retomados (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o que \"aquele\" retoma"
+       },
+       {
+        "letra": "P2",
+        "oque": "o que \"este\" retoma"
+       }
       ]
      }
     },
@@ -3294,27 +3210,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o que muda no verbo.\nR = o sentido em cada frase, pela preposição\nPor que a preposição? Alguns verbos mudam de sentido com ela. Assistir é o mais cobrado.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o que muda no verbo.\nPor que a preposição? Alguns verbos mudam de sentido com ela. Assistir é o mais cobrado.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a afirmação certa (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o sentido com \"ao\""
-       ],
-       [
-        "P2",
-        "o sentido sem preposição"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o sentido em cada frase, pela preposição",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a afirmação certa (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o sentido com \"ao\""
+       },
+       {
+        "letra": "P2",
+        "oque": "o sentido sem preposição"
+       }
       ]
      }
     },
@@ -3453,27 +3365,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o motivo da ambiguidade.\nR = a palavra que pode apontar para mais de um termo\nPor que \"sua\"? Ela retoma uma pessoa, e a frase tem duas que servem. Possessivo com dois donos possíveis é a ambiguidade mais cobrada.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o motivo da ambiguidade.\nPor que \"sua\"? Ela retoma uma pessoa, e a frase tem duas que servem. Possessivo com dois donos possíveis é a ambiguidade mais cobrada.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o motivo (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "quantos donos \"sua\" pode ter"
-       ],
-       [
-        "P2",
-        "se falta informação ou sobra sentido"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a palavra que pode apontar para mais de um termo",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o motivo (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "quantos donos \"sua\" pode ter"
+       },
+       {
+        "letra": "P2",
+        "oque": "se falta informação ou sobra sentido"
+       }
       ]
      }
     },
@@ -3617,27 +3525,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer a figura de cada frase.\nR = olhar a palavra de ligação em cada frase\nPor que a palavra de ligação? É ela que separa as duas figuras; o resto das frases é igual.\nAgora é só achar cada pista.",
+     "texto": "A questão quer a figura de cada frase.\nPor que a palavra de ligação? É ela que separa as duas figuras; o resto das frases é igual.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "as figuras (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "a figura da frase I"
-       ],
-       [
-        "P2",
-        "a figura da frase II"
-       ]
+      "tipo": "equacao",
+      "formula": "R = olhar a palavra de ligação em cada frase",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "as figuras (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "a figura da frase I"
+       },
+       {
+        "letra": "P2",
+        "oque": "a figura da frase II"
+       }
       ]
      }
     },
@@ -3776,27 +3680,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer a função que predomina.\nR = para quem o texto aponta e o que ele quer\nPor que \"para quem\"? Cada função tem um foco: no fato (referencial), em quem fala (emotiva), em quem lê (apelativa).\nAgora é só achar cada pista.",
+     "texto": "A questão quer a função que predomina.\nPor que \"para quem\"? Cada função tem um foco: no fato (referencial), em quem fala (emotiva), em quem lê (apelativa).\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a função (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "para quem o texto aponta"
-       ],
-       [
-        "P2",
-        "o que ele quer do leitor"
-       ]
+      "tipo": "equacao",
+      "formula": "R = para quem o texto aponta e o que ele quer",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a função (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "para quem o texto aponta"
+       },
+       {
+        "letra": "P2",
+        "oque": "o que ele quer do leitor"
+       }
       ]
      }
     },
@@ -3940,27 +3840,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer a função que predomina.\nR = a função do assunto central, não a de um detalhe\nPor que o assunto central? O poema tem emoção e beleza (como todo poema), mas a banca pede a que PREDOMINA: a do assunto.\nAgora é só achar cada pista.",
+     "texto": "A questão quer a função que predomina.\nPor que o assunto central? O poema tem emoção e beleza (como todo poema), mas a banca pede a que PREDOMINA: a do assunto.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a função predominante (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o assunto do poema"
-       ],
-       [
-        "P2",
-        "a função desse assunto"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a função do assunto central, não a de um detalhe",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a função predominante (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o assunto do poema"
+       },
+       {
+        "letra": "P2",
+        "oque": "a função desse assunto"
+       }
       ]
      }
     },
@@ -4104,27 +4000,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer as figuras, na ordem.\nR = a figura da fala 1 + a figura da fala 2, nessa ordem\nPor que a ordem? \"Respectivamente\" cobra a sequência. A banca coloca as mesmas figuras invertidas para pegar quem acerta e troca.\nAgora é só achar cada pista.",
+     "texto": "A questão quer as figuras, na ordem.\nPor que a ordem? \"Respectivamente\" cobra a sequência. A banca coloca as mesmas figuras invertidas para pegar quem acerta e troca.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o par de figuras (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "a figura da fala 1"
-       ],
-       [
-        "P2",
-        "a figura da fala 2"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a figura da fala 1 + a figura da fala 2, nessa ordem",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o par de figuras (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "a figura da fala 1"
+       },
+       {
+        "letra": "P2",
+        "oque": "a figura da fala 2"
+       }
       ]
      }
     },
@@ -4263,23 +4155,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o movimento.\nR = o movimento que tem esse autor e esse tema\nPor que autor e tema? Os dois juntos apontam para um movimento só. Natureza exaltada e saudade da pátria são o centro da 1ª geração romântica.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o movimento.\nPor que autor e tema? Os dois juntos apontam para um movimento só. Natureza exaltada e saudade da pátria são o centro da 1ª geração romântica.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o movimento (o que a questão quer)"
-       ],
-       [
-        "P",
-        "o tema dos versos"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o movimento que tem esse autor e esse tema",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o movimento (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "o tema dos versos"
+       }
       ]
      }
     },
@@ -4410,23 +4298,19 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o movimento.\nR = o movimento que começa com esse evento\nPor que o evento? Alguns movimentos têm um marco de data. A Semana de 22 é o marco do Modernismo.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o movimento.\nPor que o evento? Alguns movimentos têm um marco de data. A Semana de 22 é o marco do Modernismo.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o movimento (o que a questão quer)"
-       ],
-       [
-        "P",
-        "o nome do evento"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o movimento que começa com esse evento",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o movimento (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "o nome do evento"
+       }
       ]
      }
     },
@@ -4557,27 +4441,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o movimento.\nR = o movimento que junta forma perfeita e arte pela arte\nPor que juntar? Rima e soneto aparecem em outros movimentos. A forma perfeita SEM emoção e SEM crítica social é só do Parnasianismo.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o movimento.\nPor que juntar? Rima e soneto aparecem em outros movimentos. A forma perfeita SEM emoção e SEM crítica social é só do Parnasianismo.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o movimento (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "a forma"
-       ],
-       [
-        "P2",
-        "o que ele evita"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o movimento que junta forma perfeita e arte pela arte",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o movimento (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "a forma"
+       },
+       {
+        "letra": "P2",
+        "oque": "o que ele evita"
+       }
       ]
      }
     },
@@ -4716,27 +4596,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o movimento.\nR = o movimento que mostra a sociedade como ela é, sem idealizar\nPor que \"sem idealizar\"? O Romantismo idealizava herói e amor. O Realismo mostra o egoísmo e a vaidade, com crítica.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o movimento.\nPor que \"sem idealizar\"? O Romantismo idealizava herói e amor. O Realismo mostra o egoísmo e a vaidade, com crítica.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o movimento (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "a data"
-       ],
-       [
-        "P2",
-        "o jeito de mostrar a sociedade"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o movimento que mostra a sociedade como ela é, sem idealizar",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o movimento (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "a data"
+       },
+       {
+        "letra": "P2",
+        "oque": "o jeito de mostrar a sociedade"
+       }
       ]
      }
     },
@@ -4880,27 +4756,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o que Oswald faz com a troca.\nR = o que a troca de UMA palavra muda no sentido\nPor que uma palavra só? A paródia mantém quase tudo igual para o leitor reconhecer o original, e muda o ponto que vira a crítica.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o que Oswald faz com a troca.\nPor que uma palavra só? A paródia mantém quase tudo igual para o leitor reconhecer o original, e muda o ponto que vira a crítica.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o efeito da troca (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o que \"palmeiras\" mostra"
-       ],
-       [
-        "P2",
-        "o que \"palmares\" mostra"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o que a troca de UMA palavra muda no sentido",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o efeito da troca (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o que \"palmeiras\" mostra"
+       },
+       {
+        "letra": "P2",
+        "oque": "o que \"palmares\" mostra"
+       }
       ]
      }
     },
@@ -5039,27 +4911,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o que a escolha do \"tinha\" mostra.\nR = a escolha + o movimento da época\nPor que a época? Em 1928, o Modernismo trazia a fala comum para a poesia. A reação do público é a pista da ruptura.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o que a escolha do \"tinha\" mostra.\nPor que a época? Em 1928, o Modernismo trazia a fala comum para a poesia. A reação do público é a pista da ruptura.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o sentido da escolha (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "de onde vem o \"tinha\""
-       ],
-       [
-        "P2",
-        "o que o incômodo mostra"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a escolha + o movimento da época",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o sentido da escolha (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "de onde vem o \"tinha\""
+       },
+       {
+        "letra": "P2",
+        "oque": "o que o incômodo mostra"
+       }
       ]
      }
     },
@@ -5203,27 +5071,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o que o trecho final mostra.\nR = a forma do gênero + o sentido do trecho que foge da notícia\nPor que olhar o trecho final? Notícia séria não diz que buraco comemora. É ali que o texto mostra a intenção.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o que o trecho final mostra.\nPor que olhar o trecho final? Notícia séria não diz que buraco comemora. É ali que o texto mostra a intenção.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o que o texto é e faz (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "a forma"
-       ],
-       [
-        "P2",
-        "o efeito do trecho final"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a forma do gênero + o sentido do trecho que foge da notícia",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o que o texto é e faz (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "a forma"
+       },
+       {
+        "letra": "P2",
+        "oque": "o efeito do trecho final"
+       }
       ]
      }
     },
@@ -5367,27 +5231,24 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer a função do dado.\nR = a ligação entre o dado (frase 1) e o pedido (frase 2)\nPor que ligar as duas? Na campanha, cada parte trabalha para o pedido final. O número é a razão para obedecer.\nAgora é só achar cada pista.",
+     "texto": "A questão quer a função do dado.\nPor que ligar as duas? Na campanha, cada parte trabalha para o pedido final. O número é a razão para obedecer.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a função do dado (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o que o cartaz quer"
-       ],
-       [
-        "P2",
-        "o que o número mostra"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a ligação entre o dado (frase 1) e o pedido",
+      "leitura": "frase 2",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a função do dado (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o que o cartaz quer"
+       },
+       {
+        "letra": "P2",
+        "oque": "o que o número mostra"
+       }
       ]
      }
     },
@@ -5531,27 +5392,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer a comparação certa.\nR = o que cada texto DIZ + COMO diz, e se combina com o lugar onde aparece\nPor que separar \"diz\" e \"como diz\"? A banca coloca letras que confundem informal com errado. Primeiro veja se dizem a mesma coisa.\nAgora é só achar cada pista.",
+     "texto": "A questão quer a comparação certa.\nPor que separar \"diz\" e \"como diz\"? A banca coloca letras que confundem informal com errado. Primeiro veja se dizem a mesma coisa.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a comparação (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o que os dois dizem"
-       ],
-       [
-        "P2",
-        "como cada um diz"
-       ]
+      "tipo": "equacao",
+      "formula": "R = o que cada texto DIZ + COMO diz, e se combina com o lugar onde aparece",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a comparação (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o que os dois dizem"
+       },
+       {
+        "letra": "P2",
+        "oque": "como cada um diz"
+       }
       ]
      }
     },
@@ -5695,27 +5552,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o que essas marcas mostram.\nR = a variação usada + o que ela tem a ver com o gênero\nPor que juntar com o gênero? A fala regional não está ali por acaso: o cordel é feito para o povo da região ouvir.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o que essas marcas mostram.\nPor que juntar com o gênero? A fala regional não está ali por acaso: o cordel é feito para o povo da região ouvir.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o efeito das marcas (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o tipo de variação"
-       ],
-       [
-        "P2",
-        "a ligação com o gênero"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a variação usada + o que ela tem a ver com o gênero",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o efeito das marcas (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o tipo de variação"
+       },
+       {
+        "letra": "P2",
+        "oque": "a ligação com o gênero"
+       }
       ]
      }
     },
@@ -5854,27 +5707,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o que a frase II passa a dizer.\nR = a relação que \"portanto\" cria entre a chuva e o jogo\nPor que só o conectivo? Os fatos são iguais nas duas frases. O que muda é a LIGAÇÃO entre eles.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o que a frase II passa a dizer.\nPor que só o conectivo? Os fatos são iguais nas duas frases. O que muda é a LIGAÇÃO entre eles.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o novo sentido (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "relação com \"mas\""
-       ],
-       [
-        "P2",
-        "relação com \"portanto\""
-       ]
+      "tipo": "equacao",
+      "formula": "R = a relação que \"portanto\" cria entre a chuva e o jogo",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o novo sentido (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "relação com \"mas\""
+       },
+       {
+        "letra": "P2",
+        "oque": "relação com \"portanto\""
+       }
       ]
      }
     },
@@ -6018,27 +5867,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer a forma da norma-padrão.\nR = trocar \"tinha\" por \"haver\" no singular e manter o resto concordando\nPor que singular? No sentido de existir, \"haver\" não tem sujeito: \"muitas pessoas\" é o que existe, não quem faz.\nAgora é só achar cada pista.",
+     "texto": "A questão quer a forma da norma-padrão.\nPor que singular? No sentido de existir, \"haver\" não tem sujeito: \"muitas pessoas\" é o que existe, não quem faz.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "a forma correta (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o verbo da norma"
-       ],
-       [
-        "P2",
-        "a concordância do resto"
-       ]
+      "tipo": "equacao",
+      "formula": "R = trocar \"tinha\" por \"haver\" no singular e manter o resto concordando",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "a forma correta (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o verbo da norma"
+       },
+       {
+        "letra": "P2",
+        "oque": "a concordância do resto"
+       }
       ]
      }
     },
@@ -6182,27 +6027,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer a figura e a função.\nR = a figura da frase 1 + a função do texto todo\nPor que separar? A figura está numa expressão; a função é o objetivo do texto inteiro.\nAgora é só achar cada pista.",
+     "texto": "A questão quer a figura e a função.\nPor que separar? A figura está numa expressão; a função é o objetivo do texto inteiro.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o par (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "a figura"
-       ],
-       [
-        "P2",
-        "a função"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a figura da frase 1 + a função do texto todo",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o par (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "a figura"
+       },
+       {
+        "letra": "P2",
+        "oque": "a função"
+       }
       ]
      }
     },
@@ -6346,27 +6187,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o sentido da fala.\nR = comparar o que a fala diz com o que a situação mostra\nPor que comparar? Quando a fala e a situação não batem, o sentido é o contrário: é a ironia.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o sentido da fala.\nPor que comparar? Quando a fala e a situação não batem, o sentido é o contrário: é a ironia.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o sentido (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "o que a fala diz"
-       ],
-       [
-        "P2",
-        "o que a situação mostra"
-       ]
+      "tipo": "equacao",
+      "formula": "R = comparar o que a fala diz com o que a situação mostra",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o sentido (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "o que a fala diz"
+       },
+       {
+        "letra": "P2",
+        "oque": "o que a situação mostra"
+       }
       ]
      }
     },
@@ -6510,27 +6347,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o que o poeta faz com o \"mais\".\nR = a figura usada + o movimento que ela serve\nPor que o movimento? A comparação sozinha não diz o porquê. No Romantismo, ela serve para exaltar a pátria.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o que o poeta faz com o \"mais\".\nPor que o movimento? A comparação sozinha não diz o porquê. No Romantismo, ela serve para exaltar a pátria.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o efeito (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "a figura"
-       ],
-       [
-        "P2",
-        "o objetivo no Romantismo"
-       ]
+      "tipo": "equacao",
+      "formula": "R = a figura usada + o movimento que ela serve",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o efeito (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "a figura"
+       },
+       {
+        "letra": "P2",
+        "oque": "o objetivo no Romantismo"
+       }
       ]
      }
     },
@@ -6674,27 +6507,23 @@
     },
     {
      "titulo": "A regra em palavras",
-     "texto": "A questão quer o que o poema faz.\nR = de que lado o poema fica + o movimento\nPor que \"de que lado\"? O poema mostra as duas formas, mas o tom deixa claro qual ele valoriza.\nAgora é só achar cada pista.",
+     "texto": "A questão quer o que o poema faz.\nPor que \"de que lado\"? O poema mostra as duas formas, mas o tom deixa claro qual ele valoriza.\nAgora é só achar cada pista.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "o efeito (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "as duas formas"
-       ],
-       [
-        "P2",
-        "qual o poema valoriza"
-       ]
+      "tipo": "equacao",
+      "formula": "R = de que lado o poema fica + o movimento",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "o efeito (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "as duas formas"
+       },
+       {
+        "letra": "P2",
+        "oque": "qual o poema valoriza"
+       }
       ]
      }
     },
