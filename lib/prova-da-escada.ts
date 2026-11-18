@@ -2,9 +2,12 @@
    nível ITA/IME, nessa ordem, com POR_ETAPA de cada (ITA: até 2). */
 import { ESCADAS, type Degrau } from '@/data/escadas';
 
-export const ETAPAS = ['facil', 'medio', 'dificil', 'enem', 'ita'] as const;
+/* Junção (Pablo, 18/11/2026: "nas funções você pega coisas da porcentagem"): questões que
+   misturam o conteúdo desta prova com os das provas anteriores da mesma escada. A 1ª prova
+   de cada matéria não tem anteriores e fica sem ela. */
+export const ETAPAS = ['facil', 'medio', 'dificil', 'enem', 'juncao', 'ita'] as const;
 export type EtapaDaProva = (typeof ETAPAS)[number];
-export const POR_ETAPA: Record<EtapaDaProva, number> = { facil: 2, medio: 2, dificil: 2, enem: 2, ita: 2 };
+export const POR_ETAPA: Record<EtapaDaProva, number> = { facil: 2, medio: 2, dificil: 2, enem: 2, juncao: 2, ita: 2 };
 
 export type QuestaoDaEscada = {
   id: string;
@@ -18,6 +21,7 @@ export type QuestaoDaEscada = {
 export function etapaDaProva(q: QuestaoDaEscada): EtapaDaProva | null {
   const nivel = (q.nivel ?? '').toLowerCase();
   if (nivel === 'vestibular' || nivel === 'acima') return 'ita';
+  if (nivel === 'juncao') return 'juncao';
   if (q.anoProva != null || /^enem\s+\d{4}/i.test(q.origem ?? '') || nivel === 'modelo_enem') return 'enem';
   if (nivel === 'facil' || nivel === 'medio' || nivel === 'dificil') return nivel;
   return null;
@@ -31,7 +35,7 @@ function prioridade(q: QuestaoDaEscada): string {
   return `${real}${dia2}${q.id}`;
 }
 
-export function questoesDoDegrau(materia: string, degrau: Degrau, todas: QuestaoDaEscada[]) {
+export function questoesDoDegrau(materia: string, degrau: Degrau, todas: QuestaoDaEscada[], temAnteriores = true) {
   const doTema = todas.filter((q) => q.materia === materia && q.tema === degrau.tema);
   const porEtapa = ETAPAS.map((etapa) =>
     doTema
@@ -39,7 +43,7 @@ export function questoesDoDegrau(materia: string, degrau: Degrau, todas: Questao
       .sort((a, b) => prioridade(a).localeCompare(prioridade(b)))
       .slice(0, POR_ETAPA[etapa]),
   );
-  const faltam = ETAPAS.filter((_, i) => porEtapa[i].length < POR_ETAPA[ETAPAS[i]]);
+  const faltam = ETAPAS.filter((e, i) => porEtapa[i].length < POR_ETAPA[e] && (e !== 'juncao' || temAnteriores));
   return { questoes: porEtapa.flat(), faltam };
 }
 
@@ -54,7 +58,7 @@ export function provasDasEscadas(todas: QuestaoDaEscada[]) {
       materia,
       tema: degrau.tema,
       nome: nomeDaProva(materia, i + 1, degrau.tema),
-      ...questoesDoDegrau(materia, degrau, todas),
+      ...questoesDoDegrau(materia, degrau, todas, i > 0),
     })),
   );
 }

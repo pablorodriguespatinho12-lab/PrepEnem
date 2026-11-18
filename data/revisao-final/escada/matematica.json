@@ -1,0 +1,3171 @@
+[
+ {
+  "id": "d2-escada-mat-equ-01",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "Qual é o valor de x na equação 3x + 5 = 20?",
+  "A": "3",
+  "B": "5",
+  "C": "15",
+  "D": "8,3",
+  "E": "45",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "3x = 20 − 5 = 15; x = 5. B. C = parou em 3x = 15; D = somou 5 em vez de tirar (25 ÷ 3); E = (20 − 5) × 3; A = palpite.",
+   "ideia": "Desfaça as contas na ordem contrária: primeiro tire o 5 dos dois lados, depois divida por 3. Fica 3x = 15 e x = 5.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Equação",
+        "formula": "faça a mesma conta dos dois lados"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Equação",
+        "3x + 5 = 20"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o valor de x.\nx = (20 − 5) ÷ 3 (desfazer: tirar 5, depois dividir por 3)\nPor que essa ordem? Na equação, primeiro x foi vezes 3 e depois ganhou 5. Para voltar, desfaz do fim para o começo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "x",
+        "o número escondido (o que a questão quer)"
+       ],
+       [
+        "S",
+        "o que sobra depois de tirar o 5"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando S: o seu jeito",
+     "texto": "Parece certo parar aqui e responder 15. Mas 15 é 3x, três vezes o número.\nS = 20 − 5 = 15"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "x = 15 ÷ 3 = 5\nLetra B. Confere: 3 × 5 + 5 = 20.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "S",
+        "15"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: equação de 1 passo a mais → desfaça do fim para o começo: o \"+\" vira \"−\", o \"×\" vira \"÷\".",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "3x + 5 = 20"
+       ],
+       [
+        "2. Equação em letras",
+        "x = (20 − 5) ÷ 3"
+       ],
+       [
+        "3. Achar cada letra",
+        "S = 15"
+       ],
+       [
+        "4. Substituir",
+        "15 ÷ 3 = 5"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "2x + 4 = 10. Quanto vale x?",
+    "opcoes": [
+     "3",
+     "7",
+     "12",
+     "5"
+    ],
+    "certa": "3",
+    "resposta": "2x = 6, então x = 3."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-equ-02",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "Numa lanchonete, 2 sucos e 1 pastel custam R$ 13. Já 1 suco e 1 pastel custam R$ 9. Quanto custa um suco?",
+  "A": "R$ 4",
+  "B": "R$ 5",
+  "C": "R$ 9",
+  "D": "R$ 2",
+  "E": "R$ 6,50",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "(2s + p) − (s + p) = s = 13 − 9 = 4. A. B = o preço do pastel; C = o segundo pedido; D = 4 ÷ 2; E = 13 ÷ 2.",
+   "ideia": "Compare os dois pedidos: o primeiro tem só um suco a mais que o segundo. A diferença de preço, 13 − 9, é o preço desse suco.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Equação",
+        "formula": "faça a mesma conta dos dois lados"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Pedido 1",
+        "2 sucos + 1 pastel = 13"
+       ],
+       [
+        "Pedido 2",
+        "1 suco + 1 pastel = 9"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o preço do suco.\ns = P1 − P2 (o suco = a diferença entre os pedidos)\nPor que a diferença? Os dois pedidos têm o mesmo pastel. O que muda é 1 suco, e é isso que muda o preço.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "s",
+        "preço do suco (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "preço do pedido maior"
+       ],
+       [
+        "P2",
+        "preço do pedido menor"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (pedido maior)",
+     "texto": "P1 = 13"
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo dividir 13 por 2 sucos. Mas no 13 tem um pastel junto.\nP2 = 9"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "s = 13 − 9 = 4\nLetra A. O pastel sai 9 − 4 = 5.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "13"
+       ],
+       [
+        "P2",
+        "9"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dois pedidos que diferem em UM item → a diferença dos preços é o preço desse item.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "13 e 9"
+       ],
+       [
+        "2. Equação em letras",
+        "s = P1 − P2"
+       ],
+       [
+        "3. Achar cada letra",
+        "P1 = 13; P2 = 9"
+       ],
+       [
+        "4. Substituir",
+        "13 − 9 = 4"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "3 canetas + 1 lápis = R$ 10; 2 canetas + 1 lápis = R$ 7. Caneta?",
+    "opcoes": [
+     "R$ 3",
+     "R$ 7",
+     "R$ 1",
+     "R$ 10"
+    ],
+    "certa": "R$ 3",
+    "resposta": "A diferença é 1 caneta: 10 − 7 = 3."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-equ-03",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "Pedro tem o triplo da idade do filho. Somando as duas idades, dá 48 anos. Qual é a idade do filho?",
+  "A": "16",
+  "B": "36",
+  "C": "12",
+  "D": "24",
+  "E": "4",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "f + 3f = 4f = 48 → f = 12. C. A = 48 ÷ 3; B = a idade do pai; D = metade de 48; E = 12 ÷ 3.",
+   "ideia": "Se o filho tem 1 parte, o pai tem 3 partes: juntos, 4 partes. Então 48 ÷ 4 = 12 anos é o filho.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Equação",
+        "formula": "faça a mesma conta dos dois lados"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Pai",
+        "3 vezes o filho"
+       ],
+       [
+        "Soma",
+        "48"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a idade do filho.\nf = 48 ÷ N (filho = soma ÷ número de partes)\nPor que partes? Se o filho é 1 parte e o pai 3 partes, a soma 48 junta todas as partes.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "f",
+        "idade do filho (o que a questão quer)"
+       ],
+       [
+        "N",
+        "número de partes na soma"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando N: o seu jeito",
+     "texto": "Parece certo dividir 48 por 3, por causa do \"triplo\". Mas a soma tem o pai (3) E o filho (1).\nN = 3 + 1 = 4"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "f = 48 ÷ 4 = 12\nLetra C. O pai tem 36.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "N",
+        "4"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"o dobro\", \"o triplo\" com a soma → conte as partes (1 + 2, 1 + 3) e divida a soma por elas.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "triplo, soma 48"
+       ],
+       [
+        "2. Equação em letras",
+        "f = 48 ÷ N"
+       ],
+       [
+        "3. Achar cada letra",
+        "N = 4"
+       ],
+       [
+        "4. Substituir",
+        "48 ÷ 4 = 12"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Ana tem o dobro da idade de Bia. Juntas, 30. Bia tem:",
+    "opcoes": [
+     "10",
+     "15",
+     "20",
+     "5"
+    ],
+    "certa": "10",
+    "resposta": "3 partes = 30; 1 parte = 10."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-equ-04",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "Um estacionamento de shopping cobra R$ 8,00 pela primeira hora e R$ 3,00 por hora adicional, ou fração. Um motorista estacionou, foi ao cinema, jantou e, na saída, pagou exatamente R$ 29,00. Considerando que ele ficou um número inteiro de horas, quanto tempo o carro ficou no estacionamento?",
+  "A": "7 horas",
+  "B": "9 horas",
+  "C": "10 horas",
+  "D": "12 horas",
+  "E": "8 horas",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "dificil",
+  "explicacao": {
+   "conferencia": "8 + 3(h − 1) = 29 → h − 1 = 7 → h = 8. E. A = só as adicionais (esqueceu a primeira); B = 29 ÷ 3 cortado em 9; C = o mesmo arredondado para cima; D = palpite.",
+   "ideia": "Da conta, R$ 8 são da primeira hora; os R$ 21 que sobram pagam horas adicionais de R$ 3, que são 7. Somando a primeira, 8 horas.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Equação",
+        "formula": "faça a mesma conta dos dois lados"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "1ª hora",
+        "R$ 8"
+       ],
+       [
+        "Cada hora a mais",
+        "R$ 3"
+       ],
+       [
+        "Pagou",
+        "R$ 29"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o total de horas.\nh = 1 + A (horas = a primeira + as adicionais)\nPor que 1 + A? A primeira hora tem preço próprio. As outras são contadas à parte.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "h",
+        "total de horas (o que a questão quer)"
+       ],
+       [
+        "A",
+        "horas adicionais"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando A: o seu jeito",
+     "texto": "Parece certo dividir tudo por 3: 29 ÷ 3 ≈ 9,7. Mas os primeiros R$ 8 não são de R$ 3.\nSobra: 29 − 8 = 21\nA = 21 ÷ 3 = 7"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "h = 1 + 7 = 8 horas\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "A",
+        "7"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: tarifa com \"primeira hora\" e \"hora adicional\" → tire a primeira, divida o resto pelo preço da adicional e some 1.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "8, 3, 29"
+       ],
+       [
+        "2. Equação em letras",
+        "h = 1 + A"
+       ],
+       [
+        "3. Achar cada letra",
+        "A = 7"
+       ],
+       [
+        "4. Substituir",
+        "1 + 7 = 8"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "R$ 5 a 1ª hora e R$ 2 cada outra. Pagou R$ 11. Horas?",
+    "opcoes": [
+     "4",
+     "3",
+     "5",
+     "6"
+    ],
+    "certa": "4",
+    "resposta": "11 − 5 = 6; 6 ÷ 2 = 3 adicionais; 1 + 3 = 4."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-equ-05",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "Num sítio há galinhas e coelhos. Contando as cabeças, o dono chega a 30. Contando os pés, chega a 80. Considerando que cada galinha tem 2 pés e cada coelho tem 4, quantos coelhos há no sítio?",
+  "A": "20",
+  "B": "15",
+  "C": "40",
+  "D": "10",
+  "E": "25",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "dificil",
+  "explicacao": {
+   "conferencia": "g + c = 30; 2g + 4c = 80 → 2c = 80 − 60 = 20 → c = 10. D. A = as galinhas; B = metade de 30; C = 80 ÷ 2; E = palpite.",
+   "ideia": "Se os 30 bichos fossem galinhas, seriam 60 pés. Sobram 20 pés, e cada coelho tem 2 pés a mais que uma galinha: 20 ÷ 2 = 10 coelhos.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Equação",
+        "formula": "faça a mesma conta dos dois lados"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Cabeças",
+        "30"
+       ],
+       [
+        "Pés",
+        "80"
+       ],
+       [
+        "Galinha",
+        "2 pés"
+       ],
+       [
+        "Coelho",
+        "4 pés"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o número de coelhos.\nc = S ÷ 2 (coelhos = pés que sobram ÷ 2 pés a mais de cada coelho)\nPor que supor tudo galinha? Assim cada coelho \"escondido\" aparece como 2 pés a mais na conta.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "c",
+        "coelhos (o que a questão quer)"
+       ],
+       [
+        "S",
+        "pés que sobram"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando S: o seu jeito",
+     "texto": "Parece certo dividir 80 por 4. Mas nem todos os bichos têm 4 pés.\nSe todos fossem galinhas: 30 × 2 = 60 pés.\nS = 80 − 60 = 20"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "c = 20 ÷ 2 = 10 coelhos\nLetra D. E 20 galinhas: 40 + 40 = 80 pés.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "S",
+        "20"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dois tipos com totais de \"cabeças\" e \"pés\" (ou rodas) → suponha todos do tipo menor e divida a sobra pela diferença.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "30 cabeças, 80 pés"
+       ],
+       [
+        "2. Equação em letras",
+        "c = S ÷ 2"
+       ],
+       [
+        "3. Achar cada letra",
+        "S = 20"
+       ],
+       [
+        "4. Substituir",
+        "20 ÷ 2 = 10"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Motos e carros: 10 veículos, 28 rodas. Quantos carros?",
+    "opcoes": [
+     "4",
+     "6",
+     "7",
+     "10"
+    ],
+    "certa": "4",
+    "resposta": "Tudo moto: 20 rodas; sobram 8; 8 ÷ 2 = 4 carros."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-com-01",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Uma lanchonete tem 3 tipos de pão e 4 tipos de recheio. Quantos sanduíches diferentes dá para montar com 1 pão e 1 recheio?",
+  "A": "12",
+  "B": "7",
+  "C": "34",
+  "D": "1",
+  "E": "24",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "3 × 4 = 12. A. B = 3 + 4; C, D e E = palpites (E = o dobro).",
+   "ideia": "Cada pão combina com cada um dos 4 recheios. São 3 pães vezes 4 recheios, 12 sanduíches.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Princípio multiplicativo",
+        "formula": "opções de cada escolha multiplicadas"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Pães",
+        "3"
+       ],
+       [
+        "Recheios",
+        "4"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quantos sanduíches.\nS = P × R (sanduíches = pães × recheios)\nPor que vezes? Para CADA pão há 4 recheios. 3 vezes 4 escolhas.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "S",
+        "sanduíches (o que a questão quer)"
+       ],
+       [
+        "P",
+        "pães"
+       ],
+       [
+        "R",
+        "recheios"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P (pães)",
+     "texto": "P = 3"
+    },
+    {
+     "titulo": "Achando R: o seu jeito",
+     "texto": "Parece certo somar: 3 + 4 = 7. Mas cada pão vai com todos os recheios.\nR = 4"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "S = 3 × 4 = 12\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "3"
+       ],
+       [
+        "R",
+        "4"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: escolher 1 de cada grupo → multiplique as opções.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "3 pães, 4 recheios"
+       ],
+       [
+        "2. Equação em letras",
+        "S = P × R"
+       ],
+       [
+        "3. Achar cada letra",
+        "P = 3; R = 4"
+       ],
+       [
+        "4. Substituir",
+        "3 × 4 = 12"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "2 camisetas e 3 bermudas. Quantas roupas diferentes?",
+    "opcoes": [
+     "6",
+     "5",
+     "9",
+     "8"
+    ],
+    "certa": "6",
+    "resposta": "2 × 3 = 6."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-com-02",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Num dado comum de 6 faces, qual é a chance de sair o número 5?",
+  "A": "1/5",
+  "B": "5/6",
+  "C": "1/2",
+  "D": "1/6",
+  "E": "5%",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "Casos favoráveis 1, possíveis 6: 1/6. D. A = esqueceu uma face; B = a chance de NÃO sair 5; C = par ou ímpar; E = confundiu o 5 com 5%.",
+   "ideia": "Chance é o que eu quero dividido por tudo o que pode sair. Quero 1 face (o 5) e podem sair 6 faces: 1/6.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Probabilidade",
+        "formula": "chance = o que eu quero ÷ tudo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Faces",
+        "6"
+       ],
+       [
+        "Quero",
+        "o número 5"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a chance de sair 5.\nP = F ÷ T (chance = casos que eu quero ÷ casos possíveis)\nPor que dividir? A chance é a fatia do total que me serve.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "P",
+        "a chance (o que a questão quer)"
+       ],
+       [
+        "F",
+        "casos que eu quero"
+       ],
+       [
+        "T",
+        "casos possíveis"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando F (o que eu quero)",
+     "texto": "Só uma face tem o 5: F = 1"
+    },
+    {
+     "titulo": "Achando T: o seu jeito",
+     "texto": "Parece certo responder 5%, por causa do número 5. Mas o 5 é a face, não a porcentagem.\nT = 6 faces"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "P = 1 ÷ 6 = 1/6\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "F",
+        "1"
+       ],
+       [
+        "T",
+        "6"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: chance de um resultado → o que eu quero ÷ tudo que pode acontecer.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "6 faces, quero 1"
+       ],
+       [
+        "2. Equação em letras",
+        "P = F ÷ T"
+       ],
+       [
+        "3. Achar cada letra",
+        "F = 1; T = 6"
+       ],
+       [
+        "4. Substituir",
+        "1/6"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Num dado, chance de sair número par?",
+    "opcoes": [
+     "3/6 = 1/2",
+     "1/6",
+     "2/6",
+     "1/3"
+    ],
+    "certa": "3/6 = 1/2",
+    "resposta": "Pares: 2, 4, 6. São 3 de 6."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-jun-gra-01",
+  "materia": "Matemática",
+  "tema": "Grandezas e Medidas",
+  "enunciado": "Num mapa na escala 1 : 200 000, duas cidades estão a 6 cm uma da outra, em linha reta. A estrada que liga as duas é 25% mais longa que essa linha reta, por causa das curvas. Qual é o comprimento real da estrada?",
+  "A": "12 km",
+  "B": "3 km",
+  "C": "15 km",
+  "D": "150 km",
+  "E": "9 km",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "6 cm × 200 000 = 1 200 000 cm = 12 km; × 1,25 = 15 km. C. A = esqueceu os 25%; B = 25% de 12; D = erro de unidade (× 10); E = 12 − 25% de 12.",
+   "ideia": "Junta escala e porcentagem: primeiro a escala dá a linha reta real, 6 × 200 000 cm = 12 km. Depois a estrada é 25% maior: 12 × 1,25 = 15 km.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "porcentagem",
+        "nome": "Escala",
+        "formula": "real = mapa × denominador"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Porcentagem",
+        "formula": "parte = % ÷ 100 × todo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Escala",
+        "1 : 200 000"
+       ],
+       [
+        "No mapa",
+        "6 cm"
+       ],
+       [
+        "Estrada",
+        "25% mais longa"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o comprimento da estrada.\nE = R × 1,25 (estrada = reta real + 25%)\nPor que × 1,25? Aumentar 25% é ficar com 100% + 25% = 125% do valor.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "E",
+        "estrada (o que a questão quer)"
+       ],
+       [
+        "R",
+        "linha reta real"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando R: o seu jeito",
+     "texto": "Parece certo aplicar os 25% nos 6 cm e deixar em cm. Mas primeiro passe para o tamanho real.\nR = 6 × 200 000 = 1 200 000 cm\n1 200 000 cm ÷ 100 000 = 12 km"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "E = 12 × 1,25 = 15 km\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "R",
+        "12 km"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: escala + aumento em % → primeiro o tamanho real pela escala, depois o aumento (× 1,porcentagem).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1:200 000, 6 cm, +25%"
+       ],
+       [
+        "2. Equação em letras",
+        "E = R × 1,25"
+       ],
+       [
+        "3. Achar cada letra",
+        "R = 12 km"
+       ],
+       [
+        "4. Substituir",
+        "12 × 1,25 = 15"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Escala 1 : 100 000, 3 cm no mapa. Distância real?",
+    "opcoes": [
+     "3 km",
+     "30 km",
+     "300 m",
+     "0,3 km"
+    ],
+    "certa": "3 km",
+    "resposta": "3 × 100 000 cm = 300 000 cm = 3 km."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-jun-gra-02",
+  "materia": "Matemática",
+  "tema": "Grandezas e Medidas",
+  "enunciado": "Uma família gasta 15 m³ de água por mês e quer reduzir esse gasto em 20%. Considerando um mês de 30 dias e que 1 m³ tem 1 000 litros, quantos litros de água a família precisa economizar, em média, por dia?",
+  "A": "3 L",
+  "B": "10 L",
+  "C": "1 000 L",
+  "D": "300 L",
+  "E": "100 L",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "0,2 × 15 = 3 m³ = 3 000 L; 3 000 ÷ 30 = 100 L. E. A = 3 m³ lido como litros; B = 3 000 ÷ 300; C = 1 m³; D = 3 000 ÷ 10.",
+   "ideia": "Junta porcentagem e unidades: 20% de 15 m³ são 3 m³ no mês, ou 3 000 litros. Dividindo por 30 dias, 100 litros por dia.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "porcentagem",
+        "nome": "Porcentagem",
+        "formula": "parte = % ÷ 100 × todo"
+       },
+       {
+        "figura": "caixa",
+        "nome": "Volume",
+        "formula": "1 m³ = 1 000 litros"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Gasto",
+        "15 m³ por mês"
+       ],
+       [
+        "Redução",
+        "20%"
+       ],
+       [
+        "Mês",
+        "30 dias"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer os litros por dia.\nD = L ÷ 30 (por dia = litros economizados no mês ÷ 30)\nPor que dividir por 30? A economia é do mês inteiro. Por dia é a fatia de cada um dos 30 dias.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "D",
+        "litros por dia (o que a questão quer)"
+       ],
+       [
+        "L",
+        "litros economizados no mês"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando L: o seu jeito",
+     "texto": "Parece certo parar em 3, que é 20% de 15. Mas são 3 m³, não 3 litros.\n20% de 15 = 0,2 × 15 = 3 m³\nL = 3 × 1 000 = 3 000 litros"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "D = 3 000 ÷ 30 = 100 litros\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "L",
+        "3 000 L"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: porcentagem de um volume em m³ e pede litros → % primeiro, depois × 1 000, depois divida pelos dias.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "15 m³, 20%, 30 dias"
+       ],
+       [
+        "2. Equação em letras",
+        "D = L ÷ 30"
+       ],
+       [
+        "3. Achar cada letra",
+        "L = 3 000"
+       ],
+       [
+        "4. Substituir",
+        "3 000 ÷ 30 = 100"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "2 m³ são quantos litros?",
+    "opcoes": [
+     "2 000 L",
+     "200 L",
+     "20 L",
+     "2 L"
+    ],
+    "certa": "2 000 L",
+    "resposta": "1 m³ = 1 000 L."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-jun-est-01",
+  "materia": "Matemática",
+  "tema": "Estatística",
+  "enunciado": "Em 4 provas, um aluno tirou 6, 7, 8 e 7. Por causa de um erro na correção, o professor decidiu aumentar cada nota em 10%. Qual é a nova média do aluno?",
+  "A": "7,7",
+  "B": "7,1",
+  "C": "8",
+  "D": "17",
+  "E": "7",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "Média = 28/4 = 7; × 1,1 = 7,7. A. B = somou 0,1 em vez de 10%; C = arredondou; D = 7 + 10; E = esqueceu o aumento.",
+   "ideia": "Junta média e porcentagem: se todas as notas sobem 10%, a média também sobe 10%. A média era 7, então vira 7 × 1,1 = 7,7.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "media",
+        "nome": "Média",
+        "formula": "soma ÷ quantos são"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Porcentagem",
+        "formula": "parte = % ÷ 100 × todo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Notas",
+        "6, 7, 8, 7"
+       ],
+       [
+        "Aumento",
+        "10% em cada"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a nova média.\nN = M × 1,1 (nova média = média antiga + 10%)\nPor que aplicar na média? Se cada nota cresce 10%, a soma cresce 10% e a média também.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "N",
+        "nova média (o que a questão quer)"
+       ],
+       [
+        "M",
+        "média antiga"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando M: o seu jeito",
+     "texto": "Parece certo somar 10 pontos. Mas 10% de 7 é só 0,7.\nM = (6 + 7 + 8 + 7) ÷ 4 = 28 ÷ 4 = 7"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "N = 7 × 1,1 = 7,7\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "M",
+        "7"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: todos os valores mudam na mesma porcentagem → a média muda na mesma porcentagem.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "4 notas, +10%"
+       ],
+       [
+        "2. Equação em letras",
+        "N = M × 1,1"
+       ],
+       [
+        "3. Achar cada letra",
+        "M = 7"
+       ],
+       [
+        "4. Substituir",
+        "7 × 1,1 = 7,7"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Média 8. Todas as notas sobem 25%. Nova média?",
+    "opcoes": [
+     "10",
+     "8,25",
+     "33",
+     "9"
+    ],
+    "certa": "10",
+    "resposta": "8 × 1,25 = 10."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-jun-est-02",
+  "materia": "Matemática",
+  "tema": "Estatística",
+  "enunciado": "Numa viagem de dois dias, um carro rodou 100 km gastando 10 litros no primeiro dia e 300 km gastando 20 litros no segundo. O motorista calculou o consumo de cada dia e tirou a média entre os dois valores, mas o resultado não bate com o consumo médio real da viagem. Qual é o consumo médio real da viagem inteira, aproximadamente?",
+  "A": "12,5 km/L",
+  "B": "13,3 km/L",
+  "C": "15 km/L",
+  "D": "10 km/L",
+  "E": "400 km/L",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "400 ÷ 30 ≈ 13,3 km/L. B. A = média de 10 e 15 (o erro do motorista); C = o 2º dia; D = o 1º dia; E = só a distância.",
+   "ideia": "Junta média e grandezas: consumo médio é distância total ÷ litros totais, e não a média dos consumos. São 400 km ÷ 30 L ≈ 13,3 km/L.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "media",
+        "nome": "Média",
+        "formula": "soma ÷ quantos são"
+       },
+       {
+        "figura": "carro",
+        "nome": "Consumo",
+        "formula": "km/L = km ÷ litros"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Dia 1",
+        "100 km, 10 L"
+       ],
+       [
+        "Dia 2",
+        "300 km, 20 L"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o consumo médio real.\nC = K ÷ L (consumo = km totais ÷ litros totais)\nPor que totais? O dia 2 gastou o dobro de combustível. A média simples trata os dois dias como iguais, e eles não são.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "C",
+        "consumo médio (o que a questão quer)"
+       ],
+       [
+        "K",
+        "km totais"
+       ],
+       [
+        "L",
+        "litros totais"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando K (km totais)",
+     "texto": "K = 100 + 300 = 400 km"
+    },
+    {
+     "titulo": "Achando L: o seu jeito",
+     "texto": "Parece certo fazer (10 + 15) ÷ 2 = 12,5 km/L. Esse é o erro do motorista: média de médias.\nL = 10 + 20 = 30 litros"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "C = 400 ÷ 30 ≈ 13,3 km/L\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "K",
+        "400 km"
+       ],
+       [
+        "L",
+        "30 L"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: média de uma taxa (km/L, km/h) em partes diferentes → some os de cima e os de baixo; nunca tire a média das taxas.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "100 km/10 L; 300 km/20 L"
+       ],
+       [
+        "2. Equação em letras",
+        "C = K ÷ L"
+       ],
+       [
+        "3. Achar cada letra",
+        "K = 400; L = 30"
+       ],
+       [
+        "4. Substituir",
+        "400 ÷ 30 ≈ 13,3"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Média de consumo certa é:",
+    "opcoes": [
+     "km totais ÷ litros totais",
+     "média dos km/L de cada dia",
+     "maior km/L",
+     "km ÷ dias"
+    ],
+    "certa": "km totais ÷ litros totais",
+    "resposta": "Os dias pesam diferente: cada um gastou um tanto de litros."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-jun-equ-01",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "Numa liquidação, uma loja dá 20% de desconto em tudo. Uma cliente pagou R$ 96,00 num tênis, já com o desconto. Qual era o preço do tênis antes do desconto?",
+  "A": "R$ 115,20",
+  "B": "R$ 76,80",
+  "C": "R$ 116,00",
+  "D": "R$ 120,00",
+  "E": "R$ 100,00",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "0,8P = 96 → P = 120. D. A = 96 + 20% de 96 (o erro clássico); B = 96 − 20%; C = 96 + 20; E = palpite.",
+   "ideia": "Junta equação e porcentagem: com 20% de desconto, ela pagou 80% do preço. Então 0,8 × P = 96, e P = 96 ÷ 0,8 = 120.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "porcentagem",
+        "nome": "Porcentagem",
+        "formula": "parte = % ÷ 100 × todo"
+       },
+       {
+        "figura": "grafico",
+        "nome": "Equação",
+        "formula": "faça a mesma conta dos dois lados"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Desconto",
+        "20%"
+       ],
+       [
+        "Pagou",
+        "R$ 96"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o preço antes do desconto.\nP = 96 ÷ F (preço = o que pagou ÷ fração que pagou)\nPor que dividir? Ela pagou uma fração do preço: F × P = 96. Para achar P, desfaz o vezes.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "P",
+        "preço original (o que a questão quer)"
+       ],
+       [
+        "F",
+        "fração do preço que ela pagou"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando F: o seu jeito",
+     "texto": "Parece certo somar 20% de 96: dá 115,20. Mas os 20% eram do preço ANTIGO, não dos 96.\nF = 100% − 20% = 80% = 0,8"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "P = 96 ÷ 0,8 = 120\nLetra D. Confere: 20% de 120 = 24, e 120 − 24 = 96.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "F",
+        "0,8"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: preço \"depois do desconto\" e pede o de antes → divida pelo que sobrou (1 − desconto); nunca some a % no preço novo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "20%, R$ 96"
+       ],
+       [
+        "2. Equação em letras",
+        "P = 96 ÷ F"
+       ],
+       [
+        "3. Achar cada letra",
+        "F = 0,8"
+       ],
+       [
+        "4. Substituir",
+        "96 ÷ 0,8 = 120"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Pagou R$ 45 com 10% de desconto. Preço antes?",
+    "opcoes": [
+     "R$ 50",
+     "R$ 49,50",
+     "R$ 55",
+     "R$ 40,50"
+    ],
+    "certa": "R$ 50",
+    "resposta": "0,9 × P = 45, P = 50."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-jun-equ-02",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "Na escola de Ana, a média do bimestre tem 3 provas, e a terceira vale peso 2. Ana tirou 5 e 6 nas duas primeiras. Para fechar com média 7, quanto ela precisa tirar na terceira prova?",
+  "A": "10",
+  "B": "7",
+  "C": "8,5",
+  "D": "9",
+  "E": "17",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "(5 + 6 + 2x)/4 = 7 → 2x = 17 → x = 8,5. C. A = ignorou o peso ((5 + 6 + x)/3 = 7); B = a média desejada; D = palpite; E = parou em 2x.",
+   "ideia": "Junta média e equação: com a terceira valendo 2, a conta é (5 + 6 + 2x) ÷ 4 = 7. Então 11 + 2x = 28, e x = 8,5.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "media",
+        "nome": "Média",
+        "formula": "soma ÷ quantos são"
+       },
+       {
+        "figura": "grafico",
+        "nome": "Equação",
+        "formula": "faça a mesma conta dos dois lados"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Notas",
+        "5 e 6"
+       ],
+       [
+        "3ª prova",
+        "peso 2"
+       ],
+       [
+        "Meta",
+        "média 7"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a 3ª nota.\n(5 + 6 + 2x) ÷ 4 = 7 (média com peso: a 3ª conta 2 vezes; divide pela soma dos pesos)\nPor que dividir por 4? Os pesos são 1 + 1 + 2 = 4. A nota de peso 2 entra duas vezes na soma.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "x",
+        "3ª nota (o que a questão quer)"
+       ],
+       [
+        "S",
+        "quanto a soma com pesos precisa dar"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando S: o seu jeito",
+     "texto": "Parece certo dividir por 3, porque são 3 provas. Mas com peso a 3ª conta 2 vezes.\nS = 7 × 4 = 28"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "5 + 6 + 2x = 28\n2x = 17\nx = 8,5\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "S",
+        "28"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: média com peso e pede a nota que falta → média × soma dos pesos, menos o que já tem, dividido pelo peso da que falta.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "5, 6, peso 2, média 7"
+       ],
+       [
+        "2. Equação em letras",
+        "(11 + 2x) ÷ 4 = 7"
+       ],
+       [
+        "3. Achar cada letra",
+        "S = 28"
+       ],
+       [
+        "4. Substituir",
+        "x = 8,5"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Média com peso: o peso 2 conta como:",
+    "opcoes": [
+     "A nota 2 vezes",
+     "Somar 2",
+     "Metade",
+     "Nada"
+    ],
+    "certa": "A nota 2 vezes",
+    "resposta": "E o divisor soma os pesos."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-jun-fun-01",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "Um vendedor recebe um salário fixo de R$ 1 500,00 mais 4% de tudo o que vende no mês. Neste mês, ele quer receber R$ 2 300,00. Quanto ele precisa vender?",
+  "A": "R$ 800",
+  "B": "R$ 2 000",
+  "C": "R$ 57 500",
+  "D": "R$ 32 000",
+  "E": "R$ 20 000",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "1 500 + 0,04V = 2 300 → V = 800/0,04 = 20 000. E. A = só a comissão; B = 800 ÷ 0,4; C = 2 300 ÷ 0,04 (esqueceu o fixo); D = palpite.",
+   "ideia": "Junta função afim e porcentagem: salário = 1 500 + 0,04 × vendas. Os R$ 800 que faltam vêm da comissão, então 0,04 × V = 800 e V = 20 000.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Função afim",
+        "formula": "y = fixo + taxa × x"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Porcentagem",
+        "formula": "parte = % ÷ 100 × todo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Fixo",
+        "R$ 1 500"
+       ],
+       [
+        "Comissão",
+        "4% das vendas"
+       ],
+       [
+        "Quer ganhar",
+        "R$ 2 300"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer as vendas V.\nV = C ÷ 0,04 (vendas = comissão necessária ÷ 4%)\nPor que ÷ 0,04? A comissão é 4% das vendas: 0,04 × V = C. Desfaz o vezes.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "V",
+        "vendas (o que a questão quer)"
+       ],
+       [
+        "C",
+        "comissão que falta"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando C: o seu jeito",
+     "texto": "Parece certo usar os 2 300 inteiros: 2 300 ÷ 0,04 = 57 500. Mas o fixo de 1 500 já vem sem vender nada.\nC = 2 300 − 1 500 = 800"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "V = 800 ÷ 0,04 = 20 000\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "C",
+        "800"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: salário = fixo + % das vendas → tire o fixo antes e divida o resto pela porcentagem.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1 500 + 4%, 2 300"
+       ],
+       [
+        "2. Equação em letras",
+        "V = C ÷ 0,04"
+       ],
+       [
+        "3. Achar cada letra",
+        "C = 800"
+       ],
+       [
+        "4. Substituir",
+        "800 ÷ 0,04 = 20 000"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Fixo R$ 1 000 + 5% das vendas. Vendeu R$ 10 000. Salário?",
+    "opcoes": [
+     "R$ 1 500",
+     "R$ 1 050",
+     "R$ 6 000",
+     "R$ 1 005"
+    ],
+    "certa": "R$ 1 500",
+    "resposta": "5% de 10 000 = 500; 1 000 + 500."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-jun-fun-02",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "Uma operadora oferece dois planos de celular. No plano A, paga-se R$ 50,00 por mês mais R$ 0,50 por minuto. No plano B, não há valor fixo, mas cada minuto custa R$ 0,90. Com quantos minutos por mês os dois planos custam o mesmo valor? (Acima disso, o plano A fica mais barato.)",
+  "A": "100",
+  "B": "125",
+  "C": "55",
+  "D": "62,5",
+  "E": "250",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "50 + 0,5m = 0,9m → 0,4m = 50 → m = 125. B. A = palpite; C = 50 ÷ 0,9 ≈ 55; D = 50 ÷ 0,8; E = o dobro.",
+   "ideia": "Junta funções e equação: os dois planos custam igual quando 50 + 0,5m = 0,9m, ou seja, m = 125. Depois disso, o B cresce mais rápido e o A fica mais barato.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Função afim",
+        "formula": "y = fixo + preço por minuto × m"
+       },
+       {
+        "figura": "grafico",
+        "nome": "Equação",
+        "formula": "faça a mesma conta dos dois lados"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Plano A",
+        "50 + 0,50 por minuto"
+       ],
+       [
+        "Plano B",
+        "0,90 por minuto"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer onde A fica mais barato.\nm = 50 ÷ D (minutos = fixo de A ÷ diferença de preço por minuto)\nPor que dividir pela diferença? A cada minuto, o B fica 0,40 mais caro que o A. O A precisa desses minutos para \"pagar\" os 50 do fixo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "m",
+        "minutos do empate (o que a questão quer)"
+       ],
+       [
+        "D",
+        "diferença de preço por minuto"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando D: o seu jeito",
+     "texto": "Parece certo dividir 50 por 0,90. Mas o A também paga por minuto.\nD = 0,90 − 0,50 = 0,40"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "m = 50 ÷ 0,40 = 125 minutos\nLetra B. Confere: A = 50 + 62,5 = 112,50; B = 0,9 × 125 = 112,50.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "D",
+        "0,40"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dois planos, um com fixo e outro sem → empate = fixo ÷ diferença das taxas; depois do empate, ganha o de taxa menor.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "50 + 0,5; 0,9"
+       ],
+       [
+        "2. Equação em letras",
+        "m = 50 ÷ D"
+       ],
+       [
+        "3. Achar cada letra",
+        "D = 0,40"
+       ],
+       [
+        "4. Substituir",
+        "50 ÷ 0,4 = 125"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Plano X: 20 + 1 por min. Plano Y: 3 por min. Empatam em:",
+    "opcoes": [
+     "10 min",
+     "20 min",
+     "5 min",
+     "7 min"
+    ],
+    "certa": "10 min",
+    "resposta": "20 + m = 3m → m = 10."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-jun-pla-01",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um terreno retangular mede 20 m por 30 m. O dono comprou uma faixa dos vizinhos e cada lado do terreno aumentou 10%. Em quantos por cento aumentou a área do terreno?",
+  "A": "21%",
+  "B": "20%",
+  "C": "10%",
+  "D": "100%",
+  "E": "11%",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "Área nova = 22 × 33 = 726; antiga 600; 726/600 = 1,21 → +21%. A. B = 10% + 10%; C = só um lado; D e E = palpites.",
+   "ideia": "Junta área e porcentagem: cada lado vira 1,1 vez o antigo, e a área é lado × lado. Então a área vira 1,1 × 1,1 = 1,21 vez a antiga, ou 21% a mais.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "retangulo",
+        "nome": "Área do retângulo",
+        "formula": "A = base × altura"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Porcentagem",
+        "formula": "parte = % ÷ 100 × todo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Lados",
+        "20 m e 30 m"
+       ],
+       [
+        "Aumento",
+        "10% em cada lado"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o aumento da área.\nF = 1,1 × 1,1 (fator da área = fator de um lado × fator do outro)\nPor que multiplicar os fatores? Área é lado vezes lado. Se cada lado ganha 10%, a área ganha 10% sobre 10%.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "F",
+        "quantas vezes a área cresceu (o que a questão quer)"
+       ],
+       [
+        "a",
+        "fator de cada lado"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando a: o seu jeito",
+     "texto": "Parece certo somar: 10% + 10% = 20%. Mas o aumento de um lado multiplica o do outro.\na = 1 + 10% = 1,1"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "F = 1,1 × 1,1 = 1,21\n1,21 = 100% + 21%\nLetra A. Confere: 22 × 33 = 726 e 726 ÷ 600 = 1,21.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "a",
+        "1,1"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: lados aumentam X% e pede a área → multiplique os fatores (1,X × 1,X); nunca some as porcentagens.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "20 × 30, +10%"
+       ],
+       [
+        "2. Equação em letras",
+        "F = 1,1 × 1,1"
+       ],
+       [
+        "3. Achar cada letra",
+        "a = 1,1"
+       ],
+       [
+        "4. Substituir",
+        "1,21 → 21%"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um quadrado tem os lados dobrados. A área fica:",
+    "opcoes": [
+     "4 vezes maior",
+     "2 vezes maior",
+     "Igual",
+     "8 vezes maior"
+    ],
+    "certa": "4 vezes maior",
+    "resposta": "2 × 2 = 4."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-jun-pla-02",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um sitiante tem 40 m de tela e quer cercar uma horta retangular, usando toda a tela nos 4 lados. Ele quer a maior área possível. Qual é essa área máxima?",
+  "A": "400 m²",
+  "B": "96 m²",
+  "C": "40 m²",
+  "D": "100 m²",
+  "E": "200 m²",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "2x + 2y = 40 → y = 20 − x; A = x(20 − x), máximo em x = 10 → 100 m². D. A = 20 × 20 (usou metade do perímetro como lado); B = 8 × 12, menor; C = o perímetro; E = 10 × 20.",
+   "ideia": "Junta área e função: com perímetro 40, os lados somam 20, e a área é x × (20 − x). Essa função tem o máximo no meio, em x = 10: um quadrado de 10 × 10 = 100 m².",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "retangulo",
+        "nome": "Área",
+        "formula": "A = base × altura"
+       },
+       {
+        "figura": "grafico",
+        "nome": "Função do 2º grau",
+        "formula": "o máximo fica no meio das raízes"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Tela",
+        "40 m"
+       ],
+       [
+        "Formato",
+        "retângulo"
+       ],
+       [
+        "Quer",
+        "a maior área"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a área máxima.\nA = x × (20 − x) (área = um lado × o outro, que somam 20)\nPor que 20 − x? Os 4 lados somam 40, então um lado e o outro somam 20. Se um é x, o outro é 20 − x.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "A",
+        "área máxima (o que a questão quer)"
+       ],
+       [
+        "x",
+        "o lado que dá a maior área"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando x: o seu jeito",
+     "texto": "Parece certo testar 8 e 12: dá 96. Mas 9 × 11 = 99 e 10 × 10 = 100: cresce até o meio.\nA função x × (20 − x) vale zero em x = 0 e x = 20. O máximo fica no meio: x = 10"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "A = 10 × (20 − 10) = 10 × 10 = 100 m²\nLetra D. O retângulo de maior área é um quadrado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "x",
+        "10 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: perímetro fixo e pede área máxima → é um quadrado: lado = perímetro ÷ 4.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "40 m de tela"
+       ],
+       [
+        "2. Equação em letras",
+        "A = x(20 − x)"
+       ],
+       [
+        "3. Achar cada letra",
+        "x = 10"
+       ],
+       [
+        "4. Substituir",
+        "10 × 10 = 100"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Com 24 m de cerca, a maior área retangular é:",
+    "opcoes": [
+     "36 m²",
+     "144 m²",
+     "32 m²",
+     "24 m²"
+    ],
+    "certa": "36 m²",
+    "resposta": "Quadrado de lado 6: 6 × 6."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-jun-esp-01",
+  "materia": "Matemática",
+  "tema": "Geometria Espacial",
+  "enunciado": "Um arquiteto fez a maquete de uma caixa d'água na escala 1 : 10: cada medida da maquete é 10 vezes menor que a real. A maquete, cheia, guarda 2 litros. Quantos litros guarda a caixa d'água de verdade?",
+  "A": "20 L",
+  "B": "200 L",
+  "C": "2 000 L",
+  "D": "20 000 L",
+  "E": "2 L",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "Fator de volume = 10³ = 1 000; 2 × 1 000 = 2 000 L. C. A = usou × 10 (escala de comprimento); B = × 100 (escala de área); D = × 10 000; E = sem escala.",
+   "ideia": "Junta volume e escala: o volume tem 3 medidas (comprimento, largura e altura), e cada uma é 10 vezes maior. Então o volume é 10 × 10 × 10 = 1 000 vezes maior: 2 000 litros.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "caixa",
+        "nome": "Volume",
+        "formula": "V = comprimento × largura × altura"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Escala",
+        "formula": "medida real = maquete × 10"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Escala",
+        "1 : 10"
+       ],
+       [
+        "Maquete",
+        "2 litros"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o volume real.\nV = 2 × F (volume real = volume da maquete × fator de volume)\nPor que um fator de volume? Volume multiplica três medidas. Cada uma cresce 10 vezes.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "V",
+        "volume real (o que a questão quer)"
+       ],
+       [
+        "F",
+        "quantas vezes o volume cresce"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando F: o seu jeito",
+     "texto": "Parece certo multiplicar por 10, a escala. Mas a escala é de cada medida, e o volume tem três.\nF = 10 × 10 × 10 = 1 000"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "V = 2 × 1 000 = 2 000 litros\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "F",
+        "1 000"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: escala e pede volume → fator × fator × fator (o cubo); área → fator × fator.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1:10, 2 L"
+       ],
+       [
+        "2. Equação em letras",
+        "V = 2 × F"
+       ],
+       [
+        "3. Achar cada letra",
+        "F = 1 000"
+       ],
+       [
+        "4. Substituir",
+        "2 × 1 000 = 2 000"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Escala 1 : 2 numa caixa. O volume real é:",
+    "opcoes": [
+     "8 vezes o da maquete",
+     "2 vezes",
+     "4 vezes",
+     "6 vezes"
+    ],
+    "certa": "8 vezes o da maquete",
+    "resposta": "2 × 2 × 2 = 8."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-jun-esp-02",
+  "materia": "Matemática",
+  "tema": "Geometria Espacial",
+  "enunciado": "Uma piscina em forma de bloco retangular tem 10 m de comprimento, 5 m de largura e 2 m de profundidade. Ela é enchida até 80% da profundidade. Considerando que 1 m³ tem 1 000 litros, quantos litros de água ela recebe?",
+  "A": "100 000 L",
+  "B": "80 L",
+  "C": "8 000 L",
+  "D": "800 000 L",
+  "E": "80 000 L",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "10 × 5 × 2 = 100 m³; 80% = 80 m³ = 80 000 L. E. A = piscina cheia; B = 80 m³ como litros; C e D = erros de zeros.",
+   "ideia": "Junta volume, porcentagem e unidades: a água sobe só até 80% dos 2 m, ou 1,6 m. O volume é 10 × 5 × 1,6 = 80 m³, que são 80 000 litros.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "caixa",
+        "nome": "Volume",
+        "formula": "V = comprimento × largura × altura"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Porcentagem",
+        "formula": "parte = % ÷ 100 × todo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Medidas",
+        "10 m × 5 m × 2 m"
+       ],
+       [
+        "Cheia até",
+        "80% da profundidade"
+       ],
+       [
+        "1 m³",
+        "1 000 L"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer os litros de água.\nL = V × 1 000 (litros = volume de água em m³ × 1 000)\nPor que × 1 000? Cada metro cúbico tem 1 000 litros.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "L",
+        "litros (o que a questão quer)"
+       ],
+       [
+        "V",
+        "volume de água, em m³"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando V: o seu jeito",
+     "texto": "Parece certo usar a piscina cheia: 100 m³. Mas a água chega só a 80%.\nAltura da água: 0,8 × 2 = 1,6 m\nV = 10 × 5 × 1,6 = 80 m³"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "L = 80 × 1 000 = 80 000 litros\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "V",
+        "80 m³"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: recipiente cheio até X% → aplique a % na altura (ou no volume) e só depois passe m³ para litros.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "10 × 5 × 2, 80%"
+       ],
+       [
+        "2. Equação em letras",
+        "L = V × 1 000"
+       ],
+       [
+        "3. Achar cada letra",
+        "V = 80 m³"
+       ],
+       [
+        "4. Substituir",
+        "80 × 1 000 = 80 000"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Caixa de 2 m × 1 m × 1 m, cheia pela metade. Litros?",
+    "opcoes": [
+     "1 000 L",
+     "2 000 L",
+     "1 L",
+     "500 L"
+    ],
+    "certa": "1 000 L",
+    "resposta": "2 m³ ÷ 2 = 1 m³ = 1 000 L."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-jun-com-01",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Numa caixa há 3 bolas vermelhas e 2 azuis, todas iguais ao toque. Uma pessoa tira 2 bolas, uma depois da outra, sem devolver a primeira. Qual é a probabilidade de as duas serem vermelhas?",
+  "A": "36%",
+  "B": "30%",
+  "C": "60%",
+  "D": "15%",
+  "E": "40%",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "3/5 × 2/4 = 6/20 = 0,30 = 30%. B. A = com devolução (3/5 × 3/5); C = só a 1ª; D = metade de 30; E = só azul.",
+   "ideia": "Junta probabilidade e porcentagem: a 1ª vermelha tem chance 3/5; sem devolver, a 2ª tem 2/4. As duas juntas: 3/5 × 2/4 = 6/20 = 30%.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Probabilidade",
+        "formula": "chance = quero ÷ tudo"
+       },
+       {
+        "figura": "contagem",
+        "nome": "E (uma e depois a outra)",
+        "formula": "multiplique as chances"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Vermelhas",
+        "3"
+       ],
+       [
+        "Azuis",
+        "2"
+       ],
+       [
+        "Tira",
+        "2 bolas, sem devolver"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a chance de 2 vermelhas.\nP = P1 × P2 (chance das duas = chance da 1ª × chance da 2ª)\nPor que multiplicar? A 2ª só conta se a 1ª deu certo. É uma fatia de uma fatia.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "P",
+        "chance das duas (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "chance da 1ª ser vermelha"
+       ],
+       [
+        "P2",
+        "chance da 2ª, depois da 1ª"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (1ª bola)",
+     "texto": "3 vermelhas em 5: P1 = 3/5"
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo usar 3/5 de novo (dá 36%). Mas a 1ª bola não voltou: sobram 4, e só 2 vermelhas.\nP2 = 2/4"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "P = 3/5 × 2/4 = 6/20\n6 ÷ 20 = 0,30 = 30%\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "3/5"
+       ],
+       [
+        "P2",
+        "2/4"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"sem devolver\" → na 2ª retirada, tire 1 do total e 1 do que você quer; depois multiplique as chances.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "3 V, 2 A, sem devolver"
+       ],
+       [
+        "2. Equação em letras",
+        "P = P1 × P2"
+       ],
+       [
+        "3. Achar cada letra",
+        "P1 = 3/5; P2 = 2/4"
+       ],
+       [
+        "4. Substituir",
+        "6/20 = 30%"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Sem devolver muda a chance da 2ª porque:",
+    "opcoes": [
+     "A caixa tem uma bola a menos",
+     "As bolas mudam de cor",
+     "Nada muda",
+     "Sempre dobra"
+    ],
+    "certa": "A caixa tem uma bola a menos",
+    "resposta": "Ficam 4 bolas, 2 vermelhas."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-jun-com-02",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "No fim de uma reunião, cada pessoa apertou a mão de todas as outras uma única vez. Ao todo, foram 45 apertos de mão. Quantas pessoas estavam na reunião?",
+  "A": "9",
+  "B": "45",
+  "C": "10",
+  "D": "90",
+  "E": "15",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "n(n − 1)/2 = 45 → n(n − 1) = 90 → n = 10. C. A = 9 × 8 ÷ 2 = 36; B = o número de apertos; D = esqueceu o ÷ 2; E = palpite.",
+   "ideia": "Junta contagem e equação: com n pessoas, cada uma aperta n − 1 mãos, e cada aperto é contado duas vezes. Então n × (n − 1) ÷ 2 = 45, e n = 10 (10 × 9 ÷ 2 = 45).",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Princípio multiplicativo",
+        "formula": "opções de cada escolha multiplicadas"
+       },
+       {
+        "figura": "grafico",
+        "nome": "Equação",
+        "formula": "faça a mesma conta dos dois lados"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Apertos",
+        "45"
+       ],
+       [
+        "Regra",
+        "cada par aperta uma vez"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o número de pessoas n.\nn × (n − 1) ÷ 2 = 45 (pares de pessoas = apertos)\nDe onde vem a fórmula? Com 4 pessoas: cada uma aperta 3 mãos, 4 × 3 = 12, mas o aperto de A com B é o mesmo de B com A: 12 ÷ 2 = 6.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "n",
+        "pessoas (o que a questão quer)"
+       ],
+       [
+        "D",
+        "n × (n − 1), o dobro dos apertos"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando D: o seu jeito",
+     "texto": "Parece certo responder 45: um aperto por pessoa. Mas cada aperto envolve 2 pessoas.\nD = 45 × 2 = 90"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "n × (n − 1) = 90\nQue dois números seguidos multiplicados dão 90? 10 × 9 = 90\nn = 10\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "D",
+        "90"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"todos com todos, uma vez\" (apertos, jogos de um turno) → n × (n − 1) ÷ 2.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "45 apertos"
+       ],
+       [
+        "2. Equação em letras",
+        "n(n − 1) ÷ 2 = 45"
+       ],
+       [
+        "3. Achar cada letra",
+        "D = 90"
+       ],
+       [
+        "4. Substituir",
+        "n = 10"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "4 pessoas, todas se cumprimentam. Apertos?",
+    "opcoes": [
+     "6",
+     "12",
+     "4",
+     "16"
+    ],
+    "certa": "6",
+    "resposta": "4 × 3 ÷ 2 = 6."
+   }
+  }
+ }
+]

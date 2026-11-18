@@ -48,6 +48,7 @@ export function etapaDaQuestao(q: QuestaoClassificavel): Etapa {
   if (nivel === 'vestibular') return 'vestibular';
   if (isQuestaoEnem(q)) return 'enem';
   if (nivel === 'modelo_enem') return 'dificil';
+  if (nivel === 'juncao') return 'dificil'; // junção de conteúdos das escadas (18/11/2026)
   const grau = (q.nivel || q.dificuldade || '').toLowerCase();
   if (grau === 'facil') return 'facil';
   if (grau === 'dificil') return 'dificil';

@@ -41,7 +41,7 @@ async function gravarQuestoesEscritas(questoes: QuestaoEscrita[]) {
       alternativaA: q.A, alternativaB: q.B, alternativaC: q.C, alternativaD: q.D, alternativaE: q.E,
       respostaCorreta: q.resposta, materia: q.materia, subtema: q.tema, tema: q.tema,
       // "acima" (nível ITA) é difícil para o resto do site, como em criar-provas-dia-2.ts.
-      dificuldade: q.nivel === 'acima' ? 'dificil' : q.nivel, nivel: q.nivel, origem: ORIGEM_ESCADA,
+      dificuldade: q.nivel === 'acima' || q.nivel === 'juncao' ? 'dificil' : q.nivel, nivel: q.nivel, origem: ORIGEM_ESCADA,
     };
     await prisma.question.upsert({ where: { id: q.id }, create: { id: q.id, ...dados }, update: dados });
     const conteudo = validarExplicacao(q.explicacao, q.materia)!;

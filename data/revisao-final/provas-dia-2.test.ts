@@ -202,7 +202,7 @@ describe('nível acima do dia 2', () => {
    matéria em data/revisao-final/escada, cada uma com o degrau em `nivel`. Mesma
    conferência das provas, sempre no jeito do robô. */
 const PASTA_ESCADA = join(process.cwd(), 'data/revisao-final/escada');
-const NIVEIS_ESCADA = ['facil', 'medio', 'dificil', 'acima'];
+const NIVEIS_ESCADA = ['facil', 'medio', 'dificil', 'juncao', 'acima'];
 describe('questões das provas em escada', () => {
   const arquivos = existsSync(PASTA_ESCADA) ? readdirSync(PASTA_ESCADA).filter((f) => f.endsWith('.json')) : [];
   const todas = arquivos.flatMap((f) => JSON.parse(readFileSync(join(PASTA_ESCADA, f), 'utf8')) as (Questao & { nivel?: string })[]);
