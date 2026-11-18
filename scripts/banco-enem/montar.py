@@ -84,7 +84,8 @@ def passos_aula(f):
     a = f['aula']
     # 1ª tela: as fórmulas que a questão usa, já prontas (Pablo, 17/11/2026).
     formulas = [{
-        'titulo': TITULO_FORMULAS,
+        # Português (18/11/2026): 'A regra desta questão' (TITULO_REGRAS), mesmo lugar.
+        'titulo': a.get('titulo_formulas', TITULO_FORMULAS),
         'texto': a.get('formulas_texto', 'Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.'),
         'visual': {'tipo': 'formulas', 'itens': [{'figura': fig, 'nome': nome, 'formula': conta} for fig, nome, conta in a['formulas']]},
     }] if a.get('formulas') else []
@@ -92,7 +93,8 @@ def passos_aula(f):
         *formulas,
         {'titulo': 'O que eu tenho', 'texto': a.get('tenho_texto', 'Primeiro, tire os números do enunciado.'),
          'visual': tabela('O que eu tenho', ['Informação', 'Valor'], a['tenho'])},
-        {'titulo': 'A equação em letras', 'texto': f"{a['quer']}\n{a['equacao']}\n{a['porque']}\nAgora é só achar cada letra.",
+        # Sem conta (Português): 'A regra em palavras' e as pistas no lugar das letras.
+        {'titulo': a.get('titulo_regra', 'A equação em letras'), 'texto': f"{a['quer']}\n{a['equacao']}\n{a['porque']}\n{a.get('agora', 'Agora é só achar cada letra.')}",
          'visual': tabela('As letras', ['Letra', 'O que é'], a['letras'])},
     ]
     for t in a['telas']:

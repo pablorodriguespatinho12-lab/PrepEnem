@@ -232,6 +232,8 @@ export const FIGURAS_FORMULA = [
   'cilindro', 'caixa', 'cone', 'esfera', 'porcentagem', 'grafico', 'contagem', 'media',
   // Física (17/11/2026, provas em escada)
   'carro', 'onda', 'termometro', 'lente', 'circuito',
+  // Português (18/11/2026)
+  'texto', 'fala', 'livro',
 ] as const;
 export type FiguraFormula = (typeof FIGURAS_FORMULA)[number];
 export interface VisualFormulas {
@@ -242,6 +244,8 @@ export interface VisualFormulas {
 const MAX_FORMULAS = 4;
 /* Título da 1ª tela no jeito do robô; a aula da questão procura por ele (montar.py usa o mesmo). */
 export const TITULO_FORMULAS = 'As fórmulas desta questão';
+/* O mesmo lugar em questão sem conta (Português, 18/11/2026): as regras prontas. */
+export const TITULO_REGRAS = 'A regra desta questão';
 export type Visual = VisualFormulas | VisualLegenda | VisualQuadro | VisualPalavra | VisualGrafico | VisualReta | VisualTransformacao | VisualTabela | VisualVetores | VisualCena | VisualRoda | VisualRetangulo | VisualFatias | VisualProcesso | VisualMolecula | VisualFigura | VisualDiagrama;
 
 const MAX_FUNCOES = 4;

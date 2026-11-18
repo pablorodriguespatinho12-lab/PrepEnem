@@ -11,7 +11,7 @@ import { desenhoDoTema } from '@/lib/aulas-desenho';
 import { TelaDesenho, TelaProporcoes, TelaSentido } from '@/components/simulado/telas-desenho';
 import { TelaEstaQuestao, TelaPasso, useAulaDaQuestao } from '@/components/simulado/resolver-esta-questao';
 import type { QuestaoTutor } from '@/components/tutor/explicacao-tutor';
-import { TITULO_FORMULAS } from '@/lib/visual/especificacao';
+import { TITULO_FORMULAS, TITULO_REGRAS } from '@/lib/visual/especificacao';
 
 const MathText = dynamic(() => import('@/components/math-text'), { ssr: false });
 
@@ -61,7 +61,7 @@ export function AulaDoTema({ tema, questao, className }: { tema: string | null |
   // Questão no jeito do robô (1º passo "As fórmulas desta questão", 17/11/2026): a aula
   // é só ela, as fórmulas e depois os passos. Pablo: "macete mesmo é entender a lógica
   // da questão; tira essas telas que sempre aparecem iguais".
-  const noMoldeDoRobo = passos[0]?.titulo === TITULO_FORMULAS;
+  const noMoldeDoRobo = [TITULO_FORMULAS, TITULO_REGRAS].includes(passos[0]?.titulo ?? '');
   const fimDaQuestao = noMoldeDoRobo ? passos.length - 1 : conceito.length + dados.length + antes.length + estaQuestao.length - 1;
   const telas: Tela[] = noMoldeDoRobo ? passos.map((p) => ({ rotulo: p.titulo, conteudo: <TelaPasso passo={p} /> })) : [
     ...conceito,

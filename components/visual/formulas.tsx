@@ -29,6 +29,9 @@ const FIGURAS: Record<FiguraFormula, () => JSX.Element> = {
   onda: () => <><path d="M4 36 Q13 12 22 36 T40 36 T58 36 T68 30" fill="none" stroke={SUJO} strokeWidth={3} /><path d="M13 58 H49 M13 54 V62 M49 54 V62" fill="none" stroke={TINTA} strokeWidth={2} /><Rot x={31} y={72}>λ</Rot></>,
   termometro: () => <><rect x={30} y={6} width={12} height={46} rx={6} fill={PAPEL} {...T} /><circle cx={36} cy={58} r={10} fill={SUJO} {...T} /><rect x={33} y={26} width={6} height={30} fill={SUJO} /><Rot x={58} y={30}>T</Rot></>,
   lente: () => <><path d="M36 8 Q48 36 36 64 Q24 36 36 8 Z" fill={LIMPO} {...T} /><line x1={2} y1={36} x2={70} y2={36} stroke={CORTE} strokeDasharray="4 3" strokeWidth={2} /><circle cx={60} cy={36} r={3} fill={TINTA} /><Rot x={60} y={52}>f</Rot></>,
+  texto: () => <><rect x={14} y={8} width={44} height={58} fill={PAPEL} {...T} />{[20, 30, 40, 50].map((y) => <line key={y} x1={22} y1={y} x2={y === 50 ? 40 : 50} y2={y} stroke={SUJO} strokeWidth={3} />)}</>,
+  fala: () => <><path d="M8 12 H64 V46 H30 L18 60 V46 H8 Z" fill={LIMPO} {...T} /><Rot x={36} y={34}>“ ”</Rot></>,
+  livro: () => <><path d="M36 18 C26 12 14 12 6 16 V60 C14 56 26 56 36 62 C46 56 58 56 66 60 V16 C58 12 46 12 36 18 Z" fill={PAPEL} {...T} /><line x1={36} y1={18} x2={36} y2={62} stroke={TINTA} strokeWidth={2} /></>,
   circuito: () => <><rect x={10} y={14} width={52} height={44} fill="none" {...T} /><rect x={24} y={8} width={24} height={12} fill={SECO} {...T} /><path d="M6 34 H14 M8 42 H12" stroke={TINTA} strokeWidth={3} /><Rot x={36} y={72}>R</Rot></>,
 };
 

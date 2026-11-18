@@ -53,7 +53,7 @@ const ler = (nivel: string, area: string): Questao[] | null => {
 type PassoBruto = { titulo: string; visual?: { tipo?: string; linhas?: string[][] } };
 const passosDe = (q: Questao) => (q.explicacao.passos as PassoBruto[]) ?? [];
 const TITULO_FORMULAS = 'As fórmulas desta questão';
-const ehMoldeRobo = (q: Questao) => ['O que eu tenho', TITULO_FORMULAS].includes(passosDe(q)[0]?.titulo);
+const ehMoldeRobo = (q: Questao) => ['O que eu tenho', TITULO_FORMULAS, 'A regra desta questão'].includes(passosDe(q)[0]?.titulo);
 function problemasDoMolde(q: Questao): string[] {
   const passos = passosDe(q);
   const titulos = passos.map((p) => p.titulo);
