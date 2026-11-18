@@ -27,7 +27,7 @@ dict(**GEO, id='d2-banco-mat-p26-03', resp='D', objeto='toalha-redonda', cobra='
   conferencia='H = 90*1,7/2 = 76,5; P = 2/3*76,5 = 51; T = 2*(51+10) = 122. D. A = só o raio 61; B = 2*51 sem a sobra; C = 2*(45+10) com metade do lado; E = 2*76,5.',
   sua_vez=('Tampo de 3 lados iguais de 30 cm, √3 = 1,7. Do centro até a ponta?', ['17 cm', '25,5 cm', '15 cm', '8,5 cm'], '17 cm', 'Altura 30 × 1,7 ÷ 2 = 25,5; 2/3 de 25,5 = 17.'),
   aula=dict(
-    formulas=[('triangulo', 'Altura do triângulo de 3 lados iguais', 'lado × √3 ÷ 2'), ('circulo', 'Diâmetro do círculo', '2 × raio')],
+    formulas=[('triangulo', 'Altura do triângulo equilátero', 'lado × √3 ÷ 2'), ('circulo', 'Diâmetro do círculo', '2 × raio')],
     tenho_texto='Primeiro, tire os números do enunciado. Tudo em centímetros.',
     tenho=[('Lado do tampo', '90 cm'), ('Sobra da toalha', '10 cm'), ('√3', '1,7')],
     quer='A questão quer o menor diâmetro da toalha, com 10 cm de sobra depois das pontas.',
@@ -200,7 +200,7 @@ dict(**ESP, id='d2-banco-mat-p26-09', resp='A', objeto='coluna-faixa', cobra='á
   conferencia='R = 1/2 = 0,5; C = 2*3*0,5 = 3; A = 3*3 = 9. A. B = 3*0,5*3 (sem o 2); C = 9 + 2 tampas; D = 2 tampas; E = 2*3*1*3 (diâmetro no lugar do raio).',
   sua_vez=('Faixa em volta de um cilindro de raio 2 m, π = 3. Comprimento da volta?', ['12 m', '6 m', '24 m', '4 m'], '12 m', '2 × 3 × 2 = 12.'),
   aula=dict(
-    formulas=[('cilindro', 'Volta do cilindro (borda do círculo)', '2 × π × raio'), ('retangulo', 'Área do retângulo', 'base × altura')],
+    formulas=[('cilindro', 'Volta da borda do círculo', '2 × π × raio'), ('retangulo', 'Área do retângulo', 'base × altura')],
     tenho=[('Diâmetro da coluna', '1 m'), ('Altura da coluna', '3 m'), ('π', '3')],
     quer='A questão quer a área da faixa que cobre só a lateral.',
     equacao='A = C × 3 (área = volta da coluna × altura)',
@@ -229,7 +229,7 @@ dict(**ESP, id='d2-banco-mat-p26-10', resp='D', objeto='tanque-tinta', cobra='á
   conferencia='C = 2*3*2 = 12; A = 12*5 = 60; N = 60/6 = 10. D. A = 3*2*5/6 (sem o 2); B = 2*3*4*5/6 (diâmetro no lugar do raio); C = 60 sem dividir; E = (60+24)/6 com topo e fundo.',
   sua_vez=('Parede de 36 m² e cada litro cobre 6 m². Quantos litros?', ['6 L', '30 L', '216 L', '42 L'], '6 L', '36 ÷ 6 = 6.'),
   aula=dict(
-    formulas=[('cilindro', 'Volta do cilindro (borda do círculo)', '2 × π × raio'), ('retangulo', 'Área do retângulo', 'base × altura')],
+    formulas=[('cilindro', 'Volta da borda do círculo', '2 × π × raio'), ('retangulo', 'Área do retângulo', 'base × altura')],
     tenho=[('Raio do tanque', '2 m'), ('Altura do tanque', '5 m'), ('1 L de tinta cobre', '6 m²'), ('π', '3')],
     quer='A questão quer quantos litros de tinta pintam só a parede lateral.',
     equacao='N = A ÷ 6 (litros = área da parede ÷ área que 1 L cobre)',

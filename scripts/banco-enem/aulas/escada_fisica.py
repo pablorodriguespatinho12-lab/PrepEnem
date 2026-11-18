@@ -233,7 +233,7 @@ AULAS = {
   conferencia='[K] = [ρ][v]² = kg·m⁻³·m²·s⁻² = kg·m⁻¹·s⁻². B. A = velocidade sem o quadrado no tempo; C = densidade dividida por v²; D e E = combinações de unidades sem sentido para K.',
   sua_vez=('m⁻³ × m² dá:', ['m⁻¹', 'm⁻⁵', 'm⁶', 'm'], 'm⁻¹', 'Some os expoentes: −3 + 2 = −1.')),
 
-'cmuxdlzfh000izcvje50hg8pw': calc([('esfera', 'Energia potencial gravitacional', 'U = − G·M·m ÷ r')],
+'cmuxdlzfh000izcvje50hg8pw': calc([('esfera', 'Energia potencial', 'U = − G·M·m ÷ r')],
   [('Órbita', 'elipse de semieixos A e B'), ('Planeta', 'no ponto (C, 0), C = √(A² − B²)'), ('Massas', 'M do planeta, m do satélite')],
   'A questão quer U maior − U menor.', 'ΔU = G·M·m × (1 ÷ r1 − 1 ÷ r2) (r1 = mais perto, r2 = mais longe)',
   'Por que 1 ÷ r? A energia é − G·M·m ÷ r. Ela é mais baixa (mais negativa) quando o satélite está perto e mais alta quando está longe.',

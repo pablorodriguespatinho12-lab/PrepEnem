@@ -35,17 +35,21 @@ const FIGURAS: Record<FiguraFormula, () => JSX.Element> = {
   circuito: () => <><rect x={10} y={14} width={52} height={44} fill="none" {...T} /><rect x={24} y={8} width={24} height={12} fill={SECO} {...T} /><path d="M6 34 H14 M8 42 H12" stroke={TINTA} strokeWidth={3} /><Rot x={36} y={72}>R</Rot></>,
 };
 
+/* Grande o bastante para a caixa da aula "Não sei isso: ver a aula" (Pablo, 18/11/2026:
+   "a imagem tá muito pequena"): era 64 px, feita só para o cartão da explicação. */
 export function Formulas({ v }: { v: VisualFormulas }) {
   return (
-    <ul className="grid gap-3 sm:grid-cols-2">
+    // Colunas pela largura de verdade (cabe 1 no cartão da explicação, 2 na aula larga):
+    // 2 colunas fixas espremiam o texto a uma letra por linha no cartão (18/11/2026).
+    <ul className="mx-auto grid w-full max-w-2xl gap-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(16rem, 1fr))' }}>
       {v.itens.map((item) => {
         const Figura = FIGURAS[item.figura];
         return (
-          <li key={`${item.figura}-${item.nome}`} className="flex items-center gap-3 rounded-[var(--radius-control)] p-2" style={{ background: PAPEL, color: TINTA }}>
-            <svg viewBox="0 0 72 76" className="h-16 w-16 shrink-0" role="img" aria-label={item.nome}><Figura /></svg>
+          <li key={`${item.figura}-${item.nome}`} className="flex items-center gap-4 rounded-[var(--radius-control)] p-3 sm:p-4" style={{ background: PAPEL, color: TINTA }}>
+            <svg viewBox="0 0 72 76" className="h-16 w-16 shrink-0 sm:h-24 sm:w-24" role="img" aria-label={item.nome}><Figura /></svg>
             <div className="min-w-0">
-              <p className="type-meta font-semibold">{item.nome}</p>
-              <p className="font-semibold tabular-nums">{item.formula}</p>
+              <p className="text-base font-semibold">{item.nome}</p>
+              <p className="text-lg font-semibold tabular-nums sm:text-xl">{item.formula}</p>
             </div>
           </li>
         );

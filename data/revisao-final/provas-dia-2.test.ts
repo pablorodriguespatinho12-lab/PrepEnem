@@ -240,6 +240,29 @@ describe('aulas trocadas das provas em escada', () => {
   }
 });
 
+/* "As fórmulas desta questão": o validador corta nome acima de 30 letras e fórmula acima
+   de 60, e a tela mostrava "(subindo igua" (18/11/2026). Vale para todo arquivo de dados. */
+describe('fórmulas da aula cabem sem corte', () => {
+  const RAIZ_DADOS = join(process.cwd(), 'data/revisao-final');
+  const arquivos = (readdirSync(RAIZ_DADOS, { recursive: true }) as string[]).filter((f) => f.endsWith('.json'));
+  it('nome até 30 letras e fórmula até 60', () => {
+    const longos: string[] = [];
+    const varre = (o: unknown, onde: string): void => {
+      if (Array.isArray(o)) { o.forEach((x) => varre(x, onde)); return; }
+      if (!o || typeof o !== 'object') return;
+      const r = o as Record<string, unknown>;
+      if (r.tipo === 'formulas') {
+        for (const i of (r.itens as { nome: string; formula: string }[]) ?? []) {
+          if (i.nome.length > 30 || i.formula.length > 60) longos.push(`${onde}: ${i.nome} | ${i.formula}`);
+        }
+      }
+      Object.values(r).forEach((x) => varre(x, onde));
+    };
+    for (const f of arquivos) varre(JSON.parse(readFileSync(join(RAIZ_DADOS, f), 'utf8')), f);
+    expect(longos).toEqual([]);
+  });
+});
+
 /* Questões de reforço (Pablo, 12/11/2026): errou na prova, a próxima é uma
    parecida do mesmo conteúdo, estilo ENEM (nunca "ENEM real"). Mesma
    conferência das provas e uma figura em pixel no 1º passo. */
