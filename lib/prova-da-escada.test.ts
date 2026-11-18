@@ -20,6 +20,12 @@ describe('prova da escada', () => {
   });
 
   it('diz quais etapas faltam', () => {
-    expect(questoesDoDegrau('Física', degrau, [q('f1', 'facil'), q('f2', 'facil')]).faltam).toEqual(['medio', 'dificil', 'enem', 'ita']);
+    expect(questoesDoDegrau('Física', degrau, [q('f1', 'facil'), q('f2', 'facil')]).faltam).toEqual(['medio', 'dificil', 'enem', 'juncao', 'ita']);
+  });
+
+  it('junção vem depois do ENEM e antes do ITA; a 1ª prova não cobra junção', () => {
+    const todas = [q('i1', 'acima'), q('j1', 'juncao'), q('e1', 'dificil', { anoProva: 2023 })];
+    expect(questoesDoDegrau('Física', degrau, todas).questoes.map((x) => x.id)).toEqual(['e1', 'j1', 'i1']);
+    expect(questoesDoDegrau('Física', degrau, [], false).faltam).not.toContain('juncao');
   });
 });
