@@ -64,13 +64,13 @@ dict(**ARIT, id='d2-acima-mat-02', resp='C', objeto='bônus', cobra='proporção
     letras=[('D', 'diferença entre maior e menor bônus (o que a questão quer)'), ('S', 'soma das partes'), ('U', 'valor de 1 parte')],
     telas=[
       dict(titulo='Achando S (soma das partes)',
-        texto='Inverso de cada número de faltas: 1, 1/2 e 1/3.\nPor que × 6? Multiplicar TODAS pelo mesmo número não muda quem leva mais nem quantas vezes mais, como dobrar uma receita. Escolho 6 porque é o menor número que dá para dividir por 2 e por 3: as frações somem.\n1 × 6 = 6; 1/2 × 6 = 3; 1/3 × 6 = 2\nConfere: 6 é o dobro de 3 e o triplo de 2, igual a 1 ser o dobro de 1/2 e o triplo de 1/3.\nS = 6 + 3 + 2 = 11'),
+        texto='Inverso de cada número de faltas: 1, 1/2 e 1/3.\nPor que × 6? Multiplicar TODAS pelo mesmo número não muda quem leva mais nem quantas vezes mais, como dobrar uma receita. Escolho 6 porque é o MMC (mínimo múltiplo comum) de 1, 2 e 3: o menor número que dá para dividir por todos, e as frações somem.\n1 × 6 = 6; 1/2 × 6 = 3; 1/3 × 6 = 2\nConfere: 6 é o dobro de 3 e o triplo de 2, igual a 1 ser o dobro de 1/2 e o triplo de 1/3.\nS = 6 + 3 + 2 = 11'),
       dict(titulo='Achando U: o seu jeito',
         texto='Parece certo dividir direto, nas partes 1, 2 e 3. Isso dá 1 650, 3 300 e 4 950.\nMas aí quem mais faltou ganha mais. O contrário do pedido.\nCom as partes certas:\nU = 9 900 ÷ 11 = 900'),
     ],
     volta='D = (6 − 2) × 900 = 4 × 900 = 3 600\nLetra C. O maior bônus é 5 400 e o menor é 1 800.',
     valores=[('S', '11'), ('U', '900')],
-    pista='"inversamente proporcional" → use o inverso (1 ÷ número) e multiplique tudo pelo mesmo número para tirar as frações; depois divida o total pela soma das partes.',
+    pista='"inversamente proporcional" → use o inverso (1 ÷ número) e multiplique tudo pelo MMC dos números para tirar as frações; depois divida o total pela soma das partes.',
     receita=[('1. Tabela do que eu tenho', 'faltas 1, 2, 3; R$ 9 900'), ('2. Equação em letras', 'D = (6 − 2) × U'), ('3. Achar cada letra', 'S = 11; U = 900'), ('4. Substituir', '4 × 900 = 3 600')])),
 
 # 03 · Grandezas · escala de mapa: a área vai ao quadrado.
