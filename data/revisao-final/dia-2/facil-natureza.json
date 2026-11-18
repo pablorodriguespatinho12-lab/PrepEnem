@@ -29,83 +29,126 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "A questão dá a tensão e a corrente e pede a potência.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "circuito",
+                "nome": "Potência",
+                "formula": "P = U × i"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
+            "cabecalho": [
+              "Informação",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "Tensão",
+                "110 V"
+              ],
+              [
+                "Corrente",
+                "10 A"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a potência do ferro.\nP = U × i (potência = tensão × corrente)\nPor que multiplicar? A tensão é o \"empurrão\" em cada carga e a corrente é quantas cargas passam por segundo.\nAgora é só achar cada letra.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "O que é"
+            ],
+            "linhas": [
+              [
+                "P",
+                "potência (o que a questão quer)"
+              ],
+              [
+                "U",
+                "tensão"
+              ],
+              [
+                "i",
+                "corrente"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Achando U (tensão)",
+          "texto": "U = 110 V"
+        },
+        {
+          "titulo": "Achando i: o seu jeito",
+          "texto": "Parece certo somar: 110 + 10 = 120. Mas potência é tensão VEZES corrente.\ni = 10 A"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "P = 110 × 10 = 1 100 W\nLetra C.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
             "cabecalho": [
               "Letra",
               "Valor"
             ],
             "linhas": [
               [
-                "U (tensão)",
+                "U",
                 "110 V"
               ],
               [
-                "i (corrente)",
+                "i",
                 "10 A"
-              ],
-              [
-                "P (potência)",
-                "?"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Eletricidade: P = U × i.\nP = 110 × 10 = 1 100 W.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Potência elétrica",
-            "dados": [
-              "U = 110\\,\\text{V}",
-              "i = 10\\,\\text{A}"
-            ],
-            "formula": "P = U \\times i",
-            "legenda": [
-              "U: o empurrão",
-              "i: o que passa no fio"
-            ],
-            "contas": [
-              "P = 110 \\times 10"
-            ],
-            "resultado": "P = 1100\\,\\text{W}",
-            "nota": "O ferro gasta 1 100 watts."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "Pense na corrente como baldes de carga: 10 A são 10 baldes passando por segundo.\nA tensão é a força que cada balde entrega: 110.\nDez baldes com 110 cada é 110 somado 10 vezes.\nSomar a mesma coisa várias vezes é multiplicar: 110 × 10.",
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: tensão e corrente, pede potência → P = U × i.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Mesma tomada de 110 V",
+            "titulo": "A receita",
             "cabecalho": [
-              "Corrente",
-              "Potência"
+              "Passo",
+              "Nesta questão"
             ],
             "linhas": [
               [
-                "1 A",
-                "110 W"
+                "1. Tabela do que eu tenho",
+                "110 V, 10 A"
               ],
               [
-                "5 A",
-                "550 W"
+                "2. Equação em letras",
+                "P = U × i"
               ],
               [
-                "10 A",
-                "1 100 W"
+                "3. Achar cada letra",
+                "U = 110; i = 10"
+              ],
+              [
+                "4. Substituir",
+                "110 × 10 = 1 100"
               ]
             ]
           }
-        },
-        {
-          "titulo": "A resposta",
-          "texto": "Letra C, 1 100 W. A (11 W) vem de dividir 110 ÷ 10; B (120 W), de somar 110 + 10; D (100 W), de subtrair 110 − 10; E (11 000 W) tem um zero a mais na multiplicação.",
-          "visual": null
         }
       ],
       "seuErro": null,
@@ -152,83 +195,130 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "São dois resistores em fila, no mesmo fio. A questão quer saber quanto eles valem juntos.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "circuito",
+                "nome": "Em série",
+                "formula": "R total = soma"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "Peça",
-              "Resistência"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "R₁ (primeiro)",
+                "Resistor 1",
                 "4 Ω"
               ],
               [
-                "R₂ (segundo)",
+                "Resistor 2",
                 "6 Ω"
               ],
               [
-                "Juntos em série",
-                "?"
+                "Ligação",
+                "em série"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Eletricidade: em série, some.\n4 + 6 = 10 Ω.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Resistores em série",
-            "dados": [
-              "R_1 = 4\\,\\Omega",
-              "R_2 = 6\\,\\Omega"
-            ],
-            "formula": "R_{eq} = R_1 + R_2",
-            "legenda": [
-              "R_eq: o resistor que vale pelos dois",
-              "R_1 e R_2: cada resistor"
-            ],
-            "contas": [
-              "R_{eq} = 4 + 6"
-            ],
-            "resultado": "R_{eq} = 10\\,\\Omega",
-            "nota": "Os dois juntos valem 10 ohms."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "É como andar por dois trechos de estrada ruim, um depois do outro: o atraso de cada trecho se soma. A corrente enfrenta o primeiro e depois o segundo.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a resistência equivalente.\nR = R1 + R2 (em série, soma)\nPor que somar? Em série a corrente passa por um e depois pelo outro: enfrenta as duas dificuldades.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Em série, sempre soma",
+            "titulo": "As letras",
             "cabecalho": [
-              "Resistores",
-              "Juntos"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "2 Ω e 3 Ω",
-                "5 Ω"
+                "R",
+                "resistência equivalente (o que a questão quer)"
               ],
               [
-                "4 Ω e 6 Ω",
-                "10 Ω"
+                "R1",
+                "primeiro resistor"
               ],
               [
-                "5 Ω e 5 Ω",
-                "10 Ω"
+                "R2",
+                "segundo resistor"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra A, 10 Ω.\nB (24 Ω) vem de multiplicar 4 × 6.\nC (2,4 Ω) é a conta de resistores em paralelo: cada um no seu próprio fio, lado a lado, e a corrente se divide entre eles. Aqui estão em fila.\nD (2 Ω) vem de subtrair 6 − 4.\nE (1,5 Ω) vem de dividir 6 ÷ 4.",
-          "visual": null
+          "titulo": "Achando R1 (primeiro)",
+          "texto": "R1 = 4 Ω"
+        },
+        {
+          "titulo": "Achando R2: o seu jeito",
+          "texto": "Parece certo multiplicar: 4 × 6 = 24. Mas em série se soma.\nR2 = 6 Ω"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "R = 4 + 6 = 10 Ω\nLetra A.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "R1",
+                "4 Ω"
+              ],
+              [
+                "R2",
+                "6 Ω"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: resistores \"em série\" → some todos.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "4 Ω e 6 Ω"
+              ],
+              [
+                "2. Equação em letras",
+                "R = R1 + R2"
+              ],
+              [
+                "3. Achar cada letra",
+                "R1 = 4; R2 = 6"
+              ],
+              [
+                "4. Substituir",
+                "4 + 6 = 10"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -267,44 +357,118 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "Areia e água recebem o mesmo sol. Por que uma esquenta rápido e a outra não?",
+          "titulo": "A regra desta questão",
+          "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "termometro",
+                "nome": "Calor",
+                "formula": "Q = m × c × ΔT"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, separe as pistas do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Energia para esquentar 1 grama em 1 grau",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "Material",
-              "Energia",
-              "Esquenta"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "água",
-                "1 caloria",
-                "devagar"
+                "Areia",
+                "esquenta rápido"
               ],
               [
-                "areia",
-                "cerca de 0,2 caloria",
-                "rápido"
+                "Água",
+                "esquenta devagar"
+              ],
+              [
+                "Sol",
+                "o mesmo para as duas"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Com a mesma energia do Sol, a areia sobe muitos graus e a água sobe poucos. É a mesma razão de a água do mar ainda estar morna no começo da noite: ela também demora para esfriar.",
-          "visual": null
+          "titulo": "A regra em palavras",
+          "texto": "A questão quer por que a areia esquenta mais rápido.\nR = quem pede menos energia por grau esquenta mais rápido\nPor que \"por grau\"? É o calor específico (c): a energia para subir 1 grau em 1 grama. A água tem c grande; a areia, pequeno.\nAgora é só achar cada pista.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "O que é"
+            ],
+            "linhas": [
+              [
+                "R",
+                "o motivo (o que a questão quer)"
+              ],
+              [
+                "P",
+                "o que muda entre areia e água"
+              ]
+            ]
+          }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Termodinâmica: calor = quantidade × c × quanto muda.\nMesmo sol, mesma energia. Quem tem c maior sobe menos graus com essa energia.\nA água tem c bem maior que a areia: esquenta mais devagar.",
-          "visual": null
+          "titulo": "Achando P: o seu jeito",
+          "texto": "Parece certo dizer que a água recebe menos sol. Mas o sol é o mesmo para as duas.\nO que muda é o material: P = o calor específico da água é maior."
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra E: a água tem calor específico maior.\nA: falha porque o sol que chega nas duas é o mesmo.\nB: falha porque a areia perde o calor de noite e amanhece fria.\nC: falha porque o vento sopra na areia e na água.\nD: falha porque a água fica com boa parte da luz. É por isso que o mar esquenta, só que devagar.",
-          "visual": null
+          "titulo": "Volta na equação",
+          "texto": "R = a água precisa de muito mais energia para subir cada grau\nLetra E.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "P",
+                "c da água maior"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: mesmo calor, materiais diferentes → esquenta mais rápido quem tem calor específico menor.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Separe as pistas",
+                "areia, água, mesmo sol"
+              ],
+              [
+                "2. A regra em palavras",
+                "R = energia por grau"
+              ],
+              [
+                "3. Ache cada pista",
+                "P = c maior na água"
+              ],
+              [
+                "4. Compare com as letras",
+                "letra E"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -350,83 +514,126 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "A questão dá o tamanho de cada onda e quantas passam por segundo. Quer a velocidade.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "onda",
+                "nome": "Velocidade da onda",
+                "formula": "v = λ × f"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
+            "cabecalho": [
+              "Informação",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "Comprimento de onda",
+                "2 m"
+              ],
+              [
+                "Frequência",
+                "5 Hz (5 ondas por segundo)"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a velocidade da onda.\nv = λ × f (velocidade = comprimento × frequência)\nPor que multiplicar? Passam 5 ondas por segundo e cada uma tem 2 m: a onda anda 5 × 2 metros a cada segundo.\nAgora é só achar cada letra.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "O que é"
+            ],
+            "linhas": [
+              [
+                "v",
+                "velocidade (o que a questão quer)"
+              ],
+              [
+                "λ",
+                "comprimento de onda"
+              ],
+              [
+                "f",
+                "frequência"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Achando λ (comprimento)",
+          "texto": "λ = 2 m"
+        },
+        {
+          "titulo": "Achando f: o seu jeito",
+          "texto": "Parece certo dividir: 5 ÷ 2 = 2,5. Mas cada uma das 5 ondas tem 2 m: é multiplicar.\nf = 5 Hz"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "v = 2 × 5 = 10 m/s\nLetra B.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
             "cabecalho": [
               "Letra",
               "Valor"
             ],
             "linhas": [
               [
-                "λ (tamanho de 1 onda)",
+                "λ",
                 "2 m"
               ],
               [
-                "f (ondas por segundo)",
+                "f",
                 "5 Hz"
-              ],
-              [
-                "v (velocidade)",
-                "?"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Ondas: v = λ × f (tamanho de cada onda × quantas por segundo).\nv = 2 × 5 = 10 m/s.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Equação da onda",
-            "dados": [
-              "\\lambda = 2\\,\\text{m}",
-              "f = 5\\,\\text{Hz}"
-            ],
-            "formula": "v = \\lambda \\times f",
-            "legenda": [
-              "λ: tamanho de uma onda",
-              "f: ondas por segundo"
-            ],
-            "contas": [
-              "v = 2 \\times 5"
-            ],
-            "resultado": "v = 10\\,\\text{m/s}",
-            "nota": "A onda anda 10 metros a cada segundo."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "Pense em vagões de trem de 2 m passando na sua frente: se passam 5 vagões por segundo, o trem andou 10 m nesse segundo.",
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: onda com comprimento e frequência → v = λ × f.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Ondas de 2 m",
+            "titulo": "A receita",
             "cabecalho": [
-              "Ondas por segundo",
-              "Velocidade"
+              "Passo",
+              "Nesta questão"
             ],
             "linhas": [
               [
-                "1 Hz",
-                "2 m/s"
+                "1. Tabela do que eu tenho",
+                "2 m, 5 Hz"
               ],
               [
-                "3 Hz",
-                "6 m/s"
+                "2. Equação em letras",
+                "v = λ × f"
               ],
               [
-                "5 Hz",
-                "10 m/s"
+                "3. Achar cada letra",
+                "λ = 2; f = 5"
+              ],
+              [
+                "4. Substituir",
+                "2 × 5 = 10"
               ]
             ]
           }
-        },
-        {
-          "titulo": "A resposta",
-          "texto": "Letra B, 10 m/s. A (2,5) vem de 5 ÷ 2 e D (0,4) de 2 ÷ 5: dividiram em vez de multiplicar. C (7) vem de somar 2 + 5. E (3) vem de subtrair 5 − 2.",
-          "visual": null
         }
       ],
       "seuErro": null,
@@ -468,44 +675,118 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "A luz do Sol traz todas as cores. O que a camiseta faz com elas para parecer vermelha?",
+          "titulo": "A regra desta questão",
+          "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "lente",
+                "nome": "Cor de um objeto",
+                "formula": "é a luz que ele reflete"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, separe as pistas do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "O que cada objeto faz com a luz branca",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "Objeto",
-              "Devolve (reflete)",
-              "Fica com (absorve)"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "camiseta vermelha",
-                "vermelho",
-                "as outras cores"
+                "Luz do Sol",
+                "branca: todas as cores"
               ],
               [
-                "papel branco",
-                "todas",
-                "nenhuma"
+                "Camiseta",
+                "parece vermelha"
               ],
               [
-                "roupa preta",
-                "nenhuma",
-                "todas"
+                "Pergunta",
+                "por quê"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Óptica: a cor que você vê é a que o objeto devolve.\nA camiseta devolve (reflete) o vermelho e engole (absorve) as outras cores.",
-          "visual": null
+          "titulo": "A regra em palavras",
+          "texto": "A questão quer por que a camiseta parece vermelha.\nR = a cor que chega ao olho é a que o objeto devolve\nPor que a que devolve? O olho só vê a luz que vem do objeto. As cores que ele absorve não chegam.\nAgora é só achar cada pista.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "O que é"
+            ],
+            "linhas": [
+              [
+                "R",
+                "o motivo (o que a questão quer)"
+              ],
+              [
+                "P",
+                "que luz sai da camiseta"
+              ]
+            ]
+          }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra D.\nA: falha porque tecido não produz luz. No quarto escuro a camiseta some.\nB: é a armadilha. Se a camiseta ficasse com o vermelho, justamente o vermelho não chegaria ao seu olho.\nC: falha porque quem separa as cores é o prisma (um vidro em forma de cunha que faz arco-íris), não o pano.\nE: falha porque refletir todas as cores é o que a camiseta branca faz.",
-          "visual": null
+          "titulo": "Achando P: o seu jeito",
+          "texto": "Parece certo dizer que ela absorve o vermelho. Mas o que ela absorve não chega ao seu olho.\nP = ela devolve (reflete) o vermelho."
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "R = reflete a luz vermelha e absorve as outras\nLetra D.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "P",
+                "reflete o vermelho"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: cor de objeto sob luz branca → é a cor que ele REFLETE; as outras ele absorve.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Separe as pistas",
+                "luz branca, camiseta"
+              ],
+              [
+                "2. A regra em palavras",
+                "R = a luz devolvida"
+              ],
+              [
+                "3. Ache cada pista",
+                "P = vermelho refletido"
+              ],
+              [
+                "4. Compare com as letras",
+                "letra D"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -551,83 +832,126 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "A questão dá a massa e a gravidade e pede o peso, que é uma força.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "carro",
+                "nome": "Peso",
+                "formula": "P = massa × 10"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
+            "cabecalho": [
+              "Informação",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "Massa",
+                "60 kg"
+              ],
+              [
+                "Gravidade",
+                "10 m/s²"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "A equação em letras",
+          "texto": "A questão quer o peso, em newtons.\nP = m × g (peso = massa × gravidade)\nPor que multiplicar? Cada quilo é puxado pela Terra com 10 N. Com 60 quilos, são 60 vezes 10.\nAgora é só achar cada letra.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "O que é"
+            ],
+            "linhas": [
+              [
+                "P",
+                "peso (o que a questão quer)"
+              ],
+              [
+                "m",
+                "massa"
+              ],
+              [
+                "g",
+                "gravidade"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Achando m: o seu jeito",
+          "texto": "Parece certo responder 60 N. Mas 60 é a massa, em kg; peso é força, em N.\nm = 60 kg"
+        },
+        {
+          "titulo": "Achando g (gravidade)",
+          "texto": "g = 10 m/s²"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "P = 60 × 10 = 600 N\nLetra D.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
             "cabecalho": [
               "Letra",
               "Valor"
             ],
             "linhas": [
               [
-                "m (massa)",
+                "m",
                 "60 kg"
               ],
               [
-                "g (gravidade)",
-                "10 m/s²"
-              ],
-              [
-                "P (peso)",
-                "?"
+                "g",
+                "10"
               ]
             ]
           }
         },
         {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Dinâmica: o peso é a força da gravidade: P = m × 10.\nP = 60 × 10 = 600 N.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Peso",
-            "dados": [
-              "m = 60\\,\\text{kg}",
-              "g = 10\\,\\text{m/s}^2"
-            ],
-            "formula": "P = m \\times g",
-            "legenda": [
-              "m: quanto de matéria",
-              "g: o puxão do planeta em cada quilo"
-            ],
-            "contas": [
-              "P = 60 \\times 10"
-            ],
-            "resultado": "P = 600\\,\\text{N}",
-            "nota": "A Terra puxa a pessoa com 600 newtons."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "Cada quilo é puxado com 10 N.\nCom 60 quilos, são 60 puxões de 10 N somados: 60 × 10 = 600 N.\nÉ a 2ª lei de Newton: força = massa × aceleração, usando a aceleração da gravidade.\nAceleração é o quanto a velocidade aumenta a cada segundo.",
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: pede peso e dá massa → multiplique por 10 (a gravidade).",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Na Terra, g = 10 m/s²",
+            "titulo": "A receita",
             "cabecalho": [
-              "Massa",
-              "Peso"
+              "Passo",
+              "Nesta questão"
             ],
             "linhas": [
               [
-                "1 kg",
-                "10 N"
+                "1. Tabela do que eu tenho",
+                "60 kg, g = 10"
               ],
               [
-                "5 kg",
-                "50 N"
+                "2. Equação em letras",
+                "P = m × g"
               ],
               [
-                "60 kg",
-                "600 N"
+                "3. Achar cada letra",
+                "m = 60; g = 10"
+              ],
+              [
+                "4. Substituir",
+                "60 × 10 = 600"
               ]
             ]
           }
-        },
-        {
-          "titulo": "A resposta",
-          "texto": "Letra D, 600 N. B (60 N) é a armadilha: 60 é a massa em kg, não o peso. A (6 N) vem de dividir 60 ÷ 10. C (70 N) vem de somar 60 + 10. E (50 N) vem de subtrair 60 − 10.",
-          "visual": null
         }
       ],
       "seuErro": null,

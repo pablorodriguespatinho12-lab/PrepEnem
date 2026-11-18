@@ -175,104 +175,140 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "O carro andou 110 km. A questão pede quantas horas o carregador leva para repor a energia gasta.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "carro",
+                "nome": "Consumo",
+                "formula": "energia = distância ÷ km por kWh"
+              },
+              {
+                "figura": "circuito",
+                "nome": "Potência",
+                "formula": "P = U × i"
+              },
+              {
+                "figura": "circuito",
+                "nome": "Tempo",
+                "formula": "t = energia ÷ potência"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "O quê",
+              "Informação",
               "Valor"
             ],
             "linhas": [
               [
-                "percurso",
+                "Percurso",
                 "110 km"
               ],
               [
-                "desempenho",
+                "Desempenho",
                 "5 km por kWh"
               ],
               [
-                "tensão (U)",
-                "220 V"
-              ],
-              [
-                "corrente (i)",
-                "20 A"
-              ],
-              [
-                "tempo (t)",
-                "?"
+                "Carregador",
+                "220 V e 20 A"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Primeiro, a energia gasta: 110 ÷ 5 = 22 kWh (5 × 22 = 110).\nDepois, a potência do carregador: 220 × 20 = 4 400 W (22 × 2 = 44, mais os dois zeros).\nIsso é 4,4 kW, porque 1 kW = 1 000 W.\nPor fim: tempo = energia ÷ potência.",
-          "visual": null
-        },
-        {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Eletricidade: energia = potência × tempo, então tempo = energia ÷ potência.\nEnergia: 110 km ÷ 5 km por kWh = 22 kWh. Potência: 220 × 20 = 4 400 W = 4,4 kW.\nTempo: quantas horas de 4,4 kWh cabem em 22? 22 ÷ 4,4 = 5 h.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Tempo de recarga",
-            "dados": [
-              "E = \\dfrac{110}{5} = 22\\,\\text{kWh}",
-              "P = 220 \\times 20 = 4400\\,\\text{W} = 4{,}4\\,\\text{kW}"
-            ],
-            "formula": "t = \\dfrac{E}{P}",
-            "legenda": [
-              "$E$: energia a repor",
-              "$P$: energia entregue a cada hora"
-            ],
-            "contas": [
-              "t = \\dfrac{22}{4{,}4}"
-            ],
-            "resultado": "t = 5\\,\\text{h}",
-            "nota": "Cinco horas na tomada."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "Potência de 4,4 kW quer dizer 4,4 kWh entregues a cada hora. Para juntar 22 kWh, basta contar as horas.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer o tempo de recarga.\nt = E ÷ P (tempo = energia gasta ÷ potência do carregador)\nPor que dividir? O carregador entrega P de energia a cada hora. O tempo é quantas horas cabem na energia gasta.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Enchendo a bateria",
+            "titulo": "As letras",
             "cabecalho": [
-              "Horas",
-              "Energia reposta"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "1",
-                "4,4 kWh"
+                "t",
+                "tempo em horas (o que a questão quer)"
               ],
               [
-                "2",
-                "8,8 kWh"
+                "E",
+                "energia gasta"
               ],
               [
-                "3",
-                "13,2 kWh"
-              ],
-              [
-                "4",
-                "17,6 kWh"
-              ],
-              [
-                "5",
-                "22 kWh"
+                "P",
+                "potência do carregador"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra D, 5,0 h.\nA (0,005): divide 22 por 4 400 sem passar watt para quilowatt.\nB (0,125 h): não repõe os 22 kWh; daria só 4,4 × 0,125 = 0,55 kWh.\nC (2,5 h): daria 4,4 × 2,5 = 11 kWh, metade do gasto.\nE (8,0 h): daria 4,4 × 8 = 35,2 kWh, mais do que o carro gastou.",
-          "visual": null
+          "titulo": "Achando E (energia)",
+          "texto": "Cada 5 km gasta 1 kWh.\nE = 110 ÷ 5 = 22 kWh"
+        },
+        {
+          "titulo": "Achando P: o seu jeito",
+          "texto": "Parece certo deixar em watts: 220 × 20 = 4 400 W. Mas a energia está em kWh.\nP = 4 400 W = 4,4 kW"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "t = 22 ÷ 4,4 = 5 h\nLetra D.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "E",
+                "22 kWh"
+              ],
+              [
+                "P",
+                "4,4 kW"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: tempo de recarga → energia gasta (km ÷ km por kWh) dividida pela potência (U × i) em kW.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "110 km, 5 km/kWh, 220 V, 20 A"
+              ],
+              [
+                "2. Equação em letras",
+                "t = E ÷ P"
+              ],
+              [
+                "3. Achar cada letra",
+                "E = 22; P = 4,4"
+              ],
+              [
+                "4. Substituir",
+                "22 ÷ 4,4 = 5"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -1636,102 +1672,123 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "Três pilhas de lítio-iodo em fila. Em qual faixa cai a tensão total?",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "circuito",
+                "nome": "Pilha",
+                "formula": "tensão = E maior − E menor"
+              },
+              {
+                "figura": "circuito",
+                "nome": "Em série",
+                "formula": "R total = soma"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "As faixas",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "Aparelho",
-              "Faixa (V)"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "I relógio",
-                "1,2 a 1,5"
+                "Iodo",
+                "+0,54 V"
               ],
               [
-                "II celular",
-                "3,5 a 3,8"
+                "Lítio",
+                "−3,05 V"
               ],
               [
-                "III câmera",
-                "7,5 a 7,8"
-              ],
-              [
-                "IV carrinho",
-                "10,5 a 10,9"
-              ],
-              [
-                "V notebook",
-                "19,5 a 20,0"
+                "Pilhas",
+                "3 em série"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Primeiro: o E° diz quanto cada um quer receber elétrons. O iodo (+0,54) quer mais: ele recebe. O lítio (−3,05) quer menos: ele entrega.\nA tensão de uma pilha é o maior menos o menor: 0,54 − (−3,05).\nTirar um negativo é somar, como no termômetro: de −3 °C até 1 °C ele sobe 3 + 1 = 4 graus.\nAqui: 0,54 − (−3,05) = 0,54 + 3,05 = 3,59 V.\nDepois: três pilhas em série dão três vezes essa tensão: 3 × 3,59 = 10,77 V.\nConta: 3 × 3 = 9 e 3 × 0,59 = 1,77; 9 + 1,77 = 10,77.\nPor fim: procurar a faixa no quadro.",
-          "visual": null
-        },
-        {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Eletroquímica: tensão = maior − menor; em série, some.\n0,54 − (−3,05) = 0,54 + 3,05 = 3,59 V por pilha.\n3 pilhas: 3 × 3,59 = 10,77 V, dentro de 10,5 a 10,9: carrinho de controle (IV).",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Bateria de lítio-iodo",
-            "dados": [
-              "E^\\circ_{iodo} = +0{,}54\\,\\text{V}",
-              "E^\\circ_{lítio} = -3{,}05\\,\\text{V}",
-              "3 \\text{ pilhas em série}"
-            ],
-            "formula": "U = 3 \\times (E^\\circ_{maior} - E^\\circ_{menor})",
-            "legenda": [
-              "$E^\\circ$: vontade de receber elétrons",
-              "$U$: tensão da bateria"
-            ],
-            "contas": [
-              "U = 3 \\times (0{,}54 - (-3{,}05))",
-              "U = 3 \\times 3{,}59"
-            ],
-            "resultado": "U = 10{,}77\\,\\text{V}",
-            "nota": "Cabe na faixa de 10,5 a 10,9 V."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "Tirar um número negativo é somar: $0{,}54 - (-3{,}05) = 0{,}54 + 3{,}05$. É como a distância num termômetro de −3 °C até +0,5 °C: soma as duas partes.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer o dispositivo certo.\nU = 3 × e (tensão da bateria = 3 × tensão de uma pilha)\nPor que 3 vezes? Pilhas em série somam as tensões, como resistores em série somam as resistências.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Pilhas em fila",
+            "titulo": "As letras",
             "cabecalho": [
-              "Pilhas",
-              "Tensão",
-              "Serve para"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "1",
-                "3,59 V",
-                "celular (II)"
+                "U",
+                "tensão da bateria (o que a questão quer)"
               ],
               [
-                "2",
-                "7,18 V",
-                "nenhum"
-              ],
-              [
-                "3",
-                "10,77 V",
-                "carrinho (IV)"
+                "e",
+                "tensão de uma pilha"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra D, o carrinho (IV).\nB (celular): usa uma pilha só, 3,59 V, esquecendo que são três.\nC (câmera): vem de fazer 3,05 − 0,54 = 2,51 e multiplicar por 3: 7,53 V.\nA (relógio, até 1,5 V): fica longe de qualquer conta com estes números; nem uma pilha dá tão pouco.\nE (notebook, perto de 20 V): também fica longe; nem três pilhas dão tanto.",
-          "visual": null
+          "titulo": "Achando e: o seu jeito",
+          "texto": "Parece certo somar os dois valores como estão: 0,54 + (−3,05). Mas a tensão da pilha é a DIFERENÇA entre eles.\ne = 0,54 − (−3,05) = 0,54 + 3,05 = 3,59 V"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "U = 3 × 3,59 = 10,77 V\nFaixa de 10,5 a 10,9 V: carrinho de controle remoto\nLetra D.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "e",
+                "3,59 V"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: pilha com duas semirreações → maior − menor; em série, multiplique pelo número de pilhas e procure a faixa.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "0,54 V, −3,05 V, 3 pilhas"
+              ],
+              [
+                "2. Equação em letras",
+                "U = 3 × e"
+              ],
+              [
+                "3. Achar cada letra",
+                "e = 3,59"
+              ],
+              [
+                "4. Substituir",
+                "10,77 V → IV"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,

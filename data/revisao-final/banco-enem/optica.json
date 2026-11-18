@@ -22,54 +22,126 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "São três coisas na mesma linha: a porta, o cliente e o espelho.\nA questão quer a distância do cliente até a IMAGEM da porta, que fica atrás do espelho.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
           "visual": {
-            "tipo": "figura",
-            "nome": "luz-raio",
-            "titulo": "A loja e o espelho",
-            "rotulos": [
-              "porta: 4 m do espelho",
-              "cliente: 3 m do espelho",
-              "imagem da porta = ?",
-              ""
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "lente",
+                "nome": "Espelho plano",
+                "formula": "imagem atrás, à mesma distância"
+              }
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "O espelho plano faz uma cópia da loja do outro lado, à mesma distância.\nA porta está 4 m na frente, então a imagem da porta fica 4 m atrás.\nDo cliente até o espelho: 3 m. Do espelho até a imagem: mais 4 m."
-        },
-        {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Óptica: a imagem fica atrás do espelho, à mesma distância.\nA porta está 4 m na frente; a imagem dela, 4 m atrás. O cliente está 3 m na frente.\nDo cliente até a imagem da porta: 3 + 4 = 7 m.",
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
-            "tipo": "quadro",
-            "titulo": "Espelho plano",
-            "dados": [
-              "d_{cliente} = 3\\,\\text{m}",
-              "d_{porta} = 4\\,\\text{m}"
+            "tipo": "tabela",
+            "titulo": "O que eu tenho",
+            "cabecalho": [
+              "Informação",
+              "Valor"
             ],
-            "formula": "D = d_{cliente} + d_{imagem}",
-            "legenda": [
-              "D: do cliente até a imagem da porta",
-              "$d_{imagem}$: igual à distância da porta ao espelho"
-            ],
-            "contas": [
-              "d_{imagem} = 4\\,\\text{m}",
-              "D = 3 + 4"
-            ],
-            "resultado": "D = 7\\,\\text{m}",
-            "nota": "A loja parece ter o dobro do tamanho."
+            "linhas": [
+              [
+                "Porta até o espelho",
+                "4 m"
+              ],
+              [
+                "Cliente até o espelho",
+                "3 m"
+              ]
+            ]
           }
         },
         {
-          "titulo": "Por que funciona",
-          "texto": "A linha do olho do cliente até a imagem atravessa o espelho.\nPor isso entra o pedaço da frente (3 m) e o pedaço de trás (4 m).\nSe ele estivesse colado na porta, veria a imagem dela a 4 + 4 = 8 m."
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a distância do cliente até a imagem da porta.\nD = c + p (cliente até o espelho + espelho até a imagem da porta)\nPor que somar? O cliente está na frente do espelho; a imagem da porta, atrás. O caminho passa pelo espelho.\nAgora é só achar cada letra.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "O que é"
+            ],
+            "linhas": [
+              [
+                "D",
+                "distância até a imagem da porta (o que a questão quer)"
+              ],
+              [
+                "c",
+                "cliente até o espelho"
+              ],
+              [
+                "p",
+                "espelho até a imagem da porta"
+              ]
+            ]
+          }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra A, 7 m.\nB (6 m): é o cliente até a própria imagem, 3 + 3.\nC (8 m): é a porta até a imagem da porta, 4 + 4.\nD (4 m): é só da porta até o espelho.\nE (1 m): é do cliente até a porta de verdade."
+          "titulo": "Achando c (cliente)",
+          "texto": "c = 3 m"
+        },
+        {
+          "titulo": "Achando p: o seu jeito",
+          "texto": "Parece certo usar a distância da porta até o cliente: 4 − 3 = 1. Mas ele olha a IMAGEM, atrás do espelho.\np = 4 m (a porta está 4 m na frente)"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "D = 3 + 4 = 7 m\nLetra A.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "c",
+                "3 m"
+              ],
+              [
+                "p",
+                "4 m"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: espelho e pede a distância até a imagem de OUTRA coisa → some: você até o espelho + espelho até a imagem.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "4 m e 3 m"
+              ],
+              [
+                "2. Equação em letras",
+                "D = c + p"
+              ],
+              [
+                "3. Achar cada letra",
+                "c = 3; p = 4"
+              ],
+              [
+                "4. Substituir",
+                "3 + 4 = 7"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -109,54 +181,114 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "O laser faz 40° com a superfície do espelho, e não com a normal.\nA questão quer o ângulo aberto entre o raio que chega e o que volta.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
           "visual": {
-            "tipo": "figura",
-            "nome": "luz-raio",
-            "titulo": "O laser no espelho",
-            "rotulos": [
-              "laser chegando",
-              "40° com o espelho",
-              "ângulo entre os raios = ?",
-              ""
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "lente",
+                "nome": "Reflexão",
+                "formula": "ângulo que chega = ângulo que sai (com a normal)"
+              }
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "A normal fica em pé, a 90° do espelho. Se o raio faz 40° com o espelho, faz 90 − 40 = 50° com a normal.\nO raio sai a 50° da normal, do outro lado, como bola de bilhar na tabela.\nDe um raio até a normal: 50°. Da normal até o outro raio: mais 50°."
-        },
-        {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Óptica: o espelho devolve a luz como uma cópia; a luz sai com o mesmo ângulo com que chegou, medido da normal.\nCom a normal (em pé, a 90°): 90 − 40 = 50°. A saída também faz 50°.\nEntre os raios: 50 + 50 = 100°.",
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
-            "tipo": "quadro",
-            "titulo": "A reflexão",
-            "dados": [
-              "\\text{com o espelho} = 40^\\circ"
+            "tipo": "tabela",
+            "titulo": "O que eu tenho",
+            "cabecalho": [
+              "Informação",
+              "Valor"
             ],
-            "formula": "\\text{entre os raios} = i + r",
-            "legenda": [
-              "i: chegada, medida da normal",
-              "r: saída, igual a i"
-            ],
-            "contas": [
-              "i = 90 - 40 = 50^\\circ",
-              "r = i = 50^\\circ",
-              "50 + 50"
-            ],
-            "resultado": "\\text{entre os raios} = 100^\\circ",
-            "nota": "Mede-se sempre a partir da normal."
+            "linhas": [
+              [
+                "Ângulo com o espelho",
+                "40°"
+              ],
+              [
+                "Normal",
+                "reta em pé, a 90° do espelho"
+              ]
+            ]
           }
         },
         {
-          "titulo": "Por que funciona",
-          "texto": "Teste com números pequenos: raio deitado quase no espelho, 10° com ele, faz 80° com a normal e os raios abrem 160°.\nRaio quase em pé, 80° com o espelho, faz 10° com a normal e os raios abrem só 20°.\nQuanto mais em pé chega, mais fechado volta."
+          "titulo": "A equação em letras",
+          "texto": "A questão quer o ângulo entre os dois raios.\nA = 2 × i (ângulo entre os raios = 2 vezes o ângulo com a normal)\nPor que 2 vezes? O raio chega com i de um lado da normal e sai com o mesmo i do outro.\nAgora é só achar cada letra.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "O que é"
+            ],
+            "linhas": [
+              [
+                "A",
+                "ângulo entre os raios (o que a questão quer)"
+              ],
+              [
+                "i",
+                "ângulo com a normal"
+              ]
+            ]
+          }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra B, 100°.\nA (80°): somou os ângulos com o espelho, 40 + 40, e não com a normal.\nC (40°): repetiu o ângulo dado.\nD (50°): é só de um raio até a normal.\nE (90°): é o ângulo da própria normal com o espelho."
+          "titulo": "Achando i: o seu jeito",
+          "texto": "Parece certo usar 40° direto: 2 × 40 = 80. Mas 40° é com o espelho, não com a normal.\ni = 90 − 40 = 50°"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "A = 2 × 50 = 100°\nLetra B.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "i",
+                "50°"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: ângulo dado \"com o espelho\" → troque pelo ângulo com a normal (90 − ele) antes de dobrar.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "40° com o espelho"
+              ],
+              [
+                "2. Equação em letras",
+                "A = 2 × i"
+              ],
+              [
+                "3. Achar cada letra",
+                "i = 50°"
+              ],
+              [
+                "4. Substituir",
+                "2 × 50 = 100"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,

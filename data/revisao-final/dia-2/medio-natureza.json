@@ -29,92 +29,130 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "Dois aparelhos ligados juntos na mesma tomada. A questão dá as potências e a tensão e pede a corrente total.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "circuito",
+                "nome": "Potência",
+                "formula": "P = U × i"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "O quê",
+              "Informação",
               "Valor"
             ],
             "linhas": [
               [
-                "micro-ondas",
-                "1 320 W"
-              ],
-              [
-                "chaleira",
-                "880 W"
-              ],
-              [
-                "tomada (U)",
+                "Tensão",
                 "220 V"
               ],
               [
-                "corrente total (i)",
-                "?"
+                "Micro-ondas",
+                "1 320 W"
+              ],
+              [
+                "Chaleira",
+                "880 W"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Primeiro, some o gasto dos dois: 1 320 + 880 = 2 200 W. Depois, ache a corrente dessa potência total.",
-          "visual": null
-        },
-        {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Eletricidade: em paralelo, some as potências; depois P = U × i.\nTotal: 1 320 + 880 = 2 200 W.\nCorrente: quantos 220 cabem em 2 200? 2 200 ÷ 220 = 10 A.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Corrente pela potência",
-            "dados": [
-              "P = 1320 + 880 = 2200\\,\\text{W}",
-              "U = 220\\,\\text{V}"
-            ],
-            "formula": "i = \\dfrac{P}{U}",
-            "legenda": [
-              "P: energia gasta por segundo",
-              "U: o empurrão da tomada"
-            ],
-            "contas": [
-              "i = \\dfrac{2200}{220}"
-            ],
-            "resultado": "i = 10\\,\\text{A}",
-            "nota": "Passam 10 ampères pela fiação."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "Na mesma tomada, cada aparelho puxa a sua corrente: 1 320 ÷ 220 = 6 A do micro-ondas (220 × 6 = 1 320) e 880 ÷ 220 = 4 A da chaleira (220 × 4 = 880). Somando, dá os mesmos 10 A.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a corrente total.\ni = P ÷ U (corrente = potência total ÷ tensão)\nPor que dividir? De P = U × i: a corrente é quanto de potência cada volt carrega.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Mesma tomada de 220 V",
+            "titulo": "As letras",
             "cabecalho": [
-              "Aparelho",
-              "Corrente"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "micro-ondas",
-                "6 A"
+                "i",
+                "corrente total (o que a questão quer)"
               ],
               [
-                "chaleira",
-                "4 A"
+                "P",
+                "potência total"
               ],
               [
-                "os dois",
-                "10 A"
+                "U",
+                "tensão"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra D, 10 A.\nA (2 A): subtrai as potências, 440 ÷ 220.\nB (4 A): é só a chaleira, esquecendo o micro-ondas.\nC (6 A): é só o micro-ondas, esquecendo a chaleira.\nE (484 000 A): multiplica 2 200 × 220 em vez de dividir.",
-          "visual": null
+          "titulo": "Achando P: o seu jeito",
+          "texto": "Parece certo usar só o micro-ondas. Mas os dois estão ligados juntos.\nP = 1 320 + 880 = 2 200 W"
+        },
+        {
+          "titulo": "Achando U (tensão)",
+          "texto": "U = 220 V"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "i = 2 200 ÷ 220 = 10 A\nLetra D.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "P",
+                "2 200 W"
+              ],
+              [
+                "U",
+                "220 V"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: aparelhos ligados ao mesmo tempo → some as potências e divida pela tensão.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "1 320 W + 880 W, 220 V"
+              ],
+              [
+                "2. Equação em letras",
+                "i = P ÷ U"
+              ],
+              [
+                "3. Achar cada letra",
+                "P = 2 200; U = 220"
+              ],
+              [
+                "4. Substituir",
+                "2 200 ÷ 220 = 10"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -161,92 +199,139 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "Duas lâmpadas num caminho só, ligadas a 12 V. Pede a corrente.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "circuito",
+                "nome": "Em série",
+                "formula": "R total = soma"
+              },
+              {
+                "figura": "circuito",
+                "nome": "Lei de Ohm",
+                "formula": "i = U ÷ R"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "O quê",
+              "Informação",
               "Valor"
             ],
             "linhas": [
               [
-                "lâmpada 1",
+                "Lâmpada 1",
                 "8 Ω"
               ],
               [
-                "lâmpada 2",
+                "Lâmpada 2",
                 "4 Ω"
               ],
               [
-                "bateria (U)",
+                "Bateria",
                 "12 V"
               ],
               [
-                "corrente (i)",
-                "?"
+                "Ligação",
+                "em série"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Primeiro: em série, a corrente enfrenta as duas resistências, uma depois da outra: 8 + 4 = 12 Ω. Depois: usar a lei de Ohm com esse total.",
-          "visual": null
-        },
-        {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Eletricidade: em série, some; depois U = R × i.\nTotal: 8 + 4 = 12 Ω.\nCorrente: quantos 12 cabem em 12 V? 12 ÷ 12 = 1 A.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Lei de Ohm em série",
-            "dados": [
-              "R = 8 + 4 = 12\\,\\Omega",
-              "U = 12\\,\\text{V}"
-            ],
-            "formula": "i = \\dfrac{U}{R}",
-            "legenda": [
-              "U: o empurrão da bateria",
-              "R: resistência total"
-            ],
-            "contas": [
-              "i = \\dfrac{12}{12}"
-            ],
-            "resultado": "i = 1\\,\\text{A}",
-            "nota": "Passa 1 ampère pelas duas lâmpadas."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "Num caminho só, a mesma corrente atravessa tudo. Mais obstáculo no caminho, menos corrente: com uma lâmpada só de 4 Ω passariam 3 A; com as duas, cai para 1 A.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a corrente.\ni = U ÷ R (corrente = tensão ÷ resistência total)\nPor que a resistência total? Em série, a mesma corrente atravessa as duas lâmpadas.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Mesma bateria de 12 V",
+            "titulo": "As letras",
             "cabecalho": [
-              "Resistência total",
-              "Corrente"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "4 Ω",
-                "3 A"
+                "i",
+                "corrente (o que a questão quer)"
               ],
               [
-                "8 Ω",
-                "1,5 A"
+                "U",
+                "tensão"
               ],
               [
-                "12 Ω",
-                "1 A"
+                "R",
+                "resistência total"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra A, 1 A.\nB (1,5 A): usa só a lâmpada de 8 Ω, 12 ÷ 8.\nC (3 A): usa só a de 4 Ω, 12 ÷ 4.\nD (4,5 A): soma 3 + 1,5. Essa é a conta de lâmpadas lado a lado (paralelo), não o caso.\nE (144 A): multiplica 12 × 12 em vez de dividir.",
-          "visual": null
+          "titulo": "Achando U (tensão)",
+          "texto": "U = 12 V"
+        },
+        {
+          "titulo": "Achando R: o seu jeito",
+          "texto": "Parece certo usar só uma lâmpada: 12 ÷ 8 = 1,5. Mas em série as duas contam.\nR = 8 + 4 = 12 Ω"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "i = 12 ÷ 12 = 1 A\nLetra A.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "U",
+                "12 V"
+              ],
+              [
+                "R",
+                "12 Ω"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: série com bateria → some as resistências e divida a tensão pela soma.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "8 Ω, 4 Ω, 12 V"
+              ],
+              [
+                "2. Equação em letras",
+                "i = U ÷ R"
+              ],
+              [
+                "3. Achar cada letra",
+                "U = 12; R = 12"
+              ],
+              [
+                "4. Substituir",
+                "12 ÷ 12 = 1"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -293,95 +378,126 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "Pede o TEMPO. Para isso, antes é preciso saber quanto calor a água precisa.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "termometro",
+                "nome": "Calor",
+                "formula": "Q = m × c × ΔT"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "O quê",
+              "Informação",
               "Valor"
             ],
             "linhas": [
               [
-                "massa (m)",
+                "Massa",
                 "500 g"
               ],
               [
-                "calor específico (c)",
-                "1 caloria por grama, a cada grau"
+                "c da água",
+                "1 cal/(g·°C)"
               ],
               [
-                "temperaturas",
-                "20 °C → 80 °C"
+                "De",
+                "20 °C"
               ],
               [
-                "ebulidor",
+                "Até",
+                "80 °C"
+              ],
+              [
+                "Ebulidor",
                 "500 cal por segundo"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Primeiro: a temperatura sobe 80 − 20 = 60 °C.\nCada grama precisa de 1 caloria por grau.\nSão 500 gramas subindo 60 graus: 500 × 60 = 30 000 calorias.\nDepois: o ebulidor dá 500 calorias a cada segundo.\nO tempo é o total dividido por 500.",
-          "visual": null
-        },
-        {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Termodinâmica: calor = quantidade × c × quanto muda; tempo = calor ÷ o que entra por segundo.\nQ = 500 × 1 × (80 − 20) = 500 × 60 = 30 000 cal.\nA cada segundo entram 500: quantos 500 cabem em 30 000? 60 s.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Calor e tempo",
-            "dados": [
-              "m = 500\\,\\text{g}",
-              "c = 1\\,\\text{cal/(g°C)}",
-              "\\Delta T = 80 - 20 = 60\\,°\\text{C}",
-              "500\\,\\text{cal por segundo}"
-            ],
-            "formula": "Q = m \\times c \\times \\Delta T",
-            "legenda": [
-              "Q: calor que a água precisa",
-              "ΔT: quanto a temperatura sobe"
-            ],
-            "contas": [
-              "Q = 500 \\times 1 \\times 60 = 30000\\,\\text{cal}",
-              "t = \\dfrac{30000}{500}"
-            ],
-            "resultado": "t = 60\\,\\text{s}",
-            "nota": "A água chega a 80 °C em 1 minuto."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "O calor depende de quanto a temperatura SOBE, não do número final. Se a água já estivesse a 50 °C, subiria só 30 °C e levaria metade do tempo.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer o tempo.\nt = Q ÷ 500 (tempo = calor necessário ÷ calor por segundo)\nPor que dividir? Se a cada segundo entram 500 cal, o tempo é quantas vezes 500 cabe no calor total.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Mesmos 500 g e 500 cal/s",
+            "titulo": "As letras",
             "cabecalho": [
-              "Começa em",
-              "Tempo até 80 °C"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "20 °C",
-                "60 s"
+                "t",
+                "tempo (o que a questão quer)"
               ],
               [
-                "50 °C",
-                "30 s"
-              ],
-              [
-                "80 °C",
-                "0 s"
+                "Q",
+                "calor necessário"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra B, 60 s.\nA (0,06 s): usa a massa em quilos (0,5 kg) no lugar de gramas. 0,5 × 60 = 30 e 30 ÷ 500.\nC (80 s): usa só o 80 °C, esquecendo de tirar os 20 °C do começo.\nD (100 s): soma as temperaturas, 80 + 20.\nE (30 000 s): é o calor, não o tempo. Faltou dividir por 500.",
-          "visual": null
+          "titulo": "Achando Q: o seu jeito",
+          "texto": "Parece certo usar 80 °C inteiros. Mas a água já estava a 20 °C: sobe 60.\nQ = 500 × 1 × 60 = 30 000 cal"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "t = 30 000 ÷ 500 = 60 s\nLetra B.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "Q",
+                "30 000 cal"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: aquecedor que dá \"X por segundo\" → ache o calor total (m × c × ΔT) e divida por X.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "500 g, 20 a 80 °C"
+              ],
+              [
+                "2. Equação em letras",
+                "t = Q ÷ 500"
+              ],
+              [
+                "3. Achar cada letra",
+                "Q = 30 000"
+              ],
+              [
+                "4. Substituir",
+                "30 000 ÷ 500 = 60"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -428,93 +544,126 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "O som vai até o fundo e volta. Pede só a profundidade, que é a ida.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "onda",
+                "nome": "Distância com velocidade fixa",
+                "formula": "d = v × t"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Os dados",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "O quê",
+              "Informação",
               "Valor"
             ],
             "linhas": [
               [
-                "velocidade do som (v)",
+                "Tempo do eco",
+                "0,4 s (desce e volta)"
+              ],
+              [
+                "Velocidade do som na água",
                 "1 500 m/s"
-              ],
-              [
-                "tempo ida e volta (t)",
-                "0,4 s"
-              ],
-              [
-                "profundidade",
-                "?"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Primeiro: quanto o som andou ao todo em 0,4 s, que é 1 500 × 0,4.\nComo 0,4 é 4 décimos: 1 500 ÷ 10 = 150.\nE 150 × 4 = 600 m.\nDepois: esse caminho é descer + subir, então a profundidade é a metade.\n600 ÷ 2 = 300 m.",
-          "visual": null
-        },
-        {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Ondas: distância = velocidade × tempo; no eco, a metade.\nIda e volta: 1 500 × 0,4 = 600 m (0,4 é 4 décimos: 150 × 4).\nProfundidade: 600 ÷ 2 = 300 m.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Eco do sonar",
-            "dados": [
-              "v = 1500\\,\\text{m/s}",
-              "t = 0{,}4\\,\\text{s}"
-            ],
-            "formula": "d = \\dfrac{v \\times t}{2}",
-            "legenda": [
-              "v: quanto o som anda por segundo",
-              "t: tempo de ida e volta"
-            ],
-            "contas": [
-              "d = \\dfrac{1500 \\times 0{,}4}{2}",
-              "d = \\dfrac{600}{2}"
-            ],
-            "resultado": "d = 300\\,\\text{m}",
-            "nota": "O fundo está a 300 metros."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "Em 0,2 s o som chega ao fundo e em mais 0,2 s volta ao barco. Em 0,2 s ele anda 1 500 × 0,2: 1 500 ÷ 10 = 150, e 150 × 2 = 300 m. A mesma resposta.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a profundidade.\np = (v × t) ÷ 2 (profundidade = caminho do som ÷ 2)\nPor que dividir por 2? No eco o som vai até o fundo e volta. O caminho todo é o dobro da profundidade.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "O caminho do som",
+            "titulo": "As letras",
             "cabecalho": [
-              "Trecho",
-              "Tempo",
-              "Distância"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "descer",
-                "0,2 s",
-                "300 m"
+                "p",
+                "profundidade (o que a questão quer)"
               ],
               [
-                "subir",
-                "0,2 s",
-                "300 m"
+                "v",
+                "velocidade do som"
               ],
               [
-                "total",
-                "0,4 s",
-                "600 m"
+                "t",
+                "tempo de ida e volta"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra B, 300 m.\nC (600 m): é a armadilha. É o caminho de ida e volta, não a profundidade.\nA (150 m): divide por 2 duas vezes.\nE (3 750 m): divide 1 500 ÷ 0,4 em vez de multiplicar.\nD (1 875 m): é esse 3 750 dividido por 2.",
-          "visual": null
+          "titulo": "Achando v (velocidade)",
+          "texto": "v = 1 500 m/s"
+        },
+        {
+          "titulo": "Achando t: o seu jeito",
+          "texto": "Parece certo usar o caminho inteiro: 1 500 × 0,4 = 600 m. Mas esse é ida e volta.\nt = 0,4 s, para os dois caminhos"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "p = (1 500 × 0,4) ÷ 2 = 600 ÷ 2 = 300 m\nLetra B.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "v",
+                "1 500 m/s"
+              ],
+              [
+                "t",
+                "0,4 s"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: eco (sonar, morcego, grito no paredão) → velocidade × tempo e depois ÷ 2.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "0,4 s, 1 500 m/s"
+              ],
+              [
+                "2. Equação em letras",
+                "p = v × t ÷ 2"
+              ],
+              [
+                "3. Achar cada letra",
+                "v = 1 500; t = 0,4"
+              ],
+              [
+                "4. Substituir",
+                "600 ÷ 2 = 300"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -557,92 +706,118 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "Ela se moveu. Primeiro ache a nova distância até o espelho, depois a distância até a imagem.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "Antes e depois",
-            "cabecalho": [
-              "Momento",
-              "Até o espelho",
-              "Até a imagem"
-            ],
-            "linhas": [
-              [
-                "antes",
-                "2 m",
-                "4 m"
-              ],
-              [
-                "depois",
-                "?",
-                "?"
-              ]
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "lente",
+                "nome": "Espelho plano",
+                "formula": "imagem atrás, à mesma distância"
+              }
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Primeiro: chegou 0,5 m (meio metro) mais perto, então está a 2 − 0,5 = 1,5 m do espelho. Depois: a imagem está 1,5 m atrás do espelho; da pessoa até ela são 1,5 + 1,5 = 3 m.",
-          "visual": null
-        },
-        {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Óptica: a imagem fica atrás do espelho, à mesma distância.\nAgora ela está a 2 − 0,5 = 1,5 m do espelho; a imagem, 1,5 m atrás.\nDistância até a imagem: 1,5 + 1,5 = 3 m.",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Espelho plano",
-            "dados": [
-              "\\text{antes: } 2\\,\\text{m}",
-              "\\text{andou: } 0{,}5\\,\\text{m}",
-              "d = 2 - 0{,}5 = 1{,}5\\,\\text{m}"
-            ],
-            "formula": "D = 2 \\times d",
-            "legenda": [
-              "d: da pessoa até o espelho",
-              "D: da pessoa até a imagem"
-            ],
-            "contas": [
-              "D = 2 \\times 1{,}5"
-            ],
-            "resultado": "D = 3\\,\\text{m}",
-            "nota": "A imagem está a 3 metros dela."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "O espelho funciona como uma janela para um 'quarto igual' do outro lado: tudo que está a 1,5 m na frente aparece a 1,5 m atrás. Quando você se aproxima, a imagem também se aproxima do espelho.",
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Pessoa e imagem",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "Até o espelho",
-              "Imagem atrás",
-              "Pessoa até imagem"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "2 m",
-                "2 m",
-                "4 m"
-              ],
-              [
-                "1,5 m",
-                "1,5 m",
-                "3 m"
-              ],
-              [
-                "1 m",
-                "1 m",
+                "Distância antes",
                 "2 m"
+              ],
+              [
+                "Andou",
+                "0,5 m para perto"
+              ],
+              [
+                "Espelho",
+                "plano"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra C, 3 m.\nA (1 m): dobra só o 0,5 m que ela andou.\nB (1,5 m): para no espelho e esquece a parte de trás.\nD (3,5 m): mistura antes e depois, 2 + 1,5.\nE (4 m): é a distância de antes de ela andar, 2 × 2.",
-          "visual": null
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a distância da pessoa até a imagem.\nD = 2 × d (até a imagem = 2 vezes até o espelho)\nPor que 2 vezes? A imagem fica atrás do espelho, à mesma distância que você está na frente. São dois pedaços iguais.\nAgora é só achar cada letra.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "O que é"
+            ],
+            "linhas": [
+              [
+                "D",
+                "distância até a imagem (o que a questão quer)"
+              ],
+              [
+                "d",
+                "distância até o espelho agora"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Achando d: o seu jeito",
+          "texto": "Parece certo usar os 2 m do começo. Mas ela andou 0,5 m.\nd = 2 − 0,5 = 1,5 m"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "D = 2 × 1,5 = 3 m\nLetra C.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "d",
+                "1,5 m"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: espelho plano e pede distância até a imagem → dobre a distância até o espelho (a de agora).",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "2 m, andou 0,5 m"
+              ],
+              [
+                "2. Equação em letras",
+                "D = 2 × d"
+              ],
+              [
+                "3. Achar cada letra",
+                "d = 1,5"
+              ],
+              [
+                "4. Substituir",
+                "2 × 1,5 = 3"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,
@@ -689,98 +864,130 @@
       ],
       "passos": [
         {
-          "titulo": "A pergunta",
-          "texto": "Duas forças em sentidos contrários. Pede a aceleração.",
+          "titulo": "As fórmulas desta questão",
+          "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+          "visual": {
+            "tipo": "formulas",
+            "itens": [
+              {
+                "figura": "carro",
+                "nome": "2ª lei de Newton",
+                "formula": "força que sobra = massa × a"
+              }
+            ]
+          }
+        },
+        {
+          "titulo": "O que eu tenho",
+          "texto": "Primeiro, tire os números do enunciado.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "As forças",
+            "titulo": "O que eu tenho",
             "cabecalho": [
-              "Força",
-              "Valor",
-              "Sentido"
+              "Informação",
+              "Valor"
             ],
             "linhas": [
               [
-                "empurrão",
-                "200 N",
-                "para frente"
+                "Massa da caixa",
+                "40 kg"
               ],
               [
-                "atrito",
-                "80 N",
-                "para trás"
+                "Empurrão",
+                "200 N"
               ],
               [
-                "massa da caixa",
-                "40 kg",
-                "-"
+                "Atrito",
+                "80 N, contra"
               ]
             ]
           }
         },
         {
-          "titulo": "O que acontece",
-          "texto": "Primeiro: o atrito come parte do empurrão, então sobram 200 − 80 = 120 N. Depois: essa força que sobra é que acelera os 40 kg.",
-          "visual": null
-        },
-        {
-          "titulo": "Jeito rápido",
-          "texto": "Macete de Dinâmica: ache a força que sobra, depois F = m × a.\nSobra: 200 − 80 = 120 N.\nAceleração: 120 ÷ 40 = 3 m/s² (40 × 3 = 120).",
-          "visual": {
-            "tipo": "quadro",
-            "titulo": "Segunda lei de Newton",
-            "dados": [
-              "F = 200\\,\\text{N}",
-              "f_{at} = 80\\,\\text{N}",
-              "m = 40\\,\\text{kg}",
-              "F_R = 200 - 80 = 120\\,\\text{N}"
-            ],
-            "formula": "a = \\dfrac{F_R}{m}",
-            "legenda": [
-              "F_R: força que sobra",
-              "m: massa da caixa"
-            ],
-            "contas": [
-              "a = \\dfrac{120}{40}"
-            ],
-            "resultado": "a = 3\\,\\text{m/s}^2",
-            "nota": "A cada segundo, a caixa ganha 3 m/s de velocidade."
-          }
-        },
-        {
-          "titulo": "Por que funciona",
-          "texto": "Força puxando para lados opostos se cancela em parte, como num cabo de guerra: ganha a diferença. Se o atrito fosse igual ao empurrão, sobraria zero e a caixa não aceleraria.",
+          "titulo": "A equação em letras",
+          "texto": "A questão quer a aceleração da caixa.\na = F ÷ m (aceleração = força que sobra ÷ massa)\nPor que a força que sobra? O atrito puxa para trás. Só o que sobra do empurrão acelera a caixa.\nAgora é só achar cada letra.",
           "visual": {
             "tipo": "tabela",
-            "titulo": "Mesmo empurrão de 200 N",
+            "titulo": "As letras",
             "cabecalho": [
-              "Atrito",
-              "Sobra",
-              "Aceleração"
+              "Letra",
+              "O que é"
             ],
             "linhas": [
               [
-                "0 N",
-                "200 N",
-                "5 m/s²"
+                "a",
+                "aceleração (o que a questão quer)"
               ],
               [
-                "80 N",
-                "120 N",
-                "3 m/s²"
+                "F",
+                "força que sobra"
               ],
               [
-                "200 N",
-                "0 N",
-                "0"
+                "m",
+                "massa"
               ]
             ]
           }
         },
         {
-          "titulo": "A resposta",
-          "texto": "Letra E, 3 m/s². A (2) usa só o atrito: 80 ÷ 40. B (5) esquece o atrito: 200 ÷ 40. C (7) soma o atrito como se ele ajudasse: 280 ÷ 40. D (120) para na força que sobra e não divide pela massa.",
-          "visual": null
+          "titulo": "Achando F: o seu jeito",
+          "texto": "Parece certo usar os 200 N inteiros: 200 ÷ 40 = 5. Mas o atrito come 80 N.\nF = 200 − 80 = 120 N"
+        },
+        {
+          "titulo": "Achando m (massa)",
+          "texto": "m = 40 kg"
+        },
+        {
+          "titulo": "Volta na equação",
+          "texto": "a = 120 ÷ 40 = 3 m/s²\nLetra E.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "As letras",
+            "cabecalho": [
+              "Letra",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "F",
+                "120 N"
+              ],
+              [
+                "m",
+                "40 kg"
+              ]
+            ]
+          }
+        },
+        {
+          "titulo": "Questão parecida? Faça assim",
+          "texto": "Pista: força + atrito → tire o atrito antes de dividir pela massa.",
+          "visual": {
+            "tipo": "tabela",
+            "titulo": "A receita",
+            "cabecalho": [
+              "Passo",
+              "Nesta questão"
+            ],
+            "linhas": [
+              [
+                "1. Tabela do que eu tenho",
+                "40 kg, 200 N, 80 N"
+              ],
+              [
+                "2. Equação em letras",
+                "a = F ÷ m"
+              ],
+              [
+                "3. Achar cada letra",
+                "F = 120; m = 40"
+              ],
+              [
+                "4. Substituir",
+                "120 ÷ 40 = 3"
+              ]
+            ]
+          }
         }
       ],
       "seuErro": null,

@@ -13,7 +13,7 @@
   "origem": "Banco ENEM do dia 2",
   "explicacao": {
    "conferencia": "50 L = 50 000 g; ΔT = 60 − 20 = 40; Q = 50 000 × 1 × 40 = 2 000 000 cal. C. Erros: A = só o ΔT; B = massa em kg (50 × 40); D = usou 60; E = usou 20.",
-   "ideia": "QUE MACETE: Q = m × c × ΔT, com a massa em gramas. Aqui, 50 000 × 1 × 40 = 2 000 000 cal.",
+   "ideia": "O calor que a água recebe é massa × calor específico × quanto subiu, com a massa em gramas. Aqui, 50 000 × 1 × 40 = 2 000 000 cal.",
    "pecas": [
     {
      "termo": "ΔT (variação)",
@@ -26,54 +26,134 @@
    ],
    "passos": [
     {
-     "titulo": "A pergunta",
-     "texto": "O Sol esquenta 50 litros de água no reservatório.\nA água sai de 20 °C e chega a 60 °C.\nA questão quer saber quanto calor entrou na água.",
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
      "visual": {
-      "tipo": "figura",
-      "nome": "calor-panela",
-      "titulo": "A água do reservatório",
-      "rotulos": [
-       "50 L de água",
-       "20 °C → 60 °C",
-       "Q = ?",
-       "c = 1 cal/(g·°C)"
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Calor",
+        "formula": "Q = m × c × ΔT"
+       }
       ]
      }
     },
     {
-     "titulo": "O que acontece",
-     "texto": "O calor específico da água fala em gramas, então a massa tem que estar em gramas.\n50 litros = 50 kg = 50 000 g.\nA temperatura subiu 60 − 20 = 40 °C. Esse 40 é o ΔT, o quanto mudou."
-    },
-    {
-     "titulo": "Jeito rápido",
-     "texto": "Macete de Termodinâmica: calor = quantidade × c × quanto a temperatura muda.\nQuantidade: 50 L = 50 000 g. Quanto muda: 60 − 20 = 40 °C. Na água, c = 1.\nQ = 50 000 × 1 × 40 = 2 000 000 cal.",
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
      "visual": {
-      "tipo": "quadro",
-      "titulo": "Esquentando o reservatório",
-      "dados": [
-       "m = 50\\,000\\,\\text{g}",
-       "c = 1",
-       "\\Delta T = 60 - 20 = 40"
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
       ],
-      "formula": "Q = m \\times c \\times \\Delta T",
-      "legenda": [
-       "m: a massa em gramas",
-       "ΔT: quanto a temperatura subiu"
-      ],
-      "contas": [
-       "Q = 50\\,000 \\times 1 \\times 40"
-      ],
-      "resultado": "Q = 2\\,000\\,000\\,\\text{cal}",
-      "nota": "Dois milhões de calorias."
+      "linhas": [
+       [
+        "Água",
+        "50 litros = 50 000 g"
+       ],
+       [
+        "c",
+        "1 cal/(g·°C)"
+       ],
+       [
+        "De",
+        "20 °C"
+       ],
+       [
+        "Até",
+        "60 °C"
+       ]
+      ]
      }
     },
     {
-     "titulo": "Por que funciona",
-     "texto": "Cada grama de água pede 1 cal para cada grau que sobe.\nMais água pede mais calor, e mais graus também.\nPor isso a conta multiplica as três coisas: massa, calor específico e ΔT."
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o calor recebido.\nQ = m × c × ΔT (calor = massa × calor específico × quanto subiu)\nPor que multiplicar? Cada grama pede 1 cal para subir 1 grau. Muitos gramas e muitos graus: multiplica tudo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "Q",
+        "calor (o que a questão quer)"
+       ],
+       [
+        "m",
+        "massa, em gramas"
+       ],
+       [
+        "ΔT",
+        "quanto a temperatura subiu"
+       ]
+      ]
+     }
     },
     {
-     "titulo": "A resposta",
-     "texto": "Letra C, 2 000 000 cal.\nA parou no ΔT (40) e esqueceu a massa.\nB usou a massa em kg (50 × 40), mas o c está em gramas.\nD usou a temperatura final, 60, no lugar de 40.\nE usou a temperatura inicial, 20, no lugar de 40."
+     "titulo": "Achando m: o seu jeito",
+     "texto": "Parece certo usar 50. Mas o c está em cal por GRAMA.\nm = 50 × 1 000 = 50 000 g"
+    },
+    {
+     "titulo": "Achando ΔT (quanto subiu)",
+     "texto": "ΔT = 60 − 20 = 40 °C"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "Q = 50 000 × 1 × 40 = 2 000 000 cal\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "m",
+        "50 000 g"
+       ],
+       [
+        "ΔT",
+        "40 °C"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: calor para esquentar água em litros → litro vira 1 000 g e use Q = m × c × ΔT.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "50 L, 20 a 60 °C"
+       ],
+       [
+        "2. Equação em letras",
+        "Q = m × c × ΔT"
+       ],
+       [
+        "3. Achar cada letra",
+        "m = 50 000; ΔT = 40"
+       ],
+       [
+        "4. Substituir",
+        "2 000 000 cal"
+       ]
+      ]
+     }
     }
    ],
    "seuErro": null,
@@ -117,55 +197,134 @@
    ],
    "passos": [
     {
-     "titulo": "A pergunta",
-     "texto": "Duas panelas iguais: uma com 200 g de água, outra com 200 g de óleo.\nCada uma recebe 3 000 cal.\nA questão quer saber quantos graus cada líquido sobe.",
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
      "visual": {
-      "tipo": "figura",
-      "nome": "calor-panela",
-      "titulo": "Água e óleo no fogo",
-      "rotulos": [
-       "200 g de água",
-       "200 g de óleo",
-       "3 000 cal cada",
-       "ΔT = ?"
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Calor",
+        "formula": "Q = m × c × ΔT"
+       }
       ]
      }
     },
     {
-     "titulo": "O que acontece",
-     "texto": "Água: 1 g sobe 1 °C com 1 cal, então 200 g pedem 200 cal para cada grau.\nCom 3 000 cal: 3 000 ÷ 200 = 15. A água sobe 15 °C.\nÓleo: 1 g sobe 1 °C com 0,5 cal, então 200 g pedem 200 × 0,5 = 100 cal por grau.\nCom 3 000 cal: 3 000 ÷ 100 = 30. O óleo sobe 30 °C."
-    },
-    {
-     "titulo": "Jeito rápido",
-     "texto": "Macete de Termodinâmica: quem tem c maior sobe menos graus com a mesma energia. Compare em vezes.\nÁgua: cada grau custa 200 × 1 = 200 cal. Quantos 200 cabem em 3 000? 15. A água sobe 15 °C.\nO c do óleo (0,5) é metade do da água: com o mesmo calor, sobe o dobro. 2 × 15 = 30 °C.",
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
      "visual": {
-      "tipo": "quadro",
-      "titulo": "O mesmo calor, dois líquidos",
-      "dados": [
-       "Q = 3\\,000\\,\\text{cal}",
-       "m = 200\\,\\text{g}",
-       "c_{\\text{água}} = 1,\\; c_{\\text{óleo}} = 0{,}5"
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
       ],
-      "formula": "\\Delta T = Q \\div (m \\times c)",
-      "legenda": [
-       "c: quanto custa esquentar",
-       "ΔT: quanto sobe"
-      ],
-      "contas": [
-       "\\text{água: } 3\\,000 \\div 200 = 15",
-       "\\text{óleo: } 2 \\times 15 = 30"
-      ],
-      "resultado": "15\\,^\\circ\\text{C} \\text{ e } 30\\,^\\circ\\text{C}",
-      "nota": "O óleo sobe o dobro."
+      "linhas": [
+       [
+        "Massa de cada",
+        "200 g"
+       ],
+       [
+        "Calor de cada",
+        "3 000 cal"
+       ],
+       [
+        "c da água",
+        "1"
+       ],
+       [
+        "c do óleo",
+        "0,5"
+       ]
+      ]
      }
     },
     {
-     "titulo": "Por que funciona",
-     "texto": "O calor específico diz quanto o material custa para esquentar.\nO óleo custa metade da água por grau.\nCom o mesmo calor, ele sobe o dobro de graus. Por isso o óleo de fritura esquenta tão rápido."
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quanto subiu cada temperatura.\nΔT = Q ÷ (m × c) (subida = calor ÷ massa ÷ calor específico)\nPor que dividir pelo c? Quem pede menos energia por grau sobe mais graus com o mesmo calor.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "ΔT",
+        "subida de cada um (o que a questão quer)"
+       ],
+       [
+        "Ta",
+        "subida da água"
+       ],
+       [
+        "To",
+        "subida do óleo"
+       ]
+      ]
+     }
     },
     {
-     "titulo": "A resposta",
-     "texto": "Letra A, água 15 °C e óleo 30 °C.\nB trocou os dois: quem tem c menor sobe mais, não menos.\nC esqueceu o calor específico, como se os dois líquidos fossem iguais.\nD multiplicou pelo 0,5 em vez de dividir pelo custo por grau.\nE esqueceu de dividir pela massa de 200 g."
+     "titulo": "Achando Ta (água)",
+     "texto": "Ta = 3 000 ÷ (200 × 1) = 15 °C"
+    },
+    {
+     "titulo": "Achando To: o seu jeito",
+     "texto": "Parece certo achar que o óleo sobe menos, porque c é menor. Mas c menor quer dizer que esquenta MAIS fácil.\nTo = 3 000 ÷ (200 × 0,5) = 3 000 ÷ 100 = 30 °C"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "Água: 15 °C; óleo: 30 °C\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Ta",
+        "15 °C"
+       ],
+       [
+        "To",
+        "30 °C"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: mesmo calor e mesma massa → sobe mais quem tem calor específico menor (metade do c = o dobro de graus).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "200 g, 3 000 cal, c = 1 e 0,5"
+       ],
+       [
+        "2. Equação em letras",
+        "ΔT = Q ÷ (m × c)"
+       ],
+       [
+        "3. Achar cada letra",
+        "Ta = 15; To = 30"
+       ],
+       [
+        "4. Substituir",
+        "letra A"
+       ]
+      ]
+     }
     }
    ],
    "seuErro": null,

@@ -1,0 +1,6531 @@
+{
+ "cmpq9tfdn003ewxc8k3aybqfr": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Velocidade média",
+        "formula": "v = distância ÷ tempo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Distância",
+        "100 km"
+       ],
+       [
+        "Tempo",
+        "2 h"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a velocidade média.\nv = d ÷ t (velocidade = distância ÷ tempo)\nPor que dividir? Velocidade é quanto anda em cada hora. Se em 2 horas andou 100 km, em 1 hora andou a metade.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "v",
+        "velocidade média (o que a questão quer)"
+       ],
+       [
+        "d",
+        "distância"
+       ],
+       [
+        "t",
+        "tempo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando d (distância)",
+     "texto": "d = 100 km"
+    },
+    {
+     "titulo": "Achando t: o seu jeito",
+     "texto": "Parece certo fazer 100 × 2 = 200 km/h. Mas multiplicar diria que ele anda mais do que andou.\nt = 2 h"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "v = 100 ÷ 2 = 50 km/h\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "d",
+        "100 km"
+       ],
+       [
+        "t",
+        "2 h"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pede velocidade e dá km e horas → divida a distância pelo tempo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "100 km, 2 h"
+       ],
+       [
+        "2. Equação em letras",
+        "v = d ÷ t"
+       ],
+       [
+        "3. Achar cada letra",
+        "d = 100; t = 2"
+       ],
+       [
+        "4. Substituir",
+        "100 ÷ 2 = 50"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "Velocidade média é quantos km o carro anda em cada hora. Em 2 horas andou 100 km, então em 1 hora andou 50 km.",
+   "conferencia": "v = 100/2 = 50 km/h. B. A = 100/4; C = palpite; D = só a distância; E = 100 × 2.",
+   "checagem": {
+    "pergunta": "Um ônibus anda 300 km em 5 h. Velocidade média?",
+    "opcoes": [
+     "60 km/h",
+     "1 500 km/h",
+     "50 km/h",
+     "305 km/h"
+    ],
+    "certa": "60 km/h",
+    "resposta": "300 ÷ 5 = 60 km/h."
+   }
+  }
+ },
+ "q-fis-001": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "km/h para m/s",
+        "formula": "v = km/h ÷ 3,6"
+       },
+       {
+        "figura": "carro",
+        "nome": "Aceleração",
+        "formula": "a = variação da velocidade ÷ tempo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Velocidade no começo",
+        "0 (parado)"
+       ],
+       [
+        "Velocidade no fim",
+        "72 km/h"
+       ],
+       [
+        "Tempo",
+        "10 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a aceleração média.\na = Δv ÷ t (aceleração = quanto a velocidade mudou ÷ tempo)\nPor que dividir pelo tempo? Aceleração é quanto a velocidade sobe a cada segundo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "a",
+        "aceleração (o que a questão quer)"
+       ],
+       [
+        "Δv",
+        "quanto a velocidade mudou, em m/s"
+       ],
+       [
+        "t",
+        "tempo, em s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando Δv: o seu jeito",
+     "texto": "Parece certo fazer 72 ÷ 10 = 7,2. Mas o tempo está em segundos e a velocidade em km/h: misturou unidades.\n72 ÷ 3,6 = 20 m/s\nΔv = 20 − 0 = 20 m/s"
+    },
+    {
+     "titulo": "Achando t (tempo)",
+     "texto": "t = 10 s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "a = 20 ÷ 10 = 2 m/s²\nLetra B. A velocidade sobe 2 m/s a cada segundo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Δv",
+        "20 m/s"
+       ],
+       [
+        "t",
+        "10 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: aceleração com velocidade em km/h e tempo em s → antes de tudo, km/h ÷ 3,6.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "0 a 72 km/h em 10 s"
+       ],
+       [
+        "2. Equação em letras",
+        "a = Δv ÷ t"
+       ],
+       [
+        "3. Achar cada letra",
+        "Δv = 20; t = 10"
+       ],
+       [
+        "4. Substituir",
+        "20 ÷ 10 = 2"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "Primeiro passe 72 km/h para 20 m/s (divida por 3,6). Em 10 segundos a velocidade subiu 20 m/s, ou seja, 2 m/s a cada segundo.",
+   "conferencia": "72/3,6 = 20 m/s; a = 20/10 = 2 m/s². B. C = 72/10 sem converter; D = 3,6, o número da conversão; A e E = palpites.",
+   "checagem": {
+    "pergunta": "Um carro vai de 0 a 36 km/h em 5 s. Aceleração?",
+    "opcoes": [
+     "2 m/s²",
+     "7,2 m/s²",
+     "10 m/s²",
+     "5 m/s²"
+    ],
+    "certa": "2 m/s²",
+    "resposta": "36 ÷ 3,6 = 10 m/s; 10 ÷ 5 = 2 m/s²."
+   }
+  }
+ },
+ "cmpq9tfe5003mwxc828hr3hck": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Queda livre",
+        "formula": "altura = 5 × t × t"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Altura",
+        "80 m"
+       ],
+       [
+        "Velocidade para o lado",
+        "20 m/s"
+       ],
+       [
+        "Gravidade",
+        "10 m/s²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o tempo de queda.\nh = 5 × t × t (altura que cai = 5 vezes o tempo vezes ele mesmo)\nDe onde vem o 5? Caindo, a velocidade sobe 10 a cada segundo. Em 1 s cai 5 m; em 2 s, 20 m; em 3 s, 45 m; em 4 s, 80 m. É sempre 5 × t × t.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "t",
+        "tempo de queda (o que a questão quer)"
+       ],
+       [
+        "h",
+        "altura"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando h: o seu jeito",
+     "texto": "Parece certo usar os 20 m/s e fazer 80 ÷ 20 = 4. Dá o número certo por acaso, mas o raciocínio está errado: a velocidade para o lado não muda o tempo de queda.\nh = 80 m"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "80 = 5 × t × t\nt × t = 80 ÷ 5 = 16\nt = 4 s (4 × 4 = 16)\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "h",
+        "80 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: lançado \"horizontalmente\" → o tempo de queda depende só da altura: h = 5 × t × t. A velocidade para o lado não entra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "80 m, 20 m/s"
+       ],
+       [
+        "2. Equação em letras",
+        "h = 5 × t × t"
+       ],
+       [
+        "3. Achar cada letra",
+        "h = 80"
+       ],
+       [
+        "4. Substituir",
+        "t × t = 16, t = 4"
+       ]
+      ]
+     }
+    }
+   ],
+   "pecas": [
+    {
+     "termo": "queda livre",
+     "significado": "Corpo que cai só pela gravidade, como uma pedra que sai da mão."
+    },
+    {
+     "termo": "aceleração da gravidade",
+     "significado": "Quanto a velocidade de quem cai aumenta a cada segundo: g = 10 m/s² aqui."
+    }
+   ]
+  }
+ },
+ "cmoudnntz0029uoz9c7lz4lxl": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Queda e ar",
+        "formula": "o ar segura mais quem tem mais área"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Colega A",
+        "pedra cai antes da rolha"
+       ],
+       [
+        "Colega B",
+        "papel amassado cai antes do esticado"
+       ],
+       [
+        "Pergunta",
+        "o aspecto comum"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o que explica as duas situações.\nR = o que muda nas duas cenas ao mesmo tempo\nPor que \"ao mesmo tempo\"? No caso do papel, a massa é a MESMA e mesmo assim muda. Então a causa não pode ser peso nem massa.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "a causa comum (o que a questão quer)"
+       ],
+       [
+        "P",
+        "o que muda no papel"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar \"peso\": a pedra é mais pesada. Mas o papel amassado e o esticado pesam igual e caem diferente.\nO que muda no papel é o formato: P = quanto ar ele empurra."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = a resistência do ar\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "o formato muda o ar"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: mesmo objeto cai diferente só mudando o formato → a causa é a resistência do ar.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "pedra e rolha; papel"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = o que muda nas duas"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = o formato"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra B"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "enunciado": "No seu estudo sobre a queda dos corpos, Aristóteles afirmava que se abandonarmos corpos leves e pesados de uma mesma altura, o mais pesado chegaria mais rápido ao solo. Essa ideia está apoiada em algo que é difícil de refutar, a observação direta da realidade baseada no senso comum.\nApós uma aula de física, dois colegas estavam discutindo sobre a queda dos corpos, e um tentava convencer o outro de que tinha razão:\nColega A: \"O corpo mais pesado cai mais rápido que um menos pesado, quando largado de uma mesma altura. Eu provo, largando uma pedra e uma rolha. A pedra chega antes. Pronto! Tá provado!\".\nColega B: \"Eu não acho! Peguei uma folha de papel esticado e deixei cair. Quando amassei, ela caiu mais rápido. Como isso é possível? Se era a mesma folha de papel, deveria cair do mesmo jeito. Tem que ter outra explicação!\".\nHÜLSENDEGER, M. Uma análise das concepções dos alunos sobre a queda dos corpos. Caderno Brasileiro de Ensino de Física, n. 3, dez. 2004 (adaptado).\nO aspecto físico comum que explica a diferença de comportamento dos corpos em queda nessa discussão é o(a)"
+ },
+ "cmoudnnuz002puoz9dbl2mtvn": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Lançamento: para o lado",
+        "formula": "x = 0,6 × v × t"
+       },
+       {
+        "figura": "carro",
+        "nome": "Lançamento: para cima",
+        "formula": "y = 0,8 × v × t − 5 × t × t"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Distância de B até A",
+        "120 m para o lado"
+       ],
+       [
+        "Altura de A",
+        "35 m acima de B"
+       ],
+       [
+        "Ângulo",
+        "sen = 0,8; cos = 0,6"
+       ],
+       [
+        "Gravidade",
+        "10 m/s²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a velocidade v de disparo.\nv = 200 ÷ t (do lado: 120 = 0,6 × v × t)\nPor que separar em dois? A bala anda para o lado sempre igual (0,6 × v) e para cima vai freando. Cada direção dá uma conta.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "v",
+        "velocidade de disparo (o que a questão quer)"
+       ],
+       [
+        "t",
+        "tempo até chegar em A"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando t: o seu jeito",
+     "texto": "Parece certo achar v só com os 120 m. Mas falta o tempo, que vem da subida.\nNa subida: 35 = 0,8 × v × t − 5 × t × t\nComo v × t = 200, 0,8 × 200 = 160.\n35 = 160 − 5 × t × t\n5 × t × t = 125, t × t = 25, t = 5 s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "v = 200 ÷ 5 = 40 m/s\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "t",
+        "5 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: lançamento com ângulo → separe: para o lado (cos), velocidade fixa; para cima (sen), com o − 5 × t × t. Ache o tempo numa e use na outra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "120 m, 35 m, 53°"
+       ],
+       [
+        "2. Equação em letras",
+        "v = 200 ÷ t"
+       ],
+       [
+        "3. Achar cada letra",
+        "t = 5 s"
+       ],
+       [
+        "4. Substituir",
+        "200 ÷ 5 = 40"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "Separe o tiro em duas direções: para o lado ele anda 0,6 × v por segundo; para cima, 0,8 × v menos a queda. Para o lado, v × t = 200; na subida, o tempo dá 5 s, e v = 40 m/s.",
+   "conferencia": "x: 120 = 0,6vt → vt = 200; y: 35 = 0,8·200 − 5t² → t = 5 s; v = 200/5 = 40 m/s. C. Só v = 40 m/s dá 35 m de altura em x = 120 m; com 35 m/s a bala passa abaixo de A, e com 45 ou 50 m/s passa acima.",
+   "checagem": {
+    "pergunta": "Para o lado, a velocidade da bala…",
+    "opcoes": [
+     "Não muda",
+     "Aumenta",
+     "Diminui até zero",
+     "Vira para baixo"
+    ],
+    "certa": "Não muda",
+    "resposta": "Sem resistência do ar, só a vertical muda."
+   }
+  }
+ },
+ "cmuxdlym20009zcvjyzs6licq": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Velocidade média zero",
+        "formula": "voltou para a posição do início"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Posição",
+        "x = √(D² + (Vt − D)²)"
+       ],
+       [
+        "No início (t = 0)",
+        "x = √(D² + D²) = √2 × D"
+       ],
+       [
+        "Pede",
+        "distância andada até v média = 0"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a distância percorrida d.\nd = 2 × (xi − xm) (vai do início até o mínimo e volta)\nPor que 2 vezes? Velocidade média zero quer dizer que voltou para onde começou. A partícula foi até o ponto mais perto e voltou: o mesmo caminho duas vezes.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "d",
+        "distância percorrida (o que a questão quer)"
+       ],
+       [
+        "xi",
+        "posição no início"
+       ],
+       [
+        "xm",
+        "posição mais perto do zero"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando xi (início)",
+     "texto": "Com t = 0: Vt − D = −D.\nxi = √(D² + D²) = √2 × D"
+    },
+    {
+     "titulo": "Achando xm: o seu jeito",
+     "texto": "Parece certo dizer que ela andou √2 × D, a posição inicial. Mas ela não chega ao zero: a raiz nunca fica menor que D.\nO menor x é quando Vt − D = 0: xm = √(D² + 0) = D"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "d = 2 × (√2 × D − D)\nd = 2 × (√2 − 1) × D\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "xi",
+        "√2 × D"
+       ],
+       [
+        "xm",
+        "D"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: velocidade média zero → voltou ao começo; a distância é ida e volta até o ponto onde a posição vira para o outro lado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "x(t), t = 0"
+       ],
+       [
+        "2. Equação em letras",
+        "d = 2 × (xi − xm)"
+       ],
+       [
+        "3. Achar cada letra",
+        "xi = √2 D; xm = D"
+       ],
+       [
+        "4. Substituir",
+        "2(√2 − 1)D"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "Velocidade média zero quer dizer que a partícula voltou à posição do início. Ela foi de √2 × D até D (o mínimo da raiz) e voltou: anda 2 × (√2 − 1) × D.",
+   "conferencia": "x(0) = √2 D; mínimo x = D em Vt = D; volta a √2 D em Vt = 2D (v média = 0). Distância = 2(√2 D − D). B. A = só a ida; C = a posição inicial; D e E = confundem posição com distância.",
+   "checagem": {
+    "pergunta": "Velocidade média zero num trecho quer dizer que:",
+    "opcoes": [
+     "Voltou ao ponto de partida",
+     "Ficou parada o tempo todo",
+     "Andou para trás sempre",
+     "Não existiu movimento"
+    ],
+    "certa": "Voltou ao ponto de partida",
+    "resposta": "Deslocamento zero, mesmo andando."
+   }
+  }
+ },
+ "cmuxdlzo5000mzcvjyt9mkv61": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Galileu",
+        "formula": "no vácuo, leve e pesado caem juntos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Verso",
+        "penas e ferro"
+       ],
+       [
+        "Verso",
+        "as penas chegam antes do peso"
+       ],
+       [
+        "Pergunta",
+        "que episódio da física"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o episódio citado na música.\nR = o cientista que estudou a queda de objetos de massas diferentes\nPor que \"massas diferentes\"? Penas e ferro são o exemplo clássico de leve e pesado caindo. A música brinca invertendo o resultado.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o episódio (o que a questão quer)"
+       ],
+       [
+        "P",
+        "o assunto dos versos"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar a maçã de Newton, porque fala de coisa caindo. Mas a música compara objetos leves e pesados caindo juntos.\nP = queda de massas diferentes: os experimentos de Galileu."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = experimentos de Galileu sobre a queda livre\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "leve × pesado caindo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: texto que compara leve e pesado caindo → Galileu e a queda livre; maçã é gravitação (Newton).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "penas, ferro, queda"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = o estudo de massas diferentes"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = leve × pesado"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra C"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "A música fala de penas e ferro caindo, que é a comparação de objetos leves e pesados. Isso lembra os experimentos de Galileu sobre a queda livre.",
+   "conferencia": "\"Feathers... weight\" = leve e pesado em queda = Galileu. C. A = gravitação (Newton); B = relatividade; D = empuxo; E = calor e energia (Joule).",
+   "checagem": {
+    "pergunta": "No vácuo, uma pena e um martelo caem…",
+    "opcoes": [
+     "Juntos",
+     "O martelo antes",
+     "A pena antes",
+     "Nenhum cai"
+    ],
+    "certa": "Juntos",
+    "resposta": "Sem ar, a aceleração é a mesma."
+   }
+  }
+ },
+ "d2-facil-nat-06": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Peso",
+        "formula": "P = massa × 10"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa",
+        "60 kg"
+       ],
+       [
+        "Gravidade",
+        "10 m/s²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o peso, em newtons.\nP = m × g (peso = massa × gravidade)\nPor que multiplicar? Cada quilo é puxado pela Terra com 10 N. Com 60 quilos, são 60 vezes 10.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "P",
+        "peso (o que a questão quer)"
+       ],
+       [
+        "m",
+        "massa"
+       ],
+       [
+        "g",
+        "gravidade"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando m: o seu jeito",
+     "texto": "Parece certo responder 60 N. Mas 60 é a massa, em kg; peso é força, em N.\nm = 60 kg"
+    },
+    {
+     "titulo": "Achando g (gravidade)",
+     "texto": "g = 10 m/s²"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "P = 60 × 10 = 600 N\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "m",
+        "60 kg"
+       ],
+       [
+        "g",
+        "10"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pede peso e dá massa → multiplique por 10 (a gravidade).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "60 kg, g = 10"
+       ],
+       [
+        "2. Equação em letras",
+        "P = m × g"
+       ],
+       [
+        "3. Achar cada letra",
+        "m = 60; g = 10"
+       ],
+       [
+        "4. Substituir",
+        "60 × 10 = 600"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "cmpq9tfdj003cwxc8j6pu3ghp": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "1ª lei: inércia",
+        "formula": "sem força, nada muda o movimento"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Parado",
+        "continua parado"
+       ],
+       [
+        "Andando",
+        "continua em linha reta, igual"
+       ],
+       [
+        "Condição",
+        "se nenhuma força resultante agir"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o nome da lei.\nR = a lei que diz \"cada coisa tende a continuar como está\"\nPor que \"continuar como está\"? É o que o texto descreve: parado fica parado, andando continua andando. Esse \"teimar\" se chama inércia.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "a lei (o que a questão quer)"
+       ],
+       [
+        "P",
+        "a ideia central do texto"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar a 2ª lei, porque fala de força. Mas a 2ª lei faz conta (força = massa × aceleração).\nO texto só diz que nada muda sem força: P = inércia."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = 1ª lei (inércia)\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "tende a continuar"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"tende a permanecer\" ou \"continua em movimento\" → 1ª lei, inércia. Conta com força e aceleração → 2ª. Ação e reação → 3ª.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "parado, andando, sem força"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = continuar como está"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = inércia"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra C"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "O texto descreve corpos que continuam como estão, parados ou andando, se nenhuma força os muda. Essa tendência é a inércia, a 1ª lei de Newton.",
+   "conferencia": "Repouso continua repouso; movimento continua retilíneo uniforme = inércia, 1ª lei. C. A = F = m·a; B = ação e reação; D = atração entre massas; E = molas.",
+   "checagem": {
+    "pergunta": "No ônibus que freia, você vai para a frente por causa da:",
+    "opcoes": [
+     "Inércia",
+     "Ação e reação",
+     "Gravidade",
+     "Lei de Hooke"
+    ],
+    "certa": "Inércia",
+    "resposta": "Seu corpo tende a continuar andando."
+   }
+  }
+ },
+ "d2-medio-nat-06": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "2ª lei de Newton",
+        "formula": "força que sobra = massa × a"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa da caixa",
+        "40 kg"
+       ],
+       [
+        "Empurrão",
+        "200 N"
+       ],
+       [
+        "Atrito",
+        "80 N, contra"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a aceleração da caixa.\na = F ÷ m (aceleração = força que sobra ÷ massa)\nPor que a força que sobra? O atrito puxa para trás. Só o que sobra do empurrão acelera a caixa.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "a",
+        "aceleração (o que a questão quer)"
+       ],
+       [
+        "F",
+        "força que sobra"
+       ],
+       [
+        "m",
+        "massa"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando F: o seu jeito",
+     "texto": "Parece certo usar os 200 N inteiros: 200 ÷ 40 = 5. Mas o atrito come 80 N.\nF = 200 − 80 = 120 N"
+    },
+    {
+     "titulo": "Achando m (massa)",
+     "texto": "m = 40 kg"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "a = 120 ÷ 40 = 3 m/s²\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "F",
+        "120 N"
+       ],
+       [
+        "m",
+        "40 kg"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: força + atrito → tire o atrito antes de dividir pela massa.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "40 kg, 200 N, 80 N"
+       ],
+       [
+        "2. Equação em letras",
+        "a = F ÷ m"
+       ],
+       [
+        "3. Achar cada letra",
+        "F = 120; m = 40"
+       ],
+       [
+        "4. Substituir",
+        "120 ÷ 40 = 3"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "cmpq9tfee003qwxc8inbcctsx": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "2ª lei de Newton",
+        "formula": "força que sobra = massa × a"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa",
+        "2 kg"
+       ],
+       [
+        "Força",
+        "10 N"
+       ],
+       [
+        "Atrito",
+        "nenhum"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a aceleração.\na = F ÷ m (aceleração = força ÷ massa)\nPor que dividir pela massa? Quanto mais pesado, menos a mesma força consegue acelerar.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "a",
+        "aceleração (o que a questão quer)"
+       ],
+       [
+        "F",
+        "força que sobra"
+       ],
+       [
+        "m",
+        "massa"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando F (força)",
+     "texto": "Sem atrito, nada come a força: F = 10 N."
+    },
+    {
+     "titulo": "Achando m: o seu jeito",
+     "texto": "Parece certo multiplicar: 10 × 2 = 20. Mas força = massa × aceleração; então a aceleração é força ÷ massa.\nm = 2 kg"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "a = 10 ÷ 2 = 5 m/s²\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "F",
+        "10 N"
+       ],
+       [
+        "m",
+        "2 kg"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: força e massa, pede aceleração → divida a força (que sobra) pela massa.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "2 kg, 10 N"
+       ],
+       [
+        "2. Equação em letras",
+        "a = F ÷ m"
+       ],
+       [
+        "3. Achar cada letra",
+        "F = 10; m = 2"
+       ],
+       [
+        "4. Substituir",
+        "10 ÷ 2 = 5"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "Sem atrito, toda a força de 10 N acelera o bloco. Pela 2ª lei de Newton, aceleração = força ÷ massa = 10 ÷ 2 = 5 m/s².",
+   "conferencia": "a = F/m = 10/2 = 5 m/s². C. A = a massa; D = a força; E = 10 × 2; B = palpite.",
+   "checagem": {
+    "pergunta": "Força de 12 N num bloco de 3 kg, sem atrito. Aceleração?",
+    "opcoes": [
+     "4 m/s²",
+     "36 m/s²",
+     "9 m/s²",
+     "15 m/s²"
+    ],
+    "certa": "4 m/s²",
+    "resposta": "12 ÷ 3 = 4 m/s²."
+   }
+  }
+ },
+ "d2-banco-fis-din-01": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Peso",
+        "formula": "P = massa × 10"
+       },
+       {
+        "figura": "carro",
+        "nome": "2ª lei de Newton",
+        "formula": "força que sobra = massa × a"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa",
+        "60 kg"
+       ],
+       [
+        "Aceleração para cima",
+        "2 m/s²"
+       ],
+       [
+        "g",
+        "10 m/s²"
+       ],
+       [
+        "Balança",
+        "mostra força ÷ 10"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o número na balança.\nL = N ÷ 10 (leitura = força na balança ÷ 10)\nPor que dividir por 10? É o que a balança faz: ela mede força e mostra em \"kg\".\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "L",
+        "leitura da balança (o que a questão quer)"
+       ],
+       [
+        "N",
+        "força que a balança faz"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando N: o seu jeito",
+     "texto": "Parece certo usar só o peso: 600 N, e a balança mostraria 60. Mas, para subir acelerando, a balança precisa empurrar mais que o peso.\nForça que sobra = 60 × 2 = 120 N\nN = 600 + 120 = 720 N"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "L = 720 ÷ 10 = 72 kg\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "N",
+        "720 N"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: elevador acelerando para cima → a balança marca o peso + massa × aceleração; para baixo, o peso − massa × aceleração.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "60 kg, 2 m/s²"
+       ],
+       [
+        "2. Equação em letras",
+        "L = N ÷ 10"
+       ],
+       [
+        "3. Achar cada letra",
+        "N = 720"
+       ],
+       [
+        "4. Substituir",
+        "720 ÷ 10 = 72"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "d2-banco-fis-din-02": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Peso",
+        "formula": "P = massa × 10"
+       },
+       {
+        "figura": "carro",
+        "nome": "2ª lei de Newton",
+        "formula": "força que sobra = massa × a"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa do drone",
+        "2 kg"
+       ],
+       [
+        "Massa do pacote",
+        "1 kg"
+       ],
+       [
+        "Força das hélices",
+        "39 N"
+       ],
+       [
+        "g",
+        "10 m/s²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a aceleração do conjunto.\na = F ÷ m (aceleração = força que sobra ÷ massa)\nPor que a força que sobra? O peso puxa para baixo. Só o que as hélices fazem a mais acelera.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "a",
+        "aceleração (o que a questão quer)"
+       ],
+       [
+        "F",
+        "força que sobra"
+       ],
+       [
+        "m",
+        "massa do conjunto"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando m (massa total)",
+     "texto": "m = 2 + 1 = 3 kg"
+    },
+    {
+     "titulo": "Achando F: o seu jeito",
+     "texto": "Parece certo fazer 39 ÷ 3 = 13. Mas o peso puxa para baixo.\nPeso = 3 × 10 = 30 N\nF = 39 − 30 = 9 N"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "a = 9 ÷ 3 = 3 m/s²\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "m",
+        "3 kg"
+       ],
+       [
+        "F",
+        "9 N"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: subindo com força para cima → tire o peso antes de dividir pela massa toda.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "2 + 1 kg, 39 N"
+       ],
+       [
+        "2. Equação em letras",
+        "a = F ÷ m"
+       ],
+       [
+        "3. Achar cada letra",
+        "m = 3; F = 9"
+       ],
+       [
+        "4. Substituir",
+        "9 ÷ 3 = 3"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "cmoudnntg0021uoz90elk7yb8": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Potência",
+        "formula": "P = energia ÷ tempo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Gasolina",
+        "0 a 100 km/h em 13,4 s"
+       ],
+       [
+        "Álcool",
+        "0 a 100 km/h em 12,9 s"
+       ],
+       [
+        "Carro",
+        "o mesmo, mesma massa"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer qual versão tem mais potência.\nP = E ÷ t (potência = energia ganha ÷ tempo)\nPor que energia ÷ tempo? Potência é a rapidez de entregar energia. Quem ganha a mesma energia em menos tempo é mais potente.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "P",
+        "potência (o que a questão quer)"
+       ],
+       [
+        "E",
+        "energia de movimento ganha"
+       ],
+       [
+        "t",
+        "tempo gasto"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando E (a energia)",
+     "texto": "Os dois saem do 0 e chegam a 100 km/h, com a mesma massa.\nE = a mesma nas duas versões."
+    },
+    {
+     "titulo": "Achando t: o seu jeito",
+     "texto": "Parece certo marcar a gasolina, que tem velocidade máxima maior (165). Mas a potência se mede na arrancada.\nt da gasolina = 13,4 s; t do álcool = 12,9 s, menor."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "Mesma E dividida por um t menor = P maior.\nO álcool tem a maior taxa de energia por segundo.\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "E",
+        "igual"
+       ],
+       [
+        "t",
+        "álcool menor"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: comparar potência de veículos → mesma variação de velocidade? Ganha quem leva MENOS tempo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "13,4 s e 12,9 s"
+       ],
+       [
+        "2. Equação em letras",
+        "P = E ÷ t"
+       ],
+       [
+        "3. Achar cada letra",
+        "E igual; t menor no álcool"
+       ],
+       [
+        "4. Substituir",
+        "álcool"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "Potência é energia ÷ tempo. As duas versões ganham a mesma energia (de 0 a 100 km/h), mas a de álcool leva menos tempo, então tem mais potência.",
+   "conferencia": "Mesma ΔEc (mesma massa, 0 a 100 km/h); álcool em 12,9 s < 13,4 s → maior ΔEc/Δt. C. A = a gasolina tem MENOR aceleração; B = a energia é a mesma; D = ignora o tempo; E = mais tempo = menos potência.",
+   "checagem": {
+    "pergunta": "Mesma energia em menos tempo quer dizer:",
+    "opcoes": [
+     "Mais potência",
+     "Menos potência",
+     "Mesma potência",
+     "Mais massa"
+    ],
+    "certa": "Mais potência",
+    "resposta": "P = E ÷ t: tempo menor, P maior."
+   }
+  }
+ },
+ "cmoudnnwg003auoz9j03cv3us": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Unidade de um produto",
+        "formula": "some os expoentes de cada letra"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Relação",
+        "K = constante × densidade × v × v"
+       ],
+       [
+        "Densidade",
+        "kg·m⁻³"
+       ],
+       [
+        "Velocidade",
+        "m·s⁻¹"
+       ],
+       [
+        "Constante",
+        "sem unidade"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a unidade do módulo K.\nu(K) = u(ρ) × u(v) × u(v) (unidade de K = unidade da densidade × velocidade × velocidade)\nPor que multiplicar unidades? Se K = ρ × v × v, a unidade dele é a das três juntas. Expoente se soma na multiplicação.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "u(K)",
+        "unidade de K (o que a questão quer)"
+       ],
+       [
+        "u(ρ)",
+        "unidade da densidade"
+       ],
+       [
+        "u(v)",
+        "unidade da velocidade"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando u(ρ) (densidade)",
+     "texto": "Quilograma por metro cúbico: kg ÷ m³ = kg·m⁻³"
+    },
+    {
+     "titulo": "Achando u(v): o seu jeito",
+     "texto": "Parece certo usar a velocidade uma vez só. Mas ela vem ao quadrado: v × v.\nu(v) × u(v) = m·s⁻¹ × m·s⁻¹ = m²·s⁻²"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "u(K) = kg·m⁻³ × m²·s⁻²\nMetro: −3 + 2 = −1\nu(K) = kg·m⁻¹·s⁻²\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "u(ρ)",
+        "kg·m⁻³"
+       ],
+       [
+        "u(v)²",
+        "m²·s⁻²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pede unidade de uma grandeza nova → escreva a fórmula e multiplique as unidades, somando os expoentes de cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "K = ρ × v × v"
+       ],
+       [
+        "2. Equação em letras",
+        "u(K) = u(ρ) × u(v)²"
+       ],
+       [
+        "3. Achar cada letra",
+        "kg·m⁻³; m²·s⁻²"
+       ],
+       [
+        "4. Substituir",
+        "kg·m⁻¹·s⁻²"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "Se K é proporcional à densidade e ao quadrado da velocidade, a unidade dele é kg·m⁻³ × (m·s⁻¹)². Somando os expoentes do metro (−3 + 2), fica kg·m⁻¹·s⁻².",
+   "conferencia": "[K] = [ρ][v]² = kg·m⁻³·m²·s⁻² = kg·m⁻¹·s⁻². B. A = velocidade sem o quadrado no tempo; C = densidade dividida por v²; D e E = combinações de unidades sem sentido para K.",
+   "checagem": {
+    "pergunta": "m⁻³ × m² dá:",
+    "opcoes": [
+     "m⁻¹",
+     "m⁻⁵",
+     "m⁶",
+     "m"
+    ],
+    "certa": "m⁻¹",
+    "resposta": "Some os expoentes: −3 + 2 = −1."
+   }
+  }
+ },
+ "cmuxdlzfh000izcvje50hg8pw": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "esfera",
+        "nome": "Energia potencial gravitacional",
+        "formula": "U = − G·M·m ÷ r"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Órbita",
+        "elipse de semieixos A e B"
+       ],
+       [
+        "Planeta",
+        "no ponto (C, 0), C = √(A² − B²)"
+       ],
+       [
+        "Massas",
+        "M do planeta, m do satélite"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer U maior − U menor.\nΔU = G·M·m × (1 ÷ r1 − 1 ÷ r2) (r1 = mais perto, r2 = mais longe)\nPor que 1 ÷ r? A energia é − G·M·m ÷ r. Ela é mais baixa (mais negativa) quando o satélite está perto e mais alta quando está longe.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "ΔU",
+        "a diferença (o que a questão quer)"
+       ],
+       [
+        "r1",
+        "menor distância ao planeta"
+       ],
+       [
+        "r2",
+        "maior distância ao planeta"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando r1 (mais perto)",
+     "texto": "O ponto da elipse mais perto de (C, 0) é a ponta (A, 0).\nr1 = A − C"
+    },
+    {
+     "titulo": "Achando r2: o seu jeito",
+     "texto": "Parece certo usar o ponto (0, B), no alto da elipse. Mas o mais longe do planeta é a outra ponta, (−A, 0).\nr2 = A + C"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "1 ÷ (A − C) − 1 ÷ (A + C) = 2C ÷ (A² − C²)\nA² − C² = B²\nΔU = 2·C·G·M·m ÷ B²\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "r1",
+        "A − C"
+       ],
+       [
+        "r2",
+        "A + C"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: órbita em elipse com o planeta fora do centro → as distâncias extremas são A − C e A + C; e A² − C² = B².",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "elipse, foco (C, 0)"
+       ],
+       [
+        "2. Equação em letras",
+        "ΔU = GMm(1/r1 − 1/r2)"
+       ],
+       [
+        "3. Achar cada letra",
+        "r1 = A − C; r2 = A + C"
+       ],
+       [
+        "4. Substituir",
+        "2CGMm ÷ B²"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "A energia do satélite é − G·M·m ÷ r: mais baixa quando ele está mais perto. As distâncias extremas são A − C e A + C, e a diferença dá 2·C·G·M·m ÷ B², porque A² − C² = B².",
+   "conferencia": "U = −GMm/r; rmin = A − C, rmax = A + C; ΔU = GMm[1/(A−C) − 1/(A+C)] = 2C·GMm/(A² − C²) = 2CGMm/B². D. A e E trocam C por A; B esquece o 2; C usa A² no lugar de B².",
+   "checagem": {
+    "pergunta": "Perto do planeta, a energia potencial do satélite é:",
+    "opcoes": [
+     "Menor (mais negativa)",
+     "Maior",
+     "Igual",
+     "Zero"
+    ],
+    "certa": "Menor (mais negativa)",
+    "resposta": "U = − GMm ÷ r: r pequeno, U mais negativo."
+   }
+  }
+ },
+ "cmuxdm04o000uzcvjsxr8sh72": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Peso",
+        "formula": "P = massa × 10"
+       },
+       {
+        "figura": "carro",
+        "nome": "2ª lei de Newton",
+        "formula": "força que sobra = massa × a"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa",
+        "200 g"
+       ],
+       [
+        "g",
+        "10 m/s²"
+       ],
+       [
+        "Velocidade terminal",
+        "constante: aceleração zero"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a força do ar na velocidade terminal.\nFar = P (força do ar = peso, porque a aceleração é zero)\nPor que igual? Velocidade constante quer dizer aceleração zero. Pela 2ª lei, a força que sobra é zero: o ar segura exatamente o peso.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "Far",
+        "força do ar (o que a questão quer)"
+       ],
+       [
+        "P",
+        "peso"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo fazer 200 × 10 = 2 000. Mas a massa precisa estar em quilos.\n200 g = 0,2 kg\nP = 0,2 × 10 = 2 N"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "Far = 2 N\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "2 N"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"velocidade terminal\" ou \"velocidade constante\" → as forças se equilibram: força do ar = peso. Grama vira quilo antes.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "200 g, g = 10"
+       ],
+       [
+        "2. Equação em letras",
+        "Far = P"
+       ],
+       [
+        "3. Achar cada letra",
+        "P = 2 N"
+       ],
+       [
+        "4. Substituir",
+        "Far = 2 N"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "Na velocidade terminal, a velocidade não muda, então a aceleração é zero e as forças se equilibram. A força do ar é igual ao peso: 0,2 kg × 10 = 2 N.",
+   "conferencia": "a = 0 → Far = mg = 0,2 × 10 = 2,0 N. B. A = 0,02 × 10; C = 200 × 1; D = 200 × 10 sem passar para kg.",
+   "checagem": {
+    "pergunta": "Corpo de 500 g caindo na velocidade terminal. Força do ar?",
+    "opcoes": [
+     "5 N",
+     "500 N",
+     "50 N",
+     "0 N"
+    ],
+    "certa": "5 N",
+    "resposta": "0,5 kg × 10 = 5 N."
+   }
+  }
+ },
+ "d2-facil-nat-03": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Calor",
+        "formula": "Q = m × c × ΔT"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Areia",
+        "esquenta rápido"
+       ],
+       [
+        "Água",
+        "esquenta devagar"
+       ],
+       [
+        "Sol",
+        "o mesmo para as duas"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer por que a areia esquenta mais rápido.\nR = quem pede menos energia por grau esquenta mais rápido\nPor que \"por grau\"? É o calor específico (c): a energia para subir 1 grau em 1 grama. A água tem c grande; a areia, pequeno.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o motivo (o que a questão quer)"
+       ],
+       [
+        "P",
+        "o que muda entre areia e água"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo dizer que a água recebe menos sol. Mas o sol é o mesmo para as duas.\nO que muda é o material: P = o calor específico da água é maior."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = a água precisa de muito mais energia para subir cada grau\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "c da água maior"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: mesmo calor, materiais diferentes → esquenta mais rápido quem tem calor específico menor.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "areia, água, mesmo sol"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = energia por grau"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = c maior na água"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra E"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "aquec-rf-18": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Irradiação",
+        "formula": "calor em ondas, passa até no vácuo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Origem",
+        "o Sol"
+       ],
+       [
+        "Caminho",
+        "o espaço vazio"
+       ],
+       [
+        "Pergunta",
+        "como o calor passa"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer como o calor atravessa o vácuo.\nR = o único jeito de passar calor sem matéria no caminho\nPor que \"sem matéria\"? Condução precisa de átomos encostados; convecção precisa de ar ou água se mexendo. No vácuo não há nenhum dos dois.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o jeito de passar calor (o que a questão quer)"
+       ],
+       [
+        "P",
+        "o que existe no caminho"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar a convecção, o ar quente subindo. Mas no espaço não há ar.\nP = nada: vácuo. Só ondas atravessam."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = irradiação\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "vácuo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: calor atravessando o vácuo ou chegando \"sem tocar\" (Sol, fogueira) → irradiação.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "Sol, espaço vazio"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = sem matéria"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = vácuo"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra D"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "d2-medio-nat-03": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Calor",
+        "formula": "Q = m × c × ΔT"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa",
+        "500 g"
+       ],
+       [
+        "c da água",
+        "1 cal/(g·°C)"
+       ],
+       [
+        "De",
+        "20 °C"
+       ],
+       [
+        "Até",
+        "80 °C"
+       ],
+       [
+        "Ebulidor",
+        "500 cal por segundo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o tempo.\nt = Q ÷ 500 (tempo = calor necessário ÷ calor por segundo)\nPor que dividir? Se a cada segundo entram 500 cal, o tempo é quantas vezes 500 cabe no calor total.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "t",
+        "tempo (o que a questão quer)"
+       ],
+       [
+        "Q",
+        "calor necessário"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando Q: o seu jeito",
+     "texto": "Parece certo usar 80 °C inteiros. Mas a água já estava a 20 °C: sobe 60.\nQ = 500 × 1 × 60 = 30 000 cal"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "t = 30 000 ÷ 500 = 60 s\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Q",
+        "30 000 cal"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: aquecedor que dá \"X por segundo\" → ache o calor total (m × c × ΔT) e divida por X.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "500 g, 20 a 80 °C"
+       ],
+       [
+        "2. Equação em letras",
+        "t = Q ÷ 500"
+       ],
+       [
+        "3. Achar cada letra",
+        "Q = 30 000"
+       ],
+       [
+        "4. Substituir",
+        "30 000 ÷ 500 = 60"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "cmpq9tfe8003nwxc8lk9ubmty": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Rendimento de Carnot",
+        "formula": "η = 1 − Tfria ÷ Tquente"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Fonte quente",
+        "600 K"
+       ],
+       [
+        "Fonte fria",
+        "300 K"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o rendimento máximo.\nη = 1 − Tf ÷ Tq (rendimento = 1 − fria ÷ quente)\nPor que 1 − fria ÷ quente? A parte fria ÷ quente é o que a máquina joga fora. O resto vira trabalho.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "η",
+        "rendimento (o que a questão quer)"
+       ],
+       [
+        "Tf",
+        "temperatura fria"
+       ],
+       [
+        "Tq",
+        "temperatura quente"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando Tf (fria)",
+     "texto": "Tf = 300 K (já em kelvin)"
+    },
+    {
+     "titulo": "Achando Tq: o seu jeito",
+     "texto": "Parece certo dividir quente por fria: 600 ÷ 300 = 2, e 1 − 2 dá negativo. É fria ÷ quente.\nTq = 600 K"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "η = 1 − 300 ÷ 600 = 1 − 0,5 = 0,5\nη = 50%\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Tf",
+        "300 K"
+       ],
+       [
+        "Tq",
+        "600 K"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: rendimento máximo (Carnot) → 1 − fria ÷ quente, sempre em kelvin.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "600 K, 300 K"
+       ],
+       [
+        "2. Equação em letras",
+        "η = 1 − Tf ÷ Tq"
+       ],
+       [
+        "3. Achar cada letra",
+        "Tf = 300; Tq = 600"
+       ],
+       [
+        "4. Substituir",
+        "1 − 0,5 = 50%"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "O rendimento máximo de uma máquina térmica é 1 − fria ÷ quente, com as temperaturas em kelvin. Aqui, 1 − 300 ÷ 600 = 0,5, ou 50%.",
+   "conferencia": "η = 1 − 300/600 = 0,5 = 50%. C. A e B = palpites; D = 1 − 1/3; E = rendimento total, impossível.",
+   "checagem": {
+    "pergunta": "Fontes de 400 K e 300 K. Rendimento de Carnot?",
+    "opcoes": [
+     "25%",
+     "75%",
+     "33%",
+     "100%"
+    ],
+    "certa": "25%",
+    "resposta": "1 − 300 ÷ 400 = 0,25."
+   }
+  }
+ },
+ "d2-banco-fis-ter-01": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Calor",
+        "formula": "Q = m × c × ΔT"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Água",
+        "50 litros = 50 000 g"
+       ],
+       [
+        "c",
+        "1 cal/(g·°C)"
+       ],
+       [
+        "De",
+        "20 °C"
+       ],
+       [
+        "Até",
+        "60 °C"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o calor recebido.\nQ = m × c × ΔT (calor = massa × calor específico × quanto subiu)\nPor que multiplicar? Cada grama pede 1 cal para subir 1 grau. Muitos gramas e muitos graus: multiplica tudo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "Q",
+        "calor (o que a questão quer)"
+       ],
+       [
+        "m",
+        "massa, em gramas"
+       ],
+       [
+        "ΔT",
+        "quanto a temperatura subiu"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando m: o seu jeito",
+     "texto": "Parece certo usar 50. Mas o c está em cal por GRAMA.\nm = 50 × 1 000 = 50 000 g"
+    },
+    {
+     "titulo": "Achando ΔT (quanto subiu)",
+     "texto": "ΔT = 60 − 20 = 40 °C"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "Q = 50 000 × 1 × 40 = 2 000 000 cal\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "m",
+        "50 000 g"
+       ],
+       [
+        "ΔT",
+        "40 °C"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: calor para esquentar água em litros → litro vira 1 000 g e use Q = m × c × ΔT.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "50 L, 20 a 60 °C"
+       ],
+       [
+        "2. Equação em letras",
+        "Q = m × c × ΔT"
+       ],
+       [
+        "3. Achar cada letra",
+        "m = 50 000; ΔT = 40"
+       ],
+       [
+        "4. Substituir",
+        "2 000 000 cal"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "O calor que a água recebe é massa × calor específico × quanto subiu, com a massa em gramas. Aqui, 50 000 × 1 × 40 = 2 000 000 cal."
+  }
+ },
+ "d2-banco-fis-ter-02": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Calor",
+        "formula": "Q = m × c × ΔT"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa de cada",
+        "200 g"
+       ],
+       [
+        "Calor de cada",
+        "3 000 cal"
+       ],
+       [
+        "c da água",
+        "1"
+       ],
+       [
+        "c do óleo",
+        "0,5"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quanto subiu cada temperatura.\nΔT = Q ÷ (m × c) (subida = calor ÷ massa ÷ calor específico)\nPor que dividir pelo c? Quem pede menos energia por grau sobe mais graus com o mesmo calor.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "ΔT",
+        "subida de cada um (o que a questão quer)"
+       ],
+       [
+        "Ta",
+        "subida da água"
+       ],
+       [
+        "To",
+        "subida do óleo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando Ta (água)",
+     "texto": "Ta = 3 000 ÷ (200 × 1) = 15 °C"
+    },
+    {
+     "titulo": "Achando To: o seu jeito",
+     "texto": "Parece certo achar que o óleo sobe menos, porque c é menor. Mas c menor quer dizer que esquenta MAIS fácil.\nTo = 3 000 ÷ (200 × 0,5) = 3 000 ÷ 100 = 30 °C"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "Água: 15 °C; óleo: 30 °C\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Ta",
+        "15 °C"
+       ],
+       [
+        "To",
+        "30 °C"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: mesmo calor e mesma massa → sobe mais quem tem calor específico menor (metade do c = o dobro de graus).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "200 g, 3 000 cal, c = 1 e 0,5"
+       ],
+       [
+        "2. Equação em letras",
+        "ΔT = Q ÷ (m × c)"
+       ],
+       [
+        "3. Achar cada letra",
+        "Ta = 15; To = 30"
+       ],
+       [
+        "4. Substituir",
+        "letra A"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "cmoudnnsq001quoz9hxph83hc": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Dilatação",
+        "formula": "esquentou, o material aumenta de volume"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Instrumento",
+        "aferido a 20 °C"
+       ],
+       [
+        "Tabela",
+        "quanto mais quente, menor a leitura certa"
+       ],
+       [
+        "Pergunta",
+        "por que corrigir"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o motivo da correção.\nR = o que o calor muda num líquido, sem mudar a quantidade de álcool\nPor que \"sem mudar a quantidade\"? O álcool na mistura é o mesmo. O que muda com a temperatura é o volume dos materiais, e a medida é em % de volume.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o motivo (o que a questão quer)"
+       ],
+       [
+        "P",
+        "o que o calor faz no líquido"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar a D, mais álcool. Mas esquentar não cria álcool.\nO calor faz o líquido e o vidro aumentarem: P = dilatação."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = mudança do volume dos materiais por dilatação\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "dilatação"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: medida que precisa de correção pela temperatura → o calor muda o volume (dilatação), não a substância.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "20 °C, tabela"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = o que o calor muda"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = dilatação"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra C"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "O instrumento foi ajustado a 20 °C. Em outra temperatura, a água, o álcool e o vidro mudam de volume (dilatação), e a leitura em porcentagem de volume sai diferente.",
+   "conferencia": "Temperatura muda o volume (dilatação) e a densidade cai; a leitura em % v/v precisa de correção. C. A = não explica a correção de uma leitura em % de volume; B = densidade diminui; D = não cria álcool; E = não há reação química.",
+   "checagem": {
+    "pergunta": "Trilho de trem tem espaço entre as barras por causa da:",
+    "opcoes": [
+     "Dilatação",
+     "Condução",
+     "Refração",
+     "Evaporação"
+    ],
+    "certa": "Dilatação",
+    "resposta": "No calor, o metal aumenta."
+   }
+  }
+ },
+ "cmoudnntn0024uoz9i4x37jz2": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Suor",
+        "formula": "evaporar o suor tira calor do corpo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Situação",
+        "ambiente mais frio que o corpo"
+       ],
+       [
+        "Dia",
+        "úmido"
+       ],
+       [
+        "Incômodo",
+        "calor e suor"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o motivo do incômodo no dia úmido.\nR = o que a umidade atrapalha no jeito de o corpo perder calor\nPor que o suor? O corpo esfria quando o suor evapora. Com o ar já cheio de água, o suor evapora pouco e fica na pele.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o motivo (o que a questão quer)"
+       ],
+       [
+        "P",
+        "o que acontece com o suor"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo dizer que o vapor do ar está quente. Mas o ambiente está mais frio que o corpo.\nNo ar úmido, o suor quase não evapora: P = evaporação difícil."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = o suor tem mais dificuldade para evaporar\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "suor não evapora"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: calor abafado em dia úmido → o ar cheio de água atrapalha a evaporação do suor.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "úmido, frio, suor"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = o que a umidade atrapalha"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = evaporação"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra B"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "O corpo se refresca quando o suor evapora, levando calor junto. No dia úmido, o ar já está cheio de vapor, o suor evapora pouco e o calor fica.",
+   "conferencia": "Umidade alta reduz a evaporação do suor, que é o que tira calor do corpo. B. A = o ar está mais frio; C = não depende de radiação; D = ar não fica mau condutor; E = condensar na pele daria calor, mas não é o fenômeno.",
+   "checagem": {
+    "pergunta": "Abanar o corpo suado refresca porque:",
+    "opcoes": [
+     "Ajuda o suor a evaporar",
+     "Esquenta a pele",
+     "Tira o sal da pele",
+     "Aumenta a umidade"
+    ],
+    "certa": "Ajuda o suor a evaporar",
+    "resposta": "Evaporar leva calor embora."
+   }
+  }
+ },
+ "d2-facil-nat-04": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Velocidade da onda",
+        "formula": "v = λ × f"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Comprimento de onda",
+        "2 m"
+       ],
+       [
+        "Frequência",
+        "5 Hz (5 ondas por segundo)"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a velocidade da onda.\nv = λ × f (velocidade = comprimento × frequência)\nPor que multiplicar? Passam 5 ondas por segundo e cada uma tem 2 m: a onda anda 5 × 2 metros a cada segundo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "v",
+        "velocidade (o que a questão quer)"
+       ],
+       [
+        "λ",
+        "comprimento de onda"
+       ],
+       [
+        "f",
+        "frequência"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando λ (comprimento)",
+     "texto": "λ = 2 m"
+    },
+    {
+     "titulo": "Achando f: o seu jeito",
+     "texto": "Parece certo dividir: 5 ÷ 2 = 2,5. Mas cada uma das 5 ondas tem 2 m: é multiplicar.\nf = 5 Hz"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "v = 2 × 5 = 10 m/s\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "λ",
+        "2 m"
+       ],
+       [
+        "f",
+        "5 Hz"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: onda com comprimento e frequência → v = λ × f.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "2 m, 5 Hz"
+       ],
+       [
+        "2. Equação em letras",
+        "v = λ × f"
+       ],
+       [
+        "3. Achar cada letra",
+        "λ = 2; f = 5"
+       ],
+       [
+        "4. Substituir",
+        "2 × 5 = 10"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "d2-medio-nat-04": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Distância com velocidade fixa",
+        "formula": "d = v × t"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Tempo do eco",
+        "0,4 s (desce e volta)"
+       ],
+       [
+        "Velocidade do som na água",
+        "1 500 m/s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a profundidade.\np = (v × t) ÷ 2 (profundidade = caminho do som ÷ 2)\nPor que dividir por 2? No eco o som vai até o fundo e volta. O caminho todo é o dobro da profundidade.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "p",
+        "profundidade (o que a questão quer)"
+       ],
+       [
+        "v",
+        "velocidade do som"
+       ],
+       [
+        "t",
+        "tempo de ida e volta"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando v (velocidade)",
+     "texto": "v = 1 500 m/s"
+    },
+    {
+     "titulo": "Achando t: o seu jeito",
+     "texto": "Parece certo usar o caminho inteiro: 1 500 × 0,4 = 600 m. Mas esse é ida e volta.\nt = 0,4 s, para os dois caminhos"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "p = (1 500 × 0,4) ÷ 2 = 600 ÷ 2 = 300 m\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "v",
+        "1 500 m/s"
+       ],
+       [
+        "t",
+        "0,4 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: eco (sonar, morcego, grito no paredão) → velocidade × tempo e depois ÷ 2.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "0,4 s, 1 500 m/s"
+       ],
+       [
+        "2. Equação em letras",
+        "p = v × t ÷ 2"
+       ],
+       [
+        "3. Achar cada letra",
+        "v = 1 500; t = 0,4"
+       ],
+       [
+        "4. Substituir",
+        "600 ÷ 2 = 300"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "cmpq9tfec003pwxc8sv1t5osz": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Velocidade da onda",
+        "formula": "v = λ × f"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Frequência",
+        "440 Hz"
+       ],
+       [
+        "Velocidade no ar",
+        "340 m/s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o comprimento de onda.\nλ = v ÷ f (comprimento = velocidade ÷ frequência)\nPor que dividir? De v = λ × f: o som anda 340 m por segundo e passam 440 ondas nesse tempo. Cada onda tem 340 ÷ 440 metros.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "λ",
+        "comprimento de onda (o que a questão quer)"
+       ],
+       [
+        "v",
+        "velocidade"
+       ],
+       [
+        "f",
+        "frequência"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando v (velocidade)",
+     "texto": "v = 340 m/s"
+    },
+    {
+     "titulo": "Achando f: o seu jeito",
+     "texto": "Parece certo multiplicar: 340 × 440 = 149 600. Mas isso não é tamanho de uma onda de som.\nf = 440 Hz, e se divide"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "λ = 340 ÷ 440 ≈ 0,77 m\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "v",
+        "340 m/s"
+       ],
+       [
+        "f",
+        "440 Hz"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pede comprimento de onda → λ = v ÷ f.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "440 Hz, 340 m/s"
+       ],
+       [
+        "2. Equação em letras",
+        "λ = v ÷ f"
+       ],
+       [
+        "3. Achar cada letra",
+        "v = 340; f = 440"
+       ],
+       [
+        "4. Substituir",
+        "340 ÷ 440 ≈ 0,77"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "Em 1 segundo o som anda 340 m e passam 440 ondas. Cada onda mede 340 ÷ 440, cerca de 0,77 m.",
+   "conferencia": "λ = 340/440 ≈ 0,77 m. B. A = 0,39 (metade); C = 440/340; D = o dobro de C; E = 340 × 440.",
+   "checagem": {
+    "pergunta": "Som de 680 Hz no ar (340 m/s). Comprimento?",
+    "opcoes": [
+     "0,5 m",
+     "2 m",
+     "1 020 m",
+     "340 m"
+    ],
+    "certa": "0,5 m",
+    "resposta": "340 ÷ 680 = 0,5 m."
+   }
+  }
+ },
+ "d2-banco-fis-ond-01": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Velocidade da onda",
+        "formula": "v = λ × f"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Frequência",
+        "680 Hz"
+       ],
+       [
+        "Velocidade no ar",
+        "340 m/s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o comprimento de onda.\nλ = v ÷ f (comprimento = velocidade ÷ frequência)\nPor que dividir? Em 1 s o som anda 340 m e cabem 680 ondas nesse caminho.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "λ",
+        "comprimento (o que a questão quer)"
+       ],
+       [
+        "v",
+        "velocidade"
+       ],
+       [
+        "f",
+        "frequência"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando v (velocidade)",
+     "texto": "v = 340 m/s"
+    },
+    {
+     "titulo": "Achando f: o seu jeito",
+     "texto": "Parece certo fazer 680 ÷ 340 = 2. Mas é a velocidade que se divide pela frequência.\nf = 680 Hz"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "λ = 340 ÷ 680 = 0,5 m\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "v",
+        "340 m/s"
+       ],
+       [
+        "f",
+        "680 Hz"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: diapasão, nota ou som com frequência → λ = v ÷ f (o de cima é a velocidade).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "680 Hz, 340 m/s"
+       ],
+       [
+        "2. Equação em letras",
+        "λ = v ÷ f"
+       ],
+       [
+        "3. Achar cada letra",
+        "v = 340; f = 680"
+       ],
+       [
+        "4. Substituir",
+        "340 ÷ 680 = 0,5"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "De v = λ × f, o comprimento de onda é a velocidade dividida pela frequência. Aqui, 340 ÷ 680 = 0,5 m."
+  }
+ },
+ "d2-banco-fis-ond-02": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Velocidade da onda",
+        "formula": "v = λ × f"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Velocidade no corpo",
+        "1 500 m/s"
+       ],
+       [
+        "Frequência",
+        "3 000 000 Hz"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o comprimento de onda.\nλ = v ÷ f (comprimento = velocidade ÷ frequência)\nPor que dividir? Em 1 s o som anda 1 500 m, e nesse caminho cabem 3 milhões de ondas.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "λ",
+        "comprimento (o que a questão quer)"
+       ],
+       [
+        "v",
+        "velocidade"
+       ],
+       [
+        "f",
+        "frequência"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando v (em milímetros)",
+     "texto": "v = 1 500 m/s = 1 500 000 mm/s"
+    },
+    {
+     "titulo": "Achando f: o seu jeito",
+     "texto": "Parece certo achar 5 mm. Mas 1 500 000 ÷ 3 000 000 é menos que 1.\nf = 3 000 000 Hz"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "λ = 1 500 000 ÷ 3 000 000 = 0,5 mm\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "v",
+        "1 500 000 mm/s"
+       ],
+       [
+        "f",
+        "3 000 000 Hz"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: frequência em milhões → passe a velocidade para milímetros e corte os zeros.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1 500 m/s, 3 milhões Hz"
+       ],
+       [
+        "2. Equação em letras",
+        "λ = v ÷ f"
+       ],
+       [
+        "3. Achar cada letra",
+        "v e f em mm"
+       ],
+       [
+        "4. Substituir",
+        "0,5 mm"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "O comprimento de onda é a velocidade dividida pela frequência. Com a velocidade em milímetros, 1 500 000 ÷ 3 000 000 = 0,5 mm."
+  }
+ },
+ "cmoudnnt4001wuoz91voej86z": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Batimentos por minuto",
+        "formula": "batidas = 60 ÷ tempo de uma batida"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Exame",
+        "picos repetidos no gráfico"
+       ],
+       [
+        "Cada quadradinho",
+        "0,2 s"
+       ],
+       [
+        "Entre dois picos",
+        "5 quadradinhos"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer as batidas por minuto.\nN = 60 ÷ T (batidas = 60 segundos ÷ tempo de uma batida)\nPor que 60 ÷ T? Um minuto tem 60 segundos. Se uma batida leva T segundos, cabem 60 ÷ T batidas.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "N",
+        "batidas por minuto (o que a questão quer)"
+       ],
+       [
+        "T",
+        "tempo entre dois picos"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando T: o seu jeito",
+     "texto": "Parece certo contar os picos que aparecem na tela e dar o número. Mas a tela mostra só alguns segundos.\nEntre dois picos há 5 quadradinhos de 0,2 s.\nT = 5 × 0,2 = 1 s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "N = 60 ÷ 1 = 60 batidas por minuto\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "T",
+        "1 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: gráfico que se repete e pede \"por minuto\" → ache o tempo de uma repetição e faça 60 ÷ esse tempo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "picos, 0,2 s"
+       ],
+       [
+        "2. Equação em letras",
+        "N = 60 ÷ T"
+       ],
+       [
+        "3. Achar cada letra",
+        "T = 5 × 0,2 = 1 s"
+       ],
+       [
+        "4. Substituir",
+        "60 ÷ 1 = 60"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "Entre dois picos do exame passam 5 quadradinhos de 0,2 s, ou seja, 1 segundo por batida. Em 60 segundos cabem 60 batidas.",
+   "conferencia": "Período = 5 × 0,2 = 1 s → 60 batimentos/min. B. A = período lido como 2 s; C, D e E = períodos de 0,6 s, 0,5 s e 0,33 s.",
+   "checagem": {
+    "pergunta": "Uma batida a cada 0,5 s. Quantas por minuto?",
+    "opcoes": [
+     "120",
+     "30",
+     "60",
+     "0,5"
+    ],
+    "certa": "120",
+    "resposta": "60 ÷ 0,5 = 120."
+   }
+  }
+ },
+ "cmoudnnvc002vuoz940shzcze": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Velocidade da onda",
+        "formula": "v = λ × f"
+       },
+       {
+        "figura": "onda",
+        "nome": "Barra que vibra",
+        "formula": "barra curta = som mais agudo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Barras",
+        "mesmo material, comprimentos diferentes"
+       ],
+       [
+        "1",
+        "a mais curta"
+       ],
+       [
+        "2",
+        "a mais comprida"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer comparar f e v das duas barras.\nR = v depende do material; f depende do tamanho (curta = mais aguda)\nPor que separar? A velocidade do som no metal é do metal: igual nas duas. O tamanho muda a nota, como a corda curta do violão.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "as duas relações (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "velocidades"
+       ],
+       [
+        "P2",
+        "frequências"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (velocidades)",
+     "texto": "Mesmo material: v1 = v2."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo achar que a barra maior vibra mais. Mas, como na corda do violão, a menor toca mais agudo.\nP2 = f1 > f2."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = f1 > f2 e v1 = v2\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "v1 = v2"
+       ],
+       [
+        "P2",
+        "f1 > f2"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: mesmo material, tamanhos diferentes → mesma velocidade; o menor tem a frequência maior.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "mesmo metal, 2 tamanhos"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = v do material; f do tamanho"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = iguais; P2 = curta maior"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra D"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "alternativa": [
+   "A",
+   "f1 < f2 e v1 < v2."
+  ]
+ },
+ "d2-facil-nat-05": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Cor de um objeto",
+        "formula": "é a luz que ele reflete"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Luz do Sol",
+        "branca: todas as cores"
+       ],
+       [
+        "Camiseta",
+        "parece vermelha"
+       ],
+       [
+        "Pergunta",
+        "por quê"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer por que a camiseta parece vermelha.\nR = a cor que chega ao olho é a que o objeto devolve\nPor que a que devolve? O olho só vê a luz que vem do objeto. As cores que ele absorve não chegam.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o motivo (o que a questão quer)"
+       ],
+       [
+        "P",
+        "que luz sai da camiseta"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo dizer que ela absorve o vermelho. Mas o que ela absorve não chega ao seu olho.\nP = ela devolve (reflete) o vermelho."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = reflete a luz vermelha e absorve as outras\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "reflete o vermelho"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: cor de objeto sob luz branca → é a cor que ele REFLETE; as outras ele absorve.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "luz branca, camiseta"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = a luz devolvida"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = vermelho refletido"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra D"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "aquec-rf-21": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Refração",
+        "formula": "a luz muda de direção ao trocar de meio"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Pergunta",
+        "o que é refração"
+       ],
+       [
+        "Exemplo",
+        "canudo que parece quebrado no copo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer a definição de refração.\nR = a luz entortar ao passar de um meio para outro\nPor que \"outro meio\"? A luz muda de velocidade do ar para a água, e por isso entorta.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "a definição (o que a questão quer)"
+       ],
+       [
+        "P",
+        "o que acontece com a luz"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar a luz voltar no espelho. Mas isso é reflexão.\nRefração: P = a luz atravessa e muda de direção."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = a luz mudar de direção ao passar de um meio para outro\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "atravessa e entorta"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: luz VOLTA = reflexão; luz ATRAVESSA e entorta = refração.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "definição, canudo"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = atravessar e entortar"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = muda de direção"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra B"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "d2-medio-nat-05": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Espelho plano",
+        "formula": "imagem atrás, à mesma distância"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Distância antes",
+        "2 m"
+       ],
+       [
+        "Andou",
+        "0,5 m para perto"
+       ],
+       [
+        "Espelho",
+        "plano"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a distância da pessoa até a imagem.\nD = 2 × d (até a imagem = 2 vezes até o espelho)\nPor que 2 vezes? A imagem fica atrás do espelho, à mesma distância que você está na frente. São dois pedaços iguais.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "D",
+        "distância até a imagem (o que a questão quer)"
+       ],
+       [
+        "d",
+        "distância até o espelho agora"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando d: o seu jeito",
+     "texto": "Parece certo usar os 2 m do começo. Mas ela andou 0,5 m.\nd = 2 − 0,5 = 1,5 m"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "D = 2 × 1,5 = 3 m\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "d",
+        "1,5 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: espelho plano e pede distância até a imagem → dobre a distância até o espelho (a de agora).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "2 m, andou 0,5 m"
+       ],
+       [
+        "2. Equação em letras",
+        "D = 2 × d"
+       ],
+       [
+        "3. Achar cada letra",
+        "d = 1,5"
+       ],
+       [
+        "4. Substituir",
+        "2 × 1,5 = 3"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "cmpq9tfeq003vwxc8fl3h9yul": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Espelho plano",
+        "formula": "imagem atrás, à mesma distância"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Espelho",
+        "plano, como o de banheiro"
+       ],
+       [
+        "Pergunta",
+        "como é a imagem"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer as 3 características da imagem.\nR = como a sua imagem aparece no espelho do banheiro\nPor que pensar no banheiro? Você vê a imagem atrás do vidro (virtual), em pé (direita) e do seu tamanho.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "as características (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "onde fica a imagem"
+       ],
+       [
+        "P2",
+        "tamanho e posição"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (onde fica)",
+     "texto": "Atrás do espelho, onde a luz não chega de verdade: P1 = virtual."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo dizer \"invertida\", porque direita e esquerda trocam. Mas a imagem não fica de cabeça para baixo.\nP2 = direita e do mesmo tamanho."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = virtual, direita e de mesmo tamanho\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "virtual"
+       ],
+       [
+        "P2",
+        "direita, mesmo tamanho"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: espelho plano → virtual, direita, mesmo tamanho, mesma distância.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "espelho plano"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = o espelho do banheiro"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = virtual; P2 = direita"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra B"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "Pense no espelho do banheiro: você se vê atrás do vidro, em pé e do seu tamanho. Isso é imagem virtual, direita e de mesmo tamanho.",
+   "conferencia": "Espelho plano: virtual, direita, mesmo tamanho. B. A, C, E = imagem real (de lente ou espelho côncavo); D = invertida e menor não é de espelho plano.",
+   "checagem": {
+    "pergunta": "Imagem \"virtual\" quer dizer que ela:",
+    "opcoes": [
+     "Fica atrás do espelho",
+     "Pode ser projetada",
+     "É de cabeça para baixo",
+     "É maior"
+    ],
+    "certa": "Fica atrás do espelho",
+    "resposta": "A luz não passa de verdade por ela."
+   }
+  }
+ },
+ "d2-banco-fis-opt-01": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Espelho plano",
+        "formula": "imagem atrás, à mesma distância"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Porta até o espelho",
+        "4 m"
+       ],
+       [
+        "Cliente até o espelho",
+        "3 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a distância do cliente até a imagem da porta.\nD = c + p (cliente até o espelho + espelho até a imagem da porta)\nPor que somar? O cliente está na frente do espelho; a imagem da porta, atrás. O caminho passa pelo espelho.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "D",
+        "distância até a imagem da porta (o que a questão quer)"
+       ],
+       [
+        "c",
+        "cliente até o espelho"
+       ],
+       [
+        "p",
+        "espelho até a imagem da porta"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando c (cliente)",
+     "texto": "c = 3 m"
+    },
+    {
+     "titulo": "Achando p: o seu jeito",
+     "texto": "Parece certo usar a distância da porta até o cliente: 4 − 3 = 1. Mas ele olha a IMAGEM, atrás do espelho.\np = 4 m (a porta está 4 m na frente)"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "D = 3 + 4 = 7 m\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "c",
+        "3 m"
+       ],
+       [
+        "p",
+        "4 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: espelho e pede a distância até a imagem de OUTRA coisa → some: você até o espelho + espelho até a imagem.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "4 m e 3 m"
+       ],
+       [
+        "2. Equação em letras",
+        "D = c + p"
+       ],
+       [
+        "3. Achar cada letra",
+        "c = 3; p = 4"
+       ],
+       [
+        "4. Substituir",
+        "3 + 4 = 7"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "d2-banco-fis-opt-02": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Reflexão",
+        "formula": "ângulo que chega = ângulo que sai (com a normal)"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Ângulo com o espelho",
+        "40°"
+       ],
+       [
+        "Normal",
+        "reta em pé, a 90° do espelho"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o ângulo entre os dois raios.\nA = 2 × i (ângulo entre os raios = 2 vezes o ângulo com a normal)\nPor que 2 vezes? O raio chega com i de um lado da normal e sai com o mesmo i do outro.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "A",
+        "ângulo entre os raios (o que a questão quer)"
+       ],
+       [
+        "i",
+        "ângulo com a normal"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando i: o seu jeito",
+     "texto": "Parece certo usar 40° direto: 2 × 40 = 80. Mas 40° é com o espelho, não com a normal.\ni = 90 − 40 = 50°"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "A = 2 × 50 = 100°\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "i",
+        "50°"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: ângulo dado \"com o espelho\" → troque pelo ângulo com a normal (90 − ele) antes de dobrar.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "40° com o espelho"
+       ],
+       [
+        "2. Equação em letras",
+        "A = 2 × i"
+       ],
+       [
+        "3. Achar cada letra",
+        "i = 50°"
+       ],
+       [
+        "4. Substituir",
+        "2 × 50 = 100"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "cmouei95n0062uoz9a6nn3ldw": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Refração",
+        "formula": "luz entorta ao passar ar → água → ar"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Garrafa",
+        "com água, presa no telhado"
+       ],
+       [
+        "Luz do Sol",
+        "entra pela garrafa"
+       ],
+       [
+        "Buraco",
+        "muito maior que a onda da luz"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o fenômeno da luz engarrafada.\nR = o que a água faz com a luz que a atravessa\nPor que \"atravessa\"? A luz passa do ar para a água e da água para o ar, entortando e se espalhando pela casa.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o fenômeno (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "o que a luz faz na garrafa"
+       ],
+       [
+        "P2",
+        "para que serve o dado do buraco"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (na garrafa)",
+     "texto": "A luz atravessa a água e muda de direção: P1 = refração."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar difração, porque a luz passa por um buraco. Mas difração só aparece em buraco do tamanho da onda.\nP2 = o buraco grande DESCARTA a difração."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = refração\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "refração"
+       ],
+       [
+        "P2",
+        "descarta difração"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: luz atravessando água ou vidro e mudando de direção → refração. Buraco \"muito maior que a onda\" → não é difração.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "garrafa, sol, buraco"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = o que a água faz"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = refração; P2 = sem difração"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra E"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "cmpq9tfez003zwxc8fk4j6vch": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Dispersão",
+        "formula": "cada cor entorta um pouco diferente"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Luz",
+        "branca: mistura de cores"
+       ],
+       [
+        "Prisma",
+        "de vidro"
+       ],
+       [
+        "Resultado",
+        "arco-íris"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer por que as cores se separam.\nR = cada cor sofre refração com um ângulo diferente\nPor que ângulos diferentes? Cada cor tem uma frequência e entorta um pouco diferente no vidro. Elas saem separadas.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o motivo (o que a questão quer)"
+       ],
+       [
+        "P",
+        "o que muda de uma cor para outra"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo dizer que o prisma pinta a luz. Mas as cores já estavam na luz branca.\nP = cada cor entorta com um ângulo próprio (dispersão)."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = cada cor tem frequência diferente e sofre refração com ângulos diferentes\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "ângulo de cada cor"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: prisma ou arco-íris → dispersão: as cores já estão na luz branca e se separam por entortar diferente.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "luz branca, prisma"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = refração diferente por cor"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = cada cor um ângulo"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra C"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "A luz branca já é uma mistura de cores. No vidro, cada cor entorta com um ângulo um pouco diferente e elas saem separadas: é a dispersão.",
+   "conferencia": "Dispersão: índice de refração depende da frequência; cada cor desvia diferente. C. A = absorção deixaria uma cor só; B = luz branca é policromática; D = vidro não emite; E = a frequência não muda na refração.",
+   "checagem": {
+    "pergunta": "O arco-íris aparece porque a chuva faz a luz:",
+    "opcoes": [
+     "Se separar em cores",
+     "Ganhar cores novas",
+     "Parar no ar",
+     "Virar som"
+    ],
+    "certa": "Se separar em cores",
+    "resposta": "Cada cor entorta diferente nas gotas."
+   }
+  }
+ },
+ "cmuxdlzhv000jzcvjz0rhhjr3": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Objeto muito longe",
+        "formula": "a imagem fica no foco: i = f"
+       },
+       {
+        "figura": "lente",
+        "nome": "Lente",
+        "formula": "f proporcional a 1 ÷ (n − 1)"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Objeto",
+        "muito distante"
+       ],
+       [
+        "Foco",
+        "f ∝ 1 ÷ (n − 1)"
+       ],
+       [
+        "Mudança",
+        "n vira n + Δn, Δn muito pequeno"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer Δi, quanto a imagem anda.\nΔi = f′ − f (com objeto longe, a imagem está no foco)\nPor que i = f? Raios de muito longe chegam paralelos e se cruzam no foco. Então mudar o foco é mudar a imagem.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "Δi",
+        "quanto a imagem anda (o que a questão quer)"
+       ],
+       [
+        "f′",
+        "o foco novo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando f′: o seu jeito",
+     "texto": "Parece certo achar que n maior afasta a imagem. Mas f é proporcional a 1 ÷ (n − 1): n maior, foco menor.\nf′ = f × (n − 1) ÷ (n − 1 + Δn)\nf′ = f ÷ (1 + Δn ÷ (n − 1)) ≈ f × (1 − Δn ÷ (n − 1))"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "Δi = f′ − f ≈ − f × Δn ÷ (n − 1)\nLetra C. O sinal de menos: a imagem chega mais perto.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "f′",
+        "f × (1 − Δn ÷ (n − 1))"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pequena mudança num termo do tipo 1 ÷ (1 + x) → use 1 ÷ (1 + x) ≈ 1 − x.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "objeto longe, f ∝ 1/(n − 1)"
+       ],
+       [
+        "2. Equação em letras",
+        "Δi = f′ − f"
+       ],
+       [
+        "3. Achar cada letra",
+        "f′ ≈ f(1 − Δn/(n − 1))"
+       ],
+       [
+        "4. Substituir",
+        "− fΔn/(n − 1)"
+       ]
+      ]
+     }
+    }
+   ],
+   "ideia": "Com o objeto muito longe, a imagem fica no foco, então Δi é quanto o foco muda. Como f é proporcional a 1 ÷ (n − 1), aumentar n diminui f: Δi ≈ − f·Δn ÷ (n − 1).",
+   "conferencia": "i = f; f′ = f(n−1)/(n−1+Δn) ≈ f[1 − Δn/(n−1)] → Δi = −fΔn/(n−1). C. B = sinal trocado; A = n no lugar de n − 1; D e E = n² − 1 sem sentido.",
+   "checagem": {
+    "pergunta": "Objeto muito longe de uma lente: a imagem fica…",
+    "opcoes": [
+     "No foco",
+     "Na lente",
+     "No infinito",
+     "No dobro do foco"
+    ],
+    "certa": "No foco",
+    "resposta": "Raios paralelos se cruzam no foco."
+   }
+  }
+ },
+ "d2-facil-nat-01": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Potência",
+        "formula": "P = U × i"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Tensão",
+        "110 V"
+       ],
+       [
+        "Corrente",
+        "10 A"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a potência do ferro.\nP = U × i (potência = tensão × corrente)\nPor que multiplicar? A tensão é o \"empurrão\" em cada carga e a corrente é quantas cargas passam por segundo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "P",
+        "potência (o que a questão quer)"
+       ],
+       [
+        "U",
+        "tensão"
+       ],
+       [
+        "i",
+        "corrente"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando U (tensão)",
+     "texto": "U = 110 V"
+    },
+    {
+     "titulo": "Achando i: o seu jeito",
+     "texto": "Parece certo somar: 110 + 10 = 120. Mas potência é tensão VEZES corrente.\ni = 10 A"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "P = 110 × 10 = 1 100 W\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "U",
+        "110 V"
+       ],
+       [
+        "i",
+        "10 A"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: tensão e corrente, pede potência → P = U × i.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "110 V, 10 A"
+       ],
+       [
+        "2. Equação em letras",
+        "P = U × i"
+       ],
+       [
+        "3. Achar cada letra",
+        "U = 110; i = 10"
+       ],
+       [
+        "4. Substituir",
+        "110 × 10 = 1 100"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "d2-facil-nat-02": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Em série",
+        "formula": "R total = soma"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Resistor 1",
+        "4 Ω"
+       ],
+       [
+        "Resistor 2",
+        "6 Ω"
+       ],
+       [
+        "Ligação",
+        "em série"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a resistência equivalente.\nR = R1 + R2 (em série, soma)\nPor que somar? Em série a corrente passa por um e depois pelo outro: enfrenta as duas dificuldades.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "resistência equivalente (o que a questão quer)"
+       ],
+       [
+        "R1",
+        "primeiro resistor"
+       ],
+       [
+        "R2",
+        "segundo resistor"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando R1 (primeiro)",
+     "texto": "R1 = 4 Ω"
+    },
+    {
+     "titulo": "Achando R2: o seu jeito",
+     "texto": "Parece certo multiplicar: 4 × 6 = 24. Mas em série se soma.\nR2 = 6 Ω"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = 4 + 6 = 10 Ω\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "R1",
+        "4 Ω"
+       ],
+       [
+        "R2",
+        "6 Ω"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: resistores \"em série\" → some todos.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "4 Ω e 6 Ω"
+       ],
+       [
+        "2. Equação em letras",
+        "R = R1 + R2"
+       ],
+       [
+        "3. Achar cada letra",
+        "R1 = 4; R2 = 6"
+       ],
+       [
+        "4. Substituir",
+        "4 + 6 = 10"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "d2-medio-nat-01": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Potência",
+        "formula": "P = U × i"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Tensão",
+        "220 V"
+       ],
+       [
+        "Micro-ondas",
+        "1 320 W"
+       ],
+       [
+        "Chaleira",
+        "880 W"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a corrente total.\ni = P ÷ U (corrente = potência total ÷ tensão)\nPor que dividir? De P = U × i: a corrente é quanto de potência cada volt carrega.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "i",
+        "corrente total (o que a questão quer)"
+       ],
+       [
+        "P",
+        "potência total"
+       ],
+       [
+        "U",
+        "tensão"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo usar só o micro-ondas. Mas os dois estão ligados juntos.\nP = 1 320 + 880 = 2 200 W"
+    },
+    {
+     "titulo": "Achando U (tensão)",
+     "texto": "U = 220 V"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "i = 2 200 ÷ 220 = 10 A\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "2 200 W"
+       ],
+       [
+        "U",
+        "220 V"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: aparelhos ligados ao mesmo tempo → some as potências e divida pela tensão.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1 320 W + 880 W, 220 V"
+       ],
+       [
+        "2. Equação em letras",
+        "i = P ÷ U"
+       ],
+       [
+        "3. Achar cada letra",
+        "P = 2 200; U = 220"
+       ],
+       [
+        "4. Substituir",
+        "2 200 ÷ 220 = 10"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "d2-medio-nat-02": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Em série",
+        "formula": "R total = soma"
+       },
+       {
+        "figura": "circuito",
+        "nome": "Lei de Ohm",
+        "formula": "i = U ÷ R"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Lâmpada 1",
+        "8 Ω"
+       ],
+       [
+        "Lâmpada 2",
+        "4 Ω"
+       ],
+       [
+        "Bateria",
+        "12 V"
+       ],
+       [
+        "Ligação",
+        "em série"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a corrente.\ni = U ÷ R (corrente = tensão ÷ resistência total)\nPor que a resistência total? Em série, a mesma corrente atravessa as duas lâmpadas.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "i",
+        "corrente (o que a questão quer)"
+       ],
+       [
+        "U",
+        "tensão"
+       ],
+       [
+        "R",
+        "resistência total"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando U (tensão)",
+     "texto": "U = 12 V"
+    },
+    {
+     "titulo": "Achando R: o seu jeito",
+     "texto": "Parece certo usar só uma lâmpada: 12 ÷ 8 = 1,5. Mas em série as duas contam.\nR = 8 + 4 = 12 Ω"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "i = 12 ÷ 12 = 1 A\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "U",
+        "12 V"
+       ],
+       [
+        "R",
+        "12 Ω"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: série com bateria → some as resistências e divida a tensão pela soma.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "8 Ω, 4 Ω, 12 V"
+       ],
+       [
+        "2. Equação em letras",
+        "i = U ÷ R"
+       ],
+       [
+        "3. Achar cada letra",
+        "U = 12; R = 12"
+       ],
+       [
+        "4. Substituir",
+        "12 ÷ 12 = 1"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "d2-banco-fis-ele-01": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Energia",
+        "formula": "E = potência × tempo"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Conta de luz",
+        "formula": "custo = kWh × preço"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Antes",
+        "100 W"
+       ],
+       [
+        "Depois",
+        "12 W"
+       ],
+       [
+        "Uso",
+        "6 h por dia, 30 dias"
+       ],
+       [
+        "Preço",
+        "R$ 0,75 por kWh"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a economia por mês.\nC = E × 0,75 (economia = energia economizada × preço)\nPor que a energia economizada? É a potência que deixou de ser gasta, durante todas as horas do mês.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "C",
+        "economia em reais (o que a questão quer)"
+       ],
+       [
+        "E",
+        "energia economizada, em kWh"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando E: o seu jeito",
+     "texto": "Parece certo calcular só a lâmpada de LED. Mas a economia é a DIFERENÇA.\nDiferença: 100 − 12 = 88 W\nHoras: 6 × 30 = 180 h\nE = 88 × 180 = 15 840 Wh = 15,84 kWh"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "C = 15,84 × 0,75 = 11,88\nLetra A. R$ 11,88 por mês.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "E",
+        "15,84 kWh"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: economia de energia → diferença de potência × horas, em kWh (÷ 1 000), × preço.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "100 W → 12 W, 180 h"
+       ],
+       [
+        "2. Equação em letras",
+        "C = E × 0,75"
+       ],
+       [
+        "3. Achar cada letra",
+        "E = 15,84 kWh"
+       ],
+       [
+        "4. Substituir",
+        "15,84 × 0,75 = 11,88"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "d2-banco-fis-ele-02": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Potência",
+        "formula": "P = U × i"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Potência",
+        "1 760 W, as duas"
+       ],
+       [
+        "Versão 1",
+        "110 V"
+       ],
+       [
+        "Versão 2",
+        "220 V"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer comparar as correntes.\ni = P ÷ U (corrente = potência ÷ tensão)\nPor que dividir? Mesma potência com menos tensão precisa de mais corrente.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "i",
+        "corrente (o que a questão quer)"
+       ],
+       [
+        "i1",
+        "corrente em 110 V"
+       ],
+       [
+        "i2",
+        "corrente em 220 V"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando i1 (110 V)",
+     "texto": "i1 = 1 760 ÷ 110 = 16 A"
+    },
+    {
+     "titulo": "Achando i2: o seu jeito",
+     "texto": "Parece certo achar que 220 V puxa mais corrente, por ter mais tensão. Mas a potência é a mesma.\ni2 = 1 760 ÷ 220 = 8 A"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "16 A é o dobro de 8 A\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "i1",
+        "16 A"
+       ],
+       [
+        "i2",
+        "8 A"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: mesma potência em tensões diferentes → metade da tensão = o dobro da corrente.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1 760 W; 110 e 220 V"
+       ],
+       [
+        "2. Equação em letras",
+        "i = P ÷ U"
+       ],
+       [
+        "3. Achar cada letra",
+        "i1 = 16; i2 = 8"
+       ],
+       [
+        "4. Substituir",
+        "o dobro"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "cmoudnnso001puoz93jgvg2as": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Pilha",
+        "formula": "tensão = E maior − E menor"
+       },
+       {
+        "figura": "circuito",
+        "nome": "Em série",
+        "formula": "R total = soma"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Iodo",
+        "+0,54 V"
+       ],
+       [
+        "Lítio",
+        "−3,05 V"
+       ],
+       [
+        "Pilhas",
+        "3 em série"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o dispositivo certo.\nU = 3 × e (tensão da bateria = 3 × tensão de uma pilha)\nPor que 3 vezes? Pilhas em série somam as tensões, como resistores em série somam as resistências.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "U",
+        "tensão da bateria (o que a questão quer)"
+       ],
+       [
+        "e",
+        "tensão de uma pilha"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando e: o seu jeito",
+     "texto": "Parece certo somar os dois valores como estão: 0,54 + (−3,05). Mas a tensão da pilha é a DIFERENÇA entre eles.\ne = 0,54 − (−3,05) = 0,54 + 3,05 = 3,59 V"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "U = 3 × 3,59 = 10,77 V\nFaixa de 10,5 a 10,9 V: carrinho de controle remoto\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "e",
+        "3,59 V"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pilha com duas semirreações → maior − menor; em série, multiplique pelo número de pilhas e procure a faixa.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "0,54 V, −3,05 V, 3 pilhas"
+       ],
+       [
+        "2. Equação em letras",
+        "U = 3 × e"
+       ],
+       [
+        "3. Achar cada letra",
+        "e = 3,59"
+       ],
+       [
+        "4. Substituir",
+        "10,77 V → IV"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "cmoudnnsx001tuoz9obomxs7x": {
+  "explicacao": {
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Consumo",
+        "formula": "energia = distância ÷ km por kWh"
+       },
+       {
+        "figura": "circuito",
+        "nome": "Potência",
+        "formula": "P = U × i"
+       },
+       {
+        "figura": "circuito",
+        "nome": "Tempo",
+        "formula": "t = energia ÷ potência"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Percurso",
+        "110 km"
+       ],
+       [
+        "Desempenho",
+        "5 km por kWh"
+       ],
+       [
+        "Carregador",
+        "220 V e 20 A"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o tempo de recarga.\nt = E ÷ P (tempo = energia gasta ÷ potência do carregador)\nPor que dividir? O carregador entrega P de energia a cada hora. O tempo é quantas horas cabem na energia gasta.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "t",
+        "tempo em horas (o que a questão quer)"
+       ],
+       [
+        "E",
+        "energia gasta"
+       ],
+       [
+        "P",
+        "potência do carregador"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando E (energia)",
+     "texto": "Cada 5 km gasta 1 kWh.\nE = 110 ÷ 5 = 22 kWh"
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo deixar em watts: 220 × 20 = 4 400 W. Mas a energia está em kWh.\nP = 4 400 W = 4,4 kW"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "t = 22 ÷ 4,4 = 5 h\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "E",
+        "22 kWh"
+       ],
+       [
+        "P",
+        "4,4 kW"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: tempo de recarga → energia gasta (km ÷ km por kWh) dividida pela potência (U × i) em kW.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "110 km, 5 km/kWh, 220 V, 20 A"
+       ],
+       [
+        "2. Equação em letras",
+        "t = E ÷ P"
+       ],
+       [
+        "3. Achar cada letra",
+        "E = 22; P = 4,4"
+       ],
+       [
+        "4. Substituir",
+        "22 ÷ 4,4 = 5"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ }
+}
