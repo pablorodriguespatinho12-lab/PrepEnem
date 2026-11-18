@@ -104,6 +104,15 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   tema Índigo subiu de 42% para 64% de saturação, com AA conferido par a par. Baralho padrão
   usa a cor atual da matéria (`corDoBaralho`), não a gravada no seed.
 
+- **Aba Descobrir (Pablo, 17/11/2026: jeito do canal Universo Narrado, de onde vem a equação):**
+  `/descobrir`, no "Mais". Mapa com o plano cartesiano no meio e 6 aulas numeradas na ordem da
+  escadinha (`data/descobrir/mapa.ts`); no celular vira lista. Aula = uma tela por passo, sem rolar,
+  1 frase, a equação se transforma linha a linha com a operação ao lado, uma tela por letra, e no fim
+  "Prove você" (botões do que fazer dos dois lados; o código confere) e "Onde mais isso aparece".
+  Aulas escritas à mão em `data/descobrir/aulas/*.tsx` (sem IA), molde em
+  `docs/descobrir/amostra-velocidade-media.html` (aprovado). Não usar o jeito da Trilha de Cálculo
+  ("não gosto muito da explicação dela"). Lembrete de leitura não aparece na aula (cobria o Próximo).
+
 ## Conteúdo gerado por IA
 - **Explicação = o artefato dos peixes (Pablo, 22/10/2026: "perfeito, fala
   para a IA fazer exatamente assim"):** uma tela por passo, nada rola (o desenho

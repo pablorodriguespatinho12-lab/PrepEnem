@@ -7,7 +7,7 @@ import { useTheme } from 'next-themes';
 import {
   Home, BookOpen, BarChart3, Settings, ShieldCheck,
   LogOut, Menu, X, GraduationCap, Library, PenTool,
-  Layers, Moon, Sun, Sigma, ChevronDown
+  Layers, Moon, Sun, Sigma, ChevronDown, Compass
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAppTheme } from './app-theme-provider';
@@ -30,6 +30,8 @@ const principais: ItemNav[] = [
 ];
 // Simulado e Caderno de Erros moram dentro do Treino desde 02/11/2026.
 const secundarios: ItemNav[] = [
+  // Aulas no jeito do Universo Narrado: de onde vem a equação (Pablo, 17/11/2026).
+  { href: '/descobrir', label: 'Descobrir', icon: Compass },
   { href: '/banco-questoes', label: 'Banco de Questões', icon: Library },
   { href: '/perfil', label: 'Perfil', icon: Settings },
 ];
