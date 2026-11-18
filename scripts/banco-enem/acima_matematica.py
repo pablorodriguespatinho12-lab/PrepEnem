@@ -59,7 +59,7 @@ dict(**ARIT, id='d2-acima-mat-02', resp='C', objeto='bônus', cobra='proporção
     formulas=[('porcentagem', 'Partes inversas', 'parte de cada um ∝ 1 ÷ faltas'), ('porcentagem', 'Valor de 1 parte', 'bônus ÷ soma das partes')],
     tenho=[('Faltas dos 3', '1, 2 e 3'), ('Bônus total', 'R$ 9 900'), ('Regra', 'quem faltou menos recebe mais')],
     quer='A questão quer a diferença entre o maior e o menor bônus.',
-    equacao='D = (6 − 2) × U (diferença = diferença de partes × valor de 1 parte)',
+    equacao='D = maior − menor = 6 × U − 2 × U (o maior leva 6 partes e o menor 2, de U reais cada)',
     porque='Por que inverso? Quem faltou 1 vez leva 1 parte; quem faltou 2 vezes, metade disso (1/2); quem faltou 3, um terço (1/3). Fração é ruim para dividir dinheiro, então a próxima tela troca as frações por números inteiros.',
     letras=[('D', 'diferença entre maior e menor bônus (o que a questão quer)'), ('S', 'soma das partes'), ('U', 'valor de 1 parte')],
     telas=[
@@ -68,10 +68,10 @@ dict(**ARIT, id='d2-acima-mat-02', resp='C', objeto='bônus', cobra='proporção
       dict(titulo='Achando U: o seu jeito',
         texto='Parece certo dividir direto, nas partes 1, 2 e 3. Isso dá 1 650, 3 300 e 4 950.\nMas aí quem mais faltou ganha mais. O contrário do pedido.\nCom as partes certas:\nU = 9 900 ÷ 11 = 900'),
     ],
-    volta='D = (6 − 2) × 900 = 4 × 900 = 3 600\nLetra C. O maior bônus é 5 400 e o menor é 1 800.',
+    volta='Maior: 6 × 900 = 5 400\nMenor: 2 × 900 = 1 800\nD = 5 400 − 1 800 = 3 600\nAtalho: tire as partes antes, (6 − 2) × 900 = 4 × 900 = 3 600\nLetra C.',
     valores=[('S', '11'), ('U', '900')],
     pista='"inversamente proporcional" → use o inverso (1 ÷ número) e multiplique tudo pelo MMC dos números para tirar as frações; depois divida o total pela soma das partes.',
-    receita=[('1. Tabela do que eu tenho', 'faltas 1, 2, 3; R$ 9 900'), ('2. Equação em letras', 'D = (6 − 2) × U'), ('3. Achar cada letra', 'S = 11; U = 900'), ('4. Substituir', '4 × 900 = 3 600')])),
+    receita=[('1. Tabela do que eu tenho', 'faltas 1, 2, 3; R$ 9 900'), ('2. Equação em letras', 'D = 6 × U − 2 × U'), ('3. Achar cada letra', 'S = 11; U = 900'), ('4. Substituir', '4 × 900 = 3 600')])),
 
 # 03 · Grandezas · escala de mapa: a área vai ao quadrado.
 dict(**GRAN, id='d2-acima-mat-03', resp='B', objeto='lago no mapa', cobra='escala de área',
