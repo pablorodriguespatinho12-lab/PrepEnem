@@ -61,7 +61,7 @@ dict(**ARIT, id='d2-acima-mat-02', resp='C', objeto='bônus', cobra='proporção
     quer='A questão quer a diferença entre o maior e o menor bônus.',
     equacao='D = maior − menor = 6 × U − 2 × U (o maior leva 6 partes e o menor 2, de U reais cada)',
     porque='Por que inverso? Quem faltou 1 vez leva 1 parte; quem faltou 2 vezes, metade disso (1/2); quem faltou 3, um terço (1/3). Fração é ruim para dividir dinheiro, então a próxima tela troca as frações por números inteiros.',
-    letras=[('D', 'diferença entre maior e menor bônus (o que a questão quer)'), ('S', 'soma das partes'), ('U', 'valor de 1 parte')],
+    letras=[('D', 'quantos reais o maior bônus tem a mais que o menor (o que a questão quer)'), ('S', 'em quantos pedaços iguais o bônus é cortado, somando os pedaços dos 3'), ('U', 'quantos reais vale cada pedaço (todo pedaço vale igual)')],
     telas=[
       dict(titulo='Achando S (soma das partes)',
         texto='Inverso de cada número de faltas: 1, 1/2 e 1/3.\nPor que × 6? Multiplicar TODAS pelo mesmo número não muda quem leva mais nem quantas vezes mais, como dobrar uma receita. Escolho 6 porque é o MMC (mínimo múltiplo comum) de 1, 2 e 3: o menor número que dá para dividir por todos, e as frações somem.\n1 × 6 = 6; 1/2 × 6 = 3; 1/3 × 6 = 2\nConfere: 6 é o dobro de 3 e o triplo de 2, igual a 1 ser o dobro de 1/2 e o triplo de 1/3.\nS = 6 + 3 + 2 = 11'),

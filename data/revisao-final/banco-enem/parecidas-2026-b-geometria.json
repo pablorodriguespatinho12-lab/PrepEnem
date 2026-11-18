@@ -68,27 +68,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o menor diâmetro da toalha, com 10 cm de sobra depois das pontas.\nT = 2 × (P + 10) (diâmetro = 2 raios; o raio vai do centro até a ponta e mais a sobra)\nPor que dobrar? O diâmetro atravessa a toalha toda: são 2 raios, um de cada lado do centro.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o menor diâmetro da toalha, com 10 cm de sobra depois das pontas.\nPor que dobrar? O diâmetro atravessa a toalha toda: são 2 raios, um de cada lado do centro.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "T",
-        "diâmetro da toalha (o que a questão quer)"
-       ],
-       [
-        "P",
-        "distância do centro até a ponta"
-       ],
-       [
-        "H",
-        "altura do triângulo"
-       ]
+      "tipo": "equacao",
+      "formula": "T = 2 × (P + 10)",
+      "leitura": "diâmetro = 2 raios; o raio vai do centro até a ponta e mais a sobra",
+      "letras": [
+       {
+        "letra": "T",
+        "oque": "diâmetro da toalha (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "distância do centro até a ponta"
+       },
+       {
+        "letra": "H",
+        "oque": "altura do triângulo"
+       }
       ]
      }
     },
@@ -232,23 +229,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o alcance do aspersor, do centro até um canto.\nR = D ÷ 2 (raio = diagonal ÷ 2)\nPor que dividir por 2? O círculo passa pelos 4 cantos, então a diagonal é o diâmetro do círculo. O alcance, do centro até a borda, é o raio: a metade do diâmetro.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o alcance do aspersor, do centro até um canto.\nPor que dividir por 2? O círculo passa pelos 4 cantos, então a diagonal é o diâmetro do círculo. O alcance, do centro até a borda, é o raio: a metade do diâmetro.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "alcance do aspersor, o raio (o que a questão quer)"
-       ],
-       [
-        "D",
-        "diagonal do jardim"
-       ]
+      "tipo": "equacao",
+      "formula": "R = D ÷ 2",
+      "leitura": "raio = diagonal ÷ 2",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "alcance do aspersor, o raio (o que a questão quer)"
+       },
+       {
+        "letra": "D",
+        "oque": "diagonal do jardim"
+       }
       ]
      }
     },
@@ -384,23 +378,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o lado do quadrado da viga.\nL = D ÷ 1,4 (lado = diagonal ÷ √2)\nPor que dividir? A diagonal é o lado × 1,4. Se 12 = 3 × 4, então 3 = 12 ÷ 4. Do mesmo jeito, o lado é a diagonal ÷ 1,4.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o lado do quadrado da viga.\nPor que dividir? A diagonal é o lado × 1,4. Se 12 = 3 × 4, então 3 = 12 ÷ 4. Do mesmo jeito, o lado é a diagonal ÷ 1,4.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "L",
-        "lado da viga (o que a questão quer)"
-       ],
-       [
-        "D",
-        "diagonal do quadrado"
-       ]
+      "tipo": "equacao",
+      "formula": "L = D ÷ 1,4",
+      "leitura": "lado = diagonal ÷ √2",
+      "letras": [
+       {
+        "letra": "L",
+        "oque": "lado da viga (o que a questão quer)"
+       },
+       {
+        "letra": "D",
+        "oque": "diagonal do quadrado"
+       }
       ]
      }
     },
@@ -540,23 +531,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a abertura do V que a bola desenha.\nV = 180 − S (abertura = 180° da tabela − os dois ângulos com a tabela)\nPor que tirar de 180? Em cima da tabela cabem três ângulos lado a lado: o de chegada, o V e o de saída. Juntos eles fecham a linha reta, 180°.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a abertura do V que a bola desenha.\nPor que tirar de 180? Em cima da tabela cabem três ângulos lado a lado: o de chegada, o V e o de saída. Juntos eles fecham a linha reta, 180°.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "V",
-        "abertura do V (o que a questão quer)"
-       ],
-       [
-        "S",
-        "chegada + saída juntas"
-       ]
+      "tipo": "equacao",
+      "formula": "V = 180 − S",
+      "leitura": "abertura = 180° da tabela − os dois ângulos com a tabela",
+      "letras": [
+       {
+        "letra": "V",
+        "oque": "abertura do V (o que a questão quer)"
+       },
+       {
+        "letra": "S",
+        "oque": "chegada + saída juntas"
+       }
       ]
      }
     },
@@ -696,23 +684,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o ângulo da bola com a tabela da esquerda.\nX = 180 − S (ângulo que falta = 180° − os dois ângulos que já conheço)\nPor que tirar de 180? Os 3 ângulos de um triângulo sempre somam 180°. Se você sabe dois, o terceiro é o que falta.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o ângulo da bola com a tabela da esquerda.\nPor que tirar de 180? Os 3 ângulos de um triângulo sempre somam 180°. Se você sabe dois, o terceiro é o que falta.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "X",
-        "ângulo com a tabela da esquerda (o que a questão quer)"
-       ],
-       [
-        "S",
-        "os dois ângulos que já conheço juntos"
-       ]
+      "tipo": "equacao",
+      "formula": "X = 180 − S",
+      "leitura": "ângulo que falta = 180° − os dois ângulos que já conheço",
+      "letras": [
+       {
+        "letra": "X",
+        "oque": "ângulo com a tabela da esquerda (o que a questão quer)"
+       },
+       {
+        "letra": "S",
+        "oque": "os dois ângulos que já conheço juntos"
+       }
       ]
      }
     },

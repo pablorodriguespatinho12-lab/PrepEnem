@@ -70,27 +70,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer a corrente total.\ni = P ÷ U (corrente = potência total ÷ tensão)\nPor que dividir? De P = U × i: a corrente é quanto de potência cada volt carrega.\nAgora é só achar cada letra.",
+          "texto": "A questão quer a corrente total.\nPor que dividir? De P = U × i: a corrente é quanto de potência cada volt carrega.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "i",
-                "corrente total (o que a questão quer)"
-              ],
-              [
-                "P",
-                "potência total"
-              ],
-              [
-                "U",
-                "tensão"
-              ]
+            "tipo": "equacao",
+            "formula": "i = P ÷ U",
+            "leitura": "corrente = potência total ÷ tensão",
+            "letras": [
+              {
+                "letra": "i",
+                "oque": "corrente total (o que a questão quer)"
+              },
+              {
+                "letra": "P",
+                "oque": "potência total"
+              },
+              {
+                "letra": "U",
+                "oque": "tensão"
+              }
             ]
           }
         },
@@ -249,27 +246,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer a corrente.\ni = U ÷ R (corrente = tensão ÷ resistência total)\nPor que a resistência total? Em série, a mesma corrente atravessa as duas lâmpadas.\nAgora é só achar cada letra.",
+          "texto": "A questão quer a corrente.\nPor que a resistência total? Em série, a mesma corrente atravessa as duas lâmpadas.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "i",
-                "corrente (o que a questão quer)"
-              ],
-              [
-                "U",
-                "tensão"
-              ],
-              [
-                "R",
-                "resistência total"
-              ]
+            "tipo": "equacao",
+            "formula": "i = U ÷ R",
+            "leitura": "corrente = tensão ÷ resistência total",
+            "letras": [
+              {
+                "letra": "i",
+                "oque": "corrente (o que a questão quer)"
+              },
+              {
+                "letra": "U",
+                "oque": "tensão"
+              },
+              {
+                "letra": "R",
+                "oque": "resistência total"
+              }
             ]
           }
         },
@@ -427,23 +421,20 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer o tempo.\nt = Q ÷ 500 (tempo = calor necessário ÷ calor por segundo)\nPor que dividir? Se a cada segundo entram 500 cal, o tempo é quantas vezes 500 cabe no calor total.\nAgora é só achar cada letra.",
+          "texto": "A questão quer o tempo.\nPor que dividir? Se a cada segundo entram 500 cal, o tempo é quantas vezes 500 cabe no calor total.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "t",
-                "tempo (o que a questão quer)"
-              ],
-              [
-                "Q",
-                "calor necessário"
-              ]
+            "tipo": "equacao",
+            "formula": "t = Q ÷ 500",
+            "leitura": "tempo = calor necessário ÷ calor por segundo",
+            "letras": [
+              {
+                "letra": "t",
+                "oque": "tempo (o que a questão quer)"
+              },
+              {
+                "letra": "Q",
+                "oque": "calor necessário"
+              }
             ]
           }
         },
@@ -581,27 +572,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer a profundidade.\np = (v × t) ÷ 2 (profundidade = caminho do som ÷ 2)\nPor que dividir por 2? No eco o som vai até o fundo e volta. O caminho todo é o dobro da profundidade.\nAgora é só achar cada letra.",
+          "texto": "A questão quer a profundidade.\nPor que dividir por 2? No eco o som vai até o fundo e volta. O caminho todo é o dobro da profundidade.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "p",
-                "profundidade (o que a questão quer)"
-              ],
-              [
-                "v",
-                "velocidade do som"
-              ],
-              [
-                "t",
-                "tempo de ida e volta"
-              ]
+            "tipo": "equacao",
+            "formula": "p = (v × t) ÷ 2",
+            "leitura": "profundidade = caminho do som ÷ 2",
+            "letras": [
+              {
+                "letra": "p",
+                "oque": "profundidade (o que a questão quer)"
+              },
+              {
+                "letra": "v",
+                "oque": "velocidade do som"
+              },
+              {
+                "letra": "t",
+                "oque": "tempo de ida e volta"
+              }
             ]
           }
         },
@@ -747,23 +735,20 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer a distância da pessoa até a imagem.\nD = 2 × d (até a imagem = 2 vezes até o espelho)\nPor que 2 vezes? A imagem fica atrás do espelho, à mesma distância que você está na frente. São dois pedaços iguais.\nAgora é só achar cada letra.",
+          "texto": "A questão quer a distância da pessoa até a imagem.\nPor que 2 vezes? A imagem fica atrás do espelho, à mesma distância que você está na frente. São dois pedaços iguais.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "D",
-                "distância até a imagem (o que a questão quer)"
-              ],
-              [
-                "d",
-                "distância até o espelho agora"
-              ]
+            "tipo": "equacao",
+            "formula": "D = 2 × d",
+            "leitura": "até a imagem = 2 vezes até o espelho",
+            "letras": [
+              {
+                "letra": "D",
+                "oque": "distância até a imagem (o que a questão quer)"
+              },
+              {
+                "letra": "d",
+                "oque": "distância até o espelho agora"
+              }
             ]
           }
         },
@@ -905,27 +890,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer a aceleração da caixa.\na = F ÷ m (aceleração = força que sobra ÷ massa)\nPor que a força que sobra? O atrito puxa para trás. Só o que sobra do empurrão acelera a caixa.\nAgora é só achar cada letra.",
+          "texto": "A questão quer a aceleração da caixa.\nPor que a força que sobra? O atrito puxa para trás. Só o que sobra do empurrão acelera a caixa.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "a",
-                "aceleração (o que a questão quer)"
-              ],
-              [
-                "F",
-                "força que sobra"
-              ],
-              [
-                "m",
-                "massa"
-              ]
+            "tipo": "equacao",
+            "formula": "a = F ÷ m",
+            "leitura": "aceleração = força que sobra ÷ massa",
+            "letras": [
+              {
+                "letra": "a",
+                "oque": "aceleração (o que a questão quer)"
+              },
+              {
+                "letra": "F",
+                "oque": "força que sobra"
+              },
+              {
+                "letra": "m",
+                "oque": "massa"
+              }
             ]
           }
         },

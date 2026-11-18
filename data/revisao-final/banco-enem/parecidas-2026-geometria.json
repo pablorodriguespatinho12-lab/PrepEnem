@@ -49,23 +49,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o menor raio de luz que passa 1 m das 3 pontas.\nR = D + 1 (raio = distância do centro até a ponta + a sobra)\nPor que somar? A luz sai do centro. Para passar 1 m da ponta, ela anda até a ponta e mais 1 m.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o menor raio de luz que passa 1 m das 3 pontas.\nPor que somar? A luz sai do centro. Para passar 1 m da ponta, ela anda até a ponta e mais 1 m.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "raio da luz (o que a questão quer)"
-       ],
-       [
-        "D",
-        "distância do centro até a ponta"
-       ]
+      "tipo": "equacao",
+      "formula": "R = D + 1",
+      "leitura": "raio = distância do centro até a ponta + a sobra",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "raio da luz (o que a questão quer)"
+       },
+       {
+        "letra": "D",
+        "oque": "distância do centro até a ponta"
+       }
       ]
      }
     },

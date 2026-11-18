@@ -71,27 +71,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o calor recebido.\nQ = m × c × ΔT (calor = massa × calor específico × quanto subiu)\nPor que multiplicar? Cada grama pede 1 cal para subir 1 grau. Muitos gramas e muitos graus: multiplica tudo.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o calor recebido.\nPor que multiplicar? Cada grama pede 1 cal para subir 1 grau. Muitos gramas e muitos graus: multiplica tudo.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "Q",
-        "calor (o que a questão quer)"
-       ],
-       [
-        "m",
-        "massa, em gramas"
-       ],
-       [
-        "ΔT",
-        "quanto a temperatura subiu"
-       ]
+      "tipo": "equacao",
+      "formula": "Q = m × c × ΔT",
+      "leitura": "calor = massa × calor específico × quanto subiu",
+      "letras": [
+       {
+        "letra": "Q",
+        "oque": "calor (o que a questão quer)"
+       },
+       {
+        "letra": "m",
+        "oque": "massa, em gramas"
+       },
+       {
+        "letra": "ΔT",
+        "oque": "quanto a temperatura subiu"
+       }
       ]
      }
     },
@@ -242,27 +239,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer quanto subiu cada temperatura.\nΔT = Q ÷ (m × c) (subida = calor ÷ massa ÷ calor específico)\nPor que dividir pelo c? Quem pede menos energia por grau sobe mais graus com o mesmo calor.\nAgora é só achar cada letra.",
+     "texto": "A questão quer quanto subiu cada temperatura.\nPor que dividir pelo c? Quem pede menos energia por grau sobe mais graus com o mesmo calor.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "ΔT",
-        "subida de cada um (o que a questão quer)"
-       ],
-       [
-        "Ta",
-        "subida da água"
-       ],
-       [
-        "To",
-        "subida do óleo"
-       ]
+      "tipo": "equacao",
+      "formula": "ΔT = Q ÷ (m × c)",
+      "leitura": "subida = calor ÷ massa ÷ calor específico",
+      "letras": [
+       {
+        "letra": "ΔT",
+        "oque": "subida de cada um (o que a questão quer)"
+       },
+       {
+        "letra": "Ta",
+        "oque": "subida da água"
+       },
+       {
+        "letra": "To",
+        "oque": "subida do óleo"
+       }
       ]
      }
     },

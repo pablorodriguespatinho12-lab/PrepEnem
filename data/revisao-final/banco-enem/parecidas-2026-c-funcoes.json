@@ -68,23 +68,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a altura máxima do sinalizador.\nH = −4 × T × T + 24 × T + 5 (altura = a lei, com T no lugar do t)\nPor que achar T antes? O sinalizador sobe, para e desce. O ponto mais alto acontece em um instante só, o T. Com ele na lei, sai a altura do topo.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a altura máxima do sinalizador.\nPor que achar T antes? O sinalizador sobe, para e desce. O ponto mais alto acontece em um instante só, o T. Com ele na lei, sai a altura do topo.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "H",
-        "altura máxima (o que a questão quer)"
-       ],
-       [
-        "T",
-        "instante em que ele chega ao topo"
-       ]
+      "tipo": "equacao",
+      "formula": "H = −4 × T × T + 24 × T + 5",
+      "leitura": "altura = a lei, com T no lugar do t",
+      "letras": [
+       {
+        "letra": "H",
+        "oque": "altura máxima (o que a questão quer)"
+       },
+       {
+        "letra": "T",
+        "oque": "instante em que ele chega ao topo"
+       }
       ]
      }
     },
@@ -236,27 +233,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer as visitas do dia 5.\nV = A × 5 × 5 + B × 5 (a lei, com o dia 5 no lugar do t)\nPor que achar A e B antes? A lei tem 2 números escondidos. Os 2 dias dados dão 2 pistas, uma para cada número. Com os dois descobertos, a lei serve para qualquer dia.\nAgora é só achar cada letra.",
+     "texto": "A questão quer as visitas do dia 5.\nPor que achar A e B antes? A lei tem 2 números escondidos. Os 2 dias dados dão 2 pistas, uma para cada número. Com os dois descobertos, a lei serve para qualquer dia.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "V",
-        "visitas no dia 5 (o que a questão quer)"
-       ],
-       [
-        "A",
-        "número que multiplica o t × t"
-       ],
-       [
-        "B",
-        "número que multiplica o t"
-       ]
+      "tipo": "equacao",
+      "formula": "V = A × 5 × 5 + B × 5",
+      "leitura": "a lei, com o dia 5 no lugar do t",
+      "letras": [
+       {
+        "letra": "V",
+        "oque": "visitas no dia 5 (o que a questão quer)"
+       },
+       {
+        "letra": "A",
+        "oque": "número que multiplica o t × t"
+       },
+       {
+        "letra": "B",
+        "oque": "número que multiplica o t"
+       }
       ]
      }
     },
@@ -412,27 +406,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o gasto quando x = 4.\nG = A × 4 × 4 + C (a lei, com x = 4)\nPor que achar A e C antes? A lei tem 2 números escondidos. Os 2 pontos dados dão 2 pistas, uma para cada número. Com os dois descobertos, dá para prever x = 4.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o gasto quando x = 4.\nPor que achar A e C antes? A lei tem 2 números escondidos. Os 2 pontos dados dão 2 pistas, uma para cada número. Com os dois descobertos, dá para prever x = 4.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "G",
-        "gasto com x = 4 (o que a questão quer)"
-       ],
-       [
-        "C",
-        "termo fixo da lei"
-       ],
-       [
-        "A",
-        "número que multiplica o x × x"
-       ]
+      "tipo": "equacao",
+      "formula": "G = A × 4 × 4 + C",
+      "leitura": "a lei, com x = 4",
+      "letras": [
+       {
+        "letra": "G",
+        "oque": "gasto com x = 4 (o que a questão quer)"
+       },
+       {
+        "letra": "C",
+        "oque": "termo fixo da lei"
+       },
+       {
+        "letra": "A",
+        "oque": "número que multiplica o x × x"
+       }
       ]
      }
     },

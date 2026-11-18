@@ -66,27 +66,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer a potência do ferro.\nP = U × i (potência = tensão × corrente)\nPor que multiplicar? A tensão é o \"empurrão\" em cada carga e a corrente é quantas cargas passam por segundo.\nAgora é só achar cada letra.",
+          "texto": "A questão quer a potência do ferro.\nPor que multiplicar? A tensão é o \"empurrão\" em cada carga e a corrente é quantas cargas passam por segundo.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "P",
-                "potência (o que a questão quer)"
-              ],
-              [
-                "U",
-                "tensão"
-              ],
-              [
-                "i",
-                "corrente"
-              ]
+            "tipo": "equacao",
+            "formula": "P = U × i",
+            "leitura": "potência = tensão × corrente",
+            "letras": [
+              {
+                "letra": "P",
+                "oque": "potência (o que a questão quer)"
+              },
+              {
+                "letra": "U",
+                "oque": "tensão"
+              },
+              {
+                "letra": "i",
+                "oque": "corrente"
+              }
             ]
           }
         },
@@ -236,27 +233,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer a resistência equivalente.\nR = R1 + R2 (em série, soma)\nPor que somar? Em série a corrente passa por um e depois pelo outro: enfrenta as duas dificuldades.\nAgora é só achar cada letra.",
+          "texto": "A questão quer a resistência equivalente.\nPor que somar? Em série a corrente passa por um e depois pelo outro: enfrenta as duas dificuldades.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "R",
-                "resistência equivalente (o que a questão quer)"
-              ],
-              [
-                "R1",
-                "primeiro resistor"
-              ],
-              [
-                "R2",
-                "segundo resistor"
-              ]
+            "tipo": "equacao",
+            "formula": "R = R1 + R2",
+            "leitura": "em série, soma",
+            "letras": [
+              {
+                "letra": "R",
+                "oque": "resistência equivalente (o que a questão quer)"
+              },
+              {
+                "letra": "R1",
+                "oque": "primeiro resistor"
+              },
+              {
+                "letra": "R2",
+                "oque": "segundo resistor"
+              }
             ]
           }
         },
@@ -398,23 +392,19 @@
         },
         {
           "titulo": "A regra em palavras",
-          "texto": "A questão quer por que a areia esquenta mais rápido.\nR = quem pede menos energia por grau esquenta mais rápido\nPor que \"por grau\"? É o calor específico (c): a energia para subir 1 grau em 1 grama. A água tem c grande; a areia, pequeno.\nAgora é só achar cada pista.",
+          "texto": "A questão quer por que a areia esquenta mais rápido.\nPor que \"por grau\"? É o calor específico (c): a energia para subir 1 grau em 1 grama. A água tem c grande; a areia, pequeno.\nAgora é só achar cada pista.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "R",
-                "o motivo (o que a questão quer)"
-              ],
-              [
-                "P",
-                "o que muda entre areia e água"
-              ]
+            "tipo": "equacao",
+            "formula": "R = quem pede menos energia por grau esquenta mais rápido",
+            "letras": [
+              {
+                "letra": "R",
+                "oque": "o motivo (o que a questão quer)"
+              },
+              {
+                "letra": "P",
+                "oque": "o que muda entre areia e água"
+              }
             ]
           }
         },
@@ -551,27 +541,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer a velocidade da onda.\nv = λ × f (velocidade = comprimento × frequência)\nPor que multiplicar? Passam 5 ondas por segundo e cada uma tem 2 m: a onda anda 5 × 2 metros a cada segundo.\nAgora é só achar cada letra.",
+          "texto": "A questão quer a velocidade da onda.\nPor que multiplicar? Passam 5 ondas por segundo e cada uma tem 2 m: a onda anda 5 × 2 metros a cada segundo.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "v",
-                "velocidade (o que a questão quer)"
-              ],
-              [
-                "λ",
-                "comprimento de onda"
-              ],
-              [
-                "f",
-                "frequência"
-              ]
+            "tipo": "equacao",
+            "formula": "v = λ × f",
+            "leitura": "velocidade = comprimento × frequência",
+            "letras": [
+              {
+                "letra": "v",
+                "oque": "velocidade (o que a questão quer)"
+              },
+              {
+                "letra": "λ",
+                "oque": "comprimento de onda"
+              },
+              {
+                "letra": "f",
+                "oque": "frequência"
+              }
             ]
           }
         },
@@ -716,23 +703,19 @@
         },
         {
           "titulo": "A regra em palavras",
-          "texto": "A questão quer por que a camiseta parece vermelha.\nR = a cor que chega ao olho é a que o objeto devolve\nPor que a que devolve? O olho só vê a luz que vem do objeto. As cores que ele absorve não chegam.\nAgora é só achar cada pista.",
+          "texto": "A questão quer por que a camiseta parece vermelha.\nPor que a que devolve? O olho só vê a luz que vem do objeto. As cores que ele absorve não chegam.\nAgora é só achar cada pista.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "R",
-                "o motivo (o que a questão quer)"
-              ],
-              [
-                "P",
-                "que luz sai da camiseta"
-              ]
+            "tipo": "equacao",
+            "formula": "R = a cor que chega ao olho é a que o objeto devolve",
+            "letras": [
+              {
+                "letra": "R",
+                "oque": "o motivo (o que a questão quer)"
+              },
+              {
+                "letra": "P",
+                "oque": "que luz sai da camiseta"
+              }
             ]
           }
         },
@@ -869,27 +852,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer o peso, em newtons.\nP = m × g (peso = massa × gravidade)\nPor que multiplicar? Cada quilo é puxado pela Terra com 10 N. Com 60 quilos, são 60 vezes 10.\nAgora é só achar cada letra.",
+          "texto": "A questão quer o peso, em newtons.\nPor que multiplicar? Cada quilo é puxado pela Terra com 10 N. Com 60 quilos, são 60 vezes 10.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "P",
-                "peso (o que a questão quer)"
-              ],
-              [
-                "m",
-                "massa"
-              ],
-              [
-                "g",
-                "gravidade"
-              ]
+            "tipo": "equacao",
+            "formula": "P = m × g",
+            "leitura": "peso = massa × gravidade",
+            "letras": [
+              {
+                "letra": "P",
+                "oque": "peso (o que a questão quer)"
+              },
+              {
+                "letra": "m",
+                "oque": "massa"
+              },
+              {
+                "letra": "g",
+                "oque": "gravidade"
+              }
             ]
           }
         },

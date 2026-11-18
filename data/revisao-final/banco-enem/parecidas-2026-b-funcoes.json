@@ -68,23 +68,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a altura máxima do foguete.\nH = −2 × T × T + 12 × T (altura máxima = a fórmula de h com o T do ponto mais alto)\nPor que usar o T do ponto mais alto? A fórmula dá a altura em cada segundo. A maior altura acontece num segundo só: o do vértice da parábola.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a altura máxima do foguete.\nPor que usar o T do ponto mais alto? A fórmula dá a altura em cada segundo. A maior altura acontece num segundo só: o do vértice da parábola.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "H",
-        "altura máxima (o que a questão quer)"
-       ],
-       [
-        "T",
-        "segundo do ponto mais alto"
-       ]
+      "tipo": "equacao",
+      "formula": "H = −2 × T × T + 12 × T",
+      "leitura": "altura máxima = a fórmula de h com o T do ponto mais alto",
+      "letras": [
+       {
+        "letra": "H",
+        "oque": "altura máxima (o que a questão quer)"
+       },
+       {
+        "letra": "T",
+        "oque": "segundo do ponto mais alto"
+       }
       ]
      }
     },

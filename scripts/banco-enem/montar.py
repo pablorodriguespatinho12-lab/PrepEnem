@@ -77,6 +77,15 @@ def tabela(titulo, cabecalho, linhas):
     return {'tipo': 'tabela', 'titulo': titulo, 'cabecalho': cabecalho, 'linhas': [list(l) for l in linhas]}
 
 
+def equacao_no_quadro(equacao, letras):
+    """'v = d ÷ t (velocidade = distância ÷ tempo)' vira a fórmula grande e a leitura embaixo."""
+    # A leitura é o ÚLTIMO parêntese, e só se tiver palavra: '(20 − 5) ÷ 3' é conta, não leitura.
+    achado = re.match(r'^(.*\S)\s+\(([^()]*[A-Za-zÀ-ÿ]{3}[^()]*)\)$', equacao.strip())
+    formula, leitura = (achado.group(1), achado.group(2)) if achado else (equacao.strip(), '')
+    return {'tipo': 'equacao', 'formula': formula.strip(), **({'leitura': leitura.strip()} if leitura else {}),
+            'letras': [{'letra': l, 'oque': o} for l, o in letras]}
+
+
 def passos_aula(f):
     """Molde da "Aula do Robô Aspirador" (artefato aprovado em 17/11/2026: "copia
     exatamente essa explicação"): o que eu tenho → equação em letras → uma tela por
@@ -94,8 +103,10 @@ def passos_aula(f):
         {'titulo': 'O que eu tenho', 'texto': a.get('tenho_texto', 'Primeiro, tire os números do enunciado.'),
          'visual': tabela('O que eu tenho', ['Informação', 'Valor'], a['tenho'])},
         # Sem conta (Português): 'A regra em palavras' e as pistas no lugar das letras.
-        {'titulo': a.get('titulo_regra', 'A equação em letras'), 'texto': f"{a['quer']}\n{a['equacao']}\n{a['porque']}\n{a.get('agora', 'Agora é só achar cada letra.')}",
-         'visual': tabela('As letras', ['Letra', 'O que é'], a['letras'])},
+        # A equação vai num quadro branco, cada letra numa cor, com o que ela é embaixo
+        # (Pablo, 18/11/2026: "em quadro, não só texto"); o texto fica com o porquê.
+        {'titulo': a.get('titulo_regra', 'A equação em letras'), 'texto': f"{a['quer']}\n{a['porque']}\n{a.get('agora', 'Agora é só achar cada letra.')}",
+         'visual': equacao_no_quadro(a['equacao'], a['letras'])},
     ]
     for t in a['telas']:
         passos.append({'titulo': t['titulo'], 'texto': t['texto'], **({'visual': t['visual']} if t.get('visual') else {})})

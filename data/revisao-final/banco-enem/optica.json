@@ -59,27 +59,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer a distância do cliente até a imagem da porta.\nD = c + p (cliente até o espelho + espelho até a imagem da porta)\nPor que somar? O cliente está na frente do espelho; a imagem da porta, atrás. O caminho passa pelo espelho.\nAgora é só achar cada letra.",
+          "texto": "A questão quer a distância do cliente até a imagem da porta.\nPor que somar? O cliente está na frente do espelho; a imagem da porta, atrás. O caminho passa pelo espelho.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "D",
-                "distância até a imagem da porta (o que a questão quer)"
-              ],
-              [
-                "c",
-                "cliente até o espelho"
-              ],
-              [
-                "p",
-                "espelho até a imagem da porta"
-              ]
+            "tipo": "equacao",
+            "formula": "D = c + p",
+            "leitura": "cliente até o espelho + espelho até a imagem da porta",
+            "letras": [
+              {
+                "letra": "D",
+                "oque": "distância até a imagem da porta (o que a questão quer)"
+              },
+              {
+                "letra": "c",
+                "oque": "cliente até o espelho"
+              },
+              {
+                "letra": "p",
+                "oque": "espelho até a imagem da porta"
+              }
             ]
           }
         },
@@ -218,23 +215,20 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer o ângulo entre os dois raios.\nA = 2 × i (ângulo entre os raios = 2 vezes o ângulo com a normal)\nPor que 2 vezes? O raio chega com i de um lado da normal e sai com o mesmo i do outro.\nAgora é só achar cada letra.",
+          "texto": "A questão quer o ângulo entre os dois raios.\nPor que 2 vezes? O raio chega com i de um lado da normal e sai com o mesmo i do outro.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "A",
-                "ângulo entre os raios (o que a questão quer)"
-              ],
-              [
-                "i",
-                "ângulo com a normal"
-              ]
+            "tipo": "equacao",
+            "formula": "A = 2 × i",
+            "leitura": "ângulo entre os raios = 2 vezes o ângulo com a normal",
+            "letras": [
+              {
+                "letra": "A",
+                "oque": "ângulo entre os raios (o que a questão quer)"
+              },
+              {
+                "letra": "i",
+                "oque": "ângulo com a normal"
+              }
             ]
           }
         },

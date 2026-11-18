@@ -50,7 +50,7 @@ const ler = (nivel: string, area: string): Questao[] | null => {
    essa explicação"): o que eu tenho → equação em letras → uma tela por letra →
    volta na equação → receita. Não tem quadro nem "A resposta"; cada letra da
    equação, menos a que a questão pede, tem a sua tela "Achando <letra>". */
-type PassoBruto = { titulo: string; visual?: { tipo?: string; linhas?: string[][] } };
+type PassoBruto = { titulo: string; visual?: { tipo?: string; linhas?: string[][]; letras?: { letra: string }[] } };
 const passosDe = (q: Questao) => (q.explicacao.passos as PassoBruto[]) ?? [];
 const TITULO_FORMULAS = 'As fórmulas desta questão';
 const ehMoldeRobo = (q: Questao) => ['O que eu tenho', TITULO_FORMULAS, 'A regra desta questão'].includes(passosDe(q)[0]?.titulo);
@@ -62,7 +62,8 @@ function problemasDoMolde(q: Questao): string[] {
   // Questão sem conta (Biologia, parte de Química): "A regra em palavras" no lugar da equação.
   const regra = passos.find((p) => p.titulo === 'A equação em letras' || p.titulo === 'A regra em palavras');
   if (!regra) erros.push('sem a tela "A equação em letras" (ou "A regra em palavras")');
-  const letras = regra?.visual?.linhas?.map((l) => l[0]) ?? [];
+  // A equação no quadro (18/11/2026) traz as letras; a tabela antiga, nas linhas.
+  const letras = regra?.visual?.letras?.map((l) => l.letra) ?? regra?.visual?.linhas?.map((l) => l[0]) ?? [];
   if (letras.length < 2) erros.push('equação sem a tabela das letras');
   for (const l of letras.slice(1)) {
     if (!titulos.some((t) => t.startsWith(`Achando ${l} `) || t.startsWith(`Achando ${l}:`))) erros.push(`a letra ${l} não tem tela "Achando ${l}"`);
@@ -251,6 +252,12 @@ describe('fórmulas da aula cabem sem corte', () => {
       if (Array.isArray(o)) { o.forEach((x) => varre(x, onde)); return; }
       if (!o || typeof o !== 'object') return;
       const r = o as Record<string, unknown>;
+      // Equação no quadro: a leitura sai do último parêntese; cortar no errado deixava
+      // "x =" sozinho e "20 − 5) ÷ 3" embaixo (18/11/2026).
+      if (r.tipo === 'equacao') {
+        const f = String(r.formula);
+        if ((f.match(/\(/g) ?? []).length !== (f.match(/\)/g) ?? []).length) longos.push(`${onde}: parêntese quebrado em "${f}"`);
+      }
       if (r.tipo === 'tabela') {
         for (const linha of (r.linhas as unknown[][]) ?? []) {
           for (const c of linha) if (typeof c === 'string' && c.length > 60) longos.push(`${onde}: célula "${c}"`);

@@ -226,27 +226,24 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer o tempo de recarga.\nt = E ÷ P (tempo = energia gasta ÷ potência do carregador)\nPor que dividir? O carregador entrega P de energia a cada hora. O tempo é quantas horas cabem na energia gasta.\nAgora é só achar cada letra.",
+          "texto": "A questão quer o tempo de recarga.\nPor que dividir? O carregador entrega P de energia a cada hora. O tempo é quantas horas cabem na energia gasta.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "t",
-                "tempo em horas (o que a questão quer)"
-              ],
-              [
-                "E",
-                "energia gasta"
-              ],
-              [
-                "P",
-                "potência do carregador"
-              ]
+            "tipo": "equacao",
+            "formula": "t = E ÷ P",
+            "leitura": "tempo = energia gasta ÷ potência do carregador",
+            "letras": [
+              {
+                "letra": "t",
+                "oque": "tempo em horas (o que a questão quer)"
+              },
+              {
+                "letra": "E",
+                "oque": "energia gasta"
+              },
+              {
+                "letra": "P",
+                "oque": "potência do carregador"
+              }
             ]
           }
         },
@@ -1718,23 +1715,20 @@
         },
         {
           "titulo": "A equação em letras",
-          "texto": "A questão quer o dispositivo certo.\nU = 3 × e (tensão da bateria = 3 × tensão de uma pilha)\nPor que 3 vezes? Pilhas em série somam as tensões, como resistores em série somam as resistências.\nAgora é só achar cada letra.",
+          "texto": "A questão quer o dispositivo certo.\nPor que 3 vezes? Pilhas em série somam as tensões, como resistores em série somam as resistências.\nAgora é só achar cada letra.",
           "visual": {
-            "tipo": "tabela",
-            "titulo": "As letras",
-            "cabecalho": [
-              "Letra",
-              "O que é"
-            ],
-            "linhas": [
-              [
-                "U",
-                "tensão da bateria (o que a questão quer)"
-              ],
-              [
-                "e",
-                "tensão de uma pilha"
-              ]
+            "tipo": "equacao",
+            "formula": "U = 3 × e",
+            "leitura": "tensão da bateria = 3 × tensão de uma pilha",
+            "letras": [
+              {
+                "letra": "U",
+                "oque": "tensão da bateria (o que a questão quer)"
+              },
+              {
+                "letra": "e",
+                "oque": "tensão de uma pilha"
+              }
             ]
           }
         },

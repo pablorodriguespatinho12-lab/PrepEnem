@@ -68,27 +68,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a área da faixa que cobre só a lateral.\nA = C × 3 (área = volta da coluna × altura)\nPor que multiplicar? Se você abrir a faixa, ela vira um retângulo. A área do retângulo é base × altura. A base é a volta da coluna, e a altura é 3 m.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a área da faixa que cobre só a lateral.\nPor que multiplicar? Se você abrir a faixa, ela vira um retângulo. A área do retângulo é base × altura. A base é a volta da coluna, e a altura é 3 m.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "A",
-        "área da faixa (o que a questão quer)"
-       ],
-       [
-        "C",
-        "volta da coluna"
-       ],
-       [
-        "R",
-        "raio da coluna"
-       ]
+      "tipo": "equacao",
+      "formula": "A = C × 3",
+      "leitura": "área = volta da coluna × altura",
+      "letras": [
+       {
+        "letra": "A",
+        "oque": "área da faixa (o que a questão quer)"
+       },
+       {
+        "letra": "C",
+        "oque": "volta da coluna"
+       },
+       {
+        "letra": "R",
+        "oque": "raio da coluna"
+       }
       ]
      }
     },
@@ -240,27 +237,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer quantos litros de tinta pintam só a parede lateral.\nN = A ÷ 6 (litros = área da parede ÷ área que 1 L cobre)\nPor que dividir? Cada litro cobre 6 m². Para 18 m² você precisa de 18 ÷ 6 = 3 litros.\nAgora é só achar cada letra.",
+     "texto": "A questão quer quantos litros de tinta pintam só a parede lateral.\nPor que dividir? Cada litro cobre 6 m². Para 18 m² você precisa de 18 ÷ 6 = 3 litros.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "N",
-        "litros de tinta (o que a questão quer)"
-       ],
-       [
-        "A",
-        "área da parede"
-       ],
-       [
-        "C",
-        "volta do tanque"
-       ]
+      "tipo": "equacao",
+      "formula": "N = A ÷ 6",
+      "leitura": "litros = área da parede ÷ área que 1 L cobre",
+      "letras": [
+       {
+        "letra": "N",
+        "oque": "litros de tinta (o que a questão quer)"
+       },
+       {
+        "letra": "A",
+        "oque": "área da parede"
+       },
+       {
+        "letra": "C",
+        "oque": "volta do tanque"
+       }
       ]
      }
     },

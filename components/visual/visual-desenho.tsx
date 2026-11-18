@@ -11,6 +11,7 @@ import { marcas } from '@/lib/visual/geometria';
 import { renderizarTextoMatematico } from '@/lib/visual/texto-matematico';
 import { Quadro } from './quadro';
 import { QuadroEscola } from './quadro-escola';
+import { EquacaoQuadro } from './equacao-quadro';
 import { Molecula } from './molecula';
 import { Palavra } from './palavra';
 import { Legenda } from './legenda';
@@ -159,6 +160,7 @@ export function VisualDesenho({ visual, semMoldura = false }: { visual: Visual; 
       {visual.titulo && !INTERATIVOS.includes(visual.tipo) && <figcaption className="type-meta font-medium text-muted-foreground mb-2">{visual.titulo}</figcaption>}
       {visual.tipo === 'legenda' && <Legenda v={visual} />}
       {visual.tipo === 'quadro' && <QuadroEscola v={visual} />}
+      {visual.tipo === 'equacao' && <EquacaoQuadro v={visual} />}
       {visual.tipo === 'grafico' && <GraficoDesenhando v={visual} />}
       {visual.tipo === 'reta' && <Reta v={visual} />}
       {visual.tipo === 'transformacao' && <Transformacao v={visual} />}

@@ -73,27 +73,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o lucro na promoção, em % do custo.\nL = (PP − 240) ÷ 240 × 100 (lucro em % = o que sobrou em reais ÷ custo × 100)\nPor que dividir pelo custo? A questão pede o lucro em relação ao custo. Se você gastou 200 e ganhou 50, o lucro é 50 ÷ 200 = 25% do custo.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o lucro na promoção, em % do custo.\nPor que dividir pelo custo? A questão pede o lucro em relação ao custo. Se você gastou 200 e ganhou 50, o lucro é 50 ÷ 200 = 25% do custo.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "L",
-        "lucro na promoção, em % do custo (o que a questão quer)"
-       ],
-       [
-        "PV",
-        "preço de venda, sem promoção"
-       ],
-       [
-        "PP",
-        "preço na promoção"
-       ]
+      "tipo": "equacao",
+      "formula": "L = (PP − 240) ÷ 240 × 100",
+      "leitura": "lucro em % = o que sobrou em reais ÷ custo × 100",
+      "letras": [
+       {
+        "letra": "L",
+        "oque": "lucro na promoção, em % do custo (o que a questão quer)"
+       },
+       {
+        "letra": "PV",
+        "oque": "preço de venda, sem promoção"
+       },
+       {
+        "letra": "PP",
+        "oque": "preço na promoção"
+       }
       ]
      }
     },
@@ -241,27 +238,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a diferença entre o maior e o menor bônus.\nD = maior − menor = 6 × U − 2 × U (o maior leva 6 partes e o menor 2, de U reais cada)\nPor que inverso? Quem faltou 1 vez leva 1 parte; quem faltou 2 vezes, metade disso (1/2); quem faltou 3, um terço (1/3). Fração é ruim para dividir dinheiro, então a próxima tela troca as frações por números inteiros.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a diferença entre o maior e o menor bônus.\nPor que inverso? Quem faltou 1 vez leva 1 parte; quem faltou 2 vezes, metade disso (1/2); quem faltou 3, um terço (1/3). Fração é ruim para dividir dinheiro, então a próxima tela troca as frações por números inteiros.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "D",
-        "diferença entre maior e menor bônus (o que a questão quer)"
-       ],
-       [
-        "S",
-        "soma das partes"
-       ],
-       [
-        "U",
-        "valor de 1 parte"
-       ]
+      "tipo": "equacao",
+      "formula": "D = maior − menor = 6 × U − 2 × U",
+      "leitura": "o maior leva 6 partes e o menor 2, de U reais cada",
+      "letras": [
+       {
+        "letra": "D",
+        "oque": "quantos reais o maior bônus tem a mais que o menor (o que a questão quer)"
+       },
+       {
+        "letra": "S",
+        "oque": "em quantos pedaços iguais o bônus é cortado, somando os pedaços dos 3"
+       },
+       {
+        "letra": "U",
+        "oque": "quantos reais vale cada pedaço (todo pedaço vale igual)"
+       }
       ]
      }
     },
@@ -409,27 +403,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a área real do lago, em km².\nA = 12 × K (área real = área do mapa × km² que vale 1 cm²)\nPor que 12 × K? Cada 1 cm² do mapa é um pedaço igual do chão. Se 1 cm² vale 0,25 km², 12 cm² valem 12 vezes isso.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a área real do lago, em km².\nPor que 12 × K? Cada 1 cm² do mapa é um pedaço igual do chão. Se 1 cm² vale 0,25 km², 12 cm² valem 12 vezes isso.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "A",
-        "área real do lago (o que a questão quer)"
-       ],
-       [
-        "L",
-        "km do chão que 1 cm do mapa mostra"
-       ],
-       [
-        "K",
-        "km² do chão que 1 cm² do mapa mostra"
-       ]
+      "tipo": "equacao",
+      "formula": "A = 12 × K",
+      "leitura": "área real = área do mapa × km² que vale 1 cm²",
+      "letras": [
+       {
+        "letra": "A",
+        "oque": "área real do lago (o que a questão quer)"
+       },
+       {
+        "letra": "L",
+        "oque": "km do chão que 1 cm do mapa mostra"
+       },
+       {
+        "letra": "K",
+        "oque": "km² do chão que 1 cm² do mapa mostra"
+       }
       ]
      }
     },
@@ -581,35 +572,32 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o tempo para encher a piscina com tudo aberto.\nT = 1 ÷ R, com R = PA + PB − PR (tempo = 1 piscina ÷ parte que enche por hora)\nPor que 1 ÷ R? Se a piscina enche 1/3 por hora, em 3 horas enche 3 × 1/3 = 1 piscina inteira.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o tempo para encher a piscina com tudo aberto.\nPor que 1 ÷ R? Se a piscina enche 1/3 por hora, em 3 horas enche 3 × 1/3 = 1 piscina inteira.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "T",
-        "tempo para encher (o que a questão quer)"
-       ],
-       [
-        "R",
-        "parte que enche por hora, tudo aberto"
-       ],
-       [
-        "PA",
-        "parte por hora da torneira A"
-       ],
-       [
-        "PB",
-        "parte por hora da torneira B"
-       ],
-       [
-        "PR",
-        "parte por hora que o ralo tira"
-       ]
+      "tipo": "equacao",
+      "formula": "T = 1 ÷ R, com R = PA + PB − PR",
+      "leitura": "tempo = 1 piscina ÷ parte que enche por hora",
+      "letras": [
+       {
+        "letra": "T",
+        "oque": "tempo para encher (o que a questão quer)"
+       },
+       {
+        "letra": "R",
+        "oque": "parte que enche por hora, tudo aberto"
+       },
+       {
+        "letra": "PA",
+        "oque": "parte por hora da torneira A"
+       },
+       {
+        "letra": "PB",
+        "oque": "parte por hora da torneira B"
+       },
+       {
+        "letra": "PR",
+        "oque": "parte por hora que o ralo tira"
+       }
       ]
      }
     },
@@ -786,31 +774,28 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o maior valor possível para o último número.\nE = S − P − D (último = soma de todos − os 3 primeiros − o 4º)\nPor que tirar? Todos somam S. O que já está fixo sai da soma, e o que sobra é o último. Para o último ser o maior, o 4º tem que ser o menor possível.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o maior valor possível para o último número.\nPor que tirar? Todos somam S. O que já está fixo sai da soma, e o que sobra é o último. Para o último ser o maior, o 4º tem que ser o menor possível.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "E",
-        "último número (o que a questão quer)"
-       ],
-       [
-        "S",
-        "soma dos 5 números"
-       ],
-       [
-        "P",
-        "soma dos 3 primeiros"
-       ],
-       [
-        "D",
-        "menor 4º número possível"
-       ]
+      "tipo": "equacao",
+      "formula": "E = S − P − D",
+      "leitura": "último = soma de todos − os 3 primeiros − o 4º",
+      "letras": [
+       {
+        "letra": "E",
+        "oque": "último número (o que a questão quer)"
+       },
+       {
+        "letra": "S",
+        "oque": "soma dos 5 números"
+       },
+       {
+        "letra": "P",
+        "oque": "soma dos 3 primeiros"
+       },
+       {
+        "letra": "D",
+        "oque": "menor 4º número possível"
+       }
       ]
      }
     },
@@ -971,27 +956,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o coeficiente de variação do novo conjunto.\nC = S ÷ M × 100 (coeficiente em % = novo desvio ÷ nova média × 100)\nPor que dividir o desvio pela média? Mostra o tamanho do desvio em relação à média. Desvio 6 com média 25 espalha menos que desvio 6 com média 10.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o coeficiente de variação do novo conjunto.\nPor que dividir o desvio pela média? Mostra o tamanho do desvio em relação à média. Desvio 6 com média 25 espalha menos que desvio 6 com média 10.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "C",
-        "coeficiente de variação em % (o que a questão quer)"
-       ],
-       [
-        "M",
-        "nova média"
-       ],
-       [
-        "S",
-        "novo desvio-padrão"
-       ]
+      "tipo": "equacao",
+      "formula": "C = S ÷ M × 100",
+      "leitura": "coeficiente em % = novo desvio ÷ nova média × 100",
+      "letras": [
+       {
+        "letra": "C",
+        "oque": "coeficiente de variação em % (o que a questão quer)"
+       },
+       {
+        "letra": "M",
+        "oque": "nova média"
+       },
+       {
+        "letra": "S",
+        "oque": "novo desvio-padrão"
+       }
       ]
      }
     },
@@ -1139,27 +1121,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a maior área possível do curral.\nA = X × Y (área = lado que sai do muro × lado paralelo ao muro)\nPor que multiplicar? A área de um retângulo é base × altura. O que muda é o jeito de repartir os 100 m de tela entre X e Y.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a maior área possível do curral.\nPor que multiplicar? A área de um retângulo é base × altura. O que muda é o jeito de repartir os 100 m de tela entre X e Y.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "A",
-        "área do curral (o que a questão quer)"
-       ],
-       [
-        "X",
-        "cada lado que sai do muro (são 2)"
-       ],
-       [
-        "Y",
-        "lado paralelo ao muro"
-       ]
+      "tipo": "equacao",
+      "formula": "A = X × Y",
+      "leitura": "área = lado que sai do muro × lado paralelo ao muro",
+      "letras": [
+       {
+        "letra": "A",
+        "oque": "área do curral (o que a questão quer)"
+       },
+       {
+        "letra": "X",
+        "oque": "cada lado que sai do muro (são 2)"
+       },
+       {
+        "letra": "Y",
+        "oque": "lado paralelo ao muro"
+       }
       ]
      }
     },
@@ -1311,27 +1290,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o tempo mínimo para passar de 400 000 bactérias.\nT = 20 × N (tempo = 20 minutos × número de dobras)\nPor que 20 × N? Cada dobra leva 20 minutos. Com 3 dobras são 3 × 20 = 60 minutos.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o tempo mínimo para passar de 400 000 bactérias.\nPor que 20 × N? Cada dobra leva 20 minutos. Com 3 dobras são 3 × 20 = 60 minutos.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "T",
-        "tempo em minutos (o que a questão quer)"
-       ],
-       [
-        "R",
-        "quantas vezes o número precisa crescer"
-       ],
-       [
-        "N",
-        "menor número inteiro de dobras"
-       ]
+      "tipo": "equacao",
+      "formula": "T = 20 × N",
+      "leitura": "tempo = 20 minutos × número de dobras",
+      "letras": [
+       {
+        "letra": "T",
+        "oque": "tempo em minutos (o que a questão quer)"
+       },
+       {
+        "letra": "R",
+        "oque": "quantas vezes o número precisa crescer"
+       },
+       {
+        "letra": "N",
+        "oque": "menor número inteiro de dobras"
+       }
       ]
      }
     },
@@ -1479,27 +1455,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o raio do maior círculo que cabe no terreno.\nR = S ÷ P (raio = área do triângulo ÷ semiperímetro)\nPor que dividir? Ligue o centro às pontas: sobram 3 triângulos, todos de altura R, com bases 13, 14 e 15. A área vale R × 13 ÷ 2 + R × 14 ÷ 2 + R × 15 ÷ 2 = R × 21.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o raio do maior círculo que cabe no terreno.\nPor que dividir? Ligue o centro às pontas: sobram 3 triângulos, todos de altura R, com bases 13, 14 e 15. A área vale R × 13 ÷ 2 + R × 14 ÷ 2 + R × 15 ÷ 2 = R × 21.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "R",
-        "raio do canteiro (o que a questão quer)"
-       ],
-       [
-        "P",
-        "semiperímetro (metade da soma dos lados)"
-       ],
-       [
-        "S",
-        "área do terreno"
-       ]
+      "tipo": "equacao",
+      "formula": "R = S ÷ P",
+      "leitura": "raio = área do triângulo ÷ semiperímetro",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "raio do canteiro (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "semiperímetro (metade da soma dos lados)"
+       },
+       {
+        "letra": "S",
+        "oque": "área do terreno"
+       }
       ]
      }
     },
@@ -1647,23 +1620,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a distância de A até P.\nX × X = Q × Q + 6 × 6 (Pitágoras no triângulo P-D-M: a hipotenusa PM vale X)\nPor que PM vale X? A dobra faz o vértice A cair em M. O pedaço PA vira PM, com o mesmo tamanho. Então PM = PA = X.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a distância de A até P.\nPor que PM vale X? A dobra faz o vértice A cair em M. O pedaço PA vira PM, com o mesmo tamanho. Então PM = PA = X.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "X",
-        "distância de A até P (o que a questão quer)"
-       ],
-       [
-        "Q",
-        "distância de P até D"
-       ]
+      "tipo": "equacao",
+      "formula": "X × X = Q × Q + 6 × 6",
+      "leitura": "Pitágoras no triângulo P-D-M: a hipotenusa PM vale X",
+      "letras": [
+       {
+        "letra": "X",
+        "oque": "distância de A até P (o que a questão quer)"
+       },
+       {
+        "letra": "Q",
+        "oque": "distância de P até D"
+       }
       ]
      }
     },
@@ -1815,27 +1785,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o novo nível da água.\nN = 10 + V ÷ B (nível novo = nível de antes + volume das bolinhas ÷ área da base)\nPor que dividir pela base? A água que as bolinhas empurram vira uma camada fina sobre a base toda. Altura da camada = volume ÷ área da base.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o novo nível da água.\nPor que dividir pela base? A água que as bolinhas empurram vira uma camada fina sobre a base toda. Altura da camada = volume ÷ área da base.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "N",
-        "novo nível da água (o que a questão quer)"
-       ],
-       [
-        "V",
-        "volume das 3 bolinhas"
-       ],
-       [
-        "B",
-        "área da base do recipiente"
-       ]
+      "tipo": "equacao",
+      "formula": "N = 10 + V ÷ B",
+      "leitura": "nível novo = nível de antes + volume das bolinhas ÷ área da base",
+      "letras": [
+       {
+        "letra": "N",
+        "oque": "novo nível da água (o que a questão quer)"
+       },
+       {
+        "letra": "V",
+        "oque": "volume das 3 bolinhas"
+       },
+       {
+        "letra": "B",
+        "oque": "área da base do recipiente"
+       }
       ]
      }
     },
@@ -1988,27 +1955,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o volume do sólido que sobra.\nV = 1 000 − 8 × P (sobra = cubo − 8 cantos cortados)\nPor que tirar? O sólido que sobra é o cubo sem os 8 cantos. Cada canto tirado diminui o volume do cubo.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o volume do sólido que sobra.\nPor que tirar? O sólido que sobra é o cubo sem os 8 cantos. Cada canto tirado diminui o volume do cubo.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "V",
-        "volume que sobra (o que a questão quer)"
-       ],
-       [
-        "B",
-        "área da base de cada canto cortado"
-       ],
-       [
-        "P",
-        "volume de cada canto cortado"
-       ]
+      "tipo": "equacao",
+      "formula": "V = 1 000 − 8 × P",
+      "leitura": "sobra = cubo − 8 cantos cortados",
+      "letras": [
+       {
+        "letra": "V",
+        "oque": "volume que sobra (o que a questão quer)"
+       },
+       {
+        "letra": "B",
+        "oque": "área da base de cada canto cortado"
+       },
+       {
+        "letra": "P",
+        "oque": "volume de cada canto cortado"
+       }
       ]
      }
     },

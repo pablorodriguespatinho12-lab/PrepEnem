@@ -67,27 +67,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer quantas estradas ligam C a D.\n132 = 3 × X × Y × 4 (rotas = estradas de cada trecho multiplicadas)\nPor que multiplicar? Para cada estrada do 1º trecho, você ainda pode pegar qualquer estrada do 2º. Com 2 e depois 3, são 2 × 3 = 6 rotas, não 2 + 3.\nAgora é só achar cada letra.",
+     "texto": "A questão quer quantas estradas ligam C a D.\nPor que multiplicar? Para cada estrada do 1º trecho, você ainda pode pegar qualquer estrada do 2º. Com 2 e depois 3, são 2 × 3 = 6 rotas, não 2 + 3.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "Y",
-        "estradas C → D (o que a questão quer)"
-       ],
-       [
-        "X",
-        "estradas B → C"
-       ],
-       [
-        "P",
-        "X × Y juntos"
-       ]
+      "tipo": "equacao",
+      "formula": "132 = 3 × X × Y × 4",
+      "leitura": "rotas = estradas de cada trecho multiplicadas",
+      "letras": [
+       {
+        "letra": "Y",
+        "oque": "estradas C → D (o que a questão quer)"
+       },
+       {
+        "letra": "X",
+        "oque": "estradas B → C"
+       },
+       {
+        "letra": "P",
+        "oque": "X × Y juntos"
+       }
       ]
      }
     },
@@ -235,27 +232,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a chance de a moeda ficar toda dentro do círculo.\nP = B ÷ T (chance = área onde o centro pode cair ÷ área do círculo todo)\nPor que dividir áreas? O centro cai em qualquer ponto do círculo com a mesma chance. Então a chance é o tamanho da parte boa em relação ao tamanho do todo.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a chance de a moeda ficar toda dentro do círculo.\nPor que dividir áreas? O centro cai em qualquer ponto do círculo com a mesma chance. Então a chance é o tamanho da parte boa em relação ao tamanho do todo.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "P",
-        "chance de ganhar (o que a questão quer)"
-       ],
-       [
-        "B",
-        "área onde o centro pode cair"
-       ],
-       [
-        "T",
-        "área do círculo todo"
-       ]
+      "tipo": "equacao",
+      "formula": "P = B ÷ T",
+      "leitura": "chance = área onde o centro pode cair ÷ área do círculo todo",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "chance de ganhar (o que a questão quer)"
+       },
+       {
+        "letra": "B",
+        "oque": "área onde o centro pode cair"
+       },
+       {
+        "letra": "T",
+        "oque": "área do círculo todo"
+       }
       ]
      }
     },
@@ -403,31 +397,28 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a chance de a ficha tocar a linha, e não a de ficar dentro.\nP = 100% − G (tocar = 100% menos a chance de ficar toda dentro)\nPor que tirar de 100%? Cada jogada ou fica toda dentro ou toca a linha. Não tem terceira opção, então as duas chances somam 100%.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a chance de a ficha tocar a linha, e não a de ficar dentro.\nPor que tirar de 100%? Cada jogada ou fica toda dentro ou toca a linha. Não tem terceira opção, então as duas chances somam 100%.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "P",
-        "chance de tocar a linha (o que a questão quer)"
-       ],
-       [
-        "G",
-        "chance de ficar toda dentro"
-       ],
-       [
-        "B",
-        "área onde o centro pode cair"
-       ],
-       [
-        "T",
-        "área do círculo todo"
-       ]
+      "tipo": "equacao",
+      "formula": "P = 100% − G",
+      "leitura": "tocar = 100% menos a chance de ficar toda dentro",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "chance de tocar a linha (o que a questão quer)"
+       },
+       {
+        "letra": "G",
+        "oque": "chance de ficar toda dentro"
+       },
+       {
+        "letra": "B",
+        "oque": "área onde o centro pode cair"
+       },
+       {
+        "letra": "T",
+        "oque": "área do círculo todo"
+       }
       ]
      }
     },

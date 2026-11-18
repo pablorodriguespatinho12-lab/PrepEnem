@@ -51,23 +51,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o valor de x.\nx = (20 − 5) ÷ 3 (desfazer: tirar 5, depois dividir por 3)\nPor que essa ordem? Na equação, primeiro x foi vezes 3 e depois ganhou 5. Para voltar, desfaz do fim para o começo.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o valor de x.\nPor que essa ordem? Na equação, primeiro x foi vezes 3 e depois ganhou 5. Para voltar, desfaz do fim para o começo.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "x",
-        "o número escondido (o que a questão quer)"
-       ],
-       [
-        "S",
-        "o que sobra depois de tirar o 5"
-       ]
+      "tipo": "equacao",
+      "formula": "x = (20 − 5) ÷ 3",
+      "leitura": "desfazer: tirar 5, depois dividir por 3",
+      "letras": [
+       {
+        "letra": "x",
+        "oque": "o número escondido (o que a questão quer)"
+       },
+       {
+        "letra": "S",
+        "oque": "o que sobra depois de tirar o 5"
+       }
       ]
      }
     },
@@ -194,27 +191,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o preço do suco.\ns = P1 − P2 (o suco = a diferença entre os pedidos)\nPor que a diferença? Os dois pedidos têm o mesmo pastel. O que muda é 1 suco, e é isso que muda o preço.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o preço do suco.\nPor que a diferença? Os dois pedidos têm o mesmo pastel. O que muda é 1 suco, e é isso que muda o preço.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "s",
-        "preço do suco (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "preço do pedido maior"
-       ],
-       [
-        "P2",
-        "preço do pedido menor"
-       ]
+      "tipo": "equacao",
+      "formula": "s = P1 − P2",
+      "leitura": "o suco = a diferença entre os pedidos",
+      "letras": [
+       {
+        "letra": "s",
+        "oque": "preço do suco (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "preço do pedido maior"
+       },
+       {
+        "letra": "P2",
+        "oque": "preço do pedido menor"
+       }
       ]
      }
     },
@@ -349,23 +343,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a idade do filho.\nf = 48 ÷ N (filho = soma ÷ número de partes)\nPor que partes? Se o filho é 1 parte e o pai 3 partes, a soma 48 junta todas as partes.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a idade do filho.\nPor que partes? Se o filho é 1 parte e o pai 3 partes, a soma 48 junta todas as partes.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "f",
-        "idade do filho (o que a questão quer)"
-       ],
-       [
-        "N",
-        "número de partes na soma"
-       ]
+      "tipo": "equacao",
+      "formula": "f = 48 ÷ N",
+      "leitura": "filho = soma ÷ número de partes",
+      "letras": [
+       {
+        "letra": "f",
+        "oque": "idade do filho (o que a questão quer)"
+       },
+       {
+        "letra": "N",
+        "oque": "número de partes na soma"
+       }
       ]
      }
     },
@@ -496,23 +487,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o total de horas.\nh = 1 + A (horas = a primeira + as adicionais)\nPor que 1 + A? A primeira hora tem preço próprio. As outras são contadas à parte.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o total de horas.\nPor que 1 + A? A primeira hora tem preço próprio. As outras são contadas à parte.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "h",
-        "total de horas (o que a questão quer)"
-       ],
-       [
-        "A",
-        "horas adicionais"
-       ]
+      "tipo": "equacao",
+      "formula": "h = 1 + A",
+      "leitura": "horas = a primeira + as adicionais",
+      "letras": [
+       {
+        "letra": "h",
+        "oque": "total de horas (o que a questão quer)"
+       },
+       {
+        "letra": "A",
+        "oque": "horas adicionais"
+       }
       ]
      }
     },
@@ -647,23 +635,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o número de coelhos.\nc = S ÷ 2 (coelhos = pés que sobram ÷ 2 pés a mais de cada coelho)\nPor que supor tudo galinha? Assim cada coelho \"escondido\" aparece como 2 pés a mais na conta.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o número de coelhos.\nPor que supor tudo galinha? Assim cada coelho \"escondido\" aparece como 2 pés a mais na conta.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "c",
-        "coelhos (o que a questão quer)"
-       ],
-       [
-        "S",
-        "pés que sobram"
-       ]
+      "tipo": "equacao",
+      "formula": "c = S ÷ 2",
+      "leitura": "coelhos = pés que sobram ÷ 2 pés a mais de cada coelho",
+      "letras": [
+       {
+        "letra": "c",
+        "oque": "coelhos (o que a questão quer)"
+       },
+       {
+        "letra": "S",
+        "oque": "pés que sobram"
+       }
       ]
      }
     },
@@ -790,27 +775,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer quantos sanduíches.\nS = P × R (sanduíches = pães × recheios)\nPor que vezes? Para CADA pão há 4 recheios. 3 vezes 4 escolhas.\nAgora é só achar cada letra.",
+     "texto": "A questão quer quantos sanduíches.\nPor que vezes? Para CADA pão há 4 recheios. 3 vezes 4 escolhas.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "S",
-        "sanduíches (o que a questão quer)"
-       ],
-       [
-        "P",
-        "pães"
-       ],
-       [
-        "R",
-        "recheios"
-       ]
+      "tipo": "equacao",
+      "formula": "S = P × R",
+      "leitura": "sanduíches = pães × recheios",
+      "letras": [
+       {
+        "letra": "S",
+        "oque": "sanduíches (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "pães"
+       },
+       {
+        "letra": "R",
+        "oque": "recheios"
+       }
       ]
      }
     },
@@ -945,27 +927,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a chance de sair 5.\nP = F ÷ T (chance = casos que eu quero ÷ casos possíveis)\nPor que dividir? A chance é a fatia do total que me serve.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a chance de sair 5.\nPor que dividir? A chance é a fatia do total que me serve.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "P",
-        "a chance (o que a questão quer)"
-       ],
-       [
-        "F",
-        "casos que eu quero"
-       ],
-       [
-        "T",
-        "casos possíveis"
-       ]
+      "tipo": "equacao",
+      "formula": "P = F ÷ T",
+      "leitura": "chance = casos que eu quero ÷ casos possíveis",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "a chance (o que a questão quer)"
+       },
+       {
+        "letra": "F",
+        "oque": "casos que eu quero"
+       },
+       {
+        "letra": "T",
+        "oque": "casos possíveis"
+       }
       ]
      }
     },
@@ -1109,23 +1088,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o comprimento da estrada.\nE = R × 1,25 (estrada = reta real + 25%)\nPor que × 1,25? Aumentar 25% é ficar com 100% + 25% = 125% do valor.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o comprimento da estrada.\nPor que × 1,25? Aumentar 25% é ficar com 100% + 25% = 125% do valor.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "E",
-        "estrada (o que a questão quer)"
-       ],
-       [
-        "R",
-        "linha reta real"
-       ]
+      "tipo": "equacao",
+      "formula": "E = R × 1,25",
+      "leitura": "estrada = reta real + 25%",
+      "letras": [
+       {
+        "letra": "E",
+        "oque": "estrada (o que a questão quer)"
+       },
+       {
+        "letra": "R",
+        "oque": "linha reta real"
+       }
       ]
      }
     },
@@ -1261,23 +1237,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer os litros por dia.\nD = L ÷ 30 (por dia = litros economizados no mês ÷ 30)\nPor que dividir por 30? A economia é do mês inteiro. Por dia é a fatia de cada um dos 30 dias.\nAgora é só achar cada letra.",
+     "texto": "A questão quer os litros por dia.\nPor que dividir por 30? A economia é do mês inteiro. Por dia é a fatia de cada um dos 30 dias.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "D",
-        "litros por dia (o que a questão quer)"
-       ],
-       [
-        "L",
-        "litros economizados no mês"
-       ]
+      "tipo": "equacao",
+      "formula": "D = L ÷ 30",
+      "leitura": "por dia = litros economizados no mês ÷ 30",
+      "letras": [
+       {
+        "letra": "D",
+        "oque": "litros por dia (o que a questão quer)"
+       },
+       {
+        "letra": "L",
+        "oque": "litros economizados no mês"
+       }
       ]
      }
     },
@@ -1409,23 +1382,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a nova média.\nN = M × 1,1 (nova média = média antiga + 10%)\nPor que aplicar na média? Se cada nota cresce 10%, a soma cresce 10% e a média também.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a nova média.\nPor que aplicar na média? Se cada nota cresce 10%, a soma cresce 10% e a média também.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "N",
-        "nova média (o que a questão quer)"
-       ],
-       [
-        "M",
-        "média antiga"
-       ]
+      "tipo": "equacao",
+      "formula": "N = M × 1,1",
+      "leitura": "nova média = média antiga + 10%",
+      "letras": [
+       {
+        "letra": "N",
+        "oque": "nova média (o que a questão quer)"
+       },
+       {
+        "letra": "M",
+        "oque": "média antiga"
+       }
       ]
      }
     },
@@ -1557,27 +1527,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o consumo médio real.\nC = K ÷ L (consumo = km totais ÷ litros totais)\nPor que totais? O dia 2 gastou o dobro de combustível. A média simples trata os dois dias como iguais, e eles não são.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o consumo médio real.\nPor que totais? O dia 2 gastou o dobro de combustível. A média simples trata os dois dias como iguais, e eles não são.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "C",
-        "consumo médio (o que a questão quer)"
-       ],
-       [
-        "K",
-        "km totais"
-       ],
-       [
-        "L",
-        "litros totais"
-       ]
+      "tipo": "equacao",
+      "formula": "C = K ÷ L",
+      "leitura": "consumo = km totais ÷ litros totais",
+      "letras": [
+       {
+        "letra": "C",
+        "oque": "consumo médio (o que a questão quer)"
+       },
+       {
+        "letra": "K",
+        "oque": "km totais"
+       },
+       {
+        "letra": "L",
+        "oque": "litros totais"
+       }
       ]
      }
     },
@@ -1717,23 +1684,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o preço antes do desconto.\nP = 96 ÷ F (preço = o que pagou ÷ fração que pagou)\nPor que dividir? Ela pagou uma fração do preço: F × P = 96. Para achar P, desfaz o vezes.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o preço antes do desconto.\nPor que dividir? Ela pagou uma fração do preço: F × P = 96. Para achar P, desfaz o vezes.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "P",
-        "preço original (o que a questão quer)"
-       ],
-       [
-        "F",
-        "fração do preço que ela pagou"
-       ]
+      "tipo": "equacao",
+      "formula": "P = 96 ÷ F",
+      "leitura": "preço = o que pagou ÷ fração que pagou",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "preço original (o que a questão quer)"
+       },
+       {
+        "letra": "F",
+        "oque": "fração do preço que ela pagou"
+       }
       ]
      }
     },
@@ -1869,23 +1833,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a 3ª nota.\n(5 + 6 + 2x) ÷ 4 = 7 (média com peso: a 3ª conta 2 vezes; divide pela soma dos pesos)\nPor que dividir por 4? Os pesos são 1 + 1 + 2 = 4. A nota de peso 2 entra duas vezes na soma.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a 3ª nota.\nPor que dividir por 4? Os pesos são 1 + 1 + 2 = 4. A nota de peso 2 entra duas vezes na soma.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "x",
-        "3ª nota (o que a questão quer)"
-       ],
-       [
-        "S",
-        "quanto a soma com pesos precisa dar"
-       ]
+      "tipo": "equacao",
+      "formula": "(5 + 6 + 2x) ÷ 4 = 7",
+      "leitura": "média com peso: a 3ª conta 2 vezes; divide pela soma dos pesos",
+      "letras": [
+       {
+        "letra": "x",
+        "oque": "3ª nota (o que a questão quer)"
+       },
+       {
+        "letra": "S",
+        "oque": "quanto a soma com pesos precisa dar"
+       }
       ]
      }
     },
@@ -2021,23 +1982,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer as vendas V.\nV = C ÷ 0,04 (vendas = comissão necessária ÷ 4%)\nPor que ÷ 0,04? A comissão é 4% das vendas: 0,04 × V = C. Desfaz o vezes.\nAgora é só achar cada letra.",
+     "texto": "A questão quer as vendas V.\nPor que ÷ 0,04? A comissão é 4% das vendas: 0,04 × V = C. Desfaz o vezes.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "V",
-        "vendas (o que a questão quer)"
-       ],
-       [
-        "C",
-        "comissão que falta"
-       ]
+      "tipo": "equacao",
+      "formula": "V = C ÷ 0,04",
+      "leitura": "vendas = comissão necessária ÷ 4%",
+      "letras": [
+       {
+        "letra": "V",
+        "oque": "vendas (o que a questão quer)"
+       },
+       {
+        "letra": "C",
+        "oque": "comissão que falta"
+       }
       ]
      }
     },
@@ -2169,23 +2127,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer onde A fica mais barato.\nm = 50 ÷ D (minutos = fixo de A ÷ diferença de preço por minuto)\nPor que dividir pela diferença? A cada minuto, o B fica 0,40 mais caro que o A. O A precisa desses minutos para \"pagar\" os 50 do fixo.\nAgora é só achar cada letra.",
+     "texto": "A questão quer onde A fica mais barato.\nPor que dividir pela diferença? A cada minuto, o B fica 0,40 mais caro que o A. O A precisa desses minutos para \"pagar\" os 50 do fixo.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "m",
-        "minutos do empate (o que a questão quer)"
-       ],
-       [
-        "D",
-        "diferença de preço por minuto"
-       ]
+      "tipo": "equacao",
+      "formula": "m = 50 ÷ D",
+      "leitura": "minutos = fixo de A ÷ diferença de preço por minuto",
+      "letras": [
+       {
+        "letra": "m",
+        "oque": "minutos do empate (o que a questão quer)"
+       },
+       {
+        "letra": "D",
+        "oque": "diferença de preço por minuto"
+       }
       ]
      }
     },
@@ -2317,23 +2272,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o aumento da área.\nF = 1,1 × 1,1 (fator da área = fator de um lado × fator do outro)\nPor que multiplicar os fatores? Área é lado vezes lado. Se cada lado ganha 10%, a área ganha 10% sobre 10%.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o aumento da área.\nPor que multiplicar os fatores? Área é lado vezes lado. Se cada lado ganha 10%, a área ganha 10% sobre 10%.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "F",
-        "quantas vezes a área cresceu (o que a questão quer)"
-       ],
-       [
-        "a",
-        "fator de cada lado"
-       ]
+      "tipo": "equacao",
+      "formula": "F = 1,1 × 1,1",
+      "leitura": "fator da área = fator de um lado × fator do outro",
+      "letras": [
+       {
+        "letra": "F",
+        "oque": "quantas vezes a área cresceu (o que a questão quer)"
+       },
+       {
+        "letra": "a",
+        "oque": "fator de cada lado"
+       }
       ]
      }
     },
@@ -2469,23 +2421,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a área máxima.\nA = x × (20 − x) (área = um lado × o outro, que somam 20)\nPor que 20 − x? Os 4 lados somam 40, então um lado e o outro somam 20. Se um é x, o outro é 20 − x.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a área máxima.\nPor que 20 − x? Os 4 lados somam 40, então um lado e o outro somam 20. Se um é x, o outro é 20 − x.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "A",
-        "área máxima (o que a questão quer)"
-       ],
-       [
-        "x",
-        "o lado que dá a maior área"
-       ]
+      "tipo": "equacao",
+      "formula": "A = x × (20 − x)",
+      "leitura": "área = um lado × o outro, que somam 20",
+      "letras": [
+       {
+        "letra": "A",
+        "oque": "área máxima (o que a questão quer)"
+       },
+       {
+        "letra": "x",
+        "oque": "o lado que dá a maior área"
+       }
       ]
      }
     },
@@ -2617,23 +2566,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o volume real.\nV = 2 × F (volume real = volume da maquete × fator de volume)\nPor que um fator de volume? Volume multiplica três medidas. Cada uma cresce 10 vezes.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o volume real.\nPor que um fator de volume? Volume multiplica três medidas. Cada uma cresce 10 vezes.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "V",
-        "volume real (o que a questão quer)"
-       ],
-       [
-        "F",
-        "quantas vezes o volume cresce"
-       ]
+      "tipo": "equacao",
+      "formula": "V = 2 × F",
+      "leitura": "volume real = volume da maquete × fator de volume",
+      "letras": [
+       {
+        "letra": "V",
+        "oque": "volume real (o que a questão quer)"
+       },
+       {
+        "letra": "F",
+        "oque": "quantas vezes o volume cresce"
+       }
       ]
      }
     },
@@ -2769,23 +2715,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer os litros de água.\nL = V × 1 000 (litros = volume de água em m³ × 1 000)\nPor que × 1 000? Cada metro cúbico tem 1 000 litros.\nAgora é só achar cada letra.",
+     "texto": "A questão quer os litros de água.\nPor que × 1 000? Cada metro cúbico tem 1 000 litros.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "L",
-        "litros (o que a questão quer)"
-       ],
-       [
-        "V",
-        "volume de água, em m³"
-       ]
+      "tipo": "equacao",
+      "formula": "L = V × 1 000",
+      "leitura": "litros = volume de água em m³ × 1 000",
+      "letras": [
+       {
+        "letra": "L",
+        "oque": "litros (o que a questão quer)"
+       },
+       {
+        "letra": "V",
+        "oque": "volume de água, em m³"
+       }
       ]
      }
     },
@@ -2921,27 +2864,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a chance de 2 vermelhas.\nP = P1 × P2 (chance das duas = chance da 1ª × chance da 2ª)\nPor que multiplicar? A 2ª só conta se a 1ª deu certo. É uma fatia de uma fatia.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a chance de 2 vermelhas.\nPor que multiplicar? A 2ª só conta se a 1ª deu certo. É uma fatia de uma fatia.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "P",
-        "chance das duas (o que a questão quer)"
-       ],
-       [
-        "P1",
-        "chance da 1ª ser vermelha"
-       ],
-       [
-        "P2",
-        "chance da 2ª, depois da 1ª"
-       ]
+      "tipo": "equacao",
+      "formula": "P = P1 × P2",
+      "leitura": "chance das duas = chance da 1ª × chance da 2ª",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "chance das duas (o que a questão quer)"
+       },
+       {
+        "letra": "P1",
+        "oque": "chance da 1ª ser vermelha"
+       },
+       {
+        "letra": "P2",
+        "oque": "chance da 2ª, depois da 1ª"
+       }
       ]
      }
     },
@@ -3081,23 +3021,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o número de pessoas n.\nn × (n − 1) ÷ 2 = 45 (pares de pessoas = apertos)\nDe onde vem a fórmula? Com 4 pessoas: cada uma aperta 3 mãos, 4 × 3 = 12, mas o aperto de A com B é o mesmo de B com A: 12 ÷ 2 = 6.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o número de pessoas n.\nDe onde vem a fórmula? Com 4 pessoas: cada uma aperta 3 mãos, 4 × 3 = 12, mas o aperto de A com B é o mesmo de B com A: 12 ÷ 2 = 6.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "n",
-        "pessoas (o que a questão quer)"
-       ],
-       [
-        "D",
-        "n × (n − 1), o dobro dos apertos"
-       ]
+      "tipo": "equacao",
+      "formula": "n × (n − 1) ÷ 2 = 45",
+      "leitura": "pares de pessoas = apertos",
+      "letras": [
+       {
+        "letra": "n",
+        "oque": "pessoas (o que a questão quer)"
+       },
+       {
+        "letra": "D",
+        "oque": "n × (n − 1), o dobro dos apertos"
+       }
       ]
      }
     },

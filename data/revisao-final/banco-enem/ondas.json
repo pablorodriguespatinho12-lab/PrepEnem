@@ -63,27 +63,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o comprimento de onda.\nλ = v ÷ f (comprimento = velocidade ÷ frequência)\nPor que dividir? Em 1 s o som anda 340 m e cabem 680 ondas nesse caminho.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o comprimento de onda.\nPor que dividir? Em 1 s o som anda 340 m e cabem 680 ondas nesse caminho.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "λ",
-        "comprimento (o que a questão quer)"
-       ],
-       [
-        "v",
-        "velocidade"
-       ],
-       [
-        "f",
-        "frequência"
-       ]
+      "tipo": "equacao",
+      "formula": "λ = v ÷ f",
+      "leitura": "comprimento = velocidade ÷ frequência",
+      "letras": [
+       {
+        "letra": "λ",
+        "oque": "comprimento (o que a questão quer)"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade"
+       },
+       {
+        "letra": "f",
+        "oque": "frequência"
+       }
       ]
      }
     },
@@ -226,27 +223,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o comprimento de onda.\nλ = v ÷ f (comprimento = velocidade ÷ frequência)\nPor que dividir? Em 1 s o som anda 1 500 m, e nesse caminho cabem 3 milhões de ondas.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o comprimento de onda.\nPor que dividir? Em 1 s o som anda 1 500 m, e nesse caminho cabem 3 milhões de ondas.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "λ",
-        "comprimento (o que a questão quer)"
-       ],
-       [
-        "v",
-        "velocidade"
-       ],
-       [
-        "f",
-        "frequência"
-       ]
+      "tipo": "equacao",
+      "formula": "λ = v ÷ f",
+      "leitura": "comprimento = velocidade ÷ frequência",
+      "letras": [
+       {
+        "letra": "λ",
+        "oque": "comprimento (o que a questão quer)"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade"
+       },
+       {
+        "letra": "f",
+        "oque": "frequência"
+       }
       ]
      }
     },

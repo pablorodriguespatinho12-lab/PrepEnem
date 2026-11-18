@@ -72,23 +72,20 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a distância que a câmera anda em 50 s.\nD = C × 50 ÷ 180 (distância = a volta toda × a parte do tempo que ela andou)\nPor que × 50 ÷ 180? Em 180 s a câmera anda a volta toda. Em 90 s, metade do tempo, anda metade da volta. Em 50 s anda 50 de 180 partes da volta.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a distância que a câmera anda em 50 s.\nPor que × 50 ÷ 180? Em 180 s a câmera anda a volta toda. Em 90 s, metade do tempo, anda metade da volta. Em 50 s anda 50 de 180 partes da volta.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "D",
-        "distância andada em 50 s (o que a questão quer)"
-       ],
-       [
-        "C",
-        "comprimento da volta toda"
-       ]
+      "tipo": "equacao",
+      "formula": "D = C × 50 ÷ 180",
+      "leitura": "distância = a volta toda × a parte do tempo que ela andou",
+      "letras": [
+       {
+        "letra": "D",
+        "oque": "distância andada em 50 s (o que a questão quer)"
+       },
+       {
+        "letra": "C",
+        "oque": "comprimento da volta toda"
+       }
       ]
      }
     },
@@ -236,27 +233,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer o tempo para a câmera andar o arco de 60 graus.\nT = A ÷ 2 (tempo = distância do arco ÷ velocidade)\nPor que dividir? Andando 2 m a cada segundo, 10 m levam 10 ÷ 2 = 5 s. Quanto mais longo o arco, mais tempo.\nAgora é só achar cada letra.",
+     "texto": "A questão quer o tempo para a câmera andar o arco de 60 graus.\nPor que dividir? Andando 2 m a cada segundo, 10 m levam 10 ÷ 2 = 5 s. Quanto mais longo o arco, mais tempo.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "T",
-        "tempo gasto (o que a questão quer)"
-       ],
-       [
-        "A",
-        "comprimento do arco de 60 graus"
-       ],
-       [
-        "C",
-        "comprimento da volta toda"
-       ]
+      "tipo": "equacao",
+      "formula": "T = A ÷ 2",
+      "leitura": "tempo = distância do arco ÷ velocidade",
+      "letras": [
+       {
+        "letra": "T",
+        "oque": "tempo gasto (o que a questão quer)"
+       },
+       {
+        "letra": "A",
+        "oque": "comprimento do arco de 60 graus"
+       },
+       {
+        "letra": "C",
+        "oque": "comprimento da volta toda"
+       }
       ]
      }
     },
@@ -407,27 +401,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer quanto o fio aumenta.\nA = N − V (aumento = fio novo − fio velho)\nPor que tirar? Aumento é o quanto passou do que era. Se o fio era 7 m e ficou 9 m, aumentou 9 − 7 = 2 m.\nAgora é só achar cada letra.",
+     "texto": "A questão quer quanto o fio aumenta.\nPor que tirar? Aumento é o quanto passou do que era. Se o fio era 7 m e ficou 9 m, aumentou 9 − 7 = 2 m.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "A",
-        "aumento do fio (o que a questão quer)"
-       ],
-       [
-        "V",
-        "fio velho, antes da reforma"
-       ],
-       [
-        "N",
-        "fio novo, depois da reforma"
-       ]
+      "tipo": "equacao",
+      "formula": "A = N − V",
+      "leitura": "aumento = fio novo − fio velho",
+      "letras": [
+       {
+        "letra": "A",
+        "oque": "aumento do fio (o que a questão quer)"
+       },
+       {
+        "letra": "V",
+        "oque": "fio velho, antes da reforma"
+       },
+       {
+        "letra": "N",
+        "oque": "fio novo, depois da reforma"
+       }
       ]
      }
     },
@@ -574,27 +565,24 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer quanto o cabo novo é maior que o antigo.\nM = N − V (a mais = cabo novo − cabo velho)\nPor que tirar? Quanto a mais é o que passou do que era. Se era 10 m e virou 13 m, são 13 − 10 = 3 m a mais.\nAgora é só achar cada letra.",
+     "texto": "A questão quer quanto o cabo novo é maior que o antigo.\nPor que tirar? Quanto a mais é o que passou do que era. Se era 10 m e virou 13 m, são 13 − 10 = 3 m a mais.\nAgora é só achar cada letra.",
      "visual": {
-      "tipo": "tabela",
-      "titulo": "As letras",
-      "cabecalho": [
-       "Letra",
-       "O que é"
-      ],
-      "linhas": [
-       [
-        "M",
-        "quanto o cabo cresceu (o que a questão quer)"
-       ],
-       [
-        "V",
-        "cabo velho, com o ponto a 5 m"
-       ],
-       [
-        "N",
-        "cabo novo, com o ponto a 16 m"
-       ]
+      "tipo": "equacao",
+      "formula": "M = N − V",
+      "leitura": "a mais = cabo novo − cabo velho",
+      "letras": [
+       {
+        "letra": "M",
+        "oque": "quanto o cabo cresceu (o que a questão quer)"
+       },
+       {
+        "letra": "V",
+        "oque": "cabo velho, com o ponto a 5 m"
+       },
+       {
+        "letra": "N",
+        "oque": "cabo novo, com o ponto a 16 m"
+       }
       ]
      }
     },
