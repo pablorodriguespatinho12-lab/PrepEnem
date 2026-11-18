@@ -1,0 +1,5141 @@
+[
+ {
+  "id": "d2-escada-por-int-01",
+  "materia": "Português",
+  "tema": "Interpretação de Texto",
+  "enunciado": "Aviso na porta da biblioteca do bairro: \"A partir de segunda-feira, fecharemos às 18h. Quem está com livro emprestado deve devolvê-lo até sexta-feira.\" Segundo o aviso, até quando os livros devem ser devolvidos?",
+  "A": "Até segunda-feira",
+  "B": "Até sexta-feira",
+  "C": "Até as 18h de hoje",
+  "D": "A qualquer momento",
+  "E": "Até o fim do mês",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "O aviso diz \"até sexta-feira\". B. A = data da mudança de horário; C = mistura o horário com o prazo; D e E não estão no texto.",
+   "ideia": "A resposta está escrita no aviso: \"devolvê-lo até sexta-feira\". Segunda-feira é quando muda o horário, não o prazo.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "texto",
+        "nome": "Informação explícita",
+        "formula": "a resposta está escrita no texto"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Pergunta",
+        "até quando devolver"
+       ],
+       [
+        "Frase 1",
+        "fecha às 18h a partir de segunda"
+       ],
+       [
+        "Frase 2",
+        "devolver até sexta"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o prazo para devolver.\nR = a frase do texto que fala de devolver\nPor que procurar a frase? Pergunta de \"segundo o texto\" se responde com o que está escrito, não com o que achamos.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o prazo de devolução (o que a questão quer)"
+       ],
+       [
+        "P",
+        "a frase que tem a palavra \"devolver\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar \"segunda-feira\", a primeira data que aparece. Mas ela é do novo horário.\nA frase com \"devolver\" diz: até sexta-feira."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = até sexta-feira\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "\"devolvê-lo até sexta-feira\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pergunta com \"segundo o texto\" → ache a frase que tem a palavra-chave da pergunta e copie a informação dela.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "prazo; segunda; sexta"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = frase com \"devolver\""
+       ],
+       [
+        "3. Ache cada pista",
+        "P = até sexta"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra B"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "\"Inscrições abertas de 2 a 9 de maio.\" Qual é o último dia?",
+    "opcoes": [
+     "9 de maio",
+     "2 de maio",
+     "5 de maio",
+     "Não diz"
+    ],
+    "certa": "9 de maio",
+    "resposta": "O fim do intervalo \"de 2 a 9\" é o dia 9."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-int-02",
+  "materia": "Português",
+  "tema": "Interpretação de Texto",
+  "enunciado": "\"Dormir pouco atrapalha a memória. Durante o sono, o cérebro organiza o que aprendemos no dia. Por isso, passar a madrugada estudando antes da prova pode ajudar menos do que dormir bem.\" Qual é a ideia central do texto?",
+  "A": "Estudar de madrugada é a melhor estratégia",
+  "B": "O cérebro não funciona à noite",
+  "C": "Dormir bem ajuda a guardar o que se estudou",
+  "D": "Provas devem ser feitas de manhã",
+  "E": "Quem dorme muito não aprende",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "As 3 frases sustentam \"dormir bem ajuda a memória\". C. A = o contrário do texto; B = o texto diz que o cérebro trabalha no sono; D e E não estão no texto.",
+   "ideia": "A ideia central é a que todas as frases ajudam a defender. Aqui, todas levam a uma só: o sono organiza a memória, então dormir bem ajuda a lembrar.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "texto",
+        "nome": "Ideia central",
+        "formula": "o que TODAS as frases ajudam a defender"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Frase 1",
+        "dormir pouco atrapalha a memória"
+       ],
+       [
+        "Frase 2",
+        "no sono o cérebro organiza o dia"
+       ],
+       [
+        "Frase 3",
+        "madrugada estudando ajuda menos"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer a ideia central.\nR = o que as três frases defendem juntas\nPor que juntas? Um detalhe vale para uma frase só. A ideia central aparece em todas.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "a ideia central (o que a questão quer)"
+       ],
+       [
+        "P",
+        "o que se repete nas três frases"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar a A, que fala de madrugada. Mas o texto diz que a madrugada ajuda MENOS.\nO que se repete nas três frases: sono e memória."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = dormir bem ajuda a guardar o que se estudou\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "sono + memória"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pergunta de \"ideia central\" → ache o assunto que aparece em todas as frases; descarte a letra que só fala de um detalhe ou diz o contrário.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "3 frases"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = o que todas defendem"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = sono e memória"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra C"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Ideia central é:",
+    "opcoes": [
+     "O que o texto todo defende",
+     "A primeira frase, sempre",
+     "Um detalhe curioso",
+     "A palavra mais difícil"
+    ],
+    "certa": "O que o texto todo defende",
+    "resposta": "É a ideia que todas as frases ajudam a sustentar."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-int-03",
+  "materia": "Português",
+  "tema": "Interpretação de Texto",
+  "enunciado": "\"Ana olhou pela janela o céu cinzento e pesado. Já na calçada, parou, voltou para dentro de casa e saiu de novo, agora com o guarda-chuva na mão.\" A partir do trecho, pode-se concluir que Ana",
+  "A": "achou que podia chover",
+  "B": "tinha esquecido a chave",
+  "C": "estava com muito calor",
+  "D": "ia para a praia",
+  "E": "não gosta de chuva",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "Céu cinzento + volta para pegar o guarda-chuva = achou que ia chover. A. B = ela volta com o guarda-chuva, não com a chave; C e D não combinam com céu cinzento; E não tem pista no texto.",
+   "ideia": "O texto não diz \"Ana achou que ia chover\", mas dá as pistas: céu cinzento e pesado, e ela volta só para pegar o guarda-chuva. Juntar pistas é inferir.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "texto",
+        "nome": "Inferência",
+        "formula": "o texto não diz, mas as pistas mostram"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Pista 1",
+        "céu cinzento e pesado"
+       ],
+       [
+        "Pista 2",
+        "voltou para dentro"
+       ],
+       [
+        "Pista 3",
+        "saiu com o guarda-chuva"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o que se conclui sobre Ana.\nR = o que as pistas, juntas, mostram\nPor que juntas? Uma pista só pode enganar. Céu cinzento sozinho não basta; com o guarda-chuva, fica claro.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "a conclusão (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "o que o céu indica"
+       ],
+       [
+        "P2",
+        "o que ela voltou para buscar"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (o céu)",
+     "texto": "Céu cinzento e pesado = sinal de chuva."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar \"esqueceu a chave\", porque ela voltou para dentro. Mas ela saiu com o guarda-chuva, não com a chave.\nP2 = o guarda-chuva."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "P1 (chuva) + P2 (guarda-chuva) = achou que podia chover\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "sinal de chuva"
+       ],
+       [
+        "P2",
+        "guarda-chuva"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pergunta \"pode-se concluir\" → junte as pistas de ação e de cenário; a certa é a que TODAS as pistas confirmam.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "céu, volta, guarda-chuva"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = o que as pistas mostram"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = chuva; P2 = guarda-chuva"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra A"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Inferir é:",
+    "opcoes": [
+     "Concluir pelas pistas do texto",
+     "Copiar uma frase do texto",
+     "Dar a sua opinião",
+     "Inventar o final"
+    ],
+    "certa": "Concluir pelas pistas do texto",
+    "resposta": "O texto não diz; as pistas mostram."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-int-04",
+  "materia": "Português",
+  "tema": "Interpretação de Texto",
+  "enunciado": "Uma colega comenta no intervalo: \"O Pedro parou de fumar no ano passado, e agora até corre no parque.\" Sem dizer diretamente, a frase deixa claro que Pedro",
+  "A": "nunca fumou",
+  "B": "fuma até hoje",
+  "C": "vai voltar a fumar",
+  "D": "fumava antes do ano passado",
+  "E": "fumou só no ano passado",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "\"Parar de\" pressupõe que fazia antes: Pedro fumava. D. A = contradiz \"parou\"; B = contradiz \"parou\"; C = não há pista; E = \"no ano passado\" é quando parou, não o único ano.",
+   "ideia": "\"Parou de fumar\" só faz sentido se ele fumava antes. Essa informação escondida, que a frase dá como certa, se chama pressuposto.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "fala",
+        "nome": "Pressuposto",
+        "formula": "o que a frase dá como certo sem dizer"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Frase",
+        "\"parou de fumar no ano passado\""
+       ],
+       [
+        "Palavra-chave",
+        "\"parou de\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o que a frase deixa claro sem dizer.\nR = o que precisa ser verdade para \"parou de\" fazer sentido\nPor que \"parou de\"? Só para quem fazia antes. Palavras como parar, voltar, continuar e ainda escondem informação.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o pressuposto (o que a questão quer)"
+       ],
+       [
+        "P",
+        "a palavra que esconde a informação"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar \"fumou só no ano passado\", lendo rápido. Mas \"no ano passado\" diz quando ele parou.\nP = \"parou de\": ele fumava antes."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = Pedro fumava antes do ano passado\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "\"parou de\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pergunta \"sem dizer diretamente\" → procure palavras como parar, voltar, continuar, ainda, já: elas escondem o que era verdade antes.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "\"parou de fumar\""
+       ],
+       [
+        "2. A regra em palavras",
+        "R = o que precisa ser verdade"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = \"parou de\""
+       ],
+       [
+        "4. Compare com as letras",
+        "letra D"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "\"Ela voltou a estudar.\" O pressuposto é:",
+    "opcoes": [
+     "Ela já estudava antes",
+     "Ela nunca estudou",
+     "Ela estuda muito",
+     "Ela odeia estudar"
+    ],
+    "certa": "Ela já estudava antes",
+    "resposta": "\"Voltar a\" só existe se já fez antes."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-int-05",
+  "materia": "Português",
+  "tema": "Interpretação de Texto",
+  "enunciado": "\"Muito se celebra que o celular colocou uma biblioteca inteira no bolso de cada estudante. É verdade: nunca foi tão fácil achar um artigo, uma aula ou um livro. Mas ter a biblioteca no bolso não é o mesmo que entrar nela. A mesma tela que guarda o livro avisa, a cada três minutos, que chegou uma mensagem nova. O problema da leitura hoje, portanto, não é a falta de acesso: é a falta de atenção.\" O argumento central do autor é que",
+  "A": "o celular impede o acesso aos livros",
+  "B": "as bibliotecas de verdade vão acabar",
+  "C": "os estudantes leem mais do que antes",
+  "D": "as mensagens são mais importantes que os livros",
+  "E": "o acesso aumentou, mas a distração atrapalha a leitura",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "dificil",
+  "explicacao": {
+   "conferencia": "\"É verdade... Mas... portanto não é a falta de acesso: é a falta de atenção\" = E. A = o contrário (o acesso aumentou); B e C não estão no texto; D = confunde o exemplo com a tese.",
+   "ideia": "O autor concorda que o acesso aumentou (\"É verdade\") e depois vira o argumento com o \"Mas\". A conclusão vem no \"portanto\": o problema é a atenção, não o acesso.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "texto",
+        "nome": "Tese do autor",
+        "formula": "o que vem depois do \"mas\" e do \"portanto\""
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Concessão",
+        "\"É verdade: nunca foi tão fácil achar\""
+       ],
+       [
+        "Virada",
+        "\"Mas ter a biblioteca no bolso não é entrar nela\""
+       ],
+       [
+        "Conclusão",
+        "\"portanto... é a falta de atenção\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o argumento central.\nR = a conclusão (depois do \"portanto\"), sem negar o que o autor aceitou antes\nPor que o \"portanto\"? Ele anuncia a conclusão. E o \"É verdade\" mostra o que o autor aceita: o acesso aumentou.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o argumento central (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "o que o autor aceita"
+       ],
+       [
+        "P2",
+        "o que ele conclui"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (o que ele aceita)",
+     "texto": "\"É verdade: nunca foi tão fácil achar um artigo.\"\nP1 = o acesso aumentou. Por isso a letra A, que diz o contrário, cai."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar a D, porque o texto fala das mensagens. Mas elas são o exemplo, não a tese.\nP2 = o problema é a falta de atenção."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = P1 + P2: o acesso aumentou, mas a distração atrapalha a leitura\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "o acesso aumentou"
+       ],
+       [
+        "P2",
+        "falta atenção"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: texto com \"É verdade... Mas... portanto\" → a tese junta o que o autor aceita e o que ele conclui; o exemplo do meio não é a tese.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "concessão, virada, conclusão"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = conclusão sem negar a concessão"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = acesso; P2 = atenção"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra E"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Num texto, a conclusão do autor costuma vir depois de:",
+    "opcoes": [
+     "portanto, então, por isso",
+     "por exemplo",
+     "além disso",
+     "era uma vez"
+    ],
+    "certa": "portanto, então, por isso",
+    "resposta": "São palavras que introduzem a conclusão."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-int-06",
+  "materia": "Português",
+  "tema": "Interpretação de Texto",
+  "enunciado": "\"Os aplicativos de transporte barataram as corridas e deram renda a milhares de pessoas. Ainda assim, muitos motoristas trabalham mais de doze horas por dia, sem descanso remunerado nem aposentadoria garantida. Quando adoecem, simplesmente não ganham. A tecnologia é nova; a insegurança de quem trabalha, nem tanto.\" No último período, a oposição entre \"nova\" e \"nem tanto\" sugere que",
+  "A": "a tecnologia dos aplicativos é antiga",
+  "B": "a insegurança no trabalho é um problema antigo, que a novidade não resolveu",
+  "C": "os motoristas preferem trabalhar sem aplicativo",
+  "D": "a insegurança no trabalho surgiu com os aplicativos",
+  "E": "os aplicativos acabaram com o desemprego",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "dificil",
+  "explicacao": {
+   "conferencia": "\"A insegurança, nem tanto [nova]\" = antiga. B. A = troca de quem é nova; C não está no texto; D = o contrário de \"nem tanto\"; E = exagero de \"deram renda\".",
+   "ideia": "\"Nem tanto\" retoma \"nova\" pela negação: a insegurança NÃO é nova. A frase opõe a novidade da ferramenta à velhice do problema.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "texto",
+        "nome": "Palavra que some",
+        "formula": "\"nem tanto\" repete a palavra de antes, negada"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "1ª parte",
+        "\"A tecnologia é nova\""
+       ],
+       [
+        "2ª parte",
+        "\"a insegurança de quem trabalha, nem tanto\""
+       ],
+       [
+        "O que some",
+        "a palavra \"nova\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o sentido da oposição.\nR = completar a 2ª parte com a palavra que sumiu e ler de novo\nPor que completar? A vírgula está no lugar de \"é\". Lida inteira: \"a insegurança não é tão nova\".\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o sentido da frase (o que a questão quer)"
+       ],
+       [
+        "P",
+        "a frase completa"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar a D, porque o texto fala dos aplicativos e da insegurança juntos. Mas \"nem tanto\" diz o contrário: não é nova.\nP = \"a insegurança não é tão nova\"."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = a insegurança é antiga e a novidade não a resolveu\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "\"não é tão nova\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: frase com vírgula no lugar do verbo e \"nem tanto\" → escreva a frase inteira de novo, com a palavra que sumiu.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "nova; nem tanto"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = completar a frase"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = não é tão nova"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra B"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "\"O carro é novo; o motorista, nem tanto.\" O motorista é:",
+    "opcoes": [
+     "Mais velho, não novo",
+     "Novo também",
+     "Um carro",
+     "Um motorista ruim"
+    ],
+    "certa": "Mais velho, não novo",
+    "resposta": "\"Nem tanto\" nega o \"novo\" da primeira parte."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-int-07",
+  "materia": "Português",
+  "tema": "Interpretação de Texto",
+  "enunciado": "\"Num grande avanço para a mobilidade urbana, a prefeitura inaugurou ontem a ciclovia mais curta do país: 300 metros ligando o nada a lugar nenhum. Os ciclistas, emocionados, poderão pedalar em segurança durante quase um minuto inteiro, desde que cheguem até ela de carro.\" A expressão \"desde que cheguem até ela de carro\" reforça a crítica do texto porque sugere que a ciclovia",
+  "A": "é perigosa para quem pedala",
+  "B": "é longa demais para o ciclista comum",
+  "C": "não se liga a nenhum caminho que o ciclista já usa",
+  "D": "foi construída para os carros",
+  "E": "foi elogiada pelos motoristas",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "Ironia + \"ligando o nada a lugar nenhum\" + \"cheguem de carro\" = ciclovia isolada. C. A = o texto diz \"em segurança\" (ironia, mas não é a crítica); B = ela é a mais curta; D = lê a ironia ao pé da letra; E não está no texto.",
+   "ideia": "O texto elogia para criticar (ironia). Se o ciclista precisa ir de carro até a ciclovia, é porque ela não se conecta a nada: \"ligando o nada a lugar nenhum\".",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "fala",
+        "nome": "Ironia",
+        "formula": "elogiar para criticar: o sentido é o contrário"
+       },
+       {
+        "figura": "texto",
+        "nome": "Ligar trechos",
+        "formula": "uma expressão se explica por outra do texto"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Elogio",
+        "\"grande avanço\", \"emocionados\""
+       ],
+       [
+        "Fato",
+        "300 m, \"ligando o nada a lugar nenhum\""
+       ],
+       [
+        "Trecho pedido",
+        "\"desde que cheguem até ela de carro\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer por que o trecho reforça a crítica.\nR = o trecho pedido ligado a outro trecho do texto que explica a mesma falha\nPor que ligar trechos? Na banca difícil, a resposta não está na expressão sozinha: está na ponte com outra parte do texto.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o que a expressão sugere (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "o tom do texto"
+       ],
+       [
+        "P2",
+        "o trecho que explica o \"de carro\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (o tom)",
+     "texto": "Uma ciclovia de 300 m não é \"grande avanço\". O texto elogia para criticar.\nP1 = ironia."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar a D: \"de carro\" lembraria que a obra é para carros. Mas a ciclovia é para bicicletas; o problema é chegar até ela.\nO trecho que explica: \"ligando o nada a lugar nenhum\".\nP2 = ela não se liga a nenhum caminho."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = sem ligação com caminho nenhum, só se chega a ela de carro\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "ironia"
+       ],
+       [
+        "P2",
+        "\"o nada a lugar nenhum\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: expressão irônica numa questão difícil → ache no texto OUTRO trecho que diga a mesma falha com outras palavras; a certa junta os dois.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "elogio, fato, trecho"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = trecho + ponte no texto"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = ironia; P2 = sem ligação"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra C"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "\"Que dia lindo!\", dito debaixo de temporal, é:",
+    "opcoes": [
+     "Ironia",
+     "Elogio sincero",
+     "Previsão do tempo",
+     "Metáfora"
+    ],
+    "certa": "Ironia",
+    "resposta": "Diz o contrário do que se pensa, para criticar."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-int-08",
+  "materia": "Português",
+  "tema": "Interpretação de Texto",
+  "enunciado": "Ao divulgar o resultado do simulado, o coordenador disse: \"Nem todos os alunos que estudaram todos os dias foram aprovados.\" Dessa frase, pode-se concluir com certeza que",
+  "A": "nenhum aluno que estudou todos os dias foi aprovado",
+  "B": "todos os que não estudaram foram reprovados",
+  "C": "a maioria dos que estudaram todos os dias foi reprovada",
+  "D": "quem foi aprovado estudou todos os dias",
+  "E": "pelo menos um aluno que estudou todos os dias não foi aprovado",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "\"Nem todos os X são Y\" = existe ao menos um X que não é Y. E. A = troca \"nem todos\" por \"nenhum\"; B e D falam de grupos que a frase não cita; C = \"a maioria\" é exagero: pode ser um só.",
+   "ideia": "\"Nem todos foram\" quer dizer só que existe pelo menos um que não foi. Não diz quantos, nem fala de quem não estudou.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "fala",
+        "nome": "\"Nem todos\"",
+        "formula": "garante só: pelo menos 1 não é"
+       },
+       {
+        "figura": "texto",
+        "nome": "Com certeza",
+        "formula": "só o que a frase garante, nada a mais"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Frase",
+        "\"Nem todos os que estudaram foram aprovados\""
+       ],
+       [
+        "Grupo",
+        "alunos que estudaram todos os dias"
+       ],
+       [
+        "Pergunta",
+        "o que é CERTO"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o que se conclui com certeza.\nR = o mínimo que a frase garante sobre o grupo de que ela fala\nPor que o mínimo? \"Com certeza\" pede o que é verdade em qualquer caso. Se só 1 aluno reprovou, a frase já é verdadeira.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "a conclusão certa (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "de qual grupo a frase fala"
+       ],
+       [
+        "P2",
+        "quantos do grupo, no mínimo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (o grupo)",
+     "texto": "A frase fala só de quem estudou todos os dias.\nAs letras B e D falam de outros grupos: caem."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar a C, \"a maioria\". Mas a frase continua verdadeira se só 1 reprovou.\nP2 = pelo menos 1."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = pelo menos um aluno que estudou todos os dias não foi aprovado\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "quem estudou todo dia"
+       ],
+       [
+        "P2",
+        "pelo menos 1"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pergunta \"com certeza\" com \"nem todos\", \"algum\", \"nenhum\" → teste o caso mínimo (só 1); a certa vale até nele.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "nem todos; grupo; certeza"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = o mínimo garantido"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = o grupo; P2 = 1"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra E"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "\"Nem todo gato é preto.\" É certo que:",
+    "opcoes": [
+     "Existe gato que não é preto",
+     "Nenhum gato é preto",
+     "A maioria é preta",
+     "Só existe gato branco"
+    ],
+    "certa": "Existe gato que não é preto",
+    "resposta": "\"Nem todo\" só garante que existe pelo menos um diferente."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-gen-01",
+  "materia": "Português",
+  "tema": "Gêneros Textuais e Multimodalidade",
+  "enunciado": "Leia: \"Misture duas xícaras de farinha, um ovo e uma colher de fermento. Despeje na forma e asse por 30 minutos.\" Os verbos misture, despeje e asse, que dão ordens, mostram que o texto quer",
+  "A": "dar instruções para fazer algo",
+  "B": "contar uma história inventada",
+  "C": "expressar os sentimentos de quem escreve",
+  "D": "noticiar um fato que aconteceu",
+  "E": "convencer o leitor a votar",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "Imperativo + passos = texto instrucional (receita). A. B, C, D e E são finalidades de outros gêneros (conto, poema, notícia, propaganda política).",
+   "ideia": "Verbo que dá ordem (imperativo) é a marca de texto que ensina a fazer: receita, manual, regulamento. A finalidade é instruir.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "texto",
+        "nome": "Gênero pela finalidade",
+        "formula": "para que o texto serve?"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Verbos",
+        "misture, despeje, asse"
+       ],
+       [
+        "Forma",
+        "passos em ordem"
+       ],
+       [
+        "Assunto",
+        "fazer um bolo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer a finalidade do texto.\nR = o que os verbos de ordem pedem que o leitor faça\nPor que os verbos? Verbo que manda fazer (imperativo) é marca de texto que ensina.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "a finalidade (o que a questão quer)"
+       ],
+       [
+        "P",
+        "o tipo de verbo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar a D, porque o texto fala de uma coisa feita. Mas notícia conta o que já aconteceu.\nAqui os verbos mandam fazer: P = ordem, passo a passo."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = dar instruções\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "verbos de ordem"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pergunta de \"finalidade\" ou \"gênero\" → olhe o tipo de verbo: ordem = instruir; passado = contar; opinião = convencer.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "3 verbos de ordem"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = o que os verbos pedem"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = imperativo"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra A"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "\"Aperte o botão e aguarde o sinal.\" O texto é de:",
+    "opcoes": [
+     "Manual de instruções",
+     "Notícia",
+     "Poema",
+     "Carta pessoal"
+    ],
+    "certa": "Manual de instruções",
+    "resposta": "Ordem em passos = instrução."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-gen-02",
+  "materia": "Português",
+  "tema": "Gêneros Textuais e Multimodalidade",
+  "enunciado": "No jornal do bairro: \"Vendo bicicleta aro 26, pouco uso, R$ 300. Tratar com João pelo telefone 9999-0000.\" Esse texto é um anúncio classificado. O que o identifica?",
+  "A": "Um narrador que conta uma história",
+  "B": "Rimas e versos",
+  "C": "Texto curto, com o produto, o preço e o contato",
+  "D": "Data e local de um fato que aconteceu",
+  "E": "Argumentos para defender uma opinião",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "Produto + preço + contato, em poucas palavras = classificado. C. A = conto; B = poema; D = notícia; E = artigo de opinião.",
+   "ideia": "Classificado é curto e direto: o que se vende, quanto custa e como falar com quem vende. É isso que o leitor procura.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "texto",
+        "nome": "Gênero pela forma",
+        "formula": "o que o texto sempre traz"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Produto",
+        "bicicleta aro 26"
+       ],
+       [
+        "Preço",
+        "R$ 300"
+       ],
+       [
+        "Contato",
+        "João, 9999-0000"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer a marca do classificado.\nR = as partes que todo classificado tem\nPor que as partes? Cada gênero tem um formato que se repete; é por ele que se reconhece.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "a marca do gênero (o que a questão quer)"
+       ],
+       [
+        "P",
+        "as partes do texto"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar a E, porque \"pouco uso\" elogia a bicicleta. Mas é só uma informação, não um argumento longo.\nP = produto, preço e contato, em texto curto."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = texto curto com produto, preço e contato\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "produto + preço + contato"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pergunta \"o que identifica o gênero\" → liste as partes do texto; a certa é a que descreve essas partes.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "produto, preço, contato"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = partes fixas"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = as 3 partes"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra C"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "O que NÃO costuma ter num classificado?",
+    "opcoes": [
+     "Rimas",
+     "Preço",
+     "Contato",
+     "O produto"
+    ],
+    "certa": "Rimas",
+    "resposta": "Classificado é informação direta, não poema."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-gen-03",
+  "materia": "Português",
+  "tema": "Gêneros Textuais e Multimodalidade",
+  "enunciado": "Leia dois trechos sobre o mesmo assunto, publicados no mesmo jornal. Trecho 1: \"A prefeitura anunciou ontem que a passagem de ônibus vai custar R$ 5,50 a partir de março.\" Trecho 2: \"Aumentar a passagem num ano em que o salário não subiu é um descaso com quem mais depende do ônibus.\" Comparando os dois, o trecho 2 se diferencia do 1 porque",
+  "A": "informa a data do aumento",
+  "B": "é mais curto e mais claro",
+  "C": "usa números para provar o que diz",
+  "D": "avalia o fato e mostra a opinião de quem escreve",
+  "E": "não fala do ônibus",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "dificil",
+  "explicacao": {
+   "conferencia": "\"É um descaso\" = avaliação, marca de texto de opinião. D. A = é o trecho 1 que dá a data; B e C não diferenciam (o 2 não tem número); E = ele fala do ônibus.",
+   "ideia": "O trecho 1 só informa, como uma notícia. O trecho 2 julga o fato com a palavra \"descaso\", e palavra que julga é marca de opinião.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "texto",
+        "nome": "Notícia × opinião",
+        "formula": "notícia informa; opinião julga"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Trecho 1",
+        "anuncia preço e data"
+       ],
+       [
+        "Trecho 2",
+        "\"é um descaso\""
+       ],
+       [
+        "Pergunta",
+        "o que só o 2 tem"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer a diferença do trecho 2.\nR = a palavra do trecho 2 que julga o fato\nPor que a palavra que julga? Informação pode ser conferida; julgamento (\"descaso\") é a opinião de quem escreve.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "a diferença (o que a questão quer)"
+       ],
+       [
+        "P",
+        "a palavra que julga"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar a A, porque a data é importante. Mas a data está no trecho 1.\nNo trecho 2, a palavra que julga: P = \"descaso\"."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = o trecho 2 avalia o fato e mostra opinião\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "\"descaso\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dois trechos sobre o mesmo fato → procure palavras de julgamento (descaso, absurdo, ótimo); quem tem é opinião.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "2 trechos"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = o que só o 2 tem"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = \"descaso\""
+       ],
+       [
+        "4. Compare com as letras",
+        "letra D"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Qual palavra mostra opinião?",
+    "opcoes": [
+     "Absurdo",
+     "Março",
+     "Ônibus",
+     "Prefeitura"
+    ],
+    "certa": "Absurdo",
+    "resposta": "Palavra que julga = opinião."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-gen-04",
+  "materia": "Português",
+  "tema": "Gêneros Textuais e Multimodalidade",
+  "enunciado": "Um cartaz de campanha de saúde traz, no alto, a frase \"Água parada é perigo\". Logo abaixo, há o desenho de um pneu velho cheio de água da chuva, com um mosquito pousado na borda. No cartaz, a frase e o desenho trabalham juntos para",
+  "A": "mostrar onde o mosquito da dengue se cria e pedir cuidado",
+  "B": "vender pneus novos",
+  "C": "ensinar a trocar pneu",
+  "D": "pedir que se economize água",
+  "E": "falar de reciclagem de borracha",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "dificil",
+  "explicacao": {
+   "conferencia": "Frase (perigo) + pneu com água + mosquito = criadouro da dengue, campanha de prevenção. A. B e C leem só o pneu; D lê só a água; E não tem pista.",
+   "ideia": "No texto que mistura palavra e desenho (multimodal), um completa o outro. A frase diz o perigo; o desenho mostra onde ele está: água parada no pneu, onde o mosquito se cria.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "texto",
+        "nome": "Multimodal",
+        "formula": "palavra + desenho: o sentido vem dos dois"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Frase",
+        "\"Água parada é perigo\""
+       ],
+       [
+        "Desenho",
+        "pneu com água"
+       ],
+       [
+        "Detalhe",
+        "mosquito na borda"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o que frase e desenho fazem juntos.\nR = o que a frase diz + o que o desenho mostra\nPor que os dois? Lendo um só, você cai na letra que só fala de pneu ou só de água.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "a finalidade (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "o que a frase diz"
+       ],
+       [
+        "P2",
+        "o que o desenho mostra"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (a frase)",
+     "texto": "P1 = água parada é perigosa."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar a D, de economizar água. Mas o perigo não é gastar água: é ela ficar parada.\nO desenho: pneu com água e mosquito. P2 = onde o mosquito se cria."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = mostrar onde o mosquito se cria e pedir cuidado\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "água parada = perigo"
+       ],
+       [
+        "P2",
+        "criadouro do mosquito"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: texto com palavra e desenho → leia cada um e junte; a letra que usa só um dos dois está errada.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "frase, pneu, mosquito"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = frase + desenho"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = perigo; P2 = criadouro"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra A"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Num texto multimodal, palavra e desenho:",
+    "opcoes": [
+     "Se completam",
+     "Dizem coisas sem ligação",
+     "Só o desenho importa",
+     "Só a palavra importa"
+    ],
+    "certa": "Se completam",
+    "resposta": "O sentido nasce dos dois juntos."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-gen-05",
+  "materia": "Português",
+  "tema": "Gêneros Textuais e Multimodalidade",
+  "enunciado": "Leia o poema, escrito como uma bula de remédio: \"SAUDADE. Indicações: para dias cinzentos e domingos longos. Modo de usar: um verso pela manhã e dois antes de dormir. Efeitos colaterais: vontade de ligar para quem está longe. Superdosagem: lágrimas.\" Ao usar a forma de uma bula para falar de um sentimento, o texto",
+  "A": "é uma bula verdadeira, de um remédio contra a tristeza",
+  "B": "mistura gêneros: tem a estrutura da bula e a função de um poema",
+  "C": "quer vender um produto chamado Saudade",
+  "D": "mostra que poemas não podem ter regras de forma",
+  "E": "é uma receita culinária disfarçada",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "Estrutura de bula + função poética = intergenericidade. B. A e C leem a forma ao pé da letra; D = o texto usa uma forma de propósito; E não tem estrutura de receita.",
+   "ideia": "O texto pega a forma de um gênero (bula: indicações, modo de usar, efeitos) e usa com a função de outro (poema: expressar sentimento). Isso é mistura de gêneros (intergenericidade).",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "texto",
+        "nome": "Mistura de gêneros",
+        "formula": "a forma de um gênero, a função de outro"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Forma",
+        "Indicações, Modo de usar, Efeitos"
+       ],
+       [
+        "Assunto",
+        "saudade, um sentimento"
+       ],
+       [
+        "Remédio",
+        "\"um verso pela manhã\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o que o texto faz ao usar a bula.\nR = de qual gênero é a FORMA + de qual gênero é a FUNÇÃO\nPor que separar? Na banca difícil, forma e função vêm de gêneros diferentes. Quem olha só a forma marca \"bula\".\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o efeito (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "o gênero da forma"
+       ],
+       [
+        "P2",
+        "o gênero da função"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (a forma)",
+     "texto": "Indicações, modo de usar, superdosagem: P1 = bula."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar a A: tem tudo de bula. Mas o \"remédio\" é um verso, e o efeito é saudade.\nO texto quer expressar sentimento: P2 = poema."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = forma de bula (P1) + função de poema (P2)\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "bula"
+       ],
+       [
+        "P2",
+        "poema"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: texto com cara de um gênero e assunto de outro → diga a forma e a função separadas; a certa fala das duas.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "forma, assunto, \"remédio\""
+       ],
+       [
+        "2. A regra em palavras",
+        "R = forma + função"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = bula; P2 = poema"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra B"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Notícia escrita em versos, para divertir, é:",
+    "opcoes": [
+     "Mistura de gêneros",
+     "Notícia comum",
+     "Bula",
+     "Receita"
+    ],
+    "certa": "Mistura de gêneros",
+    "resposta": "Forma de um gênero, função de outro."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-gen-06",
+  "materia": "Português",
+  "tema": "Gêneros Textuais e Multimodalidade",
+  "enunciado": "Um jornal publica, na página de opinião, um texto sem assinatura de nenhum autor. O texto defende que a cidade precisa abrir mais vagas em creches e critica a demora da prefeitura. Ao lado, outro texto, assinado por uma professora, defende a mesma ideia. O texto sem assinatura é um editorial porque",
+  "A": "conta um fato sem dar opinião",
+  "B": "é escrito por um leitor do jornal",
+  "C": "expressa a opinião do próprio jornal, e não de uma pessoa",
+  "D": "é uma entrevista com a prefeitura",
+  "E": "traz só números e dados",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "Página de opinião + sem assinatura = editorial, a voz do veículo. C. A = ele critica, então dá opinião; B = carta do leitor tem nome; D e E não combinam com o texto.",
+   "ideia": "Os dois textos dão opinião. A diferença é de quem: o assinado é a opinião da professora (artigo de opinião); o sem assinatura fala pelo jornal inteiro (editorial).",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "texto",
+        "nome": "Editorial",
+        "formula": "opinião do jornal, sem assinatura"
+       },
+       {
+        "figura": "texto",
+        "nome": "Artigo de opinião",
+        "formula": "opinião de uma pessoa, assinada"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Lugar",
+        "página de opinião"
+       ],
+       [
+        "Assinatura",
+        "nenhuma"
+       ],
+       [
+        "Ao lado",
+        "texto assinado, mesma ideia"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer por que o texto é editorial.\nR = de quem é a opinião\nPor que \"de quem\"? Os dois textos opinam. O que muda é a voz: uma pessoa ou o jornal.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "a marca do editorial (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "se o texto opina"
+       ],
+       [
+        "P2",
+        "quem fala no texto"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (opina?)",
+     "texto": "\"Critica a demora\" = opina. A letra A cai."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo pensar que, sem assinatura, foi um leitor. Mas carta de leitor vem com o nome dele.\nSem nome nenhum, quem fala é o jornal: P2 = o veículo."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = opinião do próprio jornal\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "opina"
+       ],
+       [
+        "P2",
+        "o jornal"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dois textos de opinião lado a lado → olhe a assinatura: com nome = artigo; sem nome = editorial (voz do jornal).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "página, assinatura, ao lado"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = de quem é a voz"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = opina; P2 = jornal"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra C"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Texto de opinião ASSINADO por uma pessoa é:",
+    "opcoes": [
+     "Artigo de opinião",
+     "Editorial",
+     "Notícia",
+     "Classificado"
+    ],
+    "certa": "Artigo de opinião",
+    "resposta": "Editorial é sem assinatura: fala pelo jornal."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-var-01",
+  "materia": "Português",
+  "tema": "Variação Linguística e Norma-Padrão",
+  "enunciado": "Num conto, o narrador escreve tudo na norma-padrão, mas, quando um personagem do interior fala, aparece: \"Nóis vai pra roça cedinho, sô.\" Essa fala do personagem é",
+  "A": "um erro de digitação do livro",
+  "B": "uma regra da norma-padrão",
+  "C": "uma palavra estrangeira",
+  "D": "um recurso para mostrar como aquela pessoa fala",
+  "E": "uma gíria da internet",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "Narrador na norma + personagem com fala regional = recurso de caracterização. D. A = o autor usa a norma no resto; B = \"nóis vai\" não é da norma; C e E não combinam.",
+   "ideia": "O autor sabe a norma-padrão (o narrador usa). Escrever a fala do personagem como ele fala dá vida e verdade a ele: é um recurso, não um erro.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "fala",
+        "nome": "Variação na literatura",
+        "formula": "a fala mostra quem é o personagem"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Narrador",
+        "norma-padrão"
+       ],
+       [
+        "Personagem",
+        "\"Nóis vai pra roça, sô\""
+       ],
+       [
+        "Lugar",
+        "interior"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o que a fala do personagem é.\nR = por que o autor escreveu a fala assim\nPor que perguntar \"por quê\"? O narrador mostra que o autor conhece a norma. Então a fala diferente é escolha.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o que a fala é (o que a questão quer)"
+       ],
+       [
+        "P",
+        "como o narrador escreve"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar \"erro\". Mas o narrador escreve tudo na norma-padrão.\nP = o autor conhece a norma; então foi escolha."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = recurso para mostrar como a pessoa fala\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "narrador na norma"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: fala \"fora da norma\" em conto ou poema → compare com o narrador; se ele usa a norma, a fala é recurso, não erro.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "narrador, personagem"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = por que assim"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = autor sabe a norma"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra D"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Por que o autor não \"corrigiu\" a fala?",
+    "opcoes": [
+     "Para mostrar quem é o personagem",
+     "Porque não sabia",
+     "Por pressa",
+     "Para errar de propósito"
+    ],
+    "certa": "Para mostrar quem é o personagem",
+    "resposta": "A fala revela de onde a pessoa é."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-var-02",
+  "materia": "Português",
+  "tema": "Variação Linguística e Norma-Padrão",
+  "enunciado": "Uma reportagem sobre comida brasileira conta que a mesma raiz recebe nomes diferentes pelo país: \"mandioca\" em boa parte do país, \"aipim\" no Rio de Janeiro e em parte do Sul, e \"macaxeira\" em boa parte do Nordeste. Os três nomes estão corretos e são entendidos em cada lugar. Esse exemplo mostra a variação",
+  "A": "histórica, de uma época para outra",
+  "B": "social, de uma classe para outra",
+  "C": "situacional, do formal para o informal",
+  "D": "de gênero textual",
+  "E": "regional, de um lugar para outro",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "dificil",
+  "explicacao": {
+   "conferencia": "Mesma coisa, nomes diferentes por região = variação regional. E. A = não há mudança de época; B = não há classe social; C = os três servem em qualquer situação; D não é tipo de variação.",
+   "ideia": "O que muda o nome aqui é o lugar do país. Variação que muda com a região se chama regional (ou geográfica).",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "fala",
+        "nome": "Tipos de variação",
+        "formula": "muda com o lugar, a época, o grupo ou a situação"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Palavras",
+        "mandioca, aipim, macaxeira"
+       ],
+       [
+        "O que muda",
+        "a região do país"
+       ],
+       [
+        "O que não muda",
+        "a raiz é a mesma"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o tipo de variação.\nR = o que faz a palavra mudar\nPor que \"o que faz mudar\"? Cada tipo de variação tem uma causa: lugar, tempo, grupo social ou situação.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o tipo de variação (o que a questão quer)"
+       ],
+       [
+        "P",
+        "a causa da mudança"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar a C, porque um nome parece mais \"chique\" que o outro. Mas os três valem em qualquer situação.\nO que muda é o lugar: P = a região."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = variação regional\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "a região"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pergunta de tipo de variação → ache a CAUSA: lugar = regional; época = histórica; grupo = social; formalidade = situacional.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "3 nomes, 3 regiões"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = a causa"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = lugar"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra E"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "\"Vossa mercê\" virou \"você\" com o tempo. É variação:",
+    "opcoes": [
+     "Histórica",
+     "Regional",
+     "Social",
+     "Situacional"
+    ],
+    "certa": "Histórica",
+    "resposta": "Mudou de uma época para outra."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-var-03",
+  "materia": "Português",
+  "tema": "Variação Linguística e Norma-Padrão",
+  "enunciado": "Numa carta de 1890, lê-se: \"Vossa Mercê pode encontrar-me na pharmacia da rua do Ouvidor.\" Hoje, a mesma frase seria escrita assim: \"Você pode me encontrar na farmácia da rua do Ouvidor.\" As diferenças entre as duas frases são exemplo de variação",
+  "A": "histórica, de uma época para outra",
+  "B": "regional, de um lugar para outro",
+  "C": "social, de uma classe para outra",
+  "D": "situacional, do formal para o informal",
+  "E": "de erro, porque a carta antiga está errada",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "dificil",
+  "explicacao": {
+   "conferencia": "Mesma frase, épocas diferentes (1890 e hoje) = variação histórica. A. B = o lugar é o mesmo (rua do Ouvidor); C não tem pista; D = a mudança é de época, não de formalidade; E = a carta usa a grafia da época.",
+   "ideia": "\"Vossa Mercê\" virou \"você\" e \"pharmacia\" virou \"farmácia\" com o passar do tempo. A língua muda com as épocas: é a variação histórica.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "livro",
+        "nome": "Variação histórica",
+        "formula": "a língua muda com o tempo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Data",
+        "1890 e hoje"
+       ],
+       [
+        "Mudança 1",
+        "Vossa Mercê → você"
+       ],
+       [
+        "Mudança 2",
+        "pharmacia → farmácia"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o tipo de variação.\nR = a causa das diferenças\nPor que a causa? Se a mudança veio com o tempo, é histórica. A data é a pista mais forte.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o tipo de variação (o que a questão quer)"
+       ],
+       [
+        "P",
+        "o que separa as duas frases"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar a E, porque \"pharmacia\" parece erro hoje. Mas em 1890 se escrevia assim.\nO que separa as frases: P = mais de um século."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = variação histórica\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "a época"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: texto antigo comparado com o de hoje → variação histórica; a escrita antiga não é erro, era a grafia da época.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "1890 e hoje"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = a causa"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = a época"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra A"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "A língua de 1890 estava errada?",
+    "opcoes": [
+     "Não, usava a grafia da época",
+     "Sim, toda ela",
+     "Só a ortografia",
+     "Só o \"Vossa Mercê\""
+    ],
+    "certa": "Não, usava a grafia da época",
+    "resposta": "Cada época tem o seu jeito de escrever."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-var-04",
+  "materia": "Português",
+  "tema": "Variação Linguística e Norma-Padrão",
+  "enunciado": "Um apresentador de TV ridiculariza no ar um entrevistado que disse \"as pessoa da minha rua\". Um linguista comenta, no dia seguinte: \"O entrevistado foi entendido por todos. Marcar o plural só no primeiro termo é uma regra que muitas variedades do português seguem. Na escrita formal, a norma-padrão pede 'as pessoas', e a escola deve ensiná-la; rir de quem fala diferente, porém, é preconceito.\" Para o linguista,",
+  "A": "o entrevistado não sabe falar português",
+  "B": "a fala do entrevistado segue uma regra da sua variedade, e a norma-padrão continua importante na escrita formal",
+  "C": "a norma-padrão deve deixar de ser ensinada",
+  "D": "a concordância nunca importa",
+  "E": "o apresentador falou errado ao corrigir",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "\"Regra que muitas variedades seguem\" + \"a norma pede... a escola deve ensinar\" = B. A = o contrário do que ele diz; C e D = exageros que o próprio texto nega; E = ele critica o riso, não a correção do apresentador.",
+   "ideia": "O linguista defende duas coisas ao mesmo tempo: a fala do entrevistado tem regra (não é \"não saber\") e a norma-padrão continua sendo pedida na escrita formal.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "fala",
+        "nome": "Preconceito linguístico",
+        "formula": "julgar a pessoa pela fala"
+       },
+       {
+        "figura": "texto",
+        "nome": "Opinião com dois lados",
+        "formula": "a certa não pode cortar um dos lados"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Lado 1",
+        "\"regra que muitas variedades seguem\""
+       ],
+       [
+        "Lado 2",
+        "\"a norma pede 'as pessoas'... a escola deve ensiná-la\""
+       ],
+       [
+        "Crítica",
+        "\"rir... é preconceito\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer a posição do linguista.\nR = os dois lados que ele defende, juntos\nPor que os dois? A banca difícil coloca letras que ficam com um lado só e exageram. A certa mantém o equilíbrio do texto.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "a posição do linguista (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "o que ele diz da fala"
+       ],
+       [
+        "P2",
+        "o que ele diz da norma"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (a fala)",
+     "texto": "P1 = tem regra, e todos entenderam. A letra A cai."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar a C: se a fala tem regra, a norma não precisaria ser ensinada. Mas ele diz que a escola DEVE ensiná-la.\nP2 = a norma continua importante na escrita formal."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = P1 + P2: a fala segue uma regra, e a norma continua importante\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "a fala tem regra"
+       ],
+       [
+        "P2",
+        "a norma vale na escrita formal"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: texto que defende dois lados → descarte as letras que ficam com um lado só ou exageram (nunca, deve deixar de); a certa junta os dois.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "2 lados + crítica"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = os dois juntos"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = tem regra; P2 = norma vale"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra B"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Rir do jeito de alguém falar é:",
+    "opcoes": [
+     "Preconceito linguístico",
+     "Ensinar a norma",
+     "Variação histórica",
+     "Regra da escola"
+    ],
+    "certa": "Preconceito linguístico",
+    "resposta": "Julgar a pessoa pela variedade que ela fala."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-var-05",
+  "materia": "Português",
+  "tema": "Variação Linguística e Norma-Padrão",
+  "enunciado": "Numa entrevista de emprego, um candidato diz ao recrutador: \"Tipo, eu sou muito bom nisso, tá ligado?\". No mesmo dia, num churrasco com os amigos, ele diz exatamente a mesma frase. Sobre as duas situações, a afirmação mais adequada é:",
+  "A": "a frase está errada nas duas, porque foge da norma-padrão",
+  "B": "a frase cabe na entrevista, porque mostra confiança",
+  "C": "a frase cabe no churrasco, mas não na entrevista, porque a adequação depende da situação",
+  "D": "a frase está certa nas duas, porque toda fala tem o mesmo valor em qualquer lugar",
+  "E": "a frase está errada no churrasco, porque amigos pedem linguagem formal",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "Mesma frase, situações diferentes: adequada no churrasco, inadequada na entrevista. C. A = \"errada\" ignora a situação; B e E = invertem as situações; D = ignora que a situação muda o que cabe.",
+   "ideia": "Não existe frase certa ou errada em qualquer lugar: existe frase adequada à situação. Entre amigos, a gíria cabe; numa entrevista, o momento pede mais formalidade.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "fala",
+        "nome": "Adequação",
+        "formula": "certo para quem, onde e quando?"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Situação 1",
+        "entrevista: recrutador, formal"
+       ],
+       [
+        "Situação 2",
+        "churrasco: amigos, informal"
+       ],
+       [
+        "Frase",
+        "\"Tipo... tá ligado?\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer a afirmação mais adequada.\nR = julgar a frase em CADA situação, separado\nPor que separado? A mesma frase pode caber numa situação e não caber na outra. Quem julga \"certo\" ou \"errado\" para as duas cai na pegadinha.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "a avaliação (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "a frase no churrasco"
+       ],
+       [
+        "P2",
+        "a frase na entrevista"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (churrasco)",
+     "texto": "Entre amigos, a gíria é comum: P1 = cabe."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar a A: gíria é \"errada\". Mas no churrasco ela cabe.\nNa entrevista, o momento pede formalidade: P2 = não cabe."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = cabe no churrasco, não na entrevista\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "cabe"
+       ],
+       [
+        "P2",
+        "não cabe"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: mesma frase em situações diferentes → julgue cada situação separada; fuja das letras que dizem \"certa nas duas\" ou \"errada nas duas\".",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "2 situações, 1 frase"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = julgar cada uma"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = cabe; P2 = não"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra C"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "\"Prezado senhor\" numa mensagem ao melhor amigo é:",
+    "opcoes": [
+     "Inadequado à situação",
+     "Erro de português",
+     "Gíria",
+     "Variação regional"
+    ],
+    "certa": "Inadequado à situação",
+    "resposta": "Formal demais para a situação."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-gra-01",
+  "materia": "Português",
+  "tema": "Gramática e Coesão",
+  "enunciado": "Leia: \"O time treinou duas vezes por dia durante todo o mês, contratou um preparador físico e estudou cada jogo do adversário. ______, perdeu a final por 3 a 0.\" A palavra que completa a lacuna, mantendo o sentido do texto, é",
+  "A": "Portanto",
+  "B": "Porque",
+  "C": "Além disso",
+  "D": "No entanto",
+  "E": "Assim",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "dificil",
+  "explicacao": {
+   "conferencia": "Preparo enorme × derrota = oposição: \"No entanto\". D. A e E = conclusão (como se perder fosse consequência do treino); B = causa; C = soma.",
+   "ideia": "A segunda parte contraria o que a primeira fazia esperar: o time se preparou muito e mesmo assim perdeu. Para ligar ideias que se opõem, usa-se um conectivo de oposição.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "texto",
+        "nome": "Conectivos",
+        "formula": "oposição: mas, no entanto · conclusão: portanto"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Parte 1",
+        "treinou, contratou, estudou"
+       ],
+       [
+        "Parte 2",
+        "perdeu a final por 3 a 0"
+       ],
+       [
+        "Lacuna",
+        "entre as duas"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o conectivo certo.\nR = a relação entre o que a parte 1 faz esperar e o que a parte 2 diz\nPor que a relação? O conectivo não tem sentido sozinho: ele mostra se a parte 2 confirma, explica ou contraria a 1.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o conectivo (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "o que a parte 1 faz esperar"
+       ],
+       [
+        "P2",
+        "o que aconteceu"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (a expectativa)",
+     "texto": "Tanto preparo faz esperar a vitória: P1 = ganhar."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar \"Portanto\", porque vem no fim. Mas \"portanto\" diria que perder foi consequência de treinar.\nP2 = perdeu: o contrário do esperado."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "P1 (ganhar) × P2 (perdeu) = oposição: No entanto\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "esperava ganhar"
+       ],
+       [
+        "P2",
+        "perdeu"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: lacuna entre duas frases → pergunte: a 2ª confirma, explica ou contraria a 1ª? Contraria = mas, no entanto, porém.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "preparo; derrota"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = a relação"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = ganhar; P2 = perdeu"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra D"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "\"Estudei muito; ___, tirei 10.\" Qual cabe?",
+    "opcoes": [
+     "Por isso",
+     "No entanto",
+     "Mas",
+     "Embora"
+    ],
+    "certa": "Por isso",
+    "resposta": "Tirar 10 é consequência de estudar: conclusão."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-gra-02",
+  "materia": "Português",
+  "tema": "Gramática e Coesão",
+  "enunciado": "Leia: \"Comprei um livro e um caderno na papelaria. O livro custou caro; o caderno, barato. Aquele eu li em dois dias; este já está quase cheio de anotações.\" No texto, as palavras \"aquele\" e \"este\" retomam, respectivamente,",
+  "A": "o caderno e o livro",
+  "B": "a papelaria e o livro",
+  "C": "o caderno e a papelaria",
+  "D": "o livro e a papelaria",
+  "E": "o livro e o caderno",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "dificil",
+  "explicacao": {
+   "conferencia": "\"Aquele\" = o mais distante (livro); \"este\" = o mais próximo (caderno). E. A = troca os dois; B, C e D trazem a papelaria, que não se lê nem se enche de anotação.",
+   "ideia": "Quando se retomam duas coisas citadas, \"este\" aponta para a mais perto (a citada por último) e \"aquele\" para a mais longe (a citada primeiro). E o sentido confirma: livro se lê; caderno se enche de anotações.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "texto",
+        "nome": "Este × aquele",
+        "formula": "este = citado por último · aquele = primeiro"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Ordem",
+        "1º livro, 2º caderno"
+       ],
+       [
+        "Aquele",
+        "\"eu li em dois dias\""
+       ],
+       [
+        "Este",
+        "\"quase cheio de anotações\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o que \"aquele\" e \"este\" retomam.\nR = a regra da distância + conferir pelo sentido\nPor que conferir pelo sentido? A regra resolve, e o verbo prova: livro é o que se lê; caderno é o que se enche.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "os dois termos retomados (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "o que \"aquele\" retoma"
+       ],
+       [
+        "P2",
+        "o que \"este\" retoma"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (aquele)",
+     "texto": "O mais longe da palavra é o livro, citado primeiro.\nE \"li em dois dias\" combina com livro. P1 = o livro."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo pensar que \"este\" é o primeiro, porque vem antes no costume. Mas \"este\" aponta para o mais perto.\nP2 = o caderno. E \"cheio de anotações\" confirma."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = o livro e o caderno\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "o livro"
+       ],
+       [
+        "P2",
+        "o caderno"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: este/aquele retomando dois termos → este = o último citado; aquele = o primeiro. Confira com o verbo de cada um.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "livro, caderno"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = regra + sentido"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = livro; P2 = caderno"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra E"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "\"Ana e Bia chegaram. Esta sorria.\" Quem sorria?",
+    "opcoes": [
+     "Bia",
+     "Ana",
+     "As duas",
+     "Ninguém"
+    ],
+    "certa": "Bia",
+    "resposta": "\"Esta\" = a citada por último."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-gra-03",
+  "materia": "Português",
+  "tema": "Gramática e Coesão",
+  "enunciado": "Leia: \"Os torcedores assistiram ao jogo da arquibancada. Depois da partida, o médico do clube assistiu os jogadores machucados no vestiário.\" Pela norma-padrão, sobre o verbo \"assistir\" nas duas frases, é correto afirmar que",
+  "A": "com \"ao\", significa \"ver\"; sem preposição, significa \"dar assistência, ajudar\"",
+  "B": "tem o mesmo sentido nas duas frases",
+  "C": "está errado na segunda frase, que deveria ter \"aos\"",
+  "D": "significa \"ajudar\" nas duas frases",
+  "E": "pede a preposição \"a\" nas duas frases, em qualquer sentido",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "\"Assistiram ao jogo\" = viram; \"assistiu os jogadores\" = cuidou. A. B = os sentidos são diferentes; C = com \"aos\" mudaria para \"viu os jogadores\"; D = os torcedores não ajudaram o jogo; E = no sentido de ajudar, não há preposição.",
+   "ideia": "Na norma-padrão, \"assistir a\" (com preposição) é ver, presenciar. Já \"assistir alguém\" (sem preposição) é dar assistência, cuidar: a preposição muda o sentido.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "fala",
+        "nome": "Regência de assistir",
+        "formula": "assistir A = ver · assistir alguém = ajudar"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Frase 1",
+        "\"assistiram AO jogo\""
+       ],
+       [
+        "Frase 2",
+        "\"assistiu OS jogadores\""
+       ],
+       [
+        "Diferença",
+        "com e sem preposição"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o que muda no verbo.\nR = o sentido em cada frase, pela preposição\nPor que a preposição? Alguns verbos mudam de sentido com ela. Assistir é o mais cobrado.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "a afirmação certa (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "o sentido com \"ao\""
+       ],
+       [
+        "P2",
+        "o sentido sem preposição"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (com \"ao\")",
+     "texto": "Torcedores na arquibancada: P1 = viram o jogo."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar a C: \"assistir\" sempre pediria \"a\". Mas, no sentido de ajudar, ele não tem preposição.\nO médico no vestiário: P2 = cuidou dos jogadores."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = com \"ao\" é ver; sem preposição é dar assistência\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "ver"
+       ],
+       [
+        "P2",
+        "ajudar"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: verbo que aparece duas vezes, com e sem preposição → descubra o sentido de cada um pelo contexto; a preposição muda o sentido.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "ao jogo; os jogadores"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = sentido pela preposição"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = ver; P2 = ajudar"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra A"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "\"A enfermeira assistiu o doente.\" Ela:",
+    "opcoes": [
+     "Cuidou do doente",
+     "Viu o doente na TV",
+     "Ficou doente",
+     "Ignorou o doente"
+    ],
+    "certa": "Cuidou do doente",
+    "resposta": "Sem preposição: dar assistência."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-gra-04",
+  "materia": "Português",
+  "tema": "Gramática e Coesão",
+  "enunciado": "Numa reportagem policial: \"Depois de dois dias de buscas, o policial encontrou o suspeito em sua casa.\" Um leitor reclamou que a frase é ambígua. A reclamação procede porque",
+  "A": "a frase não diz quando foi a busca",
+  "B": "\"sua casa\" pode ser a casa do policial ou a do suspeito",
+  "C": "o verbo \"encontrou\" está no passado",
+  "D": "a frase não diz o nome do suspeito",
+  "E": "falta uma vírgula depois de \"policial\"",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "\"Sua casa\" = do policial ou do suspeito: ambiguidade. B. A = o tempo está dito (\"dois dias\"); C não causa dois sentidos; D é falta de informação, não ambiguidade; E = vírgula ali estaria errada.",
+   "ideia": "\"Sua\" pode se referir aos dois homens da frase. Não dá para saber de quem é a casa: isso é ambiguidade (dois sentidos possíveis).",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "fala",
+        "nome": "Ambiguidade",
+        "formula": "uma frase com dois sentidos possíveis"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Frase",
+        "\"encontrou o suspeito em sua casa\""
+       ],
+       [
+        "Homens citados",
+        "o policial e o suspeito"
+       ],
+       [
+        "Palavra suspeita",
+        "\"sua\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o motivo da ambiguidade.\nR = a palavra que pode apontar para mais de um termo\nPor que \"sua\"? Ela retoma uma pessoa, e a frase tem duas que servem. Possessivo com dois donos possíveis é a ambiguidade mais cobrada.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o motivo (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "quantos donos \"sua\" pode ter"
+       ],
+       [
+        "P2",
+        "se falta informação ou sobra sentido"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (os donos)",
+     "texto": "P1 = dois: o policial e o suspeito."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar a D: falta o nome do suspeito. Mas faltar informação não é ambiguidade.\nAmbiguidade é SOBRAR sentido: P2 = a frase pode ser lida de 2 jeitos."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = \"sua casa\" pode ser de um ou de outro\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "dois donos"
+       ],
+       [
+        "P2",
+        "dois sentidos"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pergunta de ambiguidade → procure \"seu, sua, dele\" com dois donos possíveis; falta de informação não é ambiguidade.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "frase, 2 homens, \"sua\""
+       ],
+       [
+        "2. A regra em palavras",
+        "R = palavra de dois donos"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = 2 donos; P2 = 2 sentidos"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra B"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Para desfazer: \"o policial encontrou o suspeito ___\"",
+    "opcoes": [
+     "na casa deste",
+     "em sua casa",
+     "na sua casa dele",
+     "em casa sua"
+    ],
+    "certa": "na casa deste",
+    "resposta": "\"Deste\" retoma o último citado: o suspeito."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-fig-01",
+  "materia": "Português",
+  "tema": "Funções e Figuras de Linguagem",
+  "enunciado": "Compare as duas frases, ditas por uma professora de literatura: I. \"A vida é como uma estrada cheia de curvas.\" II. \"A vida é uma estrada cheia de curvas.\" Sobre as figuras de linguagem, é correto dizer que",
+  "A": "as duas são metáforas",
+  "B": "as duas são comparações",
+  "C": "I é comparação, porque usa \"como\"; II é metáfora, porque diz direto que uma coisa é a outra",
+  "D": "I é metáfora e II é comparação",
+  "E": "nenhuma das duas tem figura de linguagem",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "dificil",
+  "explicacao": {
+   "conferencia": "I com \"como\" = comparação; II sem \"como\" = metáfora. C. A e B juntam as duas; D inverte; E ignora o sentido figurado.",
+   "ideia": "A comparação aproxima duas coisas com uma palavra de ligação (\"como\", \"feito\", \"igual a\"). A metáfora tira essa palavra e diz direto: a vida É uma estrada.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "fala",
+        "nome": "Comparação",
+        "formula": "tem \"como\": A é como B"
+       },
+       {
+        "figura": "fala",
+        "nome": "Metáfora",
+        "formula": "sem \"como\": A é B"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Frase I",
+        "\"é COMO uma estrada\""
+       ],
+       [
+        "Frase II",
+        "\"é uma estrada\""
+       ],
+       [
+        "Diferença",
+        "só a palavra \"como\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer a figura de cada frase.\nR = olhar a palavra de ligação em cada frase\nPor que a palavra de ligação? É ela que separa as duas figuras; o resto das frases é igual.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "as figuras (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "a figura da frase I"
+       ],
+       [
+        "P2",
+        "a figura da frase II"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (frase I)",
+     "texto": "Tem \"como\": P1 = comparação."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo dizer que as duas são metáforas, porque falam a mesma coisa. Mas só a II diz direto, sem \"como\".\nP2 = metáfora."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = I comparação, II metáfora\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "comparação"
+       ],
+       [
+        "P2",
+        "metáfora"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: duas frases quase iguais → ache a única palavra que muda; \"como\" = comparação, sem ele = metáfora.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "I com como; II sem"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = palavra de ligação"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = comparação; P2 = metáfora"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra C"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "\"Seus olhos são duas estrelas\" é:",
+    "opcoes": [
+     "Metáfora",
+     "Comparação",
+     "Hipérbole",
+     "Ironia"
+    ],
+    "certa": "Metáfora",
+    "resposta": "Diz que é, sem \"como\"."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-fig-02",
+  "materia": "Português",
+  "tema": "Funções e Figuras de Linguagem",
+  "enunciado": "Propaganda de uma academia, num cartaz no ponto de ônibus: \"Você merece se sentir bem. Venha treinar com a gente: a primeira semana é por nossa conta!\" A função da linguagem que predomina nesse texto é a",
+  "A": "referencial, que só informa um fato",
+  "B": "emotiva, que mostra os sentimentos de quem escreve",
+  "C": "metalinguística, que explica a própria língua",
+  "D": "apelativa, que tenta convencer o leitor a agir",
+  "E": "poética, que cuida da beleza da forma",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "dificil",
+  "explicacao": {
+   "conferencia": "\"Você\" + verbo de ordem + oferta = função apelativa. D. A = não é só informação; B = o foco não é quem escreve; C = não explica a língua; E = a forma não é o centro.",
+   "ideia": "O texto fala com o leitor (\"você\"), dá uma ordem (\"venha\") e oferece uma vantagem. Tudo para fazer o leitor agir: é a função apelativa (ou conativa).",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "fala",
+        "nome": "Função apelativa",
+        "formula": "fala com VOCÊ para você agir"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Pessoa",
+        "\"Você merece\""
+       ],
+       [
+        "Verbo",
+        "\"Venha\""
+       ],
+       [
+        "Oferta",
+        "\"primeira semana por nossa conta\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer a função que predomina.\nR = para quem o texto aponta e o que ele quer\nPor que \"para quem\"? Cada função tem um foco: no fato (referencial), em quem fala (emotiva), em quem lê (apelativa).\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "a função (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "para quem o texto aponta"
+       ],
+       [
+        "P2",
+        "o que ele quer do leitor"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (o foco)",
+     "texto": "\"Você\", \"venha\": P1 = o leitor."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar a emotiva, porque fala em \"se sentir bem\". Mas o sentimento é do leitor, e o texto quer que ele vá treinar.\nP2 = que o leitor aja."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = função apelativa\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "o leitor"
+       ],
+       [
+        "P2",
+        "agir"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: propaganda, campanha ou pedido → \"você\" + verbo de ordem = função apelativa.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "você, venha, oferta"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = o foco do texto"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = leitor; P2 = agir"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra D"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "\"Vote em mim!\" tem função:",
+    "opcoes": [
+     "Apelativa",
+     "Referencial",
+     "Emotiva",
+     "Metalinguística"
+    ],
+    "certa": "Apelativa",
+    "resposta": "Quer que o leitor aja."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-fig-03",
+  "materia": "Português",
+  "tema": "Funções e Figuras de Linguagem",
+  "enunciado": "Leia o poema: \"Escrevo este verso / e já me arrependo: / a palavra que eu queria / não cabe no papel. / Risco, troco, reescrevo — / e o poema, teimoso, / só fica pronto / quando fala de si mesmo.\" A função da linguagem que predomina no poema é a",
+  "A": "referencial, porque informa como se faz papel",
+  "B": "apelativa, porque manda o leitor escrever",
+  "C": "emotiva, porque o poeta está triste",
+  "D": "fática, porque testa se o leitor está ouvindo",
+  "E": "metalinguística, porque o poema fala do próprio ato de escrever um poema",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "Poema sobre escrever o poema (\"fala de si mesmo\") = metalinguagem predominante. E. A = não informa sobre papel; B = não há ordem ao leitor; C = o arrependimento existe, mas o centro é o ato de escrever; D = não há teste do canal.",
+   "ideia": "Todo poema tem algo de emoção e de função poética, mas o ASSUNTO deste é o próprio ato de escrever, riscar e reescrever. Quando a linguagem fala de si mesma, predomina a metalinguística.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "livro",
+        "nome": "Metalinguagem",
+        "formula": "a linguagem falando de si mesma"
+       },
+       {
+        "figura": "texto",
+        "nome": "Predominar",
+        "formula": "a função do ASSUNTO central"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Assunto",
+        "escrever um verso"
+       ],
+       [
+        "Ações",
+        "risco, troco, reescrevo"
+       ],
+       [
+        "Último verso",
+        "\"quando fala de si mesmo\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer a função que predomina.\nR = a função do assunto central, não a de um detalhe\nPor que o assunto central? O poema tem emoção e beleza (como todo poema), mas a banca pede a que PREDOMINA: a do assunto.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "a função predominante (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "o assunto do poema"
+       ],
+       [
+        "P2",
+        "a função desse assunto"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (o assunto)",
+     "texto": "Escrever, riscar, reescrever o verso: P1 = o próprio ato de escrever o poema."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar a emotiva: o poeta \"se arrepende\". Mas o arrependimento é um detalhe; o tema é o poema sendo feito.\nPoema falando de poema: P2 = metalinguística."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = função metalinguística\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "o fazer poético"
+       ],
+       [
+        "P2",
+        "metalinguística"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pergunta de função \"predominante\" → ache o assunto central; poema sobre fazer poema, ou palavra explicando palavra = metalinguística.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "assunto, ações, fim"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = função do assunto"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = escrever; P2 = metalinguagem"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra E"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um dicionário explicando o que é \"verbo\" tem função:",
+    "opcoes": [
+     "Metalinguística",
+     "Emotiva",
+     "Apelativa",
+     "Fática"
+    ],
+    "certa": "Metalinguística",
+    "resposta": "Usa a língua para falar da língua."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-fig-04",
+  "materia": "Português",
+  "tema": "Funções e Figuras de Linguagem",
+  "enunciado": "Numa reunião de condomínio, o síndico disse sobre um morador: \"Ele faltou com a verdade sobre a reforma.\" Logo depois, irritado, completou: \"Eu já avisei sobre esse barulho um milhão de vezes!\" Nas duas falas, há, respectivamente,",
+  "A": "eufemismo e hipérbole",
+  "B": "hipérbole e eufemismo",
+  "C": "ironia e metáfora",
+  "D": "metáfora e comparação",
+  "E": "eufemismo e ironia",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "Suavizar \"mentiu\" = eufemismo; exagerar o número de avisos = hipérbole. A. B inverte; C = nenhuma das falas diz o contrário do que pensa (ironia); D e E não descrevem as duas.",
+   "ideia": "\"Faltou com a verdade\" é um jeito suave de dizer \"mentiu\": eufemismo. \"Um milhão de vezes\" exagera de propósito: hipérbole.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "fala",
+        "nome": "Eufemismo",
+        "formula": "suaviza: \"faltou com a verdade\" = mentiu"
+       },
+       {
+        "figura": "fala",
+        "nome": "Hipérbole",
+        "formula": "exagera: \"um milhão de vezes\""
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Fala 1",
+        "\"faltou com a verdade\""
+       ],
+       [
+        "Fala 2",
+        "\"um milhão de vezes\""
+       ],
+       [
+        "Ordem pedida",
+        "respectivamente: 1ª, depois 2ª"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer as figuras, na ordem.\nR = a figura da fala 1 + a figura da fala 2, nessa ordem\nPor que a ordem? \"Respectivamente\" cobra a sequência. A banca coloca as mesmas figuras invertidas para pegar quem acerta e troca.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o par de figuras (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "a figura da fala 1"
+       ],
+       [
+        "P2",
+        "a figura da fala 2"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (fala 1)",
+     "texto": "Dizer \"mentiu\" seria duro. \"Faltou com a verdade\" suaviza: P1 = eufemismo."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar a E, achando que \"um milhão\" é ironia. Mas ele não diz o contrário do que pensa: ele exagera.\nP2 = hipérbole."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = eufemismo e hipérbole, nessa ordem\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "eufemismo"
+       ],
+       [
+        "P2",
+        "hipérbole"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pergunta com \"respectivamente\" → ache a figura de cada trecho na ordem e só depois procure a letra; desconfie da letra com o par invertido.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "2 falas, ordem"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = par na ordem"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = eufemismo; P2 = hipérbole"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra A"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "\"Ele nos deixou\" no lugar de \"ele morreu\" é:",
+    "opcoes": [
+     "Eufemismo",
+     "Hipérbole",
+     "Ironia",
+     "Comparação"
+    ],
+    "certa": "Eufemismo",
+    "resposta": "Suaviza uma ideia dura."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-lit-01",
+  "materia": "Português",
+  "tema": "Literatura Brasileira",
+  "enunciado": "Os versos \"Minha terra tem palmeiras, / Onde canta o Sabiá\", de Gonçalves Dias, exaltam a natureza do Brasil. Eles pertencem a qual movimento literário?",
+  "A": "Modernismo",
+  "B": "Romantismo",
+  "C": "Barroco",
+  "D": "Parnasianismo",
+  "E": "Arcadismo",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "Gonçalves Dias, \"Canção do exílio\", 1843, nacionalismo e natureza = Romantismo. B. A = 1922 em diante; C = séc. XVII; D = fim do séc. XIX; E = séc. XVIII.",
+   "ideia": "\"Canção do exílio\" (1843) é do Romantismo: o poeta, longe do país, exalta a natureza brasileira. Exaltar a pátria e a natureza é marca da 1ª geração romântica.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "livro",
+        "nome": "Romantismo (1ª geração)",
+        "formula": "pátria, natureza, saudade da terra"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Autor",
+        "Gonçalves Dias"
+       ],
+       [
+        "Tema",
+        "palmeiras, sabiá: a natureza do país"
+       ],
+       [
+        "Tom",
+        "exaltação, saudade"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o movimento.\nR = o movimento que tem esse autor e esse tema\nPor que autor e tema? Os dois juntos apontam para um movimento só. Natureza exaltada e saudade da pátria são o centro da 1ª geração romântica.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o movimento (o que a questão quer)"
+       ],
+       [
+        "P",
+        "o tema dos versos"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar o Modernismo, porque o verso é muito conhecido até hoje. Mas ele é de 1843.\nP = exaltação da natureza e da pátria: Romantismo."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = Romantismo\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "natureza + pátria"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: verso que exalta a natureza e a pátria, com saudade → Romantismo (1ª geração).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "autor, tema, tom"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = autor + tema"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = natureza e pátria"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra B"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Exaltar a pátria e a natureza é marca do:",
+    "opcoes": [
+     "Romantismo",
+     "Realismo",
+     "Parnasianismo",
+     "Barroco"
+    ],
+    "certa": "Romantismo",
+    "resposta": "Nacionalismo da 1ª geração romântica."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-lit-02",
+  "materia": "Português",
+  "tema": "Literatura Brasileira",
+  "enunciado": "Em fevereiro de 1922, no Theatro Municipal de São Paulo, artistas e escritores fizeram a Semana de Arte Moderna, com a ideia de romper com as regras antigas da arte. Esse evento marcou o início de qual movimento no Brasil?",
+  "A": "Romantismo",
+  "B": "Realismo",
+  "C": "Modernismo",
+  "D": "Arcadismo",
+  "E": "Simbolismo",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "Semana de 22, São Paulo, ruptura = início do Modernismo. C. A, B, D e E são movimentos anteriores a 1922.",
+   "ideia": "A Semana de Arte Moderna de 1922 é o marco do Modernismo brasileiro: liberdade de forma, linguagem do dia a dia e um olhar novo sobre o Brasil.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "livro",
+        "nome": "Modernismo",
+        "formula": "1922: ruptura, verso livre, fala do dia a dia"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Data",
+        "1922"
+       ],
+       [
+        "Evento",
+        "Semana de Arte Moderna"
+       ],
+       [
+        "Ideia",
+        "romper com as regras antigas"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o movimento.\nR = o movimento que começa com esse evento\nPor que o evento? Alguns movimentos têm um marco de data. A Semana de 22 é o marco do Modernismo.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o movimento (o que a questão quer)"
+       ],
+       [
+        "P",
+        "o nome do evento"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo marcar o Realismo, por ser \"real\" e moderno. Mas o Realismo é do século XIX.\nP = Semana de Arte MODERNA: o nome já dá a pista."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = Modernismo\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "Semana de Arte Moderna"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: data 1922 ou Semana de Arte Moderna → Modernismo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "1922, Semana"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = o marco"
+       ],
+       [
+        "3. Ache cada pista",
+        "P = Semana de 22"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra C"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Verso livre e fala do dia a dia são marcas do:",
+    "opcoes": [
+     "Modernismo",
+     "Parnasianismo",
+     "Arcadismo",
+     "Barroco"
+    ],
+    "certa": "Modernismo",
+    "resposta": "O Modernismo rompeu com a forma fixa."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-lit-03",
+  "materia": "Português",
+  "tema": "Literatura Brasileira",
+  "enunciado": "Um professor descreve um poeta brasileiro do fim do século XIX: \"Ele escrevia sonetos com rimas raras e versos de medida exata. Descrevia um vaso grego com cuidado de ourives, polindo cada palavra, e evitava falar de política ou dos próprios sentimentos. Para ele, a arte valia por si mesma.\" As características descritas apontam para o",
+  "A": "Romantismo, pela exaltação da pátria",
+  "B": "Modernismo, pelo verso livre",
+  "C": "Realismo, pela crítica à sociedade",
+  "D": "Parnasianismo, pela forma perfeita e pela \"arte pela arte\"",
+  "E": "Barroco, pelos contrastes religiosos",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "dificil",
+  "explicacao": {
+   "conferencia": "Soneto, rima rara, ourives, objeto clássico, sem sentimento, arte pela arte = Parnasianismo. D. A = não há pátria nem sentimento; B = é o contrário (verso livre); C = ele evita a sociedade; E = séc. XVII, tema religioso.",
+   "ideia": "Forma perfeita (soneto, rima rara, medida exata), objetos descritos com cuidado e \"a arte vale por si mesma\" (\"arte pela arte\") são as marcas do Parnasianismo, de Olavo Bilac e Alberto de Oliveira.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "livro",
+        "nome": "Parnasianismo",
+        "formula": "forma perfeita, soneto, \"arte pela arte\""
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Forma",
+        "soneto, rima rara, medida exata"
+       ],
+       [
+        "Tema",
+        "vaso grego, sem sentimento"
+       ],
+       [
+        "Ideia",
+        "\"a arte valia por si mesma\""
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o movimento.\nR = o movimento que junta forma perfeita e arte pela arte\nPor que juntar? Rima e soneto aparecem em outros movimentos. A forma perfeita SEM emoção e SEM crítica social é só do Parnasianismo.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o movimento (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "a forma"
+       ],
+       [
+        "P2",
+        "o que ele evita"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (a forma)",
+     "texto": "Soneto, rima rara, medida exata, \"polindo cada palavra\": P1 = forma perfeita."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar o Realismo, porque é da mesma época. Mas o Realismo critica a sociedade, e este poeta evita política.\nP2 = sem sentimento e sem crítica: arte pela arte."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = Parnasianismo\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "forma perfeita"
+       ],
+       [
+        "P2",
+        "arte pela arte"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: descrição de poeta com soneto, rima rara, objeto clássico e sem emoção → Parnasianismo (Olavo Bilac).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "forma, tema, ideia"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = forma + arte pela arte"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = perfeita; P2 = sem emoção"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra D"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "\"Arte pela arte\" é lema do:",
+    "opcoes": [
+     "Parnasianismo",
+     "Modernismo",
+     "Romantismo",
+     "Arcadismo"
+    ],
+    "certa": "Parnasianismo",
+    "resposta": "A forma perfeita vale por si."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-lit-04",
+  "materia": "Português",
+  "tema": "Literatura Brasileira",
+  "enunciado": "Um romance publicado em 1881 é narrado por um homem que já morreu. Do além, sem medo de ser julgado, ele conta a própria vida com ironia e mostra o egoísmo e a vaidade da elite do Rio de Janeiro do século XIX. O livro é considerado o marco de um movimento literário no Brasil. Essas características apontam para",
+  "A": "o Romantismo, com seu herói idealizado",
+  "B": "o Modernismo, com sua linguagem do dia a dia",
+  "C": "o Arcadismo, com sua vida simples no campo",
+  "D": "o Parnasianismo, com sua poesia de forma perfeita",
+  "E": "o Realismo, de Machado de Assis, em \"Memórias póstumas de Brás Cubas\"",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "dificil",
+  "explicacao": {
+   "conferencia": "1881 + narrador morto + ironia + crítica à elite = \"Memórias póstumas de Brás Cubas\", marco do Realismo. E. A = o narrador não é herói idealizado; B = 1922 em diante; C = séc. XVIII; D é poesia, não romance.",
+   "ideia": "\"Memórias póstumas de Brás Cubas\" (1881), de Machado de Assis, tem o narrador defunto e a ironia que expõe a elite. O livro marca o início do Realismo no Brasil.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "livro",
+        "nome": "Realismo",
+        "formula": "1881, Machado de Assis, ironia, crítica à elite"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Data",
+        "1881"
+       ],
+       [
+        "Narrador",
+        "um defunto"
+       ],
+       [
+        "Tom",
+        "ironia contra a elite"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o movimento.\nR = o movimento que mostra a sociedade como ela é, sem idealizar\nPor que \"sem idealizar\"? O Romantismo idealizava herói e amor. O Realismo mostra o egoísmo e a vaidade, com crítica.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o movimento (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "a data"
+       ],
+       [
+        "P2",
+        "o jeito de mostrar a sociedade"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (a data)",
+     "texto": "1881: fim do século XIX. Modernismo (1922) e Arcadismo (século XVIII) caem."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar o Romantismo, porque é um romance. Mas romance é o tipo de livro; o Romantismo idealiza, e aqui há ironia e crítica.\nP2 = sociedade sem idealizar."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = Realismo, de Machado de Assis\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "1881"
+       ],
+       [
+        "P2",
+        "crítica com ironia"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: romance de fim do séc. XIX com ironia e crítica à elite → Realismo (Machado). \"Romance\" é o tipo de livro, não o movimento.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "1881, defunto, ironia"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = sem idealizar"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = 1881; P2 = crítica"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra E"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Crítica à sociedade e ironia, no fim do séc. XIX, apontam para:",
+    "opcoes": [
+     "Realismo",
+     "Romantismo",
+     "Arcadismo",
+     "Barroco"
+    ],
+    "certa": "Realismo",
+    "resposta": "O Realismo mostra a sociedade sem idealizar."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-lit-05",
+  "materia": "Português",
+  "tema": "Literatura Brasileira",
+  "enunciado": "Em 1843, Gonçalves Dias escreveu: \"Minha terra tem palmeiras, / Onde canta o Sabiá\". Em 1925, o modernista Oswald de Andrade reescreveu o verso como \"Minha terra tem palmares\". Trocar \"palmeiras\" por \"palmares\" lembra o Quilombo dos Palmares, comunidade de pessoas escravizadas que fugiram e resistiram por décadas. Com essa troca, Oswald",
+  "A": "faz uma paródia que troca a natureza idealizada pela história de resistência do país, com olhar crítico",
+  "B": "copia o poema romântico para homenagear a natureza",
+  "C": "corrige um erro de ortografia de Gonçalves Dias",
+  "D": "mostra que não conhecia o poema original",
+  "E": "defende a volta das regras do Romantismo",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "Verso romântico + troca por \"palmares\" + 1925 = paródia modernista crítica. A. B = ele não homenageia, transforma; C = não é erro; D = só reescreve quem conhece; E = o Modernismo rompe com o Romantismo.",
+   "ideia": "Oswald imita o verso famoso para dizer outra coisa: no lugar da paisagem bonita e idealizada, põe a história de violência e resistência. Imitar para criticar é paródia, marca do Modernismo.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "livro",
+        "nome": "Paródia",
+        "formula": "imita um texto para dar outro sentido"
+       },
+       {
+        "figura": "livro",
+        "nome": "Modernismo × Romantismo",
+        "formula": "crítica × natureza idealizada"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Original",
+        "1843, \"palmeiras\", Romantismo"
+       ],
+       [
+        "Nova versão",
+        "1925, \"palmares\", Modernismo"
+       ],
+       [
+        "Palmares",
+        "quilombo, resistência"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o que Oswald faz com a troca.\nR = o que a troca de UMA palavra muda no sentido\nPor que uma palavra só? A paródia mantém quase tudo igual para o leitor reconhecer o original, e muda o ponto que vira a crítica.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o efeito da troca (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "o que \"palmeiras\" mostra"
+       ],
+       [
+        "P2",
+        "o que \"palmares\" mostra"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (palmeiras)",
+     "texto": "P1 = a natureza bonita e idealizada do Romantismo."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar a B: ele repete o verso, então homenageia. Mas a palavra trocada traz a escravidão e a resistência, que a paisagem bonita escondia.\nP2 = a história de luta do país."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = paródia: troca P1 por P2, com olhar crítico\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "natureza idealizada"
+       ],
+       [
+        "P2",
+        "resistência"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: texto modernista que reescreve um verso famoso → compare a palavra antiga com a nova; a troca mostra a crítica (paródia).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "original, nova versão"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = o que a troca muda"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = natureza; P2 = resistência"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra A"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Imitar um texto famoso para dar outro sentido, com crítica, é:",
+    "opcoes": [
+     "Paródia",
+     "Cópia",
+     "Resumo",
+     "Tradução"
+    ],
+    "certa": "Paródia",
+    "resposta": "Imitação que muda o sentido."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-por-lit-06",
+  "materia": "Português",
+  "tema": "Literatura Brasileira",
+  "enunciado": "O poema \"No meio do caminho\", de Carlos Drummond de Andrade, publicado em 1928, repete várias vezes o verso \"No meio do caminho tinha uma pedra\". Na época, muitos leitores acharam o poema simples demais e se incomodaram com a repetição. O verso usa \"tinha\", como na fala do dia a dia, no lugar do \"havia\" da norma formal. Essa escolha do poeta",
+  "A": "mostra que ele não conhecia a norma-padrão",
+  "B": "é marca do Modernismo, que aproximou a poesia da fala do dia a dia",
+  "C": "segue as regras do Parnasianismo",
+  "D": "imita a linguagem dos documentos oficiais",
+  "E": "é um erro que os editores esqueceram de corrigir",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "\"Tinha\" (fala do dia a dia) + repetição + incômodo do público em 1928 = ruptura modernista. B. A = foi escolha; C = o Parnasianismo é o oposto; D = documento oficial usaria \"havia\"; E = o poeta manteve de propósito.",
+   "ideia": "O Modernismo trouxe para a poesia a língua falada no dia a dia (\"tinha uma pedra\") e a repetição. O incômodo dos leitores mostra a ruptura com a poesia \"bem-comportada\" de antes.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "A regra desta questão",
+     "texto": "Esta é a regra que a questão usa. Já está pronta: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "livro",
+        "nome": "Modernismo",
+        "formula": "fala do dia a dia na poesia, ruptura"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, separe as pistas do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Verso",
+        "\"tinha uma pedra\""
+       ],
+       [
+        "Norma formal",
+        "\"havia uma pedra\""
+       ],
+       [
+        "Reação",
+        "leitores incomodados, 1928"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A regra em palavras",
+     "texto": "A questão quer o que a escolha do \"tinha\" mostra.\nR = a escolha + o movimento da época\nPor que a época? Em 1928, o Modernismo trazia a fala comum para a poesia. A reação do público é a pista da ruptura.\nAgora é só achar cada pista.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "R",
+        "o sentido da escolha (o que a questão quer)"
+       ],
+       [
+        "P1",
+        "de onde vem o \"tinha\""
+       ],
+       [
+        "P2",
+        "o que o incômodo mostra"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P1 (o \"tinha\")",
+     "texto": "No dia a dia se diz \"tinha uma pedra\": P1 = fala comum."
+    },
+    {
+     "titulo": "Achando P2: o seu jeito",
+     "texto": "Parece certo marcar a A: se não usou \"havia\", não conhecia a norma. Mas um grande poeta escolhe a palavra de propósito.\nO público se incomodou porque esperava a poesia de antes: P2 = ruptura."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R = marca do Modernismo: poesia perto da fala do dia a dia\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P1",
+        "fala comum"
+       ],
+       [
+        "P2",
+        "ruptura"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: poeta modernista com palavra \"do dia a dia\" → é escolha (ruptura), nunca falta de conhecimento.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Separe as pistas",
+        "tinha, havia, reação"
+       ],
+       [
+        "2. A regra em palavras",
+        "R = escolha + época"
+       ],
+       [
+        "3. Ache cada pista",
+        "P1 = fala comum; P2 = ruptura"
+       ],
+       [
+        "4. Compare com as letras",
+        "letra B"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Por que o público se incomodou?",
+    "opcoes": [
+     "O poema rompia com a poesia de antes",
+     "O poema era longo demais",
+     "Faltavam rimas ricas",
+     "O poema era estrangeiro"
+    ],
+    "certa": "O poema rompia com a poesia de antes",
+    "resposta": "A ruptura chocava quem esperava forma \"elegante\"."
+   }
+  }
+ }
+]
