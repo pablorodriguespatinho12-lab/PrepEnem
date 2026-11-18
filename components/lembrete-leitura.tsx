@@ -9,8 +9,8 @@ import { LivrosDaLeitura } from './livros-da-leitura';
 const CHAVE_FECHADO = 'prepenem-leitura-fechado';
 // Provas, Simulado e Treino: o cartão no canto cobria o Confirmar e, no
 // celular, os botões de Criar prova (22/10/2026). Treino por partes: cobria
-// o Próximo da barra de baixo (27/10/2026).
-const TELA_DE_QUESTAO = /^\/(provas|simulado|treino|redacao\/partes)(\/|$)/;
+// o Próximo da barra de baixo (27/10/2026). Aulas do Descobrir: cobria o Próximo (17/11/2026).
+const TELA_DE_QUESTAO = /^\/(provas|simulado|treino|redacao\/partes|descobrir\/[^/]+)(\/|$)/;
 /* bottom-4 (16 px) + 16 px de folga entre o conteúdo e o cartão. */
 const ESPACO_ABAIXO_PX = 32;
 

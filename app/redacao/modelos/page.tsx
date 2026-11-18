@@ -34,7 +34,7 @@ export default function RedacaoModelosPage() {
             onClick={() => setId(m.id)}
             className={`px-3 py-1.5 rounded-[var(--radius-control)] border type-meta t-colors ${m.id === id ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:bg-muted'}`}
           >
-            <span data-numeric>{m.trio ? `Trio ${m.trio} · ${m.rotulo ?? m.anoEnem}` : `ENEM ${m.anoEnem}`}</span>
+            <span data-numeric>{m.rotulo ?? `ENEM ${m.anoEnem}`}</span>
           </button>
         ))}
       </div>
@@ -50,7 +50,7 @@ export default function RedacaoModelosPage() {
           <p className="type-caption text-muted-foreground mb-1" data-numeric>Tema · ENEM {modelo.anoEnem}</p>
           <h2 id="tema-modelo" className="font-display type-lead font-semibold">{modelo.tema}</h2>
           <p className="type-meta text-muted-foreground mt-2 measure-reading">{modelo.contexto}</p>
-          {modelo.trio && <p className="type-meta text-muted-foreground mt-2 measure-reading">Trio {modelo.trio}. {quemVaiNoTrio(modelo.trio)}</p>}
+          {modelo.trio && <p className="type-meta text-muted-foreground mt-2 measure-reading">{quemVaiNoTrio(modelo.trio)}</p>}
         </header>
         {ORDEM_PARTES.map((parte) => (
           <section key={parte} className="surface-1 rounded-[var(--radius-surface)] p-6" aria-labelledby={`parte-${parte}`}>

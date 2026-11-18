@@ -160,6 +160,8 @@ Marca errado de propósito, abre todos os passos e procura fórmula quebrada, La
 cru, passo sem desenho e letra certa diferente do banco. Em 10/11/2026: 160
 questões, 840 passos, ~15 min; `--ate=5 --largura=390` para o celular.
 
+Em prova com reforço, errar troca "Próxima" por "Tentar uma parecida" e o varredor trava (17/11/2026): use `--so-escada --fotos=<pasta>` para abrir só as questões novas `d2-escada-` com foto do 1º passo; a última de cada prova ainda fica sem varrer.
+
 `scripts/varrer-telas.mts` (antes `geral.cjs` no scratchpad): abre as telas em
 1366 px e 375 px, com o cookie da sessão, e **devolve `{}` a todo POST/PUT/DELETE
 em `/api/**`** (menos `/api/caneta`, que só converte conta): assim nada grava na

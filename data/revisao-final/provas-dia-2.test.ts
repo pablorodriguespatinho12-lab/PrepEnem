@@ -3,6 +3,7 @@ import { existsSync, readFileSync, readdirSync } from 'fs';
 import { join } from 'path';
 import { frases, validarExplicacao } from '@/lib/tutor/validar';
 import { problemasDaExplicacao } from '@/lib/tutor/pronta';
+import { ESCADAS } from '@/data/escadas';
 
 // Provas do dia 2 (data/revisao-final/dia-2/LEIA-ME.md): confere o que o código
 // consegue conferir antes de o Pablo gravar no banco. Fato e conta ficam com o
@@ -195,6 +196,29 @@ describe('nível acima do dia 2', () => {
       });
     });
   }
+});
+
+/* Questões que completam as provas em escada (Pablo, 17/11/2026): uma por arquivo de
+   matéria em data/revisao-final/escada, cada uma com o degrau em `nivel`. Mesma
+   conferência das provas, sempre no jeito do robô. */
+const PASTA_ESCADA = join(process.cwd(), 'data/revisao-final/escada');
+const NIVEIS_ESCADA = ['facil', 'medio', 'dificil', 'acima'];
+describe('questões das provas em escada', () => {
+  const arquivos = existsSync(PASTA_ESCADA) ? readdirSync(PASTA_ESCADA).filter((f) => f.endsWith('.json')) : [];
+  const todas = arquivos.flatMap((f) => JSON.parse(readFileSync(join(PASTA_ESCADA, f), 'utf8')) as (Questao & { nivel?: string })[]);
+  it('ids únicos no padrão d2-escada-', () => {
+    const ids = todas.map((q) => q.id);
+    expect(ids.filter((id, i) => ids.indexOf(id) !== i || !id.startsWith('d2-escada-'))).toEqual([]);
+  });
+  it('cada questão no jeito do robô e conferida', () => {
+    const ruins = todas.map((q) => [q.id, ehMoldeRobo(q) ? problemasDaQuestao(q) : ['fora do jeito do robô']] as const).filter(([, e]) => e.length > 0);
+    expect(ruins.map(([id, e]) => `${id}: ${e.join('; ')}`)).toEqual([]);
+  });
+  it('degrau válido, tema da escada e sem figura inexistente', () => {
+    const temas = new Set(ESCADAS.flatMap((e) => e.degraus.map((d) => `${e.materia}|${d.tema}`)));
+    expect(todas.filter((q) => !NIVEIS_ESCADA.includes(q.nivel ?? '') || !temas.has(`${q.materia}|${q.tema}`)).map((q) => q.id)).toEqual([]);
+    expect(todas.filter((q) => PEDE_FIGURA.test(q.enunciado)).map((q) => q.id)).toEqual([]);
+  });
 });
 
 /* Questões de reforço (Pablo, 12/11/2026): errou na prova, a próxima é uma

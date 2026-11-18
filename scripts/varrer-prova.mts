@@ -24,6 +24,11 @@ const opcao = (nome: string, padrao: number) => Number(process.argv.find((a) => 
 const LARGURA = opcao('largura', 1366);
 const ALTURA = LARGURA < 600 ? 844 : 768;
 const ATE = opcao('ate', Infinity);
+// --fotos=<pasta>: foto do 1º passo de cada questão escrita para a escada (d2-escada-).
+const FOTOS = process.argv.find((a) => a.startsWith('--fotos='))?.split('=')[1];
+// --so-escada: só abre a explicação das d2-escada-; nas outras marca a certa e passa
+// (errar numa questão com reforço troca "Próxima" por "Tentar uma parecida").
+const SO_ESCADA = process.argv.includes('--so-escada');
 const PROVAS = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 const LETRAS = ['A', 'B', 'C', 'D', 'E'];
 const ESPERA_PASSO_MS = 450;
@@ -32,7 +37,7 @@ const TEXTO_CRU = /undefined|NaN|\[object|\\frac|\\text|\\,/;
 
 interface QuestaoDaProva { question: { id: string; respostaCorreta: string } }
 
-async function varrerQuestao(page: Page, marca: string, certa: string, achados: string[]): Promise<number> {
+async function varrerQuestao(page: Page, marca: string, certa: string, achados: string[], foto?: string): Promise<number> {
   const errada = LETRAS.find((l) => l !== certa)!;
   await page.locator(`[data-alt="${errada}"]`).first().click();
   await page.getByRole('button', { name: 'Confirmar' }).click();
@@ -53,6 +58,7 @@ async function varrerQuestao(page: Page, marca: string, certa: string, achados: 
     if (m.katexErro) achados.push(`${marca} passo ${p + 1}: fórmula quebrada`);
     if (TEXTO_CRU.test(m.texto)) achados.push(`${marca} passo ${p + 1}: texto cru "${m.texto.match(TEXTO_CRU)![0]}"`);
     if (p === 0 && m.desenho === 0) achados.push(`${marca} passo 1: sem desenho`);
+    if (p === 0 && foto) await exp.screenshot({ path: foto });
     if (m.vaza) achados.push(`${marca} passo ${p + 1}: algo vaza da caixa`);
   }
   return passos;
@@ -85,8 +91,15 @@ async function main() {
     for (let i = 0; i < limite; i++) {
       const marca = `${exam.nome} #${i + 1}`;
       try {
-        totalPassos += await varrerQuestao(page, marca, questoes[i].question.respostaCorreta, achados);
-        totalQuestoes++;
+        const qid = questoes[i].question.id;
+        const foto = FOTOS && qid.startsWith('d2-escada-') ? `${FOTOS}/${qid}.png` : undefined;
+        if (SO_ESCADA && !qid.startsWith('d2-escada-')) {
+          await page.locator(`[data-alt="${questoes[i].question.respostaCorreta}"]`).first().click();
+          await page.getByRole('button', { name: 'Confirmar' }).click();
+        } else {
+          totalPassos += await varrerQuestao(page, marca, questoes[i].question.respostaCorreta, achados, foto);
+          totalQuestoes++;
+        }
         if (i < limite - 1) {
           await page.getByRole('button', { name: /Próxima/ }).click();
           await page.waitForTimeout(300);

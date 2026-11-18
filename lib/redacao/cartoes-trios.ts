@@ -9,35 +9,22 @@
 import { CORINGAS } from './autores';
 import { MEMORIA, type Cartao } from './cartoes-coringas';
 import { LEI_CORINGA } from './lei-coringa';
+import { MODELOS } from '@/data/redacao/modelos';
 
+/* Só o Trio 1 (Pablo, 07/11/2026: "não vou conseguir decorar as duas coisas,
+ * prefiro o trio 1, o do Rui Barbosa"). O Trio 2 (Graciliano + Galeano) saiu. */
 export const TRIOS = {
-  1: { d1: 'Rui Barbosa', d2: 'Dom Hélder', tipo: 'direito, acesso, Estado, saúde ou tecnologia' },
-  2: { d1: 'Graciliano', d2: 'Galeano', tipo: 'gente excluída ou invisível (violência, criança, imigração, trabalho)' },
+  1: { d1: 'Rui Barbosa', d2: 'Dom Hélder', tipo: 'todos os temas das redações prontas' },
 } as const;
 export type NumeroDoTrio = keyof typeof TRIOS;
 
-export const AUTORES_DOS_TRIOS = ['Drummond', 'Rui Barbosa', 'Dom Hélder', 'Graciliano', 'Galeano'] as const;
+export const AUTORES_DOS_TRIOS = ['Drummond', 'Rui Barbosa', 'Dom Hélder'] as const;
 export type AutorDosTrios = (typeof AUTORES_DOS_TRIOS)[number];
 
-/* 8 temas reais do ENEM em que só um dos trios passou na prova dos 28
- * (coringas-por-tema.json): 4 de cada. */
-export const TEMAS_DO_BARALHO: { tema: string; trio: NumeroDoTrio }[] = [
-  { tema: 'O estigma associado às doenças mentais na sociedade brasileira', trio: 1 },
-  { tema: 'Direitos da criança e do adolescente: como enfrentar esse desafio nacional', trio: 2 },
-  { tema: 'Manipulação do comportamento do usuário pelo controle de dados na internet', trio: 1 },
-  { tema: 'O desafio de se conviver com a diferença', trio: 2 },
-  { tema: 'Democratização do acesso ao cinema no Brasil', trio: 1 },
-  { tema: 'O poder de transformação da leitura', trio: 2 },
-  { tema: 'A persistência da violência contra a mulher na sociedade brasileira', trio: 1 },
-  { tema: 'O trabalho na construção da dignidade humana', trio: 2 },
-];
-
 const ONDE_ENTRA: Record<AutorDosTrios, { verso: string; dica: string }> = {
-  Drummond: { verso: 'Introdução, nos dois trios, junto com o Pacto.', dica: 'Abre o texto.' },
-  'Rui Barbosa': { verso: 'Trio 1, no 1º desenvolvimento.', dica: 'O da igualdade real.' },
-  'Dom Hélder': { verso: 'Trio 1, no 2º desenvolvimento.', dica: 'O santo e o comunista.' },
-  Graciliano: { verso: 'Trio 2, no 1º desenvolvimento.', dica: 'Fabiano.' },
-  Galeano: { verso: 'Trio 2, no 2º desenvolvimento.', dica: 'Os ninguéns.' },
+  Drummond: { verso: 'Introdução, junto com o Pacto.', dica: 'Abre o texto.' },
+  'Rui Barbosa': { verso: 'No 1º desenvolvimento.', dica: 'O da igualdade real.' },
+  'Dom Hélder': { verso: 'No 2º desenvolvimento.', dica: 'O santo e o comunista.' },
 };
 
 /* Forma de decorar: a curta quando existe (o Rui longo ninguém decorou). */
@@ -63,18 +50,19 @@ function cartoesDosSentidos(): Cartao[] {
 
 function cartoesDasPosicoes(): Cartao[] {
   return [
-    { frente: 'Trio 1: quem vai em cada parte?', verso: quemVaiNoTrio(1), dica: 'A igualdade real e a causa do problema.' },
-    { frente: 'Trio 2: quem vai em cada parte?', verso: quemVaiNoTrio(2), dica: 'Um sertanejo e os invisíveis.' },
+    { frente: 'O trio: quem vai em cada parte?', verso: quemVaiNoTrio(1), dica: 'A igualdade real e a causa do problema.' },
     { frente: 'Qual lei vai com o Drummond na introdução?', verso: `${LEI_CORINGA.nome} (${LEI_CORINGA.quando}).`, dica: 'Uma lei mundial que o país assinou.' },
     ...AUTORES_DOS_TRIOS.map((nome) => ({ frente: `${CORINGAS[nome].rotulo}: em que parte da redação?`, ...ONDE_ENTRA[nome] })),
   ];
 }
 
+/* Um cartão por redação pronta: o tema na frente; atrás, como o Rui e o Dom
+ * Hélder entram nele (as linhas de RedacaoModelo.usos, sem lei nem dado). */
 function cartoesDosTemas(): Cartao[] {
-  return TEMAS_DO_BARALHO.map(({ tema, trio }) => ({
-    frente: `Tema: "${tema}". Qual trio?`,
-    verso: `Trio ${trio}. ${quemVaiNoTrio(trio)}`,
-    dica: trio === 1 ? 'Tema de direito ou de acesso?' : 'Tema de gente invisível?',
+  return MODELOS.filter((m) => m.trio && m.usos).map((m) => ({
+    frente: `Tema: "${m.tema}". Como o Rui e o Dom Hélder entram?`,
+    verso: `Rui: ${m.usos!['Rui Barbosa']} Dom Hélder: ${m.usos!['Dom Hélder']}`,
+    dica: 'Pense: quem parte atrás? Qual seria a pergunta incômoda?',
   }));
 }
 
@@ -87,9 +75,9 @@ export interface BaralhoDosTrios {
 
 export function baralhosDosTrios(): BaralhoDosTrios[] {
   return [
-    { nome: '1. O que cada autor fala', descricao: 'As 5 falas dos 2 trios: Drummond, Rui Barbosa, Dom Hélder, Graciliano e Galeano.', cartoes: cartoesDasFalas() },
+    { nome: '1. O que cada autor fala', descricao: 'As 3 falas do trio: Drummond, Rui Barbosa e Dom Hélder.', cartoes: cartoesDasFalas() },
     { nome: '2. O que cada autor quer dizer', descricao: 'A fala na frente; o sentido atrás.', cartoes: cartoesDosSentidos() },
     { nome: '3. Onde cada um entra', descricao: 'Trio = introdução, 1º e 2º desenvolvimento, um autor em cada.', cartoes: cartoesDasPosicoes() },
-    { nome: '4. Tema e trio', descricao: 'Um tema real do ENEM: qual trio usar. Depois, leia as redações prontas em Redação → Redações prontas dos trios.', cartoes: cartoesDosTemas() },
+    { nome: '4. Como o Rui e o Dom Hélder entram no tema', descricao: 'Um tema real do ENEM na frente; atrás, a ligação de cada um. São os temas das redações prontas.', cartoes: cartoesDosTemas() },
   ];
 }

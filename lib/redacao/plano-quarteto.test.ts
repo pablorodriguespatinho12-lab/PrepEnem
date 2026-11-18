@@ -1,8 +1,9 @@
 import { describe, expect, test } from 'vitest';
 import { avaliarPlano, lerPlano, triosQueServem, respostaSugerida, TEMAS_DO_PLANO } from './plano-quarteto';
 
-const MULHER = 'A persistência da violência contra a mulher na sociedade brasileira'; // só Quarteto 1
-const IMIGRACAO = 'O movimento imigratório para o Brasil no século XXI'; // só Quarteto 2
+const MULHER = 'A persistência da violência contra a mulher na sociedade brasileira'; // Trio 1 pelos juízes
+const IMIGRACAO = 'O movimento imigratório para o Brasil no século XXI'; // só o Rui passou
+const SAUDE = 'O estigma associado às doenças mentais na sociedade brasileira'; // tem redação pronta
 const ETICA = 'O indivíduo frente à ética nacional'; // nenhum
 
 describe('lerPlano: entende o jeito de falar do Pablo', () => {
@@ -35,10 +36,12 @@ describe('lerPlano: entende o jeito de falar do Pablo', () => {
 
 describe('avaliarPlano', () => {
   test('quarteto certo no tema certo: "dá certo"', () => {
-    const a = avaliarPlano(MULHER, 'Pacto e Drummond no começo, Rui no primeiro e Dom Hélder no segundo')!;
+    const a = avaliarPlano(SAUDE, 'Pacto e Drummond no começo, Rui no primeiro e Dom Hélder no segundo')!;
     expect(a.certo).toBe(true);
     expect(a.titulo).toBe('Boa ideia: dá certo. É o Trio 1.');
     expect(a.ligacoes.length).toBeGreaterThan(0);
+    /* A ligação mostrada é a da redação pronta, sem lei de fora. */
+    expect(a.ligacoes.map((l) => l.texto).join(' ')).not.toMatch(/\bLei\b|\d{4}/);
   });
   test('quarteto que não passou no tema: aponta quem trocar', () => {
     const a = avaliarPlano(MULHER, 'Pacto e Drummond na introdução, Graciliano no primeiro, Galeano no segundo')!;
@@ -60,11 +63,12 @@ describe('avaliarPlano', () => {
 });
 
 describe('os 28 temas', () => {
-  test('28 temas; os trios juntos servem em 25', () => {
+  test('28 temas; o Trio 1 serve em 19 (18 pelos juízes + criança, com redação pronta)', () => {
     expect(TEMAS_DO_PLANO).toHaveLength(28);
-    expect(TEMAS_DO_PLANO.filter((t) => triosQueServem(t).length > 0)).toHaveLength(25);
+    expect(TEMAS_DO_PLANO.filter((t) => triosQueServem(t).length > 0)).toHaveLength(19);
     expect(triosQueServem(MULHER)).toEqual([1]);
-    expect(triosQueServem(IMIGRACAO)).toEqual([2]);
+    expect(triosQueServem(IMIGRACAO)).toEqual([]);
+    expect(respostaSugerida(IMIGRACAO)).toContain('Rui Barbosa');
     expect(triosQueServem(ETICA)).toEqual([]);
   });
   test('todo tema tem resposta sugerida, e ela passa na própria avaliação', () => {

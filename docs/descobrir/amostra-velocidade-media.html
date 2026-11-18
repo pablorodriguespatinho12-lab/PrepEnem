@@ -1,0 +1,287 @@
+<title>Velocidade Média na Reta</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Nunito:wght@500;700;800&display=swap">
+<style>
+/* Uma tela por passo, sem rolar: equação no centro, desenho ao lado, 1 linha de texto. */
+:root {
+  --ceu: #dfeef6; --cartao: #ffffffee; --tinta: #1d2b3a; --suave: #4d5d6c;
+  --teal: #16a3b8; --laranja: #e0702a; --azul: #2f6fd6; --verde: #2c9a5a; --risco: #c0392b;
+  --grade: #c9d8e2; --borda: #1d2b3a;
+  --titulo: 'Jersey 10', 'Courier New', monospace; --texto: 'Nunito', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --ceu: #0f1a2b; --cartao: #17243aee; --tinta: #eef3f8; --suave: #a9b8c6;
+  --teal: #4fd1e3; --laranja: #ff9a52; --azul: #7fb0ff; --verde: #5fd58f; --risco: #ff7468;
+  --grade: #2a3b55; --borda: #050a12; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --ceu: #0f1a2b; --cartao: #17243aee; --tinta: #eef3f8; --suave: #a9b8c6;
+  --teal: #4fd1e3; --laranja: #ff9a52; --azul: #7fb0ff; --verde: #5fd58f; --risco: #ff7468;
+  --grade: #2a3b55; --borda: #050a12; color-scheme: dark }
+html, body { height: 100%; }
+body { background: var(--ceu); color: var(--tinta); font-family: var(--texto); font-size: 17px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 12px; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; }
+#fundo { position: fixed; inset: 0; width: 100%; height: 100%; image-rendering: pixelated; z-index: 0; }
+.palco { position: relative; z-index: 1; flex: 1; min-height: 0; max-width: 980px; width: 100%; margin: 0 auto;
+  display: flex; flex-direction: column; gap: 10px; }
+.topo { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.topo h1 { font-family: var(--titulo); font-weight: 400; font-size: 30px; margin: 0; line-height: 1; }
+.pontos { display: flex; gap: 6px; }
+.pontos i { width: 10px; height: 10px; background: var(--grade); }
+.pontos i.feito { background: var(--teal); }
+.cartao { flex: 1; min-height: 0; background: var(--cartao); padding: 18px;
+  box-shadow: 0 -4px 0 var(--borda), 0 4px 0 var(--borda), -4px 0 0 var(--borda), 4px 0 0 var(--borda);
+  margin: 4px; display: grid; grid-template-rows: auto auto 1fr; gap: 12px; }
+.passo-nome { font-family: var(--titulo); color: var(--teal); font-size: 24px; line-height: 1; }
+.frase { font-size: 19px; font-weight: 700; margin: 0; text-wrap: balance; }
+.corpo { min-height: 0; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 18px; align-items: center; }
+@media (max-width: 720px) { .corpo { grid-template-columns: 1fr; align-content: start; } }
+.lado { min-width: 0; display: flex; flex-direction: column; gap: 10px; align-items: center; }
+svg.graf { width: 100%; max-width: 380px; height: auto; max-height: 100%; }
+.rodape { display: flex; justify-content: space-between; gap: 12px; }
+button { font: 700 17px var(--texto); border: 0; cursor: pointer; padding: 10px 18px; color: var(--tinta);
+  background: var(--cartao); box-shadow: 0 -3px 0 var(--borda), 0 3px 0 var(--borda), -3px 0 0 var(--borda), 3px 0 0 var(--borda);
+  transition: transform .12s steps(2); }
+button:active { transform: translateY(3px); }
+button:focus { outline: none; }
+button:focus-visible { outline: 3px dashed var(--teal); outline-offset: 4px; }
+button.vai { background: var(--teal); color: #06222a; }
+button[disabled] { opacity: .35; cursor: default; }
+
+/* tabela */
+table { border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 18px; }
+th, td { padding: 6px 14px; text-align: center; border-bottom: 2px solid var(--grade); }
+th { font-size: 14px; color: var(--suave); font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+td.acende { color: var(--laranja); font-weight: 800; }
+tr.entra { animation: entra .5s steps(4) both; }
+
+/* equação viva */
+.eq { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; font-size: 30px; font-variant-numeric: tabular-nums; }
+.linha { display: flex; align-items: center; gap: 14px; animation: entra .55s steps(5) both; }
+.linha .op { font-size: 15px; font-weight: 800; color: var(--azul); white-space: nowrap; }
+.linha .op::before { content: "↓ "; }
+.m { display: inline-flex; align-items: center; gap: .28em; white-space: nowrap; font-family: 'Cambria Math', 'STIX Two Math', Georgia, serif; }
+@media (max-width: 720px) {
+  .eq { font-size: 21px; gap: 4px; }
+  .linha { gap: 8px; flex-wrap: wrap; }
+  .linha .op { font-size: 13px; }
+  svg.graf { max-height: 30vh; width: auto; }
+  .frase { font-size: 17px; }
+  .cartao { padding: 12px; gap: 8px; }
+  table { font-size: 15px; }
+  th, td { padding: 4px 8px; }
+}
+.fr { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; }
+.fr > span:first-child { border-bottom: 2px solid currentColor; padding: 0 .2em; }
+.fr > span { padding: 0 .2em; display: inline-flex; gap: .2em; }
+.novo { color: var(--laranja); animation: pisca 1.2s steps(2) 2; }
+.az { color: var(--azul); } .lj { color: var(--laranja); } .vd { color: var(--verde); }
+.corta { position: relative; color: var(--suave); }
+.corta::after { content: ""; position: absolute; left: -10%; right: -10%; top: 50%; height: 3px; background: var(--risco);
+  transform: rotate(-20deg); animation: risca .4s steps(4) .5s both; transform-origin: left; }
+.caixa { padding: 2px 10px; box-shadow: 0 -3px 0 var(--verde), 0 3px 0 var(--verde), -3px 0 0 var(--verde), 3px 0 0 var(--verde); }
+.peq { font-size: 15px; color: var(--suave); font-weight: 700; }
+
+/* escolhas do Prove você */
+.escolhas { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-start; }
+.aviso { font-size: 16px; font-weight: 700; min-height: 1.3em; margin: 0; }
+.aviso.certo { color: var(--verde); } .aviso.errado { color: var(--risco); }
+
+/* mapa de onde mais aparece */
+.mapa { width: 100%; max-width: 520px; height: auto; }
+.mapa text { font-family: var(--texto); font-weight: 800; font-size: 13px; fill: var(--tinta); }
+
+@keyframes entra { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes pisca { 50% { opacity: .35; } }
+@keyframes risca { from { transform: rotate(-20deg) scaleX(0); } to { transform: rotate(-20deg) scaleX(1); } }
+@keyframes anda { from { stroke-dashoffset: 400; } to { stroke-dashoffset: 0; } }
+@keyframes rastro { from { stroke-dashoffset: 221; } to { stroke-dashoffset: 0; } }
+@keyframes aparece { from { opacity: 0; } to { opacity: 1; } }
+.traco { stroke-dasharray: 400; animation: anda 1s steps(10) both; }
+@media (prefers-reduced-motion: reduce) {
+  /* explica, então continua, só mais devagar (regra do site para aula em desenho) */
+  .linha, tr.entra { animation-duration: .9s !important; }
+}
+</style>
+
+<canvas id="fundo" aria-hidden="true"></canvas>
+<main class="palco">
+  <div class="topo">
+    <h1>Velocidade média</h1>
+    <div class="pontos" id="pontos" aria-hidden="true"></div>
+  </div>
+  <section class="cartao" aria-live="polite">
+    <div class="passo-nome" id="nome"></div>
+    <p class="frase" id="frase"></p>
+    <div class="corpo" id="corpo"></div>
+  </section>
+  <div class="rodape">
+    <button id="voltar">Voltar</button>
+    <button id="proximo" class="vai">Próximo</button>
+  </div>
+</main>
+
+<script>
+/* ---------- fundo em pixel: céu pontilhado, morros e a estrada (desenhado uma vez) ---------- */
+function desenharFundo() {
+  const c = document.getElementById('fundo'), px = innerWidth < 600 ? 4 : 6;
+  const w = Math.ceil(innerWidth / px), h = Math.ceil(innerHeight / px);
+  c.width = w; c.height = h; const g = c.getContext('2d');
+  const noite = matchMedia('(prefers-color-scheme: dark)').matches && document.documentElement.dataset.theme !== 'light'
+    || document.documentElement.dataset.theme === 'dark';
+  const ceu = noite ? ['#0b1424', '#0f1a2b', '#15233a'] : ['#cfe6f2', '#dfeef6', '#eaf4f9'];
+  const bayer = [[0, 8, 2, 10], [12, 4, 14, 6], [3, 11, 1, 9], [15, 7, 13, 5]];
+  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+    const f = y / (h * 0.7) * 2, i = Math.min(Math.floor(f), 1), r = f - i;
+    g.fillStyle = ceu[(r * 16 > bayer[y % 4][x % 4]) ? Math.min(i + 1, 2) : i]; g.fillRect(x, y, 1, 1);
+  }
+  if (noite) { g.fillStyle = '#e8eefc'; for (let k = 0; k < 40; k++) g.fillRect((k * 37) % w, (k * 53) % Math.floor(h * .5), 1, 1); }
+  const morro = (base, amp, cor, fase) => { g.fillStyle = cor;
+    for (let x = 0; x < w; x++) { const y = Math.round(h * base - amp * Math.sin(x / 13 + fase) - amp * .5 * Math.sin(x / 5 + fase)); g.fillRect(x, y, 1, h - y); } };
+  morro(.78, 5, noite ? '#1c3046' : '#a9cdb9', 1); morro(.86, 3, noite ? '#183a2c' : '#7fb28f', 3);
+  g.fillStyle = noite ? '#2a2f38' : '#6d6f73'; g.fillRect(0, Math.round(h * .92), w, h);
+  g.fillStyle = noite ? '#c9b25a' : '#f2d36b'; for (let x = 0; x < w; x += 6) g.fillRect(x, Math.round(h * .95), 3, 1);
+}
+desenharFundo(); addEventListener('resize', desenharFundo);
+
+/* ---------- peças ---------- */
+const T = [0, 1, 2, 3], S = [5, 8, 11, 14];
+const P = (t, s) => [30 + 65 * t, 195 - 11.25 * s];
+const VIAGEM = 4.5; // segundos de animação para os 3 s da tabela
+const PASSO = VIAGEM / 3; // o carro chega em cada ponto a cada PASSO
+function grafico({ pontos = 4, reta = false, dt = false, ds = false, carro = false, guias = false } = {}) {
+  let o = `<svg class="graf" viewBox="0 0 310 230" role="img" aria-label="Plano cartesiano: tempo em segundos e posição em metros">`;
+  for (let t = 0; t <= 4; t++) { const [x] = P(t, 0); o += `<line x1="${x}" y1="15" x2="${x}" y2="195" stroke="var(--grade)" stroke-width="1"/><text x="${x}" y="212" text-anchor="middle" font-size="12" fill="var(--suave)">${t}</text>`; }
+  for (let s = 0; s <= 16; s += 4) { const [, y] = P(0, s); o += `<line x1="30" y1="${y}" x2="290" y2="${y}" stroke="var(--grade)" stroke-width="1"/><text x="24" y="${y + 4}" text-anchor="end" font-size="12" fill="var(--suave)">${s}</text>`; }
+  o += `<line x1="30" y1="195" x2="295" y2="195" stroke="var(--tinta)" stroke-width="2"/><line x1="30" y1="10" x2="30" y2="195" stroke="var(--tinta)" stroke-width="2"/>`;
+  o += `<text x="294" y="226" text-anchor="end" font-size="12" font-weight="800" fill="var(--tinta)">tempo (s)</text><text x="34" y="12" font-size="12" font-weight="800" fill="var(--tinta)">posição (m)</text>`;
+  if (reta) { const [x1, y1] = P(0, 5), [x2, y2] = P(4, 17); o += `<line class="traco" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="var(--teal)" stroke-width="3"/>`; }
+  if (dt) { const [a, b] = P(0, 5), [c] = P(3, 5); o += `<line class="traco" x1="${a}" y1="${b}" x2="${c}" y2="${b}" stroke="var(--azul)" stroke-width="5"/><text x="${(a + c) / 2}" y="${b + 18}" text-anchor="middle" font-size="15" font-weight="800" fill="var(--azul)">Δt = 3 s</text>`; }
+  if (ds) { const [c, b] = P(3, 5), [, d] = P(3, 14); o += `<line class="traco" x1="${c}" y1="${b}" x2="${c}" y2="${d}" stroke="var(--laranja)" stroke-width="5"/><text x="${c + 8}" y="${(b + d) / 2 + 5}" font-size="15" font-weight="800" fill="var(--laranja)">Δs = 9 m</text>`; }
+  if (carro) { // rastro: a linha cresce junto com o carro, sem pular
+    const [x1, y1] = P(0, 5), [x2, y2] = P(3, 14);
+    o += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="var(--teal)" stroke-width="3" stroke-dasharray="221" style="animation:rastro ${VIAGEM}s linear both"/>`;
+  }
+  for (let i = 0; i < pontos; i++) {
+    const [x, y] = P(T[i], S[i]), atraso = carro ? i * PASSO : i * .25;
+    if (guias) o += `<g style="animation:aparece .4s ease-out ${atraso}s both"><line x1="${x}" y1="${y}" x2="${x}" y2="195" stroke="var(--azul)" stroke-width="2" stroke-dasharray="4 4"/><line x1="${x}" y1="${y}" x2="30" y2="${y}" stroke="var(--laranja)" stroke-width="2" stroke-dasharray="4 4"/><text x="36" y="${y - 4}" font-size="12" font-weight="800" fill="var(--laranja)">${S[i]} m</text><text x="${x + 4}" y="190" font-size="12" font-weight="800" fill="var(--azul)">${T[i]} s</text></g>`;
+    o += `<rect x="${x - 5}" y="${y - 5}" width="10" height="10" fill="var(--tinta)" style="animation:aparece .3s ease-out ${atraso}s both"/>`;
+  }
+  if (carro) o += carroSvg();
+  return o + `</svg>`;
+}
+function carroSvg() { // carro em pixel que desliza pela reta, inclinado como ela, e para no último ponto
+  const ang = Math.atan2(P(3, 14)[1] - P(0, 5)[1], P(3, 14)[0] - P(0, 5)[0]) * 180 / Math.PI;
+  return `<g style="animation:viagem ${VIAGEM}s linear both"><g transform="rotate(${ang.toFixed(1)}) translate(0,-6)"><rect x="-14" y="-8" width="28" height="8" fill="var(--laranja)"/><rect x="-8" y="-14" width="14" height="6" fill="var(--laranja)"/><rect x="-4" y="-12" width="8" height="3" fill="var(--ceu)"/><rect x="-11" y="0" width="6" height="5" fill="var(--tinta)"/><rect x="5" y="0" width="6" height="5" fill="var(--tinta)"/></g></g>
+  <style>@keyframes viagem { from { transform: translate(${P(0,5)[0]}px, ${P(0,5)[1]}px) } to { transform: translate(${P(3,14)[0]}px, ${P(3,14)[1]}px) } }</style>`;
+}
+function tabela(n, acende = [], ritmo = .25) {
+  let o = `<table><thead><tr><th>tempo</th><th>posição</th></tr></thead><tbody>`;
+  for (let i = 0; i < n; i++) o += `<tr class="entra" style="animation-delay:${i * ritmo}s"><td>${T[i]} s</td><td class="${acende.includes(i) ? 'acende' : ''}">${S[i]} m</td></tr>`;
+  return o + `</tbody></table>`;
+}
+const fr = (a, b) => `<span class="fr"><span>${a}</span><span>${b}</span></span>`;
+const linha = (conta, op = '', atraso = 0) => `<div class="linha" style="animation-delay:${atraso}s"><span class="m">${conta}</span>${op ? `<span class="op">${op}</span>` : ''}</div>`;
+const eq = (...ls) => `<div class="eq">${ls.join('')}</div>`;
+
+/* ---------- os passos: cada um é nome, 1 frase e o que aparece ---------- */
+const passos = [
+  { nome: 'O carro', frase: 'O carro anda, e a cada segundo eu marco onde ele está.',
+    corpo: () => `<div class="lado">${tabela(4, [], PASSO)}</div><div class="lado">${grafico({ pontos: 4, carro: true, guias: true })}</div>` },
+  { nome: 'No plano cartesiano', frase: 'Cada ponto: o tempo embaixo, a posição do lado.',
+    corpo: () => `<div class="lado">${tabela(4)}</div><div class="lado">${grafico({ pontos: 4, guias: true })}</div>` },
+  { nome: 'Os pontos formam uma reta', frase: 'Sobe sempre igual: 3 metros a cada segundo.',
+    corpo: () => `<div class="lado">${eq(linha('8 − 5 = <b class="lj">3</b>'), linha('11 − 8 = <b class="lj">3</b>', '', .3), linha('14 − 11 = <b class="lj">3</b>', '', .6))}</div><div class="lado">${grafico({ reta: true })}</div>` },
+  { nome: 'A conta com números', frase: 'Quanto andou, dividido pelo tempo que levou.',
+    corpo: () => `<div class="lado">${eq(linha(`<span class="lj">14 − 5</span> = <span class="lj">9 m</span>`, 'andou'), linha(`<span class="az">3 − 0</span> = <span class="az">3 s</span>`, 'levou', .4), linha(`${fr('<span class="lj">9</span>', '<span class="az">3</span>')} = <span class="caixa">3 m/s</span>`, '', .8))}</div><div class="lado">${grafico({ reta: true, dt: true, ds: true })}</div>` },
+  { nome: 'A equação em letras', frase: 'Troco cada número pelo nome dele.',
+    corpo: () => `<div class="lado">${eq(linha(`${fr('<span class="lj">9</span>', '<span class="az">3</span>')} = 3`), linha(`${fr('<span class="lj novo">Δs</span>', '<span class="az novo">Δt</span>')} = <span class="vd novo">v</span>`, 'troca os números', .5))}</div><div class="lado">${grafico({ reta: true, dt: true, ds: true })}</div>` },
+  { nome: 'Achar o Δs', frase: 'Δs é o pedaço em pé do triângulo.',
+    corpo: () => `<div class="lado">${eq(linha(`<span class="vd">v</span> = ${fr('<span class="lj novo">Δs</span>', '<span class="az">Δt</span>')}`))}<table><tr><th>Δs</th><td>posição do fim − posição do começo</td></tr><tr><th>aqui</th><td class="acende">14 − 5 = 9 m</td></tr></table></div><div class="lado">${grafico({ reta: true, ds: true })}</div>` },
+  { nome: 'Achar o Δt', frase: 'Δt é o pedaço deitado do triângulo.',
+    corpo: () => `<div class="lado">${eq(linha(`<span class="vd">v</span> = ${fr('<span class="lj">Δs</span>', '<span class="az novo">Δt</span>')}`))}<table><tr><th>Δt</th><td>tempo do fim − tempo do começo</td></tr><tr><th>aqui</th><td style="color:var(--azul);font-weight:800">3 − 0 = 3 s</td></tr></table></div><div class="lado">${grafico({ reta: true, dt: true })}</div>` },
+  { nome: 'Volta na equação', frase: 'A velocidade é a inclinação da reta.',
+    corpo: () => `<div class="lado">${eq(linha(`<span class="vd">v</span> = ${fr('<span class="lj">Δs</span>', '<span class="az">Δt</span>')}`), linha(`<span class="vd">v</span> = ${fr('<span class="lj">9</span>', '<span class="az">3</span>')}`, 'põe os números', .4), linha(`<span class="caixa"><span class="vd">v</span> = 3 m/s</span>`, '', .8))}</div><div class="lado">${grafico({ reta: true, dt: true, ds: true })}</div>` },
+  { nome: 'A equação se transforma', frase: 'Solto o Δs: faço a mesma coisa dos dois lados.',
+    corpo: () => `<div class="lado">${eq(
+      linha(`v = ${fr('Δs', 'Δt')}`),
+      linha(`v <span class="novo">· Δt</span> = ${fr('Δs', '<span class="corta">Δt</span>')} <span class="corta">· Δt</span>`, '× Δt dos dois lados', .5),
+      linha(`<span class="lj">Δs</span> = v · Δt`, 'arruma', 1.3),
+      linha(`<span class="novo">s − 5</span> = 3 · <span class="novo">t</span>`, 'Δs = s − 5 e Δt = t', 2),
+      linha(`<span class="caixa">s = 5 + 3 · t</span>`, '+ 5 dos dois lados', 2.7))}</div><div class="lado">${grafico({ reta: true })}</div>` },
+  { nome: 'Prove você', frase: '', prova: true },
+  { nome: 'Onde mais isso aparece', frase: 'A mesma reta mora em outros lugares do mapa.',
+    corpo: () => `<div class="lado" style="grid-column:1/-1">${mapa()}</div>` },
+];
+
+/* ---------- Prove você: escolher o que fazer dos dois lados ---------- */
+const PROVA = [
+  { pede: 'Como soltar o s? Primeiro, tire o t de baixo.', certa: 0,
+    opcoes: ['× t dos dois lados', '÷ t dos dois lados', '− 5 dos dois lados'],
+    erro: ['', 'Com ÷ t, o t de baixo vira t × t: ficou pior.', 'O 5 está preso em cima do t: tire o t primeiro.'],
+    linha: () => linha(`v <span class="novo">· t</span> = ${fr('s − 5', '<span class="corta">t</span>')} <span class="corta">· t</span>`, '× t dos dois lados') },
+  { pede: 'Agora o s está junto do − 5. Como soltar?', certa: 1,
+    opcoes: ['− 5 dos dois lados', '+ 5 dos dois lados', '÷ v dos dois lados'],
+    erro: ['Com − 5, fica s − 10: o 5 não sai.', '', 'Dividir por v não mexe no − 5.'],
+    linha: () => linha(`<span class="novo">5 +</span> v · t = s <span class="corta">− 5</span> <span class="novo">+ 5</span>`, '+ 5 dos dois lados') },
+  { pede: 'Confira com a tabela: com t = 2 s, quanto dá s = 5 + 3 · t?', certa: 2,
+    opcoes: ['9 m', '6 m', '11 m'],
+    erro: ['Faltou somar o 5 da largada.', 'Olhe a tabela: em 2 s o carro está em outro lugar.', ''],
+    linha: () => linha(`s = 5 + 3 · 2 = <span class="caixa">11 m</span>`, 'bate com a tabela') },
+];
+let etapaProva = 0, aviso = { texto: '', tipo: '' };
+function corpoProva() {
+  const feitas = PROVA.slice(0, etapaProva).map((e) => e.linha()).join('');
+  const atual = PROVA[etapaProva];
+  const fim = etapaProva >= PROVA.length;
+  return `<div class="lado" style="align-items:flex-start">${eq(linha(`v = ${fr('s − 5', 't')}`, 'da tabela: andou ÷ tempo'), feitas)}</div>
+  <div class="lado" style="align-items:flex-start">${fim
+    ? `<p class="aviso certo">Provado: s = 5 + v · t. É a mesma reta do gráfico.</p>${grafico({ reta: true })}`
+    : `<p class="frase" style="font-size:17px">${atual.pede}</p><div class="escolhas">${atual.opcoes.map((o, i) => `<button data-op="${i}">${o}</button>`).join('')}</div><p class="aviso ${aviso.tipo}">${aviso.texto}</p>`}</div>`;
+}
+document.addEventListener('click', (e) => {
+  const b = e.target.closest('[data-op]'); if (!b) return;
+  const i = Number(b.dataset.op), atual = PROVA[etapaProva];
+  if (i === atual.certa) { etapaProva++; aviso = { texto: '', tipo: '' }; }
+  else aviso = { texto: atual.erro[i], tipo: 'errado' };
+  mostrar();
+});
+
+/* ---------- mapa: o plano cartesiano no meio, os vizinhos em volta ---------- */
+function mapa() {
+  const lugares = [
+    ['Plano cartesiano', 260, 120, 'var(--teal)', true],
+    ['Velocidade média', 90, 60, 'var(--verde)', true],
+    ['Função afim', 430, 60, 'var(--laranja)', false],
+    ['Reta e distância', 90, 190, 'var(--azul)', false],
+    ['Área = distância', 430, 190, 'var(--azul)', false],
+    ['Torricelli', 260, 230, 'var(--suave)', false],
+  ];
+  const ligar = [[0, 1], [0, 2], [0, 3], [0, 4], [4, 5]];
+  let o = `<svg class="mapa" viewBox="0 0 520 260" role="img" aria-label="Mapa: o plano cartesiano liga velocidade média, função afim, reta e distância, e área; da área sai Torricelli">`;
+  for (const [a, b] of ligar) o += `<line class="traco" x1="${lugares[a][1]}" y1="${lugares[a][2]}" x2="${lugares[b][1]}" y2="${lugares[b][2]}" stroke="var(--grade)" stroke-width="4" stroke-dasharray="8 6"/>`;
+  for (const [nome, x, y, cor, aceso] of lugares) {
+    o += `<rect x="${x - 66}" y="${y - 16}" width="132" height="32" fill="${aceso ? cor : 'var(--cartao)'}" stroke="${cor}" stroke-width="3"/>
+      <text x="${x}" y="${y + 5}" text-anchor="middle" ${aceso ? 'style="fill:#06222a"' : ''}>${nome}</text>`;
+  }
+  o += `<text x="430" y="92" text-anchor="middle" style="font-size:12px;fill:var(--suave)">y = b + a · x</text><text x="90" y="222" text-anchor="middle" style="font-size:12px;fill:var(--suave)">a = Δy ÷ Δx</text>`;
+  return o + `</svg>`;
+}
+
+/* ---------- navegação ---------- */
+let atual = 0;
+function mostrar() {
+  const p = passos[atual];
+  document.getElementById('nome').textContent = p.nome;
+  document.getElementById('frase').textContent = p.frase;
+  document.getElementById('frase').hidden = !p.frase;
+  document.getElementById('corpo').innerHTML = p.prova ? corpoProva() : p.corpo();
+  document.getElementById('pontos').innerHTML = passos.map((_, i) => `<i class="${i <= atual ? 'feito' : ''}"></i>`).join('');
+  document.getElementById('voltar').disabled = atual === 0;
+  document.getElementById('proximo').disabled = atual === passos.length - 1;
+}
+document.getElementById('voltar').onclick = () => { if (atual > 0) { atual--; mostrar(); } };
+document.getElementById('proximo').onclick = () => { if (atual < passos.length - 1) { atual++; if (passos[atual].prova) { etapaProva = 0; aviso = { texto: '', tipo: '' }; } mostrar(); } };
+addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') document.getElementById('proximo').click(); if (e.key === 'ArrowLeft') document.getElementById('voltar').click(); });
+mostrar();
+</script>

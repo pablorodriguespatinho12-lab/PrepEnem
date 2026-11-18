@@ -6,6 +6,7 @@
 
 import dados from './coringas-por-tema.json';
 import { TRIOS } from './cartoes-trios';
+import { MODELOS } from '@/data/redacao/modelos';
 
 export const PARTES = ['introducao', 'd1', 'd2'] as const;
 export type Parte = (typeof PARTES)[number];
@@ -126,15 +127,22 @@ export interface Avaliacao {
   partes: ParteAvaliada[];
   dicas: string[];
   /* Trios que servem neste tema (1, 2 ou nenhum). */
-  triosQueServem: (1 | 2)[];
+  triosQueServem: 1[];
   /* Exemplo de ligação com o tema para cada autor que serve no plano. */
   ligacoes: { autor: AutorDoPlano; texto: string }[];
 }
 
-export const serveNoTema = (tema: string, autor: AutorDoPlano): boolean => POR_TEMA[tema]?.[autor]?.serve === true;
+/* Redação pronta do trio neste tema (a ligação dela não tem lei nem dado). */
+const modeloDoTema = (tema: string) => MODELOS.find((m) => m.tema === tema && m.usos);
+const usoNoModelo = (tema: string, autor: AutorDoPlano): string | undefined =>
+  modeloDoTema(tema)?.usos?.[autor as keyof NonNullable<(typeof MODELOS)[number]['usos']>];
 
-export function triosQueServem(tema: string): (1 | 2)[] {
-  return ([1, 2] as const).filter((n) => {
+/* Serve: passou na prova dos juízes OU já tem redação pronta com ele no tema. */
+export const serveNoTema = (tema: string, autor: AutorDoPlano): boolean =>
+  POR_TEMA[tema]?.[autor]?.serve === true || !!usoNoModelo(tema, autor);
+
+export function triosQueServem(tema: string): 1[] {
+  return ([1] as const).filter((n) => {
     const q = TRIOS[n];
     const d1 = q.d1 as AutorDoPlano;
     const d2 = q.d2 as AutorDoPlano;
@@ -148,9 +156,9 @@ export function respostaSugerida(tema: string): string {
     const q = TRIOS[qs[0]];
     return `Trio ${qs[0]}: Pacto + Drummond na introdução, ${q.d1} no 1º argumento, ${q.d2} no 2º.`;
   }
-  const servem = AUTORES_DO_PLANO.filter((a) => a !== 'Drummond' && serveNoTema(tema, a));
-  if (servem.length === 0) return 'Neste tema, nenhum dos 5 passou além do Drummond.';
-  return `Misture: Pacto + Drummond na introdução e ${servem.slice(0, 2).join(' e ')} nos argumentos.`;
+  const servem = (['Rui Barbosa', 'Dom Hélder'] as const).filter((a) => serveNoTema(tema, a));
+  if (servem.length === 0) return 'Neste tema, só o Drummond passou: use Pacto + Drummond e fatos do dia a dia.';
+  return `Pacto + Drummond na introdução e ${servem[0]} no argumento em que ele cabe; no outro, um fato do dia a dia, sem autor.`;
 }
 
 export function avaliarPlano(tema: string, texto: string): Avaliacao | null {
@@ -175,7 +183,7 @@ export function avaliarPlano(tema: string, texto: string): Avaliacao | null {
   const certo = faltando.length === 0 && naoServem.length === 0 && !drummondFora;
 
   const dicas: string[] = [];
-  if (faltando.length === 3) dicas.push('Não achei nenhum dos 5 autores. Escreva o nome deles: Drummond, Rui Barbosa, Dom Hélder, Graciliano ou Galeano.');
+  if (faltando.length === 3) dicas.push('Não achei nenhum autor do trio. Escreva o nome deles: Drummond, Rui Barbosa ou Dom Hélder.');
   else if (faltando.length > 0) dicas.push(`Faltou dizer quem vai no ${faltando.map((p) => NOME_DA_PARTE[p.parte]).join(' e no ')}.`);
   for (const p of naoServem) dicas.push(`${p.autor} não passou neste tema: troque.`);
   if (!citouPacto && faltando.length < 3) dicas.push('Lembre do Pacto junto com o Drummond na introdução.');
@@ -187,9 +195,11 @@ export function avaliarPlano(tema: string, texto: string): Avaliacao | null {
     ? `Boa ideia: dá certo.${ehTrio ? ` É o Trio ${ehTrio}.` : ''}`
     : faltando.length === 3 ? 'Não entendi o plano.' : 'Quase. Ajuste o que está marcado.';
 
+  /* Só a ligação das redações prontas: a dos juízes cita a lei de cada tema,
+     e o Pablo só sabe o trio (07/11/2026). */
   const ligacoes = avaliadas
-    .filter((p): p is ParteAvaliada & { autor: AutorDoPlano } => !!p.autor && p.serve && !!POR_TEMA[tema][p.autor]?.ligacao)
-    .map((p) => ({ autor: p.autor, texto: POR_TEMA[tema][p.autor].ligacao! }));
+    .filter((p): p is ParteAvaliada & { autor: AutorDoPlano } => !!p.autor && p.serve && !!usoNoModelo(tema, p.autor))
+    .map((p) => ({ autor: p.autor, texto: usoNoModelo(tema, p.autor)! }));
 
   return { certo, titulo, partes: avaliadas, dicas, triosQueServem: qs, ligacoes };
 }
