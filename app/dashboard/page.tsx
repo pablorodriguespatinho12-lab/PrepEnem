@@ -6,7 +6,7 @@ import { ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
 import { getWeekScheduleByNumber, studyCycle } from '@/lib/schedule-data';
 import { materiaColors } from '@/lib/theme-colors';
 import { useLeitura } from '@/hooks/use-leitura';
-import { LivrosDaLeitura } from '@/components/livros-da-leitura';
+import { AdicionarLivro, LivrosDaLeitura } from '@/components/livros-da-leitura';
 import { Atalhos } from '@/components/inicio/atalhos';
 import { Semana } from '@/components/inicio/semana';
 import { AnelInicio } from '@/components/pixel/anel-inicio';
@@ -176,7 +176,8 @@ export default function DashboardPage() {
                 </span>
               )}
             </div>
-            <LivrosDaLeitura paginas={leitura.paginas} mudarPagina={leitura.mudarPagina} />
+            <LivrosDaLeitura livros={leitura.livros} paginas={leitura.paginas} mudarPagina={leitura.mudarPagina} tirarLivro={leitura.tirarLivro} />
+            <AdicionarLivro adicionar={leitura.adicionarLivro} />
           </section>
 
           {revisoes > 0 && (

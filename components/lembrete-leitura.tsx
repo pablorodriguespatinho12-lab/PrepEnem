@@ -25,7 +25,7 @@ export function LembreteLeitura() {
   // em cima do conteúdo em 8 telas até ele achar o X). Trocou de tela, conta
   // como lembrado. Entrou pelo Início: a seção Leitura de lá já é o lembrete.
   const [primeiraTela, setPrimeiraTela] = useState<string | null>(null);
-  const { paginas, meta, mudarPagina } = useLeitura();
+  const { livros, paginas, meta, mudarPagina } = useLeitura();
   const visivel = aberto && pathname !== '/dashboard' && !TELA_DE_QUESTAO.test(pathname ?? '');
   const cartao = useRef<HTMLElement>(null);
 
@@ -104,7 +104,7 @@ export function LembreteLeitura() {
               <X className="h-4 w-4" />
             </button>
           </div>
-          <LivrosDaLeitura paginas={paginas} mudarPagina={mudarPagina} />
+          <LivrosDaLeitura livros={livros} paginas={paginas} mudarPagina={mudarPagina} />
         </motion.aside>
       )}
     </AnimatePresence>
