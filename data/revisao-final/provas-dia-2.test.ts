@@ -240,17 +240,22 @@ describe('aulas trocadas das provas em escada', () => {
   }
 });
 
-/* "As fórmulas desta questão": o validador corta nome acima de 30 letras e fórmula acima
-   de 60, e a tela mostrava "(subindo igua" (18/11/2026). Vale para todo arquivo de dados. */
+/* O validador corta nome de fórmula acima de 30 letras, fórmula e célula de tabela acima de
+   60: a tela mostrava "(subindo igua" e "(o que a questão que" (18/11/2026). Todo arquivo de dados. */
 describe('fórmulas da aula cabem sem corte', () => {
   const RAIZ_DADOS = join(process.cwd(), 'data/revisao-final');
   const arquivos = (readdirSync(RAIZ_DADOS, { recursive: true }) as string[]).filter((f) => f.endsWith('.json'));
-  it('nome até 30 letras e fórmula até 60', () => {
+  it('nome até 30 letras, fórmula até 60 e célula de tabela até 60', () => {
     const longos: string[] = [];
     const varre = (o: unknown, onde: string): void => {
       if (Array.isArray(o)) { o.forEach((x) => varre(x, onde)); return; }
       if (!o || typeof o !== 'object') return;
       const r = o as Record<string, unknown>;
+      if (r.tipo === 'tabela') {
+        for (const linha of (r.linhas as unknown[][]) ?? []) {
+          for (const c of linha) if (typeof c === 'string' && c.length > 60) longos.push(`${onde}: célula "${c}"`);
+        }
+      }
       if (r.tipo === 'formulas') {
         for (const i of (r.itens as { nome: string; formula: string }[]) ?? []) {
           if (i.nome.length > 30 || i.formula.length > 60) longos.push(`${onde}: ${i.nome} | ${i.formula}`);
