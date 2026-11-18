@@ -241,7 +241,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a diferença entre o maior e o menor bônus.\nD = (6 − 2) × U (diferença = diferença de partes × valor de 1 parte)\nPor que inverso? Quem faltou 1 vez leva 1 parte; quem faltou 2 vezes, metade disso (1/2); quem faltou 3, um terço (1/3). Fração é ruim para dividir dinheiro, então a próxima tela troca as frações por números inteiros.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a diferença entre o maior e o menor bônus.\nD = maior − menor = 6 × U − 2 × U (o maior leva 6 partes e o menor 2, de U reais cada)\nPor que inverso? Quem faltou 1 vez leva 1 parte; quem faltou 2 vezes, metade disso (1/2); quem faltou 3, um terço (1/3). Fração é ruim para dividir dinheiro, então a próxima tela troca as frações por números inteiros.\nAgora é só achar cada letra.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -275,7 +275,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "D = (6 − 2) × 900 = 4 × 900 = 3 600\nLetra C. O maior bônus é 5 400 e o menor é 1 800.",
+     "texto": "Maior: 6 × 900 = 5 400\nMenor: 2 × 900 = 1 800\nD = 5 400 − 1 800 = 3 600\nAtalho: tire as partes antes, (6 − 2) × 900 = 4 × 900 = 3 600\nLetra C.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -312,7 +312,7 @@
        ],
        [
         "2. Equação em letras",
-        "D = (6 − 2) × U"
+        "D = 6 × U − 2 × U"
        ],
        [
         "3. Achar cada letra",
