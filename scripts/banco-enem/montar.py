@@ -143,6 +143,8 @@ def montar(f):
     return {
         'id': f['id'], 'materia': f['materia'], 'tema': f['tema'],
         'enunciado': f['enun'], **dict(zip(LETRAS, f['alts'])), 'resposta': f['resp'], 'origem': ORIGEM,
+        # Questões das provas em escada (17/11/2026) dizem o degrau: facil, medio, dificil ou acima.
+        **({'nivel': f['nivel']} if 'nivel' in f else {}),
         'explicacao': {
             'conferencia': f['conferencia'], 'ideia': f['ideia'],
             'pecas': [{'termo': t, 'significado': s} for t, s in f.get('pecas', [])],

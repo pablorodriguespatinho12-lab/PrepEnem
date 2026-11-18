@@ -25,6 +25,11 @@ const FIGURAS: Record<FiguraFormula, () => JSX.Element> = {
   grafico: () => <><path d="M10 8 V62 H66" fill="none" {...T} /><path d="M14 54 L30 40 L44 44 L62 16" fill="none" stroke={SUJO} strokeWidth={3} /></>,
   contagem: () => <>{[0, 1, 2].map((i) => <circle key={i} cx={14 + i * 22} cy={36} r={8} fill={i === 1 ? SECO : LIMPO} {...T} />)}<Rot x={36} y={64}>× × ×</Rot></>,
   media: () => <>{[30, 46, 22, 40].map((h, i) => <rect key={i} x={8 + i * 15} y={62 - h} width={11} height={h} fill={LIMPO} {...T} />)}<line x1={4} y1={28} x2={68} y2={28} stroke={SUJO} strokeWidth={2.5} strokeDasharray="5 3" /></>,
+  carro: () => <><path d="M6 46 V34 L18 22 H44 L56 34 H64 V46 Z" fill={LIMPO} {...T} /><circle cx={20} cy={48} r={6} fill={TINTA} /><circle cx={50} cy={48} r={6} fill={TINTA} /><path d="M10 64 H60 M52 58 L60 64 L52 70" fill="none" stroke={SUJO} strokeWidth={3} /><Rot x={34} y={14}>v</Rot></>,
+  onda: () => <><path d="M4 36 Q13 12 22 36 T40 36 T58 36 T68 30" fill="none" stroke={SUJO} strokeWidth={3} /><path d="M13 58 H49 M13 54 V62 M49 54 V62" fill="none" stroke={TINTA} strokeWidth={2} /><Rot x={31} y={72}>λ</Rot></>,
+  termometro: () => <><rect x={30} y={6} width={12} height={46} rx={6} fill={PAPEL} {...T} /><circle cx={36} cy={58} r={10} fill={SUJO} {...T} /><rect x={33} y={26} width={6} height={30} fill={SUJO} /><Rot x={58} y={30}>T</Rot></>,
+  lente: () => <><path d="M36 8 Q48 36 36 64 Q24 36 36 8 Z" fill={LIMPO} {...T} /><line x1={2} y1={36} x2={70} y2={36} stroke={CORTE} strokeDasharray="4 3" strokeWidth={2} /><circle cx={60} cy={36} r={3} fill={TINTA} /><Rot x={60} y={52}>f</Rot></>,
+  circuito: () => <><rect x={10} y={14} width={52} height={44} fill="none" {...T} /><rect x={24} y={8} width={24} height={12} fill={SECO} {...T} /><path d="M6 34 H14 M8 42 H12" stroke={TINTA} strokeWidth={3} /><Rot x={36} y={72}>R</Rot></>,
 };
 
 export function Formulas({ v }: { v: VisualFormulas }) {

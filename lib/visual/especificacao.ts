@@ -230,6 +230,8 @@ export interface VisualDiagrama {
 export const FIGURAS_FORMULA = [
   'quadrado', 'retangulo', 'triangulo', 'triangulo-retangulo', 'circulo', 'trapezio',
   'cilindro', 'caixa', 'cone', 'esfera', 'porcentagem', 'grafico', 'contagem', 'media',
+  // Física (17/11/2026, provas em escada)
+  'carro', 'onda', 'termometro', 'lente', 'circuito',
 ] as const;
 export type FiguraFormula = (typeof FIGURAS_FORMULA)[number];
 export interface VisualFormulas {
