@@ -42,10 +42,14 @@ AULAS = {
         texto='Vendeu 60%, então sobrou 100% − 60% = 40%.\nS1 = 0,40'),
       dict(titulo='Achando F: o seu jeito',
         texto='Parece certo somar 60% + 25% = 85% vendidos e achar que sobrou 15%.\nMas o 25% é só do que sobrou do sábado, não do estoque todo.\nNo domingo ficou 75% dos 40%.\nF = 0,40 × 0,75 = 0,30'),
+      # Pablo, 18/11/2026, no papel: "x × 3/5 × 1/4 = 90 e fiz o inverso". O inverso está certo;
+      # as frações é que eram as vendidas, e os 90 são o que SOBROU.
+      dict(titulo='Com frações: o jeito do inverso',
+        texto='Dá para montar com frações: x × (fração que sobrou no sábado) × (fração que sobrou no domingo) = 90.\nParece certo usar 3/5 (60%) e 1/4 (25%). Mas essas são as frações VENDIDAS; os 90 são os que SOBRARAM. Com elas, dá x = 90 × 4 × 5 ÷ 3 = 600, a letra E.\nAs que sobram: 100% − 60% = 40% = 2/5 e 100% − 25% = 75% = 3/4.\nx × 2/5 × 3/4 = 90\nDesfazendo com o inverso: x = 90 × 4/3 × 5/2 = 300'),
     ],
     volta='Q = 90 ÷ 0,30 = 300\nLetra C. Antes da liquidação eram 300 fones.',
     valores=[('S1', '0,40'), ('F', '0,30')],
-    pista='"% do que sobrou" → multiplique as frações que sobram; pediu o total de antes → divida.',
+    pista='"% do que sobrou" → multiplique as frações que SOBRAM (1 − vendido), nunca as vendidas; pediu o total de antes → divida (ou multiplique pelo inverso).',
     receita=[('1. Tabela do que eu tenho', '60%; 25% do que sobrou; 90 fones'), ('2. Equação em letras', 'Q = 90 ÷ F'), ('3. Achar cada letra', 'S1 = 0,40; F = 0,30'), ('4. Substituir', '90 ÷ 0,30 = 300')]),
 
   'd2-dificil-mat-03': dict(

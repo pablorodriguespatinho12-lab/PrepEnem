@@ -160,6 +160,8 @@ Marca errado de propósito, abre todos os passos e procura fórmula quebrada, La
 cru, passo sem desenho e letra certa diferente do banco. Em 10/11/2026: 160
 questões, 840 passos, ~15 min; `--ate=5 --largura=390` para o celular.
 
+Desenho novo da aula (fórmulas, figura): fotografar nos 2 lugares onde ele aparece, o cartão da explicação na prova (`varrer-prova.mts --fotos=`) e a aula "Não sei isso: ver a aula", que é mais larga (`scripts/foto-aula.mts`). Em 18/11/2026 as fórmulas ficaram minúsculas na aula porque só o cartão tinha sido fotografado; e 2 colunas fixas espremeram o cartão: use colunas `auto-fit`.
+
 Em prova com reforço, errar troca "Próxima" por "Tentar uma parecida" e o varredor trava (17/11/2026): use `--so-escada --fotos=<pasta>` para abrir só as questões novas `d2-escada-` com foto do 1º passo; a última de cada prova ainda fica sem varrer.
 
 `scripts/varrer-telas.mts` (antes `geral.cjs` no scratchpad): abre as telas em
