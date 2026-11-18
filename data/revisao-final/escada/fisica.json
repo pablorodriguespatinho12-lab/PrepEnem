@@ -1938,5 +1938,1616 @@
     "resposta": "Iguais em paralelo: divida uma pelo número delas. 10 ÷ 2 = 5."
    }
   }
+ },
+ {
+  "id": "d2-escada-fis-jun-din-01",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Um carro de 1 000 kg sai parado e chega a 72 km/h em 10 segundos, numa pista reta. Desprezando o atrito e a resistência do ar, qual é a força resultante média que age sobre o carro nesse tempo?",
+  "A": "2 000 N",
+  "B": "7 200 N",
+  "C": "720 N",
+  "D": "200 N",
+  "E": "20 000 N",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "a = (72 ÷ 3,6) ÷ 10 = 2 m/s²; F = 1 000 × 2 = 2 000 N. A. B = 72 ÷ 10 × 1 000 (sem converter); C = sem converter e ÷ 10 a mais; D = errou a massa; E = esqueceu o ÷ 10 do tempo.",
+   "ideia": "Junta Cinemática e Dinâmica: primeiro a aceleração, 20 m/s em 10 s, dá 2 m/s². Depois a força: massa × aceleração = 1 000 × 2 = 2 000 N.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "km/h para m/s",
+        "formula": "v = km/h ÷ 3,6"
+       },
+       {
+        "figura": "carro",
+        "nome": "Aceleração",
+        "formula": "a = variação da velocidade ÷ tempo"
+       },
+       {
+        "figura": "carro",
+        "nome": "2ª lei de Newton",
+        "formula": "F = m × a"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa",
+        "1 000 kg"
+       ],
+       [
+        "Velocidade",
+        "0 a 72 km/h"
+       ],
+       [
+        "Tempo",
+        "10 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a força resultante.\nF = m × a (força = massa × aceleração)\nPor que precisa da aceleração? A força não aparece no texto; o que aparece é como a velocidade mudou. Isso é a aceleração, da prova de Cinemática.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "F",
+        "força (o que a questão quer)"
+       ],
+       [
+        "m",
+        "massa"
+       ],
+       [
+        "a",
+        "aceleração"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando m (massa)",
+     "texto": "m = 1 000 kg"
+    },
+    {
+     "titulo": "Achando a: o seu jeito",
+     "texto": "Parece certo fazer 72 ÷ 10 = 7,2. Mas 72 está em km/h e o tempo em segundos.\n72 ÷ 3,6 = 20 m/s\na = 20 ÷ 10 = 2 m/s²"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "F = 1 000 × 2 = 2 000 N\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "m",
+        "1 000 kg"
+       ],
+       [
+        "a",
+        "2 m/s²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pede força e dá velocidade e tempo → primeiro a aceleração (Cinemática), depois F = m × a.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1 000 kg, 0 a 72 km/h, 10 s"
+       ],
+       [
+        "2. Equação em letras",
+        "F = m × a"
+       ],
+       [
+        "3. Achar cada letra",
+        "m = 1 000; a = 2"
+       ],
+       [
+        "4. Substituir",
+        "1 000 × 2 = 2 000"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Massa 500 kg, aceleração 3 m/s². Força?",
+    "opcoes": [
+     "1 500 N",
+     "503 N",
+     "167 N",
+     "150 N"
+    ],
+    "certa": "1 500 N",
+    "resposta": "F = 500 × 3 = 1 500 N."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-jun-din-02",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Uma caixa de 50 kg, parada num piso liso, é empurrada com uma força resultante de 100 N, sempre na mesma direção. Quantos metros a caixa anda nos primeiros 4 segundos?",
+  "A": "8 m",
+  "B": "16 m",
+  "C": "32 m",
+  "D": "4 m",
+  "E": "200 m",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "a = 100/50 = 2; v final = 8 m/s; média 4 m/s; d = 4 × 4 = 16 m. B. A = 2 × 4 (aceleração × tempo); C = usou a velocidade final 8 × 4; D = só a média; E = 100 × 4 ÷ 2.",
+   "ideia": "Junta Dinâmica e Cinemática: a força dá a aceleração, 100 ÷ 50 = 2 m/s². Em 4 s a velocidade vai de 0 a 8 m/s; a média é 4 m/s, e 4 × 4 = 16 m.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "2ª lei de Newton",
+        "formula": "F = m × a"
+       },
+       {
+        "figura": "carro",
+        "nome": "Velocidade média (subindo igual)",
+        "formula": "média = (início + fim) ÷ 2"
+       },
+       {
+        "figura": "onda",
+        "nome": "Velocidade fixa",
+        "formula": "d = v × t"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa",
+        "50 kg"
+       ],
+       [
+        "Força resultante",
+        "100 N"
+       ],
+       [
+        "Tempo",
+        "4 s"
+       ],
+       [
+        "Começo",
+        "parada"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a distância em 4 s.\nd = vm × t (distância = velocidade média × tempo)\nPor que a média? A velocidade sobe sempre igual, de 0 até a final. A média é o meio do caminho entre as duas.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "d",
+        "distância (o que a questão quer)"
+       ],
+       [
+        "a",
+        "aceleração"
+       ],
+       [
+        "vm",
+        "velocidade média"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando a (aceleração)",
+     "texto": "Pela 2ª lei: a = F ÷ m = 100 ÷ 50 = 2 m/s²"
+    },
+    {
+     "titulo": "Achando vm: o seu jeito",
+     "texto": "Parece certo usar a velocidade do fim: 8 × 4 = 32 m. Mas no começo ela estava parada.\nEm 4 s: 0 → 2 → 4 → 6 → 8 m/s\nvm = (0 + 8) ÷ 2 = 4 m/s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "d = 4 × 4 = 16 m\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "a",
+        "2 m/s²"
+       ],
+       [
+        "vm",
+        "4 m/s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: força + tempo e pede distância → a = F ÷ m; velocidade final = a × t; distância = (média) × t.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "50 kg, 100 N, 4 s"
+       ],
+       [
+        "2. Equação em letras",
+        "d = vm × t"
+       ],
+       [
+        "3. Achar cada letra",
+        "a = 2; vm = 4"
+       ],
+       [
+        "4. Substituir",
+        "4 × 4 = 16"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Sai parado e chega a 10 m/s. Velocidade média?",
+    "opcoes": [
+     "5 m/s",
+     "10 m/s",
+     "20 m/s",
+     "0 m/s"
+    ],
+    "certa": "5 m/s",
+    "resposta": "Subindo sempre igual: o meio entre 0 e 10."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-jun-ter-01",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Um carro de 1 000 kg anda a 20 m/s e freia até parar. Toda a energia de movimento do carro vira calor nos freios. Considerando 1 caloria = 4 joules, quanto calor os freios recebem?",
+  "A": "200 000 cal",
+  "B": "800 000 cal",
+  "C": "50 000 cal",
+  "D": "10 000 cal",
+  "E": "100 000 cal",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "E = 1 000 × 400 ÷ 2 = 200 000 J; ÷ 4 = 50 000 cal. C. A = ficou em joules; B = multiplicou por 4; D = esqueceu um 20 (1 000 × 20 ÷ 2); E = esqueceu o ÷ 2 da fórmula (400 000 ÷ 4).",
+   "ideia": "Junta Dinâmica e Calor: a energia de movimento é 1 000 × 20 × 20 ÷ 2 = 200 000 J. Em calorias, divide por 4: 50 000 cal.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Energia de movimento",
+        "formula": "E = m × v × v ÷ 2"
+       },
+       {
+        "figura": "termometro",
+        "nome": "Joule e caloria",
+        "formula": "1 cal = 4 J"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa",
+        "1 000 kg"
+       ],
+       [
+        "Velocidade",
+        "20 m/s"
+       ],
+       [
+        "1 caloria",
+        "4 J"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o calor, em calorias.\nQ = E ÷ 4 (calorias = joules ÷ 4)\nPor que ÷ 4? Cada caloria tem 4 joules. Quantas vezes 4 cabe na energia é o número de calorias.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "Q",
+        "calor em calorias (o que a questão quer)"
+       ],
+       [
+        "E",
+        "energia de movimento, em joules"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando E: o seu jeito",
+     "texto": "Parece certo parar em 200 000 e responder. Mas isso está em joules.\nE = 1 000 × 20 × 20 ÷ 2 = 200 000 J"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "Q = 200 000 ÷ 4 = 50 000 cal\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "E",
+        "200 000 J"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: energia de movimento que \"vira calor\" → E = m × v × v ÷ 2 e depois a troca de unidade (÷ 4 para calorias).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1 000 kg, 20 m/s"
+       ],
+       [
+        "2. Equação em letras",
+        "Q = E ÷ 4"
+       ],
+       [
+        "3. Achar cada letra",
+        "E = 200 000 J"
+       ],
+       [
+        "4. Substituir",
+        "200 000 ÷ 4 = 50 000"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "1 cal = 4 J. 400 J são quantas calorias?",
+    "opcoes": [
+     "100 cal",
+     "1 600 cal",
+     "404 cal",
+     "4 cal"
+    ],
+    "certa": "100 cal",
+    "resposta": "400 ÷ 4 = 100."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-jun-ter-02",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Uma pessoa de 70 kg sobe a escada de um prédio até 10 m de altura. Considere g = 10 m/s² e que 1 quilocaloria (a \"caloria\" dos rótulos de comida) vale 4 200 joules. A energia que ela ganhou de altura equivale a quantas quilocalorias, aproximadamente?",
+  "A": "7 kcal",
+  "B": "29 400 kcal",
+  "C": "0,6 kcal",
+  "D": "1,7 kcal",
+  "E": "70 kcal",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "E = 70 × 10 × 10 = 7 000 J; 7 000 ÷ 4 200 ≈ 1,67 kcal. D. A = 7 000 ÷ 1 000; B = 7 000 × 4,2; C = 4 200 ÷ 7 000; E = só a massa.",
+   "ideia": "Junta Dinâmica e Calor: a energia de altura é 70 × 10 × 10 = 7 000 J. Em quilocalorias, 7 000 ÷ 4 200 ≈ 1,7 kcal: muito pouco perto de um pão de 150 kcal.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Energia de altura",
+        "formula": "E = m × 10 × altura"
+       },
+       {
+        "figura": "termometro",
+        "nome": "Quilocaloria",
+        "formula": "1 kcal = 4 200 J"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa",
+        "70 kg"
+       ],
+       [
+        "Altura",
+        "10 m"
+       ],
+       [
+        "1 kcal",
+        "4 200 J"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a energia em kcal.\nK = E ÷ 4 200 (kcal = joules ÷ 4 200)\nPor que ÷ 4 200? Cada kcal tem 4 200 joules.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "K",
+        "energia em kcal (o que a questão quer)"
+       ],
+       [
+        "E",
+        "energia de altura, em joules"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando E: o seu jeito",
+     "texto": "Parece certo multiplicar por 4 200. Mas a energia já sai em joules; para virar kcal, divide.\nE = 70 × 10 × 10 = 7 000 J"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "K = 7 000 ÷ 4 200 ≈ 1,7 kcal\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "E",
+        "7 000 J"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: energia em joules e pede calorias de comida (kcal) → divida por 4 200.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "70 kg, 10 m"
+       ],
+       [
+        "2. Equação em letras",
+        "K = E ÷ 4 200"
+       ],
+       [
+        "3. Achar cada letra",
+        "E = 7 000 J"
+       ],
+       [
+        "4. Substituir",
+        "≈ 1,7"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "2 kg sobem 5 m (g = 10). Energia de altura?",
+    "opcoes": [
+     "100 J",
+     "17 J",
+     "10 J",
+     "50 J"
+    ],
+    "certa": "100 J",
+    "resposta": "2 × 10 × 5 = 100 J."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-jun-ond-01",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Num estádio, um torcedor está a 170 m do jogador. Ele vê o chute na hora, mas o barulho do chute chega depois, a 340 m/s. A bola sai a 72 km/h, em linha reta. Quantos metros a bola já andou quando o torcedor ouve o chute?",
+  "A": "10 m",
+  "B": "36 m",
+  "C": "0,5 m",
+  "D": "20 m",
+  "E": "170 m",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "t = 170/340 = 0,5 s; v bola = 72/3,6 = 20 m/s; d = 20 × 0,5 = 10 m. A. B = 72 × 0,5 sem converter; C = o tempo; D = um segundo inteiro; E = a distância do torcedor.",
+   "ideia": "Junta Ondas e Cinemática: o som leva 170 ÷ 340 = 0,5 s para chegar. Nesse meio segundo, a bola, a 20 m/s, anda 10 m.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Velocidade fixa",
+        "formula": "d = v × t"
+       },
+       {
+        "figura": "carro",
+        "nome": "km/h para m/s",
+        "formula": "v = km/h ÷ 3,6"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Distância do torcedor",
+        "170 m"
+       ],
+       [
+        "Som",
+        "340 m/s"
+       ],
+       [
+        "Bola",
+        "72 km/h"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o caminho da bola até o som chegar.\nd = vb × t (distância da bola = velocidade da bola × tempo do som)\nPor que o tempo do som? A pergunta é \"quando o torcedor ouve\". Esse tempo é o que o som leva para andar 170 m.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "d",
+        "caminho da bola (o que a questão quer)"
+       ],
+       [
+        "t",
+        "tempo do som"
+       ],
+       [
+        "vb",
+        "velocidade da bola"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando t (tempo do som)",
+     "texto": "t = 170 ÷ 340 = 0,5 s"
+    },
+    {
+     "titulo": "Achando vb: o seu jeito",
+     "texto": "Parece certo usar 72 direto: 72 × 0,5 = 36. Mas o tempo está em segundos.\nvb = 72 ÷ 3,6 = 20 m/s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "d = 20 × 0,5 = 10 m\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "t",
+        "0,5 s"
+       ],
+       [
+        "vb",
+        "20 m/s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: duas coisas andando ao mesmo tempo → ache o tempo por uma delas e use esse tempo na outra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "170 m, 340 m/s, 72 km/h"
+       ],
+       [
+        "2. Equação em letras",
+        "d = vb × t"
+       ],
+       [
+        "3. Achar cada letra",
+        "t = 0,5; vb = 20"
+       ],
+       [
+        "4. Substituir",
+        "20 × 0,5 = 10"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Som a 340 m/s, 680 m de distância. Tempo?",
+    "opcoes": [
+     "2 s",
+     "0,5 s",
+     "340 s",
+     "1 s"
+    ],
+    "certa": "2 s",
+    "resposta": "680 ÷ 340 = 2 s."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-jun-ond-02",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "No ar, a velocidade do som aumenta cerca de 0,6 m/s a cada grau Celsius a mais. Num dia de 15 °C, o som anda a 340 m/s. Num dia de verão a 35 °C, a velocidade do som no ar será de aproximadamente",
+  "A": "361 m/s",
+  "B": "340 m/s",
+  "C": "328 m/s",
+  "D": "355 m/s",
+  "E": "352 m/s",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "ΔT = 20 °C; 20 × 0,6 = 12; 340 + 12 = 352. E. A = 340 + 0,6 × 35 (usou a temperatura e não a diferença); B = achou que não muda; C = tirou em vez de somar; D = 340 + 15.",
+   "ideia": "Junta Ondas e Calor: de 15 °C para 35 °C são 20 graus a mais. Cada grau soma 0,6 m/s: 20 × 0,6 = 12, e 340 + 12 = 352 m/s.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Variação de temperatura",
+        "formula": "ΔT = final − inicial"
+       },
+       {
+        "figura": "onda",
+        "nome": "Velocidade da onda",
+        "formula": "v = λ × f"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Velocidade a 15 °C",
+        "340 m/s"
+       ],
+       [
+        "Aumento",
+        "0,6 m/s por °C"
+       ],
+       [
+        "Dia quente",
+        "35 °C"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a velocidade a 35 °C.\nv = 340 + 0,6 × ΔT (velocidade = a de 15 °C + o aumento)\nPor que ΔT? O aumento conta só os graus A MAIS, a partir dos 15 °C.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "v",
+        "velocidade a 35 °C (o que a questão quer)"
+       ],
+       [
+        "ΔT",
+        "graus a mais"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando ΔT: o seu jeito",
+     "texto": "Parece certo usar 35 inteiro: 0,6 × 35 = 21, e daria 361. Mas os 340 m/s já valem para 15 °C.\nΔT = 35 − 15 = 20 °C"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "v = 340 + 0,6 × 20 = 340 + 12 = 352 m/s\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "ΔT",
+        "20 °C"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: grandeza que muda \"a cada grau\" a partir de um valor conhecido → use a DIFERENÇA de temperatura.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "340 m/s a 15 °C, 35 °C"
+       ],
+       [
+        "2. Equação em letras",
+        "v = 340 + 0,6 × ΔT"
+       ],
+       [
+        "3. Achar cada letra",
+        "ΔT = 20"
+       ],
+       [
+        "4. Substituir",
+        "340 + 12 = 352"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "De 10 °C para 30 °C, quanto o som acelera (0,6 por grau)?",
+    "opcoes": [
+     "12 m/s",
+     "18 m/s",
+     "6 m/s",
+     "20 m/s"
+    ],
+    "certa": "12 m/s",
+    "resposta": "20 graus × 0,6 = 12."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-jun-opt-01",
+  "materia": "Física",
+  "tema": "Óptica",
+  "enunciado": "A luz vermelha de um laser tem comprimento de onda de 700 nanômetros (1 nm = 0,000000001 m, ou 10⁻⁹ m). A luz anda a 300 000 000 m/s (3 × 10⁸ m/s). Qual é, aproximadamente, a frequência dessa luz?",
+  "A": "4,3 × 10¹⁵ Hz",
+  "B": "4,3 × 10¹⁴ Hz",
+  "C": "4,3 × 10⁵ Hz",
+  "D": "2,1 × 10² Hz",
+  "E": "4,3 × 10⁸ Hz",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "f = 3 × 10⁸ / (7 × 10⁻⁷) ≈ 0,43 × 10¹⁵ = 4,3 × 10¹⁴ Hz. B. A = deixou 0,43 virar 4,3 sem baixar o expoente; C = esqueceu o 10⁻⁹ do nm; D = λ × v (multiplicou em vez de dividir); E = 3 × 10⁸ ÷ 0,7.",
+   "ideia": "Junta Óptica e Ondas: a luz também é onda, então v = λ × f. A frequência é f = v ÷ λ = 3 × 10⁸ ÷ (7 × 10⁻⁷) ≈ 4,3 × 10¹⁴ Hz.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Velocidade da onda",
+        "formula": "v = λ × f"
+       },
+       {
+        "figura": "lente",
+        "nome": "Luz",
+        "formula": "v = 3 × 10⁸ m/s"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Comprimento",
+        "700 nm = 7 × 10⁻⁷ m"
+       ],
+       [
+        "Velocidade",
+        "3 × 10⁸ m/s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a frequência.\nf = v ÷ λ (frequência = velocidade ÷ comprimento de onda)\nPor que v = λ × f vale aqui? Luz é onda, como o som da prova anterior. Só é muito mais rápida e muito mais curta.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "f",
+        "frequência (o que a questão quer)"
+       ],
+       [
+        "λ",
+        "comprimento em metros"
+       ],
+       [
+        "v",
+        "velocidade da luz"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando λ: o seu jeito",
+     "texto": "Parece certo usar 700 direto. Mas está em nanômetros.\n700 nm = 700 × 10⁻⁹ m = 7 × 10⁻⁷ m"
+    },
+    {
+     "titulo": "Achando v (luz)",
+     "texto": "v = 3 × 10⁸ m/s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "f = 3 × 10⁸ ÷ (7 × 10⁻⁷)\n3 ÷ 7 ≈ 0,43; 10⁸ ÷ 10⁻⁷ = 10¹⁵\nf ≈ 0,43 × 10¹⁵ = 4,3 × 10¹⁴ Hz (0,43 vira 4,3 e o expoente baixa 1)\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "λ",
+        "7 × 10⁻⁷ m"
+       ],
+       [
+        "v",
+        "3 × 10⁸ m/s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: frequência da luz → mesma fórmula do som, f = v ÷ λ, com o comprimento em metros.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "700 nm, 3 × 10⁸ m/s"
+       ],
+       [
+        "2. Equação em letras",
+        "f = v ÷ λ"
+       ],
+       [
+        "3. Achar cada letra",
+        "λ = 7 × 10⁻⁷; v = 3 × 10⁸"
+       ],
+       [
+        "4. Substituir",
+        "≈ 4,3 × 10¹⁴"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "10⁸ ÷ 10⁻⁷ dá:",
+    "opcoes": [
+     "10¹⁵",
+     "10¹",
+     "10⁻¹⁵",
+     "10⁵⁶"
+    ],
+    "certa": "10¹⁵",
+    "resposta": "Dividir potências: 8 − (−7) = 15."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-jun-opt-02",
+  "materia": "Física",
+  "tema": "Óptica",
+  "enunciado": "A luz do Sol leva cerca de 8 minutos e 20 segundos para chegar à Terra. A luz anda a 300 000 km por segundo. Qual é, aproximadamente, a distância entre o Sol e a Terra?",
+  "A": "2,4 milhões de km",
+  "B": "150 mil km",
+  "C": "150 milhões de km",
+  "D": "9 milhões de km",
+  "E": "1,5 bilhão de km",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "t = 8 × 60 + 20 = 500 s; d = 300 000 × 500 = 150 milhões de km. C. A = 300 000 × 8 (em minutos); B = errou os zeros; D = 300 000 × 30; E = dez vezes mais.",
+   "ideia": "Junta Óptica e Cinemática: 8 min e 20 s são 500 segundos. Distância = velocidade × tempo = 300 000 × 500 = 150 000 000 km.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Velocidade fixa",
+        "formula": "d = v × t"
+       },
+       {
+        "figura": "lente",
+        "nome": "Luz",
+        "formula": "v = 300 000 km/s"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Tempo",
+        "8 min e 20 s"
+       ],
+       [
+        "Velocidade da luz",
+        "300 000 km/s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a distância Sol–Terra.\nd = v × t (distância = velocidade × tempo)\nPor que a mesma conta do carro? A luz anda com velocidade fixa no espaço. É a Cinemática da 1ª prova.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "d",
+        "distância (o que a questão quer)"
+       ],
+       [
+        "t",
+        "tempo, em segundos"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando t: o seu jeito",
+     "texto": "Parece certo usar 8: 300 000 × 8 = 2,4 milhões. Mas a velocidade é por SEGUNDO.\nt = 8 × 60 + 20 = 500 s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "d = 300 000 × 500 = 150 000 000 km\nLetra C. 150 milhões de km.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "t",
+        "500 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: velocidade \"por segundo\" e tempo em minutos → passe tudo para segundos antes de multiplicar.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "8 min 20 s, 300 000 km/s"
+       ],
+       [
+        "2. Equação em letras",
+        "d = v × t"
+       ],
+       [
+        "3. Achar cada letra",
+        "t = 500 s"
+       ],
+       [
+        "4. Substituir",
+        "150 milhões de km"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "3 min e 10 s são quantos segundos?",
+    "opcoes": [
+     "190 s",
+     "310 s",
+     "130 s",
+     "13 s"
+    ],
+    "certa": "190 s",
+    "resposta": "3 × 60 + 10 = 190."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-jun-ele-01",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Um chuveiro de 4 200 W aquece a água que passa por ele: 3 litros (3 kg) por minuto. A água entra a 20 °C. Considere que toda a energia vai para a água e que o calor específico da água é 4 200 J/(kg·°C). A que temperatura a água sai do chuveiro?",
+  "A": "20 °C",
+  "B": "60 °C",
+  "C": "20,3 °C",
+  "D": "40 °C",
+  "E": "80 °C",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "E = 4 200 × 60 = 252 000 J; ΔT = 252 000/(3 × 4 200) = 20; 20 + 20 = 40 °C. D. A = só o aumento; B = 20 + 40; C = usou 1 segundo em vez de 1 minuto; E = palpite.",
+   "ideia": "Junta Eletricidade e Calor: em 1 minuto o chuveiro entrega 4 200 × 60 = 252 000 J. Isso aquece 3 kg em 252 000 ÷ (3 × 4 200) = 20 °C: a água sai a 40 °C.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Potência",
+        "formula": "P = energia ÷ tempo"
+       },
+       {
+        "figura": "termometro",
+        "nome": "Calor",
+        "formula": "Q = m × c × ΔT"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Potência",
+        "4 200 W"
+       ],
+       [
+        "Água",
+        "3 kg por minuto"
+       ],
+       [
+        "Entra a",
+        "20 °C"
+       ],
+       [
+        "c",
+        "4 200 J/(kg·°C)"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a temperatura de saída.\nTs = 20 + ΔT (saída = entrada + quanto esquentou)\nPor que somar? A água já entra a 20 °C. O chuveiro só acrescenta o ΔT.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "Ts",
+        "temperatura de saída (o que a questão quer)"
+       ],
+       [
+        "E",
+        "energia em 1 minuto"
+       ],
+       [
+        "ΔT",
+        "quanto a água esquenta"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando E: o seu jeito",
+     "texto": "Parece certo usar 1 segundo: 4 200 J. Mas a vazão é por MINUTO.\nE = 4 200 × 60 = 252 000 J"
+    },
+    {
+     "titulo": "Achando ΔT (o aquecimento)",
+     "texto": "Da Calorimetria: Q = m × c × ΔT\n252 000 = 3 × 4 200 × ΔT\nΔT = 252 000 ÷ 12 600 = 20 °C"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "Ts = 20 + 20 = 40 °C\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "E",
+        "252 000 J"
+       ],
+       [
+        "ΔT",
+        "20 °C"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: aparelho elétrico que aquece → energia = potência × tempo (Eletricidade) e ΔT = energia ÷ (m × c) (Calor).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "4 200 W, 3 kg/min, 20 °C"
+       ],
+       [
+        "2. Equação em letras",
+        "Ts = 20 + ΔT"
+       ],
+       [
+        "3. Achar cada letra",
+        "E = 252 000; ΔT = 20"
+       ],
+       [
+        "4. Substituir",
+        "20 + 20 = 40"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Aquecedor de 100 W ligado 10 s. Energia?",
+    "opcoes": [
+     "1 000 J",
+     "10 J",
+     "110 J",
+     "100 J"
+    ],
+    "certa": "1 000 J",
+    "resposta": "E = P × t = 100 × 10."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-jun-ele-02",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "O motor de um elevador leva 500 kg (cabine e pessoas) a 20 m de altura em 10 segundos, com velocidade constante. Considere g = 10 m/s² e que o motor não desperdiça energia. Se o motor é ligado em 220 V, qual é, aproximadamente, a corrente que passa por ele?",
+  "A": "10 000 A",
+  "B": "4,5 A",
+  "C": "2,3 A",
+  "D": "455 A",
+  "E": "45 A",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "juncao",
+  "explicacao": {
+   "conferencia": "E = 500 × 10 × 20 = 100 000 J; P = 10 000 W; i = 10 000/220 ≈ 45 A. E. A = parou na potência; B = esqueceu o g; C = usou a massa, 500, como se fosse a potência; D = esqueceu de dividir pelo tempo.",
+   "ideia": "Junta Dinâmica e Eletricidade: a energia de altura é 500 × 10 × 20 = 100 000 J em 10 s, ou 10 000 W. A corrente é potência ÷ tensão: 10 000 ÷ 220 ≈ 45 A.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Energia de altura",
+        "formula": "E = m × 10 × altura"
+       },
+       {
+        "figura": "circuito",
+        "nome": "Potência",
+        "formula": "P = energia ÷ tempo"
+       },
+       {
+        "figura": "circuito",
+        "nome": "Potência elétrica",
+        "formula": "P = U × i"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa",
+        "500 kg"
+       ],
+       [
+        "Altura",
+        "20 m"
+       ],
+       [
+        "Tempo",
+        "10 s"
+       ],
+       [
+        "Tensão",
+        "220 V"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a corrente.\ni = P ÷ 220 (corrente = potência ÷ tensão)\nPor que a potência? De P = U × i: com a tensão fixa, a corrente depende de quanta potência o motor entrega.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "i",
+        "corrente (o que a questão quer)"
+       ],
+       [
+        "E",
+        "energia para subir"
+       ],
+       [
+        "P",
+        "potência do motor"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Achando E (energia de altura)",
+     "texto": "E = 500 × 10 × 20 = 100 000 J"
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo dividir a energia direto pela tensão. Mas primeiro a energia vira potência, por segundo.\nP = 100 000 ÷ 10 = 10 000 W"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "i = 10 000 ÷ 220 ≈ 45 A\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "E",
+        "100 000 J"
+       ],
+       [
+        "P",
+        "10 000 W"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: motor que levanta peso → energia de altura (Dinâmica), potência = energia ÷ tempo, corrente = potência ÷ tensão.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "500 kg, 20 m, 10 s, 220 V"
+       ],
+       [
+        "2. Equação em letras",
+        "i = P ÷ 220"
+       ],
+       [
+        "3. Achar cada letra",
+        "E = 100 000; P = 10 000"
+       ],
+       [
+        "4. Substituir",
+        "≈ 45 A"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Motor de 2 200 W em 220 V. Corrente?",
+    "opcoes": [
+     "10 A",
+     "2 420 A",
+     "0,1 A",
+     "1 980 A"
+    ],
+    "certa": "10 A",
+    "resposta": "i = 2 200 ÷ 220 = 10 A."
+   }
+  }
  }
 ]
