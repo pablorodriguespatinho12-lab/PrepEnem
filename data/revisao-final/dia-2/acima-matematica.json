@@ -241,7 +241,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a diferença entre o maior e o menor bônus.\nD = (6 − 2) × U (diferença = diferença de partes × valor de 1 parte)\nPor que 6 e 2? Os inversos 1, 1/2 e 1/3 viram 6, 3 e 2 partes quando você multiplica tudo por 6. O maior é 6 partes e o menor é 2.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a diferença entre o maior e o menor bônus.\nD = (6 − 2) × U (diferença = diferença de partes × valor de 1 parte)\nPor que inverso? Quem faltou 1 vez leva 1 parte; quem faltou 2 vezes, metade disso (1/2); quem faltou 3, um terço (1/3). Fração é ruim para dividir dinheiro, então a próxima tela troca as frações por números inteiros.\nAgora é só achar cada letra.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -252,7 +252,7 @@
       "linhas": [
        [
         "D",
-        "diferença entre o maior e o menor bônus (o que a questão quer)"
+        "diferença entre maior e menor bônus (o que a questão quer)"
        ],
        [
         "S",
@@ -267,7 +267,7 @@
     },
     {
      "titulo": "Achando S (soma das partes)",
-     "texto": "Inverso de cada número de faltas: 1, 1/2 e 1/3.\nMultiplique tudo por 6 para tirar as frações: 6, 3 e 2.\nQuem faltou 1 vez fica com 6 partes.\nS = 6 + 3 + 2 = 11"
+     "texto": "Inverso de cada número de faltas: 1, 1/2 e 1/3.\nPor que × 6? Multiplicar TODAS pelo mesmo número não muda quem leva mais nem quantas vezes mais, como dobrar uma receita. Escolho 6 porque é o menor número que dá para dividir por 2 e por 3: as frações somem.\n1 × 6 = 6; 1/2 × 6 = 3; 1/3 × 6 = 2\nConfere: 6 é o dobro de 3 e o triplo de 2, igual a 1 ser o dobro de 1/2 e o triplo de 1/3.\nS = 6 + 3 + 2 = 11"
     },
     {
      "titulo": "Achando U: o seu jeito",
