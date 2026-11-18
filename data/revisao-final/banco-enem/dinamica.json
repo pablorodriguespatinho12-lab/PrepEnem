@@ -26,56 +26,127 @@
    ],
    "passos": [
     {
-     "titulo": "A pergunta",
-     "texto": "A estudante tem 60 kg e está sobre uma balança, dentro do elevador.\nO elevador arranca para cima, ganhando 2 m/s de velocidade a cada segundo.\nA questão quer o número que a balança mostra nessa arrancada.",
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
      "visual": {
-      "tipo": "figura",
-      "nome": "bloco-forca",
-      "titulo": "A balança no elevador",
-      "rotulos": [
-       "balança empurra ?",
-       "peso para baixo",
-       "60 kg",
-       "sobe a 2 m/s²"
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Peso",
+        "formula": "P = massa × 10"
+       },
+       {
+        "figura": "carro",
+        "nome": "2ª lei de Newton",
+        "formula": "força que sobra = massa × a"
+       }
       ]
      }
     },
     {
-     "titulo": "O que acontece",
-     "texto": "Parado, a balança só segura o peso: 60 × 10 = 600 N, e mostra 600 ÷ 10 = 60 kg.\n2 m/s² quer dizer: em 1 s a velocidade é 2 m/s; em 2 s, 4 m/s; em 3 s, 6 m/s.\nPara a estudante ganhar essa velocidade para cima, precisa sobrar força para cima: 60 × 2 = 120 N.\nEntão a balança empurra o peso mais a sobra: 600 + 120 = 720 N."
-    },
-    {
-     "titulo": "Jeito rápido",
-     "texto": "Macete de Dinâmica: ache a força que sobra, depois F = m × a. Aqui a sobra para cima é 60 × 2 = 120 N.\nA balança segura o peso (60 × 10 = 600 N) e ainda dá a sobra: 600 + 120 = 720 N.\nA tela mostra quantos 10 N cabem em 720 N: 720 ÷ 10 = 72 kg.",
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
      "visual": {
-      "tipo": "quadro",
-      "titulo": "A balança na arrancada",
-      "dados": [
-       "m = 60\\,\\text{kg}",
-       "a = 2\\,\\text{m/s}^2",
-       "P = 60 \\times 10 = 600\\,\\text{N}"
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
       ],
-      "formula": "N = P + m \\times a",
-      "legenda": [
-       "N: a força da balança",
-       "P: o peso"
-      ],
-      "contas": [
-       "N = 600 + 60 \\times 2",
-       "N = 600 + 120 = 720\\,\\text{N}",
-       "720 \\div 10 = 72"
-      ],
-      "resultado": "72\\,\\text{kg na tela}",
-      "nota": "A massa continua 60 kg; só a força mudou."
+      "linhas": [
+       [
+        "Massa",
+        "60 kg"
+       ],
+       [
+        "Aceleração para cima",
+        "2 m/s²"
+       ],
+       [
+        "g",
+        "10 m/s²"
+       ],
+       [
+        "Balança",
+        "mostra força ÷ 10"
+       ]
+      ]
      }
     },
     {
-     "titulo": "Por que funciona",
-     "texto": "Pela 3ª lei, a balança empurra a estudante com a mesma força que ela aperta a balança.\nSobre a estudante, sobra 720 − 600 = 120 N para cima.\nPela 2ª lei, a = F ÷ m = 120 ÷ 60 = 2 m/s², a aceleração do elevador. Confere."
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o número na balança.\nL = N ÷ 10 (leitura = força na balança ÷ 10)\nPor que dividir por 10? É o que a balança faz: ela mede força e mostra em \"kg\".\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "L",
+        "leitura da balança (o que a questão quer)"
+       ],
+       [
+        "N",
+        "força que a balança faz"
+       ]
+      ]
+     }
     },
     {
-     "titulo": "A resposta",
-     "texto": "Letra C, 72 kg.\nA (60 kg) é o que a balança mostra com o elevador parado.\nB (48 kg) tirou os 12 kg em vez de somar: isso seria o elevador acelerando para baixo.\nD (62 kg) somou os 2 m/s² direto na massa.\nE (720 kg) é a força em newtons, sem dividir por 10."
+     "titulo": "Achando N: o seu jeito",
+     "texto": "Parece certo usar só o peso: 600 N, e a balança mostraria 60. Mas, para subir acelerando, a balança precisa empurrar mais que o peso.\nForça que sobra = 60 × 2 = 120 N\nN = 600 + 120 = 720 N"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "L = 720 ÷ 10 = 72 kg\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "N",
+        "720 N"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: elevador acelerando para cima → a balança marca o peso + massa × aceleração; para baixo, o peso − massa × aceleração.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "60 kg, 2 m/s²"
+       ],
+       [
+        "2. Equação em letras",
+        "L = N ÷ 10"
+       ],
+       [
+        "3. Achar cada letra",
+        "N = 720"
+       ],
+       [
+        "4. Substituir",
+        "720 ÷ 10 = 72"
+       ]
+      ]
+     }
     }
    ],
    "seuErro": null,
@@ -119,55 +190,139 @@
    ],
    "passos": [
     {
-     "titulo": "A pergunta",
-     "texto": "O drone tem 2 kg e carrega um pacote de 1 kg.\nAs hélices empurram para cima com 39 N, e a gravidade puxa para baixo.\nA questão quer a aceleração na subida.",
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
      "visual": {
-      "tipo": "figura",
-      "nome": "bloco-forca",
-      "titulo": "O drone decolando",
-      "rotulos": [
-       "hélices 39 N",
-       "peso para baixo",
-       "2 kg + 1 kg",
-       "g = 10 m/s²"
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Peso",
+        "formula": "P = massa × 10"
+       },
+       {
+        "figura": "carro",
+        "nome": "2ª lei de Newton",
+        "formula": "força que sobra = massa × a"
+       }
       ]
      }
     },
     {
-     "titulo": "O que acontece",
-     "texto": "Quem sobe é o drone junto com o pacote: 2 + 1 = 3 kg.\nCada 1 kg pesa 10 N; 2 kg pesam 20 N; 3 kg pesam 30 N.\nHélice para cima 39 N, peso para baixo 30 N: sobram 39 − 30 = 9 N para cima."
-    },
-    {
-     "titulo": "Jeito rápido",
-     "texto": "Macete de Dinâmica: o que empurra menos o que segura, depois F = m × a.\nPeso do drone com o pacote: 3 × 10 = 30 N. Sobra: 39 − 30 = 9 N para cima.\na = 9 ÷ 3 = 3 m/s² (9 N repartidos por 3 kg: 3 N por quilo).",
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
      "visual": {
-      "tipo": "quadro",
-      "titulo": "A decolagem",
-      "dados": [
-       "F_{\\text{hélices}} = 39\\,\\text{N}",
-       "m = 2 + 1 = 3\\,\\text{kg}",
-       "P = 3 \\times 10 = 30\\,\\text{N}"
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
       ],
-      "formula": "a = \\frac{F_{\\text{hélices}} - P}{m}",
-      "legenda": [
-       "F: o empurrão das hélices",
-       "P: o peso do conjunto"
-      ],
-      "contas": [
-       "a = \\frac{39 - 30}{3}",
-       "a = \\frac{9}{3}"
-      ],
-      "resultado": "a = 3\\,\\text{m/s}^2",
-      "nota": "Sobe ganhando 3 m/s a cada segundo."
+      "linhas": [
+       [
+        "Massa do drone",
+        "2 kg"
+       ],
+       [
+        "Massa do pacote",
+        "1 kg"
+       ],
+       [
+        "Força das hélices",
+        "39 N"
+       ],
+       [
+        "g",
+        "10 m/s²"
+       ]
+      ]
      }
     },
     {
-     "titulo": "Por que funciona",
-     "texto": "Pela 2ª lei, F = m × a, e a força que vale é a resultante, o que sobra.\nVirando a fórmula: a = F ÷ m.\nConfira ao contrário: 3 kg × 3 m/s² = 9 N, exatamente o que sobra depois do peso."
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a aceleração do conjunto.\na = F ÷ m (aceleração = força que sobra ÷ massa)\nPor que a força que sobra? O peso puxa para baixo. Só o que as hélices fazem a mais acelera.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "a",
+        "aceleração (o que a questão quer)"
+       ],
+       [
+        "F",
+        "força que sobra"
+       ],
+       [
+        "m",
+        "massa do conjunto"
+       ]
+      ]
+     }
     },
     {
-     "titulo": "A resposta",
-     "texto": "Letra A, 3 m/s².\nB (13 m/s²) esqueceu o peso: fez 39 ÷ 3.\nC (4,5 m/s²) esqueceu o pacote na massa: fez 9 ÷ 2.\nD (19,5 m/s²) esqueceu o peso e o pacote: fez 39 ÷ 2.\nE (9) é a força que sobra, em newtons, e não a aceleração."
+     "titulo": "Achando m (massa total)",
+     "texto": "m = 2 + 1 = 3 kg"
+    },
+    {
+     "titulo": "Achando F: o seu jeito",
+     "texto": "Parece certo fazer 39 ÷ 3 = 13. Mas o peso puxa para baixo.\nPeso = 3 × 10 = 30 N\nF = 39 − 30 = 9 N"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "a = 9 ÷ 3 = 3 m/s²\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "m",
+        "3 kg"
+       ],
+       [
+        "F",
+        "9 N"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: subindo com força para cima → tire o peso antes de dividir pela massa toda.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "2 + 1 kg, 39 N"
+       ],
+       [
+        "2. Equação em letras",
+        "a = F ÷ m"
+       ],
+       [
+        "3. Achar cada letra",
+        "m = 3; F = 9"
+       ],
+       [
+        "4. Substituir",
+        "9 ÷ 3 = 3"
+       ]
+      ]
+     }
     }
    ],
    "seuErro": null,

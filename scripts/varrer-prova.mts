@@ -14,6 +14,7 @@
    Todo POST em /api/** recebe {} (nada grava na conta), menos
    /api/tutor/explicacao, que só lê a explicação pronta. Questão sem
    explicação pronta GASTA a IA do site: rode só em prova com explicação pronta. */
+import { readFileSync } from 'fs';
 import { chromium, type Page } from 'playwright';
 
 const BASE = process.env.PREPENEM_URL ?? 'http://localhost:3000';
@@ -29,6 +30,10 @@ const FOTOS = process.argv.find((a) => a.startsWith('--fotos='))?.split('=')[1];
 // --so-escada: só abre a explicação das d2-escada-; nas outras marca a certa e passa
 // (errar numa questão com reforço troca "Próxima" por "Tentar uma parecida").
 const SO_ESCADA = process.argv.includes('--so-escada');
+// --ids=<arquivo.json>: abre a explicação só destes ids (lista), em vez das d2-escada-.
+const ARQ_IDS = process.argv.find((a) => a.startsWith('--ids='))?.split('=')[1];
+const SO_IDS: Set<string> | null = ARQ_IDS ? new Set(JSON.parse(readFileSync(ARQ_IDS, 'utf8'))) : null;
+const abrir = (id: string) => (SO_IDS ? SO_IDS.has(id) : id.startsWith('d2-escada-'));
 const PROVAS = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 const LETRAS = ['A', 'B', 'C', 'D', 'E'];
 const ESPERA_PASSO_MS = 450;
@@ -64,6 +69,22 @@ async function varrerQuestao(page: Page, marca: string, certa: string, achados: 
   return passos;
 }
 
+/* Errou numa questão com reforço: o botão vira "Tentar uma parecida". Faz a parecida
+   (qualquer letra) e segue: errou o reforço também, a prova anda. */
+async function irParaProxima(page: Page) {
+  const proxima = page.getByRole('button', { name: /Próxima/ });
+  if (await proxima.isVisible().catch(() => false)) return proxima.click();
+  const parecida = page.getByRole('button', { name: /Tentar uma parecida/ });
+  if (await parecida.isVisible().catch(() => false)) {
+    await parecida.click();
+    await page.waitForTimeout(ESPERA_CARREGAR_MS);
+    await page.locator('[data-alt]').first().click();
+    await page.getByRole('button', { name: 'Confirmar' }).click();
+    await page.waitForTimeout(400);
+  }
+  await proxima.click();
+}
+
 async function main() {
   if (PROVAS.length === 0) throw new Error('Passe o id de pelo menos uma prova');
   const browser = await chromium.launch();
@@ -92,8 +113,8 @@ async function main() {
       const marca = `${exam.nome} #${i + 1}`;
       try {
         const qid = questoes[i].question.id;
-        const foto = FOTOS && qid.startsWith('d2-escada-') ? `${FOTOS}/${qid}.png` : undefined;
-        if (SO_ESCADA && !qid.startsWith('d2-escada-')) {
+        const foto = FOTOS && abrir(qid) ? `${FOTOS}/${qid}.png` : undefined;
+        if ((SO_ESCADA || SO_IDS) && !abrir(qid)) {
           await page.locator(`[data-alt="${questoes[i].question.respostaCorreta}"]`).first().click();
           await page.getByRole('button', { name: 'Confirmar' }).click();
         } else {
@@ -101,7 +122,7 @@ async function main() {
           totalQuestoes++;
         }
         if (i < limite - 1) {
-          await page.getByRole('button', { name: /Próxima/ }).click();
+          await irParaProxima(page);
           await page.waitForTimeout(300);
         }
       } catch (e) {

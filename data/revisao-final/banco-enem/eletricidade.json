@@ -26,55 +26,127 @@
    ],
    "passos": [
     {
-     "titulo": "A pergunta",
-     "texto": "Cada sala trocou uma lâmpada de 100 W por uma de LED de 12 W.\nA lâmpada fica acesa 6 horas por dia, 30 dias no mês.\nA questão quer o dinheiro economizado no mês, com o kWh a R$ 0,75.",
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
      "visual": {
-      "tipo": "figura",
-      "nome": "circuito-simples",
-      "titulo": "A lâmpada trocada",
-      "rotulos": [
-       "tomada",
-       "100 W → LED 12 W",
-       "6 h por dia",
-       "30 dias"
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Energia",
+        "formula": "E = potência × tempo"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Conta de luz",
+        "formula": "custo = kWh × preço"
+       }
       ]
      }
     },
     {
-     "titulo": "O que acontece",
-     "texto": "Antes, a sala gastava 100 W. Agora gasta 12 W.\nA cada hora, 100 − 12 = 88 W deixam de ser gastos.\nCom números pequenos: 88 W por 1 h = 88 Wh; por 2 h = 88 + 88 = 176 Wh, que é 88 × 2.\nNo mês são 6 × 30 = 180 horas."
-    },
-    {
-     "titulo": "Jeito rápido",
-     "texto": "Macete de Eletricidade: energia = potência × tempo (kWh = kW × horas).\nPotência poupada: 100 − 12 = 88 W. Horas no mês: 6 × 30 = 180 h.\nEnergia: 88 × 180 = 15 840 Wh. Quantos 1 000 cabem em 15 840? 15,84 kWh.\nDinheiro: 15,84 × 0,75 = R$ 11,88.",
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
      "visual": {
-      "tipo": "quadro",
-      "titulo": "Economia da troca",
-      "dados": [
-       "P = 100 - 12 = 88\\,\\text{W}",
-       "t = 6 \\times 30 = 180\\,\\text{h}"
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
       ],
-      "formula": "E = P \\times t",
-      "legenda": [
-       "P: a potência que deixou de gastar",
-       "t: as horas do mês"
-      ],
-      "contas": [
-       "E = 88 \\times 180 = 15\\,840\\,\\text{Wh}",
-       "E = 15{,}84\\,\\text{kWh}",
-       "15{,}84 \\times 0{,}75 = 11{,}88"
-      ],
-      "resultado": "11{,}88\\,\\text{reais}",
-      "nota": "Economia por sala, por mês."
+      "linhas": [
+       [
+        "Antes",
+        "100 W"
+       ],
+       [
+        "Depois",
+        "12 W"
+       ],
+       [
+        "Uso",
+        "6 h por dia, 30 dias"
+       ],
+       [
+        "Preço",
+        "R$ 0,75 por kWh"
+       ]
+      ]
      }
     },
     {
-     "titulo": "Por que funciona",
-     "texto": "A conta de luz cobra energia, e energia é potência vezes tempo.\nComo as duas lâmpadas ficam o mesmo tempo acesas, dá para subtrair as potências antes.\nConfira pelo outro caminho: 18 kWh antes − 2,16 kWh depois = 15,84 kWh."
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a economia por mês.\nC = E × 0,75 (economia = energia economizada × preço)\nPor que a energia economizada? É a potência que deixou de ser gasta, durante todas as horas do mês.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "C",
+        "economia em reais (o que a questão quer)"
+       ],
+       [
+        "E",
+        "energia economizada, em kWh"
+       ]
+      ]
+     }
     },
     {
-     "titulo": "A resposta",
-     "texto": "Letra A, R$ 11,88 por mês em cada sala.\nB (R$ 13,50) usa os 100 W inteiros, como se o LED não gastasse nada.\nC (R$ 15,84) é a energia em kWh, não o dinheiro.\nD (R$ 1,62) é o que o LED gasta, não o que se economiza.\nE (R$ 11 880,00) esqueceu de dividir os Wh por 1 000."
+     "titulo": "Achando E: o seu jeito",
+     "texto": "Parece certo calcular só a lâmpada de LED. Mas a economia é a DIFERENÇA.\nDiferença: 100 − 12 = 88 W\nHoras: 6 × 30 = 180 h\nE = 88 × 180 = 15 840 Wh = 15,84 kWh"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "C = 15,84 × 0,75 = 11,88\nLetra A. R$ 11,88 por mês.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "E",
+        "15,84 kWh"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: economia de energia → diferença de potência × horas, em kWh (÷ 1 000), × preço.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "100 W → 12 W, 180 h"
+       ],
+       [
+        "2. Equação em letras",
+        "C = E × 0,75"
+       ],
+       [
+        "3. Achar cada letra",
+        "E = 15,84 kWh"
+       ],
+       [
+        "4. Substituir",
+        "15,84 × 0,75 = 11,88"
+       ]
+      ]
+     }
     }
    ],
    "seuErro": null,
@@ -118,54 +190,130 @@
    ],
    "passos": [
     {
-     "titulo": "A pergunta",
-     "texto": "Duas air fryers de 1 760 W: uma em 110 V, outra em 220 V.\nA potência é igual nas duas.\nA questão quer a corrente da versão de 110 V e como ela se compara com a de 220 V.",
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
      "visual": {
-      "tipo": "figura",
-      "nome": "circuito-simples",
-      "titulo": "A air fryer na tomada",
-      "rotulos": [
-       "tomada 110 V ou 220 V",
-       "air fryer 1 760 W",
-       "i = ?",
-       ""
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Potência",
+        "formula": "P = U × i"
+       }
       ]
      }
     },
     {
-     "titulo": "O que acontece",
-     "texto": "P = U × i: a potência é o empurrão vezes a corrente.\nCom números pequenos: 10 V × 2 A = 20 W. Para dar os mesmos 20 W com 5 V, precisa de 4 A, porque 5 × 4 = 20.\nMetade do empurrão, dobro da corrente."
-    },
-    {
-     "titulo": "Jeito rápido",
-     "texto": "Macete de Eletricidade: P = U × i, então a corrente sai de i = P ÷ U.\n110 V: quantos 110 cabem em 1 760? 1 760 ÷ 110 = 16 A.\n220 V: quantos 220 cabem em 1 760? 1 760 ÷ 220 = 8 A. 16 é o dobro de 8.",
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
      "visual": {
-      "tipo": "quadro",
-      "titulo": "Corrente nas duas versões",
-      "dados": [
-       "P = 1\\,760\\,\\text{W}",
-       "U = 110\\,\\text{V} \\text{ ou } 220\\,\\text{V}"
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
       ],
-      "formula": "i = \\frac{P}{U}",
-      "legenda": [
-       "P: a potência",
-       "U: a tensão da tomada"
-      ],
-      "contas": [
-       "i_{110} = \\frac{1\\,760}{110} = 16\\,\\text{A}",
-       "i_{220} = \\frac{1\\,760}{220} = 8\\,\\text{A}"
-      ],
-      "resultado": "16\\,\\text{A} = 2 \\times 8\\,\\text{A}",
-      "nota": "Na de 110 V passa o dobro."
+      "linhas": [
+       [
+        "Potência",
+        "1 760 W, as duas"
+       ],
+       [
+        "Versão 1",
+        "110 V"
+       ],
+       [
+        "Versão 2",
+        "220 V"
+       ]
+      ]
      }
     },
     {
-     "titulo": "Por que funciona",
-     "texto": "As duas fritam igual, então gastam a mesma energia por segundo.\nSe o empurrão cai pela metade, a corrente tem que dobrar para U × i continuar igual.\nConfira: 110 × 16 = 1 760 e 220 × 8 = 1 760."
+     "titulo": "A equação em letras",
+     "texto": "A questão quer comparar as correntes.\ni = P ÷ U (corrente = potência ÷ tensão)\nPor que dividir? Mesma potência com menos tensão precisa de mais corrente.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "i",
+        "corrente (o que a questão quer)"
+       ],
+       [
+        "i1",
+        "corrente em 110 V"
+       ],
+       [
+        "i2",
+        "corrente em 220 V"
+       ]
+      ]
+     }
     },
     {
-     "titulo": "A resposta",
-     "texto": "Letra B, 16 A, o dobro da versão de 220 V.\nA (8 A, igual) acha que a corrente não muda com a tomada.\nC (8 A, metade) troca as versões: 8 A é a de 220 V.\nD (16 A, metade) acerta a conta, mas inverte a comparação.\nE (32 A) dobra duas vezes: a conta é só uma divisão."
+     "titulo": "Achando i1 (110 V)",
+     "texto": "i1 = 1 760 ÷ 110 = 16 A"
+    },
+    {
+     "titulo": "Achando i2: o seu jeito",
+     "texto": "Parece certo achar que 220 V puxa mais corrente, por ter mais tensão. Mas a potência é a mesma.\ni2 = 1 760 ÷ 220 = 8 A"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "16 A é o dobro de 8 A\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "i1",
+        "16 A"
+       ],
+       [
+        "i2",
+        "8 A"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: mesma potência em tensões diferentes → metade da tensão = o dobro da corrente.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1 760 W; 110 e 220 V"
+       ],
+       [
+        "2. Equação em letras",
+        "i = P ÷ U"
+       ],
+       [
+        "3. Achar cada letra",
+        "i1 = 16; i2 = 8"
+       ],
+       [
+        "4. Substituir",
+        "o dobro"
+       ]
+      ]
+     }
     }
    ],
    "seuErro": null,

@@ -221,6 +221,25 @@ describe('questões das provas em escada', () => {
   });
 });
 
+/* Aulas trocadas para o jeito do robô em questões que já existiam (Pablo, 18/11/2026:
+   "montar a equação e descobrir cada valor a partir dos dados"). Cada uma no molde. */
+const PASTA_AULAS_ESCADA = join(process.cwd(), 'data/revisao-final/aulas-escada');
+describe('aulas trocadas das provas em escada', () => {
+  const arquivos = existsSync(PASTA_AULAS_ESCADA) ? readdirSync(PASTA_AULAS_ESCADA).filter((f) => f.endsWith('.json')) : [];
+  for (const arquivo of arquivos) {
+    const aulas = JSON.parse(readFileSync(join(PASTA_AULAS_ESCADA, arquivo), 'utf8')) as Record<string, { explicacao: Record<string, unknown> }>;
+    it(`${arquivo}: toda aula no jeito do robô, sem frase proibida`, () => {
+      const ruins = Object.entries(aulas).flatMap(([id, a]) => {
+        const q = { explicacao: a.explicacao } as unknown as Questao;
+        const erros = ehMoldeRobo(q) ? problemasDoMolde(q) : ['fora do jeito do robô'];
+        if (PROIBIDO.test(JSON.stringify(a.explicacao))) erros.push('frase ou símbolo proibido');
+        return erros.length ? [`${id}: ${erros.join('; ')}`] : [];
+      });
+      expect(ruins).toEqual([]);
+    });
+  }
+});
+
 /* Questões de reforço (Pablo, 12/11/2026): errou na prova, a próxima é uma
    parecida do mesmo conteúdo, estilo ENEM (nunca "ENEM real"). Mesma
    conferência das provas e uma figura em pixel no 1º passo. */

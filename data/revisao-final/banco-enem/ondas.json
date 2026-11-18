@@ -13,7 +13,7 @@
   "origem": "Banco ENEM do dia 2",
   "explicacao": {
    "conferencia": "λ = v ÷ f = 340 ÷ 680 = 0,5 m. B. Erros: A = 680 ÷ 340 (dividiu ao contrário); C = 340 + 680 (somou); D = 340 × 680 (multiplicou); E = copiou a velocidade.",
-   "ideia": "VÊ LÁ FORA: v = λ × f, então λ = v ÷ f. Aqui, 340 ÷ 680 = 0,5 m.",
+   "ideia": "De v = λ × f, o comprimento de onda é a velocidade dividida pela frequência. Aqui, 340 ÷ 680 = 0,5 m.",
    "pecas": [
     {
      "termo": "Diapasão",
@@ -26,56 +26,126 @@
    ],
    "passos": [
     {
-     "titulo": "A pergunta",
-     "texto": "O diapasão vibra 680 vezes por segundo: f = 680 Hz (hertz).\nNo ar, o som anda 340 m em 1 segundo.\nA questão quer o tamanho de uma onda inteira: λ.",
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
      "visual": {
-      "tipo": "figura",
-      "nome": "onda",
-      "titulo": "O som do diapasão",
-      "rotulos": [
-       "λ = ?",
-       "f = 680 Hz",
-       "v = 340 m/s"
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Velocidade da onda",
+        "formula": "v = λ × f"
+       }
       ]
      }
     },
     {
-     "titulo": "O que acontece",
-     "texto": "Em 1 segundo, o som anda 340 m.\nNesse mesmo segundo, o diapasão solta 680 ondas, uma atrás da outra.\nEntão 680 ondas cabem em 340 m.\nHá mais ondas do que metros: cada onda tem menos de 1 m.",
-     "visual": null
-    },
-    {
-     "titulo": "Jeito rápido",
-     "texto": "Macete de Ondas: v = λ × f, então o tamanho de 1 onda é velocidade ÷ frequência.\nEm 1 s o som anda 340 m e cabem nele 680 ondas: quantos metros para cada onda? 340 ÷ 680.\n680 é o dobro de 340, então cada onda tem 0,5 m.",
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
      "visual": {
-      "tipo": "quadro",
-      "titulo": "O diapasão",
-      "dados": [
-       "v = 340\\,\\text{m/s}",
-       "f = 680\\,\\text{Hz}"
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
       ],
-      "formula": "\\lambda = \\frac{v}{f}",
-      "legenda": [
-       "\\lambda: tamanho de uma onda",
-       "v: velocidade do som",
-       "f: vibrações por segundo"
-      ],
-      "contas": [
-       "\\lambda = \\frac{340}{680}"
-      ],
-      "resultado": "\\lambda = 0{,}5\\,\\text{m}",
-      "nota": "Cada onda tem meio metro."
+      "linhas": [
+       [
+        "Frequência",
+        "680 Hz"
+       ],
+       [
+        "Velocidade no ar",
+        "340 m/s"
+       ]
+      ]
      }
     },
     {
-     "titulo": "Por que funciona",
-     "texto": "Confira ao contrário: 680 ondas de 0,5 m dão 680 × 0,5 = 340 m.\nIsso é o caminho do som em 1 segundo. Bate com os 340 m/s.\nEssa conta é o v = λ × f da aula: 340 = 0,5 × 680.",
-     "visual": null
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o comprimento de onda.\nλ = v ÷ f (comprimento = velocidade ÷ frequência)\nPor que dividir? Em 1 s o som anda 340 m e cabem 680 ondas nesse caminho.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "λ",
+        "comprimento (o que a questão quer)"
+       ],
+       [
+        "v",
+        "velocidade"
+       ],
+       [
+        "f",
+        "frequência"
+       ]
+      ]
+     }
     },
     {
-     "titulo": "A resposta",
-     "texto": "Letra B, 0,5 m.\nA (2 m): dividiu ao contrário, 680 ÷ 340.\nC (1 020 m): somou 340 + 680, e não há soma na fórmula.\nD (231 200 m): multiplicou 340 × 680. Isso seria achar a velocidade, que já foi dada.\nE (340 m): copiou a velocidade do som.",
-     "visual": null
+     "titulo": "Achando v (velocidade)",
+     "texto": "v = 340 m/s"
+    },
+    {
+     "titulo": "Achando f: o seu jeito",
+     "texto": "Parece certo fazer 680 ÷ 340 = 2. Mas é a velocidade que se divide pela frequência.\nf = 680 Hz"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "λ = 340 ÷ 680 = 0,5 m\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "v",
+        "340 m/s"
+       ],
+       [
+        "f",
+        "680 Hz"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: diapasão, nota ou som com frequência → λ = v ÷ f (o de cima é a velocidade).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "680 Hz, 340 m/s"
+       ],
+       [
+        "2. Equação em letras",
+        "λ = v ÷ f"
+       ],
+       [
+        "3. Achar cada letra",
+        "v = 340; f = 680"
+       ],
+       [
+        "4. Substituir",
+        "340 ÷ 680 = 0,5"
+       ]
+      ]
+     }
     }
    ],
    "seuErro": null,
@@ -106,7 +176,7 @@
   "origem": "Banco ENEM do dia 2",
   "explicacao": {
    "conferencia": "λ = v ÷ f = 1 500 ÷ 3 000 000 = 0,0005 m = 0,5 mm. D. Erros: A = 3 000 000 ÷ 1 500 (ao contrário); B e C = zeros errados; E = 1 500 × 3 000 000 (multiplicou).",
-   "ideia": "VÊ LÁ FORA: λ = v ÷ f. Passe a velocidade para milímetros e corte os milhões: 1,5 ÷ 3 = 0,5 mm.",
+   "ideia": "O comprimento de onda é a velocidade dividida pela frequência. Com a velocidade em milímetros, 1 500 000 ÷ 3 000 000 = 0,5 mm.",
    "pecas": [
     {
      "termo": "Milímetro (mm)",
@@ -119,57 +189,126 @@
    ],
    "passos": [
     {
-     "titulo": "A pergunta",
-     "texto": "O aparelho vibra 3 milhões de vezes por segundo: f = 3 000 000 Hz.\nNo corpo, o som anda 1 500 m em 1 segundo.\nA questão quer o tamanho de uma onda: λ.",
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
      "visual": {
-      "tipo": "figura",
-      "nome": "onda",
-      "titulo": "O ultrassom no corpo",
-      "rotulos": [
-       "λ = ?",
-       "f = 3 000 000 Hz",
-       "v = 1 500 m/s"
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Velocidade da onda",
+        "formula": "v = λ × f"
+       }
       ]
      }
     },
     {
-     "titulo": "O que acontece",
-     "texto": "Em 1 segundo, o som anda 1 500 m e o aparelho solta 3 milhões de ondas.\nSão muito mais ondas do que metros, então cada onda é minúscula.\nPor isso a resposta vem em milímetros.",
-     "visual": null
-    },
-    {
-     "titulo": "Jeito rápido",
-     "texto": "Macete de Ondas: v = λ × f, então o tamanho de 1 onda é velocidade ÷ frequência.\nEm 1 s: 1 500 m = 1 500 000 mm, repartidos em 3 000 000 de ondas.\nCorte os milhões: 1,5 ÷ 3 = 0,5 mm para cada onda, porque 3 × 0,5 = 1,5.",
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
      "visual": {
-      "tipo": "quadro",
-      "titulo": "O ultrassom",
-      "dados": [
-       "v = 1\\,500\\,\\text{m/s} = 1\\,500\\,000\\,\\text{mm/s}",
-       "f = 3\\,000\\,000\\,\\text{Hz}"
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
       ],
-      "formula": "\\lambda = \\frac{v}{f}",
-      "legenda": [
-       "\\lambda: tamanho de uma onda",
-       "v: velocidade no corpo",
-       "f: vibrações por segundo"
-      ],
-      "contas": [
-       "\\lambda = \\frac{1\\,500\\,000}{3\\,000\\,000}",
-       "\\lambda = \\frac{1{,}5}{3}"
-      ],
-      "resultado": "\\lambda = 0{,}5\\,\\text{mm}",
-      "nota": "Cada onda tem meio milímetro."
+      "linhas": [
+       [
+        "Velocidade no corpo",
+        "1 500 m/s"
+       ],
+       [
+        "Frequência",
+        "3 000 000 Hz"
+       ]
+      ]
      }
     },
     {
-     "titulo": "Por que funciona",
-     "texto": "Com números pequenos: 6 m divididos em 12 ondas dão 6 ÷ 12 = 0,5 m cada.\nAqui são 1 500 000 mm divididos em 3 000 000 de ondas: a mesma metade, em milímetros.\nConfira: 3 000 000 × 0,5 mm = 1 500 000 mm = 1 500 m. Bate com a velocidade.",
-     "visual": null
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o comprimento de onda.\nλ = v ÷ f (comprimento = velocidade ÷ frequência)\nPor que dividir? Em 1 s o som anda 1 500 m, e nesse caminho cabem 3 milhões de ondas.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "O que é"
+      ],
+      "linhas": [
+       [
+        "λ",
+        "comprimento (o que a questão quer)"
+       ],
+       [
+        "v",
+        "velocidade"
+       ],
+       [
+        "f",
+        "frequência"
+       ]
+      ]
+     }
     },
     {
-     "titulo": "A resposta",
-     "texto": "Letra D, 0,5 mm.\nA (2 000 m): dividiu ao contrário, 3 000 000 ÷ 1 500.\nB (5 mm): perdeu um zero na conta.\nC (0,05 mm): pôs um zero a mais.\nE (4 500 000 000 m): multiplicou 1 500 × 3 000 000.",
-     "visual": null
+     "titulo": "Achando v (em milímetros)",
+     "texto": "v = 1 500 m/s = 1 500 000 mm/s"
+    },
+    {
+     "titulo": "Achando f: o seu jeito",
+     "texto": "Parece certo achar 5 mm. Mas 1 500 000 ÷ 3 000 000 é menos que 1.\nf = 3 000 000 Hz"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "λ = 1 500 000 ÷ 3 000 000 = 0,5 mm\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "v",
+        "1 500 000 mm/s"
+       ],
+       [
+        "f",
+        "3 000 000 Hz"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: frequência em milhões → passe a velocidade para milímetros e corte os zeros.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1 500 m/s, 3 milhões Hz"
+       ],
+       [
+        "2. Equação em letras",
+        "λ = v ÷ f"
+       ],
+       [
+        "3. Achar cada letra",
+        "v e f em mm"
+       ],
+       [
+        "4. Substituir",
+        "0,5 mm"
+       ]
+      ]
+     }
     }
    ],
    "seuErro": null,

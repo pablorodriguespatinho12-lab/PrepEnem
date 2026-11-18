@@ -318,7 +318,8 @@ export default function ProvaDetailPage() {
     { letra: 'C', texto: q.alternativaC },
     { letra: 'D', texto: q.alternativaD },
     { letra: 'E', texto: q.alternativaE },
-  ];
+  // Unicamp tem 4 alternativas: a E vem vazia e aparecia como botão sem texto (18/11/2026).
+  ].filter((a) => a.texto?.trim());
 
   // A letra certa já vem com a questão: o acerto aparece no toque e a resposta
   // é gravada por trás (Pablo, 22/10/2026: "demora para ele ver que acerta").
