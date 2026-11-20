@@ -8,7 +8,7 @@ import path from "node:path";
 
 const [arquivo, saida] = process.argv.slice(2);
 mkdirSync(saida, { recursive: true });
-const FOTOS = new Set([2, 3, 4, 5, 7, 9]);
+const FOTOS = new Set([2, 3, 4, 5, 7, 8, 9]);
 const navegador = await chromium.launch();
 let problemas = 0;
 for (const [nome, w, h] of [["pc", 1366, 640], ["celular", 390, 700], ["pequeno", 360, 600]]) {
@@ -16,7 +16,8 @@ for (const [nome, w, h] of [["pc", 1366, 640], ["celular", 390, 700], ["pequeno"
     const pagina = await navegador.newPage({ viewport: { width: w, height: h }, colorScheme: tema });
     const erros = [];
     pagina.on("pageerror", (e) => erros.push(String(e)));
-    await pagina.goto(pathToFileURL(path.resolve(arquivo)).href, { waitUntil: "load" });
+    await pagina.goto(pathToFileURL(path.resolve(arquivo)).href, { waitUntil: "domcontentloaded" });
+    await pagina.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 15000))]));
     const total = Number((await pagina.textContent("#n")).split("/")[1]);
     for (let t = 1; t <= total; t++) {
       if (t === 5 && tema === "dark") { await pagina.waitForTimeout(3300); await pagina.screenshot({ path: `${saida}/${nome}-meio-3.png` }); }

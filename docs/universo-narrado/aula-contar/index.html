@@ -154,6 +154,14 @@ button { -webkit-tap-highlight-color: transparent; } button:focus { outline: non
       tx(190, 86, '1/16 de errar todos', INK, 26, 2.2, 'start') + tx(190, 134, '1 − 1/16 = 0,9375', BLU, 28, 3.4, 'start') +
       hl(26, 200, 348, 40, 4.6, '#b9ecc0') + tx(200, 230, '0,9375 > 0,9  passou!', GRN, 34, 4.7) + tx(200, 268, 'Resposta: B, 4 dardos', RED, 32, 5.8)));
 
+  // 7b. onde o pensamento escorrega (as outras letras, com a conta de cada uma)
+  cena([[.3, 'Por que as outras letras tentam?'], [2.6, 'A e C erram a conta. D e E erram a leitura.'], [5.4, 'O certo é o MENOR número que passa de 0,9.']],
+    svg(tx(200, 34, 'por que as outras letras erram', INK, 28, .2) +
+      tx(24, 82, 'A · 2 dardos: 0,75 → piora', INK, 26, .8, 'start') +
+      tx(24, 126, 'C · 6 dardos: 0,98 → passa, mas sobra', INK, 25, 1.8, 'start') +
+      tx(24, 170, 'D e E · leu 9/10 como 9 ou 10 dardos', RED, 25, 2.8, 'start') +
+      hl(26, 196, 348, 44, 4.4, '#b9ecc0') + tx(200, 228, 'o menor que passa: B (4)', GRN, 32, 4.5)));
+
   // 8. o que ficou
   cena([[.3, 'Viu o que a questão usou?'], [2.2, 'Pelo menos um? Conta o contrário e tira de 1.'], [5.2, 'Esse truque cai muito em probabilidade.']],
     svg(tx(200, 36, 'o que a questão ensinou', INK, 30, .2) +
