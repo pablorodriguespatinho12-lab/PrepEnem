@@ -8,7 +8,7 @@ import path from "node:path";
 
 const [arquivo, saida] = process.argv.slice(2);
 mkdirSync(saida, { recursive: true });
-const FOTOS = new Set([3, 7, 11, 15]);
+const FOTOS = new Set([2, 3, 4, 5, 7, 9]);
 const navegador = await chromium.launch();
 let problemas = 0;
 for (const [nome, w, h] of [["pc", 1366, 640], ["celular", 390, 700], ["pequeno", 360, 600]]) {
@@ -19,7 +19,7 @@ for (const [nome, w, h] of [["pc", 1366, 640], ["celular", 390, 700], ["pequeno"
     await pagina.goto(pathToFileURL(path.resolve(arquivo)).href, { waitUntil: "load" });
     const total = Number((await pagina.textContent("#n")).split("/")[1]);
     for (let t = 1; t <= total; t++) {
-      if (t === 3 && tema === "dark") { await pagina.waitForTimeout(3300); await pagina.screenshot({ path: `${saida}/${nome}-meio-3.png` }); }
+      if (t === 5 && tema === "dark") { await pagina.waitForTimeout(3300); await pagina.screenshot({ path: `${saida}/${nome}-meio-3.png` }); }
       await pagina.evaluate(() => window.__aula.fim());
       await pagina.waitForTimeout(120);
       const m = await pagina.evaluate(() => {
@@ -36,9 +36,11 @@ for (const [nome, w, h] of [["pc", 1366, 640], ["celular", 390, 700], ["pequeno"
           }
         }
         r.alt = svg ? svg.getBoundingClientRect().height : -1;
+        const b = document.getElementById("board");
+        r.corte = svg ? 0 : (b.firstElementChild.scrollHeight - b.clientHeight);
         return r;
       });
-      const ruim = m.lateral > 0 || m.vertical > 0 || m.balao > 1 || m.fora > 0 || m.sobrepoe.length > 0 || (m.alt !== -1 && m.alt < 150);
+      const ruim = m.lateral > 0 || m.vertical > 0 || m.balao > 1 || m.fora > 0 || m.corte > 1 || m.sobrepoe.length > 0 || (m.alt !== -1 && m.alt < 150);
       if (ruim) { problemas++; console.log(nome, tema, "cena", t, JSON.stringify(m)); }
       if (FOTOS.has(t) && tema === "dark") await pagina.screenshot({ path: `${saida}/${nome}-${t}.png` });
       if (t < total) { await pagina.evaluate(() => document.getElementById("app").classList.remove("fim")); await pagina.click("#prox"); }

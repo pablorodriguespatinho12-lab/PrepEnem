@@ -1,8 +1,8 @@
-<title>Contar sem decorar</title>
+<title>Pelo menos um</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Jersey+10&family=Nunito:wght@400;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Jersey+10&family=Nunito:wght@400;600;700;800&display=swap">
 <style>
-/* Layout: lousa branca em cima (o desenho se traça sozinho), professor de pixel + balão embaixo, botões. Nada de rolagem. */
+/* Layout: lousa branca em cima (a questão e o desenho se traçam sozinhos), professor de pixel + balão embaixo, botões. Nada de rolagem. */
 :root {
   --bg: #e9f0ea; --fg: #16241d; --muted: #4d6357; --wood: #7a5c3a; --yel: #f2d14a;
   --f-title: "Jersey 10", "Courier New", monospace; --f-hand: "Caveat", "Comic Sans MS", cursive; --f-body: "Nunito", system-ui, sans-serif;
@@ -33,6 +33,13 @@ svg text { font-family: var(--f-hand); font-weight: 700; }
 @keyframes wipe { to { transform: scaleX(1); } }
 .fim .tr { animation: none; stroke-dashoffset: 0; } .fim .tx, .fim .f, .fim .pop { animation: none; opacity: 1; transform: none; } .fim .wipe { animation: none; transform: none; }
 
+/* a questão em papel */
+.papel { width: 100%; padding: 12px 14px; color: #1b2430; display: flex; flex-direction: column; gap: 8px; font-size: clamp(12.5px, 3.3vw, 16px); line-height: 1.32; font-weight: 600; }
+.papel small { font-weight: 800; color: #1f6fd1; letter-spacing: .08em; text-transform: uppercase; font-size: 11.5px; }
+.papel p { margin: 0; }
+.papel .alts { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; font-family: var(--f-hand); font-size: clamp(22px, 5vw, 30px); font-weight: 700; text-align: center; }
+.papel .alts span { border: 2px solid #1b2430; padding: 2px 0; background: #fff; }
+
 /* professor + balão */
 .fala-area { display: flex; align-items: center; gap: 12px; margin: 4px; }
 #prof { width: 72px; height: 72px; flex: none; background: #cfe3d6; box-shadow: 0 -3px 0 0 var(--wood), 0 3px 0 0 var(--wood), -3px 0 0 0 var(--wood), 3px 0 0 0 var(--wood); }
@@ -62,7 +69,7 @@ svg text { font-family: var(--f-hand); font-weight: 700; }
 .btn[hidden] { display: none; }
 button { -webkit-tap-highlight-color: transparent; } button:focus { outline: none; } button:focus-visible { outline: 3px solid var(--fg); outline-offset: 4px; }
 @media (max-width: 480px) { #balao { font-size: 17px; } #prof { width: 60px; height: 60px; } .opt { font-size: 34px; } }
-@media (max-height: 620px) { #balao { min-height: 70px; padding: 6px 12px; font-size: 16px; } .btn { padding: 8px 14px; font-size: 26px; } }
+@media (max-height: 620px) { #balao { min-height: 70px; padding: 6px 12px; font-size: 16px; } .btn { padding: 8px 14px; font-size: 26px; } .papel { gap: 5px; padding: 8px 12px; } }
 </style>
 
 <div id="app">
@@ -83,135 +90,95 @@ button { -webkit-tap-highlight-color: transparent; } button:focus { outline: non
 <script>
 (function () {
   var INK = '#1b2430', BLU = '#1f6fd1', RED = '#d63a2f', GRN = '#1f9d55', YEL = '#ffe14a', MUT = '#5a6b66';
-  var CB = ['#5aa9ff', '#ffd23f', '#ff6b5a'];
   // ---------- pincéis ----------
   function path(d, cor, t, dur, w) { return '<path class="tr" d="' + d + '" pathLength="1" stroke="' + cor + '" stroke-width="' + (w || 3) + '" style="--t:' + t + 's;--d:' + (dur || .5) + 's"/>'; }
   function line(x1, y1, x2, y2, cor, t, dur) { return path('M' + x1 + ' ' + y1 + 'L' + x2 + ' ' + y2, cor, t, dur); }
+  function circ(cx, cy, r, cor, t) { return '<circle class="tr" cx="' + cx + '" cy="' + cy + '" r="' + r + '" pathLength="1" stroke="' + cor + '" stroke-width="3" style="--t:' + t + 's;--d:.5s"/>'; }
   function box(x, y, w, h, cor, t, dur) { return path('M' + x + ' ' + y + 'h' + w + 'v' + h + 'h' + (-w) + 'z', cor, t, dur || .6); }
   function tx(x, y, s, cor, size, t, anchor) { return '<text class="tx" x="' + x + '" y="' + y + '" fill="' + cor + '" font-size="' + size + '" text-anchor="' + (anchor || 'middle') + '" style="--t:' + t + 's">' + s + '</text>'; }
-  function sq(x, y, s, cor, t) { return '<rect class="pop" x="' + (x - s / 2) + '" y="' + (y - s / 2) + '" width="' + s + '" height="' + s + '" fill="' + cor + '" stroke="' + INK + '" stroke-width="2" style="--t:' + t + 's"/>'; }
-  function hl(x, y, w, h, t) { return '<rect class="wipe" x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + YEL + '" opacity=".85" style="--t:' + t + 's"/>'; }
+  function hl(x, y, w, h, t, cor) { return '<rect class="wipe" x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + (cor || YEL) + '" opacity=".85" style="--t:' + t + 's"/>'; }
   function svg(inner) { return '<svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet" role="img">' + inner + '</svg>'; }
-  function casas(t0) { return box(40, 60, 100, 90, INK, t0) + box(150, 60, 100, 90, INK, t0 + .3) + box(260, 60, 100, 90, INK, t0 + .6) +
-    tx(90, 178, 'centena', BLU, 24, t0 + .9) + tx(200, 178, 'dezena', BLU, 24, t0 + 1) + tx(310, 178, 'unidade', BLU, 24, t0 + 1.1); }
-
-  // ---------- as cenas: [fala com tempo], desenho ----------
-  var S = [];
-  function cena(fala, desenho, prova) { S.push({ fala: fala, svg: desenho, prova: prova }); }
-
-  cena([[.3, 'Oi! Eu desenho e você acompanha.'], [2.8, 'Sem fórmula decorada: tudo nasce do desenho.']],
-    svg(hl(40, 70, 320, 40, .2) + tx(200, 105, 'Contar sem decorar', INK, 50, .3) + tx(200, 160, 'árvore · casas · chance', BLU, 30, 1.8) +
-      line(120, 215, 200, 215, INK, 3, .3) + sq(110, 215, 18, '#fff', 3) + sq(210, 215, 18, CB[0], 3.4) + sq(210, 245, 18, CB[1], 3.6) + sq(210, 185, 18, CB[2], 3.2) +
-      line(118, 215, 202, 185, INK, 3.2, .4) + line(118, 215, 202, 245, INK, 3.5, .4) + tx(200, 272, 'cai ~4 vezes por prova de Matemática', MUT, 20, 4.2)));
-
-  cena([[.3, 'Tenho 3 bermudas e 2 camisas.'], [2.6, 'Quantas roupas diferentes dá?']],
-    svg(tx(200, 42, 'Quantas roupas diferentes?', INK, 34, .2) +
-      sq(90, 105, 36, CB[0], .8) + sq(140, 105, 36, CB[1], 1.1) + sq(190, 105, 36, CB[2], 1.4) + tx(250, 115, '3 bermudas', INK, 30, 1.7, 'start') +
-      sq(90, 180, 36, '#ffffff', 2.8) + sq(140, 180, 36, '#8fe39b', 3.1) + tx(250, 190, '2 camisas', INK, 30, 3.4, 'start') +
-      tx(200, 252, '?', RED, 52, 4.4)));
-
-  (function () {
-    var ys = [60, 140, 220], d = '', k = 0;
-    d += sq(40, 140, 24, '#fff', .2);
-    ys.forEach(function (y, i) { d += line(53, 140, 137, y, INK, .5 + i * .3, .4) + sq(150, y, 28, CB[i], .9 + i * .3); });
-    ys.forEach(function (y, i) {
-      [-24, 24].forEach(function (dy, j) {
-        var ty = 3.0 + i * .6 + j * .25;
-        d += line(165, y, 267, y + dy, INK, ty, .4) + sq(280, y + dy, 22, j ? '#8fe39b' : '#fff', ty + .3);
-        d += tx(312, y + dy + 9, String(++k), BLU, 28, 5.6 + k * .3);
-      });
-    });
-    d += hl(335, 105, 52, 70, 7.6) + tx(361, 160, '6', RED, 64, 7.7);
-    cena([[.4, 'Escolho a bermuda: 3 jeitos.'], [2.8, 'Para cada uma, 2 camisas.'], [5.6, 'Conta as pontas: são 6!']], svg(d));
-  })();
-
-  cena([[.3, 'A árvore vira uma conta.'], [2.2, '3 bermudas vezes 2 camisas.'], [4.8, 'Uma coisa E outra? Multiplica.']],
-    svg(tx(200, 40, 'vira conta:', INK, 30, .2) + hl(300, 62, 70, 78, 2.6) +
-      tx(90, 128, '3', INK, 64, .8) + tx(150, 128, '×', RED, 56, 1.2) + tx(210, 128, '2', INK, 64, 1.6) + tx(270, 128, '=', INK, 56, 2.0) + tx(335, 128, '6', INK, 64, 2.4) +
-      tx(90, 182, 'bermudas', BLU, 24, 3.0) + tx(210, 182, 'camisas', BLU, 24, 3.3) + tx(335, 182, 'roupas', BLU, 24, 3.6) +
-      box(70, 208, 260, 54, INK, 4.8, .8) + tx(200, 246, 'E  →  multiplica', INK, 34, 5.2)));
-
-  cena([[.3, 'Entrou um sapato: 2 opções.'], [2.6, 'Cada escolha nova multiplica.']],
-    svg(tx(200, 50, 'agora com sapato', INK, 30, .2) +
-      tx(60, 150, '3', INK, 70, .4) + tx(112, 150, '×', RED, 60, .5) + tx(160, 150, '2', INK, 70, .6) + tx(210, 150, '×', RED, 60, 2.6) + tx(258, 150, '2', RED, 70, 2.9) + tx(308, 150, '=', INK, 60, 3.6) + hl(325, 95, 70, 70, 3.8) + tx(360, 150, '12', INK, 70, 3.9) +
-      tx(60, 186, 'bermudas', BLU, 20, .9) + tx(160, 186, 'camisas', BLU, 20, 1.1) + tx(258, 186, 'sapatos', RED, 20, 3.1) + tx(360, 186, 'roupas', BLU, 20, 4.2) +
-      sq(258, 225, 26, '#8b5a2b', 3.1) + sq(292, 225, 26, '#8b5a2b', 3.3)));
-
-  cena([[.3, 'Agora é sapato OU chinelo.'], [2.8, 'Uma coisa OU outra: soma.'], [5.2, 'E empilha → vezes. OU separa → mais.']],
-    svg(tx(200, 42, 'sapato OU chinelo', INK, 34, .2) +
-      sq(70, 105, 34, '#8b5a2b', .8) + sq(115, 105, 34, '#8b5a2b', 1.1) + tx(92, 160, '2 sapatos', INK, 26, 1.4) +
-      tx(200, 115, 'OU', RED, 40, 2.0) +
-      sq(260, 105, 34, '#f2a33a', 2.3) + sq(305, 105, 34, '#f2a33a', 2.6) + sq(350, 105, 34, '#f2a33a', 2.9) + tx(305, 160, '3 chinelos', INK, 26, 3.2) +
-      hl(130, 178, 140, 48, 4.0) + tx(200, 218, '2 + 3 = 5', INK, 52, 4.1) +
-      box(55, 238, 290, 36, INK, 5.2, .8) + tx(200, 266, 'E → ×        OU → +', INK, 28, 5.6)));
-
-  cena([[.3, 'Números de 3 algarismos, todos diferentes.'], [2.6, 'Centena: de 1 a 9. O zero não vale. São 9.'], [5.8, 'Dezena: 9. Unidade: 8. Total: 648.']],
-    svg(casas(.2) +
-      tx(90, 125, '9', INK, 64, 2.8) + tx(90, 200, '1 a 9', MUT, 20, 3.1) +
-      tx(200, 125, '9', INK, 64, 6.0) + tx(200, 200, '0 a 9, menos 1', MUT, 20, 6.2) +
-      tx(310, 125, '8', INK, 64, 6.8) + tx(310, 200, 'o que sobrar', MUT, 20, 7.0) +
-      hl(60, 218, 280, 52, 8.0) + tx(200, 258, '9 × 9 × 8 = 648', RED, 46, 8.1)));
-
-  cena([[.3, 'Ímpares: começo pela unidade.'], [2.4, 'Unidade: 5 jeitos. Centena: 8. Dezena: 8.'], [6.0, '8 × 8 × 5 = 320.']],
-    svg(casas(.2) +
-      tx(310, 44, '1º', RED, 30, 2.4) + tx(310, 125, '5', INK, 64, 2.8) + tx(310, 200, '1, 3, 5, 7, 9', MUT, 20, 3.0) +
-      tx(90, 44, '2º', RED, 30, 3.8) + tx(90, 125, '8', INK, 64, 4.0) + tx(90, 200, '1 a 9, menos 1', MUT, 20, 4.2) +
-      tx(200, 44, '3º', RED, 30, 5.0) + tx(200, 125, '8', INK, 64, 5.2) + tx(200, 200, '0 a 9, menos 2', MUT, 20, 5.4) +
-      hl(60, 218, 280, 52, 6.2) + tx(200, 258, '8 × 8 × 5 = 320', RED, 46, 6.3)));
-
-  cena([[.3, 'E os pares? Todos menos os ímpares.'], [2.8, 'Às vezes contar o contrário é mais fácil.']],
-    svg(tx(200, 50, 'quantos são pares?', INK, 32, .2) +
-      tx(70, 150, '648', INK, 56, .8) + tx(138, 150, '−', RED, 56, 1.2) + tx(205, 150, '320', INK, 56, 1.6) + tx(272, 150, '=', INK, 56, 2.0) + hl(290, 105, 100, 64, 2.4) + tx(340, 150, '328', INK, 56, 2.5) +
-      tx(70, 182, 'todos', BLU, 22, 1.0) + tx(205, 182, 'ímpares', BLU, 22, 1.8) + tx(340, 182, 'pares', BLU, 22, 2.8) +
-      tx(200, 245, 'conta o que você NÃO quer', RED, 34, 3.6)));
-
-  cena([[.3, 'Duplas de 6 pessoas.'], [2.0, 'A e B é igual a B e A.'], [4.4, 'Contei em dobro. Divide por 2.']],
-    svg(tx(200, 44, '6 pessoas: A B C D E F', INK, 30, .2) +
-      box(55, 70, 90, 56, INK, .8) + tx(100, 112, 'A  B', INK, 38, 1.1) + tx(200, 110, '=', RED, 50, 2.2) + box(255, 70, 90, 56, INK, 2.4) + tx(300, 112, 'B  A', INK, 38, 2.7) +
-      tx(200, 158, 'mesma dupla!', RED, 28, 3.0) +
-      tx(105, 235, '6 × 5 = 30', INK, 40, 3.8) + tx(240, 235, '÷ 2', RED, 40, 4.6) + hl(290, 200, 100, 50, 5.0) + tx(340, 235, '= 15', INK, 40, 5.1)));
-
-  function grade(destaque) {
-    var g = '', c = 0, r = 0;
-    for (var i = 0; i < 16; i++) { c = i % 4; r = Math.floor(i / 4);
-      g += '<rect class="pop" x="' + (40 + c * 38) + '" y="' + (75 + r * 38) + '" width="30" height="30" fill="' + (destaque && i === 0 ? YEL : '#e2e8e4') + '" stroke="' + INK + '" stroke-width="2" style="--t:' + (.6 + i * .12) + 's"/>'; }
+  // grade de caminhos: o primeiro (índice 0) é o "errou todos"
+  function grade(cols, rows, x0, y0, s, gap, t0, passo) {
+    var g = '', i = 0, r, c;
+    for (r = 0; r < rows; r++) for (c = 0; c < cols; c++, i++)
+      g += '<rect class="pop" x="' + (x0 + c * (s + gap)) + '" y="' + (y0 + r * (s + gap)) + '" width="' + s + '" height="' + s + '" fill="' + (i === 0 ? '#ff8d7a' : '#e2e8e4') + '" stroke="' + INK + '" stroke-width="2" style="--t:' + (t0 + i * passo) + 's"/>';
     return g;
   }
-  cena([[.3, '4 filhos, cada um menino ou menina.'], [2.8, '2 × 2 × 2 × 2 = 16 caminhos.']],
-    svg(tx(200, 42, '4 filhos', INK, 34, .2) + grade(false) +
-      tx(215, 105, '2×2×2×2', INK, 34, 2.8, 'start') + tx(215, 170, '= 16', BLU, 52, 3.6, 'start') + tx(215, 230, 'caminhos', BLU, 26, 4.0, 'start')));
 
-  cena([[.3, 'Só 1 caminho é "todos meninos".'], [2.4, 'Chance: 1 em 16. Dá 6,25%.']],
-    svg(tx(200, 42, 'todos meninos?', INK, 34, .2) + grade(true) +
-      tx(215, 112, '1 de 16', INK, 40, 2.4, 'start') + hl(205, 128, 190, 58, 3.0) + tx(215, 172, '1/16', RED, 56, 3.1, 'start') + tx(215, 225, '= 6,25%', RED, 40, 3.8, 'start')));
+  // ---------- as cenas ----------
+  var S = [];
+  function cena(fala, desenho) { S.push({ fala: fala, svg: desenho }); }
 
-  cena([[.3, 'Já nasceram 3 meninos. E o próximo?'], [2.8, 'Continua 1/2, ou seja, 50%.'], [5.0, 'A moeda não lembra do que passou.']],
-    svg(tx(200, 42, 'e o 4º filho?', INK, 34, .2) +
-      sq(70, 105, 38, CB[0], .8) + sq(125, 105, 38, CB[0], 1.1) + sq(180, 105, 38, CB[0], 1.4) +
-      '<rect class="pop" x="233" y="86" width="38" height="38" fill="#fff" stroke="' + INK + '" stroke-width="2" stroke-dasharray="6 4" style="--t:1.8s"/>' + tx(252, 116, '?', RED, 34, 2.0) +
-      tx(300, 118, '← próximo', BLU, 24, 2.2, 'start') +
-      hl(125, 150, 150, 80, 3.0) + tx(200, 215, '1/2', RED, 80, 3.1)));
+  // 1. capa: a questão primeiro
+  cena([[.3, 'Vamos resolver uma questão que caiu no ENEM.'], [3.2, 'Cada ferramenta aparece na hora que ela serve.']],
+    svg(hl(30, 56, 340, 56, .2) + tx(200, 102, 'Pelo menos um', INK, 58, .3) + tx(200, 146, 'a questão dos dardos', BLU, 30, 1.6) +
+      circ(200, 205, 16, INK, 2.2) + circ(200, 205, 30, INK, 2.5) + circ(200, 205, 44, INK, 2.8) + line(330, 150, 206, 202, RED, 3.3, .5) + tx(200, 272, 'ENEM 2021 · questão 177', MUT, 22, 4.0)));
 
+  // 2. a questão (texto real)
+  S.push({ fala: [[.3, 'Essa caiu no ENEM 2021, questão 177.'], [2.6, 'Lê com calma. Depois eu separo o que importa.']],
+    papel: '<small>ENEM 2021 · questão 177</small><p>O organizador de uma competição de lançamento de dardos pretende tornar o campeonato mais competitivo. Pelas regras atuais da competição, numa rodada, o jogador lança 3 dardos e pontua caso acerte pelo menos um deles no alvo. O organizador considera que, em média, os jogadores têm, em cada lançamento, 1/2 de probabilidade de acertar um dardo no alvo. A fim de tornar o jogo mais atrativo, planeja modificar as regras de modo que a probabilidade de um jogador pontuar em uma rodada seja igual ou superior a 9/10. Para isso, decide aumentar a quantidade de dardos a serem lançados em cada rodada. Com base nos valores considerados pelo organizador da competição, a quantidade mínima de dardos que deve ser disponibilizada em uma rodada para tornar o jogo mais atrativo é</p><div class="alts"><span>A 2</span><span>B 4</span><span>C 6</span><span>D 9</span><span>E 10</span></div>' });
+
+  // 3. o que ela pede
+  cena([[.3, 'Ela quer o menor número de dardos.'], [2.8, 'Cuidado: 9/10 é uma chance, 90%.'], [5.4, 'Não são 9 dardos! É a pegadinha das letras D e E.']],
+    svg(tx(200, 36, 'o que a questão pede', INK, 32, .2) +
+      tx(30, 82, 'hoje: 3 dardos', INK, 28, .8, 'start') +
+      tx(30, 120, 'cada dardo acerta com chance 1/2', INK, 28, 1.6, 'start') +
+      tx(30, 158, 'meta: chance de pontuar ≥ 9/10', INK, 28, 2.4, 'start') +
+      hl(26, 178, 250, 44, 3.2) + tx(30, 212, '9/10 = 0,9 = 90%', RED, 38, 3.3, 'start') +
+      tx(30, 258, 'é uma CHANCE, não 9 dardos', RED, 28, 5.4, 'start')));
+
+  // 4. contar o contrário
+  cena([[.3, 'Pontuar é acertar pelo menos um.'], [2.6, 'Pode ser 1, 2 ou 3 acertos. Chato de contar.'], [5.8, 'Truque: só existe 1 jeito de NÃO pontuar, errar todos.']],
+    svg(tx(200, 34, 'pontuar = acertar pelo menos 1', INK, 28, .2) +
+      hl(41, 61, 278, 48, 1.6) + hl(319, 61, 40, 48, 4.4, '#ff8d7a') + box(40, 60, 320, 50, INK, .6) +
+      tx(180, 96, 'pontua', INK, 30, 1.9) + tx(40, 140, 'tudo = 100%', MUT, 22, 1.2, 'start') + tx(335, 142, 'errar todos', RED, 24, 4.6) +
+      hl(24, 172, 352, 48, 6.4) + tx(200, 210, 'pontuar = 1 − errar todos', RED, 34, 6.5) +
+      tx(200, 262, 'contar o contrário é mais fácil', BLU, 26, 7.4)));
+
+  // 5. errar todos com 3 dardos (E → multiplica)
+  cena([[.3, 'Cada dardo tem 1/2 de chance de errar.'], [2.6, 'Errar os 3 seguidos: multiplica. 1/2 × 1/2 × 1/2.'], [5.2, 'Dá 1/8. É 1 caminho em 8.']],
+    svg(tx(200, 34, '3 dardos: 8 caminhos', INK, 30, .2) + grade(4, 2, 40, 62, 32, 8, .5, .15) +
+      tx(235, 88, '½ × ½ × ½', INK, 32, 2.8, 'start') + tx(235, 144, '= 1/8', RED, 48, 3.8, 'start') +
+      hl(50, 178, 300, 46, 5.2) + tx(200, 214, 'errar todos = 1/8', INK, 38, 5.3) +
+      tx(200, 262, 'um E outro E outro → multiplica', BLU, 24, 6.2)));
+
+  // 6. com 3 dardos (hoje)
+  cena([[.3, 'Hoje, com 3 dardos: 1 − 1/8.'], [2.4, 'Dá 7/8, ou seja, 0,875.'], [4.6, 'Falta pouco para 0,9. Ainda não serve.']],
+    svg(tx(200, 36, 'com 3 dardos (hoje)', INK, 30, .2) + tx(200, 100, '1 − 1/8 = 7/8', INK, 50, .8) + tx(200, 163, '= 0,875', BLU, 46, 2.2) +
+      hl(60, 182, 280, 46, 3.6, '#ffb3a8') + tx(200, 220, '0,875 < 0,9', RED, 42, 3.7) + tx(200, 262, 'ainda não serve', RED, 26, 4.8)));
+
+  // 7. com 4 dardos
+  cena([[.3, 'Com 4 dardos, errar todos é 1/16.'], [2.8, '1 − 1/16 = 0,9375. Passou de 0,9!'], [5.6, 'Resposta: letra B, 4 dardos.']],
+    svg(tx(200, 34, 'com 4 dardos', INK, 30, .2) + grade(4, 4, 40, 56, 24, 6, .5, .1) +
+      tx(190, 86, '1/16 de errar todos', INK, 26, 2.2, 'start') + tx(190, 134, '1 − 1/16 = 0,9375', BLU, 28, 3.4, 'start') +
+      hl(26, 200, 348, 40, 4.6, '#b9ecc0') + tx(200, 230, '0,9375 > 0,9  passou!', GRN, 34, 4.7) + tx(200, 268, 'Resposta: B, 4 dardos', RED, 32, 5.8)));
+
+  // 8. o que ficou
+  cena([[.3, 'Viu o que a questão usou?'], [2.2, 'Pelo menos um? Conta o contrário e tira de 1.'], [5.2, 'Esse truque cai muito em probabilidade.']],
+    svg(tx(200, 36, 'o que a questão ensinou', INK, 30, .2) +
+      tx(30, 100, '1. pelo menos um → 1 − errar todos', INK, 25, .8, 'start') + hl(26, 118, 290, 6, 1.6, '#ffe14a') +
+      tx(30, 160, '2. um E outro → multiplica', INK, 28, 2.4, 'start') +
+      tx(30, 220, '3. 9/10 é chance, não quantidade', INK, 26, 4.0, 'start')));
+
+  // provas
   function prova(pergunta, ops, c, d) { S.push({ fala: [[.3, 'Sua vez! Escolhe uma.']], prova: { q: pergunta, ops: ops, c: c, d: d } }); }
-  prova('Quantos números de 3 algarismos diferentes são menores que 500?', ['400', '324', '288', '360'], 2, [
-    '400 é 4 × 10 × 10: deixou repetir algarismo. Têm que ser diferentes.',
-    '324 é 4 × 9 × 9: a unidade tem que ser diferente das DUAS casas de antes. Sobram 8.',
-    'Isso! Centena: 1 a 4 (4 jeitos). Dezena: 9. Unidade: 8. Dá 4 × 9 × 8 = 288.',
-    '360 é 5 × 9 × 8: contou o zero na centena. Número de 3 algarismos não começa com 0.']);
-  prova('Joga a moeda 3 vezes. Qual a chance de dar cara nas 3?', ['1/8', '1/6', '3/8', '1/2'], 0, [
-    'Isso! ½ × ½ × ½ = 1/8. A árvore tem 8 caminhos e só 1 é "cara, cara, cara".',
-    '1/6 é de dado. A moeda só tem 2 lados.',
-    '3/8 conta 3 caminhos, mas "3 caras" é um caminho só.',
-    '1/2 é a chance de UMA moeda. Três seguidas multiplicam.']);
+  prova('Joga uma moeda 2 vezes. Qual a chance de sair cara pelo menos uma vez?', ['3/4', '1/2', '1/4', '1'], 0, [
+    'Isso! Errar as 2: coroa e coroa = 1/4. Pelo menos uma cara = 1 − 1/4 = 3/4.',
+    '1/2 é a chance de UMA moeda. Com duas, conta o contrário: 1 − 1/4.',
+    '1/4 é a chance de errar as duas (coroa, coroa). A pergunta é o contrário: 1 − 1/4 = 3/4.',
+    'Chance 1 seria certeza. Dá para tirar coroa nas duas, então não é 1.']);
+  prova('Mais difícil: quantas moedas, no mínimo, para ter 99% de chance de sair cara pelo menos uma vez?', ['5', '6', '7', '99'], 2, [
+    '5 moedas: errar todas é 1/32 (3,1%). Pontua só 96,9%. Falta.',
+    '6 moedas: errar todas é 1/64 (1,6%). Pontua 98,4%. Ainda falta.',
+    'Isso! Com 7: errar todas é 1/128 (0,8%) e pontua 99,2%. Passou de 99%.',
+    '99% é a chance, não a quantidade de moedas (de novo a pegadinha do 9/10).']);
 
-  cena([[.3, 'É isso! Cinco regras e um desenho.'], [2.8, 'Quer treinar? Volta e refaz as provas.']],
-    svg(tx(200, 40, 'o resumo', INK, 34, .2) +
-      tx(40, 90, '1.  casa mais chata primeiro', INK, 28, .8, 'start') +
-      tx(40, 130, '2.  E → ×', INK, 30, 1.6, 'start') +
-      tx(40, 170, '3.  OU → +', INK, 30, 2.4, 'start') +
-      tx(40, 210, '4.  ordem não importa → ÷', INK, 28, 3.2, 'start') +
-      tx(40, 250, '5.  a moeda não lembra', INK, 28, 4.0, 'start') +
-      hl(36, 104, 170, 34, 1.6) + hl(36, 144, 150, 34, 2.4)));
+  // fim
+  cena([[.3, 'É isso! Uma questão, três ideias.'], [2.8, 'Probabilidade e contagem caem em média 4 vezes por prova.']],
+    svg(tx(200, 40, 'onde isso cai', INK, 34, .2) + tx(200, 100, 'Probabilidade e contagem:', INK, 30, .8) +
+      hl(60, 118, 280, 56, 1.6) + tx(200, 162, '~4 questões por prova', RED, 42, 1.7) +
+      tx(200, 200, '(Matemática, ENEM 2009 a 2023)', MUT, 22, 2.6) + tx(200, 252, 'quer treinar? volta e refaz as provas', BLU, 26, 3.6)));
 
   // ---------- motor ----------
   var i = 0, board = document.getElementById('board'), balao = document.getElementById('balao'), prof = document.getElementById('prof'),
@@ -220,8 +187,7 @@ button { -webkit-tap-highlight-color: transparent; } button:focus { outline: non
   function falar(linhas) {
     balao.innerHTML = linhas.map(function (l) { return '<p class="f" style="--t:' + l[0] + 's">' + l[1] + '</p>'; }).join('');
     prof.classList.add('fala'); clearTimeout(timer);
-    var fim = linhas[linhas.length - 1][0] + 1.6;
-    timer = setTimeout(function () { prof.classList.remove('fala'); }, fim * 1000);
+    timer = setTimeout(function () { prof.classList.remove('fala'); }, (linhas[linhas.length - 1][0] + 1.6) * 1000);
   }
   function mostra() {
     var c = S[i];
@@ -230,6 +196,7 @@ button { -webkit-tap-highlight-color: transparent; } button:focus { outline: non
       board.innerHTML = '<div class="prova"><small>Prove você</small><p class="q">' + p.q + '</p><div class="ops">' + p.ops.map(function (o, k) { return '<button class="opt" data-k="' + k + '">' + o + '</button>'; }).join('') + '</div></div>';
       falar(c.fala);
       if (respondeu[i] != null) marca(respondeu[i], true);
+    } else if (c.papel) { board.innerHTML = '<div class="papel">' + c.papel + '</div>'; falar(c.fala);
     } else { board.innerHTML = c.svg; falar(c.fala); }
     document.getElementById('n').textContent = (i + 1) + '/' + S.length;
     document.getElementById('barra').style.width = ((i + 1) / S.length * 100) + '%';
