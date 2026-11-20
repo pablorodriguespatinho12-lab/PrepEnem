@@ -17,7 +17,8 @@
 - **Produto:** `decisoes-prepenem` (fonte de verdade), `montar-referencia` (não há site de referência: monta uma por tela), `animation-system`, `flashcard-pattern`.
 - **Desempenho:** `medir-fluidez` (fps, travadas; script `scripts/medir-fps.mts`).
 - **Banco e deploy:** `prisma-neon-safety`, `vercel-deploy-checklist`, `verificacao-local`.
-- **Ideia e pesquisa:** `inventar-daqui`, `garimpar-da-web`, `briefing-longo`.
+- **Ideia e pesquisa:** `inventar-daqui`, `garimpar-da-web`, `briefing-longo`,
+  `transcrever-universo-narrado` (vídeo do canal → transcrição, jeito de ensinar, fotos do quadro).
 - **Falar com o Pablo:** `perguntar-ao-pablo`, `explicar-ao-pablo`.
 - **Manter as ferramentas:** `desenhar-skill`, `auditar-o-repertorio`.
 - **Agentes:** `build-guard`, `db-inspector`, `design-system-auditor`,
