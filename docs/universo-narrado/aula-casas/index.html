@@ -1,0 +1,247 @@
+<title>Contar duplas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Jersey+10&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: lousa branca em cima (a questão e o desenho se traçam sozinhos), professor de pixel + balão embaixo, botões. Nada de rolagem. */
+:root {
+  --bg: #e9f0ea; --fg: #16241d; --muted: #4d6357; --wood: #7a5c3a; --yel: #f2d14a;
+  --f-title: "Jersey 10", "Courier New", monospace; --f-hand: "Caveat", "Comic Sans MS", cursive; --f-body: "Nunito", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #0d1813; --fg: #e8f1ea; --muted: #a4b9ac; --wood: #a07f55; color-scheme: dark; } }
+:root[data-theme="dark"] { --bg: #0d1813; --fg: #e8f1ea; --muted: #a4b9ac; --wood: #a07f55; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: 18px; line-height: 1.3;
+  padding-left: max(14px, env(safe-area-inset-left, 0px)); padding-right: max(14px, env(safe-area-inset-right, 0px)); }
+#app { height: 100%; max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; padding-block: 8px; }
+.top { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--muted); font-weight: 700; }
+.bar { flex: 1; height: 8px; background: color-mix(in srgb, var(--fg) 14%, transparent); }
+.bar i { display: block; height: 100%; width: 0; background: var(--yel); transition: width .25s steps(6); }
+
+/* lousa */
+#board { flex: 1; min-height: 0; margin: 6px; background: #fbfbf6; display: flex; align-items: center; justify-content: center; overflow: hidden;
+  box-shadow: 0 -6px 0 0 var(--wood), 0 6px 0 0 var(--wood), -6px 0 0 0 var(--wood), 6px 0 0 0 var(--wood); }
+#board svg { width: 100%; height: 100%; display: block; }
+svg text { font-family: var(--f-hand); font-weight: 700; }
+.tr { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: desenha var(--d, .5s) ease-out var(--t, 0s) forwards; }
+@keyframes desenha { to { stroke-dashoffset: 0; } }
+.tx, .f { opacity: 0; animation: escreve .4s ease-out var(--t, 0s) forwards; }
+@keyframes escreve { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+.pop { opacity: 0; transform-box: fill-box; transform-origin: center; animation: pop .3s ease-out var(--t, 0s) forwards; }
+@keyframes pop { from { opacity: 0; transform: scale(.3); } to { opacity: 1; transform: scale(1); } }
+.wipe { transform-box: fill-box; transform-origin: left; transform: scaleX(0); animation: wipe .45s ease-out var(--t, 0s) forwards; }
+@keyframes wipe { to { transform: scaleX(1); } }
+.fim .tr { animation: none; stroke-dashoffset: 0; } .fim .tx, .fim .f, .fim .pop { animation: none; opacity: 1; transform: none; } .fim .wipe { animation: none; transform: none; }
+
+/* a questão em papel */
+.papel { width: 100%; padding: 12px 14px; color: #1b2430; display: flex; flex-direction: column; gap: 8px; font-size: clamp(12.5px, 3.3vw, 16px); line-height: 1.32; font-weight: 600; }
+.papel small { font-weight: 800; color: #1f6fd1; letter-spacing: .08em; text-transform: uppercase; font-size: 11.5px; }
+.papel p { margin: 0; }
+.papel .alts { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; font-family: var(--f-hand); font-size: clamp(22px, 5vw, 30px); font-weight: 700; text-align: center; }
+.papel .alts.col1 { grid-template-columns: 1fr; gap: 3px; font-size: clamp(17px, 4.2vw, 22px); text-align: left; }
+.papel .alts.col1 span { padding: 1px 10px; border-width: 2px; }
+.papel .alts span { border: 2px solid #1b2430; padding: 2px 0; background: #fff; }
+
+/* professor + balão */
+.fala-area { display: flex; align-items: center; gap: 12px; margin: 4px; }
+#prof { width: 72px; height: 72px; flex: none; background: #cfe3d6; box-shadow: 0 -3px 0 0 var(--wood), 0 3px 0 0 var(--wood), -3px 0 0 0 var(--wood), 3px 0 0 0 var(--wood); }
+#prof .boca { transform-box: fill-box; transform-origin: top; }
+#prof.fala .boca { animation: boca .32s steps(1) infinite; }
+@keyframes boca { 0% { transform: scaleY(1); } 50% { transform: scaleY(2); } }
+#balao { flex: 1; min-height: 84px; background: #fff; color: #16241d; padding: 10px 14px; position: relative; font-size: 18px; font-weight: 700; display: flex; flex-direction: column; justify-content: center; gap: 3px;
+  box-shadow: 0 -3px 0 0 #16241d, 0 3px 0 0 #16241d, -3px 0 0 0 #16241d, 3px 0 0 0 #16241d; }
+#balao::before { content: ""; position: absolute; left: -14px; top: 50%; width: 14px; height: 14px; background: #fff; transform: translateY(-50%) rotate(45deg); box-shadow: -3px 3px 0 0 #16241d; }
+#balao p { margin: 0; }
+
+/* prova */
+.prova { width: 100%; height: 100%; padding: 14px 18px; display: flex; flex-direction: column; justify-content: center; gap: 12px; color: #1b2430; }
+.prova .q { margin: 0; font-family: var(--f-hand); font-size: clamp(26px, 5.4vw, 38px); line-height: 1.05; font-weight: 700; }
+.prova small { font-weight: 800; color: #1f6fd1; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; }
+.ops { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.opt { font-family: var(--f-hand); font-weight: 700; font-size: 38px; line-height: 1; padding: 10px; background: #fff; color: #1b2430; border: 3px solid #1b2430; cursor: pointer; transition: transform .1s; }
+.opt:active { transform: translateY(3px); }
+.opt.certo { background: #8fe39b; } .opt.errado { background: #ff9e90; } .opt[disabled] { cursor: default; }
+
+/* botões */
+.ctrl { display: flex; gap: 10px; margin: 4px; }
+.btn { font-family: var(--f-title); font-size: 30px; line-height: 1; padding: 12px 18px; background: var(--yel); color: #1b2a22; border: 0; cursor: pointer; flex: 1;
+  box-shadow: 0 4px 0 0 #8c7416, 0 -3px 0 0 #1b2a22, 0 3px 0 0 #1b2a22, -3px 0 0 0 #1b2a22, 3px 0 0 0 #1b2a22; transition: transform .1s, box-shadow .1s; }
+.btn:active { transform: translateY(4px); box-shadow: 0 0 0 0 #8c7416, 0 -3px 0 0 #1b2a22, 0 3px 0 0 #1b2a22, -3px 0 0 0 #1b2a22, 3px 0 0 0 #1b2a22; }
+.btn.lado { flex: 0 0 auto; background: transparent; color: var(--fg); box-shadow: 0 -3px 0 0 var(--fg), 0 3px 0 0 var(--fg), -3px 0 0 0 var(--fg), 3px 0 0 0 var(--fg); }
+.btn[hidden] { display: none; }
+button { -webkit-tap-highlight-color: transparent; } button:focus { outline: none; } button:focus-visible { outline: 3px solid var(--fg); outline-offset: 4px; }
+@media (max-width: 480px) { #balao { font-size: 17px; } #prof { width: 60px; height: 60px; } .opt { font-size: 34px; } }
+@media (max-height: 620px) { #balao { min-height: 70px; padding: 6px 12px; font-size: 16px; } .btn { padding: 8px 14px; font-size: 26px; } .papel { gap: 5px; padding: 8px 12px; } }
+</style>
+
+<div id="app">
+  <div class="top"><span id="n">1/1</span><div class="bar"><i id="barra"></i></div></div>
+  <div id="board"></div>
+  <div class="fala-area">
+    <svg id="prof" viewBox="0 0 16 16" shape-rendering="crispEdges" role="img" aria-label="Professor de pixel">
+      <rect x="4" y="1" width="8" height="3" fill="#2b2118"/><rect x="4" y="4" width="8" height="6" fill="#e8b98f"/>
+      <rect x="5" y="5" width="2" height="2" fill="#fff" stroke="#2b2118" stroke-width=".6"/><rect x="9" y="5" width="2" height="2" fill="#fff" stroke="#2b2118" stroke-width=".6"/>
+      <rect class="boca" x="7" y="8" width="2" height="1" fill="#7a2e2e"/>
+      <rect x="3" y="10" width="10" height="6" fill="#2f6f55"/><rect x="13" y="10" width="1" height="5" fill="#d63a2f"/>
+    </svg>
+    <div id="balao" aria-live="polite"></div>
+  </div>
+  <div class="ctrl"><button class="btn lado" id="volta" aria-label="Voltar">←</button><button class="btn lado" id="de-novo" aria-label="Ver de novo">↻</button><button class="btn" id="prox">Próximo</button></div>
+</div>
+
+<script>
+(function () {
+  var INK = '#1b2430', BLU = '#1f6fd1', RED = '#d63a2f', GRN = '#1f9d55', YEL = '#ffe14a', MUT = '#5a6b66';
+  // ---------- pincéis ----------
+  function path(d, cor, t, dur, w) { return '<path class="tr" d="' + d + '" pathLength="1" stroke="' + cor + '" stroke-width="' + (w || 3) + '" style="--t:' + t + 's;--d:' + (dur || .5) + 's"/>'; }
+  function line(x1, y1, x2, y2, cor, t, dur) { return path('M' + x1 + ' ' + y1 + 'L' + x2 + ' ' + y2, cor, t, dur); }
+  function circ(cx, cy, r, cor, t) { return '<circle class="tr" cx="' + cx + '" cy="' + cy + '" r="' + r + '" pathLength="1" stroke="' + cor + '" stroke-width="3" style="--t:' + t + 's;--d:.5s"/>'; }
+  function box(x, y, w, h, cor, t, dur) { return path('M' + x + ' ' + y + 'h' + w + 'v' + h + 'h' + (-w) + 'z', cor, t, dur || .6); }
+  function tx(x, y, s, cor, size, t, anchor) { return '<text class="tx" x="' + x + '" y="' + y + '" fill="' + cor + '" font-size="' + size + '" text-anchor="' + (anchor || 'middle') + '" style="--t:' + t + 's">' + s + '</text>'; }
+  function hl(x, y, w, h, t, cor) { return '<rect class="wipe" x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + (cor || YEL) + '" opacity=".85" style="--t:' + t + 's"/>'; }
+  function svg(inner) { return '<svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet" role="img">' + inner + '</svg>'; }
+  // grade de caminhos: o primeiro (índice 0) é o "errou todos"
+  function grade(cols, rows, x0, y0, s, gap, t0, passo) {
+    var g = '', i = 0, r, c;
+    for (r = 0; r < rows; r++) for (c = 0; c < cols; c++, i++)
+      g += '<rect class="pop" x="' + (x0 + c * (s + gap)) + '" y="' + (y0 + r * (s + gap)) + '" width="' + s + '" height="' + s + '" fill="' + (i === 0 ? '#ff8d7a' : '#e2e8e4') + '" stroke="' + INK + '" stroke-width="2" style="--t:' + (t0 + i * passo) + 's"/>';
+    return g;
+  }
+
+  // ---------- as cenas ----------
+  var S = [];
+  function cena(fala, desenho) { S.push({ fala: fala, svg: desenho }); }
+  // apartamento numerado (caixinha que "pula" na lousa)
+  function apto(n, x, y, s, ok, t) {
+    return '<rect class="pop" x="' + x + '" y="' + y + '" width="' + s + '" height="' + s + '" fill="' + (ok ? '#b9ecc0' : '#ffb3a8') + '" stroke="' + INK + '" stroke-width="2" style="--t:' + t + 's"/>' +
+      tx(x + s / 2, y + s * 0.72, n, INK, s * 0.66, t + .1);
+  }
+
+  // 1. capa: a questão primeiro
+  cena([[.3, 'Outra questão que caiu no ENEM.'], [2.6, 'De novo: cada ferramenta entra na hora que a questão pede.']],
+    svg(hl(30, 56, 340, 56, .2) + tx(200, 102, 'Quantas duplas?', INK, 54, .3) + tx(200, 146, 'a questão dos apartamentos', BLU, 30, 1.6) +
+      box(165, 166, 70, 84, INK, 2.2, .8) + box(177, 178, 18, 16, INK, 3.0, .3) + box(205, 178, 18, 16, INK, 3.2, .3) + box(177, 206, 18, 16, INK, 3.4, .3) + box(205, 206, 18, 16, INK, 3.6, .3) +
+      circ(290, 190, 16, '#d99a00', 3.8) + tx(200, 274, 'ENEM 2022 · questão 150', MUT, 22, 4.2)));
+
+  // 2. a questão, parte 1 (texto real)
+  S.push({ fala: [[.3, 'Essa caiu no ENEM 2022, questão 150.'], [2.6, 'Primeiro o prédio. Depois eu mostro o que ela pede.']],
+    papel: '<small>ENEM 2022 · questão 150 · parte 1</small><p>Um prédio, com 9 andares e 8 apartamentos de 2 quartos por andar, está com todos os seus apartamentos à venda. Os apartamentos são identificados por números formados por dois algarismos, sendo que a dezena indica o andar onde se encontra o apartamento, e a unidade, um algarismo de 1 a 8, que diferencia os apartamentos de um mesmo andar. Quanto à incidência de sol nos quartos desses apartamentos, constatam-se as seguintes características, em função de seus números de identificação:</p><p>• naqueles que finalizam em 1 ou 2, ambos os quartos recebem sol apenas na parte da manhã;</p><p>• naqueles que finalizam em 3, 4, 5 ou 6, apenas um dos quartos recebe sol na parte da manhã;</p><p>• naqueles que finalizam em 7 ou 8, ambos os quartos recebem sol apenas na parte da tarde.</p>' });
+
+  // 3. a questão, parte 2 (texto real + alternativas da prova)
+  S.push({ fala: [[.3, 'Agora o pedido e as letras.'], [2.4, 'As letras vêm com fatorial (o "!"). Eu traduzo daqui a pouco.']],
+    papel: '<small>ENEM 2022 · questão 150 · parte 2</small><p>Uma pessoa pretende comprar 2 desses apartamentos em um mesmo andar, mas quer que, em ambos, pelo menos um dos quartos receba sol na parte da manhã. De quantas maneiras diferentes essa pessoa poderá escolher 2 desses apartamentos para compra nas condições desejadas?</p><div class="alts col1"><span>A &nbsp;9 × 6! / (6−2)!</span><span>B &nbsp;9 × 6! / ((6−2)! × 2!)</span><span>C &nbsp;9 × 4! / ((4−2)! × 2!)</span><span>D &nbsp;9 × 2! / ((2−2)! × 2!)</span><span>E &nbsp;9 × ( 8! / ((8−2)! × 2!) − 1 )</span></div>' });
+
+  // 4. filtrar primeiro
+  cena([[.3, 'Primeiro: quais apartamentos servem?'], [2.8, 'Ela quer sol de manhã em pelo menos um quarto.'], [5.6, 'Servem o 1 ao 6. O 7 e o 8 só têm sol à tarde.']],
+    svg(tx(200, 34, 'quais apartamentos servem?', INK, 28, .2) +
+      apto(1, 20, 56, 38, true, .6) + apto(2, 66, 56, 38, true, .75) + apto(3, 112, 56, 38, true, .9) + apto(4, 158, 56, 38, true, 1.05) +
+      apto(5, 204, 56, 38, true, 1.2) + apto(6, 250, 56, 38, true, 1.35) + apto(7, 296, 56, 38, false, 1.5) + apto(8, 342, 56, 38, false, 1.65) +
+      tx(62, 122, 'manhã', GRN, 20, 2.6) + tx(200, 122, 'manhã em 1 quarto', GRN, 20, 3.4) + tx(338, 122, 'só tarde', RED, 20, 4.4) +
+      hl(26, 150, 348, 46, 5.6) + tx(200, 186, 'servem: 6 por andar', RED, 38, 5.7) +
+      tx(200, 262, 'primeiro filtra, depois conta', BLU, 26, 6.6)));
+
+  // 5. escolher 2 em fila (E → multiplica)
+  cena([[.3, 'Agora escolhe 2 desses 6, no mesmo andar.'], [2.8, 'Primeiro apartamento: 6 opções. O segundo: sobram 5.'], [5.6, 'Um E outro: multiplica. 6 × 5 = 30.']],
+    svg(tx(200, 34, 'escolher 2 de 6, em fila', INK, 30, .2) +
+      apto(1, 50, 52, 40, true, .5) + apto(2, 102, 52, 40, true, .65) + apto(3, 154, 52, 40, true, .8) + apto(4, 206, 52, 40, true, .95) + apto(5, 258, 52, 40, true, 1.1) + apto(6, 310, 52, 40, true, 1.25) +
+      tx(200, 132, '1º apartamento: 6 opções', INK, 28, 2.0) + tx(200, 168, '2º apartamento: sobram 5', INK, 28, 3.2) +
+      hl(70, 186, 260, 46, 4.6) + tx(200, 224, '6 × 5 = 30', RED, 44, 4.7) + tx(200, 266, 'um E outro → multiplica', BLU, 24, 5.6)));
+
+  // 6. a ordem não importa (÷ 2)
+  cena([[.3, 'Mas tem repetido. Comprar o 1 e o 2...'], [2.6, '...é o mesmo que comprar o 2 e o 1.'], [5.0, 'Ordem não importa: divide por 2. Dá 15 pares.']],
+    svg(tx(200, 34, 'o mesmo par aparece 2 vezes', INK, 28, .2) +
+      box(60, 60, 100, 54, INK, .5, .6) + tx(110, 100, '1 e 2', INK, 40, .8) +
+      box(240, 60, 100, 54, INK, 1.4, .6) + tx(290, 100, '2 e 1', INK, 40, 1.7) + tx(200, 100, '=', RED, 44, 2.6) +
+      tx(200, 158, 'comprar 1 e 2 = comprar 2 e 1', INK, 26, 3.0) +
+      hl(50, 178, 300, 46, 4.6) + tx(200, 214, '30 ÷ 2 = 15 pares', RED, 38, 4.7) + tx(200, 262, 'ordem não importa → divide por 2', BLU, 24, 5.6)));
+
+  // 7. os 9 andares
+  cena([[.3, 'E os 9 andares? A pessoa escolhe um andar.'], [2.8, 'Depois escolhe o par nele: 15 jeitos.'], [5.0, 'Um E outro: 9 × 15 = 135.']],
+    svg(tx(200, 36, 'e os 9 andares?', INK, 32, .2) +
+      tx(30, 86, 'escolhe o andar: 9 jeitos', INK, 28, .8, 'start') + tx(30, 126, 'escolhe o par nele: 15 jeitos', INK, 28, 2.0, 'start') +
+      hl(50, 152, 300, 56, 3.6) + tx(200, 198, '9 × 15 = 135', RED, 50, 3.7) + tx(200, 252, 'um E outro → multiplica', BLU, 26, 4.8)));
+
+  // 8. traduzindo a letra B
+  cena([[.3, 'Agora acha a letra. A B parece difícil, mas é a mesma conta.'], [3.4, '6! sobre (6−2)! é 6 × 5. E o "÷ 2!" é dividir por 2.'], [6.4, 'Dá 9 × 15 = 135. Letra B.']],
+    svg(tx(200, 34, 'a letra B é essa conta', INK, 28, .2) + tx(200, 88, '9 × 6! / ((6−2)! × 2!)', INK, 34, .8) +
+      tx(30, 136, '6! / (6−2)!  é  6 × 5', BLU, 28, 2.4, 'start') + tx(30, 176, '÷ 2!  é  ÷ 2', BLU, 28, 4.2, 'start') +
+      hl(50, 198, 300, 50, 6.2, '#b9ecc0') + tx(200, 236, '9 × 15 = 135 → B', GRN, 40, 6.3)));
+
+  // 9. por que as outras letras erram (cada uma é uma conta com um passo trocado)
+  cena([[.3, 'Cada outra letra pula um passo.'], [2.6, 'A esquece de dividir por 2. C e D esquecem apartamentos.'], [5.4, 'E esquece o filtro do sol e usa os 8.']],
+    svg(tx(200, 32, 'por que as outras letras erram', INK, 26, .2) +
+      tx(24, 76, 'A · 9 × 30 = 270  (contou a ordem)', INK, 23, .8, 'start') +
+      tx(24, 114, 'C · 9 × 6 = 54  (usou só 4 aptos)', INK, 23, 1.8, 'start') +
+      tx(24, 152, 'D · 9 × 1 = 9  (usou só 2 aptos)', INK, 23, 2.8, 'start') +
+      tx(24, 190, 'E · 9 × 27 = 243  (usou os 8 aptos)', RED, 23, 3.8, 'start') +
+      hl(26, 208, 348, 46, 5.2, '#b9ecc0') + tx(200, 242, 'o certo: B, 9 × 15 = 135', GRN, 32, 5.3)));
+
+  // 10. o que ficou
+  cena([[.3, 'Viu o que a questão usou?'], [2.2, 'Filtra antes de contar. Ordem não importa? Divide.'], [5.2, 'Andar E par: multiplica.']],
+    svg(tx(200, 36, 'o que a questão ensinou', INK, 30, .2) +
+      tx(30, 100, '1. filtra antes de contar', INK, 27, .8, 'start') +
+      tx(30, 150, '2. ordem não importa → ÷ 2', INK, 27, 2.4, 'start') + hl(26, 168, 290, 6, 3.2, '#ffe14a') +
+      tx(30, 210, '3. um E outro → multiplica', INK, 27, 4.0, 'start')));
+
+  // provas
+  function prova(pergunta, ops, c, d) { S.push({ fala: [[.3, 'Sua vez! Escolhe uma.']], prova: { q: pergunta, ops: ops, c: c, d: d } }); }
+  prova('Uma sala tem 5 alunos. Quantas duplas diferentes dá para formar?', ['10', '20', '5', '25'], 0, [
+    'Isso! Em fila: 5 × 4 = 20. Dupla não tem ordem: divide por 2 = 10.',
+    '20 conta a ordem (Ana e Beto ≠ Beto e Ana). Dupla não tem ordem: 20 ÷ 2 = 10.',
+    '5 é o número de alunos, não de duplas. Dá 5 × 4 ÷ 2 = 10.',
+    '5 × 5 deixaria o mesmo aluno nos dois lugares. O segundo tem 4 opções: 5 × 4 ÷ 2 = 10.']);
+  prova('Mais difícil: prédio de 4 andares, 6 apartamentos por andar, mas só 4 em cada andar têm sol. Quantas maneiras de escolher 2 apartamentos com sol no mesmo andar?', ['24', '48', '60', '6'], 0, [
+    'Isso! Por andar: 4 × 3 ÷ 2 = 6 pares. Nos 4 andares: 4 × 6 = 24.',
+    '48 conta a ordem: 4 × 3 = 12 por andar. Sem ordem são 6 por andar, e 4 × 6 = 24.',
+    '60 usa os 6 apartamentos (15 pares por andar) e ignora o sol. Só 4 servem: 6 pares, 4 × 6 = 24.',
+    '6 é só UM andar. São 4 andares: 4 × 6 = 24.']);
+
+  // fim
+  cena([[.3, 'É isso! Uma questão, três ideias.'], [2.8, 'Probabilidade e contagem caem em média 4 vezes por prova.']],
+    svg(tx(200, 40, 'onde isso cai', INK, 34, .2) + tx(200, 100, 'Probabilidade e contagem:', INK, 30, .8) +
+      hl(60, 118, 280, 56, 1.6) + tx(200, 162, '~4 questões por prova', RED, 42, 1.7) +
+      tx(200, 200, '(64 questões em 15 provas, 2009 a 2023)', MUT, 22, 2.6) + tx(200, 252, 'quer treinar? volta e refaz as provas', BLU, 26, 3.6)));
+
+  // ---------- motor ----------
+  var i = 0, board = document.getElementById('board'), balao = document.getElementById('balao'), prof = document.getElementById('prof'),
+      prox = document.getElementById('prox'), volta = document.getElementById('volta'), denovo = document.getElementById('de-novo'), app = document.getElementById('app'), timer = null;
+  var respondeu = {};
+  function falar(linhas) {
+    balao.innerHTML = linhas.map(function (l) { return '<p class="f" style="--t:' + l[0] + 's">' + l[1] + '</p>'; }).join('');
+    prof.classList.add('fala'); clearTimeout(timer);
+    timer = setTimeout(function () { prof.classList.remove('fala'); }, (linhas[linhas.length - 1][0] + 1.6) * 1000);
+  }
+  function mostra() {
+    var c = S[i];
+    if (c.prova) {
+      var p = c.prova;
+      board.innerHTML = '<div class="prova"><small>Prove você</small><p class="q">' + p.q + '</p><div class="ops">' + p.ops.map(function (o, k) { return '<button class="opt" data-k="' + k + '">' + o + '</button>'; }).join('') + '</div></div>';
+      falar(c.fala);
+      if (respondeu[i] != null) marca(respondeu[i], true);
+    } else if (c.papel) { board.innerHTML = '<div class="papel">' + c.papel + '</div>'; falar(c.fala);
+    } else { board.innerHTML = c.svg; falar(c.fala); }
+    document.getElementById('n').textContent = (i + 1) + '/' + S.length;
+    document.getElementById('barra').style.width = ((i + 1) / S.length * 100) + '%';
+    volta.hidden = i === 0; denovo.hidden = !!c.prova;
+    prox.textContent = i === 0 ? 'Começar' : (i === S.length - 1 ? 'De novo' : 'Próximo');
+    try { history.replaceState(null, '', '#t' + (i + 1)); } catch (e) {}
+  }
+  function marca(k, quieto) {
+    var p = S[i].prova;
+    board.querySelectorAll('.opt').forEach(function (b, j) { b.disabled = true; if (j === p.c) b.classList.add('certo'); else if (j === k) b.classList.add('errado'); });
+    falar([[quieto ? 0 : .1, p.d[k]]]);
+  }
+  board.addEventListener('click', function (e) {
+    var b = e.target.closest('.opt'); if (!b || b.disabled) return;
+    respondeu[i] = +b.dataset.k; marca(respondeu[i]);
+  });
+  prox.addEventListener('click', function () { if (i === S.length - 1) { i = 0; respondeu = {}; } else i++; mostra(); });
+  volta.addEventListener('click', function () { if (i > 0) { i--; mostra(); } });
+  denovo.addEventListener('click', mostra);
+  document.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') prox.click(); else if (e.key === 'ArrowLeft') volta.click(); });
+  var h = parseInt((location.hash || '').replace('#t', ''), 10);
+  if (h >= 1 && h <= S.length) i = h - 1;
+  window.__aula = { fim: function () { app.classList.add('fim'); } };
+  mostra();
+})();
+</script>

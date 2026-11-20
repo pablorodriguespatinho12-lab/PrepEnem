@@ -8,7 +8,7 @@ import path from "node:path";
 
 const [arquivo, saida] = process.argv.slice(2);
 mkdirSync(saida, { recursive: true });
-const FOTOS = new Set([2, 3, 4, 5, 7, 8, 9]);
+const FOTOS = new Set([2, 3, 4, 5, 6, 7, 8, 9, 10]);
 const navegador = await chromium.launch();
 let problemas = 0;
 for (const [nome, w, h] of [["pc", 1366, 640], ["celular", 390, 700], ["pequeno", 360, 600]]) {
