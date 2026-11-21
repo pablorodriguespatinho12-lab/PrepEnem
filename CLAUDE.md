@@ -23,7 +23,10 @@
 - **Manter as ferramentas:** `desenhar-skill`, `auditar-o-repertorio`.
 - **Agentes:** `build-guard`, `db-inspector`, `design-system-auditor`,
   `aluno-do-zero` (lê a jornada de `scripts/jornada-do-aluno.mts`, ou um texto de
-  estudo, como quem só sabe as 4 operações), `revisor-de-fatos` (conta, gabarito e
+  estudo, como quem só sabe as 4 operações; **toda vez que o Pablo disser "não
+  entendi" de uma explicação, corrigir o caso E acrescentar esse tipo de tropeço
+  ao agente**, com a frase dele e a data; teste: `docs/aluno-do-zero/`),
+  `revisor-de-fatos` (conta, gabarito e
   fato de material de estudo, antes de entregar), `revisor-adversarial` e
   `inspetor-visual` (~66 mil tokens cada: decidir com `chamar-revisor`).
 

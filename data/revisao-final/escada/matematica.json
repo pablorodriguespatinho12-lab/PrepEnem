@@ -3990,7 +3990,7 @@
        ],
        [
         5.4,
-        "Então a chance é 1 em 6."
+        "Então a chance é 1 em 6, que se escreve 1/6."
        ]
       ],
       "desenho": [
@@ -4060,11 +4060,113 @@
       "fala": [
        [
         0.3,
+        "E se forem 4 cartões? Ou 7? Listar todas as filas levaria a prova inteira."
+       ],
+       [
+        3.4,
+        "Não precisa listar. Os lugares dão a conta: com 4 cartões, 4 × 3 × 2 × 1 = 24. Com 7, 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5040."
+       ],
+       [
+        8.6,
+        "Esse produto tem nome: fatorial, escrito com \"!\". k é quantos cartões você tira, e k! = k × (k−1) × … × 1. O (k−1) é o número logo antes."
+       ],
+       [
+        13.2,
+        "Só 1 fila é crescente: chance de 1 em k!, que se escreve 1 ÷ k! ou 1/k!. O total da caixa, o 9, não muda a resposta."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 30,
+        "s": "sem listar nada",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 70,
+        "s": "3 cartões:  3 × 2 × 1 = 6",
+        "cor": "tinta",
+        "tam": 24,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 102,
+        "s": "4 cartões:  4 × 3 × 2 × 1 = 24",
+        "cor": "tinta",
+        "tam": 24,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 134,
+        "s": "7 cartões:  7 × 6 × 5 × 4 × 3 × 2 × 1 = 5040",
+        "cor": "tinta",
+        "tam": 20,
+        "t": 5.6,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 152,
+        "w": 345,
+        "h": 40,
+        "t": 8.6,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 182,
+        "s": "k cartões:  k! = k × (k−1) × … × 1",
+        "cor": "vermelho",
+        "tam": 24,
+        "t": 8.7,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 224,
+        "s": "só 1 crescente: chance = 1 ÷ k!",
+        "cor": "verde",
+        "tam": 26,
+        "t": 13.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 258,
+        "s": "o 9 da caixa não muda a resposta",
+        "cor": "azul",
+        "tam": 24,
+        "t": 14.4,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
         "Dá para conferir contando tudo."
        ],
        [
         2.6,
-        "1º lugar: 9 cartões. 2º: 8. 3º: 7. São 9 × 8 × 7 = 504 filas."
+        "1º lugar: 9 cartões. 2º: 8. 3º: 7. São 9 × 8 × 7 = 504 filas. Aqui o 9 entra, para contar todas."
        ],
        [
         6.4,
@@ -4152,11 +4254,11 @@
       "fala": [
        [
         0.3,
-        "Cada letra errada é um erro de leitura."
+        "Cada letra errada vem de um erro de raciocínio."
        ],
        [
         2.8,
-        "A conta uma fila só. B e C pegam um pedaço da pergunta. E ignora o \"sem devolver\"."
+        "A só olha uma fila. B e C pegam um pedaço da pergunta. E ignora o \"sem devolver\"."
        ],
        [
         6.6,
@@ -4248,7 +4350,7 @@
        ],
        [
         5.6,
-        "Sem contar tudo: 1 em 6."
+        "Para k cartões é 1 dividido por k fatorial. Sem listar nada."
        ]
       ],
       "desenho": [
@@ -4295,9 +4397,9 @@
         "k": "tx",
         "x": 30,
         "y": 216,
-        "s": "3. chance = 1 ÷ 6, sem contar tudo",
+        "s": "3. k cartões: chance = 1 ÷ k!",
         "cor": "tinta",
-        "tam": 26,
+        "tam": 28,
         "t": 4.4,
         "ancora": "start"
        }
@@ -4311,7 +4413,7 @@
         "Sua vez! Escolhe uma."
        ]
       ],
-      "pergunta": "Sorteia 4 cartões distintos e coloca em fila. Qual a chance de ficarem crescentes?",
+      "pergunta": "Sorteia 4 cartões diferentes e põe em fila. Qual a chance de ficarem crescentes?",
       "opcoes": [
        "1/4",
        "1/24",
@@ -4334,19 +4436,19 @@
         "Sua vez! Escolhe uma."
        ]
       ],
-      "pergunta": "Mais difícil: com 3 cartões sorteados, qual a chance de o MAIOR ficar no meio da fila?",
+      "pergunta": "Mais difícil: 7 cartões são sorteados de uma caixa com 30, sem devolver. Qual a chance de saírem em ordem crescente?",
       "opcoes": [
-       "1/3",
-       "1/6",
-       "1/2",
-       "1/9"
+       "1/7",
+       "1/30",
+       "1/210",
+       "1/7!"
       ],
-      "certa": 0,
+      "certa": 3,
       "porque": [
-       "Isso! O maior cai em qualquer das 3 posições com a mesma chance: 1 em 3.",
-       "1/6 é a chance de uma fila exata. O maior no meio vale 2 filas em 6, ou 1/3.",
-       "1/2 não existe aqui: são 3 posições iguais para o maior.",
-       "1/9 não tem base. Três posições iguais dão 1/3."
+       "1/7 olharia uma posição só. Com 7 cartões são 7! ordens, e só 1 é crescente.",
+       "1/30 é o tamanho da caixa, e ele não muda a chance.",
+       "1/210 vem de 30 × 7. Não tem base: o que conta é o 7!.",
+       "Isso! 7 cartões têm 7! ordens (5040) e só 1 é crescente: 1/7!. Os 30 da caixa não mudam nada."
       ]
      }
     ]
