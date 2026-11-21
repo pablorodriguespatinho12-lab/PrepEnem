@@ -131,6 +131,13 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   para qualquer tamanho** (Pablo, 21/11/2026: "com 7 cartões ninguém lista na prova"): o k! de "k
   cartões", com o caso de número (4 cartões = 24) ANTES da letra k e o "!" dito como fatorial. Nunca
   escrever igualdade falsa só para encurtar (escrevi "9! parado no 3º fator"; 9! vale 362.880).
+  **Contar "quantas são crescentes" também é pelos lugares** (1 jeito por lugar = 1), nunca só "listei e
+  achei 1" (Pablo, 21/11/2026: "não posso escrever ordem por ordem"). **A fala só explica o conteúdo da
+  tela:** nada de "boa pergunta", "isso!", "lê com calma", "viu?" nem resposta à pergunta dele ("fica
+  tirado fora de contexto"); a explicação de cada letra no Prove você começa direto no porquê. **Ao
+  mudar uma aula por causa de uma dúvida dele, refazer o quadro inteiro, não colar tela nova.** Frase de
+  contagem diz entre o quê ("só 1 deste trio"). Até ~300 letras de fala por tela (`lousa.py` avisa):
+  fala comprida faz o balão crescer e a lousa encolher.
   Ids `d2-escada-xxx-ita-` entram no degrau ITA
   antes das antigas (`lib/prova-da-escada.ts`).
 
