@@ -8,6 +8,7 @@ import { materiaColors } from '@/lib/theme-colors';
 import { useLeitura } from '@/hooks/use-leitura';
 import { AdicionarLivro, LivrosDaLeitura } from '@/components/livros-da-leitura';
 import { Atalhos } from '@/components/inicio/atalhos';
+import { MetaDoDia } from '@/components/inicio/meta-do-dia';
 import { Semana } from '@/components/inicio/semana';
 import { AnelInicio } from '@/components/pixel/anel-inicio';
 
@@ -139,6 +140,10 @@ export default function DashboardPage() {
         {/* Só no celular: no computador o menu lateral já mostra os mesmos 4. */}
         <div className="md:hidden mb-8">
           <Atalhos />
+        </div>
+
+        <div className="mb-6 max-w-xl">
+          <MetaDoDia />
         </div>
 
         {/* Uma coluna no celular (na ordem do DOM); duas no computador, para a
