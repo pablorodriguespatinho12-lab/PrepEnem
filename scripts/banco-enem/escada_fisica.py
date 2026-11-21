@@ -498,7 +498,7 @@ J('Eletricidade e Circuitos', 'd2-escada-fis-jun-ele-02', 'E',
 # Mesma receita da Matemática: ideia procurada no banco antes, 2 ou 3 conteúdos juntos, dado escondido,
 # pegadinha nas letras, conta curta. A lousa fica em lousas_fisica.py.
 FICHAS += [
-dict(**F('Cinemática', 'acima'), id='d2-escada-fis-ita-cin-01', resp='D', objeto='trem e ponte', cobra='comprimento do trem e km/h para m/s', confere=30,
+dict(**F('Cinemática', 'acima'), id='d2-escada-fis-ita-cin-01', canal='cin-01 [0:54:30] 1 km/h = 1000 ÷ 3600, 1 sobre 3,6', resp='D', objeto='trem e ponte', cobra='comprimento do trem e km/h para m/s', confere=30,
   enun=ENUN_TREM_PONTE, alts=ALTS_TREM_PONTE, lousa=LOUSA_TREM_PONTE,
   ideia='A frente do trem anda a ponte inteira mais o comprimento do trem: 400 + 200 = 600 m, a 72 km/h, que são 20 m/s. Então o tempo é 600 ÷ 20 = 30 s.',
   pecas=[('Travessia', 'Da frente do trem entrando na ponte até a traseira saindo: a frente anda a ponte mais o trem.')],
@@ -518,7 +518,7 @@ dict(**F('Cinemática', 'acima'), id='d2-escada-fis-ita-cin-01', resp='D', objet
     pista='"trem atravessa ponte ou túnel" → a frente anda o comprimento da ponte mais o do trem; converta km/h para m/s antes de dividir.',
     receita=receita('trem 200 m, ponte 400 m, 72 km/h', 't = d ÷ v', 'd = 600 m; v = 20 m/s', '600 ÷ 20 = 30'))),
 
-dict(**F('Dinâmica e Leis de Newton', 'acima'), id='d2-escada-fis-ita-din-01', resp='B', objeto='dois blocos e polia', cobra='máquina de Atwood: diferença dos pesos ÷ massa total', confere=5,
+dict(**F('Dinâmica e Leis de Newton', 'acima'), id='d2-escada-fis-ita-din-01', canal='fora do canal: polia e Atwood não achados; fis-02 [0:57:30] só a resultante do elevador', resp='B', objeto='dois blocos e polia', cobra='máquina de Atwood: diferença dos pesos ÷ massa total', confere=5,
   enun=ENUN_POLIA, alts=ALTS_POLIA, lousa=LOUSA_POLIA,
   ideia='Os dois blocos andam juntos, como um só de 3 + 1 = 4 kg. A força que sobra é a diferença dos pesos, 30 − 10 = 20 N, então a = 20 ÷ 4 = 5 m/s².',
   pecas=[('Polia sem atrito', 'Roda por onde passa o fio; ela só muda a direção da força.'), ('Fio leve', 'Fio sem massa: a força dele é a mesma dos dois lados.')],
@@ -538,7 +538,7 @@ dict(**F('Dinâmica e Leis de Newton', 'acima'), id='d2-escada-fis-ita-din-01', 
     pista='"dois blocos presos por fio numa polia" → diferença dos pesos dividida pela soma das massas.',
     receita=receita('3 kg e 1 kg, g = 10', 'a = F ÷ m', 'F = 20 N; m = 4 kg', '20 ÷ 4 = 5'))),
 
-dict(**F('Termodinâmica e Calor', 'acima'), id='d2-escada-fis-ita-ter-01', resp='D', objeto='aquecedor elétrico', cobra='energia, potência útil e rendimento', confere=8.75,
+dict(**F('Termodinâmica e Calor', 'acima'), id='d2-escada-fis-ita-ter-01', canal='fis-06 [5:10:30] calorimetria com ebulidor; potência × tempo = energia', resp='D', objeto='aquecedor elétrico', cobra='energia, potência útil e rendimento', confere=8.75,
   enun=ENUN_AQUEC, alts=ALTS_AQUEC, lousa=LOUSA_AQUEC,
   ideia='A água precisa de 2 × 4200 × 50 = 420 000 J, e o aquecedor entrega 80% de 1000 W, ou seja, 800 J por segundo. O tempo é 420 000 ÷ 800 = 525 s, que são 8,75 min.',
   pecas=[('Potência útil', 'A parte da potência que chega à água: aqui, 80% de 1000 W = 800 W.')],
@@ -558,7 +558,7 @@ dict(**F('Termodinâmica e Calor', 'acima'), id='d2-escada-fis-ita-ter-01', resp
     pista='"aquecedor com perda" → energia que a água precisa ÷ potência que realmente chega a ela.',
     receita=receita('2 kg, 50 °C, 1000 W, 80%', 't = Q ÷ P', 'Q = 420 000 J; P = 800 W', '420 000 ÷ 800 = 525 s'))),
 
-dict(**F('Ondas e Acústica', 'acima'), id='d2-escada-fis-ita-ond-01', resp='B', objeto='dois alto-falantes', cobra='interferência destrutiva: diferença de percurso = meio comprimento de onda', confere=0.5,
+dict(**F('Ondas e Acústica', 'acima'), id='d2-escada-fis-ita-ond-01', canal='fis-10 [9:39:31] interferência: destrutiva em múltiplos ímpares de λ/2', resp='B', objeto='dois alto-falantes', cobra='interferência destrutiva: diferença de percurso = meio comprimento de onda', confere=0.5,
   enun=ENUN_ONDA, alts=ALTS_ONDA, lousa=LOUSA_ONDA,
   ideia='A nota tem λ = 340 ÷ 340 = 1 m. Silêncio acontece quando um pico encontra um vale, e isso exige uma diferença de distância de meio comprimento de onda: 1 ÷ 2 = 0,5 m.',
   pecas=[('Em fase', 'Os dois alto-falantes mandam o pico da onda no mesmo instante.'), ('Comprimento de onda', 'Distância entre dois picos seguidos da onda, escrita λ.')],
@@ -578,7 +578,7 @@ dict(**F('Ondas e Acústica', 'acima'), id='d2-escada-fis-ita-ond-01', resp='B',
     pista='"duas fontes em fase, silêncio" → ache λ (v ÷ f); a menor diferença de distância é λ ÷ 2.',
     receita=receita('340 Hz, 340 m/s', 'd = λ ÷ 2', 'λ = 1 m', '1 ÷ 2 = 0,5'))),
 
-dict(**F('Óptica', 'acima'), id='d2-escada-fis-ita-opt-01', resp='C', objeto='espelho plano que gira', cobra='o refletido gira o dobro do espelho', confere=40,
+dict(**F('Óptica', 'acima'), id='d2-escada-fis-ita-opt-01', canal='fora do canal: espelho que gira não achado', resp='C', objeto='espelho plano que gira', cobra='o refletido gira o dobro do espelho', confere=40,
   enun=ENUN_ESPELHO, alts=ALTS_ESPELHO, lousa=LOUSA_ESPELHO,
   ideia='O ângulo entre o raio que chega e o que sai é o dobro do ângulo com a normal. Quando o espelho gira 20°, esse ângulo muda 2 × 20°, então o raio refletido gira 40°.',
   pecas=[('Normal', 'Linha perpendicular ao espelho, no ponto onde o raio bate.')],
@@ -599,7 +599,7 @@ dict(**F('Óptica', 'acima'), id='d2-escada-fis-ita-opt-01', resp='C', objeto='e
     pista='"o espelho gira e o raio incidente fica parado" → o raio refletido gira o dobro do espelho.',
     receita=receita('espelho gira 20°', 'G = 2 × g', 'g = 20°', '2 × 20 = 40'))),
 
-dict(**F('Eletricidade e Circuitos', 'acima'), id='d2-escada-fis-ita-ele-01', resp='D', objeto='fio de cobre esticado', cobra='resistência com comprimento e grossura', confere=4,
+dict(**F('Eletricidade e Circuitos', 'acima'), id='d2-escada-fis-ita-ele-01', canal='fora do canal: resistência do fio não achada', resp='D', objeto='fio de cobre esticado', cobra='resistência com comprimento e grossura', confere=4,
   enun=ENUN_FIO, alts=ALTS_FIO, lousa=LOUSA_FIO,
   ideia='A resistência é o comprimento dividido pela grossura. Esticando para o dobro, o comprimento vai de 1 para 2 e a grossura cai para 1/2, então R2 = 2 ÷ 1/2 = 4: a resistência fica 4R.',
   pecas=[('Resistência', 'Dificuldade que o fio faz para a corrente passar; cresce com o comprimento e diminui com a grossura.')],
