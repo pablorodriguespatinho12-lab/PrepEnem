@@ -124,7 +124,10 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   deslizar, zoom e boca. Testado em 1366×768, 390×844, 360×640 e 844×390: o diálogo nunca rola.
   Nível acima = **mais raciocínio** (escolha dele): 2 ou 3 conteúdos juntos, dado escondido, pegadinha
   nas letras, conta curta. Antes de escrever, **procurar no banco se a ideia já existe** (minha
-  1ª questão de Estatística repetia a `d2-acima-mat-05`). Ids `d2-escada-xxx-ita-` entram no degrau ITA
+  1ª questão de Estatística repetia a `d2-acima-mat-05`). **Palavra nova da lousa aparece primeiro como
+  desenho e só depois com nome** (Pablo, 21/11/2026, "quantas filas? como assim?": a aula contava
+  "filas" sem mostrar o que é uma fila nem de onde vem o 3 × 2 × 1); antes de gravar, passar o texto
+  pelo agente `aluno-do-zero`. Ids `d2-escada-xxx-ita-` entram no degrau ITA
   antes das antigas (`lib/prova-da-escada.ts`).
 
 ## Conteúdo gerado por IA
