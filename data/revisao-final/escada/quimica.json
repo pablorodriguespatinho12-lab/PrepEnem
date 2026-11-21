@@ -1,0 +1,2188 @@
+[
+ {
+  "id": "d2-escada-qui-ita-est-01",
+  "materia": "Química",
+  "tema": "Estequiometria",
+  "enunciado": "Em um laboratório, 4 g de hidrogênio (H2) reagem com 48 g de oxigênio (O2) para formar água, segundo a equação 2 H2 + O2 → 2 H2O. Massas molares: H2 = 2 g/mol, O2 = 32 g/mol, H2O = 18 g/mol. A reação vai até acabar um dos dois gases. Qual é a massa de água formada?",
+  "A": "18 g",
+  "B": "36 g",
+  "C": "52 g",
+  "D": "54 g",
+  "E": "72 g",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "nH2 = 4/2 = 2; nO2 = 48/32 = 1,5; 2 H2 pedem 1 O2 (sobram 0,5 mol); limitante H2; 2 mol de H2O × 18 = 36 g. B. A = 1 mol de água; C = 4 + 48 (soma de massas, sobra O2); D = partiu do O2 (3 mol de água, 54 g); E = 4 g lido como 4 mol (72 g).",
+   "ideia": "A equação conta em mols. Os 4 g de H2 são 2 mol e os 48 g de O2 são 1,5 mol; 2 mol de H2 pedem só 1 mol de O2, então o H2 acaba primeiro e forma 2 mol de água, 36 g.",
+   "pecas": [
+    {
+     "termo": "Reagente limitante",
+     "significado": "O que acaba primeiro: ele decide quanto produto se forma."
+    },
+    {
+     "termo": "Mol",
+     "significado": "Quantidade fixa de partículas; a massa molar diz quanto 1 mol pesa em gramas."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Mols",
+        "formula": "mols = massa ÷ massa molar"
+       },
+       {
+        "figura": "contagem",
+        "nome": "Proporção da equação",
+        "formula": "2 H2 : 1 O2 : 2 H2O"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "H2",
+        "4 g (2 g por mol)"
+       ],
+       [
+        "O2",
+        "48 g (32 g por mol)"
+       ],
+       [
+        "Água",
+        "18 g por mol"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a massa de água formada, m.\nPor que olhar quem acaba primeiro? A reação para quando um dos gases acaba, e o gás que sobra não forma água. Quem acaba primeiro decide a água formada.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "m = n × M",
+      "leitura": "massa de água = mols de água × massa molar",
+      "letras": [
+       {
+        "letra": "m",
+        "oque": "massa de água (o que a questão quer)"
+       },
+       {
+        "letra": "n",
+        "oque": "mols de água formados, pelo limitante"
+       },
+       {
+        "letra": "M",
+        "oque": "massa molar da água, 18 g/mol"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando n: os mols de água",
+     "texto": "H2: 4 ÷ 2 = 2 mol. O2: 48 ÷ 32 = 1,5 mol. Os 2 mol de H2 pedem 1 mol de O2 e há 1,5: o H2 é o limitante.\nPela equação, 2 mol de H2 formam 2 mol de água: n = 2 mol"
+    },
+    {
+     "titulo": "Achando M: o seu jeito",
+     "texto": "Parece certo somar as massas, 4 + 48 = 52 g, porque a massa se conserva. Mas o O2 que sobra não virou água.\nM = 18 g/mol, a massa molar da água"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "m = 2 × 18 = 36 g\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "n",
+        "2 mol"
+       ],
+       [
+        "M",
+        "18 g/mol"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"quantidade de cada reagente dada\" → passe tudo para mols, ache quem acaba primeiro pela proporção da equação e siga só por ele.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "4 g de H2 e 48 g de O2"
+       ],
+       [
+        "2. Equação em letras",
+        "m = n × M"
+       ],
+       [
+        "3. Achar cada letra",
+        "n = 2 mol; M = 18 g/mol"
+       ],
+       [
+        "4. Substituir",
+        "2 × 18 = 36"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "3 mol de H2 e 1 mol de O2 reagem (2 H2 + O2 → 2 H2O). Quantos mols de água se formam?",
+    "opcoes": [
+     "2 mol",
+     "3 mol",
+     "1 mol",
+     "4 mol"
+    ],
+    "certa": "2 mol",
+    "resposta": "1 mol de O2 pede 2 de H2 e forma 2 de água: o O2 é o limitante."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Questão de nível acima: dois gases reagem e formam água."
+       ],
+       [
+        3.4,
+        "Um deles acaba primeiro, e é ele que manda."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 42,
+        "s": "Hidrogênio e oxigênio",
+        "cor": "tinta",
+        "tam": 36,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 60,
+        "y": 100,
+        "w": 110,
+        "h": 80,
+        "cor": "azul",
+        "t": 0.8,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 115,
+        "y": 148,
+        "s": "4 g de H2",
+        "cor": "azul",
+        "tam": 28,
+        "t": 1.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 230,
+        "y": 100,
+        "w": 110,
+        "h": 80,
+        "cor": "vermelho",
+        "t": 2.0,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 285,
+        "y": 148,
+        "s": "48 g de O2",
+        "cor": "vermelho",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 236,
+        "s": "forma água: quanto?",
+        "cor": "cinza",
+        "tam": 30,
+        "t": 3.6,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "Mol é um número fixo de partículas, como dúzia é 12. Massa molar é o peso de 1 mol, em gramas: o H2 pesa 2 g por mol."
+       ],
+       [
+        5.2,
+        "24 ovos ÷ 12 = 2 dúzias; do mesmo jeito, 4 g ÷ 2 g por mol = 2 mol. H2 lê-se \"agá dois\": 2 átomos de hidrogênio."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "Em um laboratório, 4 g de hidrogênio (H2) reagem com 48 g de oxigênio (O2) para formar água, segundo a equação 2 H2 + O2 → 2 H2O. Massas molares: H2 = 2 g/mol, O2 = 32 g/mol, H2O = 18 g/mol. A reação vai até acabar um dos dois gases. Qual é a massa de água formada?",
+      "alternativas": [
+       "18 g",
+       "36 g",
+       "52 g",
+       "54 g",
+       "72 g"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Tenho 4 g de H2 e 48 g de O2. A equação é 2 H2 + O2 → 2 H2O."
+       ],
+       [
+        4.6,
+        "Quero a massa de água que se forma."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "o que a questão dá",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "4 g de H2 (2 g por mol)",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 122,
+        "s": "48 g de O2 (32 g por mol)",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 2.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 160,
+        "s": "2 H2 + O2 → 2 H2O",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 182,
+        "w": 330,
+        "h": 46,
+        "t": 4.6,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "quero: a massa de água",
+        "cor": "vermelho",
+        "tam": 28,
+        "t": 4.7,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "A equação conta em mols, então passo os gramas para mols: massa ÷ massa molar."
+       ],
+       [
+        4.8,
+        "H2: 4 ÷ 2 = 2 mol. O2: 48 ÷ 32 = 1,5 mol."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "gramas em mols",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 86,
+        "s": "mols = massa ÷ massa molar",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 136,
+        "s": "H2: 4 ÷ 2 = 2 mol",
+        "cor": "azul",
+        "tam": 30,
+        "t": 4.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 184,
+        "s": "O2: 48 ÷ 32 = 1,5 mol",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 6.4,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "A equação pede 2 H2 para cada 1 O2. Os 2 mol de H2 pedem 1 mol de O2."
+       ],
+       [
+        4.6,
+        "Há 1,5 mol de O2: sobram 0,5 mol. O H2 acaba primeiro: ele é o reagente limitante."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "quem acaba primeiro",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "2 mol de H2 pedem 1 mol de O2",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 126,
+        "s": "há 1,5 mol de O2: sobra 0,5",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 4.6,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 150,
+        "w": 330,
+        "h": 56,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 194,
+        "s": "limitante: o H2",
+        "cor": "verde",
+        "tam": 36,
+        "t": 6.5,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "O limitante manda na conta. Pela equação, 2 mol de H2 formam 2 mol de H2O: de 2 para 2."
+       ],
+       [
+        5.2,
+        "Massa: 2 mol × 18 g por mol = 36 g de água."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "a água formada",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 86,
+        "s": "2 H2 → 2 H2O: 2 mol de água",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 130,
+        "s": "2 mol × 18 g = 36 g",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 5.2,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 160,
+        "w": 330,
+        "h": 56,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 204,
+        "s": "36 g de água",
+        "cor": "verde",
+        "tam": 40,
+        "t": 6.5,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "A tira o coeficiente 2 da água. C soma as massas. D parte do O2. E confunde gramas com mols."
+       ],
+       [
+        4.7,
+        "A certa é a B."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · 18 g: 1 mol de água, não 2",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "C · 52 g: somou 4 + 48 (sobra O2)",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 2.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "D · 54 g: partiu do O2, que sobra",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 72 g: 4 g tratado como 4 mol",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: B, 36 g",
+        "cor": "verde",
+        "tam": 32,
+        "t": 6.5,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.30000000000000004,
+        "Passar para mols, achar quem acaba primeiro e seguir só por ele."
+       ],
+       [
+        4.1,
+        "Os gramas só voltam no fim."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. gramas viram mols (÷ molar)",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "2. o que acaba primeiro manda",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 172,
+        "w": 270,
+        "h": 6,
+        "t": 3.8,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "3. mols de água × 18 = gramas",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 5.0,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "3 mol de H2 e 1 mol de O2 reagem (2 H2 + O2 → 2 H2O). Quantos mols de água se formam?",
+      "opcoes": [
+       "2 mol",
+       "3 mol",
+       "1 mol",
+       "4 mol"
+      ],
+      "certa": 0,
+      "porque": [
+       "1 mol de O2 pede 2 de H2 e forma 2 de água: o O2 é o limitante, e sobra 1 mol de H2.",
+       "3 mol seguiria o H2 sozinho, mas o O2 acaba antes.",
+       "1 mol é o O2 sem o coeficiente 2 da água.",
+       "4 mol soma os mols dos dois gases, e a água não vem de soma."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: 6 g de H2 e 16 g de O2 (H2 = 2 e O2 = 32 g/mol). Qual a massa de água formada?",
+      "opcoes": [
+       "18 g",
+       "54 g",
+       "22 g",
+       "9 g"
+      ],
+      "certa": 0,
+      "porque": [
+       "H2: 6 ÷ 2 = 3 mol; O2: 16 ÷ 32 = 0,5 mol. O O2 é o limitante: 0,5 mol de O2 forma 1 mol de água, que são 18 g.",
+       "54 g parte do H2 (3 mol de água), mas o O2 acaba antes.",
+       "22 g soma as massas, 6 + 16, e sobra H2.",
+       "9 g é metade do certo: esqueceu o coeficiente 2 da água."
+      ]
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "d2-escada-qui-ita-sol-01",
+  "materia": "Química",
+  "tema": "Soluções, pH e Titulação",
+  "enunciado": "Um técnico mistura 300 mL de uma solução de sal (NaCl) de 0,4 mol/L com 200 mL de outra solução de NaCl de 0,9 mol/L. Depois, deixa evaporar 100 mL de água dessa mistura (o sal não evapora). Qual é a concentração final, em mol/L?",
+  "A": "0,60",
+  "B": "0,65",
+  "C": "0,75",
+  "D": "1,3",
+  "E": "3,0",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "n1 = 0,4 × 0,3 = 0,12; n2 = 0,9 × 0,2 = 0,18; n = 0,30; V = 0,5 − 0,1 = 0,4 L; C = 0,75. C. A = 0,6 (sem evaporar); B = média simples (0,4 + 0,9) ÷ 2 = 0,65; D = 0,4 + 0,9 = 1,3; E = 0,30 ÷ 0,1 = 3,0.",
+   "ideia": "Concentrações não se somam, mols sim. A mistura tem 0,12 + 0,18 = 0,30 mol em 0,5 L; ao evaporar 100 mL de água os mols ficam e o volume vai a 0,4 L: 0,30 ÷ 0,4 = 0,75 mol/L.",
+   "pecas": [
+    {
+     "termo": "Mol/L",
+     "significado": "Quantos mols de sal há em cada litro de solução."
+    },
+    {
+     "termo": "Evaporação",
+     "significado": "Tira só água: o volume cai e os mols de sal continuam."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "media",
+        "nome": "Mols de uma solução",
+        "formula": "mols = mol/L × litros"
+       },
+       {
+        "figura": "media",
+        "nome": "Concentração",
+        "formula": "mol/L = mols ÷ litros"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Solução 1",
+        "300 mL a 0,4 mol/L"
+       ],
+       [
+        "Solução 2",
+        "200 mL a 0,9 mol/L"
+       ],
+       [
+        "Evaporação",
+        "100 mL de água"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a concentração final, C.\nPor que mols, e não a média das concentrações? Cada solução tem um volume diferente, então pesa diferente. Os mols se somam; as concentrações, não.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "C = n ÷ V",
+      "leitura": "concentração = mols totais ÷ litros no fim",
+      "letras": [
+       {
+        "letra": "C",
+        "oque": "concentração final (o que a questão quer)"
+       },
+       {
+        "letra": "n",
+        "oque": "mols de sal no total"
+       },
+       {
+        "letra": "V",
+        "oque": "volume no fim, em litros"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando n: os mols de sal",
+     "texto": "0,4 × 0,3 = 0,12 mol e 0,9 × 0,2 = 0,18 mol.\nn = 0,12 + 0,18 = 0,30 mol"
+    },
+    {
+     "titulo": "Achando V: o seu jeito",
+     "texto": "Parece certo parar nos 0,5 L da mistura. Mas saíram 100 mL de água, e os mols de sal ficaram.\nV = 0,3 + 0,2 − 0,1 = 0,4 L"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "C = 0,30 ÷ 0,4 = 0,75 mol/L\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "n",
+        "0,30 mol"
+       ],
+       [
+        "V",
+        "0,4 L"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"mistura de soluções\" ou \"evapora água\" → ache os mols de cada copo (mol/L × litros), some, e só então divida pelo volume final.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "300 mL a 0,4; 200 mL a 0,9; evapora 100 mL"
+       ],
+       [
+        "2. Equação em letras",
+        "C = n ÷ V"
+       ],
+       [
+        "3. Achar cada letra",
+        "n = 0,30 mol; V = 0,4 L"
+       ],
+       [
+        "4. Substituir",
+        "0,30 ÷ 0,4 = 0,75"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Misturam-se 100 mL de NaCl 1 mol/L com 100 mL de NaCl 3 mol/L. Qual a concentração?",
+    "opcoes": [
+     "2 mol/L",
+     "4 mol/L",
+     "1,5 mol/L",
+     "200 mol/L"
+    ],
+    "certa": "2 mol/L",
+    "resposta": "0,1 + 0,3 = 0,4 mol em 0,2 L: 2 mol/L."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Questão de nível acima: duas soluções de sal se misturam, e depois some um pouco de água."
+       ],
+       [
+        4.0,
+        "O que muda a concentração?"
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 42,
+        "s": "A mistura e a evaporação",
+        "cor": "tinta",
+        "tam": 34,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 40,
+        "y": 110,
+        "w": 100,
+        "h": 90,
+        "cor": "azul",
+        "t": 0.8,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 90,
+        "y": 160,
+        "s": "300 mL",
+        "cor": "azul",
+        "tam": 26,
+        "t": 1.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 90,
+        "y": 224,
+        "s": "0,4 mol/L",
+        "cor": "azul",
+        "tam": 24,
+        "t": 2.0,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 260,
+        "y": 110,
+        "w": 100,
+        "h": 90,
+        "cor": "vermelho",
+        "t": 2.4,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 310,
+        "y": 160,
+        "s": "200 mL",
+        "cor": "vermelho",
+        "tam": 26,
+        "t": 3.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 310,
+        "y": 224,
+        "s": "0,9 mol/L",
+        "cor": "vermelho",
+        "tam": 24,
+        "t": 3.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 168,
+        "s": "+",
+        "cor": "tinta",
+        "tam": 40,
+        "t": 2.2,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "Mol é um número fixo de partículas, como dúzia é 12. \"mol/L\" lê-se \"mol por litro\": quantos mols de sal há em cada litro."
+       ],
+       [
+        4.6,
+        "Misturar soma os mols e soma os volumes. Evaporar só tira água: os mols ficam, e o volume diminui."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "Um técnico mistura 300 mL de uma solução de sal (NaCl) de 0,4 mol/L com 200 mL de outra solução de NaCl de 0,9 mol/L. Depois, deixa evaporar 100 mL de água dessa mistura (o sal não evapora). Qual é a concentração final, em mol/L?",
+      "alternativas": [
+       "0,60",
+       "0,65",
+       "0,75",
+       "1,3",
+       "3,0"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Tenho duas soluções de sal: 300 mL a 0,4 mol/L e 200 mL a 0,9 mol/L."
+       ],
+       [
+        4.4,
+        "Depois saem 100 mL de água. Quero a concentração final."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "o que a questão dá",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "300 mL a 0,4 mol/L",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 122,
+        "s": "200 mL a 0,9 mol/L",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 2.4,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 160,
+        "s": "evapora 100 mL de água",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 4.4,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 182,
+        "w": 330,
+        "h": 46,
+        "t": 5.6,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "quero: mol/L no fim",
+        "cor": "vermelho",
+        "tam": 28,
+        "t": 5.7,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Em cada copo, mols = concentração × volume em litros."
+       ],
+       [
+        3.6,
+        "1 L são 1000 mL, então 300 mL são 0,3 L: 0,4 × 0,3 = 0,12 mol. E 200 mL são 0,2 L: 0,9 × 0,2 = 0,18 mol."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "os mols de cada copo",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 86,
+        "s": "mols = mol/L × litros",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 132,
+        "s": "0,4 × 0,3 = 0,12 mol",
+        "cor": "azul",
+        "tam": 30,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 180,
+        "s": "0,9 × 0,2 = 0,18 mol",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 5.4,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Misturando, somo os mols: 0,12 + 0,18 = 0,30 mol. Somo os volumes: 0,3 + 0,2 = 0,5 L."
+       ],
+       [
+        5.0,
+        "A concentração da mistura é 0,30 ÷ 0,5 = 0,6 mol/L."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "a mistura",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "mols: 0,12 + 0,18 = 0,30",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 124,
+        "s": "litros: 0,3 + 0,2 = 0,5",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 168,
+        "s": "0,30 ÷ 0,5 = 0,6 mol/L",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 232,
+        "s": "ainda falta a evaporação",
+        "cor": "azul",
+        "tam": 26,
+        "t": 6.4,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Sai só água: os 0,30 mol continuam todos lá. O volume cai de 0,5 L para 0,5 − 0,1 = 0,4 L."
+       ],
+       [
+        5.4,
+        "0,30 ÷ 0,4 = 0,75 mol/L."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "a evaporação",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "mols: continuam 0,30",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 124,
+        "s": "litros: 0,5 − 0,1 = 0,4",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 150,
+        "w": 330,
+        "h": 56,
+        "t": 5.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 194,
+        "s": "0,30 ÷ 0,4 = 0,75 mol/L",
+        "cor": "verde",
+        "tam": 32,
+        "t": 5.5,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "A esquece a evaporação. B tira a média simples de 0,4 e 0,9. D soma as concentrações. E divide por 0,1 L."
+       ],
+       [
+        4.9,
+        "A certa é a C."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · 0,60: esqueceu a evaporação",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "B · 0,65: média simples (0,4 e 0,9)",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 2.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "D · 1,3: somou as concentrações",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 3,0: 0,30 ÷ 0,1 L (o que saiu)",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: C, 0,75 mol/L",
+        "cor": "verde",
+        "tam": 32,
+        "t": 6.5,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.30000000000000004,
+        "Trabalhar em mols, que se somam, e não em concentrações, que não se somam."
+       ],
+       [
+        4.1,
+        "O volume final é o que sobra."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. concentração × litros = mols",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "2. misturar soma mols e litros",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 172,
+        "w": 270,
+        "h": 6,
+        "t": 3.8,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "3. evaporar tira litros, não mols",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 5.0,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Misturam-se 100 mL de NaCl 1 mol/L com 100 mL de NaCl 3 mol/L. Qual a concentração?",
+      "opcoes": [
+       "2 mol/L",
+       "4 mol/L",
+       "1,5 mol/L",
+       "0,5 mol/L"
+      ],
+      "certa": 0,
+      "porque": [
+       "0,1 + 0,3 = 0,4 mol em 0,2 L: 0,4 ÷ 0,2 = 2 mol/L.",
+       "4 mol/L soma as concentrações, 1 + 3.",
+       "1,5 mol/L divide 0,3 por 0,2 e esquece os 0,1 mol da primeira.",
+       "0,5 mol/L usa só os 0,1 mol da primeira solução, 0,1 ÷ 0,2 L."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: dessa mistura (200 mL a 2 mol/L), evaporam-se 100 mL de água. Qual a concentração?",
+      "opcoes": [
+       "4 mol/L",
+       "2 mol/L",
+       "8 mol/L",
+       "1 mol/L"
+      ],
+      "certa": 0,
+      "porque": [
+       "Os 0,4 mol ficam e o volume vai a 0,1 L: 0,4 ÷ 0,1 = 4 mol/L.",
+       "2 mol/L é a de antes da evaporação.",
+       "8 mol/L divide 0,4 mol por 0,05 L, como se saíssem 150 mL.",
+       "1 mol/L divide 0,4 mol por 0,4 L, mas o volume final é 0,1 L."
+      ]
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "d2-escada-qui-ita-ele-01",
+  "materia": "Química",
+  "tema": "Eletroquímica",
+  "enunciado": "Uma corrente constante de 5 A passa por uma solução de sulfato de cobre, e o cobre se deposita no eletrodo: Cu2+ + 2 e− → Cu. Para depositar 6,35 g de cobre (Cu = 63,5 g/mol), a eletrólise precisa durar quanto tempo? Dado: 1 mol de elétrons carrega 96 500 C (coulombs), e carga = corrente × tempo.",
+  "A": "386 s",
+  "B": "1930 s",
+  "C": "3860 s",
+  "D": "7720 s",
+  "E": "19 300 s",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "n(Cu) = 6,35/63,5 = 0,1; n(e) = 0,2; Q = 0,2 × 96 500 = 19 300 C; t = 19 300/5 = 3860 s. C. A = 0,01 mol (uma casa): 386; B = 1 elétron por Cu: 1930; D = 4 elétrons: 7720; E = a carga, sem dividir por 5 A.",
+   "ideia": "Cadeia: 6,35 g são 0,1 mol de Cu; cada Cu usa 2 elétrons, então 0,2 mol de elétrons; a carga é 0,2 × 96 500 = 19 300 C; com 5 A, o tempo é 19 300 ÷ 5 = 3860 s.",
+   "pecas": [
+    {
+     "termo": "Coulomb (C)",
+     "significado": "Unidade de carga elétrica; corrente (A) é a carga que passa por segundo."
+    },
+    {
+     "termo": "Elétrons por Cu",
+     "significado": "Cu2+ + 2 e− → Cu: cada átomo de cobre recebe 2 elétrons."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Carga",
+        "formula": "Q = corrente × tempo"
+       },
+       {
+        "figura": "circuito",
+        "nome": "Carga de elétrons",
+        "formula": "Q = mols de e− × 96 500"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Corrente",
+        "5 A"
+       ],
+       [
+        "Cobre",
+        "6,35 g (63,5 g/mol)"
+       ],
+       [
+        "Equação",
+        "Cu2+ + 2 e− → Cu"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o tempo da eletrólise, t.\nPor que passar por mols? A equação diz quantos elétrons cada cobre usa. Contando mols de elétrons, chego à carga em coulombs, e a carga dividida pela corrente dá o tempo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "t = Q ÷ i",
+      "leitura": "tempo = carga ÷ corrente",
+      "letras": [
+       {
+        "letra": "t",
+        "oque": "tempo (o que a questão quer)"
+       },
+       {
+        "letra": "Q",
+        "oque": "carga total, em coulombs"
+       },
+       {
+        "letra": "i",
+        "oque": "corrente, 5 A"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando Q: a carga",
+     "texto": "6,35 ÷ 63,5 = 0,1 mol de Cu. Cada Cu usa 2 elétrons: 0,2 mol de e−.\nQ = 0,2 × 96 500 = 19 300 C"
+    },
+    {
+     "titulo": "Achando i: o seu jeito",
+     "texto": "Parece certo responder 19 300, porque é o número que saiu da conta. Mas 19 300 está em coulombs, e a questão quer segundos.\ni = 5 A, e o tempo vem de dividir a carga por ele"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "t = 19 300 ÷ 5 = 3860 s\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Q",
+        "19 300 C"
+       ],
+       [
+        "i",
+        "5 A"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"corrente por tempo depositando massa\" → massa vira mols, mols viram mols de elétrons, × 96 500 dá a carga, e carga ÷ corrente dá o tempo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "5 A, 6,35 g de Cu, 2 e− por Cu"
+       ],
+       [
+        "2. Equação em letras",
+        "t = Q ÷ i"
+       ],
+       [
+        "3. Achar cada letra",
+        "Q = 19 300 C; i = 5 A"
+       ],
+       [
+        "4. Substituir",
+        "19 300 ÷ 5 = 3860"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma corrente de 10 A deposita 0,1 mol de prata (Ag+ + 1 e− → Ag; 96 500 C por mol de e−). Quanto tempo?",
+    "opcoes": [
+     "965 s",
+     "9650 s",
+     "1930 s",
+     "96,5 s"
+    ],
+    "certa": "965 s",
+    "resposta": "0,1 mol de e− são 9650 C, e 9650 ÷ 10 = 965 s."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Questão de nível acima: uma corrente elétrica deposita cobre numa placa (o eletrodo)."
+       ],
+       [
+        3.6,
+        "Quanto tempo leva para depositar 6,35 g?"
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 42,
+        "s": "A corrente e o cobre",
+        "cor": "tinta",
+        "tam": 36,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 60,
+        "y": 110,
+        "w": 280,
+        "h": 80,
+        "cor": "azul",
+        "t": 0.8,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 160,
+        "s": "solução com Cu2+",
+        "cor": "azul",
+        "tam": 28,
+        "t": 1.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 60,
+        "y": 236,
+        "s": "5 A",
+        "cor": "cinza",
+        "tam": 30,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 340,
+        "y": 236,
+        "s": "6,35 g de Cu",
+        "cor": "cinza",
+        "tam": 28,
+        "t": 3.6,
+        "ancora": "end"
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "Elétron é a partícula que leva a carga elétrica; a carga se mede em coulombs (C). Corrente em ampères (A): 5 A são 5 C por segundo."
+       ],
+       [
+        5.2,
+        "Em 3 s passam 15 C: carga = corrente × tempo. Cu2+ é cobre com 2 cargas positivas: pega 2 elétrons e vira Cu."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "Uma corrente constante de 5 A passa por uma solução de sulfato de cobre, e o cobre se deposita no eletrodo: Cu2+ + 2 e− → Cu. Para depositar 6,35 g de cobre (Cu = 63,5 g/mol), a eletrólise precisa durar quanto tempo? Dado: 1 mol de elétrons carrega 96 500 C (coulombs), e carga = corrente × tempo.",
+      "alternativas": [
+       "386 s",
+       "1930 s",
+       "3860 s",
+       "7720 s",
+       "19 300 s"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Corrente de 5 A, depositando 6,35 g de cobre (63,5 g/mol)."
+       ],
+       [
+        4.4,
+        "Cada cobre pede 2 elétrons. Quero o tempo."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "o que a questão dá",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "5 A (carga = 5 × tempo)",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 122,
+        "s": "6,35 g de Cu (63,5 g/mol)",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 2.4,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 160,
+        "s": "Cu2+ + 2 e− → Cu",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 4.4,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 182,
+        "w": 330,
+        "h": 46,
+        "t": 5.6,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "quero: o tempo",
+        "cor": "vermelho",
+        "tam": 28,
+        "t": 5.7,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Primeiro, quantos mols de cobre: massa ÷ massa molar."
+       ],
+       [
+        3.6,
+        "6,35 ÷ 63,5 = 0,1 mol de Cu."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "os mols de cobre",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 90,
+        "s": "mols = massa ÷ massa molar",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 140,
+        "s": "6,35 ÷ 63,5",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 166,
+        "w": 330,
+        "h": 56,
+        "t": 4.6,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 208,
+        "s": "= 0,1 mol de Cu",
+        "cor": "verde",
+        "tam": 38,
+        "t": 4.7,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Cada cobre usa 2 elétrons. Então 0,1 mol de Cu pede 0,1 × 2 = 0,2 mol de elétrons."
+       ],
+       [
+        4.6,
+        "Carga: 0,2 × 96 500 = 19 300 coulombs."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "a carga que precisa passar",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 86,
+        "s": "elétrons: 0,1 × 2 = 0,2 mol",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 130,
+        "s": "carga: 0,2 × 96 500",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 4.6,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 156,
+        "w": 330,
+        "h": 56,
+        "t": 6.0,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 198,
+        "s": "= 19 300 C",
+        "cor": "verde",
+        "tam": 40,
+        "t": 6.1,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Carga = corrente × tempo, então tempo = carga ÷ corrente."
+       ],
+       [
+        4.0,
+        "19 300 ÷ 5 = 3860 segundos. Resposta: letra C."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "o tempo",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 88,
+        "s": "tempo = carga ÷ corrente",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 132,
+        "s": "19 300 ÷ 5",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 4.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 158,
+        "w": 330,
+        "h": 56,
+        "t": 5.0,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 200,
+        "s": "= 3860 s",
+        "cor": "verde",
+        "tam": 40,
+        "t": 5.1,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "A erra uma casa nos mols. B esquece os 2 elétrons. D conta 4 elétrons. E responde a carga, sem dividir por 5 A."
+       ],
+       [
+        5.1,
+        "A certa é a C."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · 386 s: 0,01 mol de Cu (uma casa)",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "B · 1930 s: 1 elétron por cobre",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 2.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "D · 7720 s: 4 elétrons por cobre",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 19 300 s: carga, sem ÷ 5 A",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: C, 3860 s",
+        "cor": "verde",
+        "tam": 32,
+        "t": 6.5,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.30000000000000004,
+        "Seguir a cadeia: massa, mols de cobre, mols de elétrons, carga, tempo."
+       ],
+       [
+        4.1,
+        "Cada seta é uma conta curta."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. massa ÷ molar = mols de Cu",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "2. mols de Cu × 2 = mols de e−",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 172,
+        "w": 270,
+        "h": 6,
+        "t": 3.8,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "3. × 96 500 ÷ corrente = tempo",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 5.0,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Uma corrente de 10 A deposita 0,1 mol de prata (Ag+ + 1 e− → Ag; 96 500 C por mol de e−). Quanto tempo?",
+      "opcoes": [
+       "965 s",
+       "9650 s",
+       "1930 s",
+       "96,5 s"
+      ],
+      "certa": 0,
+      "porque": [
+       "0,1 mol de Ag pede 0,1 mol de e−: 9650 C. E 9650 ÷ 10 = 965 s.",
+       "9650 s é a carga, sem dividir pela corrente.",
+       "1930 s conta 2 elétrons por prata, e a equação mostra 1.",
+       "96,5 s erra uma casa na carga."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: 5 A deposita 0,05 mol de alumínio (Al3+ + 3 e− → Al). Quanto tempo?",
+      "opcoes": [
+       "2895 s",
+       "965 s",
+       "8685 s",
+       "1930 s"
+      ],
+      "certa": 0,
+      "porque": [
+       "0,05 × 3 = 0,15 mol de e−. A carga é 0,15 × 96 500 = 14 475 C, e 14 475 ÷ 5 = 2895 s.",
+       "965 s usa 1 elétron por alumínio, e são 3.",
+       "8685 s usa 0,15 mol de Al, em vez de 0,05.",
+       "1930 s conta 2 elétrons por alumínio, e são 3."
+      ]
+     }
+    ]
+   }
+  }
+ }
+]
