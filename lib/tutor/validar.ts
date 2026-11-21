@@ -2,6 +2,8 @@
 // aqui: campo faltando vira ausência, visual quebrado é descartado.
 
 import { validarVisual, type Visual } from '@/lib/visual/especificacao';
+import type { AulaLousa } from '@/lib/aula-lousa/tipos';
+import { validarLousa } from '@/lib/aula-lousa/validar';
 
 export interface PassoExplicacao { titulo: string; texto: string; visual: Visual | null }
 
@@ -12,6 +14,8 @@ export interface Explicacao {
   seuErro: string | null;
   /* "Sua vez": com opções, o aluno toca na resposta (Pablo, 22/10/2026). */
   checagem: { pergunta: string; resposta: string; opcoes?: string[]; certa?: string } | null;
+  /* Aula de lousa escrita à mão (Pablo, 21/11/2026); a IA nunca gera, só passa o que veio gravado. */
+  lousa?: AulaLousa | null;
 }
 
 export interface RespostaTutor { resposta: string; visual: Visual | null }
@@ -210,6 +214,7 @@ export function validarExplicacao(bruto: unknown, materia?: string): Explicacao 
     passos: comAlgumDesenho(passos, pecas),
     seuErro: erroConfiavel(texto(e.seuErro, 700)),
     checagem: pergunta && resposta ? { pergunta, resposta, ...comOpcoes } : null,
+    lousa: validarLousa(e.lousa),
   };
 }
 

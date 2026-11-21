@@ -113,6 +113,20 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   `docs/descobrir/amostra-velocidade-media.html` (aprovado). Não usar o jeito da Trilha de Cálculo
   ("não gosto muito da explicação dela"). Lembrete de leitura não aparece na aula (cobria o Próximo).
 
+- **Aula de lousa na questão (Pablo, 20 e 21/11/2026: "amei" a lousa que se desenha + professor de pixel):**
+  a questão nova de nível acima abre o "Não sei isso: ver a aula" numa lousa (`components/aula-lousa/`),
+  não nas telas de passos. Ordem: capa → a QUESTÃO em papel → o que pede → cada ferramenta só quando a
+  questão pede, com o motivo antes → conferindo → "por que as outras letras erram" → o que ficou →
+  2 "Prove você" (o 2º mais difícil). É DADO, não HTML: `explicacao.lousa` dentro de
+  `ExplicacaoPronta.conteudo` (sem coluna nova), passa por `lib/aula-lousa/validar.ts`; escrita com
+  `scripts/banco-enem/lousa.py` (trava texto largo demais) e `lousas_matematica.py`. O traço **continua
+  se desenhando com "reduzir movimento"** (o Chrome dele reporta reduce; é o conteúdo da aula); só saem
+  deslizar, zoom e boca. Testado em 1366×768, 390×844, 360×640 e 844×390: o diálogo nunca rola.
+  Nível acima = **mais raciocínio** (escolha dele): 2 ou 3 conteúdos juntos, dado escondido, pegadinha
+  nas letras, conta curta. Antes de escrever, **procurar no banco se a ideia já existe** (minha
+  1ª questão de Estatística repetia a `d2-acima-mat-05`). Ids `d2-escada-xxx-ita-` entram no degrau ITA
+  antes das antigas (`lib/prova-da-escada.ts`).
+
 ## Conteúdo gerado por IA
 - **Explicação = o artefato dos peixes (Pablo, 22/10/2026: "perfeito, fala
   para a IA fazer exatamente assim"):** uma tela por passo, nada rola (o desenho

@@ -163,6 +163,8 @@ def montar(f):
             'pecas': [{'termo': t, 'significado': s} for t, s in f.get('pecas', [])],
             'passos': passos, 'seuErro': None,
             'checagem': {'pergunta': pergunta, 'opcoes': opcoes, 'certa': certa_sv, 'resposta': porque},
+            # Aula de lousa (21/11/2026, lib/aula-lousa): escrita com scripts/banco-enem/lousa.py.
+            **({'lousa': f['lousa']} if 'lousa' in f else {}),
         },
     }
 
