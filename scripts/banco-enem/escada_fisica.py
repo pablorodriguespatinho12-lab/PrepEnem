@@ -6,6 +6,10 @@ scripts/contar-escada.ts. Gravar: scripts/criar-questoes-escada.ts."""
 
 ARQUIVO = '../escada/fisica'
 
+from lousas_fisica import (ALTS_AQUEC, ALTS_ESPELHO, ALTS_FIO, ALTS_ONDA, ALTS_POLIA, ALTS_TREM_PONTE,
+                           ENUN_AQUEC, ENUN_ESPELHO, ENUN_FIO, ENUN_ONDA, ENUN_POLIA, ENUN_TREM_PONTE,
+                           LOUSA_AQUEC, LOUSA_ESPELHO, LOUSA_FIO, LOUSA_ONDA, LOUSA_POLIA, LOUSA_TREM_PONTE)
+
 
 def F(tema, nivel):
   return {'materia': 'Física', 'tema': tema, 'nivel': nivel}
@@ -487,4 +491,131 @@ J('Eletricidade e Circuitos', 'd2-escada-fis-jun-ele-02', 'E',
   'i = 10 000 ÷ 220 ≈ 45 A\nLetra E.', [('E', '100 000 J'), ('P', '10 000 W')],
   'motor que levanta peso → energia de altura (Dinâmica), potência = energia ÷ tempo, corrente = potência ÷ tensão.',
   ('500 kg, 20 m, 10 s, 220 V', 'i = P ÷ 220', 'E = 100 000; P = 10 000', '≈ 45 A'), confere=45),  # 10 000 ÷ 220 = 45,5, aproximado
+]
+
+
+# ---------------- Nível acima por raciocínio (21/11/2026): 1 por prova, com aula de lousa ----------------
+# Mesma receita da Matemática: ideia procurada no banco antes, 2 ou 3 conteúdos juntos, dado escondido,
+# pegadinha nas letras, conta curta. A lousa fica em lousas_fisica.py.
+FICHAS += [
+dict(**F('Cinemática', 'acima'), id='d2-escada-fis-ita-cin-01', resp='D', objeto='trem e ponte', cobra='comprimento do trem e km/h para m/s', confere=30,
+  enun=ENUN_TREM_PONTE, alts=ALTS_TREM_PONTE, lousa=LOUSA_TREM_PONTE,
+  ideia='A frente do trem anda a ponte inteira mais o comprimento do trem: 400 + 200 = 600 m, a 72 km/h, que são 20 m/s. Então o tempo é 600 ÷ 20 = 30 s.',
+  pecas=[('Travessia', 'Da frente do trem entrando na ponte até a traseira saindo: a frente anda a ponte mais o trem.')],
+  conferencia='72 ÷ 3,6 = 20 m/s; d = 400 + 200 = 600 m; t = 600 ÷ 20 = 30 s. D. A = 600 ÷ 72 (sem converter); B = só o trem (200 ÷ 20); C = só a ponte (400 ÷ 20); E = 800 ÷ 20 (trem contado 2 vezes).',
+  sua_vez=('Um trem de 100 m passa por um poste a 36 km/h. Quanto tempo leva para passar por inteiro?', ['10 s', '2,8 s', '20 s', '100 s'], '10 s', '36 km/h são 10 m/s e a frente só anda o comprimento do trem: 100 ÷ 10 = 10 s.'),
+  aula=dict(
+    formulas=[('carro', 'Tempo', 'tempo = distância ÷ velocidade'), ('carro', 'km/h para m/s', 'm/s = km/h ÷ 3,6')],
+    tenho=[('Trem', '200 m de comprimento'), ('Ponte', '400 m'), ('Velocidade', '72 km/h')],
+    quer='A questão quer o tempo da travessia, t.',
+    equacao='t = d ÷ v (tempo = distância que a frente anda ÷ velocidade)',
+    porque='Por que a distância é 600? Quando a traseira sai, a frente já passou a ponte inteira e mais um comprimento de trem. O trem não é um ponto.',
+    letras=[('t', 'tempo da travessia (o que a questão quer)'), ('d', 'distância que a frente anda, em m'), ('v', 'velocidade, em m/s')],
+    telas=[dict(titulo='Achando d: a distância', texto='A frente anda a ponte mais o trem.\nd = 400 + 200 = 600 m'),
+           dict(titulo='Achando v: o seu jeito', texto='Parece certo dividir por 72, porque a velocidade vem em km/h. Mas a distância está em metros, e a velocidade tem que ficar em m/s.\nv = 72 ÷ 3,6 = 20 m/s')],
+    volta='t = 600 ÷ 20 = 30 s\nLetra D.',
+    valores=[('d', '600 m'), ('v', '20 m/s')],
+    pista='"trem atravessa ponte ou túnel" → a frente anda o comprimento da ponte mais o do trem; converta km/h para m/s antes de dividir.',
+    receita=receita('trem 200 m, ponte 400 m, 72 km/h', 't = d ÷ v', 'd = 600 m; v = 20 m/s', '600 ÷ 20 = 30'))),
+
+dict(**F('Dinâmica e Leis de Newton', 'acima'), id='d2-escada-fis-ita-din-01', resp='B', objeto='dois blocos e polia', cobra='máquina de Atwood: diferença dos pesos ÷ massa total', confere=5,
+  enun=ENUN_POLIA, alts=ALTS_POLIA, lousa=LOUSA_POLIA,
+  ideia='Os dois blocos andam juntos, como um só de 3 + 1 = 4 kg. A força que sobra é a diferença dos pesos, 30 − 10 = 20 N, então a = 20 ÷ 4 = 5 m/s².',
+  pecas=[('Polia sem atrito', 'Roda por onde passa o fio; ela só muda a direção da força.'), ('Fio leve', 'Fio sem massa: a força dele é a mesma dos dois lados.')],
+  conferencia='Pesos 30 N e 10 N; sobram 20 N para 4 kg: a = 5 m/s². Confere: T − 10 = 1 × 5 e 30 − T = 3 × 5 dão T = 15 N nos dois. B. A = 10 ÷ 4; C = 30 ÷ 4; D = g; E = 20 (a força).',
+  sua_vez=('Blocos de 6 kg e de 4 kg ligados por fio numa polia (g = 10). Qual a aceleração?', ['2 m/s²', '4 m/s²', '10 m/s²', '1 m/s²'], '2 m/s²', 'Pesos 60 e 40: sobram 20 N para 10 kg: 20 ÷ 10 = 2.'),
+  aula=dict(
+    formulas=[('carro', 'Peso', 'peso = massa × g'), ('carro', 'Segunda lei', 'força que sobra = massa × aceleração')],
+    tenho=[('Bloco A', '3 kg'), ('Bloco B', '1 kg'), ('g', '10 m/s²')],
+    quer='A questão quer a aceleração dos blocos, a.',
+    equacao='a = F ÷ m (aceleração = força que sobra ÷ massa total)',
+    porque='Por que juntar os dois blocos? O fio não estica, então os dois têm a mesma aceleração. A força do fio é interna e se anula; sobra a diferença dos pesos.',
+    letras=[('a', 'aceleração (o que a questão quer)'), ('F', 'força que sobra, em N'), ('m', 'massa total, em kg')],
+    telas=[dict(titulo='Achando F: a força que sobra', texto='Pesos: 3 × 10 = 30 N e 1 × 10 = 10 N.\nF = 30 − 10 = 20 N'),
+           dict(titulo='Achando m: o seu jeito', texto='Parece certo usar só a massa do bloco que desce, 3 kg. Mas o bloco de 1 kg também tem que ser acelerado.\nm = 3 + 1 = 4 kg')],
+    volta='a = 20 ÷ 4 = 5 m/s²\nLetra B.',
+    valores=[('F', '20 N'), ('m', '4 kg')],
+    pista='"dois blocos presos por fio numa polia" → diferença dos pesos dividida pela soma das massas.',
+    receita=receita('3 kg e 1 kg, g = 10', 'a = F ÷ m', 'F = 20 N; m = 4 kg', '20 ÷ 4 = 5'))),
+
+dict(**F('Termodinâmica e Calor', 'acima'), id='d2-escada-fis-ita-ter-01', resp='D', objeto='aquecedor elétrico', cobra='energia, potência útil e rendimento', confere=8.75,
+  enun=ENUN_AQUEC, alts=ALTS_AQUEC, lousa=LOUSA_AQUEC,
+  ideia='A água precisa de 2 × 4200 × 50 = 420 000 J, e o aquecedor entrega 80% de 1000 W, ou seja, 800 J por segundo. O tempo é 420 000 ÷ 800 = 525 s, que são 8,75 min.',
+  pecas=[('Potência útil', 'A parte da potência que chega à água: aqui, 80% de 1000 W = 800 W.')],
+  conferencia='Q = 2 × 4200 × 50 = 420 000 J; P útil = 800 W; t = 525 s = 8,75 min. D. A = usou 1 kg (4,4 min); B = × 0,8 (5,6 min); C = sem os 80% (7 min); E = usou 70 °C (12,25 min).',
+  sua_vez=('Um aquecedor de 500 W, sem perdas, esquenta 1 kg de água de 20 °C a 30 °C (c = 4200). Quanto tempo?', ['84 s', '840 s', '42 s', '8,4 s'], '84 s', '4200 × 10 = 42 000 J e 42 000 ÷ 500 = 84 s.'),
+  aula=dict(
+    formulas=[('termometro', 'Energia para esquentar', 'Q = massa × calor específico × subida'), ('termometro', 'Tempo', 'tempo = energia ÷ potência útil')],
+    tenho=[('Água', '2 kg, de 20 °C a 70 °C'), ('Aquecedor', '1000 W, 80% aproveitado'), ('Calor específico', '4200 J/(kg·°C)')],
+    quer='A questão quer o tempo do aquecimento, t.',
+    equacao='t = Q ÷ P (tempo = energia que a água precisa ÷ potência útil)',
+    porque='Por que dividir? Potência é energia por segundo. Se a água precisa de 420 000 J e recebe 800 J a cada segundo, é só ver quantos segundos cabem.',
+    letras=[('t', 'tempo (o que a questão quer)'), ('Q', 'energia que a água precisa, em J'), ('P', 'potência útil, em W')],
+    telas=[dict(titulo='Achando Q: a energia', texto='A temperatura sobe 70 − 20 = 50 °C.\nQ = 2 × 4200 × 50 = 420 000 J'),
+           dict(titulo='Achando P: o seu jeito', texto='Parece certo usar os 1000 W do aquecedor. Mas só 80% chega à água.\nP = 0,8 × 1000 = 800 W')],
+    volta='t = 420 000 ÷ 800 = 525 s\n525 ÷ 60 = 8,75 min\nLetra D.',
+    valores=[('Q', '420 000 J'), ('P', '800 W')],
+    pista='"aquecedor com perda" → energia que a água precisa ÷ potência que realmente chega a ela.',
+    receita=receita('2 kg, 50 °C, 1000 W, 80%', 't = Q ÷ P', 'Q = 420 000 J; P = 800 W', '420 000 ÷ 800 = 525 s'))),
+
+dict(**F('Ondas e Acústica', 'acima'), id='d2-escada-fis-ita-ond-01', resp='B', objeto='dois alto-falantes', cobra='interferência destrutiva: diferença de percurso = meio comprimento de onda', confere=0.5,
+  enun=ENUN_ONDA, alts=ALTS_ONDA, lousa=LOUSA_ONDA,
+  ideia='A nota tem λ = 340 ÷ 340 = 1 m. Silêncio acontece quando um pico encontra um vale, e isso exige uma diferença de distância de meio comprimento de onda: 1 ÷ 2 = 0,5 m.',
+  pecas=[('Em fase', 'Os dois alto-falantes mandam o pico da onda no mesmo instante.'), ('Comprimento de onda', 'Distância entre dois picos seguidos da onda, escrita λ.')],
+  conferencia='λ = v ÷ f = 340 ÷ 340 = 1 m; silêncio em λ ÷ 2 = 0,5 m. B. A = λ ÷ 4; C = λ e D = 2λ (som forte); E = a velocidade.',
+  sua_vez=('Dois alto-falantes em fase emitem 170 Hz (v = 340 m/s). Qual a menor diferença de distância para silêncio?', ['1 m', '2 m', '0,5 m', '4 m'], '1 m', 'λ = 340 ÷ 170 = 2 m, e silêncio é meio λ: 1 m.'),
+  aula=dict(
+    formulas=[('onda', 'Comprimento de onda', 'λ = velocidade ÷ frequência'), ('onda', 'Silêncio', 'pico com vale: diferença de meio λ')],
+    tenho=[('Frequência', '340 Hz'), ('Velocidade', '340 m/s'), ('Fontes', 'duas, em fase')],
+    quer='A questão quer a menor diferença de distância que dá silêncio, d.',
+    equacao='d = λ ÷ 2 (diferença = meio comprimento de onda)',
+    porque='Por que meio λ? Se um caminho é meio λ mais longo, o pico de uma onda chega junto com o vale da outra, e uma cancela a outra.',
+    letras=[('d', 'diferença de distância (o que a questão quer)'), ('λ', 'comprimento de onda, em m')],
+    telas=[dict(titulo='Achando λ: o comprimento de onda', texto='λ = velocidade ÷ frequência.\nλ = 340 ÷ 340 = 1 m'),
+           dict(titulo='Achando d: o seu jeito', texto='Parece certo usar 1 m, uma onda inteira. Mas com um λ inteiro o pico chega junto com o pico, e o som fica mais forte.\nd = 1 ÷ 2 = 0,5 m')],
+    volta='d = 1 ÷ 2 = 0,5 m\nLetra B.',
+    valores=[('λ', '1 m')],
+    pista='"duas fontes em fase, silêncio" → ache λ (v ÷ f); a menor diferença de distância é λ ÷ 2.',
+    receita=receita('340 Hz, 340 m/s', 'd = λ ÷ 2', 'λ = 1 m', '1 ÷ 2 = 0,5'))),
+
+dict(**F('Óptica', 'acima'), id='d2-escada-fis-ita-opt-01', resp='C', objeto='espelho plano que gira', cobra='o refletido gira o dobro do espelho', confere=40,
+  enun=ENUN_ESPELHO, alts=ALTS_ESPELHO, lousa=LOUSA_ESPELHO,
+  ideia='O ângulo entre o raio que chega e o que sai é o dobro do ângulo com a normal. Quando o espelho gira 20°, esse ângulo muda 2 × 20°, então o raio refletido gira 40°.',
+  pecas=[('Normal', 'Linha perpendicular ao espelho, no ponto onde o raio bate.')],
+  conferencia='Exemplo: 30° dá 60° entre os raios; o espelho gira 20°: 50° dá 100°; o refletido girou 100 − 60 = 40°. C. A = metade (10°); B = igual (20°); D = triplo (60°); E = quádruplo (80°).',
+  sua_vez=('O espelho gira 15° com o raio incidente parado. Quantos graus gira o raio refletido?', ['30°', '15°', '7,5°', '60°'], '30°', 'O refletido gira o dobro do espelho: 2 × 15° = 30°.'),
+  aula=dict(
+    formulas=[('lente', 'Lei da reflexão', 'ângulo de chegada = ângulo de saída, a partir da normal'), ('lente', 'Entre os raios', 'ângulo entre os raios = 2 × ângulo com a normal')],
+    tenho=[('Espelho', 'plano, gira 20°'), ('Raio que chega', 'parado'), ('Quero', 'giro do refletido')],
+    quer='A questão quer quantos graus gira o raio refletido, G.',
+    equacao='G = 2 × g (giro do refletido = o dobro do giro do espelho)',
+    porque='Por que o dobro? O ângulo entre os raios é 2 vezes o ângulo com a normal; se o espelho gira g, a normal gira g e esse ângulo muda 2 × g.',
+    letras=[('G', 'giro do refletido (o que a questão quer)'), ('g', 'giro do espelho, 20°')],
+    telas=[dict(titulo='Achando g: o giro do espelho', texto='Vem do enunciado, e a normal gira junto com o espelho.\ng = 20°'),
+           dict(titulo='Um exemplo com números', texto='Chega a 30° da normal: entre os raios há 2 × 30 = 60°. O espelho gira 20°: passa a 50°, e 2 × 50 = 100°.\nMudou 100 − 60 = 40°'),
+           dict(titulo='Achando G: o seu jeito', texto='Parece certo responder 20°, o mesmo giro do espelho. Mas o raio refletido muda o dobro.\nG = 2 × 20 = 40°')],
+    volta='G = 2 × 20 = 40°\nLetra C.',
+    valores=[('g', '20°')],
+    pista='"o espelho gira e o raio incidente fica parado" → o raio refletido gira o dobro do espelho.',
+    receita=receita('espelho gira 20°', 'G = 2 × g', 'g = 20°', '2 × 20 = 40'))),
+
+dict(**F('Eletricidade e Circuitos', 'acima'), id='d2-escada-fis-ita-ele-01', resp='D', objeto='fio de cobre esticado', cobra='resistência com comprimento e grossura', confere=4,
+  enun=ENUN_FIO, alts=ALTS_FIO, lousa=LOUSA_FIO,
+  ideia='A resistência é o comprimento dividido pela grossura. Esticando para o dobro, o comprimento vai de 1 para 2 e a grossura cai para 1/2, então R2 = 2 ÷ 1/2 = 4: a resistência fica 4R.',
+  pecas=[('Resistência', 'Dificuldade que o fio faz para a corrente passar; cresce com o comprimento e diminui com a grossura.')],
+  conferencia='R = comprimento ÷ grossura; esticar 2 vezes: comprimento 2 e grossura 1/2; 2 ÷ 1/2 = 4. D. A = 1 ÷ 2 em vez de 2 ÷ 1/2; B = ignorou a mudança; C = só o comprimento (2R); E = dobrou 3 vezes (8R).',
+  sua_vez=('Um fio de resistência R é esticado até ter o triplo do comprimento, sem perder material. Nova resistência?', ['3R', '6R', '9R', '27R'], '9R', 'Comprimento 3 e grossura 1/3: 3 ÷ 1/3 = 9.'),
+  aula=dict(
+    formulas=[('circuito', 'Resistência do fio', 'R = comprimento ÷ grossura'), ('circuito', 'Material igual', 'comprimento × grossura não muda')],
+    tenho=[('Comprimento', '1, depois 2'), ('Grossura', '1, depois ?'), ('Resistência', 'R, depois ?')],
+    quer='A questão quer a nova resistência, R2.',
+    equacao='R2 = 2 ÷ G (comprimento novo ÷ grossura nova)',
+    porque='Por que a grossura cai? O cobre é o mesmo, então comprimento × grossura fica igual a 1. Com comprimento 2, a grossura só pode ser 1/2.',
+    letras=[('R2', 'resistência nova (o que a questão quer)'), ('G', 'grossura nova')],
+    telas=[dict(titulo='Achando G: a grossura nova', texto='Cobre igual: comprimento × grossura = 1. Com comprimento 2:\nG = 1/2 (metade da grossura)'),
+           dict(titulo='Achando R2: o seu jeito', texto='Parece certo dobrar a resistência, porque o fio dobrou. Mas ele também ficou mais fino.\nR2 = 2 ÷ 1/2 = 4 (em 2 cabem 4 metades)')],
+    volta='R2 = 2 ÷ 1/2 = 4 vezes R\nLetra D.',
+    valores=[('G', '1/2')],
+    pista='"fio esticado sem perder material" → o comprimento sobe e a grossura cai na mesma proporção: esticar 2 vezes deixa R 4 vezes maior.',
+    receita=receita('comprimento 1 → 2', 'R2 = 2 ÷ G', 'G = 1/2', '2 ÷ 1/2 = 4'))),
 ]

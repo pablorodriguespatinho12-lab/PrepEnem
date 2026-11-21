@@ -3851,7 +3851,7 @@
       "fala": [
        [
         0.3,
-        "Quantas dessas 6 ordens são crescentes? Pelos mesmos lugares, sem listar."
+        "Quantas das 6 ordens são crescentes? Pelos mesmos lugares, sem listar."
        ],
        [
         4.0,
@@ -3859,7 +3859,7 @@
        ],
        [
         9.0,
-        "2º: o menor que sobrou, o 5. 3º: o que sobrou, o 8. Cada lugar tem 1 jeito: 1 × 1 × 1 = 1 crescente."
+        "2º: o menor que sobrou, o 5. 3º: o que sobrou, o 8. Cada lugar tem 1 jeito: 1 × 1 × 1 = 1."
        ]
       ],
       "desenho": [
@@ -4410,7 +4410,7 @@
       "fala": [
        [
         0.3,
-        "Dá para conferir contando tudo. 1º lugar: 9 cartões, 2º: 8, 3º: 7. São 9 × 8 × 7 = 504 filas; aqui o 9 entra, para contar todas."
+        "Contando tudo: 1º lugar 9 cartões, 2º: 8, 3º: 7. São 9 × 8 × 7 = 504 filas; aqui o 9 entra."
        ],
        [
         6.8,
@@ -4498,14 +4498,10 @@
       "fala": [
        [
         0.3,
-        "Cada letra errada vem de um erro de raciocínio."
-       ],
-       [
-        2.8,
         "A só olha uma fila. B e C pegam um pedaço da pergunta. E conta como se devolvesse: 9 × 9 × 9 = 729 filas e 84 ÷ 729 = 28/243."
        ],
        [
-        6.6,
+        4.1,
         "A certa é a D."
        ]
       ],
@@ -4585,15 +4581,11 @@
       "tipo": "lousa",
       "fala": [
        [
-        0.3,
-        "O que a questão cobrou:"
-       ],
-       [
-        2.2,
+        0.30000000000000004,
         "Ordens: um número por lugar, multiplicados. Crescente: um jeito só por lugar."
        ],
        [
-        6.0,
+        4.1,
         "Por isso a chance é 1 dividido por k fatorial."
        ]
       ],
@@ -5568,14 +5560,10 @@
       "fala": [
        [
         0.3,
-        "Cada letra errada é um jeito de calcular a área."
-       ],
-       [
-        3.0,
         "A e B pegam só um pedaço. D e E erram a conta do trapézio."
        ],
        [
-        6.4,
+        3.7,
         "A certa é a C."
        ]
       ],
@@ -6796,14 +6784,10 @@
       "fala": [
        [
         0.3,
-        "Cada letra errada pulou uma etapa."
-       ],
-       [
-        2.6,
         "A copia o aumento da média. C e D usam o número errado de alunos."
        ],
        [
-        6.4,
+        4.1,
         "E confunde com a média dos meninos."
        ]
       ],
@@ -6883,15 +6867,11 @@
       "tipo": "lousa",
       "fala": [
        [
-        0.3,
-        "O que a questão cobrou:"
-       ],
-       [
-        2.2,
+        0.30000000000000004,
         "A média fica perto de quem tem mais gente."
        ],
        [
-        5.2,
+        3.3,
         "E se só um grupo muda, a conta é só com ele."
        ]
       ],
@@ -7645,14 +7625,10 @@
       "fala": [
        [
         0.3,
-        "Cada letra errada vem de uma conta tentadora."
-       ],
-       [
-        2.8,
         "A é o peso da A. B e D vêm de dividir somas ao meio. E é o peso das três juntas."
        ],
        [
-        6.4,
+        3.9000000000000004,
         "A certa é a C."
        ]
       ],
@@ -7732,15 +7708,11 @@
       "tipo": "lousa",
       "fala": [
        [
-        0.3,
-        "O que a questão cobrou:"
-       ],
-       [
-        2.2,
+        0.30000000000000004,
         "Soma de duas em duas: cada caixa entra 2 vezes."
        ],
        [
-        5.4,
+        3.5,
         "Depois tira a pesagem que não tem a caixa."
        ]
       ],
@@ -8365,14 +8337,10 @@
       "fala": [
        [
         0.3,
-        "Cada letra errada para em outro quadrado, ou erra o passo."
-       ],
-       [
-        3.0,
         "A contou 4 metades, uma por quadrado. Mas do 1º ao 4º são só 3 passos."
        ],
        [
-        7.2,
+        4.5,
         "A certa é a B."
        ]
       ],
@@ -8452,15 +8420,11 @@
       "tipo": "lousa",
       "fala": [
        [
-        0.3,
-        "O que a questão cobrou:"
-       ],
-       [
-        2.2,
+        0.30000000000000004,
         "Unir os pontos do meio faz a área cair pela metade."
        ],
        [
-        5.4,
+        3.5,
         "E cada passo repete: mais uma metade."
        ]
       ],
@@ -9064,14 +9028,10 @@
       "fala": [
        [
         0.3,
-        "Cada letra errada é um número que existe no problema."
-       ],
-       [
-        2.8,
         "B é a área da face, não o volume. E é o volume final, não o aumento."
        ],
        [
-        6.4,
+        3.9000000000000004,
         "A certa é a D."
        ]
       ],
@@ -9151,15 +9111,11 @@
       "tipo": "lousa",
       "fala": [
        [
-        0.3,
-        "O que a questão cobrou:"
-       ],
-       [
-        2.2,
+        0.30000000000000004,
         "Volume é aresta × aresta × aresta, e cada uma cresceu: por isso o aumento se multiplica, não se soma."
        ],
        [
-        5.4,
+        3.5,
         "Use um número fácil e compare antes e depois."
        ]
       ],
@@ -9740,14 +9696,10 @@
       "fala": [
        [
         0.3,
-        "Cada letra errada é uma conta que existe, mas para no meio."
-       ],
-       [
-        2.8,
         "A é só o que falta. D soma o prazo antigo. E refaz tudo só com os seis."
        ],
        [
-        6.4,
+        3.9000000000000004,
         "A certa é a C."
        ]
       ],
@@ -9827,15 +9779,11 @@
       "tipo": "lousa",
       "fala": [
        [
-        0.3,
-        "O que a questão cobrou:"
-       ],
-       [
-        2.2,
+        0.30000000000000004,
         "Meça a obra em operário-dia: ela não muda."
        ],
        [
-        5.0,
+        3.0999999999999996,
         "Tire o que já foi feito e divida o resto."
        ]
       ],
@@ -10484,14 +10432,10 @@
       "fala": [
        [
         0.3,
-        "Cada letra errada é um número que parece certo."
-       ],
-       [
-        2.8,
         "E é o desconto em reais, mas a base é 125. A e B nascem de somar ou copiar porcentagens."
        ],
        [
-        7.0,
+        4.5,
         "A certa é a C."
        ]
       ],
@@ -10571,15 +10515,11 @@
       "tipo": "lousa",
       "fala": [
        [
-        0.3,
-        "O que a questão cobrou:"
-       ],
-       [
-        2.2,
+        0.30000000000000004,
         "Desconto é reais dividido pelo preço da etiqueta."
        ],
        [
-        5.4,
+        3.5,
         "E um preço fácil mostra tudo."
        ]
       ],

@@ -3486,5 +3486,4728 @@
     "resposta": "i = 2 200 ÷ 220 = 10 A."
    }
   }
+ },
+ {
+  "id": "d2-escada-fis-ita-cin-01",
+  "materia": "Física",
+  "tema": "Cinemática",
+  "enunciado": "Um trem de 200 m de comprimento atravessa uma ponte de 400 m, a 72 km/h constantes. Quanto tempo se passa entre o instante em que a frente do trem entra na ponte e o instante em que a traseira sai dela?",
+  "A": "8,3 s",
+  "B": "10 s",
+  "C": "20 s",
+  "D": "30 s",
+  "E": "40 s",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "72 ÷ 3,6 = 20 m/s; d = 400 + 200 = 600 m; t = 600 ÷ 20 = 30 s. D. A = 600 ÷ 72 (sem converter); B = só o trem (200 ÷ 20); C = só a ponte (400 ÷ 20); E = 800 ÷ 20 (trem contado 2 vezes).",
+   "ideia": "A frente do trem anda a ponte inteira mais o comprimento do trem: 400 + 200 = 600 m, a 72 km/h, que são 20 m/s. Então o tempo é 600 ÷ 20 = 30 s.",
+   "pecas": [
+    {
+     "termo": "Travessia",
+     "significado": "Da frente do trem entrando na ponte até a traseira saindo: a frente anda a ponte mais o trem."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Tempo",
+        "formula": "tempo = distância ÷ velocidade"
+       },
+       {
+        "figura": "carro",
+        "nome": "km/h para m/s",
+        "formula": "m/s = km/h ÷ 3,6"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Trem",
+        "200 m de comprimento"
+       ],
+       [
+        "Ponte",
+        "400 m"
+       ],
+       [
+        "Velocidade",
+        "72 km/h"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o tempo da travessia, t.\nPor que a distância é 600? Quando a traseira sai, a frente já passou a ponte inteira e mais um comprimento de trem. O trem não é um ponto.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "t = d ÷ v",
+      "leitura": "tempo = distância que a frente anda ÷ velocidade",
+      "letras": [
+       {
+        "letra": "t",
+        "oque": "tempo da travessia (o que a questão quer)"
+       },
+       {
+        "letra": "d",
+        "oque": "distância que a frente anda, em m"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade, em m/s"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando d: a distância",
+     "texto": "A frente anda a ponte mais o trem.\nd = 400 + 200 = 600 m"
+    },
+    {
+     "titulo": "Achando v: o seu jeito",
+     "texto": "Parece certo dividir por 72, porque a velocidade vem em km/h. Mas a distância está em metros, e a velocidade tem que ficar em m/s.\nv = 72 ÷ 3,6 = 20 m/s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "t = 600 ÷ 20 = 30 s\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "d",
+        "600 m"
+       ],
+       [
+        "v",
+        "20 m/s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"trem atravessa ponte ou túnel\" → a frente anda o comprimento da ponte mais o do trem; converta km/h para m/s antes de dividir.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "trem 200 m, ponte 400 m, 72 km/h"
+       ],
+       [
+        "2. Equação em letras",
+        "t = d ÷ v"
+       ],
+       [
+        "3. Achar cada letra",
+        "d = 600 m; v = 20 m/s"
+       ],
+       [
+        "4. Substituir",
+        "600 ÷ 20 = 30"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um trem de 100 m passa por um poste a 36 km/h. Quanto tempo leva para passar por inteiro?",
+    "opcoes": [
+     "10 s",
+     "2,8 s",
+     "20 s",
+     "100 s"
+    ],
+    "certa": "10 s",
+    "resposta": "36 km/h são 10 m/s e a frente só anda o comprimento do trem: 100 ÷ 10 = 10 s."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Questão de nível acima: um trem comprido atravessa uma ponte."
+       ],
+       [
+        3.4,
+        "O trem não é um ponto: o comprimento dele entra na conta."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 44,
+        "s": "O trem e a ponte",
+        "cor": "tinta",
+        "tam": 40,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "linha",
+        "x1": 160,
+        "y1": 150,
+        "x2": 280,
+        "y2": 150,
+        "cor": "tinta",
+        "t": 0.6,
+        "dur": 0.6
+       },
+       {
+        "k": "caixa",
+        "x": 80,
+        "y": 112,
+        "w": 60,
+        "h": 34,
+        "cor": "azul",
+        "t": 1.4,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 110,
+        "y": 136,
+        "s": "trem",
+        "cor": "azul",
+        "tam": 22,
+        "t": 1.9,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 220,
+        "y": 176,
+        "s": "ponte",
+        "cor": "cinza",
+        "tam": 24,
+        "t": 2.4,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 236,
+        "s": "72 km/h",
+        "cor": "cinza",
+        "tam": 30,
+        "t": 3.2,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "72 km/h é a velocidade. O trem tem 200 m de comprimento e a ponte, 400 m."
+       ],
+       [
+        4.6,
+        "O tempo conta da frente entrando na ponte até a traseira saindo."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "Um trem de 200 m de comprimento atravessa uma ponte de 400 m, a 72 km/h constantes. Quanto tempo se passa entre o instante em que a frente do trem entra na ponte e o instante em que a traseira sai dela?",
+      "alternativas": [
+       "8,3 s",
+       "10 s",
+       "20 s",
+       "30 s",
+       "40 s"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "O trem tem 200 m e a ponte 400 m. A velocidade é 72 km/h."
+       ],
+       [
+        3.4,
+        "O tempo começa quando a frente entra na ponte."
+       ],
+       [
+        6.0,
+        "E termina quando a traseira sai dela."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "o que a questão dá",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 82,
+        "s": "trem: 200 m de comprimento",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 120,
+        "s": "ponte: 400 m",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 1.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 158,
+        "s": "velocidade: 72 km/h",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 180,
+        "w": 330,
+        "h": 46,
+        "t": 6.0,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 214,
+        "s": "quero: o tempo da travessia",
+        "cor": "vermelho",
+        "tam": 28,
+        "t": 6.1,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Quando a frente entra na ponte, o trem está todo antes dela."
+       ],
+       [
+        3.4,
+        "Quando a traseira sai, o trem está todo depois. A frente andou a ponte inteira mais o comprimento do trem."
+       ],
+       [
+        8.2,
+        "400 + 200 = 600 m."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 28,
+        "s": "quanto a frente anda",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "linha",
+        "x1": 140,
+        "y1": 140,
+        "x2": 260,
+        "y2": 140,
+        "cor": "tinta",
+        "t": 0.4,
+        "dur": 0.5
+       },
+       {
+        "k": "caixa",
+        "x": 80,
+        "y": 106,
+        "w": 60,
+        "h": 34,
+        "cor": "azul",
+        "t": 0.9,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 110,
+        "y": 98,
+        "s": "início",
+        "cor": "azul",
+        "tam": 20,
+        "t": 1.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 260,
+        "y": 106,
+        "w": 60,
+        "h": 34,
+        "cor": "vermelho",
+        "t": 3.8,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 290,
+        "y": 98,
+        "s": "fim",
+        "cor": "vermelho",
+        "tam": 20,
+        "t": 4.1,
+        "ancora": "middle"
+       },
+       {
+        "k": "linha",
+        "x1": 140,
+        "y1": 76,
+        "x2": 320,
+        "y2": 76,
+        "cor": "verde",
+        "t": 5.4,
+        "dur": 0.8
+       },
+       {
+        "k": "tx",
+        "x": 230,
+        "y": 66,
+        "s": "600 m",
+        "cor": "verde",
+        "tam": 26,
+        "t": 6.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 196,
+        "s": "ponte: 400 m",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 1.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 226,
+        "s": "trem: 200 m",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 2.4,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 236,
+        "w": 330,
+        "h": 38,
+        "t": 8.2,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 264,
+        "s": "400 + 200 = 600 m",
+        "cor": "verde",
+        "tam": 30,
+        "t": 8.3,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "A distância está em metros: a velocidade tem que estar em m/s."
+       ],
+       [
+        3.8,
+        "72 km/h são 72 000 m em 1 hora. Uma hora tem 3 600 s: 72 000 ÷ 3 600 = 20 m/s."
+       ],
+       [
+        9.0,
+        "Atalho: 1000 m em 3 600 s dá 1 m em 3,6 s. Então km/h ÷ 3,6 = m/s: 72 ÷ 3,6 = 20."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "km/h para m/s",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 82,
+        "s": "72 km/h = 72 000 m em 1 h",
+        "cor": "tinta",
+        "tam": 27,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 122,
+        "s": "1 h = 3 600 s",
+        "cor": "tinta",
+        "tam": 27,
+        "t": 3.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 146,
+        "w": 330,
+        "h": 46,
+        "t": 5.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 180,
+        "s": "72 000 ÷ 3 600 = 20 m/s",
+        "cor": "verde",
+        "tam": 30,
+        "t": 5.5,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 232,
+        "s": "atalho: km/h ÷ 3,6 = m/s",
+        "cor": "azul",
+        "tam": 28,
+        "t": 9.0,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 266,
+        "s": "o trem anda 20 m a cada segundo",
+        "cor": "cinza",
+        "tam": 22,
+        "t": 10.4,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Se anda 20 metros a cada segundo, 600 metros levam 600 ÷ 20 = 30 segundos."
+       ],
+       [
+        5.0,
+        "Tempo é distância ÷ velocidade. Resposta: letra D."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "o tempo",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 86,
+        "s": "distância: 600 m",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 130,
+        "s": "velocidade: 20 m/s",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 1.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 152,
+        "w": 330,
+        "h": 56,
+        "t": 3.6,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 196,
+        "s": "600 ÷ 20 = 30 s",
+        "cor": "verde",
+        "tam": 40,
+        "t": 3.7,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 252,
+        "s": "resposta: D, 30 s",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 5.0,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "B e C esquecem uma das partes. E conta o trem duas vezes. A não converte a velocidade."
+       ],
+       [
+        4.5,
+        "A certa é a D."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · 8,3 s: 600 ÷ 72, sem converter",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "B · 10 s: só o trem (200 ÷ 20)",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 2.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "C · 20 s: só a ponte (400 ÷ 20)",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 40 s: 800 ÷ 20, trem 2 vezes",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: D, 30 s",
+        "cor": "verde",
+        "tam": 32,
+        "t": 6.5,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.30000000000000004,
+        "O trem tem comprimento: a frente anda a ponte mais o trem."
+       ],
+       [
+        3.6999999999999993,
+        "Depois, tempo é distância dividida pela velocidade."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. a frente anda ponte + trem",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "2. km/h ÷ 3,6 = m/s",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 172,
+        "w": 270,
+        "h": 6,
+        "t": 3.8,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "3. tempo = distância ÷ velocidade",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 5.0,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Um trem de 100 m passa por um poste a 36 km/h. Quanto tempo leva para passar por inteiro?",
+      "opcoes": [
+       "10 s",
+       "2,8 s",
+       "20 s",
+       "100 s"
+      ],
+      "certa": 0,
+      "porque": [
+       "36 ÷ 3,6 = 10 m/s, e a frente só anda o comprimento do trem: 100 ÷ 10 = 10 s.",
+       "2,8 s é 100 ÷ 36, sem converter km/h para m/s.",
+       "20 s conta o trem duas vezes: o poste não tem comprimento.",
+       "100 s é a distância escrita como tempo."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: um trem de 300 m atravessa um túnel de 900 m a 90 km/h. Quanto tempo, da frente entrar até a traseira sair?",
+      "opcoes": [
+       "48 s",
+       "36 s",
+       "13,3 s",
+       "12 s"
+      ],
+      "certa": 0,
+      "porque": [
+       "90 ÷ 3,6 = 25 m/s (3,6 × 25 = 90). A frente anda 900 + 300 = 1200 m: 1200 ÷ 25 = 48 s.",
+       "36 s conta só o túnel (900 ÷ 25).",
+       "13,3 s é 1200 ÷ 90, sem converter km/h para m/s.",
+       "12 s conta só o trem (300 ÷ 25)."
+      ]
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-din-01",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "enunciado": "Dois blocos, de 3 kg e de 1 kg, estão presos às pontas de um fio leve que passa por uma polia sem atrito, pendurados um de cada lado. Os blocos são soltos do repouso. Qual é a aceleração dos blocos? (Use g = 10 m/s².)",
+  "A": "2,5 m/s²",
+  "B": "5 m/s²",
+  "C": "7,5 m/s²",
+  "D": "10 m/s²",
+  "E": "20 m/s²",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "Pesos 30 N e 10 N; sobram 20 N para 4 kg: a = 5 m/s². Confere: T − 10 = 1 × 5 e 30 − T = 3 × 5 dão T = 15 N nos dois. B. A = 10 ÷ 4; C = 30 ÷ 4; D = g; E = 20 (a força).",
+   "ideia": "Os dois blocos andam juntos, como um só de 3 + 1 = 4 kg. A força que sobra é a diferença dos pesos, 30 − 10 = 20 N, então a = 20 ÷ 4 = 5 m/s².",
+   "pecas": [
+    {
+     "termo": "Polia sem atrito",
+     "significado": "Roda por onde passa o fio; ela só muda a direção da força."
+    },
+    {
+     "termo": "Fio leve",
+     "significado": "Fio sem massa: a força dele é a mesma dos dois lados."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Peso",
+        "formula": "peso = massa × g"
+       },
+       {
+        "figura": "carro",
+        "nome": "Segunda lei",
+        "formula": "força que sobra = massa × aceleração"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Bloco A",
+        "3 kg"
+       ],
+       [
+        "Bloco B",
+        "1 kg"
+       ],
+       [
+        "g",
+        "10 m/s²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a aceleração dos blocos, a.\nPor que juntar os dois blocos? O fio não estica, então os dois têm a mesma aceleração. A força do fio é interna e se anula; sobra a diferença dos pesos.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "a = F ÷ m",
+      "leitura": "aceleração = força que sobra ÷ massa total",
+      "letras": [
+       {
+        "letra": "a",
+        "oque": "aceleração (o que a questão quer)"
+       },
+       {
+        "letra": "F",
+        "oque": "força que sobra, em N"
+       },
+       {
+        "letra": "m",
+        "oque": "massa total, em kg"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando F: a força que sobra",
+     "texto": "Pesos: 3 × 10 = 30 N e 1 × 10 = 10 N.\nF = 30 − 10 = 20 N"
+    },
+    {
+     "titulo": "Achando m: o seu jeito",
+     "texto": "Parece certo usar só a massa do bloco que desce, 3 kg. Mas o bloco de 1 kg também tem que ser acelerado.\nm = 3 + 1 = 4 kg"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "a = 20 ÷ 4 = 5 m/s²\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "F",
+        "20 N"
+       ],
+       [
+        "m",
+        "4 kg"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"dois blocos presos por fio numa polia\" → diferença dos pesos dividida pela soma das massas.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "3 kg e 1 kg, g = 10"
+       ],
+       [
+        "2. Equação em letras",
+        "a = F ÷ m"
+       ],
+       [
+        "3. Achar cada letra",
+        "F = 20 N; m = 4 kg"
+       ],
+       [
+        "4. Substituir",
+        "20 ÷ 4 = 5"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Blocos de 6 kg e de 4 kg ligados por fio numa polia (g = 10). Qual a aceleração?",
+    "opcoes": [
+     "2 m/s²",
+     "4 m/s²",
+     "10 m/s²",
+     "1 m/s²"
+    ],
+    "certa": "2 m/s²",
+    "resposta": "Pesos 60 e 40: sobram 20 N para 10 kg: 20 ÷ 10 = 2."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Questão de nível acima: dois blocos pendurados numa polia."
+       ],
+       [
+        3.2,
+        "O mais pesado desce e puxa o mais leve para cima."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "Dois blocos e uma polia",
+        "cor": "tinta",
+        "tam": 34,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "circ",
+        "cx": 200,
+        "cy": 86,
+        "r": 26,
+        "cor": "tinta",
+        "t": 0.8
+       },
+       {
+        "k": "linha",
+        "x1": 174,
+        "y1": 86,
+        "x2": 174,
+        "y2": 140,
+        "cor": "tinta",
+        "t": 1.6,
+        "dur": 0.4
+       },
+       {
+        "k": "linha",
+        "x1": 226,
+        "y1": 86,
+        "x2": 226,
+        "y2": 140,
+        "cor": "tinta",
+        "t": 1.8,
+        "dur": 0.4
+       },
+       {
+        "k": "caixa",
+        "x": 140,
+        "y": 140,
+        "w": 56,
+        "h": 52,
+        "cor": "azul",
+        "t": 2.2,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 168,
+        "y": 176,
+        "s": "3 kg",
+        "cor": "azul",
+        "tam": 24,
+        "t": 2.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 204,
+        "y": 140,
+        "w": 56,
+        "h": 52,
+        "cor": "vermelho",
+        "t": 3.0,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 232,
+        "y": 176,
+        "s": "1 kg",
+        "cor": "vermelho",
+        "tam": 24,
+        "t": 3.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 236,
+        "s": "soltos do repouso",
+        "cor": "cinza",
+        "tam": 28,
+        "t": 4.4,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "Polia é a roda por onde passa o fio. Sem atrito, ela gira livre."
+       ],
+       [
+        3.4,
+        "Fio leve: quase sem massa, então ele faz a mesma força dos dois lados."
+       ],
+       [
+        7.0,
+        "g é a gravidade: 10 m/s² quer dizer que a velocidade de queda cresce 10 m/s a cada segundo."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "Dois blocos, de 3 kg e de 1 kg, estão presos às pontas de um fio leve que passa por uma polia sem atrito, pendurados um de cada lado. Os blocos são soltos do repouso. Qual é a aceleração dos blocos? (Use g = 10 m/s².)",
+      "alternativas": [
+       "2,5 m/s²",
+       "5 m/s²",
+       "7,5 m/s²",
+       "10 m/s²",
+       "20 m/s²"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Dois blocos, 3 kg e 1 kg, ligados por um fio que passa na polia."
+       ],
+       [
+        3.4,
+        "Soltos do repouso, o de 3 kg desce e o de 1 kg sobe."
+       ],
+       [
+        6.4,
+        "Como o fio não estica, os dois têm a mesma aceleração. Quero ela."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "o que a questão dá",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 82,
+        "s": "bloco A: 3 kg",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 120,
+        "s": "bloco B: 1 kg",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 1.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 158,
+        "s": "soltos do repouso, g = 10",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.4,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 180,
+        "w": 330,
+        "h": 46,
+        "t": 6.4,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 214,
+        "s": "quero: a aceleração",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 6.5,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Cada bloco é puxado para baixo pelo próprio peso. Peso é massa × 10."
+       ],
+       [
+        3.6,
+        "O de 3 kg pesa 3 × 10 = 30 N. O de 1 kg pesa 1 × 10 = 10 N."
+       ],
+       [
+        7.4,
+        "N é newton, a unidade de força."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "o peso de cada bloco",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "peso = massa × 10",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 126,
+        "s": "A: 3 × 10 = 30 N",
+        "cor": "azul",
+        "tam": 30,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 168,
+        "s": "B: 1 × 10 = 10 N",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 190,
+        "w": 330,
+        "h": 46,
+        "t": 7.4,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 224,
+        "s": "o lado de 30 puxa mais que o de 10",
+        "cor": "tinta",
+        "tam": 24,
+        "t": 7.5,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Os dois andam juntos: um bloco só de 4 kg. O fio freia o que desce e ajuda o que sobe, com a mesma força T: se anulam."
+       ],
+       [
+        5.4,
+        "A força que sobra é a diferença dos pesos: 30 − 10 = 20 N."
+       ],
+       [
+        9.4,
+        "Aceleração = força ÷ massa: 20 N ÷ 4 kg = 5 m/s²."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "a aceleração",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 86,
+        "s": "massa total: 3 + 1 = 4 kg",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 130,
+        "s": "força que sobra: 30 − 10 = 20 N",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 5.4,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 156,
+        "w": 330,
+        "h": 56,
+        "t": 9.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 198,
+        "s": "a = 20 ÷ 4 = 5 m/s²",
+        "cor": "verde",
+        "tam": 38,
+        "t": 9.5,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 254,
+        "s": "resposta: B",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 11.0,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Conferindo um bloco de cada vez. T é a força do fio. A força que sobra em cada bloco é massa × aceleração."
+       ],
+       [
+        5.0,
+        "Leve, sobe com 5: T − 10 = 1 × 5, então T = 15 N."
+       ],
+       [
+        9.0,
+        "Pesado, desce com 5: 30 − T = 3 × 5 = 15, então T = 15 N. Os dois dão o mesmo T."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "conferindo",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "leve: T − 10 = 1 × 5  →  T = 15",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 128,
+        "s": "pesado: 30 − T = 3 × 5  →  T = 15",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 6.4,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 156,
+        "w": 330,
+        "h": 46,
+        "t": 9.0,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 190,
+        "s": "mesmo T nos dois: confere",
+        "cor": "verde",
+        "tam": 30,
+        "t": 9.1,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "A e C usam o peso de um bloco só. D ignora o outro bloco. E é a força, em newtons."
+       ],
+       [
+        4.5,
+        "A certa é a B."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · 2,5: 10 ÷ 4, só o peso do leve",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "C · 7,5: 30 ÷ 4, só o peso do pesado",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 2.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "D · 10: só o g, sem o outro bloco",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 20: a força, não a aceleração",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: B, 5 m/s²",
+        "cor": "verde",
+        "tam": 32,
+        "t": 6.5,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.30000000000000004,
+        "A força que sobra é a diferença dos pesos."
+       ],
+       [
+        3.0999999999999996,
+        "E a aceleração é essa força dividida pela massa de todos."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. peso = massa × g",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "2. sobra: diferença dos pesos",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 172,
+        "w": 270,
+        "h": 6,
+        "t": 3.8,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "3. a = sobra ÷ massa total",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 5.0,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Dois blocos, de 6 kg e de 4 kg, estão ligados por um fio numa polia (g = 10 m/s²). Qual a aceleração?",
+      "opcoes": [
+       "2 m/s²",
+       "4 m/s²",
+       "10 m/s²",
+       "20 m/s²"
+      ],
+      "certa": 0,
+      "porque": [
+       "Os pesos são 60 N e 40 N: sobram 20 N para 10 kg, e 20 ÷ 10 = 2 m/s².",
+       "4 m/s² é 40 ÷ 10: só o peso do bloco leve.",
+       "10 m/s² é só o g: o outro bloco segura.",
+       "20 m/s² é a força que sobra, 20 N, no lugar da aceleração."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: dois blocos iguais, de 5 kg cada, ligados por um fio numa polia (g = 10 m/s²). Qual a aceleração?",
+      "opcoes": [
+       "0 (ficam parados)",
+       "5 m/s²",
+       "10 m/s²",
+       "2,5 m/s²"
+      ],
+      "certa": 0,
+      "porque": [
+       "Os pesos são iguais: 50 − 50 = 0 N sobra, então a = 0 ÷ 10 = 0.",
+       "5 m/s² vem de 50 ÷ 10, sem tirar o peso do outro bloco (50 − 50).",
+       "10 m/s² é só o g: o outro bloco segura.",
+       "2,5 m/s² não tem base: a força que sobra é 0."
+      ]
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-ter-01",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Um aquecedor elétrico de 1000 W aquece 2 kg de água de 20 °C até 70 °C. Só 80% da energia do aquecedor vai para a água. O calor específico da água é 4200 J/(kg·°C). Quanto tempo leva esse aquecimento?",
+  "A": "4,4 min",
+  "B": "5,6 min",
+  "C": "7 min",
+  "D": "8,75 min",
+  "E": "12,25 min",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "Q = 2 × 4200 × 50 = 420 000 J; P útil = 800 W; t = 525 s = 8,75 min. D. A = usou 1 kg (4,4 min); B = × 0,8 (5,6 min); C = sem os 80% (7 min); E = usou 70 °C (12,25 min).",
+   "ideia": "A água precisa de 2 × 4200 × 50 = 420 000 J, e o aquecedor entrega 80% de 1000 W, ou seja, 800 J por segundo. O tempo é 420 000 ÷ 800 = 525 s, que são 8,75 min.",
+   "pecas": [
+    {
+     "termo": "Potência útil",
+     "significado": "A parte da potência que chega à água: aqui, 80% de 1000 W = 800 W."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Energia para esquentar",
+        "formula": "Q = massa × calor específico × subida"
+       },
+       {
+        "figura": "termometro",
+        "nome": "Tempo",
+        "formula": "tempo = energia ÷ potência útil"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Água",
+        "2 kg, de 20 °C a 70 °C"
+       ],
+       [
+        "Aquecedor",
+        "1000 W, 80% aproveitado"
+       ],
+       [
+        "Calor específico",
+        "4200 J/(kg·°C)"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o tempo do aquecimento, t.\nPor que dividir? Potência é energia por segundo. Se a água precisa de 420 000 J e recebe 800 J a cada segundo, é só ver quantos segundos cabem.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "t = Q ÷ P",
+      "leitura": "tempo = energia que a água precisa ÷ potência útil",
+      "letras": [
+       {
+        "letra": "t",
+        "oque": "tempo (o que a questão quer)"
+       },
+       {
+        "letra": "Q",
+        "oque": "energia que a água precisa, em J"
+       },
+       {
+        "letra": "P",
+        "oque": "potência útil, em W"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando Q: a energia",
+     "texto": "A temperatura sobe 70 − 20 = 50 °C.\nQ = 2 × 4200 × 50 = 420 000 J"
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo usar os 1000 W do aquecedor. Mas só 80% chega à água.\nP = 0,8 × 1000 = 800 W"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "t = 420 000 ÷ 800 = 525 s\n525 ÷ 60 = 8,75 min\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Q",
+        "420 000 J"
+       ],
+       [
+        "P",
+        "800 W"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"aquecedor com perda\" → energia que a água precisa ÷ potência que realmente chega a ela.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "2 kg, 50 °C, 1000 W, 80%"
+       ],
+       [
+        "2. Equação em letras",
+        "t = Q ÷ P"
+       ],
+       [
+        "3. Achar cada letra",
+        "Q = 420 000 J; P = 800 W"
+       ],
+       [
+        "4. Substituir",
+        "420 000 ÷ 800 = 525 s"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um aquecedor de 500 W, sem perdas, esquenta 1 kg de água de 20 °C a 30 °C (c = 4200). Quanto tempo?",
+    "opcoes": [
+     "84 s",
+     "840 s",
+     "42 s",
+     "8,4 s"
+    ],
+    "certa": "84 s",
+    "resposta": "4200 × 10 = 42 000 J e 42 000 ÷ 500 = 84 s."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Questão de nível acima: um aquecedor esquenta 2 kg de água."
+       ],
+       [
+        3.2,
+        "Parte da energia se perde. Quanto tempo leva?"
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 40,
+        "s": "O aquecedor e a água",
+        "cor": "tinta",
+        "tam": 38,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caminho",
+        "d": "M120 120l16 -24l16 48l16 -48l16 48l16 -48l16 24",
+        "cor": "vermelho",
+        "t": 0.8,
+        "dur": 1.4,
+        "larg": 4
+       },
+       {
+        "k": "caixa",
+        "x": 100,
+        "y": 150,
+        "w": 200,
+        "h": 76,
+        "cor": "azul",
+        "t": 2.4,
+        "dur": 1.0
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 196,
+        "s": "2 kg de água",
+        "cor": "azul",
+        "tam": 28,
+        "t": 3.4,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 262,
+        "s": "1000 W, 80% aproveitado",
+        "cor": "cinza",
+        "tam": 26,
+        "t": 4.2,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "Potência é energia por segundo. W é watt: 1000 W são 1000 joules (J) a cada segundo."
+       ],
+       [
+        5.0,
+        "Calor específico, escrito c, é a energia para esquentar 1 kg em 1 °C (um grau Celsius): para a água, 4200 J."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "Um aquecedor elétrico de 1000 W aquece 2 kg de água de 20 °C até 70 °C. Só 80% da energia do aquecedor vai para a água. O calor específico da água é 4200 J/(kg·°C). Quanto tempo leva esse aquecimento?",
+      "alternativas": [
+       "4,4 min",
+       "5,6 min",
+       "7 min",
+       "8,75 min",
+       "12,25 min"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Aquecedor de 1000 W. Só 80% da energia vai para a água."
+       ],
+       [
+        3.4,
+        "A água, 2 kg, vai de 20 °C a 70 °C."
+       ],
+       [
+        6.0,
+        "Quero o tempo que isso leva."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "o que a questão dá",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 82,
+        "s": "1000 W, só 80% vai para a água",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 120,
+        "s": "2 kg de água: de 20 °C a 70 °C",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 3.4,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 158,
+        "s": "calor específico: 4200",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 4.6,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 180,
+        "w": 330,
+        "h": 46,
+        "t": 6.0,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 214,
+        "s": "quero: o tempo",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 6.1,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Primeiro, quanta energia a água precisa. Para esquentar 1 kg em 1 °C são 4200 J."
+       ],
+       [
+        4.4,
+        "São 2 kg e a temperatura sobe 70 − 20 = 50 °C. Então 2 × 4200 × 50."
+       ],
+       [
+        9.0,
+        "2 × 4200 × 50 = 420 000 J."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "a energia que a água precisa",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 86,
+        "s": "sobe: 70 − 20 = 50 °C",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 130,
+        "s": "energia: 2 × 4200 × 50",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 4.4,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 156,
+        "w": 330,
+        "h": 56,
+        "t": 9.0,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 198,
+        "s": "= 420 000 J",
+        "cor": "verde",
+        "tam": 40,
+        "t": 9.1,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Só 80% de 1000 W chega à água. 80% é 80 em cada 100: em 1000, são 800 W, ou 800 joules por segundo."
+       ],
+       [
+        3.8,
+        "Essa é a potência útil, o ritmo em que a água recebe energia."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "a potência útil",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 90,
+        "s": "80% de 1000 W",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 112,
+        "w": 330,
+        "h": 56,
+        "t": 2.2,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "= 800 W",
+        "cor": "verde",
+        "tam": 40,
+        "t": 2.3,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 220,
+        "s": "a água recebe 800 J por segundo",
+        "cor": "azul",
+        "tam": 28,
+        "t": 3.8,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Tempo = energia ÷ potência: 420 000 ÷ 800 = 525 segundos."
+       ],
+       [
+        4.6,
+        "Em minutos: 525 ÷ 60 = 8,75. Resposta: letra D."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "o tempo",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 86,
+        "s": "energia: 420 000 J",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 126,
+        "s": "potência útil: 800 W",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 1.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 170,
+        "s": "420 000 ÷ 800 = 525 s",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 190,
+        "w": 330,
+        "h": 50,
+        "t": 4.6,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 226,
+        "s": "525 ÷ 60 = 8,75 min",
+        "cor": "verde",
+        "tam": 34,
+        "t": 4.7,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "A usa 1 kg em vez de 2. B multiplica por 0,8 em vez de dividir. C ignora a perda. E usa a temperatura final."
+       ],
+       [
+        4.5,
+        "A certa é a D."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · 4,4: usou 1 kg, não 2 kg",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "B · 5,6: multiplicou por 0,8",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 2.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "C · 7: ignorou os 80% (÷ 1000)",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 12,25: usou 70 °C, não 50",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: D, 8,75 min",
+        "cor": "verde",
+        "tam": 32,
+        "t": 6.5,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.30000000000000004,
+        "Achar a energia que a água precisa e a potência que realmente chega a ela."
+       ],
+       [
+        4.1,
+        "O tempo é uma divisão."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. energia: massa × 4200 × subida",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "2. só 80% chega à água",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 172,
+        "w": 270,
+        "h": 6,
+        "t": 3.8,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "3. tempo = energia ÷ potência útil",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 5.0,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Um aquecedor de 500 W, sem perdas, aquece 1 kg de água de 20 °C a 30 °C (c = 4200). Quanto tempo leva?",
+      "opcoes": [
+       "84 s",
+       "840 s",
+       "42 s",
+       "8,4 s"
+      ],
+      "certa": 0,
+      "porque": [
+       "4200 × 10 = 42 000 J, e 42 000 ÷ 500 = 84 s.",
+       "840 s vem de 4200 × 100 ÷ 500: uma casa a mais na subida de temperatura.",
+       "42 s vem de dividir 42 000 por 1000, e a potência é 500 W.",
+       "8,4 s vem de dividir por 5000: uma casa a mais."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: o mesmo aquecedor de 500 W, mas só 50% da energia vai para a água. Quanto tempo para aquecer 1 kg de 20 °C a 30 °C?",
+      "opcoes": [
+       "168 s",
+       "84 s",
+       "42 s",
+       "336 s"
+      ],
+      "certa": 0,
+      "porque": [
+       "A potência útil é 50% de 500 = 250 W: 42 000 ÷ 250 = 168 s.",
+       "84 s ignora a perda de 50%.",
+       "42 s vem de dividir 42 000 por 1000.",
+       "336 s aplica os 50% duas vezes: 50% de 250 é 125, e 42 000 ÷ 125 = 336."
+      ]
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-ond-01",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Dois alto-falantes iguais emitem a mesma nota de 340 Hz, em fase (as ondas saem sempre iguais, no mesmo instante). A velocidade do som é 340 m/s. Qual é a menor diferença entre as distâncias de um ouvinte aos dois alto-falantes para que ele ouça silêncio?",
+  "A": "0,25 m",
+  "B": "0,5 m",
+  "C": "1 m",
+  "D": "2 m",
+  "E": "340 m",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "λ = v ÷ f = 340 ÷ 340 = 1 m; silêncio em λ ÷ 2 = 0,5 m. B. A = λ ÷ 4; C = λ e D = 2λ (som forte); E = a velocidade.",
+   "ideia": "A nota tem λ = 340 ÷ 340 = 1 m. Silêncio acontece quando um pico encontra um vale, e isso exige uma diferença de distância de meio comprimento de onda: 1 ÷ 2 = 0,5 m.",
+   "pecas": [
+    {
+     "termo": "Em fase",
+     "significado": "Os dois alto-falantes mandam o pico da onda no mesmo instante."
+    },
+    {
+     "termo": "Comprimento de onda",
+     "significado": "Distância entre dois picos seguidos da onda, escrita λ."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Comprimento de onda",
+        "formula": "λ = velocidade ÷ frequência"
+       },
+       {
+        "figura": "onda",
+        "nome": "Silêncio",
+        "formula": "pico com vale: diferença de meio λ"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Frequência",
+        "340 Hz"
+       ],
+       [
+        "Velocidade",
+        "340 m/s"
+       ],
+       [
+        "Fontes",
+        "duas, em fase"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a menor diferença de distância que dá silêncio, d.\nPor que meio λ? Se um caminho é meio λ mais longo, o pico de uma onda chega junto com o vale da outra, e uma cancela a outra.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "d = λ ÷ 2",
+      "leitura": "diferença = meio comprimento de onda",
+      "letras": [
+       {
+        "letra": "d",
+        "oque": "diferença de distância (o que a questão quer)"
+       },
+       {
+        "letra": "λ",
+        "oque": "comprimento de onda, em m"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando λ: o comprimento de onda",
+     "texto": "λ = velocidade ÷ frequência.\nλ = 340 ÷ 340 = 1 m"
+    },
+    {
+     "titulo": "Achando d: o seu jeito",
+     "texto": "Parece certo usar 1 m, uma onda inteira. Mas com um λ inteiro o pico chega junto com o pico, e o som fica mais forte.\nd = 1 ÷ 2 = 0,5 m"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "d = 1 ÷ 2 = 0,5 m\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "λ",
+        "1 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"duas fontes em fase, silêncio\" → ache λ (v ÷ f); a menor diferença de distância é λ ÷ 2.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "340 Hz, 340 m/s"
+       ],
+       [
+        "2. Equação em letras",
+        "d = λ ÷ 2"
+       ],
+       [
+        "3. Achar cada letra",
+        "λ = 1 m"
+       ],
+       [
+        "4. Substituir",
+        "1 ÷ 2 = 0,5"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Dois alto-falantes em fase emitem 170 Hz (v = 340 m/s). Qual a menor diferença de distância para silêncio?",
+    "opcoes": [
+     "1 m",
+     "2 m",
+     "0,5 m",
+     "4 m"
+    ],
+    "certa": "1 m",
+    "resposta": "λ = 340 ÷ 170 = 2 m, e silêncio é meio λ: 1 m."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Questão de nível acima: duas fontes de som, uma nota só."
+       ],
+       [
+        3.4,
+        "Em alguns lugares o som soma; em outros, some."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 40,
+        "s": "Dois alto-falantes",
+        "cor": "tinta",
+        "tam": 38,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 50,
+        "y": 90,
+        "w": 40,
+        "h": 50,
+        "cor": "azul",
+        "t": 0.8,
+        "dur": 0.6
+       },
+       {
+        "k": "caixa",
+        "x": 50,
+        "y": 170,
+        "w": 40,
+        "h": 50,
+        "cor": "vermelho",
+        "t": 1.4,
+        "dur": 0.6
+       },
+       {
+        "k": "circ",
+        "cx": 330,
+        "cy": 150,
+        "r": 10,
+        "cor": "verde",
+        "t": 2.0
+       },
+       {
+        "k": "linha",
+        "x1": 90,
+        "y1": 115,
+        "x2": 320,
+        "y2": 148,
+        "cor": "azul",
+        "t": 2.4,
+        "dur": 0.8
+       },
+       {
+        "k": "linha",
+        "x1": 90,
+        "y1": 195,
+        "x2": 320,
+        "y2": 152,
+        "cor": "vermelho",
+        "t": 3.2,
+        "dur": 0.8
+       },
+       {
+        "k": "tx",
+        "x": 330,
+        "y": 186,
+        "s": "ouvinte",
+        "cor": "verde",
+        "tam": 22,
+        "t": 3.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 262,
+        "s": "mesma nota nos dois",
+        "cor": "cinza",
+        "tam": 26,
+        "t": 4.2,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "Hz é hertz: 340 Hz são 340 ondas por segundo. Isso é a frequência."
+       ],
+       [
+        3.8,
+        "Em fase: os dois alto-falantes mandam o pico da onda no mesmo instante."
+       ],
+       [
+        7.6,
+        "Diferença de distância: quanto um caminho é mais longo que o outro até o ouvinte."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "Dois alto-falantes iguais emitem a mesma nota de 340 Hz, em fase (as ondas saem sempre iguais, no mesmo instante). A velocidade do som é 340 m/s. Qual é a menor diferença entre as distâncias de um ouvinte aos dois alto-falantes para que ele ouça silêncio?",
+      "alternativas": [
+       "0,25 m",
+       "0,5 m",
+       "1 m",
+       "2 m",
+       "340 m"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Dois alto-falantes iguais, 340 Hz, em fase."
+       ],
+       [
+        3.0,
+        "O som anda a 340 m/s."
+       ],
+       [
+        5.0,
+        "Quero a menor diferença de distância que dá silêncio."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "o que a questão dá",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 82,
+        "s": "dois alto-falantes, 340 Hz, em fase",
+        "cor": "tinta",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 120,
+        "s": "velocidade do som: 340 m/s",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 146,
+        "w": 330,
+        "h": 78,
+        "t": 5.0,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 180,
+        "s": "quero: a menor diferença",
+        "cor": "vermelho",
+        "tam": 28,
+        "t": 5.1,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 212,
+        "s": "de distância que dá silêncio",
+        "cor": "vermelho",
+        "tam": 28,
+        "t": 5.6,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Comprimento de onda, λ, é a distância entre dois picos seguidos. Pico é o ponto mais alto; vale, o mais baixo."
+       ],
+       [
+        5.0,
+        "Em 1 s passam 340 ondas de λ metros cada: 340 × λ metros. Isso é a velocidade, 340 m/s."
+       ],
+       [
+        10.0,
+        "Então λ = velocidade ÷ frequência = 340 ÷ 340 = 1 m."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 28,
+        "s": "o comprimento de onda",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caminho",
+        "d": "M40 110Q80 60 120 110T200 110T280 110T360 110",
+        "cor": "azul",
+        "t": 0.6,
+        "dur": 1.4,
+        "larg": 4
+       },
+       {
+        "k": "linha",
+        "x1": 40,
+        "y1": 160,
+        "x2": 200,
+        "y2": 160,
+        "cor": "vermelho",
+        "t": 2.4,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 120,
+        "y": 188,
+        "s": "λ = 1 m",
+        "cor": "vermelho",
+        "tam": 26,
+        "t": 3.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 232,
+        "s": "λ = v ÷ f = 340 ÷ 340",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 10.0,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 268,
+        "s": "λ = 1 m",
+        "cor": "verde",
+        "tam": 32,
+        "t": 10.8,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Se dois picos chegam juntos, o som soma e fica mais forte."
+       ],
+       [
+        3.6,
+        "Se chega um pico junto com um vale, um cancela o outro: silêncio."
+       ],
+       [
+        7.6,
+        "Se um caminho é meio λ mais longo, a onda chega atrasada meio λ: onde chegaria um pico, chega um vale."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 28,
+        "s": "pico com vale = silêncio",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caminho",
+        "d": "M40 80Q80 40 120 80T200 80T280 80T360 80",
+        "cor": "azul",
+        "t": 0.6,
+        "dur": 1.2,
+        "larg": 4
+       },
+       {
+        "k": "caminho",
+        "d": "M40 150Q80 190 120 150T200 150T280 150T360 150",
+        "cor": "vermelho",
+        "t": 3.6,
+        "dur": 1.2,
+        "larg": 4
+       },
+       {
+        "k": "linha",
+        "x1": 40,
+        "y1": 222,
+        "x2": 360,
+        "y2": 222,
+        "cor": "verde",
+        "t": 7.6,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 262,
+        "s": "soma: 0, silêncio",
+        "cor": "verde",
+        "tam": 30,
+        "t": 8.0,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Para silêncio, a diferença de distância tem que ser meio comprimento de onda."
+       ],
+       [
+        4.4,
+        "Como λ = 1 m, a menor diferença é 1 ÷ 2 = 0,5 m."
+       ],
+       [
+        8.2,
+        "Diferenças de 1,5 λ, 2,5 λ... também dão silêncio, mas a menor é meio λ. Resposta: letra B."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "a menor diferença",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 86,
+        "s": "λ = 1 m",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 130,
+        "s": "silêncio: meio λ",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 2.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 152,
+        "w": 330,
+        "h": 56,
+        "t": 4.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 196,
+        "s": "1 ÷ 2 = 0,5 m",
+        "cor": "verde",
+        "tam": 40,
+        "t": 4.5,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 252,
+        "s": "resposta: B",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 8.2,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "C e D são 1 λ e 2 λ inteiros: pico com pico, som forte. E é a velocidade."
+       ],
+       [
+        4.3,
+        "A certa é a B."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · 0,25 m: um quarto de λ",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "C · 1 m: um λ inteiro, som forte",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 2.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "D · 2 m: dois λ, som forte",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 340 m: é a velocidade, não λ",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: B, 0,5 m",
+        "cor": "verde",
+        "tam": 32,
+        "t": 6.5,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.30000000000000004,
+        "Achar o comprimento de onda e compará-lo com a diferença de distância."
+       ],
+       [
+        3.6999999999999993,
+        "Silêncio é meio comprimento de onda."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. λ = velocidade ÷ frequência",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "2. silêncio: pico com vale",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 172,
+        "w": 270,
+        "h": 6,
+        "t": 3.8,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "3. menor diferença: λ ÷ 2",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 5.0,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Dois alto-falantes em fase emitem 170 Hz (v = 340 m/s). Qual a menor diferença de distância para silêncio?",
+      "opcoes": [
+       "1 m",
+       "2 m",
+       "0,5 m",
+       "4 m"
+      ],
+      "certa": 0,
+      "porque": [
+       "λ = 340 ÷ 170 = 2 m, e silêncio é meio λ: 1 m.",
+       "2 m é um λ inteiro: pico com pico, som forte.",
+       "0,5 m seria para 340 Hz, não para 170 Hz.",
+       "4 m é dois λ: som forte."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: com os alto-falantes de 340 Hz, um ouvinte está a 4 m de um e a 4,5 m do outro. O que ele ouve?",
+      "opcoes": [
+       "Silêncio",
+       "Som mais forte",
+       "Som de frequência dobrada",
+       "Som só um pouco mais fraco"
+      ],
+      "certa": 0,
+      "porque": [
+       "λ = 1 m e a diferença é 4,5 − 4 = 0,5 m, meio λ: pico com vale, silêncio.",
+       "Som mais forte pede diferença 0, 1 m, 2 m...: 0, 1 λ, 2 λ...",
+       "A frequência não muda: continua 340 Hz.",
+       "Com meio λ de diferença as ondas se cancelam por inteiro, não só enfraquecem."
+      ]
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-opt-01",
+  "materia": "Física",
+  "tema": "Óptica",
+  "enunciado": "Um raio de luz incide em um espelho plano. Sem mudar o raio incidente, o espelho gira 20°. Em quantos graus gira o raio refletido?",
+  "A": "10°",
+  "B": "20°",
+  "C": "40°",
+  "D": "60°",
+  "E": "80°",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "Exemplo: 30° dá 60° entre os raios; o espelho gira 20°: 50° dá 100°; o refletido girou 100 − 60 = 40°. C. A = metade (10°); B = igual (20°); D = triplo (60°); E = quádruplo (80°).",
+   "ideia": "O ângulo entre o raio que chega e o que sai é o dobro do ângulo com a normal. Quando o espelho gira 20°, esse ângulo muda 2 × 20°, então o raio refletido gira 40°.",
+   "pecas": [
+    {
+     "termo": "Normal",
+     "significado": "Linha perpendicular ao espelho, no ponto onde o raio bate."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Lei da reflexão",
+        "formula": "ângulo de chegada = ângulo de saída, a partir da normal"
+       },
+       {
+        "figura": "lente",
+        "nome": "Entre os raios",
+        "formula": "ângulo entre os raios = 2 × ângulo com a normal"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Espelho",
+        "plano, gira 20°"
+       ],
+       [
+        "Raio que chega",
+        "parado"
+       ],
+       [
+        "Quero",
+        "giro do refletido"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quantos graus gira o raio refletido, G.\nPor que o dobro? O ângulo entre os raios é 2 vezes o ângulo com a normal; se o espelho gira g, a normal gira g e esse ângulo muda 2 × g.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "G = 2 × g",
+      "leitura": "giro do refletido = o dobro do giro do espelho",
+      "letras": [
+       {
+        "letra": "G",
+        "oque": "giro do refletido (o que a questão quer)"
+       },
+       {
+        "letra": "g",
+        "oque": "giro do espelho, 20°"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando g: o giro do espelho",
+     "texto": "Vem do enunciado, e a normal gira junto com o espelho.\ng = 20°"
+    },
+    {
+     "titulo": "Um exemplo com números",
+     "texto": "Chega a 30° da normal: entre os raios há 2 × 30 = 60°. O espelho gira 20°: passa a 50°, e 2 × 50 = 100°.\nMudou 100 − 60 = 40°"
+    },
+    {
+     "titulo": "Achando G: o seu jeito",
+     "texto": "Parece certo responder 20°, o mesmo giro do espelho. Mas o raio refletido muda o dobro.\nG = 2 × 20 = 40°"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "G = 2 × 20 = 40°\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "g",
+        "20°"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"o espelho gira e o raio incidente fica parado\" → o raio refletido gira o dobro do espelho.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "espelho gira 20°"
+       ],
+       [
+        "2. Equação em letras",
+        "G = 2 × g"
+       ],
+       [
+        "3. Achar cada letra",
+        "g = 20°"
+       ],
+       [
+        "4. Substituir",
+        "2 × 20 = 40"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "O espelho gira 15° com o raio incidente parado. Quantos graus gira o raio refletido?",
+    "opcoes": [
+     "30°",
+     "15°",
+     "7,5°",
+     "60°"
+    ],
+    "certa": "30°",
+    "resposta": "O refletido gira o dobro do espelho: 2 × 15° = 30°."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Questão de nível acima: um espelho gira e o raio que chega fica parado."
+       ],
+       [
+        3.4,
+        "O raio que sai também vai girar. Quanto?"
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 40,
+        "s": "O espelho que gira",
+        "cor": "tinta",
+        "tam": 38,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "linha",
+        "x1": 100,
+        "y1": 210,
+        "x2": 300,
+        "y2": 210,
+        "cor": "tinta",
+        "t": 0.6,
+        "dur": 0.6
+       },
+       {
+        "k": "linha",
+        "x1": 130,
+        "y1": 120,
+        "x2": 200,
+        "y2": 210,
+        "cor": "azul",
+        "t": 1.4,
+        "dur": 0.6
+       },
+       {
+        "k": "linha",
+        "x1": 200,
+        "y1": 210,
+        "x2": 270,
+        "y2": 120,
+        "cor": "vermelho",
+        "t": 2.2,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 256,
+        "s": "o raio que chega fica parado",
+        "cor": "cinza",
+        "tam": 26,
+        "t": 3.4,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "Raio incidente é o que chega ao espelho. Raio refletido é o que sai dele."
+       ],
+       [
+        4.2,
+        "O raio que chega fica parado; só o espelho gira. Ângulo se mede em graus, escritos °."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "Um raio de luz incide em um espelho plano. Sem mudar o raio incidente, o espelho gira 20°. Em quantos graus gira o raio refletido?",
+      "alternativas": [
+       "10°",
+       "20°",
+       "40°",
+       "60°",
+       "80°"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Espelho plano. O raio que chega não muda."
+       ],
+       [
+        2.8,
+        "O espelho gira 20°."
+       ],
+       [
+        4.6,
+        "Quero saber quanto gira o raio que sai."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "o que a questão dá",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "espelho plano",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 124,
+        "s": "o espelho gira 20°",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 164,
+        "s": "raio que chega: parado",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 186,
+        "w": 330,
+        "h": 46,
+        "t": 4.6,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 220,
+        "s": "quero: giro do refletido",
+        "cor": "vermelho",
+        "tam": 28,
+        "t": 4.7,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Normal é a linha perpendicular ao espelho (forma 90° com ele), no ponto onde o raio bate."
+       ],
+       [
+        3.6,
+        "Lei da reflexão: ângulo de chegada = ângulo de saída, medidos a partir da normal."
+       ],
+       [
+        8.4,
+        "Exemplo: chega a 30°, sai a 30° do outro lado: entre os raios há 2 × 30 = 60°."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "linha",
+        "x1": 90,
+        "y1": 200,
+        "x2": 310,
+        "y2": 200,
+        "cor": "tinta",
+        "t": 0.4,
+        "dur": 0.6
+       },
+       {
+        "k": "linha",
+        "x1": 200,
+        "y1": 200,
+        "x2": 200,
+        "y2": 92,
+        "cor": "cinza",
+        "t": 1.2,
+        "dur": 0.5
+       },
+       {
+        "k": "tx",
+        "x": 214,
+        "y": 108,
+        "s": "normal",
+        "cor": "cinza",
+        "tam": 20,
+        "t": 1.7,
+        "ancora": "start"
+       },
+       {
+        "k": "linha",
+        "x1": 142,
+        "y1": 100,
+        "x2": 200,
+        "y2": 200,
+        "cor": "azul",
+        "t": 3.8,
+        "dur": 0.5
+       },
+       {
+        "k": "linha",
+        "x1": 200,
+        "y1": 200,
+        "x2": 258,
+        "y2": 100,
+        "cor": "vermelho",
+        "t": 4.4,
+        "dur": 0.5
+       },
+       {
+        "k": "tx",
+        "x": 166,
+        "y": 160,
+        "s": "30°",
+        "cor": "azul",
+        "tam": 20,
+        "t": 5.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 236,
+        "y": 160,
+        "s": "30°",
+        "cor": "vermelho",
+        "tam": 20,
+        "t": 5.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 238,
+        "s": "ângulo de chegada = ângulo de saída",
+        "cor": "cinza",
+        "tam": 22,
+        "t": 3.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 268,
+        "s": "entre os raios: 2 × 30 = 60°",
+        "cor": "verde",
+        "tam": 26,
+        "t": 8.4,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Gira o espelho 20°: a normal gira 20° junto."
+       ],
+       [
+        3.4,
+        "O raio que chega fica parado: o ângulo com a normal vai de 30° a 30 + 20 = 50°."
+       ],
+       [
+        8.0,
+        "O raio sai a 50° do outro lado: agora 2 × 50 = 100° entre os raios. Antes, 60°."
+       ],
+       [
+        12.6,
+        "O refletido girou 100 − 60 = 40°."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 30,
+        "s": "depois de girar 20°",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 76,
+        "s": "a normal gira 20° junto",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 112,
+        "s": "com a normal: 30° → 50°",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 3.4,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 148,
+        "s": "agora 2 × 50 = 100° (antes 60°)",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 8.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 168,
+        "w": 330,
+        "h": 52,
+        "t": 12.6,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 206,
+        "s": "girou: 100 − 60 = 40°",
+        "cor": "verde",
+        "tam": 36,
+        "t": 12.7,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Chegada e saída têm o mesmo ângulo com a normal: entre os raios há o dobro dele."
+       ],
+       [
+        4.4,
+        "O refletido gira o dobro do espelho: 2 × 20° = 40°. O espelho gira metade do refletido."
+       ],
+       [
+        9.0,
+        "Para o outro lado, o ângulo vai de 30° a 10°: também muda 40°. Resposta: C."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 30,
+        "s": "a regra",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 86,
+        "s": "entre raios: 2 × ângulo com a normal",
+        "cor": "tinta",
+        "tam": 24,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 132,
+        "s": "refletido gira: 2 × espelho",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 4.4,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 156,
+        "w": 330,
+        "h": 56,
+        "t": 5.6,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 200,
+        "s": "2 × 20° = 40°",
+        "cor": "verde",
+        "tam": 40,
+        "t": 5.7,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 252,
+        "s": "resposta: C",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 7.0,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "A divide por 2. B copia. D triplica. E dobra duas vezes. O certo é dobrar uma vez só."
+       ],
+       [
+        4.5,
+        "A certa é a C."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · 10°: metade do giro do espelho",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "B · 20°: o mesmo giro do espelho",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 2.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "D · 60°: triplicou o giro",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 80°: dobrou duas vezes",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: C, 40°",
+        "cor": "verde",
+        "tam": 32,
+        "t": 6.5,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.30000000000000004,
+        "O raio refletido gira o dobro do espelho."
+       ],
+       [
+        3.0999999999999996,
+        "O exemplo 30° → 50° mostra a conta: 60° viram 100°, mudança de 40°."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. normal: perpendicular ao espelho",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "2. espelho 20°: refletido 40°",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 172,
+        "w": 270,
+        "h": 6,
+        "t": 3.8,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "3. teste: 30° → 50°",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 5.0,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "O espelho gira 15° com o raio incidente parado. Quantos graus gira o raio refletido?",
+      "opcoes": [
+       "30°",
+       "15°",
+       "7,5°",
+       "60°"
+      ],
+      "certa": 0,
+      "porque": [
+       "O refletido gira o dobro do espelho: 2 × 15° = 30°.",
+       "15° é o giro do espelho, não do raio refletido.",
+       "7,5° é a metade do giro do espelho.",
+       "60° dobra duas vezes: 4 × 15°."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: com o raio incidente parado, o raio refletido gira 50°. Quantos graus gira o espelho?",
+      "opcoes": [
+       "25°",
+       "50°",
+       "100°",
+       "12,5°"
+      ],
+      "certa": 0,
+      "porque": [
+       "O espelho gira a metade do refletido: 50 ÷ 2 = 25°.",
+       "50° seria o espelho girando igual ao refletido.",
+       "100° dobra em vez de dividir por 2.",
+       "12,5° divide duas vezes."
+      ]
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-ele-01",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Um fio de cobre tem resistência R. Esse fio é esticado, sem perder nem ganhar material, até ficar com o dobro do comprimento. A resistência passa a ser:",
+  "A": "R/2",
+  "B": "R",
+  "C": "2R",
+  "D": "4R",
+  "E": "8R",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "R = comprimento ÷ grossura; esticar 2 vezes: comprimento 2 e grossura 1/2; 2 ÷ 1/2 = 4. D. A = 1 ÷ 2 em vez de 2 ÷ 1/2; B = ignorou a mudança; C = só o comprimento (2R); E = dobrou 3 vezes (8R).",
+   "ideia": "A resistência é o comprimento dividido pela grossura. Esticando para o dobro, o comprimento vai de 1 para 2 e a grossura cai para 1/2, então R2 = 2 ÷ 1/2 = 4: a resistência fica 4R.",
+   "pecas": [
+    {
+     "termo": "Resistência",
+     "significado": "Dificuldade que o fio faz para a corrente passar; cresce com o comprimento e diminui com a grossura."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Resistência do fio",
+        "formula": "R = comprimento ÷ grossura"
+       },
+       {
+        "figura": "circuito",
+        "nome": "Material igual",
+        "formula": "comprimento × grossura não muda"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Comprimento",
+        "1, depois 2"
+       ],
+       [
+        "Grossura",
+        "1, depois ?"
+       ],
+       [
+        "Resistência",
+        "R, depois ?"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a nova resistência, R2.\nPor que a grossura cai? O cobre é o mesmo, então comprimento × grossura fica igual a 1. Com comprimento 2, a grossura só pode ser 1/2.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "R2 = 2 ÷ G",
+      "leitura": "comprimento novo ÷ grossura nova",
+      "letras": [
+       {
+        "letra": "R2",
+        "oque": "resistência nova (o que a questão quer)"
+       },
+       {
+        "letra": "G",
+        "oque": "grossura nova"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando G: a grossura nova",
+     "texto": "Cobre igual: comprimento × grossura = 1. Com comprimento 2:\nG = 1/2 (metade da grossura)"
+    },
+    {
+     "titulo": "Achando R2: o seu jeito",
+     "texto": "Parece certo dobrar a resistência, porque o fio dobrou. Mas ele também ficou mais fino.\nR2 = 2 ÷ 1/2 = 4 (em 2 cabem 4 metades)"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "R2 = 2 ÷ 1/2 = 4 vezes R\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "G",
+        "1/2"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"fio esticado sem perder material\" → o comprimento sobe e a grossura cai na mesma proporção: esticar 2 vezes deixa R 4 vezes maior.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "comprimento 1 → 2"
+       ],
+       [
+        "2. Equação em letras",
+        "R2 = 2 ÷ G"
+       ],
+       [
+        "3. Achar cada letra",
+        "G = 1/2"
+       ],
+       [
+        "4. Substituir",
+        "2 ÷ 1/2 = 4"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um fio de resistência R é esticado até ter o triplo do comprimento, sem perder material. Nova resistência?",
+    "opcoes": [
+     "3R",
+     "6R",
+     "9R",
+     "27R"
+    ],
+    "certa": "9R",
+    "resposta": "Comprimento 3 e grossura 1/3: 3 ÷ 1/3 = 9."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Questão de nível acima: um fio de cobre é esticado."
+       ],
+       [
+        3.2,
+        "Fica mais comprido e, como o cobre é o mesmo, mais fino."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 40,
+        "s": "O fio esticado",
+        "cor": "tinta",
+        "tam": 40,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caminho",
+        "d": "M60 100L200 100",
+        "cor": "tinta",
+        "t": 0.8,
+        "dur": 0.8,
+        "larg": 10
+       },
+       {
+        "k": "tx",
+        "x": 130,
+        "y": 140,
+        "s": "antes",
+        "cor": "cinza",
+        "tam": 22,
+        "t": 1.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "caminho",
+        "d": "M60 190L340 190",
+        "cor": "azul",
+        "t": 2.0,
+        "dur": 1.2,
+        "larg": 4
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 226,
+        "s": "depois: mais comprido e mais fino",
+        "cor": "cinza",
+        "tam": 24,
+        "t": 3.4,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "Resistência é a dificuldade que o fio faz para a corrente passar."
+       ],
+       [
+        3.6,
+        "Grossura é o tamanho do corte do fio: a área do círculo que aparece se o fio for cortado."
+       ],
+       [
+        7.6,
+        "Fio mais comprido atrapalha mais. Fio mais grosso atrapalha menos."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "Um fio de cobre tem resistência R. Esse fio é esticado, sem perder nem ganhar material, até ficar com o dobro do comprimento. A resistência passa a ser:",
+      "alternativas": [
+       "R/2",
+       "R",
+       "2R",
+       "4R",
+       "8R"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Um fio de cobre, com resistência R."
+       ],
+       [
+        2.6,
+        "Ele é esticado até o dobro do comprimento, sem perder material."
+       ],
+       [
+        5.4,
+        "Quero a resistência nova."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "o que a questão dá",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "fio de cobre: resistência R",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 124,
+        "s": "esticado até o dobro",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 164,
+        "s": "sem perder material",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 186,
+        "w": 330,
+        "h": 46,
+        "t": 5.4,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 220,
+        "s": "quero: a resistência nova",
+        "cor": "vermelho",
+        "tam": 28,
+        "t": 5.5,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Para ver quanto, use números. Fio de comprimento 1 e grossura 1: resistência = comprimento ÷ grossura = 1."
+       ],
+       [
+        5.2,
+        "Mais comprido: a resistência sobe. Mais grosso: desce. Por isso é uma divisão."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "com números",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 86,
+        "s": "comprimento 1, grossura 1",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 108,
+        "w": 330,
+        "h": 52,
+        "t": 3.0,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 146,
+        "s": "R = 1 ÷ 1 = 1",
+        "cor": "verde",
+        "tam": 36,
+        "t": 3.1,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 196,
+        "s": "mais comprido: R sobe",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 5.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 232,
+        "s": "mais grosso: R desce",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 6.4,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Esticar para o dobro: o comprimento vai de 1 para 2."
+       ],
+       [
+        3.6,
+        "O cobre é o mesmo: comprimento × grossura continua 1. Com comprimento 2, a grossura cai para 1/2."
+       ],
+       [
+        8.6,
+        "1/2 é metade: o fio fica com metade da grossura."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "esticando o fio",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 86,
+        "s": "antes: 1 × 1 = 1 de cobre",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 130,
+        "s": "depois: 2 × ? = 1",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 154,
+        "w": 330,
+        "h": 50,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 190,
+        "s": "? = 1/2  (metade da grossura)",
+        "cor": "verde",
+        "tam": 28,
+        "t": 6.5,
+        "ancora": "start"
+       },
+       {
+        "k": "circ",
+        "cx": 352,
+        "cy": 96,
+        "r": 20,
+        "cor": "azul",
+        "t": 1.2
+       },
+       {
+        "k": "tx",
+        "x": 352,
+        "y": 136,
+        "s": "área 1",
+        "cor": "azul",
+        "tam": 18,
+        "t": 1.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "circ",
+        "cx": 352,
+        "cy": 212,
+        "r": 14,
+        "cor": "vermelho",
+        "t": 8.6
+       },
+       {
+        "k": "tx",
+        "x": 352,
+        "y": 244,
+        "s": "área 1/2",
+        "cor": "vermelho",
+        "tam": 18,
+        "t": 9.0,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Resistência nova = comprimento ÷ grossura = 2 ÷ 1/2."
+       ],
+       [
+        3.8,
+        "Quantas metades cabem em 2? Quatro. Então 2 ÷ 1/2 = 4."
+       ],
+       [
+        8.0,
+        "A resistência ficou 4 vezes maior: 4R. Resposta: letra D."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "a resistência nova",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 86,
+        "s": "R nova = 2 ÷ 1/2",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 130,
+        "s": "em 2 cabem 4 metades",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 154,
+        "w": 330,
+        "h": 56,
+        "t": 8.0,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 198,
+        "s": "= 4  →  4R",
+        "cor": "verde",
+        "tam": 40,
+        "t": 8.1,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 252,
+        "s": "resposta: D",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 9.2,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "A certa conta as duas mudanças: o comprimento dobra e a grossura cai à metade. A letra C conta só a primeira."
+       ],
+       [
+        4.5,
+        "A certa é a D."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · R/2: 1 ÷ 2 em vez de 2 ÷ 1/2",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "B · R: cobre igual, R igual",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 2.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "C · 2R: só o comprimento dobrou",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 8R: dobrou três vezes",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: D, 4R",
+        "cor": "verde",
+        "tam": 32,
+        "t": 6.5,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Esticar 2 vezes: a resistência fica 4 vezes maior (2 × 2)."
+       ],
+       [
+        3.6,
+        "Esticar 3 vezes: comprimento 3 e grossura 1/3 (um terço). Em 3 inteiros cabem 9 terços: R fica 9 vezes maior."
+       ],
+       [
+        9.0,
+        "É o fator vezes ele mesmo: o comprimento cresce e a grossura diminui no mesmo fator."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. R = comprimento ÷ grossura",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 150,
+        "s": "2. esticar 2 vezes: R fica 4 vezes",
+        "cor": "tinta",
+        "tam": 25,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 166,
+        "w": 300,
+        "h": 6,
+        "t": 3.8,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 206,
+        "s": "3. esticar 3 vezes: R fica 9 vezes",
+        "cor": "tinta",
+        "tam": 25,
+        "t": 5.0,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Um fio de resistência R é esticado até ter o triplo do comprimento, sem perder material. Qual a nova resistência?",
+      "opcoes": [
+       "3R",
+       "6R",
+       "9R",
+       "27R"
+      ],
+      "certa": 2,
+      "porque": [
+       "3R seria só o comprimento triplicando. A grossura também cai.",
+       "6R não tem base: 3 + 3 não aparece na conta.",
+       "Comprimento 3 e grossura 1/3 (um terço): 3 ÷ 1/3 = 9, porque em 3 inteiros cabem 9 terços.",
+       "27R seria 3 × 3 × 3: a conta tem só duas mudanças, não três."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: um fio é esticado até ter 5 vezes o comprimento, sem perder material. A resistência fica quantas vezes maior?",
+      "opcoes": [
+       "5",
+       "10",
+       "25",
+       "125"
+      ],
+      "certa": 2,
+      "porque": [
+       "5 vezes é só o comprimento. A grossura cai para 1/5.",
+       "10 vem de 5 + 5. As mudanças se multiplicam, não se somam.",
+       "Comprimento 5 e grossura 1/5 (um quinto): 5 ÷ 1/5 = 25, que é 5 × 5.",
+       "125 seria 5 × 5 × 5: só há duas mudanças."
+      ]
+     }
+    ]
+   }
+  }
  }
 ]

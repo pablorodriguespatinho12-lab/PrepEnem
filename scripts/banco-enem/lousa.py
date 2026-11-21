@@ -13,7 +13,7 @@ MARGEM = 6
 CORES = {'tinta', 'azul', 'vermelho', 'verde', 'amarelo', 'cinza', 'rosa', 'verdeClaro'}
 MAX_TEXTO, MAX_FALA, MAX_FALAS, MAX_CENAS = 80, 160, 4, 16
 AVISOS = []
-MAX_FALA_DA_TELA = 300
+MAX_FALA_DA_TELA = 260
 
 
 def _erro(msg):
@@ -63,7 +63,16 @@ def grade(cols, rows, x0, y0, s, gap, t0, passo, marcados=()):
     return dict(k='grade', cols=cols, rows=rows, x0=x0, y0=y0, s=s, gap=gap, t0=t0, passo=passo, marcados=list(marcados))
 
 
+# Frases que só falam da aula, sem explicar conteúdo (Pablo, 21/11/2026: "fica tirado fora de contexto").
+META_FALAS = ('O que a questão cobrou', 'Cada letra errada', 'Viu o que', 'Lê com calma')
+
+
 def _fala(fala):
+    original = list(fala)
+    fala = [f for f in fala if not f[1].startswith(META_FALAS)]
+    if fala and fala[0] is not original[0]:
+        atraso = fala[0][0] - .3  # a 1ª fala que sobrou passa a abrir a tela
+        fala = [(max(.3, t - atraso), s) for t, s in fala]
     if not 1 <= len(fala) <= MAX_FALAS:
         _erro(f'cada tela tem de 1 a {MAX_FALAS} falas')
     for _, frase in fala:
