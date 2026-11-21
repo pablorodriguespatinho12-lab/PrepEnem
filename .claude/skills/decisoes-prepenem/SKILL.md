@@ -138,7 +138,11 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   mudar uma aula por causa de uma dúvida dele, refazer o quadro inteiro, não colar tela nova.** Frase de
   contagem diz entre o quê ("só 1 deste trio"). Até ~300 letras de fala por tela (`lousa.py` avisa):
   fala comprida faz o balão crescer e a lousa encolher.
-  Ids `d2-escada-xxx-ita-` entram no degrau ITA
+  **Aula nova começa pelo canal (Pablo, 21/11/2026: "tem que ser baseado naqueles vídeos"; ~60 h, 9 vídeos):
+  ANTES de escrever, `grep -n -i -- palavra docs/universo-narrado/capitulos/*.txt` e ler o trecho; a ficha
+  leva `canal='arquivo [h:mm:ss]'` ou `'fora do canal: motivo'` e `montar.py` barra sem isso.** Eu li esta
+  regra na memória no começo da sessão e escrevi 14 aulas pelo meu jeito; só depois conferi (a porcentagem
+  e a média tinham que ser refeitas). Ids `d2-escada-xxx-ita-` entram no degrau ITA
   antes das antigas (`lib/prova-da-escada.ts`).
 
 ## Conteúdo gerado por IA

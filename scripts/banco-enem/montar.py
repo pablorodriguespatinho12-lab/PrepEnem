@@ -118,6 +118,11 @@ def passos_aula(f):
 
 
 def montar(f):
+    # Aula de lousa tem que dizer de onde veio no canal Universo Narrado (arquivo e marca de tempo) ou
+    # "fora do canal: ..." (Pablo, 21/11/2026: "tem que ser baseado naqueles vídeos"). Ler o canal ANTES:
+    # grep -n -i -- palavra docs/universo-narrado/capitulos/*.txt
+    if 'lousa' in f and not f.get('canal'):
+        raise SystemExit(f"{f['id']}: aula de lousa sem `canal=` (arquivo e [h:mm:ss] do canal, ou 'fora do canal: motivo')")
     certa = f['alts'][LETRAS.index(f['resp'])]
     if 'confere' in f:
         valor = f['confere']
