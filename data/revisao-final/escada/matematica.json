@@ -3859,7 +3859,7 @@
        ],
        [
         2.6,
-        "Só uma está crescente: 2, 5, 8."
+        "Só uma está crescente nesse trio: 2, 5, 8."
        ],
        [
         5.2,
@@ -3986,7 +3986,7 @@
        ],
        [
         2.8,
-        "Sempre 6 filas e só 1 crescente."
+        "Em qualquer trio: 6 filas e só 1 crescente."
        ],
        [
         5.4,
@@ -4051,6 +4051,104 @@
         "cor": "vermelho",
         "tam": 28,
         "t": 5.0,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Boa pergunta: 3, 7, 9 também é crescente! E 1, 2, 3 também. Existem muitas filas crescentes."
+       ],
+       [
+        4.6,
+        "Mas cada trio de cartões tem só 1 fila crescente: a dele, do menor para o maior."
+       ],
+       [
+        9.0,
+        "Cada trio entra com 6 filas e só 1 é crescente. Em todos os trios dá 1 em cada 6."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "cada trio tem a sua crescente",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 76,
+        "s": "trio 2, 5, 8:  crescente 2 · 5 · 8",
+        "cor": "tinta",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 112,
+        "s": "trio 3, 7, 9:  crescente 3 · 7 · 9",
+        "cor": "tinta",
+        "tam": 25,
+        "t": 2.4,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 148,
+        "s": "trio 1, 2, 3:  crescente 1 · 2 · 3",
+        "cor": "tinta",
+        "tam": 25,
+        "t": 4.0,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 182,
+        "s": "e assim em todos os outros trios",
+        "cor": "cinza",
+        "tam": 24,
+        "t": 5.4,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 196,
+        "w": 345,
+        "h": 46,
+        "t": 9.0,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 230,
+        "s": "cada trio: 6 filas, só 1 crescente",
+        "cor": "vermelho",
+        "tam": 26,
+        "t": 9.1,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 268,
+        "s": "em todos juntos: 1 em cada 6",
+        "cor": "verde",
+        "tam": 28,
+        "t": 10.4,
         "ancora": "middle"
        }
       ]
@@ -4139,7 +4237,7 @@
         "k": "tx",
         "x": 200,
         "y": 224,
-        "s": "só 1 crescente: chance = 1 ÷ k!",
+        "s": "só 1 em cada trio: chance = 1 ÷ k!",
         "cor": "verde",
         "tam": 26,
         "t": 13.2,
@@ -4170,7 +4268,7 @@
        ],
        [
         6.4,
-        "Cada trio tem 6 filas e só 1 é crescente. Então 504 ÷ 6 = 84 filas crescentes."
+        "As 504 filas vêm de trios, 6 filas por trio: 504 ÷ 6 = 84 trios. Cada trio tem 1 fila crescente: são 84 crescentes."
        ],
        [
         10.0,
@@ -4378,9 +4476,9 @@
         "k": "tx",
         "x": 30,
         "y": 156,
-        "s": "2. só 1 fila é crescente",
+        "s": "2. cada trio: só 1 fila crescente",
         "cor": "tinta",
-        "tam": 28,
+        "tam": 26,
         "t": 2.6,
         "ancora": "start"
        },

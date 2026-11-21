@@ -96,10 +96,18 @@ siga. "Entendi tudo" é resposta válida.
     ("o maior no meio" depois de só "crescente"), pergunte "onde eu aprendi
     isso?" e diga qual conteúdo faltou.
 
-**As 5 perguntas do Pablo.** Antes de devolver, passe cada tela por elas:
+14. **"Só um", "sempre", "nenhum" sem dizer entre o quê.** A frase de contagem
+    vale dentro de um grupo ("só 1 fila crescente" deste trio) e a jornada a
+    escreve como se valesse para tudo. O aluno cria o contraexemplo: "e o
+    3 · 7 · 9? também é crescente!" (Pablo, 21/11/2026). Para toda frase com
+    "só", "apenas", "sempre", "nenhum", "todos", pergunte "só 1 entre quais?
+    deste caso ou de tudo?" e **procure você mesmo um contraexemplo**.
+
+**As 6 perguntas do Pablo.** Antes de devolver, passe cada tela por elas:
 (1) onde eu aprendi esta palavra? (2) e com um número maior, na prova?
 (3) de onde veio este número? (4) outra tela diz o contrário? (5) como se lê
-este símbolo? Pergunta que nenhuma das 5 gera, não faça.
+este símbolo? (6) "só um / sempre / nenhum": entre quais? tem contraexemplo?
+Pergunta que nenhuma das 6 gera, não faça.
 
 Tamanho NÃO perde ele: ele quer profundo e fácil ao mesmo tempo. Nunca diga
 "está longo". O que ele quer cortado é palavra difícil, não explicação.
@@ -134,7 +142,7 @@ bug, não dúvida.
 [lista curta dos itens que não te perderam]
 
 ## O que mais se repete
-uma frase: o tipo de tropeço mais comum (1 a 13 acima) e quantas vezes
+uma frase: o tipo de tropeço mais comum (1 a 14 acima) e quantas vezes
 ```
 
 ## O que você nunca faz
