@@ -111,6 +111,18 @@ export const ANEIS_ESCURO: PaletaAneis = {
   luz: ['#fff1c9', '#ffd98a', '#7fe0d0', '#2a9d93'],
 };
 
+/* Anéis em verde floresta (tema Verde; mesmo desenho, matiz 150 em vez de 190). */
+export const ANEIS_VERDE_CLARO: PaletaAneis = {
+  aneis: ['#176b43', '#145e3b', '#115133', '#0e452b', '#0b3924'],
+  linha: '#2f8c5e',
+  luz: ['#fff4d6', '#e8f6e4', '#a8e6b8', '#52bd7a'],
+};
+export const ANEIS_VERDE_ESCURO: PaletaAneis = {
+  aneis: ['#0e3a26', '#0c3120', '#0a291b', '#082116', '#061b12'],
+  linha: '#17543a',
+  luz: ['#fff1c9', '#ffe39a', '#86e0a6', '#2f9d63'],
+};
+
 /** Gerador com semente: o mesmo desenho a cada visita (sem pinheiro pulando). */
 export function aleatorio(semente: number): () => number {
   let s = semente;
@@ -281,7 +293,11 @@ export function aneis(c: Pincel, W: number, H: number, p: PaletaAneis, cx: numbe
       else {
         const k = (d - r0) / larg;
         const i = Math.min(Math.floor(k), p.aneis.length - 1);
-        cor = k % 1 < 0.12 && i < 4 ? p.linha : p.aneis[i];
+        const frac = k % 1;
+        // Pontilhado Bayer no fim de cada faixa: o anel passa para o próximo por pixels, nunca por degradê liso.
+        cor = frac < 0.12 && i < 4 ? p.linha
+          : frac > 0.7 && i < p.aneis.length - 1 ? faixa([p.aneis[i], p.aneis[i + 1]], (frac - 0.7) / 0.3, x, y)
+          : p.aneis[i];
       }
       ponto(c, cor, x, y);
     }

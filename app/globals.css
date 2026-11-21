@@ -1116,7 +1116,7 @@ html[data-imersivo] main { margin-left: 0 !important; padding-top: 0 !important;
 /* Início (voto 1B): anéis e luz atrás do bloco de hoje. */
 .anel-inicio { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
 .anel-inicio .ai-imagem { position: absolute; inset: 0; background-size: 100% 100%; image-rendering: pixelated; }
-.anel-inicio .ai-brilho { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(255, 244, 214, .55), rgba(159, 224, 230, .15) 45%, transparent 70%); }
+.anel-inicio .ai-brilho { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(255, 244, 214, .55), rgba(var(--ai-tom, 159, 224, 230), .15) 45%, transparent 70%); }
 .anel-inicio .ai-faisca { position: absolute; width: 5px; height: 5px; background: #fff4d6; opacity: .8; }
 .anel-inicio[data-animado="sim"] .ai-brilho { animation: ai-respirar 4.5s steps(6) infinite !important; }
 .anel-inicio[data-animado="sim"] .ai-faisca { animation: ai-faisca 3s steps(6) var(--atraso, 0s) infinite !important; }
