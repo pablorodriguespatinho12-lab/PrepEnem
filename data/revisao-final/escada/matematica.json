@@ -3271,11 +3271,11 @@
       "fala": [
        [
         0.3,
-        "Hoje é uma questão de nível acima, estilo vestibular difícil."
+        "Questão de nível acima: cartões numerados, tirados da caixa e postos em fila."
        ],
        [
-        3.2,
-        "A conta é curta. O difícil é enxergar o truque."
+        3.4,
+        "A pergunta é a chance de saírem em ordem crescente."
        ]
       ],
       "desenho": [
@@ -3385,11 +3385,11 @@
       "fala": [
        [
         0.3,
-        "Lê com calma. \"Crescente\" é cada número maior que o anterior, como 2, 5, 8."
+        "\"Crescente\" é cada número maior que o anterior, como 2, 5, 8. \"Estritamente\" quer dizer sem empate: nenhum igual ao anterior."
        ],
        [
-        4.6,
-        "\"Probabilidade\" é a chance de acontecer. Depois eu separo o que importa."
+        6.0,
+        "\"Probabilidade\" é a chance de acontecer."
        ]
       ],
       "rotulo": "Questão de nível acima",
@@ -3415,7 +3415,7 @@
        ],
        [
         5.6,
-        "Quero a chance de a fila ficar crescente."
+        "Quero a chance de os 3 cartões saírem em ordem crescente."
        ]
       ],
       "desenho": [
@@ -3673,19 +3673,15 @@
       "fala": [
        [
         0.3,
-        "Para contar as ordens, enche 3 lugares, um de cada vez."
+        "Para contar todas as ordens, enche 3 lugares, um de cada vez."
        ],
        [
         3.0,
-        "No 1º lugar cabe qualquer um dos 3 cartões: 3 jeitos."
+        "No 1º lugar cabe qualquer um dos 3 cartões: 3 jeitos. No 2º sobraram 2. No 3º, só 1."
        ],
        [
-        5.8,
-        "No 2º sobraram 2 cartões. No 3º, só 1."
-       ],
-       [
-        8.4,
-        "Para cada um dos 3 do 1º lugar há 2 no 2º e 1 no 3º: por isso multiplica, não soma. Dá 6."
+        8.0,
+        "Cada um dos 3 do 1º lugar tem 2 no 2º e 1 no 3º: multiplica, não soma. Dá 6."
        ]
       ],
       "desenho": [
@@ -3693,7 +3689,7 @@
         "k": "tx",
         "x": 200,
         "y": 30,
-        "s": "de onde vem o 6",
+        "s": "quantas ordens: 6",
         "cor": "tinta",
         "tam": 30,
         "t": 0.2,
@@ -3855,15 +3851,193 @@
       "fala": [
        [
         0.3,
-        "Essas são as 6 filas possíveis."
+        "Quantas dessas 6 ordens são crescentes? Pelos mesmos lugares, sem listar."
+       ],
+       [
+        4.0,
+        "1º lugar: tem que ir o menor, o 2. Se o 5 fosse primeiro, o 2 viria depois e seria menor. 1 jeito."
+       ],
+       [
+        9.0,
+        "2º: o menor que sobrou, o 5. 3º: o que sobrou, o 8. Cada lugar tem 1 jeito: 1 × 1 × 1 = 1 crescente."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 30,
+        "s": "quantas crescentes: 1",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 60,
+        "y": 64,
+        "w": 80,
+        "h": 80,
+        "cor": "tinta",
+        "t": 0.6,
+        "dur": 0.6
+       },
+       {
+        "k": "caixa",
+        "x": 160,
+        "y": 64,
+        "w": 80,
+        "h": 80,
+        "cor": "tinta",
+        "t": 0.9,
+        "dur": 0.6
+       },
+       {
+        "k": "caixa",
+        "x": 260,
+        "y": 64,
+        "w": 80,
+        "h": 80,
+        "cor": "tinta",
+        "t": 1.2,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 100,
+        "y": 56,
+        "s": "1º lugar",
+        "cor": "cinza",
+        "tam": 22,
+        "t": 1.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 56,
+        "s": "2º lugar",
+        "cor": "cinza",
+        "tam": 22,
+        "t": 1.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 300,
+        "y": 56,
+        "s": "3º lugar",
+        "cor": "cinza",
+        "tam": 22,
+        "t": 2.0,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 100,
+        "y": 122,
+        "s": "2",
+        "cor": "azul",
+        "tam": 56,
+        "t": 4.4,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 122,
+        "s": "5",
+        "cor": "vermelho",
+        "tam": 56,
+        "t": 8.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 300,
+        "y": 122,
+        "s": "8",
+        "cor": "verde",
+        "tam": 56,
+        "t": 10.0,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 100,
+        "y": 164,
+        "s": "o menor",
+        "cor": "azul",
+        "tam": 20,
+        "t": 4.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 164,
+        "s": "o próximo",
+        "cor": "vermelho",
+        "tam": 20,
+        "t": 9.0,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 300,
+        "y": 164,
+        "s": "o que sobrou",
+        "cor": "verde",
+        "tam": 20,
+        "t": 10.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "hl",
+        "x": 50,
+        "y": 184,
+        "w": 300,
+        "h": 50,
+        "t": 13.0,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 222,
+        "s": "1 × 1 × 1 = 1 crescente",
+        "cor": "verde",
+        "tam": 38,
+        "t": 13.1,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 262,
+        "s": "em cada lugar, 1 jeito só",
+        "cor": "azul",
+        "tam": 24,
+        "t": 14.2,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Conferindo na lista das 6 ordens de 2, 5 e 8."
        ],
        [
         2.6,
-        "Só uma está crescente nesse trio: 2, 5, 8."
+        "Só 2, 5, 8 é crescente, como a conta dos lugares disse."
        ],
        [
         5.2,
-        "As outras cinco estão bagunçadas."
+        "Então, neste trio, a chance é 1 em 6, que se escreve 1/6 ou 1 ÷ 6."
        ]
       ],
       "desenho": [
@@ -3871,7 +4045,7 @@
         "k": "tx",
         "x": 200,
         "y": 32,
-        "s": "as 6 filas com 2, 5 e 8",
+        "s": "as 6 ordens de 2, 5 e 8",
         "cor": "tinta",
         "tam": 28,
         "t": 0.2,
@@ -3959,7 +4133,7 @@
         "k": "tx",
         "x": 200,
         "y": 214,
-        "s": "1 fila boa em 6",
+        "s": "1 crescente em 6",
         "cor": "vermelho",
         "tam": 38,
         "t": 4.3,
@@ -3969,7 +4143,7 @@
         "k": "tx",
         "x": 200,
         "y": 258,
-        "s": "vale para QUALQUER trio de cartões",
+        "s": "a lista confirma a conta dos lugares",
         "cor": "azul",
         "tam": 26,
         "t": 5.4,
@@ -3982,93 +4156,15 @@
       "fala": [
        [
         0.3,
-        "Vale para qualquer trio, não só 2, 5 e 8."
+        "Outros trios também têm a sua. 3, 7, 9 é crescente. 1, 2, 3 também."
        ],
        [
-        2.8,
-        "Em qualquer trio: 6 filas e só 1 crescente."
-       ],
-       [
-        5.4,
-        "Então a chance é 1 em 6, que se escreve 1/6."
-       ]
-      ],
-      "desenho": [
-       {
-        "k": "tx",
-        "x": 200,
-        "y": 36,
-        "s": "qualquer trio de cartões",
-        "cor": "tinta",
-        "tam": 30,
-        "t": 0.2,
-        "ancora": "middle"
-       },
-       {
-        "k": "tx",
-        "x": 200,
-        "y": 100,
-        "s": "6 filas possíveis",
-        "cor": "tinta",
-        "tam": 38,
-        "t": 0.8,
-        "ancora": "middle"
-       },
-       {
-        "k": "tx",
-        "x": 200,
-        "y": 150,
-        "s": "1 é crescente",
-        "cor": "verde",
-        "tam": 38,
-        "t": 2.0,
-        "ancora": "middle"
-       },
-       {
-        "k": "hl",
-        "x": 70,
-        "y": 176,
-        "w": 260,
-        "h": 62,
-        "t": 3.4,
-        "cor": "amarelo"
-       },
-       {
-        "k": "tx",
-        "x": 200,
-        "y": 224,
-        "s": "chance = 1/6",
-        "cor": "vermelho",
-        "tam": 54,
-        "t": 3.5,
-        "ancora": "middle"
-       },
-       {
-        "k": "tx",
-        "x": 200,
-        "y": 268,
-        "s": "Resposta: D, 1/6",
-        "cor": "vermelho",
-        "tam": 28,
-        "t": 5.0,
-        "ancora": "middle"
-       }
-      ]
-     },
-     {
-      "tipo": "lousa",
-      "fala": [
-       [
-        0.3,
-        "Boa pergunta: 3, 7, 9 também é crescente! E 1, 2, 3 também. Existem muitas filas crescentes."
-       ],
-       [
-        4.6,
-        "Mas cada trio de cartões tem só 1 fila crescente: a dele, do menor para o maior."
+        4.4,
+        "Cada trio de cartões tem 6 ordens e, pelos lugares, só 1 crescente: a dele, do menor para o maior."
        ],
        [
         9.0,
-        "Cada trio entra com 6 filas e só 1 é crescente. Em todos os trios dá 1 em cada 6."
+        "Por isso, entre todas as filas de todos os trios, 1 em cada 6 é crescente."
        ]
       ],
       "desenho": [
@@ -4158,19 +4254,15 @@
       "fala": [
        [
         0.3,
-        "E se forem 4 cartões? Ou 7? Listar todas as filas levaria a prova inteira."
+        "Com mais cartões, as ordens crescem muito, mas as crescentes não: continua 1 só."
        ],
        [
-        3.4,
-        "Não precisa listar. Os lugares dão a conta: com 4 cartões, 4 × 3 × 2 × 1 = 24. Com 7, 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5040."
+        4.4,
+        "4 cartões: 4 × 3 × 2 × 1 = 24 ordens. Pelos lugares, só 1 é crescente."
        ],
        [
-        8.6,
-        "Esse produto tem nome: fatorial, escrito com \"!\". k é quantos cartões você tira, e k! = k × (k−1) × … × 1. O (k−1) é o número logo antes."
-       ],
-       [
-        13.2,
-        "Só 1 fila é crescente: chance de 1 em k!, que se escreve 1 ÷ k! ou 1/k!. O total da caixa, o 9, não muda a resposta."
+        8.8,
+        "7 cartões: 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5040 ordens, e só 1 crescente."
        ]
       ],
       "desenho": [
@@ -4178,17 +4270,17 @@
         "k": "tx",
         "x": 200,
         "y": 30,
-        "s": "sem listar nada",
+        "s": "mais cartões, mais ordens",
         "cor": "tinta",
-        "tam": 30,
+        "tam": 28,
         "t": 0.2,
         "ancora": "middle"
        },
        {
         "k": "tx",
         "x": 30,
-        "y": 70,
-        "s": "3 cartões:  3 × 2 × 1 = 6",
+        "y": 80,
+        "s": "3 cartões:  6 ordens,  1 crescente",
         "cor": "tinta",
         "tam": 24,
         "t": 0.8,
@@ -4197,60 +4289,118 @@
        {
         "k": "tx",
         "x": 30,
-        "y": 102,
-        "s": "4 cartões:  4 × 3 × 2 × 1 = 24",
+        "y": 120,
+        "s": "4 cartões:  24 ordens,  1 crescente",
         "cor": "tinta",
         "tam": 24,
-        "t": 3.6,
+        "t": 4.4,
         "ancora": "start"
        },
        {
         "k": "tx",
         "x": 30,
-        "y": 134,
-        "s": "7 cartões:  7 × 6 × 5 × 4 × 3 × 2 × 1 = 5040",
+        "y": 160,
+        "s": "7 cartões:  5040 ordens,  1 crescente",
         "cor": "tinta",
-        "tam": 20,
-        "t": 5.6,
+        "tam": 24,
+        "t": 8.8,
         "ancora": "start"
        },
        {
         "k": "hl",
         "x": 26,
-        "y": 152,
+        "y": 186,
         "w": 345,
-        "h": 40,
-        "t": 8.6,
+        "h": 46,
+        "t": 11.0,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 220,
+        "s": "ordens crescem, crescentes não",
+        "cor": "verde",
+        "tam": 28,
+        "t": 11.1,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Esse produto tem nome: fatorial, escrito com \"!\". Com k cartões tirados, k! = k × (k−1) × … × 1."
+       ],
+       [
+        5.2,
+        "O (k−1) é o número logo antes. A chance é 1 ÷ k!, ou 1/k!, que se lê \"1 sobre k fatorial\"."
+       ],
+       [
+        10.4,
+        "O 9 da caixa muda o total de filas (504), mas não a chance."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 30,
+        "s": "a regra para k cartões",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 78,
+        "s": "k = 4:  4! = 4 × 3 × 2 × 1 = 24",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 100,
+        "w": 345,
+        "h": 38,
+        "t": 5.2,
         "cor": "amarelo"
        },
        {
         "k": "tx",
         "x": 30,
-        "y": 182,
+        "y": 128,
         "s": "k cartões:  k! = k × (k−1) × … × 1",
         "cor": "vermelho",
         "tam": 24,
-        "t": 8.7,
+        "t": 5.3,
         "ancora": "start"
        },
        {
         "k": "tx",
         "x": 200,
-        "y": 224,
-        "s": "só 1 em cada trio: chance = 1 ÷ k!",
+        "y": 184,
+        "s": "chance = 1 ÷ k!   (ou 1/k!)",
         "cor": "verde",
-        "tam": 26,
-        "t": 13.2,
+        "tam": 32,
+        "t": 7.4,
         "ancora": "middle"
        },
        {
         "k": "tx",
         "x": 200,
-        "y": 258,
-        "s": "o 9 da caixa não muda a resposta",
+        "y": 236,
+        "s": "o 9 muda o total, não a chance",
         "cor": "azul",
-        "tam": 24,
-        "t": 14.4,
+        "tam": 26,
+        "t": 10.4,
         "ancora": "middle"
        }
       ]
@@ -4260,19 +4410,15 @@
       "fala": [
        [
         0.3,
-        "Dá para conferir contando tudo."
+        "Dá para conferir contando tudo. 1º lugar: 9 cartões, 2º: 8, 3º: 7. São 9 × 8 × 7 = 504 filas; aqui o 9 entra, para contar todas."
        ],
        [
-        2.6,
-        "1º lugar: 9 cartões. 2º: 8. 3º: 7. São 9 × 8 × 7 = 504 filas. Aqui o 9 entra, para contar todas."
+        6.8,
+        "As 504 filas vêm de trios, 6 por trio: 504 ÷ 6 = 84 trios. Cada trio tem 1 crescente: 84 crescentes."
        ],
        [
-        6.4,
-        "As 504 filas vêm de trios, 6 filas por trio: 504 ÷ 6 = 84 trios. Cada trio tem 1 fila crescente: são 84 crescentes."
-       ],
-       [
-        10.0,
-        "84 em 504 é 1 em cada 6, porque 504 ÷ 84 = 6. Bateu!"
+        11.0,
+        "84 em 504 é 1 em cada 6, porque 504 ÷ 84 = 6."
        ]
       ],
       "desenho": [
@@ -4303,7 +4449,7 @@
         "s": "crescentes: 504 ÷ 6 = 84",
         "cor": "tinta",
         "tam": 27,
-        "t": 6.6,
+        "t": 6.8,
         "ancora": "start"
        },
        {
@@ -4312,7 +4458,7 @@
         "y": 148,
         "w": 350,
         "h": 50,
-        "t": 10.0,
+        "t": 11.0,
         "cor": "verdeClaro"
        },
        {
@@ -4322,7 +4468,7 @@
         "s": "84 em 504 = 1 em 6",
         "cor": "verde",
         "tam": 40,
-        "t": 10.1,
+        "t": 11.1,
         "ancora": "middle"
        },
        {
@@ -4332,7 +4478,7 @@
         "s": "504 ÷ 84 = 6",
         "cor": "azul",
         "tam": 28,
-        "t": 11.2,
+        "t": 12.2,
         "ancora": "middle"
        },
        {
@@ -4342,7 +4488,7 @@
         "s": "o truque e a conta batem",
         "cor": "cinza",
         "tam": 24,
-        "t": 11.8,
+        "t": 12.8,
         "ancora": "middle"
        }
       ]
@@ -4356,7 +4502,7 @@
        ],
        [
         2.8,
-        "A só olha uma fila. B e C pegam um pedaço da pergunta. E ignora o \"sem devolver\"."
+        "A só olha uma fila. B e C pegam um pedaço da pergunta. E conta como se devolvesse: 9 × 9 × 9 = 729 filas e 84 ÷ 729 = 28/243."
        ],
        [
         6.6,
@@ -4398,7 +4544,7 @@
         "k": "tx",
         "x": 24,
         "y": 152,
-        "s": "C · 1/3: confundiu com 3 posições",
+        "s": "C · 1/3: só o 1º lugar certo (1 em 3)",
         "cor": "tinta",
         "tam": 25,
         "t": 2.8,
@@ -4408,7 +4554,7 @@
         "k": "tx",
         "x": 24,
         "y": 190,
-        "s": "E · 28/243: ignorou o \"sem devolver\"",
+        "s": "E · 28/243: com devolução: 84 ÷ 729",
         "cor": "vermelho",
         "tam": 25,
         "t": 3.8,
@@ -4440,15 +4586,15 @@
       "fala": [
        [
         0.3,
-        "Viu o que a questão usou?"
+        "O que a questão cobrou:"
        ],
        [
-        2.4,
-        "Três cartões formam 6 filas, e só uma é crescente."
+        2.2,
+        "Ordens: um número por lugar, multiplicados. Crescente: um jeito só por lugar."
        ],
        [
-        5.6,
-        "Para k cartões é 1 dividido por k fatorial. Sem listar nada."
+        6.0,
+        "Por isso a chance é 1 dividido por k fatorial."
        ]
       ],
       "desenho": [
@@ -4466,7 +4612,7 @@
         "k": "tx",
         "x": 30,
         "y": 100,
-        "s": "1. 3 cartões → 3 × 2 × 1 = 6 filas",
+        "s": "1. ordens: 3 × 2 × 1 = 6, ou k!",
         "cor": "tinta",
         "tam": 26,
         "t": 0.8,
@@ -4476,10 +4622,10 @@
         "k": "tx",
         "x": 30,
         "y": 156,
-        "s": "2. cada trio: só 1 fila crescente",
+        "s": "2. crescente: 1 jeito por lugar",
         "cor": "tinta",
-        "tam": 26,
-        "t": 2.6,
+        "tam": 28,
+        "t": 2.8,
         "ancora": "start"
        },
        {
@@ -4488,17 +4634,17 @@
         "y": 172,
         "w": 270,
         "h": 6,
-        "t": 3.4,
+        "t": 3.8,
         "cor": "amarelo"
        },
        {
         "k": "tx",
         "x": 30,
         "y": 216,
-        "s": "3. k cartões: chance = 1 ÷ k!",
+        "s": "3. chance = 1 ÷ k!",
         "cor": "tinta",
         "tam": 28,
-        "t": 4.4,
+        "t": 5.0,
         "ancora": "start"
        }
       ]
@@ -4521,8 +4667,8 @@
       "certa": 1,
       "porque": [
        "1/4 seria 1 fila em 4, mas 4 cartões formam 4 × 3 × 2 × 1 = 24 filas.",
-       "Isso! 4 cartões formam 24 filas e só 1 é crescente: 1/24.",
-       "1/12 seria 2 filas em 24. Só existe 1 fila crescente.",
+       "4 × 3 × 2 × 1 = 24 filas, e só 1 é crescente (1 jeito por lugar): 1/24.",
+       "1/12 seria 2 filas em 24. Pelos lugares, só existe 1 crescente.",
        "1/16 vem de 4 × 4. Sem devolver, são 4 × 3 × 2 × 1 = 24 filas."
       ]
      },
@@ -4546,7 +4692,7 @@
        "1/7 olharia uma posição só. Com 7 cartões são 7! ordens, e só 1 é crescente.",
        "1/30 é o tamanho da caixa, e ele não muda a chance.",
        "1/210 vem de 30 × 7. Não tem base: o que conta é o 7!.",
-       "Isso! 7 cartões têm 7! ordens (5040) e só 1 é crescente: 1/7!. Os 30 da caixa não mudam nada."
+       "7 cartões têm 7! ordens (5040) e só 1 é crescente: 1/7!. Os 30 da caixa não mudam nada."
       ]
      }
     ]
@@ -4794,7 +4940,7 @@
       "fala": [
        [
         0.3,
-        "Lê com calma e anota os três trechos."
+        "Os três trechos: subida, parte reta e freada."
        ],
        [
         3.0,
@@ -5591,7 +5737,7 @@
       "certa": 1,
       "porque": [
        "40 m seria 5 × 8, o retângulo inteiro. Mas a velocidade começa em 0: é um triângulo.",
-       "Isso! É um triângulo: 5 × 8 ÷ 2 = 20 metros.",
+       "É um triângulo: 5 × 8 ÷ 2 = 20 metros.",
        "13 vem de somar 5 + 8. Distância é área, não soma.",
        "8 é a velocidade final, não a distância."
       ]
@@ -5615,7 +5761,7 @@
       "porque": [
        "250 m é 25 s × 10: contou o retângulo todo. Os cantos são triângulos.",
        "150 m é só a parte reta (15 × 10). Faltam as duas pontas, 25 + 25.",
-       "Isso! 25 + 150 + 25 = 200. Ou trapézio: (25 + 15) × 10 ÷ 2 = 200.",
+       "25 + 150 + 25 = 200. Ou trapézio: (25 + 15) × 10 ÷ 2 = 200.",
        "400 m é (25 + 15) × 10 sem dividir por 2."
       ]
      }
@@ -5886,7 +6032,7 @@
       "fala": [
        [
         0.3,
-        "Lê com calma. Repara que a pergunta é sobre os pontos de CADA menino."
+        "A pergunta é sobre os pontos de CADA menino."
        ],
        [
         4.2,
@@ -6738,7 +6884,7 @@
       "fala": [
        [
         0.3,
-        "Viu o que a questão cobrou?"
+        "O que a questão cobrou:"
        ],
        [
         2.2,
@@ -6819,7 +6965,7 @@
       "certa": 1,
       "porque": [
        "7 é só a média de 8 e 6, sem contar quantos alunos tem. A turma de 30 pesa mais e puxa a média para baixo.",
-       "Isso! 10 × 8 + 30 × 6 = 260, e 260 ÷ 40 = 6,5. Mais perto de 6, porque tem mais gente.",
+       "10 × 8 + 30 × 6 = 260, e 260 ÷ 40 = 6,5. Mais perto de 6, porque tem mais gente.",
        "6 seria só a turma grande. A turma de 10 ainda puxa um pouco para cima.",
        "14 é 8 + 6: soma de médias não é média de ninguém."
       ]
@@ -6841,7 +6987,7 @@
       ],
       "certa": 0,
       "porque": [
-       "Isso! A pessoa nova está 19 acima da nova média (50 − 31). Cada um dos outros ficou 1 abaixo dela e juntos compensam esses 19: eram 19 pessoas.",
+       "A pessoa nova está 19 acima da nova média (50 − 31). Cada um dos outros ficou 1 abaixo dela e juntos compensam esses 19: eram 19 pessoas.",
        "20 é o grupo já com a pessoa nova. Antes dela eram 19.",
        "10 não fecha: com 10 pessoas a média iria para uns 31,8.",
        "21 não fecha: com 21 pessoas a média ficaria em uns 30,9."
@@ -7104,7 +7250,7 @@
       "fala": [
        [
         0.3,
-        "Lê com calma. De duas em duas quer dizer: A com B, B com C e A com C."
+        "De duas em duas quer dizer: A com B, B com C e A com C."
        ],
        [
         4.6,
@@ -7667,7 +7813,7 @@
       ],
       "certa": 0,
       "porque": [
-       "Isso! 9 + 11 + 12 = 32, e cada caixa entrou 2 vezes: 32 ÷ 2 = 16.",
+       "9 + 11 + 12 = 32, e cada caixa entrou 2 vezes: 32 ÷ 2 = 16.",
        "32 é a soma das pesagens. Cada caixa entrou 2 vezes, então falta dividir por 2.",
        "8 não tem base: a conta é (9 + 11 + 12) ÷ 2.",
        "12 é só uma das pesagens, a de A com C."
@@ -7690,7 +7836,7 @@
       ],
       "certa": 0,
       "porque": [
-       "Isso! As três pesam 16. B = 16 − 12 = 4 kg, porque 12 é a pesagem sem o B.",
+       "As três pesam 16. B = 16 − 12 = 4 kg, porque 12 é a pesagem sem o B.",
        "5 kg é a caixa A (16 − 11). A B é mais leve.",
        "7 kg é a caixa C, a mais pesada das três.",
        "9 kg é uma pesagem de duas caixas, não de uma."
@@ -7874,7 +8020,7 @@
        ],
        [
         3.4,
-        "A pergunta é a área do quarto. Mas calma: tem um padrão."
+        "A pergunta é a área do quarto. Tem um padrão."
        ]
       ],
       "desenho": [
@@ -7927,7 +8073,7 @@
       "fala": [
        [
         0.3,
-        "Lê com calma. Ponto médio é o ponto do meio do lado."
+        "Ponto médio é o ponto do meio do lado."
        ],
        [
         3.4,
@@ -8387,7 +8533,7 @@
       ],
       "certa": 0,
       "porque": [
-       "Isso! Cada passo fica com a metade: 80 ÷ 2 = 40.",
+       "Cada passo fica com a metade: 80 ÷ 2 = 40.",
        "20 seria dividir por 4. A área cai pela metade, não por 4.",
        "160 é o dobro. O quadrado de dentro é menor.",
        "60 não tem base: são 4 triângulos que tiram a metade."
@@ -8410,7 +8556,7 @@
       ],
       "certa": 0,
       "porque": [
-       "Isso! 64 → 32 → 16 → 8: três passos, três vezes ÷ 2.",
+       "64 → 32 → 16 → 8: três passos, três vezes ÷ 2.",
        "16 cm² é a área do 3º quadrado.",
        "4 cm² vem de contar 4 metades em vez de 3.",
        "32 cm² é a área do 2º quadrado."
@@ -8681,7 +8827,7 @@
       "fala": [
        [
         0.3,
-        "Lê com calma. Aresta é cada lado do cubo."
+        "Aresta é cada lado do cubo."
        ],
        [
         3.0,
@@ -9088,7 +9234,7 @@
       "porque": [
        "100% seria o aumento da aresta, que dobrou.",
        "200% não tem base: a aresta dobra 3 vezes, uma por dimensão.",
-       "Isso! 10 × 10 × 10 = 1000 e 20 × 20 × 20 = 8000: aumentou 7000, e 7000 em 1000 é 700 em 100: 700%.",
+       "10 × 10 × 10 = 1000 e 20 × 20 × 20 = 8000: aumentou 7000, e 7000 em 1000 é 700 em 100: 700%.",
        "800% é o volume final em relação ao de antes. O aumento é 8000 − 1000 = 7000, ou 700%."
       ]
      },
@@ -9112,7 +9258,7 @@
        "20% é o aumento da aresta, não do volume.",
        "44% é a área da face: 12 × 12 = 144, contra 100.",
        "60% seria 3 vezes 20%. Mas as três medidas se multiplicam.",
-       "Isso! 12 × 12 = 144 e 144 × 12 = 1728, contra 1000: aumentou 728 em 1000, ou seja, 72,8%."
+       "12 × 12 = 144 e 144 × 12 = 1728, contra 1000: aumentou 728 em 1000, ou seja, 72,8%."
       ]
      }
     ]
@@ -9338,7 +9484,7 @@
       "fala": [
        [
         0.3,
-        "Lê com calma. Contando desde o primeiro dia quer dizer: os 4 dias que já passaram também entram."
+        "Contando desde o primeiro dia quer dizer: os 4 dias que já passaram também entram."
        ],
        [
         5.4,
@@ -9763,7 +9909,7 @@
       "certa": 1,
       "porque": [
        "8 são só os dias que faltam depois dos 2 primeiros.",
-       "Isso! A obra tem 4 × 6 = 24. Em 2 dias, 8 feitos. Faltam 16, com 2 operários: 8 dias. Total: 2 + 8 = 10.",
+       "A obra tem 4 × 6 = 24. Em 2 dias, 8 feitos. Faltam 16, com 2 operários: 8 dias. Total: 2 + 8 = 10.",
        "12 vem de 24 ÷ 2, como se só 2 operários fizessem a obra toda.",
        "14 somou o prazo antigo, 6, com os 8 dias que faltam."
       ]
@@ -9785,7 +9931,7 @@
       ],
       "certa": 0,
       "porque": [
-       "Isso! A obra tem 120, 30 já feitos, faltam 90. Com 15 operários são 6 dias. Total: 3 + 6 = 9.",
+       "A obra tem 120, 30 já feitos, faltam 90. Com 15 operários são 6 dias. Total: 3 + 6 = 9.",
        "6 são só os dias que faltam. O total conta os 3 primeiros.",
        "8 é a obra toda feita só com os 15 (120 ÷ 15), mas 3 dias já foram feitos com 10.",
        "12 é o prazo de antes: com mais operários, o prazo tem que diminuir."
@@ -10072,7 +10218,7 @@
       "fala": [
        [
         0.3,
-        "Lê com calma. O desconto é dado sobre o preço JÁ aumentado."
+        "O desconto é dado sobre o preço JÁ aumentado."
        ],
        [
         4.2,
@@ -10507,7 +10653,7 @@
       "certa": 1,
       "porque": [
        "R$ 200 seria voltar ao início, mas 50% de 300 é 150, não 100.",
-       "Isso! 200 + 100 = 300; 50% de 300 é 150; 300 − 150 = 150.",
+       "200 + 100 = 300; 50% de 300 é 150; 300 − 150 = 150.",
        "R$ 100 é o valor do aumento (50% de 200), não o preço final.",
        "R$ 250 não tem base: o preço sobe e depois desce."
       ]
@@ -10530,7 +10676,7 @@
       "certa": 1,
       "porque": [
        "25% de 125 são 31,25, e fica 93,75: abaixo do original.",
-       "Isso! 100 → 125 → 100: desconto de 25 em 125. Dividindo por 25: 1 em 5, que é 20 em 100: 20%.",
+       "100 → 125 → 100: desconto de 25 em 125. Dividindo por 25: 1 em 5, que é 20 em 100: 20%.",
        "5% não tem base: tiraria só 6,25 de 125.",
        "30% tiraria 37,50 e ficaria 87,50, abaixo do original."
       ]

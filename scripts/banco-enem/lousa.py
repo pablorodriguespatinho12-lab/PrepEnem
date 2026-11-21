@@ -13,6 +13,7 @@ MARGEM = 6
 CORES = {'tinta', 'azul', 'vermelho', 'verde', 'amarelo', 'cinza', 'rosa', 'verdeClaro'}
 MAX_TEXTO, MAX_FALA, MAX_FALAS, MAX_CENAS = 80, 160, 4, 16
 AVISOS = []
+MAX_FALA_DA_TELA = 300
 
 
 def _erro(msg):
@@ -68,6 +69,10 @@ def _fala(fala):
     for _, frase in fala:
         if len(frase) > MAX_FALA:
             _erro(f'fala com mais de {MAX_FALA} letras: {frase[:40]}')
+    # Fala comprida faz o balão crescer e a lousa encolher (visto em 21/11/2026): até ~300 letras por tela.
+    total = sum(len(frase) for _, frase in fala)
+    if total > MAX_FALA_DA_TELA:
+        AVISOS.append(f'falas somam {total} letras (máximo {MAX_FALA_DA_TELA}): "{fala[0][1][:40]}"')
     return [[t, frase] for t, frase in fala]
 
 

@@ -103,11 +103,20 @@ siga. "Entendi tudo" é resposta válida.
     "só", "apenas", "sempre", "nenhum", "todos", pergunte "só 1 entre quais?
     deste caso ou de tudo?" e **procure você mesmo um contraexemplo**.
 
-**As 6 perguntas do Pablo.** Antes de devolver, passe cada tela por elas:
+15. **Fala fora de contexto.** O professor elogia ("boa pergunta", "isso!",
+    "muito bem"), responde a uma pergunta que o aluno não fez nesta tela ou
+    comenta a própria aula ("agora vamos ver outra coisa"). Quem tem TDAH perde o
+    fio. Toda frase tem que explicar o conteúdo da tela; a que não explica é
+    tropeço (Pablo, 21/11/2026: "não precisa ficar falando 'boa pergunta'; fica
+    tirado fora de contexto da aula"). Vale também para a explicação de cada
+    letra no "Prove você": ela começa direto no porquê, sem "Isso!".
+
+**As 7 perguntas do Pablo.** Antes de devolver, passe cada tela por elas:
 (1) onde eu aprendi esta palavra? (2) e com um número maior, na prova?
 (3) de onde veio este número? (4) outra tela diz o contrário? (5) como se lê
 este símbolo? (6) "só um / sempre / nenhum": entre quais? tem contraexemplo?
-Pergunta que nenhuma das 6 gera, não faça.
+(7) esta frase explica o conteúdo, ou só elogia e comenta a aula?
+Pergunta que nenhuma das 7 gera, não faça.
 
 Tamanho NÃO perde ele: ele quer profundo e fácil ao mesmo tempo. Nunca diga
 "está longo". O que ele quer cortado é palavra difícil, não explicação.
@@ -142,7 +151,7 @@ bug, não dúvida.
 [lista curta dos itens que não te perderam]
 
 ## O que mais se repete
-uma frase: o tipo de tropeço mais comum (1 a 14 acima) e quantas vezes
+uma frase: o tipo de tropeço mais comum (1 a 15 acima) e quantas vezes
 ```
 
 ## O que você nunca faz
