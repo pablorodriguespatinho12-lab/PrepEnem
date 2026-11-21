@@ -195,7 +195,7 @@ LOUSA_ONDA = aula_lousa(
           caminho('M40 110Q80 60 120 110T200 110T280 110T360 110', 'azul', .6, 1.4, 4),
           linha(40, 160, 200, 160, 'vermelho', 2.4, .6), tx(120, 188, 'λ = 1 m', 'vermelho', 26, 3.2),
           tx(30, 232, 'λ = v ÷ f = 340 ÷ 340', 'tinta', 26, 10.0, 'start'), tx(200, 268, 'λ = 1 m', 'verde', 32, 10.8)),
-    lousa([(.3, 'Se dois picos chegam juntos, o som soma e fica mais forte.'), (3.6, 'Se chega um pico junto com um vale, um cancela o outro: silêncio.'), (7.6, 'Se um caminho é meio λ mais longo, a onda chega atrasada meio λ: onde chegaria um pico, chega um vale.')],
+    lousa([(.3, 'Dois picos juntos: o som soma e fica mais forte (interferência construtiva).'), (3.6, 'Um pico junto com um vale: um cancela o outro (interferência destrutiva), silêncio.'), (7.6, 'Se um caminho é meio λ mais longo, a onda chega atrasada meio λ: no lugar do pico, vem um vale.')],
           tx(200, 28, 'pico com vale = silêncio', 'tinta', 28, .2),
           caminho('M40 80Q80 40 120 80T200 80T280 80T360 80', 'azul', .6, 1.2, 4),
           caminho('M40 150Q80 190 120 150T200 150T280 150T360 150', 'vermelho', 3.6, 1.2, 4),
