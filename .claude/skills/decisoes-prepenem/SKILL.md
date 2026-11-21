@@ -127,7 +127,11 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   1ª questão de Estatística repetia a `d2-acima-mat-05`). **Palavra nova da lousa aparece primeiro como
   desenho e só depois com nome** (Pablo, 21/11/2026, "quantas filas? como assim?": a aula contava
   "filas" sem mostrar o que é uma fila nem de onde vem o 3 × 2 × 1); antes de gravar, passar o texto
-  pelo agente `aluno-do-zero`. Ids `d2-escada-xxx-ita-` entram no degrau ITA
+  pelo agente `aluno-do-zero`. **Listar os casos é só o 1º exemplo; depois vem a conta curta que vale
+  para qualquer tamanho** (Pablo, 21/11/2026: "com 7 cartões ninguém lista na prova"): o k! de "k
+  cartões", com o caso de número (4 cartões = 24) ANTES da letra k e o "!" dito como fatorial. Nunca
+  escrever igualdade falsa só para encurtar (escrevi "9! parado no 3º fator"; 9! vale 362.880).
+  Ids `d2-escada-xxx-ita-` entram no degrau ITA
   antes das antigas (`lib/prova-da-escada.ts`).
 
 ## Conteúdo gerado por IA
