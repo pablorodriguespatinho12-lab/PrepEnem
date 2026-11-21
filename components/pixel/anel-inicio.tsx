@@ -1,7 +1,8 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { useTheme } from 'next-themes';
-import { ANEIS_CLARO, ANEIS_ESCURO, aneis } from '@/lib/pixel/desenho';
+import { ANEIS_CLARO, ANEIS_ESCURO, ANEIS_VERDE_CLARO, ANEIS_VERDE_ESCURO, aneis } from '@/lib/pixel/desenho';
+import { useAppTheme } from '@/components/app-theme-provider';
 import { useMundoAnimado } from '@/hooks/use-mundo-animado';
 import { imagemPixel, tamanhoDoPixel } from './imagem-pixel';
 
@@ -17,6 +18,7 @@ export function AnelInicio() {
   const caixa = useRef<HTMLDivElement>(null);
   const { resolvedTheme } = useTheme();
   const { animado } = useMundoAnimado();
+  const { color } = useAppTheme();
   const [desenho, setDesenho] = useState<{ url: string; cx: number; cy: number; r: number } | null>(null);
 
   useEffect(() => {
@@ -32,8 +34,8 @@ export function AnelInicio() {
       const cy = Math.round(H * 0.5);
       const r0 = Math.max(5, Math.round(Math.min(H, W) * 0.18));
       const larg = Math.max(4, Math.round(Math.min(H, W) * 0.11));
-      const url = imagemPixel(`anel-${W}x${H}-${escuro ? 'e' : 'c'}`, W, H, (c) =>
-        aneis(c, W, H, escuro ? ANEIS_ESCURO : ANEIS_CLARO, cx, cy, r0, larg),
+      const url = imagemPixel(`anel-${W}x${H}-${escuro ? 'e' : 'c'}-${color === 'green' ? 'v' : 't'}`, W, H, (c) =>
+        aneis(c, W, H, color === 'green' ? (escuro ? ANEIS_VERDE_ESCURO : ANEIS_VERDE_CLARO) : (escuro ? ANEIS_ESCURO : ANEIS_CLARO), cx, cy, r0, larg),
       );
       setDesenho({ url, cx: (cx / W) * 100, cy: (cy / H) * 100, r: r0 * px * 2.6 });
     };
@@ -41,10 +43,16 @@ export function AnelInicio() {
     const obs = new ResizeObserver(() => pintar());
     obs.observe(el);
     return () => obs.disconnect();
-  }, [resolvedTheme]);
+  }, [resolvedTheme, color]);
 
   return (
-    <div ref={caixa} className="anel-inicio" aria-hidden data-animado={animado ? 'sim' : 'nao'}>
+    <div
+      ref={caixa}
+      className="anel-inicio"
+      aria-hidden
+      data-animado={animado ? 'sim' : 'nao'}
+      style={color === 'green' ? ({ ['--ai-tom' as string]: '168, 230, 184' }) : undefined}
+    >
       {desenho && (
         <>
           <div className="ai-imagem" style={{ backgroundImage: `url(${desenho.url})` }} />
