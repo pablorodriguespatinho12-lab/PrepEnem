@@ -1,11 +1,11 @@
 ---
 name: desenhar-skill
-description: "O trabalho antes de escrever uma skill do PrepEnem: decidir se ela deve existir (ou se é uma linha numa existente), achar a falha real, o número medido e o contra-exemplo, e cortar o que um agente faria sozinho. Usar antes de write-a-skill / skill-creator, e quando uma skill parecer óbvia ou longa demais."
+description: "O trabalho antes de escrever uma skill do PrepEnem: decidir se ela deve existir (ou se é uma linha numa existente), achar a falha real, o número medido e o contra-exemplo, e cortar o que um agente faria sozinho. Usar antes de write-a-skill / anthropic-skills:skill-creator, e quando uma skill parecer óbvia ou longa demais."
 ---
 
 # Desenhar skill
 
-`write-a-skill` e `skill-creator` montam a estrutura. O difícil é decidir **o
+`write-a-skill` e `anthropic-skills:skill-creator` montam a estrutura. O difícil é decidir **o
 que a skill sabe que o agente já não sabia**. Sem isso sai um arquivo bem
 formatado que repete bom senso — e ele custa em toda sessão, porque a
 `description` entra no contexto sempre.
@@ -46,7 +46,7 @@ Se não, sai. Quarenta linhas afiadas vencem duzentas completas.
 
 ## Encerramento obrigatório
 
-1. Estrutura com `write-a-skill` ou `skill-creator`.
+1. Estrutura com `write-a-skill` ou `anthropic-skills:skill-creator`.
 2. Validar com `ln-162-skill-reviewer` passando o caminho do `SKILL.md` (não a
    pasta). Ela é de outro repositório: falta de versão, data, `**Type:**`,
    `Definition of Done` e description acima de 200 caracteres reprovam por

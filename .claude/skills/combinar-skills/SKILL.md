@@ -16,7 +16,7 @@ para tomar (02/09/2026). Anunciar não é usar.
    dizer "nenhum". Silêncio é indistinguível de não ter olhado.
 2. **Responder em voz alta: falta skill?** Mesmo quando a resposta é não.
    - Tarefa recorrente E com procedimento não óbvio → `desenhar-skill` →
-     `write-a-skill` (ou `skill-creator`) → `ln-162-skill-reviewer`.
+     `write-a-skill` (ou `anthropic-skills:skill-creator`) → `ln-162-skill-reviewer`.
    - Qualquer outro caso → é **uma linha** numa skill que já existe. No
      logica-app, 26 de 27 commits em skills foram linha, não skill nova.
 3. **Carregar cada skill no instante ANTES do trabalho que ela governa**, não
@@ -45,8 +45,8 @@ para tomar (02/09/2026). Anunciar não é usar.
 
 ## Design: por que as skills globais ficam fora
 
-Há dezenas de skills globais de design (`frontend-design`,
-`design-taste-frontend`, `high-end-visual-design`, `ui-ux-pro-max`...). Todas
+Há dezenas de skills globais de design (`design-taste-frontend`,
+`anthropic-skills:skill-de-bom-gosto`, `anthropic-skills:theme-factory`...). Todas
 trazem uma direção própria. **O PrepEnem já tem a dele, fechada em 05/08/2026:**
 editorial, teal Clareza, Fraunces + Source Serif 4 + DM Sans, tokens em
 `app/globals.css`, régua no painel `/design-system`. Global de design entra só

@@ -1,0 +1,85 @@
+/* Aula de lousa (amostra aprovada em 20/11/2026: docs/universo-narrado/aula-contar).
+   Lousa branca com moldura de madeira, traço que se desenha sozinho, professor de pixel
+   e balão. Tudo escopado em .lousa. O traço se desenha mesmo com "reduzir movimento":
+   o Windows do Pablo reporta isso e o desenho é o conteúdo da aula; só saem o deslizar
+   e o zoom (ver o bloco de reduce no fim). */
+.lousa {
+  --l-tinta: #1b2430; --l-madeira: #7a5c3a; --l-amarelo: #f2d14a; --l-mao: var(--font-mao), "Comic Sans MS", cursive;
+  --l-sombra-amarela: #8c7416;
+  display: flex; flex-direction: column; gap: 8px; height: min(76dvh, 640px); min-height: 0; color: hsl(var(--foreground));
+}
+.lousa-topo { display: flex; align-items: center; gap: 10px; padding-right: 30px; /* o × do diálogo */ font-size: 13px; font-weight: 700; color: hsl(var(--muted-foreground)); }
+.lousa-barra { flex: 1; height: 8px; background: hsl(var(--foreground) / .14); }
+.lousa-barra i { display: block; height: 100%; background: var(--l-amarelo); transition: width .25s steps(6); }
+
+.lousa-quadro { flex: 1; min-height: 0; margin: 6px; background: #fbfbf6; display: flex; align-items: center; justify-content: center; overflow: hidden;
+  box-shadow: 0 -6px 0 0 var(--l-madeira), 0 6px 0 0 var(--l-madeira), -6px 0 0 0 var(--l-madeira), 6px 0 0 0 var(--l-madeira); }
+.lousa-quadro svg { width: 100%; height: 100%; display: block; }
+.lousa-quadro svg text { font-family: var(--l-mao); font-weight: 700; }
+
+.lousa .tr { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: lousa-desenha var(--d, .5s) ease-out var(--t, 0s) forwards; }
+@keyframes lousa-desenha { to { stroke-dashoffset: 0; } }
+.lousa .tx, .lousa .f { opacity: 0; animation: lousa-escreve .4s ease-out var(--t, 0s) forwards; }
+@keyframes lousa-escreve { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+.lousa .pop { opacity: 0; transform-box: fill-box; transform-origin: center; animation: lousa-pop .3s ease-out var(--t, 0s) forwards; }
+@keyframes lousa-pop { from { opacity: 0; transform: scale(.3); } to { opacity: 1; transform: scale(1); } }
+.lousa .wipe { transform-box: fill-box; transform-origin: left; transform: scaleX(0); animation: lousa-wipe .45s ease-out var(--t, 0s) forwards; }
+@keyframes lousa-wipe { to { transform: scaleX(1); } }
+/* "Mostrar tudo": tudo já desenhado. */
+.lousa.fim .tr { animation: none; stroke-dashoffset: 0; }
+.lousa.fim .tx, .lousa.fim .f, .lousa.fim .pop { animation: none; opacity: 1; transform: none; }
+.lousa.fim .wipe { animation: none; transform: none; }
+
+/* a questão em papel */
+.lousa-papel { width: 100%; height: 100%; overflow: auto; padding: 12px 14px; color: var(--l-tinta); display: flex; flex-direction: column; gap: 10px; font-size: clamp(13px, 3.4vw, 19px); line-height: 1.36; font-weight: 600; }
+.lousa-papel small { font-weight: 800; color: #1f6fd1; letter-spacing: .08em; text-transform: uppercase; font-size: 11.5px; }
+.lousa-papel p { margin: 0; }
+/* Quebra sozinha: 5 em linha na tela larga, 3 + 2 no celular (A 1/504 e E 28/243 não cabem em 1/5). */
+.lousa-alts { display: grid; grid-template-columns: repeat(auto-fit, minmax(88px, 1fr)); gap: 6px; font-family: var(--l-mao); font-size: clamp(19px, 4.6vw, 30px); font-weight: 700; text-align: center; }
+.lousa-alts span { border: 2px solid var(--l-tinta); padding: 2px 4px; background: #fff; white-space: nowrap; }
+
+/* professor + balão */
+.lousa-fala { display: flex; align-items: center; gap: 12px; margin: 4px; }
+.lousa-prof { width: 68px; height: 68px; flex: none; background: #cfe3d6; box-shadow: 0 -3px 0 0 var(--l-madeira), 0 3px 0 0 var(--l-madeira), -3px 0 0 0 var(--l-madeira), 3px 0 0 0 var(--l-madeira); }
+.lousa-prof .boca { transform-box: fill-box; transform-origin: top; }
+.lousa-prof.fala .boca { animation: lousa-boca .32s steps(1) infinite; }
+@keyframes lousa-boca { 0% { transform: scaleY(1); } 50% { transform: scaleY(2); } }
+.lousa-balao { flex: 1; min-height: 84px; background: #fff; color: #16241d; padding: 10px 14px; position: relative; font-size: 17px; font-weight: 700; display: flex; flex-direction: column; justify-content: center; gap: 3px;
+  box-shadow: 0 -3px 0 0 #16241d, 0 3px 0 0 #16241d, -3px 0 0 0 #16241d, 3px 0 0 0 #16241d; }
+.lousa-balao::before { content: ""; position: absolute; left: -14px; top: 50%; width: 14px; height: 14px; background: #fff; transform: translateY(-50%) rotate(45deg); box-shadow: -3px 3px 0 0 #16241d; }
+.lousa-balao p { margin: 0; }
+
+/* prove você */
+.lousa-prova { width: 100%; height: 100%; padding: 14px 18px; display: flex; flex-direction: column; justify-content: center; gap: 12px; color: var(--l-tinta); overflow: auto; }
+.lousa-prova .q { margin: 0; font-family: var(--l-mao); font-size: clamp(24px, 5vw, 36px); line-height: 1.05; font-weight: 700; }
+.lousa-prova small { font-weight: 800; color: #1f6fd1; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; }
+.lousa-ops { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.lousa-opt { font-family: var(--l-mao); font-weight: 700; font-size: 34px; line-height: 1; padding: 10px; background: #fff; color: var(--l-tinta); border: 3px solid var(--l-tinta); cursor: pointer; transition: transform .1s; }
+.lousa-opt:active { transform: translateY(3px); }
+.lousa-opt.certo { background: #8fe39b; } .lousa-opt.errado { background: #ff9e90; } .lousa-opt:disabled { cursor: default; }
+
+/* botões */
+.lousa-ctrl { display: flex; gap: 10px; margin: 4px; }
+.lousa-btn { font-family: var(--font-pixel), "Courier New", monospace; font-size: 28px; line-height: 1; padding: 11px 16px; background: var(--l-amarelo); color: #1b2a22; border: 0; cursor: pointer; flex: 1; min-height: 48px;
+  box-shadow: 0 4px 0 0 var(--l-sombra-amarela), 0 -3px 0 0 #1b2a22, 0 3px 0 0 #1b2a22, -3px 0 0 0 #1b2a22, 3px 0 0 0 #1b2a22; transition: transform .1s, box-shadow .1s; }
+.lousa-btn:active { transform: translateY(4px); box-shadow: 0 0 0 0 var(--l-sombra-amarela), 0 -3px 0 0 #1b2a22, 0 3px 0 0 #1b2a22, -3px 0 0 0 #1b2a22, 3px 0 0 0 #1b2a22; }
+.lousa-btn.lado { flex: 0 0 auto; min-width: 48px; background: transparent; color: hsl(var(--foreground)); box-shadow: 0 -3px 0 0 hsl(var(--foreground)), 0 3px 0 0 hsl(var(--foreground)), -3px 0 0 0 hsl(var(--foreground)), 3px 0 0 0 hsl(var(--foreground)); }
+.lousa-btn[hidden] { display: none; }
+.lousa button { -webkit-tap-highlight-color: transparent; }
+.lousa button:focus { outline: none; }
+.lousa button:focus-visible { outline: 3px solid hsl(var(--foreground)); outline-offset: 4px; }
+
+@media (max-width: 480px) { .lousa-balao { font-size: 15.5px; min-height: 76px; padding: 8px 12px; } .lousa-prof { width: 56px; height: 56px; } .lousa-opt { font-size: 30px; } .lousa-btn { font-size: 24px; } }
+@media (max-height: 700px) { .lousa-papel { font-size: 12.5px; line-height: 1.3; gap: 4px; padding: 6px 10px; } .lousa-alts { font-size: 17px; gap: 4px; grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); } .lousa-papel small { font-size: 10.5px; } }
+@media (max-height: 640px) { .lousa-balao { min-height: 64px; } .lousa-papel { gap: 4px; padding: 6px 10px; } }
+/* Celular deitado: só cabe a lousa e o balão; o professor sai para sobrar altura. */
+@media (max-height: 520px) { .lousa { height: 84dvh; } .lousa-prof { display: none; } .lousa-balao::before { display: none; } .lousa-balao { min-height: 52px; font-size: 15px; } .lousa-btn { min-height: 42px; font-size: 22px; padding: 6px 12px; } }
+
+/* Reduzir movimento: o traço segue se desenhando; saem o deslizar, o zoom e a boca. */
+@media (prefers-reduced-motion: reduce) {
+  @keyframes lousa-escreve { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes lousa-pop { from { opacity: 0; } to { opacity: 1; } }
+  .lousa .wipe { transform: none; opacity: 0; animation: lousa-escreve .45s ease-out var(--t, 0s) forwards; }
+  .lousa-prof.fala .boca { animation: none; }
+  .lousa-btn, .lousa-opt { transition: none; }
+}

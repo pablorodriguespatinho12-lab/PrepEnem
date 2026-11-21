@@ -10,6 +10,7 @@ import { antesDaQuestao, type Exercicio } from '@/lib/antes-da-questao';
 import { desenhoDoTema } from '@/lib/aulas-desenho';
 import { TelaDesenho, TelaProporcoes, TelaSentido } from '@/components/simulado/telas-desenho';
 import { TelaEstaQuestao, TelaPasso, useAulaDaQuestao } from '@/components/simulado/resolver-esta-questao';
+import { AulaLousa } from '@/components/aula-lousa/aula-lousa';
 import type { QuestaoTutor } from '@/components/tutor/explicacao-tutor';
 import { TITULO_FORMULAS, TITULO_REGRAS } from '@/lib/visual/especificacao';
 
@@ -31,10 +32,13 @@ export function AulaDoTema({ tema, questao, className }: { tema: string | null |
   // Tema sem aula escrita (Equações, Cinemática, Português...): o botão aparece se a
   // própria questão tem a aula do robô pronta; por isso ela é buscada já ao abrir a
   // questão (Pablo, 18/11/2026: as questões novas das escadas ficavam sem o botão).
-  const daQuestao = useAulaDaQuestao(questao, aberta || !aula);
+  // Sempre buscada (só lê o banco, nunca a IA): se a questão tem aula de lousa, o botão abre
+  // direto nela, sem trocar de tela depois do clique (21/11/2026).
+  const daQuestao = useAulaDaQuestao(questao, true);
   const passosProntos = daQuestao?.estado === 'pronta' ? daQuestao.passos : [];
+  const lousa = daQuestao?.estado === 'pronta' ? daQuestao.explicacao.lousa ?? null : null;
   const soDaQuestao = !aula && [TITULO_FORMULAS, TITULO_REGRAS].includes(passosProntos[0]?.titulo ?? '');
-  if (!soDaQuestao && (!aula || !tema)) return null;
+  if (!lousa && !soDaQuestao && (!aula || !tema)) return null;
 
   const desenho = aula && tema ? desenhoDoTema(tema) : null;
   const conceito: Tela[] = desenho
@@ -83,17 +87,39 @@ export function AulaDoTema({ tema, questao, className }: { tema: string | null |
   const ultima = tela === total - 1;
   const naHoraDeTentar = tela === fimDaQuestao && !ultima;
   const abrir = () => { setTela(0); setAberta(true); };
+  const botao = (
+    <button
+      type="button"
+      onClick={abrir}
+      className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-primary/10 text-primary-text type-meta font-medium t-colors hover:bg-primary/15 ${className ?? ''}`}
+    >
+      <BookOpen className="w-4 h-4" aria-hidden />
+      Não sei isso: ver a aula
+    </button>
+  );
+
+  // Aula de lousa (Universo Narrado): a questão real, a lousa que se desenha e o professor.
+  if (lousa) {
+    return (
+      <>
+        {botao}
+        <Dialog open={aberta} onOpenChange={setAberta}>
+          <DialogContent
+            onOpenAutoFocus={(e) => e.preventDefault()}
+            className="max-w-3xl p-3 sm:p-5 overflow-hidden rounded-[var(--radius-surface)] [&>*]:min-w-0"
+          >
+            <DialogTitle className="sr-only">{tema ?? 'Aula da questão'}</DialogTitle>
+            <DialogDescription className="sr-only">Aula desta questão: o professor desenha na lousa e explica passo a passo.</DialogDescription>
+            <AulaLousa aula={lousa} onFechar={() => setAberta(false)} />
+          </DialogContent>
+        </Dialog>
+      </>
+    );
+  }
 
   return (
     <>
-      <button
-        type="button"
-        onClick={abrir}
-        className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-primary/10 text-primary-text type-meta font-medium t-colors hover:bg-primary/15 ${className ?? ''}`}
-      >
-        <BookOpen className="w-4 h-4" aria-hidden />
-        Não sei isso: ver a aula
-      </button>
+      {botao}
 
       <Dialog open={aberta} onOpenChange={setAberta}>
         <DialogContent

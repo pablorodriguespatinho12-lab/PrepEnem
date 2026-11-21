@@ -3104,5 +3104,3095 @@
     "resposta": "4 × 3 ÷ 2 = 6."
    }
   }
+ },
+ {
+  "id": "d2-escada-mat-ita-com-01",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Em uma caixa há 9 cartões, numerados de 1 a 9. Rita retira 3 cartões, um de cada vez e sem devolver, e os coloca em fila, da esquerda para a direita, na ordem em que saíram. Qual é a probabilidade de que os números formem uma sequência estritamente crescente?",
+  "A": "1/504",
+  "B": "1/9",
+  "C": "1/3",
+  "D": "1/6",
+  "E": "28/243",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "Todas as filas: 9 × 8 × 7 = 504. Crescentes: escolher 3 de 9 = 84. 84/504 = 1/6. D. A = uma só fila (1, 2, 3); B = 1/9; C = 1/3 (3 posições); E = 84/729, com devolução.",
+   "ideia": "Esqueça a ordem por um instante: três cartões quaisquer formam 3 × 2 × 1 = 6 filas, e só uma delas é crescente. Então a chance é 1 em 6.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Princípio multiplicativo",
+        "formula": "opções de cada escolha multiplicadas"
+       },
+       {
+        "figura": "contagem",
+        "nome": "Probabilidade",
+        "formula": "chance = quero ÷ tudo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Cartões",
+        "9, de 1 a 9"
+       ],
+       [
+        "Retiradas",
+        "3, sem devolver"
+       ],
+       [
+        "Quero",
+        "fila crescente"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a chance P de a fila sair crescente.\nPor que olhar um trio só? Qualquer trio de cartões pode ser arrumado de 3 × 2 × 1 = 6 jeitos, e só um deles é crescente. Vale para todo trio: a chance não depende dos números.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "P = C ÷ F",
+      "leitura": "filas crescentes ÷ filas possíveis do mesmo trio",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "chance de ficar crescente (o que a questão quer)"
+       },
+       {
+        "letra": "F",
+        "oque": "filas possíveis do mesmo trio"
+       },
+       {
+        "letra": "C",
+        "oque": "filas crescentes do trio"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando F: arrumar um trio",
+     "texto": "3 escolhas para o 1º lugar, 2 para o 2º, 1 para o 3º.\nF = 3 × 2 × 1 = 6"
+    },
+    {
+     "titulo": "Achando C: o seu jeito",
+     "texto": "Parece certo contar todos os sorteios, 9 × 8 × 7 = 504. Dá certo, mas é conta demais. Em cada trio, só 1 fila é crescente.\nC = 1"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "P = C ÷ F = 1 ÷ 6\nLetra D. Confere contando tudo: 84 ÷ 504 = 1/6.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "F",
+        "6"
+       ],
+       [
+        "C",
+        "1"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"fila crescente\" num sorteio sem devolver → de cada grupo, só 1 arrumação serve: 1 ÷ (arrumações do grupo).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "9 cartões, 3 sem devolver"
+       ],
+       [
+        "2. Equação em letras",
+        "P = C ÷ F"
+       ],
+       [
+        "3. Achar cada letra",
+        "F = 6; C = 1"
+       ],
+       [
+        "4. Substituir",
+        "1 ÷ 6"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "3 cartões distintos em fila. Qual a chance de ficarem decrescentes?",
+    "opcoes": [
+     "1/6",
+     "1/3",
+     "1/9",
+     "1/27"
+    ],
+    "certa": "1/6",
+    "resposta": "Mesma ideia: 6 filas e só 1 decrescente."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Hoje é uma questão de nível acima, estilo vestibular difícil."
+       ],
+       [
+        3.2,
+        "A conta é curta. O difícil é enxergar o truque."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "hl",
+        "x": 30,
+        "y": 40,
+        "w": 340,
+        "h": 56,
+        "t": 0.2,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 86,
+        "s": "Cartões em fila",
+        "cor": "tinta",
+        "tam": 54,
+        "t": 0.3,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 126,
+        "s": "questão de nível acima",
+        "cor": "azul",
+        "tam": 28,
+        "t": 1.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 104,
+        "y": 150,
+        "w": 50,
+        "h": 66,
+        "cor": "tinta",
+        "t": 2.0,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 129,
+        "y": 196,
+        "s": "5",
+        "cor": "vermelho",
+        "tam": 44,
+        "t": 2.4,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 174,
+        "y": 150,
+        "w": 50,
+        "h": 66,
+        "cor": "tinta",
+        "t": 2.6,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 199,
+        "y": 196,
+        "s": "2",
+        "cor": "azul",
+        "tam": 44,
+        "t": 3.0,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 244,
+        "y": 150,
+        "w": 50,
+        "h": 66,
+        "cor": "tinta",
+        "t": 3.2,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 269,
+        "y": 196,
+        "s": "8",
+        "cor": "verde",
+        "tam": 44,
+        "t": 3.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 256,
+        "s": "sorteio sem devolver",
+        "cor": "cinza",
+        "tam": 26,
+        "t": 4.2,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "Lê com calma. Repara em duas palavras: \"sem devolver\" e \"crescente\"."
+       ],
+       [
+        4.4,
+        "Depois eu separo o que importa."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "Em uma caixa há 9 cartões, numerados de 1 a 9. Rita retira 3 cartões, um de cada vez e sem devolver, e os coloca em fila, da esquerda para a direita, na ordem em que saíram. Qual é a probabilidade de que os números formem uma sequência estritamente crescente?",
+      "alternativas": [
+       "1/504",
+       "1/9",
+       "1/3",
+       "1/6",
+       "28/243"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "São 9 cartões. Ela tira 3, um de cada vez."
+       ],
+       [
+        2.8,
+        "Sem devolver: o cartão que saiu não volta para a caixa."
+       ],
+       [
+        5.6,
+        "Quero a chance de a fila ficar crescente."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão pede",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 82,
+        "s": "9 cartões, de 1 a 9",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 120,
+        "s": "tira 3, sem devolver",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 1.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 158,
+        "s": "põe em fila, na ordem que saiu",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 180,
+        "w": 330,
+        "h": 46,
+        "t": 4.0,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 214,
+        "s": "quero: crescente, tipo 2 · 5 · 8",
+        "cor": "vermelho",
+        "tam": 26,
+        "t": 4.1,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Truque: esquece a ordem por um instante."
+       ],
+       [
+        2.6,
+        "Pega 3 cartões quaisquer. Digamos 2, 5 e 8."
+       ],
+       [
+        5.4,
+        "De quantas formas esses 3 cabem na fila?"
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "pegue 3 cartões quaisquer",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 70,
+        "y": 54,
+        "w": 70,
+        "h": 90,
+        "cor": "tinta",
+        "t": 0.8,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 105,
+        "y": 118,
+        "s": "2",
+        "cor": "azul",
+        "tam": 54,
+        "t": 1.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 165,
+        "y": 54,
+        "w": 70,
+        "h": 90,
+        "cor": "tinta",
+        "t": 1.6,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 118,
+        "s": "5",
+        "cor": "vermelho",
+        "tam": 54,
+        "t": 2.0,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 260,
+        "y": 54,
+        "w": 70,
+        "h": 90,
+        "cor": "tinta",
+        "t": 2.4,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 295,
+        "y": 118,
+        "s": "8",
+        "cor": "verde",
+        "tam": 54,
+        "t": 2.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 186,
+        "s": "3 cartões: quantas filas?",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 4.0,
+        "ancora": "middle"
+       },
+       {
+        "k": "hl",
+        "x": 60,
+        "y": 206,
+        "w": 280,
+        "h": 50,
+        "t": 5.2,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 244,
+        "s": "3 × 2 × 1 = 6 filas",
+        "cor": "vermelho",
+        "tam": 40,
+        "t": 5.3,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Essas são as 6 filas possíveis."
+       ],
+       [
+        2.6,
+        "Só uma está crescente: 2, 5, 8."
+       ],
+       [
+        5.2,
+        "As outras cinco estão bagunçadas."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "as 6 filas com 2, 5 e 8",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "hl",
+        "x": 40,
+        "y": 50,
+        "w": 120,
+        "h": 36,
+        "t": 1.2,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 100,
+        "y": 76,
+        "s": "2 · 5 · 8",
+        "cor": "verde",
+        "tam": 30,
+        "t": 1.3,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 300,
+        "y": 76,
+        "s": "2 · 8 · 5",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 1.7,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 100,
+        "y": 116,
+        "s": "5 · 2 · 8",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 2.1,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 300,
+        "y": 116,
+        "s": "5 · 8 · 2",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 2.5,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 100,
+        "y": 156,
+        "s": "8 · 2 · 5",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 2.9,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 300,
+        "y": 156,
+        "s": "8 · 5 · 2",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 3.3,
+        "ancora": "middle"
+       },
+       {
+        "k": "hl",
+        "x": 70,
+        "y": 178,
+        "w": 260,
+        "h": 46,
+        "t": 4.2,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 214,
+        "s": "1 fila boa em 6",
+        "cor": "vermelho",
+        "tam": 38,
+        "t": 4.3,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 258,
+        "s": "vale para QUALQUER trio de cartões",
+        "cor": "azul",
+        "tam": 26,
+        "t": 5.4,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Vale para qualquer trio, não só 2, 5 e 8."
+       ],
+       [
+        2.8,
+        "Sempre 6 filas e só 1 crescente."
+       ],
+       [
+        5.4,
+        "Então a chance é 1 em 6."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "qualquer trio de cartões",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 100,
+        "s": "6 filas possíveis",
+        "cor": "tinta",
+        "tam": 38,
+        "t": 0.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 150,
+        "s": "1 é crescente",
+        "cor": "verde",
+        "tam": 38,
+        "t": 2.0,
+        "ancora": "middle"
+       },
+       {
+        "k": "hl",
+        "x": 70,
+        "y": 176,
+        "w": 260,
+        "h": 62,
+        "t": 3.4,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 224,
+        "s": "chance = 1/6",
+        "cor": "vermelho",
+        "tam": 54,
+        "t": 3.5,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 268,
+        "s": "Resposta: D, 1/6",
+        "cor": "vermelho",
+        "tam": 28,
+        "t": 5.0,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Dá para conferir contando tudo."
+       ],
+       [
+        2.6,
+        "Todas as filas: 9 × 8 × 7 = 504."
+       ],
+       [
+        5.0,
+        "Filas crescentes: é só escolher 3 cartões, 84 jeitos."
+       ],
+       [
+        7.8,
+        "84 ÷ 504 = 1/6. Bateu!"
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "conferindo, contando tudo",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 86,
+        "s": "todas as filas: 9 × 8 × 7 = 504",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 130,
+        "s": "crescentes: 84 (escolher 3 de 9)",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 24,
+        "y": 158,
+        "w": 350,
+        "h": 52,
+        "t": 5.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 198,
+        "s": "84 ÷ 504 = 1/6",
+        "cor": "verde",
+        "tam": 44,
+        "t": 5.5,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 252,
+        "s": "o truque e a conta batem",
+        "cor": "azul",
+        "tam": 26,
+        "t": 7.8,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Cada letra errada é um erro de leitura."
+       ],
+       [
+        2.8,
+        "A e E esquecem o \"sem devolver\" ou a ordem. B e C olham a pergunta pela metade."
+       ],
+       [
+        6.6,
+        "A certa é a D."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · 1/504: só a fila 1, 2, 3",
+        "cor": "tinta",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "B · 1/9: chance de um cartão só",
+        "cor": "tinta",
+        "tam": 25,
+        "t": 1.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "C · 1/3: confundiu com 3 posições",
+        "cor": "tinta",
+        "tam": 25,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 28/243: ignorou o \"sem devolver\"",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 5.2,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: D, 1 em 6",
+        "cor": "verde",
+        "tam": 32,
+        "t": 5.3,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Viu o que a questão usou?"
+       ],
+       [
+        2.4,
+        "Três cartões formam 6 filas, e só uma é crescente."
+       ],
+       [
+        5.6,
+        "Sem contar tudo: 1 em 6."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. 3 cartões → 3 × 2 × 1 = 6 filas",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "2. só 1 fila é crescente",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.6,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 172,
+        "w": 270,
+        "h": 6,
+        "t": 3.4,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "3. chance = 1 ÷ 6, sem contar tudo",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 4.4,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Sorteia 4 cartões distintos e coloca em fila. Qual a chance de ficarem crescentes?",
+      "opcoes": [
+       "1/4",
+       "1/24",
+       "1/12",
+       "1/16"
+      ],
+      "certa": 1,
+      "porque": [
+       "1/4 seria 1 fila em 4, mas 4 cartões formam 4 × 3 × 2 × 1 = 24 filas.",
+       "Isso! 4 cartões formam 24 filas e só 1 é crescente: 1/24.",
+       "1/12 seria 2 filas em 24. Só existe 1 fila crescente.",
+       "1/16 vem de 4 × 4. Sem devolver, são 4 × 3 × 2 × 1 = 24 filas."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: com 3 cartões sorteados, qual a chance de o MAIOR ficar no meio da fila?",
+      "opcoes": [
+       "1/3",
+       "1/6",
+       "1/2",
+       "1/9"
+      ],
+      "certa": 0,
+      "porque": [
+       "Isso! O maior cai em qualquer das 3 posições com a mesma chance: 1 em 3.",
+       "1/6 é a chance de uma fila exata. O maior no meio vale 2 filas em 6, ou 1/3.",
+       "1/2 não existe aqui: são 3 posições iguais para o maior.",
+       "1/9 não tem base. Três posições iguais dão 1/3."
+      ]
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-ita-fun-01",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "O gráfico da velocidade de um trem em função do tempo tem três trechos retos: a velocidade sobe de 0 a 20 m/s em 10 s; depois fica em 20 m/s durante 20 s; e por fim cai de 20 m/s a 0 em 10 s, quando o trem para. Qual é a distância percorrida pelo trem?",
+  "A": "200 m",
+  "B": "400 m",
+  "C": "600 m",
+  "D": "800 m",
+  "E": "1 200 m",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "Subida: 10 × 20 ÷ 2 = 100. Reta: 20 × 20 = 400. Freada: 100. Total 600. C. A = só os triângulos (200); B = só a parte reta (400); D = 40 × 20 (800); E = (40 + 20) × 20 sem ÷ 2 (1 200).",
+   "ideia": "Num gráfico de velocidade, a distância é a área embaixo da linha. O desenho é um trapézio: quebre em dois triângulos e um retângulo e some, 100 + 400 + 100.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Área sob o gráfico",
+        "formula": "distância = área entre a linha e o eixo do tempo"
+       },
+       {
+        "figura": "grafico",
+        "nome": "Triângulo e retângulo",
+        "formula": "triângulo = base × altura ÷ 2; retângulo = base × altura"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Subida",
+        "0 a 20 m/s em 10 s"
+       ],
+       [
+        "Parte reta",
+        "20 m/s por 20 s"
+       ],
+       [
+        "Freada",
+        "20 a 0 m/s em 10 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a distância total D.\nPor que área? Velocidade × tempo dá distância. Com velocidade fixa isso é a área de um retângulo; quando a velocidade muda, a área embaixo da linha continua valendo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "D = T1 + R + T2",
+      "leitura": "distância = área dos três pedaços do gráfico",
+      "letras": [
+       {
+        "letra": "D",
+        "oque": "distância total (o que a questão quer)"
+       },
+       {
+        "letra": "T1",
+        "oque": "área do triângulo da subida"
+       },
+       {
+        "letra": "R",
+        "oque": "área do retângulo da parte reta"
+       },
+       {
+        "letra": "T2",
+        "oque": "área do triângulo da freada"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando T1: triângulo da subida",
+     "texto": "Base 10 s, altura 20 m/s.\nT1 = 10 × 20 ÷ 2 = 100"
+    },
+    {
+     "titulo": "Achando R: retângulo da parte reta",
+     "texto": "Base 20 s, altura 20 m/s.\nR = 20 × 20 = 400"
+    },
+    {
+     "titulo": "Achando T2: o seu jeito",
+     "texto": "Parece certo repetir 10 × 20 = 200 na freada. Mas a velocidade cai até 0: é um triângulo, metade disso.\nT2 = 10 × 20 ÷ 2 = 100"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "D = 100 + 400 + 100 = 600\nLetra C. Confere pelo trapézio: (40 + 20) × 20 ÷ 2 = 600.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "T1",
+        "100"
+       ],
+       [
+        "R",
+        "400"
+       ],
+       [
+        "T2",
+        "100"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: gráfico de velocidade × tempo → a distância é a área embaixo; quebre em triângulos e retângulos.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "gráfico de v × t"
+       ],
+       [
+        "2. Equação em letras",
+        "D = T1 + R + T2"
+       ],
+       [
+        "3. Achar cada letra",
+        "T1 = 100; R = 400; T2 = 100"
+       ],
+       [
+        "4. Substituir",
+        "100 + 400 + 100"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um carro acelera de 0 a 6 m/s em 4 s. Qual a distância nesses 4 s?",
+    "opcoes": [
+     "12 m",
+     "24 m",
+     "10 m",
+     "6 m"
+    ],
+    "certa": "12 m",
+    "resposta": "É um triângulo: 4 × 6 ÷ 2 = 12."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Questão de nível acima. Ela dá números de velocidade e tempo."
+       ],
+       [
+        3.2,
+        "Mas a pergunta é distância. Quem liga as duas?"
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 44,
+        "s": "O trem que acelera",
+        "cor": "tinta",
+        "tam": 46,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "linha",
+        "x1": 60,
+        "y1": 230,
+        "x2": 340,
+        "y2": 230,
+        "cor": "tinta",
+        "t": 0.8,
+        "dur": 0.5
+       },
+       {
+        "k": "linha",
+        "x1": 60,
+        "y1": 230,
+        "x2": 60,
+        "y2": 120,
+        "cor": "tinta",
+        "t": 1.2,
+        "dur": 0.5
+       },
+       {
+        "k": "caminho",
+        "d": "M60 230L120 150L250 150L310 230",
+        "cor": "azul",
+        "t": 1.8,
+        "dur": 1.6,
+        "larg": 4
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 266,
+        "s": "velocidade × tempo",
+        "cor": "cinza",
+        "tam": 26,
+        "t": 3.6,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "Lê com calma e anota os três trechos."
+       ],
+       [
+        3.0,
+        "Cada trecho tem velocidade e tempo."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "O gráfico da velocidade de um trem em função do tempo tem três trechos retos: a velocidade sobe de 0 a 20 m/s em 10 s; depois fica em 20 m/s durante 20 s; e por fim cai de 20 m/s a 0 em 10 s, quando o trem para. Qual é a distância percorrida pelo trem?",
+      "alternativas": [
+       "200 m",
+       "400 m",
+       "600 m",
+       "800 m",
+       "1 200 m"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Três trechos: subida, parte reta e freada."
+       ],
+       [
+        3.0,
+        "A questão quer a distância total."
+       ],
+       [
+        5.6,
+        "Cuidado: dá número de velocidade, mas a resposta é em metros."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão dá",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "sobe: 0 a 20 m/s em 10 s",
+        "cor": "tinta",
+        "tam": 27,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 122,
+        "s": "reta: 20 m/s por 20 s",
+        "cor": "tinta",
+        "tam": 27,
+        "t": 1.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 160,
+        "s": "freia: 20 a 0 m/s em 10 s",
+        "cor": "tinta",
+        "tam": 27,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 184,
+        "w": 300,
+        "h": 46,
+        "t": 4.0,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 218,
+        "s": "quero: a distância total",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 4.1,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 262,
+        "s": "em metros, não em m/s",
+        "cor": "azul",
+        "tam": 26,
+        "t": 5.6,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Aqui entra a ferramenta: num gráfico de velocidade, a distância é a ÁREA."
+       ],
+       [
+        3.6,
+        "Teste fácil: 5 m/s durante 4 s dá 20 metros."
+       ],
+       [
+        6.4,
+        "E isso é a área do retângulo: 5 × 4."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "distância = área do gráfico",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "hl",
+        "x": 80,
+        "y": 80,
+        "w": 140,
+        "h": 80,
+        "t": 4.6,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "linha",
+        "x1": 60,
+        "y1": 160,
+        "x2": 260,
+        "y2": 160,
+        "cor": "tinta",
+        "t": 0.8,
+        "dur": 0.5
+       },
+       {
+        "k": "linha",
+        "x1": 60,
+        "y1": 160,
+        "x2": 60,
+        "y2": 60,
+        "cor": "tinta",
+        "t": 1.0,
+        "dur": 0.5
+       },
+       {
+        "k": "caixa",
+        "x": 80,
+        "y": 80,
+        "w": 140,
+        "h": 80,
+        "cor": "azul",
+        "t": 1.6,
+        "dur": 0.8
+       },
+       {
+        "k": "tx",
+        "x": 150,
+        "y": 190,
+        "s": "4 s",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 2.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 84,
+        "y": 72,
+        "s": "5 m/s",
+        "cor": "tinta",
+        "tam": 24,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 150,
+        "y": 128,
+        "s": "5 × 4",
+        "cor": "verde",
+        "tam": 34,
+        "t": 4.7,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 234,
+        "s": "área = 5 × 4 = 20 metros",
+        "cor": "vermelho",
+        "tam": 32,
+        "t": 6.4,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 270,
+        "s": "velocidade × tempo = distância",
+        "cor": "azul",
+        "tam": 24,
+        "t": 7.4,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Agora desenha o trem: sobe em 10 s, fica reto 20 s, cai em 10 s."
+       ],
+       [
+        4.0,
+        "Isso forma um trapézio."
+       ],
+       [
+        5.6,
+        "A distância é a área desse trapézio."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 30,
+        "s": "o gráfico do trem",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "linha",
+        "x1": 60,
+        "y1": 230,
+        "x2": 340,
+        "y2": 230,
+        "cor": "tinta",
+        "t": 0.6,
+        "dur": 0.5
+       },
+       {
+        "k": "linha",
+        "x1": 60,
+        "y1": 230,
+        "x2": 60,
+        "y2": 110,
+        "cor": "tinta",
+        "t": 0.9,
+        "dur": 0.5
+       },
+       {
+        "k": "caminho",
+        "d": "M60 230L110 150L250 150L300 230Z",
+        "cor": "azul",
+        "t": 1.6,
+        "dur": 1.6,
+        "larg": 4
+       },
+       {
+        "k": "tx",
+        "x": 52,
+        "y": 160,
+        "s": "20",
+        "cor": "azul",
+        "tam": 24,
+        "t": 3.4,
+        "ancora": "end"
+       },
+       {
+        "k": "tx",
+        "x": 85,
+        "y": 254,
+        "s": "10 s",
+        "cor": "tinta",
+        "tam": 22,
+        "t": 3.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 180,
+        "y": 254,
+        "s": "20 s",
+        "cor": "tinta",
+        "tam": 22,
+        "t": 3.9,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 275,
+        "y": 254,
+        "s": "10 s",
+        "cor": "tinta",
+        "tam": 22,
+        "t": 4.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 180,
+        "y": 200,
+        "s": "área = distância",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 5.6,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Quebra em figuras fáceis: dois triângulos e um retângulo."
+       ],
+       [
+        3.0,
+        "Triângulo: base × altura ÷ 2. Retângulo: base × altura."
+       ],
+       [
+        6.0,
+        "Calcula cada pedaço."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 28,
+        "s": "quebrar em pedaços",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caminho",
+        "d": "M60 120L110 70L250 70L300 120Z",
+        "cor": "azul",
+        "t": 0.6,
+        "dur": 1.2,
+        "larg": 4
+       },
+       {
+        "k": "linha",
+        "x1": 110,
+        "y1": 70,
+        "x2": 110,
+        "y2": 120,
+        "cor": "vermelho",
+        "t": 2.0,
+        "dur": 0.4
+       },
+       {
+        "k": "linha",
+        "x1": 250,
+        "y1": 70,
+        "x2": 250,
+        "y2": 120,
+        "cor": "vermelho",
+        "t": 2.2,
+        "dur": 0.4
+       },
+       {
+        "k": "tx",
+        "x": 98,
+        "y": 112,
+        "s": "1",
+        "cor": "verde",
+        "tam": 22,
+        "t": 2.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 180,
+        "y": 104,
+        "s": "2",
+        "cor": "verde",
+        "tam": 34,
+        "t": 2.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 262,
+        "y": 112,
+        "s": "3",
+        "cor": "verde",
+        "tam": 22,
+        "t": 3.0,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 164,
+        "s": "1 triângulo: 10 × 20 ÷ 2 = 100",
+        "cor": "tinta",
+        "tam": 25,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 200,
+        "s": "2 retângulo: 20 × 20 = 400",
+        "cor": "tinta",
+        "tam": 25,
+        "t": 4.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 236,
+        "s": "3 triângulo: 10 × 20 ÷ 2 = 100",
+        "cor": "tinta",
+        "tam": 25,
+        "t": 5.6,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Soma as três áreas: 100 mais 400 mais 100."
+       ],
+       [
+        3.0,
+        "Dá 600 metros. Resposta: letra C."
+       ],
+       [
+        5.6,
+        "E ainda dá para fazer de um golpe só: é um trapézio."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "somando os pedaços",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "hl",
+        "x": 50,
+        "y": 62,
+        "w": 300,
+        "h": 54,
+        "t": 1.0,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 104,
+        "s": "100 + 400 + 100 = 600 m",
+        "cor": "verde",
+        "tam": 42,
+        "t": 1.1,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 156,
+        "s": "resposta: C",
+        "cor": "vermelho",
+        "tam": 42,
+        "t": 3.0,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 204,
+        "s": "ou: trapézio",
+        "cor": "azul",
+        "tam": 28,
+        "t": 5.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 244,
+        "s": "(40 + 20) × 20 ÷ 2 = 600",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 6.4,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Cada letra errada é um jeito de calcular a área."
+       ],
+       [
+        3.0,
+        "A e B pegam só um pedaço. D e E erram a conta do trapézio."
+       ],
+       [
+        6.4,
+        "A certa é a C."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · 200 m: só os dois triângulos",
+        "cor": "tinta",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "B · 400 m: só a parte reta",
+        "cor": "tinta",
+        "tam": 25,
+        "t": 1.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "D · 800 m: 40 s × 20, o retângulo",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 1 200 m: esqueceu o ÷ 2",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 5.2,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: C, 600 m",
+        "cor": "verde",
+        "tam": 32,
+        "t": 5.3,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "O que a questão ensinou:"
+       ],
+       [
+        2.2,
+        "Gráfico de velocidade: a distância é a área."
+       ],
+       [
+        5.0,
+        "E área difícil se quebra em figuras fáceis."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. distância = área do gráfico",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "2. quebre em figuras fáceis",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.6,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 172,
+        "w": 260,
+        "h": 6,
+        "t": 3.4,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "3. trapézio: (B + b) × h ÷ 2",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 4.4,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Um ciclista vai de 0 a 8 m/s em 5 s e para de acelerar. Qual a distância nesses 5 s?",
+      "opcoes": [
+       "40 m",
+       "20 m",
+       "13 m",
+       "8 m"
+      ],
+      "certa": 1,
+      "porque": [
+       "40 m seria 5 × 8, o retângulo inteiro. Mas a velocidade começa em 0: é um triângulo.",
+       "Isso! É um triângulo: 5 × 8 ÷ 2 = 20 metros.",
+       "13 vem de somar 5 + 8. Distância é área, não soma.",
+       "8 é a velocidade final, não a distância."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: um trem acelera até 10 m/s em 5 s, segue a 10 m/s por 15 s e para em 5 s. Distância?",
+      "opcoes": [
+       "250 m",
+       "150 m",
+       "200 m",
+       "400 m"
+      ],
+      "certa": 2,
+      "porque": [
+       "250 m é 25 s × 10: contou o retângulo todo. Os cantos são triângulos.",
+       "150 m é só a parte reta (15 × 10). Faltam as duas pontas, 25 + 25.",
+       "Isso! 25 + 150 + 25 = 200. Ou trapézio: (25 + 15) × 10 ÷ 2 = 200.",
+       "400 m é (25 + 15) × 10 sem dividir por 2."
+      ]
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-ita-est-01",
+  "materia": "Matemática",
+  "tema": "Estatística",
+  "enunciado": "Numa turma de 30 alunos, a média das notas dos meninos é 6, a das meninas é 9 e a da turma toda é 7. Se só as notas dos meninos subirem, todas na mesma quantidade, quantos pontos cada menino deve ganhar para a média da turma passar a ser 8?",
+  "A": "1,0",
+  "B": "1,5",
+  "C": "2,0",
+  "D": "3,0",
+  "E": "6,0",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "m + f = 30 e 6m + 9f = 7 × 30 = 210, então f = 10 e m = 20. Média 8 pede soma 240; hoje 210; faltam 30; 30 ÷ 20 = 1,5. B. A = 1,0 (a média sobe 1); C = 2,0 (15 meninos); D = 3,0 (10 meninas); E = 6,0 (média dos meninos).",
+   "ideia": "A média da turma fica perto de quem tem mais gente: 7 está a 1 de 6 e a 2 de 9, então são 2 meninos para cada menina, 20 e 10. Faltam 30 pontos na soma para chegar a 8, e só os 20 meninos sobem: 30 ÷ 20 = 1,5.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "media",
+        "nome": "Soma e média",
+        "formula": "soma = média × quantidade"
+       },
+       {
+        "figura": "media",
+        "nome": "Média de grupos",
+        "formula": "a média fica perto do grupo com mais gente"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Alunos",
+        "30"
+       ],
+       [
+        "Média dos meninos",
+        "6"
+       ],
+       [
+        "Média das meninas",
+        "9"
+       ],
+       [
+        "Média da turma",
+        "7, depois 8"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quantos pontos cada menino ganha, G.\nPor que dividir só pelos meninos? Só as notas deles sobem, todas na mesma quantidade. Então os pontos que faltam são repartidos entre eles.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "G = F ÷ m",
+      "leitura": "pontos que faltam ÷ número de meninos",
+      "letras": [
+       {
+        "letra": "G",
+        "oque": "pontos para cada menino (o que a questão quer)"
+       },
+       {
+        "letra": "F",
+        "oque": "pontos que faltam na soma da turma"
+       },
+       {
+        "letra": "m",
+        "oque": "número de meninos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando m: quantos meninos",
+     "texto": "A média 7 está a 1 de 6 e a 2 de 9. Quem está mais perto pesa mais: meninos × 1 = meninas × 2, ou seja, 2 meninos para cada menina.\nm = 20 (e 10 meninas)"
+    },
+    {
+     "titulo": "Achando F: pontos que faltam",
+     "texto": "Para a média ser 8, a soma tem que ser 8 × 30 = 240. Hoje a soma é 7 × 30 = 210.\nF = 240 − 210 = 30"
+    },
+    {
+     "titulo": "Achando G: o seu jeito",
+     "texto": "Parece certo subir 1 ponto em cada nota, porque a média da turma sobe 1. Mas só os meninos sobem, então os 30 pontos vêm só deles.\nG = 30 ÷ 20 = 1,5"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "G = 30 ÷ 20 = 1,5\nLetra B. Confere: 20 × 7,5 + 10 × 9 = 240, e 240 ÷ 30 = 8.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "m",
+        "20"
+       ],
+       [
+        "F",
+        "30"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"só um grupo muda\" → quanto falta na soma ÷ quantos são do grupo; e a soma é média × quantidade.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "30 alunos, médias 6, 9 e 7"
+       ],
+       [
+        "2. Equação em letras",
+        "G = F ÷ m"
+       ],
+       [
+        "3. Achar cada letra",
+        "m = 20; F = 30"
+       ],
+       [
+        "4. Substituir",
+        "30 ÷ 20 = 1,5"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "2 meninos com média 4 e 1 menina com nota 10. Qual a média dos 3?",
+    "opcoes": [
+     "6",
+     "7",
+     "4",
+     "5"
+    ],
+    "certa": "6",
+    "resposta": "2 × 4 + 10 = 18, e 18 ÷ 3 = 6."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Questão de nível acima. Ela esconde duas contas dentro de uma."
+       ],
+       [
+        3.4,
+        "A primeira: quantos são os meninos? Ninguém contou isso."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 46,
+        "s": "A média e a gangorra",
+        "cor": "tinta",
+        "tam": 44,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "linha",
+        "x1": 60,
+        "y1": 170,
+        "x2": 340,
+        "y2": 170,
+        "cor": "tinta",
+        "t": 0.8,
+        "dur": 0.6
+       },
+       {
+        "k": "caminho",
+        "d": "M200 172L184 204L216 204Z",
+        "cor": "tinta",
+        "t": 1.4,
+        "dur": 0.5,
+        "larg": 3
+       },
+       {
+        "k": "circ",
+        "cx": 100,
+        "cy": 146,
+        "r": 22,
+        "cor": "azul",
+        "t": 1.8
+       },
+       {
+        "k": "circ",
+        "cx": 300,
+        "cy": 154,
+        "r": 14,
+        "cor": "vermelho",
+        "t": 2.3
+       },
+       {
+        "k": "tx",
+        "x": 100,
+        "y": 110,
+        "s": "meninos",
+        "cor": "azul",
+        "tam": 24,
+        "t": 2.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 300,
+        "y": 124,
+        "s": "meninas",
+        "cor": "vermelho",
+        "tam": 24,
+        "t": 3.1,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 250,
+        "s": "quem pesa mais puxa a média",
+        "cor": "cinza",
+        "tam": 26,
+        "t": 3.8,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "Lê com calma. Repara que a pergunta é sobre os pontos de CADA menino."
+       ],
+       [
+        4.2,
+        "E que só os meninos mudam."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "Numa turma de 30 alunos, a média das notas dos meninos é 6, a das meninas é 9 e a da turma toda é 7. Se só as notas dos meninos subirem, todas na mesma quantidade, quantos pontos cada menino deve ganhar para a média da turma passar a ser 8?",
+      "alternativas": [
+       "1,0",
+       "1,5",
+       "2,0",
+       "3,0",
+       "6,0"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Dados: 30 alunos. Meninos com média 6, meninas com média 9."
+       ],
+       [
+        3.2,
+        "A turma toda tem média 7."
+       ],
+       [
+        5.4,
+        "Depois só os meninos sobem, e a média da turma vai a 8."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "o que a questão dá",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 80,
+        "s": "30 alunos",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 118,
+        "s": "meninos: média 6 · meninas: média 9",
+        "cor": "tinta",
+        "tam": 25,
+        "t": 1.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "turma toda: média 7",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 180,
+        "w": 340,
+        "h": 46,
+        "t": 5.4,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 214,
+        "s": "só meninos sobem → turma 8",
+        "cor": "vermelho",
+        "tam": 28,
+        "t": 5.5,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 262,
+        "s": "quero: quantos pontos por menino",
+        "cor": "azul",
+        "tam": 24,
+        "t": 6.8,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Primeiro, quantos meninos? Olha onde a média 7 cai entre 6 e 9."
+       ],
+       [
+        3.6,
+        "Fica a 1 de distância do 6 e a 2 do 9."
+       ],
+       [
+        6.4,
+        "Está mais perto do 6: então tem mais meninos."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "onde a média cai",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "linha",
+        "x1": 60,
+        "y1": 150,
+        "x2": 340,
+        "y2": 150,
+        "cor": "tinta",
+        "t": 0.6,
+        "dur": 0.6
+       },
+       {
+        "k": "linha",
+        "x1": 100,
+        "y1": 140,
+        "x2": 100,
+        "y2": 160,
+        "cor": "tinta",
+        "t": 1.0,
+        "dur": 0.3
+       },
+       {
+        "k": "linha",
+        "x1": 160,
+        "y1": 140,
+        "x2": 160,
+        "y2": 160,
+        "cor": "tinta",
+        "t": 1.2,
+        "dur": 0.3
+       },
+       {
+        "k": "linha",
+        "x1": 280,
+        "y1": 140,
+        "x2": 280,
+        "y2": 160,
+        "cor": "tinta",
+        "t": 1.4,
+        "dur": 0.3
+       },
+       {
+        "k": "tx",
+        "x": 100,
+        "y": 186,
+        "s": "6",
+        "cor": "azul",
+        "tam": 30,
+        "t": 1.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 160,
+        "y": 186,
+        "s": "7",
+        "cor": "verde",
+        "tam": 30,
+        "t": 2.0,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 280,
+        "y": 186,
+        "s": "9",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 2.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 100,
+        "y": 122,
+        "s": "meninos",
+        "cor": "azul",
+        "tam": 24,
+        "t": 2.4,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 160,
+        "y": 100,
+        "s": "turma",
+        "cor": "verde",
+        "tam": 24,
+        "t": 2.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 280,
+        "y": 122,
+        "s": "meninas",
+        "cor": "vermelho",
+        "tam": 24,
+        "t": 2.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "linha",
+        "x1": 100,
+        "y1": 206,
+        "x2": 160,
+        "y2": 206,
+        "cor": "azul",
+        "t": 3.6,
+        "dur": 0.4
+       },
+       {
+        "k": "linha",
+        "x1": 160,
+        "y1": 214,
+        "x2": 280,
+        "y2": 214,
+        "cor": "vermelho",
+        "t": 4.2,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 130,
+        "y": 236,
+        "s": "a 1",
+        "cor": "azul",
+        "tam": 26,
+        "t": 4.0,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 220,
+        "y": 244,
+        "s": "a 2",
+        "cor": "vermelho",
+        "tam": 26,
+        "t": 4.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 272,
+        "s": "7 está mais perto de 6",
+        "cor": "verde",
+        "tam": 24,
+        "t": 6.4,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "É uma gangorra. Cada lado pesa: quantidade vezes distância."
+       ],
+       [
+        3.4,
+        "Para equilibrar, meninos vezes 1 é igual a meninas vezes 2."
+       ],
+       [
+        6.6,
+        "Então há 2 meninos para cada menina."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "a gangorra",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "linha",
+        "x1": 60,
+        "y1": 150,
+        "x2": 340,
+        "y2": 150,
+        "cor": "tinta",
+        "t": 0.6,
+        "dur": 0.6
+       },
+       {
+        "k": "caminho",
+        "d": "M160 152L144 188L176 188Z",
+        "cor": "tinta",
+        "t": 1.0,
+        "dur": 0.5,
+        "larg": 3
+       },
+       {
+        "k": "circ",
+        "cx": 100,
+        "cy": 126,
+        "r": 22,
+        "cor": "azul",
+        "t": 1.6
+       },
+       {
+        "k": "circ",
+        "cx": 280,
+        "cy": 134,
+        "r": 14,
+        "cor": "vermelho",
+        "t": 2.0
+       },
+       {
+        "k": "tx",
+        "x": 100,
+        "y": 92,
+        "s": "meninos",
+        "cor": "azul",
+        "tam": 24,
+        "t": 2.4,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 280,
+        "y": 102,
+        "s": "meninas",
+        "cor": "vermelho",
+        "tam": 24,
+        "t": 2.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 224,
+        "s": "quantidade × distância",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.4,
+        "ancora": "middle"
+       },
+       {
+        "k": "hl",
+        "x": 40,
+        "y": 238,
+        "w": 320,
+        "h": 38,
+        "t": 5.0,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 268,
+        "s": "meninos × 1 = meninas × 2",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 5.1,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Dois meninos para uma menina: a turma tem 3 partes."
+       ],
+       [
+        3.0,
+        "30 alunos em 3 partes: 10 alunos por parte."
+       ],
+       [
+        5.6,
+        "Uma parte de meninas, 10. Duas de meninos, 20."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "30 alunos em 3 partes",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "grade",
+        "cols": 10,
+        "rows": 3,
+        "x0": 62,
+        "y0": 56,
+        "s": 24,
+        "gap": 4,
+        "t0": 0.6,
+        "passo": 0.06,
+        "marcados": [
+         0,
+         1,
+         2,
+         3,
+         4,
+         5,
+         6,
+         7,
+         8,
+         9
+        ]
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 180,
+        "s": "10 meninas = 1 parte",
+        "cor": "vermelho",
+        "tam": 28,
+        "t": 3.0,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 218,
+        "s": "20 meninos = 2 partes",
+        "cor": "azul",
+        "tam": 28,
+        "t": 4.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 258,
+        "s": "30 ÷ 3 = 10 por parte",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 5.6,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Agora, quanto falta? Média 8 com 30 alunos pede soma 240."
+       ],
+       [
+        3.4,
+        "Hoje a soma é 7 vezes 30, que dá 210. Faltam 30 pontos."
+       ],
+       [
+        7.0,
+        "Só os 20 meninos sobem: 30 dividido por 20 dá 1,5."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "quanto falta?",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 78,
+        "s": "média 8 → soma 8 × 30 = 240",
+        "cor": "tinta",
+        "tam": 27,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 114,
+        "s": "hoje: 7 × 30 = 210",
+        "cor": "tinta",
+        "tam": 27,
+        "t": 2.4,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 134,
+        "w": 340,
+        "h": 42,
+        "t": 4.0,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 166,
+        "s": "faltam 240 − 210 = 30 pontos",
+        "cor": "vermelho",
+        "tam": 27,
+        "t": 4.1,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 208,
+        "s": "só os 20 meninos sobem",
+        "cor": "azul",
+        "tam": 28,
+        "t": 5.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "hl",
+        "x": 40,
+        "y": 222,
+        "w": 320,
+        "h": 48,
+        "t": 7.0,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 260,
+        "s": "30 ÷ 20 = 1,5 cada",
+        "cor": "verde",
+        "tam": 40,
+        "t": 7.1,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Confere: cada menino ganha 1,5, de 6 para 7,5."
+       ],
+       [
+        2.8,
+        "Os 20 meninos somam 150 e as 10 meninas somam 90."
+       ],
+       [
+        5.6,
+        "Total 240, e 240 dividido por 30 dá 8. Resposta: B."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "conferindo",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "meninos: 6 + 1,5 = 7,5",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 126,
+        "s": "20 × 7,5 = 150",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 164,
+        "s": "10 × 9 = 90",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.4,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 180,
+        "w": 340,
+        "h": 46,
+        "t": 5.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 214,
+        "s": "240 ÷ 30 = 8   certo!",
+        "cor": "verde",
+        "tam": 32,
+        "t": 5.5,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 262,
+        "s": "resposta: B, 1,5",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 6.6,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Cada letra errada pulou uma etapa."
+       ],
+       [
+        2.6,
+        "A copia o aumento da média. C e D usam o número errado de alunos."
+       ],
+       [
+        6.4,
+        "E confunde com a média dos meninos."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · 1,0: copiou o aumento da média",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "C · 2,0: supôs 15 meninos",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 2.4,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "D · 3,0: dividiu pelas 10 meninas",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 6,0: é a média dos meninos",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 5.2,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: B, 1,5",
+        "cor": "verde",
+        "tam": 32,
+        "t": 6.5,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Viu o que a questão cobrou?"
+       ],
+       [
+        2.2,
+        "A média fica perto de quem tem mais gente."
+       ],
+       [
+        5.2,
+        "E se só um grupo muda, a conta é só com ele."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. média perto de quem tem mais gente",
+        "cor": "tinta",
+        "tam": 24,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "2. soma = média × quantidade",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 172,
+        "w": 270,
+        "h": 6,
+        "t": 3.8,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "3. só um grupo muda: divida por ele",
+        "cor": "tinta",
+        "tam": 24,
+        "t": 5.0,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Uma turma de 10 alunos tem média 8 e outra, de 30 alunos, tem média 6. Qual a média das duas juntas?",
+      "opcoes": [
+       "7",
+       "6,5",
+       "6",
+       "14"
+      ],
+      "certa": 1,
+      "porque": [
+       "7 é a média simples das duas. A turma de 30 pesa mais e puxa a média para baixo.",
+       "Isso! 10 × 8 + 30 × 6 = 260, e 260 ÷ 40 = 6,5. Mais perto de 6, porque tem mais gente.",
+       "6 seria só a turma grande. A turma de 10 ainda puxa um pouco para cima.",
+       "14 é 8 + 6: soma de médias não é média de ninguém."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: um grupo tem média de idade 30. Entra uma pessoa de 50 anos e a média vai a 31. Quantas pessoas havia antes?",
+      "opcoes": [
+       "19",
+       "20",
+       "10",
+       "21"
+      ],
+      "certa": 0,
+      "porque": [
+       "Isso! A pessoa nova está 19 acima da nova média (50 − 31). Cada um dos outros ficou 1 abaixo: eram 19.",
+       "20 é o grupo já com a pessoa nova. Antes dela eram 19.",
+       "10 não fecha: com 10 pessoas a média iria para uns 31,8.",
+       "21 não fecha: com 21 pessoas a média ficaria em uns 30,9."
+      ]
+     }
+    ]
+   }
+  }
  }
 ]

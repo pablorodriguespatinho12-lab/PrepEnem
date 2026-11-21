@@ -7,6 +7,9 @@ Aula no molde do robô. Gravar: scripts/criar-provas-escada.ts."""
 
 ARQUIVO = '../escada/matematica'
 
+from lousas_matematica import (ALTS_CARTOES, ALTS_MEDIA, ALTS_TREM, ENUN_CARTOES, ENUN_MEDIA, ENUN_TREM,
+                               LOUSA_CARTOES, LOUSA_MEDIA, LOUSA_TREM)
+
 
 def M(tema, nivel):
   return {'materia': 'Matemática', 'tema': tema, 'nivel': nivel}
@@ -331,4 +334,60 @@ dict(**M(COM, 'juncao'), id='d2-escada-mat-jun-com-02', resp='C', confere=10,
     'n × (n − 1) = 90\nQue dois números seguidos multiplicados dão 90? 10 × 9 = 90\nn = 10\nLetra C.', [('D', '90')],
     '"todos com todos, uma vez" (apertos, jogos de um turno) → n × (n − 1) ÷ 2.',
     ('45 apertos', 'n(n − 1) ÷ 2 = 45', 'D = 90', 'n = 10'))),
+
+# ---------------- Nível acima (21/11/2026): mais raciocínio, conta curta, aula de lousa ----------------
+# Pablo achou as de "nível acima" tranquilas e escolheu: juntar 2 ou 3 conteúdos, dado escondido
+# no texto e pegadinha nas letras; a conta continua curta. Cada uma abre com a lousa (lousas_matematica.py).
+dict(**M(COM, 'acima'), id='d2-escada-mat-ita-com-01', resp='D',
+  enun=ENUN_CARTOES, alts=ALTS_CARTOES, lousa=LOUSA_CARTOES,
+  ideia='Esqueça a ordem por um instante: três cartões quaisquer formam 3 × 2 × 1 = 6 filas, e só uma delas é crescente. Então a chance é 1 em 6.',
+  conferencia='Todas as filas: 9 × 8 × 7 = 504. Crescentes: escolher 3 de 9 = 84. 84/504 = 1/6. D. A = uma só fila (1, 2, 3); B = 1/9; C = 1/3 (3 posições); E = 84/729, com devolução.',
+  sua_vez=('3 cartões distintos em fila. Qual a chance de ficarem decrescentes?', ['1/6', '1/3', '1/9', '1/27'], '1/6', 'Mesma ideia: 6 filas e só 1 decrescente.'),
+  aula=aula([CONT, ('contagem', 'Probabilidade', 'chance = quero ÷ tudo')],
+    [('Cartões', '9, de 1 a 9'), ('Retiradas', '3, sem devolver'), ('Quero', 'fila crescente')],
+    'A questão quer a chance P de a fila sair crescente.',
+    'P = C ÷ F (filas crescentes ÷ filas possíveis do mesmo trio)',
+    'Por que olhar um trio só? Qualquer trio de cartões pode ser arrumado de 3 × 2 × 1 = 6 jeitos, e só um deles é crescente. Vale para todo trio: a chance não depende dos números.',
+    [('P', 'chance de ficar crescente (o que a questão quer)'), ('F', 'filas possíveis do mesmo trio'), ('C', 'filas crescentes do trio')],
+    [('Achando F: arrumar um trio', '3 escolhas para o 1º lugar, 2 para o 2º, 1 para o 3º.\nF = 3 × 2 × 1 = 6'),
+     ('Achando C: o seu jeito', 'Parece certo contar todos os sorteios, 9 × 8 × 7 = 504. Dá certo, mas é conta demais. Em cada trio, só 1 fila é crescente.\nC = 1')],
+    'P = C ÷ F = 1 ÷ 6\nLetra D. Confere contando tudo: 84 ÷ 504 = 1/6.', [('F', '6'), ('C', '1')],
+    '"fila crescente" num sorteio sem devolver → de cada grupo, só 1 arrumação serve: 1 ÷ (arrumações do grupo).',
+    ('9 cartões, 3 sem devolver', 'P = C ÷ F', 'F = 6; C = 1', '1 ÷ 6'))),
+
+dict(**M(FUN, 'acima'), id='d2-escada-mat-ita-fun-01', resp='C', confere=600,
+  enun=ENUN_TREM, alts=ALTS_TREM, lousa=LOUSA_TREM,
+  ideia='Num gráfico de velocidade, a distância é a área embaixo da linha. O desenho é um trapézio: quebre em dois triângulos e um retângulo e some, 100 + 400 + 100.',
+  conferencia='Subida: 10 × 20 ÷ 2 = 100. Reta: 20 × 20 = 400. Freada: 100. Total 600. C. A = só os triângulos (200); B = só a parte reta (400); D = 40 × 20 (800); E = (40 + 20) × 20 sem ÷ 2 (1 200).',
+  sua_vez=('Um carro acelera de 0 a 6 m/s em 4 s. Qual a distância nesses 4 s?', ['12 m', '24 m', '10 m', '6 m'], '12 m', 'É um triângulo: 4 × 6 ÷ 2 = 12.'),
+  aula=aula([('grafico', 'Área sob o gráfico', 'distância = área entre a linha e o eixo do tempo'), ('grafico', 'Triângulo e retângulo', 'triângulo = base × altura ÷ 2; retângulo = base × altura')],
+    [('Subida', '0 a 20 m/s em 10 s'), ('Parte reta', '20 m/s por 20 s'), ('Freada', '20 a 0 m/s em 10 s')],
+    'A questão quer a distância total D.',
+    'D = T1 + R + T2 (distância = área dos três pedaços do gráfico)',
+    'Por que área? Velocidade × tempo dá distância. Com velocidade fixa isso é a área de um retângulo; quando a velocidade muda, a área embaixo da linha continua valendo.',
+    [('D', 'distância total (o que a questão quer)'), ('T1', 'área do triângulo da subida'), ('R', 'área do retângulo da parte reta'), ('T2', 'área do triângulo da freada')],
+    [('Achando T1: triângulo da subida', 'Base 10 s, altura 20 m/s.\nT1 = 10 × 20 ÷ 2 = 100'),
+     ('Achando R: retângulo da parte reta', 'Base 20 s, altura 20 m/s.\nR = 20 × 20 = 400'),
+     ('Achando T2: o seu jeito', 'Parece certo repetir 10 × 20 = 200 na freada. Mas a velocidade cai até 0: é um triângulo, metade disso.\nT2 = 10 × 20 ÷ 2 = 100')],
+    'D = 100 + 400 + 100 = 600\nLetra C. Confere pelo trapézio: (40 + 20) × 20 ÷ 2 = 600.', [('T1', '100'), ('R', '400'), ('T2', '100')],
+    'gráfico de velocidade × tempo → a distância é a área embaixo; quebre em triângulos e retângulos.',
+    ('gráfico de v × t', 'D = T1 + R + T2', 'T1 = 100; R = 400; T2 = 100', '100 + 400 + 100'))),
+
+dict(**M(EST, 'acima'), id='d2-escada-mat-ita-est-01', resp='B', confere=1.5,
+  enun=ENUN_MEDIA, alts=ALTS_MEDIA, lousa=LOUSA_MEDIA,
+  ideia='A média da turma fica perto de quem tem mais gente: 7 está a 1 de 6 e a 2 de 9, então são 2 meninos para cada menina, 20 e 10. Faltam 30 pontos na soma para chegar a 8, e só os 20 meninos sobem: 30 ÷ 20 = 1,5.',
+  conferencia='m + f = 30 e 6m + 9f = 7 × 30 = 210, então f = 10 e m = 20. Média 8 pede soma 240; hoje 210; faltam 30; 30 ÷ 20 = 1,5. B. A = 1,0 (a média sobe 1); C = 2,0 (15 meninos); D = 3,0 (10 meninas); E = 6,0 (média dos meninos).',
+  sua_vez=('2 meninos com média 4 e 1 menina com nota 10. Qual a média dos 3?', ['6', '7', '4', '5'], '6', '2 × 4 + 10 = 18, e 18 ÷ 3 = 6.'),
+  aula=aula([('media', 'Soma e média', 'soma = média × quantidade'), ('media', 'Média de grupos', 'a média fica perto do grupo com mais gente')],
+    [('Alunos', '30'), ('Média dos meninos', '6'), ('Média das meninas', '9'), ('Média da turma', '7, depois 8')],
+    'A questão quer quantos pontos cada menino ganha, G.',
+    'G = F ÷ m (pontos que faltam ÷ número de meninos)',
+    'Por que dividir só pelos meninos? Só as notas deles sobem, todas na mesma quantidade. Então os pontos que faltam são repartidos entre eles.',
+    [('G', 'pontos para cada menino (o que a questão quer)'), ('F', 'pontos que faltam na soma da turma'), ('m', 'número de meninos')],
+    [('Achando m: quantos meninos', 'A média 7 está a 1 de 6 e a 2 de 9. Quem está mais perto pesa mais: meninos × 1 = meninas × 2, ou seja, 2 meninos para cada menina.\nm = 20 (e 10 meninas)'),
+     ('Achando F: pontos que faltam', 'Para a média ser 8, a soma tem que ser 8 × 30 = 240. Hoje a soma é 7 × 30 = 210.\nF = 240 − 210 = 30'),
+     ('Achando G: o seu jeito', 'Parece certo subir 1 ponto em cada nota, porque a média da turma sobe 1. Mas só os meninos sobem, então os 30 pontos vêm só deles.\nG = 30 ÷ 20 = 1,5')],
+    'G = 30 ÷ 20 = 1,5\nLetra B. Confere: 20 × 7,5 + 10 × 9 = 240, e 240 ÷ 30 = 8.', [('m', '20'), ('F', '30')],
+    '"só um grupo muda" → quanto falta na soma ÷ quantos são do grupo; e a soma é média × quantidade.',
+    ('30 alunos, médias 6, 9 e 7', 'G = F ÷ m', 'm = 20; F = 30', '30 ÷ 20 = 1,5'))),
 ]

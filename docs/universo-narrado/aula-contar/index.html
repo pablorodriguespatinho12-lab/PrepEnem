@@ -1,0 +1,233 @@
+<title>Pelo menos um</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Jersey+10&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: lousa branca em cima (a questão e o desenho se traçam sozinhos), professor de pixel + balão embaixo, botões. Nada de rolagem. */
+:root {
+  --bg: #e9f0ea; --fg: #16241d; --muted: #4d6357; --wood: #7a5c3a; --yel: #f2d14a;
+  --f-title: "Jersey 10", "Courier New", monospace; --f-hand: "Caveat", "Comic Sans MS", cursive; --f-body: "Nunito", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #0d1813; --fg: #e8f1ea; --muted: #a4b9ac; --wood: #a07f55; color-scheme: dark; } }
+:root[data-theme="dark"] { --bg: #0d1813; --fg: #e8f1ea; --muted: #a4b9ac; --wood: #a07f55; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: 18px; line-height: 1.3;
+  padding-left: max(14px, env(safe-area-inset-left, 0px)); padding-right: max(14px, env(safe-area-inset-right, 0px)); }
+#app { height: 100%; max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; padding-block: 8px; }
+.top { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--muted); font-weight: 700; }
+.bar { flex: 1; height: 8px; background: color-mix(in srgb, var(--fg) 14%, transparent); }
+.bar i { display: block; height: 100%; width: 0; background: var(--yel); transition: width .25s steps(6); }
+
+/* lousa */
+#board { flex: 1; min-height: 0; margin: 6px; background: #fbfbf6; display: flex; align-items: center; justify-content: center; overflow: hidden;
+  box-shadow: 0 -6px 0 0 var(--wood), 0 6px 0 0 var(--wood), -6px 0 0 0 var(--wood), 6px 0 0 0 var(--wood); }
+#board svg { width: 100%; height: 100%; display: block; }
+svg text { font-family: var(--f-hand); font-weight: 700; }
+.tr { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: desenha var(--d, .5s) ease-out var(--t, 0s) forwards; }
+@keyframes desenha { to { stroke-dashoffset: 0; } }
+.tx, .f { opacity: 0; animation: escreve .4s ease-out var(--t, 0s) forwards; }
+@keyframes escreve { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+.pop { opacity: 0; transform-box: fill-box; transform-origin: center; animation: pop .3s ease-out var(--t, 0s) forwards; }
+@keyframes pop { from { opacity: 0; transform: scale(.3); } to { opacity: 1; transform: scale(1); } }
+.wipe { transform-box: fill-box; transform-origin: left; transform: scaleX(0); animation: wipe .45s ease-out var(--t, 0s) forwards; }
+@keyframes wipe { to { transform: scaleX(1); } }
+.fim .tr { animation: none; stroke-dashoffset: 0; } .fim .tx, .fim .f, .fim .pop { animation: none; opacity: 1; transform: none; } .fim .wipe { animation: none; transform: none; }
+
+/* a questão em papel */
+.papel { width: 100%; padding: 12px 14px; color: #1b2430; display: flex; flex-direction: column; gap: 8px; font-size: clamp(12.5px, 3.3vw, 16px); line-height: 1.32; font-weight: 600; }
+.papel small { font-weight: 800; color: #1f6fd1; letter-spacing: .08em; text-transform: uppercase; font-size: 11.5px; }
+.papel p { margin: 0; }
+.papel .alts { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; font-family: var(--f-hand); font-size: clamp(22px, 5vw, 30px); font-weight: 700; text-align: center; }
+.papel .alts span { border: 2px solid #1b2430; padding: 2px 0; background: #fff; }
+
+/* professor + balão */
+.fala-area { display: flex; align-items: center; gap: 12px; margin: 4px; }
+#prof { width: 72px; height: 72px; flex: none; background: #cfe3d6; box-shadow: 0 -3px 0 0 var(--wood), 0 3px 0 0 var(--wood), -3px 0 0 0 var(--wood), 3px 0 0 0 var(--wood); }
+#prof .boca { transform-box: fill-box; transform-origin: top; }
+#prof.fala .boca { animation: boca .32s steps(1) infinite; }
+@keyframes boca { 0% { transform: scaleY(1); } 50% { transform: scaleY(2); } }
+#balao { flex: 1; min-height: 84px; background: #fff; color: #16241d; padding: 10px 14px; position: relative; font-size: 18px; font-weight: 700; display: flex; flex-direction: column; justify-content: center; gap: 3px;
+  box-shadow: 0 -3px 0 0 #16241d, 0 3px 0 0 #16241d, -3px 0 0 0 #16241d, 3px 0 0 0 #16241d; }
+#balao::before { content: ""; position: absolute; left: -14px; top: 50%; width: 14px; height: 14px; background: #fff; transform: translateY(-50%) rotate(45deg); box-shadow: -3px 3px 0 0 #16241d; }
+#balao p { margin: 0; }
+
+/* prova */
+.prova { width: 100%; height: 100%; padding: 14px 18px; display: flex; flex-direction: column; justify-content: center; gap: 12px; color: #1b2430; }
+.prova .q { margin: 0; font-family: var(--f-hand); font-size: clamp(26px, 5.4vw, 38px); line-height: 1.05; font-weight: 700; }
+.prova small { font-weight: 800; color: #1f6fd1; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; }
+.ops { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.opt { font-family: var(--f-hand); font-weight: 700; font-size: 38px; line-height: 1; padding: 10px; background: #fff; color: #1b2430; border: 3px solid #1b2430; cursor: pointer; transition: transform .1s; }
+.opt:active { transform: translateY(3px); }
+.opt.certo { background: #8fe39b; } .opt.errado { background: #ff9e90; } .opt[disabled] { cursor: default; }
+
+/* botões */
+.ctrl { display: flex; gap: 10px; margin: 4px; }
+.btn { font-family: var(--f-title); font-size: 30px; line-height: 1; padding: 12px 18px; background: var(--yel); color: #1b2a22; border: 0; cursor: pointer; flex: 1;
+  box-shadow: 0 4px 0 0 #8c7416, 0 -3px 0 0 #1b2a22, 0 3px 0 0 #1b2a22, -3px 0 0 0 #1b2a22, 3px 0 0 0 #1b2a22; transition: transform .1s, box-shadow .1s; }
+.btn:active { transform: translateY(4px); box-shadow: 0 0 0 0 #8c7416, 0 -3px 0 0 #1b2a22, 0 3px 0 0 #1b2a22, -3px 0 0 0 #1b2a22, 3px 0 0 0 #1b2a22; }
+.btn.lado { flex: 0 0 auto; background: transparent; color: var(--fg); box-shadow: 0 -3px 0 0 var(--fg), 0 3px 0 0 var(--fg), -3px 0 0 0 var(--fg), 3px 0 0 0 var(--fg); }
+.btn[hidden] { display: none; }
+button { -webkit-tap-highlight-color: transparent; } button:focus { outline: none; } button:focus-visible { outline: 3px solid var(--fg); outline-offset: 4px; }
+@media (max-width: 480px) { #balao { font-size: 17px; } #prof { width: 60px; height: 60px; } .opt { font-size: 34px; } }
+@media (max-height: 620px) { #balao { min-height: 70px; padding: 6px 12px; font-size: 16px; } .btn { padding: 8px 14px; font-size: 26px; } .papel { gap: 5px; padding: 8px 12px; } }
+</style>
+
+<div id="app">
+  <div class="top"><span id="n">1/1</span><div class="bar"><i id="barra"></i></div></div>
+  <div id="board"></div>
+  <div class="fala-area">
+    <svg id="prof" viewBox="0 0 16 16" shape-rendering="crispEdges" role="img" aria-label="Professor de pixel">
+      <rect x="4" y="1" width="8" height="3" fill="#2b2118"/><rect x="4" y="4" width="8" height="6" fill="#e8b98f"/>
+      <rect x="5" y="5" width="2" height="2" fill="#fff" stroke="#2b2118" stroke-width=".6"/><rect x="9" y="5" width="2" height="2" fill="#fff" stroke="#2b2118" stroke-width=".6"/>
+      <rect class="boca" x="7" y="8" width="2" height="1" fill="#7a2e2e"/>
+      <rect x="3" y="10" width="10" height="6" fill="#2f6f55"/><rect x="13" y="10" width="1" height="5" fill="#d63a2f"/>
+    </svg>
+    <div id="balao" aria-live="polite"></div>
+  </div>
+  <div class="ctrl"><button class="btn lado" id="volta" aria-label="Voltar">←</button><button class="btn lado" id="de-novo" aria-label="Ver de novo">↻</button><button class="btn" id="prox">Próximo</button></div>
+</div>
+
+<script>
+(function () {
+  var INK = '#1b2430', BLU = '#1f6fd1', RED = '#d63a2f', GRN = '#1f9d55', YEL = '#ffe14a', MUT = '#5a6b66';
+  // ---------- pincéis ----------
+  function path(d, cor, t, dur, w) { return '<path class="tr" d="' + d + '" pathLength="1" stroke="' + cor + '" stroke-width="' + (w || 3) + '" style="--t:' + t + 's;--d:' + (dur || .5) + 's"/>'; }
+  function line(x1, y1, x2, y2, cor, t, dur) { return path('M' + x1 + ' ' + y1 + 'L' + x2 + ' ' + y2, cor, t, dur); }
+  function circ(cx, cy, r, cor, t) { return '<circle class="tr" cx="' + cx + '" cy="' + cy + '" r="' + r + '" pathLength="1" stroke="' + cor + '" stroke-width="3" style="--t:' + t + 's;--d:.5s"/>'; }
+  function box(x, y, w, h, cor, t, dur) { return path('M' + x + ' ' + y + 'h' + w + 'v' + h + 'h' + (-w) + 'z', cor, t, dur || .6); }
+  function tx(x, y, s, cor, size, t, anchor) { return '<text class="tx" x="' + x + '" y="' + y + '" fill="' + cor + '" font-size="' + size + '" text-anchor="' + (anchor || 'middle') + '" style="--t:' + t + 's">' + s + '</text>'; }
+  function hl(x, y, w, h, t, cor) { return '<rect class="wipe" x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + (cor || YEL) + '" opacity=".85" style="--t:' + t + 's"/>'; }
+  function svg(inner) { return '<svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet" role="img">' + inner + '</svg>'; }
+  // grade de caminhos: o primeiro (índice 0) é o "errou todos"
+  function grade(cols, rows, x0, y0, s, gap, t0, passo) {
+    var g = '', i = 0, r, c;
+    for (r = 0; r < rows; r++) for (c = 0; c < cols; c++, i++)
+      g += '<rect class="pop" x="' + (x0 + c * (s + gap)) + '" y="' + (y0 + r * (s + gap)) + '" width="' + s + '" height="' + s + '" fill="' + (i === 0 ? '#ff8d7a' : '#e2e8e4') + '" stroke="' + INK + '" stroke-width="2" style="--t:' + (t0 + i * passo) + 's"/>';
+    return g;
+  }
+
+  // ---------- as cenas ----------
+  var S = [];
+  function cena(fala, desenho) { S.push({ fala: fala, svg: desenho }); }
+
+  // 1. capa: a questão primeiro
+  cena([[.3, 'Vamos resolver uma questão que caiu no ENEM.'], [3.2, 'Cada ferramenta aparece na hora que ela serve.']],
+    svg(hl(30, 56, 340, 56, .2) + tx(200, 102, 'Pelo menos um', INK, 58, .3) + tx(200, 146, 'a questão dos dardos', BLU, 30, 1.6) +
+      circ(200, 205, 16, INK, 2.2) + circ(200, 205, 30, INK, 2.5) + circ(200, 205, 44, INK, 2.8) + line(330, 150, 206, 202, RED, 3.3, .5) + tx(200, 272, 'ENEM 2021 · questão 177', MUT, 22, 4.0)));
+
+  // 2. a questão (texto real)
+  S.push({ fala: [[.3, 'Essa caiu no ENEM 2021, questão 177.'], [2.6, 'Lê com calma. Depois eu separo o que importa.']],
+    papel: '<small>ENEM 2021 · questão 177</small><p>O organizador de uma competição de lançamento de dardos pretende tornar o campeonato mais competitivo. Pelas regras atuais da competição, numa rodada, o jogador lança 3 dardos e pontua caso acerte pelo menos um deles no alvo. O organizador considera que, em média, os jogadores têm, em cada lançamento, 1/2 de probabilidade de acertar um dardo no alvo. A fim de tornar o jogo mais atrativo, planeja modificar as regras de modo que a probabilidade de um jogador pontuar em uma rodada seja igual ou superior a 9/10. Para isso, decide aumentar a quantidade de dardos a serem lançados em cada rodada. Com base nos valores considerados pelo organizador da competição, a quantidade mínima de dardos que deve ser disponibilizada em uma rodada para tornar o jogo mais atrativo é</p><div class="alts"><span>A 2</span><span>B 4</span><span>C 6</span><span>D 9</span><span>E 10</span></div>' });
+
+  // 3. o que ela pede
+  cena([[.3, 'Ela quer o menor número de dardos.'], [2.8, 'Cuidado: 9/10 é uma chance, 90%.'], [5.4, 'Não são 9 dardos! É a pegadinha das letras D e E.']],
+    svg(tx(200, 36, 'o que a questão pede', INK, 32, .2) +
+      tx(30, 82, 'hoje: 3 dardos', INK, 28, .8, 'start') +
+      tx(30, 120, 'cada dardo acerta com chance 1/2', INK, 28, 1.6, 'start') +
+      tx(30, 158, 'meta: chance de pontuar ≥ 9/10', INK, 28, 2.4, 'start') +
+      hl(26, 178, 250, 44, 3.2) + tx(30, 212, '9/10 = 0,9 = 90%', RED, 38, 3.3, 'start') +
+      tx(30, 258, 'é uma CHANCE, não 9 dardos', RED, 28, 5.4, 'start')));
+
+  // 4. contar o contrário
+  cena([[.3, 'Pontuar é acertar pelo menos um.'], [2.6, 'Pode ser 1, 2 ou 3 acertos. Chato de contar.'], [5.8, 'Truque: só existe 1 jeito de NÃO pontuar, errar todos.']],
+    svg(tx(200, 34, 'pontuar = acertar pelo menos 1', INK, 28, .2) +
+      hl(41, 61, 278, 48, 1.6) + hl(319, 61, 40, 48, 4.4, '#ff8d7a') + box(40, 60, 320, 50, INK, .6) +
+      tx(180, 96, 'pontua', INK, 30, 1.9) + tx(40, 140, 'tudo = 100%', MUT, 22, 1.2, 'start') + tx(335, 142, 'errar todos', RED, 24, 4.6) +
+      hl(24, 172, 352, 48, 6.4) + tx(200, 210, 'pontuar = 1 − errar todos', RED, 34, 6.5) +
+      tx(200, 262, 'contar o contrário é mais fácil', BLU, 26, 7.4)));
+
+  // 5. errar todos com 3 dardos (E → multiplica)
+  cena([[.3, 'Cada dardo tem 1/2 de chance de errar.'], [2.6, 'Errar os 3 seguidos: multiplica. 1/2 × 1/2 × 1/2.'], [5.2, 'Dá 1/8. É 1 caminho em 8.']],
+    svg(tx(200, 34, '3 dardos: 8 caminhos', INK, 30, .2) + grade(4, 2, 40, 62, 32, 8, .5, .15) +
+      tx(235, 88, '½ × ½ × ½', INK, 32, 2.8, 'start') + tx(235, 144, '= 1/8', RED, 48, 3.8, 'start') +
+      hl(50, 178, 300, 46, 5.2) + tx(200, 214, 'errar todos = 1/8', INK, 38, 5.3) +
+      tx(200, 262, 'um E outro E outro → multiplica', BLU, 24, 6.2)));
+
+  // 6. com 3 dardos (hoje)
+  cena([[.3, 'Hoje, com 3 dardos: 1 − 1/8.'], [2.4, 'Dá 7/8, ou seja, 0,875.'], [4.6, 'Falta pouco para 0,9. Ainda não serve.']],
+    svg(tx(200, 36, 'com 3 dardos (hoje)', INK, 30, .2) + tx(200, 100, '1 − 1/8 = 7/8', INK, 50, .8) + tx(200, 163, '= 0,875', BLU, 46, 2.2) +
+      hl(60, 182, 280, 46, 3.6, '#ffb3a8') + tx(200, 220, '0,875 < 0,9', RED, 42, 3.7) + tx(200, 262, 'ainda não serve', RED, 26, 4.8)));
+
+  // 7. com 4 dardos
+  cena([[.3, 'Com 4 dardos, errar todos é 1/16.'], [2.8, '1 − 1/16 = 0,9375. Passou de 0,9!'], [5.6, 'Resposta: letra B, 4 dardos.']],
+    svg(tx(200, 34, 'com 4 dardos', INK, 30, .2) + grade(4, 4, 40, 56, 24, 6, .5, .1) +
+      tx(190, 86, '1/16 de errar todos', INK, 26, 2.2, 'start') + tx(190, 134, '1 − 1/16 = 0,9375', BLU, 28, 3.4, 'start') +
+      hl(26, 200, 348, 40, 4.6, '#b9ecc0') + tx(200, 230, '0,9375 > 0,9  passou!', GRN, 34, 4.7) + tx(200, 268, 'Resposta: B, 4 dardos', RED, 32, 5.8)));
+
+  // 7b. onde o pensamento escorrega (as outras letras, com a conta de cada uma)
+  cena([[.3, 'Por que as outras letras tentam?'], [2.6, 'A e C erram a conta. D e E erram a leitura.'], [5.4, 'O certo é o MENOR número que passa de 0,9.']],
+    svg(tx(200, 34, 'por que as outras letras erram', INK, 28, .2) +
+      tx(24, 82, 'A · 2 dardos: 0,75 → piora', INK, 26, .8, 'start') +
+      tx(24, 126, 'C · 6 dardos: 0,98 → passa, mas sobra', INK, 25, 1.8, 'start') +
+      tx(24, 170, 'D e E · leu 9/10 como 9 ou 10 dardos', RED, 25, 2.8, 'start') +
+      hl(26, 196, 348, 44, 4.4, '#b9ecc0') + tx(200, 228, 'o menor que passa: B (4)', GRN, 32, 4.5)));
+
+  // 8. o que ficou
+  cena([[.3, 'Viu o que a questão usou?'], [2.2, 'Pelo menos um? Conta o contrário e tira de 1.'], [5.2, 'Esse truque cai muito em probabilidade.']],
+    svg(tx(200, 36, 'o que a questão ensinou', INK, 30, .2) +
+      tx(30, 100, '1. pelo menos um → 1 − errar todos', INK, 25, .8, 'start') + hl(26, 118, 290, 6, 1.6, '#ffe14a') +
+      tx(30, 160, '2. um E outro → multiplica', INK, 28, 2.4, 'start') +
+      tx(30, 220, '3. 9/10 é chance, não quantidade', INK, 26, 4.0, 'start')));
+
+  // provas
+  function prova(pergunta, ops, c, d) { S.push({ fala: [[.3, 'Sua vez! Escolhe uma.']], prova: { q: pergunta, ops: ops, c: c, d: d } }); }
+  prova('Joga uma moeda 2 vezes. Qual a chance de sair cara pelo menos uma vez?', ['3/4', '1/2', '1/4', '1'], 0, [
+    'Isso! Errar as 2: coroa e coroa = 1/4. Pelo menos uma cara = 1 − 1/4 = 3/4.',
+    '1/2 é a chance de UMA moeda. Com duas, conta o contrário: 1 − 1/4.',
+    '1/4 é a chance de errar as duas (coroa, coroa). A pergunta é o contrário: 1 − 1/4 = 3/4.',
+    'Chance 1 seria certeza. Dá para tirar coroa nas duas, então não é 1.']);
+  prova('Mais difícil: quantas moedas, no mínimo, para ter 99% de chance de sair cara pelo menos uma vez?', ['5', '6', '7', '99'], 2, [
+    '5 moedas: errar todas é 1/32 (3,1%). Pontua só 96,9%. Falta.',
+    '6 moedas: errar todas é 1/64 (1,6%). Pontua 98,4%. Ainda falta.',
+    'Isso! Com 7: errar todas é 1/128 (0,8%) e pontua 99,2%. Passou de 99%.',
+    '99% é a chance, não a quantidade de moedas (de novo a pegadinha do 9/10).']);
+
+  // fim
+  cena([[.3, 'É isso! Uma questão, três ideias.'], [2.8, 'Probabilidade e contagem caem em média 4 vezes por prova.']],
+    svg(tx(200, 40, 'onde isso cai', INK, 34, .2) + tx(200, 100, 'Probabilidade e contagem:', INK, 30, .8) +
+      hl(60, 118, 280, 56, 1.6) + tx(200, 162, '~4 questões por prova', RED, 42, 1.7) +
+      tx(200, 200, '(Matemática, ENEM 2009 a 2023)', MUT, 22, 2.6) + tx(200, 252, 'quer treinar? volta e refaz as provas', BLU, 26, 3.6)));
+
+  // ---------- motor ----------
+  var i = 0, board = document.getElementById('board'), balao = document.getElementById('balao'), prof = document.getElementById('prof'),
+      prox = document.getElementById('prox'), volta = document.getElementById('volta'), denovo = document.getElementById('de-novo'), app = document.getElementById('app'), timer = null;
+  var respondeu = {};
+  function falar(linhas) {
+    balao.innerHTML = linhas.map(function (l) { return '<p class="f" style="--t:' + l[0] + 's">' + l[1] + '</p>'; }).join('');
+    prof.classList.add('fala'); clearTimeout(timer);
+    timer = setTimeout(function () { prof.classList.remove('fala'); }, (linhas[linhas.length - 1][0] + 1.6) * 1000);
+  }
+  function mostra() {
+    var c = S[i];
+    if (c.prova) {
+      var p = c.prova;
+      board.innerHTML = '<div class="prova"><small>Prove você</small><p class="q">' + p.q + '</p><div class="ops">' + p.ops.map(function (o, k) { return '<button class="opt" data-k="' + k + '">' + o + '</button>'; }).join('') + '</div></div>';
+      falar(c.fala);
+      if (respondeu[i] != null) marca(respondeu[i], true);
+    } else if (c.papel) { board.innerHTML = '<div class="papel">' + c.papel + '</div>'; falar(c.fala);
+    } else { board.innerHTML = c.svg; falar(c.fala); }
+    document.getElementById('n').textContent = (i + 1) + '/' + S.length;
+    document.getElementById('barra').style.width = ((i + 1) / S.length * 100) + '%';
+    volta.hidden = i === 0; denovo.hidden = !!c.prova;
+    prox.textContent = i === 0 ? 'Começar' : (i === S.length - 1 ? 'De novo' : 'Próximo');
+    try { history.replaceState(null, '', '#t' + (i + 1)); } catch (e) {}
+  }
+  function marca(k, quieto) {
+    var p = S[i].prova;
+    board.querySelectorAll('.opt').forEach(function (b, j) { b.disabled = true; if (j === p.c) b.classList.add('certo'); else if (j === k) b.classList.add('errado'); });
+    falar([[quieto ? 0 : .1, p.d[k]]]);
+  }
+  board.addEventListener('click', function (e) {
+    var b = e.target.closest('.opt'); if (!b || b.disabled) return;
+    respondeu[i] = +b.dataset.k; marca(respondeu[i]);
+  });
+  prox.addEventListener('click', function () { if (i === S.length - 1) { i = 0; respondeu = {}; } else i++; mostra(); });
+  volta.addEventListener('click', function () { if (i > 0) { i--; mostra(); } });
+  denovo.addEventListener('click', mostra);
+  document.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') prox.click(); else if (e.key === 'ArrowLeft') volta.click(); });
+  var h = parseInt((location.hash || '').replace('#t', ''), 10);
+  if (h >= 1 && h <= S.length) i = h - 1;
+  window.__aula = { fim: function () { app.classList.add('fim'); } };
+  mostra();
+})();
+</script>

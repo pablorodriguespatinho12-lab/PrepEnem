@@ -1,4 +1,4 @@
-import { DM_Sans, Fraunces, Source_Serif_4, JetBrains_Mono } from 'next/font/google';
+import { DM_Sans, Fraunces, Source_Serif_4, JetBrains_Mono, Caveat } from 'next/font/google';
 import localFont from 'next/font/local';
 import { headers } from 'next/headers';
 import './globals.css';
@@ -20,6 +20,8 @@ const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-sans', display: '
 const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-display', display: 'swap' });
 const sourceSerif = Source_Serif_4({ subsets: ['latin'], variable: '--font-reading', display: 'swap' });
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono', display: 'swap' });
+/* Letra de mão da lousa (components/aula-lousa), a mesma da amostra que o Pablo aprovou. */
+const caveat = Caveat({ subsets: ['latin'], weight: ['600', '700'], variable: '--font-mao', display: 'swap' });
 /* Jersey 10 (pixel): só no mundo pixel (número grande, letra da alternativa, placa).
    Arquivo local porque o Next 14 não tem ela na lista do Google. A Pixelify Sans
    foi descartada: o "C" dela parece "O" ("Oafé", 12/11/2026). */
@@ -58,7 +60,7 @@ export async function generateMetadata() {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning data-letra-pixel="">
-      <body className={`${dmSans.variable} ${fraunces.variable} ${sourceSerif.variable} ${jetbrainsMono.variable} ${jersey.variable} ${jerseyTexto.variable} font-sans`}>
+      <body className={`${dmSans.variable} ${fraunces.variable} ${sourceSerif.variable} ${jetbrainsMono.variable} ${caveat.variable} ${jersey.variable} ${jerseyTexto.variable} font-sans`}>
         <Providers nonce={headers().get('x-nonce') ?? undefined}>
           <AppLayout>
             {children}

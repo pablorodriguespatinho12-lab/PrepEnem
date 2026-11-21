@@ -30,10 +30,14 @@ export function etapaDaProva(q: QuestaoDaEscada): EtapaDaProva | null {
 /* Ordem de preferência dentro da etapa: ENEM real antes do modelo; as do dia 2
    (d2-, com aula do robô) antes das antigas; depois pelo id, para sair igual sempre. */
 function prioridade(q: QuestaoDaEscada): string {
+  // Nível acima escrito para raciocinar (21/11/2026: o Pablo achou as de antes "tranquilas"):
+  // entra no degrau ITA antes das antigas, que só completam a vaga que sobrar.
+  const raciocinio = ID_ACIMA_DE_RACIOCINIO.test(q.id) ? '0' : '1';
   const real = q.anoProva != null || /^enem\s+\d{4}/i.test(q.origem ?? '') ? '0' : '1';
   const dia2 = q.id.startsWith('d2-') ? '0' : '1';
-  return `${real}${dia2}${q.id}`;
+  return `${raciocinio}${real}${dia2}${q.id}`;
 }
+const ID_ACIMA_DE_RACIOCINIO = /^d2-escada-[a-z]{3}-ita-/;
 
 export function questoesDoDegrau(materia: string, degrau: Degrau, todas: QuestaoDaEscada[], temAnteriores = true) {
   const doTema = todas.filter((q) => q.materia === materia && q.tema === degrau.tema);
