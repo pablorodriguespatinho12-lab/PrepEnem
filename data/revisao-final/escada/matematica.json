@@ -6752,5 +6752,3693 @@
     ]
    }
   }
+ },
+ {
+  "id": "d2-escada-mat-ita-equ-01",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "Três caixas, A, B e C, são pesadas de duas em duas: A e B juntas pesam 30 kg, B e C juntas pesam 40 kg e A e C juntas pesam 50 kg. Quanto pesa a caixa mais pesada?",
+  "A": "20 kg",
+  "B": "25 kg",
+  "C": "30 kg",
+  "D": "35 kg",
+  "E": "60 kg",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "(30 + 40 + 50) ÷ 2 = 60; C = 60 − 30 = 30, A = 60 − 40 = 20, B = 60 − 50 = 10. C. A = peso de A (20); B = 50 ÷ 2 (25); D = (30 + 40) ÷ 2 (35); E = as três juntas (60).",
+   "ideia": "Some as três pesagens: cada caixa entra 2 vezes, então as três juntas pesam 120 ÷ 2 = 60. A mais pesada é a que não aparece na menor pesagem: 60 − 30 = 30.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Somar as pesagens",
+        "formula": "cada caixa entra 2 vezes na soma"
+       },
+       {
+        "figura": "grafico",
+        "nome": "Tirar a que não quer",
+        "formula": "as três juntas − uma pesagem = a caixa que faltou"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "A + B",
+        "30 kg"
+       ],
+       [
+        "B + C",
+        "40 kg"
+       ],
+       [
+        "A + C",
+        "50 kg"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o peso da caixa mais pesada, M.\nPor que tirar 30? A pesagem A + B é a única sem a caixa C. As três juntas menos A e B sobra só a C.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "M = T − 30",
+      "leitura": "as três juntas menos a pesagem em que ela não aparece",
+      "letras": [
+       {
+        "letra": "M",
+        "oque": "peso da mais pesada (o que a questão quer)"
+       },
+       {
+        "letra": "T",
+        "oque": "peso das três caixas juntas"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando T: as três juntas",
+     "texto": "Soma das pesagens: 30 + 40 + 50 = 120. Cada caixa entrou 2 vezes, então divide por 2.\nT = 60"
+    },
+    {
+     "titulo": "Achando M: o seu jeito",
+     "texto": "Parece certo pegar a maior pesagem, 50, e dividir por 2: dá 25. Mas A e C podem pesar diferente.\nM = 60 − 30 = 30"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "M = 60 − 30 = 30\nLetra C. Confere: A = 20, B = 10, C = 30 e as três pesagens fecham.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "T",
+        "60"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"pesagens de duas em duas\" → some todas (cada caixa entra 2 vezes), divida por 2 e tire a pesagem sem a caixa.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "3 pesagens: 30, 40, 50"
+       ],
+       [
+        "2. Equação em letras",
+        "M = T − 30"
+       ],
+       [
+        "3. Achar cada letra",
+        "T = 60"
+       ],
+       [
+        "4. Substituir",
+        "60 − 30 = 30"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "A + B = 9 kg, B + C = 11 kg e A + C = 12 kg. As três juntas pesam?",
+    "opcoes": [
+     "16 kg",
+     "32 kg",
+     "8 kg",
+     "12 kg"
+    ],
+    "certa": "16 kg",
+    "resposta": "9 + 11 + 12 = 32, e cada caixa entrou 2 vezes: 32 ÷ 2 = 16."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Questão de nível acima. Ela só dá o peso das caixas de duas em duas."
+       ],
+       [
+        3.4,
+        "Ninguém pesou uma caixa sozinha. Dá para descobrir assim mesmo."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 46,
+        "s": "Três caixas",
+        "cor": "tinta",
+        "tam": 46,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 70,
+        "y": 90,
+        "w": 60,
+        "h": 60,
+        "cor": "tinta",
+        "t": 0.8,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 100,
+        "y": 132,
+        "s": "A",
+        "cor": "azul",
+        "tam": 40,
+        "t": 1.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 170,
+        "y": 90,
+        "w": 60,
+        "h": 60,
+        "cor": "tinta",
+        "t": 1.4,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 132,
+        "s": "B",
+        "cor": "vermelho",
+        "tam": 40,
+        "t": 1.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 270,
+        "y": 90,
+        "w": 60,
+        "h": 60,
+        "cor": "tinta",
+        "t": 2.0,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 300,
+        "y": 132,
+        "s": "C",
+        "cor": "verde",
+        "tam": 40,
+        "t": 2.4,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 200,
+        "s": "só pesadas de duas em duas",
+        "cor": "cinza",
+        "tam": 28,
+        "t": 3.4,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "Lê com calma. De duas em duas quer dizer: A com B, B com C e A com C."
+       ],
+       [
+        4.6,
+        "Ninguém pesou uma caixa sozinha."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "Três caixas, A, B e C, são pesadas de duas em duas: A e B juntas pesam 30 kg, B e C juntas pesam 40 kg e A e C juntas pesam 50 kg. Quanto pesa a caixa mais pesada?",
+      "alternativas": [
+       "20 kg",
+       "25 kg",
+       "30 kg",
+       "35 kg",
+       "60 kg"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Três pesagens, e cada uma tem duas caixas."
+       ],
+       [
+        3.0,
+        "A com B dá 30. B com C dá 40. A com C dá 50."
+       ],
+       [
+        6.0,
+        "A pergunta é o peso de uma caixa só, a mais pesada."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "o que a questão dá",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "A + B = 30 kg",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 124,
+        "s": "B + C = 40 kg",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 2.4,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 164,
+        "s": "A + C = 50 kg",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 186,
+        "w": 320,
+        "h": 46,
+        "t": 6.0,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 220,
+        "s": "quero: a caixa mais pesada",
+        "cor": "vermelho",
+        "tam": 28,
+        "t": 6.1,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Truque: soma as três pesagens. 30 mais 40 mais 50 dá 120."
+       ],
+       [
+        3.8,
+        "Olha as letras: A aparece em duas pesagens, B em duas e C em duas."
+       ],
+       [
+        7.8,
+        "Então 120 é o dobro do peso das três: 2 × (A + B + C) = 120, logo A + B + C = 60. As três juntas pesam 60 kg."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 30,
+        "s": "somando as três pesagens",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 70,
+        "s": "A + B = 30",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "B + C = 40",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 1.0,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 130,
+        "s": "A + C = 50",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 1.4,
+        "ancora": "start"
+       },
+       {
+        "k": "linha",
+        "x1": 30,
+        "y1": 140,
+        "x2": 200,
+        "y2": 140,
+        "cor": "tinta",
+        "t": 2.0,
+        "dur": 0.4
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 166,
+        "s": "soma: 30 + 40 + 50 = 120",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 2.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 250,
+        "y": 76,
+        "s": "A: 2 vezes",
+        "cor": "azul",
+        "tam": 24,
+        "t": 4.4,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 250,
+        "y": 104,
+        "s": "B: 2 vezes",
+        "cor": "vermelho",
+        "tam": 24,
+        "t": 5.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 250,
+        "y": 132,
+        "s": "C: 2 vezes",
+        "cor": "verde",
+        "tam": 24,
+        "t": 6.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 182,
+        "w": 340,
+        "h": 40,
+        "t": 7.8,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 212,
+        "s": "120 ÷ 2 = 60 (as três juntas)",
+        "cor": "verde",
+        "tam": 28,
+        "t": 7.9,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 260,
+        "s": "2 × (A + B + C) = 120",
+        "cor": "azul",
+        "tam": 26,
+        "t": 9.0,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Agora cada caixa. As três juntas pesam 60."
+       ],
+       [
+        2.8,
+        "Tirando a pesagem A mais B, que é 30, sobra só a C: 60 menos 30 dá 30."
+       ],
+       [
+        6.4,
+        "Do mesmo jeito: A é 60 − 40 = 20, e B é 60 − 50 = 10."
+       ],
+       [
+        10.0,
+        "A mais pesada é a C, com 30 kg."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 30,
+        "s": "achando cada caixa",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 76,
+        "s": "as três juntas: 60",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 114,
+        "s": "C = 60 − (A + B) = 60 − 30 = 30",
+        "cor": "verde",
+        "tam": 26,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 152,
+        "s": "A = 60 − (B + C) = 60 − 40 = 20",
+        "cor": "azul",
+        "tam": 26,
+        "t": 6.4,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 190,
+        "s": "B = 60 − (A + C) = 60 − 50 = 10",
+        "cor": "vermelho",
+        "tam": 26,
+        "t": 8.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 206,
+        "w": 340,
+        "h": 46,
+        "t": 10.0,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 240,
+        "s": "a mais pesada: C = 30 kg",
+        "cor": "verde",
+        "tam": 32,
+        "t": 10.1,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Confere: 20 mais 10 dá 30, certo. 10 mais 30 dá 40, certo."
+       ],
+       [
+        3.4,
+        "20 mais 30 dá 50, certo. Resposta: letra C."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "conferindo",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "A + B = 20 + 10 = 30  certo",
+        "cor": "verde",
+        "tam": 27,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 124,
+        "s": "B + C = 10 + 30 = 40  certo",
+        "cor": "verde",
+        "tam": 27,
+        "t": 2.0,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 164,
+        "s": "A + C = 20 + 30 = 50  certo",
+        "cor": "verde",
+        "tam": 27,
+        "t": 3.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 222,
+        "s": "resposta: C, 30 kg",
+        "cor": "vermelho",
+        "tam": 34,
+        "t": 4.2,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Cada letra errada vem de uma conta tentadora."
+       ],
+       [
+        2.8,
+        "A é o peso da A. B e D vêm de dividir somas ao meio. E é o peso das três juntas."
+       ],
+       [
+        6.4,
+        "A certa é a C."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · 20 kg: é o peso da caixa A",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "B · 25 kg: metade da maior pesagem",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 2.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "D · 35 kg: média de 30 e 40",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 60 kg: as três juntas",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: C, 30 kg",
+        "cor": "verde",
+        "tam": 32,
+        "t": 6.5,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "O que a questão cobrou:"
+       ],
+       [
+        2.2,
+        "Soma de duas em duas: cada caixa entra 2 vezes."
+       ],
+       [
+        5.4,
+        "Depois tira a pesagem que não tem a caixa."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. some todas as pesagens",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "2. cada uma entra 2 vezes: ÷ 2",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 172,
+        "w": 270,
+        "h": 6,
+        "t": 3.8,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "3. tire a pesagem sem a caixa",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 5.0,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "As pesagens de duas em duas são A + B = 9 kg, B + C = 11 kg e A + C = 12 kg. Quanto pesam as três juntas?",
+      "opcoes": [
+       "16 kg",
+       "32 kg",
+       "8 kg",
+       "12 kg"
+      ],
+      "certa": 0,
+      "porque": [
+       "Isso! 9 + 11 + 12 = 32, e cada caixa entrou 2 vezes: 32 ÷ 2 = 16.",
+       "32 é a soma das pesagens. Cada caixa entrou 2 vezes, então falta dividir por 2.",
+       "8 não tem base: a conta é (9 + 11 + 12) ÷ 2.",
+       "12 é só uma das pesagens, a de A com C."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: com as mesmas pesagens (9, 11 e 12 kg), quanto pesa a caixa mais leve?",
+      "opcoes": [
+       "4 kg",
+       "5 kg",
+       "7 kg",
+       "9 kg"
+      ],
+      "certa": 0,
+      "porque": [
+       "Isso! As três pesam 16. B = 16 − 12 = 4 kg, porque 12 é a pesagem sem o B.",
+       "5 kg é a caixa A (16 − 11). A B é mais leve.",
+       "7 kg é a caixa C, a mais pesada das três.",
+       "9 kg é uma pesagem de duas caixas, não de uma."
+      ]
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-ita-pla-01",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um quadrado tem área de 100 cm². Unindo os pontos médios dos seus lados, forma-se um segundo quadrado dentro dele. Repetindo o processo no segundo quadrado, forma-se um terceiro, e depois um quarto. Qual é a área do quarto quadrado?",
+  "A": "6,25 cm²",
+  "B": "12,5 cm²",
+  "C": "25 cm²",
+  "D": "50 cm²",
+  "E": "87,5 cm²",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "Passo: 4 triângulos de lados 5 e 5 (12,5 cada) tiram 50 de 100. 100 → 50 → 25 → 12,5. B. A = contou 4 metades (6,25); C = o 3º quadrado (25); D = o 2º (50); E = tirou só 1 triângulo (87,5).",
+   "ideia": "Unir os pontos do meio dos lados tira 4 triângulos dos cantos e deixa a metade da área. Três passos de metade: 100, 50, 25 e 12,5.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "quadrado",
+        "nome": "Área do quadrado",
+        "formula": "lado × lado"
+       },
+       {
+        "figura": "triangulo",
+        "nome": "Área do triângulo",
+        "formula": "base × altura ÷ 2"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "1º quadrado",
+        "100 cm²"
+       ],
+       [
+        "Passo",
+        "unir os pontos do meio"
+       ],
+       [
+        "Quero",
+        "área do 4º"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a área do 4º quadrado, A4.\nPor que a metade? Num quadrado de lado 10 (área 100), os 4 triângulos dos cantos medem 5 × 5 ÷ 2 = 12,5 cada, 50 no total. O quadrado de dentro fica com os outros 50.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "A4 = 100 ÷ 2 ÷ 2 ÷ 2",
+      "leitura": "três vezes a metade da área",
+      "letras": [
+       {
+        "letra": "A4",
+        "oque": "área do 4º quadrado (o que a questão quer)"
+       },
+       {
+        "letra": "A2",
+        "oque": "área do 2º quadrado"
+       },
+       {
+        "letra": "A3",
+        "oque": "área do 3º quadrado"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando A2: um passo",
+     "texto": "Lado 10, área 100. Os 4 triângulos dos cantos somam 4 × 12,5 = 50. Sobra a metade.\nA2 = 100 ÷ 2 = 50"
+    },
+    {
+     "titulo": "Achando A3: o mesmo passo",
+     "texto": "O 2º quadrado perde a metade pelo mesmo motivo.\nA3 = 50 ÷ 2 = 25"
+    },
+    {
+     "titulo": "Achando A4: o seu jeito",
+     "texto": "Parece certo contar 4 metades, uma por quadrado. Mas do 1º ao 4º são só 3 passos, então 3 metades.\nA4 = 25 ÷ 2 = 12,5"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "A4 = 100 ÷ 2 ÷ 2 ÷ 2 = 12,5\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "A2",
+        "50"
+       ],
+       [
+        "A3",
+        "25"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"unir os pontos do meio dos lados\" → a área do quadrado novo é a metade da anterior.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "quadrado de 100"
+       ],
+       [
+        "2. Equação em letras",
+        "A4 = A1 ÷ 2 ÷ 2 ÷ 2"
+       ],
+       [
+        "3. Achar cada letra",
+        "A2 = 50; A3 = 25"
+       ],
+       [
+        "4. Substituir",
+        "25 ÷ 2 = 12,5"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um quadrado tem área 40 cm². Unindo os pontos do meio dos lados, qual a área do novo?",
+    "opcoes": [
+     "20 cm²",
+     "10 cm²",
+     "40 cm²",
+     "30 cm²"
+    ],
+    "certa": "20 cm²",
+    "resposta": "A área cai pela metade: 40 ÷ 2 = 20."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Quadrado dentro de quadrado, unindo os pontos do meio dos lados."
+       ],
+       [
+        3.4,
+        "A pergunta é a área do quarto. Mas calma: tem um padrão."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "Quadrados dentro de quadrados",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caminho",
+        "d": "M120 60L280 60L280 220L120 220Z",
+        "cor": "tinta",
+        "t": 0.6,
+        "dur": 0.9,
+        "larg": 3
+       },
+       {
+        "k": "caminho",
+        "d": "M200 60L280 140L200 220L120 140Z",
+        "cor": "azul",
+        "t": 1.8,
+        "dur": 0.9,
+        "larg": 3
+       },
+       {
+        "k": "caminho",
+        "d": "M240 100L240 180L160 180L160 100Z",
+        "cor": "vermelho",
+        "t": 3.0,
+        "dur": 0.9,
+        "larg": 3
+       },
+       {
+        "k": "caminho",
+        "d": "M200 100L240 140L200 180L160 140Z",
+        "cor": "verde",
+        "t": 4.2,
+        "dur": 0.9,
+        "larg": 3
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "Lê com calma. Ponto médio é o ponto do meio do lado."
+       ],
+       [
+        3.4,
+        "Cada quadrado novo nasce unindo os pontos do meio do anterior."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "Um quadrado tem área de 100 cm². Unindo os pontos médios dos seus lados, forma-se um segundo quadrado dentro dele. Repetindo o processo no segundo quadrado, forma-se um terceiro, e depois um quarto. Qual é a área do quarto quadrado?",
+      "alternativas": [
+       "6,25 cm²",
+       "12,5 cm²",
+       "25 cm²",
+       "50 cm²",
+       "87,5 cm²"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "O primeiro quadrado tem 100. Unir os pontos do meio dos lados faz o segundo."
+       ],
+       [
+        3.4,
+        "Fazemos isso de novo, e de novo, até o quarto."
+       ],
+       [
+        6.0,
+        "Quero a área do quarto."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "o que a questão pede",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "1º quadrado: 100 cm²",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 124,
+        "s": "une os pontos do meio dos lados",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.4,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 164,
+        "s": "repete até o 4º quadrado",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 186,
+        "w": 320,
+        "h": 46,
+        "t": 6.0,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 220,
+        "s": "quero: a área do 4º",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 6.1,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Um passo só. Quadrado de 10 por 10, área 100. Os pontos do meio dividem cada lado em 5 e 5."
+       ],
+       [
+        4.0,
+        "Sobram 4 triângulos nos cantos, com lados 5 e 5: 5 × 5 ÷ 2 = 12,5 cada."
+       ],
+       [
+        8.0,
+        "Os 4 triângulos somam 50. O quadrado de dentro fica com 100 − 50 = 50: a metade."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "caminho",
+        "d": "M150 40L250 40L250 140L150 140Z",
+        "cor": "tinta",
+        "t": 0.4,
+        "dur": 0.8,
+        "larg": 3
+       },
+       {
+        "k": "caminho",
+        "d": "M200 40L250 90L200 140L150 90Z",
+        "cor": "azul",
+        "t": 1.4,
+        "dur": 0.8,
+        "larg": 3
+       },
+       {
+        "k": "tx",
+        "x": 175,
+        "y": 32,
+        "s": "5",
+        "cor": "cinza",
+        "tam": 20,
+        "t": 2.4,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 225,
+        "y": 32,
+        "s": "5",
+        "cor": "cinza",
+        "tam": 20,
+        "t": 2.5,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 176,
+        "s": "quadrado 10 × 10 = 100",
+        "cor": "tinta",
+        "tam": 24,
+        "t": 1.0,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 204,
+        "s": "triângulo de canto: 5 × 5 ÷ 2 = 12,5",
+        "cor": "tinta",
+        "tam": 24,
+        "t": 4.0,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 232,
+        "s": "4 triângulos: 4 × 12,5 = 50",
+        "cor": "tinta",
+        "tam": 24,
+        "t": 6.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 244,
+        "w": 340,
+        "h": 34,
+        "t": 8.0,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 270,
+        "s": "dentro: 100 − 50 = 50 (a metade)",
+        "cor": "verde",
+        "tam": 26,
+        "t": 8.1,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Pelo mesmo motivo, cada quadrado novo é a metade do anterior, mesmo o torto: ele também perde 4 triângulos nos cantos."
+       ],
+       [
+        3.0,
+        "1º: 100. 2º: 100 ÷ 2 = 50. 3º: 50 ÷ 2 = 25. 4º: 25 ÷ 2 = 12,5."
+       ],
+       [
+        7.0,
+        "A área do quarto é 12,5. Resposta: letra B."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "cada quadrado: metade do anterior",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 82,
+        "s": "1º quadrado: 100",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 122,
+        "s": "2º: 100 ÷ 2 = 50",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.0,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 162,
+        "s": "3º: 50 ÷ 2 = 25",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 4.6,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 184,
+        "w": 340,
+        "h": 46,
+        "t": 6.0,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 220,
+        "s": "4º: 25 ÷ 2 = 12,5",
+        "cor": "verde",
+        "tam": 34,
+        "t": 6.1,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 264,
+        "s": "resposta: B, 12,5 cm²",
+        "cor": "vermelho",
+        "tam": 28,
+        "t": 7.0,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Cada letra errada para em outro quadrado, ou erra o passo."
+       ],
+       [
+        3.0,
+        "A contou 4 metades, uma por quadrado. Mas do 1º ao 4º são só 3 passos."
+       ],
+       [
+        7.2,
+        "A certa é a B."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · 6,25: contou 4 metades, são 3",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "C · 25: é a área do 3º quadrado",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 2.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "D · 50: é a área do 2º quadrado",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 87,5: tirou só 1 triângulo",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: B, 12,5",
+        "cor": "verde",
+        "tam": 32,
+        "t": 6.5,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "O que a questão cobrou:"
+       ],
+       [
+        2.2,
+        "Unir os pontos do meio faz a área cair pela metade."
+       ],
+       [
+        5.4,
+        "E cada passo repete: mais uma metade."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. unir pontos do meio: área ÷ 2",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "2. cada passo: mais um ÷ 2",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 172,
+        "w": 270,
+        "h": 6,
+        "t": 3.8,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "3. é a área que cai à metade",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 5.0,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Um quadrado tem área 80 cm². Unindo os pontos do meio dos lados, qual a área do novo quadrado?",
+      "opcoes": [
+       "40 cm²",
+       "20 cm²",
+       "160 cm²",
+       "60 cm²"
+      ],
+      "certa": 0,
+      "porque": [
+       "Isso! Cada passo fica com a metade: 80 ÷ 2 = 40.",
+       "20 seria dividir por 4. A área cai pela metade, não por 4.",
+       "160 é o dobro. O quadrado de dentro é menor.",
+       "60 não tem base: são 4 triângulos que tiram a metade."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: o 1º quadrado tem área 64 cm². Repetindo o processo, qual a área do 4º quadrado?",
+      "opcoes": [
+       "8 cm²",
+       "16 cm²",
+       "4 cm²",
+       "32 cm²"
+      ],
+      "certa": 0,
+      "porque": [
+       "Isso! 64 → 32 → 16 → 8: três passos, três vezes ÷ 2.",
+       "16 cm² é a área do 3º quadrado.",
+       "4 cm² vem de contar 4 metades em vez de 3.",
+       "32 cm² é a área do 2º quadrado."
+      ]
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-ita-esp-01",
+  "materia": "Matemática",
+  "tema": "Geometria Espacial",
+  "enunciado": "Cada aresta de um cubo aumenta 10%. O volume desse cubo aumenta em quantos por cento?",
+  "A": "10%",
+  "B": "21%",
+  "C": "30%",
+  "D": "33,1%",
+  "E": "133,1%",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "10 × 10 × 10 = 1000; 11 × 11 × 11 = 1331; (1331 − 1000) ÷ 1000 = 33,1%. D. A = 10% (a aresta); B = 21% (a área da face, 121 contra 100); C = 3 × 10%; E = 133,1% (o volume final).",
+   "ideia": "Volume é a aresta três vezes, então o aumento se multiplica: com aresta 10 vira 11, o volume vai de 1000 para 1331. Aumentou 331 em 1000, ou seja, 33,1%.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "caixa",
+        "nome": "Volume do cubo",
+        "formula": "aresta × aresta × aresta"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Aumento",
+        "formula": "(depois − antes) ÷ antes"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Aresta",
+        "+10%"
+       ],
+       [
+        "Exemplo",
+        "aresta 10"
+       ],
+       [
+        "Quero",
+        "aumento do volume em %"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quanto o volume aumenta, em %, P.\nPor que usar um número? A porcentagem não depende do tamanho do cubo, então vale pegar aresta 10 e ver quanto o volume cresce.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "P = (V2 − V1) ÷ V1",
+      "leitura": "aumento = diferença ÷ volume de antes",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "aumento do volume (o que a questão quer)"
+       },
+       {
+        "letra": "V1",
+        "oque": "volume de antes"
+       },
+       {
+        "letra": "V2",
+        "oque": "volume de depois"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando V1: antes",
+     "texto": "Aresta 10: 10 × 10 × 10.\nV1 = 1000"
+    },
+    {
+     "titulo": "Achando V2: depois",
+     "texto": "Aumentar 10% de 10 é somar 1: a aresta vira 11.\nV2 = 11 × 11 × 11 = 1331"
+    },
+    {
+     "titulo": "Achando P: o seu jeito",
+     "texto": "Parece certo responder 10%, ou 30% somando as 3 arestas. Mas as 3 medidas se multiplicam.\nP = (1331 − 1000) ÷ 1000 = 331 ÷ 1000 = 33,1%"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "P = 331 ÷ 1000 = 33,1%\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "V1",
+        "1000"
+       ],
+       [
+        "V2",
+        "1331"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"cada medida aumenta X%\" → use um número fácil, ache o volume de antes e de depois, e compare.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "aresta 10 → 11"
+       ],
+       [
+        "2. Equação em letras",
+        "P = (V2 − V1) ÷ V1"
+       ],
+       [
+        "3. Achar cada letra",
+        "V1 = 1000; V2 = 1331"
+       ],
+       [
+        "4. Substituir",
+        "331 ÷ 1000 = 33,1%"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "A aresta de um cubo dobra, de 10 para 20. O volume fica quantas vezes maior?",
+    "opcoes": [
+     "8 vezes",
+     "2 vezes",
+     "6 vezes",
+     "4 vezes"
+    ],
+    "certa": "8 vezes",
+    "resposta": "20 × 20 × 20 = 8000 contra 10 × 10 × 10 = 1000: 8 vezes."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Questão de nível acima. A aresta cresce um pouquinho."
+       ],
+       [
+        3.0,
+        "Será que o volume cresce o mesmo tanto? Vamos ver."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 30,
+        "s": "O cubo que cresce",
+        "cor": "tinta",
+        "tam": 34,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caminho",
+        "d": "M100 100h100v100h-100z",
+        "cor": "tinta",
+        "t": 0.6,
+        "dur": 0.8,
+        "larg": 3
+       },
+       {
+        "k": "caminho",
+        "d": "M140 60h100v100h-100z",
+        "cor": "tinta",
+        "t": 1.4,
+        "dur": 0.8,
+        "larg": 3
+       },
+       {
+        "k": "linha",
+        "x1": 100,
+        "y1": 100,
+        "x2": 140,
+        "y2": 60,
+        "cor": "tinta",
+        "t": 2.2,
+        "dur": 0.4
+       },
+       {
+        "k": "linha",
+        "x1": 200,
+        "y1": 100,
+        "x2": 240,
+        "y2": 60,
+        "cor": "tinta",
+        "t": 2.4,
+        "dur": 0.4
+       },
+       {
+        "k": "linha",
+        "x1": 200,
+        "y1": 200,
+        "x2": 240,
+        "y2": 160,
+        "cor": "tinta",
+        "t": 2.6,
+        "dur": 0.4
+       },
+       {
+        "k": "linha",
+        "x1": 100,
+        "y1": 200,
+        "x2": 140,
+        "y2": 160,
+        "cor": "tinta",
+        "t": 2.8,
+        "dur": 0.4
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 250,
+        "s": "cada aresta cresce 10%",
+        "cor": "azul",
+        "tam": 28,
+        "t": 3.4,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "Lê com calma. Aresta é cada lado do cubo."
+       ],
+       [
+        3.0,
+        "A pergunta é quanto cresce o volume, não a aresta."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "Cada aresta de um cubo aumenta 10%. O volume desse cubo aumenta em quantos por cento?",
+      "alternativas": [
+       "10%",
+       "21%",
+       "30%",
+       "33,1%",
+       "133,1%"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Cada aresta do cubo cresce 10%."
+       ],
+       [
+        2.6,
+        "A pergunta não é sobre a aresta. É sobre o volume."
+       ],
+       [
+        5.4,
+        "Cuidado: o volume não cresce 10%."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "o que a questão pede",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 90,
+        "s": "aresta: cresce 10%",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 140,
+        "s": "volume: cresce quantos %?",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 2.6,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 168,
+        "w": 320,
+        "h": 46,
+        "t": 5.4,
+        "cor": "rosa"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 202,
+        "s": "não é 10%. Vamos provar.",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 5.5,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Pega um cubo de aresta 10. 10% de 10 é a décima parte de 10, que é 1: a aresta vira 11."
+       ],
+       [
+        4.0,
+        "Volume é aresta vezes aresta vezes aresta. Antes: 10 × 10 × 10 = 1000."
+       ],
+       [
+        8.2,
+        "Depois: 11 × 11 = 121 e 121 × 11 = 1331."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "com um número fácil",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "aresta: 10 → 11",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 132,
+        "s": "antes: 10 × 10 × 10 = 1000",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 4.0,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 180,
+        "s": "depois: 11 × 11 × 11 = 1331",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 8.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 242,
+        "s": "volume: de 1000 para 1331",
+        "cor": "azul",
+        "tam": 28,
+        "t": 9.4,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Subiu de 1000 para 1331: aumentou 331."
+       ],
+       [
+        3.0,
+        "331 em 1000 é 331 de cada 1000, que é 33,1 de cada 100."
+       ],
+       [
+        6.6,
+        "Então o volume aumentou 33,1%. Resposta: letra D."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "quanto aumentou?",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "1331 − 1000 = 331",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 132,
+        "s": "331 em 1000 = 33,1 em 100",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 60,
+        "y": 156,
+        "w": 280,
+        "h": 62,
+        "t": 6.6,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 204,
+        "s": "33,1%",
+        "cor": "verde",
+        "tam": 56,
+        "t": 6.7,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 256,
+        "s": "resposta: D",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 7.6,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Cada letra errada é um número que existe no problema."
+       ],
+       [
+        2.8,
+        "B é a área da face, não o volume. E é o volume final, não o aumento."
+       ],
+       [
+        6.4,
+        "A certa é a D."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · 10%: é o aumento da aresta",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "B · 21%: é a ÁREA (11 × 11 = 121)",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 2.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "C · 30%: somou 10% três vezes",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 133,1%: é o volume final",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: D, 33,1%",
+        "cor": "verde",
+        "tam": 32,
+        "t": 6.5,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "O que a questão cobrou:"
+       ],
+       [
+        2.2,
+        "Volume é aresta × aresta × aresta, e cada uma cresceu: por isso o aumento se multiplica, não se soma."
+       ],
+       [
+        5.4,
+        "Use um número fácil e compare antes e depois."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. volume: aresta três vezes",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "2. 3 vezes 10%: não é 30%",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 172,
+        "w": 270,
+        "h": 6,
+        "t": 3.8,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "3. use um número: aresta 10",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 5.0,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "A aresta de um cubo dobra (de 10 para 20). O volume aumenta quantos por cento?",
+      "opcoes": [
+       "100%",
+       "200%",
+       "700%",
+       "800%"
+      ],
+      "certa": 2,
+      "porque": [
+       "100% seria o aumento da aresta, que dobrou.",
+       "200% não tem base: a aresta dobra 3 vezes, uma por dimensão.",
+       "Isso! 10 × 10 × 10 = 1000 e 20 × 20 × 20 = 8000: aumentou 7000, e 7000 em 1000 é 700 em 100: 700%.",
+       "800% é o volume final em relação ao de antes. O aumento é 8000 − 1000 = 7000, ou 700%."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: cada aresta de um cubo aumenta 20% (de 10 para 12). O volume aumenta quantos por cento?",
+      "opcoes": [
+       "20%",
+       "44%",
+       "60%",
+       "72,8%"
+      ],
+      "certa": 3,
+      "porque": [
+       "20% é o aumento da aresta, não do volume.",
+       "44% é a área da face: 12 × 12 = 144, contra 100.",
+       "60% seria 3 vezes 20%. Mas as três medidas se multiplicam.",
+       "Isso! 12 × 12 = 144 e 144 × 12 = 1728, contra 1000: aumentou 728 em 1000, ou seja, 72,8%."
+      ]
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-ita-gra-01",
+  "materia": "Matemática",
+  "tema": "Grandezas e Medidas",
+  "enunciado": "Nove operários, todos com o mesmo ritmo, constroem um muro em 10 dias. Depois de 4 dias de trabalho, 3 operários saem e não voltam. Em quantos dias, contando desde o primeiro dia, o muro fica pronto?",
+  "A": "9",
+  "B": "10",
+  "C": "13",
+  "D": "14",
+  "E": "15",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "9 × 10 = 90; 9 × 4 = 36; 90 − 36 = 54; 54 ÷ 6 = 9; 4 + 9 = 13. C. A = 9 (só o que falta); B = 10 (o prazo de antes); D = 14 (4 + 10); E = 15 (90 ÷ 6, obra toda com 6).",
+   "ideia": "Meça o muro em operário-dia: 9 × 10 = 90. Em 4 dias foram feitos 36; faltam 54, que 6 operários fazem em 9 dias, então o total é 4 + 9 = 13.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Operário-dia",
+        "formula": "operários × dias = o tamanho da obra"
+       },
+       {
+        "figura": "grafico",
+        "nome": "Mais gente, menos dias",
+        "formula": "a obra não muda de tamanho"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Operários",
+        "9"
+       ],
+       [
+        "Prazo",
+        "10 dias"
+       ],
+       [
+        "Depois de",
+        "4 dias saem 3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o total de dias, T, contando desde o início.\nPor que operário-dia? É a unidade que não muda: se sai gente, a obra continua tendo 90, só que cada dia rende menos.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "T = 4 + F ÷ 6",
+      "leitura": "dias já feitos + o que falta ÷ operários que ficaram",
+      "letras": [
+       {
+        "letra": "T",
+        "oque": "total de dias (o que a questão quer)"
+       },
+       {
+        "letra": "F",
+        "oque": "operário-dias que faltam"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando o tamanho da obra",
+     "texto": "9 operários × 10 dias.\n90 operário-dias"
+    },
+    {
+     "titulo": "Achando F: o que falta",
+     "texto": "Em 4 dias, 9 × 4 = 36 já foram feitos.\nF = 90 − 36 = 54"
+    },
+    {
+     "titulo": "Achando T: o seu jeito",
+     "texto": "Parece certo refazer 90 ÷ 6 = 15 dias, mas 4 dias já foram feitos com 9 operários. Só os 54 ficam para os 6.\nT = 4 + 54 ÷ 6 = 4 + 9 = 13"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "T = 4 + 54 ÷ 6 = 13\nLetra C. Confere: 36 + 6 × 9 = 90.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "F",
+        "54"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"alguém sai (ou entra) no meio\" → meça a obra em operário-dia, tire o que já foi feito e divida o resto pelo novo grupo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "9 operários, 10 dias"
+       ],
+       [
+        "2. Equação em letras",
+        "T = 4 + F ÷ 6"
+       ],
+       [
+        "3. Achar cada letra",
+        "F = 54"
+       ],
+       [
+        "4. Substituir",
+        "4 + 9 = 13"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Quatro operários terminam uma obra em 6 dias. Quantos operário-dias tem a obra?",
+    "opcoes": [
+     "24",
+     "10",
+     "6",
+     "12"
+    ],
+    "certa": "24",
+    "resposta": "4 operários × 6 dias = 24 operário-dias."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Questão de nível acima. A obra começa com nove e termina com seis."
+       ],
+       [
+        3.4,
+        "O prazo muda. O difícil é saber quanto."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 46,
+        "s": "O muro e os operários",
+        "cor": "tinta",
+        "tam": 38,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "grade",
+        "cols": 9,
+        "rows": 1,
+        "x0": 47,
+        "y0": 96,
+        "s": 30,
+        "gap": 4,
+        "t0": 0.8,
+        "passo": 0.12,
+        "marcados": []
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 190,
+        "s": "9 operários, 10 dias",
+        "cor": "cinza",
+        "tam": 28,
+        "t": 2.6,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 232,
+        "s": "e se saírem 3 no meio?",
+        "cor": "azul",
+        "tam": 28,
+        "t": 3.6,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "Lê com calma. Contando desde o primeiro dia quer dizer: os 4 dias que já passaram também entram."
+       ],
+       [
+        5.4,
+        "A resposta é o total, não só o que falta."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "Nove operários, todos com o mesmo ritmo, constroem um muro em 10 dias. Depois de 4 dias de trabalho, 3 operários saem e não voltam. Em quantos dias, contando desde o primeiro dia, o muro fica pronto?",
+      "alternativas": [
+       "9",
+       "10",
+       "13",
+       "14",
+       "15"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Nove operários, mesmo ritmo. O muro fica pronto em 10 dias."
+       ],
+       [
+        3.4,
+        "Depois de 4 dias, 3 saem."
+       ],
+       [
+        5.8,
+        "Quero o total de dias, desde o primeiro."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "o que a questão dá",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "9 operários, mesmo ritmo",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 124,
+        "s": "pronto em 10 dias",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.4,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 164,
+        "s": "depois de 4 dias, saem 3",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 186,
+        "w": 330,
+        "h": 46,
+        "t": 5.8,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 220,
+        "s": "quero: o total de dias",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 5.9,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Truque: medir o muro em operário-dia, que é um operário trabalhando um dia."
+       ],
+       [
+        3.8,
+        "9 operários por 10 dias: 9 × 10 = 90 operário-dias. Esse é o tamanho do muro."
+       ],
+       [
+        7.8,
+        "Se mudar o número de operários, os 90 continuam os mesmos."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "o tamanho do muro",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "1 operário × 1 dia = 1 operário-dia",
+        "cor": "tinta",
+        "tam": 24,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 132,
+        "s": "9 operários × 10 dias",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 156,
+        "w": 330,
+        "h": 50,
+        "t": 5.6,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 192,
+        "s": "= 90 operário-dias",
+        "cor": "verde",
+        "tam": 34,
+        "t": 5.7,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 246,
+        "s": "o muro tem 90, não importa quantos",
+        "cor": "azul",
+        "tam": 24,
+        "t": 7.8,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Em 4 dias, os 9 operários fizeram 9 × 4 = 36 operário-dias."
+       ],
+       [
+        3.4,
+        "Faltam 90 − 36 = 54 operário-dias. Com 6 operários, cada dia rende 6: 54 ÷ 6 = 9 dias."
+       ],
+       [
+        7.4,
+        "Total desde o começo: 4 dias que já passaram mais 9. Dá 13. Resposta: letra C."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 40,
+        "s": "já feito: 9 × 4 = 36",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "falta: 90 − 36 = 54",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.4,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 128,
+        "s": "com 6 operários: 54 ÷ 6 = 9 dias",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 156,
+        "w": 340,
+        "h": 52,
+        "t": 7.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 194,
+        "s": "total: 4 + 9 = 13 dias",
+        "cor": "verde",
+        "tam": 36,
+        "t": 7.5,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 248,
+        "s": "resposta: C, 13",
+        "cor": "vermelho",
+        "tam": 30,
+        "t": 8.6,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Cada letra errada é uma conta que existe, mas para no meio."
+       ],
+       [
+        2.8,
+        "A é só o que falta. D soma o prazo antigo. E refaz tudo só com os seis."
+       ],
+       [
+        6.4,
+        "A certa é a C."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · 9: só os dias que faltam",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "B · 10: o prazo de antes",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 2.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "D · 14: somou 4 + 10",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 15: obra toda com 6 pessoas",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: C, 13 dias",
+        "cor": "verde",
+        "tam": 32,
+        "t": 6.5,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "O que a questão cobrou:"
+       ],
+       [
+        2.2,
+        "Meça a obra em operário-dia: ela não muda."
+       ],
+       [
+        5.0,
+        "Tire o que já foi feito e divida o resto."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. meça a obra: operários × dias",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "2. tire o que já foi feito",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 172,
+        "w": 270,
+        "h": 6,
+        "t": 3.8,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "3. divida o resto pelo novo grupo",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 5.0,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Quatro operários terminam uma obra em 6 dias. Depois de 2 dias, 2 saem. No total, em quantos dias a obra termina?",
+      "opcoes": [
+       "8",
+       "10",
+       "12",
+       "14"
+      ],
+      "certa": 1,
+      "porque": [
+       "8 são só os dias que faltam depois dos 2 primeiros.",
+       "Isso! A obra tem 4 × 6 = 24. Em 2 dias, 8 feitos. Faltam 16, com 2 operários: 8 dias. Total: 2 + 8 = 10.",
+       "12 vem de 24 ÷ 2, como se só 2 operários fizessem a obra toda.",
+       "14 somou o prazo antigo, 6, com os 8 dias que faltam."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: 10 operários fazem uma obra em 12 dias. Depois de 3 dias, entram mais 5. No total, em quantos dias a obra termina?",
+      "opcoes": [
+       "9",
+       "6",
+       "8",
+       "12"
+      ],
+      "certa": 0,
+      "porque": [
+       "Isso! A obra tem 120, 30 já feitos, faltam 90. Com 15 operários são 6 dias. Total: 3 + 6 = 9.",
+       "6 são só os dias que faltam. O total conta os 3 primeiros.",
+       "8 é a obra toda feita só com os 15 (120 ÷ 15), mas 3 dias já foram feitos com 10.",
+       "12 é o prazo de antes: com mais operários, o prazo tem que diminuir."
+      ]
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-ita-ari-01",
+  "materia": "Matemática",
+  "tema": "Aritmética e Porcentagem",
+  "enunciado": "Uma loja aumentou o preço de um produto em 25%. Depois, numa liquidação, deu um desconto sobre o preço já aumentado, e o produto ficou 10% mais barato que o preço original. Qual foi o desconto da liquidação?",
+  "A": "15%",
+  "B": "25%",
+  "C": "28%",
+  "D": "30%",
+  "E": "35%",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "100 → 125 → 90; desconto = 125 − 90 = 35; 35 ÷ 125 = 7/25 = 28/100 = 28%. C. A = 15% (25 − 10); B = 25% (copiou o aumento); D = 30% (sobra 87,50, abaixo de 90); E = 35% (são reais, não %).",
+   "ideia": "Com preço 100: sobe 25% e vai a 125, e ficar 10% abaixo do original é 90. O desconto foi 35 reais sobre 125, que é 35 ÷ 125 = 28%.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "porcentagem",
+        "nome": "Aumento",
+        "formula": "novo = antigo + parte"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Desconto",
+        "formula": "parte ÷ preço da etiqueta"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Aumento",
+        "25%"
+       ],
+       [
+        "Depois",
+        "fica 10% abaixo do original"
+       ],
+       [
+        "Quero",
+        "o desconto"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o desconto da liquidação, D, em %.\nPor que usar 100? A porcentagem não depende do preço, então um preço fácil dá a mesma resposta. O desconto é sobre o preço da etiqueta, 125.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "D = R ÷ 125",
+      "leitura": "reais de desconto ÷ preço da etiqueta",
+      "letras": [
+       {
+        "letra": "D",
+        "oque": "desconto em % (o que a questão quer)"
+       },
+       {
+        "letra": "R",
+        "oque": "desconto em reais"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando os preços",
+     "texto": "Original 100. Aumento de 25%: 125. Ficou 10% abaixo do original: 90.\nPreços: 100, 125 e 90"
+    },
+    {
+     "titulo": "Achando R: o desconto em reais",
+     "texto": "O preço foi de 125 para 90.\nR = 125 − 90 = 35"
+    },
+    {
+     "titulo": "Achando D: o seu jeito",
+     "texto": "Parece certo responder 35%, porque o desconto deu 35 reais. Mas a base é 125, não 100.\nD = 35 ÷ 125 = 7/25 = 28/100 = 28%"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "D = 35 ÷ 125 = 28%\nLetra C. Confere: 28% de 125 são 35, e 125 − 35 = 90.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "R",
+        "35"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"sobe X% e depois desce Y%\" → ponha preço 100, siga os dois passos e divida o desconto em reais pelo preço que estava na etiqueta.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "preço 100 → 125 → 90"
+       ],
+       [
+        "2. Equação em letras",
+        "D = R ÷ 125"
+       ],
+       [
+        "3. Achar cada letra",
+        "R = 35"
+       ],
+       [
+        "4. Substituir",
+        "35 ÷ 125 = 28%"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um produto de R$ 200 sobe 50%. Quanto custa depois do aumento?",
+    "opcoes": [
+     "R$ 300",
+     "R$ 250",
+     "R$ 400",
+     "R$ 100"
+    ],
+    "certa": "R$ 300",
+    "resposta": "50% de 200 é 100; 200 + 100 = 300."
+   },
+   "lousa": {
+    "cenas": [
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Questão de nível acima. O preço sobe, e depois desce."
+       ],
+       [
+        3.0,
+        "A pergunta é: desce quantos por cento?"
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 46,
+        "s": "O preço que sobe e desce",
+        "cor": "tinta",
+        "tam": 36,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 40,
+        "y": 90,
+        "w": 90,
+        "h": 60,
+        "cor": "tinta",
+        "t": 0.8,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 85,
+        "y": 130,
+        "s": "100",
+        "cor": "azul",
+        "tam": 34,
+        "t": 1.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 155,
+        "y": 90,
+        "w": 90,
+        "h": 60,
+        "cor": "tinta",
+        "t": 1.6,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 130,
+        "s": "125",
+        "cor": "vermelho",
+        "tam": 34,
+        "t": 2.0,
+        "ancora": "middle"
+       },
+       {
+        "k": "caixa",
+        "x": 270,
+        "y": 90,
+        "w": 90,
+        "h": 60,
+        "cor": "tinta",
+        "t": 2.4,
+        "dur": 0.6
+       },
+       {
+        "k": "tx",
+        "x": 315,
+        "y": 130,
+        "s": "90",
+        "cor": "verde",
+        "tam": 34,
+        "t": 2.8,
+        "ancora": "middle"
+       },
+       {
+        "k": "linha",
+        "x1": 130,
+        "y1": 120,
+        "x2": 155,
+        "y2": 120,
+        "cor": "tinta",
+        "t": 1.4,
+        "dur": 0.3
+       },
+       {
+        "k": "linha",
+        "x1": 245,
+        "y1": 120,
+        "x2": 270,
+        "y2": 120,
+        "cor": "tinta",
+        "t": 2.2,
+        "dur": 0.3
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 210,
+        "s": "sobe 25%, depois desce quanto?",
+        "cor": "cinza",
+        "tam": 28,
+        "t": 3.6,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "papel",
+      "fala": [
+       [
+        0.3,
+        "Lê com calma. O desconto é dado sobre o preço JÁ aumentado."
+       ],
+       [
+        4.2,
+        "E o resultado é 10% abaixo do preço original."
+       ]
+      ],
+      "rotulo": "Questão de nível acima",
+      "texto": "Uma loja aumentou o preço de um produto em 25%. Depois, numa liquidação, deu um desconto sobre o preço já aumentado, e o produto ficou 10% mais barato que o preço original. Qual foi o desconto da liquidação?",
+      "alternativas": [
+       "15%",
+       "25%",
+       "28%",
+       "30%",
+       "35%"
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Primeiro o preço sobe 25%."
+       ],
+       [
+        2.4,
+        "Depois desce um desconto, sobre o preço novo."
+       ],
+       [
+        5.0,
+        "No fim, ficou 10% abaixo do original. Quero o desconto."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 34,
+        "s": "o que a questão pede",
+        "cor": "tinta",
+        "tam": 32,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "sobe 25%",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 124,
+        "s": "desce d% do preço já aumentado",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.4,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 164,
+        "s": "fica 10% abaixo do original",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 4.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 186,
+        "w": 320,
+        "h": 46,
+        "t": 5.4,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 220,
+        "s": "quero: o d",
+        "cor": "vermelho",
+        "tam": 32,
+        "t": 5.5,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Truque: usa um preço fácil, 100 reais. Sobe 25%: 100 mais 25 dá 125."
+       ],
+       [
+        4.2,
+        "Ficou 10% mais barato que o original: 100 menos 10 dá 90."
+       ],
+       [
+        8.0,
+        "Na loja, o preço escrito na etiqueta foi de 125 para 90."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "com um preço fácil",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 84,
+        "s": "100  sobe 25%  →  125",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 132,
+        "s": "100  menos 10%  →  90",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 4.2,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 160,
+        "w": 320,
+        "h": 50,
+        "t": 8.0,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 196,
+        "s": "de 125 para 90",
+        "cor": "verde",
+        "tam": 36,
+        "t": 8.1,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 248,
+        "s": "qual foi o desconto?",
+        "cor": "azul",
+        "tam": 28,
+        "t": 9.2,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "De 125 para 90, o desconto foi 125 − 90 = 35 reais."
+       ],
+       [
+        3.6,
+        "Mas o desconto é uma parte do preço que estava na etiqueta, que era 125, não 100."
+       ],
+       [
+        7.6,
+        "35 em 125. Para ver em 100: 125 ÷ 5 = 25 e 35 ÷ 5 = 7, então 7 em 25. Depois 25 × 4 = 100 e 7 × 4 = 28: dá 28 em 100."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 30,
+        "s": "o desconto, em %",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 76,
+        "s": "125 − 90 = 35 reais",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 116,
+        "s": "35 em 125 (a etiqueta)",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "35/125 = 7/25  (÷ 5)",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 7.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 194,
+        "s": "7/25 = 28/100  (× 4)",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 8.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 60,
+        "y": 208,
+        "w": 280,
+        "h": 58,
+        "t": 10.0,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 252,
+        "s": "28%",
+        "cor": "verde",
+        "tam": 52,
+        "t": 10.1,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "Cada letra errada é um número que parece certo."
+       ],
+       [
+        2.8,
+        "E é o desconto em reais, mas a base é 125. A e B nascem de somar ou copiar porcentagens."
+       ],
+       [
+        7.0,
+        "A certa é a C."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 32,
+        "s": "por que as outras letras erram",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 76,
+        "s": "A · 15%: 25 − 10, sem base",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 114,
+        "s": "B · 25%: copiou o aumento",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 2.2,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 152,
+        "s": "D · 30%: sobra 87,50, abaixo de 90",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 3.6,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 24,
+        "y": 190,
+        "s": "E · 35%: 35 são reais, não %",
+        "cor": "vermelho",
+        "tam": 25,
+        "t": 5.0,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 208,
+        "w": 340,
+        "h": 44,
+        "t": 6.4,
+        "cor": "verdeClaro"
+       },
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 240,
+        "s": "certa: C, 28%",
+        "cor": "verde",
+        "tam": 32,
+        "t": 6.5,
+        "ancora": "middle"
+       }
+      ]
+     },
+     {
+      "tipo": "lousa",
+      "fala": [
+       [
+        0.3,
+        "O que a questão cobrou:"
+       ],
+       [
+        2.2,
+        "Desconto é reais dividido pelo preço da etiqueta."
+       ],
+       [
+        5.4,
+        "E um preço fácil mostra tudo."
+       ]
+      ],
+      "desenho": [
+       {
+        "k": "tx",
+        "x": 200,
+        "y": 36,
+        "s": "o que a questão ensinou",
+        "cor": "tinta",
+        "tam": 30,
+        "t": 0.2,
+        "ancora": "middle"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 100,
+        "s": "1. ponha um preço fácil: 100",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 0.8,
+        "ancora": "start"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 156,
+        "s": "2. desconto = reais ÷ etiqueta",
+        "cor": "tinta",
+        "tam": 28,
+        "t": 2.8,
+        "ancora": "start"
+       },
+       {
+        "k": "hl",
+        "x": 26,
+        "y": 172,
+        "w": 270,
+        "h": 6,
+        "t": 3.8,
+        "cor": "amarelo"
+       },
+       {
+        "k": "tx",
+        "x": 30,
+        "y": 216,
+        "s": "3. a base é o preço antes dele",
+        "cor": "tinta",
+        "tam": 26,
+        "t": 5.0,
+        "ancora": "start"
+       }
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Um produto de R$ 200 sobe 50% e depois cai 50%. Quanto custa no fim?",
+      "opcoes": [
+       "R$ 200",
+       "R$ 150",
+       "R$ 100",
+       "R$ 250"
+      ],
+      "certa": 1,
+      "porque": [
+       "R$ 200 seria voltar ao início, mas 50% de 300 é 150, não 100.",
+       "Isso! 200 + 100 = 300; 50% de 300 é 150; 300 − 150 = 150.",
+       "R$ 100 é o valor do aumento (50% de 200), não o preço final.",
+       "R$ 250 não tem base: o preço sobe e depois desce."
+      ]
+     },
+     {
+      "tipo": "prova",
+      "fala": [
+       [
+        0.3,
+        "Sua vez! Escolhe uma."
+       ]
+      ],
+      "pergunta": "Mais difícil: o preço sobe 25% e depois cai d% para voltar exatamente ao preço original. Quanto é d?",
+      "opcoes": [
+       "25%",
+       "20%",
+       "5%",
+       "30%"
+      ],
+      "certa": 1,
+      "porque": [
+       "25% de 125 são 31,25, e fica 93,75: abaixo do original.",
+       "Isso! 100 → 125 → 100: desconto de 25 em 125. Dividindo por 25: 1 em 5, que é 20 em 100: 20%.",
+       "5% não tem base: tiraria só 6,25 de 125.",
+       "30% tiraria 37,50 e ficaria 87,50, abaixo do original."
+      ]
+     }
+    ]
+   }
+  }
  }
 ]
