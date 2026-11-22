@@ -98,7 +98,7 @@
   "passos": [
    [
     "Dois pontos distintos",
-    "A parábola corta o eixo horizontal (o eixo x) onde x² − 6x + k = 0 (x² lê-se \"x ao quadrado\", x · x); essas soluções se chamam raízes. O número de raízes depende de D = b² − 4ac (o discriminante, ou Δ), numa equação ax² + bx + c = 0. Aqui a = 1, b = −6, c = k, e D = (−6)² − 4 · 1 · k = 36 − 4k. D > 0: duas raízes diferentes; D = 0: uma só; D < 0: nenhuma."
+    "A parábola corta o eixo horizontal (o eixo x) onde x² − 6x + k = 0 (x² lê-se \"x ao quadrado\", x · x); essas soluções se chamam raízes. O número de raízes depende de D = b² − 4ac (o discriminante, ou Δ), numa equação ax² + bx + c = 0. Aqui a = 1, b = −6, c = k, e D = (−6)² − 4 · 1 · k = 36 − 4k ((−6)² = (−6) · (−6) = 36, porque negativo vezes negativo dá positivo). D > 0: duas raízes diferentes; D = 0: uma só; D < 0: nenhuma."
    ],
    [
     "Resolver D > 0",
@@ -110,7 +110,7 @@
    ],
    [
     "Contar",
-    "k = 1, 2, 3, 4, 5, 6, 7, 8: são 8 valores."
+    "k = 1, 2, 3, 4, 5, 6, 7, 8: são 8 valores. Teste com k = 5: x² − 6x + 5 = 0 tem raízes 1 e 5, as duas positivas. Teste com k = 5: x² − 6x + 5 = 0 tem raízes 1 e 5, as duas positivas."
    ],
    [
     "Os que enganam",
@@ -155,7 +155,7 @@
    ],
    [
     "O sinal de a",
-    "a² = 9: 3 · 3 = 9 e também (−3) · (−3) = 9, então a = 3 ou a = −3. Como a > 0, fica a = 3."
+    "a² = 9: 3 · 3 = 9 e também (−3) · (−3) = 9 (negativo vezes negativo dá positivo), então a = 3 ou a = −3. Como a > 0, fica a = 3."
    ],
    [
     "Achar b",
@@ -216,19 +216,19 @@
    ],
    [
     "Somar 3 a tudo",
-    "O oposto de −3 é 3 (o mesmo número com o sinal trocado). Chame de y o número do pedido mais 3 (y = x + 3). O próximo pedido é 2x + 3; somando 3: 2x + 6 = 2 · (x + 3). Ou seja, o y simplesmente dobra."
+    "O oposto de −3 é 3 (o mesmo número com o sinal trocado). Chame de x o número de um pedido e de Y esse número mais 3: Y = x + 3. O próximo pedido é 2x + 3; somando 3: 2x + 6 = 2 · (x + 3). Ou seja, o Y simplesmente dobra."
    ],
    [
     "O começo",
-    "x = 0 dá y = 3. Dobrando: 3, 6, 12, 24, 48, 96, 192, 384, 768, 1 536, 3 072 (10 dobras a partir de 3)."
+    "x = 0 dá Y = 3. Dobrando: 3, 6, 12, 24, 48, 96, 192, 384, 768, 1 536, 3 072 (10 dobras a partir de 3)."
    ],
    [
     "Depois de 10 passos",
-    "Dobrar 10 vezes é multiplicar por 2¹⁰ (2 multiplicado 10 vezes): 2, 4, 8, 16, 32, 64, 128, 256, 512, 1 024. Então y = 3 · 1 024 = 3 072, igual à lista."
+    "Dobrar 10 vezes é multiplicar por 2¹⁰ (2 multiplicado 10 vezes): 2, 4, 8, 16, 32, 64, 128, 256, 512, 1 024. Então Y = 3 · 1 024 = 3 072, igual à lista."
    ],
    [
     "Voltar para x",
-    "x = y − 3 = 3 072 − 3 = 3 069. Conferindo no começo da fila: 0, 3, 9, 21, 45. 45 + 3 = 48 = 3 · 16."
+    "N = Y − 3 = 3 072 − 3 = 3 069 (N é o número do pedido). Conferindo no começo da fila: 0, 3, 9, 21, 45. 45 + 3 = 48 = 3 · 16."
    ]
   ],
   "ancora": "Unesp 2025 (PG) e ITA 2025 q.5: sequência que se repete por uma regra"
@@ -291,7 +291,7 @@
    ],
    [
     "Com 10% a mais",
-    "10% de 1 050 = 1 050 ÷ 10 = 105. Então 1 050 + 105 = 1 155 m². (É o mesmo que 1 050 · 1,1: 110% é 110 ÷ 100 = 1,1.)"
+    "10% é 10 ÷ 100 = 1/10, então 10% de 1 050 = 1 050 ÷ 10 = 105. Então 1 050 + 105 = 1 155 m². (É o mesmo que 1 050 · 1,1: 110% é 110 ÷ 100 = 1,1.)"
    ],
    [
     "Quanto um pacote cobre",
@@ -344,7 +344,7 @@
    ],
    [
     "O raio do círculo inscrito",
-    "Ligue o centro do círculo aos 3 cantos (vértices) do triângulo: ele se divide em 3 triângulos, um com cada lado como base (5, 12 e 13), e em cada um a altura é o raio r (o raio chega ao lado formando ângulo reto, como nos quadradinhos). Áreas: 5 · r ÷ 2, 12 · r ÷ 2 e 13 · r ÷ 2. Somando: (5 + 12 + 13) · r ÷ 2 = 15 r. Essa soma é a área do triângulo, 30: 15 r = 30, r = 2 cm. (O perímetro, 5 + 12 + 13, também dá 30: coincidência deste triângulo.)"
+    "Ligue o centro do círculo aos 3 cantos (vértices) do triângulo: ele se divide em 3 triângulos, um com cada lado como base (5, 12 e 13), e em cada um a altura é o raio r (o raio chega ao lado formando ângulo reto, como nos quadradinhos). Áreas: 5 · r ÷ 2, 12 · r ÷ 2 e 13 · r ÷ 2. Somando: (5 + 12 + 13) · r ÷ 2 = 15 r. Essa soma é a área do triângulo, 30: 15 r = 30, r = 2 cm. Isso mostra que r = área ÷ semiperímetro = 30 ÷ 15 = 2."
    ],
    [
     "Área do círculo",
@@ -442,7 +442,7 @@
    ],
    [
     "O truque",
-    "O retângulo tem 12 · 8 = 96 m². O do meio é metade (48) com P em qualquer lugar: se P estivesse a 2 m ou a 10 m de D, a base e a altura de ABP seriam as mesmas (12 e 8). As laterais ficam com a outra metade."
+    "O retângulo tem 12 · 8 = 96 m². O do meio é metade (48) com P em qualquer ponto do lado de cima: se P estivesse a 2 m ou a 10 m de D, a base e a altura de ABP seriam as mesmas (12 e 8). As laterais ficam com a outra metade."
    ],
    [
     "O custo",
@@ -615,7 +615,7 @@
    ],
    [
     "Distância da base",
-    "12 − 4 = 8 cm."
+    "d = 12 − 12 · k = 12 − 12 · 1/3 = 12 − 4 = 8 cm."
    ]
   ],
   "ancora": "ENEM 2022 q.147 (volume vai com o cubo) e aulas fuv (tetraedro cortado)"

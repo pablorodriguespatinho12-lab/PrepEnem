@@ -48,7 +48,7 @@
   "passos": [
    [
     "Tudo em km e em horas",
-    "18 000 m ÷ 1 000 = 18 km. Ida: 18 ÷ 45 = 0,4 h (confira: 45 · 0,4 = 18). Volta: 18 ÷ 30 = 0,6 h (30 · 0,6 = 18). Em minutos: 0,4 · 60 = 24 min e 0,6 · 60 = 36 min."
+    "18 000 m ÷ 1 000 = 18 km. Tempo = distância ÷ velocidade. Tempo = distância ÷ velocidade. Tempo = distância ÷ velocidade. Ida: 18 ÷ 45 = 0,4 h (confira: 45 · 0,4 = 18). Volta: 18 ÷ 30 = 0,6 h (30 · 0,6 = 18). Em minutos: 0,4 · 60 = 24 min e 0,6 · 60 = 36 min."
    ],
    [
     "Tempo total",
@@ -127,7 +127,7 @@
    ],
    [
     "Em hectares",
-    "1 hectare = 10 000 m² (4 zeros). Cortando 4 zeros de 6 000 000, sobra 600 ha."
+    "1 hectare = 10 000 m² (4 zeros). Dividir por 10 000 é cortar 4 zeros do final: 6 000 000 ÷ 10 000 = 600 ha."
    ],
    [
     "O que sobrou",
@@ -186,7 +186,7 @@
   "passos": [
    [
     "O que está no tanque",
-    "25% é 25 ÷ 100 = 1/4, então 25% de 60 = 60 ÷ 4 = 15 L de etanol, e 60 − 15 = 45 L de gasolina."
+    "25% é 25 ÷ 100 = 25/100, e dividindo em cima e embaixo por 25 dá 1/4, então 25% de 60 = 60 ÷ 4 = 15 L de etanol, e 60 − 15 = 45 L de gasolina."
    ],
    [
     "O que não muda",
@@ -265,7 +265,7 @@
    ],
    [
     "Tempo",
-    "T = Q ÷ V = (3/4) ÷ (1/3). Se a caixa enche 1/3 por hora, enche a caixa toda em 3 horas; então dividir por 1/3 é o mesmo que multiplicar por 3: (3/4) · 3 = 9/4 h. E 9 ÷ 4 = 2,25 h."
+    "T = Q ÷ V = (3/4) ÷ (1/3). Se a caixa enche 1/3 por hora, enche a caixa toda em 3 horas; então dividir por 1/3 é o mesmo que multiplicar por 3: (3/4) · 3 = 9/4 h (3 · 3 = 9 em cima, e o 4 embaixo fica). E 9 ÷ 4 = 2,25 h."
    ],
    [
     "Em horas e minutos",
@@ -391,7 +391,7 @@
   "passos": [
    [
     "A mediana de 13 notas",
-    "Mediana é a nota do meio, com as notas em fila da menor para a maior. Com 13 notas há 6 de cada lado e a do meio é a 7ª. (Conta: (13 + 1) ÷ 2 = 7. Com 11 notas, seria a 6ª.)"
+    "Mediana é a nota do meio, com as notas em fila da menor para a maior. Com 13 notas há 6 de cada lado e a do meio é a 7ª. (Conta: (13 + 1) ÷ 2 = 7. Com 11 notas, seria a 6ª. Com um número par de notas, a mediana é a média das duas do meio.)"
    ],
    [
     "O que as 11 notas já têm",
@@ -528,20 +528,20 @@
   },
   "passos": [
    [
-    "Tudo em função de março (T)",
-    "Abril = 1,25 · T (25% a mais: 100% + 25% = 125% = 1,25)."
+    "Tudo em função de março (M)",
+    "Abril = 1,25 · M (25% a mais: 100% + 25% = 125% = 1,25)."
    ],
    [
     "Maio",
-    "Maio = 0,8 · 1,25 · T (20% a menos: 100% − 20% = 80% = 0,8). Como 0,8 · 1,25 = 1 (8 · 125 = 1 000, com 3 casas decimais: 1,000), maio = 1 · T. Subir 25% e cair 20% se cancela."
+    "Maio = 0,8 · 1,25 · M (20% a menos: 100% − 20% = 80% = 0,8). Como 0,8 · 1,25 = 1 (8 · 125 = 1 000, com 3 casas decimais: 1,000), maio = 1 · M. Subir 25% e cair 20% se cancela."
    ],
    [
     "Soma dos três meses",
-    "T + 1,25 · T + T = 3,25 · T. A soma também é 3 · 6 500 = 19 500."
+    "M + 1,25 · M + M = 3,25 · M. A soma também é 3 · 6 500 = 19 500."
    ],
    [
     "Março",
-    "3,25 · T = 19 500, então T = 19 500 ÷ 3,25. Tirando as vírgulas (multiplicando os dois por 100): 1 950 000 ÷ 325. Como 325 · 6 = 1 950, então 325 · 6 000 = 1 950 000, e T = 6 000."
+    "3,25 · M = 19 500, então M = 19 500 ÷ 3,25. Tirando as vírgulas (multiplicando os dois por 100): 1 950 000 ÷ 325. Como 325 · 6 = 1 950, então 325 · 6 000 = 1 950 000, e M = 6 000."
    ],
    [
     "Abril",
@@ -612,7 +612,7 @@
    ],
    [
     "Juntar",
-    "Troque u por 36 − 3m: m + 36 − 3m = 22. Como m − 3m = −2m, fica 36 − 2m = 22. Tire 36 dos dois lados: −2m = 22 − 36 = −14. Trocando o sinal: 2m = 14, e m = 7."
+    "Troque u por 36 − 3m: m + 36 − 3m = 22. Como m − 3m = −2m, fica 36 − 2m = 22. Então 2m é o que falta de 36 para chegar a 22: 36 − 22 = 14. Assim 2m = 14 e m = 7."
    ],
    [
     "Voltar",
@@ -674,7 +674,7 @@
    ],
    [
     "Trocar A",
-    "Da 1ª: A = 12 000 − B. Troque A na 2ª: 0,01 · (12 000 − B) + 0,018 · B = 160. Como 0,01 · 12 000 = 120 (1% de 12 000), fica 120 − 0,01 B + 0,018 B = 160."
+    "Da 1ª: A = 12 000 − B. Troque A na 2ª: 0,01 · (12 000 − B) + 0,018 · B = 160. O 0,01 multiplica cada parte do parêntese: 0,01 · 12 000 = 120 (1% de 12 000) e 0,01 · B. Fica 120 − 0,01 B + 0,018 B = 160."
    ],
    [
     "Resolver",
@@ -739,7 +739,7 @@
    ],
    [
     "Entre 60 e 120 min",
-    "B custa 54. A passa de 54 quando 0,75 · (t − 60) > 24 (24 = 54 − 30; \">\" lê-se \"maior que\"). Então t − 60 > 24 ÷ 0,75 = 32 (conferindo: 0,75 · 32 = 24), isto é, t > 92."
+    "B custa 54. A passa de 54 quando 0,75 · (t − 60) > 24 (24 = 54 − 30; \">\" lê-se \"maior que\"). Então t − 60 > 24 ÷ 0,75. Multiplicando os dois por 100: 2 400 ÷ 75 = 32 (conferindo: 0,75 · 32 = 24), isto é, t > 92."
    ],
    [
     "Em t = 92",
@@ -751,7 +751,7 @@
    ],
    [
     "Acima de 120 min",
-    "Os dois cobram excedente. A = 30 + 0,75 · (t − 60) = 30 + 0,75 t − 45 = 0,75 t − 15 (0,75 · 60 = 45). B = 54 + 0,5 · (t − 120) = 54 + 0,5 t − 60 = 0,5 t − 6 (0,5 · 120 = 60). A − B = 0,25 t − 9, que é positivo para t acima de 36; então B continua mais barato."
+    "Os dois cobram excedente. A = 30 + 0,75 · (t − 60). Abrindo o parêntese: 0,75 · t − 0,75 · 60 = 0,75 t − 45, então A = 30 + 0,75 t − 45 = 0,75 t − 15. B = 54 + 0,5 · (t − 120) = 54 + 0,5 t − 60 = 0,5 t − 6 (0,5 · 120 = 60). A − B = 0,25 t − 9, que é positivo para t acima de 36; então B continua mais barato."
    ],
    [
     "Resposta",

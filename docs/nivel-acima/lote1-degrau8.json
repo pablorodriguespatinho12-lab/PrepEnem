@@ -140,7 +140,7 @@
    ],
    [
     "Nenhum empate nos 2 sorteados",
-    "Os 2 jogos saem dos 15 − 2 = 13 que não empataram. Escolher 2 entre 13: o 1º jogo tem 13 jeitos, o 2º tem 12, e a ordem não importa (cada par foi contado 2 vezes), então 13 · 12 ÷ 2 = 78 (escreve-se C(13,2)). Entre os 15 são 15 · 14 ÷ 2 = 105. Chance = 78/105 = 26/35 (dividindo em cima e embaixo por 3)."
+    "Os 2 jogos saem dos 15 − 2 = 13 que não empataram. Escolher 2 entre 13: o 1º jogo tem 13 jeitos, o 2º tem 12, e a ordem não importa (cada par foi contado 2 vezes), então 13 · 12 ÷ 2 = 78 (escreve-se C(13,2), que se lê combinação de 13 tomados 2 a 2). Entre os 15 são 15 · 14 ÷ 2 = 105. Chance = 78/105 = 26/35 (dividindo em cima e embaixo por 3)."
    ],
    [
     "Pelo menos um",
@@ -200,7 +200,7 @@
    ],
    [
     "1º exame positivo",
-    "Doentes: 90% de 600 = 540. Sadias: 10% de 9 400 = 940."
+    "Doentes: 90% de 600 = 600 ÷ 100 · 90 = 540. Sadias: 10% de 9 400 = 9 400 ÷ 10 = 940."
    ],
    [
     "2º exame positivo",
@@ -208,7 +208,7 @@
    ],
    [
     "Quem tem a doença",
-    "486 ÷ (486 + 94) = 486 ÷ 580 ≈ 0,84 (580 · 0,84 = 487,2, quase 486). Para virar porcentagem, multiplique por 100: 0,84 = 84%."
+    "486 ÷ (486 + 94) = 486 ÷ 580: 580 · 0,8 = 464 e sobram 22; 22 ÷ 580 é cerca de 0,04. Então é cerca de 0,84. Para virar porcentagem, multiplique por 100: 0,84 = 84%."
    ]
   ],
   "ancora": "Unicamp 2024 q.61 (pedrinhas) e ENEM 2021 q.177: chance condicional e eventos independentes"
