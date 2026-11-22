@@ -1,0 +1,156 @@
+<title>Nível Acima Misturado</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Nunito:wght@400;700;800&display=swap">
+<style>
+/* Layout: uma questão por vez, abas numeradas no topo, resolução passo a passo com Próximo */
+:root {
+  --bg: #eef3e4; --card: #fbfdf4; --fg: #24331f; --muted: #5b6b52;
+  --line: #24331f; --accent: #3f8f4a; --ok: #2e7d32; --bad: #b3402c; --okbg: #dff2d8; --badbg: #f8e0d8;
+  --font-t: 'Jersey 10', 'Courier New', monospace; --font-b: 'Nunito', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121a2b; --card: #1b2540; --fg: #eef0d8; --muted: #a8b3c9;
+  --line: #eef0d8; --accent: #f2c14e; --ok: #8fdc8a; --bad: #ff9d84; --okbg: #1f3a2c; --badbg: #422a2e; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #121a2b; --card: #1b2540; --fg: #eef0d8; --muted: #a8b3c9;
+  --line: #eef0d8; --accent: #f2c14e; --ok: #8fdc8a; --bad: #ff9d84; --okbg: #1f3a2c; --badbg: #422a2e; color-scheme: dark; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-b); font-size: 17px; line-height: 1.5;
+  padding-block: 20px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+main { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+h1 { font-family: var(--font-t); font-weight: 400; font-size: 40px; line-height: 1; margin: 0; text-wrap: balance; }
+.sub { color: var(--muted); margin: 0; font-size: 15px; }
+button { font: inherit; color: inherit; cursor: pointer; outline: none; }
+button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.px { background: var(--card); border: 0; box-shadow: 0 -4px 0 0 var(--line), 0 4px 0 0 var(--line), -4px 0 0 0 var(--line), 4px 0 0 0 var(--line); }
+.abas { display: flex; gap: 12px; flex-wrap: wrap; padding: 4px; }
+.aba { padding: 8px 14px; font-family: var(--font-t); font-size: 22px; }
+.aba[aria-selected="true"] { background: var(--accent); color: var(--bg); }
+.card { padding: 22px 20px; display: flex; flex-direction: column; gap: 16px; margin: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { font-size: 13px; font-weight: 800; padding: 3px 10px; background: var(--bg); border: 2px solid var(--line); }
+h2 { font-family: var(--font-t); font-weight: 400; font-size: 30px; margin: 0; line-height: 1.05; }
+.enun { margin: 0; max-width: 65ch; }
+table { border-collapse: collapse; margin: 4px 0; }
+th, td { border: 2px solid var(--line); padding: 6px 12px; text-align: left; font-size: 15px; }
+th { background: var(--bg); }
+svg { max-width: 100%; height: auto; align-self: center; }
+.alts { display: grid; gap: 10px; }
+.alt { text-align: left; padding: 10px 14px; background: var(--bg); border: 2px solid var(--line); display: flex; gap: 12px; align-items: baseline; }
+.alt:hover { background: var(--okbg); }
+.alt b { font-family: var(--font-t); font-size: 22px; font-weight: 400; }
+.alt.certa { background: var(--okbg); border-color: var(--ok); }
+.alt.errada { background: var(--badbg); border-color: var(--bad); }
+.alt small { display: block; color: var(--muted); font-size: 14px; }
+.msg { margin: 0; font-weight: 800; }
+.msg.ok { color: var(--ok); } .msg.bad { color: var(--bad); }
+.btn { padding: 10px 18px; font-family: var(--font-t); font-size: 22px; background: var(--accent); color: var(--bg); align-self: flex-start; }
+.btn:active { transform: translateY(4px); }
+.passo { background: var(--bg); padding: 14px 16px; border: 2px solid var(--line); }
+.passo b { font-family: var(--font-t); font-size: 20px; font-weight: 400; display: block; }
+.passo p { margin: 4px 0 0; }
+.erros { font-size: 14px; color: var(--muted); margin: 0; }
+.nota { font-size: 14px; color: var(--muted); border-left: 4px solid var(--accent); padding-left: 10px; margin: 0; }
+@media (prefers-reduced-motion: no-preference) { .card { animation: sobe .25s steps(5) both; } }
+@keyframes sobe { from { opacity: 0; transform: translateY(8px); } }
+</style>
+<main>
+  <h1>Nível acima, lote 1 misturado</h1>
+  <p class="sub">4 questões originais do degrau 8, cada uma com os 4 estilos juntos (ENEM, Fuvest, ITA, Harvard–MIT). Responda e veja a resolução.</p>
+  <div class="abas" id="abas" role="tablist"></div>
+  <section class="card px" id="q" aria-live="polite"></section>
+</main>
+<script>
+const Q = [
+{ t: 'A ficha e o ladrilho', tags: ['Geometria plana + probabilidade', 'Degraus 6 + 8', 'Texto ENEM · condição Fuvest · partição ITA · truque Harvard'],
+  enun: 'Numa feira, o piso é de ladrilhos quadrados de 10 cm de lado, separados por rejuntes. No jogo da calçada, o participante lança uma ficha circular de 3 cm de raio, e os pontos dependem de quantos rejuntes do ladrilho a ficha toca, como mostra a tabela. Suponha que o centro da ficha caia sobre um ladrilho, em um ponto escolhido ao acaso, e considere só os 4 rejuntes desse ladrilho. Sabendo que a ficha tocou pelo menos um rejunte, a probabilidade de que o participante tenha feito exatamente 4 pontos é:',
+  tabela: [['Rejuntes tocados', 'Pontos'], ['0', '10'], ['1', '4'], ['2', '1']], fig: 'ladrilho',
+  alts: ['12/25', '3/7', '9/25', '4/7', '4/21'], certa: 3,
+  erros: { 0: 'Esqueceu a condição: 48 em 100, sem tirar quem não tocou nada.', 1: 'Contou só os cantos (36/84): são os que fazem 1 ponto.', 2: 'Cantos sobre o ladrilho todo (36/100), sem condição.', 4: 'Dividiu os que não tocam (16) pelos que tocam (84).' },
+  passos: [
+    ['Troque a ficha por um ponto', 'A ficha toca um rejunte quando o centro está a 3 cm ou menos dele. Só o centro importa.'],
+    ['Não toca nenhum', 'O centro fica no quadrado de dentro: 10 − 3 − 3 = 4 cm de lado, área 16 (16 de 100).'],
+    ['Toca dois', 'O centro fica a menos de 3 cm de duas bordas vizinhas: um canto de 3 × 3 = 9, e são 4 cantos: 36. (Dois rejuntes opostos não dá: 2 · 3 = 6 < 10.)'],
+    ['Toca exatamente um', 'O que sobra: 100 − 16 − 36 = 48 (4 faixas de 3 × 4 = 12).'],
+    ['Condicional', 'Tocou pelo menos um: 100 − 16 = 84. Exatamente 4 pontos: 48/84 = 4/7.']
+  ] },
+{ t: 'Campeonato do bairro', tags: ['Contagem + equação + probabilidade', 'Degraus 4 + 1 + 8', 'Texto ENEM · condição Fuvest · contagem ITA · truque Harvard'],
+  enun: 'Seis times disputaram um campeonato de bairro em turno único: todos contra todos, uma vez. Vitória vale 3 pontos; empate vale 1 ponto para cada time; derrota, nenhum. A tabela mostra a pontuação final. O jornal não publicou os resultados dos jogos. Dois jogos distintos são sorteados ao acaso entre todos os do campeonato. A probabilidade de pelo menos um deles ter terminado empatado é:',
+  tabela: [['Time', 'Pontos'], ['Tigres', '12'], ['Raio', '10'], ['Pelé', '8'], ['Unidos', '6'], ['Estrela', '4'], ['Garra', '3']],
+  alts: ['1/105', '2/15', '9/35', '4/15', '26/35'], certa: 2,
+  erros: { 0: 'Calculou a chance de os dois sorteados serem empates.', 1: 'Calculou para um jogo só.', 3: 'Somou 2/15 + 2/15 sem descontar quando os dois são empate.', 4: 'Achou a chance de nenhum empate e parou.' },
+  passos: [
+    ['Quantos jogos', '6 · 5 / 2 = 15 jogos.'],
+    ['Pontos se ninguém empatasse', '15 · 3 = 45. Empate dá 1 + 1 = 2 pontos, então cada empate tira 1 ponto.'],
+    ['Quantos empates', 'A tabela soma 12 + 10 + 8 + 6 + 4 + 3 = 43. Faltam 45 − 43 = 2 empates. Nem precisa saber quem empatou.'],
+    ['Nenhum empate nos 2 sorteados', 'Os 2 jogos saem dos 13 que não empataram: C(13,2) / C(15,2) = 78/105 = 26/35.'],
+    ['Pelo menos um', '1 − 26/35 = 9/35.']
+  ] },
+{ t: 'O exame repetido', tags: ['Porcentagem + tabela + probabilidade', 'Degraus 1 + 3 + 8', 'Texto ENEM · condição Fuvest · frequências ITA · truque Harvard'],
+  enun: 'Uma clínica aplicou um exame em 10 000 pessoas, divididas por idade como mostra a tabela. O exame dá positivo em 90% das pessoas doentes e, por engano, em 10% das sadias. Quem dá positivo repete o exame, e o resultado da repetição não depende do primeiro: vale a mesma taxa de acerto e de engano. Entre as pessoas que deram positivo nos dois exames, a porcentagem aproximada das que realmente têm a doença é:',
+  tabela: [['Faixa', 'Pessoas', 'Com a doença'], ['Menos de 40 anos', '5 000', '2%'], ['40 anos ou mais', '5 000', '10%']],
+  alts: ['84%', '36%', '81%', '90%', '94%'], certa: 0,
+  erros: { 1: 'Parou no 1º exame (540 de 1 480).', 2: 'Multiplicou 0,9 · 0,9, sem olhar as sadias.', 3: 'Pegou a taxa do exame como se fosse o resultado.', 4: 'Usou a fração de sadias da população (9 400 de 10 000).' },
+  passos: [
+    ['Quantas pessoas de cada', 'Doentes: 2% de 5 000 = 100 e 10% de 5 000 = 500, total 600. Sadias: 10 000 − 600 = 9 400.'],
+    ['1º exame positivo', 'Doentes: 90% de 600 = 540. Sadias: 10% de 9 400 = 940.'],
+    ['2º exame positivo', 'Doentes: 90% de 540 = 486. Sadias: 10% de 940 = 94.'],
+    ['Quem tem a doença', '486 ÷ (486 + 94) = 486/580 ≈ 0,84, ou 84%.']
+  ] },
+{ t: 'Painel de lâmpadas', tags: ['Contagem + sequência + probabilidade', 'Degraus 4 + 1 + 8', 'Texto ENEM · condição Fuvest · recorrência ITA · truque Harvard'],
+  enun: 'Um painel tem 6 lâmpadas em fila. No teste de fábrica, cada lâmpada fica acesa ou apagada ao acaso, com chance 1/2 e sem depender das outras. Por segurança, a máquina só aprova painéis que não têm duas lâmpadas acesas lado a lado, como o da figura. Entre os painéis aprovados, a probabilidade de que tenham exatamente 3 lâmpadas acesas é:',
+  fig: 'lampadas',
+  alts: ['1/16', '4/13', '5/16', '1/2', '4/21'], certa: 4,
+  erros: { 0: 'Ignorou a condição: 4 em 64 painéis.', 1: 'Contou 13 painéis aprovados (parou no 5º lugar).', 2: 'Usou C(6,3)/64 = 20/64, sem proibir vizinhas acesas.', 3: 'Achou que 3 de 6 é metade.' },
+  nota: 'Precisa de uma aula "Antes": contar pela recorrência (cada resultado depende dos dois anteriores).',
+  passos: [
+    ['Contar os aprovados', 'Se a última lâmpada está apagada, as 5 de antes valem qualquer arranjo bom: a(5). Se está acesa, a anterior é apagada e as 4 antes valem a(4). Então a(n) = a(n−1) + a(n−2).'],
+    ['Montar a lista', 'a(1) = 2, a(2) = 3, depois 5, 8, 13 e a(6) = 21 painéis aprovados.'],
+    ['Com exatamente 3 acesas', 'Ponha as 3 apagadas em fila: ficam 4 vãos (antes, 2 entre elas, depois). Cada acesa ocupa um vão diferente: C(4,3) = 4.'],
+    ['Probabilidade', '4/21.']
+  ] }
+];
+const FIG = {
+ladrilho: `<svg viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Ladrilho de 10 cm com a ficha de 3 cm de raio, tocando o rejunte de baixo">
+<rect x="20" y="20" width="200" height="200" fill="var(--bg)" stroke="var(--line)" stroke-width="5"/>
+<circle cx="150" cy="180" r="60" fill="var(--accent)" fill-opacity=".55" stroke="var(--line)" stroke-width="3"/>
+<circle cx="150" cy="180" r="4" fill="var(--line)"/>
+<g stroke="var(--line)" stroke-width="2" fill="none"><path d="M5 20v200M5 20h5M5 220h5"/></g>
+<g fill="var(--fg)" font-family="Nunito,sans-serif" font-size="13" font-weight="800" text-anchor="middle"><text x="120" y="12">10 cm</text><text x="150" y="168">raio 3 cm</text><text x="120" y="236">rejunte</text></g></svg>`,
+lampadas: `<svg viewBox="0 0 340 110" width="340" height="110" role="img" aria-label="Painel aprovado com 6 lâmpadas: acesa, apagada, acesa, apagada, apagada, acesa">
+<rect x="4" y="8" width="332" height="70" fill="var(--bg)" stroke="var(--line)" stroke-width="4"/>
+<g stroke="var(--line)" stroke-width="3">
+<circle cx="38" cy="43" r="20" fill="var(--accent)"/><circle cx="95" cy="43" r="20" fill="var(--card)"/><circle cx="152" cy="43" r="20" fill="var(--accent)"/>
+<circle cx="209" cy="43" r="20" fill="var(--card)"/><circle cx="266" cy="43" r="20" fill="var(--card)"/><circle cx="310" cy="43" r="20" fill="var(--accent)"/></g>
+<g fill="var(--fg)" font-family="Nunito,sans-serif" font-size="13" font-weight="800" text-anchor="middle"><text x="170" y="100">um painel aprovado (3 acesas, nenhuma ao lado de outra)</text></g></svg>`
+};
+let atual = 0, resp = null, passo = -1;
+const $ = s => document.querySelector(s);
+function abas() {
+  $('#abas').innerHTML = Q.map((q, i) => `<button class="aba px" role="tab" aria-selected="${i === atual}" data-i="${i}">${i + 1}. ${q.t}</button>`).join('');
+}
+function tela() {
+  const q = Q[atual], L = 'ABCDE';
+  let h = `<div class="tags">${q.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div><h2>${q.t}</h2><p class="enun">${q.enun}</p>`;
+  if (q.tabela) h += `<div style="overflow-x:auto"><table>${q.tabela.map((r, i) => `<tr>${r.map(c => i ? `<td>${c}</td>` : `<th>${c}</th>`).join('')}</tr>`).join('')}</table></div>`;
+  if (q.fig) h += FIG[q.fig];
+  h += `<div class="alts">${q.alts.map((a, i) => {
+    const cls = resp === null ? '' : i === q.certa ? 'certa' : i === resp ? 'errada' : '';
+    const dica = resp !== null && i === resp && i !== q.certa ? `<small>${q.erros[i]}</small>` : '';
+    return `<button class="alt ${cls}" data-a="${i}" ${resp !== null ? 'disabled' : ''}><b>${L[i]}</b><span>${a}${dica}</span></button>`; }).join('')}</div>`;
+  if (resp !== null) h += resp === q.certa ? `<p class="msg ok">Certo!</p>` : `<p class="msg bad">Errou. A certa é a ${L[q.certa]}.</p>`;
+  if (q.nota) h += `<p class="nota">${q.nota}</p>`;
+  if (resp !== null) {
+    h += q.passos.slice(0, passo + 1).map((p, i) => `<div class="passo"><b>${i + 1}. ${p[0]}</b><p>${p[1]}</p></div>`).join('');
+    if (passo < q.passos.length - 1) h += `<button class="btn px" id="prox">${passo < 0 ? 'Ver a resolução' : 'Próximo'}</button>`;
+    else h += `<p class="erros">Erros típicos já mostrados nas alternativas: cada errada vem de uma conta que parece certa.</p>`;
+  }
+  $('#q').innerHTML = h;
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.i) { atual = +b.dataset.i; resp = null; passo = -1; abas(); tela(); }
+  else if (b.dataset.a) { resp = +b.dataset.a; tela(); }
+  else if (b.id === 'prox') { passo++; tela(); }
+});
+abas(); tela();
+</script>
