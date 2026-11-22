@@ -85,15 +85,15 @@
      "texto": "18 000 m ÷ 1 000 = 18 km. Ida: 18 ÷ 45 = 0,4 h (confira: 45 · 0,4 = 18). Volta: 18 ÷ 30 = 0,6 h (30 · 0,6 = 18). Em minutos: 0,4 · 60 = 24 min e 0,6 · 60 = 36 min."
     },
     {
-     "titulo": "Tempo total",
+     "titulo": "Achando T: tempo total",
      "texto": "A parada está em minutos: 12 ÷ 60 = 0,2 h (e não 0,12). Total: 0,4 + 0,2 + 0,6 = 1,2 h. Conferindo em minutos: 24 + 12 + 36 = 72 min, e 72 ÷ 60 = 1,2 h."
     },
     {
-     "titulo": "Distância total",
+     "titulo": "Achando D: distância total",
      "texto": "Ida e volta: 18 + 18 = 36 km."
     },
     {
-     "titulo": "Média",
+     "titulo": "Volta na equação",
      "texto": "Distância total ÷ tempo total: 36 ÷ 1,2. Para tirar a vírgula, multiplique os dois por 10: 360 ÷ 12 = 30 km/h."
     },
     {
@@ -127,7 +127,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Ida de 12 km a 6 km/h e volta de 12 km a 4 km/h, sem parada. Qual é a velocidade média?",
+    "resposta": "Distância 24 km ÷ tempo (2 h + 3 h = 5 h) = 4,8 km/h. A média simples (5) erra.",
+    "opcoes": [
+     "4,8 km/h",
+     "5 km/h",
+     "4,5 km/h"
+    ],
+    "certa": "4,8 km/h"
+   },
    "seuErro": null
   },
   "ancora": "ENEM 2022 q.138: tudo na mesma unidade de tempo antes de contar",
@@ -228,11 +237,15 @@
      "texto": "Escala 1 : 25 000 lê-se: 1 cm no papel vale 25 000 cm no chão. A cópia tem metade do tamanho (50%), então 1 cm da cópia vale 2 cm da planta, que valem 2 · 25 000 = 50 000 cm do chão. Em metros: 50 000 ÷ 100 = 500 m. Então 1 cm da cópia = 500 m."
     },
     {
-     "titulo": "Lados reais",
-     "texto": "4 cm · 500 = 2 000 m. 6 cm · 500 = 3 000 m."
+     "titulo": "Achando L: largura real",
+     "texto": "4 cm da cópia · 500 m por cm = 2 000 m."
     },
     {
-     "titulo": "Área em m²",
+     "titulo": "Achando C: comprimento real",
+     "texto": "6 cm da cópia · 500 m por cm = 3 000 m."
+    },
+    {
+     "titulo": "Volta na equação",
      "texto": "2 000 · 3 000: 2 · 3 = 6 e há 3 + 3 = 6 zeros, então 6 000 000 m²."
     },
     {
@@ -270,7 +283,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Planta 1 : 1 000, cópia reduzida a 50%. Na cópia o terreno mede 3 cm por 4 cm. Qual é a área real?",
+    "resposta": "1 cm da cópia = 2 · 1 000 cm = 20 m. Lados: 60 m e 80 m. Área: 4 800 m².",
+    "opcoes": [
+     "1 200 m²",
+     "2 400 m²",
+     "4 800 m²"
+    ],
+    "certa": "4 800 m²"
+   },
    "seuErro": null
   },
   "ancora": "ENEM 2022 q.160 (740 letras): escala 1 : 50 e margem escondida; aqui a cópia reduzida",
@@ -366,7 +388,7 @@
      }
     },
     {
-     "titulo": "O que está no tanque",
+     "titulo": "Achando G: a gasolina",
      "texto": "25% é 25 ÷ 100 = 1/4, então 25% de 60 = 60 ÷ 4 = 15 L de etanol, e 60 − 15 = 45 L de gasolina."
     },
     {
@@ -378,11 +400,15 @@
      "texto": "Chame de T o total final. Se 40% é etanol, a gasolina é o que sobra: 100% − 40% = 60% de T. E 60% = 60 ÷ 100 = 0,6. Então G = 0,6 · T, ou 45 = 0,6 · T."
     },
     {
-     "titulo": "Total final",
+     "titulo": "Achando T: total final",
      "texto": "T = 45 ÷ 0,6. Para dividir por 0,6, multiplique os dois por 10: 450 ÷ 6 = 75 L. Cabe nos 100 L do tanque."
     },
     {
-     "titulo": "O que foi acrescentado",
+     "titulo": "Achando M: o que já está no tanque",
+     "texto": "M é a mistura que já está no tanque: 60 L, direto do enunciado."
+    },
+    {
+     "titulo": "Volta na equação",
      "texto": "X = T − M = 75 − 60 = 15 L. Conferindo: etanol 15 + 15 = 30 L, e 30 ÷ 75 = 0,4 = 40%."
     },
     {
@@ -412,7 +438,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Tanque de 40 L com 10% de etanol. Quantos litros de etanol puro para chegar a 20%?",
+    "resposta": "Gasolina: 36 L, que passa a ser 80% do total: 36 ÷ 0,8 = 45 L. Acrescentar 45 − 40 = 5 L.",
+    "opcoes": [
+     "4 L",
+     "5 L",
+     "8 L"
+    ],
+    "certa": "5 L"
+   },
    "seuErro": null
   },
   "ancora": "Fuvest (repo) q.33: porcentagem com várias partes e uma condição no texto",
@@ -509,15 +544,15 @@
      "texto": "Vazão é quanto a torneira enche (ou o ralo esvazia) em 1 hora. A enche a caixa em 6 h, então em 1 h enche 1/6 da caixa (\"um sexto\": 1 parte de 6 iguais). B: 1/4. O ralo esvazia, por isso conta negativo: −1/12."
     },
     {
-     "titulo": "Vazão junta",
+     "titulo": "Achando V: vazão das três juntas",
      "texto": "Para somar frações, deixe o denominador (o número de baixo) igual: 12. 1/6 = 2/12 (multiplicando em cima e embaixo por 2) e 1/4 = 3/12 (por 3). Soma: 2/12 + 3/12 − 1/12 = 4/12. E 4/12 = 1/3 (dividindo em cima e embaixo por 4)."
     },
     {
-     "titulo": "Quanto falta",
+     "titulo": "Achando Q: quanto falta encher",
      "texto": "A caixa tem 25%, faltam 100% − 25% = 75%. E 75% = 75/100 = 3/4 (dividindo por 25). Os 1 200 L do enunciado não entram: estamos falando de partes da caixa."
     },
     {
-     "titulo": "Tempo",
+     "titulo": "Volta na equação",
      "texto": "T = Q ÷ V = (3/4) ÷ (1/3). Se a caixa enche 1/3 por hora, enche a caixa toda em 3 horas; então dividir por 1/3 é o mesmo que multiplicar por 3: (3/4) · 3 = 9/4 h. E 9 ÷ 4 = 2,25 h."
     },
     {
@@ -551,7 +586,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Caixa vazia. A torneira enche em 4 h e o ralo esvazia em 12 h. Quanto tempo para encher?",
+    "resposta": "Vazão: 1/4 − 1/12 = 3/12 − 1/12 = 2/12 = 1/6 por hora. Tempo: 6 h.",
+    "opcoes": [
+     "3 h",
+     "6 h",
+     "8 h"
+    ],
+    "certa": "6 h"
+   },
    "seuErro": null
   },
   "ancora": "ENEM 2022 q.137: taxa por tempo e quantidade que já existe",
@@ -643,11 +687,11 @@
      }
     },
     {
-     "titulo": "Pontos que a turma precisa",
+     "titulo": "Achando P: pontos que a turma precisa",
      "texto": "Média × número de alunos = pontos no total. 40 alunos · 6,0 = 240 pontos."
     },
     {
-     "titulo": "O que a turma antiga já tem",
+     "titulo": "Achando A: pontos da turma antiga",
      "texto": "30 · 5,8 = 174 pontos (30 · 5 = 150 e 30 · 0,8 = 24)."
     },
     {
@@ -655,11 +699,11 @@
      "texto": "240 − 174 = 66 pontos para os 10 transferidos. (66 ÷ 10 = 6,6: é a média que os dez precisam ter juntos.)"
     },
     {
-     "titulo": "Tirar a escola X",
+     "titulo": "Achando X: pontos da escola X",
      "texto": "5 · 7,0 = 35. Sobram 66 − 35 = 31 pontos."
     },
     {
-     "titulo": "Média da escola Y",
+     "titulo": "Volta na equação",
      "texto": "31 ÷ 5: 5 · 6 = 30, sobra 1; 1 ÷ 5 = 0,2. Então 6,2."
     },
     {
@@ -689,7 +733,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Turma de 20 alunos, média 5,5. Entram 5 alunos e a turma de 25 precisa de média 6,0. Qual a média dos 5?",
+    "resposta": "Pontos: 25 · 6,0 = 150. Já tem 20 · 5,5 = 110. Faltam 40, e 40 ÷ 5 = 8,0.",
+    "opcoes": [
+     "6,0",
+     "6,5",
+     "8,0"
+    ],
+    "certa": "8,0"
+   },
    "seuErro": null
   },
   "ancora": "ENEM 2022 q.136 (786 letras): média ponderada de dois grupos e um dado que sobra",
@@ -810,8 +863,16 @@
      "texto": "As duas notas são ≤ 6, e no máximo uma é menor que 6. Então pelo menos uma é exatamente 6."
     },
     {
-     "titulo": "Contar",
-     "texto": "Os pares são: {6, 6} (1 par) e {6, outra nota de 0 a 5} (6 pares, porque há 6 notas de 0 a 5). Total: D + U = 1 + 6 = 7 pares."
+     "titulo": "Achando D: pares com dois 6",
+     "texto": "Só existe um par com dois 6: {6, 6}. Então D = 1."
+    },
+    {
+     "titulo": "Achando U: pares com um só 6",
+     "texto": "A outra nota vai de 0 a 5: são 6 notas. Então U = 6."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "N = D + U = 1 + 6 = 7 pares."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -840,7 +901,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Notas 2, 4, 6, 8 e 10. Entra mais uma nota inteira de 0 a 10. Quantas notas fazem a mediana ser exatamente 5?",
+    "resposta": "Com 6 notas, a mediana é a média da 3ª e da 4ª. Servem 0, 1, 2, 3 e 4 (a 3ª é 4 e a 4ª é 6): 5 notas.",
+    "opcoes": [
+     "4",
+     "5",
+     "6"
+    ],
+    "certa": "5"
+   },
    "seuErro": null
   },
   "ancora": "Fuvest (repo) q.34 (contar listas com mediana, média e moda): reforcei de 1 para 2 alunos faltantes, contagem de pares",
@@ -945,12 +1015,20 @@
      "texto": "Reajuste de 8%: 100% + 8% = 108% = 1,08. Cada salário vira 1,08 vez o que era. Média: 2 500 · 1,08 = 2 500 + 8% de 2 500 = 2 500 + 200 = 2 700. O desvio-padrão (o quanto os salários se espalham em torno da média) também é multiplicado: 300 · 1,08 = 300 + 24 = 324. Exemplo: 1 000 e 1 200 têm distância 200; com reajuste de 8% viram 1 080 e 1 296... e a distância cresce para 216 (200 · 1,08)."
     },
     {
-     "titulo": "O abono soma o mesmo valor em todos",
+     "titulo": "Achando M: média de hoje",
+     "texto": "M = 2 500, direto do enunciado."
+    },
+    {
+     "titulo": "Achando D: desvio de hoje",
+     "texto": "D = 300, direto do enunciado."
+    },
+    {
+     "titulo": "Volta na equação",
      "texto": "Todos sobem 150, então a média sobe 150: 2 700 + 150 = 2 850. (Os 8 funcionários não entram na conta.)"
     },
     {
-     "titulo": "O abono não muda o espalhamento",
-     "texto": "Exemplo com 2 salários, 1 000 e 1 200: a distância entre eles é 200. Somando 150 a cada um, ficam 1 150 e 1 350, e a distância continua 200. Por isso o desvio continua 324."
+     "titulo": "Achando E: novo desvio-padrão",
+     "texto": "O reajuste multiplica o desvio por 1,08: E = 1,08 · 300 = 324. O abono soma o mesmo valor a todos e não muda o espalhamento. Exemplo com 2 salários, 1 000 e 1 200: a distância entre eles é 200; somando 150 a cada um, ficam 1 150 e 1 350, e a distância continua 200. Então E continua 324."
     },
     {
      "titulo": "Resposta",
@@ -983,7 +1061,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Média 1 000 e desvio-padrão 100. Reajuste de 10% e, depois, abono de R$ 50. Qual é o novo par (média ; desvio)?",
+    "resposta": "Média: 1 000 · 1,1 + 50 = 1 150. Desvio: 100 · 1,1 = 110 (o abono não muda).",
+    "opcoes": [
+     "(1 150 ; 110)",
+     "(1 155 ; 110)",
+     "(1 150 ; 160)"
+    ],
+    "certa": "(1 150 ; 110)"
+   },
    "seuErro": null
   },
   "ancora": "ENEM 2021 q.173 (1 205 letras): média e desvio-padrão juntos, comparados com o tamanho da média",
@@ -1075,11 +1162,15 @@
      "texto": "Maio = 0,8 · 1,25 · T (20% a menos: 100% − 20% = 80% = 0,8). Como 0,8 · 1,25 = 1 (8 · 125 = 1 000, com 3 casas decimais: 1,000), maio = 1 · T. Subir 25% e cair 20% se cancela."
     },
     {
+     "titulo": "Achando M: a média",
+     "texto": "M = 6 500, direto do enunciado. A soma dos três meses é 3 · 6 500 = 19 500."
+    },
+    {
      "titulo": "Soma dos três meses",
      "texto": "T + 1,25 · T + T = 3,25 · T. A soma também é 3 · 6 500 = 19 500."
     },
     {
-     "titulo": "Março",
+     "titulo": "Volta na equação",
      "texto": "3,25 · T = 19 500, então T = 19 500 ÷ 3,25. Tirando as vírgulas (multiplicando os dois por 100): 1 950 000 ÷ 325. Como 325 · 6 = 1 950, então 325 · 6 000 = 1 950 000, e T = 6 000."
     },
     {
@@ -1113,7 +1204,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Abril vendeu 50% a mais que março, e maio vendeu 20% a mais que março. A média dos 3 meses é R$ 3 700. Quanto vendeu abril?",
+    "resposta": "Março T, abril 1,5 T e maio 1,2 T: soma 3,7 T = 11 100, então T = 3 000 e abril = 4 500.",
+    "opcoes": [
+     "R$ 3 000",
+     "R$ 4 440",
+     "R$ 4 500"
+    ],
+    "certa": "R$ 4 500"
+   },
    "seuErro": null
   },
   "ancora": "ENEM 2021 q.157: +10% e −10% não se anulam; aqui +25% e −20% se anulam",
@@ -1137,6 +1237,20 @@
    "ideia": "Dê uma letra a cada tipo de moeda. Duas equações (quantas moedas e quantos reais), com a relação do dobro, resolvem tudo.",
    "pecas": [],
    "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Valor das moedas",
+        "formula": "25 centavos = 0,25 real; 50 centavos = 0,5 real"
+       }
+      ]
+     }
+    },
     {
      "titulo": "O que eu tenho",
      "texto": "Primeiro, tire os dados do enunciado. Atenção, está no enunciado mas fora da conta: O lanche.",
@@ -1203,8 +1317,12 @@
      "texto": "Troque u por 36 − 3m: m + 36 − 3m = 22. Como m − 3m = −2m, fica 36 − 2m = 22. Tire 36 dos dois lados: −2m = 22 − 36 = −14. Trocando o sinal: 2m = 14, e m = 7."
     },
     {
-     "titulo": "Voltar",
-     "texto": "u = 36 − 3 · 7 = 36 − 21 = 15. Conferindo: 25 centavos: 2m = 14 moedas, 14 · 0,25 = 3,50; 50 centavos: 7 · 0,5 = 3,50; 1 real: 15. Soma 22,00."
+     "titulo": "Achando u: moedas de 1 real",
+     "texto": "u = 36 − 3 · 7 = 36 − 21 = 15."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "Conferindo: m + u = 7 + 15 = 22 e 3m + u = 21 + 15 = 36. Em reais: 14 · 0,25 = 3,50; 7 · 0,5 = 3,50; 15 · 1 = 15; soma 22,00."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -1233,7 +1351,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Só há moedas de 50 centavos e de 1 real: 20 moedas, R$ 14,00. Quantas são de 1 real?",
+    "resposta": "m + u = 20 e 0,5m + u = 14. Subtraindo: 0,5m = 6, m = 12 e u = 8.",
+    "opcoes": [
+     "6",
+     "8",
+     "12"
+    ],
+    "certa": "8"
+   },
    "seuErro": null
   },
   "ancora": "ITA 2025 q.7: sistema linear; aqui com uma relação \"o dobro\" entre incógnitas",
@@ -1311,12 +1438,12 @@
       "leitura": "tudo aplicado e rendimentos líquidos somados",
       "letras": [
        {
-        "letra": "A",
-        "oque": "valor na poupança A"
+        "letra": "B",
+        "oque": "valor aplicado no fundo B (o que a questão quer)"
        },
        {
-        "letra": "B",
-        "oque": "valor no fundo B (o que a questão quer)"
+        "letra": "A",
+        "oque": "valor na poupança A"
        }
       ]
      }
@@ -1338,7 +1465,11 @@
      "texto": "−0,01 B + 0,018 B = 0,008 B. Então 120 + 0,008 B = 160, 0,008 B = 160 − 120 = 40 e B = 40 ÷ 0,008. Multiplicando os dois por 1 000 para tirar a vírgula: 40 000 ÷ 8 = 5 000."
     },
     {
-     "titulo": "Conferir",
+     "titulo": "Achando A: valor na poupança A",
+     "texto": "A = 12 000 − B = 12 000 − 5 000 = 7 000."
+    },
+    {
+     "titulo": "Volta na equação",
      "texto": "A tem 7 000 e rende 70. B rende 100, líquido 90. 70 + 90 = 160. (A tarifa de R$ 15 não entra.)"
     },
     {
@@ -1368,7 +1499,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "R$ 1 000 divididos em A (1% ao mês) e B (3% ao mês). Rendimento do mês: R$ 22. Quanto está em B?",
+    "resposta": "A + B = 1 000 e 0,01 A + 0,03 B = 22. Trocando A: 10 + 0,02 B = 22, B = 600.",
+    "opcoes": [
+     "R$ 400",
+     "R$ 600",
+     "R$ 700"
+    ],
+    "certa": "R$ 600"
+   },
    "seuErro": null
   },
   "ancora": "ENEM 2022 q.140 (649 letras): taxa sobre um valor, não sobre outro",
@@ -1397,6 +1537,20 @@
     }
    ],
    "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Plano com franquia",
+        "formula": "fixo + minuto extra · (t − franquia)"
+       }
+      ]
+     }
+    },
     {
      "titulo": "O que eu tenho",
      "texto": "Primeiro, tire os dados do enunciado.",
@@ -1428,16 +1582,16 @@
       "leitura": "plano A depois dos 60 minutos; plano B até 120 minutos",
       "letras": [
        {
+        "letra": "t",
+        "oque": "minutos falados (o que a questão quer)"
+       },
+       {
         "letra": "A",
         "oque": "custo do plano A"
        },
        {
         "letra": "B",
         "oque": "custo do plano B"
-       },
-       {
-        "letra": "t",
-        "oque": "minutos falados (o que a questão quer)"
        }
       ]
      }
@@ -1459,12 +1613,20 @@
      "texto": "A = 30 + 0,75 · 33 = 54,75 e B = 54. B é mais barato."
     },
     {
+     "titulo": "Achando A: custo do plano A",
+     "texto": "Com t = 93: A = 30 + 0,75 · (93 − 60) = 30 + 24,75 = 54,75."
+    },
+    {
+     "titulo": "Achando B: custo do plano B",
+     "texto": "Até 120 minutos, B = 54."
+    },
+    {
      "titulo": "Acima de 120 min",
      "texto": "Os dois cobram excedente. A = 30 + 0,75 · (t − 60) = 30 + 0,75 t − 45 = 0,75 t − 15 (0,75 · 60 = 45). B = 54 + 0,5 · (t − 120) = 54 + 0,5 t − 60 = 0,5 t − 6 (0,5 · 120 = 60). A − B = 0,25 t − 9, que é positivo para t acima de 36; então B continua mais barato."
     },
     {
-     "titulo": "Resposta",
-     "texto": "t = 93."
+     "titulo": "Volta na equação",
+     "texto": "t = 93: A = 54,75 e B = 54, então B é mais barato. Em t = 92 há empate (54 e 54). Resposta: 93."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -1493,7 +1655,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Plano C: R$ 20 com 50 min incluídos e R$ 1 por minuto extra. Plano D: R$ 35 fixos. A partir de quantos minutos D fica estritamente mais barato?",
+    "resposta": "C = 20 + (t − 50) > 35, então t − 50 > 15 e t > 65. O menor inteiro é 66.",
+    "opcoes": [
+     "65",
+     "66",
+     "70"
+    ],
+    "certa": "66"
+   },
    "seuErro": null
   },
   "ancora": "ENEM 2021 q.176: preço por partes (franquia + excedente)",
@@ -1517,6 +1688,20 @@
    "ideia": "Cada volume aparece em duas pesagens. A diferença pedida sai direto de duas pesagens, sem achar o peso de cada um.",
    "pecas": [],
    "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "media",
+        "nome": "Soma das pesagens",
+        "formula": "cada volume aparece em duas pesagens"
+       }
+      ]
+     }
+    },
     {
      "titulo": "O que eu tenho",
      "texto": "Primeiro, tire os dados do enunciado. Atenção, estão no enunciado mas fora da conta: Os 20 kg da balança e os 32 kg da companhia.",
@@ -1575,16 +1760,24 @@
      "texto": "Somar as três pesagens: 22 + 26 + 30 = 78. Cada volume apareceu duas vezes, então M + C + B = 78 ÷ 2 = 39 kg."
     },
     {
-     "titulo": "Cada um",
-     "texto": "22 é mala + caixa, então a bolsa é o que sobra: B = 39 − 22 = 17. 26 é mala + bolsa: C = 39 − 26 = 13. 30 é caixa + bolsa: M = 39 − 30 = 9."
+     "titulo": "Achando B: peso da bolsa",
+     "texto": "22 é mala + caixa, então a bolsa é o que sobra: B = 39 − 22 = 17."
+    },
+    {
+     "titulo": "Achando C: peso da caixa",
+     "texto": "26 é mala + bolsa, então a caixa é o que sobra: C = 39 − 26 = 13."
+    },
+    {
+     "titulo": "Achando M: peso da mala",
+     "texto": "30 é caixa + bolsa, então a mala é o que sobra: M = 39 − 30 = 9."
     },
     {
      "titulo": "O mais pesado e o mais leve",
      "texto": "17 (a bolsa) é o maior e 9 (a mala) é o menor."
     },
     {
-     "titulo": "Diferença",
-     "texto": "17 − 9 = 8 kg. (Os 20 kg da balança e os 32 kg da companhia não entram.)"
+     "titulo": "Volta na equação",
+     "texto": "D = (C + B) − (M + C) = (13 + 17) − (9 + 13) = 30 − 22 = 8 kg. (É o mesmo que 17 − 9.) Os 20 kg da balança e os 32 kg da companhia não entram."
     },
     {
      "titulo": "Atalho",
@@ -1617,7 +1810,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Três volumes pesados dois a dois: 10 kg, 12 kg e 14 kg. Qual a diferença entre o mais pesado e o mais leve?",
+    "resposta": "Os três juntos: (10 + 12 + 14) ÷ 2 = 18. Pesos: 8, 6 e 4. Diferença 8 − 4 = 4 kg (também 14 − 10).",
+    "opcoes": [
+     "2 kg",
+     "4 kg",
+     "8 kg"
+    ],
+    "certa": "4 kg"
+   },
    "seuErro": null
   },
   "ancora": "IME 2024 q.4: soma e produto das raízes; o truque é não resolver cada incógnita",
@@ -1654,6 +1856,20 @@
     }
    ],
    "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Lucro",
+        "formula": "lucro = (preço − custo) · vendas − gasto fixo"
+       }
+      ]
+     }
+    },
     {
      "titulo": "O que eu tenho",
      "texto": "Primeiro, tire os dados do enunciado.",
@@ -1720,12 +1936,16 @@
      "texto": "Os preços que zeram o produto (p − 10) · (200 − 4p) são p = 10 e p = 50: as raízes. Como a parábola é igual dos dois lados, o topo fica no meio: p = (10 + 50) ÷ 2 = 30."
     },
     {
-     "titulo": "Dentro do limite",
+     "titulo": "Achando p: o preço do maior lucro permitido",
      "texto": "De 10 até 30 o lucro só sobe. A prefeitura só deixa até 25, então o melhor preço permitido é o último: 25. (Em p = 30 o lucro seria 1 600 − 300 = 1 300, mas é proibido.)"
     },
     {
-     "titulo": "A conta",
-     "texto": "q = 200 − 4 · 25 = 100 bolos. Lucro = (25 − 10) · 100 − 300 = 1 500 − 300 = 1 200."
+     "titulo": "Achando q: bolos vendidos",
+     "texto": "q = 200 − 4 · 25 = 200 − 100 = 100 bolos."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "L = (25 − 10) · 100 − 300 = 1 500 − 300 = 1 200."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -1754,7 +1974,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Lucro L = (p − 5) · (60 − 2p) − 20, com preço p de no máximo R$ 12. Qual é o maior lucro?",
+    "resposta": "O topo estaria em p = 17,5, que passa do teto. Então p = 12: 7 · 36 − 20 = 232.",
+    "opcoes": [
+     "R$ 232",
+     "R$ 252",
+     "R$ 292,50"
+    ],
+    "certa": "R$ 232"
+   },
    "seuErro": null
   },
   "ancora": "ENEM 2022 q.176 (935 letras): parábola, o mês/preço do máximo e um período permitido",
@@ -1860,7 +2089,7 @@
      "texto": "A parábola corta o eixo horizontal (o eixo x) onde x² − 6x + k = 0 (x² lê-se \"x ao quadrado\", x · x); essas soluções se chamam raízes. O número de raízes depende de D = b² − 4ac (o discriminante, ou Δ), numa equação ax² + bx + c = 0. Aqui a = 1, b = −6, c = k, e D = (−6)² − 4 · 1 · k = 36 − 4k. D > 0: duas raízes diferentes; D = 0: uma só; D < 0: nenhuma."
     },
     {
-     "titulo": "Resolver D > 0",
+     "titulo": "Achando k: os valores que dão duas raízes",
      "texto": "36 − 4k > 0 → 36 > 4k → 36 ÷ 4 > k → 9 > k. Então k < 9, ou seja, k ≤ 8 (para k inteiro)."
     },
     {
@@ -1868,7 +2097,7 @@
      "texto": "Em x² + bx + c = 0 (com a = 1), a soma das raízes é −b e o produto é c (regra pronta). Aqui b = −6, então a soma é −(−6) = 6, e o produto é k. Com k > 0 o produto é positivo, então as raízes têm o mesmo sinal; como a soma é 6, as duas são positivas."
     },
     {
-     "titulo": "Contar",
+     "titulo": "Volta na equação",
      "texto": "k = 1, 2, 3, 4, 5, 6, 7, 8: são 8 valores."
     },
     {
@@ -1902,7 +2131,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Para y = x² − 4x + k, com k inteiro de 1 a 10, em quantos k a parábola corta o eixo em 2 pontos distintos com x positivo?",
+    "resposta": "D = 16 − 4k > 0, então k < 4: k = 1, 2, 3 (soma 4 e produto k são positivos). São 3 valores.",
+    "opcoes": [
+     "3",
+     "4",
+     "10"
+    ],
+    "certa": "3"
+   },
    "seuErro": null
   },
   "ancora": "IME 2024 q.4: soma e produto das raízes",
@@ -1926,6 +2164,20 @@
    "ideia": "Aplique a máquina duas vezes e iguale a 9x + 8 para achar a e b. O sinal de a vem do enunciado (a > 0).",
    "pecas": [],
    "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Função afim",
+        "formula": "f(x) = ax + b"
+       }
+      ]
+     }
+    },
     {
      "titulo": "O que eu tenho",
      "texto": "Primeiro, tire os dados do enunciado.",
@@ -1980,15 +2232,15 @@
      "texto": "Teste com a = 2 e b = 1: f(f(x)) = 4x + 3. O 4 é o a² e multiplica o x; o 3 (a · b + b = 2 + 1) não tem x. Para a igualdade valer com qualquer x, o pedaço com x tem de bater (a² = 9) e o pedaço sem x também (ab + b = 8)."
     },
     {
-     "titulo": "O sinal de a",
+     "titulo": "Achando a: o número que multiplica",
      "texto": "a² = 9: 3 · 3 = 9 e também (−3) · (−3) = 9, então a = 3 ou a = −3. Como a > 0, fica a = 3."
     },
     {
-     "titulo": "Achar b",
+     "titulo": "Achando b: o número que se soma",
      "texto": "3b + b = 8, então 4b = 8 e b = 2."
     },
     {
-     "titulo": "Uma passagem",
+     "titulo": "Volta na equação",
      "texto": "f(5) = 3 · 5 + 2 = 17."
     },
     {
@@ -2018,7 +2270,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "f(x) = ax + b, com a > 0, e f(f(x)) = 4x + 9. Quanto vale f(1)?",
+    "resposta": "a² = 4, a = 2; 2b + b = 9, b = 3. f(1) = 2 · 1 + 3 = 5.",
+    "opcoes": [
+     "−11",
+     "5",
+     "7"
+    ],
+    "certa": "5"
+   },
    "seuErro": null
   },
   "ancora": "Unicamp 2024 q.64: f(g(x)) e g(f(x)) com um coeficiente a achar; aqui f(f(x))",
@@ -2042,6 +2303,20 @@
    "ideia": "Some 3 a todos os números: a regra \"dobra e soma 3\" vira só \"dobra\". Dobrar 10 vezes é fácil; depois tire o 3 de volta.",
    "pecas": [],
    "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Regra do pedido",
+        "formula": "próximo = 2 · anterior + 3"
+       }
+      ]
+     }
+    },
     {
      "titulo": "O que eu tenho",
      "texto": "Primeiro, tire os dados do enunciado.",
@@ -2077,12 +2352,16 @@
      "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "N = 3 · 2¹⁰ − 3",
-      "leitura": "dobra 10 vezes a partir de (x + 3) e depois tira o 3",
+      "formula": "N = Y − 3  e  Y = 3 · 2¹⁰",
+      "leitura": "o pedido é o dobrado menos 3; o dobrado é 3 vezes 2 dez vezes",
       "letras": [
        {
         "letra": "N",
         "oque": "número do pedido 10 posições depois (o que a questão quer)"
+       },
+       {
+        "letra": "Y",
+        "oque": "o número do pedido mais 3, que só dobra"
        }
       ]
      }
@@ -2100,11 +2379,11 @@
      "texto": "x = 0 dá y = 3. Dobrando: 3, 6, 12, 24, 48, 96, 192, 384, 768, 1 536, 3 072 (10 dobras a partir de 3)."
     },
     {
-     "titulo": "Depois de 10 passos",
+     "titulo": "Achando Y: depois de 10 passos",
      "texto": "Dobrar 10 vezes é multiplicar por 2¹⁰ (2 multiplicado 10 vezes): 2, 4, 8, 16, 32, 64, 128, 256, 512, 1 024. Então y = 3 · 1 024 = 3 072, igual à lista."
     },
     {
-     "titulo": "Voltar para x",
+     "titulo": "Volta na equação",
      "texto": "x = y − 3 = 3 072 − 3 = 3 069. Conferindo no começo da fila: 0, 3, 9, 21, 45. 45 + 3 = 48 = 3 · 16."
     },
     {
@@ -2124,7 +2403,7 @@
        ],
        [
         "2. Equação em letras",
-        "N = 3 · 2¹⁰ − 3"
+        "N = Y − 3  e  Y = 3 · 2¹⁰"
        ],
        [
         "3. Uma letra por vez",
@@ -2134,7 +2413,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Regra: o próximo é o dobro do anterior mais 1, começando em 0. Qual é o número 5 posições depois do 0?",
+    "resposta": "0, 1, 3, 7, 15, 31. O 5º depois do 0 é 31.",
+    "opcoes": [
+     "15",
+     "31",
+     "63"
+    ],
+    "certa": "31"
+   },
    "seuErro": null
   },
   "ancora": "Unesp 2025 (PG) e ITA 2025 q.5: sequência que se repete por uma regra",
@@ -2239,7 +2527,7 @@
      }
     },
     {
-     "titulo": "Área do terreno",
+     "titulo": "Achando A: área do gramado",
      "texto": "Retângulo grande: 40 · 30 = 1 200 m². Canto da casa: 15 · 10 = 150 m². 1 200 − 150 = 1 050 m².\nO mesmo desenho, agora com a conta.",
      "visual": {
       "tipo": "diagrama",
@@ -2265,7 +2553,7 @@
      "texto": "6 placas · 1,5 m² = 9 m²."
     },
     {
-     "titulo": "Pacotes",
+     "titulo": "Volta na equação",
      "texto": "1 155 ÷ 9: 9 · 100 = 900, restam 255; 9 · 28 = 252; resta 3. Então 128 pacotes e sobram 3 m²."
     },
     {
@@ -2299,7 +2587,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Terreno de 60 m², com 20% de folga. Cada pacote cobre 5 m². Quantos pacotes?",
+    "resposta": "60 · 1,2 = 72 m². 72 ÷ 5 = 14 e sobram 2 m², então 15 pacotes.",
+    "opcoes": [
+     "12",
+     "14",
+     "15"
+    ],
+    "certa": "15"
+   },
    "seuErro": null
   },
   "ancora": "ENEM 2021 q.152 (1 428 letras) e 2022 q.167: áreas de paredes e piso, escolha por conta",
@@ -2421,11 +2718,11 @@
      "texto": "Catetos são os dois lados que formam o ângulo reto, o \"canto quadrado\" (5 e 12). Circunferência inscrita é a que fica dentro do triângulo, encostando (tangente) nos 3 lados. π é um número fixo, aqui dado como 3."
     },
     {
-     "titulo": "Área do triângulo",
+     "titulo": "Achando T: área do triângulo",
      "texto": "Base · altura ÷ 2 = 5 · 12 ÷ 2 = 30 cm²."
     },
     {
-     "titulo": "O raio do círculo inscrito",
+     "titulo": "Achando r: o raio do círculo",
      "texto": "Ligue o centro do círculo aos 3 cantos (vértices) do triângulo: ele se divide em 3 triângulos, um com cada lado como base (5, 12 e 13), e em cada um a altura é o raio r (o raio chega ao lado formando ângulo reto, como nos quadradinhos). Áreas: 5 · r ÷ 2, 12 · r ÷ 2 e 13 · r ÷ 2. Somando: (5 + 12 + 13) · r ÷ 2 = 15 r. Essa soma é a área do triângulo, 30: 15 r = 30, r = 2 cm. (O perímetro, 5 + 12 + 13, também dá 30: coincidência deste triângulo.)\nAs linhas rosa ligam o centro aos 3 cantos e dividem o triângulo em 3 triângulos: um com cada lado como base. Em cada um, a altura é o raio (tracejado azul).",
      "visual": {
       "tipo": "diagrama",
@@ -2445,7 +2742,7 @@
      "texto": "3 · 2² = 3 · 4 = 12 cm²."
     },
     {
-     "titulo": "O que fica de fora",
+     "titulo": "Volta na equação",
      "texto": "30 − 12 = 18 cm²."
     },
     {
@@ -2475,7 +2772,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Triângulo de lados 3, 4 e 5 com a circunferência inscrita (π = 3). Qual a área do triângulo fora do círculo?",
+    "resposta": "Área 6, semiperímetro 6, r = 6 ÷ 6 = 1. Círculo: 3 · 1² = 3. Fora: 6 − 3 = 3.",
+    "opcoes": [
+     "3",
+     "5",
+     "6"
+    ],
+    "certa": "3"
+   },
    "seuErro": null
   },
   "ancora": "Fuvest (repo) q.77 e Unicamp 2024 q.54: circunferência com a medida certa e a área do círculo",
@@ -2611,7 +2917,7 @@
      }
     },
     {
-     "titulo": "O raio",
+     "titulo": "Achando r: o raio",
      "texto": "A diagonal é a hipotenusa do triângulo retângulo formado por dois lados do retângulo (6 e 8). Pitágoras: o quadrado da hipotenusa é a soma dos quadrados dos lados. 6² + 8² = 36 + 64 = 100, e 10 · 10 = 100, então a diagonal é 10 e o raio é 10 ÷ 2 = 5.\nAgora com os lados 8 e 6 (k = 2), a diagonal de 10 e o raio de 5. O amarelo é a área que a questão pede.",
      "visual": {
       "tipo": "diagrama",
@@ -2625,11 +2931,11 @@
      }
     },
     {
-     "titulo": "As áreas",
+     "titulo": "Achando A: área do retângulo",
      "texto": "Círculo: 3,14 · 5² = 3,14 · 25 = 78,5 (3 · 25 = 75 e 0,14 · 25 = 3,5). Retângulo: 6 · 8 = 48."
     },
     {
-     "titulo": "O que fica de fora",
+     "titulo": "Volta na equação",
      "texto": "78,5 − 48 = 30,5 cm²."
     },
     {
@@ -2659,7 +2965,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Retângulo de 12 por 16 inscrito numa circunferência (π = 3). Qual a área do círculo fora do retângulo?",
+    "resposta": "Diagonal: 12² + 16² = 400, então 20 e r = 10. Círculo: 3 · 100 = 300. Retângulo: 192. Fora: 108.",
+    "opcoes": [
+     "108",
+     "192",
+     "300"
+    ],
+    "certa": "108"
+   },
    "seuErro": null
   },
   "ancora": "IME 2024 q.14: figura inscrita e o raio que se descobre pela geometria",
@@ -2764,11 +3079,11 @@
      }
     },
     {
-     "titulo": "O triângulo do meio",
+     "titulo": "Achando F: área das flores",
      "texto": "Área do triângulo = base · altura ÷ 2. ABP: a base AB é o lado de baixo (12) e a altura é a distância até o lado de cima, onde está P (8). 12 · 8 ÷ 2 = 48 m²."
     },
     {
-     "titulo": "Os das laterais",
+     "titulo": "Achando G: área da grama",
      "texto": "ADP: base DP = 5, altura 8: 5 · 8 ÷ 2 = 20. BCP: base PC = 12 − 5 = 7: 7 · 8 ÷ 2 = 28. Juntos: 20 + 28 = 48 m².\nAs áreas já calculadas, em cada triângulo.",
      "visual": {
       "tipo": "diagrama",
@@ -2790,7 +3105,7 @@
      "texto": "O retângulo tem 12 · 8 = 96 m². O do meio é metade (48) com P em qualquer lugar: se P estivesse a 2 m ou a 10 m de D, a base e a altura de ABP seriam as mesmas (12 e 8). As laterais ficam com a outra metade."
     },
     {
-     "titulo": "O custo",
+     "titulo": "Volta na equação",
      "texto": "48 · 35 = 1 680 e 48 · 20 = 960. Total: 1 680 + 960 = 2 640."
     },
     {
@@ -2820,7 +3135,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Retângulo de 10 m por 6 m. P está no lado de cima. Qual a área do triângulo com base no lado de baixo e ponta em P?",
+    "resposta": "Base 10, altura 6: 10 · 6 ÷ 2 = 30 m², em qualquer posição de P.",
+    "opcoes": [
+     "15 m²",
+     "30 m²",
+     "60 m²"
+    ],
+    "certa": "30 m²"
+   },
    "seuErro": null
   },
   "ancora": "IME 2024 q.8: área do triângulo pela altura que não muda",
@@ -2922,7 +3246,7 @@
      }
     },
     {
-     "titulo": "O suco da garrafa",
+     "titulo": "Achando S: suco da garrafa",
      "texto": "3/4 de 24 = 24 ÷ 4 · 3 = 18 cm de altura de suco. Raio = diâmetro ÷ 2 = 5. Volume do cilindro = π · raio² · altura = π · 25 · 18 = 450π cm³ (25 · 18 = 450). π é um número fixo (cerca de 3,14) que aparece em todo círculo."
     },
     {
@@ -2930,11 +3254,11 @@
      "texto": "Volume do cone = ⅓ · π · raio² · altura = ⅓ · π · 25 · 9. Como 25 · 9 = 225 e 225 ÷ 3 = 75, dá 75π cm³."
     },
     {
-     "titulo": "O copo a 80% da altura",
+     "titulo": "Achando v: suco de um copo",
      "texto": "80% = 80 ÷ 100 = 0,8. O suco forma um cone menor com o mesmo formato do copo (semelhante), 0,8 vez o tamanho em tudo. Volume depende de 3 medidas (comprimento, largura e altura), então fica 0,8 · 0,8 · 0,8: 0,8 · 0,8 = 0,64 e 0,64 · 0,8 = 0,512. Exemplo: um cubo de lado 1 tem volume 1; de lado 2, volume 8 (2 · 2 · 2). Então 75π · 0,512 = 38,4π (75 · 0,512 = 38,4)."
     },
     {
-     "titulo": "Quantos copos",
+     "titulo": "Volta na equação",
      "texto": "O π aparece nos dois e se corta: 450 ÷ 38,4. Tirando a vírgula (multiplicando os dois por 10): 4 500 ÷ 384. 384 · 11 = 4 224 e sobram 276, que é menos que 384. Logo dá 11 e um pouco (≈ 11,7; \"≈\" lê-se \"aproximadamente\")."
     },
     {
@@ -2968,7 +3292,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Sobraram 300π cm³ de suco. Cada copo cônico cheio tem 20π cm³ e é servido até 50% da altura. Quantos copos?",
+    "resposta": "A 50% da altura o volume é (1/2)³ = 1/8 do copo: 2,5π. 300 ÷ 2,5 = 120.",
+    "opcoes": [
+     "15",
+     "60",
+     "120"
+    ],
+    "certa": "120"
+   },
    "seuErro": null
   },
   "ancora": "ENEM 2022 q.169 (631 letras) e q.147: volume de cilindro e razão ao cubo",
@@ -3090,6 +3423,18 @@
      "texto": "É a diagonal, de um canto ao canto oposto. Para ir de um canto ao canto oposto você atravessa a caixa nas 3 medidas ao mesmo tempo; qualquer outro caminho reto atravessa menos."
     },
     {
+     "titulo": "Achando a: um lado do chão",
+     "texto": "a = 6 cm, direto do enunciado."
+    },
+    {
+     "titulo": "Achando b: o outro lado do chão",
+     "texto": "b = 8 cm, direto do enunciado."
+    },
+    {
+     "titulo": "Achando c: a altura",
+     "texto": "c = 24 cm, direto do enunciado."
+    },
+    {
      "titulo": "Diagonal da base",
      "texto": "A base tem lados 6 e 8. A diagonal dela é a hipotenusa do triângulo retângulo formado por esses dois lados. Pitágoras: o quadrado da hipotenusa é a soma dos quadrados dos outros lados. 6² + 8² = 36 + 64 = 100, e √100 = 10 cm.\nA diagonal rosa fica no chão e é a hipotenusa de um triângulo com lados 6 e 8 (o canto do chão é um ângulo reto, então é um triângulo retângulo).",
      "visual": {
@@ -3119,7 +3464,7 @@
      }
     },
     {
-     "titulo": "A raiz de 676",
+     "titulo": "Volta na equação",
      "texto": "Qual número vezes ele mesmo dá 676? 20 · 20 = 400 é pouco e 30 · 30 = 900 é muito, então está entre 20 e 30. Termina em 6, e só 4 · 4 e 6 · 6 terminam em 6: 24 · 24 = 576 (pouco) e 26 · 26 = 676 ✓.\nAgora a diagonal azul tem o seu valor: 26.",
      "visual": {
       "tipo": "diagrama",
@@ -3164,7 +3509,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Caixa de 2 × 3 × 6 cm. Qual o maior comprimento inteiro de vareta que cabe?",
+    "resposta": "Diagonal: 4 + 9 + 36 = 49, e a raiz é 7 cm.",
+    "opcoes": [
+     "7",
+     "9",
+     "11"
+    ],
+    "certa": "7"
+   },
    "seuErro": null
   },
   "ancora": "Fuvest (repo) q.76: sólido com medidas e uma conta de cada vez",
@@ -3185,7 +3539,7 @@
   "nivel": "acima",
   "explicacao": {
    "conferencia": "12 − 4 = 8 cm. C. Erros: A = Mediu a partir do ápice, não da base. B = Achou que o corte fica no meio. D = Tratou 1/27 como razão de áreas (tirou raiz quadrada). E = Usou 1/26 como razão de alturas.",
-   "ideia": "Pirâmide inteira = 27 vezes a menor. O volume vai com o cubo da razão das alturas: a razão é 1/3 e a menor tem 4 cm de altura. A distância pedida é a da base.",
+   "ideia": "A pirâmide inteira é 27 vezes a menor, e o volume vai com o cubo da razão das alturas: a razão é 1/3 e a menor tem 4 cm. A distância pedida é a da base.",
    "pecas": [
     {
      "termo": "Semelhante",
@@ -3258,12 +3612,12 @@
       "leitura": "razão das alturas e distância do corte à base",
       "letras": [
        {
-        "letra": "k",
-        "oque": "razão entre a altura da menor e a da inteira"
-       },
-       {
         "letra": "d",
         "oque": "distância do corte à base (o que a questão quer)"
+       },
+       {
+        "letra": "k",
+        "oque": "razão entre a altura da menor e a da inteira"
        }
       ]
      }
@@ -3281,7 +3635,7 @@
      "texto": "O corte é paralelo à base, então a pirâmide menor tem o mesmo formato da inteira: são semelhantes. A razão das alturas, k, diz quantas vezes a altura da menor cabe na da inteira. O volume depende de 3 medidas (largura, comprimento e altura da pirâmide), e as 3 mudam pela mesma razão, então o volume fica k · k · k = k³. (Exemplo: dobrar tudo, k = 2, dá 8 vezes o volume.)"
     },
     {
-     "titulo": "Achar k",
+     "titulo": "Achando k: a razão das alturas",
      "texto": "k³ = 1/27. Qual número vezes ele mesmo, vezes ele mesmo, dá 1/27? 3 · 3 · 3 = 27, então k = 1/3. Conferindo: multiplicar frações é multiplicar os de cima (1 · 1 · 1 = 1) e os de baixo (3 · 3 · 3 = 27): (1/3) · (1/3) · (1/3) = 1/27."
     },
     {
@@ -3298,7 +3652,7 @@
      }
     },
     {
-     "titulo": "Distância da base",
+     "titulo": "Volta na equação",
      "texto": "12 − 4 = 8 cm.\nE o que sobra da altura de 12 cm, do corte até a base, são os 8 cm.",
      "visual": {
       "tipo": "diagrama",
@@ -3313,7 +3667,7 @@
     },
     {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: Pirâmide inteira = 27 vezes a menor.",
+     "texto": "Pista: A pirâmide inteira é 27 vezes a menor, e o volume vai com o cubo da razão das alturas: a razão é 1/3 e a menor tem 4 cm.",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -3338,7 +3692,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Pirâmide de 15 cm de altura, cortada por plano paralelo à base. O tronco tem 7 vezes o volume da menor. A que distância da base passa o corte?",
+    "resposta": "Inteira = 8 vezes a menor, k³ = 1/8, k = 1/2. Menor: 7,5 cm. Da base: 15 − 7,5 = 7,5 cm.",
+    "opcoes": [
+     "5 cm",
+     "7,5 cm",
+     "10 cm"
+    ],
+    "certa": "7,5 cm"
+   },
    "seuErro": null
   },
   "ancora": "ENEM 2022 q.147 (volume vai com o cubo) e aulas fuv (tetraedro cortado)",
@@ -3443,11 +3806,11 @@
      "texto": "O raio das bolas é r, o mesmo da lata. A altura da lata é a de 3 bolas empilhadas: 3 · 2r = 6r."
     },
     {
-     "titulo": "A lata",
+     "titulo": "Achando C: volume da lata",
      "texto": "Volume do cilindro = π · r² · altura = π · r² · 6r = 6πr³ (r² · r = r · r · r = r³)."
     },
     {
-     "titulo": "As 3 bolas",
+     "titulo": "Achando B: volume das 3 bolas",
      "texto": "Volume da esfera = (4/3) · π · r³. Três bolas: 3 · (4/3) · πr³ = (12/3) · πr³ = 4πr³."
     },
     {
@@ -3465,7 +3828,7 @@
      }
     },
     {
-     "titulo": "O vazio",
+     "titulo": "Volta na equação",
      "texto": "Sobra 1 − 2/3 = 3/3 − 2/3 = 1/3 da lata. 1,5 L = 1 500 mL, e 1 500 ÷ 3 = 500 mL.\nO azul é o vazio. No desenho de lado a área parece outra, mas a conta é de volume.",
      "visual": {
       "tipo": "diagrama",
@@ -3508,7 +3871,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Lata de 1,2 L com 2 bolas empilhadas, encostando nas paredes e nas tampas. Quantos mL ficam vazios?",
+    "resposta": "Lata: 4πr³. Bolas: 2 · (4/3)πr³ = (8/3)πr³, que é 2/3 da lata. Vazio: 1/3 de 1 200 = 400 mL.",
+    "opcoes": [
+     "400 mL",
+     "600 mL",
+     "800 mL"
+    ],
+    "certa": "400 mL"
+   },
    "seuErro": null
   },
   "ancora": "ENEM 2022 q.169: volume de cilindro contra volume de esferas",
@@ -3621,7 +3993,7 @@
      "texto": "A ficha toca um rejunte quando o centro está a 3 cm ou menos dele. Só o centro importa. Como todo ponto do ladrilho tem a mesma chance, a probabilidade é a área da região ÷ a área do ladrilho (10 · 10 = 100 cm²)."
     },
     {
-     "titulo": "Não toca nenhum",
+     "titulo": "Achando N: área que não toca nenhum",
      "texto": "O centro fica no quadrado de dentro: 10 − 3 − 3 = 4 cm de lado, área 16 (16 de 100)."
     },
     {
@@ -3629,7 +4001,7 @@
      "texto": "O centro fica a menos de 3 cm de duas bordas vizinhas: um canto de 3 · 3 = 9, e são 4 cantos: 36. (Dois rejuntes opostos não dá: 3 + 3 = 6 < 10.)"
     },
     {
-     "titulo": "Toca exatamente um",
+     "titulo": "Achando E: área que toca exatamente um",
      "texto": "O que sobra: 100 − 16 − 36 = 48 (4 faixas de 3 · 4 = 12). Pela tabela, tocar exatamente 1 rejunte vale 4 pontos.\nO ladrilho dividido pelas regiões da conta: 16 + 4 · 12 + 4 · 9 = 100.",
      "visual": {
       "tipo": "diagrama",
@@ -3646,7 +4018,7 @@
      }
     },
     {
-     "titulo": "Condicional",
+     "titulo": "Volta na equação",
      "texto": "Condicional é a chance de algo sabendo que outra coisa já aconteceu. Sabendo que tocou pelo menos um, o conjunto possível encolhe para 100 − 16 = 84. Exatamente 4 pontos = exatamente 1 rejunte = 48. Chance: 48/84 = 4/7 (dividindo em cima e embaixo por 12)."
     },
     {
@@ -3676,7 +4048,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "Ladrilho de 10 cm e ficha de raio 2 cm. Qual a chance de a ficha não tocar nenhum rejunte?",
+    "resposta": "O centro fica no quadrado de lado 10 − 2 − 2 = 6: área 36 de 100, ou 36%.",
+    "opcoes": [
+     "36%",
+     "60%",
+     "64%"
+    ],
+    "certa": "36%"
+   },
    "seuErro": null
   },
   "ancora": "IME 2024 q.8: probabilidade por área",
@@ -3789,11 +4170,11 @@
      "texto": "A tabela soma 12 + 10 + 8 + 6 + 4 + 3 = 43. Faltam 45 − 43 = 2 empates. Nem precisa saber quem empatou."
     },
     {
-     "titulo": "Nenhum empate nos 2 sorteados",
+     "titulo": "Achando N: chance de nenhum empate",
      "texto": "Os 2 jogos saem dos 15 − 2 = 13 que não empataram. Escolher 2 entre 13: o 1º jogo tem 13 jeitos, o 2º tem 12, e a ordem não importa (cada par foi contado 2 vezes), então 13 · 12 ÷ 2 = 78 (escreve-se C(13,2)). Entre os 15 são 15 · 14 ÷ 2 = 105. Chance = 78/105 = 26/35 (dividindo em cima e embaixo por 3)."
     },
     {
-     "titulo": "Pelo menos um",
+     "titulo": "Volta na equação",
      "texto": "1 − 26/35 = 35/35 − 26/35 = 9/35. (\"Pelo menos um\" é tudo menos \"nenhum\".)"
     },
     {
@@ -3823,7 +4204,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "4 times jogam todos contra todos (6 jogos) e houve 1 empate. Sorteando 2 jogos distintos, qual a chance de pelo menos um ser o empate?",
+    "resposta": "Nenhum empate: C(5,2) ÷ C(6,2) = 10/15 = 2/3. Pelo menos um: 1 − 2/3 = 1/3.",
+    "opcoes": [
+     "1/6",
+     "1/3",
+     "2/3"
+    ],
+    "certa": "1/3"
+   },
    "seuErro": null
   },
   "ancora": "Unicamp 2024 q.60 (combinatória com condição escondida no texto)",
@@ -3915,11 +4305,15 @@
      "texto": "Doentes: 90% de 600 = 540. Sadias: 10% de 9 400 = 940."
     },
     {
-     "titulo": "2º exame positivo",
-     "texto": "Só repete o exame quem deu positivo. Doentes: 90% de 540 = 486. Sadias: 10% de 940 = 94."
+     "titulo": "Achando d: doentes com 2 positivos",
+     "texto": "Só repete o exame quem deu positivo. Doentes: 90% de 540 = 486."
     },
     {
-     "titulo": "Quem tem a doença",
+     "titulo": "Achando s: sadias com 2 positivos",
+     "texto": "Sadias: 10% de 940 = 94."
+    },
+    {
+     "titulo": "Volta na equação",
      "texto": "486 ÷ (486 + 94) = 486 ÷ 580 ≈ 0,84 (580 · 0,84 = 487,2, quase 486). Para virar porcentagem, multiplique por 100: 0,84 = 84%."
     },
     {
@@ -3949,7 +4343,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "1 000 pessoas, 10% doentes. O exame dá positivo em 90% dos doentes e em 10% dos sadios. Entre os positivos, qual a porcentagem de doentes?",
+    "resposta": "Doentes positivos: 90% de 100 = 90. Sadios positivos: 10% de 900 = 90. 90 ÷ 180 = 50%.",
+    "opcoes": [
+     "10%",
+     "50%",
+     "90%"
+    ],
+    "certa": "50%"
+   },
    "seuErro": null
   },
   "ancora": "Unicamp 2024 q.61 (pedrinhas) e ENEM 2021 q.177: chance condicional e eventos independentes",
@@ -4058,11 +4461,11 @@
      "texto": "Olhe a última lâmpada. Apagada: as 5 de antes podem ser qualquer painel aprovado de 5. Acesa: a anterior tem de ser apagada, e as 4 de antes são um painel aprovado de 4. Chame de a(n) (\"a de n\") o número de painéis aprovados com n lâmpadas. Então a(6) = a(5) + a(4) e, em geral, a(n) = a(n−1) + a(n−2) (lê-se: \"a de n é a de n menos 1 mais a de n menos 2\")."
     },
     {
-     "titulo": "Montar a lista",
+     "titulo": "Achando T: painéis aprovados",
      "texto": "Com 1 lâmpada: acesa ou apagada, a(1) = 2. Com 2: apagada-apagada, apagada-acesa e acesa-apagada (acesa-acesa não pode): a(2) = 3. Daí: a(3) = 3 + 2 = 5, a(4) = 5 + 3 = 8, a(5) = 8 + 5 = 13, a(6) = 13 + 8 = 21 painéis aprovados."
     },
     {
-     "titulo": "Com exatamente 3 acesas",
+     "titulo": "Achando E: painéis com 3 acesas",
      "texto": "Ponha as 3 apagadas em fila: ficam 4 vãos (antes da 1ª, 2 entre elas, depois da 3ª). Cada acesa vai num vão diferente, e assim nenhuma fica ao lado de outra. Escolher 3 vãos entre 4 é o mesmo que escolher qual vão fica vazio: 4 jeitos (escreve-se C(4,3) = 4).\nAs 3 apagadas em fila e os 4 vãos numerados.",
      "visual": {
       "tipo": "diagrama",
@@ -4076,7 +4479,7 @@
      }
     },
     {
-     "titulo": "Probabilidade",
+     "titulo": "Volta na equação",
      "texto": "4 painéis com 3 acesas em 21 aprovados: 4 ÷ 21 = 4/21. A chance 1/2 de cada lâmpada não muda a conta: todo painel é igualmente provável, só precisa contar."
     },
     {
@@ -4106,7 +4509,16 @@
      }
     }
    ],
-   "checagem": null,
+   "checagem": {
+    "pergunta": "4 lâmpadas em fila, nenhuma acesa ao lado de outra acesa. Quantos painéis aprovados existem?",
+    "resposta": "a(1) = 2, a(2) = 3, a(3) = 5 e a(4) = 3 + 5 = 8 painéis.",
+    "opcoes": [
+     "5",
+     "8",
+     "16"
+    ],
+    "certa": "8"
+   },
    "seuErro": null
   },
   "ancora": "ITA 2025 q.5 e Unesp 2025 q.85: sequência por recorrência e contagem",
