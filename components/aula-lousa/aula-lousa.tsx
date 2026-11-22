@@ -3,6 +3,9 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
 import './lousa.css';
 import { ALTURA, LARGURA, type AulaLousa as Aula, type Cena, type Cor, type Desenho, type Fala } from '@/lib/aula-lousa/tipos';
+import { temFracao } from '@/lib/aula-lousa/fracoes';
+import { acomodarFracoes } from '@/lib/aula-lousa/espaco';
+import { TextoComFracoes } from './texto-com-fracoes';
 
 const COR: Record<Cor, string> = {
   tinta: '#1b2430', azul: '#1f6fd1', vermelho: '#d63a2f', verde: '#1f9d55',
@@ -18,6 +21,7 @@ function Traco({ d }: { d: Desenho }) {
   const cor = COR[('cor' in d && d.cor) || 'tinta'];
   switch (d.k) {
     case 'tx':
+      if (temFracao(d.s)) return <TextoComFracoes x={d.x} y={d.y} s={d.s} cor={cor} tam={d.tam} ancora={d.ancora} estilo={tempo(d.t)} />;
       return <text className="tx" x={d.x} y={d.y} fill={cor} fontSize={d.tam} textAnchor={d.ancora} style={tempo(d.t)}>{d.s}</text>;
     case 'hl':
       return <rect className="wipe" x={d.x} y={d.y} width={d.w} height={d.h} fill={cor} fillOpacity={0.85} style={tempo(d.t)} />;
@@ -119,6 +123,13 @@ export function AulaLousa({ aula, onFechar }: { aula: Aula; onFechar?: () => voi
     return () => { if (aviso.current) clearTimeout(aviso.current); };
   }, [i, rodada, marcada, fimDaFala]);
 
+  // Lousa aberta: o fundo animado do site espera (globals.css). Medido no build com CPU 4x mais lenta:
+  // 1.441 ms de tarefa em 6 s caem para 532 ms; sem isso, o mundo pixel atrás gastava 2/3 do tempo.
+  useEffect(() => {
+    document.documentElement.setAttribute('data-lousa-aberta', 'sim');
+    return () => document.documentElement.removeAttribute('data-lousa-aberta');
+  }, []);
+
   const vai = useCallback((n: number) => { setI(Math.min(total - 1, Math.max(0, n))); setPronto(false); }, [total]);
   const proximo = () => {
     if (i < total - 1) return vai(i + 1);
@@ -145,7 +156,7 @@ export function AulaLousa({ aula, onFechar }: { aula: Aula; onFechar?: () => voi
       <div className="lousa-quadro" key={`${i}-${rodada}`}>
         {cena.tipo === 'lousa' && (
           <svg viewBox={`0 0 ${LARGURA} ${ALTURA}`} preserveAspectRatio="xMidYMid meet" role="img" aria-label={descricao(cena.desenho)}>
-            {cena.desenho.map((d, k) => <Traco key={k} d={d} />)}
+            {acomodarFracoes(cena.desenho).map((d, k) => <Traco key={k} d={d} />)}
           </svg>
         )}
         {cena.tipo === 'papel' && (

@@ -16,6 +16,10 @@
   box-shadow: 0 -6px 0 0 var(--l-madeira), 0 6px 0 0 var(--l-madeira), -6px 0 0 0 var(--l-madeira), 6px 0 0 0 var(--l-madeira); }
 .lousa-quadro svg { width: 100%; height: 100%; display: block; }
 .lousa-quadro svg text { font-family: var(--l-mao); font-weight: 700; }
+/* Fração em pé (texto com a/b vira cima, traço, baixo): ver texto-com-fracoes.tsx */
+.lousa .fo-linha { display: flex; align-items: center; height: 100%; white-space: pre; line-height: 1; font-family: var(--l-mao); font-weight: 700; }
+.lousa .frac { display: inline-flex; flex-direction: column; align-items: center; margin: 0 .1em; font-size: .88em; line-height: 1.08; }
+.lousa .frac > i { display: block; align-self: stretch; border-top: .1em solid currentColor; margin: .06em 0; border-radius: 1em; }
 
 .lousa .tr { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: lousa-desenha var(--d, .5s) ease-out var(--t, 0s) forwards; }
 @keyframes lousa-desenha { to { stroke-dashoffset: 0; } }
