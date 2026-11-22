@@ -61,8 +61,8 @@ svg { max-width: 100%; height: auto; align-self: center; }
 </main>
 <script>
 const Q = [
-{ t: 'A ficha e o ladrilho', tags: ['Geometria plana + probabilidade', 'Degraus 6 + 8', 'Estilo principal: ENEM (com toques dos outros 3)'],
-  enun: 'Numa feira, o piso é de ladrilhos quadrados de 10 cm de lado, separados por rejuntes. No jogo da calçada, o participante lança uma ficha circular de 3 cm de raio, e os pontos dependem de quantos rejuntes do ladrilho a ficha toca, como mostra a tabela. Suponha que o centro da ficha caia sobre um ladrilho, em um ponto escolhido ao acaso, e considere só os 4 rejuntes desse ladrilho. Sabendo que a ficha tocou pelo menos um rejunte, a probabilidade de que o participante tenha feito exatamente 4 pontos é:',
+{ t: 'A ficha e o ladrilho', tags: ['Geometria plana + probabilidade', 'Degraus 6 + 8', 'Estilo principal: ENEM (com toques dos outros 3)', 'Âncora real: IME 2024 q.8: probabilidade por área'],
+  enun: 'Numa festa junina de bairro, o piso da quadra é de ladrilhos quadrados de 10 cm de lado, separados por rejuntes finos. Na brincadeira da calçada, o participante lança uma ficha circular de 3 cm de raio, e os pontos dependem de quantos rejuntes do ladrilho a ficha toca, como mostra a tabela. A organização garante que a ficha sempre cai com o centro dentro de um ladrilho, em qualquer ponto com a mesma chance, e que só os 4 rejuntes desse ladrilho importam (os dos ladrilhos vizinhos ficam longe demais). O prêmio do dia é uma cesta que custa R$ 80, e a ficha custa R$ 2, mas esses valores não entram na conta. Sabendo que a ficha tocou pelo menos um rejunte, a probabilidade de que o participante tenha feito exatamente 4 pontos é:',
   tabela: [['Rejuntes tocados', 'Pontos'], ['0', '10'], ['1', '4'], ['2', '1']], fig: 'ladrilho',
   alts: ['12/25', '3/7', '9/25', '4/7', '4/21'], certa: 3,
   erros: { 0: 'Esqueceu a condição: 48 em 100, sem tirar quem não tocou nada.', 1: 'Contou só os cantos (36/84): são os que fazem 1 ponto.', 2: 'Cantos sobre o ladrilho todo (36/100), sem condição.', 4: 'Dividiu os que não tocam (16) pelos que tocam (84).' },
@@ -73,7 +73,7 @@ const Q = [
     ['Toca exatamente um', 'O que sobra: 100 − 16 − 36 = 48 (4 faixas de 3 × 4 = 12).'],
     ['Condicional', 'Tocou pelo menos um: 100 − 16 = 84. Exatamente 4 pontos: 48/84 = 4/7.']
   ] },
-{ t: 'Campeonato do bairro', tags: ['Contagem + equação + probabilidade', 'Degraus 4 + 1 + 8', 'Estilo principal: Harvard (com toques dos outros 3)'],
+{ t: 'Campeonato do bairro', tags: ['Contagem + equação + probabilidade', 'Degraus 4 + 1 + 8', 'Estilo principal: Harvard (com toques dos outros 3)', 'Âncora real: Unicamp 2024 q.60 (combinatória com condição escondida no texto)'],
   enun: 'Seis times disputaram um campeonato de bairro em turno único: todos contra todos, uma vez. Vitória vale 3 pontos; empate vale 1 ponto para cada time; derrota, nenhum. A tabela mostra a pontuação final. O jornal não publicou os resultados dos jogos. Dois jogos distintos são sorteados ao acaso entre todos os do campeonato. A probabilidade de pelo menos um deles ter terminado empatado é:',
   tabela: [['Time', 'Pontos'], ['Tigres', '12'], ['Raio', '10'], ['Pelé', '8'], ['Unidos', '6'], ['Estrela', '4'], ['Garra', '3']],
   alts: ['1/105', '2/15', '9/35', '4/15', '26/35'], certa: 2,
@@ -85,7 +85,7 @@ const Q = [
     ['Nenhum empate nos 2 sorteados', 'Os 2 jogos saem dos 13 que não empataram: C(13,2) / C(15,2) = 78/105 = 26/35.'],
     ['Pelo menos um', '1 − 26/35 = 9/35.']
   ] },
-{ t: 'O exame repetido', tags: ['Porcentagem + tabela + probabilidade', 'Degraus 1 + 3 + 8', 'Estilo principal: Fuvest (com toques dos outros 3)'],
+{ t: 'O exame repetido', tags: ['Porcentagem + tabela + probabilidade', 'Degraus 1 + 3 + 8', 'Estilo principal: Fuvest (com toques dos outros 3)', 'Âncora real: Unicamp 2024 q.61 (pedrinhas) e ENEM 2021 q.177: chance condicional e eventos independentes'],
   enun: 'Uma clínica aplicou um exame em 10 000 pessoas, divididas por idade como mostra a tabela. O exame dá positivo em 90% das pessoas doentes e, por engano, em 10% das sadias. Quem dá positivo repete o exame, e o resultado da repetição não depende do primeiro: vale a mesma taxa de acerto e de engano. Entre as pessoas que deram positivo nos dois exames, a porcentagem aproximada das que realmente têm a doença é:',
   tabela: [['Faixa', 'Pessoas', 'Com a doença'], ['Menos de 40 anos', '5 000', '2%'], ['40 anos ou mais', '5 000', '10%']],
   alts: ['84%', '36%', '81%', '90%', '94%'], certa: 0,
@@ -96,7 +96,7 @@ const Q = [
     ['2º exame positivo', 'Doentes: 90% de 540 = 486. Sadias: 10% de 940 = 94.'],
     ['Quem tem a doença', '486 ÷ (486 + 94) = 486/580 ≈ 0,84, ou 84%.']
   ] },
-{ t: 'Painel de lâmpadas', tags: ['Contagem + sequência + probabilidade', 'Degraus 4 + 1 + 8', 'Estilo principal: ITA (com toques dos outros 3)'],
+{ t: 'Painel de lâmpadas', tags: ['Contagem + sequência + probabilidade', 'Degraus 4 + 1 + 8', 'Estilo principal: ITA (com toques dos outros 3)', 'Âncora real: ITA 2025 q.5 e Unesp 2025 q.85: sequência por recorrência e contagem'],
   enun: 'Um painel tem 6 lâmpadas em fila. No teste de fábrica, cada lâmpada fica acesa ou apagada ao acaso, com chance 1/2 e sem depender das outras. Por segurança, a máquina só aprova painéis que não têm duas lâmpadas acesas lado a lado, como o da figura. Entre os painéis aprovados, a probabilidade de que tenham exatamente 3 lâmpadas acesas é:',
   fig: 'lampadas',
   alts: ['1/16', '4/13', '5/16', '1/2', '4/21'], certa: 4,
@@ -110,12 +110,15 @@ const Q = [
   ] }
 ];
 const FIG = {
-ladrilho: `<svg viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Ladrilho de 10 cm com a ficha de 3 cm de raio, tocando o rejunte de baixo">
-<rect x="20" y="20" width="200" height="200" fill="var(--bg)" stroke="var(--line)" stroke-width="5"/>
-<circle cx="150" cy="180" r="60" fill="var(--accent)" fill-opacity=".55" stroke="var(--line)" stroke-width="3"/>
-<circle cx="150" cy="180" r="4" fill="var(--line)"/>
-<g stroke="var(--line)" stroke-width="2" fill="none"><path d="M5 20v200M5 20h5M5 220h5"/></g>
-<g fill="var(--fg)" font-family="Nunito,sans-serif" font-size="13" font-weight="800" text-anchor="middle"><text x="120" y="12">10 cm</text><text x="150" y="168">raio 3 cm</text><text x="120" y="236">rejunte</text></g></svg>`,
+ladrilho: `<svg viewBox="0 0 270 300" width="270" height="300" role="img" aria-label="Ladrilho de 10 cm com uma ficha circular de 3 cm de raio, centro a 2 cm do rejunte de baixo, passando por cima dele">
+<rect x="40" y="20" width="200" height="200" fill="var(--bg)" stroke="var(--line)" stroke-width="4"/>
+<rect x="40" y="226" width="200" height="60" fill="var(--bg)" fill-opacity=".5" stroke="var(--line)" stroke-width="2" stroke-dasharray="6 5"/>
+<circle cx="160" cy="180" r="60" fill="var(--accent)" fill-opacity=".55" stroke="var(--line)" stroke-width="3"/>
+<path d="M160 180H220" stroke="var(--line)" stroke-width="2.5"/>
+<path d="M160 180V220" stroke="var(--line)" stroke-width="2.5" stroke-dasharray="4 4"/>
+<circle cx="160" cy="180" r="4" fill="var(--line)"/>
+<path d="M22 20v200M16 20h12M16 220h12" stroke="var(--line)" stroke-width="2" fill="none"/>
+<g fill="var(--fg)" font-family="Nunito,sans-serif" font-size="13" font-weight="800" text-anchor="middle"><text x="22" y="124" transform="rotate(-90 22 124)" dy="-8">10 cm</text><text x="192" y="172">3 cm</text><text x="176" y="206" text-anchor="start">2 cm</text><text x="66" y="262" fill-opacity=".8">rejunte</text></g></svg>`,
 lampadas: `<svg viewBox="0 0 340 110" width="340" height="110" role="img" aria-label="Painel aprovado com 6 lâmpadas: acesa, apagada, acesa, apagada, apagada, acesa">
 <rect x="4" y="8" width="332" height="70" fill="var(--bg)" stroke="var(--line)" stroke-width="4"/>
 <g stroke="var(--line)" stroke-width="3">

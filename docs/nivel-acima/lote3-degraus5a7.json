@@ -6,9 +6,10 @@
   "tags": [
    "Função afim + quadrática + gasto fixo",
    "Degraus 5 + 4 + 1",
-   "Estilo principal: ENEM (com toques dos outros 3)"
+   "Estilo principal: ENEM (com toques dos outros 3)",
+   "Âncora real: ENEM 2022 q.176 (935 letras): parábola, o mês/preço do máximo e um período permitido"
   ],
-  "enun": "Uma confeitaria anotou, em três semanas, o preço do bolo e quantos bolos vendeu por semana. A relação entre o preço e a quantidade vendida segue uma reta. Cada bolo custa R$ 10 para ser produzido, e há um gasto fixo de R$ 300 por semana com o aluguel do forno. A prefeitura tabelou o preço de venda: ele não pode passar de R$ 25. Com o preço que dá o maior lucro semanal permitido, esse lucro é:",
+  "enun": "Uma confeitaria de bairro quer descobrir o preço ideal do seu bolo de cenoura. Durante três semanas seguidas, o dono mudou o preço e anotou quantos bolos vendeu por semana, como mostra a tabela, e percebeu que a quantidade vendida varia com o preço seguindo uma reta. Cada bolo custa R$ 10 para ser produzido (ingredientes e embalagem), e há um gasto fixo de R$ 300 por semana com o aluguel do forno e a conta de luz. O lucro semanal é o que sobra da venda depois de descontar todos os custos. Por causa de um tabelamento da prefeitura para produtos da cesta básica local, o preço de venda do bolo não pode passar de R$ 25. Escolhendo o preço que dá o maior lucro semanal permitido, esse lucro, em reais, será de:",
   "tabela": [
    [
     "Preço do bolo (R$)",
@@ -62,7 +63,8 @@
     "A conta",
     "q = 200 − 100 = 100 bolos. Lucro = 15 · 100 − 300 = 1 200."
    ]
-  ]
+  ],
+  "ancora": "ENEM 2022 q.176 (935 letras): parábola, o mês/preço do máximo e um período permitido"
  },
  {
   "g": "Degrau 5",
@@ -71,9 +73,10 @@
   "tags": [
    "Função quadrática: soma e produto",
    "Degraus 5 + 4",
-   "Estilo principal: Fuvest (com toques dos outros 3)"
+   "Estilo principal: Fuvest (com toques dos outros 3)",
+   "Âncora real: IME 2024 q.4: soma e produto das raízes"
   ],
-  "enun": "Para cada número inteiro k, com 1 ≤ k ≤ 20, considere a parábola y = x² − 6x + k. Em quantos valores de k a parábola corta o eixo horizontal em dois pontos distintos, ambos à direita da origem (isto é, com abscissa positiva)?",
+  "enun": "Para cada número inteiro k, com 1 ≤ k ≤ 20, considere a parábola y = x² − 6x + k, desenhada no plano cartesiano. Os pontos em que a parábola corta o eixo horizontal são as raízes da equação x² − 6x + k = 0. Em quantos valores de k a parábola corta o eixo horizontal em dois pontos distintos, ambos à direita da origem, isto é, com abscissa positiva?",
   "alts": [
    "2",
    "7",
@@ -105,7 +108,8 @@
     "Os que enganam",
     "k = 9 dá uma raiz só (x = 3, dupla). E as raízes não precisam ser inteiras: só k = 5 e k = 8 têm raízes inteiras."
    ]
-  ]
+  ],
+  "ancora": "IME 2024 q.4: soma e produto das raízes"
  },
  {
   "g": "Degrau 5",
@@ -114,7 +118,8 @@
   "tags": [
    "Função composta + sistema",
    "Degraus 5 + 4",
-   "Estilo principal: ITA (com toques dos outros 3)"
+   "Estilo principal: ITA (com toques dos outros 3)",
+   "Âncora real: Unicamp 2024 q.64: f(g(x)) e g(f(x)) com um coeficiente a achar; aqui f(f(x))"
   ],
   "enun": "Uma máquina de moedas transforma um número x em ax + b, com a e b números reais e a > 0. Passando duas vezes pela máquina, qualquer número x vira 9x + 8. Qual é o resultado de uma única passagem do número 5 pela máquina?",
   "alts": [
@@ -152,7 +157,8 @@
     "Uma passagem",
     "f(5) = 3 · 5 + 2 = 17."
    ]
-  ]
+  ],
+  "ancora": "Unicamp 2024 q.64: f(g(x)) e g(f(x)) com um coeficiente a achar; aqui f(f(x))"
  },
  {
   "g": "Degrau 5",
@@ -161,7 +167,8 @@
   "tags": [
    "Função afim repetida + aritmética",
    "Degraus 5 + 1",
-   "Estilo principal: Harvard (com toques dos outros 3)"
+   "Estilo principal: Harvard (com toques dos outros 3)",
+   "Âncora real: Unesp 2025 (PG) e ITA 2025 q.5: sequência que se repete por uma regra"
   ],
   "enun": "Um aplicativo de fila numera os pedidos assim: o primeiro pedido do dia recebe o número 0. Cada novo pedido recebe o número do anterior multiplicado por 2 e somado com 3 (assim, depois do 0 vem o 3, depois o 9, depois o 21). Qual é o número do pedido que vem 10 posições depois do 0?",
   "tabela": [
@@ -215,7 +222,8 @@
     "Voltar para x",
     "x = 3 072 − 3 = 3 069."
    ]
-  ]
+  ],
+  "ancora": "Unesp 2025 (PG) e ITA 2025 q.5: sequência que se repete por uma regra"
  },
  {
   "g": "Degrau 6",
@@ -224,9 +232,10 @@
   "tags": [
    "Área por subtração + porcentagem + embalagem",
    "Degraus 6 + 2 + 1",
-   "Estilo principal: ENEM (com toques dos outros 3)"
+   "Estilo principal: ENEM (com toques dos outros 3)",
+   "Âncora real: ENEM 2021 q.152 (1 428 letras) e 2022 q.167: áreas de paredes e piso, escolha por conta"
   ],
-  "enun": "Um terreno tem formato de L: é um retângulo de 40 m por 30 m do qual foi retirado, em um dos cantos, um retângulo de 15 m por 10 m, onde fica a casa. Todo o terreno restante receberá grama em placas. O fornecedor vende pacotes com 6 placas, e cada placa cobre 1,5 m². Como sempre quebram placas, o engenheiro pede 10% de área a mais do que a do terreno. Quantos pacotes ele deve comprar?",
+  "enun": "Um sítio de lazer tem um gramado em formato de L: ele é um retângulo de 40 m por 30 m do qual foi retirado, em um dos cantos, um retângulo de 15 m por 10 m, onde fica a casa do caseiro. Todo o terreno que sobrou será coberto com grama em placas. O fornecedor vende a grama em pacotes com 6 placas, e cada placa cobre 1,5 m². Como sempre quebram placas no transporte e no corte das bordas, o engenheiro pediu que o orçamento considere 10% de área a mais do que a área do gramado. Cada pacote custa R$ 54, mas o desconto de 5% para compras acima de 100 pacotes só vale no pagamento à vista, e o cliente vai pagar a prazo. Quantos pacotes devem ser comprados?",
   "tabela": [
    [
     "Dado",
@@ -288,7 +297,8 @@
     "Arredondar",
     "O resto de 0,33 pacote ainda precisa ser coberto: 129 pacotes."
    ]
-  ]
+  ],
+  "ancora": "ENEM 2021 q.152 (1 428 letras) e 2022 q.167: áreas de paredes e piso, escolha por conta"
  },
  {
   "g": "Degrau 6",
@@ -297,7 +307,8 @@
   "tags": [
    "Triângulo retângulo + círculo inscrito",
    "Degraus 6 + 2",
-   "Estilo principal: Fuvest (com toques dos outros 3)"
+   "Estilo principal: Fuvest (com toques dos outros 3)",
+   "Âncora real: Fuvest (repo) q.77 e Unicamp 2024 q.54: circunferência com a medida certa e a área do círculo"
   ],
   "enun": "Um triângulo retângulo tem lados de 5 cm, 12 cm e 13 cm. Dentro dele, tangente aos três lados, está desenhada uma circunferência. Use π = 3. A área, em cm², da parte do triângulo que fica fora da circunferência é:",
   "alts": [
@@ -331,7 +342,8 @@
     "O que fica de fora",
     "30 − 12 = 18 cm²."
    ]
-  ]
+  ],
+  "ancora": "Fuvest (repo) q.77 e Unicamp 2024 q.54: circunferência com a medida certa e a área do círculo"
  },
  {
   "g": "Degrau 6",
@@ -340,7 +352,8 @@
   "tags": [
    "Retângulo inscrito + razão + equação",
    "Degraus 6 + 4",
-   "Estilo principal: ITA (com toques dos outros 3)"
+   "Estilo principal: ITA (com toques dos outros 3)",
+   "Âncora real: IME 2024 q.14: figura inscrita e o raio que se descobre pela geometria"
   ],
   "enun": "Um retângulo tem lados na razão 3 : 4 e perímetro 28 cm. Ele está inscrito numa circunferência, isto é, os quatro vértices estão sobre ela. Use π = 3,14. A área, em cm², da região do círculo que fica fora do retângulo é:",
   "alts": [
@@ -378,7 +391,8 @@
     "O que fica de fora",
     "78,5 − 48 = 30,5 cm²."
    ]
-  ]
+  ],
+  "ancora": "IME 2024 q.14: figura inscrita e o raio que se descobre pela geometria"
  },
  {
   "g": "Degrau 6",
@@ -387,7 +401,8 @@
   "tags": [
    "Áreas de triângulos + custo",
    "Degraus 6 + 1",
-   "Estilo principal: Harvard (com toques dos outros 3)"
+   "Estilo principal: Harvard (com toques dos outros 3)",
+   "Âncora real: IME 2024 q.8: área do triângulo pela altura que não muda"
   ],
   "enun": "Um canteiro retangular tem 12 m de largura (lado AB, embaixo) e 8 m de altura. O ponto P está sobre o lado de cima, a 5 m do vértice D (o de cima, à esquerda). Os segmentos PA e PB dividem o canteiro em três triângulos: o do meio, ABP, receberá flores a R$ 35 por m²; os das laterais, ADP e BCP, serão gramados a R$ 20 por m². O custo total do plantio, em reais, é:",
   "alts": [
@@ -421,7 +436,8 @@
     "O custo",
     "48 · 35 + 48 · 20 = 1 680 + 960 = 2 640."
    ]
-  ]
+  ],
+  "ancora": "IME 2024 q.8: área do triângulo pela altura que não muda"
  },
  {
   "g": "Degrau 7",
@@ -430,9 +446,10 @@
   "tags": [
    "Cilindro + cone + semelhança",
    "Degraus 7 + 6 + 2",
-   "Estilo principal: ENEM (com toques dos outros 3)"
+   "Estilo principal: ENEM (com toques dos outros 3)",
+   "Âncora real: ENEM 2022 q.169 (631 letras) e q.147: volume de cilindro e razão ao cubo"
   ],
-  "enun": "Uma garrafa cilíndrica tem 10 cm de diâmetro interno e 24 cm de altura. Ela está com suco até 3/4 da altura. O suco será servido em copos em forma de cone, com 10 cm de diâmetro na boca e 9 cm de altura. Cada copo é servido só até 80% da altura (e não até a borda). Quantos copos é possível encher completamente desse jeito?",
+  "enun": "Numa lanchonete, o suco de laranja é preparado em garrafas de vidro cilíndricas que têm 10 cm de diâmetro interno e 24 cm de altura. No fim do dia, sobrou uma garrafa com suco até 3/4 da altura. O dono decidiu servir esse resto de graça numa degustação, em copos de papel em forma de cone, com 10 cm de diâmetro na boca e 9 cm de altura. Para o suco não derramar, cada copo é servido só até 80% da altura (e não até a borda), e o dono não quer servir copos pela metade nem com quantidades diferentes. Ele pergunta quantos copos desses consegue servir completamente com o suco que sobrou. Considere que o suco não faz espuma e que nada se perde ao servir. O número de copos é:",
   "tabela": [
    [
     "Peça",
@@ -486,7 +503,8 @@
     "Só os completos",
     "11 copos."
    ]
-  ]
+  ],
+  "ancora": "ENEM 2022 q.169 (631 letras) e q.147: volume de cilindro e razão ao cubo"
  },
  {
   "g": "Degrau 7",
@@ -495,7 +513,8 @@
   "tags": [
    "Bloco retangular + Pitágoras duas vezes",
    "Degraus 7 + 6",
-   "Estilo principal: Fuvest (com toques dos outros 3)"
+   "Estilo principal: Fuvest (com toques dos outros 3)",
+   "Âncora real: Fuvest (repo) q.76: sólido com medidas e uma conta de cada vez"
   ],
   "enun": "Uma caixa de papelão tem a forma de um bloco retangular de 6 cm × 8 cm × 24 cm. Um artesão quer guardar nela uma vareta reta, inteira e sem dobrar, com comprimento em centímetros dado por um número inteiro. A vareta pode ficar em qualquer posição dentro da caixa, podendo encostar nas paredes e nos cantos. Qual é o maior comprimento, em cm, que a vareta pode ter?",
   "alts": [
@@ -529,7 +548,8 @@
     "Cabe?",
     "Uma vareta de exatamente 26 cm vai de canto a canto e encosta neles, o que o enunciado permite. Resposta: 26."
    ]
-  ]
+  ],
+  "ancora": "Fuvest (repo) q.76: sólido com medidas e uma conta de cada vez"
  },
  {
   "g": "Degrau 7",
@@ -538,7 +558,8 @@
   "tags": [
    "Volume + semelhança de sólidos",
    "Degraus 7 + 6",
-   "Estilo principal: ITA (com toques dos outros 3)"
+   "Estilo principal: ITA (com toques dos outros 3)",
+   "Âncora real: ENEM 2022 q.147 (volume vai com o cubo) e aulas fuv (tetraedro cortado)"
   ],
   "enun": "Uma pirâmide de base quadrada tem 12 cm de altura. Um plano paralelo à base corta a pirâmide em duas partes: uma pirâmide menor, na ponta de cima, e um tronco, embaixo. O volume do tronco é 26 vezes o volume da pirâmide menor. A que distância da base, em cm, passa o plano de corte?",
   "alts": [
@@ -576,7 +597,8 @@
     "Distância da base",
     "12 − 4 = 8 cm."
    ]
-  ]
+  ],
+  "ancora": "ENEM 2022 q.147 (volume vai com o cubo) e aulas fuv (tetraedro cortado)"
  },
  {
   "g": "Degrau 7",
@@ -585,7 +607,8 @@
   "tags": [
    "Esfera + cilindro + frações",
    "Degraus 7 + 1",
-   "Estilo principal: Harvard (com toques dos outros 3)"
+   "Estilo principal: Harvard (com toques dos outros 3)",
+   "Âncora real: ENEM 2022 q.169: volume de cilindro contra volume de esferas"
   ],
   "enun": "Uma lata cilíndrica de 1,5 L guarda 3 bolas de tênis idênticas, empilhadas. Cada bola encosta nas paredes da lata e nas bolas vizinhas, e as de cima e de baixo encostam nas tampas, de modo que a altura da lata é a de 3 diâmetros. Tratando as bolas como esferas, quantos mililitros da lata ficam vazios, sem bola? (1 L = 1 000 mL.)",
   "alts": [
@@ -623,6 +646,7 @@
     "O vazio",
     "1/3 de 1 500 mL = 500 mL."
    ]
-  ]
+  ],
+  "ancora": "ENEM 2022 q.169: volume de cilindro contra volume de esferas"
  }
 ]

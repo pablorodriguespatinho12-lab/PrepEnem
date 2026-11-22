@@ -57,7 +57,8 @@ Contagem nos exemplos (34 resolvidas):
 - **Harvard–MIT:** um truque elegante que junta 2 ideias e dá resposta limpa.
 O lote 1 (4 questões, 1 estilo cada) serve de teste; refazer misturado quando ele pedir.
 
-Cada questão nova declara: (1) **junção**; (2) **jeito** (ENEM ou ITA); (3) **pegadinha** da lista acima; (4) ≥ 6 passos; (5) cada alternativa errada = um erro
+**CORRIGIDO (Pablo, 22/11/2026): cada questão nova nasce de UMA questão real aberta e lida** (índice em `indice-reais.md`), com o campo `ancora` ("ITA 2025 q.4"): copia a TÉCNICA e a classe de tamanho da real, no conteúdo do degrau. Não se escreve questão a partir deste resumo. Medido nos lotes 2 e 3 sem âncora: 317 letras de média (ENEM real 676), 0 com 600+.
+Cada questão nova declara: (0) **âncora real**; (1) **junção**; (2) **jeito** (ENEM ou ITA); (3) **pegadinha** da lista acima; (4) passos como a âncora (o dado real é 3–4 em ITA/IME, 4+ no ENEM; a dificuldade está na ideia, "≥ 6" foi invenção minha); (5) cada alternativa errada = um erro
 típico dos 7 tipos; (6) conteúdos só da cadeia do degrau (ver `mapa-da-escada.md`); (7) resolvida por **outro agente sem ver a resolução**.
 
 ## Lacuna honesta
