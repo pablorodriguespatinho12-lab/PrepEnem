@@ -17,7 +17,7 @@ export const MAX_PAPEL = 1400;
 export const MAX_ALTERNATIVA = 60;
 const MAX_FALA = 150;
 const MAX_FALA_DA_TELA = 250;
-export const MAX_CENAS = 16;
+export const MAX_CENAS = 20;
 const LINHAS_POR_TELA = 5;
 const LARGURA_TELA = 360;
 const LARGURA_DA_LETRA = 0.4; // mesma estimativa de lousa.py (em × tamanho)
@@ -113,6 +113,44 @@ export function linhasDaTabela(v: Record<string, unknown> | null): Linha[] {
   });
 }
 
+/** "E = estrada (o que a questão quer)" → "estrada": a fala lê o significado sem o aparte. */
+const semAparte = (s: string): string => limpa(s.replace(/\([^)]*\)/g, ''));
+
+/** Falas da tela das letras: "T é terras. D é dias." juntando letras até ~140 letras por fala. */
+function falasDasLetras(letras: Record<string, unknown>[]): Fala[] {
+  const frases = letras.map((l) => `${limpa(texto(l.letra))} é ${semAparte(texto(l.oque))}.`);
+  const grupos: string[] = [];
+  for (const f of frases) {
+    const ultimo = grupos[grupos.length - 1];
+    if (ultimo && ultimo.length + 1 + f.length <= 140) grupos[grupos.length - 1] = `${ultimo} ${f}`;
+    else grupos.push(f);
+  }
+  let t = 0.3;
+  return grupos.slice(0, 4).map((f): Fala => {
+    const par: Fala = [Math.round(t * 10) / 10, f];
+    t += Math.max(2.2, f.length * SEGUNDOS_POR_LETRA + 0.8);
+    return par;
+  });
+}
+
+/** Pablo, 22/11/2026: "só logo o significado de cada palavra; no outro quadro você explica; fica muita coisa em cima
+ *  da outra". A equação vira 3 telas: as letras (só "letra = palavra"), a equação sozinha e, depois, o porquê. */
+export function telasDaEquacao(formula: string, leitura: string, letras: Record<string, unknown>[], explicacao: string): Cena[] {
+  const cenas: Cena[] = [];
+  const legenda: Linha[] = letras.flatMap((l) =>
+    quebrar(`${limpa(texto(l.letra))} = ${limpa(texto(l.oque))}`, cabem(26)).map((s) => ({ s, cor: 'tinta' as Cor, tam: 26 })),
+  );
+  if (legenda.length) cenas.push(...telas('as letras', legenda, falasDasLetras(letras)));
+  const linhas: Linha[] = [
+    ...quebrar(formula, cabem(36)).map((s) => ({ s, cor: 'verde' as Cor, tam: 36 })),
+    ...quebrar(leitura, cabem(26)).map((s) => ({ s, cor: 'azul' as Cor, tam: 26 })),
+  ];
+  cenas.push(...telas('a equação', linhas, [[0.3, `A equação é ${formula}.`.slice(0, MAX_FALA)]]));
+  const porque = linhasDoTexto(explicacao);
+  if (porque.length) cenas.push(...telas('por quê', porque, falas(explicacao)));
+  return cenas;
+}
+
 export function lousaDoRobo(e: EntradaDoRobo): Resultado {
   const passos = e.passos;
   if (texto(passos[0]?.titulo) !== TITULO_PRIMEIRO_PASSO) return { ok: false, motivo: 'não é o molde do robô' };
@@ -163,12 +201,7 @@ export function lousaDoRobo(e: EntradaDoRobo): Resultado {
         .map((l, i) => ({ l, i }))
         .sort((a, b) => posicao(a.l) - posicao(b.l) || a.i - b.i)
         .map(({ l }) => l);
-      const linhas: Linha[] = [
-        ...quebrar(formula, cabem(32)).map((s) => ({ s, cor: 'verde' as Cor, tam: 32 })),
-        ...quebrar(limpa(texto(v.leitura)), cabem(24)).map((s) => ({ s, cor: 'azul' as Cor, tam: 24 })),
-        ...letras.flatMap((l) => quebrar(`${limpa(texto(l.letra))} = ${limpa(texto(l.oque))}`, cabem(22)).map((s) => ({ s, cor: 'tinta' as Cor, tam: 22 }))),
-      ];
-      cenas.push(...telas('a equação', linhas, falas(t)));
+      cenas.push(...telasDaEquacao(formula, limpa(texto(v.leitura)), letras, t));
     } else if (/receita|parecida/i.test(titulo)) {
       cenas.push(...telas('questão parecida?', [...linhasDoTexto(t), ...linhasDaTabela(v)], falas(t)));
     } else {

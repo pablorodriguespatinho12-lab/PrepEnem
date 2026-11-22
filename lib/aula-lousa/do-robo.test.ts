@@ -37,10 +37,27 @@ describe('lousa a partir da aula do robô', () => {
     ];
     const r = lousaDoRobo({ ...ENTRADA, passos });
     if (!r.ok) throw new Error(r.motivo);
-    const tela = r.aula.cenas.find((c) => c.tipo === 'lousa' && c.desenho.some((d) => d.k === 'tx' && d.s === 'a equação'));
+    const tela = r.aula.cenas.find((c) => c.tipo === 'lousa' && c.desenho.some((d) => d.k === 'tx' && d.s === 'as letras'));
     const textos = tela && tela.tipo === 'lousa' ? tela.desenho.flatMap((d) => (d.k === 'tx' ? [d.s] : [])) : [];
     expect(textos.indexOf('M = distância em metros')).toBeGreaterThan(-1);
     expect(textos.indexOf('M = distância em metros')).toBeLessThan(textos.findIndex((s) => s.startsWith('CM')) === -1 ? 99 : textos.findIndex((s) => s.startsWith('CM')));
+  });
+
+  it('equação em 3 telas: só "letra = palavra", depois a equação sozinha, depois o porquê (sem explicar na 1ª)', () => {
+    const r = lousaDoRobo(ENTRADA);
+    if (!r.ok) throw new Error(r.motivo);
+    const titulo = (c: (typeof r.aula.cenas)[number]) => (c.tipo === 'lousa' ? (c.desenho.find((d) => d.k === 'tx') as { s: string } | undefined)?.s : undefined);
+    const ordem = r.aula.cenas.map(titulo);
+    const i = ordem.indexOf('as letras');
+    expect(i).toBeGreaterThan(-1);
+    expect(ordem.slice(i, i + 3)).toEqual(['as letras', 'a equação', 'por quê']);
+    const textos = (n: number) => { const c = r.aula.cenas[n]; return c.tipo === 'lousa' ? c.desenho.flatMap((d) => (d.k === 'tx' ? [d.s] : [])) : []; };
+    expect(textos(i)).toContain('P = pães');
+    expect(textos(i).join(' ')).toContain('S = sanduíches');
+    expect(textos(i).join(' ')).not.toMatch(/Por que/);
+    expect(textos(i + 1).join(' ')).toContain('S = P × R');
+    expect(textos(i + 1).join(' ')).not.toMatch(/Por que/);
+    expect(textos(i + 2).join(' ')).toMatch(/Por que/);
   });
 
   it('escala 1 : 50 000 não é cortada em duas falas', () => {

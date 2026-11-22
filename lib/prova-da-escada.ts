@@ -1,11 +1,12 @@
-/* Uma prova por conteúdo (Pablo, 17/11/2026): Fácil → Médio → Difícil → ENEM →
-   nível ITA/IME, nessa ordem, com POR_ETAPA de cada (ITA: até 2). */
+/* Uma prova por conteúdo (Pablo, 17/11/2026): Fácil → Médio → Difícil → (Junção) → ENEM →
+   nível ITA/IME, nessa ordem, com POR_ETAPA de cada (ITA: até 2). Junção vem ANTES do ENEM (Pablo,
+   22/11/2026: depois do ENEM "voltou para difícil, era para ser um nível a mais"): o último degrau é sempre o mais alto. */
 import { ESCADAS, type Degrau } from '@/data/escadas';
 
 /* Junção (Pablo, 18/11/2026: "nas funções você pega coisas da porcentagem"): questões que
    misturam o conteúdo desta prova com os das provas anteriores da mesma escada. A 1ª prova
    de cada matéria não tem anteriores e fica sem ela. */
-export const ETAPAS = ['facil', 'medio', 'dificil', 'enem', 'juncao', 'ita'] as const;
+export const ETAPAS = ['facil', 'medio', 'dificil', 'juncao', 'enem', 'ita'] as const;
 export type EtapaDaProva = (typeof ETAPAS)[number];
 export const POR_ETAPA: Record<EtapaDaProva, number> = { facil: 2, medio: 2, dificil: 2, enem: 2, juncao: 2, ita: 2 };
 

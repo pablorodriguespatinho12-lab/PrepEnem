@@ -20,7 +20,7 @@ describe('prova da escada', () => {
   });
 
   it('diz quais etapas faltam', () => {
-    expect(questoesDoDegrau('Física', degrau, [q('f1', 'facil'), q('f2', 'facil')]).faltam).toEqual(['medio', 'dificil', 'enem', 'juncao', 'ita']);
+    expect(questoesDoDegrau('Física', degrau, [q('f1', 'facil'), q('f2', 'facil')]).faltam).toEqual(['medio', 'dificil', 'juncao', 'enem', 'ita']);
   });
 
   it('nível acima de raciocínio (id d2-escada-xxx-ita-) entra antes das antigas na vaga do ITA', () => {
@@ -34,9 +34,9 @@ describe('prova da escada', () => {
     expect(questoesDoDegrau('Física', degrau, todas).questoes.map((x) => x.id)).toEqual(['d2-escada-fis-ele-01', 'd2-escada-fis-ele-02']);
   });
 
-  it('junção vem depois do ENEM e antes do ITA; a 1ª prova não cobra junção', () => {
+  it('junção vem ANTES do ENEM e o ITA é sempre o último degrau; a 1ª prova não cobra junção', () => {
     const todas = [q('i1', 'acima'), q('j1', 'juncao'), q('e1', 'dificil', { anoProva: 2023 })];
-    expect(questoesDoDegrau('Física', degrau, todas).questoes.map((x) => x.id)).toEqual(['e1', 'j1', 'i1']);
+    expect(questoesDoDegrau('Física', degrau, todas).questoes.map((x) => x.id)).toEqual(['j1', 'e1', 'i1']);
     expect(questoesDoDegrau('Física', degrau, [], false).faltam).not.toContain('juncao');
   });
 });

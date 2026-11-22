@@ -15,7 +15,7 @@ import { semMarcaDeImagem } from '@/lib/enunciado-sem-alternativas';
 import { materiaColors } from '@/lib/theme-colors';
 import { fireConfetti, spawnCorrectParticles, flashScreen } from '@/components/animations';
 import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
-import { ETAPA_LABEL, ehExemploResolvido, etapaDaQuestao } from '@/lib/treino-etapas';
+import { ehExemploResolvido, etapaDaQuestao, rotuloDaQuestao } from '@/lib/treino-etapas';
 import { ExplicacaoTutor } from '@/components/tutor/explicacao-tutor';
 import { useTelaGrande } from '@/hooks/use-tela-grande';
 import { TextoCompleto } from '@/components/tutor/texto-completo';
@@ -936,7 +936,7 @@ export default function TreinoPage() {
             <span aria-hidden className="w-px h-3 bg-border shrink-0" />
             {currentQ && (
               <span className="font-medium">
-                {ehVestibular ? `${currentQ.origem} · questão ${currentQ.numeroQuestao} · prova real` : ETAPA_LABEL[etapaDaQuestao(currentQ)]}
+                {ehVestibular ? `${currentQ.origem} · questão ${currentQ.numeroQuestao} · prova real` : rotuloDaQuestao(currentQ)}
               </span>
             )}
             {resolvida && (
