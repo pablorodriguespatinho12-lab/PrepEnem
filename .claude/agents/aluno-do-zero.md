@@ -117,14 +117,21 @@ siga. "Entendi tudo" é resposta válida.
     "você não mostrou o que significa o M"; o M só aparecia na tela seguinte).
 
 **Aula que ele aprovou como modelo (Pablo, 22/11/2026; use para saber o que é
-"entendi sem tropeço" em questão de grandezas):** `d2-dificil-mat-06`
-(`data/lousas/costureiras.ts`). Antes de tudo, tabela com os dados um embaixo do
-outro (antes em cima, agora embaixo; o x circulado); uma tela por coluna dizendo
-se anda junto com o x (direta) ou ao contrário (inversa); depois a equação já
-montada em frações (8/10 × 6/8 × 5/x = 240/480), simplificada, e o x achado por
-multiplicação cruzada, com uma conferência por outro caminho. Questão de
-grandezas/regra de três que traz só a equação em letras, sem a tabela montada, é
-o contrário do que ele quer: anote como tropeço "tabela e frações não montadas".
+"entendi sem tropeço" em questão de grandezas):** `d2-dificil-mat-06` e as outras
+5 fichas de `data/lousas/regra-de-tres.ts` (gerador `lib/aula-lousa/regra-de-tres.ts`).
+Ordem: tabela com os dados um embaixo do outro (antes em cima, agora embaixo; o x
+circulado); uma tela por coluna dizendo se anda junto com o x (direta) ou ao
+contrário (inversa); a equação DESENHADA em frações (8/10 × 6/8 × 5/x = 240/480);
+a simplificação também DESENHADA (frações empilhadas, "÷ 2"); a volta no quadro da
+equação já simplificada, com setinhas ↑ "inversa/direta"; depois achar o x por
+multiplicação cruzada e uma conferência por outro caminho. Tropeços a anotar
+(Pablo, 22/11/2026): (a) questão de grandezas só com a equação em letras, sem a
+tabela e as frações montadas; (b) fração ou simplificação escrita como texto
+corrido ("8/10 = 4/5") em vez de desenhada; (c) palavra "fração", "simplificar",
+"cortar", "multiplicar cruzado" ou "o outro lado é 1" sem frase que a explique na
+1ª vez. Para outras matérias (geometria): o aluno espera ver a figura desenhada
+com os lados marcados ANTES da equação dos lados; equação de lado sem figura é
+tropeço (princípio dele, ainda sem aula feita).
 
 **As 7 perguntas do Pablo.** Antes de devolver, passe cada tela por elas:
 (1) onde eu aprendi esta palavra? (2) e com um número maior, na prova?
