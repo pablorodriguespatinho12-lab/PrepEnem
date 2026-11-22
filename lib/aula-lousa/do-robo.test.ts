@@ -28,6 +28,28 @@ describe('lousa a partir da aula do robô', () => {
     expect(r.aula.cenas[1].tipo).toBe('papel');
   });
 
+  it('a letra que está na fórmula é explicada na mesma tela, antes da que não está', () => {
+    const passos = [
+      PASSOS[0],
+      { titulo: 'A equação em letras', texto: 'Quer a distância.', visual: { tipo: 'equacao', formula: 'D = M ÷ 1 000', leitura: 'km = metros ÷ 1 000', letras: [{ letra: 'D', oque: 'distância em km' }, { letra: 'CM', oque: 'distância em cm' }, { letra: 'M', oque: 'distância em metros' }] } },
+      PASSOS[3],
+      PASSOS[4],
+    ];
+    const r = lousaDoRobo({ ...ENTRADA, passos });
+    if (!r.ok) throw new Error(r.motivo);
+    const tela = r.aula.cenas.find((c) => c.tipo === 'lousa' && c.desenho.some((d) => d.k === 'tx' && d.s === 'a equação'));
+    const textos = tela && tela.tipo === 'lousa' ? tela.desenho.flatMap((d) => (d.k === 'tx' ? [d.s] : [])) : [];
+    expect(textos.indexOf('M = distância em metros')).toBeGreaterThan(-1);
+    expect(textos.indexOf('M = distância em metros')).toBeLessThan(textos.findIndex((s) => s.startsWith('CM')) === -1 ? 99 : textos.findIndex((s) => s.startsWith('CM')));
+  });
+
+  it('escala 1 : 50 000 não é cortada em duas falas', () => {
+    const falasDaTela = (r: ReturnType<typeof lousaDoRobo>) => (r.ok ? r.aula.cenas.flatMap((c) => c.fala.map((f) => f[1])) : []);
+    const r = lousaDoRobo({ ...ENTRADA, passos: [PASSOS[0], { ...PASSOS[1], texto: 'Escala 1 : 50 000 diz que 1 cm vale 50 000 cm.' }, PASSOS[2], PASSOS[3], PASSOS[4]] });
+    expect(falasDaTela(r).some((f) => /1:50 000/.test(f))).toBe(true);
+    expect(falasDaTela(r).some((f) => /Escala 1 ?:?$/.test(f))).toBe(false);
+  });
+
   it('recusa o que não é o molde do robô', () => {
     const r = lousaDoRobo({ ...ENTRADA, passos: [{ titulo: 'A pergunta', texto: 'x' }] });
     expect(r.ok).toBe(false);

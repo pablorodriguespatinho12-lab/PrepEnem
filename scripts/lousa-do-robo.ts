@@ -1,6 +1,6 @@
 import { loadEnvConfig } from '@next/env';
 loadEnvConfig(process.cwd());
-import { writeFileSync } from 'fs';
+import { readFileSync, readdirSync, writeFileSync } from 'fs';
 import { PrismaClient } from '@prisma/client';
 import { lousaDoRobo } from '../lib/aula-lousa/do-robo';
 import { lousaDoAntigo } from '../lib/aula-lousa/do-antigo';
@@ -18,11 +18,24 @@ const MATERIAS_DE_EXATAS = ['Matemática', 'Física'];
 
 const prisma = new PrismaClient();
 
+function idsJaConvertidos(): Set<string> {
+  const pasta = `${process.env.HOME}/backups-prepenem`;
+  const ids = new Set<string>();
+  for (const f of readdirSync(pasta).filter((n) => n.startsWith('explicacoes-antes-lousa-do-robo-'))) {
+    for (const id of Object.keys(JSON.parse(readFileSync(`${pasta}/${f}`, 'utf8')))) ids.add(id);
+  }
+  return ids;
+}
+
 async function main() {
   const saida = process.argv[2];
   const gravar = process.argv.includes('--gravar');
   if (!saida) throw new Error('faltou o arquivo de saída');
 
+  // --refazer: regera a lousa só das que ESTE script já converteu (ids das cópias em ~/backups-prepenem),
+  // nunca das feitas à mão.
+  const refazer = process.argv.includes('--refazer');
+  const meus = refazer ? idsJaConvertidos() : new Set<string>();
   const linhas = await prisma.explicacaoPronta.findMany({ include: { question: true } });
   const feitas: Record<string, unknown> = {};
   const motivos = new Map<string, number>();
@@ -31,7 +44,8 @@ async function main() {
   let foraDaMateria = 0;
   for (const l of linhas) {
     const c = (l.conteudo ?? {}) as Record<string, unknown>;
-    if (c.lousa && typeof c.lousa === 'object') { jaTem++; continue; }
+    if (c.lousa && typeof c.lousa === 'object' && !(refazer && meus.has(l.questionId))) { jaTem++; continue; }
+    if (refazer && !meus.has(l.questionId)) continue;
     const passos = Array.isArray(c.passos) ? (c.passos as { titulo?: unknown; texto?: unknown; visual?: unknown }[]) : [];
     const q = l.question;
     if (!MATERIAS_DE_EXATAS.includes(q.materia)) { foraDaMateria++; continue; }

@@ -51,7 +51,8 @@ export type Linha = { s: string; cor: Cor; tam: number };
 
 /** Frases do professor: as frases do passo, até 4 e até ~250 letras na tela toda. */
 export function falas(textoDoPasso: string): Fala[] {
-  const frases = limpa(textoDoPasso.replace(/\n/g, ' '))
+  // "1 : 50 000" é uma escala, não o fim de uma frase: cola os dois-pontos entre números.
+  const frases = limpa(textoDoPasso.replace(/\n/g, ' ').replace(/(\d)\s*:\s*(\d)/g, '$1:$2'))
     .split(/(?<=[.:?!])\s+/)
     .map((f) => f.slice(0, MAX_FALA))
     .filter(Boolean);
@@ -151,8 +152,17 @@ export function lousaDoRobo(e: EntradaDoRobo): Resultado {
       ]);
       cenas.push(...telas('as fórmulas', linhas, falas(t)));
     } else if (v?.tipo === 'equacao') {
-      const letras = Array.isArray(v.letras) ? (v.letras as Record<string, unknown>[]) : [];
       const formula = limpa(texto(v.formula));
+      // As letras que aparecem na fórmula vêm primeiro, na ordem em que aparecem: assim nenhuma
+      // letra da equação é explicada só na tela seguinte (Pablo, 22/11/2026: "o que significa o M?").
+      const posicao = (l: Record<string, unknown>): number => {
+        const i = formula.indexOf(limpa(texto(l.letra)));
+        return i < 0 ? Number.MAX_SAFE_INTEGER : i;
+      };
+      const letras = (Array.isArray(v.letras) ? (v.letras as Record<string, unknown>[]) : [])
+        .map((l, i) => ({ l, i }))
+        .sort((a, b) => posicao(a.l) - posicao(b.l) || a.i - b.i)
+        .map(({ l }) => l);
       const linhas: Linha[] = [
         ...quebrar(formula, cabem(32)).map((s) => ({ s, cor: 'verde' as Cor, tam: 32 })),
         ...quebrar(limpa(texto(v.leitura)), cabem(24)).map((s) => ({ s, cor: 'azul' as Cor, tam: 24 })),
