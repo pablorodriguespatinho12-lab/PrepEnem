@@ -47,7 +47,7 @@
   "passos": [
    [
     "Troque a ficha por um ponto",
-    "A ficha toca um rejunte quando o centro está a 3 cm ou menos dele. Só o centro importa."
+    "A ficha toca um rejunte quando o centro está a 3 cm ou menos dele. Só o centro importa. Como todo ponto do ladrilho tem a mesma chance, a probabilidade é a área da região ÷ a área do ladrilho (10 · 10 = 100 cm²)."
    ],
    [
     "Não toca nenhum",
@@ -55,15 +55,15 @@
    ],
    [
     "Toca dois",
-    "O centro fica a menos de 3 cm de duas bordas vizinhas: um canto de 3 × 3 = 9, e são 4 cantos: 36. (Dois rejuntes opostos não dá: 2 · 3 = 6 < 10.)"
+    "O centro fica a menos de 3 cm de duas bordas vizinhas: um canto de 3 · 3 = 9, e são 4 cantos: 36. (Dois rejuntes opostos não dá: 3 + 3 = 6 < 10.)"
    ],
    [
     "Toca exatamente um",
-    "O que sobra: 100 − 16 − 36 = 48 (4 faixas de 3 × 4 = 12)."
+    "O que sobra: 100 − 16 − 36 = 48 (4 faixas de 3 · 4 = 12). Pela tabela, tocar exatamente 1 rejunte vale 4 pontos."
    ],
    [
     "Condicional",
-    "Tocou pelo menos um: 100 − 16 = 84. Exatamente 4 pontos: 48/84 = 4/7."
+    "Condicional é a chance de algo sabendo que outra coisa já aconteceu. Sabendo que tocou pelo menos um, o conjunto possível encolhe para 100 − 16 = 84. Exatamente 4 pontos = exatamente 1 rejunte = 48. Chance: 48/84 = 4/7 (dividindo em cima e embaixo por 12)."
    ]
   ],
   "ancora": "IME 2024 q.8: probabilidade por área"
@@ -128,7 +128,7 @@
   "passos": [
    [
     "Quantos jogos",
-    "6 · 5 / 2 = 15 jogos."
+    "Cada time joga contra 5 outros: 6 · 5 = 30, mas cada jogo foi contado duas vezes (uma por time), então 30 ÷ 2 = 15 jogos. (Com 3 times: 3 · 2 ÷ 2 = 3 jogos, A-B, A-C e B-C.)"
    ],
    [
     "Pontos se ninguém empatasse",
@@ -140,11 +140,11 @@
    ],
    [
     "Nenhum empate nos 2 sorteados",
-    "Os 2 jogos saem dos 13 que não empataram: C(13,2) / C(15,2) = 78/105 = 26/35."
+    "Os 2 jogos saem dos 13 que não empataram. Escolher 2 entre 13, sem ligar para a ordem, é 13 · 12 ÷ 2 = 78 jeitos (escreve-se C(13,2)). Entre os 15 são 15 · 14 ÷ 2 = 105. Chance = 78/105 = 26/35 (dividindo por 3)."
    ],
    [
     "Pelo menos um",
-    "1 − 26/35 = 9/35."
+    "1 − 26/35 = 9/35. (\"Pelo menos um\" é tudo menos \"nenhum\": um menos a chance de nenhum.)"
    ]
   ],
   "ancora": "Unicamp 2024 q.60 (combinatória com condição escondida no texto)"
@@ -196,7 +196,7 @@
   "passos": [
    [
     "Quantas pessoas de cada",
-    "Doentes: 2% de 5 000 = 100 e 10% de 5 000 = 500, total 600. Sadias: 10 000 − 600 = 9 400."
+    "2% de 5 000 = 5 000 ÷ 100 · 2 = 100 doentes (menos de 40 anos) e 10% de 5 000 = 500 (40 anos ou mais). Doentes: 600. Sadias: 10 000 − 600 = 9 400."
    ],
    [
     "1º exame positivo",
@@ -208,7 +208,7 @@
    ],
    [
     "Quem tem a doença",
-    "486 ÷ (486 + 94) = 486/580 ≈ 0,84, ou 84%."
+    "486 ÷ (486 + 94) = 486 ÷ 580 ≈ 0,838, que arredondado dá 0,84, ou 84%. (580 · 0,8 = 464; sobram 22, cerca de 0,04.)"
    ]
   ],
   "ancora": "Unicamp 2024 q.61 (pedrinhas) e ENEM 2021 q.177: chance condicional e eventos independentes"
@@ -244,19 +244,19 @@
   "passos": [
    [
     "Contar os aprovados",
-    "Se a última lâmpada está apagada, as 5 de antes valem qualquer arranjo bom: a(5). Se está acesa, a anterior é apagada e as 4 antes valem a(4). Então a(n) = a(n−1) + a(n−2)."
+    "Olhe a última lâmpada. Apagada: as 5 de antes podem ser qualquer arranjo aprovado de 5. Acesa: a anterior tem de ser apagada, e as 4 de antes são um arranjo aprovado de 4. Chame de a(n) (\"a de n\") o número de arranjos aprovados com n lâmpadas. Então a(6) = a(5) + a(4) e, em geral, a(n) = a(n−1) + a(n−2)."
    ],
    [
     "Montar a lista",
-    "a(1) = 2, a(2) = 3, depois 5, 8, 13 e a(6) = 21 painéis aprovados."
+    "Com 1 lâmpada: acesa ou apagada, a(1) = 2. Com 2: apagada-apagada, apagada-acesa e acesa-apagada (acesa-acesa não pode): a(2) = 3. Daí: a(3) = 3 + 2 = 5, a(4) = 5 + 3 = 8, a(5) = 8 + 5 = 13, a(6) = 13 + 8 = 21 painéis aprovados."
    ],
    [
     "Com exatamente 3 acesas",
-    "Ponha as 3 apagadas em fila: ficam 4 vãos (antes, 2 entre elas, depois). Cada acesa ocupa um vão diferente: C(4,3) = 4."
+    "Ponha as 3 apagadas em fila: ficam 4 vãos (antes da 1ª, 2 entre elas, depois da 3ª). Cada acesa vai num vão diferente, e assim nenhuma fica ao lado de outra. Escolher 3 vãos entre 4 é o mesmo que escolher qual vão fica vazio: 4 jeitos (escreve-se C(4,3) = 4)."
    ],
    [
     "Probabilidade",
-    "4/21."
+    "4 painéis com 3 acesas em 21 aprovados: 4 ÷ 21 = 4/21. A chance 1/2 de cada lâmpada não muda a conta: todo painel é igualmente provável, só precisa contar."
    ]
   ],
   "ancora": "ITA 2025 q.5 e Unesp 2025 q.85: sequência por recorrência e contagem"

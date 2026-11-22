@@ -45,19 +45,19 @@
   "passos": [
    [
     "A reta das vendas",
-    "Cada R$ 4 a mais no preço tira 16 bolos: são −4 bolos por real. Com 20 → 120, a quantidade é q = 200 − 4p."
+    "Na tabela, o preço sobe R$ 4 (de 20 para 24) e as vendas caem 16 (de 120 para 104): são −4 bolos por real. A reta é q = 200 − 4p. Conferindo com p = 20: 200 − 80 = 120. (O 200 vem de 120 + 4 · 20.)"
    ],
    [
     "O lucro",
-    "Lucro = (p − 10)(200 − 4p) − 300. É uma parábola aberta para baixo, com raízes de (p − 10)(200 − 4p) em 10 e 50."
+    "Lucro = (preço − custo) · bolos vendidos − gasto fixo = (p − 10) · (200 − 4p) − 300. O desenho desse lucro é uma parábola aberta para baixo: sobe, chega a um topo (o vértice) e depois desce."
    ],
    [
-    "O vértice",
-    "Fica no meio das raízes: p = 30. Mas a prefeitura só deixa até 25."
+    "Onde fica o topo",
+    "O lucro por bolo vira zero quando p = 10, e as vendas viram zero quando 200 − 4p = 0, isto é, p = 50. Esses dois preços são as raízes (onde a conta dá zero). O topo fica no meio deles: p = (10 + 50) ÷ 2 = 30."
    ],
    [
     "Dentro do limite",
-    "A parábola só sobe até 30, então no intervalo permitido o maior valor está em p = 25."
+    "De 10 até 30 o lucro só sobe. A prefeitura só deixa até 25, então o melhor preço permitido é o último: 25. (Em p = 30 seria 20 · 80 − 300 = 1 300, mas é proibido.)"
    ],
    [
     "A conta",
@@ -94,11 +94,11 @@
   "passos": [
    [
     "Dois pontos distintos",
-    "Δ = 36 − 4k > 0, então k < 9, isto é, k ≤ 8."
+    "A parábola corta o eixo horizontal onde x² − 6x + k = 0; essas soluções se chamam raízes. O número de raízes depende de D = b² − 4ac (o discriminante, também escrito Δ), que aqui é 36 − 4k (a = 1, b = −6, c = k). D > 0: duas raízes diferentes; D = 0: uma só; D < 0: nenhuma. Então 36 − 4k > 0, k < 9, ou seja, k ≤ 8."
    ],
    [
     "Soma e produto das raízes",
-    "A soma é 6 e o produto é k. Com k > 0, as duas raízes têm o mesmo sinal; como a soma é 6 (positiva), as duas são positivas."
+    "Para x² − 6x + k = 0, a soma das raízes é 6 e o produto é k (regra pronta, vale para toda equação x² + bx + c). Com k > 0, o produto é positivo, então as raízes têm o mesmo sinal; como a soma é 6, as duas são positivas."
    ],
    [
     "Contar",
@@ -106,7 +106,7 @@
    ],
    [
     "Os que enganam",
-    "k = 9 dá uma raiz só (x = 3, dupla). E as raízes não precisam ser inteiras: só k = 5 e k = 8 têm raízes inteiras."
+    "k = 9 dá raiz dupla (x = 3, as duas raízes iguais): a parábola toca o eixo num ponto só, e não serve. E as raízes não precisam ser inteiras: só k = 5 e k = 8 têm raízes inteiras, mas os outros também servem."
    ]
   ],
   "ancora": "IME 2024 q.4: soma e produto das raízes"
@@ -139,11 +139,11 @@
   "passos": [
    [
     "Duas passadas",
-    "f(f(x)) = a(ax + b) + b = a²x + ab + b."
+    "f(f(x)) é passar x pela máquina e passar o resultado de novo. Com a = 2, b = 1 e x = 1: 1 → 2 · 1 + 1 = 3 → 2 · 3 + 1 = 7. Em letras: a · (ax + b) + b = a²x + ab + b (a · ax = a²x e a · b = ab)."
    ],
    [
     "Igualar a 9x + 8",
-    "Para todo x: a² = 9 e ab + b = 8."
+    "Isso vale para todo x, então o que multiplica x tem de ser igual dos dois lados (a² = 9) e o que não tem x também (ab + b = 8)."
    ],
    [
     "O sinal de a",
@@ -151,7 +151,7 @@
    ],
    [
     "Achar b",
-    "3b + b = 8, então b = 2."
+    "3b + b = 8, então 4b = 8 e b = 2."
    ],
    [
     "Uma passagem",
@@ -204,23 +204,23 @@
   "passos": [
    [
     "O número que não muda",
-    "Quem fica igual na regra: x = 2x + 3, então x = −3."
+    "Procure um x que fica igual na regra: x = 2x + 3. Passe 2x para o outro lado: x − 2x = 3, então −x = 3 e x = −3."
    ],
    [
     "Somar 3 a tudo",
-    "Seja y = x + 3. O próximo é 2x + 3, e 2x + 3 + 3 = 2(x + 3) = 2y. O y simplesmente dobra."
+    "Por que 3? Porque 3 é o oposto de −3. Chame de y o número do pedido mais 3 (y = x + 3). O próximo pedido é 2x + 3; somando 3: 2x + 6 = 2 · (x + 3). Ou seja, o y simplesmente dobra."
    ],
    [
     "O começo",
-    "x = 0 dá y = 3."
+    "x = 0 dá y = 3. Dobrando: 3, 6, 12, 24... (1 vez: 6; 2 vezes: 12; 3 vezes: 24)."
    ],
    [
     "Depois de 10 passos",
-    "y = 3 · 2¹⁰ = 3 072."
+    "Dobrar 10 vezes é multiplicar por 2¹⁰ (2 multiplicado 10 vezes) = 1 024. Então y = 3 · 1 024 = 3 072."
    ],
    [
     "Voltar para x",
-    "x = 3 072 − 3 = 3 069."
+    "x = y − 3 = 3 072 − 3 = 3 069. Conferindo no começo da fila: 0, 3, 9, 21, 45. 45 + 3 = 48 = 3 · 16."
    ]
   ],
   "ancora": "Unesp 2025 (PG) e ITA 2025 q.5: sequência que se repete por uma regra"
@@ -279,11 +279,11 @@
   "passos": [
    [
     "Área do terreno",
-    "40 · 30 − 15 · 10 = 1 200 − 150 = 1 050 m²."
+    "Retângulo grande: 40 · 30 = 1 200 m². Canto da casa: 15 · 10 = 150 m². 1 200 − 150 = 1 050 m²."
    ],
    [
     "Com 10% a mais",
-    "1 050 · 1,1 = 1 155 m²."
+    "10% a mais é 100% + 10% = 110% = 1,1. 1 050 · 1,1 = 1 050 + 105 = 1 155 m²."
    ],
    [
     "Quanto um pacote cobre",
@@ -291,11 +291,11 @@
    ],
    [
     "Pacotes",
-    "1 155 ÷ 9 = 128,33…"
+    "1 155 ÷ 9 = 128 e sobram 3 m² (9 · 128 = 1 152)."
    ],
    [
     "Arredondar",
-    "O resto de 0,33 pacote ainda precisa ser coberto: 129 pacotes."
+    "Esses 3 m² precisam de mais um pacote: 129. O preço de R$ 54, o desconto de 5% e o pagamento a prazo não entram."
    ]
   ],
   "ancora": "ENEM 2021 q.152 (1 428 letras) e 2022 q.167: áreas de paredes e piso, escolha por conta"
@@ -327,16 +327,20 @@
   },
   "passos": [
    [
+    "Os nomes",
+    "Catetos são os dois lados que formam o ângulo reto (5 e 12). Circunferência inscrita é a que fica dentro do triângulo, encostando (tangente) nos 3 lados."
+   ],
+   [
     "Área do triângulo",
-    "Catetos 5 e 12: 5 · 12 ÷ 2 = 30 cm²."
+    "Base · altura ÷ 2 = 5 · 12 ÷ 2 = 30 cm²."
    ],
    [
     "O raio do círculo inscrito",
-    "Área = raio × semiperímetro. O semiperímetro é (5 + 12 + 13) ÷ 2 = 15, então r = 30 ÷ 15 = 2 cm."
+    "O raio sai de área ÷ semiperímetro (metade do perímetro). Perímetro: 5 + 12 + 13 = 30, semiperímetro 15. r = 30 ÷ 15 = 2 cm. Por quê: ligando o centro aos 3 lados, o triângulo se divide em 3 triângulos de altura r, e a soma das áreas é r · (5 + 12 + 13) ÷ 2 = 15 r = 30."
    ],
    [
     "Área do círculo",
-    "3 · 2² = 12 cm²."
+    "3 · 2² = 3 · 4 = 12 cm²."
    ],
    [
     "O que fica de fora",
@@ -373,19 +377,19 @@
   "passos": [
    [
     "Os lados",
-    "3k e 4k: o perímetro é 14k = 28, então k = 2 e os lados medem 6 e 8."
+    "Lados na razão 3 : 4 são 3k e 4k (k é um número a achar). Perímetro é a soma dos 4 lados: 3k + 4k + 3k + 4k = 14k = 28, então k = 28 ÷ 14 = 2. Os lados são 3 · 2 = 6 e 4 · 2 = 8."
    ],
    [
     "A ideia que destrava",
-    "Um ângulo reto inscrito enxerga um diâmetro. Então a diagonal do retângulo é o diâmetro do círculo."
+    "Um ângulo reto (como o canto do retângulo) com o vértice sobre a circunferência sempre abre sobre um diâmetro. Então a diagonal do retângulo, que liga cantos opostos, é o diâmetro do círculo."
    ],
    [
     "O raio",
-    "Diagonal = √(6² + 8²) = 10, então o raio é 5."
+    "Pelo teorema de Pitágoras, o quadrado da diagonal é a soma dos quadrados dos lados: 6² + 8² = 36 + 64 = 100. Como 10 · 10 = 100, a diagonal é 10 e o raio é 10 ÷ 2 = 5."
    ],
    [
     "As áreas",
-    "Círculo: 3,14 · 25 = 78,5. Retângulo: 6 · 8 = 48."
+    "Círculo: 3,14 · 5² = 3,14 · 25 = 78,5. Retângulo: 6 · 8 = 48."
    ],
    [
     "O que fica de fora",
@@ -422,19 +426,19 @@
   "passos": [
    [
     "O triângulo do meio",
-    "Base AB = 12 e altura 8: ½ · 12 · 8 = 48 m²."
+    "Área do triângulo = base · altura ÷ 2. ABP: 12 · 8 ÷ 2 = 48 m²."
    ],
    [
     "Os das laterais",
-    "ADP: ½ · 5 · 8 = 20. BCP: ½ · 7 · 8 = 28. Juntos: 48 m²."
+    "ADP: base 5, altura 8: 5 · 8 ÷ 2 = 20. BCP: base 12 − 5 = 7: 7 · 8 ÷ 2 = 28. Juntos: 20 + 28 = 48 m²."
    ],
    [
     "O truque",
-    "O retângulo tem 96 m². O do meio é sempre metade dele, onde quer que P esteja; as laterais ficam com a outra metade."
+    "O retângulo tem 12 · 8 = 96 m². O do meio é metade (48) com P em qualquer lugar: se P estivesse a 2 m ou a 10 m de D, a base e a altura de ABP seriam as mesmas (12 e 8). As laterais ficam com a outra metade."
    ],
    [
     "O custo",
-    "48 · 35 + 48 · 20 = 1 680 + 960 = 2 640."
+    "48 · 35 = 1 680 e 48 · 20 = 960. Total: 1 680 + 960 = 2 640."
    ]
   ],
   "ancora": "IME 2024 q.8: área do triângulo pela altura que não muda"
@@ -485,23 +489,23 @@
   "passos": [
    [
     "O suco da garrafa",
-    "Raio 5 e altura 18 (3/4 de 24): π · 25 · 18 = 450π cm³."
+    "3/4 de 24 = 24 ÷ 4 · 3 = 18 cm de altura de suco. Raio = diâmetro ÷ 2 = 5. Volume do cilindro = π · raio² · altura = π · 25 · 18 = 450π cm³."
    ],
    [
     "O copo cheio",
-    "Cone de raio 5 e altura 9: ⅓ · π · 25 · 9 = 75π cm³."
+    "Volume do cone = ⅓ · π · raio² · altura = ⅓ · π · 25 · 9 = 75π cm³."
    ],
    [
     "O copo a 80% da altura",
-    "O suco forma um cone menor, semelhante ao copo, com razão 0,8. O volume cresce com o cubo: 0,8³ = 0,512, então 75π · 0,512 = 38,4π."
+    "80% = 0,8. O suco forma um cone menor com o mesmo formato do copo (semelhante), 0,8 vez o tamanho em tudo. Volume depende de 3 medidas (comprimento, largura e altura), então fica 0,8 · 0,8 · 0,8 = 0,512 do volume. Exemplo: um cubo de lado 1 tem volume 1; de lado 2, volume 8 (2 · 2 · 2). Então 75π · 0,512 = 38,4π."
    ],
    [
     "Quantos copos",
-    "450π ÷ 38,4π = 11,72…"
+    "450π ÷ 38,4π = 450 ÷ 38,4 = 4 500 ÷ 384 ≈ 11,72."
    ],
    [
     "Só os completos",
-    "11 copos."
+    "11 copos: 11 · 38,4 = 422,4 cabe em 450, e o 12º precisaria de 460,8, que é mais do que sobrou."
    ]
   ],
   "ancora": "ENEM 2022 q.169 (631 letras) e q.147: volume de cilindro e razão ao cubo"
@@ -534,15 +538,15 @@
   "passos": [
    [
     "O maior segmento dentro de um bloco",
-    "É a diagonal, de um canto ao canto oposto."
+    "É a diagonal, de um canto ao canto oposto: qualquer outro segmento dentro da caixa é mais curto."
    ],
    [
     "Diagonal da base",
-    "√(6² + 8²) = √100 = 10 cm."
+    "Pitágoras: num triângulo com ângulo reto, o quadrado da hipotenusa é a soma dos quadrados dos outros lados. 6² + 8² = 36 + 64 = 100, e √100 = 10 cm (√100 é o número que multiplicado por ele mesmo dá 100)."
    ],
    [
     "Diagonal do bloco",
-    "√(10² + 24²) = √676 = 26 cm."
+    "De novo Pitágoras, com a diagonal da base (10) e a altura (24): 10² + 24² = 100 + 576 = 676. √676 = 26, porque 26 · 26 = 676."
    ],
    [
     "Cabe?",
@@ -587,11 +591,15 @@
    ],
    [
     "Sólidos semelhantes",
-    "O volume cresce com o cubo da razão das alturas: k³ = 1/27, então k = 1/3."
+    "Duas pirâmides com o mesmo formato, uma maior que a outra, são semelhantes. A razão das alturas, k, diz quanto a menor é menor. O volume depende de 3 medidas, então fica k · k · k = k³. (Exemplo: dobrar tudo, k = 2, dá 8 vezes o volume.)"
+   ],
+   [
+    "Achar k",
+    "k³ = 1/27. Qual número vezes ele mesmo, vezes ele mesmo, dá 1/27? 3 · 3 · 3 = 27, então k = 1/3."
    ],
    [
     "Altura da menor",
-    "12 ÷ 3 = 4 cm, do ápice até o plano."
+    "12 · 1/3 = 4 cm, do topo (o ápice, a ponta da pirâmide) até o plano de corte."
    ],
    [
     "Distância da base",
@@ -628,23 +636,23 @@
   "passos": [
    [
     "Dar nome ao raio",
-    "O raio das bolas é r, o mesmo da lata. A altura da lata é 3 · 2r = 6r."
+    "O raio das bolas é r, o mesmo da lata. A altura da lata é a de 3 bolas empilhadas: 3 · 2r = 6r."
    ],
    [
     "A lata",
-    "π · r² · 6r = 6πr³."
+    "Volume do cilindro = π · r² · altura = π · r² · 6r = 6πr³ (r² · r = r · r · r = r³)."
    ],
    [
     "As 3 bolas",
-    "3 · (4/3)πr³ = 4πr³."
+    "Volume da esfera = (4/3) · π · r³. Três bolas: 3 · (4/3) · πr³ = 4πr³ (porque 3 · 4/3 = 4)."
    ],
    [
     "Fração ocupada",
-    "4πr³ ÷ 6πr³ = 2/3. As bolas ocupam 2/3 da lata, sem precisar de r."
+    "4πr³ ÷ 6πr³: o πr³ aparece em cima e embaixo e se corta, sobra 4/6 = 2/3. As bolas ocupam 2/3 da lata, seja qual for o r (descoberta de Arquimedes)."
    ],
    [
     "O vazio",
-    "1/3 de 1 500 mL = 500 mL."
+    "Sobra 1/3 da lata. 1,5 L = 1 500 mL, e 1 500 ÷ 3 = 500 mL."
    ]
   ],
   "ancora": "ENEM 2022 q.169: volume de cilindro contra volume de esferas"
