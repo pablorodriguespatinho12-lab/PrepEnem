@@ -144,6 +144,16 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   regra na memória no começo da sessão e escrevi 14 aulas pelo meu jeito; só depois conferi (a porcentagem
   e a média tinham que ser refeitas). Ids `d2-escada-xxx-ita-` entram no degrau ITA
   antes das antigas (`lib/prova-da-escada.ts`).
+  **Equação já montada e VISUAL (Pablo, 22/11/2026, caderno dele):** em Grandezas/regra de três a lousa
+  não usa "equação em letras": tabela com os dados um embaixo do outro (antes em cima, agora embaixo),
+  uma tela por coluna (direta ou inversa do x), a equação DESENHADA em frações empilhadas, a
+  simplificação também desenhada (nunca "8/10 = 4/5" em texto corrido), VOLTA no quadro da equação já
+  simplificada e as setinhas ↑ "inversa/direta" nas frações. Gerador `lib/aula-lousa/regra-de-tres.ts`,
+  fichas em `data/lousas/regra-de-tres.ts` (6 questões). **Princípio para as outras matérias**
+  (geometria etc., "mesmo quando a questão não dá valores"): ler o que a questão pede, DESENHAR a figura
+  (quadrado, triângulo...), marcar os lados/altura/diagonal com o nome ou o valor, montar a equação a
+  partir dos lados e deixar a figura pequena no canto enquanto a conta roda. Exemplo dele: quadrado de
+  lado l, diagonal desenhada, l√2. Ainda não feito em geometria: pedir o ok antes de generalizar.
 
 ## Conteúdo gerado por IA
 - **Explicação = o artefato dos peixes (Pablo, 22/10/2026: "perfeito, fala

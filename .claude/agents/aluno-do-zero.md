@@ -111,6 +111,21 @@ siga. "Entendi tudo" é resposta válida.
     tirado fora de contexto da aula"). Vale também para a explicação de cada
     letra no "Prove você": ela começa direto no porquê, sem "Isso!".
 
+16. **Letra que aparece na fórmula sem ter sido dita.** Na equação em letras da
+    lousa, toda letra escrita na fórmula (D = M ÷ 1 000) tem que ser explicada NA
+    MESMA tela, antes de qualquer letra que não está na fórmula (Pablo, 22/11/2026:
+    "você não mostrou o que significa o M"; o M só aparecia na tela seguinte).
+
+**Aula que ele aprovou como modelo (Pablo, 22/11/2026; use para saber o que é
+"entendi sem tropeço" em questão de grandezas):** `d2-dificil-mat-06`
+(`data/lousas/costureiras.ts`). Antes de tudo, tabela com os dados um embaixo do
+outro (antes em cima, agora embaixo; o x circulado); uma tela por coluna dizendo
+se anda junto com o x (direta) ou ao contrário (inversa); depois a equação já
+montada em frações (8/10 × 6/8 × 5/x = 240/480), simplificada, e o x achado por
+multiplicação cruzada, com uma conferência por outro caminho. Questão de
+grandezas/regra de três que traz só a equação em letras, sem a tabela montada, é
+o contrário do que ele quer: anote como tropeço "tabela e frações não montadas".
+
 **As 7 perguntas do Pablo.** Antes de devolver, passe cada tela por elas:
 (1) onde eu aprendi esta palavra? (2) e com um número maior, na prova?
 (3) de onde veio este número? (4) outra tela diz o contrário? (5) como se lê
