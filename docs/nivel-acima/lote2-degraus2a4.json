@@ -5,7 +5,7 @@
   "tags": [
    "Grandezas + aritmética",
    "Degraus 2 + 1",
-   "Texto ENEM · condição Fuvest (a parada) · média ITA · truque Harvard"
+   "Estilo principal: Harvard (com toques dos outros 3)"
   ],
   "enun": "Uma entregadora sai da loja, vai de moto até um condomínio e volta pelo mesmo caminho. O trajeto de ida mede 18 000 m. Por causa da chuva, ela fez a ida a 45 km/h e a volta a 30 km/h. No condomínio, ficou parada 12 minutos esperando o cliente descer. O aplicativo da loja registra a velocidade média de cada entrega contando o tempo desde a saída até a volta à loja, com a parada inclusa. A velocidade média registrada nessa entrega, em km/h, foi:",
   "tabela": [
@@ -65,7 +65,8 @@
     "Por que não é a média das velocidades",
     "A volta, mais lenta, dura mais, e a parada também conta como tempo gasto. Cada velocidade pesa pelo tempo em que foi usada."
    ]
-  ]
+  ],
+  "principal": "Harvard"
  },
  {
   "g": "Degrau 2",
@@ -73,7 +74,7 @@
   "tags": [
    "Escala + área + unidades",
    "Degraus 2 + 1",
-   "Texto ENEM · condição Fuvest (a cópia) · razão ao quadrado ITA · truque Harvard"
+   "Estilo principal: ENEM (com toques dos outros 3)"
   ],
   "enun": "A prefeitura entregou a um morador a planta de um sítio na escala 1 : 25 000, mas a cópia saiu da impressora reduzida para 50% do tamanho, em todas as direções. Nessa cópia, o terreno aparece como um retângulo de 4 cm por 6 cm. O morador pagará uma taxa de R$ 12 por hectare, e 1 hectare equivale a 10 000 m². A área real do terreno, em hectares, é:",
   "tabela": [
@@ -129,7 +130,8 @@
     "O que sobrou",
     "A taxa de R$ 12 por hectare não era pedida."
    ]
-  ]
+  ],
+  "principal": "ENEM"
  },
  {
   "g": "Degrau 2",
@@ -137,7 +139,7 @@
   "tags": [
    "Mistura + porcentagem",
    "Degraus 2 + 1",
-   "Texto ENEM · condição Fuvest (só entra etanol) · conservação ITA · truque Harvard"
+   "Estilo principal: Fuvest (com toques dos outros 3)"
   ],
   "enun": "Um hospital de campanha usa um gerador movido a uma mistura de gasolina e etanol. O tanque tem 60 L da mistura, que contém 25% de etanol. O fabricante recomenda 40% de etanol. Para corrigir a mistura sem retirar nada do tanque, o técnico vai acrescentar apenas etanol puro (100% etanol). O tanque comporta até 100 L. Quantos litros de etanol puro ele deve acrescentar?",
   "tabela": [
@@ -197,7 +199,8 @@
     "O que foi acrescentado",
     "75 − 60 = 15 L. Conferindo: etanol 15 + 15 = 30 L, e 30 ÷ 75 = 40%."
    ]
-  ]
+  ],
+  "principal": "Fuvest"
  },
  {
   "g": "Degrau 2",
@@ -205,7 +208,7 @@
   "tags": [
    "Vazão + frações",
    "Degraus 2 + 1",
-   "Texto ENEM · condição Fuvest (os 25%) · taxa por hora ITA · truque Harvard"
+   "Estilo principal: ITA (com toques dos outros 3)"
   ],
   "enun": "Uma caixa d'água de 1 200 L está com 25% da capacidade. Há duas torneiras e um ralo, todos abertos ao mesmo tempo. A torneira A, sozinha, enche a caixa vazia em 6 horas; a torneira B, sozinha, em 4 horas. O ralo, sozinho, esvazia a caixa cheia em 12 horas. Quanto tempo leva para a caixa ficar cheia?",
   "tabela": [
@@ -261,7 +264,8 @@
     "Em horas e minutos",
     "0,25 h = 15 min. Então 2 h 15 min."
    ]
-  ]
+  ],
+  "principal": "ITA"
  },
  {
   "g": "Degrau 3",
@@ -269,7 +273,7 @@
   "tags": [
    "Média ponderada",
    "Degraus 3 + 1",
-   "Texto ENEM · condição Fuvest (40 alunos) · pesos ITA · truque Harvard"
+   "Estilo principal: ENEM (com toques dos outros 3)"
   ],
   "enun": "Numa escola, o 8º A tem 30 alunos, com média 5,8 na prova de Matemática. A direção recebeu 10 alunos transferidos, 5 vindos da escola X e 5 da escola Y, e juntou todos numa única turma de 40. A média da escola X era 7,0. A turma só é considerada aprovada se a média dos 40 alunos for exatamente 6,0 ou mais. Para a média da turma chegar a 6,0, a média dos 5 alunos vindos da escola Y deve ser:",
   "tabela": [
@@ -329,7 +333,8 @@
     "Média da escola Y",
     "31 ÷ 5 = 6,2."
    ]
-  ]
+  ],
+  "principal": "ENEM"
  },
  {
   "g": "Degrau 3",
@@ -337,7 +342,7 @@
   "tags": [
    "Mediana",
    "Degraus 3 + 1",
-   "Texto ENEM · condição Fuvest (exatamente 6) · posições ITA · truque Harvard"
+   "Estilo principal: ITA (com toques dos outros 3)"
   ],
   "enun": "Numa turma de 11 alunos, as notas de um simulado (inteiras, de 0 a 10) estão na tabela, e a mediana foi 7. Um 12º aluno, que tinha faltado, fez a prova depois. O professor quer que a mediana das 12 notas seja exatamente 6. A nota mínima de aprovação da escola é 6. Quantas notas inteiras diferentes o 12º aluno poderia tirar para a mediana ser exatamente 6?",
   "tabela": [
@@ -393,7 +398,8 @@
     "Contar",
     "Servem 0, 1, 2, 3, 4 e 5: 6 notas. A nota mínima de aprovação não entrava na pergunta."
    ]
-  ]
+  ],
+  "principal": "ITA"
  },
  {
   "g": "Degrau 3",
@@ -401,7 +407,7 @@
   "tags": [
    "Média e desvio-padrão + porcentagem",
    "Degraus 3 + 1",
-   "Texto ENEM · condição Fuvest (ordem) · transformação ITA · truque Harvard"
+   "Estilo principal: Fuvest (com toques dos outros 3)"
   ],
   "enun": "Uma empresa tem 8 funcionários. Hoje, o salário médio é R$ 2 500 e o desvio-padrão dos salários é R$ 300. Em janeiro, todos terão reajuste de 8% e, depois do reajuste, cada um receberá um abono fixo de R$ 150. Dados o novo salário médio e o novo desvio-padrão, o par correto é:",
   "tabela": [
@@ -457,7 +463,8 @@
     "Resposta",
     "(R$ 2 850 ; R$ 324)."
    ]
-  ]
+  ],
+  "principal": "Fuvest"
  },
  {
   "g": "Degrau 3",
@@ -465,7 +472,7 @@
   "tags": [
    "Média + porcentagem sucessiva",
    "Degraus 3 + 1",
-   "Texto ENEM · condição Fuvest · cancelamento ITA · truque Harvard"
+   "Estilo principal: Harvard (com toques dos outros 3)"
   ],
   "enun": "Uma padaria vendeu em abril 25% a mais do que em março. Em maio, vendeu 20% a menos do que em abril. Nos três meses, a média mensal de vendas foi de R$ 6 500, e a padaria gastou R$ 800 por mês com embalagens. O valor vendido em abril foi:",
   "tabela": [
@@ -521,7 +528,8 @@
     "Abril",
     "1,25 × 6 000 = 7 500."
    ]
-  ]
+  ],
+  "principal": "Harvard"
  },
  {
   "g": "Degrau 4",
@@ -529,7 +537,7 @@
   "tags": [
    "Sistema com 3 incógnitas",
    "Degraus 4 + 1",
-   "Texto ENEM · condição Fuvest (o dobro) · eliminação ITA · truque Harvard"
+   "Estilo principal: ITA (com toques dos outros 3)"
   ],
   "enun": "Num cofrinho há apenas moedas de 25 centavos, de 50 centavos e de 1 real. Ao todo são 36 moedas, que somam R$ 22,00. A quantidade de moedas de 25 centavos é o dobro da quantidade de moedas de 50 centavos. Para pagar um lanche, o dono vai usar todas as moedas de 1 real. Quantas moedas de 1 real há no cofrinho?",
   "tabela": [
@@ -589,7 +597,8 @@
     "Voltar",
     "c = 36 − 21 = 15. Conferindo: 14 · 0,25 = 3,50; 7 · 0,5 = 3,50; 15 · 1 = 15; soma 22,00."
    ]
-  ]
+  ],
+  "principal": "ITA"
  },
  {
   "g": "Degrau 4",
@@ -597,7 +606,7 @@
   "tags": [
    "Sistema + porcentagem",
    "Degraus 4 + 1",
-   "Texto ENEM · condição Fuvest (taxa só na B) · taxa líquida ITA · truque Harvard"
+   "Estilo principal: ENEM (com toques dos outros 3)"
   ],
   "enun": "Uma pessoa dividiu R$ 12 000 em duas aplicações. A aplicação A rende 1% ao mês. A aplicação B rende 2% ao mês, mas o banco cobra uma taxa de 10% sobre o rendimento da B (a A não tem taxa). No fim do primeiro mês, o rendimento líquido das duas, já descontada a taxa, somou R$ 160. Quanto foi aplicado em B?",
   "tabela": [
@@ -652,7 +661,8 @@
     "Conferir",
     "A tem 7 000 e rende 70. B rende 100, líquido 90. 70 + 90 = 160."
    ]
-  ]
+  ],
+  "principal": "ENEM"
  },
  {
   "g": "Degrau 4",
@@ -660,7 +670,7 @@
   "tags": [
    "Inequação por partes",
    "Degraus 4 + 1",
-   "Texto ENEM · condição Fuvest (estritamente) · casos ITA · truque Harvard"
+   "Estilo principal: Fuvest (com toques dos outros 3)"
   ],
   "enun": "Dois planos de celular cobram assim. Plano A: R$ 30 por mês, com 60 minutos de ligações incluídos; cada minuto além disso custa R$ 0,75. Plano B: R$ 54 por mês, com 120 minutos incluídos; cada minuto além disso custa R$ 0,50. Uma pessoa fala t minutos por mês, com t inteiro. O menor valor de t para o qual o plano B fica estritamente mais barato do que o A é:",
   "tabela": [
@@ -718,7 +728,8 @@
     "Resposta",
     "t = 93."
    ]
-  ]
+  ],
+  "principal": "Fuvest"
  },
  {
   "g": "Degrau 4",
@@ -726,7 +737,7 @@
   "tags": [
    "Sistema + amplitude",
    "Degraus 4 + 3",
-   "Texto ENEM · condição Fuvest (o que é pedido) · soma simétrica ITA · truque Harvard"
+   "Estilo principal: Harvard (com toques dos outros 3)"
   ],
   "enun": "No check-in, uma balança só marca pesos a partir de 20 kg. Por isso, uma família pesou três volumes (a mala M, a caixa C e a bolsa B) dois a dois: M com C deu 22 kg, M com B deu 26 kg e C com B deu 30 kg. A companhia aérea aceita até 32 kg por volume. A diferença, em kg, entre o volume mais pesado e o mais leve é:",
   "tabela": [
@@ -782,6 +793,7 @@
     "Atalho",
     "B − M = (C + B) − (M + C) = 30 − 22 = 8, sem resolver o sistema."
    ]
-  ]
+  ],
+  "principal": "Harvard"
  }
 ]

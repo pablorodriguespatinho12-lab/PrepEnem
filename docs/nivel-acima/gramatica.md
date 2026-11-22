@@ -50,7 +50,7 @@ Contagem nos exemplos (34 resolvidas):
 - Frases de método do canal: "pensa num caso exagerado" (100 portas); "número absurdo não se soma na mão"; "o que mudou e o que não mudou" (base/altura).
 
 ## Receita para a fábrica (Fase 4)
-**Regra do Pablo (22/11/2026, depois da amostra do lote 1): TODA questão mistura os 4 estilos, não um estilo por questão.** "Gostei de todos." Cada questão tem ao mesmo tempo:
+**Regra do Pablo (22/11/2026, versão final, depois do lote 2): cada questão tem UM estilo principal (Harvard, ITA, ENEM ou Fuvest) e toques dos outros 3. Em cada degrau, as 4 candidatas têm 4 principais diferentes (uma de cada).** Antes: "mistura igual nos 4" (lote 1). Cada questão tem ao mesmo tempo, com o principal mais forte:
 - **ENEM:** situação real, texto de ~500+ letras, tabela ou desenho, dado que sobra.
 - **Fuvest:** pergunta precisa, uma condição escondida no texto.
 - **ITA:** uma ideia de contagem/técnica que destrava (contagem dupla, lugar geométrico, período).
