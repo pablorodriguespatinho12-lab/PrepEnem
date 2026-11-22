@@ -1,0 +1,3334 @@
+[
+ {
+  "id": "d2-escada-mat-ita-gra-00d",
+  "materia": "Matemática",
+  "tema": "Grandezas e Medidas",
+  "enunciado": "Uma entregadora sai da loja, vai de moto até um condomínio e volta pelo mesmo caminho. O trajeto de ida mede 18 000 m. Por causa da chuva, ela fez a ida a 45 km/h e a volta a 30 km/h. No condomínio, ficou parada 12 minutos esperando o cliente descer. O aplicativo da loja registra a velocidade média de cada entrega contando o tempo desde a saída até a volta à loja, com a parada inclusa. A velocidade média registrada nessa entrega, em km/h, foi:\n\nDados: Ida: 18 000 m · 45 km/h; Parada: 0 · 12 min parada; Volta: 18 000 m · 30 km/h.",
+  "A": "25",
+  "B": "30",
+  "C": "32,1",
+  "D": "36",
+  "E": "37,5",
+  "resposta": "B",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "A volta, mais lenta, dura mais, e a parada também conta como tempo gasto. Cada velocidade pesa pelo tempo em que foi usada. B. Erros: A = Fez a média de 45, 30 e 0, como se cada fase durasse igual. C = Escreveu 12 min como 0,12 h. D = Esqueceu a parada: 36 km em 1 h. E = Média simples de 45 e 30.",
+   "ideia": "Velocidade média não é a média das velocidades: é a distância total dividida pelo tempo total. A parada de 12 minutos também conta como tempo.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Ida",
+        "18 000 m · 45 km/h"
+       ],
+       [
+        "Parada",
+        "0 · 12 min parada"
+       ],
+       [
+        "Volta",
+        "18 000 m · 30 km/h"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "V = D ÷ T",
+      "leitura": "distância total ÷ tempo total, com a parada",
+      "letras": [
+       {
+        "letra": "V",
+        "oque": "velocidade média (o que a questão quer)"
+       },
+       {
+        "letra": "D",
+        "oque": "distância total"
+       },
+       {
+        "letra": "T",
+        "oque": "tempo total"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Tudo em km e em horas",
+     "texto": "18 000 m = 18 km. Ida: 18 ÷ 45 = 0,4 h (24 min). Volta: 18 ÷ 30 = 0,6 h (36 min)."
+    },
+    {
+     "titulo": "Tempo total",
+     "texto": "24 + 12 + 36 = 72 min = 1,2 h. (12 min é 0,2 h, e não 0,12 h.)"
+    },
+    {
+     "titulo": "Distância total",
+     "texto": "Ida e volta: 18 + 18 = 36 km."
+    },
+    {
+     "titulo": "Média",
+     "texto": "Distância total ÷ tempo total: 36 ÷ 1,2 = 30 km/h."
+    },
+    {
+     "titulo": "Por que não é a média das velocidades",
+     "texto": "A volta, mais lenta, dura mais, e a parada também conta como tempo gasto. Cada velocidade pesa pelo tempo em que foi usada."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Velocidade média não é a média das velocidades: é a distância total dividida pelo tempo total.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "V = D ÷ T"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "ENEM 2022 q.138: tudo na mesma unidade de tempo antes de contar",
+  "estiloPrincipal": "Harvard"
+ },
+ {
+  "id": "d2-escada-mat-ita-gra-00a",
+  "materia": "Matemática",
+  "tema": "Grandezas e Medidas",
+  "enunciado": "Uma família herdou um sítio e quer saber o tamanho dele para decidir se vende ou se mantém. Na prefeitura, recebeu a planta do sítio, desenhada na escala 1 : 25 000. A atendente avisou que a copiadora estava desregulada e que a cópia entregue saiu reduzida para 50% do tamanho da planta original, em todas as direções, sem nenhuma indicação disso no papel. Na cópia, o sítio aparece como um retângulo de 4 cm de largura por 6 cm de comprimento. Para o imposto, a prefeitura cobra R$ 12 por hectare, e o corretor lembrou que 1 hectare equivale a 10 000 m². A família vai usar a área real do terreno para calcular o valor de venda. Essa área real, em hectares, é:\n\nDados: Largura: 4 cm; Comprimento: 6 cm; Escala impressa: 1 : 25 000.",
+  "A": "150",
+  "B": "300",
+  "C": "600",
+  "D": "6 000",
+  "E": "60 000",
+  "resposta": "C",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "A taxa de R$ 12 por hectare não era pedida. C. Erros: A = Ignorou a redução da cópia (usou 1 : 25 000 direto). B = Dobrou a área, mas lado ×2 faz a área ×4, não ×2. D = Passou de m² para hectare dividindo por 1 000. E = Passou de m² para hectare dividindo por 100.",
+   "ideia": "A cópia encolheu a planta pela metade, então a escala de verdade é outra. Ache a escala real, converta os lados e só então calcule a área em hectares.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Largura",
+        "4 cm"
+       ],
+       [
+        "Comprimento",
+        "6 cm"
+       ],
+       [
+        "Escala impressa",
+        "1 : 25 000"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "A = L × C",
+      "leitura": "largura real × comprimento real, em metros; depois em hectares",
+      "letras": [
+       {
+        "letra": "A",
+        "oque": "área real (o que a questão quer)"
+       },
+       {
+        "letra": "L",
+        "oque": "largura real"
+       },
+       {
+        "letra": "C",
+        "oque": "comprimento real"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Qual é a escala de verdade",
+     "texto": "A cópia tem metade do tamanho, então 1 cm da cópia vale 2 cm da planta, que vale 2 · 25 000 = 50 000 cm do chão: 1 cm da cópia = 500 m."
+    },
+    {
+     "titulo": "Lados reais",
+     "texto": "4 cm → 2 000 m. 6 cm → 3 000 m."
+    },
+    {
+     "titulo": "Área em m²",
+     "texto": "2 000 × 3 000 = 6 000 000 m²."
+    },
+    {
+     "titulo": "Em hectares",
+     "texto": "6 000 000 ÷ 10 000 = 600 ha."
+    },
+    {
+     "titulo": "O que sobrou",
+     "texto": "A taxa de R$ 12 por hectare não era pedida."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: A cópia encolheu a planta pela metade, então a escala de verdade é outra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "A = L × C"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "ENEM 2022 q.160 (740 letras): escala 1 : 50 e margem escondida; aqui a cópia reduzida",
+  "estiloPrincipal": "ENEM"
+ },
+ {
+  "id": "d2-escada-mat-ita-gra-00c",
+  "materia": "Matemática",
+  "tema": "Grandezas e Medidas",
+  "enunciado": "Um hospital de campanha, montado depois de uma enchente, usa um gerador movido a uma mistura de gasolina e etanol. O tanque do gerador tem agora 60 L da mistura, que contém 25% de etanol. O fabricante só garante o funcionamento se a mistura tiver 40% de etanol. Para corrigir a mistura, o técnico vai acrescentar apenas etanol puro (100% etanol), tirado de uma lata separada. O tanque comporta, no máximo, 100 L, e nada pode ser retirado dele durante a correção, para não entupir o filtro. Quantos litros de etanol puro o técnico deve acrescentar para que a mistura passe a ter exatamente 40% de etanol?\n\nDados: Mistura no tanque: 60 L; Etanol na mistura: 25%; Etanol desejado: 40%; Capacidade: 100 L.",
+  "A": "9",
+  "B": "15",
+  "C": "24",
+  "D": "25",
+  "E": "36",
+  "resposta": "B",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "75 − 60 = 15 L. Conferindo: etanol 15 + 15 = 30 L, e 30 ÷ 75 = 40%. B. Erros: A = 15% de 60: esqueceu que o total cresce depois de acrescentar. C = 40% de 60: esqueceu que o tanque já tinha 15 L de etanol. D = Supôs o tanque cheio (100 L): 40 − 15 = 25. E = 60% de 60: pegou a parte que não é etanol.",
+   "ideia": "Só entra etanol, então a gasolina não muda: 45 L. Se o etanol final é 40%, a gasolina é 60% do total, e o total sai dessa conta.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Mistura no tanque",
+        "60 L"
+       ],
+       [
+        "Etanol na mistura",
+        "25%"
+       ],
+       [
+        "Etanol desejado",
+        "40%"
+       ],
+       [
+        "Capacidade",
+        "100 L"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "X = G ÷ 0,6 − M",
+      "leitura": "total final menos o que já está no tanque",
+      "letras": [
+       {
+        "letra": "X",
+        "oque": "etanol a acrescentar (o que a questão quer)"
+       },
+       {
+        "letra": "G",
+        "oque": "gasolina, que não muda"
+       },
+       {
+        "letra": "M",
+        "oque": "mistura que já está no tanque"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que está no tanque",
+     "texto": "25% de 60 = 15 L de etanol e 45 L de gasolina."
+    },
+    {
+     "titulo": "O que não muda",
+     "texto": "Só entra etanol: os 45 L de gasolina continuam 45 L."
+    },
+    {
+     "titulo": "Quanto o resto vale no fim",
+     "texto": "No fim, 40% é etanol, então a gasolina é 60% do total: 45 = 0,6 · T."
+    },
+    {
+     "titulo": "Total final",
+     "texto": "T = 45 ÷ 0,6 = 75 L (cabe: 75 < 100)."
+    },
+    {
+     "titulo": "O que foi acrescentado",
+     "texto": "75 − 60 = 15 L. Conferindo: etanol 15 + 15 = 30 L, e 30 ÷ 75 = 40%."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Só entra etanol, então a gasolina não muda: 45 L.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "X = G ÷ 0,6 − M"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "Fuvest (repo) q.33: porcentagem com várias partes e uma condição no texto",
+  "estiloPrincipal": "Fuvest"
+ },
+ {
+  "id": "d2-escada-mat-ita-gra-00b",
+  "materia": "Matemática",
+  "tema": "Grandezas e Medidas",
+  "enunciado": "Uma caixa d'água de 1 200 L está com 25% da capacidade. Há duas torneiras e um ralo, todos abertos ao mesmo tempo. A torneira A, sozinha, enche a caixa vazia em 6 horas; a torneira B, sozinha, em 4 horas. O ralo, sozinho, esvazia a caixa cheia em 12 horas. Quanto tempo leva para a caixa ficar cheia?\n\nDados: Torneira A: enche em 6 h; Torneira B: enche em 4 h; Ralo: esvazia em 12 h.",
+  "A": "1 h 30 min",
+  "B": "1 h 48 min",
+  "C": "2 h 15 min",
+  "D": "2 h 25 min",
+  "E": "3 h",
+  "resposta": "C",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "0,25 h = 15 min. Então 2 h 15 min. C. Erros: A = Somou a vazão do ralo em vez de subtrair. B = Esqueceu o ralo. D = Achou 2,25 h e leu como 2 h 25 min. E = Calculou para a caixa vazia (esqueceu os 25%).",
+   "ideia": "Some as vazões (o ralo conta negativo) e divida o que falta pela vazão junta. O que falta é 75% da caixa, não a caixa toda.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Torneira A",
+        "enche em 6 h"
+       ],
+       [
+        "Torneira B",
+        "enche em 4 h"
+       ],
+       [
+        "Ralo",
+        "esvazia em 12 h"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "T = Q ÷ V",
+      "leitura": "o que falta encher ÷ vazão das três juntas",
+      "letras": [
+       {
+        "letra": "T",
+        "oque": "tempo (o que a questão quer)"
+       },
+       {
+        "letra": "Q",
+        "oque": "quanto falta encher"
+       },
+       {
+        "letra": "V",
+        "oque": "vazão das três juntas"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Vazão de cada um (parte da caixa por hora)",
+     "texto": "A: 1/6. B: 1/4. Ralo: −1/12."
+    },
+    {
+     "titulo": "Vazão junta",
+     "texto": "1/6 + 1/4 − 1/12 = 2/12 + 3/12 − 1/12 = 4/12 = 1/3 da caixa por hora."
+    },
+    {
+     "titulo": "Quanto falta",
+     "texto": "A caixa tem 25%, faltam 75% = 3/4."
+    },
+    {
+     "titulo": "Tempo",
+     "texto": "(3/4) ÷ (1/3) = 9/4 h = 2,25 h."
+    },
+    {
+     "titulo": "Em horas e minutos",
+     "texto": "0,25 h = 15 min. Então 2 h 15 min."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Some as vazões (o ralo conta negativo) e divida o que falta pela vazão junta.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "T = Q ÷ V"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "ENEM 2022 q.137: taxa por tempo e quantidade que já existe",
+  "estiloPrincipal": "ITA"
+ },
+ {
+  "id": "d2-escada-mat-ita-est-00a",
+  "materia": "Matemática",
+  "tema": "Estatística",
+  "enunciado": "Numa escola pública, o 8º A tem 30 alunos, e a média da turma na prova de Matemática do bimestre foi 5,8. No começo do bimestre seguinte, a direção recebeu 10 alunos transferidos de outras duas escolas, 5 vindos da escola X e 5 vindos da escola Y, e juntou todos numa única turma de 40 alunos. As notas dos transferidos na prova anterior não foram apagadas: a média dos 5 alunos da escola X era 7,0. Segundo o regimento, a turma só é considerada aprovada no bimestre se a média dos 40 alunos for exatamente 6,0 ou mais. A coordenadora quer saber qual precisa ser, no mínimo, a média dos 5 alunos vindos da escola Y para a turma chegar a 6,0, sem mexer nas notas dos alunos do 8º A. Essa média deverá ser de:\n\nDados: 8º A original: 30 · 5,8; Escola X: 5 · 7,0; Escola Y: 5 · ?.",
+  "A": "5,0",
+  "B": "5,8",
+  "C": "6,0",
+  "D": "6,2",
+  "E": "6,6",
+  "resposta": "D",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "31 ÷ 5 = 6,2. D. Erros: A = Fez 2 · 6,0 − 7,0 e ignorou os 30 alunos. B = Repetiu a média da turma antiga. C = Repetiu a meta. E = Parou na média do grupo dos 10 transferidos.",
+   "ideia": "Ache quantos pontos a turma precisa ter no total e tire o que já tem. O que sobra é das duas escolas novas: tire a escola X e divida pelos 5 da escola Y.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "8º A original",
+        "30 · 5,8"
+       ],
+       [
+        "Escola X",
+        "5 · 7,0"
+       ],
+       [
+        "Escola Y",
+        "5 · ?"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "Y = (P − A − X) ÷ 5",
+      "leitura": "pontos que faltam para a escola Y ÷ 5 alunos",
+      "letras": [
+       {
+        "letra": "Y",
+        "oque": "média da escola Y (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "pontos que a turma precisa"
+       },
+       {
+        "letra": "A",
+        "oque": "pontos da turma antiga"
+       },
+       {
+        "letra": "X",
+        "oque": "pontos da escola X"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Pontos que a turma precisa",
+     "texto": "40 alunos × 6,0 = 240 pontos."
+    },
+    {
+     "titulo": "O que a turma antiga já tem",
+     "texto": "30 × 5,8 = 174 pontos."
+    },
+    {
+     "titulo": "O que falta",
+     "texto": "240 − 174 = 66 pontos para os 10 transferidos (média 6,6)."
+    },
+    {
+     "titulo": "Tirar a escola X",
+     "texto": "5 × 7,0 = 35. Sobram 66 − 35 = 31 pontos."
+    },
+    {
+     "titulo": "Média da escola Y",
+     "texto": "31 ÷ 5 = 6,2."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Ache quantos pontos a turma precisa ter no total e tire o que já tem.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "Y = (P − A − X) ÷ 5"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "ENEM 2022 q.136 (786 letras): média ponderada de dois grupos e um dado que sobra",
+  "estiloPrincipal": "ENEM"
+ },
+ {
+  "id": "d2-escada-mat-ita-est-00b",
+  "materia": "Matemática",
+  "tema": "Estatística",
+  "enunciado": "Numa turma de 11 alunos, as notas de um simulado (inteiras, de 0 a 10) estão na tabela, e a mediana foi 7. Dois alunos que tinham faltado fazem a prova depois, e a turma passa a ter 13 alunos. O professor quer que a mediana das 13 notas seja exatamente 6. A nota mínima de aprovação da escola é 6. Considerando só quais notas os dois alunos tiraram, sem importar qual aluno tirou qual (o par {5, 6} é o mesmo que {6, 5}), quantos pares de notas fazem a mediana ser exatamente 6?\n\nDados: Nota 4: 2; Nota 5: 3; Nota 7: 3; Nota 8: 2; Nota 10: 1.",
+  "A": "6",
+  "B": "7",
+  "C": "11",
+  "D": "13",
+  "E": "21",
+  "resposta": "B",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "{6, 6} e {6, k} com k de 0 a 5: 1 + 6 = 7 pares. B. Erros: A = Esqueceu o par {6, 6}. C = Deixou a outra nota livre: um 6 e qualquer nota de 0 a 10. D = Contou pares ordenados: (6, k) e (k, 6) separados. E = Contou pares de notas de 0 a 6 sem exigir que um deles seja 6.",
+   "ideia": "Com 13 notas, a mediana é a 7ª. Veja quantas notas já estão abaixo de 6 e transforme isso em duas regras para as 2 notas novas.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Nota 4",
+        "2"
+       ],
+       [
+        "Nota 5",
+        "3"
+       ],
+       [
+        "Nota 7",
+        "3"
+       ],
+       [
+        "Nota 8",
+        "2"
+       ],
+       [
+        "Nota 10",
+        "1"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "N = D + K",
+      "leitura": "pares {6, 6} + pares {6, outra nota de 0 a 5}",
+      "letras": [
+       {
+        "letra": "N",
+        "oque": "pares que servem (o que a questão quer)"
+       },
+       {
+        "letra": "D",
+        "oque": "pares com dois 6"
+       },
+       {
+        "letra": "K",
+        "oque": "pares com um 6 e uma nota de 0 a 5"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "A mediana de 13 notas",
+     "texto": "É a 7ª nota, em ordem."
+    },
+    {
+     "titulo": "O que as 11 notas já têm",
+     "texto": "5 notas abaixo de 6 (4, 4, 5, 5, 5), nenhuma igual a 6 e 6 acima (7, 7, 7, 8, 8, 10)."
+    },
+    {
+     "titulo": "Para a 7ª ser 6",
+     "texto": "Precisa haver no máximo 6 notas menores que 6 e pelo menos 7 notas menores ou iguais a 6."
+    },
+    {
+     "titulo": "Traduzindo para as 2 notas novas",
+     "texto": "No máximo uma delas é menor que 6 (senão seriam 7 notas menores). E as duas são menores ou iguais a 6 (para chegar a 7 notas ≤ 6)."
+    },
+    {
+     "titulo": "Juntando",
+     "texto": "As duas notas são ≤ 6, e pelo menos uma é exatamente 6."
+    },
+    {
+     "titulo": "Contar",
+     "texto": "{6, 6} e {6, k} com k de 0 a 5: 1 + 6 = 7 pares."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Com 13 notas, a mediana é a 7ª.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "N = D + K"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "Fuvest (repo) q.34 (contar listas com mediana, média e moda): reforcei de 1 para 2 alunos faltantes, contagem de pares",
+  "estiloPrincipal": "ITA"
+ },
+ {
+  "id": "d2-escada-mat-ita-est-00c",
+  "materia": "Matemática",
+  "tema": "Estatística",
+  "enunciado": "Uma empresa tem 8 funcionários. Hoje, o salário médio é R$ 2 500 e o desvio-padrão dos salários é R$ 300. O sindicato negociou, para janeiro, um reajuste de 8% sobre todos os salários e, depois que o reajuste for aplicado, um abono fixo de R$ 150, pago igualmente a todos. Os 8 funcionários continuam os mesmos. A diretoria quer divulgar o novo salário médio e o novo desvio-padrão. Dados esses valores, o par (média ; desvio-padrão) correto, depois do reajuste e do abono, é:\n\nDados: Salário médio: R$ 2 500; Desvio-padrão: R$ 300; Reajuste: 8%; Abono (depois): R$ 150.",
+  "A": "(R$ 2 850 ; R$ 324)",
+  "B": "(R$ 2 850 ; R$ 474)",
+  "C": "(R$ 2 850 ; R$ 300)",
+  "D": "(R$ 2 700 ; R$ 324)",
+  "E": "(R$ 2 862 ; R$ 324)",
+  "resposta": "A",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "(R$ 2 850 ; R$ 324). A. Erros: B = Somou o abono ao desvio: 324 + 150. C = Disse que o desvio não muda, mas o reajuste de 8% muda. D = Esqueceu o abono. E = Pôs o abono antes do reajuste; o enunciado diz depois.",
+   "ideia": "Multiplicar todos os salários por 1,08 muda a média e o desvio. Somar o mesmo valor em todos muda só a média, nunca o desvio.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Salário médio",
+        "R$ 2 500"
+       ],
+       [
+        "Desvio-padrão",
+        "R$ 300"
+       ],
+       [
+        "Reajuste",
+        "8%"
+       ],
+       [
+        "Abono (depois)",
+        "R$ 150"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "N = 1,08 · M + 150  e  E = 1,08 · D",
+      "leitura": "nova média e novo desvio",
+      "letras": [
+       {
+        "letra": "N",
+        "oque": "nova média"
+       },
+       {
+        "letra": "M",
+        "oque": "média de hoje"
+       },
+       {
+        "letra": "E",
+        "oque": "novo desvio-padrão"
+       },
+       {
+        "letra": "D",
+        "oque": "desvio-padrão de hoje"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O reajuste multiplica tudo",
+     "texto": "Cada salário vira 1,08 vez o que era. A média: 2 500 × 1,08 = 2 700. O desvio: 300 × 1,08 = 324."
+    },
+    {
+     "titulo": "O abono soma o mesmo valor em todos",
+     "texto": "Todos sobem 150, então a média sobe 150: 2 700 + 150 = 2 850."
+    },
+    {
+     "titulo": "O abono não muda a dispersão",
+     "texto": "Somar o mesmo número a todos desloca os salários juntos; as distâncias entre eles ficam iguais, e o desvio continua 324."
+    },
+    {
+     "titulo": "Resposta",
+     "texto": "(R$ 2 850 ; R$ 324)."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Multiplicar todos os salários por 1,08 muda a média e o desvio.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "N = 1,08 · M + 150  e  E = 1,08 · D"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "ENEM 2021 q.173 (1 205 letras): média e desvio-padrão juntos, comparados com o tamanho da média",
+  "estiloPrincipal": "Fuvest"
+ },
+ {
+  "id": "d2-escada-mat-ita-est-00d",
+  "materia": "Matemática",
+  "tema": "Estatística",
+  "enunciado": "Uma padaria vendeu em abril 25% a mais do que em março. Em maio, vendeu 20% a menos do que em abril. Nos três meses, a média mensal de vendas foi de R$ 6 500, e a padaria gastou R$ 800 por mês com embalagens. O valor vendido em abril foi:\n\nDados: Março: base; Abril: 25% a mais que março; Maio: 20% a menos que abril.",
+  "A": "R$ 6 000",
+  "B": "R$ 6 500",
+  "C": "R$ 7 500",
+  "D": "R$ 7 800",
+  "E": "R$ 8 125",
+  "resposta": "C",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "1,25 × 6 000 = 7 500. C. Erros: A = Parou no valor de março. B = Respondeu a própria média. D = Aplicou os 20% sobre a média. E = Aplicou os 25% sobre a média.",
+   "ideia": "Escreva tudo em função de março. Subir 25% e cair 20% se cancela, então maio é igual a março, e a soma dos três meses fica 3,25 vezes março.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Março",
+        "base"
+       ],
+       [
+        "Abril",
+        "25% a mais que março"
+       ],
+       [
+        "Maio",
+        "20% a menos que abril"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "3,25 · T = 3 · M",
+      "leitura": "soma dos três meses = 3 vezes a média",
+      "letras": [
+       {
+        "letra": "T",
+        "oque": "vendas de março"
+       },
+       {
+        "letra": "M",
+        "oque": "média mensal dos três meses"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Tudo em função de março (M)",
+     "texto": "Abril = 1,25 M."
+    },
+    {
+     "titulo": "Maio",
+     "texto": "Maio = 0,8 · 1,25 M = 1,0 M. Subir 25% e cair 20% se cancela: maio = março."
+    },
+    {
+     "titulo": "Soma dos três meses",
+     "texto": "M + 1,25 M + M = 3,25 M. A soma é 3 × 6 500 = 19 500."
+    },
+    {
+     "titulo": "Março",
+     "texto": "3,25 M = 19 500, então M = 6 000."
+    },
+    {
+     "titulo": "Abril",
+     "texto": "1,25 × 6 000 = 7 500."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Escreva tudo em função de março.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "3,25 · T = 3 · M"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "ENEM 2021 q.157: +10% e −10% não se anulam; aqui +25% e −20% se anulam",
+  "estiloPrincipal": "Harvard"
+ },
+ {
+  "id": "d2-escada-mat-ita-equ-00b",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "Num cofrinho há apenas moedas de 25 centavos, de 50 centavos e de 1 real. Ao todo são 36 moedas, que somam R$ 22,00. A quantidade de moedas de 25 centavos é o dobro da quantidade de moedas de 50 centavos. Para pagar um lanche, o dono vai usar todas as moedas de 1 real. Quantas moedas de 1 real há no cofrinho?\n\nDados: 25 centavos: o dobro da de 50; 50 centavos: ?; 1 real: ?; Total: 36 moedas, R$ 22,00.",
+  "A": "7",
+  "B": "14",
+  "C": "15",
+  "D": "18",
+  "E": "22",
+  "resposta": "C",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "c = 36 − 21 = 15. Conferindo: 14 · 0,25 = 3,50; 7 · 0,5 = 3,50; 15 · 1 = 15; soma 22,00. C. Erros: A = Achou a quantidade de moedas de 50 centavos. B = Achou a de 25 centavos. D = Metade das moedas (36 ÷ 2). E = Respondeu o valor total.",
+   "ideia": "Dê uma letra a cada tipo de moeda. Duas equações (quantas moedas e quantos reais), com a relação do dobro, resolvem tudo.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "25 centavos",
+        "o dobro da de 50"
+       ],
+       [
+        "50 centavos",
+        "?"
+       ],
+       [
+        "1 real",
+        "?"
+       ],
+       [
+        "Total",
+        "36 moedas, R$ 22,00"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "m + c = 22  e  3m + c = 36",
+      "leitura": "valor em reais e quantidade de moedas",
+      "letras": [
+       {
+        "letra": "m",
+        "oque": "moedas de 50 centavos"
+       },
+       {
+        "letra": "c",
+        "oque": "moedas de 1 real (o que a questão quer)"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Uma letra para cada",
+     "texto": "Moedas de 50 centavos: b. De 25 centavos: 2b. De 1 real: c."
+    },
+    {
+     "titulo": "Total de moedas",
+     "texto": "2b + b + c = 36, então c = 36 − 3b."
+    },
+    {
+     "titulo": "Total em reais",
+     "texto": "0,25 · 2b + 0,5 · b + c = 22, ou seja, 0,5b + 0,5b + c = 22 e b + c = 22."
+    },
+    {
+     "titulo": "Juntar",
+     "texto": "b + 36 − 3b = 22, então 36 − 2b = 22 e b = 7."
+    },
+    {
+     "titulo": "Voltar",
+     "texto": "c = 36 − 21 = 15. Conferindo: 14 · 0,25 = 3,50; 7 · 0,5 = 3,50; 15 · 1 = 15; soma 22,00."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Dê uma letra a cada tipo de moeda.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "m + c = 22  e  3m + c = 36"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "ITA 2025 q.7: sistema linear; aqui com uma relação \"o dobro\" entre incógnitas",
+  "estiloPrincipal": "ITA"
+ },
+ {
+  "id": "d2-escada-mat-ita-equ-00a",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "Uma professora aposentada recebeu uma indenização de R$ 12 000 e decidiu dividi-la em duas aplicações, sem deixar nada parado na conta. A aplicação A é uma poupança que rende 1% ao mês, sem taxa nenhuma. A aplicação B é um fundo que rende 2% ao mês, mas o banco cobra uma taxa de administração de 10% sobre o rendimento do mês dessa aplicação (a poupança não tem taxa). A professora diz que, no primeiro mês, os rendimentos líquidos das duas aplicações, já descontada a taxa do fundo, somaram R$ 160. O gerente comentou que a tarifa de manutenção da conta, de R$ 15 por mês, é cobrada à parte e não entra nessa soma. Com base nessas informações, o valor aplicado no fundo B foi:\n\nDados: A: 1% ao mês · nenhuma; B: 2% ao mês · 10% do rendimento.",
+  "A": "R$ 4 000",
+  "B": "R$ 5 000",
+  "C": "R$ 6 000",
+  "D": "R$ 7 000",
+  "E": "R$ 8 000",
+  "resposta": "B",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "A tem 7 000 e rende 70. B rende 100, líquido 90. 70 + 90 = 160. B. Erros: A = Esqueceu a taxa de 10% da B. C = Dividiu os 12 000 por 2. D = Respondeu quanto foi para a A. E = 160 ÷ 0,02: pôs todo o rendimento na B.",
+   "ideia": "A taxa de 10% só vale para o fundo B, então ele rende de verdade 1,8%. Monte o sistema com o rendimento líquido e elimine uma incógnita.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "A",
+        "1% ao mês · nenhuma"
+       ],
+       [
+        "B",
+        "2% ao mês · 10% do rendimento"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "0,01 · (12 000 − B) + 0,018 · B = 160",
+      "leitura": "rendimento da A + rendimento líquido da B",
+      "letras": [
+       {
+        "letra": "B",
+        "oque": "valor aplicado no fundo B (o que a questão quer)"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Quanto a B rende de verdade",
+     "texto": "2% menos 10% desse rendimento: 2% × 0,9 = 1,8% ao mês."
+    },
+    {
+     "titulo": "Sistema",
+     "texto": "x + y = 12 000 e 0,01x + 0,018y = 160."
+    },
+    {
+     "titulo": "Eliminar x",
+     "texto": "x = 12 000 − y, então 120 − 0,01y + 0,018y = 160."
+    },
+    {
+     "titulo": "Resolver",
+     "texto": "0,008y = 40, então y = 5 000."
+    },
+    {
+     "titulo": "Conferir",
+     "texto": "A tem 7 000 e rende 70. B rende 100, líquido 90. 70 + 90 = 160."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: A taxa de 10% só vale para o fundo B, então ele rende de verdade 1,8%.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "0,01 · (12 000 − B) + 0,018 · B = 160"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "ENEM 2022 q.140 (649 letras): taxa sobre um valor, não sobre outro",
+  "estiloPrincipal": "ENEM"
+ },
+ {
+  "id": "d2-escada-mat-ita-equ-00c",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "Uma pessoa está comparando dois planos de celular só pelo que gasta com ligações, porque a internet é igual nos dois. Plano A: R$ 30 por mês, com 60 minutos de ligações incluídos; cada minuto além disso custa R$ 0,75. Plano B: R$ 54 por mês, com 120 minutos incluídos; cada minuto além disso custa R$ 0,50. Ela fala t minutos por mês, com t inteiro, e quer saber a partir de quando o plano B compensa. O menor valor de t para o qual o plano B fica estritamente mais barato do que o A é:\n\nDados: A: R$ 30 · 60 min · R$ 0,75; B: R$ 54 · 120 min · R$ 0,50.",
+  "A": "36",
+  "B": "92",
+  "C": "93",
+  "D": "120",
+  "E": "156",
+  "resposta": "C",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "t = 93. C. Erros: A = Usou t > 36, que só vale depois dos 120 minutos. B = Parou na igualdade (92): \"mais barato\" pede estritamente menor. D = Pegou os 120 minutos incluídos do B. E = Contou os 60 minutos incluídos nos dois planos.",
+   "ideia": "Cada plano tem uma conta por partes. Compare onde elas se cruzam, e lembre que \"estritamente mais barato\" exclui o empate.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "A",
+        "R$ 30 · 60 min · R$ 0,75"
+       ],
+       [
+        "B",
+        "R$ 54 · 120 min · R$ 0,50"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "A = 30 + 0,75 · (t − 60)",
+      "leitura": "plano A depois dos 60 minutos; o plano B fica em 54",
+      "letras": [
+       {
+        "letra": "A",
+        "oque": "custo do plano A"
+       },
+       {
+        "letra": "t",
+        "oque": "minutos falados (o que a questão quer)"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Quanto custa cada plano",
+     "texto": "A: 30 até 60 min; depois, 30 + 0,75 (t − 60). B: 54 até 120 min; depois, 54 + 0,50 (t − 120)."
+    },
+    {
+     "titulo": "Entre 60 e 120 min",
+     "texto": "B custa 54 fixo. A passa de 54 quando 0,75 (t − 60) > 24, isto é, t − 60 > 32, t > 92."
+    },
+    {
+     "titulo": "Em t = 92",
+     "texto": "A = 30 + 0,75 · 32 = 54 = B. Empate: B ainda não é mais barato."
+    },
+    {
+     "titulo": "Em t = 93",
+     "texto": "A = 30 + 0,75 · 33 = 54,75 e B = 54. B é mais barato. Acima de 120, A − B = 0,25 t − 9 > 0, então continua."
+    },
+    {
+     "titulo": "Resposta",
+     "texto": "t = 93."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Cada plano tem uma conta por partes.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "A = 30 + 0,75 · (t − 60)"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "ENEM 2021 q.176: preço por partes (franquia + excedente)",
+  "estiloPrincipal": "Fuvest"
+ },
+ {
+  "id": "d2-escada-mat-ita-equ-00d",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "No check-in, uma balança só marca pesos a partir de 20 kg. Por isso, uma família pesou três volumes (a mala M, a caixa C e a bolsa B) dois a dois: M com C deu 22 kg, M com B deu 26 kg e C com B deu 30 kg. A companhia aérea aceita até 32 kg por volume. A diferença, em kg, entre o volume mais pesado e o mais leve é:\n\nDados: M + C: 22 kg; M + B: 26 kg; C + B: 30 kg.",
+  "A": "4",
+  "B": "8",
+  "C": "9",
+  "D": "17",
+  "E": "39",
+  "resposta": "B",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "B − M = (C + B) − (M + C) = 30 − 22 = 8, sem resolver o sistema. B. Erros: A = Metade da diferença 30 − 22. C = Achou o mais leve (9 kg) e parou. D = Achou o mais pesado (17 kg) e parou. E = Respondeu o peso dos três juntos.",
+   "ideia": "Cada volume aparece em duas pesagens. A diferença pedida sai direto de duas pesagens, sem achar o peso de cada um.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "M + C",
+        "22 kg"
+       ],
+       [
+        "M + B",
+        "26 kg"
+       ],
+       [
+        "C + B",
+        "30 kg"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "D = 30 − 22",
+      "leitura": "(caixa + bolsa) − (mala + caixa) = bolsa − mala",
+      "letras": [
+       {
+        "letra": "D",
+        "oque": "diferença entre o mais pesado e o mais leve (o que a questão quer)"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Somar as três pesagens",
+     "texto": "22 + 26 + 30 = 78. Cada volume apareceu duas vezes: 2 (M + C + B) = 78."
+    },
+    {
+     "titulo": "Os três juntos",
+     "texto": "M + C + B = 39 kg."
+    },
+    {
+     "titulo": "Cada um",
+     "texto": "B = 39 − 22 = 17. C = 39 − 26 = 13. M = 39 − 30 = 9."
+    },
+    {
+     "titulo": "Diferença",
+     "texto": "17 − 9 = 8 kg."
+    },
+    {
+     "titulo": "Atalho",
+     "texto": "B − M = (C + B) − (M + C) = 30 − 22 = 8, sem resolver o sistema."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Cada volume aparece em duas pesagens.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "D = 30 − 22"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "IME 2024 q.4: soma e produto das raízes; o truque é não resolver cada incógnita",
+  "estiloPrincipal": "Harvard"
+ },
+ {
+  "id": "d2-escada-mat-ita-fun-00a",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "Uma confeitaria de bairro quer descobrir o preço ideal do seu bolo de cenoura. Durante três semanas seguidas, o dono mudou o preço e anotou quantos bolos vendeu por semana, como mostra a tabela, e percebeu que a quantidade vendida varia com o preço seguindo uma reta. Cada bolo custa R$ 10 para ser produzido (ingredientes e embalagem), e há um gasto fixo de R$ 300 por semana com o aluguel do forno e a conta de luz. O lucro semanal é o que sobra da venda depois de descontar todos os custos. Por causa de um tabelamento da prefeitura para produtos da cesta básica local, o preço de venda do bolo não pode passar de R$ 25. Escolhendo o preço que dá o maior lucro semanal permitido, esse lucro, em reais, será de:\n\nDados: 20: 120; 24: 104; 28: 88.",
+  "A": "R$ 900",
+  "B": "R$ 1 200",
+  "C": "R$ 1 300",
+  "D": "R$ 1 500",
+  "E": "R$ 1 600",
+  "resposta": "B",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "q = 200 − 100 = 100 bolos. Lucro = 15 · 100 − 300 = 1 200. B. Erros: A = Usou o menor preço da tabela (R$ 20). C = Usou o vértice p = 30, que passa do teto de R$ 25. D = Esqueceu o gasto fixo de R$ 300. E = Vértice e sem o gasto fixo (20 · 80).",
+   "ideia": "Ache a reta das vendas, monte o lucro (uma parábola) e veja onde está o máximo. Se o vértice passa do preço permitido, o máximo fica no limite.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "20",
+        "120"
+       ],
+       [
+        "24",
+        "104"
+       ],
+       [
+        "28",
+        "88"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "L = (p − 10) · (200 − 4p) − 300",
+      "leitura": "(lucro por bolo × bolos vendidos) − gasto fixo",
+      "letras": [
+       {
+        "letra": "L",
+        "oque": "lucro semanal (o que a questão quer)"
+       },
+       {
+        "letra": "p",
+        "oque": "preço do bolo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "A reta das vendas",
+     "texto": "Cada R$ 4 a mais no preço tira 16 bolos: são −4 bolos por real. Com 20 → 120, a quantidade é q = 200 − 4p."
+    },
+    {
+     "titulo": "O lucro",
+     "texto": "Lucro = (p − 10)(200 − 4p) − 300. É uma parábola aberta para baixo, com raízes de (p − 10)(200 − 4p) em 10 e 50."
+    },
+    {
+     "titulo": "O vértice",
+     "texto": "Fica no meio das raízes: p = 30. Mas a prefeitura só deixa até 25."
+    },
+    {
+     "titulo": "Dentro do limite",
+     "texto": "A parábola só sobe até 30, então no intervalo permitido o maior valor está em p = 25."
+    },
+    {
+     "titulo": "A conta",
+     "texto": "q = 200 − 100 = 100 bolos. Lucro = 15 · 100 − 300 = 1 200."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Ache a reta das vendas, monte o lucro (uma parábola) e veja onde está o máximo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "L = (p − 10) · (200 − 4p) − 300"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "ENEM 2022 q.176 (935 letras): parábola, o mês/preço do máximo e um período permitido",
+  "estiloPrincipal": "ENEM"
+ },
+ {
+  "id": "d2-escada-mat-ita-fun-00c",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "Para cada número inteiro k, com 1 ≤ k ≤ 20, considere a parábola y = x² − 6x + k, desenhada no plano cartesiano. Os pontos em que a parábola corta o eixo horizontal são as raízes da equação x² − 6x + k = 0. Em quantos valores de k a parábola corta o eixo horizontal em dois pontos distintos, ambos à direita da origem, isto é, com abscissa positiva?",
+  "A": "2",
+  "B": "7",
+  "C": "8",
+  "D": "9",
+  "E": "20",
+  "resposta": "C",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "k = 9 dá uma raiz só (x = 3, dupla). E as raízes não precisam ser inteiras: só k = 5 e k = 8 têm raízes inteiras. C. Erros: A = Contou só os k de raízes inteiras (k = 5 e k = 8). B = Esqueceu o k = 1. D = Incluiu k = 9, que dá raiz dupla (um ponto só). E = Só exigiu produto positivo, sem olhar o Δ.",
+   "ideia": "Duas raízes distintas pedem Δ > 0. Duas raízes positivas saem da soma (6) e do produto (k) das raízes, sem resolver a equação.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Parábola",
+        "y = x² − 6x + k"
+       ],
+       [
+        "k",
+        "inteiro de 1 a 20"
+       ],
+       [
+        "Quero",
+        "2 raízes distintas, ambas positivas"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "D = 36 − 4k",
+      "leitura": "discriminante (Δ) de x² − 6x + k = 0",
+      "letras": [
+       {
+        "letra": "D",
+        "oque": "discriminante (Δ)"
+       },
+       {
+        "letra": "k",
+        "oque": "inteiro que muda a parábola"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Dois pontos distintos",
+     "texto": "Δ = 36 − 4k > 0, então k < 9, isto é, k ≤ 8."
+    },
+    {
+     "titulo": "Soma e produto das raízes",
+     "texto": "A soma é 6 e o produto é k. Com k > 0, as duas raízes têm o mesmo sinal; como a soma é 6 (positiva), as duas são positivas."
+    },
+    {
+     "titulo": "Contar",
+     "texto": "k = 1, 2, 3, 4, 5, 6, 7, 8: são 8 valores."
+    },
+    {
+     "titulo": "Os que enganam",
+     "texto": "k = 9 dá uma raiz só (x = 3, dupla). E as raízes não precisam ser inteiras: só k = 5 e k = 8 têm raízes inteiras."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Duas raízes distintas pedem Δ > 0.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "D = 36 − 4k"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "IME 2024 q.4: soma e produto das raízes",
+  "estiloPrincipal": "Fuvest"
+ },
+ {
+  "id": "d2-escada-mat-ita-fun-00b",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "Uma máquina de moedas transforma um número x em ax + b, com a e b números reais e a > 0. Passando duas vezes pela máquina, qualquer número x vira 9x + 8. Qual é o resultado de uma única passagem do número 5 pela máquina?",
+  "A": "−19",
+  "B": "15",
+  "C": "17",
+  "D": "23",
+  "E": "53",
+  "resposta": "C",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "f(5) = 3 · 5 + 2 = 17. C. Erros: A = Usou a = −3 (b = −4), que o enunciado exclui. B = Esqueceu o b: 3 · 5. D = Tomou b = 8: 15 + 8. E = Respondeu duas passadas: 9 · 5 + 8.",
+   "ideia": "Aplique a máquina duas vezes e iguale a 9x + 8 para achar a e b. O sinal de a vem do enunciado (a > 0).",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Máquina",
+        "f(x) = ax + b, com a > 0"
+       ],
+       [
+        "Duas passadas",
+        "9x + 8"
+       ],
+       [
+        "Quero",
+        "f(5)"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "a² = 9  e  a · b + b = 8",
+      "leitura": "duas passadas dão 9x + 8",
+      "letras": [
+       {
+        "letra": "a",
+        "oque": "número que multiplica x"
+       },
+       {
+        "letra": "b",
+        "oque": "número que se soma"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Duas passadas",
+     "texto": "f(f(x)) = a(ax + b) + b = a²x + ab + b."
+    },
+    {
+     "titulo": "Igualar a 9x + 8",
+     "texto": "Para todo x: a² = 9 e ab + b = 8."
+    },
+    {
+     "titulo": "O sinal de a",
+     "texto": "a² = 9 dá a = 3 ou a = −3. Como a > 0, fica a = 3."
+    },
+    {
+     "titulo": "Achar b",
+     "texto": "3b + b = 8, então b = 2."
+    },
+    {
+     "titulo": "Uma passagem",
+     "texto": "f(5) = 3 · 5 + 2 = 17."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Aplique a máquina duas vezes e iguale a 9x + 8 para achar a e b.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "a² = 9  e  a · b + b = 8"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "Unicamp 2024 q.64: f(g(x)) e g(f(x)) com um coeficiente a achar; aqui f(f(x))",
+  "estiloPrincipal": "ITA"
+ },
+ {
+  "id": "d2-escada-mat-ita-fun-00d",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "Um aplicativo de fila numera os pedidos assim: o primeiro pedido do dia recebe o número 0. Cada novo pedido recebe o número do anterior multiplicado por 2 e somado com 3 (assim, depois do 0 vem o 3, depois o 9, depois o 21). Qual é o número do pedido que vem 10 posições depois do 0?\n\nDados: Posição 0: 0; Posição 1: 3; Posição 2: 9; Posição 3: 21.",
+  "A": "30",
+  "B": "1 023",
+  "C": "3 069",
+  "D": "3 072",
+  "E": "6 141",
+  "resposta": "C",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "x = 3 072 − 3 = 3 069. C. Erros: A = Somou 3 dez vezes. B = Esqueceu o fator 3: 2¹⁰ − 1. D = Esqueceu de tirar o 3 no fim. E = Aplicou 11 vezes: 3 · 2¹¹ − 3.",
+   "ideia": "Some 3 a todos os números: a regra \"dobra e soma 3\" vira só \"dobra\". Dobrar 10 vezes é fácil; depois tire o 3 de volta.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Posição 0",
+        "0"
+       ],
+       [
+        "Posição 1",
+        "3"
+       ],
+       [
+        "Posição 2",
+        "9"
+       ],
+       [
+        "Posição 3",
+        "21"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "N = 3 · 2¹⁰ − 3",
+      "leitura": "dobra 10 vezes a partir de x + 3, depois tira o 3",
+      "letras": [
+       {
+        "letra": "N",
+        "oque": "número do pedido 10 posições depois (o que a questão quer)"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O número que não muda",
+     "texto": "Quem fica igual na regra: x = 2x + 3, então x = −3."
+    },
+    {
+     "titulo": "Somar 3 a tudo",
+     "texto": "Seja y = x + 3. O próximo é 2x + 3, e 2x + 3 + 3 = 2(x + 3) = 2y. O y simplesmente dobra."
+    },
+    {
+     "titulo": "O começo",
+     "texto": "x = 0 dá y = 3."
+    },
+    {
+     "titulo": "Depois de 10 passos",
+     "texto": "y = 3 · 2¹⁰ = 3 072."
+    },
+    {
+     "titulo": "Voltar para x",
+     "texto": "x = 3 072 − 3 = 3 069."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Some 3 a todos os números: a regra \"dobra e soma 3\" vira só \"dobra\".",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "N = 3 · 2¹⁰ − 3"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "Unesp 2025 (PG) e ITA 2025 q.5: sequência que se repete por uma regra",
+  "estiloPrincipal": "Harvard"
+ },
+ {
+  "id": "d2-escada-mat-ita-pla-00a",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um sítio de lazer tem um gramado em formato de L: ele é um retângulo de 40 m por 30 m do qual foi retirado, em um dos cantos, um retângulo de 15 m por 10 m, onde fica a casa do caseiro. Todo o terreno que sobrou será coberto com grama em placas. O fornecedor vende a grama em pacotes com 6 placas, e cada placa cobre 1,5 m². Como sempre quebram placas no transporte e no corte das bordas, o engenheiro pediu que o orçamento considere 10% de área a mais do que a área do gramado. Cada pacote custa R$ 54, mas o desconto de 5% para compras acima de 100 pacotes só vale no pagamento à vista, e o cliente vai pagar a prazo. Quantos pacotes devem ser comprados?\n\nDados: Retângulo grande: 40 m × 30 m; Casa (canto retirado): 15 m × 10 m; Cada placa: 1,5 m²; Cada pacote: 6 placas; Folga pedida: 10% a mais.",
+  "A": "117",
+  "B": "128",
+  "C": "129",
+  "D": "193",
+  "E": "700",
+  "resposta": "C",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "O resto de 0,33 pacote ainda precisa ser coberto: 129 pacotes. C. Erros: A = Esqueceu os 10% (1 050 ÷ 9 = 116,7). B = Arredondou para baixo: sobra uma parte sem cobrir. D = Esqueceu que cada placa cobre 1,5 m² (1 155 ÷ 6). E = Parou nas placas, sem os 10% (1 050 ÷ 1,5).",
+   "ideia": "A área do L é o retângulo grande menos o canto. Some a folga de 10%, veja quanto um pacote cobre e arredonde para cima.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Retângulo grande",
+        "40 m × 30 m"
+       ],
+       [
+        "Casa (canto retirado)",
+        "15 m × 10 m"
+       ],
+       [
+        "Cada placa",
+        "1,5 m²"
+       ],
+       [
+        "Cada pacote",
+        "6 placas"
+       ],
+       [
+        "Folga pedida",
+        "10% a mais"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "P = 1,1 · A ÷ 9",
+      "leitura": "área com folga ÷ área de um pacote, arredondado para cima",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "pacotes (o que a questão quer)"
+       },
+       {
+        "letra": "A",
+        "oque": "área do gramado"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Área do terreno",
+     "texto": "40 · 30 − 15 · 10 = 1 200 − 150 = 1 050 m²."
+    },
+    {
+     "titulo": "Com 10% a mais",
+     "texto": "1 050 · 1,1 = 1 155 m²."
+    },
+    {
+     "titulo": "Quanto um pacote cobre",
+     "texto": "6 placas · 1,5 m² = 9 m²."
+    },
+    {
+     "titulo": "Pacotes",
+     "texto": "1 155 ÷ 9 = 128,33…"
+    },
+    {
+     "titulo": "Arredondar",
+     "texto": "O resto de 0,33 pacote ainda precisa ser coberto: 129 pacotes."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: A área do L é o retângulo grande menos o canto.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "P = 1,1 · A ÷ 9"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "ENEM 2021 q.152 (1 428 letras) e 2022 q.167: áreas de paredes e piso, escolha por conta",
+  "estiloPrincipal": "ENEM"
+ },
+ {
+  "id": "d2-escada-mat-ita-pla-00c",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um triângulo retângulo tem lados de 5 cm, 12 cm e 13 cm. Dentro dele, tangente aos três lados, está desenhada uma circunferência. Use π = 3. A área, em cm², da parte do triângulo que fica fora da circunferência é:",
+  "A": "12",
+  "B": "18",
+  "C": "26",
+  "D": "27",
+  "E": "30",
+  "resposta": "B",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "30 − 12 = 18 cm². B. Erros: A = Respondeu a área do círculo. C = Esqueceu o π: 30 − 4. D = Usou o perímetro (30) em vez do semiperímetro: r = 1. E = Não subtraiu o círculo.",
+   "ideia": "O raio do círculo inscrito sai de área ÷ semiperímetro. Depois é só tirar a área do círculo da área do triângulo.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Lados",
+        "5, 12 e 13 cm"
+       ],
+       [
+        "Círculo",
+        "inscrito (tangente aos 3 lados)"
+       ],
+       [
+        "π",
+        "3"
+       ],
+       [
+        "Quero",
+        "área do triângulo fora do círculo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "F = T − 3 · r²",
+      "leitura": "área do triângulo − área do círculo (π = 3)",
+      "letras": [
+       {
+        "letra": "F",
+        "oque": "área que fica fora (o que a questão quer)"
+       },
+       {
+        "letra": "T",
+        "oque": "área do triângulo"
+       },
+       {
+        "letra": "r",
+        "oque": "raio do círculo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Área do triângulo",
+     "texto": "Catetos 5 e 12: 5 · 12 ÷ 2 = 30 cm²."
+    },
+    {
+     "titulo": "O raio do círculo inscrito",
+     "texto": "Área = raio × semiperímetro. O semiperímetro é (5 + 12 + 13) ÷ 2 = 15, então r = 30 ÷ 15 = 2 cm."
+    },
+    {
+     "titulo": "Área do círculo",
+     "texto": "3 · 2² = 12 cm²."
+    },
+    {
+     "titulo": "O que fica de fora",
+     "texto": "30 − 12 = 18 cm²."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: O raio do círculo inscrito sai de área ÷ semiperímetro.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "F = T − 3 · r²"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "Fuvest (repo) q.77 e Unicamp 2024 q.54: circunferência com a medida certa e a área do círculo",
+  "estiloPrincipal": "Fuvest"
+ },
+ {
+  "id": "d2-escada-mat-ita-pla-00b",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um retângulo tem lados na razão 3 : 4 e perímetro 28 cm. Ele está inscrito numa circunferência, isto é, os quatro vértices estão sobre ela. Use π = 3,14. A área, em cm², da região do círculo que fica fora do retângulo é:",
+  "A": "2,24",
+  "B": "30,5",
+  "C": "78,5",
+  "D": "105,86",
+  "E": "266",
+  "resposta": "B",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "78,5 − 48 = 30,5 cm². B. Erros: A = Usou r = 4 (metade do lado maior). C = Não subtraiu o retângulo. D = Usou r = 7 (semiperímetro). E = Usou a diagonal (10) como raio.",
+   "ideia": "Um retângulo inscrito tem a diagonal igual ao diâmetro, porque o ângulo reto enxerga o diâmetro. Com o raio, ache o círculo e tire o retângulo.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Lados",
+        "razão 3 : 4, perímetro 28 cm"
+       ],
+       [
+        "Retângulo",
+        "inscrito na circunferência"
+       ],
+       [
+        "π",
+        "3,14"
+       ],
+       [
+        "Quero",
+        "área do círculo fora do retângulo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "F = 3,14 · R² − Z",
+      "leitura": "área do círculo − área do retângulo",
+      "letras": [
+       {
+        "letra": "F",
+        "oque": "área de fora (o que a questão quer)"
+       },
+       {
+        "letra": "R",
+        "oque": "raio do círculo"
+       },
+       {
+        "letra": "Z",
+        "oque": "área do retângulo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Os lados",
+     "texto": "3k e 4k: o perímetro é 14k = 28, então k = 2 e os lados medem 6 e 8."
+    },
+    {
+     "titulo": "A ideia que destrava",
+     "texto": "Um ângulo reto inscrito enxerga um diâmetro. Então a diagonal do retângulo é o diâmetro do círculo."
+    },
+    {
+     "titulo": "O raio",
+     "texto": "Diagonal = √(6² + 8²) = 10, então o raio é 5."
+    },
+    {
+     "titulo": "As áreas",
+     "texto": "Círculo: 3,14 · 25 = 78,5. Retângulo: 6 · 8 = 48."
+    },
+    {
+     "titulo": "O que fica de fora",
+     "texto": "78,5 − 48 = 30,5 cm²."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Um retângulo inscrito tem a diagonal igual ao diâmetro, porque o ângulo reto enxerga o diâmetro.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "F = 3,14 · R² − Z"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "IME 2024 q.14: figura inscrita e o raio que se descobre pela geometria",
+  "estiloPrincipal": "ITA"
+ },
+ {
+  "id": "d2-escada-mat-ita-pla-00d",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um canteiro retangular tem 12 m de largura (lado AB, embaixo) e 8 m de altura. O ponto P está sobre o lado de cima, a 5 m do vértice D (o de cima, à esquerda). Os segmentos PA e PB dividem o canteiro em três triângulos: o do meio, ABP, receberá flores a R$ 35 por m²; os das laterais, ADP e BCP, serão gramados a R$ 20 por m². O custo total do plantio, em reais, é:",
+  "A": "960",
+  "B": "1 680",
+  "C": "2 640",
+  "D": "3 360",
+  "E": "3 600",
+  "resposta": "C",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "48 · 35 + 48 · 20 = 1 680 + 960 = 2 640. C. Erros: A = Só a grama. B = Só as flores. D = Triângulo do meio sem o ½ (96 m²) e nada de grama. E = Laterais sem o ½ (96 m² a R$ 20) mais as flores.",
+   "ideia": "O triângulo do meio tem sempre metade do retângulo, onde quer que P esteja. As laterais ficam com a outra metade, e as duas áreas são 48 m².",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Canteiro",
+        "12 m × 8 m"
+       ],
+       [
+        "P",
+        "no lado de cima, a 5 m de D"
+       ],
+       [
+        "Flores (ABP)",
+        "R$ 35 por m²"
+       ],
+       [
+        "Grama (ADP e BCP)",
+        "R$ 20 por m²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "C = F · 35 + G · 20",
+      "leitura": "área das flores × 35 + área da grama × 20",
+      "letras": [
+       {
+        "letra": "C",
+        "oque": "custo total (o que a questão quer)"
+       },
+       {
+        "letra": "F",
+        "oque": "área das flores"
+       },
+       {
+        "letra": "G",
+        "oque": "área da grama"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O triângulo do meio",
+     "texto": "Base AB = 12 e altura 8: ½ · 12 · 8 = 48 m²."
+    },
+    {
+     "titulo": "Os das laterais",
+     "texto": "ADP: ½ · 5 · 8 = 20. BCP: ½ · 7 · 8 = 28. Juntos: 48 m²."
+    },
+    {
+     "titulo": "O truque",
+     "texto": "O retângulo tem 96 m². O do meio é sempre metade dele, onde quer que P esteja; as laterais ficam com a outra metade."
+    },
+    {
+     "titulo": "O custo",
+     "texto": "48 · 35 + 48 · 20 = 1 680 + 960 = 2 640."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: O triângulo do meio tem sempre metade do retângulo, onde quer que P esteja.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "C = F · 35 + G · 20"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "IME 2024 q.8: área do triângulo pela altura que não muda",
+  "estiloPrincipal": "Harvard"
+ },
+ {
+  "id": "d2-escada-mat-ita-esp-00a",
+  "materia": "Matemática",
+  "tema": "Geometria Espacial",
+  "enunciado": "Numa lanchonete, o suco de laranja é preparado em garrafas de vidro cilíndricas que têm 10 cm de diâmetro interno e 24 cm de altura. No fim do dia, sobrou uma garrafa com suco até 3/4 da altura. O dono decidiu servir esse resto de graça numa degustação, em copos de papel em forma de cone, com 10 cm de diâmetro na boca e 9 cm de altura. Para o suco não derramar, cada copo é servido só até 80% da altura (e não até a borda), e o dono não quer servir copos pela metade nem com quantidades diferentes. Ele pergunta quantos copos desses consegue servir completamente com o suco que sobrou. Considere que o suco não faz espuma e que nada se perde ao servir. O número de copos é:\n\nDados: Garrafa: diâmetro 10 cm, altura 24 cm, suco até 3/4; Copo (cone): diâmetro 10 cm, altura 9 cm; Servir: até 80% da altura do copo.",
+  "A": "6",
+  "B": "7",
+  "C": "11",
+  "D": "12",
+  "E": "15",
+  "resposta": "C",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "11 copos. C. Erros: A = Encheu os copos até a borda. B = Tratou 80% da altura como 80% do volume. D = Arredondou para cima: o 12º copo não enche. E = Esqueceu que a garrafa só tem 3/4 do suco.",
+   "ideia": "Servir até 80% da altura forma um cone menor semelhante, e o volume vai com o cubo da razão: 0,8³ = 0,512. Divida o suco pelo volume de cada copo e conte só os copos inteiros.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Garrafa",
+        "diâmetro 10 cm, altura 24 cm, suco até 3/4"
+       ],
+       [
+        "Copo (cone)",
+        "diâmetro 10 cm, altura 9 cm"
+       ],
+       [
+        "Servir",
+        "até 80% da altura do copo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "N = S ÷ v",
+      "leitura": "suco da garrafa ÷ suco de cada copo, só copos inteiros",
+      "letras": [
+       {
+        "letra": "N",
+        "oque": "número de copos (o que a questão quer)"
+       },
+       {
+        "letra": "S",
+        "oque": "suco da garrafa"
+       },
+       {
+        "letra": "v",
+        "oque": "suco de um copo, a 80% da altura"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O suco da garrafa",
+     "texto": "Raio 5 e altura 18 (3/4 de 24): π · 25 · 18 = 450π cm³."
+    },
+    {
+     "titulo": "O copo cheio",
+     "texto": "Cone de raio 5 e altura 9: ⅓ · π · 25 · 9 = 75π cm³."
+    },
+    {
+     "titulo": "O copo a 80% da altura",
+     "texto": "O suco forma um cone menor, semelhante ao copo, com razão 0,8. O volume cresce com o cubo: 0,8³ = 0,512, então 75π · 0,512 = 38,4π."
+    },
+    {
+     "titulo": "Quantos copos",
+     "texto": "450π ÷ 38,4π = 11,72…"
+    },
+    {
+     "titulo": "Só os completos",
+     "texto": "11 copos."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Servir até 80% da altura forma um cone menor semelhante, e o volume vai com o cubo da razão: 0,8³ = 0,512.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "N = S ÷ v"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "ENEM 2022 q.169 (631 letras) e q.147: volume de cilindro e razão ao cubo",
+  "estiloPrincipal": "ENEM"
+ },
+ {
+  "id": "d2-escada-mat-ita-esp-00c",
+  "materia": "Matemática",
+  "tema": "Geometria Espacial",
+  "enunciado": "Uma caixa de papelão tem a forma de um bloco retangular de 6 cm × 8 cm × 24 cm. Um artesão quer guardar nela uma vareta reta, inteira e sem dobrar, com comprimento em centímetros dado por um número inteiro. A vareta pode ficar em qualquer posição dentro da caixa, podendo encostar nas paredes e nos cantos. Qual é o maior comprimento, em cm, que a vareta pode ter?",
+  "A": "10",
+  "B": "24",
+  "C": "25",
+  "D": "26",
+  "E": "38",
+  "resposta": "D",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "Uma vareta de exatamente 26 cm vai de canto a canto e encosta neles, o que o enunciado permite. Resposta: 26. D. Erros: A = Parou na diagonal da base. B = Pegou a maior aresta. C = Achou que a diagonal exata não cabe; o enunciado deixa encostar nos cantos. E = Somou as três medidas (6 + 8 + 24).",
+   "ideia": "O maior segmento dentro de um bloco é a diagonal. Use Pitágoras duas vezes: primeiro na base, depois com a altura.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Caixa",
+        "6 × 8 × 24 cm"
+       ],
+       [
+        "Vareta",
+        "inteira, com número inteiro de cm"
+       ],
+       [
+        "Quero",
+        "o maior comprimento"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "D = √(a² + b² + c²)",
+      "leitura": "diagonal do bloco",
+      "letras": [
+       {
+        "letra": "D",
+        "oque": "maior vareta (o que a questão quer)"
+       },
+       {
+        "letra": "a",
+        "oque": "primeira medida"
+       },
+       {
+        "letra": "b",
+        "oque": "segunda medida"
+       },
+       {
+        "letra": "c",
+        "oque": "terceira medida"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O maior segmento dentro de um bloco",
+     "texto": "É a diagonal, de um canto ao canto oposto."
+    },
+    {
+     "titulo": "Diagonal da base",
+     "texto": "√(6² + 8²) = √100 = 10 cm."
+    },
+    {
+     "titulo": "Diagonal do bloco",
+     "texto": "√(10² + 24²) = √676 = 26 cm."
+    },
+    {
+     "titulo": "Cabe?",
+     "texto": "Uma vareta de exatamente 26 cm vai de canto a canto e encosta neles, o que o enunciado permite. Resposta: 26."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: O maior segmento dentro de um bloco é a diagonal.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "D = √(a² + b² + c²)"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "Fuvest (repo) q.76: sólido com medidas e uma conta de cada vez",
+  "estiloPrincipal": "Fuvest"
+ },
+ {
+  "id": "d2-escada-mat-ita-esp-00b",
+  "materia": "Matemática",
+  "tema": "Geometria Espacial",
+  "enunciado": "Uma pirâmide de base quadrada tem 12 cm de altura. Um plano paralelo à base corta a pirâmide em duas partes: uma pirâmide menor, na ponta de cima, e um tronco, embaixo. O volume do tronco é 26 vezes o volume da pirâmide menor. A que distância da base, em cm, passa o plano de corte?",
+  "A": "4",
+  "B": "6",
+  "C": "8",
+  "D": "9,7",
+  "E": "11,5",
+  "resposta": "C",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "12 − 4 = 8 cm. C. Erros: A = Mediu a partir do ápice, não da base. B = Achou que o corte fica no meio. D = Tratou 1/27 como razão de áreas (tirou raiz quadrada). E = Usou 1/26 como razão de alturas.",
+   "ideia": "Pirâmide inteira = 27 vezes a menor. O volume vai com o cubo da razão das alturas: a razão é 1/3 e a menor tem 4 cm de altura. A distância pedida é a da base.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Altura da pirâmide",
+        "12 cm"
+       ],
+       [
+        "Tronco",
+        "26 vezes a pirâmide menor"
+       ],
+       [
+        "Quero",
+        "distância do plano à base"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "k³ = 1 ÷ 27  e  d = 12 − 12 · k",
+      "leitura": "razão das alturas e distância do corte à base",
+      "letras": [
+       {
+        "letra": "k",
+        "oque": "razão entre a altura da menor e a da inteira"
+       },
+       {
+        "letra": "d",
+        "oque": "distância do corte à base (o que a questão quer)"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O todo em pedaços",
+     "texto": "Pirâmide inteira = menor + tronco = 1 + 26 = 27 vezes a menor."
+    },
+    {
+     "titulo": "Razão de volumes",
+     "texto": "Menor ÷ inteira = 1/27."
+    },
+    {
+     "titulo": "Sólidos semelhantes",
+     "texto": "O volume cresce com o cubo da razão das alturas: k³ = 1/27, então k = 1/3."
+    },
+    {
+     "titulo": "Altura da menor",
+     "texto": "12 ÷ 3 = 4 cm, do ápice até o plano."
+    },
+    {
+     "titulo": "Distância da base",
+     "texto": "12 − 4 = 8 cm."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Pirâmide inteira = 27 vezes a menor.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "k³ = 1 ÷ 27  e  d = 12 − 12 · k"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "ENEM 2022 q.147 (volume vai com o cubo) e aulas fuv (tetraedro cortado)",
+  "estiloPrincipal": "ITA"
+ },
+ {
+  "id": "d2-escada-mat-ita-esp-00d",
+  "materia": "Matemática",
+  "tema": "Geometria Espacial",
+  "enunciado": "Uma lata cilíndrica de 1,5 L guarda 3 bolas de tênis idênticas, empilhadas. Cada bola encosta nas paredes da lata e nas bolas vizinhas, e as de cima e de baixo encostam nas tampas, de modo que a altura da lata é a de 3 diâmetros. Tratando as bolas como esferas, quantos mililitros da lata ficam vazios, sem bola? (1 L = 1 000 mL.)",
+  "A": "333",
+  "B": "500",
+  "C": "750",
+  "D": "1 000",
+  "E": "1 125",
+  "resposta": "B",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "1/3 de 1 500 mL = 500 mL. B. Erros: A = Volume de uma bola só (2/9 da lata). C = Achou que as bolas ocupam a metade. D = Respondeu o que as bolas ocupam (2/3). E = Achou que as bolas ocupam só 1/4.",
+   "ideia": "Dê o raio r às bolas e à lata: tudo vira múltiplo de r³. As bolas ocupam 2/3 da lata (Arquimedes), então o vazio é 1/3.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Lata",
+        "1,5 L, com 3 bolas empilhadas"
+       ],
+       [
+        "Bolas",
+        "encostam nas paredes e nas tampas"
+       ],
+       [
+        "Quero",
+        "vazio, em mL"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "V = L − B",
+      "leitura": "vazio = lata − bolas",
+      "letras": [
+       {
+        "letra": "V",
+        "oque": "vazio (o que a questão quer)"
+       },
+       {
+        "letra": "L",
+        "oque": "volume da lata"
+       },
+       {
+        "letra": "B",
+        "oque": "volume das 3 bolas"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Dar nome ao raio",
+     "texto": "O raio das bolas é r, o mesmo da lata. A altura da lata é 3 · 2r = 6r."
+    },
+    {
+     "titulo": "A lata",
+     "texto": "π · r² · 6r = 6πr³."
+    },
+    {
+     "titulo": "As 3 bolas",
+     "texto": "3 · (4/3)πr³ = 4πr³."
+    },
+    {
+     "titulo": "Fração ocupada",
+     "texto": "4πr³ ÷ 6πr³ = 2/3. As bolas ocupam 2/3 da lata, sem precisar de r."
+    },
+    {
+     "titulo": "O vazio",
+     "texto": "1/3 de 1 500 mL = 500 mL."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Dê o raio r às bolas e à lata: tudo vira múltiplo de r³.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "V = L − B"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "ENEM 2022 q.169: volume de cilindro contra volume de esferas",
+  "estiloPrincipal": "Harvard"
+ },
+ {
+  "id": "d2-escada-mat-ita-com-00a",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Numa festa junina de bairro, o piso da quadra é de ladrilhos quadrados de 10 cm de lado, separados por rejuntes finos. Na brincadeira da calçada, o participante lança uma ficha circular de 3 cm de raio, e os pontos dependem de quantos rejuntes do ladrilho a ficha toca, como mostra a tabela. A organização garante que a ficha sempre cai com o centro dentro de um ladrilho, em qualquer ponto com a mesma chance, e que só os 4 rejuntes desse ladrilho importam (os dos ladrilhos vizinhos ficam longe demais). O prêmio do dia é uma cesta que custa R$ 80, e a ficha custa R$ 2, mas esses valores não entram na conta. Sabendo que a ficha tocou pelo menos um rejunte, a probabilidade de que o participante tenha feito exatamente 4 pontos é:\n\nDados: 0: 10; 1: 4; 2: 1.",
+  "A": "12/25",
+  "B": "3/7",
+  "C": "9/25",
+  "D": "4/7",
+  "E": "4/21",
+  "resposta": "D",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "Tocou pelo menos um: 100 − 16 = 84. Exatamente 4 pontos: 48/84 = 4/7. D. Erros: A = Esqueceu a condição: 48 em 100, sem tirar quem não tocou nada. B = Contou só os cantos (36/84): são os que fazem 1 ponto. C = Cantos sobre o ladrilho todo (36/100), sem condição. E = Dividiu os que não tocam (16) pelos que tocam (84).",
+   "ideia": "Troque a ficha por um ponto: só o centro importa. Divida o ladrilho em regiões pela distância às bordas e use a condição pedida (tocou pelo menos um).",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "0",
+        "10"
+       ],
+       [
+        "1",
+        "4"
+       ],
+       [
+        "2",
+        "1"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "P = U ÷ (100 − Z)",
+      "leitura": "área com exatamente 1 rejunte ÷ área em que tocou ao menos um",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "probabilidade (o que a questão quer)"
+       },
+       {
+        "letra": "U",
+        "oque": "área com exatamente 1 rejunte"
+       },
+       {
+        "letra": "Z",
+        "oque": "área sem tocar rejunte"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Troque a ficha por um ponto",
+     "texto": "A ficha toca um rejunte quando o centro está a 3 cm ou menos dele. Só o centro importa."
+    },
+    {
+     "titulo": "Não toca nenhum",
+     "texto": "O centro fica no quadrado de dentro: 10 − 3 − 3 = 4 cm de lado, área 16 (16 de 100)."
+    },
+    {
+     "titulo": "Toca dois",
+     "texto": "O centro fica a menos de 3 cm de duas bordas vizinhas: um canto de 3 × 3 = 9, e são 4 cantos: 36. (Dois rejuntes opostos não dá: 2 · 3 = 6 < 10.)"
+    },
+    {
+     "titulo": "Toca exatamente um",
+     "texto": "O que sobra: 100 − 16 − 36 = 48 (4 faixas de 3 × 4 = 12)."
+    },
+    {
+     "titulo": "Condicional",
+     "texto": "Tocou pelo menos um: 100 − 16 = 84. Exatamente 4 pontos: 48/84 = 4/7."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Troque a ficha por um ponto: só o centro importa.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "P = U ÷ (100 − Z)"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "IME 2024 q.8: probabilidade por área",
+  "estiloPrincipal": "ENEM"
+ },
+ {
+  "id": "d2-escada-mat-ita-com-00d",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Seis times disputaram um campeonato de bairro em turno único: todos contra todos, uma vez. Vitória vale 3 pontos; empate vale 1 ponto para cada time; derrota, nenhum. A tabela mostra a pontuação final. O jornal não publicou os resultados dos jogos. Dois jogos distintos são sorteados ao acaso entre todos os do campeonato. A probabilidade de pelo menos um deles ter terminado empatado é:\n\nDados: Tigres: 12; Raio: 10; Pelé: 8; Unidos: 6; Estrela: 4; Garra: 3.",
+  "A": "1/105",
+  "B": "2/15",
+  "C": "9/35",
+  "D": "4/15",
+  "E": "26/35",
+  "resposta": "C",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "1 − 26/35 = 9/35. C. Erros: A = Calculou a chance de os dois sorteados serem empates. B = Calculou para um jogo só. D = Somou 2/15 + 2/15 sem descontar quando os dois são empate. E = Achou a chance de nenhum empate e parou.",
+   "ideia": "Cada empate tira 1 ponto do total possível, então os pontos dizem quantos empates houve sem saber quais. Depois é contar jogos sorteados.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Tigres",
+        "12"
+       ],
+       [
+        "Raio",
+        "10"
+       ],
+       [
+        "Pelé",
+        "8"
+       ],
+       [
+        "Unidos",
+        "6"
+       ],
+       [
+        "Estrela",
+        "4"
+       ],
+       [
+        "Garra",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "P = 1 − N",
+      "leitura": "chance de pelo menos um empate = 1 − chance de nenhum",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "chance de pelo menos um empate (o que a questão quer)"
+       },
+       {
+        "letra": "N",
+        "oque": "chance de nenhum empate"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Quantos jogos",
+     "texto": "6 · 5 / 2 = 15 jogos."
+    },
+    {
+     "titulo": "Pontos se ninguém empatasse",
+     "texto": "15 · 3 = 45. Empate dá 1 + 1 = 2 pontos, então cada empate tira 1 ponto."
+    },
+    {
+     "titulo": "Quantos empates",
+     "texto": "A tabela soma 12 + 10 + 8 + 6 + 4 + 3 = 43. Faltam 45 − 43 = 2 empates. Nem precisa saber quem empatou."
+    },
+    {
+     "titulo": "Nenhum empate nos 2 sorteados",
+     "texto": "Os 2 jogos saem dos 13 que não empataram: C(13,2) / C(15,2) = 78/105 = 26/35."
+    },
+    {
+     "titulo": "Pelo menos um",
+     "texto": "1 − 26/35 = 9/35."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Cada empate tira 1 ponto do total possível, então os pontos dizem quantos empates houve sem saber quais.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "P = 1 − N"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "Unicamp 2024 q.60 (combinatória com condição escondida no texto)",
+  "estiloPrincipal": "Harvard"
+ },
+ {
+  "id": "d2-escada-mat-ita-com-00c",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Uma clínica aplicou um exame em 10 000 pessoas, divididas por idade como mostra a tabela. O exame dá positivo em 90% das pessoas doentes e, por engano, em 10% das sadias. Quem dá positivo repete o exame, e o resultado da repetição não depende do primeiro: vale a mesma taxa de acerto e de engano. Entre as pessoas que deram positivo nos dois exames, a porcentagem aproximada das que realmente têm a doença é:\n\nDados: Menos de 40 anos: 5 000 · 2%; 40 anos ou mais: 5 000 · 10%.",
+  "A": "84%",
+  "B": "36%",
+  "C": "81%",
+  "D": "90%",
+  "E": "94%",
+  "resposta": "A",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "486 ÷ (486 + 94) = 486/580 ≈ 0,84, ou 84%. A. Erros: B = Parou no 1º exame (540 de 1 480). C = Multiplicou 0,9 · 0,9, sem olhar as sadias. D = Pegou a taxa do exame como se fosse o resultado. E = Usou a fração de sadias da população (9 400 de 10 000).",
+   "ideia": "Conte pessoas em vez de porcentagens: de 10 000, quantas têm a doença e quantas dão positivo duas vezes. O 2º exame multiplica de novo.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Menos de 40 anos",
+        "5 000 · 2%"
+       ],
+       [
+        "40 anos ou mais",
+        "5 000 · 10%"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "R = d ÷ (d + s)",
+      "leitura": "doentes com 2 positivos ÷ todos com 2 positivos",
+      "letras": [
+       {
+        "letra": "R",
+        "oque": "chance de ter a doença (o que a questão quer)"
+       },
+       {
+        "letra": "d",
+        "oque": "doentes com 2 positivos"
+       },
+       {
+        "letra": "s",
+        "oque": "sadios com 2 positivos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Quantas pessoas de cada",
+     "texto": "Doentes: 2% de 5 000 = 100 e 10% de 5 000 = 500, total 600. Sadias: 10 000 − 600 = 9 400."
+    },
+    {
+     "titulo": "1º exame positivo",
+     "texto": "Doentes: 90% de 600 = 540. Sadias: 10% de 9 400 = 940."
+    },
+    {
+     "titulo": "2º exame positivo",
+     "texto": "Doentes: 90% de 540 = 486. Sadias: 10% de 940 = 94."
+    },
+    {
+     "titulo": "Quem tem a doença",
+     "texto": "486 ÷ (486 + 94) = 486/580 ≈ 0,84, ou 84%."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Conte pessoas em vez de porcentagens: de 10 000, quantas têm a doença e quantas dão positivo duas vezes.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "R = d ÷ (d + s)"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "Unicamp 2024 q.61 (pedrinhas) e ENEM 2021 q.177: chance condicional e eventos independentes",
+  "estiloPrincipal": "Fuvest"
+ },
+ {
+  "id": "d2-escada-mat-ita-com-00b",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Um painel tem 6 lâmpadas em fila. No teste de fábrica, cada lâmpada fica acesa ou apagada ao acaso, com chance 1/2 e sem depender das outras. Por segurança, a máquina só aprova painéis que não têm duas lâmpadas acesas lado a lado, como acesa, apagada, acesa, apagada, apagada, acesa. Entre os painéis aprovados, a probabilidade de que tenham exatamente 3 lâmpadas acesas é:",
+  "A": "1/16",
+  "B": "4/13",
+  "C": "5/16",
+  "D": "1/2",
+  "E": "4/21",
+  "resposta": "E",
+  "origem": "Escada",
+  "nivel": "acima",
+  "explicacao": {
+   "conferencia": "4/21. E. Erros: A = Ignorou a condição: 4 em 64 painéis. B = Contou 13 painéis aprovados (parou no 5º lugar). C = Usou C(6,3)/64 = 20/64, sem proibir vizinhas acesas. D = Achou que 3 de 6 é metade.",
+   "ideia": "Para contar painéis sem duas acesas vizinhas, olhe a última lâmpada: o total é a soma dos dois anteriores. Com exatamente 3 acesas, encaixe-as nos vãos entre as apagadas.",
+   "pecas": [],
+   "passos": [
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Lâmpadas",
+        "6, acesa ou apagada ao acaso"
+       ],
+       [
+        "Aprovado",
+        "sem 2 acesas lado a lado"
+       ],
+       [
+        "Quero",
+        "chance de exatamente 3 acesas"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Uma letra por coisa, pela inicial. Depois é achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "P = A ÷ T",
+      "leitura": "painéis aprovados com 3 acesas ÷ painéis aprovados",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "probabilidade (o que a questão quer)"
+       },
+       {
+        "letra": "A",
+        "oque": "painéis aprovados com 3 acesas"
+       },
+       {
+        "letra": "T",
+        "oque": "painéis aprovados"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Contar os aprovados",
+     "texto": "Se a última lâmpada está apagada, as 5 de antes valem qualquer arranjo bom: a(5). Se está acesa, a anterior é apagada e as 4 antes valem a(4). Então a(n) = a(n−1) + a(n−2)."
+    },
+    {
+     "titulo": "Montar a lista",
+     "texto": "a(1) = 2, a(2) = 3, depois 5, 8, 13 e a(6) = 21 painéis aprovados."
+    },
+    {
+     "titulo": "Com exatamente 3 acesas",
+     "texto": "Ponha as 3 apagadas em fila: ficam 4 vãos (antes, 2 entre elas, depois). Cada acesa ocupa um vão diferente: C(4,3) = 4."
+    },
+    {
+     "titulo": "Probabilidade",
+     "texto": "4/21."
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: Para contar painéis sem duas acesas vizinhas, olhe a última lâmpada: o total é a soma dos dois anteriores.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dados do enunciado"
+       ],
+       [
+        "2. Equação em letras",
+        "P = A ÷ T"
+       ],
+       [
+        "3. Uma letra por vez",
+        "ache cada letra e volte na equação"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": null,
+   "seuErro": null
+  },
+  "ancora": "ITA 2025 q.5 e Unesp 2025 q.85: sequência por recorrência e contagem",
+  "estiloPrincipal": "ITA"
+ }
+]
