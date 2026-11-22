@@ -117,7 +117,7 @@ function oRaio(): Cena {
     fala: fala(
       'O alcance do aspersor é do centro até um canto. Essa distância se chama raio, e vamos chamar de R.',
       'O raio é metade do diâmetro. Se o diâmetro fosse 10 m, o raio seria 5 m.',
-      'Em letras: R = D ÷ 2. É a conta com letras que a questão pede.',
+      'Em letras: R = D ÷ 2.',
     ),
     desenho: [
       titulo('o alcance é o raio'),
@@ -155,9 +155,9 @@ function diagonalComNumero(): Cena {
   return {
     tipo: 'lousa',
     fala: fala(
-      'Veja o quadrado de lado 1. Os dois lados azuis e a diagonal D formam um triângulo com canto reto, como o canto de uma folha.',
-      'Pitágoras: o lado grande (o da frente do canto reto) vezes ele mesmo é a soma dos outros dois, cada um vezes ele mesmo.',
-      'Aqui: D × D = 1 × 1 + 1 × 1 = 2.',
+      'Veja o quadrado de lado 1. Os dois lados azuis e a diagonal D formam um triângulo com canto reto.',
+      'Pitágoras: o lado grande (da frente do canto reto) vezes ele mesmo é a soma dos outros dois, cada um vezes ele mesmo.',
+      'Teste com 3, 4 e 5: 5 × 5 = 25 e 3 × 3 + 4 × 4 = 25. Aqui: D × D = 1 × 1 + 1 × 1 = 2.',
     ),
     desenho: [
       titulo('diagonal do quadrado de lado 1'),
@@ -174,12 +174,12 @@ function raizDeDois(f: FichaGeometria): Cena {
   return linhas('o que é √2', [
     ['√2 é o número que vezes ele mesmo dá 2', 'tinta', 20],
     ['esse número é a diagonal do lado 1', 'vermelho', 20],
-    [`${br(f.raiz2)} × ${br(f.raiz2)} = ${br(q)}`, 'tinta', 26],
-    [`${br(q)} é quase 2: usamos √2 ≈ ${br(f.raiz2)}`, 'verde', 22],
+    [`${Math.round(f.raiz2 * 10)} × ${Math.round(f.raiz2 * 10)} = ${Math.round(q * 100)}, então ${br(f.raiz2)} × ${br(f.raiz2)} = ${br(q)}`, 'tinta', 21],
+    [`${br(q)} é quase 2: √2 ≈ ${br(f.raiz2)}`, 'verde', 24],
   ], fala(
     'D × D = 2 quer dizer que D é o número que vezes ele mesmo dá 2. Esse número se escreve √2, a raiz de 2.',
-    `Ele não é exato. A questão manda usar ${br(f.raiz2)}: ${br(f.raiz2)} × ${br(f.raiz2)} dá ${br(q)}, quase 2.`,
-    `Por isso a diagonal do quadrado de lado 1 vale ${br(f.raiz2)}, aproximadamente.`,
+    `Nenhum número com vírgula dá 2 certinho. A questão manda usar ${br(f.raiz2)}: sem a vírgula, ${Math.round(f.raiz2 * 10)} × ${Math.round(f.raiz2 * 10)} = ${Math.round(q * 100)}; com duas casas, ${br(q)}.`,
+    `${br(q)} é quase 2. O símbolo ≈ se lê "quase igual a": √2 ≈ ${br(f.raiz2)}.`,
   ));
 }
 
@@ -188,9 +188,9 @@ function diagonalComLetra(): Cena {
   return {
     tipo: 'lousa',
     fala: fala(
-      'Agora um lado qualquer, que chamamos de L. Com lado 3: 3 × 3 + 3 × 3 = 18, que é 2 × 3 × 3.',
+      'Agora um lado qualquer, L. Com lado 3: 3 × 3 + 3 × 3 = 18, que é 2 × 3 × 3.',
       'Com L é igual: D × D = L × L + L × L = 2 × L × L.',
-      'Como √2 × √2 = 2, o número que vezes ele mesmo dá 2 × L × L é L × √2. Então D = L × √2, para qualquer quadrado.',
+      'Confira: L × √2 vezes L × √2 = L × L × (√2 × √2) = L × L × 2. Então D = L × √2.',
     ),
     desenho: [
       titulo('diagonal do quadrado de lado L'),
@@ -212,7 +212,7 @@ function montandoAConta(f: FichaGeometria): Cena {
   ];
   const base = linhas('montando a conta', itens, fala(
     'O alcance R é metade da diagonal D. E a diagonal do quadrado é o lado vezes √2.',
-    `${f.lado} × ${br(f.raiz2)}: faça ${f.lado} × ${Math.round(f.raiz2 * 10)} = ${f.lado * Math.round(f.raiz2 * 10)} e divida por 10. Dá ${br(d)} m.`,
+    `${f.lado} × ${br(f.raiz2)}: ${f.lado} × ${Math.floor(f.raiz2)} = ${f.lado * Math.floor(f.raiz2)} e ${f.lado} × ${br(Math.round((f.raiz2 - Math.floor(f.raiz2)) * 10) / 10)} = ${br(f.lado * (Math.round((f.raiz2 - Math.floor(f.raiz2)) * 10) / 10))}. Somando: ${br(d)} m.`,
     `Então R = ${br(d)} ÷ 2 = ${br(r)} m.`,
   ));
   return base.tipo === 'lousa' ? { ...base, desenho: [...base.desenho, ...figuraNoCanto()] } : base;
@@ -229,10 +229,10 @@ function conferindo(f: FichaGeometria): Cena {
     [`${br(r)} × ${br(r)} = ${br(r * r)}`, 'tinta', 24],
     [`${br(r * r)} é quase ${br(soma)}: o ${br(f.raiz2)} é aproximado`, 'verde', 21],
   ], fala(
-    `Outro jeito: do centro à parede são ${br(meio)} m, metade do lado.`,
+    `Outro jeito: do centro até o meio da parede são ${br(meio)} m, metade do lado.`,
     `Até o canto: ${br(meio)} m para o lado e ${br(meio)} m para cima. Triângulo de canto reto: vale o Pitágoras.`,
     `R × R = ${br(meio)} × ${br(meio)} + ${br(meio)} × ${br(meio)} = ${br(soma)}.`,
-    `${br(r)} × ${br(r)} = ${br(r * r)}, quase ${br(soma)}: o ${br(f.raiz2)} é aproximado.`,
+    `${br(r)} × ${br(r)} = ${br(r * r)}, quase ${br(soma)}. Com ${br(r + 1)} daria ${br((r + 1) * (r + 1))}, longe.`,
   ));
 }
 
@@ -241,8 +241,8 @@ function porQueErram(f: FichaGeometria): Cena {
     [f.certa, 'verde', 21],
     ...f.erros.map((s): readonly [string, Cor, number] => [s, 'tinta', 21]),
   ], fala(
-    `A resposta certa vem da conta: ${f.certa}.`,
-    'As outras trocam o alcance pelo lado, pela diagonal inteira, ou erram a metade.',
+    `A conta deu ${br(contas(f).alcance)} m, então ${f.certa.split(':')[0]}.`,
+    'As outras: o lado, metade do lado, a diagonal inteira, ou a metade do alcance.',
   ));
 }
 
@@ -250,7 +250,7 @@ function proveVoce(f: FichaGeometria): Cena {
   const { prova } = f;
   return {
     tipo: 'prova',
-    fala: fala('Agora você. Escolha a resposta.'),
+    fala: fala('Agora você, numa conta parecida. Escolha a resposta.'),
     pergunta: `Um quadrado tem ${prova.lado} m de lado. Use √2 = ${br(f.raiz2)}. Quanto mede a diagonal?`,
     opcoes: [...prova.opcoes],
     certa: prova.certa,
@@ -263,7 +263,7 @@ function receita(): Cena {
     ['1. Desenhe a figura da questão', 'tinta', 21],
     ['2. Marque as medidas na figura', 'azul', 21],
     ['3. Diagonal do quadrado = lado × √2', 'vermelho', 20],
-    ['4. Círculo pelos cantos: D = diagonal', 'verde', 20],
+    ['4. Círculo pelos cantos: diagonal = diâmetro', 'verde', 20],
     ['5. Monte a conta e ache o que pede', 'tinta', 20],
   ], fala(
     'Para uma questão de figura: desenhe, marque as medidas e só depois monte a conta.',
@@ -284,7 +284,7 @@ export function capaEPapelGeometria(tema: string, enunciado: string, alternativa
       tx(200, 196, 'desenhando passo a passo', 'cinza', 26, 2.0),
     ],
   };
-  return [capa, { ...papel, fala: [[0.3, 'Esta é a questão. Primeiro desenhe o que ela descreve.']] } as Cena];
+  return [capa, { ...papel, fala: [[0.3, 'Esta é a questão. Aspersor, √2 e alcance a gente explica nas próximas telas.']] } as Cena];
 }
 
 export function lousaGeometria(f: FichaGeometria, capa: Cena, papel: Cena): AulaLousa {
