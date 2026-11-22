@@ -3,7 +3,7 @@
 // Narrado"). Função pura: recebe a questão e os passos, devolve a lousa ou o motivo de não dar.
 import type { AulaLousa, Cena, Cor, Desenho, Fala } from './tipos';
 
-type Passo = { titulo?: unknown; texto?: unknown; visual?: unknown };
+export type Passo = { titulo?: unknown; texto?: unknown; visual?: unknown };
 export type EntradaDoRobo = {
   enunciado: string;
   alternativas: string[];
@@ -13,18 +13,18 @@ export type EntradaDoRobo = {
 export type Resultado = { ok: true; aula: AulaLousa } | { ok: false; motivo: string };
 
 const TITULO_PRIMEIRO_PASSO = 'As fórmulas desta questão';
-const MAX_PAPEL = 1400;
-const MAX_ALTERNATIVA = 60;
+export const MAX_PAPEL = 1400;
+export const MAX_ALTERNATIVA = 60;
 const MAX_FALA = 150;
 const MAX_FALA_DA_TELA = 250;
-const MAX_CENAS = 16;
+export const MAX_CENAS = 16;
 const LINHAS_POR_TELA = 5;
 const LARGURA_TELA = 360;
 const LARGURA_DA_LETRA = 0.4; // mesma estimativa de lousa.py (em × tamanho)
 const SEGUNDOS_POR_LETRA = 1 / 15;
 
-const texto = (v: unknown): string => (typeof v === 'string' ? v : '');
-const limpa = (s: string): string => s.replace(/\$/g, '').replace(/\s+/g, ' ').trim();
+export const texto = (v: unknown): string => (typeof v === 'string' ? v : '');
+export const limpa = (s: string): string => s.replace(/\$/g, '').replace(/\s+/g, ' ').trim();
 
 export function cabem(tam: number): number {
   return Math.floor(LARGURA_TELA / (tam * LARGURA_DA_LETRA));
@@ -47,10 +47,10 @@ export function quebrar(s: string, max: number): string[] {
   return linhas;
 }
 
-type Linha = { s: string; cor: Cor; tam: number };
+export type Linha = { s: string; cor: Cor; tam: number };
 
 /** Frases do professor: as frases do passo, até 4 e até ~250 letras na tela toda. */
-function falas(textoDoPasso: string): Fala[] {
+export function falas(textoDoPasso: string): Fala[] {
   const frases = limpa(textoDoPasso.replace(/\n/g, ' '))
     .split(/(?<=[.:?!])\s+/)
     .map((f) => f.slice(0, MAX_FALA))
@@ -72,7 +72,7 @@ function falas(textoDoPasso: string): Fala[] {
 }
 
 /** Telas de texto: título no alto e até 5 linhas por tela, uma a uma, com sublinhado verde no que tem "=". */
-function telas(titulo: string, linhas: Linha[], fala: Fala[]): Cena[] {
+export function telas(titulo: string, linhas: Linha[], fala: Fala[]): Cena[] {
   const paginas: Linha[][] = [];
   for (let i = 0; i < linhas.length; i += LINHAS_POR_TELA) paginas.push(linhas.slice(i, i + LINHAS_POR_TELA));
   if (!paginas.length) paginas.push([]);
@@ -87,7 +87,7 @@ function telas(titulo: string, linhas: Linha[], fala: Fala[]): Cena[] {
   });
 }
 
-function linhasDoTexto(s: string, tam = 24): Linha[] {
+export function linhasDoTexto(s: string, tam = 24): Linha[] {
   const max = cabem(tam);
   const saida: Linha[] = [];
   for (const parte of s.split('\n')) {
@@ -99,11 +99,11 @@ function linhasDoTexto(s: string, tam = 24): Linha[] {
   return saida;
 }
 
-function visualDe(p: Passo): Record<string, unknown> | null {
+export function visualDe(p: Passo): Record<string, unknown> | null {
   return p.visual && typeof p.visual === 'object' ? (p.visual as Record<string, unknown>) : null;
 }
 
-function linhasDaTabela(v: Record<string, unknown> | null): Linha[] {
+export function linhasDaTabela(v: Record<string, unknown> | null): Linha[] {
   const linhas = Array.isArray(v?.linhas) ? (v!.linhas as unknown[]) : [];
   return linhas.flatMap((l) => {
     if (!Array.isArray(l)) return [];
