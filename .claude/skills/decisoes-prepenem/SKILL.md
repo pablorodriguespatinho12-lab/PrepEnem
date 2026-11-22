@@ -122,8 +122,9 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   `scripts/banco-enem/lousa.py` (trava texto largo demais) e `lousas_matematica.py`. O traço **continua
   se desenhando com "reduzir movimento"** (o Chrome dele reporta reduce; é o conteúdo da aula); só saem
   deslizar, zoom e boca. Testado em 1366×768, 390×844, 360×640 e 844×390: o diálogo nunca rola.
-  Nível acima = **mais raciocínio** (escolha dele): 2 ou 3 conteúdos juntos, dado escondido, pegadinha
-  nas letras, conta curta. Antes de escrever, **procurar no banco se a ideia já existe** (minha
+  Nível acima = **difícil DE VERDADE** (Pablo, 22/11/2026: "muito fácil, muito genérico... pega a questão do ENEM e dificulta mais"): é ORIGINAL, aprendida de exemplos reais
+  (ITA, IME, Fuvest, ENEM, Oxford; as reais NÃO entram no site, Pablo 22/11/2026) e JUNTA conteúdos dos degraus anteriores (`precisaAntes`; modelo: ENEM círculos + disco = geom. plana + probabilidade); texto de prova (≥ 600 letras quando couber; as minhas tinham 220 contra 676 do ENEM), tabela ou desenho, 4+ passos, pegadinha de
+  unidade, 2 conteúdos juntos. Nunca variação curta de clássico ("nove operários"). Plano: `docs/plano-nivel-acima.md`. (Antes: "mais raciocínio... conta curta": VENCIDA.) Antes de escrever, **procurar no banco se a ideia já existe** (minha
   1ª questão de Estatística repetia a `d2-acima-mat-05`). **Palavra nova da lousa aparece primeiro como
   desenho e só depois com nome** (Pablo, 21/11/2026, "quantas filas? como assim?": a aula contava
   "filas" sem mostrar o que é uma fila nem de onde vem o 3 × 2 × 1); antes de gravar, passar o texto

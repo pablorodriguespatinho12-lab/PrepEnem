@@ -78,8 +78,9 @@ export function telas(titulo: string, linhas: Linha[], fala: Fala[]): Cena[] {
   for (let i = 0; i < linhas.length; i += LINHAS_POR_TELA) paginas.push(linhas.slice(i, i + LINHAS_POR_TELA));
   if (!paginas.length) paginas.push([]);
   return paginas.map((pagina, n): Cena => {
+    const tituloDaTela = (n ? `${titulo} (${n + 1})` : titulo).slice(0, 40);
     const desenho: Desenho[] = [
-      { k: 'tx', x: 200, y: 34, s: n ? `${titulo} (${n + 1})`.slice(0, 40) : titulo.slice(0, 40), cor: 'tinta', tam: 28, t: 0.2 },
+      { k: 'tx', x: 200, y: 34, s: tituloDaTela, cor: 'tinta', tam: Math.min(28, Math.floor(LARGURA_TELA / (tituloDaTela.length * LARGURA_DA_LETRA))), t: 0.2 }, // título longo encolhe: não passa do quadro
     ];
     pagina.forEach((l, i) => {
       desenho.push({ k: 'tx', x: 30, y: 84 + i * 44, s: l.s, cor: l.cor, tam: l.tam, t: 0.8 + i * 1.4, ancora: 'start' });

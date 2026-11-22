@@ -104,7 +104,7 @@ function marcandoADiagonal(): Cena {
       ponto(GRANDE, 0.2),
       diagonal(GRANDE, 0.8),
       tx(GRANDE.cx - 28, GRANDE.cy - 18, 'D', 'vermelho', 22, 3.0),
-      tx(X_TEXTO, 108, 'diagonal: canto a canto', 'vermelho', 19, 1.6, 'start'),
+      tx(X_TEXTO, 108, 'de canto a canto', 'vermelho', 20, 1.6, 'start'),
       tx(X_TEXTO, 148, 'passa pelo centro', 'tinta', 20, 3.4, 'start'),
       tx(X_TEXTO, 196, 'D = diâmetro', 'vermelho', 28, 5.6, 'start'),
     ],
