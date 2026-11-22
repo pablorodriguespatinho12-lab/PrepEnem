@@ -23,3 +23,6 @@ Regra segura: uma questão de nível acima do degrau k só junta conteúdo da **
 - **A (recomendada):** nível acima do degrau k pode juntar qualquer degrau **anterior na ordem da escada** (1..k-1) **e** a aula "Antes" correspondente
   vira pré-requisito declarado na questão. Libera 6+8, 5+3, 7+8, etc. Custo: o aluno que pulou degrau pode travar.
 - **B:** manter a cadeia estrita. Seguro, mas 4 de 8 degraus ficam com junção pobre e o modelo do Pablo fica de fora.
+
+## Decidido (22/11/2026, Pablo): **A**
+Nível acima junta qualquer degrau anterior e declara o "Antes". Estilo: mistura de Fuvest, ITA, ENEM e Harvard–MIT ("pega um pouco de todos").
