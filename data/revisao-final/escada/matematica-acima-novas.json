@@ -15,7 +15,12 @@
   "explicacao": {
    "conferencia": "Se fosse a média, daria (45 + 30) ÷ 2 = 37,5. Mas a conta certa é distância ÷ tempo, e o tempo gasto a 30 km/h (0,6 h) é maior que o gasto a 45 km/h (0,4 h), fora a parada de 0,2 h sem andar. Por isso a média fica mais perto da velocidade lenta. B. Erros: A = Fez a média de 45, 30 e 0, como se cada fase durasse igual. C = Escreveu 12 min como 0,12 h. D = Esqueceu a parada: 36 km em 1 h. E = Média simples de 45 e 30.",
    "ideia": "Velocidade média não é a média das velocidades: é a distância total dividida pelo tempo total. A parada de 12 minutos também conta como tempo.",
-   "pecas": [],
+   "pecas": [
+    {
+     "termo": "Velocidade média",
+     "significado": "Quantos km se andam em cada hora, em média: distância total ÷ tempo total."
+    }
+   ],
    "passos": [
     {
      "titulo": "As fórmulas desta questão",
@@ -82,7 +87,7 @@
     },
     {
      "titulo": "Tudo em km e em horas",
-     "texto": "18 000 m ÷ 1 000 = 18 km. Ida: 18 ÷ 45 = 0,4 h (confira: 45 · 0,4 = 18). Volta: 18 ÷ 30 = 0,6 h (30 · 0,6 = 18). Em minutos: 0,4 · 60 = 24 min e 0,6 · 60 = 36 min."
+     "texto": "18 000 m ÷ 1 000 = 18 km. Tempo = distância ÷ velocidade. Tempo = distância ÷ velocidade. Tempo = distância ÷ velocidade. Ida: 18 ÷ 45 = 0,4 h (confira: 45 · 0,4 = 18). Volta: 18 ÷ 30 = 0,6 h (30 · 0,6 = 18). Em minutos: 0,4 · 60 = 24 min e 0,6 · 60 = 36 min."
     },
     {
      "titulo": "Achando T: tempo total",
@@ -250,7 +255,7 @@
     },
     {
      "titulo": "Em hectares",
-     "texto": "1 hectare = 10 000 m² (4 zeros). Cortando 4 zeros de 6 000 000, sobra 600 ha."
+     "texto": "1 hectare = 10 000 m² (4 zeros). Dividir por 10 000 é cortar 4 zeros do final: 6 000 000 ÷ 10 000 = 600 ha."
     },
     {
      "titulo": "O que sobrou",
@@ -378,18 +383,18 @@
        },
        {
         "letra": "M",
-        "oque": "mistura que já está no tanque (60 L)"
+        "oque": "mistura que já está no tanque"
        },
        {
         "letra": "G",
-        "oque": "gasolina, que não muda (45 L)"
+        "oque": "gasolina, que não muda"
        }
       ]
      }
     },
     {
      "titulo": "Achando G: a gasolina",
-     "texto": "25% é 25 ÷ 100 = 1/4, então 25% de 60 = 60 ÷ 4 = 15 L de etanol, e 60 − 15 = 45 L de gasolina."
+     "texto": "25% é 25 ÷ 100 = 25/100, e dividindo em cima e embaixo por 25 dá 1/4, então 25% de 60 = 60 ÷ 4 = 15 L de etanol, e 60 − 15 = 45 L de gasolina."
     },
     {
      "titulo": "O que não muda",
@@ -457,7 +462,7 @@
   "id": "d2-escada-mat-ita-gra-00b",
   "materia": "Matemática",
   "tema": "Grandezas e Medidas",
-  "enunciado": "Uma caixa d'água de 1 200 L está com 25% da capacidade. Há duas torneiras e um ralo, todos abertos ao mesmo tempo. A torneira A, sozinha, enche a caixa vazia em 6 horas; a torneira B, sozinha, em 4 horas. O ralo, sozinho, esvazia a caixa cheia em 12 horas. Quanto tempo leva para a caixa ficar cheia?\n\nDados: Torneira A: enche em 6 h; Torneira B: enche em 4 h; Ralo: esvazia em 12 h.",
+  "enunciado": "Uma caixa d'água de 1 200 L está com 25% da capacidade. Há duas torneiras e um ralo, todos abertos ao mesmo tempo. A torneira A, sozinha, enche a caixa vazia em 6 horas; a torneira B, sozinha, em 4 horas. O ralo, sozinho, esvazia a caixa cheia em 12 horas. Quanto tempo leva para a caixa ficar cheia?\n\nDados: Torneira A: enche a caixa vazia em 6 h; Torneira B: enche a caixa vazia em 4 h; Ralo: esvazia a caixa cheia em 12 h; Na caixa agora: 25% da capacidade; Capacidade: 1 200 L.",
   "A": "1 h 30 min",
   "B": "1 h 48 min",
   "C": "2 h 15 min",
@@ -503,15 +508,23 @@
       "linhas": [
        [
         "Torneira A",
-        "enche em 6 h"
+        "enche a caixa vazia em 6 h"
        ],
        [
         "Torneira B",
-        "enche em 4 h"
+        "enche a caixa vazia em 4 h"
        ],
        [
         "Ralo",
-        "esvazia em 12 h"
+        "esvazia a caixa cheia em 12 h"
+       ],
+       [
+        "Na caixa agora",
+        "25% da capacidade"
+       ],
+       [
+        "Capacidade",
+        "1 200 L"
        ]
       ]
      }
@@ -553,7 +566,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "T = Q ÷ V = (3/4) ÷ (1/3). Se a caixa enche 1/3 por hora, enche a caixa toda em 3 horas; então dividir por 1/3 é o mesmo que multiplicar por 3: (3/4) · 3 = 9/4 h. E 9 ÷ 4 = 2,25 h."
+     "texto": "T = Q ÷ V = (3/4) ÷ (1/3). Se a caixa enche 1/3 por hora, enche a caixa toda em 3 horas; então dividir por 1/3 é o mesmo que multiplicar por 3: (3/4) · 3 = 9/4 h (3 · 3 = 9 em cima, e o 4 embaixo fica). E 9 ÷ 4 = 2,25 h."
     },
     {
      "titulo": "Em horas e minutos",
@@ -605,7 +618,7 @@
   "id": "d2-escada-mat-ita-est-00a",
   "materia": "Matemática",
   "tema": "Estatística",
-  "enunciado": "Numa escola pública, o 8º A tem 30 alunos, e a média da turma na prova de Matemática do bimestre foi 5,8. No começo do bimestre seguinte, a direção recebeu 10 alunos transferidos de outras duas escolas, 5 vindos da escola X e 5 vindos da escola Y, e juntou todos numa única turma de 40 alunos. As notas dos transferidos na prova anterior não foram apagadas: a média dos 5 alunos da escola X era 7,0. Segundo o regimento, a turma só é considerada aprovada no bimestre se a média dos 40 alunos for exatamente 6,0 ou mais. A coordenadora quer saber qual precisa ser, no mínimo, a média dos 5 alunos vindos da escola Y para a turma chegar a 6,0, sem mexer nas notas dos alunos do 8º A. Essa média deverá ser de:\n\nDados: 8º A original: 30 · 5,8; Escola X: 5 · 7,0; Escola Y: 5 · ?.",
+  "enunciado": "Numa escola pública, o 8º A tem 30 alunos, e a média da turma na prova de Matemática do bimestre foi 5,8. No começo do bimestre seguinte, a direção recebeu 10 alunos transferidos de outras duas escolas, 5 vindos da escola X e 5 vindos da escola Y, e juntou todos numa única turma de 40 alunos. As notas dos transferidos na prova anterior não foram apagadas: a média dos 5 alunos da escola X era 7,0. Segundo o regimento, a turma só é considerada aprovada no bimestre se a média dos 40 alunos for exatamente 6,0 ou mais. A coordenadora quer saber qual precisa ser, no mínimo, a média dos 5 alunos vindos da escola Y para a turma chegar a 6,0, sem mexer nas notas dos alunos do 8º A. Essa média deverá ser de:\n\nDados: 8º A original: 30 alunos, média 5,8; Escola X: 5 alunos, média 7,0; Escola Y: 5 alunos, média ?; Turma final: 40 alunos, média 6,0 (mínimo).",
   "A": "5,0",
   "B": "5,8",
   "C": "6,0",
@@ -646,15 +659,19 @@
       "linhas": [
        [
         "8º A original",
-        "30 · 5,8"
+        "30 alunos, média 5,8"
        ],
        [
         "Escola X",
-        "5 · 7,0"
+        "5 alunos, média 7,0"
        ],
        [
         "Escola Y",
-        "5 · ?"
+        "5 alunos, média ?"
+       ],
+       [
+        "Turma final",
+        "40 alunos, média 6,0 (mínimo)"
        ]
       ]
      }
@@ -664,11 +681,11 @@
      "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "Y = (P − A − X) ÷ 5",
+      "formula": "M = (P − A − E) ÷ 5",
       "leitura": "pontos que faltam para a escola Y ÷ 5 alunos",
       "letras": [
        {
-        "letra": "Y",
+        "letra": "M",
         "oque": "média da escola Y (o que a questão quer)"
        },
        {
@@ -680,7 +697,7 @@
         "oque": "pontos da turma antiga"
        },
        {
-        "letra": "X",
+        "letra": "E",
         "oque": "pontos da escola X"
        }
       ]
@@ -699,7 +716,7 @@
      "texto": "240 − 174 = 66 pontos para os 10 transferidos. (66 ÷ 10 = 6,6: é a média que os dez precisam ter juntos.)"
     },
     {
-     "titulo": "Achando X: pontos da escola X",
+     "titulo": "Achando E: pontos da escola X",
      "texto": "5 · 7,0 = 35. Sobram 66 − 35 = 31 pontos."
     },
     {
@@ -723,7 +740,7 @@
        ],
        [
         "2. Equação em letras",
-        "Y = (P − A − X) ÷ 5"
+        "M = (P − A − E) ÷ 5"
        ],
        [
         "3. Uma letra por vez",
@@ -752,7 +769,7 @@
   "id": "d2-escada-mat-ita-est-00b",
   "materia": "Matemática",
   "tema": "Estatística",
-  "enunciado": "Numa turma de 11 alunos, as notas de um simulado (inteiras, de 0 a 10) estão na tabela, e a mediana foi 7. Dois alunos que tinham faltado fazem a prova depois, e a turma passa a ter 13 alunos. O professor quer que a mediana das 13 notas seja exatamente 6. A nota mínima de aprovação da escola é 6. Considerando só quais notas os dois alunos tiraram, sem importar qual aluno tirou qual (o par {5, 6} é o mesmo que {6, 5}), quantos pares de notas fazem a mediana ser exatamente 6?\n\nDados: Nota 4: 2; Nota 5: 3; Nota 7: 3; Nota 8: 2; Nota 10: 1.",
+  "enunciado": "Numa turma de 11 alunos, as notas de um simulado (inteiras, de 0 a 10) estão na tabela, e a mediana foi 7. Dois alunos que tinham faltado fazem a prova depois, e a turma passa a ter 13 alunos. O professor quer que a mediana das 13 notas seja exatamente 6. A nota mínima de aprovação da escola é 6. Considerando só quais notas os dois alunos tiraram, sem importar qual aluno tirou qual (o par {5, 6} é o mesmo que {6, 5}), quantos pares de notas fazem a mediana ser exatamente 6?\n\nDados: 2 alunos: tiraram 4; 3 alunos: tiraram 5; 3 alunos: tiraram 7; 2 alunos: tiraram 8; 1 aluno: tirou 10; Quero: mediana exata 6 com 2 notas novas (13 alunos).",
   "A": "6",
   "B": "7",
   "C": "11",
@@ -797,24 +814,28 @@
       ],
       "linhas": [
        [
-        "Nota 4",
-        "2"
+        "2 alunos",
+        "tiraram 4"
        ],
        [
-        "Nota 5",
-        "3"
+        "3 alunos",
+        "tiraram 5"
        ],
        [
-        "Nota 7",
-        "3"
+        "3 alunos",
+        "tiraram 7"
        ],
        [
-        "Nota 8",
-        "2"
+        "2 alunos",
+        "tiraram 8"
        ],
        [
-        "Nota 10",
-        "1"
+        "1 aluno",
+        "tirou 10"
+       ],
+       [
+        "Quero",
+        "mediana exata 6 com 2 notas novas (13 alunos)"
        ]
       ]
      }
@@ -844,7 +865,7 @@
     },
     {
      "titulo": "A mediana de 13 notas",
-     "texto": "Mediana é a nota do meio, com as notas em fila da menor para a maior. Com 13 notas há 6 de cada lado e a do meio é a 7ª. (Conta: (13 + 1) ÷ 2 = 7. Com 11 notas, seria a 6ª.)"
+     "texto": "Mediana é a nota do meio, com as notas em fila da menor para a maior. Com 13 notas há 6 de cada lado e a do meio é a 7ª. (Conta: (13 + 1) ÷ 2 = 7. Com 11 notas, seria a 6ª. Com um número par de notas, a mediana é a média das duas do meio.)"
     },
     {
      "titulo": "O que as 11 notas já têm",
@@ -1023,7 +1044,7 @@
      "texto": "D = 300, direto do enunciado."
     },
     {
-     "titulo": "Volta na equação",
+     "titulo": "O abono soma o mesmo valor em todos",
      "texto": "Todos sobem 150, então a média sobe 150: 2 700 + 150 = 2 850. (Os 8 funcionários não entram na conta.)"
     },
     {
@@ -1031,8 +1052,8 @@
      "texto": "O reajuste multiplica o desvio por 1,08: E = 1,08 · 300 = 324. O abono soma o mesmo valor a todos e não muda o espalhamento. Exemplo com 2 salários, 1 000 e 1 200: a distância entre eles é 200; somando 150 a cada um, ficam 1 150 e 1 350, e a distância continua 200. Então E continua 324."
     },
     {
-     "titulo": "Resposta",
-     "texto": "(R$ 2 850 ; R$ 324). As outras erram assim: 474 soma o abono ao desvio; 300 esquece que o reajuste muda o desvio; 2 700 esquece o abono; 2 862 põe o abono antes do reajuste."
+     "titulo": "Volta na equação",
+     "texto": "(R$ 2 850 ; R$ 324): N = 1,08 · 2 500 + 150 = 2 850 e E = 1,08 · 300 = 324. As outras erram assim: 474 soma o abono ao desvio; 300 esquece que o reajuste muda o desvio; 2 700 esquece o abono; 2 862 põe o abono antes do reajuste."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -1080,7 +1101,7 @@
   "id": "d2-escada-mat-ita-est-00d",
   "materia": "Matemática",
   "tema": "Estatística",
-  "enunciado": "Uma padaria vendeu em abril 25% a mais do que em março. Em maio, vendeu 20% a menos do que em abril. Nos três meses, a média mensal de vendas foi de R$ 6 500, e a padaria gastou R$ 800 por mês com embalagens. O valor vendido em abril foi:\n\nDados: Março: base; Abril: 25% a mais que março; Maio: 20% a menos que abril.",
+  "enunciado": "Uma padaria vendeu em abril 25% a mais do que em março. Em maio, vendeu 20% a menos do que em abril. Nos três meses, a média mensal de vendas foi de R$ 6 500, e a padaria gastou R$ 800 por mês com embalagens. O valor vendido em abril foi:\n\nDados: Março: base; Abril: 25% a mais que março; Maio: 20% a menos que abril; Média dos 3 meses: R$ 6 500.",
   "A": "R$ 6 000",
   "B": "R$ 6 500",
   "C": "R$ 7 500",
@@ -1130,6 +1151,10 @@
        [
         "Maio",
         "20% a menos que abril"
+       ],
+       [
+        "Média dos 3 meses",
+        "R$ 6 500"
        ]
       ]
      }
@@ -1139,39 +1164,39 @@
      "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "3,25 · T = 3 · M",
+      "formula": "3,25 · M = 3 · A",
       "leitura": "soma dos três meses = 3 vezes a média",
       "letras": [
        {
-        "letra": "T",
+        "letra": "M",
         "oque": "vendas de março"
        },
        {
-        "letra": "M",
+        "letra": "A",
         "oque": "média mensal dos três meses"
        }
       ]
      }
     },
     {
-     "titulo": "Tudo em função de março (T)",
-     "texto": "Abril = 1,25 · T (25% a mais: 100% + 25% = 125% = 1,25)."
+     "titulo": "Tudo em função de março (M)",
+     "texto": "Abril = 1,25 · M (25% a mais: 100% + 25% = 125% = 1,25)."
     },
     {
      "titulo": "Maio",
-     "texto": "Maio = 0,8 · 1,25 · T (20% a menos: 100% − 20% = 80% = 0,8). Como 0,8 · 1,25 = 1 (8 · 125 = 1 000, com 3 casas decimais: 1,000), maio = 1 · T. Subir 25% e cair 20% se cancela."
+     "texto": "Maio = 0,8 · 1,25 · M (20% a menos: 100% − 20% = 80% = 0,8). Como 0,8 · 1,25 = 1 (8 · 125 = 1 000, com 3 casas decimais: 1,000), maio = 1 · M. Subir 25% e cair 20% se cancela."
     },
     {
-     "titulo": "Achando M: a média",
-     "texto": "M = 6 500, direto do enunciado. A soma dos três meses é 3 · 6 500 = 19 500."
+     "titulo": "Achando A: a média",
+     "texto": "A = 6 500, direto do enunciado. A soma dos três meses é 3 · A = 3 · 6 500 = 19 500."
     },
     {
      "titulo": "Soma dos três meses",
-     "texto": "T + 1,25 · T + T = 3,25 · T. A soma também é 3 · 6 500 = 19 500."
+     "texto": "M + 1,25 · M + M = 3,25 · M. A soma também é 3 · 6 500 = 19 500."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "3,25 · T = 19 500, então T = 19 500 ÷ 3,25. Tirando as vírgulas (multiplicando os dois por 100): 1 950 000 ÷ 325. Como 325 · 6 = 1 950, então 325 · 6 000 = 1 950 000, e T = 6 000."
+     "texto": "3,25 · M = 19 500, então M = 19 500 ÷ 3,25. Tirando as vírgulas (multiplicando os dois por 100): 1 950 000 ÷ 325. Como 325 · 6 = 1 950, então 325 · 6 000 = 1 950 000, e M = 6 000."
     },
     {
      "titulo": "Abril",
@@ -1194,7 +1219,7 @@
        ],
        [
         "2. Equação em letras",
-        "3,25 · T = 3 · M"
+        "3,25 · M = 3 · A"
        ],
        [
         "3. Uma letra por vez",
@@ -1314,7 +1339,7 @@
     },
     {
      "titulo": "Juntar",
-     "texto": "Troque u por 36 − 3m: m + 36 − 3m = 22. Como m − 3m = −2m, fica 36 − 2m = 22. Tire 36 dos dois lados: −2m = 22 − 36 = −14. Trocando o sinal: 2m = 14, e m = 7."
+     "texto": "Troque u por 36 − 3m: m + 36 − 3m = 22. Como m − 3m = −2m, fica 36 − 2m = 22. Então 2m é o que falta de 36 para chegar a 22: 36 − 22 = 14. Assim 2m = 14 e m = 7."
     },
     {
      "titulo": "Achando u: moedas de 1 real",
@@ -1353,7 +1378,7 @@
    ],
    "checagem": {
     "pergunta": "Só há moedas de 50 centavos e de 1 real: 20 moedas, R$ 14,00. Quantas são de 1 real?",
-    "resposta": "m + u = 20 e 0,5m + u = 14. Subtraindo: 0,5m = 6, m = 12 e u = 8.",
+    "resposta": "m + u = 20 e 0,5m + u = 14. Tirando a segunda da primeira: m − 0,5m = 20 − 14, ou seja, 0,5m = 6, m = 12 e u = 8.",
     "opcoes": [
      "6",
      "8",
@@ -1370,7 +1395,7 @@
   "id": "d2-escada-mat-ita-equ-00a",
   "materia": "Matemática",
   "tema": "Equações e Sistemas",
-  "enunciado": "Uma professora aposentada recebeu uma indenização de R$ 12 000 e decidiu dividi-la em duas aplicações, sem deixar nada parado na conta. A aplicação A é uma poupança que rende 1% ao mês, sem taxa nenhuma. A aplicação B é um fundo que rende 2% ao mês, mas o banco cobra uma taxa de administração de 10% sobre o rendimento do mês dessa aplicação (a poupança não tem taxa). A professora diz que, no primeiro mês, os rendimentos líquidos das duas aplicações, já descontada a taxa do fundo, somaram R$ 160. O gerente comentou que a tarifa de manutenção da conta, de R$ 15 por mês, é cobrada à parte e não entra nessa soma. Com base nessas informações, o valor aplicado no fundo B foi:\n\nDados: A: 1% ao mês · nenhuma; B: 2% ao mês · 10% do rendimento.",
+  "enunciado": "Uma professora aposentada recebeu uma indenização de R$ 12 000 e decidiu dividi-la em duas aplicações, sem deixar nada parado na conta. A aplicação A é uma poupança que rende 1% ao mês, sem taxa nenhuma. A aplicação B é um fundo que rende 2% ao mês, mas o banco cobra uma taxa de administração de 10% sobre o rendimento do mês dessa aplicação (a poupança não tem taxa). A professora diz que, no primeiro mês, os rendimentos líquidos das duas aplicações, já descontada a taxa do fundo, somaram R$ 160. O gerente comentou que a tarifa de manutenção da conta, de R$ 15 por mês, é cobrada à parte e não entra nessa soma. Com base nessas informações, o valor aplicado no fundo B foi:\n\nDados: Total aplicado: R$ 12 000; A: rende 1% ao mês, sem taxa; B: rende 2% ao mês, com taxa de 10% sobre o rendimento; Rendimento líquido das duas: R$ 160.",
   "A": "R$ 4 000",
   "B": "R$ 5 000",
   "C": "R$ 6 000",
@@ -1419,12 +1444,20 @@
       ],
       "linhas": [
        [
+        "Total aplicado",
+        "R$ 12 000"
+       ],
+       [
         "A",
-        "1% ao mês · nenhuma"
+        "rende 1% ao mês, sem taxa"
        ],
        [
         "B",
-        "2% ao mês · 10% do rendimento"
+        "rende 2% ao mês, com taxa de 10% sobre o rendimento"
+       ],
+       [
+        "Rendimento líquido das duas",
+        "R$ 160"
        ]
       ]
      }
@@ -1458,7 +1491,7 @@
     },
     {
      "titulo": "Trocar A",
-     "texto": "Da 1ª: A = 12 000 − B. Troque A na 2ª: 0,01 · (12 000 − B) + 0,018 · B = 160. Como 0,01 · 12 000 = 120 (1% de 12 000), fica 120 − 0,01 B + 0,018 B = 160."
+     "texto": "Da 1ª: A = 12 000 − B. Troque A na 2ª: 0,01 · (12 000 − B) + 0,018 · B = 160. O 0,01 multiplica cada parte do parêntese: 0,01 · 12 000 = 120 (1% de 12 000) e 0,01 · B. Fica 120 − 0,01 B + 0,018 B = 160."
     },
     {
      "titulo": "Resolver",
@@ -1601,8 +1634,16 @@
      "texto": "Até 60 min: A = 30 e B = 54, então B não compensa. Depois dos 60, A cobra 0,75 por minuto além (o excedente): com t = 70, são 70 − 60 = 10 minutos além, e A custa 30 + 0,75 · 10 = 37,50. O plano B fica em 54 até 120 min."
     },
     {
+     "titulo": "Achando A: custo do plano A",
+     "texto": "Depois dos 60 minutos, A = 30 + 0,75 · (t − 60). Com t = 93: A = 30 + 0,75 · 33 = 30 + 24,75 = 54,75."
+    },
+    {
+     "titulo": "Achando B: custo do plano B",
+     "texto": "Até 120 minutos, B = 54."
+    },
+    {
      "titulo": "Entre 60 e 120 min",
-     "texto": "B custa 54. A passa de 54 quando 0,75 · (t − 60) > 24 (24 = 54 − 30; \">\" lê-se \"maior que\"). Então t − 60 > 24 ÷ 0,75 = 32 (conferindo: 0,75 · 32 = 24), isto é, t > 92."
+     "texto": "B custa 54. A passa de 54 quando 0,75 · (t − 60) > 24 (24 = 54 − 30; \">\" lê-se \"maior que\"). Então t − 60 > 24 ÷ 0,75. Multiplicando os dois por 100: 2 400 ÷ 75 = 32 (conferindo: 0,75 · 32 = 24), isto é, t > 92."
     },
     {
      "titulo": "Em t = 92",
@@ -1613,16 +1654,8 @@
      "texto": "A = 30 + 0,75 · 33 = 54,75 e B = 54. B é mais barato."
     },
     {
-     "titulo": "Achando A: custo do plano A",
-     "texto": "Com t = 93: A = 30 + 0,75 · (93 − 60) = 30 + 24,75 = 54,75."
-    },
-    {
-     "titulo": "Achando B: custo do plano B",
-     "texto": "Até 120 minutos, B = 54."
-    },
-    {
      "titulo": "Acima de 120 min",
-     "texto": "Os dois cobram excedente. A = 30 + 0,75 · (t − 60) = 30 + 0,75 t − 45 = 0,75 t − 15 (0,75 · 60 = 45). B = 54 + 0,5 · (t − 120) = 54 + 0,5 t − 60 = 0,5 t − 6 (0,5 · 120 = 60). A − B = 0,25 t − 9, que é positivo para t acima de 36; então B continua mais barato."
+     "texto": "Os dois cobram excedente. A = 30 + 0,75 · (t − 60). Abrindo o parêntese: 0,75 · t − 0,75 · 60 = 0,75 t − 45, então A = 30 + 0,75 t − 45 = 0,75 t − 15. B = 54 + 0,5 · (t − 120) = 54 + 0,5 t − 60 = 0,5 t − 6 (0,5 · 120 = 60). A − B = 0,25 t − 9, que é positivo para t acima de 36; então B continua mais barato."
     },
     {
      "titulo": "Volta na equação",
@@ -1829,7 +1862,7 @@
   "id": "d2-escada-mat-ita-fun-00a",
   "materia": "Matemática",
   "tema": "Funções",
-  "enunciado": "Uma confeitaria de bairro quer descobrir o preço ideal do seu bolo de cenoura. Durante três semanas seguidas, o dono mudou o preço e anotou quantos bolos vendeu por semana, como mostra a tabela, e percebeu que a quantidade vendida varia com o preço seguindo uma reta. Cada bolo custa R$ 10 para ser produzido (ingredientes e embalagem), e há um gasto fixo de R$ 300 por semana com o aluguel do forno e a conta de luz. O lucro semanal é o que sobra da venda depois de descontar todos os custos. Por causa de um tabelamento da prefeitura para produtos da cesta básica local, o preço de venda do bolo não pode passar de R$ 25. Escolhendo o preço que dá o maior lucro semanal permitido, esse lucro, em reais, será de:\n\nDados: Preço do bolo (R$): 20: Bolos vendidos por semana: 120; Preço do bolo (R$): 24: Bolos vendidos por semana: 104; Preço do bolo (R$): 28: Bolos vendidos por semana: 88.",
+  "enunciado": "Uma confeitaria de bairro quer descobrir o preço ideal do seu bolo de cenoura. Durante três semanas seguidas, o dono mudou o preço e anotou quantos bolos vendeu por semana, como mostra a tabela, e percebeu que a quantidade vendida varia com o preço seguindo uma reta. Cada bolo custa R$ 10 para ser produzido (ingredientes e embalagem), e há um gasto fixo de R$ 300 por semana com o aluguel do forno e a conta de luz. O lucro semanal é o que sobra da venda depois de descontar todos os custos. Por causa de um tabelamento da prefeitura para produtos da cesta básica local, o preço de venda do bolo não pode passar de R$ 25. Escolhendo o preço que dá o maior lucro semanal permitido, esse lucro, em reais, será de:\n\nDados: Preço R$ 20: 120 bolos por semana; Preço R$ 24: 104 bolos por semana; Preço R$ 28: 88 bolos por semana; Custo de cada bolo: R$ 10; Gasto fixo: R$ 300 por semana; Preço máximo permitido: R$ 25.",
   "A": "R$ 900",
   "B": "R$ 1 200",
   "C": "R$ 1 300",
@@ -1882,16 +1915,28 @@
       ],
       "linhas": [
        [
-        "Preço do bolo (R$): 20",
-        "Bolos vendidos por semana: 120"
+        "Preço R$ 20",
+        "120 bolos por semana"
        ],
        [
-        "Preço do bolo (R$): 24",
-        "Bolos vendidos por semana: 104"
+        "Preço R$ 24",
+        "104 bolos por semana"
        ],
        [
-        "Preço do bolo (R$): 28",
-        "Bolos vendidos por semana: 88"
+        "Preço R$ 28",
+        "88 bolos por semana"
+       ],
+       [
+        "Custo de cada bolo",
+        "R$ 10"
+       ],
+       [
+        "Gasto fixo",
+        "R$ 300 por semana"
+       ],
+       [
+        "Preço máximo permitido",
+        "R$ 25"
        ]
       ]
      }
@@ -2086,7 +2131,7 @@
     },
     {
      "titulo": "Dois pontos distintos",
-     "texto": "A parábola corta o eixo horizontal (o eixo x) onde x² − 6x + k = 0 (x² lê-se \"x ao quadrado\", x · x); essas soluções se chamam raízes. O número de raízes depende de D = b² − 4ac (o discriminante, ou Δ), numa equação ax² + bx + c = 0. Aqui a = 1, b = −6, c = k, e D = (−6)² − 4 · 1 · k = 36 − 4k. D > 0: duas raízes diferentes; D = 0: uma só; D < 0: nenhuma."
+     "texto": "A parábola corta o eixo horizontal (o eixo x) onde x² − 6x + k = 0 (x² lê-se \"x ao quadrado\", x · x); essas soluções se chamam raízes. O número de raízes depende de D = b² − 4ac (o discriminante, ou Δ), numa equação ax² + bx + c = 0. Aqui a = 1, b = −6, c = k, e D = (−6)² − 4 · 1 · k = 36 − 4k ((−6)² = (−6) · (−6) = 36, porque negativo vezes negativo dá positivo). D > 0: duas raízes diferentes; D = 0: uma só; D < 0: nenhuma."
     },
     {
      "titulo": "Achando k: os valores que dão duas raízes",
@@ -2098,7 +2143,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "k = 1, 2, 3, 4, 5, 6, 7, 8: são 8 valores."
+     "texto": "k = 1, 2, 3, 4, 5, 6, 7, 8: são 8 valores. Teste com k = 5: x² − 6x + 5 = 0 tem raízes 1 e 5, as duas positivas. Teste com k = 5: x² − 6x + 5 = 0 tem raízes 1 e 5, as duas positivas."
     },
     {
      "titulo": "Os que enganam",
@@ -2150,7 +2195,7 @@
   "id": "d2-escada-mat-ita-fun-00b",
   "materia": "Matemática",
   "tema": "Funções",
-  "enunciado": "Uma máquina de moedas transforma um número x em ax + b, com a e b números reais e a > 0. Passando duas vezes pela máquina, qualquer número x vira 9x + 8. Qual é o resultado de uma única passagem do número 5 pela máquina?",
+  "enunciado": "Uma máquina de moedas transforma um número x em ax + b, com a e b números quaisquer (podem ser negativos ou ter vírgula) e a > 0. Passando duas vezes pela máquina, qualquer número x vira 9x + 8. Qual é o resultado de uma única passagem do número 5 pela máquina?",
   "A": "−19",
   "B": "15",
   "C": "17",
@@ -2233,7 +2278,7 @@
     },
     {
      "titulo": "Achando a: o número que multiplica",
-     "texto": "a² = 9: 3 · 3 = 9 e também (−3) · (−3) = 9, então a = 3 ou a = −3. Como a > 0, fica a = 3."
+     "texto": "a² = 9: 3 · 3 = 9 e também (−3) · (−3) = 9 (negativo vezes negativo dá positivo), então a = 3 ou a = −3. Como a > 0, fica a = 3."
     },
     {
      "titulo": "Achando b: o número que se soma",
@@ -2299,7 +2344,7 @@
   "origem": "Escada",
   "nivel": "acima",
   "explicacao": {
-   "conferencia": "x = y − 3 = 3 072 − 3 = 3 069. Conferindo no começo da fila: 0, 3, 9, 21, 45. 45 + 3 = 48 = 3 · 16. C. Erros: A = Somou 3 dez vezes. B = Esqueceu o fator 3: 2¹⁰ − 1. D = Esqueceu de tirar o 3 no fim. E = Aplicou 11 vezes: 3 · 2¹¹ − 3.",
+   "conferencia": "N = Y − 3 = 3 072 − 3 = 3 069 (N é o número do pedido). Conferindo no começo da fila: 0, 3, 9, 21, 45. 45 + 3 = 48 = 3 · 16. C. Erros: A = Somou 3 dez vezes. B = Esqueceu o fator 3: 2¹⁰ − 1. D = Esqueceu de tirar o 3 no fim. E = Aplicou 11 vezes: 3 · 2¹¹ − 3.",
    "ideia": "Some 3 a todos os números: a regra \"dobra e soma 3\" vira só \"dobra\". Dobrar 10 vezes é fácil; depois tire o 3 de volta.",
    "pecas": [],
    "passos": [
@@ -2372,19 +2417,19 @@
     },
     {
      "titulo": "Somar 3 a tudo",
-     "texto": "O oposto de −3 é 3 (o mesmo número com o sinal trocado). Chame de y o número do pedido mais 3 (y = x + 3). O próximo pedido é 2x + 3; somando 3: 2x + 6 = 2 · (x + 3). Ou seja, o y simplesmente dobra."
+     "texto": "O oposto de −3 é 3 (o mesmo número com o sinal trocado). Chame de x o número de um pedido e de Y esse número mais 3: Y = x + 3. O próximo pedido é 2x + 3; somando 3: 2x + 6 = 2 · (x + 3). Ou seja, o Y simplesmente dobra."
     },
     {
      "titulo": "O começo",
-     "texto": "x = 0 dá y = 3. Dobrando: 3, 6, 12, 24, 48, 96, 192, 384, 768, 1 536, 3 072 (10 dobras a partir de 3)."
+     "texto": "x = 0 dá Y = 3. Dobrando: 3, 6, 12, 24, 48, 96, 192, 384, 768, 1 536, 3 072 (10 dobras a partir de 3)."
     },
     {
      "titulo": "Achando Y: depois de 10 passos",
-     "texto": "Dobrar 10 vezes é multiplicar por 2¹⁰ (2 multiplicado 10 vezes): 2, 4, 8, 16, 32, 64, 128, 256, 512, 1 024. Então y = 3 · 1 024 = 3 072, igual à lista."
+     "texto": "Dobrar 10 vezes é multiplicar por 2¹⁰ (2 multiplicado 10 vezes): 2, 4, 8, 16, 32, 64, 128, 256, 512, 1 024. Então Y = 3 · 1 024 = 3 072, igual à lista."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "x = y − 3 = 3 072 − 3 = 3 069. Conferindo no começo da fila: 0, 3, 9, 21, 45. 45 + 3 = 48 = 3 · 16."
+     "texto": "N = Y − 3 = 3 072 − 3 = 3 069 (N é o número do pedido). Conferindo no começo da fila: 0, 3, 9, 21, 45. 45 + 3 = 48 = 3 · 16."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -2546,7 +2591,7 @@
     },
     {
      "titulo": "Com 10% a mais",
-     "texto": "10% de 1 050 = 1 050 ÷ 10 = 105. Então 1 050 + 105 = 1 155 m². (É o mesmo que 1 050 · 1,1: 110% é 110 ÷ 100 = 1,1.)"
+     "texto": "10% é 10 ÷ 100 = 1/10, então 10% de 1 050 = 1 050 ÷ 10 = 105. Então 1 050 + 105 = 1 155 m². (É o mesmo que 1 050 · 1,1: 110% é 110 ÷ 100 = 1,1.)"
     },
     {
      "titulo": "Quanto um pacote cobre",
@@ -2588,14 +2633,14 @@
     }
    ],
    "checagem": {
-    "pergunta": "Terreno de 60 m², com 20% de folga. Cada pacote cobre 5 m². Quantos pacotes?",
-    "resposta": "60 · 1,2 = 72 m². 72 ÷ 5 = 14 e sobram 2 m², então 15 pacotes.",
+    "pergunta": "Terreno de 60 m², com 10% de folga. Cada pacote cobre 5 m². Quantos pacotes?",
+    "resposta": "60 · 1,1 = 66 m². 66 ÷ 5 = 13 e sobra 1 m², então 14 pacotes.",
     "opcoes": [
      "12",
-     "14",
-     "15"
+     "13",
+     "14"
     ],
-    "certa": "15"
+    "certa": "14"
    },
    "seuErro": null
   },
@@ -2723,7 +2768,7 @@
     },
     {
      "titulo": "Achando r: o raio do círculo",
-     "texto": "Ligue o centro do círculo aos 3 cantos (vértices) do triângulo: ele se divide em 3 triângulos, um com cada lado como base (5, 12 e 13), e em cada um a altura é o raio r (o raio chega ao lado formando ângulo reto, como nos quadradinhos). Áreas: 5 · r ÷ 2, 12 · r ÷ 2 e 13 · r ÷ 2. Somando: (5 + 12 + 13) · r ÷ 2 = 15 r. Essa soma é a área do triângulo, 30: 15 r = 30, r = 2 cm. (O perímetro, 5 + 12 + 13, também dá 30: coincidência deste triângulo.)\nAs linhas rosa ligam o centro aos 3 cantos e dividem o triângulo em 3 triângulos: um com cada lado como base. Em cada um, a altura é o raio (tracejado azul).",
+     "texto": "Ligue o centro do círculo aos 3 cantos (vértices) do triângulo: ele se divide em 3 triângulos, um com cada lado como base (5, 12 e 13), e em cada um a altura é o raio r (o raio chega ao lado formando ângulo reto, como nos quadradinhos). Áreas: 5 · r ÷ 2, 12 · r ÷ 2 e 13 · r ÷ 2. Somando: (5 + 12 + 13) · r ÷ 2 = 15 r. Essa soma é a área do triângulo, 30: 15 r = 30, r = 2 cm. Isso mostra que r = área ÷ semiperímetro = 30 ÷ 15 = 2.\nAs linhas rosa ligam o centro aos 3 cantos e dividem o triângulo em 3 triângulos: um com cada lado como base. Em cada um, a altura é o raio (tracejado azul).",
      "visual": {
       "tipo": "diagrama",
       "nome": "circulo-no-triangulo",
@@ -2874,7 +2919,7 @@
     },
     {
      "titulo": "O desenho",
-     "texto": "Veja o retângulo (azul) com os 4 cantos na circunferência (o amarelo é o que sobra do círculo). Os lados são 4k e 3k, isto é, 3 e 4 vezes o mesmo número k, que vamos descobrir. A linha azul forte é a diagonal. Cada canto é um ângulo reto (quadradinho).",
+     "texto": "Veja o retângulo (azul) com os 4 cantos na circunferência (o amarelo é o que sobra do círculo). Os lados são 3k e 4k, isto é, 3 e 4 vezes o mesmo número k, que vamos descobrir. A linha azul forte é a diagonal. Cada canto é um ângulo reto (quadradinho).",
      "visual": {
       "tipo": "diagrama",
       "nome": "retangulo-na-roda"
@@ -2931,8 +2976,12 @@
      }
     },
     {
+     "titulo": "Área do círculo",
+     "texto": "Círculo: 3,14 · 5² = 3,14 · 25 = 78,5 (3 · 25 = 75 e 0,14 · 25 = 3,5)."
+    },
+    {
      "titulo": "Achando A: área do retângulo",
-     "texto": "Círculo: 3,14 · 5² = 3,14 · 25 = 78,5 (3 · 25 = 75 e 0,14 · 25 = 3,5). Retângulo: 6 · 8 = 48."
+     "texto": "Retângulo: 6 · 8 = 48 cm²."
     },
     {
      "titulo": "Volta na equação",
@@ -2995,7 +3044,7 @@
   "nivel": "acima",
   "explicacao": {
    "conferencia": "48 · 35 = 1 680 e 48 · 20 = 960. Total: 1 680 + 960 = 2 640. C. Erros: A = Só a grama. B = Só as flores. D = Triângulo do meio sem o ½ (96 m²) e nada de grama. E = Laterais sem o ½ (96 m² a R$ 20) mais as flores.",
-   "ideia": "O triângulo do meio tem sempre metade do retângulo, onde quer que P esteja. As laterais ficam com a outra metade, e as duas áreas são 48 m².",
+   "ideia": "O triângulo do meio tem sempre metade do retângulo, com P em qualquer ponto do lado de cima. As laterais ficam com a outra metade, e as duas áreas são 48 m².",
    "pecas": [],
    "passos": [
     {
@@ -3102,7 +3151,7 @@
     },
     {
      "titulo": "O truque",
-     "texto": "O retângulo tem 12 · 8 = 96 m². O do meio é metade (48) com P em qualquer lugar: se P estivesse a 2 m ou a 10 m de D, a base e a altura de ABP seriam as mesmas (12 e 8). As laterais ficam com a outra metade."
+     "texto": "O retângulo tem 12 · 8 = 96 m². O do meio é metade (48) com P em qualquer ponto do lado de cima: se P estivesse a 2 m ou a 10 m de D, a base e a altura de ABP seriam as mesmas (12 e 8). As laterais ficam com a outra metade."
     },
     {
      "titulo": "Volta na equação",
@@ -3110,7 +3159,7 @@
     },
     {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: O triângulo do meio tem sempre metade do retângulo, onde quer que P esteja.",
+     "texto": "Pista: O triângulo do meio tem sempre metade do retângulo, com P em qualquer ponto do lado de cima.",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -3154,7 +3203,7 @@
   "id": "d2-escada-mat-ita-esp-00a",
   "materia": "Matemática",
   "tema": "Geometria Espacial",
-  "enunciado": "Numa lanchonete, o suco de laranja é preparado em garrafas de vidro cilíndricas que têm 10 cm de diâmetro interno e 24 cm de altura. No fim do dia, sobrou uma garrafa com suco até 3/4 da altura. O dono decidiu servir esse resto de graça numa degustação, em copos de papel em forma de cone, com 10 cm de diâmetro na boca e 9 cm de altura. Para o suco não derramar, cada copo é servido só até 80% da altura (e não até a borda), e o dono não quer servir copos pela metade nem com quantidades diferentes. Ele pergunta quantos copos desses consegue servir completamente com o suco que sobrou. Considere que o suco não faz espuma e que nada se perde ao servir. O número de copos é:\n\nDados: Garrafa: diâmetro 10 cm, altura 24 cm, suco até 3/4; Copo (cone): diâmetro 10 cm, altura 9 cm; Servir: até 80% da altura do copo.",
+  "enunciado": "Numa lanchonete, o suco de laranja é preparado em garrafas de vidro cilíndricas que têm 10 cm de diâmetro interno e 24 cm de altura. No fim do dia, sobrou uma garrafa com suco até 3/4 da altura. O dono decidiu servir esse resto de graça numa degustação, em copos de papel em forma de cone com a ponta para baixo, com 10 cm de diâmetro na boca e 9 cm de altura. Para o suco não derramar, cada copo é servido só até 80% da altura (e não até a borda), e o dono não quer servir copos pela metade nem com quantidades diferentes. Ele pergunta quantos copos desses consegue servir completamente com o suco que sobrou. Considere que o suco não faz espuma e que nada se perde ao servir. O número de copos é:\n\nDados: Garrafa: diâmetro 10 cm, altura 24 cm, suco até 3/4; Copo (cone): diâmetro 10 cm, altura 9 cm; Servir: até 80% da altura do copo.",
   "A": "6",
   "B": "7",
   "C": "11",
@@ -3385,7 +3434,7 @@
     },
     {
      "titulo": "O desenho",
-     "texto": "Veja a caixa em pé: o chão é 6 por 8 e a altura é 24. As letras a, b e c da equação são essas três medidas.",
+     "texto": "Veja a caixa em pé: o chão é 6 por 8 e a altura é 24. Vamos chamar as três medidas de a, b e c (as letras da equação que vem a seguir).",
      "visual": {
       "tipo": "diagrama",
       "nome": "vareta-na-caixa"
@@ -3538,7 +3587,7 @@
   "origem": "Escada",
   "nivel": "acima",
   "explicacao": {
-   "conferencia": "12 − 4 = 8 cm. C. Erros: A = Mediu a partir do ápice, não da base. B = Achou que o corte fica no meio. D = Tratou 1/27 como razão de áreas (tirou raiz quadrada). E = Usou 1/26 como razão de alturas.",
+   "conferencia": "d = 12 − 12 · k = 12 − 12 · 1/3 = 12 − 4 = 8 cm. C. Erros: A = Mediu a partir do ápice, não da base. B = Achou que o corte fica no meio. D = Tratou 1/27 como razão de áreas (tirou raiz quadrada). E = Usou 1/26 como razão de alturas.",
    "ideia": "A pirâmide inteira é 27 vezes a menor, e o volume vai com o cubo da razão das alturas: a razão é 1/3 e a menor tem 4 cm. A distância pedida é a da base.",
    "pecas": [
     {
@@ -3653,7 +3702,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "12 − 4 = 8 cm.\nE o que sobra da altura de 12 cm, do corte até a base, são os 8 cm.",
+     "texto": "d = 12 − 12 · k = 12 − 12 · 1/3 = 12 − 4 = 8 cm.\nE o que sobra da altura de 12 cm, do corte até a base, são os 8 cm.",
      "visual": {
       "tipo": "diagrama",
       "nome": "piramide-cortada",
@@ -3693,14 +3742,14 @@
     }
    ],
    "checagem": {
-    "pergunta": "Pirâmide de 15 cm de altura, cortada por plano paralelo à base. O tronco tem 7 vezes o volume da menor. A que distância da base passa o corte?",
-    "resposta": "Inteira = 8 vezes a menor, k³ = 1/8, k = 1/2. Menor: 7,5 cm. Da base: 15 − 7,5 = 7,5 cm.",
+    "pergunta": "Pirâmide de 15 cm de altura, cortada por plano paralelo à base. O tronco tem 26 vezes o volume da menor. A que distância da base passa o corte?",
+    "resposta": "Inteira = 27 vezes a menor, k³ = 1/27, k = 1/3. Menor: 15 ÷ 3 = 5 cm. Da base: 15 − 5 = 10 cm.",
     "opcoes": [
      "5 cm",
      "7,5 cm",
      "10 cm"
     ],
-    "certa": "7,5 cm"
+    "certa": "10 cm"
    },
    "seuErro": null
   },
@@ -4171,7 +4220,7 @@
     },
     {
      "titulo": "Achando N: chance de nenhum empate",
-     "texto": "Os 2 jogos saem dos 15 − 2 = 13 que não empataram. Escolher 2 entre 13: o 1º jogo tem 13 jeitos, o 2º tem 12, e a ordem não importa (cada par foi contado 2 vezes), então 13 · 12 ÷ 2 = 78 (escreve-se C(13,2)). Entre os 15 são 15 · 14 ÷ 2 = 105. Chance = 78/105 = 26/35 (dividindo em cima e embaixo por 3)."
+     "texto": "Os 2 jogos saem dos 15 − 2 = 13 que não empataram. Escolher 2 entre 13: o 1º jogo tem 13 jeitos, o 2º tem 12, e a ordem não importa (cada par foi contado 2 vezes), então 13 · 12 ÷ 2 = 78 (escreve-se C(13,2), que se lê combinação de 13 tomados 2 a 2). Entre os 15 são 15 · 14 ÷ 2 = 105. Chance = 78/105 = 26/35 (dividindo em cima e embaixo por 3)."
     },
     {
      "titulo": "Volta na equação",
@@ -4206,7 +4255,7 @@
    ],
    "checagem": {
     "pergunta": "4 times jogam todos contra todos (6 jogos) e houve 1 empate. Sorteando 2 jogos distintos, qual a chance de pelo menos um ser o empate?",
-    "resposta": "Nenhum empate: C(5,2) ÷ C(6,2) = 10/15 = 2/3. Pelo menos um: 1 − 2/3 = 1/3.",
+    "resposta": "C(5,2) = 5 · 4 ÷ 2 = 10 e C(6,2) = 6 · 5 ÷ 2 = 15. Nenhum empate: 10/15 = 2/3. Pelo menos um: 1 − 2/3 = 1/3.",
     "opcoes": [
      "1/6",
      "1/3",
@@ -4223,7 +4272,7 @@
   "id": "d2-escada-mat-ita-com-00c",
   "materia": "Matemática",
   "tema": "Análise Combinatória e Probabilidade",
-  "enunciado": "Uma clínica aplicou um exame em 10 000 pessoas, divididas por idade como mostra a tabela. O exame dá positivo em 90% das pessoas doentes e, por engano, em 10% das sadias. Quem dá positivo repete o exame, e o resultado da repetição não depende do primeiro: vale a mesma taxa de acerto e de engano. Entre as pessoas que deram positivo nos dois exames, a porcentagem aproximada das que realmente têm a doença é:\n\nDados: Menos de 40 anos: 5 000 · 2%; 40 anos ou mais: 5 000 · 10%.",
+  "enunciado": "Uma clínica aplicou um exame em 10 000 pessoas, divididas por idade, com a porcentagem de doentes de cada faixa, como mostra a tabela. O exame dá positivo em 90% das pessoas doentes e, por engano, em 10% das sadias. Quem dá positivo repete o exame, e o resultado da repetição não depende do primeiro: vale a mesma taxa de acerto e de engano. Entre as pessoas que deram positivo nos dois exames, a porcentagem aproximada das que realmente têm a doença é:\n\nDados: Menos de 40 anos: 5 000 pessoas, 2% com a doença; 40 anos ou mais: 5 000 pessoas, 10% com a doença.",
   "A": "84%",
   "B": "36%",
   "C": "81%",
@@ -4233,7 +4282,7 @@
   "origem": "Escada",
   "nivel": "acima",
   "explicacao": {
-   "conferencia": "486 ÷ (486 + 94) = 486 ÷ 580 ≈ 0,84 (580 · 0,84 = 487,2, quase 486). Para virar porcentagem, multiplique por 100: 0,84 = 84%. A. Erros: B = Parou no 1º exame (540 de 1 480). C = Multiplicou 0,9 · 0,9, sem olhar as sadias. D = Pegou a taxa do exame como se fosse o resultado. E = Usou a fração de sadias da população (9 400 de 10 000).",
+   "conferencia": "486 ÷ (486 + 94) = 486 ÷ 580: 580 · 0,8 = 464 e sobram 22; 22 ÷ 580 é cerca de 0,04. Então é cerca de 0,84. Para virar porcentagem, multiplique por 100: 0,84 = 84%. A. Erros: B = Parou no 1º exame (540 de 1 480). C = Multiplicou 0,9 · 0,9, sem olhar as sadias. D = Pegou a taxa do exame como se fosse o resultado. E = Usou a fração de sadias da população (9 400 de 10 000).",
    "ideia": "Conte pessoas em vez de porcentagens: de 10 000, quantas têm a doença e quantas dão positivo duas vezes. O 2º exame multiplica de novo.",
    "pecas": [],
    "passos": [
@@ -4264,11 +4313,11 @@
       "linhas": [
        [
         "Menos de 40 anos",
-        "5 000 · 2%"
+        "5 000 pessoas, 2% com a doença"
        ],
        [
         "40 anos ou mais",
-        "5 000 · 10%"
+        "5 000 pessoas, 10% com a doença"
        ]
       ]
      }
@@ -4302,19 +4351,19 @@
     },
     {
      "titulo": "1º exame positivo",
-     "texto": "Doentes: 90% de 600 = 540. Sadias: 10% de 9 400 = 940."
+     "texto": "Doentes: 90% de 600 = 600 ÷ 100 · 90 = 540. Sadias: 10% de 9 400 = 9 400 ÷ 10 = 940."
     },
     {
      "titulo": "Achando d: doentes com 2 positivos",
-     "texto": "Só repete o exame quem deu positivo. Doentes: 90% de 540 = 486."
+     "texto": "Só repete o exame quem deu positivo. Doentes: 90% de 540 = 540 ÷ 100 · 90 = 486."
     },
     {
      "titulo": "Achando s: sadias com 2 positivos",
-     "texto": "Sadias: 10% de 940 = 94."
+     "texto": "Sadias: 10% de 940 = 940 ÷ 10 = 94."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "486 ÷ (486 + 94) = 486 ÷ 580 ≈ 0,84 (580 · 0,84 = 487,2, quase 486). Para virar porcentagem, multiplique por 100: 0,84 = 84%."
+     "texto": "486 ÷ (486 + 94) = 486 ÷ 580: 580 · 0,8 = 464 e sobram 22; 22 ÷ 580 é cerca de 0,04. Então é cerca de 0,84. Para virar porcentagem, multiplique por 100: 0,84 = 84%."
     },
     {
      "titulo": "Questão parecida? Faça assim",
