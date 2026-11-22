@@ -210,13 +210,18 @@ export interface VisualFigura {
 }
 const MAX_ROTULOS = 4;
 const MAX_ROTULO = 28;
+const MAX_ROTULOS_DIAGRAMA = 8;
+const MAX_ROTULO_DIAGRAMA = 80;
 /* Desenho de geometria em vetor, feito à mão por questão (Pablo, 16/11/2026, na
    prévia do robô: "a parte do robô limpando e a divisão de um quarto, perfeito").
    Mostra o PORQUÊ de uma conta (a fatia de 1/4, o canto que sobra). Só entra por
    explicação escrita à mão (components/visual/diagramas.tsx). */
 export const DIAGRAMAS = ['sala-quadrada', 'robo-limpando', 'canto-zoom', 'robo-quatro-fatias', 'canto-raio', 'circulo-no-quadrado', 'retangulo-diagonal',
   // molde do robô (17/11/2026): components/visual/diagramas-parecidas.tsx
-  'porta-abrindo', 'triangulo-centro', 'holofote-palco', 'trilhas-parque'] as const;
+  'porta-abrindo', 'triangulo-centro', 'holofote-palco', 'trilhas-parque',
+  // nível acima de Matemática (22/11/2026): components/visual/diagramas-nivel-acima.tsx
+  'gramado-em-l', 'circulo-no-triangulo', 'retangulo-na-roda', 'canteiro-triangulos', 'piramide-cortada',
+  'vareta-na-caixa', 'lata-bolas', 'ladrilho-ficha', 'painel-lampadas'] as const;
 export type NomeDiagrama = (typeof DIAGRAMAS)[number];
 export interface VisualDiagrama {
   tipo: 'diagrama';
@@ -560,7 +565,8 @@ function figura(v: Record<string, unknown>): VisualFigura | null {
 function diagrama(v: Record<string, unknown>): VisualDiagrama | null {
   const nome = DIAGRAMAS.find((n) => n === v.nome);
   if (!nome) return null;
-  const rotulos = lista(v.rotulos).map((r) => texto(r, MAX_ROTULO) ?? '').slice(0, MAX_ROTULOS);
+  // Os desenhos do nível acima (diagramas-nivel-acima.tsx) levam até 8 rótulos, alguns com a conta ("grama: 1 200 − 150").
+  const rotulos = lista(v.rotulos).map((r) => texto(r, MAX_ROTULO_DIAGRAMA) ?? '').slice(0, MAX_ROTULOS_DIAGRAMA);
   return { tipo: 'diagrama', titulo: texto(v.titulo), nome, ...(rotulos.some(Boolean) ? { rotulos } : {}) };
 }
 

@@ -2212,12 +2212,20 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja o terreno: um retângulo de 40 m por 30 m, e o canto da casa (tracejado, 15 m por 10 m) fica de fora.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "gramado-em-l"
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "P = 1,1 · A ÷ 9",
-      "leitura": "área com folga ÷ área de um pacote, arredondado para cima",
+      "leitura": "área com folga (1,1 vez a área) ÷ 9 m², que é o que um pacote cobre, arredondado para cima",
       "letras": [
        {
         "letra": "P",
@@ -2232,7 +2240,21 @@
     },
     {
      "titulo": "Área do terreno",
-     "texto": "Retângulo grande: 40 · 30 = 1 200 m². Canto da casa: 15 · 10 = 150 m². 1 200 − 150 = 1 050 m²."
+     "texto": "Retângulo grande: 40 · 30 = 1 200 m². Canto da casa: 15 · 10 = 150 m². 1 200 − 150 = 1 050 m².\nO mesmo desenho, agora com a conta.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "gramado-em-l",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "grama: 1 200 − 150",
+       "= 1 050 m²"
+      ]
+     }
     },
     {
      "titulo": "Com 10% a mais",
@@ -2298,7 +2320,7 @@
   "nivel": "acima",
   "explicacao": {
    "conferencia": "30 − 12 = 18 cm². B. Erros: A = Respondeu a área do círculo. C = Esqueceu o π: 30 − 4. D = Usou o perímetro (30) em vez do semiperímetro: r = 1. E = Não subtraiu o círculo.",
-   "ideia": "O raio do círculo inscrito sai de área ÷ semiperímetro. Depois é só tirar a área do círculo da área do triângulo.",
+   "ideia": "O raio do círculo inscrito sai de área ÷ semiperímetro (a metade da soma dos lados). Depois é só tirar a área do círculo da área do triângulo.",
    "pecas": [
     {
      "termo": "Inscrita",
@@ -2364,6 +2386,14 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja o triângulo com a circunferência dentro, encostando nos 3 lados. Cada raio (tracejado azul) chega ao lado formando ângulo reto, como mostra o quadradinho.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "circulo-no-triangulo"
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
@@ -2396,7 +2426,19 @@
     },
     {
      "titulo": "O raio do círculo inscrito",
-     "texto": "Ligue o centro do círculo aos 3 lados: o triângulo se divide em 3 triângulos, e em cada um a altura é o raio r (o raio chega ao lado formando ângulo reto). Áreas: 5 · r ÷ 2, 12 · r ÷ 2 e 13 · r ÷ 2. Somando: (5 + 12 + 13) · r ÷ 2 = 15 r. Essa soma é a área do triângulo, 30: 15 r = 30, r = 2 cm. (O 30 do perímetro e o 30 da área são só coincidência.)"
+     "texto": "Ligue o centro do círculo aos 3 cantos (vértices) do triângulo: ele se divide em 3 triângulos, um com cada lado como base (5, 12 e 13), e em cada um a altura é o raio r (o raio chega ao lado formando ângulo reto, como nos quadradinhos). Áreas: 5 · r ÷ 2, 12 · r ÷ 2 e 13 · r ÷ 2. Somando: (5 + 12 + 13) · r ÷ 2 = 15 r. Essa soma é a área do triângulo, 30: 15 r = 30, r = 2 cm. (O perímetro, 5 + 12 + 13, também dá 30: coincidência deste triângulo.)\nAs linhas rosa ligam o centro aos 3 cantos e dividem o triângulo em 3 triângulos: um com cada lado como base. Em cada um, a altura é o raio (tracejado azul).",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "circulo-no-triangulo",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "r = 2",
+       "3 triângulos"
+      ]
+     }
     },
     {
      "titulo": "Área do círculo",
@@ -2408,7 +2450,7 @@
     },
     {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: O raio do círculo inscrito sai de área ÷ semiperímetro.",
+     "texto": "Pista: O raio do círculo inscrito sai de área ÷ semiperímetro (a metade da soma dos lados).",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -2525,6 +2567,14 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja o retângulo (azul) com os 4 cantos na circunferência (o amarelo é o que sobra do círculo). Os lados são 4k e 3k, isto é, 3 e 4 vezes o mesmo número k, que vamos descobrir. A linha azul forte é a diagonal. Cada canto é um ângulo reto (quadradinho).",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "retangulo-na-roda"
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
@@ -2553,11 +2603,26 @@
     },
     {
      "titulo": "A ideia que destrava",
-     "texto": "Um ângulo reto (como o canto do retângulo) com o vértice sobre a circunferência sempre abre sobre um diâmetro (a corda que passa pelo centro). Então a diagonal do retângulo, que liga cantos opostos, é o diâmetro do círculo."
+     "texto": "Um ângulo reto (como o canto do retângulo) com o vértice sobre a circunferência sempre abre sobre um diâmetro (a corda que passa pelo centro). Vale para qualquer ângulo reto com o vértice sobre a circunferência: é uma regra pronta do círculo. Então a diagonal do retângulo, que liga cantos opostos, é o diâmetro do círculo.\nOlhe os quadradinhos nos cantos: um ângulo reto com o vértice na circunferência abre sobre um diâmetro. A diagonal liga dois cantos, então ela passa pelo centro.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "retangulo-na-roda",
+      "rotulos": []
+     }
     },
     {
      "titulo": "O raio",
-     "texto": "A diagonal é a hipotenusa do triângulo retângulo formado por dois lados do retângulo (6 e 8). Pitágoras: o quadrado da hipotenusa é a soma dos quadrados dos lados. 6² + 8² = 36 + 64 = 100, e 10 · 10 = 100, então a diagonal é 10 e o raio é 10 ÷ 2 = 5."
+     "texto": "A diagonal é a hipotenusa do triângulo retângulo formado por dois lados do retângulo (6 e 8). Pitágoras: o quadrado da hipotenusa é a soma dos quadrados dos lados. 6² + 8² = 36 + 64 = 100, e 10 · 10 = 100, então a diagonal é 10 e o raio é 10 ÷ 2 = 5.\nAgora com os lados 8 e 6 (k = 2), a diagonal de 10 e o raio de 5. O amarelo é a área que a questão pede.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "retangulo-na-roda",
+      "rotulos": [
+       "8",
+       "6",
+       "diagonal = diâmetro = 10",
+       "raio = 5 · amarelo: o que fica de fora"
+      ]
+     }
     },
     {
      "titulo": "As áreas",
@@ -2668,6 +2733,14 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja o canteiro: A e B embaixo, D e C em cima, P no lado de cima. A altura de P até AB (tracejada) mede 8 m e forma ângulo reto com AB. Verde é grama e rosa é flores.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "canteiro-triangulos"
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
@@ -2696,7 +2769,21 @@
     },
     {
      "titulo": "Os das laterais",
-     "texto": "ADP: base DP = 5, altura 8: 5 · 8 ÷ 2 = 20. BCP: base PC = 12 − 5 = 7: 7 · 8 ÷ 2 = 28. Juntos: 20 + 28 = 48 m²."
+     "texto": "ADP: base DP = 5, altura 8: 5 · 8 ÷ 2 = 20. BCP: base PC = 12 − 5 = 7: 7 · 8 ÷ 2 = 28. Juntos: 20 + 28 = 48 m².\nAs áreas já calculadas, em cada triângulo.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "canteiro-triangulos",
+      "rotulos": [
+       "",
+       "7 m",
+       "",
+       "",
+       "flores: 48 m²",
+       "20 m²",
+       "",
+       "28 m²"
+      ]
+     }
     },
     {
      "titulo": "O truque",
@@ -2964,6 +3051,14 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja a caixa em pé: o chão é 6 por 8 e a altura é 24. As letras a, b e c da equação são essas três medidas.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "vareta-na-caixa"
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
@@ -2996,15 +3091,47 @@
     },
     {
      "titulo": "Diagonal da base",
-     "texto": "A base tem lados 6 e 8. A diagonal dela é a hipotenusa do triângulo retângulo formado por esses dois lados. Pitágoras: o quadrado da hipotenusa é a soma dos quadrados dos outros lados. 6² + 8² = 36 + 64 = 100, e √100 = 10 cm."
+     "texto": "A base tem lados 6 e 8. A diagonal dela é a hipotenusa do triângulo retângulo formado por esses dois lados. Pitágoras: o quadrado da hipotenusa é a soma dos quadrados dos outros lados. 6² + 8² = 36 + 64 = 100, e √100 = 10 cm.\nA diagonal rosa fica no chão e é a hipotenusa de um triângulo com lados 6 e 8 (o canto do chão é um ângulo reto, então é um triângulo retângulo).",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "vareta-na-caixa",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "diagonal da base = 10"
+      ]
+     }
     },
     {
      "titulo": "Diagonal do bloco",
-     "texto": "Agora um triângulo retângulo com a diagonal da base (10) e a altura (24): 10² + 24² = 100 + 576 = 676."
+     "texto": "Agora um triângulo retângulo com a diagonal da base (10) e a altura (24): 10² + 24² = 100 + 576 = 676.\nA diagonal azul é a hipotenusa de um triângulo com a diagonal da base (10) e a altura (24). O quadradinho nos fundos marca o ângulo reto.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "vareta-na-caixa",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "diagonal da base = 10",
+       "diagonal do bloco"
+      ]
+     }
     },
     {
      "titulo": "A raiz de 676",
-     "texto": "Qual número vezes ele mesmo dá 676? 20 · 20 = 400 é pouco e 30 · 30 = 900 é muito, então está entre 20 e 30. Termina em 6, e só 4 · 4 e 6 · 6 terminam em 6: 24 · 24 = 576 (pouco) e 26 · 26 = 676 ✓."
+     "texto": "Qual número vezes ele mesmo dá 676? 20 · 20 = 400 é pouco e 30 · 30 = 900 é muito, então está entre 20 e 30. Termina em 6, e só 4 · 4 e 6 · 6 terminam em 6: 24 · 24 = 576 (pouco) e 26 · 26 = 676 ✓.\nAgora a diagonal azul tem o seu valor: 26.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "vareta-na-caixa",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "diagonal da base = 10",
+       "diagonal do bloco = 26"
+      ]
+     }
     },
     {
      "titulo": "Cabe?",
@@ -3115,6 +3242,14 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja a pirâmide de lado, cortada por um plano paralelo à base: no topo a pirâmide menor, embaixo o tronco. O ápice é a ponta de cima. A base é um quadrado (de lado, aparece só como uma linha).",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "piramide-cortada"
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
@@ -3147,15 +3282,34 @@
     },
     {
      "titulo": "Achar k",
-     "texto": "k³ = 1/27. Qual número vezes ele mesmo, vezes ele mesmo, dá 1/27? 3 · 3 · 3 = 27, então (1/3) · (1/3) · (1/3) = 1/27 e k = 1/3."
+     "texto": "k³ = 1/27. Qual número vezes ele mesmo, vezes ele mesmo, dá 1/27? 3 · 3 · 3 = 27, então k = 1/3. Conferindo: multiplicar frações é multiplicar os de cima (1 · 1 · 1 = 1) e os de baixo (3 · 3 · 3 = 27): (1/3) · (1/3) · (1/3) = 1/27."
     },
     {
      "titulo": "Altura da menor",
-     "texto": "12 · 1/3 = 12 ÷ 3 = 4 cm, do topo (o ápice, a ponta da pirâmide) até o plano de corte."
+     "texto": "Um terço de 12 é 12 dividido em 3 partes iguais: 12 ÷ 3 = 4 cm, do topo (o ápice, a ponta da pirâmide) até o plano de corte.\nO 4 cm é a altura da pirâmide menor, do topo até o plano de corte.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "piramide-cortada",
+      "rotulos": [
+       "",
+       "",
+       "4 cm"
+      ]
+     }
     },
     {
      "titulo": "Distância da base",
-     "texto": "12 − 4 = 8 cm."
+     "texto": "12 − 4 = 8 cm.\nE o que sobra da altura de 12 cm, do corte até a base, são os 8 cm.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "piramide-cortada",
+      "rotulos": [
+       "",
+       "",
+       "4 cm",
+       "8 cm"
+      ]
+     }
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -3254,6 +3408,14 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja a lata cortada ao meio: 3 bolas empilhadas, cada uma encostando nas paredes e nas vizinhas. O raio das bolas é r (o diâmetro é 2r), e a altura da lata é a de 3 bolas: 3 · 2r = 6r.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "lata-bolas"
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
@@ -3290,11 +3452,34 @@
     },
     {
      "titulo": "Fração ocupada",
-     "texto": "4πr³ ÷ 6πr³: dividindo em cima e embaixo por 2πr³, sobra 2/3. Teste com números: r = 1 dá lata 6π e bolas 4π; r = 2 dá lata 48π e bolas 32π; nos dois, 4/6 = 32/48 = 2/3. As bolas ocupam 2/3 da lata, seja qual for o r (descoberta de Arquimedes)."
+     "texto": "4πr³ ÷ 6πr³: dividindo em cima e embaixo por 2πr³, sobra 2/3. Teste com números: r = 1 dá lata 6π e bolas 4π; r = 2 dá lata 48π e bolas 32π; nos dois, 4/6 = 32/48 = 2/3. As bolas ocupam 2/3 da lata, seja qual for o r (descoberta de Arquimedes).\nAs bolas ocupam 2/3 do volume da lata.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "lata-bolas",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "bolas: 2/3 do volume"
+      ]
+     }
     },
     {
      "titulo": "O vazio",
-     "texto": "Sobra 1 − 2/3 = 3/3 − 2/3 = 1/3 da lata. 1,5 L = 1 500 mL, e 1 500 ÷ 3 = 500 mL."
+     "texto": "Sobra 1 − 2/3 = 3/3 − 2/3 = 1/3 da lata. 1,5 L = 1 500 mL, e 1 500 ÷ 3 = 500 mL.\nO azul é o vazio. No desenho de lado a área parece outra, mas a conta é de volume.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "lata-bolas",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "bolas: 2/3 do volume",
+       "azul: vazio, 1/3",
+       "",
+       "(vista de lado: o 2/3 é do volume, não da área do desenho)"
+      ]
+     }
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -3401,6 +3586,14 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja o ladrilho de 10 cm, com o rejunte fino em volta, e a ficha de raio 3 cm. Exemplo: uma ficha que cai assim passa por cima do rejunte de baixo (toca 1 rejunte). O tracejado embaixo é o ladrilho vizinho: a ficha pode passar do rejunte.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "ladrilho-ficha"
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
@@ -3437,7 +3630,20 @@
     },
     {
      "titulo": "Toca exatamente um",
-     "texto": "O que sobra: 100 − 16 − 36 = 48 (4 faixas de 3 · 4 = 12). Pela tabela, tocar exatamente 1 rejunte vale 4 pontos."
+     "texto": "O que sobra: 100 − 16 − 36 = 48 (4 faixas de 3 · 4 = 12). Pela tabela, tocar exatamente 1 rejunte vale 4 pontos.\nO ladrilho dividido pelas regiões da conta: 16 + 4 · 12 + 4 · 9 = 100.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "ladrilho-ficha",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "verde: nenhum rejunte (16)",
+       "amarelo: 1 rejunte (4 faixas de 12)",
+       "rosa: 2 rejuntes (4 cantos de 9)"
+      ]
+     }
     },
     {
      "titulo": "Condicional",
@@ -3817,6 +4023,14 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja um painel aprovado (o do exemplo do enunciado): 6 lâmpadas, amarelo é acesa, branco é apagada, e nenhuma acesa fica ao lado de outra acesa.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "painel-lampadas"
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
@@ -3849,7 +4063,17 @@
     },
     {
      "titulo": "Com exatamente 3 acesas",
-     "texto": "Ponha as 3 apagadas em fila: ficam 4 vãos (antes da 1ª, 2 entre elas, depois da 3ª). Cada acesa vai num vão diferente, e assim nenhuma fica ao lado de outra. Escolher 3 vãos entre 4 é o mesmo que escolher qual vão fica vazio: 4 jeitos (escreve-se C(4,3) = 4)."
+     "texto": "Ponha as 3 apagadas em fila: ficam 4 vãos (antes da 1ª, 2 entre elas, depois da 3ª). Cada acesa vai num vão diferente, e assim nenhuma fica ao lado de outra. Escolher 3 vãos entre 4 é o mesmo que escolher qual vão fica vazio: 4 jeitos (escreve-se C(4,3) = 4).\nAs 3 apagadas em fila e os 4 vãos numerados.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "painel-lampadas",
+      "rotulos": [
+       "",
+       "",
+       "as 3 apagadas deixam 4 vãos:",
+       "cada acesa vai num vão diferente"
+      ]
+     }
     },
     {
      "titulo": "Probabilidade",

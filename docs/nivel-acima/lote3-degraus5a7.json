@@ -344,7 +344,7 @@
    ],
    [
     "O raio do círculo inscrito",
-    "Ligue o centro do círculo aos 3 lados: o triângulo se divide em 3 triângulos, e em cada um a altura é o raio r (o raio chega ao lado formando ângulo reto). Áreas: 5 · r ÷ 2, 12 · r ÷ 2 e 13 · r ÷ 2. Somando: (5 + 12 + 13) · r ÷ 2 = 15 r. Essa soma é a área do triângulo, 30: 15 r = 30, r = 2 cm. (O 30 do perímetro e o 30 da área são só coincidência.)"
+    "Ligue o centro do círculo aos 3 cantos (vértices) do triângulo: ele se divide em 3 triângulos, um com cada lado como base (5, 12 e 13), e em cada um a altura é o raio r (o raio chega ao lado formando ângulo reto, como nos quadradinhos). Áreas: 5 · r ÷ 2, 12 · r ÷ 2 e 13 · r ÷ 2. Somando: (5 + 12 + 13) · r ÷ 2 = 15 r. Essa soma é a área do triângulo, 30: 15 r = 30, r = 2 cm. (O perímetro, 5 + 12 + 13, também dá 30: coincidência deste triângulo.)"
    ],
    [
     "Área do círculo",
@@ -389,7 +389,7 @@
    ],
    [
     "A ideia que destrava",
-    "Um ângulo reto (como o canto do retângulo) com o vértice sobre a circunferência sempre abre sobre um diâmetro (a corda que passa pelo centro). Então a diagonal do retângulo, que liga cantos opostos, é o diâmetro do círculo."
+    "Um ângulo reto (como o canto do retângulo) com o vértice sobre a circunferência sempre abre sobre um diâmetro (a corda que passa pelo centro). Vale para qualquer ângulo reto com o vértice sobre a circunferência: é uma regra pronta do círculo. Então a diagonal do retângulo, que liga cantos opostos, é o diâmetro do círculo."
    ],
    [
     "O raio",
@@ -607,11 +607,11 @@
    ],
    [
     "Achar k",
-    "k³ = 1/27. Qual número vezes ele mesmo, vezes ele mesmo, dá 1/27? 3 · 3 · 3 = 27, então (1/3) · (1/3) · (1/3) = 1/27 e k = 1/3."
+    "k³ = 1/27. Qual número vezes ele mesmo, vezes ele mesmo, dá 1/27? 3 · 3 · 3 = 27, então k = 1/3. Conferindo: multiplicar frações é multiplicar os de cima (1 · 1 · 1 = 1) e os de baixo (3 · 3 · 3 = 27): (1/3) · (1/3) · (1/3) = 1/27."
    ],
    [
     "Altura da menor",
-    "12 · 1/3 = 12 ÷ 3 = 4 cm, do topo (o ápice, a ponta da pirâmide) até o plano de corte."
+    "Um terço de 12 é 12 dividido em 3 partes iguais: 12 ÷ 3 = 4 cm, do topo (o ápice, a ponta da pirâmide) até o plano de corte."
    ],
    [
     "Distância da base",

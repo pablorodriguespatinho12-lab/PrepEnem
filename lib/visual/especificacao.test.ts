@@ -225,6 +225,16 @@ test('quadro já validado continua igual (explicação guardada no cache)', () =
   expect(validarVisual(v)).toEqual(v);
 });
 
+describe('diagrama (desenhos do nível acima levam até 8 rótulos longos)', () => {
+  test('guarda os 8 rótulos, com a conta inteira', () => {
+    const rotulos = ['', '', '', '', '', '', 'grama: 1 200 − 150 (o terreno inteiro menos o canto da casa)', '= 1 050 m²'];
+    expect(validarVisual({ tipo: 'diagrama', nome: 'gramado-em-l', rotulos })).toMatchObject({ tipo: 'diagrama', nome: 'gramado-em-l', rotulos });
+  });
+  test('nome que não existe não desenha', () => {
+    expect(validarVisual({ tipo: 'diagrama', nome: 'figura-que-nao-existe' })).toBeNull();
+  });
+});
+
 describe('legenda (fórmula com o que cada pedaço é)', () => {
   test('guarda as partes com texto e rótulo', () => {
     const v = validarVisual({ tipo: 'legenda', partes: [{ texto: 'p(d)', rotulo: 'quantos peixes', cor: 'a' }, { texto: '+20', rotulo: 'peixes do começo' }] });
