@@ -1,4 +1,4 @@
-<title>Nível Acima Misturado</title>
+<title>Nível Acima Degrau 8</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Nunito:wght@400;700;800&display=swap">
 <style>
@@ -54,14 +54,14 @@ svg { max-width: 100%; height: auto; align-self: center; }
 @keyframes sobe { from { opacity: 0; transform: translateY(8px); } }
 </style>
 <main>
-  <h1>Nível acima, lote 1 misturado</h1>
-  <p class="sub">4 questões originais do degrau 8, cada uma com os 4 estilos juntos (ENEM, Fuvest, ITA, Harvard–MIT). Responda e veja a resolução.</p>
+  <h1>Nível acima, degrau 8</h1>
+  <p class="sub">4 questões originais, uma de cada estilo principal (ENEM, Harvard, Fuvest, ITA), com toques dos outros. Responda e veja a resolução.</p>
   <div class="abas" id="abas" role="tablist"></div>
   <section class="card px" id="q" aria-live="polite"></section>
 </main>
 <script>
 const Q = [
-{ t: 'A ficha e o ladrilho', tags: ['Geometria plana + probabilidade', 'Degraus 6 + 8', 'Texto ENEM · condição Fuvest · partição ITA · truque Harvard'],
+{ t: 'A ficha e o ladrilho', tags: ['Geometria plana + probabilidade', 'Degraus 6 + 8', 'Estilo principal: ENEM (com toques dos outros 3)'],
   enun: 'Numa feira, o piso é de ladrilhos quadrados de 10 cm de lado, separados por rejuntes. No jogo da calçada, o participante lança uma ficha circular de 3 cm de raio, e os pontos dependem de quantos rejuntes do ladrilho a ficha toca, como mostra a tabela. Suponha que o centro da ficha caia sobre um ladrilho, em um ponto escolhido ao acaso, e considere só os 4 rejuntes desse ladrilho. Sabendo que a ficha tocou pelo menos um rejunte, a probabilidade de que o participante tenha feito exatamente 4 pontos é:',
   tabela: [['Rejuntes tocados', 'Pontos'], ['0', '10'], ['1', '4'], ['2', '1']], fig: 'ladrilho',
   alts: ['12/25', '3/7', '9/25', '4/7', '4/21'], certa: 3,
@@ -73,7 +73,7 @@ const Q = [
     ['Toca exatamente um', 'O que sobra: 100 − 16 − 36 = 48 (4 faixas de 3 × 4 = 12).'],
     ['Condicional', 'Tocou pelo menos um: 100 − 16 = 84. Exatamente 4 pontos: 48/84 = 4/7.']
   ] },
-{ t: 'Campeonato do bairro', tags: ['Contagem + equação + probabilidade', 'Degraus 4 + 1 + 8', 'Texto ENEM · condição Fuvest · contagem ITA · truque Harvard'],
+{ t: 'Campeonato do bairro', tags: ['Contagem + equação + probabilidade', 'Degraus 4 + 1 + 8', 'Estilo principal: Harvard (com toques dos outros 3)'],
   enun: 'Seis times disputaram um campeonato de bairro em turno único: todos contra todos, uma vez. Vitória vale 3 pontos; empate vale 1 ponto para cada time; derrota, nenhum. A tabela mostra a pontuação final. O jornal não publicou os resultados dos jogos. Dois jogos distintos são sorteados ao acaso entre todos os do campeonato. A probabilidade de pelo menos um deles ter terminado empatado é:',
   tabela: [['Time', 'Pontos'], ['Tigres', '12'], ['Raio', '10'], ['Pelé', '8'], ['Unidos', '6'], ['Estrela', '4'], ['Garra', '3']],
   alts: ['1/105', '2/15', '9/35', '4/15', '26/35'], certa: 2,
@@ -85,7 +85,7 @@ const Q = [
     ['Nenhum empate nos 2 sorteados', 'Os 2 jogos saem dos 13 que não empataram: C(13,2) / C(15,2) = 78/105 = 26/35.'],
     ['Pelo menos um', '1 − 26/35 = 9/35.']
   ] },
-{ t: 'O exame repetido', tags: ['Porcentagem + tabela + probabilidade', 'Degraus 1 + 3 + 8', 'Texto ENEM · condição Fuvest · frequências ITA · truque Harvard'],
+{ t: 'O exame repetido', tags: ['Porcentagem + tabela + probabilidade', 'Degraus 1 + 3 + 8', 'Estilo principal: Fuvest (com toques dos outros 3)'],
   enun: 'Uma clínica aplicou um exame em 10 000 pessoas, divididas por idade como mostra a tabela. O exame dá positivo em 90% das pessoas doentes e, por engano, em 10% das sadias. Quem dá positivo repete o exame, e o resultado da repetição não depende do primeiro: vale a mesma taxa de acerto e de engano. Entre as pessoas que deram positivo nos dois exames, a porcentagem aproximada das que realmente têm a doença é:',
   tabela: [['Faixa', 'Pessoas', 'Com a doença'], ['Menos de 40 anos', '5 000', '2%'], ['40 anos ou mais', '5 000', '10%']],
   alts: ['84%', '36%', '81%', '90%', '94%'], certa: 0,
@@ -96,7 +96,7 @@ const Q = [
     ['2º exame positivo', 'Doentes: 90% de 540 = 486. Sadias: 10% de 940 = 94.'],
     ['Quem tem a doença', '486 ÷ (486 + 94) = 486/580 ≈ 0,84, ou 84%.']
   ] },
-{ t: 'Painel de lâmpadas', tags: ['Contagem + sequência + probabilidade', 'Degraus 4 + 1 + 8', 'Texto ENEM · condição Fuvest · recorrência ITA · truque Harvard'],
+{ t: 'Painel de lâmpadas', tags: ['Contagem + sequência + probabilidade', 'Degraus 4 + 1 + 8', 'Estilo principal: ITA (com toques dos outros 3)'],
   enun: 'Um painel tem 6 lâmpadas em fila. No teste de fábrica, cada lâmpada fica acesa ou apagada ao acaso, com chance 1/2 e sem depender das outras. Por segurança, a máquina só aprova painéis que não têm duas lâmpadas acesas lado a lado, como o da figura. Entre os painéis aprovados, a probabilidade de que tenham exatamente 3 lâmpadas acesas é:',
   fig: 'lampadas',
   alts: ['1/16', '4/13', '5/16', '1/2', '4/21'], certa: 4,
