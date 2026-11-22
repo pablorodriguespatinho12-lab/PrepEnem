@@ -153,7 +153,7 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   (geometria etc., "mesmo quando a questão não dá valores"): ler o que a questão pede, DESENHAR a figura
   (quadrado, triângulo...), marcar os lados/altura/diagonal com o nome ou o valor, montar a equação a
   partir dos lados e deixar a figura pequena no canto enquanto a conta roda. Exemplo dele: quadrado de
-  lado l, diagonal desenhada, l√2. Ainda não feito em geometria: pedir o ok antes de generalizar.
+  lado l, diagonal desenhada, l√2. Geometria: 1ª lousa gravada em 22/11/2026 (aspersor `d2-banco-mat-p26-07`; `lib/aula-lousa/geometria.ts`, `data/lousas/geometria.ts`; pelo aluno-do-zero: 'ao quadrado' = vezes ele mesmo, D único, L maiúsculo, caso de número antes da letra, ≤300 letras de fala por tela). Falta o ok do Pablo para as outras.
 
 ## Conteúdo gerado por IA
 - **Explicação = o artefato dos peixes (Pablo, 22/10/2026: "perfeito, fala
