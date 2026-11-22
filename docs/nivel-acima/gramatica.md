@@ -50,6 +50,13 @@ Contagem nos exemplos (34 resolvidas):
 - Frases de método do canal: "pensa num caso exagerado" (100 portas); "número absurdo não se soma na mão"; "o que mudou e o que não mudou" (base/altura).
 
 ## Receita para a fábrica (Fase 4)
+**Regra do Pablo (22/11/2026, depois da amostra do lote 1): TODA questão mistura os 4 estilos, não um estilo por questão.** "Gostei de todos." Cada questão tem ao mesmo tempo:
+- **ENEM:** situação real, texto de ~500+ letras, tabela ou desenho, dado que sobra.
+- **Fuvest:** pergunta precisa, uma condição escondida no texto.
+- **ITA:** uma ideia de contagem/técnica que destrava (contagem dupla, lugar geométrico, período).
+- **Harvard–MIT:** um truque elegante que junta 2 ideias e dá resposta limpa.
+O lote 1 (4 questões, 1 estilo cada) serve de teste; refazer misturado quando ele pedir.
+
 Cada questão nova declara: (1) **junção**; (2) **jeito** (ENEM ou ITA); (3) **pegadinha** da lista acima; (4) ≥ 6 passos; (5) cada alternativa errada = um erro
 típico dos 7 tipos; (6) conteúdos só da cadeia do degrau (ver `mapa-da-escada.md`); (7) resolvida por **outro agente sem ver a resolução**.
 
