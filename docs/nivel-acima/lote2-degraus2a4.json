@@ -48,7 +48,7 @@
   "passos": [
    [
     "Tudo em km e em horas",
-    "18 000 m ÷ 1 000 = 18 km. Ida: 18 ÷ 45 = 0,4 h. Volta: 18 ÷ 30 = 0,6 h. (Em minutos: 0,4 × 60 = 24 min e 0,6 × 60 = 36 min.)"
+    "18 000 m ÷ 1 000 = 18 km. Ida: 18 ÷ 45 = 0,4 h (confira: 45 · 0,4 = 18). Volta: 18 ÷ 30 = 0,6 h (30 · 0,6 = 18). Em minutos: 0,4 · 60 = 24 min e 0,6 · 60 = 36 min."
    ],
    [
     "Tempo total",
@@ -60,11 +60,11 @@
    ],
    [
     "Média",
-    "Distância total ÷ tempo total: 36 ÷ 1,2 = 360 ÷ 12 = 30 km/h."
+    "Distância total ÷ tempo total: 36 ÷ 1,2. Para tirar a vírgula, multiplique os dois por 10: 360 ÷ 12 = 30 km/h."
    ],
    [
     "Por que não é a média das velocidades",
-    "Se fosse a média, daria (45 + 30) ÷ 2 = 37,5. Mas a volta, mais lenta, dura mais (0,6 h contra 0,4 h) e a parada também conta como tempo gasto, então a velocidade lenta pesa mais no resultado."
+    "Se fosse a média, daria (45 + 30) ÷ 2 = 37,5. Mas a conta certa é distância ÷ tempo, e o tempo gasto a 30 km/h (0,6 h) é maior que o gasto a 45 km/h (0,4 h), fora a parada de 0,2 h sem andar. Por isso a média fica mais perto da velocidade lenta."
    ]
   ],
   "principal": "Harvard",
@@ -115,7 +115,7 @@
   "passos": [
    [
     "Qual é a escala de verdade",
-    "Escala 1 : 25 000 lê-se: 1 cm no papel vale 25 000 cm no chão. A cópia tem metade do tamanho, então 1 cm da cópia vale 2 cm da planta, que valem 2 · 25 000 = 50 000 cm do chão. Em metros: 50 000 ÷ 100 = 500 m. Então 1 cm da cópia = 500 m."
+    "Escala 1 : 25 000 lê-se: 1 cm no papel vale 25 000 cm no chão. A cópia tem metade do tamanho (50%), então 1 cm da cópia vale 2 cm da planta, que valem 2 · 25 000 = 50 000 cm do chão. Em metros: 50 000 ÷ 100 = 500 m. Então 1 cm da cópia = 500 m."
    ],
    [
     "Lados reais",
@@ -123,11 +123,11 @@
    ],
    [
     "Área em m²",
-    "2 000 · 3 000 = 6 000 000 m²."
+    "2 000 · 3 000: 2 · 3 = 6 e há 3 + 3 = 6 zeros, então 6 000 000 m²."
    ],
    [
     "Em hectares",
-    "6 000 000 ÷ 10 000 = 600 ha."
+    "1 hectare = 10 000 m² (4 zeros). Cortando 4 zeros de 6 000 000, sobra 600 ha."
    ],
    [
     "O que sobrou",
@@ -186,7 +186,7 @@
   "passos": [
    [
     "O que está no tanque",
-    "25% de 60 = 60 ÷ 4 = 15 L de etanol, e 60 − 15 = 45 L de gasolina."
+    "25% é 25 ÷ 100 = 1/4, então 25% de 60 = 60 ÷ 4 = 15 L de etanol, e 60 − 15 = 45 L de gasolina."
    ],
    [
     "O que não muda",
@@ -194,15 +194,15 @@
    ],
    [
     "Quanto o resto vale no fim",
-    "No fim, 40% é etanol, então a gasolina é o que sobra: 100% − 40% = 60% do total. Ou seja, 45 = 0,6 · T."
+    "Chame de T o total final. Se 40% é etanol, a gasolina é o que sobra: 100% − 40% = 60% de T. E 60% = 60 ÷ 100 = 0,6. Então G = 0,6 · T, ou 45 = 0,6 · T."
    ],
    [
     "Total final",
-    "T = 45 ÷ 0,6. Para dividir por 0,6, multiplique os dois por 10: 450 ÷ 6 = 75 L. Cabe: 75 < 100."
+    "T = 45 ÷ 0,6. Para dividir por 0,6, multiplique os dois por 10: 450 ÷ 6 = 75 L. Cabe nos 100 L do tanque."
    ],
    [
     "O que foi acrescentado",
-    "75 − 60 = 15 L. Conferindo: etanol 15 + 15 = 30 L, e 30 ÷ 75 = 0,4 = 40%."
+    "X = T − M = 75 − 60 = 15 L. Conferindo: etanol 15 + 15 = 30 L, e 30 ÷ 75 = 0,4 = 40%."
    ]
   ],
   "principal": "Fuvest",
@@ -253,23 +253,23 @@
   "passos": [
    [
     "Vazão de cada um (parte da caixa por hora)",
-    "Vazão é quanto a torneira enche (ou o ralo esvazia) em 1 hora. A enche a caixa em 6 h, então em 1 h enche 1/6 da caixa. B: 1/4. O ralo esvazia, por isso conta negativo: −1/12."
+    "Vazão é quanto a torneira enche (ou o ralo esvazia) em 1 hora. A enche a caixa em 6 h, então em 1 h enche 1/6 da caixa (\"um sexto\": 1 parte de 6 iguais). B: 1/4. O ralo esvazia, por isso conta negativo: −1/12."
    ],
    [
     "Vazão junta",
-    "Deixe as frações com o mesmo denominador (12): 1/6 = 2/12 (multiplicando em cima e embaixo por 2) e 1/4 = 3/12 (por 3). Soma: 2/12 + 3/12 − 1/12 = 4/12. E 4/12 = 1/3 (dividindo em cima e embaixo por 4)."
+    "Para somar frações, deixe o denominador (o número de baixo) igual: 12. 1/6 = 2/12 (multiplicando em cima e embaixo por 2) e 1/4 = 3/12 (por 3). Soma: 2/12 + 3/12 − 1/12 = 4/12. E 4/12 = 1/3 (dividindo em cima e embaixo por 4)."
    ],
    [
     "Quanto falta",
-    "A caixa tem 25%, faltam 75% = 3/4. Os 1 200 L do enunciado não entram: estamos falando de partes da caixa."
+    "A caixa tem 25%, faltam 100% − 25% = 75%. E 75% = 75/100 = 3/4 (dividindo por 25). Os 1 200 L do enunciado não entram: estamos falando de partes da caixa."
    ],
    [
     "Tempo",
-    "Dividir por 1/3 é multiplicar por 3: (3/4) · 3 = 9/4 h = 2,25 h."
+    "T = Q ÷ V = (3/4) ÷ (1/3). Se a caixa enche 1/3 por hora, enche a caixa toda em 3 horas; então dividir por 1/3 é o mesmo que multiplicar por 3: (3/4) · 3 = 9/4 h. E 9 ÷ 4 = 2,25 h."
    ],
    [
     "Em horas e minutos",
-    "0,25 h = 15 min. Então 2 h 15 min."
+    "0,25 h = 0,25 · 60 = 15 min. Então 2 h 15 min."
    ]
   ],
   "principal": "ITA",
@@ -340,7 +340,7 @@
    ],
    [
     "Média da escola Y",
-    "31 ÷ 5 = 6,2."
+    "31 ÷ 5: 5 · 6 = 30, sobra 1; 1 ÷ 5 = 0,2. Então 6,2."
    ]
   ],
   "principal": "ENEM",
@@ -391,27 +391,27 @@
   "passos": [
    [
     "A mediana de 13 notas",
-    "Mediana é a nota do meio, com as notas em fila da menor para a maior. Com 13 notas, o meio é o (13 + 1) ÷ 2 = 7º lugar."
+    "Mediana é a nota do meio, com as notas em fila da menor para a maior. Com 13 notas há 6 de cada lado e a do meio é a 7ª. (Conta: (13 + 1) ÷ 2 = 7. Com 11 notas, seria a 6ª.)"
    ],
    [
     "O que as 11 notas já têm",
-    "5 notas abaixo de 6 (4, 4, 5, 5, 5), nenhuma igual a 6 e 6 acima (7, 7, 7, 8, 8, 10). A nota mínima de aprovação não entra na conta."
+    "Em fila: 4, 4, 5, 5, 5, 7, 7, 7, 8, 8, 10. Estão abaixo de 6: 4, 4, 5, 5, 5 (5 notas). Ninguém tirou 6. Acima de 6 há 6 notas. A nota mínima de aprovação não entra na conta."
    ],
    [
-    "Para a 7ª ser 6",
-    "Precisa haver no máximo 6 notas menores que 6 (senão o 6 passa do 7º lugar) e pelo menos 7 notas menores ou iguais a 6 (senão o 6 não chega ao 7º lugar)."
+    "Para a 7ª nota ser 6",
+    "Na fila de 13, a 7ª tem de valer 6. Isso exige duas coisas: (1) antes do 6 devem ficar no máximo 6 notas (senão o 6 passa do 7º lugar), e (2) até o 6 (incluindo ele) devem ficar pelo menos 7 notas (senão o 6 não chega ao 7º lugar)."
    ],
    [
     "Traduzindo para as 2 notas novas",
-    "Hoje são 5 notas menores que 6. No máximo uma das novas pode ser menor que 6 (5 + 1 = 6; com duas seriam 7). E as duas têm de ser menores ou iguais a 6 (para chegar a 5 + 2 = 7 notas até o 6)."
+    "Hoje são 5 notas abaixo de 6. (1) No máximo uma das novas pode ser menor que 6 (5 + 1 = 6 cabe; 5 + 2 = 7 não cabe). (2) Até o 6 hoje há 5 notas; para chegar a 7, as duas novas têm de ser menores ou iguais a 6 (≤ lê-se \"menor ou igual a\")."
    ],
    [
     "Juntando",
-    "As duas notas são ≤ 6, e pelo menos uma é exatamente 6."
+    "As duas notas são ≤ 6, e no máximo uma é menor que 6. Então pelo menos uma é exatamente 6."
    ],
    [
     "Contar",
-    "{6, 6} e {6, k} com k de 0 a 5: 1 + 6 = 7 pares."
+    "Os pares são: {6, 6} (1 par) e {6, outra nota de 0 a 5} (6 pares, porque há 6 notas de 0 a 5). Total: D + U = 1 + 6 = 7 pares."
    ]
   ],
   "principal": "ITA",
@@ -466,14 +466,14 @@
   "passos": [
    [
     "O reajuste multiplica tudo",
-    "Reajuste de 8%: 100% + 8% = 108% = 1,08. Cada salário vira 1,08 vez o que era. A média: 2 500 · 1,08 = 2 700. O desvio-padrão (o quanto os salários se afastam da média, em geral) também é multiplicado: 300 · 1,08 = 324."
+    "Reajuste de 8%: 100% + 8% = 108% = 1,08. Cada salário vira 1,08 vez o que era. Média: 2 500 · 1,08 = 2 500 + 8% de 2 500 = 2 500 + 200 = 2 700. O desvio-padrão (o quanto os salários se espalham em torno da média) também é multiplicado: 300 · 1,08 = 300 + 24 = 324. Exemplo: 1 000 e 1 200 têm distância 200; com reajuste de 8% viram 1 080 e 1 296... e a distância cresce para 216 (200 · 1,08)."
    ],
    [
     "O abono soma o mesmo valor em todos",
     "Todos sobem 150, então a média sobe 150: 2 700 + 150 = 2 850. (Os 8 funcionários não entram na conta.)"
    ],
    [
-    "O abono não muda a dispersão",
+    "O abono não muda o espalhamento",
     "Exemplo com 2 salários, 1 000 e 1 200: a distância entre eles é 200. Somando 150 a cada um, ficam 1 150 e 1 350, e a distância continua 200. Por isso o desvio continua 324."
    ],
    [
@@ -533,19 +533,19 @@
    ],
    [
     "Maio",
-    "Maio = 0,8 · 1,25 · T (20% a menos: 100% − 20% = 80% = 0,8). Como 0,8 · 1,25 = 1, maio = 1 · T. Subir 25% e cair 20% se cancela."
+    "Maio = 0,8 · 1,25 · T (20% a menos: 100% − 20% = 80% = 0,8). Como 0,8 · 1,25 = 1 (8 · 125 = 1 000, com 3 casas decimais: 1,000), maio = 1 · T. Subir 25% e cair 20% se cancela."
    ],
    [
     "Soma dos três meses",
-    "T + 1,25 T + T = 3,25 T. A soma também é 3 · 6 500 = 19 500."
+    "T + 1,25 · T + T = 3,25 · T. A soma também é 3 · 6 500 = 19 500."
    ],
    [
     "Março",
-    "3,25 · T = 19 500, então T = 19 500 ÷ 3,25. Multiplicando os dois por 100: 1 950 000 ÷ 325 = 6 000."
+    "3,25 · T = 19 500, então T = 19 500 ÷ 3,25. Tirando as vírgulas (multiplicando os dois por 100): 1 950 000 ÷ 325. Como 325 · 6 = 1 950, então 325 · 6 000 = 1 950 000, e T = 6 000."
    ],
    [
     "Abril",
-    "1,25 · 6 000 = 7 500. (Os R$ 800 de embalagens não entram.)"
+    "1,25 · 6 000 = 6 000 + 1 500 = 7 500. (Os R$ 800 de embalagens não entram.)"
    ]
   ],
   "principal": "Harvard",
@@ -600,23 +600,23 @@
   "passos": [
    [
     "Uma letra para cada",
-    "Moedas de 50 centavos: m. De 25 centavos: 2m (o dobro). De 1 real: c."
+    "Moedas de 50 centavos (meio real): m. De 25 centavos (um quarto do real): 2m, o dobro. De 1 real (um real): u."
    ],
    [
     "Total de moedas",
-    "2m + m + c = 36, então c = 36 − 3m."
+    "2m + m + u = 36, então u = 36 − 3m."
    ],
    [
     "Total em reais",
-    "25 centavos = 0,25 real. 0,25 · 2m + 0,5 · m + c = 22. Como 0,25 · 2m = 0,5m, fica 0,5m + 0,5m + c = 22, ou seja, m + c = 22."
+    "25 centavos = 0,25 real e 50 centavos = 0,5 real. Então 0,25 · 2m + 0,5 · m + u = 22. Como 0,25 · 2m = 0,5m, fica 0,5m + 0,5m + u = 22, ou seja, m + u = 22."
    ],
    [
     "Juntar",
-    "Troque c por 36 − 3m: m + 36 − 3m = 22. Então 36 − 2m = 22, 2m = 36 − 22 = 14 e m = 7."
+    "Troque u por 36 − 3m: m + 36 − 3m = 22. Como m − 3m = −2m, fica 36 − 2m = 22. Tire 36 dos dois lados: −2m = 22 − 36 = −14. Trocando o sinal: 2m = 14, e m = 7."
    ],
    [
     "Voltar",
-    "c = 36 − 3 · 7 = 36 − 21 = 15. Conferindo: 25 centavos: 2m = 14 moedas, 14 · 0,25 = 3,50; 50 centavos: 7 · 0,5 = 3,50; 1 real: 15. Soma 22,00."
+    "u = 36 − 3 · 7 = 36 − 21 = 15. Conferindo: 25 centavos: 2m = 14 moedas, 14 · 0,25 = 3,50; 50 centavos: 7 · 0,5 = 3,50; 1 real: 15. Soma 22,00."
    ]
   ],
   "principal": "ITA",
@@ -666,19 +666,19 @@
   "passos": [
    [
     "Quanto a B rende de verdade",
-    "A taxa é de 10% sobre o rendimento, então sobra 90% = 0,9 dele. Assim 2% · 0,9 = 1,8% ao mês, ou 0,018."
+    "Rendimento é o que a aplicação rende; líquido é o que sobra depois da taxa. A taxa é de 10% sobre o rendimento, então sobra 90% = 0,9 dele. Como 2% = 2 ÷ 100 = 0,02, o rendimento líquido é 0,02 · 0,9 = 0,018 (2 · 9 = 18, com 3 casas decimais), ou 1,8%."
    ],
    [
     "Sistema",
     "Sistema é um par de equações que valem juntas. A + B = 12 000 (tudo foi aplicado) e 0,01 · A + 0,018 · B = 160 (os rendimentos)."
    ],
    [
-    "Eliminar A",
-    "Eliminar é tirar uma letra: da 1ª, A = 12 000 − B. Troque na 2ª: 0,01 · (12 000 − B) + 0,018 · B = 160, ou 120 − 0,01 B + 0,018 B = 160."
+    "Trocar A",
+    "Da 1ª: A = 12 000 − B. Troque A na 2ª: 0,01 · (12 000 − B) + 0,018 · B = 160. Como 0,01 · 12 000 = 120 (1% de 12 000), fica 120 − 0,01 B + 0,018 B = 160."
    ],
    [
     "Resolver",
-    "−0,01 B + 0,018 B = 0,008 B. Então 120 + 0,008 B = 160, 0,008 B = 160 − 120 = 40 e B = 40 ÷ 0,008 = 40 000 ÷ 8 = 5 000."
+    "−0,01 B + 0,018 B = 0,008 B. Então 120 + 0,008 B = 160, 0,008 B = 160 − 120 = 40 e B = 40 ÷ 0,008. Multiplicando os dois por 1 000 para tirar a vírgula: 40 000 ÷ 8 = 5 000."
    ],
    [
     "Conferir",
@@ -735,11 +735,11 @@
   "passos": [
    [
     "Quanto custa cada plano",
-    "Até 60 min: A = 30 e B = 54, então B não compensa. Depois dos 60, A cobra 0,75 por minuto além: com t = 70, são 70 − 60 = 10 minutos além. O plano B fica em 54 até 120 min."
+    "Até 60 min: A = 30 e B = 54, então B não compensa. Depois dos 60, A cobra 0,75 por minuto além (o excedente): com t = 70, são 70 − 60 = 10 minutos além, e A custa 30 + 0,75 · 10 = 37,50. O plano B fica em 54 até 120 min."
    ],
    [
     "Entre 60 e 120 min",
-    "B custa 54. A passa de 54 quando 0,75 · (t − 60) > 24 (24 = 54 − 30; \">\" lê-se \"maior que\"). Então t − 60 > 24 ÷ 0,75 = 32, isto é, t > 92."
+    "B custa 54. A passa de 54 quando 0,75 · (t − 60) > 24 (24 = 54 − 30; \">\" lê-se \"maior que\"). Então t − 60 > 24 ÷ 0,75 = 32 (conferindo: 0,75 · 32 = 24), isto é, t > 92."
    ],
    [
     "Em t = 92",
@@ -747,7 +747,11 @@
    ],
    [
     "Em t = 93",
-    "A = 30 + 0,75 · 33 = 54,75 e B = 54. B é mais barato. Acima de 120 min os dois cobram excedente: A = 0,75 t − 15 e B = 0,5 t − 6, e A − B = 0,25 t − 9, que é positivo para t acima de 36; então B continua mais barato."
+    "A = 30 + 0,75 · 33 = 54,75 e B = 54. B é mais barato."
+   ],
+   [
+    "Acima de 120 min",
+    "Os dois cobram excedente. A = 30 + 0,75 · (t − 60) = 30 + 0,75 t − 45 = 0,75 t − 15 (0,75 · 60 = 45). B = 54 + 0,5 · (t − 120) = 54 + 0,5 t − 60 = 0,5 t − 6 (0,5 · 120 = 60). A − B = 0,25 t − 9, que é positivo para t acima de 36; então B continua mais barato."
    ],
    [
     "Resposta",
@@ -818,7 +822,7 @@
    ],
    [
     "Atalho",
-    "(caixa + bolsa) − (mala + caixa): a caixa sai dos dois lados e sobra bolsa − mala = 30 − 22 = 8 kg, sem resolver o sistema."
+    "D = (caixa + bolsa) − (mala + caixa) = 30 − 22 = 8. A caixa aparece nos dois e se corta (tira-se dos dois lados), e sobra bolsa − mala. Dá para chegar sem resolver o sistema."
    ]
   ],
   "principal": "Harvard",

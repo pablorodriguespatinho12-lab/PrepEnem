@@ -13,7 +13,7 @@
   "origem": "Escada",
   "nivel": "acima",
   "explicacao": {
-   "conferencia": "Se fosse a média, daria (45 + 30) ÷ 2 = 37,5. Mas a volta, mais lenta, dura mais (0,6 h contra 0,4 h) e a parada também conta como tempo gasto, então a velocidade lenta pesa mais no resultado. B. Erros: A = Fez a média de 45, 30 e 0, como se cada fase durasse igual. C = Escreveu 12 min como 0,12 h. D = Esqueceu a parada: 36 km em 1 h. E = Média simples de 45 e 30.",
+   "conferencia": "Se fosse a média, daria (45 + 30) ÷ 2 = 37,5. Mas a conta certa é distância ÷ tempo, e o tempo gasto a 30 km/h (0,6 h) é maior que o gasto a 45 km/h (0,4 h), fora a parada de 0,2 h sem andar. Por isso a média fica mais perto da velocidade lenta. B. Erros: A = Fez a média de 45, 30 e 0, como se cada fase durasse igual. C = Escreveu 12 min como 0,12 h. D = Esqueceu a parada: 36 km em 1 h. E = Média simples de 45 e 30.",
    "ideia": "Velocidade média não é a média das velocidades: é a distância total dividida pelo tempo total. A parada de 12 minutos também conta como tempo.",
    "pecas": [],
    "passos": [
@@ -59,7 +59,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "V = D ÷ T",
@@ -82,7 +82,7 @@
     },
     {
      "titulo": "Tudo em km e em horas",
-     "texto": "18 000 m ÷ 1 000 = 18 km. Ida: 18 ÷ 45 = 0,4 h. Volta: 18 ÷ 30 = 0,6 h. (Em minutos: 0,4 × 60 = 24 min e 0,6 × 60 = 36 min.)"
+     "texto": "18 000 m ÷ 1 000 = 18 km. Ida: 18 ÷ 45 = 0,4 h (confira: 45 · 0,4 = 18). Volta: 18 ÷ 30 = 0,6 h (30 · 0,6 = 18). Em minutos: 0,4 · 60 = 24 min e 0,6 · 60 = 36 min."
     },
     {
      "titulo": "Tempo total",
@@ -94,11 +94,11 @@
     },
     {
      "titulo": "Média",
-     "texto": "Distância total ÷ tempo total: 36 ÷ 1,2 = 360 ÷ 12 = 30 km/h."
+     "texto": "Distância total ÷ tempo total: 36 ÷ 1,2. Para tirar a vírgula, multiplique os dois por 10: 360 ÷ 12 = 30 km/h."
     },
     {
      "titulo": "Por que não é a média das velocidades",
-     "texto": "Se fosse a média, daria (45 + 30) ÷ 2 = 37,5. Mas a volta, mais lenta, dura mais (0,6 h contra 0,4 h) e a parada também conta como tempo gasto, então a velocidade lenta pesa mais no resultado."
+     "texto": "Se fosse a média, daria (45 + 30) ÷ 2 = 37,5. Mas a conta certa é distância ÷ tempo, e o tempo gasto a 30 km/h (0,6 h) é maior que o gasto a 45 km/h (0,4 h), fora a parada de 0,2 h sem andar. Por isso a média fica mais perto da velocidade lenta."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -137,7 +137,7 @@
   "id": "d2-escada-mat-ita-gra-00a",
   "materia": "Matemática",
   "tema": "Grandezas e Medidas",
-  "enunciado": "Uma família herdou um sítio e quer saber o tamanho dele para decidir se vende ou se mantém. Na prefeitura, recebeu a planta do sítio, desenhada na escala 1 : 25 000. A atendente avisou que a copiadora estava desregulada e que a cópia entregue saiu reduzida para 50% do tamanho da planta original, em todas as direções, sem nenhuma indicação disso no papel. Na cópia, o sítio aparece como um retângulo de 4 cm de largura por 6 cm de comprimento. Para o imposto, a prefeitura cobra R$ 12 por hectare, e o corretor lembrou que 1 hectare equivale a 10 000 m². A família vai usar a área real do terreno para calcular o valor de venda. Essa área real, em hectares, é:\n\nDados: Largura: 4 cm; Comprimento: 6 cm; Escala impressa: 1 : 25 000.",
+  "enunciado": "Uma família herdou um sítio e quer saber o tamanho dele para decidir se vende ou se mantém. Na prefeitura, recebeu a planta do sítio, desenhada na escala 1 : 25 000. A atendente avisou que a copiadora estava desregulada e que a cópia entregue saiu reduzida para 50% do tamanho da planta original, em todas as direções, sem nenhuma indicação disso no papel. Na cópia, o sítio aparece como um retângulo de 4 cm de largura por 6 cm de comprimento. Para o imposto, a prefeitura cobra R$ 12 por hectare, e o corretor lembrou que 1 hectare equivale a 10 000 m². A família vai usar a área real do terreno para calcular o valor de venda. Essa área real, em hectares, é:\n\nDados: Escala impressa: 1 : 25 000; A cópia saiu: reduzida para 50% do tamanho; Terreno na cópia: 4 cm × 6 cm; Quero: área real, em hectares.",
   "A": "150",
   "B": "300",
   "C": "600",
@@ -172,7 +172,7 @@
     },
     {
      "titulo": "O que eu tenho",
-     "texto": "Primeiro, tire os dados do enunciado. Atenção: A taxa de R$ 12 por hectare está no enunciado mas não entra na conta.",
+     "texto": "Primeiro, tire os dados do enunciado. Atenção, está no enunciado mas fora da conta: A taxa de R$ 12 por hectare.",
      "visual": {
       "tipo": "tabela",
       "titulo": "O que eu tenho",
@@ -182,23 +182,27 @@
       ],
       "linhas": [
        [
-        "Largura",
-        "4 cm"
-       ],
-       [
-        "Comprimento",
-        "6 cm"
-       ],
-       [
         "Escala impressa",
         "1 : 25 000"
+       ],
+       [
+        "A cópia saiu",
+        "reduzida para 50% do tamanho"
+       ],
+       [
+        "Terreno na cópia",
+        "4 cm × 6 cm"
+       ],
+       [
+        "Quero",
+        "área real, em hectares"
        ]
       ]
      }
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "A = L × C",
@@ -221,7 +225,7 @@
     },
     {
      "titulo": "Qual é a escala de verdade",
-     "texto": "Escala 1 : 25 000 lê-se: 1 cm no papel vale 25 000 cm no chão. A cópia tem metade do tamanho, então 1 cm da cópia vale 2 cm da planta, que valem 2 · 25 000 = 50 000 cm do chão. Em metros: 50 000 ÷ 100 = 500 m. Então 1 cm da cópia = 500 m."
+     "texto": "Escala 1 : 25 000 lê-se: 1 cm no papel vale 25 000 cm no chão. A cópia tem metade do tamanho (50%), então 1 cm da cópia vale 2 cm da planta, que valem 2 · 25 000 = 50 000 cm do chão. Em metros: 50 000 ÷ 100 = 500 m. Então 1 cm da cópia = 500 m."
     },
     {
      "titulo": "Lados reais",
@@ -229,11 +233,11 @@
     },
     {
      "titulo": "Área em m²",
-     "texto": "2 000 · 3 000 = 6 000 000 m²."
+     "texto": "2 000 · 3 000: 2 · 3 = 6 e há 3 + 3 = 6 zeros, então 6 000 000 m²."
     },
     {
      "titulo": "Em hectares",
-     "texto": "6 000 000 ÷ 10 000 = 600 ha."
+     "texto": "1 hectare = 10 000 m² (4 zeros). Cortando 4 zeros de 6 000 000, sobra 600 ha."
     },
     {
      "titulo": "O que sobrou",
@@ -286,7 +290,7 @@
   "origem": "Escada",
   "nivel": "acima",
   "explicacao": {
-   "conferencia": "75 − 60 = 15 L. Conferindo: etanol 15 + 15 = 30 L, e 30 ÷ 75 = 0,4 = 40%. B. Erros: A = 15% de 60: esqueceu que o total cresce depois de acrescentar. C = 40% de 60: esqueceu que o tanque já tinha 15 L de etanol. D = Supôs o tanque cheio (100 L): 40 − 15 = 25. E = 60% de 60: pegou a parte que não é etanol.",
+   "conferencia": "X = T − M = 75 − 60 = 15 L. Conferindo: etanol 15 + 15 = 30 L, e 30 ÷ 75 = 0,4 = 40%. B. Erros: A = 15% de 60: esqueceu que o total cresce depois de acrescentar. C = 40% de 60: esqueceu que o tanque já tinha 15 L de etanol. D = Supôs o tanque cheio (100 L): 40 − 15 = 25. E = 60% de 60: pegou a parte que não é etanol.",
    "ideia": "Só entra etanol, então a gasolina não muda: 45 L. Se o etanol final é 40%, a gasolina é 60% do total, e o total sai dessa conta.",
    "pecas": [],
    "passos": [
@@ -306,7 +310,7 @@
     },
     {
      "titulo": "O que eu tenho",
-     "texto": "Primeiro, tire os dados do enunciado. Atenção: A capacidade de 100 L (só serve para conferir que 75 L cabe) está no enunciado mas não entra na conta.",
+     "texto": "Primeiro, tire os dados do enunciado. Atenção, está no enunciado mas fora da conta: A capacidade de 100 L (só serve para conferir que 75 L cabe).",
      "visual": {
       "tipo": "tabela",
       "titulo": "O que eu tenho",
@@ -336,30 +340,34 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "X = G ÷ 0,6 − M",
-      "leitura": "total final menos o que já está no tanque",
+      "formula": "X = T − M  e  G = 0,6 · T",
+      "leitura": "etanol a acrescentar = total final − o que já está; gasolina = 60% do total",
       "letras": [
        {
         "letra": "X",
         "oque": "etanol a acrescentar (o que a questão quer)"
        },
        {
-        "letra": "G",
-        "oque": "gasolina, que não muda"
+        "letra": "T",
+        "oque": "total final da mistura"
        },
        {
         "letra": "M",
-        "oque": "mistura que já está no tanque"
+        "oque": "mistura que já está no tanque (60 L)"
+       },
+       {
+        "letra": "G",
+        "oque": "gasolina, que não muda (45 L)"
        }
       ]
      }
     },
     {
      "titulo": "O que está no tanque",
-     "texto": "25% de 60 = 60 ÷ 4 = 15 L de etanol, e 60 − 15 = 45 L de gasolina."
+     "texto": "25% é 25 ÷ 100 = 1/4, então 25% de 60 = 60 ÷ 4 = 15 L de etanol, e 60 − 15 = 45 L de gasolina."
     },
     {
      "titulo": "O que não muda",
@@ -367,15 +375,15 @@
     },
     {
      "titulo": "Quanto o resto vale no fim",
-     "texto": "No fim, 40% é etanol, então a gasolina é o que sobra: 100% − 40% = 60% do total. Ou seja, 45 = 0,6 · T."
+     "texto": "Chame de T o total final. Se 40% é etanol, a gasolina é o que sobra: 100% − 40% = 60% de T. E 60% = 60 ÷ 100 = 0,6. Então G = 0,6 · T, ou 45 = 0,6 · T."
     },
     {
      "titulo": "Total final",
-     "texto": "T = 45 ÷ 0,6. Para dividir por 0,6, multiplique os dois por 10: 450 ÷ 6 = 75 L. Cabe: 75 < 100."
+     "texto": "T = 45 ÷ 0,6. Para dividir por 0,6, multiplique os dois por 10: 450 ÷ 6 = 75 L. Cabe nos 100 L do tanque."
     },
     {
      "titulo": "O que foi acrescentado",
-     "texto": "75 − 60 = 15 L. Conferindo: etanol 15 + 15 = 30 L, e 30 ÷ 75 = 0,4 = 40%."
+     "texto": "X = T − M = 75 − 60 = 15 L. Conferindo: etanol 15 + 15 = 30 L, e 30 ÷ 75 = 0,4 = 40%."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -394,7 +402,7 @@
        ],
        [
         "2. Equação em letras",
-        "X = G ÷ 0,6 − M"
+        "X = T − M  e  G = 0,6 · T"
        ],
        [
         "3. Uma letra por vez",
@@ -424,7 +432,7 @@
   "origem": "Escada",
   "nivel": "acima",
   "explicacao": {
-   "conferencia": "0,25 h = 15 min. Então 2 h 15 min. C. Erros: A = Somou a vazão do ralo em vez de subtrair. B = Esqueceu o ralo. D = Achou 2,25 h e leu como 2 h 25 min. E = Calculou para a caixa vazia (esqueceu os 25%).",
+   "conferencia": "0,25 h = 0,25 · 60 = 15 min. Então 2 h 15 min. C. Erros: A = Somou a vazão do ralo em vez de subtrair. B = Esqueceu o ralo. D = Achou 2,25 h e leu como 2 h 25 min. E = Calculou para a caixa vazia (esqueceu os 25%).",
    "ideia": "Some as vazões (o ralo conta negativo) e divida o que falta pela vazão junta. O que falta é 75% da caixa, não a caixa toda.",
    "pecas": [
     {
@@ -434,8 +442,22 @@
    ],
    "passos": [
     {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "porcentagem",
+        "nome": "Tempo para encher",
+        "formula": "tempo = o que falta ÷ vazão por hora"
+       }
+      ]
+     }
+    },
+    {
      "titulo": "O que eu tenho",
-     "texto": "Primeiro, tire os dados do enunciado. Atenção: Os 1 200 L está no enunciado mas não entra na conta.",
+     "texto": "Primeiro, tire os dados do enunciado. Atenção, está no enunciado mas fora da conta: Os 1 200 L.",
      "visual": {
       "tipo": "tabela",
       "titulo": "O que eu tenho",
@@ -461,7 +483,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "T = Q ÷ V",
@@ -484,23 +506,23 @@
     },
     {
      "titulo": "Vazão de cada um (parte da caixa por hora)",
-     "texto": "Vazão é quanto a torneira enche (ou o ralo esvazia) em 1 hora. A enche a caixa em 6 h, então em 1 h enche 1/6 da caixa. B: 1/4. O ralo esvazia, por isso conta negativo: −1/12."
+     "texto": "Vazão é quanto a torneira enche (ou o ralo esvazia) em 1 hora. A enche a caixa em 6 h, então em 1 h enche 1/6 da caixa (\"um sexto\": 1 parte de 6 iguais). B: 1/4. O ralo esvazia, por isso conta negativo: −1/12."
     },
     {
      "titulo": "Vazão junta",
-     "texto": "Deixe as frações com o mesmo denominador (12): 1/6 = 2/12 (multiplicando em cima e embaixo por 2) e 1/4 = 3/12 (por 3). Soma: 2/12 + 3/12 − 1/12 = 4/12. E 4/12 = 1/3 (dividindo em cima e embaixo por 4)."
+     "texto": "Para somar frações, deixe o denominador (o número de baixo) igual: 12. 1/6 = 2/12 (multiplicando em cima e embaixo por 2) e 1/4 = 3/12 (por 3). Soma: 2/12 + 3/12 − 1/12 = 4/12. E 4/12 = 1/3 (dividindo em cima e embaixo por 4)."
     },
     {
      "titulo": "Quanto falta",
-     "texto": "A caixa tem 25%, faltam 75% = 3/4. Os 1 200 L do enunciado não entram: estamos falando de partes da caixa."
+     "texto": "A caixa tem 25%, faltam 100% − 25% = 75%. E 75% = 75/100 = 3/4 (dividindo por 25). Os 1 200 L do enunciado não entram: estamos falando de partes da caixa."
     },
     {
      "titulo": "Tempo",
-     "texto": "Dividir por 1/3 é multiplicar por 3: (3/4) · 3 = 9/4 h = 2,25 h."
+     "texto": "T = Q ÷ V = (3/4) ÷ (1/3). Se a caixa enche 1/3 por hora, enche a caixa toda em 3 horas; então dividir por 1/3 é o mesmo que multiplicar por 3: (3/4) · 3 = 9/4 h. E 9 ÷ 4 = 2,25 h."
     },
     {
      "titulo": "Em horas e minutos",
-     "texto": "0,25 h = 15 min. Então 2 h 15 min."
+     "texto": "0,25 h = 0,25 · 60 = 15 min. Então 2 h 15 min."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -549,7 +571,7 @@
   "origem": "Escada",
   "nivel": "acima",
   "explicacao": {
-   "conferencia": "31 ÷ 5 = 6,2. D. Erros: A = Fez 2 · 6,0 − 7,0 e ignorou os 30 alunos. B = Repetiu a média da turma antiga. C = Repetiu a meta. E = Parou na média do grupo dos 10 transferidos.",
+   "conferencia": "31 ÷ 5: 5 · 6 = 30, sobra 1; 1 ÷ 5 = 0,2. Então 6,2. D. Erros: A = Fez 2 · 6,0 − 7,0 e ignorou os 30 alunos. B = Repetiu a média da turma antiga. C = Repetiu a meta. E = Parou na média do grupo dos 10 transferidos.",
    "ideia": "Ache quantos pontos a turma precisa ter no total e tire o que já tem. O que sobra é das duas escolas novas: tire a escola X e divida pelos 5 da escola Y.",
    "pecas": [],
    "passos": [
@@ -595,7 +617,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "Y = (P − A − X) ÷ 5",
@@ -638,7 +660,7 @@
     },
     {
      "titulo": "Média da escola Y",
-     "texto": "31 ÷ 5 = 6,2."
+     "texto": "31 ÷ 5: 5 · 6 = 30, sobra 1; 1 ÷ 5 = 0,2. Então 6,2."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -687,7 +709,7 @@
   "origem": "Escada",
   "nivel": "acima",
   "explicacao": {
-   "conferencia": "{6, 6} e {6, k} com k de 0 a 5: 1 + 6 = 7 pares. B. Erros: A = Esqueceu o par {6, 6}. C = Deixou a outra nota livre: um 6 e qualquer nota de 0 a 10. D = Contou pares ordenados: (6, k) e (k, 6) separados. E = Contou pares de notas de 0 a 6 sem exigir que um deles seja 6.",
+   "conferencia": "Os pares são: {6, 6} (1 par) e {6, outra nota de 0 a 5} (6 pares, porque há 6 notas de 0 a 5). Total: D + U = 1 + 6 = 7 pares. B. Erros: A = Esqueceu o par {6, 6}. C = Deixou a outra nota livre: um 6 e qualquer nota de 0 a 10. D = Contou pares ordenados: (6, k) e (k, 6) separados. E = Contou pares de notas de 0 a 6 sem exigir que um deles seja 6.",
    "ideia": "Com 13 notas, a mediana é a 7ª. Veja quantas notas já estão abaixo de 6 e transforme isso em duas regras para as 2 notas novas.",
    "pecas": [
     {
@@ -712,7 +734,7 @@
     },
     {
      "titulo": "O que eu tenho",
-     "texto": "Primeiro, tire os dados do enunciado. Atenção: A nota mínima de aprovação (6) está no enunciado mas não entra na conta.",
+     "texto": "Primeiro, tire os dados do enunciado. Atenção, está no enunciado mas fora da conta: A nota mínima de aprovação (6).",
      "visual": {
       "tipo": "tabela",
       "titulo": "O que eu tenho",
@@ -746,7 +768,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "N = D + U",
@@ -769,27 +791,27 @@
     },
     {
      "titulo": "A mediana de 13 notas",
-     "texto": "Mediana é a nota do meio, com as notas em fila da menor para a maior. Com 13 notas, o meio é o (13 + 1) ÷ 2 = 7º lugar."
+     "texto": "Mediana é a nota do meio, com as notas em fila da menor para a maior. Com 13 notas há 6 de cada lado e a do meio é a 7ª. (Conta: (13 + 1) ÷ 2 = 7. Com 11 notas, seria a 6ª.)"
     },
     {
      "titulo": "O que as 11 notas já têm",
-     "texto": "5 notas abaixo de 6 (4, 4, 5, 5, 5), nenhuma igual a 6 e 6 acima (7, 7, 7, 8, 8, 10). A nota mínima de aprovação não entra na conta."
+     "texto": "Em fila: 4, 4, 5, 5, 5, 7, 7, 7, 8, 8, 10. Estão abaixo de 6: 4, 4, 5, 5, 5 (5 notas). Ninguém tirou 6. Acima de 6 há 6 notas. A nota mínima de aprovação não entra na conta."
     },
     {
-     "titulo": "Para a 7ª ser 6",
-     "texto": "Precisa haver no máximo 6 notas menores que 6 (senão o 6 passa do 7º lugar) e pelo menos 7 notas menores ou iguais a 6 (senão o 6 não chega ao 7º lugar)."
+     "titulo": "Para a 7ª nota ser 6",
+     "texto": "Na fila de 13, a 7ª tem de valer 6. Isso exige duas coisas: (1) antes do 6 devem ficar no máximo 6 notas (senão o 6 passa do 7º lugar), e (2) até o 6 (incluindo ele) devem ficar pelo menos 7 notas (senão o 6 não chega ao 7º lugar)."
     },
     {
      "titulo": "Traduzindo para as 2 notas novas",
-     "texto": "Hoje são 5 notas menores que 6. No máximo uma das novas pode ser menor que 6 (5 + 1 = 6; com duas seriam 7). E as duas têm de ser menores ou iguais a 6 (para chegar a 5 + 2 = 7 notas até o 6)."
+     "texto": "Hoje são 5 notas abaixo de 6. (1) No máximo uma das novas pode ser menor que 6 (5 + 1 = 6 cabe; 5 + 2 = 7 não cabe). (2) Até o 6 hoje há 5 notas; para chegar a 7, as duas novas têm de ser menores ou iguais a 6 (≤ lê-se \"menor ou igual a\")."
     },
     {
      "titulo": "Juntando",
-     "texto": "As duas notas são ≤ 6, e pelo menos uma é exatamente 6."
+     "texto": "As duas notas são ≤ 6, e no máximo uma é menor que 6. Então pelo menos uma é exatamente 6."
     },
     {
      "titulo": "Contar",
-     "texto": "{6, 6} e {6, k} com k de 0 a 5: 1 + 6 = 7 pares."
+     "texto": "Os pares são: {6, 6} (1 par) e {6, outra nota de 0 a 5} (6 pares, porque há 6 notas de 0 a 5). Total: D + U = 1 + 6 = 7 pares."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -863,7 +885,7 @@
     },
     {
      "titulo": "O que eu tenho",
-     "texto": "Primeiro, tire os dados do enunciado. Atenção: Os 8 funcionários está no enunciado mas não entra na conta.",
+     "texto": "Primeiro, tire os dados do enunciado. Atenção, está no enunciado mas fora da conta: Os 8 funcionários.",
      "visual": {
       "tipo": "tabela",
       "titulo": "O que eu tenho",
@@ -893,7 +915,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "N = 1,08 · M + 150  e  E = 1,08 · D",
@@ -920,14 +942,14 @@
     },
     {
      "titulo": "O reajuste multiplica tudo",
-     "texto": "Reajuste de 8%: 100% + 8% = 108% = 1,08. Cada salário vira 1,08 vez o que era. A média: 2 500 · 1,08 = 2 700. O desvio-padrão (o quanto os salários se afastam da média, em geral) também é multiplicado: 300 · 1,08 = 324."
+     "texto": "Reajuste de 8%: 100% + 8% = 108% = 1,08. Cada salário vira 1,08 vez o que era. Média: 2 500 · 1,08 = 2 500 + 8% de 2 500 = 2 500 + 200 = 2 700. O desvio-padrão (o quanto os salários se espalham em torno da média) também é multiplicado: 300 · 1,08 = 300 + 24 = 324. Exemplo: 1 000 e 1 200 têm distância 200; com reajuste de 8% viram 1 080 e 1 296... e a distância cresce para 216 (200 · 1,08)."
     },
     {
      "titulo": "O abono soma o mesmo valor em todos",
      "texto": "Todos sobem 150, então a média sobe 150: 2 700 + 150 = 2 850. (Os 8 funcionários não entram na conta.)"
     },
     {
-     "titulo": "O abono não muda a dispersão",
+     "titulo": "O abono não muda o espalhamento",
      "texto": "Exemplo com 2 salários, 1 000 e 1 200: a distância entre eles é 200. Somando 150 a cada um, ficam 1 150 e 1 350, e a distância continua 200. Por isso o desvio continua 324."
     },
     {
@@ -981,7 +1003,7 @@
   "origem": "Escada",
   "nivel": "acima",
   "explicacao": {
-   "conferencia": "1,25 · 6 000 = 7 500. (Os R$ 800 de embalagens não entram.) C. Erros: A = Parou no valor de março. B = Respondeu a própria média. D = Aplicou os 20% sobre a média. E = Aplicou os 25% sobre a média.",
+   "conferencia": "1,25 · 6 000 = 6 000 + 1 500 = 7 500. (Os R$ 800 de embalagens não entram.) C. Erros: A = Parou no valor de março. B = Respondeu a própria média. D = Aplicou os 20% sobre a média. E = Aplicou os 25% sobre a média.",
    "ideia": "Escreva tudo em função de março. Subir 25% e cair 20% se cancela, então maio é igual a março, e a soma dos três meses fica 3,25 vezes março.",
    "pecas": [],
    "passos": [
@@ -1001,7 +1023,7 @@
     },
     {
      "titulo": "O que eu tenho",
-     "texto": "Primeiro, tire os dados do enunciado. Atenção: Os R$ 800 de embalagens está no enunciado mas não entra na conta.",
+     "texto": "Primeiro, tire os dados do enunciado. Atenção, está no enunciado mas fora da conta: Os R$ 800 de embalagens.",
      "visual": {
       "tipo": "tabela",
       "titulo": "O que eu tenho",
@@ -1027,7 +1049,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "3,25 · T = 3 · M",
@@ -1050,19 +1072,19 @@
     },
     {
      "titulo": "Maio",
-     "texto": "Maio = 0,8 · 1,25 · T (20% a menos: 100% − 20% = 80% = 0,8). Como 0,8 · 1,25 = 1, maio = 1 · T. Subir 25% e cair 20% se cancela."
+     "texto": "Maio = 0,8 · 1,25 · T (20% a menos: 100% − 20% = 80% = 0,8). Como 0,8 · 1,25 = 1 (8 · 125 = 1 000, com 3 casas decimais: 1,000), maio = 1 · T. Subir 25% e cair 20% se cancela."
     },
     {
      "titulo": "Soma dos três meses",
-     "texto": "T + 1,25 T + T = 3,25 T. A soma também é 3 · 6 500 = 19 500."
+     "texto": "T + 1,25 · T + T = 3,25 · T. A soma também é 3 · 6 500 = 19 500."
     },
     {
      "titulo": "Março",
-     "texto": "3,25 · T = 19 500, então T = 19 500 ÷ 3,25. Multiplicando os dois por 100: 1 950 000 ÷ 325 = 6 000."
+     "texto": "3,25 · T = 19 500, então T = 19 500 ÷ 3,25. Tirando as vírgulas (multiplicando os dois por 100): 1 950 000 ÷ 325. Como 325 · 6 = 1 950, então 325 · 6 000 = 1 950 000, e T = 6 000."
     },
     {
      "titulo": "Abril",
-     "texto": "1,25 · 6 000 = 7 500. (Os R$ 800 de embalagens não entram.)"
+     "texto": "1,25 · 6 000 = 6 000 + 1 500 = 7 500. (Os R$ 800 de embalagens não entram.)"
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -1111,13 +1133,13 @@
   "origem": "Escada",
   "nivel": "acima",
   "explicacao": {
-   "conferencia": "c = 36 − 3 · 7 = 36 − 21 = 15. Conferindo: 25 centavos: 2m = 14 moedas, 14 · 0,25 = 3,50; 50 centavos: 7 · 0,5 = 3,50; 1 real: 15. Soma 22,00. C. Erros: A = Achou a quantidade de moedas de 50 centavos. B = Achou a de 25 centavos. D = Metade das moedas (36 ÷ 2). E = Respondeu o valor total.",
+   "conferencia": "u = 36 − 3 · 7 = 36 − 21 = 15. Conferindo: 25 centavos: 2m = 14 moedas, 14 · 0,25 = 3,50; 50 centavos: 7 · 0,5 = 3,50; 1 real: 15. Soma 22,00. C. Erros: A = Achou a quantidade de moedas de 50 centavos. B = Achou a de 25 centavos. D = Metade das moedas (36 ÷ 2). E = Respondeu o valor total.",
    "ideia": "Dê uma letra a cada tipo de moeda. Duas equações (quantas moedas e quantos reais), com a relação do dobro, resolvem tudo.",
    "pecas": [],
    "passos": [
     {
      "titulo": "O que eu tenho",
-     "texto": "Primeiro, tire os dados do enunciado. Atenção: O lanche está no enunciado mas não entra na conta.",
+     "texto": "Primeiro, tire os dados do enunciado. Atenção, está no enunciado mas fora da conta: O lanche.",
      "visual": {
       "tipo": "tabela",
       "titulo": "O que eu tenho",
@@ -1147,42 +1169,42 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "m + c = 22  e  3m + c = 36",
+      "formula": "m + u = 22  e  3m + u = 36",
       "leitura": "valor em reais e quantidade de moedas",
       "letras": [
        {
         "letra": "m",
-        "oque": "moedas de 50 centavos"
+        "oque": "moedas de 50 centavos (meio real)"
        },
        {
-        "letra": "c",
-        "oque": "moedas de 1 real (o que a questão quer)"
+        "letra": "u",
+        "oque": "moedas de 1 real (um real): o que a questão quer"
        }
       ]
      }
     },
     {
      "titulo": "Uma letra para cada",
-     "texto": "Moedas de 50 centavos: m. De 25 centavos: 2m (o dobro). De 1 real: c."
+     "texto": "Moedas de 50 centavos (meio real): m. De 25 centavos (um quarto do real): 2m, o dobro. De 1 real (um real): u."
     },
     {
      "titulo": "Total de moedas",
-     "texto": "2m + m + c = 36, então c = 36 − 3m."
+     "texto": "2m + m + u = 36, então u = 36 − 3m."
     },
     {
      "titulo": "Total em reais",
-     "texto": "25 centavos = 0,25 real. 0,25 · 2m + 0,5 · m + c = 22. Como 0,25 · 2m = 0,5m, fica 0,5m + 0,5m + c = 22, ou seja, m + c = 22."
+     "texto": "25 centavos = 0,25 real e 50 centavos = 0,5 real. Então 0,25 · 2m + 0,5 · m + u = 22. Como 0,25 · 2m = 0,5m, fica 0,5m + 0,5m + u = 22, ou seja, m + u = 22."
     },
     {
      "titulo": "Juntar",
-     "texto": "Troque c por 36 − 3m: m + 36 − 3m = 22. Então 36 − 2m = 22, 2m = 36 − 22 = 14 e m = 7."
+     "texto": "Troque u por 36 − 3m: m + 36 − 3m = 22. Como m − 3m = −2m, fica 36 − 2m = 22. Tire 36 dos dois lados: −2m = 22 − 36 = −14. Trocando o sinal: 2m = 14, e m = 7."
     },
     {
      "titulo": "Voltar",
-     "texto": "c = 36 − 3 · 7 = 36 − 21 = 15. Conferindo: 25 centavos: 2m = 14 moedas, 14 · 0,25 = 3,50; 50 centavos: 7 · 0,5 = 3,50; 1 real: 15. Soma 22,00."
+     "texto": "u = 36 − 3 · 7 = 36 − 21 = 15. Conferindo: 25 centavos: 2m = 14 moedas, 14 · 0,25 = 3,50; 50 centavos: 7 · 0,5 = 3,50; 1 real: 15. Soma 22,00."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -1201,7 +1223,7 @@
        ],
        [
         "2. Equação em letras",
-        "m + c = 22  e  3m + c = 36"
+        "m + u = 22  e  3m + u = 36"
        ],
        [
         "3. Uma letra por vez",
@@ -1235,6 +1257,10 @@
    "ideia": "A taxa de 10% só vale para o fundo B, então ele rende de verdade 1,8%. Monte o sistema com o rendimento líquido e elimine uma incógnita.",
    "pecas": [
     {
+     "termo": "Rendimento líquido",
+     "significado": "O que a aplicação rende, depois de descontar a taxa."
+    },
+    {
      "termo": "Sistema",
      "significado": "Duas ou mais equações que valem ao mesmo tempo, com as mesmas letras."
     }
@@ -1256,7 +1282,7 @@
     },
     {
      "titulo": "O que eu tenho",
-     "texto": "Primeiro, tire os dados do enunciado. Atenção: A tarifa de R$ 15 está no enunciado mas não entra na conta.",
+     "texto": "Primeiro, tire os dados do enunciado. Atenção, está no enunciado mas fora da conta: A tarifa de R$ 15.",
      "visual": {
       "tipo": "tabela",
       "titulo": "O que eu tenho",
@@ -1278,7 +1304,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "A + B = 12 000  e  0,01 · A + 0,018 · B = 160",
@@ -1297,19 +1323,19 @@
     },
     {
      "titulo": "Quanto a B rende de verdade",
-     "texto": "A taxa é de 10% sobre o rendimento, então sobra 90% = 0,9 dele. Assim 2% · 0,9 = 1,8% ao mês, ou 0,018."
+     "texto": "Rendimento é o que a aplicação rende; líquido é o que sobra depois da taxa. A taxa é de 10% sobre o rendimento, então sobra 90% = 0,9 dele. Como 2% = 2 ÷ 100 = 0,02, o rendimento líquido é 0,02 · 0,9 = 0,018 (2 · 9 = 18, com 3 casas decimais), ou 1,8%."
     },
     {
      "titulo": "Sistema",
      "texto": "Sistema é um par de equações que valem juntas. A + B = 12 000 (tudo foi aplicado) e 0,01 · A + 0,018 · B = 160 (os rendimentos)."
     },
     {
-     "titulo": "Eliminar A",
-     "texto": "Eliminar é tirar uma letra: da 1ª, A = 12 000 − B. Troque na 2ª: 0,01 · (12 000 − B) + 0,018 · B = 160, ou 120 − 0,01 B + 0,018 B = 160."
+     "titulo": "Trocar A",
+     "texto": "Da 1ª: A = 12 000 − B. Troque A na 2ª: 0,01 · (12 000 − B) + 0,018 · B = 160. Como 0,01 · 12 000 = 120 (1% de 12 000), fica 120 − 0,01 B + 0,018 B = 160."
     },
     {
      "titulo": "Resolver",
-     "texto": "−0,01 B + 0,018 B = 0,008 B. Então 120 + 0,008 B = 160, 0,008 B = 160 − 120 = 40 e B = 40 ÷ 0,008 = 40 000 ÷ 8 = 5 000."
+     "texto": "−0,01 B + 0,018 B = 0,008 B. Então 120 + 0,008 B = 160, 0,008 B = 160 − 120 = 40 e B = 40 ÷ 0,008. Multiplicando os dois por 1 000 para tirar a vírgula: 40 000 ÷ 8 = 5 000."
     },
     {
      "titulo": "Conferir",
@@ -1364,7 +1390,12 @@
   "explicacao": {
    "conferencia": "t = 93. C. Erros: A = Usou t > 36, que só vale depois dos 120 minutos. B = Parou na igualdade (92): \"mais barato\" pede estritamente menor. D = Pegou os 120 minutos incluídos do B. E = Contou os 60 minutos incluídos nos dois planos.",
    "ideia": "Cada plano tem uma conta por partes. Compare onde elas se cruzam, e lembre que \"estritamente mais barato\" exclui o empate.",
-   "pecas": [],
+   "pecas": [
+    {
+     "termo": "Excedente",
+     "significado": "O que passa da franquia (dos minutos já incluídos no plano)."
+    }
+   ],
    "passos": [
     {
      "titulo": "O que eu tenho",
@@ -1390,7 +1421,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "A = 30 + 0,75 · (t − 60)  e  B = 54",
@@ -1413,11 +1444,11 @@
     },
     {
      "titulo": "Quanto custa cada plano",
-     "texto": "Até 60 min: A = 30 e B = 54, então B não compensa. Depois dos 60, A cobra 0,75 por minuto além: com t = 70, são 70 − 60 = 10 minutos além. O plano B fica em 54 até 120 min."
+     "texto": "Até 60 min: A = 30 e B = 54, então B não compensa. Depois dos 60, A cobra 0,75 por minuto além (o excedente): com t = 70, são 70 − 60 = 10 minutos além, e A custa 30 + 0,75 · 10 = 37,50. O plano B fica em 54 até 120 min."
     },
     {
      "titulo": "Entre 60 e 120 min",
-     "texto": "B custa 54. A passa de 54 quando 0,75 · (t − 60) > 24 (24 = 54 − 30; \">\" lê-se \"maior que\"). Então t − 60 > 24 ÷ 0,75 = 32, isto é, t > 92."
+     "texto": "B custa 54. A passa de 54 quando 0,75 · (t − 60) > 24 (24 = 54 − 30; \">\" lê-se \"maior que\"). Então t − 60 > 24 ÷ 0,75 = 32 (conferindo: 0,75 · 32 = 24), isto é, t > 92."
     },
     {
      "titulo": "Em t = 92",
@@ -1425,7 +1456,11 @@
     },
     {
      "titulo": "Em t = 93",
-     "texto": "A = 30 + 0,75 · 33 = 54,75 e B = 54. B é mais barato. Acima de 120 min os dois cobram excedente: A = 0,75 t − 15 e B = 0,5 t − 6, e A − B = 0,25 t − 9, que é positivo para t acima de 36; então B continua mais barato."
+     "texto": "A = 30 + 0,75 · 33 = 54,75 e B = 54. B é mais barato."
+    },
+    {
+     "titulo": "Acima de 120 min",
+     "texto": "Os dois cobram excedente. A = 30 + 0,75 · (t − 60) = 30 + 0,75 t − 45 = 0,75 t − 15 (0,75 · 60 = 45). B = 54 + 0,5 · (t − 120) = 54 + 0,5 t − 60 = 0,5 t − 6 (0,5 · 120 = 60). A − B = 0,25 t − 9, que é positivo para t acima de 36; então B continua mais barato."
     },
     {
      "titulo": "Resposta",
@@ -1478,13 +1513,13 @@
   "origem": "Escada",
   "nivel": "acima",
   "explicacao": {
-   "conferencia": "(caixa + bolsa) − (mala + caixa): a caixa sai dos dois lados e sobra bolsa − mala = 30 − 22 = 8 kg, sem resolver o sistema. B. Erros: A = Metade da diferença 30 − 22. C = Achou o mais leve (9 kg) e parou. D = Achou o mais pesado (17 kg) e parou. E = Respondeu o peso dos três juntos.",
+   "conferencia": "D = (caixa + bolsa) − (mala + caixa) = 30 − 22 = 8. A caixa aparece nos dois e se corta (tira-se dos dois lados), e sobra bolsa − mala. Dá para chegar sem resolver o sistema. B. Erros: A = Metade da diferença 30 − 22. C = Achou o mais leve (9 kg) e parou. D = Achou o mais pesado (17 kg) e parou. E = Respondeu o peso dos três juntos.",
    "ideia": "Cada volume aparece em duas pesagens. A diferença pedida sai direto de duas pesagens, sem achar o peso de cada um.",
    "pecas": [],
    "passos": [
     {
      "titulo": "O que eu tenho",
-     "texto": "Primeiro, tire os dados do enunciado. Atenção: Os 20 kg da balança e os 32 kg da companhia está no enunciado mas não entra na conta.",
+     "texto": "Primeiro, tire os dados do enunciado. Atenção, estão no enunciado mas fora da conta: Os 20 kg da balança e os 32 kg da companhia.",
      "visual": {
       "tipo": "tabela",
       "titulo": "O que eu tenho",
@@ -1510,15 +1545,19 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "D = B − M",
-      "leitura": "bolsa − mala (a caixa se corta)",
+      "formula": "D = (C + B) − (M + C)",
+      "leitura": "pesagem caixa + bolsa menos pesagem mala + caixa",
       "letras": [
        {
         "letra": "D",
         "oque": "diferença entre o mais pesado e o mais leve (o que a questão quer)"
+       },
+       {
+        "letra": "C",
+        "oque": "peso da caixa"
        },
        {
         "letra": "B",
@@ -1549,7 +1588,7 @@
     },
     {
      "titulo": "Atalho",
-     "texto": "(caixa + bolsa) − (mala + caixa): a caixa sai dos dois lados e sobra bolsa − mala = 30 − 22 = 8 kg, sem resolver o sistema."
+     "texto": "D = (caixa + bolsa) − (mala + caixa) = 30 − 22 = 8. A caixa aparece nos dois e se corta (tira-se dos dois lados), e sobra bolsa − mala. Dá para chegar sem resolver o sistema."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -1568,7 +1607,7 @@
        ],
        [
         "2. Equação em letras",
-        "D = B − M"
+        "D = (C + B) − (M + C)"
        ],
        [
         "3. Uma letra por vez",
@@ -1598,7 +1637,7 @@
   "origem": "Escada",
   "nivel": "acima",
   "explicacao": {
-   "conferencia": "q = 200 − 100 = 100 bolos. Lucro = 15 · 100 − 300 = 1 200. B. Erros: A = Usou o menor preço da tabela (R$ 20). C = Usou o vértice p = 30, que passa do teto de R$ 25. D = Esqueceu o gasto fixo de R$ 300. E = Vértice e sem o gasto fixo (20 · 80).",
+   "conferencia": "q = 200 − 4 · 25 = 100 bolos. Lucro = (25 − 10) · 100 − 300 = 1 500 − 300 = 1 200. B. Erros: A = Usou o menor preço da tabela (R$ 20). C = Usou o vértice p = 30, que passa do teto de R$ 25. D = Esqueceu o gasto fixo de R$ 300. E = Vértice e sem o gasto fixo (20 · 80).",
    "ideia": "Ache a reta das vendas, monte o lucro (uma parábola) e veja onde está o máximo. Se o vértice passa do preço permitido, o máximo fica no limite.",
    "pecas": [
     {
@@ -1643,10 +1682,10 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "L = (p − 10) · (200 − 4p) − 300",
+      "formula": "L = (p − 10) · q − 300",
       "leitura": "(lucro por bolo × bolos vendidos) − gasto fixo",
       "letras": [
        {
@@ -1656,29 +1695,37 @@
        {
         "letra": "p",
         "oque": "preço do bolo"
+       },
+       {
+        "letra": "q",
+        "oque": "bolos vendidos por semana"
        }
       ]
      }
     },
     {
      "titulo": "A reta das vendas",
-     "texto": "Na tabela, o preço sobe R$ 4 (de 20 para 24) e as vendas caem 16 (de 120 para 104): são −4 bolos por real. A reta é q = 200 − 4p. Conferindo com p = 20: 200 − 80 = 120. (O 200 vem de 120 + 4 · 20.)"
+     "texto": "Na tabela, o preço sobe R$ 4 (de 20 para 24) e as vendas caem 16 (de 120 para 104): são −4 bolos por real. A letra q é a quantidade vendida: q = 200 − 4p. Conferindo com p = 20: 200 − 80 = 120. (O 200 vem de 120 + 4 · 20.)"
     },
     {
      "titulo": "O lucro",
-     "texto": "Lucro = (preço − custo) · bolos vendidos − gasto fixo = (p − 10) · (200 − 4p) − 300. O desenho desse lucro é uma parábola aberta para baixo: sobe, chega a um topo (o vértice) e depois desce."
+     "texto": "Lucro = (preço − custo) · bolos vendidos − gasto fixo, ou L = (p − 10) · q − 300 = (p − 10) · (200 − 4p) − 300."
+    },
+    {
+     "titulo": "Como o lucro varia",
+     "texto": "Sem o gasto fixo, a parte (p − 10) · (200 − 4p) vale: p = 10 → 0; p = 20 → 10 · 120 = 1 200; p = 30 → 20 · 80 = 1 600; p = 40 → 30 · 40 = 1 200; p = 50 → 0. Sobe até 30 e desce igual do outro lado: esse desenho é uma parábola aberta para baixo, e o ponto mais alto é o vértice."
     },
     {
      "titulo": "Onde fica o topo",
-     "texto": "O lucro por bolo vira zero quando p = 10, e as vendas viram zero quando 200 − 4p = 0, isto é, p = 50. Esses dois preços são as raízes (onde a conta dá zero). O topo fica no meio deles: p = (10 + 50) ÷ 2 = 30."
+     "texto": "Os preços que zeram o produto (p − 10) · (200 − 4p) são p = 10 e p = 50: as raízes. Como a parábola é igual dos dois lados, o topo fica no meio: p = (10 + 50) ÷ 2 = 30."
     },
     {
      "titulo": "Dentro do limite",
-     "texto": "De 10 até 30 o lucro só sobe. A prefeitura só deixa até 25, então o melhor preço permitido é o último: 25. (Em p = 30 seria 20 · 80 − 300 = 1 300, mas é proibido.)"
+     "texto": "De 10 até 30 o lucro só sobe. A prefeitura só deixa até 25, então o melhor preço permitido é o último: 25. (Em p = 30 o lucro seria 1 600 − 300 = 1 300, mas é proibido.)"
     },
     {
      "titulo": "A conta",
-     "texto": "q = 200 − 100 = 100 bolos. Lucro = 15 · 100 − 300 = 1 200."
+     "texto": "q = 200 − 4 · 25 = 100 bolos. Lucro = (25 − 10) · 100 − 300 = 1 500 − 300 = 1 200."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -1697,7 +1744,7 @@
        ],
        [
         "2. Equação em letras",
-        "L = (p − 10) · (200 − 4p) − 300"
+        "L = (p − 10) · q − 300"
        ],
        [
         "3. Uma letra por vez",
@@ -1717,7 +1764,7 @@
   "id": "d2-escada-mat-ita-fun-00c",
   "materia": "Matemática",
   "tema": "Funções",
-  "enunciado": "Para cada número inteiro k, com 1 ≤ k ≤ 20, considere a parábola y = x² − 6x + k, desenhada no plano cartesiano. Os pontos em que a parábola corta o eixo horizontal são as raízes da equação x² − 6x + k = 0. Em quantos valores de k a parábola corta o eixo horizontal em dois pontos distintos, ambos à direita da origem, isto é, com abscissa positiva?",
+  "enunciado": "Para cada número inteiro k, com 1 ≤ k ≤ 20, considere a parábola y = x² − 6x + k, desenhada com o eixo horizontal (o eixo x). Os pontos em que a parábola corta esse eixo são as soluções da equação x² − 6x + k = 0. Em quantos valores de k a parábola corta o eixo horizontal em dois pontos diferentes, ambos à direita do zero (isto é, com x positivo)?",
   "A": "2",
   "B": "7",
   "C": "8",
@@ -1727,7 +1774,7 @@
   "origem": "Escada",
   "nivel": "acima",
   "explicacao": {
-   "conferencia": "k = 9 dá raiz dupla (x = 3, as duas raízes iguais): a parábola toca o eixo num ponto só, e não serve. E as raízes não precisam ser inteiras: só k = 5 e k = 8 têm raízes inteiras, mas os outros também servem. C. Erros: A = Contou só os k de raízes inteiras (k = 5 e k = 8). B = Esqueceu o k = 1. D = Incluiu k = 9, que dá raiz dupla (um ponto só). E = Só exigiu produto positivo, sem olhar o Δ.",
+   "conferencia": "k = 9 dá raiz dupla (x = 3, as duas raízes iguais): a parábola toca o eixo num ponto só, e não serve. E as raízes não precisam ser inteiras: entre os k de 1 a 8, só k = 5 e k = 8 dão as duas raízes inteiras, mas os outros também servem. C. Erros: A = Contou só os k de raízes inteiras (k = 5 e k = 8). B = Esqueceu o k = 1. D = Incluiu k = 9, que dá raiz dupla (um ponto só). E = Só exigiu produto positivo, sem olhar o Δ.",
    "ideia": "Duas raízes distintas pedem Δ > 0. Duas raízes positivas saem da soma (6) e do produto (k) das raízes, sem resolver a equação.",
    "pecas": [
     {
@@ -1737,9 +1784,32 @@
     {
      "termo": "Discriminante (Δ)",
      "significado": "D = b² − 4ac: diz quantas raízes a equação tem."
+    },
+    {
+     "termo": "Eixo horizontal",
+     "significado": "A reta de x, a que fica na horizontal; o 0 é a origem."
     }
    ],
    "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Discriminante",
+        "formula": "D = b² − 4ac"
+       },
+       {
+        "figura": "grafico",
+        "nome": "Soma e produto das raízes",
+        "formula": "soma = −b; produto = c (com a = 1)"
+       }
+      ]
+     }
+    },
     {
      "titulo": "O que eu tenho",
      "texto": "Primeiro, tire os dados do enunciado.",
@@ -1768,11 +1838,11 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "D = 36 − 4k",
-      "leitura": "discriminante (Δ) de x² − 6x + k = 0",
+      "leitura": "discriminante: b² − 4ac com a = 1, b = −6, c = k",
       "letras": [
        {
         "letra": "D",
@@ -1787,11 +1857,15 @@
     },
     {
      "titulo": "Dois pontos distintos",
-     "texto": "A parábola corta o eixo horizontal onde x² − 6x + k = 0; essas soluções se chamam raízes. O número de raízes depende de D = b² − 4ac (o discriminante, também escrito Δ), que aqui é 36 − 4k (a = 1, b = −6, c = k). D > 0: duas raízes diferentes; D = 0: uma só; D < 0: nenhuma. Então 36 − 4k > 0, k < 9, ou seja, k ≤ 8."
+     "texto": "A parábola corta o eixo horizontal (o eixo x) onde x² − 6x + k = 0 (x² lê-se \"x ao quadrado\", x · x); essas soluções se chamam raízes. O número de raízes depende de D = b² − 4ac (o discriminante, ou Δ), numa equação ax² + bx + c = 0. Aqui a = 1, b = −6, c = k, e D = (−6)² − 4 · 1 · k = 36 − 4k. D > 0: duas raízes diferentes; D = 0: uma só; D < 0: nenhuma."
+    },
+    {
+     "titulo": "Resolver D > 0",
+     "texto": "36 − 4k > 0 → 36 > 4k → 36 ÷ 4 > k → 9 > k. Então k < 9, ou seja, k ≤ 8 (para k inteiro)."
     },
     {
      "titulo": "Soma e produto das raízes",
-     "texto": "Para x² − 6x + k = 0, a soma das raízes é 6 e o produto é k (regra pronta, vale para toda equação x² + bx + c). Com k > 0, o produto é positivo, então as raízes têm o mesmo sinal; como a soma é 6, as duas são positivas."
+     "texto": "Em x² + bx + c = 0 (com a = 1), a soma das raízes é −b e o produto é c (regra pronta). Aqui b = −6, então a soma é −(−6) = 6, e o produto é k. Com k > 0 o produto é positivo, então as raízes têm o mesmo sinal; como a soma é 6, as duas são positivas."
     },
     {
      "titulo": "Contar",
@@ -1799,7 +1873,7 @@
     },
     {
      "titulo": "Os que enganam",
-     "texto": "k = 9 dá raiz dupla (x = 3, as duas raízes iguais): a parábola toca o eixo num ponto só, e não serve. E as raízes não precisam ser inteiras: só k = 5 e k = 8 têm raízes inteiras, mas os outros também servem."
+     "texto": "k = 9 dá raiz dupla (x = 3, as duas raízes iguais): a parábola toca o eixo num ponto só, e não serve. E as raízes não precisam ser inteiras: entre os k de 1 a 8, só k = 5 e k = 8 dão as duas raízes inteiras, mas os outros também servem."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -1880,7 +1954,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "a² = 9  e  a · b + b = 8",
@@ -1899,15 +1973,15 @@
     },
     {
      "titulo": "Duas passadas",
-     "texto": "f(f(x)) é passar x pela máquina e passar o resultado de novo. Com a = 2, b = 1 e x = 1: 1 → 2 · 1 + 1 = 3 → 2 · 3 + 1 = 7. Em letras: a · (ax + b) + b = a²x + ab + b (a · ax = a²x e a · b = ab)."
+     "texto": "f(x) lê-se \"f de x\": o resultado da máquina quando entra x. f(f(x)) é passar x pela máquina e passar o resultado de novo. Com a = 2, b = 1 e x = 1: 1 → 2 · 1 + 1 = 3 → 2 · 3 + 1 = 7. Em letras: a · (ax + b) + b = a²x + ab + b (a · ax = a²x e a · b = ab)."
     },
     {
      "titulo": "Igualar a 9x + 8",
-     "texto": "Isso vale para todo x, então o que multiplica x tem de ser igual dos dois lados (a² = 9) e o que não tem x também (ab + b = 8)."
+     "texto": "Teste com a = 2 e b = 1: f(f(x)) = 4x + 3. O 4 é o a² e multiplica o x; o 3 (a · b + b = 2 + 1) não tem x. Para a igualdade valer com qualquer x, o pedaço com x tem de bater (a² = 9) e o pedaço sem x também (ab + b = 8)."
     },
     {
      "titulo": "O sinal de a",
-     "texto": "a² = 9 dá a = 3 ou a = −3. Como a > 0, fica a = 3."
+     "texto": "a² = 9: 3 · 3 = 9 e também (−3) · (−3) = 9, então a = 3 ou a = −3. Como a > 0, fica a = 3."
     },
     {
      "titulo": "Achar b",
@@ -2000,7 +2074,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "N = 3 · 2¹⁰ − 3",
@@ -2015,19 +2089,19 @@
     },
     {
      "titulo": "O número que não muda",
-     "texto": "Procure um x que fica igual na regra: x = 2x + 3. Passe 2x para o outro lado: x − 2x = 3, então −x = 3 e x = −3."
+     "texto": "Procure um x que fica igual na regra: x = 2x + 3. Tirando 2x dos dois lados: x − 2x = 3, e x − 2x = −x, então −x = 3 e, trocando o sinal, x = −3. Conferindo: 2 · (−3) + 3 = −3 ✓. (Esse número \"parado\" é o ponto de apoio da regra.)"
     },
     {
      "titulo": "Somar 3 a tudo",
-     "texto": "Por que 3? Porque 3 é o oposto de −3. Chame de y o número do pedido mais 3 (y = x + 3). O próximo pedido é 2x + 3; somando 3: 2x + 6 = 2 · (x + 3). Ou seja, o y simplesmente dobra."
+     "texto": "O oposto de −3 é 3 (o mesmo número com o sinal trocado). Chame de y o número do pedido mais 3 (y = x + 3). O próximo pedido é 2x + 3; somando 3: 2x + 6 = 2 · (x + 3). Ou seja, o y simplesmente dobra."
     },
     {
      "titulo": "O começo",
-     "texto": "x = 0 dá y = 3. Dobrando: 3, 6, 12, 24... (1 vez: 6; 2 vezes: 12; 3 vezes: 24)."
+     "texto": "x = 0 dá y = 3. Dobrando: 3, 6, 12, 24, 48, 96, 192, 384, 768, 1 536, 3 072 (10 dobras a partir de 3)."
     },
     {
      "titulo": "Depois de 10 passos",
-     "texto": "Dobrar 10 vezes é multiplicar por 2¹⁰ (2 multiplicado 10 vezes) = 1 024. Então y = 3 · 1 024 = 3 072."
+     "texto": "Dobrar 10 vezes é multiplicar por 2¹⁰ (2 multiplicado 10 vezes): 2, 4, 8, 16, 32, 64, 128, 256, 512, 1 024. Então y = 3 · 1 024 = 3 072, igual à lista."
     },
     {
      "titulo": "Voltar para x",
@@ -2105,7 +2179,7 @@
     },
     {
      "titulo": "O que eu tenho",
-     "texto": "Primeiro, tire os dados do enunciado. Atenção: O preço de R$ 54, o desconto de 5% e o pagamento a prazo está no enunciado mas não entra na conta.",
+     "texto": "Primeiro, tire os dados do enunciado. Atenção, estão no enunciado mas fora da conta: O preço de R$ 54, o desconto de 5% e o pagamento a prazo.",
      "visual": {
       "tipo": "tabela",
       "titulo": "O que eu tenho",
@@ -2139,7 +2213,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "P = 1,1 · A ÷ 9",
@@ -2162,7 +2236,7 @@
     },
     {
      "titulo": "Com 10% a mais",
-     "texto": "10% a mais é 100% + 10% = 110% = 1,1. 1 050 · 1,1 = 1 050 + 105 = 1 155 m²."
+     "texto": "10% de 1 050 = 1 050 ÷ 10 = 105. Então 1 050 + 105 = 1 155 m². (É o mesmo que 1 050 · 1,1: 110% é 110 ÷ 100 = 1,1.)"
     },
     {
      "titulo": "Quanto um pacote cobre",
@@ -2170,7 +2244,7 @@
     },
     {
      "titulo": "Pacotes",
-     "texto": "1 155 ÷ 9 = 128 e sobram 3 m² (9 · 128 = 1 152)."
+     "texto": "1 155 ÷ 9: 9 · 100 = 900, restam 255; 9 · 28 = 252; resta 3. Então 128 pacotes e sobram 3 m²."
     },
     {
      "titulo": "Arredondar",
@@ -2291,7 +2365,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "F = T − 3 · r²",
@@ -2314,7 +2388,7 @@
     },
     {
      "titulo": "Os nomes",
-     "texto": "Catetos são os dois lados que formam o ângulo reto (5 e 12). Circunferência inscrita é a que fica dentro do triângulo, encostando (tangente) nos 3 lados."
+     "texto": "Catetos são os dois lados que formam o ângulo reto, o \"canto quadrado\" (5 e 12). Circunferência inscrita é a que fica dentro do triângulo, encostando (tangente) nos 3 lados. π é um número fixo, aqui dado como 3."
     },
     {
      "titulo": "Área do triângulo",
@@ -2322,7 +2396,7 @@
     },
     {
      "titulo": "O raio do círculo inscrito",
-     "texto": "O raio sai de área ÷ semiperímetro (metade do perímetro). Perímetro: 5 + 12 + 13 = 30, semiperímetro 15. r = 30 ÷ 15 = 2 cm. Por quê: ligando o centro aos 3 lados, o triângulo se divide em 3 triângulos de altura r, e a soma das áreas é r · (5 + 12 + 13) ÷ 2 = 15 r = 30."
+     "texto": "Ligue o centro do círculo aos 3 lados: o triângulo se divide em 3 triângulos, e em cada um a altura é o raio r (o raio chega ao lado formando ângulo reto). Áreas: 5 · r ÷ 2, 12 · r ÷ 2 e 13 · r ÷ 2. Somando: (5 + 12 + 13) · r ÷ 2 = 15 r. Essa soma é a área do triângulo, 30: 15 r = 30, r = 2 cm. (O 30 do perímetro e o 30 da área são só coincidência.)"
     },
     {
      "titulo": "Área do círculo",
@@ -2389,6 +2463,10 @@
     {
      "termo": "Razão 3 : 4",
      "significado": "Os lados são 3 partes e 4 partes do mesmo tamanho."
+    },
+    {
+     "termo": "Hipotenusa",
+     "significado": "O lado maior do triângulo retângulo, o que fica de frente para o ângulo reto."
     }
    ],
    "passos": [
@@ -2448,10 +2526,10 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "F = 3,14 · r² − R",
+      "formula": "F = 3,14 · r² − A",
       "leitura": "área do círculo − área do retângulo",
       "letras": [
        {
@@ -2463,7 +2541,7 @@
         "oque": "raio do círculo"
        },
        {
-        "letra": "R",
+        "letra": "A",
         "oque": "área do retângulo"
        }
       ]
@@ -2471,19 +2549,19 @@
     },
     {
      "titulo": "Os lados",
-     "texto": "Lados na razão 3 : 4 são 3k e 4k (k é um número a achar). Perímetro é a soma dos 4 lados: 3k + 4k + 3k + 4k = 14k = 28, então k = 28 ÷ 14 = 2. Os lados são 3 · 2 = 6 e 4 · 2 = 8."
+     "texto": "Lados na razão 3 : 4: 3 e 4 (perímetro 14), 6 e 8 (perímetro 28)... Em letras: 3k e 4k, com k a achar. Perímetro é a soma dos 4 lados: 3k + 4k + 3k + 4k = 14k = 28, então k = 28 ÷ 14 = 2. Os lados são 3 · 2 = 6 e 4 · 2 = 8."
     },
     {
      "titulo": "A ideia que destrava",
-     "texto": "Um ângulo reto (como o canto do retângulo) com o vértice sobre a circunferência sempre abre sobre um diâmetro. Então a diagonal do retângulo, que liga cantos opostos, é o diâmetro do círculo."
+     "texto": "Um ângulo reto (como o canto do retângulo) com o vértice sobre a circunferência sempre abre sobre um diâmetro (a corda que passa pelo centro). Então a diagonal do retângulo, que liga cantos opostos, é o diâmetro do círculo."
     },
     {
      "titulo": "O raio",
-     "texto": "Pelo teorema de Pitágoras, o quadrado da diagonal é a soma dos quadrados dos lados: 6² + 8² = 36 + 64 = 100. Como 10 · 10 = 100, a diagonal é 10 e o raio é 10 ÷ 2 = 5."
+     "texto": "A diagonal é a hipotenusa do triângulo retângulo formado por dois lados do retângulo (6 e 8). Pitágoras: o quadrado da hipotenusa é a soma dos quadrados dos lados. 6² + 8² = 36 + 64 = 100, e 10 · 10 = 100, então a diagonal é 10 e o raio é 10 ÷ 2 = 5."
     },
     {
      "titulo": "As áreas",
-     "texto": "Círculo: 3,14 · 5² = 3,14 · 25 = 78,5. Retângulo: 6 · 8 = 48."
+     "texto": "Círculo: 3,14 · 5² = 3,14 · 25 = 78,5 (3 · 25 = 75 e 0,14 · 25 = 3,5). Retângulo: 6 · 8 = 48."
     },
     {
      "titulo": "O que fica de fora",
@@ -2506,7 +2584,7 @@
        ],
        [
         "2. Equação em letras",
-        "F = 3,14 · r² − R"
+        "F = 3,14 · r² − A"
        ],
        [
         "3. Uma letra por vez",
@@ -2526,7 +2604,7 @@
   "id": "d2-escada-mat-ita-pla-00d",
   "materia": "Matemática",
   "tema": "Geometria Plana",
-  "enunciado": "Um canteiro retangular tem 12 m de largura (lado AB, embaixo) e 8 m de altura. O ponto P está sobre o lado de cima, a 5 m do vértice D (o de cima, à esquerda). Os segmentos PA e PB dividem o canteiro em três triângulos: o do meio, ABP, receberá flores a R$ 35 por m²; os das laterais, ADP e BCP, serão gramados a R$ 20 por m². O custo total do plantio, em reais, é:",
+  "enunciado": "Um canteiro retangular tem 12 m de largura (lado AB, embaixo) e 8 m de altura. Os vértices são A (embaixo, à esquerda), B (embaixo, à direita), C (em cima, à direita) e D (em cima, à esquerda). O ponto P está sobre o lado de cima (DC), a 5 m do vértice D. Os segmentos PA e PB dividem o canteiro em três triângulos: o do meio, ABP, receberá flores a R$ 35 por m²; os das laterais, ADP e BCP, serão gramados a R$ 20 por m². O custo total do plantio, em reais, é:",
   "A": "960",
   "B": "1 680",
   "C": "2 640",
@@ -2591,7 +2669,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "C = F · 35 + G · 20",
@@ -2614,11 +2692,11 @@
     },
     {
      "titulo": "O triângulo do meio",
-     "texto": "Área do triângulo = base · altura ÷ 2. ABP: 12 · 8 ÷ 2 = 48 m²."
+     "texto": "Área do triângulo = base · altura ÷ 2. ABP: a base AB é o lado de baixo (12) e a altura é a distância até o lado de cima, onde está P (8). 12 · 8 ÷ 2 = 48 m²."
     },
     {
      "titulo": "Os das laterais",
-     "texto": "ADP: base 5, altura 8: 5 · 8 ÷ 2 = 20. BCP: base 12 − 5 = 7: 7 · 8 ÷ 2 = 28. Juntos: 20 + 28 = 48 m²."
+     "texto": "ADP: base DP = 5, altura 8: 5 · 8 ÷ 2 = 20. BCP: base PC = 12 − 5 = 7: 7 · 8 ÷ 2 = 28. Juntos: 20 + 28 = 48 m²."
     },
     {
      "titulo": "O truque",
@@ -2735,7 +2813,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "N = S ÷ v",
@@ -2758,19 +2836,19 @@
     },
     {
      "titulo": "O suco da garrafa",
-     "texto": "3/4 de 24 = 24 ÷ 4 · 3 = 18 cm de altura de suco. Raio = diâmetro ÷ 2 = 5. Volume do cilindro = π · raio² · altura = π · 25 · 18 = 450π cm³."
+     "texto": "3/4 de 24 = 24 ÷ 4 · 3 = 18 cm de altura de suco. Raio = diâmetro ÷ 2 = 5. Volume do cilindro = π · raio² · altura = π · 25 · 18 = 450π cm³ (25 · 18 = 450). π é um número fixo (cerca de 3,14) que aparece em todo círculo."
     },
     {
      "titulo": "O copo cheio",
-     "texto": "Volume do cone = ⅓ · π · raio² · altura = ⅓ · π · 25 · 9 = 75π cm³."
+     "texto": "Volume do cone = ⅓ · π · raio² · altura = ⅓ · π · 25 · 9. Como 25 · 9 = 225 e 225 ÷ 3 = 75, dá 75π cm³."
     },
     {
      "titulo": "O copo a 80% da altura",
-     "texto": "80% = 0,8. O suco forma um cone menor com o mesmo formato do copo (semelhante), 0,8 vez o tamanho em tudo. Volume depende de 3 medidas (comprimento, largura e altura), então fica 0,8 · 0,8 · 0,8 = 0,512 do volume. Exemplo: um cubo de lado 1 tem volume 1; de lado 2, volume 8 (2 · 2 · 2). Então 75π · 0,512 = 38,4π."
+     "texto": "80% = 80 ÷ 100 = 0,8. O suco forma um cone menor com o mesmo formato do copo (semelhante), 0,8 vez o tamanho em tudo. Volume depende de 3 medidas (comprimento, largura e altura), então fica 0,8 · 0,8 · 0,8: 0,8 · 0,8 = 0,64 e 0,64 · 0,8 = 0,512. Exemplo: um cubo de lado 1 tem volume 1; de lado 2, volume 8 (2 · 2 · 2). Então 75π · 0,512 = 38,4π (75 · 0,512 = 38,4)."
     },
     {
      "titulo": "Quantos copos",
-     "texto": "450π ÷ 38,4π = 450 ÷ 38,4 = 4 500 ÷ 384 ≈ 11,72."
+     "texto": "O π aparece nos dois e se corta: 450 ÷ 38,4. Tirando a vírgula (multiplicando os dois por 10): 4 500 ÷ 384. 384 · 11 = 4 224 e sobram 276, que é menos que 384. Logo dá 11 e um pouco (≈ 11,7; \"≈\" lê-se \"aproximadamente\")."
     },
     {
      "titulo": "Só os completos",
@@ -2831,6 +2909,10 @@
      "significado": "Segmento de um canto da caixa ao canto oposto."
     },
     {
+     "termo": "Hipotenusa",
+     "significado": "O lado maior do triângulo retângulo, o que fica de frente para o ângulo reto."
+    },
+    {
      "termo": "Raiz quadrada (√)",
      "significado": "O número que, multiplicado por ele mesmo, dá o que está dentro."
     }
@@ -2883,7 +2965,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "D = √(a² + b² + c²)",
@@ -2895,30 +2977,34 @@
        },
        {
         "letra": "a",
-        "oque": "primeira medida"
+        "oque": "primeira medida da caixa (6 cm)"
        },
        {
         "letra": "b",
-        "oque": "segunda medida"
+        "oque": "segunda medida (8 cm)"
        },
        {
         "letra": "c",
-        "oque": "terceira medida"
+        "oque": "terceira medida (24 cm)"
        }
       ]
      }
     },
     {
      "titulo": "O maior segmento dentro de um bloco",
-     "texto": "É a diagonal, de um canto ao canto oposto: qualquer outro segmento dentro da caixa é mais curto."
+     "texto": "É a diagonal, de um canto ao canto oposto. Para ir de um canto ao canto oposto você atravessa a caixa nas 3 medidas ao mesmo tempo; qualquer outro caminho reto atravessa menos."
     },
     {
      "titulo": "Diagonal da base",
-     "texto": "Pitágoras: num triângulo com ângulo reto, o quadrado da hipotenusa é a soma dos quadrados dos outros lados. 6² + 8² = 36 + 64 = 100, e √100 = 10 cm (√100 é o número que multiplicado por ele mesmo dá 100)."
+     "texto": "A base tem lados 6 e 8. A diagonal dela é a hipotenusa do triângulo retângulo formado por esses dois lados. Pitágoras: o quadrado da hipotenusa é a soma dos quadrados dos outros lados. 6² + 8² = 36 + 64 = 100, e √100 = 10 cm."
     },
     {
      "titulo": "Diagonal do bloco",
-     "texto": "De novo Pitágoras, com a diagonal da base (10) e a altura (24): 10² + 24² = 100 + 576 = 676. √676 = 26, porque 26 · 26 = 676."
+     "texto": "Agora um triângulo retângulo com a diagonal da base (10) e a altura (24): 10² + 24² = 100 + 576 = 676."
+    },
+    {
+     "titulo": "A raiz de 676",
+     "texto": "Qual número vezes ele mesmo dá 676? 20 · 20 = 400 é pouco e 30 · 30 = 900 é muito, então está entre 20 e 30. Termina em 6, e só 4 · 4 e 6 · 6 terminam em 6: 24 · 24 = 576 (pouco) e 26 · 26 = 676 ✓."
     },
     {
      "titulo": "Cabe?",
@@ -2980,11 +3066,11 @@
     },
     {
      "termo": "Razão das alturas",
-     "significado": "Quantas vezes uma altura é a outra."
+     "significado": "Quantas vezes uma altura cabe na outra."
     },
     {
-     "termo": "Ápice",
-     "significado": "A ponta de cima da pirâmide."
+     "termo": "Tronco",
+     "significado": "A parte de baixo da pirâmide, depois do corte."
     }
    ],
    "passos": [
@@ -3030,7 +3116,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "k³ = 1 ÷ 27  e  d = 12 − 12 · k",
@@ -3049,7 +3135,7 @@
     },
     {
      "titulo": "O todo em pedaços",
-     "texto": "Pirâmide inteira = menor + tronco = 1 + 26 = 27 vezes a menor."
+     "texto": "Pirâmide inteira = menor + tronco (a parte de baixo) = 1 + 26 = 27 vezes a menor."
     },
     {
      "titulo": "Razão de volumes",
@@ -3057,15 +3143,15 @@
     },
     {
      "titulo": "Sólidos semelhantes",
-     "texto": "Duas pirâmides com o mesmo formato, uma maior que a outra, são semelhantes. A razão das alturas, k, diz quanto a menor é menor. O volume depende de 3 medidas, então fica k · k · k = k³. (Exemplo: dobrar tudo, k = 2, dá 8 vezes o volume.)"
+     "texto": "O corte é paralelo à base, então a pirâmide menor tem o mesmo formato da inteira: são semelhantes. A razão das alturas, k, diz quantas vezes a altura da menor cabe na da inteira. O volume depende de 3 medidas (largura, comprimento e altura da pirâmide), e as 3 mudam pela mesma razão, então o volume fica k · k · k = k³. (Exemplo: dobrar tudo, k = 2, dá 8 vezes o volume.)"
     },
     {
      "titulo": "Achar k",
-     "texto": "k³ = 1/27. Qual número vezes ele mesmo, vezes ele mesmo, dá 1/27? 3 · 3 · 3 = 27, então k = 1/3."
+     "texto": "k³ = 1/27. Qual número vezes ele mesmo, vezes ele mesmo, dá 1/27? 3 · 3 · 3 = 27, então (1/3) · (1/3) · (1/3) = 1/27 e k = 1/3."
     },
     {
      "titulo": "Altura da menor",
-     "texto": "12 · 1/3 = 4 cm, do topo (o ápice, a ponta da pirâmide) até o plano de corte."
+     "texto": "12 · 1/3 = 12 ÷ 3 = 4 cm, do topo (o ápice, a ponta da pirâmide) até o plano de corte."
     },
     {
      "titulo": "Distância da base",
@@ -3118,7 +3204,7 @@
   "origem": "Escada",
   "nivel": "acima",
   "explicacao": {
-   "conferencia": "Sobra 1/3 da lata. 1,5 L = 1 500 mL, e 1 500 ÷ 3 = 500 mL. B. Erros: A = Volume de uma bola só (2/9 da lata). C = Achou que as bolas ocupam a metade. D = Respondeu o que as bolas ocupam (2/3). E = Achou que as bolas ocupam só 1/4.",
+   "conferencia": "Sobra 1 − 2/3 = 3/3 − 2/3 = 1/3 da lata. 1,5 L = 1 500 mL, e 1 500 ÷ 3 = 500 mL. B. Erros: A = Volume de uma bola só (2/9 da lata). C = Achou que as bolas ocupam a metade. D = Respondeu o que as bolas ocupam (2/3). E = Achou que as bolas ocupam só 1/4.",
    "ideia": "Dê o raio r às bolas e à lata: tudo vira múltiplo de r³. As bolas ocupam 2/3 da lata (Arquimedes), então o vazio é 1/3.",
    "pecas": [],
    "passos": [
@@ -3169,19 +3255,19 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "V = L − B",
-      "leitura": "vazio = lata − bolas",
+      "formula": "V = C − B",
+      "leitura": "vazio = lata (cilindro) − bolas",
       "letras": [
        {
         "letra": "V",
         "oque": "vazio (o que a questão quer)"
        },
        {
-        "letra": "L",
-        "oque": "volume da lata"
+        "letra": "C",
+        "oque": "volume da lata, que é um cilindro"
        },
        {
         "letra": "B",
@@ -3200,15 +3286,15 @@
     },
     {
      "titulo": "As 3 bolas",
-     "texto": "Volume da esfera = (4/3) · π · r³. Três bolas: 3 · (4/3) · πr³ = 4πr³ (porque 3 · 4/3 = 4)."
+     "texto": "Volume da esfera = (4/3) · π · r³. Três bolas: 3 · (4/3) · πr³ = (12/3) · πr³ = 4πr³."
     },
     {
      "titulo": "Fração ocupada",
-     "texto": "4πr³ ÷ 6πr³: o πr³ aparece em cima e embaixo e se corta, sobra 4/6 = 2/3. As bolas ocupam 2/3 da lata, seja qual for o r (descoberta de Arquimedes)."
+     "texto": "4πr³ ÷ 6πr³: dividindo em cima e embaixo por 2πr³, sobra 2/3. Teste com números: r = 1 dá lata 6π e bolas 4π; r = 2 dá lata 48π e bolas 32π; nos dois, 4/6 = 32/48 = 2/3. As bolas ocupam 2/3 da lata, seja qual for o r (descoberta de Arquimedes)."
     },
     {
      "titulo": "O vazio",
-     "texto": "Sobra 1/3 da lata. 1,5 L = 1 500 mL, e 1 500 ÷ 3 = 500 mL."
+     "texto": "Sobra 1 − 2/3 = 3/3 − 2/3 = 1/3 da lata. 1,5 L = 1 500 mL, e 1 500 ÷ 3 = 500 mL."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -3227,7 +3313,7 @@
        ],
        [
         "2. Equação em letras",
-        "V = L − B"
+        "V = C − B"
        ],
        [
         "3. Uma letra por vez",
@@ -3282,7 +3368,7 @@
     },
     {
      "titulo": "O que eu tenho",
-     "texto": "Primeiro, tire os dados do enunciado. Atenção: Os R$ 80 da cesta e os R$ 2 da ficha está no enunciado mas não entra na conta.",
+     "texto": "Primeiro, tire os dados do enunciado. Atenção, estão no enunciado mas fora da conta: Os R$ 80 da cesta e os R$ 2 da ficha.",
      "visual": {
       "tipo": "tabela",
       "titulo": "O que eu tenho",
@@ -3316,7 +3402,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "P = E ÷ (100 − N)",
@@ -3404,7 +3490,7 @@
   "origem": "Escada",
   "nivel": "acima",
   "explicacao": {
-   "conferencia": "1 − 26/35 = 9/35. (\"Pelo menos um\" é tudo menos \"nenhum\": um menos a chance de nenhum.) C. Erros: A = Calculou a chance de os dois sorteados serem empates. B = Calculou para um jogo só. D = Somou 2/15 + 2/15 sem descontar quando os dois são empate. E = Achou a chance de nenhum empate e parou.",
+   "conferencia": "1 − 26/35 = 35/35 − 26/35 = 9/35. (\"Pelo menos um\" é tudo menos \"nenhum\".) C. Erros: A = Calculou a chance de os dois sorteados serem empates. B = Calculou para um jogo só. D = Somou 2/15 + 2/15 sem descontar quando os dois são empate. E = Achou a chance de nenhum empate e parou.",
    "ideia": "Cada empate tira 1 ponto do total possível, então os pontos dizem quantos empates houve sem saber quais. Depois é contar jogos sorteados.",
    "pecas": [
     {
@@ -3467,7 +3553,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "P = 1 − N",
@@ -3498,11 +3584,11 @@
     },
     {
      "titulo": "Nenhum empate nos 2 sorteados",
-     "texto": "Os 2 jogos saem dos 13 que não empataram. Escolher 2 entre 13, sem ligar para a ordem, é 13 · 12 ÷ 2 = 78 jeitos (escreve-se C(13,2)). Entre os 15 são 15 · 14 ÷ 2 = 105. Chance = 78/105 = 26/35 (dividindo por 3)."
+     "texto": "Os 2 jogos saem dos 15 − 2 = 13 que não empataram. Escolher 2 entre 13: o 1º jogo tem 13 jeitos, o 2º tem 12, e a ordem não importa (cada par foi contado 2 vezes), então 13 · 12 ÷ 2 = 78 (escreve-se C(13,2)). Entre os 15 são 15 · 14 ÷ 2 = 105. Chance = 78/105 = 26/35 (dividindo em cima e embaixo por 3)."
     },
     {
      "titulo": "Pelo menos um",
-     "texto": "1 − 26/35 = 9/35. (\"Pelo menos um\" é tudo menos \"nenhum\": um menos a chance de nenhum.)"
+     "texto": "1 − 26/35 = 35/35 − 26/35 = 9/35. (\"Pelo menos um\" é tudo menos \"nenhum\".)"
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -3551,7 +3637,7 @@
   "origem": "Escada",
   "nivel": "acima",
   "explicacao": {
-   "conferencia": "486 ÷ (486 + 94) = 486 ÷ 580 ≈ 0,838, que arredondado dá 0,84, ou 84%. (580 · 0,8 = 464; sobram 22, cerca de 0,04.) A. Erros: B = Parou no 1º exame (540 de 1 480). C = Multiplicou 0,9 · 0,9, sem olhar as sadias. D = Pegou a taxa do exame como se fosse o resultado. E = Usou a fração de sadias da população (9 400 de 10 000).",
+   "conferencia": "486 ÷ (486 + 94) = 486 ÷ 580 ≈ 0,84 (580 · 0,84 = 487,2, quase 486). Para virar porcentagem, multiplique por 100: 0,84 = 84%. A. Erros: B = Parou no 1º exame (540 de 1 480). C = Multiplicou 0,9 · 0,9, sem olhar as sadias. D = Pegou a taxa do exame como se fosse o resultado. E = Usou a fração de sadias da população (9 400 de 10 000).",
    "ideia": "Conte pessoas em vez de porcentagens: de 10 000, quantas têm a doença e quantas dão positivo duas vezes. O 2º exame multiplica de novo.",
    "pecas": [],
    "passos": [
@@ -3593,7 +3679,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "C = d ÷ (d + s)",
@@ -3609,14 +3695,14 @@
        },
        {
         "letra": "s",
-        "oque": "sadios com 2 positivos"
+        "oque": "sadias com 2 positivos"
        }
       ]
      }
     },
     {
      "titulo": "Quantas pessoas de cada",
-     "texto": "2% de 5 000 = 5 000 ÷ 100 · 2 = 100 doentes (menos de 40 anos) e 10% de 5 000 = 500 (40 anos ou mais). Doentes: 600. Sadias: 10 000 − 600 = 9 400."
+     "texto": "2% de 5 000 = 5 000 ÷ 100 · 2 = 100 doentes (menos de 40 anos), e 10% de 5 000 = 500 (40 anos ou mais). A tabela diz que 2% e 10% são as pessoas com a doença. Doentes: 600. Sadias: 10 000 − 600 = 9 400."
     },
     {
      "titulo": "1º exame positivo",
@@ -3624,11 +3710,11 @@
     },
     {
      "titulo": "2º exame positivo",
-     "texto": "Doentes: 90% de 540 = 486. Sadias: 10% de 940 = 94."
+     "texto": "Só repete o exame quem deu positivo. Doentes: 90% de 540 = 486. Sadias: 10% de 940 = 94."
     },
     {
      "titulo": "Quem tem a doença",
-     "texto": "486 ÷ (486 + 94) = 486 ÷ 580 ≈ 0,838, que arredondado dá 0,84, ou 84%. (580 · 0,8 = 464; sobram 22, cerca de 0,04.)"
+     "texto": "486 ÷ (486 + 94) = 486 ÷ 580 ≈ 0,84 (580 · 0,84 = 487,2, quase 486). Para virar porcentagem, multiplique por 100: 0,84 = 84%."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -3683,6 +3769,10 @@
     {
      "termo": "Recorrência",
      "significado": "Uma regra que calcula cada número a partir dos anteriores."
+    },
+    {
+     "termo": "C(4,3)",
+     "significado": "Quantos jeitos de escolher 3 entre 4, sem ligar para a ordem."
     }
    ],
    "passos": [
@@ -3702,7 +3792,7 @@
     },
     {
      "titulo": "O que eu tenho",
-     "texto": "Primeiro, tire os dados do enunciado. Atenção: A chance 1/2 de cada lâmpada (todo painel é igualmente provável) está no enunciado mas não entra na conta.",
+     "texto": "Primeiro, tire os dados do enunciado. Atenção, está no enunciado mas fora da conta: A chance 1/2 de cada lâmpada (todo painel é igualmente provável).",
      "visual": {
       "tipo": "tabela",
       "titulo": "O que eu tenho",
@@ -3728,10 +3818,10 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que aparecem aqui (como o 0,6 ou o 9) nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que quer a questão. Depois é achar cada letra.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "P = A ÷ T",
+      "formula": "P = E ÷ T",
       "leitura": "painéis aprovados com 3 acesas ÷ painéis aprovados",
       "letras": [
        {
@@ -3739,19 +3829,19 @@
         "oque": "probabilidade (o que a questão quer)"
        },
        {
-        "letra": "A",
-        "oque": "painéis aprovados com 3 acesas"
+        "letra": "E",
+        "oque": "painéis aprovados com exatamente 3 acesas"
        },
        {
         "letra": "T",
-        "oque": "painéis aprovados"
+        "oque": "total de painéis aprovados"
        }
       ]
      }
     },
     {
      "titulo": "Contar os aprovados",
-     "texto": "Olhe a última lâmpada. Apagada: as 5 de antes podem ser qualquer arranjo aprovado de 5. Acesa: a anterior tem de ser apagada, e as 4 de antes são um arranjo aprovado de 4. Chame de a(n) (\"a de n\") o número de arranjos aprovados com n lâmpadas. Então a(6) = a(5) + a(4) e, em geral, a(n) = a(n−1) + a(n−2)."
+     "texto": "Olhe a última lâmpada. Apagada: as 5 de antes podem ser qualquer painel aprovado de 5. Acesa: a anterior tem de ser apagada, e as 4 de antes são um painel aprovado de 4. Chame de a(n) (\"a de n\") o número de painéis aprovados com n lâmpadas. Então a(6) = a(5) + a(4) e, em geral, a(n) = a(n−1) + a(n−2) (lê-se: \"a de n é a de n menos 1 mais a de n menos 2\")."
     },
     {
      "titulo": "Montar a lista",
@@ -3782,7 +3872,7 @@
        ],
        [
         "2. Equação em letras",
-        "P = A ÷ T"
+        "P = E ÷ T"
        ],
        [
         "3. Uma letra por vez",
