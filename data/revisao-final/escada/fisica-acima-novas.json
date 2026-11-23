@@ -5,7 +5,7 @@
   "tema": "Cinemática",
   "nivel": "acima",
   "origem": "Escada",
-  "enunciado": "Para reduzir acidentes, uma concessionária instalou em uma rodovia um radar de trecho: dois pórticos com câmeras, a 12 km um do outro. O sistema anota a hora em que cada carro passa pelo primeiro e pelo segundo pórtico e calcula a velocidade média no trecho. Se ela passar do limite de 90 km/h, o motorista é multado, mesmo que nunca tenha sido flagrado acima de 90 km/h em nenhum ponto da pista. Um motorista passou pelo primeiro pórtico às 8 h 00 min 00 s e pelo segundo às 8 h 07 min 00 s. Ao receber a multa, ele reclamou que \"só\" tinha se atrasado alguns segundos para respeitar o limite. Para não ser multado, quantos segundos a mais, no mínimo, ele deveria ter gasto para percorrer o trecho?\n\nDados: Trecho: 12 km; Limite: 90 km/h (velocidade média); Tempo gasto: 7 min.",
+  "enunciado": "Para reduzir acidentes, uma concessionária instalou em uma rodovia um radar de trecho: dois pórticos com câmeras, a 12 km um do outro. O sistema anota a hora em que cada carro passa pelo primeiro e pelo segundo pórtico e calcula a velocidade média no trecho. Se ela passar do limite de 90 km/h, o motorista é multado, mesmo que nunca tenha sido flagrado acima de 90 km/h em nenhum ponto da pista. Um motorista passou pelo primeiro pórtico às 8 h 00 min 00 s e pelo segundo às 8 h 07 min 00 s. Ao receber a multa, ele reclamou que \"só\" tinha andado alguns segundos mais rápido do que o limite permite. Para não ser multado, quantos segundos a mais, no mínimo, ele deveria ter gasto para percorrer o trecho?\n\nDados: Trecho: 12 km; Limite: 90 km/h (velocidade média); Tempo gasto: 7 min.",
   "A": "60",
   "B": "13",
   "C": "133",
@@ -96,7 +96,7 @@
     },
     {
      "titulo": "Achando M: o tempo mínimo",
-     "texto": "90 km/h ÷ 3,6 = 25 m/s (veja a tela de cima). O trecho tem 12 km = 12 000 m.\nM = 12 000 ÷ 25 = 480 s (25 · 480 = 12 000), ou seja, 8 minutos."
+     "texto": "90 km/h ÷ 3,6 = 25 m/s (confira: 3,6 · 25 = 90; a origem do 3,6 está em 'De onde vem cada fórmula'). O trecho tem 12 km; 1 km = 1 000 m, então 12 km = 12 000 m.\nM = 12 000 ÷ 25 = 480 s (25 · 480 = 12 000), ou seja, 8 minutos."
     },
     {
      "titulo": "Achando G: o tempo gasto",
@@ -234,8 +234,12 @@
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "Queda livre é cair só com a gravidade puxando. Largada parada, com g = 10: depois de 1 s a pedra está a 10 m/s e caiu 5 m; depois de 2 s, a 20 m/s e caiu 20 m; depois de 3 s, a 30 m/s e caiu 45 m. Conferindo: 2 · 10 · 45 = 900 e 30 · 30 = 900. Por isso Y² = 2 · g · altura (Y² quer dizer Y · Y). Pitágoras: num triângulo com um canto reto, a diagonal ao quadrado é a soma dos quadrados dos outros dois lados (3, 4 e 5: 9 + 16 = 25). Aqui V = velocidade total (a diagonal), X = parte horizontal, Y = parte vertical."
+     "titulo": "De onde vem cada fórmula (1 de 2)",
+     "texto": "Queda livre é cair só com a gravidade puxando. Largada parada, com g = 10: depois de 1 s a pedra está a 10 m/s e caiu 5 m (a velocidade vai de 0 a 10, média 5, então 5 · 1 = 5 m); em 2 s vai de 0 a 20, média 10, caiu 10 · 2 = 20 m; em 3 s vai de 0 a 30, média 15, caiu 15 · 3 = 45 m. Chamando de Y a velocidade vertical ao chegar: Y² = 2 · g · altura (Y² quer dizer Y · Y). Conferindo: 2 · 10 · 45 = 900 e 30 · 30 = 900. O ponto · significa vezes."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 2)",
+     "texto": "Pitágoras: num triângulo com um canto reto, a diagonal ao quadrado é a soma dos quadrados dos outros dois lados (3, 4 e 5: 9 + 16 = 25). √ lê-se 'raiz de' e desfaz o quadrado: √25 = 5, porque 5 · 5 = 25. Aqui V = velocidade total (a diagonal), X = parte horizontal e Y = parte vertical."
     },
     {
      "titulo": "A equação em letras",
@@ -405,11 +409,11 @@
     },
     {
      "titulo": "De onde vem cada fórmula",
-     "texto": "3 m/s é 3 metros a cada segundo: em 2 s ela anda 6 m e em 60 s anda 180 m (distância = velocidade · tempo). Quando duas pessoas vêm uma contra a outra, a distância entre elas diminui a soma das velocidades: 3 + 5 = 8 m a cada segundo (em 2 s diminui 16 m)."
+     "texto": "Tempo = distância ÷ velocidade: 16 m fechando a 8 m/s levam 2 s. 3 m/s é 3 metros a cada segundo: em 2 s ela anda 6 m e em 60 s anda 180 m (distância = velocidade · tempo). Quando duas pessoas vêm uma contra a outra, a distância entre elas diminui a soma das velocidades: 3 + 5 = 8 m a cada segundo (em 2 s diminui 16 m). O ponto · significa vezes."
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Ana anda a vantagem mais o que corre depois que Bia sai. Os 3 vêm dos 3 m/s dela.\nAgora é só achar d e t.",
+     "texto": "Ana anda a vantagem mais o que corre depois que Bia sai. Os 3 vêm dos 3 m/s dela.\nAgora é só achar V e t.",
      "visual": {
       "tipo": "equacao",
       "formula": "X = V + 3 · t",
@@ -436,7 +440,7 @@
     },
     {
      "titulo": "Achando t: o tempo até se cruzarem",
-     "texto": "Sobram 1 140 − 180 = 960 m entre os dois. Eles se aproximam a 3 + 5 = 8 m/s.\nt = 960 ÷ 8 = 120 s."
+     "texto": "Sobram 1 140 − 180 = 960 m entre os dois. Eles fecham 8 m a cada segundo. Quantos 8 cabem em 960?\nt = 960 ÷ 8 = 120 s (8 · 120 = 960)."
     },
     {
      "titulo": "Volta na equação",
@@ -571,7 +575,7 @@
     },
     {
      "titulo": "De onde vem cada fórmula",
-     "texto": "r diz quanto a escada anda comparada com a pessoa: r = 0,5 é metade, r = 1 é igual (pessoa a 2 degraus por segundo e escada a 1: r = 1 ÷ 2 = 0,5). N = degraus que aparecem com a escada parada. Subindo, a pessoa pisa 30 degraus e, nesse tempo, a escada traz mais 30 · r: com r = 0,5 são 15, total 30 + 15 = 45. Em geral N = 30 + 30 · r = 30 · (1 + r). Descendo, a escada leva embora 90 · r: N = 90 − 90 · r = 90 · (1 − r). 'Conta' quer dizer os degraus em que ela pisa."
+     "texto": "r diz quanto a escada anda comparada com a pessoa: r = 0,5 é metade, r = 1 é igual (pessoa a 2 degraus por segundo e escada a 1: r = 1 ÷ 2 = 0,5). N = degraus que aparecem com a escada parada. Subindo, a pessoa pisa 30 degraus e, nesse tempo, a escada traz mais 30 · r: com r = 0,5 são 15, total 30 + 15 = 45. Em geral N = 30 + 30 · r. O parêntese junta o 30: 30 · (1 + r) é 30 vezes (1 + r), igual a 30 + 30 · r (com r = 0,5: 30 · 1,5 = 45 e 30 + 15 = 45). Descendo, a escada leva embora 90 · r: N = 90 − 90 · r = 90 · (1 − r) (com r = 0,5: 90 − 45 = 45). 'Conta' quer dizer os degraus em que ela pisa. O ponto · significa vezes."
     },
     {
      "titulo": "A equação em letras",
@@ -593,8 +597,8 @@
      }
     },
     {
-     "titulo": "Achando r: a razão das velocidades",
-     "texto": "30 · (1 + r) = 30 + 30 · r e 90 · (1 − r) = 90 − 90 · r (30r quer dizer 30 vezes r).\nIgualando: 30 + 30 · r = 90 − 90 · r.\nSomo 90 · r nos dois lados: 30 + 120 · r = 90.\nTiro 30: 120 · r = 60.\nr = 60 ÷ 120 = 0,5."
+     "titulo": "Achando r: quanto a escada anda comparada com a pessoa",
+     "texto": "30 · (1 + r) = 30 + 30 · r e 90 · (1 − r) = 90 − 90 · r (30r quer dizer 30 vezes r).\nIgualando: 30 + 30 · r = 90 − 90 · r.\nSomo 90 · r nos dois lados: 30 + 30 · r + 90 · r = 90. 30 · r + 90 · r são (30 + 90) vezes r, ou seja, 120 · r, como 30 maçãs mais 90 maçãs. Fica 30 + 120 · r = 90.\nTiro 30: 120 · r = 60.\nr = 60 ÷ 120 = 0,5."
     },
     {
      "titulo": "Volta na equação",
@@ -724,8 +728,12 @@
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "Aceleração é quanto a velocidade cresce por segundo: 1,2 m/s² quer dizer que ela ganha 1,2 m/s a cada segundo. m = 70 kg é a massa da pessoa. Newton (N) é a unidade de força: parado, o chão empurra a pessoa com 70 · 10 = 700 N. A balança divide a força por g: 700 ÷ 10 = 70 kg, a massa certa."
+     "titulo": "De onde vem cada fórmula (1 de 2)",
+     "texto": "Aceleração é quanto a velocidade cresce por segundo: 2 m/s² quer dizer que ela ganha 2 m/s a cada segundo. m = 70 kg é a massa da pessoa e g = 10 m/s² é a gravidade da balança. Newton (N) é a unidade de força: parado, o chão empurra a pessoa com 70 · 10 = 700 N. A balança divide a força por g: 700 ÷ 10 = 70 kg, a massa certa. O ponto · significa vezes."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 2)",
+     "texto": "Força = massa · aceleração: para acelerar 70 kg a 1,2 m/s² precisa de 70 · 1,2 = 84 N (um bloco de 2 kg com 10 N acelera 10 ÷ 2 = 5 m/s²). Por isso, subindo e acelerando, o chão faz o peso mais essa força: F = m · (g + a)."
     },
     {
      "titulo": "A equação em letras",
@@ -746,6 +754,10 @@
        {
         "letra": "a",
         "oque": "aceleração do elevador, em m/s²"
+       },
+       {
+        "letra": "g",
+        "oque": "gravidade da balança, 10 m/s²"
        }
       ]
      }
@@ -753,6 +765,10 @@
     {
      "titulo": "Achando a: a aceleração",
      "texto": "Saiu do repouso e chegou a 6 m/s em 5 s.\na = 6 ÷ 5 = 1,2 m/s²."
+    },
+    {
+     "titulo": "Achando g: a gravidade da balança",
+     "texto": "O enunciado manda a balança usar g = 10 m/s²."
     },
     {
      "titulo": "Achando F: a força de contato",
@@ -772,6 +788,10 @@
        [
         "a",
         "1,2 m/s²"
+       ],
+       [
+        "g",
+        "10 m/s²"
        ],
        [
         "F",
@@ -898,8 +918,12 @@
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "O peso do bloco é m · g = 2 · 10 = 20 N. No plano inclinado ele se divide em duas partes: 0,6 do peso puxa o bloco ao longo do plano para baixo (20 · 0,6 = 12 N) e 0,8 do peso aperta o bloco contra o plano (20 · 0,8 = 16 N). O enunciado deu 0,6 e 0,8 para isso. μ (lê-se 'mi') é o coeficiente de atrito, o 0,5 do enunciado: o atrito vale 0,5 do aperto. Força = massa · aceleração, então aceleração = força ÷ massa."
+     "titulo": "De onde vem cada fórmula (1 de 2)",
+     "texto": "O peso do bloco é m · g = 2 · 10 = 20 N. Plano deitado quase só aperta; parede em pé quase só puxa. Neste plano, o seno (0,6) é a parte do peso que puxa ao longo do plano (20 · 0,6 = 12 N) e o cosseno (0,8) é a parte que aperta o bloco contra ele (20 · 0,8 = 16 N). μ (lê-se 'mi') é o coeficiente de atrito, o 0,5 do enunciado: o atrito vale 0,5 do aperto. Força = massa · aceleração, então aceleração = força ÷ massa. O ponto · significa vezes."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 2)",
+     "texto": "Freando a 2 m/s² desde 4 m/s: depois de 1 s está a 2 m/s e depois de 2 s está parado. Em 2 s a média foi 2 m/s, então andou 2 · 2 = 4 m. Conferindo: v · v = 16 e 2 · a · d = 2 · 2 · 4 = 16. Por isso v² = 2 · a · d e, dividindo por 2 · a, d = v² ÷ (2 · a)."
     },
     {
      "titulo": "A equação em letras",
@@ -934,7 +958,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "Freando até parar vale v · v = 2 · a · d (teste: v = 4 e a = 2 dão d = 4, pois 16 = 2 · 2 · 4). Dividindo por 2 · a: d = v² ÷ (2 · a).\nd = 144 ÷ 20 = 7,2 m.\nLetra A.",
+     "texto": "d = v² ÷ (2 · a) = 144 ÷ (2 · 10) = 144 ÷ 20 = 7,2 m.\nLetra A.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -1069,7 +1093,7 @@
     },
     {
      "titulo": "De onde vem cada fórmula",
-     "texto": "Força = massa · aceleração: um bloco de 2 kg com 10 N de força acelera 10 ÷ 2 = 5 m/s². Peso é a força da gravidade: B pesa 2 · 10 = 20 N. 'Ideal' quer dizer sem massa e sem atrito; por isso a tração vale o mesmo nas duas pontas do fio. O peso de A (3 · 10 = 30 N) é segurado pela mesa e não entra na conta."
+     "texto": "Força = massa · aceleração: um bloco de 2 kg com 10 N de força acelera 10 ÷ 2 = 5 m/s². Peso é a força da gravidade: B pesa 2 · 10 = 20 N. Polia é uma rodinha na borda da mesa: o fio passa por ela e dobra a esquina, então o peso de B puxa A para a frente. 'Ideal' quer dizer sem massa e sem atrito; por isso a tração vale o mesmo nas duas pontas do fio. O peso de A (3 · 10 = 30 N) é segurado pela mesa e não entra na conta. O ponto · significa vezes."
     },
     {
      "titulo": "A equação em letras",
@@ -1179,7 +1203,7 @@
   "E": "70",
   "resposta": "C",
   "explicacao": {
-   "conferencia": "Peso 20 N; v² = 2 · 10 · 1,25 = 25; C = 2 · 25 ÷ 1,25 = 40 N; T = 20 + 40 = 60 N (3 vezes o peso). C. Erros: A = Deu só o peso, como se a esfera estivesse parada; B = Somou o peso com metade dele; D = Deu só a força do movimento circular, sem o peso; E = Fez m · v² = 50, sem dividir pelo comprimento do fio.",
+   "conferencia": "Peso 20 N; v² = 2 · 10 · 1,25 = 25; C = 2 · 25 ÷ 1,25 = 40 N; T = 20 + 40 = 60 N (3 vezes o peso). C. Erros: A = Deu só o peso, como se a esfera estivesse parada; B = Somou o peso com metade dele; D = Deu só a força do movimento circular, sem o peso; E = Somou o peso com m · v² (20 + 50 = 70), sem dividir pelo comprimento do fio.",
    "ideia": "No ponto mais baixo, o fio sustenta o peso e ainda curva a trajetória. A velocidade ali vem da energia: a esfera trocou a altura do fio por velocidade.",
    "pecas": [
     {
@@ -1201,7 +1225,7 @@
        },
        {
         "figura": "caixa",
-        "nome": "Energia na descida",
+        "nome": "Velocidade na descida",
         "formula": "v² = 2 · g · L"
        },
        {
@@ -1243,8 +1267,12 @@
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "L = comprimento do fio, 1,25 m (também quanto a esfera desce até o ponto mais baixo). v = velocidade da esfera lá embaixo. É a conta da queda livre: cair 1,25 m dá v² = 2 · 10 · 1,25 = 25. Para andar em círculo, algo precisa puxar a esfera para o centro: essa força cresce com a massa e com a velocidade e diminui se a curva é mais aberta, C = m · v² ÷ L (o raio do círculo é o fio). Pêndulo é um peso preso a um fio que balança."
+     "titulo": "De onde vem cada fórmula (1 de 2)",
+     "texto": "Ao descer, a esfera ganha velocidade como numa queda. Parada, com g = 10: depois de 1 s está a 10 m/s e caiu 5 m; depois de 2 s, a 20 m/s e caiu 20 m. Conferindo: 2 · 10 · 20 = 400 e 20 · 20 = 400. Por isso v² = 2 · g · descida. Aqui a descida é L = 1,25 m (no arco vale o mesmo: só conta a altura que desceu): v² = 2 · 10 · 1,25 = 25. L = comprimento do fio; v = velocidade da esfera lá embaixo. O ponto · significa vezes."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 2)",
+     "texto": "Para andar em círculo, algo precisa puxar a esfera para o centro: C = m · v² ÷ L. Raio é a distância do centro à ponta do círculo, aqui o fio L. Exemplo: 1 kg a 2 m/s num fio de 1 m: C = 1 · 4 ÷ 1 = 4 N. Com o dobro da velocidade (4 m/s): C = 1 · 16 ÷ 1 = 16 N, quatro vezes mais. Pêndulo é um peso preso a um fio que balança."
     },
     {
      "titulo": "A equação em letras",
@@ -1279,7 +1307,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "T = 20 + 40 = 60 N.\nLetra C. É 3 vezes o peso, e vale para qualquer massa e qualquer fio, se a esfera é solta da horizontal e olhamos o ponto mais baixo (na checagem: 30 N = 3 · 10).",
+     "texto": "T = 20 + 40 = 60 N.\nLetra C. É 3 vezes o peso: T = m · g + m · 2 · g · L ÷ L = m · g + 2 · m · g = 3 · m · g (o L se cancela). Vale para qualquer massa e fio, se a esfera é solta da horizontal e olhamos o ponto mais baixo (na checagem: 30 N = 3 · 10).",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -1354,7 +1382,7 @@
   "E": "32",
   "resposta": "D",
   "explicacao": {
-   "conferencia": "Q · (70 − 38) = F · (38 − 20) e F = 40 − Q: 32Q = 720 − 18Q, 50Q = 720, Q = 14,4 L. D. Erros: A = Deu a diferença 38 − 20, que é uma temperatura, não litros; B = Dividiu 40 L ao meio, sem olhar as temperaturas; C = Trocou as razões e achou a água fria no lugar da quente; E = Deu a diferença 70 − 38, que é uma temperatura, não litros.",
+   "conferencia": "Lq · (70 − 38) = Lf · (38 − 20) e Lf = 40 − Lq: 32 · Lq = 720 − 18 · Lq, 50 · Lq = 720, Lq = 14,4 L. D. Erros: A = Deu a diferença 38 − 20, que é uma temperatura, não litros; B = Dividiu 40 L ao meio, sem olhar as temperaturas; C = Trocou as razões e achou a água fria no lugar da quente; E = Deu a diferença 70 − 38, que é uma temperatura, não litros.",
    "ideia": "Na mistura, o calor que a água quente perde é igual ao que a fria ganha. Como o calor específico é o mesmo, sobram só litros vezes variação de temperatura.",
    "pecas": [
     {
@@ -1414,11 +1442,11 @@
     },
     {
      "titulo": "De onde vem cada fórmula",
-     "texto": "c = calor específico: quanto calor 1 kg de água precisa para subir 1 °C. A água quente cede m · c · 32 (70 − 38 = 32 graus) e a fria recebe m · c · 18 (38 − 20 = 18 graus). Como 1 L = 1 kg e o c é igual dos dois lados, ele some: sobra Lq · 32 = Lf · 18. 32 · Lq quer dizer 32 vezes Lq."
+     "texto": "c = calor específico: quanto calor 1 kg de água precisa para subir 1 °C; Q = calor e m = massa em kg. A água quente cede m · c · 32 (70 − 38 = 32 graus) e a fria recebe m · c · 18 (38 − 20 = 18 graus). Como 1 L = 1 kg, a massa é o número de litros. O c multiplica os dois lados; dividindo os dois lados por ele, ele sai (como 3 · 5 = 3 · 5: dividindo por 3 sobra 5 = 5). Fica Lq · 32 = Lf · 18. 32 · Lq quer dizer 32 vezes Lq. O ponto · significa vezes."
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A quente cai de 70 para 38 (32 graus) e a fria sobe de 20 para 38 (18 graus). O calor cedido é igual ao recebido, e c e a massa por litro se cancelam.\nAgora é só achar Lf.",
+     "texto": "A quente cai de 70 para 38 (32 graus) e a fria sobe de 20 para 38 (18 graus). O calor cedido é igual ao recebido, e c se cancela.\nAgora é só achar Lf, que depende de Lq (a banheira tem 40 L).",
      "visual": {
       "tipo": "equacao",
       "formula": "Lq · 32 = Lf · 18",
@@ -1441,7 +1469,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "(40 − Lq) · 18 = 40 · 18 − 18 · Lq = 720 − 18 · Lq (40 · 18 = 720).\nSomo 18 · Lq nos dois lados: 32 · Lq + 18 · Lq = 50 · Lq = 720.\nLq = 720 ÷ 50 = 14,4 L.\nLetra D. Então Lf = 40 − 14,4 = 25,6 L. Conferindo: 14,4 · 32 = 460,8 e 25,6 · 18 = 460,8.",
+     "texto": "(40 − Lq) · 18 é 18 vezes 40 menos 18 vezes Lq (teste com Lq = 10: 30 · 18 = 540 e 720 − 180 = 540). Então 32 · Lq = 720 − 18 · Lq.\nSomo 18 · Lq nos dois lados para juntar os Lq: 32 vezes Lq mais 18 vezes Lq são 50 vezes Lq = 720.\nLq = 720 ÷ 50 = 14,4 L.\nLetra D. Lf = 40 − 14,4 = 25,6 L. Conferindo: 14,4 · 32 = 460,8 e 25,6 · 18 = 460,8.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -1576,8 +1604,12 @@
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "Δ (delta) quer dizer quanto mudou: ΔV = volume final − volume inicial. 10⁵ = 100 000 e 10⁻³ = 1 ÷ 1 000 = 0,001. Pa (pascal) é a unidade de pressão e J (joule), a de energia. Trabalho é a energia que o gás gasta empurrando o ambiente quando aumenta de volume. Monoatômico = gás de átomos soltos (como o hélio): por isso vale o 3/2. Na lei p · V = n · R · T, n é a quantidade de gás, R uma constante e T a temperatura."
+     "titulo": "De onde vem cada fórmula (1 de 2)",
+     "texto": "Δ (delta) quer dizer quanto mudou: ΔV = volume final − volume inicial. 10⁵ = 100 000 e 10⁻³ = 1 ÷ 1 000 = 0,001. Pa (pascal) é a unidade de pressão e J (joule), a de energia. Monoatômico = gás de átomos soltos (como o hélio): por isso vale o 3/2. Na lei p · V = n · R · T (dada pronta), p · V é o tamanho de n · R · T: n é a quantidade de gás, R uma constante e T a temperatura. Aqui p · V = 2 · 10⁵ · 3 · 10⁻³ = 600 antes e 2 · 10⁵ · 5 · 10⁻³ = 1 000 depois. O ponto · significa vezes."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 2)",
+     "texto": "Trabalho é a energia que o gás gasta empurrando o ambiente quando aumenta de volume: empurrar com pressão p um volume ΔV gasta p · ΔV. Exemplo: 100 000 Pa e 0,001 m³ gastam 100 000 · 0,001 = 100 J."
     },
     {
      "titulo": "A equação em letras",
@@ -1608,7 +1640,7 @@
     },
     {
      "titulo": "Achando ΔU: a energia interna",
-     "texto": "Como p é constante, a mudança de n · R · T vale p · ΔV. Então ΔU = (3/2) · n · R · ΔT = (3/2) · p · ΔV.\n(3/2) lê-se \"três meios\" e vale 1,5. ΔU = 1,5 · 400 = 600 J."
+     "texto": "n · R · T é igual a p · V: valia 600 e passou a valer 1 000, subiu 400 (que é p · ΔV). Então ΔU = (3/2) · n · R · ΔT = (3/2) · 400.\n(3/2) lê-se \"três meios\" e vale 1,5. ΔU = 1,5 · 400 = 600 J."
     },
     {
      "titulo": "Volta na equação",
@@ -1756,7 +1788,7 @@
     },
     {
      "titulo": "De onde vem cada fórmula",
-     "texto": "c = calor específico: quanto calor 1 g precisa para subir 1 °C (gelo: 0,5 cal). L = calor latente: o calor para derreter 1 g (80 cal). O gelo derrete a 0 °C e fica em 0 °C até derreter por completo; por isso são 3 etapas: de −10 a 0 °C (10 graus), derreter, e de 0 a 20 °C. Caloria e joule são unidades de energia; a potência é em joules por segundo (W), então passamos tudo para joules: 1 cal = 4 J."
+     "texto": "c = calor específico: quanto calor 1 g precisa para subir 1 °C (gelo: 0,5 cal). L = calor latente: o calor para derreter 1 g (80 cal). Em Q = m · c · variação: Q = calor em cal, m = massa em g, variação = quantos graus mudou. O gelo derrete a 0 °C e fica em 0 °C até derreter por completo; por isso são 3 etapas: de −10 a 0 °C (10 graus), derreter, e de 0 a 20 °C. Caloria e joule são unidades de energia; a potência é em joules por segundo (W), então passamos tudo para joules: 1 cal = 4 J. O ponto · significa vezes."
     },
     {
      "titulo": "A equação em letras",
@@ -1791,7 +1823,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "t = 84 000 ÷ 700 = 840 ÷ 7 = 120 s (700 W dão 1 400 J em 2 s).\nLetra A.",
+     "texto": "t = 84 000 ÷ 700. Divido os dois por 100 (corto dois zeros de cada): 840 ÷ 7 = 120 s (7 · 120 = 840).\nLetra A.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -1924,8 +1956,12 @@
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "k = condutividade térmica: quanto o material deixa o calor passar (cobre alto, madeira baixo). Fluxo é quanto calor passa por segundo: passa mais se k é alto e a diferença de temperatura entre as pontas é grande, e menos se a barra é comprida. A grossura (seção) também conta, mas é igual nas duas barras. 'Em série' é uma barra depois da outra, com o mesmo calor passando por todas. A barra A vai de 100 °C até T: diferença 100 − T. A barra B vai de T até 0 °C: diferença T − 0."
+     "titulo": "De onde vem cada fórmula (1 de 2)",
+     "texto": "k = condutividade térmica: quanto o material deixa o calor passar (cobre alto, madeira baixo). Fluxo é quanto calor passa por segundo: passa mais se k é alto e a diferença de temperatura entre as pontas é grande, e menos se a barra é comprida. Exemplo: k = 100, diferença de 10 °C, barra de 1 m: fluxo = 100 · 10 ÷ 1 = 1 000. Com k = 200 vai a 2 000; com a barra de 2 m cai a 500. K (kelvin) anda igual ao °C: uma diferença de 10 °C é uma de 10 K. O ponto · significa vezes."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 2)",
+     "texto": "A grossura (seção) também conta, mas é igual nas duas barras. 'Em série' é uma barra depois da outra, com o mesmo calor passando por todas. A barra A vai de 100 °C até T: diferença 100 − T. A barra B vai de T até 0 °C: diferença T − 0."
     },
     {
      "titulo": "A equação em letras",
@@ -1960,7 +1996,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "300 · (100 − T) = 100 · T. Como 300 · 100 = 30 000: 30 000 − 300 · T = 100 · T.\nSomo 300 · T nos dois lados: 30 000 = 400 · T.\nT = 30 000 ÷ 400 = 75 °C (300 ÷ 4).\nLetra B. Conferindo: 300 · 25 = 7 500 e 100 · 75 = 7 500.",
+     "texto": "300 · (100 − T) é 300 vezes 100 menos 300 vezes T (teste com T = 25: 300 · 75 = 22 500 e 30 000 − 7 500 = 22 500). Então 30 000 − 300 · T = 100 · T.\nSomo 300 · T nos dois lados: 30 000 = 400 · T.\nT = 30 000 ÷ 400: divido os dois por 100 (corto dois zeros de cada) e fica 300 ÷ 4 = 75 °C.\nLetra B. Conferindo: 300 · 25 = 7 500 e 100 · 75 = 7 500.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -2091,7 +2127,7 @@
     },
     {
      "titulo": "De onde vem cada fórmula",
-     "texto": "Ultrassom é um som agudo demais para o ouvido humano; pulso é um apito curtinho. Distância = velocidade · tempo: se o som anda 1 500 m a cada segundo, em 2 s anda 3 000 m. Com números: o eco do cardume voltou em 0,2 s: 1 500 · 0,2 = 300 m de ida e volta, então o cardume está a 300 ÷ 2 = 150 m. O do fundo voltou em 0,8 s: 1 200 m de ida e volta, 600 m de profundidade. Entre os dois: 600 − 150 = 450 m. A conta curta usa o intervalo de 0,6 s."
+     "texto": "Ultrassom é um som agudo demais para o ouvido humano; pulso é um apito curtinho. Distância = velocidade · tempo: se o som anda 1 500 m a cada segundo, em 2 s anda 3 000 m. Com números: o eco do cardume voltou em 0,2 s: 1 500 · 0,2 = 300 m de ida e volta (1 500 · 2 = 3 000, e 0,2 é 2 ÷ 10), então o cardume está a 300 ÷ 2 = 150 m. O do fundo voltou em 0,8 s: 1 500 · 8 = 12 000, ÷ 10 = 1 200 m de ida e volta, 600 m de profundidade. Entre os dois: 600 − 150 = 450 m. O ponto · significa vezes."
     },
     {
      "titulo": "A equação em letras",
@@ -2122,11 +2158,11 @@
     },
     {
      "titulo": "Achando t: o intervalo entre os ecos",
-     "texto": "O fundo respondeu em 0,8 s e o cardume em 0,2 s.\nt = 0,8 − 0,2 = 0,6 s."
+     "texto": "O fundo respondeu em 0,8 s e o cardume em 0,2 s. Como os dois ecos são divididos por 2, posso subtrair os tempos antes: 0,8 − 0,2 = 0,6 s, e dá o mesmo resultado."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "D = 1 500 · 0,6 ÷ 2 = 900 ÷ 2 = 450 m.\nLetra C.",
+     "texto": "D = 1 500 · 0,6 ÷ 2. 1 500 · 6 = 9 000 e 0,6 é 6 ÷ 10, então 1 500 · 0,6 = 900. 900 ÷ 2 = 450 m.\nLetra C.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -2201,7 +2237,7 @@
   "E": "677,6",
   "resposta": "D",
   "explicacao": {
-   "conferencia": "72 km/h = 20 m/s; O = 640 · 340 ÷ (340 − 20) = 217 600 ÷ 320 = 680 Hz. D. Erros: A = Calculou como se a ambulância se afastasse: 640 · 340 ÷ 360 = 604,4; B = Achou que o pedestre ouve a frequência emitida; C = Somou 20 m/s a 640 Hz, misturando velocidade com frequência; E = Inverteu o sinal: 640 · 360 ÷ 340.",
+   "conferencia": "72 km/h = 20 m/s; fo = 640 · 340 ÷ (340 − 20) = 217 600 ÷ 320 = 680 Hz. D. Erros: A = Calculou como se a ambulância se afastasse: 640 · 340 ÷ 360 = 604,4; B = Achou que o pedestre ouve a frequência emitida; C = Somou 20 m/s a 640 Hz, misturando velocidade com frequência; E = Inverteu o sinal: 640 · 360 ÷ 340.",
    "ideia": "Quando a ambulância se aproxima, os apitos ficam espremidos num espaço menor e chegam mais vezes por segundo ao pedestre. O fator é a velocidade do som dividida por (som menos ambulância).",
    "pecas": [
     {
@@ -2260,12 +2296,20 @@
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "Frequência é quantas vezes por segundo o som se repete: 640 Hz são 640 apitos por segundo. Fonte é quem faz o som, aqui a sirene. Em 1 s o primeiro apito anda 340 m e a ambulância anda 20 m; os 640 apitos ficam espremidos em 340 − 20 = 320 m, em vez de 340 m, e chegam mais apitos por segundo ao pedestre: multiplica-se por 340 ÷ 320 (maior que 1, porque dividimos por um número menor)."
+     "titulo": "De onde vem cada fórmula (1 de 3)",
+     "texto": "Frequência é quantas vezes por segundo o som se repete: 640 Hz são 640 apitos por segundo. Fonte é quem faz o som, aqui a sirene. fe = frequência emitida (640 Hz); fo = frequência ouvida (o que se quer); V = velocidade do som (340 m/s); va = velocidade da ambulância. O ponto · significa vezes."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 3)",
+     "texto": "Em 1 s o primeiro apito anda 340 m e a ambulância anda 20 m (72 km/h são 20 m/s: 1 m/s vale 3,6 km/h porque 3 600 ÷ 1 000 = 3,6, e 72 ÷ 3,6 = 20). Os 640 apitos ficam espremidos em 340 − 20 = 320 m, em vez de 340 m: 640 apitos em 320 m são 2 apitos por metro. O som passa pelo pedestre a 340 m por segundo: 340 · 2 = 680 apitos por segundo. Isso é 640 · 340 ÷ 320."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (3 de 3)",
+     "texto": "Se a ambulância se afastasse: o primeiro apito anda 340 m e ela se afasta 20 m, então os apitos se espalham em 340 + 20 = 360 m e a frequência cai: 640 · 340 ÷ 360 = 604,4 (a regra então usa V + va)."
     },
     {
      "titulo": "A equação em letras",
-     "texto": "O ouvinte parado ouve a frequência emitida multiplicada por um fator maior que 1, porque a fonte vem na direção dele.\nAgora é só achar E, V e A.",
+     "texto": "O ouvinte parado ouve a frequência emitida multiplicada por um fator maior que 1, porque a fonte vem na direção dele.\nAgora é só achar fe, V e va.",
      "visual": {
       "tipo": "equacao",
       "formula": "fo = fe · V ÷ (V − va)",
@@ -2300,7 +2344,7 @@
     },
     {
      "titulo": "Achando va: a velocidade da ambulância",
-     "texto": "1 km/h = 1 000 m em 3 600 s = 1 ÷ 3,6 m/s. Por isso divide-se por 3,6.\nva = 72 ÷ 3,6 = 20 m/s (3,6 · 20 = 72)."
+     "texto": "72 km/h ÷ 3,6 = 20 m/s (3,6 · 20 = 72); a conversão foi explicada em \"De onde vem cada fórmula\"."
     },
     {
      "titulo": "Volta na equação",
@@ -2438,8 +2482,12 @@
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "Comprimento de onda é o tamanho de uma ondinha completa. A onda anda v metros por segundo e repete f vezes por segundo, então v = (comprimento de onda) · f, ou f = v ÷ (comprimento de onda). Num tubo fechado numa ponta cabe só um quarto da ondinha, então a ondinha inteira tem 4 · L e f = v ÷ (4 · L). T é a temperatura: aqui, 35 °C."
+     "titulo": "De onde vem cada fórmula (1 de 2)",
+     "texto": "f = frequência (vezes por segundo, em Hz); L = comprimento do tubo; T = temperatura (35 °C). Comprimento de onda é o tamanho de uma ondinha completa. Se cada ondinha tem 2 m e passam 3 ondinhas por segundo, a onda anda 2 · 3 = 6 m por segundo: v = (comprimento de onda) · f, ou f = v ÷ (comprimento de onda). O ponto · significa vezes."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 2)",
+     "texto": "Ponta fechada: o ar fica parado. Ponta aberta: o ar balança livre. Do parado ao livre cabe um quarto da ondinha. Então a ondinha inteira tem 4 · L (4 quartos) e f = v ÷ (4 · L)."
     },
     {
      "titulo": "A equação em letras",
@@ -2466,15 +2514,15 @@
     },
     {
      "titulo": "Achando v: a velocidade do som a 35 °C",
-     "texto": "0,6 · 35 = 21 (6 · 35 = 210, dividido por 10).\nv = 331 + 21 = 352 m/s."
+     "texto": "0,6 · 35 = 21 (6 · 35 = 6 · 30 + 6 · 5 = 180 + 30 = 210, dividido por 10).\nv = 331 + 21 = 352 m/s."
     },
     {
      "titulo": "Achando L: o comprimento",
-     "texto": "O enunciado dá: L = 0,88 m.\n4 · L = 4 · 0,88 = 3,52 m."
+     "texto": "O enunciado dá: L = 0,88 m.\n4 · L = 4 · 0,88 = 4 · 0,8 + 4 · 0,08 = 3,2 + 0,32 = 3,52 m."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "f = 352 ÷ 3,52. Multiplico os dois por 100: 35 200 ÷ 352 = 100 Hz (352 · 100 = 35 200).\nLetra E.",
+     "texto": "f = 352 ÷ 3,52. Multiplicar os dois números por 100 não muda o resultado da divisão e tira a vírgula: 35 200 ÷ 352 = 100 Hz (352 · 100 = 35 200).\nLetra E.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -2554,7 +2602,7 @@
    "pecas": [
     {
      "termo": "Modos consecutivos",
-     "significado": "Dois modos de vibração um depois do outro: suas frequências diferem de uma vez a fundamental."
+     "significado": "Dois modos de vibração um depois do outro: suas frequências diferem exatamente da fundamental f (ex.: 4f − 3f = f)."
     }
    ],
    "passos": [
@@ -2596,7 +2644,7 @@
     },
     {
      "titulo": "De onde vem cada fórmula",
-     "texto": "Fundamental é o jeito mais simples de a corda vibrar: uma barriga só, com a menor frequência f. Com 2 barrigas a frequência é 2f, com 3 é 3f. Comprimento de onda é o tamanho de uma ondinha completa; a barriga do fundamental é só metade dela, então a ondinha inteira tem 2 · L e v = 2 · L · f. Modos seguidos, como 3f e 4f ou 5f e 6f, diferem sempre de f. Atenção: o 300 da resposta é velocidade (m/s), outra coisa que os 300 Hz."
+     "texto": "2f lê-se '2 vezes f'. Fundamental é o jeito mais simples de a corda vibrar: uma barriga só (barriga é a parte da corda que sobe e desce inteira, entre dois pontos parados), com a menor frequência f. Com 2 barrigas a corda vibra 2 vezes mais rápido (2f), com 3 barrigas, 3f. Comprimento de onda é o tamanho de uma ondinha completa; 1 barriga é só metade dela, então a ondinha inteira tem 2 · L e v = 2 · L · f. Modos seguidos, como 3f e 4f ou 5f e 6f, diferem sempre de f. Atenção: o 300 da resposta é velocidade (m/s), outra coisa que os 300 Hz. O ponto · significa vezes."
     },
     {
      "titulo": "A equação em letras",
@@ -2631,7 +2679,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "v = 2 · 1,5 · 100 = 300 m/s.\nLetra A.",
+     "texto": "v = 2 · L · f: 2 · 1,5 = 3 e 3 · 100 = 300 m/s.\nLetra A.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -2761,8 +2809,12 @@
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "f = 20 cm (distância focal: onde a lente junta os raios que chegam paralelos). p = 30 cm (do slide até a lente). p' (lê-se 'p linha') = distância da lente até a imagem, o que falta achar. A equação da lente é uma regra pronta que diz onde a imagem se forma."
+     "titulo": "De onde vem cada fórmula (1 de 2)",
+     "texto": "f = 20 cm (distância focal: onde a lente junta os raios que chegam paralelos; lente convergente é a que junta os raios). p = 30 cm (do slide até a lente). p' (lê-se 'p linha') = distância da lente até a imagem, o que falta achar. O ponto · significa vezes."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 2)",
+     "texto": "A equação da lente é regra pronta. Exemplo: f = 10 cm e objeto a p = 20 cm: 1/10 = 1/20 + 1/p', e dá p' = 20 cm. Aumento: se a imagem está 2 vezes mais longe da lente (60 cm contra 30 cm), ela é 2 vezes maior: M = 60 ÷ 30 = 2. ('Razão' é só uma divisão.)"
     },
     {
      "titulo": "A equação em letras",
@@ -2793,7 +2845,7 @@
     },
     {
      "titulo": "Achando M: o aumento",
-     "texto": "Quero 1/p': tiro 1/p dos dois lados, então 1/p' = 1/20 − 1/30. Para subtrair frações deixo o mesmo número embaixo: 1/20 = 3/60 (multiplico em cima e embaixo por 3) e 1/30 = 2/60 (por 2). 3/60 − 2/60 = 1/60. Se 1 ÷ p' = 1/60, então p' = 60 cm.\nM = p' ÷ p = 60 ÷ 30 = 2 (a imagem é 2 vezes maior que o slide)."
+     "texto": "1/p' é o que sobra quando tiro 1/30 de 1/20: 1/p' = 1/20 − 1/30. Para subtrair frações uso o mesmo número embaixo: 20 · 3 = 60 e 30 · 2 = 60, então 1/20 = 3/60 e 1/30 = 2/60. 3/60 − 2/60 = 1/60. Dizer que 1 ÷ p' dá 1 ÷ 60 é dizer que p' = 60 cm.\nM = p' ÷ p = 60 ÷ 30 = 2 (a imagem é 2 vezes maior que o slide)."
     },
     {
      "titulo": "Volta na equação",
@@ -2809,6 +2861,10 @@
        [
         "o",
         "5 cm"
+       ],
+       [
+        "p'",
+        "60 cm"
        ],
        [
         "M",
@@ -2872,7 +2928,7 @@
   "E": "160",
   "resposta": "C",
   "explicacao": {
-   "conferencia": "N = 1,5 ÷ (4/3) = 1,125; 1/F = 0,125 · (1/20 + 1/20) = 0,0125; F = 80 cm. C. Erros: A = Inverteu o índice relativo (água ÷ vidro) e a lente ficou divergente; B = Achou que a água não muda nada; D = Usou a diferença 1,5 − 4/3 = 1/6 em vez da razão; E = Usou só uma face: R ÷ (N − 1).",
+   "conferencia": "N = 1,5 ÷ (4/3) = 1,125; 1/F = 0,125 · (1/20 + 1/20) = 0,0125; F = 80 cm. C. Erros: A = Inverteu o índice relativo (água ÷ vidro): foco negativo, a lente espalha a luz em vez de juntar; B = Achou que a água não muda nada; D = Usou a diferença 1,5 − 4/3 = 1/6 em vez da razão; E = Usou só uma face: R ÷ (N − 1).",
    "ideia": "O foco de uma lente depende da diferença entre o índice dela e o do meio. Na água essa diferença cai muito, e a lente converge bem menos, com foco bem maior.",
    "pecas": [
     {
@@ -2931,8 +2987,12 @@
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "Índice de refração diz quantas vezes a luz é mais lenta no material do que no vácuo; o ar tem índice 1. Lente biconvexa é barriguda dos dois lados; raio de curvatura é o quanto cada barriga é curva. N = n da lente ÷ n do meio: no ar, N = 1,5 ÷ 1 = 1,5. O foco no ar (20 cm) não entra na conta: serve só para comparar no final."
+     "titulo": "De onde vem cada fórmula (1 de 2)",
+     "texto": "Índice de refração diz quantas vezes a luz é mais lenta no material do que no vácuo; o ar tem índice 1. Lente biconvexa é barriguda dos dois lados; raio de curvatura é o raio do círculo que a face desenha (raio maior = face mais reta). N = n da lente ÷ n do meio: no ar, N = 1,5 ÷ 1 = 1,5. O foco no ar (20 cm) não entra na conta: serve só para comparar no final. O ponto · significa vezes."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 2)",
+     "texto": "F = distância focal (onde a lente junta a luz); R1 e R2 = raio de cada face; (N − 1) lê-se 'N menos 1'. No ar: 1/F = (1,5 − 1) · (1/20 + 1/20) = 0,5 · 0,1 = 0,05, então F = 20 cm, o valor do enunciado: a regra confere."
     },
     {
      "titulo": "A equação em letras",
@@ -2959,15 +3019,15 @@
     },
     {
      "titulo": "Achando N: o índice relativo",
-     "texto": "Dividir por 4/3 é multiplicar pelo inverso, 3/4: 1,5 · 3/4 = 4,5 ÷ 4 = 1,125.\nN − 1 = 0,125."
+     "texto": "1,5 ÷ 4/3: dividir por 4/3 é multiplicar por 3/4. 1,5 · 3 = 4,5 e 4,5 ÷ 4 = 1,125 (4 ÷ 4 = 1 e 0,5 ÷ 4 = 0,125).\nN − 1 = 0,125."
     },
     {
      "titulo": "Achando R: o raio",
-     "texto": "O enunciado dá: R = 20 cm nas duas faces.\n1 ÷ 20 = 0,05 e 0,05 + 0,05 = 0,1."
+     "texto": "O enunciado dá: R = 20 cm nas duas faces.\n1 ÷ 20 = 0,05 (20 · 0,05 = 1) e 0,05 + 0,05 = 0,1."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "1/F = 0,125 · 0,1 = 0,0125. Como 0,0125 · 80 = 1, F = 80 cm.\nLetra C. No ar, N − 1 = 0,5 dava 1/F = 0,05 e F = 20 cm: na água o foco ficou 4 vezes maior.",
+     "texto": "1/F = 0,125 · 0,1 = 0,0125. Procuro F com 0,0125 · F = 1. Teste: 0,0125 · 8 = 0,1 e 0,1 · 10 = 1, então F = 8 · 10 = 80 cm.\nLetra C. No ar, N − 1 = 0,5 dava 1/F = 0,05 e F = 20 cm: na água o foco ficou 4 vezes maior.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -3042,7 +3102,7 @@
   "E": "160",
   "resposta": "D",
   "explicacao": {
-   "conferencia": "v = 3 · 10⁸ ÷ 1,6 = 187 500 000 m/s; t = 3 000 ÷ 187 500 000 = 0,000016 s = 16 µs. D. Erros: A = Multiplicou a velocidade por 1,6 em vez de dividir; B = Usou a velocidade do vácuo, sem o índice; C = Multiplicou o resultado por 1,6 duas vezes; E = Errou uma casa decimal na conversão para microssegundos.",
+   "conferencia": "v = 3 · 10⁸ ÷ 1,6 = 187 500 000 m/s; t = 3 000 ÷ 187 500 000 = 0,000016 s = 16 µs. D. Erros: A = Multiplicou a velocidade por 1,6 em vez de dividir; B = Usou a velocidade do vácuo, sem o índice; C = Multiplicou o tempo certo (16) por 1,6: 16 · 1,6 = 25,6; E = Errou uma casa decimal na conversão para microssegundos.",
    "ideia": "Dentro do vidro a luz anda mais devagar: a velocidade é a do vácuo dividida pelo índice de refração. O tempo é distância ÷ velocidade, e depois se passa para microssegundos.",
    "pecas": [
     {
@@ -3098,7 +3158,7 @@
     },
     {
      "titulo": "De onde vem cada fórmula",
-     "texto": "c = velocidade da luz no vácuo (3 × 10⁸ m/s), n = índice do núcleo (1,6) e v = velocidade da luz no núcleo: v = c ÷ n. 10⁸ é 1 seguido de 8 zeros (100 000 000), então 3 × 10⁸ = 300 000 000. Núcleo é o miolo de vidro da fibra; a luz anda reta dentro dele, por isso as reflexões não entram na conta."
+     "texto": "Tempo = distância ÷ velocidade: se a luz anda 2 m por segundo, para 10 m ela leva 10 ÷ 2 = 5 s. c = velocidade da luz no vácuo (3 × 10⁸ m/s), n = índice do núcleo (1,6) e v = velocidade da luz no núcleo. n = 2 quer dizer luz 2 vezes mais lenta: v = c ÷ 2; aqui v = c ÷ 1,6. 10⁸ é 1 seguido de 8 zeros (100 000 000), então 3 × 10⁸ = 300 000 000. 10⁻⁶ lê-se '10 elevado a menos 6' e vale 0,000001. Núcleo é o miolo de vidro da fibra; a luz anda reta dentro dele, por isso as reflexões não entram na conta. O ponto · significa vezes."
     },
     {
      "titulo": "A equação em letras",
@@ -3129,11 +3189,11 @@
     },
     {
      "titulo": "Achando v: a velocidade no núcleo",
-     "texto": "v = 300 000 000 ÷ 1,6. Multiplico os dois por 10: 3 000 000 000 ÷ 16 = 187 500 000 m/s (16 · 187 500 000 = 3 000 000 000)."
+     "texto": "v = 300 000 000 ÷ 1,6. Multiplico os dois por 10: 3 000 000 000 ÷ 16. 3 000 ÷ 16 = 187,5 (16 · 187 = 2 992; sobram 8; 8 ÷ 16 = 0,5). 3 000 000 000 é 3 000 · 1 000 000, então v = 187,5 · 1 000 000 = 187 500 000 m/s."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "t = 3 000 ÷ 187 500 000. Divido os dois por 3 000: 1 ÷ 62 500. Como 62 500 · 16 = 1 000 000, t = 16 ÷ 1 000 000 = 0,000016 s.\n1 µs = 0,000001 s, então t = 16 µs.\nLetra D.",
+     "texto": "t = 3 000 ÷ 187 500 000. 187 500 000 ÷ 3 000 = 62 500 (187 500 ÷ 3 = 62 500), então t = 1 ÷ 62 500. Multiplico em cima e embaixo por 16: 62 500 · 16 = 1 000 000 e fica 16 ÷ 1 000 000 = 0,000016 s.\n1 µs = 0,000001 s, então t = 16 µs.\nLetra D.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -3166,7 +3226,7 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "3 km, n = 1,6, c = 3 · 10⁸"
+        "3 km, n = 1,6, c = 3 × 10⁸"
        ],
        [
         "2. Equação em letras",
@@ -3264,7 +3324,7 @@
     },
     {
      "titulo": "De onde vem cada fórmula",
-     "texto": "No espelho plano, a imagem aparece atrás do espelho, à mesma distância que o objeto está na frente. Simétrica quer dizer igual dos dois lados, como um reflexo."
+     "texto": "No espelho plano, a imagem aparece atrás do espelho, à mesma distância x que o objeto está na frente. Simétrica quer dizer igual dos dois lados, como um reflexo. Ele anda 1,5 m a cada segundo: em 1 s, 1,5 m; em 2 s, 3 m; em 4 s, 1,5 · 4 = 6 m (1 · 4 = 4 e 0,5 · 4 = 2). O ponto · significa vezes."
     },
     {
      "titulo": "A equação em letras",
@@ -3280,7 +3340,7 @@
        },
        {
         "letra": "x",
-        "oque": "distância do homem ao espelho depois de 4 s, em m"
+        "oque": "distância do homem ao espelho (no começo 8 m; depois de 4 s, 2 m)"
        }
       ]
      }
@@ -3291,7 +3351,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "D = 2 · 2 = 4 m.\nLetra E. Conferindo: o homem se aproxima a 1,5 m/s e a imagem também: a distância entre eles diminui 3 m/s; em 4 s, 12 m; e 16 − 12 = 4.",
+     "texto": "D = 2 · 2 = 4 m.\nLetra E. Conferindo: a imagem fica sempre à mesma distância atrás do espelho; se ele chega 1,5 m mais perto, ela também. Juntos, 1,5 + 1,5 = 3 m a cada segundo; em 4 s, 12 m; e 16 − 12 = 4.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -3421,12 +3481,16 @@
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "Joule (J) é unidade de energia e watt (W) é joule por segundo: 3 360 W são 3 360 J a cada segundo. Calor específico é quantos joules esquentam 1 kg em 1 °C: 4 200 J (J/(kg · °C) lê-se 'joules por quilo e por grau'). Com 2 kg, 8 400 J; para subir 3 °C com 1 kg, 12 600 J. Logo calor = massa · 4 200 · aumento: U = m · c · ΔT, e ΔT (delta T) é quanto a temperatura subiu. 'Constante' quer dizer que a cada segundo a água esquenta o mesmo tanto."
+     "titulo": "De onde vem cada fórmula (1 de 2)",
+     "texto": "Vazão é quanta água passa por tempo: 6 L por minuto. Joule (J) é unidade de energia e watt (W) é joule por segundo. Calor específico (c) é quantos joules esquentam 1 kg em 1 °C: 4 200 J (J/(kg · °C) lê-se 'joules por quilo e por grau'). Com 2 kg, 8 400 J; para subir 3 °C com 1 kg, 12 600 J. Logo calor = massa · 4 200 · aumento. O ponto · significa vezes."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 2)",
+     "texto": "Em 1 segundo: U = calor por segundo (J/s = W), m = massa de água por segundo (kg/s), e U = m · c · ΔT, com ΔT (delta T) o quanto a temperatura subiu. 'Constante': a cada segundo a água esquenta o mesmo tanto."
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Cada segundo, U joules aquecem m quilos de água. Dividindo U = m · c · ΔT por m · c, fica ΔT = U ÷ (m · c).\nAgora é só achar U, m e c.",
+     "texto": "Cada segundo, U joules aquecem m quilos de água. Dividindo U = m · c · ΔT por m · c, fica ΔT = U ÷ (m · c). Com números: 3 360 = 420 · ΔT; qual número vezes 420 dá 3 360? É 3 360 ÷ 420.\nAgora é só achar U, m e c.",
      "visual": {
       "tipo": "equacao",
       "formula": "ΔT = U ÷ (m · c)",
@@ -3453,11 +3517,11 @@
     },
     {
      "titulo": "Achando U: a potência útil",
-     "texto": "80% é 80 em cada 100: 80 ÷ 100 = 0,8.\nU = 4 200 · 0,8 = 33 600 ÷ 10 = 3 360 W (3 360 J por segundo)."
+     "texto": "80% é 80 em cada 100: 80 ÷ 100 = 0,8, que é 8 ÷ 10. 4 200 · 8 = 33 600 (4 000 · 8 = 32 000; 200 · 8 = 1 600). 33 600 ÷ 10 = 3 360 W (3 360 J por segundo)."
     },
     {
      "titulo": "Achando m: a massa por segundo",
-     "texto": "6 L por minuto = 6 kg por minuto. 1 minuto tem 60 segundos: 6 ÷ 60 = 0,1 kg a cada segundo."
+     "texto": "6 L por minuto = 6 kg por minuto. 6 kg em 60 s: 1 kg a cada 10 s = 0,1 kg por segundo (60 · 0,1 = 6)."
     },
     {
      "titulo": "Achando c: o calor específico",
@@ -3544,7 +3608,7 @@
   "E": "144",
   "resposta": "B",
   "explicacao": {
-   "conferencia": "O máximo vem com R = r = 2 Ω: I = 12 ÷ 4 = 3 A e P = 2 · 3² = 18 W. Com R = 1: 16 W; com R = 4: 16 W. B. Erros: A = Calculou com R = 1 Ω ou R = 4 Ω, que não é o máximo; C = Contou a potência total da bateria (12 · 3), não só a do resistor; D = Usou R = 0: I = 12 ÷ 2 = 6 A e 12 · 6 = 72 W, a potência da bateria toda; no resistor chega 0 W; E = Fez 12² = 144 e esqueceu de dividir por 4 · r = 8.",
+   "conferencia": "O máximo vem com R = r = 2 Ω: I = 12 ÷ 4 = 3 A e P = 2 · 3² = 18 W. Com R = 1: 16 W; com R = 4: 16 W. B. Erros: A = Calculou com R = 1 Ω ou R = 4 Ω, que não é o máximo; C = Contou a potência total da bateria (12 · 3), não só a do resistor; D = Calculou a potência com R = 0 (curto), toda perdida na resistência interna; E = Usou 12² = 144 sem dividir por 8 (4 · r = 4 · 2).",
    "ideia": "Se R é muito pequeno, quase não há tensão nele; se é muito grande, a corrente cai. A potência no resistor é máxima quando ele é igual à resistência interna.",
    "pecas": [
     {
@@ -3599,8 +3663,12 @@
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "ε (épsilon) é a força eletromotriz: os 12 V que a bateria empurra. r é a resistência interna (2 Ω) e R, o resistor ligado a ela. A corrente passa pelo resistor e pela bateria um depois do outro (em série), então as resistências somam: I = ε ÷ (R + r) = 12 ÷ (R + 2). A potência no resistor é R · I · I (I² lê-se 'I vezes I'): com R = 2 e I = 3, 2 · 3 · 3 = 18 W."
+     "titulo": "De onde vem cada fórmula (1 de 2)",
+     "texto": "Ω lê-se 'ohm' (unidade de resistência); V = volt; A = ampère (unidade de corrente). I = corrente (quanta eletricidade passa por segundo). ε (épsilon) é a força eletromotriz: os 12 V que a bateria empurra. r é a resistência interna (2 Ω) e R, o resistor ligado a ela. A corrente passa pelo resistor e pela bateria um depois do outro (em série), então as resistências somam. Lei de Ohm: corrente = tensão ÷ resistência, então I = ε ÷ (R + r) = 12 ÷ (R + 2). O ponto · significa vezes."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 2)",
+     "texto": "Potência = tensão · corrente (V · A = W). A tensão no resistor é R · I. Então P = R · I · I (I² lê-se 'I vezes I'). Exemplo, com R = 1: I = 12 ÷ 3 = 4 A e P = 1 · 4 · 4 = 16 W."
     },
     {
      "titulo": "A equação em letras",
@@ -3627,7 +3695,7 @@
     },
     {
      "titulo": "Achando R: o valor que dá o máximo",
-     "texto": "R = 1: 1 + 2 = 3; I = 12 ÷ 3 = 4 A; P = 1 · 4 · 4 = 16 W.\nR = 2: 2 + 2 = 4; I = 3 A; P = 2 · 3 · 3 = 18 W.\nR = 3: 3 + 2 = 5; I = 2,4 A; P = 3 · 2,4 · 2,4 = 17,28 W.\nR = 4: 4 + 2 = 6; I = 2 A; P = 4 · 2 · 2 = 16 W.\nO maior é R = 2, igual à resistência interna. Na prova, vá direto: R = r."
+     "texto": "R = 1: 1 + 2 = 3; I = 12 ÷ 3 = 4 A; P = 1 · 4 · 4 = 16 W.\nR = 2: 2 + 2 = 4; I = 3 A; P = 2 · 3 · 3 = 18 W.\nR = 3: 3 + 2 = 5; I = 12 ÷ 5 = 2,4 A (5 · 2,4 = 12); 2,4 · 2,4 = 5,76; P = 3 · 5,76 = 17,28 W.\nR = 4: 4 + 2 = 6; I = 2 A; P = 4 · 2 · 2 = 16 W.\nDos valores testados, R = 2 dá o maior (1,5 dá cerca de 17,6 e 2,5 cerca de 17,8: menores). O máximo fica em R = r."
     },
     {
      "titulo": "Achando I: a corrente",
@@ -3765,8 +3833,12 @@
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "Em série: um depois do outro, mesma corrente, e as resistências somam. Em paralelo: caminhos lado a lado, mesma tensão, e a corrente se divide. Lei de Ohm: U = R · I, então I = U ÷ R. Com 12 V, o de 12 Ω deixa passar 1 A e o de 6 Ω deixa passar 2 A; juntos, 3 A com 12 V: 12 ÷ 3 = 4 Ω (menos que 6, porque dois caminhos juntos resistem menos). A conta rápida é Rp = (12 · 6) ÷ (12 + 6). Ideais: sem resistência própria."
+     "titulo": "De onde vem cada fórmula (1 de 2)",
+     "texto": "Ω lê-se 'ohm' (unidade de resistência), V é volt e A é ampère. Em série: um depois do outro, mesma corrente, e as resistências somam. Em paralelo: caminhos lado a lado, mesma tensão, e a corrente se divide. Lei de Ohm: U = R · I, então I = U ÷ R. Ideais: sem resistência própria. O ponto · significa vezes."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 2)",
+     "texto": "Rp = resistência do paralelo (os dois juntos); R1 e R2 = os dois resistores (12 e 6). Teste (12 V é só um teste fácil): o de 12 Ω deixa passar 1 A e o de 6 Ω deixa passar 2 A; juntos, 3 A: 12 ÷ 3 = 4 Ω (menos que 6, porque dois caminhos juntos resistem menos). Para 2 resistores a regra rápida é produto ÷ soma: 12 + 6 = 18; 12 · 6 = 72; 72 ÷ 18 = 4, igual ao do teste."
     },
     {
      "titulo": "A equação em letras",
@@ -3797,7 +3869,7 @@
     },
     {
      "titulo": "Achando U: a tensão do paralelo",
-     "texto": "1) Paralelo: Rp = 12 · 6 ÷ 18 = 72 ÷ 18 = 4 Ω.\n2) Em série soma: 8 + 4 = 12 Ω.\n3) Corrente total: 36 ÷ 12 = 3 A (passa pelo de 8 Ω e depois se divide).\n4) Tensão no paralelo: U = 3 · 4 = 12 V."
+     "texto": "1) Paralelo: Rp = 12 · 6 ÷ (12 + 6) = 72 ÷ 18 = 4 Ω (18 · 4 = 72).\n2) Em série soma: 8 + 4 = 12 Ω.\n3) Lei de Ohm no circuito todo: I = 36 V ÷ 12 Ω = 3 A (passa pelo de 8 Ω e depois se divide).\n4) Lei de Ohm no paralelo: U = Rp · I = 4 · 3 = 12 V."
     },
     {
      "titulo": "Volta na equação",
@@ -3932,7 +4004,23 @@
     },
     {
      "titulo": "De onde vem cada fórmula",
-     "texto": "Aresta é cada traço do cubo, vértice é cada ponta, e a diagonal vai de A até o vértice oposto B. Resistência equivalente é um resistor único que, com a mesma tensão, deixa passar a mesma corrente: E = U ÷ I, com I a corrente total que sai da bateria. A tensão de A até B é a soma das quedas ao longo de um caminho; a queda em cada aresta é R · (corrente nela)."
+     "texto": "Ω lê-se 'ohm'. Aresta é cada traço do cubo, vértice é cada ponta e a diagonal vai de A até o vértice oposto B. Resistência equivalente E é um resistor único que, com a mesma tensão U entre A e B, deixa passar a mesma corrente total I: E = U ÷ I. Queda de tensão é quanta tensão se perde ao passar por um resistor: com R = 12 Ω e 2 A, a queda é 12 · 2 = 24 V. A tensão de A até B é a soma das quedas ao longo de um caminho; a queda em cada aresta é R · (corrente nela). O ponto · significa vezes."
+    },
+    {
+     "titulo": "O desenho",
+     "texto": "Cada traço do cubo é um resistor de 12 Ω. A bateria liga os pontos A e B, as pontas de uma diagonal.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "cubo-resistores",
+      "rotulos": [
+       "A",
+       "B",
+       "",
+       "",
+       "",
+       "cada aresta é um resistor de 12 Ω"
+      ]
+     }
     },
     {
      "titulo": "A equação em letras",
@@ -3963,7 +4051,19 @@
     },
     {
      "titulo": "Achando F: a fração",
-     "texto": "A corrente I sai de A por 3 arestas iguais: I ÷ 3 em cada. Cada uma chega a um vértice de onde saem 2 arestas iguais: (I ÷ 3) ÷ 2 = I ÷ 6 em cada (por simetria, os 3 vértices do meio são tratados igual). As últimas 3 arestas levam I ÷ 3 cada a B.\nTensão = (I/3) · R + (I/6) · R + (I/3) · R. Mesmo número embaixo: 1/3 = 2/6, então F = 2/6 + 1/6 + 2/6 = 5/6."
+     "texto": "A corrente I sai de A por 3 arestas iguais: I ÷ 3 em cada. Os 3 vértices vizinhos de A são iguais entre si, e de cada um saem 2 arestas iguais: (I ÷ 3) ÷ 2 = I ÷ 6 em cada. Cada vértice vizinho de B recebe 2 arestas de I ÷ 6: I ÷ 6 + I ÷ 6 = I ÷ 3, e é isso que a última aresta leva a B.\nTensão = (I ÷ 3) · R + (I ÷ 6) · R + (I ÷ 3) · R. Mesmo número embaixo: 1/3 = 2/6, então a soma é 2/6 + 1/6 + 2/6 = 5/6 de I · R (5/6 lê-se \"cinco sextos\"). Dividindo pela corrente I: E = (5/6) · R. Por isso F = 5/6.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "cubo-resistores",
+      "rotulos": [
+       "A",
+       "B",
+       "saem de A: I ÷ 3 em cada",
+       "no meio: I ÷ 6 em cada",
+       "chegam em B: I ÷ 3 em cada",
+       "cada aresta é um resistor de 12 Ω"
+      ]
+     }
     },
     {
      "titulo": "Volta na equação",

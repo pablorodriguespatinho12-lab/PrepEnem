@@ -221,7 +221,9 @@ export const DIAGRAMAS = ['sala-quadrada', 'robo-limpando', 'canto-zoom', 'robo-
   'porta-abrindo', 'triangulo-centro', 'holofote-palco', 'trilhas-parque',
   // nível acima de Matemática (22/11/2026): components/visual/diagramas-nivel-acima.tsx
   'gramado-em-l', 'circulo-no-triangulo', 'retangulo-na-roda', 'canteiro-triangulos', 'piramide-cortada',
-  'vareta-na-caixa', 'lata-bolas', 'ladrilho-ficha', 'painel-lampadas'] as const;
+  'vareta-na-caixa', 'lata-bolas', 'ladrilho-ficha', 'painel-lampadas',
+  // nível acima de Física (23/11/2026)
+  'cubo-resistores'] as const;
 export type NomeDiagrama = (typeof DIAGRAMAS)[number];
 export interface VisualDiagrama {
   tipo: 'diagrama';

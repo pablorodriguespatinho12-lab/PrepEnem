@@ -8,7 +8,7 @@ AJUSTES = {}
 
 
 def aj(sufixo, **campos):
-    AJUSTES['d2-escada-fis-ita-' + sufixo] = campos
+    AJUSTES.setdefault('d2-escada-fis-ita-' + sufixo, {}).update(campos)
 
 
 aj('cin-00a', origem="Tempo = distância ÷ velocidade: se anda 20 m a 5 m/s, leva 20 ÷ 5 = 4 s. Para passar km/h para m/s divide-se por 3,6: 1 km/h = 1 000 m em 3 600 s, e 1 000 ÷ 3 600 = 1 ÷ 3,6. Exemplo: 36 km/h = 10 m/s. Passamos tudo para metros e segundos para as unidades baterem. O ponto · significa vezes.",
@@ -168,7 +168,9 @@ aj('ele-00c', origem="Em série: um depois do outro, mesma corrente, e as resist
 aj('ele-00d', dados=[('Resistores', '12 resistores de 12 Ω cada'), ('Montagem', 'arestas de um cubo'), ('Bateria', 'nos vértices opostos')],
    origem="Aresta é cada traço do cubo, vértice é cada ponta, e a diagonal vai de A até o vértice oposto B. Resistência equivalente é um resistor único que, com a mesma tensão, deixa passar a mesma corrente: E = U ÷ I, com I a corrente total que sai da bateria. A tensão de A até B é a soma das quedas ao longo de um caminho; a queda em cada aresta é R · (corrente nela).",
    achando=[('Achando R: a aresta', 'O enunciado dá: R = 12 Ω.'),
-            ('Achando F: a fração', 'A corrente I sai de A por 3 arestas iguais: I ÷ 3 em cada. Cada uma chega a um vértice de onde saem 2 arestas iguais: (I ÷ 3) ÷ 2 = I ÷ 6 em cada (por simetria, os 3 vértices do meio são tratados igual). As últimas 3 arestas levam I ÷ 3 cada a B.\nTensão = (I/3) · R + (I/6) · R + (I/3) · R. Mesmo número embaixo: 1/3 = 2/6, então F = 2/6 + 1/6 + 2/6 = 5/6.')],
+            ('Achando F: a fração', 'A corrente I sai de A por 3 arestas iguais: I ÷ 3 em cada. Cada uma chega a um vértice de onde saem 2 arestas iguais: (I ÷ 3) ÷ 2 = I ÷ 6 em cada (por simetria, os 3 vértices do meio são tratados igual). As últimas 3 arestas levam I ÷ 3 cada a B.\nTensão = (I/3) · R + (I/6) · R + (I/3) · R. Mesmo número embaixo: 1/3 = 2/6, então F = 2/6 + 1/6 + 2/6 = 5/6.',
+             {'tipo': 'diagrama', 'nome': 'cubo-resistores', 'rotulos': ['A', 'B', 'saem de A: I ÷ 3 em cada', 'no meio: I ÷ 6 em cada', 'chegam em B: I ÷ 3 em cada', 'cada aresta é um resistor de 12 Ω']})],
+   desenho=('Cada traço do cubo é um resistor de 12 Ω. A bateria liga os pontos A e B, as pontas de uma diagonal.', 'cubo-resistores', ['A', 'B', '', '', '', 'cada aresta é um resistor de 12 Ω']),
    volta='E = (5/6) · 12: 12 ÷ 6 = 2 e 2 · 5 = 10 Ω.\nLetra D.')
 
 
@@ -180,6 +182,9 @@ def aplicar(Q):
     for q in Q:
         a = dict(AJUSTES.get(q['id'], {}))
         motivos = a.pop('motivos', {})
+        for antigo, novo in a.pop('troca_enunciado', []):
+            assert antigo in q['enunciado'], (q['id'], antigo)
+            q['enunciado'] = q['enunciado'].replace(antigo, novo)
         q.update(a)
         if motivos:
             q['alts'] = [(t, v, motivos.get(i, m)) for i, (t, v, m) in enumerate(q['alts'])]

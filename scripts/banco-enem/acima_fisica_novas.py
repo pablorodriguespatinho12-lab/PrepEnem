@@ -17,6 +17,7 @@ SAIDA = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'revisao-fin
 LETRAS = 'ABCDE'
 sys.path.insert(0, os.path.dirname(__file__))
 from acima_fisica_ajustes import aplicar as aplicar_ajustes  # noqa: E402
+import acima_fisica_ajustes2  # noqa: E402,F401  (registra a 2ª rodada)
 
 
 def br(x):
@@ -25,6 +26,17 @@ def br(x):
         return x
     s = f'{x:,.10g}'.replace(',', ' ')
     return s.replace('.', ',')
+
+
+def origem_em_telas(origem):
+    """`origem` é um texto ou uma lista de textos: cada um vira uma tela de até 900 letras."""
+    if not origem:
+        return []
+    textos = [origem] if isinstance(origem, str) else list(origem)
+    for t in textos:
+        assert len(t) <= 900, (len(t), t[:60])
+    n = len(textos)
+    return [{'titulo': 'De onde vem cada fórmula' + (f' ({i + 1} de {n})' if n > 1 else ''), 'texto': t} for i, t in enumerate(textos)]
 
 
 def montar(q):
@@ -46,13 +58,17 @@ def montar(q):
          'visual': {'tipo': 'formulas', 'itens': [{'figura': f[0], 'nome': f[1], 'formula': f[2]} for f in q['formulas']]}},
         {'titulo': 'O que eu tenho', 'texto': 'Primeiro, tire os dados do enunciado.',
          'visual': {'tipo': 'tabela', 'titulo': 'O que eu tenho', 'cabecalho': ['Informação', 'Valor'], 'linhas': [list(d) for d in q['dados']]}},
-        *([{'titulo': 'De onde vem cada fórmula', 'texto': q['origem']}] if q.get('origem') else []),
+        *origem_em_telas(q.get('origem')),
+        *([{'titulo': 'O desenho', 'texto': q['desenho'][0], 'visual': {'tipo': 'diagrama', 'nome': q['desenho'][1], 'rotulos': q['desenho'][2]}}] if q.get('desenho') else []),
         {'titulo': 'A equação em letras',
          'texto': q['eq_texto'],
          'visual': {'tipo': 'equacao', 'formula': q['eq'], 'leitura': q['leitura'], 'letras': [{'letra': l, 'oque': o} for l, o in q['letras']]}},
     ]
-    for titulo, texto in q['achando']:
-        passos.append({'titulo': titulo, 'texto': texto})
+    for achado in q['achando']:
+        passo = {'titulo': achado[0], 'texto': achado[1]}
+        if len(achado) > 2:
+            passo['visual'] = achado[2]
+        passos.append(passo)
     volta = re.sub(r'Letra [A-E]\.', f'Letra {LETRAS[certa]}.', q['volta'])
     passos.append({'titulo': 'Volta na equação', 'texto': volta,
                    'visual': {'tipo': 'tabela', 'titulo': 'As letras', 'cabecalho': ['Letra', 'Valor'], 'linhas': [list(l) for l in q['valores']]}})
