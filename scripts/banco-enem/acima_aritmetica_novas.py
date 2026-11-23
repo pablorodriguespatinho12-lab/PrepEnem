@@ -23,10 +23,10 @@ INTRO = 'Cada fórmula é explicada, com números, no passo em que for usada. Aq
 # a) ENEM: custo com três partes que mudam
 M = 0.6 * 1.2; E = 0.25 * 0.9; O = 0.15 * 1.4; assert abs(M + E + O - 1.155) < 1e-9
 Q.append(dict(
-    id='d2-escada-mat-ita-ari-00a', intro_formulas=INTRO, materia='Matemática', tema=T, calc=15.5, pos=1,
+    id='d2-escada-mat-ita-ari-00a', ancora='forte · Fuvest 2025 q.33 (medicamento: custo por componente com variação percentual de cada um, em tabela)', intro_formulas=INTRO, materia='Matemática', tema=T, calc=15.5, pos=1,
     enunciado=('Uma cooperativa produz suco em garrafas. No mês passado, o custo de produção de cada garrafa se dividia assim: 60% em matéria-prima (as frutas), '
                '25% em embalagem e 15% em outros gastos (energia e transporte). Neste mês, o preço das frutas subiu 20%, o preço da embalagem caiu 10% e os outros '
-               'gastos subiram 40%. A gerente quer saber em quantos por cento o custo total de uma garrafa mudou em relação ao mês passado. '
+               'gastos subiram 40%. A gerente quer saber em quantos por cento o custo total de uma garrafa mudou em relação ao mês passado, para decidir se o preço de venda precisa subir. Os gastos com energia e transporte entram em "outros". '
                'A variação do custo total, em %, foi um aumento de:'),
     dados=[('Frutas', '60% do custo; subiu 20%'), ('Embalagem', '25% do custo; caiu 10%'), ('Outros gastos', '15% do custo; subiu 40%')],
     alts=[('15,5', 15.5, 'OK'),
@@ -55,7 +55,7 @@ Q.append(dict(
 # b) ITA: mistura com duas trocas
 A1 = 0.32 * 40; A2 = A1 * 0.75; A3 = A2 * 0.75; assert abs(A3 - 7.2) < 1e-9 and abs(A3 / 40 * 100 - 18) < 1e-9
 Q.append(dict(
-    id='d2-escada-mat-ita-ari-00b', intro_formulas=INTRO, materia='Matemática', tema=T, calc=18, pos=3,
+    id='d2-escada-mat-ita-ari-00b', ancora='sem · não há real de mistura ou diluição no repositório (técnica clássica de ITA)', intro_formulas=INTRO, materia='Matemática', tema=T, calc=18, pos=3,
     enunciado=('Um tanque tem 40 L de uma mistura de água e álcool, com 32% de álcool. Retiram-se 10 L da mistura, que são jogados fora, e o tanque é completado com 10 L de água pura, '
                'mexendo bem. A operação é repetida uma segunda vez, do mesmo jeito. Qual é, em %, a porcentagem de álcool na mistura final?'),
     dados=[('Volume do tanque', '40 L'), ('Álcool no início', '32%'), ('Cada troca', 'sai 10 L, entra 10 L de água'), ('Trocas', '2')],
@@ -84,7 +84,7 @@ Q.append(dict(
 # c) Fuvest: parcelas iguais com juros sobre o saldo
 P = 2310 / 2.1; assert abs(P - 1100) < 1e-9 and abs((2100 - 1100) * 1.1 - 1100) < 1e-9
 Q.append(dict(
-    id='d2-escada-mat-ita-ari-00c', intro_formulas=INTRO, materia='Matemática', tema=T, calc=1100, pos=0,
+    id='d2-escada-mat-ita-ari-00c', ancora='parcial · ENEM 2022 q.140 (geladeira: preço à vista e a prazo com acréscimo percentual)', intro_formulas=INTRO, materia='Matemática', tema=T, calc=1100, pos=0,
     enunciado=('Um notebook custa R$ 2 100 à vista. A loja oferece pagá-lo em duas parcelas iguais: a primeira no ato da compra (a entrada) e a segunda 30 dias depois. '
                'Sobre o que ainda se deve depois da entrada, a loja cobra juros de 10% ao mês. Qual é o valor de cada parcela, em reais?'),
     dados=[('Preço à vista', 'R$ 2 100'), ('Parcelas', '2 iguais: entrada e 30 dias depois'), ('Juros', '10% ao mês, sobre o saldo devedor')],
@@ -113,7 +113,7 @@ Q.append(dict(
 # d) Harvard-MIT: porcentagens em cadeia entre três pessoas
 assert abs(265 / 2.65 - 100) < 1e-9 and abs(1.2 * 0.75 - 0.9) < 1e-9
 Q.append(dict(
-    id='d2-escada-mat-ita-ari-00d', intro_formulas=INTRO, materia='Matemática', tema=T, calc=100, pos=2,
+    id='d2-escada-mat-ita-ari-00d', ancora='parcial · ENEM 2022 q.149 (variação percentual encadeada); estilo Harvard–MIT', intro_formulas=INTRO, materia='Matemática', tema=T, calc=100, pos=2,
     enunciado=('Ana tem 20% a mais de figurinhas do que Bia. Bia tem 25% a menos de figurinhas do que Caio. Os três juntos têm 265 figurinhas. Quantas figurinhas tem Caio?'),
     dados=[('Ana', '20% a mais que Bia'), ('Bia', '25% a menos que Caio'), ('Total dos três', '265 figurinhas')],
     alts=[('75', 75, 'Deu a quantidade de Bia (75% da de Caio)'),

@@ -19,6 +19,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from acima_fisica_ajustes import aplicar as aplicar_ajustes  # noqa: E402
 import acima_fisica_ajustes2  # noqa: E402,F401  (registra a 2ª rodada)
 import acima_fisica_ajustes3  # noqa: E402,F401  (registra a 3ª rodada)
+import acima_fisica_ajustes4  # noqa: E402,F401  (âncora real e contexto das ENEM)
 
 
 def br(x):
@@ -81,6 +82,7 @@ def montar(q):
     c = q['checagem']
     return {
         'id': q['id'], 'materia': q.get('materia', 'Física'), 'tema': q['tema'], 'nivel': 'acima', 'origem': 'Escada',
+        **({'ancora': q['ancora']} if q.get('ancora') else {}),
         'enunciado': f"{q['enunciado']}\n\nDados: {dados}.",
         **{LETRAS[i]: a[0] for i, a in enumerate(alts)}, 'resposta': LETRAS[certa],
         'explicacao': {
