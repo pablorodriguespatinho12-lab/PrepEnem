@@ -356,7 +356,7 @@ export default function FlashcardDeckPage() {
   const searchParams = useSearchParams();
   const deckId = params.deckId as string;
   // Deck virtual montado pelo cronograma (api/flashcards/decks/[id]): não se edita nem tem modo.
-  const ehDoDia = deckId === 'dia';
+  const ehDoDia = deckId === 'dia' || deckId === 'revisao';
   const { data: sessao } = useSession();
   const initialMode = (searchParams.get('mode') || 'todos') as 'todos' | 'revisar';
   const shouldReduceMotion = useReducedMotion();
@@ -622,7 +622,9 @@ export default function FlashcardDeckPage() {
             <p className="type-body text-muted-foreground mb-6">
               {cards.length === 0
                 ? ehDoDia
-                  ? 'Os cartões das matérias de hoje já foram respondidos.'
+                  ? deckId === 'revisao'
+                    ? 'Nenhum cartão para revisar hoje. Eles voltam sozinhos quando chegar o dia.'
+                    : 'Os cartões das matérias de hoje já foram respondidos.'
                   : mode === 'revisar'
                   ? 'Você não tem cards marcados para revisão!'
                   : 'Você já dominou todos os cards deste baralho!'
@@ -750,7 +752,7 @@ export default function FlashcardDeckPage() {
                     <span aria-hidden className="w-2 h-2 rounded-[var(--radius-data)]" style={{ backgroundColor: cor }} />
                     Resposta
                   </div>
-                  <p className="font-reading type-lead measure-reading text-center text-foreground font-medium">
+                  <p className="font-reading type-lead measure-reading text-center text-foreground font-medium whitespace-pre-line">
                     {currentCard.verso}
                   </p>
                   {currentCard.dica && (

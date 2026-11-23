@@ -122,8 +122,9 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   `scripts/banco-enem/lousa.py` (trava texto largo demais) e `lousas_matematica.py`. O traço **continua
   se desenhando com "reduzir movimento"** (o Chrome dele reporta reduce; é o conteúdo da aula); só saem
   deslizar, zoom e boca. Testado em 1366×768, 390×844, 360×640 e 844×390: o diálogo nunca rola.
-  Nível acima = **mais raciocínio** (escolha dele): 2 ou 3 conteúdos juntos, dado escondido, pegadinha
-  nas letras, conta curta. Antes de escrever, **procurar no banco se a ideia já existe** (minha
+  Nível acima = **difícil DE VERDADE** (Pablo, 22/11/2026: "muito fácil, muito genérico... pega a questão do ENEM e dificulta mais"): é ORIGINAL, aprendida de exemplos reais
+  (ITA, IME, Fuvest, ENEM, Oxford; as reais NÃO entram no site, Pablo 22/11/2026) e JUNTA conteúdos dos degraus anteriores (`precisaAntes`; modelo: ENEM círculos + disco = geom. plana + probabilidade); texto de prova (≥ 600 letras quando couber; as minhas tinham 220 contra 676 do ENEM), tabela ou desenho, 4+ passos, pegadinha de
+  unidade, 2 conteúdos juntos. Nunca variação curta de clássico ("nove operários"). Plano: `docs/plano-nivel-acima.md`. (Antes: "mais raciocínio... conta curta": VENCIDA.) Antes de escrever, **procurar no banco se a ideia já existe** (minha
   1ª questão de Estatística repetia a `d2-acima-mat-05`). **Palavra nova da lousa aparece primeiro como
   desenho e só depois com nome** (Pablo, 21/11/2026, "quantas filas? como assim?": a aula contava
   "filas" sem mostrar o que é uma fila nem de onde vem o 3 × 2 × 1); antes de gravar, passar o texto
@@ -144,6 +145,17 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   regra na memória no começo da sessão e escrevi 14 aulas pelo meu jeito; só depois conferi (a porcentagem
   e a média tinham que ser refeitas). Ids `d2-escada-xxx-ita-` entram no degrau ITA
   antes das antigas (`lib/prova-da-escada.ts`).
+  **ESCOPO = TODA questão de Matemática e Física (Pablo, 22/11/2026: "tudo que eu te falei para corrigir é para fazer em todos os exercícios de matemática e física... levar a sério").** Regras que valem em todas as lousas: (1) a equação vem MONTADA antes de resolver e a conta sai A PARTIR dela; (2) letra = INICIAL da palavra (T terras, D dias, C cidades; clássicas ficam: v t F m h Q U i P E, x incógnita; `lib/aula-lousa/letras.ts`); (3) **3 telas**: "as letras" (só `letra = palavra`, sem explicar), "a equação" (só ela) e "por quê" (a explicação), nunca tudo numa tela (`telasDaEquacao` em do-robo.ts); (4) fração em pé em tudo. Gerador do robô refaz as lousas; as feitas à mão (grandezas, geometria, ITA) o script NÃO sobrescreve (impressão da capa). **Molde antigo (sem equação) ainda falta: 187 lousas (Física 133, Matemática 54); piloto de 6 gravado em 22/11/2026; o resto segue `docs/aula-robo-do-antigo.md` + `scripts/aplicar-aulas-robo.ts`.** **Escada: Fácil → Médio → Difícil → Junção → ENEM → Nível acima (ITA) (Pablo: depois do ENEM "voltou para difícil"); selo "Junção" em vez de "Difícil" (`rotuloDaQuestao`).** `scripts/criar-provas-escada.ts` REGRAVA a explicação inteira (apaga lousa e letras trocadas): não rodar com --gravar sem reaplicar os scripts de lousa.
+  **Equação já montada e VISUAL (Pablo, 22/11/2026, caderno dele):** em Grandezas/regra de três a lousa
+  não usa "equação em letras": tabela com os dados um embaixo do outro (antes em cima, agora embaixo),
+  uma tela por coluna (direta ou inversa do x), a equação DESENHADA em frações empilhadas, a
+  simplificação também desenhada (nunca "8/10 = 4/5" em texto corrido), VOLTA no quadro da equação já
+  simplificada e as setinhas ↑ "inversa/direta" nas frações. Gerador `lib/aula-lousa/regra-de-tres.ts`,
+  fichas em `data/lousas/regra-de-tres.ts` (6 questões). **Princípio para as outras matérias**
+  (geometria etc., "mesmo quando a questão não dá valores"): ler o que a questão pede, DESENHAR a figura
+  (quadrado, triângulo...), marcar os lados/altura/diagonal com o nome ou o valor, montar a equação a
+  partir dos lados e deixar a figura pequena no canto enquanto a conta roda. Exemplo dele: quadrado de
+  lado l, diagonal desenhada, l√2. **Fração sempre em pé (Pablo, 22/11/2026, tela "juntando as frações": "coloca a equação em pé, mesmo somando ou só multiplicando em partes, em todos os quadros"):** texto `a/b` de equação (tem "=" ou é fração sozinha) é desenhado cima-traço-baixo na hora de mostrar (`lib/aula-lousa/fracoes.ts`, `components/aula-lousa/texto-com-fracoes.tsx`), em TODAS as lousas, gravadas ou novas; `espaco.ts` empurra as linhas para baixo e encolhe se não couber. Frase com 9/10 fica texto. Não escrever fração como "a/b" em frase de equação sem "="; raiz com letra "L√3/2" e soma "(4+3+2)/12" entram inteiras em cima da barra. Geometria: 1ª lousa gravada em 22/11/2026 (aspersor `d2-banco-mat-p26-07`; `lib/aula-lousa/geometria.ts`, `data/lousas/geometria.ts`; pelo aluno-do-zero: 'ao quadrado' = vezes ele mesmo, D único, L maiúsculo, caso de número antes da letra, ≤300 letras de fala por tela). Falta o ok do Pablo para as outras.
 
 ## Conteúdo gerado por IA
 - **Explicação = o artefato dos peixes (Pablo, 22/10/2026: "perfeito, fala

@@ -5,7 +5,7 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { ChevronLeft, Trophy, Loader2, ArrowRight, Target, Brain, AlertCircle, Check, X } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
-import { ETAPA_LABEL, etapaDaQuestao } from '@/lib/treino-etapas';
+import { etapaDaQuestao, rotuloDaQuestao } from '@/lib/treino-etapas';
 import { PaginaDaProva } from '@/components/pagina-da-prova';
 import { ImagemIndisponivel } from '@/components/pdf-page-viewer';
 import { semMarcaDeImagem } from '@/lib/enunciado-sem-alternativas';
@@ -452,7 +452,7 @@ export default function ProvaDetailPage() {
             </span>
             {/* Nível da questão (Pablo, 03/11/2026: "cadê o nível das questões?"). */}
             <span className="type-caption px-2 py-0.5 rounded-[var(--radius-data)] bg-muted text-foreground font-medium">
-              {reforcoAtivo ? 'Reforço · estilo ENEM' : etapaDaQuestao(q) === 'enem' && q.anoProva ? `ENEM ${q.anoProva} · questão real` : ETAPA_LABEL[etapaDaQuestao(q)]}
+              {reforcoAtivo ? 'Reforço · estilo ENEM' : etapaDaQuestao(q) === 'enem' && q.anoProva ? `ENEM ${q.anoProva} · questão real` : rotuloDaQuestao(q)}
             </span>
             {q.subtema && (
               <>

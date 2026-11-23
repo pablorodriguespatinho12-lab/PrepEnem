@@ -66,6 +66,12 @@ apareceu num trace.
   com prioridade maior que a da regra (`html body .mundo-pixel[data-animado="sim"] ...`),
   senão o teste não vale.
 
+- **Lousa de aula (22/11/2026, "melhora a fluidez deles")**: o desenho da lousa custa ~30 ms em 6 s; o que pesava era o mundo pixel
+  ATRÁS dela (tarefa 1.441 ms, estilo 627 ms, CPU 4x). Pausar com `animation-play-state` não bastou (as regras `!important` do mundo
+  ganham na especificidade: 1.036 ms); `visibility: hidden` piorou (1.742 ms); `content-visibility: hidden` deu **532 ms** e
+  não mexe no layout. Agora a lousa põe `data-lousa-aberta` no `<html>` (globals.css). Script de medição: rAF + `Performance.getMetrics`
+  com CPU 4x; achar o culpado escondendo um suspeito por vez, como acima.
+
 ## Regras para animação nova
 
 - Animação contínua (loop, fundo, 3D) precisa **parar quando ninguém vê**:

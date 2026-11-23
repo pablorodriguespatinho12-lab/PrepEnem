@@ -1,0 +1,831 @@
+[
+ {
+  "g": "Degrau 2",
+  "t": "A volta da entregadora",
+  "tags": [
+   "Grandezas + aritmética",
+   "Degraus 2 + 1",
+   "Estilo principal: Harvard (com toques dos outros 3)",
+   "Âncora real: ENEM 2022 q.138: tudo na mesma unidade de tempo antes de contar"
+  ],
+  "enun": "Uma entregadora sai da loja, vai de moto até um condomínio e volta pelo mesmo caminho. O trajeto de ida mede 18 000 m. Por causa da chuva, ela fez a ida a 45 km/h e a volta a 30 km/h. No condomínio, ficou parada 12 minutos esperando o cliente descer. O aplicativo da loja registra a velocidade média de cada entrega contando o tempo desde a saída até a volta à loja, com a parada inclusa. A velocidade média registrada nessa entrega, em km/h, foi:",
+  "tabela": [
+   [
+    "Trecho",
+    "Distância",
+    "Velocidade"
+   ],
+   [
+    "Ida",
+    "18 000 m",
+    "45 km/h"
+   ],
+   [
+    "Parada",
+    "0",
+    "12 min parada"
+   ],
+   [
+    "Volta",
+    "18 000 m",
+    "30 km/h"
+   ]
+  ],
+  "alts": [
+   "25",
+   "30",
+   "32,1",
+   "36",
+   "37,5"
+  ],
+  "certa": 1,
+  "erros": {
+   "0": "Fez a média de 45, 30 e 0, como se cada fase durasse igual.",
+   "2": "Escreveu 12 min como 0,12 h.",
+   "3": "Esqueceu a parada: 36 km em 1 h.",
+   "4": "Média simples de 45 e 30."
+  },
+  "passos": [
+   [
+    "Tudo em km e em horas",
+    "18 000 m ÷ 1 000 = 18 km. Tempo = distância ÷ velocidade. Tempo = distância ÷ velocidade. Tempo = distância ÷ velocidade. Ida: 18 ÷ 45 = 0,4 h (confira: 45 · 0,4 = 18). Volta: 18 ÷ 30 = 0,6 h (30 · 0,6 = 18). Em minutos: 0,4 · 60 = 24 min e 0,6 · 60 = 36 min."
+   ],
+   [
+    "Tempo total",
+    "A parada está em minutos: 12 ÷ 60 = 0,2 h (e não 0,12). Total: 0,4 + 0,2 + 0,6 = 1,2 h. Conferindo em minutos: 24 + 12 + 36 = 72 min, e 72 ÷ 60 = 1,2 h."
+   ],
+   [
+    "Distância total",
+    "Ida e volta: 18 + 18 = 36 km."
+   ],
+   [
+    "Média",
+    "Distância total ÷ tempo total: 36 ÷ 1,2. Para tirar a vírgula, multiplique os dois por 10: 360 ÷ 12 = 30 km/h."
+   ],
+   [
+    "Por que não é a média das velocidades",
+    "Se fosse a média, daria (45 + 30) ÷ 2 = 37,5. Mas a conta certa é distância ÷ tempo, e o tempo gasto a 30 km/h (0,6 h) é maior que o gasto a 45 km/h (0,4 h), fora a parada de 0,2 h sem andar. Por isso a média fica mais perto da velocidade lenta."
+   ]
+  ],
+  "principal": "Harvard",
+  "ancora": "ENEM 2022 q.138: tudo na mesma unidade de tempo antes de contar"
+ },
+ {
+  "g": "Degrau 2",
+  "t": "O terreno na cópia",
+  "tags": [
+   "Escala + área + unidades",
+   "Degraus 2 + 1",
+   "Estilo principal: ENEM (com toques dos outros 3)",
+   "Âncora real: ENEM 2022 q.160 (740 letras): escala 1 : 50 e margem escondida; aqui a cópia reduzida"
+  ],
+  "enun": "Uma família herdou um sítio e quer saber o tamanho dele para decidir se vende ou se mantém. Na prefeitura, recebeu a planta do sítio, desenhada na escala 1 : 25 000. A atendente avisou que a copiadora estava desregulada e que a cópia entregue saiu reduzida para 50% do tamanho da planta original, em todas as direções, sem nenhuma indicação disso no papel. Na cópia, o sítio aparece como um retângulo de 4 cm de largura por 6 cm de comprimento. Para o imposto, a prefeitura cobra R$ 12 por hectare, e o corretor lembrou que 1 hectare equivale a 10 000 m². A família vai usar a área real do terreno para calcular o valor de venda. Essa área real, em hectares, é:",
+  "tabela": [
+   [
+    "Medida",
+    "Na cópia"
+   ],
+   [
+    "Largura",
+    "4 cm"
+   ],
+   [
+    "Comprimento",
+    "6 cm"
+   ],
+   [
+    "Escala impressa",
+    "1 : 25 000"
+   ]
+  ],
+  "alts": [
+   "150",
+   "300",
+   "600",
+   "6 000",
+   "60 000"
+  ],
+  "certa": 2,
+  "erros": {
+   "0": "Ignorou a redução da cópia (usou 1 : 25 000 direto).",
+   "1": "Dobrou a área, mas lado ×2 faz a área ×4, não ×2.",
+   "3": "Passou de m² para hectare dividindo por 1 000.",
+   "4": "Passou de m² para hectare dividindo por 100."
+  },
+  "passos": [
+   [
+    "Qual é a escala de verdade",
+    "Escala 1 : 25 000 lê-se: 1 cm no papel vale 25 000 cm no chão. A cópia tem metade do tamanho (50%), então 1 cm da cópia vale 2 cm da planta, que valem 2 · 25 000 = 50 000 cm do chão. Em metros: 50 000 ÷ 100 = 500 m. Então 1 cm da cópia = 500 m."
+   ],
+   [
+    "Lados reais",
+    "4 cm · 500 = 2 000 m. 6 cm · 500 = 3 000 m."
+   ],
+   [
+    "Área em m²",
+    "2 000 · 3 000: 2 · 3 = 6 e há 3 + 3 = 6 zeros, então 6 000 000 m²."
+   ],
+   [
+    "Em hectares",
+    "1 hectare = 10 000 m² (4 zeros). Dividir por 10 000 é cortar 4 zeros do final: 6 000 000 ÷ 10 000 = 600 ha."
+   ],
+   [
+    "O que sobrou",
+    "A taxa de R$ 12 por hectare não era pedida."
+   ]
+  ],
+  "principal": "ENEM",
+  "ancora": "ENEM 2022 q.160 (740 letras): escala 1 : 50 e margem escondida; aqui a cópia reduzida"
+ },
+ {
+  "g": "Degrau 2",
+  "t": "O tanque do gerador",
+  "tags": [
+   "Mistura + porcentagem",
+   "Degraus 2 + 1",
+   "Estilo principal: Fuvest (com toques dos outros 3)",
+   "Âncora real: Fuvest (repo) q.33: porcentagem com várias partes e uma condição no texto"
+  ],
+  "enun": "Um hospital de campanha, montado depois de uma enchente, usa um gerador movido a uma mistura de gasolina e etanol. O tanque do gerador tem agora 60 L da mistura, que contém 25% de etanol. O fabricante só garante o funcionamento se a mistura tiver 40% de etanol. Para corrigir a mistura, o técnico vai acrescentar apenas etanol puro (100% etanol), tirado de uma lata separada. O tanque comporta, no máximo, 100 L, e nada pode ser retirado dele durante a correção, para não entupir o filtro. Quantos litros de etanol puro o técnico deve acrescentar para que a mistura passe a ter exatamente 40% de etanol?",
+  "tabela": [
+   [
+    "Dado",
+    "Valor"
+   ],
+   [
+    "Mistura no tanque",
+    "60 L"
+   ],
+   [
+    "Etanol na mistura",
+    "25%"
+   ],
+   [
+    "Etanol desejado",
+    "40%"
+   ],
+   [
+    "Capacidade",
+    "100 L"
+   ]
+  ],
+  "alts": [
+   "9",
+   "15",
+   "24",
+   "25",
+   "36"
+  ],
+  "certa": 1,
+  "erros": {
+   "0": "15% de 60: esqueceu que o total cresce depois de acrescentar.",
+   "2": "40% de 60: esqueceu que o tanque já tinha 15 L de etanol.",
+   "3": "Supôs o tanque cheio (100 L): 40 − 15 = 25.",
+   "4": "60% de 60: pegou a parte que não é etanol."
+  },
+  "passos": [
+   [
+    "O que está no tanque",
+    "25% é 25 ÷ 100 = 25/100, e dividindo em cima e embaixo por 25 dá 1/4, então 25% de 60 = 60 ÷ 4 = 15 L de etanol, e 60 − 15 = 45 L de gasolina."
+   ],
+   [
+    "O que não muda",
+    "Só entra etanol: os 45 L de gasolina continuam 45 L."
+   ],
+   [
+    "Quanto o resto vale no fim",
+    "Chame de T o total final. Se 40% é etanol, a gasolina é o que sobra: 100% − 40% = 60% de T. E 60% = 60 ÷ 100 = 0,6. Então G = 0,6 · T, ou 45 = 0,6 · T."
+   ],
+   [
+    "Total final",
+    "T = 45 ÷ 0,6. Para dividir por 0,6, multiplique os dois por 10: 450 ÷ 6 = 75 L. Cabe nos 100 L do tanque."
+   ],
+   [
+    "O que foi acrescentado",
+    "X = T − M = 75 − 60 = 15 L. Conferindo: etanol 15 + 15 = 30 L, e 30 ÷ 75 = 0,4 = 40%."
+   ]
+  ],
+  "principal": "Fuvest",
+  "ancora": "Fuvest (repo) q.33: porcentagem com várias partes e uma condição no texto"
+ },
+ {
+  "g": "Degrau 2",
+  "t": "A caixa que enche e vaza",
+  "tags": [
+   "Vazão + frações",
+   "Degraus 2 + 1",
+   "Estilo principal: ITA (com toques dos outros 3)",
+   "Âncora real: ENEM 2022 q.137: taxa por tempo e quantidade que já existe"
+  ],
+  "enun": "Uma caixa d'água de 1 200 L está com 25% da capacidade. Há duas torneiras e um ralo, todos abertos ao mesmo tempo. A torneira A, sozinha, enche a caixa vazia em 6 horas; a torneira B, sozinha, em 4 horas. O ralo, sozinho, esvazia a caixa cheia em 12 horas. Quanto tempo leva para a caixa ficar cheia?",
+  "tabela": [
+   [
+    "Peça",
+    "Tempo sozinha"
+   ],
+   [
+    "Torneira A",
+    "enche em 6 h"
+   ],
+   [
+    "Torneira B",
+    "enche em 4 h"
+   ],
+   [
+    "Ralo",
+    "esvazia em 12 h"
+   ]
+  ],
+  "alts": [
+   "1 h 30 min",
+   "1 h 48 min",
+   "2 h 15 min",
+   "2 h 25 min",
+   "3 h"
+  ],
+  "certa": 2,
+  "erros": {
+   "0": "Somou a vazão do ralo em vez de subtrair.",
+   "1": "Esqueceu o ralo.",
+   "3": "Achou 2,25 h e leu como 2 h 25 min.",
+   "4": "Calculou para a caixa vazia (esqueceu os 25%)."
+  },
+  "passos": [
+   [
+    "Vazão de cada um (parte da caixa por hora)",
+    "Vazão é quanto a torneira enche (ou o ralo esvazia) em 1 hora. A enche a caixa em 6 h, então em 1 h enche 1/6 da caixa (\"um sexto\": 1 parte de 6 iguais). B: 1/4. O ralo esvazia, por isso conta negativo: −1/12."
+   ],
+   [
+    "Vazão junta",
+    "Para somar frações, deixe o denominador (o número de baixo) igual: 12. 1/6 = 2/12 (multiplicando em cima e embaixo por 2) e 1/4 = 3/12 (por 3). Soma: 2/12 + 3/12 − 1/12 = 4/12. E 4/12 = 1/3 (dividindo em cima e embaixo por 4)."
+   ],
+   [
+    "Quanto falta",
+    "A caixa tem 25%, faltam 100% − 25% = 75%. E 75% = 75/100 = 3/4 (dividindo por 25). Os 1 200 L do enunciado não entram: estamos falando de partes da caixa."
+   ],
+   [
+    "Tempo",
+    "T = Q ÷ V = (3/4) ÷ (1/3). Se a caixa enche 1/3 por hora, enche a caixa toda em 3 horas; então dividir por 1/3 é o mesmo que multiplicar por 3: (3/4) · 3 = 9/4 h (3 · 3 = 9 em cima, e o 4 embaixo fica). E 9 ÷ 4 = 2,25 h."
+   ],
+   [
+    "Em horas e minutos",
+    "0,25 h = 0,25 · 60 = 15 min. Então 2 h 15 min."
+   ]
+  ],
+  "principal": "ITA",
+  "ancora": "ENEM 2022 q.137: taxa por tempo e quantidade que já existe"
+ },
+ {
+  "g": "Degrau 3",
+  "t": "Os transferidos",
+  "tags": [
+   "Média ponderada",
+   "Degraus 3 + 1",
+   "Estilo principal: ENEM (com toques dos outros 3)",
+   "Âncora real: ENEM 2022 q.136 (786 letras): média ponderada de dois grupos e um dado que sobra"
+  ],
+  "enun": "Numa escola pública, o 8º A tem 30 alunos, e a média da turma na prova de Matemática do bimestre foi 5,8. No começo do bimestre seguinte, a direção recebeu 10 alunos transferidos de outras duas escolas, 5 vindos da escola X e 5 vindos da escola Y, e juntou todos numa única turma de 40 alunos. As notas dos transferidos na prova anterior não foram apagadas: a média dos 5 alunos da escola X era 7,0. Segundo o regimento, a turma só é considerada aprovada no bimestre se a média dos 40 alunos for exatamente 6,0 ou mais. A coordenadora quer saber qual precisa ser, no mínimo, a média dos 5 alunos vindos da escola Y para a turma chegar a 6,0, sem mexer nas notas dos alunos do 8º A. Essa média deverá ser de:",
+  "tabela": [
+   [
+    "Grupo",
+    "Alunos",
+    "Média"
+   ],
+   [
+    "8º A original",
+    "30",
+    "5,8"
+   ],
+   [
+    "Escola X",
+    "5",
+    "7,0"
+   ],
+   [
+    "Escola Y",
+    "5",
+    "?"
+   ]
+  ],
+  "alts": [
+   "5,0",
+   "5,8",
+   "6,0",
+   "6,2",
+   "6,6"
+  ],
+  "certa": 3,
+  "erros": {
+   "0": "Fez 2 · 6,0 − 7,0 e ignorou os 30 alunos.",
+   "1": "Repetiu a média da turma antiga.",
+   "2": "Repetiu a meta.",
+   "4": "Parou na média do grupo dos 10 transferidos."
+  },
+  "passos": [
+   [
+    "Pontos que a turma precisa",
+    "Média × número de alunos = pontos no total. 40 alunos · 6,0 = 240 pontos."
+   ],
+   [
+    "O que a turma antiga já tem",
+    "30 · 5,8 = 174 pontos (30 · 5 = 150 e 30 · 0,8 = 24)."
+   ],
+   [
+    "O que falta",
+    "240 − 174 = 66 pontos para os 10 transferidos. (66 ÷ 10 = 6,6: é a média que os dez precisam ter juntos.)"
+   ],
+   [
+    "Tirar a escola X",
+    "5 · 7,0 = 35. Sobram 66 − 35 = 31 pontos."
+   ],
+   [
+    "Média da escola Y",
+    "31 ÷ 5: 5 · 6 = 30, sobra 1; 1 ÷ 5 = 0,2. Então 6,2."
+   ]
+  ],
+  "principal": "ENEM",
+  "ancora": "ENEM 2022 q.136 (786 letras): média ponderada de dois grupos e um dado que sobra"
+ },
+ {
+  "g": "Degrau 3",
+  "t": "A 12ª nota",
+  "tags": [
+   "Mediana",
+   "Degraus 3 + 1",
+   "Estilo principal: ITA (com toques dos outros 3)",
+   "Âncora real: Fuvest (repo) q.34 (contar listas com mediana, média e moda): reforcei de 1 para 2 alunos faltantes, contagem de pares"
+  ],
+  "enun": "Numa turma de 11 alunos, as notas de um simulado (inteiras, de 0 a 10) estão na tabela, e a mediana foi 7. Dois alunos que tinham faltado fazem a prova depois, e a turma passa a ter 13 alunos. O professor quer que a mediana das 13 notas seja exatamente 6. A nota mínima de aprovação da escola é 6. Considerando só quais notas os dois alunos tiraram, sem importar qual aluno tirou qual (o par {5, 6} é o mesmo que {6, 5}), quantos pares de notas fazem a mediana ser exatamente 6?",
+  "tabela": [
+   [
+    "Nota",
+    "4",
+    "5",
+    "7",
+    "8",
+    "10"
+   ],
+   [
+    "Alunos",
+    "2",
+    "3",
+    "3",
+    "2",
+    "1"
+   ]
+  ],
+  "alts": [
+   "6",
+   "7",
+   "11",
+   "13",
+   "21"
+  ],
+  "certa": 1,
+  "erros": {
+   "0": "Esqueceu o par {6, 6}.",
+   "2": "Deixou a outra nota livre: um 6 e qualquer nota de 0 a 10.",
+   "3": "Contou pares ordenados: (6, k) e (k, 6) separados.",
+   "4": "Contou pares de notas de 0 a 6 sem exigir que um deles seja 6."
+  },
+  "passos": [
+   [
+    "A mediana de 13 notas",
+    "Mediana é a nota do meio, com as notas em fila da menor para a maior. Com 13 notas há 6 de cada lado e a do meio é a 7ª. (Conta: (13 + 1) ÷ 2 = 7. Com 11 notas, seria a 6ª. Com um número par de notas, a mediana é a média das duas do meio.)"
+   ],
+   [
+    "O que as 11 notas já têm",
+    "Em fila: 4, 4, 5, 5, 5, 7, 7, 7, 8, 8, 10. Estão abaixo de 6: 4, 4, 5, 5, 5 (5 notas). Ninguém tirou 6. Acima de 6 há 6 notas. A nota mínima de aprovação não entra na conta."
+   ],
+   [
+    "Para a 7ª nota ser 6",
+    "Na fila de 13, a 7ª tem de valer 6. Isso exige duas coisas: (1) antes do 6 devem ficar no máximo 6 notas (senão o 6 passa do 7º lugar), e (2) até o 6 (incluindo ele) devem ficar pelo menos 7 notas (senão o 6 não chega ao 7º lugar)."
+   ],
+   [
+    "Traduzindo para as 2 notas novas",
+    "Hoje são 5 notas abaixo de 6. (1) No máximo uma das novas pode ser menor que 6 (5 + 1 = 6 cabe; 5 + 2 = 7 não cabe). (2) Até o 6 hoje há 5 notas; para chegar a 7, as duas novas têm de ser menores ou iguais a 6 (≤ lê-se \"menor ou igual a\")."
+   ],
+   [
+    "Juntando",
+    "As duas notas são ≤ 6, e no máximo uma é menor que 6. Então pelo menos uma é exatamente 6."
+   ],
+   [
+    "Contar",
+    "Os pares são: {6, 6} (1 par) e {6, outra nota de 0 a 5} (6 pares, porque há 6 notas de 0 a 5). Total: D + U = 1 + 6 = 7 pares."
+   ]
+  ],
+  "principal": "ITA",
+  "ancora": "Fuvest (repo) q.34 (contar listas com mediana, média e moda): reforcei de 1 para 2 alunos faltantes, contagem de pares"
+ },
+ {
+  "g": "Degrau 3",
+  "t": "Reajuste e abono",
+  "tags": [
+   "Média e desvio-padrão + porcentagem",
+   "Degraus 3 + 1",
+   "Estilo principal: Fuvest (com toques dos outros 3)",
+   "Âncora real: ENEM 2021 q.173 (1 205 letras): média e desvio-padrão juntos, comparados com o tamanho da média"
+  ],
+  "enun": "Uma empresa tem 8 funcionários. Hoje, o salário médio é R$ 2 500 e o desvio-padrão dos salários é R$ 300. O sindicato negociou, para janeiro, um reajuste de 8% sobre todos os salários e, depois que o reajuste for aplicado, um abono fixo de R$ 150, pago igualmente a todos. Os 8 funcionários continuam os mesmos. A diretoria quer divulgar o novo salário médio e o novo desvio-padrão. Dados esses valores, o par (média ; desvio-padrão) correto, depois do reajuste e do abono, é:",
+  "tabela": [
+   [
+    "Hoje",
+    "Valor"
+   ],
+   [
+    "Salário médio",
+    "R$ 2 500"
+   ],
+   [
+    "Desvio-padrão",
+    "R$ 300"
+   ],
+   [
+    "Reajuste",
+    "8%"
+   ],
+   [
+    "Abono (depois)",
+    "R$ 150"
+   ]
+  ],
+  "alts": [
+   "(R$ 2 850 ; R$ 324)",
+   "(R$ 2 850 ; R$ 474)",
+   "(R$ 2 850 ; R$ 300)",
+   "(R$ 2 700 ; R$ 324)",
+   "(R$ 2 862 ; R$ 324)"
+  ],
+  "certa": 0,
+  "erros": {
+   "1": "Somou o abono ao desvio: 324 + 150.",
+   "2": "Disse que o desvio não muda, mas o reajuste de 8% muda.",
+   "3": "Esqueceu o abono.",
+   "4": "Pôs o abono antes do reajuste; o enunciado diz depois."
+  },
+  "passos": [
+   [
+    "O reajuste multiplica tudo",
+    "Reajuste de 8%: 100% + 8% = 108% = 1,08. Cada salário vira 1,08 vez o que era. Média: 2 500 · 1,08 = 2 500 + 8% de 2 500 = 2 500 + 200 = 2 700. O desvio-padrão (o quanto os salários se espalham em torno da média) também é multiplicado: 300 · 1,08 = 300 + 24 = 324. Exemplo: 1 000 e 1 200 têm distância 200; com reajuste de 8% viram 1 080 e 1 296... e a distância cresce para 216 (200 · 1,08)."
+   ],
+   [
+    "O abono soma o mesmo valor em todos",
+    "Todos sobem 150, então a média sobe 150: 2 700 + 150 = 2 850. (Os 8 funcionários não entram na conta.)"
+   ],
+   [
+    "O abono não muda o espalhamento",
+    "Exemplo com 2 salários, 1 000 e 1 200: a distância entre eles é 200. Somando 150 a cada um, ficam 1 150 e 1 350, e a distância continua 200. Por isso o desvio continua 324."
+   ],
+   [
+    "Resposta",
+    "(R$ 2 850 ; R$ 324). As outras erram assim: 474 soma o abono ao desvio; 300 esquece que o reajuste muda o desvio; 2 700 esquece o abono; 2 862 põe o abono antes do reajuste."
+   ]
+  ],
+  "principal": "Fuvest",
+  "ancora": "ENEM 2021 q.173 (1 205 letras): média e desvio-padrão juntos, comparados com o tamanho da média"
+ },
+ {
+  "g": "Degrau 3",
+  "t": "Vendas do trimestre",
+  "tags": [
+   "Média + porcentagem sucessiva",
+   "Degraus 3 + 1",
+   "Estilo principal: Harvard (com toques dos outros 3)",
+   "Âncora real: ENEM 2021 q.157: +10% e −10% não se anulam; aqui +25% e −20% se anulam"
+  ],
+  "enun": "Uma padaria vendeu em abril 25% a mais do que em março. Em maio, vendeu 20% a menos do que em abril. Nos três meses, a média mensal de vendas foi de R$ 6 500, e a padaria gastou R$ 800 por mês com embalagens. O valor vendido em abril foi:",
+  "tabela": [
+   [
+    "Mês",
+    "Comparação"
+   ],
+   [
+    "Março",
+    "base"
+   ],
+   [
+    "Abril",
+    "25% a mais que março"
+   ],
+   [
+    "Maio",
+    "20% a menos que abril"
+   ]
+  ],
+  "alts": [
+   "R$ 6 000",
+   "R$ 6 500",
+   "R$ 7 500",
+   "R$ 7 800",
+   "R$ 8 125"
+  ],
+  "certa": 2,
+  "erros": {
+   "0": "Parou no valor de março.",
+   "1": "Respondeu a própria média.",
+   "3": "Aplicou os 20% sobre a média.",
+   "4": "Aplicou os 25% sobre a média."
+  },
+  "passos": [
+   [
+    "Tudo em função de março (M)",
+    "Abril = 1,25 · M (25% a mais: 100% + 25% = 125% = 1,25)."
+   ],
+   [
+    "Maio",
+    "Maio = 0,8 · 1,25 · M (20% a menos: 100% − 20% = 80% = 0,8). Como 0,8 · 1,25 = 1 (8 · 125 = 1 000, com 3 casas decimais: 1,000), maio = 1 · M. Subir 25% e cair 20% se cancela."
+   ],
+   [
+    "Soma dos três meses",
+    "M + 1,25 · M + M = 3,25 · M. A soma também é 3 · 6 500 = 19 500."
+   ],
+   [
+    "Março",
+    "3,25 · M = 19 500, então M = 19 500 ÷ 3,25. Tirando as vírgulas (multiplicando os dois por 100): 1 950 000 ÷ 325. Como 325 · 6 = 1 950, então 325 · 6 000 = 1 950 000, e M = 6 000."
+   ],
+   [
+    "Abril",
+    "1,25 · 6 000 = 6 000 + 1 500 = 7 500. (Os R$ 800 de embalagens não entram.)"
+   ]
+  ],
+  "principal": "Harvard",
+  "ancora": "ENEM 2021 q.157: +10% e −10% não se anulam; aqui +25% e −20% se anulam"
+ },
+ {
+  "g": "Degrau 4",
+  "t": "O cofrinho",
+  "tags": [
+   "Sistema com 3 incógnitas",
+   "Degraus 4 + 1",
+   "Estilo principal: ITA (com toques dos outros 3)",
+   "Âncora real: ITA 2025 q.7: sistema linear; aqui com uma relação \"o dobro\" entre incógnitas"
+  ],
+  "enun": "Num cofrinho há apenas moedas de 25 centavos, de 50 centavos e de 1 real. Ao todo são 36 moedas, que somam R$ 22,00. A quantidade de moedas de 25 centavos é o dobro da quantidade de moedas de 50 centavos. Para pagar um lanche, o dono vai usar todas as moedas de 1 real. Quantas moedas de 1 real há no cofrinho?",
+  "tabela": [
+   [
+    "Moeda",
+    "Quantidade"
+   ],
+   [
+    "25 centavos",
+    "o dobro da de 50"
+   ],
+   [
+    "50 centavos",
+    "?"
+   ],
+   [
+    "1 real",
+    "?"
+   ],
+   [
+    "Total",
+    "36 moedas, R$ 22,00"
+   ]
+  ],
+  "alts": [
+   "7",
+   "14",
+   "15",
+   "18",
+   "22"
+  ],
+  "certa": 2,
+  "erros": {
+   "0": "Achou a quantidade de moedas de 50 centavos.",
+   "1": "Achou a de 25 centavos.",
+   "3": "Metade das moedas (36 ÷ 2).",
+   "4": "Respondeu o valor total."
+  },
+  "passos": [
+   [
+    "Uma letra para cada",
+    "Moedas de 50 centavos (meio real): m. De 25 centavos (um quarto do real): 2m, o dobro. De 1 real (um real): u."
+   ],
+   [
+    "Total de moedas",
+    "2m + m + u = 36, então u = 36 − 3m."
+   ],
+   [
+    "Total em reais",
+    "25 centavos = 0,25 real e 50 centavos = 0,5 real. Então 0,25 · 2m + 0,5 · m + u = 22. Como 0,25 · 2m = 0,5m, fica 0,5m + 0,5m + u = 22, ou seja, m + u = 22."
+   ],
+   [
+    "Juntar",
+    "Troque u por 36 − 3m: m + 36 − 3m = 22. Como m − 3m = −2m, fica 36 − 2m = 22. Então 2m é o que falta de 36 para chegar a 22: 36 − 22 = 14. Assim 2m = 14 e m = 7."
+   ],
+   [
+    "Voltar",
+    "u = 36 − 3 · 7 = 36 − 21 = 15. Conferindo: 25 centavos: 2m = 14 moedas, 14 · 0,25 = 3,50; 50 centavos: 7 · 0,5 = 3,50; 1 real: 15. Soma 22,00."
+   ]
+  ],
+  "principal": "ITA",
+  "ancora": "ITA 2025 q.7: sistema linear; aqui com uma relação \"o dobro\" entre incógnitas"
+ },
+ {
+  "g": "Degrau 4",
+  "t": "As duas aplicações",
+  "tags": [
+   "Sistema + porcentagem",
+   "Degraus 4 + 1",
+   "Estilo principal: ENEM (com toques dos outros 3)",
+   "Âncora real: ENEM 2022 q.140 (649 letras): taxa sobre um valor, não sobre outro"
+  ],
+  "enun": "Uma professora aposentada recebeu uma indenização de R$ 12 000 e decidiu dividi-la em duas aplicações, sem deixar nada parado na conta. A aplicação A é uma poupança que rende 1% ao mês, sem taxa nenhuma. A aplicação B é um fundo que rende 2% ao mês, mas o banco cobra uma taxa de administração de 10% sobre o rendimento do mês dessa aplicação (a poupança não tem taxa). A professora diz que, no primeiro mês, os rendimentos líquidos das duas aplicações, já descontada a taxa do fundo, somaram R$ 160. O gerente comentou que a tarifa de manutenção da conta, de R$ 15 por mês, é cobrada à parte e não entra nessa soma. Com base nessas informações, o valor aplicado no fundo B foi:",
+  "tabela": [
+   [
+    "Aplicação",
+    "Rende",
+    "Taxa"
+   ],
+   [
+    "A",
+    "1% ao mês",
+    "nenhuma"
+   ],
+   [
+    "B",
+    "2% ao mês",
+    "10% do rendimento"
+   ]
+  ],
+  "alts": [
+   "R$ 4 000",
+   "R$ 5 000",
+   "R$ 6 000",
+   "R$ 7 000",
+   "R$ 8 000"
+  ],
+  "certa": 1,
+  "erros": {
+   "0": "Esqueceu a taxa de 10% da B.",
+   "2": "Dividiu os 12 000 por 2.",
+   "3": "Respondeu quanto foi para a A.",
+   "4": "160 ÷ 0,02: pôs todo o rendimento na B."
+  },
+  "passos": [
+   [
+    "Quanto a B rende de verdade",
+    "Rendimento é o que a aplicação rende; líquido é o que sobra depois da taxa. A taxa é de 10% sobre o rendimento, então sobra 90% = 0,9 dele. Como 2% = 2 ÷ 100 = 0,02, o rendimento líquido é 0,02 · 0,9 = 0,018 (2 · 9 = 18, com 3 casas decimais), ou 1,8%."
+   ],
+   [
+    "Sistema",
+    "Sistema é um par de equações que valem juntas. A + B = 12 000 (tudo foi aplicado) e 0,01 · A + 0,018 · B = 160 (os rendimentos)."
+   ],
+   [
+    "Trocar A",
+    "Da 1ª: A = 12 000 − B. Troque A na 2ª: 0,01 · (12 000 − B) + 0,018 · B = 160. O 0,01 multiplica cada parte do parêntese: 0,01 · 12 000 = 120 (1% de 12 000) e 0,01 · B. Fica 120 − 0,01 B + 0,018 B = 160."
+   ],
+   [
+    "Resolver",
+    "−0,01 B + 0,018 B = 0,008 B. Então 120 + 0,008 B = 160, 0,008 B = 160 − 120 = 40 e B = 40 ÷ 0,008. Multiplicando os dois por 1 000 para tirar a vírgula: 40 000 ÷ 8 = 5 000."
+   ],
+   [
+    "Conferir",
+    "A tem 7 000 e rende 70. B rende 100, líquido 90. 70 + 90 = 160. (A tarifa de R$ 15 não entra.)"
+   ]
+  ],
+  "principal": "ENEM",
+  "ancora": "ENEM 2022 q.140 (649 letras): taxa sobre um valor, não sobre outro"
+ },
+ {
+  "g": "Degrau 4",
+  "t": "Dois planos de celular",
+  "tags": [
+   "Inequação por partes",
+   "Degraus 4 + 1",
+   "Estilo principal: Fuvest (com toques dos outros 3)",
+   "Âncora real: ENEM 2021 q.176: preço por partes (franquia + excedente)"
+  ],
+  "enun": "Uma pessoa está comparando dois planos de celular só pelo que gasta com ligações, porque a internet é igual nos dois. Plano A: R$ 30 por mês, com 60 minutos de ligações incluídos; cada minuto além disso custa R$ 0,75. Plano B: R$ 54 por mês, com 120 minutos incluídos; cada minuto além disso custa R$ 0,50. Ela fala t minutos por mês, com t inteiro, e quer saber a partir de quando o plano B compensa. O menor valor de t para o qual o plano B fica estritamente mais barato do que o A é:",
+  "tabela": [
+   [
+    "Plano",
+    "Mensalidade",
+    "Incluído",
+    "Minuto extra"
+   ],
+   [
+    "A",
+    "R$ 30",
+    "60 min",
+    "R$ 0,75"
+   ],
+   [
+    "B",
+    "R$ 54",
+    "120 min",
+    "R$ 0,50"
+   ]
+  ],
+  "alts": [
+   "36",
+   "92",
+   "93",
+   "120",
+   "156"
+  ],
+  "certa": 2,
+  "erros": {
+   "0": "Usou t > 36, que só vale depois dos 120 minutos.",
+   "1": "Parou na igualdade (92): \"mais barato\" pede estritamente menor.",
+   "3": "Pegou os 120 minutos incluídos do B.",
+   "4": "Contou os 60 minutos incluídos nos dois planos."
+  },
+  "passos": [
+   [
+    "Quanto custa cada plano",
+    "Até 60 min: A = 30 e B = 54, então B não compensa. Depois dos 60, A cobra 0,75 por minuto além (o excedente): com t = 70, são 70 − 60 = 10 minutos além, e A custa 30 + 0,75 · 10 = 37,50. O plano B fica em 54 até 120 min."
+   ],
+   [
+    "Entre 60 e 120 min",
+    "B custa 54. A passa de 54 quando 0,75 · (t − 60) > 24 (24 = 54 − 30; \">\" lê-se \"maior que\"). Então t − 60 > 24 ÷ 0,75. Multiplicando os dois por 100: 2 400 ÷ 75 = 32 (conferindo: 0,75 · 32 = 24), isto é, t > 92."
+   ],
+   [
+    "Em t = 92",
+    "A = 30 + 0,75 · 32 = 54 = B. Empate: B ainda não é mais barato."
+   ],
+   [
+    "Em t = 93",
+    "A = 30 + 0,75 · 33 = 54,75 e B = 54. B é mais barato."
+   ],
+   [
+    "Acima de 120 min",
+    "Os dois cobram excedente. A = 30 + 0,75 · (t − 60). Abrindo o parêntese: 0,75 · t − 0,75 · 60 = 0,75 t − 45, então A = 30 + 0,75 t − 45 = 0,75 t − 15. B = 54 + 0,5 · (t − 120) = 54 + 0,5 t − 60 = 0,5 t − 6 (0,5 · 120 = 60). A − B = 0,25 t − 9, que é positivo para t acima de 36; então B continua mais barato."
+   ],
+   [
+    "Resposta",
+    "t = 93."
+   ]
+  ],
+  "principal": "Fuvest",
+  "ancora": "ENEM 2021 q.176: preço por partes (franquia + excedente)"
+ },
+ {
+  "g": "Degrau 4",
+  "t": "Pesando em pares",
+  "tags": [
+   "Sistema + amplitude",
+   "Degraus 4 + 3",
+   "Estilo principal: Harvard (com toques dos outros 3)",
+   "Âncora real: IME 2024 q.4: soma e produto das raízes; o truque é não resolver cada incógnita"
+  ],
+  "enun": "No check-in, uma balança só marca pesos a partir de 20 kg. Por isso, uma família pesou três volumes (a mala M, a caixa C e a bolsa B) dois a dois: M com C deu 22 kg, M com B deu 26 kg e C com B deu 30 kg. A companhia aérea aceita até 32 kg por volume. A diferença, em kg, entre o volume mais pesado e o mais leve é:",
+  "tabela": [
+   [
+    "Par",
+    "Peso juntos"
+   ],
+   [
+    "M + C",
+    "22 kg"
+   ],
+   [
+    "M + B",
+    "26 kg"
+   ],
+   [
+    "C + B",
+    "30 kg"
+   ]
+  ],
+  "alts": [
+   "4",
+   "8",
+   "9",
+   "17",
+   "39"
+  ],
+  "certa": 1,
+  "erros": {
+   "0": "Metade da diferença 30 − 22.",
+   "2": "Achou o mais leve (9 kg) e parou.",
+   "3": "Achou o mais pesado (17 kg) e parou.",
+   "4": "Respondeu o peso dos três juntos."
+  },
+  "passos": [
+   [
+    "Os três juntos",
+    "Somar as três pesagens: 22 + 26 + 30 = 78. Cada volume apareceu duas vezes, então M + C + B = 78 ÷ 2 = 39 kg."
+   ],
+   [
+    "Cada um",
+    "22 é mala + caixa, então a bolsa é o que sobra: B = 39 − 22 = 17. 26 é mala + bolsa: C = 39 − 26 = 13. 30 é caixa + bolsa: M = 39 − 30 = 9."
+   ],
+   [
+    "O mais pesado e o mais leve",
+    "17 (a bolsa) é o maior e 9 (a mala) é o menor."
+   ],
+   [
+    "Diferença",
+    "17 − 9 = 8 kg. (Os 20 kg da balança e os 32 kg da companhia não entram.)"
+   ],
+   [
+    "Atalho",
+    "D = (caixa + bolsa) − (mala + caixa) = 30 − 22 = 8. A caixa aparece nos dois e se corta (tira-se dos dois lados), e sobra bolsa − mala. Dá para chegar sem resolver o sistema."
+   ]
+  ],
+  "principal": "Harvard",
+  "ancora": "IME 2024 q.4: soma e produto das raízes; o truque é não resolver cada incógnita"
+ }
+]

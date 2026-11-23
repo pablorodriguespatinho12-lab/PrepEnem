@@ -5,6 +5,8 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { situacaoDoCartao, type RespostaCartao } from '@/lib/flashcard-dominio';
 import { escolherCartoesDoDia } from '@/lib/flashcards-dia';
+import { escolherRevisao } from '@/lib/flashcards-revisao';
+import { cartoesRespondidos } from '@/lib/flashcards-revisao-servidor';
 import { getCycleInfoForDay } from '@/lib/schedule-data';
 import { getActiveStudyDay } from '@/lib/study-progress';
 import { cotasDoDia } from '@/lib/treino-etapas';
@@ -13,7 +15,22 @@ import { deveManterOrdem, ordenarParaEstudo } from '@/lib/flashcards/ordem-fixa'
 // Deck virtual "dia": 10 cartões de cada matéria do treino de hoje, montado na
 // hora a partir dos decks padrão e dos do usuário (lib/flashcards-dia.ts).
 const DECK_DO_DIA = 'dia';
+const DECK_REVISAO = 'revisao';
 const CARTOES_POR_MATERIA = 10;
+
+// Deck virtual "revisao": cartões já estudados que venceram pelos intervalos (lib/flashcard-dominio.ts).
+async function deckDeRevisao(userId: string) {
+  const respondidos = await cartoesRespondidos(userId, new Date());
+  const escolhidos = escolherRevisao(respondidos).map(({ deck: _deck, ...cartao }) => cartao);
+  return {
+    deck: { id: DECK_REVISAO, nome: 'Revisão de hoje', materia: 'Revisão', subtema: null, cor: null },
+    cards: escolhidos,
+    totalCards: escolhidos.length,
+    cardsToRevise: escolhidos.filter((c) => c.precisaRevisar).length,
+    cardsAcertados: 0,
+    cardsParaHoje: escolhidos.length,
+  };
+}
 
 async function deckDoDia(userId: string) {
   const dia = await getActiveStudyDay(userId);
@@ -68,6 +85,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
     if (!user) return NextResponse.json({ error: 'Usuário não encontrado' }, { status: 404 });
 
     if (params.id === DECK_DO_DIA) return NextResponse.json(await deckDoDia(user.id));
+    if (params.id === DECK_REVISAO) return NextResponse.json(await deckDeRevisao(user.id));
 
     const { searchParams } = new URL(request.url);
     const mode = searchParams.get('mode') || 'todos'; // 'todos', 'revisar'

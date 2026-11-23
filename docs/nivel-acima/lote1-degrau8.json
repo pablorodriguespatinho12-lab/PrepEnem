@@ -1,0 +1,264 @@
+[
+ {
+  "g": "Degrau 8",
+  "t": "A ficha e o ladrilho",
+  "principal": "ENEM",
+  "tags": [
+   "Geometria plana + probabilidade",
+   "Degraus 6 + 8",
+   "Estilo principal: ENEM (com toques dos outros 3)",
+   "Âncora real: IME 2024 q.8: probabilidade por área"
+  ],
+  "enun": "Numa festa junina de bairro, o piso da quadra é de ladrilhos quadrados de 10 cm de lado, separados por rejuntes finos. Na brincadeira da calçada, o participante lança uma ficha circular de 3 cm de raio, e os pontos dependem de quantos rejuntes do ladrilho a ficha toca, como mostra a tabela. A organização garante que a ficha sempre cai com o centro dentro de um ladrilho, em qualquer ponto com a mesma chance, e que só os 4 rejuntes desse ladrilho importam (os dos ladrilhos vizinhos ficam longe demais). O prêmio do dia é uma cesta que custa R$ 80, e a ficha custa R$ 2, mas esses valores não entram na conta. Sabendo que a ficha tocou pelo menos um rejunte, a probabilidade de que o participante tenha feito exatamente 4 pontos é:",
+  "tabela": [
+   [
+    "Rejuntes tocados",
+    "Pontos"
+   ],
+   [
+    "0",
+    "10"
+   ],
+   [
+    "1",
+    "4"
+   ],
+   [
+    "2",
+    "1"
+   ]
+  ],
+  "fig": "ladrilho",
+  "nota": null,
+  "alts": [
+   "12/25",
+   "3/7",
+   "9/25",
+   "4/7",
+   "4/21"
+  ],
+  "certa": 3,
+  "erros": {
+   "0": "Esqueceu a condição: 48 em 100, sem tirar quem não tocou nada.",
+   "1": "Contou só os cantos (36/84): são os que fazem 1 ponto.",
+   "2": "Cantos sobre o ladrilho todo (36/100), sem condição.",
+   "4": "Dividiu os que não tocam (16) pelos que tocam (84)."
+  },
+  "passos": [
+   [
+    "Troque a ficha por um ponto",
+    "A ficha toca um rejunte quando o centro está a 3 cm ou menos dele. Só o centro importa. Como todo ponto do ladrilho tem a mesma chance, a probabilidade é a área da região ÷ a área do ladrilho (10 · 10 = 100 cm²)."
+   ],
+   [
+    "Não toca nenhum",
+    "O centro fica no quadrado de dentro: 10 − 3 − 3 = 4 cm de lado, área 16 (16 de 100)."
+   ],
+   [
+    "Toca dois",
+    "O centro fica a menos de 3 cm de duas bordas vizinhas: um canto de 3 · 3 = 9, e são 4 cantos: 36. (Dois rejuntes opostos não dá: 3 + 3 = 6 < 10.)"
+   ],
+   [
+    "Toca exatamente um",
+    "O que sobra: 100 − 16 − 36 = 48 (4 faixas de 3 · 4 = 12). Pela tabela, tocar exatamente 1 rejunte vale 4 pontos."
+   ],
+   [
+    "Condicional",
+    "Condicional é a chance de algo sabendo que outra coisa já aconteceu. Sabendo que tocou pelo menos um, o conjunto possível encolhe para 100 − 16 = 84. Exatamente 4 pontos = exatamente 1 rejunte = 48. Chance: 48/84 = 4/7 (dividindo em cima e embaixo por 12)."
+   ]
+  ],
+  "ancora": "IME 2024 q.8: probabilidade por área"
+ },
+ {
+  "g": "Degrau 8",
+  "t": "Campeonato do bairro",
+  "principal": "Harvard",
+  "tags": [
+   "Contagem + equação + probabilidade",
+   "Degraus 4 + 1 + 8",
+   "Estilo principal: Harvard (com toques dos outros 3)",
+   "Âncora real: Unicamp 2024 q.60 (combinatória com condição escondida no texto)"
+  ],
+  "enun": "Seis times disputaram um campeonato de bairro em turno único: todos contra todos, uma vez. Vitória vale 3 pontos; empate vale 1 ponto para cada time; derrota, nenhum. A tabela mostra a pontuação final. O jornal não publicou os resultados dos jogos. Dois jogos distintos são sorteados ao acaso entre todos os do campeonato. A probabilidade de pelo menos um deles ter terminado empatado é:",
+  "tabela": [
+   [
+    "Time",
+    "Pontos"
+   ],
+   [
+    "Tigres",
+    "12"
+   ],
+   [
+    "Raio",
+    "10"
+   ],
+   [
+    "Pelé",
+    "8"
+   ],
+   [
+    "Unidos",
+    "6"
+   ],
+   [
+    "Estrela",
+    "4"
+   ],
+   [
+    "Garra",
+    "3"
+   ]
+  ],
+  "fig": null,
+  "nota": null,
+  "alts": [
+   "1/105",
+   "2/15",
+   "9/35",
+   "4/15",
+   "26/35"
+  ],
+  "certa": 2,
+  "erros": {
+   "0": "Calculou a chance de os dois sorteados serem empates.",
+   "1": "Calculou para um jogo só.",
+   "3": "Somou 2/15 + 2/15 sem descontar quando os dois são empate.",
+   "4": "Achou a chance de nenhum empate e parou."
+  },
+  "passos": [
+   [
+    "Quantos jogos",
+    "Cada time joga contra 5 outros: 6 · 5 = 30, mas cada jogo foi contado duas vezes (uma por time), então 30 ÷ 2 = 15 jogos. (Com 3 times: 3 · 2 ÷ 2 = 3 jogos, A-B, A-C e B-C.)"
+   ],
+   [
+    "Pontos se ninguém empatasse",
+    "15 · 3 = 45. Empate dá 1 + 1 = 2 pontos, então cada empate tira 1 ponto."
+   ],
+   [
+    "Quantos empates",
+    "A tabela soma 12 + 10 + 8 + 6 + 4 + 3 = 43. Faltam 45 − 43 = 2 empates. Nem precisa saber quem empatou."
+   ],
+   [
+    "Nenhum empate nos 2 sorteados",
+    "Os 2 jogos saem dos 15 − 2 = 13 que não empataram. Escolher 2 entre 13: o 1º jogo tem 13 jeitos, o 2º tem 12, e a ordem não importa (cada par foi contado 2 vezes), então 13 · 12 ÷ 2 = 78 (escreve-se C(13,2), que se lê combinação de 13 tomados 2 a 2). Entre os 15 são 15 · 14 ÷ 2 = 105. Chance = 78/105 = 26/35 (dividindo em cima e embaixo por 3)."
+   ],
+   [
+    "Pelo menos um",
+    "1 − 26/35 = 35/35 − 26/35 = 9/35. (\"Pelo menos um\" é tudo menos \"nenhum\".)"
+   ]
+  ],
+  "ancora": "Unicamp 2024 q.60 (combinatória com condição escondida no texto)"
+ },
+ {
+  "g": "Degrau 8",
+  "t": "O exame repetido",
+  "principal": "Fuvest",
+  "tags": [
+   "Porcentagem + tabela + probabilidade",
+   "Degraus 1 + 3 + 8",
+   "Estilo principal: Fuvest (com toques dos outros 3)",
+   "Âncora real: Unicamp 2024 q.61 (pedrinhas) e ENEM 2021 q.177: chance condicional e eventos independentes"
+  ],
+  "enun": "Uma clínica aplicou um exame em 10 000 pessoas, divididas por idade como mostra a tabela. O exame dá positivo em 90% das pessoas doentes e, por engano, em 10% das sadias. Quem dá positivo repete o exame, e o resultado da repetição não depende do primeiro: vale a mesma taxa de acerto e de engano. Entre as pessoas que deram positivo nos dois exames, a porcentagem aproximada das que realmente têm a doença é:",
+  "tabela": [
+   [
+    "Faixa",
+    "Pessoas",
+    "Com a doença"
+   ],
+   [
+    "Menos de 40 anos",
+    "5 000",
+    "2%"
+   ],
+   [
+    "40 anos ou mais",
+    "5 000",
+    "10%"
+   ]
+  ],
+  "fig": null,
+  "nota": null,
+  "alts": [
+   "84%",
+   "36%",
+   "81%",
+   "90%",
+   "94%"
+  ],
+  "certa": 0,
+  "erros": {
+   "1": "Parou no 1º exame (540 de 1 480).",
+   "2": "Multiplicou 0,9 · 0,9, sem olhar as sadias.",
+   "3": "Pegou a taxa do exame como se fosse o resultado.",
+   "4": "Usou a fração de sadias da população (9 400 de 10 000)."
+  },
+  "passos": [
+   [
+    "Quantas pessoas de cada",
+    "2% de 5 000 = 5 000 ÷ 100 · 2 = 100 doentes (menos de 40 anos), e 10% de 5 000 = 500 (40 anos ou mais). A tabela diz que 2% e 10% são as pessoas com a doença. Doentes: 600. Sadias: 10 000 − 600 = 9 400."
+   ],
+   [
+    "1º exame positivo",
+    "Doentes: 90% de 600 = 600 ÷ 100 · 90 = 540. Sadias: 10% de 9 400 = 9 400 ÷ 10 = 940."
+   ],
+   [
+    "2º exame positivo",
+    "Só repete o exame quem deu positivo. Doentes: 90% de 540 = 486. Sadias: 10% de 940 = 94."
+   ],
+   [
+    "Quem tem a doença",
+    "486 ÷ (486 + 94) = 486 ÷ 580: 580 · 0,8 = 464 e sobram 22; 22 ÷ 580 é cerca de 0,04. Então é cerca de 0,84. Para virar porcentagem, multiplique por 100: 0,84 = 84%."
+   ]
+  ],
+  "ancora": "Unicamp 2024 q.61 (pedrinhas) e ENEM 2021 q.177: chance condicional e eventos independentes"
+ },
+ {
+  "g": "Degrau 8",
+  "t": "Painel de lâmpadas",
+  "principal": "ITA",
+  "tags": [
+   "Contagem + sequência + probabilidade",
+   "Degraus 4 + 1 + 8",
+   "Estilo principal: ITA (com toques dos outros 3)",
+   "Âncora real: ITA 2025 q.5 e Unesp 2025 q.85: sequência por recorrência e contagem"
+  ],
+  "enun": "Um painel tem 6 lâmpadas em fila. No teste de fábrica, cada lâmpada fica acesa ou apagada ao acaso, com chance 1/2 e sem depender das outras. Por segurança, a máquina só aprova painéis que não têm duas lâmpadas acesas lado a lado, como o da figura. Entre os painéis aprovados, a probabilidade de que tenham exatamente 3 lâmpadas acesas é:",
+  "tabela": null,
+  "fig": "lampadas",
+  "nota": "Precisa de uma aula \"Antes\": contar pela recorrência (cada resultado depende dos dois anteriores).",
+  "alts": [
+   "1/16",
+   "4/13",
+   "5/16",
+   "1/2",
+   "4/21"
+  ],
+  "certa": 4,
+  "erros": {
+   "0": "Ignorou a condição: 4 em 64 painéis.",
+   "1": "Contou 13 painéis aprovados (parou no 5º lugar).",
+   "2": "Usou C(6,3)/64 = 20/64, sem proibir vizinhas acesas.",
+   "3": "Achou que 3 de 6 é metade."
+  },
+  "passos": [
+   [
+    "Contar os aprovados",
+    "Olhe a última lâmpada. Apagada: as 5 de antes podem ser qualquer painel aprovado de 5. Acesa: a anterior tem de ser apagada, e as 4 de antes são um painel aprovado de 4. Chame de a(n) (\"a de n\") o número de painéis aprovados com n lâmpadas. Então a(6) = a(5) + a(4) e, em geral, a(n) = a(n−1) + a(n−2) (lê-se: \"a de n é a de n menos 1 mais a de n menos 2\")."
+   ],
+   [
+    "Montar a lista",
+    "Com 1 lâmpada: acesa ou apagada, a(1) = 2. Com 2: apagada-apagada, apagada-acesa e acesa-apagada (acesa-acesa não pode): a(2) = 3. Daí: a(3) = 3 + 2 = 5, a(4) = 5 + 3 = 8, a(5) = 8 + 5 = 13, a(6) = 13 + 8 = 21 painéis aprovados."
+   ],
+   [
+    "Com exatamente 3 acesas",
+    "Ponha as 3 apagadas em fila: ficam 4 vãos (antes da 1ª, 2 entre elas, depois da 3ª). Cada acesa vai num vão diferente, e assim nenhuma fica ao lado de outra. Escolher 3 vãos entre 4 é o mesmo que escolher qual vão fica vazio: 4 jeitos (escreve-se C(4,3) = 4)."
+   ],
+   [
+    "Probabilidade",
+    "4 painéis com 3 acesas em 21 aprovados: 4 ÷ 21 = 4/21. A chance 1/2 de cada lâmpada não muda a conta: todo painel é igualmente provável, só precisa contar."
+   ]
+  ],
+  "ancora": "ITA 2025 q.5 e Unesp 2025 q.85: sequência por recorrência e contagem"
+ }
+]
