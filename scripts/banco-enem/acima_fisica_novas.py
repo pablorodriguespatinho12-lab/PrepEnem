@@ -55,7 +55,7 @@ def montar(q):
     conferencia = f"{q['resumo']} Resposta: alternativa {LETRAS[certa]}. Erros: {erros}."
     dados = '; '.join(f'{k}: {v}' for k, v in q['dados'])
     passos = [
-        {'titulo': 'As fórmulas desta questão', 'texto': 'Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela.',
+        {'titulo': 'As fórmulas desta questão', 'texto': q.get('intro_formulas', 'Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela.'),
          'visual': {'tipo': 'formulas', 'itens': [{'figura': f[0], 'nome': f[1], 'formula': f[2]} for f in q['formulas']]}},
         {'titulo': 'O que eu tenho', 'texto': 'Primeiro, tire os dados do enunciado.',
          'visual': {'tipo': 'tabela', 'titulo': 'O que eu tenho', 'cabecalho': ['Informação', 'Valor'], 'linhas': [list(d) for d in q['dados']]}},
@@ -80,7 +80,7 @@ def montar(q):
                               'linhas': [['1. Tabela do que eu tenho', q['rec1']], ['2. Equação em letras', q['eq']], ['3. Uma letra por vez', q['rec3']]]}})
     c = q['checagem']
     return {
-        'id': q['id'], 'materia': 'Física', 'tema': q['tema'], 'nivel': 'acima', 'origem': 'Escada',
+        'id': q['id'], 'materia': q.get('materia', 'Física'), 'tema': q['tema'], 'nivel': 'acima', 'origem': 'Escada',
         'enunciado': f"{q['enunciado']}\n\nDados: {dados}.",
         **{LETRAS[i]: a[0] for i, a in enumerate(alts)}, 'resposta': LETRAS[certa],
         'explicacao': {
