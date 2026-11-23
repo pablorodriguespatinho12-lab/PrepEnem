@@ -50,6 +50,12 @@ Antes de mexer em UI, conteúdo gerado por IA, visualização de dados ou
 taxonomia de temas, carregue a skill `decisoes-prepenem` — ela é a fonte
 de verdade dessas decisões (elas não sobrevivem ao /compact de outro jeito).
 
+## Questão ou aula nova (nível acima, escada, lousa)
+O Pablo não pode ter que lembrar regra que ele já deu (23/11/2026). ANTES de escrever: `ls ~/.claude/projects/-home-pablo-prepenem-app/memory`,
+ler as descrições e abrir as que tocam a tarefa, e ler `docs/nivel-acima/regras-do-pablo.md` (14 regras, fonte e quem confere cada uma).
+DEPOIS: `npx vitest run data/revisao-final/nivel-acima-regras.test.ts data/revisao-final/provas-dia-2.test.ts` e conferir as linhas de processo
+(gabarito às cegas, `aluno-do-zero` em rodadas, prova aberta na tela, lista do que cada prova tem no banco).
+
 ## /compact
 Ao resumir, preserve: decisões de schema do Prisma, erros de build já vistos
 e a solução aplicada. Descarte: exploração de arquivos já concluída e

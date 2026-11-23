@@ -20,6 +20,8 @@ from acima_fisica_ajustes import aplicar as aplicar_ajustes  # noqa: E402
 import acima_fisica_ajustes2  # noqa: E402,F401  (registra a 2ª rodada)
 import acima_fisica_ajustes3  # noqa: E402,F401  (registra a 3ª rodada)
 import acima_fisica_ajustes4  # noqa: E402,F401  (âncora real e contexto das ENEM)
+import acima_fisica_ajustes5  # noqa: E402,F401  (canal Universo Narrado)
+from cortar_passos import dividir_passo  # noqa: E402
 
 
 def br(x):
@@ -79,10 +81,12 @@ def montar(q):
     passos.append({'titulo': 'Questão parecida? Faça assim', 'texto': f"Pista: {q['pista']}",
                    'visual': {'tipo': 'tabela', 'titulo': 'A receita', 'cabecalho': ['Passo', 'Nesta questão'],
                               'linhas': [['1. Tabela do que eu tenho', q['rec1']], ['2. Equação em letras', q['eq']], ['3. Uma letra por vez', q['rec3']]]}})
+    passos = [curto for p in passos for curto in dividir_passo(p)]  # regra 14/11: passo até ~300 letras, sem rolar
     c = q['checagem']
     return {
         'id': q['id'], 'materia': q.get('materia', 'Física'), 'tema': q['tema'], 'nivel': 'acima', 'origem': 'Escada',
         **({'ancora': q['ancora']} if q.get('ancora') else {}),
+        **({'canal': q['canal']} if q.get('canal') else {}),
         'enunciado': f"{q['enunciado']}\n\nDados: {dados}.",
         **{LETRAS[i]: a[0] for i, a in enumerate(alts)}, 'resposta': LETRAS[certa],
         'explicacao': {

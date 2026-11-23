@@ -116,6 +116,20 @@ siga. "Entendi tudo" é resposta válida.
     MESMA tela, antes de qualquer letra que não está na fórmula (Pablo, 22/11/2026:
     "você não mostrou o que significa o M"; o M só aparecia na tela seguinte).
 
+17. **Nome da alternativa igual ao nome de letra, bloco ou barra.** "Resposta: B" ou
+    "A = ..." (alternativa) ao lado de "barra B", "bloco A", "letra A" da equação
+    confunde (aluno-do-zero em 23/11/2026, 5 vezes em 12 questões de Física). A
+    resposta se escreve "alternativa B" por extenso e a lista de erros, "Alternativa A = ...".
+18. **Passo de álgebra sem o porquê.** "Somo 90 · r nos dois lados", "multiplico os dois
+    por 100", "corto os zeros", "tiro o parêntese" sem dizer PARA QUÊ e sem um teste com
+    número pequeno. "P" é "1 · P"; "30r" é "30 vezes r". Conta com letra só vale depois
+    da mesma conta com números (23/11/2026: 58 tropeços nas 24 de Física).
+19. **Conta com vírgula ou fração sem passo, e conteúdo novo dentro da explicação.**
+    0,6 · 1,2 (contar as casas), 1/20 − 1/30 (mesmo número embaixo), 3 000 ÷ 16, 7,2 ÷ 40.
+    Se a explicação precisa ENSINAR Pitágoras, fração, potência de dez, seno e cosseno ou
+    equação com incógnita, isso é aula "Antes" (data/revisao-final/antes-da-questao.json)
+    com 2 exercícios, não parágrafo dentro da explicação (regra de 12/11/2026).
+
 **Aula que ele aprovou como modelo (Pablo, 22/11/2026; use para saber o que é
 "entendi sem tropeço" em questão de grandezas):** `d2-dificil-mat-06` e as outras
 5 fichas de `data/lousas/regra-de-tres.ts` (gerador `lib/aula-lousa/regra-de-tres.ts`).
@@ -173,7 +187,7 @@ bug, não dúvida.
 [lista curta dos itens que não te perderam]
 
 ## O que mais se repete
-uma frase: o tipo de tropeço mais comum (1 a 15 acima) e quantas vezes
+uma frase: o tipo de tropeço mais comum (1 a 19 acima) e quantas vezes
 ```
 
 ## O que você nunca faz

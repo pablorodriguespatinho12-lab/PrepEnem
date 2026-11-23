@@ -6,6 +6,7 @@
   "nivel": "acima",
   "origem": "Escada",
   "ancora": "forte · Fuvest 2025 q.33 (medicamento: custo por componente com variação percentual de cada um, em tabela)",
+  "canal": "mat-04-porcentagem.txt [2:12:32] (fator 1,2 e 0,8)",
   "enunciado": "Uma cooperativa produz suco em garrafas. No mês passado, o custo de produção de cada garrafa se dividia assim: 60% em matéria-prima (as frutas), 25% em embalagem e 15% em outros gastos (energia e transporte). Neste mês, o preço das frutas subiu 20%, o preço da embalagem caiu 10% e os outros gastos subiram 40%. A gerente quer saber em quantos por cento o custo total de uma garrafa mudou em relação ao mês passado, para decidir se o preço de venda precisa subir. Os gastos com energia e transporte entram em \"outros\". A variação do custo total, em %, foi um aumento de:\n\nDados: Frutas: 60% do custo; subiu 20%; Embalagem: 25% do custo; caiu 10%; Outros gastos: 15% do custo; subiu 40%.",
   "A": "16,7",
   "B": "15,5",
@@ -74,7 +75,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "O custo antigo vale 1. Cada gasto, hoje, vale a fatia antiga vezes o reajuste. Somando as três fatias de hoje e tirando 1, sai a variação. Por que − 1? O custo de antes vale 1: se hoje vale 1,155, subiu 1,155 − 1 = 0,155. Exemplo: de 100 para 120, a variação é 120 − 100 = 20, ou 0,20 de 100.\nAgora é só achar M, E e O.",
+     "texto": "O custo antigo vale 1. Cada gasto, hoje, vale a fatia antiga vezes o reajuste. Somando as três fatias de hoje e tirando 1, sai a variação. Por que − 1? O custo de antes vale 1: se hoje vale 1,155, subiu 1,155 − 1 = 0,155. Exemplo: de 100 para 120, a variação é 120 − 100 = 20, ou 0,20 de 100.",
      "visual": {
       "tipo": "equacao",
       "formula": "V = M + E + O − 1",
@@ -98,6 +99,10 @@
        }
       ]
      }
+    },
+    {
+     "titulo": "A equação em letras (2 de 2)",
+     "texto": "Agora é só achar M, E e O."
     },
     {
      "titulo": "Achando M: as frutas hoje",
@@ -185,6 +190,7 @@
   "nivel": "acima",
   "origem": "Escada",
   "ancora": "sem · não há real de mistura ou diluição no repositório (técnica clássica de ITA)",
+  "canal": "fora do canal: mistura e diluição; porcentagem em mat-04-porcentagem.txt [2:06:00]",
   "enunciado": "Um tanque tem 40 L de uma mistura de água e álcool, com 32% de álcool. Retiram-se 10 L da mistura, que são jogados fora, e o tanque é completado com 10 L de água pura, mexendo bem. A operação é repetida uma segunda vez, do mesmo jeito. Qual é, em %, a porcentagem de álcool na mistura final?\n\nDados: Volume do tanque: 40 L; Álcool no início: 32%; Cada troca: sai 10 L, entra 10 L de água; Trocas: 2.",
   "A": "8",
   "B": "16",
@@ -253,7 +259,11 @@
     },
     {
      "titulo": "De onde vem cada fórmula",
-     "texto": "32% de 40 L: 32 ÷ 100 = 0,32 e 0,32 · 40 = 12,8 L de álcool. 10 L de 40 L: 10 ÷ 40 = 0,25. Lê-se 'um quarto' (1/4): 4 partes iguais, tira 1. Sobram 3 partes de 4, 3/4 = 3 ÷ 4 = 0,75. Dividir por 4 é o mesmo que pegar 1/4: 12,8 ÷ 4 = 3,2. Os 40 L têm 12,8 L de álcool espalhado por igual; os 10 L que saem levam 1/4 disso, 3,2 L, e sobram 12,8 − 3,2 = 9,6 L. A água pura que entra não tem álcool. O ponto · significa vezes."
+     "texto": "32% de 40 L: 32 ÷ 100 = 0,32 e 0,32 · 40 = 12,8 L de álcool. 10 L de 40 L: 10 ÷ 40 = 0,25. Lê-se 'um quarto' (1/4): 4 partes iguais, tira 1. Sobram 3 partes de 4, 3/4 = 3 ÷ 4 = 0,75. Dividir por 4 é o mesmo que pegar 1/4: 12,8 ÷ 4 = 3,2."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 2)",
+     "texto": "Os 40 L têm 12,8 L de álcool espalhado por igual; os 10 L que saem levam 1/4 disso, 3,2 L, e sobram 12,8 − 3,2 = 9,6 L. A água pura que entra não tem álcool. O ponto · significa vezes."
     },
     {
      "titulo": "A equação em letras",
@@ -356,6 +366,7 @@
   "nivel": "acima",
   "origem": "Escada",
   "ancora": "parcial · ENEM 2022 q.140 (geladeira: preço à vista e a prazo com acréscimo percentual)",
+  "canal": "mat-34-juros.txt [20:19:30] e mat-04-porcentagem.txt [2:07:30] (juros)",
   "enunciado": "Um notebook custa R$ 2 100 à vista. A loja oferece pagá-lo em duas parcelas iguais: a primeira no ato da compra (a entrada) e a segunda 30 dias depois. Sobre o que ainda se deve depois da entrada, a loja cobra juros de 10% ao mês. Qual é o valor de cada parcela, em reais?\n\nDados: Preço à vista: R$ 2 100; Parcelas: 2 iguais: entrada e 30 dias depois; Juros: 10% ao mês, sobre o saldo devedor.",
   "A": "1 100",
   "B": "1 000",
@@ -450,7 +461,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "P = (2 100 − P) · 1,1. O 1,1 multiplica tudo dentro do parêntese: 2 100 · 1,1 − P · 1,1. Teste com P = 1 000: (2 100 − 1 000) · 1,1 = 1 210 e 2 310 − 1 100 = 1 210. E 2 100 · 1,1 = 2 100 + 210 = 2 310. Então P = 2 310 − 1,1 · P.\nQuero o P de um lado só. A equação é uma balança: o que faço de um lado faço do outro. Somo 1,1 · P dos dois lados e o “menos 1,1 · P” some do lado direito. P é o mesmo que 1 · P, então 1 · P + 1,1 · P = 2,1 · P (1 + 1,1 = 2,1): 2,1 · P = 2 310.\nP = 2 310 ÷ 2,1: multiplico os dois por 10 e fica 23 100 ÷ 21 = 1 100 (21 · 1 100 = 23 100).\nResposta: alternativa A. Conferindo: saldo 2 100 − 1 100 = 1 000, e 1 000 · 1,1 = 1 100.",
+     "texto": "P = (2 100 − P) · 1,1. O 1,1 multiplica tudo dentro do parêntese: 2 100 · 1,1 − P · 1,1. Teste com P = 1 000: (2 100 − 1 000) · 1,1 = 1 210 e 2 310 − 1 100 = 1 210. E 2 100 · 1,1 = 2 100 + 210 = 2 310. Então P = 2 310 − 1,1 · P.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -469,6 +480,14 @@
        ]
       ]
      }
+    },
+    {
+     "titulo": "Volta na equação (2 de 3)",
+     "texto": "Quero o P de um lado só. A equação é uma balança: o que faço de um lado faço do outro. Somo 1,1 · P dos dois lados e o “menos 1,1 · P” some do lado direito. P é o mesmo que 1 · P, então 1 · P + 1,1 · P = 2,1 · P (1 + 1,1 = 2,1): 2,1 · P = 2 310."
+    },
+    {
+     "titulo": "Volta na equação (3 de 3)",
+     "texto": "P = 2 310 ÷ 2,1: multiplico os dois por 10 e fica 23 100 ÷ 21 = 1 100 (21 · 1 100 = 23 100).\nResposta: alternativa A. Conferindo: saldo 2 100 − 1 100 = 1 000, e 1 000 · 1,1 = 1 100."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -518,6 +537,7 @@
   "nivel": "acima",
   "origem": "Escada",
   "ancora": "parcial · ENEM 2022 q.149 (variação percentual encadeada); estilo Harvard–MIT",
+  "canal": "mat-04-porcentagem.txt [2:12:32] (fatores em cadeia)",
   "enunciado": "Ana tem 20% a mais de figurinhas do que Bia. Bia tem 25% a menos de figurinhas do que Caio. Os três juntos têm 265 figurinhas. Quantas figurinhas tem Caio?\n\nDados: Ana: 20% a mais que Bia; Bia: 25% a menos que Caio; Total dos três: 265 figurinhas.",
   "A": "75",
   "B": "88,3",
@@ -582,7 +602,11 @@
     },
     {
      "titulo": "De onde vem cada fórmula",
-     "texto": "'20% a mais' é multiplicar por 1,2 (100 vira 120); '25% a menos' é multiplicar por 0,75 (100 vira 75). Os dois seguem em cadeia: Ana = 1,2 · Bia e Bia = 0,75 · Caio, então Ana = 1,2 · 0,75 · Caio. Cuidado: 20% a mais que Bia não é 20% a mais que Caio, porque cada porcentagem é sobre o valor de antes. Aqui C, B e A são Caio, Bia e Ana. O ponto · significa vezes."
+     "texto": "'20% a mais' é multiplicar por 1,2 (100 vira 120); '25% a menos' é multiplicar por 0,75 (100 vira 75). Os dois seguem em cadeia: Ana = 1,2 · Bia e Bia = 0,75 · Caio, então Ana = 1,2 · 0,75 · Caio."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 2)",
+     "texto": "Cuidado: 20% a mais que Bia não é 20% a mais que Caio, porque cada porcentagem é sobre o valor de antes. Aqui C, B e A são Caio, Bia e Ana. O ponto · significa vezes."
     },
     {
      "titulo": "A equação em letras",
@@ -617,7 +641,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "C + 0,75 · C + 0,9 · C = 265. C é o mesmo que 1 · C. Somo quanto cada um tem de C: 1 + 0,75 + 0,9 = 2,65. Então 2,65 · C = 265, quer dizer que C é 265 ÷ 2,65.\nPara tirar a vírgula, multiplico os dois por 100: 265 ÷ 2,65 = 26 500 ÷ 265 = 100 (265 · 100 = 26 500).\nResposta: alternativa C. Conferindo: Bia 0,75 · 100 = 75, Ana 0,9 · 100 = 90, e 100 + 75 + 90 = 265.",
+     "texto": "C + 0,75 · C + 0,9 · C = 265. C é o mesmo que 1 · C. Somo quanto cada um tem de C: 1 + 0,75 + 0,9 = 2,65. Então 2,65 · C = 265, quer dizer que C é 265 ÷ 2,65.\nPara tirar a vírgula, multiplico os dois por 100: 265 ÷ 2,65 = 26 500 ÷ 265 = 100 (265 · 100 = 26 500).",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -636,6 +660,10 @@
        ]
       ]
      }
+    },
+    {
+     "titulo": "Volta na equação (2 de 2)",
+     "texto": "Resposta: alternativa C. Conferindo: Bia 0,75 · 100 = 75, Ana 0,9 · 100 = 90, e 100 + 75 + 90 = 265."
     },
     {
      "titulo": "Questão parecida? Faça assim",
