@@ -1,0 +1,3931 @@
+[
+ {
+  "id": "d2-escada-fis-ita-cin-00a",
+  "materia": "Física",
+  "tema": "Cinemática",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Para reduzir acidentes, uma concessionária instalou em uma rodovia um radar de trecho: dois pórticos com câmeras, a 12 km um do outro. O sistema anota a hora em que cada carro passa pelo primeiro e pelo segundo pórtico e calcula a velocidade média no trecho. Se ela passar do limite de 90 km/h, o motorista é multado, mesmo que nunca tenha sido flagrado acima de 90 km/h em nenhum ponto da pista. Um motorista passou pelo primeiro pórtico às 8 h 00 min 00 s e pelo segundo às 8 h 07 min 00 s. Ao receber a multa, ele reclamou que \"só\" tinha se atrasado alguns segundos para respeitar o limite. Para não ser multado, quantos segundos a mais, no mínimo, ele deveria ter gasto para percorrer o trecho?\n\nDados: Trecho: 12 km; Limite: 90 km/h (velocidade média); Tempo gasto: 7 min.",
+  "A": "60",
+  "B": "13",
+  "C": "133",
+  "D": "420",
+  "E": "480",
+  "resposta": "A",
+  "explicacao": {
+   "conferencia": "90 km/h = 25 m/s; tempo mínimo = 12 000 ÷ 25 = 480 s; gasto = 7 · 60 = 420 s; diferença = 60 s. A. Erros: B = Subtraiu as velocidades (102,9 − 90) e chamou o resultado de segundos; C = Fez 12 000 ÷ 90, sem passar 90 km/h para m/s; D = Deu o tempo que ele gastou, não a diferença; E = Deu o tempo mínimo, sem subtrair o que ele gastou.",
+   "ideia": "Radar de trecho multa pela velocidade média, então o que vale é o tempo total: 12 km a 90 km/h pedem pelo menos 8 minutos. Ele fez em 7, um minuto a menos.",
+   "pecas": [
+    {
+     "termo": "Velocidade média no trecho",
+     "significado": "Distância do trecho ÷ tempo gasto nele. Não importa a velocidade em cada ponto."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Tempo",
+        "formula": "tempo = distância ÷ velocidade"
+       },
+       {
+        "figura": "carro",
+        "nome": "km/h para m/s",
+        "formula": "m/s = km/h ÷ 3,6"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Trecho",
+        "12 km"
+       ],
+       [
+        "Limite",
+        "90 km/h (velocidade média)"
+       ],
+       [
+        "Tempo gasto",
+        "7 min"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a diferença entre o tempo mínimo permitido e o tempo que ele gastou.\nAgora é só achar cada letra, uma por vez.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "D = M − G",
+      "leitura": "segundos a mais = tempo mínimo − tempo gasto",
+      "letras": [
+       {
+        "letra": "D",
+        "oque": "segundos a mais que ele deveria ter gasto (o que a questão quer)"
+       },
+       {
+        "letra": "M",
+        "oque": "tempo mínimo para não passar de 90 km/h, em s"
+       },
+       {
+        "letra": "G",
+        "oque": "tempo que ele gastou, em s"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando M: o tempo mínimo",
+     "texto": "90 km/h ÷ 3,6 = 25 m/s. O trecho tem 12 km = 12 000 m.\nM = 12 000 ÷ 25 = 480 s (8 minutos)."
+    },
+    {
+     "titulo": "Achando G: o tempo gasto",
+     "texto": "Das 8 h 00 min 00 s às 8 h 07 min 00 s passaram 7 minutos.\nG = 7 · 60 = 420 s."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "D = 480 − 420 = 60 s.\nLetra A. Conferindo: 12 km em 8 min = 90 km/h, o limite exato.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "M",
+        "480 s"
+       ],
+       [
+        "G",
+        "420 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"radar de trecho\" ou \"velocidade média entre dois pontos\" → calcule o tempo que o limite permite (distância ÷ limite) e compare com o tempo gasto.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "12 km, limite 90 km/h, gastou 7 min"
+       ],
+       [
+        "2. Equação em letras",
+        "D = M − G"
+       ],
+       [
+        "3. Uma letra por vez",
+        "M = 480 s; G = 420 s"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Trecho de 6 km com limite de 72 km/h. Qual o tempo mínimo, sem ser multado?",
+    "opcoes": [
+     "300 s",
+     "5 s",
+     "83 s",
+     "432 s"
+    ],
+    "certa": "300 s",
+    "resposta": "72 km/h = 20 m/s; 6 000 ÷ 20 = 300 s (5 minutos)."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-cin-00b",
+  "materia": "Física",
+  "tema": "Cinemática",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Do alto de um penhasco de 45 m de altura sobre o mar, uma pedra é lançada horizontalmente com velocidade de 40 m/s. Despreze a resistência do ar e adote g = 10 m/s². O módulo da velocidade da pedra no instante em que ela atinge a água, em m/s, é:\n\nDados: Altura: 45 m; Velocidade horizontal inicial: 40 m/s; Gravidade: 10 m/s².",
+  "A": "10",
+  "B": "50",
+  "C": "30",
+  "D": "40",
+  "E": "70",
+  "resposta": "B",
+  "explicacao": {
+   "conferencia": "Horizontal: 40 m/s (não muda). Vertical: Y² = 2 · 10 · 45 = 900, Y = 30 m/s. V² = 40² + 30² = 2 500, V = 50 m/s. B. Erros: A = Subtraiu 40 − 30, como se as velocidades se cancelassem; C = Deu só a velocidade da queda e esqueceu a horizontal; D = Deu só a horizontal e esqueceu que a pedra também cai; E = Somou 40 + 30, mas as duas velocidades formam um ângulo reto.",
+   "ideia": "A pedra tem dois movimentos separados: na horizontal a velocidade não muda, na vertical é queda livre. Os dois valores formam os catetos de um triângulo retângulo.",
+   "pecas": [
+    {
+     "termo": "Módulo da velocidade",
+     "significado": "O tamanho da velocidade total, juntando o que anda para o lado e o que cai."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Queda livre",
+        "formula": "Y² = 2 · g · altura"
+       },
+       {
+        "figura": "triangulo-retangulo",
+        "nome": "Pitágoras",
+        "formula": "V² = X² + Y²"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Altura",
+        "45 m"
+       ],
+       [
+        "Velocidade horizontal inicial",
+        "40 m/s"
+       ],
+       [
+        "Gravidade",
+        "10 m/s²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A velocidade final tem uma parte horizontal (X) e uma vertical (Y). Elas formam um triângulo retângulo, e V é a diagonal.\nAgora é só achar X e Y.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "V = √(X² + Y²)",
+      "leitura": "velocidade total = raiz de (horizontal² + vertical²)",
+      "letras": [
+       {
+        "letra": "V",
+        "oque": "velocidade ao atingir a água (o que a questão quer)"
+       },
+       {
+        "letra": "X",
+        "oque": "velocidade horizontal, em m/s"
+       },
+       {
+        "letra": "Y",
+        "oque": "velocidade vertical, em m/s"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando X: a parte horizontal",
+     "texto": "Sem resistência do ar, nada empurra a pedra para os lados: a horizontal não muda.\nX = 40 m/s."
+    },
+    {
+     "titulo": "Achando Y: a parte vertical",
+     "texto": "Na queda de 45 m, partindo sem velocidade vertical: Y² = 2 · g · h.\nY² = 2 · 10 · 45 = 900, então Y = 30 m/s."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "V = √(40² + 30²) = √(1 600 + 900) = √2 500 = 50 m/s.\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "X",
+        "40 m/s"
+       ],
+       [
+        "Y",
+        "30 m/s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"lançada horizontalmente\" e \"velocidade ao chegar\" → separe: horizontal fica igual, vertical vem da queda; junte com Pitágoras.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "45 m, 40 m/s, g = 10"
+       ],
+       [
+        "2. Equação em letras",
+        "V = √(X² + Y²)"
+       ],
+       [
+        "3. Uma letra por vez",
+        "X = 40 m/s; Y = 30 m/s"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Pedra solta, sem velocidade inicial, de 20 m de altura. Com que velocidade chega ao chão? (g = 10)",
+    "opcoes": [
+     "20 m/s",
+     "10 m/s",
+     "200 m/s",
+     "40 m/s"
+    ],
+    "certa": "20 m/s",
+    "resposta": "Y² = 2 · 10 · 20 = 400, então Y = 20 m/s."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-cin-00c",
+  "materia": "Física",
+  "tema": "Cinemática",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Uma pista reta de 1 140 m liga os pontos P e Q. Ana parte de P rumo a Q, correndo a 3 m/s. Sessenta segundos depois, Bia parte de Q rumo a P, a 5 m/s. Os dois mantêm essas velocidades o tempo todo, sem parar. A que distância de P eles se cruzam, em metros?\n\nDados: Pista: 1 140 m; Ana: 3 m/s, sai de P; Bia: 5 m/s, sai de Q; Atraso de Bia: 60 s.",
+  "A": "360",
+  "B": "427,5",
+  "C": "540",
+  "D": "570",
+  "E": "600",
+  "resposta": "C",
+  "explicacao": {
+   "conferencia": "Vantagem de Ana: 3 · 60 = 180 m. Faltam 960 m, fechando a 8 m/s: 120 s. Posição = 180 + 3 · 120 = 540 m. C. Erros: A = Fez 3 · 120 e esqueceu os 180 m que Ana já tinha andado; B = Fez 1 140 · 3 ÷ 8, ignorando que Ana saiu antes; D = Achou que se cruzam no meio da pista; E = Deu a distância de Q, não de P.",
+   "ideia": "Quando Bia sai, Ana já andou 180 m. A partir daí os dois se aproximam juntos, a 3 + 5 = 8 m/s, e é só ver em quanto tempo somam os 960 m que faltam.",
+   "pecas": [
+    {
+     "termo": "Velocidade de aproximação",
+     "significado": "Quando dois andam um contra o outro, a distância entre eles diminui a soma das velocidades."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Distância",
+        "formula": "distância = velocidade · tempo"
+       },
+       {
+        "figura": "carro",
+        "nome": "Aproximação",
+        "formula": "v de aproximação = v1 + v2"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Pista",
+        "1 140 m"
+       ],
+       [
+        "Ana",
+        "3 m/s, sai de P"
+       ],
+       [
+        "Bia",
+        "5 m/s, sai de Q"
+       ],
+       [
+        "Atraso de Bia",
+        "60 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Ana anda a vantagem mais o que corre depois que Bia sai. Os 3 vêm dos 3 m/s dela.\nAgora é só achar d e t.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "X = d + 3 · t",
+      "leitura": "posição do encontro = vantagem de Ana + o que ela anda depois",
+      "letras": [
+       {
+        "letra": "X",
+        "oque": "distância de P até o encontro (o que a questão quer)"
+       },
+       {
+        "letra": "d",
+        "oque": "vantagem de Ana quando Bia sai, em m"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo, depois de Bia sair, até se cruzarem, em s"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando d: a vantagem de Ana",
+     "texto": "Ela correu sozinha por 60 s a 3 m/s.\nd = 3 · 60 = 180 m."
+    },
+    {
+     "titulo": "Achando t: o tempo até se cruzarem",
+     "texto": "Sobram 1 140 − 180 = 960 m entre os dois. Eles se aproximam a 3 + 5 = 8 m/s.\nt = 960 ÷ 8 = 120 s."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "X = 180 + 3 · 120 = 540 m.\nLetra C. Conferindo por Bia: 5 · 120 = 600 m, e 540 + 600 = 1 140 m.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "d",
+        "180 m"
+       ],
+       [
+        "t",
+        "120 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"um sai depois do outro\" e \"se cruzam\" → ache a vantagem de quem saiu antes, depois use a soma das velocidades para o tempo do encontro.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1 140 m, 3 m/s, 5 m/s, atraso 60 s"
+       ],
+       [
+        "2. Equação em letras",
+        "X = d + 3 · t"
+       ],
+       [
+        "3. Uma letra por vez",
+        "d = 180 m; t = 120 s"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Pista de 100 m. A parte de P a 2 m/s e, no mesmo instante, B parte de Q a 3 m/s. A que distância de P se cruzam?",
+    "opcoes": [
+     "40 m",
+     "50 m",
+     "60 m",
+     "20 m"
+    ],
+    "certa": "40 m",
+    "resposta": "Aproximam-se a 5 m/s: 100 ÷ 5 = 20 s. A percorre 2 · 20 = 40 m."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-cin-00d",
+  "materia": "Física",
+  "tema": "Cinemática",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Uma escada rolante sobe com velocidade constante. Uma pessoa caminha sobre ela, sempre no mesmo ritmo em relação aos degraus. Subindo, ela conta 30 degraus. Descendo pela mesma escada, no mesmo ritmo, ela conta 90 degraus. Com a escada desligada, quantos degraus aparecem de uma vez, do começo ao fim?\n\nDados: Subindo: conta 30 degraus; Descendo: conta 90 degraus; Pessoa: mesmo ritmo nas duas.",
+  "A": "30",
+  "B": "52",
+  "C": "60",
+  "D": "45",
+  "E": "90",
+  "resposta": "D",
+  "explicacao": {
+   "conferencia": "r = 0,5; N = 30 · 1,5 = 45 e N = 90 · 0,5 = 45. D. Erros: A = Deu só os degraus que contou subindo; B = Tirou a raiz de 30 · 90, como uma média qualquer; C = Fez a média simples de 30 e 90; E = Deu só os degraus que contou descendo.",
+   "ideia": "Subindo, a escada ajuda e a pessoa pisa em poucos degraus; descendo, atrapalha e ela pisa em muitos. Os dois jeitos têm de dar o mesmo total.",
+   "pecas": [
+    {
+     "termo": "Degraus visíveis",
+     "significado": "Quantos degraus existem de uma ponta à outra, com a escada parada."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Subindo",
+        "formula": "N = 30 · (1 + r)"
+       },
+       {
+        "figura": "carro",
+        "nome": "Descendo",
+        "formula": "N = 90 · (1 − r)"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Subindo",
+        "conta 30 degraus"
+       ],
+       [
+        "Descendo",
+        "conta 90 degraus"
+       ],
+       [
+        "Pessoa",
+        "mesmo ritmo nas duas"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Subindo: enquanto a pessoa pisa 30 degraus, a escada traz mais 30 · r. Descendo: a escada leva embora 90 · r. Os dois dão o mesmo N.\nAgora é achar r.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "N = 30 · (1 + r) = 90 · (1 − r)",
+      "leitura": "o mesmo N pelos dois caminhos; r = o quanto a escada anda, comparada com a pessoa",
+      "letras": [
+       {
+        "letra": "N",
+        "oque": "degraus visíveis com a escada parada (o que a questão quer)"
+       },
+       {
+        "letra": "r",
+        "oque": "velocidade da escada ÷ velocidade da pessoa"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando r: a razão das velocidades",
+     "texto": "30 · (1 + r) = 90 · (1 − r)\n30 + 30r = 90 − 90r\n120r = 60\nr = 0,5 (a escada anda a metade do que a pessoa anda)."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "N = 30 · (1 + 0,5) = 30 · 1,5 = 45 degraus.\nLetra D. Conferindo pelo outro lado: 90 · (1 − 0,5) = 45.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "r",
+        "0,5"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"a pessoa conta degraus subindo e descendo\" → monte N dos dois jeitos com a razão r das velocidades e iguale.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "30 subindo, 90 descendo"
+       ],
+       [
+        "2. Equação em letras",
+        "N = 30 · (1 + r) = 90 · (1 − r)"
+       ],
+       [
+        "3. Uma letra por vez",
+        "r = 0,5"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Subindo, conta 20 degraus; descendo, 60. Quantos degraus visíveis?",
+    "opcoes": [
+     "30",
+     "40",
+     "35",
+     "45"
+    ],
+    "certa": "30",
+    "resposta": "20 · (1 + r) = 60 · (1 − r) dá 80r = 40, r = 0,5. N = 20 · 1,5 = 30."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-din-00a",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Em um prédio, uma pessoa de 70 kg entra no elevador carregando uma balança de banheiro e a coloca no chão. O elevador parte do repouso, no térreo, e em 5 s atinge a velocidade de 6 m/s, com aceleração constante nesse intervalo. Depois disso, a velocidade fica constante. A balança mede a força que a pessoa faz sobre ela e mostra o resultado em kg, como se a gravidade valesse 10 m/s². Nos primeiros 5 s da subida, o valor mostrado é diferente da massa real da pessoa. Qual é o valor, em kg, mostrado pela balança nesses 5 s?\n\nDados: Massa da pessoa: 70 kg; Velocidade ao fim de 5 s: 6 m/s (parte do repouso); Gravidade da balança: 10 m/s².",
+  "A": "61,6",
+  "B": "70",
+  "C": "84",
+  "D": "784",
+  "E": "78,4",
+  "resposta": "E",
+  "explicacao": {
+   "conferencia": "a = 6 ÷ 5 = 1,2 m/s²; N = 70 · (10 + 1,2) = 784 N; leitura = 784 ÷ 10 = 78,4 kg. E. Erros: A = Fez m · (g − a): como se o elevador estivesse descendo; B = Achou que a balança sempre marca a massa real; C = Fez 70 · 1,2, usando só a aceleração; D = Deu a força em newtons, sem dividir por g.",
+   "ideia": "Quando o elevador acelera para cima, o chão empurra a pessoa com o peso mais a força que a faz acelerar. A balança lê essa força total e a mostra como se fosse massa.",
+   "pecas": [
+    {
+     "termo": "Leitura da balança",
+     "significado": "A balança mede a força de contato (N) e mostra N ÷ g. Em repouso isso é a massa; acelerando, muda."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Aceleração",
+        "formula": "a = variação da velocidade ÷ tempo"
+       },
+       {
+        "figura": "caixa",
+        "nome": "Força de contato (subindo)",
+        "formula": "N = m · (g + a)"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa da pessoa",
+        "70 kg"
+       ],
+       [
+        "Velocidade ao fim de 5 s",
+        "6 m/s (parte do repouso)"
+       ],
+       [
+        "Gravidade da balança",
+        "10 m/s²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A balança mostra a força que recebe dividida por g. Essa força depende da aceleração do elevador.\nAgora é só achar a e N.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "M = N ÷ g",
+      "leitura": "leitura em kg = força de contato ÷ g",
+      "letras": [
+       {
+        "letra": "M",
+        "oque": "valor mostrado pela balança, em kg (o que a questão quer)"
+       },
+       {
+        "letra": "N",
+        "oque": "força de contato da balança, em N"
+       },
+       {
+        "letra": "a",
+        "oque": "aceleração do elevador, em m/s²"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando a: a aceleração",
+     "texto": "Saiu do repouso e chegou a 6 m/s em 5 s.\na = 6 ÷ 5 = 1,2 m/s²."
+    },
+    {
+     "titulo": "Achando N: a força de contato",
+     "texto": "O chão sustenta o peso e ainda acelera a pessoa para cima: N = m · (g + a).\nN = 70 · (10 + 1,2) = 70 · 11,2 = 784 N."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "M = 784 ÷ 10 = 78,4 kg.\nLetra E. A balança marca 8,4 kg a mais, só enquanto o elevador acelera.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "a",
+        "1,2 m/s²"
+       ],
+       [
+        "N",
+        "784 N"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"balança dentro do elevador\" → ache a aceleração; subindo e acelerando, N = m · (g + a); a leitura em kg é N ÷ g.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "70 kg, 6 m/s em 5 s, g = 10"
+       ],
+       [
+        "2. Equação em letras",
+        "M = N ÷ g"
+       ],
+       [
+        "3. Uma letra por vez",
+        "a = 1,2; N = 784 N"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Pessoa de 60 kg em elevador que sobe acelerando a 2 m/s² (g = 10). Quantos kg a balança marca?",
+    "opcoes": [
+     "72 kg",
+     "60 kg",
+     "48 kg",
+     "120 kg"
+    ],
+    "certa": "72 kg",
+    "resposta": "N = 60 · (10 + 2) = 720 N; 720 ÷ 10 = 72 kg."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-din-00b",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Um bloco de 2 kg é lançado, da base de um plano inclinado, para cima, com velocidade de 12 m/s. O plano forma com a horizontal um ângulo cujo seno vale 0,6 e cujo cosseno vale 0,8. O coeficiente de atrito entre o bloco e o plano é 0,5. Adote g = 10 m/s². A distância que o bloco percorre sobre o plano, subindo, até parar por um instante, em metros, é:\n\nDados: Massa: 2 kg; Velocidade inicial: 12 m/s; Seno e cosseno: 0,6 e 0,8; Atrito: 0,5; Gravidade: 10 m/s².",
+  "A": "7,2",
+  "B": "4,32",
+  "C": "6,5",
+  "D": "12",
+  "E": "14,4",
+  "resposta": "A",
+  "explicacao": {
+   "conferencia": "Forças contra o movimento: 12 N (peso no plano) + 8 N (atrito) = 20 N; a = 10 m/s²; d = 144 ÷ 20 = 7,2 m. A. Erros: B = Deu a altura que ele sobe (7,2 · 0,6), não a distância no plano; C = Trocou seno por cosseno: a = 8 + 0,5 · 6 = 11; D = Esqueceu o atrito: a = 6 e d = 144 ÷ 12; E = Esqueceu o ½ da fórmula: 144 ÷ 10.",
+   "ideia": "Subindo, o peso e o atrito puxam o bloco para baixo ao mesmo tempo. Ache a desaceleração com as duas forças e use a fórmula que liga velocidade, aceleração e distância.",
+   "pecas": [
+    {
+     "termo": "Força normal",
+     "significado": "A força que o plano faz perpendicular a ele. O atrito é o coeficiente vezes a normal."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Distância até parar",
+        "formula": "v² = 2 · a · d (v é a inicial)"
+       },
+       {
+        "figura": "caixa",
+        "nome": "Atrito",
+        "formula": "atrito = μ · normal"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa",
+        "2 kg"
+       ],
+       [
+        "Velocidade inicial",
+        "12 m/s"
+       ],
+       [
+        "Seno e cosseno",
+        "0,6 e 0,8"
+       ],
+       [
+        "Atrito",
+        "0,5"
+       ],
+       [
+        "Gravidade",
+        "10 m/s²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "O bloco para depois de uma distância d. Para achá-la preciso da velocidade inicial e da desaceleração.\nAgora é só achar v e a.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "d = v² ÷ (2 · a)",
+      "leitura": "distância até parar = velocidade inicial ao quadrado ÷ (2 · desaceleração)",
+      "letras": [
+       {
+        "letra": "d",
+        "oque": "distância percorrida no plano, em m (o que a questão quer)"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade inicial, em m/s"
+       },
+       {
+        "letra": "a",
+        "oque": "desaceleração do bloco, em m/s²"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando v: a velocidade inicial",
+     "texto": "O enunciado dá: v = 12 m/s.\nv² = 12 · 12 = 144."
+    },
+    {
+     "titulo": "Achando a: a desaceleração",
+     "texto": "Peso ao longo do plano: 2 · 10 · 0,6 = 12 N.\nNormal: 2 · 10 · 0,8 = 16 N. Atrito: 0,5 · 16 = 8 N.\nOs dois puxam para baixo: 12 + 8 = 20 N.\na = 20 ÷ 2 = 10 m/s²."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "d = 144 ÷ (2 · 10) = 144 ÷ 20 = 7,2 m.\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "v",
+        "12 m/s"
+       ],
+       [
+        "a",
+        "10 m/s²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"lançado plano acima com atrito\" → some peso no plano e atrito para achar a desaceleração; depois d = v² ÷ (2a).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "2 kg, 12 m/s, 0,6 e 0,8, atrito 0,5"
+       ],
+       [
+        "2. Equação em letras",
+        "d = v² ÷ (2 · a)"
+       ],
+       [
+        "3. Uma letra por vez",
+        "v² = 144; a = 10 m/s²"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Sem atrito, o mesmo bloco (seno 0,6, v = 12 m/s, g = 10) sobe quanto no plano?",
+    "opcoes": [
+     "12 m",
+     "7,2 m",
+     "14,4 m",
+     "24 m"
+    ],
+    "certa": "12 m",
+    "resposta": "a = 10 · 0,6 = 6 m/s². d = 144 ÷ 12 = 12 m."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-din-00c",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Um bloco A, de 3 kg, está sobre uma mesa horizontal sem atrito. Um fio ideal liga A a um bloco B, de 2 kg, que fica pendurado fora da mesa, passando por uma polia ideal presa na borda. O sistema é solto do repouso e os blocos se movem juntos. Adote g = 10 m/s². A força de tração no fio, em newtons, é:\n\nDados: Bloco A (na mesa): 3 kg; Bloco B (pendurado): 2 kg; Atrito: nenhum; Gravidade: 10 m/s².",
+  "A": "6",
+  "B": "12",
+  "C": "8",
+  "D": "20",
+  "E": "30",
+  "resposta": "B",
+  "explicacao": {
+   "conferencia": "a = 20 ÷ 5 = 4 m/s²; tração em A: T = 3 · 4 = 12 N (em B: 20 − 12 = 8 = 2 · 4). B. Erros: A = Dividiu 12 por 2, pensando nas duas pontas do fio; C = Fez 2 · 4, que é a força resultante em B, não a tração; D = Deu o peso de B, como se B não acelerasse; E = Deu o peso de A.",
+   "ideia": "O peso de B acelera os dois blocos juntos. O fio é a única força horizontal sobre A, então a tração é a massa de A vezes a aceleração do sistema.",
+   "pecas": [
+    {
+     "termo": "Tração",
+     "significado": "A força que o fio faz nos blocos que ele liga."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "caixa",
+        "nome": "2ª lei de Newton",
+        "formula": "força = massa · aceleração"
+       },
+       {
+        "figura": "caixa",
+        "nome": "Peso",
+        "formula": "P = m · g"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Bloco A (na mesa)",
+        "3 kg"
+       ],
+       [
+        "Bloco B (pendurado)",
+        "2 kg"
+       ],
+       [
+        "Atrito",
+        "nenhum"
+       ],
+       [
+        "Gravidade",
+        "10 m/s²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Em A, a única força na horizontal é a tração. Então T = m · a, com a massa de A.\nAgora é só achar m e a.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "T = m · a",
+      "leitura": "tração = massa de A · aceleração do sistema",
+      "letras": [
+       {
+        "letra": "T",
+        "oque": "tração no fio, em N (o que a questão quer)"
+       },
+       {
+        "letra": "m",
+        "oque": "massa de A, em kg"
+       },
+       {
+        "letra": "a",
+        "oque": "aceleração dos blocos, em m/s²"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando m: a massa de A",
+     "texto": "A tração age no bloco A, que tem 3 kg.\nm = 3 kg."
+    },
+    {
+     "titulo": "Achando a: a aceleração",
+     "texto": "Os dois blocos andam juntos. A força que acelera tudo é o peso de B: 2 · 10 = 20 N.\nMassa total: 3 + 2 = 5 kg.\na = 20 ÷ 5 = 4 m/s²."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "T = 3 · 4 = 12 N.\nLetra B. Conferindo em B: peso 20 − tração 12 = 8 N, e 2 · 4 = 8 N.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "m",
+        "3 kg"
+       ],
+       [
+        "a",
+        "4 m/s²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"dois blocos ligados por fio e polia\" → a força que move tudo é o peso do que pende; ache a, depois a tração em um dos blocos.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "A 3 kg, B 2 kg, sem atrito"
+       ],
+       [
+        "2. Equação em letras",
+        "T = m · a"
+       ],
+       [
+        "3. Uma letra por vez",
+        "m = 3 kg; a = 4 m/s²"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "A de 1 kg na mesa, B de 1 kg pendurado, sem atrito, g = 10. Qual a tração?",
+    "opcoes": [
+     "5 N",
+     "10 N",
+     "2,5 N",
+     "20 N"
+    ],
+    "certa": "5 N",
+    "resposta": "a = 10 ÷ 2 = 5 m/s². T = 1 · 5 = 5 N."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-din-00d",
+  "materia": "Física",
+  "tema": "Dinâmica e Leis de Newton",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Uma esfera de 2 kg está presa a um fio ideal de 1,25 m de comprimento e é solta do repouso com o fio esticado na horizontal. Despreze a resistência do ar e adote g = 10 m/s². Ao passar pelo ponto mais baixo da trajetória, qual é a tração no fio, em newtons?\n\nDados: Massa: 2 kg; Fio: 1,25 m; Saída: repouso, fio na horizontal; Gravidade: 10 m/s².",
+  "A": "20",
+  "B": "30",
+  "C": "60",
+  "D": "40",
+  "E": "70",
+  "resposta": "C",
+  "explicacao": {
+   "conferencia": "Peso 20 N; v² = 2 · 10 · 1,25 = 25; C = 2 · 25 ÷ 1,25 = 40 N; T = 20 + 40 = 60 N (3 vezes o peso). C. Erros: A = Deu só o peso, como se a esfera estivesse parada; B = Somou o peso com metade dele; D = Deu só a força do movimento circular, sem o peso; E = Fez m · v² = 50, sem dividir pelo comprimento do fio.",
+   "ideia": "No ponto mais baixo, o fio sustenta o peso e ainda curva a trajetória. A velocidade ali vem da energia: a esfera trocou a altura do fio por velocidade.",
+   "pecas": [
+    {
+     "termo": "Força centrípeta",
+     "significado": "A parte da força que faz o corpo curvar: m · v² ÷ raio. Aqui o raio é o comprimento do fio."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "caixa",
+        "nome": "Peso",
+        "formula": "P = m · g"
+       },
+       {
+        "figura": "caixa",
+        "nome": "Energia na descida",
+        "formula": "v² = 2 · g · L"
+       },
+       {
+        "figura": "caixa",
+        "nome": "Força centrípeta",
+        "formula": "C = m · v² ÷ L"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa",
+        "2 kg"
+       ],
+       [
+        "Fio",
+        "1,25 m"
+       ],
+       [
+        "Saída",
+        "repouso, fio na horizontal"
+       ],
+       [
+        "Gravidade",
+        "10 m/s²"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Embaixo, o fio puxa para cima e o peso puxa para baixo; a diferença é a força que curva. Então T = P + C.\nAgora é só achar P e C.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "T = P + C",
+      "leitura": "tração = peso + força que curva a trajetória",
+      "letras": [
+       {
+        "letra": "T",
+        "oque": "tração no fio no ponto mais baixo, em N (o que a questão quer)"
+       },
+       {
+        "letra": "P",
+        "oque": "peso da esfera, em N"
+       },
+       {
+        "letra": "C",
+        "oque": "força centrípeta, em N"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando P: o peso",
+     "texto": "P = m · g = 2 · 10 = 20 N."
+    },
+    {
+     "titulo": "Achando C: a força que curva",
+     "texto": "Primeiro a velocidade: ela desceu 1,25 m, então v² = 2 · g · L = 2 · 10 · 1,25 = 25 (v = 5 m/s).\nC = m · v² ÷ L = 2 · 25 ÷ 1,25 = 50 ÷ 1,25 = 40 N."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "T = 20 + 40 = 60 N.\nLetra C. É exatamente 3 vezes o peso, e isso vale para qualquer fio solto da horizontal.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "P",
+        "20 N"
+       ],
+       [
+        "C",
+        "40 N"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"pêndulo no ponto mais baixo\" → tração = peso + m · v² ÷ L, com v² vindo da energia (2 · g · altura descida).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "2 kg, fio 1,25 m, solta da horizontal"
+       ],
+       [
+        "2. Equação em letras",
+        "T = P + C"
+       ],
+       [
+        "3. Uma letra por vez",
+        "P = 20 N; C = 40 N"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Esfera de 1 kg, fio de 0,8 m, solta da horizontal (g = 10). Qual a tração embaixo?",
+    "opcoes": [
+     "30 N",
+     "10 N",
+     "20 N",
+     "40 N"
+    ],
+    "certa": "30 N",
+    "resposta": "v² = 2 · 10 · 0,8 = 16; C = 1 · 16 ÷ 0,8 = 20 N; T = 10 + 20 = 30 N."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-ter-00a",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Para um banho, uma família enche uma banheira de 40 L misturando água quente do aquecedor, a 70 °C, com água fria da torneira, a 20 °C. Eles querem a mistura a 38 °C. Despreze a troca de calor com a banheira e com o ar, e lembre que 1 L de água tem massa de 1 kg e que o calor específico é o mesmo para toda a água. Quantos litros de água quente devem ser colocados na banheira?\n\nDados: Banheira: 40 L; Água quente: 70 °C; Água fria: 20 °C; Mistura desejada: 38 °C.",
+  "A": "18",
+  "B": "20",
+  "C": "25,6",
+  "D": "14,4",
+  "E": "32",
+  "resposta": "D",
+  "explicacao": {
+   "conferencia": "Q · (70 − 38) = F · (38 − 20) e F = 40 − Q: 32Q = 720 − 18Q, 50Q = 720, Q = 14,4 L. D. Erros: A = Deu a diferença 38 − 20, que é uma temperatura, não litros; B = Dividiu 40 L ao meio, sem olhar as temperaturas; C = Trocou as razões e achou a água fria no lugar da quente; E = Deu a diferença 70 − 38, que é uma temperatura, não litros.",
+   "ideia": "Na mistura, o calor que a água quente perde é igual ao que a fria ganha. Como o calor específico é o mesmo, sobram só litros vezes variação de temperatura.",
+   "pecas": [
+    {
+     "termo": "Equilíbrio térmico",
+     "significado": "Quando a mistura chega a uma temperatura só: o que um lado cedeu o outro recebeu."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Calor trocado",
+        "formula": "Q = m · c · variação da temperatura"
+       },
+       {
+        "figura": "termometro",
+        "nome": "Equilíbrio",
+        "formula": "calor cedido = calor recebido"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Banheira",
+        "40 L"
+       ],
+       [
+        "Água quente",
+        "70 °C"
+       ],
+       [
+        "Água fria",
+        "20 °C"
+       ],
+       [
+        "Mistura desejada",
+        "38 °C"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A quente cai de 70 para 38 (32 graus) e a fria sobe de 20 para 38 (18 graus). O calor cedido é igual ao recebido, e c e a massa por litro se cancelam.\nAgora é só achar F.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "Q · 32 = F · 18",
+      "leitura": "litros quentes · queda (70 − 38) = litros frios · subida (38 − 20)",
+      "letras": [
+       {
+        "letra": "Q",
+        "oque": "litros de água quente (o que a questão quer)"
+       },
+       {
+        "letra": "F",
+        "oque": "litros de água fria"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando F: os litros de água fria",
+     "texto": "A banheira tem 40 L no total: F = 40 − Q.\nSubstituindo na equação: Q · 32 = (40 − Q) · 18."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "32Q = 720 − 18Q, então 50Q = 720 e Q = 14,4 L.\nLetra D. Então F = 40 − 14,4 = 25,6 L. Conferindo: 14,4 · 32 = 460,8 e 25,6 · 18 = 460,8.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "F",
+        "40 − Q = 25,6 L"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"misturar água quente e fria\" → calor cedido = calor recebido; com mesmo c, litros · variação de temperatura dos dois lados.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "40 L, 70 °C, 20 °C, quer 38 °C"
+       ],
+       [
+        "2. Equação em letras",
+        "Q · 32 = F · 18"
+       ],
+       [
+        "3. Uma letra por vez",
+        "F = 40 − Q"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Misturam-se 10 L de água a 80 °C com 30 L a 20 °C. Qual a temperatura final?",
+    "opcoes": [
+     "35 °C",
+     "50 °C",
+     "40 °C",
+     "30 °C"
+    ],
+    "certa": "35 °C",
+    "resposta": "(10 · 80 + 30 · 20) ÷ 40 = (800 + 600) ÷ 40 = 35 °C."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-ter-00b",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Um gás ideal monoatômico, a pressão constante de 2,0 × 10⁵ Pa, tem seu volume aumentado de 3,0 L para 5,0 L. Considere 1 L = 10⁻³ m³ e que a energia interna desse gás vale U = (3/2) · n · R · T. O calor recebido pelo gás nesse processo, em joules, é:\n\nDados: Pressão: 2,0 × 10⁵ Pa (constante); Volume: 3,0 L para 5,0 L; Energia interna: U = (3/2) · n · R · T.",
+  "A": "400",
+  "B": "600",
+  "C": "1 500",
+  "D": "1 900",
+  "E": "1 000",
+  "resposta": "E",
+  "explicacao": {
+   "conferencia": "W = 2 · 10⁵ · 2 · 10⁻³ = 400 J; ΔU = (3/2) · 400 = 600 J; Q = 400 + 600 = 1 000 J. E. Erros: A = Deu só o trabalho, esquecendo a energia interna; B = Deu só a variação da energia interna, esquecendo o trabalho; C = Usou a energia interna final inteira em vez da variação; D = Somou o trabalho com a energia interna final inteira.",
+   "ideia": "O calor recebido vira trabalho (o gás empurra o ambiente) e aumento de energia interna. Como p · V = n · R · T, a variação de U sai direto de p · ΔV.",
+   "pecas": [
+    {
+     "termo": "Processo isobárico",
+     "significado": "A pressão não muda durante a expansão. O trabalho é pressão vezes variação de volume."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Primeira lei",
+        "formula": "Q = W + ΔU"
+       },
+       {
+        "figura": "termometro",
+        "nome": "Trabalho a pressão constante",
+        "formula": "W = p · ΔV"
+       },
+       {
+        "figura": "termometro",
+        "nome": "Gás ideal",
+        "formula": "p · V = n · R · T"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Pressão",
+        "2,0 × 10⁵ Pa (constante)"
+       ],
+       [
+        "Volume",
+        "3,0 L para 5,0 L"
+       ],
+       [
+        "Energia interna",
+        "U = (3/2) · n · R · T"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Pela primeira lei da termodinâmica, o calor se divide em trabalho e energia interna.\nAgora é só achar W e U.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "Q = W + U",
+      "leitura": "calor recebido = trabalho feito + aumento da energia interna",
+      "letras": [
+       {
+        "letra": "Q",
+        "oque": "calor recebido, em J (o que a questão quer)"
+       },
+       {
+        "letra": "W",
+        "oque": "trabalho do gás, em J"
+       },
+       {
+        "letra": "U",
+        "oque": "variação da energia interna, em J"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando W: o trabalho",
+     "texto": "ΔV = 5 − 3 = 2 L = 2 · 10⁻³ m³.\nW = p · ΔV = 2 · 10⁵ · 2 · 10⁻³ = 400 J."
+    },
+    {
+     "titulo": "Achando U: a energia interna",
+     "texto": "U = (3/2) · n · R · T e p · V = n · R · T, então ΔU = (3/2) · p · ΔV.\nΔU = 1,5 · 400 = 600 J."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "Q = 400 + 600 = 1 000 J.\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "W",
+        "400 J"
+       ],
+       [
+        "U",
+        "600 J"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"gás ideal monoatômico a pressão constante\" → W = p · ΔV, ΔU = (3/2) · p · ΔV, e o calor é a soma dos dois.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "2 · 10⁵ Pa, 3 L para 5 L"
+       ],
+       [
+        "2. Equação em letras",
+        "Q = W + U"
+       ],
+       [
+        "3. Uma letra por vez",
+        "W = 400 J; U = 600 J"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Gás monoatômico a 1 · 10⁵ Pa expande de 2 L para 4 L. Qual o calor recebido?",
+    "opcoes": [
+     "500 J",
+     "200 J",
+     "300 J",
+     "800 J"
+    ],
+    "certa": "500 J",
+    "resposta": "W = 10⁵ · 2 · 10⁻³ = 200 J; ΔU = 1,5 · 200 = 300 J; Q = 500 J."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-ter-00c",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Um bloco de 200 g de gelo, inicialmente a −10 °C, é aquecido por uma resistência de potência constante de 700 W, que transfere toda a potência para o gelo, até que ele se transforme em água a 20 °C. Considere o calor específico do gelo 0,5 cal/(g · °C), o da água 1 cal/(g · °C), o calor latente de fusão do gelo 80 cal/g e 1 cal = 4 J. O tempo necessário, em segundos, é:\n\nDados: Gelo: 200 g a −10 °C; Potência: 700 W; Chegada: água a 20 °C; Calores: gelo 0,5; água 1; fusão 80 cal/g; Conversão: 1 cal = 4 J.",
+  "A": "120",
+  "B": "29",
+  "C": "30",
+  "D": "114",
+  "E": "126",
+  "resposta": "A",
+  "explicacao": {
+   "conferencia": "Q = 1 000 + 16 000 + 4 000 = 21 000 cal = 84 000 J; t = 84 000 ÷ 700 = 120 s. A. Erros: B = Esqueceu o calor da fusão (só 5 000 cal); C = Dividiu as calorias por 700 sem converter em joules; D = Esqueceu de aquecer o gelo de −10 °C a 0 °C; E = Usou 4,2 J por caloria, em vez do 4 do enunciado.",
+   "ideia": "São três etapas de calor: esquentar o gelo até 0 °C, derreter, esquentar a água até 20 °C. Soma tudo, passa para joules e divide pela potência.",
+   "pecas": [
+    {
+     "termo": "Calor latente",
+     "significado": "Calor que o gelo precisa para virar água sem mudar de temperatura: 80 cal por grama."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Calor sensível",
+        "formula": "Q = m · c · variação da temperatura"
+       },
+       {
+        "figura": "termometro",
+        "nome": "Fusão",
+        "formula": "Q = m · L"
+       },
+       {
+        "figura": "circuito",
+        "nome": "Potência",
+        "formula": "tempo = energia ÷ potência"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Gelo",
+        "200 g a −10 °C"
+       ],
+       [
+        "Potência",
+        "700 W"
+       ],
+       [
+        "Chegada",
+        "água a 20 °C"
+       ],
+       [
+        "Calores",
+        "gelo 0,5; água 1; fusão 80 cal/g"
+       ],
+       [
+        "Conversão",
+        "1 cal = 4 J"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A resistência entrega 700 joules por segundo. O tempo é o calor total dividido por isso.\nAgora é só achar Q e P.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "t = Q ÷ P",
+      "leitura": "tempo = calor total em joules ÷ potência",
+      "letras": [
+       {
+        "letra": "t",
+        "oque": "tempo, em s (o que a questão quer)"
+       },
+       {
+        "letra": "Q",
+        "oque": "calor total, em J"
+       },
+       {
+        "letra": "P",
+        "oque": "potência da resistência, em W"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando Q: o calor total",
+     "texto": "Gelo de −10 a 0 °C: 200 · 0,5 · 10 = 1 000 cal.\nFusão: 200 · 80 = 16 000 cal.\nÁgua de 0 a 20 °C: 200 · 1 · 20 = 4 000 cal.\nTotal: 21 000 cal = 21 000 · 4 = 84 000 J."
+    },
+    {
+     "titulo": "Achando P: a potência",
+     "texto": "700 W são 700 J por segundo.\nP = 700 J/s."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "t = 84 000 ÷ 700 = 120 s.\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Q",
+        "84 000 J"
+       ],
+       [
+        "P",
+        "700 W"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"gelo vira água a tal temperatura com aquecedor\" → some as 3 etapas (gelo, fusão, água), converta em J e divida pela potência.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "200 g, −10 °C a 20 °C, 700 W"
+       ],
+       [
+        "2. Equação em letras",
+        "t = Q ÷ P"
+       ],
+       [
+        "3. Uma letra por vez",
+        "Q = 84 000 J; P = 700 W"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "100 g de água sobem de 20 °C a 100 °C com aquecedor de 800 W (1 cal = 4 J, c = 1). Quanto tempo?",
+    "opcoes": [
+     "40 s",
+     "10 s",
+     "80 s",
+     "8 s"
+    ],
+    "certa": "40 s",
+    "resposta": "Q = 100 · 1 · 80 = 8 000 cal = 32 000 J; 32 000 ÷ 800 = 40 s."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-ter-00d",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Duas barras de mesma seção e mesmo comprimento estão encostadas pelas pontas e formam uma barra só. A ponta livre da barra A é mantida a 100 °C e a ponta livre da barra B é mantida a 0 °C. O calor flui só ao longo das barras e, depois de um tempo, a situação fica estável: passa por A o mesmo calor, por segundo, que passa por B. A condutividade térmica de A vale 300 W/(m · K) e a de B vale 100 W/(m · K). Qual a temperatura, em °C, na junção das barras?\n\nDados: Ponta de A: 100 °C; Ponta de B: 0 °C; Condutividade de A: 300; Condutividade de B: 100; Barras: mesmo comprimento e seção.",
+  "A": "0,75",
+  "B": "75",
+  "C": "25",
+  "D": "50",
+  "E": "100",
+  "resposta": "B",
+  "explicacao": {
+   "conferencia": "300 · (100 − T) = 100 · T; 30 000 = 400T; T = 75 °C. Conferindo: 300 · 25 = 7 500 = 100 · 75. B. Erros: A = Achou a fração 300 ÷ 400 e esqueceu de multiplicar por 100; C = Inverteu as condutividades; D = Fez a média simples das pontas; E = Deu a temperatura da ponta de A.",
+   "ideia": "Em regime estável, o calor por segundo é igual nas duas barras. A barra que conduz melhor precisa de uma diferença de temperatura menor para passar o mesmo calor.",
+   "pecas": [
+    {
+     "termo": "Regime estável",
+     "significado": "Quando as temperaturas param de mudar: o calor que entra num trecho é igual ao que sai."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Fluxo de calor",
+        "formula": "fluxo = k · diferença de temperatura ÷ comprimento"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Ponta de A",
+        "100 °C"
+       ],
+       [
+        "Ponta de B",
+        "0 °C"
+       ],
+       [
+        "Condutividade de A",
+        "300"
+       ],
+       [
+        "Condutividade de B",
+        "100"
+       ],
+       [
+        "Barras",
+        "mesmo comprimento e seção"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Como as barras têm o mesmo comprimento e a mesma seção, o fluxo só depende da condutividade e da diferença de temperatura de cada barra.\nAgora é só achar A e B.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "A · (100 − T) = B · (T − 0)",
+      "leitura": "fluxo em A = fluxo em B (mesmo comprimento e seção)",
+      "letras": [
+       {
+        "letra": "T",
+        "oque": "temperatura da junção, em °C (o que a questão quer)"
+       },
+       {
+        "letra": "A",
+        "oque": "condutividade de A"
+       },
+       {
+        "letra": "B",
+        "oque": "condutividade de B"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando A: a condutividade de A",
+     "texto": "O enunciado dá: A = 300."
+    },
+    {
+     "titulo": "Achando B: a condutividade de B",
+     "texto": "O enunciado dá: B = 100."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "300 · (100 − T) = 100 · T\n30 000 − 300T = 100T\n30 000 = 400T, então T = 75 °C.\nLetra B. Conferindo: 300 · 25 = 7 500 e 100 · 75 = 7 500.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "A",
+        "300"
+       ],
+       [
+        "B",
+        "100"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"duas barras em série, regime estável\" → fluxo igual: condutividade · diferença de temperatura em cada barra.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "100 °C, 0 °C, A = 300, B = 100"
+       ],
+       [
+        "2. Equação em letras",
+        "A · (100 − T) = B · (T − 0)"
+       ],
+       [
+        "3. Uma letra por vez",
+        "A = 300; B = 100"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "A (k = 200) a 90 °C encosta em B (k = 100) a 0 °C, mesmas medidas. Temperatura da junção?",
+    "opcoes": [
+     "60 °C",
+     "45 °C",
+     "30 °C",
+     "70 °C"
+    ],
+    "certa": "60 °C",
+    "resposta": "200 · (90 − T) = 100 · T dá 18 000 = 300T, T = 60 °C."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-ond-00a",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Um barco de pesquisa usa um sonar, aparelho que emite pulsos de ultrassom na água e mede o tempo que cada eco leva para voltar. Em um ponto do lago, o sonar registra dois ecos de um mesmo pulso: o primeiro, vindo de um cardume, chega 0,2 s depois da emissão, e o segundo, vindo do fundo do lago, chega 0,8 s depois da emissão. A velocidade do som na água é de 1 500 m/s, e o pulso vai e volta pelo mesmo caminho vertical. A distância, em metros, entre o cardume e o fundo do lago é:\n\nDados: Eco do cardume: 0,2 s; Eco do fundo: 0,8 s; Som na água: 1 500 m/s.",
+  "A": "150",
+  "B": "300",
+  "C": "450",
+  "D": "600",
+  "E": "900",
+  "resposta": "C",
+  "explicacao": {
+   "conferencia": "Intervalo entre ecos = 0,8 − 0,2 = 0,6 s; D = 1 500 · 0,6 ÷ 2 = 450 m. C. Erros: A = Deu a profundidade do cardume (1 500 · 0,2 ÷ 2); B = Fez 1 500 · 0,2, sem dividir por 2 e só com o cardume; D = Deu a profundidade do fundo (1 500 · 0,8 ÷ 2); E = Esqueceu de dividir por 2: o som vai e volta.",
+   "ideia": "O som faz o caminho de ida e volta, então cada eco carrega o dobro da distância. A diferença entre os dois ecos corresponde ao dobro da distância entre cardume e fundo.",
+   "pecas": [
+    {
+     "termo": "Eco",
+     "significado": "Som que bate num obstáculo e volta. O tempo medido é de ida e volta."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Distância percorrida",
+        "formula": "distância = velocidade · tempo"
+       },
+       {
+        "figura": "onda",
+        "nome": "Ida e volta",
+        "formula": "distância até o alvo = percurso ÷ 2"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Eco do cardume",
+        "0,2 s"
+       ],
+       [
+        "Eco do fundo",
+        "0,8 s"
+       ],
+       [
+        "Som na água",
+        "1 500 m/s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "O intervalo entre os ecos é o tempo extra de ida e volta até o fundo. Por isso divido por 2.\nAgora é só achar v e t.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "D = v · t ÷ 2",
+      "leitura": "distância entre os dois = velocidade · intervalo entre os ecos ÷ 2",
+      "letras": [
+       {
+        "letra": "D",
+        "oque": "distância entre cardume e fundo, em m (o que a questão quer)"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade do som na água, em m/s"
+       },
+       {
+        "letra": "t",
+        "oque": "intervalo entre os dois ecos, em s"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando v: a velocidade do som",
+     "texto": "O enunciado dá: v = 1 500 m/s."
+    },
+    {
+     "titulo": "Achando t: o intervalo entre os ecos",
+     "texto": "O fundo respondeu em 0,8 s e o cardume em 0,2 s.\nt = 0,8 − 0,2 = 0,6 s."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "D = 1 500 · 0,6 ÷ 2 = 900 ÷ 2 = 450 m.\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "v",
+        "1 500 m/s"
+       ],
+       [
+        "t",
+        "0,6 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"sonar\" ou \"eco\" → o tempo é de ida e volta, então divida por 2; com dois ecos, use a diferença entre os tempos.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "ecos 0,2 s e 0,8 s, v = 1 500"
+       ],
+       [
+        "2. Equação em letras",
+        "D = v · t ÷ 2"
+       ],
+       [
+        "3. Uma letra por vez",
+        "v = 1 500 m/s; t = 0,6 s"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "O eco do fundo volta em 0,4 s e o som vale 1 500 m/s. Qual a profundidade?",
+    "opcoes": [
+     "300 m",
+     "600 m",
+     "150 m",
+     "750 m"
+    ],
+    "certa": "300 m",
+    "resposta": "1 500 · 0,4 = 600 m de ida e volta; metade: 300 m."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-ond-00b",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Uma ambulância com a sirene ligada emite um som de frequência 640 Hz e se aproxima, a 72 km/h, de um pedestre parado na calçada. A velocidade do som no ar é de 340 m/s. A frequência, em Hz, ouvida pelo pedestre é:\n\nDados: Frequência emitida: 640 Hz; Ambulância: 72 km/h, aproximando; Som no ar: 340 m/s; Pedestre: parado.",
+  "A": "604,4",
+  "B": "640",
+  "C": "660",
+  "D": "680",
+  "E": "677,6",
+  "resposta": "D",
+  "explicacao": {
+   "conferencia": "72 km/h = 20 m/s; O = 640 · 340 ÷ (340 − 20) = 217 600 ÷ 320 = 680 Hz. D. Erros: A = Calculou como se a ambulância se afastasse (340 ÷ 360); B = Achou que o pedestre ouve a frequência emitida; C = Somou 20 m/s a 640 Hz, misturando velocidade com frequência; E = Inverteu o sinal: 640 · 360 ÷ 340.",
+   "ideia": "Quando a fonte se aproxima, ela \"alcança\" as próprias ondas, que chegam mais juntas ao ouvinte, e a frequência ouvida sobe. O fator é a velocidade do som dividida por (velocidade do som menos a da fonte).",
+   "pecas": [
+    {
+     "termo": "Efeito Doppler",
+     "significado": "Mudança da frequência ouvida quando a fonte e o ouvinte se aproximam ou se afastam."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Doppler (fonte se aproxima)",
+        "formula": "O = E · V ÷ (V − A)"
+       },
+       {
+        "figura": "carro",
+        "nome": "km/h para m/s",
+        "formula": "m/s = km/h ÷ 3,6"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Frequência emitida",
+        "640 Hz"
+       ],
+       [
+        "Ambulância",
+        "72 km/h, aproximando"
+       ],
+       [
+        "Som no ar",
+        "340 m/s"
+       ],
+       [
+        "Pedestre",
+        "parado"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "O ouvinte parado ouve a frequência emitida multiplicada por um fator maior que 1, porque a fonte vem na direção dele.\nAgora é só achar E, V e A.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "O = E · V ÷ (V − A)",
+      "leitura": "frequência ouvida = emitida · som ÷ (som − ambulância)",
+      "letras": [
+       {
+        "letra": "O",
+        "oque": "frequência ouvida, em Hz (o que a questão quer)"
+       },
+       {
+        "letra": "E",
+        "oque": "frequência emitida, em Hz"
+       },
+       {
+        "letra": "V",
+        "oque": "velocidade do som, em m/s"
+       },
+       {
+        "letra": "A",
+        "oque": "velocidade da ambulância, em m/s"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando E: a frequência emitida",
+     "texto": "O enunciado dá: E = 640 Hz."
+    },
+    {
+     "titulo": "Achando V: a velocidade do som",
+     "texto": "O enunciado dá: V = 340 m/s."
+    },
+    {
+     "titulo": "Achando A: a velocidade da ambulância",
+     "texto": "A velocidade está em km/h e o som em m/s: converta.\nA = 72 ÷ 3,6 = 20 m/s."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "O = 640 · 340 ÷ (340 − 20) = 640 · 340 ÷ 320 = 217 600 ÷ 320 = 680 Hz.\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "E",
+        "640 Hz"
+       ],
+       [
+        "V",
+        "340 m/s"
+       ],
+       [
+        "A",
+        "20 m/s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"fonte sonora em movimento\" → converta a velocidade para m/s; se aproxima, divide por (V − A); se afasta, por (V + A).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "640 Hz, 72 km/h, 340 m/s"
+       ],
+       [
+        "2. Equação em letras",
+        "O = E · V ÷ (V − A)"
+       ],
+       [
+        "3. Uma letra por vez",
+        "E = 640; V = 340; A = 20 m/s"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Fonte de 320 Hz se aproxima a 20 m/s de um ouvinte parado (som a 340 m/s). Qual a frequência ouvida?",
+    "opcoes": [
+     "340 Hz",
+     "320 Hz",
+     "300 Hz",
+     "360 Hz"
+    ],
+    "certa": "340 Hz",
+    "resposta": "320 · 340 ÷ (340 − 20) = 320 · 340 ÷ 320 = 340 Hz."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-ond-00c",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Um tubo sonoro, fechado em uma das pontas e aberto na outra, mede 0,88 m de comprimento. O ar dentro dele está a 35 °C e, nessa faixa de temperatura, a velocidade do som no ar vale 331 + 0,6 · T, em m/s, com T em °C. A frequência do modo fundamental desse tubo, em hertz, é:\n\nDados: Comprimento: 0,88 m (uma ponta fechada); Temperatura: 35 °C; Som no ar: 331 + 0,6 · T m/s.",
+  "A": "97",
+  "B": "200",
+  "C": "300",
+  "D": "400",
+  "E": "100",
+  "resposta": "E",
+  "explicacao": {
+   "conferencia": "v = 331 + 0,6 · 35 = 352 m/s; f = 352 ÷ (4 · 0,88) = 352 ÷ 3,52 = 100 Hz. E. Erros: A = Usou 340 m/s, sem corrigir pela temperatura; B = Tratou como tubo aberto: v ÷ (2 · L); C = Deu o terceiro harmônico, não o fundamental; D = Fez v ÷ L, sem o fator 4.",
+   "ideia": "No tubo fechado, o modo fundamental cabe um quarto de onda no tubo: o comprimento de onda é 4 · L. Antes, é preciso achar a velocidade do som na temperatura do ar do tubo.",
+   "pecas": [
+    {
+     "termo": "Modo fundamental",
+     "significado": "A menor frequência com que o tubo pode ressoar."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Tubo fechado, fundamental",
+        "formula": "f = v ÷ (4 · L)"
+       },
+       {
+        "figura": "onda",
+        "nome": "Som e temperatura",
+        "formula": "v = 331 + 0,6 · T"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Comprimento",
+        "0,88 m (uma ponta fechada)"
+       ],
+       [
+        "Temperatura",
+        "35 °C"
+       ],
+       [
+        "Som no ar",
+        "331 + 0,6 · T m/s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Tubo fechado numa ponta tem um nó na ponta fechada e um ventre na aberta: cabe 1/4 de onda. Por isso o 4 na equação.\nAgora é só achar v e L.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "f = v ÷ (4 · L)",
+      "leitura": "frequência do fundamental = velocidade do som ÷ (4 · comprimento)",
+      "letras": [
+       {
+        "letra": "f",
+        "oque": "frequência fundamental, em Hz (o que a questão quer)"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade do som a 35 °C, em m/s"
+       },
+       {
+        "letra": "L",
+        "oque": "comprimento do tubo, em m"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando v: a velocidade do som a 35 °C",
+     "texto": "v = 331 + 0,6 · 35 = 331 + 21 = 352 m/s."
+    },
+    {
+     "titulo": "Achando L: o comprimento",
+     "texto": "O enunciado dá: L = 0,88 m.\n4 · L = 4 · 0,88 = 3,52 m."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "f = 352 ÷ 3,52 = 100 Hz.\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "v",
+        "352 m/s"
+       ],
+       [
+        "L",
+        "0,88 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"tubo fechado numa ponta\" → fundamental com 4 · L; se a temperatura aparece, corrija a velocidade do som antes.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "0,88 m fechado, 35 °C"
+       ],
+       [
+        "2. Equação em letras",
+        "f = v ÷ (4 · L)"
+       ],
+       [
+        "3. Uma letra por vez",
+        "v = 352 m/s; 4L = 3,52 m"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Tubo fechado de 0,5 m, som a 340 m/s. Qual a frequência fundamental?",
+    "opcoes": [
+     "170 Hz",
+     "340 Hz",
+     "85 Hz",
+     "680 Hz"
+    ],
+    "certa": "170 Hz",
+    "resposta": "f = 340 ÷ (4 · 0,5) = 340 ÷ 2 = 170 Hz."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-ond-00d",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Uma corda de 1,5 m, presa nas duas pontas, vibra formando ondas estacionárias. Dois modos de vibração consecutivos, um logo depois do outro, sem nenhum modo no meio, têm frequências de 300 Hz e 400 Hz. A velocidade de propagação da onda nessa corda, em m/s, é:\n\nDados: Corda: 1,5 m, presa nas duas pontas; Modos consecutivos: 300 Hz e 400 Hz.",
+  "A": "300",
+  "B": "150",
+  "C": "450",
+  "D": "900",
+  "E": "1 200",
+  "resposta": "A",
+  "explicacao": {
+   "conferencia": "Os modos são f, 2f, 3f...: 300 = 3f e 400 = 4f, então f = 100 Hz. v = 2 · 1,5 · 100 = 300 m/s. A. Erros: B = Fez L · f1, esquecendo o 2; C = Usou 300 como fundamental e esqueceu o 2; D = Usou 300 Hz como se fosse o fundamental; E = Usou 400 Hz como se fosse o fundamental.",
+   "ideia": "Numa corda presa nas duas pontas, as frequências possíveis são f, 2f, 3f, 4f... Dois modos seguidos diferem exatamente de f, a frequência fundamental.",
+   "pecas": [
+    {
+     "termo": "Modos consecutivos",
+     "significado": "Dois modos de vibração um depois do outro: suas frequências diferem de uma vez a fundamental."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Corda presa nas pontas",
+        "formula": "v = 2 · L · f (f = fundamental)"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Corda",
+        "1,5 m, presa nas duas pontas"
+       ],
+       [
+        "Modos consecutivos",
+        "300 Hz e 400 Hz"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "O fundamental tem meio comprimento de onda na corda, então o comprimento de onda é 2 · L e v = 2 · L · f.\nAgora é só achar L e f.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "v = 2 · L · f",
+      "leitura": "velocidade = 2 · comprimento da corda · frequência fundamental",
+      "letras": [
+       {
+        "letra": "v",
+        "oque": "velocidade da onda, em m/s (o que a questão quer)"
+       },
+       {
+        "letra": "L",
+        "oque": "comprimento da corda, em m"
+       },
+       {
+        "letra": "f",
+        "oque": "frequência fundamental, em Hz"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando L: o comprimento",
+     "texto": "O enunciado dá: L = 1,5 m."
+    },
+    {
+     "titulo": "Achando f: a frequência fundamental",
+     "texto": "As frequências possíveis são f, 2f, 3f, 4f... Dois modos seguidos são n · f e (n + 1) · f.\nA diferença entre eles é f: f = 400 − 300 = 100 Hz (300 é o 3º modo e 400 o 4º)."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "v = 2 · 1,5 · 100 = 300 m/s.\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "L",
+        "1,5 m"
+       ],
+       [
+        "f",
+        "100 Hz"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"modos consecutivos de uma corda\" → a diferença entre as duas frequências é a fundamental; depois v = 2 · L · f.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1,5 m, 300 Hz e 400 Hz"
+       ],
+       [
+        "2. Equação em letras",
+        "v = 2 · L · f"
+       ],
+       [
+        "3. Uma letra por vez",
+        "L = 1,5 m; f = 100 Hz"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Corda de 1 m com modos consecutivos de 200 Hz e 300 Hz. Qual a velocidade da onda?",
+    "opcoes": [
+     "200 m/s",
+     "100 m/s",
+     "400 m/s",
+     "300 m/s"
+    ],
+    "certa": "200 m/s",
+    "resposta": "f = 300 − 200 = 100 Hz; v = 2 · 1 · 100 = 200 m/s."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-opt-00a",
+  "materia": "Física",
+  "tema": "Óptica",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Um projetor antigo de slides usa uma lente delgada convergente de distância focal 20 cm. O slide, que tem uma figura de 5 cm de altura, é colocado a 30 cm da lente, e a imagem se forma, nítida, na parede da sala. O professor quer saber o tamanho da figura que a plateia vai ver. Qual é a altura da imagem projetada na parede, em centímetros?\n\nDados: Distância focal: 20 cm; Altura do slide: 5 cm; Slide até a lente: 30 cm.",
+  "A": "3,3",
+  "B": "10",
+  "C": "7,5",
+  "D": "30",
+  "E": "60",
+  "resposta": "B",
+  "explicacao": {
+   "conferencia": "1/p' = 1/20 − 1/30 = 1/60, p' = 60 cm; aumento = 60 ÷ 30 = 2; imagem = 2 · 5 = 10 cm. B. Erros: A = Usou o aumento f ÷ p = 20 ÷ 30, em vez de p' ÷ p; C = Usou o aumento p ÷ f = 30 ÷ 20; D = Deu a distância do slide, não a altura da imagem; E = Deu a distância da imagem à lente, não a altura.",
+   "ideia": "A lente forma a imagem a uma distância que se acha pela equação da lente. O aumento é a razão entre a distância da imagem e a do objeto, e multiplica a altura do slide.",
+   "pecas": [
+    {
+     "termo": "Aumento",
+     "significado": "Quantas vezes a imagem é maior que o objeto: distância da imagem ÷ distância do objeto."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Equação da lente",
+        "formula": "1/f = 1/p + 1/p'"
+       },
+       {
+        "figura": "lente",
+        "nome": "Aumento",
+        "formula": "A = p' ÷ p"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Distância focal",
+        "20 cm"
+       ],
+       [
+        "Altura do slide",
+        "5 cm"
+       ],
+       [
+        "Slide até a lente",
+        "30 cm"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A imagem é o slide multiplicado pelo aumento da lente.\nAgora é só achar o e A.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "i = A · o",
+      "leitura": "altura da imagem = aumento · altura do slide",
+      "letras": [
+       {
+        "letra": "i",
+        "oque": "altura da imagem, em cm (o que a questão quer)"
+       },
+       {
+        "letra": "A",
+        "oque": "aumento (quantas vezes aumenta)"
+       },
+       {
+        "letra": "o",
+        "oque": "altura do slide, em cm"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando o: a altura do slide",
+     "texto": "O enunciado dá: o = 5 cm."
+    },
+    {
+     "titulo": "Achando A: o aumento",
+     "texto": "Primeiro onde a imagem se forma: 1/p' = 1/f − 1/p = 1/20 − 1/30 = 3/60 − 2/60 = 1/60. Então p' = 60 cm.\nA = p' ÷ p = 60 ÷ 30 = 2."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "i = 2 · 5 = 10 cm.\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "o",
+        "5 cm"
+       ],
+       [
+        "A",
+        "2"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"lente projeta imagem na parede\" → ache p' pela equação da lente, depois o aumento p' ÷ p e a altura da imagem.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "f = 20 cm, 5 cm, p = 30 cm"
+       ],
+       [
+        "2. Equação em letras",
+        "i = A · o"
+       ],
+       [
+        "3. Uma letra por vez",
+        "o = 5 cm; p' = 60 cm; A = 2"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Lente de f = 10 cm, objeto de 3 cm a 15 cm da lente. Qual a altura da imagem?",
+    "opcoes": [
+     "6 cm",
+     "3 cm",
+     "9 cm",
+     "2 cm"
+    ],
+    "certa": "6 cm",
+    "resposta": "1/p' = 1/10 − 1/15 = 1/30, p' = 30; A = 30 ÷ 15 = 2; i = 6 cm."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-opt-00b",
+  "materia": "Física",
+  "tema": "Óptica",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Uma lente biconvexa de vidro, de índice de refração 1,5, tem as duas faces com raio de curvatura de 20 cm. No ar, sua distância focal é de 20 cm. Se a lente for totalmente mergulhada na água, de índice de refração 4/3, qual passa a ser sua distância focal, em centímetros? (Use a equação dos fabricantes de lentes, com o índice relativo da lente em relação ao meio.)\n\nDados: Índice do vidro: 1,5; Índice da água: 4/3; Raios das faces: 20 cm e 20 cm; Foco no ar: 20 cm.",
+  "A": "−90",
+  "B": "20",
+  "C": "80",
+  "D": "60",
+  "E": "160",
+  "resposta": "C",
+  "explicacao": {
+   "conferencia": "N = 1,5 ÷ (4/3) = 1,125; 1/F = 0,125 · (1/20 + 1/20) = 0,0125; F = 80 cm. C. Erros: A = Inverteu o índice relativo (água ÷ vidro) e a lente ficou divergente; B = Achou que a água não muda nada; D = Usou a diferença 1,5 − 4/3 = 1/6 em vez da razão; E = Usou só uma face: R ÷ (N − 1).",
+   "ideia": "O foco de uma lente depende da diferença entre o índice dela e o do meio. Na água essa diferença cai muito, e a lente converge bem menos, com foco bem maior.",
+   "pecas": [
+    {
+     "termo": "Índice relativo",
+     "significado": "Índice da lente dividido pelo índice do meio em que ela está."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Equação dos fabricantes",
+        "formula": "1/F = (N − 1) · (1/R1 + 1/R2)"
+       },
+       {
+        "figura": "lente",
+        "nome": "Índice relativo",
+        "formula": "N = n da lente ÷ n do meio"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Índice do vidro",
+        "1,5"
+       ],
+       [
+        "Índice da água",
+        "4/3"
+       ],
+       [
+        "Raios das faces",
+        "20 cm e 20 cm"
+       ],
+       [
+        "Foco no ar",
+        "20 cm"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "As duas faces têm o mesmo raio R. O que muda da água para o ar é o índice relativo N.\nAgora é só achar N e R.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "1/F = (N − 1) · (1/R + 1/R)",
+      "leitura": "1 sobre o foco = (índice relativo − 1) · (soma de 1 sobre os dois raios)",
+      "letras": [
+       {
+        "letra": "F",
+        "oque": "distância focal na água, em cm (o que a questão quer)"
+       },
+       {
+        "letra": "N",
+        "oque": "índice relativo vidro/água"
+       },
+       {
+        "letra": "R",
+        "oque": "raio de cada face, em cm"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando N: o índice relativo",
+     "texto": "N = índice do vidro ÷ índice da água = 1,5 ÷ (4/3) = 1,5 · 3/4 = 1,125.\nN − 1 = 0,125."
+    },
+    {
+     "titulo": "Achando R: o raio",
+     "texto": "O enunciado dá: R = 20 cm nas duas faces.\n1/R + 1/R = 1/20 + 1/20 = 0,1."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "1/F = 0,125 · 0,1 = 0,0125, então F = 1 ÷ 0,0125 = 80 cm.\nLetra C. No ar, N − 1 = 0,5 dava 1/F = 0,05 e F = 20 cm: na água o foco ficou 4 vezes maior.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "N",
+        "1,125"
+       ],
+       [
+        "R",
+        "20 cm"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"lente mergulhada em outro meio\" → troque o índice por índice da lente ÷ índice do meio na equação dos fabricantes.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "vidro 1,5, água 4/3, R = 20 cm"
+       ],
+       [
+        "2. Equação em letras",
+        "1/F = (N − 1) · (1/R + 1/R)"
+       ],
+       [
+        "3. Uma letra por vez",
+        "N = 1,125; 1/R + 1/R = 0,1"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Qual o índice relativo de uma lente de vidro (1,5) num líquido de índice 1,2?",
+    "opcoes": [
+     "1,25",
+     "0,8",
+     "0,3",
+     "1,8"
+    ],
+    "certa": "1,25",
+    "resposta": "N = 1,5 ÷ 1,2 = 1,25."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-opt-00c",
+  "materia": "Física",
+  "tema": "Óptica",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Em uma fibra óptica, o núcleo de vidro tem índice de refração 1,6. Um pulso de luz percorre 3 km de fibra, todo dentro do núcleo, em linha reta (despreze as reflexões nas paredes). A velocidade da luz no vácuo é 3 × 10⁸ m/s. O tempo, em microssegundos (1 µs = 10⁻⁶ s), que o pulso leva para percorrer a fibra é:\n\nDados: Comprimento: 3 km; Índice do núcleo: 1,6; Luz no vácuo: 3 × 10⁸ m/s.",
+  "A": "6,25",
+  "B": "10",
+  "C": "25,6",
+  "D": "16",
+  "E": "160",
+  "resposta": "D",
+  "explicacao": {
+   "conferencia": "v = 3 · 10⁸ ÷ 1,6 = 187 500 000 m/s; t = 3 000 ÷ 187 500 000 = 0,000016 s = 16 µs. D. Erros: A = Multiplicou a velocidade por 1,6 em vez de dividir; B = Usou a velocidade do vácuo, sem o índice; C = Multiplicou o resultado por 1,6 duas vezes; E = Errou uma casa decimal na conversão para microssegundos.",
+   "ideia": "Dentro do vidro a luz anda mais devagar: a velocidade é a do vácuo dividida pelo índice de refração. O tempo é distância ÷ velocidade, e depois se passa para microssegundos.",
+   "pecas": [
+    {
+     "termo": "Índice de refração",
+     "significado": "Quantas vezes a luz é mais lenta no material do que no vácuo: n = c ÷ v."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "onda",
+        "nome": "Velocidade no meio",
+        "formula": "v = c ÷ n"
+       },
+       {
+        "figura": "carro",
+        "nome": "Tempo",
+        "formula": "tempo = distância ÷ velocidade"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Comprimento",
+        "3 km"
+       ],
+       [
+        "Índice do núcleo",
+        "1,6"
+       ],
+       [
+        "Luz no vácuo",
+        "3 × 10⁸ m/s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "O tempo é a distância dividida pela velocidade da luz dentro do núcleo, que não é a do vácuo.\nAgora é só achar L e v.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "t = L ÷ v",
+      "leitura": "tempo = comprimento da fibra ÷ velocidade da luz no núcleo",
+      "letras": [
+       {
+        "letra": "t",
+        "oque": "tempo do pulso, em s (o que a questão quer)"
+       },
+       {
+        "letra": "L",
+        "oque": "comprimento da fibra, em m"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade da luz no núcleo, em m/s"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando L: o comprimento em metros",
+     "texto": "3 km = 3 000 m."
+    },
+    {
+     "titulo": "Achando v: a velocidade no núcleo",
+     "texto": "v = c ÷ n = 300 000 000 ÷ 1,6 = 187 500 000 m/s."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "t = 3 000 ÷ 187 500 000 = 0,000016 s.\n1 µs = 0,000001 s, então 0,000016 s = 16 µs.\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "L",
+        "3 000 m"
+       ],
+       [
+        "v",
+        "187 500 000 m/s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"luz num material com índice n\" → v = c ÷ n; depois tempo = distância ÷ v, cuidando com as unidades.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "3 km, n = 1,6, c = 3 · 10⁸"
+       ],
+       [
+        "2. Equação em letras",
+        "t = L ÷ v"
+       ],
+       [
+        "3. Uma letra por vez",
+        "L = 3 000 m; v = 1,875 · 10⁸ m/s"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Qual a velocidade da luz num vidro de índice 1,5? (c = 3 × 10⁸ m/s)",
+    "opcoes": [
+     "2 × 10⁸ m/s",
+     "4,5 × 10⁸ m/s",
+     "3 × 10⁸ m/s",
+     "1,5 × 10⁸ m/s"
+    ],
+    "certa": "2 × 10⁸ m/s",
+    "resposta": "v = 3 · 10⁸ ÷ 1,5 = 2 · 10⁸ m/s."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-opt-00d",
+  "materia": "Física",
+  "tema": "Óptica",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Um homem está de pé, a 8 m de um espelho plano vertical, e começa a andar em direção ao espelho, em linha reta, com velocidade de 1,5 m/s. Depois de 4 s de caminhada, qual é a distância, em metros, entre o homem e a imagem dele?\n\nDados: Distância inicial ao espelho: 8 m; Velocidade: 1,5 m/s, em direção ao espelho; Tempo: 4 s.",
+  "A": "2",
+  "B": "8",
+  "C": "10",
+  "D": "16",
+  "E": "4",
+  "resposta": "E",
+  "explicacao": {
+   "conferencia": "Andou 1,5 · 4 = 6 m; sobram 8 − 6 = 2 m até o espelho; a imagem está 2 m atrás, então D = 4 m. E. Erros: A = Deu a distância do homem ao espelho, não até a imagem; B = Deu a distância inicial ao espelho; C = Somou 8 + 2; D = Deu a distância inicial entre ele e a imagem.",
+   "ideia": "No espelho plano, a imagem fica tão atrás do espelho quanto o objeto fica na frente. A distância entre o homem e a imagem é o dobro da distância dele ao espelho.",
+   "pecas": [
+    {
+     "termo": "Imagem no espelho plano",
+     "significado": "Fica simétrica ao objeto: mesma distância do espelho, só que do outro lado."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Distância andada",
+        "formula": "distância = velocidade · tempo"
+       },
+       {
+        "figura": "lente",
+        "nome": "Espelho plano",
+        "formula": "distância à imagem = distância ao espelho"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Distância inicial ao espelho",
+        "8 m"
+       ],
+       [
+        "Velocidade",
+        "1,5 m/s, em direção ao espelho"
+       ],
+       [
+        "Tempo",
+        "4 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A imagem está atrás do espelho, à mesma distância d. Entre o homem e a imagem há d na frente do espelho e d atrás: 2 · d.\nAgora é só achar d.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "D = 2 · d",
+      "leitura": "distância até a imagem = 2 · distância dele ao espelho",
+      "letras": [
+       {
+        "letra": "D",
+        "oque": "distância entre o homem e a imagem, em m (o que a questão quer)"
+       },
+       {
+        "letra": "d",
+        "oque": "distância do homem ao espelho depois de 4 s, em m"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando d: a distância ao espelho",
+     "texto": "Em 4 s ele andou 1,5 · 4 = 6 m.\nd = 8 − 6 = 2 m."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "D = 2 · 2 = 4 m.\nLetra E. Antes de andar, D era 2 · 8 = 16 m: a aproximação do homem encurta a distância até a imagem duas vezes mais rápido.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "d",
+        "2 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"espelho plano e uma pessoa que anda\" → ache a distância dela ao espelho; a imagem está à mesma distância do outro lado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "8 m do espelho, 1,5 m/s, 4 s"
+       ],
+       [
+        "2. Equação em letras",
+        "D = 2 · d"
+       ],
+       [
+        "3. Uma letra por vez",
+        "d = 2 m"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "A 5 m do espelho, ele anda 1 m/s por 2 s. Qual a distância até a imagem?",
+    "opcoes": [
+     "6 m",
+     "3 m",
+     "8 m",
+     "10 m"
+    ],
+    "certa": "6 m",
+    "resposta": "d = 5 − 2 = 3 m; D = 2 · 3 = 6 m."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-ele-00a",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Um chuveiro elétrico de 4 200 W esquenta a água que passa por ele, com vazão de 6 L por minuto. Por causa de perdas, só 80% da potência elétrica vira calor na água. Considere que 1 L de água tem massa de 1 kg, que o calor específico da água é 4 200 J/(kg · °C) e que a água sai do chuveiro numa temperatura constante. Qual é o aumento de temperatura da água ao passar pelo chuveiro, em °C?\n\nDados: Potência elétrica: 4 200 W; Rendimento: 80%; Vazão: 6 L/min; Calor específico: 4 200 J/(kg · °C).",
+  "A": "8",
+  "B": "0,13",
+  "C": "10",
+  "D": "12,5",
+  "E": "80",
+  "resposta": "A",
+  "explicacao": {
+   "conferencia": "Potência útil = 4 200 · 0,8 = 3 360 W; m = 6 ÷ 60 = 0,1 kg/s; ΔT = 3 360 ÷ (0,1 · 4 200) = 8 °C. A. Erros: B = Usou 6 kg por segundo, sem dividir os 6 L por 60 s; C = Esqueceu o rendimento de 80%; D = Dividiu por 0,8 em vez de multiplicar; E = Usou 80 no lugar de 0,8.",
+   "ideia": "A água recebe, a cada segundo, só 80% da potência. Esse calor por segundo é massa por segundo vezes calor específico vezes o aumento de temperatura.",
+   "pecas": [
+    {
+     "termo": "Rendimento",
+     "significado": "A parte da energia que realmente serve ao que se quer: aqui 80% da potência vira calor na água."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Potência útil",
+        "formula": "U = P · rendimento"
+       },
+       {
+        "figura": "termometro",
+        "nome": "Calor por segundo",
+        "formula": "U = m · c · ΔT (m = massa por segundo)"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Potência elétrica",
+        "4 200 W"
+       ],
+       [
+        "Rendimento",
+        "80%"
+       ],
+       [
+        "Vazão",
+        "6 L/min"
+       ],
+       [
+        "Calor específico",
+        "4 200 J/(kg · °C)"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Cada segundo, U joules aquecem m quilos de água. Então T = U ÷ (m · c).\nAgora é só achar U, m e c.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "T = U ÷ (m · c)",
+      "leitura": "aumento de temperatura = potência útil ÷ (massa por segundo · calor específico)",
+      "letras": [
+       {
+        "letra": "T",
+        "oque": "aumento de temperatura, em °C (o que a questão quer)"
+       },
+       {
+        "letra": "U",
+        "oque": "potência que vira calor na água, em W"
+       },
+       {
+        "letra": "m",
+        "oque": "massa de água por segundo, em kg/s"
+       },
+       {
+        "letra": "c",
+        "oque": "calor específico da água"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando U: a potência útil",
+     "texto": "Só 80% vira calor: U = 4 200 · 0,8 = 3 360 W (3 360 J por segundo)."
+    },
+    {
+     "titulo": "Achando m: a massa por segundo",
+     "texto": "6 L por minuto = 6 kg por minuto. Em um segundo: 6 ÷ 60 = 0,1 kg/s."
+    },
+    {
+     "titulo": "Achando c: o calor específico",
+     "texto": "O enunciado dá: c = 4 200 J/(kg · °C)."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "T = 3 360 ÷ (0,1 · 4 200) = 3 360 ÷ 420 = 8 °C.\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "U",
+        "3 360 W"
+       ],
+       [
+        "m",
+        "0,1 kg/s"
+       ],
+       [
+        "c",
+        "4 200"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"aquecedor elétrico com rendimento e vazão\" → potência útil, massa por segundo (litros por minuto ÷ 60) e T = U ÷ (m · c).",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "4 200 W, 80%, 6 L/min"
+       ],
+       [
+        "2. Equação em letras",
+        "T = U ÷ (m · c)"
+       ],
+       [
+        "3. Uma letra por vez",
+        "U = 3 360 W; m = 0,1 kg/s; c = 4 200"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Aquecedor de 4 200 W (tudo vira calor) aquece 0,25 kg de água por segundo (c = 4 200). Qual o aumento?",
+    "opcoes": [
+     "4 °C",
+     "40 °C",
+     "16 °C",
+     "1 °C"
+    ],
+    "certa": "4 °C",
+    "resposta": "T = 4 200 ÷ (0,25 · 4 200) = 1 ÷ 0,25 = 4 °C."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-ele-00b",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Uma bateria de força eletromotriz 12 V e resistência interna 2 Ω alimenta um resistor externo de resistência R, que pode ser ajustada para qualquer valor. Qual é a maior potência, em watts, que a bateria pode entregar ao resistor R?\n\nDados: Força eletromotriz: 12 V; Resistência interna: 2 Ω; Resistor externo: R (ajustável).",
+  "A": "16",
+  "B": "18",
+  "C": "36",
+  "D": "72",
+  "E": "144",
+  "resposta": "B",
+  "explicacao": {
+   "conferencia": "O máximo vem com R = r = 2 Ω: I = 12 ÷ 4 = 3 A e P = 2 · 3² = 18 W. Com R = 1: 16 W; com R = 4: 16 W. B. Erros: A = Calculou com R = 1 Ω ou R = 4 Ω, que não é o máximo; C = Contou a potência total da bateria (12 · 3), não só a do resistor; D = Calculou a potência com R = 0 (curto), toda perdida na resistência interna; E = Fez 12² e esqueceu de dividir.",
+   "ideia": "Se R é muito pequeno, quase não há tensão nele; se é muito grande, a corrente cai. A potência no resistor é máxima quando ele é igual à resistência interna.",
+   "pecas": [
+    {
+     "termo": "Resistência interna",
+     "significado": "A resistência da própria bateria, que fica em série com o resistor ligado a ela."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Corrente no circuito",
+        "formula": "I = ε ÷ (R + r)"
+       },
+       {
+        "figura": "circuito",
+        "nome": "Potência no resistor",
+        "formula": "P = R · I²"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Força eletromotriz",
+        "12 V"
+       ],
+       [
+        "Resistência interna",
+        "2 Ω"
+       ],
+       [
+        "Resistor externo",
+        "R (ajustável)"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A potência no resistor é R · I². Mas I também depende de R, então tenho de escolher o R que dá o maior P.\nAgora é só achar R e I.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "P = R · I²",
+      "leitura": "potência no resistor = R · corrente ao quadrado",
+      "letras": [
+       {
+        "letra": "P",
+        "oque": "potência no resistor, em W (o que a questão quer)"
+       },
+       {
+        "letra": "R",
+        "oque": "resistência do resistor externo, em Ω"
+       },
+       {
+        "letra": "I",
+        "oque": "corrente no circuito, em A"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando R: o valor que dá o máximo",
+     "texto": "Teste: R = 1 Ω → I = 12 ÷ 3 = 4 A, P = 1 · 16 = 16 W. R = 2 Ω → I = 3 A, P = 18 W. R = 4 Ω → I = 2 A, P = 16 W.\nO maior está em R = 2 Ω, igual à resistência interna."
+    },
+    {
+     "titulo": "Achando I: a corrente",
+     "texto": "Com R = 2 Ω e r = 2 Ω em série: I = 12 ÷ (2 + 2) = 3 A."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "P = 2 · 3² = 2 · 9 = 18 W.\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "R",
+        "2 Ω"
+       ],
+       [
+        "I",
+        "3 A"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"máxima potência no resistor de uma bateria\" → a potência é máxima quando R é igual à resistência interna; teste os vizinhos para conferir.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "12 V, r = 2 Ω, R ajustável"
+       ],
+       [
+        "2. Equação em letras",
+        "P = R · I²"
+       ],
+       [
+        "3. Uma letra por vez",
+        "R = 2 Ω; I = 3 A"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Bateria de 10 V e r = 5 Ω. Qual a potência máxima no resistor?",
+    "opcoes": [
+     "5 W",
+     "10 W",
+     "20 W",
+     "2,5 W"
+    ],
+    "certa": "5 W",
+    "resposta": "R = 5 Ω; I = 10 ÷ 10 = 1 A; P = 5 · 1 = 5 W."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-ele-00c",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Uma fonte de 36 V alimenta um circuito em que um resistor de 8 Ω está ligado em série com um conjunto de dois resistores em paralelo, um de 12 Ω e outro de 6 Ω. Considere a fonte e os fios ideais. A corrente, em ampères, que passa pelo resistor de 6 Ω do conjunto em paralelo é:\n\nDados: Fonte: 36 V; Resistor em série: 8 Ω; Em paralelo: 12 Ω e 6 Ω.",
+  "A": "1",
+  "B": "3",
+  "C": "2",
+  "D": "4,5",
+  "E": "6",
+  "resposta": "C",
+  "explicacao": {
+   "conferencia": "Paralelo: 12 · 6 ÷ 18 = 4 Ω; total 12 Ω; I = 36 ÷ 12 = 3 A; U no paralelo = 3 · 4 = 12 V; I(6 Ω) = 12 ÷ 6 = 2 A. C. Erros: A = Deu a corrente do resistor de 12 Ω (12 ÷ 12); B = Deu a corrente total do circuito; D = Fez 36 ÷ 8, ignorando o paralelo; E = Fez 36 ÷ 6, como se só ele estivesse ligado à fonte.",
+   "ideia": "Primeiro o circuito todo: some o paralelo ao resistor em série e ache a corrente total. Essa corrente cria uma tensão no conjunto em paralelo, e é essa tensão que divide a corrente entre os dois resistores.",
+   "pecas": [
+    {
+     "termo": "Resistores em paralelo",
+     "significado": "Ligados nos mesmos dois pontos: têm a mesma tensão, e a corrente se divide entre eles."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Lei de Ohm",
+        "formula": "U = R · I"
+       },
+       {
+        "figura": "circuito",
+        "nome": "Dois em paralelo",
+        "formula": "R = (R1 · R2) ÷ (R1 + R2)"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Fonte",
+        "36 V"
+       ],
+       [
+        "Resistor em série",
+        "8 Ω"
+       ],
+       [
+        "Em paralelo",
+        "12 Ω e 6 Ω"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "O resistor de 6 Ω recebe a tensão do conjunto em paralelo. A corrente nele é U ÷ 6.\nAgora é só achar R e U.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "I = U ÷ R",
+      "leitura": "corrente no de 6 Ω = tensão do paralelo ÷ 6",
+      "letras": [
+       {
+        "letra": "I",
+        "oque": "corrente no resistor de 6 Ω, em A (o que a questão quer)"
+       },
+       {
+        "letra": "U",
+        "oque": "tensão sobre o conjunto em paralelo, em V"
+       },
+       {
+        "letra": "R",
+        "oque": "resistência desse resistor, em Ω"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando R: o resistor do paralelo",
+     "texto": "É o resistor de 6 Ω do enunciado: R = 6 Ω."
+    },
+    {
+     "titulo": "Achando U: a tensão do paralelo",
+     "texto": "Paralelo: 12 · 6 ÷ (12 + 6) = 72 ÷ 18 = 4 Ω.\nTotal em série: 8 + 4 = 12 Ω. Corrente total: 36 ÷ 12 = 3 A.\nTensão no paralelo: U = 3 · 4 = 12 V."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "I = 12 ÷ 6 = 2 A.\nLetra C. Conferindo: no de 12 Ω passa 1 A, e 1 + 2 = 3 A, a corrente total.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "R",
+        "6 Ω"
+       ],
+       [
+        "U",
+        "12 V"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"série com paralelo\" → ache a resistência total e a corrente total; a tensão do paralelo é corrente · resistência dele; divida por cada resistor.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "36 V, 8 Ω em série, 12 Ω e 6 Ω em paralelo"
+       ],
+       [
+        "2. Equação em letras",
+        "I = U ÷ R"
+       ],
+       [
+        "3. Uma letra por vez",
+        "R = 6 Ω; U = 12 V"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Fonte de 20 V, 4 Ω em série e dois de 12 Ω em paralelo. Corrente em cada um dos de 12 Ω?",
+    "opcoes": [
+     "1 A",
+     "2 A",
+     "0,5 A",
+     "3 A"
+    ],
+    "certa": "1 A",
+    "resposta": "Paralelo = 6 Ω; total 10 Ω; I = 2 A; U no paralelo = 12 V; cada um: 12 ÷ 12 = 1 A."
+   },
+   "seuErro": null
+  }
+ },
+ {
+  "id": "d2-escada-fis-ita-ele-00d",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "nivel": "acima",
+  "origem": "Escada",
+  "enunciado": "Doze resistores iguais, de 12 Ω cada um, formam as arestas de um cubo. Uma bateria é ligada a dois vértices opostos, as pontas de uma diagonal do cubo. A resistência equivalente entre esses dois vértices, em ohms, é:\n\nDados: Resistores: 12, todos de 12 Ω; Montagem: arestas de um cubo; Bateria: nos vértices opostos.",
+  "A": "4",
+  "B": "6",
+  "C": "8",
+  "D": "10",
+  "E": "12",
+  "resposta": "D",
+  "explicacao": {
+   "conferencia": "Por simetria, as correntes se dividem em I/3, I/6 e I/3: tensão = (1/3 + 1/6 + 1/3) · I · R = (5/6) · I · R. Equivalente = (5/6) · 12 = 10 Ω. D. Erros: A = Deu R ÷ 3, como se só as três primeiras arestas contassem; B = Deu R ÷ 2, sem raciocínio de simetria; C = Somou só duas etapas: 4 + 4; E = Deu a resistência de um resistor só.",
+   "ideia": "Pela simetria do cubo, a corrente que sai de um vértice se divide em 3 partes iguais, depois em 6, e volta a juntar em 3. Somando as quedas de tensão nessas três etapas, sai o equivalente.",
+   "pecas": [
+    {
+     "termo": "Simetria",
+     "significado": "Pontos que o circuito trata do mesmo jeito têm a mesma tensão e a mesma corrente. Aqui, as três arestas iniciais são iguais."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Lei de Ohm",
+        "formula": "U = R · I"
+       },
+       {
+        "figura": "circuito",
+        "nome": "Resistência equivalente",
+        "formula": "E = U ÷ I"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os dados do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Resistores",
+        "12, todos de 12 Ω"
+       ],
+       [
+        "Montagem",
+        "arestas de um cubo"
+       ],
+       [
+        "Bateria",
+        "nos vértices opostos"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "Em três etapas a corrente passa por arestas iguais. A tensão total é a soma das três quedas, e o equivalente é essa tensão dividida pela corrente total I.\nAgora é só achar R e F.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "E = F · R",
+      "leitura": "equivalente = fração · resistência de uma aresta",
+      "letras": [
+       {
+        "letra": "E",
+        "oque": "resistência equivalente, em Ω (o que a questão quer)"
+       },
+       {
+        "letra": "F",
+        "oque": "fração de R, vinda da simetria do cubo"
+       },
+       {
+        "letra": "R",
+        "oque": "resistência de cada aresta, em Ω"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando R: a aresta",
+     "texto": "O enunciado dá: R = 12 Ω."
+    },
+    {
+     "titulo": "Achando F: a fração",
+     "texto": "Saindo do vértice A, a corrente I se divide em 3 arestas iguais: I/3 em cada. Elas chegam a 3 vértices que se ligam a mais 3 por 6 arestas: I/6 em cada. As últimas 3 arestas levam I/3 cada ao outro vértice.\nTensão = (I/3) · R + (I/6) · R + (I/3) · R = (1/3 + 1/6 + 1/3) · I · R.\nF = 2/6 + 1/6 + 2/6 = 5/6."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "E = (5/6) · 12 = 60 ÷ 6 = 10 Ω.\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "R",
+        "12 Ω"
+       ],
+       [
+        "F",
+        "5/6"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"resistores iguais nas arestas de um cubo\" → por simetria a corrente se divide em I/3, I/6 e I/3; some as quedas de tensão.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "12 arestas de 12 Ω, diagonal"
+       ],
+       [
+        "2. Equação em letras",
+        "E = F · R"
+       ],
+       [
+        "3. Uma letra por vez",
+        "R = 12 Ω; F = 5/6"
+       ]
+      ]
+     }
+    }
+   ],
+   "checagem": {
+    "pergunta": "Cubo de resistores de 6 Ω cada, ligado pela diagonal. Qual o equivalente?",
+    "opcoes": [
+     "5 Ω",
+     "6 Ω",
+     "4 Ω",
+     "3 Ω"
+    ],
+    "certa": "5 Ω",
+    "resposta": "(5/6) · 6 = 5 Ω."
+   },
+   "seuErro": null
+  }
+ }
+]
