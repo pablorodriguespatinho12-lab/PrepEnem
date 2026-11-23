@@ -274,14 +274,15 @@ export function ExplicacaoTutor({ questao, respostaDada, iniciarSozinha = false,
       >
         <div className="flex items-center justify-between gap-3">
           <span className="type-meta text-muted-foreground whitespace-nowrap" data-numeric>Passo {atual + 1} de {total}</span>
-          <nav className="flex gap-1.5" aria-label="Passos">
+          {/* Os tracinhos encolhem para caber (23/11/2026: com 12 a 20 passos de até 300 letras, o 9º passava da borda no celular). */}
+          <nav className="flex flex-1 min-w-0 justify-end gap-1 md:gap-1.5" aria-label="Passos">
             {telas.map((_, i) => (
               <button
                 key={i}
                 onClick={() => ir(i)}
                 aria-label={`Ir para o passo ${i + 1}`}
                 aria-current={i === atual ? 'step' : undefined}
-                className={`h-2 w-6 md:w-7 rounded-full t-colors ${i === atual ? 'bg-primary' : i < atual ? 'bg-primary/30' : 'bg-border'}`}
+                className={`h-2 flex-1 min-w-[3px] max-w-6 md:max-w-7 rounded-full t-colors ${i === atual ? 'bg-primary' : i < atual ? 'bg-primary/30' : 'bg-border'}`}
               />
             ))}
           </nav>

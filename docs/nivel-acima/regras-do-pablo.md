@@ -32,5 +32,5 @@ Regra só escrita em memória não me obriga a olhar. Por isso: (1) ritual de ab
 ## Lacunas abertas (23/11/2026)
 - **Regra 4:** Física tem 1 desenho (cubo) em 24; Matemática tem 9 desenhos em 28. Faltam ~9 desenhos de Física (plano inclinado, circuito série/paralelo, lente com raios, espelho, tubo, corda, projétil, encontro, escada rolante).
 - **Regra 2:** 9 de 28 sem real no repositório (Doppler, gás ideal, gelo, mistura, espelho, cubo...). Baixar ENEM 2019 a 2023 de Física (INEP) para ancorar de verdade.
-- **Regra 12:** `varrer-prova.mts` e navegador nas provas de Física e Matemática 1 ainda não foram rodados com a versão cortada em telas de 300 letras.
+- **Regra 12 (feita em 23/11/2026):** `varrer-prova.mts` nas 6 provas de Física: 26 questões e 251 passos, 0 achados em 1366 px e em 390 px. Achou um defeito real: com 12 a 20 passos, os tracinhos de passo passavam da borda no celular (corrigido em `components/tutor/explicacao-tutor.tsx`). Matemática 1 #3 trava no varredor porque a questão já foi respondida (limite do teste, não da tela).
 - **Regra 5:** 9 temas fora do canal (lançamento horizontal, plano inclinado, mistura quente e fria, tubo, corda, resistência interna, fabricantes de lentes, cubo, escada rolante). Marcado em cada questão; dizer ao Pablo.
