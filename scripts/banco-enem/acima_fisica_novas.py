@@ -18,6 +18,7 @@ LETRAS = 'ABCDE'
 sys.path.insert(0, os.path.dirname(__file__))
 from acima_fisica_ajustes import aplicar as aplicar_ajustes  # noqa: E402
 import acima_fisica_ajustes2  # noqa: E402,F401  (registra a 2ª rodada)
+import acima_fisica_ajustes3  # noqa: E402,F401  (registra a 3ª rodada)
 
 
 def br(x):
@@ -50,8 +51,8 @@ def montar(q):
     assert alts[certa][2] == 'OK', (q['id'], 'a alternativa certa deve ter motivo OK')
     assert sum(a[2] == 'OK' for a in alts) == 1, q['id']
     assert len({a[0] for a in alts}) == 5, q['id']
-    erros = '; '.join(f'{LETRAS[i]} = {a[2]}' for i, a in enumerate(alts) if i != certa)
-    conferencia = f"{q['resumo']} {LETRAS[certa]}. Erros: {erros}."
+    erros = '; '.join(f'Alternativa {LETRAS[i]} = {a[2]}' for i, a in enumerate(alts) if i != certa)
+    conferencia = f"{q['resumo']} Resposta: alternativa {LETRAS[certa]}. Erros: {erros}."
     dados = '; '.join(f'{k}: {v}' for k, v in q['dados'])
     passos = [
         {'titulo': 'As fórmulas desta questão', 'texto': 'Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela.',
@@ -69,7 +70,7 @@ def montar(q):
         if len(achado) > 2:
             passo['visual'] = achado[2]
         passos.append(passo)
-    volta = re.sub(r'Letra [A-E]\.', f'Letra {LETRAS[certa]}.', q['volta'])
+    volta = re.sub(r'(Letra|Resposta: alternativa) [A-E]\.', f'Resposta: alternativa {LETRAS[certa]}.', q['volta'])
     passos.append({'titulo': 'Volta na equação', 'texto': volta,
                    'visual': {'tipo': 'tabela', 'titulo': 'As letras', 'cabecalho': ['Letra', 'Valor'], 'linhas': [list(l) for l in q['valores']]}})
     if q.get('porque'):
