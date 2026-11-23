@@ -11,9 +11,12 @@ import json
 import math
 import os
 import re
+import sys
 
 SAIDA = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'revisao-final', 'escada', 'fisica-acima-novas.json')
 LETRAS = 'ABCDE'
+sys.path.insert(0, os.path.dirname(__file__))
+from acima_fisica_ajustes import aplicar as aplicar_ajustes  # noqa: E402
 
 
 def br(x):
@@ -39,10 +42,11 @@ def montar(q):
     conferencia = f"{q['resumo']} {LETRAS[certa]}. Erros: {erros}."
     dados = '; '.join(f'{k}: {v}' for k, v in q['dados'])
     passos = [
-        {'titulo': 'As fórmulas desta questão', 'texto': 'Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.',
+        {'titulo': 'As fórmulas desta questão', 'texto': 'Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela.',
          'visual': {'tipo': 'formulas', 'itens': [{'figura': f[0], 'nome': f[1], 'formula': f[2]} for f in q['formulas']]}},
         {'titulo': 'O que eu tenho', 'texto': 'Primeiro, tire os dados do enunciado.',
          'visual': {'tipo': 'tabela', 'titulo': 'O que eu tenho', 'cabecalho': ['Informação', 'Valor'], 'linhas': [list(d) for d in q['dados']]}},
+        *([{'titulo': 'De onde vem cada fórmula', 'texto': q['origem']}] if q.get('origem') else []),
         {'titulo': 'A equação em letras',
          'texto': q['eq_texto'],
          'visual': {'tipo': 'equacao', 'formula': q['eq'], 'leitura': q['leitura'], 'letras': [{'letra': l, 'oque': o} for l, o in q['letras']]}},
@@ -785,6 +789,7 @@ Q.append(dict(
 
 
 def principal():
+    aplicar_ajustes(Q)
     for i, q in enumerate(Q):
         q['pos'] = i % 5
     saida = [montar(q) for q in Q]
