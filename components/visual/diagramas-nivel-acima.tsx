@@ -266,6 +266,47 @@ function PainelLampadas({ rotulos }: Props) {
   );
 }
 
+// Cubo de resistores (Física, 23/11/2026): 12 arestas de 12 Ω, bateria nos vértices A e B (pontas da diagonal).
+// Dados sempre: o cubo, A e B. Só com rotulos[2..4] aparecem as cores e a corrente de cada etapa (resultado).
+const CUBO = {
+  fbl: [60, 230], fbr: [180, 230], ftr: [180, 110], ftl: [60, 110],
+  bbl: [120, 180], bbr: [240, 180], btr: [240, 60], btl: [120, 60],
+} as const;
+type VerticeCubo = keyof typeof CUBO;
+const DE_A: [VerticeCubo, VerticeCubo][] = [['fbl', 'fbr'], ['fbl', 'ftl'], ['fbl', 'bbl']];
+const MEIO: [VerticeCubo, VerticeCubo][] = [['fbr', 'ftr'], ['fbr', 'bbr'], ['ftl', 'ftr'], ['ftl', 'btl'], ['bbl', 'bbr'], ['bbl', 'btl']];
+const ATE_B: [VerticeCubo, VerticeCubo][] = [['btr', 'btl'], ['btr', 'bbr'], ['btr', 'ftr']];
+const ESCONDIDAS = new Set(['bbl-bbr', 'bbl-btl', 'fbl-bbl']);
+function CuboResistores({ rotulos }: Props) {
+  const etapaA = dado(rotulos, 2);
+  const etapaMeio = dado(rotulos, 3);
+  const etapaB = dado(rotulos, 4);
+  const colorido = Boolean(etapaA || etapaMeio || etapaB);
+  const aresta = ([a, b]: [VerticeCubo, VerticeCubo], cor: string) => (
+    <line key={`${a}-${b}`} x1={CUBO[a][0]} y1={CUBO[a][1]} x2={CUBO[b][0]} y2={CUBO[b][1]} stroke={cor} strokeWidth={5} strokeLinecap="round"
+      strokeDasharray={ESCONDIDAS.has(`${a}-${b}`) ? '8 6' : undefined} />
+  );
+  return (
+    <svg viewBox={`0 0 440 ${colorido ? 372 : 290}`} className="w-full max-w-[440px] h-auto" role="img" aria-label="cubo com um resistor em cada uma das 12 arestas e a bateria ligada nos vértices A e B, pontas de uma diagonal">
+      {DE_A.map((e) => aresta(e, colorido ? SUJO : TINTA))}
+      {MEIO.map((e) => aresta(e, colorido ? SECO : TINTA))}
+      {ATE_B.map((e) => aresta(e, colorido ? CORTE : TINTA))}
+      {(Object.keys(CUBO) as VerticeCubo[]).map((v) => <circle key={v} cx={CUBO[v][0]} cy={CUBO[v][1]} r={6} fill={PAPEL} stroke={TINTA} strokeWidth={3} />)}
+      <circle cx={CUBO.fbl[0]} cy={CUBO.fbl[1]} r={9} fill={TINTA} />
+      <circle cx={CUBO.btr[0]} cy={CUBO.btr[1]} r={9} fill={TINTA} />
+      <Texto x={40} y={254}>{r(rotulos, 0, 'A')}</Texto>
+      <Texto x={262} y={56} ancora="start">{r(rotulos, 1, 'B')}</Texto>
+      <Texto x={220} y={sobra(colorido)} tam={13}>{r(rotulos, 5, 'cada aresta é um resistor de 12 Ω')}</Texto>
+      {colorido && (<>
+        <rect x="40" y="280" width="16" height="6" fill={SUJO} /><Texto x={64} y={288} ancora="start" cor={TINTA} tam={13}>{etapaA}</Texto>
+        <rect x="40" y="300" width="16" height="6" fill={SECO} /><Texto x={64} y={308} ancora="start" cor={TINTA} tam={13}>{etapaMeio}</Texto>
+        <rect x="40" y="320" width="16" height="6" fill={CORTE} /><Texto x={64} y={328} ancora="start" cor={TINTA} tam={13}>{etapaB}</Texto>
+      </>)}
+    </svg>
+  );
+}
+const sobra = (colorido: boolean) => (colorido ? 360 : 280);
+
 export const DESENHOS_NIVEL_ACIMA = {
   'gramado-em-l': GramadoEmL,
   'circulo-no-triangulo': CirculoNoTriangulo,
@@ -276,4 +317,5 @@ export const DESENHOS_NIVEL_ACIMA = {
   'lata-bolas': LataBolas,
   'ladrilho-ficha': LadrilhoFicha,
   'painel-lampadas': PainelLampadas,
+  'cubo-resistores': CuboResistores,
 };

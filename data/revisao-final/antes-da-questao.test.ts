@@ -4,11 +4,13 @@ import { describe, expect, test } from 'vitest';
 import { CONCEITOS_ANTES, QUESTOES_COM_ANTES, antesDaQuestao } from '@/lib/antes-da-questao';
 
 const PASTA = join(__dirname, 'dia-2');
-const IDS = new Set(
-  readdirSync(PASTA)
-    .filter((f) => f.endsWith('.json') && f !== 'aulas.json')
-    .flatMap((f) => (JSON.parse(readFileSync(join(PASTA, f), 'utf8')) as { id: string }[]).map((q) => q.id)),
-);
+const PASTA_ESCADA = join(__dirname, 'escada');
+const idsDe = (pasta: string, fora: string[] = []) =>
+  readdirSync(pasta)
+    .filter((f) => f.endsWith('.json') && !fora.includes(f))
+    .flatMap((f) => (JSON.parse(readFileSync(join(pasta, f), 'utf8')) as { id: string }[]).map((q) => q.id));
+// Questões do dia 2 e das provas em escada (nível acima novo liga a aulas "Antes" em 23/11/2026).
+const IDS = new Set([...idsDe(PASTA, ['aulas.json']), ...idsDe(PASTA_ESCADA)]);
 const MAX_LINHA = 170;
 
 describe('antes da questão (conteúdo que a aula do tema não ensina)', () => {
