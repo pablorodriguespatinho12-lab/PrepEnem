@@ -113,7 +113,7 @@ assert vazio_caixa * 100 == 50                                                  
 # "Sua vez": frações vazias 1/3 e 1/2: (1/2 − 1/3) ÷ (1/3) = 1/2 = 50%
 assert (F(1, 2) - F(1, 3)) / F(1, 3) == F(1, 2) and F(1, 6) / F(1, 2) == F(1, 3) and (F(1, 2) - F(1, 3)) / F(1, 2) == F(1, 3)
 ENUN_D = ('Uma loja vende 8 bolas de gude idênticas, de raio r desconhecido, em duas embalagens. Na caixa cúbica, as bolas ficam em '
-          '2 camadas de 4, encostadas umas nas outras e nas paredes. No tubo cilíndrico, ficam em 4 camadas de 2 bolas, encostadas umas nas outras, '
+          '2 camadas de 4, encostadas umas nas outras e nas paredes. No tubo cilíndrico, ficam em 4 camadas de 2 bolas, cada camada bem em cima da outra (empilhadas retas, sem encaixe), encostadas umas nas outras, '
           'nas paredes e nas duas tampas. Em cada embalagem, a fração vazia é o volume que não é bola dividido pelo volume da embalagem. '
           'Use π = 3. Em quantos por cento a fração vazia do tubo é maior que a da caixa?')
 assert 350 <= len(ENUN_D) <= 600, len(ENUN_D)

@@ -106,6 +106,12 @@ for n in [1, 3, 5, 15, 16, 48, 80, 240]:
     ult = v - n + 1
     linhas_tab.append((n, p, v, ult))
 assert linhas_tab == [(1, 240, 120, 120), (3, 80, 41, 39), (5, 48, 26, 22), (15, 16, 15, 1), (16, 15, 15, 0), (48, 5, 26, -21), (80, 3, 41, -38), (240, 1, 120, -119)]
+# Regras do enunciado: v0 inteiro > 0, N > 1, todas as velocidades v0..v0-N+1 >= 1 (sem zero, sem inverter), soma = 120. Força bruta direta:
+_bf = sorted({(n, v0) for n in range(2, 400) for v0 in range(1, 400) if all(v0 - i >= 1 for i in range(n)) and sum(v0 - i for i in range(n)) == D_TOTAL})
+assert _bf == [(3, 41), (5, 26), (15, 15)] and len(_bf) == 3
+# Se pudesse zerar ou inverter (distância = soma dos módulos) o total seria 6 (inclui N = 16 e N = 20): por isso o enunciado proíbe os dois.
+_inv = sorted({(n, v0) for n in range(2, 400) for v0 in range(1, 400) if sum(abs(v0 - i) for i in range(n)) == D_TOTAL})
+assert len(_inv) == 6 and (16, 15) in _inv, _inv
 # "Sua vez": 12 m
 assert validos(12) == [(3, 5)]
 
@@ -233,8 +239,8 @@ Q = [
     dict(
         id='d2-escada-fis-ita-cin-00d', materia='Física', tema=T, calc=3,
         enunciado=('Um carrinho anda em linha reta durante um número inteiro de segundos. A velocidade dele, em m/s, é sempre um número inteiro e fica constante dentro de cada segundo; '
-                   'a cada novo segundo ela é exatamente 1 m/s menor que no segundo anterior. O carrinho está em movimento durante todos os segundos '
-                   '(a velocidade nunca chega a zero), anda por mais de 1 segundo e percorre 120 m no total. '
+                   'a cada novo segundo ela é exatamente 1 m/s menor que no segundo anterior. A velocidade inicial é positiva e o carrinho anda sempre para a frente: '
+                   'em nenhum segundo ele para (velocidade zero) nem inverte o sentido (velocidade negativa). Ele anda por mais de 1 segundo e percorre 120 m no total. '
                    'Quantas velocidades iniciais diferentes o carrinho pode ter?'),
         dados=[('Velocidade', 'inteira, cai 1 m/s a cada segundo'), ('Distância total', '120 m'), ('Tempo', 'mais de 1 s, sempre em movimento')],
         alts=[('3', 3, 'OK'),

@@ -103,8 +103,8 @@ assert 12 / (3 + 1) == 3 and 24 / 3 == 8
 assert 24 / 12 == 2 and 24 / (12 / (3 - 1)) == 4 and 24 / (12 / 3) == 6 and 24 / (3 - 1) == 12  # distratores
 assert 12 / (2 + 1) == 4 and 24 / 4 == 6  # "Sua vez"
 ENUN_D = ('Um relógio de ponteiros, sem tique, anda de modo contínuo para trás, a 3 vezes a velocidade de um relógio certo, e agora mostra uma hora errada. '
-          'O mostrador tem só as 12 horas, sem distinguir manhã de tarde. Quantas vezes, nas próximas 24 horas, esse relógio vai mostrar a hora certa?')
-assert 250 <= len(ENUN_D) <= 360, len(ENUN_D)
+          'Os ponteiros dele andam um em relação ao outro na proporção normal (só a hora mostrada está deslocada), e o mostrador tem só as 12 horas, sem distinguir manhã de tarde. Quantas vezes, nas próximas 24 horas, esse relógio vai mostrar a hora certa?')
+assert 250 <= len(ENUN_D) <= 460, len(ENUN_D)
 
 # ---------------------------------------------------------------- módulo
 Q = [

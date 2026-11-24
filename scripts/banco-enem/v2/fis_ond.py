@@ -108,7 +108,7 @@ Q.append(dict(
                'pode ser subido ou descido. A coluna de ar entre a boca do tubo e a água funciona como um tubo sonoro fechado embaixo. Um diapasão de 500 Hz vibra sobre a boca. '
                'Baixando devagar o nível, o som reforça em duas posições seguidas, sem outra entre elas. A tabela dá o comprimento da coluna de ar, medido da boca até a água:\n\n'
                '1ª ressonância: 16,0 cm\n2ª ressonância: 50,0 cm\n\n'
-               'O som se propaga no ar a v = 331 + 0,6 · T, em m/s, com T em °C. Despreze o que não foi dito. A temperatura do ar no tubo, em °C, é:'),
+               'O ventre do som fica um pouco fora da boca do tubo, por uma correção que ninguém mediu. O som se propaga no ar a v = 331 + 0,6 · T, em m/s, com T em °C. A temperatura do ar no tubo, em °C, é:'),
     dados=[('Diapasão', '500 Hz'), ('1ª ressonância, coluna de ar', '16,0 cm'), ('2ª ressonância, coluna de ar', '50,0 cm'), ('Som no ar', 'v = 331 + 0,6 · T (m/s)')],
     alts=[('−18', -18, 'Tomou 16 cm como λ ÷ 4: λ = 64 cm, v = 320 m/s'),
           ('−7', -7, 'Achou λ de cada nível sem a folga da boca (4 · 16 e 4 · 50 ÷ 3) e fez a média'),
@@ -143,54 +143,64 @@ Q.append(dict(
     antes=['numero-que-falta', 'dividir-por-decimal'],
 ))
 
-# ============ d) Harvard-MIT: mdc e contagem de divisores aplicados aos modos de uma corda ============
-COMP, FA, FB, PISO = 0.9, 420, 700, 20
+# ============ d) Harvard-MIT: mdc e f1 = mdc ÷ k (a fundamental não precisa ser inteira) ============
+from fractions import Fraction
+
+COMP, FA, FB, PISO = Fraction(9, 10), 420, 700, 20
 MDC = math.gcd(FA, FB)
 assert MDC == 140 and 700 - 420 == 280 and math.gcd(420, 280) == 140 and math.gcd(140, 280) == 140 and 280 == 2 * 140
+# força bruta com frações: f1 vale se 420 ÷ f1 e 700 ÷ f1 são inteiros; f1 = 140 ÷ k, testado para k de 1 a 400
+POSSIVEIS = [Fraction(MDC, k) for k in range(1, 401)
+             if (FA / Fraction(MDC, k)).denominator == 1 and (FB / Fraction(MDC, k)).denominator == 1 and Fraction(MDC, k) >= PISO]
+assert len(POSSIVEIS) == 7 and POSSIVEIS[-1] == 20 and POSSIVEIS[0] == 140
+# conferência independente: varre f1 de 20 a 700 em passos de 1/60 Hz (todo valor possível é 140 ÷ k, e 60 é múltiplo dos k pedidos até 7 e mais)
+achados = [Fraction(i, 60) for i in range(20 * 60, 700 * 60 + 1)
+           if (FA / Fraction(i, 60)).denominator == 1 and (FB / Fraction(i, 60)).denominator == 1]
+assert achados == sorted(POSSIVEIS) and len(achados) == 7
+assert Fraction(MDC, 8) < PISO and Fraction(MDC, 3) == Fraction(140, 3)    # k = 8 dá 17,5 Hz (abaixo do piso); k = 3 dá 46,67 Hz
+assert FA / Fraction(140, 3) == 9 and FB / Fraction(140, 3) == 15           # k = 3: modos 9 e 15
+VELOCS = [2 * COMP * f for f in POSSIVEIS]
+assert [float(v) for v in VELOCS] == [252, 126, 84, 63, 50.4, 42, 36] and len(set(VELOCS)) == 7
+assert all(2 * COMP * Fraction(MDC, k) == Fraction(252, k) for k in range(1, 8))
+# distratores (nenhum coincide com a certa 7)
 DIVS = sorted(d for d in range(1, MDC + 1) if MDC % d == 0)
-assert DIVS == [1, 2, 4, 5, 7, 10, 14, 20, 28, 35, 70, 140] and len(DIVS) == 12
-VALIDOS = [d for d in DIVS if d >= PISO]
-assert VALIDOS == [20, 28, 35, 70, 140] and len(VALIDOS) == 5
-VELOCS = [round(2 * COMP * f, 6) for f in VALIDOS]
-assert VELOCS == [36, 50.4, 63, 126, 252] and len(set(VELOCS)) == 5
-for f1 in VALIDOS:                                                    # cada um realmente comporta os dois modos
-    assert FA % f1 == 0 and FB % f1 == 0
-assert FA // 140 == 3 and FB // 140 == 5                              # 420 e 700 nem são vizinhos de modo
-# erros típicos
-assert len([d for d in DIVS if d < PISO]) == 7                        # contou os que ficam abaixo de 20
-assert 280 and FA % 280 != 0                                          # "consecutivos" daria f1 = 280, que não divide 420: não existe
-assert math.gcd(30, 50) == 10
+assert len(DIVS) == 12                                                      # 12: todos os divisores de 140
+assert len([d for d in DIVS if d >= PISO]) == 5                             # 5: f1 só inteiro
+assert FA % 280 != 0                                                        # 1: modos vizinhos dariam f1 = 280, que não divide 420
+assert len({1, 5, 7, 12, 140}) == 5 and 7 not in (1, 5, 12, 140)
+assert math.gcd(30, 50) == 10 and [Fraction(10, k) for k in range(1, 20) if Fraction(10, k) >= 3] == [10, 5, Fraction(10, 3)]
 Q.append(dict(
-    id='d2-escada-fis-ita-ond-00d', materia='Física', tema=T, calc=5,
+    id='d2-escada-fis-ita-ond-00d', materia='Física', tema=T, calc=7,
     enunciado=('Uma corda de violão de 0,9 m, presa nas duas pontas, vibra num modo estacionário de 420 Hz e, em outra situação, num modo de 700 Hz. Não se sabe quais são esses '
-               'modos, nem se há outros entre eles. A frequência fundamental dessa corda é audível, isto é, de pelo menos 20 Hz. A tensão da corda, e portanto a velocidade '
-               'das ondas nela, é desconhecida. Quantos valores diferentes essa velocidade pode ter?'),
-    dados=[('Corda', '0,9 m, presa nas duas pontas'), ('Dois modos vistos', '420 Hz e 700 Hz'), ('Fundamental', 'pelo menos 20 Hz')],
+               'modos, nem se há outros entre eles. A frequência fundamental dessa corda é audível, isto é, de pelo menos 20 Hz, e não precisa ser um número inteiro de hertz. '
+               'A tensão da corda, e portanto a velocidade das ondas nela, é desconhecida. Quantos valores diferentes essa velocidade pode ter?'),
+    dados=[('Corda', '0,9 m, presa nas duas pontas'), ('Dois modos vistos', '420 Hz e 700 Hz'), ('Fundamental', 'pelo menos 20 Hz, não precisa ser inteira')],
     alts=[('1', 1, 'Supôs modos vizinhos: f1 = 700 − 420 = 280 Hz (e 420 nem é múltiplo de 280)'),
-          ('5', 5, 'OK'),
-          ('7', 7, 'Contou os divisores de 140 que ficam abaixo de 20, no lugar dos que passam'),
+          ('5', 5, 'Exigiu f1 inteira: só os divisores de 140 que passam de 20 (20, 28, 35, 70, 140)'),
+          ('7', 7, 'OK'),
           ('12', 12, 'Contou todos os divisores de 140, esquecendo o piso de 20 Hz'),
           ('140', 140, 'Deu o mdc (140) em vez de contar os valores')],
-    resumo='f1 divide 420 e 700, logo divide mdc = 140; divisores de 140 que são ≥ 20: 20, 28, 35, 70, 140; v = 1,8 · f1 dá 36; 50,4; 63; 126; 252 m/s: 5 valores.',
-    ideia='Os modos são f1, 2 · f1, 3 · f1... Então a fundamental cabe um número inteiro de vezes em 420 e em 700, ou seja, é divisor comum, e cada divisor aceito dá uma velocidade diferente.',
-    pecas=[('Divisor comum', 'Número que cabe certinho nos dois: aqui, o f1 que cabe em 420 e em 700. Todos os divisores comuns são divisores do mdc.')],
-    formulas=[('onda', 'Modos da corda', 'f = n · f1, com n = 1, 2, 3...'), ('onda', 'Velocidade na corda', 'v = 2 · L · f1'), ('contagem', 'Divisor comum', 'f1 divide 420 e 700')],
-    origem=['Corda presa nas pontas: os modos são f1, 2 · f1, 3 · f1... Se 420 é n · f1 e 700 é m · f1, com n e m inteiros que não conhecemos, então f1 cabe inteiro em 420 e em 700.',
-            'Não dá para só subtrair 700 − 420 = 280: isso valeria para modos vizinhos, e o enunciado não diz isso. Com f1 = 140, por exemplo, os modos são o 3º e o 5º.'],
-    eq='N = quantos F, divisores de G, são pelo menos 20', leitura='número de velocidades = número de fundamentais possíveis (todas diferentes)',
+    resumo='420 = m · f1 e 700 = n · f1 com m e n inteiros: f1 = 140 ÷ k. Com f1 ≥ 20, k vai de 1 a 7 (140 ÷ 7 = 20; 140 ÷ 8 = 17,5). v = 1,8 · f1 = 252 ÷ k: sete valores.',
+    ideia='Os modos são f1, 2 · f1, 3 · f1 e assim por diante, então 420 e 700 são múltiplos inteiros de f1, e f1 é o mdc (140) dividido por um inteiro k. O piso de 20 Hz limita k, e cada k dá uma velocidade diferente.',
+    pecas=[('mdc dividido por k', 'O maior f1 possível é o mdc, 140 Hz. Dividindo-o por 2, 3, 4... os dois modos continuam a ser múltiplos inteiros de f1, só que mais altos (o 6º e o 10º, o 9º e o 15º...).')],
+    formulas=[('onda', 'Modos da corda', 'f = n · f1, com n = 1, 2, 3...'), ('onda', 'Velocidade na corda', 'v = 2 · L · f1'), ('contagem', 'Fundamental possível', 'f1 = mdc ÷ k')],
+    origem=['Corda presa nas pontas: os modos são f1, 2 · f1, 3 · f1... Se 420 é m · f1 e 700 é n · f1, com m e n inteiros que não conhecemos, então f1 cabe um número inteiro de vezes nos dois.',
+            'Não dá para só subtrair 700 − 420 = 280: isso valeria para modos vizinhos, e o enunciado não diz isso. Com f1 = 140, os modos são o 3º e o 5º. Com f1 = 70, o 6º e o 10º.',
+            'O enunciado não pede f1 inteira. 140 ÷ 3 = 46,67 Hz serve: 420 ÷ 46,67 = 9 e 700 ÷ 46,67 = 15, os dois inteiros.'],
+    eq='N = quantos F = G ÷ k, com F pelo menos 20', leitura='número de velocidades = número de fundamentais possíveis (todas diferentes)',
     letras=[('N', 'quantidade de velocidades possíveis (o que a questão quer)'), ('G', 'maior divisor comum de 420 e 700 (o mdc)'),
-            ('F', 'cada fundamental possível, em Hz: divisor de G e pelo menos 20')],
-    eq_texto='Cada fundamental possível dá uma velocidade (v = 2 · 0,9 · F), todas diferentes. Contar velocidades é contar fundamentais.\nAgora é só achar G e F.',
+            ('k', 'inteiro que divide G para formar cada fundamental F possível')],
+    eq_texto='Cada fundamental F = G ÷ k dá uma velocidade (v = 2 · 0,9 · F), todas diferentes. Contar velocidades é contar valores de k.\nAgora é só achar G e k.',
     achando=[('Achando G: o mdc de 420 e 700',
-              'Troque o maior pela diferença: 700 − 420 = 280, e mdc(420, 700) = mdc(420, 280).\n420 − 280 = 140: mdc(140, 280). Como 280 = 2 · 140, G = 140.'),
-             ('Achando F: os divisores de 140 que passam de 19',
-              'Divisores de 140 em pares: 1 · 140, 2 · 70, 4 · 35, 5 · 28, 7 · 20, 10 · 14.\nPelo menos 20: 20, 28, 35, 70 e 140. Cada um dá v = 1,8 · F: 36; 50,4; 63; 126; 252 m/s, todas diferentes.')],
-    volta='N = 5 valores de F, logo 5 velocidades.\nResposta: alternativa X. Conferindo: 420 ÷ 20 = 21, 700 ÷ 20 = 35; 420 ÷ 140 = 3, 700 ÷ 140 = 5; os 5 valores dividem os dois.',
-    valores=[('G', '140'), ('F', '20; 28; 35; 70; 140 Hz')],
-    pista='"dois modos, sem dizer se são vizinhos" → f1 é divisor comum, ou seja, divisor do mdc; conte os que respeitam o piso.',
-    rec1='0,9 m; modos 420 e 700 Hz; fundamental ≥ 20 Hz', rec3='G = 140; F = 20, 28, 35, 70, 140',
-    checagem=('Dois modos de uma corda são 30 Hz e 50 Hz (não se sabe se são vizinhos). Qual é a maior fundamental possível?', ['10 Hz', '20 Hz', '5 Hz', '15 Hz'], '10 Hz',
-              'A fundamental divide 30 e 50, então divide o mdc = 10. A maior é 10 Hz.'),
+              'Troque o maior pela diferença: 700 − 420 = 280, e mdc(420, 700) = mdc(420, 280).\n420 − 280 = 140: mdc(140, 280). Como 280 = 2 · 140, G = 140.\nO maior F possível é 140: modos 3º e 5º.'),
+             ('Achando k: quantos inteiros servem',
+              'Se F = 140 ÷ k, os modos viram 3 · k e 5 · k, inteiros: qualquer k inteiro serve.\nO piso: 140 ÷ k pelo menos 20, ou seja, 140 ÷ 20 = 7: k é no máximo 7. Teste: 140 ÷ 7 = 20 (serve) e 140 ÷ 8 = 17,5 (não).\nk = 1, 2, 3, 4, 5, 6, 7.')],
+    volta='N = 7 valores de k, logo 7 velocidades: v = 1,8 · F = 252 ÷ k.\nResposta: alternativa X. Valores: 252; 126; 84; 63; 50,4; 42; 36 m/s, todos diferentes. Conferindo k = 3: F = 46,67 Hz, e 420 ÷ 46,67 = 9, 700 ÷ 46,67 = 15.',
+    valores=[('G', '140'), ('k', '1, 2, 3, 4, 5, 6, 7')],
+    pista='"dois modos, sem dizer se são vizinhos" → f1 = mdc ÷ k, com k inteiro; o piso de frequência limita k; conte os k.',
+    rec1='0,9 m; modos 420 e 700 Hz; fundamental ≥ 20 Hz', rec3='G = 140; k = 1 a 7',
+    checagem=('Dois modos de uma corda são 30 Hz e 50 Hz (não se sabe se são vizinhos), e a fundamental é de pelo menos 3 Hz. Quantas fundamentais são possíveis?', ['3', '2', '1', '4'], '3',
+              'mdc(30, 50) = 10. F = 10 ÷ k pelo menos 3: k = 1, 2, 3 (10; 5; 3,33). Com k = 4, F = 2,5 fica abaixo de 3. São 3.'),
     ancora='parcial · HMMT Fev 2022 Álgebra e Teoria dos Números q.6 e HMMT Nov 2021 Guts q.11 (técnica: mdc e contagem de divisores); sem Física no HMMT',
     canal='fora do canal: corda com modos desconhecidos e mdc; v = λ · f em fis-09-ondulatoria.txt [8:45:01]',
     antes=['ond-divisor-comum'],
