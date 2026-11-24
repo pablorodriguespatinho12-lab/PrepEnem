@@ -164,7 +164,7 @@ export function AulaLousa({ aula, onFechar }: { aula: Aula; onFechar?: () => voi
             <small>{cena.rotulo}</small>
             <p>{cena.texto}</p>
             {cena.alternativas && (
-              <div className="lousa-alts">
+              <div className={cena.alternativas.some((x) => x.length > 14) ? 'lousa-alts longas' : 'lousa-alts'}>
                 {cena.alternativas.map((a, k) => <span key={k}>{LETRAS[k]} {a}</span>)}
               </div>
             )}

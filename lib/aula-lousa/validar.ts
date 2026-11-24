@@ -2,6 +2,7 @@
 // Campo fora da lista some, número fora da lousa é preso nas bordas, texto longo é cortado.
 
 import { ALTURA, CORES, LARGURA, type Ancora, type AulaLousa, type Cena, type Cor, type Desenho, type Fala } from './tipos';
+import { expandirEquacao } from './equacao';
 
 const MIN_CENAS = 3;
 const MAX_CENAS = 31;
@@ -15,6 +16,7 @@ const MAX_ALTERNATIVA = 60;
 const MAX_PROVA = 220;
 const MAX_CAMINHO = 240;
 const MAX_GRADE = 36;
+const MAX_PECAS_EQ = 8;
 // Só comandos de traço de SVG: nada de letra solta que abra brecha.
 const CAMINHO_OK = /^[MmLlHhVvZzCcSsQqTtAa0-9eE.,\s-]+$/;
 const ANCORAS: readonly Ancora[] = ['start', 'middle', 'end'];
@@ -108,11 +110,27 @@ function desenho(bruto: unknown): Desenho | null {
   }
 }
 
+/** Equação com legendas: vira textos comuns (até 8 peças; peça até 12 letras, legenda até 22). */
+function equacao(bruto: unknown): Desenho[] {
+  const d = objeto(bruto);
+  const n = nums(emY(d.y), tempo(d.t), numero(d.tam ?? 40, 20, 56));
+  if (d.k !== 'eq' || !n) return [];
+  const partes = lista(d.partes).slice(0, MAX_PECAS_EQ).flatMap((p) => {
+    const o = objeto(p);
+    const s = texto(o.s, 12);
+    return s ? [{ s, leg: texto(o.leg, 22) ?? undefined, cor: cor(o.cor) }] : [];
+  });
+  return partes.length ? expandirEquacao({ k: 'eq', y: n[0], t: n[1], tam: n[2], partes }) : [];
+}
+
 function cena(bruto: unknown): Cena | null {
   const c = objeto(bruto);
   const fala = falas(c.fala);
   if (c.tipo === 'lousa') {
-    const desenhos = lista(c.desenho).map(desenho).filter((x): x is Desenho => x !== null).slice(0, MAX_DESENHOS);
+    const desenhos = lista(c.desenho)
+      .flatMap((x) => (objeto(x).k === 'eq' ? equacao(x) : [desenho(x)]))
+      .filter((x): x is Desenho => x !== null)
+      .slice(0, MAX_DESENHOS);
     return desenhos.length > 0 && fala.length > 0 ? { tipo: 'lousa', fala, desenho: desenhos } : null;
   }
   if (c.tipo === 'papel') {

@@ -41,6 +41,9 @@
 /* Quebra sozinha: 5 em linha na tela larga, 3 + 2 no celular (A 1/504 e E 28/243 não cabem em 1/5). */
 .lousa-alts { display: grid; grid-template-columns: repeat(auto-fit, minmax(88px, 1fr)); gap: 6px; font-family: var(--l-mao); font-size: clamp(19px, 4.6vw, 30px); font-weight: 700; text-align: center; }
 .lousa-alts span { border: 2px solid var(--l-tinta); padding: 2px 4px; background: #fff; white-space: nowrap; }
+/* Alternativas com texto (farmácias, hastes): uma por linha, quebrando, para nada sair da caixa. */
+.lousa-alts.longas { grid-template-columns: 1fr; font-size: clamp(15px, 3.6vw, 21px); text-align: left; gap: 4px; }
+.lousa-alts.longas span { white-space: normal; }
 
 /* professor + balão */
 .lousa-fala { display: flex; align-items: center; gap: 12px; margin: 4px; }

@@ -26,6 +26,15 @@ export type Desenho =
   /** Quadradinhos que aparecem um a um; `marcados` (índices) ficam em vermelho claro. */
   | { k: 'grade'; cols: number; rows: number; x0: number; y0: number; s: number; gap: number; t0: number; passo: number; marcados?: number[] };
 
+/** Pedido de equação com legenda embaixo de cada peça. Só entra no validador, que o troca por `tx`. */
+export interface DesenhoEq {
+  k: 'eq';
+  y: number;
+  t: number;
+  tam: number;
+  partes: { s: string; leg?: string; cor?: Cor }[];
+}
+
 export type Cena =
   | { tipo: 'lousa'; fala: Fala[]; desenho: Desenho[] }
   /** A questão em papel, com o texto real do ENEM (ou da questão). */

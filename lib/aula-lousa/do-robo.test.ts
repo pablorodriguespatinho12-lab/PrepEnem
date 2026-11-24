@@ -82,3 +82,18 @@ describe('lousa a partir da aula do robô', () => {
     }
   });
 });
+
+describe('dividirEnunciado', () => {
+  it('enunciado curto fica em 1 tela', async () => {
+    const { dividirEnunciado } = await import('./do-robo');
+    expect(dividirEnunciado('Quanto é 2 + 2?')).toEqual(['Quanto é 2 + 2?']);
+  });
+  it('enunciado longo quebra entre frases, sem perder texto, cada parte até 380', async () => {
+    const { dividirEnunciado } = await import('./do-robo');
+    const longo = Array.from({ length: 12 }, (_, i) => `Esta é a frase número ${i} do enunciado comprido.`).join(' ');
+    const partes = dividirEnunciado(longo);
+    expect(partes.length).toBeGreaterThan(1);
+    expect(partes.every((p) => p.length <= 380)).toBe(true);
+    expect(partes.join(' ')).toBe(longo);
+  });
+});

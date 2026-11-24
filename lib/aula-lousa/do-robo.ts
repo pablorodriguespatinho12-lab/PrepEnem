@@ -152,6 +152,25 @@ export function telasDaEquacao(formula: string, leitura: string, letras: Record<
   return cenas;
 }
 
+const MAX_PAPEL_POR_TELA = 380; // o quadro tem altura fixa: acima disso as alternativas ficam abaixo da dobra (sem rolar)
+
+/** Enunciado longo vira várias telas de papel, quebrando entre frases; as alternativas vão na última. */
+export function dividirEnunciado(enunciado: string): string[] {
+  if (enunciado.length <= MAX_PAPEL_POR_TELA) return [enunciado];
+  const frases = enunciado.match(/[^.!?]+[.!?]+(?:\s|$)|[^.!?]+$/g) ?? [enunciado];
+  const partes: string[] = [];
+  let atual = '';
+  for (const f of frases) {
+    if (atual && (atual + f).length > MAX_PAPEL_POR_TELA) {
+      partes.push(atual.trim());
+      atual = '';
+    }
+    atual += f;
+  }
+  if (atual.trim()) partes.push(atual.trim());
+  return partes;
+}
+
 export function lousaDoRobo(e: EntradaDoRobo): Resultado {
   const passos = e.passos;
   if (texto(passos[0]?.titulo) !== TITULO_PRIMEIRO_PASSO) return { ok: false, motivo: 'não é o molde do robô' };
@@ -170,12 +189,16 @@ export function lousaDoRobo(e: EntradaDoRobo): Resultado {
       { k: 'tx', x: 200, y: 196, s: 'passo a passo', cor: 'cinza', tam: 28, t: 2.0 },
     ],
   });
-  cenas.push({
-    tipo: 'papel',
-    fala: [[0.3, 'Esta é a questão. Primeiro vamos separar o que ela dá e o que ela quer.']],
-    rotulo: 'A questão',
-    texto: e.enunciado,
-    alternativas: alts,
+  const partes = dividirEnunciado(e.enunciado);
+  partes.forEach((parte, k) => {
+    const ultima = k === partes.length - 1;
+    cenas.push({
+      tipo: 'papel',
+      fala: [[0.3, k === 0 ? 'Esta é a questão. Primeiro vamos separar o que ela dá e o que ela quer.' : 'Continua a questão.']],
+      rotulo: partes.length > 1 ? `A questão (${k + 1} de ${partes.length})` : 'A questão',
+      texto: parte,
+      ...(ultima ? { alternativas: alts } : {}),
+    });
   });
 
   for (const p of passos) {
