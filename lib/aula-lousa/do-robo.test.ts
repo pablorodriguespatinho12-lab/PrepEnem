@@ -103,6 +103,18 @@ describe('lousa a partir da aula do robô', () => {
   });
 });
 
+describe('resumoDaPista', () => {
+  it('pista curta fica inteira; comprida mostra o conselho depois da seta, sem cortar palavra', async () => {
+    const { resumoDaPista } = await import('./do-robo');
+    expect(resumoDaPista('Pista: soma em binário.')).toBe('soma em binário.');
+    const longa = 'Pista: trechos de MESMA DISTÂNCIA com velocidades diferentes → nunca tire a média das velocidades.';
+    expect(resumoDaPista(longa)).toBe('nunca tire a média das velocidades.');
+    const sem = resumoDaPista(`Pista: ${'palavra '.repeat(30)}fim.`);
+    expect(sem.length).toBeLessThanOrEqual(90);
+    expect(sem.endsWith('…')).toBe(true);
+  });
+});
+
 describe('dividirEnunciado', () => {
   it('enunciado curto fica em 1 tela', async () => {
     const { dividirEnunciado } = await import('./do-robo');

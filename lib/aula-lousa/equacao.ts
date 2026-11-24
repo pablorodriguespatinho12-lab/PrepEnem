@@ -42,9 +42,6 @@ export function tamanhoQueCabe(partes: DesenhoEq['partes'], pedido: number): num
 export function expandirEquacao(d: DesenhoEq): Desenho[] {
   const tam = tamanhoQueCabe(d.partes, d.tam);
   const larguras = d.partes.map((p) => larguraDaPeca(p, tam));
-  const linhaTemFracao = d.partes.some((p) => partirFracao(p.s));
-  // Legenda no mesmo nível em toda a linha: embaixo do denominador se a linha tem fração.
-  const yLegenda = d.y + (linhaTemFracao ? tam * DESCE_DA_BARRA : 0) + TAM_LEGENDA + 8;
   let x = CENTRO - larguras.reduce((a, b) => a + b, 0) / 2;
   return d.partes.flatMap((p, i): Desenho[] => {
     const meio = x + larguras[i] / 2;
@@ -54,6 +51,8 @@ export function expandirEquacao(d: DesenhoEq): Desenho[] {
     const fracao = partirFracao(p.s);
     const pecas: Desenho[] = fracao ? desenharFracao(fracao, meio, d.y, tam, cor, quando, larguras[i]) : [{ k: 'tx', x: meio, y: d.y, s: p.s, cor, tam, t: quando, ancora: 'middle' }];
     if (!p.leg) return pecas;
+    // Legenda colada na própria peça: embaixo do denominador numa fração, embaixo da letra nas outras (aluno-do-zero, 24/11: "legenda longe da peça").
+    const yLegenda = d.y + (fracao ? tam * DESCE_DA_BARRA : 0) + TAM_LEGENDA + 8;
     return [...pecas, { k: 'tx', x: meio, y: yLegenda, s: p.leg, cor: 'cinza', tam: TAM_LEGENDA, t: quando + SEGUNDOS_ATE_LEGENDA, ancora: 'middle' }];
   });
 }

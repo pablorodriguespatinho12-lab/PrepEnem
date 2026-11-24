@@ -103,4 +103,6 @@ Regras que saem dos números:
 
 8. **Ao orquestrar agentes (Pablo, 24/11/2026: "quando for orquestrar seus agentes, economiza tokens")**: (a) menos agentes, cada um com mais trabalho: 4 executores de ~100 mil cada pagam 4 arranques de 20 mil; (b) escolher o modelo mais barato que dá conta (conserto de texto: `model: "sonnet"`; só ler: `explorador`/Haiku); (c) colar no pedido o trecho exato do relatório, não mandar o agente reler; (d) resposta pedida em ≤10 linhas; (e) 1 agente que já leu os arquivos continua com `SendMessage` em vez de abrir outro; (f) coordenador não relê o que o agente editou: roda `--seco` + `vitest` e olha só o resumo.
 
+9. **Medido na frente "lousa visual" (24/11/2026):** gerador novo (3 arquivos, 443 lousas) feito INLINE, sem agente: raciocínio em sequência com teste a cada passo. Conferência: foto de 2 aulas reais por mim achou 4 defeitos que 64 testes não pegaram; `aluno-do-zero` em 2 aulas (fotos + fala) custou **45,7 mil tokens, 23 chamadas, 55 s** e achou 3 defeitos do gerador (legenda longe da peça, pista só na fala, fórmula sem legenda) e ~8 lacunas do texto de origem. Ordem barata: `vitest` → minha foto de 2 aulas → 1 aluno-do-zero com 2 aulas (não 1 por aula).
+
 Não provado ainda: o ganho do plugin caveman (`/usage` antes e depois, ver memória `teste-caveman-plugin`); a economia em % dos blogs não vale aqui.

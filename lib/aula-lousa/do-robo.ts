@@ -2,7 +2,7 @@
 // volta, pista) para a aula de lousa (Pablo, 21/11/2026: "não tá que nem o quadro do Universo
 // Narrado"). Função pura: recebe a questão e os passos, devolve a lousa ou o motivo de não dar.
 import type { AulaLousa, Cena, Cor, Desenho, Fala } from './tipos';
-import { pecasDaConta, separarContas, telaDaFormula, telasDosDados, telasDeContas } from './quadro-de-conta';
+import { legendaCurta, pecasDaConta, separarContas, telaDaFormula, telasDosDados, telasDeContas } from './quadro-de-conta';
 
 export type Passo = { titulo?: unknown; texto?: unknown; visual?: unknown };
 export type EntradaDoRobo = {
@@ -172,6 +172,20 @@ export function dividirEnunciado(enunciado: string): string[] {
   return partes;
 }
 
+const MAX_PISTA = 88; // 2 linhas de 44 letras no pé do quadro
+
+/** A pista que cabe no pé do quadro: a 1ª frase; se for comprida, só o conselho (depois da seta) ou o começo até uma palavra inteira. */
+export function resumoDaPista(t: string): string {
+  const frase = limpa(t).replace(/^Pista:\s*/i, '').split(/(?<=[.!?])\s/)[0];
+  if (frase.length <= MAX_PISTA) return frase;
+  const depoisDaSeta = frase.split('→').pop()?.trim() ?? frase;
+  const antesDosDoisPontos = depoisDaSeta.split(':')[0];
+  const base = antesDosDoisPontos.length <= MAX_PISTA ? antesDosDoisPontos : depoisDaSeta;
+  if (base.length <= MAX_PISTA) return base;
+  const corte = base.slice(0, MAX_PISTA).lastIndexOf(' ');
+  return `${base.slice(0, corte > 0 ? corte : MAX_PISTA)}…`;
+}
+
 /** Equação em quadro: a fórmula com legenda embaixo de cada letra e, depois, a mesma conta com o porquê só na fala. */
 function equacaoEmQuadro(formula: string, leitura: string, letras: Record<string, unknown>[], explicacao: string): Cena[] {
   const dasLetras = letras.map((l) => ({ letra: limpa(texto(l.letra)), oque: limpa(texto(l.oque)) }));
@@ -235,7 +249,9 @@ export function lousaDoRobo(e: EntradaDoRobo): Resultado {
         ...quebrar(limpa(texto(it.formula)), cabem(26)).map((s) => ({ s, cor: 'verde' as Cor, tam: 26 })),
       ]);
       const contas = itens.map((it) => pecasDaConta(limpa(texto(it.formula)), true));
-      if (contas.length > 0 && contas.every((c) => c !== null)) cenas.push(...telasDeContas('as fórmulas', contas as NonNullable<(typeof contas)[number]>[], falas(t)));
+      // O nome da fórmula ("Calor para derreter") vira legenda da letra da esquerda: sem ela o aluno não sabe o que é Q.
+      const comNome = contas.map((c, i) => (c ? c.map((p, k) => (k === 0 ? { ...p, leg: legendaCurta(limpa(texto(itens[i]?.nome))), cor: 'verde' as Cor } : p)) : null));
+      if (contas.length > 0 && comNome.every((c) => c !== null)) cenas.push(...telasDeContas('as fórmulas', comNome as NonNullable<(typeof comNome)[number]>[], falas(t)));
       else cenas.push(...telas('as fórmulas', linhas, falas(t)));
     } else if (v?.tipo === 'equacao') {
       const formula = limpa(texto(v.formula));
@@ -253,7 +269,8 @@ export function lousaDoRobo(e: EntradaDoRobo): Resultado {
     } else if (/receita|parecida/i.test(titulo)) {
       // A receita repete a aula: só as contas dela vão para o quadro (numa tela) e a pista vira fala.
       const contas = (Array.isArray(v?.linhas) ? (v!.linhas as unknown[]) : []).flatMap((l) => (Array.isArray(l) ? separarContas(limpa(texto(l[1]))).contas : []));
-      if (contas.length > 0) cenas.push(...telasDeContas('questão parecida?', contas.slice(0, 3), falas(t)));
+      const pista = resumoDaPista(t);
+      if (contas.length > 0) cenas.push(...telasDeContas('questão parecida?', contas.slice(0, 3), falas(t), pista));
       else cenas.push(...telas('questão parecida?', [...linhasDoTexto(t), ...linhasDaTabela(v)], falas(t)));
     } else if (/^O que eu tenho/i.test(titulo) && v?.tipo === 'tabela' && telasDosDadosDe(v, t).length > 0) {
       cenas.push(...telasDosDadosDe(v, t));

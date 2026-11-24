@@ -16,6 +16,8 @@ const LINHAS_POR_TELA = 3;
 const Y_DAS_LINHAS = [95, 170, 245];
 const Y_DE_DUAS_COM_FRACAO = [112, 215];
 const LINHAS_COM_FRACAO = 2;
+const LETRAS_DA_NOTA = 44;
+const Y_DA_NOTA = 257;
 const Y_DA_LINHA_COM_LEGENDA = 130;
 const TAM_UMA_LINHA = 44;
 const TAM_VARIAS_LINHAS = 38;
@@ -107,13 +109,29 @@ const titulo = (s: string): Desenho => {
   return { k: 'tx', x: 200, y: 34, s: t, cor: 'tinta', tam: Math.min(28, Math.floor(360 / (t.length * 0.4))), t: 0.2 };
 };
 
+/** Frase curta no pé do quadro (a "pista"): até 2 linhas de 44 letras, centrada, em cinza. */
+function notaDeRodape(nota: string, t: number): Desenho[] {
+  const palavras = limpa(nota).split(' ');
+  const linhas: string[] = [];
+  let atual = '';
+  for (const p of palavras) {
+    if (atual && atual.length + 1 + p.length > LETRAS_DA_NOTA) {
+      linhas.push(atual);
+      atual = p;
+    } else atual = atual ? `${atual} ${p}` : p;
+  }
+  if (atual) linhas.push(atual);
+  return linhas.slice(0, 2).map((s, i): Desenho => ({ k: 'tx', x: 200, y: Y_DA_NOTA + i * 19, s: i === 1 && linhas.length > 2 ? `${s}…` : s, cor: 'cinza', tam: 17, t: t + i * 0.3, ancora: 'middle' }));
+}
+
 /** Telas só de conta: até 3 linhas por tela, cada linha aparecendo depois da anterior. */
-export function telasDeContas(nome: string, contas: Peca[][], fala: Fala[]): Cena[] {
+export function telasDeContas(nome: string, contas: Peca[][], fala: Fala[], nota?: string): Cena[] {
   const telas: Cena[] = [];
   for (let i = 0, n = 0; i < contas.length; n++) {
     // Fração ocupa 3 alturas de linha: com fração na página, só 2 linhas cabem.
     const tres = contas.slice(i, i + LINHAS_POR_TELA);
-    const pagina = tres.some((c) => c.some((p) => p.s.includes('|'))) ? tres.slice(0, LINHAS_COM_FRACAO) : tres;
+    const comNota = n === 0 && !!nota;
+    const pagina = comNota || tres.some((c) => c.some((p) => p.s.includes('|'))) ? tres.slice(0, LINHAS_COM_FRACAO) : tres;
     i += pagina.length;
     const tam = pagina.length === 1 ? TAM_UMA_LINHA : TAM_VARIAS_LINHAS;
     const ys = pagina.length === 1 ? [Y_DAS_LINHAS[1]] : pagina.length === 2 && pagina.some((c) => c.some((p) => p.s.includes('|'))) ? Y_DE_DUAS_COM_FRACAO : Y_DAS_LINHAS;
@@ -123,6 +141,7 @@ export function telasDeContas(nome: string, contas: Peca[][], fala: Fala[]): Cen
       desenho.push(...expandirEquacao({ k: 'eq', y: ys[k], t, tam, partes }));
       t += partes.length * SEGUNDOS_POR_PECA + SEGUNDOS_ENTRE_LINHAS;
     });
+    if (comNota) desenho.push(...notaDeRodape(nota!, t));
     telas.push({ tipo: 'lousa', fala: n === 0 ? fala : fala.slice(-1), desenho });
   }
   return telas;

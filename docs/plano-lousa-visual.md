@@ -51,3 +51,7 @@ Haiku (`explorador`): contar e listar por SQL, ler figuras. Sonnet (`executor`):
 
 Correção -> onde gravei: build com dev ligado -> `scripts/checar-dev-parado.mjs` (trava no `npm run build`); 80/20 é média -> regra 24 + teste com tolerância; ÷ em fração -> regra 25 + aluno-do-zero 22; "por que ÷ 2" -> aluno-do-zero 20; localhost pede login -> prévia por artefato com fotos; texto onde cabia equação -> aluno-do-zero 21.
 Defeitos achados SÓ olhando foto de aula real (o teste não pegava): 3 linhas com fração estouravam o quadro, legenda cortada em "em", "72 km/h" virou fração, ";" juntava duas contas. Lição: foto de 2 aulas reais depois de todo gerador novo, antes de gravar.
+
+## Fase 6 (24/11 ~20h30): aluno-do-zero em 2 aulas (cin-02, ter-01)
+Consertado no gerador e regravado (cópia `~/backups-prepenem/...T23h23.json`): legenda colada na peça; pista da "questão parecida?" no pé do quadro (só o conselho, até 88 letras); nome da fórmula vira legenda da letra na tela "as fórmulas".
+LACUNAS DO TEXTO DE ORIGEM (não são do gerador; precisam reescrever o passo na aula): passo intermediário só na fala ou ausente (60 ÷ 3 × 2 = 40 min; 1 + 2/3 = 5/3; 30 − 0 = 30 de ΔT); "o seu jeito" no título é jargão; símbolo novo (Δ) sem leitura; o × 1 (c da água) sem origem; "só vale quando o mesmo tempo" sem caso com número. Próximo: regra no molde do robô (cada número que entra numa conta tem a conta anterior desenhada).
