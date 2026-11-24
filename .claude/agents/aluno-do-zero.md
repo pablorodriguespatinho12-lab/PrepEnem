@@ -138,6 +138,7 @@ siga. "Entendi tudo" é resposta válida.
     são só a equação (legendas, depois números) e mais ou menos 20% dizem o que a questão
     quer e quais dados pegar (Pablo, 24/11/2026: "são médias, não exatamente 80%"). Tela que explica em frase o que uma equação
     mostraria é tropeço; relate quantas telas são equação e quantas texto.
+22. **Divisão escrita em linha ("120 ÷ 2").** Em lousa de exatas a divisão é fração em pé, com o traço (Pablo, 24/11/2026: "coloca por fração, é mais fácil e fica bem melhor de entender"). "÷" em linha na tela é tropeço; "km/h" é unidade e fica em linha.
 
 **Aula que ele aprovou como modelo (Pablo, 22/11/2026; use para saber o que é
 "entendi sem tropeço" em questão de grandezas):** `d2-dificil-mat-06` e as outras

@@ -38,6 +38,7 @@ Regra só escrita em memória não me obriga a olhar. Por isso: (1) ritual de ab
 | 22 | Dados da questão UMA vez, em figura (planta, escala, desenho) ou tabela de cotas; as telas seguintes não repetem os dados | Pablo 24/11 ("não precisa ficar repetindo toda hora os dados") | processo (foto) |
 | 23 | Por enquanto SÓ computador (1366 px); celular fica para depois, não fotografar nem consertar 390 px | Pablo 24/11 | processo |
 | 24 | Lousa de exatas: MÉDIA de mais ou menos 80% das telas (entre 70 e 90; não é conta exata por aula) são SÓ equação (letras com legendas, depois a mesma equação com números, `a + b = c`); só ~20% no começo dizem o que a questão quer e quais números pegar. Fator na fórmula (÷ 2) tem tela do PORQUÊ com números (queda livre: 0 a 20, média 10) | Pablo 24/11 ("pq dividir a gravidade por 2 ... 80 por cento dos quadros só a equação") | teste da fase 3 (média de telas `eq` entre 70 e 90%, nunca exigir 80% exato por aula) + aluno-do-zero (tropeços 20 e 21) |
+| 25 | Divisão sempre em FRAÇÃO desenhada (em pé) nas lousas de exatas, nunca "a ÷ b" em linha; "72 km/h" é unidade e não vira fração | Pablo 24/11 ("coloca por fração, é mais fácil") | teste `quadro-de-conta.test.ts` + foto |
 
 ## Lacunas abertas (23/11/2026)
 - **Regra 4:** Física tem 1 desenho (cubo) em 24; Matemática tem 9 desenhos em 28. Faltam ~9 desenhos de Física (plano inclinado, circuito série/paralelo, lente com raios, espelho, tubo, corda, projétil, encontro, escada rolante).

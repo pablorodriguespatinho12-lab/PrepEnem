@@ -36,3 +36,18 @@ Haiku (`explorador`): contar e listar por SQL, ler figuras. Sonnet (`executor`):
 - Fase 3 ganha um TESTE: média de telas `eq` entre 70 e 90% nas lousas de exatas (não por aula) (contar por comando, dizer "X de Y").
 - `aluno-do-zero` ganhou os tropeços 20 (origem sem porquê) e 21 (texto onde cabia equação).
 - Limite do validador subiu de 8 para 10 peças por equação (a 9ª peça sumia em silêncio).
+
+## Estado em 24/11/2026 ~20h (fases)
+| Fase | Estado |
+|---|---|
+| 0 regras 17-25 | feita |
+| 1 cena `eq` + fração (`cima|baixo`) | feita, `equacao.ts` |
+| 2 protótipo (queda livre 5 telas, velocidade média) | feito, Pablo viu; pediu fração no lugar do ÷ (feito); o porquê do ÷ 2 ele mandou deixar de lado |
+| 3 gerador (`quadro-de-conta.ts`, `do-robo.ts`, `do-antigo.ts`) | feita e GRAVADA no banco: 443 lousas, média de telas só de conta 0% -> 70% (robô 78%, antigo 48%); 1 aula não coube (33 telas, máx 31); cópia em `~/backups-prepenem/explicacoes-antes-lousa-do-robo-2026-11-24T22h49.json` |
+| 4 base por conceito | NÃO feita. Tema x quantidade (Mat/Fís): Cinemática só 16 (8 do dia 2); Grandezas 27, Equações 32, Combinatória 34. Falta o sub-conceito (velocidade média, aceleração, queda livre) |
+| 5 figura de sólido | NÃO feita |
+| 6 aluno-do-zero + revisor-de-fatos nas lousas novas | NÃO feita (14 mil tokens por questão; rodar em 2 a 3 aulas por tema) |
+| 7 auto-melhora | feita (ver lista abaixo) |
+
+Correção -> onde gravei: build com dev ligado -> `scripts/checar-dev-parado.mjs` (trava no `npm run build`); 80/20 é média -> regra 24 + teste com tolerância; ÷ em fração -> regra 25 + aluno-do-zero 22; "por que ÷ 2" -> aluno-do-zero 20; localhost pede login -> prévia por artefato com fotos; texto onde cabia equação -> aluno-do-zero 21.
+Defeitos achados SÓ olhando foto de aula real (o teste não pegava): 3 linhas com fração estouravam o quadro, legenda cortada em "em", "72 km/h" virou fração, ";" juntava duas contas. Lição: foto de 2 aulas reais depois de todo gerador novo, antes de gravar.
