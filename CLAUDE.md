@@ -10,7 +10,10 @@
 3. Carregue cada skill no instante antes do trabalho que ela governa.
 4. No fim da frente, no mesmo commit: o que ela tornou FALSO
    (`auditar-o-repertorio`) e o que tornou VERDADEIRO (`inventar-daqui`).
-5. **O Pablo tem TDAH**: toda mensagem final passa por `explicar-ao-pablo` —
+5. **Autoatualização obrigatória** (Pablo, 24/11/2026): depois de toda leva de agentes,
+   achar onde o PLANO/prompt errou, corrigir o plano e o arquivo do agente, e dizer
+   "aprendi: X, gravei em Y". Memória `autoatualizar-agentes-e-planos`.
+6. **O Pablo tem TDAH**: toda mensagem final passa por `explicar-ao-pablo` —
    curta, pelo que aparece na tela, no máximo duas opções.
 
 ## Ferramentas em `.claude/`
