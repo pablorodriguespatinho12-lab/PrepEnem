@@ -267,6 +267,15 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Uma esfera cai do alto de uma torre de 20 m. O canhão fica numa plataforma de 5 m, a 8 m da torre.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "torre-esfera-canhao",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "O projétil percorre dr em linha reta e tem de chegar até o tempo tq da queda. A menor velocidade é a que gasta justo esse tempo.\nAgora é só achar dr e tq.",
      "visual": {
@@ -291,7 +300,21 @@
     },
     {
      "titulo": "Achando dr: a distância em linha reta",
-     "texto": "A esfera foi solta a 20 m e o canhão está a 5 m: a diferença de altura é 20 − 5 = 15 m. A distância horizontal é 8 m. Os dois formam um canto reto.\n8 · 8 = 64 e 15 · 15 = 225 (15 · 10 = 150 e 15 · 5 = 75). 64 + 225 = 289."
+     "texto": "A esfera foi solta a 20 m e o canhão está a 5 m: a diferença de altura é 20 − 5 = 15 m. A distância horizontal é 8 m. Os dois formam um canto reto.\n8 · 8 = 64 e 15 · 15 = 225 (15 · 10 = 150 e 15 · 5 = 75). 64 + 225 = 289.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "torre-esfera-canhao",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "17 m em linha reta",
+       ""
+      ]
+     }
     },
     {
      "titulo": "Achando dr: a distância em linha reta (2 de 2)",
@@ -444,6 +467,15 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Pontos da tabela de Ana (v em m/s, t em s). Bia sai de Q aos 20 s.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "grafico-vt-ana",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "O 5 vem dos 5 m/s de Ana depois que Bia sai. Antes disso, Ana já andou ac + cte.\nAgora é só achar ac, cte e ap, uma por vez.",
      "visual": {
@@ -472,7 +504,19 @@
     },
     {
      "titulo": "Achando ac: Ana acelerando",
-     "texto": "Pela tabela, a velocidade sobe 2 m/s a cada 4 s: a = 2 ÷ 4 = 0,5 m/s² (4 · 0,5 = 2). Ou seja, +0,5 m/s a cada segundo. Quantos 0,5 cabem em 5? 10: chega a 5 m/s em 10 s (antes dos 12 s da tabela).\nMédia: (0 + 5) ÷ 2 = 2,5 m/s. ac = 2,5 · 10 = 25 m."
+     "texto": "Pela tabela, a velocidade sobe 2 m/s a cada 4 s: a = 2 ÷ 4 = 0,5 m/s² (4 · 0,5 = 2). Ou seja, +0,5 m/s a cada segundo. Quantos 0,5 cabem em 5? 10: chega a 5 m/s em 10 s (antes dos 12 s da tabela).\nMédia: (0 + 5) ÷ 2 = 2,5 m/s. ac = 2,5 · 10 = 25 m.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "grafico-vt-ana",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "10 s: 5 m/s",
+       "ac = 25 m",
+       ""
+      ]
+     }
     },
     {
      "titulo": "Achando cte: Ana a 5 m/s antes de Bia sair",
@@ -1101,6 +1145,15 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "A rampa sobe 3 m a cada 5 m. O bloco de 2 kg sai da base, rampa acima, a 12 m/s.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "rampa-com-forcas",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "Na volta o bloco parte do repouso lá em cima e desce a mesma distância dis, com a aceleração des da descida. É a regra v · v = 2 · a · d da aula Antes.\nAgora é só achar sub, dis e des.",
      "visual": {
@@ -1129,7 +1182,21 @@
     },
     {
      "titulo": "Achando sub: a desaceleração na subida",
-     "texto": "Seno = 3 ÷ 5 = 0,6; cosseno = 4 ÷ 5 = 0,8. Peso: 2 · 10 = 20 N.\nPuxa rampa abaixo: 0,6 · 20 = 12 N. Aperta: 0,8 · 20 = 16 N. Atrito: 0,45 · 16 = 7,2 N (45 · 16 = 720, 2 casas).\nSubindo, os dois freiam: 12 + 7,2 = 19,2 N. sub = 19,2 ÷ 2 = 9,6 m/s²."
+     "texto": "Seno = 3 ÷ 5 = 0,6; cosseno = 4 ÷ 5 = 0,8. Peso: 2 · 10 = 20 N.\nPuxa rampa abaixo: 0,6 · 20 = 12 N. Aperta: 0,8 · 20 = 16 N. Atrito: 0,45 · 16 = 7,2 N (45 · 16 = 720, 2 casas).\nSubindo, os dois freiam: 12 + 7,2 = 19,2 N. sub = 19,2 ÷ 2 = 9,6 m/s².",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "rampa-com-forcas",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "peso 20 N",
+       "aperta 16 N",
+       "puxa 12 N",
+       "atrito 7,2 N"
+      ]
+     }
     },
     {
      "titulo": "Achando dis: a distância que ele sobe",
@@ -1298,6 +1365,15 @@
      "texto": "Aqui é o contrário: a diferença de posição é o comprimento da prancha, e queremos o tempo. Pela aula Antes, tem · tem = 2 · cmp ÷ rel."
     },
     {
+     "titulo": "O desenho",
+     "texto": "O bloco de 1 kg está na ponta da frente da prancha de 4 kg. Puxam a prancha com 30 N; a mesa não tem atrito.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "bloco-sobre-prancha",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "Em relação à prancha, o bloco parte do repouso e anda para trás o comprimento cmp com a aceleração rel.\nAgora é só achar bl, pr, rel e cmp.",
      "visual": {
@@ -1342,7 +1418,21 @@
     },
     {
      "titulo": "Achando rel: a aceleração relativa",
-     "texto": "A cada segundo a prancha ganha do bloco: rel = 6,5 − 4 = 2,5 m/s²."
+     "texto": "A cada segundo a prancha ganha do bloco: rel = 6,5 − 4 = 2,5 m/s².",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "bloco-sobre-prancha",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "bloco 1: 4 m/s²",
+       "prancha 2: 6,5 m/s²",
+       "atrito 4 N"
+      ]
+     }
     },
     {
      "titulo": "Achando cmp: quanto o bloco anda em relação à prancha",
@@ -1506,6 +1596,15 @@
      "texto": "Por isso tra = 2 · vv ÷ rai − 20. Como 4/5 de L e 0,2 L ainda têm o L dentro, vamos deixar L na conta e ver se ele some."
     },
     {
+     "titulo": "O desenho",
+     "texto": "A esfera de 2 kg sai do repouso com o fio na horizontal. O pino fica a 4/5 de L abaixo da fixação.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "pendulo-com-pino",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "No topo, a tração mais o peso fazem a força da curva. O L não foi dado: vamos deixar L na conta e ver se ele some.\nAgora é só achar rai e vv.",
      "visual": {
@@ -1530,11 +1629,37 @@
     },
     {
      "titulo": "Achando rai: o raio em torno do pino",
-     "texto": "4/5 = 4 ÷ 5 = 0,8: o pino está a 0,8 L da fixação (se L = 10 m, a 8 m). O fio todo tem L, então passa do pino um pedaço de L − 0,8 L = 0,2 L.\nrai = 0,2 L."
+     "texto": "4/5 = 4 ÷ 5 = 0,8: o pino está a 0,8 L da fixação (se L = 10 m, a 8 m). O fio todo tem L, então passa do pino um pedaço de L − 0,8 L = 0,2 L.\nrai = 0,2 L.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "pendulo-com-pino",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "raio = 0,2 L",
+       ""
+      ]
+     }
     },
     {
      "titulo": "Achando vv: v · v no ponto mais alto",
-     "texto": "O pino está 0,8 L abaixo da fixação. O topo fica rai = 0,2 L acima do pino: 0,8 L − 0,2 L = 0,6 L abaixo da fixação.\nQueda: 0,6 L. vv = 2 · 10 · 0,6 L = 12 L.\nO fio fica esticado? vv = 12 L é maior que 10 · rai = 2 L: sim."
+     "texto": "O pino está 0,8 L abaixo da fixação. O topo fica rai = 0,2 L acima do pino: 0,8 L − 0,2 L = 0,6 L abaixo da fixação.\nQueda: 0,6 L. vv = 2 · 10 · 0,6 L = 12 L.\nO fio fica esticado? vv = 12 L é maior que 10 · rai = 2 L: sim.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "pendulo-com-pino",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "raio = 0,2 L",
+       "queda = 0,6 L"
+      ]
+     }
     },
     {
      "titulo": "Volta na equação",
@@ -1937,6 +2062,15 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Estado A: 3 · 10⁵ Pa e 1 L. De A a B, uma reta; de B a C, o volume não muda.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "diagrama-pv-trapezio",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "O calor líquido é o trabalho mais o aumento da energia interna.\nAgora é só achar volB, trab e aumento.",
      "visual": {
@@ -1969,7 +2103,21 @@
     },
     {
      "titulo": "Achando trab: o trabalho como área",
-     "texto": "De B a C o volume não muda: ΔV = 0 e não há trabalho. Só conta de A a B.\nA área sob a reta é um trapézio: (3 + 1) ÷ 2 = 2 (×10⁵ Pa) e largura 3 − 1 = 2 L = 2 × 10⁻³ m³.\ntrab = 2 × 10⁵ · 2 × 10⁻³. Números: 2 · 2 = 4. Potências: 10⁵ · 10⁻³ = 100 000 · 0,001 = 100. Então 4 · 100 = 400 J."
+     "texto": "De B a C o volume não muda: ΔV = 0 e não há trabalho. Só conta de A a B.\nA área sob a reta é um trapézio: (3 + 1) ÷ 2 = 2 (×10⁵ Pa) e largura 3 − 1 = 2 L = 2 × 10⁻³ m³.\ntrab = 2 × 10⁵ · 2 × 10⁻³. Números: 2 · 2 = 4. Potências: 10⁵ · 10⁻³ = 100 000 · 0,001 = 100. Então 4 · 100 = 400 J.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "diagrama-pv-trapezio",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "3",
+       "área = trabalho",
+       "400 J"
+      ]
+     }
     },
     {
      "titulo": "Achando aumento: a energia interna",
@@ -2388,7 +2536,12 @@
     },
     {
      "titulo": "Achando rhor: a barra horizontal",
-     "texto": "1 cm² = 10⁻⁴ m² = 0,0001 m². k · S = 200 · 0,0001 = 0,02.\nrhor = 0,5 ÷ 0,02. Multiplico os dois por 100: 50 ÷ 2 = 25 K/W."
+     "texto": "1 cm² = 10⁻⁴ m² = 0,0001 m². k · S = 200 · 0,0001 = 0,02.\nrhor = 0,5 ÷ 0,02. Multiplico os dois por 100: 50 ÷ 2 = 25 K/W.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "escada-de-barras",
+      "rotulos": []
+     }
     },
     {
      "titulo": "Achando rvert: a barra vertical",
@@ -2420,7 +2573,21 @@
     },
     {
      "titulo": "Achando temp3: a temperatura do 3º nó",
-     "texto": "1º nó: 100 · 1/2 = 50 °C. 2º nó: 50 · 1/2 = 25 °C. 3º nó: 25 · 1/2 = 12,5 °C.\ntemp3 = 12,5 °C."
+     "texto": "1º nó: 100 · 1/2 = 50 °C. 2º nó: 50 · 1/2 = 25 °C. 3º nó: 25 · 1/2 = 12,5 °C.\ntemp3 = 12,5 °C.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "escada-de-barras",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "50 °C",
+       "25 °C",
+       "12,5 °C",
+       ""
+      ]
+     }
     },
     {
      "titulo": "Volta na equação",
@@ -2593,6 +2760,15 @@
      "texto": "O cardume está de lado: o trajeto até ele é a diagonal de um triângulo de canto reto. A profundidade dele é o lado vertical, que sai por Pitágoras."
     },
     {
+     "titulo": "O desenho",
+     "texto": "O barco está na superfície. O eco do cardume, a 270 m na horizontal, volta em 0,6 s; o do fundo, abaixo do barco, em 0,8 s.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "sonar-eco-obliquo",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "O fundo e o cardume estão em profundidades diferentes: dis é a diferença. Para cada um, preciso da velocidade do som.\nAgora é só achar vel, fun, obl e car.",
      "visual": {
@@ -2637,7 +2813,21 @@
     },
     {
      "titulo": "Achando car: a profundidade do cardume",
-     "texto": "Triângulo de canto reto: diagonal 450 m, horizontal 270 m, vertical car.\n450 · 450 = 202 500 e 270 · 270 = 72 900. car · car = 202 500 − 72 900 = 129 600.\n36 · 36 = 1 296, então 360 · 360 = 129 600. car = 360 m."
+     "texto": "Triângulo de canto reto: diagonal 450 m, horizontal 270 m, vertical car.\n450 · 450 = 202 500 e 270 · 270 = 72 900. car · car = 202 500 − 72 900 = 129 600.\n36 · 36 = 1 296, então 360 · 360 = 129 600. car = 360 m.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "sonar-eco-obliquo",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "600 m",
+       "450 m",
+       "360 m",
+       "240 m"
+      ]
+     }
     },
     {
      "titulo": "Volta na equação",
@@ -2806,6 +2996,15 @@
      "texto": "Mesa lisa: a única força horizontal na sirene é a tração do fio, e ela faz a curva (aula \"Força para fazer a curva\"): tra = massa · vf · vf ÷ raio."
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja a mesa de cima: a sirene gira na ponta do fio e o microfone está muito longe. Quando ela vem direto ao microfone, ele ouve 420 Hz (a máxima); no ponto oposto ela se afasta e ele ouve 380 Hz (a mínima).",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "sirene-no-circulo",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "A massa e o fio são dados. Falta a velocidade vf, e as duas frequências a escondem. cte é o número fe · 340, que é o mesmo nas duas.\nAgora é só achar cte e vf.",
      "visual": {
@@ -2834,7 +3033,19 @@
     },
     {
      "titulo": "Achando vf: a velocidade da sirene",
-     "texto": "Iguale: 420 · (340 − vf) = 380 · (340 + vf). 420 · 340 = 42 · 34 · 100 = 1 428 · 100 = 142 800. 380 · 340 = 38 · 34 · 100 = 1 292 · 100 = 129 200.\n142 800 − 420 · vf = 129 200 + 380 · vf. Junte: 142 800 − 129 200 = 13 600 = 800 · vf.\nvf = 13 600 ÷ 800 = 136 ÷ 8 = 17 m/s."
+     "texto": "Iguale: 420 · (340 − vf) = 380 · (340 + vf). 420 · 340 = 42 · 34 · 100 = 1 428 · 100 = 142 800. 380 · 340 = 38 · 34 · 100 = 1 292 · 100 = 129 200.\n142 800 − 420 · vf = 129 200 + 380 · vf. Junte: 142 800 − 129 200 = 13 600 = 800 · vf.\nvf = 13 600 ÷ 800 = 136 ÷ 8 = 17 m/s.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "sirene-no-circulo",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "vf = 17 m/s"
+      ]
+     }
     },
     {
      "titulo": "Volta na equação",
@@ -2991,6 +3202,15 @@
      "texto": "A folga é a mesma nos dois níveis e some na subtração: 50 − 16 = 34 cm = lam ÷ 2. Por isso 4 · 16 = 64 cm erra: ele daria vel = 320 m/s e −18 °C."
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja o tubo: o diapasão de 500 Hz vibra sobre a boca e o nível da água sobe e desce. O som reforça com 16,0 cm de ar e de novo com 50,0 cm.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "tubo-com-agua",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "A fórmula do enunciado é vel = 331 + 0,6 · tem. Desfazendo de trás para frente (aula \"Achar o número que falta\"): tem = (vel − 331) ÷ 0,6.\nAgora é só achar vel, lam e dif.",
      "visual": {
@@ -3027,7 +3247,18 @@
     },
     {
      "titulo": "Achando dif: a diferença dos níveis",
-     "texto": "50,0 − 16,0 = 34,0 cm. Como 1 m = 100 cm, 34 cm = 34 ÷ 100 = 0,34 m. lam = 2 · 0,34 = 0,68 m.\nvel = 0,68 · 500 = 68 · 500 ÷ 100 = 34 000 ÷ 100 = 340 m/s."
+     "texto": "50,0 − 16,0 = 34,0 cm. Como 1 m = 100 cm, 34 cm = 34 ÷ 100 = 0,34 m. lam = 2 · 0,34 = 0,68 m.\nvel = 0,68 · 500 = 68 · 500 ÷ 100 = 34 000 ÷ 100 = 340 m/s.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "tubo-com-agua",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "34,0 cm = λ ÷ 2",
+       "λ = 0,68 m; vel = 340 m/s"
+      ]
+     }
     },
     {
      "titulo": "Volta na equação",
@@ -3184,6 +3415,15 @@
      "texto": "O enunciado não pede f1 inteira: f1 = 140 ÷ 3 também serve, com os modos 9º e 15º."
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja a corda de 0,9 m, presa nas duas pontas, em dois modos: 420 Hz e 700 Hz. Quantas barrigas cada um tem não é dado; o desenho mostra só um exemplo.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "corda-modos",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "Cada f1 = mdc ÷ kk dá uma velocidade (v = 1,8 · f1), todas diferentes. Contar velocidades é contar valores de kk.\nAgora é só achar mdc e kk.",
      "visual": {
@@ -3212,7 +3452,18 @@
     },
     {
      "titulo": "Achando kk: quantos inteiros servem",
-     "texto": "f1 = 140 ÷ kk. Exemplo kk = 3: f1 = 140 ÷ 3, e 420 ÷ (140 ÷ 3) = 420 · 3 ÷ 140 = 1 260 ÷ 140 = 9; 700 · 3 ÷ 140 = 15. Os dois dão inteiros: serve.\nPiso: 140 ÷ kk pelo menos 20, então kk é no máximo 140 ÷ 20 = 7. Teste: 140 ÷ 7 = 20 serve e 140 ÷ 8 = 17,5 não. kk = 1, 2, 3, 4, 5, 6, 7."
+     "texto": "f1 = 140 ÷ kk. Exemplo kk = 3: f1 = 140 ÷ 3, e 420 ÷ (140 ÷ 3) = 420 · 3 ÷ 140 = 1 260 ÷ 140 = 9; 700 · 3 ÷ 140 = 15. Os dois dão inteiros: serve.\nPiso: 140 ÷ kk pelo menos 20, então kk é no máximo 140 ÷ 20 = 7. Teste: 140 ÷ 7 = 20 serve e 140 ÷ 8 = 17,5 não. kk = 1, 2, 3, 4, 5, 6, 7.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "corda-modos",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "f1 = 140 ÷ kk, com kk de 1 a 7"
+      ]
+     }
     },
     {
      "titulo": "Volta na equação",
@@ -3373,6 +3624,15 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja o projetor, fora de escala: o slide, a lente 1, a lente 2 e a parede. A lente 2 se afasta da lente 1 pelo trilho.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "projetor-duas-lentes",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "A lente 2 anda de D0 até Df com velocidade v, e o tempo é essa distância dividida por v.\nAgora é só achar v, D0, q1, g1, h1, g2, p2 e Df.",
      "visual": {
@@ -3445,7 +3705,22 @@
     },
     {
      "titulo": "Achando p2: onde está o objeto da lente 2",
-     "texto": "g2 = q2 ÷ p2, então q2 = 4 · p2. Com f2 = 10: 1/10 = 1/p2 + 1/(4 · p2) = 4/(4 · p2) + 1/(4 · p2) = 5/(4 · p2).\nCruzando: 4 · p2 = 5 · 10 = 50, então p2 = 50 ÷ 4 = 12,5 cm.\np2 é maior que f2 = 10: a imagem é real e aparece na parede."
+     "texto": "g2 = q2 ÷ p2, então q2 = 4 · p2. Com f2 = 10: 1/10 = 1/p2 + 1/(4 · p2) = 4/(4 · p2) + 1/(4 · p2) = 5/(4 · p2).\nCruzando: 4 · p2 = 5 · 10 = 50, então p2 = 50 ÷ 4 = 12,5 cm.\np2 é maior que f2 = 10: a imagem é real e aparece na parede.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "projetor-duas-lentes",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "imagem 1: 18 cm, a 30 cm da lente 1",
+       "p2 = 12,5 cm"
+      ]
+     }
     },
     {
      "titulo": "Achando Df: a distância entre as lentes",
@@ -3901,6 +4176,15 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja a fibra: o núcleo de índice 1,50 entre dois revestimentos. O raio axial vai reto; o mais lento vai em zigue-zague, rente ao limite da reflexão total.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "fibra-zigue-zague",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "O atraso é o tempo do raio mais lento menos o do raio axial.\nAgora é só achar nr, vn, ta, sl, Lc e tl.",
      "visual": {
@@ -3983,7 +4267,20 @@
     },
     {
      "titulo": "Achando Lc: o caminho do raio lento",
-     "texto": "Para cada metro ao longo do eixo, o raio anda 1 ÷ sl metros (ângulo medido da normal).\nLc = 3 000 ÷ (29/30) = 3 000 · 30/29 = 90 000 ÷ 29.\n29 · 3 100 = 89 900 e sobram 100; 100 ÷ 29 ≈ 3,4. Lc ≈ 3 103,4 m."
+     "texto": "Para cada metro ao longo do eixo, o raio anda 1 ÷ sl metros (ângulo medido da normal).\nLc = 3 000 ÷ (29/30) = 3 000 · 30/29 = 90 000 ÷ 29.\n29 · 3 100 = 89 900 e sobram 100; 100 ÷ 29 ≈ 3,4. Lc ≈ 3 103,4 m.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "fibra-zigue-zague",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "revestimento escolhido: 1,45",
+       "caminho do raio lento: 3 103,4 m"
+      ]
+     }
     },
     {
      "titulo": "Achando tl: o tempo do raio lento",
@@ -4160,6 +4457,15 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja o corredor visto de cima: o laser numa ponta, o sensor na outra e espelhos nas duas paredes compridas.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "corredor-imagens",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "Cada direção que acerta o sensor aponta para uma imagem dele. O total é a soma das imagens de reflexões pares e de ímpares.\nAgora é só achar lo, hi, a e b.",
      "visual": {
@@ -4204,7 +4510,20 @@
     },
     {
      "titulo": "Achando b: as imagens invertidas",
-     "texto": "Refletido no espelho de baixo (y = 0), o sensor vai para y = −2, e repete a cada 6: y = −2 + 6j.\nj = −2: −14 (fora). j = −1: −8, j = 0: −2, j = 1: 4, j = 2: 10 (dentro). j = 3: 16 (fora). b = 4."
+     "texto": "Refletido no espelho de baixo (y = 0), o sensor vai para y = −2, e repete a cada 6: y = −2 + 6j.\nj = −2: −14 (fora). j = −1: −8, j = 0: −2, j = 1: 4, j = 2: 10 (dentro). j = 3: 16 (fora). b = 4.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "corredor-imagens",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "corredor desdobrado: uma reta por imagem",
+       "cheias: dentro do cone de 45° · vazias: fora"
+      ]
+     }
     },
     {
      "titulo": "Volta na equação",
@@ -4618,6 +4937,15 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja o circuito: duas baterias reais em paralelo, cada uma com a sua resistência interna, e o resistor R mergulhado na água.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "baterias-paralelo",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "O resistor entrega Pot joules por segundo à água. Dividindo o calor que a água pede por Pot, sai o tempo.\nAgora é só achar Cal, Fem, Rin e Pot.",
      "visual": {
@@ -4662,7 +4990,20 @@
     },
     {
      "titulo": "Achando Rin: a resistência da bateria única",
-     "texto": "Rin = (r1 · r2) ÷ (r1 + r2) = (1,5 · 3) ÷ 4,5 = 4,5 ÷ 4,5 = 1 Ω."
+     "texto": "Rin = (r1 · r2) ÷ (r1 + r2) = (1,5 · 3) ÷ 4,5 = 4,5 ÷ 4,5 = 1 Ω.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "baterias-paralelo",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "bateria única: 12 V e 1 Ω"
+      ]
+     }
     },
     {
      "titulo": "Achando Pot: a corrente e a potência",
@@ -4670,7 +5011,21 @@
     },
     {
      "titulo": "Achando Pot: o R que dá o máximo",
-     "texto": "Teste perto de R = 1: R = 0,8: corrente 12 ÷ 1,8 ≈ 6,67 A e potência ≈ 35,6 W. R = 1: corrente 6 A e (1 · 6) · 6 = 36 W. R = 1,25: corrente 12 ÷ 2,25 ≈ 5,33 A e ≈ 35,6 W.\nMais longe: R = 0,5 e R = 2 dão 32 W; R = 3 dá 27 W. O topo é em R = Rin = 1 Ω (vale sempre). Pot = 36 W."
+     "texto": "Teste perto de R = 1: R = 0,8: corrente 12 ÷ 1,8 ≈ 6,67 A e potência ≈ 35,6 W. R = 1: corrente 6 A e (1 · 6) · 6 = 36 W. R = 1,25: corrente 12 ÷ 2,25 ≈ 5,33 A e ≈ 35,6 W.\nMais longe: R = 0,5 e R = 2 dão 32 W; R = 3 dá 27 W. O topo é em R = Rin = 1 Ω (vale sempre). Pot = 36 W.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "baterias-paralelo",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "bateria única: 12 V e 1 Ω",
+       "R = 1 Ω: potência máxima 36 W"
+      ]
+     }
     },
     {
      "titulo": "Volta na equação",
@@ -4839,6 +5194,15 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja a protoboard: cada barra é uma linha, e todos os furos de uma linha são um ponto só. A fonte de 18 V está ligada nas linhas 1 e 3.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "protoboard-curto-aberto",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "O ramo de R5 e R6 está entre as linhas 2 e 3, e a mesma corrente passa pelos dois. Dividindo a tensão entre essas linhas pela resistência do ramo, sai a corrente.\nAgora é só achar Ram, Par, Itot e Tp.",
      "visual": {
@@ -4871,7 +5235,22 @@
     },
     {
      "titulo": "Achando Ram: quem sai da conta",
-     "texto": "Leia a tabela com cuidado. R4 tem as duas pontas na linha 2: o mesmo ponto dos dois lados, sem tensão e sem corrente (curto). R3 tem uma ponta na linha 2 e a outra na linha 5, onde mais nada se liga: a corrente não tem para onde ir (aberto). R3 e R4 saem do circuito."
+     "texto": "Leia a tabela com cuidado. R4 tem as duas pontas na linha 2: o mesmo ponto dos dois lados, sem tensão e sem corrente (curto). R3 tem uma ponta na linha 2 e a outra na linha 5, onde mais nada se liga: a corrente não tem para onde ir (aberto). R3 e R4 saem do circuito.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "protoboard-curto-aberto",
+      "rotulos": [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "R4: curto, sem corrente",
+       "R3: aberto, sem corrente"
+      ]
+     }
     },
     {
      "titulo": "Achando Ram: o ramo de R5 e R6",

@@ -283,6 +283,7 @@ Q.append(dict(
     pecas=[('Imagem 1 vira objeto', 'A imagem que a lente 1 forma é o objeto da lente 2. O tamanho dela (18 cm) é o que a lente 2 amplia.'),
            ('Imagem real e virtual', 'Real: aparece na parede (objeto além do foco). Virtual: não aparece na parede (objeto dentro do foco).')],
     formulas=[('lente', 'Equação da lente', '1/f = 1/p + 1/q'), ('lente', 'Aumento', 'g = q ÷ p'), ('carro', 'Movimento uniforme', 't = deslocamento ÷ v')],
+    desenho=('Veja o projetor, fora de escala: o slide, a lente 1, a lente 2 e a parede. A lente 2 se afasta da lente 1 pelo trilho.', 'projetor-duas-lentes', []),
     eq='t = (Df − D0) ÷ v', leitura='tempo = (distância final entre as lentes − distância inicial) ÷ velocidade de afastamento',
     letras=[('t', 'tempo de afastamento, em s (o que a questão quer)'), ('Df', 'distância entre as lentes quando a imagem tem 72 cm, em cm'),
             ('D0', 'distância entre as lentes no início, em cm'), ('v', 'velocidade de afastamento da lente 2, em cm/s'),
@@ -297,7 +298,8 @@ Q.append(dict(
              ('Achando g2: o aumento da lente 2', 'A imagem final deve ter 72 cm e o objeto da lente 2 tem 18 cm.\ng2 = 72 ÷ 18 = 4.'),
              ('Achando p2: onde está o objeto da lente 2',
               'g2 = q2 ÷ p2, então q2 = 4 · p2. Com f2 = 10: 1/10 = 1/p2 + 1/(4 · p2) = 4/(4 · p2) + 1/(4 · p2) = 5/(4 · p2).\n'
-              'Cruzando: 4 · p2 = 5 · 10 = 50, então p2 = 50 ÷ 4 = 12,5 cm.\np2 é maior que f2 = 10: a imagem é real e aparece na parede.'),
+              'Cruzando: 4 · p2 = 5 · 10 = 50, então p2 = 50 ÷ 4 = 12,5 cm.\np2 é maior que f2 = 10: a imagem é real e aparece na parede.',
+              {'tipo': 'diagrama', 'nome': 'projetor-duas-lentes', 'rotulos': ['', '', '', '', '', '', '', 'imagem 1: 18 cm, a 30 cm da lente 1', 'p2 = 12,5 cm']}),
              ('Achando Df: a distância entre as lentes', 'A imagem 1 está a q1 = 30 cm da lente 1, e o objeto da lente 2 fica a p2 = 12,5 cm antes dela.\nDf = 30 + 12,5 = 42,5 cm.')],
     volta=('t = (Df − D0) ÷ v = (42,5 − 37,5) ÷ 0,50 = 5 ÷ 0,5 = 10 s.\nResposta: alternativa X. Conferindo: 0,50 · 10 = 5 cm. No início p2 = 37,5 − 30 = 7,5 cm, dentro do foco: '
            'a imagem é virtual e também tem aumento 4 (10 ÷ 2,5), mas não aparece na parede. Por isso 0 s não serve.'),
@@ -432,6 +434,7 @@ Q.append(dict(
     pecas=[('Ângulo limite', 'O menor ângulo de incidência (medido da normal) em que a reflexão ainda é total: sen θL = n do revestimento ÷ n do núcleo.'),
            ('Raio axial', 'O que anda ao longo do eixo, em linha reta, sem bater na parede.')],
     formulas=[('onda', 'Velocidade no núcleo', 'vn = c ÷ n do núcleo'), ('grafico', 'Seno do ângulo limite', 'sl = nr ÷ n do núcleo'), ('carro', 'Tempo', 't = caminho ÷ vn')],
+    desenho=('Veja a fibra: o núcleo de índice 1,50 entre dois revestimentos. O raio axial vai reto; o mais lento vai em zigue-zague, rente ao limite da reflexão total.', 'fibra-zigue-zague', []),
     eq='at = tl − ta', leitura='atraso = tempo do raio mais lento − tempo do raio axial',
     letras=[('at', 'atraso entre os dois raios, em µs (o que a questão quer)'), ('tl', 'tempo do raio mais lento, em µs'), ('ta', 'tempo do raio axial, em µs'),
             ('nr', 'índice do revestimento escolhido'), ('vn', 'velocidade da luz no núcleo, em m/s'), ('sl', 'seno do ângulo limite'), ('Lc', 'caminho do raio mais lento, em m')],
@@ -446,7 +449,8 @@ Q.append(dict(
              ('Achando sl: o seno do ângulo limite', 'sl = nr ÷ n do núcleo = 1,45 ÷ 1,50. Multiplico os dois por 100: 145 ÷ 150.\nDividindo por 5 em cima e embaixo: 145 ÷ 5 = 29 e 150 ÷ 5 = 30. sl = 29/30.'),
              ('Achando Lc: o caminho do raio lento',
               'Para cada metro ao longo do eixo, o raio anda 1 ÷ sl metros (ângulo medido da normal).\nLc = 3 000 ÷ (29/30) = 3 000 · 30/29 = 90 000 ÷ 29.\n'
-              '29 · 3 100 = 89 900 e sobram 100; 100 ÷ 29 ≈ 3,4. Lc ≈ 3 103,4 m.'),
+              '29 · 3 100 = 89 900 e sobram 100; 100 ÷ 29 ≈ 3,4. Lc ≈ 3 103,4 m.',
+              {'tipo': 'diagrama', 'nome': 'fibra-zigue-zague', 'rotulos': ['', '', '', '', '', 'revestimento escolhido: 1,45', 'caminho do raio lento: 3 103,4 m']}),
              ('Achando tl: o tempo do raio lento', 'tl = Lc ÷ vn = 3 103,4 ÷ (2,0 × 10⁸). Primeiro 3 103,4 ÷ 2 = 1 551,7; depois ÷ 10⁸: 0,000 015 517 s.\nEm µs: tl = 15,517 µs.')],
     volta='at = tl − ta = 15,517 − 15 = 0,517, que arredondado dá 0,52 µs.\nResposta: alternativa X. Conferindo: o raio lento anda 3 103,4 − 3 000 = 103,4 m a mais, e 103,4 ÷ (2,0 × 10⁸) ≈ 0,517 µs.',
     valores=[('nr', '1,45'), ('vn', '2,0 × 10⁸ m/s'), ('ta', '15 µs'), ('sl', '29/30'), ('Lc', '3 103,4 m'), ('tl', '15,517 µs')],
@@ -533,6 +537,7 @@ Q.append(dict(
     pecas=[('Imagem do sensor', 'Cada cópia desdobrada do sensor. A reta do laser até ela é um caminho possível do feixe.'),
            ('Limite de 45°', 'A inclinação da reta (y final − 1) ÷ 12 não pode passar de 1, nem de −1.')],
     formulas=[('grafico', 'Inclinação', '(y − 1) ÷ 12'), ('contagem', 'Alvos desdobrados', 'y = 2 + 6j e y = −2 + 6j'), ('contagem', 'Total', 'n = a + b')],
+    desenho=('Veja o corredor visto de cima: o laser numa ponta, o sensor na outra e espelhos nas duas paredes compridas.', 'corredor-imagens', []),
     eq='n = a + b', leitura='direções = imagens com número par de reflexões + imagens com número ímpar',
     letras=[('n', 'número de direções de disparo (o que a questão quer)'), ('a', 'imagens do sensor sem inverter, y = 2 + 6j, dentro do limite'),
             ('b', 'imagens do sensor invertido, y = −2 + 6j, dentro do limite'), ('lo', 'menor y permitido pelo limite de 45°, em m'), ('hi', 'maior y permitido pelo limite de 45°, em m')],
@@ -544,7 +549,8 @@ Q.append(dict(
               'j = −3: −16 (fora). j = −2: −10, j = −1: −4, j = 0: 2, j = 1: 8 (dentro). j = 2: 14 (fora). a = 4.'),
              ('Achando b: as imagens invertidas',
               'Refletido no espelho de baixo (y = 0), o sensor vai para y = −2, e repete a cada 6: y = −2 + 6j.\n'
-              'j = −2: −14 (fora). j = −1: −8, j = 0: −2, j = 1: 4, j = 2: 10 (dentro). j = 3: 16 (fora). b = 4.')],
+              'j = −2: −14 (fora). j = −1: −8, j = 0: −2, j = 1: 4, j = 2: 10 (dentro). j = 3: 16 (fora). b = 4.',
+              {'tipo': 'diagrama', 'nome': 'corredor-imagens', 'rotulos': ['', '', '', '', '', 'corredor desdobrado: uma reta por imagem', 'cheias: dentro do cone de 45° · vazias: fora']})],
     volta=('n = a + b = 4 + 4 = 8.\nResposta: alternativa X. Conferindo: as 8 retas cruzam 0, 1, 1, 2, 2, 3, 3 e 4 linhas de espelho (y = 3, 6, 9 ou y = 0, −3, −6, −9), '
            'e simulei o raio nas 8 direções: todas acertam o sensor.'),
     valores=[('lo', '−11'), ('hi', '13'), ('a', '4'), ('b', '4')],

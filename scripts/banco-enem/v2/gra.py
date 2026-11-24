@@ -171,6 +171,7 @@ Q = [
                   ('texto', 'Hectare', '1 ha = 10 000 m² = 100 000 000 cm²')],
         origem=('Um quadradinho de 1 cm por 1 cm no papel tem área 1 cm². Se cada 1 cm do papel vale 3 cm do chão, o quadradinho do chão tem lado 3 cm '
                 'e área 3 · 3 = 9 cm². Ou seja: a área do chão é 9 vezes a do papel, e não 3 vezes. Aqui cada 1 cm vale K cm, então cada 1 cm² vale K · K cm².'),
+        desenho=('Veja a planta e as duas cópias: a 1ª é 50% da planta, a 2ª é 150% da 1ª, e o terreno ocupa 17,5 cm² na 2ª.', 'terreno-escala', []),
         eq='H = 17,5 × (K × K) ÷ U', leitura='hectares = área no papel (cm²) × cm² do chão por cm² do papel ÷ cm² que cabem em 1 hectare',
         letras=[('H', 'área real, em hectares (o que a questão quer)'), ('K', 'quantos cm do chão valem 1 cm da 2ª cópia'), ('U', 'quantos cm² cabem em 1 hectare')],
         eq_texto='Os 17,5 vêm do enunciado. K diz quanto 1 cm da cópia final vale no chão; como é área, K entra duas vezes. Dividir por U passa de cm² para hectares.\nAgora é só achar K e U, uma por vez.',
@@ -179,7 +180,8 @@ Q = [
                   {'tipo': 'tabela', 'titulo': 'Um lado de 10 cm da planta', 'cabecalho': ['Documento', 'Quanto mede o lado'],
                    'linhas': [['Planta original', '10 cm'], ['1ª cópia (50%)', '5 cm'], ['2ª cópia (150% da 1ª)', '7,5 cm']]}),
                  ('Achando K: 1 cm da cópia vale quantos cm do chão',
-                  'Na planta, 1 cm vale 30 000 cm do chão. A cópia final é 0,75 da planta, então 1 cm dela guarda 1 ÷ 0,75 cm da planta: 100 ÷ 75 = 4/3 (dividindo por 25).\nK = 30 000 · 4/3 = 30 000 ÷ 3 · 4 = 10 000 · 4 = 40 000 cm.'),
+                  'Na planta, 1 cm vale 30 000 cm do chão. A cópia final é 0,75 da planta, então 1 cm dela guarda 1 ÷ 0,75 cm da planta: 100 ÷ 75 = 4/3 (dividindo por 25).\nK = 30 000 · 4/3 = 30 000 ÷ 3 · 4 = 10 000 · 4 = 40 000 cm.',
+                  {'tipo': 'diagrama', 'nome': 'terreno-escala', 'rotulos': ['', '0,5 · 1,5 = 0,75 da planta', '1 cm da 2ª cópia = 40 000 cm do chão']}),
                  ('Achando U: cm² em 1 hectare',
                   '1 m = 100 cm, então 1 m² = 100 · 100 = 10 000 cm². E 1 hectare = 10 000 m².\nU = 10 000 · 10 000 = 100 000 000 cm² (1 seguido de 8 zeros).')],
         volta='H = 17,5 × (40 000 × 40 000) ÷ 100 000 000.\n40 000 · 40 000: 4 · 4 = 16 e 4 + 4 = 8 zeros, dá 1 600 000 000. Dividir por 100 000 000 é cortar 8 zeros: 16.\n17,5 · 16 = 175 + 105 = 280 hectares (17,5 · 10 = 175 e 17,5 · 6 = 105).\nResposta: alternativa X.',

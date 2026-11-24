@@ -362,6 +362,7 @@ Q.append(dict(
            ('Monoatômico', 'Gás de átomos soltos; nele a energia interna é (3/2) · p · V.')],
     formulas=[('termometro', '1ª lei', 'calor = trabalho + ΔU'), ('grafico', 'Mesma temperatura', 'p · V igual nos dois estados'),
               ('grafico', 'Trabalho = área', '(p1 + p2) ÷ 2 · ΔV'), ('termometro', 'Energia do gás', 'U = (3/2) · p · V')],
+    desenho=('Estado A: 3 · 10⁵ Pa e 1 L. De A a B, uma reta; de B a C, o volume não muda.', 'diagrama-pv-trapezio', []),
     eq='calor = trab + aumento', leitura='calor líquido = trabalho + aumento da energia interna de A até C',
     letras=[('calor', 'calor líquido recebido de A até C, em J (o que a questão quer)'), ('trab', 'trabalho do gás de A até C, em J'),
             ('aumento', 'aumento da energia interna de A até C, em J'), ('volB', 'volume do estado B, em L')],
@@ -370,7 +371,8 @@ Q.append(dict(
               'Mesma temperatura: p · V igual (n e R não mudam). Em A: 3 · 1 = 3 (em 10⁵ Pa · L).\nEm B a pressão é 3 ÷ 3 = 1. Então 1 · volB = 3 e volB = 3 L.\nEm C o volume é o mesmo de B: 3 L.'),
              ('Achando trab: o trabalho como área',
               'De B a C o volume não muda: ΔV = 0 e não há trabalho. Só conta de A a B.\nA área sob a reta é um trapézio: (3 + 1) ÷ 2 = 2 (×10⁵ Pa) e largura 3 − 1 = 2 L = 2 × 10⁻³ m³.\n'
-              'trab = 2 × 10⁵ · 2 × 10⁻³. Números: 2 · 2 = 4. Potências: 10⁵ · 10⁻³ = 100 000 · 0,001 = 100. Então 4 · 100 = 400 J.'),
+              'trab = 2 × 10⁵ · 2 × 10⁻³. Números: 2 · 2 = 4. Potências: 10⁵ · 10⁻³ = 100 000 · 0,001 = 100. Então 4 · 100 = 400 J.',
+              {'tipo': 'diagrama', 'nome': 'diagrama-pv-trapezio', 'rotulos': ['', '', '', '', '', '3', 'área = trabalho', '400 J']}),
              ('Achando aumento: a energia interna',
               'Gás monoatômico: U = (3/2) · n · R · T, e n · R · T = p · V. Então U = (3/2) · p · V.\n'
               'Em A: p · V = 3 × 10⁵ · 1 × 10⁻³ = 3 · 100 = 300 J. U = 300 ÷ 2 · 3 = 150 · 3 = 450 J.\n'
@@ -505,7 +507,8 @@ Q.append(dict(
     letras=[('fluxo', 'fluxo de calor na barra vertical do 3º nó, em W (o que a questão quer)'), ('temp3', 'temperatura do 3º nó, em °C'), ('rvert', 'resistência de uma barra vertical, em K/W'),
             ('rhor', 'resistência de uma barra horizontal, em K/W'), ('rede', 'resistência da escada toda, vista da fonte, em K/W'), ('frac', 'fração da temperatura que fica de um nó para o seguinte')],
     eq_texto='A vertical do 3º nó liga o nó (temperatura temp3) ao frio (0 °C), então o fluxo é temp3 dividido pela resistência rvert.\nAgora é só achar rhor, rvert, rede, frac e temp3.',
-    achando=[('Achando rhor: a barra horizontal', '1 cm² = 10⁻⁴ m² = 0,0001 m². k · S = 200 · 0,0001 = 0,02.\nrhor = 0,5 ÷ 0,02. Multiplico os dois por 100: 50 ÷ 2 = 25 K/W.'),
+    achando=[('Achando rhor: a barra horizontal', '1 cm² = 10⁻⁴ m² = 0,0001 m². k · S = 200 · 0,0001 = 0,02.\nrhor = 0,5 ÷ 0,02. Multiplico os dois por 100: 50 ÷ 2 = 25 K/W.',
+              {'tipo': 'diagrama', 'nome': 'escada-de-barras', 'rotulos': []}),
              ('Achando rvert: a barra vertical', 'A vertical tem 1,0 m, o dobro da horizontal, com o mesmo k e a mesma seção.\nrvert = 1,0 ÷ 0,02. Multiplico os dois por 100: 100 ÷ 2 = 50 K/W, o dobro de rhor.'),
              ('Achando rede: a escada toda',
               'Depois do 1º nó a escada é igual à inteira: resistência rede. No 1º nó, rvert (50) e rede ficam em paralelo, e rhor (25) vem em série antes deles.\n'
@@ -519,7 +522,8 @@ Q.append(dict(
               'No 1º nó, rvert = 50 e a rede = 50 estão em paralelo: 50 · 50 ÷ 100 = 25 K/W. Em série com rhor = 25, o total é 50.\n'
               'A queda de temperatura é proporcional à resistência: rhor tem 25 de 50, a metade, e o nó fica com a outra metade. frac = 25 ÷ 50 = 1/2.\n'
               'Do 2º nó para a frente a escada é a mesma, então o 2º nó divide a temperatura do 1º do mesmo jeito.'),
-             ('Achando temp3: a temperatura do 3º nó', '1º nó: 100 · 1/2 = 50 °C. 2º nó: 50 · 1/2 = 25 °C. 3º nó: 25 · 1/2 = 12,5 °C.\ntemp3 = 12,5 °C.')],
+             ('Achando temp3: a temperatura do 3º nó', '1º nó: 100 · 1/2 = 50 °C. 2º nó: 50 · 1/2 = 25 °C. 3º nó: 25 · 1/2 = 12,5 °C.\ntemp3 = 12,5 °C.',
+              {'tipo': 'diagrama', 'nome': 'escada-de-barras', 'rotulos': ['', '', '', '', '50 °C', '25 °C', '12,5 °C', '']})],
     volta='fluxo = 12,5 ÷ 50. Multiplico os dois por 2: 25 ÷ 100 = 0,25 W.\nResposta: alternativa A. Conferindo: as verticais dão 1 W, 0,5 W e 0,25 W (1 + 0,5 + 0,25 = 1,75), e as próximas chegam perto de 2 W, que é 100 ÷ 50, o fluxo da fonte.',
     valores=[('rhor', '25 K/W'), ('rvert', '50 K/W'), ('rede', '50 K/W'), ('frac', '1/2'), ('temp3', '12,5 °C')],
     pista='"escada que se repete sem fim" → o que sobra depois do 1º degrau é igual ao todo: escreva a equação da resistência e resolva; cada nó fica com a mesma fração.',

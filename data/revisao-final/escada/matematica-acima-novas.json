@@ -295,6 +295,15 @@
      "texto": "Um quadradinho de 1 cm por 1 cm no papel tem área 1 cm². Se cada 1 cm do papel vale 3 cm do chão, o quadradinho do chão tem lado 3 cm e área 3 · 3 = 9 cm². Ou seja: a área do chão é 9 vezes a do papel, e não 3 vezes. Aqui cada 1 cm vale K cm, então cada 1 cm² vale K · K cm²."
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja a planta e as duas cópias: a 1ª é 50% da planta, a 2ª é 150% da 1ª, e o terreno ocupa 17,5 cm² na 2ª.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "terreno-escala",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "Os 17,5 vêm do enunciado. K diz quanto 1 cm da cópia final vale no chão; como é área, K entra duas vezes. Dividir por U passa de cm² para hectares.\nAgora é só achar K e U, uma por vez.",
      "visual": {
@@ -345,7 +354,16 @@
     },
     {
      "titulo": "Achando K: 1 cm da cópia vale quantos cm do chão",
-     "texto": "Na planta, 1 cm vale 30 000 cm do chão. A cópia final é 0,75 da planta, então 1 cm dela guarda 1 ÷ 0,75 cm da planta: 100 ÷ 75 = 4/3 (dividindo por 25).\nK = 30 000 · 4/3 = 30 000 ÷ 3 · 4 = 10 000 · 4 = 40 000 cm."
+     "texto": "Na planta, 1 cm vale 30 000 cm do chão. A cópia final é 0,75 da planta, então 1 cm dela guarda 1 ÷ 0,75 cm da planta: 100 ÷ 75 = 4/3 (dividindo por 25).\nK = 30 000 · 4/3 = 30 000 ÷ 3 · 4 = 10 000 · 4 = 40 000 cm.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "terreno-escala",
+      "rotulos": [
+       "",
+       "0,5 · 1,5 = 0,75 da planta",
+       "1 cm da 2ª cópia = 40 000 cm do chão"
+      ]
+     }
     },
     {
      "titulo": "Achando U: cm² em 1 hectare",
@@ -4114,6 +4132,15 @@
      "texto": "Os semicírculos dos catetos (S e R) cobrem exatamente esses dois pedaços, mais o que fica fora de Γ. Então, dentro de Γ, os dois têm H − T. O que pedem é S + R − (H − T)."
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja a figura: o triângulo, os dois semicírculos sobre os catetos AB e AC e a circunferência Γ de diâmetro BC. Em rosa, a parte dos semicírculos que fica fora de Γ.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "lunulas",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "A parte fora é tudo dos dois semicírculos menos a parte que cai dentro de Γ. Deixe o π escrito, sem trocar por 3,14.\nAgora é só achar T, S, R e H, uma letra por vez.",
      "visual": {
@@ -4146,7 +4173,16 @@
     },
     {
      "titulo": "Achando T: a área do triângulo",
-     "texto": "Falta o cateto AC. Pitágoras ao contrário: AC · AC = 17 · 17 − 8 · 8 = 289 − 64 = 225, e 15 · 15 = 225. AC = 15.\nT = 8 · 15 ÷ 2 = 120 ÷ 2 = 60 cm²."
+     "texto": "Falta o cateto AC. Pitágoras ao contrário: AC · AC = 17 · 17 − 8 · 8 = 289 − 64 = 225, e 15 · 15 = 225. AC = 15.\nT = 8 · 15 ÷ 2 = 120 ÷ 2 = 60 cm².",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "lunulas",
+      "rotulos": [
+       "",
+       "",
+       "15 cm"
+      ]
+     }
     },
     {
      "titulo": "Achando S: semicírculo de AB",
@@ -4339,6 +4375,15 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja a praça: P está em algum lugar dentro dela e é ligado aos 4 vértices. As cores mostram o que foi feito em cada triângulo.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "praca-quatro-triangulos",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "A distância pedida é a altura da praça menos y. O custo total soma flores, grama e pedras: as pedras eu acho à parte, e os lados da praça saem do perímetro.\nAgora é só achar h, b, g e y, uma por vez, e depois d.",
      "visual": {
@@ -4375,7 +4420,15 @@
     },
     {
      "titulo": "Achando b: o lado AB",
-     "texto": "b = h + 8 = 12 + 8 = 20 m. Conferindo: 2 · (20 + 12) = 64 e 20 − 12 = 8."
+     "texto": "b = h + 8 = 12 + 8 = 20 m. Conferindo: 2 · (20 + 12) = 64 e 20 − 12 = 8.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "praca-quatro-triangulos",
+      "rotulos": [
+       "AB = 20 m",
+       "AD = 12 m"
+      ]
+     }
     },
     {
      "titulo": "Achando g: as pedras (1 de 2)",
@@ -4383,7 +4436,18 @@
     },
     {
      "titulo": "Achando g: as pedras (2 de 2)",
-     "texto": "Juntas: 6 · x + 120 − 6 · x = 120 m², onde quer que P esteja. Teste: x = 3 dá 18 + 102 = 120; x = 8 dá 48 + 72 = 120. É metade da praça (20 · 12 ÷ 2). g = 25 · 120 = 3 000 reais."
+     "texto": "Juntas: 6 · x + 120 − 6 · x = 120 m², onde quer que P esteja. Teste: x = 3 dá 18 + 102 = 120; x = 8 dá 48 + 72 = 120. É metade da praça (20 · 12 ÷ 2). g = 25 · 120 = 3 000 reais.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "praca-quatro-triangulos",
+      "rotulos": [
+       "AB = 20 m",
+       "AD = 12 m",
+       "pedras juntas: 120 m², metade da praça",
+       "",
+       "25 · 120 = R$ 3 000"
+      ]
+     }
     },
     {
      "titulo": "Achando y: as flores",
@@ -4581,6 +4645,15 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja o copo: um cone com a ponta para baixo, 10 cm de diâmetro e 9 cm de altura. O suco chega a 80% da altura e forma um cone menor.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "copo-cone-80",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "Cada copo leva vc de mistura; a mistura útil é vu. Dividindo, vê-se quantos copos. vu nasce de vs: mistura com água, depois a perda.\nAgora é só achar vs, vm, vu e vc, uma por vez.",
      "visual": {
@@ -4629,7 +4702,15 @@
     },
     {
      "titulo": "Achando vc: o copo a 80% (2 de 3)",
-     "texto": "80% = 80 ÷ 100 = 0,8. O suco forma um cone menor com o mesmo formato do copo (semelhante), razão 0,8. O volume depende de 3 medidas, então vai com 0,8 · 0,8 · 0,8: 0,8 · 0,8 = 0,64 e 0,64 · 0,8 = 0,512."
+     "texto": "80% = 80 ÷ 100 = 0,8. O suco forma um cone menor com o mesmo formato do copo (semelhante), razão 0,8. O volume depende de 3 medidas, então vai com 0,8 · 0,8 · 0,8: 0,8 · 0,8 = 0,64 e 0,64 · 0,8 = 0,512.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "copo-cone-80",
+      "rotulos": [
+       "7,2 cm",
+       "8 cm"
+      ]
+     }
     },
     {
      "titulo": "Achando vc: o copo a 80% (3 de 3)",
@@ -5337,6 +5418,15 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja a caixa cúbica: 8 bolas de raio r, 2 camadas de 4, encostadas umas nas outras e nas paredes.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "caixa-bolas-2x2x2",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
      "texto": "Quanto mais, sobre o que era antes: a diferença das alturas dividida pela altura da caixa cúbica. A altura nova vem do volume novo, e esse vem da fração do tubo.\nAgora é só achar ho, vb, vt, fc, vn e hn, uma por vez.",
      "visual": {
@@ -5377,7 +5467,15 @@
     },
     {
      "titulo": "Achando ho: a altura da caixa cúbica",
-     "texto": "Diâmetro da bola = 2 · raio = 2r. Duas bolas lado a lado ocupam 2 · 2r = 4r. A caixa cúbica tem 2 bolas por aresta: ho = 4r, e a base é 4r por 4r."
+     "texto": "Diâmetro da bola = 2 · raio = 2r. Duas bolas lado a lado ocupam 2 · 2r = 4r. A caixa cúbica tem 2 bolas por aresta: ho = 4r, e a base é 4r por 4r.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "caixa-bolas-2x2x2",
+      "rotulos": [
+       "",
+       "4r"
+      ]
+     }
     },
     {
      "titulo": "Achando vb: as 8 bolas",
@@ -5385,7 +5483,17 @@
     },
     {
      "titulo": "Achando vt: o tubo",
-     "texto": "Duas bolas lado a lado: o diâmetro do tubo é 4r e o raio 2r. 4 camadas de 2r: altura 8r. Volume = π · raio · raio · altura = 3 · 2r · 2r · 8r = 3 · 4 · 8 · r³. 3 · 4 = 12 e 12 · 8 = 96. vt = 96 · r³."
+     "texto": "Duas bolas lado a lado: o diâmetro do tubo é 4r e o raio 2r. 4 camadas de 2r: altura 8r. Volume = π · raio · raio · altura = 3 · 2r · 2r · 8r = 3 · 4 · 8 · r³. 3 · 4 = 12 e 12 · 8 = 96. vt = 96 · r³.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "tubo-bolas-4x2",
+      "rotulos": [
+       "",
+       "4r",
+       "8r",
+       "raio do tubo: 2r"
+      ]
+     }
     },
     {
      "titulo": "Achando fc: a fração das bolas no tubo",
@@ -5397,7 +5505,17 @@
     },
     {
      "titulo": "Achando hn: a altura da caixa nova",
-     "texto": "Volume = base · altura, com base 4r · 4r = 16 · r · r. 96 · r · r · r = 16 · r · r · hn. 96 ÷ 16 = 6 e (r · r · r) ÷ (r · r) = r. Logo hn = 6r."
+     "texto": "Volume = base · altura, com base 4r · 4r = 16 · r · r. 96 · r · r · r = 16 · r · r · hn. 96 ÷ 16 = 6 e (r · r · r) ÷ (r · r) = r. Logo hn = 6r.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "caixa-nova-6r",
+      "rotulos": [
+       "4r",
+       "2r",
+       "6r",
+       "4r"
+      ]
+     }
     },
     {
      "titulo": "Volta na equação",
