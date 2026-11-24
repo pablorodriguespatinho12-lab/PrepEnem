@@ -296,27 +296,27 @@ Q.append(dict(
               ('porcentagem', 'Rendimento', 'energia do gás = calor útil ÷ 0,8')],
     eq='custo = banhos · gas · preco', leitura='custo do mês = nº de banhos · kg de gás por banho · preço de 1 kg',
     letras=[('custo', 'custo de gás no mês, em reais (o que a questão quer)'), ('banhos', 'número de banhos no mês'), ('gas', 'kg de gás gastos em 1 banho'),
-            ('preco', 'preço de 1 kg de gás, em reais'), ('util', 'calor útil que a água quente recebe, em MJ'), ('quente', 'litros de água quente em cada banho')],
-    eq_texto='Cada banho gasta "gas" kg de gás, e cada kg custa "preco" reais. Multiplicando pelos banhos do mês, sai o custo do mês.\nAgora é só achar banhos, preco, quente, util e gas.',
+            ('preco', 'preço de 1 kg de gás, em reais'), ('util', 'calor útil que a água quente recebe, em MJ'), ('lqt', 'litros de água quente em cada banho')],
+    eq_texto='Cada banho gasta "gas" kg de gás, e cada kg custa "preco" reais. Multiplicando pelos banhos do mês, sai o custo do mês.\nAgora é só achar banhos, preco, lqt, util e gas.',
     achando=[('Achando banhos: os banhos do mês', '2 banhos por dia em 30 dias: banhos = 2 · 30 = 60.'),
              ('Achando preco: o preço de 1 kg', 'O botijão tem 13 kg e custa R$ 104,00. Cada kg custa 104 ÷ 13.\nTeste: 13 · 8 = 104, então preco = R$ 8,00 por kg.'),
-             ('Achando quente: os litros quentes',
-              'A quente esfria de 70 °C a 40 °C: 30 graus. A fria esquenta de 20 °C a 40 °C: 20 graus, e são 50 − quente litros.\n'
-              'Calor cedido = recebido. A massa em kg é igual aos litros e o c é o mesmo, então corta: 30 · quente = 20 · (50 − quente).\n'
-              'Abro o parêntese: 20 · (50 − quente) = 20 · 50 − 20 · quente = 1 000 − 20 · quente.\n'
-              'Somo 20 · quente nos dois lados (a igualdade se mantém): 30 · quente + 20 · quente = 1 000, ou 50 · quente = 1 000. Então quente = 20 L.\n'
+             ('Achando lqt: os litros quentes',
+              'A água quente esfria de 70 °C a 40 °C: 30 graus. A fria esquenta de 20 °C a 40 °C: 20 graus, e são 50 − lqt litros.\n'
+              'Calor cedido = recebido. A massa em kg é igual aos litros e o c é o mesmo, então corta: 30 · lqt = 20 · (50 − lqt).\n'
+              'Abro o parêntese: 20 · (50 − lqt) = 20 · 50 − 20 · lqt = 1 000 − 20 · lqt.\n'
+              'Somo 20 · lqt nos dois lados (a igualdade se mantém): 30 · lqt + 20 · lqt = 1 000, ou 50 · lqt = 1 000. Então lqt = 20 L.\n'
               'Teste: 30 · 20 = 600 e 20 · (50 − 20) = 20 · 30 = 600.'),
              ('Achando util: o calor útil',
-              'Só os 20 L (20 kg) passam pelo aquecedor, de 20 °C a 70 °C: 70 − 20 = 50 graus.\ncalor = 20 · 4,2 · 50. Primeiro 20 · 4,2 = 84; depois 84 · 50 = 4 200 kJ.\n'
+              'Só os 20 L (20 kg) passam pelo aquecedor, de 20 °C a 70 °C: 70 − 20 = 50 graus.\ncalor = 20 · 4,2 · 50. Primeiro 20 · 4,2: 20 · 4 = 80 e 20 · 0,2 = 4, então 84. Depois 84 · 50: 84 · 5 = 420 e, com o zero, 4 200 kJ.\n'
               '1 MJ = 1 000 kJ, então util = 4 200 ÷ 1 000 = 4,2 MJ.'),
              ('Achando gas: o gás de um banho',
               'Perde 20%, chega 100% − 20% = 80% = 0,8. O útil (4,2) é menor que o total do gás, então divide: 4,2 ÷ 0,8.\n'
               'Multiplico os dois por 10: 42 ÷ 8. Cabem 5 vezes (8 · 5 = 40) e sobram 2; 2 ÷ 8 = 0,25. Total: 5,25 MJ.\n'
-              'Cada kg dá 42 MJ: gas = 5,25 ÷ 42. Como 5,25 = 42 ÷ 8, gas = (42 ÷ 8) ÷ 42 = 1 ÷ 8 = 0,125 kg (pois 8 · 0,125 = 1).')],
+              'Cada kg dá 42 MJ: gas = 5,25 ÷ 42. Teste: 8 · 5,25 = 42, então o 5,25 cabe 8 vezes no 42, ou seja, é 1/8 dele. Logo gas = 1 ÷ 8 = 0,125 kg (pois 8 · 0,125 = 1).')],
     volta='custo = 60 · 0,125 · 8. Primeiro 0,125 · 8 = 1 (pois 0,125 = 1 ÷ 8); depois 60 · 1 = R$ 60,00.\nResposta: alternativa A.',
-    valores=[('banhos', '60'), ('preco', 'R$ 8,00 por kg'), ('quente', '20 L'), ('util', '4,2 MJ'), ('gas', '0,125 kg')],
+    valores=[('banhos', '60'), ('preco', 'R$ 8,00 por kg'), ('lqt', '20 L'), ('util', '4,2 MJ'), ('gas', '0,125 kg')],
     pista='"mistura" e "rendimento do aquecedor" → ache quantos litros passam pelo aquecedor (pela mistura), depois calor útil, divida pelo rendimento e passe a kg e a reais.',
-    rec1='50 L a 40 °C; 20 e 70 °C; rendimento 0,8; 42 MJ/kg; R$ 8 por kg; 60 banhos', rec3='banhos = 60; preco = 8; quente = 20; util = 4,2; gas = 0,125',
+    rec1='50 L a 40 °C; 20 e 70 °C; rendimento 0,8; 42 MJ/kg; R$ 8 por kg; 60 banhos', rec3='banhos = 60; preco = 8; lqt = 20; util = 4,2; gas = 0,125',
     checagem=('Quanto calor pedem 2 kg de água para ir de 20 °C a 30 °C? (c = 4,2 kJ/(kg · °C))', ['84 kJ', '42 kJ', '8,4 kJ', '840 kJ'], '84 kJ', '2 · 4,2 · 10 = 84 kJ.'),
     ancora=('parcial · Fuvest 2022 q.50 (mistura de líquido quente e frio com c e densidade iguais) e ENEM 2022 q.116 caderno 7 (ducha: vazão, calor, '
             'unidades misturadas e tabela); aqui a mistura define qual parte da água passa pelo aquecedor'),
@@ -447,7 +447,7 @@ Q.append(dict(
               'Derreter tudo pediria 200 · 80 = 16 000 cal, e só há 8 000: não derrete tudo, e a mistura fica em 0 °C.\n'
               'Derretem 8 000 ÷ 80 = 100 g. Sobram 200 − 100 = 100 g de gelo e 300 + 100 = 400 g de água.'),
              ('Achando energia: a energia que falta',
-              'Fundir os 100 g de gelo: 100 · 80 = 8 000 cal.\nAquecer 500 g de água (400 + 100) de 0 °C a 20 °C: 500 · 1 · 20 = 10 000 cal.\n'
+              'Fundir os 100 g de gelo: 100 · 80 = 8 000 cal.\nAquecer 500 g de água (os 400 g que já eram água mais os 100 g de gelo que acabaram de virar água) de 0 °C a 20 °C: 500 · 1 · 20 = 10 000 cal.\n'
               'Soma: 18 000 cal. Em joules: 18 000 · 4 = 72 000 J.')],
     volta='tempo = 72 000 ÷ 720. Corto um zero de cada: 7 200 ÷ 72 = 100 s (pois 72 · 100 = 7 200).\nResposta: alternativa A.',
     valores=[('pot', '720 W'), ('sobra', '8 000 cal'), ('gelo', '100 g'), ('energia', '72 000 J')],
@@ -513,14 +513,14 @@ Q.append(dict(
              ('Achando rede: a escada toda',
               'Depois do 1º nó a escada é igual à inteira: resistência rede. No 1º nó, rvert (50) e rede ficam em paralelo, e rhor (25) vem em série antes deles.\n'
               'Paralelo: 50 · rede ÷ (50 + rede). Série: rede = 25 + 50 · rede ÷ (50 + rede).\n'
-              'Multiplico os dois lados por (50 + rede): rede · (50 + rede) = 25 · (50 + rede) + 50 · rede.\n'
+              'Para sumir a divisão, multiplico os dois lados por (50 + rede); o que faço de um lado faço do outro, e a igualdade se mantém: rede · (50 + rede) = 25 · (50 + rede) + 50 · rede.\n'
               'Abro os parênteses: 50 · rede + rede · rede = 1 250 + 25 · rede + 50 · rede.\n'
-              'Tiro 50 · rede dos dois lados: rede · rede = 1 250 + 25 · rede. Passo 25 · rede para o outro lado: rede · rede − 25 · rede − 1 250 = 0.\n'
+              'Tiro 50 · rede dos dois lados: rede · rede = 1 250 + 25 · rede. Subtraio 25 · rede dos dois lados (por isso o sinal dele troca de + para −): rede · rede − 25 · rede − 1 250 = 0.\n'
               '1 250 = 50 · 25. Produto negativo: um dos números é negativo. Soma −25: o maior leva o sinal −. São −50 e +25.\n'
               '(rede − 50) · (rede + 25) = 0. Resistência não é negativa: rede = 50 K/W. Teste: 25 + 50 · 50 ÷ 100 = 25 + 25 = 50.'),
              ('Achando frac: a fração de cada nó',
               'No 1º nó, rvert = 50 e a rede = 50 estão em paralelo: 50 · 50 ÷ 100 = 25 K/W. Em série com rhor = 25, o total é 50.\n'
-              'A queda de temperatura é proporcional à resistência: rhor tem 25 de 50, a metade, e o nó fica com a outra metade. frac = 25 ÷ 50 = 1/2.\n'
+              'Com a fonte a 100 °C e a rede toda em 50 K/W, o fluxo da fonte é 100 ÷ 50 = 2 W. Na rhor a queda é 2 · 25 = 50 °C, então o 1º nó fica a 100 − 50 = 50 °C, metade de 100. frac = 50 ÷ 100 = 1/2.\n'
               'Do 2º nó para a frente a escada é a mesma, então o 2º nó divide a temperatura do 1º do mesmo jeito.'),
              ('Achando temp3: a temperatura do 3º nó', '1º nó: 100 · 1/2 = 50 °C. 2º nó: 50 · 1/2 = 25 °C. 3º nó: 25 · 1/2 = 12,5 °C.\ntemp3 = 12,5 °C.',
               {'tipo': 'diagrama', 'nome': 'escada-de-barras', 'rotulos': ['', '', '', '', '50 °C', '25 °C', '12,5 °C', '']})],

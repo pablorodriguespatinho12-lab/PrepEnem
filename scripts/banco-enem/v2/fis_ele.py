@@ -59,6 +59,7 @@ ANTES_NOVOS = {
     'ele-baterias-paralelo': {
         'titulo': 'Bateria real e duas baterias em paralelo',
         'linhas': [
+            'ε é a letra grega épsilon: lê-se "épsilon" e é o nome da fem de cada bateria (ε1 e ε2).',
             'Bateria real: uma fonte ideal de tensão (a fem, em V) com uma resistência interna (Rin, em Ω) em fila com ela.',
             'Duas baterias ligadas aos mesmos dois terminais (em paralelo) valem uma só, com uma Fem e uma Rin próprias.',
             'Rin = (r1 · r2) ÷ (r1 + r2), como dois resistores em paralelo. Fem = (ε1 · r2 + ε2 · r1) ÷ (r1 + r2). Bateria 1: ε1 e r1; bateria 2: ε2 e r2.',
@@ -209,8 +210,8 @@ Q.append(dict(
     formulas=[('termometro', 'Calor por segundo', 'kg por segundo · 4 200 · aumento'), ('porcentagem', 'Potência elétrica', 'calor por segundo ÷ 0,8'),
               ('circuito', 'Energia da conta', 'kWh = kW · horas')],
     eq='Cus = (Pjun + Pjul + Pago) · Hor · Pre', leitura='custo = soma das potências dos três meses, em kW · horas de banho por mês · preço de 1 kWh',
-    letras=[('Cus', 'custo de energia dos três meses, em reais (o que a questão quer)'), ('Pjun', 'potência elétrica da posição usada em junho, em kW'),
-            ('Pjul', 'potência elétrica da posição usada em julho, em kW'), ('Pago', 'potência elétrica da posição usada em agosto, em kW'),
+    letras=[('Cus', 'custo de energia dos três meses, em reais (o que a questão quer)'), ('Pjun', 'potência elétrica da posição de junho, em kW (lê-se "P de junho")'),
+            ('Pjul', 'potência elétrica da posição usada em julho, em kW'), ('Pago', 'potência elétrica da posição de agosto, em kW ("P de agosto", não a palavra pago)'),
             ('Hor', 'horas de banho em cada mês'), ('Pre', 'preço de 1 kWh, em reais')],
     eq_texto='Cada hora ligada, o chuveiro gasta tantos kWh quanto a sua potência em kW. Somando as potências dos três meses e multiplicando pelas horas de cada mês e pelo preço, sai o custo.\nAgora é só achar Hor, Pre, Pjun, Pjul e Pago.',
     achando=[('Achando Hor: as horas de cada mês', 'Cada mês: 4 pessoas · 1 banho por dia · 30 dias = 120 banhos.\n120 banhos de 10 min = 1 200 min. 1 hora tem 60 min: 1 200 ÷ 60 = 20 (pois 60 · 20 = 1 200).\nHor = 20 horas por mês.'),
@@ -219,21 +220,21 @@ Q.append(dict(
               'A tabela dá o aumento da água, não a potência. Calor por segundo = kg por segundo · 4 200 · aumento.\n'
               '3 L por minuto = 3 kg em 60 s = 0,05 kg por segundo (pois 60 · 0,05 = 3). 0,05 · 4 200 = 210: 4 200 ÷ 100 = 42 e 42 · 5 = 210.'),
              ('O que o chuveiro puxa da tomada: posição quente',
-              'Só 80% do que ele puxa vira calor: puxando 100 W, 80 W viram calor (100 · 0,8). Então puxa o calor ÷ 0,8.\n'
+              'Só 80% do que ele puxa vira calor: puxando 100 W, 80 W viram calor (100 · 0,8). Voltando: para dar 80 W de calor ele puxa 80 ÷ 0,8 = 100 W. Vale para qualquer calor: puxa = calor ÷ 0,8.\n'
               'Quente (16 °C): calor = 210 · 16 = 3 360 W (210 · 10 = 2 100 e 210 · 6 = 1 260). Puxa 3 360 ÷ 0,8 = 33 600 ÷ 8 = 4 200 W (pois 8 · 4 200 = 33 600).'),
              ('O que o chuveiro puxa nas outras duas posições',
               'Morno (8 °C): 210 · 8 = 1 680 W de calor; 1 680 ÷ 0,8 = 16 800 ÷ 8 = 2 100 W.\n'
               'Superquente (24 °C): 210 · 24 = 5 040 W (210 · 20 = 4 200 e 210 · 4 = 840); 5 040 ÷ 0,8 = 50 400 ÷ 8 = 6 300 W.'),
              ('Achando Pjun: a posição de junho',
-              'Em junho a água chega a 24 °C e precisa subir 38 − 24 = 14 °C. O morno sobe 8: é pouco. O quente sobe 16 (16 ≥ 14): é a menor que serve.\n'
+              'Em junho a água chega a 24 °C e precisa subir 38 − 24 = 14 °C. O morno sobe 8: é pouco. O quente sobe 16 (16 ≥ 14, maior ou igual): é a menor que serve.\n'
               'Pjun = 4 200 W = 4,2 kW (1 kW = 1 000 W).'),
              ('Achando Pjul: a posição de julho',
-              'Em julho: 38 − 18 = 20 °C. O quente sobe só 16 (16 < 20): não basta. O superquente sobe 24 (24 ≥ 20): só ele serve.\nPjul = 6 300 W = 6,3 kW.'),
+              'Em julho: 38 − 18 = 20 °C. O quente sobe só 16 (16 < 20, menor que): não basta. O superquente sobe 24 (24 ≥ 20): só ele serve.\nPjul = 6 300 W = 6,3 kW.'),
              ('Achando Pago: a posição de agosto',
-              'Em agosto: 38 − 22 = 16 °C. O quente sobe exatamente 16: serve (16 ≥ 16, a temperatura é atingida). O morno não.\n'
+              'Em agosto: 38 − 22 = 16 °C. O quente sobe exatamente 16: serve (16 ≥ 16: maior ou igual, a temperatura é atingida). O morno não.\n'
               'Cuidado: "o quente sobe 16" e "precisam 16" são iguais, e igual serve. Pago = 4 200 W = 4,2 kW.')],
     volta=('Cus = (4,2 + 6,3 + 4,2) · 20 · 0,90.\nSoma: 4,2 + 6,3 = 10,5 e 10,5 + 4,2 = 14,7 kW. 14,7 · 20 = 294 kWh (14 · 20 = 280 e 0,7 · 20 = 14).\n'
-           '294 · 0,90 = 264,6 (294 · 9 = 2 646, dividido por 10).\nCus = R$ 264,60.\nResposta: alternativa A.'),
+           '294 · 0,90 = 264,6 (294 · 9 = 2 940 − 294 = 2 646, dividido por 10).\nCus = R$ 264,60.\nResposta: alternativa A.'),
     valores=[('Hor', '20 horas'), ('Pre', 'R$ 0,90 por kWh'), ('Pjun', '4,2 kW'), ('Pjul', '6,3 kW'), ('Pago', '4,2 kW')],
     pista='"tabela com o aumento da água" e "menor posição que atinge" → ache a potência elétrica de cada posição (calor por segundo ÷ 0,8), escolha por mês (igual serve) e multiplique por horas e preço.',
     rec1='tabela 8/16/24 °C; 3 L/min; 80%; entradas 24, 18, 22 °C; 20 h; R$ 0,90', rec3='Hor = 20; Pre = 0,90; Pjun = 4,2; Pjul = 6,3; Pago = 4,2',
@@ -286,7 +287,7 @@ Q.append(dict(
                'O tempo, em segundos, para a água subir 6 °C é:'),
     dados=[('Bateria 1', '16 V e 1,5 Ω'), ('Bateria 2', '4 V e 3 Ω'), ('Ligação das baterias', 'em paralelo'), ('Resistor R', 'ajustado para a potência máxima'),
            ('Água', '100 g, sobe 6 °C, sem perdas'), ('Calor específico da água', '4 200 J/(kg · °C)')],
-    alts=[('24,2', 24.2, 'Usou a potência total das duas baterias, 104 W; parte dela esquenta as próprias baterias e a bateria de 4 V ainda é carregada'),
+    alts=[('24,2', 24.2, 'Usou a potência total das duas baterias, 104 W (16 · 6,67 − 4 · 0,67; a de 4 V é carregada); parte dela esquenta as próprias baterias'),
           ('70', 70, 'OK'),
           ('72,9', 72.9, 'Casou R com 1,5 Ω, a menor resistência interna, em vez da resistência da bateria única: potência 34,56 W'),
           ('100,8', 100.8, 'Tirou a média simples das fem (10 V) em vez de ponderar pelas resistências: potência 25 W'),
@@ -304,7 +305,7 @@ Q.append(dict(
             ('Fem', 'força eletromotriz da bateria única, em volts'), ('Rin', 'resistência interna da bateria única, em ohms')],
     eq_texto='O resistor entrega Pot joules por segundo à água. Dividindo o calor que a água pede por Pot, sai o tempo.\nAgora é só achar Cal, Fem, Rin e Pot.',
     achando=[('Achando Cal: o calor da água', '100 g = 0,1 kg. Cal = 0,1 · 4 200 · 6.\n0,1 · 4 200 = 420 e 420 · 6 = 2 520 J.'),
-             ('Achando Fem: a bateria única', 'Regra do "Antes": Fem = (ε1 · r2 + ε2 · r1) ÷ (r1 + r2), com ε1 = 16, r1 = 1,5, ε2 = 4 e r2 = 3.\n16 · 3 = 48 e 4 · 1,5 = 6, e 48 + 6 = 54. Embaixo: 1,5 + 3 = 4,5.'),
+             ('Achando Fem: a bateria única', 'Regra do "Antes" (ε lê-se "épsilon", a fem de cada bateria): Fem = (ε1 · r2 + ε2 · r1) ÷ (r1 + r2). Teste: duas de 12 V dão 12 · (r1 + r2) ÷ (r1 + r2) = 12 V.\nAqui ε1 = 16, r1 = 1,5, ε2 = 4, r2 = 3: 16 · 3 = 48 e 4 · 1,5 = 6; 48 + 6 = 54. Embaixo: 1,5 + 3 = 4,5.'),
              ('Achando Fem: a divisão por decimal', '54 ÷ 4,5: multiplico os dois por 10 e a conta não muda: 540 ÷ 45.\n45 · 12 = 540 (45 · 10 = 450 e 45 · 2 = 90). Fem = 12 V.'),
              ('Achando Rin: a resistência da bateria única', 'Rin = (r1 · r2) ÷ (r1 + r2) = (1,5 · 3) ÷ 4,5 = 4,5 ÷ 4,5 = 1 Ω.',
               {'tipo': 'diagrama', 'nome': 'baterias-paralelo', 'rotulos': ['', '', '', '', '', '', 'bateria única: 12 V e 1 Ω']}),
@@ -312,8 +313,8 @@ Q.append(dict(
               'A bateria única (Fem = 12 V, Rin = 1 Ω) fica em fila com R: as resistências somam, R + 1. Corrente = 12 ÷ (R + 1).\n'
               'Potência em R = (R · corrente) · corrente. Exemplo: R = 5: corrente 12 ÷ 6 = 2 A; (5 · 2) · 2 = 20 W.'),
              ('Achando Pot: o R que dá o máximo',
-              'Teste perto de R = 1: R = 0,8: corrente 12 ÷ 1,8 ≈ 6,67 A e potência ≈ 35,6 W. R = 1: corrente 6 A e (1 · 6) · 6 = 36 W. R = 1,25: corrente 12 ÷ 2,25 ≈ 5,33 A e ≈ 35,6 W.\n'
-              'Mais longe: R = 0,5 e R = 2 dão 32 W; R = 3 dá 27 W. O topo é em R = Rin = 1 Ω (vale sempre). Pot = 36 W.',
+              'Teste perto de R = 1 (≈ lê-se "cerca de"): R = 0,8: corrente 12 ÷ 1,8 ≈ 6,67 A e potência (0,8 · 6,67) · 6,67 ≈ 35,6 W. R = 1: corrente 6 A e (1 · 6) · 6 = 36 W. R = 1,25: corrente 12 ÷ 2,25 ≈ 5,33 A e potência ≈ 35,6 W (com a corrente sem arredondar: 1,25 · 5,333 · 5,333).\n'
+              'Mais longe: R = 0,5 e R = 2 dão 32 W; R = 3 dá 27 W. Outra bateria (12 V e 3 Ω): R = 2 dá 11,5 W, R = 3 dá 12 W, R = 6 dá 10,7 W. Em ambas o topo é em R = Rin. Aqui Pot = 36 W.',
               {'tipo': 'diagrama', 'nome': 'baterias-paralelo', 'rotulos': ['', '', '', '', '', '', 'bateria única: 12 V e 1 Ω', 'R = 1 Ω: potência máxima 36 W']})],
     volta='Tmp = 2 520 ÷ 36 = 70 s (pois 36 · 70 = 2 520: 36 · 7 = 252).\nResposta: alternativa A. Conferindo: com R = 1 Ω, a corrente é 6 A e (1 · 6) · 6 = 36 W.',
     valores=[('Cal', '2 520 J'), ('Fem', '12 V'), ('Rin', '1 Ω'), ('Pot', '36 W')],
@@ -359,7 +360,7 @@ Q.append(dict(
            ('R3', '0,15 kΩ, da linha 2 à linha 5 (sem mais nada)'), ('R4', '0,47 kΩ, as duas pontas na linha 2'), ('R5 e R6', '60 Ω e 90 Ω, linha 2 a 4 e linha 4 a 3')],
     alts=[('17,9 mA', 17.9, 'Pôs R4 em série (não viu o curto): 100 + 100 + 470 = 670 Ω, corrente total 26,9 mA, tensão 2,69 V no paralelo'),
           ('30 mA', 30, 'Deu a corrente de R2 (9 ÷ 300), não a do ramo de R5 e R6'),
-          ('45 mA', 45, 'Pôs R3 em paralelo (não viu que ele está aberto): paralelo de 60 Ω, corrente total 112,5 mA'),
+          ('45 mA', 45, 'Pôs R3 em paralelo (não viu o aberto): 150 e 150 dão 75 Ω; 300 e 75 dão 22 500 ÷ 375 = 60 Ω; total 100 + 60 = 160 Ω, corrente total 18 ÷ 160 = 112,5 mA, tensão 6,75 V, 6,75 ÷ 150 = 45 mA'),
           ('60 mA', 60, 'OK'),
           ('90 mA', 90, 'Deu a corrente total (18 ÷ 200), sem dividir entre R2 e o ramo de R5 e R6')],
     resumo=('R4 em curto (as duas pontas na linha 2) e R3 aberto (ponta solta na linha 5) saem da conta. R5 + R6 = 150 Ω em série; 300 · 150 ÷ 450 = 100 Ω em paralelo com R2; '
@@ -371,8 +372,8 @@ Q.append(dict(
     formulas=[('circuito', 'Série', 'resistências somam'), ('circuito', 'Dois em paralelo', 'X · Y ÷ (X + Y)'), ('texto', 'Prefixos', '1 kΩ = 1 000 Ω; 1 A = 1 000 mA')],
     desenho=('Veja a protoboard: cada barra é uma linha, e todos os furos de uma linha são um ponto só. A fonte de 18 V está ligada nas linhas 1 e 3.', 'protoboard-curto-aberto', []),
     eq='Ic = Tp ÷ Ram', leitura='corrente em R6 = tensão entre as linhas 2 e 3 ÷ resistência do ramo R5 + R6',
-    letras=[('Ic', 'corrente em R6, em mA (o que a questão quer)'), ('Tp', 'tensão entre as linhas 2 e 3, em V'), ('Ram', 'resistência do ramo R5 e R6, em Ω'),
-            ('Par', 'resistência de tudo que liga a linha 2 à 3, em Ω'), ('Itot', 'corrente total que sai da fonte, em A')],
+    letras=[('Ic', 'corrente em R6, em mA ("I de corrente"; o que a questão quer)'), ('Tp', 'tensão no paralelo, entre as linhas 2 e 3, em V ("T de tensão")'), ('Ram', 'resistência do ramo R5 e R6, em Ω'),
+            ('Par', 'resistência do paralelo entre as linhas 2 e 3, em Ω ("P de paralelo")'), ('Itot', 'corrente total que sai da fonte, em A')],
     eq_texto='O ramo de R5 e R6 está entre as linhas 2 e 3, e a mesma corrente passa pelos dois. Dividindo a tensão entre essas linhas pela resistência do ramo, sai a corrente.\nAgora é só achar Ram, Par, Itot e Tp.',
     achando=[('Quem sai da conta: R3 e R4', 'Leia a tabela com cuidado. R4 tem as duas pontas na linha 2: o mesmo ponto dos dois lados, sem tensão e sem corrente (curto). '
                                               'R3 tem uma ponta na linha 2 e a outra na linha 5, onde mais nada se liga: a corrente não tem para onde ir (aberto). R3 e R4 saem do circuito.',
@@ -408,9 +409,9 @@ assert RAR / 3 == 4 and RAR / 2 == 6 and RAR / 3 + RAR / 3 == 8
 cubo = lambda *r: ['P', 'Q', *r, 'cada aresta é um resistor de 12 Ω']
 Q.append(dict(
     id='d2-escada-fis-ita-ele-00d', materia='Física', tema=T, calc=10,
-    enunciado=('Doze resistores iguais, de 12 Ω cada um, formam as arestas de um cubo. Uma bateria é ligada a dois vértices opostos, P e Q, as pontas de uma diagonal do cubo. '
+    enunciado=('Doze resistores iguais, de 12 Ω cada um, formam as arestas de um cubo (as 12 quinas, onde duas faces se encontram). Uma bateria é ligada a dois vértices (cantos) opostos, P e Q, as pontas de uma diagonal do cubo (a reta que cruza o cubo de um canto ao canto mais longe). '
                'A resistência equivalente entre P e Q, em ohms, é:'),
-    dados=[('Resistores', '12 resistores de 12 Ω cada'), ('Montagem', 'arestas de um cubo'), ('Bateria', 'nos vértices opostos P e Q')],
+    dados=[('Resistores', '12 resistores de 12 Ω cada'), ('Montagem', 'arestas de um cubo'), ('Bateria', 'nos vértices (cantos) opostos P e Q')],
     alts=[('4', 4, 'Deu 12 ÷ 3, como se só as três primeiras arestas contassem'),
           ('6', 6, 'Deu 12 ÷ 2, sem raciocínio de simetria'),
           ('8', 8, 'Somou só duas etapas: 4 + 4'),
@@ -426,16 +427,16 @@ Q.append(dict(
     letras=[('Req', 'resistência equivalente entre P e Q, em ohms (o que a questão quer)'), ('Fra', 'fração de Rar que a simetria do cubo dá'), ('Rar', 'resistência de cada aresta, em ohms')],
     eq_texto='Em três etapas a corrente passa por arestas iguais. A soma das três quedas de tensão, dividida pela corrente total, dá o equivalente, que é uma fração de Rar.\nAgora é só achar Rar e Fra.',
     achando=[('Achando Rar: a aresta', 'O enunciado dá: Rar = 12 Ω.'),
-             ('Achando Fra: as 3 primeiras arestas', 'Finja que 6 A saem de P (a fração não depende desse valor). Gire o cubo em volta da diagonal P-Q: as 3 arestas que saem de P trocam de lugar e o cubo fica idêntico. '
-                                                  'Por isso levam a mesma corrente: 6 ÷ 3 = 2 A em cada.',
+             ('Achando Fra: as 3 primeiras arestas', 'Escolho 6 A saindo de P: divide certo por 3 e por 6 (com outro valor, correntes e quedas mudam juntas e a fração é a mesma). Gire o cubo em volta da diagonal P-Q: as 3 arestas de P trocam de lugar e o cubo fica igual, '
+                                                  'então levam a mesma corrente: 6 ÷ 3 = 2 A em cada.',
               {'tipo': 'diagrama', 'nome': 'cubo-resistores', 'rotulos': cubo('saem de P: 2 A em cada', '', '')}),
              ('Achando Fra: as 6 arestas do meio', 'Cada vizinho de P recebe 2 A e tem 2 arestas saindo. Espelhe o cubo: as duas trocam de lugar, então levam a mesma corrente. Cada uma leva 2 ÷ 2 = 1 A (são 6 arestas).',
               {'tipo': 'diagrama', 'nome': 'cubo-resistores', 'rotulos': cubo('saem de P: 2 A em cada', 'no meio: 1 A em cada', '')}),
              ('Achando Fra: chegando em Q', 'Num vértice, o que chega é o que sai (a eletricidade não some nem aparece). Cada vizinho de Q recebe 1 A + 1 A = 2 A, e a última aresta leva esses 2 A a Q. '
                                           'São 3 arestas com 2 A: 2 + 2 + 2 = 6 A, o total.',
               {'tipo': 'diagrama', 'nome': 'cubo-resistores', 'rotulos': cubo('saem de P: 2 A em cada', 'no meio: 1 A em cada', 'chegam em Q: 2 A em cada')}),
-             ('Achando Fra: as quedas, com números', 'Queda = resistência · corrente. 1ª etapa: 12 · 2 = 24 V. Meio: 12 · 1 = 12 V. Última: 12 · 2 = 24 V.\n'
-                                                   'De P a Q por um caminho, as quedas somam: 24 + 12 + 24 = 60 V. Req = 60 ÷ 6 = 10 Ω.'),
+             ('Um caso com números: quedas e Req', 'Queda = resistência · corrente. 1ª etapa: 12 · 2 = 24 V. Meio: 12 · 1 = 12 V. Última: 12 · 2 = 24 V.\n'
+                                                   'De P a Q por qualquer caminho passam 3 arestas, uma de cada etapa, e as quedas somam: 24 + 12 + 24 = 60 V. Req = 60 ÷ 6 = 10 Ω.'),
              ('Achando Fra: as quedas como fração (1 de 2)', 'Sem números: as correntes são 1/3, 1/6 e 1/3 da total I, e cada queda é essa fração de I · Rar. '
                                                            'Confira com o caso: I · Rar = 6 · 12 = 72 V; 1/3 de 72 = 24 V e 1/6 de 72 = 12 V, igual às quedas de cima.'),
              ('Achando Fra: somando as frações (2 de 2)', 'Para somar, o mesmo número embaixo: 1/3 = 2/6. Soma: 2/6 + 1/6 + 2/6 = 5/6 (lê-se "cinco sextos").\n'
@@ -451,5 +452,9 @@ Q.append(dict(
     antes=['fracoes', 'ele-nos-simetria'],
 ))
 
+# contas das correções do aluno-do-zero (24/11)
+assert 294 * 10 - 294 == 2646 and Fr(80) / Fr(8, 10) == 100 and 16 * Fr(20, 3) - 4 * Fr(2, 3) == 104
+assert round(float(_pm(Fr(12), Fr(3), Fr(2))), 1) == 11.5 and round(float(0.8 * 6.67 ** 2), 1) == 35.6 and round(float(1.25 * (12 / 2.25) ** 2), 1) == 35.6
+assert Fr(150 * 150, 300) == 75 and Fr(300 * 75, 375) == 60 and 22500 == 375 * 60 and 100 + 60 == 160 and round(18 / 160 * 1000, 1) == 112.5 and Fr(675, 100) / 150 * 1000 == 45
 for _q in Q:
     assert all(len(v) <= 60 for _, v in _q['dados']), (_q['id'], [len(v) for _, v in _q['dados']])

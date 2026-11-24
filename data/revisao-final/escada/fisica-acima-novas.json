@@ -7,7 +7,7 @@
   "origem": "Escada",
   "ancora": "parcial · ENEM 2020 dia 2 q.98 (caderno azul CD7, semáforos: fase em cadeia, antecipação de 100 m, km/h em m/s); aqui a cadeia é \"tempo permitido menos tempo gasto\" com a média que engana",
   "canal": "cin-02-video-inteiro-parte-3-13.txt [1:20:01] (média de 60 e 80 não é 70: velocidade média é deslocamento ÷ tempo)",
-  "enunciado": "Uma rodovia de 30 km, do km 100 ao km 130, tem fiscalização por radar de trecho. Três pórticos com câmera registram a hora em que cada carro passa, e o sistema calcula a velocidade média entre o primeiro e o último pórtico. O limite do trecho é 90 km/h para carros (80 km/h para caminhões). Se a velocidade média do carro passar disso, há multa, mesmo que nenhuma câmera o tenha visto acima de 90 km/h. A câmera do pórtico do meio só registra a hora e não multa ninguém. Uma motorista, dirigindo um carro, passou pelos pórticos como mostra a tabela.\n\nPórtico | Marco da rodovia | Horário\n1 | km 118 | 14 h 02 min 20 s\n2 | km 124 | 14 h 05 min 20 s\n3 | km 130 | ainda vai passar\n\nAo passar pelo pórtico 2, ela percebeu que vinha rápida e decidiu reduzir. Para chegar ao pórtico 3 sem ser multada, qual é a maior velocidade média, em km/h, que ela pode manter entre o pórtico 2 e o pórtico 3?\n\nDados: Pórtico 1: km 118, às 14 h 02 min 20 s; Pórtico 2: km 124, às 14 h 05 min 20 s; Pórtico 3: km 130 (ainda vai passar); Limite do trecho para carros: 90 km/h, na média; Não entram na conta: 30 km da rodovia, km 100, limite de caminhões.",
+  "enunciado": "Uma rodovia de 30 km, do km 100 ao km 130, tem fiscalização por radar de trecho. Três pórticos com câmera registram a hora em que cada carro passa, e o sistema calcula a velocidade média entre o primeiro e o último pórtico. O limite do trecho é 90 km/h para carros (80 km/h para caminhões). Se a velocidade média do carro passar disso, há multa, mesmo que nenhuma câmera o tenha visto acima de 90 km/h. A câmera do pórtico do meio só registra a hora e não multa ninguém. Uma motorista, dirigindo um carro, passou pelos pórticos como mostra a tabela.\n\nPórtico | Marco da rodovia | Horário\n1 | km 118 | 14 h 02 min 20 s\n2 | km 124 | 14 h 05 min 20 s\n3 | km 130 | ainda vai passar\n\nAo passar pelo pórtico 2, ela percebeu que vinha rápida e decidiu reduzir. Para chegar ao pórtico 3 sem ser multada, qual é a maior velocidade média, em km/h, que ela pode manter entre o pórtico 2 e o pórtico 3?\n\nDados: Pórtico 1: km 118, às 14 h 02 min 20 s; Pórtico 2: km 124, às 14 h 05 min 20 s; Pórtico 3: km 130 (ainda vai passar); Limite do trecho para carros: 90 km/h, na média; Não entram na conta: Fora do trecho medido: 30 km, km 100; caminhão.",
   "A": "45",
   "B": "72",
   "C": "60",
@@ -15,7 +15,7 @@
   "E": "144",
   "resposta": "B",
   "explicacao": {
-   "conferencia": "12 km a 90 km/h pedem 8 min; ela gastou 3 min; sobram 5 min para 6 km: 6 ÷ 5 = 1,2 km/min = 72 km/h. Resposta: alternativa B. Erros: Alternativa A = Dividiu os 6 km pelos 8 min inteiros, sem descontar os 3 min já gastos: 60 · 6 ÷ 8; Alternativa C = Fez a média aritmética das velocidades: 2 · 90 − 120; Alternativa D = Repetiu o limite, como se a 2ª metade pudesse andar na própria média; Alternativa E = Usou os 12 km do trecho inteiro nos 5 min que sobram: 60 · 12 ÷ 5.",
+   "conferencia": "12 km a 90 km/h pedem 8 min; ela gastou 3 min; sobram 5 min para 6 km: 6 ÷ 5 = 1,2 km/min = 72 km/h. Resposta: alternativa B. Erros: Alternativa A = Dividiu os 6 km pelos 8 min inteiros, sem descontar os 3 min já gastos: 60 · 6 ÷ 8; Alternativa C = Achou que as duas velocidades (120 e a pedida) devem ter média 90: 2 · 90 = 180 e 180 − 120; Alternativa D = Repetiu o limite, como se a 2ª metade pudesse andar na própria média; Alternativa E = Usou os 12 km do trecho inteiro nos 5 min que sobram: 60 · 12 ÷ 5.",
    "ideia": "Radar de trecho multa pela velocidade média, e velocidade média é distância total ÷ tempo total, não a média das velocidades. O que se reparte é o tempo: 8 minutos permitidos, 3 já gastos, 5 para os 6 km finais.",
    "pecas": [
     {
@@ -76,7 +76,7 @@
        ],
        [
         "Não entram na conta",
-        "30 km da rodovia, km 100, limite de caminhões"
+        "Fora do trecho medido: 30 km, km 100; caminhão"
        ]
       ]
      }
@@ -110,7 +110,7 @@
     },
     {
      "titulo": "Achando kf: os km que faltam",
-     "texto": "O pórtico 2 está no km 124 e o 3 no km 130.\nkf = 130 − 124 = 6 km."
+     "texto": "O pórtico 2 está no km 124 e o 3 no km 130.\nkf = 130 − 124 = 6 km.\nOs 30 km da rodovia e o km 100 ficam fora: só vale o trecho entre os pórticos. O limite de caminhões (80 km/h) não vale para carro."
     },
     {
      "titulo": "Achando tp: o tempo total permitido",
@@ -203,7 +203,7 @@
   "E": "17",
   "resposta": "C",
   "explicacao": {
-   "conferencia": "Queda de 20 m: 2 s. Para quem cai com a esfera, o projétil anda em reta: dr = √(8² + 15²) = 17 m; vmin = 17 ÷ 2 = 8,5 m/s. Resposta: alternativa C. Erros: Alternativa A = Dividiu só a distância horizontal pelo tempo de queda: 8 ÷ 2; Alternativa B = Dividiu só a diferença de altura pelo tempo de queda: 15 ÷ 2; Alternativa D = Somou 8 + 15 em vez de usar Pitágoras: 23 ÷ 2; Alternativa E = Deu a distância em linha reta, 17 m, sem dividir pelo tempo.",
+   "conferencia": "Queda de 20 m: 2 s. Para quem cai com a esfera, o projétil anda em reta: dr · dr = 8 · 8 + 15 · 15 = 289, então dr = 17 m; vmin = 17 ÷ 2 = 8,5 m/s. Resposta: alternativa C. Erros: Alternativa A = Dividiu só a distância horizontal pelo tempo de queda: 8 ÷ 2; Alternativa B = Dividiu só a diferença de altura pelo tempo de queda: 15 ÷ 2; Alternativa D = Somou 8 + 15 em vez de usar Pitágoras: 23 ÷ 2; Alternativa E = Deu a distância em linha reta, 17 m, sem dividir pelo tempo.",
    "ideia": "A esfera e o projétil caem a mesma altura em cada instante, então o encontro acontece quando o projétil percorreria, em reta e sem gravidade, a distância até o ponto de onde a esfera foi solta. Basta essa distância em linha reta ÷ o tempo de queda.",
    "pecas": [
     {
@@ -221,7 +221,7 @@
        {
         "figura": "triangulo-retangulo",
         "nome": "Pitágoras",
-        "formula": "dr² = lado1² + lado2²"
+        "formula": "dr · dr = lado1 · lado1 + lado2 · lado2"
        },
        {
         "figura": "carro",
@@ -300,7 +300,7 @@
     },
     {
      "titulo": "Achando dr: a distância em linha reta",
-     "texto": "A esfera foi solta a 20 m e o canhão está a 5 m: a diferença de altura é 20 − 5 = 15 m. A distância horizontal é 8 m. Os dois formam um canto reto.\n8 · 8 = 64 e 15 · 15 = 225 (15 · 10 = 150 e 15 · 5 = 75). 64 + 225 = 289.",
+     "texto": "A esfera foi solta a 20 m e o canhão está a 5 m: a diferença de altura é 20 − 5 = 15 m. A distância horizontal é 8 m. Esses dois lados, 15 m (para cima) e 8 m (de lado), formam um canto reto.\n8 · 8 = 64 e 15 · 15 = 225 (15 · 10 = 150 e 15 · 5 = 75). 64 + 225 = 289.",
      "visual": {
       "tipo": "diagrama",
       "nome": "torre-esfera-canhao",
@@ -726,11 +726,15 @@
     },
     {
      "titulo": "Achando seg: os segundos possíveis",
-     "texto": "seg divide 240. Teste: seg = 3 e v1 = 41 (41 + 40 + 39): pu = 41 + 39 = 80 e seg + pu = 83 = 2 · 41 + 1. Sempre: a última é v1 − (seg − 1), então pu = 2 · v1 − seg + 1 e seg + pu = 2 · v1 + 1, ímpar. Um é par e o outro é ímpar."
+     "texto": "seg divide 240. Só um exemplo: velocidades 41, 40, 39 dão seg = 3 e pu = 41 + 39 = 80; 3 + 80 = 83, ímpar. Sempre assim: a última é a 1ª − (seg − 1), então seg + pu = 2 · (1ª) + 1, ímpar. Um é par, o outro é ímpar."
     },
     {
-     "titulo": "Achando seg: os segundos possíveis (2 de 2)",
-     "texto": "240 = 16 · 15. Os divisores de 15 são 1, 3, 5, 15. O 16 inteiro fica num só deles: seg = 1, 3, 5 ou 15 (pu = 240, 80, 48, 16) ou seg = 16, 48, 80 ou 240 (é 16 · 1, 16 · 3, 16 · 5, 16 · 15; pu = 15, 5, 3, 1)."
+     "titulo": "Achando seg: os segundos possíveis (2 de 3)",
+     "texto": "240 = 2 · 2 · 2 · 2 · 15 = 16 · 15 (16 · 10 = 160, 16 · 5 = 80, 160 + 80 = 240). Número ímpar não tem 2 dentro, então o ímpar (seg ou pu) é divisor de 15: 1, 3, 5 ou 15. O outro leva os quatro 2 todos: 16, 48, 80 ou 240."
+    },
+    {
+     "titulo": "Achando seg: os segundos possíveis (3 de 3)",
+     "texto": "seg = 1, 3, 5, 15 (pu = 240, 80, 48, 16) ou seg = 16, 48, 80, 240 (pu = 15, 5, 3, 1)."
     },
     {
      "titulo": "Achando pu: a soma de cada caso",
@@ -738,7 +742,7 @@
     },
     {
      "titulo": "Achando v1: a velocidade inicial de cada caso",
-     "texto": "Do pu = 1ª + última e última = 1ª − (seg − 1): pu = 2 · v1 − seg + 1, então v1 = (pu + seg − 1) ÷ 2. Teste seg = 3, pu = 80: (80 + 3 − 1) ÷ 2 = 41. A última é v1 − (seg − 1) e precisa ser 1 ou mais; seg precisa ser maior que 1.\nServem seg = 3, 5 e 15.",
+     "texto": "Do pu = 1ª + última e última = 1ª − (seg − 1): pu = 2 · v1 − seg + 1. Para isolar v1, desfaço de trás para frente: somo seg − 1 dos dois lados (some o −seg + 1) e fica pu + seg − 1 = 2 · v1; depois divido os dois lados por 2: v1 = (pu + seg − 1) ÷ 2.",
      "visual": {
       "tipo": "tabela",
       "titulo": "Os 8 casos de seg",
@@ -808,6 +812,10 @@
        ]
       ]
      }
+    },
+    {
+     "titulo": "Achando v1: a velocidade inicial de cada caso (2 de 2)",
+     "texto": "Teste seg = 3, pu = 80: 80 + 3 − 1 = 82 e 82 ÷ 2 = 41. A última é v1 − (seg − 1) e precisa ser 1 ou mais; seg precisa ser maior que 1.\nServem seg = 3, 5 e 15."
     },
     {
      "titulo": "Volta na equação",
@@ -961,7 +969,7 @@
     },
     {
      "titulo": "De onde vem cada fórmula (1 de 2)",
-     "texto": "Antes você viu: parado, o chão empurra com o peso; acelerando para cima, empurra o peso mais massa · aceleração. Ou seja, empurrão = massa · (10 + aceleração)."
+     "texto": "Antes você viu: parado, o chão empurra com o peso; acelerando para cima, empurra o peso mais massa · aceleração. Ou seja, empurrão = massa · (10 + aceleração). Teste: 60 kg com aceleração 2: 60 · (10 + 2) = 60 · 10 + 60 · 2 = 600 + 120 = 720 N."
     },
     {
      "titulo": "De onde vem cada fórmula (2 de 2)",
@@ -1182,7 +1190,7 @@
     },
     {
      "titulo": "Achando sub: a desaceleração na subida",
-     "texto": "Seno = 3 ÷ 5 = 0,6; cosseno = 4 ÷ 5 = 0,8. Peso: 2 · 10 = 20 N.\nPuxa rampa abaixo: 0,6 · 20 = 12 N. Aperta: 0,8 · 20 = 16 N. Atrito: 0,45 · 16 = 7,2 N (45 · 16 = 720, 2 casas).\nSubindo, os dois freiam: 12 + 7,2 = 19,2 N. sub = 19,2 ÷ 2 = 9,6 m/s².",
+     "texto": "Seno = 3 ÷ 5 = 0,6; cosseno = 4 ÷ 5 = 0,8. Peso: 2 · 10 = 20 N.\nPuxa rampa abaixo: 0,6 · 20 = 12 N. Aperta: 0,8 · 20 = 16 N. Atrito: 0,45 · 16. Faço 45 · 16 = 720; como o 0,45 tem 2 números depois da vírgula, ponho 2 casas no resultado: 7,20 = 7,2 N.",
      "visual": {
       "tipo": "diagrama",
       "nome": "rampa-com-forcas",
@@ -1199,6 +1207,10 @@
      }
     },
     {
+     "titulo": "Achando sub: a desaceleração na subida (2 de 2)",
+     "texto": "Subindo, os dois freiam: 12 + 7,2 = 19,2 N. sub = 19,2 ÷ 2 = 9,6 m/s²."
+    },
+    {
      "titulo": "Achando dis: a distância que ele sobe",
      "texto": "Sobe até parar: 12 · 12 = 144 = 2 · 9,6 · dis. Como 2 · 9,6 = 19,2, temos 144 = 19,2 · dis.\ndis = 144 ÷ 19,2. Multiplicando os dois por 10: 1 440 ÷ 192.\n192 · 7 = 1 344; sobram 96, a metade de 192. Então dis = 7,5 m."
     },
@@ -1208,7 +1220,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "vol · vol = 2 · 2,4 · 7,5 = 4,8 · 7,5. Como 4,8 · 7 = 33,6 e 4,8 · 0,5 = 2,4, dá 36. vol = √36 = 6 m/s.\nResposta: alternativa D. Conferindo: na descida, 6 ÷ 2,4 = 2,5 s, média 3 m/s, e 3 · 2,5 = 7,5 m.",
+     "texto": "vol · vol = 2 · 2,4 · 7,5 = 4,8 · 7,5. Como 4,8 · 7 = 33,6 e 4,8 · 0,5 = 2,4, dá 36. vol = √36 = 6 m/s.\nResposta: alternativa D. Conferindo: na descida, 6 ÷ 2,4 = 60 ÷ 24 = 2,5 s (multiplico os dois por 10 para sumir a vírgula; 24 · 2,5 = 60), média 3 m/s, e 3 · 2,5 = 7,5 m.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -1289,7 +1301,7 @@
   "E": "1,0",
   "resposta": "E",
   "explicacao": {
-   "conferencia": "Juntos: 30 ÷ 5 = 6; o bloco precisaria de 6 N e o atrito dá no máximo 4 N, então escorrega. Bloco 1: 4 m/s²; prancha 2: (30 − 4) ÷ 4 = 6,5 m/s²; relativa 2,5; tem = √(2 · 1,25 ÷ 2,5) = 1 s. Resposta: alternativa E. Erros: Alternativa A = Tratou o bloco 1 como parado no chão: só a aceleração da prancha 2 (6,5); Alternativa B = Esqueceu o ½ da distância: usou d = a · t · t; Alternativa C = Esqueceu o atrito sobre a prancha 2: aceleração dela 30 ÷ 4 = 7,5; Alternativa D = Supôs os dois juntos (6) e subtraiu a do bloco (4): relativa 2, não 2,5.",
+   "conferencia": "Juntos: 30 ÷ 5 = 6; o bloco precisaria de 6 N e o atrito dá no máximo 4 N, então escorrega. Bloco 1: 4 m/s²; prancha 2: (30 − 4) ÷ 4 = 6,5 m/s²; relativa 2,5; tmp = √(2 · 1,25 ÷ 2,5) = 1 s. Resposta: alternativa E. Erros: Alternativa A = Tratou o bloco 1 como parado no chão: só a aceleração da prancha 2 (6,5); Alternativa B = Esqueceu o ½ da distância: usou d = a · t · t; Alternativa C = Esqueceu o atrito sobre a prancha 2: aceleração dela 30 ÷ 4 = 7,5; Alternativa D = Supôs os dois juntos (6) e subtraiu a do bloco (4): relativa 2, não 2,5.",
    "ideia": "Primeiro teste se os dois andam juntos: o atrito máximo (4 N) não segura o bloco, que escorrega. O atrito age nos dois, em sentidos opostos, e o bloco fica para trás.",
    "pecas": [
     {
@@ -1362,7 +1374,7 @@
     },
     {
      "titulo": "De onde vem cada fórmula (2 de 2)",
-     "texto": "Aqui é o contrário: a diferença de posição é o comprimento da prancha, e queremos o tempo. Pela aula Antes, tem · tem = 2 · cmp ÷ rel, com tem o tempo, cmp o comprimento da prancha e rel a aceleração relativa."
+     "texto": "Aqui é o contrário: a diferença de posição é o comprimento da prancha, e queremos o tempo. Pela aula Antes, tempo · tempo = 2 · comprimento ÷ aceleração relativa. Mais adiante essas três ganham letras: tmp, cmp e rel."
     },
     {
      "titulo": "O desenho",
@@ -1378,11 +1390,11 @@
      "texto": "Em relação à prancha, o bloco parte do repouso e anda para trás o comprimento cmp com a aceleração rel.\nAgora é só achar bl, pr, rel e cmp.",
      "visual": {
       "tipo": "equacao",
-      "formula": "tem = √(2 · cmp ÷ rel)",
+      "formula": "tmp = √(2 · cmp ÷ rel)",
       "leitura": "tempo = raiz de (2 · distância relativa ÷ aceleração relativa)",
       "letras": [
        {
-        "letra": "tem",
+        "letra": "tmp",
         "oque": "tempo até o bloco cair, em s (o que a questão quer)"
        },
        {
@@ -1440,7 +1452,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "tem · tem = 2 · 1,25 ÷ 2,5 = 2,5 ÷ 2,5 = 1. Então tem = √1 = 1 s.\nResposta: alternativa E. Conferindo: em 1 s, a prancha anda 6,5 ÷ 2 = 3,25 m, o bloco anda 4 ÷ 2 = 2 m, e 3,25 − 2 = 1,25 m.",
+     "texto": "tmp · tmp = 2 · 1,25 ÷ 2,5 = 2,5 ÷ 2,5 = 1. Então tmp = √1 = 1 s.\nResposta: alternativa E. Conferindo: em 1 s, a prancha anda 6,5 ÷ 2 = 3,25 m, o bloco anda 4 ÷ 2 = 2 m, e 3,25 − 2 = 1,25 m.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -1485,7 +1497,7 @@
        ],
        [
         "2. Equação em letras",
-        "tem = √(2 · cmp ÷ rel)"
+        "tmp = √(2 · cmp ÷ rel)"
        ],
        [
         "3. Uma letra por vez",
@@ -1525,7 +1537,7 @@
   "E": "140",
   "resposta": "A",
   "explicacao": {
-   "conferencia": "raio = 0,2 L; queda até o topo = 0,6 L; v · v = 12 L; tração = 2 · 12 L ÷ 0,2 L − 20 = 120 − 20 = 100 N (5 · m · g, sem depender de L). Resposta: alternativa A. Erros: Alternativa B = Usou como raio a distância até o pino (0,8 L) em vez de L − 0,8 L; Alternativa C = Ignorou o pino e deu a tração do ponto mais baixo: 3 · m · g; Alternativa D = Esqueceu de tirar o peso: deu só m · v · v ÷ raio; Alternativa E = Somou o peso em vez de subtrair, no topo.",
+   "conferencia": "raio = 0,2 L; queda até o topo = 0,6 L; v · v = 12 L; tração = 2 · 12 L ÷ 0,2 L − 20 = 120 − 20 = 100 N (5 vezes o peso de 20 N: 5 · 20 = 100, sem depender de L). Resposta: alternativa A. Erros: Alternativa B = Usou como raio a distância até o pino (0,8 L) em vez de L − 0,8 L; Alternativa C = Ignorou o pino e deu a tração do ponto mais baixo, com raio L: 3 vezes o peso de 20 N, 3 · 20; Alternativa D = Esqueceu de tirar o peso: deu só m · v · v ÷ raio; Alternativa E = Somou o peso em vez de subtrair, no topo.",
    "ideia": "Depois do pino o raio é só o pedaço de fio que sobrou, e o topo da volta pequena fica mais baixo que o ponto de fixação. O comprimento L aparece em cima e embaixo da conta e some.",
    "pecas": [
     {
@@ -1589,11 +1601,11 @@
     },
     {
      "titulo": "De onde vem cada fórmula (1 de 2)",
-     "texto": "No topo, tração + peso = massa · vv ÷ raio (aula Antes), onde vv é v · v. O peso é 2 · 10 = 20 N."
+     "texto": "No topo, tração + peso = massa · v · v ÷ raio (aula Antes). O peso é 2 · 10 = 20 N."
     },
     {
      "titulo": "De onde vem cada fórmula (2 de 2)",
-     "texto": "Por isso tra = 2 · vv ÷ rai − 20, com tra a tração no topo, vv o v · v e rai o raio em torno do pino."
+     "texto": "Por isso tração = 2 · v · v ÷ raio − 20. Nos passos seguintes uso letras curtas: tra para a tração, vv para v · v e rai para o raio."
     },
     {
      "titulo": "O desenho",
@@ -1646,7 +1658,7 @@
     },
     {
      "titulo": "Achando vv: v · v no ponto mais alto",
-     "texto": "O pino está 0,8 L abaixo da fixação. O topo fica rai = 0,2 L acima do pino: 0,8 L − 0,2 L = 0,6 L abaixo da fixação.\nQueda: 0,6 L. vv = 2 · 10 · 0,6 L = 12 L.\nO fio fica esticado? vv = 12 L é maior que 10 · rai = 2 L: sim.",
+     "texto": "O pino está 0,8 L abaixo da fixação. O topo fica rai = 0,2 L acima do pino: 0,8 L − 0,2 L = 0,6 L abaixo da fixação.\nQueda: 0,6 L. vv = 2 · 10 · 0,6 L = 12 L.",
      "visual": {
       "tipo": "diagrama",
       "nome": "pendulo-com-pino",
@@ -1660,6 +1672,10 @@
        "queda = 0,6 L"
       ]
      }
+    },
+    {
+     "titulo": "Achando vv: v · v no ponto mais alto (2 de 2)",
+     "texto": "O fio fica esticado se a tração é 0 ou mais: 2 · vv ÷ rai − 20 ≥ 0 vale quando vv ≥ 10 · rai (somo 20, divido por 2 e multiplico por rai). Aqui vv = 12 L e 10 · rai = 2 L: 12 L ≥ 2 L, sim."
     },
     {
      "titulo": "Volta na equação",
@@ -1825,7 +1841,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Cada banho gasta \"gas\" kg de gás, e cada kg custa \"preco\" reais. Multiplicando pelos banhos do mês, sai o custo do mês.\nAgora é só achar banhos, preco, quente, util e gas.",
+     "texto": "Cada banho gasta \"gas\" kg de gás, e cada kg custa \"preco\" reais. Multiplicando pelos banhos do mês, sai o custo do mês.\nAgora é só achar banhos, preco, lqt, util e gas.",
      "visual": {
       "tipo": "equacao",
       "formula": "custo = banhos · gas · preco",
@@ -1852,7 +1868,7 @@
         "oque": "calor útil que a água quente recebe, em MJ"
        },
        {
-        "letra": "quente",
+        "letra": "lqt",
         "oque": "litros de água quente em cada banho"
        }
       ]
@@ -1867,16 +1883,16 @@
      "texto": "O botijão tem 13 kg e custa R$ 104,00. Cada kg custa 104 ÷ 13.\nTeste: 13 · 8 = 104, então preco = R$ 8,00 por kg."
     },
     {
-     "titulo": "Achando quente: os litros quentes",
-     "texto": "A quente esfria de 70 °C a 40 °C: 30 graus. A fria esquenta de 20 °C a 40 °C: 20 graus, e são 50 − quente litros.\nCalor cedido = recebido. A massa em kg é igual aos litros e o c é o mesmo, então corta: 30 · quente = 20 · (50 − quente)."
+     "titulo": "Achando lqt: os litros quentes",
+     "texto": "A água quente esfria de 70 °C a 40 °C: 30 graus. A fria esquenta de 20 °C a 40 °C: 20 graus, e são 50 − lqt litros.\nCalor cedido = recebido. A massa em kg é igual aos litros e o c é o mesmo, então corta: 30 · lqt = 20 · (50 − lqt)."
     },
     {
-     "titulo": "Achando quente: os litros quentes (2 de 2)",
-     "texto": "Abro o parêntese: 20 · (50 − quente) = 20 · 50 − 20 · quente = 1 000 − 20 · quente.\nSomo 20 · quente nos dois lados (a igualdade se mantém): 30 · quente + 20 · quente = 1 000, ou 50 · quente = 1 000. Então quente = 20 L.\nTeste: 30 · 20 = 600 e 20 · (50 − 20) = 20 · 30 = 600."
+     "titulo": "Achando lqt: os litros quentes (2 de 2)",
+     "texto": "Abro o parêntese: 20 · (50 − lqt) = 20 · 50 − 20 · lqt = 1 000 − 20 · lqt.\nSomo 20 · lqt nos dois lados (a igualdade se mantém): 30 · lqt + 20 · lqt = 1 000, ou 50 · lqt = 1 000. Então lqt = 20 L.\nTeste: 30 · 20 = 600 e 20 · (50 − 20) = 20 · 30 = 600."
     },
     {
      "titulo": "Achando util: o calor útil",
-     "texto": "Só os 20 L (20 kg) passam pelo aquecedor, de 20 °C a 70 °C: 70 − 20 = 50 graus.\ncalor = 20 · 4,2 · 50. Primeiro 20 · 4,2 = 84; depois 84 · 50 = 4 200 kJ.\n1 MJ = 1 000 kJ, então util = 4 200 ÷ 1 000 = 4,2 MJ."
+     "texto": "Só os 20 L (20 kg) passam pelo aquecedor, de 20 °C a 70 °C: 70 − 20 = 50 graus.\ncalor = 20 · 4,2 · 50. Primeiro 20 · 4,2: 20 · 4 = 80 e 20 · 0,2 = 4, então 84. Depois 84 · 50: 84 · 5 = 420 e, com o zero, 4 200 kJ.\n1 MJ = 1 000 kJ, então util = 4 200 ÷ 1 000 = 4,2 MJ."
     },
     {
      "titulo": "Achando gas: o gás de um banho",
@@ -1884,7 +1900,7 @@
     },
     {
      "titulo": "Achando gas: o gás de um banho (2 de 2)",
-     "texto": "Cada kg dá 42 MJ: gas = 5,25 ÷ 42. Como 5,25 = 42 ÷ 8, gas = (42 ÷ 8) ÷ 42 = 1 ÷ 8 = 0,125 kg (pois 8 · 0,125 = 1)."
+     "texto": "Cada kg dá 42 MJ: gas = 5,25 ÷ 42. Teste: 8 · 5,25 = 42, então o 5,25 cabe 8 vezes no 42, ou seja, é 1/8 dele. Logo gas = 1 ÷ 8 = 0,125 kg (pois 8 · 0,125 = 1)."
     },
     {
      "titulo": "Volta na equação",
@@ -1906,7 +1922,7 @@
         "R$ 8,00 por kg"
        ],
        [
-        "quente",
+        "lqt",
         "20 L"
        ],
        [
@@ -1945,7 +1961,7 @@
        ],
        [
         "3. Uma letra por vez",
-        "banhos = 60; preco = 8; quente = 20; util = 4,2; gas = 0,125"
+        "banhos = 60; preco = 8; lqt = 20; util = 4,2; gas = 0,125"
        ]
       ]
      }
@@ -2330,7 +2346,7 @@
     },
     {
      "titulo": "Achando energia: a energia que falta",
-     "texto": "Fundir os 100 g de gelo: 100 · 80 = 8 000 cal.\nAquecer 500 g de água (400 + 100) de 0 °C a 20 °C: 500 · 1 · 20 = 10 000 cal.\nSoma: 18 000 cal. Em joules: 18 000 · 4 = 72 000 J."
+     "texto": "Fundir os 100 g de gelo: 100 · 80 = 8 000 cal.\nAquecer 500 g de água (os 400 g que já eram água mais os 100 g de gelo que acabaram de virar água) de 0 °C a 20 °C: 500 · 1 · 20 = 10 000 cal.\nSoma: 18 000 cal. Em joules: 18 000 · 4 = 72 000 J."
     },
     {
      "titulo": "Volta na equação",
@@ -2553,11 +2569,11 @@
     },
     {
      "titulo": "Achando rede: a escada toda (2 de 4)",
-     "texto": "Multiplico os dois lados por (50 + rede): rede · (50 + rede) = 25 · (50 + rede) + 50 · rede.\nAbro os parênteses: 50 · rede + rede · rede = 1 250 + 25 · rede + 50 · rede."
+     "texto": "Para sumir a divisão, multiplico os dois lados por (50 + rede); o que faço de um lado faço do outro, e a igualdade se mantém: rede · (50 + rede) = 25 · (50 + rede) + 50 · rede.\nAbro os parênteses: 50 · rede + rede · rede = 1 250 + 25 · rede + 50 · rede."
     },
     {
      "titulo": "Achando rede: a escada toda (3 de 4)",
-     "texto": "Tiro 50 · rede dos dois lados: rede · rede = 1 250 + 25 · rede. Passo 25 · rede para o outro lado: rede · rede − 25 · rede − 1 250 = 0.\n1 250 = 50 · 25. Produto negativo: um dos números é negativo. Soma −25: o maior leva o sinal −. São −50 e +25."
+     "texto": "Tiro 50 · rede dos dois lados: rede · rede = 1 250 + 25 · rede. Subtraio 25 · rede dos dois lados (por isso o sinal dele troca de + para −): rede · rede − 25 · rede − 1 250 = 0.\n1 250 = 50 · 25. Produto negativo: um dos números é negativo. Soma −25: o maior leva o sinal −. São −50 e +25."
     },
     {
      "titulo": "Achando rede: a escada toda (4 de 4)",
@@ -2565,11 +2581,11 @@
     },
     {
      "titulo": "Achando frac: a fração de cada nó",
-     "texto": "No 1º nó, rvert = 50 e a rede = 50 estão em paralelo: 50 · 50 ÷ 100 = 25 K/W. Em série com rhor = 25, o total é 50.\nA queda de temperatura é proporcional à resistência: rhor tem 25 de 50, a metade, e o nó fica com a outra metade. frac = 25 ÷ 50 = 1/2."
+     "texto": "No 1º nó, rvert = 50 e a rede = 50 estão em paralelo: 50 · 50 ÷ 100 = 25 K/W. Em série com rhor = 25, o total é 50."
     },
     {
      "titulo": "Achando frac: a fração de cada nó (2 de 2)",
-     "texto": "Do 2º nó para a frente a escada é a mesma, então o 2º nó divide a temperatura do 1º do mesmo jeito."
+     "texto": "Com a fonte a 100 °C e a rede toda em 50 K/W, o fluxo da fonte é 100 ÷ 50 = 2 W. Na rhor a queda é 2 · 25 = 50 °C, então o 1º nó fica a 100 − 50 = 50 °C, metade de 100. frac = 50 ÷ 100 = 1/2.\nDo 2º nó para a frente a escada é a mesma, então o 2º nó divide a temperatura do 1º do mesmo jeito."
     },
     {
      "titulo": "Achando temp3: a temperatura do 3º nó",
@@ -2676,7 +2692,7 @@
   "origem": "Escada",
   "ancora": "forte · ENEM 2023 q.135 (dois ecos de um mesmo pulso: o tempo de cada eco é de ida e volta, distância = velocidade · tempo ÷ 2); aqui um dos ecos é inclinado e a velocidade vem de tabela",
   "canal": "fis-09-ondulatoria.txt [8:45:01] (v = λ · f); eco em fis-16-som-acustica-e-efeito-doppler.txt [13:22:30], sem conta",
-  "enunciado": "Uma equipe de biólogos estuda um lago profundo e precisa saber a que distância, na vertical, um cardume está do fundo, para decidir até onde descer as redes. Do barco, parado na superfície, o sonar emite um pulso de ultrassom em todas as direções e mede o tempo até cada eco. O pulso volta de dois pontos. O primeiro eco vem do cardume, que o sonar de varredura lateral localiza a 270 m do barco, na horizontal, e chega 0,6 s depois da emissão. O segundo vem do fundo do lago, exatamente abaixo do barco, e chega 0,8 s depois da emissão. A velocidade do som na água depende da temperatura. O termômetro do barco, que marca em graus Fahrenheit, indica 68 °F na água do lago, e o manual do sonar traz esta tabela, de valores aproximados:\n\n10 °C: 1 450 m/s\n20 °C: 1 500 m/s\n30 °C: 1 550 m/s\n\nO cardume, o barco e o fundo estão no mesmo plano vertical. A distância vertical, em metros, entre o cardume e o fundo do lago é:\n\nDados: Eco do cardume: 0,6 s depois da emissão; Eco do fundo (abaixo do barco): 0,8 s depois da emissão; Cardume, na horizontal: 270 m do barco; Termômetro da água: 68 °F; Tabela do som na água: 10 °C: 1 450; 20 °C: 1 500; 30 °C: 1 550 m/s.",
+  "enunciado": "Uma equipe de biólogos estuda um lago profundo e precisa saber a que distância, na vertical, um cardume está do fundo, para decidir até onde descer as redes. Do barco, parado na superfície, o sonar emite um pulso de ultrassom (som agudo demais para o ouvido humano) em todas as direções e mede o tempo até cada eco. O pulso volta de dois pontos. O primeiro eco vem do cardume, que um segundo sonar, que mede para o lado, localiza a 270 m do barco, na horizontal, e chega 0,6 s depois da emissão. O segundo vem do fundo do lago, exatamente abaixo do barco, e chega 0,8 s depois da emissão. A velocidade do som na água depende da temperatura. O termômetro do barco, que marca em graus Fahrenheit, indica 68 °F na água do lago, e o manual do sonar traz esta tabela, de valores aproximados:\n\n10 °C: 1 450 m/s\n20 °C: 1 500 m/s\n30 °C: 1 550 m/s\n\nO cardume, o barco e o fundo estão no mesmo plano vertical. A distância vertical, em metros, entre o cardume e o fundo do lago é:\n\nDados: Eco do cardume: 0,6 s depois da emissão; Eco do fundo (abaixo do barco): 0,8 s depois da emissão; Cardume, na horizontal: 270 m do barco; Termômetro da água: 68 °F; Tabela do som na água: 10 °C: 1 450; 20 °C: 1 500; 30 °C: 1 550 m/s.",
   "A": "150",
   "B": "330",
   "C": "360",
@@ -2712,7 +2728,7 @@
        {
         "figura": "triangulo-retangulo",
         "nome": "Pitágoras",
-        "formula": "inclinado² = horizontal² + vertical²"
+        "formula": "diagonal · diagonal = horiz · horiz + vert · vert"
        }
       ]
      }
@@ -2813,7 +2829,7 @@
     },
     {
      "titulo": "Achando car: a profundidade do cardume",
-     "texto": "Triângulo de canto reto: diagonal 450 m, horizontal 270 m, vertical car.\n450 · 450 = 202 500 e 270 · 270 = 72 900. car · car = 202 500 − 72 900 = 129 600.\n36 · 36 = 1 296, então 360 · 360 = 129 600. car = 360 m.",
+     "texto": "Triângulo de canto reto: diagonal 450 m (o lado maior), horizontal 270 m, vertical car. Diagonal · diagonal = horizontal · horizontal + car · car. Como 10 = 4 + 6 dá 6 = 10 − 4, car · car = 450 · 450 − 270 · 270.",
      "visual": {
       "tipo": "diagrama",
       "nome": "sonar-eco-obliquo",
@@ -2828,6 +2844,14 @@
        "240 m"
       ]
      }
+    },
+    {
+     "titulo": "Achando car: a profundidade do cardume (2 de 3)",
+     "texto": "45 · 45 = 1 800 + 225 = 2 025, então 450 · 450 = 202 500. 27 · 27 = 540 + 189 = 729, então 270 · 270 = 72 900. Diferença: 202 500 − 72 900 = 129 600."
+    },
+    {
+     "titulo": "Achando car: a profundidade do cardume (3 de 3)",
+     "texto": "Qual número vezes ele mesmo dá 129 600? 300 · 300 = 90 000 é pouco e 400 · 400 = 160 000 é muito. Teste 360: 36 · 36 = 1 080 + 216 = 1 296 e, com 10 · 10 = 100 a mais, 360 · 360 = 129 600. car = 360 m."
     },
     {
      "titulo": "Volta na equação",
@@ -2989,7 +3013,11 @@
     },
     {
      "titulo": "De onde vem cada fórmula (2 de 3)",
-     "texto": "Nos outros pontos do círculo o som é ouvido entre esses dois valores. O microfone está muito longe: a direção da sirene até ele quase não muda durante a volta."
+     "texto": "Nos outros pontos do círculo só conta a parte da velocidade que aponta para o microfone, e ela é menor que vf. Exemplo: com a sirene andando de lado, nada se aproxima nem se afasta, e o microfone ouve a frequência emitida, entre 380 e 420 Hz."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 3) (2 de 2)",
+     "texto": "O microfone está muito longe: a direção da sirene até ele quase não muda durante a volta."
     },
     {
      "titulo": "De onde vem cada fórmula (3 de 3)",
@@ -3033,7 +3061,7 @@
     },
     {
      "titulo": "Achando vf: a velocidade da sirene",
-     "texto": "Iguale: 420 · (340 − vf) = 380 · (340 + vf). 420 · 340 = 42 · 34 · 100 = 1 428 · 100 = 142 800. 380 · 340 = 38 · 34 · 100 = 1 292 · 100 = 129 200.\n142 800 − 420 · vf = 129 200 + 380 · vf. Junte: 142 800 − 129 200 = 13 600 = 800 · vf.\nvf = 13 600 ÷ 800 = 136 ÷ 8 = 17 m/s.",
+     "texto": "Iguale: 420 · (340 − vf) = 380 · (340 + vf). Abra os parênteses: 420 · 340 = 42 · 34 · 100 (tire os zeros e ponha de volta). 42 · 34 = 1 260 + 168 = 1 428: 142 800. Do mesmo jeito 38 · 34 = 1 140 + 152 = 1 292: 129 200.",
      "visual": {
       "tipo": "diagrama",
       "nome": "sirene-no-circulo",
@@ -3048,8 +3076,12 @@
      }
     },
     {
+     "titulo": "Achando vf: a velocidade da sirene (2 de 2)",
+     "texto": "142 800 − 420 · vf = 129 200 + 380 · vf. Some 420 · vf nos dois lados, para o vf sair da esquerda: 142 800 = 129 200 + 380 · vf + 420 · vf = 129 200 + 800 · vf (380 + 420 = 800).\nTire 129 200 dos dois lados: 13 600 = 800 · vf. Divida por 800: 136 ÷ 8 = 17, pois 8 · 17 = 136. vf = 17 m/s."
+    },
+    {
      "titulo": "Volta na equação",
-     "texto": "tra = 0,8 · 17 · 17 ÷ 1,7. 17 · 17 = 170 + 119 = 289. 0,8 · 289 = 8 · 289 ÷ 10 = 2 312 ÷ 10 = 231,2.\n231,2 ÷ 1,7 = 2 312 ÷ 17. 17 · 100 = 1 700, sobram 612; 17 · 36 = 612. Então 100 + 36 = 136 N.",
+     "texto": "tra = 0,8 · 17 · 17 ÷ 1,7. 17 · 17 = 170 + 119 = 289. 0,8 · 289 = 8 · 289 ÷ 10 = 2 312 ÷ 10 = 231,2.\n231,2 ÷ 1,7: multiplico os dois por 10 e fica 2 312 ÷ 17. 17 · 100 = 1 700 e sobram 612. 17 · 30 = 510 e sobram 102; 17 · 6 = 102. Então 100 + 30 + 6 = 136 N.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -3060,7 +3092,7 @@
       "linhas": [
        [
         "cte",
-        "135 660 (= 420 · 323)"
+        "135 660 (420 · 323, com 323 = 340 − 17)"
        ],
        [
         "vf",
@@ -3071,7 +3103,7 @@
     },
     {
      "titulo": "Volta na equação (2 de 2)",
-     "texto": "Resposta: alternativa E. Conferindo: 340 − 17 = 323 e 340 + 17 = 357; cte = 420 · 323 = 135 660 = 380 · 357; fe = 135 660 ÷ 340 = 399 Hz."
+     "texto": "Resposta: alternativa E. Conferindo: 340 − 17 = 323 e 340 + 17 = 357; cte = 420 · 323 = 135 660 (420 · 300 = 126 000 e 420 · 23 = 9 660) = 380 · 357; fe = 135 660 ÷ 340 = 399 Hz."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -3122,7 +3154,7 @@
   "origem": "Escada",
   "ancora": "forte · ENEM 2020 q.114 (ressonâncias seguidas em tubo fechado: o dado medido não é a fundamental) e Fuvest 2024 F03 (ventres, nós e comprimento)",
   "canal": "fora do canal: tubo com água e níveis de ressonância (o canal só cita harmônicos em fis-16-som-acustica-e-efeito-doppler.txt [13:19:32]); v = λ · f em fis-09-ondulatoria.txt [8:45:01]",
-  "enunciado": "Num laboratório, um tubo de vidro vertical, aberto no alto, está ligado por uma mangueira a um reservatório de água, de modo que o nível da água dentro do tubo pode ser subido ou descido. A coluna de ar entre a boca do tubo e a água funciona como um tubo sonoro fechado embaixo. Um diapasão de 500 Hz vibra sobre a boca. Baixando devagar o nível, o som reforça em duas posições seguidas, sem outra entre elas. A tabela dá o comprimento da coluna de ar, medido da boca até a água:\n\n1ª ressonância: 16,0 cm\n2ª ressonância: 50,0 cm\n\nO ventre do som fica um pouco fora da boca do tubo, por uma correção que ninguém mediu. O som se propaga no ar com velocidade vel = 331 + 0,6 · tem, em m/s, sendo tem a temperatura do ar em °C. A temperatura do ar no tubo, em °C, é:\n\nDados: Diapasão: 500 Hz; 1ª ressonância, coluna de ar: 16,0 cm; 2ª ressonância, coluna de ar: 50,0 cm; Som no ar: vel = 331 + 0,6 · tem (m/s).",
+  "enunciado": "Num laboratório, um tubo de vidro vertical, aberto no alto, está ligado por uma mangueira a um reservatório de água, de modo que o nível da água dentro do tubo pode ser subido ou descido. A coluna de ar entre a boca do tubo e a água funciona como um tubo sonoro fechado embaixo. Um diapasão de 500 Hz vibra sobre a boca. Baixando devagar o nível, o som reforça em duas posições seguidas, sem outra entre elas. A tabela dá o comprimento da coluna de ar, medido da boca até a água:\n\n1ª ressonância: 16,0 cm\n2ª ressonância: 50,0 cm\n\nO ponto onde o ar vibra mais fica um pouco fora da boca do tubo, por uma folga que ninguém mediu. O som se propaga no ar com velocidade vel = 331 + 0,6 · tem, em m/s, sendo tem a temperatura do ar em °C. A temperatura do ar no tubo, em °C, é:\n\nDados: Diapasão: 500 Hz; 1ª ressonância, coluna de ar: 16,0 cm; 2ª ressonância, coluna de ar: 50,0 cm; Som no ar: vel = 331 + 0,6 · tem (m/s).",
   "A": "15",
   "B": "−18",
   "C": "−7",
@@ -3130,7 +3162,7 @@
   "E": "9",
   "resposta": "A",
   "explicacao": {
-   "conferencia": "Entre níveis seguidos cabe lam ÷ 2: 50 − 16 = 34 cm, lam = 68 cm; vel = 0,68 · 500 = 340 m/s; tem = (340 − 331) ÷ 0,6 = 15 °C. Resposta: alternativa A. Erros: Alternativa B = Tomou 16 cm como lam ÷ 4: lam = 64 cm, vel = 320 m/s; Alternativa C = Achou lam de cada nível sem a folga (4 · 16 e 4 · 50 ÷ 3) e fez a média; Alternativa D = Tomou 50 cm como 3 · lam ÷ 4: lam = 66,7 cm, vel ≈ 333 m/s; Alternativa E = Achou vel = 340 m/s e parou em 340 − 331, sem dividir por 0,6.",
+   "conferencia": "Entre níveis seguidos cabe lam ÷ 2: 50 − 16 = 34 cm, lam = 68 cm; vel = 0,68 · 500 = 340 m/s; tem = (340 − 331) ÷ 0,6 = 15 °C. Resposta: alternativa A. Erros: Alternativa B = Tomou 16 cm como lam ÷ 4: lam = 64 cm, vel = 320 m/s; Alternativa C = Achou lam de cada nível sem a folga (4 · 16 = 64 cm e 4 · 50 ÷ 3 ≈ 66,7 cm), fez a média (≈ 65,3 cm): vel ≈ 327 m/s; Alternativa D = Tomou 50 cm como 3 · lam ÷ 4: lam = 66,7 cm, vel ≈ 333 m/s; Alternativa E = Achou vel = 340 m/s e parou em 340 − 331, sem dividir por 0,6.",
    "ideia": "Na boca do tubo o som \"passa\" um pouco da borda, então um nível sozinho não dá lam ÷ 4. Já a diferença entre dois níveis seguidos é exatamente meio comprimento de onda, e a folga some.",
    "pecas": [
     {
@@ -3195,11 +3227,11 @@
     },
     {
      "titulo": "De onde vem cada fórmula (1 de 2)",
-     "texto": "Com lam = 68 cm, o 1º reforço seria em lam ÷ 4 = 17 cm e o 2º em 3 · lam ÷ 4 = 51 cm. Mas o ventre fica um pouco fora da boca: cada coluna medida sai menor por uma folga que ninguém mediu (aqui, 17 − 16 = 1 cm e 51 − 50 = 1 cm)."
+     "texto": "Exemplo só para ver a folga (a conta de verdade vem nos passos): se lam fosse 68 cm, o 1º reforço seria em lam ÷ 4 = 17 cm e o 2º em 3 · lam ÷ 4 = 51 cm. Mas o ponto de vibração máxima fica um pouco fora da boca: cada coluna medida sai menor por uma folga (aqui 17 − 16 = 1 cm e 51 − 50 = 1 cm)."
     },
     {
      "titulo": "De onde vem cada fórmula (2 de 2)",
-     "texto": "A folga é a mesma nos dois níveis e some na subtração: 50 − 16 = 34 cm = lam ÷ 2. Por isso 4 · 16 = 64 cm erra: ele daria vel = 320 m/s e −18 °C."
+     "texto": "A folga é a mesma nos dois níveis e some na subtração: 50 − 16 = 34 cm = lam ÷ 2. Por isso tomar 16 cm como lam ÷ 4 erra: lam = 4 · 16 = 64 cm, vel = 0,64 · 500 = 320 m/s e tem = (320 − 331) ÷ 0,6 = −11 ÷ 0,6, cerca de −18 °C."
     },
     {
      "titulo": "O desenho",
@@ -3344,11 +3376,11 @@
   "resposta": "B",
   "explicacao": {
    "conferencia": "420 = m · f1 e 700 = n · f1 com m e n inteiros: f1 = 140 ÷ kk. Com f1 pelo menos 20, kk vai de 1 a 7 (140 ÷ 7 = 20; 140 ÷ 8 = 17,5). v = 1,8 · f1 = 252 ÷ kk: sete valores. Resposta: alternativa B. Erros: Alternativa A = Supôs modos vizinhos: f1 = 700 − 420 = 280 Hz (e 420 nem é múltiplo de 280); Alternativa C = Exigiu f1 inteira: só os divisores de 140 que são pelo menos 20 (20, 28, 35, 70, 140); Alternativa D = Contou todos os divisores de 140, esquecendo o piso de 20 Hz; Alternativa E = Deu o mdc (140) em vez de contar os valores.",
-   "ideia": "Os modos são f1, 2 · f1, 3 · f1 e assim por diante, então 420 e 700 são múltiplos inteiros de f1, e f1 é o mdc (140) dividido por um inteiro kk. O piso de 20 Hz limita kk, e cada kk dá uma velocidade diferente.",
+   "ideia": "Os modos são f1, 2 · f1, 3 · f1 e assim por diante, então 420 e 700 são múltiplos inteiros de f1, e f1 é o mdc de 420 e 700 dividido por um inteiro kk. O piso de 20 Hz limita kk, e cada kk dá uma velocidade diferente.",
    "pecas": [
     {
      "termo": "mdc dividido por kk",
-     "significado": "O maior f1 possível é o mdc, 140 Hz. Dividindo-o por 2, 3, 4..., os dois modos continuam múltiplos inteiros de f1, só que de ordem mais alta."
+     "significado": "O maior f1 possível é o mdc, que se acha mais adiante. Dividindo-o por 2, 3, 4..., os dois modos continuam múltiplos inteiros de f1, só que de ordem mais alta."
     }
    ],
    "passos": [
@@ -3404,7 +3436,7 @@
     },
     {
      "titulo": "De onde vem cada fórmula (1 de 3)",
-     "texto": "Se 420 é m · f1 e 700 é n · f1, com m e n inteiros que não conhecemos, então f1 cabe um número inteiro de vezes nos dois. O maior f1 possível é o mdc, 140 Hz (modos 3º e 5º)."
+     "texto": "Se 420 é m · f1 e 700 é n · f1, com m e n inteiros que não conhecemos, então f1 cabe um número inteiro de vezes nos dois: f1 é um divisor comum de 420 e 700. O maior divisor comum é o mdc, e é o maior f1 possível; o mdc será calculado adiante."
     },
     {
      "titulo": "De onde vem cada fórmula (2 de 3)",
@@ -3412,7 +3444,7 @@
     },
     {
      "titulo": "De onde vem cada fórmula (3 de 3)",
-     "texto": "O enunciado não pede f1 inteira: f1 = 140 ÷ 3 também serve, com os modos 9º e 15º."
+     "texto": "O enunciado não pede f1 inteira: o mdc ÷ 3 também serve. A conta dos modos está no passo de kk."
     },
     {
      "titulo": "O desenho",
@@ -3428,8 +3460,8 @@
      "texto": "Cada f1 = mdc ÷ kk dá uma velocidade (v = 1,8 · f1), todas diferentes. Contar velocidades é contar valores de kk.\nAgora é só achar mdc e kk.",
      "visual": {
       "tipo": "equacao",
-      "formula": "qtd = quantos kk dão f1 = mdc ÷ kk pelo menos 20",
-      "leitura": "número de velocidades = número de fundamentais possíveis (todas diferentes)",
+      "formula": "qtd = contagem dos kk",
+      "leitura": "quantidade de velocidades = quantos inteiros kk dão f1 = mdc ÷ kk de pelo menos 20 Hz",
       "letras": [
        {
         "letra": "qtd",
@@ -3441,7 +3473,7 @@
        },
        {
         "letra": "kk",
-        "oque": "inteiro (1, 2, 3...) que divide o mdc para formar f1"
+        "oque": "inteiro (1, 2, 3...) que divide o mdc para formar f1; lê-se \"cá-cá\""
        }
       ]
      }
@@ -3504,7 +3536,7 @@
        ],
        [
         "2. Equação em letras",
-        "qtd = quantos kk dão f1 = mdc ÷ kk pelo menos 20"
+        "qtd = contagem dos kk"
        ],
        [
         "3. Uma letra por vez",
@@ -3544,7 +3576,7 @@
   "E": "100 s",
   "resposta": "B",
   "explicacao": {
-   "conferencia": "1/q1 = 1/5 − 1/6 = 1/30, q1 = 30 cm, g1 = 5, imagem 1 de 18 cm; g2 = 72 ÷ 18 = 4; 1/10 = 5/(4 · p2), p2 = 12,5 cm (maior que 10: real); Df = 30 + 12,5 = 42,5 cm; t = (42,5 − 37,5) ÷ 0,50 = 10 s. Resposta: alternativa B. Erros: Alternativa A = Tomou a solução em que a lente 2 está dentro do foco (p2 = 7,5 cm, aumento 4): já vale no início, mas a imagem é virtual e não aparece na parede; Alternativa C = Errou só o aumento da lente 2: usou 72 ÷ 3,6 = 20 (esqueceu o 5 da lente 1) mas manteve q1 = 30 cm: p2 = 10,5 cm, Df = 40,5 cm, (40,5 − 37,5) ÷ 0,50; Alternativa D = Dividiu a distância final entre as lentes (42,5 cm) pela velocidade, sem tirar os 37,5 cm do início; Alternativa E = Leu 0,50 cm/s como 0,50 mm/s: 50 mm ÷ 0,50 mm/s.",
+   "conferencia": "1/q1 = 1/5 − 1/6 = 1/30, q1 = 30 cm, imagem 1 de 18 cm; g2 = 72 ÷ 18 = 4; 1/10 = 5/(4 · p2), p2 = 12,5 cm (maior que 10: real); Df = 30 + 12,5 = 42,5 cm; t = (42,5 − 37,5) ÷ 0,50 = 10 s. Resposta: alternativa B. Erros: Alternativa A = Tomou a solução em que a lente 2 está dentro do foco (p2 = 7,5 cm, aumento 4): já vale no início, mas a imagem é virtual e não aparece na parede; Alternativa C = Usou g2 = 72 ÷ 3,6 = 20 (esqueceu o aumento 5 da lente 1) mas manteve q1 = 30 cm: p2 = 10,5 cm, Df = 30 + 10,5 = 40,5 cm, (40,5 − 37,5) ÷ 0,50 = 6 s; Alternativa D = Dividiu a distância final entre as lentes (42,5 cm) pela velocidade, sem tirar os 37,5 cm do início; Alternativa E = Leu 0,50 cm/s como 0,50 mm/s: 50 mm ÷ 0,50 mm/s.",
    "ideia": "A imagem da lente 1 é o objeto da lente 2, e o aumento total é o produto dos dois. O aumento 4 da lente 2 aparece duas vezes, com a lente dentro do foco (virtual) e fora dele (real): só a real aparece na parede.",
    "pecas": [
     {
@@ -3634,7 +3666,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A lente 2 anda de D0 até Df com velocidade v, e o tempo é essa distância dividida por v.\nAgora é só achar v, D0, q1, g1, h1, g2, p2 e Df.",
+     "texto": "A lente 2 anda de D0 até Df com velocidade v, e o tempo é essa distância dividida por v.\nAgora é só achar v, D0, q1, h1, g2, p2 e Df.",
      "visual": {
       "tipo": "equacao",
       "formula": "t = (Df − D0) ÷ v",
@@ -3661,10 +3693,6 @@
         "oque": "distância da imagem 1 até a lente 1, em cm"
        },
        {
-        "letra": "g1",
-        "oque": "aumento da lente 1"
-       },
-       {
         "letra": "h1",
         "oque": "altura da imagem 1, em cm"
        },
@@ -3680,24 +3708,20 @@
      }
     },
     {
-     "titulo": "Achando v: a velocidade",
-     "texto": "A lente 2 se afasta 0,50 cm a cada segundo.\nv = 0,50 cm/s."
+     "titulo": "Achando v: a velocidade da lente 2",
+     "texto": "A lente 2 se afasta 0,50 cm a cada segundo: v = 0,50 cm/s."
     },
     {
-     "titulo": "Achando D0: o início",
-     "texto": "No começo, as duas lentes estão a 37,5 cm uma da outra.\nD0 = 37,5 cm."
+     "titulo": "Achando D0: a distância do começo",
+     "texto": "No começo, as lentes estão a 37,5 cm uma da outra: D0 = 37,5 cm."
     },
     {
      "titulo": "Achando q1: a imagem da lente 1",
      "texto": "Com f1 = 5 e p1 = 6 (cm): 1/q1 = 1/5 − 1/6 = 6/30 − 5/30 = 1/30.\nq1 = 30 cm, depois da lente 1."
     },
     {
-     "titulo": "Achando g1: o aumento da lente 1",
-     "texto": "g1 = q1 ÷ p1 = 30 ÷ 6 = 5."
-    },
-    {
      "titulo": "Achando h1: o tamanho da imagem 1",
-     "texto": "h1 = g1 · 3,6 = 5 · 3,6. Como 5 · 3 = 15 e 5 · 0,6 = 3, h1 = 18 cm.\nÉ esse tamanho que a lente 2 vai ampliar."
+     "texto": "A lente 1 aumenta q1 ÷ p1 = 30 ÷ 6 = 5 vezes o objeto de 3,6 cm: h1 = 5 · 3,6. Como 5 · 3 = 15 e 5 · 0,6 = 3, h1 = 18 cm.\nÉ esse tamanho que a lente 2 vai ampliar."
     },
     {
      "titulo": "Achando g2: o aumento da lente 2",
@@ -3705,7 +3729,7 @@
     },
     {
      "titulo": "Achando p2: onde está o objeto da lente 2",
-     "texto": "g2 = q2 ÷ p2, então q2 = 4 · p2. Com f2 = 10: 1/10 = 1/p2 + 1/(4 · p2) = 4/(4 · p2) + 1/(4 · p2) = 5/(4 · p2).\nCruzando: 4 · p2 = 5 · 10 = 50, então p2 = 50 ÷ 4 = 12,5 cm.\np2 é maior que f2 = 10: a imagem é real e aparece na parede.",
+     "texto": "q2 é a distância da imagem final à lente 2. g2 = q2 ÷ p2, então q2 = 4 · p2. Com f2 = 10: 1/10 = 1/p2 + 1/(4 · p2).\nTroque 1/p2 por 4/(4 · p2): multiplicar em cima e embaixo por 4 não muda a fração (1/5 = 4/20). Então 1/10 = 4/(4 · p2) + 1/(4 · p2) = 5/(4 · p2).",
      "visual": {
       "tipo": "diagrama",
       "nome": "projetor-duas-lentes",
@@ -3723,12 +3747,16 @@
      }
     },
     {
+     "titulo": "Achando p2: onde está o objeto da lente 2 (2 de 2)",
+     "texto": "Cruzando: 4 · p2 = 5 · 10 = 50, p2 = 50 ÷ 4 = 12,5 cm. É maior que f2 = 10: imagem real, aparece na parede."
+    },
+    {
      "titulo": "Achando Df: a distância entre as lentes",
      "texto": "A imagem 1 está a q1 = 30 cm da lente 1, e o objeto da lente 2 fica a p2 = 12,5 cm antes dela.\nDf = 30 + 12,5 = 42,5 cm."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "t = (Df − D0) ÷ v = (42,5 − 37,5) ÷ 0,50 = 5 ÷ 0,5 = 10 s.\nResposta: alternativa B. Conferindo: 0,50 · 10 = 5 cm. No início p2 = 37,5 − 30 = 7,5 cm, dentro do foco: a imagem é virtual e também tem aumento 4 (10 ÷ 2,5), mas não aparece na parede. Por isso 0 s não serve.",
+     "texto": "t = (Df − D0) ÷ v = (42,5 − 37,5) ÷ 0,50 = 5 ÷ 0,5 = 10 s.\nResposta: alternativa B. Conferindo: 0,50 · 10 = 5 cm. Em t = 0, p2 = 37,5 − 30 = 7,5 cm (dentro do foco): q2 = −30 (virtual), aumento 30 ÷ 7,5 = 4, mas não aparece na parede. Por isso 0 s não serve.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -3748,10 +3776,6 @@
        [
         "q1",
         "30 cm"
-       ],
-       [
-        "g1",
-        "5"
        ],
        [
         "h1",
@@ -3797,7 +3821,7 @@
        ],
        [
         "3. Uma letra por vez",
-        "q1 = 30; g1 = 5; h1 = 18; g2 = 4; p2 = 12,5; Df = 42,5"
+        "q1 = 30; h1 = 18; g2 = 4; p2 = 12,5; Df = 42,5"
        ]
       ]
      }
@@ -3834,7 +3858,7 @@
   "resposta": "C",
   "explicacao": {
    "conferencia": "nv = 600 ÷ 400 = 1,5; nl = 3,0 ÷ 1,875 = 1,6; N = 15/16; 1/f = (−1/16) · (2/15) = −1/120, f = −120 cm; 1/q = −1/120 − 1/40 = −1/30, q = −30 cm; g = 30 ÷ 40 = 0,75; imagem de 6 cm. Resposta: alternativa C. Erros: Alternativa A = Usou o foco da lente no ar (15 cm), sem trocar o meio: 1/q = 1/15 − 1/40; Alternativa B = Usou a diferença nv − nl = −0,1 em vez da razão: f = −75 cm; Alternativa D = Perdeu o sinal do foco em Gauss: usou f = +120 cm e 1/q = 1/120 − 1/40; Alternativa E = Inverteu a razão (N = 1,6 ÷ 1,5): f = +112,5 cm, objeto dentro do foco.",
-   "ideia": "O que decide é a razão entre o índice da lente e o do meio. Como o líquido é mais refringente que o vidro, a biconvexa diverge, e a imagem de um objeto real é virtual, direita e menor.",
+   "ideia": "O que decide é a razão entre o índice da lente e o do meio. Como o líquido tem índice de refração maior que o do vidro, a biconvexa diverge, e a imagem de um objeto real é virtual, direita e menor.",
    "pecas": [
     {
      "termo": "Razão N",
@@ -3979,7 +4003,7 @@
     },
     {
      "titulo": "Achando N: o índice relativo",
-     "texto": "N = nv ÷ nl = 1,5 ÷ 1,6 = 15 ÷ 16.\nN é menor que 1: N − 1 = 15/16 − 16/16 = −1/16."
+     "texto": "N = nv ÷ nl = 1,5 ÷ 1,6 = 15 ÷ 16 (multiplico os dois por 10; a conta não muda).\nN é menor que 1: N − 1 = 15/16 − 1 = 15/16 − 16/16 = −1/16, pois 1 = 16/16 e 15 − 16 = −1."
     },
     {
      "titulo": "Achando f: o foco no líquido",
@@ -3987,7 +4011,7 @@
     },
     {
      "titulo": "Achando q: onde fica a imagem",
-     "texto": "1/f = 1/p + 1/q, então 1/q = 1/f − 1/p = −1/120 − 1/40 = −1/120 − 3/120 = −4/120 = −1/30.\nq = −30 cm: negativo, imagem virtual a 30 cm da lente."
+     "texto": "1/f = 1/p + 1/q, então 1/q = 1/f − 1/p = −1/120 − 1/40 = −1/120 − 3/120 (1/40 = 3/120). Tirar 3 de −1 anda para o lado negativo: −1 − 3 = −4, então −4/120. Dividindo em cima e embaixo por 4: −1/30.\nq = −30 cm: negativo, imagem virtual a 30 cm da lente."
     },
     {
      "titulo": "Achando g: o aumento",
@@ -4092,7 +4116,7 @@
   "origem": "Escada",
   "ancora": "forte · ITA 2020 2ª fase q.9 (fibra de 3 km, raio guiado por reflexões totais: o caminho é L ÷ sen θL e o tempo, L · n² ÷ (c · n do revestimento)) e Fuvest 2025 1ª fase q.22 (tabela de índices: há reflexão total só se n1 > n2)",
   "canal": "fora do canal: reflexão total e ângulo limite (0 hits); v = c/n em fis-08-optica-espelhos-esfericos-lentes-e-refra.txt [8:14:31]",
-  "enunciado": "Uma fibra óptica reta de 3,0 km tem núcleo de vidro com índice de refração 1,50. A luz é guiada por reflexões totais na parede entre o núcleo e o revestimento. O engenheiro dispõe de revestimentos de quatro índices de refração, e escolhe o de maior índice que ainda permite guiar a luz. Raios que entram com ângulos diferentes fazem caminhos diferentes, e o pulso se alarga: o atraso é a diferença entre o tempo do raio mais lento (o que reflete rente ao limite da reflexão total) e o do raio que anda ao longo do eixo da fibra. A velocidade da luz no vácuo é 3,0 × 10⁸ m/s (1 µs = 10⁻⁶ s).\n\nÍndices dos revestimentos:   1,20   |   1,35   |   1,45   |   1,50\n\nCom o revestimento escolhido, o atraso entre o raio mais lento e o raio axial, ao fim dos 3,0 km, vale:\n\nDados: Fibra: 3,0 km, núcleo de índice 1,50; Revestimentos: índices 1,20; 1,35; 1,45 e 1,50; Escolha: o de maior índice que ainda guia a luz; Luz no vácuo: 3,0 × 10⁸ m/s; Atraso: tempo do mais lento − tempo do axial; Unidade: 1 µs = 10⁻⁶ s.",
+  "enunciado": "Uma fibra óptica reta de 3,0 km tem núcleo de vidro com índice de refração 1,50, envolvido por um revestimento (uma camada de fora, de outro material). A luz é guiada por reflexões totais na parede entre o núcleo e o revestimento. O engenheiro dispõe de revestimentos de quatro índices de refração, e escolhe o de maior índice que ainda permite guiar a luz. Raios que entram com ângulos diferentes fazem caminhos diferentes, e o pulso se alarga: o atraso é a diferença entre o tempo do raio mais lento (o que reflete rente ao limite da reflexão total) e o do raio que anda ao longo do eixo da fibra. A velocidade da luz no vácuo é 3,0 × 10⁸ m/s (1 µs = 10⁻⁶ s).\n\nÍndices dos revestimentos:   1,20   |   1,35   |   1,45   |   1,50\n\nCom o revestimento escolhido, o atraso entre o raio mais lento e o raio axial, ao fim dos 3,0 km, vale:\n\nDados: Fibra: 3,0 km, núcleo de índice 1,50; Revestimentos: índices 1,20; 1,35; 1,45 e 1,50; Escolha: o de maior índice que ainda guia a luz; Luz no vácuo: 3,0 × 10⁸ m/s; Atraso: tempo do mais lento − tempo do axial; Unidade: 1 µs = 10⁻⁶ s.",
   "A": "0",
   "B": "1,67 µs",
   "C": "3,75 µs",
@@ -4127,7 +4151,7 @@
        {
         "figura": "grafico",
         "nome": "Seno do ângulo limite",
-        "formula": "sl = nr ÷ n do núcleo"
+        "formula": "sli = nr ÷ n do núcleo"
        },
        {
         "figura": "carro",
@@ -4186,22 +4210,22 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "O atraso é o tempo do raio mais lento menos o do raio axial.\nAgora é só achar nr, vn, ta, sl, Lc e tl.",
+     "texto": "O atraso é o tempo do raio mais lento menos o do raio axial.\nAgora é só achar nr, vn, tax, sli, Lc e tle.",
      "visual": {
       "tipo": "equacao",
-      "formula": "at = tl − ta",
+      "formula": "atr = tle − tax",
       "leitura": "atraso = tempo do raio mais lento − tempo do raio axial",
       "letras": [
        {
-        "letra": "at",
+        "letra": "atr",
         "oque": "atraso entre os dois raios, em µs (o que a questão quer)"
        },
        {
-        "letra": "tl",
+        "letra": "tle",
         "oque": "tempo do raio mais lento, em µs"
        },
        {
-        "letra": "ta",
+        "letra": "tax",
         "oque": "tempo do raio axial, em µs"
        },
        {
@@ -4213,7 +4237,7 @@
         "oque": "velocidade da luz no núcleo, em m/s"
        },
        {
-        "letra": "sl",
+        "letra": "sli",
         "oque": "seno do ângulo limite"
        },
        {
@@ -4258,16 +4282,16 @@
      "texto": "vn = c ÷ n = (3,0 × 10⁸) ÷ 1,5. Como 3,0 ÷ 1,5 = 2,0, vn = 2,0 × 10⁸ m/s."
     },
     {
-     "titulo": "Achando ta: o tempo do raio axial",
-     "texto": "3,0 km = 3 000 m. ta = 3 000 ÷ (2,0 × 10⁸). Primeiro 3 000 ÷ 2 = 1 500; depois 1 500 ÷ 10⁸ = 0,000 015 s (a vírgula anda 8 casas para a esquerda).\nComo 1 µs = 0,000 001 s, ta = 15 µs."
+     "titulo": "Achando tax: o tempo do raio axial",
+     "texto": "3,0 km = 3 000 m. tax = 3 000 ÷ (2,0 × 10⁸). Primeiro 3 000 ÷ 2 = 1 500; depois 1 500 ÷ 10⁸ = 0,000 015 s (a vírgula anda 8 casas para a esquerda).\nComo 1 µs = 0,000 001 s, tax = 15 µs."
     },
     {
-     "titulo": "Achando sl: o seno do ângulo limite",
-     "texto": "sl = nr ÷ n do núcleo = 1,45 ÷ 1,50. Multiplico os dois por 100: 145 ÷ 150.\nDividindo por 5 em cima e embaixo: 145 ÷ 5 = 29 e 150 ÷ 5 = 30. sl = 29/30."
+     "titulo": "Achando sli: o seno do ângulo limite",
+     "texto": "sli = nr ÷ n do núcleo = 1,45 ÷ 1,50. Multiplico os dois por 100: 145 ÷ 150.\nDividindo por 5 em cima e embaixo: 145 ÷ 5 = 29 e 150 ÷ 5 = 30. sli = 29/30."
     },
     {
      "titulo": "Achando Lc: o caminho do raio lento",
-     "texto": "Para cada metro ao longo do eixo, o raio anda 1 ÷ sl metros (ângulo medido da normal).\nLc = 3 000 ÷ (29/30) = 3 000 · 30/29 = 90 000 ÷ 29.\n29 · 3 100 = 89 900 e sobram 100; 100 ÷ 29 ≈ 3,4. Lc ≈ 3 103,4 m.",
+     "texto": "Seno = avanço no eixo ÷ caminho do raio. Com sli = 29/30: a cada 30 m que o raio anda, só 29 m avançam no eixo. Para avançar 3 000 m, o caminho é maior que 3 000 m: caminho = avanço ÷ sli.\nLc = 3 000 ÷ (29/30) = 3 000 · 30/29 = 90 000 ÷ 29.",
      "visual": {
       "tipo": "diagrama",
       "nome": "fibra-zigue-zague",
@@ -4283,12 +4307,16 @@
      }
     },
     {
-     "titulo": "Achando tl: o tempo do raio lento",
-     "texto": "tl = Lc ÷ vn = 3 103,4 ÷ (2,0 × 10⁸). Primeiro 3 103,4 ÷ 2 = 1 551,7; depois ÷ 10⁸: 0,000 015 517 s.\nEm µs: tl = 15,517 µs."
+     "titulo": "Achando Lc: o caminho do raio lento (2 de 2)",
+     "texto": "29 · 3 100 = 89 900 e sobram 100; 100 ÷ 29 ≈ 3,4. Lc ≈ 3 103,4 m."
+    },
+    {
+     "titulo": "Achando tle: o tempo do raio lento",
+     "texto": "tle = Lc ÷ vn = 3 103,4 ÷ (2,0 × 10⁸). Primeiro 3 103,4 ÷ 2 = 1 551,7; depois ÷ 10⁸: 0,000 015 517 s.\nEm µs: tle = 15,517 µs."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "at = tl − ta = 15,517 − 15 = 0,517, que arredondado dá 0,52 µs.\nResposta: alternativa D. Conferindo: o raio lento anda 3 103,4 − 3 000 = 103,4 m a mais, e 103,4 ÷ (2,0 × 10⁸) ≈ 0,517 µs.",
+     "texto": "atr = tle − tax = 15,517 − 15 = 0,517, que arredondado dá 0,52 µs.\nResposta: alternativa D. Conferindo: o raio lento anda 3 103,4 − 3 000 = 103,4 m a mais, e 103,4 ÷ (2,0 × 10⁸): 103,4 ÷ 2 = 51,7 e 51,7 ÷ 10⁸ = 0,000 000 517 s = 0,517 µs (1 µs = 0,000 001 s).",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -4306,11 +4334,11 @@
         "2,0 × 10⁸ m/s"
        ],
        [
-        "ta",
+        "tax",
         "15 µs"
        ],
        [
-        "sl",
+        "sli",
         "29/30"
        ],
        [
@@ -4318,7 +4346,7 @@
         "3 103,4 m"
        ],
        [
-        "tl",
+        "tle",
         "15,517 µs"
        ]
       ]
@@ -4345,30 +4373,30 @@
        ],
        [
         "2. Equação em letras",
-        "at = tl − ta"
+        "atr = tle − tax"
        ],
        [
         "3. Uma letra por vez",
-        "nr = 1,45; vn = 2,0 × 10⁸; ta = 15; sl = 29/30; Lc = 3 103,4"
+        "nr = 1,45; vn = 2,0 × 10⁸; tax = 15; sli = 29/30"
        ],
        [
         "3. Uma letra por vez (cont.)",
-        "tl = 15,517"
+        "Lc = 3 103,4; tle = 15,517"
        ]
       ]
      }
     }
    ],
    "checagem": {
-    "pergunta": "Núcleo de 1,60 e revestimento de 1,20. Quanto vale o seno do ângulo limite?",
+    "pergunta": "Núcleo de 1,80 e revestimento de 1,20. Quanto vale o seno do ângulo limite?",
     "opcoes": [
-     "0,75",
-     "1,33",
-     "0,4",
-     "1,92"
+     "0,67",
+     "1,5",
+     "0,6",
+     "2,16"
     ],
-    "certa": "0,75",
-    "resposta": "sen θL = 1,20 ÷ 1,60 = 0,75."
+    "certa": "0,67",
+    "resposta": "sen θL = 1,20 ÷ 1,80 = 12 ÷ 18 = 2/3, cerca de 0,67."
    },
    "seuErro": null
   }
@@ -4389,7 +4417,7 @@
   "E": "8",
   "resposta": "E",
   "explicacao": {
-   "conferencia": "Desdobrando, o sensor aparece em y = 2 + 6j e em y = −2 + 6j; a inclinação é (y − 1) ÷ 12 e vale até 1, então y vai de −11 a 13; pares: −10, −4, 2, 8; ímpares: −8, −2, 4, 10; total 8. Resposta: alternativa E. Erros: Alternativa A = Contou só as direções com número par de reflexões (a imagem do alvo sem inverter) e esqueceu o alvo refletido no espelho; Alternativa B = Contou um caminho para cada número de reflexões, de 0 a 4, sem ver que cada número aparece 2 vezes (subindo e descendo), menos o 0; Alternativa C = Não contou o raio direto, sem reflexão, que também chega ao sensor; Alternativa D = Contou as direções duas vezes, uma subindo e outra descendo.",
+   "conferencia": "Desdobrando, o sensor aparece em y = 2 + 6j e em y = −2 + 6j; a inclinação é (y − 1) ÷ 12 e vale até 1, então y vai de −11 a 13; pares: −10, −4, 2, 8; ímpares: −8, −2, 4, 10; total 8. Resposta: alternativa E. Erros: Alternativa A = Contou só as direções com número par de reflexões (a imagem de reflexões pares) e esqueceu o alvo refletido no espelho; Alternativa B = Contou um caminho para cada número de reflexões, de 0 a 4, sem ver que cada número aparece 2 vezes (subindo e descendo), menos o 0; Alternativa C = Não contou o raio direto, sem reflexão, que também chega ao sensor; Alternativa D = Contou as direções duas vezes, uma subindo e outra descendo.",
    "ideia": "Desdobre o corredor: cada direção de tiro é uma reta até uma imagem do sensor, com y = 2 + 6j (reflexões pares) ou y = −2 + 6j (ímpares). O limite de 45° corta a lista, e é só contar as imagens que cabem.",
    "pecas": [
     {
@@ -4421,7 +4449,7 @@
        {
         "figura": "contagem",
         "nome": "Total",
-        "formula": "n = a + b"
+        "formula": "n = par + imp"
        }
       ]
      }
@@ -4467,10 +4495,10 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Cada direção que acerta o sensor aponta para uma imagem dele. O total é a soma das imagens de reflexões pares e de ímpares.\nAgora é só achar lo, hi, a e b.",
+     "texto": "Cada direção que acerta o sensor aponta para uma imagem dele. O total é a soma das imagens de reflexões pares e de ímpares.\nAgora é só achar lo, hi, par e imp.",
      "visual": {
       "tipo": "equacao",
-      "formula": "n = a + b",
+      "formula": "n = par + imp",
       "leitura": "direções = imagens com número par de reflexões + imagens com número ímpar",
       "letras": [
        {
@@ -4478,12 +4506,12 @@
         "oque": "número de direções de disparo (o que a questão quer)"
        },
        {
-        "letra": "a",
-        "oque": "imagens do sensor sem inverter, y = 2 + 6j, dentro do limite"
+        "letra": "par",
+        "oque": "imagens do sensor depois de um número par de reflexões, y = 2 + 6j, dentro do limite"
        },
        {
-        "letra": "b",
-        "oque": "imagens do sensor invertido, y = −2 + 6j, dentro do limite"
+        "letra": "imp",
+        "oque": "imagens do sensor depois de um número ímpar de reflexões, y = −2 + 6j, dentro do limite"
        },
        {
         "letra": "lo",
@@ -4498,19 +4526,23 @@
     },
     {
      "titulo": "Achando lo: o menor y",
-     "texto": "Posição no desenho desdobrado: x vai de 0 a 12 e y parte de 1. A inclinação é (y − 1) ÷ 12.\nPara 45° para baixo a inclinação é −1: y − 1 = −12, então lo = 1 − 12 = −11."
+     "texto": "Posição no desenho desdobrado: x vai de 0 a 12 e y parte de 1. Inclinação é quanto y muda a cada 1 m de x: (y − 1) ÷ 12.\nA 45° o raio anda 1 m para o lado e 1 m para baixo (lados iguais, como a diagonal de um quadrado): inclinação −1. Então y − 1 = −12 e lo = 1 − 12 = −11."
     },
     {
      "titulo": "Achando hi: o maior y",
-     "texto": "Para 45° para cima a inclinação é 1: y − 1 = 12, então hi = 1 + 12 = 13.\nSó contam as imagens do sensor com y de −11 a 13."
+     "texto": "A 45° para cima, 1 m de subida a cada 1 m de x: inclinação 1, y − 1 = 12 e hi = 1 + 12 = 13.\nSó contam as imagens do sensor com y de −11 a 13."
     },
     {
-     "titulo": "Achando a: as imagens sem inverter",
-     "texto": "Passar o alvo pelos dois espelhos, um depois do outro, o desloca 2 · 3 = 6 m. Assim o sensor aparece em y = 2 + 6j, com j inteiro.\nj = −3: −16 (fora). j = −2: −10, j = −1: −4, j = 0: 2, j = 1: 8 (dentro). j = 2: 14 (fora). a = 4."
+     "titulo": "Achando par: as imagens de reflexões pares",
+     "texto": "Reflexão é cada batida do raio num espelho. Cada espelho joga o sensor para o outro lado dele: pelo espelho de baixo (y = 0), y = 2 vira −2; depois pelo de cima (y = 3), −2 vira 3 + 5 = 8. Passando pelos dois, o sensor subiu de 2 para 8: 6 m = 2 · 3."
     },
     {
-     "titulo": "Achando b: as imagens invertidas",
-     "texto": "Refletido no espelho de baixo (y = 0), o sensor vai para y = −2, e repete a cada 6: y = −2 + 6j.\nj = −2: −14 (fora). j = −1: −8, j = 0: −2, j = 1: 4, j = 2: 10 (dentro). j = 3: 16 (fora). b = 4.",
+     "titulo": "Achando par: as imagens de reflexões pares (2 de 2)",
+     "texto": "Repetindo, o sensor aparece em y = 2 + 6j, com j inteiro.\nj = −3: −16 (fora). j = −2: −10, j = −1: −4, j = 0: 2, j = 1: 8 (dentro). j = 2: 14 (fora). par = 4."
+    },
+    {
+     "titulo": "Achando imp: as imagens de reflexões ímpares",
+     "texto": "Refletido no espelho de baixo (y = 0), o sensor vai para y = −2, e repete a cada 6: y = −2 + 6j.\nj = −2: −14 (fora). j = −1: −8, j = 0: −2, j = 1: 4, j = 2: 10 (dentro). j = 3: 16 (fora). imp = 4.",
      "visual": {
       "tipo": "diagrama",
       "nome": "corredor-imagens",
@@ -4527,7 +4559,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "n = a + b = 4 + 4 = 8.\nResposta: alternativa E. Conferindo: as 8 retas cruzam 0, 1, 1, 2, 2, 3, 3 e 4 linhas de espelho (y = 3, 6, 9 ou y = 0, −3, −6, −9), e simulei o raio nas 8 direções: todas acertam o sensor.",
+     "texto": "n = par + imp = 4 + 4 = 8.\nResposta: alternativa E. Conferindo: cada reta até uma imagem cruza as linhas de espelho (y = 0, 3, 6, 9... e −3, −6, −9) que ficam entre y = 1 e a imagem, e cada cruzamento é uma batida.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -4545,15 +4577,19 @@
         "13"
        ],
        [
-        "a",
+        "par",
         "4"
        ],
        [
-        "b",
+        "imp",
         "4"
        ]
       ]
      }
+    },
+    {
+     "titulo": "Volta na equação (2 de 2)",
+     "texto": "Imagem y = 2: 0 batidas (raio direto). y = 4: 1 (a linha y = 3). y = −10: 4 (y = 0, −3, −6, −9). As 8 retas dão 0, 1, 1, 2, 2, 3, 3 e 4 batidas."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -4572,11 +4608,11 @@
        ],
        [
         "2. Equação em letras",
-        "n = a + b"
+        "n = par + imp"
        ],
        [
         "3. Uma letra por vez",
-        "lo = −11; hi = 13; a = 4; b = 4"
+        "lo = −11; hi = 13; par = 4; imp = 4"
        ]
       ]
      }
@@ -4713,7 +4749,7 @@
        },
        {
         "letra": "Pjun",
-        "oque": "potência elétrica da posição usada em junho, em kW"
+        "oque": "potência elétrica da posição de junho, em kW (lê-se \"P de junho\")"
        },
        {
         "letra": "Pjul",
@@ -4721,7 +4757,7 @@
        },
        {
         "letra": "Pago",
-        "oque": "potência elétrica da posição usada em agosto, em kW"
+        "oque": "potência elétrica da posição de agosto, em kW (\"P de agosto\", não a palavra pago)"
        },
        {
         "letra": "Hor",
@@ -4748,7 +4784,11 @@
     },
     {
      "titulo": "O que o chuveiro puxa da tomada: posição quente",
-     "texto": "Só 80% do que ele puxa vira calor: puxando 100 W, 80 W viram calor (100 · 0,8). Então puxa o calor ÷ 0,8.\nQuente (16 °C): calor = 210 · 16 = 3 360 W (210 · 10 = 2 100 e 210 · 6 = 1 260). Puxa 3 360 ÷ 0,8 = 33 600 ÷ 8 = 4 200 W (pois 8 · 4 200 = 33 600)."
+     "texto": "Só 80% do que ele puxa vira calor: puxando 100 W, 80 W viram calor (100 · 0,8). Voltando: para dar 80 W de calor ele puxa 80 ÷ 0,8 = 100 W. Vale para qualquer calor: puxa = calor ÷ 0,8."
+    },
+    {
+     "titulo": "O que o chuveiro puxa da tomada: posição quente (2 de 2)",
+     "texto": "Quente (16 °C): calor = 210 · 16 = 3 360 W (210 · 10 = 2 100 e 210 · 6 = 1 260). Puxa 3 360 ÷ 0,8 = 33 600 ÷ 8 = 4 200 W (pois 8 · 4 200 = 33 600)."
     },
     {
      "titulo": "O que o chuveiro puxa nas outras duas posições",
@@ -4756,19 +4796,19 @@
     },
     {
      "titulo": "Achando Pjun: a posição de junho",
-     "texto": "Em junho a água chega a 24 °C e precisa subir 38 − 24 = 14 °C. O morno sobe 8: é pouco. O quente sobe 16 (16 ≥ 14): é a menor que serve.\nPjun = 4 200 W = 4,2 kW (1 kW = 1 000 W)."
+     "texto": "Em junho a água chega a 24 °C e precisa subir 38 − 24 = 14 °C. O morno sobe 8: é pouco. O quente sobe 16 (16 ≥ 14, maior ou igual): é a menor que serve.\nPjun = 4 200 W = 4,2 kW (1 kW = 1 000 W)."
     },
     {
      "titulo": "Achando Pjul: a posição de julho",
-     "texto": "Em julho: 38 − 18 = 20 °C. O quente sobe só 16 (16 < 20): não basta. O superquente sobe 24 (24 ≥ 20): só ele serve.\nPjul = 6 300 W = 6,3 kW."
+     "texto": "Em julho: 38 − 18 = 20 °C. O quente sobe só 16 (16 < 20, menor que): não basta. O superquente sobe 24 (24 ≥ 20): só ele serve.\nPjul = 6 300 W = 6,3 kW."
     },
     {
      "titulo": "Achando Pago: a posição de agosto",
-     "texto": "Em agosto: 38 − 22 = 16 °C. O quente sobe exatamente 16: serve (16 ≥ 16, a temperatura é atingida). O morno não.\nCuidado: \"o quente sobe 16\" e \"precisam 16\" são iguais, e igual serve. Pago = 4 200 W = 4,2 kW."
+     "texto": "Em agosto: 38 − 22 = 16 °C. O quente sobe exatamente 16: serve (16 ≥ 16: maior ou igual, a temperatura é atingida). O morno não.\nCuidado: \"o quente sobe 16\" e \"precisam 16\" são iguais, e igual serve. Pago = 4 200 W = 4,2 kW."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "Cus = (4,2 + 6,3 + 4,2) · 20 · 0,90.\nSoma: 4,2 + 6,3 = 10,5 e 10,5 + 4,2 = 14,7 kW. 14,7 · 20 = 294 kWh (14 · 20 = 280 e 0,7 · 20 = 14).\n294 · 0,90 = 264,6 (294 · 9 = 2 646, dividido por 10).\nCus = R$ 264,60.\nResposta: alternativa C.",
+     "texto": "Cus = (4,2 + 6,3 + 4,2) · 20 · 0,90.\nSoma: 4,2 + 6,3 = 10,5 e 10,5 + 4,2 = 14,7 kW. 14,7 · 20 = 294 kWh (14 · 20 = 280 e 0,7 · 20 = 14).\n294 · 0,90 = 264,6 (294 · 9 = 2 940 − 294 = 2 646, dividido por 10).\nCus = R$ 264,60.\nResposta: alternativa C.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -4861,7 +4901,7 @@
   "E": "70 000",
   "resposta": "D",
   "explicacao": {
-   "conferencia": "Fem = (16 · 3 + 4 · 1,5) ÷ 4,5 = 12 V e Rin = 1,5 · 3 ÷ 4,5 = 1 Ω; potência máxima com R = Rin = 1 Ω: corrente 6 A, potência 36 W; calor = 0,1 · 4 200 · 6 = 2 520 J; tempo = 2 520 ÷ 36 = 70 s. Resposta: alternativa D. Erros: Alternativa A = Usou a potência total das duas baterias, 104 W; parte dela esquenta as próprias baterias e a bateria de 4 V ainda é carregada; Alternativa B = Casou R com 1,5 Ω, a menor resistência interna, em vez da resistência da bateria única: potência 34,56 W; Alternativa C = Tirou a média simples das fem (10 V) em vez de ponderar pelas resistências: potência 25 W; Alternativa E = Usou 100 g como se fossem 100 kg: calor de 2 520 000 J.",
+   "conferencia": "Fem = (16 · 3 + 4 · 1,5) ÷ 4,5 = 12 V e Rin = 1,5 · 3 ÷ 4,5 = 1 Ω; potência máxima com R = Rin = 1 Ω: corrente 6 A, potência 36 W; calor = 0,1 · 4 200 · 6 = 2 520 J; tempo = 2 520 ÷ 36 = 70 s. Resposta: alternativa D. Erros: Alternativa A = Usou a potência total das duas baterias, 104 W (16 · 6,67 − 4 · 0,67; a de 4 V é carregada); parte dela esquenta as próprias baterias; Alternativa B = Casou R com 1,5 Ω, a menor resistência interna, em vez da resistência da bateria única: potência 34,56 W; Alternativa C = Tirou a média simples das fem (10 V) em vez de ponderar pelas resistências: potência 25 W; Alternativa E = Usou 100 g como se fossem 100 kg: calor de 2 520 000 J.",
    "ideia": "As duas baterias em paralelo valem uma só, com Fem e Rin equivalentes. A potência no resistor é máxima quando R é igual à Rin, e o tempo é o calor da água dividido por essa potência.",
    "pecas": [
     {
@@ -4982,7 +5022,7 @@
     },
     {
      "titulo": "Achando Fem: a bateria única",
-     "texto": "Regra do \"Antes\": Fem = (ε1 · r2 + ε2 · r1) ÷ (r1 + r2), com ε1 = 16, r1 = 1,5, ε2 = 4 e r2 = 3.\n16 · 3 = 48 e 4 · 1,5 = 6, e 48 + 6 = 54. Embaixo: 1,5 + 3 = 4,5."
+     "texto": "Regra do \"Antes\" (ε lê-se \"épsilon\", a fem de cada bateria): Fem = (ε1 · r2 + ε2 · r1) ÷ (r1 + r2). Teste: duas de 12 V dão 12 · (r1 + r2) ÷ (r1 + r2) = 12 V.\nAqui ε1 = 16, r1 = 1,5, ε2 = 4, r2 = 3: 16 · 3 = 48 e 4 · 1,5 = 6; 48 + 6 = 54. Embaixo: 1,5 + 3 = 4,5."
     },
     {
      "titulo": "Achando Fem: a divisão por decimal",
@@ -5011,7 +5051,7 @@
     },
     {
      "titulo": "Achando Pot: o R que dá o máximo",
-     "texto": "Teste perto de R = 1: R = 0,8: corrente 12 ÷ 1,8 ≈ 6,67 A e potência ≈ 35,6 W. R = 1: corrente 6 A e (1 · 6) · 6 = 36 W. R = 1,25: corrente 12 ÷ 2,25 ≈ 5,33 A e ≈ 35,6 W.\nMais longe: R = 0,5 e R = 2 dão 32 W; R = 3 dá 27 W. O topo é em R = Rin = 1 Ω (vale sempre). Pot = 36 W.",
+     "texto": "Teste perto de R = 1 (≈ lê-se \"cerca de\"): R = 0,8: corrente 12 ÷ 1,8 ≈ 6,67 A e potência (0,8 · 6,67) · 6,67 ≈ 35,6 W. R = 1: corrente 6 A e (1 · 6) · 6 = 36 W. R = 1,25: corrente 12 ÷ 2,25 ≈ 5,33 A e potência ≈ 35,6 W (com a corrente sem arredondar: 1,25 · 5,333 · 5,333).",
      "visual": {
       "tipo": "diagrama",
       "nome": "baterias-paralelo",
@@ -5026,6 +5066,10 @@
        "R = 1 Ω: potência máxima 36 W"
       ]
      }
+    },
+    {
+     "titulo": "Achando Pot: o R que dá o máximo (2 de 2)",
+     "texto": "Mais longe: R = 0,5 e R = 2 dão 32 W; R = 3 dá 27 W. Outra bateria (12 V e 3 Ω): R = 2 dá 11,5 W, R = 3 dá 12 W, R = 6 dá 10,7 W. Em ambas o topo é em R = Rin. Aqui Pot = 36 W."
     },
     {
      "titulo": "Volta na equação",
@@ -5114,7 +5158,7 @@
   "E": "60 mA",
   "resposta": "E",
   "explicacao": {
-   "conferencia": "R4 em curto (as duas pontas na linha 2) e R3 aberto (ponta solta na linha 5) saem da conta. R5 + R6 = 150 Ω em série; 300 · 150 ÷ 450 = 100 Ω em paralelo com R2; com R1 = 100 Ω, total 200 Ω; corrente total 18 ÷ 200 = 90 mA; tensão 100 · 0,09 = 9 V; corrente em R6 = 9 ÷ 150 = 60 mA. Resposta: alternativa E. Erros: Alternativa A = Pôs R4 em série (não viu o curto): 100 + 100 + 470 = 670 Ω, corrente total 26,9 mA, tensão 2,69 V no paralelo; Alternativa B = Deu a corrente de R2 (9 ÷ 300), não a do ramo de R5 e R6; Alternativa C = Pôs R3 em paralelo (não viu que ele está aberto): paralelo de 60 Ω, corrente total 112,5 mA; Alternativa D = Deu a corrente total (18 ÷ 200), sem dividir entre R2 e o ramo de R5 e R6.",
+   "conferencia": "R4 em curto (as duas pontas na linha 2) e R3 aberto (ponta solta na linha 5) saem da conta. R5 + R6 = 150 Ω em série; 300 · 150 ÷ 450 = 100 Ω em paralelo com R2; com R1 = 100 Ω, total 200 Ω; corrente total 18 ÷ 200 = 90 mA; tensão 100 · 0,09 = 9 V; corrente em R6 = 9 ÷ 150 = 60 mA. Resposta: alternativa E. Erros: Alternativa A = Pôs R4 em série (não viu o curto): 100 + 100 + 470 = 670 Ω, corrente total 26,9 mA, tensão 2,69 V no paralelo; Alternativa B = Deu a corrente de R2 (9 ÷ 300), não a do ramo de R5 e R6; Alternativa C = Pôs R3 em paralelo (não viu o aberto): 150 e 150 dão 75 Ω; 300 e 75 dão 22 500 ÷ 375 = 60 Ω; total 100 + 60 = 160 Ω, corrente total 18 ÷ 160 = 112,5 mA, tensão 6,75 V, 6,75 ÷ 150 = 45 mA; Alternativa D = Deu a corrente total (18 ÷ 200), sem dividir entre R2 e o ramo de R5 e R6.",
    "ideia": "Dois defeitos escondidos na tabela: R4 está em curto e R3 está aberto, e nenhum leva corrente. O resto é R1 em série com R2 em paralelo com o ramo R5 e R6.",
    "pecas": [
     {
@@ -5212,11 +5256,11 @@
       "letras": [
        {
         "letra": "Ic",
-        "oque": "corrente em R6, em mA (o que a questão quer)"
+        "oque": "corrente em R6, em mA (\"I de corrente\"; o que a questão quer)"
        },
        {
         "letra": "Tp",
-        "oque": "tensão entre as linhas 2 e 3, em V"
+        "oque": "tensão no paralelo, entre as linhas 2 e 3, em V (\"T de tensão\")"
        },
        {
         "letra": "Ram",
@@ -5224,7 +5268,7 @@
        },
        {
         "letra": "Par",
-        "oque": "resistência de tudo que liga a linha 2 à 3, em Ω"
+        "oque": "resistência do paralelo entre as linhas 2 e 3, em Ω (\"P de paralelo\")"
        },
        {
         "letra": "Itot",
@@ -5351,7 +5395,7 @@
   "origem": "Escada",
   "ancora": "sem · técnica: simetria do circuito (pontos de mesmo potencial e divisão igual da corrente), clássico de olimpíada; não há real de Física de Harvard-MIT nem cubo de resistores no corpus legível",
   "canal": "fora do canal: resistores em cubo (0 hits); série e paralelo em fis-12-circuitos-eletricos.txt [10:40:01]",
-  "enunciado": "Doze resistores iguais, de 12 Ω cada um, formam as arestas de um cubo. Uma bateria é ligada a dois vértices opostos, P e Q, as pontas de uma diagonal do cubo. A resistência equivalente entre P e Q, em ohms, é:\n\nDados: Resistores: 12 resistores de 12 Ω cada; Montagem: arestas de um cubo; Bateria: nos vértices opostos P e Q.",
+  "enunciado": "Doze resistores iguais, de 12 Ω cada um, formam as arestas de um cubo (as 12 quinas, onde duas faces se encontram). Uma bateria é ligada a dois vértices (cantos) opostos, P e Q, as pontas de uma diagonal do cubo (a reta que cruza o cubo de um canto ao canto mais longe). A resistência equivalente entre P e Q, em ohms, é:\n\nDados: Resistores: 12 resistores de 12 Ω cada; Montagem: arestas de um cubo; Bateria: nos vértices (cantos) opostos P e Q.",
   "A": "10",
   "B": "4",
   "C": "6",
@@ -5417,7 +5461,7 @@
        ],
        [
         "Bateria",
-        "nos vértices opostos P e Q"
+        "nos vértices (cantos) opostos P e Q"
        ]
       ]
      }
@@ -5467,7 +5511,7 @@
     },
     {
      "titulo": "Achando Fra: as 3 primeiras arestas",
-     "texto": "Finja que 6 A saem de P (a fração não depende desse valor). Gire o cubo em volta da diagonal P-Q: as 3 arestas que saem de P trocam de lugar e o cubo fica idêntico. Por isso levam a mesma corrente: 6 ÷ 3 = 2 A em cada.",
+     "texto": "Escolho 6 A saindo de P: divide certo por 3 e por 6 (com outro valor, correntes e quedas mudam juntas e a fração é a mesma). Gire o cubo em volta da diagonal P-Q: as 3 arestas de P trocam de lugar e o cubo fica igual, então levam a mesma corrente: 6 ÷ 3 = 2 A em cada.",
      "visual": {
       "tipo": "diagrama",
       "nome": "cubo-resistores",
@@ -5514,8 +5558,8 @@
      }
     },
     {
-     "titulo": "Achando Fra: as quedas, com números",
-     "texto": "Queda = resistência · corrente. 1ª etapa: 12 · 2 = 24 V. Meio: 12 · 1 = 12 V. Última: 12 · 2 = 24 V.\nDe P a Q por um caminho, as quedas somam: 24 + 12 + 24 = 60 V. Req = 60 ÷ 6 = 10 Ω."
+     "titulo": "Um caso com números: quedas e Req",
+     "texto": "Queda = resistência · corrente. 1ª etapa: 12 · 2 = 24 V. Meio: 12 · 1 = 12 V. Última: 12 · 2 = 24 V.\nDe P a Q por qualquer caminho passam 3 arestas, uma de cada etapa, e as quedas somam: 24 + 12 + 24 = 60 V. Req = 60 ÷ 6 = 10 Ω."
     },
     {
      "titulo": "Achando Fra: as quedas como fração (1 de 2)",

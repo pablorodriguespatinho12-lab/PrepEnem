@@ -144,7 +144,7 @@ assert len([k for k in range(-10, 21) if cont_c[k] == 4]) == 8                  
 assert len([k for k in range(1, 10)]) == 9                                                          # 9: k de 1 a 9
 assert len([k for k in range(-10, 0)]) == 10                                                        # 10: esqueceu o k = 9
 assert len([k for k in range(-10, 1)]) + 1 == 12                                                    # 12: k negativos, k = 0 e k = 9
-ENUN_C = ('Para cada número inteiro k, com −10 ≤ k ≤ 20, considere a equação t⁴ − 6t² + k = 0, na incógnita real t. A tabela mostra alguns '
+ENUN_C = ('Para cada número inteiro k, com −10 ≤ k ≤ 20 (k vai de −10 a 20, e "≤" lê-se "menor ou igual"), considere a equação t⁴ − 6t² + k = 0, na incógnita real t. A tabela mostra alguns '
           'valores da função h(u) = u² − 6u, que ajuda a estudar essa equação. Em quantos valores de k a equação tem exatamente duas soluções '
           'reais distintas?\n\n'
           'u | −1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7\n'
@@ -200,9 +200,9 @@ assert resto_d == 1                                          # 1: respondeu o re
 assert len(((1, -1, 1))) - 1 == 2                            # 2: contou as duas raízes de x² − x + 1 sem ver D
 # 3 = o período; 2 026 = uma solução por aplicação
 ENUN_D = ('Seja f(x) = 1/(1 − x), definida para x real diferente de 1. Indique por f²⁰²⁶ a função obtida aplicando f em sequência 2 026 vezes '
-          '(f²(x) = f(f(x)), f³(x) = f(f(f(x))), e assim por diante). Quantos números reais x, com x diferente de 0 e de 1, satisfazem '
+          '(f²(x) = f(f(x)), f³(x) = f(f(f(x))), e assim por diante). Quantos números reais x, com x diferente de 0 e de 1 (f(1) não existe, e f(0) = 1 levaria a f(1) na aplicação seguinte), satisfazem '
           'f²⁰²⁶(x) = x?')
-assert 200 <= len(ENUN_D) <= 400, len(ENUN_D)
+assert 200 <= len(ENUN_D) <= 520, len(ENUN_D)
 # "Sua vez": f⁷(2) = f(2) = −1
 y7 = F(2)
 for _ in range(7):
@@ -230,19 +230,19 @@ Q = [
         formulas=[('grafico', 'Lucro', 'lucro = (preço − custo) · vendas − gasto fixo'), ('grafico', 'Reta das vendas', 'cada R$ 1 a mais no preço tira 4 bolos')],
         eq='L = (p − 10) · q − 300', leitura='(lucro por bolo × bolos vendidos) − gasto fixo',
         letras=[('L', 'lucro semanal (o que a questão quer)'), ('p', 'preço do bolo'), ('q', 'bolos vendidos por semana')],
-        eq_texto='O lucro é o ganho de cada bolo vezes os bolos vendidos, menos o gasto fixo. Os bolos vendidos dependem do preço, e o preço tem teto.\nAgora é só achar q e p, uma por vez.',
+        eq_texto='O lucro é o ganho de cada bolo vezes os bolos vendidos, menos o gasto fixo. Os bolos vendidos dependem do preço, e o preço tem teto: a prefeitura não deixa passar de R$ 25.\nAgora é só achar q e p, uma por vez.',
         achando=[('Achando q: a reta das vendas',
-                  'No quadro, o preço sobe R$ 4 (de 20 para 24) e as vendas caem 16 (de 120 para 104): são −4 bolos por real. Cada R$ 1 a mais tira 4 bolos: a R$ 21 vendem 116, a R$ 22 vendem 112. Partindo de 120 bolos a R$ 20: q = 120 − 4 · (p − 20).'),
+                  'No quadro, o preço sobe R$ 4 (de 20 para 24) e as vendas caem 16 (de 120 para 104): 16 ÷ 4 = 4 bolos a menos para cada R$ 1 a mais (por isso o −4). A R$ 21 vendem 116, a R$ 22 vendem 112. Partindo de 120 bolos a R$ 20: q = 120 − 4 · (p − 20).'),
                  ('Achando q: abrindo a conta',
-                  '−4 · (p − 20) é −4 vezes p e −4 vezes −20: −4p + 80. Então q = 120 − 4p + 80 = 200 − 4p. Teste com p = 24: 120 − 4 · 4 = 104 e 200 − 96 = 104. Conferindo com p = 28: 200 − 112 = 88.'),
+                  '−4 · (p − 20): o −4 multiplica o p e o −20. −4 · p = −4p. −4 · (−20) = +80: menos vezes menos dá mais (como tirar 4 vezes uma dívida de R$ 20: sobram R$ 80 a mais). Então q = 120 − 4p + 80 = 200 − 4p. Teste com p = 24: 120 − 4 · 4 = 104 e 200 − 96 = 104.'),
                  ('Achando p: o lucro em função do preço',
                   'Troque q: L = (p − 10) · (200 − 4p) − 300.\nTeste com p = 20: 10 · 120 = 1 200, e 1 200 − 300 = 900 reais.'),
                  ('Achando p: como o lucro varia',
-                  'Sem o gasto fixo, (p − 10) · (200 − 4p) vale: p = 10 → 0; p = 20 → 10 · 120 = 1 200; p = 30 → 20 · 80 = 1 600; p = 40 → 30 · 40 = 1 200; p = 50 → 0.\nSobe até 30 e desce igual do outro lado: uma parábola aberta para baixo.'),
+                  'Sem o gasto fixo, (p − 10) · (200 − 4p) vale: p = 10 → 0; p = 20 → 10 · 120 = 1 200; p = 30 → 20 · 80 = 1 600; p = 40 → 30 · 40 = 1 200; p = 50 → 0.\nSobe até 30 e desce igual do outro lado, como um morro: isso é uma parábola aberta para baixo.'),
                  ('Achando p: onde fica o vértice',
-                  'Os preços que zeram (p − 10) · (200 − 4p) são as raízes. p − 10 = 0 dá p = 10. 200 − 4p = 0 dá 4p = 200, p = 50. A parábola é igual dos dois lados, então o vértice (o topo) fica no meio: p = (10 + 50) ÷ 2 = 30.'),
+                  'Raízes são os preços em que a conta dá 0: p − 10 = 0 dá p = 10; 200 − 4p = 0 dá 4p = 200, p = 50. O morro é igual dos dois lados, então o topo (o vértice) fica no meio das raízes: p = (10 + 50) ÷ 2 = 30.'),
                  ('Achando p: o melhor preço permitido',
-                  'De 10 até 30 o lucro só sobe. A prefeitura só deixa até 25, então o melhor preço permitido é o último: p = 25. (Em p = 30 o lucro seria 1 600 − 300 = 1 300, mas é proibido.)'),
+                  'De 10 até 30 o lucro só sobe. A prefeitura só deixa até 25, então o melhor preço permitido é o maior que ela deixa: p = 25. (Em p = 30 o lucro seria 1 600 − 300 = 1 300, mas é proibido.)'),
                  ('Achando q: bolos vendidos a R$ 25', 'q = 200 − 4 · 25 = 200 − 100 = 100 bolos.')],
         volta='L = (25 − 10) · 100 − 300.\n25 − 10 = 15, e 15 · 100 = 1 500. Então L = 1 500 − 300 = 1 200.\nResposta: alternativa X.',
         valores=[('p', 'R$ 25'), ('q', '100 bolos'), ('L', 'R$ 1 200')],
@@ -253,7 +253,7 @@ Q = [
                   'O vértice estaria em p = 17,5, que passa do teto. Então p = 12: 7 · 36 − 20 = 232.'),
         ancora='forte · ENEM 2022 q.158 (caderno 7; q.176 no caderno 5: modelo quadrático de infectados por mês, máximo no vértice t = 5 e escolha do período que o contém); aqui a parábola nasce de uma reta de vendas dada em quadro, e o vértice passa do teto de preço',
         canal='mat-13-funcao-do-segundo-grau-propriedades.txt [6:12:01] (x do vértice e eixo de simetria da parábola)',
-        antes=['numero-que-falta'],
+        antes=['numero-que-falta', 'fun-parabola'],
     ),
     dict(
         id='d2-escada-mat-ita-fun-00b', materia='Matemática', tema=T, calc=-5 / 6,
@@ -268,10 +268,10 @@ Q = [
         ideia='A troca x → 1/(1 − x) volta ao ponto de partida depois de 3 passos. Escreva a equação nos 3 pontos do ciclo: sai um sistema 3×3 nas três imagens de f.',
         pecas=[('Troca de ponto', 'Trocar x por 1/(1 − x), três vezes seguidas, volta ao x.'), ('Ciclo', 'Pontos que se repetem em fila: 1/2 → 2 → −1 → 1/2.')],
         formulas=[('texto', 'Troca de ponto', 'x vira 1/(1 − x)'), ('contagem', 'Volta ao começo', 'trocar 3 vezes volta ao x')],
-        eq='u + 2v = ...;  v + 2w = ...;  w + 2u = ...',
-        leitura='a regra f(x) + 2 · f(1/(1 − x)) = x escrita em 3 pontos que se ligam em ciclo (os valores nascem nos passos seguintes)',
-        letras=[('u', 'f(1/2) (o que a questão quer)'), ('v', 'f do ponto seguinte do ciclo'), ('w', 'f do 3º ponto do ciclo')],
-        eq_texto='A regra vale em todo ponto. Se não sei a regra de f, f de cada ponto é só um número escondido: chamo de u o do 1/2, de v o do ponto seguinte do ciclo e de w o do 3º ponto. Escrevo a regra nos 3 pontos do ciclo, e o 1º passo "Achando" mostra de onde vem esse ciclo; cada equação fala de dois desses números escondidos.\nAgora é só achar w e v, uma por vez, em função de u.',
+        eq='u + 2v = 1/2',
+        leitura='a regra f(x) + 2 · f(1/(1 − x)) = x escrita no ponto x = 1/2: f(1/2) mais 2 vezes o f do ponto que a troca 1/(1 − x) liga a ele',
+        letras=[('u', 'f(1/2) (o que a questão quer)'), ('v', 'f(1/(1 − 1/2)): o f que a regra liga ao u'), ('w', 'f do ponto que a mesma troca liga ao ponto de v')],
+        eq_texto='A regra vale em todo ponto, e f é só uma regra desconhecida: f de cada ponto é um número escondido. Chamo de u o f(1/2). A regra em x = 1/2 liga u a um segundo número escondido, v, e a regra nesse novo ponto liga v a um terceiro, w. A equação mostra a regra em x = 1/2.\nAgora é só achar w e v, uma por vez, em função de u.',
         achando=[('Achando w: o ciclo do 1/2',
                   'Para encurtar, chame 1/(1 − x) de T(x). T(1/2) = 1/(1 − 1/2) = 1/(1/2) = 2.\n1/(1/2) é 1 ÷ 1/2: quantos meios cabem em 1? Cabem 2.'),
                  ('Achando w: voltando ao 1/2',
@@ -279,12 +279,12 @@ Q = [
                   tab('O ciclo', ['Entra x', 'Sai 1/(1 − x)'], [['1/2', '2'], ['2', '−1'], ['−1', '1/2']])),
                  ('Achando w: a regra em cada ponto',
                   'Em x = 1/2: f(1/2) + 2 · f(2) = 1/2, ou u + 2v = 1/2.\nEm x = 2: f(2) + 2 · f(−1) = 2, ou v + 2w = 2.\nEm x = −1: f(−1) + 2 · f(1/2) = −1, ou w + 2u = −1.'),
-                 ('Achando w: w em função de u', 'Da 3ª equação, w + 2u = −1. Então w = −1 − 2u.'),
+                 ('Achando w: w em função de u', 'A 3ª equação é w + 2u = −1. Tire 2u dos dois lados: w = −1 − 2u. Teste com u = 1: w + 2 = −1 dá w = −3, e −1 − 2 = −3.'),
                  ('Achando v: v em função de u',
-                  'Da 2ª equação, v = 2 − 2w. Troque w = −1 − 2u: 2w = −2 − 4u.\nEntão v = 2 − (−2 − 4u).'),
+                  'A 2ª equação é v + 2w = 2. Tire 2w dos dois lados: v = 2 − 2w. Teste com w = 1/2: v + 1 = 2 dá v = 1, e 2 − 1 = 1.\nTroque w = −1 − 2u: 2w = −2 − 4u. Então v = 2 − (−2 − 4u).'),
                  ('Achando v: tirando o parêntese',
                   'Tirar (−2 − 4u) é tirar −2 e tirar −4u: some 2 e some 4u. Então v = 2 + 2 + 4u = 4 + 4u. Teste com u = 1: 2 − (−2 − 4) = 2 + 6 = 8 e 4 + 4 = 8.')],
-        volta='Na 1ª equação, u + 2v = 1/2, troque v = 4 + 4u: u + 2 · (4 + 4u) = 1/2.\n2 · (4 + 4u) = 8 + 8u, então 9u + 8 = 1/2 e 9u = 1/2 − 8 = 1/2 − 16/2 = −15/2.\nDividir por 9 é pôr 9 embaixo: (−15/2) ÷ 9 = −15/(2 · 9) = −15/18. Divida em cima e embaixo por 3: −5/6.\nConferindo: v = 4 + 4 · (−5/6) = 4 − 10/3 = 2/3; w = −1 + 5/3 = 2/3. A 2ª equação: 2/3 + 4/3 = 2.\nResposta: alternativa X.',
+        volta='Na 1ª equação, u + 2v = 1/2, troque v = 4 + 4u: u + 2 · (4 + 4u) = 1/2.\n2 · (4 + 4u) = 8 + 8u. Juntar os u: u + 8u = 9u (1 u e mais 8 u são 9 u). Fica 9u + 8 = 1/2.\nTire 8 dos dois lados: 9u = 1/2 − 8 = 1/2 − 16/2 = −15/2.\nDividir por 9 é pôr 9 embaixo: (−15/2) ÷ 9 = −15/18 = −5/6 (÷ 3 em cima e embaixo).\nConferindo: v = 4 + 4 · (−5/6) = 4 − 10/3 = 2/3; w = −1 + 5/3 = 2/3. A 2ª equação: 2/3 + 4/3 = 2.\nResposta: alternativa X.',
         valores=[('u', '−5/6'), ('v', '2/3'), ('w', '2/3')],
         pista='regra com f(x) e f(troca de x) → ache o ciclo da troca (volta ao começo em 3 passos) e escreva a regra em cada ponto: sai um sistema.',
         rec1='f(x) + 2 · f(1/(1 − x)) = x; quero f(1/2)', rec3='ciclo 1/2, 2, −1; w = −1 − 2u; v = 4 + 4u; u = −5/6',
@@ -324,7 +324,7 @@ Q = [
                  ('Achando P: k negativo',
                   'Com k negativo, −k é positivo (k = −7 pede h(u) = 7). Então há um u menor que 0 (sem t) e um u maior que 6 (2 valores de t): 2 soluções.'),
                  ('Achando P: testando k = −1',
-                  'Teste com k = −1: h(u) = 1. Na tabela h(0) = 0 e h(−1) = 7, então um u está entre −1 e 0 (negativo); h(6) = 0 e h(7) = 7, então outro está entre 6 e 7.'),
+                  'Teste com k = −1: h(u) = 1. A curva não pula valores: h(−1) = 7 e h(0) = 0, então no caminho ela passa pelo 1, e um u está entre −1 e 0 (negativo). Do mesmo jeito h(6) = 0 e h(7) = 7: outro u entre 6 e 7.'),
                  ('Achando P: contando os k negativos',
                   'Com k = −10: h(u) = 10, ainda mais longe: u menor que −1 e maior que 7. Sempre um u negativo e um maior que 6. Isso vale para k = −10, −9, ..., −1: são 10 valores, P = 10.'),
                  ('Achando Q: o fundo de h',
@@ -333,7 +333,7 @@ Q = [
                   'Com k = 9: h(u) = −9 só em u = 3, um u positivo. t² = 3: t é o número que vezes ele mesmo dá 3 (√3, um pouco mais de 1,7 porque 1,7 · 1,7 = 2,89), e o oposto, −√3. Não precisa do valor: só importa que são 2 soluções.'),
                  ('Achando Q: os k de 0 a 8',
                   'Com k de 1 a 8, −k fica entre −8 e −1: há dois u, entre 0 e 6, ambos positivos: 4 soluções. Com k = 0: u = 0 (1 solução) e u = 6 (2 soluções): 3 soluções. Nenhum desses serve.\nEntre 0 e 20 só o k = 9 serve: Q = 1.')],
-        volta='N = P + Q = 10 + 1 = 11.\nConferindo a contagem dos k: de 1 a 5 são 5 números: 5 − 1 + 1. Por isso de −10 a 20 são 20 − (−10) + 1 = 31 valores. Servem os 10 negativos e o k = 9.\nResposta: alternativa X.',
+        volta='N = P + Q = 10 + 1 = 11.\nConferindo a contagem dos k: os dois extremos entram (de 1 a 3 são 3 números: 3 − 1 + 1). Por isso de −10 a 20 são 20 − (−10) + 1 = 31 valores. Servem os 10 negativos e o k = 9.\nResposta: alternativa X.',
         valores=[('P', '10 valores de k'), ('Q', '1 valor (k = 9)'), ('N', '11 valores de k')],
         pista='equação com t⁴ e t² → troque t² por u, leia no gráfico quantos u dá cada k e lembre: u positivo dá 2 valores de t.',
         rec1='t⁴ − 6t² + k = 0; k de −10 a 20; tabela de h(u)', rec3='P = 10 (k negativos); Q = 1 (k = 9); N = 11',
@@ -367,9 +367,9 @@ Q = [
                   'Com x = 2: f(2) = 1/(1 − 2) = −1. f(−1) = 1/(1 + 1) = 1/2. f(1/2) = 1/(1 − 1/2) = 2.\nDepois de 3 aplicações, voltou ao 2.',
                   tab('O ciclo de x = 2', ['Aplicação', 'Resultado'], [['início', '2'], ['1ª', '−1'], ['2ª', '1/2'], ['3ª', '2']])),
                  ('Achando r: aplicar f duas vezes',
-                  'Agora com letras, para qualquer x. f(x) = 1/(1 − x). Então f²(x) = 1/(1 − 1/(1 − x)).\n1 − 1/(1 − x) = (1 − x)/(1 − x) − 1/(1 − x) = −x/(1 − x).'),
+                  'Agora com letras, para qualquer x. f²(x) = 1/(1 − 1/(1 − x)).\nO 1 do começo vira (1 − x)/(1 − x), que também vale 1 (como 5/5 = 1), para ficar com o mesmo embaixo da outra fração: (1 − x)/(1 − x) − 1/(1 − x) = (1 − x − 1)/(1 − x) = −x/(1 − x).'),
                  ('Achando r: dividir por fração',
-                  'Logo f²(x) = 1 ÷ (−x/(1 − x)). Dividir por uma fração é inverter: vira (1 − x)/(−x). Multiplicando cima e baixo por −1: (x − 1)/x.\nTeste com x = 2: f(f(2)) = f(−1) = 1/2 e (2 − 1)/2 = 1/2.'),
+                  'Logo f²(x) = 1 ÷ (−x/(1 − x)). Dividir por fração é inverter: 1 ÷ 1/2 = 2 (cabem 2 meios em 1). Aqui vira (1 − x)/(−x); cima e baixo vezes −1: (x − 1)/x.\nTeste com x = 2: f(f(2)) = f(−1) = 1/2 e (2 − 1)/2 = 1/2.'),
                  ('Achando r: a terceira aplicação',
                   'f³(x) = f(f²(x)) = 1/(1 − (x − 1)/x).\n1 − (x − 1)/x = (x − (x − 1))/x = 1/x.\nEntão f³(x) = 1/(1/x) = x: três aplicações devolvem o x de partida.'),
                  ('Achando r: o resto de 2 026 ÷ 3',
@@ -379,7 +379,7 @@ Q = [
                  ('Achando Δ: igualar f(x) a x',
                   'Como f²⁰²⁶ = f, a equação é f(x) = x: 1/(1 − x) = x.\nMultiplicar os dois lados por (1 − x) tira a fração (como 6 ÷ 2 = 3 vira 6 = 3 · 2), e (1 − x) não é zero. Fica 1 = x · (1 − x) = x − x².'),
                  ('Achando Δ: passando para um lado',
-                  'Teste de 1/(1 − x) = x com x = 2: 1/(−1) = −1, e 2 não é −1.\nPassar tudo para um lado: some x² e tire x dos dois lados de 1 = x − x². Fica x² − x + 1 = 0.'),
+                  'Passar tudo para um lado: some x² e tire x dos dois lados de 1 = x − x². Fica x² − x + 1 = 0.\nTeste com x = 2: 1 − (2 − 4) = 3 e 4 − 2 + 1 = 3. Os dois lados dão o mesmo, e 3 não é 0: o 2 não resolve.'),
                  ('Achando Δ: o discriminante',
                   'Em x² − x + 1 = 0: a = 1, b = −1, c = 1.\nΔ = b² − 4ac = (−1)² − 4 · 1 · 1 = 1 − 4 = −3.\nΔ é negativo: a equação não tem raiz real.')],
         volta='Δ = −3 é menor que 0, então N = 0.\nConferindo com x = 2: f²⁰²⁶(2) = f(2) = −1, que não é 2.\nResposta: alternativa X.',
@@ -397,6 +397,22 @@ Q = [
 MANTER = {}
 
 ANTES_NOVOS = {
+    'fun-parabola': {
+        'titulo': 'Parábola: o morro, as raízes e o topo',
+        'linhas': [
+            'Parábola é a curva em forma de morro (ou de vale): sobe, chega a um topo e desce igual do outro lado.',
+            'Raízes são os valores em que a conta dá zero. Em (p − 2) · (12 − p), dá zero em p = 2 e em p = 12.',
+            'O vértice é o topo do morro. Como os dois lados são iguais, ele fica no meio das raízes: (2 + 12) ÷ 2 = 7.',
+            'Teste: p = 7 dá 5 · 5 = 25; p = 6 dá 4 · 6 = 24 e p = 8 dá 6 · 4 = 24. O topo é em p = 7.',
+        ],
+        'visual': tab('Valores de (p − 2) · (12 − p)', ['p', 'Conta'], [['2', '0'], ['6', '24'], ['7', '25'], ['8', '24'], ['12', '0']]),
+        'exercicios': [
+            {'enunciado': 'A conta (p − 2) · (12 − p) vale zero em dois valores de p. Quais?', 'alternativas': ['2 e 12', '−2 e 12', '2 e −12', '10 e 14'], 'certa': 0,
+             'resolucao': '2 e 12: p − 2 = 0 dá p = 2, e 12 − p = 0 dá p = 12.\n−2 e 12 trocou o sinal de p − 2; 2 e −12 trocou o de 12 − p; 10 e 14 não zeram nenhum parêntese.'},
+            {'enunciado': 'A conta (p − 2) · (12 − p) forma um morro, igual dos dois lados das raízes 2 e 12. Em qual p fica o topo?', 'alternativas': ['7', '5', '10', '12'], 'certa': 0,
+             'resolucao': '7: o topo fica no meio das raízes, (2 + 12) ÷ 2 = 7.\n5 é a distância do topo à raiz 12; 10 é 12 − 2; 12 é uma raiz, onde a conta dá zero.'},
+        ],
+    },
     'fun-composta': {
         'titulo': 'Aplicar uma regra duas vezes: f(f(x))',
         'linhas': [
@@ -464,6 +480,7 @@ ANTES_NOVOS = {
 }
 
 # ---- conferências das aulas "Antes" e do módulo
+assert (7 - 2) * (12 - 7) == 25 and (6 - 2) * (12 - 6) == 24 and (8 - 2) * (12 - 8) == 24 and (2 + 12) // 2 == 7 and 12 - 2 == 10 and 12 - 7 == 5
 f_ex = lambda x: 3 * x - 2                                                                          # noqa: E731
 g_ex = lambda x: 5 - x                                                                              # noqa: E731
 assert f_ex(f_ex(2)) == 10 and f_ex(2) == 4 and g_ex(g_ex(7)) == 7 and g_ex(7) == -2

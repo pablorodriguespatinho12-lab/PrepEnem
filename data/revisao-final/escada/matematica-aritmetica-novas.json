@@ -41,8 +41,8 @@
        },
        {
         "figura": "porcentagem",
-        "nome": "Parte de um total",
-        "formula": "parte = total · porcentagem ÷ 100"
+        "nome": "10% de um número",
+        "formula": "10% de 120 = 120 ÷ 10 = 12"
        }
       ]
      }
@@ -279,7 +279,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A cada operação a % de álcool é multiplicada por F. Depois de N operações é T · F · F · … · F, com N fatores F. Procuro o menor N que deixa a conta em 10 ou menos.\nAgora é só achar T e F.",
+     "texto": "A cada operação a % de álcool é multiplicada por F. Depois de N operações é T · F · F · … · F, com N fatores F (o … quer dizer \"e assim por diante\"; ≤ lê-se \"menor ou igual a\"). Procuro o menor N que deixa a conta em 10 ou menos.\nAgora é só achar T e F.",
      "visual": {
       "tipo": "equacao",
       "formula": "T · F · F · … · F ≤ 10",
@@ -314,7 +314,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "Cada operação é × 0,75, que é ÷ 4 e depois × 3. Guardo 2 casas: o erro é pequeno perto da distância até 10.\n1ª: 80 ÷ 4 = 20; 20 · 3 = 60.\n2ª: 60 ÷ 4 = 15; 15 · 3 = 45.\n3ª: 45 ÷ 4 = 11,25; 11,25 · 3 = 33,75.",
+     "texto": "Cada operação é × 0,75, que é ÷ 4 e depois × 3. Arredondo cada resultado para 2 casas depois da vírgula (uns 25,31 no lugar de 25,3125): a diferença é de centésimos, bem menor que a distância até 10.\nDividir por 4 é tirar a metade duas vezes (20 ÷ 4: metade de 20 é 10, metade de 10 é 5).",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -339,12 +339,16 @@
      }
     },
     {
-     "titulo": "Volta na equação (2 de 3)",
-     "texto": "Estimando: de 33,75 ainda falta cair até 10, então faltam umas 4 operações. Só a 7ª e a 8ª pedem cuidado.\n4ª: 33,75 ÷ 4 = 8,4375; · 3 = 25,3125, uns 25,31.\n5ª: 25,31 ÷ 4 = 6,3275; · 3 = 18,9825, uns 18,98.\n6ª: 18,98 ÷ 4 = 4,745; · 3 = 14,235, uns 14,24."
+     "titulo": "Volta na equação (2 de 4)",
+     "texto": "1ª: 80 ÷ 4 = 20; 20 · 3 = 60.\n2ª: 60 ÷ 4 = 15; 15 · 3 = 45.\n3ª: 45 ÷ 4 = 11,25; 11,25 · 3 = 33,75.\nOlhando à frente: cada operação deixa 3/4, então 33,75 vai a uns 25, uns 19, uns 14 e uns 10. Faltam umas 4 operações, e só a 7ª e a 8ª pedem cuidado."
     },
     {
-     "titulo": "Volta na equação (3 de 3)",
-     "texto": "7ª: 14,24 ÷ 4 = 3,56; · 3 = 10,68. Ainda MAIS de 10%, não vale.\n8ª: 10,68 ÷ 4 = 2,67; · 3 = 8,01. Agora é menos de 10%. N = 8.\nResposta: alternativa E."
+     "titulo": "Volta na equação (3 de 4)",
+     "texto": "4ª: 33,75 ÷ 4: metade 16,875, metade de novo 8,4375; · 3 = 25,3125, uns 25,31.\n5ª: 25,31 ÷ 4: metade 12,655, metade de novo 6,3275; · 3 = 18,9825, uns 18,98.\n6ª: 18,98 ÷ 4 = 4,745; · 3 = 14,235, uns 14,24.\n7ª: 14,24 ÷ 4: metade 7,12, metade de novo 3,56; · 3 = 10,68. Ainda MAIS de 10%, não vale."
+    },
+    {
+     "titulo": "Volta na equação (4 de 4)",
+     "texto": "8ª: 10,68 ÷ 4: metade 5,34, metade de novo 2,67; · 3 = 8,01. Agora é menos de 10%. N = 8.\nResposta: alternativa E."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -418,14 +422,14 @@
    "passos": [
     {
      "titulo": "As fórmulas desta questão",
-     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. O p é o número da porcentagem (em 10%, p = 10: 1 + 10 ÷ 100 = 1,1). O ponto · significa vezes.",
+     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. A porcentagem é o número antes do % (em 10%, é 10: 1 + 10 ÷ 100 = 1,1). O ponto · significa vezes.",
      "visual": {
       "tipo": "formulas",
       "itens": [
        {
         "figura": "porcentagem",
-        "nome": "Acrescentar p%",
-        "formula": "novo = antigo · (1 + p ÷ 100)"
+        "nome": "Acrescentar uma porcentagem",
+        "formula": "novo = antigo · (1 + porcentagem ÷ 100)"
        },
        {
         "figura": "porcentagem",
@@ -471,7 +475,7 @@
     },
     {
      "titulo": "De onde vem cada fórmula (2 de 4)",
-     "texto": "R$ 100 hoje e R$ 100 daqui a 60 dias não valem o mesmo: os de hoje viram R$ 121 em 60 dias. Só dá para somar dinheiro quando todos estão na MESMA data. Escolho o dia 60, o último."
+     "texto": "R$ 100 hoje e R$ 100 daqui a 60 dias não valem o mesmo: os de hoje viram R$ 121 em 60 dias. Só dá para somar dinheiro quando todos estão na MESMA data. Escolho o dia 60, o último: assim todo dinheiro só anda para a frente, multiplicando, e nenhum precisa voltar no tempo."
     },
     {
      "titulo": "De onde vem cada fórmula (3 de 4)",
@@ -479,7 +483,7 @@
     },
     {
      "titulo": "De onde vem cada fórmula (4 de 4)",
-     "texto": "A entrada não gera juros na DÍVIDA (o saldo começa em 3 310 − P). Mas, para comparar na mesma data, ela vale o que o dinheiro dela renderia em 60 dias: P · 1,21."
+     "texto": "A entrada não paga juros: a dívida começa em 3 310 − P. Mas, na comparação, dinheiro de hoje vale mais que o do dia 60 (R$ 100 hoje = R$ 121 no dia 60). Por isso a entrada, paga hoje, conta P · 1,21 no dia 60. É a regra do exemplo de R$ 100; não é juro cobrado sobre ela."
     },
     {
      "titulo": "A equação em letras",
@@ -603,7 +607,7 @@
   "E": "19",
   "resposta": "B",
   "explicacao": {
-   "conferencia": "Caio = 20 · x, Bia = 15 · x, Ana = 18 · x, total = 53 · x. Múltiplos de 53 de 100 a 400: 106, 159, 212, 265, 318, 371 (x = 2 a 7). Conta: 7 − 1 = 6. Resposta: alternativa B. Erros: Alternativa A = Fez (399 − 100) ÷ 53 = 5,6 e ficou com 5, sem somar 1 (contou degraus, não números); Alternativa C = Contou os múltiplos de 53 até 399 e não tirou o 53, que não passa de 100; Alternativa D = Arredondou 400 ÷ 53 = 7,5 para cima e contou o 424, que passa de 400; Alternativa E = Contou os valores de Caio (múltiplos de 20 até 399) e não ligou ao total.",
+   "conferencia": "Caio, Bia e Ana: 20, 15, 18 (total 53); 40, 30, 36 (106); 60, 45, 54 (159)... todo total é 53 vezes um número. Múltiplos de 53 de 100 a 400: 106, 159, 212, 265, 318, 371. Conta: 7 − 1 = 6. Resposta: alternativa B. Erros: Alternativa A = Fez (399 − 100) ÷ 53 = 5,6 e ficou com 5, sem somar 1 (contou degraus, não números); Alternativa C = Contou os múltiplos de 53 até 399 e não tirou o 53, que não passa de 100; Alternativa D = Arredondou 400 ÷ 53 = 7,5 para cima e contou o 424, que passa de 400; Alternativa E = Contou os valores de Caio (múltiplos de 20 até 399) e não ligou ao total.",
    "ideia": "Para as três quantidades serem inteiras, Caio precisa ser múltiplo de 20, e o total vira sempre 53 vezes um número. A porcentagem esconde a divisibilidade: a pergunta vira contar múltiplos de 53 na faixa.",
    "pecas": [
     {
@@ -618,19 +622,19 @@
    "passos": [
     {
      "titulo": "As fórmulas desta questão",
-     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. O p é o número da porcentagem (em 20%, p = 20). O ponto · significa vezes.",
+     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. A porcentagem é o número antes do % (em 20%, é 20). O ponto · significa vezes.",
      "visual": {
       "tipo": "formulas",
       "itens": [
        {
         "figura": "porcentagem",
-        "nome": "p% a mais",
-        "formula": "novo = antigo · (1 + p ÷ 100)"
+        "nome": "Porcentagem a mais",
+        "formula": "novo = antigo · (1 + porcentagem ÷ 100)"
        },
        {
         "figura": "porcentagem",
-        "nome": "p% a menos",
-        "formula": "novo = antigo · (1 − p ÷ 100)"
+        "nome": "Porcentagem a menos",
+        "formula": "novo = antigo · (1 − porcentagem ÷ 100)"
        },
        {
         "figura": "contagem",
@@ -699,15 +703,15 @@
     },
     {
      "titulo": "Achando S: o menor total possível",
-     "texto": "Chamo de x um número que ainda vou achar.\n25% a menos: sobram 100% − 25% = 75% = 3/4. De 20 sai 5 e sobram 15. Se Caio tem 8, Bia tem 3/4 de 8 = 6. Se Caio tem 6, Bia teria 4,5: não pode. Caio é de 4 em 4: Caio = 4 · x e Bia = 3 · x."
+     "texto": "Chamo de x o número tal que Caio = 4 · x. Por que 4? Teste: Caio 8, Bia 3/4 de 8 = 6. Caio 6, Bia 4,5: não pode; Caio 5, Bia 3,75: não; Caio 7, Bia 5,25: não. Só Caio 4, 8, 12... deixa Bia inteira (3/4 só dá inteiro assim). Então Bia = 3 · x."
     },
     {
      "titulo": "Achando S: o menor total possível (2 de 3)",
-     "texto": "20% a mais é 1 em cada 5: de 15 sobe 3 (15 ÷ 5 = 3), 15 + 3 = 18. Ou seja, Ana = Bia ÷ 5 · 6. Para dar inteiro, Bia (3 · x) tem de ser múltiplo de 5. Teste: x = 1, 2, 3, 4 dão 3, 6, 9, 12 (não); x = 5 dá 15 (sim)."
+     "texto": "20% a mais é 1 em cada 5: de 15 sobe 3 (15 ÷ 5 = 3), 15 + 3 = 18. Ou seja, Ana = Bia ÷ 5 · 6. Para dar inteiro, Bia (3 · x) tem de ser múltiplo de 5. Teste: x = 1, 2, 3, 4 dão 3, 6, 9, 12 (não); x = 5 dá 15 (sim). Como 3 não é múltiplo de 5, é o x que tem de ser: x = 5, 10, 15..."
     },
     {
      "titulo": "Achando S: o menor total possível (3 de 3)",
-     "texto": "Só x = 5, 10, 15... servem. Com x = 5: Caio 20, Bia 15, Ana 15 ÷ 5 · 6 = 18. Total 20 + 15 + 18 = 53. Com x = 10: 40, 30, 36, total 106 = 2 · 53. S = 53."
+     "texto": "Com x = 5: Caio 20, Bia 15, Ana 15 ÷ 5 · 6 = 18. Total 20 + 15 + 18 = 53. Com x = 10: 40, 30, 36, total 106 = 2 · 53. Com x = 15: 60, 45, 54, total 159 = 3 · 53. A cada 5 a mais em x, os três sobem o mesmo tanto e o total sobe 53. Então todo total é 53 vezes um número. S = 53."
     },
     {
      "titulo": "Achando M: os totais abaixo de 400",
