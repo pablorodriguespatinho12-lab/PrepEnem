@@ -244,7 +244,7 @@ Q.append(dict(
           ('12', 12, 'Contou todos os divisores de 140, esquecendo o piso de 20 Hz'),
           ('140', 140, 'Deu o mdc (140) em vez de contar os valores')],
     resumo='420 = m · f1 e 700 = n · f1 com m e n inteiros: f1 = 140 ÷ kk. Com f1 pelo menos 20, kk vai de 1 a 7 (140 ÷ 7 = 20; 140 ÷ 8 = 17,5). v = 1,8 · f1 = 252 ÷ kk: sete valores.',
-    ideia='Os modos são f1, 2 · f1, 3 · f1... Então 420 e 700 são múltiplos inteiros de f1, e f1 é o mdc (140) dividido por um inteiro kk. O piso de 20 Hz limita kk, e cada kk dá uma velocidade diferente.',
+    ideia='Os modos são f1, 2 · f1, 3 · f1 e assim por diante, então 420 e 700 são múltiplos inteiros de f1, e f1 é o mdc (140) dividido por um inteiro kk. O piso de 20 Hz limita kk, e cada kk dá uma velocidade diferente.',
     pecas=[('mdc dividido por kk', 'O maior f1 possível é o mdc, 140 Hz. Dividindo-o por 2, 3, 4..., os dois modos continuam múltiplos inteiros de f1, só que de ordem mais alta.')],
     formulas=[('onda', 'Modos da corda', 'f = n · f1, com n = 1, 2, 3...'), ('onda', 'Velocidade na corda', 'v = 2 · 0,9 · f1 = 1,8 · f1'), ('contagem', 'Fundamental possível', 'f1 = mdc ÷ kk')],
     origem=['Se 420 é m · f1 e 700 é n · f1, com m e n inteiros que não conhecemos, então f1 cabe um número inteiro de vezes nos dois. O maior f1 possível é o mdc, 140 Hz (modos 3º e 5º).',

@@ -211,7 +211,7 @@
   "origem": "Escada",
   "ancora": "forte · ENEM 2022 q.160 (caderno 5; q.139 no caderno 7: planta na escala 1 : 50 com folga de 10 cm só de um lado); aqui a cópia reduzida a 50% e a área real em hectares",
   "canal": "mat-07-escalas.txt [3:51:02] (escala é razão na mesma unidade); área e escala ao quadrado em mat-07-escalas.txt [4:01:31]",
-  "enunciado": "Uma família herdou uma fazenda e foi à prefeitura buscar a planta dela, desenhada na escala 1 : 30 000. O funcionário explicou que a planta original não sai do arquivo e fez uma fotocópia reduzida a 50% do tamanho, em todas as direções. Como a cópia ficou pequena demais para ler, a família a levou a uma papelaria, onde ela foi ampliada para 150% do tamanho da cópia que recebeu. Nenhuma das duas cópias traz essa informação no papel. Na cópia final, a família calculou a área do desenho do terreno em uma folha quadriculada. Para o imposto, a prefeitura cobra R$ 15 por hectare, e o corretor lembrou que 1 hectare equivale a 10 000 m². A tabela resume o que a família tem.\n\nDocumento | Como foi feito | Escala impressa\nPlanta original | desenhada pela prefeitura | 1 : 30 000\n1ª cópia | reduzida a 50% da planta | 1 : 30 000\n2ª cópia (a final) | ampliada a 150% da 1ª cópia | 1 : 30 000\n\nNa 2ª cópia, o desenho do terreno ocupa 17,5 cm². A área real do terreno, em hectares, é:\n\nDados: Planta original: escala 1 : 30 000; 1ª cópia: reduzida a 50% da planta; 2ª cópia (a final): ampliada a 150% da 1ª cópia; Desenho do terreno: 17,5 cm² na 2ª cópia; Quero: área real, em hectares.",
+  "enunciado": "Uma família herdou uma fazenda e foi à prefeitura buscar a planta dela, desenhada na escala 1 : 30 000. O funcionário explicou que a planta original não sai do arquivo e fez uma fotocópia reduzida a 50% do tamanho, em todas as direções. Como a cópia ficou pequena demais para ler, a família a levou a uma papelaria, onde ela foi ampliada para 150% do tamanho da cópia que recebeu. Nenhuma das duas cópias traz essa informação no papel. Na cópia final, a família calculou a área do desenho do terreno em uma folha quadriculada. Para o imposto, a prefeitura cobra R$ 15 por hectare, e o corretor lembrou que 1 hectare equivale a 10 000 m². A tabela resume o que a família tem.\n\nDocumento | Como foi feito | Escala\nPlanta original | desenhada pela prefeitura | 1 : 30 000\n1ª cópia | reduzida a 50% da planta | não consta no papel\n2ª cópia (a final) | ampliada a 150% da 1ª cópia | não consta no papel\n\nNa 2ª cópia, o desenho do terreno ocupa 17,5 cm². A área real do terreno, em hectares, é:\n\nDados: Planta original: escala 1 : 30 000; 1ª cópia: reduzida a 50% da planta; 2ª cópia (a final): ampliada a 150% da 1ª cópia; Desenho do terreno: 17,5 cm² na 2ª cópia; Quero: área real, em hectares.",
   "A": "17,5",
   "B": "280",
   "C": "157,5",
@@ -2052,7 +2052,7 @@
   "origem": "Escada",
   "ancora": "parcial · ENEM 2023 q.158 (caderno 7: pescador com 4% da receita repartida e número mínimo achado por teste; texto de 750 letras); aqui a margem é sobre a venda, a quebra muda a massa vendida e o x aparece nos dois lados da equação",
   "canal": "mat-04-porcentagem.txt [2:14:31] (lucro em %, custo e preço de venda: ache o custo e o preço com um fator)",
-  "enunciado": "Uma torrefação artesanal prepara, a cada lote, 100 kg de grãos crus de café, misturando dois tipos. Na torra o grão perde massa porque a água evapora, e essa perda, chamada quebra, é diferente em cada tipo, como mostra a tabela. Depois da torra, todo o café do lote é embalado em pacotes de 250 g, vendidos a R$ 12,50 cada um. O dono quer que o lucro do lote seja de 20% da receita, isto é, de 20% de tudo que entra com a venda dos pacotes (e não 20% do custo dos grãos). O frete de R$ 150 da entrega dos pacotes foi pago pelo comprador e não entra nas contas da torrefação. O único custo do lote é o dos grãos crus.\n\nTipo | Preço do kg cru | Quebra na torra\nA | R$ 36,00 | 20%\nB | R$ 24,00 | 25%\n\nQuantos quilogramas do café tipo A devem entrar no lote de 100 kg de grãos crus?\n\nDados: Lote: 100 kg de grão cru, x kg do café tipo A e o resto do B; Café tipo A: R$ 36 por kg cru, perde 20% na torra; Café tipo B: R$ 24 por kg cru, perde 25% na torra; Venda: pacotes de 250 g a R$ 12,50; Lucro: 20% da receita (da venda); Quero: kg do café tipo A no lote.",
+  "enunciado": "Uma torrefação artesanal prepara, a cada lote, 100 kg de grãos crus de café, misturando dois tipos. Na torra o grão perde massa porque a água evapora, e essa perda, chamada quebra, é diferente em cada tipo, como mostra a tabela. Depois da torra, todo o café do lote é embalado em pacotes de 250 g, vendidos a R$ 12,50 cada um. O dono quer que o lucro do lote seja de 20% da receita, isto é, de 20% de tudo que entra com a venda dos pacotes (e não 20% do custo dos grãos). O frete de R$ 150 da entrega dos pacotes foi pago pelo comprador e não entra nas contas da torrefação. O único custo do lote é o dos grãos crus.\n\nTipo | Preço do kg cru | Quebra na torra\n1 | R$ 36,00 | 20%\n2 | R$ 24,00 | 25%\n\nQuantos quilogramas do café tipo 1 devem entrar no lote de 100 kg de grãos crus?\n\nDados: Lote: 100 kg de grão cru, x kg do café tipo 1 e o resto do tipo 2; Café tipo 1: R$ 36 por kg cru, perde 20% na torra; Café tipo 2: R$ 24 por kg cru, perde 25% na torra; Venda: pacotes de 250 g a R$ 12,50; Lucro: 20% da receita (da venda); Quero: kg do café tipo 1 no lote.",
   "A": "40 kg",
   "B": "67 kg",
   "C": "73 kg",
@@ -2060,7 +2060,7 @@
   "E": "78 kg",
   "resposta": "D",
   "explicacao": {
-   "conferencia": "Custo = 36x + 24 · (100 − x) = 2 400 + 12x. Torrado = 75 + 0,05x kg = 300 + 0,2x pacotes. Receita = 3 750 + 2,5x. Custo = 0,8 · receita: x = 60. Resposta: alternativa D. Erros: Alternativa A = Respondeu os kg do café tipo B: 100 − 60; Alternativa B = Usou quebra de 20% nos dois tipos: receita fixa de 4 000 e 0,8 · 4 000 = 2 400 + 12x; Alternativa C = Fez o lucro de 20% sobre o custo: receita = 1,2 · custo; Alternativa E = Respondeu a massa torrada (75 + 0,05 · 60), que não foi pedida.",
+   "conferencia": "Custo = 36x + 24 · (100 − x) = 2 400 + 12x. Torrado = 75 + 0,05x kg = 300 + 0,2x pacotes. Receita = 3 750 + 2,5x. Custo = 0,8 · receita: x = 60. Resposta: alternativa D. Erros: Alternativa A = Respondeu os kg do café tipo 2: 100 − 60; Alternativa B = Usou quebra de 20% nos dois tipos: receita fixa de 4 000 e 0,8 · 4 000 = 2 400 + 12x; Alternativa C = Fez o lucro de 20% sobre o custo: receita = 1,2 · custo; Alternativa E = Respondeu a massa torrada (75 + 0,05 · 60), que não foi pedida.",
    "ideia": "A margem de 20% é sobre a venda, então o custo é 80% da receita. Como a quantidade de pacotes também depende de x, ele aparece nos dois lados da equação.",
    "pecas": [
     {
@@ -2110,14 +2110,14 @@
       "linhas": [
        [
         "Lote",
-        "100 kg de grão cru, x kg do café tipo A e o resto do B"
+        "100 kg de grão cru, x kg do café tipo 1 e o resto do tipo 2"
        ],
        [
-        "Café tipo A",
+        "Café tipo 1",
         "R$ 36 por kg cru, perde 20% na torra"
        ],
        [
-        "Café tipo B",
+        "Café tipo 2",
         "R$ 24 por kg cru, perde 25% na torra"
        ],
        [
@@ -2130,7 +2130,7 @@
        ],
        [
         "Quero",
-        "kg do café tipo A no lote"
+        "kg do café tipo 1 no lote"
        ]
       ]
      }
@@ -2145,7 +2145,7 @@
       "letras": [
        {
         "letra": "x",
-        "oque": "kg do café tipo A no lote (o que a questão quer; não está nesta equação)"
+        "oque": "kg do café tipo 1 no lote (o que a questão quer; não está nesta equação)"
        },
        {
         "letra": "G",
@@ -2164,13 +2164,13 @@
     },
     {
      "titulo": "Achando G: o gasto com os grãos",
-     "texto": "Com 10 kg de A e 90 kg de B: 36 · 10 = 360 e 24 · 90 = 2 160, total 2 520. É a soma de preço vezes quilos de cada tipo: 36 · 10 + 24 · 90. Com x kg de A sobram 100 − x kg de B. G = 36x + 24 · (100 − x).",
+     "texto": "Com 10 kg do tipo 1 e 90 kg do tipo 2: 36 · 10 = 360 e 24 · 90 = 2 160, total 2 520. É a soma de preço vezes quilos de cada tipo: 36 · 10 + 24 · 90. Com x kg do tipo 1 sobram 100 − x kg do tipo 2. G = 36x + 24 · (100 − x).",
      "visual": {
       "tipo": "tabela",
       "titulo": "Gasto com o lote",
       "cabecalho": [
-       "Kg de A",
-       "Kg de B",
+       "Kg do tipo 1",
+       "Kg do tipo 2",
        "Gasto (R$)"
       ],
       "linhas": [
@@ -2198,7 +2198,7 @@
     },
     {
      "titulo": "Achando P: os pacotes",
-     "texto": "Com 10 kg de A e 90 kg de B: A perde 20%, sobra 0,8 · 10 = 8 kg; B perde 25%, sobra 0,75 · 90 = 67,5 kg; juntos 75,5 kg. Com x: 0,8x + 0,75 · (100 − x). Abrindo, 0,75 · (100 − x) é 0,75 vezes 100 e 0,75 vezes x, com o sinal de menos: 75 − 0,75x."
+     "texto": "Com 10 kg do tipo 1 e 90 kg do tipo 2: o tipo 1 perde 20%, sobra 0,8 · 10 = 8 kg; o tipo 2 perde 25%, sobra 0,75 · 90 = 67,5 kg; juntos 75,5 kg. Com x: 0,8x + 0,75 · (100 − x). Abrindo, 0,75 · (100 − x) é 0,75 vezes 100 e 0,75 vezes x, com o sinal de menos: 75 − 0,75x."
     },
     {
      "titulo": "Achando P: os pacotes (2 de 2)",
@@ -2255,7 +2255,7 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "lote de 100 kg: A e B; quebras 20% e 25%"
+        "lote de 100 kg: tipos 1 e 2; quebras 20% e 25%"
        ],
        [
         "1. Tabela do que eu tenho (cont.)",
@@ -2295,7 +2295,7 @@
   "origem": "Escada",
   "ancora": "forte · Fuvest 2023 2ª fase dia 2 M01 item b (duas tarifas, uma delas por partes, e o intervalo em que uma fica mais barata); ENEM 2021 q.141 do caderno 7 (= q.176 do caderno 5) só pede montar a fórmula do preço; aqui a pegadinha é \"estritamente\" (93, não 92)",
   "canal": "mat-11-funcao-afim-e-sistemas-lineares.txt [5:19:30] (ver onde as duas retas se encontram: o ponto comum das duas)",
-  "enunciado": "Uma pessoa está comparando dois planos de celular só pelo que gasta com ligações, porque a internet é igual nos dois. Plano A: R$ 30 por mês, com 60 minutos de ligações incluídos; cada minuto além disso custa R$ 0,75. Plano B: R$ 54 por mês, com 120 minutos incluídos; cada minuto além disso custa R$ 0,50. Ela fala t minutos por mês, com t inteiro, e quer saber a partir de quando o plano B compensa. O menor valor de t para o qual o plano B fica estritamente mais barato do que o A é:\n\nDados: Plano A: R$ 30 · 60 min · R$ 0,75; Plano B: R$ 54 · 120 min · R$ 0,50; Quero: menor t com o plano B estritamente mais barato.",
+  "enunciado": "Uma pessoa está comparando dois planos de celular só pelo que gasta com ligações, porque a internet é igual nos dois. Plano 1: R$ 30 por mês, com 60 minutos de ligações incluídos; cada minuto além disso custa R$ 0,75. Plano 2: R$ 54 por mês, com 120 minutos incluídos; cada minuto além disso custa R$ 0,50. Ela fala t minutos por mês, com t inteiro, e quer saber a partir de quando o plano 2 compensa. O menor valor de t para o qual o plano 2 fica estritamente mais barato do que o plano 1 é:\n\nDados: Plano 1: R$ 30 · 60 min · R$ 0,75; Plano 2: R$ 54 · 120 min · R$ 0,50; Quero: menor t com o plano 2 estritamente mais barato.",
   "A": "36",
   "B": "92",
   "C": "93",
@@ -2303,7 +2303,7 @@
   "E": "157",
   "resposta": "C",
   "explicacao": {
-   "conferencia": "O plano B fica em R$ 54 até 120 min. O plano A chega a 54 em t = 92 (empate) e passa disso a partir de 93: o menor t com B estritamente mais barato é 93. Resposta: alternativa C. Erros: Alternativa A = Usou t > 36, que só vale depois dos 120 minutos; Alternativa B = Parou na igualdade (92): \"mais barato\" pede estritamente menor; Alternativa D = Pegou os 120 minutos incluídos do plano B; Alternativa E = Contou os 60 minutos incluídos nos dois planos: B só compensa com t > 156.",
+   "conferencia": "O plano 2 fica em R$ 54 até 120 min. O plano 1 chega a 54 em t = 92 (empate) e passa disso a partir de 93: o menor t com o plano 2 estritamente mais barato é 93. Resposta: alternativa C. Erros: Alternativa A = Usou t > 36, que só vale depois dos 120 minutos; Alternativa B = Parou na igualdade (92): \"mais barato\" pede estritamente menor; Alternativa D = Pegou os 120 minutos incluídos do plano 2; Alternativa E = Contou os 60 minutos incluídos nos dois planos: o plano 2 só compensa com t > 156.",
    "ideia": "Cada plano tem uma conta por partes. Compare onde elas se cruzam, e lembre que \"estritamente mais barato\" exclui o empate.",
    "pecas": [
     {
@@ -2342,78 +2342,78 @@
       ],
       "linhas": [
        [
-        "Plano A",
+        "Plano 1",
         "R$ 30 · 60 min · R$ 0,75"
        ],
        [
-        "Plano B",
+        "Plano 2",
         "R$ 54 · 120 min · R$ 0,50"
        ],
        [
         "Quero",
-        "menor t com o plano B estritamente mais barato"
+        "menor t com o plano 2 estritamente mais barato"
        ]
       ]
      }
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Cada plano tem um custo que depende de t. Procuro o menor t em que CB é menor que CA, e não igual.\nAgora é só achar CA e CB, uma por vez.",
+     "texto": "Cada plano tem um custo que depende de t. Procuro o menor t em que C2 é menor que C1, e não igual.\nAgora é só achar C1 e C2, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "CA = 30 + 0,75 · (t − 60)  e  CB = 54",
-      "leitura": "custo do plano A depois dos 60 minutos; custo do plano B até 120 minutos",
+      "formula": "C1 = 30 + 0,75 · (t − 60)  e  C2 = 54",
+      "leitura": "custo do plano 1 depois dos 60 minutos; custo do plano 2 até 120 minutos",
       "letras": [
        {
         "letra": "t",
         "oque": "minutos falados (o que a questão quer)"
        },
        {
-        "letra": "CA",
-        "oque": "custo do plano A, em reais"
+        "letra": "C1",
+        "oque": "custo do plano 1, em reais"
        },
        {
-        "letra": "CB",
-        "oque": "custo do plano B, em reais"
+        "letra": "C2",
+        "oque": "custo do plano 2, em reais"
        }
       ]
      }
     },
     {
-     "titulo": "Achando CA: o excedente do plano A",
-     "texto": "Até 60 min o plano A custa R$ 30. Depois dos 60, cobra R$ 0,75 por minuto além (o excedente). Com t = 70: 70 − 60 = 10 minutos além, e custa 30 + 0,75 · 10 = 37,50. Em letras, depois dos 60 min: CA = 30 + 0,75 · (t − 60)."
+     "titulo": "Achando C1: o excedente do plano 1",
+     "texto": "Até 60 min o plano 1 custa R$ 30. Depois dos 60, cobra R$ 0,75 por minuto além (o excedente). Com t = 70: 70 − 60 = 10 minutos além, e custa 30 + 0,75 · 10 = 37,50. Em letras, depois dos 60 min: C1 = 30 + 0,75 · (t − 60)."
     },
     {
-     "titulo": "Achando CB: o plano B",
-     "texto": "Até 120 minutos, CB = 54, o preço fixo. Com t = 70 o plano B custa 54, mais caro que o plano A (37,50). Até 60 min: CA = 30 e CB = 54, então B não compensa."
+     "titulo": "Achando C2: o plano 2",
+     "texto": "Até 120 minutos, C2 = 54, o preço fixo. Com t = 70 o plano 2 custa 54, mais caro que o plano 1 (37,50). Até 60 min: C1 = 30 e C2 = 54, então o plano 2 não compensa."
     },
     {
-     "titulo": "Achando CA: quando passa de 54",
-     "texto": "Entre 60 e 120 min, CB = 54. O plano A passa de 54 quando 0,75 · (t − 60) > 24 (24 = 54 − 30; \">\" lê-se \"maior que\"). Então t − 60 > 24 ÷ 0,75. Multiplicando os dois por 100: 2 400 ÷ 75 = 32 (conferindo: 0,75 · 32 = 24)."
+     "titulo": "Achando C1: quando passa de 54",
+     "texto": "Entre 60 e 120 min, C2 = 54. O plano 1 passa de 54 quando 0,75 · (t − 60) > 24 (24 = 54 − 30; \">\" lê-se \"maior que\"). Então t − 60 > 24 ÷ 0,75. Multiplicando os dois por 100: 2 400 ÷ 75 = 32 (conferindo: 0,75 · 32 = 24)."
     },
     {
-     "titulo": "Achando CA: quando passa de 54 (2 de 2)",
-     "texto": "Se 0,75 · 32 = 24, com t − 60 maior que 32 o plano A passa de 54. t − 60 > 32 quer dizer t > 32 + 60 = 92 (some 60 dos dois lados)."
+     "titulo": "Achando C1: quando passa de 54 (2 de 2)",
+     "texto": "Se 0,75 · 32 = 24, com t − 60 maior que 32 o plano 1 passa de 54. t − 60 > 32 quer dizer t > 32 + 60 = 92 (some 60 dos dois lados)."
     },
     {
-     "titulo": "Achando CA: t = 92 e t = 93",
-     "texto": "Em t = 92: CA = 30 + 0,75 · 32 = 54 = CB. Empate: B ainda não é mais barato.\nEm t = 93: CA = 30 + 0,75 · 33 = 30 + 24,75 = 54,75 e CB = 54. B é mais barato."
+     "titulo": "Achando C1: t = 92 e t = 93",
+     "texto": "Em t = 92: C1 = 30 + 0,75 · 32 = 54 = C2. Empate: o plano 2 ainda não é mais barato.\nEm t = 93: C1 = 30 + 0,75 · 33 = 30 + 24,75 = 54,75 e C2 = 54. O plano 2 é mais barato."
     },
     {
-     "titulo": "Achando CB: acima de 120 min",
+     "titulo": "Achando C2: acima de 120 min",
      "texto": "Só para conferir: acima de 120 min a resposta não muda, porque já achamos t = 93, que é menor. Aqui os dois cobram excedente. 0,75 · (t − 60) é 0,75 vezes t menos 0,75 vezes 60. Teste com t = 70: 0,75 · 10 = 7,5 e 0,75 · 70 − 45 = 52,5 − 45 = 7,5."
     },
     {
-     "titulo": "Achando CB: acima de 120 min (2 de 2)",
-     "texto": "Então CA = 30 + 0,75 · t − 45 = 0,75 · t − 15. CB = 54 + 0,5 · (t − 120) = 54 + 0,5 · t − 60 = 0,5 · t − 6 (0,5 · 120 = 60)."
+     "titulo": "Achando C2: acima de 120 min (2 de 2)",
+     "texto": "Então C1 = 30 + 0,75 · t − 45 = 0,75 · t − 15. C2 = 54 + 0,5 · (t − 120) = 54 + 0,5 · t − 60 = 0,5 · t − 6 (0,5 · 120 = 60)."
     },
     {
-     "titulo": "Achando CB: a diferença acima de 120",
-     "texto": "CA − CB = (0,75 · t − 15) − (0,5 · t − 6) = 0,25 · t − 9. Com t = 36: 0,25 · 36 = 9 e 9 − 9 = 0; para t maior que 36 dá mais que 0, então B continua mais barato."
+     "titulo": "Achando C2: a diferença acima de 120",
+     "texto": "C1 − C2 = (0,75 · t − 15) − (0,5 · t − 6) = 0,25 · t − 9. Com t = 36: 0,25 · 36 = 9 e 9 − 9 = 0; para t maior que 36 dá mais que 0, então o plano 2 continua mais barato."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "t = 93: CA = 54,75 e CB = 54, então B é mais barato. Em t = 92 há empate (54 e 54). O menor t é 93.\nResposta: alternativa C.",
+     "texto": "t = 93: C1 = 54,75 e C2 = 54, então o plano 2 é mais barato. Em t = 92 há empate (54 e 54). O menor t é 93.\nResposta: alternativa C.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -2427,11 +2427,11 @@
         "93 minutos"
        ],
        [
-        "CA",
+        "C1",
         "R$ 54,75 com t = 93"
        ],
        [
-        "CB",
+        "C2",
         "R$ 54 com t = 93"
        ]
       ]
@@ -2450,19 +2450,19 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "plano A: R$ 30, 60 min, R$ 0,75"
+        "plano 1: R$ 30, 60 min, R$ 0,75"
        ],
        [
         "1. Tabela do que eu tenho (cont.)",
-        "plano B: R$ 54, 120 min, R$ 0,50"
+        "plano 2: R$ 54, 120 min, R$ 0,50"
        ],
        [
         "2. Equação em letras",
-        "CA = 30 + 0,75 · (t − 60)  e  CB = 54"
+        "C1 = 30 + 0,75 · (t − 60)  e  C2 = 54"
        ],
        [
         "3. Uma letra por vez",
-        "CA e CB por partes; t > 92; menor t inteiro = 93"
+        "C1 e C2 por partes; t > 92; menor t inteiro = 93"
        ]
       ]
      }
@@ -2473,7 +2473,8 @@
     "opcoes": [
      "65",
      "66",
-     "70"
+     "70",
+     "85"
     ],
     "certa": "66",
     "resposta": "M = 20 + (t − 50) > 35, então t − 50 > 15 e t > 65. O menor inteiro é 66."
@@ -3094,7 +3095,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "N = P + Q = 10 + 1 = 11.\nConferindo a contagem dos k: de 1 a 5 são 5 números, não 4: 5 − 1 + 1. Por isso de −10 a 20 são 20 − (−10) + 1 = 31 valores. Servem os 10 negativos e o k = 9.\nResposta: alternativa D.",
+     "texto": "N = P + Q = 10 + 1 = 11.\nConferindo a contagem dos k: de 1 a 5 são 5 números: 5 − 1 + 1. Por isso de −10 a 20 são 20 − (−10) + 1 = 31 valores. Servem os 10 negativos e o k = 9.\nResposta: alternativa D.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -4124,20 +4125,18 @@
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "O meio círculo de Γ do lado do triângulo tem diâmetro BC: é o semicírculo H. Ele se divide em três partes: o triângulo T e dois pedaços, um junto de cada cateto."
-    },
-    {
-     "titulo": "De onde vem cada fórmula (2 de 2)",
-     "texto": "Os semicírculos dos catetos (S e R) cobrem exatamente esses dois pedaços, mais o que fica fora de Γ. Então, dentro de Γ, os dois têm H − T. O que pedem é S + R − (H − T)."
-    },
-    {
      "titulo": "O desenho",
-     "texto": "Veja a figura: o triângulo, os dois semicírculos sobre os catetos AB e AC e a circunferência Γ de diâmetro BC. Em rosa, a parte dos semicírculos que fica fora de Γ.",
+     "texto": "O semicírculo H, de diâmetro BC, se divide em T (o triângulo) e dois pedaços, um junto de cada cateto. Os semicírculos dos catetos (S e R) cobrem esses pedaços e mais o que fica fora de Γ (em rosa). Dentro de Γ, os dois têm H − T. O que pedem é S + R − (H − T).",
      "visual": {
       "tipo": "diagrama",
       "nome": "lunulas",
-      "rotulos": []
+      "rotulos": [
+       "",
+       "",
+       "",
+       "H: semicírculo de BC · T: triângulo · S e R: dos catetos",
+       ""
+      ]
      }
     },
     {
@@ -4296,7 +4295,7 @@
   "resposta": "C",
   "explicacao": {
    "conferencia": "Lados: AD = 12 e AB = 20 (perímetro 64, AB = AD + 8). Pedras: PDA + PBC = 120 m² onde P estiver, 25 · 120 = 3 000. Flores 400y; grama 100 · (12 − y). 5 700 = 300y + 4 200, y = 5; até CD: 12 − 5 = 7 m. Resposta: alternativa C. Erros: Alternativa A = Contou as pedras em só 60 m² (y = 10) e deu 12 − 10; Alternativa B = Deu a distância até AB (y) e não até CD; Alternativa D = Esqueceu a grama: 400 · y + 3 000 = 5 700; Alternativa E = Deu o \"8 m a mais\" do enunciado, que só serve para achar os lados.",
-   "ideia": "O perímetro e a diferença dão os lados. os dois triângulos sobre AD e BC têm o mesmo preço e somam sempre metade da praça, onde P estiver: a posição ao longo de AD some; só flores e grama dependem de y, e a pergunta é 12 − y.",
+   "ideia": "O perímetro e a diferença dão os lados; os dois triângulos sobre AD e BC têm o mesmo preço e somam sempre metade da praça, onde P estiver, e a posição ao longo de AD some. Só flores e grama dependem de y, e a pergunta é 12 − y.",
    "pecas": [
     {
      "termo": "Altura do triângulo",
@@ -4557,7 +4556,7 @@
   "resposta": "A",
   "explicacao": {
    "conferencia": "Concentrado: π · 25 · 18 = 450π; mistura 2:1: 450π ÷ 2 · 3 = 675π; sem a perda de 10%: 675π · 0,9 = 607,5π. Copo a 80%: 75π · 0,512 = 38,4π. 607,5 ÷ 38,4 = 15,8: 15 copos. Resposta: alternativa A. Erros: Alternativa B = Tomou 80% da altura como 80% do volume do copo (60π): 607,5 ÷ 60 = 10,1; Alternativa C = Serviu o concentrado puro, sem água e sem perda: 450 ÷ 38,4 = 11,7; Alternativa D = Arredondou 15,8 para cima: o 16º copo não enche (614,4 é mais que 607,5); Alternativa E = Esqueceu a perda de 10%: 675 ÷ 38,4 = 17,6.",
-   "ideia": "O suco servido até 80% da altura forma um cone menor semelhante ao copo, e o volume vai com o cubo da razão. antes, ache quanto líquido existe de fato: concentrado, mais a água da mistura, menos a perda; conte só os copos inteiros.",
+   "ideia": "O suco servido até 80% da altura forma um cone menor semelhante ao copo, e o volume vai com o cubo da razão. Antes, ache quanto líquido existe de fato: concentrado, mais a água da mistura, menos a perda; conte só os copos inteiros.",
    "pecas": [
     {
      "termo": "Semelhante",
@@ -5808,7 +5807,7 @@
     },
     {
      "titulo": "Volta na equação (2 de 2)",
-     "texto": "Resposta: alternativa B. Conferindo: 2/3 é cerca de 0,67, mais que a metade, porque o jeito 2 + 2 tem o dobro de área do outro."
+     "texto": "Resposta: alternativa B. Conferindo: 2/3 é cerca de 0,67, mais que a metade, porque o jeito 2 + 2 tem o dobro de chances do outro (144 contra 72, em 625)."
     },
     {
      "titulo": "Questão parecida? Faça assim",

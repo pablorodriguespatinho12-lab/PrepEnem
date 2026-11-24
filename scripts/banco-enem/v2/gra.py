@@ -39,10 +39,10 @@ ENUN_A = ('Uma família herdou uma fazenda e foi à prefeitura buscar a planta d
           'a uma papelaria, onde ela foi ampliada para 150% do tamanho da cópia que recebeu. Nenhuma das duas cópias traz essa informação no papel. '
           'Na cópia final, a família calculou a área do desenho do terreno em uma folha quadriculada. Para o imposto, a prefeitura cobra R$ 15 por hectare, '
           'e o corretor lembrou que 1 hectare equivale a 10 000 m². A tabela resume o que a família tem.\n\n'
-          'Documento | Como foi feito | Escala impressa\n'
+          'Documento | Como foi feito | Escala\n'
           'Planta original | desenhada pela prefeitura | 1 : 30 000\n'
-          '1ª cópia | reduzida a 50% da planta | 1 : 30 000\n'
-          '2ª cópia (a final) | ampliada a 150% da 1ª cópia | 1 : 30 000\n\n'
+          '1ª cópia | reduzida a 50% da planta | não consta no papel\n'
+          '2ª cópia (a final) | ampliada a 150% da 1ª cópia | não consta no papel\n\n'
           'Na 2ª cópia, o desenho do terreno ocupa 17,5 cm². A área real do terreno, em hectares, é:')
 assert len(ENUN_A) >= 600, len(ENUN_A)
 

@@ -215,13 +215,13 @@ Q.append(dict(
     eq_texto='Cada hora ligada, o chuveiro gasta tantos kWh quanto a sua potência em kW. Somando as potências dos três meses e multiplicando pelas horas de cada mês e pelo preço, sai o custo.\nAgora é só achar Hor, Pre, Pjun, Pjul e Pago.',
     achando=[('Achando Hor: as horas de cada mês', 'Cada mês: 4 pessoas · 1 banho por dia · 30 dias = 120 banhos.\n120 banhos de 10 min = 1 200 min. 1 hora tem 60 min: 1 200 ÷ 60 = 20 (pois 60 · 20 = 1 200).\nHor = 20 horas por mês.'),
              ('Achando Pre: o preço do kWh', 'O enunciado dá: Pre = R$ 0,90 por kWh.'),
-             ('Achando Pjun: a potência de cada posição',
+             ('O calor que a água precisa por segundo',
               'A tabela dá o aumento da água, não a potência. Calor por segundo = kg por segundo · 4 200 · aumento.\n'
               '3 L por minuto = 3 kg em 60 s = 0,05 kg por segundo (pois 60 · 0,05 = 3). 0,05 · 4 200 = 210: 4 200 ÷ 100 = 42 e 42 · 5 = 210.'),
-             ('Achando Pjun: o que o chuveiro puxa da tomada',
+             ('O que o chuveiro puxa da tomada: posição quente',
               'Só 80% do que ele puxa vira calor: puxando 100 W, 80 W viram calor (100 · 0,8). Então puxa o calor ÷ 0,8.\n'
               'Quente (16 °C): calor = 210 · 16 = 3 360 W (210 · 10 = 2 100 e 210 · 6 = 1 260). Puxa 3 360 ÷ 0,8 = 33 600 ÷ 8 = 4 200 W (pois 8 · 4 200 = 33 600).'),
-             ('Achando Pjun: as outras duas posições',
+             ('O que o chuveiro puxa nas outras duas posições',
               'Morno (8 °C): 210 · 8 = 1 680 W de calor; 1 680 ÷ 0,8 = 16 800 ÷ 8 = 2 100 W.\n'
               'Superquente (24 °C): 210 · 24 = 5 040 W (210 · 20 = 4 200 e 210 · 4 = 840); 5 040 ÷ 0,8 = 50 400 ÷ 8 = 6 300 W.'),
              ('Achando Pjun: a posição de junho',
@@ -374,7 +374,7 @@ Q.append(dict(
     letras=[('Ic', 'corrente em R6, em mA (o que a questão quer)'), ('Tp', 'tensão entre as linhas 2 e 3, em V'), ('Ram', 'resistência do ramo R5 e R6, em Ω'),
             ('Par', 'resistência de tudo que liga a linha 2 à 3, em Ω'), ('Itot', 'corrente total que sai da fonte, em A')],
     eq_texto='O ramo de R5 e R6 está entre as linhas 2 e 3, e a mesma corrente passa pelos dois. Dividindo a tensão entre essas linhas pela resistência do ramo, sai a corrente.\nAgora é só achar Ram, Par, Itot e Tp.',
-    achando=[('Achando Ram: quem sai da conta', 'Leia a tabela com cuidado. R4 tem as duas pontas na linha 2: o mesmo ponto dos dois lados, sem tensão e sem corrente (curto). '
+    achando=[('Quem sai da conta: R3 e R4', 'Leia a tabela com cuidado. R4 tem as duas pontas na linha 2: o mesmo ponto dos dois lados, sem tensão e sem corrente (curto). '
                                               'R3 tem uma ponta na linha 2 e a outra na linha 5, onde mais nada se liga: a corrente não tem para onde ir (aberto). R3 e R4 saem do circuito.',
               {'tipo': 'diagrama', 'nome': 'protoboard-curto-aberto', 'rotulos': ['', '', '', '', '', '', '', 'R4: curto, sem corrente', 'R3: aberto, sem corrente']}),
              ('Achando Ram: o ramo de R5 e R6', 'R5 liga a linha 2 à 4 e R6 liga a 4 à 3, e nada mais toca a linha 4: estão em fila, mesma corrente, e as resistências somam.\nRam = 60 + 90 = 150 Ω.'),

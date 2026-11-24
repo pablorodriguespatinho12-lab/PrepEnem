@@ -274,7 +274,7 @@ Q.append(dict(
            ('Lente 2', 'convergente, foco f2 = 10,0 cm'), ('Distância inicial entre as lentes', '37,5 cm'), ('Afastamento da lente 2', '0,50 cm/s, em linha reta'),
            ('Imagem pedida na parede', 'nítida, 72 cm de altura')],
     alts=[('0 s', 0, "Tomou a solução em que a lente 2 está dentro do foco (p2 = 7,5 cm, aumento 4): já vale no início, mas a imagem é virtual e não aparece na parede"),
-          ('6 s', 6, 'Esqueceu a lente 1: usou o slide de 3,6 cm como objeto da lente 2 (aumento 20, p2 = 10,5 cm)'),
+          ('6 s', 6, 'Errou só o aumento da lente 2: usou 72 ÷ 3,6 = 20 (esqueceu o 5 da lente 1) mas manteve q1 = 30 cm: p2 = 10,5 cm, Df = 40,5 cm, (40,5 − 37,5) ÷ 0,50'),
           ('10 s', 10, 'OK'),
           ('85 s', 85, 'Dividiu a distância final entre as lentes (42,5 cm) pela velocidade, sem tirar os 37,5 cm do início'),
           ('100 s', 100, 'Leu 0,50 cm/s como 0,50 mm/s: 50 mm ÷ 0,50 mm/s')],

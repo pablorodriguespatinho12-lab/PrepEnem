@@ -30,7 +30,7 @@
    "passos": [
     {
      "titulo": "As fórmulas desta questão",
-     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. O p é o número da porcentagem (em 20%, p = 20). O ponto · significa vezes.",
+     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela. O ponto · significa vezes.",
      "visual": {
       "tipo": "formulas",
       "itens": [
@@ -42,7 +42,7 @@
        {
         "figura": "porcentagem",
         "nome": "Parte de um total",
-        "formula": "parte = total · p ÷ 100"
+        "formula": "parte = total · porcentagem ÷ 100"
        }
       ]
      }
@@ -90,11 +90,11 @@
      "texto": "O aumento do frasco é o de uma cápsula vezes 30. Em uma cápsula, somo as variações dos três componentes; uma queda entra com sinal de menos.\nAgora é só achar N, P, W e X.",
      "visual": {
       "tipo": "equacao",
-      "formula": "R = N · (P + W + X)",
+      "formula": "S = N · (P + W + X)",
       "leitura": "aumento do frasco = cápsulas por frasco · (variação do cálcio + do zinco + do ferro, por cápsula)",
       "letras": [
        {
-        "letra": "R",
+        "letra": "S",
         "oque": "aumento do custo de um frasco, em R$ (o que a questão quer)"
        },
        {
@@ -134,7 +134,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "R = 30 · (12 − 12 + 20). Dentro do parêntese: 12 − 12 = 0 e 0 + 20 = 20.\nR = 30 · 20 = 600 (3 · 2 = 6 e dois zeros).\nResposta: alternativa D.",
+     "texto": "S = 30 · (12 − 12 + 20). Dentro do parêntese: 12 − 12 = 0 e 0 + 20 = 20.\nS = 30 · 20 = 600 (3 · 2 = 6 e dois zeros).\nResposta: alternativa D.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -179,7 +179,7 @@
        ],
        [
         "2. Equação em letras",
-        "R = N · (P + W + X)"
+        "S = N · (P + W + X)"
        ],
        [
         "3. Uma letra por vez",
@@ -219,7 +219,7 @@
   "E": "8",
   "resposta": "E",
   "explicacao": {
-   "conferencia": "Cada operação deixa 3/4 do álcool: 80 → 60 → 45 → 33,75 → 25,31 → 18,98 → 14,24 → 10,68 (7ª, ainda mais de 10%) → 8,01 (8ª). N = 8. Resposta: alternativa E. Erros: Alternativa A = Tirou 20 pontos (25% de 80) em toda operação: 70 ÷ 20 = 3,5, arredondado para 4; Alternativa B = Achou que a mistura tinha 30 L (sem contar o tanque cheio de 40 L) e que sai 1/3 do álcool: fator 2/3, chega a 10% na 6ª; Alternativa C = Parou na 7ª, com 10,68%, achando que é \"quase 10\"; Alternativa D = Juntou 10 L de água a 40 L sem retirar nada (fator 40 ÷ 50 = 0,8): só passa de 10% na 10ª.",
+   "conferencia": "Cada operação deixa 3/4 do álcool: 80 → 60 → 45 → 33,75 → 25,31 → 18,98 → 14,24 → 10,68 (7ª, ainda mais de 10%) → 8,01 (8ª). N = 8. Resposta: alternativa E. Erros: Alternativa A = Tirou 20 pontos (25% de 80) em toda operação: 70 ÷ 20 = 3,5, arredondado para 4; Alternativa B = Achou que a mistura tinha 30 L (sem contar o tanque cheio de 40 L) e que sai 1/3 do álcool: fator 2/3, chega a 10% na 6ª; Alternativa C = Parou na 7ª, com 10,68%, achando que é \"quase 10\"; Alternativa D = Juntou 10 L de água a 40 L sem retirar nada (fator 40 ÷ 50 = 0,8): só chega a 10% ou menos na 10ª.",
    "ideia": "Cada operação tira 1/4 da mistura e, junto, 1/4 do álcool; a água que entra não tem álcool. Então a % de álcool é multiplicada por 0,75 a cada vez, e não diminui sempre os mesmos pontos.",
    "pecas": [
     {

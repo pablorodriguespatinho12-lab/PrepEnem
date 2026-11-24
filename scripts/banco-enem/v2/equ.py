@@ -60,9 +60,9 @@ ENUN_A = ('Uma torrefação artesanal prepara, a cada lote, 100 kg de grãos cru
           'a venda dos pacotes (e não 20% do custo dos grãos). O frete de R$ 150 da entrega dos pacotes foi pago pelo comprador e não entra nas contas '
           'da torrefação. O único custo do lote é o dos grãos crus.\n\n'
           'Tipo | Preço do kg cru | Quebra na torra\n'
-          'A | R$ 36,00 | 20%\n'
-          'B | R$ 24,00 | 25%\n\n'
-          'Quantos quilogramas do café tipo A devem entrar no lote de 100 kg de grãos crus?')
+          '1 | R$ 36,00 | 20%\n'
+          '2 | R$ 24,00 | 25%\n\n'
+          'Quantos quilogramas do café tipo 1 devem entrar no lote de 100 kg de grãos crus?')
 assert len(ENUN_A) >= 600, len(ENUN_A)
 assert 'operários' not in ENUN_A
 
@@ -139,10 +139,10 @@ assert F(3, 4) * 70 - 45 == F('7.5') and F(3, 4) * 10 == F('7.5') and F(3, 4) * 
 assert all(plano_a(t) == F(3, 4) * t - 15 and plano_b(t) == F(1, 2) * t - 6 for t in range(121, 400))
 assert all(plano_a(t) - plano_b(t) == F(1, 4) * t - 9 for t in range(121, 400)) and F(1, 4) * 36 == 9
 assert 20 + (66 - 50) > 35 and not 20 + (65 - 50) > 35
-ENUN_C = ('Uma pessoa está comparando dois planos de celular só pelo que gasta com ligações, porque a internet é igual nos dois. Plano A: R$ 30 por mês, '
-          'com 60 minutos de ligações incluídos; cada minuto além disso custa R$ 0,75. Plano B: R$ 54 por mês, com 120 minutos incluídos; cada minuto além disso '
-          'custa R$ 0,50. Ela fala t minutos por mês, com t inteiro, e quer saber a partir de quando o plano B compensa. O menor valor de t para o qual o plano B '
-          'fica estritamente mais barato do que o A é:')
+ENUN_C = ('Uma pessoa está comparando dois planos de celular só pelo que gasta com ligações, porque a internet é igual nos dois. Plano 1: R$ 30 por mês, '
+          'com 60 minutos de ligações incluídos; cada minuto além disso custa R$ 0,75. Plano 2: R$ 54 por mês, com 120 minutos incluídos; cada minuto além disso '
+          'custa R$ 0,50. Ela fala t minutos por mês, com t inteiro, e quer saber a partir de quando o plano 2 compensa. O menor valor de t para o qual o plano 2 '
+          'fica estritamente mais barato do que o plano 1 é:')
 assert len(ENUN_C) >= 400, len(ENUN_C)
 
 # ---------------------------------------------------------------- d) Harvard-MIT: coeficientes que também são raízes
@@ -188,10 +188,10 @@ Q = [
     dict(
         id='d2-escada-mat-ita-equ-00a', materia='Matemática', tema=T, calc=60,
         enunciado=ENUN_A,
-        dados=[('Lote', '100 kg de grão cru, x kg do café tipo A e o resto do B'), ('Café tipo A', 'R$ 36 por kg cru, perde 20% na torra'),
-               ('Café tipo B', 'R$ 24 por kg cru, perde 25% na torra'), ('Venda', 'pacotes de 250 g a R$ 12,50'),
-               ('Lucro', '20% da receita (da venda)'), ('Quero', 'kg do café tipo A no lote')],
-        alts=[('40 kg', 40, 'Respondeu os kg do café tipo B: 100 − 60'),
+        dados=[('Lote', '100 kg de grão cru, x kg do café tipo 1 e o resto do tipo 2'), ('Café tipo 1', 'R$ 36 por kg cru, perde 20% na torra'),
+               ('Café tipo 2', 'R$ 24 por kg cru, perde 25% na torra'), ('Venda', 'pacotes de 250 g a R$ 12,50'),
+               ('Lucro', '20% da receita (da venda)'), ('Quero', 'kg do café tipo 1 no lote')],
+        alts=[('40 kg', 40, 'Respondeu os kg do café tipo 2: 100 − 60'),
               ('60 kg', 60, 'OK'),
               ('67 kg', 66.667, 'Usou quebra de 20% nos dois tipos: receita fixa de 4 000 e 0,8 · 4 000 = 2 400 + 12x'),
               ('73 kg', 73.11, 'Fez o lucro de 20% sobre o custo: receita = 1,2 · custo'),
@@ -203,20 +203,20 @@ Q = [
         formulas=[('porcentagem', 'Margem sobre a venda', 'custo = 0,8 · receita'), ('media', 'Custo da mistura', 'soma de preço · kg de cada tipo'),
                   ('texto', 'Gramas em quilos', '1 000 g ÷ 250 g = 4 pacotes por kg')],
         eq='G = 0,8 · V', leitura='custo dos grãos = 80% da receita (os outros 20% são o lucro)',
-        letras=[('x', 'kg do café tipo A no lote (o que a questão quer; não está nesta equação)'), ('G', 'gasto com os grãos do lote, em reais'),
+        letras=[('x', 'kg do café tipo 1 no lote (o que a questão quer; não está nesta equação)'), ('G', 'gasto com os grãos do lote, em reais'),
                 ('P', 'pacotes de 250 g vendidos (não está nesta equação)'), ('V', 'receita da venda, em reais')],
         eq_texto='O lucro é 20% da receita, então o gasto é os outros 80%. G e V dependem de x. As letras x e P não estão nesta equação: entram nos passos seguintes.\nAgora é só achar G, P e V, uma por vez.',
         achando=[('Achando G: o gasto com os grãos',
-                  'Com 10 kg de A e 90 kg de B: 36 · 10 = 360 e 24 · 90 = 2 160, total 2 520. É a soma de preço vezes quilos de cada tipo: 36 · 10 + 24 · 90. Com x kg de A sobram 100 − x kg de B. G = 36x + 24 · (100 − x).\n24 · (100 − x) é 24 vezes 100 e 24 vezes x, com o sinal de menos: 2 400 − 24x. Teste com x = 10: 24 · 90 = 2 160 e 2 400 − 240 = 2 160.\nEntão G = 36x + 2 400 − 24x = 2 400 + 12x.',
-                  tabela('Gasto com o lote', ['Kg de A', 'Kg de B', 'Gasto (R$)'], [['10', '90', '2 520'], ['20', '80', '2 640'], ['x', '100 − x', '2 400 + 12x']])),
+                  'Com 10 kg do tipo 1 e 90 kg do tipo 2: 36 · 10 = 360 e 24 · 90 = 2 160, total 2 520. É a soma de preço vezes quilos de cada tipo: 36 · 10 + 24 · 90. Com x kg do tipo 1 sobram 100 − x kg do tipo 2. G = 36x + 24 · (100 − x).\n24 · (100 − x) é 24 vezes 100 e 24 vezes x, com o sinal de menos: 2 400 − 24x. Teste com x = 10: 24 · 90 = 2 160 e 2 400 − 240 = 2 160.\nEntão G = 36x + 2 400 − 24x = 2 400 + 12x.',
+                  tabela('Gasto com o lote', ['Kg do tipo 1', 'Kg do tipo 2', 'Gasto (R$)'], [['10', '90', '2 520'], ['20', '80', '2 640'], ['x', '100 − x', '2 400 + 12x']])),
                  ('Achando P: os pacotes',
-                  'Com 10 kg de A e 90 kg de B: A perde 20%, sobra 0,8 · 10 = 8 kg; B perde 25%, sobra 0,75 · 90 = 67,5 kg; juntos 75,5 kg. Com x: 0,8x + 0,75 · (100 − x). Abrindo, 0,75 · (100 − x) é 0,75 vezes 100 e 0,75 vezes x, com o sinal de menos: 75 − 0,75x. Junte os x: 0,8x − 0,75x = 0,05x (80 centésimos menos 75 centésimos). Sobra 75 + 0,05x kg.\n1 kg = 1 000 g. Cabem 1 000 ÷ 250 = 4 pacotes de 250 g em 1 kg (4 · 250 = 1 000). P = 4 · (75 + 0,05x) = 300 + 0,2x.'),
+                  'Com 10 kg do tipo 1 e 90 kg do tipo 2: o tipo 1 perde 20%, sobra 0,8 · 10 = 8 kg; o tipo 2 perde 25%, sobra 0,75 · 90 = 67,5 kg; juntos 75,5 kg. Com x: 0,8x + 0,75 · (100 − x). Abrindo, 0,75 · (100 − x) é 0,75 vezes 100 e 0,75 vezes x, com o sinal de menos: 75 − 0,75x. Junte os x: 0,8x − 0,75x = 0,05x (80 centésimos menos 75 centésimos). Sobra 75 + 0,05x kg.\n1 kg = 1 000 g. Cabem 1 000 ÷ 250 = 4 pacotes de 250 g em 1 kg (4 · 250 = 1 000). P = 4 · (75 + 0,05x) = 300 + 0,2x.'),
                  ('Achando V: a receita',
                   'Cada pacote rende R$ 12,50. Com x = 10: P = 302 pacotes e V = 12,5 · 302 = 3 775. Com x: V = 12,5 · (300 + 0,2x) = 3 750 + 2,5x (12,5 · 300 = 3 750 e 12,5 · 0,2 = 2,5). O frete de R$ 150 não entra: quem pagou foi o comprador.')],
         volta='Daqui a pouco confiro G, P e V com x = 60 (a tabela mostra os valores).\nO lucro é 20% da receita, então o gasto é 80%: G = 0,8 · V.\n2 400 + 12x = 0,8 · (3 750 + 2,5x) = 3 000 + 2x (0,8 · 3 750 = 3 000 e 0,8 · 2,5 = 2).\nTire 2x e 2 400 dos dois lados: 12x − 2x = 3 000 − 2 400, 10x = 600, x = 60 kg.\nConferindo: G = 2 400 + 720 = 3 120; 78 kg torrados são 312 pacotes; V = 3 900; lucro 780 = 20% de 3 900.\nResposta: alternativa X.',
         valores=[('x', '60 kg'), ('G', 'R$ 3 120 com x = 60'), ('P', '312 pacotes com x = 60'), ('V', 'R$ 3 900 com x = 60')],
         pista='"20% da receita" é lucro sobre a venda: custo = 80% da receita. Ache custo, pacotes e receita em função de x e iguale.',
-        rec1='lote de 100 kg: A e B, quebras 20% e 25%, pacote de 250 g a R$ 12,50', rec3='G = 2 400 + 12x; P = 300 + 0,2x; V = 3 750 + 2,5x; x = 60',
+        rec1='lote de 100 kg: tipos 1 e 2, quebras 20% e 25%, pacote de 250 g a R$ 12,50', rec3='G = 2 400 + 12x; P = 300 + 0,2x; V = 3 750 + 2,5x; x = 60',
         checagem=('Um produto custa R$ 80. Para ter lucro de 20% da venda, por quanto deve ser vendido?',
                   ['R$ 100', 'R$ 96', 'R$ 64', 'R$ 120'], 'R$ 100',
                   'O custo é 80% da venda: 80 ÷ 0,8 = 100. R$ 96 é o lucro de 20% sobre o custo (80 · 1,2).'),
@@ -268,39 +268,39 @@ Q = [
     dict(
         id='d2-escada-mat-ita-equ-00c', materia='Matemática', tema=T, calc=93, pos=2,
         enunciado=ENUN_C,
-        dados=[('Plano A', 'R$ 30 · 60 min · R$ 0,75'), ('Plano B', 'R$ 54 · 120 min · R$ 0,50'),
-               ('Quero', 'menor t com o plano B estritamente mais barato')],
+        dados=[('Plano 1', 'R$ 30 · 60 min · R$ 0,75'), ('Plano 2', 'R$ 54 · 120 min · R$ 0,50'),
+               ('Quero', 'menor t com o plano 2 estritamente mais barato')],
         alts=[('36', 36, 'Usou t > 36, que só vale depois dos 120 minutos'),
               ('92', 92, 'Parou na igualdade (92): "mais barato" pede estritamente menor'),
               ('93', 93, 'OK'),
-              ('120', 120, 'Pegou os 120 minutos incluídos do plano B'),
-              ('157', 157, 'Contou os 60 minutos incluídos nos dois planos: B só compensa com t > 156')],
-        resumo='O plano B fica em R$ 54 até 120 min. O plano A chega a 54 em t = 92 (empate) e passa disso a partir de 93: o menor t com B estritamente mais barato é 93.',
+              ('120', 120, 'Pegou os 120 minutos incluídos do plano 2'),
+              ('157', 157, 'Contou os 60 minutos incluídos nos dois planos: o plano 2 só compensa com t > 156')],
+        resumo='O plano 2 fica em R$ 54 até 120 min. O plano 1 chega a 54 em t = 92 (empate) e passa disso a partir de 93: o menor t com o plano 2 estritamente mais barato é 93.',
         ideia='Cada plano tem uma conta por partes. Compare onde elas se cruzam, e lembre que "estritamente mais barato" exclui o empate.',
         pecas=[('Excedente', 'O que passa da franquia (dos minutos já incluídos no plano).'),
                ('Estritamente', 'Estritamente mais barato: menor mesmo, sem contar o empate (igual).')],
         formulas=[('grafico', 'Plano com franquia', 'R$ 30 + R$ 0,75 · (minutos − 60)')],
-        eq='CA = 30 + 0,75 · (t − 60)  e  CB = 54', leitura='custo do plano A depois dos 60 minutos; custo do plano B até 120 minutos',
-        letras=[('t', 'minutos falados (o que a questão quer)'), ('CA', 'custo do plano A, em reais'), ('CB', 'custo do plano B, em reais')],
-        eq_texto='Cada plano tem um custo que depende de t. Procuro o menor t em que CB é menor que CA, e não igual.\nAgora é só achar CA e CB, uma por vez.',
-        achando=[('Achando CA: o excedente do plano A',
-                  'Até 60 min o plano A custa R$ 30. Depois dos 60, cobra R$ 0,75 por minuto além (o excedente). Com t = 70: 70 − 60 = 10 minutos além, e custa 30 + 0,75 · 10 = 37,50. Em letras, depois dos 60 min: CA = 30 + 0,75 · (t − 60).'),
-                 ('Achando CB: o plano B',
-                  'Até 120 minutos, CB = 54, o preço fixo. Com t = 70 o plano B custa 54, mais caro que o plano A (37,50). Até 60 min: CA = 30 e CB = 54, então B não compensa.'),
-                 ('Achando CA: quando passa de 54',
-                  'Entre 60 e 120 min, CB = 54. O plano A passa de 54 quando 0,75 · (t − 60) > 24 (24 = 54 − 30; ">" lê-se "maior que"). Então t − 60 > 24 ÷ 0,75. Multiplicando os dois por 100: 2 400 ÷ 75 = 32 (conferindo: 0,75 · 32 = 24).\nSe 0,75 · 32 = 24, com t − 60 maior que 32 o plano A passa de 54. t − 60 > 32 quer dizer t > 32 + 60 = 92 (some 60 dos dois lados).'),
-                 ('Achando CA: t = 92 e t = 93',
-                  'Em t = 92: CA = 30 + 0,75 · 32 = 54 = CB. Empate: B ainda não é mais barato.\nEm t = 93: CA = 30 + 0,75 · 33 = 30 + 24,75 = 54,75 e CB = 54. B é mais barato.'),
-                 ('Achando CB: acima de 120 min',
-                  'Só para conferir: acima de 120 min a resposta não muda, porque já achamos t = 93, que é menor. Aqui os dois cobram excedente. 0,75 · (t − 60) é 0,75 vezes t menos 0,75 vezes 60. Teste com t = 70: 0,75 · 10 = 7,5 e 0,75 · 70 − 45 = 52,5 − 45 = 7,5.\nEntão CA = 30 + 0,75 · t − 45 = 0,75 · t − 15. CB = 54 + 0,5 · (t − 120) = 54 + 0,5 · t − 60 = 0,5 · t − 6 (0,5 · 120 = 60).'),
-                 ('Achando CB: a diferença acima de 120',
-                  'CA − CB = (0,75 · t − 15) − (0,5 · t − 6) = 0,25 · t − 9. Com t = 36: 0,25 · 36 = 9 e 9 − 9 = 0; para t maior que 36 dá mais que 0, então B continua mais barato.')],
-        volta='t = 93: CA = 54,75 e CB = 54, então B é mais barato. Em t = 92 há empate (54 e 54). O menor t é 93.\nResposta: alternativa X.',
-        valores=[('t', '93 minutos'), ('CA', 'R$ 54,75 com t = 93'), ('CB', 'R$ 54 com t = 93')],
+        eq='C1 = 30 + 0,75 · (t − 60)  e  C2 = 54', leitura='custo do plano 1 depois dos 60 minutos; custo do plano 2 até 120 minutos',
+        letras=[('t', 'minutos falados (o que a questão quer)'), ('C1', 'custo do plano 1, em reais'), ('C2', 'custo do plano 2, em reais')],
+        eq_texto='Cada plano tem um custo que depende de t. Procuro o menor t em que C2 é menor que C1, e não igual.\nAgora é só achar C1 e C2, uma por vez.',
+        achando=[('Achando C1: o excedente do plano 1',
+                  'Até 60 min o plano 1 custa R$ 30. Depois dos 60, cobra R$ 0,75 por minuto além (o excedente). Com t = 70: 70 − 60 = 10 minutos além, e custa 30 + 0,75 · 10 = 37,50. Em letras, depois dos 60 min: C1 = 30 + 0,75 · (t − 60).'),
+                 ('Achando C2: o plano 2',
+                  'Até 120 minutos, C2 = 54, o preço fixo. Com t = 70 o plano 2 custa 54, mais caro que o plano 1 (37,50). Até 60 min: C1 = 30 e C2 = 54, então o plano 2 não compensa.'),
+                 ('Achando C1: quando passa de 54',
+                  'Entre 60 e 120 min, C2 = 54. O plano 1 passa de 54 quando 0,75 · (t − 60) > 24 (24 = 54 − 30; ">" lê-se "maior que"). Então t − 60 > 24 ÷ 0,75. Multiplicando os dois por 100: 2 400 ÷ 75 = 32 (conferindo: 0,75 · 32 = 24).\nSe 0,75 · 32 = 24, com t − 60 maior que 32 o plano 1 passa de 54. t − 60 > 32 quer dizer t > 32 + 60 = 92 (some 60 dos dois lados).'),
+                 ('Achando C1: t = 92 e t = 93',
+                  'Em t = 92: C1 = 30 + 0,75 · 32 = 54 = C2. Empate: o plano 2 ainda não é mais barato.\nEm t = 93: C1 = 30 + 0,75 · 33 = 30 + 24,75 = 54,75 e C2 = 54. O plano 2 é mais barato.'),
+                 ('Achando C2: acima de 120 min',
+                  'Só para conferir: acima de 120 min a resposta não muda, porque já achamos t = 93, que é menor. Aqui os dois cobram excedente. 0,75 · (t − 60) é 0,75 vezes t menos 0,75 vezes 60. Teste com t = 70: 0,75 · 10 = 7,5 e 0,75 · 70 − 45 = 52,5 − 45 = 7,5.\nEntão C1 = 30 + 0,75 · t − 45 = 0,75 · t − 15. C2 = 54 + 0,5 · (t − 120) = 54 + 0,5 · t − 60 = 0,5 · t − 6 (0,5 · 120 = 60).'),
+                 ('Achando C2: a diferença acima de 120',
+                  'C1 − C2 = (0,75 · t − 15) − (0,5 · t − 6) = 0,25 · t − 9. Com t = 36: 0,25 · 36 = 9 e 9 − 9 = 0; para t maior que 36 dá mais que 0, então o plano 2 continua mais barato.')],
+        volta='t = 93: C1 = 54,75 e C2 = 54, então o plano 2 é mais barato. Em t = 92 há empate (54 e 54). O menor t é 93.\nResposta: alternativa X.',
+        valores=[('t', '93 minutos'), ('C1', 'R$ 54,75 com t = 93'), ('C2', 'R$ 54 com t = 93')],
         pista='Cada plano tem uma conta por partes. Compare onde elas se cruzam e lembre que "estritamente mais barato" exclui o empate.',
-        rec1='plano A: R$ 30, 60 min, R$ 0,75; plano B: R$ 54, 120 min, R$ 0,50', rec3='CA e CB por partes; t > 92; menor t inteiro = 93',
+        rec1='plano 1: R$ 30, 60 min, R$ 0,75; plano 2: R$ 54, 120 min, R$ 0,50', rec3='C1 e C2 por partes; t > 92; menor t inteiro = 93',
         checagem=('Plano M: R$ 20 com 50 min incluídos e R$ 1 por minuto extra. Plano N: R$ 35 fixos. A partir de quantos minutos N fica estritamente mais barato?',
-                  ['65', '66', '70'], '66',
+                  ['65', '66', '70', '85'], '66',
                   'M = 20 + (t − 50) > 35, então t − 50 > 15 e t > 65. O menor inteiro é 66.'),
         ancora='forte · Fuvest 2023 2ª fase dia 2 M01 item b (duas tarifas, uma delas por partes, e o intervalo em que uma fica mais barata); ENEM 2021 q.141 do caderno 7 (= q.176 do caderno 5) só pede montar a fórmula do preço; aqui a pegadinha é "estritamente" (93, não 92)',
         canal='mat-11-funcao-afim-e-sistemas-lineares.txt [5:19:30] (ver onde as duas retas se encontram: o ponto comum das duas)',

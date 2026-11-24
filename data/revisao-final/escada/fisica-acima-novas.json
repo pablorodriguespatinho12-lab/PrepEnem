@@ -312,7 +312,7 @@
        "",
        "",
        "17 m em linha reta",
-       ""
+       "catetos: 15 m (20 − 5) e 8 m"
       ]
      }
     },
@@ -404,7 +404,7 @@
   "resposta": "D",
   "explicacao": {
    "conferencia": "Ana chega a 5 m/s em 10 s (a = 0,5) e anda 25 m; nos 10 s seguintes anda 50 m; aos 20 s está a 75 m. Faltam 925 m a 10 m/s: 92,5 s. xe = 75 + 5 · 92,5 = 537,5 m. Resposta: alternativa D. Erros: Alternativa A = Deu a distância a partir de Q, não de P; Alternativa B = Fez como se saíssem juntas, a 5 m/s: 1 000 ÷ 10 = 100 s e 5 · 100; Alternativa C = Supôs Ana acelerando durante os 20 s (50 m): 50 + 5 · 95; Alternativa E = Supôs Ana a 5 m/s desde a partida (100 m aos 20 s): 100 + 5 · 90.",
-   "ideia": "Ana tem duas fases: acelera e depois fica a 5 m/s. quando Bia sai (20 s), Ana já está na fase constante, e só então vale somar as velocidades das duas; A tabela mostra o 5 m/s aos 12 s, mas a fase constante começa antes, aos 10 s.",
+   "ideia": "Ana acelera e depois fica a 5 m/s, e a fase constante começa aos 10 s, antes dos 12 s que a tabela mostra. Quando Bia sai (20 s), Ana já está nela, e só então vale somar as velocidades das duas.",
    "pecas": [
     {
      "termo": "Gráfico de v contra t",
@@ -1362,7 +1362,7 @@
     },
     {
      "titulo": "De onde vem cada fórmula (2 de 2)",
-     "texto": "Aqui é o contrário: a diferença de posição é o comprimento da prancha, e queremos o tempo. Pela aula Antes, tem · tem = 2 · cmp ÷ rel."
+     "texto": "Aqui é o contrário: a diferença de posição é o comprimento da prancha, e queremos o tempo. Pela aula Antes, tem · tem = 2 · cmp ÷ rel, com tem o tempo, cmp o comprimento da prancha e rel a aceleração relativa."
     },
     {
      "titulo": "O desenho",
@@ -1593,7 +1593,7 @@
     },
     {
      "titulo": "De onde vem cada fórmula (2 de 2)",
-     "texto": "Por isso tra = 2 · vv ÷ rai − 20. Como 4/5 de L e 0,2 L ainda têm o L dentro, vamos deixar L na conta e ver se ele some."
+     "texto": "Por isso tra = 2 · vv ÷ rai − 20, com tra a tração no topo, vv o v · v e rai o raio em torno do pino."
     },
     {
      "titulo": "O desenho",
@@ -1982,7 +1982,7 @@
   "resposta": "E",
   "explicacao": {
    "conferencia": "B: 3 · 1 = 1 · V, V = 3 L. Trabalho de A a B = trapézio = (3 + 1) ÷ 2 · 2 · 100 = 400 J; de B a C, 0. Energia interna: U de A = 450 J e U de C = 1 350 J, aumento 900 J. Calor = 400 + 900 = 1 300 J. Resposta: alternativa E. Erros: Alternativa A = Deu só o trabalho do trapézio e esqueceu o aumento da energia interna; Alternativa B = Deu só o aumento da energia interna e esqueceu o trabalho; Alternativa C = Usou a pressão inicial como constante no trabalho: 600 J, em vez da área do trapézio; Alternativa D = Somou a energia interna final inteira (1 350 J), em vez da variação (900 J).",
-   "ideia": "Mesma temperatura é o mesmo p · V: dá o volume de B. de B a C não há trabalho, e a energia interna só depende de p · V; O calor é o trabalho (área) mais o aumento da energia interna de A a C.",
+   "ideia": "Mesma temperatura é o mesmo p · V, o que dá o volume de B; de B a C não há trabalho, e a energia interna só depende de p · V. O calor é o trabalho (área) mais o aumento da energia interna de A a C.",
    "pecas": [
     {
      "termo": "Calor líquido",
@@ -2420,7 +2420,7 @@
   "resposta": "B",
   "explicacao": {
    "conferencia": "rhor = 0,5 ÷ (200 · 10⁻⁴) = 25 K/W; rvert = 50; a rede toda: rede = 25 + 50 · rede ÷ (50 + rede), rede = 50; cada nó fica com 1/2 da temperatura: 12,5 °C no 3º; 12,5 ÷ 50 = 0,25 W. Resposta: alternativa B. Erros: Alternativa A = Contou o 2º nó como se fosse o 3º: 25 ÷ 50; Alternativa C = Deu o fluxo total que sai da fonte (100 ÷ 50), não o da vertical do 3º nó; Alternativa D = Deu a temperatura do 3º nó, em °C, sem dividir pela resistência; Alternativa E = Usou 1 cm² como se fosse 1 m²: todas as resistências saem 10 000 vezes menores.",
-   "ideia": "Depois do 1º nó, o que resta é uma escada igual à inteira: a mesma resistência. isso dá uma equação para ela; com ela, cada nó fica com metade da temperatura do anterior.",
+   "ideia": "Depois do 1º nó, o que resta é uma escada igual à inteira, com a mesma resistência, e isso dá uma equação para ela. Com ela, cada nó fica com metade da temperatura do anterior.",
    "pecas": [
     {
      "termo": "Escada igual ao todo",
@@ -3344,7 +3344,7 @@
   "resposta": "B",
   "explicacao": {
    "conferencia": "420 = m · f1 e 700 = n · f1 com m e n inteiros: f1 = 140 ÷ kk. Com f1 pelo menos 20, kk vai de 1 a 7 (140 ÷ 7 = 20; 140 ÷ 8 = 17,5). v = 1,8 · f1 = 252 ÷ kk: sete valores. Resposta: alternativa B. Erros: Alternativa A = Supôs modos vizinhos: f1 = 700 − 420 = 280 Hz (e 420 nem é múltiplo de 280); Alternativa C = Exigiu f1 inteira: só os divisores de 140 que são pelo menos 20 (20, 28, 35, 70, 140); Alternativa D = Contou todos os divisores de 140, esquecendo o piso de 20 Hz; Alternativa E = Deu o mdc (140) em vez de contar os valores.",
-   "ideia": "Os modos são f1, 2 · f1, 3 · f1... então 420 e 700 são múltiplos inteiros de f1, e f1 é o mdc (140) dividido por um inteiro kk; O piso de 20 Hz limita kk, e cada kk dá uma velocidade diferente.",
+   "ideia": "Os modos são f1, 2 · f1, 3 · f1 e assim por diante, então 420 e 700 são múltiplos inteiros de f1, e f1 é o mdc (140) dividido por um inteiro kk. O piso de 20 Hz limita kk, e cada kk dá uma velocidade diferente.",
    "pecas": [
     {
      "termo": "mdc dividido por kk",
@@ -3544,7 +3544,7 @@
   "E": "100 s",
   "resposta": "B",
   "explicacao": {
-   "conferencia": "1/q1 = 1/5 − 1/6 = 1/30, q1 = 30 cm, g1 = 5, imagem 1 de 18 cm; g2 = 72 ÷ 18 = 4; 1/10 = 5/(4 · p2), p2 = 12,5 cm (maior que 10: real); Df = 30 + 12,5 = 42,5 cm; t = (42,5 − 37,5) ÷ 0,50 = 10 s. Resposta: alternativa B. Erros: Alternativa A = Tomou a solução em que a lente 2 está dentro do foco (p2 = 7,5 cm, aumento 4): já vale no início, mas a imagem é virtual e não aparece na parede; Alternativa C = Esqueceu a lente 1: usou o slide de 3,6 cm como objeto da lente 2 (aumento 20, p2 = 10,5 cm); Alternativa D = Dividiu a distância final entre as lentes (42,5 cm) pela velocidade, sem tirar os 37,5 cm do início; Alternativa E = Leu 0,50 cm/s como 0,50 mm/s: 50 mm ÷ 0,50 mm/s.",
+   "conferencia": "1/q1 = 1/5 − 1/6 = 1/30, q1 = 30 cm, g1 = 5, imagem 1 de 18 cm; g2 = 72 ÷ 18 = 4; 1/10 = 5/(4 · p2), p2 = 12,5 cm (maior que 10: real); Df = 30 + 12,5 = 42,5 cm; t = (42,5 − 37,5) ÷ 0,50 = 10 s. Resposta: alternativa B. Erros: Alternativa A = Tomou a solução em que a lente 2 está dentro do foco (p2 = 7,5 cm, aumento 4): já vale no início, mas a imagem é virtual e não aparece na parede; Alternativa C = Errou só o aumento da lente 2: usou 72 ÷ 3,6 = 20 (esqueceu o 5 da lente 1) mas manteve q1 = 30 cm: p2 = 10,5 cm, Df = 40,5 cm, (40,5 − 37,5) ÷ 0,50; Alternativa D = Dividiu a distância final entre as lentes (42,5 cm) pela velocidade, sem tirar os 37,5 cm do início; Alternativa E = Leu 0,50 cm/s como 0,50 mm/s: 50 mm ÷ 0,50 mm/s.",
    "ideia": "A imagem da lente 1 é o objeto da lente 2, e o aumento total é o produto dos dois. O aumento 4 da lente 2 aparece duas vezes, com a lente dentro do foco (virtual) e fora dele (real): só a real aparece na parede.",
    "pecas": [
     {
@@ -4743,15 +4743,15 @@
      "texto": "O enunciado dá: Pre = R$ 0,90 por kWh."
     },
     {
-     "titulo": "Achando Pjun: a potência de cada posição",
+     "titulo": "O calor que a água precisa por segundo",
      "texto": "A tabela dá o aumento da água, não a potência. Calor por segundo = kg por segundo · 4 200 · aumento.\n3 L por minuto = 3 kg em 60 s = 0,05 kg por segundo (pois 60 · 0,05 = 3). 0,05 · 4 200 = 210: 4 200 ÷ 100 = 42 e 42 · 5 = 210."
     },
     {
-     "titulo": "Achando Pjun: o que o chuveiro puxa da tomada",
+     "titulo": "O que o chuveiro puxa da tomada: posição quente",
      "texto": "Só 80% do que ele puxa vira calor: puxando 100 W, 80 W viram calor (100 · 0,8). Então puxa o calor ÷ 0,8.\nQuente (16 °C): calor = 210 · 16 = 3 360 W (210 · 10 = 2 100 e 210 · 6 = 1 260). Puxa 3 360 ÷ 0,8 = 33 600 ÷ 8 = 4 200 W (pois 8 · 4 200 = 33 600)."
     },
     {
-     "titulo": "Achando Pjun: as outras duas posições",
+     "titulo": "O que o chuveiro puxa nas outras duas posições",
      "texto": "Morno (8 °C): 210 · 8 = 1 680 W de calor; 1 680 ÷ 0,8 = 16 800 ÷ 8 = 2 100 W.\nSuperquente (24 °C): 210 · 24 = 5 040 W (210 · 20 = 4 200 e 210 · 4 = 840); 5 040 ÷ 0,8 = 50 400 ÷ 8 = 6 300 W."
     },
     {
@@ -5234,7 +5234,7 @@
      }
     },
     {
-     "titulo": "Achando Ram: quem sai da conta",
+     "titulo": "Quem sai da conta: R3 e R4",
      "texto": "Leia a tabela com cuidado. R4 tem as duas pontas na linha 2: o mesmo ponto dos dois lados, sem tensão e sem corrente (curto). R3 tem uma ponta na linha 2 e a outra na linha 5, onde mais nada se liga: a corrente não tem para onde ir (aberto). R3 e R4 saem do circuito.",
      "visual": {
       "tipo": "diagrama",

@@ -279,7 +279,7 @@ Q = [
                  ('Juntando as duas fichas',
                   'Fichas independentes: multiplique. 2 + 2: Pu · Pu = 12/25 · 12/25 = 144/625 (12 · 12 = 144 e 25 · 25 = 625).\n4 + 0: Pz · Pd = 4/25 · 9/25 = 36/625; são 2 ordens, então 2 · 36/625 = 72/625.')],
         volta='Pq = (144/625) ÷ (144/625 + 72/625). Mesmo número embaixo: 144 + 72 = 216, e fica 144/216 (o 625 se corta).\n'
-              '144 = 2 · 72 e 216 = 3 · 72. Dividindo em cima e embaixo por 72: Pq = 2/3.\nResposta: alternativa X. Conferindo: 2/3 é cerca de 0,67, mais que a metade, porque o jeito 2 + 2 tem o dobro de área do outro.',
+              '144 = 2 · 72 e 216 = 3 · 72. Dividindo em cima e embaixo por 72: Pq = 2/3.\nResposta: alternativa X. Conferindo: 2/3 é cerca de 0,67, mais que a metade, porque o jeito 2 + 2 tem o dobro de chances do outro (144 contra 72, em 625).',
         valores=[('Pz', '4/25'), ('Pd', '9/25'), ('Pu', '12/25'), ('Pq', '2/3')],
         pista='duas fichas e uma soma de pontos: liste os pares que dão a soma, multiplique as chances de cada par (as ordens contam) e divida pelo total dos pares.',
         rec1='ladrilho 100 cm²; fichas independentes; total 4 pontos', rec3='ache Pz, Pd e Pu, junte os pares e volte',

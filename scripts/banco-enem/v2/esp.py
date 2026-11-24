@@ -182,7 +182,7 @@ Q = [
               ('16', 16, 'Arredondou 15,8 para cima: o 16º copo não enche (614,4 é mais que 607,5)'),
               ('17', 17, 'Esqueceu a perda de 10%: 675 ÷ 38,4 = 17,6')],
         resumo='Concentrado: π · 25 · 18 = 450π; mistura 2:1: 450π ÷ 2 · 3 = 675π; sem a perda de 10%: 675π · 0,9 = 607,5π. Copo a 80%: 75π · 0,512 = 38,4π. 607,5 ÷ 38,4 = 15,8: 15 copos.',
-        ideia='O suco servido até 80% da altura forma um cone menor semelhante ao copo, e o volume vai com o cubo da razão. Antes, ache quanto líquido existe de fato: concentrado, mais a água da mistura, menos a perda. Conte só os copos inteiros.',
+        ideia='O suco servido até 80% da altura forma um cone menor semelhante ao copo, e o volume vai com o cubo da razão. Antes, ache quanto líquido existe de fato: concentrado, mais a água da mistura, menos a perda; conte só os copos inteiros.',
         pecas=[('Semelhante', 'Mesmo formato, tamanho diferente: tudo cresce na mesma razão.'),
                ('Partes', '2 partes de concentrado e 1 de água: a mistura tem 3 partes, e o concentrado é 2 delas.'),
                ('Copos inteiros', 'Só conta o copo que enche: 15 copos e um pouco são 15.')],

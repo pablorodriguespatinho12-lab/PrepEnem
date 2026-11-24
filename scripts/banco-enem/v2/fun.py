@@ -333,7 +333,7 @@ Q = [
                   'Com k = 9: h(u) = −9 só em u = 3, um u positivo. t² = 3: t é o número que vezes ele mesmo dá 3 (√3, um pouco mais de 1,7 porque 1,7 · 1,7 = 2,89), e o oposto, −√3. Não precisa do valor: só importa que são 2 soluções.'),
                  ('Achando Q: os k de 0 a 8',
                   'Com k de 1 a 8, −k fica entre −8 e −1: há dois u, entre 0 e 6, ambos positivos: 4 soluções. Com k = 0: u = 0 (1 solução) e u = 6 (2 soluções): 3 soluções. Nenhum desses serve.\nEntre 0 e 20 só o k = 9 serve: Q = 1.')],
-        volta='N = P + Q = 10 + 1 = 11.\nConferindo a contagem dos k: de 1 a 5 são 5 números, não 4: 5 − 1 + 1. Por isso de −10 a 20 são 20 − (−10) + 1 = 31 valores. Servem os 10 negativos e o k = 9.\nResposta: alternativa X.',
+        volta='N = P + Q = 10 + 1 = 11.\nConferindo a contagem dos k: de 1 a 5 são 5 números: 5 − 1 + 1. Por isso de −10 a 20 são 20 − (−10) + 1 = 31 valores. Servem os 10 negativos e o k = 9.\nResposta: alternativa X.',
         valores=[('P', '10 valores de k'), ('Q', '1 valor (k = 9)'), ('N', '11 valores de k')],
         pista='equação com t⁴ e t² → troque t² por u, leia no gráfico quantos u dá cada k e lembre: u positivo dá 2 valores de t.',
         rec1='t⁴ − 6t² + k = 0; k de −10 a 20; tabela de h(u)', rec3='P = 10 (k negativos); Q = 1 (k = 9); N = 11',
