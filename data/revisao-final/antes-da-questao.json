@@ -3108,7 +3108,7 @@
             "Três"
           ],
           "certa": 0,
-          "resolucao": "Uma: Δ = (−6)² − 4 · 1 · 9 = 36 − 36 = 0.\nD = 0 dá uma raiz só (x = 3)."
+          "resolucao": "Uma: Δ = (−6)² − 4 · 1 · 9 = 36 − 36 = 0.\nΔ = 0 dá uma raiz só (x = 3)."
         }
       ]
     },
@@ -6772,7 +6772,8 @@
     "d2-escada-mat-ita-fun-00d": [
       "fun-composta",
       "fun-periodicidade",
-      "fun-discriminante"
+      "fun-discriminante",
+      "fracoes"
     ],
     "d2-escada-mat-ita-gra-00b": [
       "velocidade",

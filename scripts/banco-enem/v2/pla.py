@@ -44,7 +44,7 @@ dois_semi = 3.14 * float(S_b + R_b)
 assert abs(dois_semi - 113.4325) < 1e-9                          # somou só os dois semicírculos dos catetos
 ENUN_B = ('Seja ABC um triângulo retângulo em A, com AB = 8 cm e BC = 17 cm. Sobre os catetos AB e AC, para fora do triângulo, '
           'constroem-se dois semicírculos, cada um com um cateto como diâmetro. Seja Γ a circunferência de diâmetro BC. '
-          'Qual é, em cm², a área da região formada pelos pontos desses dois semicírculos que ficam fora de Γ?')
+          'Qual é, em cm², a área da região formada pelos pontos desses dois semicírculos que ficam fora de Γ? Se precisar, use π = 3,14.')
 assert 250 <= len(ENUN_B) <= 450, len(ENUN_B)
 
 # ---------------------------------------------------------------- c) Fuvest: círculo inscrito
@@ -84,37 +84,96 @@ ENUN_C = ('Um artesão corta painéis de madeira no formato de triângulo retân
 assert 400 <= len(ENUN_C) <= 650, len(ENUN_C)
 
 # ---------------------------------------------------------------- d) Harvard-MIT: o custo só depende de uma distância
-AB_d, AD_d, X_d = 20, 12, 8
-def custo(y, x=X_d):
+# Os lados saem do perímetro (64 m) e da diferença (AB = AD + 8); o ponto P está em lugar desconhecido (x de AD, y de AB).
+lados_d = [(b, h) for b in range(1, 64) for h in range(1, 64) if 2 * (b + h) == 64 and b - h == 8]
+assert lados_d == [(20, 12)]
+AB_d, AD_d = lados_d[0]
+assert (32 + 8) // 2 == 20 and (32 - 8) // 2 == 12 and (12 + 8) + 12 == 32 and 2 * 12 + 8 == 32 and 2 * 12 == 24 and 20 - 12 == 8 and 2 * (20 + 12) == 64
+
+
+def custo(y, x):
     y, x = F(y), F(x)
     flores = 40 * F(AB_d) * y / 2
     grama = 10 * F(AB_d) * (AD_d - y) / 2
     pedras = 25 * (F(AD_d) * x / 2 + F(AD_d) * (AB_d - x) / 2)
     return flores + grama + pedras
+
+
 for x in (1, 3, 8, 15, 19):
     for y in (2, 5, F(11, 2), 11):
         assert custo(y, x) == 300 * y + 4200            # o x some
-assert custo(5) == 5700 and (5700 - 4200) / 300 == 5
+# força bruta: todo ponto (x, y) de custo 5 700 tem y = 5, logo a distância até CD é sempre 7
+achados_d = {(F(x, 2), F(y, 2)) for x in range(1, 40) for y in range(1, 24) if custo(F(y, 2), F(x, 2)) == 5700}
+assert achados_d and {y for _, y in achados_d} == {5} and {AD_d - y for _, y in achados_d} == {7}
+assert custo(5, 8) == 5700 and (5700 - 4200) / 300 == 5 and 12 - 5 == 7
 assert F(12 * 8, 2) == 48 and F(12 * 12, 2) == 72 and 48 + 72 == 120 == AB_d * AD_d // 2 and 25 * 120 == 3000
-assert F(12 * 3, 2) == 18 and F(12 * 17, 2) == 102 and 18 + 102 == 120
-# distratores
-assert (5700 - 3000) / 400 == F(27, 4) == F('6.75')                    # esqueceu a grama
-assert (5700 - 1200 - 1500) / 300 == 10                                # pedras só em 60 m²
-assert (5700 - 3000 - 4800) / -300 == 7                                # flores e grama com preços trocados: 100y + 400(12 − y)
-assert 100 * 7 + 400 * (12 - 7) + 3000 == 5700
-assert AD_d - 5 == 7 and X_d == 8                                      # 7 também é a distância até CD; 8 é o x
-assert len({F(27, 4), 7, 8, 10, 5}) == 5
-assert custo(F(27, 4)) != 5700 and custo(10) != 5700
+assert F(12 * 3, 2) == 18 and F(12 * 17, 2) == 102 and 18 + 102 == 120 and 6 * 3 + 120 - 6 * 3 == 120
+assert F(20 * 5, 2) == 50 and 40 * 50 == 2000 and 10 * 7 * 10 == 700 and 100 * 7 == 700 and 1200 - 500 == 700
+# distratores (cada um é o número final que o aluno daria)
+assert (5700 - 3000) / 400 == F(27, 4) == F('6.75')                    # esqueceu a grama: 400y + 3 000 = 5 700
+assert (5700 - 1200 - 1500) / 300 == 10 and 12 - 10 == 2               # pedras só em 60 m²: y = 10, e 12 − 10 = 2
+assert 5 == 5700 // 300 - 14                                           # 5: a distância até AB (y), não até CD
+assert 20 - 12 == 8                                                    # 8: o "8 m a mais" do enunciado
+assert len({2, F(27, 4), 5, 7, 8}) == 5
+assert custo(F(27, 4), 8) != 5700 and custo(10, 8) != 5700
 # "Sua vez": retângulo 10 por 6, P a 4 de um lado menor: triângulos sobre os lados de 6
 assert F(6 * 4, 2) + F(6 * 6, 2) == 30
-ENUN_D = ('Uma praça tem o formato de um retângulo ABCD, com AB = 20 m e AD = 12 m. Um ponto P, dentro da praça, fica a 8 m do lado AD. '
-          'Ligando P aos quatro vértices, a praça se divide em quatro triângulos: PAB, PBC, PCD e PDA. A prefeitura plantou flores em PAB '
-          '(R$ 40 por m²), grama em PCD (R$ 10 por m²) e colocou pedras decorativas em PBC e em PDA (R$ 25 por m²). '
-          'O custo total foi de R$ 5 700. A que distância do lado AB está o ponto P?')
+ENUN_D = ('Uma praça tem o formato de um retângulo ABCD, com os vértices nessa ordem em volta da praça (AB e CD são lados opostos, e AD e BC também). '
+          'O perímetro da praça é 64 m, e o lado AB mede 8 m a mais que o lado AD. Um ponto P, dentro da praça, em um lugar que o projeto não informa, '
+          'é ligado aos quatro vértices e divide a praça em quatro triângulos: PAB, PBC, PCD e PDA. A prefeitura plantou flores em PAB (R$ 40 por m²), '
+          'grama em PCD (R$ 10 por m²) e colocou pedras decorativas em PBC e em PDA (R$ 25 por m²). O custo total foi de R$ 5 700. '
+          'A que distância do lado CD está o ponto P?')
 assert 400 <= len(ENUN_D) <= 650, len(ENUN_D)
 
 # ---------------------------------------------------------------- módulo
+ENUN_A = ('Um sítio de lazer tem um gramado em formato de L: ele é um retângulo de 40 m por 30 m do qual foi retirado, em um dos cantos, um retângulo de 15 m por 10 m, '
+          'onde fica a casa do caseiro. Todo o terreno que sobrou será coberto com grama em placas. O fornecedor vende a grama em pacotes com 6 placas, e cada placa cobre '
+          '1,5 m². Como sempre quebram placas no transporte e no corte das bordas, o engenheiro pediu que o orçamento considere 10% de área a mais do que a área do gramado. '
+          'Cada pacote custa R$ 54, mas o desconto de 5% para compras acima de 100 pacotes só vale no pagamento à vista, e o cliente vai pagar a prazo. '
+          'Quantos pacotes devem ser comprados?')
+assert 129 == -(-1155 // 9) and divmod(255, 9) == (28, 3) and 9 * 20 == 180 and 255 - 180 == 75 and 9 * 8 == 72 and 75 - 72 == 3 and 100 + 20 + 8 == 128
+assert 40 * 30 - 15 * 10 == 1050 and 1050 // 10 == 105 and 1050 + 105 == 1155 and 6 * F(3, 2) == 9
+assert 1050 / 9 < 117 < 1050 / 9 + 1 and math.ceil(1155 / 6) == 193 and 1050 / F(3, 2) == 700
+assert 60 * F(11, 10) == 66 and divmod(66, 5) == (13, 1)
+
 Q = [
+    dict(
+        id='d2-escada-mat-ita-pla-00a', materia='Matemática', tema=T, calc=129, pos=2,
+        enunciado=ENUN_A,
+        dados=[('Retângulo grande', '40 m × 30 m'), ('Casa (canto retirado)', '15 m × 10 m'), ('Cada placa', '1,5 m²'), ('Cada pacote', '6 placas'),
+               ('Folga pedida', '10% a mais'), ('Não entra na conta', 'R$ 54, desconto de 5% e pagamento a prazo')],
+        alts=[('117', 117, 'Esqueceu os 10% (1 050 ÷ 9 = 116,7)'),
+              ('128', 128, 'Arredondou para baixo: sobra uma parte sem cobrir'),
+              ('129', 129, 'OK'),
+              ('193', 193, 'Esqueceu que cada placa cobre 1,5 m² (1 155 ÷ 6)'),
+              ('700', 700, 'Parou nas placas, sem os 10% (1 050 ÷ 1,5)')],
+        resumo='A área do L é 1 200 − 150 = 1 050 m²; com 10% a mais, 1 155 m². Um pacote cobre 6 · 1,5 = 9 m²: 1 155 ÷ 9 = 128 e sobram 3 m², que pedem mais 1 pacote: 129. O preço de R$ 54, o desconto de 5% e o pagamento a prazo não entram.',
+        ideia='A área do L é o retângulo grande menos o canto. Some a folga de 10%, veja quanto um pacote cobre e arredonde para cima.',
+        pecas=[],
+        formulas=[('retangulo', 'Área do retângulo', 'base × altura'), ('porcentagem', '10% a mais', '× 1,1')],
+        desenho=('Veja o terreno: um retângulo de 40 m por 30 m, e o canto da casa (tracejado, 15 m por 10 m) fica de fora.', 'gramado-em-l', []),
+        eq='P = 1,1 · G ÷ 9',
+        leitura='área com folga (1,1 vez a área G) ÷ 9 m², que é o que um pacote cobre; se sobrar um pedaço, precisa de mais um pacote inteiro',
+        letras=[('P', 'pacotes (o que a questão quer)'), ('G', 'área do gramado')],
+        eq_texto='Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.',
+        achando=[('Achando G: área do gramado',
+                  'Retângulo grande: 40 · 30 = 1 200 m². Canto da casa: 15 · 10 = 150 m². 1 200 − 150 = 1 050 m².\nO mesmo desenho, agora com a conta.',
+                  {'tipo': 'diagrama', 'nome': 'gramado-em-l', 'rotulos': ['', '', '', '', '', '', 'grama: 1 200 − 150', '= 1 050 m²']}),
+                 ('Com 10% a mais',
+                  '10% é 10 ÷ 100 = 1/10, então 10% de 1 050 = 1 050 ÷ 10 = 105. Então 1 050 + 105 = 1 155 m². (É o mesmo que 1 050 · 1,1: 110% é 110 ÷ 100 = 1,1.)'),
+                 ('Quanto um pacote cobre', '6 placas · 1,5 m² = 9 m².')],
+        volta='1 155 ÷ 9: 9 · 100 = 900, restam 255. 255 ÷ 9: 9 · 20 = 180, restam 75; 9 · 8 = 72, resta 3. Então 100 + 20 + 8 = 128 pacotes e sobram 3 m².\nSobrou área sem cobrir: falta 1 pacote, 129.\nResposta: alternativa X.',
+        valores=[('G', '1 050 m²'), ('P', '129 pacotes')],
+        porque=('Arredondar', 'Sobrou um pedaço (3 m²) sem cobrir: precisa de mais 1 pacote inteiro, então 129 e não 128. O preço de R$ 54, o desconto de 5% e o pagamento a prazo não entram.'),
+        pista='A área do L é o retângulo grande menos o canto.',
+        rec1='retângulo 40 × 30 menos canto 15 × 10; 10% a mais; pacote de 9 m²', rec3='G = 1 050; com folga 1 155; 128 e sobram 3; P = 129',
+        checagem=('Terreno de 60 m², com 10% de folga. Cada pacote cobre 5 m². Quantos pacotes?', ['12', '13', '14'], '14',
+                  '60 · 1,1 = 66 m². 66 ÷ 5 = 13 e sobra 1 m², então 14 pacotes.'),
+        ancora=('parcial · ENEM 2022 q.167 (CD5; piscina com 5 projetos: somar áreas e decidir por conta, 820 letras) e ENEM 2019 q.142 (CD7; só a coroa nova '
+                'conta, comparada com o estoque de material); aqui a área é de um L, com folga de 10% e arredondamento para pacotes'),
+        canal='mat-04-porcentagem.txt [2:06:31] (aumento: valor × 1,1); área de retângulo em mat-21-area-de-polignos-geometria-plana.txt [11:43:30]',
+        antes=['multiplicar-decimais', 'porcentagem', 'dividir-por-decimal'],
+    ),
     dict(
         id='d2-escada-mat-ita-pla-00b', materia='Matemática', tema=T, calc=60,
         enunciado=ENUN_B,
@@ -128,9 +187,10 @@ Q = [
               ('120 cm²', 120, 'Esqueceu o ÷ 2 da área do triângulo: 8 · 15')],
         resumo='AC = 15 por Pitágoras. Semicírculos: 8π, 28,125π e 36,125π (o da hipotenusa). Fora de Γ: 8π + 28,125π − (36,125π − 60) = 60 cm².',
         ideia='Pitágoras vale também para áreas de semicírculos: os dois dos catetos somam o da hipotenusa, e a parte deles dentro de Γ é o semicírculo de BC menos o triângulo. Os π se cancelam e sobra a área do triângulo.',
-        pecas=[('Semicírculo', 'Metade de um círculo: área = π · r · r ÷ 2, com r a metade do diâmetro.'),
+        pecas=[('Triângulo retângulo', 'Triângulo com um canto reto. O lado oposto ao canto reto é a hipotenusa; os outros dois são os catetos.'),
+               ('Semicírculo e Γ', 'Semicírculo: metade de um círculo, área π · r · r ÷ 2. Γ (gama) é a linha do círculo de diâmetro BC.'),
                ('Parte fora de Γ', 'O que sobra dos semicírculos dos catetos depois de tirar a parte que cai dentro da circunferência Γ.')],
-        formulas=[('circulo', 'Semicírculo', 'π · r · r ÷ 2'), ('triangulo-retangulo', 'Pitágoras', 'hipotenusa² = cateto² + cateto²'),
+        formulas=[('circulo', 'Semicírculo', 'π · r · r ÷ 2'), ('triangulo-retangulo', 'Pitágoras', 'hipotenusa · hipotenusa = cateto · cateto + cateto · cateto'),
                   ('triangulo', 'Área do triângulo', 'base · altura ÷ 2')],
         origem=['O meio círculo de Γ do lado do triângulo tem diâmetro BC: é o semicírculo H. Ele se divide em três partes: o triângulo T e dois pedaços, um junto de cada cateto.\n'
                 'Os semicírculos dos catetos (S e R) cobrem exatamente esses dois pedaços, mais o que fica fora de Γ. Então, dentro de Γ, os dois têm H − T. O que pedem é S + R − (H − T).'],
@@ -144,10 +204,10 @@ Q = [
                  ('Achando S: semicírculo de AB',
                   'Diâmetro 8, raio 4. S = π · 4 · 4 ÷ 2 = 16π ÷ 2 = 8π.'),
                  ('Achando R: semicírculo de AC',
-                  'Diâmetro 15, raio 7,5. 7,5 · 7,5 = 56,25 (75 · 75 = 5 625, com duas casas).\nR = 56,25π ÷ 2 = 28,125π.'),
+                  'Diâmetro 15, raio 7,5. 7,5 · 7,5 = 56,25 (75 · 75 = 75 · 70 + 75 · 5 = 5 250 + 375 = 5 625, com duas casas).\nR = 56,25π ÷ 2 = 28,125π (metade de 56,25: metade de 56 é 28 e metade de 0,25 é 0,125).'),
                  ('Achando H: semicírculo de BC',
-                  'Diâmetro 17, raio 8,5. 8,5 · 8,5 = 72,25 (85 · 85 = 7 225, com duas casas).\nH = 72,25π ÷ 2 = 36,125π.\nOlhe: S + R = 8π + 28,125π = 36,125π, o mesmo que H.')],
-        volta='L = 8π + 28,125π − (36,125π − 60).\nOs semicírculos dos catetos somam 36,125π, igual a H. Então os π se cancelam: L = 36,125π − 36,125π + 60 = 60.\nL = 60 cm².\nResposta: alternativa X. Conferindo: é a área do triângulo, 8 · 15 ÷ 2.',
+                  'Diâmetro 17, raio 8,5. 8,5 · 8,5 = 72,25 (85 · 85 = 7 225, com duas casas).\nH = 72,25π ÷ 2 = 36,125π.\nOlhe: S + R = 8π + 28,125π = 36,125π, o mesmo que H.\nNão é coincidência: os raios ao quadrado seguem Pitágoras. 4 · 4 + 7,5 · 7,5 = 16 + 56,25 = 72,25 = 8,5 · 8,5. Como cada semicírculo é π · (raio · raio) ÷ 2, as áreas somam do mesmo jeito.')],
+        volta='L = 8π + 28,125π − (36,125π − 60).\nTirar (36,125π − 60) é tirar 36,125π e somar 60. Teste: 10 − (7 − 2) = 5 e 10 − 7 + 2 = 5.\nOs semicírculos dos catetos somam 36,125π, igual a H. Então os π se cancelam: L = 36,125π − 36,125π + 60 = 60.\nL = 60 cm².\nResposta: alternativa X. Conferindo: é a área do triângulo, 8 · 15 ÷ 2.',
         valores=[('T', '60 cm²'), ('S', '8π'), ('R', '28,125π'), ('H', '36,125π'), ('L', '60 cm²')],
         pista='"área pedida entre círculos e um triângulo retângulo" → deixe o π escrito, ache o outro cateto por Pitágoras, escreva cada semicírculo em π e veja o que se cancela.',
         rec1='AB = 8; BC = 17; semicírculos nos catetos; Γ de diâmetro BC', rec3='T = 60; S = 8π; R = 28,125π; H = 36,125π; L = 60',
@@ -172,9 +232,10 @@ Q = [
               ('210 cm²', 210, 'Deu só a área do triângulo, sem tirar o círculo')],
         resumo='Soma dos catetos 41; 41 · 41 = 1 681 = 841 + 2 · produto, produto 420, área 210. Semiperímetro 35, r = 210 ÷ 35 = 6. Fora: 210 − 3,14 · 36 = 96,96 cm².',
         ideia='Os catetos não são pedidos: só a soma deles (70 − 29) e a hipotenusa dão o produto, e com ele a área. O raio inscrito é a área ÷ semiperímetro (35, não 70), e por fim se tira a área do círculo.',
-        pecas=[('Semiperímetro', 'A metade da soma dos três lados: 70 ÷ 2 = 35.'),
+        pecas=[('Triângulo retângulo', 'Triângulo com um canto reto. O lado oposto ao canto reto é a hipotenusa; os outros dois são os catetos.'),
+               ('Semiperímetro', 'A metade da soma dos três lados: 70 ÷ 2 = 35.'),
                ('Círculo inscrito', 'Encosta nos três lados por dentro. O raio dele é a área do triângulo ÷ semiperímetro.')],
-        formulas=[('triangulo-retangulo', 'Pitágoras', 'hipotenusa² = cateto² + cateto²'), ('triangulo', 'Raio do inscrito', 'r = área ÷ semiperímetro'),
+        formulas=[('triangulo-retangulo', 'Pitágoras', 'hipotenusa · hipotenusa = cateto · cateto + cateto · cateto'), ('triangulo', 'Raio do inscrito', 'r = área ÷ semiperímetro'),
                   ('circulo', 'Área do círculo', 'π · r · r')],
         desenho=('Veja o painel: os catetos não são conhecidos, a hipotenusa mede 29 cm e o círculo encosta nos três lados.',
                  'circulo-no-triangulo', ['?', '?', '29 cm', 'r']),
@@ -184,13 +245,13 @@ Q = [
                 ('r', 'raio do círculo inscrito')],
         eq_texto='O que fica sem pintura é o painel inteiro menos o círculo.\nAgora é só achar T e r, uma letra por vez.',
         achando=[('Achando T: a área do painel',
-                  'Os catetos não foram dados. Some os dois: 70 − 29 = 41. Sempre vale (soma)² = (cateto)² + (cateto)² + 2 · produto. Teste com 3 e 4: 7 · 7 = 49 = 9 + 16 + 2 · 12.\n'
-                  'Aqui: 41 · 41 = 1 681. A soma dos quadrados dos catetos é 29 · 29 = 841 (Pitágoras). 1 681 − 841 = 840 = 2 · produto, então produto = 420.\n'
+                  'Os catetos não foram dados. Os três lados somam 70 e a hipotenusa é 29. Então os dois catetos juntos somam 70 − 29 = 41. O produto dos catetos (um cateto vezes o outro) vem de (soma) · (soma) = cateto · cateto + cateto · cateto + 2 · produto. Teste com 3 e 4: 7 · 7 = 49 = 9 + 16 + 2 · 12 (12 = 3 · 4). Com 2 e 5: 7 · 7 = 49 = 4 + 25 + 2 · 10 (10 = 2 · 5): também fecha.\n'
+                  'Aqui: 41 · 41 = 40 · 41 + 41 = 1 640 + 41 = 1 681. A soma dos quadrados dos catetos é 29 · 29 = 30 · 29 − 29 = 870 − 29 = 841 (Pitágoras). 1 681 − 841 = 840 = 2 · produto, então produto = 420.\n'
                   'T = produto ÷ 2 = 420 ÷ 2 = 210 cm².'),
                  ('Achando r: o raio do círculo',
                   'Ligue o centro aos três vértices: o painel vira 3 triângulos de altura r, e a área vale r · (soma dos lados) ÷ 2 = r · semiperímetro.\n'
                   'Semiperímetro = 70 ÷ 2 = 35 (não 70). r = 210 ÷ 35 = 6 cm, porque 35 · 6 = 210.')],
-        volta='3,14 · 6 · 6 = 3,14 · 36 = 3 · 36 + 0,14 · 36 = 108 + 5,04 = 113,04.\nF = 210 − 113,04 = 96,96 cm².\nResposta: alternativa X. Conferindo: sobra menos que a área do painel (210) e é bem menos que o círculo mais o resto.',
+        volta='3,14 · 6 · 6 = 3,14 · 36 = 3 · 36 + 0,14 · 36 = 108 + 5,04 = 113,04 (0,14 · 36: 14 · 36 = 504, e duas casas depois da vírgula dá 5,04).\nF = 210 − 113,04 = 96,96 cm².\nResposta: alternativa X. Conferindo: círculo 113,04 + parte de fora 96,96 = 210, a área do painel.',
         valores=[('T', '210 cm²'), ('r', '6 cm'), ('círculo', '113,04 cm²'), ('F', '96,96 cm²')],
         pista='"círculo inscrito" com hipotenusa e perímetro → a soma dos catetos é perímetro − hipotenusa; (soma)² − hipotenusa² = 2 · produto; área = produto ÷ 2; r = área ÷ semiperímetro.',
         rec1='hipotenusa 29; perímetro 70; círculo inscrito; π = 3,14', rec3='T = 210; r = 6; F = 96,96',
@@ -203,59 +264,54 @@ Q = [
         antes=['pitagoras', 'pla-inscrito', 'pla-area-circulo', 'multiplicar-decimais'],
     ),
     dict(
-        id='d2-escada-mat-ita-pla-00d', materia='Matemática', tema=T, calc=5,
+        id='d2-escada-mat-ita-pla-00d', materia='Matemática', tema=T, calc=7,
         enunciado=ENUN_D,
-        dados=[('Praça ABCD', 'retângulo, AB = 20 m e AD = 12 m'), ('Ponto P', 'dentro da praça, a 8 m do lado AD'),
+        dados=[('Praça ABCD', 'retângulo; perímetro 64 m; AB = AD + 8'), ('Ponto P', 'dentro da praça, em lugar que o projeto não informa'),
                ('PAB: flores', 'R$ 40 por m²'), ('PCD: grama', 'R$ 10 por m²'), ('PBC e PDA: pedras', 'R$ 25 por m²'),
-               ('Custo total', 'R$ 5 700'), ('Quero', 'distância de P ao lado AB, em m')],
-        alts=[('5 m', 5, 'OK'),
+               ('Custo total', 'R$ 5 700'), ('Quero', 'distância de P ao lado CD, em m')],
+        alts=[('2 m', 2, 'Contou as pedras em só 60 m² (y = 10) e deu 12 − 10'),
+              ('5 m', 5, 'Deu a distância até AB (y) e não até CD'),
               ('6,75 m', 6.75, 'Esqueceu a grama: 400 · y + 3 000 = 5 700'),
-              ('7 m', 7, 'Trocou os preços de flores e grama (ou deu a distância até CD): 12 − 5'),
-              ('8 m', 8, 'Deu o dado que sobra: a distância de P ao lado AD'),
-              ('10 m', 10, 'Contou as pedras em só 60 m², metade da área certa de 120 m²')],
-        resumo='Pedras: PDA + PBC = 120 m² (x some), 25 · 120 = 3 000. Flores 400y; grama 100 · (12 − y). 5 700 = 300y + 4 200, y = 5 m.',
-        ideia='Os dois triângulos sobre AD e BC somam sempre metade da praça (120 m²), onde quer que P esteja, e a distância de 8 m é dado que sobra. Só flores e grama dependem da distância y até AB: monte o custo em y e resolva.',
-        pecas=[('Altura do triângulo', 'A distância da ponta P até o lado da base. Em PAB a altura é y; em PCD é 12 − y.'),
-               ('Dado que sobra', 'Os 8 m não mudam o custo: as pedras custam sempre o mesmo.')],
-        formulas=[('triangulo', 'Área do triângulo', 'base · altura ÷ 2'), ('retangulo', 'Área do retângulo', 'base × altura'),
+              ('7 m', 7, 'OK'),
+              ('8 m', 8, 'Deu o "8 m a mais" do enunciado, que só serve para achar os lados')],
+        resumo='Lados: AD = 12 e AB = 20 (perímetro 64, AB = AD + 8). Pedras: PDA + PBC = 120 m² onde P estiver, 25 · 120 = 3 000. Flores 400y; grama 100 · (12 − y). 5 700 = 300y + 4 200, y = 5; até CD: 12 − 5 = 7 m.',
+        ideia='O perímetro e a diferença dão os lados. Os dois triângulos sobre AD e BC têm o mesmo preço e somam sempre metade da praça, onde P estiver: a posição ao longo de AD some. Só flores e grama dependem de y, e a pergunta é 12 − y.',
+        pecas=[('Altura do triângulo', 'A distância da ponta P até o lado que é a base. Se P está a y do lado AB, a altura de PAB é y.'),
+               ('Lados opostos', 'AB e CD estão sempre à mesma distância um do outro, a altura h da praça: P a y de AB está a h − y de CD.')],
+        formulas=[('retangulo', 'Perímetro do retângulo', '2 · (base + altura)'), ('triangulo', 'Área do triângulo', 'base · altura ÷ 2'),
                   ('texto', 'Custo de um canteiro', 'preço por m² · área')],
-        origem=['Flores, em PAB: base AB = 20 e altura y. Área = 20 · y ÷ 2 = 10y m². Custo = 40 · 10y = 400y.\n'
-                'Grama, em PCD: base CD = 20 e altura 12 − y. Área = 10 · (12 − y) m². Custo = 10 · 10 · (12 − y) = 100 · (12 − y).'],
-        eq='V = 400 · y + 100 · (12 − y) + g',
-        leitura='custo total = flores + grama + gasto com as pedras (g)',
-        letras=[('y', 'distância de P ao lado AB, em m (o que a questão quer)'), ('V', 'custo total da obra, em reais'),
-                ('g', 'gasto com as pedras, em reais')],
-        eq_texto='O custo total é a soma dos três gastos. Flores e grama dependem de y; as pedras eu acho à parte.\nAgora é só achar V e g, e depois y.',
-        achando=[('Achando V: o custo total',
-                  'O enunciado dá: V = 5 700 reais.'),
-                 ('Achando g: o gasto com as pedras',
-                  'PDA: base AD = 12, altura 8 (a distância de P ao lado AD). Área = 12 · 8 ÷ 2 = 48 m².\n'
-                  'PBC: base BC = 12, altura 20 − 8 = 12. Área = 12 · 12 ÷ 2 = 72 m². Juntas: 48 + 72 = 120 m².\n'
-                  'Se P estivesse a 3 m de AD: 12 · 3 ÷ 2 = 18 e 12 · 17 ÷ 2 = 102, e 18 + 102 = 120 também. Os 8 m não importam.\n'
-                  'g = 25 · 120 = 3 000 reais.')],
-        volta='V = 400 · y + 100 · (12 − y) + 3 000. 100 · (12 − y) = 1 200 − 100 · y. Então V = 300 · y + 4 200.\n5 700 = 300 · y + 4 200. Tire 4 200: 1 500 = 300 · y. y = 1 500 ÷ 300 = 5 m.\n'
-              'Resposta: alternativa X. Conferindo: 300 · 5 + 4 200 = 1 500 + 4 200 = 5 700.',
-        valores=[('V', '5 700 reais'), ('g', '3 000 reais'), ('y', '5 m')],
-        pista='"ponto livre dentro do retângulo, ligado aos vértices" → os triângulos de lados opostos somam metade da área; só o par que tem a distância pedida muda o custo.',
-        rec1='AB 20; AD 12; P a 8 do lado AD; R$ 40, 10 e 25 por m²; total 5 700', rec3='V = 5 700; g = 3 000; y = 5',
+        eq='d = h − y  e  5 700 = 20 · b · y + 5 · b · (h − y) + g',
+        leitura='d é a distância de P a CD; o custo total soma flores (PAB), grama (PCD) e pedras (g)',
+        letras=[('d', 'distância de P ao lado CD, em m (o que a questão quer)'), ('h', 'lado AD da praça (a altura), em m'),
+                ('b', 'lado AB da praça (a base), em m'), ('g', 'gasto com as pedras, em reais'), ('y', 'distância de P ao lado AB, em m')],
+        eq_texto='A distância pedida é a altura da praça menos y. O custo total soma flores, grama e pedras: as pedras eu acho à parte, e os lados da praça saem do perímetro.\nAgora é só achar h, b, g e y, uma por vez, e depois d.',
+        achando=[('Achando h: o lado AD',
+                  'O perímetro é 2 · (b + h) = 64, então b + h = 32. O lado AB mede 8 m a mais: b = h + 8. Troque: (h + 8) + h = 32, ou 2h + 8 = 32. Tire 8 dos dois lados: 2h = 24, h = 12 m.'),
+                 ('Achando b: o lado AB',
+                  'b = h + 8 = 12 + 8 = 20 m. Conferindo: 2 · (20 + 12) = 64 e 20 − 12 = 8.'),
+                 ('Achando g: as pedras (1 de 2)',
+                  'Seja x a distância de P ao lado AD (a questão não dá x). PDA tem base AD = 12 e altura x: área 12 · x ÷ 2 = 6 · x. PBC tem base BC = 12 e altura 20 − x (AD e BC estão a 20 m um do outro; se P está a x de AD, está a 20 − x de BC): área 6 · (20 − x) = 120 − 6 · x.'),
+                 ('Achando g: as pedras (2 de 2)',
+                  'Juntas: 6 · x + 120 − 6 · x = 120 m², onde quer que P esteja. Teste: x = 3 dá 18 + 102 = 120; x = 8 dá 48 + 72 = 120. É metade da praça (20 · 12 ÷ 2). g = 25 · 120 = 3 000 reais.'),
+                 ('Achando y: as flores',
+                  'PAB tem base AB = 20 e altura y. Área = 20 · y ÷ 2 = 10 · y (10y quer dizer 10 · y). Custo = 40 · 10 · y = 400 · y. Com y = 5: área 20 · 5 ÷ 2 = 50 e custo 40 · 50 = 2 000.'),
+                 ('Achando y: a grama',
+                  'PCD tem base CD = 20 e altura 12 − y (AB e CD estão a 12 m um do outro; se P está a y de AB, está a 12 − y de CD). Área = 20 · (12 − y) ÷ 2 = 10 · (12 − y). Custo = 10 reais por m² · 10 · (12 − y) = 100 · (12 − y).')],
+        volta='O custo total é 400 · y + 100 · (12 − y) + 3 000 = 5 700.\n100 · (12 − y) é 100 vezes 12 menos 100 vezes y. Teste com y = 5: 100 · 7 = 700 e 1 200 − 500 = 700. Então 100 · (12 − y) = 1 200 − 100 · y.\nO custo é 300 · y + 4 200 = 5 700. Tire 4 200: 300 · y = 1 500, y = 5 m.\nA pergunta é a distância até CD: d = 12 − 5 = 7 m.\nResposta: alternativa X. Conferindo: 300 · 5 + 4 200 = 5 700.',
+        valores=[('h', '12 m'), ('b', '20 m'), ('g', '3 000 reais'), ('y', '5 m'), ('d', '7 m')],
+        pista='"ponto livre dentro do retângulo, ligado aos vértices" → ache os lados pelo perímetro; os triângulos de lados opostos com o mesmo preço somam metade da área; só o par de preços diferentes depende da distância.',
+        rec1='perímetro 64; AB = AD + 8; P livre; R$ 40, 10 e 25 por m²; total 5 700', rec3='h = 12; b = 20; g = 3 000; y = 5; d = 7',
         checagem=('Retângulo de 10 m por 6 m e um ponto P dentro dele, a 4 m de um lado menor. Quanto valem juntas as áreas dos dois triângulos que têm os lados de 6 m como base?',
                   ['30 m²', '60 m²', '15 m²', '24 m²'], '30 m²',
                   'Alturas 4 e 10 − 4 = 6. Áreas 6 · 4 ÷ 2 = 12 e 6 · 6 ÷ 2 = 18. Juntas 30 m², metade de 60.'),
         ancora=('forte · HMMT fev. 2023 Geometry q.1 (ponto livre dentro do polígono: a soma das áreas dos triângulos sobre lados opostos não depende de onde ele está) '
-                'e IME 2021 objetiva do trapézio (áreas de triângulos de mesma altura); aqui o preço faz o custo ficar em função de uma só distância'),
+                'e IME 2021 objetiva do trapézio (áreas de triângulos de mesma altura); aqui os lados saem de perímetro e diferença, o preço faz o custo ficar em função de uma só distância e a pergunta é a distância até o lado oposto (12 − y)'),
         canal='mat-21-area-de-polignos-geometria-plana.txt [11:31:03] (altura é a distância do vértice até a base)',
         antes=['pla-area-triangulo', 'numero-que-falta'],
     ),
 ]
 
-MANTER = {
-    'd2-escada-mat-ita-pla-00a': {
-        'ancora': ('parcial · ENEM 2022 q.167 (CD5; piscina com 5 projetos: somar áreas e decidir por conta, 820 letras) e ENEM 2019 q.142 (CD7; só a coroa nova '
-                   'conta, comparada com o estoque de material); aqui a área é de um L, com folga de 10% e arredondamento para pacotes'),
-        'canal': 'mat-04-porcentagem.txt [2:06:31] (aumento: valor × 1,1); área de retângulo em mat-21-area-de-polignos-geometria-plana.txt [11:43:30]',
-        'antes': ['multiplicar-decimais', 'porcentagem', 'dividir-por-decimal'],
-    },
-}
+MANTER = {}
 
 ANTES_NOVOS = {
     'pla-area-circulo': {

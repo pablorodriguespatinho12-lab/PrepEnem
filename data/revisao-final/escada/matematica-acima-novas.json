@@ -1796,14 +1796,14 @@
   "ancora": "parcial · ITA 2025 1ª fase Mat. q.7 (dois sistemas 3×3 equivalentes, o primeiro indeterminado); parcial porque a técnica é a mesma, mas aqui o lado direito da 3ª equação de II é m − n (depende de m e n) e a dificuldade fica na da real, não acima dela",
   "canal": "mat-11-funcao-afim-e-sistemas-lineares.txt [5:18:00] (sistema com infinitas soluções: as duas equações descrevem a mesma reta)",
   "enunciado": "Considere os sistemas lineares abaixo, nas incógnitas reais x, y e z, em que m, n e k são constantes reais.\n(I)  x + 2y + z = 4,  2x + 3y − z = 1,  3x + 5y = 5.\n(II)  x + 2y + z = 4,  x + my + nz = 11,  kx + y − z = m − n.\nSabendo que (I) e (II) têm exatamente o mesmo conjunto solução, o valor de k é:\n\nDados: Sistema I: x + 2y + z = 4; 2x + 3y − z = 1; 3x + 5y = 5; Sistema II: x + 2y + z = 4; x + my + nz = 11; kx + y − z = m − n; Condição: I e II têm o mesmo conjunto solução; Quero: k.",
-  "A": "3/5",
+  "A": "−2",
   "B": "5/4",
   "C": "2",
   "D": "28/5",
   "E": "4/5",
   "resposta": "E",
   "explicacao": {
-   "conferencia": "I é uma reta: (x, y, z) = ((5 − 5t)/3, t, (7 − t)/3). Em II: t = 0 dá n = 4, t = 1 dá m = 3, e a 3ª dá k · 5/3 − 7/3 = −1, então k = 4/5. Resposta: alternativa E. Erros: Alternativa A = Na 3ª equação, esqueceu o termo −z no coeficiente de t: −5k/3 + 1 = 0; Alternativa B = Inverteu a razão: de 5k = 4 escreveu k = 5/4; Alternativa C = Usou t = 0 com o lado direito trocado: 5k/3 − 7/3 = +1, em vez de −1; Alternativa D = Usou m + n = 7 no lado direito, em vez de m − n.",
+   "conferencia": "I é uma reta: (x, y, z) = ((5 − 5t)/3, t, (7 − t)/3). Em II: t = 0 dá n = 4, t = 1 dá m = 3, e a 3ª dá k · 5/3 − 7/3 = −1, então k = 4/5. Resposta: alternativa E. Erros: Alternativa A = Usou z = 7/3 com sinal de mais: 5k/3 + 7/3 = −1, que dá k = −2; Alternativa B = Inverteu a razão: de 5k = 4 escreveu k = 5/4; Alternativa C = Usou t = 0 com o lado direito trocado: 5k/3 − 7/3 = +1, em vez de −1; Alternativa D = Usou m + n = 7 no lado direito, em vez de m − n.",
    "ideia": "Somando as duas primeiras equações de I sai a terceira: I não é um ponto, é uma reta de soluções. Para II ter a mesma reta, os pontos dela têm que servir em II, e isso fixa m, n e k.",
    "pecas": [
     {
@@ -1835,7 +1835,7 @@
        {
         "figura": "porcentagem",
         "nome": "Frações com o mesmo fundo",
-        "formula": "a/3 + b/3 = (a + b)/3"
+        "formula": "1/3 + 4/3 = 5/3"
        }
       ]
      }
@@ -1872,10 +1872,10 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Todo ponto de I tem que servir em II. Escrevo a 3ª equação de II com as soluções de I (y = t).\nAgora é só achar t, n e m, uma por vez, e voltar nesta equação para achar k.",
+     "texto": "Todo ponto de I tem que servir em II. Escrevo a 3ª equação de II com x, y e z, que vêm da reta do sistema I: achamos nos passos seguintes (com y = t).\nt não tem um valor só: é o nome do y, e cada t dá um ponto da reta. Agora é só achar t, n e m, uma por vez, e voltar nesta equação para achar k.",
      "visual": {
       "tipo": "equacao",
-      "formula": "k · (5 − 5t)/3 + t − (7 − t)/3 = m − n",
+      "formula": "k · x + y − z = m − n",
       "leitura": "a 3ª equação de II, com as soluções de I no lugar de x, y e z",
       "letras": [
        {
@@ -1899,7 +1899,19 @@
     },
     {
      "titulo": "Achando t: as soluções do sistema I",
-     "texto": "Some as duas primeiras equações de I: 3x + 5y + 0z = 5. É a 3ª equação, que não traz nada novo. Sobram 2 equações para 3 letras: há infinitas soluções.\nDê nome a y: y = t. Com t = 1: 3x + 5 = 5, x = 0 e z = 4 − 0 − 2 = 2.",
+     "texto": "t não tem um valor só: é o nome do y, e cada t dá um ponto da reta. Vamos achar x e z em função de t."
+    },
+    {
+     "titulo": "Achando t: as soluções do sistema I (2 de 3)",
+     "texto": "Some as duas primeiras equações de I: 3x + 5y + 0z = 5. É a 3ª equação. Uma equação também não traz nada novo quando é a soma de outras duas. Teste: x + y = 7 e x − y = 1 somam 2x = 8; uma 3ª equação 2x = 8 não diz nada além das duas."
+    },
+    {
+     "titulo": "Achando t: as soluções do sistema I (3 de 3)",
+     "texto": "Com 2 equações e 3 letras, sobra 1 letra livre. Exemplo menor: x + y = 5 tem 2 letras e 1 equação, e tem infinitas soluções (a aula Antes)."
+    },
+    {
+     "titulo": "Achando t: x e z em função de t",
+     "texto": "Dê nome a y: y = t. Com t = 1: 3x + 5 = 5, x = 0 e z = 4 − 0 − 2 = 2. Com t = 0: 3x + 0 = 5, x = 5/3 e z = 4 − 5/3 = 7/3. Com t = 4: 3x + 20 = 5, x = −5 e z = 4 + 5 − 8 = 1.",
      "visual": {
       "tipo": "tabela",
       "titulo": "Alguns pontos de I",
@@ -1928,8 +1940,8 @@
      }
     },
     {
-     "titulo": "Achando t: as soluções do sistema I (2 de 2)",
-     "texto": "Com t qualquer: 3x = 5 − 5t, x = (5 − 5t)/3. E z = 4 − x − 2t = (12 − 5 + 5t − 6t)/3 = (7 − t)/3."
+     "titulo": "Achando t: x e z em função de t (2 de 2)",
+     "texto": "Com t qualquer: 3x = 5 − 5t, x = (5 − 5t)/3. E z = 4 − x − 2t, com 4 = 12/3 e 2t = 6t/3: z = 12/3 − (5 − 5t)/3 − 6t/3 = (12 − 5 + 5t − 6t)/3 = (7 − t)/3. Teste com t = 1: (7 − 1)/3 = 2, igual ao z de cima."
     },
     {
      "titulo": "Achando n: o ponto t = 0",
@@ -1941,7 +1953,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "Agora a 3ª equação de II: kx + y − z = m − n = 3 − 4 = −1.\nEm t = 0 (x = 5/3, y = 0, z = 7/3): k · 5/3 − 7/3 = −1. Então 5k/3 = −1 + 7/3 = 4/3 e 5k = 4, k = 4/5.\nConferindo em t = 3 (x = −10/3, y = 3, z = 4/3): 4/5 · (−10/3) + 3 − 4/3 = −8/3 + 9/3 − 4/3 = −3/3 = −1. Certo.\nResposta: alternativa E.",
+     "texto": "Agora a 3ª equação de II: kx + y − z = m − n = 3 − 4 = −1. Com x = (5 − 5t)/3 e z = (7 − t)/3 ela é k · (5 − 5t)/3 + t − (7 − t)/3 = −1.\nEm t = 0 (x = 5/3, y = 0, z = 7/3): k · 5/3 − 7/3 = −1. Então 5k/3 = −1 + 7/3 = 4/3 e 5k = 4, k = 4/5.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -1970,6 +1982,10 @@
      }
     },
     {
+     "titulo": "Volta na equação (2 de 2)",
+     "texto": "Conferindo em t = 3 (x = −10/3, y = 3, z = 4/3): 4/5 · (−10/3) + 3 − 4/3 = −8/3 + 9/3 − 4/3 = −3/3 = −1. Certo.\nResposta: alternativa E."
+    },
+    {
      "titulo": "Questão parecida? Faça assim",
      "texto": "Pista: \"mesmo conjunto solução\" e a 3ª equação de I é a soma das duas primeiras: I é uma reta. Dê nome a y e ponha os pontos da reta em II.",
      "visual": {
@@ -1986,7 +2002,7 @@
        ],
        [
         "2. Equação em letras",
-        "k · (5 − 5t)/3 + t − (7 − t)/3 = m − n"
+        "k · x + y − z = m − n"
        ],
        [
         "3. Uma letra por vez",
@@ -2018,7 +2034,7 @@
   "origem": "Escada",
   "ancora": "parcial · ENEM 2023 q.158 (caderno 7: pescador com 4% da receita repartida e número mínimo achado por teste; texto de 750 letras); aqui a margem é sobre a venda, a quebra muda a massa vendida e o x aparece nos dois lados da equação",
   "canal": "mat-04-porcentagem.txt [2:14:31] (lucro em %, custo e preço de venda: ache o custo e o preço com um fator)",
-  "enunciado": "Uma torrefação artesanal prepara, a cada lote, 100 kg de grãos crus de café, misturando dois tipos. Na torra o grão perde massa porque a água evapora, e essa perda, chamada quebra, é diferente em cada tipo, como mostra a tabela. Depois da torra, todo o café do lote é embalado em pacotes de 250 g, vendidos a R$ 12,50 cada um. O dono quer que o lucro do lote seja de 20% da receita, isto é, de 20% de tudo que entra com a venda dos pacotes (e não 20% do custo dos grãos). O frete de R$ 150 da entrega dos pacotes foi pago pelo comprador e não entra nas contas da torrefação.\n\nTipo | Preço do kg cru | Quebra na torra\nA | R$ 36,00 | 20%\nB | R$ 24,00 | 25%\n\nQuantos quilogramas do tipo A devem entrar no lote de 100 kg de grãos crus?\n\nDados: Lote: 100 kg de grão cru, x kg do tipo A e o resto do B; Tipo A: R$ 36 por kg cru, perde 20% na torra; Tipo B: R$ 24 por kg cru, perde 25% na torra; Venda: pacotes de 250 g a R$ 12,50; Lucro: 20% da receita (da venda); Quero: kg do tipo A no lote.",
+  "enunciado": "Uma torrefação artesanal prepara, a cada lote, 100 kg de grãos crus de café, misturando dois tipos. Na torra o grão perde massa porque a água evapora, e essa perda, chamada quebra, é diferente em cada tipo, como mostra a tabela. Depois da torra, todo o café do lote é embalado em pacotes de 250 g, vendidos a R$ 12,50 cada um. O dono quer que o lucro do lote seja de 20% da receita, isto é, de 20% de tudo que entra com a venda dos pacotes (e não 20% do custo dos grãos). O frete de R$ 150 da entrega dos pacotes foi pago pelo comprador e não entra nas contas da torrefação. O único custo do lote é o dos grãos crus.\n\nTipo | Preço do kg cru | Quebra na torra\nA | R$ 36,00 | 20%\nB | R$ 24,00 | 25%\n\nQuantos quilogramas do café tipo A devem entrar no lote de 100 kg de grãos crus?\n\nDados: Lote: 100 kg de grão cru, x kg do café tipo A e o resto do B; Café tipo A: R$ 36 por kg cru, perde 20% na torra; Café tipo B: R$ 24 por kg cru, perde 25% na torra; Venda: pacotes de 250 g a R$ 12,50; Lucro: 20% da receita (da venda); Quero: kg do café tipo A no lote.",
   "A": "40 kg",
   "B": "67 kg",
   "C": "73 kg",
@@ -2026,7 +2042,7 @@
   "E": "78 kg",
   "resposta": "D",
   "explicacao": {
-   "conferencia": "Custo = 36x + 24 · (100 − x) = 2 400 + 12x. Torrado = 75 + 0,05x kg = 300 + 0,2x pacotes. Receita = 3 750 + 2,5x. Custo = 0,8 · receita: x = 60. Resposta: alternativa D. Erros: Alternativa A = Respondeu os kg do tipo B: 100 − 60; Alternativa B = Usou quebra de 20% nos dois tipos: receita fixa de 4 000 e 0,8 · 4 000 = 2 400 + 12x; Alternativa C = Fez o lucro de 20% sobre o custo: receita = 1,2 · custo; Alternativa E = Respondeu a massa torrada (75 + 0,05 · 60), que não foi pedida.",
+   "conferencia": "Custo = 36x + 24 · (100 − x) = 2 400 + 12x. Torrado = 75 + 0,05x kg = 300 + 0,2x pacotes. Receita = 3 750 + 2,5x. Custo = 0,8 · receita: x = 60. Resposta: alternativa D. Erros: Alternativa A = Respondeu os kg do café tipo B: 100 − 60; Alternativa B = Usou quebra de 20% nos dois tipos: receita fixa de 4 000 e 0,8 · 4 000 = 2 400 + 12x; Alternativa C = Fez o lucro de 20% sobre o custo: receita = 1,2 · custo; Alternativa E = Respondeu a massa torrada (75 + 0,05 · 60), que não foi pedida.",
    "ideia": "A margem de 20% é sobre a venda, então o custo é 80% da receita. Como a quantidade de pacotes também depende de x, ele aparece nos dois lados da equação.",
    "pecas": [
     {
@@ -2058,7 +2074,7 @@
        {
         "figura": "texto",
         "nome": "Gramas em quilos",
-        "formula": "1 kg = 4 pacotes de 250 g"
+        "formula": "1 000 g ÷ 250 g = 4 pacotes por kg"
        }
       ]
      }
@@ -2076,14 +2092,14 @@
       "linhas": [
        [
         "Lote",
-        "100 kg de grão cru, x kg do tipo A e o resto do B"
+        "100 kg de grão cru, x kg do café tipo A e o resto do B"
        ],
        [
-        "Tipo A",
+        "Café tipo A",
         "R$ 36 por kg cru, perde 20% na torra"
        ],
        [
-        "Tipo B",
+        "Café tipo B",
         "R$ 24 por kg cru, perde 25% na torra"
        ],
        [
@@ -2096,14 +2112,14 @@
        ],
        [
         "Quero",
-        "kg do tipo A no lote"
+        "kg do café tipo A no lote"
        ]
       ]
      }
     },
     {
      "titulo": "A equação em letras",
-     "texto": "O lucro é 20% da receita, então o gasto é os outros 80%. G e V dependem de x.\nAgora é só achar G, P e V, uma por vez.",
+     "texto": "O lucro é 20% da receita, então o gasto é os outros 80%. G e V dependem de x. As letras x e P não estão nesta equação: entram nos passos seguintes.\nAgora é só achar G, P e V, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "G = 0,8 · V",
@@ -2111,7 +2127,7 @@
       "letras": [
        {
         "letra": "x",
-        "oque": "kg do tipo A no lote (o que a questão quer)"
+        "oque": "kg do café tipo A no lote (o que a questão quer; não está nesta equação)"
        },
        {
         "letra": "G",
@@ -2119,7 +2135,7 @@
        },
        {
         "letra": "P",
-        "oque": "pacotes de 250 g vendidos"
+        "oque": "pacotes de 250 g vendidos (não está nesta equação)"
        },
        {
         "letra": "V",
@@ -2130,7 +2146,7 @@
     },
     {
      "titulo": "Achando G: o gasto com os grãos",
-     "texto": "Com 10 kg de A e 90 kg de B: 36 · 10 = 360 e 24 · 90 = 2 160, total 2 520. Com x kg de A sobram 100 − x kg de B. G = 36x + 24 · (100 − x) = 36x + 2 400 − 24x = 2 400 + 12x. É uma média ponderada: cada preço pesa pelos seus quilos.",
+     "texto": "Com 10 kg de A e 90 kg de B: 36 · 10 = 360 e 24 · 90 = 2 160, total 2 520. É a soma de preço vezes quilos de cada tipo: 36 · 10 + 24 · 90. Com x kg de A sobram 100 − x kg de B. G = 36x + 24 · (100 − x).",
      "visual": {
       "tipo": "tabela",
       "titulo": "Gasto com o lote",
@@ -2159,8 +2175,16 @@
      }
     },
     {
+     "titulo": "Achando G: o gasto com os grãos (2 de 2)",
+     "texto": "24 · (100 − x) é 24 vezes 100 e 24 vezes x, com o sinal de menos: 2 400 − 24x. Teste com x = 10: 24 · 90 = 2 160 e 2 400 − 240 = 2 160.\nEntão G = 36x + 2 400 − 24x = 2 400 + 12x."
+    },
+    {
      "titulo": "Achando P: os pacotes",
-     "texto": "Com 10 kg de A e 90 kg de B: A perde 20%, sobra 0,8 · 10 = 8 kg; B perde 25%, sobra 0,75 · 90 = 67,5 kg; juntos 75,5 kg. Com x: 0,8x + 0,75 · (100 − x) = 75 + 0,05x kg. 1 kg tem 4 pacotes de 250 g: P = 4 · (75 + 0,05x) = 300 + 0,2x."
+     "texto": "Com 10 kg de A e 90 kg de B: A perde 20%, sobra 0,8 · 10 = 8 kg; B perde 25%, sobra 0,75 · 90 = 67,5 kg; juntos 75,5 kg. Com x: 0,8x + 0,75 · (100 − x). Abrindo, 0,75 · (100 − x) é 0,75 vezes 100 e 0,75 vezes x, com o sinal de menos: 75 − 0,75x."
+    },
+    {
+     "titulo": "Achando P: os pacotes (2 de 2)",
+     "texto": "Junte os x: 0,8x − 0,75x = 0,05x (80 centésimos menos 75 centésimos). Sobra 75 + 0,05x kg.\n1 kg = 1 000 g. Cabem 1 000 ÷ 250 = 4 pacotes de 250 g em 1 kg (4 · 250 = 1 000). P = 4 · (75 + 0,05x) = 300 + 0,2x."
     },
     {
      "titulo": "Achando V: a receita",
@@ -2168,7 +2192,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "O lucro é 20% da receita, então o gasto é 80%: G = 0,8 · V.\n2 400 + 12x = 0,8 · (3 750 + 2,5x) = 3 000 + 2x (0,8 · 3 750 = 3 000 e 0,8 · 2,5 = 2).\nTire 2x e 2 400 dos dois lados: 12x − 2x = 3 000 − 2 400, 10x = 600, x = 60 kg.",
+     "texto": "Daqui a pouco confiro G, P e V com x = 60 (a tabela mostra os valores).\nO lucro é 20% da receita, então o gasto é 80%: G = 0,8 · V.\n2 400 + 12x = 0,8 · (3 750 + 2,5x) = 3 000 + 2x (0,8 · 3 750 = 3 000 e 0,8 · 2,5 = 2).\nTire 2x e 2 400 dos dois lados: 12x − 2x = 3 000 − 2 400, 10x = 600, x = 60 kg.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -2249,35 +2273,41 @@
   "id": "d2-escada-mat-ita-equ-00c",
   "materia": "Matemática",
   "tema": "Equações e Sistemas",
-  "enunciado": "Uma pessoa está comparando dois planos de celular só pelo que gasta com ligações, porque a internet é igual nos dois. Plano A: R$ 30 por mês, com 60 minutos de ligações incluídos; cada minuto além disso custa R$ 0,75. Plano B: R$ 54 por mês, com 120 minutos incluídos; cada minuto além disso custa R$ 0,50. Ela fala t minutos por mês, com t inteiro, e quer saber a partir de quando o plano B compensa. O menor valor de t para o qual o plano B fica estritamente mais barato do que o A é:\n\nDados: A: R$ 30 · 60 min · R$ 0,75; B: R$ 54 · 120 min · R$ 0,50.",
+  "nivel": "acima",
+  "origem": "Escada",
+  "ancora": "forte · Fuvest 2023 2ª fase dia 2 M01 item b (duas tarifas, uma delas por partes, e o intervalo em que uma fica mais barata); ENEM 2021 q.141 do caderno 7 (= q.176 do caderno 5) só pede montar a fórmula do preço; aqui a pegadinha é \"estritamente\" (93, não 92)",
+  "canal": "mat-11-funcao-afim-e-sistemas-lineares.txt [5:19:30] (ver onde as duas retas se encontram: o ponto comum das duas)",
+  "enunciado": "Uma pessoa está comparando dois planos de celular só pelo que gasta com ligações, porque a internet é igual nos dois. Plano A: R$ 30 por mês, com 60 minutos de ligações incluídos; cada minuto além disso custa R$ 0,75. Plano B: R$ 54 por mês, com 120 minutos incluídos; cada minuto além disso custa R$ 0,50. Ela fala t minutos por mês, com t inteiro, e quer saber a partir de quando o plano B compensa. O menor valor de t para o qual o plano B fica estritamente mais barato do que o A é:\n\nDados: Plano A: R$ 30 · 60 min · R$ 0,75; Plano B: R$ 54 · 120 min · R$ 0,50; Quero: menor t com o plano B estritamente mais barato.",
   "A": "36",
   "B": "92",
   "C": "93",
   "D": "120",
-  "E": "156",
+  "E": "157",
   "resposta": "C",
-  "origem": "Escada",
-  "nivel": "acima",
   "explicacao": {
-   "conferencia": "Resposta: alternativa C. t = 93. C. Erros: A = Usou t > 36, que só vale depois dos 120 minutos. B = Parou na igualdade (92): \"mais barato\" pede estritamente menor. D = Pegou os 120 minutos incluídos do B. E = Contou os 60 minutos incluídos nos dois planos.",
+   "conferencia": "O plano B fica em R$ 54 até 120 min. O plano A chega a 54 em t = 92 (empate) e passa disso a partir de 93: o menor t com B estritamente mais barato é 93. Resposta: alternativa C. Erros: Alternativa A = Usou t > 36, que só vale depois dos 120 minutos; Alternativa B = Parou na igualdade (92): \"mais barato\" pede estritamente menor; Alternativa D = Pegou os 120 minutos incluídos do plano B; Alternativa E = Contou os 60 minutos incluídos nos dois planos: B só compensa com t > 156.",
    "ideia": "Cada plano tem uma conta por partes. Compare onde elas se cruzam, e lembre que \"estritamente mais barato\" exclui o empate.",
    "pecas": [
     {
      "termo": "Excedente",
      "significado": "O que passa da franquia (dos minutos já incluídos no plano)."
+    },
+    {
+     "termo": "Estritamente",
+     "significado": "Estritamente mais barato: menor mesmo, sem contar o empate (igual)."
     }
    ],
    "passos": [
     {
      "titulo": "As fórmulas desta questão",
-     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela.",
      "visual": {
       "tipo": "formulas",
       "itens": [
        {
         "figura": "grafico",
         "nome": "Plano com franquia",
-        "formula": "fixo + minuto extra · (t − franquia)"
+        "formula": "R$ 30 + R$ 0,75 · (minutos − 60)"
        }
       ]
      }
@@ -2294,78 +2324,104 @@
       ],
       "linhas": [
        [
-        "A",
+        "Plano A",
         "R$ 30 · 60 min · R$ 0,75"
        ],
        [
-        "B",
+        "Plano B",
         "R$ 54 · 120 min · R$ 0,50"
+       ],
+       [
+        "Quero",
+        "menor t com o plano B estritamente mais barato"
        ]
       ]
      }
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
+     "texto": "Cada plano tem um custo que depende de t. Procuro o menor t em que CB é menor que CA, e não igual.\nAgora é só achar CA e CB, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "A = 30 + 0,75 · (t − 60)  e  B = 54",
-      "leitura": "plano A depois dos 60 minutos; plano B até 120 minutos",
+      "formula": "CA = 30 + 0,75 · (t − 60)  e  CB = 54",
+      "leitura": "custo do plano A depois dos 60 minutos; custo do plano B até 120 minutos",
       "letras": [
        {
         "letra": "t",
         "oque": "minutos falados (o que a questão quer)"
        },
        {
-        "letra": "A",
-        "oque": "custo do plano A"
+        "letra": "CA",
+        "oque": "custo do plano A, em reais"
        },
        {
-        "letra": "B",
-        "oque": "custo do plano B"
+        "letra": "CB",
+        "oque": "custo do plano B, em reais"
        }
       ]
      }
     },
     {
-     "titulo": "Quanto custa cada plano",
-     "texto": "Até 60 min: A = 30 e B = 54, então B não compensa. Depois dos 60, A cobra 0,75 por minuto além (o excedente): com t = 70, são 70 − 60 = 10 minutos além, e A custa 30 + 0,75 · 10 = 37,50. O plano B fica em 54 até 120 min."
+     "titulo": "Achando CA: o excedente do plano A",
+     "texto": "Até 60 min o plano A custa R$ 30. Depois dos 60, cobra R$ 0,75 por minuto além (o excedente). Com t = 70: 70 − 60 = 10 minutos além, e custa 30 + 0,75 · 10 = 37,50. Em letras, depois dos 60 min: CA = 30 + 0,75 · (t − 60)."
     },
     {
-     "titulo": "Achando A: custo do plano A",
-     "texto": "Depois dos 60 minutos, A = 30 + 0,75 · (t − 60). Com t = 93: A = 30 + 0,75 · 33 = 30 + 24,75 = 54,75."
+     "titulo": "Achando CB: o plano B",
+     "texto": "Até 120 minutos, CB = 54, o preço fixo. Com t = 70 o plano B custa 54, mais caro que o plano A (37,50). Até 60 min: CA = 30 e CB = 54, então B não compensa."
     },
     {
-     "titulo": "Achando B: custo do plano B",
-     "texto": "Até 120 minutos, B = 54."
+     "titulo": "Achando CA: quando passa de 54",
+     "texto": "Entre 60 e 120 min, CB = 54. O plano A passa de 54 quando 0,75 · (t − 60) > 24 (24 = 54 − 30; \">\" lê-se \"maior que\"). Então t − 60 > 24 ÷ 0,75. Multiplicando os dois por 100: 2 400 ÷ 75 = 32 (conferindo: 0,75 · 32 = 24)."
     },
     {
-     "titulo": "Entre 60 e 120 min",
-     "texto": "B custa 54. A passa de 54 quando 0,75 · (t − 60) > 24 (24 = 54 − 30; \">\" lê-se \"maior que\"). Então t − 60 > 24 ÷ 0,75. Multiplicando os dois por 100: 2 400 ÷ 75 = 32 (conferindo: 0,75 · 32 = 24), isto é, t > 92."
+     "titulo": "Achando CA: quando passa de 54 (2 de 2)",
+     "texto": "Se 0,75 · 32 = 24, com t − 60 maior que 32 o plano A passa de 54. t − 60 > 32 quer dizer t > 32 + 60 = 92 (some 60 dos dois lados)."
     },
     {
-     "titulo": "Em t = 92",
-     "texto": "A = 30 + 0,75 · 32 = 54 = B. Empate: B ainda não é mais barato."
+     "titulo": "Achando CA: t = 92 e t = 93",
+     "texto": "Em t = 92: CA = 30 + 0,75 · 32 = 54 = CB. Empate: B ainda não é mais barato.\nEm t = 93: CA = 30 + 0,75 · 33 = 30 + 24,75 = 54,75 e CB = 54. B é mais barato."
     },
     {
-     "titulo": "Em t = 93",
-     "texto": "A = 30 + 0,75 · 33 = 54,75 e B = 54. B é mais barato."
+     "titulo": "Achando CB: acima de 120 min",
+     "texto": "Só para conferir: acima de 120 min a resposta não muda, porque já achamos t = 93, que é menor. Aqui os dois cobram excedente. 0,75 · (t − 60) é 0,75 vezes t menos 0,75 vezes 60. Teste com t = 70: 0,75 · 10 = 7,5 e 0,75 · 70 − 45 = 52,5 − 45 = 7,5."
     },
     {
-     "titulo": "Acima de 120 min",
-     "texto": "Os dois cobram excedente. A = 30 + 0,75 · (t − 60). Abrindo o parêntese: 0,75 · t − 0,75 · 60 = 0,75 t − 45, então A = 30 + 0,75 t − 45 = 0,75 t − 15. B = 54 + 0,5 · (t − 120) = 54 + 0,5 t − 60 = 0,5 t − 6 (0,5 · 120 = 60)."
+     "titulo": "Achando CB: acima de 120 min (2 de 2)",
+     "texto": "Então CA = 30 + 0,75 · t − 45 = 0,75 · t − 15. CB = 54 + 0,5 · (t − 120) = 54 + 0,5 · t − 60 = 0,5 · t − 6 (0,5 · 120 = 60)."
     },
     {
-     "titulo": "Acima de 120 min (2 de 2)",
-     "texto": "A − B = 0,25 t − 9, que é positivo para t acima de 36; então B continua mais barato."
+     "titulo": "Achando CB: a diferença acima de 120",
+     "texto": "CA − CB = (0,75 · t − 15) − (0,5 · t − 6) = 0,25 · t − 9. Com t = 36: 0,25 · 36 = 9 e 9 − 9 = 0; para t maior que 36 dá mais que 0, então B continua mais barato."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "t = 93: A = 54,75 e B = 54, então B é mais barato. Em t = 92 há empate (54 e 54). Resposta: 93."
+     "texto": "t = 93: CA = 54,75 e CB = 54, então B é mais barato. Em t = 92 há empate (54 e 54). O menor t é 93.\nResposta: alternativa C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "t",
+        "93 minutos"
+       ],
+       [
+        "CA",
+        "R$ 54,75 com t = 93"
+       ],
+       [
+        "CB",
+        "R$ 54 com t = 93"
+       ]
+      ]
+     }
     },
     {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: Cada plano tem uma conta por partes.",
+     "texto": "Pista: Cada plano tem uma conta por partes. Compare onde elas se cruzam e lembre que \"estritamente mais barato\" exclui o empate.",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -2376,35 +2432,36 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "dados do enunciado"
+        "plano A: R$ 30, 60 min, R$ 0,75"
+       ],
+       [
+        "1. Tabela do que eu tenho (cont.)",
+        "plano B: R$ 54, 120 min, R$ 0,50"
        ],
        [
         "2. Equação em letras",
-        "A = 30 + 0,75 · (t − 60)  e  B = 54"
+        "CA = 30 + 0,75 · (t − 60)  e  CB = 54"
        ],
        [
         "3. Uma letra por vez",
-        "ache cada letra e volte na equação"
+        "CA e CB por partes; t > 92; menor t inteiro = 93"
        ]
       ]
      }
     }
    ],
    "checagem": {
-    "pergunta": "Plano C: R$ 20 com 50 min incluídos e R$ 1 por minuto extra. Plano D: R$ 35 fixos. A partir de quantos minutos D fica estritamente mais barato?",
-    "resposta": "C = 20 + (t − 50) > 35, então t − 50 > 15 e t > 65. O menor inteiro é 66.",
+    "pergunta": "Plano M: R$ 20 com 50 min incluídos e R$ 1 por minuto extra. Plano N: R$ 35 fixos. A partir de quantos minutos N fica estritamente mais barato?",
     "opcoes": [
      "65",
      "66",
      "70"
     ],
-    "certa": "66"
+    "certa": "66",
+    "resposta": "M = 20 + (t − 50) > 35, então t − 50 > 15 e t > 65. O menor inteiro é 66."
    },
    "seuErro": null
-  },
-  "ancora": "forte · Fuvest 2023 2ª fase dia 2 M01 item b (duas tarifas, uma delas por partes, e o intervalo em que uma fica mais barata); ENEM 2021 q.141 do caderno 7 (= q.176 do caderno 5) só pede montar a fórmula do preço; aqui a pegadinha é \"estritamente\" (93, não 92)",
-  "estiloPrincipal": "Fuvest",
-  "canal": "mat-11-funcao-afim-e-sistemas-lineares.txt [5:19:30] (ver onde as duas retas se encontram: o ponto comum das duas)"
+  }
  },
  {
   "id": "d2-escada-mat-ita-equ-00d",
@@ -2422,7 +2479,7 @@
   "E": "15",
   "resposta": "B",
   "explicacao": {
-   "conferencia": "s raiz dá r = −s − 1; 3 raiz dá r = −9 − 3t; então s = 3t + 8. Com t raiz: t² + 3t − 4 = 0, t = 1 ou −4, s = 11 ou −4. Soma = 7. Resposta: alternativa B. Erros: Alternativa A = Somou os valores de r das duas soluções: −12 + 3; Alternativa C = Ficou só com o caso s = t: o s dele é −4; Alternativa D = Usou st = s, concluiu t = 1 e esqueceu o caso s = t; Alternativa E = Subtraiu em vez de somar os dois valores: 11 − (−4).",
+   "conferencia": "s raiz dá r = −s − 1; 3 raiz dá r = −9 − 3t; então s = 3t + 8. Com t raiz: t² + 3t − 4 = 0, t = 1 ou −4, s = 11 ou −4. Soma = 7. Resposta: alternativa B. Erros: Alternativa A = Somou os valores de r das duas soluções: −12 + 3; Alternativa C = Ficou só com o caso s = t: o s dele é −4; Alternativa D = Esqueceu o caso t = −4 (que dá s = −4) e ficou só com t = 1: soma 11; Alternativa E = Subtraiu em vez de somar os dois valores: 11 − (−4).",
    "ideia": "Escreva que s, t e 3 são raízes e troque x por cada um: sai r em função de s e de t, e depois uma equação só em t. Cuidado com o caso em que s e t são o mesmo número: ele também vale.",
    "pecas": [
     {
@@ -2450,11 +2507,6 @@
         "figura": "texto",
         "nome": "Dividir por s",
         "formula": "s ≠ 0 permite cortar um s da conta"
-       },
-       {
-        "figura": "texto",
-        "nome": "Dois números: soma e produto",
-        "formula": "x² + bx + c: soma −b, produto c"
        }
       ]
      }
@@ -2494,11 +2546,11 @@
      "texto": "Cada valor de t que serve dá um valor de s. Somo todos os s.\nAgora é só achar r, t e s, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "S = soma dos valores de s",
+      "formula": "Total = soma dos valores de s",
       "leitura": "cada valor possível de s vem de um valor possível de t",
       "letras": [
        {
-        "letra": "S",
+        "letra": "Total",
         "oque": "soma de todos os valores possíveis de s (o que a questão quer)"
        },
        {
@@ -2518,19 +2570,23 @@
     },
     {
      "titulo": "Achando r: o que as raízes dizem",
-     "texto": "Se s ≠ 0 é raiz de x² + rx + s: s² + rs + s = 0. Divida por s: s + r + 1 = 0, então r = −s − 1 (com s = 5, r = −6: 25 − 30 + 5 = 0).\nSe 3 é raiz de x² + tx + r: 9 + 3t + r = 0, então r = −9 − 3t.\nIguale: −s − 1 = −9 − 3t, ou seja, s = 3t + 8."
+     "texto": "Se s ≠ 0 é raiz de x² + rx + s: s² + rs + s = 0. Divida por s: s + r + 1 = 0, então r = −s − 1. Com s = 5: 25 + r · 5 + 5 = 0; dividindo cada parte por 5: 5 + r + 1 = 0, r = −6.\nSe 3 é raiz de x² + tx + r: 9 + 3t + r = 0, então r = −9 − 3t."
+    },
+    {
+     "titulo": "Achando r: o que as raízes dizem (2 de 2)",
+     "texto": "Iguale: −s − 1 = −9 − 3t. Some 1 dos dois lados: −s = −8 − 3t. Troque os sinais: s = 8 + 3t, ou seja, s = 3t + 8. Teste com t = 1: s = 11 e r = −12 nas duas fórmulas: −11 − 1 = −12 e −9 − 3 = −12."
     },
     {
      "titulo": "Achando t: a equação só em t",
-     "texto": "Também t é raiz de x² + rx + s. Com t = 2 (r = −15, s = 14): 4 − 30 + 14 = −12, não dá zero.\nCom t qualquer, r = −9 − 3t e s = 3t + 8: t² + (−9 − 3t) · t + 3t + 8 = 0. Abrindo: t² − 9t − 3t² + 3t + 8 = −2t² − 6t + 8 = 0."
+     "texto": "Também t é raiz de x² + rx + s. Com t = 2 (r = −15, s = 14): 4 − 30 + 14 = −12, não dá zero.\nCom t qualquer, r = −9 − 3t e s = 3t + 8: t² + (−9 − 3t) · t + 3t + 8 = 0. Abrindo: (−9 − 3t) · t = −9t − 3t² (cada parte vezes t). Junte: t² − 3t² = −2t² e −9t + 3t = −6t. Fica −2t² − 6t + 8 = 0."
     },
     {
      "titulo": "Achando t: a equação só em t (2 de 2)",
-     "texto": "Divida por −2: t² + 3t − 4 = 0. Somam −3 e multiplicam −4: 1 e −4. Então t = 1 ou t = −4."
+     "texto": "Divida por −2: t² + 3t − 4 = 0. Dois números que somam 3 e multiplicam −4: 4 e −1. Então (t + 4) · (t − 1) = 0 e t = −4 ou t = 1."
     },
     {
      "titulo": "Achando s: um valor para cada t",
-     "texto": "Com s = 3t + 8: t = 1 dá s = 11 e r = −12. t = −4 dá s = −4 e r = 3.\nNo 2º caso s = t = −4: é o caso que \"st = s, logo t = 1\" deixa escapar. Os dois valem: r, s e t são diferentes de zero.",
+     "texto": "Com s = 3t + 8: t = 1 dá s = 11 e r = −12. t = −4 dá s = −4 e r = 3.\nNo 2º caso s = t = −4. Os dois valem: r, s e t são diferentes de zero.",
      "visual": {
       "tipo": "tabela",
       "titulo": "Os dois casos",
@@ -2561,7 +2617,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "S = 11 + (−4) = 7.\nConferindo o 2º polinômio com raiz 3: x² + x − 12 em 3 dá 9 + 3 − 12 = 0. E x² − 4x + 3 em 3 dá 9 − 12 + 3 = 0.\nNo 2º caso as raízes de x² + 3x − 4 são 1 e −4: o −4 é s e também t.\nResposta: alternativa B.",
+     "texto": "Total = 11 + (−4) = 7.\nConferindo o 2º polinômio com raiz 3: x² + x − 12 em 3 dá 9 + 3 − 12 = 0. E x² − 4x + 3 em 3 dá 9 − 12 + 3 = 0.\nNo 2º caso as raízes de x² + 3x − 4 são 1 e −4: o −4 é s e também t.\nResposta: alternativa B.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -2583,7 +2639,7 @@
         "11 e −4"
        ],
        [
-        "S",
+        "Total",
         "7"
        ]
       ]
@@ -2606,7 +2662,7 @@
        ],
        [
         "2. Equação em letras",
-        "S = soma dos valores de s"
+        "Total = soma dos valores de s"
        ],
        [
         "3. Uma letra por vez",
@@ -2646,7 +2702,7 @@
   "E": "R$ 1 600",
   "resposta": "B",
   "explicacao": {
-   "conferencia": "As vendas seguem q = 200 − 4p. O lucro (p − 10) · (200 − 4p) − 300 é uma parábola com topo em p = 30, acima do teto. O melhor preço permitido é 25, com q = 100 e lucro 15 · 100 − 300 = 1 200. Resposta: alternativa B. Erros: Alternativa A = Usou o menor preço do quadro (R$ 20): 10 · 120 − 300; Alternativa C = Usou o vértice p = 30, que passa do teto de R$ 25: 20 · 80 − 300; Alternativa D = Esqueceu o gasto fixo de R$ 300: 15 · 100; Alternativa E = Vértice p = 30 e sem o gasto fixo: 20 · 80.",
+   "conferencia": "As vendas seguem q = 200 − 4p. O lucro (p − 10) · (200 − 4p) − 300 é uma parábola com vértice em p = 30, acima do teto. O melhor preço permitido é 25, com q = 100 e lucro 15 · 100 − 300 = 1 200. Resposta: alternativa B. Erros: Alternativa A = Usou o menor preço do quadro (R$ 20): 10 · 120 − 300; Alternativa C = Usou o vértice p = 30, que passa do teto de R$ 25: 20 · 80 − 300; Alternativa D = Esqueceu o gasto fixo de R$ 300: 15 · 100; Alternativa E = Vértice p = 30 e sem o gasto fixo: 20 · 80.",
    "ideia": "Ache a reta das vendas, monte o lucro (uma parábola) e veja onde está o máximo. Se o vértice passa do preço permitido, o máximo fica no limite.",
    "pecas": [
     {
@@ -2655,7 +2711,7 @@
     },
     {
      "termo": "Vértice",
-     "significado": "O ponto mais alto da parábola."
+     "significado": "O ponto mais alto da parábola (o topo)."
     },
     {
      "termo": "Raiz",
@@ -2677,7 +2733,7 @@
        {
         "figura": "grafico",
         "nome": "Reta das vendas",
-        "formula": "q = q₀ + inclinação · (p − p₀)"
+        "formula": "cada R$ 1 a mais no preço tira 4 bolos"
        }
       ]
      }
@@ -2745,7 +2801,11 @@
     },
     {
      "titulo": "Achando q: a reta das vendas",
-     "texto": "No quadro, o preço sobe R$ 4 (de 20 para 24) e as vendas caem 16 (de 120 para 104): são −4 bolos por real. Então q = 120 − 4 · (p − 20) = 120 − 4p + 80, ou q = 200 − 4p. Conferindo com p = 28: 200 − 112 = 88."
+     "texto": "No quadro, o preço sobe R$ 4 (de 20 para 24) e as vendas caem 16 (de 120 para 104): são −4 bolos por real. Cada R$ 1 a mais tira 4 bolos: a R$ 21 vendem 116, a R$ 22 vendem 112. Partindo de 120 bolos a R$ 20: q = 120 − 4 · (p − 20)."
+    },
+    {
+     "titulo": "Achando q: abrindo a conta",
+     "texto": "−4 · (p − 20) é −4 vezes p e −4 vezes −20: −4p + 80. Então q = 120 − 4p + 80 = 200 − 4p. Teste com p = 24: 120 − 4 · 4 = 104 e 200 − 96 = 104. Conferindo com p = 28: 200 − 112 = 88."
     },
     {
      "titulo": "Achando p: o lucro em função do preço",
@@ -2756,8 +2816,8 @@
      "texto": "Sem o gasto fixo, (p − 10) · (200 − 4p) vale: p = 10 → 0; p = 20 → 10 · 120 = 1 200; p = 30 → 20 · 80 = 1 600; p = 40 → 30 · 40 = 1 200; p = 50 → 0.\nSobe até 30 e desce igual do outro lado: uma parábola aberta para baixo."
     },
     {
-     "titulo": "Achando p: onde fica o topo",
-     "texto": "Os preços que zeram (p − 10) · (200 − 4p) são p = 10 e p = 50: as raízes. A parábola é igual dos dois lados, então o topo fica no meio: p = (10 + 50) ÷ 2 = 30."
+     "titulo": "Achando p: onde fica o vértice",
+     "texto": "Os preços que zeram (p − 10) · (200 − 4p) são as raízes. p − 10 = 0 dá p = 10. 200 − 4p = 0 dá 4p = 200, p = 50. A parábola é igual dos dois lados, então o vértice (o topo) fica no meio: p = (10 + 50) ÷ 2 = 30."
     },
     {
      "titulo": "Achando p: o melhor preço permitido",
@@ -2795,7 +2855,7 @@
     },
     {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: reta de vendas + lucro = parábola → ache o topo (no meio das raízes) e, se ele passa do preço permitido, fique no limite.",
+     "texto": "Pista: reta de vendas + lucro = parábola → ache o vértice (no meio das raízes) e, se ele passa do preço permitido, fique no limite.",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -2832,7 +2892,7 @@
      "R$ 292,50"
     ],
     "certa": "R$ 232",
-    "resposta": "O topo estaria em p = 17,5, que passa do teto. Então p = 12: 7 · 36 − 20 = 232."
+    "resposta": "O vértice estaria em p = 17,5, que passa do teto. Então p = 12: 7 · 36 − 20 = 232."
    },
    "seuErro": null
   }
@@ -2861,8 +2921,8 @@
      "significado": "Chamar t² de u: a equação de grau 4 vira de grau 2."
     },
     {
-     "termo": "Fundo da parábola",
-     "significado": "O menor valor de h: −9, em u = 3."
+     "termo": "Fundo da curva",
+     "significado": "O ponto mais baixo da curva de h (a curva em U): aqui é −9, em u = 3."
     },
     {
      "termo": "Contar soluções",
@@ -2944,7 +3004,11 @@
     },
     {
      "titulo": "Achando P: troque t² por u",
-     "texto": "Chame t² de u. Como t⁴ = t² · t², a equação vira u² − 6u + k = 0, ou h(u) = −k.\nCada u gera valores de t por t² = u: u positivo dá 2 (t e −t), u = 0 dá 1 (t = 0) e u negativo não dá nenhum."
+     "texto": "Chame t² de u. Como t⁴ = t² · t², a equação vira u² − 6u + k = 0.\nPasse k para o outro lado, trocando o sinal: u² − 6u = −k, ou h(u) = −k. Teste com k = 5: u² − 6u + 5 = 0 e u² − 6u = −5."
+    },
+    {
+     "titulo": "Achando P: quantos t dá cada u",
+     "texto": "Cada u gera valores de t por t² = u: u positivo dá 2 (t e −t), u = 0 dá 1 (t = 0) e u negativo não dá nenhum."
     },
     {
      "titulo": "Achando P: ler o gráfico de h",
@@ -2988,11 +3052,23 @@
     },
     {
      "titulo": "Achando P: k negativo",
-     "texto": "Com k negativo, −k é positivo (k = −7 pede h(u) = 7). Então há um u menor que 0 (sem t) e um u maior que 6 (2 valores de t): 2 soluções.\nIsso vale para k = −10, −9, ..., −1. São 10 valores: P = 10."
+     "texto": "Com k negativo, −k é positivo (k = −7 pede h(u) = 7). Então há um u menor que 0 (sem t) e um u maior que 6 (2 valores de t): 2 soluções."
+    },
+    {
+     "titulo": "Achando P: testando k = −1",
+     "texto": "Teste com k = −1: h(u) = 1. Na tabela h(0) = 0 e h(−1) = 7, então um u está entre −1 e 0 (negativo); h(6) = 0 e h(7) = 7, então outro está entre 6 e 7."
+    },
+    {
+     "titulo": "Achando P: contando os k negativos",
+     "texto": "Com k = −10: h(u) = 10, ainda mais longe: u menor que −1 e maior que 7. Sempre um u negativo e um maior que 6. Isso vale para k = −10, −9, ..., −1: são 10 valores, P = 10."
     },
     {
      "titulo": "Achando Q: o fundo de h",
-     "texto": "O menor valor de h é −9. Então h(u) = −k só tem solução se −k ≥ −9, ou seja, k ≤ 9. Com k = 10, 11, ..., 20 não existe u e nenhuma solução em t.\nCom k = 9: h(u) = −9 só em u = 3, um u positivo: t = √3 e t = −√3. São 2 soluções."
+     "texto": "O menor valor de h é −9. Então h(u) = −k só tem solução se −k ≥ −9 (≥ lê-se \"maior ou igual\"). Teste: k = 10 dá −k = −10, menor que −9, não serve; k = 9 dá −9, serve. Então k tem que ser 9 ou menos. Com k = 10, 11, ..., 20 não existe u."
+    },
+    {
+     "titulo": "Achando Q: o caso k = 9",
+     "texto": "Com k = 9: h(u) = −9 só em u = 3, um u positivo. t² = 3: t é o número que vezes ele mesmo dá 3 (√3, um pouco mais de 1,7 porque 1,7 · 1,7 = 2,89), e o oposto, −√3. Não precisa do valor: só importa que são 2 soluções."
     },
     {
      "titulo": "Achando Q: os k de 0 a 8",
@@ -3000,7 +3076,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "N = P + Q = 10 + 1 = 11.\nConferindo a contagem dos k: de −10 a 20 são 20 − (−10) + 1 = 31 valores. Servem os 10 negativos e o k = 9.\nResposta: alternativa D.",
+     "texto": "N = P + Q = 10 + 1 = 11.\nConferindo a contagem dos k: de 1 a 5 são 5 números, não 4: 5 − 1 + 1. Por isso de −10 a 20 são 20 − (−10) + 1 = 31 valores. Servem os 10 negativos e o k = 9.\nResposta: alternativa D.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -3085,8 +3161,8 @@
    "ideia": "A troca x → 1/(1 − x) volta ao ponto de partida depois de 3 passos. Escreva a equação nos 3 pontos do ciclo: sai um sistema 3×3 nas três imagens de f.",
    "pecas": [
     {
-     "termo": "Função composta",
-     "significado": "Aplicar a regra ao resultado da regra: f(f(x))."
+     "termo": "Troca de ponto",
+     "significado": "Trocar x por 1/(1 − x), três vezes seguidas, volta ao x."
     },
     {
      "termo": "Ciclo",
@@ -3103,12 +3179,12 @@
        {
         "figura": "texto",
         "nome": "Troca de ponto",
-        "formula": "T(x) = 1/(1 − x)"
+        "formula": "x vira 1/(1 − x)"
        },
        {
         "figura": "contagem",
         "nome": "Volta ao começo",
-        "formula": "T(T(T(x))) = x"
+        "formula": "trocar 3 vezes volta ao x"
        }
       ]
      }
@@ -3141,11 +3217,11 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A regra vale em todo ponto. Escrevo ela em 3 pontos que se ligam em ciclo (1/2, depois 2, depois −1), e o 1º passo mostra de onde vem esse ciclo.\nAgora é só achar w e v, uma por vez, em função de u.",
+     "texto": "A regra vale em todo ponto. Se não sei a regra de f, f de cada ponto é só um número escondido: chamo de u o do 1/2, de v o do ponto seguinte do ciclo e de w o do 3º ponto.",
      "visual": {
       "tipo": "equacao",
-      "formula": "u + 2v = 1/2;  v + 2w = 2;  w + 2u = −1",
-      "leitura": "a regra f(x) + 2 · f(T(x)) = x escrita em x = 1/2, x = 2 e x = −1",
+      "formula": "u + 2v = ...;  v + 2w = ...;  w + 2u = ...",
+      "leitura": "a regra f(x) + 2 · f(1/(1 − x)) = x escrita em 3 pontos que se ligam em ciclo (os valores nascem nos passos seguintes)",
       "letras": [
        {
         "letra": "u",
@@ -3153,18 +3229,26 @@
        },
        {
         "letra": "v",
-        "oque": "f(2)"
+        "oque": "f do ponto seguinte do ciclo"
        },
        {
         "letra": "w",
-        "oque": "f(−1)"
+        "oque": "f do 3º ponto do ciclo"
        }
       ]
      }
     },
     {
+     "titulo": "A equação em letras (2 de 2)",
+     "texto": "Escrevo a regra nos 3 pontos do ciclo, e o 1º passo \"Achando\" mostra de onde vem esse ciclo; cada equação fala de dois desses números escondidos.\nAgora é só achar w e v, uma por vez, em função de u."
+    },
+    {
      "titulo": "Achando w: o ciclo do 1/2",
-     "texto": "Chame T(x) = 1/(1 − x). T(1/2) = 1/(1 − 1/2) = 1/(1/2) = 2.\nT(2) = 1/(1 − 2) = 1/(−1) = −1.\nT(−1) = 1/(1 − (−1)) = 1/2.\nVolta ao 1/2 depois de 3 passos.",
+     "texto": "Para encurtar, chame 1/(1 − x) de T(x). T(1/2) = 1/(1 − 1/2) = 1/(1/2) = 2.\n1/(1/2) é 1 ÷ 1/2: quantos meios cabem em 1? Cabem 2."
+    },
+    {
+     "titulo": "Achando w: voltando ao 1/2",
+     "texto": "T(2) = 1/(1 − 2) = 1/(−1) = −1.\nT(−1) = 1/(1 − (−1)) = 1/2.\nVolta ao 1/2 depois de 3 passos.",
      "visual": {
       "tipo": "tabela",
       "titulo": "O ciclo",
@@ -3198,11 +3282,15 @@
     },
     {
      "titulo": "Achando v: v em função de u",
-     "texto": "Da 2ª equação, v = 2 − 2w. Troque w = −1 − 2u: 2w = −2 − 4u.\nEntão v = 2 − (−2 − 4u) = 2 + 2 + 4u = 4 + 4u."
+     "texto": "Da 2ª equação, v = 2 − 2w. Troque w = −1 − 2u: 2w = −2 − 4u.\nEntão v = 2 − (−2 − 4u)."
+    },
+    {
+     "titulo": "Achando v: tirando o parêntese",
+     "texto": "Tirar (−2 − 4u) é tirar −2 e tirar −4u: some 2 e some 4u. Então v = 2 + 2 + 4u = 4 + 4u. Teste com u = 1: 2 − (−2 − 4) = 2 + 6 = 8 e 4 + 4 = 8."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "Na 1ª equação, u + 2v = 1/2, troque v = 4 + 4u: u + 2 · (4 + 4u) = 1/2.\n2 · (4 + 4u) = 8 + 8u, então 9u + 8 = 1/2 e 9u = 1/2 − 8 = 1/2 − 16/2 = −15/2.\nu = (−15/2) ÷ 9 = −15/18 = −5/6.\nConferindo: v = 4 + 4 · (−5/6) = 4 − 10/3 = 2/3; w = −1 + 5/3 = 2/3. A 2ª equação: 2/3 + 4/3 = 2.",
+     "texto": "Na 1ª equação, u + 2v = 1/2, troque v = 4 + 4u: u + 2 · (4 + 4u) = 1/2.\n2 · (4 + 4u) = 8 + 8u, então 9u + 8 = 1/2 e 9u = 1/2 − 8 = 1/2 − 16/2 = −15/2.\nDividir por 9 é pôr 9 embaixo: (−15/2) ÷ 9 = −15/(2 · 9) = −15/18. Divida em cima e embaixo por 3: −5/6.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -3228,7 +3316,7 @@
     },
     {
      "titulo": "Volta na equação (2 de 2)",
-     "texto": "Resposta: alternativa C."
+     "texto": "Conferindo: v = 4 + 4 · (−5/6) = 4 − 10/3 = 2/3; w = −1 + 5/3 = 2/3. A 2ª equação: 2/3 + 4/3 = 2.\nResposta: alternativa C."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -3247,7 +3335,7 @@
        ],
        [
         "2. Equação em letras",
-        "u + 2v = 1/2;  v + 2w = 2;  w + 2u = −1"
+        "u + 2v = ...;  v + 2w = ...;  w + 2u = ..."
        ],
        [
         "3. Uma letra por vez",
@@ -3360,7 +3448,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Se f volta ao começo a cada 3 aplicações, sobram só r aplicações. A equação fʳ(x) = x é de 2º grau, e o sinal de Δ diz quantos x existem.\nAgora é só achar r e Δ, uma por vez.",
+     "texto": "Se f volta ao começo a cada 3 aplicações, sobram só r aplicações. Para r = 1 ou r = 2 a equação fʳ(x) = x é de 2º grau (aqui r será 1), e o sinal de Δ diz quantos x existem. Com r = 0, f voltou ao começo e vale para qualquer x.\nAgora é só achar r e Δ, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "N = 0 se Δ < 0;  N = 1 se Δ = 0;  N = 2 se Δ > 0",
@@ -3380,14 +3468,6 @@
        }
       ]
      }
-    },
-    {
-     "titulo": "Achando r: aplicar f duas vezes",
-     "texto": "f(x) = 1/(1 − x). Então f²(x) = 1/(1 − 1/(1 − x)).\n1 − 1/(1 − x) = (1 − x)/(1 − x) − 1/(1 − x) = −x/(1 − x).\nLogo f²(x) = (1 − x)/(−x) = (x − 1)/x."
-    },
-    {
-     "titulo": "Achando r: a terceira aplicação",
-     "texto": "f³(x) = f(f²(x)) = 1/(1 − (x − 1)/x).\n1 − (x − 1)/x = (x − (x − 1))/x = 1/x.\nEntão f³(x) = 1/(1/x) = x: três aplicações devolvem o x de partida."
     },
     {
      "titulo": "Achando r: teste com número",
@@ -3420,16 +3500,36 @@
      }
     },
     {
+     "titulo": "Achando r: aplicar f duas vezes",
+     "texto": "Agora com letras, para qualquer x. f(x) = 1/(1 − x). Então f²(x) = 1/(1 − 1/(1 − x)).\n1 − 1/(1 − x) = (1 − x)/(1 − x) − 1/(1 − x) = −x/(1 − x)."
+    },
+    {
+     "titulo": "Achando r: dividir por fração",
+     "texto": "Logo f²(x) = 1 ÷ (−x/(1 − x)). Dividir por uma fração é inverter: vira (1 − x)/(−x). Multiplicando cima e baixo por −1: (x − 1)/x.\nTeste com x = 2: f(f(2)) = f(−1) = 1/2 e (2 − 1)/2 = 1/2."
+    },
+    {
+     "titulo": "Achando r: a terceira aplicação",
+     "texto": "f³(x) = f(f²(x)) = 1/(1 − (x − 1)/x).\n1 − (x − 1)/x = (x − (x − 1))/x = 1/x.\nEntão f³(x) = 1/(1/x) = x: três aplicações devolvem o x de partida."
+    },
+    {
      "titulo": "Achando r: o resto de 2 026 ÷ 3",
-     "texto": "A cada 3 aplicações a função volta ao começo. 3 · 675 = 2 025, e 2 026 − 2 025 = 1.\nSão 675 voltas completas e mais 1 aplicação: f²⁰²⁶(x) = f(x). Então r = 1."
+     "texto": "A cada 3 aplicações a função volta ao começo. 2 026 ÷ 3: 3 · 600 = 1 800, restam 226; 3 · 75 = 225, resta 1. Então 600 + 75 = 675 voltas e resta 1."
+    },
+    {
+     "titulo": "Achando r: o que sobra",
+     "texto": "São 675 voltas completas (3 · 675 = 2 025) e mais 1 aplicação: f²⁰²⁶(x) = f(x). Então r = 1."
     },
     {
      "titulo": "Achando Δ: igualar f(x) a x",
-     "texto": "Como f²⁰²⁶ = f, a equação é f(x) = x: 1/(1 − x) = x.\nMultiplicando por (1 − x), que não é zero: 1 = x · (1 − x) = x − x².\nPassando tudo para um lado: x² − x + 1 = 0."
+     "texto": "Como f²⁰²⁶ = f, a equação é f(x) = x: 1/(1 − x) = x.\nMultiplicar os dois lados por (1 − x) tira a fração (como 6 ÷ 2 = 3 vira 6 = 3 · 2), e (1 − x) não é zero. Fica 1 = x · (1 − x) = x − x²."
+    },
+    {
+     "titulo": "Achando Δ: passando para um lado",
+     "texto": "Teste de 1/(1 − x) = x com x = 2: 1/(−1) = −1, e 2 não é −1.\nPassar tudo para um lado: some x² e tire x dos dois lados de 1 = x − x². Fica x² − x + 1 = 0."
     },
     {
      "titulo": "Achando Δ: o discriminante",
-     "texto": "Em x² − x + 1 = 0: a = 1, b = −1, c = 1.\nD = b² − 4ac = (−1)² − 4 · 1 · 1 = 1 − 4 = −3.\nD é negativo: a equação não tem raiz real."
+     "texto": "Em x² − x + 1 = 0: a = 1, b = −1, c = 1.\nΔ = b² − 4ac = (−1)² − 4 · 1 · 1 = 1 − 4 = −3.\nΔ é negativo: a equação não tem raiz real."
     },
     {
      "titulo": "Volta na equação",
@@ -3502,23 +3602,25 @@
   "id": "d2-escada-mat-ita-pla-00a",
   "materia": "Matemática",
   "tema": "Geometria Plana",
-  "enunciado": "Um sítio de lazer tem um gramado em formato de L: ele é um retângulo de 40 m por 30 m do qual foi retirado, em um dos cantos, um retângulo de 15 m por 10 m, onde fica a casa do caseiro. Todo o terreno que sobrou será coberto com grama em placas. O fornecedor vende a grama em pacotes com 6 placas, e cada placa cobre 1,5 m². Como sempre quebram placas no transporte e no corte das bordas, o engenheiro pediu que o orçamento considere 10% de área a mais do que a área do gramado. Cada pacote custa R$ 54, mas o desconto de 5% para compras acima de 100 pacotes só vale no pagamento à vista, e o cliente vai pagar a prazo. Quantos pacotes devem ser comprados?\n\nDados: Retângulo grande: 40 m × 30 m; Casa (canto retirado): 15 m × 10 m; Cada placa: 1,5 m²; Cada pacote: 6 placas; Folga pedida: 10% a mais.",
+  "nivel": "acima",
+  "origem": "Escada",
+  "ancora": "parcial · ENEM 2022 q.167 (CD5; piscina com 5 projetos: somar áreas e decidir por conta, 820 letras) e ENEM 2019 q.142 (CD7; só a coroa nova conta, comparada com o estoque de material); aqui a área é de um L, com folga de 10% e arredondamento para pacotes",
+  "canal": "mat-04-porcentagem.txt [2:06:31] (aumento: valor × 1,1); área de retângulo em mat-21-area-de-polignos-geometria-plana.txt [11:43:30]",
+  "enunciado": "Um sítio de lazer tem um gramado em formato de L: ele é um retângulo de 40 m por 30 m do qual foi retirado, em um dos cantos, um retângulo de 15 m por 10 m, onde fica a casa do caseiro. Todo o terreno que sobrou será coberto com grama em placas. O fornecedor vende a grama em pacotes com 6 placas, e cada placa cobre 1,5 m². Como sempre quebram placas no transporte e no corte das bordas, o engenheiro pediu que o orçamento considere 10% de área a mais do que a área do gramado. Cada pacote custa R$ 54, mas o desconto de 5% para compras acima de 100 pacotes só vale no pagamento à vista, e o cliente vai pagar a prazo. Quantos pacotes devem ser comprados?\n\nDados: Retângulo grande: 40 m × 30 m; Casa (canto retirado): 15 m × 10 m; Cada placa: 1,5 m²; Cada pacote: 6 placas; Folga pedida: 10% a mais; Não entra na conta: R$ 54, desconto de 5% e pagamento a prazo.",
   "A": "117",
   "B": "128",
   "C": "129",
   "D": "193",
   "E": "700",
   "resposta": "C",
-  "origem": "Escada",
-  "nivel": "acima",
   "explicacao": {
-   "conferencia": "Resposta: alternativa C. Esses 3 m² precisam de mais um pacote: 129. O preço de R$ 54, o desconto de 5% e o pagamento a prazo não entram. C. Erros: A = Esqueceu os 10% (1 050 ÷ 9 = 116,7). B = Arredondou para baixo: sobra uma parte sem cobrir. D = Esqueceu que cada placa cobre 1,5 m² (1 155 ÷ 6). E = Parou nas placas, sem os 10% (1 050 ÷ 1,5).",
+   "conferencia": "A área do L é 1 200 − 150 = 1 050 m²; com 10% a mais, 1 155 m². Um pacote cobre 6 · 1,5 = 9 m²: 1 155 ÷ 9 = 128 e sobram 3 m², que pedem mais 1 pacote: 129. O preço de R$ 54, o desconto de 5% e o pagamento a prazo não entram. Resposta: alternativa C. Erros: Alternativa A = Esqueceu os 10% (1 050 ÷ 9 = 116,7); Alternativa B = Arredondou para baixo: sobra uma parte sem cobrir; Alternativa D = Esqueceu que cada placa cobre 1,5 m² (1 155 ÷ 6); Alternativa E = Parou nas placas, sem os 10% (1 050 ÷ 1,5).",
    "ideia": "A área do L é o retângulo grande menos o canto. Some a folga de 10%, veja quanto um pacote cobre e arredonde para cima.",
    "pecas": [],
    "passos": [
     {
      "titulo": "As fórmulas desta questão",
-     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela.",
      "visual": {
       "tipo": "formulas",
       "itens": [
@@ -3537,7 +3639,7 @@
     },
     {
      "titulo": "O que eu tenho",
-     "texto": "Primeiro, tire os dados do enunciado. Atenção, estão no enunciado mas fora da conta: O preço de R$ 54, o desconto de 5% e o pagamento a prazo.",
+     "texto": "Primeiro, tire os dados do enunciado.",
      "visual": {
       "tipo": "tabela",
       "titulo": "O que eu tenho",
@@ -3565,6 +3667,10 @@
        [
         "Folga pedida",
         "10% a mais"
+       ],
+       [
+        "Não entra na conta",
+        "R$ 54, desconto de 5% e pagamento a prazo"
        ]
       ]
      }
@@ -3574,7 +3680,8 @@
      "texto": "Veja o terreno: um retângulo de 40 m por 30 m, e o canto da casa (tracejado, 15 m por 10 m) fica de fora.",
      "visual": {
       "tipo": "diagrama",
-      "nome": "gramado-em-l"
+      "nome": "gramado-em-l",
+      "rotulos": []
      }
     },
     {
@@ -3582,22 +3689,22 @@
      "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "P = 1,1 · A ÷ 9",
-      "leitura": "área com folga (1,1 vez a área) ÷ 9 m², que é o que um pacote cobre, arredondado para cima",
+      "formula": "P = 1,1 · G ÷ 9",
+      "leitura": "área com folga (1,1 vez a área G) ÷ 9 m², que é o que um pacote cobre; se sobrar um pedaço, precisa de mais um pacote inteiro",
       "letras": [
        {
         "letra": "P",
         "oque": "pacotes (o que a questão quer)"
        },
        {
-        "letra": "A",
+        "letra": "G",
         "oque": "área do gramado"
        }
       ]
      }
     },
     {
-     "titulo": "Achando A: área do gramado",
+     "titulo": "Achando G: área do gramado",
      "texto": "Retângulo grande: 40 · 30 = 1 200 m². Canto da casa: 15 · 10 = 150 m². 1 200 − 150 = 1 050 m².\nO mesmo desenho, agora com a conta.",
      "visual": {
       "tipo": "diagrama",
@@ -3624,11 +3731,29 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "1 155 ÷ 9: 9 · 100 = 900, restam 255; 9 · 28 = 252; resta 3. Então 128 pacotes e sobram 3 m²."
+     "texto": "1 155 ÷ 9: 9 · 100 = 900, restam 255. 255 ÷ 9: 9 · 20 = 180, restam 75; 9 · 8 = 72, resta 3. Então 100 + 20 + 8 = 128 pacotes e sobram 3 m².\nSobrou área sem cobrir: falta 1 pacote, 129.\nResposta: alternativa C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "G",
+        "1 050 m²"
+       ],
+       [
+        "P",
+        "129 pacotes"
+       ]
+      ]
+     }
     },
     {
      "titulo": "Arredondar",
-     "texto": "Esses 3 m² precisam de mais um pacote: 129. O preço de R$ 54, o desconto de 5% e o pagamento a prazo não entram."
+     "texto": "Sobrou um pedaço (3 m²) sem cobrir: precisa de mais 1 pacote inteiro, então 129 e não 128. O preço de R$ 54, o desconto de 5% e o pagamento a prazo não entram."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -3643,15 +3768,19 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "dados do enunciado"
+        "retângulo 40 × 30 menos canto 15 × 10; 10% a mais"
+       ],
+       [
+        "1. Tabela do que eu tenho (cont.)",
+        "pacote de 9 m²"
        ],
        [
         "2. Equação em letras",
-        "P = 1,1 · A ÷ 9"
+        "P = 1,1 · G ÷ 9"
        ],
        [
         "3. Uma letra por vez",
-        "ache cada letra e volte na equação"
+        "G = 1 050; com folga 1 155; 128 e sobram 3; P = 129"
        ]
       ]
      }
@@ -3659,19 +3788,16 @@
    ],
    "checagem": {
     "pergunta": "Terreno de 60 m², com 10% de folga. Cada pacote cobre 5 m². Quantos pacotes?",
-    "resposta": "60 · 1,1 = 66 m². 66 ÷ 5 = 13 e sobra 1 m², então 14 pacotes.",
     "opcoes": [
      "12",
      "13",
      "14"
     ],
-    "certa": "14"
+    "certa": "14",
+    "resposta": "60 · 1,1 = 66 m². 66 ÷ 5 = 13 e sobra 1 m², então 14 pacotes."
    },
    "seuErro": null
-  },
-  "ancora": "parcial · ENEM 2022 q.167 (CD5; piscina com 5 projetos: somar áreas e decidir por conta, 820 letras) e ENEM 2019 q.142 (CD7; só a coroa nova conta, comparada com o estoque de material); aqui a área é de um L, com folga de 10% e arredondamento para pacotes",
-  "estiloPrincipal": "ENEM",
-  "canal": "mat-04-porcentagem.txt [2:06:31] (aumento: valor × 1,1); área de retângulo em mat-21-area-de-polignos-geometria-plana.txt [11:43:30]"
+  }
  },
  {
   "id": "d2-escada-mat-ita-pla-00c",
@@ -3693,6 +3819,10 @@
    "ideia": "Os catetos não são pedidos: só a soma deles (70 − 29) e a hipotenusa dão o produto, e com ele a área. O raio inscrito é a área ÷ semiperímetro (35, não 70), e por fim se tira a área do círculo.",
    "pecas": [
     {
+     "termo": "Triângulo retângulo",
+     "significado": "Triângulo com um canto reto. O lado oposto ao canto reto é a hipotenusa; os outros dois são os catetos."
+    },
+    {
      "termo": "Semiperímetro",
      "significado": "A metade da soma dos três lados: 70 ÷ 2 = 35."
     },
@@ -3711,7 +3841,7 @@
        {
         "figura": "triangulo-retangulo",
         "nome": "Pitágoras",
-        "formula": "hipotenusa² = cateto² + cateto²"
+        "formula": "hipotenusa · hipotenusa = cateto · cateto + cateto · cateto"
        },
        {
         "figura": "triangulo",
@@ -3799,11 +3929,15 @@
     },
     {
      "titulo": "Achando T: a área do painel",
-     "texto": "Os catetos não foram dados. Some os dois: 70 − 29 = 41. Sempre vale (soma)² = (cateto)² + (cateto)² + 2 · produto. Teste com 3 e 4: 7 · 7 = 49 = 9 + 16 + 2 · 12.\nAqui: 41 · 41 = 1 681. A soma dos quadrados dos catetos é 29 · 29 = 841 (Pitágoras). 1 681 − 841 = 840 = 2 · produto, então produto = 420."
+     "texto": "Os catetos não foram dados. Os três lados somam 70 e a hipotenusa é 29. Então os dois catetos juntos somam 70 − 29 = 41. O produto dos catetos (um cateto vezes o outro) vem de (soma) · (soma) = cateto · cateto + cateto · cateto + 2 · produto."
     },
     {
-     "titulo": "Achando T: a área do painel (2 de 2)",
-     "texto": "T = produto ÷ 2 = 420 ÷ 2 = 210 cm²."
+     "titulo": "Achando T: a área do painel (2 de 3)",
+     "texto": "Teste com 3 e 4: 7 · 7 = 49 = 9 + 16 + 2 · 12 (12 = 3 · 4). Com 2 e 5: 7 · 7 = 49 = 4 + 25 + 2 · 10 (10 = 2 · 5): também fecha."
+    },
+    {
+     "titulo": "Achando T: a área do painel (3 de 3)",
+     "texto": "Aqui: 41 · 41 = 40 · 41 + 41 = 1 640 + 41 = 1 681. A soma dos quadrados dos catetos é 29 · 29 = 30 · 29 − 29 = 870 − 29 = 841 (Pitágoras). 1 681 − 841 = 840 = 2 · produto, então produto = 420.\nT = produto ÷ 2 = 420 ÷ 2 = 210 cm²."
     },
     {
      "titulo": "Achando r: o raio do círculo",
@@ -3811,7 +3945,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "3,14 · 6 · 6 = 3,14 · 36 = 3 · 36 + 0,14 · 36 = 108 + 5,04 = 113,04.\nF = 210 − 113,04 = 96,96 cm².\nResposta: alternativa B. Conferindo: sobra menos que a área do painel (210) e é bem menos que o círculo mais o resto.",
+     "texto": "3,14 · 6 · 6 = 3,14 · 36 = 3 · 36 + 0,14 · 36 = 108 + 5,04 = 113,04 (0,14 · 36: 14 · 36 = 504, e duas casas depois da vírgula dá 5,04).\nF = 210 − 113,04 = 96,96 cm².\nResposta: alternativa B. Conferindo: círculo 113,04 + parte de fora 96,96 = 210, a área do painel.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -3888,7 +4022,7 @@
   "origem": "Escada",
   "ancora": "parcial · ITA 2021 1ª fase q.45 (a resposta sai por uma ideia escondida, sem calcular o que parece essencial) e IME 2025 q.9 (simetria no lugar da conta direta); lúnulas de Hipócrates não aparecem em nenhuma real do repositório (busca feita nos .txt), só a técnica \"o π se cancela\" é a mesma",
   "canal": "mat-23-area-de-circunferencia-geometria-plana.txt [13:18:02] (área de círculo e a diferença entre duas áreas); as lúnulas e Pitágoras para semicírculos não aparecem no canal",
-  "enunciado": "Seja ABC um triângulo retângulo em A, com AB = 8 cm e BC = 17 cm. Sobre os catetos AB e AC, para fora do triângulo, constroem-se dois semicírculos, cada um com um cateto como diâmetro. Seja Γ a circunferência de diâmetro BC. Qual é, em cm², a área da região formada pelos pontos desses dois semicírculos que ficam fora de Γ?\n\nDados: Triângulo ABC: reto em A; AB = 8 cm; BC = 17 cm; Semicírculos: diâmetros AB e AC, para fora do triângulo; Circunferência Γ: diâmetro BC; Valor de π: só se precisar: 3,14; Quero: área dos semicírculos que fica fora de Γ, em cm².",
+  "enunciado": "Seja ABC um triângulo retângulo em A, com AB = 8 cm e BC = 17 cm. Sobre os catetos AB e AC, para fora do triângulo, constroem-se dois semicírculos, cada um com um cateto como diâmetro. Seja Γ a circunferência de diâmetro BC. Qual é, em cm², a área da região formada pelos pontos desses dois semicírculos que ficam fora de Γ? Se precisar, use π = 3,14.\n\nDados: Triângulo ABC: reto em A; AB = 8 cm; BC = 17 cm; Semicírculos: diâmetros AB e AC, para fora do triângulo; Circunferência Γ: diâmetro BC; Valor de π: só se precisar: 3,14; Quero: área dos semicírculos que fica fora de Γ, em cm².",
   "A": "60 cm²",
   "B": "30 cm²",
   "C": "68 cm²",
@@ -3900,8 +4034,12 @@
    "ideia": "Pitágoras vale também para áreas de semicírculos: os dois dos catetos somam o da hipotenusa, e a parte deles dentro de Γ é o semicírculo de BC menos o triângulo. Os π se cancelam e sobra a área do triângulo.",
    "pecas": [
     {
-     "termo": "Semicírculo",
-     "significado": "Metade de um círculo: área = π · r · r ÷ 2, com r a metade do diâmetro."
+     "termo": "Triângulo retângulo",
+     "significado": "Triângulo com um canto reto. O lado oposto ao canto reto é a hipotenusa; os outros dois são os catetos."
+    },
+    {
+     "termo": "Semicírculo e Γ",
+     "significado": "Semicírculo: metade de um círculo, área π · r · r ÷ 2. Γ (gama) é a linha do círculo de diâmetro BC."
     },
     {
      "termo": "Parte fora de Γ",
@@ -3923,7 +4061,7 @@
        {
         "figura": "triangulo-retangulo",
         "nome": "Pitágoras",
-        "formula": "hipotenusa² = cateto² + cateto²"
+        "formula": "hipotenusa · hipotenusa = cateto · cateto + cateto · cateto"
        },
        {
         "figura": "triangulo",
@@ -4016,15 +4154,19 @@
     },
     {
      "titulo": "Achando R: semicírculo de AC",
-     "texto": "Diâmetro 15, raio 7,5. 7,5 · 7,5 = 56,25 (75 · 75 = 5 625, com duas casas).\nR = 56,25π ÷ 2 = 28,125π."
+     "texto": "Diâmetro 15, raio 7,5. 7,5 · 7,5 = 56,25 (75 · 75 = 75 · 70 + 75 · 5 = 5 250 + 375 = 5 625, com duas casas).\nR = 56,25π ÷ 2 = 28,125π (metade de 56,25: metade de 56 é 28 e metade de 0,25 é 0,125)."
     },
     {
      "titulo": "Achando H: semicírculo de BC",
      "texto": "Diâmetro 17, raio 8,5. 8,5 · 8,5 = 72,25 (85 · 85 = 7 225, com duas casas).\nH = 72,25π ÷ 2 = 36,125π.\nOlhe: S + R = 8π + 28,125π = 36,125π, o mesmo que H."
     },
     {
+     "titulo": "Achando H: semicírculo de BC (2 de 2)",
+     "texto": "Não é coincidência: os raios ao quadrado seguem Pitágoras. 4 · 4 + 7,5 · 7,5 = 16 + 56,25 = 72,25 = 8,5 · 8,5. Como cada semicírculo é π · (raio · raio) ÷ 2, as áreas somam do mesmo jeito."
+    },
+    {
      "titulo": "Volta na equação",
-     "texto": "L = 8π + 28,125π − (36,125π − 60).\nOs semicírculos dos catetos somam 36,125π, igual a H. Então os π se cancelam: L = 36,125π − 36,125π + 60 = 60.\nL = 60 cm².\nResposta: alternativa A. Conferindo: é a área do triângulo, 8 · 15 ÷ 2.",
+     "texto": "L = 8π + 28,125π − (36,125π − 60).\nTirar (36,125π − 60) é tirar 36,125π e somar 60. Teste: 10 − (7 − 2) = 5 e 10 − 7 + 2 = 5.\nOs semicírculos dos catetos somam 36,125π, igual a H. Então os π se cancelam: L = 36,125π − 36,125π + 60 = 60.\nL = 60 cm².",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -4055,6 +4197,10 @@
        ]
       ]
      }
+    },
+    {
+     "titulo": "Volta na equação (2 de 2)",
+     "texto": "Resposta: alternativa A. Conferindo: é a área do triângulo, 8 · 15 ÷ 2."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -4103,26 +4249,26 @@
   "tema": "Geometria Plana",
   "nivel": "acima",
   "origem": "Escada",
-  "ancora": "forte · HMMT fev. 2023 Geometry q.1 (ponto livre dentro do polígono: a soma das áreas dos triângulos sobre lados opostos não depende de onde ele está) e IME 2021 objetiva do trapézio (áreas de triângulos de mesma altura); aqui o preço faz o custo ficar em função de uma só distância",
+  "ancora": "forte · HMMT fev. 2023 Geometry q.1 (ponto livre dentro do polígono: a soma das áreas dos triângulos sobre lados opostos não depende de onde ele está) e IME 2021 objetiva do trapézio (áreas de triângulos de mesma altura); aqui os lados saem de perímetro e diferença, o preço faz o custo ficar em função de uma só distância e a pergunta é a distância até o lado oposto (12 − y)",
   "canal": "mat-21-area-de-polignos-geometria-plana.txt [11:31:03] (altura é a distância do vértice até a base)",
-  "enunciado": "Uma praça tem o formato de um retângulo ABCD, com AB = 20 m e AD = 12 m. Um ponto P, dentro da praça, fica a 8 m do lado AD. Ligando P aos quatro vértices, a praça se divide em quatro triângulos: PAB, PBC, PCD e PDA. A prefeitura plantou flores em PAB (R$ 40 por m²), grama em PCD (R$ 10 por m²) e colocou pedras decorativas em PBC e em PDA (R$ 25 por m²). O custo total foi de R$ 5 700. A que distância do lado AB está o ponto P?\n\nDados: Praça ABCD: retângulo, AB = 20 m e AD = 12 m; Ponto P: dentro da praça, a 8 m do lado AD; PAB: flores: R$ 40 por m²; PCD: grama: R$ 10 por m²; PBC e PDA: pedras: R$ 25 por m²; Custo total: R$ 5 700; Quero: distância de P ao lado AB, em m.",
-  "A": "6,75 m",
-  "B": "7 m",
-  "C": "5 m",
-  "D": "8 m",
-  "E": "10 m",
+  "enunciado": "Uma praça tem o formato de um retângulo ABCD, com os vértices nessa ordem em volta da praça (AB e CD são lados opostos, e AD e BC também). O perímetro da praça é 64 m, e o lado AB mede 8 m a mais que o lado AD. Um ponto P, dentro da praça, em um lugar que o projeto não informa, é ligado aos quatro vértices e divide a praça em quatro triângulos: PAB, PBC, PCD e PDA. A prefeitura plantou flores em PAB (R$ 40 por m²), grama em PCD (R$ 10 por m²) e colocou pedras decorativas em PBC e em PDA (R$ 25 por m²). O custo total foi de R$ 5 700. A que distância do lado CD está o ponto P?\n\nDados: Praça ABCD: retângulo; perímetro 64 m; AB = AD + 8; Ponto P: dentro da praça, em lugar que o projeto não informa; PAB: flores: R$ 40 por m²; PCD: grama: R$ 10 por m²; PBC e PDA: pedras: R$ 25 por m²; Custo total: R$ 5 700; Quero: distância de P ao lado CD, em m.",
+  "A": "2 m",
+  "B": "5 m",
+  "C": "7 m",
+  "D": "6,75 m",
+  "E": "8 m",
   "resposta": "C",
   "explicacao": {
-   "conferencia": "Pedras: PDA + PBC = 120 m² (x some), 25 · 120 = 3 000. Flores 400y; grama 100 · (12 − y). 5 700 = 300y + 4 200, y = 5 m. Resposta: alternativa C. Erros: Alternativa A = Esqueceu a grama: 400 · y + 3 000 = 5 700; Alternativa B = Trocou os preços de flores e grama (ou deu a distância até CD): 12 − 5; Alternativa D = Deu o dado que sobra: a distância de P ao lado AD; Alternativa E = Contou as pedras em só 60 m², metade da área certa de 120 m².",
-   "ideia": "Os dois triângulos sobre AD e BC somam sempre metade da praça (120 m²), onde quer que P esteja, e a distância de 8 m é dado que sobra. Só flores e grama dependem da distância y até AB: monte o custo em y e resolva.",
+   "conferencia": "Lados: AD = 12 e AB = 20 (perímetro 64, AB = AD + 8). Pedras: PDA + PBC = 120 m² onde P estiver, 25 · 120 = 3 000. Flores 400y; grama 100 · (12 − y). 5 700 = 300y + 4 200, y = 5; até CD: 12 − 5 = 7 m. Resposta: alternativa C. Erros: Alternativa A = Contou as pedras em só 60 m² (y = 10) e deu 12 − 10; Alternativa B = Deu a distância até AB (y) e não até CD; Alternativa D = Esqueceu a grama: 400 · y + 3 000 = 5 700; Alternativa E = Deu o \"8 m a mais\" do enunciado, que só serve para achar os lados.",
+   "ideia": "O perímetro e a diferença dão os lados. os dois triângulos sobre AD e BC têm o mesmo preço e somam sempre metade da praça, onde P estiver: a posição ao longo de AD some; só flores e grama dependem de y, e a pergunta é 12 − y.",
    "pecas": [
     {
      "termo": "Altura do triângulo",
-     "significado": "A distância da ponta P até o lado da base. Em PAB a altura é y; em PCD é 12 − y."
+     "significado": "A distância da ponta P até o lado que é a base. Se P está a y do lado AB, a altura de PAB é y."
     },
     {
-     "termo": "Dado que sobra",
-     "significado": "Os 8 m não mudam o custo: as pedras custam sempre o mesmo."
+     "termo": "Lados opostos",
+     "significado": "AB e CD estão sempre à mesma distância um do outro, a altura h da praça: P a y de AB está a h − y de CD."
     }
    ],
    "passos": [
@@ -4133,14 +4279,14 @@
       "tipo": "formulas",
       "itens": [
        {
+        "figura": "retangulo",
+        "nome": "Perímetro do retângulo",
+        "formula": "2 · (base + altura)"
+       },
+       {
         "figura": "triangulo",
         "nome": "Área do triângulo",
         "formula": "base · altura ÷ 2"
-       },
-       {
-        "figura": "retangulo",
-        "nome": "Área do retângulo",
-        "formula": "base × altura"
        },
        {
         "figura": "texto",
@@ -4163,11 +4309,11 @@
       "linhas": [
        [
         "Praça ABCD",
-        "retângulo, AB = 20 m e AD = 12 m"
+        "retângulo; perímetro 64 m; AB = AD + 8"
        ],
        [
         "Ponto P",
-        "dentro da praça, a 8 m do lado AD"
+        "dentro da praça, em lugar que o projeto não informa"
        ],
        [
         "PAB: flores",
@@ -4187,53 +4333,69 @@
        ],
        [
         "Quero",
-        "distância de P ao lado AB, em m"
+        "distância de P ao lado CD, em m"
        ]
       ]
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "Flores, em PAB: base AB = 20 e altura y. Área = 20 · y ÷ 2 = 10y m². Custo = 40 · 10y = 400y.\nGrama, em PCD: base CD = 20 e altura 12 − y. Área = 10 · (12 − y) m². Custo = 10 · 10 · (12 − y) = 100 · (12 − y)."
-    },
-    {
      "titulo": "A equação em letras",
-     "texto": "O custo total é a soma dos três gastos. Flores e grama dependem de y; as pedras eu acho à parte.\nAgora é só achar V e g, e depois y.",
+     "texto": "A distância pedida é a altura da praça menos y. O custo total soma flores, grama e pedras: as pedras eu acho à parte, e os lados da praça saem do perímetro.\nAgora é só achar h, b, g e y, uma por vez, e depois d.",
      "visual": {
       "tipo": "equacao",
-      "formula": "V = 400 · y + 100 · (12 − y) + g",
-      "leitura": "custo total = flores + grama + gasto com as pedras (g)",
+      "formula": "d = h − y  e  5 700 = 20 · b · y + 5 · b · (h − y) + g",
+      "leitura": "d é a distância de P a CD; o custo total soma flores (PAB), grama (PCD) e pedras (g)",
       "letras": [
        {
-        "letra": "y",
-        "oque": "distância de P ao lado AB, em m (o que a questão quer)"
+        "letra": "d",
+        "oque": "distância de P ao lado CD, em m (o que a questão quer)"
        },
        {
-        "letra": "V",
-        "oque": "custo total da obra, em reais"
+        "letra": "h",
+        "oque": "lado AD da praça (a altura), em m"
+       },
+       {
+        "letra": "b",
+        "oque": "lado AB da praça (a base), em m"
        },
        {
         "letra": "g",
         "oque": "gasto com as pedras, em reais"
+       },
+       {
+        "letra": "y",
+        "oque": "distância de P ao lado AB, em m"
        }
       ]
      }
     },
     {
-     "titulo": "Achando V: o custo total",
-     "texto": "O enunciado dá: V = 5 700 reais."
+     "titulo": "Achando h: o lado AD",
+     "texto": "O perímetro é 2 · (b + h) = 64, então b + h = 32. O lado AB mede 8 m a mais: b = h + 8. Troque: (h + 8) + h = 32, ou 2h + 8 = 32. Tire 8 dos dois lados: 2h = 24, h = 12 m."
     },
     {
-     "titulo": "Achando g: o gasto com as pedras",
-     "texto": "PDA: base AD = 12, altura 8 (a distância de P ao lado AD). Área = 12 · 8 ÷ 2 = 48 m².\nPBC: base BC = 12, altura 20 − 8 = 12. Área = 12 · 12 ÷ 2 = 72 m². Juntas: 48 + 72 = 120 m².\nSe P estivesse a 3 m de AD: 12 · 3 ÷ 2 = 18 e 12 · 17 ÷ 2 = 102, e 18 + 102 = 120 também. Os 8 m não importam."
+     "titulo": "Achando b: o lado AB",
+     "texto": "b = h + 8 = 12 + 8 = 20 m. Conferindo: 2 · (20 + 12) = 64 e 20 − 12 = 8."
     },
     {
-     "titulo": "Achando g: o gasto com as pedras (2 de 2)",
-     "texto": "g = 25 · 120 = 3 000 reais."
+     "titulo": "Achando g: as pedras (1 de 2)",
+     "texto": "Seja x a distância de P ao lado AD (a questão não dá x). PDA tem base AD = 12 e altura x: área 12 · x ÷ 2 = 6 · x. PBC tem base BC = 12 e altura 20 − x (AD e BC estão a 20 m um do outro; se P está a x de AD, está a 20 − x de BC): área 6 · (20 − x) = 120 − 6 · x."
+    },
+    {
+     "titulo": "Achando g: as pedras (2 de 2)",
+     "texto": "Juntas: 6 · x + 120 − 6 · x = 120 m², onde quer que P esteja. Teste: x = 3 dá 18 + 102 = 120; x = 8 dá 48 + 72 = 120. É metade da praça (20 · 12 ÷ 2). g = 25 · 120 = 3 000 reais."
+    },
+    {
+     "titulo": "Achando y: as flores",
+     "texto": "PAB tem base AB = 20 e altura y. Área = 20 · y ÷ 2 = 10 · y (10y quer dizer 10 · y). Custo = 40 · 10 · y = 400 · y. Com y = 5: área 20 · 5 ÷ 2 = 50 e custo 40 · 50 = 2 000."
+    },
+    {
+     "titulo": "Achando y: a grama",
+     "texto": "PCD tem base CD = 20 e altura 12 − y (AB e CD estão a 12 m um do outro; se P está a y de AB, está a 12 − y de CD). Área = 20 · (12 − y) ÷ 2 = 10 · (12 − y). Custo = 10 reais por m² · 10 · (12 − y) = 100 · (12 − y)."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "V = 400 · y + 100 · (12 − y) + 3 000. 100 · (12 − y) = 1 200 − 100 · y. Então V = 300 · y + 4 200.\n5 700 = 300 · y + 4 200. Tire 4 200: 1 500 = 300 · y. y = 1 500 ÷ 300 = 5 m.\nResposta: alternativa C. Conferindo: 300 · 5 + 4 200 = 1 500 + 4 200 = 5 700.",
+     "texto": "O custo total é 400 · y + 100 · (12 − y) + 3 000 = 5 700.\n100 · (12 − y) é 100 vezes 12 menos 100 vezes y. Teste com y = 5: 100 · 7 = 700 e 1 200 − 500 = 700. Então 100 · (12 − y) = 1 200 − 100 · y.\nO custo é 300 · y + 4 200 = 5 700. Tire 4 200: 300 · y = 1 500, y = 5 m.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -4243,8 +4405,12 @@
       ],
       "linhas": [
        [
-        "V",
-        "5 700 reais"
+        "h",
+        "12 m"
+       ],
+       [
+        "b",
+        "20 m"
        ],
        [
         "g",
@@ -4253,13 +4419,21 @@
        [
         "y",
         "5 m"
+       ],
+       [
+        "d",
+        "7 m"
        ]
       ]
      }
     },
     {
+     "titulo": "Volta na equação (2 de 2)",
+     "texto": "A pergunta é a distância até CD: d = 12 − 5 = 7 m.\nResposta: alternativa C. Conferindo: 300 · 5 + 4 200 = 5 700."
+    },
+    {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: \"ponto livre dentro do retângulo, ligado aos vértices\" → os triângulos de lados opostos somam metade da área; só o par que tem a distância pedida muda o custo.",
+     "texto": "Pista: \"ponto livre dentro do retângulo, ligado aos vértices\" → ache os lados pelo perímetro; os triângulos de lados opostos com o mesmo preço somam metade da área; só o par de preços diferentes depende da distância.",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -4270,7 +4444,7 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "AB 20; AD 12; P a 8 do lado AD; R$ 40, 10 e 25 por m²"
+        "perímetro 64; AB = AD + 8; P livre; R$ 40, 10 e 25 por m²"
        ],
        [
         "1. Tabela do que eu tenho (cont.)",
@@ -4278,11 +4452,11 @@
        ],
        [
         "2. Equação em letras",
-        "V = 400 · y + 100 · (12 − y) + g"
+        "d = h − y  e  5 700 = 20 · b · y + 5 · b · (h − y) + g"
        ],
        [
         "3. Uma letra por vez",
-        "V = 5 700; g = 3 000; y = 5"
+        "h = 12; b = 20; g = 3 000; y = 5; d = 7"
        ]
       ]
      }
