@@ -69,6 +69,9 @@ def principal(slugs, seco=False):
                 if campos.get(chave):
                     entrada[chave] = campos[chave]
             antes['questoes'][qid] = list(campos['antes'])
+            conferencia = entrada['explicacao'].get('conferencia', '')
+            if f"Resposta: alternativa {entrada['resposta']}." not in conferencia:
+                entrada['explicacao']['conferencia'] = f"Resposta: alternativa {entrada['resposta']}. " + conferencia
         antes['conceitos'].update(getattr(mod, 'ANTES_NOVOS', {}))
         resumo.append(f'{slug}: {len(getattr(mod, "Q", []))} reescritas, {len(getattr(mod, "MANTER", {}))} mantidas')
     for chave, ids in antes['questoes'].items():

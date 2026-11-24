@@ -31,6 +31,27 @@ def origem_em_telas(origem):
     return [{'titulo': 'De onde vem cada fórmula' + (f' ({i + 1} de {n})' if n > 1 else ''), 'texto': t} for i, t in enumerate(textos)]
 
 
+def linhas_dados(dados):
+    """Cada célula da tabela "O que eu tenho" cabe em 60 letras: valor longo vira linhas "<rótulo> (cont.)", cortando em "; "."""
+    saida = []
+    for rotulo, valor in dados:
+        if len(valor) <= 60:
+            saida.append((rotulo, valor))
+            continue
+        partes, atual = [], ''
+        trechos = [x for t in valor.split('; ') for x in (t.split(', ') if len(t) > 60 else [t])]
+        for trecho in trechos:
+            candidato = trecho if not atual else atual + '; ' + trecho
+            if atual and len(candidato) > 60:
+                partes.append(atual)
+                atual = trecho
+            else:
+                atual = candidato
+        partes.append(atual)
+        saida.extend((rotulo if i == 0 else f'{rotulo} (cont.)', p) for i, p in enumerate(partes))
+    return saida
+
+
 def montar(q):
     alts = q['alts']  # [(texto, valor, motivo)] em ordem crescente
     certa = next(i for i, a in enumerate(alts) if abs(a[1] - q['calc']) < 1e-6 * max(1, abs(q['calc'])))
@@ -49,7 +70,7 @@ def montar(q):
         {'titulo': 'As fórmulas desta questão', 'texto': q.get('intro_formulas', 'Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela.'),
          'visual': {'tipo': 'formulas', 'itens': [{'figura': f[0], 'nome': f[1], 'formula': f[2]} for f in q['formulas']]}},
         {'titulo': 'O que eu tenho', 'texto': 'Primeiro, tire os dados do enunciado.',
-         'visual': {'tipo': 'tabela', 'titulo': 'O que eu tenho', 'cabecalho': ['Informação', 'Valor'], 'linhas': [list(d) for d in q['dados']]}},
+         'visual': {'tipo': 'tabela', 'titulo': 'O que eu tenho', 'cabecalho': ['Informação', 'Valor'], 'linhas': [list(d) for d in linhas_dados(q['dados'])]}},
         *origem_em_telas(q.get('origem')),
         *([{'titulo': 'O desenho', 'texto': q['desenho'][0], 'visual': {'tipo': 'diagrama', 'nome': q['desenho'][1], 'rotulos': q['desenho'][2]}}] if q.get('desenho') else []),
         {'titulo': 'A equação em letras',
@@ -68,7 +89,7 @@ def montar(q):
         passos.append({'titulo': q['porque'][0], 'texto': q['porque'][1]})
     passos.append({'titulo': 'Questão parecida? Faça assim', 'texto': f"Pista: {q['pista']}",
                    'visual': {'tipo': 'tabela', 'titulo': 'A receita', 'cabecalho': ['Passo', 'Nesta questão'],
-                              'linhas': [['1. Tabela do que eu tenho', q['rec1']], ['2. Equação em letras', q['eq']], ['3. Uma letra por vez', q['rec3']]]}})
+                              'linhas': [list(l) for l in linhas_dados([('1. Tabela do que eu tenho', q['rec1']), ('2. Equação em letras', q['eq']), ('3. Uma letra por vez', q['rec3'])])]}})
     passos = [curto for p in passos for curto in dividir_passo(p)]  # regra 14/11: passo até ~300 letras, sem rolar
     c = q['checagem']
     return {

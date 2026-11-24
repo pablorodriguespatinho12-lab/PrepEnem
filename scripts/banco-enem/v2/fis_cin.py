@@ -1,0 +1,342 @@
+"""Cinemática (1º degrau de Física), nível acima v2, 23/11/2026.
+
+a = ENEM (média que engana, tabela de pórticos), b = ITA (esfera e projétil na queda, referencial que cai),
+c = Fuvest (Ana acelera e depois segue constante, tabela v x t), d = Harvard-MIT (velocidades inteiras em degraus de 1 s, contagem).
+Toda resposta é conferida por conta Python (assert) neste módulo.
+"""
+import math
+
+ARQUIVO = 'fisica-acima-novas.json'
+T = 'Cinemática'
+
+# ---------------------------------------------------------------- a) ENEM
+km_p1, km_p2, km_p3, limite = 118, 124, 130, 90
+h1, h2 = 2 * 60 + 20, 5 * 60 + 20  # segundos depois das 14 h 00 min 00 s (14:02:20 e 14:05:20)
+gasto_min = (h2 - h1) / 60
+trecho = km_p3 - km_p1
+perm_min = trecho / (limite / 60)
+sobra_min = perm_min - gasto_min
+v_a = (km_p3 - km_p2) / sobra_min * 60
+assert (gasto_min, trecho, perm_min, sobra_min, v_a) == (3, 12, 8, 5, 72)
+assert (km_p2 - km_p1) / gasto_min * 60 == 120  # a câmera do meio vê 120 km/h
+assert 2 * limite - 120 == 60 and 60 * 6 / 8 == 45 and 60 * 12 / 5 == 144
+ENUN_A = ('Uma rodovia de 30 km, do km 100 ao km 130, tem fiscalização por radar de trecho. Três pórticos com câmera registram a hora em que cada carro passa, '
+          'e o sistema calcula a velocidade média entre o primeiro e o último pórtico. O limite do trecho é 90 km/h para carros (80 km/h para caminhões). '
+          'Se a velocidade média do carro passar disso, há multa, mesmo que nenhuma câmera o tenha visto acima de 90 km/h. '
+          'A câmera do pórtico do meio só registra a hora e não multa ninguém. Uma motorista, dirigindo um carro, passou pelos pórticos como mostra a tabela.\n\n'
+          'Pórtico | Marco da rodovia | Horário\n'
+          '1 | km 118 | 14 h 02 min 20 s\n'
+          '2 | km 124 | 14 h 05 min 20 s\n'
+          '3 | km 130 | ainda vai passar\n\n'
+          'Ao passar pelo pórtico 2, ela percebeu que vinha rápida e decidiu reduzir. Para chegar ao pórtico 3 sem ser multada, '
+          'qual é a maior velocidade média, em km/h, que ela pode manter entre o pórtico 2 e o pórtico 3?')
+assert len(ENUN_A) >= 600, len(ENUN_A)
+
+# ---------------------------------------------------------------- b) ITA
+H_TORRE, H_CANHAO, D_HOR, G = 20, 5, 8, 10
+t_queda = math.sqrt(2 * H_TORRE / G)
+dist = math.hypot(D_HOR, H_TORRE - H_CANHAO)
+v_b = dist / t_queda
+assert (t_queda, dist, v_b) == (2, 17, 8.5)
+assert (D_HOR / t_queda, (H_TORRE - H_CANHAO) / t_queda, (D_HOR + 15) / t_queda) == (4, 7.5, 11.5)
+# Conferência da ideia (referencial que cai): apontando para o ponto de onde a esfera foi solta, com v = 8,5, os dois se encontram em t = 2 s.
+ux, uy = D_HOR / dist, (H_TORRE - H_CANHAO) / dist
+px, py = v_b * t_queda * ux, H_CANHAO + v_b * t_queda * uy - 0.5 * G * t_queda ** 2
+bx, by = D_HOR, H_TORRE - 0.5 * G * t_queda ** 2
+assert abs(px - bx) < 1e-9 and abs(py - by) < 1e-9 and abs(by) < 1e-9  # encontram-se no chão, no último instante
+# Com v menor (8 m/s) o alvo, em linha reta, só seria alcançado em 17 / 8 = 2,125 s > 2 s: tarde demais.
+assert dist / 8 > t_queda
+# Conferência do "Sua vez": esfera de 45 m, canhão no chão a 24 m
+assert math.hypot(24, 45) == 51 and math.sqrt(2 * 45 / G) == 3 and 51 / 3 == 17
+
+# ---------------------------------------------------------------- c) Fuvest
+a_ana = 2 / 4
+t_max = 5 / a_ana
+F = (0 + 5) / 2 * t_max
+K = 5 * (20 - t_max)
+A20 = F + K
+resta = 1000 - A20
+t_enc = resta / (5 + 5)
+v_c = A20 + 5 * t_enc
+assert (a_ana, t_max, F, K, A20, resta, t_enc, v_c) == (0.5, 10, 25, 50, 75, 925, 92.5, 537.5)
+# a tabela bate com a = 0,5 até chegar a 5 m/s e depois fica em 5
+for t, v in zip([0, 4, 8, 12, 16, 20], [0, 2, 4, 5, 5, 5]):
+    assert min(a_ana * t, 5) == v
+assert 1000 - v_c == 5 * t_enc  # Bia anda 462,5 m
+assert 100 + 5 * (900 / 10) == 550 and 5 * 20 / 2 + 5 * (1000 - 50) / 10 == 525 and 5 * 1000 / 10 == 500
+assert 5 * 20 / 2 == 50
+# Conferência por simulação: encontro das posições
+def pos_ana(t):
+    return 0.5 * t * t / 2 if t <= 10 else 25 + 5 * (t - 10)
+t_total = 20 + t_enc
+assert abs(pos_ana(t_total) - (1000 - 5 * t_enc)) < 1e-9
+# "Sua vez": 0 a 4 m/s em 8 s e depois constante, 12 s de movimento
+assert (0 + 4) / 2 * 8 + 4 * (12 - 8) == 32 and 4 * 12 == 48
+
+# ---------------------------------------------------------------- d) Harvard-MIT
+D_TOTAL = 120
+
+
+def validos(total):
+    """(N, v0) com N > 1 segundos, velocidades inteiras v0, v0-1, ..., v0-N+1 todas >= 1 e soma = total."""
+    saida = []
+    for n in range(2, 2 * total + 2):
+        # soma = n*v0 - n(n-1)/2
+        resto = total + n * (n - 1) // 2
+        if resto % n == 0 and resto // n - n + 1 >= 1:
+            saida.append((n, resto // n))
+    return saida
+
+
+sol = validos(D_TOTAL)
+assert sol == [(3, 41), (5, 26), (15, 15)], sol
+assert len({v for _, v in sol}) == 3
+for n, v in sol:
+    assert sum(v - i for i in range(n)) == D_TOTAL
+# armadilhas
+pares_paridade = [n for n in range(1, 2 * D_TOTAL + 1) if (2 * D_TOTAL) % n == 0 and (n + (2 * D_TOTAL) // n) % 2 == 1]
+assert pares_paridade == [1, 3, 5, 15, 16, 48, 80, 240] and len(pares_paridade) == 8
+assert len([n for n in range(1, 241) if 240 % n == 0]) == 20
+assert (16, 15) == (16, (240 // 16 + 16 - 1) // 2) and (240 // 16 + 16 - 1) // 2 - 16 + 1 == 0  # N = 16 termina parado
+assert (1, 120) == (1, (240 // 1 + 1 - 1) // 2)
+linhas_tab = []
+for n in [1, 3, 5, 15, 16, 48, 80, 240]:
+    p = 240 // n
+    v = (p + n - 1) // 2
+    ult = v - n + 1
+    linhas_tab.append((n, p, v, ult))
+assert linhas_tab == [(1, 240, 120, 120), (3, 80, 41, 39), (5, 48, 26, 22), (15, 16, 15, 1), (16, 15, 15, 0), (48, 5, 26, -21), (80, 3, 41, -38), (240, 1, 120, -119)]
+# "Sua vez": 12 m
+assert validos(12) == [(3, 5)]
+
+Q = [
+    dict(
+        id='d2-escada-fis-ita-cin-00a', materia='Física', tema=T, calc=72,
+        enunciado=ENUN_A,
+        dados=[('Pórtico 1', 'km 118, às 14 h 02 min 20 s'), ('Pórtico 2', 'km 124, às 14 h 05 min 20 s'), ('Pórtico 3', 'km 130 (ainda vai passar)'),
+               ('Limite do trecho para carros', '90 km/h, na média')],
+        alts=[('45', 45, 'Dividiu os 6 km pelos 8 min inteiros, sem descontar os 3 min já gastos: 60 · 6 ÷ 8'),
+              ('60', 60, 'Fez a média aritmética das velocidades: 2 · 90 − 120'),
+              ('72', 72, 'OK'),
+              ('90', 90, 'Repetiu o limite, como se a 2ª metade pudesse andar na própria média'),
+              ('144', 144, 'Usou os 12 km do trecho inteiro nos 5 min que sobram: 60 · 12 ÷ 5')],
+        resumo='12 km a 90 km/h pedem 8 min; ela gastou 3 min; sobram 5 min para 6 km: 6 ÷ 5 = 1,2 km/min = 72 km/h.',
+        ideia='Radar de trecho multa pela velocidade média, e velocidade média é distância total ÷ tempo total, não a média das velocidades. O que se reparte é o tempo: 8 minutos permitidos, 3 já gastos, 5 para os 6 km finais.',
+        pecas=[('Velocidade média no trecho', 'Distância do trecho inteiro ÷ tempo gasto nele. Não é a média das velocidades de cada metade.'),
+               ('Marco da rodovia', 'O número do km na placa. A distância entre dois marcos é a subtração: km 130 − km 124.')],
+        formulas=[('carro', 'Tempo permitido', 'tempo = distância ÷ velocidade'), ('carro', 'km/min para km/h', 'km/h = km/min · 60')],
+        eq='V = 60 · D ÷ (M − G)', leitura='km/h = 60 · km da 2ª metade ÷ (minutos permitidos − minutos já gastos)',
+        letras=[('V', 'maior velocidade média na 2ª metade, em km/h (o que a questão quer)'), ('D', 'distância do pórtico 2 ao 3, em km'),
+                ('M', 'tempo total permitido no trecho, em min'), ('G', 'tempo já gasto do pórtico 1 ao 2, em min')],
+        eq_texto='A velocidade pedida é a distância que falta ÷ o tempo que sobra. O 60 passa de km por minuto para km por hora.\nAgora é só achar D, M e G, uma por vez.',
+        achando=[('Achando D: a distância que falta', 'O pórtico 2 está no km 124 e o 3 no km 130.\nD = 130 − 124 = 6 km.'),
+                 ('Achando M: o tempo total permitido',
+                  'Do pórtico 1 (km 118) ao 3 (km 130): 130 − 118 = 12 km. O limite, 90 km/h, é 90 ÷ 60 = 1,5 km por minuto.\nM = 12 ÷ 1,5 = 120 ÷ 15 = 8 min (multiplicou os dois por 10).'),
+                 ('Achando G: o tempo já gasto',
+                  'Do pórtico 1 (14 h 02 min 20 s) ao 2 (14 h 05 min 20 s) os 20 s são iguais: passaram 5 − 2 = 3 min.\nG = 3 min. Ela fez 6 km em 3 min, 120 km/h: rápido, mas só o total conta.')],
+        volta='V = 60 · 6 ÷ (8 − 3) = 360 ÷ 5 = 72 km/h.\nResposta: alternativa A. Conferindo: 3 min a 120 km/h dão 6 km e 5 min a 72 km/h dão 6 km; 12 km em 8 min é 90 km/h, o limite.',
+        valores=[('D', '6 km'), ('M', '8 min'), ('G', '3 min')],
+        pista='"radar de trecho" ou "velocidade média entre dois pontos" → ache o tempo que o limite permite (distância ÷ limite), tire o que já gastou e divida a distância que falta pelo tempo que sobra.',
+        rec1='6 km restantes, trecho de 12 km a 90 km/h, 3 min gastos', rec3='D = 6 km; M = 8 min; G = 3 min',
+        checagem=('Trecho de 10 km, limite de 60 km/h na média. Na 1ª metade (5 km) gastou 4 min. Qual a maior velocidade média na 2ª metade?',
+                  ['50 km/h', '60 km/h', '75 km/h', '30 km/h'], '50 km/h',
+                  '60 km/h = 1 km/min: 10 min permitidos; sobram 6 min para 5 km; 5 ÷ 6 km/min · 60 = 50 km/h.'),
+        ancora='parcial · ENEM 2020 dia 2 q.98 (caderno azul CD7, semáforos: fase em cadeia, antecipação de 100 m, km/h em m/s); aqui a cadeia é "tempo permitido menos tempo gasto" com a média que engana',
+        canal='cin-02-video-inteiro-parte-3-13.txt [1:20:01] (média de 60 e 80 não é 70: velocidade média é deslocamento ÷ tempo)',
+        antes=['velocidade', 'hora-em-minutos'],
+    ),
+    dict(
+        id='d2-escada-fis-ita-cin-00b', materia='Física', tema=T, calc=8.5,
+        enunciado=('Uma esfera é abandonada do repouso do alto de uma torre de 20 m de altura. No mesmo instante, um canhão situado sobre uma plataforma '
+                   'a 5 m do solo e a 8 m de distância horizontal da torre dispara um projétil, com um ângulo de lançamento a ser escolhido. '
+                   'Desprezando a resistência do ar e adotando g = 10 m/s², a menor velocidade de lançamento, em m/s, para que o projétil atinja a esfera '
+                   'antes de ela tocar o solo ou, no máximo, no instante em que a toca, é:'),
+        dados=[('Altura da torre (de onde a esfera cai)', '20 m'), ('Altura do canhão', '5 m'), ('Distância horizontal', '8 m'), ('Gravidade', '10 m/s²')],
+        alts=[('4', 4, 'Dividiu só a distância horizontal pelo tempo de queda: 8 ÷ 2'),
+              ('7,5', 7.5, 'Dividiu só a diferença de altura pelo tempo de queda: 15 ÷ 2'),
+              ('8,5', 8.5, 'OK'),
+              ('11,5', 11.5, 'Somou 8 + 15 em vez de usar Pitágoras: 23 ÷ 2'),
+              ('17', 17, 'Deu a distância em linha reta, 17 m, sem dividir pelo tempo')],
+        resumo='Queda de 20 m: 2 s. Para quem cai com a esfera, o projétil anda em reta: d = √(8² + 15²) = 17 m; v = 17 ÷ 2 = 8,5 m/s.',
+        ideia='A esfera e o projétil caem com a mesma aceleração, então, para quem cai junto com a esfera, ela está parada e o projétil anda em reta, a velocidade constante: o ângulo nem aparece. Basta a distância em linha reta ÷ o tempo de queda.',
+        pecas=[('Cair junto', 'Dois corpos que caem com a mesma aceleração descem a mesma altura a cada instante: a posição de um em relação ao outro só muda pela velocidade do lançamento.')],
+        formulas=[('triangulo-retangulo', 'Pitágoras', 'd² = lado1² + lado2²'), ('carro', 'Queda livre', 'altura = média · tempo'),
+                  ('carro', 'Velocidade constante', 'v = distância ÷ tempo')],
+        origem=('Solte a esfera e dispare o projétil no mesmo instante. Depois de 1 s, a gravidade já puxou cada um 5 m para baixo; depois de 2 s, 20 m. '
+                'Sem gravidade, o projétil iria em linha reta até o ponto de onde a esfera foi solta. Com gravidade, os dois descem a mesma altura: '
+                'a esfera sai do ponto de partida dela e o projétil sai da reta. A diferença entre eles continua a mesma da reta sem gravidade. '
+                'Por isso o projétil só atinge a esfera quando percorre, em reta, a distância entre o canhão e o ponto de onde a esfera foi solta.'),
+        eq='v = d ÷ t', leitura='velocidade mínima = distância em linha reta ÷ tempo de queda da esfera',
+        letras=[('v', 'menor velocidade de lançamento, em m/s (o que a questão quer)'), ('d', 'distância em linha reta do canhão ao ponto de onde a esfera foi solta, em m'),
+                ('t', 'tempo que a esfera leva para tocar o solo, em s')],
+        eq_texto='O projétil percorre d em linha reta e tem de chegar até o tempo t da queda. A menor velocidade é a que gasta justo esse tempo.\nAgora é só achar d e t.',
+        achando=[('Achando d: a distância em linha reta',
+                  'A esfera foi solta a 20 m e o canhão está a 5 m: a diferença de altura é 20 − 5 = 15 m. A distância horizontal é 8 m. Os dois formam um canto reto.\nd · d = 8 · 8 + 15 · 15 = 64 + 225 = 289, e d = 17 m (17 · 17 = 289).'),
+                 ('Achando t: o tempo de queda',
+                  'Aula da queda: velocidade cresce 10 m/s a cada segundo; distância = média × tempo. Em 1 s: média 5, cai 5 m. Em 2 s: chega a 20 m/s, média 10, cai 10 · 2 = 20 m.\nA torre tem 20 m, então t = 2 s.')],
+        volta='v = 17 ÷ 2 = 8,5 m/s.\nResposta: alternativa A. Com velocidade maior o projétil chega antes; com menor (8 m/s) ele levaria 17 ÷ 8 = 2,125 s e a esfera já teria batido no chão.',
+        valores=[('d', '17 m'), ('t', '2 s')],
+        pista='"solta e dispara no mesmo instante" → os dois caem juntos: ache a reta entre o canhão e o ponto onde a esfera foi solta e divida pelo tempo de queda.',
+        rec1='20 m, 5 m, 8 m, g = 10', rec3='d = 17 m; t = 2 s',
+        checagem=('Esfera solta de 45 m; canhão no chão, a 24 m da torre. Qual a menor velocidade para atingi-la até o fim da queda? (g = 10)',
+                  ['17 m/s', '15 m/s', '23 m/s', '51 m/s'], '17 m/s',
+                  'Queda de 45 m: 3 s. d = √(24² + 45²) = 51 m (51 · 51 = 2 601). v = 51 ÷ 3 = 17 m/s.'),
+        ancora='forte · ITA 2026 1ª fase q.14 (esfera solta e projétil disparado no mesmo instante: no referencial da esfera o projétil anda em reta e o ângulo some); aqui pede a menor velocidade, com plataforma e Pitágoras 8-15-17',
+        canal='cin-03-video-inteiro-parte-4-13.txt [2:22:01] (trocar de referencial); queda em cin-08-video-inteiro-parte-9-13.txt [5:33:01]; a ideia de "cair junto" fora do canal',
+        antes=['queda', 'pitagoras'],
+    ),
+    dict(
+        id='d2-escada-fis-ita-cin-00c', materia='Física', tema=T, calc=537.5,
+        enunciado=('Em uma pista reta de 1 000 m, Ana parte do repouso do ponto P, em direção ao ponto Q, e acelera de modo constante até atingir a sua velocidade máxima, '
+                   'que mantém daí em diante. A tabela mostra a velocidade de Ana em alguns instantes depois da partida.\n\n'
+                   't (s) | 0 | 4 | 8 | 12 | 16 | 20\n'
+                   'v (m/s) | 0 | 2 | 4 | 5 | 5 | 5\n\n'
+                   'Vinte segundos depois da partida de Ana, Bia parte de Q em direção a P, com velocidade constante de 5 m/s. '
+                   'Considere que as duas seguem pela pista sem parar. A que distância de P, em metros, Ana e Bia se encontram?'),
+        dados=[('Pista', '1 000 m, de P a Q'), ('Ana', 'sai de P, do repouso; tabela v × t'), ('Bia', 'sai de Q aos 20 s, a 5 m/s constantes')],
+        alts=[('462,5', 462.5, 'Deu a distância a partir de Q, não de P'),
+              ('500', 500, 'Fez como se saíssem juntas, a 5 m/s: 1 000 ÷ 10 = 100 s e 5 · 100'),
+              ('525', 525, 'Supôs Ana acelerando durante os 20 s (50 m): 50 + 5 · 95'),
+              ('537,5', 537.5, 'OK'),
+              ('550', 550, 'Supôs Ana a 5 m/s desde a partida (100 m aos 20 s): 100 + 5 · 90')],
+        resumo='Ana chega a 5 m/s em 10 s (a = 0,5) e anda 25 m; nos 10 s seguintes anda 50 m; aos 20 s está a 75 m. Faltam 925 m a 10 m/s: 92,5 s. X = 75 + 5 · 92,5 = 537,5 m.',
+        ideia='Ana tem duas fases: acelera e depois fica a 5 m/s; quando Bia sai (20 s), Ana já está na fase constante, e só então vale somar as velocidades das duas. A tabela mostra o 5 m/s aos 12 s, mas a fase constante começa antes, aos 10 s.',
+        pecas=[('Gráfico v × t em duas partes', 'Subida reta (acelerando) e depois reta horizontal (constante). A distância é a área embaixo.'),
+               ('Velocidade de aproximação', 'Quando dois vão um contra o outro, a distância entre eles cai a soma das velocidades: 5 + 5 = 10 m/s.')],
+        formulas=[('grafico', 'Aceleração', 'a = variação da velocidade ÷ tempo'), ('carro', 'Distância (média)', 'distância = média · tempo'),
+                  ('carro', 'Aproximação', 'v de aproximação = v1 + v2')],
+        eq='X = F + K + 5 · t', leitura='distância de P = o que Ana andou acelerando + o que andou a 5 m/s antes de Bia sair + o que anda depois',
+        letras=[('X', 'distância de P ao encontro, em m (o que a questão quer)'), ('F', 'distância de Ana na fase acelerando, em m'),
+                ('K', 'distância de Ana a 5 m/s até Bia sair, em m'), ('t', 'tempo, depois de Bia sair, até se cruzarem, em s')],
+        eq_texto='O 5 vem dos 5 m/s de Ana depois que Bia sai. Antes disso, Ana já andou F + K.\nAgora é só achar F, K e t, uma por vez.',
+        achando=[('Achando F: Ana acelerando',
+                  'Pela tabela, a velocidade sobe 2 m/s a cada 4 s: a = 2 ÷ 4 = 0,5 m/s². Chega a 5 m/s em 5 ÷ 0,5 = 10 s (antes dos 12 s da tabela).\nMédia: (0 + 5) ÷ 2 = 2,5 m/s. F = 2,5 · 10 = 25 m.'),
+                 ('Achando K: Ana a 5 m/s antes de Bia sair',
+                  'Bia sai aos 20 s. De 10 s a 20 s Ana já está a 5 m/s: 20 − 10 = 10 s.\nK = 5 · 10 = 50 m. Aos 20 s, Ana está a 25 + 50 = 75 m de P.',
+                  {'tipo': 'grafico', 'titulo': 'Velocidade de Ana (m/s) pelo tempo (s)',
+                   'funcoes': [{'expr': '(0.5*x+5-abs(0.5*x-5))/2', 'rotulo': 'v de Ana'}],
+                   'pontos': [{'x': 10, 'y': 5, 'rotulo': '10 s: 5 m/s'}, {'x': 20, 'y': 5, 'rotulo': '20 s: Bia sai'}],
+                   'x': [0, 22], 'y': [0, 6]}),
+                 ('Achando t: o tempo até se cruzarem',
+                  'Quando Bia sai, restam 1 000 − 75 = 925 m entre as duas. Elas vão uma contra a outra a 5 m/s cada: aproximação 5 + 5 = 10 m/s.\nt = 925 ÷ 10 = 92,5 s.')],
+        volta='X = 25 + 50 + 5 · 92,5 = 75 + 462,5 = 537,5 m.\nResposta: alternativa A. Conferindo por Bia: 5 · 92,5 = 462,5 m e 537,5 + 462,5 = 1 000 m.',
+        valores=[('F', '25 m'), ('K', '50 m'), ('t', '92,5 s')],
+        pista='"acelera e depois fica constante" e "sai depois" → veja em que fase está quem saiu antes quando o outro sai, some as distâncias dele até aí e use a soma das velocidades.',
+        rec1='1 000 m; Ana: tabela v × t; Bia sai aos 20 s a 5 m/s', rec3='F = 25 m; K = 50 m; t = 92,5 s',
+        checagem=('Ana acelera de 0 a 4 m/s em 8 s e depois segue a 4 m/s. Quantos metros ela anda nos primeiros 12 s?',
+                  ['32 m', '48 m', '24 m', '16 m'], '32 m',
+                  'Acelerando: (0 + 4) ÷ 2 · 8 = 16 m. Depois, 12 − 8 = 4 s a 4 m/s = 16 m. Total 32 m.'),
+        ancora='parcial · Fuvest 2023 2ª fase dia 2 F06 (tabela de números, condição escondida de quem já está em regime e distâncias que se acumulam); aqui a condição é a fase de Ana quando Bia sai',
+        canal='cin-06-video-inteiro-parte-7-13.txt [4:26:30] (área do gráfico v × t); encontro em cin-03-video-inteiro-parte-4-13.txt [2:22:01]',
+        antes=['aceleracao', 'queda', 'velocidade'],
+    ),
+    dict(
+        id='d2-escada-fis-ita-cin-00d', materia='Física', tema=T, calc=3,
+        enunciado=('Um carrinho anda em linha reta durante um número inteiro de segundos. A velocidade dele, em m/s, é sempre um número inteiro e fica constante dentro de cada segundo; '
+                   'a cada novo segundo ela é exatamente 1 m/s menor que no segundo anterior. O carrinho está em movimento durante todos os segundos '
+                   '(a velocidade nunca chega a zero), anda por mais de 1 segundo e percorre 120 m no total. '
+                   'Quantas velocidades iniciais diferentes o carrinho pode ter?'),
+        dados=[('Velocidade', 'inteira, cai 1 m/s a cada segundo'), ('Distância total', '120 m'), ('Tempo', 'mais de 1 s, sempre em movimento')],
+        alts=[('3', 3, 'OK'),
+              ('4', 4, 'Contou também o caso de 1 só segundo (120 m/s), que o enunciado exclui'),
+              ('5', 5, 'Contou também 1 segundo e o caso de 16 s, que termina com velocidade zero'),
+              ('8', 8, 'Contou os 8 casos de paridade certa (1, 3, 5, 15, 16, 48, 80, 240 s), sem exigir velocidade positiva'),
+              ('20', 20, 'Contou todos os 20 divisores de 240, sem pensar na paridade')],
+        resumo='N · P = 240 (N segundos, P = 1ª + última velocidade); N e P de paridades diferentes; com N > 1 e última velocidade ≥ 1 servem N = 3, 5 e 15: 3 velocidades iniciais (41, 26 e 15 m/s).',
+        ideia='Cada segundo anda "velocidade · 1 s", então a distância é a soma das velocidades dos degraus: N · (1ª + última) ÷ 2 = 120. Como N + (1ª + última) é ímpar, um é par e o outro é ímpar, o que deixa poucos casos.',
+        pecas=[('Soma em degraus', 'Velocidades que descem de 1 em 1: soma = quantidade · (primeira + última) ÷ 2.'),
+               ('Última velocidade', 'É a 1ª menos (N − 1). Tem de ser 1 ou mais, senão o carrinho para ou volta.')],
+        formulas=[('grafico', 'Soma em degraus', 'soma = N · (1ª + última) ÷ 2'), ('contagem', 'Produto', 'N · P = 2 · 120 = 240')],
+        eq='Q = quantos N servem em N · P = 240', leitura='quantidade de valores de N com N · P = 240, onde P = 1ª velocidade + última',
+        letras=[('Q', 'quantas velocidades iniciais diferentes (o que a questão quer)'), ('N', 'quantos segundos o carrinho anda'),
+                ('P', 'soma da primeira velocidade com a última, em m/s')],
+        eq_texto='Cada N que serve dá uma velocidade inicial. N · P ÷ 2 = 120 dá N · P = 240.\nAgora é só achar N e P e contar os que servem.',
+        achando=[('Achando N: os segundos possíveis',
+                  'N divide 240 e N + P é ímpar (N + P = 2 · 1ª velocidade + 1): um é par e o outro é ímpar. Como 240 = 16 · 15, o 16 inteiro fica num só deles.\nN = 1, 3, 5 ou 15 (P = 240, 80, 48, 16) ou N = 16, 48, 80 ou 240 (P = 15, 5, 3, 1).'),
+                 ('Achando P: quais N servem',
+                  'Para cada N: P = 240 ÷ N, a 1ª velocidade v = (P + N − 1) ÷ 2 e a última v − N + 1. Precisa de N maior que 1 e última de 1 ou mais.\nServem N = 3, 5 e 15.',
+                  {'tipo': 'tabela', 'titulo': 'Os 8 casos de N', 'cabecalho': ['N', 'P = 240 ÷ N', '1ª velocidade', 'Última', 'Serve?'],
+                   'linhas': [['1', '240', '120', '120', 'não: só 1 s'], ['3', '80', '41', '39', 'sim'], ['5', '48', '26', '22', 'sim'],
+                              ['15', '16', '15', '1', 'sim'], ['16', '15', '15', '0', 'não: para'], ['48', '5', '26', '−21', 'não: volta'],
+                              ['80', '3', '41', '−38', 'não: volta'], ['240', '1', '120', '−119', 'não: volta']]})],
+        volta='Servem N = 3 (41 + 40 + 39 = 120), N = 5 (26 + 25 + 24 + 23 + 22 = 120) e N = 15 (15 + 14 + ... + 1 = 120). São 3 velocidades iniciais: 41, 26 e 15 m/s.\nResposta: alternativa A.',
+        valores=[('N', '3, 5 ou 15 s'), ('P', '80, 48 ou 16 m/s'), ('Q', '3')],
+        pista='"velocidade inteira que cai de 1 em 1" e "distância total" → soma em degraus: N · P = 2 · distância; liste os pares de paridade oposta e tire os casos em que a velocidade zera ou fica negativa.',
+        rec1='120 m; cai 1 m/s por segundo; mais de 1 s', rec3='N = 3, 5, 15; P = 80, 48, 16',
+        checagem=('Mesmo carrinho, mas com 12 m no total. Quantas velocidades iniciais diferentes?', ['1', '2', '3', '4'], '1',
+                  'N · P = 24. Só N = 3 (P = 8, 5 + 4 + 3 = 12) serve; N = 8 daria última velocidade negativa.'),
+        ancora='parcial · HMMT nov. 2022 Guts q.12 (velocidade inteira que cai 1 por minuto, distância total fixa, número inteiro de minutos: contagem com restrição de inteiros); por técnica, não há real de Física do tema',
+        canal='fora do canal: divisores, paridade e contagem de casos (0 hits no canal); soma de degraus como área do gráfico v × t em cin-06-video-inteiro-parte-7-13.txt [4:26:30]',
+        antes=['divisores-e-par-impar', 'soma-em-degraus', 'velocidade'],
+    ),
+]
+
+MANTER = {}
+
+
+def tabela(titulo, cab, linhas):
+    return {'tipo': 'tabela', 'titulo': titulo, 'cabecalho': cab, 'linhas': linhas}
+
+
+ANTES_NOVOS = {
+    'hora-em-minutos': {
+        'titulo': 'Horas, minutos e km por minuto',
+        'linhas': [
+            '1 hora tem 60 minutos. De minutos para horas, divida por 60; de horas para minutos, multiplique por 60.',
+            'Velocidade de 90 km/h: em 1 hora anda 90 km, então em 1 minuto anda 90 ÷ 60 = 1,5 km. Assim, 90 km/h = 1,5 km/min.',
+            'Ao contrário: 2 km/min anda 2 · 60 = 120 km em 60 minutos. Assim, 2 km/min = 120 km/h.',
+            'Horário: das 14 h 02 min às 14 h 05 min passaram 5 − 2 = 3 minutos. Segundos iguais nos dois horários se cancelam.',
+        ],
+        'visual': tabela('km/h e km/min', ['Em km/h', 'Conta', 'Em km/min'], [['60 km/h', '60 ÷ 60', '1 km/min'], ['90 km/h', '90 ÷ 60', '1,5 km/min'], ['120 km/h', '120 ÷ 60', '2 km/min']]),
+        'exercicios': [
+            {'enunciado': 'Um trem anda a 120 km/h. Quantos km ele anda por minuto?', 'alternativas': ['2 km', '12 km', '0,5 km', '7 200 km'], 'certa': 0,
+             'resolucao': '2 km: 120 ÷ 60 = 2 km a cada minuto.\n12 km é dividir por 10; 0,5 km é 60 ÷ 120; 7 200 km é 120 · 60.'},
+            {'enunciado': 'Uma lancha anda 1,2 km por minuto. Qual é a velocidade em km/h?', 'alternativas': ['72 km/h', '0,02 km/h', '1,2 km/h', '7,2 km/h'], 'certa': 0,
+             'resolucao': '72 km/h: 1,2 · 60 = 72 km em 1 hora.\n0,02 é 1,2 ÷ 60; 1,2 é não converter; 7,2 é multiplicar por 6.'},
+        ],
+    },
+    'divisores-e-par-impar': {
+        'titulo': 'Divisores, par e ímpar',
+        'linhas': [
+            'Divisor de 12 é número que cabe certinho em 12: 1, 2, 3, 4, 6 e 12. Eles vêm em pares: 1 · 12, 2 · 6, 3 · 4.',
+            'Par termina em 0, 2, 4, 6 ou 8. Ímpar termina em 1, 3, 5, 7 ou 9.',
+            'Par + ímpar dá ímpar (4 + 3 = 7). Par + par e ímpar + ímpar dão par (4 + 2 = 6; 3 + 5 = 8).',
+            'Então, se a soma de dois números é ímpar, um é par e o outro é ímpar.',
+            'Pares que multiplicam 12: 1 e 12 somam 13 (ímpar); 2 e 6 somam 8 (par); 3 e 4 somam 7 (ímpar).',
+        ],
+        'visual': tabela('Pares que multiplicam 12', ['Par', 'Soma', 'Soma ímpar?'], [['1 e 12', '13', 'sim'], ['2 e 6', '8', 'não'], ['3 e 4', '7', 'sim']]),
+        'exercicios': [
+            {'enunciado': 'Qual par de números multiplica 16 e soma um número ímpar?', 'alternativas': ['1 e 16', '2 e 8', '4 e 4', '8 e 2'], 'certa': 0,
+             'resolucao': '1 e 16: 1 · 16 = 16 e 1 + 16 = 17, ímpar.\n2 e 8 somam 10 e 4 e 4 somam 8: pares, não servem.'},
+            {'enunciado': 'Quantos divisores tem o número 10?', 'alternativas': ['4', '2', '5', '10'], 'certa': 0,
+             'resolucao': '4: os divisores são 1, 2, 5 e 10.\n2 é contar só o 2 e o 5; 5 é metade de 10; 10 é o próprio número.'},
+        ],
+    },
+    'soma-em-degraus': {
+        'titulo': 'Somar números que descem de 1 em 1',
+        'linhas': [
+            'Some 5 + 4 + 3 = 12. Os números descem de 1 em 1 (de 5 a 3), então a soma tem um atalho.',
+            'Some o primeiro com o último: 5 + 3 = 8. Multiplique pela quantidade de números e divida por 2: 8 · 3 = 24 e 24 ÷ 2 = 12.',
+            'Por quê: o 5 faz par com o 3 (soma 8) e o 4 do meio vale metade de 8. Três números valem 3 metades de 8, que dá 12.',
+            'Outro: 7 + 6 + 5 + 4 = 22. Primeiro + último = 7 + 4 = 11; 11 · 4 = 44; 44 ÷ 2 = 22.',
+            'Se cada número é a velocidade de 1 segundo, a soma é a distância percorrida.',
+        ],
+        'visual': tabela('Atalho da soma', ['Números', 'Primeiro + último', 'Conta'],
+                         [['5, 4, 3', '5 + 3 = 8', '8 · 3 ÷ 2 = 12'], ['7, 6, 5, 4', '7 + 4 = 11', '11 · 4 ÷ 2 = 22'], ['9, 8, 7, 6, 5', '9 + 5 = 14', '14 · 5 ÷ 2 = 35']]),
+        'exercicios': [
+            {'enunciado': 'Some 8 + 7 + 6 + 5 + 4 + 3.', 'alternativas': ['33', '66', '11', '24'], 'certa': 0,
+             'resolucao': '33: 8 + 3 = 11; 11 · 6 = 66; 66 ÷ 2 = 33.\n66 esquece o ÷ 2; 11 é só primeiro + último; 24 é 8 · 3.'},
+            {'enunciado': 'Um carrinho anda 6 m/s no 1º segundo, 5 no 2º, 4 no 3º e 3 no 4º. Quantos metros no total?', 'alternativas': ['18 m', '36 m', '9 m', '24 m'], 'certa': 0,
+             'resolucao': '18 m: 6 + 3 = 9; 9 · 4 = 36; 36 ÷ 2 = 18.\n36 m esquece o ÷ 2; 9 m é só primeiro + último; 24 m é 6 · 4.'},
+        ],
+    },
+}
+assert sum(6 + 5 + 4 + 3 for _ in [0]) == 18 and 8 + 7 + 6 + 5 + 4 + 3 == 33 and 7 + 6 + 5 + 4 == 22 and 9 + 8 + 7 + 6 + 5 == 35
+for _id, _c in ANTES_NOVOS.items():
+    assert all(len(l) <= 170 for l in _c['linhas']), _id
+    assert len(_c['exercicios']) == 2
+    for _e in _c['exercicios']:
+        assert _e['resolucao'].split('\n')[0].count(_e['alternativas'][_e['certa']].split(' ')[0]) >= 1
+        assert len(set(_e['alternativas'])) == len(_e['alternativas'])
+for _q in Q:
+    assert all(len(v) <= 60 for _, v in _q['dados']), _q['id']

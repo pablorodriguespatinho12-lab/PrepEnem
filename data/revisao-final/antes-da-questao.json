@@ -1000,6 +1000,2476 @@
           "resolucao": "1,74 N: atrito = 0,2 · 8,7 = 1,74 N.\n0,2 N é só o coeficiente; 8,7 N é o aperto; 2 N erra a conta."
         }
       ]
+    },
+    "ari-multiplos": {
+      "titulo": "Múltiplos: contar quantos cabem",
+      "linhas": [
+        "Múltiplo de 7 é 7 vezes um número inteiro: 7 · 1 = 7, 7 · 2 = 14, 7 · 3 = 21, 7 · 4 = 28...",
+        "Para ver se um número é múltiplo de 7, divida por 7. Deu inteiro? É. 35 ÷ 7 = 5, então 35 é múltiplo. 36 ÷ 7 = 5,14: não é.",
+        "Quantos múltiplos de 7 cabem até 50? 50 ÷ 7 = 7,14. Cabem 7 (7 · 7 = 49). O próximo, 7 · 8 = 56, passa de 50.",
+        "Entre dois números: conte até o maior e tire os que ficam até o menor. Múltiplos de 7 entre 20 e 50: 7 − 2 = 5 (21, 28, 35, 42, 49)."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Quantos múltiplos cabem até 50",
+        "cabecalho": [
+          "Número",
+          "Os múltiplos",
+          "Quantos"
+        ],
+        "linhas": [
+          [
+            "5",
+            "5, 10, ..., 50",
+            "10"
+          ],
+          [
+            "7",
+            "7, 14, ..., 49",
+            "7"
+          ],
+          [
+            "12",
+            "12, 24, 36, 48",
+            "4"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Quantos múltiplos de 9 há de 1 a 100?",
+          "alternativas": [
+            "11",
+            "12",
+            "10",
+            "9"
+          ],
+          "certa": 0,
+          "resolucao": "11: 100 ÷ 9 = 11,1 e 9 · 11 = 99; 9 · 12 = 108 passa de 100.\n12 arredonda 11,1 para cima; 10 é 100 ÷ 10; 9 é o próprio número."
+        },
+        {
+          "enunciado": "Quantos múltiplos de 6 ficam entre 20 e 80?",
+          "alternativas": [
+            "10",
+            "13",
+            "11",
+            "9"
+          ],
+          "certa": 0,
+          "resolucao": "10: até 79 cabem 13 (6 · 13 = 78) e até 20 cabem 3 (18); 13 − 3 = 10.\n13 esquece de tirar os de 20 para baixo; 11 e 9 erram por 1 ao contar degraus."
+        }
+      ]
+    },
+    "com-probabilidade": {
+      "titulo": "Probabilidade: favoráveis ÷ possíveis",
+      "linhas": [
+        "Probabilidade é casos favoráveis ÷ casos possíveis, quando todos os casos têm a mesma chance.",
+        "Dado de 6 faces, sair número par: favoráveis 3 (o 2, o 4 e o 6), possíveis 6. Chance = 3 ÷ 6 = 1/2.",
+        "Uma bola de uma caixa com 3 vermelhas e 5 azuis: vermelha tem 3 favoráveis em 3 + 5 = 8 possíveis, 3/8.",
+        "\"Pelo menos um\" é 1 − \"nenhum\". Moeda 2 vezes: nenhuma cara é 1/4, então pelo menos uma é 1 − 1/4 = 3/4."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Três chances",
+        "cabecalho": [
+          "Situação",
+          "Favoráveis",
+          "Possíveis",
+          "Chance"
+        ],
+        "linhas": [
+          [
+            "Par no dado",
+            "3",
+            "6",
+            "1/2"
+          ],
+          [
+            "Vermelha na caixa",
+            "3",
+            "8",
+            "3/8"
+          ],
+          [
+            "Cara em 2 moedas, pelo menos 1",
+            "3",
+            "4",
+            "3/4"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Uma urna tem 4 bolas pretas e 6 brancas. Sorteando 1 bola, qual é a chance de ser preta?",
+          "alternativas": [
+            "2/5",
+            "2/3",
+            "3/5",
+            "1/4"
+          ],
+          "certa": 0,
+          "resolucao": "2/5: 4 favoráveis em 4 + 6 = 10 possíveis, 4/10 = 2/5.\n2/3 compara as pretas com as brancas (4 ÷ 6); 3/5 é a chance de branca; 1/4 não tem conta."
+        },
+        {
+          "enunciado": "Uma moeda é lançada 3 vezes. Qual é a chance de sair pelo menos uma coroa?",
+          "alternativas": [
+            "7/8",
+            "1/8",
+            "3/8",
+            "1/2"
+          ],
+          "certa": 0,
+          "resolucao": "7/8: são 8 resultados possíveis, e só 1 não tem coroa (cara, cara, cara). 1 − 1/8 = 7/8.\n1/8 é a chance de nenhuma coroa; 3/8 é a de exatamente 1 coroa; 1/2 é a de 1 lançamento só."
+        }
+      ]
+    },
+    "com-combinacao": {
+      "titulo": "Combinação: escolher sem ordem",
+      "linhas": [
+        "Combinação é escolher itens sem importar a ordem. Escolher 2 entre 4 pessoas: a dupla A-B é a mesma que B-A.",
+        "Conte com ordem e divida: 4 · 3 = 12 jeitos com ordem. Cada dupla apareceu 2 vezes, então 12 ÷ 2 = 6. Escreve-se C(4, 2) = 6.",
+        "Escolher 3 entre 5: 5 · 4 · 3 = 60 com ordem. Cada trio apareceu 3 · 2 · 1 = 6 vezes. 60 ÷ 6 = 10, ou seja, C(5, 3) = 10.",
+        "Escolher 3 entre 5 é o mesmo que escolher os 2 que ficam de fora: C(5, 3) = C(5, 2) = 10."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Combinações",
+        "cabecalho": [
+          "Escolha",
+          "Com ordem",
+          "Dividir por",
+          "Resultado"
+        ],
+        "linhas": [
+          [
+            "2 entre 4",
+            "4 · 3 = 12",
+            "2",
+            "6"
+          ],
+          [
+            "3 entre 5",
+            "5 · 4 · 3 = 60",
+            "6",
+            "10"
+          ],
+          [
+            "2 entre 5",
+            "5 · 4 = 20",
+            "2",
+            "10"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "De quantos jeitos se escolhem 2 pessoas entre 6, sem ligar para a ordem?",
+          "alternativas": [
+            "15",
+            "30",
+            "12",
+            "36"
+          ],
+          "certa": 0,
+          "resolucao": "15: 6 · 5 = 30 com ordem, e 30 ÷ 2 = 15.\n30 esquece de dividir por 2; 12 soma 6 + 6; 36 faz 6 · 6."
+        },
+        {
+          "enunciado": "De quantos jeitos se escolhem 3 pessoas entre 7, sem ligar para a ordem?",
+          "alternativas": [
+            "35",
+            "210",
+            "21",
+            "42"
+          ],
+          "certa": 0,
+          "resolucao": "35: 7 · 6 · 5 = 210 com ordem, e 210 ÷ 6 = 35.\n210 esquece de dividir por 3 · 2 · 1; 21 é 7 · 6 ÷ 2; 42 divide só por 5."
+        }
+      ]
+    },
+    "com-condicional": {
+      "titulo": "Condicional: a chance sabendo que...",
+      "linhas": [
+        "Condicional é a chance de algo sabendo que outra coisa já aconteceu. O grupo possível encolhe para quem cumpre a condição.",
+        "De 50 alunos, 20 jogam futebol e 5 deles também jogam vôlei. Sabendo que joga futebol: 5 ÷ 20 = 1/4.",
+        "O 50 sai da conta. O de baixo é só quem cumpre a condição (os 20), não o grupo todo.",
+        "Dado: sabendo que saiu par (2, 4 ou 6), a chance de ser 6 é 1 em 3, e não 1 em 6."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Sabendo que...",
+        "cabecalho": [
+          "Condição",
+          "Quem sobra",
+          "Favoráveis",
+          "Chance"
+        ],
+        "linhas": [
+          [
+            "Joga futebol",
+            "20",
+            "5 jogam vôlei",
+            "1/4"
+          ],
+          [
+            "Saiu par",
+            "3 (2, 4, 6)",
+            "1 (o 6)",
+            "1/3"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Numa sala de 50 alunos, 20 jogam futebol e 5 deles também jogam vôlei. Sabendo que o aluno joga futebol, qual é a chance de ele jogar vôlei?",
+          "alternativas": [
+            "1/4",
+            "1/10",
+            "2/5",
+            "3/4"
+          ],
+          "certa": 0,
+          "resolucao": "1/4: só os 20 do futebol contam, e 5 ÷ 20 = 1/4.\n1/10 divide pelos 50 da sala (5 ÷ 50); 2/5 é a chance de jogar futebol (20 ÷ 50); 3/4 é 15 ÷ 20, os que só jogam futebol."
+        },
+        {
+          "enunciado": "Um dado é lançado e se sabe que saiu número par. Qual é a chance de ter saído o 6?",
+          "alternativas": [
+            "1/3",
+            "1/6",
+            "1/2",
+            "2/3"
+          ],
+          "certa": 0,
+          "resolucao": "1/3: os pares são 2, 4 e 6, e o 6 é 1 deles. 1 ÷ 3 = 1/3.\n1/6 conta os 6 lados do dado; 1/2 é a chance de ser par; 2/3 é a de não ser o 6 entre os pares."
+        }
+      ]
+    },
+    "com-bayes": {
+      "titulo": "Bayes por contagem: do resultado à causa",
+      "linhas": [
+        "Quando o exame deu positivo, qual a chance de a pessoa estar doente? Use um número redondo de pessoas e conte.",
+        "De 1 000 pessoas, 10% doentes: 100. O exame dá positivo em 90% dos doentes (90) e em 10% dos sadios (900 · 10% = 90).",
+        "Positivos: 90 doentes + 90 sadios = 180. Entre os positivos, os doentes são 90 ÷ 180 = 1/2.",
+        "Cuidado: 90% é a chance de dar positivo SENDO doente. A de ser doente SENDO positivo é outra: 1/2."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Contando 1 000 pessoas",
+        "cabecalho": [
+          "Grupo",
+          "Pessoas",
+          "Positivos"
+        ],
+        "linhas": [
+          [
+            "Doentes",
+            "100",
+            "90"
+          ],
+          [
+            "Sadios",
+            "900",
+            "90"
+          ],
+          [
+            "Total",
+            "1 000",
+            "180"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Em 1 000 peças, 20% têm defeito. O teste acusa 50% das defeituosas e 10% das boas. Entre as peças acusadas, que fração tem defeito de verdade?",
+          "alternativas": [
+            "5/9",
+            "1/2",
+            "1/5",
+            "4/9"
+          ],
+          "certa": 0,
+          "resolucao": "5/9: defeituosas 200, acusadas 100; boas 800, acusadas 80. 100 ÷ (100 + 80) = 100/180 = 5/9.\n1/2 é a taxa do teste; 1/5 é a fração de defeituosas na fábrica; 4/9 é 80 ÷ 180, as boas acusadas."
+        },
+        {
+          "enunciado": "Em 200 caixas, 25% têm falha. O detector apita em 80% das caixas com falha e em 20% das sem falha. Entre as que apitaram, que fração tem falha?",
+          "alternativas": [
+            "4/7",
+            "4/5",
+            "1/4",
+            "3/7"
+          ],
+          "certa": 0,
+          "resolucao": "4/7: com falha 50, apitam 40; sem falha 150, apitam 30. 40 ÷ (40 + 30) = 40/70 = 4/7.\n4/5 é a taxa do detector; 1/4 é a fração com falha nas 200; 3/7 é 30 ÷ 70, as sem falha que apitaram."
+        }
+      ]
+    },
+    "equ-margem-sobre-a-venda": {
+      "titulo": "Lucro sobre a venda e lucro sobre o custo",
+      "linhas": [
+        "Lucro de 20% sobre a venda: de cada R$ 100 que o cliente paga, R$ 20 são lucro e R$ 80 cobrem o custo.",
+        "Então o custo é 80% da venda: custo = 0,8 · venda. Com custo de R$ 80, a venda é 80 ÷ 0,8 = 100.",
+        "Lucro de 20% sobre o custo é outra conta: venda = 1,2 · custo. Com custo de R$ 80, a venda é 80 · 1,2 = 96.",
+        "Leia com cuidado: \"sobre a venda\" (ou \"da receita\") e \"sobre o custo\" dão preços diferentes, 100 e 96."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Lucro de 20%, custo de R$ 80",
+        "cabecalho": [
+          "Lucro",
+          "Conta",
+          "Venda"
+        ],
+        "linhas": [
+          [
+            "sobre a venda",
+            "custo = 0,8 · venda",
+            "R$ 100"
+          ],
+          [
+            "sobre o custo",
+            "venda = 1,2 · custo",
+            "R$ 96"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Um produto custa R$ 60. Para ter lucro de 25% sobre a venda, por quanto vender?",
+          "alternativas": [
+            "R$ 80",
+            "R$ 75",
+            "R$ 45",
+            "R$ 85"
+          ],
+          "certa": 0,
+          "resolucao": "R$ 80: o custo é 75% da venda, então 60 ÷ 0,75 = 80.\nR$ 75 é lucro de 25% sobre o custo (60 · 1,25); R$ 45 é 60 · 0,75; R$ 85 soma 25."
+        },
+        {
+          "enunciado": "Uma venda de R$ 200 deu lucro de 10% da venda. Quanto custou?",
+          "alternativas": [
+            "R$ 180",
+            "R$ 20",
+            "R$ 190",
+            "R$ 220"
+          ],
+          "certa": 0,
+          "resolucao": "R$ 180: o lucro é 10% de 200 = 20 e o custo é 200 − 20 = 180.\nR$ 20 é só o lucro; R$ 190 tira 10 reais e não 10%; R$ 220 soma o lucro."
+        }
+      ]
+    },
+    "equ-sistema-infinito": {
+      "titulo": "Sistema com infinitas soluções",
+      "linhas": [
+        "Se uma equação é a outra \"dobrada\", ela não traz nada novo. x + y = 5 e 2x + 2y = 10 têm infinitas soluções.",
+        "Dê um nome a uma letra: y = t. Então x = 5 − t. Cada t dá uma solução: t = 0 dá (5, 0); t = 1 dá (4, 1); t = 2 dá (3, 2).",
+        "Para ver se outra equação vale em todas, teste dois valores de t (a conta em t é de 1º grau): se vale em dois, vale em todos.",
+        "Exemplo: 3x + 3y = 15 vale em t = 0 (3 · 5 + 0 = 15) e em t = 1 (3 · 4 + 3 = 15). Então vale sempre."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "As soluções de x + y = 5",
+        "cabecalho": [
+          "t = y",
+          "x = 5 − t",
+          "Ponto"
+        ],
+        "linhas": [
+          [
+            "0",
+            "5",
+            "(5, 0)"
+          ],
+          [
+            "1",
+            "4",
+            "(4, 1)"
+          ],
+          [
+            "2",
+            "3",
+            "(3, 2)"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "x + y = 7 e 3x + 3y = 21. Com y = t, quanto vale x?",
+          "alternativas": [
+            "7 − t",
+            "7 + t",
+            "t − 7",
+            "21 − t"
+          ],
+          "certa": 0,
+          "resolucao": "7 − t: x + y = 7 dá x = 7 − y = 7 − t.\n7 + t soma em vez de tirar; t − 7 troca o lado; 21 − t usa a 2ª equação sem dividir por 3."
+        },
+        {
+          "enunciado": "No mesmo sistema, qual é a solução com t = 2?",
+          "alternativas": [
+            "(5, 2)",
+            "(9, 2)",
+            "(7, 2)",
+            "(2, 5)"
+          ],
+          "certa": 0,
+          "resolucao": "(5, 2): x = 7 − 2 = 5 e y = 2.\n(9, 2) soma 7 + 2; (7, 2) esquece de tirar t; (2, 5) troca x e y."
+        }
+      ]
+    },
+    "equ-raiz-de-equacao": {
+      "titulo": "Raiz de uma equação",
+      "linhas": [
+        "Raiz é o número que, no lugar de x, deixa a conta igual a zero. Em x² − 5x + 6, o 2 é raiz: 4 − 10 + 6 = 0.",
+        "Se o texto diz \"3 é raiz de x² + tx + r\", troque x por 3: 9 + 3t + r = 0. Vira uma equação nas outras letras.",
+        "Para x² + 3x − 4 = 0, ache dois números que somam 3 e multiplicam −4: 4 e −1. Então (x + 4) · (x − 1) = 0.",
+        "As raízes são os números que zeram cada parêntese: −4 e 1."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Testando x² − 5x + 6",
+        "cabecalho": [
+          "x",
+          "Conta",
+          "Zerou?"
+        ],
+        "linhas": [
+          [
+            "2",
+            "4 − 10 + 6 = 0",
+            "sim"
+          ],
+          [
+            "3",
+            "9 − 15 + 6 = 0",
+            "sim"
+          ],
+          [
+            "4",
+            "16 − 20 + 6 = 2",
+            "não"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "4 é raiz de x² + px − 8. Quanto vale p?",
+          "alternativas": [
+            "−2",
+            "2",
+            "−6",
+            "−4"
+          ],
+          "certa": 0,
+          "resolucao": "−2: troque x por 4: 16 + 4p − 8 = 0, então 4p = −8 e p = −2.\n2 é o sinal trocado; −6 é 16 + 4p + 8 = 0; −4 esquece o −8."
+        },
+        {
+          "enunciado": "Quais são as raízes de x² + 2x − 3 = 0?",
+          "alternativas": [
+            "−3 e 1",
+            "3 e −1",
+            "−3 e −1",
+            "2 e −3"
+          ],
+          "certa": 0,
+          "resolucao": "−3 e 1: dois números que somam 2 e multiplicam −3 são 3 e −1, então (x + 3) · (x − 1) = 0.\n3 e −1 é o sinal trocado; −3 e −1 multiplica +3; 2 e −3 copia os coeficientes."
+        }
+      ]
+    },
+    "esp-razao-volume": {
+      "titulo": "Sólidos do mesmo formato: o volume vai ao cubo",
+      "linhas": [
+        "Dois sólidos de mesmo formato (semelhantes) diferem por uma razão k. Todos os comprimentos são multiplicados por k.",
+        "A área é multiplicada por k · k. O volume, por k · k · k, porque tem 3 medidas: largura, comprimento e altura.",
+        "Exemplo: dobrar tudo (k = 2) dá 8 vezes o volume (2 · 2 · 2). Metade (k = 1/2) dá 1/8: 1/2 · 1/2 · 1/2 = 1/8.",
+        "Copo cônico com a ponta para baixo cheio até metade da altura: a bebida é um cone semelhante e tem 1/8 do copo, não 1/2."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Razão k e o volume",
+        "cabecalho": [
+          "Razão k",
+          "Comprimento",
+          "Área",
+          "Volume"
+        ],
+        "linhas": [
+          [
+            "2",
+            "2 vezes",
+            "4 vezes",
+            "8 vezes"
+          ],
+          [
+            "1/2",
+            "1/2",
+            "1/4",
+            "1/8"
+          ],
+          [
+            "0,8",
+            "0,8",
+            "0,64",
+            "0,512"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Uma caixa-d'água de 1 000 L é copiada em um modelo igual, com o dobro de todas as medidas. Qual o volume do modelo?",
+          "alternativas": [
+            "8 000 L",
+            "2 000 L",
+            "4 000 L",
+            "6 000 L"
+          ],
+          "certa": 0,
+          "resolucao": "8 000 L: k = 2 e o volume vai com 2 · 2 · 2 = 8; 8 · 1 000 = 8 000.\n2 000 é só dobrar; 4 000 é k · k; 6 000 não tem conta que dê."
+        },
+        {
+          "enunciado": "Um copo cônico de 270 mL está com a ponta para baixo e a bebida chega a 1/3 da altura. Quantos mL de bebida?",
+          "alternativas": [
+            "10 mL",
+            "90 mL",
+            "30 mL",
+            "135 mL"
+          ],
+          "certa": 0,
+          "resolucao": "10 mL: k = 1/3 e o volume é 1/3 · 1/3 · 1/3 = 1/27; 270 ÷ 27 = 10.\n90 é 1/3 do volume; 30 é 1/9; 135 é a metade."
+        }
+      ]
+    },
+    "esp-raiz-cubica": {
+      "titulo": "Raiz cúbica por tentativa",
+      "linhas": [
+        "A raiz cúbica é o número que, vezes ele mesmo, vezes ele mesmo, dá o valor. ∛27 = 3, porque 3 · 3 · 3 = 27.",
+        "Quando não é exata, prenda entre dois vizinhos. ∛20: 2 · 2 · 2 = 8 é pouco e 3 · 3 · 3 = 27 é muito, então fica entre 2 e 3.",
+        "Afine com uma casa: 2,7 · 2,7 · 2,7 = 19,683, quase 20. Então ∛20 ≈ 2,7.",
+        "Com decimais: 0,8 · 0,8 · 0,8 = 0,512 e 0,9 · 0,9 · 0,9 = 0,729. Então ∛0,6 está entre 0,8 e 0,9."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Cubos de decimais",
+        "cabecalho": [
+          "Número",
+          "Número · número · número"
+        ],
+        "linhas": [
+          [
+            "0,5",
+            "0,125"
+          ],
+          [
+            "0,6",
+            "0,216"
+          ],
+          [
+            "0,7",
+            "0,343"
+          ],
+          [
+            "0,8",
+            "0,512"
+          ],
+          [
+            "0,9",
+            "0,729"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Qual destes valores fica mais perto de ∛0,35?",
+          "alternativas": [
+            "0,7",
+            "0,35",
+            "0,6",
+            "0,8"
+          ],
+          "certa": 0,
+          "resolucao": "0,7: 0,7 · 0,7 = 0,49 e 0,49 · 0,7 = 0,343, quase 0,35.\n0,35 é copiar o número; 0,6 dá 0,216 (pouco); 0,8 dá 0,512 (muito)."
+        },
+        {
+          "enunciado": "Entre quais números inteiros fica ∛100?",
+          "alternativas": [
+            "4 e 5",
+            "3 e 4",
+            "9 e 10",
+            "10 e 11"
+          ],
+          "certa": 0,
+          "resolucao": "4 e 5: 4 · 4 · 4 = 64 é pouco e 5 · 5 · 5 = 125 é muito.\n3 e 4 fica baixo (64 é menor que 100); 9 e 10 e 10 e 11 vêm da raiz quadrada."
+        }
+      ]
+    },
+    "esp-quadrado-da-soma": {
+      "titulo": "O quadrado de uma soma de três números",
+      "linhas": [
+        "Para dois números: (a + b)² = a² + b² + 2 · a · b. Teste: (2 + 3)² = 25 e 4 + 9 + 12 = 25.",
+        "Para três números: (a + b + c)² = a² + b² + c² + 2 · (a·b + b·c + c·a).",
+        "Teste com 1, 2 e 3: (1 + 2 + 3)² = 36. E 1 + 4 + 9 = 14; a·b + b·c + c·a = 2 + 6 + 3 = 11; 14 + 2 · 11 = 36.",
+        "Ao contrário: sabendo a soma e os produtos dois a dois, a² + b² + c² = (a + b + c)² − 2 · (a·b + b·c + c·a)."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Três números",
+        "cabecalho": [
+          "Números",
+          "a + b + c",
+          "a² + b² + c²",
+          "a·b + b·c + c·a"
+        ],
+        "linhas": [
+          [
+            "1, 2, 3",
+            "6",
+            "14",
+            "11"
+          ],
+          [
+            "2, 3, 4",
+            "9",
+            "29",
+            "26"
+          ],
+          [
+            "1, 1, 1",
+            "3",
+            "3",
+            "3"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Três números somam 10 e a soma dos produtos dois a dois é 31. Quanto vale a² + b² + c²?",
+          "alternativas": [
+            "38",
+            "69",
+            "100",
+            "131"
+          ],
+          "certa": 0,
+          "resolucao": "38: (a + b + c)² = 100 e 2 · 31 = 62; 100 − 62 = 38.\n69 é 100 − 31 (esqueceu o 2); 100 ignora os produtos; 131 soma em vez de subtrair."
+        },
+        {
+          "enunciado": "Três números somam 12 e a soma dos quadrados é 56. Quanto vale a·b + b·c + c·a?",
+          "alternativas": [
+            "44",
+            "88",
+            "72",
+            "200"
+          ],
+          "certa": 0,
+          "resolucao": "44: 12² = 144; 144 − 56 = 88 e 88 ÷ 2 = 44.\n88 esquece de dividir por 2; 72 é a metade de 144; 200 soma em vez de subtrair."
+        }
+      ]
+    },
+    "esp-quanto-maior-em-percentual": {
+      "titulo": "Quantos por cento maior? E pontos percentuais",
+      "linhas": [
+        "Para saber em quantos % A é maior que B: (A − B) ÷ B, e depois · 100. A base é B, o que você compara.",
+        "Exemplo: 30 e 24. (30 − 24) ÷ 24 = 6/24 = 1/4 = 25%. Então 30 é 25% maior que 24.",
+        "Não vale o contrário: 24 é menor que 30 em 6/30 = 1/5 = 20%. A base mudou.",
+        "Ponto percentual é só a diferença entre duas porcentagens: de 40% a 50% são 10 pontos, mas 50 é 25% maior que 40 (10 ÷ 40)."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Maior em quantos %",
+        "cabecalho": [
+          "Comparar",
+          "Conta",
+          "Resultado"
+        ],
+        "linhas": [
+          [
+            "30 contra 24",
+            "6 ÷ 24",
+            "25% maior"
+          ],
+          [
+            "24 contra 30",
+            "6 ÷ 30",
+            "20% menor"
+          ],
+          [
+            "50% contra 40%",
+            "10 ÷ 40",
+            "25% maior (10 pontos)"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Uma tarifa foi de R$ 8 para R$ 10. Em quantos por cento aumentou?",
+          "alternativas": [
+            "25%",
+            "20%",
+            "2%",
+            "80%"
+          ],
+          "certa": 0,
+          "resolucao": "25%: (10 − 8) ÷ 8 = 2/8 = 1/4 = 25%.\n20% é dividir por 10 (base errada); 2% é só a diferença; 80% é 8 ÷ 10."
+        },
+        {
+          "enunciado": "Numa turma, 40% gostam de A e 60% gostam de B. A porcentagem de B é quantos por cento maior que a de A?",
+          "alternativas": [
+            "50%",
+            "20%",
+            "33,3%",
+            "100%"
+          ],
+          "certa": 0,
+          "resolucao": "50%: (60 − 40) ÷ 40 = 20/40 = 1/2 = 50%.\n20% é só a diferença em pontos; 33,3% é 20 ÷ 60 (base errada); 100% é 40 + 60."
+        }
+      ]
+    },
+    "est-mediana-posicao": {
+      "titulo": "Mediana: a nota do meio, em fila",
+      "linhas": [
+        "Ponha as notas em fila, da menor para a maior. A mediana é a nota que fica no meio da fila.",
+        "Com 5 notas, é a 3ª. Com 13 notas, é a 7ª: seis de cada lado. A conta é (quantidade + 1) ÷ 2.",
+        "Exemplo: 3, 9, 4, 7, 5. Em fila: 3, 4, 5, 7, 9. A do meio é a 3ª: 5.",
+        "Com quantidade par de notas, a mediana é a média das duas do meio: em 2, 4, 6, 10 é (4 + 6) ÷ 2 = 5."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Qual posição é o meio",
+        "cabecalho": [
+          "Quantidade de notas",
+          "Conta",
+          "Posição da mediana"
+        ],
+        "linhas": [
+          [
+            "5",
+            "(5 + 1) ÷ 2",
+            "3ª"
+          ],
+          [
+            "11",
+            "(11 + 1) ÷ 2",
+            "6ª"
+          ],
+          [
+            "13",
+            "(13 + 1) ÷ 2",
+            "7ª"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Qual é a mediana das notas 3, 9, 4, 7 e 5?",
+          "alternativas": [
+            "5",
+            "4",
+            "5,6",
+            "7"
+          ],
+          "certa": 0,
+          "resolucao": "5: em fila, 3, 4, 5, 7, 9. A do meio é a 3ª, que vale 5.\n5,6 é a média (28 ÷ 5), não a mediana; 4 e 7 são vizinhas do meio."
+        },
+        {
+          "enunciado": "Com 15 notas em fila, qual posição da fila é a mediana?",
+          "alternativas": [
+            "8ª",
+            "7ª",
+            "15ª",
+            "7,5ª"
+          ],
+          "certa": 0,
+          "resolucao": "8ª: (15 + 1) ÷ 2 = 16 ÷ 2 = 8.\n7ª esquece de somar 1; 15ª é a última; 7,5ª não existe, a posição é inteira."
+        }
+      ]
+    },
+    "est-soma-de-1-a-n": {
+      "titulo": "Somar 1 + 2 + 3 + ... + n",
+      "linhas": [
+        "Junte o 1º com o último, o 2º com o penúltimo, e assim por diante. Cada par soma n + 1.",
+        "Em 1 até 10 há 5 pares, cada um somando 11: 5 · 11 = 55. Em fórmula: n · (n + 1) ÷ 2 = 10 · 11 ÷ 2 = 55.",
+        "Outro: 1 até 41 é 41 · 42 ÷ 2. Como 41 · 42 = 1 680 + 42 = 1 722, a soma é 1 722 ÷ 2 = 861."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Somas de 1 até n",
+        "cabecalho": [
+          "Até n",
+          "Conta",
+          "Soma"
+        ],
+        "linhas": [
+          [
+            "5",
+            "5 · 6 ÷ 2",
+            "15"
+          ],
+          [
+            "10",
+            "10 · 11 ÷ 2",
+            "55"
+          ],
+          [
+            "20",
+            "20 · 21 ÷ 2",
+            "210"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Quanto vale 1 + 2 + 3 + ... + 20?",
+          "alternativas": [
+            "210",
+            "200",
+            "420",
+            "190"
+          ],
+          "certa": 0,
+          "resolucao": "210: 20 · 21 = 420, e 420 ÷ 2 = 210.\n420 esquece de dividir por 2; 200 e 190 erram o 21."
+        },
+        {
+          "enunciado": "Quanto vale 1 + 2 + 3 + ... + 30?",
+          "alternativas": [
+            "465",
+            "930",
+            "450",
+            "495"
+          ],
+          "certa": 0,
+          "resolucao": "465: 30 · 31 = 930, e 930 ÷ 2 = 465.\n930 esquece de dividir por 2; 450 e 495 trocam o 31 por 30 ou 33."
+        }
+      ]
+    },
+    "hora-em-minutos": {
+      "titulo": "Horas, minutos e km por minuto",
+      "linhas": [
+        "1 hora tem 60 minutos. De minutos para horas, divida por 60; de horas para minutos, multiplique por 60.",
+        "Velocidade de 90 km/h: em 1 hora anda 90 km, então em 1 minuto anda 90 ÷ 60 = 1,5 km. Assim, 90 km/h = 1,5 km/min.",
+        "Ao contrário: 2 km/min anda 2 · 60 = 120 km em 60 minutos. Assim, 2 km/min = 120 km/h.",
+        "Horário: das 14 h 02 min às 14 h 05 min passaram 5 − 2 = 3 minutos. Segundos iguais nos dois horários se cancelam."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "km/h e km/min",
+        "cabecalho": [
+          "Em km/h",
+          "Conta",
+          "Em km/min"
+        ],
+        "linhas": [
+          [
+            "60 km/h",
+            "60 ÷ 60",
+            "1 km/min"
+          ],
+          [
+            "90 km/h",
+            "90 ÷ 60",
+            "1,5 km/min"
+          ],
+          [
+            "120 km/h",
+            "120 ÷ 60",
+            "2 km/min"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Um trem anda a 120 km/h. Quantos km ele anda por minuto?",
+          "alternativas": [
+            "2 km",
+            "12 km",
+            "0,5 km",
+            "7 200 km"
+          ],
+          "certa": 0,
+          "resolucao": "2 km: 120 ÷ 60 = 2 km a cada minuto.\n12 km é dividir por 10; 0,5 km é 60 ÷ 120; 7 200 km é 120 · 60."
+        },
+        {
+          "enunciado": "Uma lancha anda 1,2 km por minuto. Qual é a velocidade em km/h?",
+          "alternativas": [
+            "72 km/h",
+            "0,02 km/h",
+            "1,2 km/h",
+            "7,2 km/h"
+          ],
+          "certa": 0,
+          "resolucao": "72 km/h: 1,2 · 60 = 72 km em 1 hora.\n0,02 é 1,2 ÷ 60; 1,2 é não converter; 7,2 é multiplicar por 6."
+        }
+      ]
+    },
+    "divisores-e-par-impar": {
+      "titulo": "Divisores, par e ímpar",
+      "linhas": [
+        "Divisor de 12 é número que cabe certinho em 12: 1, 2, 3, 4, 6 e 12. Eles vêm em pares: 1 · 12, 2 · 6, 3 · 4.",
+        "Par termina em 0, 2, 4, 6 ou 8. Ímpar termina em 1, 3, 5, 7 ou 9.",
+        "Par + ímpar dá ímpar (4 + 3 = 7). Par + par e ímpar + ímpar dão par (4 + 2 = 6; 3 + 5 = 8).",
+        "Então, se a soma de dois números é ímpar, um é par e o outro é ímpar.",
+        "Pares que multiplicam 12: 1 e 12 somam 13 (ímpar); 2 e 6 somam 8 (par); 3 e 4 somam 7 (ímpar)."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Pares que multiplicam 12",
+        "cabecalho": [
+          "Par",
+          "Soma",
+          "Soma ímpar?"
+        ],
+        "linhas": [
+          [
+            "1 e 12",
+            "13",
+            "sim"
+          ],
+          [
+            "2 e 6",
+            "8",
+            "não"
+          ],
+          [
+            "3 e 4",
+            "7",
+            "sim"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Qual par de números multiplica 16 e soma um número ímpar?",
+          "alternativas": [
+            "1 e 16",
+            "2 e 8",
+            "4 e 4",
+            "8 e 2"
+          ],
+          "certa": 0,
+          "resolucao": "1 e 16: 1 · 16 = 16 e 1 + 16 = 17, ímpar.\n2 e 8 somam 10 e 4 e 4 somam 8: pares, não servem."
+        },
+        {
+          "enunciado": "Quantos divisores tem o número 10?",
+          "alternativas": [
+            "4",
+            "2",
+            "5",
+            "10"
+          ],
+          "certa": 0,
+          "resolucao": "4: os divisores são 1, 2, 5 e 10.\n2 é contar só o 2 e o 5; 5 é metade de 10; 10 é o próprio número."
+        }
+      ]
+    },
+    "soma-em-degraus": {
+      "titulo": "Somar números que descem de 1 em 1",
+      "linhas": [
+        "Some 5 + 4 + 3 = 12. Os números descem de 1 em 1 (de 5 a 3), então a soma tem um atalho.",
+        "Some o primeiro com o último: 5 + 3 = 8. Multiplique pela quantidade de números e divida por 2: 8 · 3 = 24 e 24 ÷ 2 = 12.",
+        "Por quê: o 5 faz par com o 3 (soma 8) e o 4 do meio vale metade de 8. Três números valem 3 metades de 8, que dá 12.",
+        "Outro: 7 + 6 + 5 + 4 = 22. Primeiro + último = 7 + 4 = 11; 11 · 4 = 44; 44 ÷ 2 = 22.",
+        "Se cada número é a velocidade de 1 segundo, a soma é a distância percorrida."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Atalho da soma",
+        "cabecalho": [
+          "Números",
+          "Primeiro + último",
+          "Conta"
+        ],
+        "linhas": [
+          [
+            "5, 4, 3",
+            "5 + 3 = 8",
+            "8 · 3 ÷ 2 = 12"
+          ],
+          [
+            "7, 6, 5, 4",
+            "7 + 4 = 11",
+            "11 · 4 ÷ 2 = 22"
+          ],
+          [
+            "9, 8, 7, 6, 5",
+            "9 + 5 = 14",
+            "14 · 5 ÷ 2 = 35"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Some 8 + 7 + 6 + 5 + 4 + 3.",
+          "alternativas": [
+            "33",
+            "66",
+            "11",
+            "24"
+          ],
+          "certa": 0,
+          "resolucao": "33: 8 + 3 = 11; 11 · 6 = 66; 66 ÷ 2 = 33.\n66 esquece o ÷ 2; 11 é só primeiro + último; 24 é 8 · 3."
+        },
+        {
+          "enunciado": "Um carrinho anda 6 m/s no 1º segundo, 5 no 2º, 4 no 3º e 3 no 4º. Quantos metros no total?",
+          "alternativas": [
+            "18 m",
+            "36 m",
+            "9 m",
+            "24 m"
+          ],
+          "certa": 0,
+          "resolucao": "18 m: 6 + 3 = 9; 9 · 4 = 36; 36 ÷ 2 = 18.\n36 m esquece o ÷ 2; 9 m é só primeiro + último; 24 m é 6 · 4."
+        }
+      ]
+    },
+    "ele-calor-especifico": {
+      "titulo": "Calor para esquentar a água: Q = m · c · ΔT",
+      "linhas": [
+        "Calor (Q) é energia que passa de um corpo para outro. Medimos em joule (J). 1 kJ = 1 000 J.",
+        "Calor específico (c): quantos J pedem 1 kg do material para subir 1 °C. Na água, c = 4 200 J por kg por °C.",
+        "Q = m · c · ΔT. Exemplo: 2 kg de água sobem 10 °C: Q = 2 · 4 200 · 10 = 84 000 J.",
+        "Com vazão: se passam 0,5 kg por segundo, o calor por segundo (a potência) é 0,5 · 4 200 · ΔT, em watts (1 W = 1 J por segundo).",
+        "L por minuto vira kg por segundo: 3 L por minuto = 3 kg em 60 s = 0,05 kg por segundo. E 100 g = 0,1 kg."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Calor para esquentar a água",
+        "cabecalho": [
+          "Água",
+          "ΔT",
+          "Conta"
+        ],
+        "linhas": [
+          [
+            "2 kg",
+            "10 °C",
+            "2 · 4 200 · 10 = 84 000 J"
+          ],
+          [
+            "0,5 kg por s",
+            "10 °C",
+            "0,5 · 4 200 · 10 = 21 000 W"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Quanto calor pedem 0,2 kg de água para subir 5 °C? (c = 4 200 J/(kg · °C))",
+          "alternativas": [
+            "4 200 J",
+            "21 000 J",
+            "840 J",
+            "1 J"
+          ],
+          "certa": 0,
+          "resolucao": "4 200 J: 0,2 · 4 200 = 840 e 840 · 5 = 4 200.\n21 000 J esquece os 0,2 kg; 840 J esquece o ΔT; 1 J só multiplica 0,2 · 5."
+        },
+        {
+          "enunciado": "A água passa por um chuveiro a 6 L por minuto e esquenta 10 °C. Qual a potência que vira calor? (c = 4 200)",
+          "alternativas": [
+            "4 200 W",
+            "252 000 W",
+            "420 W",
+            "42 W"
+          ],
+          "certa": 0,
+          "resolucao": "4 200 W: 6 L por minuto = 6 kg em 60 s = 0,1 kg por segundo; 0,1 · 4 200 · 10 = 4 200 W.\n252 000 W não divide por 60; 420 W esquece o ΔT; 42 W erra o c."
+        }
+      ]
+    },
+    "ele-prefixos": {
+      "titulo": "Quilo e mili: kΩ, mA",
+      "linhas": [
+        "k (quilo) é mil vezes: 1 kΩ = 1 000 Ω e 1 kW = 1 000 W. Então 0,15 kΩ = 0,15 · 1 000 = 150 Ω.",
+        "m (mili) é a milésima parte: 1 mA = 0,001 A. Então 1 A = 1 000 mA.",
+        "Lei de Ohm: corrente (A) = tensão (V) ÷ resistência (Ω). Para dar em mA, multiplique o resultado em A por 1 000.",
+        "Exemplo: 5 V sobre 2 kΩ = 2 000 Ω. 5 ÷ 2 000 = 0,0025 A, e 0,0025 · 1 000 = 2,5 mA."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Prefixos",
+        "cabecalho": [
+          "Unidade",
+          "Vale",
+          "Exemplo"
+        ],
+        "linhas": [
+          [
+            "1 kΩ",
+            "1 000 Ω",
+            "0,47 kΩ = 470 Ω"
+          ],
+          [
+            "1 A",
+            "1 000 mA",
+            "0,05 A = 50 mA"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Quantos ohms são 0,47 kΩ?",
+          "alternativas": [
+            "470 Ω",
+            "4,7 Ω",
+            "47 Ω",
+            "47 000 Ω"
+          ],
+          "certa": 0,
+          "resolucao": "470 Ω: 0,47 · 1 000 = 470.\n4,7 Ω e 47 Ω andam a vírgula para o lado errado; 47 000 Ω anda casas demais."
+        },
+        {
+          "enunciado": "Uma corrente de 0,05 A vale quantos mA?",
+          "alternativas": [
+            "50 mA",
+            "0,05 mA",
+            "5 mA",
+            "500 mA"
+          ],
+          "certa": 0,
+          "resolucao": "50 mA: 0,05 · 1 000 = 50.\n0,05 mA não converteu; 5 mA e 500 mA erram uma casa."
+        }
+      ]
+    },
+    "ele-baterias-paralelo": {
+      "titulo": "Bateria real e duas baterias em paralelo",
+      "linhas": [
+        "Bateria real: uma fonte ideal de tensão ε (a fem) com uma resistência interna r em série com ela.",
+        "Duas baterias ligadas aos mesmos dois terminais (em paralelo) valem uma só, com fem ε e resistência interna r.",
+        "r = (r1 · r2) ÷ (r1 + r2), como dois resistores em paralelo. ε = (ε1 · r2 + ε2 · r1) ÷ (r1 + r2).",
+        "Exemplo: 10 V e 2 Ω com 4 V e 2 Ω: ε = (10 · 2 + 4 · 2) ÷ 4 = 28 ÷ 4 = 7 V e r = (2 · 2) ÷ 4 = 1 Ω.",
+        "A fem da bateria única fica sempre entre as duas fem (aqui, entre 4 V e 10 V)."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Duas baterias em paralelo",
+        "cabecalho": [
+          "Baterias",
+          "ε",
+          "r"
+        ],
+        "linhas": [
+          [
+            "10 V e 2 Ω com 4 V e 2 Ω",
+            "7 V",
+            "1 Ω"
+          ],
+          [
+            "12 V e 2 Ω com 12 V e 2 Ω",
+            "12 V",
+            "1 Ω"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Duas baterias iguais, de 12 V e 2 Ω, em paralelo. Quanto valem ε e r da bateria única?",
+          "alternativas": [
+            "12 V e 1 Ω",
+            "24 V e 4 Ω",
+            "12 V e 4 Ω",
+            "24 V e 1 Ω"
+          ],
+          "certa": 0,
+          "resolucao": "12 V e 1 Ω: ε = (12 · 2 + 12 · 2) ÷ 4 = 48 ÷ 4 = 12 e r = (2 · 2) ÷ 4 = 1.\n24 V e 4 Ω soma tudo; 12 V e 4 Ω soma só o r; 24 V e 1 Ω soma só a fem."
+        },
+        {
+          "enunciado": "Baterias de 10 V e 2 Ω e de 4 V e 2 Ω, em paralelo. Quanto valem ε e r da bateria única?",
+          "alternativas": [
+            "7 V e 1 Ω",
+            "14 V e 4 Ω",
+            "7 V e 4 Ω",
+            "10 V e 2 Ω"
+          ],
+          "certa": 0,
+          "resolucao": "7 V e 1 Ω: ε = (10 · 2 + 4 · 2) ÷ 4 = 28 ÷ 4 = 7 e r = (2 · 2) ÷ 4 = 1.\n14 V e 4 Ω soma tudo; 7 V e 4 Ω soma só o r; 10 V e 2 Ω fica só com a maior bateria."
+        }
+      ]
+    },
+    "ond-incognita-dos-dois-lados": {
+      "titulo": "Número escondido dos dois lados",
+      "linhas": [
+        "Às vezes o número escondido (U) aparece dos dois lados da igualdade. Exemplo: 3 · (12 − U) = 12 + U.",
+        "Primeiro abra o parêntese: 3 · 12 = 36 e 3 · U = 3U. Fica 36 − 3U = 12 + U.",
+        "Some 3U dos dois lados, para os U ficarem juntos: 36 = 12 + U + 3U, ou seja, 36 = 12 + 4U.",
+        "Tire 12 dos dois lados: 24 = 4U. Divida por 4: U = 6. Confira: 3 · (12 − 6) = 18 e 12 + 6 = 18.",
+        "Outro: 7 · (10 − U) = 3 · (10 + U). 70 − 7U = 30 + 3U. 70 = 30 + 10U. 40 = 10U. U = 4."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Passo a passo",
+        "cabecalho": [
+          "Passo",
+          "3 · (12 − U) = 12 + U"
+        ],
+        "linhas": [
+          [
+            "Abrir o parêntese",
+            "36 − 3U = 12 + U"
+          ],
+          [
+            "Juntar os U",
+            "36 = 12 + 4U"
+          ],
+          [
+            "Tirar 12",
+            "24 = 4U"
+          ],
+          [
+            "Dividir por 4",
+            "U = 6"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "2 · (9 − U) = 9 + U. Quanto vale U?",
+          "alternativas": [
+            "3",
+            "9",
+            "6",
+            "1"
+          ],
+          "certa": 0,
+          "resolucao": "3: 2 · 9 = 18, então 18 − 2U = 9 + U; 18 = 9 + 3U; 9 = 3U; U = 3.\n9 esquece de dividir por 3; 6 é 18 ÷ 3; 1 é 3 − 2."
+        },
+        {
+          "enunciado": "5 · (20 − U) = 3 · (20 + U). Quanto vale U?",
+          "alternativas": [
+            "5",
+            "40",
+            "8",
+            "10"
+          ],
+          "certa": 0,
+          "resolucao": "5: 100 − 5U = 60 + 3U; 100 = 60 + 8U; 40 = 8U; U = 5.\n40 esquece de dividir por 8; 8 é o número que multiplica U; 10 é 40 ÷ 4."
+        }
+      ]
+    },
+    "ond-divisor-comum": {
+      "titulo": "Divisor comum e mdc",
+      "linhas": [
+        "Divisores de 12: 1, 2, 3, 4, 6 e 12 (os que cabem certinho). Divisores de 18: 1, 2, 3, 6, 9 e 18.",
+        "Divisor comum é o que cabe nos dois números: 1, 2, 3 e 6 aparecem nas duas listas.",
+        "O maior deles é o mdc (maior divisor comum): mdc(12, 18) = 6. Todo divisor comum é divisor do mdc.",
+        "Os divisores de 6 são 1, 2, 3 e 6: exatamente os divisores comuns. Para achá-los, liste os divisores do mdc.",
+        "Atalho: o mdc não muda se você troca o maior número pela diferença. 18 − 12 = 6, então mdc(12, 18) = mdc(12, 6) = 6.",
+        "Liste divisores em pares: 1 · 6, 2 · 3. Os maiores que 2: 3 e 6. São 2."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Divisores de 12 e de 18",
+        "cabecalho": [
+          "Número",
+          "Divisores",
+          "Comuns"
+        ],
+        "linhas": [
+          [
+            "12",
+            "1, 2, 3, 4, 6, 12",
+            "1, 2, 3, 6"
+          ],
+          [
+            "18",
+            "1, 2, 3, 6, 9, 18",
+            "1, 2, 3, 6"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Qual é o mdc de 20 e 30?",
+          "alternativas": [
+            "10",
+            "5",
+            "60",
+            "50"
+          ],
+          "certa": 0,
+          "resolucao": "10: 30 − 20 = 10, e 20 = 2 · 10, então mdc(20, 30) = 10.\n5 é divisor comum, mas não o maior; 60 e 50 são contas que não dão divisor."
+        },
+        {
+          "enunciado": "Quantos divisores de 24 são maiores que 5?",
+          "alternativas": [
+            "4",
+            "8",
+            "3",
+            "5"
+          ],
+          "certa": 0,
+          "resolucao": "4: os divisores de 24 são 1, 2, 3, 4, 6, 8, 12 e 24; maiores que 5: 6, 8, 12 e 24.\n8 conta todos os divisores; 3 e 5 contam errado."
+        }
+      ]
+    },
+    "opt-gauss-aumento": {
+      "titulo": "Lente: 1/f = 1/p + 1/p' e o aumento",
+      "linhas": [
+        "Lente delgada: 1/f = 1/p + 1/p'. f é o foco, p a distância do objeto à lente e p' a da imagem à lente, todas na mesma unidade.",
+        "Lente convergente tem f positivo. Objeto além do foco dá imagem real (p' positivo), de cabeça para baixo.",
+        "Aumento: g = p' ÷ p. Altura da imagem = g · altura do objeto. Com f = 20 e p = 30: 1/p' = 3/60 − 2/60 = 1/60, p' = 60 e g = 60 ÷ 30 = 2.",
+        "Atalho: de 1/p = 1/f − 1/p' sai p' ÷ p = p' ÷ f − 1. Então g = p' ÷ f − 1: o −1 é o que mais se esquece.",
+        "Imagem virtual: p' sai negativo (do mesmo lado do objeto) e a imagem é direita; o aumento vale −p' ÷ p."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Exemplo com f = 20",
+        "cabecalho": [
+          "p",
+          "p'",
+          "g"
+        ],
+        "linhas": [
+          [
+            "30",
+            "60",
+            "2"
+          ],
+          [
+            "40",
+            "40",
+            "1"
+          ],
+          [
+            "60",
+            "30",
+            "1/2"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Lente de f = 10 cm e objeto a 15 cm. A que distância da lente fica a imagem?",
+          "alternativas": [
+            "30 cm",
+            "6 cm",
+            "25 cm",
+            "5 cm"
+          ],
+          "certa": 0,
+          "resolucao": "30 cm: 1/p' = 1/10 − 1/15 = 3/30 − 2/30 = 1/30, então p' = 30 cm.\n6 cm soma os dois inversos; 25 cm soma 10 + 15; 5 cm subtrai 15 − 10."
+        },
+        {
+          "enunciado": "Imagem real a 60 cm de uma lente de f = 20 cm. Qual o aumento? (use g = p' ÷ f − 1)",
+          "alternativas": [
+            "2",
+            "3",
+            "1/3",
+            "4"
+          ],
+          "certa": 0,
+          "resolucao": "2: g = 60 ÷ 20 − 1 = 3 − 1 = 2.\n3 esquece o −1; 1/3 inverte a divisão; 4 soma 1 em vez de tirar."
+        }
+      ]
+    },
+    "opt-indice-meio": {
+      "titulo": "Índice de refração: n = c ÷ v",
+      "linhas": [
+        "O índice de refração n diz quantas vezes a luz é mais lenta no meio do que no vácuo: n = c ÷ v. No vácuo n = 1; no vidro, perto de 1,5.",
+        "c = 3,0 × 10⁸ m/s. Num meio com n = 1,5: v = 3,0 × 10⁸ ÷ 1,5 = 2,0 × 10⁸ m/s.",
+        "Ao entrar no meio, a frequência da onda não muda e o comprimento de onda encolhe: λ no meio = λ no vácuo ÷ n.",
+        "Então n = λ no vácuo ÷ λ no meio. Luz de 600 nm no vácuo e 400 nm no vidro: n = 600 ÷ 400 = 1,5. (1 nm = 10⁻⁹ m)",
+        "Pela velocidade: se v = 1,5 × 10⁸ m/s, então n = 3,0 × 10⁸ ÷ 1,5 × 10⁸ = 2,0."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Índice e velocidade",
+        "cabecalho": [
+          "Meio",
+          "n",
+          "v"
+        ],
+        "linhas": [
+          [
+            "vácuo",
+            "1,0",
+            "3,0 × 10⁸ m/s"
+          ],
+          [
+            "vidro",
+            "1,5",
+            "2,0 × 10⁸ m/s"
+          ],
+          [
+            "líquido",
+            "2,0",
+            "1,5 × 10⁸ m/s"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "A luz anda a 2,0 × 10⁸ m/s num material. Qual o índice de refração? (c = 3,0 × 10⁸ m/s)",
+          "alternativas": [
+            "1,5",
+            "0,67",
+            "6",
+            "1,0"
+          ],
+          "certa": 0,
+          "resolucao": "1,5: n = c ÷ v = 3,0 × 10⁸ ÷ 2,0 × 10⁸ = 1,5.\n0,67 inverte a divisão; 6 multiplica; 1,0 é o índice do vácuo."
+        },
+        {
+          "enunciado": "Luz de 500 nm no vácuo tem 400 nm dentro de um vidro. Qual o índice de refração?",
+          "alternativas": [
+            "1,25",
+            "0,8",
+            "900",
+            "100"
+          ],
+          "certa": 0,
+          "resolucao": "1,25: n = 500 ÷ 400 = 1,25.\n0,8 inverte a divisão; 900 soma; 100 subtrai."
+        }
+      ]
+    },
+    "opt-fabricantes": {
+      "titulo": "Equação dos fabricantes de lentes",
+      "linhas": [
+        "O foco de uma lente delgada depende do material e do meio: 1/f = (N − 1) · (1/R1 + 1/R2), com N = n da lente ÷ n do meio.",
+        "R1 e R2 são os raios das duas faces. Numa lente biconvexa os dois entram com sinal de mais. Use a mesma unidade para todos.",
+        "No ar, N = n da lente ÷ 1. Vidro de 1,5 e raios de 10 e 10 cm: 1/f = 0,5 · (1/10 + 1/10) = 0,5 · 0,2 = 0,1, então f = 10 cm.",
+        "Se N é maior que 1, f é positivo e a lente converge. Se N é menor que 1, f sai negativo e a lente diverge, mesmo sendo biconvexa.",
+        "Em Gauss, o foco negativo entra com o sinal de menos: de um objeto real, a lente divergente dá só imagem virtual."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "N e a natureza da lente",
+        "cabecalho": [
+          "N",
+          "N − 1",
+          "Lente"
+        ],
+        "linhas": [
+          [
+            "1,5",
+            "+0,5",
+            "converge"
+          ],
+          [
+            "1,0",
+            "0",
+            "não desvia"
+          ],
+          [
+            "0,8",
+            "−0,2",
+            "diverge"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Lente biconvexa de vidro (1,5) no ar, com raios de 20 cm e 20 cm. Qual o foco?",
+          "alternativas": [
+            "20 cm",
+            "40 cm",
+            "10 cm",
+            "5 cm"
+          ],
+          "certa": 0,
+          "resolucao": "20 cm: 1/f = 0,5 · (1/20 + 1/20) = 0,5 · 0,1 = 0,05, então f = 20 cm.\n40 cm usa só uma face; 10 cm esquece o 0,5; 5 cm erra os dois."
+        },
+        {
+          "enunciado": "Uma lente biconvexa tem N = 0,8 (o meio é mais refringente que ela). Ela converge ou diverge?",
+          "alternativas": [
+            "Diverge",
+            "Converge",
+            "Não desvia",
+            "Depende do raio"
+          ],
+          "certa": 0,
+          "resolucao": "Diverge: N − 1 = 0,8 − 1 = −0,2 é negativo, então f é negativo.\nConverge esquece o sinal; não desvia só vale se N = 1."
+        }
+      ]
+    },
+    "opt-reflexao-total": {
+      "titulo": "Reflexão total e ângulo limite",
+      "linhas": [
+        "Quando a luz vai de um meio de índice n1 para outro de índice n2 menor (n1 > n2), ela se afasta da normal ao refratar.",
+        "Ângulo limite θL: a luz sai rente à superfície. sen θL = n2 ÷ n1. Acima desse ângulo de incidência toda a luz reflete: reflexão total.",
+        "Só existe reflexão total se n1 > n2. Com n2 igual ou maior, o seno daria 1 ou mais e não há ângulo limite.",
+        "Exemplo: vidro 1,5 para ar 1,0: sen θL = 1,0 ÷ 1,5 = 0,67. O ângulo é medido da normal, a reta perpendicular à parede.",
+        "Numa fibra reta, o raio vai e volta entre as paredes. Para avançar um comprimento L ao longo do eixo, ele anda L ÷ sen θ (θ medido da normal)."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Seno do ângulo limite",
+        "cabecalho": [
+          "n1",
+          "n2",
+          "sen θL"
+        ],
+        "linhas": [
+          [
+            "1,5",
+            "1,0",
+            "0,67"
+          ],
+          [
+            "1,6",
+            "1,2",
+            "0,75"
+          ],
+          [
+            "1,5",
+            "1,5",
+            "não há"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Núcleo de índice 1,60 e revestimento de 1,20. Quanto vale o seno do ângulo limite?",
+          "alternativas": [
+            "0,75",
+            "1,33",
+            "0,4",
+            "1,92"
+          ],
+          "certa": 0,
+          "resolucao": "0,75: sen θL = 1,20 ÷ 1,60 = 0,75.\n1,33 inverte a divisão; 0,4 subtrai; 1,92 multiplica."
+        },
+        {
+          "enunciado": "Núcleo de 1,50 e revestimento de 1,50. Existe reflexão total?",
+          "alternativas": [
+            "Não",
+            "Sim, a 90°",
+            "Sim, a 45°",
+            "Sim, a 0°"
+          ],
+          "certa": 0,
+          "resolucao": "Não: é preciso n1 maior que n2; com índices iguais, sen θL = 1 e não há ângulo limite.\nOs outros inventam um ângulo que não existe."
+        }
+      ]
+    },
+    "opt-espelho-desdobrado": {
+      "titulo": "Espelho: desdobrar a sala",
+      "linhas": [
+        "Espelho plano: a imagem fica do outro lado, à mesma distância. O raio refletido segue como se viesse da imagem, em linha reta.",
+        "Truque do desdobramento: em vez de quicar o raio, copie a sala do outro lado da parede, como num espelho. O raio segue reto pela cópia.",
+        "Cada linha de parede que o raio cruza nas cópias é uma reflexão na sala de verdade. Contar reflexões vira contar linhas cruzadas.",
+        "Sala de 4 m por 2 m, raio a 45° saindo do canto: ele anda x = y. Linhas verticais de parede em x = 4, 8, ...; horizontais em y = 2, 4, 6, ...",
+        "O raio só chega a um canto de verdade quando x e y caem, os dois, em linhas de parede. Nesse ponto ele para e não conta como reflexão."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Sala de 4 m por 2 m, a 45°",
+        "cabecalho": [
+          "x = y",
+          "Cruza",
+          "O que acontece"
+        ],
+        "linhas": [
+          [
+            "2",
+            "y = 2",
+            "reflete na parede de cima"
+          ],
+          [
+            "4",
+            "x = 4 e y = 4",
+            "chega ao canto"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Sala de 4 m por 2 m, raio a 45° saindo do canto. Quando chega a um canto, quanto andou na direção x?",
+          "alternativas": [
+            "4 m",
+            "8 m",
+            "2 m",
+            "6 m"
+          ],
+          "certa": 0,
+          "resolucao": "4 m: x tem de ser múltiplo de 4 e y múltiplo de 2; o primeiro valor comum é 4.\n8 m é o segundo canto; 2 m só serve para y; 6 m não serve para x."
+        },
+        {
+          "enunciado": "No mesmo raio, em quantas reflexões ele bate até chegar ao canto (a chegada não conta)?",
+          "alternativas": [
+            "1",
+            "2",
+            "3",
+            "0"
+          ],
+          "certa": 0,
+          "resolucao": "1: nenhuma linha vertical antes de x = 4 e uma horizontal, y = 2.\n2 conta o canto; 3 conta o canto duas vezes; 0 ignora a linha y = 2."
+        }
+      ]
+    },
+    "opt-mmc": {
+      "titulo": "Menor múltiplo comum (mmc)",
+      "linhas": [
+        "Múltiplos de 5: 5, 10, 15, 20... Múltiplos de 3: 3, 6, 9, 12, 15... Os que aparecem nas duas listas são os múltiplos comuns.",
+        "O menor deles é o mmc. Para 5 e 3, o mmc é 15.",
+        "Se os números não têm fator em comum (como 5 e 3), o mmc é o produto: 5 · 3 = 15.",
+        "Se têm fator comum, o mmc é menor que o produto. 4 e 6: múltiplos de 6 são 6 e 12; 12 é múltiplo de 4. O mmc é 12, e não 24.",
+        "Quantas vezes cada número cabe no mmc: 15 ÷ 5 = 3 e 15 ÷ 3 = 5. Esses quocientes contam as voltas de cada um."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Exemplos de mmc",
+        "cabecalho": [
+          "Números",
+          "mmc",
+          "Cabe"
+        ],
+        "linhas": [
+          [
+            "5 e 3",
+            "15",
+            "3 e 5 vezes"
+          ],
+          [
+            "4 e 6",
+            "12",
+            "3 e 2 vezes"
+          ],
+          [
+            "4 e 2",
+            "4",
+            "1 e 2 vezes"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Qual o mmc de 6 e 4?",
+          "alternativas": [
+            "12",
+            "24",
+            "2",
+            "10"
+          ],
+          "certa": 0,
+          "resolucao": "12: múltiplos de 6 são 6, 12; e 12 é múltiplo de 4.\n24 é o produto, maior que o mmc; 2 é divisor, não múltiplo; 10 não é múltiplo de 6."
+        },
+        {
+          "enunciado": "Qual o mmc de 7 e 3?",
+          "alternativas": [
+            "21",
+            "10",
+            "1",
+            "42"
+          ],
+          "certa": 0,
+          "resolucao": "21: sem fator comum, o mmc é o produto, 7 · 3 = 21.\n10 soma; 1 é divisor; 42 dobra."
+        }
+      ]
+    },
+    "calor-especifico": {
+      "titulo": "Calor para esquentar: Q = m · c · ΔT",
+      "linhas": [
+        "Calor (Q) é energia que passa do corpo quente para o frio. Medimos em cal ou em J (1 cal = 4 J, perto de 4,2).",
+        "Calor específico (c): quanto calor 1 g do material pede para subir 1 °C. A água pede 1 cal por g por °C.",
+        "Q = m · c · ΔT. 200 g de água de 20 °C a 50 °C: ΔT = 30, então Q = 200 · 1 · 30 = 6 000 cal.",
+        "Em kJ: a água pede 4,2 kJ por kg por °C. 1 L de água tem 1 kg. 1 MJ = 1 000 kJ.",
+        "Dois corpos isolados trocam calor até a mesma temperatura: o calor que um cede é o que o outro recebe."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Calor para esquentar a água",
+        "cabecalho": [
+          "Massa",
+          "ΔT",
+          "Calor"
+        ],
+        "linhas": [
+          [
+            "100 g",
+            "10 °C",
+            "100 · 1 · 10 = 1 000 cal"
+          ],
+          [
+            "2 kg",
+            "5 °C",
+            "2 · 4,2 · 5 = 42 kJ"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Quanto calor pedem 500 g de água para ir de 20 °C a 60 °C? (c = 1 cal/(g · °C))",
+          "alternativas": [
+            "20 000 cal",
+            "500 cal",
+            "40 cal",
+            "10 000 cal"
+          ],
+          "certa": 0,
+          "resolucao": "20 000 cal: ΔT = 60 − 20 = 40 e Q = 500 · 1 · 40 = 20 000 cal.\n500 cal esquece o ΔT; 40 cal é só o ΔT; 10 000 cal usa ΔT = 20."
+        },
+        {
+          "enunciado": "Misturam-se 1 kg de água a 80 °C e 1 kg de água a 20 °C, sem perda. Qual a temperatura final?",
+          "alternativas": [
+            "50 °C",
+            "100 °C",
+            "60 °C",
+            "40 °C"
+          ],
+          "certa": 0,
+          "resolucao": "50 °C: a quente perde 80 − T e a fria ganha T − 20. 80 − T = T − 20, então 2 · T = 100 e T = 50.\n100 °C soma as duas; 60 °C e 40 °C não equilibram."
+        }
+      ]
+    },
+    "mudanca-de-fase": {
+      "titulo": "Gelo derretendo: calor latente",
+      "linhas": [
+        "Gelo a 0 °C derrete sem esquentar: o calor entra e a temperatura fica parada em 0 °C até acabar o gelo.",
+        "Calor latente (L): calor para mudar 1 g de fase. Fusão do gelo: L = 80 cal por g.",
+        "Q = m · L. Derreter 50 g de gelo a 0 °C: Q = 50 · 80 = 4 000 cal.",
+        "Gelo abaixo de 0 °C primeiro esquenta até 0 °C (c do gelo = 0,5 cal por g por °C), depois derrete, depois a água esquenta.",
+        "Cada etapa é uma conta separada. Se o calor não basta para derreter tudo, a mistura fica em 0 °C com gelo sobrando."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Etapas de 10 g de gelo a −10 °C até água a 20 °C",
+        "cabecalho": [
+          "Etapa",
+          "Conta",
+          "Calor"
+        ],
+        "linhas": [
+          [
+            "Gelo a 0 °C",
+            "10 · 0,5 · 10",
+            "50 cal"
+          ],
+          [
+            "Derreter",
+            "10 · 80",
+            "800 cal"
+          ],
+          [
+            "Água a 20 °C",
+            "10 · 1 · 20",
+            "200 cal"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Quanto calor derrete 100 g de gelo a 0 °C? (L = 80 cal/g)",
+          "alternativas": [
+            "8 000 cal",
+            "800 cal",
+            "180 cal",
+            "80 cal"
+          ],
+          "certa": 0,
+          "resolucao": "8 000 cal: Q = 100 · 80 = 8 000 cal.\n800 cal perde um zero; 180 cal soma 100 + 80; 80 cal é só o L."
+        },
+        {
+          "enunciado": "10 g de gelo a −10 °C vão a 0 °C. Quanto calor? (c do gelo = 0,5 cal/(g · °C))",
+          "alternativas": [
+            "50 cal",
+            "100 cal",
+            "5 cal",
+            "800 cal"
+          ],
+          "certa": 0,
+          "resolucao": "50 cal: Q = 10 · 0,5 · 10 = 50 cal.\n100 cal esquece o 0,5; 5 cal esquece a massa; 800 cal é o calor de derreter."
+        }
+      ]
+    },
+    "gas-ideal": {
+      "titulo": "Gás ideal: p · V, temperatura e trabalho",
+      "linhas": [
+        "Num gás ideal, pressão (p), volume (V) e temperatura (T, em kelvin) se ligam por p · V = n · R · T.",
+        "n e R não mudam. Se a temperatura não muda, p · V fica igual: a pressão dobra quando o volume cai à metade.",
+        "A energia interna só depende da temperatura. Mesma temperatura, mesma energia: ΔU = 0.",
+        "Trabalho do gás com pressão constante: W = p · ΔV. Se a linha no gráfico p × V é reta, use a pressão média.",
+        "1ª lei: calor recebido Q = trabalho W + variação de energia interna ΔU. Com 1 L = 10⁻³ m³ e p em Pa, W sai em J."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Trabalho a pressão constante",
+        "cabecalho": [
+          "p",
+          "ΔV",
+          "W = p · ΔV"
+        ],
+        "linhas": [
+          [
+            "2 × 10⁵ Pa",
+            "3 L = 3 × 10⁻³ m³",
+            "600 J"
+          ],
+          [
+            "1 × 10⁵ Pa",
+            "2 L = 2 × 10⁻³ m³",
+            "200 J"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Um gás tem p = 4 e V = 2 (unidades de aula). A temperatura não muda e o volume vai a 8. Qual a nova pressão?",
+          "alternativas": [
+            "1",
+            "4",
+            "16",
+            "0,5"
+          ],
+          "certa": 0,
+          "resolucao": "1: p · V = 4 · 2 = 8 fica igual, e 8 ÷ 8 = 1.\n4 não muda a pressão; 16 multiplica por 4; 0,5 divide por 16."
+        },
+        {
+          "enunciado": "Pressão constante de 2 × 10⁵ Pa, volume de 1 L a 4 L. Qual o trabalho do gás? (1 L = 10⁻³ m³)",
+          "alternativas": [
+            "600 J",
+            "800 J",
+            "200 J",
+            "600 000 J"
+          ],
+          "certa": 0,
+          "resolucao": "600 J: ΔV = 4 − 1 = 3 L = 3 × 10⁻³ m³ e W = 2 × 10⁵ · 3 × 10⁻³ = 600 J.\n800 J usa 4 L; 200 J usa 1 L; 600 000 J esquece a conversão."
+        }
+      ]
+    },
+    "resistencia-termica": {
+      "titulo": "Barra que conduz calor: resistência térmica",
+      "linhas": [
+        "O calor passa por uma barra de um ponto quente para um frio. Fluxo (W) = diferença de temperatura ÷ resistência R.",
+        "Resistência da barra: R = L ÷ (k · S). L comprimento (m), S seção (m²), k condutividade (W/(m · K)). 1 cm² = 10⁻⁴ m².",
+        "Exemplo: k = 100, L = 1 m, S = 1 cm². R = 1 ÷ (100 · 10⁻⁴) = 1 ÷ 0,01 = 100 K/W.",
+        "Barras em fila (série): o mesmo fluxo passa por todas e as resistências somam. A queda de temperatura numa barra = fluxo · R.",
+        "Duas barras iguais ligadas aos mesmos dois pontos (paralelo): a resistência vira a metade."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Resistências",
+        "cabecalho": [
+          "Montagem",
+          "Conta",
+          "Resultado"
+        ],
+        "linhas": [
+          [
+            "1 barra",
+            "L ÷ (k · S)",
+            "100 K/W"
+          ],
+          [
+            "2 em série",
+            "100 + 100",
+            "200 K/W"
+          ],
+          [
+            "2 em paralelo",
+            "100 ÷ 2",
+            "50 K/W"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Barra de 2 m, seção de 1 cm² e k = 100 W/(m · K). Qual a resistência?",
+          "alternativas": [
+            "200 K/W",
+            "0,005 K/W",
+            "100 K/W",
+            "20 K/W"
+          ],
+          "certa": 0,
+          "resolucao": "200 K/W: 1 cm² = 10⁻⁴ m², k · S = 0,01 e R = 2 ÷ 0,01 = 200.\n0,005 inverte a conta; 100 usa L = 1; 20 erra a seção."
+        },
+        {
+          "enunciado": "Duas barras de 40 K/W em série, com 100 °C de diferença entre as pontas. Qual o fluxo?",
+          "alternativas": [
+            "1,25 W",
+            "2,5 W",
+            "5 W",
+            "0,8 W"
+          ],
+          "certa": 0,
+          "resolucao": "1,25 W: R = 40 + 40 = 80 e fluxo = 100 ÷ 80 = 1,25 W.\n2,5 W usa só uma barra; 5 W usa o paralelo; 0,8 W inverte a divisão."
+        }
+      ]
+    },
+    "produto-zero": {
+      "titulo": "Produto zero: achar a raiz de x · x − x − 6",
+      "linhas": [
+        "Se um produto dá zero, um dos fatores é zero. (x − 3) · (x + 2) = 0 vale se x = 3 ou x = −2.",
+        "Abrindo: (x − 3) · (x + 2) = x · x + 2x − 3x − 6 = x · x − x − 6.",
+        "Então x · x − x − 6 = 0 tem raízes 3 e −2. Procure dois números que somam −1 (o número de x) e multiplicam −6.",
+        "Os dois números são −3 e +2, e os fatores são (x − 3) e (x + 2).",
+        "Se a grandeza não pode ser negativa (resistência, tempo), fica só a raiz positiva."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Achar os fatores",
+        "cabecalho": [
+          "Equação",
+          "Soma e produto",
+          "Fatores"
+        ],
+        "linhas": [
+          [
+            "x · x − x − 6 = 0",
+            "−3 + 2 = −1 e −3 · 2 = −6",
+            "(x − 3) · (x + 2)"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Quais as raízes de x · x − 2x − 15 = 0?",
+          "alternativas": [
+            "5 e −3",
+            "−5 e 3",
+            "5 e 3",
+            "−5 e −3"
+          ],
+          "certa": 0,
+          "resolucao": "5 e −3: −5 + 3 = −2 e −5 · 3 = −15, então (x − 5) · (x + 3) = 0.\n−5 e 3 troca os sinais; 5 e 3 e −5 e −3 erram a soma ou o produto."
+        },
+        {
+          "enunciado": "A resistência R não é negativa e R · R − 4R − 12 = 0. Quanto vale R?",
+          "alternativas": [
+            "6",
+            "2",
+            "12",
+            "4"
+          ],
+          "certa": 0,
+          "resolucao": "6: −6 + 2 = −4 e −6 · 2 = −12, então (R − 6) · (R + 2) = 0; R = 6 (−2 não serve).\n2 é a raiz negativa trocada; 12 e 4 são só números da equação."
+        }
+      ]
+    },
+    "fun-composta": {
+      "titulo": "Aplicar uma regra duas vezes: f(f(x))",
+      "linhas": [
+        "f(x) é o resultado da regra f quando entra x. Aplicar duas vezes é pôr esse resultado de novo na regra: f(f(x)).",
+        "Exemplo: f(x) = 2x + 1. f(3) = 2 · 3 + 1 = 7. Depois f(f(3)) = f(7) = 2 · 7 + 1 = 15.",
+        "Em letras: f(f(x)) = 2 · (2x + 1) + 1 = 4x + 3. Conferindo com x = 3: 4 · 3 + 3 = 15.",
+        "Uma regra pode voltar ao começo: se g(x) = 5 − x, então g(g(x)) = 5 − (5 − x) = x."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Aplicando f(x) = 2x + 1 duas vezes",
+        "cabecalho": [
+          "Entra x",
+          "f(x)",
+          "f(f(x))"
+        ],
+        "linhas": [
+          [
+            "1",
+            "3",
+            "7"
+          ],
+          [
+            "2",
+            "5",
+            "11"
+          ],
+          [
+            "3",
+            "7",
+            "15"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Se f(x) = 3x − 2, quanto vale f(f(2))?",
+          "alternativas": [
+            "10",
+            "4",
+            "8",
+            "7"
+          ],
+          "certa": 0,
+          "resolucao": "10: f(2) = 3 · 2 − 2 = 4, e f(4) = 3 · 4 − 2 = 10.\n4 é só a 1ª aplicação; 8 e 7 erram a segunda conta."
+        },
+        {
+          "enunciado": "Se g(x) = 5 − x, quanto vale g(g(7))?",
+          "alternativas": [
+            "7",
+            "−2",
+            "5",
+            "12"
+          ],
+          "certa": 0,
+          "resolucao": "7: g(7) = 5 − 7 = −2, e g(−2) = 5 − (−2) = 7.\n−2 é só a 1ª aplicação; 5 e 12 erram o sinal."
+        }
+      ]
+    },
+    "fun-periodicidade": {
+      "titulo": "Ciclo que se repete e a divisão com resto",
+      "linhas": [
+        "Se uma regra volta ao começo depois de 3 aplicações, ela repete em ciclo: 1ª, 2ª, 3ª, e de novo 1ª, 2ª, 3ª...",
+        "Para saber onde cai a 100ª aplicação, divida por 3 e olhe só o resto.",
+        "Exemplo: 100 ÷ 3 = 33 e sobra 1, porque 33 · 3 = 99. A 100ª cai onde cai a 1ª.",
+        "Resto 0 vale como o fim do ciclo (3ª): 99 ÷ 3 = 33 e sobra 0, então a 99ª cai onde cai a 3ª."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Onde cai a aplicação de número n",
+        "cabecalho": [
+          "n",
+          "Conta",
+          "Cai em"
+        ],
+        "linhas": [
+          [
+            "100",
+            "100 = 33 · 3 + 1",
+            "1ª"
+          ],
+          [
+            "99",
+            "99 = 33 · 3 + 0",
+            "3ª"
+          ],
+          [
+            "2 000",
+            "2 000 = 666 · 3 + 2",
+            "2ª"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Um ciclo de 3 passos se repete. Em qual passo do ciclo cai a 50ª aplicação?",
+          "alternativas": [
+            "2º passo",
+            "1º passo",
+            "3º passo",
+            "16º passo"
+          ],
+          "certa": 0,
+          "resolucao": "2º passo: 50 ÷ 3 = 16 e sobra 2, porque 16 · 3 = 48.\n16 é o número de voltas completas, não o passo."
+        },
+        {
+          "enunciado": "Em um ciclo de 3 passos, em qual passo cai a 60ª aplicação?",
+          "alternativas": [
+            "3º passo",
+            "1º passo",
+            "2º passo",
+            "20º passo"
+          ],
+          "certa": 0,
+          "resolucao": "3º passo: 60 ÷ 3 = 20 e sobra 0, que vale o fim do ciclo.\n20 é o número de voltas completas, não o passo."
+        }
+      ]
+    },
+    "fun-discriminante": {
+      "titulo": "Discriminante: a equação de 2º grau tem raiz real?",
+      "linhas": [
+        "Em ax² + bx + c = 0, o discriminante é Δ = b² − 4ac. Ele diz quantas raízes reais a equação tem.",
+        "Δ positivo: duas raízes reais diferentes. Δ = 0: uma só. Δ negativo: nenhuma raiz real.",
+        "Exemplo: x² − 5x + 6 = 0. Δ = 25 − 24 = 1, positivo: duas raízes (2 e 3).",
+        "Exemplo: x² − x + 1 = 0. Δ = (−1)² − 4 · 1 · 1 = 1 − 4 = −3, negativo: nenhuma raiz real."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Sinal de Δ e raízes reais",
+        "cabecalho": [
+          "Δ",
+          "Raízes reais"
+        ],
+        "linhas": [
+          [
+            "positivo",
+            "2, diferentes"
+          ],
+          [
+            "zero",
+            "1"
+          ],
+          [
+            "negativo",
+            "nenhuma"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Quantas raízes reais tem x² − 4x + 5 = 0?",
+          "alternativas": [
+            "Nenhuma",
+            "Uma",
+            "Duas",
+            "Quatro"
+          ],
+          "certa": 0,
+          "resolucao": "Nenhuma: Δ = (−4)² − 4 · 1 · 5 = 16 − 20 = −4, negativo.\nDuas só se Δ fosse positivo."
+        },
+        {
+          "enunciado": "Quantas raízes reais tem x² − 6x + 9 = 0?",
+          "alternativas": [
+            "Uma",
+            "Nenhuma",
+            "Duas",
+            "Três"
+          ],
+          "certa": 0,
+          "resolucao": "Uma: Δ = (−6)² − 4 · 1 · 9 = 36 − 36 = 0.\nD = 0 dá uma raiz só (x = 3)."
+        }
+      ]
+    },
+    "fun-biquadrada": {
+      "titulo": "Equação com t⁴: troque t² por u",
+      "linhas": [
+        "Em t⁴ − 5t² + 4 = 0, note que t⁴ = t² · t². Chame t² de u: fica u² − 5u + 4 = 0, de 2º grau.",
+        "Ache u e volte: t² = u. Cada u positivo dá 2 valores de t (a raiz e o oposto); u = 0 dá 1; u negativo não dá nenhum.",
+        "Exemplo: u = 1 e u = 4 servem. Então t = 1, −1, 2, −2: são 4 soluções."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Quantos t dá cada u",
+        "cabecalho": [
+          "u",
+          "t² = u",
+          "Soluções em t"
+        ],
+        "linhas": [
+          [
+            "4",
+            "t² = 4",
+            "2 (t = 2 e t = −2)"
+          ],
+          [
+            "0",
+            "t² = 0",
+            "1 (t = 0)"
+          ],
+          [
+            "−4",
+            "t² = −4",
+            "nenhuma"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Quantas soluções reais tem t² = 9?",
+          "alternativas": [
+            "2",
+            "1",
+            "3",
+            "0"
+          ],
+          "certa": 0,
+          "resolucao": "2: t = 3 e t = −3.\n1 só valeria para t² = 0; 0 só para t² negativo."
+        },
+        {
+          "enunciado": "Em t⁴ − 5t² + 4 = 0, quantas soluções reais existem?",
+          "alternativas": [
+            "4",
+            "2",
+            "3",
+            "1"
+          ],
+          "certa": 0,
+          "resolucao": "4: u = 1 e u = 4 dão t = 1, −1, 2 e −2.\nContar só as duas raízes de u dá 2."
+        }
+      ]
+    },
+    "gra-hora-minuto-decimal": {
+      "titulo": "Minutos em horas e segundos em minutos",
+      "linhas": [
+        "Para passar minutos para horas, divida por 60. 30 min são meia hora: 0,5 h. 15 min são 0,25 h. 45 min são 0,75 h.",
+        "Então 7 h 30 min = 7 + 0,5 = 7,5 h. E 8 h 15 min = 8 + 0,25 = 8,25 h.",
+        "O mesmo vale para segundos: 0,75 min · 60 = 45 s. Então 63,75 min = 63 min e 45 s.",
+        "63 min = 60 min + 3 min = 1 h 03 min. Logo 63,75 min = 1 h 03 min 45 s."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Minutos em horas",
+        "cabecalho": [
+          "Tempo",
+          "Conta",
+          "Em horas"
+        ],
+        "linhas": [
+          [
+            "15 min",
+            "15 ÷ 60",
+            "0,25 h"
+          ],
+          [
+            "30 min",
+            "30 ÷ 60",
+            "0,5 h"
+          ],
+          [
+            "45 min",
+            "45 ÷ 60",
+            "0,75 h"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Uma máquina trabalha 6 h 30 min por dia. Quantas horas por dia são, em decimal?",
+          "alternativas": [
+            "6,5 h",
+            "6,3 h",
+            "6,05 h",
+            "630 h"
+          ],
+          "certa": 0,
+          "resolucao": "6,5 h: 30 min são meia hora, 0,5 h; 6 + 0,5 = 6,5.\n6,3 é ler 6 h 30 como 6,30; 6,05 é 5 em vez de 50; 630 é juntar os números."
+        },
+        {
+          "enunciado": "Quanto é 2,5 min em minutos e segundos?",
+          "alternativas": [
+            "2 min 30 s",
+            "2 min 50 s",
+            "2 min 5 s",
+            "2 min 15 s"
+          ],
+          "certa": 0,
+          "resolucao": "2 min 30 s: 0,5 min · 60 = 30 s, então 2,5 min = 2 min 30 s.\n2 min 50 s lê o 0,5 como 50; 2 min 5 s tira um zero; 2 min 15 s é 0,25 min."
+        }
+      ]
+    },
+    "gra-mostrador-12h": {
+      "titulo": "Relógio de ponteiros: o mostrador de 12 horas",
+      "linhas": [
+        "O relógio de ponteiros tem 12 números e não diz manhã ou tarde. Passou de 12 h, o ponteiro dá uma volta e recomeça.",
+        "Por isso 3 h da tarde (15 h) mostra o mesmo que 3 h da manhã: a diferença é 12 h.",
+        "Dois relógios mostram a mesma hora quando a diferença entre eles é 0, 12, 24, 36 h... ou seja, um múltiplo de 12.",
+        "Exemplo: 5 h e 17 h mostram o mesmo (17 − 5 = 12). 2 h e 9 h não (9 − 2 = 7)."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Mesma hora no mostrador",
+        "cabecalho": [
+          "Hora",
+          "Mais 12 h",
+          "Mostra"
+        ],
+        "linhas": [
+          [
+            "3 h",
+            "15 h",
+            "3"
+          ],
+          [
+            "5 h",
+            "17 h",
+            "5"
+          ],
+          [
+            "9 h",
+            "21 h",
+            "9"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Um relógio de ponteiros mostra 4 h. Daqui a 30 horas, que hora ele mostra?",
+          "alternativas": [
+            "10 h",
+            "4 h",
+            "6 h",
+            "34 h"
+          ],
+          "certa": 0,
+          "resolucao": "10 h: 4 + 30 = 34; tire 12 duas vezes (24): 34 − 24 = 10.\n4 h é ignorar as 30 h; 6 h é tirar só 30 − 24; 34 h não existe no mostrador."
+        },
+        {
+          "enunciado": "Qual par de horas mostra a mesma coisa no relógio de ponteiros?",
+          "alternativas": [
+            "3 h e 15 h",
+            "3 h e 14 h",
+            "3 h e 18 h",
+            "3 h e 10 h"
+          ],
+          "certa": 0,
+          "resolucao": "3 h e 15 h: 15 − 3 = 12, um múltiplo de 12.\n14 − 3 = 11, 18 − 3 = 15 e 10 − 3 = 7 não são múltiplos de 12."
+        }
+      ]
+    },
+    "pla-area-circulo": {
+      "titulo": "Área do círculo e do semicírculo",
+      "linhas": [
+        "A área de um círculo é π · r · r, onde r é o raio. O raio é a metade do diâmetro.",
+        "Diâmetro 10: raio 5, e a área é π · 5 · 5 = 25π. Pode deixar o π escrito: 25π.",
+        "Semicírculo é metade do círculo, então a área é a metade. Diâmetro 10: 25π ÷ 2 = 12,5π.",
+        "Outro: diâmetro 6, raio 3. Círculo: π · 9 = 9π. Semicírculo: 9π ÷ 2 = 4,5π."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Círculo e semicírculo",
+        "cabecalho": [
+          "Diâmetro",
+          "Raio",
+          "Círculo",
+          "Semicírculo"
+        ],
+        "linhas": [
+          [
+            "10",
+            "5",
+            "25π",
+            "12,5π"
+          ],
+          [
+            "6",
+            "3",
+            "9π",
+            "4,5π"
+          ],
+          [
+            "4",
+            "2",
+            "4π",
+            "2π"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Um semicírculo tem diâmetro 8. Qual é a área dele, em função de π?",
+          "alternativas": [
+            "8π",
+            "16π",
+            "4π",
+            "32π"
+          ],
+          "certa": 0,
+          "resolucao": "8π: raio 4, círculo π · 16 = 16π, e a metade é 8π.\n16π é o círculo inteiro; 4π é a área do círculo de raio 2; 32π dobra em vez de dividir."
+        },
+        {
+          "enunciado": "Um semicírculo tem diâmetro 12. Qual é a área dele, em função de π?",
+          "alternativas": [
+            "18π",
+            "36π",
+            "72π",
+            "12π"
+          ],
+          "certa": 0,
+          "resolucao": "18π: raio 6, círculo π · 36 = 36π, e a metade é 18π.\n36π é o círculo inteiro; 72π dobra; 12π usa o diâmetro no lugar de r · r ÷ 2."
+        }
+      ]
+    },
+    "pla-area-triangulo": {
+      "titulo": "Área do triângulo: base, altura e meio",
+      "linhas": [
+        "A área de um triângulo é base · altura ÷ 2. A altura é a distância da ponta oposta até a base, em ângulo reto.",
+        "Base 12 e altura 5: 12 · 5 = 60, e 60 ÷ 2 = 30.",
+        "Qualquer lado pode ser a base. A altura é então a distância da ponta oposta até aquele lado.",
+        "No triângulo com canto reto, os dois lados do canto servem: um é a base e o outro, a altura. Lados 6 e 8: 6 · 8 ÷ 2 = 24."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Três triângulos",
+        "cabecalho": [
+          "Base",
+          "Altura",
+          "Base · altura",
+          "Área"
+        ],
+        "linhas": [
+          [
+            "12",
+            "5",
+            "60",
+            "30"
+          ],
+          [
+            "6",
+            "8",
+            "48",
+            "24"
+          ],
+          [
+            "10",
+            "3",
+            "30",
+            "15"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Um triângulo tem base 10 e altura 6. Qual é a área?",
+          "alternativas": [
+            "30",
+            "60",
+            "16",
+            "8"
+          ],
+          "certa": 0,
+          "resolucao": "30: 10 · 6 = 60, e 60 ÷ 2 = 30.\n60 esquece de dividir por 2; 16 soma em vez de multiplicar; 8 é a diferença."
+        },
+        {
+          "enunciado": "Um triângulo tem base 8 e altura 3. Qual é a área?",
+          "alternativas": [
+            "12",
+            "24",
+            "11",
+            "5,5"
+          ],
+          "certa": 0,
+          "resolucao": "12: 8 · 3 = 24, e 24 ÷ 2 = 12.\n24 esquece de dividir por 2; 11 soma; 5,5 é (8 + 3) ÷ 2."
+        }
+      ]
+    },
+    "pla-inscrito": {
+      "titulo": "Círculo dentro do triângulo: o raio",
+      "linhas": [
+        "O círculo inscrito encosta nos três lados por dentro. O raio até o ponto onde encosta forma canto reto com o lado.",
+        "Ligue o centro aos 3 vértices: o triângulo vira 3 triângulos, todos de altura r. A área de cada um é lado · r ÷ 2.",
+        "Somando: área = (lado + lado + lado) · r ÷ 2. A soma dos lados é o perímetro, e a metade dele é o semiperímetro.",
+        "Então área = semiperímetro · r, e r = área ÷ semiperímetro. Lados 3, 4, 5: área 6, semiperímetro 12 ÷ 2 = 6, r = 6 ÷ 6 = 1."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Raio do círculo inscrito",
+        "cabecalho": [
+          "Lados",
+          "Área",
+          "Semiperímetro",
+          "Raio"
+        ],
+        "linhas": [
+          [
+            "3, 4, 5",
+            "6",
+            "6",
+            "1"
+          ],
+          [
+            "6, 8, 10",
+            "24",
+            "12",
+            "2"
+          ],
+          [
+            "5, 12, 13",
+            "30",
+            "15",
+            "2"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Um triângulo de lados 9, 12 e 15 tem canto reto. Qual é o raio do círculo inscrito?",
+          "alternativas": [
+            "3",
+            "6",
+            "4,5",
+            "18"
+          ],
+          "certa": 0,
+          "resolucao": "3: área 9 · 12 ÷ 2 = 54, semiperímetro (9 + 12 + 15) ÷ 2 = 18, e 54 ÷ 18 = 3.\n6 divide por 9; 4,5 divide por 12; 18 é o semiperímetro, não o raio."
+        },
+        {
+          "enunciado": "Um triângulo de lados 8, 15 e 17 tem canto reto. Qual é o raio do círculo inscrito?",
+          "alternativas": [
+            "3",
+            "60",
+            "20",
+            "5"
+          ],
+          "certa": 0,
+          "resolucao": "3: área 8 · 15 ÷ 2 = 60, semiperímetro (8 + 15 + 17) ÷ 2 = 20, e 60 ÷ 20 = 3.\n60 é a área; 20 é o semiperímetro; 5 divide por 12."
+        }
+      ]
     }
   },
   "questoes": {
@@ -1101,87 +3571,111 @@
       "isomeros"
     ],
     "d2-escada-fis-ita-cin-00a": [
-      "velocidade"
+      "velocidade",
+      "hora-em-minutos"
     ],
     "d2-escada-fis-ita-cin-00b": [
       "queda",
       "pitagoras"
     ],
     "d2-escada-fis-ita-cin-00c": [
+      "aceleracao",
+      "queda",
       "velocidade"
     ],
     "d2-escada-fis-ita-cin-00d": [
-      "numero-que-falta"
+      "divisores-e-par-impar",
+      "soma-em-degraus",
+      "velocidade"
     ],
     "d2-escada-fis-ita-din-00a": [
       "aceleracao"
     ],
     "d2-escada-fis-ita-din-00b": [
-      "aceleracao",
-      "queda",
-      "seno-cosseno"
+      "seno-cosseno",
+      "pitagoras",
+      "aceleracao"
     ],
     "d2-escada-fis-ita-din-00c": [
-      "aceleracao"
+      "aceleracao",
+      "queda"
     ],
     "d2-escada-fis-ita-din-00d": [
       "queda",
       "curva"
     ],
     "d2-escada-fis-ita-ter-00a": [
-      "numero-que-falta",
-      "multiplicar-decimais"
+      "calor-especifico",
+      "porcentagem",
+      "dividir-por-decimal"
     ],
     "d2-escada-fis-ita-ter-00b": [
-      "potencia-de-dez"
+      "gas-ideal",
+      "potencia-de-dez",
+      "fracoes"
     ],
     "d2-escada-fis-ita-ter-00c": [
-      "numero-que-falta"
+      "calor-especifico",
+      "mudanca-de-fase",
+      "porcentagem"
     ],
     "d2-escada-fis-ita-ter-00d": [
-      "numero-que-falta"
+      "resistencia-termica",
+      "produto-zero",
+      "potencia-de-dez",
+      "fracoes"
     ],
     "d2-escada-fis-ita-ond-00a": [
-      "velocidade",
-      "multiplicar-decimais"
-    ],
-    "d2-escada-fis-ita-ond-00b": [
       "velocidade"
     ],
+    "d2-escada-fis-ita-ond-00b": [
+      "curva",
+      "dividir-por-decimal",
+      "ond-incognita-dos-dois-lados"
+    ],
     "d2-escada-fis-ita-ond-00c": [
-      "velocidade",
+      "numero-que-falta",
       "dividir-por-decimal"
     ],
     "d2-escada-fis-ita-ond-00d": [
-      "velocidade",
-      "numero-que-falta"
+      "ond-divisor-comum"
     ],
     "d2-escada-fis-ita-opt-00a": [
-      "fracoes",
-      "numero-que-falta"
+      "opt-gauss-aumento",
+      "velocidade",
+      "multiplicar-decimais",
+      "dividir-por-decimal"
     ],
     "d2-escada-fis-ita-opt-00b": [
-      "fracoes",
-      "dividir-por-decimal"
+      "opt-fabricantes",
+      "opt-gauss-aumento",
+      "opt-indice-meio",
+      "fracoes"
     ],
     "d2-escada-fis-ita-opt-00c": [
-      "potencia-de-dez",
-      "dividir-por-decimal"
+      "opt-reflexao-total",
+      "opt-indice-meio",
+      "dividir-por-decimal",
+      "potencia-de-dez"
     ],
     "d2-escada-fis-ita-opt-00d": [
-      "velocidade"
+      "opt-espelho-desdobrado",
+      "opt-mmc",
+      "pitagoras"
     ],
     "d2-escada-fis-ita-ele-00a": [
+      "ele-calor-especifico",
       "porcentagem",
-      "multiplicar-decimais"
+      "dividir-por-decimal"
     ],
     "d2-escada-fis-ita-ele-00b": [
-      "numero-que-falta",
-      "multiplicar-decimais"
+      "ele-baterias-paralelo",
+      "ele-calor-especifico",
+      "numero-que-falta"
     ],
     "d2-escada-fis-ita-ele-00c": [
-      "numero-que-falta",
-      "fracoes"
+      "ele-prefixos",
+      "dividir-por-decimal"
     ],
     "d2-escada-fis-ita-ele-00d": [
       "fracoes"
@@ -1193,16 +3687,147 @@
     "d2-escada-mat-ita-ari-00b": [
       "porcentagem",
       "fracoes",
-      "dividir-por-decimal"
+      "multiplicar-decimais"
     ],
     "d2-escada-mat-ita-ari-00c": [
       "porcentagem",
-      "numero-que-falta",
-      "dividir-por-decimal"
+      "multiplicar-decimais",
+      "dividir-por-decimal",
+      "numero-que-falta"
     ],
     "d2-escada-mat-ita-ari-00d": [
       "porcentagem",
+      "fracoes",
+      "ari-multiplos"
+    ],
+    "d2-escada-mat-ita-com-00b": [
+      "com-probabilidade",
+      "com-combinacao",
+      "fracoes"
+    ],
+    "d2-escada-mat-ita-com-00a": [
+      "com-probabilidade",
+      "com-condicional",
+      "fracoes"
+    ],
+    "d2-escada-mat-ita-com-00c": [
+      "porcentagem",
+      "com-bayes",
+      "fracoes"
+    ],
+    "d2-escada-mat-ita-com-00d": [
+      "com-probabilidade",
+      "com-combinacao",
+      "numero-que-falta"
+    ],
+    "d2-escada-mat-ita-equ-00a": [
+      "porcentagem",
       "multiplicar-decimais",
+      "numero-que-falta",
+      "equ-margem-sobre-a-venda"
+    ],
+    "d2-escada-mat-ita-equ-00b": [
+      "fracoes",
+      "numero-que-falta",
+      "equ-sistema-infinito"
+    ],
+    "d2-escada-mat-ita-equ-00d": [
+      "numero-que-falta",
+      "equ-raiz-de-equacao"
+    ],
+    "d2-escada-mat-ita-equ-00c": [
+      "multiplicar-decimais",
+      "dividir-por-decimal",
+      "numero-que-falta"
+    ],
+    "d2-escada-mat-ita-esp-00b": [
+      "esp-razao-volume",
+      "esp-raiz-cubica",
+      "multiplicar-decimais"
+    ],
+    "d2-escada-mat-ita-esp-00c": [
+      "pitagoras",
+      "esp-quadrado-da-soma"
+    ],
+    "d2-escada-mat-ita-esp-00d": [
+      "esp-quanto-maior-em-percentual",
+      "fracoes",
+      "porcentagem"
+    ],
+    "d2-escada-mat-ita-esp-00a": [
+      "esp-razao-volume",
+      "multiplicar-decimais",
+      "dividir-por-decimal"
+    ],
+    "d2-escada-mat-ita-est-00a": [
+      "multiplicar-decimais",
+      "numero-que-falta"
+    ],
+    "d2-escada-mat-ita-est-00b": [
+      "est-mediana-posicao"
+    ],
+    "d2-escada-mat-ita-est-00c": [
+      "porcentagem",
+      "dividir-por-decimal",
+      "numero-que-falta"
+    ],
+    "d2-escada-mat-ita-est-00d": [
+      "est-soma-de-1-a-n",
+      "numero-que-falta",
+      "multiplicar-decimais"
+    ],
+    "d2-escada-mat-ita-fun-00a": [
+      "numero-que-falta"
+    ],
+    "d2-escada-mat-ita-fun-00b": [
+      "fun-composta",
+      "fracoes"
+    ],
+    "d2-escada-mat-ita-fun-00c": [
+      "fun-biquadrada"
+    ],
+    "d2-escada-mat-ita-fun-00d": [
+      "fun-composta",
+      "fun-periodicidade",
+      "fun-discriminante"
+    ],
+    "d2-escada-mat-ita-gra-00b": [
+      "velocidade",
+      "dividir-por-decimal",
+      "gra-hora-minuto-decimal"
+    ],
+    "d2-escada-mat-ita-gra-00c": [
+      "porcentagem",
+      "fracoes",
+      "potencia-de-dez"
+    ],
+    "d2-escada-mat-ita-gra-00d": [
+      "gra-mostrador-12h",
+      "velocidade"
+    ],
+    "d2-escada-mat-ita-gra-00a": [
+      "potencia-de-dez",
+      "porcentagem"
+    ],
+    "d2-escada-mat-ita-pla-00b": [
+      "pitagoras",
+      "pla-area-circulo",
+      "pla-area-triangulo",
+      "fracoes"
+    ],
+    "d2-escada-mat-ita-pla-00c": [
+      "pitagoras",
+      "pla-inscrito",
+      "pla-area-circulo",
+      "multiplicar-decimais"
+    ],
+    "d2-escada-mat-ita-pla-00d": [
+      "pla-area-triangulo",
+      "numero-que-falta"
+    ],
+    "d2-escada-mat-ita-pla-00a": [
+      "multiplicar-decimais",
+      "porcentagem",
       "dividir-por-decimal"
     ]
   }
