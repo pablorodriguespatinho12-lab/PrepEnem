@@ -945,22 +945,26 @@
   "tema": "Estatística",
   "nivel": "acima",
   "origem": "Escada",
-  "ancora": "forte · ENEM 2022 q.163 (caderno 7; q.136 no caderno 5: média ponderada de dois grupos de professores e uma meta para a média geral); aqui são três grupos de alunos, um deles com média desconhecida, em quadro",
+  "ancora": "forte · ENEM 2022 q.163 (caderno 7; q.136 no caderno 5: média ponderada de dois grupos de professores e uma meta para a média geral); aqui são três turmas com pesos em % e em razão, um grupo fora da conta e a média de uma turma desconhecida",
   "canal": "mat-44-medias-estatistica.txt [27:20:00] (média ponderada: valor × peso, somar e dividir pelo total de pesos)",
-  "enunciado": "Numa escola pública, a coordenação acompanha a média de Matemática de cada turma. No fim do bimestre, o 8º A, com 30 alunos, teve média 5,8 na prova. No começo do bimestre seguinte, a direção recebeu 10 alunos transferidos de duas outras escolas, 5 vindos da escola X e 5 vindos da escola Y, e juntou todos numa única turma de 40 alunos. As notas que os transferidos já tinham foram aproveitadas, e o quadro mostra o que se sabe. Pelo regimento, a turma só é considerada aprovada no bimestre se a média dos 40 alunos for 6,0 ou mais, e as notas do 8º A não podem ser alteradas. A coordenadora quer saber qual precisa ser, no mínimo, a média dos 5 alunos vindos da escola Y para a turma chegar a 6,0.\n\nGrupo | Alunos | Média na prova\n8º A | 30 | 5,8\nEscola X | 5 | 7,0\nEscola Y | 5 | ?\nTurma final | 40 | 6,0 (mínimo)\n\nEssa média deverá ser de:\n\nDados: 8º A original: 30 alunos, média 5,8; Escola X: 5 alunos, média 7,0; Escola Y: 5 alunos, média ?; Turma final: 40 alunos, média 6,0 (mínimo).",
-  "A": "5,0",
-  "B": "5,8",
-  "C": "6,0",
-  "D": "6,6",
-  "E": "6,2",
+  "enunciado": "Uma escola acompanha a média de Matemática das três turmas do 9º ano. O quadro mostra o que se sabe da última prova. A média 6,5 do 9º B inclui 6 alunos que fizeram uma prova adaptada e tiraram 8,0 cada um; a coordenação decidiu tirar esses 6 alunos do cálculo da escola, e as notas dos demais continuam valendo. A meta é que a média das três turmas, sem esses 6 alunos, seja de 6,2, no mínimo. Qual precisa ser, no mínimo, a média do 9º C para a escola atingir a meta?\n\nTurma | Alunos | Média na prova\n9º A | 30 | 5,8\n9º B | 20% a mais que o 9º A | 6,5\n9º C | 4 para cada 5 do 9º A | ?\n\nEssa média deverá ser de:\n\nDados: 9º A: 30 alunos, média 5,8; 9º B: 20% a mais que o 9º A, média 6,5; 9º C: 4 alunos para cada 5 do 9º A, média ?; Fora da conta: 6 alunos do 9º B, nota 8,0 cada; Meta: média 6,2 no mínimo, sem esses 6.",
+  "A": "4,7",
+  "B": "6,25",
+  "C": "6,3",
+  "D": "6,85",
+  "E": "6,7",
   "resposta": "E",
   "explicacao": {
-   "conferencia": "Pontos que a turma de 40 precisa: 40 · 6,0 = 240. Já tem 30 · 5,8 = 174 e a escola X dá 5 · 7,0 = 35. Faltam 240 − 174 − 35 = 31, e 31 ÷ 5 = 6,2. Resposta: alternativa E. Erros: Alternativa A = Fez 2 · 6,0 − 7,0 e ignorou os 30 alunos; Alternativa B = Repetiu a média da turma antiga; Alternativa C = Repetiu a meta da turma; Alternativa D = Parou na média dos 10 transferidos juntos: 66 ÷ 10.",
-   "ideia": "Ache quantos pontos a turma precisa ter no total e tire o que já tem. O que sobra é da escola Y: divida pelos 5 alunos dela.",
+   "conferencia": "Alunos que contam: 30 + 30 + 24 = 84; pontos que a escola precisa: 84 · 6,2 = 520,8. O 9º A tem 174 e o 9º B, sem os 6, tem 234 − 48 = 186. Faltam 520,8 − 174 − 186 = 160,8, e 160,8 ÷ 24 = 6,7. Resposta: alternativa E. Erros: Alternativa A = Tirou os 6 alunos do número de alunos, mas deixou as notas deles nos pontos do 9º B; Alternativa B = Esqueceu de tirar os 6 alunos da conta; Alternativa C = Fez a média simples das médias, sem pesos: 3 · 6,2 − 5,8 − 6,5; Alternativa D = Leu \"20% a mais\" como \"20% a menos\": o 9º B teria 24 alunos.",
+   "ideia": "Os pesos vêm escondidos: 20% a mais e 4 para cada 5 viram número de alunos. Tire do 9º B os 6 alunos e as notas deles, ache os pontos que a escola precisa e desconte os do 9º A e do 9º B.",
    "pecas": [
     {
      "termo": "Média",
      "significado": "A soma das notas dividida pela quantidade de alunos. Por isso soma = média × quantidade."
+    },
+    {
+     "termo": "Média ponderada",
+     "significado": "Média de turmas de tamanhos diferentes: some os pontos de cada turma e divida pelo total de alunos."
     }
    ],
    "passos": [
@@ -974,6 +978,16 @@
         "figura": "media",
         "nome": "Média",
         "formula": "soma ÷ quantidade; soma = média × quantidade"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "20% a mais",
+        "formula": "novo = antigo × 1,20"
+       },
+       {
+        "figura": "texto",
+        "nome": "Razão 4 para 5",
+        "formula": "turma C = 4/5 da turma A"
        }
       ]
      }
@@ -990,66 +1004,86 @@
       ],
       "linhas": [
        [
-        "8º A original",
+        "9º A",
         "30 alunos, média 5,8"
        ],
        [
-        "Escola X",
-        "5 alunos, média 7,0"
+        "9º B",
+        "20% a mais que o 9º A, média 6,5"
        ],
        [
-        "Escola Y",
-        "5 alunos, média ?"
+        "9º C",
+        "4 alunos para cada 5 do 9º A, média ?"
        ],
        [
-        "Turma final",
-        "40 alunos, média 6,0 (mínimo)"
+        "Fora da conta",
+        "6 alunos do 9º B, nota 8,0 cada"
+       ],
+       [
+        "Meta",
+        "média 6,2 no mínimo, sem esses 6"
        ]
       ]
      }
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A turma precisa de um total de pontos. Tirando os pontos do 8º A e da escola X, o que sobra é da escola Y, e dividimos pelos 5 alunos.\nAgora é só achar P, O e X, uma por vez.",
+     "texto": "A escola precisa de um total de pontos. Tirando os pontos do 9º A e os do 9º B que contam, o que sobra é do 9º C, e dividimos pelos alunos dele.\nO quadro não dá o número de alunos do 9º B nem do 9º C: primeiro acho H e L. Depois T, W e Q, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "M = (P − O − X) ÷ 5",
-      "leitura": "pontos que faltam para a escola Y ÷ 5 alunos",
+      "formula": "M = (T − W − Q) ÷ L",
+      "leitura": "média do 9º C = pontos que faltam para o 9º C ÷ alunos do 9º C",
       "letras": [
        {
         "letra": "M",
-        "oque": "média da escola Y (o que a questão quer)"
+        "oque": "média do 9º C (o que a questão quer)"
        },
        {
-        "letra": "P",
-        "oque": "pontos que a turma de 40 precisa ter"
+        "letra": "T",
+        "oque": "pontos que a escola precisa, sem os 6 alunos"
        },
        {
-        "letra": "O",
-        "oque": "pontos da turma original, o 8º A"
+        "letra": "W",
+        "oque": "pontos do 9º A"
        },
        {
-        "letra": "X",
-        "oque": "pontos da escola X"
+        "letra": "Q",
+        "oque": "pontos do 9º B que contam, sem os 6"
+       },
+       {
+        "letra": "H",
+        "oque": "alunos do 9º B"
+       },
+       {
+        "letra": "L",
+        "oque": "alunos do 9º C"
        }
       ]
      }
     },
     {
-     "titulo": "Achando P: pontos que a turma precisa",
-     "texto": "Média × número de alunos = pontos no total.\n40 alunos · 6,0 = 240 pontos. P = 240."
+     "titulo": "Achando H: alunos do 9º B",
+     "texto": "20% a mais que o 9º A: 20% de 30 = 30 ÷ 5 = 6 (20 de cada 100 é 1 de cada 5).\nH = 30 + 6 = 36 alunos."
     },
     {
-     "titulo": "Achando O: pontos da turma original",
-     "texto": "30 · 5,8: 30 · 5 = 150 e 30 · 0,8 = 24. Então 150 + 24 = 174 pontos. O = 174."
+     "titulo": "Achando L: alunos do 9º C",
+     "texto": "4 para cada 5 do 9º A. Em 30 alunos do 9º A cabem 30 ÷ 5 = 6 grupos de 5.\nCada grupo vale 4 do 9º C: 6 · 4 = 24. L = 24 alunos."
     },
     {
-     "titulo": "Achando X: pontos da escola X",
-     "texto": "5 alunos · 7,0 = 35 pontos. X = 35."
+     "titulo": "Achando T: pontos que a escola precisa",
+     "texto": "Alunos que contam: 30 + (36 − 6) + 24 = 30 + 30 + 24 = 84.\nPontos = média × alunos: 84 · 6,2. 84 · 6 = 504 e 84 · 0,2 = 16,8. Então 504 + 16,8 = 520,8. T = 520,8."
+    },
+    {
+     "titulo": "Achando W: pontos do 9º A",
+     "texto": "30 · 5,8: 30 · 5 = 150 e 30 · 0,8 = 24.\nEntão 150 + 24 = 174. W = 174."
+    },
+    {
+     "titulo": "Achando Q: pontos do 9º B que contam",
+     "texto": "Os 36 alunos do 9º B somam 36 · 6,5: 36 · 6 = 216 e 36 · 0,5 = 18, então 234 pontos.\nOs 6 que saem somam 6 · 8,0 = 48.\nQ = 234 − 48 = 186 (de 30 alunos)."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "M = (240 − 174 − 35) ÷ 5.\n240 − 174 = 66 e 66 − 35 = 31, então M = 31 ÷ 5.\n5 · 6 = 30, sobra 1, e 1 ÷ 5 = 0,2. Então M = 6,2.\nResposta: alternativa E. Conferindo: 174 + 35 + 5 · 6,2 = 174 + 35 + 31 = 240, e 240 ÷ 40 = 6,0.",
+     "texto": "M = (520,8 − 174 − 186) ÷ 24.\n520,8 − 174 = 346,8 e 346,8 − 186 = 160,8. Então M = 160,8 ÷ 24.\n24 · 6 = 144 e sobra 160,8 − 144 = 16,8. 24 · 0,7 = 16,8. Então M = 6 + 0,7 = 6,7.\nResposta: alternativa E. Conferindo: 174 + 186 + 24 · 6,7 = 174 + 186 + 160,8 = 520,8, e 520,8 ÷ 84 = 6,2.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -1059,27 +1093,35 @@
       ],
       "linhas": [
        [
-        "P",
-        "240 pontos"
+        "H",
+        "36 alunos"
        ],
        [
-        "O",
+        "L",
+        "24 alunos"
+       ],
+       [
+        "T",
+        "520,8 pontos"
+       ],
+       [
+        "W",
         "174 pontos"
        ],
        [
-        "X",
-        "35 pontos"
+        "Q",
+        "186 pontos"
        ],
        [
         "M",
-        "6,2"
+        "6,7"
        ]
       ]
      }
     },
     {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: média de grupos com um grupo desconhecido → ache o total de pontos que a turma precisa e tire os pontos dos grupos que você já conhece.",
+     "texto": "Pista: média de turmas com pesos escondidos → ponha cada peso em número de alunos, tire do cálculo o que o texto manda tirar, ache os pontos que a escola precisa e desconte os que já tem.",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -1090,19 +1132,19 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "8º A: 30 e 5,8; escola X: 5 e 7,0; escola Y: 5 e ?"
+        "9º A: 30 e 5,8; 9º B: 36 e 6,5, menos 6 de 8,0; 9º C: 24 e ?"
        ],
        [
         "1. Tabela do que eu tenho (cont.)",
-        "turma: 40 e 6,0"
+        "meta 6,2"
        ],
        [
         "2. Equação em letras",
-        "M = (P − O − X) ÷ 5"
+        "M = (T − W − Q) ÷ L"
        ],
        [
         "3. Uma letra por vez",
-        "P = 240; O = 174; X = 35; M = 6,2"
+        "H = 36; L = 24; T = 520,8; W = 174; Q = 186; M = 6,7"
        ]
       ]
      }
@@ -1206,7 +1248,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Os pares que servem têm pelo menos um 6. Separei em dois grupos para contar sem repetir: os dois 6 e um só 6.\nAntes de achar P e Q, vejo o que a mediana exige das 2 notas novas.",
+     "texto": "Vou descobrir que, para dar certo, os pares têm de ter pelo menos um 6. Separo em dois grupos para contar sem repetir: os dois 6 e um só 6.\nPrimeiro vem o preparo: o que a mediana exige das 2 notas novas. Depois acho P e Q.",
      "visual": {
       "tipo": "equacao",
       "formula": "N = P + Q",
@@ -1228,19 +1270,19 @@
      }
     },
     {
-     "titulo": "Achando P: a mediana de 13 notas",
+     "titulo": "Preparo: a mediana de 13 notas",
      "texto": "Mediana é a nota do meio, com as notas em fila da menor para a maior. Com 13 notas há 6 de cada lado e a do meio é a 7ª. (Conta: (13 + 1) ÷ 2 = 7.)\nPara a 7ª valer 6, as 2 notas novas têm de encaixar certo na fila."
     },
     {
-     "titulo": "Achando P: o que as 11 notas já têm",
+     "titulo": "Preparo: o que as 11 notas já têm",
      "texto": "Em fila: 4, 4, 5, 5, 5, 7, 7, 7, 8, 8, 10.\nAbaixo de 6 há 5 notas (4, 4, 5, 5, 5) e ninguém tirou 6. Acima de 6 há 6 notas. A nota mínima de aprovação (6) não entra na conta."
     },
     {
-     "titulo": "Achando P: duas regras para a 7ª ser 6",
-     "texto": "(1) No máximo 6 notas ficam abaixo do 6, senão o 6 passa do 7º lugar.\n(2) Até o 6, contando ele, ficam pelo menos 7 notas, senão o 6 não chega ao 7º lugar."
+     "titulo": "Preparo: duas regras para a 7ª ser 6",
+     "texto": "(1) No máximo 6 notas ficam abaixo do 6, senão o 6 passa do 7º lugar.\n(2) Até o 6, contando ele, ficam pelo menos 7 notas, senão o 6 não chega ao 7º lugar.\nExemplo: fila 3, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 10 (13 notas): o 6 é o 7º e antes dele há 6 notas. Com 7 notas antes, ele seria o 8º."
     },
     {
-     "titulo": "Achando P: traduzindo para as 2 notas novas",
+     "titulo": "Preparo: traduzindo para as 2 notas novas",
      "texto": "Hoje são 5 abaixo de 6. Regra (1): no máximo uma nova é menor que 6 (5 + 1 = 6 cabe; 5 + 2 = 7 não cabe).\nRegra (2): até o 6 hoje há 5 notas; para chegar a 7, as duas novas são menores ou iguais a 6."
     },
     {
@@ -1347,7 +1389,7 @@
   "origem": "Escada",
   "ancora": "parcial · ENEM 2021 q.173 (caderno 5; coeficiente de variação = desvio ÷ média, trocar só se o novo CV for menor; o PDF está ilegível, li o texto do banco do site) com o quadro antes e depois da Fuvest 2025 2ª fase M02; não achei real com reajuste e abono fixo sobre média e desvio",
   "canal": "fora do canal: coeficiente de variação não aparece; média e desvio-padrão em mat-45-medias-de-dispersao-estatistica.txt [28:24:01]",
-  "enunciado": "Uma empresa tem 8 funcionários. Hoje o salário médio deles é R$ 2 500,00 e o desvio-padrão é R$ 300,00. O coeficiente de variação (CV) de um grupo é o desvio-padrão dividido pela média, e a empresa só divulga a folha de pagamento se o CV for menor que 10%. Hoje o CV é 12%, e a folha não pode ser divulgada. A diretoria decidiu dar a todos um reajuste de 10% sobre o salário e, depois do reajuste, um abono mensal do mesmo valor para cada funcionário, em reais inteiros. O quadro resume a situação.\n\nSituação | Média (R$) | Desvio-padrão (R$) | CV\nHoje | 2 500 | 300 | 12%\nDepois do reajuste e do abono | ? | ? | menor que 10%\n\nQual é o menor valor inteiro do abono, em reais, que permite à empresa divulgar a folha?\n\nDados: Hoje: média R$ 2 500, desvio-padrão R$ 300, CV 12%; Reajuste: 10% sobre o salário de todos; Abono: mesmo valor para todos, depois do reajuste; Divulga se: CV menor que 10%; Quero: menor abono inteiro, em reais.",
+  "enunciado": "Uma empresa tem 8 funcionários. Hoje o salário médio deles é R$ 2 500,00 e o desvio-padrão é R$ 300,00. O coeficiente de variação (CV) de um grupo é o desvio-padrão dividido pela média, e a empresa só divulga a folha de pagamento se o CV for menor que 10%. Hoje o CV é 12%, e a folha não pode ser divulgada. A diretoria decidiu dar a todos um reajuste de 10% sobre o salário e, depois do reajuste, um abono mensal do mesmo valor para cada funcionário, em reais inteiros. O quadro resume a situação.\n\nSituação | Média (R$) | Desvio-padrão (R$) | CV\nHoje | 2 500 | 300 | 12%\nDepois do reajuste e do abono | ? | ? | menor que 10%\n\nQual é o menor valor inteiro do abono, em reais, que permite à empresa divulgar a folha?\n\nDados: Hoje: média R$ 2 500 e desvio-padrão R$ 300; Reajuste: 10% sobre o salário de todos; Abono: mesmo valor para todos, depois do reajuste; Divulga se: CV menor que 10%; Quero: menor abono inteiro, em reais.",
   "A": "R$ 251",
   "B": "R$ 551",
   "C": "R$ 501",
@@ -1355,12 +1397,16 @@
   "E": "R$ 801",
   "resposta": "B",
   "explicacao": {
-   "conferencia": "Depois do reajuste: média 2 750 e desvio 330. O abono soma na média e não muda o desvio. CV < 0,10 pede 330 < 0,10 · (2 750 + R), ou seja 2 750 + R > 3 300 e R > 550. Menor inteiro: 551. Resposta: alternativa B. Erros: Alternativa A = Não reajustou o desvio (ficou 300): 300 ÷ (2 750 + R) < 0,10 dá R > 250; Alternativa C = Pôs o abono antes do reajuste: 330 ÷ (1,10 · (2 500 + R)) < 0,10 dá R > 500; Alternativa D = Aceitou CV igual a 10%: 330 ÷ 3 300 = 0,10 não é menor que 0,10; Alternativa E = Não reajustou a média (ficou 2 500): 330 ÷ (2 500 + R) < 0,10 dá R > 800.",
+   "conferencia": "Depois do reajuste: média 2 750 e desvio 330. O abono soma na média e não muda o desvio. CV < 0,10 pede 330 < 0,10 · (2 750 + G), ou seja 2 750 + G > 3 300 e G > 550. Menor inteiro: 551. Resposta: alternativa B. Erros: Alternativa A = Não reajustou o desvio (ficou 300): 300 ÷ (2 750 + G) < 0,10 dá G > 250; Alternativa C = Pôs o abono antes do reajuste: 330 ÷ (1,10 · (2 500 + G)) < 0,10 dá G > 500; Alternativa D = Aceitou CV igual a 10%: 330 ÷ 3 300 = 0,10 não é menor que 0,10; Alternativa E = Não reajustou a média (ficou 2 500): 330 ÷ (2 500 + G) < 0,10 dá G > 800.",
    "ideia": "O reajuste de 10% multiplica a média e o desvio por 1,10; o abono fixo soma só na média, o desvio não muda. O desvio tem de ficar abaixo de 1/10 da média nova.",
    "pecas": [
     {
+     "termo": "Desvio-padrão",
+     "significado": "Quanto os valores se afastam da média, em geral. Quanto maior, mais espalhados."
+    },
+    {
      "termo": "Coeficiente de variação",
-     "significado": "Desvio-padrão ÷ média. Compara o tamanho do desvio com o tamanho da média, sem unidade."
+     "significado": "Desvio-padrão ÷ média. Compara o tamanho do desvio com o da média, sem unidade."
     },
     {
      "termo": "Abono fixo",
@@ -1387,7 +1433,7 @@
        {
         "figura": "texto",
         "nome": "Abono fixo",
-        "formula": "média + R; o desvio não muda"
+        "formula": "média + G; o desvio não muda"
        }
       ]
      }
@@ -1405,7 +1451,7 @@
       "linhas": [
        [
         "Hoje",
-        "média R$ 2 500, desvio-padrão R$ 300, CV 12%"
+        "média R$ 2 500 e desvio-padrão R$ 300"
        ],
        [
         "Reajuste",
@@ -1428,14 +1474,14 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "CV menor que 10% quer dizer desvio menor que 1/10 da média, ou média maior que 10 vezes o desvio. A média nova é M + R, e o desvio novo é S.\nAgora é só achar S e M, uma por vez.",
+     "texto": "CV menor que 10% quer dizer desvio menor que 1/10 da média, ou média maior que 10 vezes o desvio. Teste: média 1 000 e desvio 90; 90 é menos que 1/10 de 1 000 (100), e 1 000 é mais que 10 · 90 = 900. A média nova é M + G; o desvio novo é S.",
      "visual": {
       "tipo": "equacao",
-      "formula": "R > 10 × S − M",
+      "formula": "G > 10 × S − M",
       "leitura": "o abono precisa levar a média nova a mais de 10 vezes o desvio novo",
       "letras": [
        {
-        "letra": "R",
+        "letra": "G",
         "oque": "abono, em reais (o que a questão quer)"
        },
        {
@@ -1450,8 +1496,16 @@
      }
     },
     {
+     "titulo": "A equação em letras (2 de 2)",
+     "texto": "Os 8 funcionários e o CV de 12% de hoje estão no enunciado, mas não entram na conta.\nAgora é só achar S e M, uma por vez."
+    },
+    {
      "titulo": "Achando S: o desvio depois do reajuste",
-     "texto": "O reajuste multiplica todos os salários por 1,10, e o desvio cresce na mesma proporção.\n300 · 1,10 = 300 + 30 = 330. O abono é igual para todos e só desloca os salários: não muda o desvio. S = 330."
+     "texto": "Desvio-padrão é o quanto os salários se afastam da média. Exemplo: 2 000 e 3 000, média 2 500, afastamento 500. Com reajuste de 10%: 2 200 e 3 300, média 2 750, afastamento 550 (500 · 1,1). Com abono de 100: 2 300 e 3 400, os dois sobem 100 e o afastamento segue 550."
+    },
+    {
+     "titulo": "Achando S: o desvio depois do reajuste (2 de 2)",
+     "texto": "Aqui: 300 · 1,10 = 300 + 30 = 330. O abono não muda o desvio. S = 330."
     },
     {
      "titulo": "Achando M: a média depois do reajuste",
@@ -1459,7 +1513,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "O CV novo é 330 ÷ (2 750 + R) e precisa ser menor que 0,10.\nDividir por 0,10 é multiplicar por 10: 10 · 330 = 3 300, e a média nova precisa passar de 3 300.\n2 750 + R > 3 300, então R > 3 300 − 2 750 = 550. O menor inteiro é 551.",
+     "texto": "O CV novo é 330 ÷ (2 750 + G) e tem de ser menor que 0,10.\n330 ÷ (algo) < 0,10 quer dizer que \"algo\" tem de ser maior que 330 ÷ 0,10 = 3 300 (cabem 10 desvios na média).\n2 750 + G > 3 300, então G > 3 300 − 2 750 = 550. O menor inteiro é 551.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -1477,7 +1531,7 @@
         "R$ 2 750"
        ],
        [
-        "R",
+        "G",
         "mais de R$ 550, logo R$ 551"
        ]
       ]
@@ -1485,7 +1539,7 @@
     },
     {
      "titulo": "Volta na equação (2 de 2)",
-     "texto": "Resposta: alternativa B. Conferindo: com 551, 330 ÷ 3 301 é cerca de 0,09997; com 550, 330 ÷ 3 300 = 0,10 exato, que não é menor."
+     "texto": "Resposta: alternativa B. Conferindo: 2 750 + 551 = 3 301, e 330 ÷ 3 301 é um pouco menos que 330 ÷ 3 300 = 0,1, então é menor que 0,10. Com 550 dá exatamente 0,10, que não é menor."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -1504,11 +1558,11 @@
        ],
        [
         "2. Equação em letras",
-        "R > 10 × S − M"
+        "G > 10 × S − M"
        ],
        [
         "3. Uma letra por vez",
-        "S = 330; M = 2 750; R > 550, logo 551"
+        "S = 330; M = 2 750; G > 550, logo 551"
        ]
       ]
      }
@@ -1534,9 +1588,9 @@
   "tema": "Estatística",
   "nivel": "acima",
   "origem": "Escada",
-  "ancora": "parcial · HMMT fev/2021 Guts q.1 (inteiros consecutivos com um apagado) e q.6 (a média vira uma soma); sem real do tema com média dada e n desconhecido, a técnica é a dessas duas",
-  "canal": "mat-44-medias-estatistica.txt [27:19:31] (média = soma dos valores ÷ quantidade); soma de 1 até n fora do canal (aula Antes)",
-  "enunciado": "Os números inteiros de 1 até n foram escritos numa lista, e um deles foi apagado. O valor de n não foi informado. A média dos números que sobraram na lista é 20,6. Qual foi o número apagado?\n\nDados: Lista: os inteiros de 1 até n, n desconhecido; Apagado: um dos números da lista; Média dos que sobraram: 20,6; Quero: o número apagado.",
+  "ancora": "parcial · HMMT fev/2021 Guts q.1 (inteiros consecutivos com um apagado) e q.6 (a média vira uma soma); sem real do tema com média dada e N desconhecido, a técnica é a dessas duas",
+  "canal": "mat-44-medias-estatistica.txt [27:19:31] (média = soma dos valores ÷ quantidade); soma de 1 até N fora do canal (aula Antes)",
+  "enunciado": "Os números inteiros de 1 até N foram escritos numa lista, e um deles foi apagado. O valor de N não foi informado. A média dos números que sobraram na lista é 20,6. Qual foi o número apagado?\n\nDados: Lista: os inteiros de 1 até N, N desconhecido; Apagado: um dos números da lista; Média dos que sobraram: 20,6; Quero: o número apagado.",
   "A": "17",
   "B": "21",
   "C": "37",
@@ -1544,16 +1598,16 @@
   "E": "41",
   "resposta": "C",
   "explicacao": {
-   "conferencia": "A média prende n entre 39,2 e 41,2, logo n é 40 ou 41; só n = 41 dá soma inteira (40 · 20,6 = 824). A lista soma 861, então o apagado é 861 − 824 = 37. Resposta: alternativa C. Erros: Alternativa A = Supôs n = 40 e arredondou: 820 − 39 · 20,6 = 820 − 803,4 = 16,6; Alternativa B = Arredondou a média 20,6 e respondeu um número perto dela; Alternativa D = Respondeu quantos números sobraram, em vez do apagado; Alternativa E = Respondeu o maior número da lista (n), em vez do apagado.",
-   "ideia": "Apagar um número só mexe pouco na média: ela fica entre n ÷ 2 e (n + 2) ÷ 2, e isso prende n. Depois, soma total menos soma dos que sobraram dá o apagado.",
+   "conferencia": "A média prende N entre 39,2 e 41,2, logo N é 40 ou 41; só N = 41 dá soma inteira (40 · 20,6 = 824). A lista soma 861, então o apagado é 861 − 824 = 37. Resposta: alternativa C. Erros: Alternativa A = Supôs N = 40 e arredondou: 820 − 39 · 20,6 = 820 − 803,4 = 16,6; Alternativa B = Arredondou a média 20,6 e respondeu um número perto dela; Alternativa D = Respondeu quantos números sobraram, em vez do apagado; Alternativa E = Respondeu o maior número da lista (N), em vez do apagado.",
+   "ideia": "Apagar um número só mexe pouco na média: ela fica entre N ÷ 2 e (N + 2) ÷ 2, e isso prende N. Depois, soma total menos soma dos que sobraram dá o apagado.",
    "pecas": [
     {
      "termo": "Média",
      "significado": "Soma ÷ quantidade, então soma = média × quantidade."
     },
     {
-     "termo": "Soma de 1 a n",
-     "significado": "n × (n + 1) ÷ 2."
+     "termo": "Soma de 1 a N",
+     "significado": "N × (N + 1) ÷ 2."
     }
    ],
    "passos": [
@@ -1570,8 +1624,8 @@
        },
        {
         "figura": "contagem",
-        "nome": "Soma de 1 até n",
-        "formula": "n × (n + 1) ÷ 2"
+        "nome": "Soma de 1 até N",
+        "formula": "N × (N + 1) ÷ 2"
        },
        {
         "figura": "texto",
@@ -1594,7 +1648,7 @@
       "linhas": [
        [
         "Lista",
-        "os inteiros de 1 até n, n desconhecido"
+        "os inteiros de 1 até N, N desconhecido"
        ],
        [
         "Apagado",
@@ -1613,7 +1667,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A soma de tudo menos a soma do que sobrou é o número que saiu. Mas N não foi dado: primeiro preciso achar N.\nAgora é só achar N, S e R, uma por vez.",
+     "texto": "A soma de tudo menos a soma do que sobrou é o número que saiu. Mas N não foi dado, e S e R dependem dele: primeiro acho N.\nDepois acho S e R, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "K = S − R",
@@ -1624,31 +1678,35 @@
         "oque": "número apagado (o que a questão quer)"
        },
        {
-        "letra": "N",
-        "oque": "quantos números a lista tinha antes de apagar"
-       },
-       {
         "letra": "S",
         "oque": "soma de todos os números de 1 até N"
        },
        {
         "letra": "R",
         "oque": "soma dos N − 1 números que sobraram"
+       },
+       {
+        "letra": "N",
+        "oque": "quantos números a lista tinha antes de apagar (não está na fórmula, mas S e R dependem dele)"
        }
       ]
      }
     },
     {
      "titulo": "Achando N: onde a média prende N",
-     "texto": "Apagar o maior número (N) deixa a média mais baixa possível: N ÷ 2. Apagar o 1 deixa a mais alta: (N + 2) ÷ 2.\nConferindo com 1 a 5: sem o 5 a média é 2,5; sem o 1 é 3,5.\nEntão N ÷ 2 ≤ 20,6 ≤ (N + 2) ÷ 2."
+     "texto": "Apagar o maior número (N) deixa a média mais baixa possível: N ÷ 2. Apagar o 1 deixa a mais alta: (N + 2) ÷ 2.\nExemplo, 1 a 7 (soma 28): sem o 7 sobra 21 em 6 números, média 3,5 = 7 ÷ 2; sem o 1 sobra 27 em 6, média 4,5 = (7 + 2) ÷ 2. Apagar um do meio dá média entre 3,5 e 4,5."
+    },
+    {
+     "titulo": "Achando N: onde a média prende N (2 de 2)",
+     "texto": "Aqui: N ÷ 2 ≤ 20,6 ≤ (N + 2) ÷ 2."
     },
     {
      "titulo": "Achando N: só dois valores servem",
-     "texto": "N ÷ 2 ≤ 20,6 dá N ≤ 41,2.\n(N + 2) ÷ 2 ≥ 20,6 dá N + 2 ≥ 41,2, então N ≥ 39,2.\nComo N é inteiro, N é 40 ou 41."
+     "texto": "≤ lê-se \"menor ou igual\". N ÷ 2 ≤ 20,6: multiplico os dois lados por 2 (20,6 · 2 = 41,2) e fica N ≤ 41,2.\n(N + 2) ÷ 2 ≥ 20,6 dá N + 2 ≥ 41,2, então N ≥ 41,2 − 2 = 39,2.\nComo N é inteiro, N é 40 ou 41."
     },
     {
      "titulo": "Achando N: só um dos dois fecha",
-     "texto": "Sobram N − 1 números, e a soma deles é um número inteiro.\nCom N = 40: 39 · 20,6 = 780 + 23,4 = 803,4, que não é inteiro.\nCom N = 41: 40 · 20,6 = 800 + 24 = 824, que é inteiro. Então N = 41."
+     "texto": "Sobram N − 1 números, e a soma deles é um número inteiro.\nCom N = 40: 39 · 20,6. 39 · 20 = 780 e 39 · 0,6: 39 · 6 = 234, uma casa: 23,4. Soma 803,4, que não é inteiro.\nCom N = 41: 40 · 20,6 = 800 + 24 = 824, que é inteiro. Então N = 41."
     },
     {
      "titulo": "Achando S: a soma de 1 até 41",
@@ -1690,7 +1748,7 @@
     },
     {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: n não foi dado → a média prende n (entre n ÷ 2 e (n + 2) ÷ 2); depois, soma de 1 até n menos média × quantidade dá o apagado.",
+     "texto": "Pista: N não foi dado → a média prende N (entre N ÷ 2 e (N + 2) ÷ 2); depois, soma de 1 até N menos média × quantidade dá o apagado.",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -1701,7 +1759,7 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "lista de 1 até n; um apagado; média 20,6"
+        "lista de 1 até N; um apagado; média 20,6"
        ],
        [
         "2. Equação em letras",

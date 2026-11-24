@@ -75,3 +75,11 @@ numa sessão e é evitável.
   ~15.000 numa única sessão — incluindo `arkts/` (HarmonyOS, stack que este
   projeto não usa) a ~6.100 tokens sozinho. Nenhuma instrução compensa isso;
   é decisão de arquivo em disco, no escopo global do usuário.
+
+## Ideias da web (24/11/2026, conferidas só como leitura; % dos autores NÃO provado aqui)
+Fontes: dev.to "9 ways to cut token consumption", alexgreensh/token-optimizer, JuliusBrussee/caveman.
+- **Medido aqui:** carga fixa por sessão ≈ 19 KB (~5 mil tokens: 2 CLAUDE.md, licoes, MEMORY.md). `decisoes-prepenem` tem 52 KB (~13 mil tokens) por carga: só carregar quando mexer em UI/IA/taxonomia; candidata a dividir em arquivos de `references/` lidos sob demanda.
+- Caveman (resposta curta): o autor diz -65% de SAÍDA, mas só ~4% da sessão inteira (leitura de arquivo e agente pesam mais). O estilo TDAH do Pablo já faz isso: não instalar.
+- Filtrar saída longa antes de ler: `| tail -20`, `| grep -c`, `--seco`; nunca despejar log de build/teste inteiro.
+- `/context` mostra quem ocupa espaço; `/usage` antes e depois de lote grande.
+- Lote repetido (módulos v2): colar no pedido do agente o que ele iria buscar e reusar o agente com `SendMessage`.

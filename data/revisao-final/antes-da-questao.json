@@ -1782,17 +1782,17 @@
       ]
     },
     "est-soma-de-1-a-n": {
-      "titulo": "Somar 1 + 2 + 3 + ... + n",
+      "titulo": "Somar 1 + 2 + 3 + ... + N",
       "linhas": [
-        "Junte o 1º com o último, o 2º com o penúltimo, e assim por diante. Cada par soma n + 1.",
-        "Em 1 até 10 há 5 pares, cada um somando 11: 5 · 11 = 55. Em fórmula: n · (n + 1) ÷ 2 = 10 · 11 ÷ 2 = 55.",
+        "Junte o 1º com o último, o 2º com o penúltimo, e assim por diante. Cada par soma N + 1.",
+        "Em 1 até 10 há 5 pares, cada um somando 11: 5 · 11 = 55. Em fórmula: N · (N + 1) ÷ 2 = 10 · 11 ÷ 2 = 55.",
         "Outro: 1 até 41 é 41 · 42 ÷ 2. Como 41 · 42 = 1 680 + 42 = 1 722, a soma é 1 722 ÷ 2 = 861."
       ],
       "visual": {
         "tipo": "tabela",
-        "titulo": "Somas de 1 até n",
+        "titulo": "Somas de 1 até N",
         "cabecalho": [
-          "Até n",
+          "Até N",
           "Conta",
           "Soma"
         ],
@@ -6297,6 +6297,119 @@
           "resolucao": "diretas: dobra uma e a outra também dobra.\nInversas seriam se os dias caíssem à metade."
         }
       ]
+    },
+    "est-media-e-soma": {
+      "titulo": "Média: soma ÷ quantidade, e soma = média × quantidade",
+      "linhas": [
+        "Média é o valor que cada um teria se todos fossem iguais. Some tudo e divida pela quantidade.",
+        "Dois alunos tiram 4 e 6: soma 10, média 10 ÷ 2 = 5.",
+        "Ao contrário: média 5 com 2 alunos. Soma = média × quantidade = 5 · 2 = 10.",
+        "Isso vale para somar grupos: some os pontos de cada grupo (média × alunos) e divida pelo total de alunos."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Média e soma",
+        "cabecalho": [
+          "Quero",
+          "Conta",
+          "Exemplo"
+        ],
+        "linhas": [
+          [
+            "Média",
+            "soma ÷ quantidade",
+            "10 ÷ 2 = 5"
+          ],
+          [
+            "Soma",
+            "média × quantidade",
+            "5 · 2 = 10"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Qual é a média de 8, 6 e 7?",
+          "alternativas": [
+            "7",
+            "21",
+            "6",
+            "8"
+          ],
+          "certa": 0,
+          "resolucao": "7: a soma é 8 + 6 + 7 = 21, e 21 ÷ 3 = 7.\n21 é a soma, que falta dividir por 3; 6 e 8 são só dois dos valores."
+        },
+        {
+          "enunciado": "4 alunos têm média 5. Quantos pontos eles somam?",
+          "alternativas": [
+            "20",
+            "9",
+            "1,25",
+            "5"
+          ],
+          "certa": 0,
+          "resolucao": "20: soma = média × quantidade = 5 · 4 = 20.\n9 soma 5 + 4; 1,25 é 5 ÷ 4; 5 é só a média."
+        }
+      ]
+    },
+    "est-desvio-padrao": {
+      "titulo": "Desvio-padrão: o quanto os valores se afastam da média",
+      "linhas": [
+        "O desvio-padrão diz, em geral, quanto os valores se afastam da média. Valores todos iguais: desvio 0.",
+        "Exemplo: 2 000 e 3 000. A média é 2 500 e cada um está a 500 dela. O desvio-padrão é 500.",
+        "Multiplicar todos por 1,1 afasta 10% mais: 2 200 e 3 300, média 2 750, desvio 550.",
+        "Somar o mesmo valor a todos só desloca: 2 300 e 3 400 seguem a 550 da média. O desvio não muda."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Os dois movimentos",
+        "cabecalho": [
+          "Mudança",
+          "Valores",
+          "Desvio"
+        ],
+        "linhas": [
+          [
+            "Nenhuma",
+            "2 000 e 3 000",
+            "500"
+          ],
+          [
+            "× 1,1",
+            "2 200 e 3 300",
+            "550"
+          ],
+          [
+            "+ 100",
+            "2 100 e 3 100",
+            "500"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Os valores 4 e 8 têm média 6. Qual é o desvio-padrão deles?",
+          "alternativas": [
+            "2",
+            "4",
+            "6",
+            "1"
+          ],
+          "certa": 0,
+          "resolucao": "2: cada valor está a 2 da média (6 − 4 = 2 e 8 − 6 = 2).\n4 é a distância entre os dois valores; 6 é a média."
+        },
+        {
+          "enunciado": "Os valores 10 e 30 têm desvio 10. Somando 5 a cada um (15 e 35), qual é o novo desvio?",
+          "alternativas": [
+            "10",
+            "15",
+            "5",
+            "20"
+          ],
+          "certa": 0,
+          "resolucao": "10: somar o mesmo valor a todos só desloca e o afastamento da média segue o mesmo.\n15 e 5 misturam o 5 somado com o desvio."
+        }
+      ]
     }
   },
   "questoes": {
@@ -6626,18 +6739,22 @@
       "dividir-por-decimal"
     ],
     "d2-escada-mat-ita-est-00a": [
-      "multiplicar-decimais",
-      "numero-que-falta"
+      "est-media-e-soma",
+      "porcentagem",
+      "fracoes",
+      "multiplicar-decimais"
     ],
     "d2-escada-mat-ita-est-00b": [
       "est-mediana-posicao"
     ],
     "d2-escada-mat-ita-est-00c": [
+      "est-desvio-padrao",
       "porcentagem",
       "dividir-por-decimal",
       "numero-que-falta"
     ],
     "d2-escada-mat-ita-est-00d": [
+      "est-media-e-soma",
       "est-soma-de-1-a-n",
       "numero-que-falta",
       "multiplicar-decimais"
