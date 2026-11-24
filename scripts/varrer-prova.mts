@@ -94,12 +94,14 @@ async function main() {
   const achados: string[] = [];
   const erros = new Set<string>();
   page.on('pageerror', (e) => erros.add(`JS: ${e.message.slice(0, 120)}`));
+  page.on('response', (r) => { if (r.status() >= 400) erros.add(`HTTP ${r.status()}: ${r.url().slice(0, 100)} (questão ${atual})`); });
   page.on('console', (m) => { if (m.type() === 'error') erros.add(`console: ${m.text().slice(0, 120)}`); });
   await page.route('**/api/**', (route) => {
     const req = route.request();
     if (req.method() !== 'GET' && !req.url().includes('/api/tutor/explicacao')) return route.fulfill({ json: {} });
     return route.continue();
   });
+  let atual = '';
   let totalPassos = 0;
   let totalQuestoes = 0;
   for (const id of PROVAS) {
@@ -113,6 +115,7 @@ async function main() {
       const marca = `${exam.nome} #${i + 1}`;
       try {
         const qid = questoes[i].question.id;
+        atual = qid;
         const foto = FOTOS && abrir(qid) ? `${FOTOS}/${qid}.png` : undefined;
         if ((SO_ESCADA || SO_IDS) && !abrir(qid)) {
           await page.locator(`[data-alt="${questoes[i].question.respostaCorreta}"]`).first().click();
