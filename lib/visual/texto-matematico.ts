@@ -62,7 +62,52 @@ const MACROS_KATEX = {
   '\\novo': '{#1}',
   '\\corta': '\\cancel{#1}',
 };
+/* Tabela escrita com barras (Pablo, 24/11/2026: "Documento | Como foi feito | Escala" na tela
+   "não fica legal"): 2 ou mais linhas seguidas com " | " viram <table>. Cada célula passa pelo
+   mesmo renderizador, então fórmula e **negrito** continuam funcionando dentro dela. */
+const LINHA_DE_TABELA = /^[^|\n]+(?: \| [^|\n]+)+$/;
+const CLASSE_CELULA = 'border px-1.5 sm:px-3 py-1.5 text-left align-top';
+const ESTILO_CELULA = 'border-color:hsl(var(--foreground) / 0.5)';
+
+function tabelaHtml(linhas: string[]): string {
+  const celulas = (l: string) => l.split(' | ').map((c) => renderizarCelula(c.trim()));
+  const [cab, ...corpo] = linhas.map(celulas);
+  const th = cab.map((c) => `<th style="${ESTILO_CELULA}" class="${CLASSE_CELULA} font-semibold bg-foreground/10">${c}</th>`).join('');
+  const tr = corpo.map((l) => `<tr>${l.map((c) => `<td style="${ESTILO_CELULA}" class="${CLASSE_CELULA}">${c}</td>`).join('')}</tr>`).join('');
+  return `<div class="my-3 overflow-x-auto"><table class="border-collapse w-full text-[0.85em] sm:text-[0.95em]"><thead><tr>${th}</tr></thead><tbody>${tr}</tbody></table></div>`;
+}
+
+function renderizarCelula(texto: string): string {
+  return renderizarSemTabela(texto);
+}
+
 export function renderizarTextoMatematico(texto: string): string {
+  if (!texto) return '';
+  const linhas = texto.split('\n');
+  if (!linhas.some((l) => LINHA_DE_TABELA.test(l))) return renderizarSemTabela(texto);
+  const blocos: string[] = [];
+  let corrente: string[] = [];
+  const fecharTexto = () => {
+    if (corrente.length) blocos.push(renderizarSemTabela(corrente.join('\n').replace(/^\n+|\n+$/g, '')));
+    corrente = [];
+  };
+  for (let i = 0; i < linhas.length; ) {
+    let j = i;
+    while (j < linhas.length && LINHA_DE_TABELA.test(linhas[j])) j++;
+    if (j - i >= 2) {
+      fecharTexto();
+      blocos.push(tabelaHtml(linhas.slice(i, j)));
+      i = j;
+    } else {
+      corrente.push(linhas[i]);
+      i++;
+    }
+  }
+  fecharTexto();
+  return blocos.join('');
+}
+
+function renderizarSemTabela(texto: string): string {
   if (!texto) return '';
   let saida = '';
   let ultimo = 0;
