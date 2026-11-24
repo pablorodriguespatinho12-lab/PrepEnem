@@ -58,3 +58,24 @@ test('milhar não quebra no meio: 1 000 vira espaço fixo (geladeira, 14/11/2026
   expect(r('fica 1 000 000')).toContain('1 000 000');
   expect(r('2 de 4 = 50%')).toContain('2 de 4');
 });
+
+describe('tabela escrita com barras', () => {
+  const texto = 'Veja:\n\nDocumento | Como foi feito | Escala\nPlanta | da prefeitura | 1 : 30 000\n1ª cópia | reduzida a 50% | não consta\n\nNa cópia, a área é:';
+  test('2 ou mais linhas com " | " viram tabela, sem barra solta', () => {
+    const html = r(texto);
+    expect(html).toContain('<table');
+    expect(html.match(/<th /g)?.length).toBe(3);
+    expect(html.match(/<tr>/g)?.length).toBe(3);
+    expect(html).not.toContain(' | ');
+    expect(html).toContain('Na cópia, a área é:');
+  });
+  test('uma linha só com barra não vira tabela', () => {
+    expect(r('A | B')).not.toContain('<table');
+  });
+  test('fórmula dentro da célula continua funcionando', () => {
+    expect(r('x | y\n$a^2$ | 5')).toContain('katex');
+  });
+  test('o texto da tabela continua escapado', () => {
+    expect(r('a | b\n<img src=x> | 2')).not.toContain('<img');
+  });
+});
