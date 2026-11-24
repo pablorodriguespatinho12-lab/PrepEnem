@@ -8,7 +8,15 @@ nextEnv.loadEnvConfig(process.cwd());
 const { PrismaClient } = await import('@prisma/client');
 const db = new PrismaClient();
 
-const NUMERO = /\d+[.,]\d+|\d{3,}/g;
+const NUMERO = /\d+[.,]\d+|\d{1,3}(?:\.\d{3})+|\d{3,}/g;
+
+/* Só texto que o aluno lê: coordenadas e tempos são número no JSON, não string. */
+function textos(no: unknown): string[] {
+  if (typeof no === 'string') return [no];
+  if (Array.isArray(no)) return no.flatMap(textos);
+  if (no && typeof no === 'object') return Object.values(no).flatMap(textos);
+  return [];
+}
 const LIMITE_TELAS = 3;
 
 const linhas = await db.question.findMany({
@@ -29,10 +37,10 @@ for (const q of linhas) {
   const escada = q.id.startsWith('d2-escada');
   if (!escada) foraEscada++;
   const numeros = [...new Set(q.enunciado.match(NUMERO) ?? [])];
-  const textos = cenas.map((c) => JSON.stringify(c));
+  const porTela = cenas.map((c) => textos(c).join(' '));
   let melhor = { n: '-', telas: 0 };
   for (const n of numeros) {
-    const telas = textos.filter((t) => t.includes(n)).length;
+    const telas = porTela.filter((t) => t.includes(n)).length;
     if (telas > melhor.telas) melhor = { n, telas };
   }
   if (melhor.telas >= LIMITE_TELAS) {

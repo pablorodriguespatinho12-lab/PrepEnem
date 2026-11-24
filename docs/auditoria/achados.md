@@ -35,7 +35,7 @@ SQL: Question left join ExplicacaoPronta where anoProva between 2019 and 2025.
 Comando: `DB_CONFIRMED=1 npx tsx scripts/auditar-repeticao-lousa.mts`
 - **52 de 90 repetem** um número do enunciado em 3+ telas (fora de escada: 5 de 12; escadas: 47 de 78).
 - Escadas: média de 598 letras de enunciado e 21 telas; 29 de 78 sem repetição, 17 com 8+ telas, 1 com 31 telas.
-- Falha conhecida do script: "1.000" vira "000" (separador de milhar). Corrigir antes de usar como teste.
+- Script corrigido (24/11): conta só TEXTO das telas (antes contava coordenada x=200 e milhar "1.000"). Resultado depois do conserto: **51 de 90** repetem (fora de escada 5 de 12); maior: 16 de 26 telas (0,75).
 - Isto responde o pedido do Pablo (regra 22): ~58% das lousas digitam o dado várias vezes.
 
 ## Plano dos lotes de conserto (ordem por dor, cada lote = 1 commit)
