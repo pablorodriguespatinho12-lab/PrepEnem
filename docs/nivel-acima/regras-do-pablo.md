@@ -28,6 +28,8 @@ Regra só escrita em memória não me obriga a olhar. Por isso: (1) ritual de ab
 | 12 | Abrir a prova na tela antes de dizer "está no site" (`scripts/varrer-prova.mts`) | testar-como-aluno-antes-de-entregar | processo (ver abaixo) |
 | 13 | Resposta escrita por extenso ("Resposta: alternativa B"), nunca "Letra B" | aluno-do-zero tipo 17 | teste |
 | 14 | Mostrar UMA amostra ao Pablo antes de gravar um lote novo (ele pode dispensar, como em 23/11) | nivel-acima-dificil-de-verdade | processo |
+| 15 | Toda questão de Mat/Fís tem aula em LOUSA (quadro do Universo Narrado), não o molde do robô: depois de gravar, rodar `scripts/lousa-do-robo.ts` e contar por SQL com `jsonb_typeof(conteudo->'lousa')='object'` (nunca LIKE) | Pablo 21/11 e 24/11 ("por que não fez") | processo (SQL) |
+| 16 | Tela real antes de "pronto": enunciado (tabela), "Não sei isso", correção e RECARREGAR no meio da questão | erros-da-sessao-24-11-o-que-ele-ve | processo (foto) |
 
 ## Lacunas abertas (23/11/2026)
 - **Regra 4:** Física tem 1 desenho (cubo) em 24; Matemática tem 9 desenhos em 28. Faltam ~9 desenhos de Física (plano inclinado, circuito série/paralelo, lente com raios, espelho, tubo, corda, projétil, encontro, escada rolante).

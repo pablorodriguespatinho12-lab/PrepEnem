@@ -35,6 +35,8 @@ const ANEIS_MS = [0, 90, 180];
    As já vistas ficam no navegador, para a próxima vez trazer outra. */
 type Reforco = { questao: any; figura: { nome: NomeFigura; rotulos?: string[] } | null };
 const CHAVE_REFORCO = 'prepenem:reforco-usadas';
+/* Qual correção estava aberta nesta aba (índice da questão): ver fetchExam. */
+const CHAVE_CORRECAO = (examId: string) => `prepenem:vendo-correcao:${examId}`;
 const lerUsadas = (): string[] => {
   try {
     return JSON.parse(localStorage.getItem(CHAVE_REFORCO) ?? '[]');
@@ -114,7 +116,19 @@ export default function ProvaDetailPage() {
         router.push('/provas');
         return;
       }
-      setExam(data.exam);
+      // Recarregou (Shift+R) lendo a correção: o servidor já avançou para a próxima no
+      // momento da resposta, então a tela abria na seguinte e a correção sumia
+      // (Pablo, 24/11/2026, questão da planta). A aba lembra qual correção estava aberta.
+      const lida = Number(sessionStorage.getItem(CHAVE_CORRECAO(examId)));
+      const anterior = data.exam.questions?.[lida];
+      if (data.exam.status !== 'finalizada' && sessionStorage.getItem(CHAVE_CORRECAO(examId)) !== null && lida === data.exam.currentIdx - 1 && anterior?.answered) {
+        setExam({ ...data.exam, currentIdx: lida });
+        setSelectedAnswer(anterior.respostaDada);
+        setFeedback({ acertou: anterior.acertou, respostaCorreta: anterior.question.respostaCorreta });
+        setSubmitted(true);
+      } else {
+        setExam(data.exam);
+      }
     } catch (e) {
       toast.error('Erro ao carregar prova');
     } finally {
@@ -333,6 +347,7 @@ export default function ProvaDetailPage() {
       marcarUsada(q.id);
       return;
     }
+    sessionStorage.setItem(CHAVE_CORRECAO(examId), String(exam.currentIdx));
     // Errou: já busca a parecida, para a "Próxima" trazer ela.
     if (!acertou) {
       buscarReforco(temaDaQuestao(q) ?? q.tema, q.id).then(setReforcoPronto);
@@ -367,6 +382,7 @@ export default function ProvaDetailPage() {
       return;
     }
     setReforcoAtivo(null);
+    sessionStorage.removeItem(CHAVE_CORRECAO(examId));
     if (isLast) {
       setFechando(true);
       await Promise.allSettled(salvando.current);
