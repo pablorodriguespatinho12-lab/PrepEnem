@@ -52,6 +52,20 @@ def linhas_dados(dados):
     return saida
 
 
+def ideia_em_duas_frases(texto):
+    """O validador (lib/tutor/validar.ts) aceita `ideia` com até 300 letras e 2 frases: junta as frases além da 2ª com "; "."""
+    partes = [p for p in re.split(r'(?<=[.!?])\s+', texto.strip()) if p]
+    if len(partes) <= 2:
+        return texto
+    resto = []
+    for p in partes[1:]:
+        p = p.rstrip('.!?')
+        if len(p) > 1 and p[0].isupper() and p[1].islower():
+            p = p[0].lower() + p[1:]
+        resto.append(p)
+    return partes[0] + ' ' + '; '.join(resto) + '.'
+
+
 def montar(q):
     alts = q['alts']  # [(texto, valor, motivo)] em ordem crescente
     certa = next(i for i, a in enumerate(alts) if abs(a[1] - q['calc']) < 1e-6 * max(1, abs(q['calc'])))
@@ -82,7 +96,7 @@ def montar(q):
         if len(achado) > 2:
             passo['visual'] = achado[2]
         passos.append(passo)
-    volta = re.sub(r'(Letra|Resposta: alternativa) [A-E]\.', f'Resposta: alternativa {LETRAS[certa]}.', q['volta'])
+    volta = re.sub(r'(Letra|Resposta: alternativa) [A-EX]\.', f'Resposta: alternativa {LETRAS[certa]}.', q['volta'])  # X = letra provisória dos autores v2
     passos.append({'titulo': 'Volta na equação', 'texto': volta,
                    'visual': {'tipo': 'tabela', 'titulo': 'As letras', 'cabecalho': ['Letra', 'Valor'], 'linhas': [list(l) for l in q['valores']]}})
     if q.get('porque'):
@@ -99,7 +113,7 @@ def montar(q):
         'enunciado': f"{q['enunciado']}\n\nDados: {dados}.",
         **{LETRAS[i]: a[0] for i, a in enumerate(alts)}, 'resposta': LETRAS[certa],
         'explicacao': {
-            'conferencia': conferencia, 'ideia': q['ideia'],
+            'conferencia': conferencia, 'ideia': ideia_em_duas_frases(q['ideia']),
             'pecas': [{'termo': t, 'significado': s} for t, s in q['pecas']],
             'passos': passos,
             'checagem': {'pergunta': c[0], 'opcoes': c[1], 'certa': c[2], 'resposta': c[3]},

@@ -65,6 +65,10 @@ describe.each([...NOVOS, ...LEGADO])('nível acima novo: %s', (arq) => {
     expect(qs.filter((q) => (QUESTOES_COM_ANTES[q.id] ?? []).length === 0).map((q) => q.id)).toEqual([]);
   });
 
+  it('nenhuma tela diz "alternativa X": a letra provisória tem de virar a letra certa', () => {
+    expect(qs.filter((q) => /alternativa X\b/.test(JSON.stringify(q.explicacao))).map((q) => q.id)).toEqual([]);
+  });
+
   it('a explicação diz a alternativa certa por extenso ("Resposta: alternativa X")', () => {
     expect(qs.filter((q) => !/Resposta: alternativa [A-E]\./.test(q.explicacao.conferencia)).map((q) => q.id)).toEqual([]);
   });
