@@ -1505,10 +1505,10 @@
             "1/8"
           ],
           [
-            "0,8",
-            "0,8",
-            "0,64",
-            "0,512"
+            "3",
+            "3 vezes",
+            "9 vezes",
+            "27 vezes"
           ]
         ]
       },
@@ -1601,65 +1601,65 @@
       ]
     },
     "esp-quadrado-da-soma": {
-      "titulo": "O quadrado de uma soma de três números",
+      "titulo": "O quadrado de uma soma de dois números",
       "linhas": [
         "Para dois números: (a + b)² = a² + b² + 2 · a · b. Teste: (2 + 3)² = 25 e 4 + 9 + 12 = 25.",
-        "Para três números: (a + b + c)² = a² + b² + c² + 2 · (a·b + b·c + c·a).",
-        "Teste com 1, 2 e 3: (1 + 2 + 3)² = 36. E 1 + 4 + 9 = 14; a·b + b·c + c·a = 2 + 6 + 3 = 11; 14 + 2 · 11 = 36.",
-        "Ao contrário: sabendo a soma e os produtos dois a dois, a² + b² + c² = (a + b + c)² − 2 · (a·b + b·c + c·a)."
+        "Por quê: (a + b) · (a + b) tem a · a, b · b e o produto a · b duas vezes (a · b e b · a).",
+        "Ao contrário: sabendo a soma e o produto, a² + b² = (a + b)² − 2 · a · b. Teste com 2 e 3: 25 − 12 = 13 = 4 + 9.",
+        "Cuidado: o 2 é obrigatório. (2 + 3)² = 25 não é 4 + 9 = 13."
       ],
       "visual": {
         "tipo": "tabela",
-        "titulo": "Três números",
+        "titulo": "Dois números",
         "cabecalho": [
           "Números",
-          "a + b + c",
-          "a² + b² + c²",
-          "a·b + b·c + c·a"
+          "a + b",
+          "a² + b²",
+          "a · b"
         ],
         "linhas": [
           [
-            "1, 2, 3",
+            "2, 3",
+            "5",
+            "13",
+            "6"
+          ],
+          [
+            "1, 4",
+            "5",
+            "17",
+            "4"
+          ],
+          [
+            "3, 3",
             "6",
-            "14",
-            "11"
-          ],
-          [
-            "2, 3, 4",
-            "9",
-            "29",
-            "26"
-          ],
-          [
-            "1, 1, 1",
-            "3",
-            "3",
-            "3"
+            "18",
+            "9"
           ]
         ]
       },
       "exercicios": [
         {
-          "enunciado": "Três números somam 10 e a soma dos produtos dois a dois é 31. Quanto vale a² + b² + c²?",
+          "enunciado": "Dois números somam 10 e o produto deles é 21. Quanto vale a² + b²?",
           "alternativas": [
-            "38",
-            "69",
+            "58",
+            "79",
             "100",
-            "131"
+            "142"
           ],
           "certa": 0,
-          "resolucao": "38: (a + b + c)² = 100 e 2 · 31 = 62; 100 − 62 = 38.\n69 é 100 − 31 (esqueceu o 2); 100 ignora os produtos; 131 soma em vez de subtrair."
+          "resolucao": "58: (a + b)² = 100 e 2 · 21 = 42; 100 − 42 = 58.\n79 é 100 − 21 (esqueceu o 2); 100 ignora o produto; 142 soma em vez de subtrair."
         },
         {
-          "enunciado": "Três números somam 12 e a soma dos quadrados é 56. Quanto vale a·b + b·c + c·a?",
+          "enunciado": "Dois números somam 9 e a soma dos quadrados é 45. Quanto vale o produto a · b?",
           "alternativas": [
-            "44",
-            "88",
-            "72",
-            "200"
+            "18",
+            "36",
+            "27",
+            "126"
           ],
           "certa": 0,
-          "resolucao": "44: 12² = 144; 144 − 56 = 88 e 88 ÷ 2 = 44.\n88 esquece de dividir por 2; 72 é a metade de 144; 200 soma em vez de subtrair."
+          "resolucao": "18: 9² = 81; 81 − 45 = 36 e 36 ÷ 2 = 18.\n36 esquece de dividir por 2; 27 é 81 ÷ 3; 126 soma em vez de subtrair."
         }
       ]
     },
@@ -6410,6 +6410,416 @@
           "resolucao": "10: somar o mesmo valor a todos só desloca e o afastamento da média segue o mesmo.\n15 e 5 misturam o 5 somado com o desvio."
         }
       ]
+    },
+    "esp-mistura-em-partes": {
+      "titulo": "Mistura em partes (2 para 1)",
+      "linhas": [
+        "\"2 partes de concentrado para 1 de água\": no total são 2 + 1 = 3 partes, e o concentrado é 2 dessas 3.",
+        "Ache o valor de 1 parte dividindo: se o concentrado é 400 mL (2 partes), 1 parte = 400 ÷ 2 = 200 mL.",
+        "A mistura toda tem 3 partes: 3 · 200 = 600 mL. A água é 1 parte, 200 mL.",
+        "Conferindo: 400 mL de concentrado mais 200 mL de água dão 600 mL, e 400 é 2 de 3 partes de 600."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Partes da mistura",
+        "cabecalho": [
+          "Item",
+          "Partes",
+          "Quantidade"
+        ],
+        "linhas": [
+          [
+            "Concentrado",
+            "2",
+            "400 mL"
+          ],
+          [
+            "Água",
+            "1",
+            "200 mL"
+          ],
+          [
+            "Mistura",
+            "3",
+            "600 mL"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Uma tinta é feita com 3 partes de pigmento para 2 de água. Com 90 mL de pigmento, quantos mL de tinta se faz?",
+          "alternativas": [
+            "150 mL",
+            "180 mL",
+            "135 mL",
+            "270 mL"
+          ],
+          "certa": 0,
+          "resolucao": "150 mL: 3 partes = 90, então 1 parte = 30; a tinta tem 5 partes, 5 · 30 = 150.\n180 é 90 · 2; 135 é 90 · 1,5; 270 é 90 · 3."
+        },
+        {
+          "enunciado": "Uma jarra tem 600 mL de mistura, 1 parte de xarope para 4 de água. Quantos mL de xarope?",
+          "alternativas": [
+            "120 mL",
+            "150 mL",
+            "480 mL",
+            "300 mL"
+          ],
+          "certa": 0,
+          "resolucao": "120 mL: a mistura tem 5 partes, 1 parte = 600 ÷ 5 = 120.\n150 é 600 ÷ 4; 480 é a água (4 partes); 300 é a metade."
+        }
+      ]
+    },
+    "esp-diagonal-do-bloco": {
+      "titulo": "A diagonal de um bloco",
+      "linhas": [
+        "Um bloco tem medidas x, y e z. A maior reta dentro dele vai de um canto ao canto oposto: é a diagonal do bloco.",
+        "1º, Pitágoras no chão: a diagonal da base ao quadrado é x² + y² (x² lê-se x · x).",
+        "2º, Pitágoras em pé: diagonal do bloco ao quadrado = (diagonal da base)² + z² = x² + y² + z².",
+        "Teste: bloco 1 por 2 por 2: 1 + 4 + 4 = 9, e a diagonal é 3, porque 3 · 3 = 9. Nenhuma reta maior que 3 cabe lá dentro."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Diagonal do bloco",
+        "cabecalho": [
+          "Bloco",
+          "x² + y² + z²",
+          "Diagonal"
+        ],
+        "linhas": [
+          [
+            "1 por 2 por 2",
+            "1 + 4 + 4 = 9",
+            "3"
+          ],
+          [
+            "2 por 3 por 6",
+            "4 + 9 + 36 = 49",
+            "7"
+          ],
+          [
+            "3 por 4 por 12",
+            "9 + 16 + 144 = 169",
+            "13"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Um bloco mede 2 cm, 3 cm e 6 cm. Qual o comprimento da maior vareta reta que cabe nele?",
+          "alternativas": [
+            "7 cm",
+            "11 cm",
+            "6 cm",
+            "5 cm"
+          ],
+          "certa": 0,
+          "resolucao": "7 cm: 4 + 9 + 36 = 49 e 7 · 7 = 49.\n11 é a soma das medidas; 6 é só a maior aresta; 5 é a diagonal de 3 e 4 sem a altura."
+        },
+        {
+          "enunciado": "Um bloco mede 1 cm, 4 cm e 8 cm. Qual o comprimento da diagonal?",
+          "alternativas": [
+            "9 cm",
+            "13 cm",
+            "8 cm",
+            "81 cm"
+          ],
+          "certa": 0,
+          "resolucao": "9 cm: 1 + 16 + 64 = 81 e 9 · 9 = 81.\n13 é a soma das medidas; 8 é só a maior aresta; 81 esqueceu a raiz."
+        }
+      ]
+    },
+    "esp-metro-quadrado-em-cm": {
+      "titulo": "Metros e metros quadrados em centímetros",
+      "linhas": [
+        "1 m = 100 cm. Para passar de m para cm, ande a vírgula 2 casas para a direita: 0,96 m = 96 cm.",
+        "1 m² é um quadrado de 1 m por 1 m, igual a 100 cm por 100 cm = 100 · 100 = 10 000 cm².",
+        "Para passar de m² para cm², ande a vírgula 4 casas para a direita: 0,0376 m² = 376 cm².",
+        "Cuidado: 1 m² não é 100 cm². O 100 serve para comprimento; área usa 100 · 100."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "De metro para centímetro",
+        "cabecalho": [
+          "Medida",
+          "Vezes",
+          "Exemplo"
+        ],
+        "linhas": [
+          [
+            "Comprimento (m para cm)",
+            "100",
+            "0,96 m = 96 cm"
+          ],
+          [
+            "Área (m² para cm²)",
+            "10 000",
+            "0,0376 m² = 376 cm²"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Uma lona tem 0,25 m². Quantos cm²?",
+          "alternativas": [
+            "2 500 cm²",
+            "25 cm²",
+            "250 cm²",
+            "25 000 cm²"
+          ],
+          "certa": 0,
+          "resolucao": "2 500 cm²: 0,25 · 10 000 = 2 500 (vírgula 4 casas à direita).\n25 e 250 usam 100 ou 1 000; 25 000 anda 5 casas."
+        },
+        {
+          "enunciado": "Um azulejo tem 150 cm². Quantos m²?",
+          "alternativas": [
+            "0,015 m²",
+            "0,15 m²",
+            "1,5 m²",
+            "0,0015 m²"
+          ],
+          "certa": 0,
+          "resolucao": "0,015 m²: 150 ÷ 10 000 = 0,015 (vírgula 4 casas à esquerda).\n0,15 e 1,5 andam só 3 e 2 casas; 0,0015 anda 5."
+        }
+      ]
+    },
+    "esp-volume-da-esfera": {
+      "titulo": "π, r³ e o volume da esfera e do cilindro",
+      "linhas": [
+        "π (lê-se \"pi\") é um número fixo, cerca de 3,14, que aparece em todo círculo e toda esfera. Alguns enunciados mandam usar π = 3.",
+        "r é o raio, metade do diâmetro: diâmetro = 2 · raio. r³ lê-se r · r · r, e r² é r · r.",
+        "Volume da esfera = 4/3 · π · r³. Com π = 3: 4/3 · 3 = 12/3 = 4, então o volume é 4 · r³.",
+        "Volume do cilindro = π · raio · raio · altura. Com π = 3, raio 2 e altura 5: 3 · 2 · 2 · 5 = 60."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Com π = 3",
+        "cabecalho": [
+          "Sólido",
+          "Fórmula",
+          "Raio 2"
+        ],
+        "linhas": [
+          [
+            "Esfera",
+            "4 · r · r · r",
+            "4 · 8 = 32"
+          ],
+          [
+            "Cilindro de altura 5",
+            "3 · r · r · 5",
+            "3 · 4 · 5 = 60"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Com π = 3, qual o volume de uma bola de raio 2 cm?",
+          "alternativas": [
+            "32 cm³",
+            "24 cm³",
+            "8 cm³",
+            "96 cm³"
+          ],
+          "certa": 0,
+          "resolucao": "32 cm³: 4/3 · 3 = 4 e 2 · 2 · 2 = 8; 4 · 8 = 32.\n24 é 3 · 8 (esqueceu o 4/3); 8 é só r³; 96 é 4 · 3 · 8."
+        },
+        {
+          "enunciado": "Com π = 3, um cilindro tem raio 2 cm e altura 5 cm. Qual o volume?",
+          "alternativas": [
+            "60 cm³",
+            "30 cm³",
+            "20 cm³",
+            "240 cm³"
+          ],
+          "certa": 0,
+          "resolucao": "60 cm³: 3 · 2 · 2 · 5 = 3 · 4 · 5 = 60.\n30 usou o raio uma vez só; 20 esqueceu o π; 240 usou o diâmetro 4 no lugar do raio."
+        }
+      ]
+    },
+    "com-independentes": {
+      "titulo": "Independentes: multiplicar as chances",
+      "linhas": [
+        "Duas coisas são independentes quando uma não muda a chance da outra. A chance das duas juntas é o produto das chances.",
+        "Moeda e dado: cara é 1/2 e o número 3 é 1/6. Cara e 3 juntos: 1/2 · 1/6 = 1/12.",
+        "Multiplicar frações: em cima com em cima, embaixo com embaixo. 2/5 · 3/4 = 6/20 = 3/10 (dividindo por 2).",
+        "Se o par pode sair em duas ordens (cara e coroa, ou coroa e cara), as duas contam: some as chances das ordens.",
+        "Duas moedas, uma cara e uma coroa: 1/2 · 1/2 = 1/4 por ordem. Com 2 ordens: 1/4 + 1/4 = 1/2."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Juntando chances",
+        "cabecalho": [
+          "Situação",
+          "Conta",
+          "Chance"
+        ],
+        "linhas": [
+          [
+            "Cara e o 3",
+            "1/2 · 1/6",
+            "1/12"
+          ],
+          [
+            "Cara, depois coroa",
+            "1/2 · 1/2",
+            "1/4"
+          ],
+          [
+            "Uma cara e uma coroa, qualquer ordem",
+            "1/4 + 1/4",
+            "1/2"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Uma moeda e um dado são lançados. Qual é a chance de sair cara e um número par?",
+          "alternativas": [
+            "1/4",
+            "1/2",
+            "3/4",
+            "1/8"
+          ],
+          "certa": 0,
+          "resolucao": "1/4: cara é 1/2 e par é 3 em 6, 1/2. 1/2 · 1/2 = 1/4.\n1/2 é a chance só da cara; 3/4 é a de cara ou par; 1/8 conta a moeda duas vezes (1/2 · 1/2 · 1/2)."
+        },
+        {
+          "enunciado": "Duas moedas são lançadas. Qual é a chance de saírem uma cara e uma coroa, em qualquer ordem?",
+          "alternativas": [
+            "1/2",
+            "1/4",
+            "3/4",
+            "1/3"
+          ],
+          "certa": 0,
+          "resolucao": "1/2: cara e coroa valem 1/2 · 1/2 = 1/4, e coroa e cara também. 1/4 + 1/4 = 1/2.\n1/4 conta uma ordem só; 3/4 é a chance de pelo menos uma cara; 1/3 trata 3 resultados como se fossem igualmente prováveis."
+        }
+      ]
+    },
+    "com-ramos": {
+      "titulo": "Árvore: multiplicar no caminho, somar os caminhos",
+      "linhas": [
+        "Uma árvore mostra o que pode acontecer em etapas. Cada caminho é uma sequência de resultados.",
+        "Num caminho, multiplique as chances de cada etapa. Exame com 0,9 de positivo: positivo e depois negativo = 0,9 · 0,1 = 0,09.",
+        "Caminhos diferentes que dão o mesmo final se somam: (positivo, negativo) e (negativo, positivo) valem 0,09 + 0,09 = 0,18.",
+        "Decimais: 0,9 · 0,1 = 0,09 (9 · 1 = 9, com 2 casas). 0,18 · 0,9 = 0,162 (18 · 9 = 162, com 3 casas).",
+        "Confira: todos os caminhos somam 1. Com 2 exames: 0,81 + 0,09 + 0,09 + 0,01 = 1."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Dois exames",
+        "cabecalho": [
+          "Caminho",
+          "Conta",
+          "Chance"
+        ],
+        "linhas": [
+          [
+            "positivo, positivo",
+            "0,9 · 0,9",
+            "0,81"
+          ],
+          [
+            "positivo, negativo",
+            "0,9 · 0,1",
+            "0,09"
+          ],
+          [
+            "negativo, positivo",
+            "0,1 · 0,9",
+            "0,09"
+          ],
+          [
+            "negativo, negativo",
+            "0,1 · 0,1",
+            "0,01"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Um teste acusa 80% das peças defeituosas (0,8). Uma peça defeituosa é testada 2 vezes, uma não depende da outra. Qual a chance de o 1º acusar e o 2º não acusar?",
+          "alternativas": [
+            "0,16",
+            "0,64",
+            "0,04",
+            "0,20"
+          ],
+          "certa": 0,
+          "resolucao": "0,16: acusar é 0,8 e não acusar é 1 − 0,8 = 0,2. 0,8 · 0,2 = 0,16 (8 · 2 = 16, com 2 casas).\n0,64 é acusar nas duas (0,8 · 0,8); 0,04 é não acusar nas duas (0,2 · 0,2); 0,20 é só a chance do 2º não acusar."
+        },
+        {
+          "enunciado": "A mesma peça defeituosa é testada 2 vezes. Qual a chance de os dois resultados serem diferentes (um acusa e o outro não)?",
+          "alternativas": [
+            "0,32",
+            "0,16",
+            "0,64",
+            "0,36"
+          ],
+          "certa": 0,
+          "resolucao": "0,32: acusa e depois não vale 0,8 · 0,2 = 0,16, e não acusa e depois acusa vale 0,2 · 0,8 = 0,16. Somando: 0,16 + 0,16 = 0,32.\n0,16 é uma só das ordens; 0,64 é acusar nas duas; 0,36 é 1 − 0,64 e inclui não acusar nas duas."
+        }
+      ]
+    },
+    "com-escolhas-juntas": {
+      "titulo": "Escolhas juntas: multiplicar os jeitos",
+      "linhas": [
+        "Para fazer duas escolhas, multiplique os jeitos de cada uma. Com 3 camisas e 4 calças há 3 · 4 = 12 trajes.",
+        "Com combinação: de 4 bolas vermelhas e 5 azuis, escolher 1 vermelha e 2 azuis. 1 vermelha: 4 jeitos. 2 azuis: 5 · 4 ÷ 2 = 10 jeitos.",
+        "Juntando as escolhas: 4 · 10 = 40 jeitos de pegar 1 vermelha e 2 azuis.",
+        "\"Nenhuma vermelha\" em 3 bolas é escolher as 3 só entre as 5 azuis: 5 · 4 · 3 = 60, dividido por 3 · 2 · 1 = 6, dá 10 jeitos."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Escolhas juntas",
+        "cabecalho": [
+          "Escolha",
+          "Conta",
+          "Jeitos"
+        ],
+        "linhas": [
+          [
+            "1 vermelha entre 4",
+            "4",
+            "4"
+          ],
+          [
+            "2 azuis entre 5",
+            "5 · 4 ÷ 2",
+            "10"
+          ],
+          [
+            "As duas juntas",
+            "4 · 10",
+            "40"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "Uma caixa tem 3 bolas verdes e 6 amarelas. De quantos jeitos se escolhem 1 verde e 2 amarelas, sem ligar para a ordem?",
+          "alternativas": [
+            "45",
+            "18",
+            "90",
+            "15"
+          ],
+          "certa": 0,
+          "resolucao": "45: 1 verde entre 3 são 3 jeitos; 2 amarelas entre 6 são 6 · 5 ÷ 2 = 15. Juntas: 3 · 15 = 45.\n90 esquece de dividir por 2 as amarelas (3 · 30); 18 é 3 · 6, só 1 amarela; 15 são só as amarelas."
+        },
+        {
+          "enunciado": "Numa turma há 5 meninos e 4 meninas. Quantos trios têm exatamente 1 menina?",
+          "alternativas": [
+            "40",
+            "80",
+            "20",
+            "10"
+          ],
+          "certa": 0,
+          "resolucao": "40: 1 menina entre 4 são 4 jeitos; 2 meninos entre 5 são 5 · 4 ÷ 2 = 10. Juntos: 4 · 10 = 40.\n80 esquece de dividir por 2 os meninos (4 · 20); 20 são os meninos com ordem, sem as meninas; 10 são só os meninos."
+        }
+      ]
     }
   },
   "questoes": {
@@ -6682,22 +7092,28 @@
     "d2-escada-mat-ita-com-00b": [
       "com-probabilidade",
       "com-combinacao",
+      "com-condicional",
       "fracoes"
     ],
     "d2-escada-mat-ita-com-00a": [
       "com-probabilidade",
       "com-condicional",
+      "com-independentes",
       "fracoes"
     ],
     "d2-escada-mat-ita-com-00c": [
       "porcentagem",
       "com-bayes",
-      "fracoes"
+      "fracoes",
+      "multiplicar-decimais",
+      "com-ramos"
     ],
     "d2-escada-mat-ita-com-00d": [
       "com-probabilidade",
       "com-combinacao",
-      "numero-que-falta"
+      "com-condicional",
+      "com-escolhas-juntas",
+      "fracoes"
     ],
     "d2-escada-mat-ita-equ-00a": [
       "porcentagem",
@@ -6722,19 +7138,25 @@
     "d2-escada-mat-ita-esp-00b": [
       "esp-razao-volume",
       "esp-raiz-cubica",
-      "multiplicar-decimais"
+      "multiplicar-decimais",
+      "dividir-por-decimal"
     ],
     "d2-escada-mat-ita-esp-00c": [
       "pitagoras",
-      "esp-quadrado-da-soma"
+      "esp-diagonal-do-bloco",
+      "esp-quadrado-da-soma",
+      "esp-metro-quadrado-em-cm"
     ],
     "d2-escada-mat-ita-esp-00d": [
+      "esp-volume-da-esfera",
       "esp-quanto-maior-em-percentual",
       "fracoes",
       "porcentagem"
     ],
     "d2-escada-mat-ita-esp-00a": [
       "esp-razao-volume",
+      "esp-mistura-em-partes",
+      "porcentagem",
       "multiplicar-decimais",
       "dividir-por-decimal"
     ],

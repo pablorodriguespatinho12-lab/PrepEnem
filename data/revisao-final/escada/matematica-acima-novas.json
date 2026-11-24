@@ -4480,44 +4480,60 @@
   "id": "d2-escada-mat-ita-esp-00a",
   "materia": "Matemática",
   "tema": "Geometria Espacial",
-  "enunciado": "Numa lanchonete, o suco de laranja é preparado em garrafas de vidro cilíndricas que têm 10 cm de diâmetro interno e 24 cm de altura. No fim do dia, sobrou uma garrafa com suco até 3/4 da altura. O dono decidiu servir esse resto de graça numa degustação, em copos de papel em forma de cone com a ponta para baixo, com 10 cm de diâmetro na boca e 9 cm de altura. Para o suco não derramar, cada copo é servido só até 80% da altura (e não até a borda), e o dono não quer servir copos pela metade nem com quantidades diferentes. Ele pergunta quantos copos desses consegue servir completamente com o suco que sobrou. Considere que o suco não faz espuma e que nada se perde ao servir. O número de copos é:\n\nDados: Garrafa: diâmetro 10 cm, altura 24 cm, suco até 3/4; Copo (cone): diâmetro 10 cm, altura 9 cm; Servir: até 80% da altura do copo.",
-  "A": "6",
-  "B": "7",
-  "C": "11",
-  "D": "12",
-  "E": "15",
-  "resposta": "C",
-  "origem": "Escada",
   "nivel": "acima",
+  "origem": "Escada",
+  "ancora": "forte · ENEM 2022 q.169 (CD5: peça cilíndrica derretida em esferas, razão de volumes e contagem de peças inteiras) e q.147 (CD5: dobrar o diâmetro multiplica o volume por 8); aqui o suco sobra de um cilindro, é diluído, perde 10% e enche cones a 80% da altura",
+  "canal": "mat-07-escalas.txt [4:02:32] (o volume vai ao cubo da razão); volume do cilindro em mat-25-cilindro-e-esfera.txt [14:43:00]",
+  "enunciado": "Numa lanchonete, o suco de laranja concentrado é guardado em garrafas de vidro cilíndricas que têm 10 cm de diâmetro interno e 24 cm de altura. No fim do dia, sobrou uma garrafa com o concentrado até 3/4 da altura. Para a degustação grátis do dia seguinte, o dono vai misturar esse concentrado com água, na proporção de 2 partes de concentrado para 1 parte de água, e servir em copos de papel em forma de cone com a ponta para baixo, com 10 cm de diâmetro na boca e 9 cm de altura, comprados a R$ 0,30 cada. Para o suco não derramar, cada copo é servido só até 80% da altura (e não até a borda), e não se servem copos pela metade. Na preparação, 10% da mistura fica agarrada na jarra e nas paredes e se perde. Considere que o suco não faz espuma. Quantos copos o dono consegue servir completamente?\n\nDados: Garrafa: diâmetro 10 cm, altura 24 cm, concentrado até 3/4; Mistura: 2 partes de concentrado para 1 de água; Perda: 10% da mistura; Copo (cone): diâmetro 10 cm, altura 9 cm; Servir: até 80% da altura do copo; Preço do copo: R$ 0,30: não entra na conta; Quero: número de copos completos.",
+  "A": "15",
+  "B": "10",
+  "C": "11",
+  "D": "16",
+  "E": "17",
+  "resposta": "A",
   "explicacao": {
-   "conferencia": "Resposta: alternativa C. 11 copos: 11 · 38,4 = 422,4 cabe em 450, e o 12º precisaria de 460,8, que é mais do que sobrou. C. Erros: A = Encheu os copos até a borda. B = Tratou 80% da altura como 80% do volume. D = Arredondou para cima: o 12º copo não enche. E = Esqueceu que a garrafa só tem 3/4 do suco.",
-   "ideia": "Servir até 80% da altura forma um cone menor semelhante, e o volume vai com o cubo da razão: 0,8³ = 0,512. Divida o suco pelo volume de cada copo e conte só os copos inteiros.",
+   "conferencia": "Concentrado: π · 25 · 18 = 450π; mistura 2:1: 450π ÷ 2 · 3 = 675π; sem a perda de 10%: 675π · 0,9 = 607,5π. Copo a 80%: 75π · 0,512 = 38,4π. 607,5 ÷ 38,4 = 15,8: 15 copos. Resposta: alternativa A. Erros: Alternativa B = Tomou 80% da altura como 80% do volume do copo (60π): 607,5 ÷ 60 = 10,1; Alternativa C = Serviu o concentrado puro, sem água e sem perda: 450 ÷ 38,4 = 11,7; Alternativa D = Arredondou 15,8 para cima: o 16º copo não enche (614,4 é mais que 607,5); Alternativa E = Esqueceu a perda de 10%: 675 ÷ 38,4 = 17,6.",
+   "ideia": "O suco servido até 80% da altura forma um cone menor semelhante ao copo, e o volume vai com o cubo da razão. antes, ache quanto líquido existe de fato: concentrado, mais a água da mistura, menos a perda; conte só os copos inteiros.",
    "pecas": [
     {
      "termo": "Semelhante",
      "significado": "Mesmo formato, tamanho diferente: tudo cresce na mesma razão."
     },
     {
-     "termo": "Razão",
-     "significado": "Quantas vezes uma medida é a outra."
+     "termo": "Partes",
+     "significado": "2 partes de concentrado e 1 de água: a mistura tem 3 partes, e o concentrado é 2 delas."
+    },
+    {
+     "termo": "Copos inteiros",
+     "significado": "Só conta o copo que enche: 15 copos e um pouco são 15."
     }
    ],
    "passos": [
     {
      "titulo": "As fórmulas desta questão",
-     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela.",
      "visual": {
       "tipo": "formulas",
       "itens": [
        {
+        "figura": "circulo",
+        "nome": "π (pi)",
+        "formula": "número fixo, cerca de 3,14"
+       },
+       {
         "figura": "cilindro",
         "nome": "Volume do cilindro",
-        "formula": "π · r² · h"
+        "formula": "π · raio · raio · altura"
        },
        {
         "figura": "cone",
         "nome": "Volume do cone",
-        "formula": "⅓ · π · r² · h"
+        "formula": "⅓ · π · raio · raio · altura"
+       },
+       {
+        "figura": "cone",
+        "nome": "Por que ⅓",
+        "formula": "o cone cabe 3 vezes no cilindro igual"
        }
       ]
      }
@@ -4535,7 +4551,15 @@
       "linhas": [
        [
         "Garrafa",
-        "diâmetro 10 cm, altura 24 cm, suco até 3/4"
+        "diâmetro 10 cm, altura 24 cm, concentrado até 3/4"
+       ],
+       [
+        "Mistura",
+        "2 partes de concentrado para 1 de água"
+       ],
+       [
+        "Perda",
+        "10% da mistura"
        ],
        [
         "Copo (cone)",
@@ -4544,60 +4568,110 @@
        [
         "Servir",
         "até 80% da altura do copo"
+       ],
+       [
+        "Preço do copo",
+        "R$ 0,30: não entra na conta"
+       ],
+       [
+        "Quero",
+        "número de copos completos"
        ]
       ]
      }
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
+     "texto": "Cada copo leva vc de mistura; a mistura útil é vu. Dividindo, vê-se quantos copos. vu nasce de vs: mistura com água, depois a perda.\nAgora é só achar vs, vm, vu e vc, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "N = S ÷ v",
-      "leitura": "suco da garrafa ÷ suco de cada copo, só copos inteiros",
+      "formula": "nc = vu ÷ vc",
+      "leitura": "número de copos = mistura que sobrou depois da perda ÷ volume de um copo, só copos inteiros",
       "letras": [
        {
-        "letra": "N",
+        "letra": "nc",
         "oque": "número de copos (o que a questão quer)"
        },
        {
-        "letra": "S",
-        "oque": "suco da garrafa"
+        "letra": "vs",
+        "oque": "concentrado da garrafa, em cm³"
        },
        {
-        "letra": "v",
-        "oque": "suco de um copo, a 80% da altura"
+        "letra": "vm",
+        "oque": "mistura pronta, com a água, em cm³"
+       },
+       {
+        "letra": "vu",
+        "oque": "mistura que sobra depois da perda de 10%, em cm³"
+       },
+       {
+        "letra": "vc",
+        "oque": "suco de um copo servido a 80% da altura, em cm³"
        }
       ]
      }
     },
     {
-     "titulo": "Achando S: suco da garrafa",
-     "texto": "3/4 de 24 = 24 ÷ 4 · 3 = 18 cm de altura de suco. Raio = diâmetro ÷ 2 = 5. Volume do cilindro = π · raio² · altura = π · 25 · 18 = 450π cm³ (25 · 18 = 450). π é um número fixo (cerca de 3,14) que aparece em todo círculo."
+     "titulo": "Achando vs: o concentrado da garrafa",
+     "texto": "3/4 de 24: 24 ÷ 4 = 6 e 6 · 3 = 18 cm de altura. Raio = diâmetro ÷ 2 = 5 cm. Volume = π · raio · raio · altura = π · 5 · 5 · 18 = π · 25 · 18. 25 · 18 = 250 + 200 = 450. vs = 450π cm³ (π é só um número fixo; vai se cortar no fim)."
     },
     {
-     "titulo": "O copo cheio",
-     "texto": "Volume do cone = ⅓ · π · raio² · altura = ⅓ · π · 25 · 9. Como 25 · 9 = 225 e 225 ÷ 3 = 75, dá 75π cm³."
+     "titulo": "Achando vm: a mistura com água",
+     "texto": "2 partes de concentrado para 1 de água: 3 partes no total. O concentrado (450π) é 2 partes: 1 parte = 450π ÷ 2 = 225π. A mistura tem 3 partes: vm = 3 · 225π = 675π cm³."
     },
     {
-     "titulo": "Achando v: suco de um copo",
-     "texto": "80% = 80 ÷ 100 = 0,8. O suco forma um cone menor com o mesmo formato do copo (semelhante), 0,8 vez o tamanho em tudo. Volume depende de 3 medidas (comprimento, largura e altura), então fica 0,8 · 0,8 · 0,8: 0,8 · 0,8 = 0,64 e 0,64 · 0,8 = 0,512."
+     "titulo": "Achando vu: depois da perda",
+     "texto": "Perde 10%, então fica 90% = 90 ÷ 100 = 0,9 da mistura. 675 · 0,9: 675 · 9 = 6 075 (675 · 10 = 6 750 menos 675) e uma casa depois da vírgula: 607,5. vu = 607,5π cm³."
     },
     {
-     "titulo": "Achando v: suco de um copo (2 de 2)",
-     "texto": "Exemplo: um cubo de lado 1 tem volume 1; de lado 2, volume 8 (2 · 2 · 2). Então 75π · 0,512 = 38,4π (75 · 0,512 = 38,4)."
+     "titulo": "Achando vc: o copo cheio",
+     "texto": "Volume do cone = ⅓ · π · raio · raio · altura = ⅓ · π · 5 · 5 · 9. 25 · 9 = 225 e 225 ÷ 3 = 75. O copo cheio tem 75π cm³."
+    },
+    {
+     "titulo": "Achando vc: o copo a 80% (2 de 3)",
+     "texto": "80% = 80 ÷ 100 = 0,8. O suco forma um cone menor com o mesmo formato do copo (semelhante), razão 0,8. O volume depende de 3 medidas, então vai com 0,8 · 0,8 · 0,8: 0,8 · 0,8 = 0,64 e 0,64 · 0,8 = 0,512."
+    },
+    {
+     "titulo": "Achando vc: o copo a 80% (3 de 3)",
+     "texto": "75π · 0,512: 75 · 512 = 38 400 (75 · 500 = 37 500 e 75 · 12 = 900). 0,512 tem três casas depois da vírgula, então 38 400 vira 38,4. vc = 38,4π cm³."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "O π aparece nos dois e se corta: 450 ÷ 38,4. Tirando a vírgula (multiplicando os dois por 10): 4 500 ÷ 384. 384 · 11 = 4 224 e sobram 276, que é menos que 384. Logo dá 11 e um pouco (≈ 11,7; \"≈\" lê-se \"aproximadamente\")."
-    },
-    {
-     "titulo": "Só os completos",
-     "texto": "11 copos: 11 · 38,4 = 422,4 cabe em 450, e o 12º precisaria de 460,8, que é mais do que sobrou."
+     "texto": "nc = 607,5π ÷ 38,4π. O π some: 6π ÷ 3π = 2, igual a 6 ÷ 3. Fica 607,5 ÷ 38,4 = 6 075 ÷ 384 (vezes 10 nos dois). 384 · 15 = 5 760 (3 840 + 1 920) e sobram 315, menos que 384: dá 15 e um pouco (≈ 15,8).\nSó os completos: 15 · 38,4 = 576 cabe em 607,5; 16 · 38,4 = 614,4 passa.\nResposta: alternativa A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "vs",
+        "450π cm³"
+       ],
+       [
+        "vm",
+        "675π cm³"
+       ],
+       [
+        "vu",
+        "607,5π cm³"
+       ],
+       [
+        "vc",
+        "38,4π cm³"
+       ],
+       [
+        "nc",
+        "15 copos"
+       ]
+      ]
+     }
     },
     {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: Servir até 80% da altura forma um cone menor semelhante, e o volume vai com o cubo da razão: 0,8³ = 0,512.",
+     "texto": "Pista: servir até 80% da altura forma um cone semelhante: o volume vai com 0,8 · 0,8 · 0,8; antes de dividir, ache o líquido de verdade (mistura com água, menos a perda).",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -4608,35 +4682,37 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "dados do enunciado"
+        "garrafa 10 × 24 até 3/4; mistura 2:1; perda 10%"
+       ],
+       [
+        "1. Tabela do que eu tenho (cont.)",
+        "copo cone a 80%"
        ],
        [
         "2. Equação em letras",
-        "N = S ÷ v"
+        "nc = vu ÷ vc"
        ],
        [
         "3. Uma letra por vez",
-        "ache cada letra e volte na equação"
+        "vs = 450π; vm = 675π; vu = 607,5π; vc = 38,4π; nc = 15"
        ]
       ]
      }
     }
    ],
    "checagem": {
-    "pergunta": "Sobraram 300π cm³ de suco. Cada copo cônico cheio tem 20π cm³ e é servido até 50% da altura. Quantos copos?",
-    "resposta": "A 50% da altura o volume é (1/2)³ = 1/8 do copo: 2,5π. 300 ÷ 2,5 = 120.",
+    "pergunta": "Sobraram 100π cm³ de suco, misturado com água na proporção de 1 parte de suco para 1 de água. Cada copo cônico cheio tem 20π cm³ e é servido até 50% da altura. Sem perdas, quantos copos?",
     "opcoes": [
-     "15",
-     "60",
-     "120"
+     "20",
+     "40",
+     "80",
+     "160"
     ],
-    "certa": "120"
+    "certa": "80",
+    "resposta": "Mistura: 100π é 1 parte, então 2 partes = 200π. A 50% da altura o volume é (1/2)³ = 1/8 de 20π = 2,5π. 200 ÷ 2,5 = 80."
    },
    "seuErro": null
-  },
-  "ancora": "forte · ENEM 2022 q.169 (CD5: peça cilíndrica derretida em esferas, razão de volumes e contagem de peças inteiras) e q.147 (CD5: dobrar o diâmetro multiplica o volume por 8); aqui o suco sobra de um cilindro e enche cones a 80% da altura",
-  "estiloPrincipal": "ENEM",
-  "canal": "mat-07-escalas.txt [4:02:32] (o volume vai ao cubo da razão); volume do cilindro em mat-25-cilindro-e-esfera.txt [14:43:00]"
+  }
  },
  {
   "id": "d2-escada-mat-ita-esp-00c",
@@ -4644,30 +4720,30 @@
   "tema": "Geometria Espacial",
   "nivel": "acima",
   "origem": "Escada",
-  "ancora": "forte · Fuvest 2020 1ª fase q.17 (diagonal do paralelepípedo = diâmetro da esfera circunscrita, Pitágoras duas vezes); aqui as medidas ficam escondidas e a diagonal sai de (a + b + c)² − 2 · (ab + bc + ca), a identidade escondida do ITA 2023 q.46",
+  "ancora": "forte · Fuvest 2020 1ª fase q.17 (diagonal do paralelepípedo = diâmetro da esfera circunscrita, Pitágoras duas vezes); aqui as medidas ficam escondidas, os dados vêm em m e m², e a diagonal sai de (x + y + z)² − 2 · (x · y + y · z + z · x), a identidade escondida do ITA 2023 q.46",
   "canal": "fuv-02-geometria-espacial-parte-2-3.txt [0:50:01] (a diagonal pede Pitágoras duas vezes)",
-  "enunciado": "Uma fábrica de embalagens guardou, de um modelo de caixa em forma de bloco retangular, apenas estes dois dados, sem as medidas das arestas:\n\nDado | Valor\nSoma das 12 arestas | 96 cm\nÁrea total (as 6 faces) | 376 cm²\n\nUm artesão quer guardar nessa caixa uma vareta reta, inteira e sem dobrar, que pode encostar nas paredes e nos cantos. O comprimento da vareta, em centímetros, é um número inteiro. Qual é o maior comprimento possível, em centímetros?\n\nDados: Soma das 12 arestas: 96 cm; Área total (6 faces): 376 cm²; Medidas da caixa: não informadas; Vareta: reta, inteira, com número inteiro de cm; Quero: maior comprimento inteiro, em cm.",
-  "A": "15",
-  "B": "19",
-  "C": "14",
-  "D": "24",
-  "E": "30",
+  "enunciado": "Uma fábrica de embalagens guardou, de um modelo de caixa em forma de bloco retangular, apenas estes dados, sem as medidas das arestas:\n\nDado | Valor\nSoma das 12 arestas | 0,96 m\nÁrea total (as 6 faces) | 0,0376 m²\nPeso da caixa vazia | 120 g\n\nUm artesão quer guardar nessa caixa uma vareta reta, protegida por uma espuma de 1 cm em cada ponta: a vareta com as duas espumas é que precisa caber inteira, sem dobrar, podendo encostar nas paredes e nos cantos. O comprimento da vareta, sem a espuma, é um número inteiro de centímetros. Qual é o maior comprimento possível, em centímetros?\n\nDados: Soma das 12 arestas: 0,96 m; Área total (6 faces): 0,0376 m²; Peso da caixa vazia: 120 g: não entra na conta; Espuma: 1 cm em cada ponta da vareta; Medidas da caixa: não informadas; Quero: maior vareta (sem espuma), inteira, em cm.",
+  "A": "13",
+  "B": "14",
+  "C": "12",
+  "D": "17",
+  "E": "21",
   "resposta": "C",
   "explicacao": {
-   "conferencia": "S = 96 ÷ 4 = 24; P = 376 ÷ 2 = 188; d² = 24² − 2 · 188 = 576 − 376 = 200; 14² = 196 e 15² = 225, então d ≈ 14,1 e a maior vareta inteira tem 14 cm. Resposta: alternativa C. Erros: Alternativa A = Arredondou 14,14 para cima: a vareta de 15 cm não cabe; Alternativa B = Subtraiu só metade da área: 576 − 188 = 388, e a raiz de 388 é 19,7; Alternativa D = Parou em a + b + c = 96 ÷ 4 = 24, a soma das medidas; Alternativa E = Somou em vez de subtrair: 576 + 376 = 952, e a raiz de 952 é 30,8.",
-   "ideia": "A maior vareta é a diagonal do bloco, d² = a² + b² + c², e você não tem a, b e c: mas S² − 2P, com S = a + b + c e P = ab + bc + ca, dá o mesmo valor: as arestas dão S e a área dá P. A vareta é o maior inteiro que cabe.",
+   "conferencia": "sm = 96 ÷ 4 = 24 cm; pr = 376 ÷ 2 = 188 cm²; dg · dg = 24 · 24 − 2 · 188 = 576 − 376 = 200, dg ≈ 14,1; lv + 2 não passa de 14,1: lv ≤ 12,1, e a maior vareta inteira tem 12 cm. Resposta: alternativa C. Erros: Alternativa A = Descontou só 1 cm de espuma no total: 14,1 − 1 = 13,1; Alternativa B = Esqueceu a espuma: a vareta de 14 cm com as espumas (16 cm) não cabe; Alternativa D = Subtraiu só metade da área: 576 − 188 = 388, a raiz é 19,7, menos 2 de espuma; Alternativa E = Leu 0,0376 m² como 37,6 cm² (1 m² = 100 cm², não 10 000): 576 − 37,6, raiz 23,2, menos 2.",
+   "ideia": "A maior reta dentro do bloco é a diagonal, mas você não tem as medidas: a soma delas ao quadrado, menos 2 vezes a soma dos produtos dois a dois, dá a diagonal ao quadrado. Passe tudo para cm, ache a diagonal e desconte as duas espumas.",
    "pecas": [
     {
      "termo": "Diagonal do bloco",
-     "significado": "O segmento de um canto ao canto oposto, o maior que cabe na caixa. d² = a² + b² + c²."
+     "significado": "O segmento de um canto ao canto oposto, o maior que cabe na caixa."
     },
     {
      "termo": "Aresta",
      "significado": "Cada um dos 12 segmentos onde duas faces se encontram: 4 de cada medida."
     },
     {
-     "termo": "Inteiro que cabe",
-     "significado": "Se a diagonal é 14,14, a vareta de 14 cabe e a de 15 não."
+     "termo": "Espuma",
+     "significado": "Ocupa 1 cm em cada ponta: a vareta mais 2 cm é que tem de caber na diagonal."
     }
    ],
    "passos": [
@@ -4679,18 +4755,23 @@
       "itens": [
        {
         "figura": "caixa",
-        "nome": "Diagonal do bloco",
-        "formula": "d² = a² + b² + c²"
-       },
-       {
-        "figura": "caixa",
         "nome": "Soma das 12 arestas",
-        "formula": "4 · (a + b + c)"
+        "formula": "4 · (x + y + z)"
        },
        {
         "figura": "caixa",
         "nome": "Área total",
-        "formula": "2 · (ab + bc + ca)"
+        "formula": "2 · (x · y + y · z + z · x)"
+       },
+       {
+        "figura": "caixa",
+        "nome": "Diagonal do bloco",
+        "formula": "dg² = x² + y² + z²"
+       },
+       {
+        "figura": "texto",
+        "nome": "m² em cm²",
+        "formula": "1 m² = 100 · 100 = 10 000 cm²"
        }
       ]
      }
@@ -4708,77 +4789,109 @@
       "linhas": [
        [
         "Soma das 12 arestas",
-        "96 cm"
+        "0,96 m"
        ],
        [
         "Área total (6 faces)",
-        "376 cm²"
+        "0,0376 m²"
+       ],
+       [
+        "Peso da caixa vazia",
+        "120 g: não entra na conta"
+       ],
+       [
+        "Espuma",
+        "1 cm em cada ponta da vareta"
        ],
        [
         "Medidas da caixa",
         "não informadas"
        ],
        [
-        "Vareta",
-        "reta, inteira, com número inteiro de cm"
-       ],
-       [
         "Quero",
-        "maior comprimento inteiro, em cm"
+        "maior vareta (sem espuma), inteira, em cm"
        ]
       ]
      }
     },
     {
      "titulo": "O desenho",
-     "texto": "Veja a caixa (desenho fora de escala). As três medidas são a, b e c, e nenhuma delas é dada. A vareta mais comprida vai de um canto ao canto oposto.",
+     "texto": "Veja a caixa (desenho fora de escala). As três medidas são x, y e z, e nenhuma delas é dada. A vareta mais comprida vai de um canto ao canto oposto.",
      "visual": {
       "tipo": "diagrama",
       "nome": "vareta-na-caixa",
       "rotulos": [
-       "b",
-       "a",
-       "c",
+       "y",
+       "x",
+       "z",
        "",
        "",
-       "desenho fora de escala: as medidas a, b e c são desconhecidas"
+       "desenho fora de escala: as medidas x, y e z são desconhecidas"
       ]
      }
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A diagonal vem de a² + b² + c². Pela identidade da aula Antes, isso é S² − 2P, e S e P vêm dos dois dados da tabela.\nAgora é só achar S e P, uma por vez.",
+     "texto": "A vareta com as espumas mede lv + 2 e tem de caber na diagonal dg. A diagonal sai de sm e pr, que vêm dos dois dados da tabela, já em centímetros.\nAgora é só achar sm, pr e dg, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "d² = S² − 2 · P",
-      "leitura": "diagonal ao quadrado = (a + b + c)² − 2 · (ab + bc + ca)",
+      "formula": "dg · dg = sm · sm − 2 · pr  e  lv + 2 não passa de dg",
+      "leitura": "diagonal ao quadrado = (x + y + z)² − 2 · (x · y + y · z + z · x); vareta mais as duas espumas cabe na diagonal",
       "letras": [
        {
-        "letra": "d",
-        "oque": "diagonal do bloco, a maior vareta possível (o que a questão quer)"
+        "letra": "lv",
+        "oque": "vareta inteira sem a espuma, o maior valor possível, em cm (o que a questão quer)"
        },
        {
-        "letra": "S",
-        "oque": "soma das três medidas, a + b + c, em cm"
+        "letra": "dg",
+        "oque": "diagonal do bloco, em cm"
        },
        {
-        "letra": "P",
-        "oque": "soma dos produtos dois a dois, ab + bc + ca, em cm²"
+        "letra": "sm",
+        "oque": "soma das três medidas, x + y + z, em cm"
+       },
+       {
+        "letra": "pr",
+        "oque": "soma dos produtos dois a dois, x · y + y · z + z · x, em cm²"
        }
       ]
      }
     },
     {
-     "titulo": "Achando S: a soma das três medidas",
-     "texto": "Um bloco tem 12 arestas: 4 de cada medida (a, b e c).\nSoma das arestas = 4a + 4b + 4c = 4 · (a + b + c) = 96.\nS = 96 ÷ 4 = 24 cm."
+     "titulo": "Achando sm: a soma das três medidas",
+     "texto": "1 m = 100 cm: 0,96 m = 96 cm (vírgula 2 casas para a direita). Um bloco tem 12 arestas, 4 de cada medida: 4 · x + 4 · y + 4 · z = 4 · (x + y + z) = 96. Teste: 4 · 2 + 4 · 3 = 20 = 4 · 5. sm = 96 ÷ 4 = 24 cm."
     },
     {
-     "titulo": "Achando P: a soma dos produtos",
-     "texto": "A área total tem 6 faces, 2 de cada tipo: 2ab + 2bc + 2ca = 2 · (ab + bc + ca) = 376.\nP = 376 ÷ 2 = 188 cm²."
+     "titulo": "Achando pr: a soma dos produtos",
+     "texto": "1 m² = 100 cm · 100 cm = 10 000 cm²: 0,0376 m² = 376 cm² (vírgula 4 casas à direita). 6 faces, 2 de cada tipo: 2 · x · y + 2 · y · z + 2 · z · x = 2 · pr = 376. pr = 376 ÷ 2 = 188 cm²."
+    },
+    {
+     "titulo": "Achando dg: o truque da soma",
+     "texto": "dg · dg = x · x + y · y + z · z (Pitágoras duas vezes). (x + y + z) · (x + y + z) = x · x + y · y + z · z + 2 · pr: cada produto de duas medidas aparece 2 vezes. Teste 1, 2, 3: 36 = 14 + 2 · 11. Logo dg · dg = sm · sm − 2 · pr.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "vareta-na-caixa",
+      "rotulos": [
+       "y",
+       "x",
+       "z",
+       "",
+       "",
+       "desenho fora de escala: as medidas x, y e z são desconhecidas"
+      ]
+     }
+    },
+    {
+     "titulo": "Achando dg: a conta (2 de 3)",
+     "texto": "sm · sm = 24 · 24 = 576 (24 · 20 = 480 e 24 · 4 = 96). 2 · pr = 2 · 188 = 376. dg · dg = 576 − 376 = 200."
+    },
+    {
+     "titulo": "Achando dg: a raiz (3 de 3)",
+     "texto": "Raiz de 200: 14 · 14 = 196 (pouco) e 15 · 15 = 225 (muito). Afinando: 14,1 · 14,1 = 198,81 (pouco) e 14,2 · 14,2 = 201,64 (muito). Então dg está entre 14,1 e 14,2."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "d² = S² − 2 · P = 24 · 24 − 2 · 188. 24 · 24 = 576 (24 · 20 = 480 e 24 · 4 = 96) e 2 · 188 = 376. d² = 576 − 376 = 200.\n14 · 14 = 196 (pouco) e 15 · 15 = 225 (muito): d está entre 14 e 15, cerca de 14,1.\nA vareta inteira só cabe se for menor ou igual a d: a maior é 14 cm.\nResposta: alternativa C.",
+     "texto": "A vareta com as espumas mede lv + 1 + 1 = lv + 2 e cabe na diagonal: lv + 2 não passa de 14,1, então lv não passa de 12,1. O maior inteiro é 12 cm.\nConferindo: 12 + 2 = 14 cabe em 14,1; 13 + 2 = 15 não cabe.\nResposta: alternativa C.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -4788,27 +4901,27 @@
       ],
       "linhas": [
        [
-        "S",
+        "sm",
         "24 cm"
        ],
        [
-        "P",
+        "pr",
         "188 cm²"
        ],
        [
-        "d²",
-        "200 cm²"
+        "dg",
+        "≈ 14,1 cm"
        ],
        [
-        "d",
-        "≈ 14,1 cm; vareta de 14 cm"
+        "lv",
+        "12 cm"
        ]
       ]
      }
     },
     {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: dados que não dão as medidas: a diagonal d² = (a + b + c)² − 2 · (ab + bc + ca), e as arestas dão a soma e a área dá os produtos; como a vareta é inteira, pegue o maior inteiro que cabe.",
+     "texto": "Pista: dados que não dão as medidas: a diagonal ao quadrado é (soma das medidas)² − 2 · (soma dos produtos dois a dois); passe m e m² para cm e cm², e desconte a espuma antes de pegar o maior inteiro.",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -4819,15 +4932,19 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "soma das arestas 96; área total 376; medidas escondidas"
+        "soma das arestas 0,96 m; área total 0,0376 m²"
+       ],
+       [
+        "1. Tabela do que eu tenho (cont.)",
+        "espuma 1 cm em cada ponta"
        ],
        [
         "2. Equação em letras",
-        "d² = S² − 2 · P"
+        "dg · dg = sm · sm − 2 · pr  e  lv + 2 não passa de dg"
        ],
        [
         "3. Uma letra por vez",
-        "S = 24; P = 188; d² = 200; d ≈ 14,1"
+        "sm = 24; pr = 188; dg ≈ 14,1; lv = 12"
        ]
       ]
      }
@@ -4842,7 +4959,7 @@
      "25 cm"
     ],
     "certa": "13 cm",
-    "resposta": "S = 76 ÷ 4 = 19; P = 192 ÷ 2 = 96. d² = 19² − 2 · 96 = 361 − 192 = 169, e 13 · 13 = 169."
+    "resposta": "Soma das medidas: 76 ÷ 4 = 19; soma dos produtos: 192 ÷ 2 = 96. Diagonal ao quadrado = 19 · 19 − 2 · 96 = 361 − 192 = 169, e 13 · 13 = 169."
    },
    "seuErro": null
   }
@@ -4863,12 +4980,12 @@
   "E": "7,7 cm",
   "resposta": "B",
   "explicacao": {
-   "conferencia": "Copo: 36 · 20 ÷ 3 = 240 cm³. Bebida: 0,8³ · 240 = 122,88; depois do gole, 92,88. Vazio: 147,12 = 0,613 do copo; k³ = 0,613, k ≈ 0,85 e a ≈ 17 cm. Bebida: 20 − 17 = 3 cm. Resposta: alternativa B. Erros: Alternativa A = Esqueceu o gole: vazio de 117,12 cm³, e 20 − 15,7; Alternativa C = Achou a pirâmide da bebida que sobrou (14,6 cm) e fez 20 − 14,6, como se a bebida ficasse na ponta; Alternativa D = Tomou 80% da altura como 80% do volume (192 cm³), sem o cubo; Alternativa E = Fez a altura vazia como 0,613 de 20 (sem tirar a raiz cúbica): 20 − 12,3.",
-   "ideia": "Com a ponta para baixo, a bebida é uma pirâmide semelhante ao copo, e o volume vai com o cubo da razão das alturas. Virado o copo, o vazio é a pirâmide pequena do topo: ache a altura dela por tentativa de k · k · k e tire de 20.",
+   "conferencia": "Copo: 36 · 20 ÷ 3 = 240 cm³. Bebida: 0,8³ · 240 = 122,88; depois do gole, 92,88. Vazio: 147,12 = 0,613 do copo; kr · kr · kr = 0,613, kr ≈ 0,85 e av ≈ 17 cm. Bebida: 20 − 17 = 3 cm. Resposta: alternativa B. Erros: Alternativa A = Esqueceu o gole: vazio de 117,12 cm³, e 20 − 15,7; Alternativa C = Achou a pirâmide da bebida que sobrou (14,6 cm) e fez 20 − 14,6, como se a bebida ficasse na ponta; Alternativa D = Tomou 80% da altura como 80% do volume (192 cm³), sem o cubo; Alternativa E = Fez a altura vazia como 0,613 de 20 (sem tirar a raiz cúbica): 20 − 12,3.",
+   "ideia": "Com a ponta para baixo, a bebida é uma pirâmide semelhante ao copo, e o volume vai com o cubo da razão das alturas. Virado o copo, o vazio é a pirâmide pequena do topo: ache a altura dela por tentativa de kr · kr · kr e tire de 20.",
    "pecas": [
     {
      "termo": "Semelhante",
-     "significado": "Mesmo formato, tamanho diferente: tudo cresce pela mesma razão k. O volume vai com k · k · k."
+     "significado": "Mesmo formato, tamanho diferente: tudo cresce pela mesma razão. O volume vai com razão · razão · razão."
     },
     {
      "termo": "Raiz cúbica",
@@ -4890,6 +5007,11 @@
         "figura": "cone",
         "nome": "Volume da pirâmide",
         "formula": "⅓ · área da base · altura"
+       },
+       {
+        "figura": "cone",
+        "nome": "Por que ⅓",
+        "formula": "a pirâmide cabe 3 vezes no prisma igual"
        },
        {
         "figura": "cone",
@@ -4955,54 +5077,66 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A bebida e o vazio dividem os 20 cm do copo. O vazio é uma pirâmide semelhante ao copo, com razão k e volume k³ · 240.\nAgora é só achar L, V, k e a, uma por vez.",
+     "texto": "A bebida e o vazio dividem os 20 cm do copo. O vazio é uma pirâmide semelhante ao copo, com razão kr e volume kr · kr · kr · vp.\nAgora é só achar vp, vs, vv, kr e av, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "h = 20 − a  e  k³ = V ÷ 240",
-      "leitura": "altura da bebida = 20 − altura do vazio; razão das alturas ao cubo = vazio ÷ volume do copo",
+      "formula": "hb = 20 − av  e  kr · kr · kr = vv ÷ vp",
+      "leitura": "altura da bebida = 20 − altura do vazio; razão das alturas ao cubo = volume do vazio ÷ volume do copo todo",
       "letras": [
        {
-        "letra": "h",
+        "letra": "hb",
         "oque": "altura da bebida no copo virado (o que a questão quer)"
        },
        {
-        "letra": "a",
+        "letra": "av",
         "oque": "altura da pirâmide vazia, no topo"
        },
        {
-        "letra": "k",
-        "oque": "razão entre a altura do vazio e a do copo, a ÷ 20"
+        "letra": "kr",
+        "oque": "razão entre a altura do vazio e a do copo, av ÷ 20"
        },
        {
-        "letra": "V",
+        "letra": "vv",
         "oque": "volume do vazio, em cm³"
        },
        {
-        "letra": "L",
+        "letra": "vs",
         "oque": "bebida que sobra depois do gole, em cm³"
+       },
+       {
+        "letra": "vp",
+        "oque": "volume do copo todo, em cm³"
        }
       ]
      }
     },
     {
-     "titulo": "Achando L: a bebida que sobra",
-     "texto": "Volume da pirâmide = ⅓ · base · altura. Base = 6 · 6 = 36; 36 · 20 = 720; 720 ÷ 3 = 240 cm³.\nCom a ponta para baixo, a bebida é semelhante ao copo, razão 16 ÷ 20 = 0,8. Volume: 0,8 · 0,8 · 0,8 = 0,512 do copo.\n0,512 · 240 = 122,88 cm³."
+     "titulo": "Achando vp: o copo todo",
+     "texto": "Base quadrada = 6 · 6 = 36 cm². A pirâmide cabe 3 vezes no prisma de mesma base e altura (por isso o ⅓). Volume = ⅓ · base · altura = ⅓ · 36 · 20 = 720 ÷ 3 = 240 cm³."
     },
     {
-     "titulo": "Achando L: a bebida que sobra (2 de 2)",
-     "texto": "O gole é 30 mL = 30 cm³.\nL = 122,88 − 30 = 92,88 cm³."
+     "titulo": "Achando vs: a bebida que sobra",
+     "texto": "Ponta para baixo, a bebida é uma pirâmide do mesmo formato do copo (semelhante), razão das alturas 16 ÷ 20 = 8 ÷ 10 = 0,8 (dividindo por 2). O volume vai com 0,8 · 0,8 · 0,8: 0,8 · 0,8 = 0,64 e 0,64 · 0,8 = 0,512 do copo."
     },
     {
-     "titulo": "Achando V: o vazio",
-     "texto": "O copo vazio é o copo todo menos a bebida: V = 240 − 92,88 = 147,12 cm³.\nFração do copo: 147,12 ÷ 240. 240 · 0,6 = 144, sobram 3,12; 3,12 ÷ 240 = 0,013. Fração = 0,613."
+     "titulo": "Achando vs: a bebida que sobra (2 de 2)",
+     "texto": "0,512 · 240: 512 · 24 = 12 288 (512 · 20 = 10 240 e 512 · 4 = 2 048). Três casas depois da vírgula: 12,288, e vezes 10 (240 = 24 · 10): 122,88 cm³. O gole é 30 mL = 30 cm³. vs = 122,88 − 30 = 92,88 cm³."
     },
     {
-     "titulo": "Achando k: a razão das alturas",
-     "texto": "k · k · k = 0,613. Tentando: 0,8 · 0,8 · 0,8 = 0,512 (pouco) e 0,9 · 0,9 · 0,9 = 0,729 (muito).\nMeio-termo: 0,85 · 0,85 = 0,7225 e 0,7225 · 0,85 = 0,614, quase 0,613. Logo k ≈ 0,85."
+     "titulo": "Achando vv: o vazio",
+     "texto": "vv = 240 − 92,88 = 147,12 cm³. Fração do copo: 147,12 ÷ 240. Corte um zero dos dois: 14,712 ÷ 24. 24 · 0,6 = 14,4 e 14,712 − 14,4 = 0,312; 24 · 0,013 = 0,312. A fração é 0,6 + 0,013 = 0,613."
     },
     {
-     "titulo": "Achando a: a altura do vazio",
-     "texto": "a = k · 20 = 0,85 · 20 = 17 cm. O vazio é a pirâmide pequena do topo, com cerca de 17 cm de altura.",
+     "titulo": "Achando kr: a razão das alturas",
+     "texto": "Virado, o vazio é a pirâmide pequena do topo: kr · kr · kr = 0,613. 0,8 · 0,8 · 0,8 = 0,512 (pouco) e 0,9 · 0,9 · 0,9 = 0,729 (muito). Teste 0,85: 0,85 · 0,85 = 0,7225 e 0,7225 · 0,85 = 0,614125, quase 0,613. Logo kr ≈ 0,85."
+    },
+    {
+     "titulo": "Achando kr: o erro importa?",
+     "texto": "O cubo de 0,85 passa de 0,613 em 0,001. Isso muda kr em menos de 0,001 e a altura em menos de 0,02 cm. As alternativas distam 0,9 cm ou mais umas das outras, então 0,85 basta."
+    },
+    {
+     "titulo": "Achando av: a altura do vazio",
+     "texto": "av = kr · 20 = 0,85 · 20 = 17 cm (0,85 · 2 = 1,7 e vezes 10). O vazio é a pirâmide pequena do topo, com cerca de 17 cm de altura.",
      "visual": {
       "tipo": "diagrama",
       "nome": "piramide-cortada",
@@ -5017,7 +5151,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "h = 20 − a = 20 − 17 = 3 cm.\nConferindo: bebida de 3 cm de altura, num copo de 20 cm, fica pouca bebida, e o vazio é a maior parte.\nResposta: alternativa B.",
+     "texto": "hb = 20 − av = 20 − 17 = 3 cm.\nConferindo: bebida de 3 cm de altura, num copo de 20 cm, fica pouca bebida, e o vazio é a maior parte.\nResposta: alternativa B.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -5027,23 +5161,27 @@
       ],
       "linhas": [
        [
-        "L",
+        "vp",
+        "240 cm³"
+       ],
+       [
+        "vs",
         "92,88 cm³"
        ],
        [
-        "V",
+        "vv",
         "147,12 cm³"
        ],
        [
-        "k",
+        "kr",
         "≈ 0,85"
        ],
        [
-        "a",
+        "av",
         "≈ 17 cm"
        ],
        [
-        "h",
+        "hb",
         "≈ 3,0 cm"
        ]
       ]
@@ -5070,11 +5208,15 @@
        ],
        [
         "2. Equação em letras",
-        "h = 20 − a  e  k³ = V ÷ 240"
+        "hb = 20 − av  e  kr · kr · kr = vv ÷ vp"
        ],
        [
         "3. Uma letra por vez",
-        "L = 92,88; V = 147,12; k ≈ 0,85; a ≈ 17; h ≈ 3"
+        "vp = 240; vs = 92,88; vv = 147,12; kr ≈ 0,85; av ≈ 17"
+       ],
+       [
+        "3. Uma letra por vez (cont.)",
+        "hb ≈ 3"
        ]
       ]
      }
@@ -5100,26 +5242,30 @@
   "tema": "Geometria Espacial",
   "nivel": "acima",
   "origem": "Escada",
-  "ancora": "parcial · HMMT nov/2020 Theme q.3 (cilindros de raio k: olhar a figura de um lado em vez de somar partes, e a conta se simplifica) e ENEM 2022 q.169 (CD5, cilindro e esferas, o π cancela); aqui o r some das frações vazias e a pegadinha é a base da porcentagem",
+  "ancora": "parcial · HMMT nov/2020 Theme q.3 (cilindros de raio k: olhar a figura de um lado em vez de somar partes, e a conta se simplifica) e ENEM 2022 q.169 (CD5, cilindro e esferas, o π cancela); aqui o r some das frações, a fração do tubo fixa o volume da caixa nova, e a pegadinha é a base da porcentagem",
   "canal": "mat-25-cilindro-e-esfera.txt [14:43:00] (volume da esfera 4/3 π r³ e do cilindro); comparar duas embalagens por fração é fora do canal",
-  "enunciado": "Uma loja vende 8 bolas de gude idênticas, de raio r desconhecido, em duas embalagens. Na caixa cúbica, as bolas ficam em 2 camadas de 4, encostadas umas nas outras e nas paredes. No tubo cilíndrico, ficam em 4 camadas de 2 bolas, cada camada bem em cima da outra (empilhadas retas, sem encaixe), encostadas umas nas outras, nas paredes e nas duas tampas. Em cada embalagem, a fração vazia é o volume que não é bola dividido pelo volume da embalagem. Use π = 3. Em quantos por cento a fração vazia do tubo é maior que a da caixa?\n\nDados: Bolas: 8, idênticas, raio r desconhecido; Caixa cúbica: 2 camadas de 4 bolas; Tubo cilíndrico: 4 camadas de 2 bolas, encostadas nas tampas; π: 3; Quero: em quantos % a fração vazia do tubo é maior.",
+  "enunciado": "Uma loja vende 8 bolas de gude idênticas, de raio r desconhecido, em duas embalagens. Na caixa cúbica, as bolas ficam em 2 camadas de 4, encostadas umas nas outras e nas paredes. No tubo cilíndrico, ficam em 4 camadas de 2 bolas, cada camada bem em cima da outra (empilhadas retas, sem encaixe), encostadas umas nas outras, nas paredes e nas duas tampas. A fração vazia de uma embalagem é o volume que não é bola dividido pelo volume dela. A loja quer fabricar uma caixa nova, com a mesma base quadrada da caixa cúbica, só que mais alta, para que a fração vazia dela seja igual à do tubo. Use π = 3. Em quantos por cento a altura da caixa nova é maior que a da caixa cúbica?\n\nDados: Bolas: 8, idênticas, raio r desconhecido; Caixa cúbica: 2 camadas de 4 bolas; Tubo cilíndrico: 4 camadas de 2 bolas, encostadas nas tampas; Caixa nova: mesma base da cúbica, mais alta, mesma fração vazia do tubo; π: 3; Quero: em quantos % a altura da caixa nova é maior.",
   "A": "16,7%",
-  "B": "25%",
-  "C": "50%",
-  "D": "33,3%",
+  "B": "33,3%",
+  "C": "66,7%",
+  "D": "50%",
   "E": "100%",
   "resposta": "D",
   "explicacao": {
-   "conferencia": "8 bolas: 8 · 4r³ = 32r³. Caixa: (4r)³ = 64r³, fração vazia 32/64 = 1/2. Tubo: 3 · (2r)² · 8r = 96r³, fração vazia 64/96 = 2/3. (2/3 − 1/2) ÷ (1/2) = 1/3 = 33,3%. Resposta: alternativa D. Erros: Alternativa A = Subtraiu as frações vazias, 2/3 − 1/2 = 1/6, e deu os pontos percentuais; Alternativa B = Dividiu a diferença pela fração vazia do tubo, e não pela da caixa: (1/6) ÷ (2/3); Alternativa C = Respondeu a fração vazia da caixa, 1/2; Alternativa E = Comparou os volumes vazios, 64r³ contra 32r³, e não as frações vazias.",
-   "ideia": "Dê o raio r às bolas: tudo vira múltiplo de r³ e o r some das frações. Compare as frações vazias da caixa e do tubo, e use a base certa na porcentagem: quanto mais, sobre o menor.",
+   "conferencia": "8 bolas: 8 · 4r³ = 32r³. Tubo: 3 · (2r)² · 8r = 96r³, bolas 32/96 = 1/3. Caixa nova: bolas 1/3, volume 3 · 32r³ = 96r³; base 16r², altura 96r³ ÷ 16r² = 6r. (6r − 4r) ÷ 4r = 1/2 = 50%. Resposta: alternativa D. Erros: Alternativa A = Subtraiu as frações vazias do tubo e da caixa cúbica, 2/3 − 1/2 = 1/6, e deu os pontos percentuais; Alternativa B = Dividiu a diferença das alturas pela altura nova, 2r ÷ 6r, e não pela da caixa cúbica; Alternativa C = Respondeu a fração vazia do tubo, 2/3; Alternativa E = Comparou os volumes vazios do tubo e da caixa cúbica, 64r³ contra 32r³.",
+   "ideia": "Dê o raio r às bolas: tudo vira múltiplo de r³ e o r some das frações. Fração vazia igual à do tubo quer dizer que as bolas ocupam a mesma fração do volume: ache o volume da caixa nova, depois a altura, e compare com a base certa.",
    "pecas": [
     {
      "termo": "Fração vazia",
      "significado": "Volume que não é bola ÷ volume da embalagem. Não depende do tamanho do r."
     },
     {
-     "termo": "Pontos percentuais",
-     "significado": "Diferença simples entre duas porcentagens. É diferente de \"quantos % maior\"."
+     "termo": "Mesma fração",
+     "significado": "Se as bolas são 1/3 do total, o total é 3 vezes as bolas."
+    },
+    {
+     "termo": "Base da porcentagem",
+     "significado": "\"Maior que\" divide pelo valor de antes, a caixa cúbica."
     }
    ],
    "passos": [
@@ -5132,17 +5278,22 @@
        {
         "figura": "esfera",
         "nome": "Volume da esfera",
-        "formula": "4/3 · π · r³"
+        "formula": "4/3 · π · r · r · r"
        },
        {
         "figura": "cilindro",
         "nome": "Volume do cilindro",
-        "formula": "π · raio² · altura"
+        "formula": "π · raio · raio · altura"
+       },
+       {
+        "figura": "caixa",
+        "nome": "Volume da caixa",
+        "formula": "base · altura"
        },
        {
         "figura": "porcentagem",
         "nome": "Quantos % maior",
-        "formula": "(maior − menor) ÷ menor"
+        "formula": "(novo − antigo) ÷ antigo · 100"
        }
       ]
      }
@@ -5171,58 +5322,86 @@
         "4 camadas de 2 bolas, encostadas nas tampas"
        ],
        [
+        "Caixa nova",
+        "mesma base da cúbica, mais alta, mesma fração vazia do tubo"
+       ],
+       [
         "π",
         "3"
        ],
        [
         "Quero",
-        "em quantos % a fração vazia do tubo é maior"
+        "em quantos % a altura da caixa nova é maior"
        ]
       ]
      }
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Quanto mais, sobre o menor: a diferença entre as frações vazias, dividida pela fração vazia da caixa.\nAgora é só achar b, c e t, uma por vez.",
+     "texto": "Quanto mais, sobre o que era antes: a diferença das alturas dividida pela altura da caixa cúbica. A altura nova vem do volume novo, e esse vem da fração do tubo.\nAgora é só achar ho, vb, vt, fc, vn e hn, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "P = (t − c) ÷ c · 100",
-      "leitura": "percentual = (fração vazia do tubo − fração vazia da caixa) ÷ fração vazia da caixa · 100",
+      "formula": "pc = (hn − ho) ÷ ho · 100",
+      "leitura": "percentual = (altura nova − altura da caixa cúbica) ÷ altura da caixa cúbica · 100",
       "letras": [
        {
-        "letra": "P",
-        "oque": "quantos por cento o vazio do tubo é maior (o que a questão quer)"
+        "letra": "pc",
+        "oque": "quantos por cento a altura da caixa nova é maior (o que a questão quer)"
        },
        {
-        "letra": "b",
+        "letra": "ho",
+        "oque": "altura da caixa cúbica, em r"
+       },
+       {
+        "letra": "hn",
+        "oque": "altura da caixa nova, em r"
+       },
+       {
+        "letra": "vn",
+        "oque": "volume da caixa nova, em r³"
+       },
+       {
+        "letra": "fc",
+        "oque": "fração do tubo ocupada pelas bolas"
+       },
+       {
+        "letra": "vt",
+        "oque": "volume do tubo, em r³"
+       },
+       {
+        "letra": "vb",
         "oque": "volume das 8 bolas, em r³"
-       },
-       {
-        "letra": "c",
-        "oque": "fração vazia da caixa"
-       },
-       {
-        "letra": "t",
-        "oque": "fração vazia do tubo"
        }
       ]
      }
     },
     {
-     "titulo": "Achando b: as 8 bolas",
-     "texto": "Volume da esfera = 4/3 · π · r³ = 4/3 · 3 · r³ = 4r³.\nOito bolas: b = 8 · 4r³ = 32r³."
+     "titulo": "Achando ho: a altura da caixa cúbica",
+     "texto": "Diâmetro da bola = 2 · raio = 2r. Duas bolas lado a lado ocupam 2 · 2r = 4r. A caixa cúbica tem 2 bolas por aresta: ho = 4r, e a base é 4r por 4r."
     },
     {
-     "titulo": "Achando c: a fração vazia da caixa",
-     "texto": "A aresta tem 2 bolas lado a lado: 2 · 2r = 4r. Volume = 4r · 4r · 4r = 64r³.\nVazio = 64r³ − 32r³ = 32r³. Fração: 32 ÷ 64 = 1/2."
+     "titulo": "Achando vb: as 8 bolas",
+     "texto": "Volume da esfera = 4/3 · π · r · r · r. Com π = 3: 4/3 · 3 = 12/3 = 4, então cada bola tem 4 · r³ (r³ = r · r · r). Oito bolas: vb = 8 · 4 · r³ = 32 · r³."
     },
     {
-     "titulo": "Achando t: a fração vazia do tubo",
-     "texto": "Duas bolas lado a lado ocupam 4r, então o raio do tubo é 2r. A altura é de 4 camadas: 4 · 2r = 8r.\nVolume = π · (2r)² · 8r = 3 · 4r² · 8r = 96r³. Vazio = 96r³ − 32r³ = 64r³.\nFração: 64 ÷ 96 = 2/3 (dividindo por 32)."
+     "titulo": "Achando vt: o tubo",
+     "texto": "Duas bolas lado a lado: o diâmetro do tubo é 4r e o raio 2r. 4 camadas de 2r: altura 8r. Volume = π · raio · raio · altura = 3 · 2r · 2r · 8r = 3 · 4 · 8 · r³. 3 · 4 = 12 e 12 · 8 = 96. vt = 96 · r³."
+    },
+    {
+     "titulo": "Achando fc: a fração das bolas no tubo",
+     "texto": "fc = vb ÷ vt = 32 ÷ 96. Como 96 = 3 · 32, fc = 1/3: as bolas são 1/3 do tubo (o vazio é 2/3). O r³ some na divisão."
+    },
+    {
+     "titulo": "Achando vn: o volume da caixa nova",
+     "texto": "A caixa nova tem a mesma fração vazia, 2/3, então as 8 bolas ocupam 1/3 dela. Se 32 é 1/3 do total, o total é 3 · 32 = 96. Teste: se 5 é 1/3 do total, o total é 15. vn = 96 · r³."
+    },
+    {
+     "titulo": "Achando hn: a altura da caixa nova",
+     "texto": "Volume = base · altura, com base 4r · 4r = 16 · r · r. 96 · r · r · r = 16 · r · r · hn. 96 ÷ 16 = 6 e (r · r · r) ÷ (r · r) = r. Logo hn = 6r."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "t − c = 2/3 − 1/2 = 4/6 − 3/6 = 1/6. Dividindo por c: (1/6) ÷ (1/2) = 1/6 · 2 = 2/6 = 1/3.\nP = 1/3 · 100 = 33,3 (100 ÷ 3). O r sumiu de todas as contas.\nAtenção: 1/6 = 16,7 é a diferença em pontos percentuais, não o \"quanto mais\".\nResposta: alternativa D.",
+     "texto": "pc = (hn − ho) ÷ ho · 100 = (6r − 4r) ÷ 4r · 100. 6r − 4r = 2r, e 2r ÷ 4r = 2/4 = 1/2 (o r some). 1/2 · 100 = 50.\nAtenção: dividir por 6r, a altura nova, dá 1/3 = 33,3%; a base é a caixa de antes.\nResposta: alternativa D.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -5232,27 +5411,39 @@
       ],
       "linhas": [
        [
-        "b",
+        "ho",
+        "4r"
+       ],
+       [
+        "vb",
         "32r³"
        ],
        [
-        "c",
-        "1/2"
+        "vt",
+        "96r³"
        ],
        [
-        "t",
-        "2/3"
+        "fc",
+        "1/3"
        ],
        [
-        "P",
-        "33,3%"
+        "vn",
+        "96r³"
+       ],
+       [
+        "hn",
+        "6r"
+       ],
+       [
+        "pc",
+        "50%"
        ]
       ]
      }
     },
     {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: raio desconhecido → tudo é múltiplo de r³ e o r some das frações; compare as frações vazias, e porcentagem \"maior que\" divide pela base menor.",
+     "texto": "Pista: raio desconhecido → tudo é múltiplo de r³ e o r some; mesma fração vazia quer dizer bolas na mesma fração do volume, e \"maior que\" divide pelo valor de antes.",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -5263,30 +5454,38 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "8 bolas; caixa 2 × 2 × 2; tubo 4 × 2; π = 3"
+        "8 bolas; caixa 2 × 2 × 2; tubo 4 × 2"
+       ],
+       [
+        "1. Tabela do que eu tenho (cont.)",
+        "caixa nova, mesma base e mesma fração do tubo; π = 3"
        ],
        [
         "2. Equação em letras",
-        "P = (t − c) ÷ c · 100"
+        "pc = (hn − ho) ÷ ho · 100"
        ],
        [
         "3. Uma letra por vez",
-        "B = 32r³; c = 1/2; t = 2/3; P = 33,3%"
+        "ho = 4r; vb = 32r³; vt = 96r³; fc = 1/3; vn = 96r³; hn = 6r"
+       ],
+       [
+        "3. Uma letra por vez (cont.)",
+        "pc = 50%"
        ]
       ]
      }
     }
    ],
    "checagem": {
-    "pergunta": "A fração vazia de uma embalagem é 1/3 e a de outra é 1/2. Em quantos por cento a segunda é maior que a primeira?",
+    "pergunta": "As bolas de uma caixa somam 10 cm³ e ocupam 1/2 dela, que tem base de 5 cm². Uma caixa nova, com a mesma base, deve deixar as bolas ocupando só 1/4. A altura nova é maior em quantos por cento?",
     "opcoes": [
+     "100%",
      "50%",
-     "16,7%",
-     "33,3%",
-     "66,7%"
+     "200%",
+     "25%"
     ],
-    "certa": "50%",
-    "resposta": "(1/2 − 1/3) ÷ (1/3) = (1/6) ÷ (1/3) = 1/2 = 50%. A base é a primeira, a menor."
+    "certa": "100%",
+    "resposta": "Se 10 é metade, o total é 20 e a altura é 20 ÷ 5 = 4. Se 10 é 1/4, o total é 40 e a altura é 40 ÷ 5 = 8. (8 − 4) ÷ 4 = 1 = 100%."
    },
    "seuErro": null
   }
@@ -5295,42 +5494,58 @@
   "id": "d2-escada-mat-ita-com-00a",
   "materia": "Matemática",
   "tema": "Análise Combinatória e Probabilidade",
-  "enunciado": "Numa festa junina de bairro, o piso da quadra é de ladrilhos quadrados de 10 cm de lado, separados por rejuntes finos. Na brincadeira da calçada, o participante lança uma ficha circular de 3 cm de raio, e os pontos dependem de quantos rejuntes do ladrilho a ficha toca, como mostra a tabela. A organização garante que a ficha sempre cai com o centro dentro de um ladrilho, em qualquer ponto com a mesma chance, e que só os 4 rejuntes desse ladrilho importam (os dos ladrilhos vizinhos ficam longe demais). O prêmio do dia é uma cesta que custa R$ 80, e a ficha custa R$ 2, mas esses valores não entram na conta. Sabendo que a ficha tocou pelo menos um rejunte, a probabilidade de que o participante tenha feito exatamente 4 pontos é:\n\nDados: Tocar 0 rejuntes: 10 pontos; Tocar 1 rejunte: 4 pontos; Tocar 2 rejuntes: 1 ponto; Ladrilho: 10 cm × 10 cm = 100 cm²; Ficha: círculo de raio 3 cm.",
-  "A": "12/25",
-  "B": "3/7",
-  "C": "9/25",
-  "D": "4/7",
-  "E": "4/21",
-  "resposta": "D",
-  "origem": "Escada",
   "nivel": "acima",
+  "origem": "Escada",
+  "ancora": "parcial · ENEM 2019 CD7 q.173 (condicional contando em 100, com porcentagens); a parte de área (probabilidade geométrica, ficha no ladrilho) não tem real aberta do tema, só o canal; a nossa une as duas, com 2 fichas independentes e soma de pontos (2 jeitos, 2 ordens), e traz dado que sobra",
+  "canal": "fuv-07-analise-combinatoria-e-probabi.txt [3:53:00] (probabilidade geométrica: área favorável ÷ área total); fuv-08-analise-combinatoria-e-probabi.txt [4:00:32] (probabilidade condicional)",
+  "enunciado": "Numa festa junina de bairro, o piso da quadra é coberto de ladrilhos quadrados de 1 dm de lado, separados por rejuntes finos. Na brincadeira da calçada, o participante lança duas fichas circulares, uma de cada vez, cada uma com 6 cm de diâmetro, e os pontos de cada ficha dependem de quantos rejuntes do ladrilho ela toca, como mostra a tabela. A organização garante que cada ficha cai com o centro dentro de um ladrilho, em qualquer ponto com a mesma chance, que o lançamento de uma ficha não influencia o da outra e que só os 4 rejuntes do ladrilho importam (os dos ladrilhos vizinhos ficam longe demais). O prêmio do dia é uma cesta que custa R$ 80 e cada par de fichas custa R$ 2, mas esses valores não entram na conta. Sabendo que o total dos pontos das duas fichas foi exatamente 4, a probabilidade de que cada uma delas tenha tocado exatamente 1 rejunte é:\n\nDados: Ladrilho: 1 dm de lado = 10 cm, área 100 cm²; Ficha: diâmetro 6 cm, ou seja, raio 3 cm; Tocar 0 rejuntes: 4 pontos; Tocar 1 rejunte: 2 pontos; Tocar 2 rejuntes: 0 ponto; Duas fichas: uma não influencia a outra; Cesta (R$ 80) e par de fichas (R$ 2): não entra na conta; Quero: total 4 pontos: cada ficha tocou 1 rejunte.",
+  "A": "144/625",
+  "B": "2/3",
+  "C": "1/3",
+  "D": "12/25",
+  "E": "4/5",
+  "resposta": "B",
   "explicacao": {
-   "conferencia": "Resposta: alternativa D. Condicional é a chance de algo sabendo que outra coisa já aconteceu. Sabendo que tocou pelo menos um, o conjunto possível encolhe para 100 − 16 = 84. Exatamente 4 pontos = exatamente 1 rejunte = 48. Chance: 48/84 = 4/7 (dividindo em cima e embaixo por 12). D. Erros: A = Esqueceu a condição: 48 em 100, sem tirar quem não tocou nada. B = Contou só os cantos (36/84): são os que fazem 1 ponto. C = Cantos sobre o ladrilho todo (36/100), sem condição. E = Dividiu os que não tocam (16) pelos que tocam (84).",
-   "ideia": "Troque a ficha por um ponto: só o centro importa. Divida o ladrilho em regiões pela distância às bordas e use a condição pedida (tocou pelo menos um).",
+   "conferencia": "Pz = 4/25, Pd = 9/25, Pu = 12/25. Soma 4: dois 1 rejunte (144/625) ou 0 e 2 rejuntes em 2 ordens (72/625). Pq = 144 ÷ 216 = 2/3. Resposta: alternativa B. Erros: Alternativa A = Esqueceu a condição do total: Pu · Pu = 12/25 · 12/25, sem dividir pelos casos que dão 4 pontos; Alternativa C = Pôs no numerador o outro jeito de dar 4 pontos (0 e 2 rejuntes, 72) sobre 216; Alternativa D = Só a chance de UMA ficha tocar exatamente 1 rejunte (48 ÷ 100), sem a 2ª ficha nem a soma; Alternativa E = Contou o jeito 0 e 2 rejuntes uma vez só (36), sem as 2 ordens: 144 ÷ (144 + 36).",
+   "ideia": "Total 4 só sai de dois jeitos, e o segundo tem duas ordens; as fichas são independentes, então as chances se multiplicam. Cada chance é uma área do ladrilho ÷ 100, e a condição encolhe os casos aos que dão 4.",
    "pecas": [
     {
+     "termo": "Independentes",
+     "significado": "Uma ficha não muda a chance da outra: a chance das duas juntas é o produto."
+    },
+    {
      "termo": "Condicional",
-     "significado": "Chance de algo sabendo que outra coisa já aconteceu: o conjunto possível encolhe."
+     "significado": "Chance de algo sabendo que outra coisa já aconteceu: só contam os casos que cumprem a condição."
     }
    ],
    "passos": [
     {
      "titulo": "As fórmulas desta questão",
-     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela.",
      "visual": {
       "tipo": "formulas",
       "itens": [
        {
         "figura": "contagem",
         "nome": "Probabilidade por área",
-        "formula": "área da parte ÷ área do ladrilho"
+        "formula": "área da parte ÷ 100 cm²"
+       },
+       {
+        "figura": "contagem",
+        "nome": "Fichas independentes",
+        "formula": "chance da 1ª · chance da 2ª"
+       },
+       {
+        "figura": "contagem",
+        "nome": "Condicional",
+        "formula": "casos pedidos ÷ casos que cumprem a condição"
        }
       ]
      }
     },
     {
      "titulo": "O que eu tenho",
-     "texto": "Primeiro, tire os dados do enunciado. Atenção, estão no enunciado mas fora da conta: Os R$ 80 da cesta e os R$ 2 da ficha.",
+     "texto": "Primeiro, tire os dados do enunciado.",
      "visual": {
       "tipo": "tabela",
       "titulo": "O que eu tenho",
@@ -5340,74 +5555,91 @@
       ],
       "linhas": [
        [
-        "Tocar 0 rejuntes",
-        "10 pontos"
-       ],
-       [
-        "Tocar 1 rejunte",
-        "4 pontos"
-       ],
-       [
-        "Tocar 2 rejuntes",
-        "1 ponto"
-       ],
-       [
         "Ladrilho",
-        "10 cm × 10 cm = 100 cm²"
+        "1 dm de lado = 10 cm, área 100 cm²"
        ],
        [
         "Ficha",
-        "círculo de raio 3 cm"
+        "diâmetro 6 cm, ou seja, raio 3 cm"
+       ],
+       [
+        "Tocar 0 rejuntes",
+        "4 pontos"
+       ],
+       [
+        "Tocar 1 rejunte",
+        "2 pontos"
+       ],
+       [
+        "Tocar 2 rejuntes",
+        "0 ponto"
+       ],
+       [
+        "Duas fichas",
+        "uma não influencia a outra"
+       ],
+       [
+        "Cesta (R$ 80) e par de fichas (R$ 2)",
+        "não entra na conta"
+       ],
+       [
+        "Quero",
+        "total 4 pontos: cada ficha tocou 1 rejunte"
        ]
       ]
      }
     },
     {
      "titulo": "O desenho",
-     "texto": "Veja o ladrilho de 10 cm, com o rejunte fino em volta, e a ficha de raio 3 cm. Exemplo: uma ficha que cai assim passa por cima do rejunte de baixo (toca 1 rejunte). O tracejado embaixo é o ladrilho vizinho: a ficha pode passar do rejunte.",
+     "texto": "Veja o ladrilho de 1 dm = 10 cm, com o rejunte fino em volta, e uma ficha de diâmetro 6 cm (raio 3 cm). Exemplo: esta ficha passa por cima do rejunte de baixo (toca 1 rejunte). O tracejado embaixo é o ladrilho vizinho.",
      "visual": {
       "tipo": "diagrama",
-      "nome": "ladrilho-ficha"
+      "nome": "ladrilho-ficha",
+      "rotulos": []
      }
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
+     "texto": "Cada ficha vale 4, 2 ou 0 pontos. Total 4 só sai de 2 + 2 (as duas tocam 1) ou de 4 + 0 (uma toca 0 e a outra 2, em 2 ordens). Fichas independentes: as chances se multiplicam.\nAgora é só achar Pz, Pd e Pu, uma letra por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "P = E ÷ (100 − N)",
-      "leitura": "área com exatamente 1 rejunte ÷ área em que tocou ao menos um",
+      "formula": "Pq = Pu · Pu ÷ (Pu · Pu + 2 · Pz · Pd)",
+      "leitura": "chance = as duas tocam 1 rejunte ÷ (as duas tocam 1, ou uma toca 0 e a outra 2, em 2 ordens)",
       "letras": [
        {
-        "letra": "P",
-        "oque": "probabilidade (o que a questão quer)"
+        "letra": "Pq",
+        "oque": "chance de cada ficha ter tocado 1 rejunte, sabendo que o total foi 4 (o que a questão quer)"
        },
        {
-        "letra": "E",
-        "oque": "área com exatamente 1 rejunte"
+        "letra": "Pz",
+        "oque": "chance de uma ficha tocar 0 rejuntes"
        },
        {
-        "letra": "N",
-        "oque": "área sem tocar nenhum rejunte"
+        "letra": "Pu",
+        "oque": "chance de uma ficha tocar 1 rejunte"
+       },
+       {
+        "letra": "Pd",
+        "oque": "chance de uma ficha tocar 2 rejuntes"
        }
       ]
      }
     },
     {
-     "titulo": "Troque a ficha por um ponto",
-     "texto": "A ficha toca um rejunte quando o centro está a 3 cm ou menos dele. Só o centro importa. Como todo ponto do ladrilho tem a mesma chance, a probabilidade é a área da região ÷ a área do ladrilho (10 · 10 = 100 cm²)."
+     "titulo": "Achando Pz: a ficha vira um ponto",
+     "texto": "Só o centro da ficha importa: ele toca um rejunte quando está a 3 cm ou menos dele (6 ÷ 2 = 3). Todo ponto do ladrilho tem a mesma chance, então a chance de uma região é a área dela ÷ 100 (o ladrilho tem 10 · 10 = 100 cm²)."
     },
     {
-     "titulo": "Achando N: área que não toca nenhum",
-     "texto": "O centro fica no quadrado de dentro: 10 − 3 − 3 = 4 cm de lado, área 16 (16 de 100)."
+     "titulo": "Achando Pz: nenhum rejunte",
+     "texto": "O centro fica no quadrado de dentro, de lado 10 − 3 − 3 = 4 cm. Área: 4 · 4 = 16 cm².\nPz = 16/100. Dividindo em cima e embaixo por 4 (cabe em 16 e em 100): 16 ÷ 4 = 4 e 100 ÷ 4 = 25. Pz = 4/25."
     },
     {
-     "titulo": "Toca dois",
-     "texto": "O centro fica a menos de 3 cm de duas bordas vizinhas: um canto de 3 · 3 = 9, e são 4 cantos: 36. (Dois rejuntes opostos não dá: 3 + 3 = 6 < 10.)"
+     "titulo": "Achando Pd: dois rejuntes",
+     "texto": "Perto de dois lados vizinhos, o centro cai num canto de 3 · 3 = 9 cm². São 4 cantos: 4 · 9 = 36 cm².\nDois lados opostos nunca: 3 + 3 = 6 cm e o ladrilho tem 10 cm, então o centro não chega perto dos dois.\nPd = 36/100 = 9/25 (÷ 4)."
     },
     {
-     "titulo": "Achando E: área que toca exatamente um",
-     "texto": "O que sobra: 100 − 16 − 36 = 48 (4 faixas de 3 · 4 = 12). Pela tabela, tocar exatamente 1 rejunte vale 4 pontos.\nO ladrilho dividido pelas regiões da conta: 16 + 4 · 12 + 4 · 9 = 100.",
+     "titulo": "Achando Pu: um rejunte",
+     "texto": "O que sobra toca só 1: 100 − 16 − 36 = 48 cm² (4 faixas de 3 · 4 = 12).\nPu = 48/100 = 12/25 (÷ 4).\nConfira: 4/25 + 12/25 + 9/25 = 25/25 = 1.",
      "visual": {
       "tipo": "diagrama",
       "nome": "ladrilho-ficha",
@@ -5423,12 +5655,46 @@
      }
     },
     {
+     "titulo": "Juntando as duas fichas",
+     "texto": "Fichas independentes: multiplique. 2 + 2: Pu · Pu = 12/25 · 12/25 = 144/625 (12 · 12 = 144 e 25 · 25 = 625).\n4 + 0: Pz · Pd = 4/25 · 9/25 = 36/625; são 2 ordens, então 2 · 36/625 = 72/625."
+    },
+    {
      "titulo": "Volta na equação",
-     "texto": "Condicional é a chance de algo sabendo que outra coisa já aconteceu. Sabendo que tocou pelo menos um, o conjunto possível encolhe para 100 − 16 = 84. Exatamente 4 pontos = exatamente 1 rejunte = 48. Chance: 48/84 = 4/7 (dividindo em cima e embaixo por 12)."
+     "texto": "Pq = (144/625) ÷ (144/625 + 72/625). Mesmo número embaixo: 144 + 72 = 216, e fica 144/216 (o 625 se corta).\n144 = 2 · 72 e 216 = 3 · 72. Dividindo em cima e embaixo por 72: Pq = 2/3.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Pz",
+        "4/25"
+       ],
+       [
+        "Pd",
+        "9/25"
+       ],
+       [
+        "Pu",
+        "12/25"
+       ],
+       [
+        "Pq",
+        "2/3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Volta na equação (2 de 2)",
+     "texto": "Resposta: alternativa B. Conferindo: 2/3 é cerca de 0,67, mais que a metade, porque o jeito 2 + 2 tem o dobro de área do outro."
     },
     {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: Troque a ficha por um ponto: só o centro importa.",
+     "texto": "Pista: duas fichas e uma soma de pontos: liste os pares que dão a soma, multiplique as chances de cada par (as ordens contam) e divida pelo total dos pares.",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -5439,62 +5705,66 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "dados do enunciado"
+        "ladrilho 100 cm²; fichas independentes; total 4 pontos"
        ],
        [
         "2. Equação em letras",
-        "P = E ÷ (100 − N)"
+        "Pq = Pu · Pu ÷ (Pu · Pu + 2 · Pz · Pd)"
        ],
        [
         "3. Uma letra por vez",
-        "ache cada letra e volte na equação"
+        "ache Pz, Pd e Pu, junte os pares e volte"
        ]
       ]
      }
     }
    ],
    "checagem": {
-    "pergunta": "Ladrilho de 10 cm e ficha de raio 2 cm. Qual a chance de a ficha não tocar nenhum rejunte?",
-    "resposta": "O centro fica no quadrado de lado 10 − 2 − 2 = 6: área 36 de 100, ou 36%.",
+    "pergunta": "Duas fichas independentes valem 1 ponto (chance 1/2) ou 0 ponto (chance 1/2). Sabendo que o total foi 1 ponto, qual a chance de a 1ª ter feito 1 ponto?",
     "opcoes": [
-     "36%",
-     "60%",
-     "64%"
+     "1/4",
+     "1/2",
+     "3/4",
+     "1/3"
     ],
-    "certa": "36%"
+    "certa": "1/2",
+    "resposta": "Total 1 só em 1 + 0 ou 0 + 1, e cada ordem vale 1/2 · 1/2 = 1/4. A 1ª fez 1 ponto numa das duas: (1/4) ÷ (1/4 + 1/4) = 1/2."
    },
    "seuErro": null
-  },
-  "ancora": "parcial · ENEM 2019 CD7 q.173 (condicional contando em 100, com porcentagens); a parte de área (probabilidade geométrica, ficha no ladrilho) não tem real aberta do tema, só o canal; a nossa une as duas e traz tabela de pontos e dado que sobra",
-  "estiloPrincipal": "ENEM",
-  "canal": "fuv-07-analise-combinatoria-e-probabi.txt [3:53:00] (probabilidade geométrica: área favorável ÷ área total); fuv-08-analise-combinatoria-e-probabi.txt [4:00:32] (probabilidade condicional)"
+  }
  },
  {
   "id": "d2-escada-mat-ita-com-00d",
   "materia": "Matemática",
   "tema": "Análise Combinatória e Probabilidade",
-  "enunciado": "Seis times disputaram um campeonato de bairro em turno único: todos contra todos, uma vez. Vitória vale 3 pontos; empate vale 1 ponto para cada time; derrota, nenhum. A tabela mostra a pontuação final. O jornal não publicou os resultados dos jogos. Dois jogos distintos são sorteados ao acaso entre todos os do campeonato. A probabilidade de pelo menos um deles ter terminado empatado é:\n\nDados: Tigres: 12; Raio: 10; Pelé: 8; Unidos: 6; Estrela: 4; Garra: 3.",
-  "A": "1/105",
-  "B": "2/15",
-  "C": "9/35",
-  "D": "4/15",
-  "E": "26/35",
-  "resposta": "C",
-  "origem": "Escada",
   "nivel": "acima",
+  "origem": "Escada",
+  "ancora": "parcial · HMMT fev. 2021 Combinatorics q.2 (invariante: cada partida elimina 1 jogador, então se contam partidas e não jogadores); aqui a invariante é cada empate tirar 1 ponto do total de 84, e se sorteiam 3 jogos com condicional",
+  "canal": "mat-41-probabilidade.txt [25:03:01] (probabilidade = favoráveis ÷ espaço amostral); mat-40-combinacao-com-repeticao-analise-combina.txt [24:25:31] (combinação); a invariante dos pontos fora do canal",
+  "enunciado": "Oito times disputaram um campeonato em turno único: todos contra todos, uma vez. Vitória vale 3 pontos; empate vale 1 ponto para cada time; derrota, nenhum. A tabela mostra a pontuação final. O jornal não publicou os resultados dos jogos. Três jogos distintos são sorteados ao acaso entre todos os do campeonato. Sabendo que pelo menos um deles terminou empatado, a probabilidade de que exatamente um tenha terminado empatado é:\n\nDados: Tigres: 17; Raio: 15; Pelé: 13; Unidos: 11; Estrela: 9; Garra: 6; Furacão: 4; Cometa: 3; Público total do campeonato: 9 200 pessoas: não entra na conta.",
+  "A": "11/26",
+  "B": "62/117",
+  "C": "121/157",
+  "D": "225/244",
+  "E": "99/124",
+  "resposta": "E",
   "explicacao": {
-   "conferencia": "Resposta: alternativa C. 1 − 26/35 = 35/35 − 26/35 = 9/35. (\"Pelo menos um\" é tudo menos \"nenhum\".) C. Erros: A = Calculou a chance de os dois sorteados serem empates. B = Calculou para um jogo só. D = Somou 2/15 + 2/15 sem descontar quando os dois são empate. E = Achou a chance de nenhum empate e parou.",
-   "ideia": "Cada empate tira 1 ponto do total possível, então os pontos dizem quantos empates houve sem saber quais. Depois é contar jogos sorteados.",
+   "conferencia": "28 jogos, 84 − 78 = 6 empates. Sorteios de 3: 3 276. Exatamente 1 empate: 6 · 231 = 1 386. Pelo menos 1: 3 276 − 1 540 = 1 736. 1 386 ÷ 1 736 = 99/124. Resposta: alternativa E. Erros: Alternativa A = Esqueceu a condição: 1 386 ÷ 3 276, todos os sorteios possíveis; Alternativa B = Achou a chance de pelo menos um empate (1 736 ÷ 3 276) e parou; Alternativa C = Sorteou com reposição (o mesmo jogo podia sair 2 vezes): 3 · (3/14) · (11/14)² dividido por 1 − (11/14)³; Alternativa D = Achou que cada empate tira 2 pontos: 3 empates em vez de 6.",
+   "ideia": "Cada empate tira 1 ponto do total possível, então os pontos dizem quantos empates houve sem saber quais. Depois conte os sorteios de 3 jogos: a condição encolhe o total aos que têm pelo menos 1 empate.",
    "pecas": [
     {
-     "termo": "C(13,2)",
-     "significado": "Quantos jeitos de escolher 2 entre 13, sem ligar para a ordem: 13 · 12 ÷ 2."
+     "termo": "Combinação",
+     "significado": "Quantos jeitos de escolher k entre n, sem ligar para a ordem: n · (n−1) · ... ÷ (k · ... · 1)."
+    },
+    {
+     "termo": "Pelo menos 1",
+     "significado": "É todos os casos menos os casos de nenhum."
     }
    ],
    "passos": [
     {
      "titulo": "As fórmulas desta questão",
-     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela.",
      "visual": {
       "tipo": "formulas",
       "itens": [
@@ -5502,6 +5772,16 @@
         "figura": "contagem",
         "nome": "Probabilidade",
         "formula": "quero ÷ tudo"
+       },
+       {
+        "figura": "contagem",
+        "nome": "Condicional",
+        "formula": "casos pedidos ÷ casos que cumprem a condição"
+       },
+       {
+        "figura": "contagem",
+        "nome": "Combinação",
+        "formula": "n · (n−1) · ... ÷ k!"
        }
       ]
      }
@@ -5519,77 +5799,119 @@
       "linhas": [
        [
         "Tigres",
-        "12"
+        "17"
        ],
        [
         "Raio",
-        "10"
+        "15"
        ],
        [
         "Pelé",
-        "8"
+        "13"
        ],
        [
         "Unidos",
-        "6"
+        "11"
        ],
        [
         "Estrela",
-        "4"
+        "9"
        ],
        [
         "Garra",
+        "6"
+       ],
+       [
+        "Furacão",
+        "4"
+       ],
+       [
+        "Cometa",
         "3"
+       ],
+       [
+        "Público total do campeonato",
+        "9 200 pessoas: não entra na conta"
        ]
       ]
      }
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
+     "texto": "Sabendo que há pelo menos 1 empate, o grupo possível encolhe para os sorteios que têm pelo menos 1. A chance é então os sorteios com exatamente 1 ÷ os com pelo menos 1.\nAntes de achar Xu e Mu, é preciso saber quantos jogos e quantos empates houve.",
      "visual": {
       "tipo": "equacao",
-      "formula": "P = 1 − N",
-      "leitura": "chance de pelo menos um empate = 1 − chance de nenhum",
+      "formula": "Pq = Xu ÷ Mu",
+      "leitura": "chance = sorteios com exatamente 1 empate ÷ sorteios com pelo menos 1 empate",
       "letras": [
        {
-        "letra": "P",
-        "oque": "chance de pelo menos um empate (o que a questão quer)"
+        "letra": "Pq",
+        "oque": "chance de exatamente 1 empate, sabendo que há pelo menos 1 (o que a questão quer)"
        },
        {
-        "letra": "N",
-        "oque": "chance de nenhum empate"
+        "letra": "Xu",
+        "oque": "sorteios de 3 jogos com exatamente 1 empate"
+       },
+       {
+        "letra": "Mu",
+        "oque": "sorteios de 3 jogos com pelo menos 1 empate"
        }
       ]
      }
     },
     {
      "titulo": "Quantos jogos",
-     "texto": "Cada time joga contra 5 outros: 6 · 5 = 30, mas cada jogo foi contado duas vezes (uma por time), então 30 ÷ 2 = 15 jogos. (Com 3 times: 3 · 2 ÷ 2 = 3 jogos, A-B, A-C e B-C.)"
+     "texto": "Cada time joga contra 7 outros: 8 · 7 = 56, mas cada jogo foi contado duas vezes (uma por time), então 56 ÷ 2 = 28 jogos.\n(Com 3 times: 3 · 2 ÷ 2 = 3 jogos.)"
     },
     {
      "titulo": "Pontos se ninguém empatasse",
-     "texto": "15 · 3 = 45. Empate dá 1 + 1 = 2 pontos, então cada empate tira 1 ponto."
+     "texto": "28 · 3 = 84. Um empate dá 1 + 1 = 2 pontos, e não os 3 de uma vitória: cada empate tira 1 ponto do total."
     },
     {
      "titulo": "Quantos empates",
-     "texto": "A tabela soma 12 + 10 + 8 + 6 + 4 + 3 = 43. Faltam 45 − 43 = 2 empates. Nem precisa saber quem empatou."
+     "texto": "A tabela soma 17 + 15 = 32; 32 + 13 = 45; 45 + 11 = 56; 56 + 9 = 65; 65 + 6 = 71; 71 + 4 = 75; 75 + 3 = 78.\nFaltam 84 − 78 = 6 empates, e 28 − 6 = 22 jogos com vencedor. Nem precisa saber quais empataram."
     },
     {
-     "titulo": "Achando N: chance de nenhum empate",
-     "texto": "Os 2 jogos saem dos 15 − 2 = 13 que não empataram. Escolher 2 entre 13: o 1º jogo tem 13 jeitos, o 2º tem 12, e a ordem não importa (cada par foi contado 2 vezes), então 13 · 12 ÷ 2 = 78 (escreve-se C(13,2), que se lê combinação de 13 tomados 2 a 2). Entre os 15 são 15 · 14 ÷ 2 = 105."
+     "titulo": "Quantos sorteios existem",
+     "texto": "Escolher 3 jogos entre 28, sem ordem: 28 · 27 · 26 = 19 656 (28 · 27 = 756 e 756 · 26 = 19 656), dividido por 3 · 2 · 1 = 6: 19 656 ÷ 6 = 3 276 sorteios no total."
     },
     {
-     "titulo": "Achando N: chance de nenhum empate (2 de 2)",
-     "texto": "Chance = 78/105 = 26/35 (dividindo em cima e embaixo por 3)."
+     "titulo": "Achando Xu: exatamente 1 empate",
+     "texto": "Escolher o 1 empate entre os 6: 6 jeitos. Escolher os outros 2 jogos entre os 22 com vencedor: 22 · 21 = 462, e 462 ÷ 2 = 231 jeitos.\nAs duas escolhas se multiplicam: Xu = 6 · 231 = 1 386."
+    },
+    {
+     "titulo": "Achando Mu: pelo menos 1 empate",
+     "texto": "\"Pelo menos 1\" é todos menos \"nenhum\". Nenhum empate: os 3 jogos saem dos 22 com vencedor: 22 · 21 · 20 = 9 240 (462 · 20), e 9 240 ÷ 6 = 1 540.\nMu = 3 276 − 1 540 = 1 736."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "1 − 26/35 = 35/35 − 26/35 = 9/35. (\"Pelo menos um\" é tudo menos \"nenhum\".)"
+     "texto": "Pq = Xu ÷ Mu = 1 386 ÷ 1 736.\nDividindo em cima e embaixo por 2: 693/868. Depois por 7 (7 · 99 = 693 e 7 · 124 = 868): 99/124.\n99 = 9 · 11 e 124 = 4 · 31: não há fator comum.\nResposta: alternativa E. Conferindo: 124 · 0,8 = 99,2, então 99/124 é cerca de 0,8.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Xu",
+        "1 386 sorteios"
+       ],
+       [
+        "Mu",
+        "1 736 sorteios"
+       ],
+       [
+        "Pq",
+        "99/124"
+       ]
+      ]
+     }
     },
     {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: Cada empate tira 1 ponto do total possível, então os pontos dizem quantos empates houve sem saber quais.",
+     "texto": "Pista: cada empate tira 1 ponto do total (3 por jogo): os pontos dizem quantos empates houve. Exatamente 1 = escolhas que se multiplicam; pelo menos 1 = todos menos nenhum; a condição troca o total.",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -5600,64 +5922,83 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "dados do enunciado"
+        "8 times, 28 jogos, 6 empates; sorteio de 3 jogos"
        ],
        [
         "2. Equação em letras",
-        "P = 1 − N"
+        "Pq = Xu ÷ Mu"
        ],
        [
         "3. Uma letra por vez",
-        "ache cada letra e volte na equação"
+        "ache Xu e Mu e volte"
        ]
       ]
      }
     }
    ],
    "checagem": {
-    "pergunta": "4 times jogam todos contra todos (6 jogos) e houve 1 empate. Sorteando 2 jogos distintos, qual a chance de pelo menos um ser o empate?",
-    "resposta": "C(5,2) = 5 · 4 ÷ 2 = 10 e C(6,2) = 6 · 5 ÷ 2 = 15. Nenhum empate: 10/15 = 2/3. Pelo menos um: 1 − 2/3 = 1/3.",
+    "pergunta": "5 times jogam todos contra todos (10 jogos) e 2 foram empates. Sorteando 2 jogos distintos, sabendo que pelo menos um foi empate, qual a chance de exatamente um ter sido empate?",
     "opcoes": [
-     "1/6",
-     "1/3",
-     "2/3"
+     "16/17",
+     "1/2",
+     "16/45",
+     "28/45"
     ],
-    "certa": "1/3"
+    "certa": "16/17",
+    "resposta": "Exatamente 1: 2 · 8 = 16. Pelo menos 1: 10 · 9 ÷ 2 = 45 sorteios, menos 8 · 7 ÷ 2 = 28 sem empate, dá 17. Então 16/17. (16/45 esquece a condição.)"
    },
    "seuErro": null
-  },
-  "ancora": "parcial · HMMT fev. 2021 Combinatorics q.2 (invariante: cada partida elimina 1 jogador, então se contam partidas e não jogadores); aqui a invariante é cada empate tirar 1 ponto do total de 45",
-  "estiloPrincipal": "Harvard",
-  "canal": "mat-41-probabilidade.txt [25:03:01] (probabilidade = favoráveis ÷ espaço amostral); mat-40-combinacao-com-repeticao-analise-combina.txt [24:25:31] (combinação); a invariante dos pontos fora do canal"
+  }
  },
  {
   "id": "d2-escada-mat-ita-com-00c",
   "materia": "Matemática",
   "tema": "Análise Combinatória e Probabilidade",
-  "enunciado": "Uma clínica aplicou um exame em 10 000 pessoas, divididas por idade, com a porcentagem de doentes de cada faixa, como mostra a tabela. O exame dá positivo em 90% das pessoas doentes e, por engano, em 10% das sadias. Quem dá positivo repete o exame, e o resultado da repetição não depende do primeiro: vale a mesma taxa de acerto e de engano. Entre as pessoas que deram positivo nos dois exames, a porcentagem aproximada das que realmente têm a doença é:\n\nDados: Menos de 40 anos: 5 000 pessoas, 2% com a doença; 40 anos ou mais: 5 000 pessoas, 10% com a doença.",
-  "A": "84%",
-  "B": "36%",
-  "C": "81%",
-  "D": "90%",
-  "E": "94%",
-  "resposta": "A",
-  "origem": "Escada",
   "nivel": "acima",
+  "origem": "Escada",
+  "ancora": "forte · ENEM 2019 CD7 q.173 (Bayes contando em 100: de fraudulenta para inconsistente) e Fuvest 2025 2ª fase M02 (tabela e condicionais com denominadores trocados); aqui 2 faixas de idade e regra de 3 exames com desempate (caminhos da árvore somados)",
+  "canal": "fuv-08-analise-combinatoria-e-probabi.txt [4:00:32] (clássico da probabilidade condicional); mat-04-porcentagem.txt [2:06:31] (percentual de um valor)",
+  "enunciado": "Uma clínica aplicou um protocolo de exames em 10 000 pessoas, divididas por idade, com a porcentagem de doentes de cada faixa, como mostra a tabela. Cada exame dá positivo em 90% das pessoas doentes e, por engano, em 10% das sadias, e os resultados de exames repetidos na mesma pessoa não dependem uns dos outros. A regra da clínica é: faz-se o 1º e o 2º exame; se os dois derem o mesmo resultado, ele vale; se divergirem, faz-se um 3º exame, e o resultado dele decide. Cada exame custa R$ 120, mas esse valor não entra na conta. Entre as pessoas que a regra classifica como doentes, a porcentagem aproximada das que realmente têm a doença é:\n\nDados: Pessoas: 10 000; Menos de 40 anos: 5 000 pessoas, 5% com a doença; 40 anos ou mais: 5 000 pessoas, 10% com a doença; Exame em doente: positivo em 90% (0,9); Exame em sadia: positivo em 10% (0,1), por engano; Regra: 2 resultados iguais valem; se divergem, o 3º decide; Preço de cada exame: R$ 120: não entra na conta.",
+  "A": "42%",
+  "B": "87%",
+  "C": "90%",
+  "D": "74%",
+  "E": "97%",
+  "resposta": "D",
   "explicacao": {
-   "conferencia": "Resposta: alternativa A. 486 ÷ (486 + 94) = 486 ÷ 580: 580 · 0,8 = 464 e sobram 22; 22 ÷ 580 é cerca de 0,04. Então é cerca de 0,84. Para virar porcentagem, multiplique por 100: 0,84 = 84%. A. Erros: B = Parou no 1º exame (540 de 1 480). C = Multiplicou 0,9 · 0,9, sem olhar as sadias. D = Pegou a taxa do exame como se fosse o resultado. E = Usou a fração de sadias da população (9 400 de 10 000).",
-   "ideia": "Conte pessoas em vez de porcentagens: de 10 000, quantas têm a doença e quantas dão positivo duas vezes. O 2º exame multiplica de novo.",
-   "pecas": [],
+   "conferencia": "Doentes 750, sadias 9 250. A regra acusa um doente com 0,972 e uma sadia com 0,028: 729 e 259. 729 ÷ 988 é cerca de 74%. Resposta: alternativa D. Erros: Alternativa A = Parou no 1º exame: 675 ÷ (675 + 925), com 0,9 · 750 doentes e 0,1 · 9 250 sadias; Alternativa B = Só aceitou 2 positivos e ignorou o 3º exame: 607,5 ÷ (607,5 + 92,5); Alternativa C = Pegou a taxa de acerto do exame (90%) como se fosse a resposta; Alternativa E = Pegou a chance de a regra acusar um doente (0,972), sem olhar as sadias acusadas.",
+   "ideia": "Conte pessoas, não porcentagens: ache os doentes e as sadias e a chance de a regra de 3 exames acusar cada tipo, somando os caminhos da árvore. Depois compare os doentes acusados com todos os acusados.",
+   "pecas": [
+    {
+     "termo": "Caminho da árvore",
+     "significado": "Uma sequência de resultados dos exames: multiplique as chances dela. Caminhos que levam à mesma conclusão se somam."
+    },
+    {
+     "termo": "Desempate",
+     "significado": "O 3º exame só é feito se o 1º e o 2º divergem, e aí ele decide."
+    }
+   ],
    "passos": [
     {
      "titulo": "As fórmulas desta questão",
-     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela.",
      "visual": {
       "tipo": "formulas",
       "itens": [
        {
+        "figura": "porcentagem",
+        "nome": "Porcentagem de um valor",
+        "formula": "valor ÷ 100 · porcentagem"
+       },
+       {
         "figura": "contagem",
-        "nome": "Probabilidade",
-        "formula": "quero ÷ tudo"
+        "nome": "Caminho da árvore",
+        "formula": "multiplica as chances de cada etapa"
+       },
+       {
+        "figura": "contagem",
+        "nome": "Bayes por contagem",
+        "formula": "doentes acusados ÷ todos os acusados"
        }
       ]
      }
@@ -5674,62 +6015,116 @@
       ],
       "linhas": [
        [
+        "Pessoas",
+        "10 000"
+       ],
+       [
         "Menos de 40 anos",
-        "5 000 pessoas, 2% com a doença"
+        "5 000 pessoas, 5% com a doença"
        ],
        [
         "40 anos ou mais",
         "5 000 pessoas, 10% com a doença"
+       ],
+       [
+        "Exame em doente",
+        "positivo em 90% (0,9)"
+       ],
+       [
+        "Exame em sadia",
+        "positivo em 10% (0,1), por engano"
+       ],
+       [
+        "Regra",
+        "2 resultados iguais valem; se divergem, o 3º decide"
+       ],
+       [
+        "Preço de cada exame",
+        "R$ 120: não entra na conta"
        ]
       ]
      }
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
+     "texto": "Conte pessoas em vez de porcentagens. A regra acusa quem tem 2 positivos, ou 1 positivo e 1 negativo seguidos de um 3º positivo.\nAgora é só achar Dc e Sc, uma letra por vez: quantos doentes e sadias existem, e a chance de a regra acusar cada um.",
      "visual": {
       "tipo": "equacao",
-      "formula": "C = d ÷ (d + s)",
-      "leitura": "doentes com 2 positivos ÷ todos com 2 positivos",
+      "formula": "Pq = Dc ÷ (Dc + Sc)",
+      "leitura": "porcentagem = doentes que a regra acusa ÷ todos que a regra acusa",
       "letras": [
        {
-        "letra": "C",
-        "oque": "chance de ter a doença (o que a questão quer)"
+        "letra": "Pq",
+        "oque": "porcentagem de doentes entre os acusados (o que a questão quer)"
        },
        {
-        "letra": "d",
-        "oque": "doentes com 2 positivos"
+        "letra": "Dc",
+        "oque": "doentes que a regra classifica como doentes"
        },
        {
-        "letra": "s",
-        "oque": "sadias com 2 positivos"
+        "letra": "Sc",
+        "oque": "sadias que a regra classifica como doentes"
        }
       ]
      }
     },
     {
-     "titulo": "Quantas pessoas de cada",
-     "texto": "2% de 5 000 = 5 000 ÷ 100 · 2 = 100 doentes (menos de 40 anos), e 10% de 5 000 = 500 (40 anos ou mais). A tabela diz que 2% e 10% são as pessoas com a doença. Doentes: 600. Sadias: 10 000 − 600 = 9 400."
+     "titulo": "Achando Dc: quantos doentes (1 de 4)",
+     "texto": "Menos de 40 anos: 5% de 5 000 = 5 000 ÷ 100 · 5 = 250. 40 anos ou mais: 10% de 5 000 = 5 000 ÷ 10 = 500.\nDoentes ao todo: 250 + 500 = 750. Sadias: 10 000 − 750 = 9 250."
     },
     {
-     "titulo": "1º exame positivo",
-     "texto": "Doentes: 90% de 600 = 600 ÷ 100 · 90 = 540. Sadias: 10% de 9 400 = 9 400 ÷ 10 = 940."
+     "titulo": "Achando Dc: a regra acusa um doente (2 de 4)",
+     "texto": "Doente: positivo com chance 0,9 e negativo com 0,1. Positivo, positivo: 0,9 · 0,9 = 0,81 (9 · 9 = 81, com 2 casas).\nExames diferentes: positivo, negativo 0,9 · 0,1 = 0,09; negativo, positivo 0,1 · 0,9 = 0,09. Soma: 0,18."
     },
     {
-     "titulo": "Achando d: doentes com 2 positivos",
-     "texto": "Só repete o exame quem deu positivo. Doentes: 90% de 540 = 540 ÷ 100 · 90 = 486."
+     "titulo": "Achando Dc: a regra acusa um doente (3 de 4)",
+     "texto": "Nesses 0,18 há um 3º exame, positivo com chance 0,9: 0,18 · 0,9 = 0,162 (18 · 9 = 162, com 3 casas).\nA regra acusa o doente com chance 0,81 + 0,162 = 0,972."
     },
     {
-     "titulo": "Achando s: sadias com 2 positivos",
-     "texto": "Sadias: 10% de 940 = 940 ÷ 10 = 94."
+     "titulo": "Achando Dc: doentes acusados (4 de 4)",
+     "texto": "Dc = 750 · 0,972. O 750 é 3/4 de 1 000. 0,972 · 1 000 = 972; 972 ÷ 4 = 243; 243 · 3 = 729.\nDc = 729 doentes acusados."
+    },
+    {
+     "titulo": "Achando Sc: a regra acusa uma sadia (1 de 2)",
+     "texto": "Sadia: positivo com chance 0,1 e negativo com 0,9. Positivo, positivo: 0,1 · 0,1 = 0,01.\nExames diferentes: 0,1 · 0,9 = 0,09, duas vezes: 0,18. O 3º positivo tem chance 0,1: 0,18 · 0,1 = 0,018. A regra acusa a sadia com chance 0,01 + 0,018 = 0,028."
+    },
+    {
+     "titulo": "Achando Sc: sadias acusadas (2 de 2)",
+     "texto": "Sc = 9 250 · 0,028. Sem vírgula: 9 250 · 28 = 9 000 · 28 + 250 · 28 = 252 000 + 7 000 = 259 000.\n0,028 tem 3 casas, então tire 3 zeros: Sc = 259 sadias acusadas."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "486 ÷ (486 + 94) = 486 ÷ 580: 580 · 0,8 = 464 e sobram 22; 22 ÷ 580 é cerca de 0,04. Então é cerca de 0,84. Para virar porcentagem, multiplique por 100: 0,84 = 84%."
+     "texto": "Pq = 729 ÷ (729 + 259) = 729 ÷ 988.\nSem calculadora: 988 · 74 = 73 112, então 988 · 0,74 = 731,12; e 988 · 0,73 = 721,24. O 729 fica entre os dois, bem perto do 731,12: Pq é cerca de 0,74.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Dc",
+        "729 pessoas"
+       ],
+       [
+        "Sc",
+        "259 pessoas"
+       ],
+       [
+        "Pq",
+        "cerca de 74%"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Volta na equação (2 de 2)",
+     "texto": "Resposta: alternativa D. Conferindo: 0,74 = 74%, menos que os 90% do exame, porque as sadias são 9 250 de 10 000."
     },
     {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: Conte pessoas em vez de porcentagens: de 10 000, quantas têm a doença e quantas dão positivo duas vezes.",
+     "texto": "Pista: conte pessoas: doentes e sadias, a chance de a regra acusar cada tipo (multiplique no caminho, some os caminhos) e divida doentes acusados por todos os acusados.",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -5740,35 +6135,33 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "dados do enunciado"
+        "10 000 pessoas, 750 doentes; regra de 3 exames"
        ],
        [
         "2. Equação em letras",
-        "C = d ÷ (d + s)"
+        "Pq = Dc ÷ (Dc + Sc)"
        ],
        [
         "3. Uma letra por vez",
-        "ache cada letra e volte na equação"
+        "ache Dc e Sc e volte"
        ]
       ]
      }
     }
    ],
    "checagem": {
-    "pergunta": "1 000 pessoas, 10% doentes. O exame dá positivo em 90% dos doentes e em 10% dos sadios. Entre os positivos, qual a porcentagem de doentes?",
-    "resposta": "Doentes positivos: 90% de 100 = 90. Sadios positivos: 10% de 900 = 90. 90 ÷ 180 = 50%.",
+    "pergunta": "Uma pessoa doente faz 2 exames independentes, cada um positivo com chance 0,9. Qual a chance de o 1º dar positivo e o 2º dar negativo?",
     "opcoes": [
-     "10%",
-     "50%",
-     "90%"
+     "0,09",
+     "0,81",
+     "0,90",
+     "0,19"
     ],
-    "certa": "50%"
+    "certa": "0,09",
+    "resposta": "Negativo tem chance 1 − 0,9 = 0,1. Positivo e depois negativo: 0,9 · 0,1 = 0,09 (9 · 1 = 9, com 2 casas). 0,81 é positivo nos dois."
    },
    "seuErro": null
-  },
-  "ancora": "forte · ENEM 2019 CD7 q.173 (Bayes contando em 100: de fraudulenta para inconsistente) e Fuvest 2025 2ª fase M02 (tabela e condicionais com denominadores trocados); aqui 2 faixas de idade e 2º exame independente",
-  "estiloPrincipal": "Fuvest",
-  "canal": "fuv-08-analise-combinatoria-e-probabi.txt [4:00:32] (clássico da probabilidade condicional); mat-04-porcentagem.txt [2:06:31] (percentual de um valor)"
+  }
  },
  {
   "id": "d2-escada-mat-ita-com-00b",
@@ -5854,8 +6247,17 @@
      }
     },
     {
+     "titulo": "O desenho",
+     "texto": "Veja um painel aprovado de 6 lâmpadas: amarelo é acesa e branco é apagada, e nenhuma acesa fica ao lado de outra acesa.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "painel-lampadas",
+      "rotulos": []
+     }
+    },
+    {
      "titulo": "A equação em letras",
-     "texto": "Cada painel tem a mesma chance (1/2, doze vezes), então só é preciso contar: favoráveis ÷ possíveis, entre os aprovados.\nAgora é só achar T e N, uma letra por vez.",
+     "texto": "Entre os aprovados, cada painel pesa igual (a conta está no 1º passo de T), então só é preciso contar: favoráveis ÷ possíveis.\nAgora é só achar T e N, uma letra por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "P = N ÷ T",
@@ -5877,32 +6279,46 @@
      }
     },
     {
-     "titulo": "Achando T: contar os aprovados (1 de 5)",
+     "titulo": "Achando T: contar os aprovados (1 de 4)",
+     "texto": "Um painel certo, lâmpada por lâmpada, tem chance 1/2 doze vezes: 2 · 2 · ... dá 4 096. Cada painel tem chance 1/4 096.\nEntre os aprovados todos pesam igual: o 1/4 096 se corta e a chance é N ÷ T. (Teste: (3 · 5) ÷ (7 · 5) = 3/7.)"
+    },
+    {
+     "titulo": "Achando T: contar os aprovados (2 de 4)",
      "texto": "Olhe a última lâmpada. Apagada: as 11 de antes são um painel aprovado qualquer. Acesa: a anterior tem de ser apagada, e as 10 de antes são um aprovado qualquer.\nCom a(n) = painéis aprovados de n lâmpadas: a(12) = a(11) + a(10)."
     },
     {
-     "titulo": "Achando T: contar os aprovados (2 de 5)",
-     "texto": "Começo: 1 lâmpada tem 2 painéis (acesa ou apagada), a(1) = 2. 2 lâmpadas têm 3: apagada-apagada, apagada-acesa e acesa-apagada; acesa-acesa não vale. a(2) = 3.\na(3) = 3 + 2 = 5. a(4) = 5 + 3 = 8. a(5) = 8 + 5 = 13. a(6) = 13 + 8 = 21."
+     "titulo": "Achando T: contar os aprovados (3 de 4)",
+     "texto": "Teste com 1 = acesa e 0 = apagada. a(1) = 2 (0 ou 1). a(2) = 3 (00, 01, 10; o 11 não vale). Com 3 lâmpadas, terminando em 0: 000, 010, 100, são 3 = a(2). Terminando em 1: 001 e 101, são 2 = a(1).\na(3) = 3 + 2 = 5. A regra confere."
     },
     {
-     "titulo": "Achando T: contar os aprovados (3 de 5)",
-     "texto": "a(7) = 21 + 13 = 34.\na(8) = 34 + 21 = 55.\na(9) = 55 + 34 = 89.\na(10) = 89 + 55 = 144."
+     "titulo": "Achando T: contar os aprovados (4 de 4)",
+     "texto": "a(4) = 5 + 3 = 8; a(5) = 8 + 5 = 13; a(6) = 13 + 8 = 21; a(7) = 21 + 13 = 34.\na(8) = 34 + 21 = 55; a(9) = 55 + 34 = 89; a(10) = 89 + 55 = 144; a(11) = 144 + 89 = 233.\na(12) = 233 + 144 = 377.\nT = 377 painéis aprovados."
     },
     {
-     "titulo": "Achando T: contar os aprovados (4 de 5)",
-     "texto": "a(11) = 144 + 89 = 233.\na(12) = 233 + 144 = 377.\nT = 377 painéis aprovados."
+     "titulo": "Achando N: os vãos entre as apagadas (1 de 3)",
+     "texto": "Com 5 acesas, sobram 12 − 5 = 7 apagadas. Vão é o lugar onde uma acesa pode entrar: antes da 1ª apagada, entre duas apagadas vizinhas, ou depois da última.\nNo desenho, 3 apagadas dão 4 vãos. 7 apagadas dão 7 + 1 = 8 vãos.",
+     "visual": {
+      "tipo": "diagrama",
+      "nome": "painel-lampadas",
+      "rotulos": [
+       "",
+       "",
+       "exemplo: 3 apagadas deixam 4 vãos (1 a 4)",
+       "cada acesa entra num vão diferente"
+      ]
+     }
     },
     {
-     "titulo": "Achando N: os vãos entre as apagadas",
-     "texto": "Com 5 acesas, sobram 12 − 5 = 7 apagadas. Ponha as 7 apagadas em fila: ficam 8 vãos (antes da 1ª, 6 entre elas, depois da 7ª).\nCada acesa vai num vão diferente, e assim nenhuma fica ao lado de outra."
+     "titulo": "Achando N: os vãos entre as apagadas (2 de 3)",
+     "texto": "Cada acesa vai num vão diferente, e assim nenhuma fica colada em outra: entre duas acesas há sempre uma apagada.\nVale também a volta: num painel aprovado, as 5 acesas estão separadas por apagadas, então cada uma ocupa um vão diferente. Nenhum aprovado fica de fora."
     },
     {
-     "titulo": "Achando N: escolher os vãos",
+     "titulo": "Achando N: escolher os vãos (3 de 3)",
      "texto": "Escolher 5 vãos entre 8 é o mesmo que escolher os 3 que ficam vazios: C(8, 5) = C(8, 3).\n8 · 7 · 6 = 336, e 3 · 2 · 1 = 6. 336 ÷ 6 = 56.\nN = 56 painéis."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "P = N ÷ T = 56 ÷ 377.\n377 = 13 · 29 e 56 = 8 · 7: não há fator comum, a fração não simplifica.\nP = 56/377.\nResposta: alternativa C. Conferindo: 56 ÷ 377 é cerca de 0,15, um pouco menos que 1 em 6.",
+     "texto": "P = N ÷ T = 56 ÷ 377.\n56 = 2 · 2 · 2 · 7, então só o 2 e o 7 poderiam cortar. 377 é ímpar: o 2 não divide. 7 · 53 = 371 e 7 · 54 = 378: 377 não é múltiplo de 7.\nSem fator comum, a fração não simplifica: P = 56/377.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -5925,6 +6341,10 @@
        ]
       ]
      }
+    },
+    {
+     "titulo": "Volta na equação (2 de 2)",
+     "texto": "Resposta: alternativa C. Conferindo: 377 · 0,15 = 56,55 (377 · 15 = 5 655), que passa de 56. Logo 56 ÷ 377 é um pouco menos que 0,15."
     },
     {
      "titulo": "Questão parecida? Faça assim",
