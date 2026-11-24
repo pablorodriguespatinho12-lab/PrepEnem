@@ -42,8 +42,8 @@ assert len({150, 240, 330, 360, 960}) == 5
 Q.append(dict(
     id='d2-escada-fis-ita-ond-00a', materia='Física', tema=T, calc=240,
     enunciado=('Uma equipe de biólogos estuda um lago profundo e precisa saber a que distância, na vertical, um cardume está do fundo, para decidir até onde descer as redes. '
-               'Do barco, parado na superfície, o sonar emite um pulso de ultrassom em todas as direções e mede o tempo até cada eco. O pulso volta de dois pontos. O primeiro eco '
-               'vem do cardume, que o sonar de varredura lateral localiza a 270 m do barco, na horizontal, e chega 0,6 s depois da emissão. O segundo vem do fundo do lago, '
+               'Do barco, parado na superfície, o sonar emite um pulso de ultrassom (som agudo demais para o ouvido humano) em todas as direções e mede o tempo até cada eco. O pulso volta de dois pontos. O primeiro eco '
+               'vem do cardume, que um segundo sonar, que mede para o lado, localiza a 270 m do barco, na horizontal, e chega 0,6 s depois da emissão. O segundo vem do fundo do lago, '
                'exatamente abaixo do barco, e chega 0,8 s depois da emissão. A velocidade do som na água depende da temperatura. O termômetro do barco, que marca em graus Fahrenheit, '
                'indica 68 °F na água do lago, e o manual do sonar traz esta tabela, de valores aproximados:\n\n10 °C: 1 450 m/s\n20 °C: 1 500 m/s\n30 °C: 1 550 m/s\n\n'
                'O cardume, o barco e o fundo estão no mesmo plano vertical. A distância vertical, em metros, entre o cardume e o fundo do lago é:'),
@@ -58,7 +58,7 @@ Q.append(dict(
     ideia='Cada eco é de ida e volta, então a distância é metade do que o som andou. O eco do cardume é inclinado: a profundidade dele sai do triângulo de canto reto. Antes, o termômetro em °F escolhe a linha da tabela.',
     pecas=[('Eco inclinado', 'O pulso vai até o cardume em linha reta e volta. Esse caminho é a diagonal de um triângulo; só o lado vertical dele é profundidade.')],
     formulas=[('termometro', '°F para °C', '°C = (°F − 32) · 5 ÷ 9'), ('onda', 'Eco: ida e volta', 'distância = velocidade · tempo ÷ 2'),
-              ('triangulo-retangulo', 'Pitágoras', 'inclinado² = horizontal² + vertical²')],
+              ('triangulo-retangulo', 'Pitágoras', 'diagonal · diagonal = horiz · horiz + vert · vert')],
     origem=['O eco é o som que bate e volta: o tempo medido é de ida e volta, então a distância até o ponto é a velocidade do som vezes o tempo, dividida por 2.',
             'O cardume está de lado: o trajeto até ele é a diagonal de um triângulo de canto reto. A profundidade dele é o lado vertical, que sai por Pitágoras.'],
     desenho=('O barco está na superfície. O eco do cardume, a 270 m na horizontal, volta em 0,6 s; o do fundo, abaixo do barco, em 0,8 s.', 'sonar-eco-obliquo', []),
@@ -73,7 +73,7 @@ Q.append(dict(
              ('Achando obl: o trajeto inclinado até o cardume',
               'Ida e volta: 1 500 · 0,6 = 1 500 · 6 ÷ 10 = 9 000 ÷ 10 = 900 m.\nSó a ida: obl = 900 ÷ 2 = 450 m. Esse caminho é inclinado: não é a profundidade do cardume.'),
              ('Achando car: a profundidade do cardume',
-              'Triângulo de canto reto: diagonal 450 m, horizontal 270 m, vertical car.\n450 · 450 = 202 500 e 270 · 270 = 72 900. car · car = 202 500 − 72 900 = 129 600.\n36 · 36 = 1 296, então 360 · 360 = 129 600. car = 360 m.',
+              'Triângulo de canto reto: diagonal 450 m (o lado maior), horizontal 270 m, vertical car. Diagonal · diagonal = horizontal · horizontal + car · car. Como 10 = 4 + 6 dá 6 = 10 − 4, car · car = 450 · 450 − 270 · 270.\n45 · 45 = 1 800 + 225 = 2 025, então 450 · 450 = 202 500. 27 · 27 = 540 + 189 = 729, então 270 · 270 = 72 900. Diferença: 202 500 − 72 900 = 129 600.\nQual número vezes ele mesmo dá 129 600? 300 · 300 = 90 000 é pouco e 400 · 400 = 160 000 é muito. Teste 360: 36 · 36 = 1 080 + 216 = 1 296 e, com 10 · 10 = 100 a mais, 360 · 360 = 129 600. car = 360 m.',
               {'tipo': 'diagrama', 'nome': 'sonar-eco-obliquo', 'rotulos': ['', '', '', '', '600 m', '450 m', '360 m', '240 m']})],
     volta='dis = 600 − 360 = 240 m.\nResposta: alternativa A. Conferindo: 270 · 270 + 360 · 360 = 72 900 + 129 600 = 202 500 = 450 · 450.',
     valores=[('vel', '1 500 m/s'), ('fun', '600 m'), ('obl', '450 m'), ('car', '360 m')],
@@ -129,7 +129,7 @@ Q.append(dict(
     formulas=[('onda', 'Doppler, fonte chegando', 'fo = fe · vsom ÷ (vsom − vf)'), ('onda', 'Doppler, fonte indo embora', 'fo = fe · vsom ÷ (vsom + vf)'),
               ('circulo', 'Tração no giro', 'tra = massa · vf · vf ÷ raio')],
     origem=['A sirene vem direto ao microfone quando a velocidade dela aponta para ele: aí vale a fórmula de chegando, com vsom = 340 m/s. Quando aponta para longe, vale a de indo embora.',
-            'Nos outros pontos do círculo o som é ouvido entre esses dois valores. O microfone está muito longe: a direção da sirene até ele quase não muda durante a volta.',
+            'Nos outros pontos do círculo só conta a parte da velocidade que aponta para o microfone, e ela é menor que vf. Exemplo: com a sirene andando de lado, nada se aproxima nem se afasta, e o microfone ouve a frequência emitida, entre 380 e 420 Hz. O microfone está muito longe: a direção da sirene até ele quase não muda durante a volta.',
             'Mesa lisa: a única força horizontal na sirene é a tração do fio, e ela faz a curva (aula "Força para fazer a curva"): tra = massa · vf · vf ÷ raio.'],
     desenho=('Veja a mesa de cima: a sirene gira na ponta do fio e o microfone está muito longe. Quando ela vem direto ao microfone, ele ouve 420 Hz (a máxima); no ponto oposto ela se afasta e ele ouve 380 Hz (a mínima).', 'sirene-no-circulo', []),
     eq='tra = 0,8 · vf · vf ÷ 1,7', leitura='tração = massa · velocidade · velocidade ÷ raio (o raio é o fio)',
@@ -139,11 +139,11 @@ Q.append(dict(
     achando=[('Achando cte: o que as duas frequências têm em comum',
               'Chegando: 420 = fe · 340 ÷ (340 − vf). Multiplique os dois lados por (340 − vf) para sumir a divisão (como 6 = 12 ÷ 2 vira 6 · 2 = 12): 420 · (340 − vf) = fe · 340.\nIndo embora: 380 · (340 + vf) = fe · 340. Então cte = fe · 340 aparece nas duas.'),
              ('Achando vf: a velocidade da sirene',
-              'Iguale: 420 · (340 − vf) = 380 · (340 + vf). 420 · 340 = 42 · 34 · 100 = 1 428 · 100 = 142 800. 380 · 340 = 38 · 34 · 100 = 1 292 · 100 = 129 200.\n142 800 − 420 · vf = 129 200 + 380 · vf. Junte: 142 800 − 129 200 = 13 600 = 800 · vf.\nvf = 13 600 ÷ 800 = 136 ÷ 8 = 17 m/s.',
+              'Iguale: 420 · (340 − vf) = 380 · (340 + vf). Abra os parênteses: 420 · 340 = 42 · 34 · 100 (tire os zeros e ponha de volta). 42 · 34 = 1 260 + 168 = 1 428: 142 800. Do mesmo jeito 38 · 34 = 1 140 + 152 = 1 292: 129 200.\n142 800 − 420 · vf = 129 200 + 380 · vf. Some 420 · vf nos dois lados, para o vf sair da esquerda: 142 800 = 129 200 + 380 · vf + 420 · vf = 129 200 + 800 · vf (380 + 420 = 800).\nTire 129 200 dos dois lados: 13 600 = 800 · vf. Divida por 800: 136 ÷ 8 = 17, pois 8 · 17 = 136. vf = 17 m/s.',
               {'tipo': 'diagrama', 'nome': 'sirene-no-circulo', 'rotulos': ['', '', '', '', '', 'vf = 17 m/s']})],
-    volta=('tra = 0,8 · 17 · 17 ÷ 1,7. 17 · 17 = 170 + 119 = 289. 0,8 · 289 = 8 · 289 ÷ 10 = 2 312 ÷ 10 = 231,2.\n231,2 ÷ 1,7 = 2 312 ÷ 17. 17 · 100 = 1 700, sobram 612; 17 · 36 = 612. Então 100 + 36 = 136 N.\n'
-           'Resposta: alternativa A. Conferindo: 340 − 17 = 323 e 340 + 17 = 357; cte = 420 · 323 = 135 660 = 380 · 357; fe = 135 660 ÷ 340 = 399 Hz.'),
-    valores=[('cte', '135 660 (= 420 · 323)'), ('vf', '17 m/s')],
+    volta=('tra = 0,8 · 17 · 17 ÷ 1,7. 17 · 17 = 170 + 119 = 289. 0,8 · 289 = 8 · 289 ÷ 10 = 2 312 ÷ 10 = 231,2.\n231,2 ÷ 1,7: multiplico os dois por 10 e fica 2 312 ÷ 17. 17 · 100 = 1 700 e sobram 612. 17 · 30 = 510 e sobram 102; 17 · 6 = 102. Então 100 + 30 + 6 = 136 N.\n'
+           'Resposta: alternativa A. Conferindo: 340 − 17 = 323 e 340 + 17 = 357; cte = 420 · 323 = 135 660 (420 · 300 = 126 000 e 420 · 23 = 9 660) = 380 · 357; fe = 135 660 ÷ 340 = 399 Hz.'),
+    valores=[('cte', '135 660 (420 · 323, com 323 = 340 − 17)'), ('vf', '17 m/s')],
     pista='"duas frequências, máxima e mínima, de fonte em círculo" → monte máx · (vsom − vf) = mín · (vsom + vf); o fe some. Com vf, tração = massa · vf · vf ÷ raio.',
     rec1='0,8 kg; fio 1,7 m; 420 e 380 Hz; 340 m/s', rec3='cte = fe · 340; vf = 17 m/s',
     checagem=('Uma fonte de 380 Hz vem na direção de um ouvinte parado a 17 m/s (som a 340 m/s). Qual frequência o ouvinte percebe?', ['400 Hz', '380 Hz', '362 Hz', '323 Hz'], '400 Hz',
@@ -174,11 +174,11 @@ Q.append(dict(
                'pode ser subido ou descido. A coluna de ar entre a boca do tubo e a água funciona como um tubo sonoro fechado embaixo. Um diapasão de 500 Hz vibra sobre a boca. '
                'Baixando devagar o nível, o som reforça em duas posições seguidas, sem outra entre elas. A tabela dá o comprimento da coluna de ar, medido da boca até a água:\n\n'
                '1ª ressonância: 16,0 cm\n2ª ressonância: 50,0 cm\n\n'
-               'O ventre do som fica um pouco fora da boca do tubo, por uma correção que ninguém mediu. O som se propaga no ar com velocidade vel = 331 + 0,6 · tem, em m/s, '
+               'O ponto onde o ar vibra mais fica um pouco fora da boca do tubo, por uma folga que ninguém mediu. O som se propaga no ar com velocidade vel = 331 + 0,6 · tem, em m/s, '
                'sendo tem a temperatura do ar em °C. A temperatura do ar no tubo, em °C, é:'),
     dados=[('Diapasão', '500 Hz'), ('1ª ressonância, coluna de ar', '16,0 cm'), ('2ª ressonância, coluna de ar', '50,0 cm'), ('Som no ar', 'vel = 331 + 0,6 · tem (m/s)')],
     alts=[('−18', -18, 'Tomou 16 cm como lam ÷ 4: lam = 64 cm, vel = 320 m/s'),
-          ('−7', -7, 'Achou lam de cada nível sem a folga (4 · 16 e 4 · 50 ÷ 3) e fez a média'),
+          ('−7', -7, 'Achou lam de cada nível sem a folga (4 · 16 = 64 cm e 4 · 50 ÷ 3 ≈ 66,7 cm), fez a média (≈ 65,3 cm): vel ≈ 327 m/s'),
           ('4', 4, 'Tomou 50 cm como 3 · lam ÷ 4: lam = 66,7 cm, vel ≈ 333 m/s'),
           ('9', 9, 'Achou vel = 340 m/s e parou em 340 − 331, sem dividir por 0,6'),
           ('15', 15, 'OK')],
@@ -186,8 +186,8 @@ Q.append(dict(
     ideia='Na boca do tubo o som "passa" um pouco da borda, então um nível sozinho não dá lam ÷ 4. Já a diferença entre dois níveis seguidos é exatamente meio comprimento de onda, e a folga some.',
     pecas=[('Níveis seguidos', 'Dois pontos de ressonância em sequência: a coluna de ar cresce meio comprimento de onda de um para o outro.')],
     formulas=[('onda', 'Entre dois níveis seguidos', 'dif = lam ÷ 2'), ('onda', 'Velocidade da onda', 'vel = lam · freq'), ('termometro', 'Som e temperatura', 'vel = 331 + 0,6 · tem')],
-    origem=['Com lam = 68 cm, o 1º reforço seria em lam ÷ 4 = 17 cm e o 2º em 3 · lam ÷ 4 = 51 cm. Mas o ventre fica um pouco fora da boca: cada coluna medida sai menor por uma folga que ninguém mediu (aqui, 17 − 16 = 1 cm e 51 − 50 = 1 cm).',
-            'A folga é a mesma nos dois níveis e some na subtração: 50 − 16 = 34 cm = lam ÷ 2. Por isso 4 · 16 = 64 cm erra: ele daria vel = 320 m/s e −18 °C.'],
+    origem=['Exemplo só para ver a folga (a conta de verdade vem nos passos): se lam fosse 68 cm, o 1º reforço seria em lam ÷ 4 = 17 cm e o 2º em 3 · lam ÷ 4 = 51 cm. Mas o ponto de vibração máxima fica um pouco fora da boca: cada coluna medida sai menor por uma folga (aqui 17 − 16 = 1 cm e 51 − 50 = 1 cm).',
+            'A folga é a mesma nos dois níveis e some na subtração: 50 − 16 = 34 cm = lam ÷ 2. Por isso tomar 16 cm como lam ÷ 4 erra: lam = 4 · 16 = 64 cm, vel = 0,64 · 500 = 320 m/s e tem = (320 − 331) ÷ 0,6 = −11 ÷ 0,6, cerca de −18 °C.'],
     desenho=('Veja o tubo: o diapasão de 500 Hz vibra sobre a boca e o nível da água sobe e desce. O som reforça com 16,0 cm de ar e de novo com 50,0 cm.', 'tubo-com-agua', []),
     eq='tem = (vel − 331) ÷ 0,6', leitura='temperatura = (velocidade do som − 331) ÷ 0,6',
     letras=[('tem', 'temperatura do ar, em °C (o que a questão quer)'), ('vel', 'velocidade do som no tubo, em m/s'),
@@ -244,16 +244,16 @@ Q.append(dict(
           ('12', 12, 'Contou todos os divisores de 140, esquecendo o piso de 20 Hz'),
           ('140', 140, 'Deu o mdc (140) em vez de contar os valores')],
     resumo='420 = m · f1 e 700 = n · f1 com m e n inteiros: f1 = 140 ÷ kk. Com f1 pelo menos 20, kk vai de 1 a 7 (140 ÷ 7 = 20; 140 ÷ 8 = 17,5). v = 1,8 · f1 = 252 ÷ kk: sete valores.',
-    ideia='Os modos são f1, 2 · f1, 3 · f1 e assim por diante, então 420 e 700 são múltiplos inteiros de f1, e f1 é o mdc (140) dividido por um inteiro kk. O piso de 20 Hz limita kk, e cada kk dá uma velocidade diferente.',
-    pecas=[('mdc dividido por kk', 'O maior f1 possível é o mdc, 140 Hz. Dividindo-o por 2, 3, 4..., os dois modos continuam múltiplos inteiros de f1, só que de ordem mais alta.')],
+    ideia='Os modos são f1, 2 · f1, 3 · f1 e assim por diante, então 420 e 700 são múltiplos inteiros de f1, e f1 é o mdc de 420 e 700 dividido por um inteiro kk. O piso de 20 Hz limita kk, e cada kk dá uma velocidade diferente.',
+    pecas=[('mdc dividido por kk', 'O maior f1 possível é o mdc, que se acha mais adiante. Dividindo-o por 2, 3, 4..., os dois modos continuam múltiplos inteiros de f1, só que de ordem mais alta.')],
     formulas=[('onda', 'Modos da corda', 'f = n · f1, com n = 1, 2, 3...'), ('onda', 'Velocidade na corda', 'v = 2 · 0,9 · f1 = 1,8 · f1'), ('contagem', 'Fundamental possível', 'f1 = mdc ÷ kk')],
-    origem=['Se 420 é m · f1 e 700 é n · f1, com m e n inteiros que não conhecemos, então f1 cabe um número inteiro de vezes nos dois. O maior f1 possível é o mdc, 140 Hz (modos 3º e 5º).',
+    origem=['Se 420 é m · f1 e 700 é n · f1, com m e n inteiros que não conhecemos, então f1 cabe um número inteiro de vezes nos dois: f1 é um divisor comum de 420 e 700. O maior divisor comum é o mdc, e é o maior f1 possível; o mdc será calculado adiante.',
             'Não dá para só subtrair 700 − 420 = 280: isso valeria para modos vizinhos, e o enunciado não diz isso. (A subtração do mdc, na tela seguinte, é só um truque de conta.)',
-            'O enunciado não pede f1 inteira: f1 = 140 ÷ 3 também serve, com os modos 9º e 15º.'],
+            'O enunciado não pede f1 inteira: o mdc ÷ 3 também serve. A conta dos modos está no passo de kk.'],
     desenho=('Veja a corda de 0,9 m, presa nas duas pontas, em dois modos: 420 Hz e 700 Hz. Quantas barrigas cada um tem não é dado; o desenho mostra só um exemplo.', 'corda-modos', []),
-    eq='qtd = quantos kk dão f1 = mdc ÷ kk pelo menos 20', leitura='número de velocidades = número de fundamentais possíveis (todas diferentes)',
+    eq='qtd = contagem dos kk', leitura='quantidade de velocidades = quantos inteiros kk dão f1 = mdc ÷ kk de pelo menos 20 Hz',
     letras=[('qtd', 'quantidade de velocidades possíveis (o que a questão quer)'), ('mdc', 'maior divisor comum de 420 e 700'),
-            ('kk', 'inteiro (1, 2, 3...) que divide o mdc para formar f1')],
+            ('kk', 'inteiro (1, 2, 3...) que divide o mdc para formar f1; lê-se "cá-cá"')],
     eq_texto='Cada f1 = mdc ÷ kk dá uma velocidade (v = 1,8 · f1), todas diferentes. Contar velocidades é contar valores de kk.\nAgora é só achar mdc e kk.',
     achando=[('Achando mdc: o maior divisor comum de 420 e 700',
               'Troque o maior pela diferença (truque do mdc, não quer dizer que os modos são vizinhos): 700 − 420 = 280, e mdc(420, 700) = mdc(420, 280).\n420 − 280 = 140: mdc(140, 280). Como 280 = 2 · 140, mdc = 140.'),
@@ -411,6 +411,10 @@ assert (86 - 32) * 5 / 9 == 30 and round(86 * 5 / 9) == 48 and round((86 - 32) *
 assert 2 * 5 == 10 and 0.3 * 200 == 60 and abs(0.68 * 500 - 340) < 1e-9
 assert 12 + 24 == 36 and 3 * 80 / 4 == 60 and 2 * 1 * 50 == 100 and 4 * 80 == 320 and 2 * 0.9 * 100 == 180
 assert math.gcd(12, 18) == 6 and 12 / 1.5 == 8 and 18 / 1.5 == 12
+# contas das correções do aluno-do-zero (24/11)
+assert 45 * 45 == 2025 and 27 * 27 == 729 and 36 * 30 + 36 * 6 == 1296 and 300 ** 2 == 90000 and 400 ** 2 == 160000
+assert 42 * 30 + 42 * 4 == 1428 and 38 * 30 + 38 * 4 == 1292 and 380 + 420 == 800 and 420 * 300 + 420 * 23 == 135660
+assert 17 * 30 + 17 * 6 == 612 and 2312 - 1700 == 612 and round((320 - 331) / 0.6) == -18 and round(((64 + 200 / 3) / 2 / 100 * 500 - 331) / 0.6) == -7
 for _q in Q:
     assert all(len(v) <= 60 for _, v in _q['dados']), _q['id']
     assert len(_q['ideia']) <= 300, _q['id']

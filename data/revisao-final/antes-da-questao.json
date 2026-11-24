@@ -2136,6 +2136,7 @@
     "ele-baterias-paralelo": {
       "titulo": "Bateria real e duas baterias em paralelo",
       "linhas": [
+        "ε é a letra grega épsilon: lê-se \"épsilon\" e é o nome da fem de cada bateria (ε1 e ε2).",
         "Bateria real: uma fonte ideal de tensão (a fem, em V) com uma resistência interna (Rin, em Ω) em fila com ela.",
         "Duas baterias ligadas aos mesmos dois terminais (em paralelo) valem uma só, com uma Fem e uma Rin próprias.",
         "Rin = (r1 · r2) ÷ (r1 + r2), como dois resistores em paralelo. Fem = (ε1 · r2 + ε2 · r1) ÷ (r1 + r2). Bateria 1: ε1 e r1; bateria 2: ε2 e r2.",
@@ -2472,7 +2473,7 @@
           "resolucao": "20 cm: 1/f = 0,5 · (1/20 + 1/20) = 0,5 · 0,1 = 0,05, então f = 20 cm.\n40 cm usa só uma face; 10 cm esquece o 0,5; 5 cm erra os dois."
         },
         {
-          "enunciado": "Uma lente biconvexa tem N = 0,8 (o meio é mais refringente que ela). Ela converge ou diverge?",
+          "enunciado": "Uma lente biconvexa tem N = 0,8 (o índice do meio é maior que o dela). Ela converge ou diverge?",
           "alternativas": [
             "Diverge",
             "Converge",
@@ -2491,7 +2492,7 @@
         "Ângulo limite θL: a luz sai rente à superfície. sen θL = n2 ÷ n1. Acima desse ângulo de incidência toda a luz reflete: reflexão total.",
         "Só existe reflexão total se n1 > n2. Com n2 igual ou maior, o seno daria 1 ou mais e não há ângulo limite.",
         "Exemplo: vidro 1,5 para ar 1,0: sen θL = 1,0 ÷ 1,5 = 0,67. O ângulo é medido da normal, a reta perpendicular à parede.",
-        "Numa fibra reta, o raio vai e volta entre as paredes. Para avançar um comprimento L ao longo do eixo, ele anda L ÷ sen θ (θ medido da normal)."
+        "Numa fibra reta, o raio vai e volta. sen θ = avanço no eixo ÷ caminho do raio. Para avançar L no eixo, ele anda L ÷ sen θ."
       ],
       "visual": {
         "tipo": "tabela",
@@ -6820,6 +6821,69 @@
           "resolucao": "40: 1 menina entre 4 são 4 jeitos; 2 meninos entre 5 são 5 · 4 ÷ 2 = 10. Juntos: 4 · 10 = 40.\n80 esquece de dividir por 2 os meninos (4 · 20); 20 são os meninos com ordem, sem as meninas; 10 são só os meninos."
         }
       ]
+    },
+    "fun-parabola": {
+      "titulo": "Parábola: o morro, as raízes e o topo",
+      "linhas": [
+        "Parábola é a curva em forma de morro (ou de vale): sobe, chega a um topo e desce igual do outro lado.",
+        "Raízes são os valores em que a conta dá zero. Em (p − 2) · (12 − p), dá zero em p = 2 e em p = 12.",
+        "O vértice é o topo do morro. Como os dois lados são iguais, ele fica no meio das raízes: (2 + 12) ÷ 2 = 7.",
+        "Teste: p = 7 dá 5 · 5 = 25; p = 6 dá 4 · 6 = 24 e p = 8 dá 6 · 4 = 24. O topo é em p = 7."
+      ],
+      "visual": {
+        "tipo": "tabela",
+        "titulo": "Valores de (p − 2) · (12 − p)",
+        "cabecalho": [
+          "p",
+          "Conta"
+        ],
+        "linhas": [
+          [
+            "2",
+            "0"
+          ],
+          [
+            "6",
+            "24"
+          ],
+          [
+            "7",
+            "25"
+          ],
+          [
+            "8",
+            "24"
+          ],
+          [
+            "12",
+            "0"
+          ]
+        ]
+      },
+      "exercicios": [
+        {
+          "enunciado": "A conta (p − 2) · (12 − p) vale zero em dois valores de p. Quais?",
+          "alternativas": [
+            "2 e 12",
+            "−2 e 12",
+            "2 e −12",
+            "10 e 14"
+          ],
+          "certa": 0,
+          "resolucao": "2 e 12: p − 2 = 0 dá p = 2, e 12 − p = 0 dá p = 12.\n−2 e 12 trocou o sinal de p − 2; 2 e −12 trocou o de 12 − p; 10 e 14 não zeram nenhum parêntese."
+        },
+        {
+          "enunciado": "A conta (p − 2) · (12 − p) forma um morro, igual dos dois lados das raízes 2 e 12. Em qual p fica o topo?",
+          "alternativas": [
+            "7",
+            "5",
+            "10",
+            "12"
+          ],
+          "certa": 0,
+          "resolucao": "7: o topo fica no meio das raízes, (2 + 12) ÷ 2 = 7.\n5 é a distância do topo à raiz 12; 10 é 12 − 2; 12 é uma raiz, onde a conta dá zero."
+        }
+      ]
     }
   },
   "questoes": {
@@ -7182,7 +7246,8 @@
       "multiplicar-decimais"
     ],
     "d2-escada-mat-ita-fun-00a": [
-      "numero-que-falta"
+      "numero-que-falta",
+      "fun-parabola"
     ],
     "d2-escada-mat-ita-fun-00b": [
       "fun-composta",

@@ -52,13 +52,14 @@ function TerrenoEscala({ rotulos }: Props) {
   );
 }
 
-// Lúnulas: triângulo ABC reto em A (AB = 8, BC = 17, AC = 15 só como resultado), semicírculos nos catetos e a circunferência Γ de diâmetro BC.
+// Lúnulas: triângulo XYZ reto em X (XY = 8, YZ = 17, XZ = 15 só como resultado), semicírculos nos catetos e a circunferência Γ de diâmetro YZ.
 // Escala 12 px por cm. A parte dos semicírculos que fica fora de Γ é a pedida.
 function Lunulas({ rotulos }: Props) {
   const ac = dado(rotulos, 2);
   const conta = dado(rotulos, 3);
+  const meio = dado(rotulos, 5);
   return (
-    <svg viewBox={`0 0 430 ${conta ? 350 : 328}`} className="w-full max-w-[430px] h-auto" role="img" aria-label="triângulo retângulo ABC com semicírculos sobre os catetos AB e AC e a circunferência Γ de diâmetro BC; a parte dos semicírculos fora de Γ está pintada">
+    <svg viewBox={`0 0 430 ${328 + (conta ? 22 : 0) + (meio ? 22 : 0)}`} className="w-full max-w-[430px] h-auto" role="img" aria-label="triângulo retângulo XYZ com semicírculos sobre os catetos XY e XZ e a circunferência Γ de diâmetro YZ; a parte dos semicírculos fora de Γ está pintada">
       <path d="M160 104 A48 48 0 0 0 160 200 Z" fill={SUJO} />
       <path d="M160 200 A90 90 0 0 0 340 200 Z" fill={SUJO} />
       <circle cx="250" cy="152" r="102" fill={PAPEL} />
@@ -68,15 +69,16 @@ function Lunulas({ rotulos }: Props) {
       <path d="M160 104 V200 H340 Z" fill={CHAO} stroke={TINTA} strokeWidth={4} strokeLinejoin="round" />
       <path d="M160 104 L340 200" stroke={CORTE} strokeWidth={4} />
       <path d="M160 190 H170 V200" fill="none" stroke={TINTA} strokeWidth={2} />
-      <Texto x={148} y={100} ancora="end">B</Texto>
-      <Texto x={150} y={224} ancora="end">A</Texto>
-      <Texto x={350} y={192} ancora="start">C</Texto>
+      <Texto x={148} y={100} ancora="end">Y</Texto>
+      <Texto x={150} y={224} ancora="end">X</Texto>
+      <Texto x={350} y={192} ancora="start">Z</Texto>
       <Texto x={103} y={158} ancora="end">{r(rotulos, 0, '8 cm')}</Texto>
       <Texto x={268} y={118} ancora="start">{r(rotulos, 1, '17 cm')}</Texto>
       {ac && <Texto x={250} y={186} tam={14}>{ac}</Texto>}
       <Texto x={316} y={64} cor={CORTE} tam={20}>Γ</Texto>
       <Texto x={215} y={318} tam={13}>{r(rotulos, 4, 'rosa: a parte dos semicírculos que fica fora de Γ')}</Texto>
       {conta && <Texto x={215} y={338} tam={13}>{conta}</Texto>}
+      {meio && <Texto x={215} y={conta ? 360 : 338} tam={13}>{meio}</Texto>}
     </svg>
   );
 }

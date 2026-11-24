@@ -101,4 +101,6 @@ Regras que saem dos números:
 6. Guarda do banco lê o TEXTO do comando: `git add -u` em vez de listar `scripts/...`.
 7. Pablo pediu (24/11) usar esta skill SEMPRE: abrir toda tarefa carregando-a e escrevendo o plano com quem faz cada parte.
 
+8. **Ao orquestrar agentes (Pablo, 24/11/2026: "quando for orquestrar seus agentes, economiza tokens")**: (a) menos agentes, cada um com mais trabalho: 4 executores de ~100 mil cada pagam 4 arranques de 20 mil; (b) escolher o modelo mais barato que dá conta (conserto de texto: `model: "sonnet"`; só ler: `explorador`/Haiku); (c) colar no pedido o trecho exato do relatório, não mandar o agente reler; (d) resposta pedida em ≤10 linhas; (e) 1 agente que já leu os arquivos continua com `SendMessage` em vez de abrir outro; (f) coordenador não relê o que o agente editou: roda `--seco` + `vitest` e olha só o resumo.
+
 Não provado ainda: o ganho do plugin caveman (`/usage` antes e depois, ver memória `teste-caveman-plugin`); a economia em % dos blogs não vale aqui.

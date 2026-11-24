@@ -19,8 +19,8 @@
    "ideia": "Um relógio vai para frente e o outro para trás, então a diferença entre eles muda 4 horas a cada hora. O mostrador repete a cada 12 horas, por isso eles coincidem de 3 em 3 horas, qualquer que seja a hora errada de agora.",
    "pecas": [
     {
-     "termo": "Velocidade relativa",
-     "significado": "Quando duas coisas vão em sentidos contrários, a diferença entre elas muda a soma das velocidades."
+     "termo": "Diferença entre os dois",
+     "significado": "Se um vai para frente e o outro para trás, a diferença entre eles muda, a cada hora, a soma dos dois movimentos. O exemplo do passo \"Achando R\" mostra."
     },
     {
      "termo": "Mostrador de 12 h",
@@ -37,7 +37,7 @@
        {
         "figura": "texto",
         "nome": "Quanto a diferença muda",
-        "formula": "R = 1 + 3 = 4 h a cada hora"
+        "formula": "R = 1 + quantas vezes anda para trás"
        },
        {
         "figura": "texto",
@@ -84,7 +84,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Dois relógios mostram a mesma hora quando a diferença entre eles dá uma volta de 12 h. Se a diferença muda R horas a cada hora, isso acontece de 12 ÷ R em 12 ÷ R horas, e cabem 24 ÷ (12 ÷ R) vezes em 24 h.\nAgora é só achar R.",
+     "texto": "Dois relógios mostram a mesma hora quando a diferença entre eles é 0, 12, 24... h. De um acerto ao próximo a diferença anda 12 h. Se ela muda R horas a cada hora, isso leva 12 ÷ R horas, e cabem 24 ÷ (12 ÷ R) vezes em 24 h.\nAgora é só achar R.",
      "visual": {
       "tipo": "equacao",
       "formula": "N = 24 ÷ (12 ÷ R)",
@@ -138,11 +138,15 @@
     },
     {
      "titulo": "Achando R: quando eles acertam",
-     "texto": "No exemplo, daqui a 0,5 h (meia hora) o certo mostra 3 h 30 min e o errado 5 − 1,5 = 3 h 30 min: acertou.\nDepois disso a situação se repete a cada 12 ÷ 4 = 3 h: acertos em 0,5; 3,5; 6,5; 9,5; 12,5; 15,5; 18,5 e 21,5 h. O próximo, 24,5 h, já passou de 24."
+     "texto": "No exemplo, o errado está 5 − 3 = 2 h à frente do certo. A diferença cai 4 h a cada hora, então zerar os 2 h leva 2 ÷ 4 = 0,5 h. Daqui a 0,5 h (meia hora) o certo mostra 3 h 30 min e o errado 5 − 1,5 = 3 h 30 min: acertou."
+    },
+    {
+     "titulo": "Achando R: quando eles acertam (2 de 2)",
+     "texto": "Depois disso a situação se repete a cada 12 ÷ 4 = 3 h: acertos em 0,5; 3,5; 6,5; 9,5; 12,5; 15,5; 18,5 e 21,5 h. O próximo, 24,5 h, já passou de 24."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "N = 24 ÷ (12 ÷ 4) = 24 ÷ 3 = 8.\nCom outra hora errada de partida a 1ª vez muda, mas ela cai sempre antes de 3 h e depois vem uma a cada 3 h: cabem sempre 8 em 24 h.\nResposta: alternativa E.",
+     "texto": "N = 24 ÷ (12 ÷ 4) = 24 ÷ 3 = 8.\nTeste com outra hora errada: certo 3 h, errado 8 h. A diferença é 5 h e cai 4 por hora: acerta em 5 ÷ 4 = 1,25 h (os dois em 4 h 15 min). Depois, de 3 em 3 h: 1,25; 4,25; 7,25; 10,25; 13,25; 16,25; 19,25; 22,25. São 8, e o próximo (25,25) passa de 24.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -161,6 +165,10 @@
        ]
       ]
      }
+    },
+    {
+     "titulo": "Volta na equação (2 de 2)",
+     "texto": "Os acertos vêm de 3 em 3 h, então o 1º cai nas 3 primeiras horas, qualquer que seja a hora errada.\nResposta: alternativa E."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -211,7 +219,7 @@
   "origem": "Escada",
   "ancora": "forte · ENEM 2022 q.160 (caderno 5; q.139 no caderno 7: planta na escala 1 : 50 com folga de 10 cm só de um lado); aqui a cópia reduzida a 50% e a área real em hectares",
   "canal": "mat-07-escalas.txt [3:51:02] (escala é razão na mesma unidade); área e escala ao quadrado em mat-07-escalas.txt [4:01:31]",
-  "enunciado": "Uma família herdou uma fazenda e foi à prefeitura buscar a planta dela, desenhada na escala 1 : 30 000. O funcionário explicou que a planta original não sai do arquivo e fez uma fotocópia reduzida a 50% do tamanho, em todas as direções. Como a cópia ficou pequena demais para ler, a família a levou a uma papelaria, onde ela foi ampliada para 150% do tamanho da cópia que recebeu. Nenhuma das duas cópias traz essa informação no papel. Na cópia final, a família calculou a área do desenho do terreno em uma folha quadriculada. Para o imposto, a prefeitura cobra R$ 15 por hectare, e o corretor lembrou que 1 hectare equivale a 10 000 m². A tabela resume o que a família tem.\n\nDocumento | Como foi feito | Escala\nPlanta original | desenhada pela prefeitura | 1 : 30 000\n1ª cópia | reduzida a 50% da planta | não consta no papel\n2ª cópia (a final) | ampliada a 150% da 1ª cópia | não consta no papel\n\nNa 2ª cópia, o desenho do terreno ocupa 17,5 cm². A área real do terreno, em hectares, é:\n\nDados: Planta original: escala 1 : 30 000; 1ª cópia: reduzida a 50% da planta; 2ª cópia (a final): ampliada a 150% da 1ª cópia; Desenho do terreno: 17,5 cm² na 2ª cópia; Quero: área real, em hectares.",
+  "enunciado": "Uma família herdou uma fazenda e foi à prefeitura buscar a planta dela, desenhada na escala 1 : 30 000. O funcionário explicou que a planta original não sai do arquivo e fez uma fotocópia reduzida a 50% do tamanho, em todas as direções. Como a cópia ficou pequena demais para ler, a família a levou a uma papelaria, onde ela foi ampliada para 150% do tamanho da cópia que recebeu. Nenhuma das duas cópias traz essa informação no papel. Na cópia final, a família calculou a área do desenho do terreno em uma folha quadriculada. Para o imposto, a prefeitura cobra R$ 15 por hectare, e o corretor lembrou que 1 hectare equivale a 10 000 m². A tabela resume o que a família tem.\n\nDocumento | Como foi feito | Escala\nPlanta original | desenhada pela prefeitura | 1 : 30 000\n1ª cópia | reduzida a 50% da planta | não consta no papel\n2ª cópia (a final) | ampliada a 150% da 1ª cópia | não consta no papel\n\nNa 2ª cópia, o desenho do terreno ocupa 17,5 cm². A área real do terreno, em hectares, é:\n\nDados: Planta original: escala 1 : 30 000; 1ª cópia: reduzida a 50% da planta; 2ª cópia (a final): ampliada a 150% da 1ª cópia; Desenho do terreno: 17,5 cm² na 2ª cópia; Imposto: R$ 15 por hectare (não entra na conta); Quero: área real, em hectares.",
   "A": "17,5",
   "B": "280",
   "C": "157,5",
@@ -284,6 +292,10 @@
         "17,5 cm² na 2ª cópia"
        ],
        [
+        "Imposto",
+        "R$ 15 por hectare (não entra na conta)"
+       ],
+       [
         "Quero",
         "área real, em hectares"
        ]
@@ -305,7 +317,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Os 17,5 vêm do enunciado. K diz quanto 1 cm da cópia final vale no chão; como é área, K entra duas vezes. Dividir por U passa de cm² para hectares.\nAgora é só achar K e U, uma por vez.",
+     "texto": "Os R$ 15 por hectare do imposto não entram: a questão pede a área, não o imposto. Os 17,5 vêm do enunciado. K diz quanto 1 cm da cópia final vale no chão; como é área, K entra duas vezes. Dividir por U passa de cm² para hectares.\nAgora é só achar K e U, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "H = 17,5 × (K × K) ÷ U",
@@ -328,7 +340,7 @@
     },
     {
      "titulo": "Achando K: o que as duas cópias fazem",
-     "texto": "Exemplo: um lado de 10 cm na planta fica com 10 · 0,5 = 5 cm na 1ª cópia e com 5 · 1,5 = 7,5 cm na 2ª. A cópia final tem 7,5 ÷ 10 = 0,75 do tamanho da planta.\nNão é 50% + 150%, é 0,5 · 1,5.",
+     "texto": "Exemplo: um lado de 10 cm na planta fica com 10 · 0,5 = 5 cm na 1ª cópia e com 5 · 1,5 = 7,5 cm na 2ª. A cópia final tem 7,5 ÷ 10 = 0,75 do tamanho da planta.",
      "visual": {
       "tipo": "tabela",
       "titulo": "Um lado de 10 cm da planta",
@@ -353,8 +365,12 @@
      }
     },
     {
+     "titulo": "Achando K: o que as duas cópias fazem (2 de 2)",
+     "texto": "Não é 50% + 150%, é 0,5 · 1,5 = 0,75: 0,5 é a metade, e a metade de 1,5 é 0,75. Conferindo o 5 · 1,5: 5 · 1 = 5 e 5 · 0,5 = 2,5; 5 + 2,5 = 7,5."
+    },
+    {
      "titulo": "Achando K: 1 cm da cópia vale quantos cm do chão",
-     "texto": "Na planta, 1 cm vale 30 000 cm do chão. A cópia final é 0,75 da planta, então 1 cm dela guarda 1 ÷ 0,75 cm da planta: 100 ÷ 75 = 4/3 (dividindo por 25).\nK = 30 000 · 4/3 = 30 000 ÷ 3 · 4 = 10 000 · 4 = 40 000 cm.",
+     "texto": "Na planta, 1 cm vale 30 000 cm do chão. A cópia final é 0,75 da planta: o desenho encolheu, então 1 cm dela vale MAIS chão que 1 cm da planta (na tabela, os 10 cm da planta cabem em só 7,5 cm). Para voltar ao tamanho da planta, divido por 0,75.",
      "visual": {
       "tipo": "diagrama",
       "nome": "terreno-escala",
@@ -364,6 +380,10 @@
        "1 cm da 2ª cópia = 40 000 cm do chão"
       ]
      }
+    },
+    {
+     "titulo": "Achando K: 1 cm da cópia vale quantos cm do chão (2 de 2)",
+     "texto": "K = 30 000 ÷ 0,75. Multiplico os dois por 4 (o resultado da divisão não muda): 0,75 · 4 = 3 e 30 000 · 4 = 120 000. K = 120 000 ÷ 3 = 40 000 cm."
     },
     {
      "titulo": "Achando U: cm² em 1 hectare",
@@ -533,10 +553,10 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "É a tabela antes e agora, uma coluna por grandeza. Os dias, 15 antes e Z agora, ficam de um lado; as outras colunas entram uma a uma.\nAgora é só achar R e F, uma por vez; depois a conta com as frações.",
+     "texto": "É a tabela antes e agora, uma coluna por grandeza. Cada parêntese \"a ÷ b\" é uma fração, a em cima e b embaixo, e o × liga as frações. Os dias, 15 antes e Z agora, ficam de um lado; as outras colunas entram uma a uma.\nAgora é só achar R e F, uma por vez; depois a conta com as frações.",
      "visual": {
       "tipo": "equacao",
-      "formula": "15 ÷ Z × 60 ÷ 40 × 200 ÷ 250 = R ÷ F",
+      "formula": "(15 ÷ Z) × (60 ÷ 40) × (200 ÷ 250) = R ÷ F",
       "leitura": "em cada coluna, antes ÷ agora; cães e gramas (ao contrário dos dias) ficam do lado dos dias, a ração do outro lado",
       "letras": [
        {
@@ -650,7 +670,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "Fica 15/Z × 6/5 = 6/7. Em cima, 15 · 6 = 90; embaixo, Z · 5 = 5Z; 90 ÷ 5 = 18, e fica 18/Z = 6/7.\nCruzado: 18 · 7 = 6 · Z, isto é, 126 = 6 · Z. Então Z = 126 ÷ 6 = 21 (6 · 21 = 126).\nResposta: alternativa D.",
+     "texto": "Fica 15/Z × 6/5 = 6/7. Em cima, 15 · 6 = 90; embaixo, Z · 5 (Z vezes 5). Posso dividir em cima e embaixo por 5 sem mudar a fração: 90 ÷ 5 = 18, e embaixo sobra só Z. Fica 18/Z = 6/7.\nCruzado: 18 · 7 = 6 · Z, isto é, 126 = 6 · Z. Então Z = 126 ÷ 6 = 21 (6 · 21 = 126).\nResposta: alternativa D.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -695,7 +715,7 @@
        ],
        [
         "2. Equação em letras",
-        "15 ÷ Z × 60 ÷ 40 × 200 ÷ 250 = R ÷ F"
+        "(15 ÷ Z) × (60 ÷ 40) × (200 ÷ 250) = R ÷ F"
        ],
        [
         "3. Uma letra por vez",
@@ -743,8 +763,8 @@
      "significado": "Distância ÷ velocidade. Se a velocidade cai à metade, o tempo do trecho dobra."
     },
     {
-     "termo": "Velocidade média",
-     "significado": "Distância total ÷ tempo total. Não é a média das velocidades dos trechos."
+     "termo": "Média das velocidades",
+     "significado": "Somar as 8 velocidades e dividir por 8 não serve: o robô passa mais tempo nas velocidades baixas."
     }
    ],
    "passos": [
@@ -1101,7 +1121,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "M = (520,8 − 174 − 186) ÷ 24.\n520,8 − 174 = 346,8 e 346,8 − 186 = 160,8. Então M = 160,8 ÷ 24.\n24 · 6 = 144 e sobra 160,8 − 144 = 16,8. 24 · 0,7 = 16,8. Então M = 6 + 0,7 = 6,7.\nResposta: alternativa E. Conferindo: 174 + 186 + 24 · 6,7 = 174 + 186 + 160,8 = 520,8, e 520,8 ÷ 84 = 6,2.",
+     "texto": "M = (520,8 − 174 − 186) ÷ 24.\n520,8 − 174 = 346,8 e 346,8 − 186 = 160,8. Então M = 160,8 ÷ 24.\n24 · 6 = 144 e sobra 160,8 − 144 = 16,8. 24 · 0,7 = 16,8. Então M = 6 + 0,7 = 6,7.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -1136,6 +1156,10 @@
        ]
       ]
      }
+    },
+    {
+     "titulo": "Volta na equação (2 de 2)",
+     "texto": "Resposta: alternativa E. Conferindo: 174 + 186 + 24 · 6,7 = 174 + 186 + 160,8 = 520,8, e 520,8 ÷ 84 = 6,2 (84 · 6 = 504, sobram 16,8, e 84 · 0,2 = 16,8)."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -1297,15 +1321,19 @@
     },
     {
      "titulo": "Preparo: duas regras para a 7ª ser 6",
-     "texto": "(1) No máximo 6 notas ficam abaixo do 6, senão o 6 passa do 7º lugar.\n(2) Até o 6, contando ele, ficam pelo menos 7 notas, senão o 6 não chega ao 7º lugar.\nExemplo: fila 3, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 10 (13 notas): o 6 é o 7º e antes dele há 6 notas. Com 7 notas antes, ele seria o 8º."
+     "texto": "Exemplo: fila 3, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 10 (13 notas): o 6 é o 7º e antes dele há 6 notas.\nDaí saem duas regras para o 6 ser o 7º da fila:\n(1) Antes do 6 ficam no máximo 6 notas (com 7 antes, ele seria o 8º)."
+    },
+    {
+     "titulo": "Preparo: duas regras para a 7ª ser 6 (2 de 2)",
+     "texto": "(2) Contando o próprio 6, ficam pelo menos 7 notas até ele (com menos, o 7º já seria maior que 6)."
     },
     {
      "titulo": "Preparo: traduzindo para as 2 notas novas",
-     "texto": "Hoje são 5 abaixo de 6. Regra (1): no máximo uma nova é menor que 6 (5 + 1 = 6 cabe; 5 + 2 = 7 não cabe).\nRegra (2): até o 6 hoje há 5 notas; para chegar a 7, as duas novas são menores ou iguais a 6."
+     "texto": "Hoje são 5 abaixo de 6. Regra (1): no máximo uma nova é menor que 6 (5 + 1 = 6 cabe; 5 + 2 = 7 não cabe).\nRegra (2): as notas até 6 (menores ou iguais a 6) são hoje 5, as mesmas de antes, porque ninguém tirou 6. Para chegar a 7, as duas novas têm de ser menores ou iguais a 6 (escreve-se ≤ 6)."
     },
     {
      "titulo": "Achando P: pares com dois 6",
-     "texto": "As duas são ≤ 6 e no máximo uma é menor que 6. Então pelo menos uma é exatamente 6.\nCom dois 6 só existe o par {6, 6}. Então P = 1."
+     "texto": "As duas são menores ou iguais a 6 (≤ 6) e no máximo uma é menor que 6. Então pelo menos uma é exatamente 6.\nCom dois 6 só existe o par {6, 6}. Então P = 1."
     },
     {
      "titulo": "Achando Q: pares com um só 6",
@@ -1446,12 +1474,12 @@
        {
         "figura": "porcentagem",
         "nome": "Reajuste de 10%",
-        "formula": "novo = antigo × 1,10"
+        "formula": "novo = antigo · 1,10"
        },
        {
         "figura": "texto",
         "nome": "Abono fixo",
-        "formula": "média + G; o desvio não muda"
+        "formula": "média + abono; o desvio não muda"
        }
       ]
      }
@@ -1495,7 +1523,7 @@
      "texto": "CV menor que 10% quer dizer desvio menor que 1/10 da média, ou média maior que 10 vezes o desvio. Teste: média 1 000 e desvio 90; 90 é menos que 1/10 de 1 000 (100), e 1 000 é mais que 10 · 90 = 900. A média nova é M + G; o desvio novo é S.",
      "visual": {
       "tipo": "equacao",
-      "formula": "G > 10 × S − M",
+      "formula": "G > 10 · S − M",
       "leitura": "o abono precisa levar a média nova a mais de 10 vezes o desvio novo",
       "letras": [
        {
@@ -1531,7 +1559,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "O CV novo é 330 ÷ (2 750 + G) e tem de ser menor que 0,10.\n330 ÷ (algo) < 0,10 quer dizer que \"algo\" tem de ser maior que 330 ÷ 0,10 = 3 300 (cabem 10 desvios na média).\n2 750 + G > 3 300, então G > 3 300 − 2 750 = 550. O menor inteiro é 551.",
+     "texto": "O CV novo é 330 ÷ (2 750 + G) e tem de ser menor que 0,10.\n330 ÷ (algo) < 0,10 quer dizer que \"algo\" tem de ser maior que 330 ÷ 0,10 = 3 300. Teste do sentido: 330 ÷ 4 000 = 0,0825 (menor que 0,10) e 330 ÷ 3 000 = 0,11 (maior): quanto maior o \"algo\", menor a fração.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -1557,7 +1585,7 @@
     },
     {
      "titulo": "Volta na equação (2 de 2)",
-     "texto": "Resposta: alternativa B. Conferindo: 2 750 + 551 = 3 301, e 330 ÷ 3 301 é um pouco menos que 330 ÷ 3 300 = 0,1, então é menor que 0,10. Com 550 dá exatamente 0,10, que não é menor."
+     "texto": "2 750 + G > 3 300, então G > 3 300 − 2 750 = 550. O menor inteiro é 551.\nResposta: alternativa B. Conferindo: 2 750 + 551 = 3 301, e 330 ÷ 3 301 é um pouco menos que 330 ÷ 3 300 = 0,1, então é menor que 0,10. Com 550 dá exatamente 0,10, que não é menor."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -1576,7 +1604,7 @@
        ],
        [
         "2. Equação em letras",
-        "G > 10 × S − M"
+        "G > 10 · S − M"
        ],
        [
         "3. Uma letra por vez",
@@ -1712,15 +1740,15 @@
     },
     {
      "titulo": "Achando N: onde a média prende N",
-     "texto": "Apagar o maior número (N) deixa a média mais baixa possível: N ÷ 2. Apagar o 1 deixa a mais alta: (N + 2) ÷ 2.\nExemplo, 1 a 7 (soma 28): sem o 7 sobra 21 em 6 números, média 3,5 = 7 ÷ 2; sem o 1 sobra 27 em 6, média 4,5 = (7 + 2) ÷ 2. Apagar um do meio dá média entre 3,5 e 4,5."
+     "texto": "Testo em listas pequenas. 1 a 7 (soma 28): sem o 7 sobra 21 em 6 números, média 3,5 = 7 ÷ 2; sem o 1 sobra 27 em 6, média 4,5 = (7 + 2) ÷ 2. Outro tamanho, 1 a 5 (soma 15): sem o 5, 10 ÷ 4 = 2,5 = 5 ÷ 2; sem o 1, 14 ÷ 4 = 3,5 = (5 + 2) ÷ 2."
     },
     {
      "titulo": "Achando N: onde a média prende N (2 de 2)",
-     "texto": "Aqui: N ÷ 2 ≤ 20,6 ≤ (N + 2) ÷ 2."
+     "texto": "Se repete: apagar o MAIOR deixa a média mais baixa, N ÷ 2; apagar o 1 deixa a mais alta, (N + 2) ÷ 2; um do meio fica entre as duas.\nAqui: N ÷ 2 ≤ 20,6 e 20,6 ≤ (N + 2) ÷ 2. O sinal ≤ lê-se \"menor ou igual a\"; ≥ lê-se \"maior ou igual a\"."
     },
     {
      "titulo": "Achando N: só dois valores servem",
-     "texto": "≤ lê-se \"menor ou igual\". N ÷ 2 ≤ 20,6: multiplico os dois lados por 2 (20,6 · 2 = 41,2) e fica N ≤ 41,2.\n(N + 2) ÷ 2 ≥ 20,6 dá N + 2 ≥ 41,2, então N ≥ 41,2 − 2 = 39,2.\nComo N é inteiro, N é 40 ou 41."
+     "texto": "1ª: N ÷ 2 ≤ 20,6. Multiplico os dois lados por 2 (20,6 · 2 = 41,2) e fica N ≤ 41,2.\n2ª: 20,6 ≤ (N + 2) ÷ 2, lido ao contrário (N + 2) ÷ 2 ≥ 20,6. Multiplico por 2: N + 2 ≥ 41,2, então N ≥ 41,2 − 2 = 39,2.\nComo N é inteiro, N é 40 ou 41."
     },
     {
      "titulo": "Achando N: só um dos dois fecha",
@@ -1963,7 +1991,11 @@
     },
     {
      "titulo": "Achando n: o ponto t = 0",
-     "texto": "A 1ª equação de II é igual à 1ª de I: já vale. A 2ª, x + my + nz = 11, tem que valer em todo ponto de I.\nEm t = 0 (x = 5/3, y = 0, z = 7/3): 5/3 + n · 7/3 = 11. Multiplique por 3: 5 + 7n = 33, 7n = 28, n = 4."
+     "texto": "A 1ª equação de II é igual à 1ª de I: já vale. A 2ª, x + my + nz = 11, tem que valer em todo ponto de I."
+    },
+    {
+     "titulo": "Achando n: o ponto t = 0 (2 de 2)",
+     "texto": "Em t = 0 (x = 5/3, y = 0, z = 7/3): 5/3 + n · 7/3 = 11. Para sumir os \"÷ 3\", multiplico os dois lados por 3 (o que faço de um lado faço do outro): 3 vezes 5/3 é 5, n · 7/3 vezes 3 é 7n e 11 · 3 = 33. Fica 5 + 7n = 33, então 7n = 28 (33 − 5) e n = 4."
     },
     {
      "titulo": "Achando m: o ponto t = 1",
@@ -1971,7 +2003,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "Agora a 3ª equação de II: kx + y − z = m − n = 3 − 4 = −1. Com x = (5 − 5t)/3 e z = (7 − t)/3 ela é k · (5 − 5t)/3 + t − (7 − t)/3 = −1.\nEm t = 0 (x = 5/3, y = 0, z = 7/3): k · 5/3 − 7/3 = −1. Então 5k/3 = −1 + 7/3 = 4/3 e 5k = 4, k = 4/5.",
+     "texto": "Agora a 3ª equação de II: kx + y − z = m − n = 3 − 4 = −1. Com x = (5 − 5t)/3 e z = (7 − t)/3 ela é k · (5 − 5t)/3 + t − (7 − t)/3 = −1.\nEm t = 0 (x = 5/3, y = 0, z = 7/3): k · 5/3 − 7/3 = −1. −1 + 7/3 = −3/3 + 7/3 = 4/3, então 5k/3 = 4/3. Vezes 3 nos dois lados: 5k = 4, k = 4/5.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -2001,7 +2033,7 @@
     },
     {
      "titulo": "Volta na equação (2 de 2)",
-     "texto": "Conferindo em t = 3 (x = −10/3, y = 3, z = 4/3): 4/5 · (−10/3) + 3 − 4/3 = −8/3 + 9/3 − 4/3 = −3/3 = −1. Certo.\nResposta: alternativa E."
+     "texto": "Conferindo em t = 3 (x = −10/3, y = 3, z = 4/3): 4/5 · (−10/3) = −40/15 (em cima com em cima, embaixo com embaixo) = −8/3 (÷ 5). Com 3 = 9/3: −8/3 + 9/3 − 4/3 = −3/3 = −1. Certo.\nResposta: alternativa E."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -2187,7 +2219,7 @@
        [
         "x",
         "100 − x",
-        "2 400 + 12x"
+        "36x + 24 · (100 − x)"
        ]
       ]
      }
@@ -2409,7 +2441,11 @@
     },
     {
      "titulo": "Achando C2: a diferença acima de 120",
-     "texto": "C1 − C2 = (0,75 · t − 15) − (0,5 · t − 6) = 0,25 · t − 9. Com t = 36: 0,25 · 36 = 9 e 9 − 9 = 0; para t maior que 36 dá mais que 0, então o plano 2 continua mais barato."
+     "texto": "C1 − C2 = (0,75 · t − 15) − (0,5 · t − 6). Menos na frente do parêntese troca o sinal de cada termo de dentro: − (0,5 · t − 6) vira − 0,5 · t + 6 (teste: 10 − (3 − 1) = 8 e 10 − 3 + 1 = 8). Fica 0,75 · t − 15 − 0,5 · t + 6 = 0,25 · t − 9 (0,75 − 0,5 = 0,25 e −15 + 6 = −9)."
+    },
+    {
+     "titulo": "Achando C2: a diferença acima de 120 (2 de 2)",
+     "texto": "Com t = 36: 0,25 · 36 = 9 e 9 − 9 = 0; para t maior que 36 dá mais que 0, então o plano 2 continua mais barato."
     },
     {
      "titulo": "Volta na equação",
@@ -2525,7 +2561,7 @@
        {
         "figura": "texto",
         "nome": "Dividir por s",
-        "formula": "s ≠ 0 permite cortar um s da conta"
+        "formula": "s ≠ 0 (s diferente de zero) deixa dividir"
        }
       ]
      }
@@ -2593,7 +2629,7 @@
     },
     {
      "titulo": "Achando r: o que as raízes dizem (2 de 2)",
-     "texto": "Iguale: −s − 1 = −9 − 3t. Some 1 dos dois lados: −s = −8 − 3t. Troque os sinais: s = 8 + 3t, ou seja, s = 3t + 8. Teste com t = 1: s = 11 e r = −12 nas duas fórmulas: −11 − 1 = −12 e −9 − 3 = −12."
+     "texto": "Iguale: −s − 1 = −9 − 3t. Some 1 dos dois lados: −s = −8 − 3t. Multiplico os dois lados por −1, o que troca o sinal de cada termo: s = 8 + 3t, ou seja, s = 3t + 8. Teste com t = 1: s = 11 e r = −12 nas duas fórmulas: −11 − 1 = −12 e −9 − 3 = −12."
     },
     {
      "titulo": "Achando t: a equação só em t",
@@ -2797,7 +2833,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "O lucro é o ganho de cada bolo vezes os bolos vendidos, menos o gasto fixo. Os bolos vendidos dependem do preço, e o preço tem teto.\nAgora é só achar q e p, uma por vez.",
+     "texto": "O lucro é o ganho de cada bolo vezes os bolos vendidos, menos o gasto fixo. Os bolos vendidos dependem do preço, e o preço tem teto: a prefeitura não deixa passar de R$ 25.\nAgora é só achar q e p, uma por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "L = (p − 10) · q − 300",
@@ -2820,11 +2856,11 @@
     },
     {
      "titulo": "Achando q: a reta das vendas",
-     "texto": "No quadro, o preço sobe R$ 4 (de 20 para 24) e as vendas caem 16 (de 120 para 104): são −4 bolos por real. Cada R$ 1 a mais tira 4 bolos: a R$ 21 vendem 116, a R$ 22 vendem 112. Partindo de 120 bolos a R$ 20: q = 120 − 4 · (p − 20)."
+     "texto": "No quadro, o preço sobe R$ 4 (de 20 para 24) e as vendas caem 16 (de 120 para 104): 16 ÷ 4 = 4 bolos a menos para cada R$ 1 a mais (por isso o −4). A R$ 21 vendem 116, a R$ 22 vendem 112. Partindo de 120 bolos a R$ 20: q = 120 − 4 · (p − 20)."
     },
     {
      "titulo": "Achando q: abrindo a conta",
-     "texto": "−4 · (p − 20) é −4 vezes p e −4 vezes −20: −4p + 80. Então q = 120 − 4p + 80 = 200 − 4p. Teste com p = 24: 120 − 4 · 4 = 104 e 200 − 96 = 104. Conferindo com p = 28: 200 − 112 = 88."
+     "texto": "−4 · (p − 20): o −4 multiplica o p e o −20. −4 · p = −4p. −4 · (−20) = +80: menos vezes menos dá mais (como tirar 4 vezes uma dívida de R$ 20: sobram R$ 80 a mais). Então q = 120 − 4p + 80 = 200 − 4p. Teste com p = 24: 120 − 4 · 4 = 104 e 200 − 96 = 104."
     },
     {
      "titulo": "Achando p: o lucro em função do preço",
@@ -2832,15 +2868,15 @@
     },
     {
      "titulo": "Achando p: como o lucro varia",
-     "texto": "Sem o gasto fixo, (p − 10) · (200 − 4p) vale: p = 10 → 0; p = 20 → 10 · 120 = 1 200; p = 30 → 20 · 80 = 1 600; p = 40 → 30 · 40 = 1 200; p = 50 → 0.\nSobe até 30 e desce igual do outro lado: uma parábola aberta para baixo."
+     "texto": "Sem o gasto fixo, (p − 10) · (200 − 4p) vale: p = 10 → 0; p = 20 → 10 · 120 = 1 200; p = 30 → 20 · 80 = 1 600; p = 40 → 30 · 40 = 1 200; p = 50 → 0.\nSobe até 30 e desce igual do outro lado, como um morro: isso é uma parábola aberta para baixo."
     },
     {
      "titulo": "Achando p: onde fica o vértice",
-     "texto": "Os preços que zeram (p − 10) · (200 − 4p) são as raízes. p − 10 = 0 dá p = 10. 200 − 4p = 0 dá 4p = 200, p = 50. A parábola é igual dos dois lados, então o vértice (o topo) fica no meio: p = (10 + 50) ÷ 2 = 30."
+     "texto": "Raízes são os preços em que a conta dá 0: p − 10 = 0 dá p = 10; 200 − 4p = 0 dá 4p = 200, p = 50. O morro é igual dos dois lados, então o topo (o vértice) fica no meio das raízes: p = (10 + 50) ÷ 2 = 30."
     },
     {
      "titulo": "Achando p: o melhor preço permitido",
-     "texto": "De 10 até 30 o lucro só sobe. A prefeitura só deixa até 25, então o melhor preço permitido é o último: p = 25. (Em p = 30 o lucro seria 1 600 − 300 = 1 300, mas é proibido.)"
+     "texto": "De 10 até 30 o lucro só sobe. A prefeitura só deixa até 25, então o melhor preço permitido é o maior que ela deixa: p = 25. (Em p = 30 o lucro seria 1 600 − 300 = 1 300, mas é proibido.)"
     },
     {
      "titulo": "Achando q: bolos vendidos a R$ 25",
@@ -2924,7 +2960,7 @@
   "origem": "Escada",
   "ancora": "parcial · ITA 2025 1ª fase q.6 (equação em 9^x e 3^x: troca de variável e contar soluções reais distintas conforme o parâmetro) com Fuvest 2023 2ª fase dia 2 M02 item c (composição com função de imagem limitada); não achei real de t⁴ − 6t² + k",
   "canal": "mat-13-funcao-do-segundo-grau-propriedades.txt [6:05:31] (delta e quantas raízes; o fundo da parábola); a troca de t² por u fica fora do canal",
-  "enunciado": "Para cada número inteiro k, com −10 ≤ k ≤ 20, considere a equação t⁴ − 6t² + k = 0, na incógnita real t. A tabela mostra alguns valores da função h(u) = u² − 6u, que ajuda a estudar essa equação. Em quantos valores de k a equação tem exatamente duas soluções reais distintas?\n\nu | −1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7\nh(u) | 7 | 0 | −5 | −8 | −9 | −8 | −5 | 0 | 7\n\nDados: Equação: t⁴ − 6t² + k = 0, t real; k: inteiro de −10 a 20 (31 valores); h(u): u² − 6u (tabela do enunciado); Quero: k com exatamente 2 soluções reais distintas.",
+  "enunciado": "Para cada número inteiro k, com −10 ≤ k ≤ 20 (k vai de −10 a 20, e \"≤\" lê-se \"menor ou igual\"), considere a equação t⁴ − 6t² + k = 0, na incógnita real t. A tabela mostra alguns valores da função h(u) = u² − 6u, que ajuda a estudar essa equação. Em quantos valores de k a equação tem exatamente duas soluções reais distintas?\n\nu | −1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7\nh(u) | 7 | 0 | −5 | −8 | −9 | −8 | −5 | 0 | 7\n\nDados: Equação: t⁴ − 6t² + k = 0, t real; k: inteiro de −10 a 20 (31 valores); h(u): u² − 6u (tabela do enunciado); Quero: k com exatamente 2 soluções reais distintas.",
   "A": "8",
   "B": "9",
   "C": "10",
@@ -3075,7 +3111,7 @@
     },
     {
      "titulo": "Achando P: testando k = −1",
-     "texto": "Teste com k = −1: h(u) = 1. Na tabela h(0) = 0 e h(−1) = 7, então um u está entre −1 e 0 (negativo); h(6) = 0 e h(7) = 7, então outro está entre 6 e 7."
+     "texto": "Teste com k = −1: h(u) = 1. A curva não pula valores: h(−1) = 7 e h(0) = 0, então no caminho ela passa pelo 1, e um u está entre −1 e 0 (negativo). Do mesmo jeito h(6) = 0 e h(7) = 7: outro u entre 6 e 7."
     },
     {
      "titulo": "Achando P: contando os k negativos",
@@ -3095,7 +3131,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "N = P + Q = 10 + 1 = 11.\nConferindo a contagem dos k: de 1 a 5 são 5 números: 5 − 1 + 1. Por isso de −10 a 20 são 20 − (−10) + 1 = 31 valores. Servem os 10 negativos e o k = 9.\nResposta: alternativa D.",
+     "texto": "N = P + Q = 10 + 1 = 11.\nConferindo a contagem dos k: os dois extremos entram (de 1 a 3 são 3 números: 3 − 1 + 1). Por isso de −10 a 20 são 20 − (−10) + 1 = 31 valores. Servem os 10 negativos e o k = 9.\nResposta: alternativa D.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -3236,11 +3272,11 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A regra vale em todo ponto. Se não sei a regra de f, f de cada ponto é só um número escondido: chamo de u o do 1/2, de v o do ponto seguinte do ciclo e de w o do 3º ponto.",
+     "texto": "A regra vale em todo ponto, e f é só uma regra desconhecida: f de cada ponto é um número escondido. Chamo de u o f(1/2). A regra em x = 1/2 liga u a um segundo número escondido, v, e a regra nesse novo ponto liga v a um terceiro, w. A equação mostra a regra em x = 1/2.",
      "visual": {
       "tipo": "equacao",
-      "formula": "u + 2v = ...;  v + 2w = ...;  w + 2u = ...",
-      "leitura": "a regra f(x) + 2 · f(1/(1 − x)) = x escrita em 3 pontos que se ligam em ciclo (os valores nascem nos passos seguintes)",
+      "formula": "u + 2v = 1/2",
+      "leitura": "a regra f(x) + 2 · f(1/(1 − x)) = x escrita no ponto x = 1/2: f(1/2) mais 2 vezes o f do ponto que a troca 1/(1 − x) liga a ele",
       "letras": [
        {
         "letra": "u",
@@ -3248,18 +3284,18 @@
        },
        {
         "letra": "v",
-        "oque": "f do ponto seguinte do ciclo"
+        "oque": "f(1/(1 − 1/2)): o f que a regra liga ao u"
        },
        {
         "letra": "w",
-        "oque": "f do 3º ponto do ciclo"
+        "oque": "f do ponto que a mesma troca liga ao ponto de v"
        }
       ]
      }
     },
     {
      "titulo": "A equação em letras (2 de 2)",
-     "texto": "Escrevo a regra nos 3 pontos do ciclo, e o 1º passo \"Achando\" mostra de onde vem esse ciclo; cada equação fala de dois desses números escondidos.\nAgora é só achar w e v, uma por vez, em função de u."
+     "texto": "Agora é só achar w e v, uma por vez, em função de u."
     },
     {
      "titulo": "Achando w: o ciclo do 1/2",
@@ -3297,11 +3333,11 @@
     },
     {
      "titulo": "Achando w: w em função de u",
-     "texto": "Da 3ª equação, w + 2u = −1. Então w = −1 − 2u."
+     "texto": "A 3ª equação é w + 2u = −1. Tire 2u dos dois lados: w = −1 − 2u. Teste com u = 1: w + 2 = −1 dá w = −3, e −1 − 2 = −3."
     },
     {
      "titulo": "Achando v: v em função de u",
-     "texto": "Da 2ª equação, v = 2 − 2w. Troque w = −1 − 2u: 2w = −2 − 4u.\nEntão v = 2 − (−2 − 4u)."
+     "texto": "A 2ª equação é v + 2w = 2. Tire 2w dos dois lados: v = 2 − 2w. Teste com w = 1/2: v + 1 = 2 dá v = 1, e 2 − 1 = 1.\nTroque w = −1 − 2u: 2w = −2 − 4u. Então v = 2 − (−2 − 4u)."
     },
     {
      "titulo": "Achando v: tirando o parêntese",
@@ -3309,7 +3345,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "Na 1ª equação, u + 2v = 1/2, troque v = 4 + 4u: u + 2 · (4 + 4u) = 1/2.\n2 · (4 + 4u) = 8 + 8u, então 9u + 8 = 1/2 e 9u = 1/2 − 8 = 1/2 − 16/2 = −15/2.\nDividir por 9 é pôr 9 embaixo: (−15/2) ÷ 9 = −15/(2 · 9) = −15/18. Divida em cima e embaixo por 3: −5/6.",
+     "texto": "Na 1ª equação, u + 2v = 1/2, troque v = 4 + 4u: u + 2 · (4 + 4u) = 1/2.\n2 · (4 + 4u) = 8 + 8u. Juntar os u: u + 8u = 9u (1 u e mais 8 u são 9 u). Fica 9u + 8 = 1/2.\nTire 8 dos dois lados: 9u = 1/2 − 8 = 1/2 − 16/2 = −15/2.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -3335,7 +3371,7 @@
     },
     {
      "titulo": "Volta na equação (2 de 2)",
-     "texto": "Conferindo: v = 4 + 4 · (−5/6) = 4 − 10/3 = 2/3; w = −1 + 5/3 = 2/3. A 2ª equação: 2/3 + 4/3 = 2.\nResposta: alternativa C."
+     "texto": "Dividir por 9 é pôr 9 embaixo: (−15/2) ÷ 9 = −15/18 = −5/6 (÷ 3 em cima e embaixo).\nConferindo: v = 4 + 4 · (−5/6) = 4 − 10/3 = 2/3; w = −1 + 5/3 = 2/3. A 2ª equação: 2/3 + 4/3 = 2.\nResposta: alternativa C."
     },
     {
      "titulo": "Questão parecida? Faça assim",
@@ -3354,7 +3390,7 @@
        ],
        [
         "2. Equação em letras",
-        "u + 2v = ...;  v + 2w = ...;  w + 2u = ..."
+        "u + 2v = 1/2"
        ],
        [
         "3. Uma letra por vez",
@@ -3386,7 +3422,7 @@
   "origem": "Escada",
   "ancora": "parcial · ITA 2023 1ª fase q.38 (f(z) = z + i aplicada 2 023 vezes: os iterados se repetem em ciclo e o expoente grande vira resto de divisão); aqui a função é 1/(1 − x), o ciclo é de 3 e a pergunta é contar pontos fixos; não achei real que conte pontos fixos",
   "canal": "mat-17-funcoes-trigonometricas.txt [8:07:33] (função periódica: depois de um período a coisa se repete); aplicar uma função várias vezes fica fora do canal",
-  "enunciado": "Seja f(x) = 1/(1 − x), definida para x real diferente de 1. Indique por f²⁰²⁶ a função obtida aplicando f em sequência 2 026 vezes (f²(x) = f(f(x)), f³(x) = f(f(f(x))), e assim por diante). Quantos números reais x, com x diferente de 0 e de 1, satisfazem f²⁰²⁶(x) = x?\n\nDados: Regra: f(x) = 1/(1 − x); Aplicações: 2 026 seguidas; Domínio: x diferente de 0 e de 1; Quero: quantos x com f²⁰²⁶(x) = x.",
+  "enunciado": "Seja f(x) = 1/(1 − x), definida para x real diferente de 1. Indique por f²⁰²⁶ a função obtida aplicando f em sequência 2 026 vezes (f²(x) = f(f(x)), f³(x) = f(f(f(x))), e assim por diante). Quantos números reais x, com x diferente de 0 e de 1 (f(1) não existe, e f(0) = 1 levaria a f(1) na aplicação seguinte), satisfazem f²⁰²⁶(x) = x?\n\nDados: Regra: f(x) = 1/(1 − x); Aplicações: 2 026 seguidas; Domínio: x diferente de 0 e de 1; Quero: quantos x com f²⁰²⁶(x) = x.",
   "A": "1",
   "B": "2",
   "C": "3",
@@ -3520,11 +3556,11 @@
     },
     {
      "titulo": "Achando r: aplicar f duas vezes",
-     "texto": "Agora com letras, para qualquer x. f(x) = 1/(1 − x). Então f²(x) = 1/(1 − 1/(1 − x)).\n1 − 1/(1 − x) = (1 − x)/(1 − x) − 1/(1 − x) = −x/(1 − x)."
+     "texto": "Agora com letras, para qualquer x. f²(x) = 1/(1 − 1/(1 − x)).\nO 1 do começo vira (1 − x)/(1 − x), que também vale 1 (como 5/5 = 1), para ficar com o mesmo embaixo da outra fração: (1 − x)/(1 − x) − 1/(1 − x) = (1 − x − 1)/(1 − x) = −x/(1 − x)."
     },
     {
      "titulo": "Achando r: dividir por fração",
-     "texto": "Logo f²(x) = 1 ÷ (−x/(1 − x)). Dividir por uma fração é inverter: vira (1 − x)/(−x). Multiplicando cima e baixo por −1: (x − 1)/x.\nTeste com x = 2: f(f(2)) = f(−1) = 1/2 e (2 − 1)/2 = 1/2."
+     "texto": "Logo f²(x) = 1 ÷ (−x/(1 − x)). Dividir por fração é inverter: 1 ÷ 1/2 = 2 (cabem 2 meios em 1). Aqui vira (1 − x)/(−x); cima e baixo vezes −1: (x − 1)/x.\nTeste com x = 2: f(f(2)) = f(−1) = 1/2 e (2 − 1)/2 = 1/2."
     },
     {
      "titulo": "Achando r: a terceira aplicação",
@@ -3544,7 +3580,7 @@
     },
     {
      "titulo": "Achando Δ: passando para um lado",
-     "texto": "Teste de 1/(1 − x) = x com x = 2: 1/(−1) = −1, e 2 não é −1.\nPassar tudo para um lado: some x² e tire x dos dois lados de 1 = x − x². Fica x² − x + 1 = 0."
+     "texto": "Passar tudo para um lado: some x² e tire x dos dois lados de 1 = x − x². Fica x² − x + 1 = 0.\nTeste com x = 2: 1 − (2 − 4) = 3 e 4 − 2 + 1 = 3. Os dois lados dão o mesmo, e 3 não é 0: o 2 não resolve."
     },
     {
      "titulo": "Achando Δ: o discriminante",
@@ -3651,7 +3687,7 @@
        {
         "figura": "porcentagem",
         "nome": "10% a mais",
-        "formula": "× 1,1"
+        "formula": "valor + valor ÷ 10"
        }
       ]
      }
@@ -3705,11 +3741,11 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Depois é achar cada letra, uma por vez.",
+     "texto": "Uma letra por coisa, pela inicial. Os números que ainda não aparecem aqui nascem nos passos seguintes: agora só damos nome às coisas e dizemos o que a questão quer. Agora é só achar G e R, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "P = 1,1 · G ÷ 9",
-      "leitura": "área com folga (1,1 vez a área G) ÷ 9 m², que é o que um pacote cobre; se sobrar um pedaço, precisa de mais um pacote inteiro",
+      "formula": "P = (G + G ÷ 10) ÷ R",
+      "leitura": "área com folga (a área G mais um décimo dela) ÷ R, a área que um pacote rende (cobre); se sobrar um pedaço, precisa de mais um pacote inteiro",
       "letras": [
        {
         "letra": "P",
@@ -3718,6 +3754,10 @@
        {
         "letra": "G",
         "oque": "área do gramado"
+       },
+       {
+        "letra": "R",
+        "oque": "área que um pacote rende (cobre), em m²"
        }
       ]
      }
@@ -3741,11 +3781,11 @@
      }
     },
     {
-     "titulo": "Com 10% a mais",
-     "texto": "10% é 10 ÷ 100 = 1/10, então 10% de 1 050 = 1 050 ÷ 10 = 105. Então 1 050 + 105 = 1 155 m². (É o mesmo que 1 050 · 1,1: 110% é 110 ÷ 100 = 1,1.)"
+     "titulo": "Achando G: com 10% a mais",
+     "texto": "10% é 10 ÷ 100 = 1/10, então 10% de 1 050 = 1 050 ÷ 10 = 105. Então 1 050 + 105 = 1 155 m² de área com folga."
     },
     {
-     "titulo": "Quanto um pacote cobre",
+     "titulo": "Achando R: quanto um pacote rende",
      "texto": "6 placas · 1,5 m² = 9 m²."
     },
     {
@@ -3762,6 +3802,10 @@
        [
         "G",
         "1 050 m²"
+       ],
+       [
+        "R",
+        "9 m²"
        ],
        [
         "P",
@@ -3795,7 +3839,7 @@
        ],
        [
         "2. Equação em letras",
-        "P = 1,1 · G ÷ 9"
+        "P = (G + G ÷ 10) ÷ R"
        ],
        [
         "3. Uma letra por vez",
@@ -4041,7 +4085,7 @@
   "origem": "Escada",
   "ancora": "parcial · ITA 2021 1ª fase q.45 (a resposta sai por uma ideia escondida, sem calcular o que parece essencial) e IME 2025 q.9 (simetria no lugar da conta direta); lúnulas de Hipócrates não aparecem em nenhuma real do repositório (busca feita nos .txt), só a técnica \"o π se cancela\" é a mesma",
   "canal": "mat-23-area-de-circunferencia-geometria-plana.txt [13:18:02] (área de círculo e a diferença entre duas áreas); as lúnulas e Pitágoras para semicírculos não aparecem no canal",
-  "enunciado": "Seja ABC um triângulo retângulo em A, com AB = 8 cm e BC = 17 cm. Sobre os catetos AB e AC, para fora do triângulo, constroem-se dois semicírculos, cada um com um cateto como diâmetro. Seja Γ a circunferência de diâmetro BC. Qual é, em cm², a área da região formada pelos pontos desses dois semicírculos que ficam fora de Γ? Se precisar, use π = 3,14.\n\nDados: Triângulo ABC: reto em A; AB = 8 cm; BC = 17 cm; Semicírculos: diâmetros AB e AC, para fora do triângulo; Circunferência Γ: diâmetro BC; Valor de π: só se precisar: 3,14; Quero: área dos semicírculos que fica fora de Γ, em cm².",
+  "enunciado": "Seja XYZ um triângulo retângulo em X, com XY = 8 cm e YZ = 17 cm. Sobre os catetos XY e XZ, para fora do triângulo, constroem-se dois semicírculos, cada um com um cateto como diâmetro. Seja Γ a circunferência de diâmetro YZ. Qual é, em cm², a área da região formada pelos pontos desses dois semicírculos que ficam fora de Γ? Se precisar, use π = 3,14.\n\nDados: Triângulo XYZ: reto em X; XY = 8 cm; YZ = 17 cm; Semicírculos: diâmetros XY e XZ, para fora do triângulo; Circunferência Γ: diâmetro YZ; Valor de π: só se precisar: 3,14; Quero: área dos semicírculos que fica fora de Γ, em cm².",
   "A": "60 cm²",
   "B": "30 cm²",
   "C": "68 cm²",
@@ -4049,8 +4093,8 @@
   "E": "120 cm²",
   "resposta": "A",
   "explicacao": {
-   "conferencia": "AC = 15 por Pitágoras. Semicírculos: 8π, 28,125π e 36,125π (o da hipotenusa). Fora de Γ: 8π + 28,125π − (36,125π − 60) = 60 cm². Resposta: alternativa A. Erros: Alternativa B = Dividiu a área do triângulo por 2 duas vezes: 8 · 15 ÷ 2 ÷ 2; Alternativa C = Usou a hipotenusa como cateto: 8 · 17 ÷ 2; Alternativa D = Somou só os dois semicírculos dos catetos: 3,14 · (8 + 28,125); Alternativa E = Esqueceu o ÷ 2 da área do triângulo: 8 · 15.",
-   "ideia": "Pitágoras vale também para áreas de semicírculos: os dois dos catetos somam o da hipotenusa, e a parte deles dentro de Γ é o semicírculo de BC menos o triângulo. Os π se cancelam e sobra a área do triângulo.",
+   "conferencia": "XZ = 15 por Pitágoras. Semicírculos: 8π, 28,125π e 36,125π (o da hipotenusa). Fora de Γ: 8π + 28,125π − (36,125π − 60) = 60 cm². Resposta: alternativa A. Erros: Alternativa B = Dividiu a área do triângulo por 2 duas vezes: 8 · 15 ÷ 2 ÷ 2; Alternativa C = Usou a hipotenusa como cateto: 8 · 17 ÷ 2; Alternativa D = Somou só os dois semicírculos dos catetos: 3,14 · (8 + 28,125); Alternativa E = Esqueceu o ÷ 2 da área do triângulo: 8 · 15.",
+   "ideia": "Pitágoras vale também para áreas de semicírculos: os dois dos catetos somam o da hipotenusa, e a parte deles dentro de Γ é o semicírculo de YZ menos o triângulo. Os π se cancelam e sobra a área do triângulo.",
    "pecas": [
     {
      "termo": "Triângulo retângulo",
@@ -4058,7 +4102,7 @@
     },
     {
      "termo": "Semicírculo e Γ",
-     "significado": "Semicírculo: metade de um círculo, área π · r · r ÷ 2. Γ (gama) é a linha do círculo de diâmetro BC."
+     "significado": "Semicírculo: metade de um círculo, área π · r · r ÷ 2. Γ (gama) é a linha do círculo de diâmetro YZ."
     },
     {
      "termo": "Parte fora de Γ",
@@ -4102,16 +4146,16 @@
       ],
       "linhas": [
        [
-        "Triângulo ABC",
-        "reto em A; AB = 8 cm; BC = 17 cm"
+        "Triângulo XYZ",
+        "reto em X; XY = 8 cm; YZ = 17 cm"
        ],
        [
         "Semicírculos",
-        "diâmetros AB e AC, para fora do triângulo"
+        "diâmetros XY e XZ, para fora do triângulo"
        ],
        [
         "Circunferência Γ",
-        "diâmetro BC"
+        "diâmetro YZ"
        ],
        [
         "Valor de π",
@@ -4126,7 +4170,7 @@
     },
     {
      "titulo": "O desenho",
-     "texto": "O semicírculo H, de diâmetro BC, se divide em T (o triângulo) e dois pedaços, um junto de cada cateto. Os semicírculos dos catetos (S e R) cobrem esses pedaços e mais o que fica fora de Γ (em rosa). Dentro de Γ, os dois têm H − T. O que pedem é S + R − (H − T).",
+     "texto": "Veja o triângulo XYZ, reto em X, com um semicírculo sobre cada cateto (XY e XZ) e a circunferência Γ de diâmetro YZ. Em rosa está o que a questão pede: a parte dos dois semicírculos que fica fora de Γ. A metade de Γ do lado do triângulo é o triângulo mais dois pedaços finos, um junto de cada cateto.",
      "visual": {
       "tipo": "diagrama",
       "nome": "lunulas",
@@ -4134,45 +4178,46 @@
        "",
        "",
        "",
-       "H: semicírculo de BC · T: triângulo · S e R: dos catetos",
-       ""
+       "",
+       "",
+       "metade de Γ do lado do triângulo = triângulo + 2 pedaços finos"
       ]
      }
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A parte fora é tudo dos dois semicírculos menos a parte que cai dentro de Γ. Deixe o π escrito, sem trocar por 3,14.\nAgora é só achar T, S, R e H, uma letra por vez.",
+     "texto": "A parte fora é tudo dos dois semicírculos menos a parte que cai dentro de Γ. Deixe o π escrito, sem trocar por 3,14.\nAgora é só achar T, P, M e H, uma letra por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "L = S + R − (H − T)",
-      "leitura": "área pedida = semicírculo de AB (S) + semicírculo de AC (R) − o que cai dentro de Γ (semicírculo de BC menos o triângulo)",
+      "formula": "L = P + M − (H − T)",
+      "leitura": "área pedida = semicírculo de XY (P) + semicírculo de XZ (M) − o que cai dentro de Γ (semicírculo de YZ menos o triângulo)",
       "letras": [
        {
         "letra": "L",
         "oque": "área dos semicírculos que fica fora de Γ (o que a questão quer)"
        },
        {
-        "letra": "S",
-        "oque": "semicírculo de diâmetro AB"
+        "letra": "P",
+        "oque": "semicírculo de diâmetro XY (cateto pequeno)"
        },
        {
-        "letra": "R",
-        "oque": "semicírculo de diâmetro AC"
+        "letra": "M",
+        "oque": "semicírculo de diâmetro XZ (cateto maior)"
        },
        {
         "letra": "H",
-        "oque": "semicírculo de diâmetro BC"
+        "oque": "semicírculo de diâmetro YZ"
        },
        {
         "letra": "T",
-        "oque": "área do triângulo ABC"
+        "oque": "área do triângulo XYZ"
        }
       ]
      }
     },
     {
      "titulo": "Achando T: a área do triângulo",
-     "texto": "Falta o cateto AC. Pitágoras ao contrário: AC · AC = 17 · 17 − 8 · 8 = 289 − 64 = 225, e 15 · 15 = 225. AC = 15.\nT = 8 · 15 ÷ 2 = 120 ÷ 2 = 60 cm².",
+     "texto": "Falta o cateto XZ. Pitágoras ao contrário: XZ · XZ = 17 · 17 − 8 · 8 = 289 − 64 = 225, e 15 · 15 = 225. XZ = 15.\nT = 8 · 15 ÷ 2 = 120 ÷ 2 = 60 cm².",
      "visual": {
       "tipo": "diagrama",
       "nome": "lunulas",
@@ -4184,19 +4229,19 @@
      }
     },
     {
-     "titulo": "Achando S: semicírculo de AB",
-     "texto": "Diâmetro 8, raio 4. S = π · 4 · 4 ÷ 2 = 16π ÷ 2 = 8π."
+     "titulo": "Achando P: semicírculo de XY",
+     "texto": "Diâmetro 8, raio 4. P = π · 4 · 4 ÷ 2 = 16π ÷ 2 = 8π."
     },
     {
-     "titulo": "Achando R: semicírculo de AC",
-     "texto": "Diâmetro 15, raio 7,5. 7,5 · 7,5 = 56,25 (75 · 75 = 75 · 70 + 75 · 5 = 5 250 + 375 = 5 625, com duas casas).\nR = 56,25π ÷ 2 = 28,125π (metade de 56,25: metade de 56 é 28 e metade de 0,25 é 0,125)."
+     "titulo": "Achando M: semicírculo de XZ",
+     "texto": "Diâmetro 15, raio 7,5. 7,5 · 7,5 = 56,25 (75 · 75 = 75 · 70 + 75 · 5 = 5 250 + 375 = 5 625, com duas casas).\nM = 56,25π ÷ 2 = 28,125π (metade de 56,25: metade de 56 é 28 e metade de 0,25 é 0,125)."
     },
     {
-     "titulo": "Achando H: semicírculo de BC",
-     "texto": "Diâmetro 17, raio 8,5. 8,5 · 8,5 = 72,25 (85 · 85 = 7 225, com duas casas).\nH = 72,25π ÷ 2 = 36,125π.\nOlhe: S + R = 8π + 28,125π = 36,125π, o mesmo que H."
+     "titulo": "Achando H: semicírculo de YZ",
+     "texto": "Diâmetro 17, raio 8,5. 8,5 · 8,5 = 72,25 (85 · 85 = 7 225, com duas casas).\nH = 72,25π ÷ 2 = 36,125π.\nOlhe: P + M = 8π + 28,125π = 36,125π, o mesmo que H."
     },
     {
-     "titulo": "Achando H: semicírculo de BC (2 de 2)",
+     "titulo": "Achando H: semicírculo de YZ (2 de 2)",
      "texto": "Não é coincidência: os raios ao quadrado seguem Pitágoras. 4 · 4 + 7,5 · 7,5 = 16 + 56,25 = 72,25 = 8,5 · 8,5. Como cada semicírculo é π · (raio · raio) ÷ 2, as áreas somam do mesmo jeito."
     },
     {
@@ -4215,11 +4260,11 @@
         "60 cm²"
        ],
        [
-        "S",
+        "P",
         "8π"
        ],
        [
-        "R",
+        "M",
         "28,125π"
        ],
        [
@@ -4250,15 +4295,15 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "AB = 8; BC = 17; semicírculos nos catetos; Γ de diâmetro BC"
+        "XY = 8; YZ = 17; semicírculos nos catetos; Γ de diâmetro YZ"
        ],
        [
         "2. Equação em letras",
-        "L = S + R − (H − T)"
+        "L = P + M − (H − T)"
        ],
        [
         "3. Uma letra por vez",
-        "T = 60; S = 8π; R = 28,125π; H = 36,125π; L = 60"
+        "T = 60; P = 8π; M = 28,125π; H = 36,125π; L = 60"
        ]
       ]
      }
@@ -4303,7 +4348,7 @@
     },
     {
      "termo": "Lados opostos",
-     "significado": "AB e CD estão sempre à mesma distância um do outro, a altura h da praça: P a y de AB está a h − y de CD."
+     "significado": "AB e CD estão sempre à mesma distância um do outro, h (o lado AD): P a y de AB está a h − y de CD."
     }
    ],
    "passos": [
@@ -4384,11 +4429,11 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A distância pedida é a altura da praça menos y. O custo total soma flores, grama e pedras: as pedras eu acho à parte, e os lados da praça saem do perímetro.\nAgora é só achar h, b, g e y, uma por vez, e depois d.",
+     "texto": "A distância pedida é h menos y (h é o lado AD, a distância entre AB e CD). O custo total soma flores, grama e pedras: as pedras eu acho à parte, e os lados da praça saem do perímetro.\nAgora é só achar h, b, g e y, uma por vez, e depois d.",
      "visual": {
       "tipo": "equacao",
-      "formula": "d = h − y  e  5 700 = 20 · b · y + 5 · b · (h − y) + g",
-      "leitura": "d é a distância de P a CD; o custo total soma flores (PAB), grama (PCD) e pedras (g)",
+      "formula": "d = h − y  e  5 700 = 40 · fl + 10 · gr + g",
+      "leitura": "d é a distância de P a CD; o custo total soma as flores (R$ 40 vezes a área fl de PAB), a grama (R$ 10 vezes a área gr de PCD) e as pedras (g)",
       "letras": [
        {
         "letra": "d",
@@ -4396,11 +4441,11 @@
        },
        {
         "letra": "h",
-        "oque": "lado AD da praça (a altura), em m"
+        "oque": "lado AD da praça, em m (a distância entre AB e CD)"
        },
        {
         "letra": "b",
-        "oque": "lado AB da praça (a base), em m"
+        "oque": "lado AB da praça, em m"
        },
        {
         "letra": "g",
@@ -4431,7 +4476,7 @@
     },
     {
      "titulo": "Achando g: as pedras (1 de 2)",
-     "texto": "Seja x a distância de P ao lado AD (a questão não dá x). PDA tem base AD = 12 e altura x: área 12 · x ÷ 2 = 6 · x. PBC tem base BC = 12 e altura 20 − x (AD e BC estão a 20 m um do outro; se P está a x de AD, está a 20 − x de BC): área 6 · (20 − x) = 120 − 6 · x."
+     "texto": "Para achar g, chame de x a distância de P ao lado AD (a questão não dá x; ele some da conta). PDA tem base AD = 12 e altura x: área 12 · x ÷ 2 = 6 · x. PBC tem base BC = 12 e altura 20 − x (AD e BC estão a 20 m um do outro; se P está a x de AD, está a 20 − x de BC): área 6 · (20 − x) = 120 − 6 · x."
     },
     {
      "titulo": "Achando g: as pedras (2 de 2)",
@@ -4515,7 +4560,7 @@
        ],
        [
         "2. Equação em letras",
-        "d = h − y  e  5 700 = 20 · b · y + 5 · b · (h − y) + g"
+        "d = h − y  e  5 700 = 40 · fl + 10 · gr + g"
        ],
        [
         "3. Uma letra por vez",
@@ -4556,7 +4601,7 @@
   "resposta": "A",
   "explicacao": {
    "conferencia": "Concentrado: π · 25 · 18 = 450π; mistura 2:1: 450π ÷ 2 · 3 = 675π; sem a perda de 10%: 675π · 0,9 = 607,5π. Copo a 80%: 75π · 0,512 = 38,4π. 607,5 ÷ 38,4 = 15,8: 15 copos. Resposta: alternativa A. Erros: Alternativa B = Tomou 80% da altura como 80% do volume do copo (60π): 607,5 ÷ 60 = 10,1; Alternativa C = Serviu o concentrado puro, sem água e sem perda: 450 ÷ 38,4 = 11,7; Alternativa D = Arredondou 15,8 para cima: o 16º copo não enche (614,4 é mais que 607,5); Alternativa E = Esqueceu a perda de 10%: 675 ÷ 38,4 = 17,6.",
-   "ideia": "O suco servido até 80% da altura forma um cone menor semelhante ao copo, e o volume vai com o cubo da razão. Antes, ache quanto líquido existe de fato: concentrado, mais a água da mistura, menos a perda; conte só os copos inteiros.",
+   "ideia": "Antes, ache quanto líquido existe de fato: concentrado, mais a água da mistura, menos a perda. Depois, o suco servido até 80% da altura forma um cone menor semelhante ao copo, e o volume vai com o cubo da razão; conte só os copos inteiros.",
    "pecas": [
     {
      "termo": "Semelhante",
@@ -4596,7 +4641,7 @@
        {
         "figura": "cone",
         "nome": "Por que ⅓",
-        "formula": "o cone cabe 3 vezes no cilindro igual"
+        "formula": "cilindro 225π; cone 225π ÷ 3 = 75π"
        }
       ]
      }
@@ -4654,53 +4699,53 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Cada copo leva vc de mistura; a mistura útil é vu. Dividindo, vê-se quantos copos. vu nasce de vs: mistura com água, depois a perda.\nAgora é só achar vs, vm, vu e vc, uma por vez.",
+     "texto": "Cada copo leva uma porção P de mistura; a mistura útil é U. Dividindo, vê-se quantos copos. U nasce de G, o concentrado da garrafa: com a água dá M, e depois da perda dá U.\nAgora é só achar G, M, U e P, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "nc = vu ÷ vc",
+      "formula": "N = U ÷ P",
       "leitura": "número de copos = mistura que sobrou depois da perda ÷ volume de um copo, só copos inteiros",
       "letras": [
        {
-        "letra": "nc",
+        "letra": "N",
         "oque": "número de copos (o que a questão quer)"
        },
        {
-        "letra": "vs",
+        "letra": "G",
         "oque": "concentrado da garrafa, em cm³"
        },
        {
-        "letra": "vm",
+        "letra": "M",
         "oque": "mistura pronta, com a água, em cm³"
        },
        {
-        "letra": "vu",
-        "oque": "mistura que sobra depois da perda de 10%, em cm³"
+        "letra": "U",
+        "oque": "mistura útil, a que sobra depois da perda de 10%, em cm³"
        },
        {
-        "letra": "vc",
-        "oque": "suco de um copo servido a 80% da altura, em cm³"
+        "letra": "P",
+        "oque": "porção de suco de um copo servido a 80% da altura, em cm³"
        }
       ]
      }
     },
     {
-     "titulo": "Achando vs: o concentrado da garrafa",
-     "texto": "3/4 de 24: 24 ÷ 4 = 6 e 6 · 3 = 18 cm de altura. Raio = diâmetro ÷ 2 = 5 cm. Volume = π · raio · raio · altura = π · 5 · 5 · 18 = π · 25 · 18. 25 · 18 = 250 + 200 = 450. vs = 450π cm³ (π é só um número fixo; vai se cortar no fim)."
+     "titulo": "Achando G: o concentrado da garrafa",
+     "texto": "3/4 de 24: 24 ÷ 4 = 6 e 6 · 3 = 18 cm de altura. Raio = diâmetro ÷ 2 = 5 cm. Volume = π · raio · raio · altura = π · 5 · 5 · 18 = π · 25 · 18. 25 · 18 = 250 + 200 = 450. G = 450π cm³ (π é só um número fixo; vai se cortar no fim)."
     },
     {
-     "titulo": "Achando vm: a mistura com água",
-     "texto": "2 partes de concentrado para 1 de água: 3 partes no total. O concentrado (450π) é 2 partes: 1 parte = 450π ÷ 2 = 225π. A mistura tem 3 partes: vm = 3 · 225π = 675π cm³."
+     "titulo": "Achando M: a mistura com água",
+     "texto": "2 partes de concentrado para 1 de água: 3 partes no total. O concentrado (450π) é 2 partes: 1 parte = 450π ÷ 2 = 225π. A mistura tem 3 partes: M = 3 · 225π = 675π cm³."
     },
     {
-     "titulo": "Achando vu: depois da perda",
-     "texto": "Perde 10%, então fica 90% = 90 ÷ 100 = 0,9 da mistura. 675 · 0,9: 675 · 9 = 6 075 (675 · 10 = 6 750 menos 675) e uma casa depois da vírgula: 607,5. vu = 607,5π cm³."
+     "titulo": "Achando U: depois da perda",
+     "texto": "Perde 10%, então fica 90% = 90 ÷ 100 = 0,9 da mistura. 675 · 0,9: 675 · 9 = 6 075 (675 · 10 = 6 750 menos 675) e uma casa depois da vírgula: 607,5. U = 607,5π cm³."
     },
     {
-     "titulo": "Achando vc: o copo cheio",
+     "titulo": "Achando P: o copo cheio",
      "texto": "Volume do cone = ⅓ · π · raio · raio · altura = ⅓ · π · 5 · 5 · 9. 25 · 9 = 225 e 225 ÷ 3 = 75. O copo cheio tem 75π cm³."
     },
     {
-     "titulo": "Achando vc: o copo a 80% (2 de 3)",
+     "titulo": "Achando P: o copo a 80% (2 de 3)",
      "texto": "80% = 80 ÷ 100 = 0,8. O suco forma um cone menor com o mesmo formato do copo (semelhante), razão 0,8. O volume depende de 3 medidas, então vai com 0,8 · 0,8 · 0,8: 0,8 · 0,8 = 0,64 e 0,64 · 0,8 = 0,512.",
      "visual": {
       "tipo": "diagrama",
@@ -4712,12 +4757,12 @@
      }
     },
     {
-     "titulo": "Achando vc: o copo a 80% (3 de 3)",
-     "texto": "75π · 0,512: 75 · 512 = 38 400 (75 · 500 = 37 500 e 75 · 12 = 900). 0,512 tem três casas depois da vírgula, então 38 400 vira 38,4. vc = 38,4π cm³."
+     "titulo": "Achando P: o copo a 80% (3 de 3)",
+     "texto": "75π · 0,512: 75 · 512 = 38 400 (75 · 500 = 37 500 e 75 · 12 = 900). 0,512 tem três casas depois da vírgula, então 38 400 vira 38,4. P = 38,4π cm³."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "nc = 607,5π ÷ 38,4π. O π some: 6π ÷ 3π = 2, igual a 6 ÷ 3. Fica 607,5 ÷ 38,4 = 6 075 ÷ 384 (vezes 10 nos dois). 384 · 15 = 5 760 (3 840 + 1 920) e sobram 315, menos que 384: dá 15 e um pouco (≈ 15,8).\nSó os completos: 15 · 38,4 = 576 cabe em 607,5; 16 · 38,4 = 614,4 passa.\nResposta: alternativa A.",
+     "texto": "N = 607,5π ÷ 38,4π. O π some: 6π ÷ 3π = 2, igual a 6 ÷ 3. Fica 607,5 ÷ 38,4 = 6 075 ÷ 384 (vezes 10 nos dois). 384 · 15 = 5 760 (3 840 + 1 920) e sobram 315, menos que 384: dá 15 e um pouco (≈ 15,8).\nSó os completos: 15 · 38,4 = 576 cabe em 607,5; 16 · 38,4 = 614,4 passa.\nResposta: alternativa A.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -4727,23 +4772,23 @@
       ],
       "linhas": [
        [
-        "vs",
+        "G",
         "450π cm³"
        ],
        [
-        "vm",
+        "M",
         "675π cm³"
        ],
        [
-        "vu",
+        "U",
         "607,5π cm³"
        ],
        [
-        "vc",
+        "P",
         "38,4π cm³"
        ],
        [
-        "nc",
+        "N",
         "15 copos"
        ]
       ]
@@ -4770,11 +4815,11 @@
        ],
        [
         "2. Equação em letras",
-        "nc = vu ÷ vc"
+        "N = U ÷ P"
        ],
        [
         "3. Uma letra por vez",
-        "vs = 450π; vm = 675π; vu = 607,5π; vc = 38,4π; nc = 15"
+        "G = 450π; M = 675π; U = 607,5π; P = 38,4π; N = 15"
        ]
       ]
      }
@@ -4810,7 +4855,7 @@
   "E": "21",
   "resposta": "C",
   "explicacao": {
-   "conferencia": "sm = 96 ÷ 4 = 24 cm; pr = 376 ÷ 2 = 188 cm²; dg · dg = 24 · 24 − 2 · 188 = 576 − 376 = 200, dg ≈ 14,1; lv + 2 não passa de 14,1: lv ≤ 12,1, e a maior vareta inteira tem 12 cm. Resposta: alternativa C. Erros: Alternativa A = Descontou só 1 cm de espuma no total: 14,1 − 1 = 13,1; Alternativa B = Esqueceu a espuma: a vareta de 14 cm com as espumas (16 cm) não cabe; Alternativa D = Subtraiu só metade da área: 576 − 188 = 388, a raiz é 19,7, menos 2 de espuma; Alternativa E = Leu 0,0376 m² como 37,6 cm² (1 m² = 100 cm², não 10 000): 576 − 37,6, raiz 23,2, menos 2.",
+   "conferencia": "sm = 96 ÷ 4 = 24 cm; pr = 376 ÷ 2 = 188 cm²; dg · dg = 24 · 24 − 2 · 188 = 576 − 376 = 200, dg está entre 14,1 e 14,2. Com lv = 12, 12 + 2 = 14 cabe; com lv = 13, 13 + 2 = 15 não cabe. A maior vareta inteira tem 12 cm. Resposta: alternativa C. Erros: Alternativa A = Descontou só 1 cm de espuma no total: 14,1 − 1 = 13,1; Alternativa B = Esqueceu a espuma: a vareta de 14 cm com as espumas (16 cm) não cabe; Alternativa D = Subtraiu só metade da área: 576 − 188 = 388, a raiz é 19,7, menos 2 de espuma; Alternativa E = Leu 0,0376 m² como 37,6 cm² (1 m² = 100 cm², não 10 000): 576 − 37,6, raiz 23,2, menos 2.",
    "ideia": "A maior reta dentro do bloco é a diagonal, mas você não tem as medidas: a soma delas ao quadrado, menos 2 vezes a soma dos produtos dois a dois, dá a diagonal ao quadrado. Passe tudo para cm, ache a diagonal e desconte as duas espumas.",
    "pecas": [
     {
@@ -4943,7 +4988,7 @@
     },
     {
      "titulo": "Achando pr: a soma dos produtos",
-     "texto": "1 m² = 100 cm · 100 cm = 10 000 cm²: 0,0376 m² = 376 cm² (vírgula 4 casas à direita). 6 faces, 2 de cada tipo: 2 · x · y + 2 · y · z + 2 · z · x = 2 · pr = 376. pr = 376 ÷ 2 = 188 cm²."
+     "texto": "1 m² = 100 cm · 100 cm = 10 000 cm²: 0,0376 m² = 376 cm² (vírgula 4 casas à direita). As 6 faces são 3 pares iguais: tampa e fundo (x · y), frente e trás (y · z), as duas laterais (z · x). Então 2 · x · y + 2 · y · z + 2 · z · x = 2 · pr = 376. pr = 376 ÷ 2 = 188 cm²."
     },
     {
      "titulo": "Achando dg: o truque da soma",
@@ -4971,7 +5016,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "A vareta com as espumas mede lv + 1 + 1 = lv + 2 e cabe na diagonal: lv + 2 não passa de 14,1, então lv não passa de 12,1. O maior inteiro é 12 cm.\nConferindo: 12 + 2 = 14 cabe em 14,1; 13 + 2 = 15 não cabe.\nResposta: alternativa C.",
+     "texto": "A vareta com as espumas mede lv + 1 + 1 = lv + 2 e tem de caber na diagonal: lv + 2 ≤ dg, com dg entre 14,1 e 14,2.\nlv = 12: 12 + 2 = 14, menor que 14,1: cabe. lv = 13: 13 + 2 = 15, maior que 14,2: não cabe. O maior inteiro é 12 cm.\nResposta: alternativa C.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -5060,8 +5105,8 @@
   "E": "7,7 cm",
   "resposta": "B",
   "explicacao": {
-   "conferencia": "Copo: 36 · 20 ÷ 3 = 240 cm³. Bebida: 0,8³ · 240 = 122,88; depois do gole, 92,88. Vazio: 147,12 = 0,613 do copo; kr · kr · kr = 0,613, kr ≈ 0,85 e av ≈ 17 cm. Bebida: 20 − 17 = 3 cm. Resposta: alternativa B. Erros: Alternativa A = Esqueceu o gole: vazio de 117,12 cm³, e 20 − 15,7; Alternativa C = Achou a pirâmide da bebida que sobrou (14,6 cm) e fez 20 − 14,6, como se a bebida ficasse na ponta; Alternativa D = Tomou 80% da altura como 80% do volume (192 cm³), sem o cubo; Alternativa E = Fez a altura vazia como 0,613 de 20 (sem tirar a raiz cúbica): 20 − 12,3.",
-   "ideia": "Com a ponta para baixo, a bebida é uma pirâmide semelhante ao copo, e o volume vai com o cubo da razão das alturas. Virado o copo, o vazio é a pirâmide pequena do topo: ache a altura dela por tentativa de kr · kr · kr e tire de 20.",
+   "conferencia": "Copo: 36 · 20 ÷ 3 = 240 cm³. Bebida: 0,8³ · 240 = 122,88; depois do gole, 92,88. Vazio: 147,12 = 0,613 do copo; R · R · R = 0,613, R ≈ 0,85 e T ≈ 17 cm. Bebida: 20 − 17 = 3 cm. Resposta: alternativa B. Erros: Alternativa A = Esqueceu o gole: vazio de 117,12 cm³, e 20 − 15,7; Alternativa C = Achou a pirâmide da bebida que sobrou (14,6 cm) e fez 20 − 14,6, como se a bebida ficasse na ponta; Alternativa D = Tomou 80% da altura como 80% do volume (192 cm³), sem o cubo; Alternativa E = Fez a altura vazia como 0,613 de 20 (sem tirar a raiz cúbica): 20 − 12,3.",
+   "ideia": "Com a ponta para baixo, a bebida é uma pirâmide semelhante ao copo, e o volume vai com o cubo da razão das alturas. Virado o copo, o vazio é a pirâmide pequena do topo: ache a altura dela por tentativa de R · R · R e tire de 20.",
    "pecas": [
     {
      "termo": "Semelhante",
@@ -5157,66 +5202,66 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A bebida e o vazio dividem os 20 cm do copo. O vazio é uma pirâmide semelhante ao copo, com razão kr e volume kr · kr · kr · vp.\nAgora é só achar vp, vs, vv, kr e av, uma por vez.",
+     "texto": "A bebida e o vazio dividem os 20 cm do copo. O vazio é uma pirâmide semelhante ao copo, com razão R e volume R · R · R · P.\nAgora é só achar P, S, V, R e T, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "hb = 20 − av  e  kr · kr · kr = vv ÷ vp",
+      "formula": "L = 20 − T  e  R · R · R = V ÷ P",
       "leitura": "altura da bebida = 20 − altura do vazio; razão das alturas ao cubo = volume do vazio ÷ volume do copo todo",
       "letras": [
        {
-        "letra": "hb",
-        "oque": "altura da bebida no copo virado (o que a questão quer)"
+        "letra": "L",
+        "oque": "altura do líquido (a bebida) no copo virado (o que a questão quer)"
        },
        {
-        "letra": "av",
+        "letra": "T",
         "oque": "altura da pirâmide vazia, no topo"
        },
        {
-        "letra": "kr",
-        "oque": "razão entre a altura do vazio e a do copo, av ÷ 20"
+        "letra": "R",
+        "oque": "razão entre a altura do vazio e a do copo, T ÷ 20"
        },
        {
-        "letra": "vv",
+        "letra": "V",
         "oque": "volume do vazio, em cm³"
        },
        {
-        "letra": "vs",
+        "letra": "S",
         "oque": "bebida que sobra depois do gole, em cm³"
        },
        {
-        "letra": "vp",
-        "oque": "volume do copo todo, em cm³"
+        "letra": "P",
+        "oque": "volume da pirâmide, o copo todo, em cm³"
        }
       ]
      }
     },
     {
-     "titulo": "Achando vp: o copo todo",
+     "titulo": "Achando P: o copo todo",
      "texto": "Base quadrada = 6 · 6 = 36 cm². A pirâmide cabe 3 vezes no prisma de mesma base e altura (por isso o ⅓). Volume = ⅓ · base · altura = ⅓ · 36 · 20 = 720 ÷ 3 = 240 cm³."
     },
     {
-     "titulo": "Achando vs: a bebida que sobra",
+     "titulo": "Achando S: a bebida que sobra",
      "texto": "Ponta para baixo, a bebida é uma pirâmide do mesmo formato do copo (semelhante), razão das alturas 16 ÷ 20 = 8 ÷ 10 = 0,8 (dividindo por 2). O volume vai com 0,8 · 0,8 · 0,8: 0,8 · 0,8 = 0,64 e 0,64 · 0,8 = 0,512 do copo."
     },
     {
-     "titulo": "Achando vs: a bebida que sobra (2 de 2)",
-     "texto": "0,512 · 240: 512 · 24 = 12 288 (512 · 20 = 10 240 e 512 · 4 = 2 048). Três casas depois da vírgula: 12,288, e vezes 10 (240 = 24 · 10): 122,88 cm³. O gole é 30 mL = 30 cm³. vs = 122,88 − 30 = 92,88 cm³."
+     "titulo": "Achando S: a bebida que sobra (2 de 2)",
+     "texto": "0,512 · 240: 512 · 24 = 12 288 (512 · 20 = 10 240 e 512 · 4 = 2 048). Três casas depois da vírgula: 12,288, e vezes 10 (240 = 24 · 10): 122,88 cm³. O gole é 30 mL = 30 cm³. S = 122,88 − 30 = 92,88 cm³."
     },
     {
-     "titulo": "Achando vv: o vazio",
-     "texto": "vv = 240 − 92,88 = 147,12 cm³. Fração do copo: 147,12 ÷ 240. Corte um zero dos dois: 14,712 ÷ 24. 24 · 0,6 = 14,4 e 14,712 − 14,4 = 0,312; 24 · 0,013 = 0,312. A fração é 0,6 + 0,013 = 0,613."
+     "titulo": "Achando V: o vazio",
+     "texto": "V = 240 − 92,88 = 147,12 cm³. Fração do copo: 147,12 ÷ 240. Corte um zero dos dois: 14,712 ÷ 24. 24 · 0,6 = 14,4 e sobram 0,312. 24 · 0,01 = 0,24 e sobram 0,072. 24 · 0,003 = 0,072. Soma: 0,6 + 0,01 + 0,003 = 0,613."
     },
     {
-     "titulo": "Achando kr: a razão das alturas",
-     "texto": "Virado, o vazio é a pirâmide pequena do topo: kr · kr · kr = 0,613. 0,8 · 0,8 · 0,8 = 0,512 (pouco) e 0,9 · 0,9 · 0,9 = 0,729 (muito). Teste 0,85: 0,85 · 0,85 = 0,7225 e 0,7225 · 0,85 = 0,614125, quase 0,613. Logo kr ≈ 0,85."
+     "titulo": "Achando R: a razão das alturas",
+     "texto": "Virado, o vazio é a pirâmide pequena do topo: R · R · R = 0,613. 0,8 · 0,8 · 0,8 = 0,512 (pouco) e 0,9 · 0,9 · 0,9 = 0,729 (muito). Teste 0,85: 0,85 · 0,85 = 0,7225 e 0,7225 · 0,85 = 0,614125, quase 0,613. Logo R ≈ 0,85."
     },
     {
-     "titulo": "Achando kr: o erro importa?",
-     "texto": "O cubo de 0,85 passa de 0,613 em 0,001. Isso muda kr em menos de 0,001 e a altura em menos de 0,02 cm. As alternativas distam 0,9 cm ou mais umas das outras, então 0,85 basta."
+     "titulo": "Achando R: o erro importa?",
+     "texto": "O cubo de 0,85 dá 0,614, passa de 0,613 em 0,001. Teste 0,86 · 0,86 · 0,86 = 0,636: 0,01 a mais em R sobe o cubo 0,022. Então 0,001 de cubo é cerca de 0,0005 em R, e 0,0005 · 20 = 0,01 cm. As alternativas distam 0,9 cm ou mais: 0,85 basta."
     },
     {
-     "titulo": "Achando av: a altura do vazio",
-     "texto": "av = kr · 20 = 0,85 · 20 = 17 cm (0,85 · 2 = 1,7 e vezes 10). O vazio é a pirâmide pequena do topo, com cerca de 17 cm de altura.",
+     "titulo": "Achando T: a altura do vazio",
+     "texto": "T = R · 20 = 0,85 · 20 = 17 cm (0,85 · 2 = 1,7 e vezes 10). O vazio é a pirâmide pequena do topo, com cerca de 17 cm de altura.",
      "visual": {
       "tipo": "diagrama",
       "nome": "piramide-cortada",
@@ -5231,7 +5276,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "hb = 20 − av = 20 − 17 = 3 cm.\nConferindo: bebida de 3 cm de altura, num copo de 20 cm, fica pouca bebida, e o vazio é a maior parte.\nResposta: alternativa B.",
+     "texto": "L = 20 − T = 20 − 17 = 3 cm.\nConferindo: bebida de 3 cm de altura, num copo de 20 cm, fica pouca bebida, e o vazio é a maior parte.\nResposta: alternativa B.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -5241,27 +5286,27 @@
       ],
       "linhas": [
        [
-        "vp",
+        "P",
         "240 cm³"
        ],
        [
-        "vs",
+        "S",
         "92,88 cm³"
        ],
        [
-        "vv",
+        "V",
         "147,12 cm³"
        ],
        [
-        "kr",
+        "R",
         "≈ 0,85"
        ],
        [
-        "av",
+        "T",
         "≈ 17 cm"
        ],
        [
-        "hb",
+        "L",
         "≈ 3,0 cm"
        ]
       ]
@@ -5288,15 +5333,11 @@
        ],
        [
         "2. Equação em letras",
-        "hb = 20 − av  e  kr · kr · kr = vv ÷ vp"
+        "L = 20 − T  e  R · R · R = V ÷ P"
        ],
        [
         "3. Uma letra por vez",
-        "vp = 240; vs = 92,88; vv = 147,12; kr ≈ 0,85; av ≈ 17"
-       ],
-       [
-        "3. Uma letra por vez (cont.)",
-        "hb ≈ 3"
+        "P = 240; S = 92,88; V = 147,12; R ≈ 0,85; T ≈ 17; L ≈ 3"
        ]
       ]
      }
@@ -5427,46 +5468,46 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Quanto mais, sobre o que era antes: a diferença das alturas dividida pela altura da caixa cúbica. A altura nova vem do volume novo, e esse vem da fração do tubo.\nAgora é só achar ho, vb, vt, fc, vn e hn, uma por vez.",
+     "texto": "Quanto mais, sobre o que era antes: a diferença das alturas dividida pela altura da caixa cúbica. A altura nova vem do volume novo, e esse vem da fração do tubo.\nAgora é só achar O, G, T, F, V e N, uma por vez.",
      "visual": {
       "tipo": "equacao",
-      "formula": "pc = (hn − ho) ÷ ho · 100",
+      "formula": "P = (N − O) ÷ O · 100",
       "leitura": "percentual = (altura nova − altura da caixa cúbica) ÷ altura da caixa cúbica · 100",
       "letras": [
        {
-        "letra": "pc",
+        "letra": "P",
         "oque": "quantos por cento a altura da caixa nova é maior (o que a questão quer)"
        },
        {
-        "letra": "ho",
-        "oque": "altura da caixa cúbica, em r"
+        "letra": "O",
+        "oque": "altura da caixa cúbica (a original), em r"
        },
        {
-        "letra": "hn",
+        "letra": "N",
         "oque": "altura da caixa nova, em r"
        },
        {
-        "letra": "vn",
+        "letra": "V",
         "oque": "volume da caixa nova, em r³"
        },
        {
-        "letra": "fc",
+        "letra": "F",
         "oque": "fração do tubo ocupada pelas bolas"
        },
        {
-        "letra": "vt",
+        "letra": "T",
         "oque": "volume do tubo, em r³"
        },
        {
-        "letra": "vb",
-        "oque": "volume das 8 bolas, em r³"
+        "letra": "G",
+        "oque": "volume das 8 bolas de gude, em r³"
        }
       ]
      }
     },
     {
-     "titulo": "Achando ho: a altura da caixa cúbica",
-     "texto": "Diâmetro da bola = 2 · raio = 2r. Duas bolas lado a lado ocupam 2 · 2r = 4r. A caixa cúbica tem 2 bolas por aresta: ho = 4r, e a base é 4r por 4r.",
+     "titulo": "Achando O: a altura da caixa cúbica",
+     "texto": "Diâmetro da bola = 2 · raio = 2r. Duas bolas lado a lado ocupam 2 · 2r = 4r. A caixa cúbica tem 2 bolas por aresta: O = 4r, e a base é 4r por 4r.",
      "visual": {
       "tipo": "diagrama",
       "nome": "caixa-bolas-2x2x2",
@@ -5477,12 +5518,12 @@
      }
     },
     {
-     "titulo": "Achando vb: as 8 bolas",
-     "texto": "Volume da esfera = 4/3 · π · r · r · r. Com π = 3: 4/3 · 3 = 12/3 = 4, então cada bola tem 4 · r³ (r³ = r · r · r). Oito bolas: vb = 8 · 4 · r³ = 32 · r³."
+     "titulo": "Achando G: as 8 bolas",
+     "texto": "Volume da esfera = 4/3 · π · r · r · r. Com π = 3: 4/3 · 3 = 12/3 = 4, então cada bola tem 4 · r³ (r³ = r · r · r). Oito bolas: G = 8 · 4 · r³ = 32 · r³."
     },
     {
-     "titulo": "Achando vt: o tubo",
-     "texto": "Duas bolas lado a lado: o diâmetro do tubo é 4r e o raio 2r. 4 camadas de 2r: altura 8r. Volume = π · raio · raio · altura = 3 · 2r · 2r · 8r = 3 · 4 · 8 · r³. 3 · 4 = 12 e 12 · 8 = 96. vt = 96 · r³.",
+     "titulo": "Achando T: o tubo",
+     "texto": "Duas bolas lado a lado: o diâmetro do tubo é 4r e o raio 2r. 4 camadas de 2r: altura 8r. Volume = π · raio · raio · altura = 3 · 2r · 2r · 8r = 3 · 4 · 8 · r³. 3 · 4 = 12 e 12 · 8 = 96. T = 96 · r³.",
      "visual": {
       "tipo": "diagrama",
       "nome": "tubo-bolas-4x2",
@@ -5495,16 +5536,16 @@
      }
     },
     {
-     "titulo": "Achando fc: a fração das bolas no tubo",
-     "texto": "fc = vb ÷ vt = 32 ÷ 96. Como 96 = 3 · 32, fc = 1/3: as bolas são 1/3 do tubo (o vazio é 2/3). O r³ some na divisão."
+     "titulo": "Achando F: a fração das bolas no tubo",
+     "texto": "F = G ÷ T = 32 ÷ 96. Como 96 = 3 · 32, F = 1/3: as bolas são 1/3 do tubo (o vazio é 2/3). O r³ some na divisão."
     },
     {
-     "titulo": "Achando vn: o volume da caixa nova",
-     "texto": "A caixa nova tem a mesma fração vazia, 2/3, então as 8 bolas ocupam 1/3 dela. Se 32 é 1/3 do total, o total é 3 · 32 = 96. Teste: se 5 é 1/3 do total, o total é 15. vn = 96 · r³."
+     "titulo": "Achando V: o volume da caixa nova",
+     "texto": "A caixa nova tem a mesma fração vazia, 2/3, então as 8 bolas ocupam 1/3 dela. Se 32 é 1/3 do total, o total é 3 · 32 = 96. Teste: se 5 é 1/3 do total, o total é 15. V = 96 · r³."
     },
     {
-     "titulo": "Achando hn: a altura da caixa nova",
-     "texto": "Volume = base · altura, com base 4r · 4r = 16 · r · r. 96 · r · r · r = 16 · r · r · hn. 96 ÷ 16 = 6 e (r · r · r) ÷ (r · r) = r. Logo hn = 6r.",
+     "titulo": "Achando N: a altura da caixa nova",
+     "texto": "Volume = base · altura, com base 4r · 4r = 16 · r · r. 96 · r · r · r = 16 · r · r · N. 96 ÷ 16 = 6 e (r · r · r) ÷ (r · r) = r. Logo N = 6r.",
      "visual": {
       "tipo": "diagrama",
       "nome": "caixa-nova-6r",
@@ -5518,7 +5559,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "pc = (hn − ho) ÷ ho · 100 = (6r − 4r) ÷ 4r · 100. 6r − 4r = 2r, e 2r ÷ 4r = 2/4 = 1/2 (o r some). 1/2 · 100 = 50.\nAtenção: dividir por 6r, a altura nova, dá 1/3 = 33,3%; a base é a caixa de antes.\nResposta: alternativa D.",
+     "texto": "P = (N − O) ÷ O · 100 = (6r − 4r) ÷ 4r · 100. 6r − 4r = 2r, e 2r ÷ 4r = 2/4 = 1/2 (o r some). 1/2 · 100 = 50.\nAtenção: dividir por 6r, a altura nova, dá 1/3 = 33,3%; a base é a caixa de antes.\nResposta: alternativa D.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -5528,31 +5569,31 @@
       ],
       "linhas": [
        [
-        "ho",
+        "O",
         "4r"
        ],
        [
-        "vb",
+        "G",
         "32r³"
        ],
        [
-        "vt",
+        "T",
         "96r³"
        ],
        [
-        "fc",
+        "F",
         "1/3"
        ],
        [
-        "vn",
+        "V",
         "96r³"
        ],
        [
-        "hn",
+        "N",
         "6r"
        ],
        [
-        "pc",
+        "P",
         "50%"
        ]
       ]
@@ -5579,15 +5620,15 @@
        ],
        [
         "2. Equação em letras",
-        "pc = (hn − ho) ÷ ho · 100"
+        "P = (N − O) ÷ O · 100"
        ],
        [
         "3. Uma letra por vez",
-        "ho = 4r; vb = 32r³; vt = 96r³; fc = 1/3; vn = 96r³; hn = 6r"
+        "O = 4r; G = 32r³; T = 96r³; F = 1/3; V = 96r³; N = 6r"
        ],
        [
         "3. Uma letra por vez (cont.)",
-        "pc = 50%"
+        "P = 50%"
        ]
       ]
      }
@@ -5717,7 +5758,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Cada ficha vale 4, 2 ou 0 pontos. Total 4 só sai de 2 + 2 (as duas tocam 1) ou de 4 + 0 (uma toca 0 e a outra 2, em 2 ordens). Fichas independentes: as chances se multiplicam.\nAgora é só achar Pz, Pd e Pu, uma letra por vez.",
+     "texto": "Cada ficha vale 4, 2 ou 0 pontos. Total 4 pontos só sai de 2 pontos + 2 pontos (as duas fichas tocam 1 rejunte) ou de 4 pontos + 0 ponto (uma toca 0 rejuntes e a outra toca 2, em 2 ordens). Fichas independentes: as chances se multiplicam.\nAgora é só achar Pz, Pd e Pu, uma letra por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "Pq = Pu · Pu ÷ (Pu · Pu + 2 · Pz · Pd)",
@@ -5777,7 +5818,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "Pq = (144/625) ÷ (144/625 + 72/625). Mesmo número embaixo: 144 + 72 = 216, e fica 144/216 (o 625 se corta).\n144 = 2 · 72 e 216 = 3 · 72. Dividindo em cima e embaixo por 72: Pq = 2/3.",
+     "texto": "Pq = (144/625) ÷ (144/625 + 72/625). Os dois somam 144 + 72 = 216 pedaços de 1/625. Dividir por pedaços do mesmo tamanho é só contar: 144 pedaços em 216, ou 144/216 (teste: (3/10) ÷ (6/10) = 3 de 6 = 1/2).\n144 = 2 · 72 e 216 = 3 · 72. Dividindo em cima e embaixo por 72: Pq = 2/3.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -5871,7 +5912,7 @@
    "pecas": [
     {
      "termo": "Combinação",
-     "significado": "Quantos jeitos de escolher k entre n, sem ligar para a ordem: n · (n−1) · ... ÷ (k · ... · 1)."
+     "significado": "Quantos jeitos de escolher k entre n, sem ligar para a ordem. Escolher 3 de 28: 28 · 27 · 26 ÷ (3 · 2 · 1)."
     },
     {
      "termo": "Pelo menos 1",
@@ -5898,7 +5939,7 @@
        {
         "figura": "contagem",
         "nome": "Combinação",
-        "formula": "n · (n−1) · ... ÷ k!"
+        "formula": "escolher 3 de 28: 28 · 27 · 26 ÷ (3 · 2 · 1)"
        }
       ]
      }
@@ -5955,22 +5996,22 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Sabendo que há pelo menos 1 empate, o grupo possível encolhe para os sorteios que têm pelo menos 1. A chance é então os sorteios com exatamente 1 ÷ os com pelo menos 1.\nAntes de achar Xu e Mu, é preciso saber quantos jogos e quantos empates houve.",
+     "texto": "Sabendo que há pelo menos 1 empate, o grupo possível encolhe para os sorteios que têm pelo menos 1. A chance é então os sorteios com exatamente 1 ÷ os com pelo menos 1.\nAntes de achar U e M, é preciso saber quantos jogos e quantos empates houve.",
      "visual": {
       "tipo": "equacao",
-      "formula": "Pq = Xu ÷ Mu",
+      "formula": "P = U ÷ M",
       "leitura": "chance = sorteios com exatamente 1 empate ÷ sorteios com pelo menos 1 empate",
       "letras": [
        {
-        "letra": "Pq",
+        "letra": "P",
         "oque": "chance de exatamente 1 empate, sabendo que há pelo menos 1 (o que a questão quer)"
        },
        {
-        "letra": "Xu",
+        "letra": "U",
         "oque": "sorteios de 3 jogos com exatamente 1 empate"
        },
        {
-        "letra": "Mu",
+        "letra": "M",
         "oque": "sorteios de 3 jogos com pelo menos 1 empate"
        }
       ]
@@ -5993,16 +6034,16 @@
      "texto": "Escolher 3 jogos entre 28, sem ordem: 28 · 27 · 26 = 19 656 (28 · 27 = 756 e 756 · 26 = 19 656), dividido por 3 · 2 · 1 = 6: 19 656 ÷ 6 = 3 276 sorteios no total."
     },
     {
-     "titulo": "Achando Xu: exatamente 1 empate",
-     "texto": "Escolher o 1 empate entre os 6: 6 jeitos. Escolher os outros 2 jogos entre os 22 com vencedor: 22 · 21 = 462, e 462 ÷ 2 = 231 jeitos.\nAs duas escolhas se multiplicam: Xu = 6 · 231 = 1 386."
+     "titulo": "Achando U: exatamente 1 empate",
+     "texto": "Escolher o 1 empate entre os 6: 6 jeitos. Escolher os outros 2 jogos entre os 22 com vencedor: 22 · 21 = 462, e 462 ÷ 2 = 231 jeitos.\nAs duas escolhas se multiplicam: U = 6 · 231 = 1 386."
     },
     {
-     "titulo": "Achando Mu: pelo menos 1 empate",
+     "titulo": "Achando M: pelo menos 1 empate",
      "texto": "\"Pelo menos 1\" é todos menos \"nenhum\". Nenhum empate: os 3 jogos saem dos 22 com vencedor: 22 · 21 · 20 = 9 240 (462 · 20), e 9 240 ÷ 6 = 1 540.\nMu = 3 276 − 1 540 = 1 736."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "Pq = Xu ÷ Mu = 1 386 ÷ 1 736.\nDividindo em cima e embaixo por 2: 693/868. Depois por 7 (7 · 99 = 693 e 7 · 124 = 868): 99/124.\n99 = 9 · 11 e 124 = 4 · 31: não há fator comum.\nResposta: alternativa E. Conferindo: 124 · 0,8 = 99,2, então 99/124 é cerca de 0,8.",
+     "texto": "P = U ÷ M = 1 386 ÷ 1 736.\nDividindo em cima e embaixo por 2: 693/868. Depois por 7 (7 · 99 = 693 e 7 · 124 = 868): 99/124.\n99 = 9 · 11 e 124 = 4 · 31: não há fator comum.\nResposta: alternativa E. Conferindo: 124 · 0,8 = 99,2, então 99/124 é cerca de 0,8.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -6012,15 +6053,15 @@
       ],
       "linhas": [
        [
-        "Xu",
+        "U",
         "1 386 sorteios"
        ],
        [
-        "Mu",
+        "M",
         "1 736 sorteios"
        ],
        [
-        "Pq",
+        "P",
         "99/124"
        ]
       ]
@@ -6043,11 +6084,11 @@
        ],
        [
         "2. Equação em letras",
-        "Pq = Xu ÷ Mu"
+        "P = U ÷ M"
        ],
        [
         "3. Uma letra por vez",
-        "ache Xu e Mu e volte"
+        "ache U e M e volte"
        ]
       ]
      }
@@ -6073,7 +6114,7 @@
   "tema": "Análise Combinatória e Probabilidade",
   "nivel": "acima",
   "origem": "Escada",
-  "ancora": "forte · ENEM 2019 CD7 q.173 (Bayes contando em 100: de fraudulenta para inconsistente) e Fuvest 2025 2ª fase M02 (tabela e condicionais com denominadores trocados); aqui 2 faixas de idade e regra de 3 exames com desempate (caminhos da árvore somados)",
+  "ancora": "forte · ENEM 2019 CD7 q.173 (Bayes contando em 100: de fraudulenta para inconsistente) e Fuvest 2025 2ª fase M02 (tabela e condicionais com denominadores trocados); aqui 2 faixas de idade e regra dos exames com desempate (caminhos da árvore somados)",
   "canal": "fuv-08-analise-combinatoria-e-probabi.txt [4:00:32] (clássico da probabilidade condicional); mat-04-porcentagem.txt [2:06:31] (percentual de um valor)",
   "enunciado": "Uma clínica aplicou um protocolo de exames em 10 000 pessoas, divididas por idade, com a porcentagem de doentes de cada faixa, como mostra a tabela. Cada exame dá positivo em 90% das pessoas doentes e, por engano, em 10% das sadias, e os resultados de exames repetidos na mesma pessoa não dependem uns dos outros. A regra da clínica é: faz-se o 1º e o 2º exame; se os dois derem o mesmo resultado, ele vale; se divergirem, faz-se um 3º exame, e o resultado dele decide. Cada exame custa R$ 120, mas esse valor não entra na conta. Entre as pessoas que a regra classifica como doentes, a porcentagem aproximada das que realmente têm a doença é:\n\nDados: Pessoas: 10 000; Menos de 40 anos: 5 000 pessoas, 5% com a doença; 40 anos ou mais: 5 000 pessoas, 10% com a doença; Exame em doente: positivo em 90% (0,9); Exame em sadia: positivo em 10% (0,1), por engano; Regra: 2 resultados iguais valem; se divergem, o 3º decide; Preço de cada exame: R$ 120: não entra na conta.",
   "A": "42%",
@@ -6084,7 +6125,7 @@
   "resposta": "D",
   "explicacao": {
    "conferencia": "Doentes 750, sadias 9 250. A regra acusa um doente com 0,972 e uma sadia com 0,028: 729 e 259. 729 ÷ 988 é cerca de 74%. Resposta: alternativa D. Erros: Alternativa A = Parou no 1º exame: 675 ÷ (675 + 925), com 0,9 · 750 doentes e 0,1 · 9 250 sadias; Alternativa B = Só aceitou 2 positivos e ignorou o 3º exame: 607,5 ÷ (607,5 + 92,5); Alternativa C = Pegou a taxa de acerto do exame (90%) como se fosse a resposta; Alternativa E = Pegou a chance de a regra acusar um doente (0,972), sem olhar as sadias acusadas.",
-   "ideia": "Conte pessoas, não porcentagens: ache os doentes e as sadias e a chance de a regra de 3 exames acusar cada tipo, somando os caminhos da árvore. Depois compare os doentes acusados com todos os acusados.",
+   "ideia": "Conte pessoas, não porcentagens: ache os doentes e as sadias e a chance de a regra dos exames acusar cada tipo, somando os caminhos da árvore. Depois compare os doentes acusados com todos os acusados.",
    "pecas": [
     {
      "termo": "Caminho da árvore",
@@ -6164,7 +6205,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Conte pessoas em vez de porcentagens. A regra acusa quem tem 2 positivos, ou 1 positivo e 1 negativo seguidos de um 3º positivo.\nAgora é só achar Dc e Sc, uma letra por vez: quantos doentes e sadias existem, e a chance de a regra acusar cada um.",
+     "texto": "Conte pessoas em vez de porcentagens. \"Acusar\" aqui é a regra classificar a pessoa como doente. A regra acusa quem tem 2 positivos, ou 1 positivo e 1 negativo seguidos de um 3º positivo.",
      "visual": {
       "tipo": "equacao",
       "formula": "Pq = Dc ÷ (Dc + Sc)",
@@ -6186,6 +6227,10 @@
      }
     },
     {
+     "titulo": "A equação em letras (2 de 2)",
+     "texto": "Agora é só achar Dc e Sc, uma letra por vez: quantos doentes e sadias existem, e a chance de a regra acusar cada um."
+    },
+    {
      "titulo": "Achando Dc: quantos doentes (1 de 4)",
      "texto": "Menos de 40 anos: 5% de 5 000 = 5 000 ÷ 100 · 5 = 250. 40 anos ou mais: 10% de 5 000 = 5 000 ÷ 10 = 500.\nDoentes ao todo: 250 + 500 = 750. Sadias: 10 000 − 750 = 9 250."
     },
@@ -6195,11 +6240,11 @@
     },
     {
      "titulo": "Achando Dc: a regra acusa um doente (3 de 4)",
-     "texto": "Nesses 0,18 há um 3º exame, positivo com chance 0,9: 0,18 · 0,9 = 0,162 (18 · 9 = 162, com 3 casas).\nA regra acusa o doente com chance 0,81 + 0,162 = 0,972."
+     "texto": "Quando os dois primeiros divergem (chance 0,18), faz-se o 3º exame, positivo com chance 0,9: 0,18 · 0,9 = 0,162 (18 · 9 = 162, com 3 casas).\nA regra acusa o doente com chance 0,81 + 0,162 = 0,972."
     },
     {
      "titulo": "Achando Dc: doentes acusados (4 de 4)",
-     "texto": "Dc = 750 · 0,972. O 750 é 3/4 de 1 000. 0,972 · 1 000 = 972; 972 ÷ 4 = 243; 243 · 3 = 729.\nDc = 729 doentes acusados."
+     "texto": "Dc = 750 · 0,972. Sem vírgula: 750 · 972. 972 · 75 = 972 · 70 + 972 · 5 = 68 040 + 4 860 = 72 900, e vezes 10: 729 000. 0,972 tem 3 casas: tire 3 zeros, 729.\nDc = 729 doentes acusados."
     },
     {
      "titulo": "Achando Sc: a regra acusa uma sadia (1 de 2)",
@@ -6252,7 +6297,7 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "10 000 pessoas, 750 doentes; regra de 3 exames"
+        "10 000 pessoas, 750 doentes; regra dos exames"
        ],
        [
         "2. Equação em letras",
@@ -6374,7 +6419,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "Entre os aprovados, cada painel pesa igual (a conta está no 1º passo de T), então só é preciso contar: favoráveis ÷ possíveis.\nAgora é só achar T e N, uma letra por vez.",
+     "texto": "Todos os painéis aprovados têm a mesma chance, então só é preciso contar: favoráveis ÷ possíveis.\nAgora é só achar T e N, uma letra por vez.",
      "visual": {
       "tipo": "equacao",
       "formula": "P = N ÷ T",
@@ -6397,7 +6442,7 @@
     },
     {
      "titulo": "Achando T: contar os aprovados (1 de 4)",
-     "texto": "Um painel certo, lâmpada por lâmpada, tem chance 1/2 doze vezes: 2 · 2 · ... dá 4 096. Cada painel tem chance 1/4 096.\nEntre os aprovados todos pesam igual: o 1/4 096 se corta e a chance é N ÷ T. (Teste: (3 · 5) ÷ (7 · 5) = 3/7.)"
+     "texto": "Cada lâmpada tem 2 jeitos (acesa ou apagada). Com 12 lâmpadas, 2 multiplicado 12 vezes: 2 · 2 = 4; 4 · 4 = 16; 16 · 16 = 256; 256 · 16 = 4 096 painéis, cada um com chance 1/4 096.\nOs aprovados têm todos a mesma chance: o 1/4 096 se corta e a chance é N ÷ T (teste: (3 · 5) ÷ (7 · 5) = 3/7)."
     },
     {
      "titulo": "Achando T: contar os aprovados (2 de 4)",

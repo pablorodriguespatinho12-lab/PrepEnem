@@ -85,7 +85,7 @@ ANTES_NOVOS = {
         'exercicios': [
             {'enunciado': 'Lente biconvexa de vidro (1,5) no ar, com raios de 20 cm e 20 cm. Qual o foco?', 'alternativas': ['20 cm', '40 cm', '10 cm', '5 cm'], 'certa': 0,
              'resolucao': '20 cm: 1/f = 0,5 · (1/20 + 1/20) = 0,5 · 0,1 = 0,05, então f = 20 cm.\n40 cm usa só uma face; 10 cm esquece o 0,5; 5 cm erra os dois.'},
-            {'enunciado': 'Uma lente biconvexa tem N = 0,8 (o meio é mais refringente que ela). Ela converge ou diverge?', 'alternativas': ['Diverge', 'Converge', 'Não desvia', 'Depende do raio'], 'certa': 0,
+            {'enunciado': 'Uma lente biconvexa tem N = 0,8 (o índice do meio é maior que o dela). Ela converge ou diverge?', 'alternativas': ['Diverge', 'Converge', 'Não desvia', 'Depende do raio'], 'certa': 0,
              'resolucao': 'Diverge: N − 1 = 0,8 − 1 = −0,2 é negativo, então f é negativo.\nConverge esquece o sinal; não desvia só vale se N = 1.'},
         ],
     },
@@ -96,7 +96,7 @@ ANTES_NOVOS = {
             'Ângulo limite θL: a luz sai rente à superfície. sen θL = n2 ÷ n1. Acima desse ângulo de incidência toda a luz reflete: reflexão total.',
             'Só existe reflexão total se n1 > n2. Com n2 igual ou maior, o seno daria 1 ou mais e não há ângulo limite.',
             'Exemplo: vidro 1,5 para ar 1,0: sen θL = 1,0 ÷ 1,5 = 0,67. O ângulo é medido da normal, a reta perpendicular à parede.',
-            'Numa fibra reta, o raio vai e volta entre as paredes. Para avançar um comprimento L ao longo do eixo, ele anda L ÷ sen θ (θ medido da normal).',
+            'Numa fibra reta, o raio vai e volta. sen θ = avanço no eixo ÷ caminho do raio. Para avançar L no eixo, ele anda L ÷ sen θ.',
         ],
         'visual': tabela('Seno do ângulo limite', ['n1', 'n2', 'sen θL'], [['1,5', '1,0', '0,67'], ['1,6', '1,2', '0,75'], ['1,5', '1,5', 'não há']]),
         'exercicios': [
@@ -274,11 +274,11 @@ Q.append(dict(
            ('Lente 2', 'convergente, foco f2 = 10,0 cm'), ('Distância inicial entre as lentes', '37,5 cm'), ('Afastamento da lente 2', '0,50 cm/s, em linha reta'),
            ('Imagem pedida na parede', 'nítida, 72 cm de altura')],
     alts=[('0 s', 0, "Tomou a solução em que a lente 2 está dentro do foco (p2 = 7,5 cm, aumento 4): já vale no início, mas a imagem é virtual e não aparece na parede"),
-          ('6 s', 6, 'Errou só o aumento da lente 2: usou 72 ÷ 3,6 = 20 (esqueceu o 5 da lente 1) mas manteve q1 = 30 cm: p2 = 10,5 cm, Df = 40,5 cm, (40,5 − 37,5) ÷ 0,50'),
+          ('6 s', 6, 'Usou g2 = 72 ÷ 3,6 = 20 (esqueceu o aumento 5 da lente 1) mas manteve q1 = 30 cm: p2 = 10,5 cm, Df = 30 + 10,5 = 40,5 cm, (40,5 − 37,5) ÷ 0,50 = 6 s'),
           ('10 s', 10, 'OK'),
           ('85 s', 85, 'Dividiu a distância final entre as lentes (42,5 cm) pela velocidade, sem tirar os 37,5 cm do início'),
           ('100 s', 100, 'Leu 0,50 cm/s como 0,50 mm/s: 50 mm ÷ 0,50 mm/s')],
-    resumo='1/q1 = 1/5 − 1/6 = 1/30, q1 = 30 cm, g1 = 5, imagem 1 de 18 cm; g2 = 72 ÷ 18 = 4; 1/10 = 5/(4 · p2), p2 = 12,5 cm (maior que 10: real); Df = 30 + 12,5 = 42,5 cm; t = (42,5 − 37,5) ÷ 0,50 = 10 s.',
+    resumo='1/q1 = 1/5 − 1/6 = 1/30, q1 = 30 cm, imagem 1 de 18 cm; g2 = 72 ÷ 18 = 4; 1/10 = 5/(4 · p2), p2 = 12,5 cm (maior que 10: real); Df = 30 + 12,5 = 42,5 cm; t = (42,5 − 37,5) ÷ 0,50 = 10 s.',
     ideia='A imagem da lente 1 é o objeto da lente 2, e o aumento total é o produto dos dois. O aumento 4 da lente 2 aparece duas vezes, com a lente dentro do foco (virtual) e fora dele (real): só a real aparece na parede.',
     pecas=[('Imagem 1 vira objeto', 'A imagem que a lente 1 forma é o objeto da lente 2. O tamanho dela (18 cm) é o que a lente 2 amplia.'),
            ('Imagem real e virtual', 'Real: aparece na parede (objeto além do foco). Virtual: não aparece na parede (objeto dentro do foco).')],
@@ -287,25 +287,25 @@ Q.append(dict(
     eq='t = (Df − D0) ÷ v', leitura='tempo = (distância final entre as lentes − distância inicial) ÷ velocidade de afastamento',
     letras=[('t', 'tempo de afastamento, em s (o que a questão quer)'), ('Df', 'distância entre as lentes quando a imagem tem 72 cm, em cm'),
             ('D0', 'distância entre as lentes no início, em cm'), ('v', 'velocidade de afastamento da lente 2, em cm/s'),
-            ('q1', 'distância da imagem 1 até a lente 1, em cm'), ('g1', 'aumento da lente 1'), ('h1', 'altura da imagem 1, em cm'),
+            ('q1', 'distância da imagem 1 até a lente 1, em cm'), ('h1', 'altura da imagem 1, em cm'),
             ('g2', 'aumento da lente 2 quando a imagem final tem 72 cm'), ('p2', 'distância da imagem 1 (objeto da lente 2) até a lente 2, em cm')],
-    eq_texto='A lente 2 anda de D0 até Df com velocidade v, e o tempo é essa distância dividida por v.\nAgora é só achar v, D0, q1, g1, h1, g2, p2 e Df.',
-    achando=[('Achando v: a velocidade', 'A lente 2 se afasta 0,50 cm a cada segundo.\nv = 0,50 cm/s.'),
-             ('Achando D0: o início', 'No começo, as duas lentes estão a 37,5 cm uma da outra.\nD0 = 37,5 cm.'),
+    eq_texto='A lente 2 anda de D0 até Df com velocidade v, e o tempo é essa distância dividida por v.\nAgora é só achar v, D0, q1, h1, g2, p2 e Df.',
+    achando=[('Achando v: a velocidade da lente 2', 'A lente 2 se afasta 0,50 cm a cada segundo: v = 0,50 cm/s.'),
+             ('Achando D0: a distância do começo', 'No começo, as lentes estão a 37,5 cm uma da outra: D0 = 37,5 cm.'),
              ('Achando q1: a imagem da lente 1', 'Com f1 = 5 e p1 = 6 (cm): 1/q1 = 1/5 − 1/6 = 6/30 − 5/30 = 1/30.\nq1 = 30 cm, depois da lente 1.'),
-             ('Achando g1: o aumento da lente 1', 'g1 = q1 ÷ p1 = 30 ÷ 6 = 5.'),
-             ('Achando h1: o tamanho da imagem 1', 'h1 = g1 · 3,6 = 5 · 3,6. Como 5 · 3 = 15 e 5 · 0,6 = 3, h1 = 18 cm.\nÉ esse tamanho que a lente 2 vai ampliar.'),
+             ('Achando h1: o tamanho da imagem 1', 'A lente 1 aumenta q1 ÷ p1 = 30 ÷ 6 = 5 vezes o objeto de 3,6 cm: h1 = 5 · 3,6. Como 5 · 3 = 15 e 5 · 0,6 = 3, h1 = 18 cm.\nÉ esse tamanho que a lente 2 vai ampliar.'),
              ('Achando g2: o aumento da lente 2', 'A imagem final deve ter 72 cm e o objeto da lente 2 tem 18 cm.\ng2 = 72 ÷ 18 = 4.'),
              ('Achando p2: onde está o objeto da lente 2',
-              'g2 = q2 ÷ p2, então q2 = 4 · p2. Com f2 = 10: 1/10 = 1/p2 + 1/(4 · p2) = 4/(4 · p2) + 1/(4 · p2) = 5/(4 · p2).\n'
-              'Cruzando: 4 · p2 = 5 · 10 = 50, então p2 = 50 ÷ 4 = 12,5 cm.\np2 é maior que f2 = 10: a imagem é real e aparece na parede.',
+              'q2 é a distância da imagem final à lente 2. g2 = q2 ÷ p2, então q2 = 4 · p2. Com f2 = 10: 1/10 = 1/p2 + 1/(4 · p2).\n'
+              'Troque 1/p2 por 4/(4 · p2): multiplicar em cima e embaixo por 4 não muda a fração (1/5 = 4/20). Então 1/10 = 4/(4 · p2) + 1/(4 · p2) = 5/(4 · p2).\n'
+              'Cruzando: 4 · p2 = 5 · 10 = 50, p2 = 50 ÷ 4 = 12,5 cm. É maior que f2 = 10: imagem real, aparece na parede.',
               {'tipo': 'diagrama', 'nome': 'projetor-duas-lentes', 'rotulos': ['', '', '', '', '', '', '', 'imagem 1: 18 cm, a 30 cm da lente 1', 'p2 = 12,5 cm']}),
              ('Achando Df: a distância entre as lentes', 'A imagem 1 está a q1 = 30 cm da lente 1, e o objeto da lente 2 fica a p2 = 12,5 cm antes dela.\nDf = 30 + 12,5 = 42,5 cm.')],
-    volta=('t = (Df − D0) ÷ v = (42,5 − 37,5) ÷ 0,50 = 5 ÷ 0,5 = 10 s.\nResposta: alternativa X. Conferindo: 0,50 · 10 = 5 cm. No início p2 = 37,5 − 30 = 7,5 cm, dentro do foco: '
-           'a imagem é virtual e também tem aumento 4 (10 ÷ 2,5), mas não aparece na parede. Por isso 0 s não serve.'),
-    valores=[('v', '0,50 cm/s'), ('D0', '37,5 cm'), ('q1', '30 cm'), ('g1', '5'), ('h1', '18 cm'), ('g2', '4'), ('p2', '12,5 cm'), ('Df', '42,5 cm')],
+    volta=('t = (Df − D0) ÷ v = (42,5 − 37,5) ÷ 0,50 = 5 ÷ 0,5 = 10 s.\nResposta: alternativa X. Conferindo: 0,50 · 10 = 5 cm. Em t = 0, p2 = 37,5 − 30 = 7,5 cm (dentro do foco): '
+           'q2 = −30 (virtual), aumento 30 ÷ 7,5 = 4, mas não aparece na parede. Por isso 0 s não serve.'),
+    valores=[('v', '0,50 cm/s'), ('D0', '37,5 cm'), ('q1', '30 cm'), ('h1', '18 cm'), ('g2', '4'), ('p2', '12,5 cm'), ('Df', '42,5 cm')],
     pista='"duas lentes" e "imagem na parede" → a imagem da lente 1 é o objeto da lente 2; ache o aumento que falta, veja se a imagem é real (p2 maior que f2) e divida o deslocamento pela velocidade.',
-    rec1='f1 = 5; p1 = 6; f2 = 10; D0 = 37,5; v = 0,50; imagem de 72 cm', rec3='q1 = 30; g1 = 5; h1 = 18; g2 = 4; p2 = 12,5; Df = 42,5',
+    rec1='f1 = 5; p1 = 6; f2 = 10; D0 = 37,5; v = 0,50; imagem de 72 cm', rec3='q1 = 30; h1 = 18; g2 = 4; p2 = 12,5; Df = 42,5',
     checagem=('A lente 1 forma a imagem a 30 cm dela e as lentes estão a 50 cm uma da outra. Qual a distância dessa imagem até a lente 2?', ['20 cm', '80 cm', '30 cm', '50 cm'], '20 cm', 'p2 = 50 − 30 = 20 cm.'),
     ancora=("parcial · ITA 2024 q.7 (microscópio de duas lentes: Gauss duas vezes, a imagem da objetiva vira objeto da ocular e o aumento é o produto); "
             "no ENEM 2019 a 2023 não há conta de lente: o estilo e o tamanho são de ENEM, a técnica é a de ITA, com Cinemática (movimento uniforme) junto"),
@@ -359,7 +359,7 @@ Q.append(dict(
           ('Divergente; imagem virtual, a 60 cm da lente, com 12 cm de altura', 12, "Perdeu o sinal do foco em Gauss: usou f = +120 cm e 1/q = 1/120 − 1/40"),
           ('Convergente; imagem virtual, a 62 cm da lente, com 12,4 cm de altura', 12.413793103, 'Inverteu a razão (N = 1,6 ÷ 1,5): f = +112,5 cm, objeto dentro do foco')],
     resumo="nv = 600 ÷ 400 = 1,5; nl = 3,0 ÷ 1,875 = 1,6; N = 15/16; 1/f = (−1/16) · (2/15) = −1/120, f = −120 cm; 1/q = −1/120 − 1/40 = −1/30, q = −30 cm; g = 30 ÷ 40 = 0,75; imagem de 6 cm.",
-    ideia='O que decide é a razão entre o índice da lente e o do meio. Como o líquido é mais refringente que o vidro, a biconvexa diverge, e a imagem de um objeto real é virtual, direita e menor.',
+    ideia='O que decide é a razão entre o índice da lente e o do meio. Como o líquido tem índice de refração maior que o do vidro, a biconvexa diverge, e a imagem de um objeto real é virtual, direita e menor.',
     pecas=[('Razão N', 'N = nv ÷ nl, o índice da lente dividido pelo do meio. Menor que 1 faz a lente divergir.'),
            ('Foco negativo', 'Lente divergente: f entra com sinal de menos, e a imagem de objeto real é virtual (q negativo).')],
     formulas=[('onda', 'Índice pelo λ', 'n = λ vácuo ÷ λ no meio'), ('onda', 'Índice pela velocidade', 'n = c ÷ v'), ('lente', 'Razão dos índices', 'N = nv ÷ nl'),
@@ -376,11 +376,11 @@ Q.append(dict(
              ('Achando nl: o índice do líquido',
               'nl = c ÷ v = (3,0 × 10⁸) ÷ (1,875 × 10⁸). Os 10⁸ se cancelam: 3,0 ÷ 1,875.\nMultiplico os dois por 1 000: 3 000 ÷ 1 875. Cabe 1 vez (1 875) e sobram 1 125.\n'
               '1 875 · 0,6 = 1 125, então nl = 1,6. Confere: 1 875 · 1,6 = 3 000.'),
-             ('Achando N: o índice relativo', 'N = nv ÷ nl = 1,5 ÷ 1,6 = 15 ÷ 16.\nN é menor que 1: N − 1 = 15/16 − 16/16 = −1/16.'),
+             ('Achando N: o índice relativo', 'N = nv ÷ nl = 1,5 ÷ 1,6 = 15 ÷ 16 (multiplico os dois por 10; a conta não muda).\nN é menor que 1: N − 1 = 15/16 − 1 = 15/16 − 16/16 = −1/16, pois 1 = 16/16 e 15 − 16 = −1.'),
              ('Achando f: o foco no líquido',
               '1/f = (N − 1) · (1/10 + 1/30). Primeiro 1/10 + 1/30 = 3/30 + 1/30 = 4/30 = 2/15.\n'
               'Multiplicar fração: em cima com em cima, embaixo com embaixo: (−1/16) · (2/15) = (−1 · 2) ÷ (16 · 15) = −2/240.\nDividindo por 2 em cima e embaixo: 1/f = −1/120. f = −120 cm: a lente diverge.'),
-             ('Achando q: onde fica a imagem', '1/f = 1/p + 1/q, então 1/q = 1/f − 1/p = −1/120 − 1/40 = −1/120 − 3/120 = −4/120 = −1/30.\nq = −30 cm: negativo, imagem virtual a 30 cm da lente.'),
+             ('Achando q: onde fica a imagem', '1/f = 1/p + 1/q, então 1/q = 1/f − 1/p = −1/120 − 1/40 = −1/120 − 3/120 (1/40 = 3/120). Tirar 3 de −1 anda para o lado negativo: −1 − 3 = −4, então −4/120. Dividindo em cima e embaixo por 4: −1/30.\nq = −30 cm: negativo, imagem virtual a 30 cm da lente.'),
              ('Achando g: o aumento', 'g = q ÷ p sem o sinal: 30 ÷ 40 = 3/4 = 0,75.\nMenor que 1: a imagem é menor. (Virtual de objeto real é direita.)')],
     volta='hi = g · ho = 0,75 · 8 = 6 cm.\nResposta: alternativa X. Conferindo: lente divergente, imagem virtual, a 30 cm e com 6 cm de altura.',
     valores=[('ho', '8 cm'), ('p', '40 cm'), ('nv', '1,5'), ('nl', '1,6'), ('N', '15/16'), ('f', '−120 cm'), ('q', '−30 cm'), ('g', '0,75')],
@@ -416,7 +416,7 @@ assert round(atraso_us(Fr(12, 10))[0], 2) == 3.75 and round(atraso_us(Fr(135, 10
 assert 29 * 3100 == 89900 and 90000 - 89900 == 100 and round(100 / 29, 1) == 3.4 and Fr(3000, 2) == 1500 and Fr(31034, 10) / 2 == Fr(15517, 10)
 Q.append(dict(
     id='d2-escada-fis-ita-opt-00c', materia='Física', tema=T, calc=0.52,
-    enunciado=('Uma fibra óptica reta de 3,0 km tem núcleo de vidro com índice de refração 1,50. A luz é guiada por reflexões totais na parede entre o núcleo e o revestimento. '
+    enunciado=('Uma fibra óptica reta de 3,0 km tem núcleo de vidro com índice de refração 1,50, envolvido por um revestimento (uma camada de fora, de outro material). A luz é guiada por reflexões totais na parede entre o núcleo e o revestimento. '
                'O engenheiro dispõe de revestimentos de quatro índices de refração, e escolhe o de maior índice que ainda permite guiar a luz. Raios que entram com ângulos diferentes fazem caminhos '
                'diferentes, e o pulso se alarga: o atraso é a diferença entre o tempo do raio mais lento (o que reflete rente ao limite da reflexão total) e o do raio que '
                'anda ao longo do eixo da fibra. A velocidade da luz no vácuo é 3,0 × 10⁸ m/s (1 µs = 10⁻⁶ s).\n\n'
@@ -433,30 +433,30 @@ Q.append(dict(
     ideia='Só há reflexão total se o revestimento tem índice menor que o do núcleo, então o de 1,50 não serve e o de 1,45 é o maior que serve. O raio mais lento anda L ÷ sen θL, e o atraso é a diferença para o tempo do raio axial.',
     pecas=[('Ângulo limite', 'O menor ângulo de incidência (medido da normal) em que a reflexão ainda é total: sen θL = n do revestimento ÷ n do núcleo.'),
            ('Raio axial', 'O que anda ao longo do eixo, em linha reta, sem bater na parede.')],
-    formulas=[('onda', 'Velocidade no núcleo', 'vn = c ÷ n do núcleo'), ('grafico', 'Seno do ângulo limite', 'sl = nr ÷ n do núcleo'), ('carro', 'Tempo', 't = caminho ÷ vn')],
+    formulas=[('onda', 'Velocidade no núcleo', 'vn = c ÷ n do núcleo'), ('grafico', 'Seno do ângulo limite', 'sli = nr ÷ n do núcleo'), ('carro', 'Tempo', 't = caminho ÷ vn')],
     desenho=('Veja a fibra: o núcleo de índice 1,50 entre dois revestimentos. O raio axial vai reto; o mais lento vai em zigue-zague, rente ao limite da reflexão total.', 'fibra-zigue-zague', []),
-    eq='at = tl − ta', leitura='atraso = tempo do raio mais lento − tempo do raio axial',
-    letras=[('at', 'atraso entre os dois raios, em µs (o que a questão quer)'), ('tl', 'tempo do raio mais lento, em µs'), ('ta', 'tempo do raio axial, em µs'),
-            ('nr', 'índice do revestimento escolhido'), ('vn', 'velocidade da luz no núcleo, em m/s'), ('sl', 'seno do ângulo limite'), ('Lc', 'caminho do raio mais lento, em m')],
-    eq_texto='O atraso é o tempo do raio mais lento menos o do raio axial.\nAgora é só achar nr, vn, ta, sl, Lc e tl.',
+    eq='atr = tle − tax', leitura='atraso = tempo do raio mais lento − tempo do raio axial',
+    letras=[('atr', 'atraso entre os dois raios, em µs (o que a questão quer)'), ('tle', 'tempo do raio mais lento, em µs'), ('tax', 'tempo do raio axial, em µs'),
+            ('nr', 'índice do revestimento escolhido'), ('vn', 'velocidade da luz no núcleo, em m/s'), ('sli', 'seno do ângulo limite'), ('Lc', 'caminho do raio mais lento, em m')],
+    eq_texto='O atraso é o tempo do raio mais lento menos o do raio axial.\nAgora é só achar nr, vn, tax, sli, Lc e tle.',
     achando=[('Achando nr: o revestimento escolhido',
               'Para guiar a luz, o revestimento precisa ter índice menor que o do núcleo, 1,50. O de 1,50 é igual: não há reflexão total.\nO maior que ainda serve é o de 1,45. nr = 1,45.',
               tabela('Revestimentos', ['Índice', 'Guia a luz?'], [['1,20', 'sim'], ['1,35', 'sim'], ['1,45', 'sim, o maior'], ['1,50', 'não']])),
              ('Achando vn: a velocidade no núcleo', 'vn = c ÷ n = (3,0 × 10⁸) ÷ 1,5. Como 3,0 ÷ 1,5 = 2,0, vn = 2,0 × 10⁸ m/s.'),
-             ('Achando ta: o tempo do raio axial',
-              '3,0 km = 3 000 m. ta = 3 000 ÷ (2,0 × 10⁸). Primeiro 3 000 ÷ 2 = 1 500; depois 1 500 ÷ 10⁸ = 0,000 015 s (a vírgula anda 8 casas para a esquerda).\n'
-              'Como 1 µs = 0,000 001 s, ta = 15 µs.'),
-             ('Achando sl: o seno do ângulo limite', 'sl = nr ÷ n do núcleo = 1,45 ÷ 1,50. Multiplico os dois por 100: 145 ÷ 150.\nDividindo por 5 em cima e embaixo: 145 ÷ 5 = 29 e 150 ÷ 5 = 30. sl = 29/30.'),
+             ('Achando tax: o tempo do raio axial',
+              '3,0 km = 3 000 m. tax = 3 000 ÷ (2,0 × 10⁸). Primeiro 3 000 ÷ 2 = 1 500; depois 1 500 ÷ 10⁸ = 0,000 015 s (a vírgula anda 8 casas para a esquerda).\n'
+              'Como 1 µs = 0,000 001 s, tax = 15 µs.'),
+             ('Achando sli: o seno do ângulo limite', 'sli = nr ÷ n do núcleo = 1,45 ÷ 1,50. Multiplico os dois por 100: 145 ÷ 150.\nDividindo por 5 em cima e embaixo: 145 ÷ 5 = 29 e 150 ÷ 5 = 30. sli = 29/30.'),
              ('Achando Lc: o caminho do raio lento',
-              'Para cada metro ao longo do eixo, o raio anda 1 ÷ sl metros (ângulo medido da normal).\nLc = 3 000 ÷ (29/30) = 3 000 · 30/29 = 90 000 ÷ 29.\n'
+              'Seno = avanço no eixo ÷ caminho do raio. Com sli = 29/30: a cada 30 m que o raio anda, só 29 m avançam no eixo. Para avançar 3 000 m, o caminho é maior que 3 000 m: caminho = avanço ÷ sli.\nLc = 3 000 ÷ (29/30) = 3 000 · 30/29 = 90 000 ÷ 29.\n'
               '29 · 3 100 = 89 900 e sobram 100; 100 ÷ 29 ≈ 3,4. Lc ≈ 3 103,4 m.',
               {'tipo': 'diagrama', 'nome': 'fibra-zigue-zague', 'rotulos': ['', '', '', '', '', 'revestimento escolhido: 1,45', 'caminho do raio lento: 3 103,4 m']}),
-             ('Achando tl: o tempo do raio lento', 'tl = Lc ÷ vn = 3 103,4 ÷ (2,0 × 10⁸). Primeiro 3 103,4 ÷ 2 = 1 551,7; depois ÷ 10⁸: 0,000 015 517 s.\nEm µs: tl = 15,517 µs.')],
-    volta='at = tl − ta = 15,517 − 15 = 0,517, que arredondado dá 0,52 µs.\nResposta: alternativa X. Conferindo: o raio lento anda 3 103,4 − 3 000 = 103,4 m a mais, e 103,4 ÷ (2,0 × 10⁸) ≈ 0,517 µs.',
-    valores=[('nr', '1,45'), ('vn', '2,0 × 10⁸ m/s'), ('ta', '15 µs'), ('sl', '29/30'), ('Lc', '3 103,4 m'), ('tl', '15,517 µs')],
+             ('Achando tle: o tempo do raio lento', 'tle = Lc ÷ vn = 3 103,4 ÷ (2,0 × 10⁸). Primeiro 3 103,4 ÷ 2 = 1 551,7; depois ÷ 10⁸: 0,000 015 517 s.\nEm µs: tle = 15,517 µs.')],
+    volta='atr = tle − tax = 15,517 − 15 = 0,517, que arredondado dá 0,52 µs.\nResposta: alternativa X. Conferindo: o raio lento anda 3 103,4 − 3 000 = 103,4 m a mais, e 103,4 ÷ (2,0 × 10⁸): 103,4 ÷ 2 = 51,7 e 51,7 ÷ 10⁸ = 0,000 000 517 s = 0,517 µs (1 µs = 0,000 001 s).',
+    valores=[('nr', '1,45'), ('vn', '2,0 × 10⁸ m/s'), ('tax', '15 µs'), ('sli', '29/30'), ('Lc', '3 103,4 m'), ('tle', '15,517 µs')],
     pista='"fibra", "raio mais lento" e "revestimento" → só guia índice menor que o do núcleo; o raio no ângulo limite anda L ÷ sen θL; o atraso é a diferença para o tempo do raio axial.',
-    rec1='3,0 km; núcleo 1,50; revestimentos 1,20 a 1,50; c = 3,0 × 10⁸', rec3='nr = 1,45; vn = 2,0 × 10⁸; ta = 15; sl = 29/30; Lc = 3 103,4; tl = 15,517',
-    checagem=('Núcleo de 1,60 e revestimento de 1,20. Quanto vale o seno do ângulo limite?', ['0,75', '1,33', '0,4', '1,92'], '0,75', 'sen θL = 1,20 ÷ 1,60 = 0,75.'),
+    rec1='3,0 km; núcleo 1,50; revestimentos 1,20 a 1,50; c = 3,0 × 10⁸', rec3='nr = 1,45; vn = 2,0 × 10⁸; tax = 15; sli = 29/30; Lc = 3 103,4; tle = 15,517',
+    checagem=('Núcleo de 1,80 e revestimento de 1,20. Quanto vale o seno do ângulo limite?', ['0,67', '1,5', '0,6', '2,16'], '0,67', 'sen θL = 1,20 ÷ 1,80 = 12 ÷ 18 = 2/3, cerca de 0,67.'),
     ancora=('forte · ITA 2020 2ª fase q.9 (fibra de 3 km, raio guiado por reflexões totais: o caminho é L ÷ sen θL e o tempo, L · n² ÷ (c · n do revestimento)) '
             'e Fuvest 2025 1ª fase q.22 (tabela de índices: há reflexão total só se n1 > n2)'),
     canal='fora do canal: reflexão total e ângulo limite (0 hits); v = c/n em fis-08-optica-espelhos-esfericos-lentes-e-refra.txt [8:14:31]',
@@ -527,7 +527,7 @@ Q.append(dict(
                'do corredor, mas o motor só deixa o feixe inclinar até 45° para cada lado do eixo comprido. Quantas direções diferentes de disparo levam o feixe até o sensor?'),
     dados=[('Corredor', '12 m por 3 m, duas paredes compridas espelhadas'), ('Laser', 'numa ponta, a 1 m do espelho de baixo'), ('Sensor', 'na outra ponta, a 2 m do mesmo espelho'),
            ('Inclinação do feixe', 'até 45° para cada lado do eixo')],
-    alts=[('4', 4, 'Contou só as direções com número par de reflexões (a imagem do alvo sem inverter) e esqueceu o alvo refletido no espelho'),
+    alts=[('4', 4, 'Contou só as direções com número par de reflexões (a imagem de reflexões pares) e esqueceu o alvo refletido no espelho'),
           ('5', 5, 'Contou um caminho para cada número de reflexões, de 0 a 4, sem ver que cada número aparece 2 vezes (subindo e descendo), menos o 0'),
           ('7', 7, 'Não contou o raio direto, sem reflexão, que também chega ao sensor'),
           ('8', 8, 'OK'),
@@ -536,26 +536,26 @@ Q.append(dict(
     ideia='Desdobre o corredor: cada direção de tiro é uma reta até uma imagem do sensor, com y = 2 + 6j (reflexões pares) ou y = −2 + 6j (ímpares). O limite de 45° corta a lista, e é só contar as imagens que cabem.',
     pecas=[('Imagem do sensor', 'Cada cópia desdobrada do sensor. A reta do laser até ela é um caminho possível do feixe.'),
            ('Limite de 45°', 'A inclinação da reta (y final − 1) ÷ 12 não pode passar de 1, nem de −1.')],
-    formulas=[('grafico', 'Inclinação', '(y − 1) ÷ 12'), ('contagem', 'Alvos desdobrados', 'y = 2 + 6j e y = −2 + 6j'), ('contagem', 'Total', 'n = a + b')],
+    formulas=[('grafico', 'Inclinação', '(y − 1) ÷ 12'), ('contagem', 'Alvos desdobrados', 'y = 2 + 6j e y = −2 + 6j'), ('contagem', 'Total', 'n = par + imp')],
     desenho=('Veja o corredor visto de cima: o laser numa ponta, o sensor na outra e espelhos nas duas paredes compridas.', 'corredor-imagens', []),
-    eq='n = a + b', leitura='direções = imagens com número par de reflexões + imagens com número ímpar',
-    letras=[('n', 'número de direções de disparo (o que a questão quer)'), ('a', 'imagens do sensor sem inverter, y = 2 + 6j, dentro do limite'),
-            ('b', 'imagens do sensor invertido, y = −2 + 6j, dentro do limite'), ('lo', 'menor y permitido pelo limite de 45°, em m'), ('hi', 'maior y permitido pelo limite de 45°, em m')],
-    eq_texto='Cada direção que acerta o sensor aponta para uma imagem dele. O total é a soma das imagens de reflexões pares e de ímpares.\nAgora é só achar lo, hi, a e b.',
-    achando=[('Achando lo: o menor y', 'Posição no desenho desdobrado: x vai de 0 a 12 e y parte de 1. A inclinação é (y − 1) ÷ 12.\nPara 45° para baixo a inclinação é −1: y − 1 = −12, então lo = 1 − 12 = −11.'),
-             ('Achando hi: o maior y', 'Para 45° para cima a inclinação é 1: y − 1 = 12, então hi = 1 + 12 = 13.\nSó contam as imagens do sensor com y de −11 a 13.'),
-             ('Achando a: as imagens sem inverter',
-              'Passar o alvo pelos dois espelhos, um depois do outro, o desloca 2 · 3 = 6 m. Assim o sensor aparece em y = 2 + 6j, com j inteiro.\n'
-              'j = −3: −16 (fora). j = −2: −10, j = −1: −4, j = 0: 2, j = 1: 8 (dentro). j = 2: 14 (fora). a = 4.'),
-             ('Achando b: as imagens invertidas',
+    eq='n = par + imp', leitura='direções = imagens com número par de reflexões + imagens com número ímpar',
+    letras=[('n', 'número de direções de disparo (o que a questão quer)'), ('par', 'imagens do sensor depois de um número par de reflexões, y = 2 + 6j, dentro do limite'),
+            ('imp', 'imagens do sensor depois de um número ímpar de reflexões, y = −2 + 6j, dentro do limite'), ('lo', 'menor y permitido pelo limite de 45°, em m'), ('hi', 'maior y permitido pelo limite de 45°, em m')],
+    eq_texto='Cada direção que acerta o sensor aponta para uma imagem dele. O total é a soma das imagens de reflexões pares e de ímpares.\nAgora é só achar lo, hi, par e imp.',
+    achando=[('Achando lo: o menor y', 'Posição no desenho desdobrado: x vai de 0 a 12 e y parte de 1. Inclinação é quanto y muda a cada 1 m de x: (y − 1) ÷ 12.\nA 45° o raio anda 1 m para o lado e 1 m para baixo (lados iguais, como a diagonal de um quadrado): inclinação −1. Então y − 1 = −12 e lo = 1 − 12 = −11.'),
+             ('Achando hi: o maior y', 'A 45° para cima, 1 m de subida a cada 1 m de x: inclinação 1, y − 1 = 12 e hi = 1 + 12 = 13.\nSó contam as imagens do sensor com y de −11 a 13.'),
+             ('Achando par: as imagens de reflexões pares',
+              'Reflexão é cada batida do raio num espelho. Cada espelho joga o sensor para o outro lado dele: pelo espelho de baixo (y = 0), y = 2 vira −2; depois pelo de cima (y = 3), −2 vira 3 + 5 = 8. Passando pelos dois, o sensor subiu de 2 para 8: 6 m = 2 · 3. Repetindo, o sensor aparece em y = 2 + 6j, com j inteiro.\n'
+              'j = −3: −16 (fora). j = −2: −10, j = −1: −4, j = 0: 2, j = 1: 8 (dentro). j = 2: 14 (fora). par = 4.'),
+             ('Achando imp: as imagens de reflexões ímpares',
               'Refletido no espelho de baixo (y = 0), o sensor vai para y = −2, e repete a cada 6: y = −2 + 6j.\n'
-              'j = −2: −14 (fora). j = −1: −8, j = 0: −2, j = 1: 4, j = 2: 10 (dentro). j = 3: 16 (fora). b = 4.',
+              'j = −2: −14 (fora). j = −1: −8, j = 0: −2, j = 1: 4, j = 2: 10 (dentro). j = 3: 16 (fora). imp = 4.',
               {'tipo': 'diagrama', 'nome': 'corredor-imagens', 'rotulos': ['', '', '', '', '', 'corredor desdobrado: uma reta por imagem', 'cheias: dentro do cone de 45° · vazias: fora']})],
-    volta=('n = a + b = 4 + 4 = 8.\nResposta: alternativa X. Conferindo: as 8 retas cruzam 0, 1, 1, 2, 2, 3, 3 e 4 linhas de espelho (y = 3, 6, 9 ou y = 0, −3, −6, −9), '
-           'e simulei o raio nas 8 direções: todas acertam o sensor.'),
-    valores=[('lo', '−11'), ('hi', '13'), ('a', '4'), ('b', '4')],
+    volta=('n = par + imp = 4 + 4 = 8.\nResposta: alternativa X. Conferindo: cada reta até uma imagem cruza as linhas de espelho (y = 0, 3, 6, 9... e −3, −6, −9) que ficam entre y = 1 e a imagem, e cada cruzamento é uma batida. '
+           'Imagem y = 2: 0 batidas (raio direto). y = 4: 1 (a linha y = 3). y = −10: 4 (y = 0, −3, −6, −9). As 8 retas dão 0, 1, 1, 2, 2, 3, 3 e 4 batidas.'),
+    valores=[('lo', '−11'), ('hi', '13'), ('par', '4'), ('imp', '4')],
     pista='"raio que quica entre espelhos" e "quantas direções" → desdobre: cada direção é uma reta até uma imagem do alvo; liste as imagens (duas famílias), corte pelo limite de inclinação e conte.',
-    rec1='corredor 12 por 3; laser a 1 m; sensor a 2 m; até 45°', rec3='lo = −11; hi = 13; a = 4; b = 4',
+    rec1='corredor 12 por 3; laser a 1 m; sensor a 2 m; até 45°', rec3='lo = −11; hi = 13; par = 4; imp = 4',
     checagem=('Espelho na linha y = 0 e alvo em y = 5. Qual o y da imagem do alvo nesse espelho?', ['−5', '5', '0', '−10'], '−5', 'A imagem fica do outro lado, à mesma distância: o y troca de sinal, y = −5.'),
     ancora=('sem · técnica: desdobramento do espelho e imagens do alvo (método das imagens, como no bilhar das olimpíadas); a mais próxima é Fuvest 2021 2ª fase F04 '
             '(método das imagens com espelho plano); HMMT 2020 a 2024 não tem luz que quica'),
@@ -563,6 +563,12 @@ Q.append(dict(
     antes=['opt-espelho-desdobrado', 'opt-contar-no-intervalo', 'opt-ponto-vezes'],
 ))
 
+# contas das correções do aluno-do-zero (24/11)
+assert Fr(1, 10) - Fr(1, 7) * 0 == Fr(1, 10) and 1 / (Fr(1, 10) - 1 / Fr(15, 2)) == -30 and Fr(30) / Fr(15, 2) == 4 and Fr(1, 5) == Fr(4, 20)
+assert Fr(517, 10**9) * 10**6 == Fr(517, 1000) and Fr(1034, 10) / 2 == Fr(517, 10) and Fr(12, 18) == Fr(2, 3) and round(1.2 / 1.8, 2) == 0.67 and 1.8 * 1.2 == 2.16
+assert 2 * 3 - (-2) == 8 and 2 * 3 * 1 + 2 == 8 and 8 - 2 == 6 == 2 * 3 and 1 - 12 == -11 and 1 + 12 == 13
+assert [y for y in (2, 4, -2, 8, -4, 10, -8, -10) if reflexoes(Fr(y)) == 0] == [2] and reflexoes(Fr(4)) == 1 and reflexoes(Fr(-10)) == 4
+assert Fr(-1, 120) - Fr(3, 120) == Fr(-4, 120) == Fr(-1, 30) and Fr(15, 16) - 1 == Fr(-1, 16)
 for _q in Q:
     assert all(len(v) <= 60 for _, v in _q['dados']), _q['id']
     assert all(len(f[1]) <= 30 and len(f[2]) <= 60 for f in _q['formulas']), _q['id']
