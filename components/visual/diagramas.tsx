@@ -9,6 +9,9 @@ import type { NomeDiagrama } from '@/lib/visual/especificacao';
 import { AGUA, CHAO, CORTE, LIMPO, PAPEL, ROBO, SECO, SUJO, TINTA, Texto, r, type Props } from './diagramas-base';
 import { DESENHOS_PARECIDAS } from './diagramas-parecidas';
 import { DESENHOS_NIVEL_ACIMA } from './diagramas-nivel-acima';
+import { DESENHOS_ACIMA_FISICA_A } from './diagramas-acima-fisica-a';
+import { DESENHOS_ACIMA_FISICA_B } from './diagramas-acima-fisica-b';
+import { DESENHOS_ACIMA_MATEMATICA } from './diagramas-acima-matematica';
 
 // O robô dá a volta encostado nas paredes e depois varre o meio em faixas da largura dele:
 // o rastro limpo cobre tudo, menos as 4 pontinhas. Sem a volta, sobravam dentes nas laterais.
@@ -148,12 +151,13 @@ function RetanguloDiagonal({ rotulos }: Props) {
   );
 }
 
-const DESENHOS: Record<NomeDiagrama, (p: Props) => JSX.Element> = {
+const DESENHOS = {
   'sala-quadrada': SalaQuadrada, 'robo-limpando': RoboLimpando, 'canto-zoom': CantoZoom,
   'robo-quatro-fatias': RoboQuatroFatias, 'canto-raio': CantoRaio,
   'circulo-no-quadrado': CirculoNoQuadrado, 'retangulo-diagonal': RetanguloDiagonal,
   ...DESENHOS_PARECIDAS, ...DESENHOS_NIVEL_ACIMA,
-};
+  ...DESENHOS_ACIMA_FISICA_A, ...DESENHOS_ACIMA_FISICA_B, ...DESENHOS_ACIMA_MATEMATICA,
+} as unknown as Record<NomeDiagrama, (p: Props) => JSX.Element>;
 
 export function Diagrama({ nome, rotulos }: { nome: NomeDiagrama; rotulos?: string[] }) {
   const Desenho = DESENHOS[nome];

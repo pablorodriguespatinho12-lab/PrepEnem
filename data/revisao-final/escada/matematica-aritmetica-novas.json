@@ -5,40 +5,44 @@
   "tema": "Aritmética e Porcentagem",
   "nivel": "acima",
   "origem": "Escada",
-  "ancora": "forte · Fuvest 2025 q.33 (medicamento: custo por componente com variação percentual de cada um, em tabela)",
-  "canal": "mat-04-porcentagem.txt [2:12:32] (fator 1,2 e 0,8)",
-  "enunciado": "Uma cooperativa produz suco em garrafas. No mês passado, o custo de produção de cada garrafa se dividia assim: 60% em matéria-prima (as frutas), 25% em embalagem e 15% em outros gastos (energia e transporte). Neste mês, o preço das frutas subiu 20%, o preço da embalagem caiu 10% e os outros gastos subiram 40%. A gerente quer saber em quantos por cento o custo total de uma garrafa mudou em relação ao mês passado, para decidir se o preço de venda precisa subir. Os gastos com energia e transporte entram em \"outros\". A variação do custo total, em %, foi um aumento de:\n\nDados: Frutas: 60% do custo; subiu 20%; Embalagem: 25% do custo; caiu 10%; Outros gastos: 15% do custo; subiu 40%.",
-  "A": "16,7",
-  "B": "15,5",
-  "C": "20,5",
-  "D": "50",
-  "E": "70",
-  "resposta": "B",
+  "ancora": "forte · Fuvest 2024 1ª fase q.33, prova V (custo por componente em mg e R$/g, com a variação percentual de cada um em 2ª tabela)",
+  "canal": "mat-04-porcentagem.txt [2:12:32] (fator 1,2 e 0,8; cada variação multiplica a sua parte)",
+  "enunciado": "Uma farmácia de manipulação produz um suplemento em cápsulas, com três componentes. A tabela I mostra a massa de cada componente em uma cápsula e o preço de cada grama dele. A tabela II mostra como esses preços mudam no próximo mês. O ferro passará a ser comprado de dois fornecedores: o antigo, que mantém o preço, e um novo, que cobra 50% a mais por grama do que o antigo e fornecerá 40% de todo o ferro comprado. Os outros custos de produção não mudam.\n\nTabela I | Massa por cápsula | Preço por grama\nCálcio | 200 mg | R$ 600\nZinco | 150 mg | R$ 400\nFerro | 50 mg | R$ 2 000\n\nTabela II | Variação do preço por grama\nCálcio | aumenta 10%\nZinco | diminui 20%\nFerro | antigo fornecedor: 0%; novo fornecedor: aumenta 50% (60% do ferro vem do antigo e 40% do novo)\n\nCada frasco leva 30 cápsulas. Qual será o aumento, em reais, no custo dos componentes de um frasco?\n\nDados: Cálcio: 200 mg; R$ 600/g; sobe 10%; Zinco: 150 mg; R$ 400/g; cai 20%; Ferro: 50 mg; R$ 2 000/g; 40% sobe 50%; Frasco: 30 cápsulas.",
+  "A": "0",
+  "B": "20",
+  "C": "1 500",
+  "D": "600",
+  "E": "600 000",
+  "resposta": "D",
   "explicacao": {
-   "conferencia": "M = 0,6 · 1,2 = 0,72; E = 0,25 · 0,9 = 0,225; O = 0,15 · 1,4 = 0,21; custo novo = 1,155 do antigo, então V = 0,155 = 15,5%. Resposta: alternativa B. Erros: Alternativa A = Fez a média simples de 20, −10 e 40 (50 ÷ 3), sem pesar pela fatia de cada gasto; Alternativa C = Somou o 10% da embalagem em vez de tirar (12 + 2,5 + 6); Alternativa D = Somou 20 − 10 + 40, sem considerar a fatia de cada gasto; Alternativa E = Somou os três reajustes sem sinal: 20 + 10 + 40.",
-   "ideia": "Cada gasto muda do seu jeito e pesa uma fatia diferente do custo. Calcule quanto cada fatia vale hoje, some, e compare com o custo de antes (que vale 1).",
+   "conferencia": "Custo por cápsula: cálcio 0,2 · 600 = 120; zinco 0,15 · 400 = 60; ferro 0,05 · 2 000 = 100. Variações: +12; −12; ferro 40% de 100 = 40 e 50% de 40 = +20. Soma +20 por cápsula; frasco: 30 · 20 = 600. Resposta: alternativa D. Erros: Alternativa A = Esqueceu o novo fornecedor do ferro: +12 − 12 = 0; Alternativa B = Deu o aumento de uma cápsula, não o do frasco de 30; Alternativa C = Pôs os 50% em todo o ferro (+50 por cápsula): (12 − 12 + 50) · 30; Alternativa E = Não passou mg para g: usou 200, 150 e 50 no lugar de 0,2, 0,15 e 0,05.",
+   "ideia": "Cada componente custa massa em gramas vezes o preço do grama, e a variação é uma % desse custo. No ferro, o aumento de 50% vale só para os 40% comprados do novo fornecedor: o efeito é 40% de 50% = 20% do custo do ferro.",
    "pecas": [
     {
-     "termo": "Variação percentual",
-     "significado": "Quanto o valor mudou, em % do valor de antes: (novo − antigo) ÷ antigo."
+     "termo": "Mg e g",
+     "significado": "O preço é por grama e a massa vem em miligramas. 1 g tem 1 000 mg."
+    },
+    {
+     "termo": "Aumento só de uma parte",
+     "significado": "Os 50% valem só para 40% do ferro; os outros 60% seguem com o preço antigo."
     }
    ],
    "passos": [
     {
      "titulo": "As fórmulas desta questão",
-     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela. O p é o número da porcentagem (em 20%, p = 20). O ponto · significa vezes.",
+     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela. O ponto · significa vezes.",
      "visual": {
       "tipo": "formulas",
       "itens": [
        {
         "figura": "porcentagem",
-        "nome": "Subir p%",
-        "formula": "novo = antigo · (1 + p ÷ 100)"
+        "nome": "Custo do componente",
+        "formula": "custo = gramas · preço por grama"
        },
        {
         "figura": "porcentagem",
-        "nome": "Cair p%",
-        "formula": "novo = antigo · (1 − p ÷ 100)"
+        "nome": "Parte de um total",
+        "formula": "parte = total · porcentagem ÷ 100"
        }
       ]
      }
@@ -55,70 +59,82 @@
       ],
       "linhas": [
        [
-        "Frutas",
-        "60% do custo; subiu 20%"
+        "Cálcio",
+        "200 mg; R$ 600/g; sobe 10%"
        ],
        [
-        "Embalagem",
-        "25% do custo; caiu 10%"
+        "Zinco",
+        "150 mg; R$ 400/g; cai 20%"
        ],
        [
-        "Outros gastos",
-        "15% do custo; subiu 40%"
+        "Ferro",
+        "50 mg; R$ 2 000/g; 40% sobe 50%"
+       ],
+       [
+        "Frasco",
+        "30 cápsulas"
        ]
       ]
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "Porcentagem é 'em cada 100': 60% = 60 ÷ 100 = 0,6. Subir 20% é multiplicar por 1 + 0,2 = 1,2: um preço de 100 passa a 120. Cair 10% é multiplicar por 1 − 0,1 = 0,9: 100 passa a 90. O custo do mês passado vale 1 (100%). O ponto · significa vezes."
+     "titulo": "De onde vem cada fórmula (1 de 2)",
+     "texto": "O aumento vale só para uma parte. Exemplo com R$ 200 de ferro: 40% de 200 = 80 passam a vir do novo fornecedor, com 50% a mais: 80 + 40 = 120. Os outros 120 ficam iguais. O total vira 120 + 120 = 240: subiu 40, que são 20% de 200."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 2)",
+     "texto": "Isso é 40% de 50%: 0,4 · 0,5 = 0,2 = 20%. O custo do ferro, no todo, sobe 20%, e não 50%."
     },
     {
      "titulo": "A equação em letras",
-     "texto": "O custo antigo vale 1. Cada gasto, hoje, vale a fatia antiga vezes o reajuste. Somando as três fatias de hoje e tirando 1, sai a variação. Por que − 1? O custo de antes vale 1: se hoje vale 1,155, subiu 1,155 − 1 = 0,155. Exemplo: de 100 para 120, a variação é 120 − 100 = 20, ou 0,20 de 100.",
+     "texto": "O aumento do frasco é o de uma cápsula vezes 30. Em uma cápsula, somo as variações dos três componentes; uma queda entra com sinal de menos.\nAgora é só achar N, P, W e X.",
      "visual": {
       "tipo": "equacao",
-      "formula": "V = M + E + O − 1",
-      "leitura": "variação = (fatias de hoje somadas) − 1",
+      "formula": "S = N · (P + W + X)",
+      "leitura": "aumento do frasco = cápsulas por frasco · (variação do cálcio + do zinco + do ferro, por cápsula)",
       "letras": [
        {
-        "letra": "V",
-        "oque": "variação do custo, em fração (o que a questão quer)"
+        "letra": "S",
+        "oque": "aumento do custo de um frasco, em R$ (o que a questão quer)"
        },
        {
-        "letra": "M",
-        "oque": "matéria-prima (as frutas): quanto pesam hoje, em fração do custo antigo"
+        "letra": "N",
+        "oque": "cápsulas por frasco"
        },
        {
-        "letra": "E",
-        "oque": "quanto a embalagem pesa hoje"
+        "letra": "P",
+        "oque": "variação do custo do cálcio por cápsula, em R$"
        },
        {
-        "letra": "O",
-        "oque": "quanto os outros gastos pesam hoje"
+        "letra": "W",
+        "oque": "variação do custo do zinco por cápsula, em R$ (negativa se o custo cai)"
+       },
+       {
+        "letra": "X",
+        "oque": "variação do custo do ferro por cápsula, em R$"
        }
       ]
      }
     },
     {
-     "titulo": "A equação em letras (2 de 2)",
-     "texto": "Agora é só achar M, E e O."
+     "titulo": "Achando N: as cápsulas do frasco",
+     "texto": "O enunciado diz: N = 30."
     },
     {
-     "titulo": "Achando M: as frutas hoje",
-     "texto": "Frutas eram 60% = 0,6 do custo. Subir 20% é multiplicar por 1,2.\nM = 0,6 · 1,2. Tire as vírgulas: 6 · 12 = 72. Em 0,6 há 1 número depois da vírgula e em 1,2 há mais 1: são 2 ao todo. Ponha a vírgula com 2 números depois dela: M = 0,72."
+     "titulo": "Achando P: a variação do cálcio",
+     "texto": "200 mg em gramas: 200 ÷ 1 000 = 0,2 g. Custo: 0,2 · 600 = 120 (2 · 600 = 1 200; 0,2 tem 1 casa, então 1 200 ÷ 10 = 120).\nSobe 10%: 10% de 120 = 120 ÷ 10 = 12. P = +12."
     },
     {
-     "titulo": "Achando E: a embalagem hoje",
-     "texto": "Embalagem era 25% = 0,25. Cair 10% é multiplicar por 0,9.\nE = 0,25 · 0,9. Sem vírgulas: 25 · 9 = 225. Depois das vírgulas há 2 + 1 = 3 números: E = 0,225."
+     "titulo": "Achando W: a variação do zinco",
+     "texto": "150 mg = 0,15 g. Custo: 0,15 · 400 = 60 (15 · 400 = 6 000; 0,15 tem 2 casas, então 6 000 ÷ 100 = 60).\nCai 20%: 10% de 60 = 6 e 20% = 12. Como é queda, W = −12."
     },
     {
-     "titulo": "Achando O: os outros gastos hoje",
-     "texto": "Outros eram 15% = 0,15. Subir 40% é multiplicar por 1,4.\nO = 0,15 · 1,4. Sem vírgulas: 15 · 14 = 210. Depois das vírgulas há 2 + 1 = 3 números: O = 0,210 = 0,21."
+     "titulo": "Achando X: a variação do ferro",
+     "texto": "50 mg = 0,05 g. Custo: 0,05 · 2 000 = 100 (5 · 2 000 = 10 000, e ÷ 100 = 100).\nSó 40% do ferro vem do novo fornecedor: 40% de 100 = 40. Essa parte custa 50% a mais: 50% de 40 = 20. X = +20."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "M + E + O: 0,72 + 0,225 = 0,945 (0,720 + 0,225) e 0,945 + 0,21 = 1,155 (0,945 + 0,210). O custo de hoje é 1,155 do de antes.\nV = 1,155 − 1 = 0,155. 0,155 é 155 em cada 1 000; vezes 100 dá 15,5%. Para passar fração em % basta multiplicar por 100 (0,6 → 60%).\nResposta: alternativa B.",
+     "texto": "S = 30 · (12 − 12 + 20). Dentro do parêntese: 12 − 12 = 0 e 0 + 20 = 20.\nS = 30 · 20 = 600 (3 · 2 = 6 e dois zeros).\nResposta: alternativa D.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -128,23 +144,27 @@
       ],
       "linhas": [
        [
-        "M",
-        "0,72"
+        "N",
+        "30"
        ],
        [
-        "E",
-        "0,225"
+        "P",
+        "+12"
        ],
        [
-        "O",
-        "0,21"
+        "W",
+        "−12"
+       ],
+       [
+        "X",
+        "+20"
        ]
       ]
      }
     },
     {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: \"várias partes do custo com reajustes diferentes\" → multiplique cada fatia pelo seu reajuste, some e compare com 1; não faça média simples dos reajustes.",
+     "texto": "Pista: \"preço em R$/g e massa em mg, reajuste de cada parte\" → passe mg para g, ache o custo de cada componente, aplique a % só na parte que muda, some e multiplique pelo lote.",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -155,30 +175,30 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "60% sobe 20%, 25% cai 10%, 15% sobe 40%"
+        "3 componentes em mg e R$/g; ferro: 40% sobe 50%; 30 cápsulas"
        ],
        [
         "2. Equação em letras",
-        "V = M + E + O − 1"
+        "S = N · (P + W + X)"
        ],
        [
         "3. Uma letra por vez",
-        "M = 0,72; E = 0,225; O = 0,21"
+        "N = 30; P = +12; W = −12; X = +20"
        ]
       ]
      }
     }
    ],
    "checagem": {
-    "pergunta": "Um custo se divide em 50% A e 50% B. A sobe 10% e B cai 10%. Qual a variação do custo total?",
+    "pergunta": "Uma cápsula tem 20 mg de um pó a R$ 500 por g. Em um lote de 10 cápsulas, o preço do g sobe 10%. Qual o aumento no custo do pó do lote?",
     "opcoes": [
-     "0%",
-     "10%",
-     "1%",
-     "−1%"
+     "R$ 10",
+     "R$ 1",
+     "R$ 100",
+     "R$ 10 000"
     ],
-    "certa": "0%",
-    "resposta": "0,5 · 1,1 = 0,55 e 0,5 · 0,9 = 0,45; 0,55 + 0,45 = 1, então não mudou."
+    "certa": "R$ 10",
+    "resposta": "20 mg = 0,02 g; 0,02 · 500 = 10 por cápsula; 10% de 10 = 1; 10 cápsulas: R$ 10."
    },
    "seuErro": null
   }
@@ -189,40 +209,40 @@
   "tema": "Aritmética e Porcentagem",
   "nivel": "acima",
   "origem": "Escada",
-  "ancora": "sem · não há real de mistura ou diluição no repositório (técnica clássica de ITA)",
-  "canal": "fora do canal: mistura e diluição; porcentagem em mat-04-porcentagem.txt [2:06:00]",
-  "enunciado": "Um tanque tem 40 L de uma mistura de água e álcool, com 32% de álcool. Retiram-se 10 L da mistura, que são jogados fora, e o tanque é completado com 10 L de água pura, mexendo bem. A operação é repetida uma segunda vez, do mesmo jeito. Qual é, em %, a porcentagem de álcool na mistura final?\n\nDados: Volume do tanque: 40 L; Álcool no início: 32%; Cada troca: sai 10 L, entra 10 L de água; Trocas: 2.",
-  "A": "8",
-  "B": "16",
-  "C": "24",
-  "D": "18",
-  "E": "25",
-  "resposta": "D",
+  "ancora": "parcial · IME 2022 2ª fase q.1 (texto seco em que a ideia escondida vale mais que a conta; aqui, o fator por troca); não há real de diluição no repositório",
+  "canal": "mat-04-porcentagem.txt [2:09:00] (cada variação percentual é um fator que se multiplica, 1,2 e 0,8); mistura e diluição: fora do canal",
+  "enunciado": "Um tanque de 40 L contém uma mistura de álcool e água com 80% de álcool. Em cada operação, retiram-se 10 L da mistura, bem mexida, e o tanque é completado com 10 L de água pura. A operação se repete até que o álcool passe a ser 10% ou menos do volume da mistura. Qual é o menor número de operações necessário?\n\nDados: Tanque: 40 L, sempre cheio; Álcool no início: 80%; Cada operação: sai 10 L e entra 10 L de água; Parar quando: álcool for 10% ou menos.",
+  "A": "4",
+  "B": "6",
+  "C": "7",
+  "D": "10",
+  "E": "8",
+  "resposta": "E",
   "explicacao": {
-   "conferencia": "Álcool: 0,32 · 40 = 12,8 L; 1ª troca: 12,8 · 0,75 = 9,6 L; 2ª troca: 9,6 · 0,75 = 7,2 L. P = 7,2 ÷ 40 · 100 = 18%. Resposta: alternativa D. Erros: Alternativa A = Deu a quantidade que sai de álcool a cada troca em pontos (25% de 32); Alternativa B = Tirou 8 pontos duas vezes (32 − 8 − 8), sem ver que a segunda troca tira menos álcool; Alternativa C = Fez só uma troca (32 · 0,75); Alternativa E = Deu a fração que sai da mistura (10 ÷ 40), não a porcentagem de álcool.",
-   "ideia": "Cada troca leva embora 1/4 da mistura e, junto, 1/4 do álcool que estava nela. Como a água que entra não tem álcool, sobra 3/4 do álcool a cada troca.",
+   "conferencia": "Cada operação deixa 3/4 do álcool: 80 → 60 → 45 → 33,75 → 25,31 → 18,98 → 14,24 → 10,68 (7ª, ainda mais de 10%) → 8,01 (8ª). N = 8. Resposta: alternativa E. Erros: Alternativa A = Tirou 20 pontos (25% de 80) em toda operação: 70 ÷ 20 = 3,5, arredondado para 4; Alternativa B = Achou que a mistura tinha 30 L (sem contar o tanque cheio de 40 L) e que sai 1/3 do álcool: fator 2/3, chega a 10% na 6ª; Alternativa C = Parou na 7ª, com 10,68%, achando que é \"quase 10\"; Alternativa D = Juntou 10 L de água a 40 L sem retirar nada (fator 40 ÷ 50 = 0,8): só chega a 10% ou menos na 10ª.",
+   "ideia": "Cada operação tira 1/4 da mistura e, junto, 1/4 do álcool; a água que entra não tem álcool. Então a % de álcool é multiplicada por 0,75 a cada vez, e não diminui sempre os mesmos pontos.",
    "pecas": [
     {
-     "termo": "Mistura",
-     "significado": "Água e álcool misturados por igual: o que sai tem a mesma porcentagem de álcool do tanque."
+     "termo": "Mistura bem mexida",
+     "significado": "O que sai tem a mesma % de álcool do tanque. Por isso sai 1/4 do álcool quando sai 1/4 da mistura."
     }
    ],
    "passos": [
     {
      "titulo": "As fórmulas desta questão",
-     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela. O p é o número da porcentagem (em 20%, p = 20). O ponto · significa vezes.",
+     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. O 0,75 e o 1/4 nascem no passo \"Achando F\"; por enquanto, só o nome. O ponto · significa vezes.",
      "visual": {
       "tipo": "formulas",
       "itens": [
        {
         "figura": "porcentagem",
-        "nome": "Parte de um total",
-        "formula": "parte = total · p ÷ 100"
+        "nome": "Ficar com 3/4",
+        "formula": "sobra = antes · 0,75"
        },
        {
         "figura": "porcentagem",
-        "nome": "Porcentagem",
-        "formula": "p% = parte ÷ total · 100"
+        "nome": "Fração que sai",
+        "formula": "10 L ÷ 40 L = 1/4"
        }
       ]
      }
@@ -239,66 +259,62 @@
       ],
       "linhas": [
        [
-        "Volume do tanque",
-        "40 L"
+        "Tanque",
+        "40 L, sempre cheio"
        ],
        [
         "Álcool no início",
-        "32%"
+        "80%"
        ],
        [
-        "Cada troca",
-        "sai 10 L, entra 10 L de água"
+        "Cada operação",
+        "sai 10 L e entra 10 L de água"
        ],
        [
-        "Trocas",
-        "2"
+        "Parar quando",
+        "álcool for 10% ou menos"
        ]
       ]
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "32% de 40 L: 32 ÷ 100 = 0,32 e 0,32 · 40 = 12,8 L de álcool. 10 L de 40 L: 10 ÷ 40 = 0,25. Lê-se 'um quarto' (1/4): 4 partes iguais, tira 1. Sobram 3 partes de 4, 3/4 = 3 ÷ 4 = 0,75. Dividir por 4 é o mesmo que pegar 1/4: 12,8 ÷ 4 = 3,2."
-    },
-    {
-     "titulo": "De onde vem cada fórmula (2 de 2)",
-     "texto": "Os 40 L têm 12,8 L de álcool espalhado por igual; os 10 L que saem levam 1/4 disso, 3,2 L, e sobram 12,8 − 3,2 = 9,6 L. A água pura que entra não tem álcool. O ponto · significa vezes."
-    },
-    {
      "titulo": "A equação em letras",
-     "texto": "Porcentagem é a parte dividida pelo total, vezes 100. O total é sempre o tanque cheio, e a parte é o álcool que sobrou depois das duas trocas.\nAgora é só achar A e V.",
+     "texto": "A cada operação a % de álcool é multiplicada por F. Depois de N operações é T · F · F · … · F, com N fatores F. Procuro o menor N que deixa a conta em 10 ou menos.\nAgora é só achar T e F.",
      "visual": {
       "tipo": "equacao",
-      "formula": "P = A ÷ V · 100",
-      "leitura": "porcentagem de álcool = álcool ÷ volume do tanque · 100",
+      "formula": "T · F · F · … · F ≤ 10",
+      "leitura": "álcool no início, vezes 0,75 uma vez por troca, até ficar 10 ou menos; N é quantos F aparecem",
       "letras": [
        {
-        "letra": "P",
-        "oque": "porcentagem final de álcool (o que a questão quer)"
+        "letra": "N",
+        "oque": "número de operações: quantos F aparecem na conta (o que a questão quer)"
        },
        {
-        "letra": "A",
-        "oque": "álcool que sobra no fim, em L"
+        "letra": "T",
+        "oque": "álcool no início, em %"
        },
        {
-        "letra": "V",
-        "oque": "volume do tanque, em L"
+        "letra": "F",
+        "oque": "o que sobra do álcool a cada operação"
        }
       ]
      }
     },
     {
-     "titulo": "Achando A: o álcool que sobra",
-     "texto": "No começo: 0,32 · 40 = 12,8 L de álcool.\n1ª troca: sai 1/4 do álcool e sobra 0,75 · 12,8 = 9,6 L (12,8 ÷ 4 = 3,2 e 12,8 − 3,2 = 9,6).\n2ª troca: sai 1/4 de novo e sobra 0,75 · 9,6 = 7,2 L (9,6 ÷ 4 = 2,4 e 9,6 − 2,4 = 7,2)."
+     "titulo": "Achando T: o álcool no início",
+     "texto": "O tanque começa com 80% de álcool: T = 80.\nO tanque está sempre com 40 L. Por isso a % de álcool anda junto com a quantidade de álcool: se o álcool vai a 3/4, a % vai a 3/4 também."
     },
     {
-     "titulo": "Achando V: o volume do tanque",
-     "texto": "A cada troca saem 10 L e entram 10 L de água: o tanque fica sempre com 40 L.\nV = 40 L."
+     "titulo": "Achando F: o que sobra a cada operação",
+     "texto": "Saem 10 L de 40 L: 10 ÷ 40 = 1/4 da mistura. Está bem mexida, então sai 1/4 do álcool junto. A água que entra não tem álcool. Sobram 3/4 = 0,75: F = 0,75."
+    },
+    {
+     "titulo": "Achando F: o que sobra a cada operação (2 de 2)",
+     "texto": "Exemplo com números: 40 L com 80% = 32 L de álcool e 8 L de água. Saem 10 L, que levam 1/4 de cada um: 8 L de álcool e 2 L de água. Sobram 24 L de álcool em 40 L: 24 ÷ 40 = 0,6 = 60%, o mesmo que 80 · 0,75.\nCuidado: não são sempre 20 pontos. A 2ª operação tira 1/4 de 60, que é 15."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "P = 7,2 ÷ 40 · 100. 7,2 ÷ 40: 72 ÷ 40 = 1,8, então 7,2 ÷ 40 = 0,18 (outro jeito: 40 · 0,1 = 4 e 40 · 0,08 = 3,2; 4 + 3,2 = 7,2). Vezes 100: 0,18 · 100 = 18%.\nResposta: alternativa D.",
+     "texto": "Cada operação é × 0,75, que é ÷ 4 e depois × 3. Guardo 2 casas: o erro é pequeno perto da distância até 10.\n1ª: 80 ÷ 4 = 20; 20 · 3 = 60.\n2ª: 60 ÷ 4 = 15; 15 · 3 = 45.\n3ª: 45 ÷ 4 = 11,25; 11,25 · 3 = 33,75.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -308,19 +324,31 @@
       ],
       "linhas": [
        [
-        "A",
-        "7,2 L"
+        "T",
+        "80%"
        ],
        [
-        "V",
-        "40 L"
+        "F",
+        "0,75"
+       ],
+       [
+        "N",
+        "8"
        ]
       ]
      }
     },
     {
+     "titulo": "Volta na equação (2 de 3)",
+     "texto": "Estimando: de 33,75 ainda falta cair até 10, então faltam umas 4 operações. Só a 7ª e a 8ª pedem cuidado.\n4ª: 33,75 ÷ 4 = 8,4375; · 3 = 25,3125, uns 25,31.\n5ª: 25,31 ÷ 4 = 6,3275; · 3 = 18,9825, uns 18,98.\n6ª: 18,98 ÷ 4 = 4,745; · 3 = 14,235, uns 14,24."
+    },
+    {
+     "titulo": "Volta na equação (3 de 3)",
+     "texto": "7ª: 14,24 ÷ 4 = 3,56; · 3 = 10,68. Ainda MAIS de 10%, não vale.\n8ª: 10,68 ÷ 4 = 2,67; · 3 = 8,01. Agora é menos de 10%. N = 8.\nResposta: alternativa E."
+    },
+    {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: \"retira parte da mistura e completa com água\" → a cada troca sobra a mesma fração do álcool; aplique em cadeia e divida pelo volume total.",
+     "texto": "Pista: \"retira parte da mistura e completa com água, várias vezes\" → a cada vez sobra a mesma fração do álcool; multiplique em cadeia e pare no primeiro valor que atende, sem arredondar a contagem.",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -331,30 +359,30 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "40 L, 32%, troca 10 L, 2 vezes"
+        "40 L; 80%; sai 1/4; parar em 10% ou menos"
        ],
        [
         "2. Equação em letras",
-        "P = A ÷ V · 100"
+        "T · F · F · … · F ≤ 10"
        ],
        [
         "3. Uma letra por vez",
-        "A = 7,2 L; V = 40 L"
+        "T = 80; F = 0,75; N = 8"
        ]
       ]
      }
     }
    ],
    "checagem": {
-    "pergunta": "Tanque de 20 L com 50% de álcool. Trocam-se 10 L por água, uma vez. Qual a % de álcool?",
+    "pergunta": "Tanque com 50% de álcool; cada operação tira metade da mistura e põe água. Quantas operações até 10% ou menos?",
     "opcoes": [
-     "25%",
-     "50%",
-     "0%",
-     "40%"
+     "3",
+     "2",
+     "4",
+     "5"
     ],
-    "certa": "25%",
-    "resposta": "50% de 20 = 10 L de álcool; sai metade da mistura, sobram 5 L; 5 ÷ 20 = 0,25 = 25%."
+    "certa": "3",
+    "resposta": "50 → 25 → 12,5 → 6,25: na 2ª ainda tem 12,5%; na 3ª tem 6,25%."
    },
    "seuErro": null
   }
@@ -365,28 +393,32 @@
   "tema": "Aritmética e Porcentagem",
   "nivel": "acima",
   "origem": "Escada",
-  "ancora": "parcial · ENEM 2022 q.140 (geladeira: preço à vista e a prazo com acréscimo percentual)",
-  "canal": "mat-34-juros.txt [20:19:30] e mat-04-porcentagem.txt [2:07:30] (juros)",
-  "enunciado": "Um notebook custa R$ 2 100 à vista. A loja oferece pagá-lo em duas parcelas iguais: a primeira no ato da compra (a entrada) e a segunda 30 dias depois. Sobre o que ainda se deve depois da entrada, a loja cobra juros de 10% ao mês. Qual é o valor de cada parcela, em reais?\n\nDados: Preço à vista: R$ 2 100; Parcelas: 2 iguais: entrada e 30 dias depois; Juros: 10% ao mês, sobre o saldo devedor.",
-  "A": "1 100",
+  "ancora": "parcial · ENEM 2023 q.161 (CD7: parcelas iguais, a 1ª na compra, juros só depois) e Fuvest 2025 2ª fase M04 (financiamento por parcelas); juros cobrados só sobre o saldo",
+  "canal": "mat-35-amortizacao-e-parcelamento.txt [21:15:02] (a entrada não tem juros) e [21:21:35] (levar cada parcela à mesma data)",
+  "enunciado": "Uma loja anuncia uma máquina de lavar por R$ 3 310 à vista. Quem prefere parcelar segue o contrato abaixo, com juros de 10% ao mês, cobrados somente sobre o que ainda se deve depois de cada pagamento, mês a mês. A 1ª parcela é uma entrada e, por ser paga na hora, não rende juros. As três parcelas têm o mesmo valor, e a última deixa a dívida zerada.\n\nQuando | O que se paga\nHoje, na compra | 1ª parcela (entrada)\n30 dias depois | 2ª parcela\n60 dias depois | 3ª parcela, que quita a dívida\n\nUm cliente raciocinou: \"3 310 dividido por 3 é 1 103,33, e ainda vêm os juros\". Qual é o valor de cada parcela, em reais, para que a loja receba exatamente o equivalente ao preço à vista?\n\nDados: Preço à vista: R$ 3 310; Parcelas: 3 iguais: hoje, em 30 e em 60 dias; Juros: 10% ao mês, só sobre o saldo devedor; Entrada: paga na hora, sem juros.",
+  "A": "1 210",
   "B": "1 000",
-  "C": "1 050",
-  "D": "1 155",
-  "E": "1 210",
+  "C": "1 103",
+  "D": "1 214",
+  "E": "1 335",
   "resposta": "A",
   "explicacao": {
-   "conferencia": "P = (2 100 − P) · 1,1 = 2 310 − 1,1 · P; 2,1 · P = 2 310; P = 1 100. Conferindo: saldo 1 000, com 10%: 1 100. Resposta: alternativa A. Erros: Alternativa B = Deu o saldo devedor depois da entrada (2 100 − 1 100), não a parcela; Alternativa C = Dividiu 2 100 por 2, sem os juros; Alternativa D = Pôs 10% de juros sobre 1 050, mas as duas parcelas precisam ser iguais; Alternativa E = Aplicou 10% de juros sobre a própria parcela de 1 100.",
-   "ideia": "A entrada é uma parcela P. O que sobra, 2 100 − P, rende 10% em um mês, e esse total tem de ser igual à segunda parcela, que também vale P.",
+   "conferencia": "No dia 60: V = 3 310 · 1,21 = 4 005,1; K = 1,21 + 1,1 + 1 = 3,31; P = 4 005,1 ÷ 3,31 = 1 210. Conferindo: saldo 3 310 − 1 210 = 2 100; 2 100 · 1,1 − 1 210 = 1 100; 1 100 · 1,1 − 1 210 = 0. Resposta: alternativa A. Erros: Alternativa B = Deu o valor de hoje da última parcela (3 310 ÷ 3,31) e não levou ao dia 60; Alternativa C = Dividiu 3 310 por 3 e ignorou os juros; Alternativa D = Pôs 10% de juros no total e dividiu por 3: 3 310 · 1,1 ÷ 3 = 1 213,67; Alternativa E = Pôs 21% no total e dividiu por 3: 3 310 · 1,21 ÷ 3 = 1 335,03.",
+   "ideia": "A entrada não rende juros e a dívida cresce 10% por mês. Leve tudo para o dia 60: o preço à vista, parado até lá, tem de valer o mesmo que as três parcelas, cada uma levada com os juros do tempo que ficou na mão do cliente.",
    "pecas": [
     {
      "termo": "Saldo devedor",
-     "significado": "O que ainda falta pagar depois da entrada. Os juros são cobrados só sobre ele."
+     "significado": "O que ainda se deve depois de pagar a parcela. Só ele rende juros."
+    },
+    {
+     "termo": "Levar para o dia 60",
+     "significado": "Dinheiro de hoje cresce 10% por mês: ×1,1 em 30 dias e ×1,1 ×1,1 = ×1,21 em 60 dias."
     }
    ],
    "passos": [
     {
      "titulo": "As fórmulas desta questão",
-     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela. O p é o número da porcentagem (em 20%, p = 20). O ponto · significa vezes.",
+     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. O p é o número da porcentagem (em 10%, p = 10: 1 + 10 ÷ 100 = 1,1). O ponto · significa vezes.",
      "visual": {
       "tipo": "formulas",
       "itens": [
@@ -394,6 +426,11 @@
         "figura": "porcentagem",
         "nome": "Acrescentar p%",
         "formula": "novo = antigo · (1 + p ÷ 100)"
+       },
+       {
+        "figura": "porcentagem",
+        "nome": "Levar ao dia 60",
+        "formula": "dia 60 = hoje · 1,1 · 1,1"
        }
       ]
      }
@@ -411,57 +448,73 @@
       "linhas": [
        [
         "Preço à vista",
-        "R$ 2 100"
+        "R$ 3 310"
        ],
        [
         "Parcelas",
-        "2 iguais: entrada e 30 dias depois"
+        "3 iguais: hoje, em 30 e em 60 dias"
        ],
        [
         "Juros",
-        "10% ao mês, sobre o saldo devedor"
+        "10% ao mês, só sobre o saldo devedor"
+       ],
+       [
+        "Entrada",
+        "paga na hora, sem juros"
        ]
       ]
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "10% de juros quer dizer multiplicar por 1 + 0,1 = 1,1: se falta pagar 100, vira 110. A entrada não paga juros, pois é paga na hora. Por isso a segunda parcela é o saldo vezes 1,1, e as duas parcelas têm o mesmo valor P. O ponto · significa vezes."
+     "titulo": "De onde vem cada fórmula (1 de 4)",
+     "texto": "Com juros de 10% ao mês, R$ 100 de hoje viram R$ 110 em 30 dias (100 · 1,1) e R$ 121 em 60 dias (110 · 1,1)."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (2 de 4)",
+     "texto": "R$ 100 hoje e R$ 100 daqui a 60 dias não valem o mesmo: os de hoje viram R$ 121 em 60 dias. Só dá para somar dinheiro quando todos estão na MESMA data. Escolho o dia 60, o último."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (3 de 4)",
+     "texto": "Uma parcela paga hoje vale, no dia 60, P · 1,1 · 1,1. A do dia 30 vale P · 1,1. A do dia 60 vale P. E os R$ 3 310 à vista valem 3 310 · 1,1 · 1,1. As duas somas têm de ser iguais."
+    },
+    {
+     "titulo": "De onde vem cada fórmula (4 de 4)",
+     "texto": "A entrada não gera juros na DÍVIDA (o saldo começa em 3 310 − P). Mas, para comparar na mesma data, ela vale o que o dinheiro dela renderia em 60 dias: P · 1,21."
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A segunda parcela é o saldo devedor com juros. Como as duas parcelas são iguais, ela também vale P.\nAgora é só achar J (um número) e S (que vai ficar com P dentro, porque a entrada também é P).",
+     "texto": "No dia 60, as três parcelas valem P · 1,21 + P · 1,1 + P. P é o mesmo que 1 · P. Teste com P = 100: 121 + 110 + 100 = 331, e 100 · 3,31 = 331. Então a soma é P · K, com K = 1,21 + 1,1 + 1. Isso tem de ser igual a V, o preço à vista levado ao dia 60.\nAgora é só achar K e V.",
      "visual": {
       "tipo": "equacao",
-      "formula": "P = S · J",
-      "leitura": "parcela = saldo devedor · fator dos juros",
+      "formula": "P · K = V",
+      "leitura": "parcela · (soma dos fatores) = preço à vista levado ao dia 60",
       "letras": [
        {
         "letra": "P",
         "oque": "valor de cada parcela, em R$ (o que a questão quer)"
        },
        {
-        "letra": "S",
-        "oque": "saldo devedor depois da entrada, em R$"
+        "letra": "K",
+        "oque": "soma dos números pelos quais cada parcela é multiplicada até o dia 60 (1,21, 1,1 e 1)"
        },
        {
-        "letra": "J",
-        "oque": "fator dos juros"
+        "letra": "V",
+        "oque": "preço à vista levado ao dia 60, em R$"
        }
       ]
      }
     },
     {
-     "titulo": "Achando J: o fator dos juros",
-     "texto": "10% = 10 ÷ 100 = 0,1. Acrescentar 10% é multiplicar por 1 + 0,1.\nJ = 1,1."
+     "titulo": "Achando K: a soma dos fatores",
+     "texto": "1ª parcela (hoje): ×1,1 duas vezes, 1,1 · 1,1: sem vírgulas, 11 · 11 = 121; há 1 + 1 = 2 casas: 1,21.\n2ª parcela (30 dias): ×1,1.\n3ª parcela (60 dias): ×1.\nK = 1,21 + 1,1 + 1: 1,21 + 1,10 = 2,31 e 2,31 + 1 = 3,31."
     },
     {
-     "titulo": "Achando S: o saldo devedor",
-     "texto": "A entrada vale P, então o saldo é o preço menos a entrada.\nS = 2 100 − P."
+     "titulo": "Achando V: o preço à vista no dia 60",
+     "texto": "V = 3 310 · 1,21. Sem vírgulas: 3 310 · 121 = 331 000 + 66 200 + 3 310 = 400 510 (3 310 · 100, 3 310 · 20 e 3 310 · 1). Há 2 casas, então V = 4 005,10 = 4 005,1."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "P = (2 100 − P) · 1,1. O 1,1 multiplica tudo dentro do parêntese: 2 100 · 1,1 − P · 1,1. Teste com P = 1 000: (2 100 − 1 000) · 1,1 = 1 210 e 2 310 − 1 100 = 1 210. E 2 100 · 1,1 = 2 100 + 210 = 2 310. Então P = 2 310 − 1,1 · P.",
+     "texto": "P · 3,31 = 4 005,1. Quero P: desfaço o × 3,31 dividindo.\nP = 4 005,1 ÷ 3,31. Multiplico os dois por 100 (o resultado da divisão não muda) para sumir a vírgula: 400 510 ÷ 331.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -471,27 +524,27 @@
       ],
       "linhas": [
        [
-        "J",
-        "1,1"
+        "K",
+        "3,31"
        ],
        [
-        "S",
-        "2 100 − P = 1 000"
+        "V",
+        "4 005,1"
        ]
       ]
      }
     },
     {
      "titulo": "Volta na equação (2 de 3)",
-     "texto": "Quero o P de um lado só. A equação é uma balança: o que faço de um lado faço do outro. Somo 1,1 · P dos dois lados e o “menos 1,1 · P” some do lado direito. P é o mesmo que 1 · P, então 1 · P + 1,1 · P = 2,1 · P (1 + 1,1 = 2,1): 2,1 · P = 2 310."
+     "texto": "Divisão grande: vou tirando de 400 510 pedaços de 331 que sei calcular. 331 · 1 000 = 331 000; sobram 69 510. 331 · 200 = 66 200; sobram 3 310. 331 · 10 = 3 310; sobra 0. P = 1 000 + 200 + 10 = 1 210."
     },
     {
      "titulo": "Volta na equação (3 de 3)",
-     "texto": "P = 2 310 ÷ 2,1: multiplico os dois por 10 e fica 23 100 ÷ 21 = 1 100 (21 · 1 100 = 23 100).\nResposta: alternativa A. Conferindo: saldo 2 100 − 1 100 = 1 000, e 1 000 · 1,1 = 1 100."
+     "texto": "Conferindo: saldo 3 310 − 1 210 = 2 100; 2 100 · 1,1 = 2 310, menos 1 210 = 1 100; 1 100 · 1,1 = 1 210, menos 1 210 = 0.\nResposta: alternativa A."
     },
     {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: \"parcelas iguais com juros sobre o saldo\" → a entrada não paga juros; a última parcela é o saldo vezes (1 + juros); iguale e ache P.",
+     "texto": "Pista: \"parcelas iguais, a 1ª na compra, juros só sobre o saldo\" → leve tudo para a última data: cada parcela ganha ×1,1 por mês que ficou antes dela, e o preço à vista também.",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -502,30 +555,34 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "2 100 à vista, 2 parcelas iguais, 10% ao mês"
+        "3 310 à vista; 3 parcelas iguais; 10% ao mês"
+       ],
+       [
+        "1. Tabela do que eu tenho (cont.)",
+        "entrada sem juros"
        ],
        [
         "2. Equação em letras",
-        "P = S · J"
+        "P · K = V"
        ],
        [
         "3. Uma letra por vez",
-        "J = 1,1; S = 2 100 − P"
+        "K = 3,31; V = 4 005,1; P = 1 210"
        ]
       ]
      }
     }
    ],
    "checagem": {
-    "pergunta": "À vista R$ 900, duas parcelas iguais (entrada e 30 dias), juros de 25% ao mês sobre o saldo. Qual a parcela?",
+    "pergunta": "À vista R$ 210, duas parcelas iguais (hoje e em 30 dias), juros de 10% ao mês. Qual a parcela?",
     "opcoes": [
-     "R$ 500",
-     "R$ 450",
-     "R$ 560",
-     "R$ 400"
+     "R$ 110",
+     "R$ 105",
+     "R$ 115,50",
+     "R$ 100"
     ],
-    "certa": "R$ 500",
-    "resposta": "P = (900 − P) · 1,25 = 1 125 − 1,25 · P; 2,25 · P = 1 125; P = 500. Conferindo: saldo 400, com 25%: 500."
+    "certa": "R$ 110",
+    "resposta": "No dia 30: V = 210 · 1,1 = 231 e K = 1,1 + 1 = 2,1; P = 231 ÷ 2,1 = 110. Conferindo: saldo 100, com 10%: 110."
    },
    "seuErro": null
   }
@@ -536,28 +593,32 @@
   "tema": "Aritmética e Porcentagem",
   "nivel": "acima",
   "origem": "Escada",
-  "ancora": "parcial · ENEM 2022 q.149 (variação percentual encadeada); estilo Harvard–MIT",
-  "canal": "mat-04-porcentagem.txt [2:12:32] (fatores em cadeia)",
-  "enunciado": "Ana tem 20% a mais de figurinhas do que Bia. Bia tem 25% a menos de figurinhas do que Caio. Os três juntos têm 265 figurinhas. Quantas figurinhas tem Caio?\n\nDados: Ana: 20% a mais que Bia; Bia: 25% a menos que Caio; Total dos três: 265 figurinhas.",
-  "A": "75",
-  "B": "88,3",
-  "C": "100",
-  "D": "90",
-  "E": "106",
-  "resposta": "C",
+  "ancora": "parcial · HMMT nov/2020 Theme q.3 (porcentagem que vira condição sobre inteiros) e HMMT nov/2021 Theme q.7 (inteiros por razão); a contagem é do estilo, o texto é nosso",
+  "canal": "mat-03-mmc-e-mdc.txt [1:02:33] (múltiplos) e mat-04-porcentagem.txt [2:09:00] (fator em cadeia)",
+  "enunciado": "Ana, Bia e Caio guardam figurinhas, cada um com uma quantidade inteira. Ana tem 20% a mais do que Bia, e Bia tem 25% a menos do que Caio. Juntos, eles têm mais de 100 e menos de 400 figurinhas. Quantos valores diferentes o total de figurinhas pode ter?\n\nDados: Ana: 20% a mais que Bia; Bia: 25% a menos que Caio; Total dos três: mais de 100 e menos de 400; Quantidades: todas inteiras.",
+  "A": "5",
+  "B": "6",
+  "C": "7",
+  "D": "8",
+  "E": "19",
+  "resposta": "B",
   "explicacao": {
-   "conferencia": "B = 0,75 · C; A = 1,2 · B = 0,9 · C; C · (1 + 0,75 + 0,9) = 265, então 2,65 · C = 265 e C = 100. Conferindo: Bia 75, Ana 90, soma 265. Resposta: alternativa C. Erros: Alternativa A = Deu a quantidade de Bia (75% da de Caio); Alternativa B = Dividiu 265 por 3, como se os três tivessem o mesmo tanto; Alternativa D = Deu a quantidade de Ana; Alternativa E = Somou 1 + 0,75 + 0,75, tratando Ana como igual a Bia (265 ÷ 2,5).",
-   "ideia": "Escreva tudo em função de Caio: Bia tem 0,75 dele e Ana tem 1,2 de Bia, que é 0,9 dele. Cada porcentagem é sobre o valor anterior da cadeia, não sobre o de Caio.",
+   "conferencia": "Caio = 20 · x, Bia = 15 · x, Ana = 18 · x, total = 53 · x. Múltiplos de 53 de 100 a 400: 106, 159, 212, 265, 318, 371 (x = 2 a 7). Conta: 7 − 1 = 6. Resposta: alternativa B. Erros: Alternativa A = Fez (399 − 100) ÷ 53 = 5,6 e ficou com 5, sem somar 1 (contou degraus, não números); Alternativa C = Contou os múltiplos de 53 até 399 e não tirou o 53, que não passa de 100; Alternativa D = Arredondou 400 ÷ 53 = 7,5 para cima e contou o 424, que passa de 400; Alternativa E = Contou os valores de Caio (múltiplos de 20 até 399) e não ligou ao total.",
+   "ideia": "Para as três quantidades serem inteiras, Caio precisa ser múltiplo de 20, e o total vira sempre 53 vezes um número. A porcentagem esconde a divisibilidade: a pergunta vira contar múltiplos de 53 na faixa.",
    "pecas": [
     {
-     "termo": "Porcentagem em cadeia",
-     "significado": "Cada \"a mais\" ou \"a menos\" é sobre o valor da pessoa citada: Ana é 20% a mais que Bia, e não que Caio."
+     "termo": "Quantidade inteira",
+     "significado": "Ninguém tem figurinha pela metade. 75% de Caio só é inteiro se Caio for múltiplo de 4, e assim por diante."
+    },
+    {
+     "termo": "Múltiplo de 53",
+     "significado": "Um número que é 53 vezes um inteiro: 53, 106, 159, 212..."
     }
    ],
    "passos": [
     {
      "titulo": "As fórmulas desta questão",
-     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. Aqui você só vê o nome dela. O p é o número da porcentagem (em 20%, p = 20). O ponto · significa vezes.",
+     "texto": "Cada fórmula é explicada, com números, no passo em que for usada. O p é o número da porcentagem (em 20%, p = 20). O ponto · significa vezes.",
      "visual": {
       "tipo": "formulas",
       "itens": [
@@ -570,6 +631,11 @@
         "figura": "porcentagem",
         "nome": "p% a menos",
         "formula": "novo = antigo · (1 − p ÷ 100)"
+       },
+       {
+        "figura": "contagem",
+        "nome": "Múltiplos entre dois valores",
+        "formula": "quantos até o maior − quantos até o menor"
        }
       ]
      }
@@ -595,53 +661,65 @@
        ],
        [
         "Total dos três",
-        "265 figurinhas"
+        "mais de 100 e menos de 400"
+       ],
+       [
+        "Quantidades",
+        "todas inteiras"
        ]
       ]
      }
     },
     {
-     "titulo": "De onde vem cada fórmula",
-     "texto": "'20% a mais' é multiplicar por 1,2 (100 vira 120); '25% a menos' é multiplicar por 0,75 (100 vira 75). Os dois seguem em cadeia: Ana = 1,2 · Bia e Bia = 0,75 · Caio, então Ana = 1,2 · 0,75 · Caio."
-    },
-    {
-     "titulo": "De onde vem cada fórmula (2 de 2)",
-     "texto": "Cuidado: 20% a mais que Bia não é 20% a mais que Caio, porque cada porcentagem é sobre o valor de antes. Aqui C, B e A são Caio, Bia e Ana. O ponto · significa vezes."
-    },
-    {
      "titulo": "A equação em letras",
-     "texto": "Escrevo B e A usando só C. Depois a soma vira uma conta com uma letra só.\nAgora é só achar B e A.",
+     "texto": "Se todo total possível é múltiplo de S (o menor total), o número de totais é a quantidade de múltiplos de S na faixa. Conto os que cabem abaixo de 400 (M) e tiro os que ficam até 100 (L).\nAgora é só achar S, M e L. Começo por S.",
      "visual": {
       "tipo": "equacao",
-      "formula": "C + B + A = 265",
-      "leitura": "as figurinhas de Caio, Bia e Ana somam 265",
+      "formula": "N = M − L",
+      "leitura": "totais possíveis = múltiplos de S que cabem abaixo de 400 − múltiplos de S que ficam até 100",
       "letras": [
        {
-        "letra": "C",
-        "oque": "figurinhas de Caio (o que a questão quer)"
+        "letra": "N",
+        "oque": "quantos totais diferentes são possíveis (o que a questão quer)"
        },
        {
-        "letra": "B",
-        "oque": "figurinhas de Bia"
+        "letra": "M",
+        "oque": "quantos múltiplos de S ficam abaixo de 400"
        },
        {
-        "letra": "A",
-        "oque": "figurinhas de Ana"
+        "letra": "L",
+        "oque": "quantos múltiplos de S ficam até 100 (não valem)"
+       },
+       {
+        "letra": "S",
+        "oque": "o menor total possível, em figurinhas"
        }
       ]
      }
     },
     {
-     "titulo": "Achando B: as figurinhas de Bia",
-     "texto": "25% a menos que Caio é ficar com 75%: B = 0,75 · C."
+     "titulo": "Achando S: o menor total possível",
+     "texto": "Chamo de x um número que ainda vou achar.\n25% a menos: sobram 100% − 25% = 75% = 3/4. De 20 sai 5 e sobram 15. Se Caio tem 8, Bia tem 3/4 de 8 = 6. Se Caio tem 6, Bia teria 4,5: não pode. Caio é de 4 em 4: Caio = 4 · x e Bia = 3 · x."
     },
     {
-     "titulo": "Achando A: as figurinhas de Ana",
-     "texto": "20% a mais que Bia é 1,2 vezes Bia: A = 1,2 · B = 1,2 · 0,75 · C. 1,2 · 0,75: sem vírgulas, 12 · 75 = 900; depois das vírgulas há 1 + 2 = 3 números, então 0,900 = 0,9. Conferindo: Bia com 100 de Caio tem 75; Ana = 1,2 · 75 = 90, que é 0,9 · 100.\nA = 0,9 · C."
+     "titulo": "Achando S: o menor total possível (2 de 3)",
+     "texto": "20% a mais é 1 em cada 5: de 15 sobe 3 (15 ÷ 5 = 3), 15 + 3 = 18. Ou seja, Ana = Bia ÷ 5 · 6. Para dar inteiro, Bia (3 · x) tem de ser múltiplo de 5. Teste: x = 1, 2, 3, 4 dão 3, 6, 9, 12 (não); x = 5 dá 15 (sim)."
+    },
+    {
+     "titulo": "Achando S: o menor total possível (3 de 3)",
+     "texto": "Só x = 5, 10, 15... servem. Com x = 5: Caio 20, Bia 15, Ana 15 ÷ 5 · 6 = 18. Total 20 + 15 + 18 = 53. Com x = 10: 40, 30, 36, total 106 = 2 · 53. S = 53."
+    },
+    {
+     "titulo": "Achando M: os totais abaixo de 400",
+     "texto": "Os totais possíveis são 53, 106, 159, 212, 265, 318, 371, 424...\n53 · 7 = 371 (50 · 7 = 350 e 3 · 7 = 21). 53 · 8 = 424 passa de 400. Abaixo de 400 cabem 7. M = 7."
+    },
+    {
+     "titulo": "Achando L: os totais que não passam de 100",
+     "texto": "O total tem de ser MAIS de 100. 53 · 1 = 53 não passa; 53 · 2 = 106 passa. Só 1 múltiplo fica até 100. L = 1."
     },
     {
      "titulo": "Volta na equação",
-     "texto": "C + 0,75 · C + 0,9 · C = 265. C é o mesmo que 1 · C. Somo quanto cada um tem de C: 1 + 0,75 + 0,9 = 2,65. Então 2,65 · C = 265, quer dizer que C é 265 ÷ 2,65.\nPara tirar a vírgula, multiplico os dois por 100: 265 ÷ 2,65 = 26 500 ÷ 265 = 100 (265 · 100 = 26 500).",
+     "texto": "N = M − L = 7 − 1 = 6.\nConferindo na lista: 106, 159, 212, 265, 318, 371. São 6 totais (Caio com 40, 60, 80, 100, 120 e 140).\nResposta: alternativa B.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -651,23 +729,23 @@
       ],
       "linhas": [
        [
-        "B",
-        "0,75 · C"
+        "S",
+        "53"
        ],
        [
-        "A",
-        "0,9 · C"
+        "M",
+        "7"
+       ],
+       [
+        "L",
+        "1"
        ]
       ]
      }
     },
     {
-     "titulo": "Volta na equação (2 de 2)",
-     "texto": "Resposta: alternativa C. Conferindo: Bia 0,75 · 100 = 75, Ana 0,9 · 100 = 90, e 100 + 75 + 90 = 265."
-    },
-    {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: \"fulano tem p% a mais que beltrano\" → escreva cada pessoa em função de uma só e some; a % é sempre sobre o valor da pessoa citada.",
+     "texto": "Pista: \"porcentagem a mais ou a menos, com quantidades inteiras\" → escreva cada um como fração de um só, ache o menor total que fecha com inteiros e conte os múltiplos dele na faixa.",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",
@@ -678,30 +756,34 @@
       "linhas": [
        [
         "1. Tabela do que eu tenho",
-        "Ana +20% de Bia, Bia −25% de Caio, total 265"
+        "Ana +20% de Bia; Bia −25% de Caio; total entre 100 e 400"
+       ],
+       [
+        "1. Tabela do que eu tenho (cont.)",
+        "inteiros"
        ],
        [
         "2. Equação em letras",
-        "C + B + A = 265"
+        "N = M − L"
        ],
        [
         "3. Uma letra por vez",
-        "B = 0,75 · C; A = 0,9 · C"
+        "S = 53; M = 7; L = 1"
        ]
       ]
      }
     }
    ],
    "checagem": {
-    "pergunta": "Ana tem 50% a mais que Bia; Bia tem 20% a menos que Caio. Caio tem 100. Quantas tem Ana?",
+    "pergunta": "Ana tem 50% a mais que Bia; Bia tem 20% a menos que Caio; todos com quantidade inteira. Qual o menor total possível?",
     "opcoes": [
-     "120",
-     "130",
-     "110",
-     "100"
+     "15",
+     "9",
+     "10",
+     "30"
     ],
-    "certa": "120",
-    "resposta": "Bia = 0,8 · 100 = 80; Ana = 1,5 · 80 = 120."
+    "certa": "15",
+    "resposta": "Bia = 4/5 de Caio: Caio múltiplo de 5. Ana = 3/2 de Bia: Bia par. Com Caio 5: Bia 4, Ana 6, total 15."
    },
    "seuErro": null
   }

@@ -16,9 +16,9 @@ type Questao = {
 };
 const ler = (arq: string) => JSON.parse(readFileSync(join(PASTA, arq), 'utf8')) as Questao[];
 
-const NOVOS = ['fisica-acima-novas.json', 'matematica-aritmetica-novas.json'];
-// As 28 de Matemática dos degraus 2 a 8 vêm de antes deste porteiro: valem as regras que não dependem de campo novo.
-const LEGADO = ['matematica-acima-novas.json'];
+// Desde 23/11/2026 (fábrica v2) as 56 questões passam por todas as regras, inclusive as 28 de Matemática dos degraus 2 a 8.
+const NOVOS = ['fisica-acima-novas.json', 'matematica-aritmetica-novas.json', 'matematica-acima-novas.json'];
+const LEGADO: string[] = [];
 const MAX_PASSO = 300; // explicacao-curta-sem-rolar (14/11/2026)
 const MIN_ENEM = 600; // nivel-acima-dificil-de-verdade: texto de prova, ENEM real ~676
 const PROIBIDO_NO_ENUNCIADO = /oper[aá]rios/i; // "Nove operários... 3 saem": "muito fácil" (22 e 23/11/2026)
@@ -63,6 +63,10 @@ describe.each([...NOVOS, ...LEGADO])('nível acima novo: %s', (arq) => {
 
   it('toda questão liga a pelo menos uma aula "Antes" (conteúdo de outro tema não é ensinado na explicação)', () => {
     expect(qs.filter((q) => (QUESTOES_COM_ANTES[q.id] ?? []).length === 0).map((q) => q.id)).toEqual([]);
+  });
+
+  it('nenhuma tela diz "alternativa X": a letra provisória tem de virar a letra certa', () => {
+    expect(qs.filter((q) => /alternativa X\b/.test(JSON.stringify(q.explicacao))).map((q) => q.id)).toEqual([]);
   });
 
   it('a explicação diz a alternativa certa por extenso ("Resposta: alternativa X")', () => {

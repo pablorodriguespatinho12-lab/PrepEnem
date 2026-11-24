@@ -223,6 +223,10 @@ export const DIAGRAMAS = ['sala-quadrada', 'robo-limpando', 'canto-zoom', 'robo-
   'gramado-em-l', 'circulo-no-triangulo', 'retangulo-na-roda', 'canteiro-triangulos', 'piramide-cortada',
   'vareta-na-caixa', 'lata-bolas', 'ladrilho-ficha', 'painel-lampadas',
   // nível acima de Física (23/11/2026)
+  // nível acima v2 (24/11/2026): components/visual/diagramas-acima-*.tsx
+  'torre-esfera-canhao', 'grafico-vt-ana', 'rampa-com-forcas', 'bloco-sobre-prancha', 'pendulo-com-pino', 'diagrama-pv-trapezio', 'escada-de-barras', 'sonar-eco-obliquo',
+  'sirene-no-circulo', 'tubo-com-agua', 'corda-modos', 'projetor-duas-lentes', 'corredor-imagens', 'fibra-zigue-zague', 'protoboard-curto-aberto', 'baterias-paralelo',
+  'terreno-escala', 'praca-quatro-triangulos', 'lunulas', 'copo-cone-80', 'caixa-bolas-2x2x2', 'tubo-bolas-4x2', 'caixa-nova-6r',
   'cubo-resistores'] as const;
 export type NomeDiagrama = (typeof DIAGRAMAS)[number];
 export interface VisualDiagrama {

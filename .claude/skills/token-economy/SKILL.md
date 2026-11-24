@@ -75,3 +75,30 @@ numa sessão e é evitável.
   ~15.000 numa única sessão — incluindo `arkts/` (HarmonyOS, stack que este
   projeto não usa) a ~6.100 tokens sozinho. Nenhuma instrução compensa isso;
   é decisão de arquivo em disco, no escopo global do usuário.
+
+## Ideias da web (24/11/2026, conferidas só como leitura; % dos autores NÃO provado aqui)
+Fontes: dev.to "9 ways to cut token consumption", alexgreensh/token-optimizer, JuliusBrussee/caveman.
+- **Medido aqui:** carga fixa por sessão ≈ 19 KB (~5 mil tokens: 2 CLAUDE.md, licoes, MEMORY.md). `decisoes-prepenem` tem 52 KB (~13 mil tokens) por carga: só carregar quando mexer em UI/IA/taxonomia; candidata a dividir em arquivos de `references/` lidos sob demanda.
+- Caveman (resposta curta): o autor diz -65% de SAÍDA, mas só ~4% da sessão inteira (leitura de arquivo e agente pesam mais). O estilo TDAH do Pablo já faz isso: não instalar.
+- Filtrar saída longa antes de ler: `| tail -20`, `| grep -c`, `--seco`; nunca despejar log de build/teste inteiro.
+- `/context` mostra quem ocupa espaço; `/usage` antes e depois de lote grande.
+- Lote repetido (módulos v2): colar no pedido do agente o que ele iria buscar e reusar o agente com `SendMessage`.
+
+## Medido na frente "nível acima v2" (24/11/2026, 16 agentes, contado por comando)
+Total dos agentes: **2 282 548 tokens**. Por tarefa (tokens do agente, vindos do aviso de término):
+- Chamada mínima de um agente (explorador, 1 `ls`): **20 mil**. Todo agente novo paga esse arranque; por isso lote pequeno de 1 tarefa não compensa.
+- Aluno-do-zero lendo (rodada 2): **14,2 mil por questão** (56 questões = 793 mil).
+- Gabarito às cegas: **8,6 mil por questão** (16 questões = 138 mil). Mais barato que o aluno e acha o que mais importa (resposta errada): rodar ANTES.
+- Corrigir módulo (executor): 107 a 159 mil. Desenhos: 152 a 189 mil por 7 a 8 desenhos.
+- Conserto de 1 a 3 linhas (juntar passos de com-00b e ter-00d, tabela de gra-00a): fiz inline com 2 a 3 chamadas, bem abaixo de 100 mil. **Regra: até ~5 linhas em 1 arquivo, inline; agente só para o que passa disso.**
+
+Regras que saem dos números:
+1. Ordem da conferência, do mais barato ao mais caro: `--seco` + `vitest` (segundos) → gabarito às cegas (8,6 mil/q) → aluno-do-zero (14 mil/q) → revisor-de-fatos. Não pular para o caro quando o barato ainda acha defeito.
+2. Um agente por arquivo escrito (`diagramas-acima-*.tsx`, módulos `v2/*.py`): 3 agentes em paralelo no mesmo `.tsx` quebrariam. Registrar nomes/stubs ANTES de abrir os agentes (feito com 23 nomes de desenho).
+3. Regravar o JSON e testar UMA vez por leva (`montar_v2.py` sem `--seco` só no coordenador), não por agente.
+4. Esperar agente: não usar laço `sleep` no terminal (o Pablo barrou, 24/11); o aviso de término chega sozinho.
+5. Build: rodar em segundo plano com `> log` e ler só `grep "Compiled|Failed|FIM"` do log.
+6. Guarda do banco lê o TEXTO do comando: `git add -u` em vez de listar `scripts/...`.
+7. Pablo pediu (24/11) usar esta skill SEMPRE: abrir toda tarefa carregando-a e escrevendo o plano com quem faz cada parte.
+
+Não provado ainda: o ganho do plugin caveman (`/usage` antes e depois, ver memória `teste-caveman-plugin`); a economia em % dos blogs não vale aqui.
