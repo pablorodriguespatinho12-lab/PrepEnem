@@ -4,7 +4,7 @@
 import { ALTURA, CORES, LARGURA, type Ancora, type AulaLousa, type Cena, type Cor, type Desenho, type Fala } from './tipos';
 
 const MIN_CENAS = 3;
-const MAX_CENAS = 20;
+const MAX_CENAS = 31;
 const MAX_DESENHOS = 40;
 const MAX_FALAS = 4;
 const MAX_TEMPO = 40;
