@@ -2,6 +2,8 @@
 
 1. Liste as skills e agentes deste projeto que se aplicam, e use-os. Se nenhum,
    diga isso. A ordem de cada tipo de frente está em `combinar-skills`.
+   **Carregue `token-economy` em TODA tarefa** (pedido do Pablo, 24/11/2026), com
+   plano curto de quem faz cada parte.
 2. Responda em voz alta, mesmo quando for não: **falta skill?** Skill nova só
    para tarefa recorrente com procedimento não óbvio (`desenhar-skill` →
    `write-a-skill` → `ln-162-skill-reviewer`). Quase sempre é uma LINHA numa existente.
