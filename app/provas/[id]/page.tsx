@@ -37,6 +37,7 @@ type Reforco = { questao: any; figura: { nome: NomeFigura; rotulos?: string[] } 
 const CHAVE_REFORCO = 'prepenem:reforco-usadas';
 /* Qual correção estava aberta nesta aba (índice da questão): ver fetchExam. */
 const CHAVE_CORRECAO = (examId: string) => `prepenem:vendo-correcao:${examId}`;
+const RESPOSTA_RECENTE_MS = 10 * 60 * 1000;
 const lerUsadas = (): string[] => {
   try {
     return JSON.parse(localStorage.getItem(CHAVE_REFORCO) ?? '[]');
@@ -118,16 +119,22 @@ export default function ProvaDetailPage() {
       }
       // Recarregou (Shift+R) lendo a correção: o servidor já avançou para a próxima no
       // momento da resposta, então a tela abria na seguinte e a correção sumia
-      // (Pablo, 24/11/2026, questão da planta). A aba lembra qual correção estava aberta.
-      const lida = Number(sessionStorage.getItem(CHAVE_CORRECAO(examId)));
-      const anterior = data.exam.questions?.[lida];
-      if (data.exam.status !== 'finalizada' && sessionStorage.getItem(CHAVE_CORRECAO(examId)) !== null && lida === data.exam.currentIdx - 1 && anterior?.answered) {
-        setExam({ ...data.exam, currentIdx: lida });
+      // (Pablo, 24/11/2026, planta e depois Estatística). A aba lembra o que fez: o índice da
+      // correção aberta, ou 'seguiu' se já apertou Próxima. Aba sem memória (aberta antes
+      // desta versão): vale a resposta dada há menos de 10 min.
+      const ex = data.exam;
+      const memoria = sessionStorage.getItem(CHAVE_CORRECAO(examId));
+      const lida = memoria !== null && memoria !== 'seguiu' ? Number(memoria) : ex.currentIdx - 1;
+      const anterior = ex.questions?.[lida];
+      const recente = Date.now() - new Date(ex.updatedAt).getTime() < RESPOSTA_RECENTE_MS;
+      const aindaLendo = memoria === null ? recente && !ex.questions?.[ex.currentIdx]?.answered : memoria !== 'seguiu';
+      if (ex.status !== 'finalizada' && aindaLendo && lida === ex.currentIdx - 1 && anterior?.answered) {
+        setExam({ ...ex, currentIdx: lida });
         setSelectedAnswer(anterior.respostaDada);
         setFeedback({ acertou: anterior.acertou, respostaCorreta: anterior.question.respostaCorreta });
         setSubmitted(true);
       } else {
-        setExam(data.exam);
+        setExam(ex);
       }
     } catch (e) {
       toast.error('Erro ao carregar prova');
@@ -382,7 +389,7 @@ export default function ProvaDetailPage() {
       return;
     }
     setReforcoAtivo(null);
-    sessionStorage.removeItem(CHAVE_CORRECAO(examId));
+    sessionStorage.setItem(CHAVE_CORRECAO(examId), 'seguiu');
     if (isLast) {
       setFechando(true);
       await Promise.allSettled(salvando.current);
