@@ -6,6 +6,7 @@ import { lousaDoRobo } from '../lib/aula-lousa/do-robo';
 import { letraCombina } from '../lib/aula-lousa/letras';
 import { validarLousa } from '../lib/aula-lousa/validar';
 import { validarExplicacao } from '../lib/tutor/validar';
+import { VERSAO_EXPLICACAO } from '../lib/tutor/pronta';
 
 // Aplica as aulas reescritas no molde do robô (docs/aula-robo-do-antigo.md) em questões de Matemática e Física que
 // estavam no molde antigo, SEM equação montada (Pablo, 22/11/2026). Cada arquivo de <pasta>/saida/<id>.json passa por
@@ -20,6 +21,15 @@ type Passo = { titulo?: unknown; texto?: unknown; visual?: unknown };
 export function primeiroNumero(s: string): number | null {
   const m = s.replace(/\s(?=\d{3}\b)/g, '').match(/-?\d+(?:[.,]\d+)?/);
   return m ? Number(m[0].replace(',', '.')) : null;
+}
+
+/** Aula nova não tem "ideia": usa o que a questão quer, que abre o texto do passo "A equação em letras" (até 300 letras, em frases inteiras). */
+function ideiaDosPassos(passos: Passo[]): string {
+  const texto = String(passos.find((p) => p.titulo === 'A equação em letras')?.texto ?? '').replace(/\s+/g, ' ').trim();
+  const frases = texto.match(/[^.!?]+[.!?]/g) ?? [texto];
+  let saida = '';
+  for (const f of frases) if ((saida + f).trim().length <= 300) saida = `${saida}${f}`;
+  return saida.trim() || texto.slice(0, 300);
 }
 
 function conferir(passos: Passo[], resposta: string, valorFinal: unknown, alternativaCerta: string): string[] {
@@ -48,7 +58,7 @@ async function main() {
   if (!pasta) throw new Error('uso: aplicar-aulas-robo.ts <pasta> [--gravar]');
   const dir = `${pasta}/saida`;
   if (!existsSync(dir)) throw new Error(`sem ${dir}`);
-  const aprovadas: { id: string; antes: unknown; depois: object }[] = [];
+  const aprovadas: { id: string; nova: boolean; antes: unknown; depois: object }[] = [];
   let semConta = 0;
   for (const arq of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     const id = arq.replace(/\.json$/, '');
@@ -56,11 +66,12 @@ async function main() {
     if (saida.semConta) { semConta++; console.log(`${id}: sem conta (${saida.motivo ?? '?'}) — fica como está`); continue; }
     const q = await prisma.question.findUnique({ where: { id } });
     const e = await prisma.explicacaoPronta.findUnique({ where: { questionId: id } });
-    if (!q || !e || !saida.passos) { console.log(`${id}: ✗ questão, explicação ou passos ausentes`); continue; }
+    // Sem aula no banco (questão real do ENEM nunca explicada): nasce uma linha nova (24/11/2026).
+    if (!q || !saida.passos) { console.log(`${id}: ✗ questão ou passos ausentes`); continue; }
     if (!['Matemática', 'Física'].includes(q.materia)) { console.log(`${id}: ✗ fora de Mat/Fís`); continue; }
     const certa = ({ A: q.alternativaA, B: q.alternativaB, C: q.alternativaC, D: q.alternativaD, E: q.alternativaE } as Record<string, string | null>)[q.respostaCorreta] ?? '';
     const erros = conferir(saida.passos, q.respostaCorreta, saida.valor_final, certa);
-    const antigo = (e.conteudo ?? {}) as Record<string, unknown>;
+    const antigo = (e?.conteudo ?? { ideia: ideiaDosPassos(saida.passos), pecas: [], seuErro: null }) as Record<string, unknown>;
     const { lousa: _l, ...semLousa } = antigo;
     void _l;
     const mesclado = validarExplicacao({ ...semLousa, passos: saida.passos }, q.materia);
@@ -72,14 +83,17 @@ async function main() {
     else if (!aula || aula.cenas.length !== r.aula.cenas.length) erros.push('o porteiro da lousa cortou tela');
     if (erros.length || !mesclado || !aula) { console.log(`${id}: ✗ ${erros.join(' · ')}`); continue; }
     console.log(`${id}: ✓ ${aula.cenas.length} telas · resposta ${q.respostaCorreta} = ${saida.valor_final}`);
-    aprovadas.push({ id, antes: antigo, depois: { ...(mesclado as object), lousa: aula } });
+    aprovadas.push({ id, nova: !e, antes: antigo, depois: { ...(mesclado as object), lousa: aula } });
   }
   console.log(`\naprovadas: ${aprovadas.length} · sem conta: ${semConta}`);
   if (!gravar) { console.log('Simulação: nada gravado. Rode com --gravar.'); return; }
   const copia = `${process.env.HOME}/backups-prepenem/explicacoes-antes-aulas-robo-${new Date().toISOString().slice(0, 16).replace(':', 'h')}.json`;
   writeFileSync(copia, JSON.stringify(Object.fromEntries(aprovadas.map((a) => [a.id, a.antes]))));
   console.log(`Cópia: ${copia}`);
-  for (const a of aprovadas) await prisma.explicacaoPronta.update({ where: { questionId: a.id }, data: { conteudo: a.depois } });
+  for (const a of aprovadas) {
+    if (a.nova) await prisma.explicacaoPronta.create({ data: { questionId: a.id, versao: VERSAO_EXPLICACAO, conteudo: a.depois as object, revisada: true, problemas: null, modelo: 'escrita na sessão' } });
+    else await prisma.explicacaoPronta.update({ where: { questionId: a.id }, data: { conteudo: a.depois } });
+  }
   console.log(`Gravadas: ${aprovadas.length}`);
 }
 
