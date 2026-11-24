@@ -2,6 +2,7 @@
 // volta, pista) para a aula de lousa (Pablo, 21/11/2026: "não tá que nem o quadro do Universo
 // Narrado"). Função pura: recebe a questão e os passos, devolve a lousa ou o motivo de não dar.
 import type { AulaLousa, Cena, Cor, Desenho, Fala } from './tipos';
+import { pecasDaConta, separarContas, telaDaFormula, telasDosDados, telasDeContas } from './quadro-de-conta';
 
 export type Passo = { titulo?: unknown; texto?: unknown; visual?: unknown };
 export type EntradaDoRobo = {
@@ -171,6 +172,27 @@ export function dividirEnunciado(enunciado: string): string[] {
   return partes;
 }
 
+/** Equação em quadro: a fórmula com legenda embaixo de cada letra e, depois, a mesma conta com o porquê só na fala. */
+function equacaoEmQuadro(formula: string, leitura: string, letras: Record<string, unknown>[], explicacao: string): Cena[] {
+  const dasLetras = letras.map((l) => ({ letra: limpa(texto(l.letra)), oque: limpa(texto(l.oque)) }));
+  const tela = telaDaFormula(formula, dasLetras, falasDasLetras(letras));
+  if (!tela) return telasDaEquacao(formula, leitura, letras, explicacao);
+  const cenas: Cena[] = [tela];
+  const conta = pecasDaConta(formula, true);
+  const porque = limpa(explicacao);
+  if (conta && porque) cenas.push(...telasDeContas('por quê', [conta], falas(porque)));
+  return cenas;
+}
+
+function telasDosDadosDe(v: Record<string, unknown> | null, t: string): Cena[] {
+  const linhas = (Array.isArray(v?.linhas) ? (v!.linhas as unknown[]) : []).flatMap((l): [string, string][] => {
+    if (!Array.isArray(l)) return [];
+    const [a, b] = l.map((x) => limpa(texto(x)));
+    return a && b ? [[a, b]] : [];
+  });
+  return telasDosDados(linhas, falas(t));
+}
+
 export function lousaDoRobo(e: EntradaDoRobo): Resultado {
   const passos = e.passos;
   if (texto(passos[0]?.titulo) !== TITULO_PRIMEIRO_PASSO) return { ok: false, motivo: 'não é o molde do robô' };
@@ -212,7 +234,9 @@ export function lousaDoRobo(e: EntradaDoRobo): Resultado {
         ...quebrar(limpa(texto(it.nome)), cabem(24)).map((s) => ({ s, cor: 'azul' as Cor, tam: 24 })),
         ...quebrar(limpa(texto(it.formula)), cabem(26)).map((s) => ({ s, cor: 'verde' as Cor, tam: 26 })),
       ]);
-      cenas.push(...telas('as fórmulas', linhas, falas(t)));
+      const contas = itens.map((it) => pecasDaConta(limpa(texto(it.formula)), true));
+      if (contas.length > 0 && contas.every((c) => c !== null)) cenas.push(...telasDeContas('as fórmulas', contas as NonNullable<(typeof contas)[number]>[], falas(t)));
+      else cenas.push(...telas('as fórmulas', linhas, falas(t)));
     } else if (v?.tipo === 'equacao') {
       const formula = limpa(texto(v.formula));
       // As letras que aparecem na fórmula vêm primeiro, na ordem em que aparecem: assim nenhuma
@@ -225,9 +249,17 @@ export function lousaDoRobo(e: EntradaDoRobo): Resultado {
         .map((l, i) => ({ l, i }))
         .sort((a, b) => posicao(a.l) - posicao(b.l) || a.i - b.i)
         .map(({ l }) => l);
-      cenas.push(...telasDaEquacao(formula, limpa(texto(v.leitura)), letras, t));
+      cenas.push(...equacaoEmQuadro(formula, limpa(texto(v.leitura)), letras, t));
     } else if (/receita|parecida/i.test(titulo)) {
-      cenas.push(...telas('questão parecida?', [...linhasDoTexto(t), ...linhasDaTabela(v)], falas(t)));
+      // A receita repete a aula: só as contas dela vão para o quadro (numa tela) e a pista vira fala.
+      const contas = (Array.isArray(v?.linhas) ? (v!.linhas as unknown[]) : []).flatMap((l) => (Array.isArray(l) ? separarContas(limpa(texto(l[1]))).contas : []));
+      if (contas.length > 0) cenas.push(...telasDeContas('questão parecida?', contas.slice(0, 3), falas(t)));
+      else cenas.push(...telas('questão parecida?', [...linhasDoTexto(t), ...linhasDaTabela(v)], falas(t)));
+    } else if (/^O que eu tenho/i.test(titulo) && v?.tipo === 'tabela' && telasDosDadosDe(v, t).length > 0) {
+      cenas.push(...telasDosDadosDe(v, t));
+    } else if (!/receita|parecida/i.test(titulo) && separarContas(t).contas.length > 0) {
+      const { contas, prosa } = separarContas(t);
+      cenas.push(...telasDeContas(titulo.replace(/^Achando /, 'achando '), contas, falas(prosa || `${titulo}.`)));
     } else {
       const base = v?.tipo === 'tabela' ? [...linhasDoTexto(t.split('\n')[0] ?? ''), ...linhasDaTabela(v)] : linhasDoTexto(t);
       cenas.push(...telas(titulo.replace(/^Achando /, 'achando '), base, falas(t)));

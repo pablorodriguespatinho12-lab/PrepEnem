@@ -29,3 +29,10 @@
 
 ## Ordem de modelos
 Haiku (`explorador`): contar e listar por SQL, ler figuras. Sonnet (`executor`): código, telas, conferir tela. Opus só se travar.
+
+## Regra 24 (Pablo, 24/11/2026, depois de ver o protótipo)
+- **Mais ou menos 80% das telas só equação, mais ou menos 20% outras: são MÉDIAS (Pablo: "não é exatamente 80%"), nunca limite exato por aula.** Telas só equação (letras com legendas, depois a mesma com números, `a + b = c`); ~20% no começo dizem o que a questão quer e quais dados pegar.
+- **Fator na fórmula tem tela do porquê**: queda livre, "÷ 2" = velocidade média (0 a 20, média 10). Protótipo refeito com 5 telas: pede, v no fim, v média, altura, atalho.
+- Fase 3 ganha um TESTE: média de telas `eq` entre 70 e 90% nas lousas de exatas (não por aula) (contar por comando, dizer "X de Y").
+- `aluno-do-zero` ganhou os tropeços 20 (origem sem porquê) e 21 (texto onde cabia equação).
+- Limite do validador subiu de 8 para 10 peças por equação (a 9ª peça sumia em silêncio).

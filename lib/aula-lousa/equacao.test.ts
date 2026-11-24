@@ -51,3 +51,20 @@ describe('validarLousa com eq', () => {
     expect(aula).toBeNull();
   });
 });
+
+describe('fração desenhada (peça "cima|baixo")', () => {
+  const saida = expandirEquacao({ k: 'eq', y: 120, t: 0, tam: 44, partes: [{ s: 'v' }, { s: '=' }, { s: '0 + 20|2', leg: 'média' }] });
+
+  it('vira numerador, traço e denominador, e a legenda vai para baixo do denominador', () => {
+    const cima = saida.find((d) => d.k === 'tx' && d.s === '0 + 20')!;
+    const baixo = saida.find((d) => d.k === 'tx' && d.s === '2')!;
+    const barra = saida.find((d) => d.k === 'linha')!;
+    const leg = saida.find((d) => d.k === 'tx' && d.s === 'média')!;
+    expect(cima.k === 'tx' && barra.k === 'linha' && baixo.k === 'tx' && leg.k === 'tx').toBe(true);
+    if (cima.k !== 'tx' || barra.k !== 'linha' || baixo.k !== 'tx' || leg.k !== 'tx') return;
+    expect(cima.y).toBeLessThan(barra.y1);
+    expect(baixo.y).toBeGreaterThan(barra.y1);
+    expect(leg.y).toBeGreaterThan(baixo.y);
+    expect(saida.some((d) => d.k === 'tx' && d.s.includes('|'))).toBe(false);
+  });
+});

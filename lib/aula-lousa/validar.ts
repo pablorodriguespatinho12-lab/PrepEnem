@@ -16,7 +16,7 @@ const MAX_ALTERNATIVA = 60;
 const MAX_PROVA = 220;
 const MAX_CAMINHO = 240;
 const MAX_GRADE = 36;
-const MAX_PECAS_EQ = 8;
+const MAX_PECAS_EQ = 12;
 // Só comandos de traço de SVG: nada de letra solta que abra brecha.
 const CAMINHO_OK = /^[MmLlHhVvZzCcSsQqTtAa0-9eE.,\s-]+$/;
 const ANCORAS: readonly Ancora[] = ['start', 'middle', 'end'];
@@ -110,14 +110,14 @@ function desenho(bruto: unknown): Desenho | null {
   }
 }
 
-/** Equação com legendas: vira textos comuns (até 8 peças; peça até 12 letras, legenda até 22). */
+/** Equação com legendas: vira textos comuns (até 12 peças; peça até 16 letras, legenda até 22). */
 function equacao(bruto: unknown): Desenho[] {
   const d = objeto(bruto);
   const n = nums(emY(d.y), tempo(d.t), numero(d.tam ?? 40, 20, 56));
   if (d.k !== 'eq' || !n) return [];
   const partes = lista(d.partes).slice(0, MAX_PECAS_EQ).flatMap((p) => {
     const o = objeto(p);
-    const s = texto(o.s, 12);
+    const s = texto(o.s, 16);
     return s ? [{ s, leg: texto(o.leg, 22) ?? undefined, cor: cor(o.cor) }] : [];
   });
   return partes.length ? expandirEquacao({ k: 'eq', y: n[0], t: n[1], tam: n[2], partes }) : [];
