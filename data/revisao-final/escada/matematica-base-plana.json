@@ -1,0 +1,989 @@
+[
+ {
+  "id": "d2-escada-mat-pla-b01",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um terreno retangular de 8 m de comprimento e 5 m de largura vai ser cercado em toda a volta. Quantos metros de cerca são necessários?",
+  "A": "26 m",
+  "B": "13 m",
+  "C": "40 m",
+  "D": "21 m",
+  "E": "18 m",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "16+10 = 26. A. B = só dois lados; C = área; D = 8+8+5; E = 8+5+5.",
+   "ideia": "A volta toda tem dois lados de 8 e dois lados de 5: 16 + 10 = 26 m.",
+   "pecas": [
+    {
+     "termo": "Perímetro",
+     "significado": "O comprimento da volta toda de uma figura."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "retangulo",
+        "nome": "Perímetro",
+        "formula": "volta = 2 × comprimento + 2 × largura"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Comprimento",
+        "8 m"
+       ],
+       [
+        "Largura",
+        "5 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o tamanho da volta toda.\nPor que 2 vezes? Um retângulo tem 4 lados: dois iguais compridos e dois iguais curtos.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "p = 2 × c + 2 × l",
+      "leitura": "perímetro = dois comprimentos + duas larguras",
+      "letras": [
+       {
+        "letra": "p",
+        "oque": "perímetro, em metros (o que a questão quer)"
+       },
+       {
+        "letra": "c",
+        "oque": "comprimento"
+       },
+       {
+        "letra": "l",
+        "oque": "largura"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando c (comprimento)",
+     "texto": "O enunciado dá direto.\nc = 8 m"
+    },
+    {
+     "titulo": "Achando l (largura)",
+     "texto": "O enunciado dá direto.\nl = 5 m"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "p = 2 × 8 + 2 × 5\n2 × 8 = 16\n2 × 5 = 10\np = 16 + 10 = 26 m\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "c",
+        "8 m"
+       ],
+       [
+        "l",
+        "5 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: cerca, moldura, volta → some todos os lados.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "8 m e 5 m"
+       ],
+       [
+        "2. Equação em letras",
+        "p = 2 × c + 2 × l"
+       ],
+       [
+        "3. Achar cada letra",
+        "c = 8; l = 5"
+       ],
+       [
+        "4. Substituir",
+        "16 + 10 = 26"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Retângulo de 6 m por 2 m. Perímetro?",
+    "opcoes": [
+     "16 m",
+     "8 m",
+     "12 m",
+     "14 m"
+    ],
+    "certa": "16 m",
+    "resposta": "6 + 6 + 2 + 2 = 16 m."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-pla-b02",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Uma sala retangular mede 7 m por 4 m e vai receber piso novo. Quantos metros quadrados de piso são necessários?",
+  "A": "11 m²",
+  "B": "22 m²",
+  "C": "14 m²",
+  "D": "28 m²",
+  "E": "56 m²",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "7×4 = 28. D. A = soma; B = perímetro; C = metade; E = dobro.",
+   "ideia": "São 7 quadrados de 1 metro numa fileira e 4 fileiras: 28 m².",
+   "pecas": [
+    {
+     "termo": "Área",
+     "significado": "O tamanho de uma superfície, o quanto ela cobre."
+    },
+    {
+     "termo": "m²",
+     "significado": "Lê-se metro quadrado: um quadrado de 1 m por 1 m."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "retangulo",
+        "nome": "Área do retângulo",
+        "formula": "área = comprimento × largura"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Comprimento",
+        "7 m"
+       ],
+       [
+        "Largura",
+        "4 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quanto de chão há para cobrir.\nPor que multiplicar? 3 quadrados em cada uma de 2 fileiras: 3 × 2 = 6 quadrados.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "a = c × l",
+      "leitura": "área = comprimento × largura",
+      "letras": [
+       {
+        "letra": "a",
+        "oque": "área, em m² (o que a questão quer)"
+       },
+       {
+        "letra": "c",
+        "oque": "comprimento"
+       },
+       {
+        "letra": "l",
+        "oque": "largura"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando c (comprimento)",
+     "texto": "O enunciado dá direto.\nc = 7 m"
+    },
+    {
+     "titulo": "Achando l (largura)",
+     "texto": "O enunciado dá direto.\nl = 4 m"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "a = 7 × 4 = 28 m²\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "c",
+        "7 m"
+       ],
+       [
+        "l",
+        "4 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: piso, tinta, grama → área: comprimento × largura.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "7 m e 4 m"
+       ],
+       [
+        "2. Equação em letras",
+        "a = c × l"
+       ],
+       [
+        "3. Achar cada letra",
+        "c = 7; l = 4"
+       ],
+       [
+        "4. Substituir",
+        "7 × 4 = 28"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Sala de 6 m por 3 m. Área?",
+    "opcoes": [
+     "18 m²",
+     "9 m²",
+     "36 m²",
+     "12 m²"
+    ],
+    "certa": "18 m²",
+    "resposta": "6 × 3 = 18 m²."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-pla-b03",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um canteiro em forma de triângulo tem base de 6 m e altura de 4 m. Qual é a área do canteiro?",
+  "A": "24 m²",
+  "B": "12 m²",
+  "C": "10 m²",
+  "D": "5 m²",
+  "E": "48 m²",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "24/2 = 12. B. A = retângulo; C = soma; D = metade da soma; E = dobro.",
+   "ideia": "O triângulo ocupa metade do retângulo de mesma base e altura: 24 ÷ 2 = 12 m².",
+   "pecas": [
+    {
+     "termo": "Base",
+     "significado": "O lado de baixo do triângulo."
+    },
+    {
+     "termo": "Altura",
+     "significado": "A medida em pé, da base até a ponta de cima."
+    },
+    {
+     "termo": "m²",
+     "significado": "Lê-se metro quadrado: um quadrado de 1 m por 1 m."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "triangulo",
+        "nome": "Área do triângulo",
+        "formula": "área = base × altura ÷ 2"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Base",
+        "6 m"
+       ],
+       [
+        "Altura",
+        "4 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a superfície do canteiro.\nPor que dividir por 2? Um retângulo cortado de um canto até o canto oposto vira 2 triângulos iguais.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "a = b × h ÷ 2",
+      "leitura": "área = base × altura ÷ 2",
+      "letras": [
+       {
+        "letra": "a",
+        "oque": "área, em m² (o que a questão quer)"
+       },
+       {
+        "letra": "b",
+        "oque": "base"
+       },
+       {
+        "letra": "h",
+        "oque": "altura"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando b (base)",
+     "texto": "O enunciado dá direto.\nb = 6 m"
+    },
+    {
+     "titulo": "Achando h (altura)",
+     "texto": "O enunciado dá direto.\nh = 4 m"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo fazer 6 × 4 = 24, a letra A.\n24 é o retângulo inteiro; o triângulo é a metade."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "6 × 4 = 24\na = 24 ÷ 2 = 12 m²\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "b",
+        "6 m"
+       ],
+       [
+        "h",
+        "4 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: triângulo → base × altura e metade.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "base 6, altura 4"
+       ],
+       [
+        "2. Equação em letras",
+        "a = b × h ÷ 2"
+       ],
+       [
+        "3. Achar cada letra",
+        "b = 6; h = 4"
+       ],
+       [
+        "4. Substituir",
+        "24 ÷ 2 = 12"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Triângulo de base 10 m e altura 3 m. Área?",
+    "opcoes": [
+     "15 m²",
+     "30 m²",
+     "13 m²",
+     "60 m²"
+    ],
+    "certa": "15 m²",
+    "resposta": "10 × 3 = 30; 30 ÷ 2 = 15 m²."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-pla-b04",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "O tampo redondo de uma mesa tem raio de 2 m. Usando π = 3, qual é a área do tampo?",
+  "A": "6 m²",
+  "B": "4 m²",
+  "C": "36 m²",
+  "D": "7 m²",
+  "E": "12 m²",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "3×4 = 12. E. A = 3×2; B = sem pi; C = (3×2)²; D = soma.",
+   "ideia": "A área do círculo é pi × raio × raio: 3 × 2 × 2 = 12 m².",
+   "pecas": [
+    {
+     "termo": "π",
+     "significado": "Lê-se pi: um número usado nos círculos. Aqui vale 3."
+    },
+    {
+     "termo": "Raio",
+     "significado": "A distância do meio do círculo até a borda."
+    },
+    {
+     "termo": "m²",
+     "significado": "Lê-se metro quadrado: um quadrado de 1 m por 1 m."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circulo",
+        "nome": "Área do círculo",
+        "formula": "área = pi × raio × raio"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Raio",
+        "2 m"
+       ],
+       [
+        "π",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a superfície do tampo.\nPor que raio duas vezes? A área do círculo é pi vezes a do quadrado de lado r: raio 1, quadrado 1, círculo 3.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "a = p × r × r",
+      "leitura": "área = pi × raio × raio",
+      "letras": [
+       {
+        "letra": "a",
+        "oque": "área, em m² (o que a questão quer)"
+       },
+       {
+        "letra": "p",
+        "oque": "o número pi"
+       },
+       {
+        "letra": "r",
+        "oque": "raio"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando p (pi)",
+     "texto": "O enunciado manda usar.\np = 3"
+    },
+    {
+     "titulo": "Achando r (raio)",
+     "texto": "O enunciado dá direto.\nr = 2 m"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo fazer 3 × 2 = 6, a letra A.\nFaltou multiplicar pelo raio de novo."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "a = 3 × 2 × 2\n3 × 2 = 6\n6 × 2 = 12 m²\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "p",
+        "3"
+       ],
+       [
+        "r",
+        "2 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: área redonda → pi × raio × raio.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "raio 2, pi 3"
+       ],
+       [
+        "2. Equação em letras",
+        "a = p × r × r"
+       ],
+       [
+        "3. Achar cada letra",
+        "p = 3; r = 2"
+       ],
+       [
+        "4. Substituir",
+        "3 × 2 × 2 = 12"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Círculo de raio 3 m (π = 3). Área?",
+    "opcoes": [
+     "27 m²",
+     "9 m²",
+     "18 m²",
+     "81 m²"
+    ],
+    "certa": "27 m²",
+    "resposta": "3 × 3 × 3 = 27 m²."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-pla-b05",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Uma escada está encostada numa parede em pé. O pé da escada fica a 3 m da parede, e o topo alcança 4 m de altura. Qual é o comprimento da escada?",
+  "A": "7 m",
+  "B": "25 m",
+  "C": "5 m",
+  "D": "1 m",
+  "E": "12 m",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "9+16 = 25; 5. C. A = soma; B = não tirou a raiz; D = diferença; E = produto.",
+   "ideia": "Escada, parede e chão formam um triângulo reto: 9 + 16 = 25, e o número que vezes ele mesmo dá 25 é 5.",
+   "pecas": [
+    {
+     "termo": "Triângulo reto",
+     "significado": "Triângulo com um canto igual ao canto de uma folha de papel."
+    },
+    {
+     "termo": "Hipotenusa",
+     "significado": "O lado mais comprido, em frente ao canto reto."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "triangulo-retangulo",
+        "nome": "Pitágoras",
+        "formula": "maior × maior = chão × chão + parede × parede"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Chão",
+        "3 m"
+       ],
+       [
+        "Parede",
+        "4 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o lado comprido, que é a escada.\nPor que vezes ele mesmo? Pitágoras, num canto reto, compara quadrados desenhados nos lados: lado 2 dá 2 × 2 = 4.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "h × h = a × a + b × b",
+      "leitura": "escada vezes ela mesma = chão vezes chão + parede vezes parede",
+      "letras": [
+       {
+        "letra": "h",
+        "oque": "comprimento da escada, a hipotenusa (o que a questão quer)"
+       },
+       {
+        "letra": "a",
+        "oque": "lado no chão"
+       },
+       {
+        "letra": "b",
+        "oque": "lado na parede"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando a (chão)",
+     "texto": "O enunciado dá direto.\na = 3 m"
+    },
+    {
+     "titulo": "Achando b (parede)",
+     "texto": "O enunciado dá direto.\nb = 4 m"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo somar 3 + 4 = 7, a letra A.\nA escada corta caminho: é menor que 7."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "3 × 3 = 9\n4 × 4 = 16\n9 + 16 = 25\nTeste: 4 × 4 = 16, pouco. 5 × 5 = 25.\nh = 5 m\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "a",
+        "3 m"
+       ],
+       [
+        "b",
+        "4 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: canto reto e pede o lado comprido → some os quadrados e ache o número.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "3 m e 4 m"
+       ],
+       [
+        "2. Equação em letras",
+        "h × h = a × a + b × b"
+       ],
+       [
+        "3. Achar cada letra",
+        "a = 3; b = 4"
+       ],
+       [
+        "4. Substituir",
+        "9 + 16 = 25; h = 5"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Pé a 6 m, topo a 8 m. Comprimento?",
+    "opcoes": [
+     "10 m",
+     "14 m",
+     "100 m",
+     "2 m"
+    ],
+    "certa": "10 m",
+    "resposta": "36 + 64 = 100 = 10 × 10."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-pla-b06",
+  "materia": "Matemática",
+  "tema": "Geometria Plana",
+  "enunciado": "Um jardim retangular de 10 m por 6 m tem, dentro dele, um canteiro retangular de 4 m por 3 m. O resto do jardim é coberto de grama. Qual é a área de grama?",
+  "A": "60 m²",
+  "B": "48 m²",
+  "C": "72 m²",
+  "D": "12 m²",
+  "E": "9 m²",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "60-12 = 48. B. A = jardim todo; C = soma; D = só o canteiro; E = lados subtraídos.",
+   "ideia": "Ache a área do jardim todo, 60, e tire a área do canteiro, 12: sobram 48 m².",
+   "pecas": [
+    {
+     "termo": "m²",
+     "significado": "Lê-se metro quadrado: um quadrado de 1 m por 1 m."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "retangulo",
+        "nome": "Área do retângulo",
+        "formula": "área = comprimento × largura"
+       },
+       {
+        "figura": "retangulo",
+        "nome": "O que sobra",
+        "formula": "área grande − área pequena"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Jardim",
+        "10 m por 6 m"
+       ],
+       [
+        "Canteiro",
+        "4 m por 3 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer só a parte com grama.\nPor que subtrair? O canteiro ocupa um pedaço do jardim onde não há grama.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "g = j − c",
+      "leitura": "grama = área do jardim − área do canteiro",
+      "letras": [
+       {
+        "letra": "g",
+        "oque": "área de grama (o que a questão quer)"
+       },
+       {
+        "letra": "j",
+        "oque": "área do jardim todo"
+       },
+       {
+        "letra": "c",
+        "oque": "área do canteiro"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando j (jardim)",
+     "texto": "Comprimento × largura.\nj = 10 × 6 = 60"
+    },
+    {
+     "titulo": "Achando c (canteiro)",
+     "texto": "Comprimento × largura.\nc = 4 × 3 = 12"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo parar em 60, a letra A.\nAí o canteiro também teria grama."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "g = 60 − 12 = 48 m²\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "j",
+        "60"
+       ],
+       [
+        "c",
+        "12"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: uma figura dentro da outra → área grande menos a pequena.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "10 × 6 e 4 × 3"
+       ],
+       [
+        "2. Equação em letras",
+        "g = j − c"
+       ],
+       [
+        "3. Achar cada letra",
+        "j = 60; c = 12"
+       ],
+       [
+        "4. Substituir",
+        "60 − 12 = 48"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Parede de 5 m por 3 m com janela de 2 m por 1 m. Área da parede sem a janela?",
+    "opcoes": [
+     "13 m²",
+     "15 m²",
+     "17 m²",
+     "2 m²"
+    ],
+    "certa": "13 m²",
+    "resposta": "Janela 2 × 1 = 2; 15 − 2 = 13 m²."
+   }
+  }
+ }
+]

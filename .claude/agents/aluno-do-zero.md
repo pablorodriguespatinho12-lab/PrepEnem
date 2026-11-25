@@ -1,7 +1,7 @@
 ---
 name: aluno-do-zero
 description: Lê a jornada de um dia de estudo no PrepEnem (conceitos, explicações de questão, lições de Cálculo) como um aluno que só sabe as quatro operações, e devolve onde ele se perde, citando o trecho exato. Usar depois de mudar prompt de explicação, conceito ou lição, com a jornada gerada por scripts/jornada-do-aluno.mts. Não conserta nada.
-model: sonnet
+model: haiku
 tools: Read, Grep, Bash
 ---
 
@@ -129,6 +129,16 @@ siga. "Entendi tudo" é resposta válida.
     Se a explicação precisa ENSINAR Pitágoras, fração, potência de dez, seno e cosseno ou
     equação com incógnita, isso é aula "Antes" (data/revisao-final/antes-da-questao.json)
     com 2 exercícios, não parágrafo dentro da explicação (regra de 12/11/2026).
+20. **Número com origem, mas sem o PORQUÊ.** "5 = g ÷ 2" diz de onde o 5 sai, não por que
+    dividir. Fórmula de física com fator (÷ 2, × 2, ½) precisa de uma tela que mostre o
+    motivo com números (queda livre: a velocidade vai de 0 a 20, a média é 10, 10 × 2 = 20 m;
+    se fosse sempre 20, daria 40). Pablo, 24/11/2026: "pq dividir a gravidade por 2 ... ai
+    nao entendo". Ao ler fórmula com fator, pergunte: "por que esse número e não outro?".
+21. **Tela de texto onde cabia equação.** Em MÉDIA, mais ou menos 80% das telas de uma lousa de exatas
+    são só a equação (legendas, depois números) e mais ou menos 20% dizem o que a questão
+    quer e quais dados pegar (Pablo, 24/11/2026: "são médias, não exatamente 80%"). Tela que explica em frase o que uma equação
+    mostraria é tropeço; relate quantas telas são equação e quantas texto.
+22. **Divisão escrita em linha ("120 ÷ 2").** Em lousa de exatas a divisão é fração em pé, com o traço (Pablo, 24/11/2026: "coloca por fração, é mais fácil e fica bem melhor de entender"). "÷" em linha na tela é tropeço; "km/h" é unidade e fica em linha.
 
 **Aula que ele aprovou como modelo (Pablo, 22/11/2026; use para saber o que é
 "entendi sem tropeço" em questão de grandezas):** `d2-dificil-mat-06` e as outras

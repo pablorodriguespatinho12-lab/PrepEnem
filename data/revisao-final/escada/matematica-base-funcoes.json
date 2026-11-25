@@ -1,0 +1,1033 @@
+[
+ {
+  "id": "d2-escada-mat-fun-b01",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "Uma função é dada por f(x) = 3x + 2. Qual é o valor de f(4)?",
+  "A": "9",
+  "B": "12",
+  "C": "14",
+  "D": "36",
+  "E": "18",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "3×4+2 = 14. C. A = soma 3+4+2; B = esqueceu o 2; D = 34+2; E = 3×(4+2).",
+   "ideia": "f(4) quer dizer: ponha 4 no lugar do x. Fica 3 × 4 + 2 = 14.",
+   "pecas": [
+    {
+     "termo": "f(x)",
+     "significado": "Lê-se f de x: o resultado que depende do número x."
+    },
+    {
+     "termo": "3x",
+     "significado": "Quer dizer 3 vezes x."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Valor da função",
+        "formula": "troque o x pelo número e faça a conta"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Multiplica x",
+        "3"
+       ],
+       [
+        "Somado",
+        "2"
+       ],
+       [
+        "Número no lugar de x",
+        "4"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o resultado quando x vale 4.\nPor que multiplicar antes? 3x é \"três vezes x\": com x = 1, dá 3 × 1 + 2 = 5.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "r = m × x + s",
+      "leitura": "resultado = multiplicador × x + somado",
+      "letras": [
+       {
+        "letra": "r",
+        "oque": "resultado f(4) (o que a questão quer)"
+       },
+       {
+        "letra": "m",
+        "oque": "número que multiplica x"
+       },
+       {
+        "letra": "x",
+        "oque": "número que entra"
+       },
+       {
+        "letra": "s",
+        "oque": "número somado"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando m (multiplica)",
+     "texto": "Está na função.\nm = 3"
+    },
+    {
+     "titulo": "Achando x (entrada)",
+     "texto": "Está dentro de f(4).\nx = 4"
+    },
+    {
+     "titulo": "Achando s (somado)",
+     "texto": "Está na função.\ns = 2"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "3 × 4 = 12\nr = 12 + 2 = 14\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "m",
+        "3"
+       ],
+       [
+        "x",
+        "4"
+       ],
+       [
+        "s",
+        "2"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: f de um número → ponha o número no lugar do x.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "f(x) = 3x + 2; x = 4"
+       ],
+       [
+        "2. Equação em letras",
+        "r = m × x + s"
+       ],
+       [
+        "3. Achar cada letra",
+        "m = 3; x = 4; s = 2"
+       ],
+       [
+        "4. Substituir",
+        "12 + 2 = 14"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "f(x) = 2x + 1. Quanto é f(5)?",
+    "opcoes": [
+     "11",
+     "8",
+     "26",
+     "12"
+    ],
+    "certa": "11",
+    "resposta": "2 × 5 + 1 = 11."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-fun-b02",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "Um estacionamento cobra R$ 7,00 de entrada mais R$ 4,00 por hora. Quanto paga, em reais, quem fica 3 horas?",
+  "A": "19",
+  "B": "33",
+  "C": "25",
+  "D": "14",
+  "E": "12",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "7+12 = 19. A. B = (7+4)×3; C = 7×3+4; D = soma; E = só as horas.",
+   "ideia": "A entrada se paga uma vez só e a hora se repete: 7 + 4 × 3 = 19.",
+   "pecas": [
+    {
+     "termo": "Fixo",
+     "significado": "O que se paga uma vez, não importa o tempo."
+    },
+    {
+     "termo": "Variável",
+     "significado": "O que muda com o tempo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Fixo mais variável",
+        "formula": "total = fixo + preço da hora × horas"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Entrada",
+        "7"
+       ],
+       [
+        "Por hora",
+        "4"
+       ],
+       [
+        "Horas",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o total pago.\nPor que só a hora multiplica? Em 2 horas: paga 7 uma vez, mais 4 e mais 4.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "t = fix + q × h",
+      "leitura": "total = fixo + preço da hora × horas",
+      "letras": [
+       {
+        "letra": "t",
+        "oque": "total (o que a questão quer)"
+       },
+       {
+        "letra": "fix",
+        "oque": "parte fixa"
+       },
+       {
+        "letra": "q",
+        "oque": "preço de cada hora"
+       },
+       {
+        "letra": "h",
+        "oque": "horas"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando fix (fixo)",
+     "texto": "O enunciado dá direto.\nfix = 7"
+    },
+    {
+     "titulo": "Achando q (preço da hora)",
+     "texto": "O enunciado dá direto.\nq = 4"
+    },
+    {
+     "titulo": "Achando h (horas)",
+     "texto": "O enunciado dá direto.\nh = 3"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "4 × 3 = 12\nt = 7 + 12 = 19\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "fix",
+        "7"
+       ],
+       [
+        "q",
+        "4"
+       ],
+       [
+        "h",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"de entrada mais por hora\" → fixo + hora × horas.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "7 e 4 por hora; 3 h"
+       ],
+       [
+        "2. Equação em letras",
+        "t = fix + q × h"
+       ],
+       [
+        "3. Achar cada letra",
+        "fix = 7; q = 4; h = 3"
+       ],
+       [
+        "4. Substituir",
+        "7 + 12 = 19"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Taxa de 5 mais 2 por hora; 4 horas. Total?",
+    "opcoes": [
+     "13",
+     "28",
+     "22",
+     "11"
+    ],
+    "certa": "13",
+    "resposta": "2 × 4 = 8; 5 + 8 = 13."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-fun-b03",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "Uma planta cresce sempre no mesmo ritmo. No dia 2 ela media 14 cm, e no dia 6 media 26 cm. Quantos centímetros ela cresce por dia?",
+  "A": "12",
+  "B": "7",
+  "C": "4",
+  "D": "3",
+  "E": "2",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "12/4 = 3. D. A = só o crescimento; B = 14/2; C = só os dias; E = 12/6.",
+   "ideia": "Em 4 dias ela cresceu 12 cm: são 12 ÷ 4 = 3 cm por dia.",
+   "pecas": [
+    {
+     "termo": "Ritmo",
+     "significado": "Quanto muda a cada dia, sempre igual."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Taxa",
+        "formula": "por dia = quanto cresceu ÷ dias que passaram"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Dia 2",
+        "14 cm"
+       ],
+       [
+        "Dia 6",
+        "26 cm"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o crescimento de um único dia.\nPor que dividir? Se crescesse 10 cm em 2 dias, seriam 10 ÷ 2 = 5 em cada dia.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "t = c ÷ p",
+      "leitura": "taxa = crescimento ÷ dias passados",
+      "letras": [
+       {
+        "letra": "t",
+        "oque": "crescimento por dia, a taxa (o que a questão quer)"
+       },
+       {
+        "letra": "c",
+        "oque": "quanto cresceu, em cm"
+       },
+       {
+        "letra": "p",
+        "oque": "dias passados"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando c (crescimento)",
+     "texto": "Altura depois menos altura antes.\nc = 26 − 14 = 12"
+    },
+    {
+     "titulo": "Achando p (dias passados)",
+     "texto": "Dia depois menos dia antes.\np = 6 − 2 = 4"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo fazer 14 ÷ 2 = 7, a letra B.\nA planta não começou do zero no dia 0."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "t = 12 ÷ 4 = 3 cm por dia\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "c",
+        "12"
+       ],
+       [
+        "p",
+        "4"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dois momentos e pede \"por dia\" → diferença ÷ diferença.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "dia 2: 14; dia 6: 26"
+       ],
+       [
+        "2. Equação em letras",
+        "t = c ÷ p"
+       ],
+       [
+        "3. Achar cada letra",
+        "c = 12; p = 4"
+       ],
+       [
+        "4. Substituir",
+        "12 ÷ 4 = 3"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "No dia 1: 10 cm; no dia 3: 20 cm. Cresce quanto por dia?",
+    "opcoes": [
+     "5",
+     "10",
+     "20",
+     "15"
+    ],
+    "certa": "5",
+    "resposta": "10 cm em 2 dias: 5."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-fun-b04",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "A água de um tanque, em litros, é dada por f(t) = 60 − 5t, em que t é o tempo em minutos. Depois de quantos minutos o tanque fica vazio?",
+  "A": "60",
+  "B": "55",
+  "C": "300",
+  "D": "5",
+  "E": "12",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "60/5 = 12. E. A = o começo; B = 60-5; C = 60×5; D = a taxa.",
+   "ideia": "Vazio é água igual a zero: 5 litros por minuto precisam gastar os 60, e 60 ÷ 5 = 12 minutos.",
+   "pecas": [
+    {
+     "termo": "f(t)",
+     "significado": "Lê-se f de t: a água que há no minuto t."
+    },
+    {
+     "termo": "5t",
+     "significado": "Quer dizer 5 vezes t."
+    },
+    {
+     "termo": "Raiz",
+     "significado": "O número que faz a função dar zero."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Raiz",
+        "formula": "iguale a função a zero"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Água no começo",
+        "60"
+       ],
+       [
+        "Sai por minuto",
+        "5"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o minuto em que a água acaba.\nPor que zero? Tanque vazio tem 0 litro: 60 − 5t = 0, como 8 − 8 = 0, o que sai, 5t, tem de ser igual ao que havia, 60.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "t = a ÷ s",
+      "leitura": "tempo = água no começo ÷ quanto sai por minuto",
+      "letras": [
+       {
+        "letra": "t",
+        "oque": "tempo, em minutos (o que a questão quer)"
+       },
+       {
+        "letra": "a",
+        "oque": "água no começo, em litros"
+       },
+       {
+        "letra": "s",
+        "oque": "litros que saem por minuto"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando a (começo)",
+     "texto": "É o número sozinho na função.\na = 60"
+    },
+    {
+     "titulo": "Achando s (sai por minuto)",
+     "texto": "É o número que multiplica t.\ns = 5"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "t = 60 ÷ 5 = 12 minutos\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "a",
+        "60"
+       ],
+       [
+        "s",
+        "5"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"fica vazio\", \"zera\" → iguale a zero.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "60 − 5t"
+       ],
+       [
+        "2. Equação em letras",
+        "t = a ÷ s"
+       ],
+       [
+        "3. Achar cada letra",
+        "a = 60; s = 5"
+       ],
+       [
+        "4. Substituir",
+        "60 ÷ 5 = 12"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "f(t) = 20 − 4t. Quando dá zero?",
+    "opcoes": [
+     "5",
+     "16",
+     "80",
+     "4"
+    ],
+    "certa": "5",
+    "resposta": "20 ÷ 4 = 5."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-fun-b05",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "Uma tabela mostra o preço de uma corrida: 1 km custa R$ 8,00; 2 km, R$ 11,00; 3 km, R$ 14,00. Mantido o padrão, quanto custam 4 km, em reais?",
+  "A": "16",
+  "B": "17",
+  "C": "32",
+  "D": "22",
+  "E": "15",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "14+3 = 17. B. A = +2; C = 8×4; D = 8+14; E = 14+1.",
+   "ideia": "A cada quilômetro o preço sobe 3 reais: depois de 14 vem 17.",
+   "pecas": [
+    {
+     "termo": "Padrão",
+     "significado": "O que se repete sempre igual."
+    },
+    {
+     "termo": "km",
+     "significado": "Lê-se quilômetro."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Continuar a tabela",
+        "formula": "próximo = último + quanto sobe de cada vez"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "1 km",
+        "8"
+       ],
+       [
+        "2 km",
+        "11"
+       ],
+       [
+        "3 km",
+        "14"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a próxima linha da tabela.\nPor que não multiplicar 8 por 4? Isso cobraria a entrada 4 vezes; só 3 reais se repetem.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "n = u + d",
+      "leitura": "próximo = último preço + degrau",
+      "letras": [
+       {
+        "letra": "n",
+        "oque": "preço dos 4 km (o que a questão quer)"
+       },
+       {
+        "letra": "u",
+        "oque": "último preço da tabela"
+       },
+       {
+        "letra": "d",
+        "oque": "degrau: quanto sobe a cada km"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando u (último)",
+     "texto": "É a linha de 3 km.\nu = 14"
+    },
+    {
+     "titulo": "Achando d (degrau)",
+     "texto": "Uma linha menos a anterior.\nd = 11 − 8 = 3"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "n = 14 + 3 = 17\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "u",
+        "14"
+       ],
+       [
+        "d",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: tabela subindo igual → ache o degrau e some.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "8, 11, 14"
+       ],
+       [
+        "2. Equação em letras",
+        "n = u + d"
+       ],
+       [
+        "3. Achar cada letra",
+        "u = 14; d = 3"
+       ],
+       [
+        "4. Substituir",
+        "14 + 3 = 17"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "1 dá 5, 2 dá 9, 3 dá 13. Quanto dá 4?",
+    "opcoes": [
+     "17",
+     "20",
+     "14",
+     "18"
+    ],
+    "certa": "17",
+    "resposta": "Sobe 9 − 5 = 4 de cada vez: 13 + 4 = 17."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-fun-b06",
+  "materia": "Matemática",
+  "tema": "Funções",
+  "enunciado": "Num plano de celular, a conta é um valor fixo mais um preço por gigabyte usado. Com 2 gigabytes a conta foi de R$ 30,00, e com 6 gigabytes, R$ 50,00. Quanto será a conta com 10 gigabytes, em reais?",
+  "A": "70",
+  "B": "150",
+  "C": "80",
+  "D": "60",
+  "E": "50",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "taxa 5; fixo 20; 20+50 = 70. A. B = 15×10; C = 30+50; D = 50+10; E = repetiu.",
+   "ideia": "4 gigabytes a mais custaram 20 reais, então cada um custa 5. O fixo é 30 − 10 = 20, e com 10 gigabytes: 20 + 50 = 70.",
+   "pecas": [
+    {
+     "termo": "Gigabyte",
+     "significado": "Uma medida da internet usada."
+    },
+    {
+     "termo": "Fixo",
+     "significado": "O que se paga sempre, mesmo sem usar."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Taxa",
+        "formula": "preço de 1 = diferença de contas ÷ diferença de uso"
+       },
+       {
+        "figura": "grafico",
+        "nome": "Conta",
+        "formula": "conta = fixo + preço de 1 × quantidade"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "2 gigabytes",
+        "30"
+       ],
+       [
+        "6 gigabytes",
+        "50"
+       ],
+       [
+        "Quero",
+        "10 gigabytes"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a conta de um uso que não está na tabela.\nPor que achar o preço de 1 antes? Sem ele não dá para saber quanto do 30 é fixo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "c = fix + q × g",
+      "leitura": "conta = fixo + preço de cada gigabyte × gigabytes",
+      "letras": [
+       {
+        "letra": "c",
+        "oque": "conta com 10 gigabytes (o que a questão quer)"
+       },
+       {
+        "letra": "fix",
+        "oque": "parte fixa"
+       },
+       {
+        "letra": "q",
+        "oque": "preço de cada gigabyte"
+       },
+       {
+        "letra": "g",
+        "oque": "gigabytes usados"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando q (preço de cada um)",
+     "texto": "50 − 30 = 20 reais\n6 − 2 = 4 gigabytes\nq = 20 ÷ 4 = 5"
+    },
+    {
+     "titulo": "Achando fix (fixo)",
+     "texto": "Na conta de 2: 2 × 5 = 10 foi de uso.\nfix = 30 − 10 = 20"
+    },
+    {
+     "titulo": "Achando g (gigabytes)",
+     "texto": "O enunciado pede.\ng = 10"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo fazer 30 ÷ 2 = 15 por gigabyte e achar 150, a letra B.\nDentro dos 30 há o fixo."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "5 × 10 = 50\nc = 20 + 50 = 70\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "fix",
+        "20"
+       ],
+       [
+        "q",
+        "5"
+       ],
+       [
+        "g",
+        "10"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: duas contas e um fixo → preço de 1, depois o fixo, depois a nova conta.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "2 dá 30; 6 dá 50"
+       ],
+       [
+        "2. Equação em letras",
+        "c = fix + q × g"
+       ],
+       [
+        "3. Achar cada letra",
+        "q = 5; fix = 20"
+       ],
+       [
+        "4. Substituir",
+        "20 + 50 = 70"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Fixo mais preço por unidade: 1 dá 12, 3 dá 20. Quanto dá 5?",
+    "opcoes": [
+     "28",
+     "60",
+     "32",
+     "24"
+    ],
+    "certa": "28",
+    "resposta": "Cada um: 8 ÷ 2 = 4. Fixo: 12 − 4 = 8. Conta: 8 + 20 = 28."
+   }
+  }
+ }
+]

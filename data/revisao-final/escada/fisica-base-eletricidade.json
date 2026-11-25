@@ -1,0 +1,1150 @@
+[
+ {
+  "id": "d2-escada-fis-ele-03",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Por um ponto do fio de um carregador passam 20 C de carga elétrica em 4 segundos, sempre no mesmo ritmo. Qual é a corrente elétrica?",
+  "A": "80 A",
+  "B": "16 A",
+  "C": "5 A",
+  "D": "0,2 A",
+  "E": "24 A",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "20/4 = 5 A. C. A = 20×4; B = 20-4; D = 4/20; E = 20+4.",
+   "ideia": "Corrente é quanta carga passa em 1 segundo: 20 em 4 segundos dá 5 em cada segundo.",
+   "pecas": [
+    {
+     "termo": "C",
+     "significado": "Lê-se coulomb: mede a carga, a eletricidade que corre pelo fio."
+    },
+    {
+     "termo": "A",
+     "significado": "Lê-se ampere: coulombs que passam a cada segundo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Corrente",
+        "formula": "corrente = carga ÷ tempo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Carga",
+        "20 C"
+       ],
+       [
+        "Tempo",
+        "4 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a carga que passa em 1 segundo.\nPor que dividir? Se passassem 20 C em 2 s, seriam 20 ÷ 2 = 10 C em cada segundo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "i = c ÷ t",
+      "leitura": "intensidade da corrente = carga ÷ tempo",
+      "letras": [
+       {
+        "letra": "i",
+        "oque": "intensidade da corrente, em A (o que a questão quer)"
+       },
+       {
+        "letra": "c",
+        "oque": "carga que passou, em coulombs"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo, em segundos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando c (carga)",
+     "texto": "O enunciado dá direto.\nc = 20 C"
+    },
+    {
+     "titulo": "Achando t (tempo)",
+     "texto": "O enunciado dá direto.\nt = 4 s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "i = 20 ÷ 4 = 5 A\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "c",
+        "20 C"
+       ],
+       [
+        "t",
+        "4 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"tanta carga em tantos segundos\" → carga ÷ tempo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "20 C, 4 s"
+       ],
+       [
+        "2. Equação em letras",
+        "i = c ÷ t"
+       ],
+       [
+        "3. Achar cada letra",
+        "c = 20; t = 4"
+       ],
+       [
+        "4. Substituir",
+        "20 ÷ 4 = 5"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Passam 30 C em 10 s. Corrente?",
+    "opcoes": [
+     "3 A",
+     "300 A",
+     "20 A",
+     "40 A"
+    ],
+    "certa": "3 A",
+    "resposta": "30 ÷ 10 = 3 A."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ele-04",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Numa lanterna, a lâmpada tem resistência de 6 Ω e é atravessada por uma corrente de 2 A. Qual é a tensão na lâmpada?",
+  "A": "12 V",
+  "B": "3 V",
+  "C": "8 V",
+  "D": "4 V",
+  "E": "24 V",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "6×2 = 12 V. A. B = 6/2; C = 6+2; D = 6-2; E = 6×2×2.",
+   "ideia": "Cada ampere que atravessa 6 ohms pede 6 volts: com 2 amperes são 12 volts.",
+   "pecas": [
+    {
+     "termo": "Ω",
+     "significado": "Lê-se ohm: o quanto a peça dificulta a corrente."
+    },
+    {
+     "termo": "A",
+     "significado": "Lê-se ampere: a medida da corrente."
+    },
+    {
+     "termo": "V",
+     "significado": "Lê-se volt: a medida da tensão, o empurrão da pilha."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Lei de Ohm",
+        "formula": "tensão = resistência × corrente"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Resistência",
+        "6 Ω"
+       ],
+       [
+        "Corrente",
+        "2 A"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a tensão na lâmpada.\nPor que multiplicar? Em 6 Ω, 1 A pede 6 V, e 2 A pedem 6 + 6 = 12 V.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "U = R × i",
+      "leitura": "tensão = resistência × corrente",
+      "letras": [
+       {
+        "letra": "U",
+        "oque": "tensão, em volts (o que a questão quer)"
+       },
+       {
+        "letra": "R",
+        "oque": "resistência, em ohms"
+       },
+       {
+        "letra": "i",
+        "oque": "intensidade da corrente, em amperes"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando R (resistência)",
+     "texto": "O enunciado dá direto.\nR = 6 Ω"
+    },
+    {
+     "titulo": "Achando i (corrente)",
+     "texto": "O enunciado dá direto.\ni = 2 A"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "U = 6 × 2 = 12 V\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "R",
+        "6 Ω"
+       ],
+       [
+        "i",
+        "2 A"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dá ohms e amperes e pede volts → multiplique.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "6 Ω, 2 A"
+       ],
+       [
+        "2. Equação em letras",
+        "U = R × i"
+       ],
+       [
+        "3. Achar cada letra",
+        "R = 6; i = 2"
+       ],
+       [
+        "4. Substituir",
+        "6 × 2 = 12"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Resistência 10 Ω, corrente 3 A. Tensão?",
+    "opcoes": [
+     "30 V",
+     "13 V",
+     "7 V",
+     "3,3 V"
+    ],
+    "certa": "30 V",
+    "resposta": "10 × 3 = 30 V."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ele-05",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Num brinquedo, um resistor de 100 Ω e outro de 200 Ω estão ligados em série, um depois do outro. Qual é a resistência total dos dois?",
+  "A": "100 Ω",
+  "B": "150 Ω",
+  "C": "67 Ω",
+  "D": "300 Ω",
+  "E": "20 000 Ω",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "100+200 = 300. D. A = 200-100; B = média; C = fórmula de paralelo; E = produto.",
+   "ideia": "Em série a corrente atravessa um e depois o outro, então as resistências se somam: 100 + 200 = 300 Ω.",
+   "pecas": [
+    {
+     "termo": "Resistor",
+     "significado": "Uma peça que dificulta a passagem da corrente."
+    },
+    {
+     "termo": "Ω",
+     "significado": "Lê-se ohm: a medida da resistência."
+    },
+    {
+     "termo": "Em série",
+     "significado": "Um depois do outro, no mesmo caminho."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Série",
+        "formula": "total = primeira + segunda"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Primeiro resistor",
+        "100 Ω"
+       ],
+       [
+        "Segundo resistor",
+        "200 Ω"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a resistência dos dois juntos.\nPor que somar? A corrente enfrenta a dificuldade do primeiro e depois a do segundo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "s = a + b",
+      "leitura": "total em série = primeira resistência + segunda",
+      "letras": [
+       {
+        "letra": "s",
+        "oque": "resistência total em série (o que a questão quer)"
+       },
+       {
+        "letra": "a",
+        "oque": "resistência do primeiro, em ohms"
+       },
+       {
+        "letra": "b",
+        "oque": "resistência do segundo, em ohms"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando a (primeiro)",
+     "texto": "O enunciado dá direto.\na = 100 Ω"
+    },
+    {
+     "titulo": "Achando b (segundo)",
+     "texto": "O enunciado dá direto.\nb = 200 Ω"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "s = 100 + 200 = 300 Ω\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "a",
+        "100 Ω"
+       ],
+       [
+        "b",
+        "200 Ω"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"em série\" → some as resistências.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "100 Ω e 200 Ω"
+       ],
+       [
+        "2. Equação em letras",
+        "s = a + b"
+       ],
+       [
+        "3. Achar cada letra",
+        "a = 100; b = 200"
+       ],
+       [
+        "4. Substituir",
+        "100 + 200 = 300"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "20 Ω e 30 Ω em série. Total?",
+    "opcoes": [
+     "50 Ω",
+     "12 Ω",
+     "10 Ω",
+     "600 Ω"
+    ],
+    "certa": "50 Ω",
+    "resposta": "20 + 30 = 50 Ω."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ele-06",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Duas lâmpadas iguais, de 40 Ω cada, estão ligadas em paralelo, cada uma no seu próprio caminho. Qual é a resistência do conjunto?",
+  "A": "80 Ω",
+  "B": "20 Ω",
+  "C": "40 Ω",
+  "D": "1 600 Ω",
+  "E": "10 Ω",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "40/2 = 20. B. A = somou como série; C = não mudou; D = produto; E = 40/4.",
+   "ideia": "Com dois caminhos iguais a corrente passa com metade da dificuldade: 40 ÷ 2 = 20 Ω.",
+   "pecas": [
+    {
+     "termo": "Ω",
+     "significado": "Lê-se ohm: a medida da resistência."
+    },
+    {
+     "termo": "Em paralelo",
+     "significado": "Lado a lado: a corrente se divide entre dois caminhos."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Dois iguais em paralelo",
+        "formula": "total = resistência de um ÷ 2"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Cada lâmpada",
+        "40 Ω"
+       ],
+       [
+        "Lâmpadas",
+        "2 iguais"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a resistência das duas juntas.\nPor que fica menor? É como abrir uma segunda porta igual: com 2 caminhos, a dificuldade cai pela metade.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "p = R ÷ 2",
+      "leitura": "total em paralelo = resistência de uma ÷ 2",
+      "letras": [
+       {
+        "letra": "p",
+        "oque": "resistência do conjunto em paralelo (o que a questão quer)"
+       },
+       {
+        "letra": "R",
+        "oque": "resistência de uma lâmpada, em ohms"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando R (uma lâmpada)",
+     "texto": "O enunciado dá direto.\nR = 40 Ω"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo somar, 40 + 40 = 80, a letra A.\nSomar é para série, um depois do outro.\nAqui são dois caminhos lado a lado."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "p = 40 ÷ 2 = 20 Ω\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "R",
+        "40 Ω"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dois iguais \"em paralelo\" → metade de um.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "2 de 40 Ω"
+       ],
+       [
+        "2. Equação em letras",
+        "p = R ÷ 2"
+       ],
+       [
+        "3. Achar cada letra",
+        "R = 40"
+       ],
+       [
+        "4. Substituir",
+        "40 ÷ 2 = 20"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Dois resistores de 100 Ω em paralelo. Total?",
+    "opcoes": [
+     "50 Ω",
+     "200 Ω",
+     "100 Ω",
+     "25 Ω"
+    ],
+    "certa": "50 Ω",
+    "resposta": "100 ÷ 2 = 50 Ω."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ele-07",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Um chuveiro ligado em 220 V é atravessado por uma corrente de 20 A. Qual é a potência do chuveiro?",
+  "A": "11 W",
+  "B": "240 W",
+  "C": "200 W",
+  "D": "440 W",
+  "E": "4 400 W",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "220×20 = 4400. E. A = 220/20; B = soma; C = subtrai; D = vezes 2.",
+   "ideia": "Potência é tensão vezes corrente: 220 × 20 = 4 400 W.",
+   "pecas": [
+    {
+     "termo": "V",
+     "significado": "Lê-se volt: a medida da tensão."
+    },
+    {
+     "termo": "A",
+     "significado": "Lê-se ampere: a medida da corrente."
+    },
+    {
+     "termo": "W",
+     "significado": "Lê-se watt: a medida da potência, a energia usada a cada segundo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Potência",
+        "formula": "potência = tensão × corrente"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Tensão",
+        "220 V"
+       ],
+       [
+        "Corrente",
+        "20 A"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a potência do chuveiro.\nPor que multiplicar? Em 220 V, cada ampere usa 220 W. Com mais amperes, repete 220 W para cada um.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "pot = U × i",
+      "leitura": "potência = tensão × corrente",
+      "letras": [
+       {
+        "letra": "pot",
+        "oque": "potência, em watts (o que a questão quer)"
+       },
+       {
+        "letra": "U",
+        "oque": "tensão, em volts"
+       },
+       {
+        "letra": "i",
+        "oque": "intensidade da corrente, em amperes"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando U (tensão)",
+     "texto": "O enunciado dá direto.\nU = 220 V"
+    },
+    {
+     "titulo": "Achando i (corrente)",
+     "texto": "O enunciado dá direto.\ni = 20 A"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "pot = 220 × 20 = 4400 W\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "U",
+        "220 V"
+       ],
+       [
+        "i",
+        "20 A"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dá volts e amperes e pede watts → multiplique.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "220 V, 20 A"
+       ],
+       [
+        "2. Equação em letras",
+        "pot = U × i"
+       ],
+       [
+        "3. Achar cada letra",
+        "U = 220; i = 20"
+       ],
+       [
+        "4. Substituir",
+        "220 × 20 = 4400"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Aparelho em 110 V com 2 A. Potência?",
+    "opcoes": [
+     "220 W",
+     "55 W",
+     "112 W",
+     "108 W"
+    ],
+    "certa": "220 W",
+    "resposta": "110 × 2 = 220 W."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ele-08",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Um ventilador de 0,1 kW fica ligado 8 horas por dia durante 30 dias. Quanta energia ele consome nesse período?",
+  "A": "0,8 kWh",
+  "B": "3 kWh",
+  "C": "24 kWh",
+  "D": "240 kWh",
+  "E": "38 kWh",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "h = 240; 0,1×240 = 24. C. A = um dia; B = esqueceu as 8 h; D = vírgula; E = soma.",
+   "ideia": "Energia da conta de luz é quilowatts vezes horas: são 240 horas no mês, e 0,1 × 240 = 24 kWh.",
+   "pecas": [
+    {
+     "termo": "kW",
+     "significado": "Lê-se quilowatt: 1000 watts de potência."
+    },
+    {
+     "termo": "kWh",
+     "significado": "Lê-se quilowatt-hora: a energia de 1 kW ligado por 1 hora."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Energia na conta de luz",
+        "formula": "energia = potência em kW × horas"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Potência",
+        "0,1 kW"
+       ],
+       [
+        "Por dia",
+        "8 horas"
+       ],
+       [
+        "Dias",
+        "30"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a energia dos 30 dias.\nPor que multiplicar? Um aparelho de 2 kW por 3 horas gasta 2 + 2 + 2 = 6 kWh.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "e = pot × h",
+      "leitura": "energia = potência × horas ligado",
+      "letras": [
+       {
+        "letra": "e",
+        "oque": "energia, em kWh (o que a questão quer)"
+       },
+       {
+        "letra": "pot",
+        "oque": "potência, em kW"
+       },
+       {
+        "letra": "h",
+        "oque": "horas ligado no período todo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando pot (potência)",
+     "texto": "O enunciado dá direto.\npot = 0,1 kW"
+    },
+    {
+     "titulo": "Achando h (horas no mês)",
+     "texto": "8 horas por dia, em 30 dias.\nh = 8 × 30 = 240 horas"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "e = 0,1 × 240\n0,1 é um décimo.\nUm décimo de 240: 240 ÷ 10 = 24\ne = 24 kWh\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "pot",
+        "0,1 kW"
+       ],
+       [
+        "h",
+        "240"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dá potência e tempo por dia → junte as horas do mês e multiplique.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "0,1 kW; 8 h; 30 dias"
+       ],
+       [
+        "2. Equação em letras",
+        "e = pot × h"
+       ],
+       [
+        "3. Achar cada letra",
+        "h = 240"
+       ],
+       [
+        "4. Substituir",
+        "0,1 × 240 = 24"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Aparelho de 2 kW ligado 5 horas. Energia?",
+    "opcoes": [
+     "10 kWh",
+     "7 kWh",
+     "2,5 kWh",
+     "3 kWh"
+    ],
+    "certa": "10 kWh",
+    "resposta": "2 × 5 = 10 kWh."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ele-09",
+  "materia": "Física",
+  "tema": "Eletricidade e Circuitos",
+  "enunciado": "Uma bateria de 12 V alimenta dois resistores ligados em série, um de 2 Ω e outro de 4 Ω. Qual é a corrente no circuito?",
+  "A": "2 A",
+  "B": "6 A",
+  "C": "3 A",
+  "D": "9 A",
+  "E": "72 A",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "s = 6; i = 2. A. B = só o de 2 Ω; C = só o de 4 Ω; D = paralelo (4/3 Ω); E = 12×6.",
+   "ideia": "Primeiro junte os resistores em série: 2 + 4 = 6 Ω. Depois divida a tensão pela resistência: 12 ÷ 6 = 2 A.",
+   "pecas": [
+    {
+     "termo": "Ω",
+     "significado": "Lê-se ohm: a medida da resistência."
+    },
+    {
+     "termo": "Em série",
+     "significado": "Um depois do outro, no mesmo caminho."
+    },
+    {
+     "termo": "A",
+     "significado": "Lê-se ampere: a medida da corrente."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Série",
+        "formula": "total = primeira + segunda"
+       },
+       {
+        "figura": "circuito",
+        "nome": "Corrente",
+        "formula": "corrente = tensão ÷ resistência total"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Tensão",
+        "12 V"
+       ],
+       [
+        "Primeiro resistor",
+        "2 Ω"
+       ],
+       [
+        "Segundo resistor",
+        "4 Ω"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a corrente que passa pelos dois.\nPor que dividir? Se a resistência fosse 5 Ω, 1 A pediria 5 V, e com 10 V passariam 10 ÷ 5 = 2 A.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "i = U ÷ s",
+      "leitura": "corrente = tensão ÷ resistência total",
+      "letras": [
+       {
+        "letra": "i",
+        "oque": "intensidade da corrente, em amperes (o que a questão quer)"
+       },
+       {
+        "letra": "U",
+        "oque": "tensão da bateria, em volts"
+       },
+       {
+        "letra": "s",
+        "oque": "resistência total em série, em ohms"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando U (tensão)",
+     "texto": "O enunciado dá direto.\nU = 12 V"
+    },
+    {
+     "titulo": "Achando s (total em série)",
+     "texto": "Em série as resistências se somam.\ns = 2 + 4 = 6 Ω"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "i = 12 ÷ 6 = 2 A\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "U",
+        "12 V"
+       ],
+       [
+        "s",
+        "6 Ω"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: resistores em série e pede a corrente → some e depois tensão ÷ total.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "12 V; 2 Ω e 4 Ω"
+       ],
+       [
+        "2. Equação em letras",
+        "i = U ÷ s"
+       ],
+       [
+        "3. Achar cada letra",
+        "s = 6"
+       ],
+       [
+        "4. Substituir",
+        "12 ÷ 6 = 2"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "20 V com 3 Ω e 2 Ω em série. Corrente?",
+    "opcoes": [
+     "4 A",
+     "100 A",
+     "10 A",
+     "5 A"
+    ],
+    "certa": "4 A",
+    "resposta": "3 + 2 = 5; 20 ÷ 5 = 4 A."
+   }
+  }
+ }
+]

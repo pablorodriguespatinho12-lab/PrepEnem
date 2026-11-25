@@ -4,7 +4,9 @@ import { readFileSync, readdirSync, writeFileSync } from 'fs';
 import { PrismaClient } from '@prisma/client';
 import { lousaDoRobo } from '../lib/aula-lousa/do-robo';
 import { lousaDoAntigo } from '../lib/aula-lousa/do-antigo';
+import { comFiguraDoSolido } from '../lib/aula-lousa/solido';
 import { validarLousa } from '../lib/aula-lousa/validar';
+import { META_DE_CONTA, TOLERANCIA_DA_META, ehTelaDeConta } from '../lib/aula-lousa/quadro-de-conta';
 import { letrasPelaInicial, type Troca } from '../lib/aula-lousa/letras';
 
 // Põe a lousa nas aulas que ainda estão só no molde do robô (Pablo, 21/11/2026: "não tá que nem o
@@ -41,8 +43,12 @@ async function main() {
 
   // --refazer: regera a lousa só das que ESTE script já converteu (ids das cópias em ~/backups-prepenem),
   // nunca das feitas à mão.
+  // --todas (com --refazer): vale para qualquer lousa que tenha a capa deste gerador (as de aplicar-aulas-robo também), nunca as feitas à mão.
   const refazer = process.argv.includes('--refazer');
-  const meus = refazer ? idsJaConvertidos() : new Set<string>();
+  const todas = process.argv.includes('--todas');
+  const meus = refazer && !todas ? idsJaConvertidos() : new Set<string>();
+  const soIds = process.argv.find((a) => a.startsWith('--ids='))?.slice('--ids='.length).split(',');
+  const ehMinha = (id: string): boolean => (soIds ? soIds.includes(id) : todas || meus.has(id));
   const linhas = await prisma.explicacaoPronta.findMany({ include: { question: true } });
   const feitas: Record<string, unknown> = {};
   const motivos = new Map<string, number>();
@@ -52,8 +58,8 @@ async function main() {
   let foraDaMateria = 0;
   for (const l of linhas) {
     const c = (l.conteudo ?? {}) as Record<string, unknown>;
-    if (c.lousa && typeof c.lousa === 'object' && !(refazer && meus.has(l.questionId))) { jaTem++; continue; }
-    if (refazer && !meus.has(l.questionId)) continue;
+    if (c.lousa && typeof c.lousa === 'object' && !(refazer && ehMinha(l.questionId))) { jaTem++; continue; }
+    if (refazer && !ehMinha(l.questionId)) continue;
     // Nunca sobrescrever lousa feita à mão: um id que o script converteu antes pode ter ganho lousa à mão depois.
     if (refazer && !lousaEDoGerador(c.lousa)) { feitaAMao++; continue; }
     const passos = Array.isArray(c.passos) ? (c.passos as { titulo?: unknown; texto?: unknown; visual?: unknown }[]) : [];
@@ -71,13 +77,30 @@ async function main() {
       passos: passosNovos,
     };
     const r = doRobo ? lousaDoRobo(entrada) : lousaDoAntigo({ ...entrada, ideia: typeof c.ideia === 'string' ? c.ideia : '' });
-    if (!r.ok) { motivos.set(r.motivo, (motivos.get(r.motivo) ?? 0) + 1); continue; }
-    const aula = validarLousa(r.aula);
-    if (!aula || aula.cenas.length !== r.aula.cenas.length) { motivos.set('porteiro cortou tela', (motivos.get('porteiro cortou tela') ?? 0) + 1); continue; }
+    if (!r.ok) { motivos.set(r.motivo, (motivos.get(r.motivo) ?? 0) + 1); if (process.argv.includes('--quais')) console.log(`recusada ${q.id} · ${r.motivo}`); continue; }
+    // Regra 21: enunciado de sólido sem imagem → a lousa desenha a figura (só Matemática).
+    const comFigura = q.materia === 'Matemática' ? comFiguraDoSolido(r.aula, q.enunciado, !!q.imagemUrl || q.dependeImagem) : r.aula;
+    const aula = validarLousa(comFigura);
+    if (!aula || aula.cenas.length !== comFigura.cenas.length) { motivos.set('porteiro cortou tela', (motivos.get('porteiro cortou tela') ?? 0) + 1); continue; }
     feitas[q.id] = { aula, antes: c, conteudo: { ...c, passos: passosNovos }, trocas };
   }
 
   const ids = Object.keys(feitas);
+  // Regra 24: parte das telas de lousa (fora a capa) que é só conta, antes e depois.
+  const lousasDe = (x: unknown): ReturnType<typeof validarLousa> => validarLousa(x);
+  const parteDeConta = (aula: { cenas: Parameters<typeof ehTelaDeConta>[0][] } | null): [number, number] => {
+    const telas = (aula?.cenas ?? []).filter((c) => c.tipo === 'lousa').slice(1);
+    return [telas.filter(ehTelaDeConta).length, telas.length];
+  };
+  let [contasDepois, telasDepois, contasAntes, telasAntes, aulasNaFaixa] = [0, 0, 0, 0, 0];
+  for (const id of ids) {
+    const f = feitas[id] as { aula: Parameters<typeof parteDeConta>[0]; antes: { lousa?: unknown } };
+    const [cd, td] = parteDeConta(f.aula);
+    const [ca, ta] = parteDeConta(lousasDe(f.antes.lousa));
+    contasDepois += cd; telasDepois += td; contasAntes += ca; telasAntes += ta;
+    if (td > 0 && Math.abs(cd / td - META_DE_CONTA) <= TOLERANCIA_DA_META) aulasNaFaixa++;
+  }
+  console.log(`telas só de conta: antes ${contasAntes} de ${telasAntes} · depois ${contasDepois} de ${telasDepois} · aulas entre 70% e 90%: ${aulasNaFaixa} de ${ids.length} (média geral ${((100 * contasDepois) / Math.max(1, telasDepois)).toFixed(0)}%; meta é MÉDIA de mais ou menos 80%)`);
   const comTroca = ids.filter((id) => (feitas[id] as { trocas: Troca[] }).trocas.length);
   console.log(`letras trocadas pela inicial: ${comTroca.length} aulas, ${comTroca.reduce((n, id) => n + (feitas[id] as { trocas: Troca[] }).trocas.length, 0)} letras`);
   // Relatório de cada frase que mudou na troca de letra, para conferir linha a linha antes de gravar.

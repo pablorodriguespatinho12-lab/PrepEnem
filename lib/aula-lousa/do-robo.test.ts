@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { cabem, lousaDoRobo, quebrar } from './do-robo';
 import { validarLousa } from './validar';
+import { META_DE_CONTA, TOLERANCIA_DA_META, ehTelaDeConta } from './quadro-de-conta';
 
 const PASSOS = [
   { titulo: 'As fórmulas desta questão', texto: 'Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.', visual: { tipo: 'formulas', itens: [{ nome: 'Princípio multiplicativo', figura: 'contagem', formula: 'opções de cada escolha multiplicadas' }] } },
@@ -28,36 +29,55 @@ describe('lousa a partir da aula do robô', () => {
     expect(r.aula.cenas[1].tipo).toBe('papel');
   });
 
-  it('a letra que está na fórmula é explicada na mesma tela, antes da que não está', () => {
-    const passos = [
-      PASSOS[0],
-      { titulo: 'A equação em letras', texto: 'Quer a distância.', visual: { tipo: 'equacao', formula: 'D = M ÷ 1 000', leitura: 'km = metros ÷ 1 000', letras: [{ letra: 'D', oque: 'distância em km' }, { letra: 'CM', oque: 'distância em cm' }, { letra: 'M', oque: 'distância em metros' }] } },
-      PASSOS[3],
-      PASSOS[4],
-    ];
-    const r = lousaDoRobo({ ...ENTRADA, passos });
+  const textosDe = (c: (typeof ENTRADA_OK)['aula']['cenas'][number]) => (c.tipo === 'lousa' ? c.desenho.flatMap((d) => (d.k === 'tx' ? [d] : [])) : []);
+  const gera = (e = ENTRADA) => {
+    const r = lousaDoRobo(e);
     if (!r.ok) throw new Error(r.motivo);
-    const tela = r.aula.cenas.find((c) => c.tipo === 'lousa' && c.desenho.some((d) => d.k === 'tx' && d.s === 'as letras'));
-    const textos = tela && tela.tipo === 'lousa' ? tela.desenho.flatMap((d) => (d.k === 'tx' ? [d.s] : [])) : [];
-    expect(textos.indexOf('M = distância em metros')).toBeGreaterThan(-1);
-    expect(textos.indexOf('M = distância em metros')).toBeLessThan(textos.findIndex((s) => s.startsWith('CM')) === -1 ? 99 : textos.findIndex((s) => s.startsWith('CM')));
+    return validarLousa(r.aula)!;
+  };
+  const ENTRADA_OK = { aula: gera() };
+
+  it('a equação vira UMA tela com a legenda embaixo de cada letra (regra 18), sem tela de "as letras" em texto', () => {
+    const cenas = gera().cenas;
+    const tela = cenas.find((c) => textosDe(c).some((d) => d.s === 'a equação'))!;
+    const t = textosDe(tela);
+    const letraS = t.find((d) => d.s === 'S')!;
+    const legS = t.find((d) => d.s === 'sanduíches')!;
+    expect(legS.x).toBe(letraS.x);
+    expect(legS.y).toBeGreaterThan(letraS.y);
+    expect(cenas.some((c) => textosDe(c).some((d) => d.s === 'as letras'))).toBe(false);
   });
 
-  it('equação em 3 telas: só "letra = palavra", depois a equação sozinha, depois o porquê (sem explicar na 1ª)', () => {
-    const r = lousaDoRobo(ENTRADA);
-    if (!r.ok) throw new Error(r.motivo);
-    const titulo = (c: (typeof r.aula.cenas)[number]) => (c.tipo === 'lousa' ? (c.desenho.find((d) => d.k === 'tx') as { s: string } | undefined)?.s : undefined);
-    const ordem = r.aula.cenas.map(titulo);
-    const i = ordem.indexOf('as letras');
-    expect(i).toBeGreaterThan(-1);
-    expect(ordem.slice(i, i + 3)).toEqual(['as letras', 'a equação', 'por quê']);
-    const textos = (n: number) => { const c = r.aula.cenas[n]; return c.tipo === 'lousa' ? c.desenho.flatMap((d) => (d.k === 'tx' ? [d.s] : [])) : []; };
-    expect(textos(i)).toContain('P = pães');
-    expect(textos(i).join(' ')).toContain('S = sanduíches');
-    expect(textos(i).join(' ')).not.toMatch(/Por que/);
-    expect(textos(i + 1).join(' ')).toContain('S = P × R');
-    expect(textos(i + 1).join(' ')).not.toMatch(/Por que/);
-    expect(textos(i + 2).join(' ')).toMatch(/Por que/);
+  it('letra que não está na fórmula (CM) vai numa 2ª linha com a legenda, depois das que estão', () => {
+    const passos = [PASSOS[0], { titulo: 'A equação em letras', texto: 'Quer a distância.', visual: { tipo: 'equacao', formula: 'D = M ÷ 1 000', leitura: 'km = metros ÷ 1 000', letras: [{ letra: 'D', oque: 'distância em km' }, { letra: 'CM', oque: 'distância em cm' }, { letra: 'M', oque: 'distância em metros' }] } }, PASSOS[3], PASSOS[4]];
+    const tela = gera({ ...ENTRADA, passos }).cenas.find((c) => textosDe(c).some((d) => d.s === 'a equação'))!;
+    const t = textosDe(tela);
+    expect(t.some((d) => d.s === '1 000')).toBe(true); // denominador desenhado embaixo do traço
+    expect(t.find((d) => d.s === 'CM')!.y).toBeGreaterThan(t.find((d) => d.s === 'D')!.y);
+    expect(t.some((d) => d.s.includes('÷') || d.s.includes('|'))).toBe(false); // divisão sempre em fração
+  });
+
+  it('depois da equação vem o porquê: a conta de novo na tela e a explicação só na fala', () => {
+    const cenas = gera().cenas;
+    const i = cenas.findIndex((c) => textosDe(c).some((d) => d.s === 'a equação'));
+    const porque = cenas[i + 1];
+    expect(textosDe(porque).some((d) => d.s === 'por quê')).toBe(true);
+    expect(textosDe(porque).some((d) => /Por que/.test(d.s))).toBe(false);
+    expect(porque.fala.map((f) => f[1]).join(' ')).toMatch(/Por que/);
+  });
+
+  it('regra 24: em média, mais ou menos 80% das telas de lousa (fora a capa) são só conta', () => {
+    const lousas = gera().cenas.filter((c) => c.tipo === 'lousa').slice(1);
+    const contas = lousas.filter(ehTelaDeConta).length;
+    expect(contas / lousas.length).toBeGreaterThanOrEqual(META_DE_CONTA - TOLERANCIA_DA_META);
+  });
+
+  it('"Achando P" e a volta viram conta; a prosa e "Letra A." só viram fala', () => {
+    const cenas = gera().cenas;
+    const volta = cenas[cenas.length - 1];
+    expect(textosDe(volta).map((d) => d.s)).toEqual(expect.arrayContaining(['S', '=', '3', '×', '4', '12']));
+    expect(textosDe(volta).some((d) => /Letra/.test(d.s))).toBe(false);
+    expect(volta.fala.map((f) => f[1]).join(' ')).toContain('Letra A');
   });
 
   it('escala 1 : 50 000 não é cortada em duas falas', () => {
@@ -80,5 +100,32 @@ describe('lousa a partir da aula do robô', () => {
     for (const l of quebrar('uma frase bem comprida que precisa ser quebrada em várias linhas curtas', cabem(24))) {
       expect(l.length).toBeLessThanOrEqual(cabem(24));
     }
+  });
+});
+
+describe('resumoDaPista', () => {
+  it('pista curta fica inteira; comprida mostra o conselho depois da seta, sem cortar palavra', async () => {
+    const { resumoDaPista } = await import('./do-robo');
+    expect(resumoDaPista('Pista: soma em binário.')).toBe('soma em binário.');
+    const longa = 'Pista: trechos de MESMA DISTÂNCIA com velocidades diferentes → nunca tire a média das velocidades.';
+    expect(resumoDaPista(longa)).toBe('nunca tire a média das velocidades.');
+    const sem = resumoDaPista(`Pista: ${'palavra '.repeat(30)}fim.`);
+    expect(sem.length).toBeLessThanOrEqual(90);
+    expect(sem.endsWith('…')).toBe(true);
+  });
+});
+
+describe('dividirEnunciado', () => {
+  it('enunciado curto fica em 1 tela', async () => {
+    const { dividirEnunciado } = await import('./do-robo');
+    expect(dividirEnunciado('Quanto é 2 + 2?')).toEqual(['Quanto é 2 + 2?']);
+  });
+  it('enunciado longo quebra entre frases, sem perder texto, cada parte até 380', async () => {
+    const { dividirEnunciado } = await import('./do-robo');
+    const longo = Array.from({ length: 12 }, (_, i) => `Esta é a frase número ${i} do enunciado comprido.`).join(' ');
+    const partes = dividirEnunciado(longo);
+    expect(partes.length).toBeGreaterThan(1);
+    expect(partes.every((p) => p.length <= 380)).toBe(true);
+    expect(partes.join(' ')).toBe(longo);
   });
 });

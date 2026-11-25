@@ -1,0 +1,1009 @@
+[
+ {
+  "id": "d2-escada-fis-ter-03",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Um termômetro numa sala marca 27 °C. Sabendo que a temperatura em kelvin é a temperatura em graus Celsius mais 273, qual é essa temperatura em kelvin?",
+  "A": "246 K",
+  "B": "273 K",
+  "C": "27 K",
+  "D": "300 K",
+  "E": "7 371 K",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "27 + 273 = 300. D. A = 273-27; B = o número da regra; C = não converteu; E = 27×273.",
+   "ideia": "Para passar de graus Celsius para kelvin, some 273: 27 + 273 = 300 K.",
+   "pecas": [
+    {
+     "termo": "°C",
+     "significado": "Lê-se graus Celsius: a temperatura do dia a dia."
+    },
+    {
+     "termo": "K",
+     "significado": "Lê-se kelvin: a temperatura usada nas contas de gás."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Kelvin",
+        "formula": "kelvin = graus Celsius + 273"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Temperatura",
+        "27 °C"
+       ],
+       [
+        "Para somar",
+        "273"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a mesma temperatura, em kelvin.\nPor que somar? As duas escalas andam juntas, só começam em lugares diferentes: 0 °C é 273 K.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "k = g + 273",
+      "leitura": "temperatura em kelvin = graus Celsius + 273",
+      "letras": [
+       {
+        "letra": "k",
+        "oque": "temperatura em kelvin (o que a questão quer)"
+       },
+       {
+        "letra": "g",
+        "oque": "temperatura em graus Celsius"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando g (graus Celsius)",
+     "texto": "O enunciado dá direto.\ng = 27 °C"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "k = 27 + 273 = 300 K\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "g",
+        "27 °C"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pede kelvin e dá graus Celsius → some 273.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "27 °C"
+       ],
+       [
+        "2. Equação em letras",
+        "k = g + 273"
+       ],
+       [
+        "3. Achar cada letra",
+        "g = 27"
+       ],
+       [
+        "4. Substituir",
+        "27 + 273 = 300"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Quanto é 7 °C em kelvin?",
+    "opcoes": [
+     "280 K",
+     "266 K",
+     "7 K",
+     "273 K"
+    ],
+    "certa": "280 K",
+    "resposta": "7 + 273 = 280 K."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ter-04",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Uma chaleira aquece 200 g de água de 20 °C até 50 °C. O calor específico da água é 1 cal por grama a cada grau. Quanto calor a água recebe?",
+  "A": "6 000 cal",
+  "B": "10 000 cal",
+  "C": "4 000 cal",
+  "D": "200 cal",
+  "E": "230 cal",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "200×1×30 = 6000. A. B = usou 50; C = usou 20; D = esqueceu ΔT; E = soma.",
+   "ideia": "Cada grama precisa de 1 caloria para subir 1 grau: 200 gramas subindo 30 graus pedem 200 × 30 = 6 000 cal.",
+   "pecas": [
+    {
+     "termo": "cal",
+     "significado": "Lê-se caloria: uma medida de calor."
+    },
+    {
+     "termo": "Calor específico",
+     "significado": "O calor que 1 grama precisa para subir 1 grau."
+    },
+    {
+     "termo": "ΔT",
+     "significado": "Lê-se delta tê: quantos graus a temperatura mudou."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Calor para esquentar",
+        "formula": "calor = massa × calor específico × graus que subiu"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa",
+        "200 g"
+       ],
+       [
+        "Calor específico",
+        "1"
+       ],
+       [
+        "Começo",
+        "20 °C"
+       ],
+       [
+        "Fim",
+        "50 °C"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o calor que entrou na água.\nPor que multiplicar? 2 g subindo 3 graus: cada grama pede 3 cal, e 2 × 3 = 6 cal.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "Q = m × c × ΔT",
+      "leitura": "calor = massa × calor específico × graus que subiu",
+      "letras": [
+       {
+        "letra": "Q",
+        "oque": "calor, em calorias (o que a questão quer)"
+       },
+       {
+        "letra": "m",
+        "oque": "massa, em gramas"
+       },
+       {
+        "letra": "c",
+        "oque": "calor específico"
+       },
+       {
+        "letra": "ΔT",
+        "oque": "quantos graus a temperatura subiu"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando m (massa)",
+     "texto": "O enunciado dá direto.\nm = 200 g"
+    },
+    {
+     "titulo": "Achando c (calor específico)",
+     "texto": "O enunciado dá direto.\nc = 1"
+    },
+    {
+     "titulo": "Achando ΔT (graus que subiu)",
+     "texto": "Temperatura do fim menos a do começo.\nΔT = 50 − 20 = 30 graus"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "Q = 200 × 1 × 30\n200 × 1 = 200\n200 × 30 = 6000 cal\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "m",
+        "200 g"
+       ],
+       [
+        "c",
+        "1"
+       ],
+       [
+        "ΔT",
+        "30"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: esquentar sem mudar de estado → massa × calor específico × graus que subiu.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "200 g; 1; 20 a 50 °C"
+       ],
+       [
+        "2. Equação em letras",
+        "Q = m × c × ΔT"
+       ],
+       [
+        "3. Achar cada letra",
+        "ΔT = 30"
+       ],
+       [
+        "4. Substituir",
+        "200 × 1 × 30 = 6000"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "100 g de água sobem de 30 °C a 40 °C (c = 1). Calor?",
+    "opcoes": [
+     "1000 cal",
+     "4000 cal",
+     "100 cal",
+     "3000 cal"
+    ],
+    "certa": "1000 cal",
+    "resposta": "ΔT = 10; 100 × 1 × 10 = 1000 cal."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ter-05",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Um bloco de 50 g de gelo está a 0 °C. Para derreter, cada grama de gelo precisa de 80 cal. Quanto calor é necessário para derreter o bloco todo?",
+  "A": "0 cal",
+  "B": "130 cal",
+  "C": "1,6 cal",
+  "D": "400 cal",
+  "E": "4 000 cal",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "50×80 = 4000. E. A = achou que sem mudar temperatura não há calor; B = soma; C = 80/50; D = erro de zero.",
+   "ideia": "Cada grama pede 80 calorias para virar água: 50 gramas pedem 50 × 80 = 4 000 cal.",
+   "pecas": [
+    {
+     "termo": "cal",
+     "significado": "Lê-se caloria: uma medida de calor."
+    },
+    {
+     "termo": "Calor latente",
+     "significado": "O calor que 1 grama precisa para virar outra coisa (gelo virar água), sem mudar a temperatura."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Calor latente",
+        "formula": "calor = massa × calor latente"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Massa de gelo",
+        "50 g"
+       ],
+       [
+        "Calor latente",
+        "80 cal por grama"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o calor para virar tudo água.\nPor que multiplicar? 2 g de gelo, 80 cal para cada: 2 × 80 = 160 cal.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "Q = m × L",
+      "leitura": "calor = massa × calor latente",
+      "letras": [
+       {
+        "letra": "Q",
+        "oque": "calor, em calorias (o que a questão quer)"
+       },
+       {
+        "letra": "m",
+        "oque": "massa, em gramas"
+       },
+       {
+        "letra": "L",
+        "oque": "calor latente: calor para derreter 1 grama"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando m (massa)",
+     "texto": "O enunciado dá direto.\nm = 50 g"
+    },
+    {
+     "titulo": "Achando L (calor latente)",
+     "texto": "O enunciado dá direto.\nL = 80 cal por grama"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo dizer 0 cal, a letra A, porque o gelo continua a 0 °C.\nO calor entra, mas é gasto para derreter, não para esquentar."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "Q = 50 × 80 = 4000 cal\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "m",
+        "50 g"
+       ],
+       [
+        "L",
+        "80"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: derreter ou ferver → massa × calor latente.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "50 g; 80 cal por grama"
+       ],
+       [
+        "2. Equação em letras",
+        "Q = m × L"
+       ],
+       [
+        "3. Achar cada letra",
+        "m = 50; L = 80"
+       ],
+       [
+        "4. Substituir",
+        "50 × 80 = 4000"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Derreter 10 g de gelo a 0 °C (80 cal por grama). Calor?",
+    "opcoes": [
+     "800 cal",
+     "90 cal",
+     "8 cal",
+     "0 cal"
+    ],
+    "certa": "800 cal",
+    "resposta": "10 × 80 = 800 cal."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ter-06",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Um ebulidor (aparelho que esquenta água) de 500 W fica ligado por 1 minuto. Quanto calor (energia) ele entrega?",
+  "A": "500 J",
+  "B": "30 000 J",
+  "C": "501 J",
+  "D": "8,3 J",
+  "E": "1 800 000 J",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "500×60 = 30000. B. A = 1 s; C = soma com 1; D = 500/60; E = usou 3600.",
+   "ideia": "500 W são 500 joules a cada segundo, e 1 minuto tem 60 segundos: 500 × 60 = 30 000 J.",
+   "pecas": [
+    {
+     "termo": "J",
+     "significado": "Lê-se joule: uma medida de energia."
+    },
+    {
+     "termo": "W",
+     "significado": "Lê-se watt: joules entregues a cada segundo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "circuito",
+        "nome": "Energia pela potência",
+        "formula": "calor = potência × tempo em segundos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Potência",
+        "500 W"
+       ],
+       [
+        "Tempo",
+        "1 minuto"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a energia entregue no minuto todo.\nPor que multiplicar? Com 500 J em cada segundo, em 2 s seriam 500 × 2 = 1000 J.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "Q = pot × t",
+      "leitura": "calor = potência × tempo em segundos",
+      "letras": [
+       {
+        "letra": "Q",
+        "oque": "calor, em joules (o que a questão quer)"
+       },
+       {
+        "letra": "pot",
+        "oque": "potência, em W"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo, em segundos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando pot (potência)",
+     "texto": "O enunciado dá direto.\npot = 500 W"
+    },
+    {
+     "titulo": "Achando t (tempo em segundos)",
+     "texto": "1 minuto são 60 segundos (para decorar).\nt = 60 s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "Q = 500 × 60\nQ = 30 000 J\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "pot",
+        "500 W"
+       ],
+       [
+        "t",
+        "60 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dá watts e tempo → watts × segundos.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "500 W; 1 min"
+       ],
+       [
+        "2. Equação em letras",
+        "Q = pot × t"
+       ],
+       [
+        "3. Achar cada letra",
+        "t = 60"
+       ],
+       [
+        "4. Substituir",
+        "500 × 60 = 30 000"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um aquecedor de 100 W ligado por 10 s. Energia?",
+    "opcoes": [
+     "1000 J",
+     "10 J",
+     "110 J",
+     "60 000 J"
+    ],
+    "certa": "1000 J",
+    "resposta": "100 × 10 = 1000 J."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ter-07",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Um gás empurra um pistão (a tampa que desliza) com pressão sempre igual a 100 000 Pa. O volume do gás passa de 0,002 m³ para 0,005 m³. Qual é o trabalho feito pelo gás?",
+  "A": "500 J",
+  "B": "200 J",
+  "C": "300 J",
+  "D": "700 J",
+  "E": "300 000 J",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "ΔV = 0,003; 100000×0,003 = 300. C. A = usou o volume final; B = o inicial; D = somou os volumes; E = esqueceu a vírgula.",
+   "ideia": "Com pressão constante, o trabalho é a pressão vezes o quanto o volume cresceu: 100 000 × 0,003 = 300 J.",
+   "pecas": [
+    {
+     "termo": "Pa",
+     "significado": "Lê-se pascal: mede a pressão, o quanto o gás aperta as paredes."
+    },
+    {
+     "termo": "m³",
+     "significado": "Lê-se metro cúbico: uma medida de volume."
+    },
+    {
+     "termo": "ΔV",
+     "significado": "Lê-se delta vê: quanto o volume mudou."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Trabalho do gás",
+        "formula": "trabalho = pressão × quanto o volume mudou"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Pressão",
+        "100 000 Pa"
+       ],
+       [
+        "Volume no começo",
+        "0,002 m³"
+       ],
+       [
+        "Volume no fim",
+        "0,005 m³"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o trabalho: a energia que o gás gasta empurrando.\nPor que só a mudança? Se o volume não muda, o pistão não anda e o trabalho é zero.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "trab = p × ΔV",
+      "leitura": "trabalho = pressão × quanto o volume mudou",
+      "letras": [
+       {
+        "letra": "trab",
+        "oque": "trabalho, em joules (o que a questão quer)"
+       },
+       {
+        "letra": "p",
+        "oque": "pressão, em Pa"
+       },
+       {
+        "letra": "ΔV",
+        "oque": "volume do fim menos volume do começo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando p (pressão)",
+     "texto": "O enunciado dá direto.\np = 100 000 Pa"
+    },
+    {
+     "titulo": "Achando ΔV (mudança de volume)",
+     "texto": "0,005 são 5 pedaços de mil e 0,002 são 2. De 5 pedaços tire 2: ficam 3.\nΔV = 0,005 − 0,002 = 0,003 m³"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "trab = 100 000 × 0,003\n0,003 são 3 milésimos.\nUm pedaço de mil de 100 000: 100 000 ÷ 1000 = 100\nTrês milésimos: 100 + 100 + 100 = 300 J\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "p",
+        "100 000 Pa"
+       ],
+       [
+        "ΔV",
+        "0,003"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: gás com pressão constante mudando de volume → pressão × mudança de volume.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "100 000 Pa; 0,002 a 0,005"
+       ],
+       [
+        "2. Equação em letras",
+        "trab = p × ΔV"
+       ],
+       [
+        "3. Achar cada letra",
+        "ΔV = 0,003"
+       ],
+       [
+        "4. Substituir",
+        "100 000 × 0,003 = 300"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Pressão 1000 Pa; volume vai de 1 m³ a 3 m³. Trabalho?",
+    "opcoes": [
+     "2000 J",
+     "3000 J",
+     "4000 J",
+     "1000 J"
+    ],
+    "certa": "2000 J",
+    "resposta": "ΔV = 2; 1000 × 2 = 2000 J."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ter-08",
+  "materia": "Física",
+  "tema": "Termodinâmica e Calor",
+  "enunciado": "Um aquecedor de 100 W esquenta um aquário com 2 kg de água, fazendo a temperatura subir 5 °C. O calor específico da água é 4 000 J por quilograma a cada grau. Sem perdas de calor, quanto tempo o aquecedor precisa ficar ligado?",
+  "A": "400 s",
+  "B": "200 s",
+  "C": "80 s",
+  "D": "40 000 s",
+  "E": "100 s",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "Q = 40000; t = 400. A. B = esqueceu a massa; C = esqueceu o ΔT; D = parou no calor; E = 2×5×... = potência.",
+   "ideia": "Primeiro o calor que a água pede: 2 × 4 000 × 5 = 40 000 J. Depois o tempo: 40 000 ÷ 100 = 400 s.",
+   "pecas": [
+    {
+     "termo": "W",
+     "significado": "Lê-se watt: joules entregues a cada segundo."
+    },
+    {
+     "termo": "J",
+     "significado": "Lê-se joule: uma medida de energia."
+    },
+    {
+     "termo": "ΔT",
+     "significado": "Lê-se delta tê: quantos graus a temperatura mudou."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "termometro",
+        "nome": "Calor para esquentar",
+        "formula": "calor = massa × calor específico × graus que subiu"
+       },
+       {
+        "figura": "circuito",
+        "nome": "Tempo",
+        "formula": "tempo = calor ÷ potência"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Potência",
+        "100 W"
+       ],
+       [
+        "Massa",
+        "2 kg"
+       ],
+       [
+        "Calor específico",
+        "4 000"
+       ],
+       [
+        "Subida",
+        "5 °C"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer por quantos segundos o aquecedor fica ligado.\nPor que dividir? Para entregar 200 J com 100 J em cada segundo: 200 ÷ 100 = 2 s.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "t = Q ÷ pot",
+      "leitura": "tempo = calor ÷ potência",
+      "letras": [
+       {
+        "letra": "t",
+        "oque": "tempo, em segundos (o que a questão quer)"
+       },
+       {
+        "letra": "Q",
+        "oque": "calor que a água pede, em joules"
+       },
+       {
+        "letra": "pot",
+        "oque": "potência, em W"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando Q (calor)",
+     "texto": "Massa × calor específico × graus.\n2 × 4000 = 8000\n8000 × 5 = 40 000\nQ = 40 000 J"
+    },
+    {
+     "titulo": "Achando pot (potência)",
+     "texto": "O enunciado dá direto.\npot = 100 W"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "t = 40 000 ÷ 100\nTire dois zeros dos dois (a resposta não muda): 400 ÷ 1\nt = 400 s\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Q",
+        "40 000 J"
+       ],
+       [
+        "pot",
+        "100 W"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pede o tempo de um aquecedor → primeiro o calor, depois calor ÷ potência.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "100 W; 2 kg; 4000; 5 °C"
+       ],
+       [
+        "2. Equação em letras",
+        "t = Q ÷ pot"
+       ],
+       [
+        "3. Achar cada letra",
+        "Q = 40 000; pot = 100"
+       ],
+       [
+        "4. Substituir",
+        "40 000 ÷ 100 = 400"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um aquecedor de 200 W precisa entregar 20 000 J. Tempo?",
+    "opcoes": [
+     "100 s",
+     "4 000 000 s",
+     "200 s",
+     "10 s"
+    ],
+    "certa": "100 s",
+    "resposta": "20 000 ÷ 200 = 100 s."
+   }
+  }
+ }
+]

@@ -1,0 +1,791 @@
+[
+ {
+  "id": "d2-escada-mat-est-b01",
+  "materia": "Matemática",
+  "tema": "Estatística",
+  "enunciado": "Um time marcou 6, 7 e 11 pontos em três jogos. Qual foi a média de pontos por jogo?",
+  "A": "7",
+  "B": "24",
+  "C": "12",
+  "D": "8",
+  "E": "5",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "24/3 = 8. D. A = o do meio; B = só a soma; C = 24/2; E = diferença.",
+   "ideia": "Junte tudo, 24 pontos, e reparta igualmente pelos 3 jogos: 8 em cada.",
+   "pecas": [
+    {
+     "termo": "Média",
+     "significado": "O valor que cada um teria se o total fosse repartido por igual."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "media",
+        "nome": "Média",
+        "formula": "média = soma de todos ÷ quantos são"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Pontos",
+        "6, 7 e 11"
+       ],
+       [
+        "Jogos",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer os pontos de cada jogo se fossem iguais.\nPor que dividir? Com 4 e 6 pontos: juntos 10, repartidos em 2 jogos, 5 em cada.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "m = s ÷ n",
+      "leitura": "média = soma ÷ número de jogos",
+      "letras": [
+       {
+        "letra": "m",
+        "oque": "média (o que a questão quer)"
+       },
+       {
+        "letra": "s",
+        "oque": "soma dos pontos"
+       },
+       {
+        "letra": "n",
+        "oque": "número de jogos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando s (soma)",
+     "texto": "6 + 7 = 13\ns = 13 + 11 = 24"
+    },
+    {
+     "titulo": "Achando n (jogos)",
+     "texto": "O enunciado dá direto.\nn = 3"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "m = 24 ÷ 3 = 8\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "s",
+        "24"
+       ],
+       [
+        "n",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"média\" → some tudo e divida por quantos são.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "6, 7, 11"
+       ],
+       [
+        "2. Equação em letras",
+        "m = s ÷ n"
+       ],
+       [
+        "3. Achar cada letra",
+        "s = 24; n = 3"
+       ],
+       [
+        "4. Substituir",
+        "24 ÷ 3 = 8"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Notas 4, 6 e 8. Média?",
+    "opcoes": [
+     "6",
+     "18",
+     "9",
+     "4"
+    ],
+    "certa": "6",
+    "resposta": "18 ÷ 3 = 6."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-est-b02",
+  "materia": "Matemática",
+  "tema": "Estatística",
+  "enunciado": "As idades de cinco jogadores são 19, 12, 18, 14 e 13 anos. Qual é a mediana dessas idades?",
+  "A": "13",
+  "B": "14",
+  "C": "15,2",
+  "D": "18",
+  "E": "12",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "ordenado 12,13,14,18,19; meio 14. B. A = o último sem ordenar; C = a média; D = meio sem ordenar; E = o menor.",
+   "ideia": "Em ordem ficam 12, 13, 14, 18, 19: o do meio é 14.",
+   "pecas": [
+    {
+     "termo": "Mediana",
+     "significado": "O número do meio, com todos em ordem."
+    },
+    {
+     "termo": "Em ordem",
+     "significado": "Do menor para o maior."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "media",
+        "nome": "Mediana",
+        "formula": "ponha em ordem e pegue o do meio"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Idades",
+        "19, 12, 18, 14, 13"
+       ],
+       [
+        "Quantidade",
+        "5"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a idade do meio, com todas em ordem.\nEm ordem, com 3 números o meio é o 2º: (3 + 1) ÷ 2 = 2. Fora de ordem, o meio muda.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "p = (n + 1) ÷ 2 (posição do meio = (quantidade + 1) ÷ 2)",
+      "letras": [
+       {
+        "letra": "p",
+        "oque": "posição do meio na fila"
+       },
+       {
+        "letra": "n",
+        "oque": "quantidade de idades"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Pondo em ordem",
+     "texto": "Do menor para o maior:\n12, 13, 14, 18, 19"
+    },
+    {
+     "titulo": "Achando n (quantidade)",
+     "texto": "Conte as idades.\nn = 5"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo pegar o meio da lista como veio, 18, a letra D.\nPrimeiro ordene, depois pegue o meio."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "p = (5 + 1) ÷ 2 = 3\nA 3ª idade em ordem é 14.\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "n",
+        "5"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"mediana\" → ordenar e pegar o do meio.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "19, 12, 18, 14, 13"
+       ],
+       [
+        "2. Equação em letras",
+        "p = (n + 1) ÷ 2"
+       ],
+       [
+        "3. Achar cada letra",
+        "n = 5"
+       ],
+       [
+        "4. Substituir",
+        "3ª posição: 14"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Mediana de 9, 2 e 5?",
+    "opcoes": [
+     "5",
+     "2",
+     "9",
+     "16"
+    ],
+    "certa": "5",
+    "resposta": "Em ordem: 2, 5, 9."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-est-b03",
+  "materia": "Matemática",
+  "tema": "Estatística",
+  "enunciado": "Uma loja vendeu tênis dos números 37, 38, 40, 38, 39, 38 e 40. Qual é a moda desses números?",
+  "A": "40",
+  "B": "39",
+  "C": "3",
+  "D": "7",
+  "E": "38",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "38 aparece 3×. E. A = aparece 2×; B = chute vizinho; C = quantas vezes; D = quantos tênis.",
+   "ideia": "O número 38 aparece 3 vezes, mais do que qualquer outro: ele é a moda.",
+   "pecas": [
+    {
+     "termo": "Moda",
+     "significado": "O valor que mais aparece."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Moda",
+        "formula": "conte as repetições e pegue o campeão"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Números",
+        "37, 38, 40, 38, 39, 38, 40"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o número de tênis que mais saiu.\nPor que contar? A moda não faz soma nem divisão: só olha quem se repete mais.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "m = número com r repetições",
+      "leitura": "moda = o número da maior contagem r",
+      "letras": [
+       {
+        "letra": "m",
+        "oque": "moda (o que a questão quer)"
+       },
+       {
+        "letra": "r",
+        "oque": "a maior contagem de repetições"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando r (maior contagem)",
+     "texto": "37: 1 vez\n38: 3 vezes\n39: 1 vez\n40: 2 vezes\nr = 3"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo responder 3, a letra C.\n3 é quantas vezes; a moda é o número do tênis."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "m = 38\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "r",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"moda\" → o valor repetido mais vezes.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "sete números"
+       ],
+       [
+        "2. Equação em letras",
+        "m = o campeão"
+       ],
+       [
+        "3. Achar cada letra",
+        "38 aparece 3 vezes"
+       ],
+       [
+        "4. Substituir",
+        "m = 38"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Moda de 5, 7, 5, 9, 5, 7?",
+    "opcoes": [
+     "5",
+     "7",
+     "9",
+     "3"
+    ],
+    "certa": "5",
+    "resposta": "O 5 aparece 3 vezes."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-est-b04",
+  "materia": "Matemática",
+  "tema": "Estatística",
+  "enunciado": "Numa matéria, o trabalho tem peso 1 e a prova tem peso 3. Um aluno tirou 5 no trabalho e 9 na prova. Qual é a média dele?",
+  "A": "8",
+  "B": "7",
+  "C": "32",
+  "D": "16",
+  "E": "6",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "(5+27)/4 = 8. A. B = média simples; C = só a soma; D = 32/2; E = pesos trocados.",
+   "ideia": "A prova conta 3 vezes: 5 + 9 + 9 + 9 = 32, repartidos por 4, dão 8.",
+   "pecas": [
+    {
+     "termo": "Peso",
+     "significado": "Quantas vezes a nota conta."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "media",
+        "nome": "Média com peso",
+        "formula": "cada nota × peso, somar, dividir pela soma dos pesos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Trabalho",
+        "nota 5, peso 1"
+       ],
+       [
+        "Prova",
+        "nota 9, peso 3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a média contando a prova 3 vezes.\nPor que dividir pela soma dos pesos? É como ter 4 notas: uma do trabalho e três da prova.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "m = s ÷ p",
+      "leitura": "média = soma com pesos ÷ soma dos pesos",
+      "letras": [
+       {
+        "letra": "m",
+        "oque": "média (o que a questão quer)"
+       },
+       {
+        "letra": "s",
+        "oque": "soma das notas já multiplicadas pelo peso"
+       },
+       {
+        "letra": "p",
+        "oque": "soma dos pesos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando s (soma com pesos)",
+     "texto": "5 × 1 = 5\n9 × 3 = 27\ns = 5 + 27 = 32"
+    },
+    {
+     "titulo": "Achando p (soma dos pesos)",
+     "texto": "Os dois pesos juntos.\np = 1 + 3 = 4"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo fazer a média de 5 e 9, que dá 7, a letra B.\nA prova vale mais que o trabalho."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "m = 32 ÷ 4 = 8\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "s",
+        "32"
+       ],
+       [
+        "p",
+        "4"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"peso\" → multiplique cada um pelo peso e divida pela soma dos pesos.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "5 peso 1; 9 peso 3"
+       ],
+       [
+        "2. Equação em letras",
+        "m = s ÷ p"
+       ],
+       [
+        "3. Achar cada letra",
+        "s = 32; p = 4"
+       ],
+       [
+        "4. Substituir",
+        "32 ÷ 4 = 8"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Nota 4 com peso 1 e nota 10 com peso 2. Média?",
+    "opcoes": [
+     "8",
+     "7",
+     "24",
+     "6"
+    ],
+    "certa": "8",
+    "resposta": "4 + 20 = 24; 24 ÷ 3 = 8."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-est-b05",
+  "materia": "Matemática",
+  "tema": "Estatística",
+  "enunciado": "Cinco amigos leram 1, 2, 3, 4 e 15 livros num ano. Quanto a média de livros é maior que a mediana?",
+  "A": "5",
+  "B": "3",
+  "C": "2",
+  "D": "8",
+  "E": "0",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "5-3 = 2. C. A = a média; B = a mediana; D = diferença errada; E = achou iguais.",
+   "ideia": "A média é 25 ÷ 5 = 5 e a mediana é o do meio, 3: a diferença é 2.",
+   "pecas": [
+    {
+     "termo": "Média",
+     "significado": "A soma repartida por igual."
+    },
+    {
+     "termo": "Mediana",
+     "significado": "O número do meio, com todos em ordem."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "media",
+        "nome": "Média",
+        "formula": "soma ÷ quantos são"
+       },
+       {
+        "figura": "media",
+        "nome": "Mediana",
+        "formula": "o do meio, em ordem"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Livros",
+        "1, 2, 3, 4, 15"
+       ],
+       [
+        "Amigos",
+        "5"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a diferença entre a média e a mediana.\nPor que são diferentes? O 15 puxa a média para cima, mas não muda quem está no meio.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "d = m − e",
+      "leitura": "diferença = média − mediana",
+      "letras": [
+       {
+        "letra": "d",
+        "oque": "diferença (o que a questão quer)"
+       },
+       {
+        "letra": "m",
+        "oque": "média"
+       },
+       {
+        "letra": "e",
+        "oque": "mediana, o elemento do meio"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando m: a soma",
+     "texto": "1 + 2 + 3 + 4 = 10\n10 + 15 = 25"
+    },
+    {
+     "titulo": "Achando m (média)",
+     "texto": "m = 25 ÷ 5 = 5"
+    },
+    {
+     "titulo": "Achando e (mediana)",
+     "texto": "Já estão em ordem. O 3º dos 5 é o do meio.\ne = 3"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "d = 5 − 3 = 2\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "m",
+        "5"
+       ],
+       [
+        "e",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pede duas medidas → ache uma de cada vez e compare.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1, 2, 3, 4, 15"
+       ],
+       [
+        "2. Equação em letras",
+        "d = m − e"
+       ],
+       [
+        "3. Achar cada letra",
+        "m = 5; e = 3"
+       ],
+       [
+        "4. Substituir",
+        "5 − 3 = 2"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Em 2, 3 e 10, quanto a média é maior que a mediana?",
+    "opcoes": [
+     "2",
+     "5",
+     "3",
+     "7"
+    ],
+    "certa": "2",
+    "resposta": "Média 5; mediana 3; 5 − 3 = 2."
+   }
+  }
+ }
+]

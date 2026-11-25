@@ -3,6 +3,7 @@
 // Física (Pablo, 22/11/2026: "vai"). Função pura. Se sobrar LaTeX que não sei escrever em texto
 // simples, recusa a questão em vez de pôr "\dfrac" cru na lousa.
 import type { AulaLousa, Cena, Cor } from './tipos';
+import { pecasDaConta, separarContas, telasDeContas } from './quadro-de-conta';
 import {
   MAX_ALTERNATIVA, MAX_CENAS, MAX_PAPEL, cabem, falas, limpa, linhasDoTexto, quebrar, telas, texto, visualDe,
   type EntradaDoRobo, type Linha, type Resultado,
@@ -60,6 +61,34 @@ function linhasDoQuadro(v: Record<string, unknown>): Linha[] | null {
   return saida;
 }
 
+/** Do quadro antigo, as linhas que são conta (fórmula, dados com "=", contas, resultado) vão desenhadas; o resto vira fala. null = LaTeX que não sei escrever. */
+function contasDoQuadro(v: Record<string, unknown>): { contas: ReturnType<typeof pecasDaConta>[]; sobras: string[] } | null {
+  const lista = (k: string): string[] => (Array.isArray(v[k]) ? (v[k] as unknown[]).map(texto) : []);
+  const itens = [...[texto(v.formula)].filter(Boolean), ...lista('dados'), ...lista('contas'), ...[texto(v.resultado)].filter(Boolean)];
+  const contas: ReturnType<typeof pecasDaConta>[] = [];
+  const sobras: string[] = [];
+  for (const item of itens) {
+    const plano = latexParaTexto(item);
+    if (plano === null) return null;
+    const conta = pecasDaConta(plano, true);
+    if (conta) contas.push(conta);
+    else if (plano) sobras.push(plano);
+  }
+  return { contas, sobras };
+}
+
+const RESPOSTA = /^Letra\s+([A-E])\b[,:]?\s*(.{1,24}?)\.(?:\s+|$)/;
+
+/** "Letra D, 675 cm². A (90 cm²): ..." → quadro "D = 675 cm²" e o texto que sobra (por que as outras erram). null = não tem esse começo. */
+function respostaEmQuadro(titulo: string, t: string): { cena: Cena; resto: string } | null {
+  if (!/^a resposta/i.test(titulo)) return null;
+  const m = RESPOSTA.exec(t.trim());
+  if (!m) return null;
+  const partes = [{ s: m[1], leg: 'alternativa', cor: 'verde' as Cor }, { s: '=' }, { s: m[2].trim(), leg: 'resposta', cor: 'verde' as Cor }];
+  const [cena] = telasDeContas('a resposta', [partes], [[0.3, `A resposta é a letra ${m[1]}: ${m[2].trim()}.`]]);
+  return { cena, resto: t.trim().slice(m[0].length).trim() };
+}
+
 export function lousaDoAntigo(e: EntradaDoRobo & { ideia: string }): Resultado {
   const passos = e.passos;
   if (!passos.length || texto(passos[0]?.titulo) === 'As fórmulas desta questão') return { ok: false, motivo: 'não é o molde antigo' };
@@ -91,7 +120,11 @@ export function lousaDoAntigo(e: EntradaDoRobo & { ideia: string }): Resultado {
 
   const ideia = latexParaTexto(e.ideia);
   if (ideia === null) return { ok: false, motivo: 'LaTeX na ideia' };
-  if (ideia) cenas.push(...telas('a ideia', linhasDoTexto(ideia), falas(ideia)));
+  if (ideia) {
+    const { contas, prosa } = separarContas(ideia);
+    if (contas.length > 0) cenas.push(...telasDeContas('a ideia', contas, falas(prosa || ideia)));
+    else cenas.push(...telas('a ideia', linhasDoTexto(ideia), falas(ideia)));
+  }
 
   for (const p of passos) {
     const titulo = limpa(texto(p.titulo));
@@ -104,9 +137,23 @@ export function lousaDoAntigo(e: EntradaDoRobo & { ideia: string }): Resultado {
       const quadro = linhasDoQuadro(v);
       if (quadro === null) return { ok: false, motivo: 'LaTeX que não sei escrever' };
       const nota = latexParaTexto(texto(v.nota)) ?? '';
-      cenas.push(...telas(tituloTela, [...linhasDoTexto(t), ...quadro], falas(nota ? `${t} ${nota}` : t)));
+      const desenhado = contasDoQuadro(v);
+      const contasDoPasso = separarContas(t);
+      const todas = [...contasDoPasso.contas, ...(desenhado?.contas ?? [])].filter((c): c is NonNullable<typeof c> => c !== null);
+      if (todas.length > 0) {
+        const fala = [contasDoPasso.prosa, ...(desenhado?.sobras ?? []), nota].filter(Boolean).join(' ');
+        cenas.push(...telasDeContas(tituloTela, todas, falas(fala || tituloTela)));
+      } else {
+        cenas.push(...telas(tituloTela, [...linhasDoTexto(t), ...quadro], falas(nota ? `${t} ${nota}` : t)));
+      }
+    } else if (respostaEmQuadro(titulo, t)) {
+      const { cena, resto } = respostaEmQuadro(titulo, t)!;
+      cenas.push(cena);
+      if (resto) cenas.push(...telas('os outros', linhasDoTexto(resto), falas(resto)));
     } else {
-      cenas.push(...telas(tituloTela, linhasDoTexto(t), falas(t)));
+      const { contas, prosa } = separarContas(t);
+      if (contas.length > 0) cenas.push(...telasDeContas(tituloTela, contas, falas(prosa || tituloTela)));
+      else cenas.push(...telas(tituloTela, linhasDoTexto(t), falas(t)));
     }
   }
 
