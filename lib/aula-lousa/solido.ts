@@ -84,10 +84,10 @@ function desenhoDo(s: Solido): { d: Desenho[]; medidas: string; fala: string } {
       return {
         d: [
           traco('M110,110 L250,110 L250,220 L110,220 Z', 0.8), traco('M150,70 L290,70 L290,180 L250,220', 1.5), traco('M110,110 L150,70 L290,70 M250,110 L290,70', 1.8), traco('M150,70 L150,180 L110,220 M150,180 L290,180', 2.2, 'cinza'),
-          nome(180, 244, 'a', 'azul', 3.0), nome(86, 170, 'c', 'vermelho', 3.2), nome(286, 214, 'b', 'verde', 3.4),
+          nome(180, 244, 'c', 'azul', 3.0), nome(86, 170, 'a', 'vermelho', 3.2), nome(286, 214, 'l', 'verde', 3.4),
         ],
-        medidas: 'a = comprimento, b = largura, c = altura',
-        fala: 'Uma caixa (paralelepípedo): três medidas. a é o comprimento, b a largura e c a altura. As faces opostas são iguais.',
+        medidas: 'c = comprimento, l = largura, a = altura',
+        fala: 'Uma caixa (paralelepípedo): três medidas. c é o comprimento, l a largura e a a altura. As faces opostas são iguais.',
       };
   }
 }

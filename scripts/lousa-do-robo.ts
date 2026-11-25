@@ -47,7 +47,8 @@ async function main() {
   const refazer = process.argv.includes('--refazer');
   const todas = process.argv.includes('--todas');
   const meus = refazer && !todas ? idsJaConvertidos() : new Set<string>();
-  const ehMinha = (id: string): boolean => todas || meus.has(id);
+  const soIds = process.argv.find((a) => a.startsWith('--ids='))?.slice('--ids='.length).split(',');
+  const ehMinha = (id: string): boolean => (soIds ? soIds.includes(id) : todas || meus.has(id));
   const linhas = await prisma.explicacaoPronta.findMany({ include: { question: true } });
   const feitas: Record<string, unknown> = {};
   const motivos = new Map<string, number>();

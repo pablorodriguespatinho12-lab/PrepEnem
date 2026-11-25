@@ -13,21 +13,29 @@ Pedido dele: "faz um plano para já fazer tudo". Trabalhar até o fim, sem parar
 | Prova | Questões | Onde |
 |---|---|---|
 | Cinemática · Base | 7 | no ar |
-| Ondas · Base | 6 | no ar (não foi aberta na tela) |
-| 1 Óptica · Base | 6 | no ar (25/11), falta abrir na tela |
-| 2 Termodinâmica e Calor · Base | 6 | no ar (25/11), falta abrir na tela |
-| 3 Eletricidade · Base | 7 | no ar (25/11), falta abrir na tela |
-| 4 Dinâmica · Base | 6 | no ar (25/11), falta abrir na tela |
-| 5 Contagem e Probabilidade · Base | 6 | no ar (25/11), falta abrir na tela |
-| 6 Equações e Sistemas · Base | 5 | no ar (25/11), falta abrir na tela |
-| 7 Grandezas e Medidas · Base | 6 | no ar (25/11), falta abrir na tela |
-| 8 Geometria Espacial · Base | 5 | no ar (25/11), falta abrir na tela |
-| 9 Geometria Plana · Base | 6 | no ar (25/11), falta abrir na tela |
-| 10 Funções · Base | 6 | no ar (25/11), falta abrir na tela |
-| 11 Estatística · Base | 5 | no ar (25/11), falta abrir na tela |
-| 12 Aritmética e Porcentagem · Base | 6 | no ar (25/11), falta abrir na tela |
+| Ondas · Base | 6 | no ar, aberta na tela |
+| 1 Óptica · Base | 6 | no ar (25/11), aberta na tela |
+| 2 Termodinâmica e Calor · Base | 6 | no ar (25/11), aberta na tela |
+| 3 Eletricidade · Base | 7 | no ar (25/11), aberta na tela |
+| 4 Dinâmica · Base | 6 | no ar (25/11), aberta na tela |
+| 5 Contagem e Probabilidade · Base | 6 | no ar (25/11), aberta na tela |
+| 6 Equações e Sistemas · Base | 5 | no ar (25/11), aberta na tela |
+| 7 Grandezas e Medidas · Base | 6 | no ar (25/11), aberta na tela |
+| 8 Geometria Espacial · Base | 5 | no ar (25/11), aberta na tela |
+| 9 Geometria Plana · Base | 6 | no ar (25/11), aberta na tela |
+| 10 Funções · Base | 6 | no ar (25/11), aberta na tela |
+| 11 Estatística · Base | 5 | no ar (25/11), aberta na tela |
+| 12 Aritmética e Porcentagem · Base | 6 | no ar (25/11), aberta na tela |
 
-## Falta A: 12 provas de base (um conceito por questão, a última junta 2)
+## Estado em 25/11 (depois da execução)
+A: 12 de 12 no ar (70 questões, todas com lousa no banco). `varrer-prova` em 13 provas: 76 questões, 640 passos, 0 achados.
+B1 feito (lousa fotografada em 8 provas de Matemática; achado e consertado: letras da figura da caixa, 12 lousas regravadas).
+B2: 45 lousas com número sem origem listadas, NÃO consertadas (amostra parece conta trivial). B3: 2 aulas com telas demais
+(`d2-escada-mat-ita-pla-00d` 34, `d2-escada-fis-ita-ond-00b` 32), não mexidas. B4: 12 recusadas listadas com
+`lousa-do-robo.ts --quais` (8 LaTeX, 2 enunciado, 2 alternativa), não consertadas. B5 não feito.
+Consertos pós-agente sem 2ª leitura. Falta no molde: o desenho do triângulo da fórmula usa a, b, c fixos (colide em pla-b05).
+
+## Falta A (feito): 12 provas de base (um conceito por questão, a última junta 2)
 Ordem: a de menos questões fáceis primeiro. Nome do tema = exatamente o do banco. 5 a 7 questões por prova.
 
 | # | Tema (banco) | Fáceis hoje | Conceitos sozinhos, em ordem | Canal |
@@ -62,6 +70,14 @@ Canal de Matemática: `grep -n -i -- palavra docs/universo-narrado/capitulos/*.t
 11. `npm run build` (dev/start parado: `ss -ltnp | grep ':3000 '`), `git add` com os arquivos listados, commit, e `git push` em comando SEPARADO (a guarda exige).
 
 **Nunca rodar** `scripts/criar-provas-escada.ts`: ele esconde as provas "· Base".
+
+## Aprendi em 25/11 (conferir ANTES de escrever ficha)
+- Cada letra da equação tem sua tela "Achando X"; no máximo 3 peças; fórmula com até 60 letras; `confere` de fração é o numerador.
+- A letra da equação bate com a letra do DESENHO da tela.
+- Definição vale fora do caso: "proporcional" é "dobrou, dobra", nunca "cresce junto".
+- "Sua vez" mostra o caminho inteiro da conta, não só o resultado.
+- "Parece certo fazer X" tem de levar a uma resposta diferente da certa.
+- `conferencia` de distrator também é conta: conferir cada letra.
 
 ## Pedidos prontos
 - **Gabarito:** "Arquivo: <json>. Resolva cada questão só com enunciado e alternativas, depois compare com \"resposta\". Confira cada conta dos passos e do \"Sua vez\" (certa única) e se alguma definição é falsa. Não edite. Até 8 linhas: \"N de N batem\" ou id + erro."
