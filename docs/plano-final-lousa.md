@@ -35,6 +35,13 @@ B2: 45 lousas com número sem origem listadas, NÃO consertadas (amostra parece 
 `lousa-do-robo.ts --quais` (8 LaTeX, 2 enunciado, 2 alternativa), não consertadas. B5 não feito.
 Consertos pós-agente sem 2ª leitura. Falta no molde: o desenho do triângulo da fórmula usa a, b, c fixos (colide em pla-b05).
 
+## Estado em 25/11, 2ª sessão (PR 84 publicado)
+- `varrer-prova` nas 14 provas "· Base": 83 questões, 698 passos, 0 achados.
+- Achado olhando foto (o varredor NÃO pega): legendas uma em cima da outra, 198 telas em 157 aulas na simulação. Consertado no gerador (1 sobra, `d2-escada-mat-ita-esp-00b`). Falta regravar: `DB_CONFIRMED=1 npx tsx scripts/lousa-do-robo.ts <saida> --refazer --todas --gravar` (mudam 250 de 525; faz cópia sozinho; precisa do ok do Pablo).
+- 7 das 12 recusadas agora convertem: mesmo script sem `--refazer`, com `--gravar` (precisa do ok).
+- Ainda abertos: 5 recusadas, 2 aulas com telas demais (36), números sem origem (58 marcadas, maioria alarme falso; olhar `d2-banco-mat-cob-05/06/12/17/20`), aluno-do-zero nas figuras de sólidos.
+- Aprendi: foto de aula espera ~14 s por tela (com menos, o desenho sai pela metade); prévia sem gravar = trocar a lousa na resposta de `/api/tutor/explicacao`.
+
 ## Falta A (feito): 12 provas de base (um conceito por questão, a última junta 2)
 Ordem: a de menos questões fáceis primeiro. Nome do tema = exatamente o do banco. 5 a 7 questões por prova.
 
