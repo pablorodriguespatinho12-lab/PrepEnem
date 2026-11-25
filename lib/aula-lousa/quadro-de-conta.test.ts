@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { contasNaFrase, pecasDaConta, separarContas } from './quadro-de-conta';
+import { quebrar } from './do-robo';
 
 const textos = (p: { s: string }[] | null) => p?.map((x) => x.s);
 
@@ -26,6 +27,27 @@ describe('contasNaFrase', () => {
   });
   it('frase sem conta não devolve nada', () => {
     expect(contasNaFrase('A pizza cabe dentro do quadrado, com sobra nos cantos.')).toEqual([]);
+  });
+});
+
+describe('contasNaFrase não corta número nem aparte', () => {
+  const linhas = (f: string) => contasNaFrase(f).map((c) => c.map((p) => p.s.replace(/\u00a0/g, ' ')).join(' '));
+  it('milhar com espaço fica inteiro', () => {
+    expect(linhas('Então 72 · 100 = 7 200 metros.')).toEqual(['72 · 100 = 7 200']);
+    expect(linhas('Somando, 2 200 + 880 = 3 080.')).toEqual(['2 200 + 880 = 3 080']);
+  });
+  it('parêntese que sobrou e "milhões" ficam com o número', () => {
+    expect(linhas('conta: 2 200 + 880 = 3 080.)')).toEqual(['2 200 + 880 = 3 080']);
+    expect(linhas('Parece certo: 300 000 × 8 = 2,4 milhões. Mas não.')).toEqual(['300 000 × 8 = 2,4 milhões']);
+  });
+  it('a quebra de linha não parte o milhar', () => {
+    expect(quebrar('V = 400 000 + 1 500 000 = 1 900 000', 20).every((l) => !/^000/.test(l))).toBe(true);
+  });
+  it('conta dentro de parênteses não gruda na de fora', () => {
+    const saida = linhas('sm · sm = 24 · 24 = 576 (24 · 20 = 480 e 24 · 4 = 96). 2 · pr = 2 · 188 = 376.');
+    expect(saida).toContain('24 · 4 = 96');
+    expect(saida).toContain('2 · pr = 2 · 188 = 376');
+    expect(saida.some((l) => l.includes('96 2') || l.startsWith('24 · 4 = 2'))).toBe(false);
   });
 });
 

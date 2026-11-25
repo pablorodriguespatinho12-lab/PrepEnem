@@ -204,7 +204,7 @@ export function telasDosDados(linhas: [string, string][], fala: Fala[]): Cena[] 
   return telas;
 }
 
-const NUMERO = /^\d[\d.,]*[²³]?%?$/;
+const NUMERO = /^\d[\d.,]*(?:\u00a0\d{3}(?:,\d+)?)*(?:\u00a0(?:mil|milhão|milhões|bilhão|bilhões))?[²³]?%?$/;
 const SIMBOLO = /^[A-Za-zπΔ][A-Za-z0-9²³]{0,2}$/;
 const UNIDADE_COMPOSTA = /^[A-Za-z]{1,3}\/[A-Za-z]{1,3}$/;
 const PALAVRA_ANTES_DO_IGUAL = /^[A-Za-zÀ-ú]{2,8}$/;
@@ -212,11 +212,28 @@ const PONTUACAO_FINAL = /[.,;:]+$/;
 const MIN_TOKENS_DA_CONTA = 3;
 const MAX_TOKENS_DA_CONTA = 13;
 
+const APARTE_COM_CONTA = /\(([^()]*=[^()]*)\)/g;
+const INICIO_DE_MILHAR = /^\d{1,3}$/;
+const RESTO_DE_MILHAR = /^\d{3}(?:,\d+)?[²³]?%?[.,;:)]*$/;
+const ESCALA = /^(?:mil|milhão|milhões|bilhão|bilhões)[.,;:)]*$/;
+
+/** "7 200" é um número só: sem juntar, a frase quebrava no espaço e a lousa mostrava "72 · 100 = 7". */
+const juntaMilhar = (tokens: string[]): string[] =>
+  tokens.reduce<string[]>((feitos, t) => {
+    const antes = feitos[feitos.length - 1];
+    // "2,4 milhões" também é um número só: sem a escala, "300 000 × 8 = 2,4" fica falso.
+    const milhar = !!antes && RESTO_DE_MILHAR.test(t) && (INICIO_DE_MILHAR.test(antes) || /^\d{1,3}(?:\u00a0\d{3})+$/.test(antes));
+    const cola = milhar || (!!antes && ESCALA.test(t) && NUMERO.test(antes));
+    return cola ? [...feitos.slice(0, -1), `${antes}\u00a0${t}`] : [...feitos, t];
+  }, []);
+
 const tokenDeConta = (t: string): boolean => OPERADORES.has(t) || NUMERO.test(t) || SIMBOLO.test(t) || UNIDADE_COMPOSTA.test(t);
 
 /** Contas escritas no meio de uma frase ("Raio = 30 ÷ 2 = 15 cm."): acha a sequência de símbolos que tem "=" e a devolve como peças. */
 export function contasNaFrase(frase: string): Peca[][] {
-  const tokens = limpa(frase).split(' ');
+  // Aparte entre parênteses que tem conta ("(24 · 20 = 480 e 24 · 4 = 96)") é um trecho à parte.
+  const semAparte = limpa(frase).replace(APARTE_COM_CONTA, '; $1; ').replace(/\s+/g, ' ').trim();
+  const tokens = juntaMilhar(semAparte.split(' '));
   const achadas: Peca[][] = [];
   let janela: string[] = [];
   const fecha = (): void => {
@@ -227,7 +244,13 @@ export function contasNaFrase(frase: string): Peca[][] {
     janela = [];
   };
   tokens.forEach((bruto, i) => {
-    const t = bruto.replace(PONTUACAO_FINAL, '');
+    if (bruto === ';') return fecha();
+    // "96 e 24": o "e" entre duas contas é a palavra, não uma letra da conta.
+    const ligaContas = bruto === 'e' && janela.includes('=') && !OPERADORES.has(janela[janela.length - 1]) && !OPERADORES.has(tokens[i + 1] ?? '');
+    if (ligaContas) return fecha();
+    // ")" que sobrou de um aparte cortado ("= 3 080.)") não faz parte do número.
+    const solto = bruto.includes(')') && !bruto.includes('(') ? bruto.replace(/\)/g, '') : bruto;
+    const t = solto.replace(PONTUACAO_FINAL, '');
     const termina = t !== bruto;
     const palavraAntes = tokens[i + 1] === '=' && janela.length === 0 && PALAVRA_ANTES_DO_IGUAL.test(t);
     if (t && (tokenDeConta(t) || palavraAntes)) {

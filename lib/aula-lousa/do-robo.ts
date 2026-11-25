@@ -32,10 +32,14 @@ export function cabem(tam: number): number {
 }
 
 /** Quebra em linhas de até `max` letras, só entre palavras. */
+const ESPACO_DE_MILHAR = /(?<=\d) (?=\d{3}(?!\d))/g;
+const MARCA_DE_MILHAR = '\u0001';
+
 export function quebrar(s: string, max: number): string[] {
   const linhas: string[] = [];
   let atual = '';
-  for (const palavra of limpa(s).split(' ')) {
+  // "1 500 000" não pode quebrar no meio: o espaço do milhar vira um marcador até a linha sair.
+  for (const palavra of limpa(s).replace(ESPACO_DE_MILHAR, MARCA_DE_MILHAR).split(' ').map((p) => p.split(MARCA_DE_MILHAR).join(' '))) {
     if (!palavra) continue;
     if (atual && atual.length + 1 + palavra.length > max) {
       linhas.push(atual);
