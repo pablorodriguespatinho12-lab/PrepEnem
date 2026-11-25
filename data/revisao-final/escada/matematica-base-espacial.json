@@ -1,0 +1,864 @@
+[
+ {
+  "id": "d2-escada-mat-esp-b01",
+  "materia": "Matemática",
+  "tema": "Geometria Espacial",
+  "enunciado": "Uma caixa de areia em forma de bloco retangular tem 4 m de comprimento, 3 m de largura e 2 m de altura. Qual é o volume da caixa?",
+  "A": "9 m³",
+  "B": "24 m³",
+  "C": "12 m³",
+  "D": "14 m³",
+  "E": "48 m³",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "4×3×2 = 24. B. A = soma; C = só o fundo; D = 12+2; E = dobro.",
+   "ideia": "No fundo cabem 4 × 3 = 12 cubos de 1 metro, e são 2 andares: 24 m³.",
+   "pecas": [
+    {
+     "termo": "Volume",
+     "significado": "O espaço que cabe dentro de um objeto."
+    },
+    {
+     "termo": "m³",
+     "significado": "Lê-se metro cúbico: um cubo de 1 m de cada lado."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "caixa",
+        "nome": "Volume da caixa",
+        "formula": "volume = comprimento × largura × altura"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Comprimento",
+        "4 m"
+       ],
+       [
+        "Largura",
+        "3 m"
+       ],
+       [
+        "Altura",
+        "2 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quantos cubos de 1 metro cabem dentro.\nPor que multiplicar? 3 fileiras de 5 cubos dão 15 no fundo. Cada metro de altura repete esse fundo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "v = c × l × a",
+      "leitura": "volume = comprimento × largura × altura",
+      "letras": [
+       {
+        "letra": "v",
+        "oque": "volume, em m³ (o que a questão quer)"
+       },
+       {
+        "letra": "c",
+        "oque": "comprimento, em metros"
+       },
+       {
+        "letra": "l",
+        "oque": "largura, em metros"
+       },
+       {
+        "letra": "a",
+        "oque": "altura, em metros"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando c (comprimento)",
+     "texto": "O enunciado dá direto.\nc = 4 m"
+    },
+    {
+     "titulo": "Achando l (largura)",
+     "texto": "O enunciado dá direto.\nl = 3 m"
+    },
+    {
+     "titulo": "Achando a (altura)",
+     "texto": "O enunciado dá direto.\na = 2 m"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "v = 4 × 3 × 2\n4 × 3 = 12\n12 × 2 = 24 m³\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "c",
+        "4 m"
+       ],
+       [
+        "l",
+        "3 m"
+       ],
+       [
+        "a",
+        "2 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: caixa com três medidas → multiplique as três.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "4, 3 e 2 m"
+       ],
+       [
+        "2. Equação em letras",
+        "v = c × l × a"
+       ],
+       [
+        "3. Achar cada letra",
+        "c = 4; l = 3; a = 2"
+       ],
+       [
+        "4. Substituir",
+        "12 × 2 = 24"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Caixa de 5 m, 2 m e 3 m. Volume?",
+    "opcoes": [
+     "30 m³",
+     "10 m³",
+     "13 m³",
+     "25 m³"
+    ],
+    "certa": "30 m³",
+    "resposta": "5 × 2 × 3 = 30 m³."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-esp-b02",
+  "materia": "Matemática",
+  "tema": "Geometria Espacial",
+  "enunciado": "Um tambor em forma de cilindro tem raio da base de 2 m e altura de 5 m. Usando π = 3, qual é o volume do tambor?",
+  "A": "30 m³",
+  "B": "12 m³",
+  "C": "150 m³",
+  "D": "60 m³",
+  "E": "20 m³",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "3×4×5 = 60. D. A = não elevou o raio; B = só a base; C = 3×2×5×5; E = esqueceu π.",
+   "ideia": "O fundo redondo tem área 3 × 2 × 2 = 12, e a altura repete essa área 5 vezes: 60 m³.",
+   "pecas": [
+    {
+     "termo": "π",
+     "significado": "Lê-se pi: um número usado nos círculos. Aqui vale 3."
+    },
+    {
+     "termo": "Raio",
+     "significado": "A distância do meio do círculo até a borda."
+    },
+    {
+     "termo": "m³",
+     "significado": "Lê-se metro cúbico: um cubo de 1 m de cada lado."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "cilindro",
+        "nome": "Volume do cilindro",
+        "formula": "volume = área do fundo × altura"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Raio",
+        "2 m"
+       ],
+       [
+        "Altura",
+        "5 m"
+       ],
+       [
+        "π",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o espaço dentro do tambor.\nPor que raio duas vezes? O fundo redondo mede pi × r × r: raio 1 dá 3. Altura 4 repete isso 4 vezes: 12.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "v = p × r × r × a",
+      "leitura": "volume = pi × raio × raio × altura",
+      "letras": [
+       {
+        "letra": "v",
+        "oque": "volume, em m³ (o que a questão quer)"
+       },
+       {
+        "letra": "p",
+        "oque": "o número pi"
+       },
+       {
+        "letra": "r",
+        "oque": "raio da base, em metros"
+       },
+       {
+        "letra": "a",
+        "oque": "altura, em metros"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando p (pi)",
+     "texto": "O enunciado manda usar.\np = 3"
+    },
+    {
+     "titulo": "Achando r (raio)",
+     "texto": "O enunciado dá direto.\nr = 2 m"
+    },
+    {
+     "titulo": "Achando a (altura)",
+     "texto": "O enunciado dá direto.\na = 5 m"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "v = 3 × 2 × 2 × 5\n3 × 2 × 2 = 12\n12 × 5 = 60 m³\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "p",
+        "3"
+       ],
+       [
+        "r",
+        "2 m"
+       ],
+       [
+        "a",
+        "5 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: cilindro → pi × raio × raio × altura.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "raio 2, altura 5, pi 3"
+       ],
+       [
+        "2. Equação em letras",
+        "v = p × r × r × a"
+       ],
+       [
+        "3. Achar cada letra",
+        "p = 3; r = 2; a = 5"
+       ],
+       [
+        "4. Substituir",
+        "12 × 5 = 60"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Cilindro de raio 1 m e altura 4 m (π = 3). Volume?",
+    "opcoes": [
+     "12 m³",
+     "4 m³",
+     "24 m³",
+     "48 m³"
+    ],
+    "certa": "12 m³",
+    "resposta": "3 × 1 × 1 × 4 = 12 m³."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-esp-b03",
+  "materia": "Matemática",
+  "tema": "Geometria Espacial",
+  "enunciado": "Um reservatório tem volume de 3 m³. Sabendo que 1 m³ comporta 1 000 litros, quantos litros de água cabem nele?",
+  "A": "3 000 L",
+  "B": "300 L",
+  "C": "30 000 L",
+  "D": "1 003 L",
+  "E": "333 L",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "3×1000 = 3000. A. B = vezes 100; C = vezes 10000; D = soma; E = divisão.",
+   "ideia": "Cada metro cúbico guarda 1 000 litros: 3 deles guardam 3 000.",
+   "pecas": [
+    {
+     "termo": "m³",
+     "significado": "Lê-se metro cúbico: um cubo de 1 m de cada lado."
+    },
+    {
+     "termo": "L",
+     "significado": "Lê-se litro."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "caixa",
+        "nome": "Metro cúbico em litros",
+        "formula": "litros = metros cúbicos × 1000"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Volume",
+        "3 m³"
+       ],
+       [
+        "Cada m³",
+        "1 000 L"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a capacidade em litros.\nPor que multiplicar? 1 m³ são 1000 L, e 2 m³ são 1000 + 1000 = 2000 L.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "q = v × k",
+      "leitura": "litros = volume × litros em 1 m³",
+      "letras": [
+       {
+        "letra": "q",
+        "oque": "quantidade em litros (o que a questão quer)"
+       },
+       {
+        "letra": "v",
+        "oque": "volume, em m³"
+       },
+       {
+        "letra": "k",
+        "oque": "litros dentro de 1 m³"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando v (volume)",
+     "texto": "O enunciado dá direto.\nv = 3"
+    },
+    {
+     "titulo": "Achando k (litros em 1 m³)",
+     "texto": "O enunciado dá direto.\nk = 1000"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "q = 3 × 1000 = 3000 L\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "v",
+        "3"
+       ],
+       [
+        "k",
+        "1000"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: de m³ para litros → vezes 1000.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "3 m³"
+       ],
+       [
+        "2. Equação em letras",
+        "q = v × k"
+       ],
+       [
+        "3. Achar cada letra",
+        "v = 3; k = 1000"
+       ],
+       [
+        "4. Substituir",
+        "3 × 1000 = 3000"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Quantos litros cabem em 5 m³?",
+    "opcoes": [
+     "5 000 L",
+     "500 L",
+     "1 005 L",
+     "200 L"
+    ],
+    "certa": "5 000 L",
+    "resposta": "5 × 1000 = 5000 L."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-esp-b04",
+  "materia": "Matemática",
+  "tema": "Geometria Espacial",
+  "enunciado": "Um enfeite maciço em forma de pirâmide tem base quadrada de 6 cm de lado e altura de 10 cm. Qual é o volume do enfeite?",
+  "A": "360 cm³",
+  "B": "60 cm³",
+  "C": "180 cm³",
+  "D": "36 cm³",
+  "E": "120 cm³",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "36×10/3 = 120. E. A = caixa inteira; B = 6×10; C = metade; D = só a base.",
+   "ideia": "A pirâmide ocupa a terça parte da caixa de mesma base e altura: 360 ÷ 3 = 120 cm³.",
+   "pecas": [
+    {
+     "termo": "Pirâmide",
+     "significado": "Sólido com uma base e uma ponta em cima."
+    },
+    {
+     "termo": "cm³",
+     "significado": "Lê-se centímetro cúbico: um cubo de 1 cm de cada lado."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "triangulo",
+        "nome": "Volume da pirâmide",
+        "formula": "volume = área da base × altura ÷ 3"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Lado da base",
+        "6 cm"
+       ],
+       [
+        "Altura",
+        "10 cm"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o espaço ocupado pela pirâmide.\nPor que dividir por 3? Três pirâmides cheias de água enchem 1 caixa de mesma base e altura.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "v = b × a ÷ 3",
+      "leitura": "volume = área da base × altura ÷ 3",
+      "letras": [
+       {
+        "letra": "v",
+        "oque": "volume, em cm³ (o que a questão quer)"
+       },
+       {
+        "letra": "b",
+        "oque": "área da base quadrada, em cm²"
+       },
+       {
+        "letra": "a",
+        "oque": "altura, em cm"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando b (área da base)",
+     "texto": "Base quadrada: lado × lado.\nb = 6 × 6 = 36"
+    },
+    {
+     "titulo": "Achando a (altura)",
+     "texto": "O enunciado dá direto.\na = 10 cm"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo parar em 36 × 10 = 360, a letra A.\n360 é a caixa inteira; a pirâmide é uma de 3 partes iguais dela."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "v = 36 × 10 ÷ 3\n36 × 10 = 360\n360 ÷ 3 = 120 cm³\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "b",
+        "36"
+       ],
+       [
+        "a",
+        "10 cm"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pirâmide (ou cone) → base × altura e depois ÷ 3.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "lado 6, altura 10"
+       ],
+       [
+        "2. Equação em letras",
+        "v = b × a ÷ 3"
+       ],
+       [
+        "3. Achar cada letra",
+        "b = 36; a = 10"
+       ],
+       [
+        "4. Substituir",
+        "360 ÷ 3 = 120"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Pirâmide com base de área 9 cm² e altura 5 cm. Volume?",
+    "opcoes": [
+     "15 cm³",
+     "45 cm³",
+     "14 cm³",
+     "22,5 cm³"
+    ],
+    "certa": "15 cm³",
+    "resposta": "9 × 5 = 45; 45 ÷ 3 = 15 cm³."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-esp-b05",
+  "materia": "Matemática",
+  "tema": "Geometria Espacial",
+  "enunciado": "Uma piscina infantil em forma de bloco retangular mede 3 m de comprimento e 2 m de largura, com água até a altura de 0,5 m. Cada 1 m³ são 1 000 litros. Quantos litros de água há na piscina?",
+  "A": "6 000 L",
+  "B": "550 L",
+  "C": "3 000 L",
+  "D": "5 500 L",
+  "E": "300 L",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "3×2×0,5 = 3 m³ = 3000 L. C. A = altura 1 m; B = soma; D = soma × 1000; E = erro de zero.",
+   "ideia": "Primeiro o volume: 3 × 2 = 6, e metade disso é 3 m³. Depois os litros: 3 000.",
+   "pecas": [
+    {
+     "termo": "m³",
+     "significado": "Lê-se metro cúbico: um cubo de 1 m de cada lado."
+    },
+    {
+     "termo": "L",
+     "significado": "Lê-se litro."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "caixa",
+        "nome": "Volume",
+        "formula": "volume = comprimento × largura × altura"
+       },
+       {
+        "figura": "caixa",
+        "nome": "Litros",
+        "formula": "litros = volume × 1000"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Comprimento",
+        "3 m"
+       ],
+       [
+        "Largura",
+        "2 m"
+       ],
+       [
+        "Altura da água",
+        "0,5 m"
+       ],
+       [
+        "Cada m³",
+        "1 000 L"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a água em litros.\nPor que achar o volume antes? A regra dos 1000 litros só vale para metros cúbicos.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "q = v × k",
+      "leitura": "litros = volume × litros em 1 m³",
+      "letras": [
+       {
+        "letra": "q",
+        "oque": "quantidade em litros (o que a questão quer)"
+       },
+       {
+        "letra": "v",
+        "oque": "volume de água, em m³"
+       },
+       {
+        "letra": "k",
+        "oque": "litros dentro de 1 m³"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Primeiro, o fundo",
+     "texto": "Comprimento × largura.\n3 × 2 = 6"
+    },
+    {
+     "titulo": "Achando v (volume de água)",
+     "texto": "A água tem meio metro, 0,5: metade de 1 metro de altura.\nMetade de 6: 6 ÷ 2 = 3\nv = 3 m³"
+    },
+    {
+     "titulo": "Achando k (litros em 1 m³)",
+     "texto": "O enunciado dá direto.\nk = 1000"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "q = 3 × 1000 = 3000 L\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "v",
+        "3"
+       ],
+       [
+        "k",
+        "1000"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pede litros e dá metros → volume primeiro, depois vezes 1000.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "3; 2; 0,5 m"
+       ],
+       [
+        "2. Equação em letras",
+        "q = v × k"
+       ],
+       [
+        "3. Achar cada letra",
+        "v = 3; k = 1000"
+       ],
+       [
+        "4. Substituir",
+        "3 × 1000 = 3000"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Tanque de 4 m por 1 m, água a 0,5 m. Litros?",
+    "opcoes": [
+     "2 000 L",
+     "4 000 L",
+     "200 L",
+     "5 500 L"
+    ],
+    "certa": "2 000 L",
+    "resposta": "4 × 1 = 4; metade 2 m³ = 2000 L."
+   }
+  }
+ }
+]

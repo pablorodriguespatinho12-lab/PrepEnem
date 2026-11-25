@@ -14,6 +14,18 @@ Pedido dele: "faz um plano para já fazer tudo". Trabalhar até o fim, sem parar
 |---|---|---|
 | Cinemática · Base | 7 | no ar |
 | Ondas · Base | 6 | no ar (não foi aberta na tela) |
+| 1 Óptica · Base | 6 | no ar (25/11), falta abrir na tela |
+| 2 Termodinâmica e Calor · Base | 6 | no ar (25/11), falta abrir na tela |
+| 3 Eletricidade · Base | 7 | no ar (25/11), falta abrir na tela |
+| 4 Dinâmica · Base | 6 | no ar (25/11), falta abrir na tela |
+| 5 Contagem e Probabilidade · Base | 6 | no ar (25/11), falta abrir na tela |
+| 6 Equações e Sistemas · Base | 5 | no ar (25/11), falta abrir na tela |
+| 7 Grandezas e Medidas · Base | 6 | no ar (25/11), falta abrir na tela |
+| 8 Geometria Espacial · Base | 5 | no ar (25/11), falta abrir na tela |
+| 9 Geometria Plana · Base | 6 | no ar (25/11), falta abrir na tela |
+| 10 Funções · Base | 6 | no ar (25/11), falta abrir na tela |
+| 11 Estatística · Base | 5 | no ar (25/11), falta abrir na tela |
+| 12 Aritmética e Porcentagem · Base | 6 | no ar (25/11), falta abrir na tela |
 
 ## Falta A: 12 provas de base (um conceito por questão, a última junta 2)
 Ordem: a de menos questões fáceis primeiro. Nome do tema = exatamente o do banco. 5 a 7 questões por prova.

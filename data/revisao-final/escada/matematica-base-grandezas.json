@@ -1,0 +1,1013 @@
+[
+ {
+  "id": "d2-escada-mat-gra-b01",
+  "materia": "Matemática",
+  "tema": "Grandezas e Medidas",
+  "enunciado": "Uma fita tem 3 m de comprimento. Qual é esse comprimento em centímetros?",
+  "A": "30 cm",
+  "B": "3 000 cm",
+  "C": "300 cm",
+  "D": "0,03 cm",
+  "E": "103 cm",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "3×100 = 300. C. A = vezes 10; B = vezes 1000; D = dividiu; E = somou.",
+   "ideia": "Cada metro tem 100 centímetros: 3 metros têm 3 × 100 = 300 cm.",
+   "pecas": [
+    {
+     "termo": "m",
+     "significado": "Lê-se metro."
+    },
+    {
+     "termo": "cm",
+     "significado": "Lê-se centímetro: 100 deles formam 1 metro."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "retangulo",
+        "nome": "Metro para centímetro",
+        "formula": "centímetros = metros × 100"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Comprimento",
+        "3 m"
+       ],
+       [
+        "1 metro",
+        "100 cm, para decorar"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o mesmo comprimento em centímetros.\nPor que multiplicar? 1 m são 100 cm, e 2 m são 100 + 100 = 200 cm.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "c = m × k",
+      "leitura": "centímetros = metros × quantos cm há em 1 metro",
+      "letras": [
+       {
+        "letra": "c",
+        "oque": "comprimento em cm (o que a questão quer)"
+       },
+       {
+        "letra": "m",
+        "oque": "comprimento em metros"
+       },
+       {
+        "letra": "k",
+        "oque": "centímetros dentro de 1 metro"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando m (metros)",
+     "texto": "O enunciado dá direto.\nm = 3"
+    },
+    {
+     "titulo": "Achando k (cm em 1 metro)",
+     "texto": "É de decorar.\nk = 100"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "c = 3 × 100 = 300 cm\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "m",
+        "3"
+       ],
+       [
+        "k",
+        "100"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: de metro para centímetro → vezes 100.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "3 m"
+       ],
+       [
+        "2. Equação em letras",
+        "c = m × k"
+       ],
+       [
+        "3. Achar cada letra",
+        "m = 3; k = 100"
+       ],
+       [
+        "4. Substituir",
+        "3 × 100 = 300"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Quantos centímetros há em 5 m?",
+    "opcoes": [
+     "500 cm",
+     "50 cm",
+     "105 cm",
+     "5 000 cm"
+    ],
+    "certa": "500 cm",
+    "resposta": "5 × 100 = 500 cm."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-gra-b02",
+  "materia": "Matemática",
+  "tema": "Grandezas e Medidas",
+  "enunciado": "Um tapete retangular mede 4 m de comprimento e 2 m de largura. Qual é a área do tapete?",
+  "A": "8 m²",
+  "B": "6 m²",
+  "C": "12 m²",
+  "D": "8 m",
+  "E": "16 m²",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "4×2 = 8 m². A. B = soma; C = perímetro; D = unidade errada; E = 4×4.",
+   "ideia": "Cabem 4 quadrados de 1 metro numa fileira, e são 2 fileiras: 4 × 2 = 8 m².",
+   "pecas": [
+    {
+     "termo": "Área",
+     "significado": "O tamanho de uma superfície, o quanto ela cobre."
+    },
+    {
+     "termo": "m²",
+     "significado": "Lê-se metro quadrado: um quadrado de 1 m por 1 m."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "retangulo",
+        "nome": "Área do retângulo",
+        "formula": "área = comprimento × largura"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Comprimento",
+        "4 m"
+       ],
+       [
+        "Largura",
+        "2 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quantos quadrados de 1 metro cabem no tapete.\nPor que multiplicar? Num tapete menor, 3 m por 2 m: 2 fileiras de 3 quadrados, 3 × 2 = 6.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "a = c × l",
+      "leitura": "área = comprimento × largura",
+      "letras": [
+       {
+        "letra": "a",
+        "oque": "área, em m² (o que a questão quer)"
+       },
+       {
+        "letra": "c",
+        "oque": "comprimento, em metros"
+       },
+       {
+        "letra": "l",
+        "oque": "largura, em metros"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando c (comprimento)",
+     "texto": "O enunciado dá direto.\nc = 4 m"
+    },
+    {
+     "titulo": "Achando l (largura)",
+     "texto": "O enunciado dá direto.\nl = 2 m"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "a = 4 × 2 = 8 m²\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "c",
+        "4 m"
+       ],
+       [
+        "l",
+        "2 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"área do retângulo\" → um lado vezes o outro.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "4 m por 2 m"
+       ],
+       [
+        "2. Equação em letras",
+        "a = c × l"
+       ],
+       [
+        "3. Achar cada letra",
+        "c = 4; l = 2"
+       ],
+       [
+        "4. Substituir",
+        "4 × 2 = 8"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma parede de 5 m por 3 m. Área?",
+    "opcoes": [
+     "15 m²",
+     "8 m²",
+     "16 m²",
+     "15 m"
+    ],
+    "certa": "15 m²",
+    "resposta": "5 × 3 = 15 m²."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-gra-b03",
+  "materia": "Matemática",
+  "tema": "Grandezas e Medidas",
+  "enunciado": "Na planta de uma casa, na escala 1 : 50, uma parede foi desenhada com 6 cm. Qual é o comprimento real da parede, em centímetros?",
+  "A": "56 cm",
+  "B": "50 cm",
+  "C": "30 cm",
+  "D": "8 cm",
+  "E": "300 cm",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "6×50 = 300. E. A = soma; B = a escala; C = erro de zero; D = 50/6.",
+   "ideia": "Cada 1 cm do desenho vale 50 cm de verdade: 6 × 50 = 300 cm.",
+   "pecas": [
+    {
+     "termo": "1 : 50",
+     "significado": "Lê-se um para cinquenta: 1 cm no desenho vale 50 cm no real."
+    },
+    {
+     "termo": "Planta",
+     "significado": "O desenho da casa visto de cima."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "retangulo",
+        "nome": "Escala",
+        "formula": "real = desenho × número da escala"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Escala",
+        "1 : 50"
+       ],
+       [
+        "No desenho",
+        "6 cm"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o tamanho da parede de verdade.\nPor que multiplicar? 1 cm vale 50 cm, e 2 cm valem 50 + 50 = 100 cm.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "r = d × e",
+      "leitura": "real = desenho × escala",
+      "letras": [
+       {
+        "letra": "r",
+        "oque": "tamanho real, em cm (o que a questão quer)"
+       },
+       {
+        "letra": "d",
+        "oque": "tamanho no desenho, em cm"
+       },
+       {
+        "letra": "e",
+        "oque": "número da escala, depois dos dois pontos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando d (desenho)",
+     "texto": "O enunciado dá direto.\nd = 6 cm"
+    },
+    {
+     "titulo": "Achando e (escala)",
+     "texto": "O número depois dos dois pontos em 1 : 50.\ne = 50"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "r = 6 × 50 = 300 cm\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "d",
+        "6 cm"
+       ],
+       [
+        "e",
+        "50"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dá o desenho e a escala → multiplique para achar o real.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1 : 50; 6 cm"
+       ],
+       [
+        "2. Equação em letras",
+        "r = d × e"
+       ],
+       [
+        "3. Achar cada letra",
+        "d = 6; e = 50"
+       ],
+       [
+        "4. Substituir",
+        "6 × 50 = 300"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Escala 1 : 100, desenho de 4 cm. Tamanho real?",
+    "opcoes": [
+     "400 cm",
+     "104 cm",
+     "25 cm",
+     "40 cm"
+    ],
+    "certa": "400 cm",
+    "resposta": "4 × 100 = 400 cm."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-gra-b04",
+  "materia": "Matemática",
+  "tema": "Grandezas e Medidas",
+  "enunciado": "Na padaria, 3 pães custam R$ 12,00. Mantendo o mesmo preço por pão, quanto custam 5 pães, em reais?",
+  "A": "14",
+  "B": "20",
+  "C": "60",
+  "D": "7,20",
+  "E": "17",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "3x = 60; x = 20. B. A = 12+2; C = 12×5; D = inversa; E = 12+5.",
+   "ideia": "Mais pães, mais dinheiro: 1 pão custa 12 ÷ 3 = 4, então 5 pães custam 5 × 4 = 20.",
+   "pecas": [
+    {
+     "termo": "Direta",
+     "significado": "Dobrou uma coisa, a outra dobra também."
+    },
+    {
+     "termo": "x",
+     "significado": "O número que ainda não se sabe."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "porcentagem",
+        "nome": "Regra de três direta",
+        "formula": "antes em cima, agora embaixo, e multiplique cruzado"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Antes",
+        "3 pães, 12 reais"
+       ],
+       [
+        "Agora",
+        "5 pães, x reais"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o preço dos pães de agora.\nPor que direta? Dobrando os pães, o preço dobra: as duas coisas andam juntas.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "x = p × a ÷ b",
+      "leitura": "preço novo = preço antigo × pães de agora ÷ pães de antes",
+      "letras": [
+       {
+        "letra": "x",
+        "oque": "preço novo (o que a questão quer)"
+       },
+       {
+        "letra": "p",
+        "oque": "preço antigo"
+       },
+       {
+        "letra": "a",
+        "oque": "pães de agora"
+       },
+       {
+        "letra": "b",
+        "oque": "pães de antes"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando p (preço antigo)",
+     "texto": "O enunciado dá direto.\np = 12"
+    },
+    {
+     "titulo": "Achando a (pães de agora)",
+     "texto": "É a linha de baixo.\na = 5"
+    },
+    {
+     "titulo": "Achando b (pães de antes)",
+     "texto": "É a linha de cima.\nb = 3"
+    },
+    {
+     "titulo": "Montando as frações",
+     "texto": "Antes em cima, agora embaixo: 3/5 = 12/x\nEm cruz: 3 vezes x é igual a 12 vezes 5"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "3 × x = 60\nx = 60 ÷ 3 = 20\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "p",
+        "12"
+       ],
+       [
+        "a",
+        "5"
+       ],
+       [
+        "b",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: mais de uma coisa dá mais da outra → direta, multiplique cruzado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "3 pães, 12; 5 pães"
+       ],
+       [
+        "2. Equação em letras",
+        "x = p × a ÷ b"
+       ],
+       [
+        "3. Achar cada letra",
+        "p = 12; a = 5; b = 3"
+       ],
+       [
+        "4. Substituir",
+        "60 ÷ 3 = 20"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "2 cadernos custam 14. Quanto custam 6?",
+    "opcoes": [
+     "42",
+     "18",
+     "84",
+     "28"
+    ],
+    "certa": "42",
+    "resposta": "1 custa 7; 6 × 7 = 42."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-gra-b05",
+  "materia": "Matemática",
+  "tema": "Grandezas e Medidas",
+  "enunciado": "Dois pintores, no mesmo ritmo, pintam um muro em 6 horas. Em quantas horas 3 pintores, nesse ritmo, pintam o mesmo muro?",
+  "A": "9",
+  "B": "7",
+  "C": "12",
+  "D": "4",
+  "E": "3",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "12/3 = 4. D. A = direta; B = soma 6+1; C = trabalho total; E = metade.",
+   "ideia": "O muro pede 2 × 6 = 12 horas de trabalho de uma pessoa; dividindo por 3 pintores, dá 4 horas.",
+   "pecas": [
+    {
+     "termo": "Inversa",
+     "significado": "Dobrou uma coisa, a outra cai pela metade."
+    },
+    {
+     "termo": "x",
+     "significado": "O número que ainda não se sabe."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "porcentagem",
+        "nome": "Regra de três inversa",
+        "formula": "o trabalho total não muda"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Antes",
+        "2 pintores, 6 horas"
+       ],
+       [
+        "Agora",
+        "3 pintores, x horas"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o tempo com mais gente.\nPor que inversa? 2 pintores por 6 horas são 12 horas de uma pessoa sozinha. Mais gente divide essas horas.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "x = a × h ÷ b",
+      "leitura": "horas novas = pintores de antes × horas de antes ÷ pintores de agora",
+      "letras": [
+       {
+        "letra": "x",
+        "oque": "horas novas (o que a questão quer)"
+       },
+       {
+        "letra": "a",
+        "oque": "pintores de antes"
+       },
+       {
+        "letra": "h",
+        "oque": "horas de antes"
+       },
+       {
+        "letra": "b",
+        "oque": "pintores de agora"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando a (pintores de antes)",
+     "texto": "O enunciado dá direto.\na = 2"
+    },
+    {
+     "titulo": "Achando h (horas de antes)",
+     "texto": "O enunciado dá direto.\nh = 6"
+    },
+    {
+     "titulo": "Achando b (agora)",
+     "texto": "O enunciado dá direto.\nb = 3"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo montar como nos pães, 2/3 = 6/x, e achar 9 horas, a letra A.\nMais pintores não podem demorar mais."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "2 × 6 = 12\nx = 12 ÷ 3 = 4 horas\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "a",
+        "2"
+       ],
+       [
+        "h",
+        "6"
+       ],
+       [
+        "b",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: mais gente, menos tempo → inversa: ache o trabalho total e divida.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "2 e 6 h; 3 pintores"
+       ],
+       [
+        "2. Equação em letras",
+        "x = a × h ÷ b"
+       ],
+       [
+        "3. Achar cada letra",
+        "a = 2; h = 6; b = 3"
+       ],
+       [
+        "4. Substituir",
+        "12 ÷ 3 = 4"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "4 pessoas fazem em 3 dias. 6 pessoas fazem em quantos?",
+    "opcoes": [
+     "2",
+     "4,5",
+     "5",
+     "12"
+    ],
+    "certa": "2",
+    "resposta": "4 × 3 = 12; 12 ÷ 6 = 2."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-gra-b06",
+  "materia": "Matemática",
+  "tema": "Grandezas e Medidas",
+  "enunciado": "Numa planta na escala 1 : 50, uma varanda retangular mede 4 cm por 3 cm. Qual é a área real da varanda, em metros quadrados?",
+  "A": "6 m²",
+  "B": "12 m²",
+  "C": "3 m²",
+  "D": "600 m²",
+  "E": "30 000 m²",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "2 × 1,5 = 3. C. A = 12×50/100; B = área do desenho; D = 12×50; E = em cm².",
+   "ideia": "Primeiro cada lado de verdade: 4 × 50 = 200 cm = 2 m e 3 × 50 = 150 cm = 1,5 m. Depois a área: 2 × 1,5 = 3 m².",
+   "pecas": [
+    {
+     "termo": "1 : 50",
+     "significado": "Lê-se um para cinquenta: 1 cm no desenho vale 50 cm no real."
+    },
+    {
+     "termo": "m²",
+     "significado": "Lê-se metro quadrado: um quadrado de 1 m por 1 m."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "retangulo",
+        "nome": "Escala",
+        "formula": "real = desenho × 50"
+       },
+       {
+        "figura": "retangulo",
+        "nome": "Área",
+        "formula": "área = um lado × o outro"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Escala",
+        "1 : 50"
+       ],
+       [
+        "Desenho",
+        "4 cm por 3 cm"
+       ],
+       [
+        "1 metro",
+        "100 cm"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a área da varanda de verdade, em m².\nPor que não multiplicar a área do desenho só por 50? Os dois lados aumentam, não um só.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "a = c × l",
+      "leitura": "área = comprimento real × largura real",
+      "letras": [
+       {
+        "letra": "a",
+        "oque": "área real, em m² (o que a questão quer)"
+       },
+       {
+        "letra": "c",
+        "oque": "comprimento real, em metros"
+       },
+       {
+        "letra": "l",
+        "oque": "largura real, em metros"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando c (comprimento real)",
+     "texto": "4 × 50 = 200 cm\n200 ÷ 100 = 2\nc = 2 m"
+    },
+    {
+     "titulo": "Achando l (largura real)",
+     "texto": "3 × 50 = 150 cm\n100 cm são 1 m, e 50 cm são meio metro.\nl = 1,5 m"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo fazer 4 × 3 = 12 e marcar a letra B.\nEssa é a área do desenho, não a da varanda."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "a = 2 × 1,5\n1,5 + 1,5 = 3 m²\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "c",
+        "2 m"
+       ],
+       [
+        "l",
+        "1,5 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: área com escala → passe cada lado para o real antes de multiplicar.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1 : 50; 4 e 3 cm"
+       ],
+       [
+        "2. Equação em letras",
+        "a = c × l"
+       ],
+       [
+        "3. Achar cada letra",
+        "c = 2; l = 1,5"
+       ],
+       [
+        "4. Substituir",
+        "2 × 1,5 = 3"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Escala 1 : 100, desenho de 3 cm por 2 cm. Área real?",
+    "opcoes": [
+     "6 m²",
+     "600 m²",
+     "5 m²",
+     "60 m²"
+    ],
+    "certa": "6 m²",
+    "resposta": "Lados 3 m e 2 m: 6 m²."
+   }
+  }
+ }
+]

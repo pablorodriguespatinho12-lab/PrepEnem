@@ -1,0 +1,985 @@
+[
+ {
+  "id": "d2-escada-mat-com-03",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Numa cantina, o lanche é montado com 1 salgado e 1 suco. Há 4 tipos de salgado e 3 tipos de suco. De quantas maneiras diferentes dá para montar o lanche?",
+  "A": "7",
+  "B": "4",
+  "C": "64",
+  "D": "12",
+  "E": "24",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "4×3 = 12. D. A = soma; B = só salgados; C = 4³; E = 12×2.",
+   "ideia": "Cada um dos 4 salgados combina com os 3 sucos: 4 × 3 = 12 lanches.",
+   "pecas": [
+    {
+     "termo": "Maneiras diferentes",
+     "significado": "Lanches que mudam no salgado, no suco ou nos dois."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Princípio multiplicativo",
+        "formula": "total = opções da 1ª escolha × opções da 2ª"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Salgados",
+        "4"
+       ],
+       [
+        "Sucos",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quantos lanches diferentes existem.\nPor que multiplicar? Com 2 salgados e 3 sucos: 3 lanches com o 1º e 3 com o 2º, 3 + 3 = 6.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "t = s × u",
+      "leitura": "total = salgados × sucos",
+      "letras": [
+       {
+        "letra": "t",
+        "oque": "total de lanches (o que a questão quer)"
+       },
+       {
+        "letra": "s",
+        "oque": "número de salgados"
+       },
+       {
+        "letra": "u",
+        "oque": "número de sucos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando s (salgados)",
+     "texto": "O enunciado dá direto.\ns = 4"
+    },
+    {
+     "titulo": "Achando u (sucos)",
+     "texto": "O enunciado dá direto.\nu = 3"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "t = 4 × 3 = 12\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "s",
+        "4"
+       ],
+       [
+        "u",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: uma coisa de cada grupo → multiplique as opções.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "4 salgados, 3 sucos"
+       ],
+       [
+        "2. Equação em letras",
+        "t = s × u"
+       ],
+       [
+        "3. Achar cada letra",
+        "s = 4; u = 3"
+       ],
+       [
+        "4. Substituir",
+        "4 × 3 = 12"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "5 camisetas e 2 bermudas. Quantas roupas diferentes?",
+    "opcoes": [
+     "10",
+     "7",
+     "25",
+     "3"
+    ],
+    "certa": "10",
+    "resposta": "5 × 2 = 10."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-com-04",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Numa corrida com 5 atletas, de quantas maneiras diferentes pode ficar o pódio com 1º, 2º e 3º lugar? Não há empate.",
+  "A": "125",
+  "B": "60",
+  "C": "15",
+  "D": "10",
+  "E": "12",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "5×4×3 = 60. B. A = repetindo atleta; C = 5×3; D = combinação; E = 5+4+3.",
+   "ideia": "São 5 opções para o 1º, sobram 4 para o 2º e 3 para o 3º: 5 × 4 × 3 = 60.",
+   "pecas": [
+    {
+     "termo": "Pódio",
+     "significado": "Os três primeiros lugares, em ordem."
+    },
+    {
+     "termo": "Empate",
+     "significado": "Dois atletas no mesmo lugar."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Escolha com ordem",
+        "formula": "multiplique as opções de cada lugar, uma a menos a cada vez"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Atletas",
+        "5"
+       ],
+       [
+        "Lugares",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quantos pódios diferentes existem.\nPor que vai diminuindo? Quem já ficou em 1º não pode ficar também em 2º.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "p = a × b × c",
+      "leitura": "pódios = opções do 1º × do 2º × do 3º lugar",
+      "letras": [
+       {
+        "letra": "p",
+        "oque": "número de pódios (o que a questão quer)"
+       },
+       {
+        "letra": "a",
+        "oque": "opções para o 1º lugar"
+       },
+       {
+        "letra": "b",
+        "oque": "opções para o 2º lugar"
+       },
+       {
+        "letra": "c",
+        "oque": "opções para o 3º lugar"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando a (1º lugar)",
+     "texto": "Qualquer um dos atletas.\na = 5"
+    },
+    {
+     "titulo": "Achando b (2º lugar)",
+     "texto": "Um já foi usado.\nb = 5 − 1 = 4"
+    },
+    {
+     "titulo": "Achando c (3º lugar)",
+     "texto": "Dois já foram usados.\nc = 5 − 2 = 3"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "p = 5 × 4 × 3\n5 × 4 = 20\n20 × 3 = 60\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "a",
+        "5"
+       ],
+       [
+        "b",
+        "4"
+       ],
+       [
+        "c",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: a ordem importa (1º, 2º, 3º) → multiplique, tirando um a cada lugar.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "5 atletas, 3 lugares"
+       ],
+       [
+        "2. Equação em letras",
+        "p = a × b × c"
+       ],
+       [
+        "3. Achar cada letra",
+        "a = 5; b = 4; c = 3"
+       ],
+       [
+        "4. Substituir",
+        "5 × 4 × 3 = 60"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "4 pessoas, escolher presidente e vice. Maneiras?",
+    "opcoes": [
+     "12",
+     "16",
+     "6",
+     "7"
+    ],
+    "certa": "12",
+    "resposta": "4 × 3 = 12."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-com-05",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Um professor vai escolher uma dupla entre 6 alunos para apresentar um trabalho. Os dois têm a mesma função. Quantas duplas diferentes podem ser formadas?",
+  "A": "15",
+  "B": "30",
+  "C": "36",
+  "D": "12",
+  "E": "11",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "6×5/2 = 15. A. B = com ordem; C = repetindo; D = 6×2; E = 6+5.",
+   "ideia": "Contando com ordem são 6 × 5 = 30, mas cada dupla apareceu 2 vezes: 30 ÷ 2 = 15.",
+   "pecas": [
+    {
+     "termo": "Dupla",
+     "significado": "Duas pessoas, sem primeira nem segunda."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Dupla sem ordem",
+        "formula": "duplas = escolhas com ordem ÷ 2"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Alunos",
+        "6"
+       ],
+       [
+        "Pessoas na dupla",
+        "2"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quantas duplas diferentes existem.\nPor que dividir? \"Ana e Bia\" e \"Bia e Ana\" são a mesma dupla, contada 2 vezes.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "d = c ÷ r",
+      "leitura": "duplas = contagem com ordem ÷ repetições de cada dupla",
+      "letras": [
+       {
+        "letra": "d",
+        "oque": "número de duplas (o que a questão quer)"
+       },
+       {
+        "letra": "c",
+        "oque": "contagem com ordem: 1º escolhido e 2º escolhido"
+       },
+       {
+        "letra": "r",
+        "oque": "quantas vezes cada dupla foi contada"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando c (com ordem)",
+     "texto": "6 opções para o primeiro, 5 para o segundo.\nc = 6 × 5 = 30"
+    },
+    {
+     "titulo": "Achando r (repetições)",
+     "texto": "Cada dupla aparece nas duas ordens.\nr = 2"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo parar em 30, a letra B.\n30 conta cada dupla duas vezes."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "d = 30 ÷ 2 = 15\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "c",
+        "30"
+       ],
+       [
+        "r",
+        "2"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dupla com a mesma função → conte com ordem e divida por 2.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "6 alunos, duplas"
+       ],
+       [
+        "2. Equação em letras",
+        "d = c ÷ r"
+       ],
+       [
+        "3. Achar cada letra",
+        "c = 30; r = 2"
+       ],
+       [
+        "4. Substituir",
+        "30 ÷ 2 = 15"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "4 amigos, escolher uma dupla. Quantas?",
+    "opcoes": [
+     "6",
+     "12",
+     "16",
+     "8"
+    ],
+    "certa": "6",
+    "resposta": "4 × 3 = 12; 12 ÷ 2 = 6."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-com-06",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Numa rifa há 20 bilhetes, e um único bilhete será sorteado. Lia comprou 3 deles. Qual é a probabilidade de Lia ganhar?",
+  "A": "3/17",
+  "B": "1/20",
+  "C": "1/3",
+  "D": "17/20",
+  "E": "3/20",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "3/20. E. A = bons sobre ruins; B = um bilhete; C = 1 sobre os dela; D = chance de perder.",
+   "ideia": "São 3 bilhetes bons para Lia num total de 20: a chance é 3 em 20.",
+   "pecas": [
+    {
+     "termo": "Probabilidade",
+     "significado": "A chance: casos bons sobre todos os casos."
+    },
+    {
+     "termo": "3/20",
+     "significado": "Lê-se três em vinte."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Probabilidade",
+        "formula": "chance = casos bons ÷ todos os casos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Bilhetes",
+        "20"
+       ],
+       [
+        "Bilhetes da Lia",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a chance de sair um bilhete da Lia.\nPor que sobre o total? Com 1 bilhete bom em 2, a chance é 1 de 2, escrito 1/2: metade.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "p = b ÷ t",
+      "leitura": "probabilidade = bilhetes bons ÷ total de bilhetes",
+      "letras": [
+       {
+        "letra": "p",
+        "oque": "probabilidade (o que a questão quer)"
+       },
+       {
+        "letra": "b",
+        "oque": "bilhetes bons: os da Lia"
+       },
+       {
+        "letra": "t",
+        "oque": "total de bilhetes"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando b (bons)",
+     "texto": "O enunciado dá direto.\nb = 3"
+    },
+    {
+     "titulo": "Achando t (total)",
+     "texto": "O enunciado dá direto.\nt = 20"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "p = 3/20\nTrês chances em vinte.\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "b",
+        "3"
+       ],
+       [
+        "t",
+        "20"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"qual a probabilidade\" → o que serve sobre tudo que pode sair.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "20 bilhetes, 3 dela"
+       ],
+       [
+        "2. Equação em letras",
+        "p = b ÷ t"
+       ],
+       [
+        "3. Achar cada letra",
+        "b = 3; t = 20"
+       ],
+       [
+        "4. Substituir",
+        "3/20"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "10 bolas, 7 azuis. Chance de sair azul?",
+    "opcoes": [
+     "7/10",
+     "7/3",
+     "3/10",
+     "1/7"
+    ],
+    "certa": "7/10",
+    "resposta": "7 boas em 10."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-com-07",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "A previsão diz que a probabilidade de chover amanhã é de 30%. Qual é a probabilidade de não chover?",
+  "A": "30%",
+  "B": "3%",
+  "C": "70%",
+  "D": "130%",
+  "E": "50%",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "100-30 = 70. C. A = a própria; B = 30/10; D = soma; E = achou meio a meio.",
+   "ideia": "Chover ou não chover completam 100%: se chover vale 30%, não chover vale 100 − 30 = 70%.",
+   "pecas": [
+    {
+     "termo": "%",
+     "significado": "Lê-se por cento: partes de cada 100."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "porcentagem",
+        "nome": "Não acontecer",
+        "formula": "chance de não = 100% − chance de sim"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Chance de chover",
+        "30%"
+       ],
+       [
+        "Tudo junto",
+        "100%, para decorar"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a chance de ficar sem chuva.\nPor que subtrair de 100%? De 100 partes, as que não são de chuva são de tempo sem chuva. Juntas dão as 100.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "n = t − c",
+      "leitura": "não chover = tudo − chover",
+      "letras": [
+       {
+        "letra": "n",
+        "oque": "chance de não chover (o que a questão quer)"
+       },
+       {
+        "letra": "t",
+        "oque": "tudo: 100%"
+       },
+       {
+        "letra": "c",
+        "oque": "chance de chover"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando t (tudo)",
+     "texto": "Somando todas as chances dá 100% (para decorar).\nt = 100"
+    },
+    {
+     "titulo": "Achando c (chover)",
+     "texto": "O enunciado dá direto.\nc = 30"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "n = 100 − 30 = 70%\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "t",
+        "100"
+       ],
+       [
+        "c",
+        "30"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"probabilidade de não\" → 100% menos a de sim.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "30% de chuva"
+       ],
+       [
+        "2. Equação em letras",
+        "n = t − c"
+       ],
+       [
+        "3. Achar cada letra",
+        "t = 100; c = 30"
+       ],
+       [
+        "4. Substituir",
+        "100 − 30 = 70"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Chance de acertar: 40%. Chance de errar?",
+    "opcoes": [
+     "60%",
+     "40%",
+     "140%",
+     "50%"
+    ],
+    "certa": "60%",
+    "resposta": "100 − 40 = 60%."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-com-08",
+  "materia": "Matemática",
+  "tema": "Análise Combinatória e Probabilidade",
+  "enunciado": "Uma senha tem uma letra seguida de um número. A letra é A, B ou C, e o número é 1, 2, 3 ou 4. Alguém tenta uma senha ao acaso, uma única vez. Qual é a probabilidade de acertar?",
+  "A": "1/7",
+  "B": "1/12",
+  "C": "2/12",
+  "D": "1/4",
+  "E": "1/3",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "12 senhas; 1/12. B. A = somou; C = duas tentativas; D = só número; E = só letra.",
+   "ideia": "Primeiro conte as senhas: 3 × 4 = 12. Só 1 é a certa: a chance é 1/12.",
+   "pecas": [
+    {
+     "termo": "Ao acaso",
+     "significado": "Chutando, sem saber nada."
+    },
+    {
+     "termo": "1/12",
+     "significado": "Lê-se um em doze."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "contagem",
+        "nome": "Contar as senhas",
+        "formula": "total = letras × números"
+       },
+       {
+        "figura": "contagem",
+        "nome": "Probabilidade",
+        "formula": "chance = casos bons ÷ total"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Letras",
+        "3"
+       ],
+       [
+        "Números",
+        "4"
+       ],
+       [
+        "Senha certa",
+        "1"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a chance de acertar chutando uma vez.\nPor que contar primeiro? Sem saber quantas senhas existem, não há como achar a chance.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "p = b ÷ t",
+      "leitura": "probabilidade = senhas certas ÷ total de senhas",
+      "letras": [
+       {
+        "letra": "p",
+        "oque": "probabilidade (o que a questão quer)"
+       },
+       {
+        "letra": "b",
+        "oque": "senhas certas"
+       },
+       {
+        "letra": "t",
+        "oque": "total de senhas"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando b (certas)",
+     "texto": "Só uma senha abre.\nb = 1"
+    },
+    {
+     "titulo": "Achando t (total)",
+     "texto": "Cada letra combina com cada número.\nt = 3 × 4 = 12"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo somar, 3 + 4 = 7, e marcar a letra A.\nA senha usa uma letra junto com um número: multiplique."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "p = 1/12\nUma chance em doze.\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "b",
+        "1"
+       ],
+       [
+        "t",
+        "12"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: chance de acertar uma senha → conte todas e faça 1 sobre o total.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "3 letras, 4 números"
+       ],
+       [
+        "2. Equação em letras",
+        "p = b ÷ t"
+       ],
+       [
+        "3. Achar cada letra",
+        "b = 1; t = 12"
+       ],
+       [
+        "4. Substituir",
+        "1/12"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "2 letras e 5 números (uma de cada). Chance de acertar de primeira?",
+    "opcoes": [
+     "1/10",
+     "1/7",
+     "1/5",
+     "1/2"
+    ],
+    "certa": "1/10",
+    "resposta": "2 × 5 = 10 senhas: 1/10."
+   }
+  }
+ }
+]

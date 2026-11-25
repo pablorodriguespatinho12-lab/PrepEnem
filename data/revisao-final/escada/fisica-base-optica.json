@@ -1,0 +1,945 @@
+[
+ {
+  "id": "d2-escada-fis-opt-02",
+  "materia": "Física",
+  "tema": "Óptica",
+  "enunciado": "Um raio de laser bate num espelho plano. O ângulo entre o raio que chega e a normal (a linha em pé sobre o espelho) é de 35 graus. Qual é o ângulo entre o raio que chega e o raio que volta?",
+  "A": "35°",
+  "B": "55°",
+  "C": "70°",
+  "D": "110°",
+  "E": "17,5°",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "35 + 35 = 70. C. A = só um lado; B = 90-35; D = 180-70; E = 35/2.",
+   "ideia": "O raio volta com o mesmo ângulo que chegou: 35 graus de um lado da normal e 35 do outro, 70 no total.",
+   "pecas": [
+    {
+     "termo": "Normal",
+     "significado": "Uma linha em pé sobre o espelho, no ponto onde o raio bate."
+    },
+    {
+     "termo": "°",
+     "significado": "Lê-se graus: a medida de um ângulo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Reflexão",
+        "formula": "ângulo que volta = ângulo que chega"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Ângulo de chegada",
+        "35°"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a abertura entre os dois raios.\nPor que 2 vezes? Se o raio chegasse a 10°, voltaria a 10°: 10 + 10 = 20° entre eles.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "e = 2 × i",
+      "leitura": "ângulo entre os raios = 2 × ângulo de incidência",
+      "letras": [
+       {
+        "letra": "e",
+        "oque": "ângulo entre os dois raios (o que a questão quer)"
+       },
+       {
+        "letra": "i",
+        "oque": "ângulo de incidência: entre o raio que chega e a normal"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando i (ângulo que chega)",
+     "texto": "O enunciado dá direto.\ni = 35°"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo responder 35°, a letra A.\n35° é só um lado da normal.\nDo outro lado o raio que volta abre mais 35°."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "e = 2 × 35 = 70°\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "i",
+        "35°"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"entre o raio que chega e o que volta\" → 2 vezes o ângulo com a normal.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "35° com a normal"
+       ],
+       [
+        "2. Equação em letras",
+        "e = 2 × i"
+       ],
+       [
+        "3. Achar cada letra",
+        "i = 35"
+       ],
+       [
+        "4. Substituir",
+        "2 × 35 = 70"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "O raio chega a 20° da normal. Ângulo entre os dois raios?",
+    "opcoes": [
+     "40°",
+     "20°",
+     "70°",
+     "10°"
+    ],
+    "certa": "40°",
+    "resposta": "20 × 2 = 40°."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-opt-03",
+  "materia": "Física",
+  "tema": "Óptica",
+  "enunciado": "Uma bailarina está a 3 m de um espelho plano. Qual é a distância entre a bailarina e a imagem dela?",
+  "A": "6 m",
+  "B": "3 m",
+  "C": "1,5 m",
+  "D": "9 m",
+  "E": "0 m",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "3 + 3 = 6. A. B = só até o espelho; C = 3/2; D = 3×3; E = 3-3.",
+   "ideia": "No espelho plano a imagem fica atrás do espelho, à mesma distância: 3 m na frente e 3 m atrás, 6 m no total.",
+   "pecas": [
+    {
+     "termo": "Espelho plano",
+     "significado": "O espelho reto, como o do banheiro."
+    },
+    {
+     "termo": "Imagem",
+     "significado": "O que se vê \"dentro\" do espelho."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Espelho plano",
+        "formula": "distância até a imagem = 2 × distância até o espelho"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Distância até o espelho",
+        "3 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer da bailarina até a imagem.\nPor que 2 vezes? A 1 m do espelho, a imagem fica 1 m atrás dele: 1 + 1 = 2 m.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "d = 2 × p",
+      "leitura": "distância até a imagem = 2 × distância da pessoa ao espelho",
+      "letras": [
+       {
+        "letra": "d",
+        "oque": "distância entre a bailarina e a imagem (o que a questão quer)"
+       },
+       {
+        "letra": "p",
+        "oque": "distância da pessoa ao espelho, em metros"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando p (pessoa ao espelho)",
+     "texto": "O enunciado dá direto.\np = 3 m"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo responder 3 m, a letra B.\n3 m é só até o espelho.\nA imagem está mais 3 m atrás dele."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "d = 2 × 3 = 6 m\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "p",
+        "3 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"distância entre a pessoa e a imagem\" → o dobro da distância ao espelho.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "3 m do espelho"
+       ],
+       [
+        "2. Equação em letras",
+        "d = 2 × p"
+       ],
+       [
+        "3. Achar cada letra",
+        "p = 3"
+       ],
+       [
+        "4. Substituir",
+        "2 × 3 = 6"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um gato está a 2 m do espelho. Distância até a imagem?",
+    "opcoes": [
+     "4 m",
+     "2 m",
+     "1 m",
+     "8 m"
+    ],
+    "certa": "4 m",
+    "resposta": "2 × 2 = 4 m."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-opt-04",
+  "materia": "Física",
+  "tema": "Óptica",
+  "enunciado": "No vácuo, a luz anda 300 000 km a cada segundo. Dentro de um bloco transparente, ela anda 200 000 km a cada segundo. Qual é o índice de refração do bloco?",
+  "A": "0,67",
+  "B": "100 000",
+  "C": "5",
+  "D": "2",
+  "E": "1,5",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "300000/200000 = 1,5. E. A = invertido; B = diferença; C = soma sem os zeros; D = arredondou.",
+   "ideia": "O índice diz quantas vezes a luz é mais rápida no vácuo do que no material: 300 000 dividido por 200 000 é 1,5.",
+   "pecas": [
+    {
+     "termo": "Vácuo",
+     "significado": "Lugar sem nada, nem ar."
+    },
+    {
+     "termo": "Índice de refração",
+     "significado": "Um número que diz quanto o material freia a luz."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Índice de refração",
+        "formula": "índice = velocidade no vácuo ÷ velocidade no material"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Luz no vácuo",
+        "300 000 km por segundo"
+       ],
+       [
+        "Luz no bloco",
+        "200 000 km por segundo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o índice de refração do bloco.\nPor que dividir? Se a luz fosse 10 no vácuo e 5 no bloco, seria 10 ÷ 5 = 2 vezes mais rápida fora.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "n = c ÷ v",
+      "leitura": "índice = velocidade no vácuo ÷ velocidade no bloco",
+      "letras": [
+       {
+        "letra": "n",
+        "oque": "índice de refração (o que a questão quer)"
+       },
+       {
+        "letra": "c",
+        "oque": "velocidade da luz no vácuo"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade da luz no bloco"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando c (luz no vácuo)",
+     "texto": "O enunciado dá direto.\nc = 300 000 km por segundo"
+    },
+    {
+     "titulo": "Achando v (luz no bloco)",
+     "texto": "O enunciado dá direto.\nv = 200 000 km por segundo"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "n = 300 000 ÷ 200 000\nTirar os mesmos zeros dos dois não muda a resposta: 3 ÷ 2\n2 cabe 1 vez em 3 e sobra 1.\nO 1 que sobrou são 10 décimos: 10 ÷ 2 = 5 décimos, ou 0,5\nn = 1 + 0,5 = 1,5\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "c",
+        "300 000"
+       ],
+       [
+        "v",
+        "200 000"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dá as duas velocidades da luz → a do vácuo dividida pela do material.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "300 000 e 200 000"
+       ],
+       [
+        "2. Equação em letras",
+        "n = c ÷ v"
+       ],
+       [
+        "3. Achar cada letra",
+        "c = 300 000; v = 200 000"
+       ],
+       [
+        "4. Substituir",
+        "300 000 ÷ 200 000 = 1,5"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Num cristal a luz anda 150 000 km por segundo (no vácuo, 300 000). Índice?",
+    "opcoes": [
+     "2",
+     "0,5",
+     "150 000",
+     "4,5"
+    ],
+    "certa": "2",
+    "resposta": "300 000 ÷ 150 000 = 2."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-opt-05",
+  "materia": "Física",
+  "tema": "Óptica",
+  "enunciado": "Um espelho côncavo, daqueles curvos para dentro, tem raio de curvatura de 80 cm. A que distância do espelho fica o foco?",
+  "A": "80 cm",
+  "B": "40 cm",
+  "C": "160 cm",
+  "D": "20 cm",
+  "E": "78 cm",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "80/2 = 40. B. A = o raio; C = 80×2; D = 80/4; E = 80-2.",
+   "ideia": "O foco fica na metade do raio: 80 dividido por 2 é 40 cm.",
+   "pecas": [
+    {
+     "termo": "Raio de curvatura",
+     "significado": "O espelho é um pedaço da casca de uma bola: é a distância do meio da bola até a casca."
+    },
+    {
+     "termo": "Foco",
+     "significado": "O ponto onde se juntam os raios que chegam paralelos à linha do meio do espelho."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Foco",
+        "formula": "foco = raio ÷ 2"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Raio de curvatura",
+        "80 cm"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a distância do foco ao espelho.\nPor que 2? É a regra do espelho esférico: o foco fica no meio do raio. Raio 10 cm, foco 5 cm.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "f = r ÷ 2",
+      "leitura": "distância do foco = raio de curvatura ÷ 2",
+      "letras": [
+       {
+        "letra": "f",
+        "oque": "distância do foco, em cm (o que a questão quer)"
+       },
+       {
+        "letra": "r",
+        "oque": "raio de curvatura, em cm"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando r (raio)",
+     "texto": "O enunciado dá direto.\nr = 80 cm"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "f = 80 ÷ 2 = 40 cm\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "r",
+        "80 cm"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dá o raio do espelho e pede o foco → a metade.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "raio 80 cm"
+       ],
+       [
+        "2. Equação em letras",
+        "f = r ÷ 2"
+       ],
+       [
+        "3. Achar cada letra",
+        "r = 80"
+       ],
+       [
+        "4. Substituir",
+        "80 ÷ 2 = 40"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Raio de curvatura 50 cm. Distância do foco?",
+    "opcoes": [
+     "25 cm",
+     "50 cm",
+     "100 cm",
+     "48 cm"
+    ],
+    "certa": "25 cm",
+    "resposta": "50 ÷ 2 = 25 cm."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-opt-06",
+  "materia": "Física",
+  "tema": "Óptica",
+  "enunciado": "Diante de um espelho curvo de maquiagem, um detalhe de 3 mm de altura aparece com uma imagem de 12 mm de altura. De quantas vezes é o aumento?",
+  "A": "9 vezes",
+  "B": "36 vezes",
+  "C": "0,25 vez",
+  "D": "4 vezes",
+  "E": "15 vezes",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "12/3 = 4. D. A = 12-3; B = 12×3; C = 3/12; E = 12+3.",
+   "ideia": "Aumento é quantas vezes o objeto cabe na imagem: 3 mm cabem 4 vezes em 12 mm.",
+   "pecas": [
+    {
+     "termo": "Imagem",
+     "significado": "O que se vê \"dentro\" do espelho."
+    },
+    {
+     "termo": "mm",
+     "significado": "Lê-se milímetros."
+    },
+    {
+     "termo": "Objeto",
+     "significado": "A coisa de verdade, que está na frente do espelho."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Aumento",
+        "formula": "aumento = altura da imagem ÷ altura do objeto"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Altura do objeto",
+        "3 mm"
+       ],
+       [
+        "Altura da imagem",
+        "12 mm"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quantas vezes a imagem é maior.\nPor que dividir? Objeto de 1 mm com imagem de 2 mm: 2 ÷ 1 = 2 vezes maior.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "a = h ÷ o",
+      "leitura": "aumento = altura da imagem ÷ altura do objeto",
+      "letras": [
+       {
+        "letra": "a",
+        "oque": "aumento, em vezes (o que a questão quer)"
+       },
+       {
+        "letra": "h",
+        "oque": "altura da imagem"
+       },
+       {
+        "letra": "o",
+        "oque": "altura do objeto"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando h (altura da imagem)",
+     "texto": "O enunciado dá direto.\nh = 12 mm"
+    },
+    {
+     "titulo": "Achando o (altura do objeto)",
+     "texto": "O enunciado dá direto.\no = 3 mm"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "a = 12 ÷ 3 = 4 vezes\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "h",
+        "12 mm"
+       ],
+       [
+        "o",
+        "3 mm"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"quantas vezes maior\" → imagem dividida pelo objeto.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "3 mm e 12 mm"
+       ],
+       [
+        "2. Equação em letras",
+        "a = h ÷ o"
+       ],
+       [
+        "3. Achar cada letra",
+        "h = 12; o = 3"
+       ],
+       [
+        "4. Substituir",
+        "12 ÷ 3 = 4"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Objeto de 2 cm, imagem de 10 cm. Aumento?",
+    "opcoes": [
+     "5 vezes",
+     "8 vezes",
+     "20 vezes",
+     "12 vezes"
+    ],
+    "certa": "5 vezes",
+    "resposta": "10 ÷ 2 = 5."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-opt-07",
+  "materia": "Física",
+  "tema": "Óptica",
+  "enunciado": "Um sinal de internet viaja como luz por uma fibra óptica de 600 km. O índice de refração da fibra é 1,5, e a luz no vácuo anda 300 000 km a cada segundo. Quanto tempo o sinal leva para atravessar a fibra?",
+  "A": "0,002 s",
+  "B": "0,003 s",
+  "C": "0,03 s",
+  "D": "400 s",
+  "E": "500 s",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "v = 200000; t = 600/200000 = 0,003. B. A = usou a luz no vácuo; C = erro de zero; D = 600/1,5; E = 300000/600.",
+   "ideia": "Primeiro a velocidade dentro da fibra: 300 000 ÷ 1,5 = 200 000 km por segundo. Depois o tempo: 600 ÷ 200 000 = 0,003 s.",
+   "pecas": [
+    {
+     "termo": "Fibra óptica",
+     "significado": "Um fio de vidro por onde a luz leva o sinal."
+    },
+    {
+     "termo": "Índice de refração",
+     "significado": "Velocidade no vácuo dividida pela velocidade no material."
+    },
+    {
+     "termo": "Vácuo",
+     "significado": "Lugar sem nada, nem ar."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "lente",
+        "nome": "Velocidade no material",
+        "formula": "velocidade = luz no vácuo ÷ índice"
+       },
+       {
+        "figura": "carro",
+        "nome": "Tempo",
+        "formula": "tempo = distância ÷ velocidade"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Fibra",
+        "600 km"
+       ],
+       [
+        "Índice",
+        "1,5"
+       ],
+       [
+        "Luz no vácuo",
+        "300 000 km por segundo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o tempo dentro da fibra.\nPor que não usar 300 000? Essa é a luz no vácuo. Dentro da fibra ela é mais lenta.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "t = d ÷ v",
+      "leitura": "tempo = distância ÷ velocidade na fibra",
+      "letras": [
+       {
+        "letra": "t",
+        "oque": "tempo, em segundos (o que a questão quer)"
+       },
+       {
+        "letra": "d",
+        "oque": "distância: o tamanho da fibra, em km"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade da luz na fibra"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando d (distância)",
+     "texto": "O enunciado dá direto.\nd = 600 km"
+    },
+    {
+     "titulo": "Achando v (velocidade na fibra)",
+     "texto": "6 ÷ 2 = 3, então 6 ÷ 3 = 2. Do mesmo jeito: fibra = vácuo ÷ índice.\nv = 300 000 ÷ 1,5\nVezes 10 nos dois tira a vírgula e não muda a resposta: 3 000 000 ÷ 15\n30 ÷ 15 = 2, e voltam cinco zeros\nv = 200 000 km por segundo"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "t = 600 ÷ 200 000\nTire dois zeros dos dois: 6 ÷ 2000\nMetade dos dois dá o mesmo: 3 ÷ 1000\n3 pedaços de mil: t = 0,003 s\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "d",
+        "600 km"
+       ],
+       [
+        "v",
+        "200 000"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dá o índice e pede o tempo → primeiro a velocidade no material, depois distância ÷ velocidade.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "600 km; 1,5; 300 000"
+       ],
+       [
+        "2. Equação em letras",
+        "t = d ÷ v"
+       ],
+       [
+        "3. Achar cada letra",
+        "d = 600; v = 200 000"
+       ],
+       [
+        "4. Substituir",
+        "600 ÷ 200 000 = 0,003"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Fibra de 400 km, luz dentro dela a 200 000 km por segundo. Tempo?",
+    "opcoes": [
+     "0,002 s",
+     "0,02 s",
+     "500 s",
+     "2 s"
+    ],
+    "certa": "0,002 s",
+    "resposta": "400 ÷ 200 000 = 2 ÷ 1000 = 0,002 s."
+   }
+  }
+ }
+]

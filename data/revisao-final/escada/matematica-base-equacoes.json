@@ -1,0 +1,839 @@
+[
+ {
+  "id": "d2-escada-mat-equ-06",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "Na equação 3 × p + 5 = 26, a letra p é o preço de um caderno, em reais. Qual é o valor de p?",
+  "A": "31",
+  "B": "21",
+  "C": "7",
+  "D": "10",
+  "E": "63",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "3p = 21; p = 7. C. A = 26+5; B = parou em 21; D = 31/3 arredondado; E = 21×3.",
+   "ideia": "Tire os 5 dos dois lados e fica 3 × p = 21. Depois divida por 3: p = 7.",
+   "pecas": [
+    {
+     "termo": "Equação",
+     "significado": "Uma igualdade com uma letra escondendo um número."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Isolar a letra",
+        "formula": "desfaça a soma, depois a multiplicação"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Multiplica p",
+        "3"
+       ],
+       [
+        "Somado",
+        "5"
+       ],
+       [
+        "Resultado",
+        "26"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o número escondido na letra p.\nPor que tirar primeiro o somado? Em 2 × p + 1 = 7, sem o 1 sobra 2 × p = 6. Metade: p = 6 ÷ 2 = 3.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "p = (r − s) ÷ m (preço = (resultado − somado) ÷ multiplicador)",
+      "letras": [
+       {
+        "letra": "p",
+        "oque": "preço de um caderno (o que a questão quer)"
+       },
+       {
+        "letra": "r",
+        "oque": "resultado, o lado direito"
+       },
+       {
+        "letra": "s",
+        "oque": "número somado"
+       },
+       {
+        "letra": "m",
+        "oque": "número que multiplica p"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando r (resultado)",
+     "texto": "Está na equação.\nr = 26"
+    },
+    {
+     "titulo": "Achando s (somado)",
+     "texto": "Está na equação.\ns = 5"
+    },
+    {
+     "titulo": "Achando m (multiplica)",
+     "texto": "Está na equação.\nm = 3"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "26 − 5 = 21\np = 21 ÷ 3 = 7\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "r",
+        "26"
+       ],
+       [
+        "s",
+        "5"
+       ],
+       [
+        "m",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: letra sozinha de um lado → desfaça a soma e depois a multiplicação.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "3 × p + 5 = 26"
+       ],
+       [
+        "2. Equação em letras",
+        "p = (r − s) ÷ m"
+       ],
+       [
+        "3. Achar cada letra",
+        "r = 26; s = 5; m = 3"
+       ],
+       [
+        "4. Substituir",
+        "21 ÷ 3 = 7"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "2 × x + 4 = 18. Quanto vale x?",
+    "opcoes": [
+     "7",
+     "11",
+     "14",
+     "22"
+    ],
+    "certa": "7",
+    "resposta": "2 × x = 14; x = 7."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-equ-07",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "Um aplicativo cobra R$ 5,00 fixos mais R$ 3,00 por quilômetro. Uma corrida custou R$ 29,00. Quantos quilômetros ela teve?",
+  "A": "8",
+  "B": "24",
+  "C": "9",
+  "D": "11",
+  "E": "3",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "(29-5)/3 = 8. A. B = parou em 24; C = 29/3 arredondado; D = (29+4)/3; E = o preço do km.",
+   "ideia": "O texto vira 5 + 3 × k = 29. Tirando os 5 sobram 24, e 24 ÷ 3 = 8 km.",
+   "pecas": [
+    {
+     "termo": "Valor fixo",
+     "significado": "O que se paga sempre, mesmo sem andar."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Montar a conta",
+        "formula": "total = fixo + preço do km × quilômetros"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Fixo",
+        "5"
+       ],
+       [
+        "Por quilômetro",
+        "3"
+       ],
+       [
+        "Total",
+        "29"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quantos quilômetros foram rodados.\nPor que tirar o fixo? Os 5 reais não pagam distância. Numa corrida de 2 km: 5 + 3 × 2 = 11.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "k = (t − f) ÷ q (quilômetros = (total − fixo) ÷ preço de cada quilômetro)",
+      "letras": [
+       {
+        "letra": "k",
+        "oque": "quilômetros (o que a questão quer)"
+       },
+       {
+        "letra": "t",
+        "oque": "total pago"
+       },
+       {
+        "letra": "f",
+        "oque": "valor fixo"
+       },
+       {
+        "letra": "q",
+        "oque": "preço de cada quilômetro"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando t (total)",
+     "texto": "O enunciado dá direto.\nt = 29"
+    },
+    {
+     "titulo": "Achando f (fixo)",
+     "texto": "O enunciado dá direto.\nf = 5"
+    },
+    {
+     "titulo": "Achando q (cada quilômetro)",
+     "texto": "O enunciado dá direto.\nq = 3"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "29 − 5 = 24\nk = 24 ÷ 3 = 8\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "t",
+        "29"
+       ],
+       [
+        "f",
+        "5"
+       ],
+       [
+        "q",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"fixo mais tanto por\" → total menos fixo, dividido pelo preço de cada um.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "5 fixos, 3 por km, 29"
+       ],
+       [
+        "2. Equação em letras",
+        "k = (t − f) ÷ q"
+       ],
+       [
+        "3. Achar cada letra",
+        "t = 29; f = 5; q = 3"
+       ],
+       [
+        "4. Substituir",
+        "24 ÷ 3 = 8"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Taxa de 4 reais mais 2 por km; total 20. Quilômetros?",
+    "opcoes": [
+     "8",
+     "10",
+     "16",
+     "12"
+    ],
+    "certa": "8",
+    "resposta": "20 − 4 = 16; 16 ÷ 2 = 8."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-equ-08",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "Um estojo custa o mesmo que 3 canetas. Um estojo e uma caneta, juntos, custam R$ 24,00. Quanto custa uma caneta, em reais?",
+  "A": "8",
+  "B": "18",
+  "C": "12",
+  "D": "21",
+  "E": "6",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "4c = 24; c = 6. E. A = 24/3; B = o estojo; C = 24/2; D = 24-3.",
+   "ideia": "Troque o estojo por 3 canetas: ficam 4 canetas por 24, e cada uma custa 6.",
+   "pecas": [
+    {
+     "termo": "Trocar",
+     "significado": "Pôr no lugar de uma coisa outra que vale o mesmo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Substituição",
+        "formula": "troque o estojo por 3 canetas"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Estojo",
+        "3 canetas"
+       ],
+       [
+        "Estojo + caneta",
+        "24"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o preço de uma caneta sozinha.\nPor que trocar? Com duas coisas diferentes não dá para dividir; só com canetas dá.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "c = t ÷ n",
+      "leitura": "preço da caneta = total ÷ número de canetas depois da troca",
+      "letras": [
+       {
+        "letra": "c",
+        "oque": "preço de uma caneta (o que a questão quer)"
+       },
+       {
+        "letra": "t",
+        "oque": "total pago"
+       },
+       {
+        "letra": "n",
+        "oque": "número de canetas depois da troca"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando t (total)",
+     "texto": "O enunciado dá direto.\nt = 24"
+    },
+    {
+     "titulo": "Achando n (canetas)",
+     "texto": "O estojo vira 3 canetas, mais a 1 caneta.\nn = 3 + 1 = 4"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo fazer 24 ÷ 3 = 8, a letra A.\nFaltou contar a caneta que já estava junto: são 4."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "c = 24 ÷ 4 = 6\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "t",
+        "24"
+       ],
+       [
+        "n",
+        "4"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"custa o mesmo que\" → troque e fique com um tipo só.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "estojo = 3 canetas; 24"
+       ],
+       [
+        "2. Equação em letras",
+        "c = t ÷ n"
+       ],
+       [
+        "3. Achar cada letra",
+        "n = 4"
+       ],
+       [
+        "4. Substituir",
+        "24 ÷ 4 = 6"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um bolo vale 2 sucos. Bolo + suco = 15. Preço do suco?",
+    "opcoes": [
+     "5",
+     "10",
+     "7,50",
+     "13"
+    ],
+    "certa": "5",
+    "resposta": "3 sucos = 15; 15 ÷ 3 = 5."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-equ-09",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "A soma das idades de duas irmãs é 30 anos, e a diferença entre elas é 6 anos. Qual é a idade da mais velha?",
+  "A": "36",
+  "B": "18",
+  "C": "12",
+  "D": "24",
+  "E": "15",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "(30+6)/2 = 18. B. A = parou em 36; C = a mais nova; D = 30-6; E = 30/2.",
+   "ideia": "Somando as duas informações, a idade da mais nova some: 2 vezes a mais velha é 36, então ela tem 18.",
+   "pecas": [
+    {
+     "termo": "Diferença",
+     "significado": "O resultado de uma subtração."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Somar as duas contas",
+        "formula": "maior = (soma + diferença) ÷ 2"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Soma",
+        "30"
+       ],
+       [
+        "Diferença",
+        "6"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a idade da irmã mais velha.\nPor que somar? Com 10 e 4: soma 14, diferença 6. Juntando, 14 + 6 = 20, que é 2 vezes o maior.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "v = (s + d) ÷ 2 (mais velha = (soma + diferença) ÷ 2)",
+      "letras": [
+       {
+        "letra": "v",
+        "oque": "idade da mais velha (o que a questão quer)"
+       },
+       {
+        "letra": "s",
+        "oque": "soma das idades"
+       },
+       {
+        "letra": "d",
+        "oque": "diferença das idades"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando s (soma)",
+     "texto": "O enunciado dá direto.\ns = 30"
+    },
+    {
+     "titulo": "Achando d (diferença)",
+     "texto": "O enunciado dá direto.\nd = 6"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "30 + 6 = 36\nv = 36 ÷ 2 = 18\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "s",
+        "30"
+       ],
+       [
+        "d",
+        "6"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dá a soma e a diferença → some as duas e divida por 2 para achar o maior.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "soma 30, diferença 6"
+       ],
+       [
+        "2. Equação em letras",
+        "v = (s + d) ÷ 2"
+       ],
+       [
+        "3. Achar cada letra",
+        "s = 30; d = 6"
+       ],
+       [
+        "4. Substituir",
+        "36 ÷ 2 = 18"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Soma 20, diferença 4. Qual é o maior?",
+    "opcoes": [
+     "12",
+     "8",
+     "24",
+     "16"
+    ],
+    "certa": "12",
+    "resposta": "20 + 4 = 24; 24 ÷ 2 = 12."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-mat-equ-10",
+  "materia": "Matemática",
+  "tema": "Equações e Sistemas",
+  "enunciado": "Num cinema, o ingresso inteiro custa R$ 5,00 a mais que o ingresso de criança. Uma família pagou R$ 60,00 por 1 inteiro e 4 ingressos de criança. Quanto custa o ingresso de criança, em reais?",
+  "A": "12",
+  "B": "16",
+  "C": "13",
+  "D": "11",
+  "E": "15",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "5c + 5 = 60; c = 11. D. A = 60/5; B = o inteiro; C = (60+5)/5; E = 60/4.",
+   "ideia": "Troque o inteiro por \"criança + 5\": ficam 5 ingressos de criança mais 5 reais, igual a 60. Então cada um custa 11.",
+   "pecas": [
+    {
+     "termo": "Ingresso inteiro",
+     "significado": "O ingresso de preço cheio."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "grafico",
+        "nome": "Substituição",
+        "formula": "inteiro = criança + 5"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Inteiro",
+        "criança + 5"
+       ],
+       [
+        "Compra",
+        "1 inteiro e 4 de criança"
+       ],
+       [
+        "Total",
+        "60"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o preço de um ingresso de criança.\nPor que tirar o acréscimo? Sem os 5 a mais, os 5 ingressos ficam todos com o mesmo preço.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "c = (t − a) ÷ n (criança = (total − acréscimo) ÷ número de ingressos)",
+      "letras": [
+       {
+        "letra": "c",
+        "oque": "preço de criança (o que a questão quer)"
+       },
+       {
+        "letra": "t",
+        "oque": "total pago"
+       },
+       {
+        "letra": "a",
+        "oque": "acréscimo do inteiro"
+       },
+       {
+        "letra": "n",
+        "oque": "número de ingressos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando t (total)",
+     "texto": "O enunciado dá direto.\nt = 60"
+    },
+    {
+     "titulo": "Achando a (acréscimo)",
+     "texto": "O enunciado dá direto.\na = 5"
+    },
+    {
+     "titulo": "Achando n (ingressos)",
+     "texto": "O inteiro vira 1 de criança mais 5 reais.\nn = 1 + 4 = 5"
+    },
+    {
+     "titulo": "O seu jeito",
+     "texto": "Parece certo fazer 60 ÷ 5 = 12, a letra A.\nOs 5 reais a mais ainda estão dentro dos 60."
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "60 − 5 = 55\nc = 55 ÷ 5 = 11\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "t",
+        "60"
+       ],
+       [
+        "a",
+        "5"
+       ],
+       [
+        "n",
+        "5"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"custa tanto a mais que\" → troque, tire o acréscimo e divida.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "+5; 1 e 4; 60"
+       ],
+       [
+        "2. Equação em letras",
+        "c = (t − a) ÷ n"
+       ],
+       [
+        "3. Achar cada letra",
+        "n = 5"
+       ],
+       [
+        "4. Substituir",
+        "55 ÷ 5 = 11"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um adulto paga 2 a mais que uma criança. 1 adulto e 2 crianças: 23. Preço da criança?",
+    "opcoes": [
+     "7",
+     "9",
+     "8",
+     "11"
+    ],
+    "certa": "7",
+    "resposta": "3 crianças + 2 = 23; 21 ÷ 3 = 7."
+   }
+  }
+ }
+]

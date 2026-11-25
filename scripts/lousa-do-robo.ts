@@ -76,7 +76,7 @@ async function main() {
       passos: passosNovos,
     };
     const r = doRobo ? lousaDoRobo(entrada) : lousaDoAntigo({ ...entrada, ideia: typeof c.ideia === 'string' ? c.ideia : '' });
-    if (!r.ok) { motivos.set(r.motivo, (motivos.get(r.motivo) ?? 0) + 1); continue; }
+    if (!r.ok) { motivos.set(r.motivo, (motivos.get(r.motivo) ?? 0) + 1); if (process.argv.includes('--quais')) console.log(`recusada ${q.id} · ${r.motivo}`); continue; }
     // Regra 21: enunciado de sólido sem imagem → a lousa desenha a figura (só Matemática).
     const comFigura = q.materia === 'Matemática' ? comFiguraDoSolido(r.aula, q.enunciado, !!q.imagemUrl || q.dependeImagem) : r.aula;
     const aula = validarLousa(comFigura);
