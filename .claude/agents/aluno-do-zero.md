@@ -1,7 +1,7 @@
 ---
 name: aluno-do-zero
 description: Lê a jornada de um dia de estudo no PrepEnem (conceitos, explicações de questão, lições de Cálculo) como um aluno que só sabe as quatro operações, e devolve onde ele se perde, citando o trecho exato. Usar depois de mudar prompt de explicação, conceito ou lição, com a jornada gerada por scripts/jornada-do-aluno.mts. Não conserta nada.
-model: sonnet
+model: haiku
 tools: Read, Grep, Bash
 ---
 

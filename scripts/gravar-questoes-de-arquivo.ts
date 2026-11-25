@@ -1,6 +1,6 @@
 import { loadEnvConfig } from '@next/env';
 loadEnvConfig(process.cwd());
-import { readFileSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 import { PrismaClient } from '@prisma/client';
 import { validarExplicacao } from '../lib/tutor/validar';
 import { VERSAO_EXPLICACAO } from '../lib/tutor/pronta';
@@ -30,6 +30,17 @@ async function main() {
   const novas = prontas.filter(({ q }) => !ja.has(q.id));
   console.log(`No arquivo: ${questoes.length} · já no banco: ${ja.size} · novas: ${novas.length}`);
   if (!process.argv.includes('--gravar')) return console.log('Nada gravado (use --gravar).');
+  // --atualizar-aula: troca SÓ a explicação das que já estão no banco (com cópia antes). A lousa
+  // sai junto; rodar scripts/lousa-do-robo.ts --gravar depois para ela voltar.
+  if (process.argv.includes('--atualizar-aula')) {
+    const velhas = prontas.filter(({ q }) => ja.has(q.id));
+    const antes = await prisma.explicacaoPronta.findMany({ where: { questionId: { in: velhas.map(({ q }) => q.id) } } });
+    const copia = `${process.env.HOME}/backups-prepenem/explicacoes-antes-de-arquivo-${new Date().toISOString().slice(0, 19).replace(/:/g, '-')}.json`;
+    writeFileSync(copia, JSON.stringify(antes));
+    await prisma.$transaction(velhas.map(({ q, conteudo }) =>
+      prisma.explicacaoPronta.update({ where: { questionId: q.id }, data: { conteudo: conteudo as object, modelo: MODELO } })));
+    console.log(`Aulas atualizadas: ${velhas.length} · cópia: ${copia}`);
+  }
   await prisma.$transaction(novas.flatMap(({ q, conteudo }) => [
     prisma.question.create({
       data: {

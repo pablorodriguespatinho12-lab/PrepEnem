@@ -65,6 +65,9 @@ Eu penso e respondo pelo resultado. Antes de CADA leva, as 7 linhas; a que falha
 | Modelo mais barato que dá conta; ≤5 linhas em 1 arquivo faço inline | arranque de 20 mil tokens por agente |
 | Pablo sabe em 1 linha o que cada um vai fazer | disparo recusado 2 vezes sem aviso |
 
+`aluno-do-zero` roda em Haiku (Pablo, 24/11/2026: só lê). Medido em 7 questões: Haiku 55,5 mil tokens, 59 s, 10 tropeços
+(a maioria real); a leitura anterior, antes do 1º conserto, gastou 42,6 mil e 13 s. Conta e gabarito NÃO vão para Haiku.
+
 Depois de cada leva: conferir o achado na fonte (`vitest`, comando, foto); perguntar "onde o MEU pedido errou?";
 gravar a resposta nesta tabela ou no arquivo do agente e dizer "aprendi: X, gravei em Y". Texto consertado por causa de
 um revisor e não relido é dito ao Pablo como "sem 2ª leitura".

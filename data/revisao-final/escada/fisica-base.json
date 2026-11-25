@@ -42,7 +42,7 @@
     },
     {
      "titulo": "O que eu tenho",
-     "texto": "Primeiro, tire os números do enunciado.",
+     "texto": "A velocidade vem do enunciado. Os outros dois valem sempre.",
      "visual": {
       "tipo": "tabela",
       "titulo": "O que eu tenho",
@@ -56,11 +56,11 @@
         "72 km/h"
        ],
        [
-        "1 km",
+        "1 km (decore)",
         "1000 m"
        ],
        [
-        "1 hora",
+        "1 hora (60 × 60)",
         "3600 s"
        ]
       ]
@@ -68,7 +68,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer os metros percorridos em 1 segundo.\nDe onde vem o 3,6? 72 km/h são 72 000 m em 3600 s: 72 000 ÷ 3600 = 20. É o mesmo que 72 ÷ 3,6.\nAgora é só achar cada letra.",
+     "texto": "A questão quer os metros percorridos em 1 segundo.\nDe onde vem o 3,6? Cada km vira 1000 m e cada hora vira 3600 s: 3600 ÷ 1000 = 3,6.\nAgora é só achar cada letra.",
      "visual": {
       "tipo": "equacao",
       "formula": "v = k ÷ 3,6",
@@ -91,7 +91,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "3600 ÷ 1000 = 3,6\nv = 72 ÷ 3,6\nSem vírgula: 720 ÷ 36 = 20 m/s\nLetra B.",
+     "texto": "v = 72 ÷ 3,6\nPara tirar a vírgula, vezes 10 nos dois:\n72 × 10 = 720\n3,6 × 10 = 36\nv = 720 ÷ 36 = 20 m/s\nLetra B.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -225,7 +225,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a aceleração.\nPor que dividir? A aceleração é a parte da mudança de velocidade que acontece em cada segundo.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a aceleração.\nPor que dividir? Se ganhasse 10 m/s em 5 s, seriam 10 ÷ 5 = 2 m/s em cada segundo.\nAgora é só achar cada letra.",
      "visual": {
       "tipo": "equacao",
       "formula": "a = m ÷ t",
@@ -256,7 +256,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "a = 12 ÷ 8\nCorte os dois por 4: 3 ÷ 2 = 1,5 m/s²\nLetra D.",
+     "texto": "a = 12 ÷ 8\n12 ÷ 4 = 3\n8 ÷ 4 = 2\na = 3 ÷ 2\n2 cabe 1 vez em 3 e sobra metade: 1,5 m/s²\nLetra D.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -579,7 +579,7 @@
     },
     {
      "titulo": "Achando m: por que o meio",
-     "texto": "O começo lento compensa o fim rápido, em pares.\n0 + 20 = 20\n5 + 15 = 20\nCada par vale o mesmo que 10 + 10."
+     "texto": "O começo lento compensa o fim rápido, em pares.\n0 + 20 = 20\nDepois sobe 5 no começo e desce 5 no fim:\n0 + 5 = 5\n20 − 5 = 15\n5 + 15 = 20\nCada par vale o mesmo que 10 + 10."
     },
     {
      "titulo": "Achando t (tempo)",
@@ -725,7 +725,7 @@
     },
     {
      "titulo": "A equação em letras",
-     "texto": "A questão quer a velocidade depois de 3 s.\nPor que vezes? A cada segundo caindo, a chave ganha mais 10 m/s.\nAgora é só achar cada letra.",
+     "texto": "A questão quer a velocidade depois de 3 s.\nPor que vezes? Com 1 s: 10 m/s. Com 2 s: 20 m/s. Com 3 s: 30 m/s.\nAgora é só achar cada letra.",
      "visual": {
       "tipo": "equacao",
       "formula": "v = g × t",
@@ -914,11 +914,11 @@
     },
     {
      "titulo": "Achando m (velocidade média)",
-     "texto": "No fim: 10 × 2 = 20 m/s\nm = (0 + 20) ÷ 2 = 10 m/s"
+     "texto": "Velocidade no fim = g × tempo\n10 × 2 = 20 m/s\nm = (0 + 20) ÷ 2 = 10 m/s"
     },
     {
      "titulo": "Achando m: por que o meio",
-     "texto": "O começo lento compensa o fim rápido, em pares.\n0 + 20 = 20\n5 + 15 = 20\nCada par vale o mesmo que 10 + 10."
+     "texto": "O começo lento compensa o fim rápido, em pares.\n0 + 20 = 20\nDepois sobe 5 no começo e desce 5 no fim:\n0 + 5 = 5\n20 − 5 = 15\n5 + 15 = 20\nCada par vale o mesmo que 10 + 10."
     },
     {
      "titulo": "Achando t (tempo)",
