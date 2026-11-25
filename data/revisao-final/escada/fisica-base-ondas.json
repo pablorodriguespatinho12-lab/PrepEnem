@@ -1,0 +1,949 @@
+[
+ {
+  "id": "d2-escada-fis-ond-04",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Num vídeo em câmera lenta, uma corda faz 20 vibrações completas em 4 segundos, sempre no mesmo ritmo. Qual é a frequência dessa corda?",
+  "A": "80 Hz",
+  "B": "5 Hz",
+  "C": "0,2 Hz",
+  "D": "16 Hz",
+  "E": "24 Hz",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "f = 20/4 = 5 Hz. B. A = 20×4; C = 4/20; D = 20-4; E = 20+4.",
+   "ideia": "Frequência é quantas vibrações acontecem em 1 segundo: 20 em 4 segundos dá 5 em cada segundo.",
+   "pecas": [
+    {
+     "termo": "Vibração completa",
+     "significado": "Um vai e volta da corda."
+    },
+    {
+     "termo": "Hz",
+     "significado": "Lê-se hertz: vibrações a cada segundo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Frequência",
+        "formula": "frequência = vibrações ÷ segundos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Vibrações",
+        "20"
+       ],
+       [
+        "Tempo",
+        "4 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer quantas vibrações há em 1 segundo.\nPor que dividir? Se fossem 20 em 2 s, seriam 20 ÷ 2 = 10 em cada segundo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "f = n ÷ t",
+      "leitura": "frequência = número de vibrações ÷ tempo",
+      "letras": [
+       {
+        "letra": "f",
+        "oque": "frequência, em Hz (o que a questão quer)"
+       },
+       {
+        "letra": "n",
+        "oque": "número de vibrações"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo, em segundos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando n (número de vibrações)",
+     "texto": "O enunciado dá direto.\nn = 20"
+    },
+    {
+     "titulo": "Achando t (tempo)",
+     "texto": "O enunciado dá direto.\nt = 4 s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "f = 20 ÷ 4 = 5 Hz\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "n",
+        "20"
+       ],
+       [
+        "t",
+        "4 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"tantas vibrações em tantos segundos\" → vibrações ÷ segundos.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "20 vibrações, 4 s"
+       ],
+       [
+        "2. Equação em letras",
+        "f = n ÷ t"
+       ],
+       [
+        "3. Achar cada letra",
+        "n = 20; t = 4"
+       ],
+       [
+        "4. Substituir",
+        "20 ÷ 4 = 5"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um pêndulo faz 30 vibrações em 10 s. Frequência?",
+    "opcoes": [
+     "3 Hz",
+     "300 Hz",
+     "20 Hz",
+     "40 Hz"
+    ],
+    "certa": "3 Hz",
+    "resposta": "30 ÷ 10 = 3 Hz."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ond-05",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "A luz de um enfeite pisca com frequência de 4 Hz, ou seja, 4 vezes a cada segundo. Quanto tempo passa entre o começo de uma piscada e o começo da seguinte?",
+  "A": "4 s",
+  "B": "2 s",
+  "C": "0,4 s",
+  "D": "0,25 s",
+  "E": "5 s",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "T = 1/4 = 0,25 s. D. A = a própria frequência; B = 4/2; C = 4/10; E = 4+1.",
+   "ideia": "Em 1 segundo cabem 4 piscadas iguais, então cada uma ocupa 1 dividido por 4: 0,25 s.",
+   "pecas": [
+    {
+     "termo": "Hz",
+     "significado": "Lê-se hertz: vezes a cada segundo."
+    },
+    {
+     "termo": "Período",
+     "significado": "O tempo de uma repetição."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Período",
+        "formula": "período = 1 segundo ÷ frequência"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Frequência",
+        "4 Hz"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o tempo de uma piscada.\nPor que 1 ÷ f? Com 2 piscadas em 1 s, cada uma leva 1 ÷ 2 = meio segundo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "p = 1 ÷ f",
+      "leitura": "período = 1 segundo ÷ frequência",
+      "letras": [
+       {
+        "letra": "p",
+        "oque": "período, em segundos (o que a questão quer)"
+       },
+       {
+        "letra": "f",
+        "oque": "frequência, em Hz"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando f (frequência)",
+     "texto": "O enunciado dá direto.\nf = 4 Hz"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "p = 1 ÷ 4\n1 s são 100 centésimos de segundo.\n100 ÷ 4 = 25 centésimos\n25 centésimos se escreve 0,25 s\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "f",
+        "4 Hz"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: pergunta o tempo de uma repetição e dá a frequência → 1 ÷ frequência.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "4 Hz"
+       ],
+       [
+        "2. Equação em letras",
+        "p = 1 ÷ f"
+       ],
+       [
+        "3. Achar cada letra",
+        "f = 4"
+       ],
+       [
+        "4. Substituir",
+        "1 ÷ 4 = 0,25"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Algo se repete 5 vezes por segundo. Período?",
+    "opcoes": [
+     "0,2 s",
+     "5 s",
+     "0,5 s",
+     "2 s"
+    ],
+    "certa": "0,2 s",
+    "resposta": "1 ÷ 5 = 0,2 s."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ond-06",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Numa piscina com ondas iguais, um aluno mede 12 m da primeira até a quarta crista, em linha reta. Qual é o comprimento de onda?",
+  "A": "4 m",
+  "B": "3 m",
+  "C": "48 m",
+  "D": "12 m",
+  "E": "9 m",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "3 espaços; 12/3 = 4 m. A. B = 12/4 (contou cristas); C = 12×4; D = a distância toda; E = 12-3.",
+   "ideia": "Entre a 1ª e a 4ª crista há 3 espaços iguais, e cada espaço é um comprimento de onda: 12 ÷ 3 = 4 m.",
+   "pecas": [
+    {
+     "termo": "Crista",
+     "significado": "O ponto mais alto da onda."
+    },
+    {
+     "termo": "Comprimento de onda",
+     "significado": "A distância de uma crista até a seguinte."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Comprimento de onda",
+        "formula": "comprimento = distância ÷ espaços"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Distância medida",
+        "12 m"
+       ],
+       [
+        "Cristas",
+        "da 1ª até a 4ª"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a distância entre duas cristas vizinhas.\nPor que espaços? Com 2 cristas há 1 espaço entre elas; com 3 cristas, 2 espaços.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "c = d ÷ e",
+      "leitura": "comprimento de onda = distância ÷ número de espaços",
+      "letras": [
+       {
+        "letra": "c",
+        "oque": "comprimento de onda (o que a questão quer)"
+       },
+       {
+        "letra": "d",
+        "oque": "distância medida, em metros"
+       },
+       {
+        "letra": "e",
+        "oque": "número de espaços entre as cristas"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando d (distância)",
+     "texto": "O enunciado dá direto.\nd = 12 m"
+    },
+    {
+     "titulo": "Achando e: o seu jeito",
+     "texto": "Parece certo dividir por 4: daria 3 m, a letra B.\nConte os espaços: 1ª a 2ª, 2ª a 3ª, 3ª a 4ª.\ne = 4 − 1 = 3"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "c = 12 ÷ 3 = 4 m\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "d",
+        "12 m"
+       ],
+       [
+        "e",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: distância entre várias cristas → conte os espaços (cristas menos 1) e divida.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "12 m, 1ª à 4ª crista"
+       ],
+       [
+        "2. Equação em letras",
+        "c = d ÷ e"
+       ],
+       [
+        "3. Achar cada letra",
+        "d = 12; e = 3"
+       ],
+       [
+        "4. Substituir",
+        "12 ÷ 3 = 4"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Da 1ª à 3ª crista há 10 m. Comprimento de onda?",
+    "opcoes": [
+     "5 m",
+     "3,3 m",
+     "10 m",
+     "20 m"
+    ],
+    "certa": "5 m",
+    "resposta": "2 espaços: 10 ÷ 2 = 5 m."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ond-07",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Um alto-falante emite um som de frequência 170 Hz. No ar, esse som anda 340 m a cada segundo. Qual é o comprimento de onda?",
+  "A": "57 800 m",
+  "B": "0,5 m",
+  "C": "170 m",
+  "D": "510 m",
+  "E": "2 m",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "λ = 340/170 = 2 m. E. A = 340×170; B = 170/340; C = a frequência; D = soma.",
+   "ideia": "Em 1 segundo o som anda 340 m, e nesse caminho cabem 170 ondas iguais: cada uma mede 340 ÷ 170 = 2 m.",
+   "pecas": [
+    {
+     "termo": "Hz",
+     "significado": "Lê-se hertz: ondas a cada segundo."
+    },
+    {
+     "termo": "Comprimento de onda",
+     "significado": "O tamanho de uma onda, em metros."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Comprimento de onda",
+        "formula": "comprimento = velocidade ÷ frequência"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Frequência",
+        "170 Hz"
+       ],
+       [
+        "Velocidade",
+        "340 m por segundo"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o tamanho de uma onda.\nPor que dividir? Se fossem 2 ondas em 340 m, cada uma teria 340 ÷ 2 = 170 m.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "c = v ÷ f",
+      "leitura": "comprimento de onda = velocidade ÷ frequência",
+      "letras": [
+       {
+        "letra": "c",
+        "oque": "comprimento de onda (o que a questão quer)"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade, em metros por segundo"
+       },
+       {
+        "letra": "f",
+        "oque": "frequência, em Hz"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando v (velocidade)",
+     "texto": "O enunciado dá direto.\nv = 340 m por segundo"
+    },
+    {
+     "titulo": "Achando f (frequência)",
+     "texto": "O enunciado dá direto.\nf = 170 Hz"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "c = 340 ÷ 170\n170 × 2 = 340\nc = 2 m\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "v",
+        "340 m/s"
+       ],
+       [
+        "f",
+        "170 Hz"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dá velocidade e frequência e pede o comprimento → velocidade ÷ frequência.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "170 Hz, 340 m/s"
+       ],
+       [
+        "2. Equação em letras",
+        "c = v ÷ f"
+       ],
+       [
+        "3. Achar cada letra",
+        "v = 340; f = 170"
+       ],
+       [
+        "4. Substituir",
+        "340 ÷ 170 = 2"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma onda anda 100 m por segundo e tem 50 Hz. Comprimento?",
+    "opcoes": [
+     "2 m",
+     "5 000 m",
+     "0,5 m",
+     "150 m"
+    ],
+    "certa": "2 m",
+    "resposta": "100 ÷ 50 = 2 m."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ond-08",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Uma pessoa grita diante de um paredão e ouve o eco 2 segundos depois. O som anda 340 m a cada segundo. A que distância está o paredão?",
+  "A": "680 m",
+  "B": "170 m",
+  "C": "340 m",
+  "D": "342 m",
+  "E": "85 m",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "caminho 340×2 = 680; metade 340 m. C. A = esqueceu a volta; B = 340/2; D = soma; E = 340/4.",
+   "ideia": "Em 2 segundos o som anda 680 m, mas isso é ida e volta: o paredão está na metade, 340 m.",
+   "pecas": [
+    {
+     "termo": "Eco",
+     "significado": "O som que bate numa parede e volta até quem gritou."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Caminho do som",
+        "formula": "caminho = velocidade × tempo"
+       },
+       {
+        "figura": "carro",
+        "nome": "Distância no eco",
+        "formula": "distância = caminho ÷ 2"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Velocidade",
+        "340 m por segundo"
+       ],
+       [
+        "Tempo do eco",
+        "2 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a distância até o paredão.\nPor que dividir por 2? Parede a 100 m: o som anda 100 de ida + 100 de volta = 200 m.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "d = c ÷ 2",
+      "leitura": "distância = caminho do som ÷ 2",
+      "letras": [
+       {
+        "letra": "d",
+        "oque": "distância até o paredão (o que a questão quer)"
+       },
+       {
+        "letra": "c",
+        "oque": "caminho todo do som, em metros"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando c (caminho do som)",
+     "texto": "Velocidade × tempo\n340 × 2 = 680 m"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "d = 680 ÷ 2 = 340 m\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "c",
+        "680 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"ouve o eco depois de\" → velocidade × tempo e depois a metade.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "340 m/s, 2 s"
+       ],
+       [
+        "2. Equação em letras",
+        "d = c ÷ 2"
+       ],
+       [
+        "3. Achar cada letra",
+        "c = 680"
+       ],
+       [
+        "4. Substituir",
+        "680 ÷ 2 = 340"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Eco depois de 4 s, som a 340 m por segundo. Distância da parede?",
+    "opcoes": [
+     "680 m",
+     "1 360 m",
+     "340 m",
+     "170 m"
+    ],
+    "certa": "680 m",
+    "resposta": "340 × 4 = 1360; metade: 680 m."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-ond-09",
+  "materia": "Física",
+  "tema": "Ondas e Acústica",
+  "enunciado": "Um aparelho no chão emite um estalo para estudar uma camada de líquido de 300 m de espessura, presa entre duas rochas. O eco do topo da camada volta 0,2 s depois do estalo. O eco do fundo da camada volta 0,6 s depois do estalo. A velocidade do som dentro do líquido é de",
+  "A": "500 m/s",
+  "B": "1 500 m/s",
+  "C": "750 m/s",
+  "D": "1 000 m/s",
+  "E": "375 m/s",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "d = 600; t = 0,6-0,2 = 0,4; v = 1500. B. A = 300/0,6; C = 300/0,4; D = 600/0,6; E = 300/0,8.",
+   "ideia": "O segundo eco demora 0,4 s a mais porque desce e sobe a camada: são 600 m em 0,4 s, ou 1 500 m por segundo.",
+   "pecas": [
+    {
+     "termo": "Eco",
+     "significado": "O som que bate numa superfície e volta."
+    },
+    {
+     "termo": "Espessura",
+     "significado": "A grossura da camada: do topo (em cima) até o fundo (embaixo)."
+    },
+    {
+     "termo": "m/s",
+     "significado": "Lê-se metros por segundo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Velocidade",
+        "formula": "velocidade = distância ÷ tempo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Espessura da camada",
+        "300 m"
+       ],
+       [
+        "Eco do topo",
+        "0,2 s"
+       ],
+       [
+        "Eco do fundo",
+        "0,6 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a velocidade do som só dentro do líquido.\nPor que dois ecos? O 1º volta do topo. O 2º faz o mesmo caminho e ainda atravessa o líquido.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "v = d ÷ t",
+      "leitura": "velocidade = distância no líquido ÷ tempo no líquido",
+      "letras": [
+       {
+        "letra": "v",
+        "oque": "velocidade no líquido (o que a questão quer)"
+       },
+       {
+        "letra": "d",
+        "oque": "caminho dentro do líquido, em metros"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo dentro do líquido, em segundos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando d (caminho no líquido)",
+     "texto": "A espessura é 300 m: o som desce e sobe.\nd = 300 × 2 = 600 m"
+    },
+    {
+     "titulo": "Achando t (tempo no líquido)",
+     "texto": "Eco do fundo menos eco do topo.\nt = 0,6 − 0,2 = 0,4 s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "v = 600 ÷ 0,4\n0,4 s são 4 décimos de segundo.\nEm 1 décimo: 600 ÷ 4 = 150 m\n1 s tem 10 décimos:\nv = 150 × 10 = 1500 m/s\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "d",
+        "600 m"
+       ],
+       [
+        "t",
+        "0,4 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: dois ecos de uma camada → o dobro da espessura, dividido pela diferença dos tempos.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "300 m; 0,2 s e 0,6 s"
+       ],
+       [
+        "2. Equação em letras",
+        "v = d ÷ t"
+       ],
+       [
+        "3. Achar cada letra",
+        "d = 600; t = 0,4"
+       ],
+       [
+        "4. Substituir",
+        "600 ÷ 0,4 = 1500"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Camada de 100 m; ecos em 0,1 s e 0,3 s. Velocidade na camada?",
+    "opcoes": [
+     "1000 m/s",
+     "500 m/s",
+     "333 m/s",
+     "2000 m/s"
+    ],
+    "certa": "1000 m/s",
+    "resposta": "200 m em 0,2 s: 1000 m/s."
+   }
+  }
+ }
+]
