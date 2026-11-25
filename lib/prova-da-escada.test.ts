@@ -26,12 +26,12 @@ describe('prova da escada', () => {
   it('nível acima de raciocínio (id d2-escada-xxx-ita-) entra antes das antigas na vaga do ITA', () => {
     const todas = [q('d2-acima-mat-05', 'acima'), q('d2-acima-mat-06', 'acima'), q('d2-escada-mat-ita-est-01', 'acima')];
     const ita = questoesDoDegrau('Física', degrau, todas).questoes.map((x) => x.id);
-    expect(ita).toEqual(['d2-escada-mat-ita-est-01', 'd2-acima-mat-05']);
+    expect(ita).toEqual(['d2-escada-mat-ita-est-01', 'd2-acima-mat-05', 'd2-acima-mat-06']);
   });
 
   it('o resto da ordem não muda: ids de Física e Português seguem como estavam', () => {
     const todas = [q('d2-escada-fis-ele-02', 'acima'), q('d2-escada-fis-ele-01', 'acima'), q('cmux1', 'vestibular')];
-    expect(questoesDoDegrau('Física', degrau, todas).questoes.map((x) => x.id)).toEqual(['d2-escada-fis-ele-01', 'd2-escada-fis-ele-02']);
+    expect(questoesDoDegrau('Física', degrau, todas).questoes.map((x) => x.id)).toEqual(['d2-escada-fis-ele-01', 'd2-escada-fis-ele-02', 'cmux1']);
   });
 
   it('junção vem ANTES do ENEM e o ITA é sempre o último degrau; a 1ª prova não cobra junção', () => {

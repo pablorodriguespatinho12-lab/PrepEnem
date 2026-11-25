@@ -20,6 +20,11 @@
 | 6 | `aluno-do-zero` em rodadas nas aulas novas; `revisor-de-fatos` nas contas | relatório sem conta errada |
 | 7 | Auto-melhora: o gancho `detectar-correcao.py` já avisa; conferir que cada correção desta sessão virou regra | lista correção -> onde foi gravada |
 
+## Fase 4, 1ª leva (24/11 ~23h30): base de Cinemática
+7 questões (`scripts/banco-enem/base_fisica.py` -> `data/revisao-final/escada/fisica-base.json`, ids `d2-escada-fis-cin-04` a `10`): só km/h, só aceleração, só velocidade constante, só saindo do repouso, queda (velocidade), queda (altura), junção. Gabarito às cegas 7 de 7; `aluno-do-zero` 12 tropeços corrigidos.
+**Antes de escrever a próxima leva (erros desta):** unidade nova (km/h, m/s²) tem peça com a leitura; a mesma letra não muda de sentido entre aulas da leva (`a` era aceleração e virou tempo); velocidade média = (começo + fim) ÷ 2 só com "subindo por igual", e com a tela dos pares; divisão difícil (12 ÷ 8, 72 ÷ 3,6) mostra o passo.
+`POR_ETAPA.facil = 2`: a base não cabe na prova da escada; vira prova própria "Cinemática · Base" (`criar-prova-do-banco.ts`). Não rodar `criar-provas-escada.ts` depois sem desarquivar essa prova.
+
 ## Regras novas (entram em `regras-do-pablo.md`)
 - **17** Quadro de conta antes de texto: valores, cálculo e equação desenhados; fala curta, sem repetir o que está na tela.
 - **18** Equação com legendas embaixo de cada letra, depois a mesma equação com números.

@@ -1,0 +1,1169 @@
+[
+ {
+  "id": "d2-escada-fis-cin-04",
+  "materia": "Física",
+  "tema": "Cinemática",
+  "enunciado": "O velocímetro de um carro marca 72 km/h numa avenida com semáforos. Mantendo essa velocidade, quantos metros o carro percorre a cada segundo?",
+  "A": "259,2 m",
+  "B": "20 m",
+  "C": "72 m",
+  "D": "7,2 m",
+  "E": "2 m",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "72 km/h = 72000 m em 3600 s = 20 m/s. B. A = multiplicou por 3,6; C = não converteu; D = dividiu por 10; E = dividiu por 36.",
+   "ideia": "Para passar de km/h para m/s, divida por 3,6: 72 ÷ 3,6 = 20 metros a cada segundo.",
+   "pecas": [
+    {
+     "termo": "km/h",
+     "significado": "Quilômetros por hora. 1 km = 1000 m."
+    },
+    {
+     "termo": "m/s",
+     "significado": "Metros por segundo: quantos metros a cada segundo."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "km/h para m/s",
+        "formula": "m/s = km/h ÷ 3,6"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Velocidade",
+        "72 km/h"
+       ],
+       [
+        "1 km",
+        "1000 m"
+       ],
+       [
+        "1 hora",
+        "3600 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer os metros percorridos em 1 segundo.\nDe onde vem o 3,6? 72 km/h são 72 000 m em 3600 s: 72 000 ÷ 3600 = 20. É o mesmo que 72 ÷ 3,6.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "v = k ÷ 3,6",
+      "leitura": "velocidade em m/s = velocidade em km/h ÷ 3,6",
+      "letras": [
+       {
+        "letra": "v",
+        "oque": "velocidade em m/s (o que a questão quer)"
+       },
+       {
+        "letra": "k",
+        "oque": "velocidade em km/h"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando k (velocidade em km/h)",
+     "texto": "O velocímetro dá direto.\nk = 72 km/h"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "3600 ÷ 1000 = 3,6\nv = 72 ÷ 3,6\nSem vírgula: 720 ÷ 36 = 20 m/s\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "k",
+        "72 km/h"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: velocidade em km/h e pergunta em metros ou segundos → divida por 3,6 antes de tudo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "72 km/h"
+       ],
+       [
+        "2. Equação em letras",
+        "v = k ÷ 3,6"
+       ],
+       [
+        "3. Achar cada letra",
+        "k = 72"
+       ],
+       [
+        "4. Substituir",
+        "72 ÷ 3,6 = 20"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um ônibus anda a 36 km/h. Quantos metros por segundo?",
+    "opcoes": [
+     "10 m/s",
+     "36 m/s",
+     "129,6 m/s",
+     "3,6 m/s"
+    ],
+    "certa": "10 m/s",
+    "resposta": "36 ÷ 3,6 = 10 m/s."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-cin-05",
+  "materia": "Física",
+  "tema": "Cinemática",
+  "enunciado": "Um ônibus está parado no semáforo. Quando o sinal abre, ele aumenta a velocidade sempre no mesmo ritmo e, 8 s depois, está a 12 m/s. A aceleração do ônibus é de",
+  "A": "96 m/s²",
+  "B": "0,67 m/s²",
+  "C": "12 m/s²",
+  "D": "1,5 m/s²",
+  "E": "4 m/s²",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "a = (12-0)/8 = 1,5 m/s². D. A = 12×8; B = 8/12; C = só a velocidade final; E = 12-8.",
+   "ideia": "Aceleração é quanto a velocidade aumenta a cada segundo. Subiu 12 m/s em 8 s: 12 ÷ 8 = 1,5 m/s a cada segundo.",
+   "pecas": [
+    {
+     "termo": "Aceleração",
+     "significado": "Quanto a velocidade muda a cada segundo."
+    },
+    {
+     "termo": "m/s²",
+     "significado": "Lê-se metro por segundo ao quadrado: m/s ganhos a cada segundo."
+    },
+    {
+     "termo": "Parado",
+     "significado": "Velocidade inicial igual a 0."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Aceleração",
+        "formula": "a = mudança de velocidade ÷ tempo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Velocidade no começo",
+        "0 (parado)"
+       ],
+       [
+        "Velocidade no fim",
+        "12 m/s"
+       ],
+       [
+        "Tempo",
+        "8 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a aceleração.\nPor que dividir? A aceleração é a parte da mudança de velocidade que acontece em cada segundo.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "a = m ÷ t",
+      "leitura": "aceleração = mudança de velocidade ÷ tempo",
+      "letras": [
+       {
+        "letra": "a",
+        "oque": "aceleração (o que a questão quer)"
+       },
+       {
+        "letra": "m",
+        "oque": "mudança de velocidade, em m/s"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo, em segundos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando m (mudança de velocidade)",
+     "texto": "Velocidade do fim menos a do começo.\nm = 12 − 0 = 12 m/s"
+    },
+    {
+     "titulo": "Achando t (tempo)",
+     "texto": "O enunciado dá direto.\nt = 8 s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "a = 12 ÷ 8\nCorte os dois por 4: 3 ÷ 2 = 1,5 m/s²\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "m",
+        "12 m/s"
+       ],
+       [
+        "t",
+        "8 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"aceleração\" com duas velocidades e um tempo → (fim − começo) ÷ tempo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "0, 12 m/s, 8 s"
+       ],
+       [
+        "2. Equação em letras",
+        "a = m ÷ t"
+       ],
+       [
+        "3. Achar cada letra",
+        "m = 12; t = 8"
+       ],
+       [
+        "4. Substituir",
+        "12 ÷ 8 = 1,5"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma moto vai de 0 a 20 m/s em 5 s. Aceleração?",
+    "opcoes": [
+     "4 m/s²",
+     "100 m/s²",
+     "15 m/s²",
+     "0,25 m/s²"
+    ],
+    "certa": "4 m/s²",
+    "resposta": "20 ÷ 5 = 4 m/s²."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-cin-06",
+  "materia": "Física",
+  "tema": "Cinemática",
+  "enunciado": "Um caminhão segue por uma avenida reta com velocidade constante de 20 m/s. Que distância ele percorre em 15 s?",
+  "A": "300 m",
+  "B": "35 m",
+  "C": "1,33 m",
+  "D": "150 m",
+  "E": "3 000 m",
+  "resposta": "A",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "d = 20×15 = 300 m. A. B = soma; C = 20/15; D = metade; E = zero a mais.",
+   "ideia": "Com velocidade constante, cada segundo rende os mesmos metros: 20 m por segundo, durante 15 s, dá 300 m.",
+   "pecas": [
+    {
+     "termo": "Velocidade constante",
+     "significado": "A velocidade não muda: todo segundo anda o mesmo tanto."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Velocidade constante",
+        "formula": "distância = velocidade × tempo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Velocidade",
+        "20 m/s (constante)"
+       ],
+       [
+        "Tempo",
+        "15 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a distância percorrida.\nPor que vezes? São 15 segundos, e em cada um o caminhão anda 20 m.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "d = v × t",
+      "leitura": "distância = velocidade × tempo",
+      "letras": [
+       {
+        "letra": "d",
+        "oque": "distância (o que a questão quer)"
+       },
+       {
+        "letra": "v",
+        "oque": "velocidade, em m/s"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo, em segundos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando v (velocidade)",
+     "texto": "O enunciado dá direto.\nv = 20 m/s"
+    },
+    {
+     "titulo": "Achando t (tempo)",
+     "texto": "O enunciado dá direto.\nt = 15 s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "d = 20 × 15 = 300 m\nLetra A.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "v",
+        "20 m/s"
+       ],
+       [
+        "t",
+        "15 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"velocidade constante\" → distância = velocidade × tempo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "20 m/s, 15 s"
+       ],
+       [
+        "2. Equação em letras",
+        "d = v × t"
+       ],
+       [
+        "3. Achar cada letra",
+        "v = 20; t = 15"
+       ],
+       [
+        "4. Substituir",
+        "20 × 15 = 300"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "A 10 m/s constantes, que distância se anda em 30 s?",
+    "opcoes": [
+     "300 m",
+     "40 m",
+     "3 m",
+     "150 m"
+    ],
+    "certa": "300 m",
+    "resposta": "10 × 30 = 300 m."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-cin-07",
+  "materia": "Física",
+  "tema": "Cinemática",
+  "enunciado": "Uma moto parte do repouso e aumenta a velocidade sempre no mesmo ritmo. Em 10 s ela chega a 20 m/s. Que distância a moto percorre nesses 10 s?",
+  "A": "200 m",
+  "B": "2 m",
+  "C": "100 m",
+  "D": "30 m",
+  "E": "50 m",
+  "resposta": "C",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "vm = (0+20)/2 = 10; d = 10×10 = 100 m. C. A = usou 20 m/s o tempo todo; B = aceleração; D = 20+10; E = dividiu por 2 duas vezes.",
+   "ideia": "A velocidade sobe por igual de 0 a 20, então a média é 10 m/s. Em 10 s, a moto anda 10 × 10 = 100 m.",
+   "pecas": [
+    {
+     "termo": "Repouso",
+     "significado": "Parado: velocidade 0."
+    },
+    {
+     "termo": "Velocidade média",
+     "significado": "Com a velocidade subindo por igual: o meio entre a do começo e a do fim."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Velocidade média",
+        "formula": "média = (começo + fim) ÷ 2"
+       },
+       {
+        "figura": "carro",
+        "nome": "Distância",
+        "formula": "distância = média × tempo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Velocidade no começo",
+        "0"
+       ],
+       [
+        "Velocidade no fim",
+        "20 m/s"
+       ],
+       [
+        "Tempo",
+        "10 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a distância percorrida.\nPor que a média? A moto não andou a 20 m/s o tempo todo: começou em 0 e foi subindo por igual.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "d = m × t",
+      "leitura": "distância = velocidade média × tempo",
+      "letras": [
+       {
+        "letra": "d",
+        "oque": "distância (o que a questão quer)"
+       },
+       {
+        "letra": "m",
+        "oque": "velocidade média, em m/s"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo, em segundos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando m: o seu jeito",
+     "texto": "Parece certo usar 20 m/s: daria 200 m, a letra A.\nMas ela só chega a 20 no fim.\nm = (0 + 20) ÷ 2 = 10 m/s"
+    },
+    {
+     "titulo": "Achando m: por que o meio",
+     "texto": "O começo lento compensa o fim rápido, em pares.\n0 + 20 = 20\n5 + 15 = 20\nCada par vale o mesmo que 10 + 10."
+    },
+    {
+     "titulo": "Achando t (tempo)",
+     "texto": "O enunciado dá direto.\nt = 10 s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "d = 10 × 10 = 100 m\nLetra C.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "m",
+        "10 m/s"
+       ],
+       [
+        "t",
+        "10 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: velocidade subindo por igual → média entre começo e fim, vezes o tempo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "0, 20 m/s, 10 s"
+       ],
+       [
+        "2. Equação em letras",
+        "d = m × t"
+       ],
+       [
+        "3. Achar cada letra",
+        "m = 10; t = 10"
+       ],
+       [
+        "4. Substituir",
+        "10 × 10 = 100"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "De 0 a 30 m/s, por igual, em 4 s. Distância?",
+    "opcoes": [
+     "60 m",
+     "120 m",
+     "15 m",
+     "34 m"
+    ],
+    "certa": "60 m",
+    "resposta": "Média 15 m/s; 15 × 4 = 60 m."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-cin-08",
+  "materia": "Física",
+  "tema": "Cinemática",
+  "enunciado": "Uma chave escapa da mão de um pintor, no alto de um prédio, e cai a partir do repouso durante 3 s. Considere g = 10 m/s² e despreze a resistência do ar. A velocidade da chave ao fim dos 3 s é de",
+  "A": "10 m/s",
+  "B": "45 m/s",
+  "C": "3,3 m/s",
+  "D": "13 m/s",
+  "E": "30 m/s",
+  "resposta": "E",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "v = 10×3 = 30 m/s. E. A = só g; B = altura (45 m); C = 10/3; D = soma.",
+   "ideia": "Na queda livre, a velocidade aumenta 10 m/s a cada segundo. Em 3 s: 10 × 3 = 30 m/s.",
+   "pecas": [
+    {
+     "termo": "Queda livre",
+     "significado": "Cair só puxado pela Terra, sem o ar atrapalhar."
+    },
+    {
+     "termo": "g = 10 m/s²",
+     "significado": "g é a gravidade: caindo, a velocidade ganha 10 m/s a cada segundo."
+    },
+    {
+     "termo": "Repouso",
+     "significado": "Parado: velocidade 0."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Velocidade na queda",
+        "formula": "velocidade = g × tempo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Começo",
+        "parada (0)"
+       ],
+       [
+        "g",
+        "10 m/s²"
+       ],
+       [
+        "Tempo",
+        "3 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a velocidade depois de 3 s.\nPor que vezes? A cada segundo caindo, a chave ganha mais 10 m/s.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "v = g × t",
+      "leitura": "velocidade = gravidade × tempo",
+      "letras": [
+       {
+        "letra": "v",
+        "oque": "velocidade no fim (o que a questão quer)"
+       },
+       {
+        "letra": "g",
+        "oque": "gravidade, em m/s²"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo de queda, em segundos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando g (gravidade)",
+     "texto": "O enunciado dá direto.\ng = 10 m/s²"
+    },
+    {
+     "titulo": "Achando t (tempo)",
+     "texto": "O enunciado dá direto.\nt = 3 s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "v = 10 × 3 = 30 m/s\nLetra E.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "g",
+        "10 m/s²"
+       ],
+       [
+        "t",
+        "3 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"cai do repouso\" e pergunta a velocidade → gravidade × tempo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "0, g = 10, 3 s"
+       ],
+       [
+        "2. Equação em letras",
+        "v = g × t"
+       ],
+       [
+        "3. Achar cada letra",
+        "g = 10; t = 3"
+       ],
+       [
+        "4. Substituir",
+        "10 × 3 = 30"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Uma pedra cai do repouso por 2 s (g = 10). Velocidade?",
+    "opcoes": [
+     "20 m/s",
+     "10 m/s",
+     "5 m/s",
+     "12 m/s"
+    ],
+    "certa": "20 m/s",
+    "resposta": "10 × 2 = 20 m/s."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-cin-09",
+  "materia": "Física",
+  "tema": "Cinemática",
+  "enunciado": "Em uma obra, um tijolo cai a partir do repouso e leva 2 s para chegar ao chão. Considere g = 10 m/s² e despreze a resistência do ar. De que altura o tijolo caiu?",
+  "A": "40 m",
+  "B": "20 m",
+  "C": "10 m",
+  "D": "5 m",
+  "E": "12 m",
+  "resposta": "B",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "facil",
+  "explicacao": {
+   "conferencia": "v = 10×2 = 20; média 10; h = 10×2 = 20 m. B. A = usou 20 m/s o tempo todo; C = usou a média e esqueceu o tempo; D = altura de 1 s; E = soma.",
+   "ideia": "A velocidade vai de 0 a 20 m/s, então a média é 10 m/s. Em 2 s o tijolo desce 10 × 2 = 20 m.",
+   "pecas": [
+    {
+     "termo": "Velocidade média",
+     "significado": "Com a velocidade subindo por igual: o meio entre a do começo e a do fim."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "Velocidade na queda",
+        "formula": "velocidade = g × tempo"
+       },
+       {
+        "figura": "carro",
+        "nome": "Altura",
+        "formula": "altura = média × tempo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Começo",
+        "parado (0)"
+       ],
+       [
+        "g",
+        "10 m/s²"
+       ],
+       [
+        "Tempo",
+        "2 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer a altura da queda.\nPor que a média? O tijolo começa parado e vai ficando mais rápido por igual.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "h = m × t",
+      "leitura": "altura = velocidade média × tempo",
+      "letras": [
+       {
+        "letra": "h",
+        "oque": "altura (o que a questão quer)"
+       },
+       {
+        "letra": "m",
+        "oque": "velocidade média, em m/s"
+       },
+       {
+        "letra": "t",
+        "oque": "tempo de queda, em segundos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando m (velocidade média)",
+     "texto": "No fim: 10 × 2 = 20 m/s\nm = (0 + 20) ÷ 2 = 10 m/s"
+    },
+    {
+     "titulo": "Achando m: por que o meio",
+     "texto": "O começo lento compensa o fim rápido, em pares.\n0 + 20 = 20\n5 + 15 = 20\nCada par vale o mesmo que 10 + 10."
+    },
+    {
+     "titulo": "Achando t (tempo)",
+     "texto": "O enunciado dá direto.\nt = 2 s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "h = 10 × 2 = 20 m\nLetra B.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "m",
+        "10 m/s"
+       ],
+       [
+        "t",
+        "2 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: queda com tempo dado e pergunta a altura → ache a velocidade do fim, tire a média, vezes o tempo.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "0, g = 10, 2 s"
+       ],
+       [
+        "2. Equação em letras",
+        "h = m × t"
+       ],
+       [
+        "3. Achar cada letra",
+        "m = 10; t = 2"
+       ],
+       [
+        "4. Substituir",
+        "10 × 2 = 20"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Um objeto cai do repouso por 4 s (g = 10). Altura?",
+    "opcoes": [
+     "80 m",
+     "160 m",
+     "40 m",
+     "14 m"
+    ],
+    "certa": "80 m",
+    "resposta": "Fim 40 m/s, média 20; 20 × 4 = 80 m."
+   }
+  }
+ },
+ {
+  "id": "d2-escada-fis-cin-10",
+  "materia": "Física",
+  "tema": "Cinemática",
+  "enunciado": "Um carro parte do repouso num semáforo e acelera 1 m/s a cada segundo até atingir 72 km/h. A partir daí, segue com velocidade constante. Quanto tempo depois da partida o carro está a 400 m do semáforo?",
+  "A": "20 s",
+  "B": "5,6 s",
+  "C": "40 s",
+  "D": "30 s",
+  "E": "10 s",
+  "resposta": "D",
+  "origem": "Banco ENEM do dia 2",
+  "nivel": "medio",
+  "explicacao": {
+   "conferencia": "72/3,6 = 20; t1 = 20/1 = 20 s; d1 = 10×20 = 200 m; t2 = 200/20 = 10 s; total 30 s. D. A = só o 1º trecho; B = 400/72; C = 400 m com média 10 o tempo todo; E = só o 2º.",
+   "ideia": "São dois trechos: primeiro acelera até 20 m/s (20 s e 200 m), depois anda os 200 m que faltam a 20 m/s (10 s). Total: 30 s.",
+   "pecas": [
+    {
+     "termo": "Trecho",
+     "significado": "Um pedaço do caminho com um só tipo de movimento."
+    }
+   ],
+   "passos": [
+    {
+     "titulo": "As fórmulas desta questão",
+     "texto": "Estas são as fórmulas que a questão usa. Já estão prontas: é só usar.",
+     "visual": {
+      "tipo": "formulas",
+      "itens": [
+       {
+        "figura": "carro",
+        "nome": "km/h para m/s",
+        "formula": "m/s = km/h ÷ 3,6"
+       },
+       {
+        "figura": "carro",
+        "nome": "Tempo para acelerar",
+        "formula": "tempo = mudança de velocidade ÷ aceleração"
+       },
+       {
+        "figura": "carro",
+        "nome": "Distância",
+        "formula": "distância = média × tempo"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "O que eu tenho",
+     "texto": "Primeiro, tire os números do enunciado.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "O que eu tenho",
+      "cabecalho": [
+       "Informação",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "Aceleração",
+        "1 m/s a cada segundo"
+       ],
+       [
+        "Velocidade máxima",
+        "72 km/h"
+       ],
+       [
+        "Distância",
+        "400 m"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "A equação em letras",
+     "texto": "A questão quer o tempo total até os 400 m.\nPor que duas partes? O movimento muda quando o carro chega a 72 km/h.\nAgora é só achar cada letra.",
+     "visual": {
+      "tipo": "equacao",
+      "formula": "t = x + y",
+      "leitura": "tempo total = tempo acelerando + tempo constante",
+      "letras": [
+       {
+        "letra": "t",
+        "oque": "tempo total (o que a questão quer)"
+       },
+       {
+        "letra": "x",
+        "oque": "tempo acelerando, em segundos"
+       },
+       {
+        "letra": "y",
+        "oque": "tempo em velocidade constante, em segundos"
+       }
+      ]
+     }
+    },
+    {
+     "titulo": "Achando x (tempo acelerando)",
+     "texto": "72 ÷ 3,6 = 20 m/s\nGanha 1 m/s por segundo:\n1 s dá 1 m/s, 2 s dão 2 m/s\nx = 20 ÷ 1 = 20 s"
+    },
+    {
+     "titulo": "Achando y: quanto já andou",
+     "texto": "Velocidade média: (0 + 20) ÷ 2 = 10 m/s\nDurante 20 segundos:\n10 × 20 = 200 m\n400 − 200 = 200 m faltando"
+    },
+    {
+     "titulo": "Achando y: o tempo que falta",
+     "texto": "Agora cada segundo rende 20 m.\nQuantos 20 cabem em 200?\ny = 200 ÷ 20 = 10 s"
+    },
+    {
+     "titulo": "Volta na equação",
+     "texto": "t = 20 + 10 = 30 s\nLetra D.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "As letras",
+      "cabecalho": [
+       "Letra",
+       "Valor"
+      ],
+      "linhas": [
+       [
+        "x",
+        "20 s"
+       ],
+       [
+        "y",
+        "10 s"
+       ]
+      ]
+     }
+    },
+    {
+     "titulo": "Questão parecida? Faça assim",
+     "texto": "Pista: \"acelera até... e a partir daí constante\" → separe em dois trechos e some os tempos.",
+     "visual": {
+      "tipo": "tabela",
+      "titulo": "A receita",
+      "cabecalho": [
+       "Passo",
+       "Nesta questão"
+      ],
+      "linhas": [
+       [
+        "1. Tabela do que eu tenho",
+        "1 m/s², 72 km/h, 400 m"
+       ],
+       [
+        "2. Equação em letras",
+        "t = x + y"
+       ],
+       [
+        "3. Achar cada letra",
+        "x = 20; y = 10"
+       ],
+       [
+        "4. Substituir",
+        "20 + 10 = 30"
+       ]
+      ]
+     }
+    }
+   ],
+   "seuErro": null,
+   "checagem": {
+    "pergunta": "Do repouso, 2 m/s a cada segundo até 20 m/s, depois constante. Tempo para 300 m?",
+    "opcoes": [
+     "20 s",
+     "10 s",
+     "15 s",
+     "30 s"
+    ],
+    "certa": "20 s",
+    "resposta": "10 s e 100 m; faltam 200 m a 20 m/s = 10 s; total 20 s."
+   }
+  }
+ }
+]
