@@ -60,7 +60,9 @@ function legendasEmLista(d: DesenhoEq, tam: number, extras: DesenhoEq['partes'])
 
 export function expandirEquacao(d: DesenhoEq, opcoes: { emLista?: boolean; extras?: DesenhoEq['partes'] } = {}): Desenho[] {
   const emLista = !!opcoes.emLista && (legendasNaoCabem(d.partes) || !!opcoes.extras?.length);
-  const partes = emLista ? d.partes.map((p) => ({ ...p, leg: undefined })) : d.partes;
+  // Legenda igual à própria palavra ("raio" com "Raio" embaixo) não ensina nada: sai.
+  const repete = (p: DesenhoEq['partes'][number]): boolean => p.leg?.toLowerCase() === textoDaPeca(p.s).toLowerCase();
+  const partes = d.partes.map((p) => (emLista || repete(p) ? { ...p, leg: undefined } : p));
   const tam = tamanhoQueCabe(partes, d.tam);
   const larguras = partes.map((p) => larguraDaPeca(p, tam));
   let x = CENTRO - larguras.reduce((a, b) => a + b, 0) / 2;

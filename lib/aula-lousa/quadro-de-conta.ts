@@ -2,6 +2,7 @@
 // fração quando for divisão, e a explicação fica só na fala do professor. Pelo menos 80% das
 // telas de uma lousa de exatas são só equação; as outras dizem o que a questão quer e quais dados pegar.
 // Funções puras: texto da aula do robô entra, telas de lousa saem.
+import { contaVerdadeira } from './conta-verdadeira';
 import { expandirEquacao, legendasNaoCabem } from './equacao';
 import type { Cena, Cor, Desenho, DesenhoEq, Fala } from './tipos';
 
@@ -34,13 +35,15 @@ const MAX_LETRAS_NA_PECA = 16;
 const SEPARA_CONTAS = /\n|;\s*|,\s+(?=[A-Za-zπ][A-Za-z0-9]{0,2} =)/;
 const PALAVRA_SOLTA = /^(?:a|o|as|os|de|da|do|das|dos|em|e|ou|para|com|que|na|no)$/i; // fim de legenda cortada não pode ser preposição
 const MAX_LETRAS_DO_DADO = 24; // valor de dado pode ser "200 g a 30 °C"; a letra encolhe para caber
+const FIM_DE_FRASE = /[.?!]\s+[A-ZÀ-Ú]/;
+const PREPOSICAO = /(?:^| )(?:do|da|de|no|na)(?: |$|[.,;:])/;
 // Conta de verdade: tem "=" e nenhuma palavra de 5 letras ou mais fora dos parênteses.
 const PALAVRA_LONGA = /[a-zà-ú]{5,}/i;
 const OPERADORES = new Set(['=', '+', '−', '-', '×', '÷', '·', '*']);
 // "2/3", "x/2", "(a+b)/2": o termo INTEIRO tem de ser a fração; "72 km/h" é unidade e fica como está.
 const FRACAO_PEQUENA = /^(\d[\d.,]*|[A-Za-z]|\([^()]{1,10}\))\/(\d[\d.,]*|[A-Za-z])$/;
 
-const limpa = (s: string): string => s.replace(/\$/g, '').replace(/\s+/g, ' ').trim();
+const limpa = (s: string): string => s.replace(/(?<!R)\$|(?<=R)\$(?!\s?\d)/g, '').replace(/\s+/g, ' ').trim();
 
 /** Parte a conta em termos e operadores; o operador só vale fora de parênteses ("(1 + 2/3)" é um termo só). */
 function termosDaConta(l: string): string[] {
@@ -88,10 +91,13 @@ function virarFracoes(tokens: string[]): string[] | null {
 export function pecasDaConta(linha: string, comPalavras = false): Peca[] | null {
   const l = limpa(linha);
   if (!l.includes('=')) return null;
+  if (!comPalavras && PREPOSICAO.test(l.replace(/\([^)]*\)/g, ''))) return null;
+  if (!comPalavras && FIM_DE_FRASE.test(l)) return null; // "= 32 ÷ 96. Como 96 = …" são duas frases: quem separa é contasNaFrase
   if (!comPalavras && PALAVRA_LONGA.test(l.replace(/\([^)]*\)/g, ''))) return null;
   const tokens = virarFracoes(termosDaConta(l));
   if (!tokens || tokens.length < 3 || tokens.length > MAX_PECAS) return null;
   if (tokens.some((t) => t.split('|').some((x) => x.length > MAX_LETRAS_NA_PECA))) return null;
+  if (legendasNaoCabem(tokens.map((s) => ({ s })))) return null; // larga demais até sem legenda: vazaria do quadro
   return tokens.map((s) => ({ s: s.replace(/\b(\d{1,3}) (\d{3})\b/g, '$1 $2') }));
 }
 
@@ -108,9 +114,18 @@ export function legendaCurta(oque: string): string | undefined {
 }
 
 const titulo = (s: string): Desenho => {
-  const t = s.slice(0, MAX_TITULO);
+  const t = tituloCortado(s, MAX_TITULO);
   return { k: 'tx', x: 200, y: 34, s: t, cor: 'tinta', tam: Math.min(28, Math.floor(360 / (t.length * 0.4))), t: 0.2 };
 };
+
+/** Título que não cabe perde o aparte aberto em vez de terminar em "(2 de". */
+const tituloCortado = (s: string, max: number): string => s.slice(0, max).replace(/\s*\([^)]*$/, '').trimEnd();
+
+/** "nome (2)" sem cortar o número: quem encurta é o nome. */
+export function tituloNumerado(nome: string, n: number): string {
+  const numero = ` (${n})`;
+  return `${tituloCortado(nome, MAX_TITULO - numero.length)}${numero}`;
+}
 
 /** Frase curta no pé do quadro (a "pista"): até 2 linhas de 44 letras, centrada, em cinza. */
 function notaDeRodape(nota: string, t: number): Desenho[] {
@@ -125,6 +140,14 @@ function notaDeRodape(nota: string, t: number): Desenho[] {
   }
   if (atual) linhas.push(atual);
   return linhas.slice(0, 2).map((s, i): Desenho => ({ k: 'tx', x: 200, y: Y_DA_NOTA + i * 19, s: i === 1 && linhas.length > 2 ? `${s}…` : s, cor: 'cinza', tam: 17, t: t + i * 0.3, ancora: 'middle' }));
+}
+
+/** Na tela de continuação, a frase que fala dos números DAQUELA tela; sem nenhuma, a última. */
+function falaDaPagina(fala: Fala[], pagina: Peca[][]): Fala[] {
+  const numeros = pagina.flat().flatMap((p) => p.s.split('|')).filter((s) => /\d/.test(s));
+  const pontos = fala.map(([, frase]) => numeros.filter((n) => frase.includes(n)).length);
+  const melhor = pontos.lastIndexOf(Math.max(...pontos));
+  return melhor < 0 ? [] : [[fala[0][0], fala[melhor][1]]];
 }
 
 /** Telas só de conta: até 3 linhas por tela, cada linha aparecendo depois da anterior. */
@@ -143,20 +166,21 @@ export function telasDeContas(nome: string, contas: Peca[][], fala: Fala[], nota
     const tam = pagina.length === 1 ? TAM_UMA_LINHA : TAM_VARIAS_LINHAS;
     const ys = emLista ? [Y_DA_EQUACAO_COM_LISTA] : pagina.length === 1 ? [Y_DAS_LINHAS[1]] : pagina.length === 2 && pagina.some((c) => c.some((p) => p.s.includes('|'))) ? Y_DE_DUAS_COM_FRACAO : Y_DAS_LINHAS;
     let t = TEMPO_INICIAL;
-    const desenho: Desenho[] = [titulo(n ? `${nome} (${n + 1})` : nome)];
+    const desenho: Desenho[] = [titulo(n ? tituloNumerado(nome, n + 1) : nome)];
     pagina.forEach((partes, k) => {
       desenho.push(...expandirEquacao({ k: 'eq', y: ys[k], t, tam, partes }, { emLista }));
       t += partes.length * SEGUNDOS_POR_PECA + SEGUNDOS_ENTRE_LINHAS;
     });
     if (comNota) desenho.push(...notaDeRodape(nota!, t));
-    telas.push({ tipo: 'lousa', fala: n === 0 ? fala : fala.slice(-1), desenho });
+    telas.push({ tipo: 'lousa', fala: n === 0 ? fala : falaDaPagina(fala, pagina), desenho });
   }
   return telas;
 }
 
 /** A fórmula com a legenda embaixo de cada letra (regra 18). Letras que não aparecem nela vão numa 2ª linha. null = fórmula não vira conta. */
 export function telaDaFormula(formula: string, letras: { letra: string; oque: string }[], fala: Fala[], cor: Cor = 'verde'): Cena | null {
-  const base = pecasDaConta(formula, true);
+  // " e " são duas contas numa linha: desenhadas juntas, uma cobre a outra.
+  const base = / e /.test(formula) ? null : pecasDaConta(formula, true);
   if (!base) return null;
   const legendas = new Map(letras.map((l) => [limpa(l.letra), legendaCurta(l.oque)]));
   const usadas = new Set<string>();
@@ -169,6 +193,7 @@ export function telaDaFormula(formula: string, letras: { letra: string; oque: st
   // Legendas compridas viram lista embaixo da equação, junto das letras que ficaram de fora.
   const extras: Peca[] = faltam.map((l) => ({ s: limpa(l.letra), leg: legendaCurta(l.oque) }));
   const emLista = (legendasNaoCabem(partes) || legendasNaoCabem(extras)) && [...partes, ...extras].filter((p) => p.leg).length <= MAX_LEGENDAS_NA_LISTA;
+  if (!emLista && legendasNaoCabem(partes)) return null; // legendas demais até para a lista: vai em texto
   const principal: DesenhoEq = { k: 'eq', y: emLista ? Y_DA_EQUACAO_COM_LISTA : Y_DA_LINHA_COM_LEGENDA, t: TEMPO_INICIAL, tam: TAM_UMA_LINHA, partes };
   const desenho: Desenho[] = [titulo('a equação'), ...expandirEquacao(principal, { emLista, extras: emLista ? extras : [] })];
   if (faltam.length && !emLista) {
@@ -227,7 +252,16 @@ const juntaMilhar = (tokens: string[]): string[] =>
     return cola ? [...feitos.slice(0, -1), `${antes}\u00a0${t}`] : [...feitos, t];
   }, []);
 
-const tokenDeConta = (t: string): boolean => OPERADORES.has(t) || NUMERO.test(t) || SIMBOLO.test(t) || UNIDADE_COMPOSTA.test(t);
+// "4r", "0,8h", "4/3", "12/3": número colado na letra e fração em linha também são peças da conta.
+const COEFICIENTE = /^\d[\d.,]*[A-Za-zπ][²³]?$/;
+// "e 15 · 15", "Com π = 3": palavra curta que abre a frase não é letra da conta.
+const ABRE_FRASE = /^(?:e|E|Com|Em|No|Na|Se|Há|São|Dá|Aí|Já)$/;
+
+const tokenDeConta = (t: string): boolean =>
+  !PREPOSICAO.test(t) && (OPERADORES.has(t) || NUMERO.test(t) || SIMBOLO.test(t) || UNIDADE_COMPOSTA.test(t) || COEFICIENTE.test(t) || FRACAO_PEQUENA.test(t));
+
+/** Conta que começa ou termina em operador é pedaço de uma maior ("= 2 ·"): não vai para o quadro. */
+const contaInteira = (janela: string[]): boolean => !OPERADORES.has(janela[0]) && !OPERADORES.has(janela[janela.length - 1]);
 
 /** Contas escritas no meio de uma frase ("Raio = 30 ÷ 2 = 15 cm."): acha a sequência de símbolos que tem "=" e a devolve como peças. */
 export function contasNaFrase(frase: string): Peca[][] {
@@ -237,9 +271,11 @@ export function contasNaFrase(frase: string): Peca[][] {
   const achadas: Peca[][] = [];
   let janela: string[] = [];
   const fecha = (): void => {
-    if (janela.includes('=') && janela.length >= MIN_TOKENS_DA_CONTA && janela.length <= MAX_TOKENS_DA_CONTA) {
-      const conta = pecasDaConta(janela.join(' '), true);
-      if (conta) achadas.push(conta);
+    // "(…) = 600 − 180 = 420": sem o "=" da frente a igualdade continua verdadeira; outro operador, não.
+    const inteira = janela[0] === '=' ? janela.slice(1) : janela;
+    if (inteira.includes('=') && inteira.length >= MIN_TOKENS_DA_CONTA && inteira.length <= MAX_TOKENS_DA_CONTA && contaInteira(inteira)) {
+      const conta = pecasDaConta(inteira.join(' '), true);
+      if (conta && contaVerdadeira(conta.map((p) => p.s))) achadas.push(conta);
     }
     janela = [];
   };
@@ -253,6 +289,7 @@ export function contasNaFrase(frase: string): Peca[][] {
     const t = solto.replace(PONTUACAO_FINAL, '');
     const termina = t !== bruto;
     const palavraAntes = tokens[i + 1] === '=' && janela.length === 0 && PALAVRA_ANTES_DO_IGUAL.test(t);
+    if (janela.length === 0 && ABRE_FRASE.test(t)) return;
     if (t && (tokenDeConta(t) || palavraAntes)) {
       janela.push(t);
       if (termina) fecha();
@@ -270,7 +307,7 @@ export function separarContas(texto: string): { contas: Peca[][]; prosa: string 
   const prosa: string[] = [];
   for (const linha of texto.split(SEPARA_CONTAS)) {
     const partes = pecasDaConta(linha);
-    if (partes) {
+    if (partes && contaVerdadeira(partes.map((p) => p.s))) {
       contas.push(partes);
       continue;
     }

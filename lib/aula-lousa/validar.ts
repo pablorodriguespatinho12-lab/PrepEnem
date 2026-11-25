@@ -5,7 +5,7 @@ import { ALTURA, CORES, LARGURA, type Ancora, type AulaLousa, type Cena, type Co
 import { expandirEquacao } from './equacao';
 
 const MIN_CENAS = 3;
-const MAX_CENAS = 31;
+const MAX_CENAS = 36;
 const MAX_DESENHOS = 40;
 const MAX_FALAS = 4;
 const MAX_TEMPO = 40;

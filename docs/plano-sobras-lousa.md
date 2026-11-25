@@ -25,3 +25,20 @@ Juntar tudo e gravar UMA vez. A trava do modo automático barra gravação em ma
 `DB_CONFIRMED=1 npx tsx scripts/lousa-do-robo.ts /tmp/lousa.json --refazer --todas --gravar`
 
 Depois: build, testes, commit, push. O código do ramo `pixel-em-tudo` desde o PR 84 ainda não foi para a `main`: abrir PR novo no fim.
+
+## Feito em 25/11/2026 (noite)
+
+Simulação: 539 de 539 aulas viram lousa (antes 531; 0 recusadas). 830 testes e build passando.
+
+- Item 1: falas não terminam mais cortadas; contas "= 2 ·" saem inteiras; figura do 00c usa x, y, z; caixa cúbica desenha cubo; remendos de texto do 00a em `data/revisao-final/lousa-remendos.json`.
+- Item 2: limite de telas subiu de 31 para 36 (troca o "cortar passo repetido"); equação que não cabe vira texto. Sobra: `d2-escada-qui-ita-ele-01` (à mão).
+- Itens 3, 4 e 5: feitos.
+- Achados na foto e consertados: enunciado cortado nas aulas antigas, conta falsa no quadro (trava `conta-verdadeira.ts`), "R6,00", título "(2 de", sobra "0,512 do".
+
+### O que o aluno-do-zero ainda achou (00a e 00d), não consertado
+- Aulas de sólido: não explicam o ⅓ do cone nem o 4/3 da esfera; "volume" e "cm³" sem definição.
+- Conta dita na fala e ausente da tela (raio = 10 ÷ 2; equação com N; 315 que sobra; "N = 15" e a letra no fim do 00a).
+- "O desenho" é só frase (sem copo de ponta para baixo, sem bolas); cone desenhado com a ponta para cima.
+- Alternativas longas (5 em fileira) vazam da caixa no papel (`d2-escada-fis-ter-04`).
+
+Aprendi: contar "0 contas erradas" não pega conta cortada nem sobreposta; fotografar a aula inteira antes de fechar.

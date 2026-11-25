@@ -42,7 +42,7 @@ describe('lousa a partir da aula antiga', () => {
   });
 
   it('alternativa longa: o papel leva só o enunciado, sem cortar a aula', () => {
-    const r = lousaDoAntigo({ ...ENTRADA, alternativas: ['a'.repeat(90), 'b'] });
+    const r = lousaDoAntigo({ ...ENTRADA, alternativas: ['a'.repeat(130), 'b'] });
     expect(r.ok).toBe(true);
     if (!r.ok) return;
     const papel = r.aula.cenas[1];

@@ -68,3 +68,18 @@ describe('defeitos achados na foto das aulas reais (24/11/2026)', () => {
     expect(separarContas('S = 21, B = 10101').contas).toHaveLength(2);
   });
 });
+
+describe('conta no meio da frase sai inteira ou não sai', () => {
+  const pecas = (frase: string) => contasNaFrase(frase).map((c) => c.map((p) => p.s).join(' '));
+  it('número colado na letra faz parte da conta', () => {
+    expect(pecas('Duas bolas lado a lado ocupam 2 · 2r = 4r.')).toEqual(['2 · 2r = 4r']);
+  });
+  it('tira só o "=" que sobrou na frente', () => {
+    expect(pecas('a força é (x) = 600 − 180 = 420 N.')).toEqual(['600 − 180 = 420 N']);
+  });
+  it('nunca começa nem termina em operador, nem com "e" solto', () => {
+    const todas = pecas('Raio de (x) = 2 · (y) e 15 · 15 = 225.');
+    expect(todas).toContain('15 · 15 = 225');
+    for (const c of todas) expect(c).not.toMatch(/^[=·+−÷]|[=·+−÷]$/);
+  });
+});

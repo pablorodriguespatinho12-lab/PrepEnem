@@ -5,13 +5,14 @@
 import type { AulaLousa, Cena, Cor } from './tipos';
 import { pecasDaConta, separarContas, telasDeContas } from './quadro-de-conta';
 import {
-  MAX_ALTERNATIVA, MAX_CENAS, MAX_PAPEL, cabem, falas, limpa, linhasDoTexto, quebrar, telas, texto, visualDe,
+  MAX_ALTERNATIVA, MAX_CENAS, MAX_PAPEL, cabem, dividirEnunciado, falas, limpa, linhasDoTexto, quebrar, telas, texto, visualDe,
   type EntradaDoRobo, type Linha, type Resultado,
 } from './do-robo';
 
 const SUPERESCRITO: Record<string, string> = { '2': '²', '3': '³' };
 const SIMBOLOS: [RegExp, string][] = [
-  [/\\times/g, '×'], [/\\div/g, '÷'], [/\\cdot/g, '·'], [/\\approx/g, '≈'], [/\\neq/g, '≠'],
+  [/\\\$/g, '$'], [/\\times/g, '×'], [/\bR(\d+,\d{2})\b/g, 'R$$ $1'], // dinheiro que veio sem o cifrão ("R6,00")
+  [/\\lceil/g, '⌈'], [/\\rceil/g, '⌉'], [/\\max/g, 'máx'], [/\\div/g, '÷'], [/\\cdot/g, '·'], [/\\approx/g, '≈'], [/\\neq/g, '≠'],
   [/\\leq?/g, '≤'], [/\\geq?/g, '≥'], [/\\pi/g, 'π'], [/\\Delta/g, 'Δ'], [/\\circ/g, '°'],
   [/\\%/g, '%'], [/\\(?:quad|qquad)/g, ' '], [/\\[,;:! ]/g, ' '], [/\\left|\\right/g, ''],
   [/\\(?:rightarrow|to)/g, '→'], [/\\mu/g, 'µ'], [/\\Omega/g, 'Ω'], [/\\lambda/g, 'λ'],
@@ -109,13 +110,13 @@ export function lousaDoAntigo(e: EntradaDoRobo & { ideia: string }): Resultado {
         { k: 'tx', x: 200, y: 196, s: 'passo a passo', cor: 'cinza', tam: 28, t: 2.0 },
       ],
     },
-    {
+    ...dividirEnunciado(e.enunciado).map((parte, k, partes): Cena => ({
       tipo: 'papel',
-      fala: [[0.3, 'Esta é a questão. Leia com calma o que ela dá e o que ela quer.']],
-      rotulo: 'A questão',
-      texto: e.enunciado,
-      ...(cabemNoPapel ? { alternativas: alts } : {}),
-    },
+      fala: [[0.3, k === 0 ? 'Esta é a questão. Leia com calma o que ela dá e o que ela quer.' : 'Continua a questão.']],
+      rotulo: partes.length > 1 ? `A questão (${k + 1} de ${partes.length})` : 'A questão',
+      texto: parte,
+      ...(k === partes.length - 1 && cabemNoPapel ? { alternativas: alts } : {}),
+    })),
   ];
 
   const ideia = latexParaTexto(e.ideia);
