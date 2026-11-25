@@ -45,7 +45,7 @@ Haiku (`explorador`): contar e listar por SQL, ler figuras. Sonnet (`executor`):
 | 2 protótipo (queda livre 5 telas, velocidade média) | feito, Pablo viu; pediu fração no lugar do ÷ (feito); o porquê do ÷ 2 ele mandou deixar de lado |
 | 3 gerador (`quadro-de-conta.ts`, `do-robo.ts`, `do-antigo.ts`) | feita e GRAVADA no banco: 443 lousas, média de telas só de conta 0% -> 70% (robô 78%, antigo 48%); 1 aula não coube (33 telas, máx 31); cópia em `~/backups-prepenem/explicacoes-antes-lousa-do-robo-2026-11-24T22h49.json` |
 | 4 base por conceito | NÃO feita. Tema x quantidade (Mat/Fís): Cinemática só 16 (8 do dia 2); Grandezas 27, Equações 32, Combinatória 34. Falta o sub-conceito (velocidade média, aceleração, queda livre) |
-| 5 figura de sólido | NÃO feita |
+| 5 figura de sólido | FEITA 24/11 ~22h: `lib/aula-lousa/solido.ts` (cilindro, cone, pirâmide, esfera, cubo, caixa), tela "a figura" depois do papel, só Matemática sem imagem; 22 lousas de 442 ganharam; gravada no banco (cópia em `~/backups-prepenem/explicacoes-antes-lousa-do-robo-2026-11-25T01h11.json`); foto dos 6 conferida (letras tiradas de cima dos traços). Falta: prisma de base não retangular e questões com 2 sólidos (desenha só o 1º citado) |
 | 6 aluno-do-zero + revisor-de-fatos nas lousas novas | NÃO feita (14 mil tokens por questão; rodar em 2 a 3 aulas por tema) |
 | 7 auto-melhora | feita (ver lista abaixo) |
 

@@ -4,6 +4,7 @@ import { readFileSync, readdirSync, writeFileSync } from 'fs';
 import { PrismaClient } from '@prisma/client';
 import { lousaDoRobo } from '../lib/aula-lousa/do-robo';
 import { lousaDoAntigo } from '../lib/aula-lousa/do-antigo';
+import { comFiguraDoSolido } from '../lib/aula-lousa/solido';
 import { validarLousa } from '../lib/aula-lousa/validar';
 import { META_DE_CONTA, TOLERANCIA_DA_META, ehTelaDeConta } from '../lib/aula-lousa/quadro-de-conta';
 import { letrasPelaInicial, type Troca } from '../lib/aula-lousa/letras';
@@ -76,8 +77,10 @@ async function main() {
     };
     const r = doRobo ? lousaDoRobo(entrada) : lousaDoAntigo({ ...entrada, ideia: typeof c.ideia === 'string' ? c.ideia : '' });
     if (!r.ok) { motivos.set(r.motivo, (motivos.get(r.motivo) ?? 0) + 1); continue; }
-    const aula = validarLousa(r.aula);
-    if (!aula || aula.cenas.length !== r.aula.cenas.length) { motivos.set('porteiro cortou tela', (motivos.get('porteiro cortou tela') ?? 0) + 1); continue; }
+    // Regra 21: enunciado de sólido sem imagem → a lousa desenha a figura (só Matemática).
+    const comFigura = q.materia === 'Matemática' ? comFiguraDoSolido(r.aula, q.enunciado, !!q.imagemUrl || q.dependeImagem) : r.aula;
+    const aula = validarLousa(comFigura);
+    if (!aula || aula.cenas.length !== comFigura.cenas.length) { motivos.set('porteiro cortou tela', (motivos.get('porteiro cortou tela') ?? 0) + 1); continue; }
     feitas[q.id] = { aula, antes: c, conteudo: { ...c, passos: passosNovos }, trocas };
   }
 
