@@ -37,8 +37,8 @@ Consertos pós-agente sem 2ª leitura. Falta no molde: o desenho do triângulo d
 
 ## Estado em 25/11, 2ª sessão (PR 84 publicado)
 - `varrer-prova` nas 14 provas "· Base": 83 questões, 698 passos, 0 achados.
-- Achado olhando foto (o varredor NÃO pega): legendas uma em cima da outra, 198 telas em 157 aulas na simulação. Consertado no gerador (1 sobra, `d2-escada-mat-ita-esp-00b`). Falta regravar: `DB_CONFIRMED=1 npx tsx scripts/lousa-do-robo.ts <saida> --refazer --todas --gravar` (mudam 250 de 525; faz cópia sozinho; precisa do ok do Pablo).
-- 7 das 12 recusadas agora convertem: mesmo script sem `--refazer`, com `--gravar` (precisa do ok).
+- Achado olhando foto (o varredor NÃO pega): legendas uma em cima da outra, 198 telas em 157 aulas na simulação. Consertado no gerador (1 sobra, `d2-escada-mat-ita-esp-00b`).
+- GRAVADO com o ok do Pablo (25/11, ~15h50): 250 lousas regravadas + 7 novas; banco igual ao gerador novo (0 de 525 mudariam). Cópias em `~/backups-prepenem/` (`...18h49-250-legendas.json` e `...18h50.json`). Aula de Geometria Espacial, tela "a equação", fotografada lendo do banco.
 - Ainda abertos: 5 recusadas, 2 aulas com telas demais (36), números sem origem (58 marcadas, maioria alarme falso; olhar `d2-banco-mat-cob-05/06/12/17/20`), aluno-do-zero nas figuras de sólidos.
 - Aprendi: foto de aula espera ~14 s por tela (com menos, o desenho sai pela metade); prévia sem gravar = trocar a lousa na resposta de `/api/tutor/explicacao`.
 
