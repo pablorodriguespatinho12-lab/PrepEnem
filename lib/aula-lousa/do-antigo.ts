@@ -15,7 +15,7 @@ const SIMBOLOS: [RegExp, string][] = [
   [/\\leq?/g, '≤'], [/\\geq?/g, '≥'], [/\\pi/g, 'π'], [/\\Delta/g, 'Δ'], [/\\circ/g, '°'],
   [/\\%/g, '%'], [/\\(?:quad|qquad)/g, ' '], [/\\[,;:! ]/g, ' '], [/\\left|\\right/g, ''],
   [/\\(?:rightarrow|to)/g, '→'], [/\\mu/g, 'µ'], [/\\Omega/g, 'Ω'], [/\\lambda/g, 'λ'],
-  [/\\theta/g, 'θ'], [/\\rho/g, 'ρ'], [/\{,\}/g, ','],
+  [/\\theta/g, 'θ'], [/\\rho/g, 'ρ'], [/\\Rightarrow/g, '→'], [/\\varepsilon/g, 'ε'], [/\{,\}/g, ','],
 ];
 
 function agrupa(s: string): string {
@@ -28,7 +28,7 @@ export function latexParaTexto(entrada: string): string | null {
   for (let i = 0; i < 4; i++) {
     s = s
       .replace(/\\text\{([^{}]*)\}/g, '$1')
-      .replace(/\\(?:mathrm|textbf|mathbf)\{([^{}]*)\}/g, '$1')
+      .replace(/\\(?:mathrm|textbf|mathbf|boxed)\{([^{}]*)\}/g, '$1')
       .replace(/\\d?frac\{([^{}]*)\}\{([^{}]*)\}/g, (_m, a: string, b: string) => `${agrupa(a)}/${agrupa(b)}`)
       .replace(/\\sqrt\{([^{}]*)\}/g, (_m, a: string) => `√${agrupa(a)}`)
       .replace(/\^\{?([0-9])\}?/g, (_m, n: string) => SUPERESCRITO[n] ?? `^${n}`)

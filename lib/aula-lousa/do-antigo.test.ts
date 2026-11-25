@@ -20,6 +20,11 @@ describe('latexParaTexto', () => {
     expect(latexParaTexto('E = 60 \\times 150')).toBe('E = 60 × 150');
     expect(latexParaTexto('x^{2} + 1')).toBe('x² + 1');
   });
+  it('converte seta de consequência, ε e resposta em caixa', () => {
+    expect(latexParaTexto('12 - r = 9 \\Rightarrow r = 3')).toBe('12 - r = 9 → r = 3');
+    expect(latexParaTexto('\\varepsilon = 3')).toBe('ε = 3');
+    expect(latexParaTexto('2;\\ \\boxed{3};\\ 4')).toBe('2; 3; 4');
+  });
   it('recusa comando desconhecido', () => {
     expect(latexParaTexto('\\sum_{i} x')).toBeNull();
   });

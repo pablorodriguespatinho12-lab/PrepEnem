@@ -2,7 +2,7 @@
 // fração quando for divisão, e a explicação fica só na fala do professor. Pelo menos 80% das
 // telas de uma lousa de exatas são só equação; as outras dizem o que a questão quer e quais dados pegar.
 // Funções puras: texto da aula do robô entra, telas de lousa saem.
-import { expandirEquacao } from './equacao';
+import { expandirEquacao, legendasNaoCabem } from './equacao';
 import type { Cena, Cor, Desenho, DesenhoEq, Fala } from './tipos';
 
 type Peca = DesenhoEq['partes'][number];
@@ -12,6 +12,7 @@ export const META_DE_CONTA = 0.8;
 export const TOLERANCIA_DA_META = 0.1;
 const MAX_PECAS = 12;
 const DADOS_POR_TELA = 4;
+const FILEIRAS_DE_DADOS = 2;
 const LINHAS_POR_TELA = 3;
 const Y_DAS_LINHAS = [95, 170, 245];
 const Y_DE_DUAS_COM_FRACAO = [112, 215];
@@ -19,6 +20,8 @@ const LINHAS_COM_FRACAO = 2;
 const LETRAS_DA_NOTA = 44;
 const Y_DA_NOTA = 257;
 const Y_DA_LINHA_COM_LEGENDA = 130;
+const Y_DA_EQUACAO_COM_LISTA = 100;
+const MAX_LEGENDAS_NA_LISTA = 6;
 const TAM_UMA_LINHA = 44;
 const TAM_VARIAS_LINHAS = 38;
 const MAX_LEGENDA = 22;
@@ -129,16 +132,20 @@ export function telasDeContas(nome: string, contas: Peca[][], fala: Fala[], nota
   const telas: Cena[] = [];
   for (let i = 0, n = 0; i < contas.length; n++) {
     // Fração ocupa 3 alturas de linha: com fração na página, só 2 linhas cabem.
-    const tres = contas.slice(i, i + LINHAS_POR_TELA);
+    // Conta com legendas que não cabem lado a lado ganha a tela só para ela, com as legendas em lista.
+    const proximas = contas.slice(i, i + LINHAS_POR_TELA);
+    const primeiraLonga = proximas.findIndex((c) => legendasNaoCabem(c));
+    const tres = primeiraLonga < 0 ? proximas : proximas.slice(0, Math.max(1, primeiraLonga));
+    const emLista = tres.length === 1 && legendasNaoCabem(tres[0]);
     const comNota = n === 0 && !!nota;
     const pagina = comNota || tres.some((c) => c.some((p) => p.s.includes('|'))) ? tres.slice(0, LINHAS_COM_FRACAO) : tres;
     i += pagina.length;
     const tam = pagina.length === 1 ? TAM_UMA_LINHA : TAM_VARIAS_LINHAS;
-    const ys = pagina.length === 1 ? [Y_DAS_LINHAS[1]] : pagina.length === 2 && pagina.some((c) => c.some((p) => p.s.includes('|'))) ? Y_DE_DUAS_COM_FRACAO : Y_DAS_LINHAS;
+    const ys = emLista ? [Y_DA_EQUACAO_COM_LISTA] : pagina.length === 1 ? [Y_DAS_LINHAS[1]] : pagina.length === 2 && pagina.some((c) => c.some((p) => p.s.includes('|'))) ? Y_DE_DUAS_COM_FRACAO : Y_DAS_LINHAS;
     let t = TEMPO_INICIAL;
     const desenho: Desenho[] = [titulo(n ? `${nome} (${n + 1})` : nome)];
     pagina.forEach((partes, k) => {
-      desenho.push(...expandirEquacao({ k: 'eq', y: ys[k], t, tam, partes }));
+      desenho.push(...expandirEquacao({ k: 'eq', y: ys[k], t, tam, partes }, { emLista }));
       t += partes.length * SEGUNDOS_POR_PECA + SEGUNDOS_ENTRE_LINHAS;
     });
     if (comNota) desenho.push(...notaDeRodape(nota!, t));
@@ -159,8 +166,12 @@ export function telaDaFormula(formula: string, letras: { letra: string; oque: st
     return leg ? { s: p.s, leg, cor } : { s: p.s, cor: p.s === '=' ? ('tinta' as Cor) : cor };
   });
   const faltam = letras.filter((l) => !usadas.has(limpa(l.letra)) && legendaCurta(l.oque)).slice(0, 4);
-  const desenho: Desenho[] = [titulo('a equação'), ...expandirEquacao({ k: 'eq', y: Y_DA_LINHA_COM_LEGENDA, t: TEMPO_INICIAL, tam: TAM_UMA_LINHA, partes })];
-  if (faltam.length) {
+  // Legendas compridas viram lista embaixo da equação, junto das letras que ficaram de fora.
+  const extras: Peca[] = faltam.map((l) => ({ s: limpa(l.letra), leg: legendaCurta(l.oque) }));
+  const emLista = (legendasNaoCabem(partes) || legendasNaoCabem(extras)) && [...partes, ...extras].filter((p) => p.leg).length <= MAX_LEGENDAS_NA_LISTA;
+  const principal: DesenhoEq = { k: 'eq', y: emLista ? Y_DA_EQUACAO_COM_LISTA : Y_DA_LINHA_COM_LEGENDA, t: TEMPO_INICIAL, tam: TAM_UMA_LINHA, partes };
+  const desenho: Desenho[] = [titulo('a equação'), ...expandirEquacao(principal, { emLista, extras: emLista ? extras : [] })];
+  if (faltam.length && !emLista) {
     const t = TEMPO_INICIAL + partes.length * SEGUNDOS_POR_PECA + SEGUNDOS_ENTRE_LINHAS;
     desenho.push(...expandirEquacao({ k: 'eq', y: Y_DAS_LINHAS[2], t, tam: TAM_VARIAS_LINHAS, partes: faltam.map((l) => ({ s: limpa(l.letra), leg: legendaCurta(l.oque), cor: 'azul' as Cor })) }));
   }
@@ -171,11 +182,24 @@ export function telaDaFormula(formula: string, letras: { letra: string; oque: st
 export function telasDosDados(linhas: [string, string][], fala: Fala[]): Cena[] {
   const dados = linhas.map(([nome, valor]) => ({ s: limpa(valor), leg: legendaCurta(nome), cor: 'azul' as Cor }));
   if (dados.length < 1 || dados.some((d) => !d.s || d.s.length > MAX_LETRAS_DO_DADO)) return [];
+  // Cada linha leva os dados cujas legendas cabem lado a lado; cada tela leva até 2 linhas.
+  const fileiras = dados.reduce<Peca[][]>((feitas, dado) => {
+    const ultima = feitas[feitas.length - 1];
+    const cabe = !!ultima && ultima.length < DADOS_POR_TELA && !legendasNaoCabem([...ultima, dado]);
+    return cabe ? [...feitas.slice(0, -1), [...ultima, dado]] : [...feitas, [dado]];
+  }, []);
   const telas: Cena[] = [];
-  for (let i = 0; i < dados.length; i += DADOS_POR_TELA) {
-    const pagina = dados.slice(i, i + DADOS_POR_TELA);
-    const nome = i ? `o que eu tenho (${i / DADOS_POR_TELA + 1})` : 'o que eu tenho';
-    telas.push({ tipo: 'lousa', fala: i === 0 ? fala : fala.slice(-1), desenho: [titulo(nome), ...expandirEquacao({ k: 'eq', y: Y_DAS_LINHAS[1], t: TEMPO_INICIAL, tam: TAM_UMA_LINHA, partes: pagina })] });
+  for (let i = 0; i < fileiras.length; i += FILEIRAS_DE_DADOS) {
+    const pagina = fileiras.slice(i, i + FILEIRAS_DE_DADOS);
+    const nome = i ? `o que eu tenho (${i / FILEIRAS_DE_DADOS + 1})` : 'o que eu tenho';
+    const ys = pagina.length === 1 ? [Y_DAS_LINHAS[1]] : Y_DE_DUAS_COM_FRACAO;
+    let t = TEMPO_INICIAL;
+    const desenho: Desenho[] = [titulo(nome)];
+    pagina.forEach((partes, k) => {
+      desenho.push(...expandirEquacao({ k: 'eq', y: ys[k], t, tam: pagina.length === 1 ? TAM_UMA_LINHA : TAM_VARIAS_LINHAS, partes }));
+      t += partes.length * SEGUNDOS_POR_PECA;
+    });
+    telas.push({ tipo: 'lousa', fala: i === 0 ? fala : fala.slice(-1), desenho });
   }
   return telas;
 }
