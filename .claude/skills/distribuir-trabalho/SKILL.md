@@ -51,6 +51,24 @@ o valor dele é não ter visto a conversa.
 Cole no pedido o que ele iria buscar (o `grep`, a seção do arquivo): o custo de
 subagente cresce com o **número de chamadas**, não com o tamanho do pedido.
 
+## Porteiro do orquestrador (Pablo, 24/11/2026: "você tem que ser um bom orquestrador")
+
+Eu penso e respondo pelo resultado. Antes de CADA leva, as 7 linhas; a que falhar, conserto antes de disparar:
+
+| Confira no pedido | Erro real que criou a linha |
+|---|---|
+| Palavra ambígua definida em 1 frase, com exemplo do que NÃO conta | "tema do ENEM" lido como redação; "qualquer número" contado (89 de 90) |
+| O agente tem a ferramenta que a saída exige (Write? Bash?) | 2 de 3 voltaram sem poder gravar |
+| Um agente por arquivo escrito; nomes compartilhados registrados antes | 3 em paralelo no mesmo `.tsx` se atropelariam |
+| Leva de até 4; a 1ª conferida antes da 2ª | 8 de uma vez, 5 mortos com 429 |
+| Script e guardas da máquina colados no pedido (sem heredoc; `DB_CONFIRMED=1`) | heredoc barrado |
+| Modelo mais barato que dá conta; ≤5 linhas em 1 arquivo faço inline | arranque de 20 mil tokens por agente |
+| Pablo sabe em 1 linha o que cada um vai fazer | disparo recusado 2 vezes sem aviso |
+
+Depois de cada leva: conferir o achado na fonte (`vitest`, comando, foto); perguntar "onde o MEU pedido errou?";
+gravar a resposta nesta tabela ou no arquivo do agente e dizer "aprendi: X, gravei em Y". Texto consertado por causa de
+um revisor e não relido é dito ao Pablo como "sem 2ª leitura".
+
 ## Depois
 
 O resultado chega na notificação. **Nunca abra o transcript** (JSONL inteiro).
