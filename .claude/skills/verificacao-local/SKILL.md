@@ -94,6 +94,13 @@ const token = await encode({
 Grave o token num arquivo do scratchpad e **apague ao terminar** — não deixe
 credencial de sessão sobrando no disco.
 
+## Janela por cima da tela: fotografe a tela inteira
+
+26/11/2026: a aula abria com o fundo claro chapado (`content-visibility: hidden`
+esconde os filhos, e a cor do próprio elemento continua). Todas as fotos eram só
+de `.lousa-quadro`. Mudou aula, diálogo ou algo que esconde o fundo: uma foto da
+página inteira, abrindo pelo botão numa prova de verdade, no modo escuro.
+
 ## Playwright
 
 Já está em `node_modules` (não precisa instalar). Rode via `node -e`.
