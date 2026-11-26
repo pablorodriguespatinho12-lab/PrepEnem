@@ -63,7 +63,7 @@ export async function generateMetadata() {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning data-letra-pixel="">
+    <html lang="pt-BR" suppressHydrationWarning data-letra-pixel="" data-jardim="">
       <body className={`${dmSans.variable} ${fraunces.variable} ${sourceSerif.variable} ${jetbrainsMono.variable} ${caveat.variable} ${sora.variable} ${jersey.variable} ${jerseyTexto.variable} font-sans`}>
         <Providers nonce={headers().get('x-nonce') ?? undefined}>
           <AppLayout>

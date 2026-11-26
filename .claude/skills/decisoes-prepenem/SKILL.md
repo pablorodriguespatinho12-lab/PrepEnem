@@ -36,7 +36,8 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 - **Modo Jardim = 26/11/2026** (Pablo: "como se fosse um modo do site tem o pixel
   tem os outros... verde claro e na logo deixa ela mais bonita"). É a chave
   `jardim` do tema de cores (`html[data-jardim]`, `app/jardim.css`): verde claro,
-  serifa, pintura na capa, sem pixel. Os outros temas continuam com pixel.
+  serifa, pintura na capa, sem pixel. É o **padrão** (login e sem escolha; "deixa como modo padrao").
+  Os outros temas continuam com pixel.
   Logo (todos os temas): livro com broto, `components/logo.tsx` e `favicon.svg`.
 
 - **Menu, Início e Estudar = opção A de 26/11/2026** (Pablo: "pode o A desse

@@ -107,7 +107,7 @@ export const authOptions: NextAuthOptions = {
         // a exceção derrubava a sessão: 401 "Não autenticado" no meio do treino
         // (18/10/2026). Mantém o token e tenta de novo na próxima requisição.
         const stillExists = await prisma.user
-          .findUnique({ where: { id: token.id }, select: { id: true } })
+          .findUnique({ where: { id: token.id }, select: { id: true, themeColor: true } })
           .catch((erro: unknown) => {
             console.error('[auth] revalidação adiada, banco indisponível:', erro instanceof Error ? erro.message.split('\n').pop() : erro);
             return undefined;
@@ -117,6 +117,8 @@ export const authOptions: NextAuthOptions = {
           token.error = 'UserNotFound';
         } else {
           delete token.error;
+          // O tema escolhido em outro aparelho chega aqui sem novo login.
+          token.themeColor = stillExists.themeColor;
         }
         token.lastValidated = Date.now();
       }
