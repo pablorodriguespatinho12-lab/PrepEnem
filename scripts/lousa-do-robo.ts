@@ -61,11 +61,13 @@ async function main() {
     const c = (l.conteudo ?? {}) as Record<string, unknown>;
     if (c.lousa && typeof c.lousa === 'object' && !(refazer && ehMinha(l.questionId))) { jaTem++; continue; }
     if (refazer && !ehMinha(l.questionId)) continue;
+    if (soIds && !soIds.includes(l.questionId)) continue;
     // Nunca sobrescrever lousa feita à mão: um id que o script converteu antes pode ter ganho lousa à mão depois.
     if (refazer && c.lousa && !lousaEDoGerador(c.lousa)) { feitaAMao++; continue; }
     const passos = remendar(l.questionId, Array.isArray(c.passos) ? (c.passos as { titulo?: unknown; texto?: unknown; visual?: unknown }[]) : []);
     const q = l.question;
-    if (!MATERIAS_DE_EXATAS.includes(q.materia)) { foraDaMateria++; continue; }
+    // --ids= vale para qualquer matéria: Biologia e Química entraram em 24/11/2026.
+    if (!soIds && !MATERIAS_DE_EXATAS.includes(q.materia)) { foraDaMateria++; continue; }
     const doRobo = passos[0]?.titulo === 'As fórmulas desta questão';
     if (!doRobo && !passos.length) { outroMolde++; continue; }
     // Letra = inicial da palavra (Pablo, 22/11/2026): troca nos passos E na lousa, para as duas aulas usarem as mesmas letras.

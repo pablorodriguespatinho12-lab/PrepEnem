@@ -34,5 +34,6 @@ Modelo completo e correto: `exemplo-fisica.json` (Física) e `exemplo-matematica
   ("ao quadrado" = vezes ele mesmo). Aluno que só sabe as 4 operações.
 - Frações escritas `a/b` (ex.: `5/3`, `3/5 × 5/x = 1/2`) viram fração em pé na lousa. Use só `× ÷ + − =` e números; **sem LaTeX, sem `$`**.
 - Cada linha de texto ≤ ~150 letras; o passo todo ≤ ~5 linhas. No máximo 9 passos no total.
+- Linha de conta termina no número ou na unidade curta (cm, A, V): "E = 1,9", nunca "E = 1,9 mil reais" (o resultado some do quadro). Rótulos parecidos começam diferente.
 - Zero emoji, zero elogio, zero "vamos ver". Português do Brasil.
 - Confira a conta com Python antes de devolver. `valor_final` é o número da alternativa certa; a `Letra X` do passo 5 tem de ser o gabarito.

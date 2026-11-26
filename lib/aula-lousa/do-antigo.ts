@@ -43,6 +43,12 @@ export function latexParaTexto(entrada: string): string | null {
 
 const TITULO_PERGUNTA = 'A pergunta';
 
+/** Linha por linha: sem isso "A: ...\nB: ..." virava um parágrafo só no quadro. */
+function textoEmLinhas(s: string): string | null {
+  const linhas = s.split('\n').map(latexParaTexto);
+  return linhas.some((l) => l === null) ? null : linhas.join('\n');
+}
+
 function linhasDoQuadro(v: Record<string, unknown>): Linha[] | null {
   const lista = (k: string): string[] => (Array.isArray(v[k]) ? (v[k] as unknown[]).map(texto) : []);
   const blocos: [string[], Cor, number][] = [
@@ -130,7 +136,7 @@ export function lousaDoAntigo(e: EntradaDoRobo & { ideia: string }): Resultado {
   for (const p of passos) {
     const titulo = limpa(texto(p.titulo));
     if (!titulo || titulo === TITULO_PERGUNTA) continue;
-    const t = latexParaTexto(texto(p.texto));
+    const t = textoEmLinhas(texto(p.texto));
     if (t === null) return { ok: false, motivo: 'LaTeX no texto do passo' };
     const v = visualDe(p);
     const tituloTela = titulo.slice(0, 1).toLowerCase() + titulo.slice(1);
@@ -150,7 +156,7 @@ export function lousaDoAntigo(e: EntradaDoRobo & { ideia: string }): Resultado {
     } else if (respostaEmQuadro(titulo, t)) {
       const { cena, resto } = respostaEmQuadro(titulo, t)!;
       cenas.push(cena);
-      if (resto) cenas.push(...telas('os outros', linhasDoTexto(resto), falas(resto)));
+      if (resto) cenas.push(...telas('por quê', linhasDoTexto(resto), falas(resto)));
     } else {
       const { contas, prosa } = separarContas(t);
       if (contas.length > 0) cenas.push(...telasDeContas(tituloTela, contas, falas(prosa || tituloTela)));
