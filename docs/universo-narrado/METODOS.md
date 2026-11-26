@@ -18,4 +18,7 @@ Por capítulo, em ordem:
 - **Questão resolvida** `[h:mm:ss]`: banca e ano ditos, ideia-chave (sem copiar o enunciado), resposta conferida ou "?".
 - **O que ele desenha**: figura ou traço que ele faz antes da conta.
 
+Formato de cada item é fixo, para contar por comando: a linha começa com `- **Método** [h:mm:ss] nome:` (o rótulo
+em negrito não leva o nome dentro). Contagem: `grep -c '\*\*Método\*\*'`.
+
 Incluir **todos**, não os "principais". No fim do arquivo, tabela de cobertura: capítulo | palavras (`wc -w`) | li inteiro (sim/não) | nº de métodos.
