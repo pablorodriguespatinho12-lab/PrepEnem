@@ -5,6 +5,9 @@
 import { ESCADAS, MATERIAS_DO_DIA, type Degrau } from '@/data/escadas';
 
 export const TITULO_OUTRAS = 'Outras provas';
+/* Cume (26/11/2026): só questão real muito difícil de ITA, IME, Fuvest e Unicamp. */
+export const TITULO_CUME = 'Cume';
+export const NIVEL_CUME = 'cume';
 
 type ProvaListada = { nivel: string; nome: string };
 
@@ -25,6 +28,7 @@ export function agruparProvas<T extends ProvaListada>(exams: T[]) {
       .filter((e) => degrauDaProva(e.nome)!.materia === materia)
       .sort((a, b) => degrauDaProva(a.nome)!.posicao - degrauDaProva(b.nome)!.posicao),
   }));
-  const outras = exams.filter((e) => !daEscada.includes(e));
-  return [...porMateria, { titulo: TITULO_OUTRAS, lista: outras }].filter((g) => g.lista.length > 0);
+  const cume = exams.filter((e) => e.nivel === NIVEL_CUME);
+  const outras = exams.filter((e) => !daEscada.includes(e) && !cume.includes(e));
+  return [...porMateria, { titulo: TITULO_CUME, lista: cume }, { titulo: TITULO_OUTRAS, lista: outras }].filter((g) => g.lista.length > 0);
 }

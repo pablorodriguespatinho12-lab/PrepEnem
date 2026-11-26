@@ -1,0 +1,1 @@
+- [Definição de primo](erro-definicao-de-primo.md) — sem "maior que 1" o 1 vira primo

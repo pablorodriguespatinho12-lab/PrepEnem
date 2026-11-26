@@ -1,0 +1,1 @@
+- [Questão real no nível Cume](cume-lote-de-questao-real.md) — PDF via PyMuPDF; listar telas da lousa; gabarito por força bruta

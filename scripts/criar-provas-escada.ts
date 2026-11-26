@@ -11,7 +11,7 @@ import { VERSAO_EXPLICACAO } from '../lib/tutor/pronta';
 // Provas em escada (Pablo, 17/11/2026): uma por conteúdo, Fácil → Médio → Difícil
 // → ENEM → ITA. Faz, nesta ordem:
 //   1. grava as questões escritas para a escada (data/revisao-final/escada/*.json);
-//   2. esconde (arquivada = true, sem apagar) as provas antigas, menos a Revisão de erros;
+//   2. esconde (arquivada = true, sem apagar) as provas antigas, menos a Revisão de erros e as Cume;
 //   3. cria a prova que não existe; a que existe ganha as questões que faltavam
 //      (sem resposta: remonta na ordem da escada; com resposta: põe as novas no fim).
 // Sem --gravar só mostra. Uso:
@@ -102,7 +102,7 @@ async function main() {
 
   const nomes = new Set(provas.map((p) => p.nome));
   const antigas = await prisma.customExam.findMany({
-    where: { userId: user.id, arquivada: false, nivel: { not: 'revisao' } },
+    where: { userId: user.id, arquivada: false, nivel: { notIn: ['revisao', 'cume'] } }, // Cume é prova à parte (26/11)
     select: { id: true, nome: true },
   });
   const esconder = antigas.filter((e) => !nomes.has(e.nome));
