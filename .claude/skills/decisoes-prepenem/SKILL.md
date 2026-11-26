@@ -33,6 +33,12 @@ dos componentes, movimento, personalidade visual. Nada disso está decidido
 O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 `montar-referencia`, escolhida pelo Pablo olhando, e registrada aqui com data.
 
+- **Modo Jardim = 26/11/2026** (Pablo: "como se fosse um modo do site tem o pixel
+  tem os outros... verde claro e na logo deixa ela mais bonita"). É a chave
+  `jardim` do tema de cores (`html[data-jardim]`, `app/jardim.css`): verde claro,
+  serifa, pintura na capa, sem pixel. Os outros temas continuam com pixel.
+  Logo (todos os temas): livro com broto, `components/logo.tsx` e `favicon.svg`.
+
 - **Menu, Início e Estudar = opção A de 26/11/2026** (Pablo: "pode o A desse
   jeitnho igualzinho cara"; estilos em `app/moderno.css`, letra Sora, números em
   letra pixel). **Substitui** o "Início no jeito Nubank" (21/10), o "Menu: 6

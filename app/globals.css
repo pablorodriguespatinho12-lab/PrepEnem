@@ -949,15 +949,15 @@ html[data-lousa-aberta="sim"] body .mundo-pixel[data-animado] { content-visibili
    cartão ficam na letra normal: com pixel em tudo o Pablo "não estava
    conseguindo ler" (12/11/2026, print de /provas). A Jersey só tem um peso;
    negrito inventado pelo navegador borrava, por isso font-synthesis: none. */
-html[data-letra-pixel] body { --font-display: var(--font-pixel); }
-html[data-letra-pixel] :is(h1, h2, h3) {
+html[data-letra-pixel]:where(:not([data-jardim])) body { --font-display: var(--font-pixel); }
+html[data-letra-pixel]:where(:not([data-jardim])) :is(h1, h2, h3) {
   font-family: var(--font-pixel), monospace; font-weight: 400; letter-spacing: .015em; font-synthesis: none;
 }
-html[data-letra-pixel] :is(button, nav a, [data-menu-lateral] a, .type-caption) {
+html[data-letra-pixel]:where(:not([data-jardim])) :is(button, nav a, [data-menu-lateral] a, .type-caption) {
   font-family: var(--font-pixel-texto), monospace; font-weight: 400; letter-spacing: .02em; font-synthesis: none;
 }
 /* frase dentro de cartão clicável (descrição) volta à letra normal */
-html[data-letra-pixel] :is(button, a) :is(p, .type-meta, .type-body) { font-family: var(--font-sans), system-ui, sans-serif; letter-spacing: normal; }
+html[data-letra-pixel]:where(:not([data-jardim])) :is(button, a) :is(p, .type-meta, .type-body) { font-family: var(--font-sans), system-ui, sans-serif; letter-spacing: normal; }
 
 /* Flip do flashcard (opção A, 05/10/2026; em CSS desde 12/11/2026 para não
    travar). !important: a regra geral do reduced-motion zeraria a transição, e

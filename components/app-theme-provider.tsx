@@ -34,6 +34,7 @@ export function AppThemeProvider({ children }: { children: React.ReactNode }) {
     // durante SSR); até lá, assume claro — mesmo fallback que o next-themes usa internamente.
     const mode = resolvedTheme === 'dark' ? set.dark : set.light;
     const root = document.documentElement;
+    root.toggleAttribute('data-jardim', color === 'jardim');
     root.style.setProperty('--primary', mode.primary);
     root.style.setProperty('--primary-foreground', mode.primaryForeground);
     root.style.setProperty('--ring', mode.ring);
