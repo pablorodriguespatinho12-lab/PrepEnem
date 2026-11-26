@@ -3,9 +3,10 @@
 
 import { ALTURA, CORES, LARGURA, type Ancora, type AulaLousa, type Cena, type Cor, type Desenho, type Fala } from './tipos';
 import { expandirEquacao } from './equacao';
+import { DIAGRAMAS } from '../visual/especificacao';
 
 const MIN_CENAS = 3;
-const MAX_CENAS = 36;
+const MAX_CENAS = 44;
 const MAX_DESENHOS = 40;
 const MAX_FALAS = 4;
 const MAX_TEMPO = 40;
@@ -17,6 +18,8 @@ const MAX_PROVA = 220;
 const MAX_CAMINHO = 240;
 const MAX_GRADE = 36;
 const MAX_PECAS_EQ = 12;
+const MAX_ROTULOS = 8;
+const MAX_ROTULO = 120;
 // Só comandos de traço de SVG: nada de letra solta que abra brecha.
 const CAMINHO_OK = /^[MmLlHhVvZzCcSsQqTtAa0-9eE.,\s-]+$/;
 const ANCORAS: readonly Ancora[] = ['start', 'middle', 'end'];
@@ -138,6 +141,11 @@ function cena(bruto: unknown): Cena | null {
     const rotulo = texto(c.rotulo, 60);
     const alternativas = lista(c.alternativas).map((a) => texto(a, MAX_ALTERNATIVA)).filter((a): a is string => a !== null).slice(0, 5);
     return corpo && rotulo && fala.length > 0 ? { tipo: 'papel', fala, rotulo, texto: corpo, alternativas } : null;
+  }
+  if (c.tipo === 'figura') {
+    const nome = DIAGRAMAS.find((n) => n === c.nome);
+    const rotulos = lista(c.rotulos).slice(0, MAX_ROTULOS).map((r) => texto(r, MAX_ROTULO) ?? '');
+    return nome && fala.length > 0 ? { tipo: 'figura', fala, nome, ...(rotulos.length ? { rotulos } : {}) } : null;
   }
   if (c.tipo === 'prova') {
     const pergunta = texto(c.pergunta, MAX_PROVA);

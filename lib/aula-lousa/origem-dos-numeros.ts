@@ -43,6 +43,7 @@ export function numerosSemOrigem(cenas: Cena[]): NumeroSemOrigem[] {
       [c.pergunta, ...c.opcoes].forEach((t) => numerosDe(t).forEach((n) => vistos.add(n)));
       return;
     }
+    if (c.tipo === 'figura') return;
     for (const linha of linhasDaLousa(c.desenho)) {
       const texto = linha.map((d) => d.s).join(' ');
       const ehConta = linha.some((d) => d.s === '=') && linha.some((d) => SINAIS.test(d.s) && d.s !== '=');

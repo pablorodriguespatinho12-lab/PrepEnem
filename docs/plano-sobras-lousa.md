@@ -42,3 +42,20 @@ Simulação: 539 de 539 aulas viram lousa (antes 531; 0 recusadas). 830 testes e
 - Alternativas longas (5 em fileira) vazam da caixa no papel (`d2-escada-fis-ter-04`).
 
 Aprendi: contar "0 contas erradas" não pega conta cortada nem sobreposta; fotografar a aula inteira antes de fechar.
+
+## Feito em 26/11/2026: as 4 sobras do aluno-do-zero
+- Desenho do passo vai para o quadro (tela `figura`): 62 telas em 28 de 28 aulas do gerador com desenho (6 à mão ficam como estão). As 62 fotografadas.
+- "o que é volume" em 27 aulas; "de onde vem o ⅓" e "4/3" nas aulas de cone, pirâmide e esfera (`lib/aula-lousa/extras.ts`).
+- Resposta escrita no quadro: 337 aulas com a frase completa, 190 em tela própria.
+- Alternativas curtas quebram de linha em vez de vazar.
+- 00a: raio, 315, exemplo solto de π e o "são 15" (remendos).
+
+### Aberto (2ª leitura do aluno-do-zero)
+- "3 cones = 1 cilindro" e "bola no cilindro" são só texto: falta desenhar.
+- Tela de resposta não lista as alternativas.
+- 00a: "250 + 200" e "3/4 de 24" sem explicação.
+- Desenho `corredor-imagens` fica miúdo no quadro.
+- Rótulo de figura sobreposto: "AD = 12 m" na praça.
+
+### Aprendi
+O porteiro (`validar.ts`) corta texto longo sem avisar: rótulo de desenho saiu pela metade e só a foto pegou. Campo novo no porteiro: medir o maior valor real antes de pôr o limite.

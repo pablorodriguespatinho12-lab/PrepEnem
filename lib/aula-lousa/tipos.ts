@@ -39,6 +39,8 @@ export type Cena =
   | { tipo: 'lousa'; fala: Fala[]; desenho: Desenho[] }
   /** A questão em papel, com o texto real do ENEM (ou da questão). */
   | { tipo: 'papel'; fala: Fala[]; rotulo: string; texto: string; alternativas?: string[] }
+  /** Desenho pronto do site (components/visual/diagramas.tsx), pelo nome. */
+  | { tipo: 'figura'; fala: Fala[]; nome: string; rotulos?: string[] }
   /** "Prove você": o aluno escolhe e o professor diz por que cada letra está certa ou errada. */
   | { tipo: 'prova'; fala: Fala[]; pergunta: string; opcoes: string[]; certa: number; porque: string[] };
 

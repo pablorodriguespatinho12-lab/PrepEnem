@@ -6,6 +6,8 @@ import { ALTURA, LARGURA, type AulaLousa as Aula, type Cena, type Cor, type Dese
 import { temFracao } from '@/lib/aula-lousa/fracoes';
 import { acomodarFracoes } from '@/lib/aula-lousa/espaco';
 import { TextoComFracoes } from './texto-com-fracoes';
+import { Diagrama } from '@/components/visual/diagramas';
+import type { NomeDiagrama } from '@/lib/visual/especificacao';
 
 const COR: Record<Cor, string> = {
   tinta: '#1b2430', azul: '#1f6fd1', vermelho: '#d63a2f', verde: '#1f9d55',
@@ -169,6 +171,9 @@ export function AulaLousa({ aula, onFechar }: { aula: Aula; onFechar?: () => voi
               </div>
             )}
           </div>
+        )}
+        {cena.tipo === 'figura' && (
+          <div className="lousa-figura"><Diagrama nome={cena.nome as NomeDiagrama} rotulos={cena.rotulos} /></div>
         )}
         {cena.tipo === 'prova' && (
           <Prova cena={cena} marcada={marcada} onEscolher={(k) => setRespostas((r) => ({ ...r, [i]: k }))} />
