@@ -120,7 +120,8 @@ function comLetrasXyz(cena: Cena): Cena {
 
 /** Põe a tela do sólido logo depois do papel da questão, só se a questão não tem imagem. */
 export function comFiguraDoSolido(aula: AulaLousa, enunciado: string, temImagem: boolean): AulaLousa {
-  if (temImagem) return aula;
+  // A aula já traz o desenho da própria questão: o sólido genérico (cone de ponta para cima) só atrapalha.
+  if (temImagem || aula.cenas.some((c) => c.tipo === 'figura')) return aula;
   const s = solidoDoEnunciado(enunciado);
   if (!s) return aula;
   const ultimoPapel = aula.cenas.reduce((i, c, k) => (c.tipo === 'papel' ? k : i), -1);

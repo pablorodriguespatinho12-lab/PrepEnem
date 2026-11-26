@@ -2,6 +2,7 @@
 // volta, pista) para a aula de lousa (Pablo, 21/11/2026: "não tá que nem o quadro do Universo
 // Narrado"). Função pura: recebe a questão e os passos, devolve a lousa ou o motivo de não dar.
 import type { AulaLousa, Cena, Cor, Desenho, Fala } from './tipos';
+import { comResposta, telaDaFigura, telasDosConceitos } from './extras';
 import { legendaCurta, pecasDaConta, separarContas, telaDaFormula, telasDosDados, telasDeContas, tituloNumerado } from './quadro-de-conta';
 
 export type Passo = { titulo?: unknown; texto?: unknown; visual?: unknown };
@@ -18,7 +19,7 @@ export const MAX_PAPEL = 3000; // vira várias telas de papel (dividirEnunciado)
 export const MAX_ALTERNATIVA = 60;
 const MAX_FALA = 150;
 const MAX_FALA_DA_TELA = 250;
-export const MAX_CENAS = 36;
+export const MAX_CENAS = 44;
 const LINHAS_POR_TELA = 5;
 const LARGURA_TELA = 360;
 const LARGURA_DA_LETRA = 0.4; // mesma estimativa de lousa.py (em × tamanho)
@@ -267,17 +268,27 @@ export function lousaDoRobo(e: EntradaDoRobo): Resultado {
     const t = texto(p.texto);
     const v = visualDe(p);
     if (!titulo) continue;
+    // Passo com desenho: o desenho vai para o quadro. "O desenho" é só ele; os outros seguem com as contas.
+    const figura = telaDaFigura(v, falas(t));
+    if (figura) {
+      cenas.push(figura);
+      if (/^O desenho/i.test(titulo)) continue;
+    }
     if (titulo === TITULO_PRIMEIRO_PASSO) {
       const itens = Array.isArray(v?.itens) ? (v!.itens as Record<string, unknown>[]) : [];
-      const linhas = itens.flatMap((it) => [
+      const conceitos = telasDosConceitos(itens);
+      // "Por que ⅓" com números soltos sai quando a tela "de onde vem" explica.
+      const formulas = conceitos.length ? itens.filter((it) => !/^Por que/i.test(texto(it.nome))) : itens;
+      const linhas = formulas.flatMap((it) => [
         ...quebrar(limpa(texto(it.nome)), cabem(24)).map((s) => ({ s, cor: 'azul' as Cor, tam: 24 })),
         ...quebrar(limpa(texto(it.formula)), cabem(26)).map((s) => ({ s, cor: 'verde' as Cor, tam: 26 })),
       ]);
-      const contas = itens.map((it) => pecasDaConta(limpa(texto(it.formula)), true));
+      const contas = formulas.map((it) => pecasDaConta(limpa(texto(it.formula)), true));
       // O nome da fórmula ("Calor para derreter") vira legenda da letra da esquerda: sem ela o aluno não sabe o que é Q.
-      const comNome = contas.map((c, i) => (c ? c.map((p, k) => (k === 0 ? { ...p, leg: legendaCurta(limpa(texto(itens[i]?.nome))), cor: 'verde' as Cor } : p)) : null));
+      const comNome = contas.map((c, i) => (c ? c.map((p, k) => (k === 0 ? { ...p, leg: legendaCurta(limpa(texto(formulas[i]?.nome))), cor: 'verde' as Cor } : p)) : null));
       if (contas.length > 0 && comNome.every((c) => c !== null)) cenas.push(...telasDeContas('as fórmulas', comNome as NonNullable<(typeof comNome)[number]>[], falas(t)));
       else cenas.push(...telas('as fórmulas', linhas, falas(t)));
+      cenas.push(...conceitos);
     } else if (v?.tipo === 'equacao') {
       const formula = limpa(texto(v.formula));
       // As letras que aparecem na fórmula vêm primeiro, na ordem em que aparecem: assim nenhuma
@@ -308,7 +319,10 @@ export function lousaDoRobo(e: EntradaDoRobo): Resultado {
     }
   }
 
-  if (cenas.length < 3) return { ok: false, motivo: 'poucas telas' };
-  if (cenas.length > MAX_CENAS) return { ok: false, motivo: `telas demais (${cenas.length})` };
-  return { ok: true, aula: { cenas } };
+  const volta = passos.find((p) => /^Volta na equa/i.test(texto(p.titulo)));
+  const completas = volta ? comResposta(cenas, texto(volta.texto), alts) : cenas;
+
+  if (completas.length < 3) return { ok: false, motivo: 'poucas telas' };
+  if (completas.length > MAX_CENAS) return { ok: false, motivo: `telas demais (${completas.length})` };
+  return { ok: true, aula: { cenas: completas } };
 }
