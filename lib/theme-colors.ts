@@ -159,6 +159,40 @@ export const themeColors: Record<string, ThemeColorSet> = {
   // Verde Floresta (Pablo, 21/11/2026: "deixe uma cor verde pro site"): o verde do pinheiro do mundo pixel.
   // Contrastes conferidos: branco sobre primary claro 6,5:1; primary escuro sobre fundo escuro 7,8:1;
   // primaryText sobre a tinta primary/15 5,9:1; cinza de apoio 5,3:1 (claro) e 7,9:1 (escuro).
+  /* Modo Jardim (Pablo, 26/11/2026: "como se fosse um modo do site... verde claro"):
+     além da cor, troca letra, fundo e capa (app/jardim.css). */
+  jardim: {
+    label: 'Jardim (modo)',
+    swatch: '#a9dc9b',
+    light: {
+      primary: '140 42% 27%',
+      primaryText: '140 46% 23%',
+      primaryForeground: '0 0% 100%',
+      ring: '140 42% 27%',
+      accent: '105 35% 89%',
+      chart1: '140 42% 27%',
+      background: '90 36% 95%',
+      card: '80 40% 99%',
+      foreground: '140 22% 12%',
+      muted: '105 28% 90%',
+      mutedForeground: '130 10% 36%',
+      border: '100 22% 85%',
+    },
+    dark: {
+      primary: '108 50% 73%',
+      primaryText: '108 50% 73%',
+      primaryForeground: '140 35% 10%',
+      ring: '108 50% 73%',
+      accent: '135 16% 19%',
+      chart1: '108 50% 73%',
+      background: '140 18% 8%',
+      card: '138 16% 11%',
+      foreground: '90 25% 94%',
+      muted: '135 14% 19%',
+      mutedForeground: '100 10% 68%',
+      border: '135 14% 21%',
+    },
+  },
   green: {
     label: 'Verde Floresta',
     swatch: '#1a6b43',

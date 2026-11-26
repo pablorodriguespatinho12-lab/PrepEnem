@@ -1,7 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import { signIn } from 'next-auth/react';
-import { GraduationCap, User, Lock, Eye, EyeOff } from 'lucide-react';
+import { User, Lock, Eye, EyeOff } from 'lucide-react';
+import { Logo } from '@/components/logo';
 import { toast } from 'sonner';
 import { motion } from 'framer-motion';
 import { ParticlesBg } from '@/components/particles-bg';
@@ -53,9 +54,7 @@ export default function LoginPage() {
           transition={{ delay: 0.15, duration: 0.5 }}
           className="flex items-center justify-center gap-3 mb-8"
         >
-          <div className="w-12 h-12 rounded-[var(--radius-control)] bg-primary flex items-center justify-center shadow-elev-2">
-            <GraduationCap className="w-7 h-7 text-primary-foreground" />
-          </div>
+          <Logo tamanho={52} />
           <h1 className="font-display type-display font-bold">PrepEnem</h1>
         </motion.div>
 

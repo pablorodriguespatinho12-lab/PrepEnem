@@ -1,0 +1,38 @@
+/* Modo Jardim (Pablo, 26/11/2026): verde claro, título com serifa, pintura na
+   capa, sem pixel. Liga em Perfil > cor "Jardim (modo)". */
+.m-pintura { display: none; }
+
+html[data-jardim] {
+  --m-bg: #eef4e8; --m-card: #fcfdf9; --m-card2: #e9f2e2; --m-line: #d5e3cb; --m-fg: #16251b; --m-mut: #566a59;
+  --m-sombra: 0 10px 30px rgba(35, 70, 40, .08);
+}
+html.dark[data-jardim] {
+  --m-bg: #101712; --m-card: #17201a; --m-card2: #202c23; --m-line: #2c3b30; --m-fg: #eef5e9; --m-mut: #a3b6a4;
+  --m-sombra: 0 14px 34px rgba(0, 0, 0, .35);
+}
+/* Quem pede letra de pixel por nome (número, título, "Começar") recebe a serifa. */
+html[data-jardim] body { --font-pixel: var(--font-display); --font-pixel-texto: var(--font-sans); }
+
+/* Sem mundo pixel atrás: fundo liso, cor da página. */
+html[data-jardim] :is(.mundo-pixel, .mundo-veu) { display: none; }
+
+html.dark[data-jardim] .m-pintura { filter: brightness(.7) saturate(.85); }
+
+/* capa: texto à esquerda no creme, pintura à direita */
+html[data-jardim] .m-capa { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: stretch; min-height: 340px; background: var(--m-card); border: 1px solid var(--m-line); }
+html[data-jardim] .m-capa canvas { display: none; }
+html[data-jardim] .m-pintura { display: block; grid-column: 2; grid-row: 1; width: calc(100% - 24px); height: calc(100% - 24px); margin: 12px; border-radius: 18px; position: absolute; right: 0; top: 0; }
+html[data-jardim] .m-capa-texto { grid-column: 1; grid-row: 1; background: none; color: var(--m-fg); flex-direction: column; align-items: flex-start; justify-content: center; padding: 34px 32px; gap: 22px; }
+html[data-jardim] .m-capa small { color: var(--m-mut); opacity: 1; }
+html[data-jardim] .moderno.moderno.moderno .m-capa h1.px { font-size: clamp(36px, 4.4vw, 58px); line-height: 1.05; letter-spacing: -.01em; text-wrap: balance; }
+html[data-jardim] .moderno.moderno.moderno .m-vai { font-family: var(--font-sora), system-ui, sans-serif; font-weight: 700; font-size: 16px; padding: 15px 30px; border-radius: 999px; box-shadow: none; }
+html[data-jardim] .m-vai:active { transform: scale(.97); box-shadow: none !important; }
+html[data-jardim] .m-numero.m-numero.m-numero { font-size: 48px; }
+html[data-jardim] .moderno.moderno.moderno :is(.m-n, .m-dia b) { font-size: 19px; }
+html[data-jardim] .m-materia i { border-radius: 50%; }
+
+@media (max-width: 767px) {
+  html[data-jardim] .m-capa { display: flex; flex-direction: column; }
+  html[data-jardim] .m-pintura { position: static; width: calc(100% - 16px); max-width: none; height: 190px; margin: 8px 8px 0; }
+  html[data-jardim] .m-capa-texto { padding: 20px; gap: 16px; }
+}

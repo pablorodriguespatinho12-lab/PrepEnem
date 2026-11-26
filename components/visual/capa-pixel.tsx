@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef, type ReactNode } from 'react';
+import { PinturaJardim } from './pintura-jardim';
 
 /* Capa do Início e do Estudar: paisagem de noite desenhada em pixel (1 pixel = 5 px),
    igual ao desenho aprovado em 26/11/2026. Parada: é fundo, não animação. */
@@ -62,6 +63,7 @@ export function CapaPixel({ sobre, titulo, id, children }: { sobre: string; titu
   return (
     <section className="m-capa" aria-labelledby={id}>
       <canvas ref={tela} aria-hidden />
+      <PinturaJardim />
       <div className="m-capa-texto">
         <div className="min-w-0">
           <small data-numeric>{sobre}</small>

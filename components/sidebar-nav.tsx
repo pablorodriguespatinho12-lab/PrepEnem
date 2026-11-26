@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useSession, signOut } from 'next-auth/react';
 import { useTheme } from 'next-themes';
+import { Logo } from './logo';
 import { Settings, ShieldCheck, LogOut, Library, Moon, Sun, Sigma, BarChart3, Compass } from 'lucide-react';
 
 /* Menu da opção A (26/11/2026): trilho flutuante no computador e barra embaixo
@@ -91,7 +92,7 @@ export function SidebarNav() {
   return (
     <>
       <nav data-menu-lateral aria-label="Menu" className="moderno m-trilho">
-        <div className="m-logo px" aria-label="PrepEnem">PE</div>
+        <Link href="/dashboard" className="m-logo" aria-label="PrepEnem: ir ao Início"><Logo /></Link>
         {itens(principais)}
         {botaoMais(emSecundario)}
         <button type="button" className="m-eu" aria-label={`Conta de ${nome}`} onClick={() => setMais((v) => !v)}>
