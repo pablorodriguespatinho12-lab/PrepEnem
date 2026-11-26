@@ -26,6 +26,11 @@
   `transcrever-universo-narrado` (vídeo do canal → transcrição, jeito de ensinar, fotos do quadro).
 - **Falar com o Pablo:** `perguntar-ao-pablo`, `explicar-ao-pablo`.
 - **Manter as ferramentas:** `desenhar-skill`, `auditar-o-repertorio`.
+- **Agentes automáticos** (Pablo, 26/11/2026: "quero tipo automático"): o Claude aciona sozinho, sem pedir
+  que ele digite nada. `escritor`: material de estudo maior que um texto curto; `revisor-de-fatos`: antes de
+  entregar material; `explorador`: busca em mais de 5 arquivos; `executor`: lote braçal já planejado;
+  `build-guard`: antes do push. Tarefa pequena (até 3 arquivos): fazer direto. Tarefa média ou incerta:
+  entrar no modo plano por conta própria (`EnterPlanMode`).
 - **Agentes:** `escritor` (aula, questão, redação-modelo; tem memória), `build-guard`, `db-inspector`, `design-system-auditor`,
   `aluno-do-zero` (lê a jornada de `scripts/jornada-do-aluno.mts`, ou um texto de
   estudo, como quem só sabe as 4 operações; **toda vez que o Pablo disser "não
