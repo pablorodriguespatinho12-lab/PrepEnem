@@ -873,9 +873,10 @@ html [data-sonner-toaster][data-theme] {
 .mundo-pixel[data-animado="sim"] .mp-nuvens { will-change: transform; animation: mp-deriva 220s steps(1920) infinite !important; }
 /* rolando a página: o mundo espera (a rolagem fica só para o texto) */
 .mundo-pixel[data-rolando="sim"] *, .mundo-pixel[data-rolando="sim"] { animation-play-state: paused !important; }
-/* Aula de lousa aberta (22/11/2026, "melhora a fluidez"): o fundo atrás do quadro não é visto e gastava 2/3 do
-   tempo da página (tarefa 1.441 ms -> 532 ms em 6 s, CPU 4x). content-visibility esconde sem mudar o layout. */
-html[data-lousa-aberta="sim"] body .mundo-pixel[data-animado] { content-visibility: hidden; }
+/* Aula de lousa aberta (22/11/2026, "melhora a fluidez"): o fundo atrás do quadro gastava 2/3 do
+   tempo da página (tarefa 1.441 ms -> 532 ms em 6 s, CPU 4x). content-visibility esconde sem mudar o layout.
+   26/11: esconde só os filhos, e o céu claro do próprio elemento ficava chapado atrás da aula: trocar a cor junto. */
+html[data-lousa-aberta="sim"] body .mundo-pixel[data-animado] { content-visibility: hidden; background: #0b1114; }
 .mundo-pixel[data-animado="sim"] .mp-estrela { animation: mp-piscar 2.4s steps(2) infinite !important; }
 .mundo-pixel[data-animado="sim"] .mp-vagalume { animation: mp-vagalume 5s steps(10) infinite !important; }
 .mundo-pixel[data-animado="sim"] .mp-passaro { animation: mp-voar 46s steps(160) infinite !important; }
