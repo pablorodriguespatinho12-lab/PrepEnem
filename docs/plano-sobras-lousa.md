@@ -50,12 +50,11 @@ Aprendi: contar "0 contas erradas" não pega conta cortada nem sobreposta; fotog
 - Alternativas curtas quebram de linha em vez de vazar.
 - 00a: raio, 315, exemplo solto de π e o "são 15" (remendos).
 
-### Aberto (2ª leitura do aluno-do-zero)
-- "3 cones = 1 cilindro" e "bola no cilindro" são só texto: falta desenhar.
-- Tela de resposta não lista as alternativas.
-- 00a: "250 + 200" e "3/4 de 24" sem explicação.
-- Desenho `corredor-imagens` fica miúdo no quadro.
-- Rótulo de figura sobreposto: "AD = 12 m" na praça.
+### Feito na 2ª leva (26/11)
+- Cones, pirâmides e bola no cilindro desenhados.
+- Tela de resposta com as 5 alternativas (459 aulas); 3 com texto comprido mostram só a certa.
+- 00a: "3/4" explicado e 25 · 18 aberto em partes.
+- `corredor-imagens` com letra maior; "AD = 12 m" da praça sem sobrepor.
 
 ### Aprendi
 O porteiro (`validar.ts`) corta texto longo sem avisar: rótulo de desenho saiu pela metade e só a foto pegou. Campo novo no porteiro: medir o maior valor real antes de pôr o limite.

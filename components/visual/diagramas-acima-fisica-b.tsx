@@ -180,7 +180,7 @@ function CorredorImagens({ rotulos }: Props) {
   const imagens = [-10, -8, -4, -2, 2, 4, 8, 10];
   const fora = [-16, -14, 14, 16];
   return (
-    <svg viewBox={`0 0 460 ${conta ? 500 : 190}`} className="w-full max-w-[460px] h-auto" role="img" aria-label="corredor de 12 por 3 metros com espelhos nas paredes compridas, um laser a 1 metro do espelho de baixo numa ponta e um sensor a 2 metros do mesmo espelho na outra">
+    <svg viewBox={conta ? '0 148 460 358' : '0 0 460 190'} className="w-full max-w-[460px] h-auto" role="img" aria-label="corredor de 12 por 3 metros com espelhos nas paredes compridas, um laser a 1 metro do espelho de baixo numa ponta e um sensor a 2 metros do mesmo espelho na outra">
       <rect x={x0} y={Y(3)} width={12 * E} height={3 * E} fill={PAPEL} />
       <line x1={x0} y1={Y(3)} x2={x0 + 12 * E} y2={Y(3)} stroke={CORTE} strokeWidth={6} />
       <line x1={x0} y1={Y(0)} x2={x0 + 12 * E} y2={Y(0)} stroke={CORTE} strokeWidth={6} />
@@ -197,7 +197,7 @@ function CorredorImagens({ rotulos }: Props) {
       <Texto x={x0 + 6 * E} y={Y(0) + 42} tam={12} cor={CORTE}>azul: espelho · cinza: ponta que absorve</Texto>
       {conta && (
         <g>
-          <Texto x={230} y={166} tam={14}>{conta}</Texto>
+          <Texto x={230} y={166} tam={19}>{conta}</Texto>
           {[...Array(11)].map((_, i) => {
             const y = -15 + 3 * i;
             return <line key={y} x1={px0} y1={PY(y)} x2={px0 + pw} y2={PY(y)} stroke={CORTE} strokeWidth={2} opacity={0.55} />;
@@ -209,13 +209,13 @@ function CorredorImagens({ rotulos }: Props) {
           {imagens.map((y) => <circle key={y} cx={px0 + pw} cy={PY(y)} r="6" fill={SECO} stroke={TINTA} strokeWidth={2} />)}
           {fora.map((y) => <circle key={y} cx={px0 + pw} cy={PY(y)} r="6" fill={PAPEL} stroke={TINTA} strokeWidth={2} strokeDasharray="3 3" />)}
           <circle cx={px0} cy={PY(1)} r="7" fill={SUJO} stroke={TINTA} strokeWidth={2.5} />
-          <Texto x={px0 - 10} y={PY(1) + 5} ancora="end" tam={13}>laser</Texto>
-          <Texto x={px0 + pw + 14} y={PY(10) + 5} ancora="start" tam={12}>y = 10</Texto>
-          <Texto x={px0 + pw + 14} y={PY(-10) + 5} ancora="start" tam={12}>y = −10</Texto>
-          <Texto x={px0 + pw + 14} y={PY(2) + 5} ancora="start" tam={12}>y = 2</Texto>
-          <Texto x={px0 + pw + 14} y={PY(14) + 5} ancora="start" tam={12}>fora do cone</Texto>
-          <Texto x={px0 + pw + 14} y={PY(-14) + 5} ancora="start" tam={12}>fora do cone</Texto>
-          <Texto x={230} y={PY(-16) + 40} tam={13}>{dado(rotulos, 6)}</Texto>
+          <Texto x={px0 - 10} y={PY(1) + 5} ancora="end" tam={18}>laser</Texto>
+          <Texto x={px0 + pw + 14} y={PY(10) + 5} ancora="start" tam={19}>y = 10</Texto>
+          <Texto x={px0 + pw + 14} y={PY(-10) + 5} ancora="start" tam={19}>y = −10</Texto>
+          <Texto x={px0 + pw + 14} y={PY(2) + 5} ancora="start" tam={19}>y = 2</Texto>
+          <Texto x={px0 + pw + 14} y={PY(14) + 5} ancora="start" tam={19}>fora do cone</Texto>
+          <Texto x={px0 + pw + 14} y={PY(-14) + 5} ancora="start" tam={19}>fora do cone</Texto>
+          <Texto x={230} y={PY(-16) + 40} tam={18}>{dado(rotulos, 6)}</Texto>
         </g>
       )}
     </svg>
