@@ -3,17 +3,17 @@ loadEnvConfig(process.cwd());
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
 import { PrismaClient } from '@prisma/client';
 
-// Só leitura: exporta as questões reais do ENEM (2019-2025) de Matemática e Física sem aula, SEM o gabarito
+// Só leitura: exporta as questões reais do ENEM (2019-2025) de exatas, Biologia e Química sem aula, SEM o gabarito
 // (quem escreve a aula resolve às cegas; o gravador compara). Uso: DB_CONFIRMED=1 npx tsx <este> <pasta>
 
-const LOTES_DE_MATEMATICA = 3;
+const LOTES_DE_BIO_E_QUIMICA = 3;
 const prisma = new PrismaClient();
 
 async function main() {
   const pasta = process.argv[2];
   if (!pasta) throw new Error('faltou a pasta');
   const questoes = await prisma.question.findMany({
-    where: { anoProva: { gte: 2019, lte: 2025 }, materia: { in: ['Matemática', 'Física'] } },
+    where: { anoProva: { gte: 2019, lte: 2025 }, materia: { in: ['Matemática', 'Física', 'Biologia', 'Química'] } },
     orderBy: [{ materia: 'asc' }, { tema: 'asc' }, { id: 'asc' }],
   });
   const comAula = new Set((await prisma.explicacaoPronta.findMany({ select: { questionId: true } })).map((e) => e.questionId));
@@ -21,7 +21,8 @@ async function main() {
   const contagem = new Map<string, number>();
   let n = 0;
   for (const q of semAula) {
-    const lote = q.materia === 'Física' ? 'fis' : `mat${(n++ % LOTES_DE_MATEMATICA) + 1}`;
+    // Mat/Fís que sobraram são as sem conta: vão juntas, no molde de ideia e passos.
+    const lote = q.materia === 'Física' || q.materia === 'Matemática' ? 'con' : `bq${(n++ % LOTES_DE_BIO_E_QUIMICA) + 1}`;
     const imagem = q.imagemUrl ? `${process.cwd()}/public${q.imagemUrl}` : null;
     mkdirSync(`${pasta}/${lote}`, { recursive: true });
     writeFileSync(`${pasta}/${lote}/${q.id}.json`, JSON.stringify({
