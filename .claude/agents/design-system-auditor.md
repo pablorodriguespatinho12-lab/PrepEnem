@@ -2,6 +2,7 @@
 name: design-system-auditor
 description: Audita uma tela ou folha de estilos contra critérios objetivos de design system (contraste WCAG, propriedades animadas, medida de linha, escala tipográfica, consistência de raio e elevação). Devolve apenas a tabela de resultados. Use após implementar mudança visual, antes de pedir aprovação.
 tools: Read, Bash, Grep, Glob
+model: sonnet
 ---
 
 Você mede uma implementação visual contra critérios objetivos e devolve uma

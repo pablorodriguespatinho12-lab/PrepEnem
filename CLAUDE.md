@@ -26,7 +26,7 @@
   `transcrever-universo-narrado` (vídeo do canal → transcrição, jeito de ensinar, fotos do quadro).
 - **Falar com o Pablo:** `perguntar-ao-pablo`, `explicar-ao-pablo`.
 - **Manter as ferramentas:** `desenhar-skill`, `auditar-o-repertorio`.
-- **Agentes:** `build-guard`, `db-inspector`, `design-system-auditor`,
+- **Agentes:** `escritor` (aula, questão, redação-modelo; tem memória), `build-guard`, `db-inspector`, `design-system-auditor`,
   `aluno-do-zero` (lê a jornada de `scripts/jornada-do-aluno.mts`, ou um texto de
   estudo, como quem só sabe as 4 operações; **toda vez que o Pablo disser "não
   entendi" de uma explicação, corrigir o caso E acrescentar esse tipo de tropeço
