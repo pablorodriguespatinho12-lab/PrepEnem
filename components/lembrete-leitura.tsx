@@ -85,7 +85,7 @@ export function LembreteLeitura() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}
-          className="fixed bottom-4 right-4 left-4 sm:left-auto sm:w-80 z-50 p-4 rounded-[var(--radius-surface)] bg-[hsl(var(--surface-2))] border border-border shadow-elev-2"
+          className="fixed bottom-[calc(var(--doca)+1rem)] right-4 left-4 sm:left-auto sm:w-80 z-50 p-4 rounded-[var(--radius-surface)] bg-[hsl(var(--surface-2))] border border-border shadow-elev-2"
         >
           <div className="flex items-start justify-between gap-2 mb-3">
             <div>

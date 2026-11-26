@@ -19,6 +19,9 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   // A prova tem o mundo dela, forte e sem véu (components/pixel/mundo-pixel.tsx).
   const provaAberta = /^\/provas\/(?!criar)[^/]+/.test(pathname ?? '');
 
+  // Início e Estudar têm fundo liso e a própria paisagem na capa (desenho A, 26/11/2026).
+  const telaModerna = pathname === '/dashboard' || pathname === '/provas';
+
   const publicPaths = ['/login', '/signup'];
   const isPublic = publicPaths.includes(pathname ?? '');
 
@@ -44,19 +47,18 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <AppThemeProvider>
-      <div className="min-h-screen relative">
+      <div className={`min-h-screen relative ${telaModerna ? 'fundo-moderno' : ''} ${provaAberta ? 'sem-doca' : ''}`}>
         {/* Mundo pixel no fundo do site inteiro (Pablo, 12/11/2026: "literalmente
             tudo"), com um véu da cor da página por cima para o texto seguir legível.
             Substituiu as partículas. */}
-        {!provaAberta && (
+        {!provaAberta && !telaModerna && (
           <>
             <MundoPixel animado={mundo.animado} />
             <div className="mundo-veu" aria-hidden />
           </>
         )}
         <SidebarNav />
-        {/* pt-12 no celular: o botão fixo do menu (top-4, 36 px) cobria o topo das páginas, ex. o "Voltar". */}
-        <main className="md:ml-64 min-h-screen relative pt-12 md:pt-0" style={{ zIndex: 1 }}>
+        <main className="com-menu min-h-screen relative" style={{ zIndex: 1 }}>
           {children}
         </main>
         <LembreteLeitura />

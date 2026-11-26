@@ -1056,7 +1056,7 @@ html[data-letra-pixel] :is(button, a) :is(p, .type-meta, .type-body) { font-fami
 
 /* Tela cheia: some o menu, a prova ocupa tudo. */
 html[data-imersivo] [data-menu-lateral] { display: none !important; }
-html[data-imersivo] main { margin-left: 0 !important; padding-top: 0 !important; }
+html[data-imersivo] main { margin-left: 0 !important; padding-bottom: 0 !important; }
 
 /* Cartão com borda de pixel (cantos recortados por 4 sombras sem desfoque). */
 /* Translúcido para ver o mundo pixel atrás (Pablo, 13/11/2026: "transparente para ver
@@ -1118,14 +1118,7 @@ html[data-imersivo] main { margin-left: 0 !important; padding-top: 0 !important;
 }
 
 /* Início (voto 1B): anéis e luz atrás do bloco de hoje. */
-.anel-inicio { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
-.anel-inicio .ai-imagem { position: absolute; inset: 0; background-size: 100% 100%; image-rendering: pixelated; }
-.anel-inicio .ai-brilho { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(255, 244, 214, .55), rgba(var(--ai-tom, 159, 224, 230), .15) 45%, transparent 70%); }
-.anel-inicio .ai-faisca { position: absolute; width: 5px; height: 5px; background: #fff4d6; opacity: .8; }
-.anel-inicio[data-animado="sim"] .ai-brilho { animation: ai-respirar 4.5s steps(6) infinite !important; }
-.anel-inicio[data-animado="sim"] .ai-faisca { animation: ai-faisca 3s steps(6) var(--atraso, 0s) infinite !important; }
 @keyframes ai-respirar { 0%, 100% { transform: scale(.92); opacity: .75; } 50% { transform: scale(1.08); opacity: 1; } }
-@keyframes ai-faisca { 0% { transform: translateY(0); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(-28px); opacity: 0; } }
 
 /* Fim da prova (voto 4A): casinha acesa no escuro, anéis respirando. */
 .cena-fim { position: relative; overflow: hidden; background: #062022; }

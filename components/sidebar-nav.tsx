@@ -1,194 +1,126 @@
 'use client';
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useSession, signOut } from 'next-auth/react';
 import { useTheme } from 'next-themes';
-import {
-  Home, BookOpen, BarChart3, Settings, ShieldCheck,
-  LogOut, Menu, X, GraduationCap, Library, PenTool,
-  Layers, Moon, Sun, Sigma, ChevronDown, Compass
-} from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { useAppTheme } from './app-theme-provider';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Settings, ShieldCheck, LogOut, Library, Moon, Sun, Sigma, BarChart3, Compass } from 'lucide-react';
 
-type ItemNav = { href: string; label: string; icon: typeof Home; tambem?: string[] };
-// Menu enxuto (pedido do Pablo, 06/10/2026: "não deixar tanta coisa num lugar
-// só"). Eram 13 itens de uma vez. Ficam à vista os 6 do estudo diário; o resto
-// abre em "Mais". "Importar PDF" saiu: depende de S3, que não será configurado.
+/* Menu da opção A (26/11/2026): trilho flutuante no computador e barra embaixo
+   no celular. Ficam à vista os itens do estudo diário; o resto abre em "Mais". */
+const DESENHOS = {
+  inicio: 'M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z',
+  estudar: 'M3 5h6a3 3 0 0 1 3 3v12a3 3 0 0 0-3-2H3zM21 5h-6a3 3 0 0 0-3 3v12a3 3 0 0 1 3-2h6z',
+  cartoes: 'M12 3l9 5-9 5-9-5zM3 13l9 5 9-5',
+  redacao: 'M4 20l4-1L20 7l-3-3L5 16zM14 7l3 3',
+  calculo: 'M17 5H7l6 7-6 7h10',
+  progresso: 'M4 20V10M10 20V4M16 20v-7M22 20H2',
+  mais: 'M5 12h.01M12 12h.01M19 12h.01',
+} as const;
+
+type ItemNav = { href: string; label: string; desenho: keyof typeof DESENHOS; tambem?: string[]; soNoTrilho?: boolean };
+
 const principais: ItemNav[] = [
-  { href: '/dashboard', label: 'Início', icon: Home },
-  // Treino = Provas (Pablo, 02/11/2026: a prova escolhida, com flashcards antes,
-  // faz o papel do treino). O treino do dia segue pelo "Começar" do Início,
-  // porque é ele que faz o cronograma andar.
-  { href: '/provas', label: 'Estudar', icon: BookOpen, tambem: ['/treino', '/simulado', '/caderno-erros'] },
-  { href: '/flashcards', label: 'Flashcards', icon: Layers },
-  { href: '/redacao', label: 'Redação', icon: PenTool },
-  { href: '/calculo', label: 'Cálculo', icon: Sigma },
-  { href: '/progresso', label: 'Progresso', icon: BarChart3 },
+  { href: '/dashboard', label: 'Início', desenho: 'inicio' },
+  // Treino = Provas (Pablo, 02/11/2026). O treino do dia segue pelo "Começar" do Início.
+  { href: '/provas', label: 'Estudar', desenho: 'estudar', tambem: ['/treino', '/simulado', '/caderno-erros'] },
+  { href: '/flashcards', label: 'Cartões', desenho: 'cartoes' },
+  { href: '/redacao', label: 'Redação', desenho: 'redacao' },
+  { href: '/calculo', label: 'Cálculo', desenho: 'calculo', soNoTrilho: true },
+  { href: '/progresso', label: 'Progresso', desenho: 'progresso', soNoTrilho: true },
 ];
-// Simulado e Caderno de Erros moram dentro do Treino desde 02/11/2026.
-const secundarios: ItemNav[] = [
+const secundarios = [
   // Aulas no jeito do Universo Narrado: de onde vem a equação (Pablo, 17/11/2026).
-  { href: '/descobrir', label: 'Descobrir', icon: Compass },
-  { href: '/banco-questoes', label: 'Banco de Questões', icon: Library },
-  { href: '/perfil', label: 'Perfil', icon: Settings },
+  { href: '/descobrir', label: 'Descobrir', Icone: Compass },
+  { href: '/banco-questoes', label: 'Banco de Questões', Icone: Library },
+  { href: '/perfil', label: 'Perfil', Icone: Settings },
 ];
+const noCelular = [
+  { href: '/calculo', label: 'Cálculo', Icone: Sigma },
+  { href: '/progresso', label: 'Progresso', Icone: BarChart3 },
+];
+
+const Desenho = ({ nome }: { nome: keyof typeof DESENHOS }) => (
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d={DESENHOS[nome]} /></svg>
+);
 
 export function SidebarNav() {
   const pathname = usePathname();
   const { data: session } = useSession() || {};
-  const [open, setOpen] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mais, setMais] = useState(false);
   const isAdmin = (session?.user as any)?.role === 'admin';
-  const { theme, setTheme } = useTheme();
-  const estaEm = (href: string) => pathname === href || pathname?.startsWith(href + '/');
-  const itemAtivo = (item: ItemNav) => [item.href, ...(item.tambem ?? [])].some(estaEm);
-  const [maisAberto, setMaisAberto] = useState(() => secundarios.some(itemAtivo));
-  const linkDoMenu = (item: ItemNav, i: number) => {
-    const Icon = item.icon;
-    const active = itemAtivo(item);
-    return (
-      <motion.div
-        key={item.href}
-        initial={{ opacity: 0, x: -10 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: i * 0.02, duration: 0.15 }}
-      >
-        <Link
-          href={item.href}
-          onClick={() => setOpen(false)}
-          aria-current={active ? 'page' : undefined}
-          className={cn(
-            'group flex items-center gap-3 px-3 py-2.5 rounded-[var(--radius-control)] type-meta font-medium transition-[color,background-color,border-color,box-shadow] duration-200',
-            active
-              ? 'bg-primary text-primary-foreground shadow-md'
-              : 'text-muted-foreground hover:bg-muted hover:text-foreground'
-          )}
-        >
-          <Icon className={cn('w-4 h-4 transition-transform duration-200', !active && 'group-hover:scale-110')} />
-          {item.label}
-        </Link>
-      </motion.div>
-    );
-  };
+  const nome = session?.user?.name ?? 'Estudante';
+  const estaEm = (href: string) => pathname === href || !!pathname?.startsWith(href + '/');
+  const ativo = (item: ItemNav) => [item.href, ...(item.tambem ?? [])].some(estaEm);
+  const emSecundario = secundarios.some((i) => estaEm(i.href)) || estaEm('/admin');
+  const emSoNoTrilho = noCelular.some((i) => estaEm(i.href));
+
+  useEffect(() => setMais(false), [pathname]);
+  useEffect(() => {
+    if (!mais) return;
+    const fechar = (e: KeyboardEvent) => { if (e.key === 'Escape') setMais(false); };
+    window.addEventListener('keydown', fechar);
+    return () => window.removeEventListener('keydown', fechar);
+  }, [mais]);
+
+  const itens = (lista: ItemNav[]) => lista.map((item) => (
+    <Link key={item.href} href={item.href} className="m-item" aria-current={ativo(item) ? 'page' : undefined}>
+      <Desenho nome={item.desenho} />
+      <span>{item.label}</span>
+    </Link>
+  ));
+  const botaoMais = (marcado: boolean) => (
+    <button
+      type="button"
+      className="m-item"
+      aria-expanded={mais}
+      aria-current={marcado ? 'true' : undefined}
+      onClick={() => setMais((v) => !v)}
+    >
+      <Desenho nome="mais" />
+      <span>Mais</span>
+    </button>
+  );
+  const opcao = ({ href, label, Icone }: (typeof secundarios)[number], extra = '') => (
+    <Link key={href} href={href} onClick={() => setMais(false)} className={`m-opcao ${extra}`} aria-current={estaEm(href) ? 'page' : undefined}>
+      <Icone className="w-4 h-4" aria-hidden /> {label}
+    </Link>
+  );
 
   return (
     <>
-      {/* Mobile toggle */}
-      <motion.button
-        onClick={() => setOpen(!open)}
-        data-menu-lateral
-        className="fixed top-4 left-4 z-50 p-3 rounded-[var(--radius-control)] bg-primary text-primary-foreground shadow-lg md:hidden"
-        aria-label="Menu"
-        whileTap={{ scale: 0.9 }}
-      >
-        {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-      </motion.button>
+      <nav data-menu-lateral aria-label="Menu" className="moderno m-trilho">
+        <div className="m-logo px" aria-label="PrepEnem">PE</div>
+        {itens(principais)}
+        {botaoMais(emSecundario)}
+        <button type="button" className="m-eu" aria-label={`Conta de ${nome}`} onClick={() => setMais((v) => !v)}>
+          {nome[0]?.toUpperCase() ?? 'U'}
+        </button>
+      </nav>
 
-      {/* Overlay */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden"
-            onClick={() => setOpen(false)}
-          />
-        )}
-      </AnimatePresence>
+      <nav data-menu-lateral aria-label="Menu no celular" className="moderno m-doca">
+        {itens(principais.filter((i) => !i.soNoTrilho))}
+        {botaoMais(emSecundario || emSoNoTrilho)}
+      </nav>
 
-      {/* Sidebar */}
-      <aside
-        data-menu-lateral
-        className={cn(
-          'fixed top-0 left-0 z-40 h-full w-64 bg-[hsl(var(--surface-1))] border-r border-border flex flex-col transition-transform duration-300',
-          'md:translate-x-0',
-          open ? 'translate-x-0' : '-translate-x-full'
-        )}
-      >
-        <div className="flex items-center gap-3 p-6 border-b border-border">
-          {/* Antes pulsava em loop infinito. Movimento perpétuo na visão
-              periférica durante sessão de uma a três horas é exatamente o que
-              a direção evita — e não comunicava estado nenhum. */}
-          <div className="w-10 h-10 rounded-[var(--radius-control)] bg-primary flex items-center justify-center shrink-0">
-            <GraduationCap className="w-5 h-5 text-primary-foreground" />
-          </div>
-          <div>
-            <h1 className="font-display type-lead font-semibold">PrepEnem</h1>
-            <p className="type-micro text-muted-foreground tracking-wide">Plataforma de Estudos</p>
+      {mais && (
+        <div data-menu-lateral>
+          <div className="m-veu-menu" onClick={() => setMais(false)} aria-hidden />
+          <div className="moderno m-mais" role="dialog" aria-label="Mais opções">
+            {noCelular.map((i) => opcao(i, 'm-so-celular'))}
+            {secundarios.map((i) => opcao(i))}
+            {isAdmin && opcao({ href: '/admin/questoes', label: 'Admin Questões', Icone: ShieldCheck })}
+            <button type="button" className="m-opcao" onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}>
+              {resolvedTheme === 'dark' ? <Sun className="w-4 h-4" aria-hidden /> : <Moon className="w-4 h-4" aria-hidden />}
+              {resolvedTheme === 'dark' ? 'Modo Claro' : 'Modo Escuro'}
+            </button>
+            <button type="button" className="m-opcao" onClick={() => signOut({ callbackUrl: '/login' })}>
+              <LogOut className="w-4 h-4" aria-hidden /> Sair ({nome})
+            </button>
           </div>
         </div>
-
-        <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
-          {principais.map(linkDoMenu)}
-          <button
-            type="button"
-            onClick={() => setMaisAberto((v) => !v)}
-            aria-expanded={maisAberto}
-            className="flex w-full items-center gap-3 px-3 py-2.5 mt-3 rounded-[var(--radius-control)] type-meta font-medium text-muted-foreground hover:bg-muted hover:text-foreground transition-[color,background-color]"
-          >
-            <ChevronDown className={cn('w-4 h-4 transition-transform duration-200', maisAberto && 'rotate-180')} />
-            Mais
-          </button>
-          {maisAberto && <div className="space-y-1">{secundarios.map(linkDoMenu)}</div>}
-          {isAdmin && (
-            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 }}>
-              <Link
-                href="/admin/questoes"
-                onClick={() => setOpen(false)}
-                className={cn(
-                  'flex items-center gap-3 px-3 py-2.5 rounded-[var(--radius-control)] type-meta font-medium transition-[color,background-color,border-color,box-shadow] duration-200',
-                  pathname?.startsWith('/admin')
-                    ? 'bg-primary text-primary-foreground shadow-md'
-                    : 'text-muted-foreground hover:bg-muted hover:text-foreground'
-                )}
-              >
-                <ShieldCheck className="w-4 h-4" />
-                Admin Questões
-              </Link>
-            </motion.div>
-          )}
-        </nav>
-
-        <div className="p-4 border-t border-border space-y-2">
-          {/* Dark mode toggle */}
-          <button
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="flex items-center gap-3 px-3 py-2.5 rounded-[var(--radius-control)] type-meta font-medium text-muted-foreground hover:bg-muted hover:text-foreground transition-[color,background-color] w-full"
-          >
-            <motion.div
-              key={theme}
-              initial={{ rotate: -90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              transition={{ duration: 0.3 }}
-            >
-              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-            </motion.div>
-            {theme === 'dark' ? 'Modo Claro' : 'Modo Escuro'}
-          </button>
-
-          <div className="flex items-center gap-3 px-3">
-            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-              <span className="type-meta font-semibold text-primary-text">
-                {session?.user?.name?.[0]?.toUpperCase() ?? 'U'}
-              </span>
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="type-meta font-medium truncate">{session?.user?.name ?? 'Estudante'}</p>
-              <p className="type-micro text-muted-foreground truncate">@{session?.user?.email ?? ''}</p>
-            </div>
-          </div>
-          <button
-            onClick={() => signOut({ callbackUrl: '/login' })}
-            className="flex items-center gap-3 px-3 py-2.5 rounded-[var(--radius-control)] type-meta font-medium text-muted-foreground hover:bg-destructive/10 hover:text-destructive transition-[color,background-color] w-full"
-          >
-            <LogOut className="w-4 h-4" />
-            Sair
-          </button>
-        </div>
-      </aside>
+      )}
     </>
   );
 }

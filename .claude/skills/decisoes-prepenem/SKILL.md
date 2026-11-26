@@ -33,6 +33,17 @@ dos componentes, movimento, personalidade visual. Nada disso está decidido
 O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 `montar-referencia`, escolhida pelo Pablo olhando, e registrada aqui com data.
 
+- **Menu, Início e Estudar = opção A de 26/11/2026** (Pablo: "pode o A desse
+  jeitnho igualzinho cara"; estilos em `app/moderno.css`, letra Sora, números em
+  letra pixel). **Substitui** o "Início no jeito Nubank" (21/10), o "Menu: 6
+  itens à vista" e a lista em colunas do quadro de 26/11 (a questão continua a B).
+  Menu: trilho flutuante no PC e barra embaixo no celular (Início, Estudar,
+  Cartões, Redação, Mais; Cálculo e Progresso no trilho, no "Mais" no celular);
+  questão aberta no celular fica sem a barra. Início: capa pixel com "Começar" e
+  blocos (O que cai hoje, Meta, Revisão, Leitura, Continuar prova, Semana).
+  Estudar: capa com "Continuar", 4 ações, uma aba por matéria, uma linha por
+  prova e só a do Continuar destacada. Classe de coluna é `m-col4`: `m-4` é
+  margem no Tailwind e entortou os blocos.
 - **Estudar e questão = quadro de 26/11/2026** (Pablo: "gostei mais do b e
   resolvendo a questao ficou legal"; artefato W2dDsBP45MBwan8yhFqfmD). Lista:
   uma coluna por matéria, Continuar no topo, "Mais jeitos", "Outras provas" e
@@ -41,11 +52,7 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   respondidas e a atual: o servidor grava em ordem), riscar, "Revisar depois"
   (fica no navegador) e botões fixos embaixo; o fundo de montanhas fica.
 
-- **Fluidez e Início = Nubank (Pablo, 21/10/2026: "achei muito legal e fluido",
-  o site e o app).** Medido em nubank.com.br: título de 112px, blocos de cor
-  de ponta a ponta, 57 elementos em pílula (999px), transição de 0,65 s,
-  `scroll-behavior: smooth`. Venda fora (foto, CPF, carrossel do blog). O
-  Pablo escolheu a opção B de https://claude.ai/artifact/Wy2USfyj6hiYfSKA4dKdfs.
+- **Fluidez (Pablo, 21/10/2026):** transição de 0,65 s e `scroll-behavior: smooth`.
 - **Desenho de química = mapa mental (opção A, Pablo, 07/10/2026):** átomo de
   verdade (núcleo de bolinhas, camadas com elétrons girando, símbolo embaixo),
   linha do átomo até uma etiqueta "H: massa 1", e a soma numa caixa. Nunca seta
@@ -53,9 +60,7 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 
 ## Telas enxutas (06/10/2026, pedido do Pablo: menos coisa num lugar só)
 
-- **Menu: 6 itens à vista** (Início, Treino, Flashcards, Redação, Cálculo,
-  Progresso) e o resto em "Mais", aberto sozinho quando a página atual é dele.
-  Tela nova entra em "Mais", a não ser que seja estudo diário.
+- **Telas novas entram no "Mais"**, a não ser que sejam estudo diário.
   **Treino = Provas (Pablo, 02/11/2026: "tem a mesma função e é até melhor,
   inclui flashcards antes"):** o item Treino do menu e o atalho do Início
   abrem `/provas`, e Provas saiu do "Mais". O treino do dia (`/treino`) fica
@@ -86,12 +91,7 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   e Redação do Simulado); a tela do Simulado se chama "Prova rápida ou
   simulado", como o cartão; Simulado e Caderno têm "‹ Treino" no topo; Caderno
   vazio diz "Ainda não há erro para refazer", não "Continue assim".
-- **Início = o cronograma de hoje e "Começar", no jeito Nubank (B, 21/10/2026):**
-  bloco bg-primary de ponta a ponta com "N matérias hoje" (`--type-mega`) e o
-  Começar em pílula; 4 atalhos redondos (mesmos ícones do menu); seções com
-  linha fina, sem caixa: O que cai hoje (com tema), Leitura (o cartão
-  flutuante não aparece no Início), Revisões, A semana (fechada).
-  Enquanto carrega, esqueleto do cartão, nunca tela vazia.
+- **Início:** ver "Referência por tela" (opção A). Enquanto carrega, nunca tela vazia.
 - **Progresso = 2 números** (total respondidas e acertos), 06/10/2026.
 - **Sem controle deslizante para número (Pablo, 21/10/2026: "muito feio"):**
   quantidade se escolhe com botões (`components/escolha-de-numero.tsx`); saiu

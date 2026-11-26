@@ -36,7 +36,7 @@ export default function ProvasPage() {
   };
 
   return (
-    <div className="min-h-screen p-6 md:p-10 max-w-7xl mx-auto">
+    <div className="moderno m-pagina">
       {loading ? (
         <div className="text-center py-20 text-muted-foreground type-meta">Carregando...</div>
       ) : (

@@ -53,8 +53,8 @@ const CAMINHOS = [
 const ehPaginaPronta = (href: string) => href.endsWith('.html');
 
 /* `soSecundarios`: sem a Nova prova, que já é botão no topo da página Estudar. */
-export function CaminhosDoTreino({ soSecundarios = false }: { soSecundarios?: boolean }) {
-  const caminhos = CAMINHOS.filter((c) => !soSecundarios || !c.principal);
+export function CaminhosDoTreino({ soSecundarios = false, fora = [] }: { soSecundarios?: boolean; fora?: string[] }) {
+  const caminhos = CAMINHOS.filter((c) => (!soSecundarios || !c.principal) && !fora.includes(c.href));
   return (
     <nav aria-label="Jeitos de treinar" className="grid gap-3 md:grid-cols-2 mb-10">
       {caminhos.map(({ href, titulo, quando, Icone, principal }, i) => {
