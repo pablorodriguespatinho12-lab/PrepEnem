@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { cabem, lousaDoRobo, quebrar } from './do-robo';
+import { cabem, falas, lousaDoRobo, quebrar } from './do-robo';
 import { validarLousa } from './validar';
 import { META_DE_CONTA, TOLERANCIA_DA_META, ehTelaDeConta } from './quadro-de-conta';
 
@@ -92,8 +92,9 @@ describe('lousa a partir da aula do robô', () => {
     expect(r.ok).toBe(false);
   });
 
-  it('recusa alternativa longa demais', () => {
-    expect(lousaDoRobo({ ...ENTRADA, alternativas: ['a'.repeat(80), 'b'] }).ok).toBe(false);
+  it('alternativa longa: o papel leva só o enunciado, sem recusar a aula', () => {
+    const r = lousaDoRobo({ ...ENTRADA, alternativas: ['a'.repeat(130), 'b'] });
+    expect(r.ok && r.aula.cenas[1].tipo === 'papel' && !r.aula.cenas[1].alternativas).toBe(true);
   });
 
   it('quebra em linhas que cabem na lousa', () => {
@@ -127,5 +128,16 @@ describe('dividirEnunciado', () => {
     expect(partes.length).toBeGreaterThan(1);
     expect(partes.every((p) => p.length <= 380)).toBe(true);
     expect(partes.join(' ')).toBe(longo);
+  });
+});
+
+describe('falas não saem cortadas', () => {
+  it('não termina em dois-pontos nem no meio de palavra', () => {
+    const longo = `Atenção: ${'o valor pedido depende da razão entre os dois sólidos '.repeat(5)}e só então some. Pista:`;
+    const ditas = falas(longo).map((f) => f[1]);
+    expect(ditas.length).toBeGreaterThan(0);
+    expect(ditas[ditas.length - 1]).not.toMatch(/[:;,]$/);
+    const palavras = new Set(longo.split(/[\s.:;,]+/));
+    for (const p of ditas.join(' ').split(/[\s.:;,]+/)) expect(palavras.has(p)).toBe(true);
   });
 });

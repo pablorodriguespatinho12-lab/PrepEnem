@@ -8,6 +8,7 @@ import { comFiguraDoSolido } from '../lib/aula-lousa/solido';
 import { validarLousa } from '../lib/aula-lousa/validar';
 import { META_DE_CONTA, TOLERANCIA_DA_META, ehTelaDeConta } from '../lib/aula-lousa/quadro-de-conta';
 import { letrasPelaInicial, type Troca } from '../lib/aula-lousa/letras';
+import { remendar } from '../lib/aula-lousa/remendos';
 
 // Põe a lousa nas aulas que ainda estão só no molde do robô (Pablo, 21/11/2026: "não tá que nem o
 // quadro do Universo Narrado"). Não mexe nas que já têm lousa feita à mão.
@@ -61,8 +62,8 @@ async function main() {
     if (c.lousa && typeof c.lousa === 'object' && !(refazer && ehMinha(l.questionId))) { jaTem++; continue; }
     if (refazer && !ehMinha(l.questionId)) continue;
     // Nunca sobrescrever lousa feita à mão: um id que o script converteu antes pode ter ganho lousa à mão depois.
-    if (refazer && !lousaEDoGerador(c.lousa)) { feitaAMao++; continue; }
-    const passos = Array.isArray(c.passos) ? (c.passos as { titulo?: unknown; texto?: unknown; visual?: unknown }[]) : [];
+    if (refazer && c.lousa && !lousaEDoGerador(c.lousa)) { feitaAMao++; continue; }
+    const passos = remendar(l.questionId, Array.isArray(c.passos) ? (c.passos as { titulo?: unknown; texto?: unknown; visual?: unknown }[]) : []);
     const q = l.question;
     if (!MATERIAS_DE_EXATAS.includes(q.materia)) { foraDaMateria++; continue; }
     const doRobo = passos[0]?.titulo === 'As fórmulas desta questão';

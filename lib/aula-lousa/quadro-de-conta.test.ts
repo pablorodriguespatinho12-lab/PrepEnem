@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { contasNaFrase, pecasDaConta, separarContas } from './quadro-de-conta';
+import { quebrar } from './do-robo';
 
 const textos = (p: { s: string }[] | null) => p?.map((x) => x.s);
 
@@ -29,6 +30,27 @@ describe('contasNaFrase', () => {
   });
 });
 
+describe('contasNaFrase não corta número nem aparte', () => {
+  const linhas = (f: string) => contasNaFrase(f).map((c) => c.map((p) => p.s.replace(/\u00a0/g, ' ')).join(' '));
+  it('milhar com espaço fica inteiro', () => {
+    expect(linhas('Então 72 · 100 = 7 200 metros.')).toEqual(['72 · 100 = 7 200']);
+    expect(linhas('Somando, 2 200 + 880 = 3 080.')).toEqual(['2 200 + 880 = 3 080']);
+  });
+  it('parêntese que sobrou e "milhões" ficam com o número', () => {
+    expect(linhas('conta: 2 200 + 880 = 3 080.)')).toEqual(['2 200 + 880 = 3 080']);
+    expect(linhas('Parece certo: 300 000 × 8 = 2,4 milhões. Mas não.')).toEqual(['300 000 × 8 = 2,4 milhões']);
+  });
+  it('a quebra de linha não parte o milhar', () => {
+    expect(quebrar('V = 400 000 + 1 500 000 = 1 900 000', 20).every((l) => !/^000/.test(l))).toBe(true);
+  });
+  it('conta dentro de parênteses não gruda na de fora', () => {
+    const saida = linhas('sm · sm = 24 · 24 = 576 (24 · 20 = 480 e 24 · 4 = 96). 2 · pr = 2 · 188 = 376.');
+    expect(saida).toContain('24 · 4 = 96');
+    expect(saida).toContain('2 · pr = 2 · 188 = 376');
+    expect(saida.some((l) => l.includes('96 2') || l.startsWith('24 · 4 = 2'))).toBe(false);
+  });
+});
+
 describe('separarContas', () => {
   it('a frase inteira continua na prosa (vira fala) e a conta vai para o quadro', () => {
     const { contas, prosa } = separarContas('Raio = 30 ÷ 2 = 15 cm.\nPor isso a área usa o raio.');
@@ -44,5 +66,20 @@ describe('defeitos achados na foto das aulas reais (24/11/2026)', () => {
   it('duas contas na mesma linha viram duas', () => {
     expect(separarContas('t1 = 1 h; t2 = 2/3 h').contas).toHaveLength(2);
     expect(separarContas('S = 21, B = 10101').contas).toHaveLength(2);
+  });
+});
+
+describe('conta no meio da frase sai inteira ou não sai', () => {
+  const pecas = (frase: string) => contasNaFrase(frase).map((c) => c.map((p) => p.s).join(' '));
+  it('número colado na letra faz parte da conta', () => {
+    expect(pecas('Duas bolas lado a lado ocupam 2 · 2r = 4r.')).toEqual(['2 · 2r = 4r']);
+  });
+  it('tira só o "=" que sobrou na frente', () => {
+    expect(pecas('a força é (x) = 600 − 180 = 420 N.')).toEqual(['600 − 180 = 420 N']);
+  });
+  it('nunca começa nem termina em operador, nem com "e" solto', () => {
+    const todas = pecas('Raio de (x) = 2 · (y) e 15 · 15 = 225.');
+    expect(todas).toContain('15 · 15 = 225');
+    for (const c of todas) expect(c).not.toMatch(/^[=·+−÷]|[=·+−÷]$/);
   });
 });

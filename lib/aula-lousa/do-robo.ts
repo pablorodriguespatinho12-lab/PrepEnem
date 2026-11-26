@@ -2,7 +2,7 @@
 // volta, pista) para a aula de lousa (Pablo, 21/11/2026: "não tá que nem o quadro do Universo
 // Narrado"). Função pura: recebe a questão e os passos, devolve a lousa ou o motivo de não dar.
 import type { AulaLousa, Cena, Cor, Desenho, Fala } from './tipos';
-import { legendaCurta, pecasDaConta, separarContas, telaDaFormula, telasDosDados, telasDeContas } from './quadro-de-conta';
+import { legendaCurta, pecasDaConta, separarContas, telaDaFormula, telasDosDados, telasDeContas, tituloNumerado } from './quadro-de-conta';
 
 export type Passo = { titulo?: unknown; texto?: unknown; visual?: unknown };
 export type EntradaDoRobo = {
@@ -14,28 +14,32 @@ export type EntradaDoRobo = {
 export type Resultado = { ok: true; aula: AulaLousa } | { ok: false; motivo: string };
 
 const TITULO_PRIMEIRO_PASSO = 'As fórmulas desta questão';
-export const MAX_PAPEL = 1400;
+export const MAX_PAPEL = 3000; // vira várias telas de papel (dividirEnunciado)
 export const MAX_ALTERNATIVA = 60;
 const MAX_FALA = 150;
 const MAX_FALA_DA_TELA = 250;
-export const MAX_CENAS = 31;
+export const MAX_CENAS = 36;
 const LINHAS_POR_TELA = 5;
 const LARGURA_TELA = 360;
 const LARGURA_DA_LETRA = 0.4; // mesma estimativa de lousa.py (em × tamanho)
 const SEGUNDOS_POR_LETRA = 1 / 15;
 
 export const texto = (v: unknown): string => (typeof v === 'string' ? v : '');
-export const limpa = (s: string): string => s.replace(/\$/g, '').replace(/\s+/g, ' ').trim();
+export const limpa = (s: string): string => s.replace(/(?<!R)\$|(?<=R)\$(?!\s?\d)/g, '').replace(/\s+/g, ' ').trim();
 
 export function cabem(tam: number): number {
   return Math.floor(LARGURA_TELA / (tam * LARGURA_DA_LETRA));
 }
 
 /** Quebra em linhas de até `max` letras, só entre palavras. */
+const ESPACO_DE_MILHAR = /(?<=\d) (?=\d{3}(?!\d))/g;
+const MARCA_DE_MILHAR = '\u0001';
+
 export function quebrar(s: string, max: number): string[] {
   const linhas: string[] = [];
   let atual = '';
-  for (const palavra of limpa(s).split(' ')) {
+  // "1 500 000" não pode quebrar no meio: o espaço do milhar vira um marcador até a linha sair.
+  for (const palavra of limpa(s).replace(ESPACO_DE_MILHAR, MARCA_DE_MILHAR).split(' ').map((p) => p.split(MARCA_DE_MILHAR).join(' '))) {
     if (!palavra) continue;
     if (atual && atual.length + 1 + palavra.length > max) {
       linhas.push(atual);
@@ -50,12 +54,31 @@ export function quebrar(s: string, max: number): string[] {
 
 export type Linha = { s: string; cor: Cor; tam: number };
 
+/** Frase maior que uma fala quebra depois de ":", ";" ou "," e, sem isso, entre palavras: nunca no meio delas. */
+function pedacosDaFala(frase: string): string[] {
+  if (frase.length <= MAX_FALA) return [frase];
+  const janela = frase.slice(0, MAX_FALA + 1);
+  const pontuacao = Math.max(...[': ', '; ', ', '].map((marca) => janela.lastIndexOf(marca)));
+  const corte = pontuacao > 0 ? pontuacao + 1 : janela.lastIndexOf(' ');
+  const fim = corte > 0 ? corte : MAX_FALA;
+  return [frase.slice(0, fim).trim(), ...pedacosDaFala(frase.slice(fim).trim())];
+}
+
+/** A última fala não pode terminar anunciando algo que não vem ("Atenção:"): rótulo curto sai, o resto ganha ponto. */
+function semPontaSolta(frases: string[]): string[] {
+  const ultima = frases[frases.length - 1];
+  if (!ultima || !/[:;,]$/.test(ultima)) return frases;
+  const antes = frases.slice(0, -1);
+  if (antes.length && ultima.split(' ').length < 3) return semPontaSolta(antes);
+  return [...antes, ultima.replace(/[:;,]$/, '.')];
+}
+
 /** Frases do professor: as frases do passo, até 4 e até ~250 letras na tela toda. */
 export function falas(textoDoPasso: string): Fala[] {
-  // "1 : 50 000" é uma escala, não o fim de uma frase: cola os dois-pontos entre números.
+  // "1 : 50 000" é uma escala: cola os dois-pontos entre números.
   const frases = limpa(textoDoPasso.replace(/\n/g, ' ').replace(/(\d)\s*:\s*(\d)/g, '$1:$2'))
-    .split(/(?<=[.:?!])\s+/)
-    .map((f) => f.slice(0, MAX_FALA))
+    .split(/(?<=[.?!])\s+/)
+    .flatMap(pedacosDaFala)
     .filter(Boolean);
   const escolhidas: string[] = [];
   let total = 0;
@@ -64,9 +87,9 @@ export function falas(textoDoPasso: string): Fala[] {
     escolhidas.push(f);
     total += f.length;
   }
-  if (!escolhidas.length && frases[0]) escolhidas.push(frases[0].slice(0, MAX_FALA));
+  if (!escolhidas.length && frases[0]) escolhidas.push(frases[0]);
   let t = 0.3;
-  return escolhidas.map((f): Fala => {
+  return semPontaSolta(escolhidas).map((f): Fala => {
     const par: Fala = [Math.round(t * 10) / 10, f];
     t += Math.max(2.2, f.length * SEGUNDOS_POR_LETRA + 0.8);
     return par;
@@ -79,7 +102,7 @@ export function telas(titulo: string, linhas: Linha[], fala: Fala[]): Cena[] {
   for (let i = 0; i < linhas.length; i += LINHAS_POR_TELA) paginas.push(linhas.slice(i, i + LINHAS_POR_TELA));
   if (!paginas.length) paginas.push([]);
   return paginas.map((pagina, n): Cena => {
-    const tituloDaTela = (n ? `${titulo} (${n + 1})` : titulo).slice(0, 40);
+    const tituloDaTela = n ? tituloNumerado(titulo, n + 1) : tituloNumerado(titulo, 1).replace(/ \(1\)$/, '');
     const desenho: Desenho[] = [
       { k: 'tx', x: 200, y: 34, s: tituloDaTela, cor: 'tinta', tam: Math.min(28, Math.floor(LARGURA_TELA / (tituloDaTela.length * LARGURA_DA_LETRA))), t: 0.2 }, // título longo encolhe: não passa do quadro
     ];
@@ -212,7 +235,9 @@ export function lousaDoRobo(e: EntradaDoRobo): Resultado {
   if (texto(passos[0]?.titulo) !== TITULO_PRIMEIRO_PASSO) return { ok: false, motivo: 'não é o molde do robô' };
   if (!e.enunciado || e.enunciado.length > MAX_PAPEL) return { ok: false, motivo: 'enunciado vazio ou longo demais' };
   const alts = e.alternativas.map((a) => limpa(a));
-  if (alts.length < 2 || alts.some((a) => !a || a.length > MAX_ALTERNATIVA)) return { ok: false, motivo: 'alternativa vazia ou longa' };
+  if (alts.length < 2 || alts.some((a) => !a)) return { ok: false, motivo: 'alternativa vazia' };
+  // Alternativa longa vazaria da fileira do papel: nesse caso o papel leva só o enunciado.
+  const cabemNoPapel = alts.every((a) => a.length <= MAX_ALTERNATIVA);
 
   const cenas: Cena[] = [];
   const nome = (e.tema ?? 'Questão').slice(0, 30);
@@ -233,7 +258,7 @@ export function lousaDoRobo(e: EntradaDoRobo): Resultado {
       fala: [[0.3, k === 0 ? 'Esta é a questão. Primeiro vamos separar o que ela dá e o que ela quer.' : 'Continua a questão.']],
       rotulo: partes.length > 1 ? `A questão (${k + 1} de ${partes.length})` : 'A questão',
       texto: parte,
-      ...(ultima ? { alternativas: alts } : {}),
+      ...(ultima && cabemNoPapel ? { alternativas: alts } : {}),
     });
   });
 
@@ -270,7 +295,7 @@ export function lousaDoRobo(e: EntradaDoRobo): Resultado {
       // A receita repete a aula: só as contas dela vão para o quadro (numa tela) e a pista vira fala.
       const contas = (Array.isArray(v?.linhas) ? (v!.linhas as unknown[]) : []).flatMap((l) => (Array.isArray(l) ? separarContas(limpa(texto(l[1]))).contas : []));
       const pista = resumoDaPista(t);
-      if (contas.length > 0) cenas.push(...telasDeContas('questão parecida?', contas.slice(0, 3), falas(t), pista));
+      if (contas.length > 0) cenas.push(...telasDeContas('questão parecida?', contas.slice(0, 2), falas(t), pista));
       else cenas.push(...telas('questão parecida?', [...linhasDoTexto(t), ...linhasDaTabela(v)], falas(t)));
     } else if (/^O que eu tenho/i.test(titulo) && v?.tipo === 'tabela' && telasDosDadosDe(v, t).length > 0) {
       cenas.push(...telasDosDadosDe(v, t));

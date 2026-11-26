@@ -7,6 +7,8 @@ const LARGURA_DO_SINAL = 0.55; // × tamanho; mais larga que a estimativa de tex
 const LARGURA_DA_LEGENDA = 8; // letra de 16 de tamanho
 const TAM_LEGENDA = 16;
 const FOLGA_ENTRE_PECAS = 16;
+const FOLGA_DA_LISTA = 20;
+const ALTURA_DA_LINHA_DA_LISTA = 24;
 const LARGURA_UTIL = 380;
 const TAM_MINIMO = 20;
 const SEGUNDOS_ENTRE_PECAS = 0.5;
@@ -39,11 +41,32 @@ export function tamanhoQueCabe(partes: DesenhoEq['partes'], pedido: number): num
   return TAM_MINIMO;
 }
 
-export function expandirEquacao(d: DesenhoEq): Desenho[] {
-  const tam = tamanhoQueCabe(d.partes, d.tam);
-  const larguras = d.partes.map((p) => larguraDaPeca(p, tam));
+const larguraTotal = (partes: DesenhoEq['partes'], tam: number): number => partes.reduce((soma, p) => soma + larguraDaPeca(p, tam), 0);
+
+/** Lado a lado, uma legenda cobriria a outra mesmo com a menor letra. */
+export const legendasNaoCabem = (partes: DesenhoEq['partes']): boolean => larguraTotal(partes, TAM_MINIMO) > LARGURA_UTIL;
+
+/** Legendas em lista, uma por linha ("c = comprimento, em metros"), para quando lado a lado uma cobriria a outra. */
+function legendasEmLista(d: DesenhoEq, tam: number, extras: DesenhoEq['partes']): Desenho[] {
+  const temFracao = d.partes.some((p) => partirFracao(p.s));
+  const primeira = d.y + (temFracao ? tam * DESCE_DA_BARRA : 0) + TAM_LEGENDA + FOLGA_DA_LISTA;
+  return [...d.partes, ...extras]
+    .filter((p) => p.leg)
+    .map((p, i): Desenho => ({
+      k: 'tx', x: CENTRO, y: primeira + i * ALTURA_DA_LINHA_DA_LISTA, s: `${textoDaPeca(p.s)} = ${p.leg}`,
+      cor: 'cinza', tam: TAM_LEGENDA, t: d.t + (d.partes.length + i) * SEGUNDOS_ENTRE_PECAS, ancora: 'middle',
+    }));
+}
+
+export function expandirEquacao(d: DesenhoEq, opcoes: { emLista?: boolean; extras?: DesenhoEq['partes'] } = {}): Desenho[] {
+  const emLista = !!opcoes.emLista && (legendasNaoCabem(d.partes) || !!opcoes.extras?.length);
+  // Legenda igual à própria palavra ("raio" com "Raio" embaixo) não ensina nada: sai.
+  const repete = (p: DesenhoEq['partes'][number]): boolean => p.leg?.toLowerCase() === textoDaPeca(p.s).toLowerCase();
+  const partes = d.partes.map((p) => (emLista || repete(p) ? { ...p, leg: undefined } : p));
+  const tam = tamanhoQueCabe(partes, d.tam);
+  const larguras = partes.map((p) => larguraDaPeca(p, tam));
   let x = CENTRO - larguras.reduce((a, b) => a + b, 0) / 2;
-  return d.partes.flatMap((p, i): Desenho[] => {
+  const pecasDaEquacao = partes.flatMap((p, i): Desenho[] => {
     const meio = x + larguras[i] / 2;
     x += larguras[i];
     const quando = d.t + i * SEGUNDOS_ENTRE_PECAS;
@@ -55,6 +78,7 @@ export function expandirEquacao(d: DesenhoEq): Desenho[] {
     const yLegenda = d.y + (fracao ? tam * DESCE_DA_BARRA : 0) + TAM_LEGENDA + 8;
     return [...pecas, { k: 'tx', x: meio, y: yLegenda, s: p.leg, cor: 'cinza', tam: TAM_LEGENDA, t: quando + SEGUNDOS_ATE_LEGENDA, ancora: 'middle' }];
   });
+  return emLista ? [...pecasDaEquacao, ...legendasEmLista(d, tam, opcoes.extras ?? [])] : pecasDaEquacao;
 }
 
 function desenharFracao([cima, baixo]: [string, string], meio: number, y: number, tam: number, cor: Cor, t: number, largura: number): Desenho[] {

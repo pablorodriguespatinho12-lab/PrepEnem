@@ -12,8 +12,8 @@ const PALAVRAS: readonly [Solido, RegExp][] = [
   ['cone', /\bcone\b/i],
   ['cilindro', /cilindr/i],
   ['esfera', /\besfera\b/i],
-  ['cubo', /\bcubo\b/i],
-  ['caixa', /paralelep[íi]pedo|\bprisma\b|\bcaixa\b/i],
+  ['cubo', /\bcubo\b|caixa c[úu]bica/i],
+  ['caixa', /paralelep[íi]pedo|\bprisma\b|\bcaixa\b(?! c[úu]bica)/i],
 ];
 
 /** O primeiro sólido que o enunciado cita (o que aparece antes no texto). null se nenhum. */
@@ -102,6 +102,22 @@ export function telaDoSolido(s: Solido): Cena {
   };
 }
 
+const XYZ: Record<string, string> = { c: 'x', l: 'y', a: 'z' };
+
+/** A conta da aula chama as medidas de x, y e z: a figura usa as mesmas letras. */
+function comLetrasXyz(cena: Cena): Cena {
+  if (cena.tipo !== 'lousa') return cena;
+  return {
+    ...cena,
+    fala: fala('A questão não traz figura. Vamos desenhar.', 'Uma caixa (paralelepípedo): três medidas, x, y e z. As faces opostas são iguais.'),
+    desenho: cena.desenho.map((d) => {
+      if (d.k !== 'tx') return d;
+      if (XYZ[d.s]) return { ...d, s: XYZ[d.s] };
+      return d.s.startsWith('c = ') ? { ...d, s: 'x, y, z = as três medidas' } : d;
+    }),
+  };
+}
+
 /** Põe a tela do sólido logo depois do papel da questão, só se a questão não tem imagem. */
 export function comFiguraDoSolido(aula: AulaLousa, enunciado: string, temImagem: boolean): AulaLousa {
   if (temImagem) return aula;
@@ -109,6 +125,8 @@ export function comFiguraDoSolido(aula: AulaLousa, enunciado: string, temImagem:
   if (!s) return aula;
   const ultimoPapel = aula.cenas.reduce((i, c, k) => (c.tipo === 'papel' ? k : i), -1);
   if (ultimoPapel < 0) return aula;
-  const cenas = [...aula.cenas.slice(0, ultimoPapel + 1), telaDoSolido(s), ...aula.cenas.slice(ultimoPapel + 1)];
+  const usaXyz = s === 'caixa' && JSON.stringify(aula.cenas).includes('x + y + z');
+  const figura = usaXyz ? comLetrasXyz(telaDoSolido(s)) : telaDoSolido(s);
+  const cenas = [...aula.cenas.slice(0, ultimoPapel + 1), figura, ...aula.cenas.slice(ultimoPapel + 1)];
   return { cenas };
 }

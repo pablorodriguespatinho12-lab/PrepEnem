@@ -4690,7 +4690,7 @@
     },
     {
      "titulo": "O desenho",
-     "texto": "Veja o copo: um cone com a ponta para baixo, 10 cm de diâmetro e 9 cm de altura. O suco chega a 80% da altura e forma um cone menor.",
+     "texto": "Veja o copo: um cone com a ponta para baixo, 10 cm de diâmetro e 9 cm de altura. O suco sobe só 80 de cada 100 partes da altura (80%) e forma um cone menor.",
      "visual": {
       "tipo": "diagrama",
       "nome": "copo-cone-80",
@@ -4734,7 +4734,7 @@
     },
     {
      "titulo": "Achando M: a mistura com água",
-     "texto": "2 partes de concentrado para 1 de água: 3 partes no total. O concentrado (450π) é 2 partes: 1 parte = 450π ÷ 2 = 225π. A mistura tem 3 partes: M = 3 · 225π = 675π cm³."
+     "texto": "2 partes de concentrado para 1 de água: 3 partes no total. O concentrado (450π) é 2 partes: 1 parte = 450π ÷ 2 = 225π (400 ÷ 2 = 200 e 50 ÷ 2 = 25). A mistura tem 3 partes: M = 3 · 225π = 675π cm³."
     },
     {
      "titulo": "Achando U: depois da perda",
@@ -4742,11 +4742,11 @@
     },
     {
      "titulo": "Achando P: o copo cheio",
-     "texto": "Volume do cone = ⅓ · π · raio · raio · altura = ⅓ · π · 5 · 5 · 9. 25 · 9 = 225 e 225 ÷ 3 = 75. O copo cheio tem 75π cm³."
+     "texto": "O sinal ⅓ se lê um terço: é dividir por 3. Volume do cone = ⅓ · π · raio · raio · altura = ⅓ · π · 5 · 5 · 9. 25 · 9 = 225 e 225 ÷ 3 = 75. O copo cheio tem 75π cm³."
     },
     {
      "titulo": "Achando P: o copo a 80% (2 de 3)",
-     "texto": "80% = 80 ÷ 100 = 0,8. O suco forma um cone menor com o mesmo formato do copo (semelhante), razão 0,8. O volume depende de 3 medidas, então vai com 0,8 · 0,8 · 0,8: 0,8 · 0,8 = 0,64 e 0,64 · 0,8 = 0,512.",
+     "texto": "80% = 80 ÷ 100 = 0,8. O suco é um cone menor, com o mesmo formato do copo: cada medida dele é 0,8 vez a do copo. O volume depende de 3 medidas, então vai com 0,8 · 0,8 · 0,8: 0,8 · 0,8 = 0,64 e 0,64 · 0,8 = 0,512.",
      "visual": {
       "tipo": "diagrama",
       "nome": "copo-cone-80",
@@ -4762,7 +4762,7 @@
     },
     {
      "titulo": "Volta na equação",
-     "texto": "N = 607,5π ÷ 38,4π. O π some: 6π ÷ 3π = 2, igual a 6 ÷ 3. Fica 607,5 ÷ 38,4 = 6 075 ÷ 384 (vezes 10 nos dois). 384 · 15 = 5 760 (3 840 + 1 920) e sobram 315, menos que 384: dá 15 e um pouco (≈ 15,8).\nSó os completos: 15 · 38,4 = 576 cabe em 607,5; 16 · 38,4 = 614,4 passa.\nResposta: alternativa A.",
+     "texto": "N = 607,5π ÷ 38,4π. O π some: 6π ÷ 3π = 2, igual a 6 ÷ 3. Fica 607,5 ÷ 38,4 = 6 075 ÷ 384 (vezes 10 nos dois). 384 · 15 = 5 760 (10x: 3 840; 5x: 1 920) e sobram 315, menos que 384: dá 15 e pouco.\nSó os completos: 15 · 38,4 = 576 cabe em 607,5; 16 · 38,4 = 614,4 passa.\nResposta: alternativa A.",
      "visual": {
       "tipo": "tabela",
       "titulo": "As letras",
@@ -4796,7 +4796,7 @@
     },
     {
      "titulo": "Questão parecida? Faça assim",
-     "texto": "Pista: servir até 80% da altura forma um cone semelhante: o volume vai com 0,8 · 0,8 · 0,8; antes de dividir, ache o líquido de verdade (mistura com água, menos a perda).",
+     "texto": "Pista: servir até 80% da altura forma um cone menor de mesmo formato: o volume vai com 0,8 · 0,8 · 0,8; antes de dividir, ache o líquido de verdade (mistura com água, menos a perda).",
      "visual": {
       "tipo": "tabela",
       "titulo": "A receita",

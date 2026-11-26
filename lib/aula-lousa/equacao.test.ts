@@ -36,6 +36,31 @@ describe('expandirEquacao', () => {
   });
 });
 
+describe('legendas que não cabem lado a lado', () => {
+  const caixa = [
+    { s: 'v', leg: 'volume, em m³' },
+    { s: '=' },
+    { s: 'c', leg: 'comprimento, em metros' },
+    { s: '×' },
+    { s: 'l', leg: 'largura, em metros' },
+    { s: '×' },
+    { s: 'a', leg: 'altura, em metros' },
+  ];
+  const textos = expandirEquacao({ k: 'eq', y: 100, t: 0, tam: 44, partes: caixa }, { emLista: true }).flatMap((d) => (d.k === 'tx' ? [d] : []));
+  const legendas = textos.filter((d) => d.cor === 'cinza');
+
+  it('empilha uma legenda por linha, com a letra na frente, sem sair da lousa', () => {
+    expect(legendas.map((d) => d.s)).toEqual(['v = volume, em m³', 'c = comprimento, em metros', 'l = largura, em metros', 'a = altura, em metros']);
+    expect(new Set(legendas.map((d) => d.y)).size).toBe(4);
+    expect(legendas.every((d) => d.x === 200 && d.y < 280)).toBe(true);
+  });
+
+  it('a equação fica grande e inteira dentro da lousa', () => {
+    const peças = textos.filter((d) => d.cor !== 'cinza');
+    expect(peças.every((d) => d.x > 20 && d.x < 380 && d.tam! > 20)).toBe(true);
+  });
+});
+
 describe('validarLousa com eq', () => {
   const cena = (desenho: unknown[]) => ({ tipo: 'lousa', fala: [[0.3, 'oi']], desenho });
   const base = [cena([{ k: 'tx', x: 1, y: 1, s: 'a', t: 0 }]), cena([{ k: 'tx', x: 1, y: 1, s: 'b', t: 0 }])];
