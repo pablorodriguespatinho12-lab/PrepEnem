@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { cabem, falas, lousaDoRobo, quebrar } from './do-robo';
+import { cabem, dividirEnunciado, falas, lousaDoRobo, quebrar } from './do-robo';
 import { validarLousa } from './validar';
 import { META_DE_CONTA, TOLERANCIA_DA_META, ehTelaDeConta } from './quadro-de-conta';
 
@@ -140,5 +140,11 @@ describe('falas não saem cortadas', () => {
     expect(ditas[ditas.length - 1]).not.toMatch(/[:;,]$/);
     const palavras = new Set(longo.split(/[\s.:;,]+/));
     for (const p of ditas.join(' ').split(/[\s.:;,]+/)) expect(palavras.has(p)).toBe(true);
+  });
+});
+
+describe('enunciado com figura', () => {
+  it('troca a marca [IMAGEM] por um aviso', () => {
+    expect(dividirEnunciado('Veja [IMAGEM: um cubo] e responda.')).toEqual(['Veja (figura na questão) e responda.']);
   });
 });

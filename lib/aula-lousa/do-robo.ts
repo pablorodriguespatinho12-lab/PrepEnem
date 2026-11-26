@@ -180,7 +180,9 @@ export function telasDaEquacao(formula: string, leitura: string, letras: Record<
 const MAX_PAPEL_POR_TELA = 380; // o quadro tem altura fixa: acima disso as alternativas ficam abaixo da dobra (sem rolar)
 
 /** Enunciado longo vira várias telas de papel, quebrando entre frases; as alternativas vão na última. */
-export function dividirEnunciado(enunciado: string): string[] {
+export function dividirEnunciado(bruto: string): string[] {
+  // "[IMAGEM]" é marca do banco: no papel da lousa vira um aviso que o aluno entende.
+  const enunciado = bruto.replace(/\[IMAGEM[^\]]*\]/g, '(figura na questão)');
   if (enunciado.length <= MAX_PAPEL_POR_TELA) return [enunciado];
   const frases = enunciado.match(/[^.!?]+[.!?]+(?:\s|$)|[^.!?]+$/g) ?? [enunciado];
   const partes: string[] = [];
