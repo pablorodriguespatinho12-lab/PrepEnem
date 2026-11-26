@@ -90,7 +90,7 @@ function PracaQuatroTriangulos({ rotulos }: Props) {
   const tri = (a: number[], b: number[]) => `${a[0]},${a[1]} ${b[0]},${b[1]} ${P[0]},${P[1]}`;
   const soma = dado(rotulos, 2);
   return (
-    <svg viewBox={`0 0 380 ${soma ? 320 : 292}`} className="w-full max-w-[380px] h-auto" role="img" aria-label="praça retangular ABCD com o ponto P dentro, ligado aos 4 vértices: flores no triângulo de baixo, grama no de cima e pedras nos dois das laterais">
+    <svg viewBox={`-40 0 420 ${soma ? 320 : 292}`} className="w-full max-w-[380px] h-auto" role="img" aria-label="praça retangular ABCD com o ponto P dentro, ligado aos 4 vértices: flores no triângulo de baixo, grama no de cima e pedras nos dois das laterais">
       <polygon points={tri(A, B)} fill={SUJO} fillOpacity={0.75} />
       <polygon points={tri(D, C)} fill={LIMPO} />
       <polygon points={tri(B, C)} fill={CHAO} />
@@ -113,7 +113,7 @@ function PracaQuatroTriangulos({ rotulos }: Props) {
       <Texto x={252} y={112} tam={13}>pedras</Texto><Texto x={252} y={130} tam={13}>R$ 25</Texto>
       <Texto x={92} y={106} tam={12}>pedras</Texto><Texto x={92} y={122} tam={12}>R$ 25</Texto>
       <Texto x={180} y={240} tam={14}>{r(rotulos, 0, 'AB = AD + 8 m · perímetro 64 m')}</Texto>
-      <Texto x={22} y={122} tam={13} ancora="middle">{dado(rotulos, 1)}</Texto>
+      <Texto x={6} y={122} tam={13} ancora="middle">{dado(rotulos, 1)}</Texto>
       <Texto x={180} y={264} tam={13} cor={CORTE}>tracejado: a distância pedida, de P a CD</Texto>
       {soma && <Texto x={190} y={288} tam={13}>{soma}</Texto>}
       {soma && <Texto x={190} y={308} tam={13}>{dado(rotulos, 4)}</Texto>}

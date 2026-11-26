@@ -74,10 +74,10 @@ describe('lousa a partir da aula do robô', () => {
 
   it('"Achando P" e a volta viram conta; a prosa e "Letra A." só viram fala', () => {
     const cenas = gera().cenas;
-    const volta = cenas[cenas.length - 1];
+    expect(textosDe(cenas[cenas.length - 1]).map((d) => d.s)).toContain('Resposta: alternativa A');
+    const volta = cenas[cenas.length - 2];
     expect(textosDe(volta).map((d) => d.s)).toEqual(expect.arrayContaining(['S', '=', '3', '×', '4', '12']));
     expect(textosDe(volta).some((d) => /Letra/.test(d.s))).toBe(false);
-    expect(textosDe(volta).map((d) => d.s)).toContain('Resposta: alternativa A: 12');
     expect(volta.fala.map((f) => f[1]).join(' ')).toContain('Letra A');
   });
 

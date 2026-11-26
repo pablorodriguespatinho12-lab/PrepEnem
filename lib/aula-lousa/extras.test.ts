@@ -36,7 +36,7 @@ describe('telas extras da lousa', () => {
   });
 
   it('escreve a resposta no quadro, sem inventar quando não há letra', () => {
-    expect(escrito(comResposta([], 'Letra B.', ['1', '2']))).toContain('Resposta: alternativa B: 2');
+    expect(escrito(comResposta([], 'Letra B.', ['1', '2']))).toContain('A: 1 | B: 2 | Resposta: alternativa B');
     expect(comResposta([], 'Q = 3', ['1', '2'])).toEqual([]);
   });
 });
