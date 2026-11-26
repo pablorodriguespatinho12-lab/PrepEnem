@@ -1,4 +1,4 @@
-export const DEFAULT_THEME_COLOR = 'clareza';
+export const DEFAULT_THEME_COLOR = 'jardim';
 
 type ThemeModeTokens = {
   primary: string;
@@ -162,7 +162,7 @@ export const themeColors: Record<string, ThemeColorSet> = {
   /* Modo Jardim (Pablo, 26/11/2026: "como se fosse um modo do site... verde claro"):
      além da cor, troca letra, fundo e capa (app/jardim.css). */
   jardim: {
-    label: 'Jardim (modo)',
+    label: 'Jardim (padrão)',
     swatch: '#a9dc9b',
     light: {
       primary: '140 42% 27%',
