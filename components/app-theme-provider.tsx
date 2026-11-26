@@ -39,6 +39,9 @@ export function AppThemeProvider({ children }: { children: React.ReactNode }) {
     root.style.setProperty('--ring', mode.ring);
     root.style.setProperty('--accent', mode.accent);
     root.style.setProperty('--chart-1', mode.chart1);
+    // Destaque do menu, Início e Estudar: o tom claro do tema, com tinta escura, nos dois modos.
+    root.style.setProperty('--destaque', set.dark.primary);
+    root.style.setProperty('--destaque-tinta', set.dark.primaryForeground);
     // A escala de superfície é a fonte da elevação; --background/--card/--popover
     // derivam dela para os componentes shadcn continuarem funcionando.
     root.style.setProperty('--primary-text', mode.primaryText);

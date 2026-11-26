@@ -1,7 +1,8 @@
-import { DM_Sans, Fraunces, Source_Serif_4, JetBrains_Mono, Caveat } from 'next/font/google';
+import { DM_Sans, Fraunces, Source_Serif_4, JetBrains_Mono, Caveat, Sora } from 'next/font/google';
 import localFont from 'next/font/local';
 import { headers } from 'next/headers';
 import './globals.css';
+import './moderno.css';
 import { Providers } from '@/components/providers';
 import { FocoTeclado } from '@/components/foco-teclado';
 import { AppLayout } from '@/components/app-layout';
@@ -20,6 +21,8 @@ const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-sans', display: '
 const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-display', display: 'swap' });
 const sourceSerif = Source_Serif_4({ subsets: ['latin'], variable: '--font-reading', display: 'swap' });
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono', display: 'swap' });
+/* Sora: menu, Início e Estudar (desenho aprovado em 26/11/2026, app/moderno.css). */
+const sora = Sora({ subsets: ['latin'], weight: ['400', '600', '700', '800'], variable: '--font-sora', display: 'swap' });
 /* Letra de mão da lousa (components/aula-lousa), a mesma da amostra que o Pablo aprovou. */
 const caveat = Caveat({ subsets: ['latin'], weight: ['600', '700'], variable: '--font-mao', display: 'swap' });
 /* Jersey 10 (pixel): só no mundo pixel (número grande, letra da alternativa, placa).
@@ -60,7 +63,7 @@ export async function generateMetadata() {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning data-letra-pixel="">
-      <body className={`${dmSans.variable} ${fraunces.variable} ${sourceSerif.variable} ${jetbrainsMono.variable} ${caveat.variable} ${jersey.variable} ${jerseyTexto.variable} font-sans`}>
+      <body className={`${dmSans.variable} ${fraunces.variable} ${sourceSerif.variable} ${jetbrainsMono.variable} ${caveat.variable} ${sora.variable} ${jersey.variable} ${jerseyTexto.variable} font-sans`}>
         <Providers nonce={headers().get('x-nonce') ?? undefined}>
           <AppLayout>
             {children}

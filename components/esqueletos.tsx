@@ -82,7 +82,7 @@ export function EsqueletoApp() {
           <Bloco key={i} className="h-9 w-full rounded-[var(--radius-control)]" />
         ))}
       </div>
-      <div className="md:ml-64 p-4 md:p-8 pt-16 md:pt-8 max-w-6xl">
+      <div className="com-menu p-4 md:p-8 max-w-6xl">
         <div className="surface-1 rounded-[var(--radius-surface)] p-6 space-y-4">
           <Bloco className="h-8 w-28 rounded-[var(--radius-control)]" />
           <Bloco className="h-4 w-64 max-w-full rounded-[var(--radius-data)]" />

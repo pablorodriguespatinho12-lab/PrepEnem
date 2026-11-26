@@ -1,11 +1,9 @@
 'use client';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { OPCOES_DA_META, guardarMeta, lerMeta, META_PADRAO, progressoDaMeta } from '@/lib/meta-provas';
 
-/* Meta de provas do dia (Pablo, 21/11/2026: "umas 2 provas por dia"). Quadradinhos cheios
-   = provas terminadas hoje; botões 1 a 4 trocam a meta (nunca controle deslizante). Sem
-   contagem regressiva de prova (regra dele). */
+/* Meta de provas do dia (Pablo, 21/11/2026: "umas 2 provas por dia"). Botões 1 a 4
+   trocam a meta (nunca controle deslizante). Sem contagem regressiva de prova. */
 export function MetaDoDia() {
   const [meta, setMeta] = useState(META_PADRAO);
   const [feitas, setFeitas] = useState<number | null>(null);
@@ -20,51 +18,25 @@ export function MetaDoDia() {
     return () => { ativo = false; };
   }, []);
 
-  if (feitas === null) return null;
-  const p = progressoDaMeta(feitas, meta);
-
+  const p = progressoDaMeta(feitas ?? 0, meta);
   const escolher = (valor: number) => { setMeta(valor); guardarMeta(valor); };
 
   return (
-    <section aria-labelledby="meta-do-dia" className="py-5 border-t border-border">
-      <div className="flex items-baseline justify-between gap-3">
-        <h2 id="meta-do-dia" className="type-meta font-medium text-foreground">Provas de hoje</h2>
-        <span className="type-meta text-muted-foreground" aria-live="polite">
-          {p.bateu ? 'Meta feita' : `${p.feitas} de ${p.meta}`}
-        </span>
+    <section aria-labelledby="meta-do-dia" className="m-cartao m-col5">
+      <h2 id="meta-do-dia">Meta de hoje</h2>
+      <div className="m-numero px" data-numeric aria-live="polite">
+        {feitas === null ? '–' : p.feitas}<span style={{ color: 'var(--m-mut)' }} className="px m-numero"> / {p.meta}</span>
       </div>
-
-      <div className="mt-3 flex gap-2" aria-hidden="true">
-        {Array.from({ length: Math.max(p.meta, p.feitas) }, (_, i) => (
-          <span
-            key={i}
-            className={`h-3 flex-1 rounded-sm transition-colors duration-300 ${i < p.feitas ? 'bg-primary' : 'bg-primary/15'}`}
-          />
+      <div className="m-trilha" aria-hidden>
+        <i style={{ transform: `scaleX(${feitas === null ? 0 : Math.min(1, p.feitas / p.meta)})` }} />
+      </div>
+      <p className="m-mut">{feitas !== null && p.bateu ? 'Meta feita' : 'provas terminadas'}</p>
+      <div className="m-metas" role="group" aria-label="Meta de provas por dia">
+        {OPCOES_DA_META.map((n) => (
+          <button key={n} type="button" onClick={() => escolher(n)} aria-pressed={meta === n} className="m-sec">
+            {n}
+          </button>
         ))}
-      </div>
-
-      <div className="mt-4 flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2" role="group" aria-label="Meta de provas por dia">
-          <span className="type-meta text-muted-foreground">Meta</span>
-          {OPCOES_DA_META.map((n) => (
-            <button
-              key={n}
-              type="button"
-              onClick={() => escolher(n)}
-              aria-pressed={meta === n}
-              className={`h-9 w-9 rounded-full type-meta font-medium outline-none transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary ${
-                meta === n ? 'bg-primary text-primary-foreground' : 'bg-primary/10 text-primary-text'
-              }`}
-            >
-              {n}
-            </button>
-          ))}
-        </div>
-        {!p.bateu && (
-          <Link href="/provas" className="type-meta font-medium text-primary-text">
-            {p.feitas === 0 ? 'Fazer a 1ª' : `Falta${p.restam > 1 ? 'm' : ''} ${p.restam}`}
-          </Link>
-        )}
       </div>
     </section>
   );

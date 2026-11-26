@@ -10,7 +10,7 @@ export function BarraQuestao({ podeVoltar, onAnterior, marcada, onMarcar, princi
 }) {
   const neutro = 'min-h-12 px-3 md:px-5 rounded-[var(--radius-control)] border border-border type-meta font-medium t-colors disabled:opacity-40';
   return (
-    <div className="sticky bottom-0 z-10 -mx-5 -mb-5 md:-mx-8 md:-mb-8 mt-6 px-5 md:px-8 py-3 flex items-center justify-between gap-2 bg-[hsl(var(--surface-1))] border-t border-border">
+    <div className="sticky bottom-[var(--doca)] z-10 -mx-5 -mb-5 md:-mx-8 md:-mb-8 mt-6 px-5 md:px-8 py-3 flex items-center justify-between gap-2 bg-[hsl(var(--surface-1))] border-t border-border">
       <button type="button" disabled={!podeVoltar} onClick={onAnterior} className={`${neutro} text-foreground`}>
         Anterior
       </button>

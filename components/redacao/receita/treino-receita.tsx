@@ -195,7 +195,7 @@ export function TreinoReceita() {
       </div>
 
       {/* Barra presa embaixo: Voltar e Próximo nunca mudam de lugar. */}
-      <nav className="sticky bottom-0 -mx-4 md:-mx-8 border-t border-border bg-background px-4 md:px-8 py-3" aria-label="Passos">
+      <nav className="sticky bottom-[var(--doca)] -mx-4 md:-mx-8 border-t border-border bg-background px-4 md:px-8 py-3" aria-label="Passos">
         <div className="flex items-center justify-between gap-3">
           <button
             type="button"
