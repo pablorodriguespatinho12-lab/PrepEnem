@@ -1,8 +1,11 @@
 'use client';
 import { useEffect, useState, useCallback, useRef } from 'react';
+import { MapaQuestoes } from '@/components/provas/mapa-questoes';
+import { BarraQuestao } from '@/components/provas/barra-questao';
+import { useMarcadas } from '@/components/provas/use-marcadas';
 import { useRouter, useParams, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import { ChevronLeft, Trophy, Loader2, ArrowRight, Target, Brain, AlertCircle, Check, X } from 'lucide-react';
+import { ChevronLeft, Trophy, Loader2, Brain, AlertCircle, Check, X, Undo2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { materiaColors } from '@/lib/theme-colors';
 import { etapaDaQuestao, rotuloDaQuestao } from '@/lib/treino-etapas';
@@ -90,6 +93,11 @@ export default function ProvaDetailPage() {
   const shouldReduceMotion = useReducedMotion();
   const mundo = useMundoAnimado();
   const telaCheia = useTelaCheia();
+  const { marcadas, alternar: alternarMarca } = useMarcadas(examId);
+  // Questão já respondida aberta pelo mapa; null = a atual.
+  const [vendo, setVendo] = useState<number | null>(null);
+  // Alternativas riscadas, por questão (só enquanto a prova está aberta).
+  const [riscadas, setRiscadas] = useState<Record<string, string[]>>({});
   // muda a cada toque numa alternativa: remonta as faíscas para tocarem de novo
   const [toque, setToque] = useState(0);
   // Reforço: errou, a próxima é uma parecida do mesmo conteúdo (não conta na nota).
@@ -330,9 +338,26 @@ export default function ProvaDetailPage() {
     );
   }
 
-  const q = reforcoAtivo?.questao ?? currentEQ.question;
+  const antiga = vendo === null ? null : exam.questions[vendo];
+  const idxVisto = vendo ?? exam.currentIdx;
+  const reforco = antiga ? null : reforcoAtivo;
+  const q = antiga ? antiga.question : reforcoAtivo?.questao ?? currentEQ.question;
+  // O que a tela mostra: a resposta antiga (só leitura) ou a da questão atual.
+  const respondidaTela = antiga ? true : submitted;
+  const respostaTela: string | null = antiga ? antiga.respostaDada : selectedAnswer;
+  const retorno = antiga ? { acertou: antiga.acertou, respostaCorreta: antiga.question.respostaCorreta } : feedback;
+  const foraDaConta: string[] = riscadas[q.id] ?? [];
+  const abrirQuestao = (i: number) => {
+    setVendo(i === exam.currentIdx ? null : i);
+    window.scrollTo({ top: 0 });
+  };
+  const riscar = (letra: string) => {
+    const fora = foraDaConta.includes(letra);
+    setRiscadas((r) => ({ ...r, [q.id]: fora ? foraDaConta.filter((x) => x !== letra) : [...foraDaConta, letra] }));
+    if (selectedAnswer === letra) setSelectedAnswer(null);
+  };
   // O astronauta reage à resposta dentro do desenho da questão (14/11/2026).
-  const reacao = submitted && feedback ? (feedback.acertou ? 'acerto' : 'erro') : null;
+  const reacao = respondidaTela && retorno ? (retorno.acertou ? 'acerto' : 'erro') : null;
   const alternativas = [
     { letra: 'A', texto: q.alternativaA },
     { letra: 'B', texto: q.alternativaB },
@@ -410,8 +435,6 @@ export default function ProvaDetailPage() {
     window.scrollTo({ top: 0 });
   };
 
-  const progress = (exam.currentIdx + (submitted ? 1 : 0)) / exam.totalQuestoes;
-
   // Mundo pixel atrás da prova (Pablo, 12/11/2026): o céu aparece em cima do
   // cartão, a serra embaixo, e o dia e a noite passam enquanto ele estuda.
   return (
@@ -441,18 +464,14 @@ export default function ProvaDetailPage() {
         animate={{ opacity: 1, y: 0 }}
         className="mb-6"
       >
-        <div className="flex items-center justify-between mb-3 gap-3">
-          <h1 className="font-display type-headline font-semibold truncate">{exam.nome}</h1>
-          <span data-numeric className="type-meta font-medium text-muted-foreground shrink-0">
-            {exam.currentIdx + 1}/{exam.totalQuestoes}
-          </span>
-        </div>
-        <div className="h-px w-full bg-border overflow-hidden" role="presentation">
-          <div
-            className="h-full w-full bg-primary origin-left transition-transform duration-medium ease-out-quart"
-            style={{ transform: `scaleX(${progress})` }}
-          />
-        </div>
+        <h1 className="font-display type-headline font-semibold mb-3">{exam.nome}</h1>
+        <MapaQuestoes
+          respondidas={exam.questions.map((eq: any) => Boolean(eq.answered))}
+          atual={exam.currentIdx}
+          vendo={idxVisto}
+          marcadas={exam.questions.map((eq: any) => marcadas.includes(eq.question.id))}
+          onAbrir={abrirQuestao}
+        />
       </motion.div>
 
       {/* Question */}
@@ -475,7 +494,7 @@ export default function ProvaDetailPage() {
             </span>
             {/* Nível da questão (Pablo, 03/11/2026: "cadê o nível das questões?"). */}
             <span className="type-caption px-2 py-0.5 rounded-[var(--radius-data)] bg-muted text-foreground font-medium">
-              {reforcoAtivo ? 'Reforço · estilo ENEM' : etapaDaQuestao(q) === 'enem' && q.anoProva ? `ENEM ${q.anoProva} · questão real` : rotuloDaQuestao(q)}
+              {reforco ? 'Reforço · estilo ENEM' : etapaDaQuestao(q) === 'enem' && q.anoProva ? `ENEM ${q.anoProva} · questão real` : rotuloDaQuestao(q)}
             </span>
             {q.subtema && (
               <>
@@ -484,7 +503,7 @@ export default function ProvaDetailPage() {
               </>
             )}
           </div>
-          {reforcoAtivo && (
+          {reforco && (
             <p className="mb-4 px-4 py-3 rounded-[var(--radius-control)] bg-primary/10 type-meta text-foreground">
               <strong className="text-primary-text">Questão de reforço:</strong> parecida com a que você errou, para ver se ficou claro. Não conta na nota da prova.
             </p>
@@ -494,15 +513,15 @@ export default function ProvaDetailPage() {
           </div>
           {/* Cena em pixel da situação da questão (Pablo, 14/11/2026: "se fala de um menino
               puxando uma corda, desenha o menino"). Mapa em data/revisao-final/cenas-das-questoes.json. */}
-          {!reforcoAtivo && cenaDaQuestao(q.id) && (
+          {!reforco && cenaDaQuestao(q.id) && (
             <div className="mb-6">
               <FiguraPixel nome={cenaDaQuestao(q.id)!.nome} rotulos={cenaDaQuestao(q.id)!.rotulos} semConta astronauta={{ reacao }} />
             </div>
           )}
           {/* Desenho em pixel da questão de reforço, sem a conta (só ajuda a entender). */}
-          {reforcoAtivo?.figura && (
+          {reforco?.figura && (
             <div className="mb-6">
-              <FiguraPixel nome={reforcoAtivo.figura.nome} rotulos={reforcoAtivo.figura.rotulos} semConta astronauta={{ reacao }} />
+              <FiguraPixel nome={reforco.figura.nome} rotulos={reforco.figura.rotulos} semConta astronauta={{ reacao }} />
             </div>
           )}
           <AulaDoTema key={`aula-${q.id}`} tema={temaDaQuestao(q)} questao={q} className="mb-6" />
@@ -525,12 +544,13 @@ export default function ProvaDetailPage() {
               // isCorrect/isWrong só existem quando `submitted` é true, e `submitted` só vira
               // true depois que `feedback` já foi setado (mesmo bloco síncrono em
               // handleSubmit) — não há janela onde submitted=true e feedback=null aqui.
-              const isCorrect = submitted && alt.letra === feedback?.respostaCorreta;
-              const isWrong = submitted && selectedAnswer === alt.letra && alt.letra !== feedback?.respostaCorreta;
-              const isSelected = !submitted && selectedAnswer === alt.letra;
+              const isCorrect = respondidaTela && alt.letra === retorno?.respostaCorreta;
+              const isWrong = respondidaTela && respostaTela === alt.letra && alt.letra !== retorno?.respostaCorreta;
+              const isSelected = !respondidaTela && respostaTela === alt.letra;
+              const riscada = !respondidaTela && foraDaConta.includes(alt.letra);
 
               // A alternativa respondida (a marcada) abre os anéis; a certa só acende.
-              const respondida = submitted && selectedAnswer === alt.letra;
+              const respondida = !antiga && submitted && selectedAnswer === alt.letra;
               return (
                 // A entrada fica no invólucro: o transform do framer no botão
                 // apagaria o "afundar" de 4 px do CSS (.px-alt).
@@ -539,18 +559,20 @@ export default function ProvaDetailPage() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.08, duration: 0.3 }}
+                  className="flex items-stretch gap-3"
                 >
                   <button
                     type="button"
-                    disabled={submitted}
+                    disabled={respondidaTela}
                     onClick={() => {
-                      if (submitted) return;
+                      if (respondidaTela) return;
+                      if (riscada) riscar(alt.letra);
                       setSelectedAnswer(alt.letra);
                       setToque((t) => t + 1);
                     }}
                     data-alt={alt.letra}
                     data-state={isCorrect ? 'correta' : isWrong ? 'errada' : isSelected ? 'selecionada' : 'repouso'}
-                    className="px-alt"
+                    className={`px-alt min-w-0 ${riscada ? 'opacity-50 line-through' : ''}`}
                   >
                     <span aria-hidden className="px-letra">{alt.letra}</span>
                     <span className="font-reading text-body leading-[var(--lh-reading)] pt-0.5 flex-1">
@@ -571,13 +593,25 @@ export default function ProvaDetailPage() {
                         <span key={ms} aria-hidden className="px-anel" style={{ ['--atraso' as string]: `${ms}ms` }} />
                       ))}
                   </button>
+                  {!respondidaTela && (
+                    <button
+                      type="button"
+                      aria-pressed={riscada}
+                      aria-label={`Riscar a alternativa ${alt.letra}`}
+                      title={riscada ? 'Desfazer o risco' : 'Riscar'}
+                      onClick={() => riscar(alt.letra)}
+                      className="shrink-0 w-11 rounded-[var(--radius-control)] border border-border grid place-items-center text-muted-foreground hover:text-foreground t-colors"
+                    >
+                      {riscada ? <Undo2 className="w-4 h-4" /> : <X className="w-4 h-4" />}
+                    </button>
+                  )}
                 </motion.div>
               );
             })}
           </div>
 
           {/* Feedback + Explanation after answer */}
-          {submitted && feedback && (
+          {respondidaTela && retorno && (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -587,73 +621,52 @@ export default function ProvaDetailPage() {
               <div
                 className="rounded-[var(--radius-surface)] border p-4"
                 style={{
-                  backgroundColor: feedback.acertou ? 'hsl(var(--success-surface))' : 'hsl(var(--danger-surface))',
-                  borderColor: feedback.acertou ? 'hsl(var(--success-border))' : 'hsl(var(--danger-border))',
+                  backgroundColor: retorno.acertou ? 'hsl(var(--success-surface))' : 'hsl(var(--danger-surface))',
+                  borderColor: retorno.acertou ? 'hsl(var(--success-border))' : 'hsl(var(--danger-border))',
                 }}
               >
                 <div className="flex items-center gap-2 mb-1">
-                  <span style={{ color: feedback.acertou ? 'hsl(var(--success))' : 'hsl(var(--danger))' }}>
-                    {feedback.acertou ? <Check className="w-5 h-5" strokeWidth={3} /> : <X className="w-5 h-5" strokeWidth={3} />}
+                  <span style={{ color: retorno.acertou ? 'hsl(var(--success))' : 'hsl(var(--danger))' }}>
+                    {retorno.acertou ? <Check className="w-5 h-5" strokeWidth={3} /> : <X className="w-5 h-5" strokeWidth={3} />}
                   </span>
                   <span
                     className="font-display type-lead font-semibold"
-                    style={{ color: feedback.acertou ? 'hsl(var(--success))' : 'hsl(var(--danger))' }}
+                    style={{ color: retorno.acertou ? 'hsl(var(--success))' : 'hsl(var(--danger))' }}
                   >
-                    {feedback.acertou ? 'Correto' : 'Incorreto'}
+                    {retorno.acertou ? 'Correto' : 'Incorreto'}
                   </span>
                 </div>
-                {!feedback.acertou && (
+                {!retorno.acertou && (
                   <p className="type-meta text-foreground/80">
                     Resposta correta:{' '}
-                    <span className="font-semibold" style={{ color: 'hsl(var(--success))' }}>{feedback.respostaCorreta}</span>
+                    <span className="font-semibold" style={{ color: 'hsl(var(--success))' }}>{retorno.respostaCorreta}</span>
                   </p>
                 )}
               </div>
 
-              <ExplicacaoTutor questao={q} respostaDada={selectedAnswer} iniciarSozinha={!feedback.acertou} />
+              <ExplicacaoTutor key={`tutor-${q.id}`} questao={q} respostaDada={respostaTela} iniciarSozinha={!antiga && !retorno.acertou} />
             </motion.div>
           )}
 
-          {/* Submit / Next */}
-          <div className="flex justify-end mt-6">
-            {!submitted ? (
-              <button
-                disabled={!selectedAnswer}
-                onClick={handleSubmit}
-                className="px-6 py-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-2 t-lift enabled:hover:-translate-y-px enabled:hover:shadow-elev-3 disabled:opacity-40 disabled:shadow-elev-1 flex items-center gap-2"
-              >
-                <Target className="w-4 h-4" />
-                Confirmar
-              </button>
-            ) : (
-              <motion.button
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                onClick={handleNext}
-                disabled={fechando}
-                className="px-6 py-3 bg-primary text-primary-foreground rounded-[var(--radius-control)] font-medium type-meta shadow-elev-2 t-lift hover:-translate-y-px hover:shadow-elev-3 flex items-center gap-2"
-              >
-                {!reforcoAtivo && reforcoPronto ? (
-                  <>
-                    Tentar uma parecida
-                    <ArrowRight className="w-4 h-4" />
-                  </>
-                ) : isLast ? (
-                  <>
-                    {fechando ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trophy className="w-4 h-4" />}
-                    Finalizar Prova
-                  </>
-                ) : (
-                  <>
-                    Próxima
-                    <ArrowRight className="w-4 h-4" />
-                  </>
-                )}
-              </motion.button>
-            )}
-          </div>
         </motion.div>
       </AnimatePresence>
+      <BarraQuestao
+        podeVoltar={!reforco && idxVisto > 0}
+        onAnterior={() => abrirQuestao(idxVisto - 1)}
+        marcada={marcadas.includes(q.id)}
+        onMarcar={reforco ? null : () => alternarMarca(q.id)}
+        principal={
+          antiga
+            ? { rotulo: 'Voltar à atual', onClick: () => abrirQuestao(exam.currentIdx) }
+            : !submitted
+              ? { rotulo: 'Confirmar', onClick: handleSubmit, desligado: !selectedAnswer }
+              : {
+                  rotulo: !reforcoAtivo && reforcoPronto ? 'Tentar uma parecida' : isLast ? 'Finalizar Prova' : 'Próxima',
+                  onClick: handleNext,
+                  desligado: fechando,
+                }
+        }
+      />
       </div>
       </div>
     </div>

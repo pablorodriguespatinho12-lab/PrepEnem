@@ -33,6 +33,14 @@ dos componentes, movimento, personalidade visual. Nada disso está decidido
 O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
 `montar-referencia`, escolhida pelo Pablo olhando, e registrada aqui com data.
 
+- **Estudar e questão = quadro de 26/11/2026** (Pablo: "gostei mais do b e
+  resolvendo a questao ficou legal"; artefato W2dDsBP45MBwan8yhFqfmD). Lista:
+  uma coluna por matéria, Continuar no topo, "Mais jeitos", "Outras provas" e
+  "Apagar provas" abrem no clique. Medido: 7,7 telas no PC viraram 1,4
+  (1104 px de 800); celular 17 viraram 4,3. Questão: mapa numerado (só já
+  respondidas e a atual: o servidor grava em ordem), riscar, "Revisar depois"
+  (fica no navegador) e botões fixos embaixo; o fundo de montanhas fica.
+
 - **Fluidez e Início = Nubank (Pablo, 21/10/2026: "achei muito legal e fluido",
   o site e o app).** Medido em nubank.com.br: título de 112px, blocos de cor
   de ponta a ponta, 57 elementos em pílula (999px), transição de 0,65 s,
