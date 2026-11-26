@@ -10,7 +10,7 @@ Palavras próprias; citação literal só em regra de bolso. Contas refeitas. "?
 - **Método** `[5:44:30]` distância usual é Pitágoras: eixos perpendiculares. Passos: ΔX e ΔY são catetos, d = √(ΔX² + ΔY²). Por que funciona: as paralelas aos eixos formam triângulo retângulo.
 - **Método** `[5:47:30]` distância em eixos inclinados (lei dos cossenos): ângulo θ entre os eixos. Passos: levar ΔX e ΔY por paralelas até formar um paralelogramo; o ângulo oposto ao segmento é 180° − θ; usar cos(180° − θ) = −cos θ; d² = ΔX² + ΔY² + 2·ΔX·ΔY·cos θ. Por que funciona: o triângulo deixa de ser retângulo.
 - **Método** `[5:51:31]` achar o cosseno do ângulo por uma distância conhecida: o enunciado dá dois pontos e a distância entre eles, e pede outra distância. Passos: aplicar a fórmula ao par conhecido, isolar cos θ, aplicar ao segundo par. O ângulo em si não precisa. Por que funciona: a única incógnita da fórmula é cos θ.
-- **Método alternativo: converter para eixos perpendiculares** `[5:59:30]`: se souber o ângulo, converter as coordenadas e usar Pitágoras. Ele julga bem mais trabalhoso.
+- **Método** `[5:59:30]` alternativo: converter para eixos perpendiculares: se souber o ângulo, converter as coordenadas e usar Pitágoras. Ele julga bem mais trabalhoso.
 - **Método** `[6:04:30]` completar quadrados na circunferência: equação aberta com x², y², termos lineares. Passos: agrupar x e y; somar e subtrair o quadrado da metade do coeficiente linear; ler (x − a)² + (y − b)² = R². Por que funciona: somar e subtrair o mesmo número não muda a equação e refaz o produto notável.
 - **Método** `[6:07:31]` esboço antes da conta: marcar centro, raio, reta dada e a posição das retas procuradas. Por que funciona: mostra quantas respostas existem e qual a condição extra elimina.
 - **Método** `[6:10:30]` perpendicularidade: retas perpendiculares. Passos: produto dos coeficientes angulares = −1 (inverte e troca o sinal); deixa só o coeficiente linear k como incógnita. Por que funciona: condição de perpendicularidade para retas não paralelas aos eixos.
@@ -38,11 +38,11 @@ Palavras próprias; citação literal só em regra de bolso. Contas refeitas. "?
 - **Método** `[6:31:00]` distância de ponto a reta: tangência (distância do centro = raio). Passos: reta em ax + by + c = 0; d = |a·xP + b·yP + c| / √(a² + b²); aqui |5 − k|/√5 = √5, então k = 0 ou 10. Por que funciona: a distância é medida na perpendicular. Ele acha pesado para a Fuvest, mas sempre funciona.
 - **Método** `[6:35:31]` módulo como duas distâncias: |5 − k| = 5 pede os números a 5 unidades de 5: 0 e 10.
 - **Método** `[6:41:32]` ângulo reto é lugar geométrico (circunferência): ponto P tal que PA ⟂ PB. Passos: os P possíveis ficam na circunferência de diâmetro AB; cruzar com a reta ou curva onde P deve estar. Por que funciona: triângulo retângulo se inscreve em semicircunferência de diâmetro igual à hipotenusa. (A e B ficam fora do lugar válido.)
-- **Método analítico para o mesmo** `[6:44:32]`: sem lembrar da geometria plana. Passos: m(PA)·m(PB) = −1, com m = Δy/Δx: [y/(x + 5)]·[y/(x − 5)] = −1, que vira x² + y² = 25. Por que funciona: definição de coeficiente angular mais perpendicularidade.
+- **Método** `[6:44:32]` analítico para o mesmo: sem lembrar da geometria plana. Passos: m(PA)·m(PB) = −1, com m = Δy/Δx: [y/(x + 5)]·[y/(x − 5)] = −1, que vira x² + y² = 25. Por que funciona: definição de coeficiente angular mais perpendicularidade.
 - **Método** `[6:48:30]` interseção reta com circunferência: substituir y = x + 1: x² + x − 12 = 0, x = 3 ou −4; pontos (3, 4) e (−4, −3). Conferido.
 - **Método** `[6:49:31]` testar terno pitagórico: x² + (x + 1)² = 25 é cateto, cateto + 1, hipotenusa 5: sai 3-4-5; a segunda raiz é −4. Por que funciona: catetos consecutivos 3 e 4.
 - **Método** `[6:51:30]` Δ iguais viram diagonal: ΔX = ΔY = 7, distância 7√2.
-- **Método: reflexão com ponto simétrico** `[6:53:30]` (termina em fuv-13): menor caminho passando por uma reta ou espelho. Passos: refletir o destino B em B'; a distância A–P–B é o segmento AB'. Por que funciona: PB = PB' e a luz segue o menor tempo (princípio de Fermat).
+- **Método** `[6:53:30]` reflexão com ponto simétrico (termina em fuv-13): menor caminho passando por uma reta ou espelho. Passos: refletir o destino B em B'; a distância A–P–B é o segmento AB'. Por que funciona: PB = PB' e a luz segue o menor tempo (princípio de Fermat).
 
 - **Erro que ele avisa** `[6:17:30]`: esquecer o termo cruzado ao elevar (−2x + k) ao quadrado (ele quase erra).
 - **Erro que ele avisa** `[6:24:00]`: aceitar as duas raízes sem checar a condição do enunciado.
@@ -85,7 +85,7 @@ Palavras próprias; citação literal só em regra de bolso. Contas refeitas. "?
 - **Método** `[7:27:01]` gráfico de |x − a| por distância: V com ponta em (a, 0), simétrico em x = a, sem parte abaixo do eixo.
 - **Método** `[7:29:30]` módulo por definição: x − 2 se x ≥ 2; −x + 2 se x < 2; desenhar cada reta só no seu trecho. (A legenda troca o sinal da desigualdade.)
 - **Método** `[7:32:00]` quadro de sinais para vários módulos: dividir em intervalos e abrir cada um. Ele não recomenda aqui.
-- **Método do barbante** `[7:36:00]`: soma de módulos. Passos: uma estaca em cada raiz; andando, conta quantos barbantes esticam e quantos encurtam; o saldo é a inclinação; mínimo onde o saldo muda de negativo para positivo. Inclinações à direita de 3: +1, +3, +5; simétrico à esquerda. Por que funciona: cada distância varia 1 para 1.
+- **Método** `[7:36:00]` do barbante: soma de módulos. Passos: uma estaca em cada raiz; andando, conta quantos barbantes esticam e quantos encurtam; o saldo é a inclinação; mínimo onde o saldo muda de negativo para positivo. Inclinações à direita de 3: +1, +3, +5; simétrico à esquerda. Por que funciona: cada distância varia 1 para 1.
 - **Método** `[7:44:03]` quantidade par de pontos dá patamar: Σ de 1 a 4: entre 2 e 3 os ganhos e perdas se anulam; mínimo constante 4 em [2, 3]. Conferido.
 - **Método** `[7:41:31]` ponto de simetria: achar o centro das estacas e estudar ali (não garante um único mínimo).
 - **Método** `[7:48:31]` expoente negativo inverte a base: 2^(−algo) = (1/2)^algo; deixa o módulo sem sinal.
