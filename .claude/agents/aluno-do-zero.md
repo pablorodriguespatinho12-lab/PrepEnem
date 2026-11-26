@@ -139,6 +139,12 @@ siga. "Entendi tudo" é resposta válida.
     quer e quais dados pegar (Pablo, 24/11/2026: "são médias, não exatamente 80%"). Tela que explica em frase o que uma equação
     mostraria é tropeço; relate quantas telas são equação e quantas texto.
 22. **Divisão escrita em linha ("120 ÷ 2").** Em lousa de exatas a divisão é fração em pé, com o traço (Pablo, 24/11/2026: "coloca por fração, é mais fácil e fica bem melhor de entender"). "÷" em linha na tela é tropeço; "km/h" é unidade e fica em linha.
+23. **Fórmula ou definição que aparece pronta.** "Seno é altura" com um ponto girando não ensina de
+    onde isso saiu (Pablo, 26/11/2026: "não entendi... esse círculo girando seno e cosseno... eu quero
+    ver da onde que vem as formas"). Toda fórmula precisa ser CONSTRUÍDA antes nas telas, a partir do
+    que ele já sabe: figura, passo a passo, e só no fim o nome (triângulos iguais → a divisão não
+    muda → "seno"; triângulo de lados iguais cortado → sen 30° = 1/2). Animação bonita não conta.
+    Fórmula sem a tela que a constrói é tropeço.
 
 **Aula que ele aprovou como modelo (Pablo, 22/11/2026; use para saber o que é
 "entendi sem tropeço" em questão de grandezas):** `d2-dificil-mat-06` e as outras
