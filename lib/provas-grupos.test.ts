@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { agruparProvas, degrauDaProva, TITULO_OUTRAS } from './provas-grupos';
+import { agruparProvas, degrauDaProva, TITULO_CUME, TITULO_OUTRAS } from './provas-grupos';
 
 describe('agruparProvas', () => {
   it('agrupa por matéria, na ordem do dia e da escada; o resto vai para Outras', () => {
@@ -21,5 +21,13 @@ describe('agruparProvas', () => {
   it('sabe o que precisa vir antes', () => {
     expect(degrauDaProva('Física 2 · Dinâmica e Leis de Newton')?.degrau.precisaAntes).toBe('Cinemática');
     expect(degrauDaProva('Física 6 · Eletricidade e Circuitos')?.degrau.precisaAntes).toBeNull();
+  });
+
+  it('prova do nível Cume ganha aba própria, depois das matérias', () => {
+    const grupos = agruparProvas([
+      { nivel: 'cume', nome: 'Cume · Matemática 1' },
+      { nivel: 'escada', nome: 'Física 1 · Cinemática' },
+    ]);
+    expect(grupos.map((g) => g.titulo)).toEqual(['Física', TITULO_CUME]);
   });
 });

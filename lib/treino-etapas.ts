@@ -44,7 +44,7 @@ export function isQuestaoEnem(q: QuestaoClassificavel): boolean {
 }
 export function etapaDaQuestao(q: QuestaoClassificavel): Etapa {
   const nivel = (q.nivel ?? '').toLowerCase();
-  if (nivel === 'acima') return 'acima';
+  if (nivel === 'acima' || nivel === 'cume') return 'acima';
   if (nivel === 'vestibular') return 'vestibular';
   if (isQuestaoEnem(q)) return 'enem';
   if (nivel === 'modelo_enem') return 'dificil';
@@ -57,7 +57,9 @@ export function etapaDaQuestao(q: QuestaoClassificavel): Etapa {
 /** Nome do nível que o aluno VÊ no selo da questão. Junção conta como Difícil na escada do treino, mas mostrar
  *  "Difícil" logo depois do ENEM parecia voltar um degrau (Pablo, 22/11/2026): o selo diz "Junção". */
 export function rotuloDaQuestao(q: QuestaoClassificavel): string {
-  return (q.nivel ?? '').toLowerCase() === 'juncao' ? 'Junção' : ETAPA_LABEL[etapaDaQuestao(q)];
+  const nivel = (q.nivel ?? '').toLowerCase();
+  if (nivel === 'cume') return 'Cume';
+  return nivel === 'juncao' ? 'Junção' : ETAPA_LABEL[etapaDaQuestao(q)];
 }
 /* Fácil → Médio → Difícil → ENEM → acima, sem embaralhar dentro do degrau.
    Usado no simulado, que sorteia as questões mas não pode abrir com a mais difícil. */
