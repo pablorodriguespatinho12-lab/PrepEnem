@@ -121,3 +121,19 @@ html[data-jardim] .px-chip::before, html[data-jardim] .px-chip::after { content:
   html[data-jardim] .m-capa .jv-cena { position: static; height: 190px; }
   html[data-jardim] .m-capa-texto { max-width: none; margin: 0; padding: 20px; gap: 16px; border: 0; border-radius: 0; background: none; }
 }
+
+/* 2ª leva (27/11/2026): capas dos baralhos, pauta da redação e canteiro. */
+html[data-jardim] .jv-capa-baralho { display: block; width: 100%; height: 112px; transition: transform .4s cubic-bezier(.2,.8,.2,1); }
+html[data-jardim] .group:hover > .jv-capa-baralho { transform: scale(1.08); }
+html[data-jardim] .jv-capa-baralho + * { position: relative; background: var(--m-card); }
+html[data-jardim] textarea.jv-pauta { line-height: 32px; padding-top: 0; background: repeating-linear-gradient(var(--m-card) 0 31px, var(--m-line) 31px 32px); background-attachment: local; }
+html[data-jardim] .jv-banner { display: grid; grid-template-columns: 1.1fr 1fr; min-height: 220px; margin-bottom: 24px; overflow: hidden; border: 1px solid var(--m-line); border-radius: 28px; background: var(--m-card); }
+html[data-jardim] .jv-banner > div { display: grid; gap: 8px; align-content: center; padding: 26px; min-width: 0; }
+html[data-jardim] .jv-banner h1 { font-size: clamp(24px, 3.2vw, 34px); line-height: 1.15; overflow-wrap: anywhere; }
+html[data-jardim] .jv-banner .jv-arte { width: 100%; height: 100%; min-height: 190px; display: block; }
+html[data-jardim] .jv-canteiro { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; max-width: 520px; margin: 0 auto 24px; }
+html[data-jardim] .jv-canteiro .jv-planta { display: block; width: 100%; height: auto; }
+@media (max-width: 700px) {
+  html[data-jardim] .jv-banner { grid-template-columns: 1fr; }
+  html[data-jardim] .jv-banner .jv-arte { order: -1; height: 150px; min-height: 0; }
+}
