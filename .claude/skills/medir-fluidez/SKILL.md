@@ -72,6 +72,10 @@ apareceu num trace.
   não mexe no layout. Agora a lousa põe `data-lousa-aberta` no `<html>` (globals.css). Script de medição: rAF + `Performance.getMetrics`
   com CPU 4x; achar o culpado escondendo um suspeito por vez, como acima.
 
+- **Nuvens do Jardim (27/11/2026, "engasgando")**: `steps(700)` em 70 s = 10 pulos de ~2 px por segundo. "Em
+  passos" vale só para o que é a tela inteira. Peça pequena que anda (nuvem, pássaro, anel): `<svg>` ou `div`
+  próprio com `transform`, `linear` e `will-change`. Medido: 60 quadros/s, pior quadro 17 ms (PC, claro).
+
 ## Regras para animação nova
 
 - Animação contínua (loop, fundo, 3D) precisa **parar quando ninguém vê**:

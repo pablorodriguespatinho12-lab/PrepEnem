@@ -72,6 +72,10 @@ Depois de cada leva: conferir o achado na fonte (`vitest`, comando, foto); pergu
 gravar a resposta nesta tabela ou no arquivo do agente e dizer "aprendi: X, gravei em Y". Texto consertado por causa de
 um revisor e não relido é dito ao Pablo como "sem 2ª leitura".
 
+**Padrão é fazer sozinho** (pesquisa de 27/11/2026, `docs/pesquisa-orquestracao-agentes-2026-11-27.md`): raciocínio em
+sequência piorou 39 a 70% dividido entre agentes (Google + MIT); erro de agente solto cresce 17x, com orquestrador 4x.
+Agente só para parte independente, leitura que sujaria o contexto ou conferência com olhos limpos.
+
 ## Depois
 
 O resultado chega na notificação. **Nunca abra o transcript** (JSONL inteiro).
