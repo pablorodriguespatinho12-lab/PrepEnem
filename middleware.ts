@@ -31,18 +31,13 @@ function politica(nonce: string): string {
 }
 
 export async function middleware(req: NextRequest) {
-  const { pathname, search } = req.nextUrl;
+  const { pathname } = req.nextUrl;
   const publica = PUBLICAS.includes(pathname);
 
   if (!publica) {
     const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET }).catch(() => null);
     if (!token) {
-      const login = new URL('/login', req.url);
-      // volta para onde ia depois de entrar (só caminho interno)
-      if (pathname !== '/' && pathname.startsWith('/') && !pathname.startsWith('//')) {
-        login.searchParams.set('callbackUrl', pathname + search);
-      }
-      return NextResponse.redirect(login);
+      return NextResponse.redirect(new URL('/login', req.url));
     }
   }
 

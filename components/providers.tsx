@@ -2,6 +2,7 @@
 import { SessionProvider } from 'next-auth/react';
 import { ThemeProvider } from '@/components/theme-provider';
 import { SessionGuard } from '@/components/session-guard';
+import { AbrirNoInicio } from '@/components/abrir-no-inicio';
 import { Toaster } from 'sonner';
 import { MotionConfig } from 'framer-motion';
 import React from 'react';
@@ -12,6 +13,7 @@ export function Providers({ children, nonce }: { children: React.ReactNode; nonc
   return (
     <SessionProvider>
       <SessionGuard />
+      <AbrirNoInicio />
       <ThemeProvider
         attribute="class"
         defaultTheme="system"

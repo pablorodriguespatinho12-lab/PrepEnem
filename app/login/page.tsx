@@ -28,10 +28,8 @@ export default function LoginPage() {
         toast.error(res.error.startsWith('Muitas tentativas') ? res.error : 'Usuário ou senha inválidos');
         return;
       }
-      // Volta para onde ia (o middleware manda ?callbackUrl=). Só caminho interno.
-      const destino = new URLSearchParams(window.location.search).get('callbackUrl') ?? '';
-      const seguro = destino.startsWith('/') && !destino.startsWith('//') && !destino.startsWith('/\\');
-      window.location.assign(seguro ? destino : '/dashboard');
+      // Sempre entra pelo Início (Pablo, 27/11/2026).
+      window.location.assign('/dashboard');
     } catch {
       toast.error('Erro ao fazer login');
     } finally {
