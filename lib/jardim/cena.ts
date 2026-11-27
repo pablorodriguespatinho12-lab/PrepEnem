@@ -12,8 +12,6 @@ function sorteio(semente: number): Sorteio {
 
 const varios = (n: number, f: (i: number) => string) => Array.from({ length: n }, (_, i) => f(i)).join('');
 const n1 = (v: number) => Math.round(v * 10) / 10;
-const tempo = (dur: number, atraso = 0) => `style="--dur:${n1(dur)}s;--atraso:${n1(atraso)}s"`;
-
 function morro(r: Sorteio, y: number, amp: number, cor: string): string {
   let d = `M-60 ${y}`;
   for (let x = -60; x < 1060; x += 140) {
@@ -60,7 +58,15 @@ export const CAMADAS: readonly Camada[] = [
   { classe: 'jv-ave', estilo: {}, desenho: AVES },
 ];
 
-export function montarCena(): string {
+/* Vagalume e brilho do rio: um elemento pequeno cada, em unidades do desenho. */
+export type Ponto = { classe: 'jv-brilho' | 'jv-vaga'; estilo: Record<string, string> };
+
+const ponto = (classe: Ponto['classe'], x: number, y: number, largura: number, atraso: number): Ponto => ({
+  classe,
+  estilo: { '--x': `${n1(x)}`, '--y': `${n1(y)}`, '--w': `${n1(largura)}`, '--atraso': `${n1(atraso)}s` },
+});
+
+export function montarCena(): { fundo: string; brilhos: Ponto[]; frente: string; vagalumes: Ponto[] } {
   const r = sorteio(7);
   const defs = `<defs><linearGradient id="jv-dia" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fb8c4"/><stop offset=".55" stop-color="#cfe6d2"/><stop offset="1" stop-color="#fdeec2"/></linearGradient><linearGradient id="jv-noite" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1230"/><stop offset="1" stop-color="#2b4a63"/></linearGradient><radialGradient id="jv-luz"><stop offset="0" stop-color="#fff6c9" stop-opacity=".95"/><stop offset="1" stop-color="#fff6c9" stop-opacity="0"/></radialGradient></defs>`;
   const estrelas = varios(70, () => `<circle cx="${n1(r() * 1000)}" cy="${n1(r() * 230)}" r="${n1(0.6 + r() * 1.5)}" fill="#fff" opacity="${n1(0.4 + r() * 0.6)}"/>`);
@@ -75,10 +81,10 @@ export function montarCena(): string {
   });
   const rio = `<path d="M560 360C500 390 640 402 560 428S410 455 470 520H700C610 462 700 440 660 420S590 385 590 360Z" fill="#8fd0dc"/>`;
   const vale = morro(r, 390, 60, '#7cb45c') + rio;
-  const brilhos = varios(9, (i) => {
+  const brilhos = Array.from({ length: 9 }, (_, i) => {
     const atraso = -r() * 3;
     const x = 490 + r() * 140;
-    return `<rect class="jv-brilho" ${tempo(3.2, atraso)} x="${n1(x)}" y="${385 + i * 10}" width="${n1(16 + r() * 22)}" height="3" rx="2" fill="#fff"/>`;
+    return ponto('jv-brilho', x, 385 + i * 10, 16 + r() * 22, atraso);
   });
   const arvores = arvore(850, 420, 1.25) + arvore(935, 405, 0.85) + arvore(120, 400, 0.9);
   const frente = morro(r, 452, 34, '#4d8c46') + varios(60, () => {
@@ -87,9 +93,15 @@ export function montarCena(): string {
     const cor = ['#ffd45c', '#fff', '#f28f79', '#c6a2f0'][Math.floor(r() * 4)];
     return `<path d="M${n1(x)} ${n1(y + 14)}v-12" stroke="#2f6b33" stroke-width="2"/><circle cx="${n1(x)}" cy="${n1(y)}" r="${n1(3 + r() * 2.5)}" fill="${cor}"/>`;
   });
-  const vagalumes = varios(22, () => {
+  const vagalumes = Array.from({ length: 22 }, () => {
     const atraso = -r() * 7;
-    return `<circle class="jv-vaga" ${tempo(7, atraso)} cx="${n1(r() * 1000)}" cy="${n1(290 + r() * 170)}" r="2.6" fill="#ffee8c"/>`;
+    const x = r() * 1000;
+    return ponto('jv-vaga', x - 2.6, 290 + r() * 170 - 2.6, 5.2, atraso);
   });
-  return `${defs}${ceu}<g class="jv-astro">${sol}${lua}</g><g class="jv-terra">${longe}${meio}${vale}</g><g>${brilhos}</g><g class="jv-terra">${arvores}${frente}</g><g class="jv-so-noite">${vagalumes}</g>`;
+  return {
+    fundo: `${defs}${ceu}<g class="jv-astro">${sol}${lua}</g><g class="jv-terra">${longe}${meio}${vale}</g>`,
+    brilhos,
+    frente: `<g class="jv-terra">${arvores}${frente}</g>`,
+    vagalumes,
+  };
 }
