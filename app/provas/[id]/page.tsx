@@ -441,7 +441,7 @@ export default function ProvaDetailPage() {
     // overflow-x-clip: os anéis do acerto/erro passam da borda no celular e a página rolava para o lado
     <div className="relative min-h-screen overflow-x-clip">
       <MundoPixel animado={mundo.animado} />
-      <div className="relative z-[1] min-h-screen px-4 pb-10 md:px-10 pt-[min(20vh,170px)] max-w-4xl mx-auto">
+      <div className="relative z-[1] min-h-screen px-2 pb-6 md:px-10 md:pb-10 pt-[68px] md:pt-[min(20vh,170px)] max-w-4xl mx-auto">
       <div className="absolute top-4 right-4 md:right-10 flex gap-3">
         <button type="button" className="px-chip" aria-pressed={telaCheia.ativa} onClick={telaCheia.alternar}>
           {telaCheia.ativa ? 'Sair da tela cheia' : 'Tela cheia'}
@@ -464,7 +464,7 @@ export default function ProvaDetailPage() {
         animate={{ opacity: 1, y: 0 }}
         className="mb-6"
       >
-        <h1 className="font-display type-headline font-semibold mb-3">{exam.nome}</h1>
+        <h1 className="font-display type-title md:[font-size:var(--type-headline)] font-semibold mb-3">{exam.nome}</h1>
         <MapaQuestoes
           respondidas={exam.questions.map((eq: any) => Boolean(eq.answered))}
           atual={exam.currentIdx}

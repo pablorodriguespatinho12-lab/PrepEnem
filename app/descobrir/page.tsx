@@ -6,8 +6,8 @@ import '@/components/descobrir/descobrir.css';
 
 export default function DescobrirPage() {
   return (
-    <div className="dsc mx-auto flex w-full max-w-4xl flex-col gap-4 px-4 pb-6 pt-2 md:px-6 md:py-8">
-      <header className="pl-12 md:pl-0">
+    <div className="dsc mx-auto flex w-full max-w-4xl flex-col gap-4 px-4 pb-6 pt-5 md:px-6 md:py-8">
+      <header>
         <h1 className="font-display text-3xl leading-none">Descobrir</h1>
         <p className="mt-2 text-muted-foreground">De onde vem cada equação. Comece pela 1 e siga os números.</p>
       </header>

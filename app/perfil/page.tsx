@@ -162,7 +162,7 @@ export default function PerfilPage() {
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            {darkMode === 'dark' ? <Moon className="w-5 h-5 text-primary-text" /> : <Sun className="w-5 h-5 text-primary-text" />}
+            {darkMode === 'dark' ? <Moon className="w-5 h-5 shrink-0 text-primary-text" /> : <Sun className="w-5 h-5 shrink-0 text-primary-text" />}
             <div>
               <h2 className="font-display type-body font-semibold">Modo Escuro</h2>
               <p className="type-meta text-muted-foreground">Altere entre modo claro e escuro</p>
@@ -173,7 +173,7 @@ export default function PerfilPage() {
             role="switch"
             aria-checked={darkMode === 'dark'}
             aria-label="Modo escuro"
-            className={`relative w-14 h-7 rounded-full t-colors ${
+            className={`relative w-14 h-7 rounded-full t-colors after:absolute after:-inset-2 after:content-[''] ${
               darkMode === 'dark' ? 'bg-primary' : 'bg-muted'
             }`}
           >
@@ -197,7 +197,7 @@ export default function PerfilPage() {
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            {soundEnabled ? <Volume2 className="w-5 h-5 text-primary-text" /> : <VolumeX className="w-5 h-5 text-primary-text" />}
+            {soundEnabled ? <Volume2 className="w-5 h-5 shrink-0 text-primary-text" /> : <VolumeX className="w-5 h-5 shrink-0 text-primary-text" />}
             <div>
               <h2 className="font-display type-body font-semibold">Som</h2>
               <p className="type-meta text-muted-foreground">Feedback sonoro discreto em acerto, erro, card salvo e sessão concluída</p>
@@ -208,7 +208,7 @@ export default function PerfilPage() {
             role="switch"
             aria-checked={soundEnabled}
             aria-label="Som"
-            className={`relative w-14 h-7 rounded-full t-colors flex-shrink-0 ${
+            className={`relative w-14 h-7 rounded-full t-colors after:absolute after:-inset-2 after:content-[''] flex-shrink-0 ${
               soundEnabled ? 'bg-primary' : 'bg-muted'
             }`}
           >
@@ -232,7 +232,7 @@ export default function PerfilPage() {
       >
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-primary-text" />
+            <Sparkles className="w-5 h-5 shrink-0 text-primary-text" />
             <div>
               <h2 className="font-display type-body font-semibold">Mundo pixel animado</h2>
               <p className="type-meta text-muted-foreground">Dia e noite passando no fundo da prova, faíscas e luz no Início</p>
@@ -243,7 +243,7 @@ export default function PerfilPage() {
             role="switch"
             aria-checked={mundo.animado}
             aria-label="Mundo pixel animado"
-            className={`relative w-14 h-7 rounded-full t-colors flex-shrink-0 ${mundo.animado ? 'bg-primary' : 'bg-muted'}`}
+            className={`relative w-14 h-7 rounded-full t-colors after:absolute after:-inset-2 after:content-[''] flex-shrink-0 ${mundo.animado ? 'bg-primary' : 'bg-muted'}`}
           >
             <motion.div
               className="absolute top-0.5 left-0.5 w-6 h-6 bg-white rounded-full shadow-elev-1"
@@ -263,7 +263,7 @@ export default function PerfilPage() {
       >
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <Type className="w-5 h-5 text-primary-text" />
+            <Type className="w-5 h-5 shrink-0 text-primary-text" />
             <div>
               <h2 className="font-display type-body font-semibold">Letras em pixel</h2>
               <p className="type-meta text-muted-foreground">Todo o texto do site em letra de pixel</p>
@@ -274,7 +274,7 @@ export default function PerfilPage() {
             role="switch"
             aria-checked={letra.ligado}
             aria-label="Letras em pixel"
-            className={`relative w-14 h-7 rounded-full t-colors flex-shrink-0 ${letra.ligado ? 'bg-primary' : 'bg-muted'}`}
+            className={`relative w-14 h-7 rounded-full t-colors after:absolute after:-inset-2 after:content-[''] flex-shrink-0 ${letra.ligado ? 'bg-primary' : 'bg-muted'}`}
           >
             <motion.div
               className="absolute top-0.5 left-0.5 w-6 h-6 bg-white rounded-full shadow-elev-1"
