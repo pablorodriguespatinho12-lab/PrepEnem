@@ -180,3 +180,5 @@ fica no círculo de carregar (compilação + Neon acordando), e um 500 isolado c
 "Can't reach database server" é o Neon dormindo, não bug: rode de novo antes de
 caçar. `MathText` vira `<div>`: dentro de `<p>` dá aviso de hidratação.
 
+**Bateria de QA** (`npm run test:qa`, sem banco real; ver `QA-REPORT.md`): teste de tela confere antes se ela redireciona no `useEffect`. `/treino` sem parâmetro vai para `/provas`; em 27/11/2026 o teste passava ou falhava pela velocidade.
+
