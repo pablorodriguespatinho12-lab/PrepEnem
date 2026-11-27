@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
+import { FaixaJardim } from '@/components/visual/jardim/faixa';
 import { motion, AnimatePresence } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import {
@@ -337,11 +338,18 @@ export default function RedacaoPage() {
           <ChevronLeft className="w-4 h-4" /> Voltar
         </button>
 
+        <FaixaJardim
+          arte="redacao"
+          sobre={selectedTheme.anoEnem ? `ENEM ${selectedTheme.anoEnem}` : 'Seu tema'}
+          titulo={selectedTheme.tema}
+          nota={`${wordCount} ${wordCount === 1 ? 'palavra' : 'palavras'}`}
+        />
+
         {/* Theme header */}
-        <div className="surface-1 rounded-[var(--radius-surface)] p-5 mb-6">
-          <h2 className="font-display type-lead font-semibold mb-1">{selectedTheme.tema}</h2>
+        <div className={`surface-1 rounded-[var(--radius-surface)] p-5 mb-6 ${selectedTheme.textoMotivador ? '' : 'fora-jardim'}`}>
+          <h2 className="fora-jardim font-display type-lead font-semibold mb-1">{selectedTheme.tema}</h2>
           {selectedTheme.anoEnem && (
-            <span className="type-meta text-muted-foreground">ENEM {selectedTheme.anoEnem}</span>
+            <span className="fora-jardim type-meta text-muted-foreground">ENEM {selectedTheme.anoEnem}</span>
           )}
           {selectedTheme.textoMotivador && (
             <details className="mt-3">
@@ -360,14 +368,14 @@ export default function RedacaoPage() {
           <div className="flex items-center justify-between px-4 py-2 bg-muted/60 border-b border-border">
             <span className="type-caption text-muted-foreground">Sua redação</span>
             <div className="flex items-center gap-3 type-meta text-muted-foreground">
-              <span data-numeric>{wordCount} palavras</span>
+              <span data-numeric className="fora-jardim">{wordCount} palavras</span>
             </div>
           </div>
           <textarea
             value={texto}
             onChange={(e) => setTexto(e.target.value)}
             placeholder="Escreva sua redação aqui...\n\nLembre-se da estrutura:\n- Introdução com tese\n- Desenvolvimento 1 (argumento)\n- Desenvolvimento 2 (argumento)\n- Conclusão com proposta de intervenção"
-            className="block w-full max-w-[var(--measure-reading)] mx-auto min-h-[400px] p-4 bg-[hsl(var(--surface-2))] font-reading text-body leading-[var(--lh-reading)] resize-y focus:outline-none"
+            className="jv-pauta block w-full max-w-[var(--measure-reading)] mx-auto min-h-[400px] p-4 bg-[hsl(var(--surface-2))] font-reading text-body leading-[var(--lh-reading)] resize-y focus:outline-none"
           />
         </div>
 
@@ -519,11 +527,12 @@ export default function RedacaoPage() {
   return (
     <div className="p-4 md:p-8 max-w-4xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}>
-        <div className="flex items-center gap-3 mb-2">
+        <FaixaJardim arte="redacao" sobre="Redação do ENEM" titulo="Treino de Redação" />
+        <div className="fora-jardim flex items-center gap-3 mb-2">
           <PenTool className="w-6 h-6 text-primary-text" />
           <h1 className="font-display type-headline font-bold">Treino de Redação</h1>
         </div>
-        <p className="type-meta text-muted-foreground mb-6">Pratique com temas reais do ENEM e receba correção detalhada por IA nas 5 competências</p>
+        <p className="fora-jardim type-meta text-muted-foreground mb-6">Pratique com temas reais do ENEM e receba correção detalhada por IA nas 5 competências</p>
 
         {/* Stats */}
         {essays.length > 0 && (

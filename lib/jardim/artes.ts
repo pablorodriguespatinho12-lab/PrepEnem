@@ -28,6 +28,7 @@ const ARTE_DA_MATERIA: Record<string, NomeDaArte> = {
   'Português': 'portugues',
   'Literatura': 'portugues',
   'Livros': 'portugues',
+  'Inglês': 'portugues',
   'História': 'historia',
   'Filosofia': 'historia',
   'Sociologia': 'historia',

@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic';
 import { materiaColors } from '@/lib/theme-colors';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { EsqueletoLista } from '@/components/esqueletos';
+import { CanteiroJardim } from '@/components/visual/jardim/canteiro';
 
 // Abaixo disso, uma % individual é ruído estatístico, não informação — numa
 // amostra binária pequena, uma resposta a mais ou a menos muda a taxa em
@@ -82,12 +83,14 @@ export default function ProgressoPage() {
   return (
     <div className="p-4 md:p-8 max-w-6xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}>
-        <div className="flex items-center gap-3 mb-2">
+        <div className="fora-jardim flex items-center gap-3 mb-2">
           <BarChart3 className="w-6 h-6 text-primary-text" />
           <h1 className="font-display type-headline font-bold">Seu progresso</h1>
         </div>
 
       </motion.div>
+
+      {stats && <CanteiroJardim porDia={stats.dailyData ?? {}} />}
 
       {/* Só dois números (Pablo, 06/10/2026: "pode deixar só total respondidas
           e acertos"). Taxa e sequência saíram. */}

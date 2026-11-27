@@ -1,5 +1,7 @@
 'use client';
 import { useEffect, useState, useCallback, useMemo } from 'react';
+import { ArteJardim } from '@/components/visual/jardim/desenhos';
+import { arteDaMateria } from '@/lib/jardim/artes';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -249,12 +251,14 @@ export default function FlashcardsPage() {
                         className="relative surface-1 rounded-[var(--radius-surface)] overflow-hidden cursor-pointer group card-3d t-lift hover:shadow-elev-3"
                       >
                         {/* Color band */}
-                        <div className="h-2" style={{ backgroundColor: cor }} />
+                        <div className="fora-jardim h-2" style={{ backgroundColor: cor }} />
+
+                        <ArteJardim nome={arteDaMateria(group.materia)} className="so-jardim jv-capa-baralho" />
 
                         <div className="p-5">
-                          {/* 3D Icon */}
+                          {/* Fora do Jardim; lá a capa desenhada já diz a matéria. */}
                           <div
-                            className="w-14 h-14 rounded-[var(--radius-control)] flex items-center justify-center mb-3 transition-transform duration-200 group-hover:scale-110 group-hover:-rotate-3"
+                            className="fora-jardim w-14 h-14 rounded-[var(--radius-control)] flex items-center justify-center mb-3 transition-transform duration-200 group-hover:scale-110 group-hover:-rotate-3"
                             style={{ backgroundColor: `${cor}20` }}
                           >
                             <MateriaIcon materia={group.materia} color={cor} size={48} />
@@ -398,7 +402,9 @@ export default function FlashcardsPage() {
                         onClick={() => router.push(`/flashcards/${deck.id}`)}
                       >
                         {/* Color band */}
-                        <div className="h-2" style={{ backgroundColor: cor }} />
+                        <div className="fora-jardim h-2" style={{ backgroundColor: cor }} />
+
+                        <ArteJardim nome={arteDaMateria(deck.materia)} className="so-jardim jv-capa-baralho" />
 
                         <div className="p-5">
                           {/* Procedência: ponto de cor + nome, não pílula preenchida com
