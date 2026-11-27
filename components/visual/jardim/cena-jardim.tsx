@@ -1,12 +1,17 @@
 'use client';
 import { useEffect, useRef, type CSSProperties } from 'react';
-import { CAMADAS, montarCena } from '@/lib/jardim/cena';
+import { CAMADAS, montarCena, type Ponto } from '@/lib/jardim/cena';
 import { useMundoAnimado } from '@/hooks/use-mundo-animado';
 
 /* Texto fixo do próprio código (nada do usuário entra aqui). */
-const FUNDO = { __html: montarCena() };
+const CENA = montarCena();
+const FUNDO = { __html: CENA.fundo };
+const FRENTE = { __html: CENA.frente };
 const QUADRO = { viewBox: '0 0 1000 480', preserveAspectRatio: 'xMidYMid slice' };
 const PAUSA_DEPOIS_DE_ROLAR = 180;
+
+const pontos = (lista: Ponto[]) =>
+  lista.map((p, i) => <i key={`${p.classe}-${i}`} className={p.classe} style={p.estilo as CSSProperties} />);
 
 /* Cena viva da capa no modo Jardim. Para fora da tela, com a aba escondida e
    durante a rolagem (skill medir-fluidez); desliga junto com o mundo animado
@@ -45,9 +50,12 @@ export function CenaJardim() {
   return (
     <div ref={ref} className="jv-cena" data-animada={animado ? 'sim' : 'nao'} aria-hidden>
       <svg {...QUADRO} className="jv-fundo" dangerouslySetInnerHTML={FUNDO} />
+      {pontos(CENA.brilhos)}
+      <svg {...QUADRO} className="jv-frente" dangerouslySetInnerHTML={FRENTE} />
       {CAMADAS.map((c, i) => (
         <svg key={i} {...QUADRO} className={c.classe} style={c.estilo as CSSProperties} dangerouslySetInnerHTML={{ __html: c.desenho }} />
       ))}
+      {pontos(CENA.vagalumes)}
     </div>
   );
 }
