@@ -1,6 +1,7 @@
 export const dynamic = 'force-dynamic';
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
+import { ehId } from '@/lib/entrada';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 
@@ -11,7 +12,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Não autenticado' }, { status: 401 });
     }
     const { progressId, explicacaoEstudante } = await request.json();
-    if (!progressId || !explicacaoEstudante) {
+    if (!ehId(progressId) || !explicacaoEstudante) {
       return NextResponse.json({ error: 'Dados incompletos' }, { status: 400 });
     }
     // Só o dono escreve: antes qualquer conta sobrescrevia pelo id.

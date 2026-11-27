@@ -8,6 +8,7 @@
     "start": "next start",
     "postinstall": "prisma generate",
     "test": "vitest run",
+    "test:qa": "node tests/qa/rodar.mjs",
     "test:redacao": "RODAR_IA=1 node --env-file=.env node_modules/vitest/vitest.mjs run tests/redacao/golden.test.ts"
   },
   "dependencies": {
@@ -83,6 +84,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@types/three": "^0.165.0",
+    "@vitest/coverage-v8": "^2.1.9",
     "autoprefixer": "^10.4.19",
     "playwright": "^1.63.0",
     "postcss": "^8.4.38",

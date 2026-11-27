@@ -2,6 +2,7 @@ export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
+import { ehId } from '@/lib/entrada';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { maxSimilarity } from '@/lib/text-similarity';
@@ -30,6 +31,7 @@ export async function POST(request: Request) {
 
     const body = await request.json();
     const { deckId, quantidade = 10, topico } = body;
+    if (!ehId(deckId)) return NextResponse.json({ error: 'Baralho não informado' }, { status: 400 });
     const limiarSimilaridade =
       typeof body.limiarSimilaridade === 'number' && body.limiarSimilaridade > 0 && body.limiarSimilaridade <= 1
         ? body.limiarSimilaridade

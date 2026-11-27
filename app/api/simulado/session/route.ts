@@ -1,6 +1,7 @@
 export const dynamic = 'force-dynamic';
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
+import { ehId } from '@/lib/entrada';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 
@@ -111,8 +112,11 @@ export async function PUT(req: Request) {
 
     const { sessionId, currentIdx, timeLeft, timeElapsed, questionId, respostaDada, finished } = await req.json();
 
-    if (!sessionId) {
+    if (!ehId(sessionId)) {
       return NextResponse.json({ error: 'Session ID não fornecido' }, { status: 400 });
+    }
+    if (questionId != null && !ehId(questionId)) {
+      return NextResponse.json({ error: 'Questão inválida' }, { status: 400 });
     }
 
     const updateData: any = {};

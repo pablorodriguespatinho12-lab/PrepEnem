@@ -26,3 +26,6 @@ docs/redacao/fontes/
 
 # Python
 __pycache__/
+
+# cobertura de testes
+/coverage
