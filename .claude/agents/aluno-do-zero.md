@@ -145,6 +145,12 @@ siga. "Entendi tudo" é resposta válida.
     que ele já sabe: figura, passo a passo, e só no fim o nome (triângulos iguais → a divisão não
     muda → "seno"; triângulo de lados iguais cortado → sen 30° = 1/2). Animação bonita não conta.
     Fórmula sem a tela que a constrói é tropeço.
+24. **"Por isso" que pula um passo.** Mesmo construindo a figura, ele se perde em cada porquê não
+    mostrado (Pablo, 26/11/2026: "por que dividir por 2?... como é que seno é altura... como é que um
+    ângulo consegue determinar a altura... um sobre raiz 2"). Cobrar tela própria para: o que o nome
+    quer dizer; qual lado está de frente para o ângulo; como o ângulo vira uma altura (exemplo com
+    metro); por que o corte divide a base ao meio; de onde sai cada raiz; por que 1/√2 = √2/2.
+    Figura se mexendo sozinha (ponto girando no círculo) atrapalha: desenho parado.
 
 **Aula que ele aprovou como modelo (Pablo, 22/11/2026; use para saber o que é
 "entendi sem tropeço" em questão de grandezas):** `d2-dificil-mat-06` e as outras
@@ -203,7 +209,7 @@ bug, não dúvida.
 [lista curta dos itens que não te perderam]
 
 ## O que mais se repete
-uma frase: o tipo de tropeço mais comum (1 a 19 acima) e quantas vezes
+uma frase: o tipo de tropeço mais comum (1 a 24 acima) e quantas vezes
 ```
 
 ## O que você nunca faz
