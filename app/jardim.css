@@ -1,6 +1,8 @@
 /* Modo Jardim (Pablo, 26/11/2026): verde claro, título com serifa, pintura na
    capa, sem pixel. Liga em Perfil > cor "Jardim (modo)". */
-.m-pintura { display: none; }
+/* !important: outras folhas repetem classes e ganhariam na especificidade */
+html:not([data-jardim]) .so-jardim { display: none !important; }
+html[data-jardim] .fora-jardim { display: none !important; }
 
 html[data-jardim] {
   --m-bg: #eef4e8; --m-card: #fcfdf9; --m-card2: #e9f2e2; --m-line: #d5e3cb; --m-fg: #16251b; --m-mut: #566a59;
@@ -16,23 +18,106 @@ html[data-jardim] body { --font-pixel: var(--font-display); --font-pixel-texto: 
 /* Sem mundo pixel atrás: fundo liso, cor da página. */
 html[data-jardim] :is(.mundo-pixel, .mundo-veu) { display: none; }
 
-html.dark[data-jardim] .m-pintura { filter: brightness(.7) saturate(.85); }
-
-/* capa: texto à esquerda no creme, pintura à direita */
-html[data-jardim] .m-capa { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: stretch; min-height: 340px; background: var(--m-card); border: 1px solid var(--m-line); }
+/* capa: cena viva inteira e o texto num cartão embaixo, à esquerda (prévia "Jardim vivo") */
+html[data-jardim] .m-capa { height: min(62vh, 480px); min-height: 380px; align-items: flex-end; justify-content: flex-start; border-radius: 28px; background: #2b4a63; }
 html[data-jardim] .m-capa canvas { display: none; }
-html[data-jardim] .m-pintura { display: block; grid-column: 2; grid-row: 1; width: calc(100% - 24px); height: calc(100% - 24px); margin: 12px; border-radius: 18px; position: absolute; right: 0; top: 0; }
-html[data-jardim] .m-capa-texto { grid-column: 1; grid-row: 1; background: none; color: var(--m-fg); flex-direction: column; align-items: flex-start; justify-content: center; padding: 34px 32px; gap: 22px; }
-html[data-jardim] .m-capa small { color: var(--m-mut); opacity: 1; }
-html[data-jardim] .moderno.moderno.moderno .m-capa h1.px { font-size: clamp(36px, 4.4vw, 58px); line-height: 1.05; letter-spacing: -.01em; text-wrap: balance; }
-html[data-jardim] .moderno.moderno.moderno .m-vai { font-family: var(--font-sora), system-ui, sans-serif; font-weight: 700; font-size: 16px; padding: 15px 30px; border-radius: 999px; box-shadow: none; }
-html[data-jardim] .m-vai:active { transform: scale(.97); box-shadow: none !important; }
+html[data-jardim] .m-capa-texto { width: auto; max-width: 430px; margin: 16px; flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px 22px; border-radius: 22px; background: color-mix(in srgb, var(--m-card) 93%, transparent); border: 1px solid var(--m-line); color: var(--m-fg); }
+html[data-jardim] .m-capa small { color: var(--m-mut); opacity: 1; font-weight: 600; }
+html[data-jardim] .moderno.moderno.moderno .m-capa h1.px { font-size: clamp(28px, 4.4vw, 44px); line-height: 1.05; letter-spacing: -.01em; text-wrap: balance; }
+html[data-jardim] .moderno.moderno.moderno .m-vai { font-family: var(--font-sora), system-ui, sans-serif; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 999px; background: #f2c94c; color: #1d2a14; box-shadow: 0 5px 0 #a8861c; transition: transform .12s, box-shadow .12s; }
+html.dark[data-jardim] .moderno.moderno.moderno .m-vai { box-shadow: 0 5px 0 #8a6d10; }
+html[data-jardim] .moderno.moderno.moderno .m-vai:hover { transform: translateY(-2px); box-shadow: 0 7px 0 #a8861c; }
+html[data-jardim] .moderno.moderno.moderno .m-vai:active { transform: translateY(4px); box-shadow: 0 1px 0 #a8861c; }
 html[data-jardim] .m-numero.m-numero.m-numero { font-size: 48px; }
 html[data-jardim] .moderno.moderno.moderno :is(.m-n, .m-dia b) { font-size: 19px; }
 html[data-jardim] .m-materia i { border-radius: 50%; }
 
+/* cartões sobem 4px no mouse; entram um depois do outro */
+html[data-jardim] .m-cartao { transition: transform .12s ease-out; }
+html[data-jardim] .m-cartao:hover { transform: translateY(-4px); }
+html[data-jardim] .jv-entra { animation: jv-entra .45s cubic-bezier(.2, .8, .2, 1) backwards !important; }
+html[data-jardim] .jv-entra:nth-of-type(2) { animation-delay: .09s !important; }
+html[data-jardim] .jv-entra:nth-of-type(3) { animation-delay: .18s !important; }
+@keyframes jv-entra { from { opacity: 0; transform: translateY(30px) scale(.97); } }
+
+/* Início: números */
+html[data-jardim] section.so-jardim.m-cartao { display: flex; flex-direction: column; gap: 8px; }
+html[data-jardim] .so-jardim .m-mut { margin: auto 0 0; }
+.jv-anel-taxa { width: 96px; height: 96px; transform: rotate(-90deg); }
+.jv-anel-taxa circle { fill: none; stroke-width: 6; stroke-linecap: round; stroke: var(--m-card2); }
+.jv-anel-taxa .jv-parte { stroke: hsl(var(--primary)); stroke-dasharray: 100; transition: stroke-dashoffset 1.4s cubic-bezier(.2, .8, .2, 1) !important; }
+.jv-dias { display: flex; gap: 6px; align-items: flex-end; height: 74px; }
+.jv-dias li { flex: 1; border-radius: 8px; background: hsl(var(--primary)); transform-origin: bottom; }
+html[data-jardim] .jv-dias li { animation: jv-barra .7s cubic-bezier(.3, 1.4, .5, 1) backwards !important; }
+.jv-dias li[data-vazio] { background: var(--m-line); }
+@keyframes jv-barra { from { transform: scaleY(0); } }
+
+/* Início: um cartão por matéria */
+html[data-jardim] .so-jardim.jv-materias { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.jv-materia { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 14px; align-items: center; }
+.jv-materia svg { width: 56px; height: 56px; grid-row: span 2; transition: transform .35s cubic-bezier(.3, 1.6, .5, 1); }
+.jv-materia:hover svg { transform: rotate(-8deg) scale(1.15); }
+html[data-jardim] .moderno.moderno.moderno .jv-materia b { font-family: var(--font-display), serif; font-size: 20px; line-height: 1.15; align-self: end; }
+.jv-materia span { color: var(--m-mut); font-size: 13px; align-self: start; }
+
+/* menu: pílula verde clara que cresce no item da tela */
+html[data-jardim] .m-trilho, html[data-jardim] .m-doca { isolation: isolate; }
+html[data-jardim] .m-item { position: relative; font-weight: 700; transition: transform .12s, color .2s; }
+html[data-jardim] .m-item::before { content: ""; position: absolute; inset: 0; border-radius: 18px; background: #a8e09a; transform: scale(.5); opacity: 0; transition: transform .3s cubic-bezier(.3, 1.5, .5, 1), opacity .2s; z-index: -1; }
+html[data-jardim] .m-item:hover { background: none; color: var(--m-fg); transform: translateY(-2px); }
+html[data-jardim] .m-item[aria-current], html[data-jardim] .m-item[aria-current]:hover { background: none; color: #12251a; }
+html[data-jardim] .m-item[aria-current]::before { transform: none; opacity: 1; }
+html[data-jardim] .m-logo rect { fill: #a8e09a; }
+html[data-jardim] .m-logo g { fill: #12251a; }
+
+/* barra de progresso das faixas e das paradas */
+html[data-jardim] .jv-barra { display: block; width: 100%; max-width: 260px; height: 10px; border-radius: 9px; background: var(--m-card2); overflow: hidden; }
+.jv-barra > i { display: block; height: 100%; border-radius: 9px; background: hsl(var(--primary)); transform-origin: left; }
+html[data-jardim] .jv-barra > i { animation: jv-cresce 1s cubic-bezier(.2, .8, .2, 1) backwards !important; }
+@keyframes jv-cresce { from { transform: scaleX(0); } }
+
+/* faixa: texto à esquerda, desenho da matéria à direita */
+html[data-jardim] .m-capa[data-faixa] { display: grid; grid-template-columns: 1.1fr 1fr; height: auto; min-height: 260px; align-items: stretch; background: var(--m-card); border: 1px solid var(--m-line); }
+html[data-jardim] .m-capa[data-faixa] .m-capa-texto { grid-column: 1; grid-row: 1; max-width: none; margin: 0; padding: 26px; justify-content: center; border: 0; border-radius: 0; background: none; }
+html[data-jardim] .jv-faixa-arte { display: block; grid-column: 2; grid-row: 1; width: 100%; height: 100%; min-height: 190px; }
+
+/* Estudar: trilha de plantas */
+html[data-jardim] .m-lista { position: relative; gap: 12px; }
+html[data-jardim] .m-lista::before { content: ""; position: absolute; left: 43px; top: 30px; bottom: 30px; border-left: 3px dashed var(--m-line); }
+html[data-jardim] .m-item-lista { position: relative; animation: jv-entra .45s cubic-bezier(.2, .8, .2, 1) backwards !important; }
+html[data-jardim] .m-item-lista:nth-child(2) { animation-delay: .06s !important; }
+html[data-jardim] .m-item-lista:nth-child(3) { animation-delay: .12s !important; }
+html[data-jardim] .m-item-lista:nth-child(n + 4) { animation-delay: .18s !important; }
+html[data-jardim] .m-linha { border-radius: 22px; padding: 12px 14px; transition: transform .12s; }
+html[data-jardim] .m-linha:hover { transform: translateX(6px); }
+html[data-jardim] .m-linha .jv-planta { display: block; width: 60px; height: 60px; flex: none; position: relative; }
+html[data-jardim] .m-t .jv-barra { margin-top: 6px; }
+html[data-jardim] .jv-vai-pequeno { display: inline-flex; flex: none; align-items: center; padding: 10px 18px; border-radius: 999px; background: #f2c94c; color: #1d2a14; font-weight: 700; font-size: 14px; box-shadow: 0 4px 0 #a8861c; }
+html.dark[data-jardim] .jv-vai-pequeno { box-shadow: 0 4px 0 #8a6d10; }
+html[data-jardim] .m-linha[data-aberta="sim"] { border-color: hsl(var(--primary)); border-width: 2px; }
+
+/* Questão: folha de papel e opções que afundam */
+html[data-jardim] .px-cartao { border: 1px solid var(--m-line); border-radius: 26px; box-shadow: var(--m-sombra); background: var(--m-card); }
+html[data-jardim] .px-alt { border: 2px solid var(--m-line); border-radius: 18px; box-shadow: 0 4px 0 var(--m-line); }
+html[data-jardim] .px-alt:enabled:hover { transform: translateY(-2px); }
+html[data-jardim] .px-alt:enabled:active { transform: translateY(4px); box-shadow: none; }
+html[data-jardim] .px-alt[data-state="selecionada"] { border-color: hsl(var(--primary)); }
+html[data-jardim] .px-alt[data-state="correta"] { border-color: hsl(var(--success)); animation: jv-pulo .4s !important; }
+html[data-jardim] .px-alt[data-state="errada"] { border-color: hsl(var(--danger)); animation: jv-nao .35s !important; }
+html[data-jardim] .px-letra { border-radius: 11px; }
+html[data-jardim] .px-chip.px-chip { font-family: var(--font-sans); font-weight: 700; font-size: 14px; padding: 10px 18px; border: 1px solid var(--m-line); border-radius: 999px; background: var(--m-card); box-shadow: var(--m-sombra); clip-path: none; }
+html[data-jardim] .px-chip::before, html[data-jardim] .px-chip::after { content: none; }
+@keyframes jv-pulo {50% { transform: scale(1.03); } }
+@keyframes jv-nao { 25% { transform: translateX(-7px); } 75% { transform: translateX(7px); } }
+
 @media (max-width: 767px) {
-  html[data-jardim] .m-capa { display: flex; flex-direction: column; }
-  html[data-jardim] .m-pintura { position: static; width: calc(100% - 16px); max-width: none; height: 190px; margin: 8px 8px 0; }
-  html[data-jardim] .m-capa-texto { padding: 20px; gap: 16px; }
+  html[data-jardim] .m-linha { gap: 10px; padding: 12px 10px; }
+  html[data-jardim] .m-linha .jv-planta { width: 40px; height: 40px; }
+  html[data-jardim] .m-lista::before { left: 30px; }
+  html[data-jardim] .jv-vai-pequeno { padding: 8px 12px; }
+  html[data-jardim] .m-capa[data-faixa] { display: flex; }
+  html[data-jardim] .jv-faixa-arte { order: -1; height: 150px; min-height: 0; flex: none; }
+  html[data-jardim] .m-capa { height: auto; min-height: 0; flex-direction: column; align-items: stretch; background: var(--m-card); border: 1px solid var(--m-line); }
+  html[data-jardim] .m-capa .jv-cena { position: static; height: 190px; }
+  html[data-jardim] .m-capa-texto { max-width: none; margin: 0; padding: 20px; gap: 16px; border: 0; border-radius: 0; background: none; }
 }

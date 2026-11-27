@@ -1,6 +1,8 @@
 'use client';
 import { useEffect, useRef, type ReactNode } from 'react';
-import { PinturaJardim } from './pintura-jardim';
+import { CenaJardim } from './jardim/cena-jardim';
+import { ArteJardim } from './jardim/desenhos';
+import type { NomeDaArte } from '@/lib/jardim/artes';
 
 /* Capa do Início e do Estudar: paisagem de noite desenhada em pixel (1 pixel = 5 px),
    igual ao desenho aprovado em 26/11/2026. Parada: é fundo, não animação. */
@@ -48,7 +50,8 @@ function desenhar(c: HTMLCanvasElement) {
   g.fillRect(cx + 1, cy + 8, 3, 3);
 }
 
-export function CapaPixel({ sobre, titulo, id, children }: { sobre: string; titulo: string; id: string; children?: ReactNode }) {
+/* `arte`: no modo Jardim vira faixa (texto à esquerda, desenho à direita) no lugar da cena. */
+export function CapaPixel({ sobre, titulo, id, arte, children }: { sobre: string; titulo: string; id: string; arte?: NomeDaArte; children?: ReactNode }) {
   const tela = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -61,9 +64,9 @@ export function CapaPixel({ sobre, titulo, id, children }: { sobre: string; titu
   }, []);
 
   return (
-    <section className="m-capa" aria-labelledby={id}>
+    <section className="m-capa" aria-labelledby={id} data-faixa={arte ? 'sim' : undefined}>
       <canvas ref={tela} aria-hidden />
-      <PinturaJardim />
+      {arte ? <ArteJardim nome={arte} className="so-jardim jv-faixa-arte" /> : <CenaJardim />}
       <div className="m-capa-texto">
         <div className="min-w-0">
           <small data-numeric>{sobre}</small>
