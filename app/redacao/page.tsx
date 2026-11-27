@@ -586,15 +586,15 @@ export default function RedacaoPage() {
           <ArrowRight className="w-5 h-5 shrink-0 text-primary-text transition-transform duration-200 group-hover:translate-x-1" aria-hidden />
         </a>
         <nav aria-label="Outras ferramentas de redação" className="flex flex-wrap gap-x-5 gap-y-1 mb-6 type-meta">
-          <button onClick={() => setView('history')} className="inline-flex items-center gap-1.5 py-2 text-muted-foreground hover:text-foreground t-colors">
+          <button onClick={() => setView('history')} className="inline-flex items-center gap-1.5 py-3 md:py-2 text-muted-foreground hover:text-foreground t-colors">
             <History className="w-4 h-4" /> Histórico
           </button>
-          <button onClick={() => { loadSavedDrafts(); setView('saved'); }} className="inline-flex items-center gap-1.5 py-2 text-muted-foreground hover:text-foreground t-colors">
+          <button onClick={() => { loadSavedDrafts(); setView('saved'); }} className="inline-flex items-center gap-1.5 py-3 md:py-2 text-muted-foreground hover:text-foreground t-colors">
             <FileText className="w-4 h-4" /> Salvas
             {savedDrafts.length > 0 && <span data-numeric className="type-caption bg-primary/10 text-primary-text px-1.5 rounded-[var(--radius-data)]">{savedDrafts.length}</span>}
           </button>
           {/* Até 07/11/2026 nenhum link levava às redações-modelo. */}
-          <a href="/redacao/modelos" className="inline-flex items-center gap-1.5 py-2 text-muted-foreground hover:text-foreground t-colors">
+          <a href="/redacao/modelos" className="inline-flex items-center gap-1.5 py-3 md:py-2 text-muted-foreground hover:text-foreground t-colors">
             <BookOpen className="w-4 h-4" /> Redações prontas dos trios
           </a>
         </nav>

@@ -46,7 +46,7 @@ export function AulaDescobrir({ aula }: { aula: Aula }) {
 
   return (
     <div className="dsc mx-auto flex h-[calc(100dvh-3rem)] w-full max-w-5xl flex-col gap-3 px-3 pb-3 pt-1 md:h-dvh md:px-6 md:py-6">
-      <div className="flex items-center justify-between gap-3 pl-12 md:pl-0">
+      <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-3">
           <Link href="/descobrir" className="type-meta text-muted-foreground hover:text-foreground">‹ Mapa</Link>
           <h1 className="font-display text-2xl leading-none sm:text-3xl">{aula.titulo}</h1>

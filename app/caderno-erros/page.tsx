@@ -182,7 +182,7 @@ export default function CadernoErrosPage() {
 
               <button
                 onClick={() => item?.question?.id && void abrirRevisao([item.question.id])}
-                className="flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary-text type-meta font-medium rounded-[var(--radius-control)] hover:bg-primary/20 t-colors"
+                className="flex items-center gap-1.5 px-3 py-3 md:py-1.5 bg-primary/10 text-primary-text type-meta font-medium rounded-[var(--radius-control)] hover:bg-primary/20 t-colors"
               >
                 <RefreshCcw className="w-3 h-3" /> Revisar até acertar
               </button>
