@@ -4,6 +4,7 @@ import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/db';
+import { letraDoGabarito } from '@/lib/entrada';
 import { PDFDocument } from 'pdf-lib';
 import { uploadBufferToS3 } from '@/lib/s3';
 import { isS3Configured, s3UnavailableResponse } from '@/lib/aws-client';
@@ -252,10 +253,9 @@ export async function POST(req: Request) {
         let dificuldade = (q.dificuldade ?? 'medio').toLowerCase();
         if (!['facil', 'medio', 'dificil'].includes(dificuldade)) dificuldade = 'medio';
 
-        // Use gabarito answer if available, otherwise LLM's guess
-        let resposta = gabAnswer ?? (q.respostaCorreta ?? 'A');
-        resposta = resposta.toUpperCase().trim();
-        if (!['A', 'B', 'C', 'D', 'E'].includes(resposta)) resposta = 'A';
+        // Gabarito oficial; sem ele, o palpite da IA. Nunca uma letra inventada.
+        const oficial = letraDoGabarito(gabAnswer);
+        const resposta = letraDoGabarito(gabAnswer ?? q.respostaCorreta);
 
         // Check for image references in enunciado
         const enunciado = q.enunciado ?? `Questão ${i + 1}`;
@@ -275,17 +275,19 @@ export async function POST(req: Request) {
             where: { anoProva: ano, diaProva: dia, numeroQuestao: qNum },
           });
           if (existing) {
-            // Update answer if gabarito available
-            if (gabAnswer) {
+            // Só o gabarito oficial legível troca a resposta já salva
+            if (oficial) {
               await prisma.question.update({
                 where: { id: existing.id },
-                data: { respostaCorreta: resposta },
+                data: { respostaCorreta: oficial },
               });
             }
             saved.push(existing);
             continue;
           }
         }
+
+        if (!resposta) continue;
 
         const absolutePage = q._absolutePage ?? null;
 

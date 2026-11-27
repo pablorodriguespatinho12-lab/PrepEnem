@@ -1,6 +1,7 @@
 export const dynamic = 'force-dynamic';
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
+import { ehId } from '@/lib/entrada';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 
@@ -17,7 +18,7 @@ export async function POST(request: Request) {
 
     const { cardId, acertou } = await request.json();
 
-    if (!cardId || typeof acertou !== 'boolean') {
+    if (!ehId(cardId) || typeof acertou !== 'boolean') {
       return NextResponse.json({ error: 'Dados inválidos' }, { status: 400 });
     }
 

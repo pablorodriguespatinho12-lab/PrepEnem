@@ -1,6 +1,7 @@
 export const dynamic = 'force-dynamic';
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
+import { ehId } from '@/lib/entrada';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 
@@ -14,6 +15,9 @@ export async function POST(request: Request) {
     const userId = (session.user as any).id as string;
     const body = await request.json();
     const { examId, questionId, respostaDada } = body;
+    if (!ehId(examId) || !ehId(questionId)) {
+      return NextResponse.json({ error: 'Dados inválidos' }, { status: 400 });
+    }
 
     // Cada ida ao Neon custa; as duas leituras vão juntas e as escritas numa transação.
     const [exam, examQuestion] = await Promise.all([

@@ -4,14 +4,16 @@
 
 | | Antes | Depois |
 |---|---|---|
-| Testes | 1.003 (994 passam, 9 pulados) | 1.818 (1.690 passam, 119 falham, 9 pulados) |
+| Testes | 1.003 (994 passam, 9 pulados) | 1.818 (1.705 passam, 104 falham, 9 pulados) |
 | Testes novos | | 815: 765 de unidade e API, 50 no navegador |
-| Cobertura de linhas | 20,05% | 31,72% |
-| Cobertura de ramos | 80,51% | 84,09% |
-| Cobertura de funções | 62,16% | 73,86% |
+| Cobertura de linhas | 20,05% | 31,74% |
+| Cobertura de ramos | 80,51% | 84,12% |
+| Cobertura de funções | 62,16% | 73,91% |
 | Bugs documentados | | **44: 7 altos, 13 médios, 24 baixos** |
+| Consertados no mesmo dia | | **8: os 7 altos e 1 médio (C3)** |
+| Abertos | | **36: 0 altos, 12 médios, 24 baixos** |
 
-As **119 falhas são os bugs**: cada uma tem `BUG-` no nome do teste e fica vermelha até o conserto. Nenhum código de produção foi alterado.
+Primeiro a bateria rodou **sem mudar o código de produção** (119 testes vermelhos). Depois, em um commit separado, foram consertados E1, E10, C1, C2, C3, C14, C16 e C17: os **15 testes deles passaram sem alteração nos testes**. As **104 falhas restantes são bugs abertos** (103 de unidade e API, 1 no navegador): cada uma tem `BUG-` no nome do teste e fica vermelha até o conserto.
 
 Cobertura por pasta (só unidade e API; o navegador não entra na conta): `app/api` 91,3% · `lib` 87,3% · `middleware.ts` 100% · telas (`app`) 0% · `components` 0,3%.
 
@@ -51,27 +53,27 @@ npm run test:qa                   # unidade e API com cobertura, build, navegado
 | 1 | Login e sessão | Alto | passa |
 | 2 | Limite de tentativas de senha | Alto | **S1** |
 | 3 | Proteção das páginas | Alto | **S2** |
-| 4 | Permissões das APIs | Alto | sem sessão e sem ser admin: passa. Entre usuários: **E1, E10** |
+| 4 | Permissões das APIs | Alto | passa (E1 e E10 consertados) |
 | 5 | Cadastro fechado | Médio | passa |
-| 6 | Provas prontas | Alto | **E1 a E6** |
+| 6 | Provas prontas | Alto | **E2 a E6** (E1 consertado) |
 | 7 | Reforço e revisão de erros | Alto | **E7** |
-| 8 | Treino | Alto | **E8 a E14** |
-| 9 | Simulado | Alto | **E10, E11, E13, E15 a E17** |
+| 8 | Treino | Alto | **E8, E9, E11 a E14** (E10 consertado) |
+| 9 | Simulado | Alto | **E11, E13, E15 a E17** (E10 consertado) |
 | 10 | Caderno de erros | Médio | passa |
 | 11 | Revisão espaçada | Médio | **E18, E19** |
 | 12 | Aula em lousa | Alto | passa (testes que já existiam) |
 | 13 | Tutor | Médio | passa |
-| 14 | Flashcards: baralhos e cartões | Alto | **C1, C5, C19, C20** |
-| 15 | Flashcards: estudo | Alto | **C3, C4** |
-| 16 | Flashcards por IA | Médio | **C1** |
+| 14 | Flashcards: baralhos e cartões | Alto | **C5, C19, C20** (C1 consertado) |
+| 15 | Flashcards: estudo | Alto | **C4** (C3 consertado) |
+| 16 | Flashcards por IA | Médio | passa (C1 consertado) |
 | 17 | Redação: correção | Alto | **C6 a C9** |
 | 18 | Redação: partes e modelos | Médio | passa (testes que já existiam) |
 | 19 | Cálculo | Médio | passa |
 | 20 | Caneta | Baixo | passa |
 | 21 | Banco de questões e conferência | Médio | **C12, E21, E22** |
-| 22 | Administração de questões | Alto | **C11, C13 a C16** |
-| 23 | PDF de provas | Alto | **C17, C18** |
-| 24 | Progresso e estatísticas | Médio | **C2, E6** |
+| 22 | Administração de questões | Alto | **C11, C13, C15** (C14 e C16 consertados) |
+| 23 | PDF de provas | Alto | **C18** (C17 e C16 consertados) |
+| 24 | Progresso e estatísticas | Médio | **E6** (C2 consertado) |
 | 25 | Início | Médio | **E20** |
 | 26 | Perfil | Baixo | **C10** |
 | 27 a 29 | Descobrir, visual e celular, vestibular | Baixo | só fumaça: abrem, sem erro de script e sem rolar de lado em 390 px |
@@ -82,7 +84,9 @@ Como reproduzir qualquer um: `npx vitest run -c vitest.qa.config.ts -t "BUG-E10"
 
 **Conferidos também lendo o código:** E1, E10, C1, C2, C14, C16, C17. Os demais estão confirmados pelo teste, com banco falso.
 
-### Altos
+### Altos (todos consertados em 27/11/2026)
+
+A tabela mostra o comportamento **antes** do conserto. Conserto: `lib/entrada.ts` confere o tipo do identificador (400 se não for texto) e a letra do gabarito (sem A a E, nada é gravado; gabarito vazio responde 422).
 
 Causa comum de E1, E10, C1 e C2: o servidor **não confere se o identificador recebido é um texto**. Um objeto como `{"not":""}`, ou um campo ausente, muda o filtro do banco.
 
@@ -103,7 +107,7 @@ E1 e E10 exigem login, e o cadastro é fechado.
 | Id | Onde | Passos | Esperado | Obtido |
 |---|---|---|---|---|
 | S1 | `lib/auth.ts`, `lib/limite-login.ts` | 20 senhas erradas ao mesmo tempo | no máximo 5 conferidas | as 20 conferidas |
-| C3 | `flashcards/progresso` | `cardId: {"not":""}`, `acertou: true` | 400 | limpa a revisão de todos os cartões do aluno |
+| C3 (consertado) | `flashcards/progresso` | `cardId: {"not":""}`, `acertou: true` | 400 | limpa a revisão de todos os cartões do aluno |
 | C9 | `redacao/submit`, `evaluate` | texto de 200 mil caracteres | recusar | grava e manda inteiro para a IA |
 | C12 | `questions/ai-generate` | `subtema` de 100 mil letras | cortar ou recusar | vai inteiro ao pedido da IA |
 | C18 | `pdf-process` | arquivo que não é PDF | recusar sem IA | gasta IA e devolve 500 com a mensagem interna |
@@ -155,8 +159,8 @@ E1 e E10 exigem login, e o cadastro é fechado.
 
 ## Próximos passos
 
-1. Validar o tipo de todo identificador recebido (zod, já no projeto): fecha E1, E10, C1, C2, C3.
-2. Nunca gravar gabarito "A" por falta de informação: C14, C16, C17.
+1. Validar o corpo de todas as rotas com um esquema (zod, já no projeto): fecha C5, E6 e boa parte dos baixos.
+2. Recusar envio repetido: E2, E8, E19.
 3. Registrar a tentativa de senha antes de conferir: S1.
 4. Atualizar `next` e `next-auth` num ramo separado e rodar esta bateria.
-5. Colocar `npm run test:qa` na integração do GitHub quando os bugs altos fecharem.
+5. Colocar `npm run test:qa` na integração do GitHub quando os testes vermelhos restantes fecharem.

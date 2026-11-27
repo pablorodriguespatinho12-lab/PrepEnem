@@ -4,6 +4,7 @@ import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/db';
+import { letraDoGabarito } from '@/lib/entrada';
 import { PDFDocument } from 'pdf-lib';
 import { uploadBufferToS3 } from '@/lib/s3';
 import { isS3Configured, s3UnavailableResponse } from '@/lib/aws-client';
@@ -139,6 +140,9 @@ export async function POST(req: Request) {
     if (!gabResult.ok) return gabResult.response;
     const gabarito = gabResult.gabarito;
     console.log(`[BATCH] Gabarito: ${Object.keys(gabarito).length} answers`);
+    if (!Object.values(gabarito).some(letraDoGabarito)) {
+      return NextResponse.json({ error: 'Gabarito vazio ou ilegível: nada foi gravado' }, { status: 422 });
+    }
 
     // Step 2: Upload PDF to S3
     let pdfFileUrl: string | null = null;
@@ -201,9 +205,9 @@ export async function POST(req: Request) {
         let dificuldade = (q.dificuldade ?? 'medio').toLowerCase();
         if (!['facil', 'medio', 'dificil'].includes(dificuldade)) dificuldade = 'medio';
 
-        let resposta = gabAnswer ?? (q.respostaCorreta ?? 'A');
-        resposta = resposta.toUpperCase().trim();
-        if (!['A', 'B', 'C', 'D', 'E'].includes(resposta)) resposta = 'A';
+        // Gabarito oficial; sem ele, o palpite da IA. Sem nenhum dos dois, não grava.
+        const resposta = letraDoGabarito(gabAnswer ?? q.respostaCorreta);
+        if (!resposta) continue;
 
         const enunciado = q.enunciado ?? `Questão ${qNum}`;
         const imagePatterns = /\[IMAGEM\]|imagem|figura(?! de linguagem)|gráfico|tirinha|charge|quadrinho|esquema|diagrama|tabela|mapa|ilustração/i;
