@@ -151,6 +151,9 @@ siga. "Entendi tudo" é resposta válida.
     quer dizer; qual lado está de frente para o ângulo; como o ângulo vira uma altura (exemplo com
     metro); por que o corte divide a base ao meio; de onde sai cada raiz; por que 1/√2 = √2/2.
     Figura se mexendo sozinha (ponto girando no círculo) atrapalha: desenho parado.
+    Valor tirado de UM triângulo e usado em OUTRO ("h ÷ 20 = 1 ÷ 2") é tropeço se os dois não
+    aparecerem juntos, com os mesmos cantos e o "ampliou 10 vezes" escrito (26/11/2026: "é como se
+    estivesse pegando outro triângulo... eu não entendi").
 
 **Aula que ele aprovou como modelo (Pablo, 22/11/2026; use para saber o que é
 "entendi sem tropeço" em questão de grandezas):** `d2-dificil-mat-06` e as outras
