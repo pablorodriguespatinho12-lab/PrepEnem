@@ -3,32 +3,39 @@
    !important porque a regra geral de "reduzir movimento" zera animação e o
    Chrome do Pablo reporta reduzir; quem quer parado desliga em Perfil. */
 .jv-cena { display: none; }
-html[data-jardim] .jv-cena { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
+html[data-jardim] .jv-cena { display: block; position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; container-type: size; }
+/* --u = tamanho na tela de 1 unidade do desenho (1000 x 480, preenchendo a caixa). */
+.jv-cena > svg { position: absolute; inset: 0; width: 100%; height: 100%; --u: max(.1cqw, .208334cqh); }
+.jv-cena > svg:not(.jv-fundo) { overflow: visible; will-change: transform; }
 
 .jv-so-noite { opacity: 0; }
 html.dark .jv-so-noite { opacity: 1; }
 html.dark .jv-so-dia { opacity: 0; }
 html.dark .jv-terra { filter: brightness(.52) saturate(.8) hue-rotate(18deg); }
-@media (max-width: 767px) { .jv-astro { transform: translate(-120px, 0); } }
+@media (max-width: 767px) {
+  g.jv-astro { transform: translate(-120px, 0); }
+  svg.jv-astro { translate: calc(-120 * var(--u)) 0; }
+}
 
-.jv-nuvem { transform: translateX(300px); }
-.jv-nuvem + .jv-nuvem { transform: translateX(640px); }
-.jv-ave { transform: translate(300px, 5px); }
-.jv-anel { transform-box: fill-box; transform-origin: center; }
+.jv-nuvem { transform: translateX(calc(var(--parada) * var(--u))); }
+.jv-ave { transform: translate(calc(300 * var(--u)), calc(5 * var(--u))); }
+.jv-anel { transform-origin: calc(50cqw + 230 * var(--u)) calc(50cqh - 120 * var(--u)); }
 .jv-asa { transform-box: fill-box; transform-origin: center; }
 .jv-brilho { opacity: .5; }
 .jv-vaga { opacity: .6; }
 
-.jv-cena[data-animada="sim"] .jv-nuvem { animation: jv-nuvem var(--dur) steps(700) var(--atraso) infinite !important; }
-.jv-cena[data-animada="sim"] .jv-ave { animation: jv-ave 22s steps(330) infinite !important; }
+.jv-cena[data-animada="sim"] .jv-nuvem { animation: jv-nuvem var(--dur) linear var(--atraso) infinite !important; }
+.jv-cena[data-animada="sim"] .jv-ave { animation: jv-ave 22s linear infinite !important; }
 .jv-cena[data-animada="sim"] .jv-asa { animation: jv-asa .7s steps(4) infinite alternate !important; }
-html:not(.dark) .jv-cena[data-animada="sim"] .jv-anel { animation: jv-anel var(--dur) steps(36) var(--atraso) infinite !important; }
+html:not(.dark) .jv-cena[data-animada="sim"] .jv-anel { animation: jv-anel var(--dur) ease-in-out var(--atraso) infinite !important; }
 .jv-cena[data-animada="sim"] .jv-brilho { animation: jv-brilho var(--dur) steps(16) var(--atraso) infinite !important; }
 html.dark .jv-cena[data-animada="sim"] .jv-vaga { animation: jv-vaga var(--dur) steps(42) var(--atraso) infinite !important; }
-.jv-cena[data-pausada] * { animation-play-state: paused !important; }
+/* Fora da tela ou aba escondida: tudo para. Rolando: só o fundo (as camadas
+   não custam nada à rolagem, e parar fazia a nuvem dar um tranco). */
+.jv-cena[data-pausada] *, .jv-cena[data-rolando] .jv-fundo *, .jv-cena[data-rolando] .jv-asa { animation-play-state: paused !important; }
 
-@keyframes jv-nuvem { from { transform: translateX(-260px); } to { transform: translateX(1100px); } }
-@keyframes jv-ave { from { transform: translate(-60px, 20px); } to { transform: translate(1060px, -50px); } }
+@keyframes jv-nuvem { from { transform: translateX(calc(-260 * var(--u))); } to { transform: translateX(calc(1100 * var(--u))); } }
+@keyframes jv-ave { from { transform: translate(calc(-60 * var(--u)), calc(20 * var(--u))); } to { transform: translate(calc(1060 * var(--u)), calc(-50 * var(--u))); } }
 @keyframes jv-asa { to { transform: scaleY(.25); } }
 @keyframes jv-anel { 50% { transform: scale(1.07); opacity: .55; } }
 @keyframes jv-brilho { 0%, 100% { opacity: 0; transform: translateX(0); } 50% { opacity: .9; transform: translateX(14px); } }

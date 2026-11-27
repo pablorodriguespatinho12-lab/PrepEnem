@@ -118,7 +118,7 @@ html[data-jardim] .px-chip::before, html[data-jardim] .px-chip::after { content:
   html[data-jardim] .m-capa[data-faixa] { display: flex; }
   html[data-jardim] .jv-faixa-arte { order: -1; height: 150px; min-height: 0; flex: none; }
   html[data-jardim] .m-capa { height: auto; min-height: 0; flex-direction: column; align-items: stretch; background: var(--m-card); border: 1px solid var(--m-line); }
-  html[data-jardim] .m-capa .jv-cena { position: static; height: 190px; }
+  html[data-jardim] .m-capa .jv-cena { position: relative; height: 190px; }
   html[data-jardim] .m-capa-texto { max-width: none; margin: 0; padding: 20px; gap: 16px; border: 0; border-radius: 0; background: none; }
 }
 

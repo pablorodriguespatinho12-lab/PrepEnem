@@ -13,7 +13,11 @@
 5. **Autoatualização obrigatória** (Pablo, 24/11/2026): depois de toda leva de agentes,
    achar onde o PLANO/prompt errou, corrigir o plano e o arquivo do agente, e dizer
    "aprendi: X, gravei em Y". Memória `autoatualizar-agentes-e-planos`.
-6. **O Pablo tem TDAH**: toda mensagem final passa por `explicar-ao-pablo` —
+6. **Bug ou melhoria visto no caminho é automático** (Pablo, 27/11/2026): pequeno (até 3 arquivos), consertar
+   e dizer; maior, 1 linha em `docs/melhorias.md`. Regra vencida que eu encontrar sai no mesmo commit.
+7. **Rapidez** (27/11/2026: "demorando muito pra fazer coisas mais ou menos simples"): tarefa pequena = sem agente,
+   sem skill além da que governa o arquivo (e `token-economy`), foto só do que mudou, build em segundo plano.
+8. **O Pablo tem TDAH**: toda mensagem final passa por `explicar-ao-pablo` —
    curta, pelo que aparece na tela, no máximo duas opções.
 
 ## Ferramentas em `.claude/`
