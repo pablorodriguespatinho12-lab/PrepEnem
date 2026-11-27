@@ -52,6 +52,15 @@
             "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/typecheck.sh"
           }
         ]
+      },
+      {
+        "matcher": "Agent",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"hookSpecificOutput\": {\"hookEventName\": \"PostToolUse\", \"additionalContext\": \"Agente voltou: 1) confira o achado com comando; 2) se errou, grave 1 linha no arquivo do agente (ou em distribuir-trabalho), editando a linha velha; 3) diga \\\"aprendi: X, gravei em Y\\\".\"}}'"
+          }
+        ]
       }
     ],
     "Stop": [
