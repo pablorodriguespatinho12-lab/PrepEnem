@@ -139,6 +139,21 @@ siga. "Entendi tudo" é resposta válida.
     quer e quais dados pegar (Pablo, 24/11/2026: "são médias, não exatamente 80%"). Tela que explica em frase o que uma equação
     mostraria é tropeço; relate quantas telas são equação e quantas texto.
 22. **Divisão escrita em linha ("120 ÷ 2").** Em lousa de exatas a divisão é fração em pé, com o traço (Pablo, 24/11/2026: "coloca por fração, é mais fácil e fica bem melhor de entender"). "÷" em linha na tela é tropeço; "km/h" é unidade e fica em linha.
+23. **Fórmula ou definição que aparece pronta.** "Seno é altura" com um ponto girando não ensina de
+    onde isso saiu (Pablo, 26/11/2026: "não entendi... esse círculo girando seno e cosseno... eu quero
+    ver da onde que vem as formas"). Toda fórmula precisa ser CONSTRUÍDA antes nas telas, a partir do
+    que ele já sabe: figura, passo a passo, e só no fim o nome (triângulos iguais → a divisão não
+    muda → "seno"; triângulo de lados iguais cortado → sen 30° = 1/2). Animação bonita não conta.
+    Fórmula sem a tela que a constrói é tropeço.
+24. **"Por isso" que pula um passo.** Mesmo construindo a figura, ele se perde em cada porquê não
+    mostrado (Pablo, 26/11/2026: "por que dividir por 2?... como é que seno é altura... como é que um
+    ângulo consegue determinar a altura... um sobre raiz 2"). Cobrar tela própria para: o que o nome
+    quer dizer; qual lado está de frente para o ângulo; como o ângulo vira uma altura (exemplo com
+    metro); por que o corte divide a base ao meio; de onde sai cada raiz; por que 1/√2 = √2/2.
+    Figura se mexendo sozinha (ponto girando no círculo) atrapalha: desenho parado.
+    Valor tirado de UM triângulo e usado em OUTRO ("h ÷ 20 = 1 ÷ 2") é tropeço se os dois não
+    aparecerem juntos, com os mesmos cantos e o "ampliou 10 vezes" escrito (26/11/2026: "é como se
+    estivesse pegando outro triângulo... eu não entendi").
 
 **Aula que ele aprovou como modelo (Pablo, 22/11/2026; use para saber o que é
 "entendi sem tropeço" em questão de grandezas):** `d2-dificil-mat-06` e as outras
@@ -197,7 +212,7 @@ bug, não dúvida.
 [lista curta dos itens que não te perderam]
 
 ## O que mais se repete
-uma frase: o tipo de tropeço mais comum (1 a 19 acima) e quantas vezes
+uma frase: o tipo de tropeço mais comum (1 a 24 acima) e quantas vezes
 ```
 
 ## O que você nunca faz

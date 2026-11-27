@@ -9,6 +9,9 @@ import { Semana } from '@/components/inicio/semana';
 import { BlocoLeitura } from '@/components/inicio/leitura';
 import { ContinuarProva } from '@/components/inicio/continuar-prova';
 import { CapaPixel } from '@/components/visual/capa-pixel';
+import { NumerosJardim } from '@/components/inicio/numeros-jardim';
+import { MateriasJardim } from '@/components/inicio/materias-jardim';
+import { soltarFolhasDe } from '@/lib/jardim/folhas';
 
 /* Início da opção A (26/11/2026): capa em pixel com o dia e o Começar, e blocos
    embaixo. Sem saudação e sem banner: a capa É o cronograma de hoje. */
@@ -86,12 +89,15 @@ export default function DashboardPage() {
         titulo={carregando ? 'Hoje' : titulo}
       >
         {!carregando && !activeDay?.cycleComplete && (
-          <Link href={comecarHref} className="m-vai">Começar</Link>
+          <Link href={comecarHref} className="m-vai" onClick={(e) => soltarFolhasDe(e.currentTarget)}>Começar</Link>
         )}
       </CapaPixel>
 
       <div className="m-blocos">
-        <section aria-labelledby="cai-hoje" className="m-cartao m-col7">
+        <NumerosJardim stats={stats} />
+        <MateriasJardim blocos={blocos} href={comecarHref} />
+
+        <section aria-labelledby="cai-hoje" className="m-cartao m-col7 fora-jardim">
           <h2 id="cai-hoje">O que cai hoje</h2>
           {blocos.length === 0 && <p className="m-mut">{carregando ? 'Carregando' : 'Sem blocos hoje'}</p>}
           {blocos.map((block, i) => (

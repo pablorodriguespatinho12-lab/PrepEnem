@@ -4,6 +4,7 @@ import { headers } from 'next/headers';
 import './globals.css';
 import './moderno.css';
 import './jardim.css';
+import './jardim-cena.css';
 import { Providers } from '@/components/providers';
 import { FocoTeclado } from '@/components/foco-teclado';
 import { AppLayout } from '@/components/app-layout';

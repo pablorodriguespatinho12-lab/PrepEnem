@@ -39,6 +39,10 @@ O PrepEnem não tem site de referência. Cada tela ganha a sua pela skill
   serifa, pintura na capa, sem pixel. É o **padrão** (login e sem escolha; "deixa como modo padrao").
   Os outros temas continuam com pixel.
   Logo (todos os temas): livro com broto, `components/logo.tsx` e `favicon.svg`.
+  **Jardim vivo (26-27/11/2026, "perfeito"):** menu, Início, Estudar e Questão iguais à prévia
+  (`app/jardim-cena.css`, `lib/jardim/`, `components/visual/jardim/`). No Início do Jardim entram 3 cartões
+  de número (feitas, acertos, 7 dias), que repetem o Progresso: vem da prévia aprovada, exceção a "um número,
+  um lugar". `.so-jardim` / `.fora-jardim` separam o que é só de um tema. Faltam Cartões, Redação e Progresso.
 
 - **Menu, Início e Estudar = opção A de 26/11/2026** (Pablo: "pode o A desse
   jeitnho igualzinho cara"; estilos em `app/moderno.css`, letra Sora, números em

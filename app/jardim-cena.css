@@ -1,0 +1,39 @@
+/* Cena viva e desenhos do modo Jardim (prévia "Jardim vivo", 26/11/2026).
+   Fundo grande anda em passos (steps): a tela muda poucas vezes por segundo.
+   !important porque a regra geral de "reduzir movimento" zera animação e o
+   Chrome do Pablo reporta reduzir; quem quer parado desliga em Perfil. */
+.jv-cena { display: none; }
+html[data-jardim] .jv-cena { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
+
+.jv-so-noite { opacity: 0; }
+html.dark .jv-so-noite { opacity: 1; }
+html.dark .jv-so-dia { opacity: 0; }
+html.dark .jv-terra { filter: brightness(.52) saturate(.8) hue-rotate(18deg); }
+@media (max-width: 767px) { .jv-astro { transform: translate(-120px, 0); } }
+
+.jv-nuvem { transform: translateX(300px); }
+.jv-nuvem + .jv-nuvem { transform: translateX(640px); }
+.jv-ave { transform: translate(300px, 5px); }
+.jv-anel { transform-box: fill-box; transform-origin: center; }
+.jv-asa { transform-box: fill-box; transform-origin: center; }
+.jv-brilho { opacity: .5; }
+.jv-vaga { opacity: .6; }
+
+.jv-cena[data-animada="sim"] .jv-nuvem { animation: jv-nuvem var(--dur) steps(700) var(--atraso) infinite !important; }
+.jv-cena[data-animada="sim"] .jv-ave { animation: jv-ave 22s steps(330) infinite !important; }
+.jv-cena[data-animada="sim"] .jv-asa { animation: jv-asa .7s steps(4) infinite alternate !important; }
+html:not(.dark) .jv-cena[data-animada="sim"] .jv-anel { animation: jv-anel var(--dur) steps(36) var(--atraso) infinite !important; }
+.jv-cena[data-animada="sim"] .jv-brilho { animation: jv-brilho var(--dur) steps(16) var(--atraso) infinite !important; }
+html.dark .jv-cena[data-animada="sim"] .jv-vaga { animation: jv-vaga var(--dur) steps(42) var(--atraso) infinite !important; }
+.jv-cena[data-pausada] * { animation-play-state: paused !important; }
+
+@keyframes jv-nuvem { from { transform: translateX(-260px); } to { transform: translateX(1100px); } }
+@keyframes jv-ave { from { transform: translate(-60px, 20px); } to { transform: translate(1060px, -50px); } }
+@keyframes jv-asa { to { transform: scaleY(.25); } }
+@keyframes jv-anel { 50% { transform: scale(1.07); opacity: .55; } }
+@keyframes jv-brilho { 0%, 100% { opacity: 0; transform: translateX(0); } 50% { opacity: .9; transform: translateX(14px); } }
+@keyframes jv-vaga { 0%, 100% { transform: translate(0, 0); opacity: .15; } 30% { opacity: 1; } 60% { transform: translate(22px, -30px); opacity: .5; } }
+
+.jv-arte { display: block; }
+.jv-planta { display: block; }
+.jv-folha { position: fixed; width: 12px; height: 12px; border-radius: 12px 0; pointer-events: none; z-index: 60; }

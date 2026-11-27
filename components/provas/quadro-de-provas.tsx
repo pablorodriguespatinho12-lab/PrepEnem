@@ -4,6 +4,9 @@ import Link from 'next/link';
 import { Trash2 } from 'lucide-react';
 import { CaminhosDoTreino } from '@/components/treino/caminhos-do-treino';
 import { CapaPixel } from '@/components/visual/capa-pixel';
+import { soltarFolhasDe } from '@/lib/jardim/folhas';
+import { Planta } from '@/components/visual/jardim/desenhos';
+import { arteDaMateria, estagioDaPlanta } from '@/lib/jardim/artes';
 import { agruparProvas, degrauDaProva, TITULO_OUTRAS } from '@/lib/provas-grupos';
 import { estadoDaProva, provaParaContinuar, type ProvaDoQuadro } from '@/lib/provas-estado';
 
@@ -15,16 +18,20 @@ function Linha({ prova, numero, destaque, apagando, onExcluir }: { prova: ProvaD
   const escada = prova.nivel === 'escada' ? degrauDaProva(prova.nome) : null;
   const estado = estadoDaProva(prova);
   const aberta = prova.status === 'em_andamento';
+  const feito = prova.status === 'finalizada' ? 1 : (estado.progresso ?? 0);
   return (
     <li className="m-item-lista">
       <Link href={`/provas/${prova.id}`} className="m-linha" data-aberta={destaque ? 'sim' : undefined}>
-        <span className="m-n" data-numeric>{escada?.posicao ?? numero}</span>
+        <span className="m-n fora-jardim" data-numeric>{escada?.posicao ?? numero}</span>
+        <Planta estagio={estagioDaPlanta(feito)} className="so-jardim" />
         <span className="m-t">
           <b>{escada ? escada.degrau.tema : prova.nome}</b>
           <span data-numeric>{estado.texto}</span>
           {escada?.degrau.precisaAntes && <span>Antes: {escada.degrau.precisaAntes}</span>}
+          <i className="so-jardim jv-barra" aria-hidden><i style={{ transform: `scaleX(${Math.max(0.03, feito)})` }} /></i>
         </span>
-        <span className="m-sec">{aberta ? 'Continuar' : 'Abrir'}</span>
+        <span className="m-sec fora-jardim">{aberta ? 'Continuar' : 'Abrir'}</span>
+        <span className="so-jardim jv-vai-pequeno">{aberta ? 'Seguir' : feito ? 'Rever' : 'Plantar'}</span>
       </Link>
       {apagando && (
         <button type="button" className="m-sec" onClick={() => onExcluir(prova.id)} aria-label={`Excluir prova ${prova.nome}`}>
@@ -52,13 +59,15 @@ export function QuadroDeProvas({ provas, onExcluir }: { provas: ProvaDoQuadro[];
       {continuar ? (
         <CapaPixel
           id="estudar-titulo"
+          arte={arteDaMateria(grupos.find((g) => g.lista.some((p) => p.id === continuar.id))?.titulo ?? '')}
           sobre="Continuar de onde parou"
           titulo={`${degrauDaProva(continuar.nome)?.degrau.tema ?? continuar.nome} · ${estadoDaProva(continuar).texto}`}
         >
-          <Link href={`/provas/${continuar.id}`} className="m-vai">Continuar</Link>
+          <i className="so-jardim jv-barra" aria-hidden><i style={{ transform: `scaleX(${Math.max(0.03, estadoDaProva(continuar).progresso ?? 0)})` }} /></i>
+          <Link href={`/provas/${continuar.id}`} className="m-vai" onClick={(e) => soltarFolhasDe(e.currentTarget)}>Continuar</Link>
         </CapaPixel>
       ) : (
-        <CapaPixel id="estudar-titulo" sobre="Estudar" titulo="Escolha uma prova">
+        <CapaPixel id="estudar-titulo" arte={arteDaMateria(grupo?.titulo ?? '')} sobre="Estudar" titulo="Escolha uma prova">
           <Link href="/provas/criar" className="m-vai">Nova prova</Link>
         </CapaPixel>
       )}

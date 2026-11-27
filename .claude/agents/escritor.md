@@ -25,6 +25,9 @@ Texto (ideia adaptada de blader/humanizer, MIT):
 
 Ao terminar:
 - Rode os testes que o pedido citar e cole a linha do resultado.
+- Questão com tela (26/11/2026, piloto Cume): `enunciadoTela` em LaTeX, nenhuma fórmula mais larga que o celular
+  (390 px: quebrar em linhas); cada passo traz uma conta completa, do começo ao resultado; sinal, intervalo ou
+  figura vira desenho na lousa.
 - Responda em até 10 linhas: arquivos escritos, contagem tirada de comando, dúvidas.
 - Grave na memória só o que vale para o próximo lote: correção recebida ou
   jeito que passou na conferência. Uma linha cada, sem dado pessoal (o repositório é público).
